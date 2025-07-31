@@ -24,7 +24,7 @@ class SubCustomerOrderV2 implements ModelInterface, ArrayAccess
     * customerId  客户账号ID。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
-    * sourceType  客户订单订单来源类型： 1：客户2：代理3：合同4：分销商
+    * sourceType  客户订单来源类型。1：客户 2：代理 3：合同 4：分销商 5：页面删除资源 6：补录订单 7：补偿订单 8：系统自动创建
     * status  订单状态： 1：待审核2：待退款3：处理中4：已取消5：已完成6：待支付9：待确认10：待发货11：待收货12：待上门取货13：换新中
     * orderType  订单类型： 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
     * amountAfterDiscount  订单优惠后金额（不含券不含卡的实付价格）。
@@ -64,7 +64,7 @@ class SubCustomerOrderV2 implements ModelInterface, ArrayAccess
     * customerId  客户账号ID。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
-    * sourceType  客户订单订单来源类型： 1：客户2：代理3：合同4：分销商
+    * sourceType  客户订单来源类型。1：客户 2：代理 3：合同 4：分销商 5：页面删除资源 6：补录订单 7：补偿订单 8：系统自动创建
     * status  订单状态： 1：待审核2：待退款3：处理中4：已取消5：已完成6：待支付9：待确认10：待发货11：待收货12：待上门取货13：换新中
     * orderType  订单类型： 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
     * amountAfterDiscount  订单优惠后金额（不含券不含卡的实付价格）。
@@ -125,7 +125,7 @@ class SubCustomerOrderV2 implements ModelInterface, ArrayAccess
     * customerId  客户账号ID。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
-    * sourceType  客户订单订单来源类型： 1：客户2：代理3：合同4：分销商
+    * sourceType  客户订单来源类型。1：客户 2：代理 3：合同 4：分销商 5：页面删除资源 6：补录订单 7：补偿订单 8：系统自动创建
     * status  订单状态： 1：待审核2：待退款3：处理中4：已取消5：已完成6：待支付9：待确认10：待发货11：待收货12：待上门取货13：换新中
     * orderType  订单类型： 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
     * amountAfterDiscount  订单优惠后金额（不含券不含卡的实付价格）。
@@ -165,7 +165,7 @@ class SubCustomerOrderV2 implements ModelInterface, ArrayAccess
     * customerId  客户账号ID。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
-    * sourceType  客户订单订单来源类型： 1：客户2：代理3：合同4：分销商
+    * sourceType  客户订单来源类型。1：客户 2：代理 3：合同 4：分销商 5：页面删除资源 6：补录订单 7：补偿订单 8：系统自动创建
     * status  订单状态： 1：待审核2：待退款3：处理中4：已取消5：已完成6：待支付9：待确认10：待发货11：待收货12：待上门取货13：换新中
     * orderType  订单类型： 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
     * amountAfterDiscount  订单优惠后金额（不含券不含卡的实付价格）。
@@ -205,7 +205,7 @@ class SubCustomerOrderV2 implements ModelInterface, ArrayAccess
     * customerId  客户账号ID。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
-    * sourceType  客户订单订单来源类型： 1：客户2：代理3：合同4：分销商
+    * sourceType  客户订单来源类型。1：客户 2：代理 3：合同 4：分销商 5：页面删除资源 6：补录订单 7：补偿订单 8：系统自动创建
     * status  订单状态： 1：待审核2：待退款3：处理中4：已取消5：已完成6：待支付9：待确认10：待发货11：待收货12：待上门取货13：换新中
     * orderType  订单类型： 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
     * amountAfterDiscount  订单优惠后金额（不含券不含卡的实付价格）。
@@ -435,7 +435,7 @@ class SubCustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceType
-    *  客户订单订单来源类型： 1：客户2：代理3：合同4：分销商
+    *  客户订单来源类型。1：客户 2：代理 3：合同 4：分销商 5：页面删除资源 6：补录订单 7：补偿订单 8：系统自动创建
     *
     * @return int|null
     */
@@ -447,7 +447,7 @@ class SubCustomerOrderV2 implements ModelInterface, ArrayAccess
     /**
     * Sets sourceType
     *
-    * @param int|null $sourceType 客户订单订单来源类型： 1：客户2：代理3：合同4：分销商
+    * @param int|null $sourceType 客户订单来源类型。1：客户 2：代理 3：合同 4：分销商 5：页面删除资源 6：补录订单 7：补偿订单 8：系统自动创建
     *
     * @return $this
     */

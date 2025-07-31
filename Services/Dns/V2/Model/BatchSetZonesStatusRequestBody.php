@@ -20,8 +20,8 @@ class BatchSetZonesStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  待设置域名状态，支持DISABLE或ENABLE。
-    * zoneIds  待设置域名ID列表。 最多支持50个。
+    * status  **参数解释：** 待设置域名状态。 **约束限制：** 不涉及。 **取值范围：** - DISABLE：暂停解析 - ENABLE：启用解析  **默认取值：** 不涉及。
+    * zoneIds  **参数解释：** 待设置域名ID列表。 **约束限制：** 最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class BatchSetZonesStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  待设置域名状态，支持DISABLE或ENABLE。
-    * zoneIds  待设置域名ID列表。 最多支持50个。
+    * status  **参数解释：** 待设置域名状态。 **约束限制：** 不涉及。 **取值范围：** - DISABLE：暂停解析 - ENABLE：启用解析  **默认取值：** 不涉及。
+    * zoneIds  **参数解释：** 待设置域名ID列表。 **约束限制：** 最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BatchSetZonesStatusRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  待设置域名状态，支持DISABLE或ENABLE。
-    * zoneIds  待设置域名ID列表。 最多支持50个。
+    * status  **参数解释：** 待设置域名状态。 **约束限制：** 不涉及。 **取值范围：** - DISABLE：暂停解析 - ENABLE：启用解析  **默认取值：** 不涉及。
+    * zoneIds  **参数解释：** 待设置域名ID列表。 **约束限制：** 最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BatchSetZonesStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  待设置域名状态，支持DISABLE或ENABLE。
-    * zoneIds  待设置域名ID列表。 最多支持50个。
+    * status  **参数解释：** 待设置域名状态。 **约束限制：** 不涉及。 **取值范围：** - DISABLE：暂停解析 - ENABLE：启用解析  **默认取值：** 不涉及。
+    * zoneIds  **参数解释：** 待设置域名ID列表。 **约束限制：** 最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BatchSetZonesStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  待设置域名状态，支持DISABLE或ENABLE。
-    * zoneIds  待设置域名ID列表。 最多支持50个。
+    * status  **参数解释：** 待设置域名状态。 **约束限制：** 不涉及。 **取值范围：** - DISABLE：暂停解析 - ENABLE：启用解析  **默认取值：** 不涉及。
+    * zoneIds  **参数解释：** 待设置域名ID列表。 **约束限制：** 最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -194,7 +194,7 @@ class BatchSetZonesStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  待设置域名状态，支持DISABLE或ENABLE。
+    *  **参数解释：** 待设置域名状态。 **约束限制：** 不涉及。 **取值范围：** - DISABLE：暂停解析 - ENABLE：启用解析  **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -206,7 +206,7 @@ class BatchSetZonesStatusRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 待设置域名状态，支持DISABLE或ENABLE。
+    * @param string $status **参数解释：** 待设置域名状态。 **约束限制：** 不涉及。 **取值范围：** - DISABLE：暂停解析 - ENABLE：启用解析  **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -218,7 +218,7 @@ class BatchSetZonesStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneIds
-    *  待设置域名ID列表。 最多支持50个。
+    *  **参数解释：** 待设置域名ID列表。 **约束限制：** 最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string[]
     */
@@ -230,7 +230,7 @@ class BatchSetZonesStatusRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets zoneIds
     *
-    * @param string[] $zoneIds 待设置域名ID列表。 最多支持50个。
+    * @param string[] $zoneIds **参数解释：** 待设置域名ID列表。 **约束限制：** 最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */

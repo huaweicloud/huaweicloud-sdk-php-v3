@@ -20,8 +20,8 @@ class PrivateNameServer implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * priority  优先级。如果priority的值为“1”，表示会第一个采用该域名服务器进行解析。
-    * address  DNS服务器地址。
+    * priority  **参数解释：** 优先级。如果priority的值为“1”，表示会第一个采用该域名服务器进行解析。 **取值范围：** 不涉及。
+    * address  **参数解释：** DNS服务器地址。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class PrivateNameServer implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * priority  优先级。如果priority的值为“1”，表示会第一个采用该域名服务器进行解析。
-    * address  DNS服务器地址。
+    * priority  **参数解释：** 优先级。如果priority的值为“1”，表示会第一个采用该域名服务器进行解析。 **取值范围：** 不涉及。
+    * address  **参数解释：** DNS服务器地址。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class PrivateNameServer implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * priority  优先级。如果priority的值为“1”，表示会第一个采用该域名服务器进行解析。
-    * address  DNS服务器地址。
+    * priority  **参数解释：** 优先级。如果priority的值为“1”，表示会第一个采用该域名服务器进行解析。 **取值范围：** 不涉及。
+    * address  **参数解释：** DNS服务器地址。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class PrivateNameServer implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * priority  优先级。如果priority的值为“1”，表示会第一个采用该域名服务器进行解析。
-    * address  DNS服务器地址。
+    * priority  **参数解释：** 优先级。如果priority的值为“1”，表示会第一个采用该域名服务器进行解析。 **取值范围：** 不涉及。
+    * address  **参数解释：** DNS服务器地址。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class PrivateNameServer implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * priority  优先级。如果priority的值为“1”，表示会第一个采用该域名服务器进行解析。
-    * address  DNS服务器地址。
+    * priority  **参数解释：** 优先级。如果priority的值为“1”，表示会第一个采用该域名服务器进行解析。 **取值范围：** 不涉及。
+    * address  **参数解释：** DNS服务器地址。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class PrivateNameServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  优先级。如果priority的值为“1”，表示会第一个采用该域名服务器进行解析。
+    *  **参数解释：** 优先级。如果priority的值为“1”，表示会第一个采用该域名服务器进行解析。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -197,7 +197,7 @@ class PrivateNameServer implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param int|null $priority 优先级。如果priority的值为“1”，表示会第一个采用该域名服务器进行解析。
+    * @param int|null $priority **参数解释：** 优先级。如果priority的值为“1”，表示会第一个采用该域名服务器进行解析。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class PrivateNameServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets address
-    *  DNS服务器地址。
+    *  **参数解释：** DNS服务器地址。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class PrivateNameServer implements ModelInterface, ArrayAccess
     /**
     * Sets address
     *
-    * @param string|null $address DNS服务器地址。
+    * @param string|null $address **参数解释：** DNS服务器地址。 **取值范围：** 不涉及。
     *
     * @return $this
     */

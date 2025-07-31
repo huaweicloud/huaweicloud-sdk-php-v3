@@ -43,6 +43,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * allocatedResource  allocatedResource
     * outputLanguage  模型输出语言类型
     * isRemake  任务是否重做
+    * assessResult  assessResult
+    * isOndemandResource  是否是按需任务
     *
     * @var string[]
     */
@@ -69,7 +71,9 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'batchName' => 'string',
             'allocatedResource' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceTrainingAllocatedResource',
             'outputLanguage' => 'string',
-            'isRemake' => 'bool'
+            'isRemake' => 'bool',
+            'assessResult' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssessResult',
+            'isOndemandResource' => 'bool'
     ];
 
     /**
@@ -97,6 +101,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * allocatedResource  allocatedResource
     * outputLanguage  模型输出语言类型
     * isRemake  任务是否重做
+    * assessResult  assessResult
+    * isOndemandResource  是否是按需任务
     *
     * @var string[]
     */
@@ -123,7 +129,9 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
         'batchName' => null,
         'allocatedResource' => null,
         'outputLanguage' => null,
-        'isRemake' => null
+        'isRemake' => null,
+        'assessResult' => null,
+        'isOndemandResource' => null
     ];
 
     /**
@@ -172,6 +180,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * allocatedResource  allocatedResource
     * outputLanguage  模型输出语言类型
     * isRemake  任务是否重做
+    * assessResult  assessResult
+    * isOndemandResource  是否是按需任务
     *
     * @var string[]
     */
@@ -198,7 +208,9 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'batchName' => 'batch_name',
             'allocatedResource' => 'allocated_resource',
             'outputLanguage' => 'output_language',
-            'isRemake' => 'is_remake'
+            'isRemake' => 'is_remake',
+            'assessResult' => 'assess_result',
+            'isOndemandResource' => 'is_ondemand_resource'
     ];
 
     /**
@@ -226,6 +238,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * allocatedResource  allocatedResource
     * outputLanguage  模型输出语言类型
     * isRemake  任务是否重做
+    * assessResult  assessResult
+    * isOndemandResource  是否是按需任务
     *
     * @var string[]
     */
@@ -252,7 +266,9 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'batchName' => 'setBatchName',
             'allocatedResource' => 'setAllocatedResource',
             'outputLanguage' => 'setOutputLanguage',
-            'isRemake' => 'setIsRemake'
+            'isRemake' => 'setIsRemake',
+            'assessResult' => 'setAssessResult',
+            'isOndemandResource' => 'setIsOndemandResource'
     ];
 
     /**
@@ -280,6 +296,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * allocatedResource  allocatedResource
     * outputLanguage  模型输出语言类型
     * isRemake  任务是否重做
+    * assessResult  assessResult
+    * isOndemandResource  是否是按需任务
     *
     * @var string[]
     */
@@ -306,7 +324,9 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'batchName' => 'getBatchName',
             'allocatedResource' => 'getAllocatedResource',
             'outputLanguage' => 'getOutputLanguage',
-            'isRemake' => 'getIsRemake'
+            'isRemake' => 'getIsRemake',
+            'assessResult' => 'getAssessResult',
+            'isOndemandResource' => 'getIsOndemandResource'
     ];
 
     /**
@@ -390,6 +410,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
         $this->container['allocatedResource'] = isset($data['allocatedResource']) ? $data['allocatedResource'] : null;
         $this->container['outputLanguage'] = isset($data['outputLanguage']) ? $data['outputLanguage'] : null;
         $this->container['isRemake'] = isset($data['isRemake']) ? $data['isRemake'] : null;
+        $this->container['assessResult'] = isset($data['assessResult']) ? $data['assessResult'] : null;
+        $this->container['isOndemandResource'] = isset($data['isOndemandResource']) ? $data['isOndemandResource'] : null;
     }
 
     /**
@@ -1065,6 +1087,54 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     public function setIsRemake($isRemake)
     {
         $this->container['isRemake'] = $isRemake;
+        return $this;
+    }
+
+    /**
+    * Gets assessResult
+    *  assessResult
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\AssessResult|null
+    */
+    public function getAssessResult()
+    {
+        return $this->container['assessResult'];
+    }
+
+    /**
+    * Sets assessResult
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\AssessResult|null $assessResult assessResult
+    *
+    * @return $this
+    */
+    public function setAssessResult($assessResult)
+    {
+        $this->container['assessResult'] = $assessResult;
+        return $this;
+    }
+
+    /**
+    * Gets isOndemandResource
+    *  是否是按需任务
+    *
+    * @return bool|null
+    */
+    public function getIsOndemandResource()
+    {
+        return $this->container['isOndemandResource'];
+    }
+
+    /**
+    * Sets isOndemandResource
+    *
+    * @param bool|null $isOndemandResource 是否是按需任务
+    *
+    * @return $this
+    */
+    public function setIsOndemandResource($isOndemandResource)
+    {
+        $this->container['isOndemandResource'] = $isOndemandResource;
         return $this;
     }
 

@@ -20,32 +20,32 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * vulId  漏洞ID
-    * type  漏洞类型   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * hostName  受影响主机名称
-    * hostIp  受影响主机ip
-    * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
-    * limit  每页条数
-    * offset  偏移量：指定返回记录的开始位置
-    * assetValue  资产重要性 important:重要 common：一般 test：测试
-    * groupName  服务器组名称
-    * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * severityLevel  危险程度 ，Critical，High，Medium，Low
-    * isAffectBusiness  是否影响业务
-    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高 - Medium 中 - Low 低
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 主机IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * vulId  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符范围0-64 **默认取值**: 不涉及
+    * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞  **默认取值**: 不涉及
+    * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
+    * assetValue  **参数解释**: 资产重要性 **约束限制**: 不涉及 **取值范围**: - important : 重要 - common    : 一般 - test      : 测试  **默认取值**: 不涉及
+    * groupName  **参数解释**: 服务器组名称 **约束限制**: 不涉及 **取值范围**: 字符范围0-256位  **默认取值**: 不涉及
+    * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled : 未处理 - handled   : 已处理  **默认取值**: 不涉及
+    * severityLevel  **参数解释**: 危险程度 **约束限制**: 不涉及 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危  可用逗号连接作为多选 **默认取值**: 不涉及
+    * isAffectBusiness  **参数解释**: 是否影响业务 **约束限制**: 不涉及 **取值范围**: - true  : 影响业务 - false : 不影响业务  **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高危 - Medium   : 中危 - Low      : 低危  可用逗号连接作为多选 **默认取值**:   不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'enterpriseProjectId' => 'string',
-            'vulId' => 'string',
-            'type' => 'string',
-            'hostName' => 'string',
-            'hostIp' => 'string',
-            'status' => 'string',
             'limit' => 'int',
             'offset' => 'int',
+            'hostName' => 'string',
+            'hostIp' => 'string',
+            'vulId' => 'string',
+            'type' => 'string',
+            'status' => 'string',
             'assetValue' => 'string',
             'groupName' => 'string',
             'handleStatus' => 'string',
@@ -56,32 +56,32 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * vulId  漏洞ID
-    * type  漏洞类型   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * hostName  受影响主机名称
-    * hostIp  受影响主机ip
-    * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
-    * limit  每页条数
-    * offset  偏移量：指定返回记录的开始位置
-    * assetValue  资产重要性 important:重要 common：一般 test：测试
-    * groupName  服务器组名称
-    * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * severityLevel  危险程度 ，Critical，High，Medium，Low
-    * isAffectBusiness  是否影响业务
-    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高 - Medium 中 - Low 低
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 主机IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * vulId  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符范围0-64 **默认取值**: 不涉及
+    * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞  **默认取值**: 不涉及
+    * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
+    * assetValue  **参数解释**: 资产重要性 **约束限制**: 不涉及 **取值范围**: - important : 重要 - common    : 一般 - test      : 测试  **默认取值**: 不涉及
+    * groupName  **参数解释**: 服务器组名称 **约束限制**: 不涉及 **取值范围**: 字符范围0-256位  **默认取值**: 不涉及
+    * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled : 未处理 - handled   : 已处理  **默认取值**: 不涉及
+    * severityLevel  **参数解释**: 危险程度 **约束限制**: 不涉及 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危  可用逗号连接作为多选 **默认取值**: 不涉及
+    * isAffectBusiness  **参数解释**: 是否影响业务 **约束限制**: 不涉及 **取值范围**: - true  : 影响业务 - false : 不影响业务  **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高危 - Medium   : 中危 - Low      : 低危  可用逗号连接作为多选 **默认取值**:   不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'enterpriseProjectId' => null,
-        'vulId' => null,
-        'type' => null,
-        'hostName' => null,
-        'hostIp' => null,
-        'status' => null,
         'limit' => 'int32',
         'offset' => 'int32',
+        'hostName' => null,
+        'hostIp' => null,
+        'vulId' => null,
+        'type' => null,
+        'status' => null,
         'assetValue' => null,
         'groupName' => null,
         'handleStatus' => null,
@@ -113,32 +113,32 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * vulId  漏洞ID
-    * type  漏洞类型   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * hostName  受影响主机名称
-    * hostIp  受影响主机ip
-    * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
-    * limit  每页条数
-    * offset  偏移量：指定返回记录的开始位置
-    * assetValue  资产重要性 important:重要 common：一般 test：测试
-    * groupName  服务器组名称
-    * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * severityLevel  危险程度 ，Critical，High，Medium，Low
-    * isAffectBusiness  是否影响业务
-    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高 - Medium 中 - Low 低
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 主机IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * vulId  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符范围0-64 **默认取值**: 不涉及
+    * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞  **默认取值**: 不涉及
+    * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
+    * assetValue  **参数解释**: 资产重要性 **约束限制**: 不涉及 **取值范围**: - important : 重要 - common    : 一般 - test      : 测试  **默认取值**: 不涉及
+    * groupName  **参数解释**: 服务器组名称 **约束限制**: 不涉及 **取值范围**: 字符范围0-256位  **默认取值**: 不涉及
+    * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled : 未处理 - handled   : 已处理  **默认取值**: 不涉及
+    * severityLevel  **参数解释**: 危险程度 **约束限制**: 不涉及 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危  可用逗号连接作为多选 **默认取值**: 不涉及
+    * isAffectBusiness  **参数解释**: 是否影响业务 **约束限制**: 不涉及 **取值范围**: - true  : 影响业务 - false : 不影响业务  **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高危 - Medium   : 中危 - Low      : 低危  可用逗号连接作为多选 **默认取值**:   不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'enterpriseProjectId' => 'enterprise_project_id',
-            'vulId' => 'vul_id',
-            'type' => 'type',
-            'hostName' => 'host_name',
-            'hostIp' => 'host_ip',
-            'status' => 'status',
             'limit' => 'limit',
             'offset' => 'offset',
+            'hostName' => 'host_name',
+            'hostIp' => 'host_ip',
+            'vulId' => 'vul_id',
+            'type' => 'type',
+            'status' => 'status',
             'assetValue' => 'asset_value',
             'groupName' => 'group_name',
             'handleStatus' => 'handle_status',
@@ -149,32 +149,32 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * vulId  漏洞ID
-    * type  漏洞类型   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * hostName  受影响主机名称
-    * hostIp  受影响主机ip
-    * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
-    * limit  每页条数
-    * offset  偏移量：指定返回记录的开始位置
-    * assetValue  资产重要性 important:重要 common：一般 test：测试
-    * groupName  服务器组名称
-    * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * severityLevel  危险程度 ，Critical，High，Medium，Low
-    * isAffectBusiness  是否影响业务
-    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高 - Medium 中 - Low 低
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 主机IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * vulId  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符范围0-64 **默认取值**: 不涉及
+    * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞  **默认取值**: 不涉及
+    * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
+    * assetValue  **参数解释**: 资产重要性 **约束限制**: 不涉及 **取值范围**: - important : 重要 - common    : 一般 - test      : 测试  **默认取值**: 不涉及
+    * groupName  **参数解释**: 服务器组名称 **约束限制**: 不涉及 **取值范围**: 字符范围0-256位  **默认取值**: 不涉及
+    * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled : 未处理 - handled   : 已处理  **默认取值**: 不涉及
+    * severityLevel  **参数解释**: 危险程度 **约束限制**: 不涉及 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危  可用逗号连接作为多选 **默认取值**: 不涉及
+    * isAffectBusiness  **参数解释**: 是否影响业务 **约束限制**: 不涉及 **取值范围**: - true  : 影响业务 - false : 不影响业务  **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高危 - Medium   : 中危 - Low      : 低危  可用逗号连接作为多选 **默认取值**:   不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'vulId' => 'setVulId',
-            'type' => 'setType',
-            'hostName' => 'setHostName',
-            'hostIp' => 'setHostIp',
-            'status' => 'setStatus',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
+            'hostName' => 'setHostName',
+            'hostIp' => 'setHostIp',
+            'vulId' => 'setVulId',
+            'type' => 'setType',
+            'status' => 'setStatus',
             'assetValue' => 'setAssetValue',
             'groupName' => 'setGroupName',
             'handleStatus' => 'setHandleStatus',
@@ -185,32 +185,32 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * vulId  漏洞ID
-    * type  漏洞类型   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * hostName  受影响主机名称
-    * hostIp  受影响主机ip
-    * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
-    * limit  每页条数
-    * offset  偏移量：指定返回记录的开始位置
-    * assetValue  资产重要性 important:重要 common：一般 test：测试
-    * groupName  服务器组名称
-    * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * severityLevel  危险程度 ，Critical，High，Medium，Low
-    * isAffectBusiness  是否影响业务
-    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高 - Medium 中 - Low 低
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 主机IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * vulId  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符范围0-64 **默认取值**: 不涉及
+    * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞  **默认取值**: 不涉及
+    * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
+    * assetValue  **参数解释**: 资产重要性 **约束限制**: 不涉及 **取值范围**: - important : 重要 - common    : 一般 - test      : 测试  **默认取值**: 不涉及
+    * groupName  **参数解释**: 服务器组名称 **约束限制**: 不涉及 **取值范围**: 字符范围0-256位  **默认取值**: 不涉及
+    * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled : 未处理 - handled   : 已处理  **默认取值**: 不涉及
+    * severityLevel  **参数解释**: 危险程度 **约束限制**: 不涉及 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危  可用逗号连接作为多选 **默认取值**: 不涉及
+    * isAffectBusiness  **参数解释**: 是否影响业务 **约束限制**: 不涉及 **取值范围**: - true  : 影响业务 - false : 不影响业务  **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高危 - Medium   : 中危 - Low      : 低危  可用逗号连接作为多选 **默认取值**:   不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'vulId' => 'getVulId',
-            'type' => 'getType',
-            'hostName' => 'getHostName',
-            'hostIp' => 'getHostIp',
-            'status' => 'getStatus',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
+            'hostName' => 'getHostName',
+            'hostIp' => 'getHostIp',
+            'vulId' => 'getVulId',
+            'type' => 'getType',
+            'status' => 'getStatus',
             'assetValue' => 'getAssetValue',
             'groupName' => 'getGroupName',
             'handleStatus' => 'getHandleStatus',
@@ -278,13 +278,13 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
-        $this->container['vulId'] = isset($data['vulId']) ? $data['vulId'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
-        $this->container['hostIp'] = isset($data['hostIp']) ? $data['hostIp'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
+        $this->container['hostIp'] = isset($data['hostIp']) ? $data['hostIp'] : null;
+        $this->container['vulId'] = isset($data['vulId']) ? $data['vulId'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['assetValue'] = isset($data['assetValue']) ? $data['assetValue'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['handleStatus'] = isset($data['handleStatus']) ? $data['handleStatus'] : null;
@@ -301,47 +301,14 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 128)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['vulId'] === null) {
-            $invalidProperties[] = "'vulId' can't be null";
-        }
-            if ((mb_strlen($this->container['vulId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'vulId', the character length must be smaller than or equal to 64.";
-            }
-            if ((mb_strlen($this->container['vulId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'vulId', the character length must be bigger than or equal to 0.";
-            }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-            if ((mb_strlen($this->container['type']) > 64)) {
-                $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 64.";
-            }
-            if ((mb_strlen($this->container['type']) < 0)) {
-                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) > 128)) {
-                $invalidProperties[] = "invalid value for 'hostIp', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) < 0)) {
-                $invalidProperties[] = "invalid value for 'hostIp', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 128)) {
-                $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
-                $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
@@ -355,11 +322,65 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostName']) && !preg_match("/^.*$/", $this->container['hostName'])) {
+                $invalidProperties[] = "invalid value for 'hostName', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) > 256)) {
+                $invalidProperties[] = "invalid value for 'hostIp', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostIp', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostIp']) && !preg_match("/^.*$/", $this->container['hostIp'])) {
+                $invalidProperties[] = "invalid value for 'hostIp', must be conform to the pattern /^.*$/.";
+            }
+        if ($this->container['vulId'] === null) {
+            $invalidProperties[] = "'vulId' can't be null";
+        }
+            if ((mb_strlen($this->container['vulId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'vulId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['vulId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'vulId', the character length must be bigger than or equal to 0.";
+            }
+            if (!preg_match("/^.*$/", $this->container['vulId'])) {
+                $invalidProperties[] = "invalid value for 'vulId', must be conform to the pattern /^.*$/.";
+            }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+            if ((mb_strlen($this->container['type']) > 64)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['type']) < 0)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
+            }
+            if (!preg_match("/^(linux_vul|windows_vul|web_cms|app_vul|urgent_vul)$/", $this->container['type'])) {
+                $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /^(linux_vul|windows_vul|web_cms|app_vul|urgent_vul)$/.";
+            }
+            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 128)) {
+                $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
+                $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['status']) && !preg_match("/^(vul_status_unfix|vul_status_unfix|vul_status_verified|vul_status_fixing|vul_status_fixed|vul_status_reboot|vul_status_failed|vul_status_fix_after_reboot)$/", $this->container['status'])) {
+                $invalidProperties[] = "invalid value for 'status', must be conform to the pattern /^(vul_status_unfix|vul_status_unfix|vul_status_verified|vul_status_fixing|vul_status_fixed|vul_status_reboot|vul_status_failed|vul_status_fix_after_reboot)$/.";
+            }
             if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) > 32)) {
                 $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 32.";
             }
             if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) < 0)) {
                 $invalidProperties[] = "invalid value for 'assetValue', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['assetValue']) && !preg_match("/^(important|common|test)$/", $this->container['assetValue'])) {
+                $invalidProperties[] = "invalid value for 'assetValue', must be conform to the pattern /^(important|common|test)$/.";
             }
             if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 256.";
@@ -367,11 +388,17 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['groupName']) && !preg_match("/^.*$/", $this->container['groupName'])) {
+                $invalidProperties[] = "invalid value for 'groupName', must be conform to the pattern /^.*$/.";
+            }
             if (!is_null($this->container['handleStatus']) && (mb_strlen($this->container['handleStatus']) > 32)) {
                 $invalidProperties[] = "invalid value for 'handleStatus', the character length must be smaller than or equal to 32.";
             }
             if (!is_null($this->container['handleStatus']) && (mb_strlen($this->container['handleStatus']) < 1)) {
                 $invalidProperties[] = "invalid value for 'handleStatus', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['handleStatus']) && !preg_match("/^(unhandled|handled)$/", $this->container['handleStatus'])) {
+                $invalidProperties[] = "invalid value for 'handleStatus', must be conform to the pattern /^(unhandled|handled)$/.";
             }
             if (!is_null($this->container['severityLevel']) && (mb_strlen($this->container['severityLevel']) > 32)) {
                 $invalidProperties[] = "invalid value for 'severityLevel', the character length must be smaller than or equal to 32.";
@@ -379,11 +406,17 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['severityLevel']) && (mb_strlen($this->container['severityLevel']) < 0)) {
                 $invalidProperties[] = "invalid value for 'severityLevel', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['severityLevel']) && !preg_match("/^.*$/", $this->container['severityLevel'])) {
+                $invalidProperties[] = "invalid value for 'severityLevel', must be conform to the pattern /^.*$/.";
+            }
             if (!is_null($this->container['repairPriority']) && (mb_strlen($this->container['repairPriority']) > 10)) {
                 $invalidProperties[] = "invalid value for 'repairPriority', the character length must be smaller than or equal to 10.";
             }
             if (!is_null($this->container['repairPriority']) && (mb_strlen($this->container['repairPriority']) < 1)) {
                 $invalidProperties[] = "invalid value for 'repairPriority', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['repairPriority']) && !preg_match("/^.*$/", $this->container['repairPriority'])) {
+                $invalidProperties[] = "invalid value for 'repairPriority', must be conform to the pattern /^.*$/.";
             }
         return $invalidProperties;
     }
@@ -401,7 +434,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return string|null
     */
@@ -413,7 +446,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return $this
     */
@@ -424,128 +457,8 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets vulId
-    *  漏洞ID
-    *
-    * @return string
-    */
-    public function getVulId()
-    {
-        return $this->container['vulId'];
-    }
-
-    /**
-    * Sets vulId
-    *
-    * @param string $vulId 漏洞ID
-    *
-    * @return $this
-    */
-    public function setVulId($vulId)
-    {
-        $this->container['vulId'] = $vulId;
-        return $this;
-    }
-
-    /**
-    * Gets type
-    *  漏洞类型   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    *
-    * @return string
-    */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-    * Sets type
-    *
-    * @param string $type 漏洞类型   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    *
-    * @return $this
-    */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
-        return $this;
-    }
-
-    /**
-    * Gets hostName
-    *  受影响主机名称
-    *
-    * @return string|null
-    */
-    public function getHostName()
-    {
-        return $this->container['hostName'];
-    }
-
-    /**
-    * Sets hostName
-    *
-    * @param string|null $hostName 受影响主机名称
-    *
-    * @return $this
-    */
-    public function setHostName($hostName)
-    {
-        $this->container['hostName'] = $hostName;
-        return $this;
-    }
-
-    /**
-    * Gets hostIp
-    *  受影响主机ip
-    *
-    * @return string|null
-    */
-    public function getHostIp()
-    {
-        return $this->container['hostIp'];
-    }
-
-    /**
-    * Sets hostIp
-    *
-    * @param string|null $hostIp 受影响主机ip
-    *
-    * @return $this
-    */
-    public function setHostIp($hostIp)
-    {
-        $this->container['hostIp'] = $hostIp;
-        return $this;
-    }
-
-    /**
-    * Gets status
-    *  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
-    *
-    * @return string|null
-    */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-    * Sets status
-    *
-    * @param string|null $status 漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
-    *
-    * @return $this
-    */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
-        return $this;
-    }
-
-    /**
     * Gets limit
-    *  每页条数
+    *  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return int|null
     */
@@ -557,7 +470,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页条数
+    * @param int|null $limit **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return $this
     */
@@ -569,7 +482,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置
+    *  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return int|null
     */
@@ -581,7 +494,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置
+    * @param int|null $offset **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return $this
     */
@@ -592,8 +505,128 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets hostName
+    *  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getHostName()
+    {
+        return $this->container['hostName'];
+    }
+
+    /**
+    * Sets hostName
+    *
+    * @param string|null $hostName **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setHostName($hostName)
+    {
+        $this->container['hostName'] = $hostName;
+        return $this;
+    }
+
+    /**
+    * Gets hostIp
+    *  **参数解释**: 主机IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getHostIp()
+    {
+        return $this->container['hostIp'];
+    }
+
+    /**
+    * Sets hostIp
+    *
+    * @param string|null $hostIp **参数解释**: 主机IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setHostIp($hostIp)
+    {
+        $this->container['hostIp'] = $hostIp;
+        return $this;
+    }
+
+    /**
+    * Gets vulId
+    *  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符范围0-64 **默认取值**: 不涉及
+    *
+    * @return string
+    */
+    public function getVulId()
+    {
+        return $this->container['vulId'];
+    }
+
+    /**
+    * Sets vulId
+    *
+    * @param string $vulId **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符范围0-64 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setVulId($vulId)
+    {
+        $this->container['vulId'] = $vulId;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞  **默认取值**: 不涉及
+    *
+    * @return string
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string $type **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞  **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
     * Gets assetValue
-    *  资产重要性 important:重要 common：一般 test：测试
+    *  **参数解释**: 资产重要性 **约束限制**: 不涉及 **取值范围**: - important : 重要 - common    : 一般 - test      : 测试  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -605,7 +638,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string|null $assetValue 资产重要性 important:重要 common：一般 test：测试
+    * @param string|null $assetValue **参数解释**: 资产重要性 **约束限制**: 不涉及 **取值范围**: - important : 重要 - common    : 一般 - test      : 测试  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -617,7 +650,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  服务器组名称
+    *  **参数解释**: 服务器组名称 **约束限制**: 不涉及 **取值范围**: 字符范围0-256位  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -629,7 +662,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 服务器组名称
+    * @param string|null $groupName **参数解释**: 服务器组名称 **约束限制**: 不涉及 **取值范围**: 字符范围0-256位  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -641,7 +674,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets handleStatus
-    *  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    *  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled : 未处理 - handled   : 已处理  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -653,7 +686,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets handleStatus
     *
-    * @param string|null $handleStatus 处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * @param string|null $handleStatus **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled : 未处理 - handled   : 已处理  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -665,7 +698,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets severityLevel
-    *  危险程度 ，Critical，High，Medium，Low
+    *  **参数解释**: 危险程度 **约束限制**: 不涉及 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危  可用逗号连接作为多选 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -677,7 +710,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets severityLevel
     *
-    * @param string|null $severityLevel 危险程度 ，Critical，High，Medium，Low
+    * @param string|null $severityLevel **参数解释**: 危险程度 **约束限制**: 不涉及 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危  可用逗号连接作为多选 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -689,7 +722,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAffectBusiness
-    *  是否影响业务
+    *  **参数解释**: 是否影响业务 **约束限制**: 不涉及 **取值范围**: - true  : 影响业务 - false : 不影响业务  **默认取值**: 不涉及
     *
     * @return bool|null
     */
@@ -701,7 +734,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isAffectBusiness
     *
-    * @param bool|null $isAffectBusiness 是否影响业务
+    * @param bool|null $isAffectBusiness **参数解释**: 是否影响业务 **约束限制**: 不涉及 **取值范围**: - true  : 影响业务 - false : 不影响业务  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -713,7 +746,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets repairPriority
-    *  修复优先级,包含如下 - Critical 紧急  - High 高 - Medium 中 - Low 低
+    *  **参数解释**: 修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高危 - Medium   : 中危 - Low      : 低危  可用逗号连接作为多选 **默认取值**:   不涉及
     *
     * @return string|null
     */
@@ -725,7 +758,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets repairPriority
     *
-    * @param string|null $repairPriority 修复优先级,包含如下 - Critical 紧急  - High 高 - Medium 中 - Low 低
+    * @param string|null $repairPriority **参数解释**: 修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高危 - Medium   : 中危 - Low      : 低危  可用逗号连接作为多选 **默认取值**:   不涉及
     *
     * @return $this
     */

@@ -22,24 +22,28 @@ class ResourceNameItem implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * resourceName  资源名称条件值
     * operator  实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   all表示全部
+    * resourceNameIsIgnoreCase  资源名称忽略大小写
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'resourceName' => 'string',
-            'operator' => 'string'
+            'operator' => 'string',
+            'resourceNameIsIgnoreCase' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceName  资源名称条件值
     * operator  实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   all表示全部
+    * resourceNameIsIgnoreCase  资源名称忽略大小写
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'resourceName' => null,
-        'operator' => null
+        'operator' => null,
+        'resourceNameIsIgnoreCase' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ResourceNameItem implements ModelInterface, ArrayAccess
     * and the value is the original name
     * resourceName  资源名称条件值
     * operator  实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   all表示全部
+    * resourceNameIsIgnoreCase  资源名称忽略大小写
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'resourceName' => 'resource_name',
-            'operator' => 'operator'
+            'operator' => 'operator',
+            'resourceNameIsIgnoreCase' => 'resource_name_is_ignore_case'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceName  资源名称条件值
     * operator  实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   all表示全部
+    * resourceNameIsIgnoreCase  资源名称忽略大小写
     *
     * @var string[]
     */
     protected static $setters = [
             'resourceName' => 'setResourceName',
-            'operator' => 'setOperator'
+            'operator' => 'setOperator',
+            'resourceNameIsIgnoreCase' => 'setResourceNameIsIgnoreCase'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceName  资源名称条件值
     * operator  实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   all表示全部
+    * resourceNameIsIgnoreCase  资源名称忽略大小写
     *
     * @var string[]
     */
     protected static $getters = [
             'resourceName' => 'getResourceName',
-            'operator' => 'getOperator'
+            'operator' => 'getOperator',
+            'resourceNameIsIgnoreCase' => 'getResourceNameIsIgnoreCase'
     ];
 
     /**
@@ -182,6 +192,7 @@ class ResourceNameItem implements ModelInterface, ArrayAccess
     {
         $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
         $this->container['operator'] = isset($data['operator']) ? $data['operator'] : null;
+        $this->container['resourceNameIsIgnoreCase'] = isset($data['resourceNameIsIgnoreCase']) ? $data['resourceNameIsIgnoreCase'] : null;
     }
 
     /**
@@ -268,6 +279,30 @@ class ResourceNameItem implements ModelInterface, ArrayAccess
     public function setOperator($operator)
     {
         $this->container['operator'] = $operator;
+        return $this;
+    }
+
+    /**
+    * Gets resourceNameIsIgnoreCase
+    *  资源名称忽略大小写
+    *
+    * @return bool|null
+    */
+    public function getResourceNameIsIgnoreCase()
+    {
+        return $this->container['resourceNameIsIgnoreCase'];
+    }
+
+    /**
+    * Sets resourceNameIsIgnoreCase
+    *
+    * @param bool|null $resourceNameIsIgnoreCase 资源名称忽略大小写
+    *
+    * @return $this
+    */
+    public function setResourceNameIsIgnoreCase($resourceNameIsIgnoreCase)
+    {
+        $this->container['resourceNameIsIgnoreCase'] = $resourceNameIsIgnoreCase;
         return $this;
     }
 

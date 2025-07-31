@@ -21,21 +21,25 @@ class OpExternalInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * reviewIdList  审核详情id列表
+    * algorithmFailureReason  算法侧失败原因
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'reviewIdList' => 'string[]'
+            'reviewIdList' => 'string[]',
+            'algorithmFailureReason' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * reviewIdList  审核详情id列表
+    * algorithmFailureReason  算法侧失败原因
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'reviewIdList' => null
+        'reviewIdList' => null,
+        'algorithmFailureReason' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class OpExternalInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * reviewIdList  审核详情id列表
+    * algorithmFailureReason  算法侧失败原因
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'reviewIdList' => 'review_id_list'
+            'reviewIdList' => 'review_id_list',
+            'algorithmFailureReason' => 'algorithm_failure_reason'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * reviewIdList  审核详情id列表
+    * algorithmFailureReason  算法侧失败原因
     *
     * @var string[]
     */
     protected static $setters = [
-            'reviewIdList' => 'setReviewIdList'
+            'reviewIdList' => 'setReviewIdList',
+            'algorithmFailureReason' => 'setAlgorithmFailureReason'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * reviewIdList  审核详情id列表
+    * algorithmFailureReason  算法侧失败原因
     *
     * @var string[]
     */
     protected static $getters = [
-            'reviewIdList' => 'getReviewIdList'
+            'reviewIdList' => 'getReviewIdList',
+            'algorithmFailureReason' => 'getAlgorithmFailureReason'
     ];
 
     /**
@@ -148,6 +158,7 @@ class OpExternalInfo implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['reviewIdList'] = isset($data['reviewIdList']) ? $data['reviewIdList'] : null;
+        $this->container['algorithmFailureReason'] = isset($data['algorithmFailureReason']) ? $data['algorithmFailureReason'] : null;
     }
 
     /**
@@ -158,6 +169,12 @@ class OpExternalInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['algorithmFailureReason']) && (mb_strlen($this->container['algorithmFailureReason']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'algorithmFailureReason', the character length must be smaller than or equal to 4096.";
+            }
+            if (!is_null($this->container['algorithmFailureReason']) && (mb_strlen($this->container['algorithmFailureReason']) < 0)) {
+                $invalidProperties[] = "invalid value for 'algorithmFailureReason', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -193,6 +210,30 @@ class OpExternalInfo implements ModelInterface, ArrayAccess
     public function setReviewIdList($reviewIdList)
     {
         $this->container['reviewIdList'] = $reviewIdList;
+        return $this;
+    }
+
+    /**
+    * Gets algorithmFailureReason
+    *  算法侧失败原因
+    *
+    * @return string|null
+    */
+    public function getAlgorithmFailureReason()
+    {
+        return $this->container['algorithmFailureReason'];
+    }
+
+    /**
+    * Sets algorithmFailureReason
+    *
+    * @param string|null $algorithmFailureReason 算法侧失败原因
+    *
+    * @return $this
+    */
+    public function setAlgorithmFailureReason($algorithmFailureReason)
+    {
+        $this->container['algorithmFailureReason'] = $algorithmFailureReason;
         return $this;
     }
 

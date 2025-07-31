@@ -20,7 +20,7 @@ class ValuesItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * values  所有版本列表。
+    * values  **参数解释：** 所有版本列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ValuesItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * values  所有版本列表。
+    * values  **参数解释：** 所有版本列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ValuesItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * values  所有版本列表。
+    * values  **参数解释：** 所有版本列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ValuesItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * values  所有版本列表。
+    * values  **参数解释：** 所有版本列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ValuesItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * values  所有版本列表。
+    * values  **参数解释：** 所有版本列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class ValuesItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  所有版本列表。
+    *  **参数解释：** 所有版本列表。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\ListApiVersionsItem[]|null
     */
@@ -186,7 +186,7 @@ class ValuesItem implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\ListApiVersionsItem[]|null $values 所有版本列表。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\ListApiVersionsItem[]|null $values **参数解释：** 所有版本列表。 **取值范围：** 不涉及。
     *
     * @return $this
     */

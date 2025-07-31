@@ -28,7 +28,7 @@ class ListPtrRecordsFloatingResp implements ModelInterface, ArrayAccess
     * status  资源状态。
     * action  对该资源的当前操作。  取值范围：CREATE，UPDATE，DELETE，NONE。 CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
-    * tags  资源标签。
+    * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
@@ -56,7 +56,7 @@ class ListPtrRecordsFloatingResp implements ModelInterface, ArrayAccess
     * status  资源状态。
     * action  对该资源的当前操作。  取值范围：CREATE，UPDATE，DELETE，NONE。 CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
-    * tags  资源标签。
+    * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
@@ -105,7 +105,7 @@ class ListPtrRecordsFloatingResp implements ModelInterface, ArrayAccess
     * status  资源状态。
     * action  对该资源的当前操作。  取值范围：CREATE，UPDATE，DELETE，NONE。 CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
-    * tags  资源标签。
+    * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
@@ -133,7 +133,7 @@ class ListPtrRecordsFloatingResp implements ModelInterface, ArrayAccess
     * status  资源状态。
     * action  对该资源的当前操作。  取值范围：CREATE，UPDATE，DELETE，NONE。 CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
-    * tags  资源标签。
+    * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
@@ -161,7 +161,7 @@ class ListPtrRecordsFloatingResp implements ModelInterface, ArrayAccess
     * status  资源状态。
     * action  对该资源的当前操作。  取值范围：CREATE，UPDATE，DELETE，NONE。 CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
-    * tags  资源标签。
+    * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
@@ -465,7 +465,7 @@ class ListPtrRecordsFloatingResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  资源标签。
+    *  **参数解释：** 资源标签。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\Tag[]|null
     */
@@ -477,7 +477,7 @@ class ListPtrRecordsFloatingResp implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Tag[]|null $tags 资源标签。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\Tag[]|null $tags **参数解释：** 资源标签。 **取值范围：** 不涉及。
     *
     * @return $this
     */

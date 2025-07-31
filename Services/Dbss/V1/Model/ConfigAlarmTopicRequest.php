@@ -24,9 +24,9 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     * alarmDisk  磁盘告警阈值(%)
     * alarmMemory  内存告警阈值(%)
     * alarmNum  每天发送告警总条数
-    * alarmRisk  告警等级 - high：高  - medium：中  - low：低
+    * alarmRisk  告警等级,默认为空。 - high：高  - medium：中  - low：低
     * alarmSwitch  通知开关 - ON：开启  - OFF：关闭
-    * alarmTopicUrn  通知消息主题URN,调用SMN服务接口获取
+    * alarmTopicUrn  通知消息主题URN,调用SMN服务接口获取。当alarm_switch为ON时必填
     *
     * @var string[]
     */
@@ -46,9 +46,9 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     * alarmDisk  磁盘告警阈值(%)
     * alarmMemory  内存告警阈值(%)
     * alarmNum  每天发送告警总条数
-    * alarmRisk  告警等级 - high：高  - medium：中  - low：低
+    * alarmRisk  告警等级,默认为空。 - high：高  - medium：中  - low：低
     * alarmSwitch  通知开关 - ON：开启  - OFF：关闭
-    * alarmTopicUrn  通知消息主题URN,调用SMN服务接口获取
+    * alarmTopicUrn  通知消息主题URN,调用SMN服务接口获取。当alarm_switch为ON时必填
     *
     * @var string[]
     */
@@ -89,9 +89,9 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     * alarmDisk  磁盘告警阈值(%)
     * alarmMemory  内存告警阈值(%)
     * alarmNum  每天发送告警总条数
-    * alarmRisk  告警等级 - high：高  - medium：中  - low：低
+    * alarmRisk  告警等级,默认为空。 - high：高  - medium：中  - low：低
     * alarmSwitch  通知开关 - ON：开启  - OFF：关闭
-    * alarmTopicUrn  通知消息主题URN,调用SMN服务接口获取
+    * alarmTopicUrn  通知消息主题URN,调用SMN服务接口获取。当alarm_switch为ON时必填
     *
     * @var string[]
     */
@@ -111,9 +111,9 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     * alarmDisk  磁盘告警阈值(%)
     * alarmMemory  内存告警阈值(%)
     * alarmNum  每天发送告警总条数
-    * alarmRisk  告警等级 - high：高  - medium：中  - low：低
+    * alarmRisk  告警等级,默认为空。 - high：高  - medium：中  - low：低
     * alarmSwitch  通知开关 - ON：开启  - OFF：关闭
-    * alarmTopicUrn  通知消息主题URN,调用SMN服务接口获取
+    * alarmTopicUrn  通知消息主题URN,调用SMN服务接口获取。当alarm_switch为ON时必填
     *
     * @var string[]
     */
@@ -133,9 +133,9 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     * alarmDisk  磁盘告警阈值(%)
     * alarmMemory  内存告警阈值(%)
     * alarmNum  每天发送告警总条数
-    * alarmRisk  告警等级 - high：高  - medium：中  - low：低
+    * alarmRisk  告警等级,默认为空。 - high：高  - medium：中  - low：低
     * alarmSwitch  通知开关 - ON：开启  - OFF：关闭
-    * alarmTopicUrn  通知消息主题URN,调用SMN服务接口获取
+    * alarmTopicUrn  通知消息主题URN,调用SMN服务接口获取。当alarm_switch为ON时必填
     *
     * @var string[]
     */
@@ -224,34 +224,49 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['alarmCpu']) && ($this->container['alarmCpu'] > 100)) {
+        if ($this->container['alarmCpu'] === null) {
+            $invalidProperties[] = "'alarmCpu' can't be null";
+        }
+            if (($this->container['alarmCpu'] > 100)) {
                 $invalidProperties[] = "invalid value for 'alarmCpu', must be smaller than or equal to 100.";
             }
-            if (!is_null($this->container['alarmCpu']) && ($this->container['alarmCpu'] < 1)) {
+            if (($this->container['alarmCpu'] < 1)) {
                 $invalidProperties[] = "invalid value for 'alarmCpu', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['alarmDisk']) && ($this->container['alarmDisk'] > 100)) {
+        if ($this->container['alarmDisk'] === null) {
+            $invalidProperties[] = "'alarmDisk' can't be null";
+        }
+            if (($this->container['alarmDisk'] > 100)) {
                 $invalidProperties[] = "invalid value for 'alarmDisk', must be smaller than or equal to 100.";
             }
-            if (!is_null($this->container['alarmDisk']) && ($this->container['alarmDisk'] < 1)) {
+            if (($this->container['alarmDisk'] < 1)) {
                 $invalidProperties[] = "invalid value for 'alarmDisk', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['alarmMemory']) && ($this->container['alarmMemory'] > 100)) {
+        if ($this->container['alarmMemory'] === null) {
+            $invalidProperties[] = "'alarmMemory' can't be null";
+        }
+            if (($this->container['alarmMemory'] > 100)) {
                 $invalidProperties[] = "invalid value for 'alarmMemory', must be smaller than or equal to 100.";
             }
-            if (!is_null($this->container['alarmMemory']) && ($this->container['alarmMemory'] < 1)) {
+            if (($this->container['alarmMemory'] < 1)) {
                 $invalidProperties[] = "invalid value for 'alarmMemory', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['alarmNum']) && ($this->container['alarmNum'] > 65535)) {
+        if ($this->container['alarmNum'] === null) {
+            $invalidProperties[] = "'alarmNum' can't be null";
+        }
+            if (($this->container['alarmNum'] > 65535)) {
                 $invalidProperties[] = "invalid value for 'alarmNum', must be smaller than or equal to 65535.";
             }
-            if (!is_null($this->container['alarmNum']) && ($this->container['alarmNum'] < 1)) {
+            if (($this->container['alarmNum'] < 1)) {
                 $invalidProperties[] = "invalid value for 'alarmNum', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['alarmSwitch']) && (mb_strlen($this->container['alarmSwitch']) > 32)) {
+        if ($this->container['alarmSwitch'] === null) {
+            $invalidProperties[] = "'alarmSwitch' can't be null";
+        }
+            if ((mb_strlen($this->container['alarmSwitch']) > 32)) {
                 $invalidProperties[] = "invalid value for 'alarmSwitch', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['alarmSwitch']) && (mb_strlen($this->container['alarmSwitch']) < 0)) {
+            if ((mb_strlen($this->container['alarmSwitch']) < 0)) {
                 $invalidProperties[] = "invalid value for 'alarmSwitch', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['alarmTopicUrn']) && (mb_strlen($this->container['alarmTopicUrn']) > 512)) {
@@ -278,7 +293,7 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     * Gets alarmCpu
     *  CPU告警阈值(%)
     *
-    * @return int|null
+    * @return int
     */
     public function getAlarmCpu()
     {
@@ -288,7 +303,7 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmCpu
     *
-    * @param int|null $alarmCpu CPU告警阈值(%)
+    * @param int $alarmCpu CPU告警阈值(%)
     *
     * @return $this
     */
@@ -302,7 +317,7 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     * Gets alarmDisk
     *  磁盘告警阈值(%)
     *
-    * @return int|null
+    * @return int
     */
     public function getAlarmDisk()
     {
@@ -312,7 +327,7 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmDisk
     *
-    * @param int|null $alarmDisk 磁盘告警阈值(%)
+    * @param int $alarmDisk 磁盘告警阈值(%)
     *
     * @return $this
     */
@@ -326,7 +341,7 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     * Gets alarmMemory
     *  内存告警阈值(%)
     *
-    * @return int|null
+    * @return int
     */
     public function getAlarmMemory()
     {
@@ -336,7 +351,7 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmMemory
     *
-    * @param int|null $alarmMemory 内存告警阈值(%)
+    * @param int $alarmMemory 内存告警阈值(%)
     *
     * @return $this
     */
@@ -350,7 +365,7 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     * Gets alarmNum
     *  每天发送告警总条数
     *
-    * @return int|null
+    * @return int
     */
     public function getAlarmNum()
     {
@@ -360,7 +375,7 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmNum
     *
-    * @param int|null $alarmNum 每天发送告警总条数
+    * @param int $alarmNum 每天发送告警总条数
     *
     * @return $this
     */
@@ -372,7 +387,7 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmRisk
-    *  告警等级 - high：高  - medium：中  - low：低
+    *  告警等级,默认为空。 - high：高  - medium：中  - low：低
     *
     * @return string[]|null
     */
@@ -384,7 +399,7 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmRisk
     *
-    * @param string[]|null $alarmRisk 告警等级 - high：高  - medium：中  - low：低
+    * @param string[]|null $alarmRisk 告警等级,默认为空。 - high：高  - medium：中  - low：低
     *
     * @return $this
     */
@@ -398,7 +413,7 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     * Gets alarmSwitch
     *  通知开关 - ON：开启  - OFF：关闭
     *
-    * @return string|null
+    * @return string
     */
     public function getAlarmSwitch()
     {
@@ -408,7 +423,7 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmSwitch
     *
-    * @param string|null $alarmSwitch 通知开关 - ON：开启  - OFF：关闭
+    * @param string $alarmSwitch 通知开关 - ON：开启  - OFF：关闭
     *
     * @return $this
     */
@@ -420,7 +435,7 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmTopicUrn
-    *  通知消息主题URN,调用SMN服务接口获取
+    *  通知消息主题URN,调用SMN服务接口获取。当alarm_switch为ON时必填
     *
     * @return string|null
     */
@@ -432,7 +447,7 @@ class ConfigAlarmTopicRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmTopicUrn
     *
-    * @param string|null $alarmTopicUrn 通知消息主题URN,调用SMN服务接口获取
+    * @param string|null $alarmTopicUrn 通知消息主题URN,调用SMN服务接口获取。当alarm_switch为ON时必填
     *
     * @return $this
     */

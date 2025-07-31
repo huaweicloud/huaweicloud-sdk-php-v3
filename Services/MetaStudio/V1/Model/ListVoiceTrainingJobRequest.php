@@ -35,6 +35,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * batchName  批次名称。
     * sortKey  排序字段，当前支持：ceate_time/update_time
     * sortDir  排序规则：desc(降序)/asc(升序)
+    * isOndemandResource  是否是按需任务
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'jobType' => 'string',
             'batchName' => 'string',
             'sortKey' => 'string',
-            'sortDir' => 'string'
+            'sortDir' => 'string',
+            'isOndemandResource' => 'bool'
     ];
 
     /**
@@ -73,6 +75,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * batchName  批次名称。
     * sortKey  排序字段，当前支持：ceate_time/update_time
     * sortDir  排序规则：desc(降序)/asc(升序)
+    * isOndemandResource  是否是按需任务
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
         'jobType' => null,
         'batchName' => null,
         'sortKey' => null,
-        'sortDir' => null
+        'sortDir' => null,
+        'isOndemandResource' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * batchName  批次名称。
     * sortKey  排序字段，当前支持：ceate_time/update_time
     * sortDir  排序规则：desc(降序)/asc(升序)
+    * isOndemandResource  是否是按需任务
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'jobType' => 'job_type',
             'batchName' => 'batch_name',
             'sortKey' => 'sort_key',
-            'sortDir' => 'sort_dir'
+            'sortDir' => 'sort_dir',
+            'isOndemandResource' => 'is_ondemand_resource'
     ];
 
     /**
@@ -170,6 +176,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * batchName  批次名称。
     * sortKey  排序字段，当前支持：ceate_time/update_time
     * sortDir  排序规则：desc(降序)/asc(升序)
+    * isOndemandResource  是否是按需任务
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'jobType' => 'setJobType',
             'batchName' => 'setBatchName',
             'sortKey' => 'setSortKey',
-            'sortDir' => 'setSortDir'
+            'sortDir' => 'setSortDir',
+            'isOndemandResource' => 'setIsOndemandResource'
     ];
 
     /**
@@ -208,6 +216,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * batchName  批次名称。
     * sortKey  排序字段，当前支持：ceate_time/update_time
     * sortDir  排序规则：desc(降序)/asc(升序)
+    * isOndemandResource  是否是按需任务
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'jobType' => 'getJobType',
             'batchName' => 'getBatchName',
             'sortKey' => 'getSortKey',
-            'sortDir' => 'getSortDir'
+            'sortDir' => 'getSortDir',
+            'isOndemandResource' => 'getIsOndemandResource'
     ];
 
     /**
@@ -302,6 +312,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
         $this->container['batchName'] = isset($data['batchName']) ? $data['batchName'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
+        $this->container['isOndemandResource'] = isset($data['isOndemandResource']) ? $data['isOndemandResource'] : null;
     }
 
     /**
@@ -773,6 +784,30 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     public function setSortDir($sortDir)
     {
         $this->container['sortDir'] = $sortDir;
+        return $this;
+    }
+
+    /**
+    * Gets isOndemandResource
+    *  是否是按需任务
+    *
+    * @return bool|null
+    */
+    public function getIsOndemandResource()
+    {
+        return $this->container['isOndemandResource'];
+    }
+
+    /**
+    * Sets isOndemandResource
+    *
+    * @param bool|null $isOndemandResource 是否是按需任务
+    *
+    * @return $this
+    */
+    public function setIsOndemandResource($isOndemandResource)
+    {
+        $this->container['isOndemandResource'] = $isOndemandResource;
         return $this;
     }
 

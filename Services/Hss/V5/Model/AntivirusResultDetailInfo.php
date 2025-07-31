@@ -24,13 +24,13 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     * malwareName  病毒名称
     * filePath  文件路径
     * fileHash  文件哈希
-    * fileSize  文件大小
+    * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  文件属主
     * fileAttr  文件属性
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
     * updateTime  更新时间，毫秒
-    * agentId  Agent ID
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -54,13 +54,13 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     * malwareName  病毒名称
     * filePath  文件路径
     * fileHash  文件哈希
-    * fileSize  文件大小
+    * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  文件属主
     * fileAttr  文件属性
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
     * updateTime  更新时间，毫秒
-    * agentId  Agent ID
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -105,13 +105,13 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     * malwareName  病毒名称
     * filePath  文件路径
     * fileHash  文件哈希
-    * fileSize  文件大小
+    * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  文件属主
     * fileAttr  文件属性
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
     * updateTime  更新时间，毫秒
-    * agentId  Agent ID
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -135,13 +135,13 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     * malwareName  病毒名称
     * filePath  文件路径
     * fileHash  文件哈希
-    * fileSize  文件大小
+    * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  文件属主
     * fileAttr  文件属性
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
     * updateTime  更新时间，毫秒
-    * agentId  Agent ID
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -165,13 +165,13 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     * malwareName  病毒名称
     * filePath  文件路径
     * fileHash  文件哈希
-    * fileSize  文件大小
+    * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  文件属主
     * fileAttr  文件属性
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
     * updateTime  更新时间，毫秒
-    * agentId  Agent ID
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -425,7 +425,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileSize
-    *  文件大小
+    *  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     *
     * @return int|null
     */
@@ -437,7 +437,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileSize
     *
-    * @param int|null $fileSize 文件大小
+    * @param int|null $fileSize **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -569,7 +569,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  Agent ID
+    *  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -581,7 +581,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId Agent ID
+    * @param string|null $agentId **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return $this
     */

@@ -20,50 +20,51 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
-    * agentStatus  Agent的状态分为两类： - installed：已安装。已安装状态包含以下四种情况：    - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。    - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。    - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。    - installing：安装中。表示当前正在进行Agent安装。 - not_installed ：未安装。表示服务器中尚未安装Agent。 如果您要筛选除在线以外所有状态的Agent，可设置not_online（仅作为查询条件）
-    * detectResult  检测结果，包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * hostStatus  主机状态，包含如下4种。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * privateIp  服务器私有IP
-    * publicIp  服务器公网IP
-    * ipAddr  公网或私网IP
-    * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。   - protection_exception ：防护异常。
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * vpcId  vpc id
     * region  Region ID
-    * hasIntrusion  存在告警事件
-    * hasVul  存在漏洞风险
-    * hasBaseline  存在基线风险
-    * sortKey  排序字段，只支持risk_num - risk_num：风险总量
-    * sortDir  排序的顺序 - asc: 正序 - desc: 倒序
-    * policyGroupId  策略组ID
-    * policyGroupName  策略组名称
-    * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
-    * refresh  是否强制从ECS同步主机
-    * getCommonLoginLocations  是否获取主机常用登录地信息
-    * aboveVersion  是否返回比当前版本高的所有版本
-    * outsideHost  是否华为云主机
-    * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * label  资产标签
-    * serverGroup  资产服务器组
-    * agentUpgradable  agent是否可升级
-    * installMode  是否安装模式场景
-    * bindingKey  是否绑定DEW密钥
-    * protectInterrupt  是否防护中断
-    * incluster  是否集群内节点
-    * protectDegradation  是否防护降级
-    * clusterId  集群ID
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * version  **参数解释**： 主机开通的版本 **约束限制**: 不涉及 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent的状态 **约束限制**: 不涉及 **取值范围**: Agent的状态分为两类： - installed：已安装。已安装状态包含以下四种情况：   - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。   - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。   - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。   - installing：安装中。表示当前正在进行Agent安装。 - not_installed ：未安装。表示服务器中尚未安装Agent。 如果您要筛选除在线以外所有状态的Agent，可设置not_online（仅作为查询条件） **默认取值**: 不涉及
+    * detectResult  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**: 包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。 **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostStatus  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下4种。 - ACTIVE ：正在运行。 - SHUTOFF ：关机。 - BUILDING ：创建中。 - ERROR ：故障。 **默认取值**: 不涉及
+    * osType  **参数解释**: 操作系统类型 **约束限制**: 不涉及 **取值范围**: 包含如下2种。 - Linux ：Linux。 - Windows ：Windows。 **默认取值**: 不涉及
+    * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * publicIp  服务器公网IP
+    * ipAddr  **参数解释**: 公网或私网IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种： - closed ：关闭。 - opened ：开启。 - protection_exception ：防护异常。 **默认取值**: 不涉及
+    * groupId  服务器组ID
+    * groupName  **参数解释**: 服务器组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * vpcId  **参数解释**: VPC的ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hasIntrusion  **参数解释**: 存在告警事件 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * hasVul  **参数解释**: 存在漏洞风险 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * hasBaseline  **参数解释**: 存在基线风险 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序字段 **约束限制**: 不涉及 **取值范围**: 只支持risk_num **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**: - asc: 正序 - desc: 倒序 **默认取值**: 不涉及
+    * policyGroupId  **参数解释**: 策略组ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * policyGroupName  **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * chargingMode  **参数解释**： 收费模式 **约束限制**: 不涉及 **取值范围**: - packet_cycle ：包年/包月。 - on_demand ：按需。 **默认取值**: 不涉及
+    * refresh  **参数解释** : 是否强制从ECS同步主机 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * getCommonLoginLocations  **参数解释** : 是否获取主机常用登录地信息 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * aboveVersion  **参数解释** : 是否返回比当前版本高的所有版本 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * outsideHost  **参数解释** : 是否华为云主机 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * assetValue  **参数解释** : 资产重要性 **约束限制** : 不涉及 **取值范围** : 包含如下4种 - important ：重要资产 - common ：一般资产 - test ：测试资产 **默认取值** : 不涉及
+    * label  **参数解释** : 资产标签 **约束限制** : 不涉及 **取值范围** : 字符长度1-64位 **默认取值** : 不涉及
+    * serverGroup  **参数解释** : 资产服务器组 **约束限制** : 不涉及 **取值范围** : 字符长度1-64位 **默认取值** : 不涉及
+    * agentUpgradable  **参数解释** : agent是否可升级 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * installMode  **参数解释** : 是否安装模式场景 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * bindingKey  **参数解释** : 是否绑定DEW密钥 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * protectInterrupt  **参数解释** : 是否防护中断 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * incluster  **参数解释** : 是否集群内节点 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * protectDegradation  **参数解释** : 是否防护降级 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * clusterId  **参数解释**: 集群ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'region' => 'string',
             'enterpriseProjectId' => 'string',
             'version' => 'string',
             'agentStatus' => 'string',
@@ -79,7 +80,6 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'groupId' => 'string',
             'groupName' => 'string',
             'vpcId' => 'string',
-            'region' => 'string',
             'hasIntrusion' => 'bool',
             'hasVul' => 'bool',
             'hasBaseline' => 'bool',
@@ -102,56 +102,57 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'incluster' => 'bool',
             'protectDegradation' => 'bool',
             'clusterId' => 'string',
-            'limit' => 'int',
-            'offset' => 'int'
+            'offset' => 'int',
+            'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
-    * agentStatus  Agent的状态分为两类： - installed：已安装。已安装状态包含以下四种情况：    - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。    - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。    - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。    - installing：安装中。表示当前正在进行Agent安装。 - not_installed ：未安装。表示服务器中尚未安装Agent。 如果您要筛选除在线以外所有状态的Agent，可设置not_online（仅作为查询条件）
-    * detectResult  检测结果，包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * hostStatus  主机状态，包含如下4种。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * privateIp  服务器私有IP
-    * publicIp  服务器公网IP
-    * ipAddr  公网或私网IP
-    * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。   - protection_exception ：防护异常。
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * vpcId  vpc id
     * region  Region ID
-    * hasIntrusion  存在告警事件
-    * hasVul  存在漏洞风险
-    * hasBaseline  存在基线风险
-    * sortKey  排序字段，只支持risk_num - risk_num：风险总量
-    * sortDir  排序的顺序 - asc: 正序 - desc: 倒序
-    * policyGroupId  策略组ID
-    * policyGroupName  策略组名称
-    * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
-    * refresh  是否强制从ECS同步主机
-    * getCommonLoginLocations  是否获取主机常用登录地信息
-    * aboveVersion  是否返回比当前版本高的所有版本
-    * outsideHost  是否华为云主机
-    * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * label  资产标签
-    * serverGroup  资产服务器组
-    * agentUpgradable  agent是否可升级
-    * installMode  是否安装模式场景
-    * bindingKey  是否绑定DEW密钥
-    * protectInterrupt  是否防护中断
-    * incluster  是否集群内节点
-    * protectDegradation  是否防护降级
-    * clusterId  集群ID
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * version  **参数解释**： 主机开通的版本 **约束限制**: 不涉及 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent的状态 **约束限制**: 不涉及 **取值范围**: Agent的状态分为两类： - installed：已安装。已安装状态包含以下四种情况：   - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。   - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。   - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。   - installing：安装中。表示当前正在进行Agent安装。 - not_installed ：未安装。表示服务器中尚未安装Agent。 如果您要筛选除在线以外所有状态的Agent，可设置not_online（仅作为查询条件） **默认取值**: 不涉及
+    * detectResult  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**: 包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。 **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostStatus  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下4种。 - ACTIVE ：正在运行。 - SHUTOFF ：关机。 - BUILDING ：创建中。 - ERROR ：故障。 **默认取值**: 不涉及
+    * osType  **参数解释**: 操作系统类型 **约束限制**: 不涉及 **取值范围**: 包含如下2种。 - Linux ：Linux。 - Windows ：Windows。 **默认取值**: 不涉及
+    * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * publicIp  服务器公网IP
+    * ipAddr  **参数解释**: 公网或私网IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种： - closed ：关闭。 - opened ：开启。 - protection_exception ：防护异常。 **默认取值**: 不涉及
+    * groupId  服务器组ID
+    * groupName  **参数解释**: 服务器组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * vpcId  **参数解释**: VPC的ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hasIntrusion  **参数解释**: 存在告警事件 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * hasVul  **参数解释**: 存在漏洞风险 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * hasBaseline  **参数解释**: 存在基线风险 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序字段 **约束限制**: 不涉及 **取值范围**: 只支持risk_num **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**: - asc: 正序 - desc: 倒序 **默认取值**: 不涉及
+    * policyGroupId  **参数解释**: 策略组ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * policyGroupName  **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * chargingMode  **参数解释**： 收费模式 **约束限制**: 不涉及 **取值范围**: - packet_cycle ：包年/包月。 - on_demand ：按需。 **默认取值**: 不涉及
+    * refresh  **参数解释** : 是否强制从ECS同步主机 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * getCommonLoginLocations  **参数解释** : 是否获取主机常用登录地信息 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * aboveVersion  **参数解释** : 是否返回比当前版本高的所有版本 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * outsideHost  **参数解释** : 是否华为云主机 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * assetValue  **参数解释** : 资产重要性 **约束限制** : 不涉及 **取值范围** : 包含如下4种 - important ：重要资产 - common ：一般资产 - test ：测试资产 **默认取值** : 不涉及
+    * label  **参数解释** : 资产标签 **约束限制** : 不涉及 **取值范围** : 字符长度1-64位 **默认取值** : 不涉及
+    * serverGroup  **参数解释** : 资产服务器组 **约束限制** : 不涉及 **取值范围** : 字符长度1-64位 **默认取值** : 不涉及
+    * agentUpgradable  **参数解释** : agent是否可升级 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * installMode  **参数解释** : 是否安装模式场景 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * bindingKey  **参数解释** : 是否绑定DEW密钥 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * protectInterrupt  **参数解释** : 是否防护中断 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * incluster  **参数解释** : 是否集群内节点 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * protectDegradation  **参数解释** : 是否防护降级 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * clusterId  **参数解释**: 集群ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'region' => null,
         'enterpriseProjectId' => null,
         'version' => null,
         'agentStatus' => null,
@@ -167,7 +168,6 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
         'groupId' => null,
         'groupName' => null,
         'vpcId' => null,
-        'region' => null,
         'hasIntrusion' => null,
         'hasVul' => null,
         'hasBaseline' => null,
@@ -190,8 +190,8 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
         'incluster' => null,
         'protectDegradation' => null,
         'clusterId' => null,
-        'limit' => 'int32',
-        'offset' => 'int32'
+        'offset' => 'int32',
+        'limit' => 'int32'
     ];
 
     /**
@@ -217,50 +217,51 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
-    * agentStatus  Agent的状态分为两类： - installed：已安装。已安装状态包含以下四种情况：    - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。    - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。    - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。    - installing：安装中。表示当前正在进行Agent安装。 - not_installed ：未安装。表示服务器中尚未安装Agent。 如果您要筛选除在线以外所有状态的Agent，可设置not_online（仅作为查询条件）
-    * detectResult  检测结果，包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * hostStatus  主机状态，包含如下4种。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * privateIp  服务器私有IP
-    * publicIp  服务器公网IP
-    * ipAddr  公网或私网IP
-    * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。   - protection_exception ：防护异常。
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * vpcId  vpc id
     * region  Region ID
-    * hasIntrusion  存在告警事件
-    * hasVul  存在漏洞风险
-    * hasBaseline  存在基线风险
-    * sortKey  排序字段，只支持risk_num - risk_num：风险总量
-    * sortDir  排序的顺序 - asc: 正序 - desc: 倒序
-    * policyGroupId  策略组ID
-    * policyGroupName  策略组名称
-    * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
-    * refresh  是否强制从ECS同步主机
-    * getCommonLoginLocations  是否获取主机常用登录地信息
-    * aboveVersion  是否返回比当前版本高的所有版本
-    * outsideHost  是否华为云主机
-    * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * label  资产标签
-    * serverGroup  资产服务器组
-    * agentUpgradable  agent是否可升级
-    * installMode  是否安装模式场景
-    * bindingKey  是否绑定DEW密钥
-    * protectInterrupt  是否防护中断
-    * incluster  是否集群内节点
-    * protectDegradation  是否防护降级
-    * clusterId  集群ID
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * version  **参数解释**： 主机开通的版本 **约束限制**: 不涉及 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent的状态 **约束限制**: 不涉及 **取值范围**: Agent的状态分为两类： - installed：已安装。已安装状态包含以下四种情况：   - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。   - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。   - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。   - installing：安装中。表示当前正在进行Agent安装。 - not_installed ：未安装。表示服务器中尚未安装Agent。 如果您要筛选除在线以外所有状态的Agent，可设置not_online（仅作为查询条件） **默认取值**: 不涉及
+    * detectResult  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**: 包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。 **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostStatus  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下4种。 - ACTIVE ：正在运行。 - SHUTOFF ：关机。 - BUILDING ：创建中。 - ERROR ：故障。 **默认取值**: 不涉及
+    * osType  **参数解释**: 操作系统类型 **约束限制**: 不涉及 **取值范围**: 包含如下2种。 - Linux ：Linux。 - Windows ：Windows。 **默认取值**: 不涉及
+    * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * publicIp  服务器公网IP
+    * ipAddr  **参数解释**: 公网或私网IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种： - closed ：关闭。 - opened ：开启。 - protection_exception ：防护异常。 **默认取值**: 不涉及
+    * groupId  服务器组ID
+    * groupName  **参数解释**: 服务器组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * vpcId  **参数解释**: VPC的ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hasIntrusion  **参数解释**: 存在告警事件 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * hasVul  **参数解释**: 存在漏洞风险 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * hasBaseline  **参数解释**: 存在基线风险 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序字段 **约束限制**: 不涉及 **取值范围**: 只支持risk_num **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**: - asc: 正序 - desc: 倒序 **默认取值**: 不涉及
+    * policyGroupId  **参数解释**: 策略组ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * policyGroupName  **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * chargingMode  **参数解释**： 收费模式 **约束限制**: 不涉及 **取值范围**: - packet_cycle ：包年/包月。 - on_demand ：按需。 **默认取值**: 不涉及
+    * refresh  **参数解释** : 是否强制从ECS同步主机 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * getCommonLoginLocations  **参数解释** : 是否获取主机常用登录地信息 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * aboveVersion  **参数解释** : 是否返回比当前版本高的所有版本 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * outsideHost  **参数解释** : 是否华为云主机 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * assetValue  **参数解释** : 资产重要性 **约束限制** : 不涉及 **取值范围** : 包含如下4种 - important ：重要资产 - common ：一般资产 - test ：测试资产 **默认取值** : 不涉及
+    * label  **参数解释** : 资产标签 **约束限制** : 不涉及 **取值范围** : 字符长度1-64位 **默认取值** : 不涉及
+    * serverGroup  **参数解释** : 资产服务器组 **约束限制** : 不涉及 **取值范围** : 字符长度1-64位 **默认取值** : 不涉及
+    * agentUpgradable  **参数解释** : agent是否可升级 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * installMode  **参数解释** : 是否安装模式场景 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * bindingKey  **参数解释** : 是否绑定DEW密钥 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * protectInterrupt  **参数解释** : 是否防护中断 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * incluster  **参数解释** : 是否集群内节点 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * protectDegradation  **参数解释** : 是否防护降级 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * clusterId  **参数解释**: 集群ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'region' => 'region',
             'enterpriseProjectId' => 'enterprise_project_id',
             'version' => 'version',
             'agentStatus' => 'agent_status',
@@ -276,7 +277,6 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'groupId' => 'group_id',
             'groupName' => 'group_name',
             'vpcId' => 'vpc_id',
-            'region' => 'region',
             'hasIntrusion' => 'has_intrusion',
             'hasVul' => 'has_vul',
             'hasBaseline' => 'has_baseline',
@@ -299,56 +299,57 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'incluster' => 'incluster',
             'protectDegradation' => 'protect_degradation',
             'clusterId' => 'cluster_id',
-            'limit' => 'limit',
-            'offset' => 'offset'
+            'offset' => 'offset',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
-    * agentStatus  Agent的状态分为两类： - installed：已安装。已安装状态包含以下四种情况：    - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。    - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。    - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。    - installing：安装中。表示当前正在进行Agent安装。 - not_installed ：未安装。表示服务器中尚未安装Agent。 如果您要筛选除在线以外所有状态的Agent，可设置not_online（仅作为查询条件）
-    * detectResult  检测结果，包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * hostStatus  主机状态，包含如下4种。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * privateIp  服务器私有IP
-    * publicIp  服务器公网IP
-    * ipAddr  公网或私网IP
-    * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。   - protection_exception ：防护异常。
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * vpcId  vpc id
     * region  Region ID
-    * hasIntrusion  存在告警事件
-    * hasVul  存在漏洞风险
-    * hasBaseline  存在基线风险
-    * sortKey  排序字段，只支持risk_num - risk_num：风险总量
-    * sortDir  排序的顺序 - asc: 正序 - desc: 倒序
-    * policyGroupId  策略组ID
-    * policyGroupName  策略组名称
-    * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
-    * refresh  是否强制从ECS同步主机
-    * getCommonLoginLocations  是否获取主机常用登录地信息
-    * aboveVersion  是否返回比当前版本高的所有版本
-    * outsideHost  是否华为云主机
-    * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * label  资产标签
-    * serverGroup  资产服务器组
-    * agentUpgradable  agent是否可升级
-    * installMode  是否安装模式场景
-    * bindingKey  是否绑定DEW密钥
-    * protectInterrupt  是否防护中断
-    * incluster  是否集群内节点
-    * protectDegradation  是否防护降级
-    * clusterId  集群ID
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * version  **参数解释**： 主机开通的版本 **约束限制**: 不涉及 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent的状态 **约束限制**: 不涉及 **取值范围**: Agent的状态分为两类： - installed：已安装。已安装状态包含以下四种情况：   - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。   - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。   - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。   - installing：安装中。表示当前正在进行Agent安装。 - not_installed ：未安装。表示服务器中尚未安装Agent。 如果您要筛选除在线以外所有状态的Agent，可设置not_online（仅作为查询条件） **默认取值**: 不涉及
+    * detectResult  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**: 包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。 **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostStatus  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下4种。 - ACTIVE ：正在运行。 - SHUTOFF ：关机。 - BUILDING ：创建中。 - ERROR ：故障。 **默认取值**: 不涉及
+    * osType  **参数解释**: 操作系统类型 **约束限制**: 不涉及 **取值范围**: 包含如下2种。 - Linux ：Linux。 - Windows ：Windows。 **默认取值**: 不涉及
+    * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * publicIp  服务器公网IP
+    * ipAddr  **参数解释**: 公网或私网IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种： - closed ：关闭。 - opened ：开启。 - protection_exception ：防护异常。 **默认取值**: 不涉及
+    * groupId  服务器组ID
+    * groupName  **参数解释**: 服务器组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * vpcId  **参数解释**: VPC的ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hasIntrusion  **参数解释**: 存在告警事件 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * hasVul  **参数解释**: 存在漏洞风险 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * hasBaseline  **参数解释**: 存在基线风险 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序字段 **约束限制**: 不涉及 **取值范围**: 只支持risk_num **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**: - asc: 正序 - desc: 倒序 **默认取值**: 不涉及
+    * policyGroupId  **参数解释**: 策略组ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * policyGroupName  **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * chargingMode  **参数解释**： 收费模式 **约束限制**: 不涉及 **取值范围**: - packet_cycle ：包年/包月。 - on_demand ：按需。 **默认取值**: 不涉及
+    * refresh  **参数解释** : 是否强制从ECS同步主机 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * getCommonLoginLocations  **参数解释** : 是否获取主机常用登录地信息 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * aboveVersion  **参数解释** : 是否返回比当前版本高的所有版本 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * outsideHost  **参数解释** : 是否华为云主机 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * assetValue  **参数解释** : 资产重要性 **约束限制** : 不涉及 **取值范围** : 包含如下4种 - important ：重要资产 - common ：一般资产 - test ：测试资产 **默认取值** : 不涉及
+    * label  **参数解释** : 资产标签 **约束限制** : 不涉及 **取值范围** : 字符长度1-64位 **默认取值** : 不涉及
+    * serverGroup  **参数解释** : 资产服务器组 **约束限制** : 不涉及 **取值范围** : 字符长度1-64位 **默认取值** : 不涉及
+    * agentUpgradable  **参数解释** : agent是否可升级 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * installMode  **参数解释** : 是否安装模式场景 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * bindingKey  **参数解释** : 是否绑定DEW密钥 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * protectInterrupt  **参数解释** : 是否防护中断 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * incluster  **参数解释** : 是否集群内节点 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * protectDegradation  **参数解释** : 是否防护降级 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * clusterId  **参数解释**: 集群ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @var string[]
     */
     protected static $setters = [
+            'region' => 'setRegion',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'version' => 'setVersion',
             'agentStatus' => 'setAgentStatus',
@@ -364,7 +365,6 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'groupId' => 'setGroupId',
             'groupName' => 'setGroupName',
             'vpcId' => 'setVpcId',
-            'region' => 'setRegion',
             'hasIntrusion' => 'setHasIntrusion',
             'hasVul' => 'setHasVul',
             'hasBaseline' => 'setHasBaseline',
@@ -387,56 +387,57 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'incluster' => 'setIncluster',
             'protectDegradation' => 'setProtectDegradation',
             'clusterId' => 'setClusterId',
-            'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'offset' => 'setOffset',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
-    * agentStatus  Agent的状态分为两类： - installed：已安装。已安装状态包含以下四种情况：    - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。    - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。    - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。    - installing：安装中。表示当前正在进行Agent安装。 - not_installed ：未安装。表示服务器中尚未安装Agent。 如果您要筛选除在线以外所有状态的Agent，可设置not_online（仅作为查询条件）
-    * detectResult  检测结果，包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * hostStatus  主机状态，包含如下4种。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * privateIp  服务器私有IP
-    * publicIp  服务器公网IP
-    * ipAddr  公网或私网IP
-    * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。   - protection_exception ：防护异常。
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * vpcId  vpc id
     * region  Region ID
-    * hasIntrusion  存在告警事件
-    * hasVul  存在漏洞风险
-    * hasBaseline  存在基线风险
-    * sortKey  排序字段，只支持risk_num - risk_num：风险总量
-    * sortDir  排序的顺序 - asc: 正序 - desc: 倒序
-    * policyGroupId  策略组ID
-    * policyGroupName  策略组名称
-    * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
-    * refresh  是否强制从ECS同步主机
-    * getCommonLoginLocations  是否获取主机常用登录地信息
-    * aboveVersion  是否返回比当前版本高的所有版本
-    * outsideHost  是否华为云主机
-    * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * label  资产标签
-    * serverGroup  资产服务器组
-    * agentUpgradable  agent是否可升级
-    * installMode  是否安装模式场景
-    * bindingKey  是否绑定DEW密钥
-    * protectInterrupt  是否防护中断
-    * incluster  是否集群内节点
-    * protectDegradation  是否防护降级
-    * clusterId  集群ID
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * version  **参数解释**： 主机开通的版本 **约束限制**: 不涉及 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent的状态 **约束限制**: 不涉及 **取值范围**: Agent的状态分为两类： - installed：已安装。已安装状态包含以下四种情况：   - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。   - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。   - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。   - installing：安装中。表示当前正在进行Agent安装。 - not_installed ：未安装。表示服务器中尚未安装Agent。 如果您要筛选除在线以外所有状态的Agent，可设置not_online（仅作为查询条件） **默认取值**: 不涉及
+    * detectResult  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**: 包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。 **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostStatus  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下4种。 - ACTIVE ：正在运行。 - SHUTOFF ：关机。 - BUILDING ：创建中。 - ERROR ：故障。 **默认取值**: 不涉及
+    * osType  **参数解释**: 操作系统类型 **约束限制**: 不涉及 **取值范围**: 包含如下2种。 - Linux ：Linux。 - Windows ：Windows。 **默认取值**: 不涉及
+    * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * publicIp  服务器公网IP
+    * ipAddr  **参数解释**: 公网或私网IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种： - closed ：关闭。 - opened ：开启。 - protection_exception ：防护异常。 **默认取值**: 不涉及
+    * groupId  服务器组ID
+    * groupName  **参数解释**: 服务器组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * vpcId  **参数解释**: VPC的ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hasIntrusion  **参数解释**: 存在告警事件 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * hasVul  **参数解释**: 存在漏洞风险 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * hasBaseline  **参数解释**: 存在基线风险 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序字段 **约束限制**: 不涉及 **取值范围**: 只支持risk_num **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**: - asc: 正序 - desc: 倒序 **默认取值**: 不涉及
+    * policyGroupId  **参数解释**: 策略组ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * policyGroupName  **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * chargingMode  **参数解释**： 收费模式 **约束限制**: 不涉及 **取值范围**: - packet_cycle ：包年/包月。 - on_demand ：按需。 **默认取值**: 不涉及
+    * refresh  **参数解释** : 是否强制从ECS同步主机 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * getCommonLoginLocations  **参数解释** : 是否获取主机常用登录地信息 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * aboveVersion  **参数解释** : 是否返回比当前版本高的所有版本 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * outsideHost  **参数解释** : 是否华为云主机 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * assetValue  **参数解释** : 资产重要性 **约束限制** : 不涉及 **取值范围** : 包含如下4种 - important ：重要资产 - common ：一般资产 - test ：测试资产 **默认取值** : 不涉及
+    * label  **参数解释** : 资产标签 **约束限制** : 不涉及 **取值范围** : 字符长度1-64位 **默认取值** : 不涉及
+    * serverGroup  **参数解释** : 资产服务器组 **约束限制** : 不涉及 **取值范围** : 字符长度1-64位 **默认取值** : 不涉及
+    * agentUpgradable  **参数解释** : agent是否可升级 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * installMode  **参数解释** : 是否安装模式场景 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * bindingKey  **参数解释** : 是否绑定DEW密钥 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * protectInterrupt  **参数解释** : 是否防护中断 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * incluster  **参数解释** : 是否集群内节点 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * protectDegradation  **参数解释** : 是否防护降级 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
+    * clusterId  **参数解释**: 集群ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @var string[]
     */
     protected static $getters = [
+            'region' => 'getRegion',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'version' => 'getVersion',
             'agentStatus' => 'getAgentStatus',
@@ -452,7 +453,6 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'groupId' => 'getGroupId',
             'groupName' => 'getGroupName',
             'vpcId' => 'getVpcId',
-            'region' => 'getRegion',
             'hasIntrusion' => 'getHasIntrusion',
             'hasVul' => 'getHasVul',
             'hasBaseline' => 'getHasBaseline',
@@ -475,8 +475,8 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'incluster' => 'getIncluster',
             'protectDegradation' => 'getProtectDegradation',
             'clusterId' => 'getClusterId',
-            'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'offset' => 'getOffset',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -537,6 +537,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['agentStatus'] = isset($data['agentStatus']) ? $data['agentStatus'] : null;
@@ -552,7 +553,6 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
-        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['hasIntrusion'] = isset($data['hasIntrusion']) ? $data['hasIntrusion'] : null;
         $this->container['hasVul'] = isset($data['hasVul']) ? $data['hasVul'] : null;
         $this->container['hasBaseline'] = isset($data['hasBaseline']) ? $data['hasBaseline'] : null;
@@ -575,8 +575,8 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
         $this->container['incluster'] = isset($data['incluster']) ? $data['incluster'] : null;
         $this->container['protectDegradation'] = isset($data['protectDegradation']) ? $data['protectDegradation'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -587,6 +587,15 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 128)) {
+                $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) < 0)) {
+                $invalidProperties[] = "invalid value for 'region', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['region']) && !preg_match("/^.*$/", $this->container['region'])) {
+                $invalidProperties[] = "invalid value for 'region', must be conform to the pattern /^.*$/.";
+            }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 256)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 256.";
             }
@@ -614,8 +623,20 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['detectResult']) && (mb_strlen($this->container['detectResult']) < 1)) {
                 $invalidProperties[] = "invalid value for 'detectResult', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['hostName']) && !preg_match("/^.*$/", $this->container['hostName'])) {
                 $invalidProperties[] = "invalid value for 'hostName', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['hostId']) && !preg_match("/^.*$/", $this->container['hostId'])) {
                 $invalidProperties[] = "invalid value for 'hostId', must be conform to the pattern /^.*$/.";
@@ -632,8 +653,20 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'osType', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) > 128)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) < 1)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['privateIp']) && !preg_match("/^.*$/", $this->container['privateIp'])) {
                 $invalidProperties[] = "invalid value for 'privateIp', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) > 128)) {
+                $invalidProperties[] = "invalid value for 'publicIp', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) < 1)) {
+                $invalidProperties[] = "invalid value for 'publicIp', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['publicIp']) && !preg_match("/^.*$/", $this->container['publicIp'])) {
                 $invalidProperties[] = "invalid value for 'publicIp', must be conform to the pattern /^.*$/.";
@@ -649,6 +682,12 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['protectStatus']) && !preg_match("/^.*$/", $this->container['protectStatus'])) {
                 $invalidProperties[] = "invalid value for 'protectStatus', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['groupId']) && !preg_match("/^.*$/", $this->container['groupId'])) {
                 $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /^.*$/.";
@@ -670,15 +709,6 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['vpcId']) && !preg_match("/^.*$/", $this->container['vpcId'])) {
                 $invalidProperties[] = "invalid value for 'vpcId', must be conform to the pattern /^.*$/.";
-            }
-            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 128)) {
-                $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) < 0)) {
-                $invalidProperties[] = "invalid value for 'region', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['region']) && !preg_match("/^.*$/", $this->container['region'])) {
-                $invalidProperties[] = "invalid value for 'region', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['sortKey']) && !preg_match("/^risk_num$/", $this->container['sortKey'])) {
                 $invalidProperties[] = "invalid value for 'sortKey', must be conform to the pattern /^risk_num$/.";
@@ -731,17 +761,17 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['clusterId']) && !preg_match("/^.*$/", $this->container['clusterId'])) {
                 $invalidProperties[] = "invalid value for 'clusterId', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 2000000)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
             }
         return $invalidProperties;
     }
@@ -758,8 +788,32 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets region
+    *  Region ID
+    *
+    * @return string|null
+    */
+    public function getRegion()
+    {
+        return $this->container['region'];
+    }
+
+    /**
+    * Sets region
+    *
+    * @param string|null $region Region ID
+    *
+    * @return $this
+    */
+    public function setRegion($region)
+    {
+        $this->container['region'] = $region;
+        return $this;
+    }
+
+    /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return string|null
     */
@@ -771,7 +825,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return $this
     */
@@ -783,7 +837,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
+    *  **参数解释**： 主机开通的版本 **约束限制**: 不涉及 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -795,7 +849,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
+    * @param string|null $version **参数解释**： 主机开通的版本 **约束限制**: 不涉及 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -807,7 +861,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentStatus
-    *  Agent的状态分为两类： - installed：已安装。已安装状态包含以下四种情况：    - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。    - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。    - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。    - installing：安装中。表示当前正在进行Agent安装。 - not_installed ：未安装。表示服务器中尚未安装Agent。 如果您要筛选除在线以外所有状态的Agent，可设置not_online（仅作为查询条件）
+    *  **参数解释**: Agent的状态 **约束限制**: 不涉及 **取值范围**: Agent的状态分为两类： - installed：已安装。已安装状态包含以下四种情况：   - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。   - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。   - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。   - installing：安装中。表示当前正在进行Agent安装。 - not_installed ：未安装。表示服务器中尚未安装Agent。 如果您要筛选除在线以外所有状态的Agent，可设置not_online（仅作为查询条件） **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -819,7 +873,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets agentStatus
     *
-    * @param string|null $agentStatus Agent的状态分为两类： - installed：已安装。已安装状态包含以下四种情况：    - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。    - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。    - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。    - installing：安装中。表示当前正在进行Agent安装。 - not_installed ：未安装。表示服务器中尚未安装Agent。 如果您要筛选除在线以外所有状态的Agent，可设置not_online（仅作为查询条件）
+    * @param string|null $agentStatus **参数解释**: Agent的状态 **约束限制**: 不涉及 **取值范围**: Agent的状态分为两类： - installed：已安装。已安装状态包含以下四种情况：   - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。   - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。   - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。   - installing：安装中。表示当前正在进行Agent安装。 - not_installed ：未安装。表示服务器中尚未安装Agent。 如果您要筛选除在线以外所有状态的Agent，可设置not_online（仅作为查询条件） **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -831,7 +885,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets detectResult
-    *  检测结果，包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。
+    *  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**: 包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -843,7 +897,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets detectResult
     *
-    * @param string|null $detectResult 检测结果，包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。
+    * @param string|null $detectResult **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**: 包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -855,7 +909,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -867,7 +921,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -879,7 +933,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -891,7 +945,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器ID
+    * @param string|null $hostId **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -903,7 +957,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostStatus
-    *  主机状态，包含如下4种。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
+    *  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下4种。 - ACTIVE ：正在运行。 - SHUTOFF ：关机。 - BUILDING ：创建中。 - ERROR ：故障。 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -915,7 +969,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostStatus
     *
-    * @param string|null $hostStatus 主机状态，包含如下4种。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
+    * @param string|null $hostStatus **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下4种。 - ACTIVE ：正在运行。 - SHUTOFF ：关机。 - BUILDING ：创建中。 - ERROR ：故障。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -927,7 +981,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    *  **参数解释**: 操作系统类型 **约束限制**: 不涉及 **取值范围**: 包含如下2种。 - Linux ：Linux。 - Windows ：Windows。 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -939,7 +993,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * @param string|null $osType **参数解释**: 操作系统类型 **约束限制**: 不涉及 **取值范围**: 包含如下2种。 - Linux ：Linux。 - Windows ：Windows。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -951,7 +1005,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  服务器私有IP
+    *  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -963,7 +1017,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp 服务器私有IP
+    * @param string|null $privateIp **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -999,7 +1053,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipAddr
-    *  公网或私网IP
+    *  **参数解释**: 公网或私网IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -1011,7 +1065,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ipAddr
     *
-    * @param string|null $ipAddr 公网或私网IP
+    * @param string|null $ipAddr **参数解释**: 公网或私网IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1023,7 +1077,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。   - protection_exception ：防护异常。
+    *  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种： - closed ：关闭。 - opened ：开启。 - protection_exception ：防护异常。 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -1035,7 +1089,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus 防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。   - protection_exception ：防护异常。
+    * @param string|null $protectStatus **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种： - closed ：关闭。 - opened ：开启。 - protection_exception ：防护异常。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1071,7 +1125,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  服务器组名称
+    *  **参数解释**: 服务器组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -1083,7 +1137,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 服务器组名称
+    * @param string|null $groupName **参数解释**: 服务器组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1095,7 +1149,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  vpc id
+    *  **参数解释**: VPC的ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -1107,7 +1161,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId vpc id
+    * @param string|null $vpcId **参数解释**: VPC的ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1118,32 +1172,8 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets region
-    *  Region ID
-    *
-    * @return string|null
-    */
-    public function getRegion()
-    {
-        return $this->container['region'];
-    }
-
-    /**
-    * Sets region
-    *
-    * @param string|null $region Region ID
-    *
-    * @return $this
-    */
-    public function setRegion($region)
-    {
-        $this->container['region'] = $region;
-        return $this;
-    }
-
-    /**
     * Gets hasIntrusion
-    *  存在告警事件
+    *  **参数解释**: 存在告警事件 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
     *
     * @return bool|null
     */
@@ -1155,7 +1185,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hasIntrusion
     *
-    * @param bool|null $hasIntrusion 存在告警事件
+    * @param bool|null $hasIntrusion **参数解释**: 存在告警事件 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1167,7 +1197,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hasVul
-    *  存在漏洞风险
+    *  **参数解释**: 存在漏洞风险 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
     *
     * @return bool|null
     */
@@ -1179,7 +1209,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hasVul
     *
-    * @param bool|null $hasVul 存在漏洞风险
+    * @param bool|null $hasVul **参数解释**: 存在漏洞风险 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1191,7 +1221,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hasBaseline
-    *  存在基线风险
+    *  **参数解释**: 存在基线风险 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
     *
     * @return bool|null
     */
@@ -1203,7 +1233,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hasBaseline
     *
-    * @param bool|null $hasBaseline 存在基线风险
+    * @param bool|null $hasBaseline **参数解释**: 存在基线风险 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1215,7 +1245,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  排序字段，只支持risk_num - risk_num：风险总量
+    *  **参数解释**: 排序字段 **约束限制**: 不涉及 **取值范围**: 只支持risk_num **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -1227,7 +1257,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 排序字段，只支持risk_num - risk_num：风险总量
+    * @param string|null $sortKey **参数解释**: 排序字段 **约束限制**: 不涉及 **取值范围**: 只支持risk_num **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1239,7 +1269,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortDir
-    *  排序的顺序 - asc: 正序 - desc: 倒序
+    *  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**: - asc: 正序 - desc: 倒序 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -1251,7 +1281,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir 排序的顺序 - asc: 正序 - desc: 倒序
+    * @param string|null $sortDir **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**: - asc: 正序 - desc: 倒序 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1263,7 +1293,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyGroupId
-    *  策略组ID
+    *  **参数解释**: 策略组ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -1275,7 +1305,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets policyGroupId
     *
-    * @param string|null $policyGroupId 策略组ID
+    * @param string|null $policyGroupId **参数解释**: 策略组ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1287,7 +1317,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyGroupName
-    *  策略组名称
+    *  **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -1299,7 +1329,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets policyGroupName
     *
-    * @param string|null $policyGroupName 策略组名称
+    * @param string|null $policyGroupName **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1311,7 +1341,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
+    *  **参数解释**： 收费模式 **约束限制**: 不涉及 **取值范围**: - packet_cycle ：包年/包月。 - on_demand ：按需。 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -1323,7 +1353,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string|null $chargingMode 收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
+    * @param string|null $chargingMode **参数解释**： 收费模式 **约束限制**: 不涉及 **取值范围**: - packet_cycle ：包年/包月。 - on_demand ：按需。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1335,7 +1365,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets refresh
-    *  是否强制从ECS同步主机
+    *  **参数解释** : 是否强制从ECS同步主机 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return bool|null
     */
@@ -1347,7 +1377,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets refresh
     *
-    * @param bool|null $refresh 是否强制从ECS同步主机
+    * @param bool|null $refresh **参数解释** : 是否强制从ECS同步主机 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return $this
     */
@@ -1359,7 +1389,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets getCommonLoginLocations
-    *  是否获取主机常用登录地信息
+    *  **参数解释** : 是否获取主机常用登录地信息 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return bool|null
     */
@@ -1371,7 +1401,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets getCommonLoginLocations
     *
-    * @param bool|null $getCommonLoginLocations 是否获取主机常用登录地信息
+    * @param bool|null $getCommonLoginLocations **参数解释** : 是否获取主机常用登录地信息 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return $this
     */
@@ -1383,7 +1413,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets aboveVersion
-    *  是否返回比当前版本高的所有版本
+    *  **参数解释** : 是否返回比当前版本高的所有版本 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return bool|null
     */
@@ -1395,7 +1425,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets aboveVersion
     *
-    * @param bool|null $aboveVersion 是否返回比当前版本高的所有版本
+    * @param bool|null $aboveVersion **参数解释** : 是否返回比当前版本高的所有版本 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return $this
     */
@@ -1407,7 +1437,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets outsideHost
-    *  是否华为云主机
+    *  **参数解释** : 是否华为云主机 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return bool|null
     */
@@ -1419,7 +1449,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets outsideHost
     *
-    * @param bool|null $outsideHost 是否华为云主机
+    * @param bool|null $outsideHost **参数解释** : 是否华为云主机 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return $this
     */
@@ -1431,7 +1461,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetValue
-    *  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    *  **参数解释** : 资产重要性 **约束限制** : 不涉及 **取值范围** : 包含如下4种 - important ：重要资产 - common ：一般资产 - test ：测试资产 **默认取值** : 不涉及
     *
     * @return string|null
     */
@@ -1443,7 +1473,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string|null $assetValue 资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * @param string|null $assetValue **参数解释** : 资产重要性 **约束限制** : 不涉及 **取值范围** : 包含如下4种 - important ：重要资产 - common ：一般资产 - test ：测试资产 **默认取值** : 不涉及
     *
     * @return $this
     */
@@ -1455,7 +1485,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets label
-    *  资产标签
+    *  **参数解释** : 资产标签 **约束限制** : 不涉及 **取值范围** : 字符长度1-64位 **默认取值** : 不涉及
     *
     * @return string|null
     */
@@ -1467,7 +1497,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets label
     *
-    * @param string|null $label 资产标签
+    * @param string|null $label **参数解释** : 资产标签 **约束限制** : 不涉及 **取值范围** : 字符长度1-64位 **默认取值** : 不涉及
     *
     * @return $this
     */
@@ -1479,7 +1509,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverGroup
-    *  资产服务器组
+    *  **参数解释** : 资产服务器组 **约束限制** : 不涉及 **取值范围** : 字符长度1-64位 **默认取值** : 不涉及
     *
     * @return string|null
     */
@@ -1491,7 +1521,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets serverGroup
     *
-    * @param string|null $serverGroup 资产服务器组
+    * @param string|null $serverGroup **参数解释** : 资产服务器组 **约束限制** : 不涉及 **取值范围** : 字符长度1-64位 **默认取值** : 不涉及
     *
     * @return $this
     */
@@ -1503,7 +1533,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentUpgradable
-    *  agent是否可升级
+    *  **参数解释** : agent是否可升级 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return bool|null
     */
@@ -1515,7 +1545,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets agentUpgradable
     *
-    * @param bool|null $agentUpgradable agent是否可升级
+    * @param bool|null $agentUpgradable **参数解释** : agent是否可升级 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return $this
     */
@@ -1527,7 +1557,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets installMode
-    *  是否安装模式场景
+    *  **参数解释** : 是否安装模式场景 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return bool|null
     */
@@ -1539,7 +1569,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets installMode
     *
-    * @param bool|null $installMode 是否安装模式场景
+    * @param bool|null $installMode **参数解释** : 是否安装模式场景 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return $this
     */
@@ -1551,7 +1581,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets bindingKey
-    *  是否绑定DEW密钥
+    *  **参数解释** : 是否绑定DEW密钥 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return bool|null
     */
@@ -1563,7 +1593,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets bindingKey
     *
-    * @param bool|null $bindingKey 是否绑定DEW密钥
+    * @param bool|null $bindingKey **参数解释** : 是否绑定DEW密钥 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return $this
     */
@@ -1575,7 +1605,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectInterrupt
-    *  是否防护中断
+    *  **参数解释** : 是否防护中断 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return bool|null
     */
@@ -1587,7 +1617,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protectInterrupt
     *
-    * @param bool|null $protectInterrupt 是否防护中断
+    * @param bool|null $protectInterrupt **参数解释** : 是否防护中断 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return $this
     */
@@ -1599,7 +1629,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets incluster
-    *  是否集群内节点
+    *  **参数解释** : 是否集群内节点 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return bool|null
     */
@@ -1611,7 +1641,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets incluster
     *
-    * @param bool|null $incluster 是否集群内节点
+    * @param bool|null $incluster **参数解释** : 是否集群内节点 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return $this
     */
@@ -1623,7 +1653,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectDegradation
-    *  是否防护降级
+    *  **参数解释** : 是否防护降级 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return bool|null
     */
@@ -1635,7 +1665,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protectDegradation
     *
-    * @param bool|null $protectDegradation 是否防护降级
+    * @param bool|null $protectDegradation **参数解释** : 是否防护降级 **约束限制** : 不涉及 **取值范围** : true或者false **默认取值** : 不涉及
     *
     * @return $this
     */
@@ -1647,7 +1677,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群ID
+    *  **参数解释**: 集群ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -1659,7 +1689,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群ID
+    * @param string|null $clusterId **参数解释**: 集群ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1670,32 +1700,8 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets limit
-    *  每页显示数量
-    *
-    * @return int|null
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param int|null $limit 每页显示数量
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-        return $this;
-    }
-
-    /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置
+    *  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return int|null
     */
@@ -1707,13 +1713,37 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置
+    * @param int|null $offset **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return $this
     */
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

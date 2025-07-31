@@ -20,8 +20,8 @@ class ProcessStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * path  进程的可执行文件路径
-    * num  进程数量
+    * path  **参数解释** : 进程的可执行文件路径 **约束限制** : 不涉及 **取值范围** : 字符长度1-256位 **默认取值** : 不涉及
+    * num  **参数解释** : 进程数量 **约束限制** : 不涉及 **取值范围** : 最小值0，最大值10000 **默认取值** : 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ProcessStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * path  进程的可执行文件路径
-    * num  进程数量
+    * path  **参数解释** : 进程的可执行文件路径 **约束限制** : 不涉及 **取值范围** : 字符长度1-256位 **默认取值** : 不涉及
+    * num  **参数解释** : 进程数量 **约束限制** : 不涉及 **取值范围** : 最小值0，最大值10000 **默认取值** : 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ProcessStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * path  进程的可执行文件路径
-    * num  进程数量
+    * path  **参数解释** : 进程的可执行文件路径 **约束限制** : 不涉及 **取值范围** : 字符长度1-256位 **默认取值** : 不涉及
+    * num  **参数解释** : 进程数量 **约束限制** : 不涉及 **取值范围** : 最小值0，最大值10000 **默认取值** : 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ProcessStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * path  进程的可执行文件路径
-    * num  进程数量
+    * path  **参数解释** : 进程的可执行文件路径 **约束限制** : 不涉及 **取值范围** : 字符长度1-256位 **默认取值** : 不涉及
+    * num  **参数解释** : 进程数量 **约束限制** : 不涉及 **取值范围** : 最小值0，最大值10000 **默认取值** : 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ProcessStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * path  进程的可执行文件路径
-    * num  进程数量
+    * path  **参数解释** : 进程的可执行文件路径 **约束限制** : 不涉及 **取值范围** : 字符长度1-256位 **默认取值** : 不涉及
+    * num  **参数解释** : 进程数量 **约束限制** : 不涉及 **取值范围** : 最小值0，最大值10000 **默认取值** : 不涉及
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ProcessStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  进程的可执行文件路径
+    *  **参数解释** : 进程的可执行文件路径 **约束限制** : 不涉及 **取值范围** : 字符长度1-256位 **默认取值** : 不涉及
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class ProcessStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string|null $path 进程的可执行文件路径
+    * @param string|null $path **参数解释** : 进程的可执行文件路径 **约束限制** : 不涉及 **取值范围** : 字符长度1-256位 **默认取值** : 不涉及
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ProcessStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets num
-    *  进程数量
+    *  **参数解释** : 进程数量 **约束限制** : 不涉及 **取值范围** : 最小值0，最大值10000 **默认取值** : 不涉及
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class ProcessStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets num
     *
-    * @param int|null $num 进程数量
+    * @param int|null $num **参数解释** : 进程数量 **约束限制** : 不涉及 **取值范围** : 最小值0，最大值10000 **默认取值** : 不涉及
     *
     * @return $this
     */

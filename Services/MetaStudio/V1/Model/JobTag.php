@@ -13,6 +13,10 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     const ECOMMERCE = 'ECOMMERCE';
     const NEWS = 'NEWS';
     const MARKETING = 'MARKETING';
+    const LIVE = 'LIVE';
+    const EDUCATION = 'EDUCATION';
+    const CUSTOMER = 'CUSTOMER';
+    const STORYTELLING = 'STORYTELLING';
     
     /**
      * Gets allowable values of the enum
@@ -24,6 +28,10 @@ use HuaweiCloud\SDK\Core\SdkResponse;
             self::ECOMMERCE,
             self::NEWS,
             self::MARKETING,
+            self::LIVE,
+            self::EDUCATION,
+            self::CUSTOMER,
+            self::STORYTELLING,
         ];
     }
 }

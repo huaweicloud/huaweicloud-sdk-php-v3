@@ -23,8 +23,8 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     * instanceId  主机id
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * invocationId  任务id
-    * invocationType  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退，RETRY 重试
-    * invocationTarget  任务对象，目前仅支持telescope
+    * invocationType  任务类型, INSTALL安装, UPDATE升级, ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALLER设置远程安装主机，REMOTE_INSTALL执行远程安装
+    * invocationTarget  任务对象, 支持 telescope监控
     * offset  分页偏移量
     * limit  分页大小
     *
@@ -45,8 +45,8 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     * instanceId  主机id
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * invocationId  任务id
-    * invocationType  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退，RETRY 重试
-    * invocationTarget  任务对象，目前仅支持telescope
+    * invocationType  任务类型, INSTALL安装, UPDATE升级, ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALLER设置远程安装主机，REMOTE_INSTALL执行远程安装
+    * invocationTarget  任务对象, 支持 telescope监控
     * offset  分页偏移量
     * limit  分页大小
     *
@@ -58,8 +58,8 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
         'invocationId' => null,
         'invocationType' => null,
         'invocationTarget' => null,
-        'offset' => null,
-        'limit' => null
+        'offset' => 'int64',
+        'limit' => 'int32'
     ];
 
     /**
@@ -88,8 +88,8 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     * instanceId  主机id
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * invocationId  任务id
-    * invocationType  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退，RETRY 重试
-    * invocationTarget  任务对象，目前仅支持telescope
+    * invocationType  任务类型, INSTALL安装, UPDATE升级, ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALLER设置远程安装主机，REMOTE_INSTALL执行远程安装
+    * invocationTarget  任务对象, 支持 telescope监控
     * offset  分页偏移量
     * limit  分页大小
     *
@@ -110,8 +110,8 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     * instanceId  主机id
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * invocationId  任务id
-    * invocationType  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退，RETRY 重试
-    * invocationTarget  任务对象，目前仅支持telescope
+    * invocationType  任务类型, INSTALL安装, UPDATE升级, ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALLER设置远程安装主机，REMOTE_INSTALL执行远程安装
+    * invocationTarget  任务对象, 支持 telescope监控
     * offset  分页偏移量
     * limit  分页大小
     *
@@ -132,8 +132,8 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     * instanceId  主机id
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * invocationId  任务id
-    * invocationType  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退，RETRY 重试
-    * invocationTarget  任务对象，目前仅支持telescope
+    * invocationType  任务类型, INSTALL安装, UPDATE升级, ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALLER设置远程安装主机，REMOTE_INSTALL执行远程安装
+    * invocationTarget  任务对象, 支持 telescope监控
     * offset  分页偏移量
     * limit  分页大小
     *
@@ -195,6 +195,8 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     const INVOCATION_TYPE_UPDATE = 'UPDATE';
     const INVOCATION_TYPE_ROLLBACK = 'ROLLBACK';
     const INVOCATION_TYPE_RETRY = 'RETRY';
+    const INVOCATION_TYPE_SET_REMOTE_INSTALLER = 'SET_REMOTE_INSTALLER';
+    const INVOCATION_TYPE_REMOTE_INSTALL = 'REMOTE_INSTALL';
     const INVOCATION_TARGET_TELESCOPE = 'telescope';
     
 
@@ -223,6 +225,8 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
             self::INVOCATION_TYPE_UPDATE,
             self::INVOCATION_TYPE_ROLLBACK,
             self::INVOCATION_TYPE_RETRY,
+            self::INVOCATION_TYPE_SET_REMOTE_INSTALLER,
+            self::INVOCATION_TYPE_REMOTE_INSTALL,
         ];
     }
 
@@ -401,7 +405,7 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocationType
-    *  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退，RETRY 重试
+    *  任务类型, INSTALL安装, UPDATE升级, ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALLER设置远程安装主机，REMOTE_INSTALL执行远程安装
     *
     * @return string|null
     */
@@ -413,7 +417,7 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets invocationType
     *
-    * @param string|null $invocationType 任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退，RETRY 重试
+    * @param string|null $invocationType 任务类型, INSTALL安装, UPDATE升级, ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALLER设置远程安装主机，REMOTE_INSTALL执行远程安装
     *
     * @return $this
     */
@@ -425,7 +429,7 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocationTarget
-    *  任务对象，目前仅支持telescope
+    *  任务对象, 支持 telescope监控
     *
     * @return string|null
     */
@@ -437,7 +441,7 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets invocationTarget
     *
-    * @param string|null $invocationTarget 任务对象，目前仅支持telescope
+    * @param string|null $invocationTarget 任务对象, 支持 telescope监控
     *
     * @return $this
     */

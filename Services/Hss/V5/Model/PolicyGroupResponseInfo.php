@@ -20,14 +20,15 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupName  策略组名
-    * groupId  策略组ID
-    * description  策略组的描述信息
-    * deletable  是否允许删除该策略组
-    * hostNum  影响主机数量
-    * defaultGroup  是否是默认策略组
-    * supportOs  支持的操作系统，包含如下:   - Linux ：支持Linux系统   - Windows : 支持Windows系统
-    * supportVersion  支持的版本，包含如下:   - hss.version.basic ：基础版策略组   - hss.version.advanced : 专业版策略组   - hss.version.enterprise : 企业版策略组   - hss.version.premium : 旗舰版策略组   - hss.version.wtp : 网页防篡改版策略组   - hss.version.container.enterprise : 容器版策略组
+    * groupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-256位
+    * groupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-256位
+    * description  **参数解释**: 策略组描述 **取值范围**: 字符长度0-64位
+    * hostNum  **参数解释**: 关联服务器数 **取值范围**: 取值0-1000000
+    * defaultGroup  **参数解释**: 是否是默认策略组 **取值范围**: true: 是默认策略组 false: 不是默认策略组
+    * deletable  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: true: 支持删除 false: 不支持删除
+    * supportOs  **参数解释**: 支持的操作系统 **取值范围**: Linux: 支持Linux操作系统 Windows: 支持Windows操作系统
+    * supportVersion  **参数解释**: 支持的版本 **取值范围**: hss.version.advanced: 专业版 hss.version.enterprise: 企业版 hss.version.premium: 旗舰版 hss.version.wtp: 网页防篡改版 hss.version.container.enterprise: 容器版
+    * protectMode  **参数解释**: 防护模式 **取值范围**: high_detection: 高检出模式 equalization: 均衡模式
     *
     * @var string[]
     */
@@ -35,23 +36,25 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
             'groupName' => 'string',
             'groupId' => 'string',
             'description' => 'string',
-            'deletable' => 'bool',
             'hostNum' => 'int',
             'defaultGroup' => 'bool',
+            'deletable' => 'bool',
             'supportOs' => 'string',
-            'supportVersion' => 'string'
+            'supportVersion' => 'string',
+            'protectMode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupName  策略组名
-    * groupId  策略组ID
-    * description  策略组的描述信息
-    * deletable  是否允许删除该策略组
-    * hostNum  影响主机数量
-    * defaultGroup  是否是默认策略组
-    * supportOs  支持的操作系统，包含如下:   - Linux ：支持Linux系统   - Windows : 支持Windows系统
-    * supportVersion  支持的版本，包含如下:   - hss.version.basic ：基础版策略组   - hss.version.advanced : 专业版策略组   - hss.version.enterprise : 企业版策略组   - hss.version.premium : 旗舰版策略组   - hss.version.wtp : 网页防篡改版策略组   - hss.version.container.enterprise : 容器版策略组
+    * groupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-256位
+    * groupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-256位
+    * description  **参数解释**: 策略组描述 **取值范围**: 字符长度0-64位
+    * hostNum  **参数解释**: 关联服务器数 **取值范围**: 取值0-1000000
+    * defaultGroup  **参数解释**: 是否是默认策略组 **取值范围**: true: 是默认策略组 false: 不是默认策略组
+    * deletable  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: true: 支持删除 false: 不支持删除
+    * supportOs  **参数解释**: 支持的操作系统 **取值范围**: Linux: 支持Linux操作系统 Windows: 支持Windows操作系统
+    * supportVersion  **参数解释**: 支持的版本 **取值范围**: hss.version.advanced: 专业版 hss.version.enterprise: 企业版 hss.version.premium: 旗舰版 hss.version.wtp: 网页防篡改版 hss.version.container.enterprise: 容器版
+    * protectMode  **参数解释**: 防护模式 **取值范围**: high_detection: 高检出模式 equalization: 均衡模式
     *
     * @var string[]
     */
@@ -59,11 +62,12 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
         'groupName' => null,
         'groupId' => null,
         'description' => null,
-        'deletable' => null,
-        'hostNum' => 'int32',
+        'hostNum' => null,
         'defaultGroup' => null,
+        'deletable' => null,
         'supportOs' => null,
-        'supportVersion' => null
+        'supportVersion' => null,
+        'protectMode' => null
     ];
 
     /**
@@ -89,14 +93,15 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupName  策略组名
-    * groupId  策略组ID
-    * description  策略组的描述信息
-    * deletable  是否允许删除该策略组
-    * hostNum  影响主机数量
-    * defaultGroup  是否是默认策略组
-    * supportOs  支持的操作系统，包含如下:   - Linux ：支持Linux系统   - Windows : 支持Windows系统
-    * supportVersion  支持的版本，包含如下:   - hss.version.basic ：基础版策略组   - hss.version.advanced : 专业版策略组   - hss.version.enterprise : 企业版策略组   - hss.version.premium : 旗舰版策略组   - hss.version.wtp : 网页防篡改版策略组   - hss.version.container.enterprise : 容器版策略组
+    * groupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-256位
+    * groupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-256位
+    * description  **参数解释**: 策略组描述 **取值范围**: 字符长度0-64位
+    * hostNum  **参数解释**: 关联服务器数 **取值范围**: 取值0-1000000
+    * defaultGroup  **参数解释**: 是否是默认策略组 **取值范围**: true: 是默认策略组 false: 不是默认策略组
+    * deletable  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: true: 支持删除 false: 不支持删除
+    * supportOs  **参数解释**: 支持的操作系统 **取值范围**: Linux: 支持Linux操作系统 Windows: 支持Windows操作系统
+    * supportVersion  **参数解释**: 支持的版本 **取值范围**: hss.version.advanced: 专业版 hss.version.enterprise: 企业版 hss.version.premium: 旗舰版 hss.version.wtp: 网页防篡改版 hss.version.container.enterprise: 容器版
+    * protectMode  **参数解释**: 防护模式 **取值范围**: high_detection: 高检出模式 equalization: 均衡模式
     *
     * @var string[]
     */
@@ -104,23 +109,25 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
             'groupName' => 'group_name',
             'groupId' => 'group_id',
             'description' => 'description',
-            'deletable' => 'deletable',
             'hostNum' => 'host_num',
             'defaultGroup' => 'default_group',
+            'deletable' => 'deletable',
             'supportOs' => 'support_os',
-            'supportVersion' => 'support_version'
+            'supportVersion' => 'support_version',
+            'protectMode' => 'protect_mode'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupName  策略组名
-    * groupId  策略组ID
-    * description  策略组的描述信息
-    * deletable  是否允许删除该策略组
-    * hostNum  影响主机数量
-    * defaultGroup  是否是默认策略组
-    * supportOs  支持的操作系统，包含如下:   - Linux ：支持Linux系统   - Windows : 支持Windows系统
-    * supportVersion  支持的版本，包含如下:   - hss.version.basic ：基础版策略组   - hss.version.advanced : 专业版策略组   - hss.version.enterprise : 企业版策略组   - hss.version.premium : 旗舰版策略组   - hss.version.wtp : 网页防篡改版策略组   - hss.version.container.enterprise : 容器版策略组
+    * groupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-256位
+    * groupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-256位
+    * description  **参数解释**: 策略组描述 **取值范围**: 字符长度0-64位
+    * hostNum  **参数解释**: 关联服务器数 **取值范围**: 取值0-1000000
+    * defaultGroup  **参数解释**: 是否是默认策略组 **取值范围**: true: 是默认策略组 false: 不是默认策略组
+    * deletable  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: true: 支持删除 false: 不支持删除
+    * supportOs  **参数解释**: 支持的操作系统 **取值范围**: Linux: 支持Linux操作系统 Windows: 支持Windows操作系统
+    * supportVersion  **参数解释**: 支持的版本 **取值范围**: hss.version.advanced: 专业版 hss.version.enterprise: 企业版 hss.version.premium: 旗舰版 hss.version.wtp: 网页防篡改版 hss.version.container.enterprise: 容器版
+    * protectMode  **参数解释**: 防护模式 **取值范围**: high_detection: 高检出模式 equalization: 均衡模式
     *
     * @var string[]
     */
@@ -128,23 +135,25 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
             'groupName' => 'setGroupName',
             'groupId' => 'setGroupId',
             'description' => 'setDescription',
-            'deletable' => 'setDeletable',
             'hostNum' => 'setHostNum',
             'defaultGroup' => 'setDefaultGroup',
+            'deletable' => 'setDeletable',
             'supportOs' => 'setSupportOs',
-            'supportVersion' => 'setSupportVersion'
+            'supportVersion' => 'setSupportVersion',
+            'protectMode' => 'setProtectMode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupName  策略组名
-    * groupId  策略组ID
-    * description  策略组的描述信息
-    * deletable  是否允许删除该策略组
-    * hostNum  影响主机数量
-    * defaultGroup  是否是默认策略组
-    * supportOs  支持的操作系统，包含如下:   - Linux ：支持Linux系统   - Windows : 支持Windows系统
-    * supportVersion  支持的版本，包含如下:   - hss.version.basic ：基础版策略组   - hss.version.advanced : 专业版策略组   - hss.version.enterprise : 企业版策略组   - hss.version.premium : 旗舰版策略组   - hss.version.wtp : 网页防篡改版策略组   - hss.version.container.enterprise : 容器版策略组
+    * groupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-256位
+    * groupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-256位
+    * description  **参数解释**: 策略组描述 **取值范围**: 字符长度0-64位
+    * hostNum  **参数解释**: 关联服务器数 **取值范围**: 取值0-1000000
+    * defaultGroup  **参数解释**: 是否是默认策略组 **取值范围**: true: 是默认策略组 false: 不是默认策略组
+    * deletable  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: true: 支持删除 false: 不支持删除
+    * supportOs  **参数解释**: 支持的操作系统 **取值范围**: Linux: 支持Linux操作系统 Windows: 支持Windows操作系统
+    * supportVersion  **参数解释**: 支持的版本 **取值范围**: hss.version.advanced: 专业版 hss.version.enterprise: 企业版 hss.version.premium: 旗舰版 hss.version.wtp: 网页防篡改版 hss.version.container.enterprise: 容器版
+    * protectMode  **参数解释**: 防护模式 **取值范围**: high_detection: 高检出模式 equalization: 均衡模式
     *
     * @var string[]
     */
@@ -152,11 +161,12 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
             'groupName' => 'getGroupName',
             'groupId' => 'getGroupId',
             'description' => 'getDescription',
-            'deletable' => 'getDeletable',
             'hostNum' => 'getHostNum',
             'defaultGroup' => 'getDefaultGroup',
+            'deletable' => 'getDeletable',
             'supportOs' => 'getSupportOs',
-            'supportVersion' => 'getSupportVersion'
+            'supportVersion' => 'getSupportVersion',
+            'protectMode' => 'getProtectMode'
     ];
 
     /**
@@ -220,11 +230,12 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['deletable'] = isset($data['deletable']) ? $data['deletable'] : null;
         $this->container['hostNum'] = isset($data['hostNum']) ? $data['hostNum'] : null;
         $this->container['defaultGroup'] = isset($data['defaultGroup']) ? $data['defaultGroup'] : null;
+        $this->container['deletable'] = isset($data['deletable']) ? $data['deletable'] : null;
         $this->container['supportOs'] = isset($data['supportOs']) ? $data['supportOs'] : null;
         $this->container['supportVersion'] = isset($data['supportVersion']) ? $data['supportVersion'] : null;
+        $this->container['protectMode'] = isset($data['protectMode']) ? $data['protectMode'] : null;
     }
 
     /**
@@ -235,38 +246,47 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 32)) {
-                $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 32.";
+            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['groupName']) && !preg_match("/^.*$/", $this->container['groupName'])) {
-                $invalidProperties[] = "invalid value for 'groupName', must be conform to the pattern /^.*$/.";
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 36.";
-            }
-            if (!is_null($this->container['groupId']) && !preg_match("/^.*$/", $this->container['groupId'])) {
-                $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /^.*$/.";
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 64)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 1)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['description']) && !preg_match("/^.*$/", $this->container['description'])) {
-                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^.*$/.";
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['hostNum']) && ($this->container['hostNum'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'hostNum', must be smaller than or equal to 2147483647.";
             }
             if (!is_null($this->container['hostNum']) && ($this->container['hostNum'] < 0)) {
                 $invalidProperties[] = "invalid value for 'hostNum', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['supportOs']) && (mb_strlen($this->container['supportOs']) > 32)) {
+                $invalidProperties[] = "invalid value for 'supportOs', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['supportOs']) && (mb_strlen($this->container['supportOs']) < 1)) {
+                $invalidProperties[] = "invalid value for 'supportOs', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['supportVersion']) && (mb_strlen($this->container['supportVersion']) > 64)) {
+                $invalidProperties[] = "invalid value for 'supportVersion', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['supportVersion']) && (mb_strlen($this->container['supportVersion']) < 1)) {
+                $invalidProperties[] = "invalid value for 'supportVersion', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['protectMode']) && (mb_strlen($this->container['protectMode']) > 64)) {
+                $invalidProperties[] = "invalid value for 'protectMode', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['protectMode']) && (mb_strlen($this->container['protectMode']) < 1)) {
+                $invalidProperties[] = "invalid value for 'protectMode', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -284,7 +304,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  策略组名
+    *  **参数解释**: 策略组名称 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -296,7 +316,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 策略组名
+    * @param string|null $groupName **参数解释**: 策略组名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -308,7 +328,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  策略组ID
+    *  **参数解释**: 策略组ID **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -320,7 +340,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 策略组ID
+    * @param string|null $groupId **参数解释**: 策略组ID **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -332,7 +352,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  策略组的描述信息
+    *  **参数解释**: 策略组描述 **取值范围**: 字符长度0-64位
     *
     * @return string|null
     */
@@ -344,7 +364,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 策略组的描述信息
+    * @param string|null $description **参数解释**: 策略组描述 **取值范围**: 字符长度0-64位
     *
     * @return $this
     */
@@ -355,32 +375,8 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets deletable
-    *  是否允许删除该策略组
-    *
-    * @return bool|null
-    */
-    public function getDeletable()
-    {
-        return $this->container['deletable'];
-    }
-
-    /**
-    * Sets deletable
-    *
-    * @param bool|null $deletable 是否允许删除该策略组
-    *
-    * @return $this
-    */
-    public function setDeletable($deletable)
-    {
-        $this->container['deletable'] = $deletable;
-        return $this;
-    }
-
-    /**
     * Gets hostNum
-    *  影响主机数量
+    *  **参数解释**: 关联服务器数 **取值范围**: 取值0-1000000
     *
     * @return int|null
     */
@@ -392,7 +388,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostNum
     *
-    * @param int|null $hostNum 影响主机数量
+    * @param int|null $hostNum **参数解释**: 关联服务器数 **取值范围**: 取值0-1000000
     *
     * @return $this
     */
@@ -404,7 +400,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultGroup
-    *  是否是默认策略组
+    *  **参数解释**: 是否是默认策略组 **取值范围**: true: 是默认策略组 false: 不是默认策略组
     *
     * @return bool|null
     */
@@ -416,7 +412,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets defaultGroup
     *
-    * @param bool|null $defaultGroup 是否是默认策略组
+    * @param bool|null $defaultGroup **参数解释**: 是否是默认策略组 **取值范围**: true: 是默认策略组 false: 不是默认策略组
     *
     * @return $this
     */
@@ -427,8 +423,32 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets deletable
+    *  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: true: 支持删除 false: 不支持删除
+    *
+    * @return bool|null
+    */
+    public function getDeletable()
+    {
+        return $this->container['deletable'];
+    }
+
+    /**
+    * Sets deletable
+    *
+    * @param bool|null $deletable **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: true: 支持删除 false: 不支持删除
+    *
+    * @return $this
+    */
+    public function setDeletable($deletable)
+    {
+        $this->container['deletable'] = $deletable;
+        return $this;
+    }
+
+    /**
     * Gets supportOs
-    *  支持的操作系统，包含如下:   - Linux ：支持Linux系统   - Windows : 支持Windows系统
+    *  **参数解释**: 支持的操作系统 **取值范围**: Linux: 支持Linux操作系统 Windows: 支持Windows操作系统
     *
     * @return string|null
     */
@@ -440,7 +460,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets supportOs
     *
-    * @param string|null $supportOs 支持的操作系统，包含如下:   - Linux ：支持Linux系统   - Windows : 支持Windows系统
+    * @param string|null $supportOs **参数解释**: 支持的操作系统 **取值范围**: Linux: 支持Linux操作系统 Windows: 支持Windows操作系统
     *
     * @return $this
     */
@@ -452,7 +472,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportVersion
-    *  支持的版本，包含如下:   - hss.version.basic ：基础版策略组   - hss.version.advanced : 专业版策略组   - hss.version.enterprise : 企业版策略组   - hss.version.premium : 旗舰版策略组   - hss.version.wtp : 网页防篡改版策略组   - hss.version.container.enterprise : 容器版策略组
+    *  **参数解释**: 支持的版本 **取值范围**: hss.version.advanced: 专业版 hss.version.enterprise: 企业版 hss.version.premium: 旗舰版 hss.version.wtp: 网页防篡改版 hss.version.container.enterprise: 容器版
     *
     * @return string|null
     */
@@ -464,13 +484,37 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets supportVersion
     *
-    * @param string|null $supportVersion 支持的版本，包含如下:   - hss.version.basic ：基础版策略组   - hss.version.advanced : 专业版策略组   - hss.version.enterprise : 企业版策略组   - hss.version.premium : 旗舰版策略组   - hss.version.wtp : 网页防篡改版策略组   - hss.version.container.enterprise : 容器版策略组
+    * @param string|null $supportVersion **参数解释**: 支持的版本 **取值范围**: hss.version.advanced: 专业版 hss.version.enterprise: 企业版 hss.version.premium: 旗舰版 hss.version.wtp: 网页防篡改版 hss.version.container.enterprise: 容器版
     *
     * @return $this
     */
     public function setSupportVersion($supportVersion)
     {
         $this->container['supportVersion'] = $supportVersion;
+        return $this;
+    }
+
+    /**
+    * Gets protectMode
+    *  **参数解释**: 防护模式 **取值范围**: high_detection: 高检出模式 equalization: 均衡模式
+    *
+    * @return string|null
+    */
+    public function getProtectMode()
+    {
+        return $this->container['protectMode'];
+    }
+
+    /**
+    * Sets protectMode
+    *
+    * @param string|null $protectMode **参数解释**: 防护模式 **取值范围**: high_detection: 高检出模式 equalization: 均衡模式
+    *
+    * @return $this
+    */
+    public function setProtectMode($protectMode)
+    {
+        $this->container['protectMode'] = $protectMode;
         return $this;
     }
 

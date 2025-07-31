@@ -20,19 +20,19 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentId  Agent ID
-    * changeType  变更类型   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
-    * hostId  主机ID
-    * hostName  服务器名称
-    * privateIp  服务器私有IP
-    * loginPermission  是否有登录权限
-    * rootPermission  是否有root权限
-    * userGroupName  用户组
-    * userHomeDir  用户目录
-    * shell  用户启动shell
-    * userName  账号名称
-    * expireTime  到期时间，采用时间戳，默认毫秒，
-    * recentScanTime  账号增加、修改、删除等操作的变更时间
+    * agentId  **参数解释** agent标识 **取值范围** 长度1-128
+    * changeType  **参数解释** 变更类型 **取值范围**     - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
+    * hostId  **参数解释** 主机ID **取值范围** 长度1-128
+    * hostName  **参数解释** 服务器名称 **取值范围** 长度1-128
+    * privateIp  **参数解释** 服务器私有IP **取值范围** 长度1-128
+    * loginPermission  **参数解释** 是否有登录权限 **取值范围** true: 具有登录权限 false: 不具有登录权限
+    * rootPermission  **参数解释** 是否有root权限 **取值范围** true: 具有root权限 false: 不具有root权限
+    * userGroupName  **参数解释** 用户组名称 **取值范围** 长度1-128
+    * userHomeDir  **参数解释** 用户目录 **取值范围** 长度1-128
+    * shell  **参数解释** 用户启动shell **取值范围** 长度1-128
+    * userName  **参数解释** 用户名称 **取值范围** 长度1-128
+    * expireTime  **参数解释** 到期时间，采用时间戳，默认毫秒 **取值范围** 长度0-4070880000000
+    * recentScanTime  **参数解释** 账号增加、修改、删除等操作的变更时间 **取值范围** 长度0-4070880000000
     *
     * @var string[]
     */
@@ -54,19 +54,19 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentId  Agent ID
-    * changeType  变更类型   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
-    * hostId  主机ID
-    * hostName  服务器名称
-    * privateIp  服务器私有IP
-    * loginPermission  是否有登录权限
-    * rootPermission  是否有root权限
-    * userGroupName  用户组
-    * userHomeDir  用户目录
-    * shell  用户启动shell
-    * userName  账号名称
-    * expireTime  到期时间，采用时间戳，默认毫秒，
-    * recentScanTime  账号增加、修改、删除等操作的变更时间
+    * agentId  **参数解释** agent标识 **取值范围** 长度1-128
+    * changeType  **参数解释** 变更类型 **取值范围**     - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
+    * hostId  **参数解释** 主机ID **取值范围** 长度1-128
+    * hostName  **参数解释** 服务器名称 **取值范围** 长度1-128
+    * privateIp  **参数解释** 服务器私有IP **取值范围** 长度1-128
+    * loginPermission  **参数解释** 是否有登录权限 **取值范围** true: 具有登录权限 false: 不具有登录权限
+    * rootPermission  **参数解释** 是否有root权限 **取值范围** true: 具有root权限 false: 不具有root权限
+    * userGroupName  **参数解释** 用户组名称 **取值范围** 长度1-128
+    * userHomeDir  **参数解释** 用户目录 **取值范围** 长度1-128
+    * shell  **参数解释** 用户启动shell **取值范围** 长度1-128
+    * userName  **参数解释** 用户名称 **取值范围** 长度1-128
+    * expireTime  **参数解释** 到期时间，采用时间戳，默认毫秒 **取值范围** 长度0-4070880000000
+    * recentScanTime  **参数解释** 账号增加、修改、删除等操作的变更时间 **取值范围** 长度0-4070880000000
     *
     * @var string[]
     */
@@ -109,19 +109,19 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentId  Agent ID
-    * changeType  变更类型   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
-    * hostId  主机ID
-    * hostName  服务器名称
-    * privateIp  服务器私有IP
-    * loginPermission  是否有登录权限
-    * rootPermission  是否有root权限
-    * userGroupName  用户组
-    * userHomeDir  用户目录
-    * shell  用户启动shell
-    * userName  账号名称
-    * expireTime  到期时间，采用时间戳，默认毫秒，
-    * recentScanTime  账号增加、修改、删除等操作的变更时间
+    * agentId  **参数解释** agent标识 **取值范围** 长度1-128
+    * changeType  **参数解释** 变更类型 **取值范围**     - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
+    * hostId  **参数解释** 主机ID **取值范围** 长度1-128
+    * hostName  **参数解释** 服务器名称 **取值范围** 长度1-128
+    * privateIp  **参数解释** 服务器私有IP **取值范围** 长度1-128
+    * loginPermission  **参数解释** 是否有登录权限 **取值范围** true: 具有登录权限 false: 不具有登录权限
+    * rootPermission  **参数解释** 是否有root权限 **取值范围** true: 具有root权限 false: 不具有root权限
+    * userGroupName  **参数解释** 用户组名称 **取值范围** 长度1-128
+    * userHomeDir  **参数解释** 用户目录 **取值范围** 长度1-128
+    * shell  **参数解释** 用户启动shell **取值范围** 长度1-128
+    * userName  **参数解释** 用户名称 **取值范围** 长度1-128
+    * expireTime  **参数解释** 到期时间，采用时间戳，默认毫秒 **取值范围** 长度0-4070880000000
+    * recentScanTime  **参数解释** 账号增加、修改、删除等操作的变更时间 **取值范围** 长度0-4070880000000
     *
     * @var string[]
     */
@@ -143,19 +143,19 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentId  Agent ID
-    * changeType  变更类型   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
-    * hostId  主机ID
-    * hostName  服务器名称
-    * privateIp  服务器私有IP
-    * loginPermission  是否有登录权限
-    * rootPermission  是否有root权限
-    * userGroupName  用户组
-    * userHomeDir  用户目录
-    * shell  用户启动shell
-    * userName  账号名称
-    * expireTime  到期时间，采用时间戳，默认毫秒，
-    * recentScanTime  账号增加、修改、删除等操作的变更时间
+    * agentId  **参数解释** agent标识 **取值范围** 长度1-128
+    * changeType  **参数解释** 变更类型 **取值范围**     - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
+    * hostId  **参数解释** 主机ID **取值范围** 长度1-128
+    * hostName  **参数解释** 服务器名称 **取值范围** 长度1-128
+    * privateIp  **参数解释** 服务器私有IP **取值范围** 长度1-128
+    * loginPermission  **参数解释** 是否有登录权限 **取值范围** true: 具有登录权限 false: 不具有登录权限
+    * rootPermission  **参数解释** 是否有root权限 **取值范围** true: 具有root权限 false: 不具有root权限
+    * userGroupName  **参数解释** 用户组名称 **取值范围** 长度1-128
+    * userHomeDir  **参数解释** 用户目录 **取值范围** 长度1-128
+    * shell  **参数解释** 用户启动shell **取值范围** 长度1-128
+    * userName  **参数解释** 用户名称 **取值范围** 长度1-128
+    * expireTime  **参数解释** 到期时间，采用时间戳，默认毫秒 **取值范围** 长度0-4070880000000
+    * recentScanTime  **参数解释** 账号增加、修改、删除等操作的变更时间 **取值范围** 长度0-4070880000000
     *
     * @var string[]
     */
@@ -177,19 +177,19 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentId  Agent ID
-    * changeType  变更类型   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
-    * hostId  主机ID
-    * hostName  服务器名称
-    * privateIp  服务器私有IP
-    * loginPermission  是否有登录权限
-    * rootPermission  是否有root权限
-    * userGroupName  用户组
-    * userHomeDir  用户目录
-    * shell  用户启动shell
-    * userName  账号名称
-    * expireTime  到期时间，采用时间戳，默认毫秒，
-    * recentScanTime  账号增加、修改、删除等操作的变更时间
+    * agentId  **参数解释** agent标识 **取值范围** 长度1-128
+    * changeType  **参数解释** 变更类型 **取值范围**     - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
+    * hostId  **参数解释** 主机ID **取值范围** 长度1-128
+    * hostName  **参数解释** 服务器名称 **取值范围** 长度1-128
+    * privateIp  **参数解释** 服务器私有IP **取值范围** 长度1-128
+    * loginPermission  **参数解释** 是否有登录权限 **取值范围** true: 具有登录权限 false: 不具有登录权限
+    * rootPermission  **参数解释** 是否有root权限 **取值范围** true: 具有root权限 false: 不具有root权限
+    * userGroupName  **参数解释** 用户组名称 **取值范围** 长度1-128
+    * userHomeDir  **参数解释** 用户目录 **取值范围** 长度1-128
+    * shell  **参数解释** 用户启动shell **取值范围** 长度1-128
+    * userName  **参数解释** 用户名称 **取值范围** 长度1-128
+    * expireTime  **参数解释** 到期时间，采用时间戳，默认毫秒 **取值范围** 长度0-4070880000000
+    * recentScanTime  **参数解释** 账号增加、修改、删除等操作的变更时间 **取值范围** 长度0-4070880000000
     *
     * @var string[]
     */
@@ -372,7 +372,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  Agent ID
+    *  **参数解释** agent标识 **取值范围** 长度1-128
     *
     * @return string|null
     */
@@ -384,7 +384,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId Agent ID
+    * @param string|null $agentId **参数解释** agent标识 **取值范围** 长度1-128
     *
     * @return $this
     */
@@ -396,7 +396,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets changeType
-    *  变更类型   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
+    *  **参数解释** 变更类型 **取值范围**     - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
     *
     * @return string|null
     */
@@ -408,7 +408,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets changeType
     *
-    * @param string|null $changeType 变更类型   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
+    * @param string|null $changeType **参数解释** 变更类型 **取值范围**     - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
     *
     * @return $this
     */
@@ -420,7 +420,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机ID
+    *  **参数解释** 主机ID **取值范围** 长度1-128
     *
     * @return string|null
     */
@@ -432,7 +432,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机ID
+    * @param string|null $hostId **参数解释** 主机ID **取值范围** 长度1-128
     *
     * @return $this
     */
@@ -444,7 +444,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释** 服务器名称 **取值范围** 长度1-128
     *
     * @return string|null
     */
@@ -456,7 +456,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释** 服务器名称 **取值范围** 长度1-128
     *
     * @return $this
     */
@@ -468,7 +468,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  服务器私有IP
+    *  **参数解释** 服务器私有IP **取值范围** 长度1-128
     *
     * @return string|null
     */
@@ -480,7 +480,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp 服务器私有IP
+    * @param string|null $privateIp **参数解释** 服务器私有IP **取值范围** 长度1-128
     *
     * @return $this
     */
@@ -492,7 +492,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginPermission
-    *  是否有登录权限
+    *  **参数解释** 是否有登录权限 **取值范围** true: 具有登录权限 false: 不具有登录权限
     *
     * @return bool|null
     */
@@ -504,7 +504,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets loginPermission
     *
-    * @param bool|null $loginPermission 是否有登录权限
+    * @param bool|null $loginPermission **参数解释** 是否有登录权限 **取值范围** true: 具有登录权限 false: 不具有登录权限
     *
     * @return $this
     */
@@ -516,7 +516,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets rootPermission
-    *  是否有root权限
+    *  **参数解释** 是否有root权限 **取值范围** true: 具有root权限 false: 不具有root权限
     *
     * @return bool|null
     */
@@ -528,7 +528,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets rootPermission
     *
-    * @param bool|null $rootPermission 是否有root权限
+    * @param bool|null $rootPermission **参数解释** 是否有root权限 **取值范围** true: 具有root权限 false: 不具有root权限
     *
     * @return $this
     */
@@ -540,7 +540,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userGroupName
-    *  用户组
+    *  **参数解释** 用户组名称 **取值范围** 长度1-128
     *
     * @return string|null
     */
@@ -552,7 +552,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userGroupName
     *
-    * @param string|null $userGroupName 用户组
+    * @param string|null $userGroupName **参数解释** 用户组名称 **取值范围** 长度1-128
     *
     * @return $this
     */
@@ -564,7 +564,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userHomeDir
-    *  用户目录
+    *  **参数解释** 用户目录 **取值范围** 长度1-128
     *
     * @return string|null
     */
@@ -576,7 +576,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userHomeDir
     *
-    * @param string|null $userHomeDir 用户目录
+    * @param string|null $userHomeDir **参数解释** 用户目录 **取值范围** 长度1-128
     *
     * @return $this
     */
@@ -588,7 +588,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets shell
-    *  用户启动shell
+    *  **参数解释** 用户启动shell **取值范围** 长度1-128
     *
     * @return string|null
     */
@@ -600,7 +600,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets shell
     *
-    * @param string|null $shell 用户启动shell
+    * @param string|null $shell **参数解释** 用户启动shell **取值范围** 长度1-128
     *
     * @return $this
     */
@@ -612,7 +612,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  账号名称
+    *  **参数解释** 用户名称 **取值范围** 长度1-128
     *
     * @return string|null
     */
@@ -624,7 +624,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 账号名称
+    * @param string|null $userName **参数解释** 用户名称 **取值范围** 长度1-128
     *
     * @return $this
     */
@@ -636,7 +636,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets expireTime
-    *  到期时间，采用时间戳，默认毫秒，
+    *  **参数解释** 到期时间，采用时间戳，默认毫秒 **取值范围** 长度0-4070880000000
     *
     * @return int|null
     */
@@ -648,7 +648,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets expireTime
     *
-    * @param int|null $expireTime 到期时间，采用时间戳，默认毫秒，
+    * @param int|null $expireTime **参数解释** 到期时间，采用时间戳，默认毫秒 **取值范围** 长度0-4070880000000
     *
     * @return $this
     */
@@ -660,7 +660,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets recentScanTime
-    *  账号增加、修改、删除等操作的变更时间
+    *  **参数解释** 账号增加、修改、删除等操作的变更时间 **取值范围** 长度0-4070880000000
     *
     * @return int|null
     */
@@ -672,7 +672,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets recentScanTime
     *
-    * @param int|null $recentScanTime 账号增加、修改、删除等操作的变更时间
+    * @param int|null $recentScanTime **参数解释** 账号增加、修改、删除等操作的变更时间 **取值范围** 长度0-4070880000000
     *
     * @return $this
     */

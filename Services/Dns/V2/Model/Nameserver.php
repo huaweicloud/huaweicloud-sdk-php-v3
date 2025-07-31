@@ -20,8 +20,8 @@ class Nameserver implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostname  主机名。
-    * priority  优先级。
+    * hostname  **参数解释：** 主机名。 **取值范围：** 不涉及。
+    * priority  **参数解释：** 优先级。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Nameserver implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostname  主机名。
-    * priority  优先级。
+    * hostname  **参数解释：** 主机名。 **取值范围：** 不涉及。
+    * priority  **参数解释：** 优先级。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Nameserver implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostname  主机名。
-    * priority  优先级。
+    * hostname  **参数解释：** 主机名。 **取值范围：** 不涉及。
+    * priority  **参数解释：** 优先级。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Nameserver implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostname  主机名。
-    * priority  优先级。
+    * hostname  **参数解释：** 主机名。 **取值范围：** 不涉及。
+    * priority  **参数解释：** 优先级。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Nameserver implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostname  主机名。
-    * priority  优先级。
+    * hostname  **参数解释：** 主机名。 **取值范围：** 不涉及。
+    * priority  **参数解释：** 优先级。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class Nameserver implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostname
-    *  主机名。
+    *  **参数解释：** 主机名。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class Nameserver implements ModelInterface, ArrayAccess
     /**
     * Sets hostname
     *
-    * @param string|null $hostname 主机名。
+    * @param string|null $hostname **参数解释：** 主机名。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class Nameserver implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  优先级。
+    *  **参数解释：** 优先级。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class Nameserver implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param int|null $priority 优先级。
+    * @param int|null $priority **参数解释：** 优先级。 **取值范围：** 不涉及。
     *
     * @return $this
     */

@@ -181,8 +181,8 @@ class ProductMetric implements ModelInterface, ArrayAccess
         if ($this->container['metricName'] === null) {
             $invalidProperties[] = "'metricName' can't be null";
         }
-            if ((mb_strlen($this->container['metricName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'metricName', the character length must be smaller than or equal to 64.";
+            if ((mb_strlen($this->container['metricName']) > 96)) {
+                $invalidProperties[] = "invalid value for 'metricName', the character length must be smaller than or equal to 96.";
             }
             if ((mb_strlen($this->container['metricName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'metricName', the character length must be bigger than or equal to 1.";

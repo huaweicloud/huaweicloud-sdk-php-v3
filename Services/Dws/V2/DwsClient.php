@@ -11392,7 +11392,7 @@ class DwsClient extends Client
     /**
      * 逻辑集群缩容
      *
-     * 逻辑集群缩容，支持从弹性池缩容，或是从逻辑集群中缩容。
+     * 逻辑集群缩容，支持从弹性池缩容。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

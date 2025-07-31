@@ -40,7 +40,7 @@ class ListAgentInvocationsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'invocations' => null,
-        'count' => null
+        'count' => 'int64'
     ];
 
     /**

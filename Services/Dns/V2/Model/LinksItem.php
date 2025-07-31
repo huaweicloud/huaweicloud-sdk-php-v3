@@ -20,8 +20,8 @@ class LinksItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * href  对应快捷链接。
-    * rel  快捷链接标记名称。
+    * href  **参数解释：** 对应快捷链接。 **取值范围：** 不涉及。
+    * rel  **参数解释：** 快捷链接标记名称。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class LinksItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * href  对应快捷链接。
-    * rel  快捷链接标记名称。
+    * href  **参数解释：** 对应快捷链接。 **取值范围：** 不涉及。
+    * rel  **参数解释：** 快捷链接标记名称。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class LinksItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * href  对应快捷链接。
-    * rel  快捷链接标记名称。
+    * href  **参数解释：** 对应快捷链接。 **取值范围：** 不涉及。
+    * rel  **参数解释：** 快捷链接标记名称。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class LinksItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * href  对应快捷链接。
-    * rel  快捷链接标记名称。
+    * href  **参数解释：** 对应快捷链接。 **取值范围：** 不涉及。
+    * rel  **参数解释：** 快捷链接标记名称。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class LinksItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * href  对应快捷链接。
-    * rel  快捷链接标记名称。
+    * href  **参数解释：** 对应快捷链接。 **取值范围：** 不涉及。
+    * rel  **参数解释：** 快捷链接标记名称。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class LinksItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets href
-    *  对应快捷链接。
+    *  **参数解释：** 对应快捷链接。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class LinksItem implements ModelInterface, ArrayAccess
     /**
     * Sets href
     *
-    * @param string $href 对应快捷链接。
+    * @param string $href **参数解释：** 对应快捷链接。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class LinksItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets rel
-    *  快捷链接标记名称。
+    *  **参数解释：** 快捷链接标记名称。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class LinksItem implements ModelInterface, ArrayAccess
     /**
     * Sets rel
     *
-    * @param string $rel 快捷链接标记名称。
+    * @param string $rel **参数解释：** 快捷链接标记名称。 **取值范围：** 不涉及。
     *
     * @return $this
     */

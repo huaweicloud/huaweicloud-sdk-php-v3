@@ -20,8 +20,8 @@ class AntiVirusPolicyHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  服务器ID
-    * hostName  服务器名称
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
@@ -38,8 +38,8 @@ class AntiVirusPolicyHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  服务器ID
-    * hostName  服务器名称
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
@@ -77,8 +77,8 @@ class AntiVirusPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  服务器ID
-    * hostName  服务器名称
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
@@ -95,8 +95,8 @@ class AntiVirusPolicyHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  服务器ID
-    * hostName  服务器名称
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
@@ -113,8 +113,8 @@ class AntiVirusPolicyHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  服务器ID
-    * hostName  服务器名称
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
@@ -263,7 +263,7 @@ class AntiVirusPolicyHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return string|null
     */
@@ -275,7 +275,7 @@ class AntiVirusPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器ID
+    * @param string|null $hostId **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -287,7 +287,7 @@ class AntiVirusPolicyHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -299,7 +299,7 @@ class AntiVirusPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */

@@ -20,10 +20,10 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * port  端口号
-    * type  端口类型
-    * num  端口数量
-    * status  危险类型:danger/unknown
+    * port  **参数解释**: 端口号 **取值范围**: 最小值0，最大值65535
+    * type  **参数解释**: 端口类型 **取值范围**: - UDP - UDP6 - TCP - TCP6
+    * num  **参数解释**: 端口数量 **取值范围**: 最小值0，最大值65535
+    * status  **参数解释**: 危险类型 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * port  端口号
-    * type  端口类型
-    * num  端口数量
-    * status  危险类型:danger/unknown
+    * port  **参数解释**: 端口号 **取值范围**: 最小值0，最大值65535
+    * type  **参数解释**: 端口类型 **取值范围**: - UDP - UDP6 - TCP - TCP6
+    * num  **参数解释**: 端口数量 **取值范围**: 最小值0，最大值65535
+    * status  **参数解释**: 危险类型 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * port  端口号
-    * type  端口类型
-    * num  端口数量
-    * status  危险类型:danger/unknown
+    * port  **参数解释**: 端口号 **取值范围**: 最小值0，最大值65535
+    * type  **参数解释**: 端口类型 **取值范围**: - UDP - UDP6 - TCP - TCP6
+    * num  **参数解释**: 端口数量 **取值范围**: 最小值0，最大值65535
+    * status  **参数解释**: 危险类型 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * port  端口号
-    * type  端口类型
-    * num  端口数量
-    * status  危险类型:danger/unknown
+    * port  **参数解释**: 端口号 **取值范围**: 最小值0，最大值65535
+    * type  **参数解释**: 端口类型 **取值范围**: - UDP - UDP6 - TCP - TCP6
+    * num  **参数解释**: 端口数量 **取值范围**: 最小值0，最大值65535
+    * status  **参数解释**: 危险类型 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * port  端口号
-    * type  端口类型
-    * num  端口数量
-    * status  危险类型:danger/unknown
+    * port  **参数解释**: 端口号 **取值范围**: 最小值0，最大值65535
+    * type  **参数解释**: 端口类型 **取值范围**: - UDP - UDP6 - TCP - TCP6
+    * num  **参数解释**: 端口数量 **取值范围**: 最小值0，最大值65535
+    * status  **参数解释**: 危险类型 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口
     *
     * @var string[]
     */
@@ -231,7 +231,7 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
-    *  端口号
+    *  **参数解释**: 端口号 **取值范围**: 最小值0，最大值65535
     *
     * @return int|null
     */
@@ -243,7 +243,7 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param int|null $port 端口号
+    * @param int|null $port **参数解释**: 端口号 **取值范围**: 最小值0，最大值65535
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  端口类型
+    *  **参数解释**: 端口类型 **取值范围**: - UDP - UDP6 - TCP - TCP6
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 端口类型
+    * @param string|null $type **参数解释**: 端口类型 **取值范围**: - UDP - UDP6 - TCP - TCP6
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets num
-    *  端口数量
+    *  **参数解释**: 端口数量 **取值范围**: 最小值0，最大值65535
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets num
     *
-    * @param int|null $num 端口数量
+    * @param int|null $num **参数解释**: 端口数量 **取值范围**: 最小值0，最大值65535
     *
     * @return $this
     */
@@ -303,7 +303,7 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  危险类型:danger/unknown
+    *  **参数解释**: 危险类型 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口
     *
     * @return string|null
     */
@@ -315,7 +315,7 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 危险类型:danger/unknown
+    * @param string|null $status **参数解释**: 危险类型 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口
     *
     * @return $this
     */

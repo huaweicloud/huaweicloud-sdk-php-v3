@@ -20,21 +20,21 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmId  告警ID,以al开头，后跟22位由字母或数字组成的字符串
-    * recordId  告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
-    * name  告警规则名称
-    * status  告警规则状态, ok为正常，alarm为告警，invalid为已失效
-    * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
-    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * resourceId  告警资源ID，多维度情况按字母升序排列并使用逗号分隔
-    * from  查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00
-    * to  查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00
-    * alarmType  告警类型，event：查询事件类型告警，metric：查询指标类型告警
-    * createTimeFrom  查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00
-    * createTimeTo  查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00
-    * offset  分页偏移量
-    * limit  分页大小
-    * orderBy  按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
+    * alarmId  **参数解释**： 告警ID列表。告警ID：以al开头，后跟22位由字母或数字组成的字符串。 **约束限制**： 列表最大长度为50。
+    * recordId  **参数解释**： 告警记录ID。 **约束限制**： 不涉及。 **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。 **默认取值**： 不涉及。
+    * name  **参数解释**： 告警规则名称。 **约束限制**： 不涉及。 **取值范围**： 最大128字符长度。 **默认取值**： 不涉及。
+    * status  **参数解释**： 告警规则状态列表。告警规则状态：枚举值，ok为正常，alarm为告警，invalid为已失效。 **约束限制**： 列表长度最大为3。
+    * level  **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 枚举值，1为紧急，2为重要，3为次要，4为提示。 **默认取值**： 不涉及。
+    * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。
+    * resourceId  **参数解释**： 告警资源ID。 **约束限制**： 不涉及。 **取值范围**： 多维度情况按字母升序排列并使用逗号分隔。最大字符长度为2048。 **默认取值**： 不涉及。
+    * from  **参数解释**： 查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * to  **参数解释**： 查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。event:查询事件类型告警，metric:查询指标类型告警。 **默认取值**： 不涉及。
+    * createTimeFrom  **参数解释**： 查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * createTimeTo  **参数解释**： 查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 整数，最小值为0，最大值为1000000000。 **默认取值**： 0
+    * limit  **参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 整数，最小值为1，最大值为100。 **默认取值**： 100
+    * orderBy  **参数解释**： 按关键字排序。 **约束限制**： 不涉及。 **取值范围**： 枚举值。first_alarm_time:告警产生时间, update_time:更新时间, alarm_level:告警级别，record_id表记录主键。 **默认取值**： update_time
     *
     * @var string[]
     */
@@ -58,21 +58,21 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmId  告警ID,以al开头，后跟22位由字母或数字组成的字符串
-    * recordId  告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
-    * name  告警规则名称
-    * status  告警规则状态, ok为正常，alarm为告警，invalid为已失效
-    * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
-    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * resourceId  告警资源ID，多维度情况按字母升序排列并使用逗号分隔
-    * from  查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00
-    * to  查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00
-    * alarmType  告警类型，event：查询事件类型告警，metric：查询指标类型告警
-    * createTimeFrom  查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00
-    * createTimeTo  查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00
-    * offset  分页偏移量
-    * limit  分页大小
-    * orderBy  按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
+    * alarmId  **参数解释**： 告警ID列表。告警ID：以al开头，后跟22位由字母或数字组成的字符串。 **约束限制**： 列表最大长度为50。
+    * recordId  **参数解释**： 告警记录ID。 **约束限制**： 不涉及。 **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。 **默认取值**： 不涉及。
+    * name  **参数解释**： 告警规则名称。 **约束限制**： 不涉及。 **取值范围**： 最大128字符长度。 **默认取值**： 不涉及。
+    * status  **参数解释**： 告警规则状态列表。告警规则状态：枚举值，ok为正常，alarm为告警，invalid为已失效。 **约束限制**： 列表长度最大为3。
+    * level  **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 枚举值，1为紧急，2为重要，3为次要，4为提示。 **默认取值**： 不涉及。
+    * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。
+    * resourceId  **参数解释**： 告警资源ID。 **约束限制**： 不涉及。 **取值范围**： 多维度情况按字母升序排列并使用逗号分隔。最大字符长度为2048。 **默认取值**： 不涉及。
+    * from  **参数解释**： 查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * to  **参数解释**： 查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。event:查询事件类型告警，metric:查询指标类型告警。 **默认取值**： 不涉及。
+    * createTimeFrom  **参数解释**： 查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * createTimeTo  **参数解释**： 查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 整数，最小值为0，最大值为1000000000。 **默认取值**： 0
+    * limit  **参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 整数，最小值为1，最大值为100。 **默认取值**： 100
+    * orderBy  **参数解释**： 按关键字排序。 **约束限制**： 不涉及。 **取值范围**： 枚举值。first_alarm_time:告警产生时间, update_time:更新时间, alarm_level:告警级别，record_id表记录主键。 **默认取值**： update_time
     *
     * @var string[]
     */
@@ -117,21 +117,21 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmId  告警ID,以al开头，后跟22位由字母或数字组成的字符串
-    * recordId  告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
-    * name  告警规则名称
-    * status  告警规则状态, ok为正常，alarm为告警，invalid为已失效
-    * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
-    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * resourceId  告警资源ID，多维度情况按字母升序排列并使用逗号分隔
-    * from  查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00
-    * to  查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00
-    * alarmType  告警类型，event：查询事件类型告警，metric：查询指标类型告警
-    * createTimeFrom  查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00
-    * createTimeTo  查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00
-    * offset  分页偏移量
-    * limit  分页大小
-    * orderBy  按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
+    * alarmId  **参数解释**： 告警ID列表。告警ID：以al开头，后跟22位由字母或数字组成的字符串。 **约束限制**： 列表最大长度为50。
+    * recordId  **参数解释**： 告警记录ID。 **约束限制**： 不涉及。 **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。 **默认取值**： 不涉及。
+    * name  **参数解释**： 告警规则名称。 **约束限制**： 不涉及。 **取值范围**： 最大128字符长度。 **默认取值**： 不涉及。
+    * status  **参数解释**： 告警规则状态列表。告警规则状态：枚举值，ok为正常，alarm为告警，invalid为已失效。 **约束限制**： 列表长度最大为3。
+    * level  **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 枚举值，1为紧急，2为重要，3为次要，4为提示。 **默认取值**： 不涉及。
+    * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。
+    * resourceId  **参数解释**： 告警资源ID。 **约束限制**： 不涉及。 **取值范围**： 多维度情况按字母升序排列并使用逗号分隔。最大字符长度为2048。 **默认取值**： 不涉及。
+    * from  **参数解释**： 查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * to  **参数解释**： 查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。event:查询事件类型告警，metric:查询指标类型告警。 **默认取值**： 不涉及。
+    * createTimeFrom  **参数解释**： 查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * createTimeTo  **参数解释**： 查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 整数，最小值为0，最大值为1000000000。 **默认取值**： 0
+    * limit  **参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 整数，最小值为1，最大值为100。 **默认取值**： 100
+    * orderBy  **参数解释**： 按关键字排序。 **约束限制**： 不涉及。 **取值范围**： 枚举值。first_alarm_time:告警产生时间, update_time:更新时间, alarm_level:告警级别，record_id表记录主键。 **默认取值**： update_time
     *
     * @var string[]
     */
@@ -155,21 +155,21 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmId  告警ID,以al开头，后跟22位由字母或数字组成的字符串
-    * recordId  告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
-    * name  告警规则名称
-    * status  告警规则状态, ok为正常，alarm为告警，invalid为已失效
-    * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
-    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * resourceId  告警资源ID，多维度情况按字母升序排列并使用逗号分隔
-    * from  查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00
-    * to  查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00
-    * alarmType  告警类型，event：查询事件类型告警，metric：查询指标类型告警
-    * createTimeFrom  查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00
-    * createTimeTo  查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00
-    * offset  分页偏移量
-    * limit  分页大小
-    * orderBy  按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
+    * alarmId  **参数解释**： 告警ID列表。告警ID：以al开头，后跟22位由字母或数字组成的字符串。 **约束限制**： 列表最大长度为50。
+    * recordId  **参数解释**： 告警记录ID。 **约束限制**： 不涉及。 **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。 **默认取值**： 不涉及。
+    * name  **参数解释**： 告警规则名称。 **约束限制**： 不涉及。 **取值范围**： 最大128字符长度。 **默认取值**： 不涉及。
+    * status  **参数解释**： 告警规则状态列表。告警规则状态：枚举值，ok为正常，alarm为告警，invalid为已失效。 **约束限制**： 列表长度最大为3。
+    * level  **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 枚举值，1为紧急，2为重要，3为次要，4为提示。 **默认取值**： 不涉及。
+    * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。
+    * resourceId  **参数解释**： 告警资源ID。 **约束限制**： 不涉及。 **取值范围**： 多维度情况按字母升序排列并使用逗号分隔。最大字符长度为2048。 **默认取值**： 不涉及。
+    * from  **参数解释**： 查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * to  **参数解释**： 查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。event:查询事件类型告警，metric:查询指标类型告警。 **默认取值**： 不涉及。
+    * createTimeFrom  **参数解释**： 查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * createTimeTo  **参数解释**： 查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 整数，最小值为0，最大值为1000000000。 **默认取值**： 0
+    * limit  **参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 整数，最小值为1，最大值为100。 **默认取值**： 100
+    * orderBy  **参数解释**： 按关键字排序。 **约束限制**： 不涉及。 **取值范围**： 枚举值。first_alarm_time:告警产生时间, update_time:更新时间, alarm_level:告警级别，record_id表记录主键。 **默认取值**： update_time
     *
     * @var string[]
     */
@@ -193,21 +193,21 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmId  告警ID,以al开头，后跟22位由字母或数字组成的字符串
-    * recordId  告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
-    * name  告警规则名称
-    * status  告警规则状态, ok为正常，alarm为告警，invalid为已失效
-    * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
-    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * resourceId  告警资源ID，多维度情况按字母升序排列并使用逗号分隔
-    * from  查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00
-    * to  查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00
-    * alarmType  告警类型，event：查询事件类型告警，metric：查询指标类型告警
-    * createTimeFrom  查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00
-    * createTimeTo  查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00
-    * offset  分页偏移量
-    * limit  分页大小
-    * orderBy  按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
+    * alarmId  **参数解释**： 告警ID列表。告警ID：以al开头，后跟22位由字母或数字组成的字符串。 **约束限制**： 列表最大长度为50。
+    * recordId  **参数解释**： 告警记录ID。 **约束限制**： 不涉及。 **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。 **默认取值**： 不涉及。
+    * name  **参数解释**： 告警规则名称。 **约束限制**： 不涉及。 **取值范围**： 最大128字符长度。 **默认取值**： 不涉及。
+    * status  **参数解释**： 告警规则状态列表。告警规则状态：枚举值，ok为正常，alarm为告警，invalid为已失效。 **约束限制**： 列表长度最大为3。
+    * level  **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 枚举值，1为紧急，2为重要，3为次要，4为提示。 **默认取值**： 不涉及。
+    * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。
+    * resourceId  **参数解释**： 告警资源ID。 **约束限制**： 不涉及。 **取值范围**： 多维度情况按字母升序排列并使用逗号分隔。最大字符长度为2048。 **默认取值**： 不涉及。
+    * from  **参数解释**： 查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * to  **参数解释**： 查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。event:查询事件类型告警，metric:查询指标类型告警。 **默认取值**： 不涉及。
+    * createTimeFrom  **参数解释**： 查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * createTimeTo  **参数解释**： 查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 整数，最小值为0，最大值为1000000000。 **默认取值**： 0
+    * limit  **参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 整数，最小值为1，最大值为100。 **默认取值**： 100
+    * orderBy  **参数解释**： 按关键字排序。 **约束限制**： 不涉及。 **取值范围**： 枚举值。first_alarm_time:告警产生时间, update_time:更新时间, alarm_level:告警级别，record_id表记录主键。 **默认取值**： update_time
     *
     * @var string[]
     */
@@ -369,6 +369,9 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['recordId']) && (mb_strlen($this->container['recordId']) < 24)) {
                 $invalidProperties[] = "invalid value for 'recordId', the character length must be bigger than or equal to 24.";
             }
+            if (!is_null($this->container['recordId']) && !preg_match("/^ah([0-9A-Za-z]){22}$/", $this->container['recordId'])) {
+                $invalidProperties[] = "invalid value for 'recordId', must be conform to the pattern /^ah([0-9A-Za-z]){22}$/.";
+            }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 128)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 128.";
             }
@@ -387,11 +390,17 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 3)) {
                 $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 3.";
             }
+            if (!is_null($this->container['namespace']) && !preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/", $this->container['namespace'])) {
+                $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/.";
+            }
             if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) > 2048)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 2048.";
             }
             if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['resourceId']) && !preg_match("/^([a-z]|[A-Z]|[0-9]|_|-|:|,|\\*|\\.|\/|#|\\(|\\))+$/", $this->container['resourceId'])) {
+                $invalidProperties[] = "invalid value for 'resourceId', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|_|-|:|,|\\*|\\.|\/|#|\\(|\\))+$/.";
             }
             if (!is_null($this->container['from']) && (mb_strlen($this->container['from']) > 64)) {
                 $invalidProperties[] = "invalid value for 'from', the character length must be smaller than or equal to 64.";
@@ -461,7 +470,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmId
-    *  告警ID,以al开头，后跟22位由字母或数字组成的字符串
+    *  **参数解释**： 告警ID列表。告警ID：以al开头，后跟22位由字母或数字组成的字符串。 **约束限制**： 列表最大长度为50。
     *
     * @return string[]|null
     */
@@ -473,7 +482,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmId
     *
-    * @param string[]|null $alarmId 告警ID,以al开头，后跟22位由字母或数字组成的字符串
+    * @param string[]|null $alarmId **参数解释**： 告警ID列表。告警ID：以al开头，后跟22位由字母或数字组成的字符串。 **约束限制**： 列表最大长度为50。
     *
     * @return $this
     */
@@ -485,7 +494,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordId
-    *  告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
+    *  **参数解释**： 告警记录ID。 **约束限制**： 不涉及。 **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -497,7 +506,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets recordId
     *
-    * @param string|null $recordId 告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
+    * @param string|null $recordId **参数解释**： 告警记录ID。 **约束限制**： 不涉及。 **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -509,7 +518,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  告警规则名称
+    *  **参数解释**： 告警规则名称。 **约束限制**： 不涉及。 **取值范围**： 最大128字符长度。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -521,7 +530,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 告警规则名称
+    * @param string|null $name **参数解释**： 告警规则名称。 **约束限制**： 不涉及。 **取值范围**： 最大128字符长度。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -533,7 +542,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  告警规则状态, ok为正常，alarm为告警，invalid为已失效
+    *  **参数解释**： 告警规则状态列表。告警规则状态：枚举值，ok为正常，alarm为告警，invalid为已失效。 **约束限制**： 列表长度最大为3。
     *
     * @return string[]|null
     */
@@ -545,7 +554,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 告警规则状态, ok为正常，alarm为告警，invalid为已失效
+    * @param string[]|null $status **参数解释**： 告警规则状态列表。告警规则状态：枚举值，ok为正常，alarm为告警，invalid为已失效。 **约束限制**： 列表长度最大为3。
     *
     * @return $this
     */
@@ -557,7 +566,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets level
-    *  告警级别, 1为紧急，2为重要，3为次要，4为提示
+    *  **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 枚举值，1为紧急，2为重要，3为次要，4为提示。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -569,7 +578,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param int|null $level 告警级别, 1为紧急，2为重要，3为次要，4为提示
+    * @param int|null $level **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 枚举值，1为紧急，2为重要，3为次要，4为提示。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -581,7 +590,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    *  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -593,7 +602,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * @param string|null $namespace **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -605,7 +614,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  告警资源ID，多维度情况按字母升序排列并使用逗号分隔
+    *  **参数解释**： 告警资源ID。 **约束限制**： 不涉及。 **取值范围**： 多维度情况按字母升序排列并使用逗号分隔。最大字符长度为2048。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -617,7 +626,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 告警资源ID，多维度情况按字母升序排列并使用逗号分隔
+    * @param string|null $resourceId **参数解释**： 告警资源ID。 **约束限制**： 不涉及。 **取值范围**： 多维度情况按字母升序排列并使用逗号分隔。最大字符长度为2048。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -629,7 +638,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets from
-    *  查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00
+    *  **参数解释**： 查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -641,7 +650,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets from
     *
-    * @param string|null $from 查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00
+    * @param string|null $from **参数解释**： 查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -653,7 +662,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets to
-    *  查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00
+    *  **参数解释**： 查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -665,7 +674,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets to
     *
-    * @param string|null $to 查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00
+    * @param string|null $to **参数解释**： 查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -677,7 +686,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmType
-    *  告警类型，event：查询事件类型告警，metric：查询指标类型告警
+    *  **参数解释**： 告警类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。event:查询事件类型告警，metric:查询指标类型告警。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -689,7 +698,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmType
     *
-    * @param string|null $alarmType 告警类型，event：查询事件类型告警，metric：查询指标类型告警
+    * @param string|null $alarmType **参数解释**： 告警类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。event:查询事件类型告警，metric:查询指标类型告警。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -701,7 +710,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTimeFrom
-    *  查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00
+    *  **参数解释**： 查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -713,7 +722,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets createTimeFrom
     *
-    * @param string|null $createTimeFrom 查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00
+    * @param string|null $createTimeFrom **参数解释**： 查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -725,7 +734,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTimeTo
-    *  查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00
+    *  **参数解释**： 查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -737,7 +746,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets createTimeTo
     *
-    * @param string|null $createTimeTo 查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00
+    * @param string|null $createTimeTo **参数解释**： 查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00。 **约束限制**： 不涉及。 **取值范围**： 最大字符长度为64。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -749,7 +758,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  分页偏移量
+    *  **参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 整数，最小值为0，最大值为1000000000。 **默认取值**： 0
     *
     * @return int|null
     */
@@ -761,7 +770,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 分页偏移量
+    * @param int|null $offset **参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 整数，最小值为0，最大值为1000000000。 **默认取值**： 0
     *
     * @return $this
     */
@@ -773,7 +782,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  分页大小
+    *  **参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 整数，最小值为1，最大值为100。 **默认取值**： 100
     *
     * @return int|null
     */
@@ -785,7 +794,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 分页大小
+    * @param int|null $limit **参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 整数，最小值为1，最大值为100。 **默认取值**： 100
     *
     * @return $this
     */
@@ -797,7 +806,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderBy
-    *  按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
+    *  **参数解释**： 按关键字排序。 **约束限制**： 不涉及。 **取值范围**： 枚举值。first_alarm_time:告警产生时间, update_time:更新时间, alarm_level:告警级别，record_id表记录主键。 **默认取值**： update_time
     *
     * @return string|null
     */
@@ -809,7 +818,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderBy
     *
-    * @param string|null $orderBy 按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
+    * @param string|null $orderBy **参数解释**： 按关键字排序。 **约束限制**： 不涉及。 **取值范围**： 枚举值。first_alarm_time:告警产生时间, update_time:更新时间, alarm_level:告警级别，record_id表记录主键。 **默认取值**： update_time
     *
     * @return $this
     */

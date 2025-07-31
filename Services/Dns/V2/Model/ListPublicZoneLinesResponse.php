@@ -22,7 +22,7 @@ class ListPublicZoneLinesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * links  links
-    * lines  查询公网域名的线路列表响应。
+    * lines  **参数解释：** 查询公网域名的线路列表响应。 **取值范围：** 不涉及。
     * metadata  metadata
     *
     * @var string[]
@@ -36,7 +36,7 @@ class ListPublicZoneLinesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * links  links
-    * lines  查询公网域名的线路列表响应。
+    * lines  **参数解释：** 查询公网域名的线路列表响应。 **取值范围：** 不涉及。
     * metadata  metadata
     *
     * @var string[]
@@ -71,7 +71,7 @@ class ListPublicZoneLinesResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * links  links
-    * lines  查询公网域名的线路列表响应。
+    * lines  **参数解释：** 查询公网域名的线路列表响应。 **取值范围：** 不涉及。
     * metadata  metadata
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ListPublicZoneLinesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * links  links
-    * lines  查询公网域名的线路列表响应。
+    * lines  **参数解释：** 查询公网域名的线路列表响应。 **取值范围：** 不涉及。
     * metadata  metadata
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ListPublicZoneLinesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * links  links
-    * lines  查询公网域名的线路列表响应。
+    * lines  **参数解释：** 查询公网域名的线路列表响应。 **取值范围：** 不涉及。
     * metadata  metadata
     *
     * @var string[]
@@ -221,7 +221,7 @@ class ListPublicZoneLinesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets lines
-    *  查询公网域名的线路列表响应。
+    *  **参数解释：** 查询公网域名的线路列表响应。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\PublicZoneLines[]|null
     */
@@ -233,7 +233,7 @@ class ListPublicZoneLinesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lines
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\PublicZoneLines[]|null $lines 查询公网域名的线路列表响应。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\PublicZoneLines[]|null $lines **参数解释：** 查询公网域名的线路列表响应。 **取值范围：** 不涉及。
     *
     * @return $this
     */

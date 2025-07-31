@@ -23,13 +23,15 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
     * type  支持配置的自定义读法类型。当前读法类型会映射为SSML标签，详见[文本驱动SSML定义](metastudio_02_0038.xml)。  包含如下选项： * CHINESE_G2P：拼音 * PHONETIC_SYMBOL：音标 * CONTINUUM：连读 * ALIAS：别名 * SAY_AS：数字/英文的读法。不同value值有不同的读法，详情如下所示。   数字的读法包括：   - date：读日期   - number：读数字   - figure：读数值   - telephone：读电话    英文的读法包括：   - spell：读字母   - english：读单词
     * key  原始词。
     * value  自定义读法。其中，音标的读法请参考[词典](https://www.youdao.com/)。
+    * groupId  分组id
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
             'key' => 'string',
-            'value' => 'string'
+            'value' => 'string',
+            'groupId' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
     * type  支持配置的自定义读法类型。当前读法类型会映射为SSML标签，详见[文本驱动SSML定义](metastudio_02_0038.xml)。  包含如下选项： * CHINESE_G2P：拼音 * PHONETIC_SYMBOL：音标 * CONTINUUM：连读 * ALIAS：别名 * SAY_AS：数字/英文的读法。不同value值有不同的读法，详情如下所示。   数字的读法包括：   - date：读日期   - number：读数字   - figure：读数值   - telephone：读电话    英文的读法包括：   - spell：读字母   - english：读单词
     * key  原始词。
     * value  自定义读法。其中，音标的读法请参考[词典](https://www.youdao.com/)。
+    * groupId  分组id
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
         'key' => null,
-        'value' => null
+        'value' => null,
+        'groupId' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
     * type  支持配置的自定义读法类型。当前读法类型会映射为SSML标签，详见[文本驱动SSML定义](metastudio_02_0038.xml)。  包含如下选项： * CHINESE_G2P：拼音 * PHONETIC_SYMBOL：音标 * CONTINUUM：连读 * ALIAS：别名 * SAY_AS：数字/英文的读法。不同value值有不同的读法，详情如下所示。   数字的读法包括：   - date：读日期   - number：读数字   - figure：读数值   - telephone：读电话    英文的读法包括：   - spell：读字母   - english：读单词
     * key  原始词。
     * value  自定义读法。其中，音标的读法请参考[词典](https://www.youdao.com/)。
+    * groupId  分组id
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
             'key' => 'key',
-            'value' => 'value'
+            'value' => 'value',
+            'groupId' => 'group_id'
     ];
 
     /**
@@ -86,13 +92,15 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
     * type  支持配置的自定义读法类型。当前读法类型会映射为SSML标签，详见[文本驱动SSML定义](metastudio_02_0038.xml)。  包含如下选项： * CHINESE_G2P：拼音 * PHONETIC_SYMBOL：音标 * CONTINUUM：连读 * ALIAS：别名 * SAY_AS：数字/英文的读法。不同value值有不同的读法，详情如下所示。   数字的读法包括：   - date：读日期   - number：读数字   - figure：读数值   - telephone：读电话    英文的读法包括：   - spell：读字母   - english：读单词
     * key  原始词。
     * value  自定义读法。其中，音标的读法请参考[词典](https://www.youdao.com/)。
+    * groupId  分组id
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
             'key' => 'setKey',
-            'value' => 'setValue'
+            'value' => 'setValue',
+            'groupId' => 'setGroupId'
     ];
 
     /**
@@ -100,13 +108,15 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
     * type  支持配置的自定义读法类型。当前读法类型会映射为SSML标签，详见[文本驱动SSML定义](metastudio_02_0038.xml)。  包含如下选项： * CHINESE_G2P：拼音 * PHONETIC_SYMBOL：音标 * CONTINUUM：连读 * ALIAS：别名 * SAY_AS：数字/英文的读法。不同value值有不同的读法，详情如下所示。   数字的读法包括：   - date：读日期   - number：读数字   - figure：读数值   - telephone：读电话    英文的读法包括：   - spell：读字母   - english：读单词
     * key  原始词。
     * value  自定义读法。其中，音标的读法请参考[词典](https://www.youdao.com/)。
+    * groupId  分组id
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
             'key' => 'getKey',
-            'value' => 'getValue'
+            'value' => 'getValue',
+            'groupId' => 'getGroupId'
     ];
 
     /**
@@ -191,6 +201,7 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
     }
 
     /**
@@ -223,6 +234,12 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
             }
             if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 0)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -307,6 +324,30 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
     public function setValue($value)
     {
         $this->container['value'] = $value;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  分组id
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 分组id
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
         return $this;
     }
 

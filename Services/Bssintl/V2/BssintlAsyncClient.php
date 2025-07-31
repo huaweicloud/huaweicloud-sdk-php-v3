@@ -28,7 +28,7 @@ class BssintlAsyncClient extends Client
     /**
      * 设置包年/包月资源自动续费
      *
-     * 功能描述：客户可以设置包年/包月资源到期后转为按需资源计费
+     * 功能描述：为防止资源到期被删除，客户可为长期使用的包年/包月资源开通自动续费。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -59,6 +59,9 @@ class BssintlAsyncClient extends Client
         if ($localVarParams['resourceId'] !== null) {
             $pathParams['resource_id'] = $localVarParams['resourceId'];
         }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -67,7 +70,7 @@ class BssintlAsyncClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 [],
-                []
+                ['application/json']
             );
         }
         $headers = array_merge(
@@ -1375,9 +1378,9 @@ class BssintlAsyncClient extends Client
     }
 
     /**
-     * 查询资源内使用量
+     * 查询资源包使用量
      *
-     * 功能描述：客户在自建平台查询客户自己的资源包列表
+     * 功能描述：客户在自建平台根据资源项维度查询资源包使用量。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1667,9 +1670,9 @@ class BssintlAsyncClient extends Client
     }
 
     /**
-     * 查询使用量单位列表
+     * 查询度量单位列表
      *
-     * 功能描述：伙伴在伙伴销售平台上查询资源使用量的度量单位及名称，度量单位类型等。
+     * 功能描述：查询资源使用量，包年包月资源的时长及金额的度量单位及名称，度量单位类型等。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1728,80 +1731,6 @@ class BssintlAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListMeasureUnitsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListMeasureUnitsRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询消费汇总(客户)
-     *
-     * 功能描述：客户可以查询自身的消费汇总单的功能，消费按月汇总。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listMonthlyExpendituresAsync($request)
-    {
-        return $this->listMonthlyExpendituresAsyncWithHttpInfo($request);
-    }
-    
-    public function listMonthlyExpendituresAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{domain_id}/customer/account-mgr/bill/monthly-sum';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['cycle'] !== null) {
-            $queryParams['cycle'] = $localVarParams['cycle'];
-        }
-        if ($localVarParams['cloudServiceTypeCode'] !== null) {
-            $queryParams['cloud_service_type_code'] = $localVarParams['cloudServiceTypeCode'];
-        }
-        if ($localVarParams['type'] !== null) {
-            $queryParams['type'] = $localVarParams['type'];
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListMonthlyExpendituresResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListMonthlyExpendituresRequest',
             $asyncRequest = true);
     }
 

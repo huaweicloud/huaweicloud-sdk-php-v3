@@ -21,8 +21,8 @@ class ListAutoLaunchStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  自启动项统计信息总数,
-    * dataList  自启动项统计信息列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**： 自启动项统计信息列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListAutoLaunchStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  自启动项统计信息总数,
-    * dataList  自启动项统计信息列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**： 自启动项统计信息列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListAutoLaunchStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  自启动项统计信息总数,
-    * dataList  自启动项统计信息列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**： 自启动项统计信息列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListAutoLaunchStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  自启动项统计信息总数,
-    * dataList  自启动项统计信息列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**： 自启动项统计信息列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListAutoLaunchStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  自启动项统计信息总数,
-    * dataList  自启动项统计信息列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**： 自启动项统计信息列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -170,8 +170,8 @@ class ListAutoLaunchStatisticsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 10000)) {
-                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 10000.";
+            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 2147483647.";
             }
             if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] < 0)) {
                 $invalidProperties[] = "invalid value for 'totalNum', must be bigger than or equal to 0.";
@@ -192,7 +192,7 @@ class ListAutoLaunchStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  自启动项统计信息总数,
+    *  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListAutoLaunchStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 自启动项统计信息总数,
+    * @param int|null $totalNum **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListAutoLaunchStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  自启动项统计信息列表
+    *  **参数解释**： 自启动项统计信息列表 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\AutoLaunchStatisticsResponseInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListAutoLaunchStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\AutoLaunchStatisticsResponseInfo[]|null $dataList 自启动项统计信息列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\AutoLaunchStatisticsResponseInfo[]|null $dataList **参数解释**： 自启动项统计信息列表 **取值范围**： 不涉及
     *
     * @return $this
     */

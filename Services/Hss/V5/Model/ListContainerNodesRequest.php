@@ -20,23 +20,23 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示个数
-    * hostName  节点名称
-    * agentStatus  Agent状态，包含如下3种。   - not_installed ：未安装   - online ：在线   - offline ：离线
-    * protectStatus  防护状态，包含如下2种。   - closed ：关闭   - opened ：开启
-    * containerTags  标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * region  **参数解释**: Region ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: - online: 在线状态 - offline: 离线状态 - not_installed: 未安装Agent **默认取值**: 不涉及
+    * protectStatus  **参数解释**: Agent防护状态 **约束限制**: 不涉及 **取值范围**: - closed: 防护关闭状态 - opened: 防护开启状态 **默认取值**: 不涉及
+    * containerTags  **参数解释**: 标签: 用来识别cce集群节点和自建节点 **约束限制**: 不涉及 **取值范围**: - cce: CCE集群节点 - self: 自建集群节点 - other: 其它节点 **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'region' => 'string',
             'enterpriseProjectId' => 'string',
             'offset' => 'int',
             'limit' => 'int',
             'hostName' => 'string',
+            'region' => 'string',
             'agentStatus' => 'string',
             'protectStatus' => 'string',
             'containerTags' => 'string'
@@ -44,23 +44,23 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示个数
-    * hostName  节点名称
-    * agentStatus  Agent状态，包含如下3种。   - not_installed ：未安装   - online ：在线   - offline ：离线
-    * protectStatus  防护状态，包含如下2种。   - closed ：关闭   - opened ：开启
-    * containerTags  标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * region  **参数解释**: Region ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: - online: 在线状态 - offline: 离线状态 - not_installed: 未安装Agent **默认取值**: 不涉及
+    * protectStatus  **参数解释**: Agent防护状态 **约束限制**: 不涉及 **取值范围**: - closed: 防护关闭状态 - opened: 防护开启状态 **默认取值**: 不涉及
+    * containerTags  **参数解释**: 标签: 用来识别cce集群节点和自建节点 **约束限制**: 不涉及 **取值范围**: - cce: CCE集群节点 - self: 自建集群节点 - other: 其它节点 **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'region' => null,
         'enterpriseProjectId' => null,
         'offset' => 'int32',
         'limit' => 'int32',
         'hostName' => null,
+        'region' => null,
         'agentStatus' => null,
         'protectStatus' => null,
         'containerTags' => null
@@ -89,23 +89,23 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示个数
-    * hostName  节点名称
-    * agentStatus  Agent状态，包含如下3种。   - not_installed ：未安装   - online ：在线   - offline ：离线
-    * protectStatus  防护状态，包含如下2种。   - closed ：关闭   - opened ：开启
-    * containerTags  标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * region  **参数解释**: Region ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: - online: 在线状态 - offline: 离线状态 - not_installed: 未安装Agent **默认取值**: 不涉及
+    * protectStatus  **参数解释**: Agent防护状态 **约束限制**: 不涉及 **取值范围**: - closed: 防护关闭状态 - opened: 防护开启状态 **默认取值**: 不涉及
+    * containerTags  **参数解释**: 标签: 用来识别cce集群节点和自建节点 **约束限制**: 不涉及 **取值范围**: - cce: CCE集群节点 - self: 自建集群节点 - other: 其它节点 **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'region' => 'region',
             'enterpriseProjectId' => 'enterprise_project_id',
             'offset' => 'offset',
             'limit' => 'limit',
             'hostName' => 'host_name',
+            'region' => 'region',
             'agentStatus' => 'agent_status',
             'protectStatus' => 'protect_status',
             'containerTags' => 'container_tags'
@@ -113,23 +113,23 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示个数
-    * hostName  节点名称
-    * agentStatus  Agent状态，包含如下3种。   - not_installed ：未安装   - online ：在线   - offline ：离线
-    * protectStatus  防护状态，包含如下2种。   - closed ：关闭   - opened ：开启
-    * containerTags  标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * region  **参数解释**: Region ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: - online: 在线状态 - offline: 离线状态 - not_installed: 未安装Agent **默认取值**: 不涉及
+    * protectStatus  **参数解释**: Agent防护状态 **约束限制**: 不涉及 **取值范围**: - closed: 防护关闭状态 - opened: 防护开启状态 **默认取值**: 不涉及
+    * containerTags  **参数解释**: 标签: 用来识别cce集群节点和自建节点 **约束限制**: 不涉及 **取值范围**: - cce: CCE集群节点 - self: 自建集群节点 - other: 其它节点 **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
-            'region' => 'setRegion',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'hostName' => 'setHostName',
+            'region' => 'setRegion',
             'agentStatus' => 'setAgentStatus',
             'protectStatus' => 'setProtectStatus',
             'containerTags' => 'setContainerTags'
@@ -137,23 +137,23 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示个数
-    * hostName  节点名称
-    * agentStatus  Agent状态，包含如下3种。   - not_installed ：未安装   - online ：在线   - offline ：离线
-    * protectStatus  防护状态，包含如下2种。   - closed ：关闭   - opened ：开启
-    * containerTags  标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * region  **参数解释**: Region ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: - online: 在线状态 - offline: 离线状态 - not_installed: 未安装Agent **默认取值**: 不涉及
+    * protectStatus  **参数解释**: Agent防护状态 **约束限制**: 不涉及 **取值范围**: - closed: 防护关闭状态 - opened: 防护开启状态 **默认取值**: 不涉及
+    * containerTags  **参数解释**: 标签: 用来识别cce集群节点和自建节点 **约束限制**: 不涉及 **取值范围**: - cce: CCE集群节点 - self: 自建集群节点 - other: 其它节点 **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
-            'region' => 'getRegion',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'hostName' => 'getHostName',
+            'region' => 'getRegion',
             'agentStatus' => 'getAgentStatus',
             'protectStatus' => 'getProtectStatus',
             'containerTags' => 'getContainerTags'
@@ -217,11 +217,11 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
+        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['agentStatus'] = isset($data['agentStatus']) ? $data['agentStatus'] : null;
         $this->container['protectStatus'] = isset($data['protectStatus']) ? $data['protectStatus'] : null;
         $this->container['containerTags'] = isset($data['containerTags']) ? $data['containerTags'] : null;
@@ -235,15 +235,6 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 128)) {
-                $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) < 0)) {
-                $invalidProperties[] = "invalid value for 'region', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['region']) && !preg_match("/^.*$/", $this->container['region'])) {
-                $invalidProperties[] = "invalid value for 'region', must be conform to the pattern /^.*$/.";
-            }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 256)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 256.";
             }
@@ -265,11 +256,23 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
             }
-            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostName']) && !preg_match("/^.*$/", $this->container['hostName'])) {
+                $invalidProperties[] = "invalid value for 'hostName', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 128)) {
+                $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) < 0)) {
+                $invalidProperties[] = "invalid value for 'region', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['region']) && !preg_match("/^.*$/", $this->container['region'])) {
+                $invalidProperties[] = "invalid value for 'region', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['agentStatus']) && (mb_strlen($this->container['agentStatus']) > 32)) {
                 $invalidProperties[] = "invalid value for 'agentStatus', the character length must be smaller than or equal to 32.";
@@ -304,32 +307,8 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets region
-    *  Region ID
-    *
-    * @return string|null
-    */
-    public function getRegion()
-    {
-        return $this->container['region'];
-    }
-
-    /**
-    * Sets region
-    *
-    * @param string|null $region Region ID
-    *
-    * @return $this
-    */
-    public function setRegion($region)
-    {
-        $this->container['region'] = $region;
-        return $this;
-    }
-
-    /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return string|null
     */
@@ -341,7 +320,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return $this
     */
@@ -353,7 +332,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置
+    *  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return int|null
     */
@@ -365,7 +344,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置
+    * @param int|null $offset **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return $this
     */
@@ -377,7 +356,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示个数
+    *  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return int|null
     */
@@ -389,7 +368,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示个数
+    * @param int|null $limit **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return $this
     */
@@ -401,7 +380,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  节点名称
+    *  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -413,7 +392,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 节点名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -424,8 +403,32 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets region
+    *  **参数解释**: Region ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getRegion()
+    {
+        return $this->container['region'];
+    }
+
+    /**
+    * Sets region
+    *
+    * @param string|null $region **参数解释**: Region ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setRegion($region)
+    {
+        $this->container['region'] = $region;
+        return $this;
+    }
+
+    /**
     * Gets agentStatus
-    *  Agent状态，包含如下3种。   - not_installed ：未安装   - online ：在线   - offline ：离线
+    *  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: - online: 在线状态 - offline: 离线状态 - not_installed: 未安装Agent **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -437,7 +440,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets agentStatus
     *
-    * @param string|null $agentStatus Agent状态，包含如下3种。   - not_installed ：未安装   - online ：在线   - offline ：离线
+    * @param string|null $agentStatus **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: - online: 在线状态 - offline: 离线状态 - not_installed: 未安装Agent **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -449,7 +452,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  防护状态，包含如下2种。   - closed ：关闭   - opened ：开启
+    *  **参数解释**: Agent防护状态 **约束限制**: 不涉及 **取值范围**: - closed: 防护关闭状态 - opened: 防护开启状态 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -461,7 +464,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus 防护状态，包含如下2种。   - closed ：关闭   - opened ：开启
+    * @param string|null $protectStatus **参数解释**: Agent防护状态 **约束限制**: 不涉及 **取值范围**: - closed: 防护关闭状态 - opened: 防护开启状态 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -473,7 +476,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerTags
-    *  标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
+    *  **参数解释**: 标签: 用来识别cce集群节点和自建节点 **约束限制**: 不涉及 **取值范围**: - cce: CCE集群节点 - self: 自建集群节点 - other: 其它节点 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -485,7 +488,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets containerTags
     *
-    * @param string|null $containerTags 标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
+    * @param string|null $containerTags **参数解释**: 标签: 用来识别cce集群节点和自建节点 **约束限制**: 不涉及 **取值范围**: - cce: CCE集群节点 - self: 自建集群节点 - other: 其它节点 **默认取值**: 不涉及
     *
     * @return $this
     */

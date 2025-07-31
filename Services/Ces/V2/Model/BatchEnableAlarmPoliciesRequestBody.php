@@ -21,7 +21,7 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * alarmPolicyIds  需要批量启停的告警规则策略的ID列表
-    * enabled  是否启用告警策略。true:开启，false:关闭。
+    * enabled  是否启用告警策略。true:开启，false：关闭。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * alarmPolicyIds  需要批量启停的告警规则策略的ID列表
-    * enabled  是否启用告警策略。true:开启，false:关闭。
+    * enabled  是否启用告警策略。true:开启，false：关闭。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * alarmPolicyIds  需要批量启停的告警规则策略的ID列表
-    * enabled  是否启用告警策略。true:开启，false:关闭。
+    * enabled  是否启用告警策略。true:开启，false：关闭。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * alarmPolicyIds  需要批量启停的告警规则策略的ID列表
-    * enabled  是否启用告警策略。true:开启，false:关闭。
+    * enabled  是否启用告警策略。true:开启，false：关闭。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * alarmPolicyIds  需要批量启停的告警规则策略的ID列表
-    * enabled  是否启用告警策略。true:开启，false:关闭。
+    * enabled  是否启用告警策略。true:开启，false：关闭。
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  是否启用告警策略。true:开启，false:关闭。
+    *  是否启用告警策略。true:开启，false：关闭。
     *
     * @return bool
     */
@@ -227,7 +227,7 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool $enabled 是否启用告警策略。true:开启，false:关闭。
+    * @param bool $enabled 是否启用告警策略。true:开启，false：关闭。
     *
     * @return $this
     */

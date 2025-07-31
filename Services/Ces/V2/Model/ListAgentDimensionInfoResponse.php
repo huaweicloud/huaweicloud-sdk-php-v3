@@ -21,8 +21,8 @@ class ListAgentDimensionInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dimensions  维度信息
-    * count  维度信息总数
+    * dimensions  **参数解释**： 维度信息。
+    * count  **参数解释**： 维度信息总数。 **取值范围**： 整数，最小值为0，最大值为2147483647。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListAgentDimensionInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dimensions  维度信息
-    * count  维度信息总数
+    * dimensions  **参数解释**： 维度信息。
+    * count  **参数解释**： 维度信息总数。 **取值范围**： 整数，最小值为0，最大值为2147483647。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListAgentDimensionInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dimensions  维度信息
-    * count  维度信息总数
+    * dimensions  **参数解释**： 维度信息。
+    * count  **参数解释**： 维度信息总数。 **取值范围**： 整数，最小值为0，最大值为2147483647。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListAgentDimensionInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dimensions  维度信息
-    * count  维度信息总数
+    * dimensions  **参数解释**： 维度信息。
+    * count  **参数解释**： 维度信息总数。 **取值范围**： 整数，最小值为0，最大值为2147483647。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListAgentDimensionInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dimensions  维度信息
-    * count  维度信息总数
+    * dimensions  **参数解释**： 维度信息。
+    * count  **参数解释**： 维度信息总数。 **取值范围**： 整数，最小值为0，最大值为2147483647。
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListAgentDimensionInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensions
-    *  维度信息
+    *  **参数解释**： 维度信息。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\AgentDimension[]|null
     */
@@ -204,7 +204,7 @@ class ListAgentDimensionInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dimensions
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\AgentDimension[]|null $dimensions 维度信息
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\AgentDimension[]|null $dimensions **参数解释**： 维度信息。
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListAgentDimensionInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  维度信息总数
+    *  **参数解释**： 维度信息总数。 **取值范围**： 整数，最小值为0，最大值为2147483647。
     *
     * @return int|null
     */
@@ -228,7 +228,7 @@ class ListAgentDimensionInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 维度信息总数
+    * @param int|null $count **参数解释**： 维度信息总数。 **取值范围**： 整数，最小值为0，最大值为2147483647。
     *
     * @return $this
     */

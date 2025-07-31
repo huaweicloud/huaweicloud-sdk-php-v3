@@ -31,6 +31,8 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     * batchName  批次名称
     * outputLanguage  模型输出语言类型
     * customText  自定义试听文本
+    * isOndemandResource  是否使用按需资源
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
     */
@@ -45,7 +47,9 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
             'dhtmsJobId' => 'string',
             'batchName' => 'string',
             'outputLanguage' => 'string',
-            'customText' => 'string'
+            'customText' => 'string',
+            'isOndemandResource' => 'bool',
+            'supportedService' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]'
     ];
 
     /**
@@ -61,6 +65,8 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     * batchName  批次名称
     * outputLanguage  模型输出语言类型
     * customText  自定义试听文本
+    * isOndemandResource  是否使用按需资源
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
     */
@@ -75,7 +81,9 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
         'dhtmsJobId' => null,
         'batchName' => null,
         'outputLanguage' => null,
-        'customText' => null
+        'customText' => null,
+        'isOndemandResource' => null,
+        'supportedService' => null
     ];
 
     /**
@@ -112,6 +120,8 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     * batchName  批次名称
     * outputLanguage  模型输出语言类型
     * customText  自定义试听文本
+    * isOndemandResource  是否使用按需资源
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
     */
@@ -126,7 +136,9 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
             'dhtmsJobId' => 'dhtms_job_id',
             'batchName' => 'batch_name',
             'outputLanguage' => 'output_language',
-            'customText' => 'custom_text'
+            'customText' => 'custom_text',
+            'isOndemandResource' => 'is_ondemand_resource',
+            'supportedService' => 'supported_service'
     ];
 
     /**
@@ -142,6 +154,8 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     * batchName  批次名称
     * outputLanguage  模型输出语言类型
     * customText  自定义试听文本
+    * isOndemandResource  是否使用按需资源
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
     */
@@ -156,7 +170,9 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
             'dhtmsJobId' => 'setDhtmsJobId',
             'batchName' => 'setBatchName',
             'outputLanguage' => 'setOutputLanguage',
-            'customText' => 'setCustomText'
+            'customText' => 'setCustomText',
+            'isOndemandResource' => 'setIsOndemandResource',
+            'supportedService' => 'setSupportedService'
     ];
 
     /**
@@ -172,6 +188,8 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     * batchName  批次名称
     * outputLanguage  模型输出语言类型
     * customText  自定义试听文本
+    * isOndemandResource  是否使用按需资源
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
     */
@@ -186,7 +204,9 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
             'dhtmsJobId' => 'getDhtmsJobId',
             'batchName' => 'getBatchName',
             'outputLanguage' => 'getOutputLanguage',
-            'customText' => 'getCustomText'
+            'customText' => 'getCustomText',
+            'isOndemandResource' => 'getIsOndemandResource',
+            'supportedService' => 'getSupportedService'
     ];
 
     /**
@@ -273,6 +293,8 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
         $this->container['batchName'] = isset($data['batchName']) ? $data['batchName'] : null;
         $this->container['outputLanguage'] = isset($data['outputLanguage']) ? $data['outputLanguage'] : null;
         $this->container['customText'] = isset($data['customText']) ? $data['customText'] : null;
+        $this->container['isOndemandResource'] = isset($data['isOndemandResource']) ? $data['isOndemandResource'] : null;
+        $this->container['supportedService'] = isset($data['supportedService']) ? $data['supportedService'] : null;
     }
 
     /**
@@ -617,6 +639,54 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     public function setCustomText($customText)
     {
         $this->container['customText'] = $customText;
+        return $this;
+    }
+
+    /**
+    * Gets isOndemandResource
+    *  是否使用按需资源
+    *
+    * @return bool|null
+    */
+    public function getIsOndemandResource()
+    {
+        return $this->container['isOndemandResource'];
+    }
+
+    /**
+    * Sets isOndemandResource
+    *
+    * @param bool|null $isOndemandResource 是否使用按需资源
+    *
+    * @return $this
+    */
+    public function setIsOndemandResource($isOndemandResource)
+    {
+        $this->container['isOndemandResource'] = $isOndemandResource;
+        return $this;
+    }
+
+    /**
+    * Gets supportedService
+    *  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]|null
+    */
+    public function getSupportedService()
+    {
+        return $this->container['supportedService'];
+    }
+
+    /**
+    * Sets supportedService
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]|null $supportedService 支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    *
+    * @return $this
+    */
+    public function setSupportedService($supportedService)
+    {
+        $this->container['supportedService'] = $supportedService;
         return $this;
     }
 

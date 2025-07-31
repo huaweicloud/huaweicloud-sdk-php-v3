@@ -2745,6 +2745,92 @@ class CfwClient extends Client
     }
 
     /**
+     * 查询攻击统计
+     *
+     * 根据防火墙攻击日志，查询攻击统计信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAttackStatistic($request)
+    {
+        return $this->listAttackStatisticWithHttpInfo($request);
+    }
+
+    public function listAttackStatisticWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cfw/logs/attack-statistic';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['range'] !== null) {
+            $queryParams['range'] = $localVarParams['range'];
+        }
+        if ($localVarParams['logType'] !== null) {
+            $queryParams['log_type'] = $localVarParams['logType'];
+        }
+        if ($localVarParams['direction'] !== null) {
+            $queryParams['direction'] = $localVarParams['direction'];
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['vgwId'] !== null) {
+            $queryParams['vgw_id'] = $localVarParams['vgwId'];
+        }
+        if ($localVarParams['item'] !== null) {
+            $queryParams['item'] = $localVarParams['item'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\ListAttackStatisticResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\ListAttackStatisticRequest');
+    }
+
+    /**
      * 查询黑白名单列表
      *
      * 查询黑白名单列表
@@ -4590,6 +4676,95 @@ class CfwClient extends Client
     }
 
     /**
+     * 查询访问日志统计信息
+     *
+     * 获取访问日志的TOP统计信息，如TOP命中规则等
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAccessTop($request)
+    {
+        return $this->showAccessTopWithHttpInfo($request);
+    }
+
+    public function showAccessTopWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cfw/logs/access-top';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['direction'] !== null) {
+            $queryParams['direction'] = $localVarParams['direction'];
+        }
+        if ($localVarParams['range'] !== null) {
+            $queryParams['range'] = $localVarParams['range'];
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['vgwId'] !== null) {
+            $queryParams['vgw_id'] = $localVarParams['vgwId'];
+        }
+        if ($localVarParams['logType'] !== null) {
+            $queryParams['log_type'] = $localVarParams['logType'];
+        }
+        if ($localVarParams['item'] !== null) {
+            $queryParams['item'] = $localVarParams['item'];
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $queryParams['rule_id'] = $localVarParams['ruleId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\ShowAccessTopResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\ShowAccessTopRequest');
+    }
+
+    /**
      * 获取告警配置信息
      *
      * 获取告警配置信息
@@ -4803,6 +4978,166 @@ class CfwClient extends Client
     }
 
     /**
+     * 查询攻击概览
+     *
+     * 查询攻击概览
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAttackTotal($request)
+    {
+        return $this->showAttackTotalWithHttpInfo($request);
+    }
+
+    public function showAttackTotalWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cfw/logs/total-attack';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['range'] !== null) {
+            $queryParams['range'] = $localVarParams['range'];
+        }
+        if ($localVarParams['logType'] !== null) {
+            $queryParams['log_type'] = $localVarParams['logType'];
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['vgwId'] !== null) {
+            $queryParams['vgw_id'] = $localVarParams['vgwId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\ShowAttackTotalResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\ShowAttackTotalRequest');
+    }
+
+    /**
+     * 查询攻击趋势
+     *
+     * 查询攻击趋势
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAttackTrend($request)
+    {
+        return $this->showAttackTrendWithHttpInfo($request);
+    }
+
+    public function showAttackTrendWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cfw/logs/trend-attack';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['range'] !== null) {
+            $queryParams['range'] = $localVarParams['range'];
+        }
+        if ($localVarParams['logType'] !== null) {
+            $queryParams['log_type'] = $localVarParams['logType'];
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['vgwId'] !== null) {
+            $queryParams['vgw_id'] = $localVarParams['vgwId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\ShowAttackTrendResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\ShowAttackTrendRequest');
+    }
+
+    /**
      * 查看域名组详情
      *
      * 查看域名组详情
@@ -4871,6 +5206,92 @@ class CfwClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\ShowDomainSetDetailResponse',
             $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\ShowDomainSetDetailRequest');
+    }
+
+    /**
+     * 查询流量趋势
+     *
+     * 查询流量趋势，包括南北向、EIP、东西向的流量趋势
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showTrafficTrend($request)
+    {
+        return $this->showTrafficTrendWithHttpInfo($request);
+    }
+
+    public function showTrafficTrendWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cfw/logs/traffic-trend';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['range'] !== null) {
+            $queryParams['range'] = $localVarParams['range'];
+        }
+        if ($localVarParams['logType'] !== null) {
+            $queryParams['log_type'] = $localVarParams['logType'];
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['vgwId'] !== null) {
+            $queryParams['vgw_id'] = $localVarParams['vgwId'];
+        }
+        if ($localVarParams['aggType'] !== null) {
+            $queryParams['agg_type'] = $localVarParams['aggType'];
+        }
+        if ($localVarParams['ip'] !== null) {
+            $queryParams['ip'] = $localVarParams['ip'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\ShowTrafficTrendResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\ShowTrafficTrendRequest');
     }
 
     /**
@@ -7562,6 +7983,77 @@ class CfwClient extends Client
     }
 
     /**
+     * 查询自定义IPS规则详情
+     *
+     * 功能说明：自定义IPS规则详情，特性:根据路径输入的IPS ID查看对应的自定义IPS详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showCustomerIpsInfo($request)
+    {
+        return $this->showCustomerIpsInfoWithHttpInfo($request);
+    }
+
+    public function showCustomerIpsInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ips/custom-rule/{ips_cfw_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['objectId'] !== null) {
+            $queryParams['object_id'] = $localVarParams['objectId'];
+        }
+        if ($localVarParams['ipsCfwId'] !== null) {
+            $pathParams['ips_cfw_id'] = $localVarParams['ipsCfwId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\ShowCustomerIpsInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\ShowCustomerIpsInfoRequest');
+    }
+
+    /**
      * 获取ips规则细节
      *
      * 获取ips规则细节
@@ -7698,6 +8190,74 @@ class CfwClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\UpdateAdvancedIpsRuleResponse',
             $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\UpdateAdvancedIpsRuleRequest');
+    }
+
+    /**
+     * 更新自定义IPS规则
+     *
+     * 更新自定义IPS规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateCustomerIps($request)
+    {
+        return $this->updateCustomerIpsWithHttpInfo($request);
+    }
+
+    public function updateCustomerIpsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ips/custom-rule/{ips_cfw_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['ipsCfwId'] !== null) {
+            $pathParams['ips_cfw_id'] = $localVarParams['ipsCfwId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\UpdateCustomerIpsResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\UpdateCustomerIpsRequest');
     }
 
     protected function callApi(

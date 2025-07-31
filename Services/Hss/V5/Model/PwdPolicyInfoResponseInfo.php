@@ -20,23 +20,23 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
-    * privateIp  服务器私有IP
-    * publicIp  服务器公网IP
-    * minLength  口令最小长度的设置是否符合要求，符合为true，不符合为false
-    * uppercaseLetter  大写字母的设置是否符合要求，符合为true，不符合为false
-    * lowercaseLetter  小写字母的设置是否符合要求，符合为true，不符合为false
-    * number  数字的设置是否符合要求，符合为true，不符合为false
-    * specialCharacter  特殊字符的设置是否符合要求，符合为true，不符合为false
-    * minLengthNum  复杂口令策略中定义的口令最小长度
-    * minUppercaseLetter  复杂口令策略中定义的最少包含的大写字母数
-    * minLowercaseLetter  复杂口令策略中定义的最少包含的小写字母数
-    * minNumber  复杂口令策略中定义的最少包含的数字数
-    * minSpecialCharacter  复杂口令策略中定义的最少包含的特殊字母数
-    * updateTime  最近扫描时间
-    * suggestion  修改建议
+    * hostId  **参数解释**: 主机id **取值范围**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 不涉及
+    * hostIp  **参数解释**: 服务器IP（私有IP），为兼容用户使用，不删除此字段 **取值范围**: 不涉及
+    * privateIp  **参数解释**: 服务器私有IP **取值范围**: 不涉及
+    * publicIp  **参数解释**: 服务器公网IP **取值范围**: 不涉及
+    * minLength  **参数解释**: 口令最小长度的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
+    * uppercaseLetter  **参数解释**: 大写字母的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
+    * lowercaseLetter  **参数解释**: 小写字母的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
+    * number  **参数解释**: 数字的设置是否符合要求，符合为true，不符合为false **取值范围**: - true：符合要求 - false：不符合要求
+    * specialCharacter  **参数解释**: 特殊字符的设置是否符合要求，符合为true，不符合为false **取值范围**: - true：符合要求 - false：不符合要求
+    * minLengthNum  **参数解释**: 复杂口令策略中定义的口令最小长度 **取值范围**: 8 - 26
+    * minUppercaseLetter  **参数解释**: 复杂口令策略中定义的最少包含的大写字母数 **取值范围**: 0 - 10
+    * minLowercaseLetter  **参数解释**: 复杂口令策略中定义的最少包含的小写字母数 **取值范围**: 0 - 10
+    * minNumber  **参数解释**: 复杂口令策略中定义的最少包含的数字数 **取值范围**: 0 - 10
+    * minSpecialCharacter  **参数解释**: 复杂口令策略中定义的最少包含的特殊字母数 **取值范围**: 0 - 10
+    * updateTime  **参数解释**: 最近扫描时间 **取值范围**: 不涉及
+    * suggestion  **参数解释**: 修改建议 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -62,23 +62,23 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
-    * privateIp  服务器私有IP
-    * publicIp  服务器公网IP
-    * minLength  口令最小长度的设置是否符合要求，符合为true，不符合为false
-    * uppercaseLetter  大写字母的设置是否符合要求，符合为true，不符合为false
-    * lowercaseLetter  小写字母的设置是否符合要求，符合为true，不符合为false
-    * number  数字的设置是否符合要求，符合为true，不符合为false
-    * specialCharacter  特殊字符的设置是否符合要求，符合为true，不符合为false
-    * minLengthNum  复杂口令策略中定义的口令最小长度
-    * minUppercaseLetter  复杂口令策略中定义的最少包含的大写字母数
-    * minLowercaseLetter  复杂口令策略中定义的最少包含的小写字母数
-    * minNumber  复杂口令策略中定义的最少包含的数字数
-    * minSpecialCharacter  复杂口令策略中定义的最少包含的特殊字母数
-    * updateTime  最近扫描时间
-    * suggestion  修改建议
+    * hostId  **参数解释**: 主机id **取值范围**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 不涉及
+    * hostIp  **参数解释**: 服务器IP（私有IP），为兼容用户使用，不删除此字段 **取值范围**: 不涉及
+    * privateIp  **参数解释**: 服务器私有IP **取值范围**: 不涉及
+    * publicIp  **参数解释**: 服务器公网IP **取值范围**: 不涉及
+    * minLength  **参数解释**: 口令最小长度的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
+    * uppercaseLetter  **参数解释**: 大写字母的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
+    * lowercaseLetter  **参数解释**: 小写字母的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
+    * number  **参数解释**: 数字的设置是否符合要求，符合为true，不符合为false **取值范围**: - true：符合要求 - false：不符合要求
+    * specialCharacter  **参数解释**: 特殊字符的设置是否符合要求，符合为true，不符合为false **取值范围**: - true：符合要求 - false：不符合要求
+    * minLengthNum  **参数解释**: 复杂口令策略中定义的口令最小长度 **取值范围**: 8 - 26
+    * minUppercaseLetter  **参数解释**: 复杂口令策略中定义的最少包含的大写字母数 **取值范围**: 0 - 10
+    * minLowercaseLetter  **参数解释**: 复杂口令策略中定义的最少包含的小写字母数 **取值范围**: 0 - 10
+    * minNumber  **参数解释**: 复杂口令策略中定义的最少包含的数字数 **取值范围**: 0 - 10
+    * minSpecialCharacter  **参数解释**: 复杂口令策略中定义的最少包含的特殊字母数 **取值范围**: 0 - 10
+    * updateTime  **参数解释**: 最近扫描时间 **取值范围**: 不涉及
+    * suggestion  **参数解释**: 修改建议 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -125,23 +125,23 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
-    * privateIp  服务器私有IP
-    * publicIp  服务器公网IP
-    * minLength  口令最小长度的设置是否符合要求，符合为true，不符合为false
-    * uppercaseLetter  大写字母的设置是否符合要求，符合为true，不符合为false
-    * lowercaseLetter  小写字母的设置是否符合要求，符合为true，不符合为false
-    * number  数字的设置是否符合要求，符合为true，不符合为false
-    * specialCharacter  特殊字符的设置是否符合要求，符合为true，不符合为false
-    * minLengthNum  复杂口令策略中定义的口令最小长度
-    * minUppercaseLetter  复杂口令策略中定义的最少包含的大写字母数
-    * minLowercaseLetter  复杂口令策略中定义的最少包含的小写字母数
-    * minNumber  复杂口令策略中定义的最少包含的数字数
-    * minSpecialCharacter  复杂口令策略中定义的最少包含的特殊字母数
-    * updateTime  最近扫描时间
-    * suggestion  修改建议
+    * hostId  **参数解释**: 主机id **取值范围**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 不涉及
+    * hostIp  **参数解释**: 服务器IP（私有IP），为兼容用户使用，不删除此字段 **取值范围**: 不涉及
+    * privateIp  **参数解释**: 服务器私有IP **取值范围**: 不涉及
+    * publicIp  **参数解释**: 服务器公网IP **取值范围**: 不涉及
+    * minLength  **参数解释**: 口令最小长度的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
+    * uppercaseLetter  **参数解释**: 大写字母的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
+    * lowercaseLetter  **参数解释**: 小写字母的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
+    * number  **参数解释**: 数字的设置是否符合要求，符合为true，不符合为false **取值范围**: - true：符合要求 - false：不符合要求
+    * specialCharacter  **参数解释**: 特殊字符的设置是否符合要求，符合为true，不符合为false **取值范围**: - true：符合要求 - false：不符合要求
+    * minLengthNum  **参数解释**: 复杂口令策略中定义的口令最小长度 **取值范围**: 8 - 26
+    * minUppercaseLetter  **参数解释**: 复杂口令策略中定义的最少包含的大写字母数 **取值范围**: 0 - 10
+    * minLowercaseLetter  **参数解释**: 复杂口令策略中定义的最少包含的小写字母数 **取值范围**: 0 - 10
+    * minNumber  **参数解释**: 复杂口令策略中定义的最少包含的数字数 **取值范围**: 0 - 10
+    * minSpecialCharacter  **参数解释**: 复杂口令策略中定义的最少包含的特殊字母数 **取值范围**: 0 - 10
+    * updateTime  **参数解释**: 最近扫描时间 **取值范围**: 不涉及
+    * suggestion  **参数解释**: 修改建议 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -167,23 +167,23 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
-    * privateIp  服务器私有IP
-    * publicIp  服务器公网IP
-    * minLength  口令最小长度的设置是否符合要求，符合为true，不符合为false
-    * uppercaseLetter  大写字母的设置是否符合要求，符合为true，不符合为false
-    * lowercaseLetter  小写字母的设置是否符合要求，符合为true，不符合为false
-    * number  数字的设置是否符合要求，符合为true，不符合为false
-    * specialCharacter  特殊字符的设置是否符合要求，符合为true，不符合为false
-    * minLengthNum  复杂口令策略中定义的口令最小长度
-    * minUppercaseLetter  复杂口令策略中定义的最少包含的大写字母数
-    * minLowercaseLetter  复杂口令策略中定义的最少包含的小写字母数
-    * minNumber  复杂口令策略中定义的最少包含的数字数
-    * minSpecialCharacter  复杂口令策略中定义的最少包含的特殊字母数
-    * updateTime  最近扫描时间
-    * suggestion  修改建议
+    * hostId  **参数解释**: 主机id **取值范围**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 不涉及
+    * hostIp  **参数解释**: 服务器IP（私有IP），为兼容用户使用，不删除此字段 **取值范围**: 不涉及
+    * privateIp  **参数解释**: 服务器私有IP **取值范围**: 不涉及
+    * publicIp  **参数解释**: 服务器公网IP **取值范围**: 不涉及
+    * minLength  **参数解释**: 口令最小长度的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
+    * uppercaseLetter  **参数解释**: 大写字母的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
+    * lowercaseLetter  **参数解释**: 小写字母的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
+    * number  **参数解释**: 数字的设置是否符合要求，符合为true，不符合为false **取值范围**: - true：符合要求 - false：不符合要求
+    * specialCharacter  **参数解释**: 特殊字符的设置是否符合要求，符合为true，不符合为false **取值范围**: - true：符合要求 - false：不符合要求
+    * minLengthNum  **参数解释**: 复杂口令策略中定义的口令最小长度 **取值范围**: 8 - 26
+    * minUppercaseLetter  **参数解释**: 复杂口令策略中定义的最少包含的大写字母数 **取值范围**: 0 - 10
+    * minLowercaseLetter  **参数解释**: 复杂口令策略中定义的最少包含的小写字母数 **取值范围**: 0 - 10
+    * minNumber  **参数解释**: 复杂口令策略中定义的最少包含的数字数 **取值范围**: 0 - 10
+    * minSpecialCharacter  **参数解释**: 复杂口令策略中定义的最少包含的特殊字母数 **取值范围**: 0 - 10
+    * updateTime  **参数解释**: 最近扫描时间 **取值范围**: 不涉及
+    * suggestion  **参数解释**: 修改建议 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -209,23 +209,23 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
-    * privateIp  服务器私有IP
-    * publicIp  服务器公网IP
-    * minLength  口令最小长度的设置是否符合要求，符合为true，不符合为false
-    * uppercaseLetter  大写字母的设置是否符合要求，符合为true，不符合为false
-    * lowercaseLetter  小写字母的设置是否符合要求，符合为true，不符合为false
-    * number  数字的设置是否符合要求，符合为true，不符合为false
-    * specialCharacter  特殊字符的设置是否符合要求，符合为true，不符合为false
-    * minLengthNum  复杂口令策略中定义的口令最小长度
-    * minUppercaseLetter  复杂口令策略中定义的最少包含的大写字母数
-    * minLowercaseLetter  复杂口令策略中定义的最少包含的小写字母数
-    * minNumber  复杂口令策略中定义的最少包含的数字数
-    * minSpecialCharacter  复杂口令策略中定义的最少包含的特殊字母数
-    * updateTime  最近扫描时间
-    * suggestion  修改建议
+    * hostId  **参数解释**: 主机id **取值范围**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 不涉及
+    * hostIp  **参数解释**: 服务器IP（私有IP），为兼容用户使用，不删除此字段 **取值范围**: 不涉及
+    * privateIp  **参数解释**: 服务器私有IP **取值范围**: 不涉及
+    * publicIp  **参数解释**: 服务器公网IP **取值范围**: 不涉及
+    * minLength  **参数解释**: 口令最小长度的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
+    * uppercaseLetter  **参数解释**: 大写字母的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
+    * lowercaseLetter  **参数解释**: 小写字母的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
+    * number  **参数解释**: 数字的设置是否符合要求，符合为true，不符合为false **取值范围**: - true：符合要求 - false：不符合要求
+    * specialCharacter  **参数解释**: 特殊字符的设置是否符合要求，符合为true，不符合为false **取值范围**: - true：符合要求 - false：不符合要求
+    * minLengthNum  **参数解释**: 复杂口令策略中定义的口令最小长度 **取值范围**: 8 - 26
+    * minUppercaseLetter  **参数解释**: 复杂口令策略中定义的最少包含的大写字母数 **取值范围**: 0 - 10
+    * minLowercaseLetter  **参数解释**: 复杂口令策略中定义的最少包含的小写字母数 **取值范围**: 0 - 10
+    * minNumber  **参数解释**: 复杂口令策略中定义的最少包含的数字数 **取值范围**: 0 - 10
+    * minSpecialCharacter  **参数解释**: 复杂口令策略中定义的最少包含的特殊字母数 **取值范围**: 0 - 10
+    * updateTime  **参数解释**: 最近扫描时间 **取值范围**: 不涉及
+    * suggestion  **参数解释**: 修改建议 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -392,7 +392,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机id
+    *  **参数解释**: 主机id **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -404,7 +404,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机id
+    * @param string|null $hostId **参数解释**: 主机id **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -416,7 +416,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -428,7 +428,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -440,7 +440,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  服务器IP（私有IP），为兼容用户使用，不删除此字段
+    *  **参数解释**: 服务器IP（私有IP），为兼容用户使用，不删除此字段 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -452,7 +452,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 服务器IP（私有IP），为兼容用户使用，不删除此字段
+    * @param string|null $hostIp **参数解释**: 服务器IP（私有IP），为兼容用户使用，不删除此字段 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -464,7 +464,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  服务器私有IP
+    *  **参数解释**: 服务器私有IP **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -476,7 +476,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp 服务器私有IP
+    * @param string|null $privateIp **参数解释**: 服务器私有IP **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -488,7 +488,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  服务器公网IP
+    *  **参数解释**: 服务器公网IP **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -500,7 +500,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp 服务器公网IP
+    * @param string|null $publicIp **参数解释**: 服务器公网IP **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -512,7 +512,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets minLength
-    *  口令最小长度的设置是否符合要求，符合为true，不符合为false
+    *  **参数解释**: 口令最小长度的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
     *
     * @return bool|null
     */
@@ -524,7 +524,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets minLength
     *
-    * @param bool|null $minLength 口令最小长度的设置是否符合要求，符合为true，不符合为false
+    * @param bool|null $minLength **参数解释**: 口令最小长度的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
     *
     * @return $this
     */
@@ -536,7 +536,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets uppercaseLetter
-    *  大写字母的设置是否符合要求，符合为true，不符合为false
+    *  **参数解释**: 大写字母的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
     *
     * @return bool|null
     */
@@ -548,7 +548,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets uppercaseLetter
     *
-    * @param bool|null $uppercaseLetter 大写字母的设置是否符合要求，符合为true，不符合为false
+    * @param bool|null $uppercaseLetter **参数解释**: 大写字母的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
     *
     * @return $this
     */
@@ -560,7 +560,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets lowercaseLetter
-    *  小写字母的设置是否符合要求，符合为true，不符合为false
+    *  **参数解释**: 小写字母的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
     *
     * @return bool|null
     */
@@ -572,7 +572,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets lowercaseLetter
     *
-    * @param bool|null $lowercaseLetter 小写字母的设置是否符合要求，符合为true，不符合为false
+    * @param bool|null $lowercaseLetter **参数解释**: 小写字母的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
     *
     * @return $this
     */
@@ -584,7 +584,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets number
-    *  数字的设置是否符合要求，符合为true，不符合为false
+    *  **参数解释**: 数字的设置是否符合要求，符合为true，不符合为false **取值范围**: - true：符合要求 - false：不符合要求
     *
     * @return bool|null
     */
@@ -596,7 +596,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets number
     *
-    * @param bool|null $number 数字的设置是否符合要求，符合为true，不符合为false
+    * @param bool|null $number **参数解释**: 数字的设置是否符合要求，符合为true，不符合为false **取值范围**: - true：符合要求 - false：不符合要求
     *
     * @return $this
     */
@@ -608,7 +608,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets specialCharacter
-    *  特殊字符的设置是否符合要求，符合为true，不符合为false
+    *  **参数解释**: 特殊字符的设置是否符合要求，符合为true，不符合为false **取值范围**: - true：符合要求 - false：不符合要求
     *
     * @return bool|null
     */
@@ -620,7 +620,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets specialCharacter
     *
-    * @param bool|null $specialCharacter 特殊字符的设置是否符合要求，符合为true，不符合为false
+    * @param bool|null $specialCharacter **参数解释**: 特殊字符的设置是否符合要求，符合为true，不符合为false **取值范围**: - true：符合要求 - false：不符合要求
     *
     * @return $this
     */
@@ -632,7 +632,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets minLengthNum
-    *  复杂口令策略中定义的口令最小长度
+    *  **参数解释**: 复杂口令策略中定义的口令最小长度 **取值范围**: 8 - 26
     *
     * @return int|null
     */
@@ -644,7 +644,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets minLengthNum
     *
-    * @param int|null $minLengthNum 复杂口令策略中定义的口令最小长度
+    * @param int|null $minLengthNum **参数解释**: 复杂口令策略中定义的口令最小长度 **取值范围**: 8 - 26
     *
     * @return $this
     */
@@ -656,7 +656,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets minUppercaseLetter
-    *  复杂口令策略中定义的最少包含的大写字母数
+    *  **参数解释**: 复杂口令策略中定义的最少包含的大写字母数 **取值范围**: 0 - 10
     *
     * @return int|null
     */
@@ -668,7 +668,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets minUppercaseLetter
     *
-    * @param int|null $minUppercaseLetter 复杂口令策略中定义的最少包含的大写字母数
+    * @param int|null $minUppercaseLetter **参数解释**: 复杂口令策略中定义的最少包含的大写字母数 **取值范围**: 0 - 10
     *
     * @return $this
     */
@@ -680,7 +680,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets minLowercaseLetter
-    *  复杂口令策略中定义的最少包含的小写字母数
+    *  **参数解释**: 复杂口令策略中定义的最少包含的小写字母数 **取值范围**: 0 - 10
     *
     * @return int|null
     */
@@ -692,7 +692,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets minLowercaseLetter
     *
-    * @param int|null $minLowercaseLetter 复杂口令策略中定义的最少包含的小写字母数
+    * @param int|null $minLowercaseLetter **参数解释**: 复杂口令策略中定义的最少包含的小写字母数 **取值范围**: 0 - 10
     *
     * @return $this
     */
@@ -704,7 +704,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets minNumber
-    *  复杂口令策略中定义的最少包含的数字数
+    *  **参数解释**: 复杂口令策略中定义的最少包含的数字数 **取值范围**: 0 - 10
     *
     * @return int|null
     */
@@ -716,7 +716,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets minNumber
     *
-    * @param int|null $minNumber 复杂口令策略中定义的最少包含的数字数
+    * @param int|null $minNumber **参数解释**: 复杂口令策略中定义的最少包含的数字数 **取值范围**: 0 - 10
     *
     * @return $this
     */
@@ -728,7 +728,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets minSpecialCharacter
-    *  复杂口令策略中定义的最少包含的特殊字母数
+    *  **参数解释**: 复杂口令策略中定义的最少包含的特殊字母数 **取值范围**: 0 - 10
     *
     * @return int|null
     */
@@ -740,7 +740,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets minSpecialCharacter
     *
-    * @param int|null $minSpecialCharacter 复杂口令策略中定义的最少包含的特殊字母数
+    * @param int|null $minSpecialCharacter **参数解释**: 复杂口令策略中定义的最少包含的特殊字母数 **取值范围**: 0 - 10
     *
     * @return $this
     */
@@ -752,7 +752,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  最近扫描时间
+    *  **参数解释**: 最近扫描时间 **取值范围**: 不涉及
     *
     * @return int|null
     */
@@ -764,7 +764,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 最近扫描时间
+    * @param int|null $updateTime **参数解释**: 最近扫描时间 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -776,7 +776,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets suggestion
-    *  修改建议
+    *  **参数解释**: 修改建议 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -788,7 +788,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets suggestion
     *
-    * @param string|null $suggestion 修改建议
+    * @param string|null $suggestion **参数解释**: 修改建议 **取值范围**: 不涉及
     *
     * @return $this
     */

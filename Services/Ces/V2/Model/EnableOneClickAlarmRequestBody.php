@@ -27,6 +27,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
     * notificationPolicyIds  关联的通知策略ID列表
     * isReset  是否以默认一键告警规则重置创建
@@ -42,6 +43,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
             'okNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\Notification[]',
             'notificationBeginTime' => 'string',
             'notificationEndTime' => 'string',
+            'effectiveTimezone' => 'string',
             'notificationManner' => 'string',
             'notificationPolicyIds' => 'string[]',
             'isReset' => 'bool',
@@ -57,6 +59,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
     * notificationPolicyIds  关联的通知策略ID列表
     * isReset  是否以默认一键告警规则重置创建
@@ -72,6 +75,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
         'okNotifications' => null,
         'notificationBeginTime' => null,
         'notificationEndTime' => null,
+        'effectiveTimezone' => null,
         'notificationManner' => null,
         'notificationPolicyIds' => null,
         'isReset' => null,
@@ -108,6 +112,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
     * notificationPolicyIds  关联的通知策略ID列表
     * isReset  是否以默认一键告警规则重置创建
@@ -123,6 +128,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
             'okNotifications' => 'ok_notifications',
             'notificationBeginTime' => 'notification_begin_time',
             'notificationEndTime' => 'notification_end_time',
+            'effectiveTimezone' => 'effective_timezone',
             'notificationManner' => 'notification_manner',
             'notificationPolicyIds' => 'notification_policy_ids',
             'isReset' => 'is_reset',
@@ -138,6 +144,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
     * notificationPolicyIds  关联的通知策略ID列表
     * isReset  是否以默认一键告警规则重置创建
@@ -153,6 +160,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
             'okNotifications' => 'setOkNotifications',
             'notificationBeginTime' => 'setNotificationBeginTime',
             'notificationEndTime' => 'setNotificationEndTime',
+            'effectiveTimezone' => 'setEffectiveTimezone',
             'notificationManner' => 'setNotificationManner',
             'notificationPolicyIds' => 'setNotificationPolicyIds',
             'isReset' => 'setIsReset',
@@ -168,6 +176,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
     * notificationPolicyIds  关联的通知策略ID列表
     * isReset  是否以默认一键告警规则重置创建
@@ -183,6 +192,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
             'okNotifications' => 'getOkNotifications',
             'notificationBeginTime' => 'getNotificationBeginTime',
             'notificationEndTime' => 'getNotificationEndTime',
+            'effectiveTimezone' => 'getEffectiveTimezone',
             'notificationManner' => 'getNotificationManner',
             'notificationPolicyIds' => 'getNotificationPolicyIds',
             'isReset' => 'getIsReset',
@@ -271,6 +281,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
         $this->container['okNotifications'] = isset($data['okNotifications']) ? $data['okNotifications'] : null;
         $this->container['notificationBeginTime'] = isset($data['notificationBeginTime']) ? $data['notificationBeginTime'] : null;
         $this->container['notificationEndTime'] = isset($data['notificationEndTime']) ? $data['notificationEndTime'] : null;
+        $this->container['effectiveTimezone'] = isset($data['effectiveTimezone']) ? $data['effectiveTimezone'] : null;
         $this->container['notificationManner'] = isset($data['notificationManner']) ? $data['notificationManner'] : null;
         $this->container['notificationPolicyIds'] = isset($data['notificationPolicyIds']) ? $data['notificationPolicyIds'] : null;
         $this->container['isReset'] = isset($data['isReset']) ? $data['isReset'] : null;
@@ -320,6 +331,15 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['notificationEndTime']) && !preg_match("/^([01][0-9]|2[0-3]):([0-5][0-9])$/", $this->container['notificationEndTime'])) {
                 $invalidProperties[] = "invalid value for 'notificationEndTime', must be conform to the pattern /^([01][0-9]|2[0-3]):([0-5][0-9])$/.";
+            }
+            if (!is_null($this->container['effectiveTimezone']) && (mb_strlen($this->container['effectiveTimezone']) > 16)) {
+                $invalidProperties[] = "invalid value for 'effectiveTimezone', the character length must be smaller than or equal to 16.";
+            }
+            if (!is_null($this->container['effectiveTimezone']) && (mb_strlen($this->container['effectiveTimezone']) < 1)) {
+                $invalidProperties[] = "invalid value for 'effectiveTimezone', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['effectiveTimezone']) && !preg_match("/^(GMT[+-](0|0[1-9]|1[0-2]):00)$/", $this->container['effectiveTimezone'])) {
+                $invalidProperties[] = "invalid value for 'effectiveTimezone', must be conform to the pattern /^(GMT[+-](0|0[1-9]|1[0-2]):00)$/.";
             }
             $allowedValues = $this->getNotificationMannerAllowableValues();
                 if (!is_null($this->container['notificationManner']) && !in_array($this->container['notificationManner'], $allowedValues, true)) {
@@ -514,6 +534,30 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     public function setNotificationEndTime($notificationEndTime)
     {
         $this->container['notificationEndTime'] = $notificationEndTime;
+        return $this;
+    }
+
+    /**
+    * Gets effectiveTimezone
+    *  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    *
+    * @return string|null
+    */
+    public function getEffectiveTimezone()
+    {
+        return $this->container['effectiveTimezone'];
+    }
+
+    /**
+    * Sets effectiveTimezone
+    *
+    * @param string|null $effectiveTimezone 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    *
+    * @return $this
+    */
+    public function setEffectiveTimezone($effectiveTimezone)
+    {
+        $this->container['effectiveTimezone'] = $effectiveTimezone;
         return $this;
     }
 

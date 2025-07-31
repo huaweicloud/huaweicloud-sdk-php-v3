@@ -21,8 +21,8 @@ class ListAlarmHistoriesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmHistories  alarmHistories列表
-    * count  告警记录列表总数
+    * alarmHistories  **参数解释**： alarmHistories列表。
+    * count  **参数解释**： 告警记录列表总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListAlarmHistoriesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmHistories  alarmHistories列表
-    * count  告警记录列表总数
+    * alarmHistories  **参数解释**： alarmHistories列表。
+    * count  **参数解释**： 告警记录列表总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListAlarmHistoriesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmHistories  alarmHistories列表
-    * count  告警记录列表总数
+    * alarmHistories  **参数解释**： alarmHistories列表。
+    * count  **参数解释**： 告警记录列表总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListAlarmHistoriesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmHistories  alarmHistories列表
-    * count  告警记录列表总数
+    * alarmHistories  **参数解释**： alarmHistories列表。
+    * count  **参数解释**： 告警记录列表总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListAlarmHistoriesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmHistories  alarmHistories列表
-    * count  告警记录列表总数
+    * alarmHistories  **参数解释**： alarmHistories列表。
+    * count  **参数解释**： 告警记录列表总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListAlarmHistoriesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmHistories
-    *  alarmHistories列表
+    *  **参数解释**： alarmHistories列表。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\AlarmHistoryItemV2[]|null
     */
@@ -204,7 +204,7 @@ class ListAlarmHistoriesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmHistories
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\AlarmHistoryItemV2[]|null $alarmHistories alarmHistories列表
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\AlarmHistoryItemV2[]|null $alarmHistories **参数解释**： alarmHistories列表。
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListAlarmHistoriesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  告警记录列表总数
+    *  **参数解释**： 告警记录列表总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -228,7 +228,7 @@ class ListAlarmHistoriesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 告警记录列表总数
+    * @param int|null $count **参数解释**： 告警记录列表总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

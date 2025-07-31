@@ -20,44 +20,40 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * groupName  策略组名
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示个数
-    * containerMode  是否查询容器版策略
-    * groupId  策略组id
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * groupName  **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * containerMode  **参数解释**: 是否只查询容器版策略组 **约束限制**: 不涉及 **取值范围**: true: 只查询容器版策略组 false: 查询全部策略组 **默认取值**: false
+    * groupId  **参数解释**: 策略组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'region' => 'string',
             'enterpriseProjectId' => 'string',
-            'groupName' => 'string',
             'offset' => 'int',
             'limit' => 'int',
+            'groupName' => 'string',
             'containerMode' => 'bool',
             'groupId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * groupName  策略组名
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示个数
-    * containerMode  是否查询容器版策略
-    * groupId  策略组id
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * groupName  **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * containerMode  **参数解释**: 是否只查询容器版策略组 **约束限制**: 不涉及 **取值范围**: true: 只查询容器版策略组 false: 查询全部策略组 **默认取值**: false
+    * groupId  **参数解释**: 策略组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'region' => null,
         'enterpriseProjectId' => null,
-        'groupName' => null,
         'offset' => 'int32',
         'limit' => 'int32',
+        'groupName' => null,
         'containerMode' => null,
         'groupId' => null
     ];
@@ -85,66 +81,60 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * groupName  策略组名
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示个数
-    * containerMode  是否查询容器版策略
-    * groupId  策略组id
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * groupName  **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * containerMode  **参数解释**: 是否只查询容器版策略组 **约束限制**: 不涉及 **取值范围**: true: 只查询容器版策略组 false: 查询全部策略组 **默认取值**: false
+    * groupId  **参数解释**: 策略组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'region' => 'region',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'groupName' => 'group_name',
             'offset' => 'offset',
             'limit' => 'limit',
+            'groupName' => 'group_name',
             'containerMode' => 'container_mode',
             'groupId' => 'group_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * groupName  策略组名
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示个数
-    * containerMode  是否查询容器版策略
-    * groupId  策略组id
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * groupName  **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * containerMode  **参数解释**: 是否只查询容器版策略组 **约束限制**: 不涉及 **取值范围**: true: 只查询容器版策略组 false: 查询全部策略组 **默认取值**: false
+    * groupId  **参数解释**: 策略组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
-            'region' => 'setRegion',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'groupName' => 'setGroupName',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
+            'groupName' => 'setGroupName',
             'containerMode' => 'setContainerMode',
             'groupId' => 'setGroupId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * groupName  策略组名
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示个数
-    * containerMode  是否查询容器版策略
-    * groupId  策略组id
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * groupName  **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * containerMode  **参数解释**: 是否只查询容器版策略组 **约束限制**: 不涉及 **取值范围**: true: 只查询容器版策略组 false: 查询全部策略组 **默认取值**: false
+    * groupId  **参数解释**: 策略组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
-            'region' => 'getRegion',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'groupName' => 'getGroupName',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
+            'groupName' => 'getGroupName',
             'containerMode' => 'getContainerMode',
             'groupId' => 'getGroupId'
     ];
@@ -207,11 +197,10 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
-        $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['containerMode'] = isset($data['containerMode']) ? $data['containerMode'] : null;
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
     }
@@ -224,15 +213,6 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 128)) {
-                $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) < 0)) {
-                $invalidProperties[] = "invalid value for 'region', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['region']) && !preg_match("/^.*$/", $this->container['region'])) {
-                $invalidProperties[] = "invalid value for 'region', must be conform to the pattern /^.*$/.";
-            }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 256)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 256.";
             }
@@ -242,17 +222,8 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['groupName']) && !preg_match("/^.*$/", $this->container['groupName'])) {
-                $invalidProperties[] = "invalid value for 'groupName', must be conform to the pattern /^.*$/.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 100000)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 100000.";
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2000000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
@@ -262,6 +233,15 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
+            }
+            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['groupName']) && !preg_match("/^.*$/", $this->container['groupName'])) {
+                $invalidProperties[] = "invalid value for 'groupName', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 256)) {
                 $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 256.";
@@ -287,32 +267,8 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets region
-    *  Region ID
-    *
-    * @return string|null
-    */
-    public function getRegion()
-    {
-        return $this->container['region'];
-    }
-
-    /**
-    * Sets region
-    *
-    * @param string|null $region Region ID
-    *
-    * @return $this
-    */
-    public function setRegion($region)
-    {
-        $this->container['region'] = $region;
-        return $this;
-    }
-
-    /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return string|null
     */
@@ -324,7 +280,7 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return $this
     */
@@ -335,32 +291,8 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets groupName
-    *  策略组名
-    *
-    * @return string|null
-    */
-    public function getGroupName()
-    {
-        return $this->container['groupName'];
-    }
-
-    /**
-    * Sets groupName
-    *
-    * @param string|null $groupName 策略组名
-    *
-    * @return $this
-    */
-    public function setGroupName($groupName)
-    {
-        $this->container['groupName'] = $groupName;
-        return $this;
-    }
-
-    /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置
+    *  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return int|null
     */
@@ -372,7 +304,7 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置
+    * @param int|null $offset **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return $this
     */
@@ -384,7 +316,7 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示个数
+    *  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return int|null
     */
@@ -396,7 +328,7 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示个数
+    * @param int|null $limit **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return $this
     */
@@ -407,8 +339,32 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets groupName
+    *  **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getGroupName()
+    {
+        return $this->container['groupName'];
+    }
+
+    /**
+    * Sets groupName
+    *
+    * @param string|null $groupName **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setGroupName($groupName)
+    {
+        $this->container['groupName'] = $groupName;
+        return $this;
+    }
+
+    /**
     * Gets containerMode
-    *  是否查询容器版策略
+    *  **参数解释**: 是否只查询容器版策略组 **约束限制**: 不涉及 **取值范围**: true: 只查询容器版策略组 false: 查询全部策略组 **默认取值**: false
     *
     * @return bool|null
     */
@@ -420,7 +376,7 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets containerMode
     *
-    * @param bool|null $containerMode 是否查询容器版策略
+    * @param bool|null $containerMode **参数解释**: 是否只查询容器版策略组 **约束限制**: 不涉及 **取值范围**: true: 只查询容器版策略组 false: 查询全部策略组 **默认取值**: false
     *
     * @return $this
     */
@@ -432,7 +388,7 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  策略组id
+    *  **参数解释**: 策略组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -444,7 +400,7 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 策略组id
+    * @param string|null $groupId **参数解释**: 策略组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return $this
     */

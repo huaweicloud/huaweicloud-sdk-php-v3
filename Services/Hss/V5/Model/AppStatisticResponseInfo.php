@@ -20,8 +20,8 @@ class AppStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * appName  软件名称
-    * num  进程数量
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-128位
+    * num  **参数解释**: 进程数量 **取值范围**: 字符长度0-100000位
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class AppStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * appName  软件名称
-    * num  进程数量
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-128位
+    * num  **参数解释**: 进程数量 **取值范围**: 字符长度0-100000位
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class AppStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * appName  软件名称
-    * num  进程数量
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-128位
+    * num  **参数解释**: 进程数量 **取值范围**: 字符长度0-100000位
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class AppStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * appName  软件名称
-    * num  进程数量
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-128位
+    * num  **参数解释**: 进程数量 **取值范围**: 字符长度0-100000位
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class AppStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * appName  软件名称
-    * num  进程数量
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-128位
+    * num  **参数解释**: 进程数量 **取值范围**: 字符长度0-100000位
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class AppStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets appName
-    *  软件名称
+    *  **参数解释**: 软件名称 **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class AppStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets appName
     *
-    * @param string|null $appName 软件名称
+    * @param string|null $appName **参数解释**: 软件名称 **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class AppStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets num
-    *  进程数量
+    *  **参数解释**: 进程数量 **取值范围**: 字符长度0-100000位
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class AppStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets num
     *
-    * @param int|null $num 进程数量
+    * @param int|null $num **参数解释**: 进程数量 **取值范围**: 字符长度0-100000位
     *
     * @return $this
     */

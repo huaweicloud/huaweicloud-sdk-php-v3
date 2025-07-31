@@ -20,13 +20,13 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  主机ID
-    * hostName  服务器名称
-    * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
-    * privateIp  服务器私有IP
-    * publicIp  服务器公网IP
-    * updateTime  最近扫描时间，时间戳单位：毫秒
-    * weakPwdAccounts  弱口令账号列表
+    * hostId  **参数解释**: 主机ID **取值范围**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 不涉及
+    * hostIp  **参数解释**: 服务器IP（私有IP），为兼容用户使用，不删除此字段 **取值范围**: 不涉及
+    * privateIp  **参数解释**: 服务器私有IP **取值范围**: 不涉及
+    * publicIp  **参数解释**: 服务器公网IP **取值范围**: 不涉及
+    * updateTime  **参数解释**: 最近扫描时间，时间戳单位：毫秒 **取值范围**: 不涉及
+    * weakPwdAccounts  **参数解释**: 弱口令账号列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  主机ID
-    * hostName  服务器名称
-    * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
-    * privateIp  服务器私有IP
-    * publicIp  服务器公网IP
-    * updateTime  最近扫描时间，时间戳单位：毫秒
-    * weakPwdAccounts  弱口令账号列表
+    * hostId  **参数解释**: 主机ID **取值范围**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 不涉及
+    * hostIp  **参数解释**: 服务器IP（私有IP），为兼容用户使用，不删除此字段 **取值范围**: 不涉及
+    * privateIp  **参数解释**: 服务器私有IP **取值范围**: 不涉及
+    * publicIp  **参数解释**: 服务器公网IP **取值范围**: 不涉及
+    * updateTime  **参数解释**: 最近扫描时间，时间戳单位：毫秒 **取值范围**: 不涉及
+    * weakPwdAccounts  **参数解释**: 弱口令账号列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  主机ID
-    * hostName  服务器名称
-    * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
-    * privateIp  服务器私有IP
-    * publicIp  服务器公网IP
-    * updateTime  最近扫描时间，时间戳单位：毫秒
-    * weakPwdAccounts  弱口令账号列表
+    * hostId  **参数解释**: 主机ID **取值范围**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 不涉及
+    * hostIp  **参数解释**: 服务器IP（私有IP），为兼容用户使用，不删除此字段 **取值范围**: 不涉及
+    * privateIp  **参数解释**: 服务器私有IP **取值范围**: 不涉及
+    * publicIp  **参数解释**: 服务器公网IP **取值范围**: 不涉及
+    * updateTime  **参数解释**: 最近扫描时间，时间戳单位：毫秒 **取值范围**: 不涉及
+    * weakPwdAccounts  **参数解释**: 弱口令账号列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  主机ID
-    * hostName  服务器名称
-    * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
-    * privateIp  服务器私有IP
-    * publicIp  服务器公网IP
-    * updateTime  最近扫描时间，时间戳单位：毫秒
-    * weakPwdAccounts  弱口令账号列表
+    * hostId  **参数解释**: 主机ID **取值范围**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 不涉及
+    * hostIp  **参数解释**: 服务器IP（私有IP），为兼容用户使用，不删除此字段 **取值范围**: 不涉及
+    * privateIp  **参数解释**: 服务器私有IP **取值范围**: 不涉及
+    * publicIp  **参数解释**: 服务器公网IP **取值范围**: 不涉及
+    * updateTime  **参数解释**: 最近扫描时间，时间戳单位：毫秒 **取值范围**: 不涉及
+    * weakPwdAccounts  **参数解释**: 弱口令账号列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  主机ID
-    * hostName  服务器名称
-    * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
-    * privateIp  服务器私有IP
-    * publicIp  服务器公网IP
-    * updateTime  最近扫描时间，时间戳单位：毫秒
-    * weakPwdAccounts  弱口令账号列表
+    * hostId  **参数解释**: 主机ID **取值范围**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 不涉及
+    * hostIp  **参数解释**: 服务器IP（私有IP），为兼容用户使用，不删除此字段 **取值范围**: 不涉及
+    * privateIp  **参数解释**: 服务器私有IP **取值范围**: 不涉及
+    * publicIp  **参数解释**: 服务器公网IP **取值范围**: 不涉及
+    * updateTime  **参数解释**: 最近扫描时间，时间戳单位：毫秒 **取值范围**: 不涉及
+    * weakPwdAccounts  **参数解释**: 弱口令账号列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -276,7 +276,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机ID
+    *  **参数解释**: 主机ID **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -288,7 +288,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机ID
+    * @param string|null $hostId **参数解释**: 主机ID **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -300,7 +300,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -312,7 +312,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  服务器IP（私有IP），为兼容用户使用，不删除此字段
+    *  **参数解释**: 服务器IP（私有IP），为兼容用户使用，不删除此字段 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -336,7 +336,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 服务器IP（私有IP），为兼容用户使用，不删除此字段
+    * @param string|null $hostIp **参数解释**: 服务器IP（私有IP），为兼容用户使用，不删除此字段 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -348,7 +348,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  服务器私有IP
+    *  **参数解释**: 服务器私有IP **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -360,7 +360,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp 服务器私有IP
+    * @param string|null $privateIp **参数解释**: 服务器私有IP **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -372,7 +372,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  服务器公网IP
+    *  **参数解释**: 服务器公网IP **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -384,7 +384,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp 服务器公网IP
+    * @param string|null $publicIp **参数解释**: 服务器公网IP **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -396,7 +396,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  最近扫描时间，时间戳单位：毫秒
+    *  **参数解释**: 最近扫描时间，时间戳单位：毫秒 **取值范围**: 不涉及
     *
     * @return int|null
     */
@@ -408,7 +408,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 最近扫描时间，时间戳单位：毫秒
+    * @param int|null $updateTime **参数解释**: 最近扫描时间，时间戳单位：毫秒 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -420,7 +420,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets weakPwdAccounts
-    *  弱口令账号列表
+    *  **参数解释**: 弱口令账号列表 **取值范围**: 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\WeakPwdAccountInfoResponseInfo[]|null
     */
@@ -432,7 +432,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets weakPwdAccounts
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\WeakPwdAccountInfoResponseInfo[]|null $weakPwdAccounts 弱口令账号列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\WeakPwdAccountInfoResponseInfo[]|null $weakPwdAccounts **参数解释**: 弱口令账号列表 **取值范围**: 不涉及
     *
     * @return $this
     */

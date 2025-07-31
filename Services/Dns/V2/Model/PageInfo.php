@@ -20,9 +20,9 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nextMarker  下一页的页面标识。
-    * previousMarker  上一页的页面标识。
-    * currentCount  页面数量。
+    * nextMarker  **参数解释：** 下一页的页面标识。 **取值范围：** 不涉及。
+    * previousMarker  **参数解释：** 上一页的页面标识。 **取值范围：** 不涉及。
+    * currentCount  **参数解释：** 页面数量。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nextMarker  下一页的页面标识。
-    * previousMarker  上一页的页面标识。
-    * currentCount  页面数量。
+    * nextMarker  **参数解释：** 下一页的页面标识。 **取值范围：** 不涉及。
+    * previousMarker  **参数解释：** 上一页的页面标识。 **取值范围：** 不涉及。
+    * currentCount  **参数解释：** 页面数量。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nextMarker  下一页的页面标识。
-    * previousMarker  上一页的页面标识。
-    * currentCount  页面数量。
+    * nextMarker  **参数解释：** 下一页的页面标识。 **取值范围：** 不涉及。
+    * previousMarker  **参数解释：** 上一页的页面标识。 **取值范围：** 不涉及。
+    * currentCount  **参数解释：** 页面数量。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nextMarker  下一页的页面标识。
-    * previousMarker  上一页的页面标识。
-    * currentCount  页面数量。
+    * nextMarker  **参数解释：** 下一页的页面标识。 **取值范围：** 不涉及。
+    * previousMarker  **参数解释：** 上一页的页面标识。 **取值范围：** 不涉及。
+    * currentCount  **参数解释：** 页面数量。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nextMarker  下一页的页面标识。
-    * previousMarker  上一页的页面标识。
-    * currentCount  页面数量。
+    * nextMarker  **参数解释：** 下一页的页面标识。 **取值范围：** 不涉及。
+    * previousMarker  **参数解释：** 上一页的页面标识。 **取值范围：** 不涉及。
+    * currentCount  **参数解释：** 页面数量。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextMarker
-    *  下一页的页面标识。
+    *  **参数解释：** 下一页的页面标识。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nextMarker
     *
-    * @param string|null $nextMarker 下一页的页面标识。
+    * @param string|null $nextMarker **参数解释：** 下一页的页面标识。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets previousMarker
-    *  上一页的页面标识。
+    *  **参数解释：** 上一页的页面标识。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets previousMarker
     *
-    * @param string|null $previousMarker 上一页的页面标识。
+    * @param string|null $previousMarker **参数解释：** 上一页的页面标识。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets currentCount
-    *  页面数量。
+    *  **参数解释：** 页面数量。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -256,7 +256,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets currentCount
     *
-    * @param int|null $currentCount 页面数量。
+    * @param int|null $currentCount **参数解释：** 页面数量。 **取值范围：** 不涉及。
     *
     * @return $this
     */

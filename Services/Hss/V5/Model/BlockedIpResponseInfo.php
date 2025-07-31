@@ -20,8 +20,8 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  服务器ID
-    * hostName  服务器名称
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * srcIp  攻击源IP
     * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
     * interceptNum  拦截次数
@@ -44,8 +44,8 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  服务器ID
-    * hostName  服务器名称
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * srcIp  攻击源IP
     * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
     * interceptNum  拦截次数
@@ -89,8 +89,8 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  服务器ID
-    * hostName  服务器名称
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * srcIp  攻击源IP
     * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
     * interceptNum  拦截次数
@@ -113,8 +113,8 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  服务器ID
-    * hostName  服务器名称
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * srcIp  攻击源IP
     * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
     * interceptNum  拦截次数
@@ -137,8 +137,8 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  服务器ID
-    * hostName  服务器名称
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * srcIp  攻击源IP
     * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
     * interceptNum  拦截次数
@@ -339,7 +339,7 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return string
     */
@@ -351,7 +351,7 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string $hostId 服务器ID
+    * @param string $hostId **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return string
     */
@@ -375,7 +375,7 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string $hostName 服务器名称
+    * @param string $hostName **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ShowPrivateZoneNameServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nameservers  名称服务器列表信息。
+    * nameservers  **参数解释：** 名称服务器列表信息。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowPrivateZoneNameServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nameservers  名称服务器列表信息。
+    * nameservers  **参数解释：** 名称服务器列表信息。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowPrivateZoneNameServerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nameservers  名称服务器列表信息。
+    * nameservers  **参数解释：** 名称服务器列表信息。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowPrivateZoneNameServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nameservers  名称服务器列表信息。
+    * nameservers  **参数解释：** 名称服务器列表信息。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowPrivateZoneNameServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nameservers  名称服务器列表信息。
+    * nameservers  **参数解释：** 名称服务器列表信息。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowPrivateZoneNameServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameservers
-    *  名称服务器列表信息。
+    *  **参数解释：** 名称服务器列表信息。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\PrivateNameServer[]|null
     */
@@ -187,7 +187,7 @@ class ShowPrivateZoneNameServerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nameservers
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\PrivateNameServer[]|null $nameservers 名称服务器列表信息。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\PrivateNameServer[]|null $nameservers **参数解释：** 名称服务器列表信息。 **取值范围：** 不涉及。
     *
     * @return $this
     */

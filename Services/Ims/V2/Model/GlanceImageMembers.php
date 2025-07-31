@@ -26,6 +26,8 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
     * imageId  镜像ID。
     * memberId  成员ID。
     * schema  共享视图。
+    * memberType  共享成员类型。
+    * urn  共享组织的URN仅当member_type类型为organization时，才会返回urn字段。
     *
     * @var string[]
     */
@@ -35,7 +37,9 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
             'updatedAt' => 'string',
             'imageId' => 'string',
             'memberId' => 'string',
-            'schema' => 'string'
+            'schema' => 'string',
+            'memberType' => 'string',
+            'urn' => 'string'
     ];
 
     /**
@@ -46,6 +50,8 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
     * imageId  镜像ID。
     * memberId  成员ID。
     * schema  共享视图。
+    * memberType  共享成员类型。
+    * urn  共享组织的URN仅当member_type类型为organization时，才会返回urn字段。
     *
     * @var string[]
     */
@@ -55,7 +61,9 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
         'updatedAt' => null,
         'imageId' => null,
         'memberId' => null,
-        'schema' => null
+        'schema' => null,
+        'memberType' => null,
+        'urn' => null
     ];
 
     /**
@@ -87,6 +95,8 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
     * imageId  镜像ID。
     * memberId  成员ID。
     * schema  共享视图。
+    * memberType  共享成员类型。
+    * urn  共享组织的URN仅当member_type类型为organization时，才会返回urn字段。
     *
     * @var string[]
     */
@@ -96,7 +106,9 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
             'updatedAt' => 'updated_at',
             'imageId' => 'image_id',
             'memberId' => 'member_id',
-            'schema' => 'schema'
+            'schema' => 'schema',
+            'memberType' => 'member_type',
+            'urn' => 'urn'
     ];
 
     /**
@@ -107,6 +119,8 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
     * imageId  镜像ID。
     * memberId  成员ID。
     * schema  共享视图。
+    * memberType  共享成员类型。
+    * urn  共享组织的URN仅当member_type类型为organization时，才会返回urn字段。
     *
     * @var string[]
     */
@@ -116,7 +130,9 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
             'updatedAt' => 'setUpdatedAt',
             'imageId' => 'setImageId',
             'memberId' => 'setMemberId',
-            'schema' => 'setSchema'
+            'schema' => 'setSchema',
+            'memberType' => 'setMemberType',
+            'urn' => 'setUrn'
     ];
 
     /**
@@ -127,6 +143,8 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
     * imageId  镜像ID。
     * memberId  成员ID。
     * schema  共享视图。
+    * memberType  共享成员类型。
+    * urn  共享组织的URN仅当member_type类型为organization时，才会返回urn字段。
     *
     * @var string[]
     */
@@ -136,7 +154,9 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
             'updatedAt' => 'getUpdatedAt',
             'imageId' => 'getImageId',
             'memberId' => 'getMemberId',
-            'schema' => 'getSchema'
+            'schema' => 'getSchema',
+            'memberType' => 'getMemberType',
+            'urn' => 'getUrn'
     ];
 
     /**
@@ -203,6 +223,8 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
         $this->container['imageId'] = isset($data['imageId']) ? $data['imageId'] : null;
         $this->container['memberId'] = isset($data['memberId']) ? $data['memberId'] : null;
         $this->container['schema'] = isset($data['schema']) ? $data['schema'] : null;
+        $this->container['memberType'] = isset($data['memberType']) ? $data['memberType'] : null;
+        $this->container['urn'] = isset($data['urn']) ? $data['urn'] : null;
     }
 
     /**
@@ -386,6 +408,54 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
     public function setSchema($schema)
     {
         $this->container['schema'] = $schema;
+        return $this;
+    }
+
+    /**
+    * Gets memberType
+    *  共享成员类型。
+    *
+    * @return string|null
+    */
+    public function getMemberType()
+    {
+        return $this->container['memberType'];
+    }
+
+    /**
+    * Sets memberType
+    *
+    * @param string|null $memberType 共享成员类型。
+    *
+    * @return $this
+    */
+    public function setMemberType($memberType)
+    {
+        $this->container['memberType'] = $memberType;
+        return $this;
+    }
+
+    /**
+    * Gets urn
+    *  共享组织的URN仅当member_type类型为organization时，才会返回urn字段。
+    *
+    * @return string|null
+    */
+    public function getUrn()
+    {
+        return $this->container['urn'];
+    }
+
+    /**
+    * Sets urn
+    *
+    * @param string|null $urn 共享组织的URN仅当member_type类型为organization时，才会返回urn字段。
+    *
+    * @return $this
+    */
+    public function setUrn($urn)
+    {
+        $this->container['urn'] = $urn;
         return $this;
     }
 

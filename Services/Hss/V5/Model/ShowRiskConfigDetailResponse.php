@@ -21,14 +21,14 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * severity  风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
-    * checkType  配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows
-    * checkTypeDesc  对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。
-    * checkRuleNum  当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
-    * failedRuleNum  未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
-    * passedRuleNum  已通过的检查项数量，check_rule_num中只要有一台主机通过了某个检查项，这个检查项就会被计算在passed_rule_num中
-    * ignoredRuleNum  已忽略的检查项数量，check_rule_num中只要有一台主机忽略了某个检查项，这个检查项就会被计算在ignored_rule_num中
-    * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
+    * severity  **参数解释**: 风险等级 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危
+    * checkType  **参数解释**: 配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows **取值范围**: 不涉及
+    * checkTypeDesc  **参数解释**: 对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。 **取值范围**: 不涉及
+    * checkRuleNum  **参数解释**: 当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。 **取值范围**: 不涉及
+    * failedRuleNum  **参数解释**: 未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中 **取值范围**: 不涉及
+    * passedRuleNum  **参数解释**: 已通过的检查项数量，check_rule_num中只要有一台主机通过了某个检查项，这个检查项就会被计算在passed_rule_num中 **取值范围**: 不涉及
+    * ignoredRuleNum  **参数解释**: 已忽略的检查项数量，check_rule_num中只要有一台主机忽略了某个检查项，这个检查项就会被计算在ignored_rule_num中 **取值范围**: 不涉及
+    * hostNum  **参数解释**: 受影响的服务器的数量，进行了当前基线检测的服务器数量 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -45,14 +45,14 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * severity  风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
-    * checkType  配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows
-    * checkTypeDesc  对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。
-    * checkRuleNum  当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
-    * failedRuleNum  未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
-    * passedRuleNum  已通过的检查项数量，check_rule_num中只要有一台主机通过了某个检查项，这个检查项就会被计算在passed_rule_num中
-    * ignoredRuleNum  已忽略的检查项数量，check_rule_num中只要有一台主机忽略了某个检查项，这个检查项就会被计算在ignored_rule_num中
-    * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
+    * severity  **参数解释**: 风险等级 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危
+    * checkType  **参数解释**: 配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows **取值范围**: 不涉及
+    * checkTypeDesc  **参数解释**: 对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。 **取值范围**: 不涉及
+    * checkRuleNum  **参数解释**: 当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。 **取值范围**: 不涉及
+    * failedRuleNum  **参数解释**: 未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中 **取值范围**: 不涉及
+    * passedRuleNum  **参数解释**: 已通过的检查项数量，check_rule_num中只要有一台主机通过了某个检查项，这个检查项就会被计算在passed_rule_num中 **取值范围**: 不涉及
+    * ignoredRuleNum  **参数解释**: 已忽略的检查项数量，check_rule_num中只要有一台主机忽略了某个检查项，这个检查项就会被计算在ignored_rule_num中 **取值范围**: 不涉及
+    * hostNum  **参数解释**: 受影响的服务器的数量，进行了当前基线检测的服务器数量 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -90,14 +90,14 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * severity  风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
-    * checkType  配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows
-    * checkTypeDesc  对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。
-    * checkRuleNum  当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
-    * failedRuleNum  未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
-    * passedRuleNum  已通过的检查项数量，check_rule_num中只要有一台主机通过了某个检查项，这个检查项就会被计算在passed_rule_num中
-    * ignoredRuleNum  已忽略的检查项数量，check_rule_num中只要有一台主机忽略了某个检查项，这个检查项就会被计算在ignored_rule_num中
-    * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
+    * severity  **参数解释**: 风险等级 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危
+    * checkType  **参数解释**: 配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows **取值范围**: 不涉及
+    * checkTypeDesc  **参数解释**: 对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。 **取值范围**: 不涉及
+    * checkRuleNum  **参数解释**: 当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。 **取值范围**: 不涉及
+    * failedRuleNum  **参数解释**: 未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中 **取值范围**: 不涉及
+    * passedRuleNum  **参数解释**: 已通过的检查项数量，check_rule_num中只要有一台主机通过了某个检查项，这个检查项就会被计算在passed_rule_num中 **取值范围**: 不涉及
+    * ignoredRuleNum  **参数解释**: 已忽略的检查项数量，check_rule_num中只要有一台主机忽略了某个检查项，这个检查项就会被计算在ignored_rule_num中 **取值范围**: 不涉及
+    * hostNum  **参数解释**: 受影响的服务器的数量，进行了当前基线检测的服务器数量 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -114,14 +114,14 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * severity  风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
-    * checkType  配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows
-    * checkTypeDesc  对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。
-    * checkRuleNum  当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
-    * failedRuleNum  未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
-    * passedRuleNum  已通过的检查项数量，check_rule_num中只要有一台主机通过了某个检查项，这个检查项就会被计算在passed_rule_num中
-    * ignoredRuleNum  已忽略的检查项数量，check_rule_num中只要有一台主机忽略了某个检查项，这个检查项就会被计算在ignored_rule_num中
-    * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
+    * severity  **参数解释**: 风险等级 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危
+    * checkType  **参数解释**: 配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows **取值范围**: 不涉及
+    * checkTypeDesc  **参数解释**: 对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。 **取值范围**: 不涉及
+    * checkRuleNum  **参数解释**: 当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。 **取值范围**: 不涉及
+    * failedRuleNum  **参数解释**: 未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中 **取值范围**: 不涉及
+    * passedRuleNum  **参数解释**: 已通过的检查项数量，check_rule_num中只要有一台主机通过了某个检查项，这个检查项就会被计算在passed_rule_num中 **取值范围**: 不涉及
+    * ignoredRuleNum  **参数解释**: 已忽略的检查项数量，check_rule_num中只要有一台主机忽略了某个检查项，这个检查项就会被计算在ignored_rule_num中 **取值范围**: 不涉及
+    * hostNum  **参数解释**: 受影响的服务器的数量，进行了当前基线检测的服务器数量 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -138,14 +138,14 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * severity  风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
-    * checkType  配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows
-    * checkTypeDesc  对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。
-    * checkRuleNum  当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
-    * failedRuleNum  未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
-    * passedRuleNum  已通过的检查项数量，check_rule_num中只要有一台主机通过了某个检查项，这个检查项就会被计算在passed_rule_num中
-    * ignoredRuleNum  已忽略的检查项数量，check_rule_num中只要有一台主机忽略了某个检查项，这个检查项就会被计算在ignored_rule_num中
-    * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
+    * severity  **参数解释**: 风险等级 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危
+    * checkType  **参数解释**: 配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows **取值范围**: 不涉及
+    * checkTypeDesc  **参数解释**: 对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。 **取值范围**: 不涉及
+    * checkRuleNum  **参数解释**: 当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。 **取值范围**: 不涉及
+    * failedRuleNum  **参数解释**: 未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中 **取值范围**: 不涉及
+    * passedRuleNum  **参数解释**: 已通过的检查项数量，check_rule_num中只要有一台主机通过了某个检查项，这个检查项就会被计算在passed_rule_num中 **取值范围**: 不涉及
+    * ignoredRuleNum  **参数解释**: 已忽略的检查项数量，check_rule_num中只要有一台主机忽略了某个检查项，这个检查项就会被计算在ignored_rule_num中 **取值范围**: 不涉及
+    * hostNum  **参数解释**: 受影响的服务器的数量，进行了当前基线检测的服务器数量 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -300,7 +300,7 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
+    *  **参数解释**: 风险等级 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危
     *
     * @return string|null
     */
@@ -312,7 +312,7 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity 风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
+    * @param string|null $severity **参数解释**: 风险等级 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkType
-    *  配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows
+    *  **参数解释**: 配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -336,7 +336,7 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets checkType
     *
-    * @param string|null $checkType 配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows
+    * @param string|null $checkType **参数解释**: 配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -348,7 +348,7 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkTypeDesc
-    *  对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。
+    *  **参数解释**: 对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -360,7 +360,7 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets checkTypeDesc
     *
-    * @param string|null $checkTypeDesc 对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。
+    * @param string|null $checkTypeDesc **参数解释**: 对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -372,7 +372,7 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkRuleNum
-    *  当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
+    *  **参数解释**: 当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。 **取值范围**: 不涉及
     *
     * @return int|null
     */
@@ -384,7 +384,7 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets checkRuleNum
     *
-    * @param int|null $checkRuleNum 当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
+    * @param int|null $checkRuleNum **参数解释**: 当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -396,7 +396,7 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedRuleNum
-    *  未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
+    *  **参数解释**: 未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中 **取值范围**: 不涉及
     *
     * @return int|null
     */
@@ -408,7 +408,7 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets failedRuleNum
     *
-    * @param int|null $failedRuleNum 未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
+    * @param int|null $failedRuleNum **参数解释**: 未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -420,7 +420,7 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets passedRuleNum
-    *  已通过的检查项数量，check_rule_num中只要有一台主机通过了某个检查项，这个检查项就会被计算在passed_rule_num中
+    *  **参数解释**: 已通过的检查项数量，check_rule_num中只要有一台主机通过了某个检查项，这个检查项就会被计算在passed_rule_num中 **取值范围**: 不涉及
     *
     * @return int|null
     */
@@ -432,7 +432,7 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets passedRuleNum
     *
-    * @param int|null $passedRuleNum 已通过的检查项数量，check_rule_num中只要有一台主机通过了某个检查项，这个检查项就会被计算在passed_rule_num中
+    * @param int|null $passedRuleNum **参数解释**: 已通过的检查项数量，check_rule_num中只要有一台主机通过了某个检查项，这个检查项就会被计算在passed_rule_num中 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -444,7 +444,7 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ignoredRuleNum
-    *  已忽略的检查项数量，check_rule_num中只要有一台主机忽略了某个检查项，这个检查项就会被计算在ignored_rule_num中
+    *  **参数解释**: 已忽略的检查项数量，check_rule_num中只要有一台主机忽略了某个检查项，这个检查项就会被计算在ignored_rule_num中 **取值范围**: 不涉及
     *
     * @return int|null
     */
@@ -456,7 +456,7 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ignoredRuleNum
     *
-    * @param int|null $ignoredRuleNum 已忽略的检查项数量，check_rule_num中只要有一台主机忽略了某个检查项，这个检查项就会被计算在ignored_rule_num中
+    * @param int|null $ignoredRuleNum **参数解释**: 已忽略的检查项数量，check_rule_num中只要有一台主机忽略了某个检查项，这个检查项就会被计算在ignored_rule_num中 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -468,7 +468,7 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostNum
-    *  受影响的服务器的数量，进行了当前基线检测的服务器数量
+    *  **参数解释**: 受影响的服务器的数量，进行了当前基线检测的服务器数量 **取值范围**: 不涉及
     *
     * @return int|null
     */
@@ -480,7 +480,7 @@ class ShowRiskConfigDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets hostNum
     *
-    * @param int|null $hostNum 受影响的服务器的数量，进行了当前基线检测的服务器数量
+    * @param int|null $hostNum **参数解释**: 受影响的服务器的数量，进行了当前基线检测的服务器数量 **取值范围**: 不涉及
     *
     * @return $this
     */

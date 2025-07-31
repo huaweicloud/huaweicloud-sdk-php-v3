@@ -20,10 +20,10 @@ class CreateRSetBatchLinesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
-    * description  可选配置，对域名的描述。 长度不超过255个字符。
-    * type  记录集的类型。 取值范围：A,AAAA,MX,CNAME,TXT,NS,SRV,CAA。
-    * lines  解析线路域名参数。最多支持50个。
+    * name  **参数解释：** 域名，后缀需以zone name结束且为FQDN（Fully Qualified Domain Name，全称域名），即以“.”结束的完整主机名。 如“www.example.com.”。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 记录集的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 不涉及。
+    * type  **参数解释：** 记录集的类型。 **约束限制：** 不涉及。 **取值范围：** A、AAAA、MX、CNAME、TXT、SRV、NS、SOA、CAA。 **默认取值：** 不涉及。
+    * lines  **参数解释：** 解析线路域名参数。 **约束限制：** 最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class CreateRSetBatchLinesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
-    * description  可选配置，对域名的描述。 长度不超过255个字符。
-    * type  记录集的类型。 取值范围：A,AAAA,MX,CNAME,TXT,NS,SRV,CAA。
-    * lines  解析线路域名参数。最多支持50个。
+    * name  **参数解释：** 域名，后缀需以zone name结束且为FQDN（Fully Qualified Domain Name，全称域名），即以“.”结束的完整主机名。 如“www.example.com.”。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 记录集的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 不涉及。
+    * type  **参数解释：** 记录集的类型。 **约束限制：** 不涉及。 **取值范围：** A、AAAA、MX、CNAME、TXT、SRV、NS、SOA、CAA。 **默认取值：** 不涉及。
+    * lines  **参数解释：** 解析线路域名参数。 **约束限制：** 最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class CreateRSetBatchLinesReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
-    * description  可选配置，对域名的描述。 长度不超过255个字符。
-    * type  记录集的类型。 取值范围：A,AAAA,MX,CNAME,TXT,NS,SRV,CAA。
-    * lines  解析线路域名参数。最多支持50个。
+    * name  **参数解释：** 域名，后缀需以zone name结束且为FQDN（Fully Qualified Domain Name，全称域名），即以“.”结束的完整主机名。 如“www.example.com.”。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 记录集的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 不涉及。
+    * type  **参数解释：** 记录集的类型。 **约束限制：** 不涉及。 **取值范围：** A、AAAA、MX、CNAME、TXT、SRV、NS、SOA、CAA。 **默认取值：** 不涉及。
+    * lines  **参数解释：** 解析线路域名参数。 **约束限制：** 最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class CreateRSetBatchLinesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
-    * description  可选配置，对域名的描述。 长度不超过255个字符。
-    * type  记录集的类型。 取值范围：A,AAAA,MX,CNAME,TXT,NS,SRV,CAA。
-    * lines  解析线路域名参数。最多支持50个。
+    * name  **参数解释：** 域名，后缀需以zone name结束且为FQDN（Fully Qualified Domain Name，全称域名），即以“.”结束的完整主机名。 如“www.example.com.”。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 记录集的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 不涉及。
+    * type  **参数解释：** 记录集的类型。 **约束限制：** 不涉及。 **取值范围：** A、AAAA、MX、CNAME、TXT、SRV、NS、SOA、CAA。 **默认取值：** 不涉及。
+    * lines  **参数解释：** 解析线路域名参数。 **约束限制：** 最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class CreateRSetBatchLinesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
-    * description  可选配置，对域名的描述。 长度不超过255个字符。
-    * type  记录集的类型。 取值范围：A,AAAA,MX,CNAME,TXT,NS,SRV,CAA。
-    * lines  解析线路域名参数。最多支持50个。
+    * name  **参数解释：** 域名，后缀需以zone name结束且为FQDN（Fully Qualified Domain Name，全称域名），即以“.”结束的完整主机名。 如“www.example.com.”。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 记录集的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 不涉及。
+    * type  **参数解释：** 记录集的类型。 **约束限制：** 不涉及。 **取值范围：** A、AAAA、MX、CNAME、TXT、SRV、NS、SOA、CAA。 **默认取值：** 不涉及。
+    * lines  **参数解释：** 解析线路域名参数。 **约束限制：** 最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -216,7 +216,7 @@ class CreateRSetBatchLinesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
+    *  **参数解释：** 域名，后缀需以zone name结束且为FQDN（Fully Qualified Domain Name，全称域名），即以“.”结束的完整主机名。 如“www.example.com.”。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -228,7 +228,7 @@ class CreateRSetBatchLinesReq implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
+    * @param string $name **参数解释：** 域名，后缀需以zone name结束且为FQDN（Fully Qualified Domain Name，全称域名），即以“.”结束的完整主机名。 如“www.example.com.”。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -240,7 +240,7 @@ class CreateRSetBatchLinesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  可选配置，对域名的描述。 长度不超过255个字符。
+    *  **参数解释：** 记录集的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class CreateRSetBatchLinesReq implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 可选配置，对域名的描述。 长度不超过255个字符。
+    * @param string|null $description **参数解释：** 记录集的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class CreateRSetBatchLinesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  记录集的类型。 取值范围：A,AAAA,MX,CNAME,TXT,NS,SRV,CAA。
+    *  **参数解释：** 记录集的类型。 **约束限制：** 不涉及。 **取值范围：** A、AAAA、MX、CNAME、TXT、SRV、NS、SOA、CAA。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -276,7 +276,7 @@ class CreateRSetBatchLinesReq implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 记录集的类型。 取值范围：A,AAAA,MX,CNAME,TXT,NS,SRV,CAA。
+    * @param string $type **参数解释：** 记录集的类型。 **约束限制：** 不涉及。 **取值范围：** A、AAAA、MX、CNAME、TXT、SRV、NS、SOA、CAA。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class CreateRSetBatchLinesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets lines
-    *  解析线路域名参数。最多支持50个。
+    *  **参数解释：** 解析线路域名参数。 **约束限制：** 最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\BatchCreateRecordSetWithLine[]
     */
@@ -300,7 +300,7 @@ class CreateRSetBatchLinesReq implements ModelInterface, ArrayAccess
     /**
     * Sets lines
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\BatchCreateRecordSetWithLine[] $lines 解析线路域名参数。最多支持50个。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\BatchCreateRecordSetWithLine[] $lines **参数解释：** 解析线路域名参数。 **约束限制：** 最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */

@@ -20,13 +20,13 @@ class HostGroupItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * hostNum  影响主机数量
-    * riskHostNum  有风险服务器数
-    * unprotectHostNum  未防护服务器数
-    * hostIdList  主机id列表
-    * isOutside  是否是线下数据中心服务器组
+    * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
+    * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
+    * riskHostNum  **参数解释**: 有风险服务器数 **取值范围**: 0到2147483647
+    * unprotectHostNum  **参数解释**: 未防护服务器数 **取值范围**: 0到2147483647
+    * hostIdList  **参数解释**: 主机id列表 **取值范围**: 不涉及
+    * isOutside  **参数解释**: 是否是线下数据中心服务器组 **取值范围**: true或者false
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class HostGroupItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * hostNum  影响主机数量
-    * riskHostNum  有风险服务器数
-    * unprotectHostNum  未防护服务器数
-    * hostIdList  主机id列表
-    * isOutside  是否是线下数据中心服务器组
+    * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
+    * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
+    * riskHostNum  **参数解释**: 有风险服务器数 **取值范围**: 0到2147483647
+    * unprotectHostNum  **参数解释**: 未防护服务器数 **取值范围**: 0到2147483647
+    * hostIdList  **参数解释**: 主机id列表 **取值范围**: 不涉及
+    * isOutside  **参数解释**: 是否是线下数据中心服务器组 **取值范围**: true或者false
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * hostNum  影响主机数量
-    * riskHostNum  有风险服务器数
-    * unprotectHostNum  未防护服务器数
-    * hostIdList  主机id列表
-    * isOutside  是否是线下数据中心服务器组
+    * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
+    * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
+    * riskHostNum  **参数解释**: 有风险服务器数 **取值范围**: 0到2147483647
+    * unprotectHostNum  **参数解释**: 未防护服务器数 **取值范围**: 0到2147483647
+    * hostIdList  **参数解释**: 主机id列表 **取值范围**: 不涉及
+    * isOutside  **参数解释**: 是否是线下数据中心服务器组 **取值范围**: true或者false
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class HostGroupItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * hostNum  影响主机数量
-    * riskHostNum  有风险服务器数
-    * unprotectHostNum  未防护服务器数
-    * hostIdList  主机id列表
-    * isOutside  是否是线下数据中心服务器组
+    * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
+    * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
+    * riskHostNum  **参数解释**: 有风险服务器数 **取值范围**: 0到2147483647
+    * unprotectHostNum  **参数解释**: 未防护服务器数 **取值范围**: 0到2147483647
+    * hostIdList  **参数解释**: 主机id列表 **取值范围**: 不涉及
+    * isOutside  **参数解释**: 是否是线下数据中心服务器组 **取值范围**: true或者false
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class HostGroupItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * hostNum  影响主机数量
-    * riskHostNum  有风险服务器数
-    * unprotectHostNum  未防护服务器数
-    * hostIdList  主机id列表
-    * isOutside  是否是线下数据中心服务器组
+    * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
+    * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
+    * riskHostNum  **参数解释**: 有风险服务器数 **取值范围**: 0到2147483647
+    * unprotectHostNum  **参数解释**: 未防护服务器数 **取值范围**: 0到2147483647
+    * hostIdList  **参数解释**: 主机id列表 **取值范围**: 不涉及
+    * isOutside  **参数解释**: 是否是线下数据中心服务器组 **取值范围**: true或者false
     *
     * @var string[]
     */
@@ -273,7 +273,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  服务器组ID
+    *  **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 服务器组ID
+    * @param string|null $groupId **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
     *
     * @return $this
     */
@@ -297,7 +297,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  服务器组名称
+    *  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 服务器组名称
+    * @param string|null $groupName **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
     *
     * @return $this
     */
@@ -321,7 +321,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostNum
-    *  影响主机数量
+    *  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -333,7 +333,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     /**
     * Sets hostNum
     *
-    * @param int|null $hostNum 影响主机数量
+    * @param int|null $hostNum **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -345,7 +345,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskHostNum
-    *  有风险服务器数
+    *  **参数解释**: 有风险服务器数 **取值范围**: 0到2147483647
     *
     * @return int|null
     */
@@ -357,7 +357,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     /**
     * Sets riskHostNum
     *
-    * @param int|null $riskHostNum 有风险服务器数
+    * @param int|null $riskHostNum **参数解释**: 有风险服务器数 **取值范围**: 0到2147483647
     *
     * @return $this
     */
@@ -369,7 +369,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets unprotectHostNum
-    *  未防护服务器数
+    *  **参数解释**: 未防护服务器数 **取值范围**: 0到2147483647
     *
     * @return int|null
     */
@@ -381,7 +381,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     /**
     * Sets unprotectHostNum
     *
-    * @param int|null $unprotectHostNum 未防护服务器数
+    * @param int|null $unprotectHostNum **参数解释**: 未防护服务器数 **取值范围**: 0到2147483647
     *
     * @return $this
     */
@@ -393,7 +393,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIdList
-    *  主机id列表
+    *  **参数解释**: 主机id列表 **取值范围**: 不涉及
     *
     * @return string[]|null
     */
@@ -405,7 +405,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[]|null $hostIdList 主机id列表
+    * @param string[]|null $hostIdList **参数解释**: 主机id列表 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -417,7 +417,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets isOutside
-    *  是否是线下数据中心服务器组
+    *  **参数解释**: 是否是线下数据中心服务器组 **取值范围**: true或者false
     *
     * @return bool|null
     */
@@ -429,7 +429,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     /**
     * Sets isOutside
     *
-    * @param bool|null $isOutside 是否是线下数据中心服务器组
+    * @param bool|null $isOutside **参数解释**: 是否是线下数据中心服务器组 **取值范围**: true或者false
     *
     * @return $this
     */

@@ -20,12 +20,12 @@ class VersionItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  版本ID（版本号），如v2。
-    * status  版本状态，为如下3种： CURRENT：表示该版本为主推版本。 SUPPORTED：表示为老版本，但是现在还继续支持。 DEPRECATED：表示为废弃版本，存在后续删除的可能。
-    * links  API的URL地址。
-    * updated  版本发布时间。
-    * version  支持的最大微版本号。若该版本API不支持微版本，则为空。
-    * minVersion  支持的最小微版本号。若该版本API不支持微版本，则为空。
+    * id  **参数解释：** 版本号。 **取值范围：** v2。
+    * status  **参数解释：** 版本状态。 **取值范围：** - CURRENT：表示该版本为主推版本。 - SUPPORTED：表示为老版本，但是现在还继续支持。 - DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * links  **参数解释：** API的URL地址。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 版本发布时间。 **取值范围：** 不涉及。
+    * version  **参数解释：** 支持的最大微版本号。 **取值范围：** 若该版本API不支持微版本，则为空。
+    * minVersion  **参数解释：** 支持的最小微版本号。 **取值范围：** 若该版本API不支持微版本，则为空。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class VersionItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  版本ID（版本号），如v2。
-    * status  版本状态，为如下3种： CURRENT：表示该版本为主推版本。 SUPPORTED：表示为老版本，但是现在还继续支持。 DEPRECATED：表示为废弃版本，存在后续删除的可能。
-    * links  API的URL地址。
-    * updated  版本发布时间。
-    * version  支持的最大微版本号。若该版本API不支持微版本，则为空。
-    * minVersion  支持的最小微版本号。若该版本API不支持微版本，则为空。
+    * id  **参数解释：** 版本号。 **取值范围：** v2。
+    * status  **参数解释：** 版本状态。 **取值范围：** - CURRENT：表示该版本为主推版本。 - SUPPORTED：表示为老版本，但是现在还继续支持。 - DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * links  **参数解释：** API的URL地址。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 版本发布时间。 **取值范围：** 不涉及。
+    * version  **参数解释：** 支持的最大微版本号。 **取值范围：** 若该版本API不支持微版本，则为空。
+    * minVersion  **参数解释：** 支持的最小微版本号。 **取值范围：** 若该版本API不支持微版本，则为空。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class VersionItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  版本ID（版本号），如v2。
-    * status  版本状态，为如下3种： CURRENT：表示该版本为主推版本。 SUPPORTED：表示为老版本，但是现在还继续支持。 DEPRECATED：表示为废弃版本，存在后续删除的可能。
-    * links  API的URL地址。
-    * updated  版本发布时间。
-    * version  支持的最大微版本号。若该版本API不支持微版本，则为空。
-    * minVersion  支持的最小微版本号。若该版本API不支持微版本，则为空。
+    * id  **参数解释：** 版本号。 **取值范围：** v2。
+    * status  **参数解释：** 版本状态。 **取值范围：** - CURRENT：表示该版本为主推版本。 - SUPPORTED：表示为老版本，但是现在还继续支持。 - DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * links  **参数解释：** API的URL地址。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 版本发布时间。 **取值范围：** 不涉及。
+    * version  **参数解释：** 支持的最大微版本号。 **取值范围：** 若该版本API不支持微版本，则为空。
+    * minVersion  **参数解释：** 支持的最小微版本号。 **取值范围：** 若该版本API不支持微版本，则为空。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class VersionItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  版本ID（版本号），如v2。
-    * status  版本状态，为如下3种： CURRENT：表示该版本为主推版本。 SUPPORTED：表示为老版本，但是现在还继续支持。 DEPRECATED：表示为废弃版本，存在后续删除的可能。
-    * links  API的URL地址。
-    * updated  版本发布时间。
-    * version  支持的最大微版本号。若该版本API不支持微版本，则为空。
-    * minVersion  支持的最小微版本号。若该版本API不支持微版本，则为空。
+    * id  **参数解释：** 版本号。 **取值范围：** v2。
+    * status  **参数解释：** 版本状态。 **取值范围：** - CURRENT：表示该版本为主推版本。 - SUPPORTED：表示为老版本，但是现在还继续支持。 - DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * links  **参数解释：** API的URL地址。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 版本发布时间。 **取值范围：** 不涉及。
+    * version  **参数解释：** 支持的最大微版本号。 **取值范围：** 若该版本API不支持微版本，则为空。
+    * minVersion  **参数解释：** 支持的最小微版本号。 **取值范围：** 若该版本API不支持微版本，则为空。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class VersionItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  版本ID（版本号），如v2。
-    * status  版本状态，为如下3种： CURRENT：表示该版本为主推版本。 SUPPORTED：表示为老版本，但是现在还继续支持。 DEPRECATED：表示为废弃版本，存在后续删除的可能。
-    * links  API的URL地址。
-    * updated  版本发布时间。
-    * version  支持的最大微版本号。若该版本API不支持微版本，则为空。
-    * minVersion  支持的最小微版本号。若该版本API不支持微版本，则为空。
+    * id  **参数解释：** 版本号。 **取值范围：** v2。
+    * status  **参数解释：** 版本状态。 **取值范围：** - CURRENT：表示该版本为主推版本。 - SUPPORTED：表示为老版本，但是现在还继续支持。 - DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * links  **参数解释：** API的URL地址。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 版本发布时间。 **取值范围：** 不涉及。
+    * version  **参数解释：** 支持的最大微版本号。 **取值范围：** 若该版本API不支持微版本，则为空。
+    * minVersion  **参数解释：** 支持的最小微版本号。 **取值范围：** 若该版本API不支持微版本，则为空。
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class VersionItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  版本ID（版本号），如v2。
+    *  **参数解释：** 版本号。 **取值范围：** v2。
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class VersionItem implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 版本ID（版本号），如v2。
+    * @param string|null $id **参数解释：** 版本号。 **取值范围：** v2。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class VersionItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  版本状态，为如下3种： CURRENT：表示该版本为主推版本。 SUPPORTED：表示为老版本，但是现在还继续支持。 DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    *  **参数解释：** 版本状态。 **取值范围：** - CURRENT：表示该版本为主推版本。 - SUPPORTED：表示为老版本，但是现在还继续支持。 - DEPRECATED：表示为废弃版本，存在后续删除的可能。
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class VersionItem implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 版本状态，为如下3种： CURRENT：表示该版本为主推版本。 SUPPORTED：表示为老版本，但是现在还继续支持。 DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * @param string|null $status **参数解释：** 版本状态。 **取值范围：** - CURRENT：表示该版本为主推版本。 - SUPPORTED：表示为老版本，但是现在还继续支持。 - DEPRECATED：表示为废弃版本，存在后续删除的可能。
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class VersionItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
-    *  API的URL地址。
+    *  **参数解释：** API的URL地址。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\LinksItem[]|null
     */
@@ -289,7 +289,7 @@ class VersionItem implements ModelInterface, ArrayAccess
     /**
     * Sets links
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\LinksItem[]|null $links API的URL地址。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\LinksItem[]|null $links **参数解释：** API的URL地址。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class VersionItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets updated
-    *  版本发布时间。
+    *  **参数解释：** 版本发布时间。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class VersionItem implements ModelInterface, ArrayAccess
     /**
     * Sets updated
     *
-    * @param string|null $updated 版本发布时间。
+    * @param string|null $updated **参数解释：** 版本发布时间。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class VersionItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  支持的最大微版本号。若该版本API不支持微版本，则为空。
+    *  **参数解释：** 支持的最大微版本号。 **取值范围：** 若该版本API不支持微版本，则为空。
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class VersionItem implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 支持的最大微版本号。若该版本API不支持微版本，则为空。
+    * @param string|null $version **参数解释：** 支持的最大微版本号。 **取值范围：** 若该版本API不支持微版本，则为空。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class VersionItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets minVersion
-    *  支持的最小微版本号。若该版本API不支持微版本，则为空。
+    *  **参数解释：** 支持的最小微版本号。 **取值范围：** 若该版本API不支持微版本，则为空。
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class VersionItem implements ModelInterface, ArrayAccess
     /**
     * Sets minVersion
     *
-    * @param string|null $minVersion 支持的最小微版本号。若该版本API不支持微版本，则为空。
+    * @param string|null $minVersion **参数解释：** 支持的最小微版本号。 **取值范围：** 若该版本API不支持微版本，则为空。
     *
     * @return $this
     */

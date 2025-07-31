@@ -21,8 +21,8 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * hostId  服务器ID
-    * hostName  服务器名称
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * fileHash  文件哈希
     * filePath  文件路径
     * fileAttr  文件属性
@@ -61,8 +61,8 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * hostId  服务器ID
-    * hostName  服务器名称
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * fileHash  文件哈希
     * filePath  文件路径
     * fileAttr  文件属性
@@ -122,8 +122,8 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * hostId  服务器ID
-    * hostName  服务器名称
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * fileHash  文件哈希
     * filePath  文件路径
     * fileAttr  文件属性
@@ -162,8 +162,8 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * hostId  服务器ID
-    * hostName  服务器名称
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * fileHash  文件哈希
     * filePath  文件路径
     * fileAttr  文件属性
@@ -202,8 +202,8 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * hostId  服务器ID
-    * hostName  服务器名称
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * fileHash  文件哈希
     * filePath  文件路径
     * fileAttr  文件属性
@@ -483,7 +483,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return string
     */
@@ -495,7 +495,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string $hostId 服务器ID
+    * @param string $hostId **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -507,7 +507,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return string
     */
@@ -519,7 +519,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string $hostName 服务器名称
+    * @param string $hostName **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */

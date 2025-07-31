@@ -28,6 +28,7 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * TEMPORARY：临时文件夹（用于文件替换时上传新文件） * PACKAGE：打包后的资产文件 > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
     * downloadUrl  文件下载URL，有效期为24小时。
     * state  文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传） * BLOCK：冻结
+    * blockReasonCode  冻结原因编号。
     * reason  审核失败原因
     * fileExtraMeta  fileExtraMeta
     *
@@ -42,6 +43,7 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
             'assetFileCategory' => 'string',
             'downloadUrl' => 'string',
             'state' => 'string',
+            'blockReasonCode' => 'string',
             'reason' => 'string',
             'fileExtraMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\FileExtraMeta'
     ];
@@ -56,6 +58,7 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * TEMPORARY：临时文件夹（用于文件替换时上传新文件） * PACKAGE：打包后的资产文件 > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
     * downloadUrl  文件下载URL，有效期为24小时。
     * state  文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传） * BLOCK：冻结
+    * blockReasonCode  冻结原因编号。
     * reason  审核失败原因
     * fileExtraMeta  fileExtraMeta
     *
@@ -70,6 +73,7 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
         'assetFileCategory' => null,
         'downloadUrl' => null,
         'state' => null,
+        'blockReasonCode' => null,
         'reason' => null,
         'fileExtraMeta' => null
     ];
@@ -105,6 +109,7 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * TEMPORARY：临时文件夹（用于文件替换时上传新文件） * PACKAGE：打包后的资产文件 > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
     * downloadUrl  文件下载URL，有效期为24小时。
     * state  文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传） * BLOCK：冻结
+    * blockReasonCode  冻结原因编号。
     * reason  审核失败原因
     * fileExtraMeta  fileExtraMeta
     *
@@ -119,6 +124,7 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
             'assetFileCategory' => 'asset_file_category',
             'downloadUrl' => 'download_url',
             'state' => 'state',
+            'blockReasonCode' => 'block_reason_code',
             'reason' => 'reason',
             'fileExtraMeta' => 'file_extra_meta'
     ];
@@ -133,6 +139,7 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * TEMPORARY：临时文件夹（用于文件替换时上传新文件） * PACKAGE：打包后的资产文件 > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
     * downloadUrl  文件下载URL，有效期为24小时。
     * state  文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传） * BLOCK：冻结
+    * blockReasonCode  冻结原因编号。
     * reason  审核失败原因
     * fileExtraMeta  fileExtraMeta
     *
@@ -147,6 +154,7 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
             'assetFileCategory' => 'setAssetFileCategory',
             'downloadUrl' => 'setDownloadUrl',
             'state' => 'setState',
+            'blockReasonCode' => 'setBlockReasonCode',
             'reason' => 'setReason',
             'fileExtraMeta' => 'setFileExtraMeta'
     ];
@@ -161,6 +169,7 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * TEMPORARY：临时文件夹（用于文件替换时上传新文件） * PACKAGE：打包后的资产文件 > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
     * downloadUrl  文件下载URL，有效期为24小时。
     * state  文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传） * BLOCK：冻结
+    * blockReasonCode  冻结原因编号。
     * reason  审核失败原因
     * fileExtraMeta  fileExtraMeta
     *
@@ -175,6 +184,7 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
             'assetFileCategory' => 'getAssetFileCategory',
             'downloadUrl' => 'getDownloadUrl',
             'state' => 'getState',
+            'blockReasonCode' => 'getBlockReasonCode',
             'reason' => 'getReason',
             'fileExtraMeta' => 'getFileExtraMeta'
     ];
@@ -274,6 +284,7 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
         $this->container['assetFileCategory'] = isset($data['assetFileCategory']) ? $data['assetFileCategory'] : null;
         $this->container['downloadUrl'] = isset($data['downloadUrl']) ? $data['downloadUrl'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['blockReasonCode'] = isset($data['blockReasonCode']) ? $data['blockReasonCode'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
         $this->container['fileExtraMeta'] = isset($data['fileExtraMeta']) ? $data['fileExtraMeta'] : null;
     }
@@ -344,6 +355,12 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) < 0)) {
                 $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['blockReasonCode']) && (mb_strlen($this->container['blockReasonCode']) > 256)) {
+                $invalidProperties[] = "invalid value for 'blockReasonCode', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['blockReasonCode']) && (mb_strlen($this->container['blockReasonCode']) < 0)) {
+                $invalidProperties[] = "invalid value for 'blockReasonCode', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) > 256)) {
                 $invalidProperties[] = "invalid value for 'reason', the character length must be smaller than or equal to 256.";
@@ -554,6 +571,30 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     public function setState($state)
     {
         $this->container['state'] = $state;
+        return $this;
+    }
+
+    /**
+    * Gets blockReasonCode
+    *  冻结原因编号。
+    *
+    * @return string|null
+    */
+    public function getBlockReasonCode()
+    {
+        return $this->container['blockReasonCode'];
+    }
+
+    /**
+    * Sets blockReasonCode
+    *
+    * @param string|null $blockReasonCode 冻结原因编号。
+    *
+    * @return $this
+    */
+    public function setBlockReasonCode($blockReasonCode)
+    {
+        $this->container['blockReasonCode'] = $blockReasonCode;
         return $this;
     }
 

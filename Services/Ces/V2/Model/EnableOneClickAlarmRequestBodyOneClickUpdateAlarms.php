@@ -23,7 +23,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -33,7 +33,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * notificationManner  NOTIFICATION_POLICY(通知策略)
+    * notificationManner  通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
     * notificationPolicyIds  关联的通知策略ID列表
     *
     * @var string[]
@@ -44,7 +44,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
             'description' => 'string',
             'namespace' => 'string',
             'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\Policy[]',
-            'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourcesInListResp[]',
+            'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\Dimension[][]',
             'type' => '\HuaweiCloud\SDK\Ces\V2\Model\AlarmType',
             'enabled' => 'bool',
             'notificationEnabled' => 'bool',
@@ -61,7 +61,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -71,7 +71,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * notificationManner  NOTIFICATION_POLICY(通知策略)
+    * notificationManner  通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
     * notificationPolicyIds  关联的通知策略ID列表
     *
     * @var string[]
@@ -120,7 +120,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -130,7 +130,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * notificationManner  NOTIFICATION_POLICY(通知策略)
+    * notificationManner  通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
     * notificationPolicyIds  关联的通知策略ID列表
     *
     * @var string[]
@@ -158,7 +158,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -168,7 +168,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * notificationManner  NOTIFICATION_POLICY(通知策略)
+    * notificationManner  通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
     * notificationPolicyIds  关联的通知策略ID列表
     *
     * @var string[]
@@ -196,7 +196,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -206,7 +206,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * notificationManner  NOTIFICATION_POLICY(通知策略)
+    * notificationManner  通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
     * notificationPolicyIds  关联的通知策略ID列表
     *
     * @var string[]
@@ -270,6 +270,8 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
         return self::$openAPIModelName;
     }
     const NOTIFICATION_MANNER_NOTIFICATION_POLICY = 'NOTIFICATION_POLICY';
+    const NOTIFICATION_MANNER_NOTIFICATION_GROUP = 'NOTIFICATION_GROUP';
+    const NOTIFICATION_MANNER_TOPIC_SUBSCRIPTION = 'TOPIC_SUBSCRIPTION';
     
 
     /**
@@ -281,6 +283,8 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     {
         return [
             self::NOTIFICATION_MANNER_NOTIFICATION_POLICY,
+            self::NOTIFICATION_MANNER_NOTIFICATION_GROUP,
+            self::NOTIFICATION_MANNER_TOPIC_SUBSCRIPTION,
         ];
     }
 
@@ -334,8 +338,8 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['name']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-){1,128}$/", $this->container['name'])) {
-                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-){1,128}$/.";
+            if (!is_null($this->container['name']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 256)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 256.";
@@ -343,11 +347,11 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
             if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 32)) {
                 $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 3)) {
-                $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 3.";
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 0)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['namespace']) && !preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/", $this->container['namespace'])) {
-                $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/.";
+            if (!is_null($this->container['namespace']) && !preg_match("/^((([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*)|)$/", $this->container['namespace'])) {
+                $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^((([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*)|)$/.";
             }
             if (!is_null($this->container['notificationBeginTime']) && (mb_strlen($this->container['notificationBeginTime']) > 64)) {
                 $invalidProperties[] = "invalid value for 'notificationBeginTime', the character length must be smaller than or equal to 64.";
@@ -469,7 +473,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
 
     /**
     * Gets namespace
-    *  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    *  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return string|null
     */
@@ -481,7 +485,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * @param string|null $namespace 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return $this
     */
@@ -519,7 +523,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     * Gets resources
     *  资源列表，关联资源需要使用查询告警规则资源接口获取
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourcesInListResp[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\Dimension[][]|null
     */
     public function getResources()
     {
@@ -529,7 +533,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourcesInListResp[]|null $resources 资源列表，关联资源需要使用查询告警规则资源接口获取
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Dimension[][]|null $resources 资源列表，关联资源需要使用查询告警规则资源接口获取
     *
     * @return $this
     */
@@ -709,7 +713,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
 
     /**
     * Gets notificationManner
-    *  NOTIFICATION_POLICY(通知策略)
+    *  通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
     *
     * @return string|null
     */
@@ -721,7 +725,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Sets notificationManner
     *
-    * @param string|null $notificationManner NOTIFICATION_POLICY(通知策略)
+    * @param string|null $notificationManner 通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
     *
     * @return $this
     */

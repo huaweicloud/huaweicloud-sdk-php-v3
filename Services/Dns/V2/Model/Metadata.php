@@ -20,7 +20,7 @@ class Metadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalCount  满足查询条件的资源总数，不受分页（即limit、offset参数）影响。
+    * totalCount  **参数解释：** 满足查询条件的资源总数，不受分页（即limit、offset参数）影响。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class Metadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalCount  满足查询条件的资源总数，不受分页（即limit、offset参数）影响。
+    * totalCount  **参数解释：** 满足查询条件的资源总数，不受分页（即limit、offset参数）影响。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class Metadata implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalCount  满足查询条件的资源总数，不受分页（即limit、offset参数）影响。
+    * totalCount  **参数解释：** 满足查询条件的资源总数，不受分页（即limit、offset参数）影响。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class Metadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalCount  满足查询条件的资源总数，不受分页（即limit、offset参数）影响。
+    * totalCount  **参数解释：** 满足查询条件的资源总数，不受分页（即limit、offset参数）影响。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class Metadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalCount  满足查询条件的资源总数，不受分页（即limit、offset参数）影响。
+    * totalCount  **参数解释：** 满足查询条件的资源总数，不受分页（即limit、offset参数）影响。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class Metadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  满足查询条件的资源总数，不受分页（即limit、offset参数）影响。
+    *  **参数解释：** 满足查询条件的资源总数，不受分页（即limit、offset参数）影响。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -186,7 +186,7 @@ class Metadata implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount 满足查询条件的资源总数，不受分页（即limit、offset参数）影响。
+    * @param int|null $totalCount **参数解释：** 满足查询条件的资源总数，不受分页（即limit、offset参数）影响。 **取值范围：** 不涉及。
     *
     * @return $this
     */

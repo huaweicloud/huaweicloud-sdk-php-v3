@@ -24,9 +24,9 @@ class ListResolverRulesRequest implements ModelInterface, ArrayAccess
     * name  待查询的转发规则的名称。
     * endpointId  终端节点ID。
     * id  转发规则ID。
-    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
-    * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
+    * limit  **参数解释：** 分页查询时配置每页返回的资源个数。 **约束限制：** 不涉及。 **取值范围：** 0~500。 **默认取值：** 500
+    * offset  **参数解释：** 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。 **约束限制：** 当设置marker不为空时，以marker为分页起始标识，offset不生效。。 **取值范围：** 0~2147483647。 **默认取值：** 0
+    * marker  **参数解释：** 分页查询的起始资源ID。 - 查询第一页时，设置为空。 - 查询下一页时，设置为上一页最后一条资源的ID。  **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -46,9 +46,9 @@ class ListResolverRulesRequest implements ModelInterface, ArrayAccess
     * name  待查询的转发规则的名称。
     * endpointId  终端节点ID。
     * id  转发规则ID。
-    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
-    * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
+    * limit  **参数解释：** 分页查询时配置每页返回的资源个数。 **约束限制：** 不涉及。 **取值范围：** 0~500。 **默认取值：** 500
+    * offset  **参数解释：** 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。 **约束限制：** 当设置marker不为空时，以marker为分页起始标识，offset不生效。。 **取值范围：** 0~2147483647。 **默认取值：** 0
+    * marker  **参数解释：** 分页查询的起始资源ID。 - 查询第一页时，设置为空。 - 查询下一页时，设置为上一页最后一条资源的ID。  **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -89,9 +89,9 @@ class ListResolverRulesRequest implements ModelInterface, ArrayAccess
     * name  待查询的转发规则的名称。
     * endpointId  终端节点ID。
     * id  转发规则ID。
-    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
-    * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
+    * limit  **参数解释：** 分页查询时配置每页返回的资源个数。 **约束限制：** 不涉及。 **取值范围：** 0~500。 **默认取值：** 500
+    * offset  **参数解释：** 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。 **约束限制：** 当设置marker不为空时，以marker为分页起始标识，offset不生效。。 **取值范围：** 0~2147483647。 **默认取值：** 0
+    * marker  **参数解释：** 分页查询的起始资源ID。 - 查询第一页时，设置为空。 - 查询下一页时，设置为上一页最后一条资源的ID。  **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -111,9 +111,9 @@ class ListResolverRulesRequest implements ModelInterface, ArrayAccess
     * name  待查询的转发规则的名称。
     * endpointId  终端节点ID。
     * id  转发规则ID。
-    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
-    * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
+    * limit  **参数解释：** 分页查询时配置每页返回的资源个数。 **约束限制：** 不涉及。 **取值范围：** 0~500。 **默认取值：** 500
+    * offset  **参数解释：** 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。 **约束限制：** 当设置marker不为空时，以marker为分页起始标识，offset不生效。。 **取值范围：** 0~2147483647。 **默认取值：** 0
+    * marker  **参数解释：** 分页查询的起始资源ID。 - 查询第一页时，设置为空。 - 查询下一页时，设置为上一页最后一条资源的ID。  **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -133,9 +133,9 @@ class ListResolverRulesRequest implements ModelInterface, ArrayAccess
     * name  待查询的转发规则的名称。
     * endpointId  终端节点ID。
     * id  转发规则ID。
-    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
-    * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
+    * limit  **参数解释：** 分页查询时配置每页返回的资源个数。 **约束限制：** 不涉及。 **取值范围：** 0~500。 **默认取值：** 500
+    * offset  **参数解释：** 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。 **约束限制：** 当设置marker不为空时，以marker为分页起始标识，offset不生效。。 **取值范围：** 0~2147483647。 **默认取值：** 0
+    * marker  **参数解释：** 分页查询的起始资源ID。 - 查询第一页时，设置为空。 - 查询下一页时，设置为上一页最后一条资源的ID。  **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -363,7 +363,7 @@ class ListResolverRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    *  **参数解释：** 分页查询时配置每页返回的资源个数。 **约束限制：** 不涉及。 **取值范围：** 0~500。 **默认取值：** 500
     *
     * @return int|null
     */
@@ -375,7 +375,7 @@ class ListResolverRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * @param int|null $limit **参数解释：** 分页查询时配置每页返回的资源个数。 **约束限制：** 不涉及。 **取值范围：** 0~500。 **默认取值：** 500
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class ListResolverRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
+    *  **参数解释：** 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。 **约束限制：** 当设置marker不为空时，以marker为分页起始标识，offset不生效。。 **取值范围：** 0~2147483647。 **默认取值：** 0
     *
     * @return int|null
     */
@@ -399,7 +399,7 @@ class ListResolverRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
+    * @param int|null $offset **参数解释：** 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。 **约束限制：** 当设置marker不为空时，以marker为分页起始标识，offset不生效。。 **取值范围：** 0~2147483647。 **默认取值：** 0
     *
     * @return $this
     */
@@ -411,7 +411,7 @@ class ListResolverRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
-    *  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
+    *  **参数解释：** 分页查询的起始资源ID。 - 查询第一页时，设置为空。 - 查询下一页时，设置为上一页最后一条资源的ID。  **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -423,7 +423,7 @@ class ListResolverRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker 分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
+    * @param string|null $marker **参数解释：** 分页查询的起始资源ID。 - 查询第一页时，设置为空。 - 查询下一页时，设置为上一页最后一条资源的ID。  **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */

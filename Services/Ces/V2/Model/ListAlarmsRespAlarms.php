@@ -23,7 +23,7 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -63,7 +63,7 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -124,7 +124,7 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -164,7 +164,7 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -204,7 +204,7 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -349,8 +349,8 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['name']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-){1,128}$/", $this->container['name'])) {
-                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-){1,128}$/.";
+            if (!is_null($this->container['name']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 256)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 256.";
@@ -493,7 +493,7 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    *  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return string|null
     */
@@ -505,7 +505,7 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * @param string|null $namespace 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return $this
     */

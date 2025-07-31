@@ -20,8 +20,8 @@ class PageLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * self  当前资源的链接。
-    * next  下一页资源的链接。
+    * self  **参数解释：** 当前页面的链接。 **取值范围：** 不涉及。
+    * next  **参数解释：** 下一页的链接。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class PageLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * self  当前资源的链接。
-    * next  下一页资源的链接。
+    * self  **参数解释：** 当前页面的链接。 **取值范围：** 不涉及。
+    * next  **参数解释：** 下一页的链接。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class PageLink implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * self  当前资源的链接。
-    * next  下一页资源的链接。
+    * self  **参数解释：** 当前页面的链接。 **取值范围：** 不涉及。
+    * next  **参数解释：** 下一页的链接。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class PageLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * self  当前资源的链接。
-    * next  下一页资源的链接。
+    * self  **参数解释：** 当前页面的链接。 **取值范围：** 不涉及。
+    * next  **参数解释：** 下一页的链接。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class PageLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * self  当前资源的链接。
-    * next  下一页资源的链接。
+    * self  **参数解释：** 当前页面的链接。 **取值范围：** 不涉及。
+    * next  **参数解释：** 下一页的链接。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class PageLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets self
-    *  当前资源的链接。
+    *  **参数解释：** 当前页面的链接。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class PageLink implements ModelInterface, ArrayAccess
     /**
     * Sets self
     *
-    * @param string|null $self 当前资源的链接。
+    * @param string|null $self **参数解释：** 当前页面的链接。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class PageLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets next
-    *  下一页资源的链接。
+    *  **参数解释：** 下一页的链接。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class PageLink implements ModelInterface, ArrayAccess
     /**
     * Sets next
     *
-    * @param string|null $next 下一页资源的链接。
+    * @param string|null $next **参数解释：** 下一页的链接。 **取值范围：** 不涉及。
     *
     * @return $this
     */

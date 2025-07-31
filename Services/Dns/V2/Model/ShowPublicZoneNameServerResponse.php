@@ -21,7 +21,7 @@ class ShowPublicZoneNameServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nameservers  查询公网域名的名称服务器响应。
+    * nameservers  **参数解释：** 查询公网域名的名称服务器响应。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowPublicZoneNameServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nameservers  查询公网域名的名称服务器响应。
+    * nameservers  **参数解释：** 查询公网域名的名称服务器响应。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowPublicZoneNameServerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nameservers  查询公网域名的名称服务器响应。
+    * nameservers  **参数解释：** 查询公网域名的名称服务器响应。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowPublicZoneNameServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nameservers  查询公网域名的名称服务器响应。
+    * nameservers  **参数解释：** 查询公网域名的名称服务器响应。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowPublicZoneNameServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nameservers  查询公网域名的名称服务器响应。
+    * nameservers  **参数解释：** 查询公网域名的名称服务器响应。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowPublicZoneNameServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameservers
-    *  查询公网域名的名称服务器响应。
+    *  **参数解释：** 查询公网域名的名称服务器响应。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\Nameserver[]|null
     */
@@ -187,7 +187,7 @@ class ShowPublicZoneNameServerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nameservers
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Nameserver[]|null $nameservers 查询公网域名的名称服务器响应。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\Nameserver[]|null $nameservers **参数解释：** 查询公网域名的名称服务器响应。 **取值范围：** 不涉及。
     *
     * @return $this
     */

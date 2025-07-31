@@ -72,8 +72,8 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * reverseIssue  二手车反向开具标识，True表示是反向开具发票，False表示不是反向开具发票。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * remark  备注
     * drawerName  开票人
-    * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
-    * textLocation  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。
+    * type  枚举值，当入参中包含type时返回。取值范围包括： - 机动车销售统一发票 - 电子发票（机动车销售统一发票） - 二手车销售统一发票 - 电子发票（二手车销售统一发票）
+    * textLocation  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。 > 说明： - 输入数据格式是PDF时，返回的字段坐标仅用于参考，表示字段间的相对位置关系。若发票类型为电子发票（机动车销售统一发票）或电子发票（二手车销售统一发票），字段tax_authority和字段tax_authority_code的坐标位置统一为这两个字段的最大外接矩形。
     * confidence  字段文字内容置信度，内容为字段-字符置信度对,如code:0.9999。这个数值为字段中每个字符置信度，格式为fp32，保留四位。若字段不存在则返回0.0。
     *
     * @var string[]
@@ -190,8 +190,8 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * reverseIssue  二手车反向开具标识，True表示是反向开具发票，False表示不是反向开具发票。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * remark  备注
     * drawerName  开票人
-    * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
-    * textLocation  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。
+    * type  枚举值，当入参中包含type时返回。取值范围包括： - 机动车销售统一发票 - 电子发票（机动车销售统一发票） - 二手车销售统一发票 - 电子发票（二手车销售统一发票）
+    * textLocation  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。 > 说明： - 输入数据格式是PDF时，返回的字段坐标仅用于参考，表示字段间的相对位置关系。若发票类型为电子发票（机动车销售统一发票）或电子发票（二手车销售统一发票），字段tax_authority和字段tax_authority_code的坐标位置统一为这两个字段的最大外接矩形。
     * confidence  字段文字内容置信度，内容为字段-字符置信度对,如code:0.9999。这个数值为字段中每个字符置信度，格式为fp32，保留四位。若字段不存在则返回0.0。
     *
     * @var string[]
@@ -329,8 +329,8 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * reverseIssue  二手车反向开具标识，True表示是反向开具发票，False表示不是反向开具发票。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * remark  备注
     * drawerName  开票人
-    * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
-    * textLocation  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。
+    * type  枚举值，当入参中包含type时返回。取值范围包括： - 机动车销售统一发票 - 电子发票（机动车销售统一发票） - 二手车销售统一发票 - 电子发票（二手车销售统一发票）
+    * textLocation  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。 > 说明： - 输入数据格式是PDF时，返回的字段坐标仅用于参考，表示字段间的相对位置关系。若发票类型为电子发票（机动车销售统一发票）或电子发票（二手车销售统一发票），字段tax_authority和字段tax_authority_code的坐标位置统一为这两个字段的最大外接矩形。
     * confidence  字段文字内容置信度，内容为字段-字符置信度对,如code:0.9999。这个数值为字段中每个字符置信度，格式为fp32，保留四位。若字段不存在则返回0.0。
     *
     * @var string[]
@@ -447,8 +447,8 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * reverseIssue  二手车反向开具标识，True表示是反向开具发票，False表示不是反向开具发票。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * remark  备注
     * drawerName  开票人
-    * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
-    * textLocation  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。
+    * type  枚举值，当入参中包含type时返回。取值范围包括： - 机动车销售统一发票 - 电子发票（机动车销售统一发票） - 二手车销售统一发票 - 电子发票（二手车销售统一发票）
+    * textLocation  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。 > 说明： - 输入数据格式是PDF时，返回的字段坐标仅用于参考，表示字段间的相对位置关系。若发票类型为电子发票（机动车销售统一发票）或电子发票（二手车销售统一发票），字段tax_authority和字段tax_authority_code的坐标位置统一为这两个字段的最大外接矩形。
     * confidence  字段文字内容置信度，内容为字段-字符置信度对,如code:0.9999。这个数值为字段中每个字符置信度，格式为fp32，保留四位。若字段不存在则返回0.0。
     *
     * @var string[]
@@ -565,8 +565,8 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * reverseIssue  二手车反向开具标识，True表示是反向开具发票，False表示不是反向开具发票。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * remark  备注
     * drawerName  开票人
-    * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
-    * textLocation  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。
+    * type  枚举值，当入参中包含type时返回。取值范围包括： - 机动车销售统一发票 - 电子发票（机动车销售统一发票） - 二手车销售统一发票 - 电子发票（二手车销售统一发票）
+    * textLocation  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。 > 说明： - 输入数据格式是PDF时，返回的字段坐标仅用于参考，表示字段间的相对位置关系。若发票类型为电子发票（机动车销售统一发票）或电子发票（二手车销售统一发票），字段tax_authority和字段tax_authority_code的坐标位置统一为这两个字段的最大外接矩形。
     * confidence  字段文字内容置信度，内容为字段-字符置信度对,如code:0.9999。这个数值为字段中每个字符置信度，格式为fp32，保留四位。若字段不存在则返回0.0。
     *
     * @var string[]
@@ -2016,7 +2016,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
+    *  枚举值，当入参中包含type时返回。取值范围包括： - 机动车销售统一发票 - 电子发票（机动车销售统一发票） - 二手车销售统一发票 - 电子发票（二手车销售统一发票）
     *
     * @return string|null
     */
@@ -2028,7 +2028,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
+    * @param string|null $type 枚举值，当入参中包含type时返回。取值范围包括： - 机动车销售统一发票 - 电子发票（机动车销售统一发票） - 二手车销售统一发票 - 电子发票（二手车销售统一发票）
     *
     * @return $this
     */
@@ -2040,7 +2040,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets textLocation
-    *  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。
+    *  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。 > 说明： - 输入数据格式是PDF时，返回的字段坐标仅用于参考，表示字段间的相对位置关系。若发票类型为电子发票（机动车销售统一发票）或电子发票（二手车销售统一发票），字段tax_authority和字段tax_authority_code的坐标位置统一为这两个字段的最大外接矩形。
     *
     * @return object|null
     */
@@ -2052,7 +2052,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets textLocation
     *
-    * @param object|null $textLocation 检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。
+    * @param object|null $textLocation 检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。 > 说明： - 输入数据格式是PDF时，返回的字段坐标仅用于参考，表示字段间的相对位置关系。若发票类型为电子发票（机动车销售统一发票）或电子发票（二手车销售统一发票），字段tax_authority和字段tax_authority_code的坐标位置统一为这两个字段的最大外接矩形。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ListOneClickAlarmsRespOneClickAlarms implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * oneClickAlarmId  一键告警ID
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * description  一键告警描述，长度范围[0,256]，该字段默认值为空字符串
     * enabled  是否启用一键告警。true:开启，false：关闭。
     *
@@ -37,7 +37,7 @@ class ListOneClickAlarmsRespOneClickAlarms implements ModelInterface, ArrayAcces
     /**
     * Array of property to format mappings. Used for (de)serialization
     * oneClickAlarmId  一键告警ID
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * description  一键告警描述，长度范围[0,256]，该字段默认值为空字符串
     * enabled  是否启用一键告警。true:开启，false：关闭。
     *
@@ -74,7 +74,7 @@ class ListOneClickAlarmsRespOneClickAlarms implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * oneClickAlarmId  一键告警ID
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * description  一键告警描述，长度范围[0,256]，该字段默认值为空字符串
     * enabled  是否启用一键告警。true:开启，false：关闭。
     *
@@ -90,7 +90,7 @@ class ListOneClickAlarmsRespOneClickAlarms implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * oneClickAlarmId  一键告警ID
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * description  一键告警描述，长度范围[0,256]，该字段默认值为空字符串
     * enabled  是否启用一键告警。true:开启，false：关闭。
     *
@@ -106,7 +106,7 @@ class ListOneClickAlarmsRespOneClickAlarms implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * oneClickAlarmId  一键告警ID
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * description  一键告警描述，长度范围[0,256]，该字段默认值为空字符串
     * enabled  是否启用一键告警。true:开启，false：关闭。
     *
@@ -267,7 +267,7 @@ class ListOneClickAlarmsRespOneClickAlarms implements ModelInterface, ArrayAcces
 
     /**
     * Gets namespace
-    *  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    *  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return string
     */
@@ -279,7 +279,7 @@ class ListOneClickAlarmsRespOneClickAlarms implements ModelInterface, ArrayAcces
     /**
     * Sets namespace
     *
-    * @param string $namespace 服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * @param string $namespace 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return $this
     */

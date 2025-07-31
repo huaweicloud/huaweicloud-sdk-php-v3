@@ -20,10 +20,12 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  资源健康状态，取值为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未关联告警规则）
+    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
     * dimensions  资源的维度信息
     * tags  资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
     * enterpriseProjectId  企业项目ID
+    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * resourceName  资源名称
     *
     * @var string[]
     */
@@ -31,15 +33,19 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
             'status' => 'string',
             'dimensions' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceDimension[]',
             'tags' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'eventStatus' => 'string',
+            'resourceName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  资源健康状态，取值为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未关联告警规则）
+    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
     * dimensions  资源的维度信息
     * tags  资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
     * enterpriseProjectId  企业项目ID
+    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * resourceName  资源名称
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
         'status' => null,
         'dimensions' => null,
         'tags' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'eventStatus' => null,
+        'resourceName' => null
     ];
 
     /**
@@ -73,10 +81,12 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  资源健康状态，取值为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未关联告警规则）
+    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
     * dimensions  资源的维度信息
     * tags  资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
     * enterpriseProjectId  企业项目ID
+    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * resourceName  资源名称
     *
     * @var string[]
     */
@@ -84,15 +94,19 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
             'status' => 'status',
             'dimensions' => 'dimensions',
             'tags' => 'tags',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'eventStatus' => 'event_status',
+            'resourceName' => 'resource_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  资源健康状态，取值为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未关联告警规则）
+    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
     * dimensions  资源的维度信息
     * tags  资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
     * enterpriseProjectId  企业项目ID
+    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * resourceName  资源名称
     *
     * @var string[]
     */
@@ -100,15 +114,19 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'dimensions' => 'setDimensions',
             'tags' => 'setTags',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'eventStatus' => 'setEventStatus',
+            'resourceName' => 'setResourceName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  资源健康状态，取值为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未关联告警规则）
+    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
     * dimensions  资源的维度信息
     * tags  资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
     * enterpriseProjectId  企业项目ID
+    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * resourceName  资源名称
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'dimensions' => 'getDimensions',
             'tags' => 'getTags',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'eventStatus' => 'getEventStatus',
+            'resourceName' => 'getResourceName'
     ];
 
     /**
@@ -162,6 +182,9 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
     const STATUS_HEALTH = 'health';
     const STATUS_UNHEALTHY = 'unhealthy';
     const STATUS_NO_ALARM_RULE = 'no_alarm_rule';
+    const EVENT_STATUS_HEALTH = 'health';
+    const EVENT_STATUS_UNHEALTHY = 'unhealthy';
+    const EVENT_STATUS_NO_ALARM_RULE = 'no_alarm_rule';
     
 
     /**
@@ -175,6 +198,20 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
             self::STATUS_HEALTH,
             self::STATUS_UNHEALTHY,
             self::STATUS_NO_ALARM_RULE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEventStatusAllowableValues()
+    {
+        return [
+            self::EVENT_STATUS_HEALTH,
+            self::EVENT_STATUS_UNHEALTHY,
+            self::EVENT_STATUS_NO_ALARM_RULE,
         ];
     }
 
@@ -198,6 +235,8 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
         $this->container['dimensions'] = isset($data['dimensions']) ? $data['dimensions'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['eventStatus'] = isset($data['eventStatus']) ? $data['eventStatus'] : null;
+        $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
     }
 
     /**
@@ -234,6 +273,20 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getEventStatusAllowableValues();
+                if (!is_null($this->container['eventStatus']) && !in_array($this->container['eventStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'eventStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'resourceName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'resourceName', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -250,7 +303,7 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源健康状态，取值为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未关联告警规则）
+    *  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
     *
     * @return string
     */
@@ -262,7 +315,7 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 资源健康状态，取值为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未关联告警规则）
+    * @param string $status 指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
     *
     * @return $this
     */
@@ -341,6 +394,54 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets eventStatus
+    *  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    *
+    * @return string|null
+    */
+    public function getEventStatus()
+    {
+        return $this->container['eventStatus'];
+    }
+
+    /**
+    * Sets eventStatus
+    *
+    * @param string|null $eventStatus 事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    *
+    * @return $this
+    */
+    public function setEventStatus($eventStatus)
+    {
+        $this->container['eventStatus'] = $eventStatus;
+        return $this;
+    }
+
+    /**
+    * Gets resourceName
+    *  资源名称
+    *
+    * @return string|null
+    */
+    public function getResourceName()
+    {
+        return $this->container['resourceName'];
+    }
+
+    /**
+    * Sets resourceName
+    *
+    * @param string|null $resourceName 资源名称
+    *
+    * @return $this
+    */
+    public function setResourceName($resourceName)
+    {
+        $this->container['resourceName'] = $resourceName;
         return $this;
     }
 

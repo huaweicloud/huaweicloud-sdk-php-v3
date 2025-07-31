@@ -22,7 +22,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名名称](ces_03_0059.xml)”
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
@@ -31,6 +31,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * enterpriseProjectId  企业项目ID
     * enabled  是否开启告警规则。true:开启，false:关闭。
     * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
@@ -53,6 +54,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'okNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\Notification[]',
             'notificationBeginTime' => 'string',
             'notificationEndTime' => 'string',
+            'effectiveTimezone' => 'string',
             'enterpriseProjectId' => 'string',
             'enabled' => 'bool',
             'notificationEnabled' => 'bool',
@@ -66,7 +68,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名名称](ces_03_0059.xml)”
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
@@ -75,6 +77,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * enterpriseProjectId  企业项目ID
     * enabled  是否开启告警规则。true:开启，false:关闭。
     * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
@@ -97,6 +100,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         'okNotifications' => null,
         'notificationBeginTime' => null,
         'notificationEndTime' => null,
+        'effectiveTimezone' => null,
         'enterpriseProjectId' => null,
         'enabled' => null,
         'notificationEnabled' => null,
@@ -131,7 +135,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名名称](ces_03_0059.xml)”
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
@@ -140,6 +144,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * enterpriseProjectId  企业项目ID
     * enabled  是否开启告警规则。true:开启，false:关闭。
     * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
@@ -162,6 +167,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'okNotifications' => 'ok_notifications',
             'notificationBeginTime' => 'notification_begin_time',
             'notificationEndTime' => 'notification_end_time',
+            'effectiveTimezone' => 'effective_timezone',
             'enterpriseProjectId' => 'enterprise_project_id',
             'enabled' => 'enabled',
             'notificationEnabled' => 'notification_enabled',
@@ -175,7 +181,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名名称](ces_03_0059.xml)”
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
@@ -184,6 +190,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * enterpriseProjectId  企业项目ID
     * enabled  是否开启告警规则。true:开启，false:关闭。
     * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
@@ -206,6 +213,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'okNotifications' => 'setOkNotifications',
             'notificationBeginTime' => 'setNotificationBeginTime',
             'notificationEndTime' => 'setNotificationEndTime',
+            'effectiveTimezone' => 'setEffectiveTimezone',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'enabled' => 'setEnabled',
             'notificationEnabled' => 'setNotificationEnabled',
@@ -219,7 +227,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名名称](ces_03_0059.xml)”
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
@@ -228,6 +236,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * enterpriseProjectId  企业项目ID
     * enabled  是否开启告警规则。true:开启，false:关闭。
     * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
@@ -250,6 +259,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'okNotifications' => 'getOkNotifications',
             'notificationBeginTime' => 'getNotificationBeginTime',
             'notificationEndTime' => 'getNotificationEndTime',
+            'effectiveTimezone' => 'getEffectiveTimezone',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'enabled' => 'getEnabled',
             'notificationEnabled' => 'getNotificationEnabled',
@@ -343,6 +353,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         $this->container['okNotifications'] = isset($data['okNotifications']) ? $data['okNotifications'] : null;
         $this->container['notificationBeginTime'] = isset($data['notificationBeginTime']) ? $data['notificationBeginTime'] : null;
         $this->container['notificationEndTime'] = isset($data['notificationEndTime']) ? $data['notificationEndTime'] : null;
+        $this->container['effectiveTimezone'] = isset($data['effectiveTimezone']) ? $data['effectiveTimezone'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
         $this->container['notificationEnabled'] = isset($data['notificationEnabled']) ? $data['notificationEnabled'] : null;
@@ -369,8 +380,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-){1,128}$/", $this->container['name'])) {
-                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-){1,128}$/.";
+            if (!preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 256)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 256.";
@@ -380,6 +391,9 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         }
             if ((mb_strlen($this->container['namespace']) > 32)) {
                 $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['namespace']) < 0)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 0.";
             }
             if (!preg_match("/^((([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*)|)$/", $this->container['namespace'])) {
                 $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^((([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*)|)$/.";
@@ -417,6 +431,15 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             if (!is_null($this->container['notificationEndTime']) && !preg_match("/^([01][0-9]|2[0-3]):([0-5][0-9])$/", $this->container['notificationEndTime'])) {
                 $invalidProperties[] = "invalid value for 'notificationEndTime', must be conform to the pattern /^([01][0-9]|2[0-3]):([0-5][0-9])$/.";
             }
+            if (!is_null($this->container['effectiveTimezone']) && (mb_strlen($this->container['effectiveTimezone']) > 16)) {
+                $invalidProperties[] = "invalid value for 'effectiveTimezone', the character length must be smaller than or equal to 16.";
+            }
+            if (!is_null($this->container['effectiveTimezone']) && (mb_strlen($this->container['effectiveTimezone']) < 1)) {
+                $invalidProperties[] = "invalid value for 'effectiveTimezone', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['effectiveTimezone']) && !preg_match("/^(GMT[+-](0|0[1-9]|1[0-2]):00)$/", $this->container['effectiveTimezone'])) {
+                $invalidProperties[] = "invalid value for 'effectiveTimezone', must be conform to the pattern /^(GMT[+-](0|0[1-9]|1[0-2]):00)$/.";
+            }
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^((([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12})|0)$/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^((([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12})|0)$/.";
             }
@@ -432,14 +455,17 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             if (!is_null($this->container['alarmTemplateId']) && (mb_strlen($this->container['alarmTemplateId']) < 2)) {
                 $invalidProperties[] = "invalid value for 'alarmTemplateId', the character length must be bigger than or equal to 2.";
             }
-            if (!is_null($this->container['alarmTemplateId']) && !preg_match("/^at([0-9A-Za-z])+$/", $this->container['alarmTemplateId'])) {
-                $invalidProperties[] = "invalid value for 'alarmTemplateId', must be conform to the pattern /^at([0-9A-Za-z])+$/.";
+            if (!is_null($this->container['alarmTemplateId']) && !preg_match("/^at([0-9A-Za-z]){0,62}$/", $this->container['alarmTemplateId'])) {
+                $invalidProperties[] = "invalid value for 'alarmTemplateId', must be conform to the pattern /^at([0-9A-Za-z]){0,62}$/.";
             }
             if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'productName', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'productName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['productName']) && !preg_match("/^(([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.){0,31}){0,3}|)$/", $this->container['productName'])) {
+                $invalidProperties[] = "invalid value for 'productName', must be conform to the pattern /^(([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.){0,31}){0,3}|)$/.";
             }
             $allowedValues = $this->getResourceLevelAllowableValues();
                 if (!is_null($this->container['resourceLevel']) && !in_array($this->container['resourceLevel'], $allowedValues, true)) {
@@ -513,7 +539,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
+    *  查询服务的命名空间，各服务命名空间请参考“[服务命名名称](ces_03_0059.xml)”
     *
     * @return string
     */
@@ -525,7 +551,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string $namespace 查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
+    * @param string $namespace 查询服务的命名空间，各服务命名空间请参考“[服务命名名称](ces_03_0059.xml)”
     *
     * @return $this
     */
@@ -724,6 +750,30 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     public function setNotificationEndTime($notificationEndTime)
     {
         $this->container['notificationEndTime'] = $notificationEndTime;
+        return $this;
+    }
+
+    /**
+    * Gets effectiveTimezone
+    *  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    *
+    * @return string|null
+    */
+    public function getEffectiveTimezone()
+    {
+        return $this->container['effectiveTimezone'];
+    }
+
+    /**
+    * Sets effectiveTimezone
+    *
+    * @param string|null $effectiveTimezone 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    *
+    * @return $this
+    */
+    public function setEffectiveTimezone($effectiveTimezone)
+    {
+        $this->container['effectiveTimezone'] = $effectiveTimezone;
         return $this;
     }
 

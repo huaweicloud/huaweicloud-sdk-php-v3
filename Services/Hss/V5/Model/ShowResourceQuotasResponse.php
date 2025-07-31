@@ -21,7 +21,7 @@ class ShowResourceQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dataList  配额统计列表
+    * dataList  **参数解释**： 配额统计列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowResourceQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dataList  配额统计列表
+    * dataList  **参数解释**： 配额统计列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowResourceQuotasResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dataList  配额统计列表
+    * dataList  **参数解释**： 配额统计列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowResourceQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dataList  配额统计列表
+    * dataList  **参数解释**： 配额统计列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowResourceQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dataList  配额统计列表
+    * dataList  **参数解释**： 配额统计列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowResourceQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  配额统计列表
+    *  **参数解释**： 配额统计列表 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\ResourceQuotasInfo[]|null
     */
@@ -187,7 +187,7 @@ class ShowResourceQuotasResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\ResourceQuotasInfo[]|null $dataList 配额统计列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\ResourceQuotasInfo[]|null $dataList **参数解释**： 配额统计列表 **取值范围**： 不涉及
     *
     * @return $this
     */

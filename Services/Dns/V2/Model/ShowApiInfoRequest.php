@@ -20,7 +20,7 @@ class ShowApiInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  待查询版本号。以v开头，如v2。
+    * version  **参数解释：** 待查询版本号。 **约束限制：** 不涉及。 **取值范围：** v2。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ShowApiInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  待查询版本号。以v开头，如v2。
+    * version  **参数解释：** 待查询版本号。 **约束限制：** 不涉及。 **取值范围：** v2。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ShowApiInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  待查询版本号。以v开头，如v2。
+    * version  **参数解释：** 待查询版本号。 **约束限制：** 不涉及。 **取值范围：** v2。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowApiInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  待查询版本号。以v开头，如v2。
+    * version  **参数解释：** 待查询版本号。 **约束限制：** 不涉及。 **取值范围：** v2。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowApiInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  待查询版本号。以v开头，如v2。
+    * version  **参数解释：** 待查询版本号。 **约束限制：** 不涉及。 **取值范围：** v2。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -183,7 +183,7 @@ class ShowApiInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  待查询版本号。以v开头，如v2。
+    *  **参数解释：** 待查询版本号。 **约束限制：** 不涉及。 **取值范围：** v2。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -195,7 +195,7 @@ class ShowApiInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 待查询版本号。以v开头，如v2。
+    * @param string $version **参数解释：** 待查询版本号。 **约束限制：** 不涉及。 **取值范围：** v2。 **默认取值：** 不涉及。
     *
     * @return $this
     */

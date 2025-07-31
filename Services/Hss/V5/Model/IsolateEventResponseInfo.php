@@ -25,10 +25,10 @@ class IsolateEventResponseInfo implements ModelInterface, ArrayAccess
     * eventType  事件类型，包含如下:   - 1001 : 通用恶意软件   - 1002 : 病毒   - 1003 : 蠕虫   - 1004 : 木马   - 1005 : 僵尸网络   - 1006 : 后门   - 1010 : Rootkit   - 1011 : 勒索软件   - 1012 ：黑客工具   - 1015 : Webshell   - 1016 : 挖矿   - 1017 : 反弹Shell   - 2001 : 一般漏洞利用   - 2012 : 远程代码执行   - 2047 : Redis漏洞利用   - 2048 : Hadoop漏洞利用   - 2049 : MySQL漏洞利用   - 3002 : 文件提权   - 3003 : 进程提权   - 3004 : 关键文件变更   - 3005 : 文件/目录变更   - 3007 : 进程异常行为   - 3015 : 高危命令执行   - 3018 : 异常Shell   - 3027 : Crontab可疑任务   - 3029 ：系统安全防护被禁用   - 3030 ：备份删除   - 3031 ：异常注册表操作   - 3036 : 容器镜像阻断   - 4002 : 暴力破解   - 4004 : 异常登录   - 4006 : 非法系统账号   - 4014 : 用户账号添加   - 4020 : 用户密码窃取   - 6002 : 端口扫描   - 6003 : 主机扫描   - 13001 : Kubernetes事件删除   - 13002 : Pod异常行为   - 13003 : 枚举用户信息   - 13004 : 绑定集群用户角色
     * eventName  事件名称
     * severity  威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
-    * containerName  容器实例名称
+    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     * imageName  镜像名称，只有容器类型的告警有
-    * hostName  服务器名称
-    * hostId  服务器ID
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
@@ -131,10 +131,10 @@ class IsolateEventResponseInfo implements ModelInterface, ArrayAccess
     * eventType  事件类型，包含如下:   - 1001 : 通用恶意软件   - 1002 : 病毒   - 1003 : 蠕虫   - 1004 : 木马   - 1005 : 僵尸网络   - 1006 : 后门   - 1010 : Rootkit   - 1011 : 勒索软件   - 1012 ：黑客工具   - 1015 : Webshell   - 1016 : 挖矿   - 1017 : 反弹Shell   - 2001 : 一般漏洞利用   - 2012 : 远程代码执行   - 2047 : Redis漏洞利用   - 2048 : Hadoop漏洞利用   - 2049 : MySQL漏洞利用   - 3002 : 文件提权   - 3003 : 进程提权   - 3004 : 关键文件变更   - 3005 : 文件/目录变更   - 3007 : 进程异常行为   - 3015 : 高危命令执行   - 3018 : 异常Shell   - 3027 : Crontab可疑任务   - 3029 ：系统安全防护被禁用   - 3030 ：备份删除   - 3031 ：异常注册表操作   - 3036 : 容器镜像阻断   - 4002 : 暴力破解   - 4004 : 异常登录   - 4006 : 非法系统账号   - 4014 : 用户账号添加   - 4020 : 用户密码窃取   - 6002 : 端口扫描   - 6003 : 主机扫描   - 13001 : Kubernetes事件删除   - 13002 : Pod异常行为   - 13003 : 枚举用户信息   - 13004 : 绑定集群用户角色
     * eventName  事件名称
     * severity  威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
-    * containerName  容器实例名称
+    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     * imageName  镜像名称，只有容器类型的告警有
-    * hostName  服务器名称
-    * hostId  服务器ID
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
@@ -258,10 +258,10 @@ class IsolateEventResponseInfo implements ModelInterface, ArrayAccess
     * eventType  事件类型，包含如下:   - 1001 : 通用恶意软件   - 1002 : 病毒   - 1003 : 蠕虫   - 1004 : 木马   - 1005 : 僵尸网络   - 1006 : 后门   - 1010 : Rootkit   - 1011 : 勒索软件   - 1012 ：黑客工具   - 1015 : Webshell   - 1016 : 挖矿   - 1017 : 反弹Shell   - 2001 : 一般漏洞利用   - 2012 : 远程代码执行   - 2047 : Redis漏洞利用   - 2048 : Hadoop漏洞利用   - 2049 : MySQL漏洞利用   - 3002 : 文件提权   - 3003 : 进程提权   - 3004 : 关键文件变更   - 3005 : 文件/目录变更   - 3007 : 进程异常行为   - 3015 : 高危命令执行   - 3018 : 异常Shell   - 3027 : Crontab可疑任务   - 3029 ：系统安全防护被禁用   - 3030 ：备份删除   - 3031 ：异常注册表操作   - 3036 : 容器镜像阻断   - 4002 : 暴力破解   - 4004 : 异常登录   - 4006 : 非法系统账号   - 4014 : 用户账号添加   - 4020 : 用户密码窃取   - 6002 : 端口扫描   - 6003 : 主机扫描   - 13001 : Kubernetes事件删除   - 13002 : Pod异常行为   - 13003 : 枚举用户信息   - 13004 : 绑定集群用户角色
     * eventName  事件名称
     * severity  威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
-    * containerName  容器实例名称
+    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     * imageName  镜像名称，只有容器类型的告警有
-    * hostName  服务器名称
-    * hostId  服务器ID
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
@@ -364,10 +364,10 @@ class IsolateEventResponseInfo implements ModelInterface, ArrayAccess
     * eventType  事件类型，包含如下:   - 1001 : 通用恶意软件   - 1002 : 病毒   - 1003 : 蠕虫   - 1004 : 木马   - 1005 : 僵尸网络   - 1006 : 后门   - 1010 : Rootkit   - 1011 : 勒索软件   - 1012 ：黑客工具   - 1015 : Webshell   - 1016 : 挖矿   - 1017 : 反弹Shell   - 2001 : 一般漏洞利用   - 2012 : 远程代码执行   - 2047 : Redis漏洞利用   - 2048 : Hadoop漏洞利用   - 2049 : MySQL漏洞利用   - 3002 : 文件提权   - 3003 : 进程提权   - 3004 : 关键文件变更   - 3005 : 文件/目录变更   - 3007 : 进程异常行为   - 3015 : 高危命令执行   - 3018 : 异常Shell   - 3027 : Crontab可疑任务   - 3029 ：系统安全防护被禁用   - 3030 ：备份删除   - 3031 ：异常注册表操作   - 3036 : 容器镜像阻断   - 4002 : 暴力破解   - 4004 : 异常登录   - 4006 : 非法系统账号   - 4014 : 用户账号添加   - 4020 : 用户密码窃取   - 6002 : 端口扫描   - 6003 : 主机扫描   - 13001 : Kubernetes事件删除   - 13002 : Pod异常行为   - 13003 : 枚举用户信息   - 13004 : 绑定集群用户角色
     * eventName  事件名称
     * severity  威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
-    * containerName  容器实例名称
+    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     * imageName  镜像名称，只有容器类型的告警有
-    * hostName  服务器名称
-    * hostId  服务器ID
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
@@ -470,10 +470,10 @@ class IsolateEventResponseInfo implements ModelInterface, ArrayAccess
     * eventType  事件类型，包含如下:   - 1001 : 通用恶意软件   - 1002 : 病毒   - 1003 : 蠕虫   - 1004 : 木马   - 1005 : 僵尸网络   - 1006 : 后门   - 1010 : Rootkit   - 1011 : 勒索软件   - 1012 ：黑客工具   - 1015 : Webshell   - 1016 : 挖矿   - 1017 : 反弹Shell   - 2001 : 一般漏洞利用   - 2012 : 远程代码执行   - 2047 : Redis漏洞利用   - 2048 : Hadoop漏洞利用   - 2049 : MySQL漏洞利用   - 3002 : 文件提权   - 3003 : 进程提权   - 3004 : 关键文件变更   - 3005 : 文件/目录变更   - 3007 : 进程异常行为   - 3015 : 高危命令执行   - 3018 : 异常Shell   - 3027 : Crontab可疑任务   - 3029 ：系统安全防护被禁用   - 3030 ：备份删除   - 3031 ：异常注册表操作   - 3036 : 容器镜像阻断   - 4002 : 暴力破解   - 4004 : 异常登录   - 4006 : 非法系统账号   - 4014 : 用户账号添加   - 4020 : 用户密码窃取   - 6002 : 端口扫描   - 6003 : 主机扫描   - 13001 : Kubernetes事件删除   - 13002 : Pod异常行为   - 13003 : 枚举用户信息   - 13004 : 绑定集群用户角色
     * eventName  事件名称
     * severity  威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
-    * containerName  容器实例名称
+    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     * imageName  镜像名称，只有容器类型的告警有
-    * hostName  服务器名称
-    * hostId  服务器ID
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
@@ -990,7 +990,7 @@ class IsolateEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerName
-    *  容器实例名称
+    *  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1002,7 +1002,7 @@ class IsolateEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerName
     *
-    * @param string|null $containerName 容器实例名称
+    * @param string|null $containerName **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1038,7 +1038,7 @@ class IsolateEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -1050,7 +1050,7 @@ class IsolateEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -1062,7 +1062,7 @@ class IsolateEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return string|null
     */
@@ -1074,7 +1074,7 @@ class IsolateEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器ID
+    * @param string|null $hostId **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return $this
     */

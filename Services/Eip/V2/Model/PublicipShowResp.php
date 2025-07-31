@@ -31,6 +31,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * privateIpAddress  功能说明：绑定弹性公网IP的私有IP地址  约束：只有绑定了的弹性公网IP查询才会返回该参数
     * profile  profile
     * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
+    * tags  - 功能说明：\"公网EIP标签\"
     * status  功能说明：弹性公网IP的状态  取值范围：冻结FREEZED，绑定失败BIND_ERROR，绑定中BINDING，释放中PENDING_DELETE， 创建中PENDING_CREATE，创建中NOTIFYING，释放中NOTIFY_DELETE，更新中PENDING_UPDATE， 未绑定DOWN ，绑定ACTIVE，绑定ELB，绑定VPN，失败ERROR。
     * tenantId  项目ID
     * type  弹性公网IP的类型
@@ -54,6 +55,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             'privateIpAddress' => 'string',
             'profile' => '\HuaweiCloud\SDK\Eip\V2\Model\ProfileResp',
             'publicIpAddress' => 'string',
+            'tags' => 'string[]',
             'status' => 'string',
             'tenantId' => 'string',
             'type' => 'string',
@@ -77,6 +79,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * privateIpAddress  功能说明：绑定弹性公网IP的私有IP地址  约束：只有绑定了的弹性公网IP查询才会返回该参数
     * profile  profile
     * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
+    * tags  - 功能说明：\"公网EIP标签\"
     * status  功能说明：弹性公网IP的状态  取值范围：冻结FREEZED，绑定失败BIND_ERROR，绑定中BINDING，释放中PENDING_DELETE， 创建中PENDING_CREATE，创建中NOTIFYING，释放中NOTIFY_DELETE，更新中PENDING_UPDATE， 未绑定DOWN ，绑定ACTIVE，绑定ELB，绑定VPN，失败ERROR。
     * tenantId  项目ID
     * type  弹性公网IP的类型
@@ -100,6 +103,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
         'privateIpAddress' => null,
         'profile' => null,
         'publicIpAddress' => null,
+        'tags' => null,
         'status' => null,
         'tenantId' => null,
         'type' => null,
@@ -144,6 +148,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * privateIpAddress  功能说明：绑定弹性公网IP的私有IP地址  约束：只有绑定了的弹性公网IP查询才会返回该参数
     * profile  profile
     * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
+    * tags  - 功能说明：\"公网EIP标签\"
     * status  功能说明：弹性公网IP的状态  取值范围：冻结FREEZED，绑定失败BIND_ERROR，绑定中BINDING，释放中PENDING_DELETE， 创建中PENDING_CREATE，创建中NOTIFYING，释放中NOTIFY_DELETE，更新中PENDING_UPDATE， 未绑定DOWN ，绑定ACTIVE，绑定ELB，绑定VPN，失败ERROR。
     * tenantId  项目ID
     * type  弹性公网IP的类型
@@ -167,6 +172,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             'privateIpAddress' => 'private_ip_address',
             'profile' => 'profile',
             'publicIpAddress' => 'public_ip_address',
+            'tags' => 'tags',
             'status' => 'status',
             'tenantId' => 'tenant_id',
             'type' => 'type',
@@ -190,6 +196,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * privateIpAddress  功能说明：绑定弹性公网IP的私有IP地址  约束：只有绑定了的弹性公网IP查询才会返回该参数
     * profile  profile
     * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
+    * tags  - 功能说明：\"公网EIP标签\"
     * status  功能说明：弹性公网IP的状态  取值范围：冻结FREEZED，绑定失败BIND_ERROR，绑定中BINDING，释放中PENDING_DELETE， 创建中PENDING_CREATE，创建中NOTIFYING，释放中NOTIFY_DELETE，更新中PENDING_UPDATE， 未绑定DOWN ，绑定ACTIVE，绑定ELB，绑定VPN，失败ERROR。
     * tenantId  项目ID
     * type  弹性公网IP的类型
@@ -213,6 +220,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             'privateIpAddress' => 'setPrivateIpAddress',
             'profile' => 'setProfile',
             'publicIpAddress' => 'setPublicIpAddress',
+            'tags' => 'setTags',
             'status' => 'setStatus',
             'tenantId' => 'setTenantId',
             'type' => 'setType',
@@ -236,6 +244,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * privateIpAddress  功能说明：绑定弹性公网IP的私有IP地址  约束：只有绑定了的弹性公网IP查询才会返回该参数
     * profile  profile
     * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
+    * tags  - 功能说明：\"公网EIP标签\"
     * status  功能说明：弹性公网IP的状态  取值范围：冻结FREEZED，绑定失败BIND_ERROR，绑定中BINDING，释放中PENDING_DELETE， 创建中PENDING_CREATE，创建中NOTIFYING，释放中NOTIFY_DELETE，更新中PENDING_UPDATE， 未绑定DOWN ，绑定ACTIVE，绑定ELB，绑定VPN，失败ERROR。
     * tenantId  项目ID
     * type  弹性公网IP的类型
@@ -259,6 +268,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             'privateIpAddress' => 'getPrivateIpAddress',
             'profile' => 'getProfile',
             'publicIpAddress' => 'getPublicIpAddress',
+            'tags' => 'getTags',
             'status' => 'getStatus',
             'tenantId' => 'getTenantId',
             'type' => 'getType',
@@ -405,6 +415,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
         $this->container['privateIpAddress'] = isset($data['privateIpAddress']) ? $data['privateIpAddress'] : null;
         $this->container['profile'] = isset($data['profile']) ? $data['profile'] : null;
         $this->container['publicIpAddress'] = isset($data['publicIpAddress']) ? $data['publicIpAddress'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
@@ -764,6 +775,30 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     public function setPublicIpAddress($publicIpAddress)
     {
         $this->container['publicIpAddress'] = $publicIpAddress;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  - 功能说明：\"公网EIP标签\"
+    *
+    * @return string[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string[]|null $tags - 功能说明：\"公网EIP标签\"
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

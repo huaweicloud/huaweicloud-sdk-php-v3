@@ -20,7 +20,7 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * zoneId  域名ID。
+    * zoneId  **参数解释：** 域名ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * zoneId  域名ID。
+    * zoneId  **参数解释：** 域名ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * zoneId  域名ID。
+    * zoneId  **参数解释：** 域名ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * zoneId  域名ID。
+    * zoneId  **参数解释：** 域名ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * zoneId  域名ID。
+    * zoneId  **参数解释：** 域名ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * body  body
     *
     * @var string[]
@@ -194,7 +194,7 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneId
-    *  域名ID。
+    *  **参数解释：** 域名ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -206,7 +206,7 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets zoneId
     *
-    * @param string $zoneId 域名ID。
+    * @param string $zoneId **参数解释：** 域名ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */

@@ -33,14 +33,14 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * assetType  资产类型。多个类型使用英文逗号分隔。 * VOICE_MODEL：音色模型（仅系统管理员可上传） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐 * AUDIO: 音频
     * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
-    * assetSource  资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * GROUP_CUSTOMIZATION：租户组资产 * ALL：所有资产  默认查询租户资产。
+    * assetSource  资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * ALL：所有资产  默认查询租户资产。
     * assetState  资产状态。多个资产状态使用英文逗号分隔。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线 默认查询所有状态的资产。
     * styleId  基于风格化ID查询关联资产。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
     * accurateQueryField  使用精确查询的字段
     * assetId  资产id
     * sex  性别。多选使用英文逗号分隔。
     * language  语言。多选使用英文逗号分隔。
-    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes  数字人资产属性： * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）  租户组资产验签属性： * SIG：加签秘钥。取值方式SIG=HexEncode(HMAC-SHA256(group_id:EXP_TIME:NONCE,key)) * EXP_TIME：过期时间，当前时间增加增加10分钟。取值示例1627768613 * NONCE：随机字符串。取值示例：EycLQsHwxhzK9OW8UEKWNfH2I3CGR2nINuU1EBpv162d42d92s
+    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes  数字人资产属性： * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
     * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
     * isMovable  分身数字人是否支持走动。仅在分身数字人模型查询时有效。
@@ -52,7 +52,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * excludeDeviceName  资产已执行的任务名称
     * supportedService  资产支持的业务类型。默认查询所有资产。 * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     * appUserId  第三方用户ID。不允许输入中文。
-    * projectGroupId  租户组id。只支持asset_souce是ALL 或者GROUP_CUSTOMIZATION 来源。
     *
     * @var string[]
     */
@@ -88,8 +87,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'includeDeviceName' => 'string',
             'excludeDeviceName' => 'string',
             'supportedService' => 'string',
-            'appUserId' => 'string',
-            'projectGroupId' => 'string'
+            'appUserId' => 'string'
     ];
 
     /**
@@ -107,14 +105,14 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * assetType  资产类型。多个类型使用英文逗号分隔。 * VOICE_MODEL：音色模型（仅系统管理员可上传） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐 * AUDIO: 音频
     * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
-    * assetSource  资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * GROUP_CUSTOMIZATION：租户组资产 * ALL：所有资产  默认查询租户资产。
+    * assetSource  资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * ALL：所有资产  默认查询租户资产。
     * assetState  资产状态。多个资产状态使用英文逗号分隔。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线 默认查询所有状态的资产。
     * styleId  基于风格化ID查询关联资产。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
     * accurateQueryField  使用精确查询的字段
     * assetId  资产id
     * sex  性别。多选使用英文逗号分隔。
     * language  语言。多选使用英文逗号分隔。
-    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes  数字人资产属性： * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）  租户组资产验签属性： * SIG：加签秘钥。取值方式SIG=HexEncode(HMAC-SHA256(group_id:EXP_TIME:NONCE,key)) * EXP_TIME：过期时间，当前时间增加增加10分钟。取值示例1627768613 * NONCE：随机字符串。取值示例：EycLQsHwxhzK9OW8UEKWNfH2I3CGR2nINuU1EBpv162d42d92s
+    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes  数字人资产属性： * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
     * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
     * isMovable  分身数字人是否支持走动。仅在分身数字人模型查询时有效。
@@ -126,7 +124,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * excludeDeviceName  资产已执行的任务名称
     * supportedService  资产支持的业务类型。默认查询所有资产。 * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     * appUserId  第三方用户ID。不允许输入中文。
-    * projectGroupId  租户组id。只支持asset_souce是ALL 或者GROUP_CUSTOMIZATION 来源。
     *
     * @var string[]
     */
@@ -162,8 +159,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
         'includeDeviceName' => null,
         'excludeDeviceName' => null,
         'supportedService' => null,
-        'appUserId' => null,
-        'projectGroupId' => null
+        'appUserId' => null
     ];
 
     /**
@@ -202,14 +198,14 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * assetType  资产类型。多个类型使用英文逗号分隔。 * VOICE_MODEL：音色模型（仅系统管理员可上传） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐 * AUDIO: 音频
     * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
-    * assetSource  资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * GROUP_CUSTOMIZATION：租户组资产 * ALL：所有资产  默认查询租户资产。
+    * assetSource  资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * ALL：所有资产  默认查询租户资产。
     * assetState  资产状态。多个资产状态使用英文逗号分隔。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线 默认查询所有状态的资产。
     * styleId  基于风格化ID查询关联资产。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
     * accurateQueryField  使用精确查询的字段
     * assetId  资产id
     * sex  性别。多选使用英文逗号分隔。
     * language  语言。多选使用英文逗号分隔。
-    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes  数字人资产属性： * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）  租户组资产验签属性： * SIG：加签秘钥。取值方式SIG=HexEncode(HMAC-SHA256(group_id:EXP_TIME:NONCE,key)) * EXP_TIME：过期时间，当前时间增加增加10分钟。取值示例1627768613 * NONCE：随机字符串。取值示例：EycLQsHwxhzK9OW8UEKWNfH2I3CGR2nINuU1EBpv162d42d92s
+    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes  数字人资产属性： * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
     * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
     * isMovable  分身数字人是否支持走动。仅在分身数字人模型查询时有效。
@@ -221,7 +217,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * excludeDeviceName  资产已执行的任务名称
     * supportedService  资产支持的业务类型。默认查询所有资产。 * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     * appUserId  第三方用户ID。不允许输入中文。
-    * projectGroupId  租户组id。只支持asset_souce是ALL 或者GROUP_CUSTOMIZATION 来源。
     *
     * @var string[]
     */
@@ -257,8 +252,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'includeDeviceName' => 'include_device_name',
             'excludeDeviceName' => 'exclude_device_name',
             'supportedService' => 'supported_service',
-            'appUserId' => 'app_user_id',
-            'projectGroupId' => 'project_group_id'
+            'appUserId' => 'app_user_id'
     ];
 
     /**
@@ -276,14 +270,14 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * assetType  资产类型。多个类型使用英文逗号分隔。 * VOICE_MODEL：音色模型（仅系统管理员可上传） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐 * AUDIO: 音频
     * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
-    * assetSource  资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * GROUP_CUSTOMIZATION：租户组资产 * ALL：所有资产  默认查询租户资产。
+    * assetSource  资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * ALL：所有资产  默认查询租户资产。
     * assetState  资产状态。多个资产状态使用英文逗号分隔。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线 默认查询所有状态的资产。
     * styleId  基于风格化ID查询关联资产。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
     * accurateQueryField  使用精确查询的字段
     * assetId  资产id
     * sex  性别。多选使用英文逗号分隔。
     * language  语言。多选使用英文逗号分隔。
-    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes  数字人资产属性： * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）  租户组资产验签属性： * SIG：加签秘钥。取值方式SIG=HexEncode(HMAC-SHA256(group_id:EXP_TIME:NONCE,key)) * EXP_TIME：过期时间，当前时间增加增加10分钟。取值示例1627768613 * NONCE：随机字符串。取值示例：EycLQsHwxhzK9OW8UEKWNfH2I3CGR2nINuU1EBpv162d42d92s
+    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes  数字人资产属性： * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
     * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
     * isMovable  分身数字人是否支持走动。仅在分身数字人模型查询时有效。
@@ -295,7 +289,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * excludeDeviceName  资产已执行的任务名称
     * supportedService  资产支持的业务类型。默认查询所有资产。 * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     * appUserId  第三方用户ID。不允许输入中文。
-    * projectGroupId  租户组id。只支持asset_souce是ALL 或者GROUP_CUSTOMIZATION 来源。
     *
     * @var string[]
     */
@@ -331,8 +324,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'includeDeviceName' => 'setIncludeDeviceName',
             'excludeDeviceName' => 'setExcludeDeviceName',
             'supportedService' => 'setSupportedService',
-            'appUserId' => 'setAppUserId',
-            'projectGroupId' => 'setProjectGroupId'
+            'appUserId' => 'setAppUserId'
     ];
 
     /**
@@ -350,14 +342,14 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * assetType  资产类型。多个类型使用英文逗号分隔。 * VOICE_MODEL：音色模型（仅系统管理员可上传） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐 * AUDIO: 音频
     * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
-    * assetSource  资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * GROUP_CUSTOMIZATION：租户组资产 * ALL：所有资产  默认查询租户资产。
+    * assetSource  资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * ALL：所有资产  默认查询租户资产。
     * assetState  资产状态。多个资产状态使用英文逗号分隔。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线 默认查询所有状态的资产。
     * styleId  基于风格化ID查询关联资产。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
     * accurateQueryField  使用精确查询的字段
     * assetId  资产id
     * sex  性别。多选使用英文逗号分隔。
     * language  语言。多选使用英文逗号分隔。
-    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes  数字人资产属性： * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）  租户组资产验签属性： * SIG：加签秘钥。取值方式SIG=HexEncode(HMAC-SHA256(group_id:EXP_TIME:NONCE,key)) * EXP_TIME：过期时间，当前时间增加增加10分钟。取值示例1627768613 * NONCE：随机字符串。取值示例：EycLQsHwxhzK9OW8UEKWNfH2I3CGR2nINuU1EBpv162d42d92s
+    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes  数字人资产属性： * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
     * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
     * isMovable  分身数字人是否支持走动。仅在分身数字人模型查询时有效。
@@ -369,7 +361,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * excludeDeviceName  资产已执行的任务名称
     * supportedService  资产支持的业务类型。默认查询所有资产。 * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     * appUserId  第三方用户ID。不允许输入中文。
-    * projectGroupId  租户组id。只支持asset_souce是ALL 或者GROUP_CUSTOMIZATION 来源。
     *
     * @var string[]
     */
@@ -405,8 +396,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'includeDeviceName' => 'getIncludeDeviceName',
             'excludeDeviceName' => 'getExcludeDeviceName',
             'supportedService' => 'getSupportedService',
-            'appUserId' => 'getAppUserId',
-            'projectGroupId' => 'getProjectGroupId'
+            'appUserId' => 'getAppUserId'
     ];
 
     /**
@@ -453,7 +443,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     const TAG_COMBINATION_TYPE_UNION_SET = 'UNION_SET';
     const ASSET_SOURCE_SYSTEM = 'SYSTEM';
     const ASSET_SOURCE_CUSTOMIZATION = 'CUSTOMIZATION';
-    const ASSET_SOURCE_GROUP_CUSTOMIZATION = 'GROUP_CUSTOMIZATION';
     const ASSET_SOURCE_ALL = 'ALL';
     const ROLE_SHARER = 'SHARER';
     const ROLE_SHAREE = 'SHAREE';
@@ -485,7 +474,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
         return [
             self::ASSET_SOURCE_SYSTEM,
             self::ASSET_SOURCE_CUSTOMIZATION,
-            self::ASSET_SOURCE_GROUP_CUSTOMIZATION,
             self::ASSET_SOURCE_ALL,
         ];
     }
@@ -565,7 +553,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
         $this->container['excludeDeviceName'] = isset($data['excludeDeviceName']) ? $data['excludeDeviceName'] : null;
         $this->container['supportedService'] = isset($data['supportedService']) ? $data['supportedService'] : null;
         $this->container['appUserId'] = isset($data['appUserId']) ? $data['appUserId'] : null;
-        $this->container['projectGroupId'] = isset($data['projectGroupId']) ? $data['projectGroupId'] : null;
     }
 
     /**
@@ -748,12 +735,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['appUserId']) && (mb_strlen($this->container['appUserId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'appUserId', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['projectGroupId']) && (mb_strlen($this->container['projectGroupId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'projectGroupId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['projectGroupId']) && (mb_strlen($this->container['projectGroupId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'projectGroupId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -1083,7 +1064,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetSource
-    *  资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * GROUP_CUSTOMIZATION：租户组资产 * ALL：所有资产  默认查询租户资产。
+    *  资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * ALL：所有资产  默认查询租户资产。
     *
     * @return string|null
     */
@@ -1095,7 +1076,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets assetSource
     *
-    * @param string|null $assetSource 资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * GROUP_CUSTOMIZATION：租户组资产 * ALL：所有资产  默认查询租户资产。
+    * @param string|null $assetSource 资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * ALL：所有资产  默认查询租户资产。
     *
     * @return $this
     */
@@ -1251,7 +1232,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets systemProperty
-    *  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes  数字人资产属性： * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）  租户组资产验签属性： * SIG：加签秘钥。取值方式SIG=HexEncode(HMAC-SHA256(group_id:EXP_TIME:NONCE,key)) * EXP_TIME：过期时间，当前时间增加增加10分钟。取值示例1627768613 * NONCE：随机字符串。取值示例：EycLQsHwxhzK9OW8UEKWNfH2I3CGR2nINuU1EBpv162d42d92s
+    *  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes  数字人资产属性： * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     *
     * @return string|null
     */
@@ -1263,7 +1244,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets systemProperty
     *
-    * @param string|null $systemProperty 系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes  数字人资产属性： * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）  租户组资产验签属性： * SIG：加签秘钥。取值方式SIG=HexEncode(HMAC-SHA256(group_id:EXP_TIME:NONCE,key)) * EXP_TIME：过期时间，当前时间增加增加10分钟。取值示例1627768613 * NONCE：随机字符串。取值示例：EycLQsHwxhzK9OW8UEKWNfH2I3CGR2nINuU1EBpv162d42d92s
+    * @param string|null $systemProperty 系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes  数字人资产属性： * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     *
     * @return $this
     */
@@ -1534,30 +1515,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     public function setAppUserId($appUserId)
     {
         $this->container['appUserId'] = $appUserId;
-        return $this;
-    }
-
-    /**
-    * Gets projectGroupId
-    *  租户组id。只支持asset_souce是ALL 或者GROUP_CUSTOMIZATION 来源。
-    *
-    * @return string|null
-    */
-    public function getProjectGroupId()
-    {
-        return $this->container['projectGroupId'];
-    }
-
-    /**
-    * Sets projectGroupId
-    *
-    * @param string|null $projectGroupId 租户组id。只支持asset_souce是ALL 或者GROUP_CUSTOMIZATION 来源。
-    *
-    * @return $this
-    */
-    public function setProjectGroupId($projectGroupId)
-    {
-        $this->container['projectGroupId'] = $projectGroupId;
         return $this;
     }
 

@@ -229,8 +229,8 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['templateName']) && (mb_strlen($this->container['templateName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'templateName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['templateName']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s)+$/", $this->container['templateName'])) {
-                $invalidProperties[] = "invalid value for 'templateName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s)+$/.";
+            if (!is_null($this->container['templateName']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s){1,128}$/", $this->container['templateName'])) {
+                $invalidProperties[] = "invalid value for 'templateName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s){1,128}$/.";
             }
             if (!is_null($this->container['templateDescription']) && (mb_strlen($this->container['templateDescription']) > 256)) {
                 $invalidProperties[] = "invalid value for 'templateDescription', the character length must be smaller than or equal to 256.";
@@ -238,8 +238,8 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['templateDescription']) && (mb_strlen($this->container['templateDescription']) < 0)) {
                 $invalidProperties[] = "invalid value for 'templateDescription', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['templateDescription']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|| |_|-|\\.|。|,|，|:|：|;|；|\"|\"|“|”|'|'|‘|’)+$/", $this->container['templateDescription'])) {
-                $invalidProperties[] = "invalid value for 'templateDescription', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|| |_|-|\\.|。|,|，|:|：|;|；|\"|\"|“|”|'|'|‘|’)+$/.";
+            if (!is_null($this->container['templateDescription']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|| |_|-|\\.|。|,|，|:|：|;|；|\"|“|”|'|‘|’)+$/", $this->container['templateDescription'])) {
+                $invalidProperties[] = "invalid value for 'templateDescription', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|| |_|-|\\.|。|,|，|:|：|;|；|\"|“|”|'|‘|’)+$/.";
             }
         return $invalidProperties;
     }

@@ -21,29 +21,29 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * hostId  受漏洞影响的服务器id
-    * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
-    * hostName  受影响主机名称
-    * hostIp  受影响主机ip
-    * agentId  主机对应的agent id
-    * version  主机绑定的配额版本
-    * cveNum  漏洞cve总数
-    * cveIdList  漏洞对应的cve id列表
-    * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
-    * repairCmd  修复漏洞需要执行的命令行（只有Linux漏洞有该字段）
-    * appPath  应用软件的路径（只有应用漏洞有该字段）
-    * regionName  地域
-    * publicIp  服务器公网ip
-    * privateIp  服务器私网ip
-    * groupId  服务器组id
-    * groupName  服务器组名称
-    * osType  操作系统
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * isAffectBusiness  是否影响业务
-    * firstScanTime  首次扫描时间
-    * scanTime  扫描时间，时间戳单位：毫秒
-    * supportRestore  是否可以回滚到修复漏洞时创建的备份
-    * disabledOperateTypes  漏洞在当前主机上不可进行的操作类型列表
-    * repairPriority  修复优先级,包含如下  - Critical 紧急  - High 高  - Medium 中  - Low 低
+    * severityLevel  **参数解释**: 危险程度 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危
+    * hostName  **参数解释**: 受影响主机名称 **取值范围**: 字符范围1-256位
+    * hostIp  **参数解释**: 受影响主机ip **取值范围**: 字符范围1-256位
+    * agentId  **参数解释**: 主机对应的agent id **取值范围**: 字符范围1-128位
+    * version  **参数解释**: 主机绑定的配额版本 **取值范围**: 字符范围1-128位
+    * cveNum  **参数解释**: 漏洞cve总数 **取值范围**: 最小值0，最大值10000
+    * cveIdList  **参数解释**: 漏洞对应的cve id列表 **取值范围**: 最小值1，最大值10000
+    * status  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复
+    * repairCmd  **参数解释**: 修复漏洞需要执行的命令行（只有Linux漏洞有该字段） **取值范围**: 字符范围1-256位
+    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围**: 字符范围1-512位
+    * regionName  **参数解释**: 地域 **取值范围**: 字符范围0-128位
+    * publicIp  **参数解释**: 服务器公网ip **取值范围**: 字符范围0-128位
+    * privateIp  **参数解释**: 服务器私网ip **取值范围**: 字符范围0-128位
+    * groupId  **参数解释**: 服务器组id **取值范围**: 字符范围0-128位
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符范围0-256位
+    * osType  **参数解释**: 操作系统 **取值范围**: 字符范围0-32位
+    * assetValue  **参数解释**: 资产重要性 **取值范围**: - important : 重要资产 - common    : 一般资产 - test      : 测试资产
+    * isAffectBusiness  **参数解释**: 是否影响业务 **取值范围**: - true  : 影响业务 - false : 不影响业务
+    * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * scanTime  **参数解释**: 扫描时间，时间戳单位：毫秒 **取值范围**: 最小值0，最大值9223372036854775807
+    * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
+    * disabledOperateTypes  **参数解释**: 漏洞在当前主机上不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
     *
     * @var string[]
     */
@@ -77,29 +77,29 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * hostId  受漏洞影响的服务器id
-    * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
-    * hostName  受影响主机名称
-    * hostIp  受影响主机ip
-    * agentId  主机对应的agent id
-    * version  主机绑定的配额版本
-    * cveNum  漏洞cve总数
-    * cveIdList  漏洞对应的cve id列表
-    * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
-    * repairCmd  修复漏洞需要执行的命令行（只有Linux漏洞有该字段）
-    * appPath  应用软件的路径（只有应用漏洞有该字段）
-    * regionName  地域
-    * publicIp  服务器公网ip
-    * privateIp  服务器私网ip
-    * groupId  服务器组id
-    * groupName  服务器组名称
-    * osType  操作系统
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * isAffectBusiness  是否影响业务
-    * firstScanTime  首次扫描时间
-    * scanTime  扫描时间，时间戳单位：毫秒
-    * supportRestore  是否可以回滚到修复漏洞时创建的备份
-    * disabledOperateTypes  漏洞在当前主机上不可进行的操作类型列表
-    * repairPriority  修复优先级,包含如下  - Critical 紧急  - High 高  - Medium 中  - Low 低
+    * severityLevel  **参数解释**: 危险程度 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危
+    * hostName  **参数解释**: 受影响主机名称 **取值范围**: 字符范围1-256位
+    * hostIp  **参数解释**: 受影响主机ip **取值范围**: 字符范围1-256位
+    * agentId  **参数解释**: 主机对应的agent id **取值范围**: 字符范围1-128位
+    * version  **参数解释**: 主机绑定的配额版本 **取值范围**: 字符范围1-128位
+    * cveNum  **参数解释**: 漏洞cve总数 **取值范围**: 最小值0，最大值10000
+    * cveIdList  **参数解释**: 漏洞对应的cve id列表 **取值范围**: 最小值1，最大值10000
+    * status  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复
+    * repairCmd  **参数解释**: 修复漏洞需要执行的命令行（只有Linux漏洞有该字段） **取值范围**: 字符范围1-256位
+    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围**: 字符范围1-512位
+    * regionName  **参数解释**: 地域 **取值范围**: 字符范围0-128位
+    * publicIp  **参数解释**: 服务器公网ip **取值范围**: 字符范围0-128位
+    * privateIp  **参数解释**: 服务器私网ip **取值范围**: 字符范围0-128位
+    * groupId  **参数解释**: 服务器组id **取值范围**: 字符范围0-128位
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符范围0-256位
+    * osType  **参数解释**: 操作系统 **取值范围**: 字符范围0-32位
+    * assetValue  **参数解释**: 资产重要性 **取值范围**: - important : 重要资产 - common    : 一般资产 - test      : 测试资产
+    * isAffectBusiness  **参数解释**: 是否影响业务 **取值范围**: - true  : 影响业务 - false : 不影响业务
+    * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * scanTime  **参数解释**: 扫描时间，时间戳单位：毫秒 **取值范围**: 最小值0，最大值9223372036854775807
+    * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
+    * disabledOperateTypes  **参数解释**: 漏洞在当前主机上不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
     *
     * @var string[]
     */
@@ -154,29 +154,29 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * hostId  受漏洞影响的服务器id
-    * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
-    * hostName  受影响主机名称
-    * hostIp  受影响主机ip
-    * agentId  主机对应的agent id
-    * version  主机绑定的配额版本
-    * cveNum  漏洞cve总数
-    * cveIdList  漏洞对应的cve id列表
-    * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
-    * repairCmd  修复漏洞需要执行的命令行（只有Linux漏洞有该字段）
-    * appPath  应用软件的路径（只有应用漏洞有该字段）
-    * regionName  地域
-    * publicIp  服务器公网ip
-    * privateIp  服务器私网ip
-    * groupId  服务器组id
-    * groupName  服务器组名称
-    * osType  操作系统
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * isAffectBusiness  是否影响业务
-    * firstScanTime  首次扫描时间
-    * scanTime  扫描时间，时间戳单位：毫秒
-    * supportRestore  是否可以回滚到修复漏洞时创建的备份
-    * disabledOperateTypes  漏洞在当前主机上不可进行的操作类型列表
-    * repairPriority  修复优先级,包含如下  - Critical 紧急  - High 高  - Medium 中  - Low 低
+    * severityLevel  **参数解释**: 危险程度 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危
+    * hostName  **参数解释**: 受影响主机名称 **取值范围**: 字符范围1-256位
+    * hostIp  **参数解释**: 受影响主机ip **取值范围**: 字符范围1-256位
+    * agentId  **参数解释**: 主机对应的agent id **取值范围**: 字符范围1-128位
+    * version  **参数解释**: 主机绑定的配额版本 **取值范围**: 字符范围1-128位
+    * cveNum  **参数解释**: 漏洞cve总数 **取值范围**: 最小值0，最大值10000
+    * cveIdList  **参数解释**: 漏洞对应的cve id列表 **取值范围**: 最小值1，最大值10000
+    * status  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复
+    * repairCmd  **参数解释**: 修复漏洞需要执行的命令行（只有Linux漏洞有该字段） **取值范围**: 字符范围1-256位
+    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围**: 字符范围1-512位
+    * regionName  **参数解释**: 地域 **取值范围**: 字符范围0-128位
+    * publicIp  **参数解释**: 服务器公网ip **取值范围**: 字符范围0-128位
+    * privateIp  **参数解释**: 服务器私网ip **取值范围**: 字符范围0-128位
+    * groupId  **参数解释**: 服务器组id **取值范围**: 字符范围0-128位
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符范围0-256位
+    * osType  **参数解释**: 操作系统 **取值范围**: 字符范围0-32位
+    * assetValue  **参数解释**: 资产重要性 **取值范围**: - important : 重要资产 - common    : 一般资产 - test      : 测试资产
+    * isAffectBusiness  **参数解释**: 是否影响业务 **取值范围**: - true  : 影响业务 - false : 不影响业务
+    * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * scanTime  **参数解释**: 扫描时间，时间戳单位：毫秒 **取值范围**: 最小值0，最大值9223372036854775807
+    * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
+    * disabledOperateTypes  **参数解释**: 漏洞在当前主机上不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
     *
     * @var string[]
     */
@@ -210,29 +210,29 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * hostId  受漏洞影响的服务器id
-    * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
-    * hostName  受影响主机名称
-    * hostIp  受影响主机ip
-    * agentId  主机对应的agent id
-    * version  主机绑定的配额版本
-    * cveNum  漏洞cve总数
-    * cveIdList  漏洞对应的cve id列表
-    * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
-    * repairCmd  修复漏洞需要执行的命令行（只有Linux漏洞有该字段）
-    * appPath  应用软件的路径（只有应用漏洞有该字段）
-    * regionName  地域
-    * publicIp  服务器公网ip
-    * privateIp  服务器私网ip
-    * groupId  服务器组id
-    * groupName  服务器组名称
-    * osType  操作系统
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * isAffectBusiness  是否影响业务
-    * firstScanTime  首次扫描时间
-    * scanTime  扫描时间，时间戳单位：毫秒
-    * supportRestore  是否可以回滚到修复漏洞时创建的备份
-    * disabledOperateTypes  漏洞在当前主机上不可进行的操作类型列表
-    * repairPriority  修复优先级,包含如下  - Critical 紧急  - High 高  - Medium 中  - Low 低
+    * severityLevel  **参数解释**: 危险程度 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危
+    * hostName  **参数解释**: 受影响主机名称 **取值范围**: 字符范围1-256位
+    * hostIp  **参数解释**: 受影响主机ip **取值范围**: 字符范围1-256位
+    * agentId  **参数解释**: 主机对应的agent id **取值范围**: 字符范围1-128位
+    * version  **参数解释**: 主机绑定的配额版本 **取值范围**: 字符范围1-128位
+    * cveNum  **参数解释**: 漏洞cve总数 **取值范围**: 最小值0，最大值10000
+    * cveIdList  **参数解释**: 漏洞对应的cve id列表 **取值范围**: 最小值1，最大值10000
+    * status  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复
+    * repairCmd  **参数解释**: 修复漏洞需要执行的命令行（只有Linux漏洞有该字段） **取值范围**: 字符范围1-256位
+    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围**: 字符范围1-512位
+    * regionName  **参数解释**: 地域 **取值范围**: 字符范围0-128位
+    * publicIp  **参数解释**: 服务器公网ip **取值范围**: 字符范围0-128位
+    * privateIp  **参数解释**: 服务器私网ip **取值范围**: 字符范围0-128位
+    * groupId  **参数解释**: 服务器组id **取值范围**: 字符范围0-128位
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符范围0-256位
+    * osType  **参数解释**: 操作系统 **取值范围**: 字符范围0-32位
+    * assetValue  **参数解释**: 资产重要性 **取值范围**: - important : 重要资产 - common    : 一般资产 - test      : 测试资产
+    * isAffectBusiness  **参数解释**: 是否影响业务 **取值范围**: - true  : 影响业务 - false : 不影响业务
+    * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * scanTime  **参数解释**: 扫描时间，时间戳单位：毫秒 **取值范围**: 最小值0，最大值9223372036854775807
+    * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
+    * disabledOperateTypes  **参数解释**: 漏洞在当前主机上不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
     *
     * @var string[]
     */
@@ -266,29 +266,29 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * hostId  受漏洞影响的服务器id
-    * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
-    * hostName  受影响主机名称
-    * hostIp  受影响主机ip
-    * agentId  主机对应的agent id
-    * version  主机绑定的配额版本
-    * cveNum  漏洞cve总数
-    * cveIdList  漏洞对应的cve id列表
-    * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
-    * repairCmd  修复漏洞需要执行的命令行（只有Linux漏洞有该字段）
-    * appPath  应用软件的路径（只有应用漏洞有该字段）
-    * regionName  地域
-    * publicIp  服务器公网ip
-    * privateIp  服务器私网ip
-    * groupId  服务器组id
-    * groupName  服务器组名称
-    * osType  操作系统
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * isAffectBusiness  是否影响业务
-    * firstScanTime  首次扫描时间
-    * scanTime  扫描时间，时间戳单位：毫秒
-    * supportRestore  是否可以回滚到修复漏洞时创建的备份
-    * disabledOperateTypes  漏洞在当前主机上不可进行的操作类型列表
-    * repairPriority  修复优先级,包含如下  - Critical 紧急  - High 高  - Medium 中  - Low 低
+    * severityLevel  **参数解释**: 危险程度 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危
+    * hostName  **参数解释**: 受影响主机名称 **取值范围**: 字符范围1-256位
+    * hostIp  **参数解释**: 受影响主机ip **取值范围**: 字符范围1-256位
+    * agentId  **参数解释**: 主机对应的agent id **取值范围**: 字符范围1-128位
+    * version  **参数解释**: 主机绑定的配额版本 **取值范围**: 字符范围1-128位
+    * cveNum  **参数解释**: 漏洞cve总数 **取值范围**: 最小值0，最大值10000
+    * cveIdList  **参数解释**: 漏洞对应的cve id列表 **取值范围**: 最小值1，最大值10000
+    * status  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复
+    * repairCmd  **参数解释**: 修复漏洞需要执行的命令行（只有Linux漏洞有该字段） **取值范围**: 字符范围1-256位
+    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围**: 字符范围1-512位
+    * regionName  **参数解释**: 地域 **取值范围**: 字符范围0-128位
+    * publicIp  **参数解释**: 服务器公网ip **取值范围**: 字符范围0-128位
+    * privateIp  **参数解释**: 服务器私网ip **取值范围**: 字符范围0-128位
+    * groupId  **参数解释**: 服务器组id **取值范围**: 字符范围0-128位
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符范围0-256位
+    * osType  **参数解释**: 操作系统 **取值范围**: 字符范围0-32位
+    * assetValue  **参数解释**: 资产重要性 **取值范围**: - important : 重要资产 - common    : 一般资产 - test      : 测试资产
+    * isAffectBusiness  **参数解释**: 是否影响业务 **取值范围**: - true  : 影响业务 - false : 不影响业务
+    * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * scanTime  **参数解释**: 扫描时间，时间戳单位：毫秒 **取值范围**: 最小值0，最大值9223372036854775807
+    * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
+    * disabledOperateTypes  **参数解释**: 漏洞在当前主机上不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
     *
     * @var string[]
     */
@@ -571,7 +571,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets severityLevel
-    *  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
+    *  **参数解释**: 危险程度 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危
     *
     * @return string|null
     */
@@ -583,7 +583,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets severityLevel
     *
-    * @param string|null $severityLevel 危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
+    * @param string|null $severityLevel **参数解释**: 危险程度 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危
     *
     * @return $this
     */
@@ -595,7 +595,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  受影响主机名称
+    *  **参数解释**: 受影响主机名称 **取值范围**: 字符范围1-256位
     *
     * @return string|null
     */
@@ -607,7 +607,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 受影响主机名称
+    * @param string|null $hostName **参数解释**: 受影响主机名称 **取值范围**: 字符范围1-256位
     *
     * @return $this
     */
@@ -619,7 +619,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  受影响主机ip
+    *  **参数解释**: 受影响主机ip **取值范围**: 字符范围1-256位
     *
     * @return string|null
     */
@@ -631,7 +631,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 受影响主机ip
+    * @param string|null $hostIp **参数解释**: 受影响主机ip **取值范围**: 字符范围1-256位
     *
     * @return $this
     */
@@ -643,7 +643,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  主机对应的agent id
+    *  **参数解释**: 主机对应的agent id **取值范围**: 字符范围1-128位
     *
     * @return string|null
     */
@@ -655,7 +655,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId 主机对应的agent id
+    * @param string|null $agentId **参数解释**: 主机对应的agent id **取值范围**: 字符范围1-128位
     *
     * @return $this
     */
@@ -667,7 +667,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  主机绑定的配额版本
+    *  **参数解释**: 主机绑定的配额版本 **取值范围**: 字符范围1-128位
     *
     * @return string|null
     */
@@ -679,7 +679,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 主机绑定的配额版本
+    * @param string|null $version **参数解释**: 主机绑定的配额版本 **取值范围**: 字符范围1-128位
     *
     * @return $this
     */
@@ -691,7 +691,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cveNum
-    *  漏洞cve总数
+    *  **参数解释**: 漏洞cve总数 **取值范围**: 最小值0，最大值10000
     *
     * @return int|null
     */
@@ -703,7 +703,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cveNum
     *
-    * @param int|null $cveNum 漏洞cve总数
+    * @param int|null $cveNum **参数解释**: 漏洞cve总数 **取值范围**: 最小值0，最大值10000
     *
     * @return $this
     */
@@ -715,7 +715,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cveIdList
-    *  漏洞对应的cve id列表
+    *  **参数解释**: 漏洞对应的cve id列表 **取值范围**: 最小值1，最大值10000
     *
     * @return string[]|null
     */
@@ -727,7 +727,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cveIdList
     *
-    * @param string[]|null $cveIdList 漏洞对应的cve id列表
+    * @param string[]|null $cveIdList **参数解释**: 漏洞对应的cve id列表 **取值范围**: 最小值1，最大值10000
     *
     * @return $this
     */
@@ -739,7 +739,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
+    *  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复
     *
     * @return string|null
     */
@@ -751,7 +751,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
+    * @param string|null $status **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复
     *
     * @return $this
     */
@@ -763,7 +763,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets repairCmd
-    *  修复漏洞需要执行的命令行（只有Linux漏洞有该字段）
+    *  **参数解释**: 修复漏洞需要执行的命令行（只有Linux漏洞有该字段） **取值范围**: 字符范围1-256位
     *
     * @return string|null
     */
@@ -775,7 +775,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets repairCmd
     *
-    * @param string|null $repairCmd 修复漏洞需要执行的命令行（只有Linux漏洞有该字段）
+    * @param string|null $repairCmd **参数解释**: 修复漏洞需要执行的命令行（只有Linux漏洞有该字段） **取值范围**: 字符范围1-256位
     *
     * @return $this
     */
@@ -787,7 +787,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets appPath
-    *  应用软件的路径（只有应用漏洞有该字段）
+    *  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围**: 字符范围1-512位
     *
     * @return string|null
     */
@@ -799,7 +799,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets appPath
     *
-    * @param string|null $appPath 应用软件的路径（只有应用漏洞有该字段）
+    * @param string|null $appPath **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围**: 字符范围1-512位
     *
     * @return $this
     */
@@ -811,7 +811,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionName
-    *  地域
+    *  **参数解释**: 地域 **取值范围**: 字符范围0-128位
     *
     * @return string|null
     */
@@ -823,7 +823,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets regionName
     *
-    * @param string|null $regionName 地域
+    * @param string|null $regionName **参数解释**: 地域 **取值范围**: 字符范围0-128位
     *
     * @return $this
     */
@@ -835,7 +835,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  服务器公网ip
+    *  **参数解释**: 服务器公网ip **取值范围**: 字符范围0-128位
     *
     * @return string|null
     */
@@ -847,7 +847,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp 服务器公网ip
+    * @param string|null $publicIp **参数解释**: 服务器公网ip **取值范围**: 字符范围0-128位
     *
     * @return $this
     */
@@ -859,7 +859,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  服务器私网ip
+    *  **参数解释**: 服务器私网ip **取值范围**: 字符范围0-128位
     *
     * @return string|null
     */
@@ -871,7 +871,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp 服务器私网ip
+    * @param string|null $privateIp **参数解释**: 服务器私网ip **取值范围**: 字符范围0-128位
     *
     * @return $this
     */
@@ -883,7 +883,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  服务器组id
+    *  **参数解释**: 服务器组id **取值范围**: 字符范围0-128位
     *
     * @return string|null
     */
@@ -895,7 +895,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 服务器组id
+    * @param string|null $groupId **参数解释**: 服务器组id **取值范围**: 字符范围0-128位
     *
     * @return $this
     */
@@ -907,7 +907,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  服务器组名称
+    *  **参数解释**: 服务器组名称 **取值范围**: 字符范围0-256位
     *
     * @return string|null
     */
@@ -919,7 +919,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 服务器组名称
+    * @param string|null $groupName **参数解释**: 服务器组名称 **取值范围**: 字符范围0-256位
     *
     * @return $this
     */
@@ -931,7 +931,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  操作系统
+    *  **参数解释**: 操作系统 **取值范围**: 字符范围0-32位
     *
     * @return string|null
     */
@@ -943,7 +943,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType 操作系统
+    * @param string|null $osType **参数解释**: 操作系统 **取值范围**: 字符范围0-32位
     *
     * @return $this
     */
@@ -955,7 +955,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetValue
-    *  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    *  **参数解释**: 资产重要性 **取值范围**: - important : 重要资产 - common    : 一般资产 - test      : 测试资产
     *
     * @return string|null
     */
@@ -967,7 +967,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string|null $assetValue 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * @param string|null $assetValue **参数解释**: 资产重要性 **取值范围**: - important : 重要资产 - common    : 一般资产 - test      : 测试资产
     *
     * @return $this
     */
@@ -979,7 +979,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAffectBusiness
-    *  是否影响业务
+    *  **参数解释**: 是否影响业务 **取值范围**: - true  : 影响业务 - false : 不影响业务
     *
     * @return bool|null
     */
@@ -991,7 +991,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isAffectBusiness
     *
-    * @param bool|null $isAffectBusiness 是否影响业务
+    * @param bool|null $isAffectBusiness **参数解释**: 是否影响业务 **取值范围**: - true  : 影响业务 - false : 不影响业务
     *
     * @return $this
     */
@@ -1003,7 +1003,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets firstScanTime
-    *  首次扫描时间
+    *  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -1015,7 +1015,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets firstScanTime
     *
-    * @param int|null $firstScanTime 首次扫描时间
+    * @param int|null $firstScanTime **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -1027,7 +1027,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanTime
-    *  扫描时间，时间戳单位：毫秒
+    *  **参数解释**: 扫描时间，时间戳单位：毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -1039,7 +1039,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanTime
     *
-    * @param int|null $scanTime 扫描时间，时间戳单位：毫秒
+    * @param int|null $scanTime **参数解释**: 扫描时间，时间戳单位：毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -1051,7 +1051,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportRestore
-    *  是否可以回滚到修复漏洞时创建的备份
+    *  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
     *
     * @return bool|null
     */
@@ -1063,7 +1063,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets supportRestore
     *
-    * @param bool|null $supportRestore 是否可以回滚到修复漏洞时创建的备份
+    * @param bool|null $supportRestore **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
     *
     * @return $this
     */
@@ -1075,7 +1075,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets disabledOperateTypes
-    *  漏洞在当前主机上不可进行的操作类型列表
+    *  **参数解释**: 漏洞在当前主机上不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\HostVulInfoDisabledOperateTypes[]|null
     */
@@ -1087,7 +1087,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets disabledOperateTypes
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\HostVulInfoDisabledOperateTypes[]|null $disabledOperateTypes 漏洞在当前主机上不可进行的操作类型列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\HostVulInfoDisabledOperateTypes[]|null $disabledOperateTypes **参数解释**: 漏洞在当前主机上不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
     *
     * @return $this
     */
@@ -1099,7 +1099,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets repairPriority
-    *  修复优先级,包含如下  - Critical 紧急  - High 高  - Medium 中  - Low 低
+    *  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
     *
     * @return string|null
     */
@@ -1111,7 +1111,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets repairPriority
     *
-    * @param string|null $repairPriority 修复优先级,包含如下  - Critical 紧急  - High 高  - Medium 中  - Low 低
+    * @param string|null $repairPriority **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
     *
     * @return $this
     */

@@ -20,9 +20,9 @@ class ListApiVersionsItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  版本状态，包含：  CURRENT：表示该版本为主推版本。 SUPPORTED：表示为老版本，但是现在还在继续支持。 DEPRECATED：表示为废弃版本，存在后续删除的可能。
-    * id  版本号。
-    * links  指向当前版本的url。
+    * status  **参数解释：** 版本状态。 **取值范围：** - CURRENT：表示该版本为主推版本。 - SUPPORTED：表示为老版本，但是现在还在继续支持。 - DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * id  **参数解释：** 版本号。 **取值范围：** v2。
+    * links  **参数解释：** 指向当前版本的URL。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ListApiVersionsItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  版本状态，包含：  CURRENT：表示该版本为主推版本。 SUPPORTED：表示为老版本，但是现在还在继续支持。 DEPRECATED：表示为废弃版本，存在后续删除的可能。
-    * id  版本号。
-    * links  指向当前版本的url。
+    * status  **参数解释：** 版本状态。 **取值范围：** - CURRENT：表示该版本为主推版本。 - SUPPORTED：表示为老版本，但是现在还在继续支持。 - DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * id  **参数解释：** 版本号。 **取值范围：** v2。
+    * links  **参数解释：** 指向当前版本的URL。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ListApiVersionsItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  版本状态，包含：  CURRENT：表示该版本为主推版本。 SUPPORTED：表示为老版本，但是现在还在继续支持。 DEPRECATED：表示为废弃版本，存在后续删除的可能。
-    * id  版本号。
-    * links  指向当前版本的url。
+    * status  **参数解释：** 版本状态。 **取值范围：** - CURRENT：表示该版本为主推版本。 - SUPPORTED：表示为老版本，但是现在还在继续支持。 - DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * id  **参数解释：** 版本号。 **取值范围：** v2。
+    * links  **参数解释：** 指向当前版本的URL。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ListApiVersionsItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  版本状态，包含：  CURRENT：表示该版本为主推版本。 SUPPORTED：表示为老版本，但是现在还在继续支持。 DEPRECATED：表示为废弃版本，存在后续删除的可能。
-    * id  版本号。
-    * links  指向当前版本的url。
+    * status  **参数解释：** 版本状态。 **取值范围：** - CURRENT：表示该版本为主推版本。 - SUPPORTED：表示为老版本，但是现在还在继续支持。 - DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * id  **参数解释：** 版本号。 **取值范围：** v2。
+    * links  **参数解释：** 指向当前版本的URL。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ListApiVersionsItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  版本状态，包含：  CURRENT：表示该版本为主推版本。 SUPPORTED：表示为老版本，但是现在还在继续支持。 DEPRECATED：表示为废弃版本，存在后续删除的可能。
-    * id  版本号。
-    * links  指向当前版本的url。
+    * status  **参数解释：** 版本状态。 **取值范围：** - CURRENT：表示该版本为主推版本。 - SUPPORTED：表示为老版本，但是现在还在继续支持。 - DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * id  **参数解释：** 版本号。 **取值范围：** v2。
+    * links  **参数解释：** 指向当前版本的URL。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class ListApiVersionsItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  版本状态，包含：  CURRENT：表示该版本为主推版本。 SUPPORTED：表示为老版本，但是现在还在继续支持。 DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    *  **参数解释：** 版本状态。 **取值范围：** - CURRENT：表示该版本为主推版本。 - SUPPORTED：表示为老版本，但是现在还在继续支持。 - DEPRECATED：表示为废弃版本，存在后续删除的可能。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class ListApiVersionsItem implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 版本状态，包含：  CURRENT：表示该版本为主推版本。 SUPPORTED：表示为老版本，但是现在还在继续支持。 DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * @param string|null $status **参数解释：** 版本状态。 **取值范围：** - CURRENT：表示该版本为主推版本。 - SUPPORTED：表示为老版本，但是现在还在继续支持。 - DEPRECATED：表示为废弃版本，存在后续删除的可能。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class ListApiVersionsItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  版本号。
+    *  **参数解释：** 版本号。 **取值范围：** v2。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class ListApiVersionsItem implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 版本号。
+    * @param string|null $id **参数解释：** 版本号。 **取值范围：** v2。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class ListApiVersionsItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
-    *  指向当前版本的url。
+    *  **参数解释：** 指向当前版本的URL。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\LinksItem[]|null
     */
@@ -256,7 +256,7 @@ class ListApiVersionsItem implements ModelInterface, ArrayAccess
     /**
     * Sets links
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\LinksItem[]|null $links 指向当前版本的url。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\LinksItem[]|null $links **参数解释：** 指向当前版本的URL。 **取值范围：** 不涉及。
     *
     * @return $this
     */

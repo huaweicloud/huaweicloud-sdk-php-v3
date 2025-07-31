@@ -20,7 +20,7 @@ class ResourceCategory implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimensionNames  资源的维度信息，多个维度通过字母序排序后逗号拼接
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ResourceCategory implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimensionNames  资源的维度信息，多个维度通过字母序排序后逗号拼接
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ResourceCategory implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimensionNames  资源的维度信息，多个维度通过字母序排序后逗号拼接
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ResourceCategory implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimensionNames  资源的维度信息，多个维度通过字母序排序后逗号拼接
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ResourceCategory implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimensionNames  资源的维度信息，多个维度通过字母序排序后逗号拼接
     *
     * @var string[]
@@ -200,7 +200,7 @@ class ResourceCategory implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    *  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return string
     */
@@ -212,7 +212,7 @@ class ResourceCategory implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string $namespace 服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * @param string $namespace 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return $this
     */

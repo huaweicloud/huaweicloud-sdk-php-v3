@@ -21,7 +21,7 @@ class ListSystemUserWhiteListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  总数
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * remainNum  可继续添加的白名单数量
     * limitNum  白名单数量上限
     * dataList  系统用户白名单详情
@@ -37,7 +37,7 @@ class ListSystemUserWhiteListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  总数
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * remainNum  可继续添加的白名单数量
     * limitNum  白名单数量上限
     * dataList  系统用户白名单详情
@@ -74,7 +74,7 @@ class ListSystemUserWhiteListResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  总数
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * remainNum  可继续添加的白名单数量
     * limitNum  白名单数量上限
     * dataList  系统用户白名单详情
@@ -90,7 +90,7 @@ class ListSystemUserWhiteListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  总数
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * remainNum  可继续添加的白名单数量
     * limitNum  白名单数量上限
     * dataList  系统用户白名单详情
@@ -106,7 +106,7 @@ class ListSystemUserWhiteListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  总数
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * remainNum  可继续添加的白名单数量
     * limitNum  白名单数量上限
     * dataList  系统用户白名单详情
@@ -214,7 +214,7 @@ class ListSystemUserWhiteListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  总数
+    *  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -226,7 +226,7 @@ class ListSystemUserWhiteListResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 总数
+    * @param int|null $totalNum **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */

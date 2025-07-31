@@ -20,23 +20,23 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recordId  告警记录ID
-    * alarmId  告警规则的ID，如：al1603131199286dzxpqK3Ez。
-    * name  告警规则的名称，如：alarm-test01。
-    * status  告警记录的状态，取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
-    * level  告警记录的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
-    * type  type
-    * actionEnabled  是否发送通知，值为true或者false。
-    * beginTime  产生时间,UTC时间
-    * endTime  结束时间，UTC时间
-    * firstAlarmTime  第一次告警时间，UTC时间
-    * lastAlarmTime  最后一次告警时间，UTC时间
-    * alarmRecoveryTime  告警恢复时间，UTC时间
+    * recordId  **参数解释**： 告警记录ID。 **取值范围**： 字符串长度为24。
+    * alarmId  **参数解释**： 告警规则的ID，如：al1603131199286dzxpqK3Ez。 **取值范围**： 字符串长度为24
+    * name  **参数解释**： 告警规则的名称，如：alarm-test01。 **取值范围**： 字符串长度在 1 到 128 之间。
+    * status  **参数解释**： 告警记录的状态。 **取值范围**： 取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
+    * level  **参数解释**： 告警记录的告警级别。 **取值范围**： 值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
+    * type  **参数解释**： 告警规则类型。 **取值范围**： 枚举值。ALL_INSTANCE为全部资源指标告警，RESOURCE_GROUP为资源分组指标告警，MULTI_INSTANCE为指定资源指标告警，EVENT.SYS为系统事件告警，EVENT.CUSTOM自定义事件告警，DNSHealthCheck为健康检查告警。
+    * actionEnabled  **参数解释**： 是否发送通知 **取值范围**： true：发送通知 false：不发送通知
+    * beginTime  **参数解释**： 产生时间,UTC时间 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间，UTC时间 **取值范围**： 不涉及。
+    * firstAlarmTime  **参数解释**： 第一次告警时间，UTC时间 **取值范围**： 不涉及。
+    * lastAlarmTime  **参数解释**： 最后一次告警时间，UTC时间。 **取值范围**： 不涉及。
+    * alarmRecoveryTime  **参数解释**： 告警恢复时间，UTC时间。 **取值范围**： 不涉及。
     * metric  metric
     * condition  condition
     * additionalInfo  additionalInfo
-    * alarmActions  告警触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值： notification：通知。 autoscaling：弹性伸缩。 notification_list：告警状态发生变化时，被通知对象的列表。
-    * okActions  告警恢复触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：  notification：通知。  notification_list：告警状态发生变化时，被通知对象的列表。
+    * alarmActions  **参数解释**： 告警触发的动作列表。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值： notification：通知。 autoscaling：弹性伸缩。 notification_list：告警状态发生变化时，被通知对象的列表。
+    * okActions  **参数解释**： 告警恢复触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：  notification：通知。  notification_list：告警状态发生变化时，被通知对象的列表。
     * dataPoints  计算出该条告警记录的资源监控数据上报时间和监控数值。
     *
     * @var string[]
@@ -47,40 +47,40 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
             'name' => 'string',
             'status' => 'string',
             'level' => 'int',
-            'type' => '\HuaweiCloud\SDK\Ces\V2\Model\AlarmType',
+            'type' => 'string',
             'actionEnabled' => 'bool',
             'beginTime' => '\DateTime',
             'endTime' => '\DateTime',
             'firstAlarmTime' => '\DateTime',
             'lastAlarmTime' => '\DateTime',
             'alarmRecoveryTime' => '\DateTime',
-            'metric' => '\HuaweiCloud\SDK\Ces\V2\Model\Metric',
-            'condition' => '\HuaweiCloud\SDK\Ces\V2\Model\AlarmCondition',
+            'metric' => '\HuaweiCloud\SDK\Ces\V2\Model\AlarmHistoryItemV2Metric',
+            'condition' => '\HuaweiCloud\SDK\Ces\V2\Model\AlarmHistoryItemV2Condition',
             'additionalInfo' => '\HuaweiCloud\SDK\Ces\V2\Model\AdditionalInfo',
-            'alarmActions' => '\HuaweiCloud\SDK\Ces\V2\Model\Notification[]',
-            'okActions' => '\HuaweiCloud\SDK\Ces\V2\Model\Notification[]',
+            'alarmActions' => '\HuaweiCloud\SDK\Ces\V2\Model\AlarmHistoryItemV2AlarmActions[]',
+            'okActions' => '\HuaweiCloud\SDK\Ces\V2\Model\AlarmHistoryItemV2AlarmActions[]',
             'dataPoints' => '\HuaweiCloud\SDK\Ces\V2\Model\DataPointInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recordId  告警记录ID
-    * alarmId  告警规则的ID，如：al1603131199286dzxpqK3Ez。
-    * name  告警规则的名称，如：alarm-test01。
-    * status  告警记录的状态，取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
-    * level  告警记录的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
-    * type  type
-    * actionEnabled  是否发送通知，值为true或者false。
-    * beginTime  产生时间,UTC时间
-    * endTime  结束时间，UTC时间
-    * firstAlarmTime  第一次告警时间，UTC时间
-    * lastAlarmTime  最后一次告警时间，UTC时间
-    * alarmRecoveryTime  告警恢复时间，UTC时间
+    * recordId  **参数解释**： 告警记录ID。 **取值范围**： 字符串长度为24。
+    * alarmId  **参数解释**： 告警规则的ID，如：al1603131199286dzxpqK3Ez。 **取值范围**： 字符串长度为24
+    * name  **参数解释**： 告警规则的名称，如：alarm-test01。 **取值范围**： 字符串长度在 1 到 128 之间。
+    * status  **参数解释**： 告警记录的状态。 **取值范围**： 取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
+    * level  **参数解释**： 告警记录的告警级别。 **取值范围**： 值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
+    * type  **参数解释**： 告警规则类型。 **取值范围**： 枚举值。ALL_INSTANCE为全部资源指标告警，RESOURCE_GROUP为资源分组指标告警，MULTI_INSTANCE为指定资源指标告警，EVENT.SYS为系统事件告警，EVENT.CUSTOM自定义事件告警，DNSHealthCheck为健康检查告警。
+    * actionEnabled  **参数解释**： 是否发送通知 **取值范围**： true：发送通知 false：不发送通知
+    * beginTime  **参数解释**： 产生时间,UTC时间 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间，UTC时间 **取值范围**： 不涉及。
+    * firstAlarmTime  **参数解释**： 第一次告警时间，UTC时间 **取值范围**： 不涉及。
+    * lastAlarmTime  **参数解释**： 最后一次告警时间，UTC时间。 **取值范围**： 不涉及。
+    * alarmRecoveryTime  **参数解释**： 告警恢复时间，UTC时间。 **取值范围**： 不涉及。
     * metric  metric
     * condition  condition
     * additionalInfo  additionalInfo
-    * alarmActions  告警触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值： notification：通知。 autoscaling：弹性伸缩。 notification_list：告警状态发生变化时，被通知对象的列表。
-    * okActions  告警恢复触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：  notification：通知。  notification_list：告警状态发生变化时，被通知对象的列表。
+    * alarmActions  **参数解释**： 告警触发的动作列表。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值： notification：通知。 autoscaling：弹性伸缩。 notification_list：告警状态发生变化时，被通知对象的列表。
+    * okActions  **参数解释**： 告警恢复触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：  notification：通知。  notification_list：告警状态发生变化时，被通知对象的列表。
     * dataPoints  计算出该条告警记录的资源监控数据上报时间和监控数值。
     *
     * @var string[]
@@ -129,23 +129,23 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recordId  告警记录ID
-    * alarmId  告警规则的ID，如：al1603131199286dzxpqK3Ez。
-    * name  告警规则的名称，如：alarm-test01。
-    * status  告警记录的状态，取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
-    * level  告警记录的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
-    * type  type
-    * actionEnabled  是否发送通知，值为true或者false。
-    * beginTime  产生时间,UTC时间
-    * endTime  结束时间，UTC时间
-    * firstAlarmTime  第一次告警时间，UTC时间
-    * lastAlarmTime  最后一次告警时间，UTC时间
-    * alarmRecoveryTime  告警恢复时间，UTC时间
+    * recordId  **参数解释**： 告警记录ID。 **取值范围**： 字符串长度为24。
+    * alarmId  **参数解释**： 告警规则的ID，如：al1603131199286dzxpqK3Ez。 **取值范围**： 字符串长度为24
+    * name  **参数解释**： 告警规则的名称，如：alarm-test01。 **取值范围**： 字符串长度在 1 到 128 之间。
+    * status  **参数解释**： 告警记录的状态。 **取值范围**： 取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
+    * level  **参数解释**： 告警记录的告警级别。 **取值范围**： 值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
+    * type  **参数解释**： 告警规则类型。 **取值范围**： 枚举值。ALL_INSTANCE为全部资源指标告警，RESOURCE_GROUP为资源分组指标告警，MULTI_INSTANCE为指定资源指标告警，EVENT.SYS为系统事件告警，EVENT.CUSTOM自定义事件告警，DNSHealthCheck为健康检查告警。
+    * actionEnabled  **参数解释**： 是否发送通知 **取值范围**： true：发送通知 false：不发送通知
+    * beginTime  **参数解释**： 产生时间,UTC时间 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间，UTC时间 **取值范围**： 不涉及。
+    * firstAlarmTime  **参数解释**： 第一次告警时间，UTC时间 **取值范围**： 不涉及。
+    * lastAlarmTime  **参数解释**： 最后一次告警时间，UTC时间。 **取值范围**： 不涉及。
+    * alarmRecoveryTime  **参数解释**： 告警恢复时间，UTC时间。 **取值范围**： 不涉及。
     * metric  metric
     * condition  condition
     * additionalInfo  additionalInfo
-    * alarmActions  告警触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值： notification：通知。 autoscaling：弹性伸缩。 notification_list：告警状态发生变化时，被通知对象的列表。
-    * okActions  告警恢复触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：  notification：通知。  notification_list：告警状态发生变化时，被通知对象的列表。
+    * alarmActions  **参数解释**： 告警触发的动作列表。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值： notification：通知。 autoscaling：弹性伸缩。 notification_list：告警状态发生变化时，被通知对象的列表。
+    * okActions  **参数解释**： 告警恢复触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：  notification：通知。  notification_list：告警状态发生变化时，被通知对象的列表。
     * dataPoints  计算出该条告警记录的资源监控数据上报时间和监控数值。
     *
     * @var string[]
@@ -173,23 +173,23 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recordId  告警记录ID
-    * alarmId  告警规则的ID，如：al1603131199286dzxpqK3Ez。
-    * name  告警规则的名称，如：alarm-test01。
-    * status  告警记录的状态，取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
-    * level  告警记录的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
-    * type  type
-    * actionEnabled  是否发送通知，值为true或者false。
-    * beginTime  产生时间,UTC时间
-    * endTime  结束时间，UTC时间
-    * firstAlarmTime  第一次告警时间，UTC时间
-    * lastAlarmTime  最后一次告警时间，UTC时间
-    * alarmRecoveryTime  告警恢复时间，UTC时间
+    * recordId  **参数解释**： 告警记录ID。 **取值范围**： 字符串长度为24。
+    * alarmId  **参数解释**： 告警规则的ID，如：al1603131199286dzxpqK3Ez。 **取值范围**： 字符串长度为24
+    * name  **参数解释**： 告警规则的名称，如：alarm-test01。 **取值范围**： 字符串长度在 1 到 128 之间。
+    * status  **参数解释**： 告警记录的状态。 **取值范围**： 取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
+    * level  **参数解释**： 告警记录的告警级别。 **取值范围**： 值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
+    * type  **参数解释**： 告警规则类型。 **取值范围**： 枚举值。ALL_INSTANCE为全部资源指标告警，RESOURCE_GROUP为资源分组指标告警，MULTI_INSTANCE为指定资源指标告警，EVENT.SYS为系统事件告警，EVENT.CUSTOM自定义事件告警，DNSHealthCheck为健康检查告警。
+    * actionEnabled  **参数解释**： 是否发送通知 **取值范围**： true：发送通知 false：不发送通知
+    * beginTime  **参数解释**： 产生时间,UTC时间 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间，UTC时间 **取值范围**： 不涉及。
+    * firstAlarmTime  **参数解释**： 第一次告警时间，UTC时间 **取值范围**： 不涉及。
+    * lastAlarmTime  **参数解释**： 最后一次告警时间，UTC时间。 **取值范围**： 不涉及。
+    * alarmRecoveryTime  **参数解释**： 告警恢复时间，UTC时间。 **取值范围**： 不涉及。
     * metric  metric
     * condition  condition
     * additionalInfo  additionalInfo
-    * alarmActions  告警触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值： notification：通知。 autoscaling：弹性伸缩。 notification_list：告警状态发生变化时，被通知对象的列表。
-    * okActions  告警恢复触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：  notification：通知。  notification_list：告警状态发生变化时，被通知对象的列表。
+    * alarmActions  **参数解释**： 告警触发的动作列表。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值： notification：通知。 autoscaling：弹性伸缩。 notification_list：告警状态发生变化时，被通知对象的列表。
+    * okActions  **参数解释**： 告警恢复触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：  notification：通知。  notification_list：告警状态发生变化时，被通知对象的列表。
     * dataPoints  计算出该条告警记录的资源监控数据上报时间和监控数值。
     *
     * @var string[]
@@ -217,23 +217,23 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recordId  告警记录ID
-    * alarmId  告警规则的ID，如：al1603131199286dzxpqK3Ez。
-    * name  告警规则的名称，如：alarm-test01。
-    * status  告警记录的状态，取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
-    * level  告警记录的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
-    * type  type
-    * actionEnabled  是否发送通知，值为true或者false。
-    * beginTime  产生时间,UTC时间
-    * endTime  结束时间，UTC时间
-    * firstAlarmTime  第一次告警时间，UTC时间
-    * lastAlarmTime  最后一次告警时间，UTC时间
-    * alarmRecoveryTime  告警恢复时间，UTC时间
+    * recordId  **参数解释**： 告警记录ID。 **取值范围**： 字符串长度为24。
+    * alarmId  **参数解释**： 告警规则的ID，如：al1603131199286dzxpqK3Ez。 **取值范围**： 字符串长度为24
+    * name  **参数解释**： 告警规则的名称，如：alarm-test01。 **取值范围**： 字符串长度在 1 到 128 之间。
+    * status  **参数解释**： 告警记录的状态。 **取值范围**： 取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
+    * level  **参数解释**： 告警记录的告警级别。 **取值范围**： 值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
+    * type  **参数解释**： 告警规则类型。 **取值范围**： 枚举值。ALL_INSTANCE为全部资源指标告警，RESOURCE_GROUP为资源分组指标告警，MULTI_INSTANCE为指定资源指标告警，EVENT.SYS为系统事件告警，EVENT.CUSTOM自定义事件告警，DNSHealthCheck为健康检查告警。
+    * actionEnabled  **参数解释**： 是否发送通知 **取值范围**： true：发送通知 false：不发送通知
+    * beginTime  **参数解释**： 产生时间,UTC时间 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间，UTC时间 **取值范围**： 不涉及。
+    * firstAlarmTime  **参数解释**： 第一次告警时间，UTC时间 **取值范围**： 不涉及。
+    * lastAlarmTime  **参数解释**： 最后一次告警时间，UTC时间。 **取值范围**： 不涉及。
+    * alarmRecoveryTime  **参数解释**： 告警恢复时间，UTC时间。 **取值范围**： 不涉及。
     * metric  metric
     * condition  condition
     * additionalInfo  additionalInfo
-    * alarmActions  告警触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值： notification：通知。 autoscaling：弹性伸缩。 notification_list：告警状态发生变化时，被通知对象的列表。
-    * okActions  告警恢复触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：  notification：通知。  notification_list：告警状态发生变化时，被通知对象的列表。
+    * alarmActions  **参数解释**： 告警触发的动作列表。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值： notification：通知。 autoscaling：弹性伸缩。 notification_list：告警状态发生变化时，被通知对象的列表。
+    * okActions  **参数解释**： 告警恢复触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：  notification：通知。  notification_list：告警状态发生变化时，被通知对象的列表。
     * dataPoints  计算出该条告警记录的资源监控数据上报时间和监控数值。
     *
     * @var string[]
@@ -307,6 +307,12 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     const LEVEL_2 = 2;
     const LEVEL_3 = 3;
     const LEVEL_4 = 4;
+    const TYPE_EVENT_SYS = 'EVENT.SYS';
+    const TYPE_EVENT_CUSTOM = 'EVENT.CUSTOM';
+    const TYPE_DNS_HEALTH_CHECK = 'DNSHealthCheck';
+    const TYPE_RESOURCE_GROUP = 'RESOURCE_GROUP';
+    const TYPE_MULTI_INSTANCE = 'MULTI_INSTANCE';
+    const TYPE_ALL_INSTANCE = 'ALL_INSTANCE';
     
 
     /**
@@ -336,6 +342,23 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
             self::LEVEL_2,
             self::LEVEL_3,
             self::LEVEL_4,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_EVENT_SYS,
+            self::TYPE_EVENT_CUSTOM,
+            self::TYPE_DNS_HEALTH_CHECK,
+            self::TYPE_RESOURCE_GROUP,
+            self::TYPE_MULTI_INSTANCE,
+            self::TYPE_ALL_INSTANCE,
         ];
     }
 
@@ -417,6 +440,17 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
                 );
             }
 
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['type']) && !preg_match("/^(EVENT.SYS|EVENT.CUSTOM|DNSHealthCheck|RESOURCE_GROUP|MULTI_INSTANCE|ALL_INSTANCE)$/", $this->container['type'])) {
+                $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /^(EVENT.SYS|EVENT.CUSTOM|DNSHealthCheck|RESOURCE_GROUP|MULTI_INSTANCE|ALL_INSTANCE)$/.";
+            }
         return $invalidProperties;
     }
 
@@ -433,7 +467,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordId
-    *  告警记录ID
+    *  **参数解释**： 告警记录ID。 **取值范围**： 字符串长度为24。
     *
     * @return string|null
     */
@@ -445,7 +479,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets recordId
     *
-    * @param string|null $recordId 告警记录ID
+    * @param string|null $recordId **参数解释**： 告警记录ID。 **取值范围**： 字符串长度为24。
     *
     * @return $this
     */
@@ -457,7 +491,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmId
-    *  告警规则的ID，如：al1603131199286dzxpqK3Ez。
+    *  **参数解释**： 告警规则的ID，如：al1603131199286dzxpqK3Ez。 **取值范围**： 字符串长度为24
     *
     * @return string|null
     */
@@ -469,7 +503,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets alarmId
     *
-    * @param string|null $alarmId 告警规则的ID，如：al1603131199286dzxpqK3Ez。
+    * @param string|null $alarmId **参数解释**： 告警规则的ID，如：al1603131199286dzxpqK3Ez。 **取值范围**： 字符串长度为24
     *
     * @return $this
     */
@@ -481,7 +515,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  告警规则的名称，如：alarm-test01。
+    *  **参数解释**： 告警规则的名称，如：alarm-test01。 **取值范围**： 字符串长度在 1 到 128 之间。
     *
     * @return string|null
     */
@@ -493,7 +527,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 告警规则的名称，如：alarm-test01。
+    * @param string|null $name **参数解释**： 告警规则的名称，如：alarm-test01。 **取值范围**： 字符串长度在 1 到 128 之间。
     *
     * @return $this
     */
@@ -505,7 +539,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  告警记录的状态，取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
+    *  **参数解释**： 告警记录的状态。 **取值范围**： 取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
     *
     * @return string|null
     */
@@ -517,7 +551,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 告警记录的状态，取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
+    * @param string|null $status **参数解释**： 告警记录的状态。 **取值范围**： 取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
     *
     * @return $this
     */
@@ -529,7 +563,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets level
-    *  告警记录的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
+    *  **参数解释**： 告警记录的告警级别。 **取值范围**： 值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
     *
     * @return int|null
     */
@@ -541,7 +575,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param int|null $level 告警记录的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
+    * @param int|null $level **参数解释**： 告警记录的告警级别。 **取值范围**： 值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
     *
     * @return $this
     */
@@ -553,9 +587,9 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  type
+    *  **参数解释**： 告警规则类型。 **取值范围**： 枚举值。ALL_INSTANCE为全部资源指标告警，RESOURCE_GROUP为资源分组指标告警，MULTI_INSTANCE为指定资源指标告警，EVENT.SYS为系统事件告警，EVENT.CUSTOM自定义事件告警，DNSHealthCheck为健康检查告警。
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\AlarmType|null
+    * @return string|null
     */
     public function getType()
     {
@@ -565,7 +599,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\AlarmType|null $type type
+    * @param string|null $type **参数解释**： 告警规则类型。 **取值范围**： 枚举值。ALL_INSTANCE为全部资源指标告警，RESOURCE_GROUP为资源分组指标告警，MULTI_INSTANCE为指定资源指标告警，EVENT.SYS为系统事件告警，EVENT.CUSTOM自定义事件告警，DNSHealthCheck为健康检查告警。
     *
     * @return $this
     */
@@ -577,7 +611,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets actionEnabled
-    *  是否发送通知，值为true或者false。
+    *  **参数解释**： 是否发送通知 **取值范围**： true：发送通知 false：不发送通知
     *
     * @return bool|null
     */
@@ -589,7 +623,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets actionEnabled
     *
-    * @param bool|null $actionEnabled 是否发送通知，值为true或者false。
+    * @param bool|null $actionEnabled **参数解释**： 是否发送通知 **取值范围**： true：发送通知 false：不发送通知
     *
     * @return $this
     */
@@ -601,7 +635,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
-    *  产生时间,UTC时间
+    *  **参数解释**： 产生时间,UTC时间 **取值范围**： 不涉及。
     *
     * @return \DateTime|null
     */
@@ -613,7 +647,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets beginTime
     *
-    * @param \DateTime|null $beginTime 产生时间,UTC时间
+    * @param \DateTime|null $beginTime **参数解释**： 产生时间,UTC时间 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -625,7 +659,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间，UTC时间
+    *  **参数解释**： 结束时间，UTC时间 **取值范围**： 不涉及。
     *
     * @return \DateTime|null
     */
@@ -637,7 +671,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param \DateTime|null $endTime 结束时间，UTC时间
+    * @param \DateTime|null $endTime **参数解释**： 结束时间，UTC时间 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -649,7 +683,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets firstAlarmTime
-    *  第一次告警时间，UTC时间
+    *  **参数解释**： 第一次告警时间，UTC时间 **取值范围**： 不涉及。
     *
     * @return \DateTime|null
     */
@@ -661,7 +695,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets firstAlarmTime
     *
-    * @param \DateTime|null $firstAlarmTime 第一次告警时间，UTC时间
+    * @param \DateTime|null $firstAlarmTime **参数解释**： 第一次告警时间，UTC时间 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -673,7 +707,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastAlarmTime
-    *  最后一次告警时间，UTC时间
+    *  **参数解释**： 最后一次告警时间，UTC时间。 **取值范围**： 不涉及。
     *
     * @return \DateTime|null
     */
@@ -685,7 +719,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets lastAlarmTime
     *
-    * @param \DateTime|null $lastAlarmTime 最后一次告警时间，UTC时间
+    * @param \DateTime|null $lastAlarmTime **参数解释**： 最后一次告警时间，UTC时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -697,7 +731,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmRecoveryTime
-    *  告警恢复时间，UTC时间
+    *  **参数解释**： 告警恢复时间，UTC时间。 **取值范围**： 不涉及。
     *
     * @return \DateTime|null
     */
@@ -709,7 +743,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets alarmRecoveryTime
     *
-    * @param \DateTime|null $alarmRecoveryTime 告警恢复时间，UTC时间
+    * @param \DateTime|null $alarmRecoveryTime **参数解释**： 告警恢复时间，UTC时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -723,7 +757,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     * Gets metric
     *  metric
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\Metric|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\AlarmHistoryItemV2Metric|null
     */
     public function getMetric()
     {
@@ -733,7 +767,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets metric
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Metric|null $metric metric
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\AlarmHistoryItemV2Metric|null $metric metric
     *
     * @return $this
     */
@@ -747,7 +781,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     * Gets condition
     *  condition
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\AlarmCondition|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\AlarmHistoryItemV2Condition|null
     */
     public function getCondition()
     {
@@ -757,7 +791,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets condition
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\AlarmCondition|null $condition condition
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\AlarmHistoryItemV2Condition|null $condition condition
     *
     * @return $this
     */
@@ -793,9 +827,9 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmActions
-    *  告警触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值： notification：通知。 autoscaling：弹性伸缩。 notification_list：告警状态发生变化时，被通知对象的列表。
+    *  **参数解释**： 告警触发的动作列表。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值： notification：通知。 autoscaling：弹性伸缩。 notification_list：告警状态发生变化时，被通知对象的列表。
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\AlarmHistoryItemV2AlarmActions[]|null
     */
     public function getAlarmActions()
     {
@@ -805,7 +839,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets alarmActions
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null $alarmActions 告警触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值： notification：通知。 autoscaling：弹性伸缩。 notification_list：告警状态发生变化时，被通知对象的列表。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\AlarmHistoryItemV2AlarmActions[]|null $alarmActions **参数解释**： 告警触发的动作列表。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值： notification：通知。 autoscaling：弹性伸缩。 notification_list：告警状态发生变化时，被通知对象的列表。
     *
     * @return $this
     */
@@ -817,9 +851,9 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets okActions
-    *  告警恢复触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：  notification：通知。  notification_list：告警状态发生变化时，被通知对象的列表。
+    *  **参数解释**： 告警恢复触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：  notification：通知。  notification_list：告警状态发生变化时，被通知对象的列表。
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\AlarmHistoryItemV2AlarmActions[]|null
     */
     public function getOkActions()
     {
@@ -829,7 +863,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets okActions
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null $okActions 告警恢复触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：  notification：通知。  notification_list：告警状态发生变化时，被通知对象的列表。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\AlarmHistoryItemV2AlarmActions[]|null $okActions **参数解释**： 告警恢复触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：  notification：通知。  notification_list：告警状态发生变化时，被通知对象的列表。
     *
     * @return $this
     */

@@ -20,11 +20,11 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。
-    * dimName  维度名称，枚举类型，类型有：   mount_point：挂载点,   disk：磁盘,   proc：进程,   gpu：显卡,   raid: RAID控制器,
-    * dimValue  维度值，32位字符串，如：2e84018fc8b4484b94e89aae212fe615。
-    * offset  分页偏移量
-    * limit  分页大小
+    * instanceId  **参数描述**： 资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制**： 不涉及。 **取值范围**： 字符串长度为36。 **默认取值**： 不涉及。
+    * dimName  **参数描述**： 维度名称。 **约束限制**： 不涉及。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。 **默认取值**： 不涉及。
+    * dimValue  **参数描述**： 维度值。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
+    * offset  **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为2147483647。 **默认取值**： 0
+    * limit  **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为1000。 **默认取值**： 1000
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。
-    * dimName  维度名称，枚举类型，类型有：   mount_point：挂载点,   disk：磁盘,   proc：进程,   gpu：显卡,   raid: RAID控制器,
-    * dimValue  维度值，32位字符串，如：2e84018fc8b4484b94e89aae212fe615。
-    * offset  分页偏移量
-    * limit  分页大小
+    * instanceId  **参数描述**： 资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制**： 不涉及。 **取值范围**： 字符串长度为36。 **默认取值**： 不涉及。
+    * dimName  **参数描述**： 维度名称。 **约束限制**： 不涉及。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。 **默认取值**： 不涉及。
+    * dimValue  **参数描述**： 维度值。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
+    * offset  **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为2147483647。 **默认取值**： 0
+    * limit  **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为1000。 **默认取值**： 1000
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。
-    * dimName  维度名称，枚举类型，类型有：   mount_point：挂载点,   disk：磁盘,   proc：进程,   gpu：显卡,   raid: RAID控制器,
-    * dimValue  维度值，32位字符串，如：2e84018fc8b4484b94e89aae212fe615。
-    * offset  分页偏移量
-    * limit  分页大小
+    * instanceId  **参数描述**： 资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制**： 不涉及。 **取值范围**： 字符串长度为36。 **默认取值**： 不涉及。
+    * dimName  **参数描述**： 维度名称。 **约束限制**： 不涉及。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。 **默认取值**： 不涉及。
+    * dimValue  **参数描述**： 维度值。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
+    * offset  **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为2147483647。 **默认取值**： 0
+    * limit  **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为1000。 **默认取值**： 1000
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。
-    * dimName  维度名称，枚举类型，类型有：   mount_point：挂载点,   disk：磁盘,   proc：进程,   gpu：显卡,   raid: RAID控制器,
-    * dimValue  维度值，32位字符串，如：2e84018fc8b4484b94e89aae212fe615。
-    * offset  分页偏移量
-    * limit  分页大小
+    * instanceId  **参数描述**： 资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制**： 不涉及。 **取值范围**： 字符串长度为36。 **默认取值**： 不涉及。
+    * dimName  **参数描述**： 维度名称。 **约束限制**： 不涉及。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。 **默认取值**： 不涉及。
+    * dimValue  **参数描述**： 维度值。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
+    * offset  **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为2147483647。 **默认取值**： 0
+    * limit  **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为1000。 **默认取值**： 1000
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。
-    * dimName  维度名称，枚举类型，类型有：   mount_point：挂载点,   disk：磁盘,   proc：进程,   gpu：显卡,   raid: RAID控制器,
-    * dimValue  维度值，32位字符串，如：2e84018fc8b4484b94e89aae212fe615。
-    * offset  分页偏移量
-    * limit  分页大小
+    * instanceId  **参数描述**： 资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制**： 不涉及。 **取值范围**： 字符串长度为36。 **默认取值**： 不涉及。
+    * dimName  **参数描述**： 维度名称。 **约束限制**： 不涉及。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。 **默认取值**： 不涉及。
+    * dimValue  **参数描述**： 维度值。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
+    * offset  **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为2147483647。 **默认取值**： 0
+    * limit  **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为1000。 **默认取值**： 1000
     *
     * @var string[]
     */
@@ -232,6 +232,9 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['instanceId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 36.";
             }
+            if (!preg_match("/^([a-z]|[A-Z]|[0-9]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\\.|\/|#|\\(|\\))*$/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\\.|\/|#|\\(|\\))*$/.";
+            }
         if ($this->container['dimName'] === null) {
             $invalidProperties[] = "'dimName' can't be null";
         }
@@ -248,6 +251,9 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['dimValue']) && (mb_strlen($this->container['dimValue']) < 32)) {
                 $invalidProperties[] = "invalid value for 'dimValue', the character length must be bigger than or equal to 32.";
+            }
+            if (!is_null($this->container['dimValue']) && !preg_match("/([a-f\\d]{32}|[A-F\\d]{32})/", $this->container['dimValue'])) {
+                $invalidProperties[] = "invalid value for 'dimValue', must be conform to the pattern /([a-f\\d]{32}|[A-F\\d]{32})/.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
@@ -277,7 +283,7 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。
+    *  **参数描述**： 资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制**： 不涉及。 **取值范围**： 字符串长度为36。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -289,7 +295,7 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。
+    * @param string $instanceId **参数描述**： 资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制**： 不涉及。 **取值范围**： 字符串长度为36。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -301,7 +307,7 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimName
-    *  维度名称，枚举类型，类型有：   mount_point：挂载点,   disk：磁盘,   proc：进程,   gpu：显卡,   raid: RAID控制器,
+    *  **参数描述**： 维度名称。 **约束限制**： 不涉及。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -313,7 +319,7 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dimName
     *
-    * @param string $dimName 维度名称，枚举类型，类型有：   mount_point：挂载点,   disk：磁盘,   proc：进程,   gpu：显卡,   raid: RAID控制器,
+    * @param string $dimName **参数描述**： 维度名称。 **约束限制**： 不涉及。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -325,7 +331,7 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimValue
-    *  维度值，32位字符串，如：2e84018fc8b4484b94e89aae212fe615。
+    *  **参数描述**： 维度值。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -337,7 +343,7 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dimValue
     *
-    * @param string|null $dimValue 维度值，32位字符串，如：2e84018fc8b4484b94e89aae212fe615。
+    * @param string|null $dimValue **参数描述**： 维度值。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -349,7 +355,7 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  分页偏移量
+    *  **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为2147483647。 **默认取值**： 0
     *
     * @return int|null
     */
@@ -361,7 +367,7 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 分页偏移量
+    * @param int|null $offset **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为2147483647。 **默认取值**： 0
     *
     * @return $this
     */
@@ -373,7 +379,7 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  分页大小
+    *  **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为1000。 **默认取值**： 1000
     *
     * @return int|null
     */
@@ -385,7 +391,7 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 分页大小
+    * @param int|null $limit **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为1000。 **默认取值**： 1000
     *
     * @return $this
     */

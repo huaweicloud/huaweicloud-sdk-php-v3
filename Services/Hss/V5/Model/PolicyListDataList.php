@@ -22,7 +22,7 @@ class PolicyListDataList implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * policyName  策略名称
     * policyId  策略ID
-    * hostNum  总数
+    * hostNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * isDefault  是否默认
     * portList  端口列表
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Winodws.
@@ -44,7 +44,7 @@ class PolicyListDataList implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * policyName  策略名称
     * policyId  策略ID
-    * hostNum  总数
+    * hostNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * isDefault  是否默认
     * portList  端口列表
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Winodws.
@@ -87,7 +87,7 @@ class PolicyListDataList implements ModelInterface, ArrayAccess
     * and the value is the original name
     * policyName  策略名称
     * policyId  策略ID
-    * hostNum  总数
+    * hostNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * isDefault  是否默认
     * portList  端口列表
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Winodws.
@@ -109,7 +109,7 @@ class PolicyListDataList implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * policyName  策略名称
     * policyId  策略ID
-    * hostNum  总数
+    * hostNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * isDefault  是否默认
     * portList  端口列表
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Winodws.
@@ -131,7 +131,7 @@ class PolicyListDataList implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * policyName  策略名称
     * policyId  策略ID
-    * hostNum  总数
+    * hostNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * isDefault  是否默认
     * portList  端口列表
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Winodws.
@@ -318,7 +318,7 @@ class PolicyListDataList implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostNum
-    *  总数
+    *  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -330,7 +330,7 @@ class PolicyListDataList implements ModelInterface, ArrayAccess
     /**
     * Sets hostNum
     *
-    * @param int|null $hostNum 总数
+    * @param int|null $hostNum **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */

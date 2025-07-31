@@ -194,26 +194,26 @@ class HierarchicalValue implements ModelInterface, ArrayAccess
             if (!is_null($this->container['critical']) && ($this->container['critical'] > 1.7976931348623156E+108)) {
                 $invalidProperties[] = "invalid value for 'critical', must be smaller than or equal to 1.7976931348623156E+108.";
             }
-            if (!is_null($this->container['critical']) && ($this->container['critical'] < 0)) {
-                $invalidProperties[] = "invalid value for 'critical', must be bigger than or equal to 0.";
+            if (!is_null($this->container['critical']) && ($this->container['critical'] < -1.7976931348623156E+108)) {
+                $invalidProperties[] = "invalid value for 'critical', must be bigger than or equal to -1.7976931348623156E+108.";
             }
             if (!is_null($this->container['major']) && ($this->container['major'] > 1.7976931348623156E+108)) {
                 $invalidProperties[] = "invalid value for 'major', must be smaller than or equal to 1.7976931348623156E+108.";
             }
-            if (!is_null($this->container['major']) && ($this->container['major'] < 0)) {
-                $invalidProperties[] = "invalid value for 'major', must be bigger than or equal to 0.";
+            if (!is_null($this->container['major']) && ($this->container['major'] < -1.7976931348623156E+108)) {
+                $invalidProperties[] = "invalid value for 'major', must be bigger than or equal to -1.7976931348623156E+108.";
             }
             if (!is_null($this->container['minor']) && ($this->container['minor'] > 1.7976931348623156E+108)) {
                 $invalidProperties[] = "invalid value for 'minor', must be smaller than or equal to 1.7976931348623156E+108.";
             }
-            if (!is_null($this->container['minor']) && ($this->container['minor'] < 0)) {
-                $invalidProperties[] = "invalid value for 'minor', must be bigger than or equal to 0.";
+            if (!is_null($this->container['minor']) && ($this->container['minor'] < -1.7976931348623156E+108)) {
+                $invalidProperties[] = "invalid value for 'minor', must be bigger than or equal to -1.7976931348623156E+108.";
             }
             if (!is_null($this->container['info']) && ($this->container['info'] > 1.7976931348623156E+108)) {
                 $invalidProperties[] = "invalid value for 'info', must be smaller than or equal to 1.7976931348623156E+108.";
             }
-            if (!is_null($this->container['info']) && ($this->container['info'] < 0)) {
-                $invalidProperties[] = "invalid value for 'info', must be bigger than or equal to 0.";
+            if (!is_null($this->container['info']) && ($this->container['info'] < -1.7976931348623156E+108)) {
+                $invalidProperties[] = "invalid value for 'info', must be bigger than or equal to -1.7976931348623156E+108.";
             }
         return $invalidProperties;
     }

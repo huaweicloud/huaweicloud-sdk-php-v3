@@ -20,11 +20,11 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * userName  弱口令账号名称
-    * serviceType  账号类型，包含如下:   - system   - mysql   - redis
-    * duration  弱口令使用时长，单位天
-    * desensitizedWeakPasswords  脱敏弱口令
-    * suggestion  修改建议
+    * userName  **参数解释**: 弱口令账号名称 **取值范围**: 不涉及
+    * serviceType  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql  : mysql账号 - redis  : redis账号
+    * duration  **参数解释**: 弱口令使用时长，单位天 **取值范围**: 不涉及
+    * desensitizedWeakPasswords  **参数解释**: 脱敏弱口令 **取值范围**: 不涉及
+    * suggestion  **参数解释**: 修改建议 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * userName  弱口令账号名称
-    * serviceType  账号类型，包含如下:   - system   - mysql   - redis
-    * duration  弱口令使用时长，单位天
-    * desensitizedWeakPasswords  脱敏弱口令
-    * suggestion  修改建议
+    * userName  **参数解释**: 弱口令账号名称 **取值范围**: 不涉及
+    * serviceType  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql  : mysql账号 - redis  : redis账号
+    * duration  **参数解释**: 弱口令使用时长，单位天 **取值范围**: 不涉及
+    * desensitizedWeakPasswords  **参数解释**: 脱敏弱口令 **取值范围**: 不涉及
+    * suggestion  **参数解释**: 修改建议 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * userName  弱口令账号名称
-    * serviceType  账号类型，包含如下:   - system   - mysql   - redis
-    * duration  弱口令使用时长，单位天
-    * desensitizedWeakPasswords  脱敏弱口令
-    * suggestion  修改建议
+    * userName  **参数解释**: 弱口令账号名称 **取值范围**: 不涉及
+    * serviceType  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql  : mysql账号 - redis  : redis账号
+    * duration  **参数解释**: 弱口令使用时长，单位天 **取值范围**: 不涉及
+    * desensitizedWeakPasswords  **参数解释**: 脱敏弱口令 **取值范围**: 不涉及
+    * suggestion  **参数解释**: 修改建议 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * userName  弱口令账号名称
-    * serviceType  账号类型，包含如下:   - system   - mysql   - redis
-    * duration  弱口令使用时长，单位天
-    * desensitizedWeakPasswords  脱敏弱口令
-    * suggestion  修改建议
+    * userName  **参数解释**: 弱口令账号名称 **取值范围**: 不涉及
+    * serviceType  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql  : mysql账号 - redis  : redis账号
+    * duration  **参数解释**: 弱口令使用时长，单位天 **取值范围**: 不涉及
+    * desensitizedWeakPasswords  **参数解释**: 脱敏弱口令 **取值范围**: 不涉及
+    * suggestion  **参数解释**: 修改建议 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * userName  弱口令账号名称
-    * serviceType  账号类型，包含如下:   - system   - mysql   - redis
-    * duration  弱口令使用时长，单位天
-    * desensitizedWeakPasswords  脱敏弱口令
-    * suggestion  修改建议
+    * userName  **参数解释**: 弱口令账号名称 **取值范围**: 不涉及
+    * serviceType  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql  : mysql账号 - redis  : redis账号
+    * duration  **参数解释**: 弱口令使用时长，单位天 **取值范围**: 不涉及
+    * desensitizedWeakPasswords  **参数解释**: 脱敏弱口令 **取值范围**: 不涉及
+    * suggestion  **参数解释**: 修改建议 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -248,7 +248,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  弱口令账号名称
+    *  **参数解释**: 弱口令账号名称 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -260,7 +260,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 弱口令账号名称
+    * @param string|null $userName **参数解释**: 弱口令账号名称 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -272,7 +272,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
-    *  账号类型，包含如下:   - system   - mysql   - redis
+    *  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql  : mysql账号 - redis  : redis账号
     *
     * @return string|null
     */
@@ -284,7 +284,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param string|null $serviceType 账号类型，包含如下:   - system   - mysql   - redis
+    * @param string|null $serviceType **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql  : mysql账号 - redis  : redis账号
     *
     * @return $this
     */
@@ -296,7 +296,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
-    *  弱口令使用时长，单位天
+    *  **参数解释**: 弱口令使用时长，单位天 **取值范围**: 不涉及
     *
     * @return int|null
     */
@@ -308,7 +308,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param int|null $duration 弱口令使用时长，单位天
+    * @param int|null $duration **参数解释**: 弱口令使用时长，单位天 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -320,7 +320,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets desensitizedWeakPasswords
-    *  脱敏弱口令
+    *  **参数解释**: 脱敏弱口令 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -332,7 +332,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets desensitizedWeakPasswords
     *
-    * @param string|null $desensitizedWeakPasswords 脱敏弱口令
+    * @param string|null $desensitizedWeakPasswords **参数解释**: 脱敏弱口令 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -344,7 +344,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets suggestion
-    *  修改建议
+    *  **参数解释**: 修改建议 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -356,7 +356,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets suggestion
     *
-    * @param string|null $suggestion 修改建议
+    * @param string|null $suggestion **参数解释**: 修改建议 **取值范围**: 不涉及
     *
     * @return $this
     */

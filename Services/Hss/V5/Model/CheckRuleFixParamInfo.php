@@ -20,11 +20,11 @@ class CheckRuleFixParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleParamId  检查项参数ID
-    * ruleDesc  检查项参数描述
-    * defaultValue  检查项参数默认值
-    * rangeMin  检查项参数可取最小值
-    * rangeMax  检查项参数可取最大值
+    * ruleParamId  **参数解释**: 检查项参数ID **取值范围**: 不涉及
+    * ruleDesc  **参数解释**: 检查项参数描述 **取值范围**: 不涉及
+    * defaultValue  **参数解释**: 检查项参数默认值 **取值范围**: 不涉及
+    * rangeMin  **参数解释**: 检查项参数可取最小值 **取值范围**: 不涉及
+    * rangeMax  **参数解释**: 检查项参数可取最大值 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class CheckRuleFixParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleParamId  检查项参数ID
-    * ruleDesc  检查项参数描述
-    * defaultValue  检查项参数默认值
-    * rangeMin  检查项参数可取最小值
-    * rangeMax  检查项参数可取最大值
+    * ruleParamId  **参数解释**: 检查项参数ID **取值范围**: 不涉及
+    * ruleDesc  **参数解释**: 检查项参数描述 **取值范围**: 不涉及
+    * defaultValue  **参数解释**: 检查项参数默认值 **取值范围**: 不涉及
+    * rangeMin  **参数解释**: 检查项参数可取最小值 **取值范围**: 不涉及
+    * rangeMax  **参数解释**: 检查项参数可取最大值 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class CheckRuleFixParamInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleParamId  检查项参数ID
-    * ruleDesc  检查项参数描述
-    * defaultValue  检查项参数默认值
-    * rangeMin  检查项参数可取最小值
-    * rangeMax  检查项参数可取最大值
+    * ruleParamId  **参数解释**: 检查项参数ID **取值范围**: 不涉及
+    * ruleDesc  **参数解释**: 检查项参数描述 **取值范围**: 不涉及
+    * defaultValue  **参数解释**: 检查项参数默认值 **取值范围**: 不涉及
+    * rangeMin  **参数解释**: 检查项参数可取最小值 **取值范围**: 不涉及
+    * rangeMax  **参数解释**: 检查项参数可取最大值 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class CheckRuleFixParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleParamId  检查项参数ID
-    * ruleDesc  检查项参数描述
-    * defaultValue  检查项参数默认值
-    * rangeMin  检查项参数可取最小值
-    * rangeMax  检查项参数可取最大值
+    * ruleParamId  **参数解释**: 检查项参数ID **取值范围**: 不涉及
+    * ruleDesc  **参数解释**: 检查项参数描述 **取值范围**: 不涉及
+    * defaultValue  **参数解释**: 检查项参数默认值 **取值范围**: 不涉及
+    * rangeMin  **参数解释**: 检查项参数可取最小值 **取值范围**: 不涉及
+    * rangeMax  **参数解释**: 检查项参数可取最大值 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class CheckRuleFixParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleParamId  检查项参数ID
-    * ruleDesc  检查项参数描述
-    * defaultValue  检查项参数默认值
-    * rangeMin  检查项参数可取最小值
-    * rangeMax  检查项参数可取最大值
+    * ruleParamId  **参数解释**: 检查项参数ID **取值范围**: 不涉及
+    * ruleDesc  **参数解释**: 检查项参数描述 **取值范围**: 不涉及
+    * defaultValue  **参数解释**: 检查项参数默认值 **取值范围**: 不涉及
+    * rangeMin  **参数解释**: 检查项参数可取最小值 **取值范围**: 不涉及
+    * rangeMax  **参数解释**: 检查项参数可取最大值 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -248,7 +248,7 @@ class CheckRuleFixParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleParamId
-    *  检查项参数ID
+    *  **参数解释**: 检查项参数ID **取值范围**: 不涉及
     *
     * @return int|null
     */
@@ -260,7 +260,7 @@ class CheckRuleFixParamInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ruleParamId
     *
-    * @param int|null $ruleParamId 检查项参数ID
+    * @param int|null $ruleParamId **参数解释**: 检查项参数ID **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -272,7 +272,7 @@ class CheckRuleFixParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleDesc
-    *  检查项参数描述
+    *  **参数解释**: 检查项参数描述 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -284,7 +284,7 @@ class CheckRuleFixParamInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ruleDesc
     *
-    * @param string|null $ruleDesc 检查项参数描述
+    * @param string|null $ruleDesc **参数解释**: 检查项参数描述 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -296,7 +296,7 @@ class CheckRuleFixParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultValue
-    *  检查项参数默认值
+    *  **参数解释**: 检查项参数默认值 **取值范围**: 不涉及
     *
     * @return int|null
     */
@@ -308,7 +308,7 @@ class CheckRuleFixParamInfo implements ModelInterface, ArrayAccess
     /**
     * Sets defaultValue
     *
-    * @param int|null $defaultValue 检查项参数默认值
+    * @param int|null $defaultValue **参数解释**: 检查项参数默认值 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -320,7 +320,7 @@ class CheckRuleFixParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets rangeMin
-    *  检查项参数可取最小值
+    *  **参数解释**: 检查项参数可取最小值 **取值范围**: 不涉及
     *
     * @return int|null
     */
@@ -332,7 +332,7 @@ class CheckRuleFixParamInfo implements ModelInterface, ArrayAccess
     /**
     * Sets rangeMin
     *
-    * @param int|null $rangeMin 检查项参数可取最小值
+    * @param int|null $rangeMin **参数解释**: 检查项参数可取最小值 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -344,7 +344,7 @@ class CheckRuleFixParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets rangeMax
-    *  检查项参数可取最大值
+    *  **参数解释**: 检查项参数可取最大值 **取值范围**: 不涉及
     *
     * @return int|null
     */
@@ -356,7 +356,7 @@ class CheckRuleFixParamInfo implements ModelInterface, ArrayAccess
     /**
     * Sets rangeMax
     *
-    * @param int|null $rangeMax 检查项参数可取最大值
+    * @param int|null $rangeMax **参数解释**: 检查项参数可取最大值 **取值范围**: 不涉及
     *
     * @return $this
     */

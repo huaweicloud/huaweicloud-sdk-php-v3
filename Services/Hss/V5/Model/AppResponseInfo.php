@@ -20,16 +20,16 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentId  HSS的Agent ID
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * appName  软件名称
-    * version  版本号
-    * updateTime  更新时间，最近一次更新的时间，用毫秒表示
-    * recentScanTime  最近扫描时间，用毫秒表示
-    * containerId  容器id
-    * containerName  容器名称
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
+    * version  **参数解释**: 版本号 **取值范围**: 字符长度1-128位
+    * updateTime  **参数解释**: 更新时间，最近一次更新的时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
+    * recentScanTime  **参数解释**: 最近扫描时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
+    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentId  HSS的Agent ID
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * appName  软件名称
-    * version  版本号
-    * updateTime  更新时间，最近一次更新的时间，用毫秒表示
-    * recentScanTime  最近扫描时间，用毫秒表示
-    * containerId  容器id
-    * containerName  容器名称
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
+    * version  **参数解释**: 版本号 **取值范围**: 字符长度1-128位
+    * updateTime  **参数解释**: 更新时间，最近一次更新的时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
+    * recentScanTime  **参数解释**: 最近扫描时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
+    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentId  HSS的Agent ID
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * appName  软件名称
-    * version  版本号
-    * updateTime  更新时间，最近一次更新的时间，用毫秒表示
-    * recentScanTime  最近扫描时间，用毫秒表示
-    * containerId  容器id
-    * containerName  容器名称
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
+    * version  **参数解释**: 版本号 **取值范围**: 字符长度1-128位
+    * updateTime  **参数解释**: 更新时间，最近一次更新的时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
+    * recentScanTime  **参数解释**: 最近扫描时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
+    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentId  HSS的Agent ID
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * appName  软件名称
-    * version  版本号
-    * updateTime  更新时间，最近一次更新的时间，用毫秒表示
-    * recentScanTime  最近扫描时间，用毫秒表示
-    * containerId  容器id
-    * containerName  容器名称
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
+    * version  **参数解释**: 版本号 **取值范围**: 字符长度1-128位
+    * updateTime  **参数解释**: 更新时间，最近一次更新的时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
+    * recentScanTime  **参数解释**: 最近扫描时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
+    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentId  HSS的Agent ID
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * appName  软件名称
-    * version  版本号
-    * updateTime  更新时间，最近一次更新的时间，用毫秒表示
-    * recentScanTime  最近扫描时间，用毫秒表示
-    * containerId  容器id
-    * containerName  容器名称
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
+    * version  **参数解释**: 版本号 **取值范围**: 字符长度1-128位
+    * updateTime  **参数解释**: 更新时间，最近一次更新的时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
+    * recentScanTime  **参数解释**: 最近扫描时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
+    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -257,17 +257,17 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) > 128)) {
-                $invalidProperties[] = "invalid value for 'agentId', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['agentId']) && !preg_match("/^.*$/", $this->container['agentId'])) {
+                $invalidProperties[] = "invalid value for 'agentId', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'agentId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 128)) {
-                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostId']) && !preg_match("/^.*$/", $this->container['hostId'])) {
+                $invalidProperties[] = "invalid value for 'hostId', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
@@ -275,17 +275,23 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) > 256)) {
-                $invalidProperties[] = "invalid value for 'hostIp', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['hostName']) && !preg_match("/^.*$/", $this->container['hostName'])) {
+                $invalidProperties[] = "invalid value for 'hostName', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) > 128)) {
+                $invalidProperties[] = "invalid value for 'hostIp', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostIp', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['appName']) && (mb_strlen($this->container['appName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'appName', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['appName']) && (mb_strlen($this->container['appName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'appName', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['appName']) && (mb_strlen($this->container['appName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'appName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['appName']) && !preg_match("/^.*$/", $this->container['appName'])) {
+                $invalidProperties[] = "invalid value for 'appName', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) > 128)) {
                 $invalidProperties[] = "invalid value for 'version', the character length must be smaller than or equal to 128.";
@@ -311,11 +317,8 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'containerId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'containerName', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'containerName', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['containerName']) && !preg_match("/^.*$/", $this->container['containerName'])) {
+                $invalidProperties[] = "invalid value for 'containerName', must be conform to the pattern /^.*$/.";
             }
         return $invalidProperties;
     }
@@ -333,7 +336,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  HSS的Agent ID
+    *  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -345,7 +348,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId HSS的Agent ID
+    * @param string|null $agentId **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -357,7 +360,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机id
+    *  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return string|null
     */
@@ -369,7 +372,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机id
+    * @param string|null $hostId **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -381,7 +384,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -393,7 +396,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -405,7 +408,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  服务器ip
+    *  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -417,7 +420,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 服务器ip
+    * @param string|null $hostIp **参数解释**: 主机IP **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -429,7 +432,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets appName
-    *  软件名称
+    *  **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -441,7 +444,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets appName
     *
-    * @param string|null $appName 软件名称
+    * @param string|null $appName **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -453,7 +456,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  版本号
+    *  **参数解释**: 版本号 **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -465,7 +468,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 版本号
+    * @param string|null $version **参数解释**: 版本号 **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -477,7 +480,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间，最近一次更新的时间，用毫秒表示
+    *  **参数解释**: 更新时间，最近一次更新的时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -489,7 +492,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 更新时间，最近一次更新的时间，用毫秒表示
+    * @param int|null $updateTime **参数解释**: 更新时间，最近一次更新的时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -501,7 +504,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets recentScanTime
-    *  最近扫描时间，用毫秒表示
+    *  **参数解释**: 最近扫描时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -513,7 +516,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets recentScanTime
     *
-    * @param int|null $recentScanTime 最近扫描时间，用毫秒表示
+    * @param int|null $recentScanTime **参数解释**: 最近扫描时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -525,7 +528,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerId
-    *  容器id
+    *  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -537,7 +540,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerId
     *
-    * @param string|null $containerId 容器id
+    * @param string|null $containerId **参数解释**: 容器ID **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -549,7 +552,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerName
-    *  容器名称
+    *  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -561,7 +564,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerName
     *
-    * @param string|null $containerName 容器名称
+    * @param string|null $containerName **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */

@@ -34,7 +34,7 @@ class GeneralTableWordsBlockList implements ModelInterface, ArrayAccess
             'words' => 'string',
             'confidence' => 'float',
             'location' => 'int[][]',
-            'wordsList' => '\HuaweiCloud\SDK\Ocr\V1\Model\WordsListIem[]',
+            'wordsList' => '\HuaweiCloud\SDK\Ocr\V1\Model\WordsListItem[]',
             'rows' => 'int[]',
             'columns' => 'int[]',
             'cellLocation' => 'int[][]'
@@ -314,7 +314,7 @@ class GeneralTableWordsBlockList implements ModelInterface, ArrayAccess
     * Gets wordsList
     *  单元格内文字段列表。输出顺序从左到右，从上到下。仅当入参\"return_text_location\"为true时存在。
     *
-    * @return \HuaweiCloud\SDK\Ocr\V1\Model\WordsListIem[]|null
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\WordsListItem[]|null
     */
     public function getWordsList()
     {
@@ -324,7 +324,7 @@ class GeneralTableWordsBlockList implements ModelInterface, ArrayAccess
     /**
     * Sets wordsList
     *
-    * @param \HuaweiCloud\SDK\Ocr\V1\Model\WordsListIem[]|null $wordsList 单元格内文字段列表。输出顺序从左到右，从上到下。仅当入参\"return_text_location\"为true时存在。
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\WordsListItem[]|null $wordsList 单元格内文字段列表。输出顺序从左到右，从上到下。仅当入参\"return_text_location\"为true时存在。
     *
     * @return $this
     */

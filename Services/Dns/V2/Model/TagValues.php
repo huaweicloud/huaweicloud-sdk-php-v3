@@ -20,8 +20,8 @@ class TagValues implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键。最大长度36个unicode字符。 key不能为空。(搜索时不对此参数做校验)
-    * values  值列表。每个值最大长度43个unicode字符。&ast;为系统保留字符。如果里面的value是以&ast;开头时，表示按照&ast;后面的值全模糊匹配。如果values缺失，则表示匹配任意值。value之间为或的关系。
+    * key  键。最大长度128个unicode字符。 key不能为空。(搜索时不对此参数做校验)
+    * values  值列表。每个值最大长度255个unicode字符。&ast;为系统保留字符。如果里面的value是以&ast;开头时，表示按照&ast;后面的值全模糊匹配。如果values缺失，则表示匹配任意值。value之间为或的关系。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class TagValues implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键。最大长度36个unicode字符。 key不能为空。(搜索时不对此参数做校验)
-    * values  值列表。每个值最大长度43个unicode字符。&ast;为系统保留字符。如果里面的value是以&ast;开头时，表示按照&ast;后面的值全模糊匹配。如果values缺失，则表示匹配任意值。value之间为或的关系。
+    * key  键。最大长度128个unicode字符。 key不能为空。(搜索时不对此参数做校验)
+    * values  值列表。每个值最大长度255个unicode字符。&ast;为系统保留字符。如果里面的value是以&ast;开头时，表示按照&ast;后面的值全模糊匹配。如果values缺失，则表示匹配任意值。value之间为或的关系。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class TagValues implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键。最大长度36个unicode字符。 key不能为空。(搜索时不对此参数做校验)
-    * values  值列表。每个值最大长度43个unicode字符。&ast;为系统保留字符。如果里面的value是以&ast;开头时，表示按照&ast;后面的值全模糊匹配。如果values缺失，则表示匹配任意值。value之间为或的关系。
+    * key  键。最大长度128个unicode字符。 key不能为空。(搜索时不对此参数做校验)
+    * values  值列表。每个值最大长度255个unicode字符。&ast;为系统保留字符。如果里面的value是以&ast;开头时，表示按照&ast;后面的值全模糊匹配。如果values缺失，则表示匹配任意值。value之间为或的关系。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class TagValues implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键。最大长度36个unicode字符。 key不能为空。(搜索时不对此参数做校验)
-    * values  值列表。每个值最大长度43个unicode字符。&ast;为系统保留字符。如果里面的value是以&ast;开头时，表示按照&ast;后面的值全模糊匹配。如果values缺失，则表示匹配任意值。value之间为或的关系。
+    * key  键。最大长度128个unicode字符。 key不能为空。(搜索时不对此参数做校验)
+    * values  值列表。每个值最大长度255个unicode字符。&ast;为系统保留字符。如果里面的value是以&ast;开头时，表示按照&ast;后面的值全模糊匹配。如果values缺失，则表示匹配任意值。value之间为或的关系。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class TagValues implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键。最大长度36个unicode字符。 key不能为空。(搜索时不对此参数做校验)
-    * values  值列表。每个值最大长度43个unicode字符。&ast;为系统保留字符。如果里面的value是以&ast;开头时，表示按照&ast;后面的值全模糊匹配。如果values缺失，则表示匹配任意值。value之间为或的关系。
+    * key  键。最大长度128个unicode字符。 key不能为空。(搜索时不对此参数做校验)
+    * values  值列表。每个值最大长度255个unicode字符。&ast;为系统保留字符。如果里面的value是以&ast;开头时，表示按照&ast;后面的值全模糊匹配。如果values缺失，则表示匹配任意值。value之间为或的关系。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class TagValues implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键。最大长度36个unicode字符。 key不能为空。(搜索时不对此参数做校验)
+    *  键。最大长度128个unicode字符。 key不能为空。(搜索时不对此参数做校验)
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class TagValues implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 键。最大长度36个unicode字符。 key不能为空。(搜索时不对此参数做校验)
+    * @param string|null $key 键。最大长度128个unicode字符。 key不能为空。(搜索时不对此参数做校验)
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class TagValues implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  值列表。每个值最大长度43个unicode字符。&ast;为系统保留字符。如果里面的value是以&ast;开头时，表示按照&ast;后面的值全模糊匹配。如果values缺失，则表示匹配任意值。value之间为或的关系。
+    *  值列表。每个值最大长度255个unicode字符。&ast;为系统保留字符。如果里面的value是以&ast;开头时，表示按照&ast;后面的值全模糊匹配。如果values缺失，则表示匹配任意值。value之间为或的关系。
     *
     * @return string[]|null
     */
@@ -221,7 +221,7 @@ class TagValues implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param string[]|null $values 值列表。每个值最大长度43个unicode字符。&ast;为系统保留字符。如果里面的value是以&ast;开头时，表示按照&ast;后面的值全模糊匹配。如果values缺失，则表示匹配任意值。value之间为或的关系。
+    * @param string[]|null $values 值列表。每个值最大长度255个unicode字符。&ast;为系统保留字符。如果里面的value是以&ast;开头时，表示按照&ast;后面的值全模糊匹配。如果values缺失，则表示匹配任意值。value之间为或的关系。
     *
     * @return $this
     */

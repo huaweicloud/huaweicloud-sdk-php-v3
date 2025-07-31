@@ -28,6 +28,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * type  自定义读法类型 CHINESE_G2P：拼音
     * ttsServiceName  声音模型名称
     * isVocabularyConfigEnable  是否应用词表配置，从周边服务传递
+    * groupId  分组id
+    * assetId  资产id
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -45,6 +47,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
             'type' => 'string',
             'ttsServiceName' => 'string',
             'isVocabularyConfigEnable' => 'string',
+            'groupId' => 'string',
+            'assetId' => 'string',
             'limit' => 'int',
             'offset' => 'int',
             'startTime' => 'string',
@@ -62,6 +66,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * type  自定义读法类型 CHINESE_G2P：拼音
     * ttsServiceName  声音模型名称
     * isVocabularyConfigEnable  是否应用词表配置，从周边服务传递
+    * groupId  分组id
+    * assetId  资产id
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -79,6 +85,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
         'type' => null,
         'ttsServiceName' => null,
         'isVocabularyConfigEnable' => null,
+        'groupId' => null,
+        'assetId' => null,
         'limit' => 'uint32',
         'offset' => 'uint32',
         'startTime' => null,
@@ -117,6 +125,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * type  自定义读法类型 CHINESE_G2P：拼音
     * ttsServiceName  声音模型名称
     * isVocabularyConfigEnable  是否应用词表配置，从周边服务传递
+    * groupId  分组id
+    * assetId  资产id
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -134,6 +144,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
             'type' => 'type',
             'ttsServiceName' => 'tts_service_name',
             'isVocabularyConfigEnable' => 'is_vocabulary_config_enable',
+            'groupId' => 'group_id',
+            'assetId' => 'asset_id',
             'limit' => 'limit',
             'offset' => 'offset',
             'startTime' => 'start_time',
@@ -151,6 +163,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * type  自定义读法类型 CHINESE_G2P：拼音
     * ttsServiceName  声音模型名称
     * isVocabularyConfigEnable  是否应用词表配置，从周边服务传递
+    * groupId  分组id
+    * assetId  资产id
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -168,6 +182,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'ttsServiceName' => 'setTtsServiceName',
             'isVocabularyConfigEnable' => 'setIsVocabularyConfigEnable',
+            'groupId' => 'setGroupId',
+            'assetId' => 'setAssetId',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
             'startTime' => 'setStartTime',
@@ -185,6 +201,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * type  自定义读法类型 CHINESE_G2P：拼音
     * ttsServiceName  声音模型名称
     * isVocabularyConfigEnable  是否应用词表配置，从周边服务传递
+    * groupId  分组id
+    * assetId  资产id
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -202,6 +220,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'ttsServiceName' => 'getTtsServiceName',
             'isVocabularyConfigEnable' => 'getIsVocabularyConfigEnable',
+            'groupId' => 'getGroupId',
+            'assetId' => 'getAssetId',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
             'startTime' => 'getStartTime',
@@ -275,6 +295,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['ttsServiceName'] = isset($data['ttsServiceName']) ? $data['ttsServiceName'] : null;
         $this->container['isVocabularyConfigEnable'] = isset($data['isVocabularyConfigEnable']) ? $data['isVocabularyConfigEnable'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
+        $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
@@ -337,6 +359,18 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['isVocabularyConfigEnable']) && (mb_strlen($this->container['isVocabularyConfigEnable']) < 1)) {
                 $invalidProperties[] = "invalid value for 'isVocabularyConfigEnable', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['assetId']) && (mb_strlen($this->container['assetId']) > 48)) {
+                $invalidProperties[] = "invalid value for 'assetId', the character length must be smaller than or equal to 48.";
+            }
+            if (!is_null($this->container['assetId']) && (mb_strlen($this->container['assetId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'assetId', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
@@ -571,6 +605,54 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     public function setIsVocabularyConfigEnable($isVocabularyConfigEnable)
     {
         $this->container['isVocabularyConfigEnable'] = $isVocabularyConfigEnable;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  分组id
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 分组id
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
+        return $this;
+    }
+
+    /**
+    * Gets assetId
+    *  资产id
+    *
+    * @return string|null
+    */
+    public function getAssetId()
+    {
+        return $this->container['assetId'];
+    }
+
+    /**
+    * Sets assetId
+    *
+    * @param string|null $assetId 资产id
+    *
+    * @return $this
+    */
+    public function setAssetId($assetId)
+    {
+        $this->container['assetId'] = $assetId;
         return $this;
     }
 

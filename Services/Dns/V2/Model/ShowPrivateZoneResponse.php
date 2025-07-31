@@ -21,24 +21,24 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  域名的ID，UUID形式的一个资源标识。
-    * name  域名。
-    * description  对域名的描述信息。
-    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
-    * zoneType  域名类型，内网（private）。
-    * ttl  该域名下SOA记录中的ttl值。
-    * serial  该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。
-    * status  资源状态。
-    * recordNum  该域名下的记录集个数。
-    * poolId  托管该域名的pool，由系统分配。
-    * projectId  域名所属的项目ID。
-    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * id  **参数解释：** 域名的ID，UUID形式的一个资源标识。 **取值范围：** 不涉及。
+    * name  **参数解释：** 域名。 **取值范围：** 不涉及。
+    * description  **参数解释：** 域名的描述信息。 **取值范围：** 长度不超过255个字符。
+    * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **取值范围：** 不涉及。
+    * zoneType  **参数解释：** 域名类型。 **取值范围：** private：内网域名。
+    * ttl  **参数解释：** 该域名下SOA记录中的有效缓存时间，以秒为单位。 **取值范围：** 1~2147483647。
+    * serial  **参数解释：** 该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。 **取值范围：** 不涉及。
+    * status  **参数解释：** 内网域名状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
+    * recordNum  **参数解释：** 该域名下的记录集个数。 **取值范围：** 不涉及。
+    * poolId  **参数解释：** 托管该域名的pool，由系统分配。 **取值范围：** 不涉及。
+    * projectId  **参数解释：** 域名所属的项目ID。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 域名的创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 域名的最近一次修改时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     * links  links
-    * masters  主从模式中，从DNS服务器获取DNS信息。
-    * routers  与该域名关联的Router(VPC)列表。
-    * proxyPattern  内网域名的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前域名未开启递归解析代理 RECURSIVE：当前域名已开启递归解析代理
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
+    * masters  **参数解释：** 主从模式中，从DNS服务器获取DNS信息。 **取值范围：** 不涉及。
+    * routers  **参数解释：** 与该域名关联的Router(VPC)列表。 **取值范围：** 不涉及。
+    * proxyPattern  **参数解释：** 内网域名的子域名递归解析代理模式。 **取值范围：** - AUTHORITY：当前域名未开启递归解析代理 - RECURSIVE：当前域名已开启递归解析代理
+    * enterpriseProjectId  **参数解释：** 域名所属的企业项目ID。可以使用该字段过滤企业项目下的域名。 **取值范围：** 最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @var string[]
     */
@@ -65,24 +65,24 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  域名的ID，UUID形式的一个资源标识。
-    * name  域名。
-    * description  对域名的描述信息。
-    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
-    * zoneType  域名类型，内网（private）。
-    * ttl  该域名下SOA记录中的ttl值。
-    * serial  该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。
-    * status  资源状态。
-    * recordNum  该域名下的记录集个数。
-    * poolId  托管该域名的pool，由系统分配。
-    * projectId  域名所属的项目ID。
-    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * id  **参数解释：** 域名的ID，UUID形式的一个资源标识。 **取值范围：** 不涉及。
+    * name  **参数解释：** 域名。 **取值范围：** 不涉及。
+    * description  **参数解释：** 域名的描述信息。 **取值范围：** 长度不超过255个字符。
+    * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **取值范围：** 不涉及。
+    * zoneType  **参数解释：** 域名类型。 **取值范围：** private：内网域名。
+    * ttl  **参数解释：** 该域名下SOA记录中的有效缓存时间，以秒为单位。 **取值范围：** 1~2147483647。
+    * serial  **参数解释：** 该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。 **取值范围：** 不涉及。
+    * status  **参数解释：** 内网域名状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
+    * recordNum  **参数解释：** 该域名下的记录集个数。 **取值范围：** 不涉及。
+    * poolId  **参数解释：** 托管该域名的pool，由系统分配。 **取值范围：** 不涉及。
+    * projectId  **参数解释：** 域名所属的项目ID。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 域名的创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 域名的最近一次修改时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     * links  links
-    * masters  主从模式中，从DNS服务器获取DNS信息。
-    * routers  与该域名关联的Router(VPC)列表。
-    * proxyPattern  内网域名的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前域名未开启递归解析代理 RECURSIVE：当前域名已开启递归解析代理
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
+    * masters  **参数解释：** 主从模式中，从DNS服务器获取DNS信息。 **取值范围：** 不涉及。
+    * routers  **参数解释：** 与该域名关联的Router(VPC)列表。 **取值范围：** 不涉及。
+    * proxyPattern  **参数解释：** 内网域名的子域名递归解析代理模式。 **取值范围：** - AUTHORITY：当前域名未开启递归解析代理 - RECURSIVE：当前域名已开启递归解析代理
+    * enterpriseProjectId  **参数解释：** 域名所属的企业项目ID。可以使用该字段过滤企业项目下的域名。 **取值范围：** 最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @var string[]
     */
@@ -130,24 +130,24 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  域名的ID，UUID形式的一个资源标识。
-    * name  域名。
-    * description  对域名的描述信息。
-    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
-    * zoneType  域名类型，内网（private）。
-    * ttl  该域名下SOA记录中的ttl值。
-    * serial  该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。
-    * status  资源状态。
-    * recordNum  该域名下的记录集个数。
-    * poolId  托管该域名的pool，由系统分配。
-    * projectId  域名所属的项目ID。
-    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * id  **参数解释：** 域名的ID，UUID形式的一个资源标识。 **取值范围：** 不涉及。
+    * name  **参数解释：** 域名。 **取值范围：** 不涉及。
+    * description  **参数解释：** 域名的描述信息。 **取值范围：** 长度不超过255个字符。
+    * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **取值范围：** 不涉及。
+    * zoneType  **参数解释：** 域名类型。 **取值范围：** private：内网域名。
+    * ttl  **参数解释：** 该域名下SOA记录中的有效缓存时间，以秒为单位。 **取值范围：** 1~2147483647。
+    * serial  **参数解释：** 该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。 **取值范围：** 不涉及。
+    * status  **参数解释：** 内网域名状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
+    * recordNum  **参数解释：** 该域名下的记录集个数。 **取值范围：** 不涉及。
+    * poolId  **参数解释：** 托管该域名的pool，由系统分配。 **取值范围：** 不涉及。
+    * projectId  **参数解释：** 域名所属的项目ID。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 域名的创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 域名的最近一次修改时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     * links  links
-    * masters  主从模式中，从DNS服务器获取DNS信息。
-    * routers  与该域名关联的Router(VPC)列表。
-    * proxyPattern  内网域名的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前域名未开启递归解析代理 RECURSIVE：当前域名已开启递归解析代理
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
+    * masters  **参数解释：** 主从模式中，从DNS服务器获取DNS信息。 **取值范围：** 不涉及。
+    * routers  **参数解释：** 与该域名关联的Router(VPC)列表。 **取值范围：** 不涉及。
+    * proxyPattern  **参数解释：** 内网域名的子域名递归解析代理模式。 **取值范围：** - AUTHORITY：当前域名未开启递归解析代理 - RECURSIVE：当前域名已开启递归解析代理
+    * enterpriseProjectId  **参数解释：** 域名所属的企业项目ID。可以使用该字段过滤企业项目下的域名。 **取值范围：** 最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @var string[]
     */
@@ -174,24 +174,24 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  域名的ID，UUID形式的一个资源标识。
-    * name  域名。
-    * description  对域名的描述信息。
-    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
-    * zoneType  域名类型，内网（private）。
-    * ttl  该域名下SOA记录中的ttl值。
-    * serial  该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。
-    * status  资源状态。
-    * recordNum  该域名下的记录集个数。
-    * poolId  托管该域名的pool，由系统分配。
-    * projectId  域名所属的项目ID。
-    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * id  **参数解释：** 域名的ID，UUID形式的一个资源标识。 **取值范围：** 不涉及。
+    * name  **参数解释：** 域名。 **取值范围：** 不涉及。
+    * description  **参数解释：** 域名的描述信息。 **取值范围：** 长度不超过255个字符。
+    * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **取值范围：** 不涉及。
+    * zoneType  **参数解释：** 域名类型。 **取值范围：** private：内网域名。
+    * ttl  **参数解释：** 该域名下SOA记录中的有效缓存时间，以秒为单位。 **取值范围：** 1~2147483647。
+    * serial  **参数解释：** 该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。 **取值范围：** 不涉及。
+    * status  **参数解释：** 内网域名状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
+    * recordNum  **参数解释：** 该域名下的记录集个数。 **取值范围：** 不涉及。
+    * poolId  **参数解释：** 托管该域名的pool，由系统分配。 **取值范围：** 不涉及。
+    * projectId  **参数解释：** 域名所属的项目ID。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 域名的创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 域名的最近一次修改时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     * links  links
-    * masters  主从模式中，从DNS服务器获取DNS信息。
-    * routers  与该域名关联的Router(VPC)列表。
-    * proxyPattern  内网域名的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前域名未开启递归解析代理 RECURSIVE：当前域名已开启递归解析代理
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
+    * masters  **参数解释：** 主从模式中，从DNS服务器获取DNS信息。 **取值范围：** 不涉及。
+    * routers  **参数解释：** 与该域名关联的Router(VPC)列表。 **取值范围：** 不涉及。
+    * proxyPattern  **参数解释：** 内网域名的子域名递归解析代理模式。 **取值范围：** - AUTHORITY：当前域名未开启递归解析代理 - RECURSIVE：当前域名已开启递归解析代理
+    * enterpriseProjectId  **参数解释：** 域名所属的企业项目ID。可以使用该字段过滤企业项目下的域名。 **取值范围：** 最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @var string[]
     */
@@ -218,24 +218,24 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  域名的ID，UUID形式的一个资源标识。
-    * name  域名。
-    * description  对域名的描述信息。
-    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
-    * zoneType  域名类型，内网（private）。
-    * ttl  该域名下SOA记录中的ttl值。
-    * serial  该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。
-    * status  资源状态。
-    * recordNum  该域名下的记录集个数。
-    * poolId  托管该域名的pool，由系统分配。
-    * projectId  域名所属的项目ID。
-    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * id  **参数解释：** 域名的ID，UUID形式的一个资源标识。 **取值范围：** 不涉及。
+    * name  **参数解释：** 域名。 **取值范围：** 不涉及。
+    * description  **参数解释：** 域名的描述信息。 **取值范围：** 长度不超过255个字符。
+    * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **取值范围：** 不涉及。
+    * zoneType  **参数解释：** 域名类型。 **取值范围：** private：内网域名。
+    * ttl  **参数解释：** 该域名下SOA记录中的有效缓存时间，以秒为单位。 **取值范围：** 1~2147483647。
+    * serial  **参数解释：** 该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。 **取值范围：** 不涉及。
+    * status  **参数解释：** 内网域名状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
+    * recordNum  **参数解释：** 该域名下的记录集个数。 **取值范围：** 不涉及。
+    * poolId  **参数解释：** 托管该域名的pool，由系统分配。 **取值范围：** 不涉及。
+    * projectId  **参数解释：** 域名所属的项目ID。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 域名的创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 域名的最近一次修改时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     * links  links
-    * masters  主从模式中，从DNS服务器获取DNS信息。
-    * routers  与该域名关联的Router(VPC)列表。
-    * proxyPattern  内网域名的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前域名未开启递归解析代理 RECURSIVE：当前域名已开启递归解析代理
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
+    * masters  **参数解释：** 主从模式中，从DNS服务器获取DNS信息。 **取值范围：** 不涉及。
+    * routers  **参数解释：** 与该域名关联的Router(VPC)列表。 **取值范围：** 不涉及。
+    * proxyPattern  **参数解释：** 内网域名的子域名递归解析代理模式。 **取值范围：** - AUTHORITY：当前域名未开启递归解析代理 - RECURSIVE：当前域名已开启递归解析代理
+    * enterpriseProjectId  **参数解释：** 域名所属的企业项目ID。可以使用该字段过滤企业项目下的域名。 **取值范围：** 最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @var string[]
     */
@@ -362,7 +362,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  域名的ID，UUID形式的一个资源标识。
+    *  **参数解释：** 域名的ID，UUID形式的一个资源标识。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -374,7 +374,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 域名的ID，UUID形式的一个资源标识。
+    * @param string|null $id **参数解释：** 域名的ID，UUID形式的一个资源标识。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -386,7 +386,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  域名。
+    *  **参数解释：** 域名。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -398,7 +398,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 域名。
+    * @param string|null $name **参数解释：** 域名。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -410,7 +410,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  对域名的描述信息。
+    *  **参数解释：** 域名的描述信息。 **取值范围：** 长度不超过255个字符。
     *
     * @return string|null
     */
@@ -422,7 +422,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 对域名的描述信息。
+    * @param string|null $description **参数解释：** 域名的描述信息。 **取值范围：** 长度不超过255个字符。
     *
     * @return $this
     */
@@ -434,7 +434,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
-    *  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
+    *  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -446,7 +446,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email 管理该域名的管理员邮箱，用于生成该域名的SOA记录。
+    * @param string|null $email **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -458,7 +458,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneType
-    *  域名类型，内网（private）。
+    *  **参数解释：** 域名类型。 **取值范围：** private：内网域名。
     *
     * @return string|null
     */
@@ -470,7 +470,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets zoneType
     *
-    * @param string|null $zoneType 域名类型，内网（private）。
+    * @param string|null $zoneType **参数解释：** 域名类型。 **取值范围：** private：内网域名。
     *
     * @return $this
     */
@@ -482,7 +482,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ttl
-    *  该域名下SOA记录中的ttl值。
+    *  **参数解释：** 该域名下SOA记录中的有效缓存时间，以秒为单位。 **取值范围：** 1~2147483647。
     *
     * @return int|null
     */
@@ -494,7 +494,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ttl
     *
-    * @param int|null $ttl 该域名下SOA记录中的ttl值。
+    * @param int|null $ttl **参数解释：** 该域名下SOA记录中的有效缓存时间，以秒为单位。 **取值范围：** 1~2147483647。
     *
     * @return $this
     */
@@ -506,7 +506,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serial
-    *  该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。
+    *  **参数解释：** 该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -518,7 +518,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serial
     *
-    * @param int|null $serial 该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。
+    * @param int|null $serial **参数解释：** 该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -530,7 +530,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源状态。
+    *  **参数解释：** 内网域名状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
     *
     * @return string|null
     */
@@ -542,7 +542,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源状态。
+    * @param string|null $status **参数解释：** 内网域名状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
     *
     * @return $this
     */
@@ -554,7 +554,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordNum
-    *  该域名下的记录集个数。
+    *  **参数解释：** 该域名下的记录集个数。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -566,7 +566,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets recordNum
     *
-    * @param int|null $recordNum 该域名下的记录集个数。
+    * @param int|null $recordNum **参数解释：** 该域名下的记录集个数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -578,7 +578,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets poolId
-    *  托管该域名的pool，由系统分配。
+    *  **参数解释：** 托管该域名的pool，由系统分配。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -590,7 +590,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets poolId
     *
-    * @param string|null $poolId 托管该域名的pool，由系统分配。
+    * @param string|null $poolId **参数解释：** 托管该域名的pool，由系统分配。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -602,7 +602,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  域名所属的项目ID。
+    *  **参数解释：** 域名所属的项目ID。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -614,7 +614,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 域名所属的项目ID。
+    * @param string|null $projectId **参数解释：** 域名所属的项目ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -626,7 +626,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    *  **参数解释：** 域名的创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -638,7 +638,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * @param string|null $createdAt **参数解释：** 域名的创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -650,7 +650,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    *  **参数解释：** 域名的最近一次修改时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -662,7 +662,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string|null $updatedAt 更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * @param string|null $updatedAt **参数解释：** 域名的最近一次修改时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -698,7 +698,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets masters
-    *  主从模式中，从DNS服务器获取DNS信息。
+    *  **参数解释：** 主从模式中，从DNS服务器获取DNS信息。 **取值范围：** 不涉及。
     *
     * @return string[]|null
     */
@@ -710,7 +710,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets masters
     *
-    * @param string[]|null $masters 主从模式中，从DNS服务器获取DNS信息。
+    * @param string[]|null $masters **参数解释：** 主从模式中，从DNS服务器获取DNS信息。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -722,7 +722,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets routers
-    *  与该域名关联的Router(VPC)列表。
+    *  **参数解释：** 与该域名关联的Router(VPC)列表。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\Router[]|null
     */
@@ -734,7 +734,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets routers
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Router[]|null $routers 与该域名关联的Router(VPC)列表。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\Router[]|null $routers **参数解释：** 与该域名关联的Router(VPC)列表。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -746,7 +746,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets proxyPattern
-    *  内网域名的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前域名未开启递归解析代理 RECURSIVE：当前域名已开启递归解析代理
+    *  **参数解释：** 内网域名的子域名递归解析代理模式。 **取值范围：** - AUTHORITY：当前域名未开启递归解析代理 - RECURSIVE：当前域名已开启递归解析代理
     *
     * @return string|null
     */
@@ -758,7 +758,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets proxyPattern
     *
-    * @param string|null $proxyPattern 内网域名的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前域名未开启递归解析代理 RECURSIVE：当前域名已开启递归解析代理
+    * @param string|null $proxyPattern **参数解释：** 内网域名的子域名递归解析代理模式。 **取值范围：** - AUTHORITY：当前域名未开启递归解析代理 - RECURSIVE：当前域名已开启递归解析代理
     *
     * @return $this
     */
@@ -770,7 +770,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  域名关联的企业项目ID，长度不超过36个字符。
+    *  **参数解释：** 域名所属的企业项目ID。可以使用该字段过滤企业项目下的域名。 **取值范围：** 最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @return string|null
     */
@@ -782,7 +782,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 域名关联的企业项目ID，长度不超过36个字符。
+    * @param string|null $enterpriseProjectId **参数解释：** 域名所属的企业项目ID。可以使用该字段过滤企业项目下的域名。 **取值范围：** 最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @return $this
     */

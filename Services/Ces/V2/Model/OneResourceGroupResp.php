@@ -24,7 +24,12 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * createTime  资源分组的创建时间
     * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
+    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
+    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * resourceStatistics  resourceStatistics
+    * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
+    * associationAlarmTemplates  关联的告警模板列表
     *
     * @var string[]
     */
@@ -33,7 +38,12 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
             'groupId' => 'string',
             'createTime' => '\DateTime',
             'enterpriseProjectId' => 'string',
-            'type' => 'string'
+            'type' => 'string',
+            'status' => 'string',
+            'eventStatus' => 'string',
+            'resourceStatistics' => '\HuaweiCloud\SDK\Ces\V2\Model\OneResourceGroupRespResourceStatistics',
+            'relatedEpIds' => 'string[]',
+            'associationAlarmTemplates' => '\HuaweiCloud\SDK\Ces\V2\Model\AssociationAlarmTemplate[]'
     ];
 
     /**
@@ -42,7 +52,12 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * createTime  资源分组的创建时间
     * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
+    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
+    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * resourceStatistics  resourceStatistics
+    * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
+    * associationAlarmTemplates  关联的告警模板列表
     *
     * @var string[]
     */
@@ -51,7 +66,12 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
         'groupId' => null,
         'createTime' => 'date-time',
         'enterpriseProjectId' => null,
-        'type' => null
+        'type' => null,
+        'status' => null,
+        'eventStatus' => null,
+        'resourceStatistics' => null,
+        'relatedEpIds' => null,
+        'associationAlarmTemplates' => null
     ];
 
     /**
@@ -81,7 +101,12 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * createTime  资源分组的创建时间
     * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
+    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
+    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * resourceStatistics  resourceStatistics
+    * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
+    * associationAlarmTemplates  关联的告警模板列表
     *
     * @var string[]
     */
@@ -90,7 +115,12 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
             'groupId' => 'group_id',
             'createTime' => 'create_time',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'type' => 'type'
+            'type' => 'type',
+            'status' => 'status',
+            'eventStatus' => 'event_status',
+            'resourceStatistics' => 'resource_statistics',
+            'relatedEpIds' => 'related_ep_ids',
+            'associationAlarmTemplates' => 'association_alarm_templates'
     ];
 
     /**
@@ -99,7 +129,12 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * createTime  资源分组的创建时间
     * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
+    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
+    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * resourceStatistics  resourceStatistics
+    * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
+    * associationAlarmTemplates  关联的告警模板列表
     *
     * @var string[]
     */
@@ -108,7 +143,12 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
             'groupId' => 'setGroupId',
             'createTime' => 'setCreateTime',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'type' => 'setType'
+            'type' => 'setType',
+            'status' => 'setStatus',
+            'eventStatus' => 'setEventStatus',
+            'resourceStatistics' => 'setResourceStatistics',
+            'relatedEpIds' => 'setRelatedEpIds',
+            'associationAlarmTemplates' => 'setAssociationAlarmTemplates'
     ];
 
     /**
@@ -117,7 +157,12 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * createTime  资源分组的创建时间
     * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
+    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
+    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * resourceStatistics  resourceStatistics
+    * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
+    * associationAlarmTemplates  关联的告警模板列表
     *
     * @var string[]
     */
@@ -126,7 +171,12 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
             'groupId' => 'getGroupId',
             'createTime' => 'getCreateTime',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'type' => 'getType'
+            'type' => 'getType',
+            'status' => 'getStatus',
+            'eventStatus' => 'getEventStatus',
+            'resourceStatistics' => 'getResourceStatistics',
+            'relatedEpIds' => 'getRelatedEpIds',
+            'associationAlarmTemplates' => 'getAssociationAlarmTemplates'
     ];
 
     /**
@@ -171,7 +221,15 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     }
     const TYPE_EPS = 'EPS';
     const TYPE_TAG = 'TAG';
+    const TYPE_NAME = 'NAME';
+    const TYPE_COMB = 'COMB';
     const TYPE_MANUAL = 'Manual';
+    const STATUS_HEALTH = 'health';
+    const STATUS_UNHEALTHY = 'unhealthy';
+    const STATUS_NO_ALARM_RULE = 'no_alarm_rule';
+    const EVENT_STATUS_HEALTH = 'health';
+    const EVENT_STATUS_UNHEALTHY = 'unhealthy';
+    const EVENT_STATUS_NO_ALARM_RULE = 'no_alarm_rule';
     
 
     /**
@@ -184,7 +242,37 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
         return [
             self::TYPE_EPS,
             self::TYPE_TAG,
+            self::TYPE_NAME,
+            self::TYPE_COMB,
             self::TYPE_MANUAL,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_HEALTH,
+            self::STATUS_UNHEALTHY,
+            self::STATUS_NO_ALARM_RULE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEventStatusAllowableValues()
+    {
+        return [
+            self::EVENT_STATUS_HEALTH,
+            self::EVENT_STATUS_UNHEALTHY,
+            self::EVENT_STATUS_NO_ALARM_RULE,
         ];
     }
 
@@ -209,6 +297,11 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['eventStatus'] = isset($data['eventStatus']) ? $data['eventStatus'] : null;
+        $this->container['resourceStatistics'] = isset($data['resourceStatistics']) ? $data['resourceStatistics'] : null;
+        $this->container['relatedEpIds'] = isset($data['relatedEpIds']) ? $data['relatedEpIds'] : null;
+        $this->container['associationAlarmTemplates'] = isset($data['associationAlarmTemplates']) ? $data['associationAlarmTemplates'] : null;
     }
 
     /**
@@ -250,6 +343,22 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getEventStatusAllowableValues();
+                if (!is_null($this->container['eventStatus']) && !in_array($this->container['eventStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'eventStatus', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -366,7 +475,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
+    *  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
     *
     * @return string
     */
@@ -378,13 +487,133 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
+    * @param string $type 资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
     *
     * @return $this
     */
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets eventStatus
+    *  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    *
+    * @return string|null
+    */
+    public function getEventStatus()
+    {
+        return $this->container['eventStatus'];
+    }
+
+    /**
+    * Sets eventStatus
+    *
+    * @param string|null $eventStatus 事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    *
+    * @return $this
+    */
+    public function setEventStatus($eventStatus)
+    {
+        $this->container['eventStatus'] = $eventStatus;
+        return $this;
+    }
+
+    /**
+    * Gets resourceStatistics
+    *  resourceStatistics
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\OneResourceGroupRespResourceStatistics|null
+    */
+    public function getResourceStatistics()
+    {
+        return $this->container['resourceStatistics'];
+    }
+
+    /**
+    * Sets resourceStatistics
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\OneResourceGroupRespResourceStatistics|null $resourceStatistics resourceStatistics
+    *
+    * @return $this
+    */
+    public function setResourceStatistics($resourceStatistics)
+    {
+        $this->container['resourceStatistics'] = $resourceStatistics;
+        return $this;
+    }
+
+    /**
+    * Gets relatedEpIds
+    *  当资源匹配规则为匹配企业项目时，指定的企业项目列表
+    *
+    * @return string[]|null
+    */
+    public function getRelatedEpIds()
+    {
+        return $this->container['relatedEpIds'];
+    }
+
+    /**
+    * Sets relatedEpIds
+    *
+    * @param string[]|null $relatedEpIds 当资源匹配规则为匹配企业项目时，指定的企业项目列表
+    *
+    * @return $this
+    */
+    public function setRelatedEpIds($relatedEpIds)
+    {
+        $this->container['relatedEpIds'] = $relatedEpIds;
+        return $this;
+    }
+
+    /**
+    * Gets associationAlarmTemplates
+    *  关联的告警模板列表
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\AssociationAlarmTemplate[]|null
+    */
+    public function getAssociationAlarmTemplates()
+    {
+        return $this->container['associationAlarmTemplates'];
+    }
+
+    /**
+    * Sets associationAlarmTemplates
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\AssociationAlarmTemplate[]|null $associationAlarmTemplates 关联的告警模板列表
+    *
+    * @return $this
+    */
+    public function setAssociationAlarmTemplates($associationAlarmTemplates)
+    {
+        $this->container['associationAlarmTemplates'] = $associationAlarmTemplates;
         return $this;
     }
 

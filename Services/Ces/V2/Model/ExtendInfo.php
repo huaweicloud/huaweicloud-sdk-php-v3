@@ -21,7 +21,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * filter  表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
-    * period  表示指标聚合周期，1表示原始值，60表示一分钟，300表示5分钟，1200表示20分钟，3600表示1小时，14400表示4小时，86400表示1天
+    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}'
     * displayTime  展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
     * refreshTime  刷新时间 0秒表示不刷新,10秒，1分钟，5分钟，20分钟
     * from  开始时间
@@ -36,7 +36,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'filter' => 'string',
-            'period' => 'int',
+            'period' => 'string',
             'displayTime' => 'int',
             'refreshTime' => 'int',
             'from' => 'int',
@@ -51,7 +51,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * filter  表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
-    * period  表示指标聚合周期，1表示原始值，60表示一分钟，300表示5分钟，1200表示20分钟，3600表示1小时，14400表示4小时，86400表示1天
+    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}'
     * displayTime  展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
     * refreshTime  刷新时间 0秒表示不刷新,10秒，1分钟，5分钟，20分钟
     * from  开始时间
@@ -66,7 +66,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'filter' => null,
-        'period' => 'int32',
+        'period' => null,
         'displayTime' => 'int32',
         'refreshTime' => 'int32',
         'from' => null,
@@ -102,7 +102,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * filter  表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
-    * period  表示指标聚合周期，1表示原始值，60表示一分钟，300表示5分钟，1200表示20分钟，3600表示1小时，14400表示4小时，86400表示1天
+    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}'
     * displayTime  展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
     * refreshTime  刷新时间 0秒表示不刷新,10秒，1分钟，5分钟，20分钟
     * from  开始时间
@@ -132,7 +132,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * filter  表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
-    * period  表示指标聚合周期，1表示原始值，60表示一分钟，300表示5分钟，1200表示20分钟，3600表示1小时，14400表示4小时，86400表示1天
+    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}'
     * displayTime  展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
     * refreshTime  刷新时间 0秒表示不刷新,10秒，1分钟，5分钟，20分钟
     * from  开始时间
@@ -162,7 +162,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * filter  表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
-    * period  表示指标聚合周期，1表示原始值，60表示一分钟，300表示5分钟，1200表示20分钟，3600表示1小时，14400表示4小时，86400表示1天
+    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}'
     * displayTime  展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
     * refreshTime  刷新时间 0秒表示不刷新,10秒，1分钟，5分钟，20分钟
     * from  开始时间
@@ -233,13 +233,6 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     const FILTER_MIN = 'min';
     const FILTER_MAX = 'max';
     const FILTER_SUM = 'sum';
-    const PERIOD_1 = 1;
-    const PERIOD_60 = 60;
-    const PERIOD_300 = 300;
-    const PERIOD_1200 = 1200;
-    const PERIOD_3600 = 3600;
-    const PERIOD_14400 = 14400;
-    const PERIOD_86400 = 86400;
     const DISPLAY_TIME_0 = 0;
     const DISPLAY_TIME_5 = 5;
     const DISPLAY_TIME_15 = 15;
@@ -273,24 +266,6 @@ class ExtendInfo implements ModelInterface, ArrayAccess
             self::FILTER_MIN,
             self::FILTER_MAX,
             self::FILTER_SUM,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getPeriodAllowableValues()
-    {
-        return [
-            self::PERIOD_1,
-            self::PERIOD_60,
-            self::PERIOD_300,
-            self::PERIOD_1200,
-            self::PERIOD_3600,
-            self::PERIOD_14400,
-            self::PERIOD_86400,
         ];
     }
 
@@ -391,14 +366,15 @@ class ExtendInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-            $allowedValues = $this->getPeriodAllowableValues();
-                if (!is_null($this->container['period']) && !in_array($this->container['period'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'period', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['period']) && (mb_strlen($this->container['period']) > 100)) {
+                $invalidProperties[] = "invalid value for 'period', the character length must be smaller than or equal to 100.";
             }
-
+            if (!is_null($this->container['period']) && (mb_strlen($this->container['period']) < 0)) {
+                $invalidProperties[] = "invalid value for 'period', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['period']) && !preg_match("/^(1|60|300|1200|3600|14400|86400)$/", $this->container['period'])) {
+                $invalidProperties[] = "invalid value for 'period', must be conform to the pattern /^(1|60|300|1200|3600|14400|86400)$/.";
+            }
             $allowedValues = $this->getDisplayTimeAllowableValues();
                 if (!is_null($this->container['displayTime']) && !in_array($this->container['displayTime'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -487,9 +463,9 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets period
-    *  表示指标聚合周期，1表示原始值，60表示一分钟，300表示5分钟，1200表示20分钟，3600表示1小时，14400表示4小时，86400表示1天
+    *  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}'
     *
-    * @return int|null
+    * @return string|null
     */
     public function getPeriod()
     {
@@ -499,7 +475,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets period
     *
-    * @param int|null $period 表示指标聚合周期，1表示原始值，60表示一分钟，300表示5分钟，1200表示20分钟，3600表示1小时，14400表示4小时，86400表示1天
+    * @param string|null $period '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}'
     *
     * @return $this
     */

@@ -25,7 +25,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     * malwareName  病毒名称
     * severity  威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
     * filePath  文件路径
-    * hostName  服务器名称
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
@@ -63,7 +63,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     * malwareName  病毒名称
     * severity  威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
     * filePath  文件路径
-    * hostName  服务器名称
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
@@ -122,7 +122,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     * malwareName  病毒名称
     * severity  威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
     * filePath  文件路径
-    * hostName  服务器名称
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
@@ -160,7 +160,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     * malwareName  病毒名称
     * severity  威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
     * filePath  文件路径
-    * hostName  服务器名称
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
@@ -198,7 +198,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     * malwareName  病毒名称
     * severity  威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
     * filePath  文件路径
-    * hostName  服务器名称
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
@@ -520,7 +520,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -532,7 +532,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */

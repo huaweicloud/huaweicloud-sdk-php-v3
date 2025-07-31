@@ -25,10 +25,19 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * createTime  资源分组的创建时间
     * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
+    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
     * associationEpIds  该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
-    * tags  标签动态匹配时的关联标签,type为TAG时该字段不为空
+    * tags  当资源匹配规则为匹配标签时,所指定的标签规则
     * instances  实例名称匹配参数
+    * combRelation  combRelation
+    * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
+    * enterpriseProjectIdAndTags  匹配企业项目或匹配标签参数
+    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * resourceStatistics  resourceStatistics
+    * resourceLevel  dimension: 子维度,product: 云产品
+    * productNames  创建资源层级为云产品时的云产品的取值，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。
+    * epResourceStatistics  每个企业项目关联的资源状态
     *
     * @var string[]
     */
@@ -40,7 +49,16 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
             'type' => 'string',
             'associationEpIds' => 'string[]',
             'tags' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceGroupTagRelation[]',
-            'instances' => '\HuaweiCloud\SDK\Ces\V2\Model\Instance[]'
+            'instances' => '\HuaweiCloud\SDK\Ces\V2\Model\Instance[]',
+            'combRelation' => '\HuaweiCloud\SDK\Ces\V2\Model\CombRelation',
+            'relatedEpIds' => 'string[]',
+            'enterpriseProjectIdAndTags' => '\HuaweiCloud\SDK\Ces\V2\Model\EnterpriseProjectIdAndTags[]',
+            'status' => 'string',
+            'eventStatus' => 'string',
+            'resourceStatistics' => '\HuaweiCloud\SDK\Ces\V2\Model\OneResourceGroupRespResourceStatistics',
+            'resourceLevel' => 'string',
+            'productNames' => 'string',
+            'epResourceStatistics' => '\HuaweiCloud\SDK\Ces\V2\Model\EpResourceStatistics[]'
     ];
 
     /**
@@ -49,10 +67,19 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * createTime  资源分组的创建时间
     * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
+    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
     * associationEpIds  该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
-    * tags  标签动态匹配时的关联标签,type为TAG时该字段不为空
+    * tags  当资源匹配规则为匹配标签时,所指定的标签规则
     * instances  实例名称匹配参数
+    * combRelation  combRelation
+    * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
+    * enterpriseProjectIdAndTags  匹配企业项目或匹配标签参数
+    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * resourceStatistics  resourceStatistics
+    * resourceLevel  dimension: 子维度,product: 云产品
+    * productNames  创建资源层级为云产品时的云产品的取值，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。
+    * epResourceStatistics  每个企业项目关联的资源状态
     *
     * @var string[]
     */
@@ -64,7 +91,16 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
         'type' => null,
         'associationEpIds' => null,
         'tags' => null,
-        'instances' => null
+        'instances' => null,
+        'combRelation' => null,
+        'relatedEpIds' => null,
+        'enterpriseProjectIdAndTags' => null,
+        'status' => null,
+        'eventStatus' => null,
+        'resourceStatistics' => null,
+        'resourceLevel' => null,
+        'productNames' => null,
+        'epResourceStatistics' => null
     ];
 
     /**
@@ -94,10 +130,19 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * createTime  资源分组的创建时间
     * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
+    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
     * associationEpIds  该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
-    * tags  标签动态匹配时的关联标签,type为TAG时该字段不为空
+    * tags  当资源匹配规则为匹配标签时,所指定的标签规则
     * instances  实例名称匹配参数
+    * combRelation  combRelation
+    * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
+    * enterpriseProjectIdAndTags  匹配企业项目或匹配标签参数
+    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * resourceStatistics  resourceStatistics
+    * resourceLevel  dimension: 子维度,product: 云产品
+    * productNames  创建资源层级为云产品时的云产品的取值，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。
+    * epResourceStatistics  每个企业项目关联的资源状态
     *
     * @var string[]
     */
@@ -109,7 +154,16 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
             'type' => 'type',
             'associationEpIds' => 'association_ep_ids',
             'tags' => 'tags',
-            'instances' => 'instances'
+            'instances' => 'instances',
+            'combRelation' => 'comb_relation',
+            'relatedEpIds' => 'related_ep_ids',
+            'enterpriseProjectIdAndTags' => 'enterprise_project_id_and_tags',
+            'status' => 'status',
+            'eventStatus' => 'event_status',
+            'resourceStatistics' => 'resource_statistics',
+            'resourceLevel' => 'resource_level',
+            'productNames' => 'product_names',
+            'epResourceStatistics' => 'ep_resource_statistics'
     ];
 
     /**
@@ -118,10 +172,19 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * createTime  资源分组的创建时间
     * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
+    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
     * associationEpIds  该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
-    * tags  标签动态匹配时的关联标签,type为TAG时该字段不为空
+    * tags  当资源匹配规则为匹配标签时,所指定的标签规则
     * instances  实例名称匹配参数
+    * combRelation  combRelation
+    * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
+    * enterpriseProjectIdAndTags  匹配企业项目或匹配标签参数
+    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * resourceStatistics  resourceStatistics
+    * resourceLevel  dimension: 子维度,product: 云产品
+    * productNames  创建资源层级为云产品时的云产品的取值，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。
+    * epResourceStatistics  每个企业项目关联的资源状态
     *
     * @var string[]
     */
@@ -133,7 +196,16 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'associationEpIds' => 'setAssociationEpIds',
             'tags' => 'setTags',
-            'instances' => 'setInstances'
+            'instances' => 'setInstances',
+            'combRelation' => 'setCombRelation',
+            'relatedEpIds' => 'setRelatedEpIds',
+            'enterpriseProjectIdAndTags' => 'setEnterpriseProjectIdAndTags',
+            'status' => 'setStatus',
+            'eventStatus' => 'setEventStatus',
+            'resourceStatistics' => 'setResourceStatistics',
+            'resourceLevel' => 'setResourceLevel',
+            'productNames' => 'setProductNames',
+            'epResourceStatistics' => 'setEpResourceStatistics'
     ];
 
     /**
@@ -142,10 +214,19 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * createTime  资源分组的创建时间
     * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
+    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
     * associationEpIds  该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
-    * tags  标签动态匹配时的关联标签,type为TAG时该字段不为空
+    * tags  当资源匹配规则为匹配标签时,所指定的标签规则
     * instances  实例名称匹配参数
+    * combRelation  combRelation
+    * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
+    * enterpriseProjectIdAndTags  匹配企业项目或匹配标签参数
+    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * resourceStatistics  resourceStatistics
+    * resourceLevel  dimension: 子维度,product: 云产品
+    * productNames  创建资源层级为云产品时的云产品的取值，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。
+    * epResourceStatistics  每个企业项目关联的资源状态
     *
     * @var string[]
     */
@@ -157,7 +238,16 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'associationEpIds' => 'getAssociationEpIds',
             'tags' => 'getTags',
-            'instances' => 'getInstances'
+            'instances' => 'getInstances',
+            'combRelation' => 'getCombRelation',
+            'relatedEpIds' => 'getRelatedEpIds',
+            'enterpriseProjectIdAndTags' => 'getEnterpriseProjectIdAndTags',
+            'status' => 'getStatus',
+            'eventStatus' => 'getEventStatus',
+            'resourceStatistics' => 'getResourceStatistics',
+            'resourceLevel' => 'getResourceLevel',
+            'productNames' => 'getProductNames',
+            'epResourceStatistics' => 'getEpResourceStatistics'
     ];
 
     /**
@@ -202,7 +292,17 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     }
     const TYPE_EPS = 'EPS';
     const TYPE_TAG = 'TAG';
+    const TYPE_NAME = 'NAME';
+    const TYPE_COMB = 'COMB';
     const TYPE_MANUAL = 'Manual';
+    const STATUS_HEALTH = 'health';
+    const STATUS_UNHEALTHY = 'unhealthy';
+    const STATUS_NO_ALARM_RULE = 'no_alarm_rule';
+    const EVENT_STATUS_HEALTH = 'health';
+    const EVENT_STATUS_UNHEALTHY = 'unhealthy';
+    const EVENT_STATUS_NO_ALARM_RULE = 'no_alarm_rule';
+    const RESOURCE_LEVEL_DIMENSION = 'dimension';
+    const RESOURCE_LEVEL_PRODUCT = 'product';
     
 
     /**
@@ -215,7 +315,50 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
         return [
             self::TYPE_EPS,
             self::TYPE_TAG,
+            self::TYPE_NAME,
+            self::TYPE_COMB,
             self::TYPE_MANUAL,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_HEALTH,
+            self::STATUS_UNHEALTHY,
+            self::STATUS_NO_ALARM_RULE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEventStatusAllowableValues()
+    {
+        return [
+            self::EVENT_STATUS_HEALTH,
+            self::EVENT_STATUS_UNHEALTHY,
+            self::EVENT_STATUS_NO_ALARM_RULE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getResourceLevelAllowableValues()
+    {
+        return [
+            self::RESOURCE_LEVEL_DIMENSION,
+            self::RESOURCE_LEVEL_PRODUCT,
         ];
     }
 
@@ -243,6 +386,15 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
         $this->container['associationEpIds'] = isset($data['associationEpIds']) ? $data['associationEpIds'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['instances'] = isset($data['instances']) ? $data['instances'] : null;
+        $this->container['combRelation'] = isset($data['combRelation']) ? $data['combRelation'] : null;
+        $this->container['relatedEpIds'] = isset($data['relatedEpIds']) ? $data['relatedEpIds'] : null;
+        $this->container['enterpriseProjectIdAndTags'] = isset($data['enterpriseProjectIdAndTags']) ? $data['enterpriseProjectIdAndTags'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['eventStatus'] = isset($data['eventStatus']) ? $data['eventStatus'] : null;
+        $this->container['resourceStatistics'] = isset($data['resourceStatistics']) ? $data['resourceStatistics'] : null;
+        $this->container['resourceLevel'] = isset($data['resourceLevel']) ? $data['resourceLevel'] : null;
+        $this->container['productNames'] = isset($data['productNames']) ? $data['productNames'] : null;
+        $this->container['epResourceStatistics'] = isset($data['epResourceStatistics']) ? $data['epResourceStatistics'] : null;
     }
 
     /**
@@ -273,6 +425,36 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
                 );
             }
 
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getEventStatusAllowableValues();
+                if (!is_null($this->container['eventStatus']) && !in_array($this->container['eventStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'eventStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getResourceLevelAllowableValues();
+                if (!is_null($this->container['resourceLevel']) && !in_array($this->container['resourceLevel'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'resourceLevel', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['productNames']) && (mb_strlen($this->container['productNames']) > 10240)) {
+                $invalidProperties[] = "invalid value for 'productNames', the character length must be smaller than or equal to 10240.";
+            }
+            if (!is_null($this->container['productNames']) && (mb_strlen($this->container['productNames']) < 0)) {
+                $invalidProperties[] = "invalid value for 'productNames', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -385,7 +567,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
+    *  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
     *
     * @return string|null
     */
@@ -397,7 +579,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
+    * @param string|null $type 资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
     *
     * @return $this
     */
@@ -433,7 +615,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签动态匹配时的关联标签,type为TAG时该字段不为空
+    *  当资源匹配规则为匹配标签时,所指定的标签规则
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceGroupTagRelation[]|null
     */
@@ -445,7 +627,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceGroupTagRelation[]|null $tags 标签动态匹配时的关联标签,type为TAG时该字段不为空
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceGroupTagRelation[]|null $tags 当资源匹配规则为匹配标签时,所指定的标签规则
     *
     * @return $this
     */
@@ -476,6 +658,222 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     public function setInstances($instances)
     {
         $this->container['instances'] = $instances;
+        return $this;
+    }
+
+    /**
+    * Gets combRelation
+    *  combRelation
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\CombRelation|null
+    */
+    public function getCombRelation()
+    {
+        return $this->container['combRelation'];
+    }
+
+    /**
+    * Sets combRelation
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\CombRelation|null $combRelation combRelation
+    *
+    * @return $this
+    */
+    public function setCombRelation($combRelation)
+    {
+        $this->container['combRelation'] = $combRelation;
+        return $this;
+    }
+
+    /**
+    * Gets relatedEpIds
+    *  当资源匹配规则为匹配企业项目时，指定的企业项目列表
+    *
+    * @return string[]|null
+    */
+    public function getRelatedEpIds()
+    {
+        return $this->container['relatedEpIds'];
+    }
+
+    /**
+    * Sets relatedEpIds
+    *
+    * @param string[]|null $relatedEpIds 当资源匹配规则为匹配企业项目时，指定的企业项目列表
+    *
+    * @return $this
+    */
+    public function setRelatedEpIds($relatedEpIds)
+    {
+        $this->container['relatedEpIds'] = $relatedEpIds;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectIdAndTags
+    *  匹配企业项目或匹配标签参数
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\EnterpriseProjectIdAndTags[]|null
+    */
+    public function getEnterpriseProjectIdAndTags()
+    {
+        return $this->container['enterpriseProjectIdAndTags'];
+    }
+
+    /**
+    * Sets enterpriseProjectIdAndTags
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\EnterpriseProjectIdAndTags[]|null $enterpriseProjectIdAndTags 匹配企业项目或匹配标签参数
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectIdAndTags($enterpriseProjectIdAndTags)
+    {
+        $this->container['enterpriseProjectIdAndTags'] = $enterpriseProjectIdAndTags;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets eventStatus
+    *  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    *
+    * @return string|null
+    */
+    public function getEventStatus()
+    {
+        return $this->container['eventStatus'];
+    }
+
+    /**
+    * Sets eventStatus
+    *
+    * @param string|null $eventStatus 事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    *
+    * @return $this
+    */
+    public function setEventStatus($eventStatus)
+    {
+        $this->container['eventStatus'] = $eventStatus;
+        return $this;
+    }
+
+    /**
+    * Gets resourceStatistics
+    *  resourceStatistics
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\OneResourceGroupRespResourceStatistics|null
+    */
+    public function getResourceStatistics()
+    {
+        return $this->container['resourceStatistics'];
+    }
+
+    /**
+    * Sets resourceStatistics
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\OneResourceGroupRespResourceStatistics|null $resourceStatistics resourceStatistics
+    *
+    * @return $this
+    */
+    public function setResourceStatistics($resourceStatistics)
+    {
+        $this->container['resourceStatistics'] = $resourceStatistics;
+        return $this;
+    }
+
+    /**
+    * Gets resourceLevel
+    *  dimension: 子维度,product: 云产品
+    *
+    * @return string|null
+    */
+    public function getResourceLevel()
+    {
+        return $this->container['resourceLevel'];
+    }
+
+    /**
+    * Sets resourceLevel
+    *
+    * @param string|null $resourceLevel dimension: 子维度,product: 云产品
+    *
+    * @return $this
+    */
+    public function setResourceLevel($resourceLevel)
+    {
+        $this->container['resourceLevel'] = $resourceLevel;
+        return $this;
+    }
+
+    /**
+    * Gets productNames
+    *  创建资源层级为云产品时的云产品的取值，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。
+    *
+    * @return string|null
+    */
+    public function getProductNames()
+    {
+        return $this->container['productNames'];
+    }
+
+    /**
+    * Sets productNames
+    *
+    * @param string|null $productNames 创建资源层级为云产品时的云产品的取值，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。
+    *
+    * @return $this
+    */
+    public function setProductNames($productNames)
+    {
+        $this->container['productNames'] = $productNames;
+        return $this;
+    }
+
+    /**
+    * Gets epResourceStatistics
+    *  每个企业项目关联的资源状态
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\EpResourceStatistics[]|null
+    */
+    public function getEpResourceStatistics()
+    {
+        return $this->container['epResourceStatistics'];
+    }
+
+    /**
+    * Sets epResourceStatistics
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\EpResourceStatistics[]|null $epResourceStatistics 每个企业项目关联的资源状态
+    *
+    * @return $this
+    */
+    public function setEpResourceStatistics($epResourceStatistics)
+    {
+        $this->container['epResourceStatistics'] = $epResourceStatistics;
         return $this;
     }
 

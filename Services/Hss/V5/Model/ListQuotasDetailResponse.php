@@ -21,17 +21,17 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * packetCycleNum  包周期配额数
-    * onDemandNum  按需配额数
-    * usedNum  已使用配额数
-    * idleNum  空闲配额数
-    * normalNum  正常配额数
-    * expiredNum  过期配额数
-    * createTime  创建时间
-    * freezeNum  冻结配额数
-    * quotaStatisticsList  配额统计列表
-    * totalNum  配额总数
-    * dataList  配额列表
+    * packetCycleNum  **参数解释**： 包周期配额数 **取值范围**： 0到10000000
+    * onDemandNum  **参数解释**： 按需配额数 **取值范围**： 0到10000000
+    * usedNum  **参数解释**： 已使用配额数 **取值范围**： 0到10000000
+    * idleNum  **参数解释**： 空闲配额数 **取值范围**： 0到10000000
+    * normalNum  **参数解释**： 正常配额数 **取值范围**： 0到10000000
+    * expiredNum  **参数解释**： 过期配额数 **取值范围**： 0到10000000
+    * createTime  **参数解释**： 创建时间 **取值范围**： 0到9223372036854775807
+    * freezeNum  **参数解释**： 冻结配额数 **取值范围**： 0到10000000
+    * quotaStatisticsList  **参数解释**： 配额统计列表 **取值范围**： 不涉及
+    * totalNum  **参数解释**： 配额总数 **取值范围**： 0到10000000
+    * dataList  **参数解释**： 配额列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -51,17 +51,17 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * packetCycleNum  包周期配额数
-    * onDemandNum  按需配额数
-    * usedNum  已使用配额数
-    * idleNum  空闲配额数
-    * normalNum  正常配额数
-    * expiredNum  过期配额数
-    * createTime  创建时间
-    * freezeNum  冻结配额数
-    * quotaStatisticsList  配额统计列表
-    * totalNum  配额总数
-    * dataList  配额列表
+    * packetCycleNum  **参数解释**： 包周期配额数 **取值范围**： 0到10000000
+    * onDemandNum  **参数解释**： 按需配额数 **取值范围**： 0到10000000
+    * usedNum  **参数解释**： 已使用配额数 **取值范围**： 0到10000000
+    * idleNum  **参数解释**： 空闲配额数 **取值范围**： 0到10000000
+    * normalNum  **参数解释**： 正常配额数 **取值范围**： 0到10000000
+    * expiredNum  **参数解释**： 过期配额数 **取值范围**： 0到10000000
+    * createTime  **参数解释**： 创建时间 **取值范围**： 0到9223372036854775807
+    * freezeNum  **参数解释**： 冻结配额数 **取值范围**： 0到10000000
+    * quotaStatisticsList  **参数解释**： 配额统计列表 **取值范围**： 不涉及
+    * totalNum  **参数解释**： 配额总数 **取值范围**： 0到10000000
+    * dataList  **参数解释**： 配额列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -102,17 +102,17 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * packetCycleNum  包周期配额数
-    * onDemandNum  按需配额数
-    * usedNum  已使用配额数
-    * idleNum  空闲配额数
-    * normalNum  正常配额数
-    * expiredNum  过期配额数
-    * createTime  创建时间
-    * freezeNum  冻结配额数
-    * quotaStatisticsList  配额统计列表
-    * totalNum  配额总数
-    * dataList  配额列表
+    * packetCycleNum  **参数解释**： 包周期配额数 **取值范围**： 0到10000000
+    * onDemandNum  **参数解释**： 按需配额数 **取值范围**： 0到10000000
+    * usedNum  **参数解释**： 已使用配额数 **取值范围**： 0到10000000
+    * idleNum  **参数解释**： 空闲配额数 **取值范围**： 0到10000000
+    * normalNum  **参数解释**： 正常配额数 **取值范围**： 0到10000000
+    * expiredNum  **参数解释**： 过期配额数 **取值范围**： 0到10000000
+    * createTime  **参数解释**： 创建时间 **取值范围**： 0到9223372036854775807
+    * freezeNum  **参数解释**： 冻结配额数 **取值范围**： 0到10000000
+    * quotaStatisticsList  **参数解释**： 配额统计列表 **取值范围**： 不涉及
+    * totalNum  **参数解释**： 配额总数 **取值范围**： 0到10000000
+    * dataList  **参数解释**： 配额列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -132,17 +132,17 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * packetCycleNum  包周期配额数
-    * onDemandNum  按需配额数
-    * usedNum  已使用配额数
-    * idleNum  空闲配额数
-    * normalNum  正常配额数
-    * expiredNum  过期配额数
-    * createTime  创建时间
-    * freezeNum  冻结配额数
-    * quotaStatisticsList  配额统计列表
-    * totalNum  配额总数
-    * dataList  配额列表
+    * packetCycleNum  **参数解释**： 包周期配额数 **取值范围**： 0到10000000
+    * onDemandNum  **参数解释**： 按需配额数 **取值范围**： 0到10000000
+    * usedNum  **参数解释**： 已使用配额数 **取值范围**： 0到10000000
+    * idleNum  **参数解释**： 空闲配额数 **取值范围**： 0到10000000
+    * normalNum  **参数解释**： 正常配额数 **取值范围**： 0到10000000
+    * expiredNum  **参数解释**： 过期配额数 **取值范围**： 0到10000000
+    * createTime  **参数解释**： 创建时间 **取值范围**： 0到9223372036854775807
+    * freezeNum  **参数解释**： 冻结配额数 **取值范围**： 0到10000000
+    * quotaStatisticsList  **参数解释**： 配额统计列表 **取值范围**： 不涉及
+    * totalNum  **参数解释**： 配额总数 **取值范围**： 0到10000000
+    * dataList  **参数解释**： 配额列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -162,17 +162,17 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * packetCycleNum  包周期配额数
-    * onDemandNum  按需配额数
-    * usedNum  已使用配额数
-    * idleNum  空闲配额数
-    * normalNum  正常配额数
-    * expiredNum  过期配额数
-    * createTime  创建时间
-    * freezeNum  冻结配额数
-    * quotaStatisticsList  配额统计列表
-    * totalNum  配额总数
-    * dataList  配额列表
+    * packetCycleNum  **参数解释**： 包周期配额数 **取值范围**： 0到10000000
+    * onDemandNum  **参数解释**： 按需配额数 **取值范围**： 0到10000000
+    * usedNum  **参数解释**： 已使用配额数 **取值范围**： 0到10000000
+    * idleNum  **参数解释**： 空闲配额数 **取值范围**： 0到10000000
+    * normalNum  **参数解释**： 正常配额数 **取值范围**： 0到10000000
+    * expiredNum  **参数解释**： 过期配额数 **取值范围**： 0到10000000
+    * createTime  **参数解释**： 创建时间 **取值范围**： 0到9223372036854775807
+    * freezeNum  **参数解释**： 冻结配额数 **取值范围**： 0到10000000
+    * quotaStatisticsList  **参数解释**： 配额统计列表 **取值范围**： 不涉及
+    * totalNum  **参数解释**： 配额总数 **取值范围**： 0到10000000
+    * dataList  **参数解释**： 配额列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -339,7 +339,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets packetCycleNum
-    *  包周期配额数
+    *  **参数解释**： 包周期配额数 **取值范围**： 0到10000000
     *
     * @return int|null
     */
@@ -351,7 +351,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets packetCycleNum
     *
-    * @param int|null $packetCycleNum 包周期配额数
+    * @param int|null $packetCycleNum **参数解释**： 包周期配额数 **取值范围**： 0到10000000
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets onDemandNum
-    *  按需配额数
+    *  **参数解释**： 按需配额数 **取值范围**： 0到10000000
     *
     * @return int|null
     */
@@ -375,7 +375,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets onDemandNum
     *
-    * @param int|null $onDemandNum 按需配额数
+    * @param int|null $onDemandNum **参数解释**： 按需配额数 **取值范围**： 0到10000000
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedNum
-    *  已使用配额数
+    *  **参数解释**： 已使用配额数 **取值范围**： 0到10000000
     *
     * @return int|null
     */
@@ -399,7 +399,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets usedNum
     *
-    * @param int|null $usedNum 已使用配额数
+    * @param int|null $usedNum **参数解释**： 已使用配额数 **取值范围**： 0到10000000
     *
     * @return $this
     */
@@ -411,7 +411,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets idleNum
-    *  空闲配额数
+    *  **参数解释**： 空闲配额数 **取值范围**： 0到10000000
     *
     * @return int|null
     */
@@ -423,7 +423,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets idleNum
     *
-    * @param int|null $idleNum 空闲配额数
+    * @param int|null $idleNum **参数解释**： 空闲配额数 **取值范围**： 0到10000000
     *
     * @return $this
     */
@@ -435,7 +435,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets normalNum
-    *  正常配额数
+    *  **参数解释**： 正常配额数 **取值范围**： 0到10000000
     *
     * @return int|null
     */
@@ -447,7 +447,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets normalNum
     *
-    * @param int|null $normalNum 正常配额数
+    * @param int|null $normalNum **参数解释**： 正常配额数 **取值范围**： 0到10000000
     *
     * @return $this
     */
@@ -459,7 +459,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets expiredNum
-    *  过期配额数
+    *  **参数解释**： 过期配额数 **取值范围**： 0到10000000
     *
     * @return int|null
     */
@@ -471,7 +471,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets expiredNum
     *
-    * @param int|null $expiredNum 过期配额数
+    * @param int|null $expiredNum **参数解释**： 过期配额数 **取值范围**： 0到10000000
     *
     * @return $this
     */
@@ -483,7 +483,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  **参数解释**： 创建时间 **取值范围**： 0到9223372036854775807
     *
     * @return int|null
     */
@@ -495,7 +495,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 创建时间
+    * @param int|null $createTime **参数解释**： 创建时间 **取值范围**： 0到9223372036854775807
     *
     * @return $this
     */
@@ -507,7 +507,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets freezeNum
-    *  冻结配额数
+    *  **参数解释**： 冻结配额数 **取值范围**： 0到10000000
     *
     * @return int|null
     */
@@ -519,7 +519,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets freezeNum
     *
-    * @param int|null $freezeNum 冻结配额数
+    * @param int|null $freezeNum **参数解释**： 冻结配额数 **取值范围**： 0到10000000
     *
     * @return $this
     */
@@ -531,7 +531,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaStatisticsList
-    *  配额统计列表
+    *  **参数解释**： 配额统计列表 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\QuotaStatisticsResponseInfo[]|null
     */
@@ -543,7 +543,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets quotaStatisticsList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\QuotaStatisticsResponseInfo[]|null $quotaStatisticsList 配额统计列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\QuotaStatisticsResponseInfo[]|null $quotaStatisticsList **参数解释**： 配额统计列表 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -555,7 +555,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  配额总数
+    *  **参数解释**： 配额总数 **取值范围**： 0到10000000
     *
     * @return int|null
     */
@@ -567,7 +567,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 配额总数
+    * @param int|null $totalNum **参数解释**： 配额总数 **取值范围**： 0到10000000
     *
     * @return $this
     */
@@ -579,7 +579,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  配额列表
+    *  **参数解释**： 配额列表 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\QuotaResourcesResponseInfo[]|null
     */
@@ -591,7 +591,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\QuotaResourcesResponseInfo[]|null $dataList 配额列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\QuotaResourcesResponseInfo[]|null $dataList **参数解释**： 配额列表 **取值范围**： 不涉及
     *
     * @return $this
     */

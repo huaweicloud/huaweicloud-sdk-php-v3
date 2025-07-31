@@ -21,7 +21,7 @@ class ListAppsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  软件总数
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * dataList  软件列表
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListAppsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  软件总数
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * dataList  软件列表
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListAppsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  软件总数
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * dataList  软件列表
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListAppsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  软件总数
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * dataList  软件列表
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListAppsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  软件总数
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * dataList  软件列表
     *
     * @var string[]
@@ -170,8 +170,8 @@ class ListAppsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 10000)) {
-                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 10000.";
+            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 2147483647.";
             }
             if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] < 0)) {
                 $invalidProperties[] = "invalid value for 'totalNum', must be bigger than or equal to 0.";
@@ -192,7 +192,7 @@ class ListAppsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  软件总数
+    *  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListAppsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 软件总数
+    * @param int|null $totalNum **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */

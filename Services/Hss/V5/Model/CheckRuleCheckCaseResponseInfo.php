@@ -20,9 +20,9 @@ class CheckRuleCheckCaseResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * checkDescription  检测用例描述
-    * currentValue  当前结果
-    * suggestValue  期待结果
+    * checkDescription  **参数解释**: 检测用例描述 **取值范围**: 不涉及
+    * currentValue  **参数解释**: 当前结果 **取值范围**: 不涉及
+    * suggestValue  **参数解释**: 期待结果 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class CheckRuleCheckCaseResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * checkDescription  检测用例描述
-    * currentValue  当前结果
-    * suggestValue  期待结果
+    * checkDescription  **参数解释**: 检测用例描述 **取值范围**: 不涉及
+    * currentValue  **参数解释**: 当前结果 **取值范围**: 不涉及
+    * suggestValue  **参数解释**: 期待结果 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class CheckRuleCheckCaseResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * checkDescription  检测用例描述
-    * currentValue  当前结果
-    * suggestValue  期待结果
+    * checkDescription  **参数解释**: 检测用例描述 **取值范围**: 不涉及
+    * currentValue  **参数解释**: 当前结果 **取值范围**: 不涉及
+    * suggestValue  **参数解释**: 期待结果 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class CheckRuleCheckCaseResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * checkDescription  检测用例描述
-    * currentValue  当前结果
-    * suggestValue  期待结果
+    * checkDescription  **参数解释**: 检测用例描述 **取值范围**: 不涉及
+    * currentValue  **参数解释**: 当前结果 **取值范围**: 不涉及
+    * suggestValue  **参数解释**: 期待结果 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class CheckRuleCheckCaseResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * checkDescription  检测用例描述
-    * currentValue  当前结果
-    * suggestValue  期待结果
+    * checkDescription  **参数解释**: 检测用例描述 **取值范围**: 不涉及
+    * currentValue  **参数解释**: 当前结果 **取值范围**: 不涉及
+    * suggestValue  **参数解释**: 期待结果 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -214,7 +214,7 @@ class CheckRuleCheckCaseResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkDescription
-    *  检测用例描述
+    *  **参数解释**: 检测用例描述 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -226,7 +226,7 @@ class CheckRuleCheckCaseResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkDescription
     *
-    * @param string|null $checkDescription 检测用例描述
+    * @param string|null $checkDescription **参数解释**: 检测用例描述 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class CheckRuleCheckCaseResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets currentValue
-    *  当前结果
+    *  **参数解释**: 当前结果 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -250,7 +250,7 @@ class CheckRuleCheckCaseResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets currentValue
     *
-    * @param string|null $currentValue 当前结果
+    * @param string|null $currentValue **参数解释**: 当前结果 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -262,7 +262,7 @@ class CheckRuleCheckCaseResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets suggestValue
-    *  期待结果
+    *  **参数解释**: 期待结果 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class CheckRuleCheckCaseResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets suggestValue
     *
-    * @param string|null $suggestValue 期待结果
+    * @param string|null $suggestValue **参数解释**: 期待结果 **取值范围**: 不涉及
     *
     * @return $this
     */

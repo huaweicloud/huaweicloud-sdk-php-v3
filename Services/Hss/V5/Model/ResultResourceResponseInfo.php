@@ -20,9 +20,9 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * agentId  Agent ID
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
@@ -52,9 +52,9 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * agentId  Agent ID
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
@@ -105,9 +105,9 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * agentId  Agent ID
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
@@ -137,9 +137,9 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * agentId  Agent ID
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
@@ -169,9 +169,9 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * agentId  Agent ID
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
@@ -373,7 +373,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -385,7 +385,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -397,7 +397,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return string|null
     */
@@ -409,7 +409,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器ID
+    * @param string|null $hostId **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -421,7 +421,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  Agent ID
+    *  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -433,7 +433,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId Agent ID
+    * @param string|null $agentId **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return $this
     */

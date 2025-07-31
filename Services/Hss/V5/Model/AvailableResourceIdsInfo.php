@@ -20,9 +20,9 @@ class AvailableResourceIdsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceId  资源ID
-    * currentTime  当前时间
-    * sharedQuota  是否共享配额   - shared：共享的   - unshared：非共享的
+    * resourceId  **参数解释**： 资源ID **取值范围**： 字符长度1-256位
+    * currentTime  **参数解释**： 当前时间 **取值范围**： 字符长度1-64位
+    * sharedQuota  **参数解释**： 是否共享配额 **取值范围**：   - shared：共享的   - unshared：非共享的
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class AvailableResourceIdsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceId  资源ID
-    * currentTime  当前时间
-    * sharedQuota  是否共享配额   - shared：共享的   - unshared：非共享的
+    * resourceId  **参数解释**： 资源ID **取值范围**： 字符长度1-256位
+    * currentTime  **参数解释**： 当前时间 **取值范围**： 字符长度1-64位
+    * sharedQuota  **参数解释**： 是否共享配额 **取值范围**：   - shared：共享的   - unshared：非共享的
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class AvailableResourceIdsInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceId  资源ID
-    * currentTime  当前时间
-    * sharedQuota  是否共享配额   - shared：共享的   - unshared：非共享的
+    * resourceId  **参数解释**： 资源ID **取值范围**： 字符长度1-256位
+    * currentTime  **参数解释**： 当前时间 **取值范围**： 字符长度1-64位
+    * sharedQuota  **参数解释**： 是否共享配额 **取值范围**：   - shared：共享的   - unshared：非共享的
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class AvailableResourceIdsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceId  资源ID
-    * currentTime  当前时间
-    * sharedQuota  是否共享配额   - shared：共享的   - unshared：非共享的
+    * resourceId  **参数解释**： 资源ID **取值范围**： 字符长度1-256位
+    * currentTime  **参数解释**： 当前时间 **取值范围**： 字符长度1-64位
+    * sharedQuota  **参数解释**： 是否共享配额 **取值范围**：   - shared：共享的   - unshared：非共享的
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class AvailableResourceIdsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceId  资源ID
-    * currentTime  当前时间
-    * sharedQuota  是否共享配额   - shared：共享的   - unshared：非共享的
+    * resourceId  **参数解释**： 资源ID **取值范围**： 字符长度1-256位
+    * currentTime  **参数解释**： 当前时间 **取值范围**： 字符长度1-64位
+    * sharedQuota  **参数解释**： 是否共享配额 **取值范围**：   - shared：共享的   - unshared：非共享的
     *
     * @var string[]
     */
@@ -214,7 +214,7 @@ class AvailableResourceIdsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  资源ID
+    *  **参数解释**： 资源ID **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -226,7 +226,7 @@ class AvailableResourceIdsInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 资源ID
+    * @param string|null $resourceId **参数解释**： 资源ID **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class AvailableResourceIdsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets currentTime
-    *  当前时间
+    *  **参数解释**： 当前时间 **取值范围**： 字符长度1-64位
     *
     * @return string|null
     */
@@ -250,7 +250,7 @@ class AvailableResourceIdsInfo implements ModelInterface, ArrayAccess
     /**
     * Sets currentTime
     *
-    * @param string|null $currentTime 当前时间
+    * @param string|null $currentTime **参数解释**： 当前时间 **取值范围**： 字符长度1-64位
     *
     * @return $this
     */
@@ -262,7 +262,7 @@ class AvailableResourceIdsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets sharedQuota
-    *  是否共享配额   - shared：共享的   - unshared：非共享的
+    *  **参数解释**： 是否共享配额 **取值范围**：   - shared：共享的   - unshared：非共享的
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class AvailableResourceIdsInfo implements ModelInterface, ArrayAccess
     /**
     * Sets sharedQuota
     *
-    * @param string|null $sharedQuota 是否共享配额   - shared：共享的   - unshared：非共享的
+    * @param string|null $sharedQuota **参数解释**： 是否共享配额 **取值范围**：   - shared：共享的   - unshared：非共享的
     *
     * @return $this
     */

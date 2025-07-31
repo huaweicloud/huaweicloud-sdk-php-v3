@@ -20,21 +20,25 @@ class SetJobBatchNameRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'xAppUserId' => 'string',
             'body' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SetJobBatchNameReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'xAppUserId' => null,
         'body' => null
     ];
 
@@ -61,31 +65,37 @@ class SetJobBatchNameRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'xAppUserId' => 'X-App-UserId',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
+            'xAppUserId' => 'setXAppUserId',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
+            'xAppUserId' => 'getXAppUserId',
             'body' => 'getBody'
     ];
 
@@ -147,6 +157,7 @@ class SetJobBatchNameRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -158,6 +169,12 @@ class SetJobBatchNameRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['xAppUserId']) && (mb_strlen($this->container['xAppUserId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'xAppUserId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['xAppUserId']) && (mb_strlen($this->container['xAppUserId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'xAppUserId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -170,6 +187,30 @@ class SetJobBatchNameRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets xAppUserId
+    *  第三方用户ID。不允许输入中文。
+    *
+    * @return string|null
+    */
+    public function getXAppUserId()
+    {
+        return $this->container['xAppUserId'];
+    }
+
+    /**
+    * Sets xAppUserId
+    *
+    * @param string|null $xAppUserId 第三方用户ID。不允许输入中文。
+    *
+    * @return $this
+    */
+    public function setXAppUserId($xAppUserId)
+    {
+        $this->container['xAppUserId'] = $xAppUserId;
+        return $this;
     }
 
     /**

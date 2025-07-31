@@ -21,8 +21,8 @@ class ListRiskConfigCheckRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  风险总数
-    * dataList  数据列表
+    * totalNum  **参数解释**: 风险总数 **取值范围**: 不涉及
+    * dataList  **参数解释**: 数据列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListRiskConfigCheckRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  风险总数
-    * dataList  数据列表
+    * totalNum  **参数解释**: 风险总数 **取值范围**: 不涉及
+    * dataList  **参数解释**: 数据列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListRiskConfigCheckRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  风险总数
-    * dataList  数据列表
+    * totalNum  **参数解释**: 风险总数 **取值范围**: 不涉及
+    * dataList  **参数解释**: 数据列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListRiskConfigCheckRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  风险总数
-    * dataList  数据列表
+    * totalNum  **参数解释**: 风险总数 **取值范围**: 不涉及
+    * dataList  **参数解释**: 数据列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListRiskConfigCheckRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  风险总数
-    * dataList  数据列表
+    * totalNum  **参数解释**: 风险总数 **取值范围**: 不涉及
+    * dataList  **参数解释**: 数据列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListRiskConfigCheckRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  风险总数
+    *  **参数解释**: 风险总数 **取值范围**: 不涉及
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListRiskConfigCheckRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 风险总数
+    * @param int|null $totalNum **参数解释**: 风险总数 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListRiskConfigCheckRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  数据列表
+    *  **参数解释**: 数据列表 **取值范围**: 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\CheckRuleRiskInfoResponseInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListRiskConfigCheckRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\CheckRuleRiskInfoResponseInfo[]|null $dataList 数据列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\CheckRuleRiskInfoResponseInfo[]|null $dataList **参数解释**: 数据列表 **取值范围**: 不涉及
     *
     * @return $this
     */

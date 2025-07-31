@@ -23,6 +23,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * clusterId  集群id
     * protectNodeNum  集群开启防护节点数量
     * protectInterruptNodeNum  集群防护中断节点数量
+    * protectDegradationNodeNum  集群防护降级节点数量
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
@@ -39,6 +40,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
             'clusterId' => 'string',
             'protectNodeNum' => 'int',
             'protectInterruptNodeNum' => 'int',
+            'protectDegradationNodeNum' => 'int',
             'unprotectNodeNum' => 'int',
             'nodeTotalNum' => 'int',
             'clusterName' => 'string',
@@ -55,6 +57,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * clusterId  集群id
     * protectNodeNum  集群开启防护节点数量
     * protectInterruptNodeNum  集群防护中断节点数量
+    * protectDegradationNodeNum  集群防护降级节点数量
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
@@ -71,6 +74,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
         'clusterId' => null,
         'protectNodeNum' => null,
         'protectInterruptNodeNum' => null,
+        'protectDegradationNodeNum' => null,
         'unprotectNodeNum' => null,
         'nodeTotalNum' => null,
         'clusterName' => null,
@@ -108,6 +112,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * clusterId  集群id
     * protectNodeNum  集群开启防护节点数量
     * protectInterruptNodeNum  集群防护中断节点数量
+    * protectDegradationNodeNum  集群防护降级节点数量
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
@@ -124,6 +129,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
             'clusterId' => 'cluster_id',
             'protectNodeNum' => 'protect_node_num',
             'protectInterruptNodeNum' => 'protect_interrupt_node_num',
+            'protectDegradationNodeNum' => 'protect_degradation_node_num',
             'unprotectNodeNum' => 'unprotect_node_num',
             'nodeTotalNum' => 'node_total_num',
             'clusterName' => 'cluster_name',
@@ -140,6 +146,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * clusterId  集群id
     * protectNodeNum  集群开启防护节点数量
     * protectInterruptNodeNum  集群防护中断节点数量
+    * protectDegradationNodeNum  集群防护降级节点数量
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
@@ -156,6 +163,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
             'clusterId' => 'setClusterId',
             'protectNodeNum' => 'setProtectNodeNum',
             'protectInterruptNodeNum' => 'setProtectInterruptNodeNum',
+            'protectDegradationNodeNum' => 'setProtectDegradationNodeNum',
             'unprotectNodeNum' => 'setUnprotectNodeNum',
             'nodeTotalNum' => 'setNodeTotalNum',
             'clusterName' => 'setClusterName',
@@ -172,6 +180,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * clusterId  集群id
     * protectNodeNum  集群开启防护节点数量
     * protectInterruptNodeNum  集群防护中断节点数量
+    * protectDegradationNodeNum  集群防护降级节点数量
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
@@ -188,6 +197,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
             'clusterId' => 'getClusterId',
             'protectNodeNum' => 'getProtectNodeNum',
             'protectInterruptNodeNum' => 'getProtectInterruptNodeNum',
+            'protectDegradationNodeNum' => 'getProtectDegradationNodeNum',
             'unprotectNodeNum' => 'getUnprotectNodeNum',
             'nodeTotalNum' => 'getNodeTotalNum',
             'clusterName' => 'getClusterName',
@@ -260,6 +270,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['protectNodeNum'] = isset($data['protectNodeNum']) ? $data['protectNodeNum'] : null;
         $this->container['protectInterruptNodeNum'] = isset($data['protectInterruptNodeNum']) ? $data['protectInterruptNodeNum'] : null;
+        $this->container['protectDegradationNodeNum'] = isset($data['protectDegradationNodeNum']) ? $data['protectDegradationNodeNum'] : null;
         $this->container['unprotectNodeNum'] = isset($data['unprotectNodeNum']) ? $data['unprotectNodeNum'] : null;
         $this->container['nodeTotalNum'] = isset($data['nodeTotalNum']) ? $data['nodeTotalNum'] : null;
         $this->container['clusterName'] = isset($data['clusterName']) ? $data['clusterName'] : null;
@@ -293,6 +304,12 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['protectInterruptNodeNum']) && ($this->container['protectInterruptNodeNum'] < 0)) {
                 $invalidProperties[] = "invalid value for 'protectInterruptNodeNum', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['protectDegradationNodeNum']) && ($this->container['protectDegradationNodeNum'] > 2000)) {
+                $invalidProperties[] = "invalid value for 'protectDegradationNodeNum', must be smaller than or equal to 2000.";
+            }
+            if (!is_null($this->container['protectDegradationNodeNum']) && ($this->container['protectDegradationNodeNum'] < 0)) {
+                $invalidProperties[] = "invalid value for 'protectDegradationNodeNum', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['unprotectNodeNum']) && ($this->container['unprotectNodeNum'] > 2000)) {
                 $invalidProperties[] = "invalid value for 'unprotectNodeNum', must be smaller than or equal to 2000.";
@@ -413,6 +430,30 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     public function setProtectInterruptNodeNum($protectInterruptNodeNum)
     {
         $this->container['protectInterruptNodeNum'] = $protectInterruptNodeNum;
+        return $this;
+    }
+
+    /**
+    * Gets protectDegradationNodeNum
+    *  集群防护降级节点数量
+    *
+    * @return int|null
+    */
+    public function getProtectDegradationNodeNum()
+    {
+        return $this->container['protectDegradationNodeNum'];
+    }
+
+    /**
+    * Sets protectDegradationNodeNum
+    *
+    * @param int|null $protectDegradationNodeNum 集群防护降级节点数量
+    *
+    * @return $this
+    */
+    public function setProtectDegradationNodeNum($protectDegradationNodeNum)
+    {
+        $this->container['protectDegradationNodeNum'] = $protectDegradationNodeNum;
         return $this;
     }
 

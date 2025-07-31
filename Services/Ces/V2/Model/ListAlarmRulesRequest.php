@@ -264,17 +264,14 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['alarmId']) && !preg_match("/^al([0-9A-Za-z]){22}$/", $this->container['alarmId'])) {
                 $invalidProperties[] = "invalid value for 'alarmId', must be conform to the pattern /^al([0-9A-Za-z]){22}$/.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 128)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['name']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['name'])) {
-                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
+            if (!is_null($this->container['name']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-){1, 128}$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-){1, 128}$/.";
             }
             if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 32)) {
                 $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 0)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['namespace']) && !preg_match("/^((([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*)|)$/", $this->container['namespace'])) {
                 $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^((([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*)|)$/.";
@@ -282,11 +279,14 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) > 700)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 700.";
             }
+            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['resourceId']) && !preg_match("/^([a-z]|[A-Z]|[0-9]|_|-|:|,|\\.|)+$/", $this->container['resourceId'])) {
                 $invalidProperties[] = "invalid value for 'resourceId', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|_|-|:|,|\\.|)+$/.";
             }
-            if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^((([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12})|0)$/", $this->container['enterpriseProjectId'])) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^((([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12})|0)$/.";
+            if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^((([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12})|0|all_granted_eps)$/", $this->container['enterpriseProjectId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^((([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12})|0|all_granted_eps)$/.";
             }
             if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'productName', the character length must be smaller than or equal to 128.";

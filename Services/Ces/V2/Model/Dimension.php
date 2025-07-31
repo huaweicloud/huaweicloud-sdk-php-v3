@@ -172,11 +172,23 @@ class Dimension implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-            if (!preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){1,32}$/", $this->container['name'])) {
-                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){1,32}$/.";
+            if ((mb_strlen($this->container['name']) > 32)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['value']) && !preg_match("/^((([a-z]|[A-Z]|[0-9]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.)*)|\\*){1,256}$/", $this->container['value'])) {
-                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^((([a-z]|[A-Z]|[0-9]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.)*)|\\*){1,256}$/.";
+            if ((mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
+            if (!preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-)*$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-)*$/.";
+            }
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 256)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 1)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['value']) && !preg_match("/^((([a-z]|[A-Z]|[0-9]|\\*|_|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\\.|\\*|\/|#|\\(|\\))*))$/", $this->container['value'])) {
+                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^((([a-z]|[A-Z]|[0-9]|\\*|_|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\\.|\\*|\/|#|\\(|\\))*))$/.";
             }
         return $invalidProperties;
     }

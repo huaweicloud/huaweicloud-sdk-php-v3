@@ -21,25 +21,21 @@ class SetAlarmTopicConfigInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isUseTopic  主题使用状态  - true: 已被使用  - false: 未被使用
     * status  状态  - SUCCESS: 成功  - FAILED: 失败
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'isUseTopic' => 'bool',
             'status' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isUseTopic  主题使用状态  - true: 已被使用  - false: 未被使用
     * status  状态  - SUCCESS: 成功  - FAILED: 失败
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'isUseTopic' => null,
         'status' => null
     ];
 
@@ -66,37 +62,31 @@ class SetAlarmTopicConfigInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isUseTopic  主题使用状态  - true: 已被使用  - false: 未被使用
     * status  状态  - SUCCESS: 成功  - FAILED: 失败
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'isUseTopic' => 'is_use_topic',
             'status' => 'status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isUseTopic  主题使用状态  - true: 已被使用  - false: 未被使用
     * status  状态  - SUCCESS: 成功  - FAILED: 失败
     *
     * @var string[]
     */
     protected static $setters = [
-            'isUseTopic' => 'setIsUseTopic',
             'status' => 'setStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isUseTopic  主题使用状态  - true: 已被使用  - false: 未被使用
     * status  状态  - SUCCESS: 成功  - FAILED: 失败
     *
     * @var string[]
     */
     protected static $getters = [
-            'isUseTopic' => 'getIsUseTopic',
             'status' => 'getStatus'
     ];
 
@@ -158,7 +148,6 @@ class SetAlarmTopicConfigInfoResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['isUseTopic'] = isset($data['isUseTopic']) ? $data['isUseTopic'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
@@ -188,30 +177,6 @@ class SetAlarmTopicConfigInfoResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets isUseTopic
-    *  主题使用状态  - true: 已被使用  - false: 未被使用
-    *
-    * @return bool|null
-    */
-    public function getIsUseTopic()
-    {
-        return $this->container['isUseTopic'];
-    }
-
-    /**
-    * Sets isUseTopic
-    *
-    * @param bool|null $isUseTopic 主题使用状态  - true: 已被使用  - false: 未被使用
-    *
-    * @return $this
-    */
-    public function setIsUseTopic($isUseTopic)
-    {
-        $this->container['isUseTopic'] = $isUseTopic;
-        return $this;
     }
 
     /**

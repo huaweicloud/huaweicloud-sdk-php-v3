@@ -283,14 +283,8 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['templateName']) && (mb_strlen($this->container['templateName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'templateName', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['templateName']) && (mb_strlen($this->container['templateName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'templateName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['templateName']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s)+$/", $this->container['templateName'])) {
-                $invalidProperties[] = "invalid value for 'templateName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s)+$/.";
+            if (!is_null($this->container['templateName']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s){1,128}$/", $this->container['templateName'])) {
+                $invalidProperties[] = "invalid value for 'templateName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s){1,128}$/.";
             }
             if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'productName', the character length must be smaller than or equal to 128.";

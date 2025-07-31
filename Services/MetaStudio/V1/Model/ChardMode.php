@@ -12,6 +12,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
      */
     const PERIODIC = 'PERIODIC';
     const ONE_TIME = 'ONE_TIME';
+    const ON_DEMAND = 'ON_DEMAND';
     
     /**
      * Gets allowable values of the enum
@@ -22,6 +23,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
         return [
             self::PERIODIC,
             self::ONE_TIME,
+            self::ON_DEMAND,
         ];
     }
 }

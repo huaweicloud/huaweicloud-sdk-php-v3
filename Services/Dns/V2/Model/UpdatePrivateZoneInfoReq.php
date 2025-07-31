@@ -20,9 +20,9 @@ class UpdatePrivateZoneInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * description  域名的描述信息。长度不超过255个字符。
-    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
-    * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
+    * description  **参数解释：** 域名的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 默认为空，表示维持原值。
+    * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。   **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 默认为空，表示维持原值。
+    * ttl  **参数解释：** 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 **约束限制：** 不涉及。 **取值范围：** 1~2147483647。 **默认取值：** 默认为空，表示维持原值。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class UpdatePrivateZoneInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * description  域名的描述信息。长度不超过255个字符。
-    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
-    * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
+    * description  **参数解释：** 域名的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 默认为空，表示维持原值。
+    * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。   **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 默认为空，表示维持原值。
+    * ttl  **参数解释：** 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 **约束限制：** 不涉及。 **取值范围：** 1~2147483647。 **默认取值：** 默认为空，表示维持原值。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class UpdatePrivateZoneInfoReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * description  域名的描述信息。长度不超过255个字符。
-    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
-    * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
+    * description  **参数解释：** 域名的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 默认为空，表示维持原值。
+    * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。   **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 默认为空，表示维持原值。
+    * ttl  **参数解释：** 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 **约束限制：** 不涉及。 **取值范围：** 1~2147483647。 **默认取值：** 默认为空，表示维持原值。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class UpdatePrivateZoneInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * description  域名的描述信息。长度不超过255个字符。
-    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
-    * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
+    * description  **参数解释：** 域名的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 默认为空，表示维持原值。
+    * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。   **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 默认为空，表示维持原值。
+    * ttl  **参数解释：** 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 **约束限制：** 不涉及。 **取值范围：** 1~2147483647。 **默认取值：** 默认为空，表示维持原值。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class UpdatePrivateZoneInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * description  域名的描述信息。长度不超过255个字符。
-    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
-    * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
+    * description  **参数解释：** 域名的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 默认为空，表示维持原值。
+    * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。   **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 默认为空，表示维持原值。
+    * ttl  **参数解释：** 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 **约束限制：** 不涉及。 **取值范围：** 1~2147483647。 **默认取值：** 默认为空，表示维持原值。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class UpdatePrivateZoneInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  域名的描述信息。长度不超过255个字符。
+    *  **参数解释：** 域名的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 默认为空，表示维持原值。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class UpdatePrivateZoneInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 域名的描述信息。长度不超过255个字符。
+    * @param string|null $description **参数解释：** 域名的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 默认为空，表示维持原值。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class UpdatePrivateZoneInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
-    *  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
+    *  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。   **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 默认为空，表示维持原值。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class UpdatePrivateZoneInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email 管理该域名的管理员邮箱，用于生成该域名的SOA记录。
+    * @param string|null $email **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。   **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 默认为空，表示维持原值。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class UpdatePrivateZoneInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets ttl
-    *  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
+    *  **参数解释：** 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 **约束限制：** 不涉及。 **取值范围：** 1~2147483647。 **默认取值：** 默认为空，表示维持原值。
     *
     * @return int|null
     */
@@ -256,7 +256,7 @@ class UpdatePrivateZoneInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets ttl
     *
-    * @param int|null $ttl 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
+    * @param int|null $ttl **参数解释：** 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 **约束限制：** 不涉及。 **取值范围：** 1~2147483647。 **默认取值：** 默认为空，表示维持原值。
     *
     * @return $this
     */

@@ -21,21 +21,25 @@ class ClusterRing implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * ringHosts  **参数解释**： 集群主机信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * unShrinkableClusterRing  **参数解释**： 是否可以缩容。 **约束限制**： 不涉及。 **取值范围**： false|true。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'ringHosts' => '\HuaweiCloud\SDK\Dws\V2\Model\RingHost[]'
+            'ringHosts' => '\HuaweiCloud\SDK\Dws\V2\Model\RingHost[]',
+            'unShrinkableClusterRing' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * ringHosts  **参数解释**： 集群主机信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * unShrinkableClusterRing  **参数解释**： 是否可以缩容。 **约束限制**： 不涉及。 **取值范围**： false|true。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'ringHosts' => null
+        'ringHosts' => null,
+        'unShrinkableClusterRing' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ClusterRing implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * ringHosts  **参数解释**： 集群主机信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * unShrinkableClusterRing  **参数解释**： 是否可以缩容。 **约束限制**： 不涉及。 **取值范围**： false|true。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'ringHosts' => 'ring_hosts'
+            'ringHosts' => 'ring_hosts',
+            'unShrinkableClusterRing' => 'un_shrinkable_cluster_ring'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * ringHosts  **参数解释**： 集群主机信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * unShrinkableClusterRing  **参数解释**： 是否可以缩容。 **约束限制**： 不涉及。 **取值范围**： false|true。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'ringHosts' => 'setRingHosts'
+            'ringHosts' => 'setRingHosts',
+            'unShrinkableClusterRing' => 'setUnShrinkableClusterRing'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * ringHosts  **参数解释**： 集群主机信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * unShrinkableClusterRing  **参数解释**： 是否可以缩容。 **约束限制**： 不涉及。 **取值范围**： false|true。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'ringHosts' => 'getRingHosts'
+            'ringHosts' => 'getRingHosts',
+            'unShrinkableClusterRing' => 'getUnShrinkableClusterRing'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ClusterRing implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['ringHosts'] = isset($data['ringHosts']) ? $data['ringHosts'] : null;
+        $this->container['unShrinkableClusterRing'] = isset($data['unShrinkableClusterRing']) ? $data['unShrinkableClusterRing'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class ClusterRing implements ModelInterface, ArrayAccess
     public function setRingHosts($ringHosts)
     {
         $this->container['ringHosts'] = $ringHosts;
+        return $this;
+    }
+
+    /**
+    * Gets unShrinkableClusterRing
+    *  **参数解释**： 是否可以缩容。 **约束限制**： 不涉及。 **取值范围**： false|true。 **默认取值**： 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getUnShrinkableClusterRing()
+    {
+        return $this->container['unShrinkableClusterRing'];
+    }
+
+    /**
+    * Sets unShrinkableClusterRing
+    *
+    * @param bool|null $unShrinkableClusterRing **参数解释**： 是否可以缩容。 **约束限制**： 不涉及。 **取值范围**： false|true。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setUnShrinkableClusterRing($unShrinkableClusterRing)
+    {
+        $this->container['unShrinkableClusterRing'] = $unShrinkableClusterRing;
         return $this;
     }
 

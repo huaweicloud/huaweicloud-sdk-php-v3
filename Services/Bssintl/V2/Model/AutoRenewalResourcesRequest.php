@@ -21,21 +21,25 @@ class AutoRenewalResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceId  资源实例ID。您可以调用“查询客户包年包月资源列表”接口获取资源ID。在设置弹性云服务器自动续费时，能够自动将其挂载的硬盘一并设置为自动续费。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resourceId' => 'string'
+            'resourceId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Bssintl\V2\Model\AutoRenewalResourcesReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceId  资源实例ID。您可以调用“查询客户包年包月资源列表”接口获取资源ID。在设置弹性云服务器自动续费时，能够自动将其挂载的硬盘一并设置为自动续费。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resourceId' => null
+        'resourceId' => null,
+        'body' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class AutoRenewalResourcesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceId  资源实例ID。您可以调用“查询客户包年包月资源列表”接口获取资源ID。在设置弹性云服务器自动续费时，能够自动将其挂载的硬盘一并设置为自动续费。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'resourceId' => 'resource_id'
+            'resourceId' => 'resource_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceId  资源实例ID。您可以调用“查询客户包年包月资源列表”接口获取资源ID。在设置弹性云服务器自动续费时，能够自动将其挂载的硬盘一并设置为自动续费。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'resourceId' => 'setResourceId'
+            'resourceId' => 'setResourceId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceId  资源实例ID。您可以调用“查询客户包年包月资源列表”接口获取资源ID。在设置弹性云服务器自动续费时，能够自动将其挂载的硬盘一并设置为自动续费。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'resourceId' => 'getResourceId'
+            'resourceId' => 'getResourceId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -148,6 +158,7 @@ class AutoRenewalResourcesRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class AutoRenewalResourcesRequest implements ModelInterface, ArrayAccess
     public function setResourceId($resourceId)
     {
         $this->container['resourceId'] = $resourceId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Bssintl\V2\Model\AutoRenewalResourcesReq|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\AutoRenewalResourcesReq|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

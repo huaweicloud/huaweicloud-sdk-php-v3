@@ -20,9 +20,9 @@ class AgentDimension implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  维度名称，枚举类型，类型有：   mount_point：挂载点，   disk：磁盘，   proc：进程，   gpu：显卡，   raid: RAID控制器
-    * value  维度值，32位字符串，如：2e84018fc8b4484b94e89aae212fe615
-    * originValue  实际维度信息，字符串，如：vda。
+    * name  **参数解释**： 维度名称。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。
+    * value  **参数解释**： 维度值。 **取值范围**： 字符串长度为32。
+    * originValue  **参数解释**： 实际维度信息。 **取值范围** 字符串长度在 1 到 1024 之间。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class AgentDimension implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  维度名称，枚举类型，类型有：   mount_point：挂载点，   disk：磁盘，   proc：进程，   gpu：显卡，   raid: RAID控制器
-    * value  维度值，32位字符串，如：2e84018fc8b4484b94e89aae212fe615
-    * originValue  实际维度信息，字符串，如：vda。
+    * name  **参数解释**： 维度名称。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。
+    * value  **参数解释**： 维度值。 **取值范围**： 字符串长度为32。
+    * originValue  **参数解释**： 实际维度信息。 **取值范围** 字符串长度在 1 到 1024 之间。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class AgentDimension implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  维度名称，枚举类型，类型有：   mount_point：挂载点，   disk：磁盘，   proc：进程，   gpu：显卡，   raid: RAID控制器
-    * value  维度值，32位字符串，如：2e84018fc8b4484b94e89aae212fe615
-    * originValue  实际维度信息，字符串，如：vda。
+    * name  **参数解释**： 维度名称。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。
+    * value  **参数解释**： 维度值。 **取值范围**： 字符串长度为32。
+    * originValue  **参数解释**： 实际维度信息。 **取值范围** 字符串长度在 1 到 1024 之间。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class AgentDimension implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  维度名称，枚举类型，类型有：   mount_point：挂载点，   disk：磁盘，   proc：进程，   gpu：显卡，   raid: RAID控制器
-    * value  维度值，32位字符串，如：2e84018fc8b4484b94e89aae212fe615
-    * originValue  实际维度信息，字符串，如：vda。
+    * name  **参数解释**： 维度名称。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。
+    * value  **参数解释**： 维度值。 **取值范围**： 字符串长度为32。
+    * originValue  **参数解释**： 实际维度信息。 **取值范围** 字符串长度在 1 到 1024 之间。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class AgentDimension implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  维度名称，枚举类型，类型有：   mount_point：挂载点，   disk：磁盘，   proc：进程，   gpu：显卡，   raid: RAID控制器
-    * value  维度值，32位字符串，如：2e84018fc8b4484b94e89aae212fe615
-    * originValue  实际维度信息，字符串，如：vda。
+    * name  **参数解释**： 维度名称。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。
+    * value  **参数解释**： 维度值。 **取值范围**： 字符串长度为32。
+    * originValue  **参数解释**： 实际维度信息。 **取值范围** 字符串长度在 1 到 1024 之间。
     *
     * @var string[]
     */
@@ -237,7 +237,7 @@ class AgentDimension implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  维度名称，枚举类型，类型有：   mount_point：挂载点，   disk：磁盘，   proc：进程，   gpu：显卡，   raid: RAID控制器
+    *  **参数解释**： 维度名称。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。
     *
     * @return string|null
     */
@@ -249,7 +249,7 @@ class AgentDimension implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 维度名称，枚举类型，类型有：   mount_point：挂载点，   disk：磁盘，   proc：进程，   gpu：显卡，   raid: RAID控制器
+    * @param string|null $name **参数解释**： 维度名称。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。
     *
     * @return $this
     */
@@ -261,7 +261,7 @@ class AgentDimension implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  维度值，32位字符串，如：2e84018fc8b4484b94e89aae212fe615
+    *  **参数解释**： 维度值。 **取值范围**： 字符串长度为32。
     *
     * @return string|null
     */
@@ -273,7 +273,7 @@ class AgentDimension implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 维度值，32位字符串，如：2e84018fc8b4484b94e89aae212fe615
+    * @param string|null $value **参数解释**： 维度值。 **取值范围**： 字符串长度为32。
     *
     * @return $this
     */
@@ -285,7 +285,7 @@ class AgentDimension implements ModelInterface, ArrayAccess
 
     /**
     * Gets originValue
-    *  实际维度信息，字符串，如：vda。
+    *  **参数解释**： 实际维度信息。 **取值范围** 字符串长度在 1 到 1024 之间。
     *
     * @return string|null
     */
@@ -297,7 +297,7 @@ class AgentDimension implements ModelInterface, ArrayAccess
     /**
     * Sets originValue
     *
-    * @param string|null $originValue 实际维度信息，字符串，如：vda。
+    * @param string|null $originValue **参数解释**： 实际维度信息。 **取值范围** 字符串长度在 1 到 1024 之间。
     *
     * @return $this
     */

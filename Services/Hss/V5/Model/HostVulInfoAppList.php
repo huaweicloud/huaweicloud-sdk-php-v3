@@ -20,10 +20,10 @@ class HostVulInfoAppList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * appName  软件名称
-    * appVersion  软件版本
-    * upgradeVersion  修复漏洞软件需要升级到的版本
-    * appPath  应用软件的路径（只有应用漏洞有该字段）
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符范围0-256位
+    * appVersion  **参数解释**: 软件版本 **取值范围**: 字符范围0-256位
+    * upgradeVersion  **参数解释**: 修复漏洞软件需要升级到的版本 **取值范围**: 字符范围0-256位
+    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围**: 字符范围1-512位
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class HostVulInfoAppList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * appName  软件名称
-    * appVersion  软件版本
-    * upgradeVersion  修复漏洞软件需要升级到的版本
-    * appPath  应用软件的路径（只有应用漏洞有该字段）
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符范围0-256位
+    * appVersion  **参数解释**: 软件版本 **取值范围**: 字符范围0-256位
+    * upgradeVersion  **参数解释**: 修复漏洞软件需要升级到的版本 **取值范围**: 字符范围0-256位
+    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围**: 字符范围1-512位
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class HostVulInfoAppList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * appName  软件名称
-    * appVersion  软件版本
-    * upgradeVersion  修复漏洞软件需要升级到的版本
-    * appPath  应用软件的路径（只有应用漏洞有该字段）
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符范围0-256位
+    * appVersion  **参数解释**: 软件版本 **取值范围**: 字符范围0-256位
+    * upgradeVersion  **参数解释**: 修复漏洞软件需要升级到的版本 **取值范围**: 字符范围0-256位
+    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围**: 字符范围1-512位
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class HostVulInfoAppList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * appName  软件名称
-    * appVersion  软件版本
-    * upgradeVersion  修复漏洞软件需要升级到的版本
-    * appPath  应用软件的路径（只有应用漏洞有该字段）
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符范围0-256位
+    * appVersion  **参数解释**: 软件版本 **取值范围**: 字符范围0-256位
+    * upgradeVersion  **参数解释**: 修复漏洞软件需要升级到的版本 **取值范围**: 字符范围0-256位
+    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围**: 字符范围1-512位
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class HostVulInfoAppList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * appName  软件名称
-    * appVersion  软件版本
-    * upgradeVersion  修复漏洞软件需要升级到的版本
-    * appPath  应用软件的路径（只有应用漏洞有该字段）
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符范围0-256位
+    * appVersion  **参数解释**: 软件版本 **取值范围**: 字符范围0-256位
+    * upgradeVersion  **参数解释**: 修复漏洞软件需要升级到的版本 **取值范围**: 字符范围0-256位
+    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围**: 字符范围1-512位
     *
     * @var string[]
     */
@@ -231,7 +231,7 @@ class HostVulInfoAppList implements ModelInterface, ArrayAccess
 
     /**
     * Gets appName
-    *  软件名称
+    *  **参数解释**: 软件名称 **取值范围**: 字符范围0-256位
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class HostVulInfoAppList implements ModelInterface, ArrayAccess
     /**
     * Sets appName
     *
-    * @param string|null $appName 软件名称
+    * @param string|null $appName **参数解释**: 软件名称 **取值范围**: 字符范围0-256位
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class HostVulInfoAppList implements ModelInterface, ArrayAccess
 
     /**
     * Gets appVersion
-    *  软件版本
+    *  **参数解释**: 软件版本 **取值范围**: 字符范围0-256位
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class HostVulInfoAppList implements ModelInterface, ArrayAccess
     /**
     * Sets appVersion
     *
-    * @param string|null $appVersion 软件版本
+    * @param string|null $appVersion **参数解释**: 软件版本 **取值范围**: 字符范围0-256位
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class HostVulInfoAppList implements ModelInterface, ArrayAccess
 
     /**
     * Gets upgradeVersion
-    *  修复漏洞软件需要升级到的版本
+    *  **参数解释**: 修复漏洞软件需要升级到的版本 **取值范围**: 字符范围0-256位
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class HostVulInfoAppList implements ModelInterface, ArrayAccess
     /**
     * Sets upgradeVersion
     *
-    * @param string|null $upgradeVersion 修复漏洞软件需要升级到的版本
+    * @param string|null $upgradeVersion **参数解释**: 修复漏洞软件需要升级到的版本 **取值范围**: 字符范围0-256位
     *
     * @return $this
     */
@@ -303,7 +303,7 @@ class HostVulInfoAppList implements ModelInterface, ArrayAccess
 
     /**
     * Gets appPath
-    *  应用软件的路径（只有应用漏洞有该字段）
+    *  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围**: 字符范围1-512位
     *
     * @return string|null
     */
@@ -315,7 +315,7 @@ class HostVulInfoAppList implements ModelInterface, ArrayAccess
     /**
     * Sets appPath
     *
-    * @param string|null $appPath 应用软件的路径（只有应用漏洞有该字段）
+    * @param string|null $appPath **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围**: 字符范围1-512位
     *
     * @return $this
     */

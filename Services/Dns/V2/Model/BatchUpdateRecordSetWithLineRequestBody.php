@@ -20,7 +20,7 @@ class BatchUpdateRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recordsets  记录集列表。
+    * recordsets  **参数解释：** 记录集列表。 **约束限制：**  最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchUpdateRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recordsets  记录集列表。
+    * recordsets  **参数解释：** 记录集列表。 **约束限制：**  最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchUpdateRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recordsets  记录集列表。
+    * recordsets  **参数解释：** 记录集列表。 **约束限制：**  最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchUpdateRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recordsets  记录集列表。
+    * recordsets  **参数解释：** 记录集列表。 **约束限制：**  最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchUpdateRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recordsets  记录集列表。
+    * recordsets  **参数解释：** 记录集列表。 **约束限制：**  最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class BatchUpdateRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets recordsets
-    *  记录集列表。
+    *  **参数解释：** 记录集列表。 **约束限制：**  最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSet[]
     */
@@ -189,7 +189,7 @@ class BatchUpdateRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets recordsets
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSet[] $recordsets 记录集列表。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSet[] $recordsets **参数解释：** 记录集列表。 **约束限制：**  最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */

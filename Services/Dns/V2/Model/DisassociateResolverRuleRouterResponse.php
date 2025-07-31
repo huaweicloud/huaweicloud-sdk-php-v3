@@ -21,9 +21,9 @@ class DisassociateResolverRuleRouterResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * routerId  关联VPC的ID。
-    * routerRegion  关联VPC所在的region。
-    * status  资源状态。
+    * routerId  **参数解释：** 关联VPC的ID。 **取值范围：** 不涉及。
+    * routerRegion  **参数解释：** 关联VPC所在的region。 **取值范围：** 不涉及。
+    * status  **参数解释：** 关联VPC的状态。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class DisassociateResolverRuleRouterResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * routerId  关联VPC的ID。
-    * routerRegion  关联VPC所在的region。
-    * status  资源状态。
+    * routerId  **参数解释：** 关联VPC的ID。 **取值范围：** 不涉及。
+    * routerRegion  **参数解释：** 关联VPC所在的region。 **取值范围：** 不涉及。
+    * status  **参数解释：** 关联VPC的状态。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class DisassociateResolverRuleRouterResponse implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * routerId  关联VPC的ID。
-    * routerRegion  关联VPC所在的region。
-    * status  资源状态。
+    * routerId  **参数解释：** 关联VPC的ID。 **取值范围：** 不涉及。
+    * routerRegion  **参数解释：** 关联VPC所在的region。 **取值范围：** 不涉及。
+    * status  **参数解释：** 关联VPC的状态。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class DisassociateResolverRuleRouterResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * routerId  关联VPC的ID。
-    * routerRegion  关联VPC所在的region。
-    * status  资源状态。
+    * routerId  **参数解释：** 关联VPC的ID。 **取值范围：** 不涉及。
+    * routerRegion  **参数解释：** 关联VPC所在的region。 **取值范围：** 不涉及。
+    * status  **参数解释：** 关联VPC的状态。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class DisassociateResolverRuleRouterResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * routerId  关联VPC的ID。
-    * routerRegion  关联VPC所在的region。
-    * status  资源状态。
+    * routerId  **参数解释：** 关联VPC的ID。 **取值范围：** 不涉及。
+    * routerRegion  **参数解释：** 关联VPC所在的region。 **取值范围：** 不涉及。
+    * status  **参数解释：** 关联VPC的状态。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class DisassociateResolverRuleRouterResponse implements ModelInterface, ArrayAcc
 
     /**
     * Gets routerId
-    *  关联VPC的ID。
+    *  **参数解释：** 关联VPC的ID。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class DisassociateResolverRuleRouterResponse implements ModelInterface, ArrayAcc
     /**
     * Sets routerId
     *
-    * @param string|null $routerId 关联VPC的ID。
+    * @param string|null $routerId **参数解释：** 关联VPC的ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class DisassociateResolverRuleRouterResponse implements ModelInterface, ArrayAcc
 
     /**
     * Gets routerRegion
-    *  关联VPC所在的region。
+    *  **参数解释：** 关联VPC所在的region。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class DisassociateResolverRuleRouterResponse implements ModelInterface, ArrayAcc
     /**
     * Sets routerRegion
     *
-    * @param string|null $routerRegion 关联VPC所在的region。
+    * @param string|null $routerRegion **参数解释：** 关联VPC所在的region。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class DisassociateResolverRuleRouterResponse implements ModelInterface, ArrayAcc
 
     /**
     * Gets status
-    *  资源状态。
+    *  **参数解释：** 关联VPC的状态。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class DisassociateResolverRuleRouterResponse implements ModelInterface, ArrayAcc
     /**
     * Sets status
     *
-    * @param string|null $status 资源状态。
+    * @param string|null $status **参数解释：** 关联VPC的状态。 **取值范围：** 不涉及。
     *
     * @return $this
     */

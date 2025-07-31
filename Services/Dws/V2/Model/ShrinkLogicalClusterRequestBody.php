@@ -27,7 +27,7 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'clusterRings' => '\HuaweiCloud\SDK\Dws\V2\Model\ClusterRingVo[]',
+            'clusterRings' => '\HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[]',
             'parallelJobs' => 'int',
             'mode' => 'string'
     ];
@@ -201,7 +201,7 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
     * Gets clusterRings
     *  **参数解释**： 缩容主机环信息。  **约束限制**：  不涉及。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
     *
-    * @return \HuaweiCloud\SDK\Dws\V2\Model\ClusterRingVo[]
+    * @return \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[]
     */
     public function getClusterRings()
     {
@@ -211,7 +211,7 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets clusterRings
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterRingVo[] $clusterRings **参数解释**： 缩容主机环信息。  **约束限制**：  不涉及。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[] $clusterRings **参数解释**： 缩容主机环信息。  **约束限制**：  不涉及。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
     *
     * @return $this
     */

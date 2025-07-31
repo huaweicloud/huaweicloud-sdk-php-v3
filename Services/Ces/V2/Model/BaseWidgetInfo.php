@@ -310,8 +310,8 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['title']) < 1)) {
                 $invalidProperties[] = "invalid value for 'title', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|:|;|\\(|\\)|\\.|~|（|）)+$/", $this->container['title'])) {
-                $invalidProperties[] = "invalid value for 'title', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|:|;|\\(|\\)|\\.|~|（|）)+$/.";
+            if (!preg_match("/^([\\u4E00-\\u9FFF]|[\\u00C0-\\u0204]|[a-z]|[A-Z]|[0-9]|[\\\"”≤<>&%_:\/;“'?+,~，（） º\\\\(\\\\)\\\\[\\\\.\\\\-])( *([\\u4E00-\\u9FFF]|[\\u00C0-\\u0204]|[a-z]|[A-Z]|[0-9]|[\\\"”≤<>&%_:\/;“'?+,~，（） º\\\\(\\\\)\\\\[\\\\.\\\\-]))*$/", $this->container['title'])) {
+                $invalidProperties[] = "invalid value for 'title', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[\\u00C0-\\u0204]|[a-z]|[A-Z]|[0-9]|[\\\"”≤<>&%_:\/;“'?+,~，（） º\\\\(\\\\)\\\\[\\\\.\\\\-])( *([\\u4E00-\\u9FFF]|[\\u00C0-\\u0204]|[a-z]|[A-Z]|[0-9]|[\\\"”≤<>&%_:\/;“'?+,~，（） º\\\\(\\\\)\\\\[\\\\.\\\\-]))*$/.";
             }
             if (!is_null($this->container['threshold']) && ($this->container['threshold'] > 1.7976931348623157E+308)) {
                 $invalidProperties[] = "invalid value for 'threshold', must be smaller than or equal to 1.7976931348623157E+308.";

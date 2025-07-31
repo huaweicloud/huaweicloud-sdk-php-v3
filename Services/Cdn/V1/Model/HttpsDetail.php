@@ -25,7 +25,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     * certName  证书名字。
     * certificate  证书内容。
     * privateKey  私钥内容。
-    * certificateType  0：自有证书  1：云托管证书。
+    * certificateType  证书类型，0：自有证书，1：云托管证书，2：SCM证书。
     * expirationTime  证书过期时间。
     * httpsStatus  HTTPS证书是否启用，取值0：不启用；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源。
     * forceRedirectHttps  客户端请求是否强制重定向。1是，0否。（如果为2，表示强制跳转HTTP）
@@ -55,7 +55,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     * certName  证书名字。
     * certificate  证书内容。
     * privateKey  私钥内容。
-    * certificateType  0：自有证书  1：云托管证书。
+    * certificateType  证书类型，0：自有证书，1：云托管证书，2：SCM证书。
     * expirationTime  证书过期时间。
     * httpsStatus  HTTPS证书是否启用，取值0：不启用；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源。
     * forceRedirectHttps  客户端请求是否强制重定向。1是，0否。（如果为2，表示强制跳转HTTP）
@@ -106,7 +106,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     * certName  证书名字。
     * certificate  证书内容。
     * privateKey  私钥内容。
-    * certificateType  0：自有证书  1：云托管证书。
+    * certificateType  证书类型，0：自有证书，1：云托管证书，2：SCM证书。
     * expirationTime  证书过期时间。
     * httpsStatus  HTTPS证书是否启用，取值0：不启用；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源。
     * forceRedirectHttps  客户端请求是否强制重定向。1是，0否。（如果为2，表示强制跳转HTTP）
@@ -136,7 +136,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     * certName  证书名字。
     * certificate  证书内容。
     * privateKey  私钥内容。
-    * certificateType  0：自有证书  1：云托管证书。
+    * certificateType  证书类型，0：自有证书，1：云托管证书，2：SCM证书。
     * expirationTime  证书过期时间。
     * httpsStatus  HTTPS证书是否启用，取值0：不启用；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源。
     * forceRedirectHttps  客户端请求是否强制重定向。1是，0否。（如果为2，表示强制跳转HTTP）
@@ -166,7 +166,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     * certName  证书名字。
     * certificate  证书内容。
     * privateKey  私钥内容。
-    * certificateType  0：自有证书  1：云托管证书。
+    * certificateType  证书类型，0：自有证书，1：云托管证书，2：SCM证书。
     * expirationTime  证书过期时间。
     * httpsStatus  HTTPS证书是否启用，取值0：不启用；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源。
     * forceRedirectHttps  客户端请求是否强制重定向。1是，0否。（如果为2，表示强制跳转HTTP）
@@ -404,7 +404,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificateType
-    *  0：自有证书  1：云托管证书。
+    *  证书类型，0：自有证书，1：云托管证书，2：SCM证书。
     *
     * @return int|null
     */
@@ -416,7 +416,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets certificateType
     *
-    * @param int|null $certificateType 0：自有证书  1：云托管证书。
+    * @param int|null $certificateType 证书类型，0：自有证书，1：云托管证书，2：SCM证书。
     *
     * @return $this
     */

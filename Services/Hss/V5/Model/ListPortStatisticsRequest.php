@@ -20,58 +20,58 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * port  端口号，精确匹配
-    * portString  端口字符串，用来进行模糊匹配
-    * type  端口类型
-    * status  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * sortKey  排序的key值，目前支持按照端口号port排序
-    * sortDir  升序还是降序，默认升序，asc
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
-    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * category  **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host：主机 - container：容器  **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * port  **参数解释**: 端口号，该字段用来进行精确匹配 **约束限制**: 与port_string同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果 为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
+    * portString  **参数解释**: 端口字符串，该字段用来进行模糊匹配 **约束限制**: 与port同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果 为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
+    * type  **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: - UDP - UDP6 - TCP - TCP6  **默认取值**: 不涉及
+    * status  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口  **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序的key值，目前支持按照端口号port排序 **约束限制**: 不涉及 **取值范围**: - port: 端口号  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'enterpriseProjectId' => 'string',
+            'category' => 'string',
+            'sortDir' => 'string',
+            'limit' => 'int',
+            'offset' => 'int',
             'port' => 'int',
             'portString' => 'string',
             'type' => 'string',
             'status' => 'string',
-            'enterpriseProjectId' => 'string',
-            'sortKey' => 'string',
-            'sortDir' => 'string',
-            'limit' => 'int',
-            'offset' => 'int',
-            'category' => 'string'
+            'sortKey' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * port  端口号，精确匹配
-    * portString  端口字符串，用来进行模糊匹配
-    * type  端口类型
-    * status  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * sortKey  排序的key值，目前支持按照端口号port排序
-    * sortDir  升序还是降序，默认升序，asc
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
-    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * category  **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host：主机 - container：容器  **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * port  **参数解释**: 端口号，该字段用来进行精确匹配 **约束限制**: 与port_string同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果 为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
+    * portString  **参数解释**: 端口字符串，该字段用来进行模糊匹配 **约束限制**: 与port同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果 为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
+    * type  **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: - UDP - UDP6 - TCP - TCP6  **默认取值**: 不涉及
+    * status  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口  **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序的key值，目前支持按照端口号port排序 **约束限制**: 不涉及 **取值范围**: - port: 端口号  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'enterpriseProjectId' => null,
+        'category' => null,
+        'sortDir' => null,
+        'limit' => 'int32',
+        'offset' => 'int32',
         'port' => null,
         'portString' => null,
         'type' => null,
         'status' => null,
-        'enterpriseProjectId' => null,
-        'sortKey' => null,
-        'sortDir' => null,
-        'limit' => 'int32',
-        'offset' => 'int32',
-        'category' => null
+        'sortKey' => null
     ];
 
     /**
@@ -97,86 +97,86 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * port  端口号，精确匹配
-    * portString  端口字符串，用来进行模糊匹配
-    * type  端口类型
-    * status  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * sortKey  排序的key值，目前支持按照端口号port排序
-    * sortDir  升序还是降序，默认升序，asc
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
-    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * category  **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host：主机 - container：容器  **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * port  **参数解释**: 端口号，该字段用来进行精确匹配 **约束限制**: 与port_string同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果 为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
+    * portString  **参数解释**: 端口字符串，该字段用来进行模糊匹配 **约束限制**: 与port同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果 为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
+    * type  **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: - UDP - UDP6 - TCP - TCP6  **默认取值**: 不涉及
+    * status  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口  **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序的key值，目前支持按照端口号port排序 **约束限制**: 不涉及 **取值范围**: - port: 端口号  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'category' => 'category',
+            'sortDir' => 'sort_dir',
+            'limit' => 'limit',
+            'offset' => 'offset',
             'port' => 'port',
             'portString' => 'port_string',
             'type' => 'type',
             'status' => 'status',
-            'enterpriseProjectId' => 'enterprise_project_id',
-            'sortKey' => 'sort_key',
-            'sortDir' => 'sort_dir',
-            'limit' => 'limit',
-            'offset' => 'offset',
-            'category' => 'category'
+            'sortKey' => 'sort_key'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * port  端口号，精确匹配
-    * portString  端口字符串，用来进行模糊匹配
-    * type  端口类型
-    * status  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * sortKey  排序的key值，目前支持按照端口号port排序
-    * sortDir  升序还是降序，默认升序，asc
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
-    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * category  **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host：主机 - container：容器  **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * port  **参数解释**: 端口号，该字段用来进行精确匹配 **约束限制**: 与port_string同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果 为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
+    * portString  **参数解释**: 端口字符串，该字段用来进行模糊匹配 **约束限制**: 与port同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果 为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
+    * type  **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: - UDP - UDP6 - TCP - TCP6  **默认取值**: 不涉及
+    * status  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口  **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序的key值，目前支持按照端口号port排序 **约束限制**: 不涉及 **取值范围**: - port: 端口号  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'category' => 'setCategory',
+            'sortDir' => 'setSortDir',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset',
             'port' => 'setPort',
             'portString' => 'setPortString',
             'type' => 'setType',
             'status' => 'setStatus',
-            'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'sortKey' => 'setSortKey',
-            'sortDir' => 'setSortDir',
-            'limit' => 'setLimit',
-            'offset' => 'setOffset',
-            'category' => 'setCategory'
+            'sortKey' => 'setSortKey'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * port  端口号，精确匹配
-    * portString  端口字符串，用来进行模糊匹配
-    * type  端口类型
-    * status  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * sortKey  排序的key值，目前支持按照端口号port排序
-    * sortDir  升序还是降序，默认升序，asc
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
-    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * category  **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host：主机 - container：容器  **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * port  **参数解释**: 端口号，该字段用来进行精确匹配 **约束限制**: 与port_string同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果 为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
+    * portString  **参数解释**: 端口字符串，该字段用来进行模糊匹配 **约束限制**: 与port同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果 为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
+    * type  **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: - UDP - UDP6 - TCP - TCP6  **默认取值**: 不涉及
+    * status  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口  **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序的key值，目前支持按照端口号port排序 **约束限制**: 不涉及 **取值范围**: - port: 端口号  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'category' => 'getCategory',
+            'sortDir' => 'getSortDir',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset',
             'port' => 'getPort',
             'portString' => 'getPortString',
             'type' => 'getType',
             'status' => 'getStatus',
-            'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'sortKey' => 'getSortKey',
-            'sortDir' => 'getSortDir',
-            'limit' => 'getLimit',
-            'offset' => 'getOffset',
-            'category' => 'getCategory'
+            'sortKey' => 'getSortKey'
     ];
 
     /**
@@ -237,16 +237,16 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['portString'] = isset($data['portString']) ? $data['portString'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
-        $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
     }
 
     /**
@@ -257,6 +257,45 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) > 32)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) < 0)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['category']) && !preg_match("/^(host|container)$/", $this->container['category'])) {
+                $invalidProperties[] = "invalid value for 'category', must be conform to the pattern /^(host|container)$/.";
+            }
+            if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) > 32)) {
+                $invalidProperties[] = "invalid value for 'sortDir', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sortDir', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['sortDir']) && !preg_match("/^(asc|desc)$/", $this->container['sortDir'])) {
+                $invalidProperties[] = "invalid value for 'sortDir', must be conform to the pattern /^(asc|desc)$/.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2000000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['port']) && ($this->container['port'] > 65535)) {
                 $invalidProperties[] = "invalid value for 'port', must be smaller than or equal to 65535.";
             }
@@ -275,17 +314,17 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 1)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['type']) && !preg_match("/^(UDP|UDP6|TCP|TCP6)$/", $this->container['type'])) {
+                $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /^(UDP|UDP6|TCP|TCP6)$/.";
+            }
             if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 64)) {
                 $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
                 $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 128)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['status']) && !preg_match("/^(danger|normal|unknow)$/", $this->container['status'])) {
+                $invalidProperties[] = "invalid value for 'status', must be conform to the pattern /^(danger|normal|unknow)$/.";
             }
             if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) > 128)) {
                 $invalidProperties[] = "invalid value for 'sortKey', the character length must be smaller than or equal to 128.";
@@ -293,29 +332,8 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) < 1)) {
                 $invalidProperties[] = "invalid value for 'sortKey', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) > 32)) {
-                $invalidProperties[] = "invalid value for 'sortDir', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) < 1)) {
-                $invalidProperties[] = "invalid value for 'sortDir', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2000000)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) > 64)) {
-                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) < 0)) {
-                $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['sortKey']) && !preg_match("/^(port)$/", $this->container['sortKey'])) {
+                $invalidProperties[] = "invalid value for 'sortKey', must be conform to the pattern /^(port)$/.";
             }
         return $invalidProperties;
     }
@@ -332,104 +350,8 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets port
-    *  端口号，精确匹配
-    *
-    * @return int|null
-    */
-    public function getPort()
-    {
-        return $this->container['port'];
-    }
-
-    /**
-    * Sets port
-    *
-    * @param int|null $port 端口号，精确匹配
-    *
-    * @return $this
-    */
-    public function setPort($port)
-    {
-        $this->container['port'] = $port;
-        return $this;
-    }
-
-    /**
-    * Gets portString
-    *  端口字符串，用来进行模糊匹配
-    *
-    * @return string|null
-    */
-    public function getPortString()
-    {
-        return $this->container['portString'];
-    }
-
-    /**
-    * Sets portString
-    *
-    * @param string|null $portString 端口字符串，用来进行模糊匹配
-    *
-    * @return $this
-    */
-    public function setPortString($portString)
-    {
-        $this->container['portString'] = $portString;
-        return $this;
-    }
-
-    /**
-    * Gets type
-    *  端口类型
-    *
-    * @return string|null
-    */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-    * Sets type
-    *
-    * @param string|null $type 端口类型
-    *
-    * @return $this
-    */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
-        return $this;
-    }
-
-    /**
-    * Gets status
-    *  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
-    *
-    * @return string|null
-    */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-    * Sets status
-    *
-    * @param string|null $status 端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
-    *
-    * @return $this
-    */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
-        return $this;
-    }
-
-    /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return string|null
     */
@@ -441,7 +363,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return $this
     */
@@ -452,104 +374,8 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets sortKey
-    *  排序的key值，目前支持按照端口号port排序
-    *
-    * @return string|null
-    */
-    public function getSortKey()
-    {
-        return $this->container['sortKey'];
-    }
-
-    /**
-    * Sets sortKey
-    *
-    * @param string|null $sortKey 排序的key值，目前支持按照端口号port排序
-    *
-    * @return $this
-    */
-    public function setSortKey($sortKey)
-    {
-        $this->container['sortKey'] = $sortKey;
-        return $this;
-    }
-
-    /**
-    * Gets sortDir
-    *  升序还是降序，默认升序，asc
-    *
-    * @return string|null
-    */
-    public function getSortDir()
-    {
-        return $this->container['sortDir'];
-    }
-
-    /**
-    * Sets sortDir
-    *
-    * @param string|null $sortDir 升序还是降序，默认升序，asc
-    *
-    * @return $this
-    */
-    public function setSortDir($sortDir)
-    {
-        $this->container['sortDir'] = $sortDir;
-        return $this;
-    }
-
-    /**
-    * Gets limit
-    *  每页显示数量
-    *
-    * @return int|null
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param int|null $limit 每页显示数量
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-        return $this;
-    }
-
-    /**
-    * Gets offset
-    *  偏移量：指定返回记录的开始位置
-    *
-    * @return int|null
-    */
-    public function getOffset()
-    {
-        return $this->container['offset'];
-    }
-
-    /**
-    * Sets offset
-    *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置
-    *
-    * @return $this
-    */
-    public function setOffset($offset)
-    {
-        $this->container['offset'] = $offset;
-        return $this;
-    }
-
-    /**
     * Gets category
-    *  类别，默认为host，包含如下： - host：主机 - container：容器
+    *  **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host：主机 - container：容器  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -561,13 +387,205 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category 类别，默认为host，包含如下： - host：主机 - container：容器
+    * @param string|null $category **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host：主机 - container：容器  **默认取值**: 不涉及
     *
     * @return $this
     */
     public function setCategory($category)
     {
         $this->container['category'] = $category;
+        return $this;
+    }
+
+    /**
+    * Gets sortDir
+    *  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
+    *
+    * @return string|null
+    */
+    public function getSortDir()
+    {
+        return $this->container['sortDir'];
+    }
+
+    /**
+    * Sets sortDir
+    *
+    * @param string|null $sortDir **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
+    *
+    * @return $this
+    */
+    public function setSortDir($sortDir)
+    {
+        $this->container['sortDir'] = $sortDir;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets port
+    *  **参数解释**: 端口号，该字段用来进行精确匹配 **约束限制**: 与port_string同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果 为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
+    *
+    * @return int|null
+    */
+    public function getPort()
+    {
+        return $this->container['port'];
+    }
+
+    /**
+    * Sets port
+    *
+    * @param int|null $port **参数解释**: 端口号，该字段用来进行精确匹配 **约束限制**: 与port_string同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果 为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setPort($port)
+    {
+        $this->container['port'] = $port;
+        return $this;
+    }
+
+    /**
+    * Gets portString
+    *  **参数解释**: 端口字符串，该字段用来进行模糊匹配 **约束限制**: 与port同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果 为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getPortString()
+    {
+        return $this->container['portString'];
+    }
+
+    /**
+    * Sets portString
+    *
+    * @param string|null $portString **参数解释**: 端口字符串，该字段用来进行模糊匹配 **约束限制**: 与port同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果 为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setPortString($portString)
+    {
+        $this->container['portString'] = $portString;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: - UDP - UDP6 - TCP - TCP6  **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: - UDP - UDP6 - TCP - TCP6  **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口  **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口  **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets sortKey
+    *  **参数解释**: 排序的key值，目前支持按照端口号port排序 **约束限制**: 不涉及 **取值范围**: - port: 端口号  **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getSortKey()
+    {
+        return $this->container['sortKey'];
+    }
+
+    /**
+    * Sets sortKey
+    *
+    * @param string|null $sortKey **参数解释**: 排序的key值，目前支持按照端口号port排序 **约束限制**: 不涉及 **取值范围**: - port: 端口号  **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setSortKey($sortKey)
+    {
+        $this->container['sortKey'] = $sortKey;
         return $this;
     }
 

@@ -22,14 +22,14 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * vaultId  存储库ID
     * vaultName  存储库名称
-    * vaultSize  总容量，单位GB
-    * vaultUsed  已使用容量，单位MB
-    * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小
-    * vaultChargingMode  存储库创建模式，按需：post_paid，包周期：pre_paid
-    * vaultStatus  存储库状态。   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
+    * vaultSize  存储库总容量，单位GB
+    * vaultUsed  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G,则已使用容量为60G。
+    * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小，例如绑定了1台主机，主机大小40G，则已分配容量为40G。
+    * vaultChargingMode  存储库创建模式：   - 按需：post_paid   - 包周期：pre_paid
+    * vaultStatus  存储库状态。   - available：可用。   - lock：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
     * backupPolicyId  备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用
     * backupPolicyName  备份策略名称
-    * backupPolicyEnabled  策略是否启用
+    * backupPolicyEnabled  备份策略是否启用
     * resourcesNum  已绑定服务器（个）
     *
     * @var string[]
@@ -52,14 +52,14 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * vaultId  存储库ID
     * vaultName  存储库名称
-    * vaultSize  总容量，单位GB
-    * vaultUsed  已使用容量，单位MB
-    * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小
-    * vaultChargingMode  存储库创建模式，按需：post_paid，包周期：pre_paid
-    * vaultStatus  存储库状态。   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
+    * vaultSize  存储库总容量，单位GB
+    * vaultUsed  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G,则已使用容量为60G。
+    * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小，例如绑定了1台主机，主机大小40G，则已分配容量为40G。
+    * vaultChargingMode  存储库创建模式：   - 按需：post_paid   - 包周期：pre_paid
+    * vaultStatus  存储库状态。   - available：可用。   - lock：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
     * backupPolicyId  备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用
     * backupPolicyName  备份策略名称
-    * backupPolicyEnabled  策略是否启用
+    * backupPolicyEnabled  备份策略是否启用
     * resourcesNum  已绑定服务器（个）
     *
     * @var string[]
@@ -103,14 +103,14 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * vaultId  存储库ID
     * vaultName  存储库名称
-    * vaultSize  总容量，单位GB
-    * vaultUsed  已使用容量，单位MB
-    * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小
-    * vaultChargingMode  存储库创建模式，按需：post_paid，包周期：pre_paid
-    * vaultStatus  存储库状态。   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
+    * vaultSize  存储库总容量，单位GB
+    * vaultUsed  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G,则已使用容量为60G。
+    * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小，例如绑定了1台主机，主机大小40G，则已分配容量为40G。
+    * vaultChargingMode  存储库创建模式：   - 按需：post_paid   - 包周期：pre_paid
+    * vaultStatus  存储库状态。   - available：可用。   - lock：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
     * backupPolicyId  备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用
     * backupPolicyName  备份策略名称
-    * backupPolicyEnabled  策略是否启用
+    * backupPolicyEnabled  备份策略是否启用
     * resourcesNum  已绑定服务器（个）
     *
     * @var string[]
@@ -133,14 +133,14 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * vaultId  存储库ID
     * vaultName  存储库名称
-    * vaultSize  总容量，单位GB
-    * vaultUsed  已使用容量，单位MB
-    * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小
-    * vaultChargingMode  存储库创建模式，按需：post_paid，包周期：pre_paid
-    * vaultStatus  存储库状态。   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
+    * vaultSize  存储库总容量，单位GB
+    * vaultUsed  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G,则已使用容量为60G。
+    * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小，例如绑定了1台主机，主机大小40G，则已分配容量为40G。
+    * vaultChargingMode  存储库创建模式：   - 按需：post_paid   - 包周期：pre_paid
+    * vaultStatus  存储库状态。   - available：可用。   - lock：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
     * backupPolicyId  备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用
     * backupPolicyName  备份策略名称
-    * backupPolicyEnabled  策略是否启用
+    * backupPolicyEnabled  备份策略是否启用
     * resourcesNum  已绑定服务器（个）
     *
     * @var string[]
@@ -163,14 +163,14 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * vaultId  存储库ID
     * vaultName  存储库名称
-    * vaultSize  总容量，单位GB
-    * vaultUsed  已使用容量，单位MB
-    * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小
-    * vaultChargingMode  存储库创建模式，按需：post_paid，包周期：pre_paid
-    * vaultStatus  存储库状态。   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
+    * vaultSize  存储库总容量，单位GB
+    * vaultUsed  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G,则已使用容量为60G。
+    * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小，例如绑定了1台主机，主机大小40G，则已分配容量为40G。
+    * vaultChargingMode  存储库创建模式：   - 按需：post_paid   - 包周期：pre_paid
+    * vaultStatus  存储库状态。   - available：可用。   - lock：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
     * backupPolicyId  备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用
     * backupPolicyName  备份策略名称
-    * backupPolicyEnabled  策略是否启用
+    * backupPolicyEnabled  备份策略是否启用
     * resourcesNum  已绑定服务器（个）
     *
     * @var string[]
@@ -392,7 +392,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vaultSize
-    *  总容量，单位GB
+    *  存储库总容量，单位GB
     *
     * @return int|null
     */
@@ -404,7 +404,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vaultSize
     *
-    * @param int|null $vaultSize 总容量，单位GB
+    * @param int|null $vaultSize 存储库总容量，单位GB
     *
     * @return $this
     */
@@ -416,7 +416,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vaultUsed
-    *  已使用容量，单位MB
+    *  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G,则已使用容量为60G。
     *
     * @return int|null
     */
@@ -428,7 +428,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vaultUsed
     *
-    * @param int|null $vaultUsed 已使用容量，单位MB
+    * @param int|null $vaultUsed 已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G,则已使用容量为60G。
     *
     * @return $this
     */
@@ -440,7 +440,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vaultAllocated
-    *  已分配容量，单位GB，指绑定的服务器大小
+    *  已分配容量，单位GB，指绑定的服务器大小，例如绑定了1台主机，主机大小40G，则已分配容量为40G。
     *
     * @return int|null
     */
@@ -452,7 +452,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vaultAllocated
     *
-    * @param int|null $vaultAllocated 已分配容量，单位GB，指绑定的服务器大小
+    * @param int|null $vaultAllocated 已分配容量，单位GB，指绑定的服务器大小，例如绑定了1台主机，主机大小40G，则已分配容量为40G。
     *
     * @return $this
     */
@@ -464,7 +464,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vaultChargingMode
-    *  存储库创建模式，按需：post_paid，包周期：pre_paid
+    *  存储库创建模式：   - 按需：post_paid   - 包周期：pre_paid
     *
     * @return string|null
     */
@@ -476,7 +476,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vaultChargingMode
     *
-    * @param string|null $vaultChargingMode 存储库创建模式，按需：post_paid，包周期：pre_paid
+    * @param string|null $vaultChargingMode 存储库创建模式：   - 按需：post_paid   - 包周期：pre_paid
     *
     * @return $this
     */
@@ -488,7 +488,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vaultStatus
-    *  存储库状态。   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
+    *  存储库状态。   - available：可用。   - lock：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
     *
     * @return string|null
     */
@@ -500,7 +500,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vaultStatus
     *
-    * @param string|null $vaultStatus 存储库状态。   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
+    * @param string|null $vaultStatus 存储库状态。   - available：可用。   - lock：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
     *
     * @return $this
     */
@@ -560,7 +560,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupPolicyEnabled
-    *  策略是否启用
+    *  备份策略是否启用
     *
     * @return bool|null
     */
@@ -572,7 +572,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
     /**
     * Sets backupPolicyEnabled
     *
-    * @param bool|null $backupPolicyEnabled 策略是否启用
+    * @param bool|null $backupPolicyEnabled 备份策略是否启用
     *
     * @return $this
     */

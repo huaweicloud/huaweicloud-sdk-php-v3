@@ -20,28 +20,28 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  主机id
-    * hostIp  主机ip
-    * hostName  主机名称
-    * appName  软件名称
-    * variationType  变更类型:   - add ：新建   - delete ：删除   - modify ：修改
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * sortKey  排序的key值，目前只支持按照recent_scan_time排序，按照recent_scan_time排序时，根据sort_dir的值决定升序还是降序
-    * sortDir  排序方式，默认为降序，当sort_key为按照recent_scan_time排序时，根据当前值决定升序还是降序，当sort_key为其他值时均为降序   - asc ：升序   - desc ：降序
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
-    * startTime  变更开始时间，13位时间戳
-    * endTime  变更结束时间，13位时间戳
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * hostId  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 主机ip **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * hostName  **参数解释**: 主机名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * appName  **参数解释**: 软件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * variationType  **参数解释**: 变更类型 **约束限制**: 不涉及 **取值范围**: - add：新建 - delete：删除 - modify：修改  **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序的key值，目前只支持按照recent_scan_time排序，按照recent_scan_time排序时，根据sort_dir的值决定升序还是降序 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序方式，默认为降序，当sort_key为按照recent_scan_time排序时，根据当前值决定升序还是降序，当sort_key为其他值时均为降序 **约束限制**: 不涉及 **取值范围**: - asc：升序 - desc：降序  **默认取值**: 不涉及
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * startTime  **参数解释**: 开始时间，13位时间戳 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**:
+    * endTime  **参数解释**: 结束时间，13位时间戳 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**:
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'enterpriseProjectId' => 'string',
             'hostId' => 'string',
             'hostIp' => 'string',
             'hostName' => 'string',
             'appName' => 'string',
             'variationType' => 'string',
-            'enterpriseProjectId' => 'string',
             'sortKey' => 'string',
             'sortDir' => 'string',
             'limit' => 'int',
@@ -52,28 +52,28 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  主机id
-    * hostIp  主机ip
-    * hostName  主机名称
-    * appName  软件名称
-    * variationType  变更类型:   - add ：新建   - delete ：删除   - modify ：修改
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * sortKey  排序的key值，目前只支持按照recent_scan_time排序，按照recent_scan_time排序时，根据sort_dir的值决定升序还是降序
-    * sortDir  排序方式，默认为降序，当sort_key为按照recent_scan_time排序时，根据当前值决定升序还是降序，当sort_key为其他值时均为降序   - asc ：升序   - desc ：降序
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
-    * startTime  变更开始时间，13位时间戳
-    * endTime  变更结束时间，13位时间戳
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * hostId  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 主机ip **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * hostName  **参数解释**: 主机名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * appName  **参数解释**: 软件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * variationType  **参数解释**: 变更类型 **约束限制**: 不涉及 **取值范围**: - add：新建 - delete：删除 - modify：修改  **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序的key值，目前只支持按照recent_scan_time排序，按照recent_scan_time排序时，根据sort_dir的值决定升序还是降序 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序方式，默认为降序，当sort_key为按照recent_scan_time排序时，根据当前值决定升序还是降序，当sort_key为其他值时均为降序 **约束限制**: 不涉及 **取值范围**: - asc：升序 - desc：降序  **默认取值**: 不涉及
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * startTime  **参数解释**: 开始时间，13位时间戳 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**:
+    * endTime  **参数解释**: 结束时间，13位时间戳 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**:
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'enterpriseProjectId' => null,
         'hostId' => null,
         'hostIp' => null,
         'hostName' => null,
         'appName' => null,
         'variationType' => null,
-        'enterpriseProjectId' => null,
         'sortKey' => null,
         'sortDir' => null,
         'limit' => 'int32',
@@ -105,28 +105,28 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  主机id
-    * hostIp  主机ip
-    * hostName  主机名称
-    * appName  软件名称
-    * variationType  变更类型:   - add ：新建   - delete ：删除   - modify ：修改
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * sortKey  排序的key值，目前只支持按照recent_scan_time排序，按照recent_scan_time排序时，根据sort_dir的值决定升序还是降序
-    * sortDir  排序方式，默认为降序，当sort_key为按照recent_scan_time排序时，根据当前值决定升序还是降序，当sort_key为其他值时均为降序   - asc ：升序   - desc ：降序
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
-    * startTime  变更开始时间，13位时间戳
-    * endTime  变更结束时间，13位时间戳
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * hostId  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 主机ip **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * hostName  **参数解释**: 主机名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * appName  **参数解释**: 软件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * variationType  **参数解释**: 变更类型 **约束限制**: 不涉及 **取值范围**: - add：新建 - delete：删除 - modify：修改  **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序的key值，目前只支持按照recent_scan_time排序，按照recent_scan_time排序时，根据sort_dir的值决定升序还是降序 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序方式，默认为降序，当sort_key为按照recent_scan_time排序时，根据当前值决定升序还是降序，当sort_key为其他值时均为降序 **约束限制**: 不涉及 **取值范围**: - asc：升序 - desc：降序  **默认取值**: 不涉及
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * startTime  **参数解释**: 开始时间，13位时间戳 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**:
+    * endTime  **参数解释**: 结束时间，13位时间戳 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**:
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'enterpriseProjectId' => 'enterprise_project_id',
             'hostId' => 'host_id',
             'hostIp' => 'host_ip',
             'hostName' => 'host_name',
             'appName' => 'app_name',
             'variationType' => 'variation_type',
-            'enterpriseProjectId' => 'enterprise_project_id',
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir',
             'limit' => 'limit',
@@ -137,28 +137,28 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  主机id
-    * hostIp  主机ip
-    * hostName  主机名称
-    * appName  软件名称
-    * variationType  变更类型:   - add ：新建   - delete ：删除   - modify ：修改
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * sortKey  排序的key值，目前只支持按照recent_scan_time排序，按照recent_scan_time排序时，根据sort_dir的值决定升序还是降序
-    * sortDir  排序方式，默认为降序，当sort_key为按照recent_scan_time排序时，根据当前值决定升序还是降序，当sort_key为其他值时均为降序   - asc ：升序   - desc ：降序
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
-    * startTime  变更开始时间，13位时间戳
-    * endTime  变更结束时间，13位时间戳
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * hostId  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 主机ip **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * hostName  **参数解释**: 主机名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * appName  **参数解释**: 软件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * variationType  **参数解释**: 变更类型 **约束限制**: 不涉及 **取值范围**: - add：新建 - delete：删除 - modify：修改  **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序的key值，目前只支持按照recent_scan_time排序，按照recent_scan_time排序时，根据sort_dir的值决定升序还是降序 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序方式，默认为降序，当sort_key为按照recent_scan_time排序时，根据当前值决定升序还是降序，当sort_key为其他值时均为降序 **约束限制**: 不涉及 **取值范围**: - asc：升序 - desc：降序  **默认取值**: 不涉及
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * startTime  **参数解释**: 开始时间，13位时间戳 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**:
+    * endTime  **参数解释**: 结束时间，13位时间戳 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**:
     *
     * @var string[]
     */
     protected static $setters = [
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
             'hostId' => 'setHostId',
             'hostIp' => 'setHostIp',
             'hostName' => 'setHostName',
             'appName' => 'setAppName',
             'variationType' => 'setVariationType',
-            'enterpriseProjectId' => 'setEnterpriseProjectId',
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir',
             'limit' => 'setLimit',
@@ -169,28 +169,28 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  主机id
-    * hostIp  主机ip
-    * hostName  主机名称
-    * appName  软件名称
-    * variationType  变更类型:   - add ：新建   - delete ：删除   - modify ：修改
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * sortKey  排序的key值，目前只支持按照recent_scan_time排序，按照recent_scan_time排序时，根据sort_dir的值决定升序还是降序
-    * sortDir  排序方式，默认为降序，当sort_key为按照recent_scan_time排序时，根据当前值决定升序还是降序，当sort_key为其他值时均为降序   - asc ：升序   - desc ：降序
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
-    * startTime  变更开始时间，13位时间戳
-    * endTime  变更结束时间，13位时间戳
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * hostId  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 主机ip **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * hostName  **参数解释**: 主机名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * appName  **参数解释**: 软件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * variationType  **参数解释**: 变更类型 **约束限制**: 不涉及 **取值范围**: - add：新建 - delete：删除 - modify：修改  **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序的key值，目前只支持按照recent_scan_time排序，按照recent_scan_time排序时，根据sort_dir的值决定升序还是降序 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序方式，默认为降序，当sort_key为按照recent_scan_time排序时，根据当前值决定升序还是降序，当sort_key为其他值时均为降序 **约束限制**: 不涉及 **取值范围**: - asc：升序 - desc：降序  **默认取值**: 不涉及
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * startTime  **参数解释**: 开始时间，13位时间戳 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**:
+    * endTime  **参数解释**: 结束时间，13位时间戳 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**:
     *
     * @var string[]
     */
     protected static $getters = [
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
             'hostId' => 'getHostId',
             'hostIp' => 'getHostIp',
             'hostName' => 'getHostName',
             'appName' => 'getAppName',
             'variationType' => 'getVariationType',
-            'enterpriseProjectId' => 'getEnterpriseProjectId',
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir',
             'limit' => 'getLimit',
@@ -257,12 +257,12 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
         $this->container['hostIp'] = isset($data['hostIp']) ? $data['hostIp'] : null;
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
         $this->container['variationType'] = isset($data['variationType']) ? $data['variationType'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
@@ -279,6 +279,15 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
+            }
             if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 128.";
             }
@@ -309,12 +318,6 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['variationType']) && (mb_strlen($this->container['variationType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'variationType', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 256)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) > 128)) {
                 $invalidProperties[] = "invalid value for 'sortKey', the character length must be smaller than or equal to 128.";
             }
@@ -327,26 +330,26 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) < 1)) {
                 $invalidProperties[] = "invalid value for 'sortDir', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
             }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 10000)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 10000.";
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2000000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['startTime']) && ($this->container['startTime'] > 9007199254740992)) {
-                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 9007199254740992.";
+            if (!is_null($this->container['startTime']) && ($this->container['startTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 9223372036854775807.";
             }
             if (!is_null($this->container['startTime']) && ($this->container['startTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'startTime', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['endTime']) && ($this->container['endTime'] > 9007199254740992)) {
-                $invalidProperties[] = "invalid value for 'endTime', must be smaller than or equal to 9007199254740992.";
+            if (!is_null($this->container['endTime']) && ($this->container['endTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'endTime', must be smaller than or equal to 9223372036854775807.";
             }
             if (!is_null($this->container['endTime']) && ($this->container['endTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'endTime', must be bigger than or equal to 0.";
@@ -366,128 +369,8 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets hostId
-    *  主机id
-    *
-    * @return string|null
-    */
-    public function getHostId()
-    {
-        return $this->container['hostId'];
-    }
-
-    /**
-    * Sets hostId
-    *
-    * @param string|null $hostId 主机id
-    *
-    * @return $this
-    */
-    public function setHostId($hostId)
-    {
-        $this->container['hostId'] = $hostId;
-        return $this;
-    }
-
-    /**
-    * Gets hostIp
-    *  主机ip
-    *
-    * @return string|null
-    */
-    public function getHostIp()
-    {
-        return $this->container['hostIp'];
-    }
-
-    /**
-    * Sets hostIp
-    *
-    * @param string|null $hostIp 主机ip
-    *
-    * @return $this
-    */
-    public function setHostIp($hostIp)
-    {
-        $this->container['hostIp'] = $hostIp;
-        return $this;
-    }
-
-    /**
-    * Gets hostName
-    *  主机名称
-    *
-    * @return string|null
-    */
-    public function getHostName()
-    {
-        return $this->container['hostName'];
-    }
-
-    /**
-    * Sets hostName
-    *
-    * @param string|null $hostName 主机名称
-    *
-    * @return $this
-    */
-    public function setHostName($hostName)
-    {
-        $this->container['hostName'] = $hostName;
-        return $this;
-    }
-
-    /**
-    * Gets appName
-    *  软件名称
-    *
-    * @return string|null
-    */
-    public function getAppName()
-    {
-        return $this->container['appName'];
-    }
-
-    /**
-    * Sets appName
-    *
-    * @param string|null $appName 软件名称
-    *
-    * @return $this
-    */
-    public function setAppName($appName)
-    {
-        $this->container['appName'] = $appName;
-        return $this;
-    }
-
-    /**
-    * Gets variationType
-    *  变更类型:   - add ：新建   - delete ：删除   - modify ：修改
-    *
-    * @return string|null
-    */
-    public function getVariationType()
-    {
-        return $this->container['variationType'];
-    }
-
-    /**
-    * Sets variationType
-    *
-    * @param string|null $variationType 变更类型:   - add ：新建   - delete ：删除   - modify ：修改
-    *
-    * @return $this
-    */
-    public function setVariationType($variationType)
-    {
-        $this->container['variationType'] = $variationType;
-        return $this;
-    }
-
-    /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return string|null
     */
@@ -499,7 +382,7 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return $this
     */
@@ -510,8 +393,128 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets hostId
+    *  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getHostId()
+    {
+        return $this->container['hostId'];
+    }
+
+    /**
+    * Sets hostId
+    *
+    * @param string|null $hostId **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setHostId($hostId)
+    {
+        $this->container['hostId'] = $hostId;
+        return $this;
+    }
+
+    /**
+    * Gets hostIp
+    *  **参数解释**: 主机ip **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getHostIp()
+    {
+        return $this->container['hostIp'];
+    }
+
+    /**
+    * Sets hostIp
+    *
+    * @param string|null $hostIp **参数解释**: 主机ip **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setHostIp($hostIp)
+    {
+        $this->container['hostIp'] = $hostIp;
+        return $this;
+    }
+
+    /**
+    * Gets hostName
+    *  **参数解释**: 主机名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getHostName()
+    {
+        return $this->container['hostName'];
+    }
+
+    /**
+    * Sets hostName
+    *
+    * @param string|null $hostName **参数解释**: 主机名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setHostName($hostName)
+    {
+        $this->container['hostName'] = $hostName;
+        return $this;
+    }
+
+    /**
+    * Gets appName
+    *  **参数解释**: 软件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getAppName()
+    {
+        return $this->container['appName'];
+    }
+
+    /**
+    * Sets appName
+    *
+    * @param string|null $appName **参数解释**: 软件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setAppName($appName)
+    {
+        $this->container['appName'] = $appName;
+        return $this;
+    }
+
+    /**
+    * Gets variationType
+    *  **参数解释**: 变更类型 **约束限制**: 不涉及 **取值范围**: - add：新建 - delete：删除 - modify：修改  **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getVariationType()
+    {
+        return $this->container['variationType'];
+    }
+
+    /**
+    * Sets variationType
+    *
+    * @param string|null $variationType **参数解释**: 变更类型 **约束限制**: 不涉及 **取值范围**: - add：新建 - delete：删除 - modify：修改  **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setVariationType($variationType)
+    {
+        $this->container['variationType'] = $variationType;
+        return $this;
+    }
+
+    /**
     * Gets sortKey
-    *  排序的key值，目前只支持按照recent_scan_time排序，按照recent_scan_time排序时，根据sort_dir的值决定升序还是降序
+    *  **参数解释**: 排序的key值，目前只支持按照recent_scan_time排序，按照recent_scan_time排序时，根据sort_dir的值决定升序还是降序 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -523,7 +526,7 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 排序的key值，目前只支持按照recent_scan_time排序，按照recent_scan_time排序时，根据sort_dir的值决定升序还是降序
+    * @param string|null $sortKey **参数解释**: 排序的key值，目前只支持按照recent_scan_time排序，按照recent_scan_time排序时，根据sort_dir的值决定升序还是降序 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -535,7 +538,7 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortDir
-    *  排序方式，默认为降序，当sort_key为按照recent_scan_time排序时，根据当前值决定升序还是降序，当sort_key为其他值时均为降序   - asc ：升序   - desc ：降序
+    *  **参数解释**: 排序方式，默认为降序，当sort_key为按照recent_scan_time排序时，根据当前值决定升序还是降序，当sort_key为其他值时均为降序 **约束限制**: 不涉及 **取值范围**: - asc：升序 - desc：降序  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -547,7 +550,7 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir 排序方式，默认为降序，当sort_key为按照recent_scan_time排序时，根据当前值决定升序还是降序，当sort_key为其他值时均为降序   - asc ：升序   - desc ：降序
+    * @param string|null $sortDir **参数解释**: 排序方式，默认为降序，当sort_key为按照recent_scan_time排序时，根据当前值决定升序还是降序，当sort_key为其他值时均为降序 **约束限制**: 不涉及 **取值范围**: - asc：升序 - desc：降序  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -559,7 +562,7 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示数量
+    *  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return int|null
     */
@@ -571,7 +574,7 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示数量
+    * @param int|null $limit **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return $this
     */
@@ -583,7 +586,7 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置
+    *  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return int|null
     */
@@ -595,7 +598,7 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置
+    * @param int|null $offset **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return $this
     */
@@ -607,7 +610,7 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  变更开始时间，13位时间戳
+    *  **参数解释**: 开始时间，13位时间戳 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**:
     *
     * @return int|null
     */
@@ -619,7 +622,7 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime 变更开始时间，13位时间戳
+    * @param int|null $startTime **参数解释**: 开始时间，13位时间戳 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**:
     *
     * @return $this
     */
@@ -631,7 +634,7 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  变更结束时间，13位时间戳
+    *  **参数解释**: 结束时间，13位时间戳 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**:
     *
     * @return int|null
     */
@@ -643,7 +646,7 @@ class ListAppChangeHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int|null $endTime 变更结束时间，13位时间戳
+    * @param int|null $endTime **参数解释**: 结束时间，13位时间戳 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**:
     *
     * @return $this
     */

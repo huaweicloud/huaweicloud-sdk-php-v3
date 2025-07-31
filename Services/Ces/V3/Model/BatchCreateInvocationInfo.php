@@ -20,38 +20,38 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  主机id
-    * retStatus  任务结果, successful成功，error失败
-    * errorMsg  错误信息
+    * instanceId  机器id
     * invocationId  任务id
+    * retStatus  任务结果, successful成功，error失败
     * errorCode  错误码
+    * errorMsg  错误信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'instanceId' => 'string',
-            'retStatus' => 'string',
-            'errorMsg' => 'string',
             'invocationId' => 'string',
-            'errorCode' => 'string'
+            'retStatus' => 'string',
+            'errorCode' => 'string',
+            'errorMsg' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  主机id
-    * retStatus  任务结果, successful成功，error失败
-    * errorMsg  错误信息
+    * instanceId  机器id
     * invocationId  任务id
+    * retStatus  任务结果, successful成功，error失败
     * errorCode  错误码
+    * errorMsg  错误信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'instanceId' => null,
-        'retStatus' => null,
-        'errorMsg' => null,
         'invocationId' => null,
-        'errorCode' => null
+        'retStatus' => null,
+        'errorCode' => null,
+        'errorMsg' => null
     ];
 
     /**
@@ -77,56 +77,56 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  主机id
-    * retStatus  任务结果, successful成功，error失败
-    * errorMsg  错误信息
+    * instanceId  机器id
     * invocationId  任务id
+    * retStatus  任务结果, successful成功，error失败
     * errorCode  错误码
+    * errorMsg  错误信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'instanceId' => 'instance_id',
-            'retStatus' => 'ret_status',
-            'errorMsg' => 'error_msg',
             'invocationId' => 'invocation_id',
-            'errorCode' => 'error_code'
+            'retStatus' => 'ret_status',
+            'errorCode' => 'error_code',
+            'errorMsg' => 'error_msg'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  主机id
-    * retStatus  任务结果, successful成功，error失败
-    * errorMsg  错误信息
+    * instanceId  机器id
     * invocationId  任务id
+    * retStatus  任务结果, successful成功，error失败
     * errorCode  错误码
+    * errorMsg  错误信息
     *
     * @var string[]
     */
     protected static $setters = [
             'instanceId' => 'setInstanceId',
-            'retStatus' => 'setRetStatus',
-            'errorMsg' => 'setErrorMsg',
             'invocationId' => 'setInvocationId',
-            'errorCode' => 'setErrorCode'
+            'retStatus' => 'setRetStatus',
+            'errorCode' => 'setErrorCode',
+            'errorMsg' => 'setErrorMsg'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  主机id
-    * retStatus  任务结果, successful成功，error失败
-    * errorMsg  错误信息
+    * instanceId  机器id
     * invocationId  任务id
+    * retStatus  任务结果, successful成功，error失败
     * errorCode  错误码
+    * errorMsg  错误信息
     *
     * @var string[]
     */
     protected static $getters = [
             'instanceId' => 'getInstanceId',
-            'retStatus' => 'getRetStatus',
-            'errorMsg' => 'getErrorMsg',
             'invocationId' => 'getInvocationId',
-            'errorCode' => 'getErrorCode'
+            'retStatus' => 'getRetStatus',
+            'errorCode' => 'getErrorCode',
+            'errorMsg' => 'getErrorMsg'
     ];
 
     /**
@@ -203,10 +203,10 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['retStatus'] = isset($data['retStatus']) ? $data['retStatus'] : null;
-        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
         $this->container['invocationId'] = isset($data['invocationId']) ? $data['invocationId'] : null;
+        $this->container['retStatus'] = isset($data['retStatus']) ? $data['retStatus'] : null;
         $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
     }
 
     /**
@@ -220,6 +220,9 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['instanceId']) && !preg_match("/^[a-zA-Z0-9-]{1,64}$/", $this->container['instanceId'])) {
                 $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-zA-Z0-9-]{1,64}$/.";
             }
+            if (!is_null($this->container['invocationId']) && !preg_match("/^[a-zA-Z0-9-]{1,64}$/", $this->container['invocationId'])) {
+                $invalidProperties[] = "invalid value for 'invocationId', must be conform to the pattern /^[a-zA-Z0-9-]{1,64}$/.";
+            }
             $allowedValues = $this->getRetStatusAllowableValues();
                 if (!is_null($this->container['retStatus']) && !in_array($this->container['retStatus'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -228,17 +231,14 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['errorCode']) && !preg_match("/^(invocationmgr\\.[0-9]{4})$/", $this->container['errorCode'])) {
+                $invalidProperties[] = "invalid value for 'errorCode', must be conform to the pattern /^(invocationmgr\\.[0-9]{4})$/.";
+            }
             if (!is_null($this->container['errorMsg']) && (mb_strlen($this->container['errorMsg']) > 128)) {
                 $invalidProperties[] = "invalid value for 'errorMsg', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['errorMsg']) && (mb_strlen($this->container['errorMsg']) < 1)) {
                 $invalidProperties[] = "invalid value for 'errorMsg', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['invocationId']) && !preg_match("/^[a-zA-Z0-9-]{1,64}$/", $this->container['invocationId'])) {
-                $invalidProperties[] = "invalid value for 'invocationId', must be conform to the pattern /^[a-zA-Z0-9-]{1,64}$/.";
-            }
-            if (!is_null($this->container['errorCode']) && !preg_match("/^(invocationmgr\\.[0-9]{4})$/", $this->container['errorCode'])) {
-                $invalidProperties[] = "invalid value for 'errorCode', must be conform to the pattern /^(invocationmgr\\.[0-9]{4})$/.";
             }
         return $invalidProperties;
     }
@@ -256,7 +256,7 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  主机id
+    *  机器id
     *
     * @return string|null
     */
@@ -268,61 +268,13 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 主机id
+    * @param string|null $instanceId 机器id
     *
     * @return $this
     */
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
-        return $this;
-    }
-
-    /**
-    * Gets retStatus
-    *  任务结果, successful成功，error失败
-    *
-    * @return string|null
-    */
-    public function getRetStatus()
-    {
-        return $this->container['retStatus'];
-    }
-
-    /**
-    * Sets retStatus
-    *
-    * @param string|null $retStatus 任务结果, successful成功，error失败
-    *
-    * @return $this
-    */
-    public function setRetStatus($retStatus)
-    {
-        $this->container['retStatus'] = $retStatus;
-        return $this;
-    }
-
-    /**
-    * Gets errorMsg
-    *  错误信息
-    *
-    * @return string|null
-    */
-    public function getErrorMsg()
-    {
-        return $this->container['errorMsg'];
-    }
-
-    /**
-    * Sets errorMsg
-    *
-    * @param string|null $errorMsg 错误信息
-    *
-    * @return $this
-    */
-    public function setErrorMsg($errorMsg)
-    {
-        $this->container['errorMsg'] = $errorMsg;
         return $this;
     }
 
@@ -351,6 +303,30 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets retStatus
+    *  任务结果, successful成功，error失败
+    *
+    * @return string|null
+    */
+    public function getRetStatus()
+    {
+        return $this->container['retStatus'];
+    }
+
+    /**
+    * Sets retStatus
+    *
+    * @param string|null $retStatus 任务结果, successful成功，error失败
+    *
+    * @return $this
+    */
+    public function setRetStatus($retStatus)
+    {
+        $this->container['retStatus'] = $retStatus;
+        return $this;
+    }
+
+    /**
     * Gets errorCode
     *  错误码
     *
@@ -371,6 +347,30 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
     public function setErrorCode($errorCode)
     {
         $this->container['errorCode'] = $errorCode;
+        return $this;
+    }
+
+    /**
+    * Gets errorMsg
+    *  错误信息
+    *
+    * @return string|null
+    */
+    public function getErrorMsg()
+    {
+        return $this->container['errorMsg'];
+    }
+
+    /**
+    * Sets errorMsg
+    *
+    * @param string|null $errorMsg 错误信息
+    *
+    * @return $this
+    */
+    public function setErrorMsg($errorMsg)
+    {
+        $this->container['errorMsg'] = $errorMsg;
         return $this;
     }
 

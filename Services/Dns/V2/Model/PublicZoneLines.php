@@ -20,9 +20,9 @@ class PublicZoneLines implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * line  线路ID。
-    * lineName  线路名称。
-    * createTime  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * line  **参数解释：** 线路ID。 **取值范围：** 不涉及。
+    * lineName  **参数解释：** 线路名称。 **取值范围：** 不涉及。
+    * createTime  **参数解释：** 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class PublicZoneLines implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * line  线路ID。
-    * lineName  线路名称。
-    * createTime  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * line  **参数解释：** 线路ID。 **取值范围：** 不涉及。
+    * lineName  **参数解释：** 线路名称。 **取值范围：** 不涉及。
+    * createTime  **参数解释：** 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class PublicZoneLines implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * line  线路ID。
-    * lineName  线路名称。
-    * createTime  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * line  **参数解释：** 线路ID。 **取值范围：** 不涉及。
+    * lineName  **参数解释：** 线路名称。 **取值范围：** 不涉及。
+    * createTime  **参数解释：** 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class PublicZoneLines implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * line  线路ID。
-    * lineName  线路名称。
-    * createTime  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * line  **参数解释：** 线路ID。 **取值范围：** 不涉及。
+    * lineName  **参数解释：** 线路名称。 **取值范围：** 不涉及。
+    * createTime  **参数解释：** 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class PublicZoneLines implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * line  线路ID。
-    * lineName  线路名称。
-    * createTime  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * line  **参数解释：** 线路ID。 **取值范围：** 不涉及。
+    * lineName  **参数解释：** 线路名称。 **取值范围：** 不涉及。
+    * createTime  **参数解释：** 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class PublicZoneLines implements ModelInterface, ArrayAccess
 
     /**
     * Gets line
-    *  线路ID。
+    *  **参数解释：** 线路ID。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class PublicZoneLines implements ModelInterface, ArrayAccess
     /**
     * Sets line
     *
-    * @param string|null $line 线路ID。
+    * @param string|null $line **参数解释：** 线路ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class PublicZoneLines implements ModelInterface, ArrayAccess
 
     /**
     * Gets lineName
-    *  线路名称。
+    *  **参数解释：** 线路名称。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class PublicZoneLines implements ModelInterface, ArrayAccess
     /**
     * Sets lineName
     *
-    * @param string|null $lineName 线路名称。
+    * @param string|null $lineName **参数解释：** 线路名称。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class PublicZoneLines implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    *  **参数解释：** 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class PublicZoneLines implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * @param string|null $createTime **参数解释：** 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @return $this
     */

@@ -25,7 +25,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     * metricName  多个指标名称，用逗号隔开
     * alias  监控视图的指标别名列表
     * extraInfo  extraInfo
-    * rollupEnable  是否开启聚合
+    * rollupEnable  **参数解释** 是否开启聚合 **约束限制** 当RollupEnable开启时，RollupFilter和RollupDimension必填 **取值范围** true，表示开启聚合；false表示不开启聚合 **默认取值** false
     * rollupFilter  rollupFilter
     * rollupDimension  聚合维度
     * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
@@ -63,7 +63,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     * metricName  多个指标名称，用逗号隔开
     * alias  监控视图的指标别名列表
     * extraInfo  extraInfo
-    * rollupEnable  是否开启聚合
+    * rollupEnable  **参数解释** 是否开启聚合 **约束限制** 当RollupEnable开启时，RollupFilter和RollupDimension必填 **取值范围** true，表示开启聚合；false表示不开启聚合 **默认取值** false
     * rollupFilter  rollupFilter
     * rollupDimension  聚合维度
     * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
@@ -122,7 +122,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     * metricName  多个指标名称，用逗号隔开
     * alias  监控视图的指标别名列表
     * extraInfo  extraInfo
-    * rollupEnable  是否开启聚合
+    * rollupEnable  **参数解释** 是否开启聚合 **约束限制** 当RollupEnable开启时，RollupFilter和RollupDimension必填 **取值范围** true，表示开启聚合；false表示不开启聚合 **默认取值** false
     * rollupFilter  rollupFilter
     * rollupDimension  聚合维度
     * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
@@ -160,7 +160,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     * metricName  多个指标名称，用逗号隔开
     * alias  监控视图的指标别名列表
     * extraInfo  extraInfo
-    * rollupEnable  是否开启聚合
+    * rollupEnable  **参数解释** 是否开启聚合 **约束限制** 当RollupEnable开启时，RollupFilter和RollupDimension必填 **取值范围** true，表示开启聚合；false表示不开启聚合 **默认取值** false
     * rollupFilter  rollupFilter
     * rollupDimension  聚合维度
     * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
@@ -198,7 +198,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     * metricName  多个指标名称，用逗号隔开
     * alias  监控视图的指标别名列表
     * extraInfo  extraInfo
-    * rollupEnable  是否开启聚合
+    * rollupEnable  **参数解释** 是否开启聚合 **约束限制** 当RollupEnable开启时，RollupFilter和RollupDimension必填 **取值范围** true，表示开启聚合；false表示不开启聚合 **默认取值** false
     * rollupFilter  rollupFilter
     * rollupDimension  聚合维度
     * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
@@ -537,7 +537,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets rollupEnable
-    *  是否开启聚合
+    *  **参数解释** 是否开启聚合 **约束限制** 当RollupEnable开启时，RollupFilter和RollupDimension必填 **取值范围** true，表示开启聚合；false表示不开启聚合 **默认取值** false
     *
     * @return bool|null
     */
@@ -549,7 +549,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     /**
     * Sets rollupEnable
     *
-    * @param bool|null $rollupEnable 是否开启聚合
+    * @param bool|null $rollupEnable **参数解释** 是否开启聚合 **约束限制** 当RollupEnable开启时，RollupFilter和RollupDimension必填 **取值范围** true，表示开启聚合；false表示不开启聚合 **默认取值** false
     *
     * @return $this
     */

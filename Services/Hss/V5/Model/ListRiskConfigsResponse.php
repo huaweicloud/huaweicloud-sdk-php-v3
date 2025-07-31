@@ -21,8 +21,8 @@ class ListRiskConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  记录总数
-    * dataList  服务器配置检测结果列表
+    * totalNum  **参数解释**: 记录总数 **取值范围**: 不涉及
+    * dataList  **参数解释**: 服务器配置检测结果列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListRiskConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  记录总数
-    * dataList  服务器配置检测结果列表
+    * totalNum  **参数解释**: 记录总数 **取值范围**: 不涉及
+    * dataList  **参数解释**: 服务器配置检测结果列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListRiskConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  记录总数
-    * dataList  服务器配置检测结果列表
+    * totalNum  **参数解释**: 记录总数 **取值范围**: 不涉及
+    * dataList  **参数解释**: 服务器配置检测结果列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListRiskConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  记录总数
-    * dataList  服务器配置检测结果列表
+    * totalNum  **参数解释**: 记录总数 **取值范围**: 不涉及
+    * dataList  **参数解释**: 服务器配置检测结果列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListRiskConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  记录总数
-    * dataList  服务器配置检测结果列表
+    * totalNum  **参数解释**: 记录总数 **取值范围**: 不涉及
+    * dataList  **参数解释**: 服务器配置检测结果列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListRiskConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  记录总数
+    *  **参数解释**: 记录总数 **取值范围**: 不涉及
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListRiskConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 记录总数
+    * @param int|null $totalNum **参数解释**: 记录总数 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListRiskConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  服务器配置检测结果列表
+    *  **参数解释**: 服务器配置检测结果列表 **取值范围**: 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\SecurityCheckInfoResponseInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListRiskConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\SecurityCheckInfoResponseInfo[]|null $dataList 服务器配置检测结果列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\SecurityCheckInfoResponseInfo[]|null $dataList **参数解释**: 服务器配置检测结果列表 **取值范围**: 不涉及
     *
     * @return $this
     */

@@ -2294,9 +2294,6 @@ class MetaStudioClient extends Client
         if ($localVarParams['appUserId'] !== null) {
             $queryParams['app_user_id'] = $localVarParams['appUserId'];
         }
-        if ($localVarParams['projectGroupId'] !== null) {
-            $queryParams['project_group_id'] = $localVarParams['projectGroupId'];
-        }
         if ($localVarParams['authorization'] !== null) {
             $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
@@ -12148,6 +12145,9 @@ class MetaStudioClient extends Client
         if ($localVarParams['sortDir'] !== null) {
             $queryParams['sort_dir'] = $localVarParams['sortDir'];
         }
+        if ($localVarParams['isOndemandResource'] !== null) {
+            $queryParams['is_ondemand_resource'] = $localVarParams['isOndemandResource'];
+        }
         if ($localVarParams['xAppUserId'] !== null) {
             $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
         }
@@ -12210,6 +12210,9 @@ class MetaStudioClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -13638,6 +13641,83 @@ class MetaStudioClient extends Client
     }
 
     /**
+     * 设置TTS租户级词表分组配置
+     *
+     * 该接口用于设置TTS租户级词表分组配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createTtscVocabularyGroups($request)
+    {
+        return $this->createTtscVocabularyGroupsWithHttpInfo($request);
+    }
+
+    public function createTtscVocabularyGroupsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ttsc/vocabulary-groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xRequestId'] !== null) {
+            $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateTtscVocabularyGroupsResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateTtscVocabularyGroupsRequest');
+    }
+
+    /**
      * 删除TTS租户级自定义读法配置
      *
      * 该接口用于删除TTS租户级自定义读法配置。
@@ -13721,6 +13801,89 @@ class MetaStudioClient extends Client
     }
 
     /**
+     * 删除TTS租户级词表分组
+     *
+     * 该接口用于删除TTS租户级词表分组配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteTtscVocabularyGroups($request)
+    {
+        return $this->deleteTtscVocabularyGroupsWithHttpInfo($request);
+    }
+
+    public function deleteTtscVocabularyGroupsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ttsc/vocabulary-groups/{group_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xRequestId'] !== null) {
+            $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\DeleteTtscVocabularyGroupsResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\DeleteTtscVocabularyGroupsRequest');
+    }
+
+    /**
      * 获取TTS租户级自定义读法配置
      *
      * 该接口用于获取TTS租户级自定义读法配置。
@@ -13759,6 +13922,12 @@ class MetaStudioClient extends Client
         }
         if ($localVarParams['isVocabularyConfigEnable'] !== null) {
             $queryParams['is_vocabulary_config_enable'] = $localVarParams['isVocabularyConfigEnable'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $queryParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['assetId'] !== null) {
+            $queryParams['asset_id'] = $localVarParams['assetId'];
         }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
@@ -13816,6 +13985,80 @@ class MetaStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListTtscVocabularyConfigsResponse',
             $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListTtscVocabularyConfigsRequest');
+    }
+
+    /**
+     * 获取TTS租户级词表分组列表
+     *
+     * 该接口用于获取TTS租户级词表分组列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTtscVocabularyGroups($request)
+    {
+        return $this->listTtscVocabularyGroupsWithHttpInfo($request);
+    }
+
+    public function listTtscVocabularyGroupsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ttsc/vocabulary-groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xRequestId'] !== null) {
+            $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListTtscVocabularyGroupsResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListTtscVocabularyGroupsRequest');
     }
 
     /**
@@ -13896,6 +14139,86 @@ class MetaStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\SaveTtscVocabularyConfigsResponse',
             $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\SaveTtscVocabularyConfigsRequest');
+    }
+
+    /**
+     * 设置TTS租户级词表分组的资产列表
+     *
+     * 该接口用于设置TTS租户级词表分组的资产列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setTtscGroupAssets($request)
+    {
+        return $this->setTtscGroupAssetsWithHttpInfo($request);
+    }
+
+    public function setTtscGroupAssetsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ttsc/group-assets/{group_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xRequestId'] !== null) {
+            $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\SetTtscGroupAssetsResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\SetTtscGroupAssetsRequest');
     }
 
     /**
@@ -14130,6 +14453,86 @@ class MetaStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowTtsPhoneticSymbolResponse',
             $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowTtsPhoneticSymbolRequest');
+    }
+
+    /**
+     * TTS租户级词表分组重命名
+     *
+     * 该接口用于对TTS租户级词表分组重命名。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateTtscVocabularyGroups($request)
+    {
+        return $this->updateTtscVocabularyGroupsWithHttpInfo($request);
+    }
+
+    public function updateTtscVocabularyGroupsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ttsc/vocabulary-groups/{group_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xRequestId'] !== null) {
+            $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateTtscVocabularyGroupsResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateTtscVocabularyGroupsRequest');
     }
 
     /**

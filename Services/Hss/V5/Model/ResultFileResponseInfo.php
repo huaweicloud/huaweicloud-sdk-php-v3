@@ -22,7 +22,7 @@ class ResultFileResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * filePath  文件路径
     * fileHash  文件哈希
-    * fileSize  文件大小
+    * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  文件属主
     * fileAttr  文件属性
     * fileCtime  文件创建时间
@@ -44,7 +44,7 @@ class ResultFileResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * filePath  文件路径
     * fileHash  文件哈希
-    * fileSize  文件大小
+    * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  文件属主
     * fileAttr  文件属性
     * fileCtime  文件创建时间
@@ -87,7 +87,7 @@ class ResultFileResponseInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * filePath  文件路径
     * fileHash  文件哈希
-    * fileSize  文件大小
+    * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  文件属主
     * fileAttr  文件属性
     * fileCtime  文件创建时间
@@ -109,7 +109,7 @@ class ResultFileResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * filePath  文件路径
     * fileHash  文件哈希
-    * fileSize  文件大小
+    * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  文件属主
     * fileAttr  文件属性
     * fileCtime  文件创建时间
@@ -131,7 +131,7 @@ class ResultFileResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * filePath  文件路径
     * fileHash  文件哈希
-    * fileSize  文件大小
+    * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  文件属主
     * fileAttr  文件属性
     * fileCtime  文件创建时间
@@ -318,7 +318,7 @@ class ResultFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileSize
-    *  文件大小
+    *  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     *
     * @return int|null
     */
@@ -330,7 +330,7 @@ class ResultFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileSize
     *
-    * @param int|null $fileSize 文件大小
+    * @param int|null $fileSize **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     *
     * @return $this
     */

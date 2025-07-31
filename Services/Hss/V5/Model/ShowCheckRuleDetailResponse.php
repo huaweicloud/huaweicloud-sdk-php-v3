@@ -21,11 +21,11 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * description  当前检查项（检测规则）的描述
-    * reference  当前检查项（检测规则）的制定依据
-    * audit  当前检查项（检测规则）的审计描述
-    * remediation  当前检查项（检测规则）的修改建议
-    * checkInfoList  检测用例信息
+    * description  **参数解释**: 当前检查项（检测规则）的描述 **取值范围**: 不涉及
+    * reference  **参数解释**: 当前检查项（检测规则）的制定依据 **取值范围**: 不涉及
+    * audit  **参数解释**: 当前检查项（检测规则）的审计描述 **取值范围**: 不涉及
+    * remediation  **参数解释**: 当前检查项（检测规则）的修改建议 **取值范围**: 不涉及
+    * checkInfoList  **参数解释**: 检测用例信息 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -39,11 +39,11 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * description  当前检查项（检测规则）的描述
-    * reference  当前检查项（检测规则）的制定依据
-    * audit  当前检查项（检测规则）的审计描述
-    * remediation  当前检查项（检测规则）的修改建议
-    * checkInfoList  检测用例信息
+    * description  **参数解释**: 当前检查项（检测规则）的描述 **取值范围**: 不涉及
+    * reference  **参数解释**: 当前检查项（检测规则）的制定依据 **取值范围**: 不涉及
+    * audit  **参数解释**: 当前检查项（检测规则）的审计描述 **取值范围**: 不涉及
+    * remediation  **参数解释**: 当前检查项（检测规则）的修改建议 **取值范围**: 不涉及
+    * checkInfoList  **参数解释**: 检测用例信息 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -78,11 +78,11 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * description  当前检查项（检测规则）的描述
-    * reference  当前检查项（检测规则）的制定依据
-    * audit  当前检查项（检测规则）的审计描述
-    * remediation  当前检查项（检测规则）的修改建议
-    * checkInfoList  检测用例信息
+    * description  **参数解释**: 当前检查项（检测规则）的描述 **取值范围**: 不涉及
+    * reference  **参数解释**: 当前检查项（检测规则）的制定依据 **取值范围**: 不涉及
+    * audit  **参数解释**: 当前检查项（检测规则）的审计描述 **取值范围**: 不涉及
+    * remediation  **参数解释**: 当前检查项（检测规则）的修改建议 **取值范围**: 不涉及
+    * checkInfoList  **参数解释**: 检测用例信息 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -96,11 +96,11 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * description  当前检查项（检测规则）的描述
-    * reference  当前检查项（检测规则）的制定依据
-    * audit  当前检查项（检测规则）的审计描述
-    * remediation  当前检查项（检测规则）的修改建议
-    * checkInfoList  检测用例信息
+    * description  **参数解释**: 当前检查项（检测规则）的描述 **取值范围**: 不涉及
+    * reference  **参数解释**: 当前检查项（检测规则）的制定依据 **取值范围**: 不涉及
+    * audit  **参数解释**: 当前检查项（检测规则）的审计描述 **取值范围**: 不涉及
+    * remediation  **参数解释**: 当前检查项（检测规则）的修改建议 **取值范围**: 不涉及
+    * checkInfoList  **参数解释**: 检测用例信息 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -114,11 +114,11 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * description  当前检查项（检测规则）的描述
-    * reference  当前检查项（检测规则）的制定依据
-    * audit  当前检查项（检测规则）的审计描述
-    * remediation  当前检查项（检测规则）的修改建议
-    * checkInfoList  检测用例信息
+    * description  **参数解释**: 当前检查项（检测规则）的描述 **取值范围**: 不涉及
+    * reference  **参数解释**: 当前检查项（检测规则）的制定依据 **取值范围**: 不涉及
+    * audit  **参数解释**: 当前检查项（检测规则）的审计描述 **取值范围**: 不涉及
+    * remediation  **参数解释**: 当前检查项（检测规则）的修改建议 **取值范围**: 不涉及
+    * checkInfoList  **参数解释**: 检测用例信息 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -243,7 +243,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  当前检查项（检测规则）的描述
+    *  **参数解释**: 当前检查项（检测规则）的描述 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -255,7 +255,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 当前检查项（检测规则）的描述
+    * @param string|null $description **参数解释**: 当前检查项（检测规则）的描述 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets reference
-    *  当前检查项（检测规则）的制定依据
+    *  **参数解释**: 当前检查项（检测规则）的制定依据 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -279,7 +279,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets reference
     *
-    * @param string|null $reference 当前检查项（检测规则）的制定依据
+    * @param string|null $reference **参数解释**: 当前检查项（检测规则）的制定依据 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets audit
-    *  当前检查项（检测规则）的审计描述
+    *  **参数解释**: 当前检查项（检测规则）的审计描述 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -303,7 +303,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets audit
     *
-    * @param string|null $audit 当前检查项（检测规则）的审计描述
+    * @param string|null $audit **参数解释**: 当前检查项（检测规则）的审计描述 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets remediation
-    *  当前检查项（检测规则）的修改建议
+    *  **参数解释**: 当前检查项（检测规则）的修改建议 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -327,7 +327,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets remediation
     *
-    * @param string|null $remediation 当前检查项（检测规则）的修改建议
+    * @param string|null $remediation **参数解释**: 当前检查项（检测规则）的修改建议 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -339,7 +339,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkInfoList
-    *  检测用例信息
+    *  **参数解释**: 检测用例信息 **取值范围**: 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\CheckRuleCheckCaseResponseInfo[]|null
     */
@@ -351,7 +351,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets checkInfoList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\CheckRuleCheckCaseResponseInfo[]|null $checkInfoList 检测用例信息
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\CheckRuleCheckCaseResponseInfo[]|null $checkInfoList **参数解释**: 检测用例信息 **取值范围**: 不涉及
     *
     * @return $this
     */

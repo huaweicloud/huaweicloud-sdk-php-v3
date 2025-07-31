@@ -20,13 +20,13 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  域名。
-    * description  描述。
-    * zoneType  域名类型。取值：public。
-    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
-    * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。默认值为0。
-    * tags  资源标签。
+    * name  **参数解释：** 域名。 **约束限制：** 不涉及。 **取值范围：** 由多个以点分隔的字符串组成，可包含字母、数字、汉字、中划线，中划线不能在开头或末尾，单个字符串不超过63个字符，域名总长度不超过254个字符。 **默认取值：** 不涉及。
+    * description  **参数解释：** 域名的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 不涉及。
+    * zoneType  **参数解释：** 域名类型。 **约束限制：** 不涉及。 **取值范围：** public：公网域名 **默认取值：** 不涉及。
+    * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ttl  **参数解释：** 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 **约束限制：** 不涉及。 **取值范围：** 1~2147483647。 **默认取值：** 300
+    * enterpriseProjectId  **参数解释：** 域名所属的企业项目ID。可以使用该字段过滤企业项目下的域名。 **约束限制：** 不涉及。 **取值范围：** 最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 **默认取值：** 0
+    * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  域名。
-    * description  描述。
-    * zoneType  域名类型。取值：public。
-    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
-    * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。默认值为0。
-    * tags  资源标签。
+    * name  **参数解释：** 域名。 **约束限制：** 不涉及。 **取值范围：** 由多个以点分隔的字符串组成，可包含字母、数字、汉字、中划线，中划线不能在开头或末尾，单个字符串不超过63个字符，域名总长度不超过254个字符。 **默认取值：** 不涉及。
+    * description  **参数解释：** 域名的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 不涉及。
+    * zoneType  **参数解释：** 域名类型。 **约束限制：** 不涉及。 **取值范围：** public：公网域名 **默认取值：** 不涉及。
+    * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ttl  **参数解释：** 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 **约束限制：** 不涉及。 **取值范围：** 1~2147483647。 **默认取值：** 300
+    * enterpriseProjectId  **参数解释：** 域名所属的企业项目ID。可以使用该字段过滤企业项目下的域名。 **约束限制：** 不涉及。 **取值范围：** 最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 **默认取值：** 0
+    * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  域名。
-    * description  描述。
-    * zoneType  域名类型。取值：public。
-    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
-    * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。默认值为0。
-    * tags  资源标签。
+    * name  **参数解释：** 域名。 **约束限制：** 不涉及。 **取值范围：** 由多个以点分隔的字符串组成，可包含字母、数字、汉字、中划线，中划线不能在开头或末尾，单个字符串不超过63个字符，域名总长度不超过254个字符。 **默认取值：** 不涉及。
+    * description  **参数解释：** 域名的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 不涉及。
+    * zoneType  **参数解释：** 域名类型。 **约束限制：** 不涉及。 **取值范围：** public：公网域名 **默认取值：** 不涉及。
+    * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ttl  **参数解释：** 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 **约束限制：** 不涉及。 **取值范围：** 1~2147483647。 **默认取值：** 300
+    * enterpriseProjectId  **参数解释：** 域名所属的企业项目ID。可以使用该字段过滤企业项目下的域名。 **约束限制：** 不涉及。 **取值范围：** 最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 **默认取值：** 0
+    * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  域名。
-    * description  描述。
-    * zoneType  域名类型。取值：public。
-    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
-    * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。默认值为0。
-    * tags  资源标签。
+    * name  **参数解释：** 域名。 **约束限制：** 不涉及。 **取值范围：** 由多个以点分隔的字符串组成，可包含字母、数字、汉字、中划线，中划线不能在开头或末尾，单个字符串不超过63个字符，域名总长度不超过254个字符。 **默认取值：** 不涉及。
+    * description  **参数解释：** 域名的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 不涉及。
+    * zoneType  **参数解释：** 域名类型。 **约束限制：** 不涉及。 **取值范围：** public：公网域名 **默认取值：** 不涉及。
+    * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ttl  **参数解释：** 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 **约束限制：** 不涉及。 **取值范围：** 1~2147483647。 **默认取值：** 300
+    * enterpriseProjectId  **参数解释：** 域名所属的企业项目ID。可以使用该字段过滤企业项目下的域名。 **约束限制：** 不涉及。 **取值范围：** 最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 **默认取值：** 0
+    * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  域名。
-    * description  描述。
-    * zoneType  域名类型。取值：public。
-    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
-    * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。默认值为0。
-    * tags  资源标签。
+    * name  **参数解释：** 域名。 **约束限制：** 不涉及。 **取值范围：** 由多个以点分隔的字符串组成，可包含字母、数字、汉字、中划线，中划线不能在开头或末尾，单个字符串不超过63个字符，域名总长度不超过254个字符。 **默认取值：** 不涉及。
+    * description  **参数解释：** 域名的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 不涉及。
+    * zoneType  **参数解释：** 域名类型。 **约束限制：** 不涉及。 **取值范围：** public：公网域名 **默认取值：** 不涉及。
+    * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ttl  **参数解释：** 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 **约束限制：** 不涉及。 **取值范围：** 1~2147483647。 **默认取值：** 300
+    * enterpriseProjectId  **参数解释：** 域名所属的企业项目ID。可以使用该字段过滤企业项目下的域名。 **约束限制：** 不涉及。 **取值范围：** 最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 **默认取值：** 0
+    * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -243,7 +243,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  域名。
+    *  **参数解释：** 域名。 **约束限制：** 不涉及。 **取值范围：** 由多个以点分隔的字符串组成，可包含字母、数字、汉字、中划线，中划线不能在开头或末尾，单个字符串不超过63个字符，域名总长度不超过254个字符。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -255,7 +255,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 域名。
+    * @param string $name **参数解释：** 域名。 **约束限制：** 不涉及。 **取值范围：** 由多个以点分隔的字符串组成，可包含字母、数字、汉字、中划线，中划线不能在开头或末尾，单个字符串不超过63个字符，域名总长度不超过254个字符。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述。
+    *  **参数解释：** 域名的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -279,7 +279,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述。
+    * @param string|null $description **参数解释：** 域名的描述信息。 **约束限制：** 不涉及。 **取值范围：** 长度不超过255个字符。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneType
-    *  域名类型。取值：public。
+    *  **参数解释：** 域名类型。 **约束限制：** 不涉及。 **取值范围：** public：公网域名 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -303,7 +303,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
     /**
     * Sets zoneType
     *
-    * @param string|null $zoneType 域名类型。取值：public。
+    * @param string|null $zoneType **参数解释：** 域名类型。 **约束限制：** 不涉及。 **取值范围：** public：公网域名 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
-    *  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
+    *  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -327,7 +327,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email 管理该域名的管理员邮箱，用于生成该域名的SOA记录。
+    * @param string|null $email **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -339,7 +339,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets ttl
-    *  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
+    *  **参数解释：** 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 **约束限制：** 不涉及。 **取值范围：** 1~2147483647。 **默认取值：** 300
     *
     * @return int|null
     */
@@ -351,7 +351,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
     /**
     * Sets ttl
     *
-    * @param int|null $ttl 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
+    * @param int|null $ttl **参数解释：** 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 **约束限制：** 不涉及。 **取值范围：** 1~2147483647。 **默认取值：** 300
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  域名关联的企业项目ID，长度不超过36个字符。默认值为0。
+    *  **参数解释：** 域名所属的企业项目ID。可以使用该字段过滤企业项目下的域名。 **约束限制：** 不涉及。 **取值范围：** 最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 **默认取值：** 0
     *
     * @return string|null
     */
@@ -375,7 +375,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 域名关联的企业项目ID，长度不超过36个字符。默认值为0。
+    * @param string|null $enterpriseProjectId **参数解释：** 域名所属的企业项目ID。可以使用该字段过滤企业项目下的域名。 **约束限制：** 不涉及。 **取值范围：** 最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 **默认取值：** 0
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  资源标签。
+    *  **参数解释：** 资源标签。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\Tag[]|null
     */
@@ -399,7 +399,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Tag[]|null $tags 资源标签。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\Tag[]|null $tags **参数解释：** 资源标签。 **取值范围：** 不涉及。
     *
     * @return $this
     */

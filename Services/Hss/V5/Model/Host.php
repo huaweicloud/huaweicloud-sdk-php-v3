@@ -20,58 +20,58 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * agentId  Agent ID
-    * privateIp  私有IP地址
-    * publicIp  弹性公网IP地址
-    * enterpriseProjectId  企业项目ID
-    * enterpriseProjectName  所属企业项目名称
-    * osName  系统名称
-    * osVersion  系统版本
-    * kernelVersion  内核版本
-    * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
-    * agentStatus  Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
-    * installResultCode  安装结果，包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
-    * osImage  系统镜像
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * osBit  操作系统位数
-    * detectResult  云主机安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
-    * expireTime  试用版到期时间（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
-    * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
-    * resourceId  主机安全配额ID（UUID）
-    * outsideHost  是否非华为云机器
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * policyGroupId  策略组ID
-    * policyGroupName  策略组名称
-    * asset  资产风险
-    * vulnerability  漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞
-    * baseline  基线风险总数，包含配置风险、弱口令
-    * intrusion  入侵风险总数
-    * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * labels  标签列表
-    * agentCreateTime  agent安装时间，采用时间戳，默认毫秒，
-    * agentUpdateTime  agent状态修改时间，采用时间戳，默认毫秒，
-    * agentVersion  agent版本
-    * upgradeStatus  升级状态，包含如下4种。   - not_upgrade ：未升级，也就是默认状态，客户还没有给这台机器下发过升级。   - upgrading ：正在升级中。   - upgrade_failed ：升级失败。   - upgrade_succeed ：升级成功。
-    * upgradeResultCode  升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示，包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
-    * upgradable  该服务器agent是否可升级
-    * openTime  开启防护时间，采用时间戳，默认毫秒，
-    * protectInterrupt  防护是否中断
-    * protectDegradation  防护是否降级
-    * hostSources  服务器来源
-    * interruptReason  防护中断原因
-    * degradationReason  防护降级原因
-    * keyName  使用的密钥对名称
-    * autoOpenVersion  cce购买主机
-    * installProgress  安装进度
-    * vpcId  vpc id
-    * commonLoginAreaCodes  后台识别服务器常用登录地编号
-    * clusterName  集群名称
-    * clusterId  集群id
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-128位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-128位
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-128位
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度1-128位
+    * publicIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度1-128位
+    * enterpriseProjectId  **参数解释**: 企业项目ID **取值范围**: 字符长度0-256位
+    * enterpriseProjectName  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度0-256位
+    * osName  **参数解释**: 系统名称 **取值范围**: 字符长度0-128位
+    * osVersion  **参数解释**: 系统版本 **取值范围**: 字符长度0-256位
+    * kernelVersion  **参数解释**: 内核版本 **取值范围**: 字符长度0-256位
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种。 - ACTIVE ：运行中。 - SHUTOFF ：关机。 - BUILDING ：创建中。 - ERROR ：故障。
+    * agentStatus  **参数解释**: Agent状态 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。
+    * installResultCode  **参数解释**: 安装结果 **取值范围**: 包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
+    * version  **参数解释**： 主机开通的版本 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    * protectStatus  **参数解释**： 防护状态 **取值范围**： 包含如下3种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
+    * osImage  **参数解释**： 系统镜像 **取值范围**： 字符长度0-128位
+    * osType  **参数解释**： 操作系统类型 **取值范围**： 包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度0-128位
+    * detectResult  **参数解释**： 云主机安全检测结果 **取值范围**： 包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
+    * expireTime  **参数解释**： 试用版到期时间 **取值范围**： -1到4824695185000（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
+    * chargingMode  **参数解释**： 收费模式 **取值范围**： 包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
+    * resourceId  **参数解释**： 主机安全配额ID（UUID） **取值范围**： 字符长度0-128位
+    * outsideHost  **参数解释**： 是否非华为云机器 **取值范围**： true或者false
+    * groupId  **参数解释**： 服务器组ID **取值范围**： 字符长度0-128位
+    * groupName  **参数解释**： 服务器组名称 **取值范围**： 字符长度0-128位
+    * policyGroupId  **参数解释**： 策略组ID **取值范围**： 字符长度0-128位
+    * policyGroupName  **参数解释**： 策略组名称 **取值范围**： 字符长度0-128位
+    * asset  **参数解释**： 资产风险 **取值范围**： 0-2097152
+    * vulnerability  **参数解释**： 漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞 **取值范围**： 0-2097152
+    * baseline  **参数解释**： 基线风险总数，包含配置风险、弱口令 **取值范围**： 0-2097152
+    * intrusion  **参数解释**： 入侵风险总数 **取值范围**： 0-2097152
+    * assetValue  **参数解释**： 资产重要性 **取值范围**： 包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * labels  **参数解释**： 标签列表 **取值范围**： 不涉及
+    * agentCreateTime  **参数解释**： agent安装时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
+    * agentUpdateTime  **参数解释**： agent状态修改时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
+    * agentVersion  **参数解释**： agent版本 **取值范围**： 字符长度0-32位
+    * upgradeStatus  **参数解释**： 升级状态 **取值范围**： 包含如下4种。   - not_upgrade ：未升级，也就是默认状态，客户还没有给这台机器下发过升级。   - upgrading ：正在升级中。   - upgrade_failed ：升级失败。   - upgrade_succeed ：升级成功。
+    * upgradeResultCode  **参数解释**： 升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示 **取值范围**： 包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
+    * upgradable  **参数解释**： 该服务器agent是否可升级 **取值范围**： true或者false
+    * openTime  **参数解释**： 开启防护时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
+    * protectInterrupt  **参数解释**： 防护是否中断 **取值范围**： true或者false
+    * protectDegradation  **参数解释**： 防护是否降级 **取值范围**： true或者false
+    * hostSources  **参数解释**： 服务器来源 **取值范围**： 包含如下3种。   - ecs ：华为云ecs。   - outside ：非华为云机器。   - workspace ：华为云workspace。
+    * interruptReason  **参数解释**： 防护中断原因 **取值范围**： 字符长度1-32位
+    * degradationReason  **参数解释**： 防护降级原因 **取值范围**： 字符长度1-32位
+    * keyName  **参数解释**： 使用的密钥对名称 **取值范围**： 字符长度1-32位
+    * autoOpenVersion  **参数解释**： cce购买主机 **取值范围**： 字符长度1-32位
+    * installProgress  **参数解释**： 安装进度 **取值范围**： 0-100
+    * vpcId  **参数解释**： vpc id **取值范围**： 字符长度0-128位
+    * commonLoginAreaCodes  **参数解释**： 后台识别服务器常用登录地编号 **取值范围**： 不涉及
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 字符长度1-128位
+    * clusterId  **参数解释**： 集群id **取值范围**： 字符长度1-128位
     *
     * @var string[]
     */
@@ -132,58 +132,58 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * agentId  Agent ID
-    * privateIp  私有IP地址
-    * publicIp  弹性公网IP地址
-    * enterpriseProjectId  企业项目ID
-    * enterpriseProjectName  所属企业项目名称
-    * osName  系统名称
-    * osVersion  系统版本
-    * kernelVersion  内核版本
-    * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
-    * agentStatus  Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
-    * installResultCode  安装结果，包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
-    * osImage  系统镜像
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * osBit  操作系统位数
-    * detectResult  云主机安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
-    * expireTime  试用版到期时间（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
-    * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
-    * resourceId  主机安全配额ID（UUID）
-    * outsideHost  是否非华为云机器
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * policyGroupId  策略组ID
-    * policyGroupName  策略组名称
-    * asset  资产风险
-    * vulnerability  漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞
-    * baseline  基线风险总数，包含配置风险、弱口令
-    * intrusion  入侵风险总数
-    * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * labels  标签列表
-    * agentCreateTime  agent安装时间，采用时间戳，默认毫秒，
-    * agentUpdateTime  agent状态修改时间，采用时间戳，默认毫秒，
-    * agentVersion  agent版本
-    * upgradeStatus  升级状态，包含如下4种。   - not_upgrade ：未升级，也就是默认状态，客户还没有给这台机器下发过升级。   - upgrading ：正在升级中。   - upgrade_failed ：升级失败。   - upgrade_succeed ：升级成功。
-    * upgradeResultCode  升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示，包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
-    * upgradable  该服务器agent是否可升级
-    * openTime  开启防护时间，采用时间戳，默认毫秒，
-    * protectInterrupt  防护是否中断
-    * protectDegradation  防护是否降级
-    * hostSources  服务器来源
-    * interruptReason  防护中断原因
-    * degradationReason  防护降级原因
-    * keyName  使用的密钥对名称
-    * autoOpenVersion  cce购买主机
-    * installProgress  安装进度
-    * vpcId  vpc id
-    * commonLoginAreaCodes  后台识别服务器常用登录地编号
-    * clusterName  集群名称
-    * clusterId  集群id
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-128位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-128位
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-128位
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度1-128位
+    * publicIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度1-128位
+    * enterpriseProjectId  **参数解释**: 企业项目ID **取值范围**: 字符长度0-256位
+    * enterpriseProjectName  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度0-256位
+    * osName  **参数解释**: 系统名称 **取值范围**: 字符长度0-128位
+    * osVersion  **参数解释**: 系统版本 **取值范围**: 字符长度0-256位
+    * kernelVersion  **参数解释**: 内核版本 **取值范围**: 字符长度0-256位
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种。 - ACTIVE ：运行中。 - SHUTOFF ：关机。 - BUILDING ：创建中。 - ERROR ：故障。
+    * agentStatus  **参数解释**: Agent状态 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。
+    * installResultCode  **参数解释**: 安装结果 **取值范围**: 包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
+    * version  **参数解释**： 主机开通的版本 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    * protectStatus  **参数解释**： 防护状态 **取值范围**： 包含如下3种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
+    * osImage  **参数解释**： 系统镜像 **取值范围**： 字符长度0-128位
+    * osType  **参数解释**： 操作系统类型 **取值范围**： 包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度0-128位
+    * detectResult  **参数解释**： 云主机安全检测结果 **取值范围**： 包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
+    * expireTime  **参数解释**： 试用版到期时间 **取值范围**： -1到4824695185000（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
+    * chargingMode  **参数解释**： 收费模式 **取值范围**： 包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
+    * resourceId  **参数解释**： 主机安全配额ID（UUID） **取值范围**： 字符长度0-128位
+    * outsideHost  **参数解释**： 是否非华为云机器 **取值范围**： true或者false
+    * groupId  **参数解释**： 服务器组ID **取值范围**： 字符长度0-128位
+    * groupName  **参数解释**： 服务器组名称 **取值范围**： 字符长度0-128位
+    * policyGroupId  **参数解释**： 策略组ID **取值范围**： 字符长度0-128位
+    * policyGroupName  **参数解释**： 策略组名称 **取值范围**： 字符长度0-128位
+    * asset  **参数解释**： 资产风险 **取值范围**： 0-2097152
+    * vulnerability  **参数解释**： 漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞 **取值范围**： 0-2097152
+    * baseline  **参数解释**： 基线风险总数，包含配置风险、弱口令 **取值范围**： 0-2097152
+    * intrusion  **参数解释**： 入侵风险总数 **取值范围**： 0-2097152
+    * assetValue  **参数解释**： 资产重要性 **取值范围**： 包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * labels  **参数解释**： 标签列表 **取值范围**： 不涉及
+    * agentCreateTime  **参数解释**： agent安装时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
+    * agentUpdateTime  **参数解释**： agent状态修改时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
+    * agentVersion  **参数解释**： agent版本 **取值范围**： 字符长度0-32位
+    * upgradeStatus  **参数解释**： 升级状态 **取值范围**： 包含如下4种。   - not_upgrade ：未升级，也就是默认状态，客户还没有给这台机器下发过升级。   - upgrading ：正在升级中。   - upgrade_failed ：升级失败。   - upgrade_succeed ：升级成功。
+    * upgradeResultCode  **参数解释**： 升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示 **取值范围**： 包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
+    * upgradable  **参数解释**： 该服务器agent是否可升级 **取值范围**： true或者false
+    * openTime  **参数解释**： 开启防护时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
+    * protectInterrupt  **参数解释**： 防护是否中断 **取值范围**： true或者false
+    * protectDegradation  **参数解释**： 防护是否降级 **取值范围**： true或者false
+    * hostSources  **参数解释**： 服务器来源 **取值范围**： 包含如下3种。   - ecs ：华为云ecs。   - outside ：非华为云机器。   - workspace ：华为云workspace。
+    * interruptReason  **参数解释**： 防护中断原因 **取值范围**： 字符长度1-32位
+    * degradationReason  **参数解释**： 防护降级原因 **取值范围**： 字符长度1-32位
+    * keyName  **参数解释**： 使用的密钥对名称 **取值范围**： 字符长度1-32位
+    * autoOpenVersion  **参数解释**： cce购买主机 **取值范围**： 字符长度1-32位
+    * installProgress  **参数解释**： 安装进度 **取值范围**： 0-100
+    * vpcId  **参数解释**： vpc id **取值范围**： 字符长度0-128位
+    * commonLoginAreaCodes  **参数解释**： 后台识别服务器常用登录地编号 **取值范围**： 不涉及
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 字符长度1-128位
+    * clusterId  **参数解释**： 集群id **取值范围**： 字符长度1-128位
     *
     * @var string[]
     */
@@ -265,58 +265,58 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * agentId  Agent ID
-    * privateIp  私有IP地址
-    * publicIp  弹性公网IP地址
-    * enterpriseProjectId  企业项目ID
-    * enterpriseProjectName  所属企业项目名称
-    * osName  系统名称
-    * osVersion  系统版本
-    * kernelVersion  内核版本
-    * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
-    * agentStatus  Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
-    * installResultCode  安装结果，包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
-    * osImage  系统镜像
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * osBit  操作系统位数
-    * detectResult  云主机安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
-    * expireTime  试用版到期时间（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
-    * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
-    * resourceId  主机安全配额ID（UUID）
-    * outsideHost  是否非华为云机器
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * policyGroupId  策略组ID
-    * policyGroupName  策略组名称
-    * asset  资产风险
-    * vulnerability  漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞
-    * baseline  基线风险总数，包含配置风险、弱口令
-    * intrusion  入侵风险总数
-    * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * labels  标签列表
-    * agentCreateTime  agent安装时间，采用时间戳，默认毫秒，
-    * agentUpdateTime  agent状态修改时间，采用时间戳，默认毫秒，
-    * agentVersion  agent版本
-    * upgradeStatus  升级状态，包含如下4种。   - not_upgrade ：未升级，也就是默认状态，客户还没有给这台机器下发过升级。   - upgrading ：正在升级中。   - upgrade_failed ：升级失败。   - upgrade_succeed ：升级成功。
-    * upgradeResultCode  升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示，包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
-    * upgradable  该服务器agent是否可升级
-    * openTime  开启防护时间，采用时间戳，默认毫秒，
-    * protectInterrupt  防护是否中断
-    * protectDegradation  防护是否降级
-    * hostSources  服务器来源
-    * interruptReason  防护中断原因
-    * degradationReason  防护降级原因
-    * keyName  使用的密钥对名称
-    * autoOpenVersion  cce购买主机
-    * installProgress  安装进度
-    * vpcId  vpc id
-    * commonLoginAreaCodes  后台识别服务器常用登录地编号
-    * clusterName  集群名称
-    * clusterId  集群id
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-128位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-128位
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-128位
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度1-128位
+    * publicIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度1-128位
+    * enterpriseProjectId  **参数解释**: 企业项目ID **取值范围**: 字符长度0-256位
+    * enterpriseProjectName  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度0-256位
+    * osName  **参数解释**: 系统名称 **取值范围**: 字符长度0-128位
+    * osVersion  **参数解释**: 系统版本 **取值范围**: 字符长度0-256位
+    * kernelVersion  **参数解释**: 内核版本 **取值范围**: 字符长度0-256位
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种。 - ACTIVE ：运行中。 - SHUTOFF ：关机。 - BUILDING ：创建中。 - ERROR ：故障。
+    * agentStatus  **参数解释**: Agent状态 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。
+    * installResultCode  **参数解释**: 安装结果 **取值范围**: 包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
+    * version  **参数解释**： 主机开通的版本 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    * protectStatus  **参数解释**： 防护状态 **取值范围**： 包含如下3种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
+    * osImage  **参数解释**： 系统镜像 **取值范围**： 字符长度0-128位
+    * osType  **参数解释**： 操作系统类型 **取值范围**： 包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度0-128位
+    * detectResult  **参数解释**： 云主机安全检测结果 **取值范围**： 包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
+    * expireTime  **参数解释**： 试用版到期时间 **取值范围**： -1到4824695185000（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
+    * chargingMode  **参数解释**： 收费模式 **取值范围**： 包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
+    * resourceId  **参数解释**： 主机安全配额ID（UUID） **取值范围**： 字符长度0-128位
+    * outsideHost  **参数解释**： 是否非华为云机器 **取值范围**： true或者false
+    * groupId  **参数解释**： 服务器组ID **取值范围**： 字符长度0-128位
+    * groupName  **参数解释**： 服务器组名称 **取值范围**： 字符长度0-128位
+    * policyGroupId  **参数解释**： 策略组ID **取值范围**： 字符长度0-128位
+    * policyGroupName  **参数解释**： 策略组名称 **取值范围**： 字符长度0-128位
+    * asset  **参数解释**： 资产风险 **取值范围**： 0-2097152
+    * vulnerability  **参数解释**： 漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞 **取值范围**： 0-2097152
+    * baseline  **参数解释**： 基线风险总数，包含配置风险、弱口令 **取值范围**： 0-2097152
+    * intrusion  **参数解释**： 入侵风险总数 **取值范围**： 0-2097152
+    * assetValue  **参数解释**： 资产重要性 **取值范围**： 包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * labels  **参数解释**： 标签列表 **取值范围**： 不涉及
+    * agentCreateTime  **参数解释**： agent安装时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
+    * agentUpdateTime  **参数解释**： agent状态修改时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
+    * agentVersion  **参数解释**： agent版本 **取值范围**： 字符长度0-32位
+    * upgradeStatus  **参数解释**： 升级状态 **取值范围**： 包含如下4种。   - not_upgrade ：未升级，也就是默认状态，客户还没有给这台机器下发过升级。   - upgrading ：正在升级中。   - upgrade_failed ：升级失败。   - upgrade_succeed ：升级成功。
+    * upgradeResultCode  **参数解释**： 升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示 **取值范围**： 包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
+    * upgradable  **参数解释**： 该服务器agent是否可升级 **取值范围**： true或者false
+    * openTime  **参数解释**： 开启防护时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
+    * protectInterrupt  **参数解释**： 防护是否中断 **取值范围**： true或者false
+    * protectDegradation  **参数解释**： 防护是否降级 **取值范围**： true或者false
+    * hostSources  **参数解释**： 服务器来源 **取值范围**： 包含如下3种。   - ecs ：华为云ecs。   - outside ：非华为云机器。   - workspace ：华为云workspace。
+    * interruptReason  **参数解释**： 防护中断原因 **取值范围**： 字符长度1-32位
+    * degradationReason  **参数解释**： 防护降级原因 **取值范围**： 字符长度1-32位
+    * keyName  **参数解释**： 使用的密钥对名称 **取值范围**： 字符长度1-32位
+    * autoOpenVersion  **参数解释**： cce购买主机 **取值范围**： 字符长度1-32位
+    * installProgress  **参数解释**： 安装进度 **取值范围**： 0-100
+    * vpcId  **参数解释**： vpc id **取值范围**： 字符长度0-128位
+    * commonLoginAreaCodes  **参数解释**： 后台识别服务器常用登录地编号 **取值范围**： 不涉及
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 字符长度1-128位
+    * clusterId  **参数解释**： 集群id **取值范围**： 字符长度1-128位
     *
     * @var string[]
     */
@@ -377,58 +377,58 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * agentId  Agent ID
-    * privateIp  私有IP地址
-    * publicIp  弹性公网IP地址
-    * enterpriseProjectId  企业项目ID
-    * enterpriseProjectName  所属企业项目名称
-    * osName  系统名称
-    * osVersion  系统版本
-    * kernelVersion  内核版本
-    * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
-    * agentStatus  Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
-    * installResultCode  安装结果，包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
-    * osImage  系统镜像
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * osBit  操作系统位数
-    * detectResult  云主机安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
-    * expireTime  试用版到期时间（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
-    * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
-    * resourceId  主机安全配额ID（UUID）
-    * outsideHost  是否非华为云机器
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * policyGroupId  策略组ID
-    * policyGroupName  策略组名称
-    * asset  资产风险
-    * vulnerability  漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞
-    * baseline  基线风险总数，包含配置风险、弱口令
-    * intrusion  入侵风险总数
-    * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * labels  标签列表
-    * agentCreateTime  agent安装时间，采用时间戳，默认毫秒，
-    * agentUpdateTime  agent状态修改时间，采用时间戳，默认毫秒，
-    * agentVersion  agent版本
-    * upgradeStatus  升级状态，包含如下4种。   - not_upgrade ：未升级，也就是默认状态，客户还没有给这台机器下发过升级。   - upgrading ：正在升级中。   - upgrade_failed ：升级失败。   - upgrade_succeed ：升级成功。
-    * upgradeResultCode  升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示，包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
-    * upgradable  该服务器agent是否可升级
-    * openTime  开启防护时间，采用时间戳，默认毫秒，
-    * protectInterrupt  防护是否中断
-    * protectDegradation  防护是否降级
-    * hostSources  服务器来源
-    * interruptReason  防护中断原因
-    * degradationReason  防护降级原因
-    * keyName  使用的密钥对名称
-    * autoOpenVersion  cce购买主机
-    * installProgress  安装进度
-    * vpcId  vpc id
-    * commonLoginAreaCodes  后台识别服务器常用登录地编号
-    * clusterName  集群名称
-    * clusterId  集群id
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-128位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-128位
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-128位
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度1-128位
+    * publicIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度1-128位
+    * enterpriseProjectId  **参数解释**: 企业项目ID **取值范围**: 字符长度0-256位
+    * enterpriseProjectName  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度0-256位
+    * osName  **参数解释**: 系统名称 **取值范围**: 字符长度0-128位
+    * osVersion  **参数解释**: 系统版本 **取值范围**: 字符长度0-256位
+    * kernelVersion  **参数解释**: 内核版本 **取值范围**: 字符长度0-256位
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种。 - ACTIVE ：运行中。 - SHUTOFF ：关机。 - BUILDING ：创建中。 - ERROR ：故障。
+    * agentStatus  **参数解释**: Agent状态 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。
+    * installResultCode  **参数解释**: 安装结果 **取值范围**: 包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
+    * version  **参数解释**： 主机开通的版本 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    * protectStatus  **参数解释**： 防护状态 **取值范围**： 包含如下3种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
+    * osImage  **参数解释**： 系统镜像 **取值范围**： 字符长度0-128位
+    * osType  **参数解释**： 操作系统类型 **取值范围**： 包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度0-128位
+    * detectResult  **参数解释**： 云主机安全检测结果 **取值范围**： 包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
+    * expireTime  **参数解释**： 试用版到期时间 **取值范围**： -1到4824695185000（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
+    * chargingMode  **参数解释**： 收费模式 **取值范围**： 包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
+    * resourceId  **参数解释**： 主机安全配额ID（UUID） **取值范围**： 字符长度0-128位
+    * outsideHost  **参数解释**： 是否非华为云机器 **取值范围**： true或者false
+    * groupId  **参数解释**： 服务器组ID **取值范围**： 字符长度0-128位
+    * groupName  **参数解释**： 服务器组名称 **取值范围**： 字符长度0-128位
+    * policyGroupId  **参数解释**： 策略组ID **取值范围**： 字符长度0-128位
+    * policyGroupName  **参数解释**： 策略组名称 **取值范围**： 字符长度0-128位
+    * asset  **参数解释**： 资产风险 **取值范围**： 0-2097152
+    * vulnerability  **参数解释**： 漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞 **取值范围**： 0-2097152
+    * baseline  **参数解释**： 基线风险总数，包含配置风险、弱口令 **取值范围**： 0-2097152
+    * intrusion  **参数解释**： 入侵风险总数 **取值范围**： 0-2097152
+    * assetValue  **参数解释**： 资产重要性 **取值范围**： 包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * labels  **参数解释**： 标签列表 **取值范围**： 不涉及
+    * agentCreateTime  **参数解释**： agent安装时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
+    * agentUpdateTime  **参数解释**： agent状态修改时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
+    * agentVersion  **参数解释**： agent版本 **取值范围**： 字符长度0-32位
+    * upgradeStatus  **参数解释**： 升级状态 **取值范围**： 包含如下4种。   - not_upgrade ：未升级，也就是默认状态，客户还没有给这台机器下发过升级。   - upgrading ：正在升级中。   - upgrade_failed ：升级失败。   - upgrade_succeed ：升级成功。
+    * upgradeResultCode  **参数解释**： 升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示 **取值范围**： 包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
+    * upgradable  **参数解释**： 该服务器agent是否可升级 **取值范围**： true或者false
+    * openTime  **参数解释**： 开启防护时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
+    * protectInterrupt  **参数解释**： 防护是否中断 **取值范围**： true或者false
+    * protectDegradation  **参数解释**： 防护是否降级 **取值范围**： true或者false
+    * hostSources  **参数解释**： 服务器来源 **取值范围**： 包含如下3种。   - ecs ：华为云ecs。   - outside ：非华为云机器。   - workspace ：华为云workspace。
+    * interruptReason  **参数解释**： 防护中断原因 **取值范围**： 字符长度1-32位
+    * degradationReason  **参数解释**： 防护降级原因 **取值范围**： 字符长度1-32位
+    * keyName  **参数解释**： 使用的密钥对名称 **取值范围**： 字符长度1-32位
+    * autoOpenVersion  **参数解释**： cce购买主机 **取值范围**： 字符长度1-32位
+    * installProgress  **参数解释**： 安装进度 **取值范围**： 0-100
+    * vpcId  **参数解释**： vpc id **取值范围**： 字符长度0-128位
+    * commonLoginAreaCodes  **参数解释**： 后台识别服务器常用登录地编号 **取值范围**： 不涉及
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 字符长度1-128位
+    * clusterId  **参数解释**： 集群id **取值范围**： 字符长度1-128位
     *
     * @var string[]
     */
@@ -489,58 +489,58 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * agentId  Agent ID
-    * privateIp  私有IP地址
-    * publicIp  弹性公网IP地址
-    * enterpriseProjectId  企业项目ID
-    * enterpriseProjectName  所属企业项目名称
-    * osName  系统名称
-    * osVersion  系统版本
-    * kernelVersion  内核版本
-    * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
-    * agentStatus  Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
-    * installResultCode  安装结果，包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
-    * osImage  系统镜像
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * osBit  操作系统位数
-    * detectResult  云主机安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
-    * expireTime  试用版到期时间（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
-    * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
-    * resourceId  主机安全配额ID（UUID）
-    * outsideHost  是否非华为云机器
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * policyGroupId  策略组ID
-    * policyGroupName  策略组名称
-    * asset  资产风险
-    * vulnerability  漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞
-    * baseline  基线风险总数，包含配置风险、弱口令
-    * intrusion  入侵风险总数
-    * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * labels  标签列表
-    * agentCreateTime  agent安装时间，采用时间戳，默认毫秒，
-    * agentUpdateTime  agent状态修改时间，采用时间戳，默认毫秒，
-    * agentVersion  agent版本
-    * upgradeStatus  升级状态，包含如下4种。   - not_upgrade ：未升级，也就是默认状态，客户还没有给这台机器下发过升级。   - upgrading ：正在升级中。   - upgrade_failed ：升级失败。   - upgrade_succeed ：升级成功。
-    * upgradeResultCode  升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示，包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
-    * upgradable  该服务器agent是否可升级
-    * openTime  开启防护时间，采用时间戳，默认毫秒，
-    * protectInterrupt  防护是否中断
-    * protectDegradation  防护是否降级
-    * hostSources  服务器来源
-    * interruptReason  防护中断原因
-    * degradationReason  防护降级原因
-    * keyName  使用的密钥对名称
-    * autoOpenVersion  cce购买主机
-    * installProgress  安装进度
-    * vpcId  vpc id
-    * commonLoginAreaCodes  后台识别服务器常用登录地编号
-    * clusterName  集群名称
-    * clusterId  集群id
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-128位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-128位
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-128位
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度1-128位
+    * publicIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度1-128位
+    * enterpriseProjectId  **参数解释**: 企业项目ID **取值范围**: 字符长度0-256位
+    * enterpriseProjectName  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度0-256位
+    * osName  **参数解释**: 系统名称 **取值范围**: 字符长度0-128位
+    * osVersion  **参数解释**: 系统版本 **取值范围**: 字符长度0-256位
+    * kernelVersion  **参数解释**: 内核版本 **取值范围**: 字符长度0-256位
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种。 - ACTIVE ：运行中。 - SHUTOFF ：关机。 - BUILDING ：创建中。 - ERROR ：故障。
+    * agentStatus  **参数解释**: Agent状态 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。
+    * installResultCode  **参数解释**: 安装结果 **取值范围**: 包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
+    * version  **参数解释**： 主机开通的版本 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    * protectStatus  **参数解释**： 防护状态 **取值范围**： 包含如下3种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
+    * osImage  **参数解释**： 系统镜像 **取值范围**： 字符长度0-128位
+    * osType  **参数解释**： 操作系统类型 **取值范围**： 包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度0-128位
+    * detectResult  **参数解释**： 云主机安全检测结果 **取值范围**： 包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
+    * expireTime  **参数解释**： 试用版到期时间 **取值范围**： -1到4824695185000（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
+    * chargingMode  **参数解释**： 收费模式 **取值范围**： 包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
+    * resourceId  **参数解释**： 主机安全配额ID（UUID） **取值范围**： 字符长度0-128位
+    * outsideHost  **参数解释**： 是否非华为云机器 **取值范围**： true或者false
+    * groupId  **参数解释**： 服务器组ID **取值范围**： 字符长度0-128位
+    * groupName  **参数解释**： 服务器组名称 **取值范围**： 字符长度0-128位
+    * policyGroupId  **参数解释**： 策略组ID **取值范围**： 字符长度0-128位
+    * policyGroupName  **参数解释**： 策略组名称 **取值范围**： 字符长度0-128位
+    * asset  **参数解释**： 资产风险 **取值范围**： 0-2097152
+    * vulnerability  **参数解释**： 漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞 **取值范围**： 0-2097152
+    * baseline  **参数解释**： 基线风险总数，包含配置风险、弱口令 **取值范围**： 0-2097152
+    * intrusion  **参数解释**： 入侵风险总数 **取值范围**： 0-2097152
+    * assetValue  **参数解释**： 资产重要性 **取值范围**： 包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * labels  **参数解释**： 标签列表 **取值范围**： 不涉及
+    * agentCreateTime  **参数解释**： agent安装时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
+    * agentUpdateTime  **参数解释**： agent状态修改时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
+    * agentVersion  **参数解释**： agent版本 **取值范围**： 字符长度0-32位
+    * upgradeStatus  **参数解释**： 升级状态 **取值范围**： 包含如下4种。   - not_upgrade ：未升级，也就是默认状态，客户还没有给这台机器下发过升级。   - upgrading ：正在升级中。   - upgrade_failed ：升级失败。   - upgrade_succeed ：升级成功。
+    * upgradeResultCode  **参数解释**： 升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示 **取值范围**： 包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
+    * upgradable  **参数解释**： 该服务器agent是否可升级 **取值范围**： true或者false
+    * openTime  **参数解释**： 开启防护时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
+    * protectInterrupt  **参数解释**： 防护是否中断 **取值范围**： true或者false
+    * protectDegradation  **参数解释**： 防护是否降级 **取值范围**： true或者false
+    * hostSources  **参数解释**： 服务器来源 **取值范围**： 包含如下3种。   - ecs ：华为云ecs。   - outside ：非华为云机器。   - workspace ：华为云workspace。
+    * interruptReason  **参数解释**： 防护中断原因 **取值范围**： 字符长度1-32位
+    * degradationReason  **参数解释**： 防护降级原因 **取值范围**： 字符长度1-32位
+    * keyName  **参数解释**： 使用的密钥对名称 **取值范围**： 字符长度1-32位
+    * autoOpenVersion  **参数解释**： cce购买主机 **取值范围**： 字符长度1-32位
+    * installProgress  **参数解释**： 安装进度 **取值范围**： 0-100
+    * vpcId  **参数解释**： vpc id **取值范围**： 字符长度0-128位
+    * commonLoginAreaCodes  **参数解释**： 后台识别服务器常用登录地编号 **取值范围**： 不涉及
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 字符长度1-128位
+    * clusterId  **参数解释**： 集群id **取值范围**： 字符长度1-128位
     *
     * @var string[]
     */
@@ -1030,7 +1030,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -1042,7 +1042,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -1054,7 +1054,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  **参数解释**: 服务器ID **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -1066,7 +1066,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器ID
+    * @param string|null $hostId **参数解释**: 服务器ID **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -1078,7 +1078,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  Agent ID
+    *  **参数解释**: Agent ID **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -1090,7 +1090,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId Agent ID
+    * @param string|null $agentId **参数解释**: Agent ID **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -1102,7 +1102,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  私有IP地址
+    *  **参数解释**: 私有IP地址 **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -1114,7 +1114,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp 私有IP地址
+    * @param string|null $privateIp **参数解释**: 私有IP地址 **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -1126,7 +1126,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  弹性公网IP地址
+    *  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -1138,7 +1138,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp 弹性公网IP地址
+    * @param string|null $publicIp **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -1150,7 +1150,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID
+    *  **参数解释**: 企业项目ID **取值范围**: 字符长度0-256位
     *
     * @return string|null
     */
@@ -1162,7 +1162,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID **取值范围**: 字符长度0-256位
     *
     * @return $this
     */
@@ -1174,7 +1174,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectName
-    *  所属企业项目名称
+    *  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度0-256位
     *
     * @return string|null
     */
@@ -1186,7 +1186,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectName
     *
-    * @param string|null $enterpriseProjectName 所属企业项目名称
+    * @param string|null $enterpriseProjectName **参数解释**: 所属企业项目名称 **取值范围**: 字符长度0-256位
     *
     * @return $this
     */
@@ -1198,7 +1198,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets osName
-    *  系统名称
+    *  **参数解释**: 系统名称 **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -1210,7 +1210,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets osName
     *
-    * @param string|null $osName 系统名称
+    * @param string|null $osName **参数解释**: 系统名称 **取值范围**: 字符长度0-128位
     *
     * @return $this
     */
@@ -1222,7 +1222,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets osVersion
-    *  系统版本
+    *  **参数解释**: 系统版本 **取值范围**: 字符长度0-256位
     *
     * @return string|null
     */
@@ -1234,7 +1234,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets osVersion
     *
-    * @param string|null $osVersion 系统版本
+    * @param string|null $osVersion **参数解释**: 系统版本 **取值范围**: 字符长度0-256位
     *
     * @return $this
     */
@@ -1246,7 +1246,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets kernelVersion
-    *  内核版本
+    *  **参数解释**: 内核版本 **取值范围**: 字符长度0-256位
     *
     * @return string|null
     */
@@ -1258,7 +1258,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets kernelVersion
     *
-    * @param string|null $kernelVersion 内核版本
+    * @param string|null $kernelVersion **参数解释**: 内核版本 **取值范围**: 字符长度0-256位
     *
     * @return $this
     */
@@ -1270,7 +1270,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostStatus
-    *  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
+    *  **参数解释**: 服务器状态 **取值范围**: 包含如下4种。 - ACTIVE ：运行中。 - SHUTOFF ：关机。 - BUILDING ：创建中。 - ERROR ：故障。
     *
     * @return string|null
     */
@@ -1282,7 +1282,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets hostStatus
     *
-    * @param string|null $hostStatus 服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
+    * @param string|null $hostStatus **参数解释**: 服务器状态 **取值范围**: 包含如下4种。 - ACTIVE ：运行中。 - SHUTOFF ：关机。 - BUILDING ：创建中。 - ERROR ：故障。
     *
     * @return $this
     */
@@ -1294,7 +1294,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentStatus
-    *  Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
+    *  **参数解释**: Agent状态 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。
     *
     * @return string|null
     */
@@ -1306,7 +1306,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets agentStatus
     *
-    * @param string|null $agentStatus Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
+    * @param string|null $agentStatus **参数解释**: Agent状态 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。
     *
     * @return $this
     */
@@ -1318,7 +1318,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets installResultCode
-    *  安装结果，包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
+    *  **参数解释**: 安装结果 **取值范围**: 包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
     *
     * @return string|null
     */
@@ -1330,7 +1330,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets installResultCode
     *
-    * @param string|null $installResultCode 安装结果，包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
+    * @param string|null $installResultCode **参数解释**: 安装结果 **取值范围**: 包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
     *
     * @return $this
     */
@@ -1342,7 +1342,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    *  **参数解释**： 主机开通的版本 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
     *
     * @return string|null
     */
@@ -1354,7 +1354,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * @param string|null $version **参数解释**： 主机开通的版本 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
     *
     * @return $this
     */
@@ -1366,7 +1366,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
+    *  **参数解释**： 防护状态 **取值范围**： 包含如下3种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
     *
     * @return string|null
     */
@@ -1378,7 +1378,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus 防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
+    * @param string|null $protectStatus **参数解释**： 防护状态 **取值范围**： 包含如下3种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
     *
     * @return $this
     */
@@ -1390,7 +1390,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets osImage
-    *  系统镜像
+    *  **参数解释**： 系统镜像 **取值范围**： 字符长度0-128位
     *
     * @return string|null
     */
@@ -1402,7 +1402,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets osImage
     *
-    * @param string|null $osImage 系统镜像
+    * @param string|null $osImage **参数解释**： 系统镜像 **取值范围**： 字符长度0-128位
     *
     * @return $this
     */
@@ -1414,7 +1414,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    *  **参数解释**： 操作系统类型 **取值范围**： 包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
     *
     * @return string|null
     */
@@ -1426,7 +1426,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * @param string|null $osType **参数解释**： 操作系统类型 **取值范围**： 包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
     *
     * @return $this
     */
@@ -1438,7 +1438,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets osBit
-    *  操作系统位数
+    *  **参数解释**： 操作系统位数 **取值范围**： 字符长度0-128位
     *
     * @return string|null
     */
@@ -1450,7 +1450,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets osBit
     *
-    * @param string|null $osBit 操作系统位数
+    * @param string|null $osBit **参数解释**： 操作系统位数 **取值范围**： 字符长度0-128位
     *
     * @return $this
     */
@@ -1462,7 +1462,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets detectResult
-    *  云主机安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
+    *  **参数解释**： 云主机安全检测结果 **取值范围**： 包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
     *
     * @return string|null
     */
@@ -1474,7 +1474,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets detectResult
     *
-    * @param string|null $detectResult 云主机安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
+    * @param string|null $detectResult **参数解释**： 云主机安全检测结果 **取值范围**： 包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
     *
     * @return $this
     */
@@ -1486,7 +1486,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets expireTime
-    *  试用版到期时间（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
+    *  **参数解释**： 试用版到期时间 **取值范围**： -1到4824695185000（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
     *
     * @return int|null
     */
@@ -1498,7 +1498,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets expireTime
     *
-    * @param int|null $expireTime 试用版到期时间（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
+    * @param int|null $expireTime **参数解释**： 试用版到期时间 **取值范围**： -1到4824695185000（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
     *
     * @return $this
     */
@@ -1510,7 +1510,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
+    *  **参数解释**： 收费模式 **取值范围**： 包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     *
     * @return string|null
     */
@@ -1522,7 +1522,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string|null $chargingMode 收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
+    * @param string|null $chargingMode **参数解释**： 收费模式 **取值范围**： 包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     *
     * @return $this
     */
@@ -1534,7 +1534,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  主机安全配额ID（UUID）
+    *  **参数解释**： 主机安全配额ID（UUID） **取值范围**： 字符长度0-128位
     *
     * @return string|null
     */
@@ -1546,7 +1546,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 主机安全配额ID（UUID）
+    * @param string|null $resourceId **参数解释**： 主机安全配额ID（UUID） **取值范围**： 字符长度0-128位
     *
     * @return $this
     */
@@ -1558,7 +1558,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets outsideHost
-    *  是否非华为云机器
+    *  **参数解释**： 是否非华为云机器 **取值范围**： true或者false
     *
     * @return bool|null
     */
@@ -1570,7 +1570,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets outsideHost
     *
-    * @param bool|null $outsideHost 是否非华为云机器
+    * @param bool|null $outsideHost **参数解释**： 是否非华为云机器 **取值范围**： true或者false
     *
     * @return $this
     */
@@ -1582,7 +1582,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  服务器组ID
+    *  **参数解释**： 服务器组ID **取值范围**： 字符长度0-128位
     *
     * @return string|null
     */
@@ -1594,7 +1594,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 服务器组ID
+    * @param string|null $groupId **参数解释**： 服务器组ID **取值范围**： 字符长度0-128位
     *
     * @return $this
     */
@@ -1606,7 +1606,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  服务器组名称
+    *  **参数解释**： 服务器组名称 **取值范围**： 字符长度0-128位
     *
     * @return string|null
     */
@@ -1618,7 +1618,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 服务器组名称
+    * @param string|null $groupName **参数解释**： 服务器组名称 **取值范围**： 字符长度0-128位
     *
     * @return $this
     */
@@ -1630,7 +1630,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyGroupId
-    *  策略组ID
+    *  **参数解释**： 策略组ID **取值范围**： 字符长度0-128位
     *
     * @return string|null
     */
@@ -1642,7 +1642,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets policyGroupId
     *
-    * @param string|null $policyGroupId 策略组ID
+    * @param string|null $policyGroupId **参数解释**： 策略组ID **取值范围**： 字符长度0-128位
     *
     * @return $this
     */
@@ -1654,7 +1654,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyGroupName
-    *  策略组名称
+    *  **参数解释**： 策略组名称 **取值范围**： 字符长度0-128位
     *
     * @return string|null
     */
@@ -1666,7 +1666,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets policyGroupName
     *
-    * @param string|null $policyGroupName 策略组名称
+    * @param string|null $policyGroupName **参数解释**： 策略组名称 **取值范围**： 字符长度0-128位
     *
     * @return $this
     */
@@ -1678,7 +1678,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets asset
-    *  资产风险
+    *  **参数解释**： 资产风险 **取值范围**： 0-2097152
     *
     * @return int|null
     */
@@ -1690,7 +1690,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets asset
     *
-    * @param int|null $asset 资产风险
+    * @param int|null $asset **参数解释**： 资产风险 **取值范围**： 0-2097152
     *
     * @return $this
     */
@@ -1702,7 +1702,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulnerability
-    *  漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞
+    *  **参数解释**： 漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞 **取值范围**： 0-2097152
     *
     * @return int|null
     */
@@ -1714,7 +1714,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets vulnerability
     *
-    * @param int|null $vulnerability 漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞
+    * @param int|null $vulnerability **参数解释**： 漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞 **取值范围**： 0-2097152
     *
     * @return $this
     */
@@ -1726,7 +1726,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets baseline
-    *  基线风险总数，包含配置风险、弱口令
+    *  **参数解释**： 基线风险总数，包含配置风险、弱口令 **取值范围**： 0-2097152
     *
     * @return int|null
     */
@@ -1738,7 +1738,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets baseline
     *
-    * @param int|null $baseline 基线风险总数，包含配置风险、弱口令
+    * @param int|null $baseline **参数解释**： 基线风险总数，包含配置风险、弱口令 **取值范围**： 0-2097152
     *
     * @return $this
     */
@@ -1750,7 +1750,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets intrusion
-    *  入侵风险总数
+    *  **参数解释**： 入侵风险总数 **取值范围**： 0-2097152
     *
     * @return int|null
     */
@@ -1762,7 +1762,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets intrusion
     *
-    * @param int|null $intrusion 入侵风险总数
+    * @param int|null $intrusion **参数解释**： 入侵风险总数 **取值范围**： 0-2097152
     *
     * @return $this
     */
@@ -1774,7 +1774,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetValue
-    *  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    *  **参数解释**： 资产重要性 **取值范围**： 包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     *
     * @return string|null
     */
@@ -1786,7 +1786,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string|null $assetValue 资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * @param string|null $assetValue **参数解释**： 资产重要性 **取值范围**： 包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     *
     * @return $this
     */
@@ -1798,7 +1798,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets labels
-    *  标签列表
+    *  **参数解释**： 标签列表 **取值范围**： 不涉及
     *
     * @return string[]|null
     */
@@ -1810,7 +1810,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets labels
     *
-    * @param string[]|null $labels 标签列表
+    * @param string[]|null $labels **参数解释**： 标签列表 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -1822,7 +1822,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentCreateTime
-    *  agent安装时间，采用时间戳，默认毫秒，
+    *  **参数解释**： agent安装时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
     *
     * @return int|null
     */
@@ -1834,7 +1834,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets agentCreateTime
     *
-    * @param int|null $agentCreateTime agent安装时间，采用时间戳，默认毫秒，
+    * @param int|null $agentCreateTime **参数解释**： agent安装时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
     *
     * @return $this
     */
@@ -1846,7 +1846,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentUpdateTime
-    *  agent状态修改时间，采用时间戳，默认毫秒，
+    *  **参数解释**： agent状态修改时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
     *
     * @return int|null
     */
@@ -1858,7 +1858,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets agentUpdateTime
     *
-    * @param int|null $agentUpdateTime agent状态修改时间，采用时间戳，默认毫秒，
+    * @param int|null $agentUpdateTime **参数解释**： agent状态修改时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
     *
     * @return $this
     */
@@ -1870,7 +1870,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentVersion
-    *  agent版本
+    *  **参数解释**： agent版本 **取值范围**： 字符长度0-32位
     *
     * @return string|null
     */
@@ -1882,7 +1882,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets agentVersion
     *
-    * @param string|null $agentVersion agent版本
+    * @param string|null $agentVersion **参数解释**： agent版本 **取值范围**： 字符长度0-32位
     *
     * @return $this
     */
@@ -1894,7 +1894,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets upgradeStatus
-    *  升级状态，包含如下4种。   - not_upgrade ：未升级，也就是默认状态，客户还没有给这台机器下发过升级。   - upgrading ：正在升级中。   - upgrade_failed ：升级失败。   - upgrade_succeed ：升级成功。
+    *  **参数解释**： 升级状态 **取值范围**： 包含如下4种。   - not_upgrade ：未升级，也就是默认状态，客户还没有给这台机器下发过升级。   - upgrading ：正在升级中。   - upgrade_failed ：升级失败。   - upgrade_succeed ：升级成功。
     *
     * @return string|null
     */
@@ -1906,7 +1906,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets upgradeStatus
     *
-    * @param string|null $upgradeStatus 升级状态，包含如下4种。   - not_upgrade ：未升级，也就是默认状态，客户还没有给这台机器下发过升级。   - upgrading ：正在升级中。   - upgrade_failed ：升级失败。   - upgrade_succeed ：升级成功。
+    * @param string|null $upgradeStatus **参数解释**： 升级状态 **取值范围**： 包含如下4种。   - not_upgrade ：未升级，也就是默认状态，客户还没有给这台机器下发过升级。   - upgrading ：正在升级中。   - upgrade_failed ：升级失败。   - upgrade_succeed ：升级成功。
     *
     * @return $this
     */
@@ -1918,7 +1918,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets upgradeResultCode
-    *  升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示，包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
+    *  **参数解释**： 升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示 **取值范围**： 包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
     *
     * @return string|null
     */
@@ -1930,7 +1930,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets upgradeResultCode
     *
-    * @param string|null $upgradeResultCode 升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示，包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
+    * @param string|null $upgradeResultCode **参数解释**： 升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示 **取值范围**： 包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
     *
     * @return $this
     */
@@ -1942,7 +1942,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets upgradable
-    *  该服务器agent是否可升级
+    *  **参数解释**： 该服务器agent是否可升级 **取值范围**： true或者false
     *
     * @return bool|null
     */
@@ -1954,7 +1954,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets upgradable
     *
-    * @param bool|null $upgradable 该服务器agent是否可升级
+    * @param bool|null $upgradable **参数解释**： 该服务器agent是否可升级 **取值范围**： true或者false
     *
     * @return $this
     */
@@ -1966,7 +1966,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets openTime
-    *  开启防护时间，采用时间戳，默认毫秒，
+    *  **参数解释**： 开启防护时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
     *
     * @return int|null
     */
@@ -1978,7 +1978,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets openTime
     *
-    * @param int|null $openTime 开启防护时间，采用时间戳，默认毫秒，
+    * @param int|null $openTime **参数解释**： 开启防护时间，采用时间戳，默认毫秒 **取值范围**： 0-4824695185000
     *
     * @return $this
     */
@@ -1990,7 +1990,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectInterrupt
-    *  防护是否中断
+    *  **参数解释**： 防护是否中断 **取值范围**： true或者false
     *
     * @return bool|null
     */
@@ -2002,7 +2002,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets protectInterrupt
     *
-    * @param bool|null $protectInterrupt 防护是否中断
+    * @param bool|null $protectInterrupt **参数解释**： 防护是否中断 **取值范围**： true或者false
     *
     * @return $this
     */
@@ -2014,7 +2014,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectDegradation
-    *  防护是否降级
+    *  **参数解释**： 防护是否降级 **取值范围**： true或者false
     *
     * @return bool|null
     */
@@ -2026,7 +2026,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets protectDegradation
     *
-    * @param bool|null $protectDegradation 防护是否降级
+    * @param bool|null $protectDegradation **参数解释**： 防护是否降级 **取值范围**： true或者false
     *
     * @return $this
     */
@@ -2038,7 +2038,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostSources
-    *  服务器来源
+    *  **参数解释**： 服务器来源 **取值范围**： 包含如下3种。   - ecs ：华为云ecs。   - outside ：非华为云机器。   - workspace ：华为云workspace。
     *
     * @return string|null
     */
@@ -2050,7 +2050,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets hostSources
     *
-    * @param string|null $hostSources 服务器来源
+    * @param string|null $hostSources **参数解释**： 服务器来源 **取值范围**： 包含如下3种。   - ecs ：华为云ecs。   - outside ：非华为云机器。   - workspace ：华为云workspace。
     *
     * @return $this
     */
@@ -2062,7 +2062,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets interruptReason
-    *  防护中断原因
+    *  **参数解释**： 防护中断原因 **取值范围**： 字符长度1-32位
     *
     * @return string|null
     */
@@ -2074,7 +2074,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets interruptReason
     *
-    * @param string|null $interruptReason 防护中断原因
+    * @param string|null $interruptReason **参数解释**： 防护中断原因 **取值范围**： 字符长度1-32位
     *
     * @return $this
     */
@@ -2086,7 +2086,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets degradationReason
-    *  防护降级原因
+    *  **参数解释**： 防护降级原因 **取值范围**： 字符长度1-32位
     *
     * @return string|null
     */
@@ -2098,7 +2098,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets degradationReason
     *
-    * @param string|null $degradationReason 防护降级原因
+    * @param string|null $degradationReason **参数解释**： 防护降级原因 **取值范围**： 字符长度1-32位
     *
     * @return $this
     */
@@ -2110,7 +2110,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets keyName
-    *  使用的密钥对名称
+    *  **参数解释**： 使用的密钥对名称 **取值范围**： 字符长度1-32位
     *
     * @return string|null
     */
@@ -2122,7 +2122,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets keyName
     *
-    * @param string|null $keyName 使用的密钥对名称
+    * @param string|null $keyName **参数解释**： 使用的密钥对名称 **取值范围**： 字符长度1-32位
     *
     * @return $this
     */
@@ -2134,7 +2134,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoOpenVersion
-    *  cce购买主机
+    *  **参数解释**： cce购买主机 **取值范围**： 字符长度1-32位
     *
     * @return string|null
     */
@@ -2146,7 +2146,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets autoOpenVersion
     *
-    * @param string|null $autoOpenVersion cce购买主机
+    * @param string|null $autoOpenVersion **参数解释**： cce购买主机 **取值范围**： 字符长度1-32位
     *
     * @return $this
     */
@@ -2158,7 +2158,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets installProgress
-    *  安装进度
+    *  **参数解释**： 安装进度 **取值范围**： 0-100
     *
     * @return int|null
     */
@@ -2170,7 +2170,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets installProgress
     *
-    * @param int|null $installProgress 安装进度
+    * @param int|null $installProgress **参数解释**： 安装进度 **取值范围**： 0-100
     *
     * @return $this
     */
@@ -2182,7 +2182,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  vpc id
+    *  **参数解释**： vpc id **取值范围**： 字符长度0-128位
     *
     * @return string|null
     */
@@ -2194,7 +2194,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId vpc id
+    * @param string|null $vpcId **参数解释**： vpc id **取值范围**： 字符长度0-128位
     *
     * @return $this
     */
@@ -2206,7 +2206,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets commonLoginAreaCodes
-    *  后台识别服务器常用登录地编号
+    *  **参数解释**： 后台识别服务器常用登录地编号 **取值范围**： 不涉及
     *
     * @return int[]|null
     */
@@ -2218,7 +2218,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets commonLoginAreaCodes
     *
-    * @param int[]|null $commonLoginAreaCodes 后台识别服务器常用登录地编号
+    * @param int[]|null $commonLoginAreaCodes **参数解释**： 后台识别服务器常用登录地编号 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -2230,7 +2230,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterName
-    *  集群名称
+    *  **参数解释**： 集群名称 **取值范围**： 字符长度1-128位
     *
     * @return string|null
     */
@@ -2242,7 +2242,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets clusterName
     *
-    * @param string|null $clusterName 集群名称
+    * @param string|null $clusterName **参数解释**： 集群名称 **取值范围**： 字符长度1-128位
     *
     * @return $this
     */
@@ -2254,7 +2254,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群id
+    *  **参数解释**： 集群id **取值范围**： 字符长度1-128位
     *
     * @return string|null
     */
@@ -2266,7 +2266,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群id
+    * @param string|null $clusterId **参数解释**： 集群id **取值范围**： 字符长度1-128位
     *
     * @return $this
     */

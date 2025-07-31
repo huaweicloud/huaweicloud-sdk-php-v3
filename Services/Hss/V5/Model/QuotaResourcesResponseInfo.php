@@ -20,19 +20,19 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceId  主机安全配额的资源ID
-    * version  资源规格编码，包含如下:   - hss.version.basic : 基础版   - hss.version.advanced : 专业版   - hss.version.enterprise : 企业版   - hss.version.premium : 旗舰版   - hss.version.wtp : 网页防篡改版   - hss.version.container : 容器版
-    * quotaStatus  配额状态   - normal : 正常   - expired : 已过期   - freeze : 已冻结
-    * usedStatus  使用状态   - idle : 空闲   - used : 使用中
-    * hostId  主机ID
-    * hostName  服务器名称
-    * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
-    * tags  标签
-    * expireTime  过期时间，-1表示没有到期时间
-    * createTime  创建时间
-    * sharedQuota  是否共享配额   - shared：共享的   - unshared：非共享的
-    * enterpriseProjectId  企业项目ID
-    * enterpriseProjectName  所属企业项目名称
+    * resourceId  **参数解释** : HSS配额的资源ID **取值范围** : 字符长度1-128位
+    * version  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    * quotaStatus  **参数解释**： 配额状态 **取值范围**： 包含如下3种。 - normal : 正常 - expired : 已过期 - freeze : 已冻结
+    * usedStatus  **参数解释**： 使用状态 **取值范围**： 包含如下2种。 - idle : 空闲 - used : 使用中
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-128位
+    * chargingMode  **参数解释**： 计费模式 **取值范围**: - packet_cycle ：包周期。 - on_demand ：按需。
+    * tags  **参数解释**： 标签 **取值范围**: 不涉及
+    * expireTime  **参数解释**： 过期时间 **取值范围**: -1到9223372036854775807，-1表示没有到期时间
+    * createTime  **参数解释**： 创建时间 **取值范围**: 0到9223372036854775807
+    * sharedQuota  **参数解释**： 是否共享配额 **取值范围**: - shared：共享的 - unshared：非共享的
+    * enterpriseProjectId  **参数解释**: 主机所属的企业项目ID。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。 **取值范围**: 字符长度1-256位
+    * enterpriseProjectName  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度1-256位
     *
     * @var string[]
     */
@@ -54,19 +54,19 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceId  主机安全配额的资源ID
-    * version  资源规格编码，包含如下:   - hss.version.basic : 基础版   - hss.version.advanced : 专业版   - hss.version.enterprise : 企业版   - hss.version.premium : 旗舰版   - hss.version.wtp : 网页防篡改版   - hss.version.container : 容器版
-    * quotaStatus  配额状态   - normal : 正常   - expired : 已过期   - freeze : 已冻结
-    * usedStatus  使用状态   - idle : 空闲   - used : 使用中
-    * hostId  主机ID
-    * hostName  服务器名称
-    * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
-    * tags  标签
-    * expireTime  过期时间，-1表示没有到期时间
-    * createTime  创建时间
-    * sharedQuota  是否共享配额   - shared：共享的   - unshared：非共享的
-    * enterpriseProjectId  企业项目ID
-    * enterpriseProjectName  所属企业项目名称
+    * resourceId  **参数解释** : HSS配额的资源ID **取值范围** : 字符长度1-128位
+    * version  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    * quotaStatus  **参数解释**： 配额状态 **取值范围**： 包含如下3种。 - normal : 正常 - expired : 已过期 - freeze : 已冻结
+    * usedStatus  **参数解释**： 使用状态 **取值范围**： 包含如下2种。 - idle : 空闲 - used : 使用中
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-128位
+    * chargingMode  **参数解释**： 计费模式 **取值范围**: - packet_cycle ：包周期。 - on_demand ：按需。
+    * tags  **参数解释**： 标签 **取值范围**: 不涉及
+    * expireTime  **参数解释**： 过期时间 **取值范围**: -1到9223372036854775807，-1表示没有到期时间
+    * createTime  **参数解释**： 创建时间 **取值范围**: 0到9223372036854775807
+    * sharedQuota  **参数解释**： 是否共享配额 **取值范围**: - shared：共享的 - unshared：非共享的
+    * enterpriseProjectId  **参数解释**: 主机所属的企业项目ID。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。 **取值范围**: 字符长度1-256位
+    * enterpriseProjectName  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度1-256位
     *
     * @var string[]
     */
@@ -109,19 +109,19 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceId  主机安全配额的资源ID
-    * version  资源规格编码，包含如下:   - hss.version.basic : 基础版   - hss.version.advanced : 专业版   - hss.version.enterprise : 企业版   - hss.version.premium : 旗舰版   - hss.version.wtp : 网页防篡改版   - hss.version.container : 容器版
-    * quotaStatus  配额状态   - normal : 正常   - expired : 已过期   - freeze : 已冻结
-    * usedStatus  使用状态   - idle : 空闲   - used : 使用中
-    * hostId  主机ID
-    * hostName  服务器名称
-    * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
-    * tags  标签
-    * expireTime  过期时间，-1表示没有到期时间
-    * createTime  创建时间
-    * sharedQuota  是否共享配额   - shared：共享的   - unshared：非共享的
-    * enterpriseProjectId  企业项目ID
-    * enterpriseProjectName  所属企业项目名称
+    * resourceId  **参数解释** : HSS配额的资源ID **取值范围** : 字符长度1-128位
+    * version  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    * quotaStatus  **参数解释**： 配额状态 **取值范围**： 包含如下3种。 - normal : 正常 - expired : 已过期 - freeze : 已冻结
+    * usedStatus  **参数解释**： 使用状态 **取值范围**： 包含如下2种。 - idle : 空闲 - used : 使用中
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-128位
+    * chargingMode  **参数解释**： 计费模式 **取值范围**: - packet_cycle ：包周期。 - on_demand ：按需。
+    * tags  **参数解释**： 标签 **取值范围**: 不涉及
+    * expireTime  **参数解释**： 过期时间 **取值范围**: -1到9223372036854775807，-1表示没有到期时间
+    * createTime  **参数解释**： 创建时间 **取值范围**: 0到9223372036854775807
+    * sharedQuota  **参数解释**： 是否共享配额 **取值范围**: - shared：共享的 - unshared：非共享的
+    * enterpriseProjectId  **参数解释**: 主机所属的企业项目ID。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。 **取值范围**: 字符长度1-256位
+    * enterpriseProjectName  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度1-256位
     *
     * @var string[]
     */
@@ -143,19 +143,19 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceId  主机安全配额的资源ID
-    * version  资源规格编码，包含如下:   - hss.version.basic : 基础版   - hss.version.advanced : 专业版   - hss.version.enterprise : 企业版   - hss.version.premium : 旗舰版   - hss.version.wtp : 网页防篡改版   - hss.version.container : 容器版
-    * quotaStatus  配额状态   - normal : 正常   - expired : 已过期   - freeze : 已冻结
-    * usedStatus  使用状态   - idle : 空闲   - used : 使用中
-    * hostId  主机ID
-    * hostName  服务器名称
-    * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
-    * tags  标签
-    * expireTime  过期时间，-1表示没有到期时间
-    * createTime  创建时间
-    * sharedQuota  是否共享配额   - shared：共享的   - unshared：非共享的
-    * enterpriseProjectId  企业项目ID
-    * enterpriseProjectName  所属企业项目名称
+    * resourceId  **参数解释** : HSS配额的资源ID **取值范围** : 字符长度1-128位
+    * version  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    * quotaStatus  **参数解释**： 配额状态 **取值范围**： 包含如下3种。 - normal : 正常 - expired : 已过期 - freeze : 已冻结
+    * usedStatus  **参数解释**： 使用状态 **取值范围**： 包含如下2种。 - idle : 空闲 - used : 使用中
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-128位
+    * chargingMode  **参数解释**： 计费模式 **取值范围**: - packet_cycle ：包周期。 - on_demand ：按需。
+    * tags  **参数解释**： 标签 **取值范围**: 不涉及
+    * expireTime  **参数解释**： 过期时间 **取值范围**: -1到9223372036854775807，-1表示没有到期时间
+    * createTime  **参数解释**： 创建时间 **取值范围**: 0到9223372036854775807
+    * sharedQuota  **参数解释**： 是否共享配额 **取值范围**: - shared：共享的 - unshared：非共享的
+    * enterpriseProjectId  **参数解释**: 主机所属的企业项目ID。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。 **取值范围**: 字符长度1-256位
+    * enterpriseProjectName  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度1-256位
     *
     * @var string[]
     */
@@ -177,19 +177,19 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceId  主机安全配额的资源ID
-    * version  资源规格编码，包含如下:   - hss.version.basic : 基础版   - hss.version.advanced : 专业版   - hss.version.enterprise : 企业版   - hss.version.premium : 旗舰版   - hss.version.wtp : 网页防篡改版   - hss.version.container : 容器版
-    * quotaStatus  配额状态   - normal : 正常   - expired : 已过期   - freeze : 已冻结
-    * usedStatus  使用状态   - idle : 空闲   - used : 使用中
-    * hostId  主机ID
-    * hostName  服务器名称
-    * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
-    * tags  标签
-    * expireTime  过期时间，-1表示没有到期时间
-    * createTime  创建时间
-    * sharedQuota  是否共享配额   - shared：共享的   - unshared：非共享的
-    * enterpriseProjectId  企业项目ID
-    * enterpriseProjectName  所属企业项目名称
+    * resourceId  **参数解释** : HSS配额的资源ID **取值范围** : 字符长度1-128位
+    * version  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    * quotaStatus  **参数解释**： 配额状态 **取值范围**： 包含如下3种。 - normal : 正常 - expired : 已过期 - freeze : 已冻结
+    * usedStatus  **参数解释**： 使用状态 **取值范围**： 包含如下2种。 - idle : 空闲 - used : 使用中
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-128位
+    * chargingMode  **参数解释**： 计费模式 **取值范围**: - packet_cycle ：包周期。 - on_demand ：按需。
+    * tags  **参数解释**： 标签 **取值范围**: 不涉及
+    * expireTime  **参数解释**： 过期时间 **取值范围**: -1到9223372036854775807，-1表示没有到期时间
+    * createTime  **参数解释**： 创建时间 **取值范围**: 0到9223372036854775807
+    * sharedQuota  **参数解释**： 是否共享配额 **取值范围**: - shared：共享的 - unshared：非共享的
+    * enterpriseProjectId  **参数解释**: 主机所属的企业项目ID。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。 **取值范围**: 字符长度1-256位
+    * enterpriseProjectName  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度1-256位
     *
     * @var string[]
     */
@@ -290,8 +290,8 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) > 256)) {
-                $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 0.";
@@ -378,7 +378,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  主机安全配额的资源ID
+    *  **参数解释** : HSS配额的资源ID **取值范围** : 字符长度1-128位
     *
     * @return string|null
     */
@@ -390,7 +390,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 主机安全配额的资源ID
+    * @param string|null $resourceId **参数解释** : HSS配额的资源ID **取值范围** : 字符长度1-128位
     *
     * @return $this
     */
@@ -402,7 +402,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  资源规格编码，包含如下:   - hss.version.basic : 基础版   - hss.version.advanced : 专业版   - hss.version.enterprise : 企业版   - hss.version.premium : 旗舰版   - hss.version.wtp : 网页防篡改版   - hss.version.container : 容器版
+    *  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
     *
     * @return string|null
     */
@@ -414,7 +414,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 资源规格编码，包含如下:   - hss.version.basic : 基础版   - hss.version.advanced : 专业版   - hss.version.enterprise : 企业版   - hss.version.premium : 旗舰版   - hss.version.wtp : 网页防篡改版   - hss.version.container : 容器版
+    * @param string|null $version **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
     *
     * @return $this
     */
@@ -426,7 +426,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaStatus
-    *  配额状态   - normal : 正常   - expired : 已过期   - freeze : 已冻结
+    *  **参数解释**： 配额状态 **取值范围**： 包含如下3种。 - normal : 正常 - expired : 已过期 - freeze : 已冻结
     *
     * @return string|null
     */
@@ -438,7 +438,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets quotaStatus
     *
-    * @param string|null $quotaStatus 配额状态   - normal : 正常   - expired : 已过期   - freeze : 已冻结
+    * @param string|null $quotaStatus **参数解释**： 配额状态 **取值范围**： 包含如下3种。 - normal : 正常 - expired : 已过期 - freeze : 已冻结
     *
     * @return $this
     */
@@ -450,7 +450,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedStatus
-    *  使用状态   - idle : 空闲   - used : 使用中
+    *  **参数解释**： 使用状态 **取值范围**： 包含如下2种。 - idle : 空闲 - used : 使用中
     *
     * @return string|null
     */
@@ -462,7 +462,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets usedStatus
     *
-    * @param string|null $usedStatus 使用状态   - idle : 空闲   - used : 使用中
+    * @param string|null $usedStatus **参数解释**： 使用状态 **取值范围**： 包含如下2种。 - idle : 空闲 - used : 使用中
     *
     * @return $this
     */
@@ -474,7 +474,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机ID
+    *  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return string|null
     */
@@ -486,7 +486,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机ID
+    * @param string|null $hostId **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -498,7 +498,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -510,7 +510,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -522,7 +522,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  计费模式   - packet_cycle : 包周期   - on_demand : 按需
+    *  **参数解释**： 计费模式 **取值范围**: - packet_cycle ：包周期。 - on_demand ：按需。
     *
     * @return string|null
     */
@@ -534,7 +534,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string|null $chargingMode 计费模式   - packet_cycle : 包周期   - on_demand : 按需
+    * @param string|null $chargingMode **参数解释**： 计费模式 **取值范围**: - packet_cycle ：包周期。 - on_demand ：按需。
     *
     * @return $this
     */
@@ -546,7 +546,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签
+    *  **参数解释**： 标签 **取值范围**: 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\TagInfo[]|null
     */
@@ -558,7 +558,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\TagInfo[]|null $tags 标签
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\TagInfo[]|null $tags **参数解释**： 标签 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -570,7 +570,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets expireTime
-    *  过期时间，-1表示没有到期时间
+    *  **参数解释**： 过期时间 **取值范围**: -1到9223372036854775807，-1表示没有到期时间
     *
     * @return int|null
     */
@@ -582,7 +582,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets expireTime
     *
-    * @param int|null $expireTime 过期时间，-1表示没有到期时间
+    * @param int|null $expireTime **参数解释**： 过期时间 **取值范围**: -1到9223372036854775807，-1表示没有到期时间
     *
     * @return $this
     */
@@ -594,7 +594,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  **参数解释**： 创建时间 **取值范围**: 0到9223372036854775807
     *
     * @return int|null
     */
@@ -606,7 +606,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 创建时间
+    * @param int|null $createTime **参数解释**： 创建时间 **取值范围**: 0到9223372036854775807
     *
     * @return $this
     */
@@ -618,7 +618,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets sharedQuota
-    *  是否共享配额   - shared：共享的   - unshared：非共享的
+    *  **参数解释**： 是否共享配额 **取值范围**: - shared：共享的 - unshared：非共享的
     *
     * @return string|null
     */
@@ -630,7 +630,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets sharedQuota
     *
-    * @param string|null $sharedQuota 是否共享配额   - shared：共享的   - unshared：非共享的
+    * @param string|null $sharedQuota **参数解释**： 是否共享配额 **取值范围**: - shared：共享的 - unshared：非共享的
     *
     * @return $this
     */
@@ -642,7 +642,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID
+    *  **参数解释**: 主机所属的企业项目ID。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -654,7 +654,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID
+    * @param string|null $enterpriseProjectId **参数解释**: 主机所属的企业项目ID。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -666,7 +666,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectName
-    *  所属企业项目名称
+    *  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -678,7 +678,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectName
     *
-    * @param string|null $enterpriseProjectName 所属企业项目名称
+    * @param string|null $enterpriseProjectName **参数解释**: 所属企业项目名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */

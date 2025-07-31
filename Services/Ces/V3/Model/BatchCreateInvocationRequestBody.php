@@ -21,12 +21,13 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceIds  主机id列表（INSTALL和UPDATE时必须）
-    * invocationType  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试
+    * invocationType  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALL_HOST设置远程安装主机，REMOTE_INSTALL执行远程安装
     * invocationTarget  任务对象，目前仅支持telescope
     * invocationIds  任务ID列表（ROLLBACK和RETRY时必须）
     * versionType  插件升级时需要选择升级“基础版本”还是“增强版本”，传值“BASIC_VERSION”表示升级成基础版本，传值“ADVANCE_VERSION”表示升级成增强版本
     * origin  Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
     * version  版本号
+    * remoteInstallMeta  创建远程安装任务时需要下发的被安装主机相关信息
     *
     * @var string[]
     */
@@ -37,18 +38,20 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
             'invocationIds' => 'string[]',
             'versionType' => 'string',
             'origin' => 'string',
-            'version' => 'string'
+            'version' => 'string',
+            'remoteInstallMeta' => '\HuaweiCloud\SDK\Ces\V3\Model\RemoteInstallHostInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceIds  主机id列表（INSTALL和UPDATE时必须）
-    * invocationType  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试
+    * invocationType  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALL_HOST设置远程安装主机，REMOTE_INSTALL执行远程安装
     * invocationTarget  任务对象，目前仅支持telescope
     * invocationIds  任务ID列表（ROLLBACK和RETRY时必须）
     * versionType  插件升级时需要选择升级“基础版本”还是“增强版本”，传值“BASIC_VERSION”表示升级成基础版本，传值“ADVANCE_VERSION”表示升级成增强版本
     * origin  Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
     * version  版本号
+    * remoteInstallMeta  创建远程安装任务时需要下发的被安装主机相关信息
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
         'invocationIds' => null,
         'versionType' => null,
         'origin' => null,
-        'version' => null
+        'version' => null,
+        'remoteInstallMeta' => null
     ];
 
     /**
@@ -86,12 +90,13 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceIds  主机id列表（INSTALL和UPDATE时必须）
-    * invocationType  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试
+    * invocationType  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALL_HOST设置远程安装主机，REMOTE_INSTALL执行远程安装
     * invocationTarget  任务对象，目前仅支持telescope
     * invocationIds  任务ID列表（ROLLBACK和RETRY时必须）
     * versionType  插件升级时需要选择升级“基础版本”还是“增强版本”，传值“BASIC_VERSION”表示升级成基础版本，传值“ADVANCE_VERSION”表示升级成增强版本
     * origin  Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
     * version  版本号
+    * remoteInstallMeta  创建远程安装任务时需要下发的被安装主机相关信息
     *
     * @var string[]
     */
@@ -102,18 +107,20 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
             'invocationIds' => 'invocation_ids',
             'versionType' => 'version_type',
             'origin' => 'origin',
-            'version' => 'version'
+            'version' => 'version',
+            'remoteInstallMeta' => 'remote_install_meta'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceIds  主机id列表（INSTALL和UPDATE时必须）
-    * invocationType  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试
+    * invocationType  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALL_HOST设置远程安装主机，REMOTE_INSTALL执行远程安装
     * invocationTarget  任务对象，目前仅支持telescope
     * invocationIds  任务ID列表（ROLLBACK和RETRY时必须）
     * versionType  插件升级时需要选择升级“基础版本”还是“增强版本”，传值“BASIC_VERSION”表示升级成基础版本，传值“ADVANCE_VERSION”表示升级成增强版本
     * origin  Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
     * version  版本号
+    * remoteInstallMeta  创建远程安装任务时需要下发的被安装主机相关信息
     *
     * @var string[]
     */
@@ -124,18 +131,20 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
             'invocationIds' => 'setInvocationIds',
             'versionType' => 'setVersionType',
             'origin' => 'setOrigin',
-            'version' => 'setVersion'
+            'version' => 'setVersion',
+            'remoteInstallMeta' => 'setRemoteInstallMeta'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceIds  主机id列表（INSTALL和UPDATE时必须）
-    * invocationType  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试
+    * invocationType  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALL_HOST设置远程安装主机，REMOTE_INSTALL执行远程安装
     * invocationTarget  任务对象，目前仅支持telescope
     * invocationIds  任务ID列表（ROLLBACK和RETRY时必须）
     * versionType  插件升级时需要选择升级“基础版本”还是“增强版本”，传值“BASIC_VERSION”表示升级成基础版本，传值“ADVANCE_VERSION”表示升级成增强版本
     * origin  Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
     * version  版本号
+    * remoteInstallMeta  创建远程安装任务时需要下发的被安装主机相关信息
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
             'invocationIds' => 'getInvocationIds',
             'versionType' => 'getVersionType',
             'origin' => 'getOrigin',
-            'version' => 'getVersion'
+            'version' => 'getVersion',
+            'remoteInstallMeta' => 'getRemoteInstallMeta'
     ];
 
     /**
@@ -193,6 +203,8 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     const INVOCATION_TYPE_UPDATE = 'UPDATE';
     const INVOCATION_TYPE_ROLLBACK = 'ROLLBACK';
     const INVOCATION_TYPE_RETRY = 'RETRY';
+    const INVOCATION_TYPE_SET_REMOTE_INSTALL_HOST = 'SET_REMOTE_INSTALL_HOST';
+    const INVOCATION_TYPE_REMOTE_INSTALL = 'REMOTE_INSTALL';
     const INVOCATION_TARGET_TELESCOPE = 'telescope';
     const VERSION_TYPE_BASIC_VERSION = 'BASIC_VERSION';
     const VERSION_TYPE_ADVANCE_VERSION = 'ADVANCE_VERSION';
@@ -213,6 +225,8 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
             self::INVOCATION_TYPE_UPDATE,
             self::INVOCATION_TYPE_ROLLBACK,
             self::INVOCATION_TYPE_RETRY,
+            self::INVOCATION_TYPE_SET_REMOTE_INSTALL_HOST,
+            self::INVOCATION_TYPE_REMOTE_INSTALL,
         ];
     }
 
@@ -278,6 +292,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
         $this->container['versionType'] = isset($data['versionType']) ? $data['versionType'] : null;
         $this->container['origin'] = isset($data['origin']) ? $data['origin'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['remoteInstallMeta'] = isset($data['remoteInstallMeta']) ? $data['remoteInstallMeta'] : null;
     }
 
     /**
@@ -372,7 +387,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocationType
-    *  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试
+    *  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALL_HOST设置远程安装主机，REMOTE_INSTALL执行远程安装
     *
     * @return string
     */
@@ -384,7 +399,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets invocationType
     *
-    * @param string $invocationType 任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试
+    * @param string $invocationType 任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALL_HOST设置远程安装主机，REMOTE_INSTALL执行远程安装
     *
     * @return $this
     */
@@ -511,6 +526,30 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     public function setVersion($version)
     {
         $this->container['version'] = $version;
+        return $this;
+    }
+
+    /**
+    * Gets remoteInstallMeta
+    *  创建远程安装任务时需要下发的被安装主机相关信息
+    *
+    * @return \HuaweiCloud\SDK\Ces\V3\Model\RemoteInstallHostInfo[]|null
+    */
+    public function getRemoteInstallMeta()
+    {
+        return $this->container['remoteInstallMeta'];
+    }
+
+    /**
+    * Sets remoteInstallMeta
+    *
+    * @param \HuaweiCloud\SDK\Ces\V3\Model\RemoteInstallHostInfo[]|null $remoteInstallMeta 创建远程安装任务时需要下发的被安装主机相关信息
+    *
+    * @return $this
+    */
+    public function setRemoteInstallMeta($remoteInstallMeta)
+    {
+        $this->container['remoteInstallMeta'] = $remoteInstallMeta;
         return $this;
     }
 

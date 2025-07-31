@@ -20,25 +20,25 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  记录集的ID。
-    * name  记录集的名称。
-    * description  记录集的描述信息。
-    * zoneId  托管该记录的域名ID。
-    * zoneName  托管该记录的域名。
-    * type  记录类型。
-    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
-    * records  域名解析后的值。
-    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * status  资源状态。
-    * default  标识是否由系统默认生成，系统默认生成的记录集不能删除。
-    * projectId  该记录集所属的项目ID。
+    * id  **参数解释：** 记录集的ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 记录集的名称。 **取值范围：** 不涉及。
+    * description  **参数解释：** 记录集的描述信息。 **取值范围：** 长度不超过255个字符。
+    * zoneId  **参数解释：** 托管该记录的域名ID。 **取值范围：** 不涉及。
+    * zoneName  **参数解释：** 托管该记录的域名。 **取值范围：** 不涉及。
+    * type  **参数解释：** 记录类型。 **取值范围：** - 公网域名的记录类型: A、AAAA、MX、CNAME、TXT、SRV、NS、SOA、CAA。 - 内网域名的记录类型: A、AAAA、MX、CNAME、TXT、PTR、SRV、NS、SOA。
+    * ttl  **参数解释：** 解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 **取值范围：** 1~2147483647。
+    * records  **参数解释：** 域名解析后的值。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 记录集的创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 记录集的最近一次修改时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * status  **参数解释：** 记录集状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
+    * default  **参数解释：** 标识是否由系统默认生成，系统默认生成的记录集不能删除。 **取值范围：** 不涉及。
+    * projectId  **参数解释：** 该记录集所属的项目ID。 **取值范围：** 不涉及。
     * links  links
-    * tags  资源标签。
-    * line  解析线路ID。
-    * lineName  解析线路名称。
-    * weight  解析记录的权重。
-    * healthCheckId  健康检查ID。
+    * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
+    * line  **参数解释：** 解析线路ID。 **取值范围：** 不涉及。
+    * lineName  **参数解释：** 解析线路名称。 **取值范围：** 不涉及。
+    * weight  **参数解释：** 解析记录的权重。 **取值范围：** 0~1000。
+    * healthCheckId  **参数解释：** 健康检查ID。 **取值范围：** 不涉及。
     * aliasTarget  aliasTarget
     *
     * @var string[]
@@ -68,25 +68,25 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  记录集的ID。
-    * name  记录集的名称。
-    * description  记录集的描述信息。
-    * zoneId  托管该记录的域名ID。
-    * zoneName  托管该记录的域名。
-    * type  记录类型。
-    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
-    * records  域名解析后的值。
-    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * status  资源状态。
-    * default  标识是否由系统默认生成，系统默认生成的记录集不能删除。
-    * projectId  该记录集所属的项目ID。
+    * id  **参数解释：** 记录集的ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 记录集的名称。 **取值范围：** 不涉及。
+    * description  **参数解释：** 记录集的描述信息。 **取值范围：** 长度不超过255个字符。
+    * zoneId  **参数解释：** 托管该记录的域名ID。 **取值范围：** 不涉及。
+    * zoneName  **参数解释：** 托管该记录的域名。 **取值范围：** 不涉及。
+    * type  **参数解释：** 记录类型。 **取值范围：** - 公网域名的记录类型: A、AAAA、MX、CNAME、TXT、SRV、NS、SOA、CAA。 - 内网域名的记录类型: A、AAAA、MX、CNAME、TXT、PTR、SRV、NS、SOA。
+    * ttl  **参数解释：** 解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 **取值范围：** 1~2147483647。
+    * records  **参数解释：** 域名解析后的值。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 记录集的创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 记录集的最近一次修改时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * status  **参数解释：** 记录集状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
+    * default  **参数解释：** 标识是否由系统默认生成，系统默认生成的记录集不能删除。 **取值范围：** 不涉及。
+    * projectId  **参数解释：** 该记录集所属的项目ID。 **取值范围：** 不涉及。
     * links  links
-    * tags  资源标签。
-    * line  解析线路ID。
-    * lineName  解析线路名称。
-    * weight  解析记录的权重。
-    * healthCheckId  健康检查ID。
+    * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
+    * line  **参数解释：** 解析线路ID。 **取值范围：** 不涉及。
+    * lineName  **参数解释：** 解析线路名称。 **取值范围：** 不涉及。
+    * weight  **参数解释：** 解析记录的权重。 **取值范围：** 0~1000。
+    * healthCheckId  **参数解释：** 健康检查ID。 **取值范围：** 不涉及。
     * aliasTarget  aliasTarget
     *
     * @var string[]
@@ -137,25 +137,25 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  记录集的ID。
-    * name  记录集的名称。
-    * description  记录集的描述信息。
-    * zoneId  托管该记录的域名ID。
-    * zoneName  托管该记录的域名。
-    * type  记录类型。
-    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
-    * records  域名解析后的值。
-    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * status  资源状态。
-    * default  标识是否由系统默认生成，系统默认生成的记录集不能删除。
-    * projectId  该记录集所属的项目ID。
+    * id  **参数解释：** 记录集的ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 记录集的名称。 **取值范围：** 不涉及。
+    * description  **参数解释：** 记录集的描述信息。 **取值范围：** 长度不超过255个字符。
+    * zoneId  **参数解释：** 托管该记录的域名ID。 **取值范围：** 不涉及。
+    * zoneName  **参数解释：** 托管该记录的域名。 **取值范围：** 不涉及。
+    * type  **参数解释：** 记录类型。 **取值范围：** - 公网域名的记录类型: A、AAAA、MX、CNAME、TXT、SRV、NS、SOA、CAA。 - 内网域名的记录类型: A、AAAA、MX、CNAME、TXT、PTR、SRV、NS、SOA。
+    * ttl  **参数解释：** 解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 **取值范围：** 1~2147483647。
+    * records  **参数解释：** 域名解析后的值。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 记录集的创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 记录集的最近一次修改时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * status  **参数解释：** 记录集状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
+    * default  **参数解释：** 标识是否由系统默认生成，系统默认生成的记录集不能删除。 **取值范围：** 不涉及。
+    * projectId  **参数解释：** 该记录集所属的项目ID。 **取值范围：** 不涉及。
     * links  links
-    * tags  资源标签。
-    * line  解析线路ID。
-    * lineName  解析线路名称。
-    * weight  解析记录的权重。
-    * healthCheckId  健康检查ID。
+    * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
+    * line  **参数解释：** 解析线路ID。 **取值范围：** 不涉及。
+    * lineName  **参数解释：** 解析线路名称。 **取值范围：** 不涉及。
+    * weight  **参数解释：** 解析记录的权重。 **取值范围：** 0~1000。
+    * healthCheckId  **参数解释：** 健康检查ID。 **取值范围：** 不涉及。
     * aliasTarget  aliasTarget
     *
     * @var string[]
@@ -185,25 +185,25 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  记录集的ID。
-    * name  记录集的名称。
-    * description  记录集的描述信息。
-    * zoneId  托管该记录的域名ID。
-    * zoneName  托管该记录的域名。
-    * type  记录类型。
-    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
-    * records  域名解析后的值。
-    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * status  资源状态。
-    * default  标识是否由系统默认生成，系统默认生成的记录集不能删除。
-    * projectId  该记录集所属的项目ID。
+    * id  **参数解释：** 记录集的ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 记录集的名称。 **取值范围：** 不涉及。
+    * description  **参数解释：** 记录集的描述信息。 **取值范围：** 长度不超过255个字符。
+    * zoneId  **参数解释：** 托管该记录的域名ID。 **取值范围：** 不涉及。
+    * zoneName  **参数解释：** 托管该记录的域名。 **取值范围：** 不涉及。
+    * type  **参数解释：** 记录类型。 **取值范围：** - 公网域名的记录类型: A、AAAA、MX、CNAME、TXT、SRV、NS、SOA、CAA。 - 内网域名的记录类型: A、AAAA、MX、CNAME、TXT、PTR、SRV、NS、SOA。
+    * ttl  **参数解释：** 解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 **取值范围：** 1~2147483647。
+    * records  **参数解释：** 域名解析后的值。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 记录集的创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 记录集的最近一次修改时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * status  **参数解释：** 记录集状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
+    * default  **参数解释：** 标识是否由系统默认生成，系统默认生成的记录集不能删除。 **取值范围：** 不涉及。
+    * projectId  **参数解释：** 该记录集所属的项目ID。 **取值范围：** 不涉及。
     * links  links
-    * tags  资源标签。
-    * line  解析线路ID。
-    * lineName  解析线路名称。
-    * weight  解析记录的权重。
-    * healthCheckId  健康检查ID。
+    * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
+    * line  **参数解释：** 解析线路ID。 **取值范围：** 不涉及。
+    * lineName  **参数解释：** 解析线路名称。 **取值范围：** 不涉及。
+    * weight  **参数解释：** 解析记录的权重。 **取值范围：** 0~1000。
+    * healthCheckId  **参数解释：** 健康检查ID。 **取值范围：** 不涉及。
     * aliasTarget  aliasTarget
     *
     * @var string[]
@@ -233,25 +233,25 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  记录集的ID。
-    * name  记录集的名称。
-    * description  记录集的描述信息。
-    * zoneId  托管该记录的域名ID。
-    * zoneName  托管该记录的域名。
-    * type  记录类型。
-    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
-    * records  域名解析后的值。
-    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * status  资源状态。
-    * default  标识是否由系统默认生成，系统默认生成的记录集不能删除。
-    * projectId  该记录集所属的项目ID。
+    * id  **参数解释：** 记录集的ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 记录集的名称。 **取值范围：** 不涉及。
+    * description  **参数解释：** 记录集的描述信息。 **取值范围：** 长度不超过255个字符。
+    * zoneId  **参数解释：** 托管该记录的域名ID。 **取值范围：** 不涉及。
+    * zoneName  **参数解释：** 托管该记录的域名。 **取值范围：** 不涉及。
+    * type  **参数解释：** 记录类型。 **取值范围：** - 公网域名的记录类型: A、AAAA、MX、CNAME、TXT、SRV、NS、SOA、CAA。 - 内网域名的记录类型: A、AAAA、MX、CNAME、TXT、PTR、SRV、NS、SOA。
+    * ttl  **参数解释：** 解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 **取值范围：** 1~2147483647。
+    * records  **参数解释：** 域名解析后的值。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 记录集的创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 记录集的最近一次修改时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * status  **参数解释：** 记录集状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
+    * default  **参数解释：** 标识是否由系统默认生成，系统默认生成的记录集不能删除。 **取值范围：** 不涉及。
+    * projectId  **参数解释：** 该记录集所属的项目ID。 **取值范围：** 不涉及。
     * links  links
-    * tags  资源标签。
-    * line  解析线路ID。
-    * lineName  解析线路名称。
-    * weight  解析记录的权重。
-    * healthCheckId  健康检查ID。
+    * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
+    * line  **参数解释：** 解析线路ID。 **取值范围：** 不涉及。
+    * lineName  **参数解释：** 解析线路名称。 **取值范围：** 不涉及。
+    * weight  **参数解释：** 解析记录的权重。 **取值范围：** 0~1000。
+    * healthCheckId  **参数解释：** 健康检查ID。 **取值范围：** 不涉及。
     * aliasTarget  aliasTarget
     *
     * @var string[]
@@ -383,7 +383,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  记录集的ID。
+    *  **参数解释：** 记录集的ID。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -395,7 +395,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 记录集的ID。
+    * @param string|null $id **参数解释：** 记录集的ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -407,7 +407,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  记录集的名称。
+    *  **参数解释：** 记录集的名称。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -419,7 +419,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 记录集的名称。
+    * @param string|null $name **参数解释：** 记录集的名称。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -431,7 +431,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  记录集的描述信息。
+    *  **参数解释：** 记录集的描述信息。 **取值范围：** 长度不超过255个字符。
     *
     * @return string|null
     */
@@ -443,7 +443,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 记录集的描述信息。
+    * @param string|null $description **参数解释：** 记录集的描述信息。 **取值范围：** 长度不超过255个字符。
     *
     * @return $this
     */
@@ -455,7 +455,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneId
-    *  托管该记录的域名ID。
+    *  **参数解释：** 托管该记录的域名ID。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -467,7 +467,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets zoneId
     *
-    * @param string|null $zoneId 托管该记录的域名ID。
+    * @param string|null $zoneId **参数解释：** 托管该记录的域名ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -479,7 +479,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneName
-    *  托管该记录的域名。
+    *  **参数解释：** 托管该记录的域名。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -491,7 +491,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets zoneName
     *
-    * @param string|null $zoneName 托管该记录的域名。
+    * @param string|null $zoneName **参数解释：** 托管该记录的域名。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -503,7 +503,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  记录类型。
+    *  **参数解释：** 记录类型。 **取值范围：** - 公网域名的记录类型: A、AAAA、MX、CNAME、TXT、SRV、NS、SOA、CAA。 - 内网域名的记录类型: A、AAAA、MX、CNAME、TXT、PTR、SRV、NS、SOA。
     *
     * @return string|null
     */
@@ -515,7 +515,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 记录类型。
+    * @param string|null $type **参数解释：** 记录类型。 **取值范围：** - 公网域名的记录类型: A、AAAA、MX、CNAME、TXT、SRV、NS、SOA、CAA。 - 内网域名的记录类型: A、AAAA、MX、CNAME、TXT、PTR、SRV、NS、SOA。
     *
     * @return $this
     */
@@ -527,7 +527,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets ttl
-    *  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    *  **参数解释：** 解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 **取值范围：** 1~2147483647。
     *
     * @return int|null
     */
@@ -539,7 +539,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets ttl
     *
-    * @param int|null $ttl 解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * @param int|null $ttl **参数解释：** 解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 **取值范围：** 1~2147483647。
     *
     * @return $this
     */
@@ -551,7 +551,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets records
-    *  域名解析后的值。
+    *  **参数解释：** 域名解析后的值。 **取值范围：** 不涉及。
     *
     * @return string[]|null
     */
@@ -563,7 +563,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets records
     *
-    * @param string[]|null $records 域名解析后的值。
+    * @param string[]|null $records **参数解释：** 域名解析后的值。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -575,7 +575,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    *  **参数解释：** 记录集的创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -587,7 +587,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * @param string|null $createdAt **参数解释：** 记录集的创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -599,7 +599,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    *  **参数解释：** 记录集的最近一次修改时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -611,7 +611,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string|null $updatedAt 更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * @param string|null $updatedAt **参数解释：** 记录集的最近一次修改时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -623,7 +623,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源状态。
+    *  **参数解释：** 记录集状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
     *
     * @return string|null
     */
@@ -635,7 +635,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源状态。
+    * @param string|null $status **参数解释：** 记录集状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
     *
     * @return $this
     */
@@ -647,7 +647,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets default
-    *  标识是否由系统默认生成，系统默认生成的记录集不能删除。
+    *  **参数解释：** 标识是否由系统默认生成，系统默认生成的记录集不能删除。 **取值范围：** 不涉及。
     *
     * @return bool|null
     */
@@ -659,7 +659,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets default
     *
-    * @param bool|null $default 标识是否由系统默认生成，系统默认生成的记录集不能删除。
+    * @param bool|null $default **参数解释：** 标识是否由系统默认生成，系统默认生成的记录集不能删除。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -671,7 +671,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  该记录集所属的项目ID。
+    *  **参数解释：** 该记录集所属的项目ID。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -683,7 +683,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 该记录集所属的项目ID。
+    * @param string|null $projectId **参数解释：** 该记录集所属的项目ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -719,7 +719,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  资源标签。
+    *  **参数解释：** 资源标签。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\Tag[]|null
     */
@@ -731,7 +731,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Tag[]|null $tags 资源标签。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\Tag[]|null $tags **参数解释：** 资源标签。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -743,7 +743,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets line
-    *  解析线路ID。
+    *  **参数解释：** 解析线路ID。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -755,7 +755,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets line
     *
-    * @param string|null $line 解析线路ID。
+    * @param string|null $line **参数解释：** 解析线路ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -767,7 +767,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets lineName
-    *  解析线路名称。
+    *  **参数解释：** 解析线路名称。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -779,7 +779,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets lineName
     *
-    * @param string|null $lineName 解析线路名称。
+    * @param string|null $lineName **参数解释：** 解析线路名称。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -791,7 +791,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets weight
-    *  解析记录的权重。
+    *  **参数解释：** 解析记录的权重。 **取值范围：** 0~1000。
     *
     * @return int|null
     */
@@ -803,7 +803,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets weight
     *
-    * @param int|null $weight 解析记录的权重。
+    * @param int|null $weight **参数解释：** 解析记录的权重。 **取值范围：** 0~1000。
     *
     * @return $this
     */
@@ -815,7 +815,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets healthCheckId
-    *  健康检查ID。
+    *  **参数解释：** 健康检查ID。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -827,7 +827,7 @@ class QueryRecordSetWithLineAndTagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets healthCheckId
     *
-    * @param string|null $healthCheckId 健康检查ID。
+    * @param string|null $healthCheckId **参数解释：** 健康检查ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */

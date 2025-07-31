@@ -31,6 +31,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * isNeedGenerateCover  **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。
     * assetOrder  **参数解释**： 用于console控制台展示顺序。 如果取值相同，则默认最新的排在前面。 **约束限制**： 不涉及 **默认取值**： 不涉及
     * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    * autoOperationConfig  资产自动处理任务。
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetSharedConfig',
             'isNeedGenerateCover' => 'bool',
             'assetOrder' => 'int',
-            'supportedService' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]'
+            'supportedService' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]',
+            'autoOperationConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AutoOperationConfig[]'
     ];
 
     /**
@@ -61,6 +63,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * isNeedGenerateCover  **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。
     * assetOrder  **参数解释**： 用于console控制台展示顺序。 如果取值相同，则默认最新的排在前面。 **约束限制**： 不涉及 **默认取值**： 不涉及
     * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    * autoOperationConfig  资产自动处理任务。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
         'sharedConfig' => null,
         'isNeedGenerateCover' => null,
         'assetOrder' => 'int32',
-        'supportedService' => null
+        'supportedService' => null,
+        'autoOperationConfig' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * isNeedGenerateCover  **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。
     * assetOrder  **参数解释**： 用于console控制台展示顺序。 如果取值相同，则默认最新的排在前面。 **约束限制**： 不涉及 **默认取值**： 不涉及
     * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    * autoOperationConfig  资产自动处理任务。
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'sharedConfig' => 'shared_config',
             'isNeedGenerateCover' => 'is_need_generate_cover',
             'assetOrder' => 'asset_order',
-            'supportedService' => 'supported_service'
+            'supportedService' => 'supported_service',
+            'autoOperationConfig' => 'auto_operation_config'
     ];
 
     /**
@@ -142,6 +148,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * isNeedGenerateCover  **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。
     * assetOrder  **参数解释**： 用于console控制台展示顺序。 如果取值相同，则默认最新的排在前面。 **约束限制**： 不涉及 **默认取值**： 不涉及
     * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    * autoOperationConfig  资产自动处理任务。
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'sharedConfig' => 'setSharedConfig',
             'isNeedGenerateCover' => 'setIsNeedGenerateCover',
             'assetOrder' => 'setAssetOrder',
-            'supportedService' => 'setSupportedService'
+            'supportedService' => 'setSupportedService',
+            'autoOperationConfig' => 'setAutoOperationConfig'
     ];
 
     /**
@@ -172,6 +180,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * isNeedGenerateCover  **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。
     * assetOrder  **参数解释**： 用于console控制台展示顺序。 如果取值相同，则默认最新的排在前面。 **约束限制**： 不涉及 **默认取值**： 不涉及
     * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    * autoOperationConfig  资产自动处理任务。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'sharedConfig' => 'getSharedConfig',
             'isNeedGenerateCover' => 'getIsNeedGenerateCover',
             'assetOrder' => 'getAssetOrder',
-            'supportedService' => 'getSupportedService'
+            'supportedService' => 'getSupportedService',
+            'autoOperationConfig' => 'getAutoOperationConfig'
     ];
 
     /**
@@ -297,6 +307,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
         $this->container['isNeedGenerateCover'] = isset($data['isNeedGenerateCover']) ? $data['isNeedGenerateCover'] : null;
         $this->container['assetOrder'] = isset($data['assetOrder']) ? $data['assetOrder'] : null;
         $this->container['supportedService'] = isset($data['supportedService']) ? $data['supportedService'] : null;
+        $this->container['autoOperationConfig'] = isset($data['autoOperationConfig']) ? $data['autoOperationConfig'] : null;
     }
 
     /**
@@ -614,6 +625,30 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     public function setSupportedService($supportedService)
     {
         $this->container['supportedService'] = $supportedService;
+        return $this;
+    }
+
+    /**
+    * Gets autoOperationConfig
+    *  资产自动处理任务。
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\AutoOperationConfig[]|null
+    */
+    public function getAutoOperationConfig()
+    {
+        return $this->container['autoOperationConfig'];
+    }
+
+    /**
+    * Sets autoOperationConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\AutoOperationConfig[]|null $autoOperationConfig 资产自动处理任务。
+    *
+    * @return $this
+    */
+    public function setAutoOperationConfig($autoOperationConfig)
+    {
+        $this->container['autoOperationConfig'] = $autoOperationConfig;
         return $this;
     }
 

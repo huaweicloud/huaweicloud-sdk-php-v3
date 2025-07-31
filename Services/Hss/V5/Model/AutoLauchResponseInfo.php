@@ -20,16 +20,16 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentId  Agent ID
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * name  自启动项名称
-    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
-    * path  自启动项的路径
-    * hash  采用sha256算法生成的文件hash值
-    * runUser  运行用户
-    * recentScanTime  最近扫描时间
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * name  **参数解释**: 自启动项名称 **取值范围**: 字符长度1-256位
+    * type  **参数解释**: 自启动项类型 **取值范围**: - 0：自启动服务 - 1：定时任务 - 2：预加载动态库 - 3：Run注册表键 - 4：开机启动文件夹
+    * path  **参数解释**: 自启动项的路径 **取值范围**: 字符长度1-256位
+    * hash  **参数解释**: 采用sha256算法生成的文件hash值 **取值范围**: 字符长度1-128位
+    * runUser  **参数解释**: 运行用户 **取值范围**: 字符长度1-128位
+    * recentScanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentId  Agent ID
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * name  自启动项名称
-    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
-    * path  自启动项的路径
-    * hash  采用sha256算法生成的文件hash值
-    * runUser  运行用户
-    * recentScanTime  最近扫描时间
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * name  **参数解释**: 自启动项名称 **取值范围**: 字符长度1-256位
+    * type  **参数解释**: 自启动项类型 **取值范围**: - 0：自启动服务 - 1：定时任务 - 2：预加载动态库 - 3：Run注册表键 - 4：开机启动文件夹
+    * path  **参数解释**: 自启动项的路径 **取值范围**: 字符长度1-256位
+    * hash  **参数解释**: 采用sha256算法生成的文件hash值 **取值范围**: 字符长度1-128位
+    * runUser  **参数解释**: 运行用户 **取值范围**: 字符长度1-128位
+    * recentScanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentId  Agent ID
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * name  自启动项名称
-    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
-    * path  自启动项的路径
-    * hash  采用sha256算法生成的文件hash值
-    * runUser  运行用户
-    * recentScanTime  最近扫描时间
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * name  **参数解释**: 自启动项名称 **取值范围**: 字符长度1-256位
+    * type  **参数解释**: 自启动项类型 **取值范围**: - 0：自启动服务 - 1：定时任务 - 2：预加载动态库 - 3：Run注册表键 - 4：开机启动文件夹
+    * path  **参数解释**: 自启动项的路径 **取值范围**: 字符长度1-256位
+    * hash  **参数解释**: 采用sha256算法生成的文件hash值 **取值范围**: 字符长度1-128位
+    * runUser  **参数解释**: 运行用户 **取值范围**: 字符长度1-128位
+    * recentScanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentId  Agent ID
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * name  自启动项名称
-    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
-    * path  自启动项的路径
-    * hash  采用sha256算法生成的文件hash值
-    * runUser  运行用户
-    * recentScanTime  最近扫描时间
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * name  **参数解释**: 自启动项名称 **取值范围**: 字符长度1-256位
+    * type  **参数解释**: 自启动项类型 **取值范围**: - 0：自启动服务 - 1：定时任务 - 2：预加载动态库 - 3：Run注册表键 - 4：开机启动文件夹
+    * path  **参数解释**: 自启动项的路径 **取值范围**: 字符长度1-256位
+    * hash  **参数解释**: 采用sha256算法生成的文件hash值 **取值范围**: 字符长度1-128位
+    * runUser  **参数解释**: 运行用户 **取值范围**: 字符长度1-128位
+    * recentScanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentId  Agent ID
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * name  自启动项名称
-    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
-    * path  自启动项的路径
-    * hash  采用sha256算法生成的文件hash值
-    * runUser  运行用户
-    * recentScanTime  最近扫描时间
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * name  **参数解释**: 自启动项名称 **取值范围**: 字符长度1-256位
+    * type  **参数解释**: 自启动项类型 **取值范围**: - 0：自启动服务 - 1：定时任务 - 2：预加载动态库 - 3：Run注册表键 - 4：开机启动文件夹
+    * path  **参数解释**: 自启动项的路径 **取值范围**: 字符长度1-256位
+    * hash  **参数解释**: 采用sha256算法生成的文件hash值 **取值范围**: 字符长度1-128位
+    * runUser  **参数解释**: 运行用户 **取值范围**: 字符长度1-128位
+    * recentScanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @var string[]
     */
@@ -257,17 +257,17 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) > 128)) {
-                $invalidProperties[] = "invalid value for 'agentId', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['agentId']) && !preg_match("/^.*$/", $this->container['agentId'])) {
+                $invalidProperties[] = "invalid value for 'agentId', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'agentId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 128)) {
-                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostId']) && !preg_match("/^.*$/", $this->container['hostId'])) {
+                $invalidProperties[] = "invalid value for 'hostId', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
@@ -275,8 +275,11 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) > 256)) {
-                $invalidProperties[] = "invalid value for 'hostIp', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['hostName']) && !preg_match("/^.*$/", $this->container['hostName'])) {
+                $invalidProperties[] = "invalid value for 'hostName', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) > 128)) {
+                $invalidProperties[] = "invalid value for 'hostIp', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostIp', the character length must be bigger than or equal to 1.";
@@ -311,8 +314,8 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['runUser']) && (mb_strlen($this->container['runUser']) < 1)) {
                 $invalidProperties[] = "invalid value for 'runUser', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['recentScanTime']) && ($this->container['recentScanTime'] > 4824430336000)) {
-                $invalidProperties[] = "invalid value for 'recentScanTime', must be smaller than or equal to 4824430336000.";
+            if (!is_null($this->container['recentScanTime']) && ($this->container['recentScanTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'recentScanTime', must be smaller than or equal to 9223372036854775807.";
             }
             if (!is_null($this->container['recentScanTime']) && ($this->container['recentScanTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'recentScanTime', must be bigger than or equal to 0.";
@@ -333,7 +336,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  Agent ID
+    *  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -345,7 +348,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId Agent ID
+    * @param string|null $agentId **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -357,7 +360,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机id
+    *  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return string|null
     */
@@ -369,7 +372,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机id
+    * @param string|null $hostId **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -381,7 +384,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -393,7 +396,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -405,7 +408,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  服务器ip
+    *  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -417,7 +420,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 服务器ip
+    * @param string|null $hostIp **参数解释**: 主机IP **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -429,7 +432,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  自启动项名称
+    *  **参数解释**: 自启动项名称 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -441,7 +444,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 自启动项名称
+    * @param string|null $name **参数解释**: 自启动项名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -453,7 +456,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
+    *  **参数解释**: 自启动项类型 **取值范围**: - 0：自启动服务 - 1：定时任务 - 2：预加载动态库 - 3：Run注册表键 - 4：开机启动文件夹
     *
     * @return int|null
     */
@@ -465,7 +468,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int|null $type 自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
+    * @param int|null $type **参数解释**: 自启动项类型 **取值范围**: - 0：自启动服务 - 1：定时任务 - 2：预加载动态库 - 3：Run注册表键 - 4：开机启动文件夹
     *
     * @return $this
     */
@@ -477,7 +480,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  自启动项的路径
+    *  **参数解释**: 自启动项的路径 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -489,7 +492,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string|null $path 自启动项的路径
+    * @param string|null $path **参数解释**: 自启动项的路径 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -501,7 +504,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hash
-    *  采用sha256算法生成的文件hash值
+    *  **参数解释**: 采用sha256算法生成的文件hash值 **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -513,7 +516,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hash
     *
-    * @param string|null $hash 采用sha256算法生成的文件hash值
+    * @param string|null $hash **参数解释**: 采用sha256算法生成的文件hash值 **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -525,7 +528,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets runUser
-    *  运行用户
+    *  **参数解释**: 运行用户 **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -537,7 +540,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets runUser
     *
-    * @param string|null $runUser 运行用户
+    * @param string|null $runUser **参数解释**: 运行用户 **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -549,7 +552,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets recentScanTime
-    *  最近扫描时间
+    *  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -561,7 +564,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets recentScanTime
     *
-    * @param int|null $recentScanTime 最近扫描时间
+    * @param int|null $recentScanTime **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return $this
     */

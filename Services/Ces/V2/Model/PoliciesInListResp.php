@@ -24,13 +24,13 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
     * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * extraInfo  extraInfo
     * period  period
-    * filter  聚合方式, 支持的值为(average|min|max|sum)
+    * filter  聚合方式。average： 平均值，variance：方差，min：最小值，max：最大值，sum：求和，tp99：99百分位数，tp95：95百分位数，tp90：90百分位数
     * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
-    * value  告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。取值范围[0, Number.MAX_VALUE]，Number.MAX_VALUE值为1.7976931348623157e+108。具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。](tag: dt,g42,dt_test,hk_g42,hk_sbc,hws,hws_hk,ocb,sbc,tm)
+    * value  告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。 具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。]
     * hierarchicalValue  hierarchicalValue
     * unit  数据的单位。
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
-    * type  告警策略类型。（暂时未使用）
+    * type  告警策略类型，已废弃，不推荐使用。
     * suppressDuration  suppressDuration
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
     * selectedUnit  用户在页面中选择的指标单位， 用于后续指标数据回显和计算
@@ -60,13 +60,13 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
     * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * extraInfo  extraInfo
     * period  period
-    * filter  聚合方式, 支持的值为(average|min|max|sum)
+    * filter  聚合方式。average： 平均值，variance：方差，min：最小值，max：最大值，sum：求和，tp99：99百分位数，tp95：95百分位数，tp90：90百分位数
     * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
-    * value  告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。取值范围[0, Number.MAX_VALUE]，Number.MAX_VALUE值为1.7976931348623157e+108。具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。](tag: dt,g42,dt_test,hk_g42,hk_sbc,hws,hws_hk,ocb,sbc,tm)
+    * value  告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。 具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。]
     * hierarchicalValue  hierarchicalValue
     * unit  数据的单位。
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
-    * type  告警策略类型。（暂时未使用）
+    * type  告警策略类型，已废弃，不推荐使用。
     * suppressDuration  suppressDuration
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
     * selectedUnit  用户在页面中选择的指标单位， 用于后续指标数据回显和计算
@@ -117,13 +117,13 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
     * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * extraInfo  extraInfo
     * period  period
-    * filter  聚合方式, 支持的值为(average|min|max|sum)
+    * filter  聚合方式。average： 平均值，variance：方差，min：最小值，max：最大值，sum：求和，tp99：99百分位数，tp95：95百分位数，tp90：90百分位数
     * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
-    * value  告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。取值范围[0, Number.MAX_VALUE]，Number.MAX_VALUE值为1.7976931348623157e+108。具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。](tag: dt,g42,dt_test,hk_g42,hk_sbc,hws,hws_hk,ocb,sbc,tm)
+    * value  告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。 具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。]
     * hierarchicalValue  hierarchicalValue
     * unit  数据的单位。
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
-    * type  告警策略类型。（暂时未使用）
+    * type  告警策略类型，已废弃，不推荐使用。
     * suppressDuration  suppressDuration
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
     * selectedUnit  用户在页面中选择的指标单位， 用于后续指标数据回显和计算
@@ -153,13 +153,13 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
     * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * extraInfo  extraInfo
     * period  period
-    * filter  聚合方式, 支持的值为(average|min|max|sum)
+    * filter  聚合方式。average： 平均值，variance：方差，min：最小值，max：最大值，sum：求和，tp99：99百分位数，tp95：95百分位数，tp90：90百分位数
     * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
-    * value  告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。取值范围[0, Number.MAX_VALUE]，Number.MAX_VALUE值为1.7976931348623157e+108。具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。](tag: dt,g42,dt_test,hk_g42,hk_sbc,hws,hws_hk,ocb,sbc,tm)
+    * value  告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。 具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。]
     * hierarchicalValue  hierarchicalValue
     * unit  数据的单位。
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
-    * type  告警策略类型。（暂时未使用）
+    * type  告警策略类型，已废弃，不推荐使用。
     * suppressDuration  suppressDuration
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
     * selectedUnit  用户在页面中选择的指标单位， 用于后续指标数据回显和计算
@@ -189,13 +189,13 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
     * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * extraInfo  extraInfo
     * period  period
-    * filter  聚合方式, 支持的值为(average|min|max|sum)
+    * filter  聚合方式。average： 平均值，variance：方差，min：最小值，max：最大值，sum：求和，tp99：99百分位数，tp95：95百分位数，tp90：90百分位数
     * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
-    * value  告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。取值范围[0, Number.MAX_VALUE]，Number.MAX_VALUE值为1.7976931348623157e+108。具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。](tag: dt,g42,dt_test,hk_g42,hk_sbc,hws,hws_hk,ocb,sbc,tm)
+    * value  告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。 具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。]
     * hierarchicalValue  hierarchicalValue
     * unit  数据的单位。
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
-    * type  告警策略类型。（暂时未使用）
+    * type  告警策略类型，已废弃，不推荐使用。
     * suppressDuration  suppressDuration
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
     * selectedUnit  用户在页面中选择的指标单位， 用于后续指标数据回显和计算
@@ -316,8 +316,8 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
         if ($this->container['metricName'] === null) {
             $invalidProperties[] = "'metricName' can't be null";
         }
-            if ((mb_strlen($this->container['metricName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'metricName', the character length must be smaller than or equal to 64.";
+            if ((mb_strlen($this->container['metricName']) > 96)) {
+                $invalidProperties[] = "invalid value for 'metricName', the character length must be smaller than or equal to 96.";
             }
             if ((mb_strlen($this->container['metricName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'metricName', the character length must be bigger than or equal to 1.";
@@ -331,8 +331,8 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
         if ($this->container['filter'] === null) {
             $invalidProperties[] = "'filter' can't be null";
         }
-            if (!preg_match("/^(average|min|max|sum)$/", $this->container['filter'])) {
-                $invalidProperties[] = "invalid value for 'filter', must be conform to the pattern /^(average|min|max|sum)$/.";
+            if (!preg_match("/^(average|variance|min|max|sum|tp99|tp95|tp90)$/", $this->container['filter'])) {
+                $invalidProperties[] = "invalid value for 'filter', must be conform to the pattern /^(average|variance|min|max|sum|tp99|tp95|tp90)$/.";
             }
         if ($this->container['comparisonOperator'] === null) {
             $invalidProperties[] = "'comparisonOperator' can't be null";
@@ -343,8 +343,8 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
             if (!is_null($this->container['value']) && ($this->container['value'] > 1.7976931348623156E+108)) {
                 $invalidProperties[] = "invalid value for 'value', must be smaller than or equal to 1.7976931348623156E+108.";
             }
-            if (!is_null($this->container['value']) && ($this->container['value'] < 0)) {
-                $invalidProperties[] = "invalid value for 'value', must be bigger than or equal to 0.";
+            if (!is_null($this->container['value']) && ($this->container['value'] < -1.7976931348623156E+108)) {
+                $invalidProperties[] = "invalid value for 'value', must be bigger than or equal to -1.7976931348623156E+108.";
             }
             if (!is_null($this->container['unit']) && (mb_strlen($this->container['unit']) > 32)) {
                 $invalidProperties[] = "invalid value for 'unit', the character length must be smaller than or equal to 32.";
@@ -491,7 +491,7 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets filter
-    *  聚合方式, 支持的值为(average|min|max|sum)
+    *  聚合方式。average： 平均值，variance：方差，min：最小值，max：最大值，sum：求和，tp99：99百分位数，tp95：95百分位数，tp90：90百分位数
     *
     * @return string
     */
@@ -503,7 +503,7 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
     /**
     * Sets filter
     *
-    * @param string $filter 聚合方式, 支持的值为(average|min|max|sum)
+    * @param string $filter 聚合方式。average： 平均值，variance：方差，min：最小值，max：最大值，sum：求和，tp99：99百分位数，tp95：95百分位数，tp90：90百分位数
     *
     * @return $this
     */
@@ -539,7 +539,7 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。取值范围[0, Number.MAX_VALUE]，Number.MAX_VALUE值为1.7976931348623157e+108。具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。](tag: dt,g42,dt_test,hk_g42,hk_sbc,hws,hws_hk,ocb,sbc,tm)
+    *  告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。 具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。]
     *
     * @return double|null
     */
@@ -551,7 +551,7 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param double|null $value 告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。取值范围[0, Number.MAX_VALUE]，Number.MAX_VALUE值为1.7976931348623157e+108。具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。](tag: dt,g42,dt_test,hk_g42,hk_sbc,hws,hws_hk,ocb,sbc,tm)
+    * @param double|null $value 告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。 具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。]
     *
     * @return $this
     */
@@ -635,7 +635,7 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  告警策略类型。（暂时未使用）
+    *  告警策略类型，已废弃，不推荐使用。
     *
     * @return string|null
     */
@@ -647,7 +647,7 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 告警策略类型。（暂时未使用）
+    * @param string|null $type 告警策略类型，已废弃，不推荐使用。
     *
     * @return $this
     */

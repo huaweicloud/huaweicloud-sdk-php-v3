@@ -40,6 +40,8 @@ class ShowTenantDurationCfgResponse implements ModelInterface, ArrayAccess
     * ljznMin  逻辑智能最低时长（秒）
     * ljznMax  逻辑智能最高时长（秒）
     * ljznAdviceValue  逻辑智能建议时长（秒）
+    * shortAssessMin  短任务质量检测最低时长（秒）
+    * shortAssessMax  短任务质量检测最高时长（秒）
     *
     * @var string[]
     */
@@ -62,7 +64,9 @@ class ShowTenantDurationCfgResponse implements ModelInterface, ArrayAccess
             'cmwwAdviceValue' => 'int',
             'ljznMin' => 'int',
             'ljznMax' => 'int',
-            'ljznAdviceValue' => 'int'
+            'ljznAdviceValue' => 'int',
+            'shortAssessMin' => 'int',
+            'shortAssessMax' => 'int'
     ];
 
     /**
@@ -86,6 +90,8 @@ class ShowTenantDurationCfgResponse implements ModelInterface, ArrayAccess
     * ljznMin  逻辑智能最低时长（秒）
     * ljznMax  逻辑智能最高时长（秒）
     * ljznAdviceValue  逻辑智能建议时长（秒）
+    * shortAssessMin  短任务质量检测最低时长（秒）
+    * shortAssessMax  短任务质量检测最高时长（秒）
     *
     * @var string[]
     */
@@ -108,7 +114,9 @@ class ShowTenantDurationCfgResponse implements ModelInterface, ArrayAccess
         'cmwwAdviceValue' => null,
         'ljznMin' => null,
         'ljznMax' => null,
-        'ljznAdviceValue' => null
+        'ljznAdviceValue' => null,
+        'shortAssessMin' => null,
+        'shortAssessMax' => null
     ];
 
     /**
@@ -153,6 +161,8 @@ class ShowTenantDurationCfgResponse implements ModelInterface, ArrayAccess
     * ljznMin  逻辑智能最低时长（秒）
     * ljznMax  逻辑智能最高时长（秒）
     * ljznAdviceValue  逻辑智能建议时长（秒）
+    * shortAssessMin  短任务质量检测最低时长（秒）
+    * shortAssessMax  短任务质量检测最高时长（秒）
     *
     * @var string[]
     */
@@ -175,7 +185,9 @@ class ShowTenantDurationCfgResponse implements ModelInterface, ArrayAccess
             'cmwwAdviceValue' => 'cmww_advice_value',
             'ljznMin' => 'ljzn_min',
             'ljznMax' => 'ljzn_max',
-            'ljznAdviceValue' => 'ljzn_advice_value'
+            'ljznAdviceValue' => 'ljzn_advice_value',
+            'shortAssessMin' => 'short_assess_min',
+            'shortAssessMax' => 'short_assess_max'
     ];
 
     /**
@@ -199,6 +211,8 @@ class ShowTenantDurationCfgResponse implements ModelInterface, ArrayAccess
     * ljznMin  逻辑智能最低时长（秒）
     * ljznMax  逻辑智能最高时长（秒）
     * ljznAdviceValue  逻辑智能建议时长（秒）
+    * shortAssessMin  短任务质量检测最低时长（秒）
+    * shortAssessMax  短任务质量检测最高时长（秒）
     *
     * @var string[]
     */
@@ -221,7 +235,9 @@ class ShowTenantDurationCfgResponse implements ModelInterface, ArrayAccess
             'cmwwAdviceValue' => 'setCmwwAdviceValue',
             'ljznMin' => 'setLjznMin',
             'ljznMax' => 'setLjznMax',
-            'ljznAdviceValue' => 'setLjznAdviceValue'
+            'ljznAdviceValue' => 'setLjznAdviceValue',
+            'shortAssessMin' => 'setShortAssessMin',
+            'shortAssessMax' => 'setShortAssessMax'
     ];
 
     /**
@@ -245,6 +261,8 @@ class ShowTenantDurationCfgResponse implements ModelInterface, ArrayAccess
     * ljznMin  逻辑智能最低时长（秒）
     * ljznMax  逻辑智能最高时长（秒）
     * ljznAdviceValue  逻辑智能建议时长（秒）
+    * shortAssessMin  短任务质量检测最低时长（秒）
+    * shortAssessMax  短任务质量检测最高时长（秒）
     *
     * @var string[]
     */
@@ -267,7 +285,9 @@ class ShowTenantDurationCfgResponse implements ModelInterface, ArrayAccess
             'cmwwAdviceValue' => 'getCmwwAdviceValue',
             'ljznMin' => 'getLjznMin',
             'ljznMax' => 'getLjznMax',
-            'ljznAdviceValue' => 'getLjznAdviceValue'
+            'ljznAdviceValue' => 'getLjznAdviceValue',
+            'shortAssessMin' => 'getShortAssessMin',
+            'shortAssessMax' => 'getShortAssessMax'
     ];
 
     /**
@@ -347,6 +367,8 @@ class ShowTenantDurationCfgResponse implements ModelInterface, ArrayAccess
         $this->container['ljznMin'] = isset($data['ljznMin']) ? $data['ljznMin'] : null;
         $this->container['ljznMax'] = isset($data['ljznMax']) ? $data['ljznMax'] : null;
         $this->container['ljznAdviceValue'] = isset($data['ljznAdviceValue']) ? $data['ljznAdviceValue'] : null;
+        $this->container['shortAssessMin'] = isset($data['shortAssessMin']) ? $data['shortAssessMin'] : null;
+        $this->container['shortAssessMax'] = isset($data['shortAssessMax']) ? $data['shortAssessMax'] : null;
     }
 
     /**
@@ -470,6 +492,18 @@ class ShowTenantDurationCfgResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['ljznAdviceValue']) && ($this->container['ljznAdviceValue'] < 0)) {
                 $invalidProperties[] = "invalid value for 'ljznAdviceValue', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['shortAssessMin']) && ($this->container['shortAssessMin'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'shortAssessMin', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['shortAssessMin']) && ($this->container['shortAssessMin'] < 0)) {
+                $invalidProperties[] = "invalid value for 'shortAssessMin', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['shortAssessMax']) && ($this->container['shortAssessMax'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'shortAssessMax', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['shortAssessMax']) && ($this->container['shortAssessMax'] < 0)) {
+                $invalidProperties[] = "invalid value for 'shortAssessMax', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -938,6 +972,54 @@ class ShowTenantDurationCfgResponse implements ModelInterface, ArrayAccess
     public function setLjznAdviceValue($ljznAdviceValue)
     {
         $this->container['ljznAdviceValue'] = $ljznAdviceValue;
+        return $this;
+    }
+
+    /**
+    * Gets shortAssessMin
+    *  短任务质量检测最低时长（秒）
+    *
+    * @return int|null
+    */
+    public function getShortAssessMin()
+    {
+        return $this->container['shortAssessMin'];
+    }
+
+    /**
+    * Sets shortAssessMin
+    *
+    * @param int|null $shortAssessMin 短任务质量检测最低时长（秒）
+    *
+    * @return $this
+    */
+    public function setShortAssessMin($shortAssessMin)
+    {
+        $this->container['shortAssessMin'] = $shortAssessMin;
+        return $this;
+    }
+
+    /**
+    * Gets shortAssessMax
+    *  短任务质量检测最高时长（秒）
+    *
+    * @return int|null
+    */
+    public function getShortAssessMax()
+    {
+        return $this->container['shortAssessMax'];
+    }
+
+    /**
+    * Sets shortAssessMax
+    *
+    * @param int|null $shortAssessMax 短任务质量检测最高时长（秒）
+    *
+    * @return $this
+    */
+    public function setShortAssessMax($shortAssessMax)
+    {
+        $this->container['shortAssessMax'] = $shortAssessMax;
         return $this;
     }
 

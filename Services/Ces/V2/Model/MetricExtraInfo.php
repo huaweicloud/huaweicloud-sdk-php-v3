@@ -191,29 +191,41 @@ class MetricExtraInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['originMetricName']) && (mb_strlen($this->container['originMetricName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'originMetricName', the character length must be smaller than or equal to 64.";
+        if ($this->container['originMetricName'] === null) {
+            $invalidProperties[] = "'originMetricName' can't be null";
+        }
+            if ((mb_strlen($this->container['originMetricName']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'originMetricName', the character length must be smaller than or equal to 4096.";
             }
-            if (!is_null($this->container['originMetricName']) && (mb_strlen($this->container['originMetricName']) < 0)) {
+            if ((mb_strlen($this->container['originMetricName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'originMetricName', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['metricPrefix']) && (mb_strlen($this->container['metricPrefix']) > 8)) {
-                $invalidProperties[] = "invalid value for 'metricPrefix', the character length must be smaller than or equal to 8.";
+            if (!preg_match("/^([a-z]|[A-Z]|[0-9]|_|-|~|\\.|\/|:)*$/", $this->container['originMetricName'])) {
+                $invalidProperties[] = "invalid value for 'originMetricName', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|_|-|~|\\.|\/|:)*$/.";
+            }
+            if (!is_null($this->container['metricPrefix']) && (mb_strlen($this->container['metricPrefix']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'metricPrefix', the character length must be smaller than or equal to 4096.";
             }
             if (!is_null($this->container['metricPrefix']) && (mb_strlen($this->container['metricPrefix']) < 0)) {
                 $invalidProperties[] = "invalid value for 'metricPrefix', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['customProcName']) && (mb_strlen($this->container['customProcName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'customProcName', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['metricPrefix']) && !preg_match("/^([a-z]|[A-Z]|[0-9]|_|-|~|\\.|\/|:)*$/", $this->container['metricPrefix'])) {
+                $invalidProperties[] = "invalid value for 'metricPrefix', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|_|-|~|\\.|\/|:)*$/.";
+            }
+            if (!is_null($this->container['customProcName']) && (mb_strlen($this->container['customProcName']) > 250)) {
+                $invalidProperties[] = "invalid value for 'customProcName', the character length must be smaller than or equal to 250.";
             }
             if (!is_null($this->container['customProcName']) && (mb_strlen($this->container['customProcName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'customProcName', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['metricType']) && (mb_strlen($this->container['metricType']) > 16)) {
-                $invalidProperties[] = "invalid value for 'metricType', the character length must be smaller than or equal to 16.";
+            if (!is_null($this->container['metricType']) && (mb_strlen($this->container['metricType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'metricType', the character length must be smaller than or equal to 32.";
             }
             if (!is_null($this->container['metricType']) && (mb_strlen($this->container['metricType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'metricType', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['metricType']) && !preg_match("/^([a-z]|[A-Z]|[0-9]|_|-|~|\\.|\/|:)*$/", $this->container['metricType'])) {
+                $invalidProperties[] = "invalid value for 'metricType', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|_|-|~|\\.|\/|:)*$/.";
             }
         return $invalidProperties;
     }
@@ -233,7 +245,7 @@ class MetricExtraInfo implements ModelInterface, ArrayAccess
     * Gets originMetricName
     *  原始指标名称
     *
-    * @return string|null
+    * @return string
     */
     public function getOriginMetricName()
     {
@@ -243,7 +255,7 @@ class MetricExtraInfo implements ModelInterface, ArrayAccess
     /**
     * Sets originMetricName
     *
-    * @param string|null $originMetricName 原始指标名称
+    * @param string $originMetricName 原始指标名称
     *
     * @return $this
     */

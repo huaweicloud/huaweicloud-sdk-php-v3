@@ -567,6 +567,75 @@ class ImsAsyncClient extends Client
     }
 
     /**
+     * Region内复制镜像（新）
+     *
+     * 该接口为扩展接口，主要用于用户将一个已有镜像复制为另一个镜像。复制镜像时，可以更改镜像的加密等属性，以满足不同的场景。
+     * 该接口为异步接口，返回job_id说明任务下发成功，查询异步任务状态，如果是success说明任务执行成功，如果是failed说明任务执行失败。如何查询异步任务，请参见异步任务查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function copyImageInRegionInSafeModeAsync($request)
+    {
+        return $this->copyImageInRegionInSafeModeAsyncWithHttpInfo($request);
+    }
+    
+    public function copyImageInRegionInSafeModeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/cloudimages/{image_id}/copy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $pathParams['image_id'] = $localVarParams['imageId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ims\V2\Model\CopyImageInRegionInSafeModeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ims\V2\Model\CopyImageInRegionInSafeModeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 使用外部镜像文件制作数据镜像
      *
      * 使用上传至OBS桶中的外部数据卷镜像文件制作数据镜像。作为异步接口，调用成功，只是说明后台收到了制作请求，镜像是否制作成功需要通过异步任务查询接口查询该任务的执行状态。具体请参考异步任务查询。
@@ -628,6 +697,71 @@ class ImsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\CreateDataImageResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\CreateDataImageRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 使用外部镜像文件制作数据镜像（新）
+     *
+     * 使用上传至OBS桶中的外部数据卷镜像文件制作数据镜像。作为异步接口，调用成功，只是说明后台收到了制作请求，镜像是否制作成功需要通过异步任务查询接口查询该任务的执行状态。具体请参考异步任务查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createDataImageInSafeModeAsync($request)
+    {
+        return $this->createDataImageInSafeModeAsyncWithHttpInfo($request);
+    }
+    
+    public function createDataImageInSafeModeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/cloudimages/dataimages/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ims\V2\Model\CreateDataImageInSafeModeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ims\V2\Model\CreateDataImageInSafeModeRequest',
             $asyncRequest = true);
     }
 
@@ -704,6 +838,82 @@ class ImsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\CreateImageResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\CreateImageRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 制作镜像（新）
+     *
+     * 本接口用于制作私有镜像，支持：
+     * - 使用云服务器制作私有镜像。
+     * - 使用上传至OBS桶中的外部镜像文件制作私有镜像。
+     * - 使用数据卷制作系统盘镜像。
+     * 
+     * 作为异步接口，调用成功，只是说明云平台收到了制作请求，镜像是否制作成功需要通过异步任务查询接口查询该任务的执行状态，具体请参考异步任务查询。
+     * 
+     * 不同场景必选参数说明：
+     * 
+     * - 使用云服务器制作镜像时的请求的必选参数：name,instance_id。
+     * - 使用上传至OBS桶中的外部镜像文件时的请求必选参数：name,image_url,min_disk。
+     * - 使用数据卷制作系统盘镜像时的请求必选参数：name,volume_id,os_version
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createImageInSafeModeAsync($request)
+    {
+        return $this->createImageInSafeModeAsyncWithHttpInfo($request);
+    }
+    
+    public function createImageInSafeModeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/cloudimages/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ims\V2\Model\CreateImageInSafeModeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ims\V2\Model\CreateImageInSafeModeRequest',
             $asyncRequest = true);
     }
 
@@ -974,6 +1184,74 @@ class ImsAsyncClient extends Client
     }
 
     /**
+     * 导出镜像（新）
+     *
+     * 该接口为扩展接口，用于用户将自己的私有镜像导出到指定的OBS桶中。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function exportImageInSafeModeAsync($request)
+    {
+        return $this->exportImageInSafeModeAsyncWithHttpInfo($request);
+    }
+    
+    public function exportImageInSafeModeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/cloudimages/{image_id}/file';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $pathParams['image_id'] = $localVarParams['imageId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ExportImageInSafeModeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ExportImageInSafeModeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 镜像文件快速导入
      *
      * 使用上传至OBS桶中的超大外部镜像文件制作私有镜像，目前仅支持RAW或ZVHD2格式镜像文件。且要求镜像文件大小不能超过1TB。
@@ -1037,6 +1315,73 @@ class ImsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ImportImageQuickResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ImportImageQuickRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 镜像文件快速导入（新）
+     *
+     * 使用上传至OBS桶中的超大外部镜像文件制作私有镜像，目前仅支持RAW或ZVHD2格式镜像文件。且要求镜像文件大小不能超过1TB。
+     * 由于快速导入功能要求提前转换镜像文件格式为RAW或ZVHD2格式，因此镜像文件小于128GB时推荐您优先使用常规的创建私有镜像的方式。
+     * 作为异步接口，调用成功，只是说明后台收到了制作请求，镜像是否制作成功需要通过异步任务查询接口查询该任务的执行状态，具体请参考异步任务查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function importImageQuickInSafeModeAsync($request)
+    {
+        return $this->importImageQuickInSafeModeAsyncWithHttpInfo($request);
+    }
+    
+    public function importImageQuickInSafeModeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/cloudimages/quickimport/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ImportImageQuickInSafeModeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ImportImageQuickInSafeModeRequest',
             $asyncRequest = true);
     }
 

@@ -20,13 +20,13 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  主机ID
-    * hostName  服务器名称
-    * hostPublicIp  服务器公网IP
-    * hostPrivateIp  服务器私网IP
-    * scanTime  扫描时间(ms)
-    * failedNum  风险项数量
-    * passedNum  通过项数量
+    * hostId  **参数解释**: 主机ID **取值范围**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 不涉及
+    * hostPublicIp  **参数解释**: 服务器公网IP **取值范围**: 不涉及
+    * hostPrivateIp  **参数解释**: 服务器私网IP **取值范围**: 不涉及
+    * scanTime  **参数解释**: 扫描时间(ms) **取值范围**: 不涉及
+    * failedNum  **参数解释**: 风险项数量 **取值范围**: 不涉及
+    * passedNum  **参数解释**: 通过项数量 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  主机ID
-    * hostName  服务器名称
-    * hostPublicIp  服务器公网IP
-    * hostPrivateIp  服务器私网IP
-    * scanTime  扫描时间(ms)
-    * failedNum  风险项数量
-    * passedNum  通过项数量
+    * hostId  **参数解释**: 主机ID **取值范围**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 不涉及
+    * hostPublicIp  **参数解释**: 服务器公网IP **取值范围**: 不涉及
+    * hostPrivateIp  **参数解释**: 服务器私网IP **取值范围**: 不涉及
+    * scanTime  **参数解释**: 扫描时间(ms) **取值范围**: 不涉及
+    * failedNum  **参数解释**: 风险项数量 **取值范围**: 不涉及
+    * passedNum  **参数解释**: 通过项数量 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  主机ID
-    * hostName  服务器名称
-    * hostPublicIp  服务器公网IP
-    * hostPrivateIp  服务器私网IP
-    * scanTime  扫描时间(ms)
-    * failedNum  风险项数量
-    * passedNum  通过项数量
+    * hostId  **参数解释**: 主机ID **取值范围**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 不涉及
+    * hostPublicIp  **参数解释**: 服务器公网IP **取值范围**: 不涉及
+    * hostPrivateIp  **参数解释**: 服务器私网IP **取值范围**: 不涉及
+    * scanTime  **参数解释**: 扫描时间(ms) **取值范围**: 不涉及
+    * failedNum  **参数解释**: 风险项数量 **取值范围**: 不涉及
+    * passedNum  **参数解释**: 通过项数量 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  主机ID
-    * hostName  服务器名称
-    * hostPublicIp  服务器公网IP
-    * hostPrivateIp  服务器私网IP
-    * scanTime  扫描时间(ms)
-    * failedNum  风险项数量
-    * passedNum  通过项数量
+    * hostId  **参数解释**: 主机ID **取值范围**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 不涉及
+    * hostPublicIp  **参数解释**: 服务器公网IP **取值范围**: 不涉及
+    * hostPrivateIp  **参数解释**: 服务器私网IP **取值范围**: 不涉及
+    * scanTime  **参数解释**: 扫描时间(ms) **取值范围**: 不涉及
+    * failedNum  **参数解释**: 风险项数量 **取值范围**: 不涉及
+    * passedNum  **参数解释**: 通过项数量 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  主机ID
-    * hostName  服务器名称
-    * hostPublicIp  服务器公网IP
-    * hostPrivateIp  服务器私网IP
-    * scanTime  扫描时间(ms)
-    * failedNum  风险项数量
-    * passedNum  通过项数量
+    * hostId  **参数解释**: 主机ID **取值范围**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 不涉及
+    * hostPublicIp  **参数解释**: 服务器公网IP **取值范围**: 不涉及
+    * hostPrivateIp  **参数解释**: 服务器私网IP **取值范围**: 不涉及
+    * scanTime  **参数解释**: 扫描时间(ms) **取值范围**: 不涉及
+    * failedNum  **参数解释**: 风险项数量 **取值范围**: 不涉及
+    * passedNum  **参数解释**: 通过项数量 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -282,7 +282,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机ID
+    *  **参数解释**: 主机ID **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -294,7 +294,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机ID
+    * @param string|null $hostId **参数解释**: 主机ID **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -306,7 +306,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -318,7 +318,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -330,7 +330,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostPublicIp
-    *  服务器公网IP
+    *  **参数解释**: 服务器公网IP **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -342,7 +342,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostPublicIp
     *
-    * @param string|null $hostPublicIp 服务器公网IP
+    * @param string|null $hostPublicIp **参数解释**: 服务器公网IP **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -354,7 +354,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostPrivateIp
-    *  服务器私网IP
+    *  **参数解释**: 服务器私网IP **取值范围**: 不涉及
     *
     * @return string|null
     */
@@ -366,7 +366,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostPrivateIp
     *
-    * @param string|null $hostPrivateIp 服务器私网IP
+    * @param string|null $hostPrivateIp **参数解释**: 服务器私网IP **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -378,7 +378,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanTime
-    *  扫描时间(ms)
+    *  **参数解释**: 扫描时间(ms) **取值范围**: 不涉及
     *
     * @return int|null
     */
@@ -390,7 +390,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanTime
     *
-    * @param int|null $scanTime 扫描时间(ms)
+    * @param int|null $scanTime **参数解释**: 扫描时间(ms) **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -402,7 +402,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedNum
-    *  风险项数量
+    *  **参数解释**: 风险项数量 **取值范围**: 不涉及
     *
     * @return int|null
     */
@@ -414,7 +414,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets failedNum
     *
-    * @param int|null $failedNum 风险项数量
+    * @param int|null $failedNum **参数解释**: 风险项数量 **取值范围**: 不涉及
     *
     * @return $this
     */
@@ -426,7 +426,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets passedNum
-    *  通过项数量
+    *  **参数解释**: 通过项数量 **取值范围**: 不涉及
     *
     * @return int|null
     */
@@ -438,7 +438,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets passedNum
     *
-    * @param int|null $passedNum 通过项数量
+    * @param int|null $passedNum **参数解释**: 通过项数量 **取值范围**: 不涉及
     *
     * @return $this
     */

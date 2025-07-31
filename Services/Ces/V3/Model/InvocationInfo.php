@@ -26,13 +26,14 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * intranetIps  内网ip列表
     * elasticIps  弹性公网ip列表
-    * invocationType  任务类型(INSTALL 安装，UPDATE 升级，ROLLBACK 回滚，RETRY 重试)
+    * invocationType  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚，RETRY重试)
     * invocationStatus  任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
-    * invocationTarget  任务对象，目前仅支持telescope
+    * invocationTarget  任务对象，目前支持telescope
     * createTime  任务创建时间
     * updateTime  任务更新时间
     * currentVersion  当前版本
     * targetVersion  目标版本
+    * resultMsg  任务执行结果信息
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class InvocationInfo implements ModelInterface, ArrayAccess
             'createTime' => 'int',
             'updateTime' => 'int',
             'currentVersion' => 'string',
-            'targetVersion' => 'string'
+            'targetVersion' => 'string',
+            'resultMsg' => 'string'
     ];
 
     /**
@@ -60,13 +62,14 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * intranetIps  内网ip列表
     * elasticIps  弹性公网ip列表
-    * invocationType  任务类型(INSTALL 安装，UPDATE 升级，ROLLBACK 回滚，RETRY 重试)
+    * invocationType  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚，RETRY重试)
     * invocationStatus  任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
-    * invocationTarget  任务对象，目前仅支持telescope
+    * invocationTarget  任务对象，目前支持telescope
     * createTime  任务创建时间
     * updateTime  任务更新时间
     * currentVersion  当前版本
     * targetVersion  目标版本
+    * resultMsg  任务执行结果信息
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class InvocationInfo implements ModelInterface, ArrayAccess
         'createTime' => 'int64',
         'updateTime' => 'int64',
         'currentVersion' => null,
-        'targetVersion' => null
+        'targetVersion' => null,
+        'resultMsg' => null
     ];
 
     /**
@@ -115,13 +119,14 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * intranetIps  内网ip列表
     * elasticIps  弹性公网ip列表
-    * invocationType  任务类型(INSTALL 安装，UPDATE 升级，ROLLBACK 回滚，RETRY 重试)
+    * invocationType  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚，RETRY重试)
     * invocationStatus  任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
-    * invocationTarget  任务对象，目前仅支持telescope
+    * invocationTarget  任务对象，目前支持telescope
     * createTime  任务创建时间
     * updateTime  任务更新时间
     * currentVersion  当前版本
     * targetVersion  目标版本
+    * resultMsg  任务执行结果信息
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class InvocationInfo implements ModelInterface, ArrayAccess
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
             'currentVersion' => 'current_version',
-            'targetVersion' => 'target_version'
+            'targetVersion' => 'target_version',
+            'resultMsg' => 'result_msg'
     ];
 
     /**
@@ -149,13 +155,14 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * intranetIps  内网ip列表
     * elasticIps  弹性公网ip列表
-    * invocationType  任务类型(INSTALL 安装，UPDATE 升级，ROLLBACK 回滚，RETRY 重试)
+    * invocationType  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚，RETRY重试)
     * invocationStatus  任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
-    * invocationTarget  任务对象，目前仅支持telescope
+    * invocationTarget  任务对象，目前支持telescope
     * createTime  任务创建时间
     * updateTime  任务更新时间
     * currentVersion  当前版本
     * targetVersion  目标版本
+    * resultMsg  任务执行结果信息
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class InvocationInfo implements ModelInterface, ArrayAccess
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
             'currentVersion' => 'setCurrentVersion',
-            'targetVersion' => 'setTargetVersion'
+            'targetVersion' => 'setTargetVersion',
+            'resultMsg' => 'setResultMsg'
     ];
 
     /**
@@ -183,13 +191,14 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * intranetIps  内网ip列表
     * elasticIps  弹性公网ip列表
-    * invocationType  任务类型(INSTALL 安装，UPDATE 升级，ROLLBACK 回滚，RETRY 重试)
+    * invocationType  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚，RETRY重试)
     * invocationStatus  任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
-    * invocationTarget  任务对象，目前仅支持telescope
+    * invocationTarget  任务对象，目前支持telescope
     * createTime  任务创建时间
     * updateTime  任务更新时间
     * currentVersion  当前版本
     * targetVersion  目标版本
+    * resultMsg  任务执行结果信息
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class InvocationInfo implements ModelInterface, ArrayAccess
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
             'currentVersion' => 'getCurrentVersion',
-            'targetVersion' => 'getTargetVersion'
+            'targetVersion' => 'getTargetVersion',
+            'resultMsg' => 'getResultMsg'
     ];
 
     /**
@@ -352,6 +362,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['currentVersion'] = isset($data['currentVersion']) ? $data['currentVersion'] : null;
         $this->container['targetVersion'] = isset($data['targetVersion']) ? $data['targetVersion'] : null;
+        $this->container['resultMsg'] = isset($data['resultMsg']) ? $data['resultMsg'] : null;
     }
 
     /**
@@ -368,8 +379,8 @@ class InvocationInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['instanceId']) && !preg_match("/^[a-zA-Z0-9-]{1,64}$/", $this->container['instanceId'])) {
                 $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-zA-Z0-9-]{1,64}$/.";
             }
-            if (!is_null($this->container['instanceName']) && (mb_strlen($this->container['instanceName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'instanceName', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['instanceName']) && (mb_strlen($this->container['instanceName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'instanceName', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['instanceName']) && (mb_strlen($this->container['instanceName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'instanceName', the character length must be bigger than or equal to 1.";
@@ -429,6 +440,12 @@ class InvocationInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['targetVersion']) && (mb_strlen($this->container['targetVersion']) < 1)) {
                 $invalidProperties[] = "invalid value for 'targetVersion', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['resultMsg']) && (mb_strlen($this->container['resultMsg']) > 5000)) {
+                $invalidProperties[] = "invalid value for 'resultMsg', the character length must be smaller than or equal to 5000.";
+            }
+            if (!is_null($this->container['resultMsg']) && (mb_strlen($this->container['resultMsg']) < 1)) {
+                $invalidProperties[] = "invalid value for 'resultMsg', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -590,7 +607,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocationType
-    *  任务类型(INSTALL 安装，UPDATE 升级，ROLLBACK 回滚，RETRY 重试)
+    *  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚，RETRY重试)
     *
     * @return string|null
     */
@@ -602,7 +619,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets invocationType
     *
-    * @param string|null $invocationType 任务类型(INSTALL 安装，UPDATE 升级，ROLLBACK 回滚，RETRY 重试)
+    * @param string|null $invocationType 任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚，RETRY重试)
     *
     * @return $this
     */
@@ -638,7 +655,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocationTarget
-    *  任务对象，目前仅支持telescope
+    *  任务对象，目前支持telescope
     *
     * @return string|null
     */
@@ -650,7 +667,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets invocationTarget
     *
-    * @param string|null $invocationTarget 任务对象，目前仅支持telescope
+    * @param string|null $invocationTarget 任务对象，目前支持telescope
     *
     * @return $this
     */
@@ -753,6 +770,30 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     public function setTargetVersion($targetVersion)
     {
         $this->container['targetVersion'] = $targetVersion;
+        return $this;
+    }
+
+    /**
+    * Gets resultMsg
+    *  任务执行结果信息
+    *
+    * @return string|null
+    */
+    public function getResultMsg()
+    {
+        return $this->container['resultMsg'];
+    }
+
+    /**
+    * Sets resultMsg
+    *
+    * @param string|null $resultMsg 任务执行结果信息
+    *
+    * @return $this
+    */
+    public function setResultMsg($resultMsg)
+    {
+        $this->container['resultMsg'] = $resultMsg;
         return $this;
     }
 

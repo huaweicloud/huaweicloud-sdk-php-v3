@@ -20,8 +20,8 @@ class HostVulInfoDisabledOperateTypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * operateType  操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
-    * reason  不可进行操作的原因
+    * operateType  **参数解释**: 操作类型 **取值范围**: - ignore           : 忽略 - not_ignore       : 取消忽略 - immediate_repair : 修复 - manual_repair    : 人工修复 - verify           : 验证 - add_to_whitelist : 加入白名单
+    * reason  **参数解释**: 不可进行操作的原因 **取值范围**: 字符范围0-512位
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class HostVulInfoDisabledOperateTypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * operateType  操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
-    * reason  不可进行操作的原因
+    * operateType  **参数解释**: 操作类型 **取值范围**: - ignore           : 忽略 - not_ignore       : 取消忽略 - immediate_repair : 修复 - manual_repair    : 人工修复 - verify           : 验证 - add_to_whitelist : 加入白名单
+    * reason  **参数解释**: 不可进行操作的原因 **取值范围**: 字符范围0-512位
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class HostVulInfoDisabledOperateTypes implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * operateType  操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
-    * reason  不可进行操作的原因
+    * operateType  **参数解释**: 操作类型 **取值范围**: - ignore           : 忽略 - not_ignore       : 取消忽略 - immediate_repair : 修复 - manual_repair    : 人工修复 - verify           : 验证 - add_to_whitelist : 加入白名单
+    * reason  **参数解释**: 不可进行操作的原因 **取值范围**: 字符范围0-512位
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class HostVulInfoDisabledOperateTypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * operateType  操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
-    * reason  不可进行操作的原因
+    * operateType  **参数解释**: 操作类型 **取值范围**: - ignore           : 忽略 - not_ignore       : 取消忽略 - immediate_repair : 修复 - manual_repair    : 人工修复 - verify           : 验证 - add_to_whitelist : 加入白名单
+    * reason  **参数解释**: 不可进行操作的原因 **取值范围**: 字符范围0-512位
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class HostVulInfoDisabledOperateTypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * operateType  操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
-    * reason  不可进行操作的原因
+    * operateType  **参数解释**: 操作类型 **取值范围**: - ignore           : 忽略 - not_ignore       : 取消忽略 - immediate_repair : 修复 - manual_repair    : 人工修复 - verify           : 验证 - add_to_whitelist : 加入白名单
+    * reason  **参数解释**: 不可进行操作的原因 **取值范围**: 字符范围0-512位
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class HostVulInfoDisabledOperateTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets operateType
-    *  操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
+    *  **参数解释**: 操作类型 **取值范围**: - ignore           : 忽略 - not_ignore       : 取消忽略 - immediate_repair : 修复 - manual_repair    : 人工修复 - verify           : 验证 - add_to_whitelist : 加入白名单
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class HostVulInfoDisabledOperateTypes implements ModelInterface, ArrayAccess
     /**
     * Sets operateType
     *
-    * @param string|null $operateType 操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
+    * @param string|null $operateType **参数解释**: 操作类型 **取值范围**: - ignore           : 忽略 - not_ignore       : 取消忽略 - immediate_repair : 修复 - manual_repair    : 人工修复 - verify           : 验证 - add_to_whitelist : 加入白名单
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class HostVulInfoDisabledOperateTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets reason
-    *  不可进行操作的原因
+    *  **参数解释**: 不可进行操作的原因 **取值范围**: 字符范围0-512位
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class HostVulInfoDisabledOperateTypes implements ModelInterface, ArrayAccess
     /**
     * Sets reason
     *
-    * @param string|null $reason 不可进行操作的原因
+    * @param string|null $reason **参数解释**: 不可进行操作的原因 **取值范围**: 字符范围0-512位
     *
     * @return $this
     */

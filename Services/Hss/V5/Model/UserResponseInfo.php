@@ -20,20 +20,20 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentId  Agent ID
-    * hostId  主机ID
-    * hostName  服务器名称
-    * hostIp  服务器ip
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
     * userName  用户名
-    * loginPermission  是否有登录权限
-    * rootPermission  是否有root权限
-    * userGroupName  用户组
-    * userHomeDir  用户目录
-    * shell  用户启动shell
-    * recentScanTime  最近扫描时间
-    * firstScanTime  首次扫描时间
-    * containerId  容器id
-    * containerName  容器名称
+    * loginPermission  **参数解释**: 是否允许登录 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
+    * rootPermission  **参数解释**： 管理员权限 **取值范围**： - true：是 - false：否
+    * userGroupName  **参数解释**： 用户组 **取值范围**： 字符长度1-128位
+    * userHomeDir  **参数解释**： 用户目录 **取值范围**： 字符长度1-256位
+    * shell  **参数解释**: 用户启动shell **取值范围**: 字符长度1-128位
+    * recentScanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
+    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -56,20 +56,20 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentId  Agent ID
-    * hostId  主机ID
-    * hostName  服务器名称
-    * hostIp  服务器ip
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
     * userName  用户名
-    * loginPermission  是否有登录权限
-    * rootPermission  是否有root权限
-    * userGroupName  用户组
-    * userHomeDir  用户目录
-    * shell  用户启动shell
-    * recentScanTime  最近扫描时间
-    * firstScanTime  首次扫描时间
-    * containerId  容器id
-    * containerName  容器名称
+    * loginPermission  **参数解释**: 是否允许登录 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
+    * rootPermission  **参数解释**： 管理员权限 **取值范围**： - true：是 - false：否
+    * userGroupName  **参数解释**： 用户组 **取值范围**： 字符长度1-128位
+    * userHomeDir  **参数解释**： 用户目录 **取值范围**： 字符长度1-256位
+    * shell  **参数解释**: 用户启动shell **取值范围**: 字符长度1-128位
+    * recentScanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
+    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -113,20 +113,20 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentId  Agent ID
-    * hostId  主机ID
-    * hostName  服务器名称
-    * hostIp  服务器ip
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
     * userName  用户名
-    * loginPermission  是否有登录权限
-    * rootPermission  是否有root权限
-    * userGroupName  用户组
-    * userHomeDir  用户目录
-    * shell  用户启动shell
-    * recentScanTime  最近扫描时间
-    * firstScanTime  首次扫描时间
-    * containerId  容器id
-    * containerName  容器名称
+    * loginPermission  **参数解释**: 是否允许登录 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
+    * rootPermission  **参数解释**： 管理员权限 **取值范围**： - true：是 - false：否
+    * userGroupName  **参数解释**： 用户组 **取值范围**： 字符长度1-128位
+    * userHomeDir  **参数解释**： 用户目录 **取值范围**： 字符长度1-256位
+    * shell  **参数解释**: 用户启动shell **取值范围**: 字符长度1-128位
+    * recentScanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
+    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -149,20 +149,20 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentId  Agent ID
-    * hostId  主机ID
-    * hostName  服务器名称
-    * hostIp  服务器ip
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
     * userName  用户名
-    * loginPermission  是否有登录权限
-    * rootPermission  是否有root权限
-    * userGroupName  用户组
-    * userHomeDir  用户目录
-    * shell  用户启动shell
-    * recentScanTime  最近扫描时间
-    * firstScanTime  首次扫描时间
-    * containerId  容器id
-    * containerName  容器名称
+    * loginPermission  **参数解释**: 是否允许登录 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
+    * rootPermission  **参数解释**： 管理员权限 **取值范围**： - true：是 - false：否
+    * userGroupName  **参数解释**： 用户组 **取值范围**： 字符长度1-128位
+    * userHomeDir  **参数解释**： 用户目录 **取值范围**： 字符长度1-256位
+    * shell  **参数解释**: 用户启动shell **取值范围**: 字符长度1-128位
+    * recentScanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
+    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -185,20 +185,20 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentId  Agent ID
-    * hostId  主机ID
-    * hostName  服务器名称
-    * hostIp  服务器ip
+    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
     * userName  用户名
-    * loginPermission  是否有登录权限
-    * rootPermission  是否有root权限
-    * userGroupName  用户组
-    * userHomeDir  用户目录
-    * shell  用户启动shell
-    * recentScanTime  最近扫描时间
-    * firstScanTime  首次扫描时间
-    * containerId  容器id
-    * containerName  容器名称
+    * loginPermission  **参数解释**: 是否允许登录 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
+    * rootPermission  **参数解释**： 管理员权限 **取值范围**： - true：是 - false：否
+    * userGroupName  **参数解释**： 用户组 **取值范围**： 字符长度1-128位
+    * userHomeDir  **参数解释**： 用户目录 **取值范围**： 字符长度1-256位
+    * shell  **参数解释**: 用户启动shell **取值范围**: 字符长度1-128位
+    * recentScanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
+    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -301,23 +301,26 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) > 128)) {
-                $invalidProperties[] = "invalid value for 'agentId', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['agentId']) && !preg_match("/^.*$/", $this->container['agentId'])) {
+                $invalidProperties[] = "invalid value for 'agentId', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'agentId', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 128)) {
-                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['hostId']) && !preg_match("/^.*$/", $this->container['hostId'])) {
+                $invalidProperties[] = "invalid value for 'hostId', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostName']) && !preg_match("/^.*$/", $this->container['hostName'])) {
+                $invalidProperties[] = "invalid value for 'hostName', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) > 128)) {
                 $invalidProperties[] = "invalid value for 'hostIp', the character length must be smaller than or equal to 128.";
@@ -325,23 +328,14 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostIp', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['userName']) && (mb_strlen($this->container['userName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'userName', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['userName']) && !preg_match("/^.*$/", $this->container['userName'])) {
+                $invalidProperties[] = "invalid value for 'userName', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['userName']) && (mb_strlen($this->container['userName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'userName', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['userGroupName']) && !preg_match("/^.*$/", $this->container['userGroupName'])) {
+                $invalidProperties[] = "invalid value for 'userGroupName', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['userGroupName']) && (mb_strlen($this->container['userGroupName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'userGroupName', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['userGroupName']) && (mb_strlen($this->container['userGroupName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'userGroupName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['userHomeDir']) && (mb_strlen($this->container['userHomeDir']) > 256)) {
-                $invalidProperties[] = "invalid value for 'userHomeDir', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['userHomeDir']) && (mb_strlen($this->container['userHomeDir']) < 1)) {
-                $invalidProperties[] = "invalid value for 'userHomeDir', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['userHomeDir']) && !preg_match("/^.*$/", $this->container['userHomeDir'])) {
+                $invalidProperties[] = "invalid value for 'userHomeDir', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['shell']) && (mb_strlen($this->container['shell']) > 128)) {
                 $invalidProperties[] = "invalid value for 'shell', the character length must be smaller than or equal to 128.";
@@ -367,11 +361,8 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'containerId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'containerName', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'containerName', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['containerName']) && !preg_match("/^.*$/", $this->container['containerName'])) {
+                $invalidProperties[] = "invalid value for 'containerName', must be conform to the pattern /^.*$/.";
             }
         return $invalidProperties;
     }
@@ -389,7 +380,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  Agent ID
+    *  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -401,7 +392,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId Agent ID
+    * @param string|null $agentId **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -413,7 +404,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机ID
+    *  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return string|null
     */
@@ -425,7 +416,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机ID
+    * @param string|null $hostId **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -437,7 +428,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -449,7 +440,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -461,7 +452,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  服务器ip
+    *  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -473,7 +464,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 服务器ip
+    * @param string|null $hostIp **参数解释**: 主机IP **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -509,7 +500,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginPermission
-    *  是否有登录权限
+    *  **参数解释**: 是否允许登录 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
     *
     * @return bool|null
     */
@@ -521,7 +512,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets loginPermission
     *
-    * @param bool|null $loginPermission 是否有登录权限
+    * @param bool|null $loginPermission **参数解释**: 是否允许登录 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -533,7 +524,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets rootPermission
-    *  是否有root权限
+    *  **参数解释**： 管理员权限 **取值范围**： - true：是 - false：否
     *
     * @return bool|null
     */
@@ -545,7 +536,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets rootPermission
     *
-    * @param bool|null $rootPermission 是否有root权限
+    * @param bool|null $rootPermission **参数解释**： 管理员权限 **取值范围**： - true：是 - false：否
     *
     * @return $this
     */
@@ -557,7 +548,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userGroupName
-    *  用户组
+    *  **参数解释**： 用户组 **取值范围**： 字符长度1-128位
     *
     * @return string|null
     */
@@ -569,7 +560,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userGroupName
     *
-    * @param string|null $userGroupName 用户组
+    * @param string|null $userGroupName **参数解释**： 用户组 **取值范围**： 字符长度1-128位
     *
     * @return $this
     */
@@ -581,7 +572,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userHomeDir
-    *  用户目录
+    *  **参数解释**： 用户目录 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -593,7 +584,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userHomeDir
     *
-    * @param string|null $userHomeDir 用户目录
+    * @param string|null $userHomeDir **参数解释**： 用户目录 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -605,7 +596,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets shell
-    *  用户启动shell
+    *  **参数解释**: 用户启动shell **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -617,7 +608,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets shell
     *
-    * @param string|null $shell 用户启动shell
+    * @param string|null $shell **参数解释**: 用户启动shell **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -629,7 +620,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets recentScanTime
-    *  最近扫描时间
+    *  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -641,7 +632,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets recentScanTime
     *
-    * @param int|null $recentScanTime 最近扫描时间
+    * @param int|null $recentScanTime **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -653,7 +644,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets firstScanTime
-    *  首次扫描时间
+    *  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -665,7 +656,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets firstScanTime
     *
-    * @param int|null $firstScanTime 首次扫描时间
+    * @param int|null $firstScanTime **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -677,7 +668,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerId
-    *  容器id
+    *  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -689,7 +680,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerId
     *
-    * @param string|null $containerId 容器id
+    * @param string|null $containerId **参数解释**: 容器ID **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -701,7 +692,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerName
-    *  容器名称
+    *  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -713,7 +704,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerName
     *
-    * @param string|null $containerName 容器名称
+    * @param string|null $containerName **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */

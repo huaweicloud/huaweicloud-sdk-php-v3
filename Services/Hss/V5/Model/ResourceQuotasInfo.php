@@ -20,11 +20,11 @@ class ResourceQuotasInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
-    * totalNum  总配额数
-    * usedNum  已使用配额数
-    * availableNum  可用总配额数
-    * availableResourcesList  可用资源列表
+    * version  **参数解释**： 主机开通的版本 **取值范围**： 包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
+    * totalNum  **参数解释**： 总配额数 **取值范围**： 0-2000000
+    * usedNum  **参数解释**： 已使用配额数 **取值范围**： 0-2000000
+    * availableNum  **参数解释**： 可用总配额数 **取值范围**： 0-2000000
+    * availableResourcesList  **参数解释**： 可用资源列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ResourceQuotasInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
-    * totalNum  总配额数
-    * usedNum  已使用配额数
-    * availableNum  可用总配额数
-    * availableResourcesList  可用资源列表
+    * version  **参数解释**： 主机开通的版本 **取值范围**： 包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
+    * totalNum  **参数解释**： 总配额数 **取值范围**： 0-2000000
+    * usedNum  **参数解释**： 已使用配额数 **取值范围**： 0-2000000
+    * availableNum  **参数解释**： 可用总配额数 **取值范围**： 0-2000000
+    * availableResourcesList  **参数解释**： 可用资源列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ResourceQuotasInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
-    * totalNum  总配额数
-    * usedNum  已使用配额数
-    * availableNum  可用总配额数
-    * availableResourcesList  可用资源列表
+    * version  **参数解释**： 主机开通的版本 **取值范围**： 包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
+    * totalNum  **参数解释**： 总配额数 **取值范围**： 0-2000000
+    * usedNum  **参数解释**： 已使用配额数 **取值范围**： 0-2000000
+    * availableNum  **参数解释**： 可用总配额数 **取值范围**： 0-2000000
+    * availableResourcesList  **参数解释**： 可用资源列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ResourceQuotasInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
-    * totalNum  总配额数
-    * usedNum  已使用配额数
-    * availableNum  可用总配额数
-    * availableResourcesList  可用资源列表
+    * version  **参数解释**： 主机开通的版本 **取值范围**： 包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
+    * totalNum  **参数解释**： 总配额数 **取值范围**： 0-2000000
+    * usedNum  **参数解释**： 已使用配额数 **取值范围**： 0-2000000
+    * availableNum  **参数解释**： 可用总配额数 **取值范围**： 0-2000000
+    * availableResourcesList  **参数解释**： 可用资源列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ResourceQuotasInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
-    * totalNum  总配额数
-    * usedNum  已使用配额数
-    * availableNum  可用总配额数
-    * availableResourcesList  可用资源列表
+    * version  **参数解释**： 主机开通的版本 **取值范围**： 包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
+    * totalNum  **参数解释**： 总配额数 **取值范围**： 0-2000000
+    * usedNum  **参数解释**： 已使用配额数 **取值范围**： 0-2000000
+    * availableNum  **参数解释**： 可用总配额数 **取值范围**： 0-2000000
+    * availableResourcesList  **参数解释**： 可用资源列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -242,7 +242,7 @@ class ResourceQuotasInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
+    *  **参数解释**： 主机开通的版本 **取值范围**： 包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class ResourceQuotasInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
+    * @param string|null $version **参数解释**： 主机开通的版本 **取值范围**： 包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class ResourceQuotasInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  总配额数
+    *  **参数解释**： 总配额数 **取值范围**： 0-2000000
     *
     * @return int|null
     */
@@ -278,7 +278,7 @@ class ResourceQuotasInfo implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 总配额数
+    * @param int|null $totalNum **参数解释**： 总配额数 **取值范围**： 0-2000000
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class ResourceQuotasInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedNum
-    *  已使用配额数
+    *  **参数解释**： 已使用配额数 **取值范围**： 0-2000000
     *
     * @return int|null
     */
@@ -302,7 +302,7 @@ class ResourceQuotasInfo implements ModelInterface, ArrayAccess
     /**
     * Sets usedNum
     *
-    * @param int|null $usedNum 已使用配额数
+    * @param int|null $usedNum **参数解释**： 已使用配额数 **取值范围**： 0-2000000
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ResourceQuotasInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableNum
-    *  可用总配额数
+    *  **参数解释**： 可用总配额数 **取值范围**： 0-2000000
     *
     * @return int|null
     */
@@ -326,7 +326,7 @@ class ResourceQuotasInfo implements ModelInterface, ArrayAccess
     /**
     * Sets availableNum
     *
-    * @param int|null $availableNum 可用总配额数
+    * @param int|null $availableNum **参数解释**： 可用总配额数 **取值范围**： 0-2000000
     *
     * @return $this
     */
@@ -338,7 +338,7 @@ class ResourceQuotasInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableResourcesList
-    *  可用资源列表
+    *  **参数解释**： 可用资源列表 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\AvailableResourceIdsInfo[]|null
     */
@@ -350,7 +350,7 @@ class ResourceQuotasInfo implements ModelInterface, ArrayAccess
     /**
     * Sets availableResourcesList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\AvailableResourceIdsInfo[]|null $availableResourcesList 可用资源列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\AvailableResourceIdsInfo[]|null $availableResourcesList **参数解释**： 可用资源列表 **取值范围**： 不涉及
     *
     * @return $this
     */

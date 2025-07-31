@@ -28,7 +28,7 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     * maskName  屏蔽规则名称,可选，只能为字母、数字、汉字、-、_，最大长度为64
     * maskStatus  屏蔽状态,可选。MASK_EFFECTIVE：已生效，MASK_INEFFECTIVE：未生效。
     * resourceId  资源维度值,提供一个维度的资源ID即可,可选
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimensions  资源的维度信息
     *
     * @var string[]
@@ -56,7 +56,7 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     * maskName  屏蔽规则名称,可选，只能为字母、数字、汉字、-、_，最大长度为64
     * maskStatus  屏蔽状态,可选。MASK_EFFECTIVE：已生效，MASK_INEFFECTIVE：未生效。
     * resourceId  资源维度值,提供一个维度的资源ID即可,可选
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimensions  资源的维度信息
     *
     * @var string[]
@@ -105,7 +105,7 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     * maskName  屏蔽规则名称,可选，只能为字母、数字、汉字、-、_，最大长度为64
     * maskStatus  屏蔽状态,可选。MASK_EFFECTIVE：已生效，MASK_INEFFECTIVE：未生效。
     * resourceId  资源维度值,提供一个维度的资源ID即可,可选
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimensions  资源的维度信息
     *
     * @var string[]
@@ -133,7 +133,7 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     * maskName  屏蔽规则名称,可选，只能为字母、数字、汉字、-、_，最大长度为64
     * maskStatus  屏蔽状态,可选。MASK_EFFECTIVE：已生效，MASK_INEFFECTIVE：未生效。
     * resourceId  资源维度值,提供一个维度的资源ID即可,可选
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimensions  资源的维度信息
     *
     * @var string[]
@@ -161,7 +161,7 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     * maskName  屏蔽规则名称,可选，只能为字母、数字、汉字、-、_，最大长度为64
     * maskStatus  屏蔽状态,可选。MASK_EFFECTIVE：已生效，MASK_INEFFECTIVE：未生效。
     * resourceId  资源维度值,提供一个维度的资源ID即可,可选
-    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimensions  资源的维度信息
     *
     * @var string[]
@@ -293,8 +293,8 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['relationIds'] === null) {
             $invalidProperties[] = "'relationIds' can't be null";
         }
-            if (!is_null($this->container['metricName']) && (mb_strlen($this->container['metricName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'metricName', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['metricName']) && (mb_strlen($this->container['metricName']) > 96)) {
+                $invalidProperties[] = "invalid value for 'metricName', the character length must be smaller than or equal to 96.";
             }
             if (!is_null($this->container['metricName']) && (mb_strlen($this->container['metricName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'metricName', the character length must be bigger than or equal to 1.";
@@ -565,7 +565,7 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    *  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return string|null
     */
@@ -577,7 +577,7 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * @param string|null $namespace 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return $this
     */

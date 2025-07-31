@@ -31,6 +31,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线
     * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
+    * blockReasonCode  冻结原因编号。
     * reason  冻结/解冻/失败 原因。
     * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
@@ -38,6 +39,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * files  资产下的文件。
     * assetOrder  展示顺序
     * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    * autoOperationConfig  资产自动处理任务。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -53,6 +55,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             'assetType' => 'string',
             'assetState' => 'string',
             'failType' => 'string',
+            'blockReasonCode' => 'string',
             'reason' => 'string',
             'tags' => 'string[]',
             'assetExtraMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetExtraMeta',
@@ -60,6 +63,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             'files' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetFileInfo[]',
             'assetOrder' => 'int',
             'supportedService' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]',
+            'autoOperationConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AutoOperationConfig[]',
             'xRequestId' => 'string'
     ];
 
@@ -75,6 +79,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线
     * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
+    * blockReasonCode  冻结原因编号。
     * reason  冻结/解冻/失败 原因。
     * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
@@ -82,6 +87,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * files  资产下的文件。
     * assetOrder  展示顺序
     * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    * autoOperationConfig  资产自动处理任务。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -97,6 +103,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
         'assetType' => null,
         'assetState' => null,
         'failType' => null,
+        'blockReasonCode' => null,
         'reason' => null,
         'tags' => null,
         'assetExtraMeta' => null,
@@ -104,6 +111,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
         'files' => null,
         'assetOrder' => null,
         'supportedService' => null,
+        'autoOperationConfig' => null,
         'xRequestId' => null
     ];
 
@@ -140,6 +148,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线
     * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
+    * blockReasonCode  冻结原因编号。
     * reason  冻结/解冻/失败 原因。
     * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
@@ -147,6 +156,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * files  资产下的文件。
     * assetOrder  展示顺序
     * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    * autoOperationConfig  资产自动处理任务。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -162,6 +172,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             'assetType' => 'asset_type',
             'assetState' => 'asset_state',
             'failType' => 'fail_type',
+            'blockReasonCode' => 'block_reason_code',
             'reason' => 'reason',
             'tags' => 'tags',
             'assetExtraMeta' => 'asset_extra_meta',
@@ -169,6 +180,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             'files' => 'files',
             'assetOrder' => 'asset_order',
             'supportedService' => 'supported_service',
+            'autoOperationConfig' => 'auto_operation_config',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -184,6 +196,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线
     * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
+    * blockReasonCode  冻结原因编号。
     * reason  冻结/解冻/失败 原因。
     * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
@@ -191,6 +204,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * files  资产下的文件。
     * assetOrder  展示顺序
     * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    * autoOperationConfig  资产自动处理任务。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -206,6 +220,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             'assetType' => 'setAssetType',
             'assetState' => 'setAssetState',
             'failType' => 'setFailType',
+            'blockReasonCode' => 'setBlockReasonCode',
             'reason' => 'setReason',
             'tags' => 'setTags',
             'assetExtraMeta' => 'setAssetExtraMeta',
@@ -213,6 +228,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             'files' => 'setFiles',
             'assetOrder' => 'setAssetOrder',
             'supportedService' => 'setSupportedService',
+            'autoOperationConfig' => 'setAutoOperationConfig',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -228,6 +244,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线
     * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
+    * blockReasonCode  冻结原因编号。
     * reason  冻结/解冻/失败 原因。
     * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
@@ -235,6 +252,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * files  资产下的文件。
     * assetOrder  展示顺序
     * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    * autoOperationConfig  资产自动处理任务。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -250,6 +268,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             'assetType' => 'getAssetType',
             'assetState' => 'getAssetState',
             'failType' => 'getFailType',
+            'blockReasonCode' => 'getBlockReasonCode',
             'reason' => 'getReason',
             'tags' => 'getTags',
             'assetExtraMeta' => 'getAssetExtraMeta',
@@ -257,6 +276,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             'files' => 'getFiles',
             'assetOrder' => 'getAssetOrder',
             'supportedService' => 'getSupportedService',
+            'autoOperationConfig' => 'getAutoOperationConfig',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -409,6 +429,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
         $this->container['assetType'] = isset($data['assetType']) ? $data['assetType'] : null;
         $this->container['assetState'] = isset($data['assetState']) ? $data['assetState'] : null;
         $this->container['failType'] = isset($data['failType']) ? $data['failType'] : null;
+        $this->container['blockReasonCode'] = isset($data['blockReasonCode']) ? $data['blockReasonCode'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['assetExtraMeta'] = isset($data['assetExtraMeta']) ? $data['assetExtraMeta'] : null;
@@ -416,6 +437,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['assetOrder'] = isset($data['assetOrder']) ? $data['assetOrder'] : null;
         $this->container['supportedService'] = isset($data['supportedService']) ? $data['supportedService'] : null;
+        $this->container['autoOperationConfig'] = isset($data['autoOperationConfig']) ? $data['autoOperationConfig'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -493,6 +515,12 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['blockReasonCode']) && (mb_strlen($this->container['blockReasonCode']) > 256)) {
+                $invalidProperties[] = "invalid value for 'blockReasonCode', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['blockReasonCode']) && (mb_strlen($this->container['blockReasonCode']) < 0)) {
+                $invalidProperties[] = "invalid value for 'blockReasonCode', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) > 256)) {
                 $invalidProperties[] = "invalid value for 'reason', the character length must be smaller than or equal to 256.";
             }
@@ -760,6 +788,30 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets blockReasonCode
+    *  冻结原因编号。
+    *
+    * @return string|null
+    */
+    public function getBlockReasonCode()
+    {
+        return $this->container['blockReasonCode'];
+    }
+
+    /**
+    * Sets blockReasonCode
+    *
+    * @param string|null $blockReasonCode 冻结原因编号。
+    *
+    * @return $this
+    */
+    public function setBlockReasonCode($blockReasonCode)
+    {
+        $this->container['blockReasonCode'] = $blockReasonCode;
+        return $this;
+    }
+
+    /**
     * Gets reason
     *  冻结/解冻/失败 原因。
     *
@@ -924,6 +976,30 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     public function setSupportedService($supportedService)
     {
         $this->container['supportedService'] = $supportedService;
+        return $this;
+    }
+
+    /**
+    * Gets autoOperationConfig
+    *  资产自动处理任务。
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\AutoOperationConfig[]|null
+    */
+    public function getAutoOperationConfig()
+    {
+        return $this->container['autoOperationConfig'];
+    }
+
+    /**
+    * Sets autoOperationConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\AutoOperationConfig[]|null $autoOperationConfig 资产自动处理任务。
+    *
+    * @return $this
+    */
+    public function setAutoOperationConfig($autoOperationConfig)
+    {
+        $this->container['autoOperationConfig'] = $autoOperationConfig;
         return $this;
     }
 
