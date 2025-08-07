@@ -8,7 +8,7 @@
     "api",
     "aos"
   ],
-  "version": "3.1.155",
+  "version": "3.1.156",
    "type": "library",
   "license": "Apache-2.0",
   "authors": [
@@ -20,7 +20,7 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "huaweicloud/huaweicloud-sdk-core": "3.1.155"
+    "huaweicloud/huaweicloud-sdk-core": "3.1.156"
   },
   "autoload": {
     "psr-4": {

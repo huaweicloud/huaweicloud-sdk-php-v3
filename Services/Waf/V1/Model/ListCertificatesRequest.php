@@ -27,6 +27,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * name  证书名称
     * host  是否获取证书关联的域名，默认为false   -true:获取已关联域名的证书   -false:获取未关联域名的证书
     * expStatus  证书过期状态，0-未过期，1-已过期，2-即将过期（证书将在一个月内过期）
+    * queryScm  查询结果的证书来源服务是否包括SCM服务，值为true或者false。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'pagesize' => 'int',
             'name' => 'string',
             'host' => 'bool',
-            'expStatus' => 'int'
+            'expStatus' => 'int',
+            'queryScm' => 'bool'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * name  证书名称
     * host  是否获取证书关联的域名，默认为false   -true:获取已关联域名的证书   -false:获取未关联域名的证书
     * expStatus  证书过期状态，0-未过期，1-已过期，2-即将过期（证书将在一个月内过期）
+    * queryScm  查询结果的证书来源服务是否包括SCM服务，值为true或者false。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
         'pagesize' => null,
         'name' => null,
         'host' => null,
-        'expStatus' => null
+        'expStatus' => null,
+        'queryScm' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * name  证书名称
     * host  是否获取证书关联的域名，默认为false   -true:获取已关联域名的证书   -false:获取未关联域名的证书
     * expStatus  证书过期状态，0-未过期，1-已过期，2-即将过期（证书将在一个月内过期）
+    * queryScm  查询结果的证书来源服务是否包括SCM服务，值为true或者false。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'pagesize' => 'pagesize',
             'name' => 'name',
             'host' => 'host',
-            'expStatus' => 'exp_status'
+            'expStatus' => 'exp_status',
+            'queryScm' => 'query_scm'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * name  证书名称
     * host  是否获取证书关联的域名，默认为false   -true:获取已关联域名的证书   -false:获取未关联域名的证书
     * expStatus  证书过期状态，0-未过期，1-已过期，2-即将过期（证书将在一个月内过期）
+    * queryScm  查询结果的证书来源服务是否包括SCM服务，值为true或者false。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'pagesize' => 'setPagesize',
             'name' => 'setName',
             'host' => 'setHost',
-            'expStatus' => 'setExpStatus'
+            'expStatus' => 'setExpStatus',
+            'queryScm' => 'setQueryScm'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * name  证书名称
     * host  是否获取证书关联的域名，默认为false   -true:获取已关联域名的证书   -false:获取未关联域名的证书
     * expStatus  证书过期状态，0-未过期，1-已过期，2-即将过期（证书将在一个月内过期）
+    * queryScm  查询结果的证书来源服务是否包括SCM服务，值为true或者false。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'pagesize' => 'getPagesize',
             'name' => 'getName',
             'host' => 'getHost',
-            'expStatus' => 'getExpStatus'
+            'expStatus' => 'getExpStatus',
+            'queryScm' => 'getQueryScm'
     ];
 
     /**
@@ -214,6 +224,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['host'] = isset($data['host']) ? $data['host'] : null;
         $this->container['expStatus'] = isset($data['expStatus']) ? $data['expStatus'] : null;
+        $this->container['queryScm'] = isset($data['queryScm']) ? $data['queryScm'] : null;
     }
 
     /**
@@ -406,6 +417,30 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     public function setExpStatus($expStatus)
     {
         $this->container['expStatus'] = $expStatus;
+        return $this;
+    }
+
+    /**
+    * Gets queryScm
+    *  查询结果的证书来源服务是否包括SCM服务，值为true或者false。
+    *
+    * @return bool|null
+    */
+    public function getQueryScm()
+    {
+        return $this->container['queryScm'];
+    }
+
+    /**
+    * Sets queryScm
+    *
+    * @param bool|null $queryScm 查询结果的证书来源服务是否包括SCM服务，值为true或者false。
+    *
+    * @return $this
+    */
+    public function setQueryScm($queryScm)
+    {
+        $this->container['queryScm'] = $queryScm;
         return $this;
     }
 

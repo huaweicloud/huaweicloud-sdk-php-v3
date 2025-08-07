@@ -21,8 +21,8 @@ class ShowVpnGatewayRoutingTableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * routingTable  routingTable
-    * totalCount  totalCount
+    * routingTable  VPN网关的路由表
+    * totalCount  该网关下的路由总条数
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -35,8 +35,8 @@ class ShowVpnGatewayRoutingTableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * routingTable  routingTable
-    * totalCount  totalCount
+    * routingTable  VPN网关的路由表
+    * totalCount  该网关下的路由总条数
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -70,8 +70,8 @@ class ShowVpnGatewayRoutingTableResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * routingTable  routingTable
-    * totalCount  totalCount
+    * routingTable  VPN网关的路由表
+    * totalCount  该网关下的路由总条数
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -84,8 +84,8 @@ class ShowVpnGatewayRoutingTableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * routingTable  routingTable
-    * totalCount  totalCount
+    * routingTable  VPN网关的路由表
+    * totalCount  该网关下的路由总条数
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -98,8 +98,8 @@ class ShowVpnGatewayRoutingTableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * routingTable  routingTable
-    * totalCount  totalCount
+    * routingTable  VPN网关的路由表
+    * totalCount  该网关下的路由总条数
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -197,7 +197,7 @@ class ShowVpnGatewayRoutingTableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets routingTable
-    *  routingTable
+    *  VPN网关的路由表
     *
     * @return \HuaweiCloud\SDK\Vpn\V5\Model\VpnGatewayRoutingTableEntryVo[]|null
     */
@@ -209,7 +209,7 @@ class ShowVpnGatewayRoutingTableResponse implements ModelInterface, ArrayAccess
     /**
     * Sets routingTable
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\VpnGatewayRoutingTableEntryVo[]|null $routingTable routingTable
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\VpnGatewayRoutingTableEntryVo[]|null $routingTable VPN网关的路由表
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ShowVpnGatewayRoutingTableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  totalCount
+    *  该网关下的路由总条数
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class ShowVpnGatewayRoutingTableResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount totalCount
+    * @param int|null $totalCount 该网关下的路由总条数
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class AlarmTemplatePolicies implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32, 事件告警模板DimensionName为空
+    * dimensionName  **参数解释**： 资源维度。 **约束限制**： 当template_type为0或者不选时，DimensionName必填。当template_type为2时，DimensionName为空。 **取值范围**： 必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32。字符串最大长度为131。 **默认取值**： 不涉及。
     * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * period  告警条件判断周期,单位为秒
     * filter  数据聚合方式
@@ -55,7 +55,7 @@ class AlarmTemplatePolicies implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32, 事件告警模板DimensionName为空
+    * dimensionName  **参数解释**： 资源维度。 **约束限制**： 当template_type为0或者不选时，DimensionName必填。当template_type为2时，DimensionName为空。 **取值范围**： 必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32。字符串最大长度为131。 **默认取值**： 不涉及。
     * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * period  告警条件判断周期,单位为秒
     * filter  数据聚合方式
@@ -110,7 +110,7 @@ class AlarmTemplatePolicies implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32, 事件告警模板DimensionName为空
+    * dimensionName  **参数解释**： 资源维度。 **约束限制**： 当template_type为0或者不选时，DimensionName必填。当template_type为2时，DimensionName为空。 **取值范围**： 必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32。字符串最大长度为131。 **默认取值**： 不涉及。
     * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * period  告警条件判断周期,单位为秒
     * filter  数据聚合方式
@@ -144,7 +144,7 @@ class AlarmTemplatePolicies implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32, 事件告警模板DimensionName为空
+    * dimensionName  **参数解释**： 资源维度。 **约束限制**： 当template_type为0或者不选时，DimensionName必填。当template_type为2时，DimensionName为空。 **取值范围**： 必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32。字符串最大长度为131。 **默认取值**： 不涉及。
     * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * period  告警条件判断周期,单位为秒
     * filter  数据聚合方式
@@ -178,7 +178,7 @@ class AlarmTemplatePolicies implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32, 事件告警模板DimensionName为空
+    * dimensionName  **参数解释**： 资源维度。 **约束限制**： 当template_type为0或者不选时，DimensionName必填。当template_type为2时，DimensionName为空。 **取值范围**： 必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32。字符串最大长度为131。 **默认取值**： 不涉及。
     * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * period  告警条件判断周期,单位为秒
     * filter  数据聚合方式
@@ -495,7 +495,7 @@ class AlarmTemplatePolicies implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensionName
-    *  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32, 事件告警模板DimensionName为空
+    *  **参数解释**： 资源维度。 **约束限制**： 当template_type为0或者不选时，DimensionName必填。当template_type为2时，DimensionName为空。 **取值范围**： 必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32。字符串最大长度为131。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -507,7 +507,7 @@ class AlarmTemplatePolicies implements ModelInterface, ArrayAccess
     /**
     * Sets dimensionName
     *
-    * @param string $dimensionName 资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32, 事件告警模板DimensionName为空
+    * @param string $dimensionName **参数解释**： 资源维度。 **约束限制**： 当template_type为0或者不选时，DimensionName必填。当template_type为2时，DimensionName为空。 **取值范围**： 必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32。字符串最大长度为131。 **默认取值**： 不涉及。
     *
     * @return $this
     */

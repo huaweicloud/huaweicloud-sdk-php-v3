@@ -20,7 +20,7 @@ class BatchCreateVpnConnectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vpnConnections  vpnConnections
+    * vpnConnections  VPN连接对象数组
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchCreateVpnConnectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vpnConnections  vpnConnections
+    * vpnConnections  VPN连接对象数组
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchCreateVpnConnectionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vpnConnections  vpnConnections
+    * vpnConnections  VPN连接对象数组
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchCreateVpnConnectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vpnConnections  vpnConnections
+    * vpnConnections  VPN连接对象数组
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchCreateVpnConnectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vpnConnections  vpnConnections
+    * vpnConnections  VPN连接对象数组
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class BatchCreateVpnConnectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpnConnections
-    *  vpnConnections
+    *  VPN连接对象数组
     *
     * @return \HuaweiCloud\SDK\Vpn\V5\Model\CreateVpnConnectionRequestBodyContent[]
     */
@@ -189,7 +189,7 @@ class BatchCreateVpnConnectionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets vpnConnections
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\CreateVpnConnectionRequestBodyContent[] $vpnConnections vpnConnections
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\CreateVpnConnectionRequestBodyContent[] $vpnConnections VPN连接对象数组
     *
     * @return $this
     */

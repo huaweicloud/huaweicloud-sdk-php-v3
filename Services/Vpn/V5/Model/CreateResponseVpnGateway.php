@@ -24,7 +24,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * name  VPN网关名称
     * attachmentType  关联模式
     * ipVersion  网关的IP协议版本
-    * certificateId  certificateId
+    * certificateId  证书ID
     * erId  VPN网关所连接的ER实例的ID
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
@@ -76,7 +76,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * name  VPN网关名称
     * attachmentType  关联模式
     * ipVersion  网关的IP协议版本
-    * certificateId  certificateId
+    * certificateId  证书ID
     * erId  VPN网关所连接的ER实例的ID
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
@@ -149,7 +149,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * name  VPN网关名称
     * attachmentType  关联模式
     * ipVersion  网关的IP协议版本
-    * certificateId  certificateId
+    * certificateId  证书ID
     * erId  VPN网关所连接的ER实例的ID
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
@@ -201,7 +201,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * name  VPN网关名称
     * attachmentType  关联模式
     * ipVersion  网关的IP协议版本
-    * certificateId  certificateId
+    * certificateId  证书ID
     * erId  VPN网关所连接的ER实例的ID
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
@@ -253,7 +253,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * name  VPN网关名称
     * attachmentType  关联模式
     * ipVersion  网关的IP协议版本
-    * certificateId  certificateId
+    * certificateId  证书ID
     * erId  VPN网关所连接的ER实例的ID
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
@@ -603,7 +603,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificateId
-    *  certificateId
+    *  证书ID
     *
     * @return string|null
     */
@@ -615,7 +615,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     /**
     * Sets certificateId
     *
-    * @param string|null $certificateId certificateId
+    * @param string|null $certificateId 证书ID
     *
     * @return $this
     */

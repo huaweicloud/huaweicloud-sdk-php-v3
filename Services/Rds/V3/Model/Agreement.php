@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Aom\V1\Model;
+namespace HuaweiCloud\SDK\Rds\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateFastExecuteScriptResponse implements ModelInterface, ArrayAccess
+class Agreement implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,26 +16,42 @@ class CreateFastExecuteScriptResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateFastExecuteScriptResponse';
+    protected static $openAPIModelName = 'Agreement';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * executionId  工作流执行id。
+    * id  许可ID。
+    * name  许可名称。
+    * language  许可语言类型。
+    * version  许可版本。
+    * provisionUrl  许可链接。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'executionId' => 'string'
+            'id' => 'string',
+            'name' => 'string',
+            'language' => 'string',
+            'version' => 'string',
+            'provisionUrl' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * executionId  工作流执行id。
+    * id  许可ID。
+    * name  许可名称。
+    * language  许可语言类型。
+    * version  许可版本。
+    * provisionUrl  许可链接。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'executionId' => null
+        'id' => null,
+        'name' => null,
+        'language' => null,
+        'version' => null,
+        'provisionUrl' => null
     ];
 
     /**
@@ -62,32 +77,56 @@ class CreateFastExecuteScriptResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * executionId  工作流执行id。
+    * id  许可ID。
+    * name  许可名称。
+    * language  许可语言类型。
+    * version  许可版本。
+    * provisionUrl  许可链接。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'executionId' => 'execution_id'
+            'id' => 'id',
+            'name' => 'name',
+            'language' => 'language',
+            'version' => 'version',
+            'provisionUrl' => 'provision_url'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * executionId  工作流执行id。
+    * id  许可ID。
+    * name  许可名称。
+    * language  许可语言类型。
+    * version  许可版本。
+    * provisionUrl  许可链接。
     *
     * @var string[]
     */
     protected static $setters = [
-            'executionId' => 'setExecutionId'
+            'id' => 'setId',
+            'name' => 'setName',
+            'language' => 'setLanguage',
+            'version' => 'setVersion',
+            'provisionUrl' => 'setProvisionUrl'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * executionId  工作流执行id。
+    * id  许可ID。
+    * name  许可名称。
+    * language  许可语言类型。
+    * version  许可版本。
+    * provisionUrl  许可链接。
     *
     * @var string[]
     */
     protected static $getters = [
-            'executionId' => 'getExecutionId'
+            'id' => 'getId',
+            'name' => 'getName',
+            'language' => 'getLanguage',
+            'version' => 'getVersion',
+            'provisionUrl' => 'getProvisionUrl'
     ];
 
     /**
@@ -148,7 +187,11 @@ class CreateFastExecuteScriptResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['executionId'] = isset($data['executionId']) ? $data['executionId'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['provisionUrl'] = isset($data['provisionUrl']) ? $data['provisionUrl'] : null;
     }
 
     /**
@@ -159,12 +202,6 @@ class CreateFastExecuteScriptResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['executionId']) && (mb_strlen($this->container['executionId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'executionId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['executionId']) && (mb_strlen($this->container['executionId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'executionId', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -180,26 +217,122 @@ class CreateFastExecuteScriptResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets executionId
-    *  工作流执行id。
+    * Gets id
+    *  许可ID。
     *
     * @return string|null
     */
-    public function getExecutionId()
+    public function getId()
     {
-        return $this->container['executionId'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets executionId
+    * Sets id
     *
-    * @param string|null $executionId 工作流执行id。
+    * @param string|null $id 许可ID。
     *
     * @return $this
     */
-    public function setExecutionId($executionId)
+    public function setId($id)
     {
-        $this->container['executionId'] = $executionId;
+        $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  许可名称。
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 许可名称。
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  许可语言类型。
+    *
+    * @return string|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param string|null $language 许可语言类型。
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
+        return $this;
+    }
+
+    /**
+    * Gets version
+    *  许可版本。
+    *
+    * @return string|null
+    */
+    public function getVersion()
+    {
+        return $this->container['version'];
+    }
+
+    /**
+    * Sets version
+    *
+    * @param string|null $version 许可版本。
+    *
+    * @return $this
+    */
+    public function setVersion($version)
+    {
+        $this->container['version'] = $version;
+        return $this;
+    }
+
+    /**
+    * Gets provisionUrl
+    *  许可链接。
+    *
+    * @return string|null
+    */
+    public function getProvisionUrl()
+    {
+        return $this->container['provisionUrl'];
+    }
+
+    /**
+    * Sets provisionUrl
+    *
+    * @param string|null $provisionUrl 许可链接。
+    *
+    * @return $this
+    */
+    public function setProvisionUrl($provisionUrl)
+    {
+        $this->container['provisionUrl'] = $provisionUrl;
         return $this;
     }
 

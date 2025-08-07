@@ -21,7 +21,7 @@ class ListConnectionMonitorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * connectionMonitors  connectionMonitors
+    * connectionMonitors  VPN连接监控列表
     * requestId  请求id
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListConnectionMonitorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * connectionMonitors  connectionMonitors
+    * connectionMonitors  VPN连接监控列表
     * requestId  请求id
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListConnectionMonitorsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * connectionMonitors  connectionMonitors
+    * connectionMonitors  VPN连接监控列表
     * requestId  请求id
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListConnectionMonitorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * connectionMonitors  connectionMonitors
+    * connectionMonitors  VPN连接监控列表
     * requestId  请求id
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListConnectionMonitorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * connectionMonitors  connectionMonitors
+    * connectionMonitors  VPN连接监控列表
     * requestId  请求id
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ListConnectionMonitorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets connectionMonitors
-    *  connectionMonitors
+    *  VPN连接监控列表
     *
     * @return \HuaweiCloud\SDK\Vpn\V5\Model\ConnectionMonitorInfo[]|null
     */
@@ -198,7 +198,7 @@ class ListConnectionMonitorsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets connectionMonitors
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\ConnectionMonitorInfo[]|null $connectionMonitors connectionMonitors
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\ConnectionMonitorInfo[]|null $connectionMonitors VPN连接监控列表
     *
     * @return $this
     */

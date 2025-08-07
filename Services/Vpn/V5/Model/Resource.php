@@ -20,10 +20,10 @@ class Resource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceId  resourceId
-    * resourceDetail  resourceDetail
-    * tags  tags
-    * resourceName  resourceName
+    * resourceId  资源ID
+    * resourceDetail  资源详情
+    * tags  标签列表
+    * resourceName  资源名称
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class Resource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceId  resourceId
-    * resourceDetail  resourceDetail
-    * tags  tags
-    * resourceName  resourceName
+    * resourceId  资源ID
+    * resourceDetail  资源详情
+    * tags  标签列表
+    * resourceName  资源名称
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class Resource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceId  resourceId
-    * resourceDetail  resourceDetail
-    * tags  tags
-    * resourceName  resourceName
+    * resourceId  资源ID
+    * resourceDetail  资源详情
+    * tags  标签列表
+    * resourceName  资源名称
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class Resource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceId  resourceId
-    * resourceDetail  resourceDetail
-    * tags  tags
-    * resourceName  resourceName
+    * resourceId  资源ID
+    * resourceDetail  资源详情
+    * tags  标签列表
+    * resourceName  资源名称
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class Resource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceId  resourceId
-    * resourceDetail  resourceDetail
-    * tags  tags
-    * resourceName  resourceName
+    * resourceId  资源ID
+    * resourceDetail  资源详情
+    * tags  标签列表
+    * resourceName  资源名称
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class Resource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  resourceId
+    *  资源ID
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class Resource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId resourceId
+    * @param string|null $resourceId 资源ID
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class Resource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceDetail
-    *  resourceDetail
+    *  资源详情
     *
     * @return object|null
     */
@@ -243,7 +243,7 @@ class Resource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceDetail
     *
-    * @param object|null $resourceDetail resourceDetail
+    * @param object|null $resourceDetail 资源详情
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class Resource implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  tags
+    *  标签列表
     *
     * @return \HuaweiCloud\SDK\Vpn\V5\Model\ResourceTag[]|null
     */
@@ -267,7 +267,7 @@ class Resource implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\ResourceTag[]|null $tags tags
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\ResourceTag[]|null $tags 标签列表
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class Resource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
-    *  resourceName
+    *  资源名称
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class Resource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceName
     *
-    * @param string|null $resourceName resourceName
+    * @param string|null $resourceName 资源名称
     *
     * @return $this
     */

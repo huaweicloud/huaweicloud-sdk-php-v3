@@ -20,8 +20,8 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  key
-    * value  value
+    * key  匹配的键
+    * value  匹配的值
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  key
-    * value  value
+    * key  匹配的键
+    * value  匹配的值
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Match implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  key
-    * value  value
+    * key  匹配的键
+    * value  匹配的值
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  key
-    * value  value
+    * key  匹配的键
+    * value  匹配的值
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  key
-    * value  value
+    * key  匹配的键
+    * value  匹配的值
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  key
+    *  匹配的键
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class Match implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key key
+    * @param string $key 匹配的键
     *
     * @return $this
     */
@@ -239,7 +239,7 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  value
+    *  匹配的值
     *
     * @return string
     */
@@ -251,7 +251,7 @@ class Match implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value value
+    * @param string $value 匹配的值
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class Quotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resources  resources
+    * resources  资源对象
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class Quotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resources  resources
+    * resources  资源对象
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class Quotas implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resources  resources
+    * resources  资源对象
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class Quotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resources  resources
+    * resources  资源对象
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class Quotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resources  resources
+    * resources  资源对象
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class Quotas implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
-    *  resources
+    *  资源对象
     *
     * @return \HuaweiCloud\SDK\Vpn\V5\Model\QuotaInfo[]|null
     */
@@ -186,7 +186,7 @@ class Quotas implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\QuotaInfo[]|null $resources resources
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\QuotaInfo[]|null $resources 资源对象
     *
     * @return $this
     */

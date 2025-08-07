@@ -21,7 +21,7 @@ class ConnectionMonitorInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  VPN连接监控ID
-    * status  status
+    * status  VPN连接监控状态
     * vpnConnectionId  VPN连接监控对应的VPN连接ID
     * type  监控类型，取值范围：gateway
     * sourceIp  VPN连接监控的源地址
@@ -43,7 +43,7 @@ class ConnectionMonitorInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  VPN连接监控ID
-    * status  status
+    * status  VPN连接监控状态
     * vpnConnectionId  VPN连接监控对应的VPN连接ID
     * type  监控类型，取值范围：gateway
     * sourceIp  VPN连接监控的源地址
@@ -86,7 +86,7 @@ class ConnectionMonitorInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  VPN连接监控ID
-    * status  status
+    * status  VPN连接监控状态
     * vpnConnectionId  VPN连接监控对应的VPN连接ID
     * type  监控类型，取值范围：gateway
     * sourceIp  VPN连接监控的源地址
@@ -108,7 +108,7 @@ class ConnectionMonitorInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  VPN连接监控ID
-    * status  status
+    * status  VPN连接监控状态
     * vpnConnectionId  VPN连接监控对应的VPN连接ID
     * type  监控类型，取值范围：gateway
     * sourceIp  VPN连接监控的源地址
@@ -130,7 +130,7 @@ class ConnectionMonitorInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  VPN连接监控ID
-    * status  status
+    * status  VPN连接监控状态
     * vpnConnectionId  VPN连接监控对应的VPN连接ID
     * type  监控类型，取值范围：gateway
     * sourceIp  VPN连接监控的源地址
@@ -264,7 +264,7 @@ class ConnectionMonitorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  status
+    *  VPN连接监控状态
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class ConnectionMonitorInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status status
+    * @param string|null $status VPN连接监控状态
     *
     * @return $this
     */

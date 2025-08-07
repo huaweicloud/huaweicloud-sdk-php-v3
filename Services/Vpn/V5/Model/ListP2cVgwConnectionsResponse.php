@@ -21,7 +21,7 @@ class ListP2cVgwConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * connections  connections
+    * connections  连接信息
     * totalCount  总计数量
     * requestId  请求ID
     *
@@ -35,7 +35,7 @@ class ListP2cVgwConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * connections  connections
+    * connections  连接信息
     * totalCount  总计数量
     * requestId  请求ID
     *
@@ -70,7 +70,7 @@ class ListP2cVgwConnectionsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * connections  connections
+    * connections  连接信息
     * totalCount  总计数量
     * requestId  请求ID
     *
@@ -84,7 +84,7 @@ class ListP2cVgwConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * connections  connections
+    * connections  连接信息
     * totalCount  总计数量
     * requestId  请求ID
     *
@@ -98,7 +98,7 @@ class ListP2cVgwConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * connections  connections
+    * connections  连接信息
     * totalCount  总计数量
     * requestId  请求ID
     *
@@ -197,7 +197,7 @@ class ListP2cVgwConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets connections
-    *  connections
+    *  连接信息
     *
     * @return \HuaweiCloud\SDK\Vpn\V5\Model\Connection[]|null
     */
@@ -209,7 +209,7 @@ class ListP2cVgwConnectionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets connections
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\Connection[]|null $connections connections
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\Connection[]|null $connections 连接信息
     *
     * @return $this
     */

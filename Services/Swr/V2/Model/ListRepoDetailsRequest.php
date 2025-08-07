@@ -34,7 +34,7 @@ class ListRepoDetailsRequest implements ModelInterface, ArrayAccess
             'name' => 'string',
             'category' => 'string',
             'limit' => 'int',
-            'marker' => 'string',
+            'marker' => 'int',
             'isPublic' => 'bool'
     ];
 
@@ -333,7 +333,7 @@ class ListRepoDetailsRequest implements ModelInterface, ArrayAccess
     * Gets marker
     *  分页查询下一次查询起始标记，接口的返回值nextMarker为下一次查询的起始标记。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getMarker()
     {
@@ -343,7 +343,7 @@ class ListRepoDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker 分页查询下一次查询起始标记，接口的返回值nextMarker为下一次查询的起始标记。
+    * @param int|null $marker 分页查询下一次查询起始标记，接口的返回值nextMarker为下一次查询的起始标记。
     *
     * @return $this
     */

@@ -224,8 +224,8 @@ class ListVpnConnectionsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
             }
         return $invalidProperties;
     }

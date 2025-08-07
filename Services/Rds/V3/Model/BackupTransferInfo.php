@@ -33,6 +33,7 @@ class BackupTransferInfo implements ModelInterface, ArrayAccess
     * backupEndTime  转储备份结束时间
     * transferType  转储任务类型
     * prefix  转储目标前缀
+    * type  转储备份类型
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class BackupTransferInfo implements ModelInterface, ArrayAccess
             'backupBeginTime' => 'int',
             'backupEndTime' => 'int',
             'transferType' => 'string',
-            'prefix' => 'string'
+            'prefix' => 'string',
+            'type' => 'string'
     ];
 
     /**
@@ -67,6 +69,7 @@ class BackupTransferInfo implements ModelInterface, ArrayAccess
     * backupEndTime  转储备份结束时间
     * transferType  转储任务类型
     * prefix  转储目标前缀
+    * type  转储备份类型
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class BackupTransferInfo implements ModelInterface, ArrayAccess
         'backupBeginTime' => 'int64',
         'backupEndTime' => 'int64',
         'transferType' => null,
-        'prefix' => null
+        'prefix' => null,
+        'type' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class BackupTransferInfo implements ModelInterface, ArrayAccess
     * backupEndTime  转储备份结束时间
     * transferType  转储任务类型
     * prefix  转储目标前缀
+    * type  转储备份类型
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class BackupTransferInfo implements ModelInterface, ArrayAccess
             'backupBeginTime' => 'backup_begin_time',
             'backupEndTime' => 'backup_end_time',
             'transferType' => 'transfer_type',
-            'prefix' => 'prefix'
+            'prefix' => 'prefix',
+            'type' => 'type'
     ];
 
     /**
@@ -156,6 +162,7 @@ class BackupTransferInfo implements ModelInterface, ArrayAccess
     * backupEndTime  转储备份结束时间
     * transferType  转储任务类型
     * prefix  转储目标前缀
+    * type  转储备份类型
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class BackupTransferInfo implements ModelInterface, ArrayAccess
             'backupBeginTime' => 'setBackupBeginTime',
             'backupEndTime' => 'setBackupEndTime',
             'transferType' => 'setTransferType',
-            'prefix' => 'setPrefix'
+            'prefix' => 'setPrefix',
+            'type' => 'setType'
     ];
 
     /**
@@ -190,6 +198,7 @@ class BackupTransferInfo implements ModelInterface, ArrayAccess
     * backupEndTime  转储备份结束时间
     * transferType  转储任务类型
     * prefix  转储目标前缀
+    * type  转储备份类型
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class BackupTransferInfo implements ModelInterface, ArrayAccess
             'backupBeginTime' => 'getBackupBeginTime',
             'backupEndTime' => 'getBackupEndTime',
             'transferType' => 'getTransferType',
-            'prefix' => 'getPrefix'
+            'prefix' => 'getPrefix',
+            'type' => 'getType'
     ];
 
     /**
@@ -280,6 +290,7 @@ class BackupTransferInfo implements ModelInterface, ArrayAccess
         $this->container['backupEndTime'] = isset($data['backupEndTime']) ? $data['backupEndTime'] : null;
         $this->container['transferType'] = isset($data['transferType']) ? $data['transferType'] : null;
         $this->container['prefix'] = isset($data['prefix']) ? $data['prefix'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -613,6 +624,30 @@ class BackupTransferInfo implements ModelInterface, ArrayAccess
     public function setPrefix($prefix)
     {
         $this->container['prefix'] = $prefix;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  转储备份类型
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 转储备份类型
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

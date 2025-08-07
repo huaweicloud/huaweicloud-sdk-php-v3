@@ -20,7 +20,7 @@ class DeleteResourcesTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tags  tags
+    * tags  资源标签
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteResourcesTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tags  tags
+    * tags  资源标签
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteResourcesTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tags  tags
+    * tags  资源标签
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteResourcesTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tags  tags
+    * tags  资源标签
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteResourcesTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tags  tags
+    * tags  资源标签
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class DeleteResourcesTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  tags
+    *  资源标签
     *
     * @return \HuaweiCloud\SDK\Vpn\V5\Model\ResourceTag[]
     */
@@ -189,7 +189,7 @@ class DeleteResourcesTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\ResourceTag[] $tags tags
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\ResourceTag[] $tags 资源标签
     *
     * @return $this
     */

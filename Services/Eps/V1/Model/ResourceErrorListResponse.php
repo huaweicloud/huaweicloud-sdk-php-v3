@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Aom\V1\Model;
+namespace HuaweiCloud\SDK\Eps\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateFastExecuteScriptRequest implements ModelInterface, ArrayAccess
+class ResourceErrorListResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,42 @@ class CreateFastExecuteScriptRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateFastExecuteScriptRequest';
+    protected static $openAPIModelName = 'ResourceErrorListResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * projectId  项目ID
+    * resourceType  资源类型
+    * resourceId  资源ID
+    * errorCode  错误码
+    * errorMsg  错误信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Aom\V1\Model\HISFastScript'
+            'projectId' => 'string',
+            'resourceType' => 'string',
+            'resourceId' => 'string',
+            'errorCode' => 'string',
+            'errorMsg' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * projectId  项目ID
+    * resourceType  资源类型
+    * resourceId  资源ID
+    * errorCode  错误码
+    * errorMsg  错误信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'projectId' => null,
+        'resourceType' => null,
+        'resourceId' => null,
+        'errorCode' => null,
+        'errorMsg' => null
     ];
 
     /**
@@ -61,32 +77,56 @@ class CreateFastExecuteScriptRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * projectId  项目ID
+    * resourceType  资源类型
+    * resourceId  资源ID
+    * errorCode  错误码
+    * errorMsg  错误信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'projectId' => 'project_id',
+            'resourceType' => 'resource_type',
+            'resourceId' => 'resource_id',
+            'errorCode' => 'error_code',
+            'errorMsg' => 'error_msg'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * projectId  项目ID
+    * resourceType  资源类型
+    * resourceId  资源ID
+    * errorCode  错误码
+    * errorMsg  错误信息
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'projectId' => 'setProjectId',
+            'resourceType' => 'setResourceType',
+            'resourceId' => 'setResourceId',
+            'errorCode' => 'setErrorCode',
+            'errorMsg' => 'setErrorMsg'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * projectId  项目ID
+    * resourceType  资源类型
+    * resourceId  资源ID
+    * errorCode  错误码
+    * errorMsg  错误信息
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'projectId' => 'getProjectId',
+            'resourceType' => 'getResourceType',
+            'resourceId' => 'getResourceId',
+            'errorCode' => 'getErrorCode',
+            'errorMsg' => 'getErrorMsg'
     ];
 
     /**
@@ -147,7 +187,11 @@ class CreateFastExecuteScriptRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
+        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
+        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
     }
 
     /**
@@ -173,26 +217,122 @@ class CreateFastExecuteScriptRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets projectId
+    *  项目ID
     *
-    * @return \HuaweiCloud\SDK\Aom\V1\Model\HISFastScript|null
+    * @return string|null
     */
-    public function getBody()
+    public function getProjectId()
     {
-        return $this->container['body'];
+        return $this->container['projectId'];
     }
 
     /**
-    * Sets body
+    * Sets projectId
     *
-    * @param \HuaweiCloud\SDK\Aom\V1\Model\HISFastScript|null $body body
+    * @param string|null $projectId 项目ID
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setProjectId($projectId)
     {
-        $this->container['body'] = $body;
+        $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets resourceType
+    *  资源类型
+    *
+    * @return string|null
+    */
+    public function getResourceType()
+    {
+        return $this->container['resourceType'];
+    }
+
+    /**
+    * Sets resourceType
+    *
+    * @param string|null $resourceType 资源类型
+    *
+    * @return $this
+    */
+    public function setResourceType($resourceType)
+    {
+        $this->container['resourceType'] = $resourceType;
+        return $this;
+    }
+
+    /**
+    * Gets resourceId
+    *  资源ID
+    *
+    * @return string|null
+    */
+    public function getResourceId()
+    {
+        return $this->container['resourceId'];
+    }
+
+    /**
+    * Sets resourceId
+    *
+    * @param string|null $resourceId 资源ID
+    *
+    * @return $this
+    */
+    public function setResourceId($resourceId)
+    {
+        $this->container['resourceId'] = $resourceId;
+        return $this;
+    }
+
+    /**
+    * Gets errorCode
+    *  错误码
+    *
+    * @return string|null
+    */
+    public function getErrorCode()
+    {
+        return $this->container['errorCode'];
+    }
+
+    /**
+    * Sets errorCode
+    *
+    * @param string|null $errorCode 错误码
+    *
+    * @return $this
+    */
+    public function setErrorCode($errorCode)
+    {
+        $this->container['errorCode'] = $errorCode;
+        return $this;
+    }
+
+    /**
+    * Gets errorMsg
+    *  错误信息
+    *
+    * @return string|null
+    */
+    public function getErrorMsg()
+    {
+        return $this->container['errorMsg'];
+    }
+
+    /**
+    * Sets errorMsg
+    *
+    * @param string|null $errorMsg 错误信息
+    *
+    * @return $this
+    */
+    public function setErrorMsg($errorMsg)
+    {
+        $this->container['errorMsg'] = $errorMsg;
         return $this;
     }
 

@@ -22,7 +22,7 @@ class ExtendedAvailabilityZone implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  可用区名称
     * publicBorderGroup  公共边界组
-    * availableSpecs  availableSpecs
+    * availableSpecs  该可用区下可选的VPN网关规格组合
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ExtendedAvailabilityZone implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  可用区名称
     * publicBorderGroup  公共边界组
-    * availableSpecs  availableSpecs
+    * availableSpecs  该可用区下可选的VPN网关规格组合
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ExtendedAvailabilityZone implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  可用区名称
     * publicBorderGroup  公共边界组
-    * availableSpecs  availableSpecs
+    * availableSpecs  该可用区下可选的VPN网关规格组合
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ExtendedAvailabilityZone implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  可用区名称
     * publicBorderGroup  公共边界组
-    * availableSpecs  availableSpecs
+    * availableSpecs  该可用区下可选的VPN网关规格组合
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ExtendedAvailabilityZone implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  可用区名称
     * publicBorderGroup  公共边界组
-    * availableSpecs  availableSpecs
+    * availableSpecs  该可用区下可选的VPN网关规格组合
     *
     * @var string[]
     */
@@ -244,7 +244,7 @@ class ExtendedAvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableSpecs
-    *  availableSpecs
+    *  该可用区下可选的VPN网关规格组合
     *
     * @return \HuaweiCloud\SDK\Vpn\V5\Model\AvailableSpec[]|null
     */
@@ -256,7 +256,7 @@ class ExtendedAvailabilityZone implements ModelInterface, ArrayAccess
     /**
     * Sets availableSpecs
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\AvailableSpec[]|null $availableSpecs availableSpecs
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\AvailableSpec[]|null $availableSpecs 该可用区下可选的VPN网关规格组合
     *
     * @return $this
     */

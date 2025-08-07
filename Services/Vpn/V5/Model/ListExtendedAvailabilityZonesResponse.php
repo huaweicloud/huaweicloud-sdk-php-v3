@@ -21,7 +21,7 @@ class ListExtendedAvailabilityZonesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * availabilityZones  availabilityZones
+    * availabilityZones  可用区列表
     * requestId  请求id
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListExtendedAvailabilityZonesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * availabilityZones  availabilityZones
+    * availabilityZones  可用区列表
     * requestId  请求id
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListExtendedAvailabilityZonesResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * availabilityZones  availabilityZones
+    * availabilityZones  可用区列表
     * requestId  请求id
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListExtendedAvailabilityZonesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * availabilityZones  availabilityZones
+    * availabilityZones  可用区列表
     * requestId  请求id
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListExtendedAvailabilityZonesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * availabilityZones  availabilityZones
+    * availabilityZones  可用区列表
     * requestId  请求id
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ListExtendedAvailabilityZonesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets availabilityZones
-    *  availabilityZones
+    *  可用区列表
     *
     * @return \HuaweiCloud\SDK\Vpn\V5\Model\ExtendedAvailabilityZone[]|null
     */
@@ -198,7 +198,7 @@ class ListExtendedAvailabilityZonesResponse implements ModelInterface, ArrayAcce
     /**
     * Sets availabilityZones
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\ExtendedAvailabilityZone[]|null $availabilityZones availabilityZones
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\ExtendedAvailabilityZone[]|null $availabilityZones 可用区列表
     *
     * @return $this
     */

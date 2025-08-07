@@ -1993,9 +1993,6 @@ class CesClient extends Client
         if ($localVarParams['templateName'] !== null) {
             $queryParams['template_name'] = $localVarParams['templateName'];
         }
-        if ($localVarParams['productName'] !== null) {
-            $queryParams['product_name'] = $localVarParams['productName'];
-        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json', 'text/plain; charset=utf-8']

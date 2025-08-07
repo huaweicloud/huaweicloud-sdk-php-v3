@@ -34,6 +34,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * updateTime  IAM用户更新时间。
     * createTime  IAM用户创建时间。
     * lastLoginTime  IAM用户最后登录时间。
+    * lastPwdAuthTime  IAM用户最后使用密码认证时间。
     * pwdStrength  IAM用户密码强度。结果为Low/Middle/High/None，分别表示密码强度低/中/高/无。
     * isDomainOwner  IAM用户是否为根用户。
     * accessMode  IAM用户访问模式。
@@ -58,6 +59,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'updateTime' => 'string',
             'createTime' => 'string',
             'lastLoginTime' => 'string',
+            'lastPwdAuthTime' => 'string',
             'pwdStrength' => 'string',
             'isDomainOwner' => 'bool',
             'accessMode' => 'string',
@@ -82,6 +84,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * updateTime  IAM用户更新时间。
     * createTime  IAM用户创建时间。
     * lastLoginTime  IAM用户最后登录时间。
+    * lastPwdAuthTime  IAM用户最后使用密码认证时间。
     * pwdStrength  IAM用户密码强度。结果为Low/Middle/High/None，分别表示密码强度低/中/高/无。
     * isDomainOwner  IAM用户是否为根用户。
     * accessMode  IAM用户访问模式。
@@ -106,6 +109,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
         'updateTime' => null,
         'createTime' => null,
         'lastLoginTime' => null,
+        'lastPwdAuthTime' => null,
         'pwdStrength' => null,
         'isDomainOwner' => null,
         'accessMode' => null,
@@ -151,6 +155,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * updateTime  IAM用户更新时间。
     * createTime  IAM用户创建时间。
     * lastLoginTime  IAM用户最后登录时间。
+    * lastPwdAuthTime  IAM用户最后使用密码认证时间。
     * pwdStrength  IAM用户密码强度。结果为Low/Middle/High/None，分别表示密码强度低/中/高/无。
     * isDomainOwner  IAM用户是否为根用户。
     * accessMode  IAM用户访问模式。
@@ -175,6 +180,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'updateTime' => 'update_time',
             'createTime' => 'create_time',
             'lastLoginTime' => 'last_login_time',
+            'lastPwdAuthTime' => 'last_pwd_auth_time',
             'pwdStrength' => 'pwd_strength',
             'isDomainOwner' => 'is_domain_owner',
             'accessMode' => 'access_mode',
@@ -199,6 +205,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * updateTime  IAM用户更新时间。
     * createTime  IAM用户创建时间。
     * lastLoginTime  IAM用户最后登录时间。
+    * lastPwdAuthTime  IAM用户最后使用密码认证时间。
     * pwdStrength  IAM用户密码强度。结果为Low/Middle/High/None，分别表示密码强度低/中/高/无。
     * isDomainOwner  IAM用户是否为根用户。
     * accessMode  IAM用户访问模式。
@@ -223,6 +230,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'updateTime' => 'setUpdateTime',
             'createTime' => 'setCreateTime',
             'lastLoginTime' => 'setLastLoginTime',
+            'lastPwdAuthTime' => 'setLastPwdAuthTime',
             'pwdStrength' => 'setPwdStrength',
             'isDomainOwner' => 'setIsDomainOwner',
             'accessMode' => 'setAccessMode',
@@ -247,6 +255,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * updateTime  IAM用户更新时间。
     * createTime  IAM用户创建时间。
     * lastLoginTime  IAM用户最后登录时间。
+    * lastPwdAuthTime  IAM用户最后使用密码认证时间。
     * pwdStrength  IAM用户密码强度。结果为Low/Middle/High/None，分别表示密码强度低/中/高/无。
     * isDomainOwner  IAM用户是否为根用户。
     * accessMode  IAM用户访问模式。
@@ -271,6 +280,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'updateTime' => 'getUpdateTime',
             'createTime' => 'getCreateTime',
             'lastLoginTime' => 'getLastLoginTime',
+            'lastPwdAuthTime' => 'getLastPwdAuthTime',
             'pwdStrength' => 'getPwdStrength',
             'isDomainOwner' => 'getIsDomainOwner',
             'accessMode' => 'getAccessMode',
@@ -351,6 +361,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['lastLoginTime'] = isset($data['lastLoginTime']) ? $data['lastLoginTime'] : null;
+        $this->container['lastPwdAuthTime'] = isset($data['lastPwdAuthTime']) ? $data['lastPwdAuthTime'] : null;
         $this->container['pwdStrength'] = isset($data['pwdStrength']) ? $data['pwdStrength'] : null;
         $this->container['isDomainOwner'] = isset($data['isDomainOwner']) ? $data['isDomainOwner'] : null;
         $this->container['accessMode'] = isset($data['accessMode']) ? $data['accessMode'] : null;
@@ -738,6 +749,30 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     public function setLastLoginTime($lastLoginTime)
     {
         $this->container['lastLoginTime'] = $lastLoginTime;
+        return $this;
+    }
+
+    /**
+    * Gets lastPwdAuthTime
+    *  IAM用户最后使用密码认证时间。
+    *
+    * @return string|null
+    */
+    public function getLastPwdAuthTime()
+    {
+        return $this->container['lastPwdAuthTime'];
+    }
+
+    /**
+    * Sets lastPwdAuthTime
+    *
+    * @param string|null $lastPwdAuthTime IAM用户最后使用密码认证时间。
+    *
+    * @return $this
+    */
+    public function setLastPwdAuthTime($lastPwdAuthTime)
+    {
+        $this->container['lastPwdAuthTime'] = $lastPwdAuthTime;
         return $this;
     }
 

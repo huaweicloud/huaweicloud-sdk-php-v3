@@ -24,6 +24,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     * action  obs访问权限
     * resource  obs对象
     * condition  statement生效的条件
+    * sid  策略Id
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class PolicyStatement implements ModelInterface, ArrayAccess
             'effect' => 'string',
             'action' => 'string[]',
             'resource' => 'string[]',
-            'condition' => 'object'
+            'condition' => 'object',
+            'sid' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     * action  obs访问权限
     * resource  obs对象
     * condition  statement生效的条件
+    * sid  策略Id
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class PolicyStatement implements ModelInterface, ArrayAccess
         'effect' => null,
         'action' => null,
         'resource' => null,
-        'condition' => null
+        'condition' => null,
+        'sid' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     * action  obs访问权限
     * resource  obs对象
     * condition  statement生效的条件
+    * sid  策略Id
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class PolicyStatement implements ModelInterface, ArrayAccess
             'effect' => 'Effect',
             'action' => 'Action',
             'resource' => 'Resource',
-            'condition' => 'Condition'
+            'condition' => 'Condition',
+            'sid' => 'Sid'
     ];
 
     /**
@@ -93,6 +99,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     * action  obs访问权限
     * resource  obs对象
     * condition  statement生效的条件
+    * sid  策略Id
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class PolicyStatement implements ModelInterface, ArrayAccess
             'effect' => 'setEffect',
             'action' => 'setAction',
             'resource' => 'setResource',
-            'condition' => 'setCondition'
+            'condition' => 'setCondition',
+            'sid' => 'setSid'
     ];
 
     /**
@@ -109,6 +117,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     * action  obs访问权限
     * resource  obs对象
     * condition  statement生效的条件
+    * sid  策略Id
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class PolicyStatement implements ModelInterface, ArrayAccess
             'effect' => 'getEffect',
             'action' => 'getAction',
             'resource' => 'getResource',
-            'condition' => 'getCondition'
+            'condition' => 'getCondition',
+            'sid' => 'getSid'
     ];
 
     /**
@@ -196,6 +206,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['resource'] = isset($data['resource']) ? $data['resource'] : null;
         $this->container['condition'] = isset($data['condition']) ? $data['condition'] : null;
+        $this->container['sid'] = isset($data['sid']) ? $data['sid'] : null;
     }
 
     /**
@@ -330,6 +341,30 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     public function setCondition($condition)
     {
         $this->container['condition'] = $condition;
+        return $this;
+    }
+
+    /**
+    * Gets sid
+    *  策略Id
+    *
+    * @return string|null
+    */
+    public function getSid()
+    {
+        return $this->container['sid'];
+    }
+
+    /**
+    * Sets sid
+    *
+    * @param string|null $sid 策略Id
+    *
+    * @return $this
+    */
+    public function setSid($sid)
+    {
+        $this->container['sid'] = $sid;
         return $this;
     }
 

@@ -275,21 +275,21 @@ class CocClient extends Client
     }
 
     /**
-     * 自动处理设置脚本和runbook
+     * 自动处理告警
      *
-     * 自动处理设置脚本和runbook
+     * 自动处理告警
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function handlerAlarm($request)
+    public function handleAlarm($request)
     {
-        return $this->handlerAlarmWithHttpInfo($request);
+        return $this->handleAlarmWithHttpInfo($request);
     }
 
-    public function handlerAlarmWithHttpInfo($request)
+    public function handleAlarmWithHttpInfo($request)
     {
         $resourcePath = '/v1/alarm-mgmt/alarm/{alarm_id}/auto-process';
         $formParams = [];
@@ -335,8 +335,8 @@ class CocClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\HandlerAlarmResponse',
-            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\HandlerAlarmRequest');
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\HandleAlarmResponse',
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\HandleAlarmRequest');
     }
 
     /**

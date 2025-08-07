@@ -21,8 +21,8 @@ class ListResourcesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resources  resources
-    * totalCount  totalCount
+    * resources  资源对象列表
+    * totalCount  总记录数
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListResourcesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resources  resources
-    * totalCount  totalCount
+    * resources  资源对象列表
+    * totalCount  总记录数
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListResourcesByTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resources  resources
-    * totalCount  totalCount
+    * resources  资源对象列表
+    * totalCount  总记录数
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListResourcesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resources  resources
-    * totalCount  totalCount
+    * resources  资源对象列表
+    * totalCount  总记录数
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListResourcesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resources  resources
-    * totalCount  totalCount
+    * resources  资源对象列表
+    * totalCount  总记录数
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListResourcesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
-    *  resources
+    *  资源对象列表
     *
     * @return \HuaweiCloud\SDK\Vpn\V5\Model\Resource[]|null
     */
@@ -198,7 +198,7 @@ class ListResourcesByTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\Resource[]|null $resources resources
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\Resource[]|null $resources 资源对象列表
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListResourcesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  totalCount
+    *  总记录数
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListResourcesByTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount totalCount
+    * @param int|null $totalCount 总记录数
     *
     * @return $this
     */

@@ -23,7 +23,7 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     * lineId  线路分组ID。 模糊匹配。
     * name  线路分组名称。 模糊匹配。
     * limit  分页查询时配置每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当设置marker不为空时，以marker为分页起始标识，offset不生效。。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当设置marker不为空时，以marker为分页起始标识，offset不生效。
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     * lineId  线路分组ID。 模糊匹配。
     * name  线路分组名称。 模糊匹配。
     * limit  分页查询时配置每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当设置marker不为空时，以marker为分页起始标识，offset不生效。。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当设置marker不为空时，以marker为分页起始标识，offset不生效。
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     * lineId  线路分组ID。 模糊匹配。
     * name  线路分组名称。 模糊匹配。
     * limit  分页查询时配置每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当设置marker不为空时，以marker为分页起始标识，offset不生效。。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当设置marker不为空时，以marker为分页起始标识，offset不生效。
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     * lineId  线路分组ID。 模糊匹配。
     * name  线路分组名称。 模糊匹配。
     * limit  分页查询时配置每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当设置marker不为空时，以marker为分页起始标识，offset不生效。。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当设置marker不为空时，以marker为分页起始标识，offset不生效。
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     * lineId  线路分组ID。 模糊匹配。
     * name  线路分组名称。 模糊匹配。
     * limit  分页查询时配置每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当设置marker不为空时，以marker为分页起始标识，offset不生效。。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当设置marker不为空时，以marker为分页起始标识，offset不生效。
     *
     * @var string[]
     */
@@ -294,7 +294,7 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当设置marker不为空时，以marker为分页起始标识，offset不生效。。
+    *  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当设置marker不为空时，以marker为分页起始标识，offset不生效。
     *
     * @return int|null
     */
@@ -306,7 +306,7 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当设置marker不为空时，以marker为分页起始标识，offset不生效。。
+    * @param int|null $offset 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当设置marker不为空时，以marker为分页起始标识，offset不生效。
     *
     * @return $this
     */

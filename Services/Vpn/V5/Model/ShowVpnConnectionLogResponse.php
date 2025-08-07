@@ -21,9 +21,9 @@ class ShowVpnConnectionLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * logs  logs
+    * logs  日志
     * requestId  请求ID
-    * headerResponseToken  headerResponseToken
+    * headerResponseToken  响应头令牌
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ShowVpnConnectionLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * logs  logs
+    * logs  日志
     * requestId  请求ID
-    * headerResponseToken  headerResponseToken
+    * headerResponseToken  响应头令牌
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ShowVpnConnectionLogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * logs  logs
+    * logs  日志
     * requestId  请求ID
-    * headerResponseToken  headerResponseToken
+    * headerResponseToken  响应头令牌
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ShowVpnConnectionLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * logs  logs
+    * logs  日志
     * requestId  请求ID
-    * headerResponseToken  headerResponseToken
+    * headerResponseToken  响应头令牌
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ShowVpnConnectionLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * logs  logs
+    * logs  日志
     * requestId  请求ID
-    * headerResponseToken  headerResponseToken
+    * headerResponseToken  响应头令牌
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ShowVpnConnectionLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets logs
-    *  logs
+    *  日志
     *
     * @return \HuaweiCloud\SDK\Vpn\V5\Model\Log[]|null
     */
@@ -209,7 +209,7 @@ class ShowVpnConnectionLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets logs
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\Log[]|null $logs logs
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\Log[]|null $logs 日志
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ShowVpnConnectionLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets headerResponseToken
-    *  headerResponseToken
+    *  响应头令牌
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class ShowVpnConnectionLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets headerResponseToken
     *
-    * @param string|null $headerResponseToken headerResponseToken
+    * @param string|null $headerResponseToken 响应头令牌
     *
     * @return $this
     */

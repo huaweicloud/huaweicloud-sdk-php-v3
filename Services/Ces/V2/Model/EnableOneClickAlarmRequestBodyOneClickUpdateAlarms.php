@@ -21,20 +21,20 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Array of property to type mappings. Used for (de)serialization
     * alarmId  告警规则id，以al开头，包含22个数字或字母
-    * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
-    * description  告警描述，长度0-256
+    * name  此字段已废弃。告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
+    * description  此字段已废弃。告警描述，长度0-256
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
-    * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
-    * type  type
+    * resources  此字段已废弃。资源列表，关联资源需要使用查询告警规则资源接口获取
+    * type  此字段已废弃。 **参数解释**： 告警规则类型 **约束限制**： 不涉及。 **取值范围**： 枚举值。ALL_INSTANCE为全部资源指标告警，RESOURCE_GROUP为资源分组指标告警，MULTI_INSTANCE为指定资源指标告警，EVENT.SYS为系统事件告警，EVENT.CUSTOM自定义事件告警，DNSHealthCheck为健康检查告警； **默认取值**： 不涉及。
     * enabled  是否开启告警规则。true:开启，false:关闭。
-    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
-    * alarmNotifications  告警触发的动作
-    * okNotifications  告警恢复触发的动作
-    * notificationBeginTime  告警通知开启时间
-    * notificationEndTime  告警通知关闭时间
-    * notificationManner  通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
-    * notificationPolicyIds  关联的通知策略ID列表
+    * notificationEnabled  此字段已废弃。是否开启告警通知。true:开启，false:关闭。
+    * alarmNotifications  此字段已废弃。告警触发的动作
+    * okNotifications  此字段已废弃。告警恢复触发的动作
+    * notificationBeginTime  此字段已废弃。告警通知开启时间
+    * notificationEndTime  此字段已废弃。告警通知关闭时间
+    * notificationManner  此字段已废弃。通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
+    * notificationPolicyIds  此字段已废弃。关联的通知策略ID列表
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
             'namespace' => 'string',
             'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\Policy[]',
             'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\Dimension[][]',
-            'type' => '\HuaweiCloud\SDK\Ces\V2\Model\AlarmType',
+            'type' => 'string',
             'enabled' => 'bool',
             'notificationEnabled' => 'bool',
             'alarmNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\Notification[]',
@@ -59,20 +59,20 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Array of property to format mappings. Used for (de)serialization
     * alarmId  告警规则id，以al开头，包含22个数字或字母
-    * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
-    * description  告警描述，长度0-256
+    * name  此字段已废弃。告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
+    * description  此字段已废弃。告警描述，长度0-256
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
-    * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
-    * type  type
+    * resources  此字段已废弃。资源列表，关联资源需要使用查询告警规则资源接口获取
+    * type  此字段已废弃。 **参数解释**： 告警规则类型 **约束限制**： 不涉及。 **取值范围**： 枚举值。ALL_INSTANCE为全部资源指标告警，RESOURCE_GROUP为资源分组指标告警，MULTI_INSTANCE为指定资源指标告警，EVENT.SYS为系统事件告警，EVENT.CUSTOM自定义事件告警，DNSHealthCheck为健康检查告警； **默认取值**： 不涉及。
     * enabled  是否开启告警规则。true:开启，false:关闭。
-    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
-    * alarmNotifications  告警触发的动作
-    * okNotifications  告警恢复触发的动作
-    * notificationBeginTime  告警通知开启时间
-    * notificationEndTime  告警通知关闭时间
-    * notificationManner  通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
-    * notificationPolicyIds  关联的通知策略ID列表
+    * notificationEnabled  此字段已废弃。是否开启告警通知。true:开启，false:关闭。
+    * alarmNotifications  此字段已废弃。告警触发的动作
+    * okNotifications  此字段已废弃。告警恢复触发的动作
+    * notificationBeginTime  此字段已废弃。告警通知开启时间
+    * notificationEndTime  此字段已废弃。告警通知关闭时间
+    * notificationManner  此字段已废弃。通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
+    * notificationPolicyIds  此字段已废弃。关联的通知策略ID列表
     *
     * @var string[]
     */
@@ -118,20 +118,20 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * alarmId  告警规则id，以al开头，包含22个数字或字母
-    * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
-    * description  告警描述，长度0-256
+    * name  此字段已废弃。告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
+    * description  此字段已废弃。告警描述，长度0-256
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
-    * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
-    * type  type
+    * resources  此字段已废弃。资源列表，关联资源需要使用查询告警规则资源接口获取
+    * type  此字段已废弃。 **参数解释**： 告警规则类型 **约束限制**： 不涉及。 **取值范围**： 枚举值。ALL_INSTANCE为全部资源指标告警，RESOURCE_GROUP为资源分组指标告警，MULTI_INSTANCE为指定资源指标告警，EVENT.SYS为系统事件告警，EVENT.CUSTOM自定义事件告警，DNSHealthCheck为健康检查告警； **默认取值**： 不涉及。
     * enabled  是否开启告警规则。true:开启，false:关闭。
-    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
-    * alarmNotifications  告警触发的动作
-    * okNotifications  告警恢复触发的动作
-    * notificationBeginTime  告警通知开启时间
-    * notificationEndTime  告警通知关闭时间
-    * notificationManner  通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
-    * notificationPolicyIds  关联的通知策略ID列表
+    * notificationEnabled  此字段已废弃。是否开启告警通知。true:开启，false:关闭。
+    * alarmNotifications  此字段已废弃。告警触发的动作
+    * okNotifications  此字段已废弃。告警恢复触发的动作
+    * notificationBeginTime  此字段已废弃。告警通知开启时间
+    * notificationEndTime  此字段已废弃。告警通知关闭时间
+    * notificationManner  此字段已废弃。通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
+    * notificationPolicyIds  此字段已废弃。关联的通知策略ID列表
     *
     * @var string[]
     */
@@ -156,20 +156,20 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * alarmId  告警规则id，以al开头，包含22个数字或字母
-    * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
-    * description  告警描述，长度0-256
+    * name  此字段已废弃。告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
+    * description  此字段已废弃。告警描述，长度0-256
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
-    * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
-    * type  type
+    * resources  此字段已废弃。资源列表，关联资源需要使用查询告警规则资源接口获取
+    * type  此字段已废弃。 **参数解释**： 告警规则类型 **约束限制**： 不涉及。 **取值范围**： 枚举值。ALL_INSTANCE为全部资源指标告警，RESOURCE_GROUP为资源分组指标告警，MULTI_INSTANCE为指定资源指标告警，EVENT.SYS为系统事件告警，EVENT.CUSTOM自定义事件告警，DNSHealthCheck为健康检查告警； **默认取值**： 不涉及。
     * enabled  是否开启告警规则。true:开启，false:关闭。
-    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
-    * alarmNotifications  告警触发的动作
-    * okNotifications  告警恢复触发的动作
-    * notificationBeginTime  告警通知开启时间
-    * notificationEndTime  告警通知关闭时间
-    * notificationManner  通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
-    * notificationPolicyIds  关联的通知策略ID列表
+    * notificationEnabled  此字段已废弃。是否开启告警通知。true:开启，false:关闭。
+    * alarmNotifications  此字段已废弃。告警触发的动作
+    * okNotifications  此字段已废弃。告警恢复触发的动作
+    * notificationBeginTime  此字段已废弃。告警通知开启时间
+    * notificationEndTime  此字段已废弃。告警通知关闭时间
+    * notificationManner  此字段已废弃。通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
+    * notificationPolicyIds  此字段已废弃。关联的通知策略ID列表
     *
     * @var string[]
     */
@@ -194,20 +194,20 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * alarmId  告警规则id，以al开头，包含22个数字或字母
-    * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
-    * description  告警描述，长度0-256
+    * name  此字段已废弃。告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
+    * description  此字段已废弃。告警描述，长度0-256
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
-    * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
-    * type  type
+    * resources  此字段已废弃。资源列表，关联资源需要使用查询告警规则资源接口获取
+    * type  此字段已废弃。 **参数解释**： 告警规则类型 **约束限制**： 不涉及。 **取值范围**： 枚举值。ALL_INSTANCE为全部资源指标告警，RESOURCE_GROUP为资源分组指标告警，MULTI_INSTANCE为指定资源指标告警，EVENT.SYS为系统事件告警，EVENT.CUSTOM自定义事件告警，DNSHealthCheck为健康检查告警； **默认取值**： 不涉及。
     * enabled  是否开启告警规则。true:开启，false:关闭。
-    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
-    * alarmNotifications  告警触发的动作
-    * okNotifications  告警恢复触发的动作
-    * notificationBeginTime  告警通知开启时间
-    * notificationEndTime  告警通知关闭时间
-    * notificationManner  通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
-    * notificationPolicyIds  关联的通知策略ID列表
+    * notificationEnabled  此字段已废弃。是否开启告警通知。true:开启，false:关闭。
+    * alarmNotifications  此字段已废弃。告警触发的动作
+    * okNotifications  此字段已废弃。告警恢复触发的动作
+    * notificationBeginTime  此字段已废弃。告警通知开启时间
+    * notificationEndTime  此字段已废弃。告警通知关闭时间
+    * notificationManner  此字段已废弃。通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
+    * notificationPolicyIds  此字段已废弃。关联的通知策略ID列表
     *
     * @var string[]
     */
@@ -425,7 +425,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
 
     /**
     * Gets name
-    *  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
+    *  此字段已废弃。告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     *
     * @return string|null
     */
@@ -437,7 +437,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Sets name
     *
-    * @param string|null $name 告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
+    * @param string|null $name 此字段已废弃。告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     *
     * @return $this
     */
@@ -449,7 +449,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
 
     /**
     * Gets description
-    *  告警描述，长度0-256
+    *  此字段已废弃。告警描述，长度0-256
     *
     * @return string|null
     */
@@ -461,7 +461,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Sets description
     *
-    * @param string|null $description 告警描述，长度0-256
+    * @param string|null $description 此字段已废弃。告警描述，长度0-256
     *
     * @return $this
     */
@@ -521,7 +521,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
 
     /**
     * Gets resources
-    *  资源列表，关联资源需要使用查询告警规则资源接口获取
+    *  此字段已废弃。资源列表，关联资源需要使用查询告警规则资源接口获取
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\Dimension[][]|null
     */
@@ -533,7 +533,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Dimension[][]|null $resources 资源列表，关联资源需要使用查询告警规则资源接口获取
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Dimension[][]|null $resources 此字段已废弃。资源列表，关联资源需要使用查询告警规则资源接口获取
     *
     * @return $this
     */
@@ -545,9 +545,9 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
 
     /**
     * Gets type
-    *  type
+    *  此字段已废弃。 **参数解释**： 告警规则类型 **约束限制**： 不涉及。 **取值范围**： 枚举值。ALL_INSTANCE为全部资源指标告警，RESOURCE_GROUP为资源分组指标告警，MULTI_INSTANCE为指定资源指标告警，EVENT.SYS为系统事件告警，EVENT.CUSTOM自定义事件告警，DNSHealthCheck为健康检查告警； **默认取值**： 不涉及。
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\AlarmType|null
+    * @return string|null
     */
     public function getType()
     {
@@ -557,7 +557,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Sets type
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\AlarmType|null $type type
+    * @param string|null $type 此字段已废弃。 **参数解释**： 告警规则类型 **约束限制**： 不涉及。 **取值范围**： 枚举值。ALL_INSTANCE为全部资源指标告警，RESOURCE_GROUP为资源分组指标告警，MULTI_INSTANCE为指定资源指标告警，EVENT.SYS为系统事件告警，EVENT.CUSTOM自定义事件告警，DNSHealthCheck为健康检查告警； **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -593,7 +593,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
 
     /**
     * Gets notificationEnabled
-    *  是否开启告警通知。true:开启，false:关闭。
+    *  此字段已废弃。是否开启告警通知。true:开启，false:关闭。
     *
     * @return bool|null
     */
@@ -605,7 +605,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Sets notificationEnabled
     *
-    * @param bool|null $notificationEnabled 是否开启告警通知。true:开启，false:关闭。
+    * @param bool|null $notificationEnabled 此字段已废弃。是否开启告警通知。true:开启，false:关闭。
     *
     * @return $this
     */
@@ -617,7 +617,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
 
     /**
     * Gets alarmNotifications
-    *  告警触发的动作
+    *  此字段已废弃。告警触发的动作
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null
     */
@@ -629,7 +629,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Sets alarmNotifications
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null $alarmNotifications 告警触发的动作
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null $alarmNotifications 此字段已废弃。告警触发的动作
     *
     * @return $this
     */
@@ -641,7 +641,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
 
     /**
     * Gets okNotifications
-    *  告警恢复触发的动作
+    *  此字段已废弃。告警恢复触发的动作
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null
     */
@@ -653,7 +653,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Sets okNotifications
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null $okNotifications 告警恢复触发的动作
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null $okNotifications 此字段已废弃。告警恢复触发的动作
     *
     * @return $this
     */
@@ -665,7 +665,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
 
     /**
     * Gets notificationBeginTime
-    *  告警通知开启时间
+    *  此字段已废弃。告警通知开启时间
     *
     * @return string|null
     */
@@ -677,7 +677,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Sets notificationBeginTime
     *
-    * @param string|null $notificationBeginTime 告警通知开启时间
+    * @param string|null $notificationBeginTime 此字段已废弃。告警通知开启时间
     *
     * @return $this
     */
@@ -689,7 +689,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
 
     /**
     * Gets notificationEndTime
-    *  告警通知关闭时间
+    *  此字段已废弃。告警通知关闭时间
     *
     * @return string|null
     */
@@ -701,7 +701,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Sets notificationEndTime
     *
-    * @param string|null $notificationEndTime 告警通知关闭时间
+    * @param string|null $notificationEndTime 此字段已废弃。告警通知关闭时间
     *
     * @return $this
     */
@@ -713,7 +713,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
 
     /**
     * Gets notificationManner
-    *  通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
+    *  此字段已废弃。通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
     *
     * @return string|null
     */
@@ -725,7 +725,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Sets notificationManner
     *
-    * @param string|null $notificationManner 通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
+    * @param string|null $notificationManner 此字段已废弃。通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
     *
     * @return $this
     */
@@ -737,7 +737,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
 
     /**
     * Gets notificationPolicyIds
-    *  关联的通知策略ID列表
+    *  此字段已废弃。关联的通知策略ID列表
     *
     * @return string[]|null
     */
@@ -749,7 +749,7 @@ class EnableOneClickAlarmRequestBodyOneClickUpdateAlarms implements ModelInterfa
     /**
     * Sets notificationPolicyIds
     *
-    * @param string[]|null $notificationPolicyIds 关联的通知策略ID列表
+    * @param string[]|null $notificationPolicyIds 此字段已废弃。关联的通知策略ID列表
     *
     * @return $this
     */

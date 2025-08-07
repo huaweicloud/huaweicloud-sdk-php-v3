@@ -91,6 +91,71 @@ class EpsAsyncClient extends Client
     }
 
     /**
+     * 删除企业项目
+     *
+     * 删除企业项目
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteEnterpriseProjectAsync($request)
+    {
+        return $this->deleteEnterpriseProjectAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteEnterpriseProjectAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/enterprise-projects/{enterprise_project_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $pathParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eps\V1\Model\DeleteEnterpriseProjectResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Eps\V1\Model\DeleteEnterpriseProjectRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 停用企业项目
      *
      * 停用企业项目。
@@ -372,6 +437,83 @@ class EpsAsyncClient extends Client
     }
 
     /**
+     * 查询资源迁移记录
+     *
+     * 查询资源迁移记录
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listMigrationRecordAsync($request)
+    {
+        return $this->listMigrationRecordAsyncWithHttpInfo($request);
+    }
+    
+    public function listMigrationRecordAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/enterprise-projects/migrate-record/list';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $queryParams['resource_id'] = $localVarParams['resourceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eps\V1\Model\ListMigrationRecordResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Eps\V1\Model\ListMigrationRecordRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询企业项目支持的服务
      *
      * 查询企业项目支持的服务
@@ -442,6 +584,68 @@ class EpsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Eps\V1\Model\ListProvidersResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eps\V1\Model\ListProvidersRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询资源类型映射
+     *
+     * 查询资源类型映射
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listResourceMappingAsync($request)
+    {
+        return $this->listResourceMappingAsyncWithHttpInfo($request);
+    }
+    
+    public function listResourceMappingAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/enterprise-projects/resources-mapping';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eps\V1\Model\ListResourceMappingResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Eps\V1\Model\ListResourceMappingRequest',
             $asyncRequest = true);
     }
 
@@ -579,6 +783,80 @@ class EpsAsyncClient extends Client
     }
 
     /**
+     * 查询关联资源
+     *
+     * 查询关联资源
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAssociatedResourcesAsync($request)
+    {
+        return $this->showAssociatedResourcesAsyncWithHttpInfo($request);
+    }
+    
+    public function showAssociatedResourcesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/associated-resources/{resource_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $queryParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $queryParams['region_id'] = $localVarParams['regionId'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $queryParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eps\V1\Model\ShowAssociatedResourcesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Eps\V1\Model\ShowAssociatedResourcesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询企业项目详情
      *
      * 查询企业项目详情。
@@ -702,6 +980,68 @@ class EpsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Eps\V1\Model\ShowEnterpriseProjectQuotaResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eps\V1\Model\ShowEnterpriseProjectQuotaRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询服务配置
+     *
+     * 查询服务配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showEpConfigsAsync($request)
+    {
+        return $this->showEpConfigsAsyncWithHttpInfo($request);
+    }
+    
+    public function showEpConfigsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/enterprise-projects/configs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eps\V1\Model\ShowEpConfigsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Eps\V1\Model\ShowEpConfigsRequest',
             $asyncRequest = true);
     }
 

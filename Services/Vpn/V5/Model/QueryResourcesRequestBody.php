@@ -20,9 +20,9 @@ class QueryResourcesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * withoutAnyTag  withoutAnyTag
-    * tags  tags
-    * matches  matches
+    * withoutAnyTag  该字段为true时查询所有不带标签的资源，此时忽略 “tags”字段。该字段为false或者未提供该参数时，该条件不生效，即返回所有资源或按\"tags\"，\"matches\"等条件过滤
+    * tags  标签列表
+    * matches  搜索字段，包含key和value。key为要匹配的字段，如resource_name等。value为匹配的值。key为固定字典值
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class QueryResourcesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * withoutAnyTag  withoutAnyTag
-    * tags  tags
-    * matches  matches
+    * withoutAnyTag  该字段为true时查询所有不带标签的资源，此时忽略 “tags”字段。该字段为false或者未提供该参数时，该条件不生效，即返回所有资源或按\"tags\"，\"matches\"等条件过滤
+    * tags  标签列表
+    * matches  搜索字段，包含key和value。key为要匹配的字段，如resource_name等。value为匹配的值。key为固定字典值
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class QueryResourcesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * withoutAnyTag  withoutAnyTag
-    * tags  tags
-    * matches  matches
+    * withoutAnyTag  该字段为true时查询所有不带标签的资源，此时忽略 “tags”字段。该字段为false或者未提供该参数时，该条件不生效，即返回所有资源或按\"tags\"，\"matches\"等条件过滤
+    * tags  标签列表
+    * matches  搜索字段，包含key和value。key为要匹配的字段，如resource_name等。value为匹配的值。key为固定字典值
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class QueryResourcesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * withoutAnyTag  withoutAnyTag
-    * tags  tags
-    * matches  matches
+    * withoutAnyTag  该字段为true时查询所有不带标签的资源，此时忽略 “tags”字段。该字段为false或者未提供该参数时，该条件不生效，即返回所有资源或按\"tags\"，\"matches\"等条件过滤
+    * tags  标签列表
+    * matches  搜索字段，包含key和value。key为要匹配的字段，如resource_name等。value为匹配的值。key为固定字典值
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class QueryResourcesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * withoutAnyTag  withoutAnyTag
-    * tags  tags
-    * matches  matches
+    * withoutAnyTag  该字段为true时查询所有不带标签的资源，此时忽略 “tags”字段。该字段为false或者未提供该参数时，该条件不生效，即返回所有资源或按\"tags\"，\"matches\"等条件过滤
+    * tags  标签列表
+    * matches  搜索字段，包含key和value。key为要匹配的字段，如resource_name等。value为匹配的值。key为固定字典值
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class QueryResourcesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets withoutAnyTag
-    *  withoutAnyTag
+    *  该字段为true时查询所有不带标签的资源，此时忽略 “tags”字段。该字段为false或者未提供该参数时，该条件不生效，即返回所有资源或按\"tags\"，\"matches\"等条件过滤
     *
     * @return bool|null
     */
@@ -208,7 +208,7 @@ class QueryResourcesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets withoutAnyTag
     *
-    * @param bool|null $withoutAnyTag withoutAnyTag
+    * @param bool|null $withoutAnyTag 该字段为true时查询所有不带标签的资源，此时忽略 “tags”字段。该字段为false或者未提供该参数时，该条件不生效，即返回所有资源或按\"tags\"，\"matches\"等条件过滤
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class QueryResourcesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  tags
+    *  标签列表
     *
     * @return \HuaweiCloud\SDK\Vpn\V5\Model\Tag[]|null
     */
@@ -232,7 +232,7 @@ class QueryResourcesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\Tag[]|null $tags tags
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\Tag[]|null $tags 标签列表
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class QueryResourcesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets matches
-    *  matches
+    *  搜索字段，包含key和value。key为要匹配的字段，如resource_name等。value为匹配的值。key为固定字典值
     *
     * @return \HuaweiCloud\SDK\Vpn\V5\Model\Match[]|null
     */
@@ -256,7 +256,7 @@ class QueryResourcesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets matches
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\Match[]|null $matches matches
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\Match[]|null $matches 搜索字段，包含key和value。key为要匹配的字段，如resource_name等。value为匹配的值。key为固定字典值
     *
     * @return $this
     */

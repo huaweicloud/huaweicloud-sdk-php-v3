@@ -27,6 +27,7 @@ class CreateAccountStatusDto implements ModelInterface, ArrayAccess
     * id  请求的唯一标识符（ID）。您可以从创建账号的初始CreateAccount请求的响应中获得此值。
     * state  创建账号的异步请求的状态，in_progress：处理中，succeeded：成功，failed：失败。
     * failureReason  如果请求失败，则说明失败原因。
+    * failureDetailMsg  failureDetailMsg
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class CreateAccountStatusDto implements ModelInterface, ArrayAccess
             'createdAt' => '\DateTime',
             'id' => 'string',
             'state' => 'string',
-            'failureReason' => 'string'
+            'failureReason' => 'string',
+            'failureDetailMsg' => '\HuaweiCloud\SDK\Organizations\V1\Model\CreateAccountStatusDtoFailureDetailMsg'
     ];
 
     /**
@@ -49,6 +51,7 @@ class CreateAccountStatusDto implements ModelInterface, ArrayAccess
     * id  请求的唯一标识符（ID）。您可以从创建账号的初始CreateAccount请求的响应中获得此值。
     * state  创建账号的异步请求的状态，in_progress：处理中，succeeded：成功，failed：失败。
     * failureReason  如果请求失败，则说明失败原因。
+    * failureDetailMsg  failureDetailMsg
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class CreateAccountStatusDto implements ModelInterface, ArrayAccess
         'createdAt' => 'date-time',
         'id' => null,
         'state' => null,
-        'failureReason' => null
+        'failureReason' => null,
+        'failureDetailMsg' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class CreateAccountStatusDto implements ModelInterface, ArrayAccess
     * id  请求的唯一标识符（ID）。您可以从创建账号的初始CreateAccount请求的响应中获得此值。
     * state  创建账号的异步请求的状态，in_progress：处理中，succeeded：成功，failed：失败。
     * failureReason  如果请求失败，则说明失败原因。
+    * failureDetailMsg  failureDetailMsg
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class CreateAccountStatusDto implements ModelInterface, ArrayAccess
             'createdAt' => 'created_at',
             'id' => 'id',
             'state' => 'state',
-            'failureReason' => 'failure_reason'
+            'failureReason' => 'failure_reason',
+            'failureDetailMsg' => 'failure_detail_msg'
     ];
 
     /**
@@ -114,6 +120,7 @@ class CreateAccountStatusDto implements ModelInterface, ArrayAccess
     * id  请求的唯一标识符（ID）。您可以从创建账号的初始CreateAccount请求的响应中获得此值。
     * state  创建账号的异步请求的状态，in_progress：处理中，succeeded：成功，failed：失败。
     * failureReason  如果请求失败，则说明失败原因。
+    * failureDetailMsg  failureDetailMsg
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class CreateAccountStatusDto implements ModelInterface, ArrayAccess
             'createdAt' => 'setCreatedAt',
             'id' => 'setId',
             'state' => 'setState',
-            'failureReason' => 'setFailureReason'
+            'failureReason' => 'setFailureReason',
+            'failureDetailMsg' => 'setFailureDetailMsg'
     ];
 
     /**
@@ -136,6 +144,7 @@ class CreateAccountStatusDto implements ModelInterface, ArrayAccess
     * id  请求的唯一标识符（ID）。您可以从创建账号的初始CreateAccount请求的响应中获得此值。
     * state  创建账号的异步请求的状态，in_progress：处理中，succeeded：成功，failed：失败。
     * failureReason  如果请求失败，则说明失败原因。
+    * failureDetailMsg  failureDetailMsg
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class CreateAccountStatusDto implements ModelInterface, ArrayAccess
             'createdAt' => 'getCreatedAt',
             'id' => 'getId',
             'state' => 'getState',
-            'failureReason' => 'getFailureReason'
+            'failureReason' => 'getFailureReason',
+            'failureDetailMsg' => 'getFailureDetailMsg'
     ];
 
     /**
@@ -214,6 +224,7 @@ class CreateAccountStatusDto implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['failureReason'] = isset($data['failureReason']) ? $data['failureReason'] : null;
+        $this->container['failureDetailMsg'] = isset($data['failureDetailMsg']) ? $data['failureDetailMsg'] : null;
     }
 
     /**
@@ -445,6 +456,30 @@ class CreateAccountStatusDto implements ModelInterface, ArrayAccess
     public function setFailureReason($failureReason)
     {
         $this->container['failureReason'] = $failureReason;
+        return $this;
+    }
+
+    /**
+    * Gets failureDetailMsg
+    *  failureDetailMsg
+    *
+    * @return \HuaweiCloud\SDK\Organizations\V1\Model\CreateAccountStatusDtoFailureDetailMsg|null
+    */
+    public function getFailureDetailMsg()
+    {
+        return $this->container['failureDetailMsg'];
+    }
+
+    /**
+    * Sets failureDetailMsg
+    *
+    * @param \HuaweiCloud\SDK\Organizations\V1\Model\CreateAccountStatusDtoFailureDetailMsg|null $failureDetailMsg failureDetailMsg
+    *
+    * @return $this
+    */
+    public function setFailureDetailMsg($failureDetailMsg)
+    {
+        $this->container['failureDetailMsg'] = $failureDetailMsg;
         return $this;
     }
 

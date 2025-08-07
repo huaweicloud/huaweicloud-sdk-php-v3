@@ -20,8 +20,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  key
-    * values  values
+    * key  标签的键
+    * values  标签的值列表
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  key
-    * values  values
+    * key  标签的键
+    * values  标签的值列表
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  key
-    * values  values
+    * key  标签的键
+    * values  标签的值列表
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  key
-    * values  values
+    * key  标签的键
+    * values  标签的值列表
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  key
-    * values  values
+    * key  标签的键
+    * values  标签的值列表
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  key
+    *  标签的键
     *
     * @return string
     */
@@ -209,7 +209,7 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key key
+    * @param string $key 标签的键
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  values
+    *  标签的值列表
     *
     * @return string[]
     */
@@ -233,7 +233,7 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param string[] $values values
+    * @param string[] $values 标签的值列表
     *
     * @return $this
     */

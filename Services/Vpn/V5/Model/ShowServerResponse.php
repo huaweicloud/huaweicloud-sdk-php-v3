@@ -27,7 +27,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * clientAuthType  客户端认证类型
     * tunnelProtocol  隧道协议类型
     * serverCertificate  serverCertificate
-    * clientCaCertificates  clientCaCertificates
+    * clientCaCertificates  客户端CA证书列表
     * sslOptions  sslOptions
     * dnsServers  DNS服务器列表
     * status  服务端状态
@@ -61,7 +61,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * clientAuthType  客户端认证类型
     * tunnelProtocol  隧道协议类型
     * serverCertificate  serverCertificate
-    * clientCaCertificates  clientCaCertificates
+    * clientCaCertificates  客户端CA证书列表
     * sslOptions  sslOptions
     * dnsServers  DNS服务器列表
     * status  服务端状态
@@ -116,7 +116,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * clientAuthType  客户端认证类型
     * tunnelProtocol  隧道协议类型
     * serverCertificate  serverCertificate
-    * clientCaCertificates  clientCaCertificates
+    * clientCaCertificates  客户端CA证书列表
     * sslOptions  sslOptions
     * dnsServers  DNS服务器列表
     * status  服务端状态
@@ -150,7 +150,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * clientAuthType  客户端认证类型
     * tunnelProtocol  隧道协议类型
     * serverCertificate  serverCertificate
-    * clientCaCertificates  clientCaCertificates
+    * clientCaCertificates  客户端CA证书列表
     * sslOptions  sslOptions
     * dnsServers  DNS服务器列表
     * status  服务端状态
@@ -184,7 +184,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * clientAuthType  客户端认证类型
     * tunnelProtocol  隧道协议类型
     * serverCertificate  serverCertificate
-    * clientCaCertificates  clientCaCertificates
+    * clientCaCertificates  客户端CA证书列表
     * sslOptions  sslOptions
     * dnsServers  DNS服务器列表
     * status  服务端状态
@@ -474,7 +474,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets clientCaCertificates
-    *  clientCaCertificates
+    *  客户端CA证书列表
     *
     * @return \HuaweiCloud\SDK\Vpn\V5\Model\QueryClientCaCertificateBody[]|null
     */
@@ -486,7 +486,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets clientCaCertificates
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\QueryClientCaCertificateBody[]|null $clientCaCertificates clientCaCertificates
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\QueryClientCaCertificateBody[]|null $clientCaCertificates 客户端CA证书列表
     *
     * @return $this
     */

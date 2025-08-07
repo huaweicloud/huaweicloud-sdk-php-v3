@@ -183,8 +183,8 @@ class ListP2cVgwConnectionsRequest implements ModelInterface, ArrayAccess
         if ($this->container['p2cVgwId'] === null) {
             $invalidProperties[] = "'p2cVgwId' can't be null";
         }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 3000)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 3000.";

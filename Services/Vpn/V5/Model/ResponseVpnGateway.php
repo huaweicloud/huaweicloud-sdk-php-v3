@@ -25,7 +25,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * status  VPN网关状态
     * attachmentType  关联模式
     * ipVersion  网关的IP协议版本
-    * certificateId  certificateId
+    * certificateId  证书ID
     * erId  VPN网关所连接的ER实例的ID
     * erAttachmentId  VPN网关关联的ER连接ID
     * vpcId  VPN网关所连接的VPC的ID
@@ -103,7 +103,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * status  VPN网关状态
     * attachmentType  关联模式
     * ipVersion  网关的IP协议版本
-    * certificateId  certificateId
+    * certificateId  证书ID
     * erId  VPN网关所连接的ER实例的ID
     * erAttachmentId  VPN网关关联的ER连接ID
     * vpcId  VPN网关所连接的VPC的ID
@@ -202,7 +202,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * status  VPN网关状态
     * attachmentType  关联模式
     * ipVersion  网关的IP协议版本
-    * certificateId  certificateId
+    * certificateId  证书ID
     * erId  VPN网关所连接的ER实例的ID
     * erAttachmentId  VPN网关关联的ER连接ID
     * vpcId  VPN网关所连接的VPC的ID
@@ -280,7 +280,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * status  VPN网关状态
     * attachmentType  关联模式
     * ipVersion  网关的IP协议版本
-    * certificateId  certificateId
+    * certificateId  证书ID
     * erId  VPN网关所连接的ER实例的ID
     * erAttachmentId  VPN网关关联的ER连接ID
     * vpcId  VPN网关所连接的VPC的ID
@@ -358,7 +358,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * status  VPN网关状态
     * attachmentType  关联模式
     * ipVersion  网关的IP协议版本
-    * certificateId  certificateId
+    * certificateId  证书ID
     * erId  VPN网关所连接的ER实例的ID
     * erAttachmentId  VPN网关关联的ER连接ID
     * vpcId  VPN网关所连接的VPC的ID
@@ -779,7 +779,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificateId
-    *  certificateId
+    *  证书ID
     *
     * @return string|null
     */
@@ -791,7 +791,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     /**
     * Sets certificateId
     *
-    * @param string|null $certificateId certificateId
+    * @param string|null $certificateId 证书ID
     *
     * @return $this
     */

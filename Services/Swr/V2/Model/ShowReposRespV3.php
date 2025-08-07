@@ -31,7 +31,7 @@ class ShowReposRespV3 implements ModelInterface, ArrayAccess
     * createdAt  仓库创建时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updatedAt  仓库更新时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * domainName  仓库所属租户
-    * namespace  租户的组织名称
+    * namespaceName  租户的组织名称
     * status  查询他人共享镜像：共享是否过期 查询我共享的镜像：默认为false,无意义
     *
     * @var string[]
@@ -48,7 +48,7 @@ class ShowReposRespV3 implements ModelInterface, ArrayAccess
             'createdAt' => 'string',
             'updatedAt' => 'string',
             'domainName' => 'string',
-            'namespace' => 'string',
+            'namespaceName' => 'string',
             'status' => 'bool'
     ];
 
@@ -65,7 +65,7 @@ class ShowReposRespV3 implements ModelInterface, ArrayAccess
     * createdAt  仓库创建时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updatedAt  仓库更新时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * domainName  仓库所属租户
-    * namespace  租户的组织名称
+    * namespaceName  租户的组织名称
     * status  查询他人共享镜像：共享是否过期 查询我共享的镜像：默认为false,无意义
     *
     * @var string[]
@@ -82,7 +82,7 @@ class ShowReposRespV3 implements ModelInterface, ArrayAccess
         'createdAt' => null,
         'updatedAt' => null,
         'domainName' => null,
-        'namespace' => null,
+        'namespaceName' => null,
         'status' => null
     ];
 
@@ -120,7 +120,7 @@ class ShowReposRespV3 implements ModelInterface, ArrayAccess
     * createdAt  仓库创建时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updatedAt  仓库更新时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * domainName  仓库所属租户
-    * namespace  租户的组织名称
+    * namespaceName  租户的组织名称
     * status  查询他人共享镜像：共享是否过期 查询我共享的镜像：默认为false,无意义
     *
     * @var string[]
@@ -137,7 +137,7 @@ class ShowReposRespV3 implements ModelInterface, ArrayAccess
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
             'domainName' => 'domain_name',
-            'namespace' => 'namespace',
+            'namespaceName' => 'namespace_name',
             'status' => 'status'
     ];
 
@@ -154,7 +154,7 @@ class ShowReposRespV3 implements ModelInterface, ArrayAccess
     * createdAt  仓库创建时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updatedAt  仓库更新时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * domainName  仓库所属租户
-    * namespace  租户的组织名称
+    * namespaceName  租户的组织名称
     * status  查询他人共享镜像：共享是否过期 查询我共享的镜像：默认为false,无意义
     *
     * @var string[]
@@ -171,7 +171,7 @@ class ShowReposRespV3 implements ModelInterface, ArrayAccess
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
             'domainName' => 'setDomainName',
-            'namespace' => 'setNamespace',
+            'namespaceName' => 'setNamespaceName',
             'status' => 'setStatus'
     ];
 
@@ -188,7 +188,7 @@ class ShowReposRespV3 implements ModelInterface, ArrayAccess
     * createdAt  仓库创建时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updatedAt  仓库更新时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * domainName  仓库所属租户
-    * namespace  租户的组织名称
+    * namespaceName  租户的组织名称
     * status  查询他人共享镜像：共享是否过期 查询我共享的镜像：默认为false,无意义
     *
     * @var string[]
@@ -205,7 +205,7 @@ class ShowReposRespV3 implements ModelInterface, ArrayAccess
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
             'domainName' => 'getDomainName',
-            'namespace' => 'getNamespace',
+            'namespaceName' => 'getNamespaceName',
             'status' => 'getStatus'
     ];
 
@@ -278,7 +278,7 @@ class ShowReposRespV3 implements ModelInterface, ArrayAccess
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['domainName'] = isset($data['domainName']) ? $data['domainName'] : null;
-        $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
+        $this->container['namespaceName'] = isset($data['namespaceName']) ? $data['namespaceName'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
@@ -323,8 +323,8 @@ class ShowReposRespV3 implements ModelInterface, ArrayAccess
         if ($this->container['domainName'] === null) {
             $invalidProperties[] = "'domainName' can't be null";
         }
-        if ($this->container['namespace'] === null) {
-            $invalidProperties[] = "'namespace' can't be null";
+        if ($this->container['namespaceName'] === null) {
+            $invalidProperties[] = "'namespaceName' can't be null";
         }
         return $invalidProperties;
     }
@@ -605,26 +605,26 @@ class ShowReposRespV3 implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets namespace
+    * Gets namespaceName
     *  租户的组织名称
     *
     * @return string
     */
-    public function getNamespace()
+    public function getNamespaceName()
     {
-        return $this->container['namespace'];
+        return $this->container['namespaceName'];
     }
 
     /**
-    * Sets namespace
+    * Sets namespaceName
     *
-    * @param string $namespace 租户的组织名称
+    * @param string $namespaceName 租户的组织名称
     *
     * @return $this
     */
-    public function setNamespace($namespace)
+    public function setNamespaceName($namespaceName)
     {
-        $this->container['namespace'] = $namespace;
+        $this->container['namespaceName'] = $namespaceName;
         return $this;
     }
 

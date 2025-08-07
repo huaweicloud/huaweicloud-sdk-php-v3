@@ -12551,6 +12551,18 @@ class DataArtsStudioClient extends Client
         if ($localVarParams['itemName'] !== null) {
             $queryParams['item_name'] = $localVarParams['itemName'];
         }
+        if ($localVarParams['updateType'] !== null) {
+            $queryParams['update_type'] = $localVarParams['updateType'];
+        }
+        if ($localVarParams['taskType'] !== null) {
+            $queryParams['task_type'] = $localVarParams['taskType'];
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }

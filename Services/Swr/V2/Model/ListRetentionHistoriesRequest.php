@@ -22,6 +22,8 @@ class ListRetentionHistoriesRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。
     * repository  镜像仓库名称
+    * limit  返回条数。注意：offset和limit参数需要配套使用。
+    * offset  起始索引。注意：offset和limit参数需要配套使用。
     * filter  应填写 limit::{limit}|offset::{offset}, 其中{limit}为返回条数,{offset}为起始索引, 注意：offset和limit参数需要配套使用
     *
     * @var string[]
@@ -29,6 +31,8 @@ class ListRetentionHistoriesRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'namespace' => 'string',
             'repository' => 'string',
+            'limit' => 'string',
+            'offset' => 'string',
             'filter' => 'string'
     ];
 
@@ -36,6 +40,8 @@ class ListRetentionHistoriesRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。
     * repository  镜像仓库名称
+    * limit  返回条数。注意：offset和limit参数需要配套使用。
+    * offset  起始索引。注意：offset和limit参数需要配套使用。
     * filter  应填写 limit::{limit}|offset::{offset}, 其中{limit}为返回条数,{offset}为起始索引, 注意：offset和limit参数需要配套使用
     *
     * @var string[]
@@ -43,6 +49,8 @@ class ListRetentionHistoriesRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'namespace' => null,
         'repository' => null,
+        'limit' => null,
+        'offset' => null,
         'filter' => null
     ];
 
@@ -71,6 +79,8 @@ class ListRetentionHistoriesRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。
     * repository  镜像仓库名称
+    * limit  返回条数。注意：offset和limit参数需要配套使用。
+    * offset  起始索引。注意：offset和limit参数需要配套使用。
     * filter  应填写 limit::{limit}|offset::{offset}, 其中{limit}为返回条数,{offset}为起始索引, 注意：offset和limit参数需要配套使用
     *
     * @var string[]
@@ -78,6 +88,8 @@ class ListRetentionHistoriesRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'namespace' => 'namespace',
             'repository' => 'repository',
+            'limit' => 'limit',
+            'offset' => 'offset',
             'filter' => 'filter'
     ];
 
@@ -85,6 +97,8 @@ class ListRetentionHistoriesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。
     * repository  镜像仓库名称
+    * limit  返回条数。注意：offset和limit参数需要配套使用。
+    * offset  起始索引。注意：offset和limit参数需要配套使用。
     * filter  应填写 limit::{limit}|offset::{offset}, 其中{limit}为返回条数,{offset}为起始索引, 注意：offset和limit参数需要配套使用
     *
     * @var string[]
@@ -92,6 +106,8 @@ class ListRetentionHistoriesRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'namespace' => 'setNamespace',
             'repository' => 'setRepository',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset',
             'filter' => 'setFilter'
     ];
 
@@ -99,6 +115,8 @@ class ListRetentionHistoriesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。
     * repository  镜像仓库名称
+    * limit  返回条数。注意：offset和limit参数需要配套使用。
+    * offset  起始索引。注意：offset和limit参数需要配套使用。
     * filter  应填写 limit::{limit}|offset::{offset}, 其中{limit}为返回条数,{offset}为起始索引, 注意：offset和limit参数需要配套使用
     *
     * @var string[]
@@ -106,6 +124,8 @@ class ListRetentionHistoriesRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'namespace' => 'getNamespace',
             'repository' => 'getRepository',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset',
             'filter' => 'getFilter'
     ];
 
@@ -169,6 +189,8 @@ class ListRetentionHistoriesRequest implements ModelInterface, ArrayAccess
     {
         $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
         $this->container['repository'] = isset($data['repository']) ? $data['repository'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['filter'] = isset($data['filter']) ? $data['filter'] : null;
     }
 
@@ -245,6 +267,54 @@ class ListRetentionHistoriesRequest implements ModelInterface, ArrayAccess
     public function setRepository($repository)
     {
         $this->container['repository'] = $repository;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  返回条数。注意：offset和limit参数需要配套使用。
+    *
+    * @return string|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param string|null $limit 返回条数。注意：offset和limit参数需要配套使用。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  起始索引。注意：offset和limit参数需要配套使用。
+    *
+    * @return string|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param string|null $offset 起始索引。注意：offset和limit参数需要配套使用。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
         return $this;
     }
 

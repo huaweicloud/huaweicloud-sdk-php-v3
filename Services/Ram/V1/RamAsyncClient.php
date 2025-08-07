@@ -798,6 +798,74 @@ class RamAsyncClient extends Client
     }
 
     /**
+     * 检索资源使用者并去除其中的重复项
+     *
+     * 检索您正在共享资源的不同使用者或被共享资源给您的不同使用者并去除其中的重复项。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function searchDistinctPrincipalsAsync($request)
+    {
+        return $this->searchDistinctPrincipalsAsyncWithHttpInfo($request);
+    }
+    
+    public function searchDistinctPrincipalsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/shared-principals/search-distinct-principal';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ram\V1\Model\SearchDistinctPrincipalsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ram\V1\Model\SearchDistinctPrincipalsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 检索资源使用者
      *
      * 检索共享资源的使用者。
@@ -862,6 +930,74 @@ class RamAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Ram\V1\Model\SearchSharedPrincipalsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ram\V1\Model\SearchSharedPrincipalsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 检索共享的资源并去除其中的重复项
+     *
+     * 检索您添加到资源共享或被共享给您的不同资源并去除其中的重复项。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function searchDistinctSharedResourcesAsync($request)
+    {
+        return $this->searchDistinctSharedResourcesAsyncWithHttpInfo($request);
+    }
+    
+    public function searchDistinctSharedResourcesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/shared-resources/search-distinct-resource';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ram\V1\Model\SearchDistinctSharedResourcesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ram\V1\Model\SearchDistinctSharedResourcesRequest',
             $asyncRequest = true);
     }
 

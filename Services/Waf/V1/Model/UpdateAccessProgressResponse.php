@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Coc\V1\Model;
+namespace HuaweiCloud\SDK\Waf\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class HandlerAlarmRequest implements ModelInterface, ArrayAccess
+class UpdateAccessProgressResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,30 @@ class HandlerAlarmRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'HandlerAlarmRequest';
+    protected static $openAPIModelName = 'UpdateAccessProgressResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmId  告警ID
-    * body  body
+    * step  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * status  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'alarmId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Coc\V1\Model\AutoHandlerAlarmRequestBody'
+            'step' => 'int',
+            'status' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmId  告警ID
-    * body  body
+    * step  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * status  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'alarmId' => null,
-        'body' => null
+        'step' => null,
+        'status' => null
     ];
 
     /**
@@ -65,38 +66,38 @@ class HandlerAlarmRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmId  告警ID
-    * body  body
+    * step  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * status  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'alarmId' => 'alarm_id',
-            'body' => 'body'
+            'step' => 'step',
+            'status' => 'status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmId  告警ID
-    * body  body
+    * step  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * status  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
-            'alarmId' => 'setAlarmId',
-            'body' => 'setBody'
+            'step' => 'setStep',
+            'status' => 'setStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmId  告警ID
-    * body  body
+    * step  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * status  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
-            'alarmId' => 'getAlarmId',
-            'body' => 'getBody'
+            'step' => 'getStep',
+            'status' => 'getStatus'
     ];
 
     /**
@@ -157,8 +158,8 @@ class HandlerAlarmRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['alarmId'] = isset($data['alarmId']) ? $data['alarmId'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['step'] = isset($data['step']) ? $data['step'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -169,15 +170,6 @@ class HandlerAlarmRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['alarmId'] === null) {
-            $invalidProperties[] = "'alarmId' can't be null";
-        }
-            if ((mb_strlen($this->container['alarmId']) > 26)) {
-                $invalidProperties[] = "invalid value for 'alarmId', the character length must be smaller than or equal to 26.";
-            }
-            if ((mb_strlen($this->container['alarmId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'alarmId', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -193,50 +185,50 @@ class HandlerAlarmRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets alarmId
-    *  告警ID
+    * Gets step
+    *  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
-    * @return string
+    * @return int|null
     */
-    public function getAlarmId()
+    public function getStep()
     {
-        return $this->container['alarmId'];
+        return $this->container['step'];
     }
 
     /**
-    * Sets alarmId
+    * Sets step
     *
-    * @param string $alarmId 告警ID
+    * @param int|null $step **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
-    public function setAlarmId($alarmId)
+    public function setStep($step)
     {
-        $this->container['alarmId'] = $alarmId;
+        $this->container['step'] = $step;
         return $this;
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets status
+    *  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
-    * @return \HuaweiCloud\SDK\Coc\V1\Model\AutoHandlerAlarmRequestBody|null
+    * @return int|null
     */
-    public function getBody()
+    public function getStatus()
     {
-        return $this->container['body'];
+        return $this->container['status'];
     }
 
     /**
-    * Sets body
+    * Sets status
     *
-    * @param \HuaweiCloud\SDK\Coc\V1\Model\AutoHandlerAlarmRequestBody|null $body body
+    * @param int|null $status **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setStatus($status)
     {
-        $this->container['body'] = $body;
+        $this->container['status'] = $status;
         return $this;
     }
 

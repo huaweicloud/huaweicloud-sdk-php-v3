@@ -186,8 +186,8 @@ class ListVpnUsersRequest implements ModelInterface, ArrayAccess
             if (!preg_match("/[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}/", $this->container['vpnServerId'])) {
                 $invalidProperties[] = "invalid value for 'vpnServerId', must be conform to the pattern /[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}/.";
             }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 500)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 500.";
             }
         return $invalidProperties;
     }

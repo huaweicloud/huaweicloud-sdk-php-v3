@@ -21,7 +21,7 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vpnServers  vpnServers
+    * vpnServers  服务端列表
     * totalCount  总数
     * pageInfo  pageInfo
     * requestId  请求id
@@ -39,7 +39,7 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vpnServers  vpnServers
+    * vpnServers  服务端列表
     * totalCount  总数
     * pageInfo  pageInfo
     * requestId  请求id
@@ -78,7 +78,7 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vpnServers  vpnServers
+    * vpnServers  服务端列表
     * totalCount  总数
     * pageInfo  pageInfo
     * requestId  请求id
@@ -96,7 +96,7 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vpnServers  vpnServers
+    * vpnServers  服务端列表
     * totalCount  总数
     * pageInfo  pageInfo
     * requestId  请求id
@@ -114,7 +114,7 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vpnServers  vpnServers
+    * vpnServers  服务端列表
     * totalCount  总数
     * pageInfo  pageInfo
     * requestId  请求id
@@ -219,7 +219,7 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpnServers
-    *  vpnServers
+    *  服务端列表
     *
     * @return \HuaweiCloud\SDK\Vpn\V5\Model\ShowServerResponse[]|null
     */
@@ -231,7 +231,7 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
     /**
     * Sets vpnServers
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\ShowServerResponse[]|null $vpnServers vpnServers
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\ShowServerResponse[]|null $vpnServers 服务端列表
     *
     * @return $this
     */

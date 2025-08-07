@@ -24,6 +24,10 @@ class ListFactoryPendingItemsRequest implements ModelInterface, ArrayAccess
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * submitUserName  提交人。
     * itemName  任务名称。
+    * updateType  变更类型。
+    * taskType  任务类型。
+    * startTime  开始时间。
+    * endTime  结束时间。
     * limit  分页返回结果，指定每页最大记录数。范围[1,100] 默认值：10
     * offset  分页列表的页数，默认值为0。取值范围大于等于0。
     *
@@ -34,6 +38,10 @@ class ListFactoryPendingItemsRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'string',
             'submitUserName' => 'string',
             'itemName' => 'string',
+            'updateType' => 'string',
+            'taskType' => 'string',
+            'startTime' => 'string',
+            'endTime' => 'string',
             'limit' => 'int',
             'offset' => 'int'
     ];
@@ -44,6 +52,10 @@ class ListFactoryPendingItemsRequest implements ModelInterface, ArrayAccess
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * submitUserName  提交人。
     * itemName  任务名称。
+    * updateType  变更类型。
+    * taskType  任务类型。
+    * startTime  开始时间。
+    * endTime  结束时间。
     * limit  分页返回结果，指定每页最大记录数。范围[1,100] 默认值：10
     * offset  分页列表的页数，默认值为0。取值范围大于等于0。
     *
@@ -54,6 +66,10 @@ class ListFactoryPendingItemsRequest implements ModelInterface, ArrayAccess
         'xProjectId' => null,
         'submitUserName' => null,
         'itemName' => null,
+        'updateType' => null,
+        'taskType' => null,
+        'startTime' => null,
+        'endTime' => null,
         'limit' => null,
         'offset' => null
     ];
@@ -85,6 +101,10 @@ class ListFactoryPendingItemsRequest implements ModelInterface, ArrayAccess
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * submitUserName  提交人。
     * itemName  任务名称。
+    * updateType  变更类型。
+    * taskType  任务类型。
+    * startTime  开始时间。
+    * endTime  结束时间。
     * limit  分页返回结果，指定每页最大记录数。范围[1,100] 默认值：10
     * offset  分页列表的页数，默认值为0。取值范围大于等于0。
     *
@@ -95,6 +115,10 @@ class ListFactoryPendingItemsRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'X-Project-Id',
             'submitUserName' => 'submit_user_name',
             'itemName' => 'item_name',
+            'updateType' => 'update_type',
+            'taskType' => 'task_type',
+            'startTime' => 'start_time',
+            'endTime' => 'end_time',
             'limit' => 'limit',
             'offset' => 'offset'
     ];
@@ -105,6 +129,10 @@ class ListFactoryPendingItemsRequest implements ModelInterface, ArrayAccess
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * submitUserName  提交人。
     * itemName  任务名称。
+    * updateType  变更类型。
+    * taskType  任务类型。
+    * startTime  开始时间。
+    * endTime  结束时间。
     * limit  分页返回结果，指定每页最大记录数。范围[1,100] 默认值：10
     * offset  分页列表的页数，默认值为0。取值范围大于等于0。
     *
@@ -115,6 +143,10 @@ class ListFactoryPendingItemsRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'setXProjectId',
             'submitUserName' => 'setSubmitUserName',
             'itemName' => 'setItemName',
+            'updateType' => 'setUpdateType',
+            'taskType' => 'setTaskType',
+            'startTime' => 'setStartTime',
+            'endTime' => 'setEndTime',
             'limit' => 'setLimit',
             'offset' => 'setOffset'
     ];
@@ -125,6 +157,10 @@ class ListFactoryPendingItemsRequest implements ModelInterface, ArrayAccess
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * submitUserName  提交人。
     * itemName  任务名称。
+    * updateType  变更类型。
+    * taskType  任务类型。
+    * startTime  开始时间。
+    * endTime  结束时间。
     * limit  分页返回结果，指定每页最大记录数。范围[1,100] 默认值：10
     * offset  分页列表的页数，默认值为0。取值范围大于等于0。
     *
@@ -135,6 +171,10 @@ class ListFactoryPendingItemsRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'getXProjectId',
             'submitUserName' => 'getSubmitUserName',
             'itemName' => 'getItemName',
+            'updateType' => 'getUpdateType',
+            'taskType' => 'getTaskType',
+            'startTime' => 'getStartTime',
+            'endTime' => 'getEndTime',
             'limit' => 'getLimit',
             'offset' => 'getOffset'
     ];
@@ -201,6 +241,10 @@ class ListFactoryPendingItemsRequest implements ModelInterface, ArrayAccess
         $this->container['xProjectId'] = isset($data['xProjectId']) ? $data['xProjectId'] : null;
         $this->container['submitUserName'] = isset($data['submitUserName']) ? $data['submitUserName'] : null;
         $this->container['itemName'] = isset($data['itemName']) ? $data['itemName'] : null;
+        $this->container['updateType'] = isset($data['updateType']) ? $data['updateType'] : null;
+        $this->container['taskType'] = isset($data['taskType']) ? $data['taskType'] : null;
+        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
+        $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
@@ -341,6 +385,102 @@ class ListFactoryPendingItemsRequest implements ModelInterface, ArrayAccess
     public function setItemName($itemName)
     {
         $this->container['itemName'] = $itemName;
+        return $this;
+    }
+
+    /**
+    * Gets updateType
+    *  变更类型。
+    *
+    * @return string|null
+    */
+    public function getUpdateType()
+    {
+        return $this->container['updateType'];
+    }
+
+    /**
+    * Sets updateType
+    *
+    * @param string|null $updateType 变更类型。
+    *
+    * @return $this
+    */
+    public function setUpdateType($updateType)
+    {
+        $this->container['updateType'] = $updateType;
+        return $this;
+    }
+
+    /**
+    * Gets taskType
+    *  任务类型。
+    *
+    * @return string|null
+    */
+    public function getTaskType()
+    {
+        return $this->container['taskType'];
+    }
+
+    /**
+    * Sets taskType
+    *
+    * @param string|null $taskType 任务类型。
+    *
+    * @return $this
+    */
+    public function setTaskType($taskType)
+    {
+        $this->container['taskType'] = $taskType;
+        return $this;
+    }
+
+    /**
+    * Gets startTime
+    *  开始时间。
+    *
+    * @return string|null
+    */
+    public function getStartTime()
+    {
+        return $this->container['startTime'];
+    }
+
+    /**
+    * Sets startTime
+    *
+    * @param string|null $startTime 开始时间。
+    *
+    * @return $this
+    */
+    public function setStartTime($startTime)
+    {
+        $this->container['startTime'] = $startTime;
+        return $this;
+    }
+
+    /**
+    * Gets endTime
+    *  结束时间。
+    *
+    * @return string|null
+    */
+    public function getEndTime()
+    {
+        return $this->container['endTime'];
+    }
+
+    /**
+    * Sets endTime
+    *
+    * @param string|null $endTime 结束时间。
+    *
+    * @return $this
+    */
+    public function setEndTime($endTime)
+    {
+        $this->container['endTime'] = $endTime;
         return $this;
     }
 

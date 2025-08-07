@@ -21,7 +21,7 @@ class ListVpnConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vpnConnections  vpnConnections
+    * vpnConnections  VPN连接对象数组
     * pageInfo  pageInfo
     * requestId  请求ID
     * totalCount  租户下连接总数
@@ -39,7 +39,7 @@ class ListVpnConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vpnConnections  vpnConnections
+    * vpnConnections  VPN连接对象数组
     * pageInfo  pageInfo
     * requestId  请求ID
     * totalCount  租户下连接总数
@@ -78,7 +78,7 @@ class ListVpnConnectionsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vpnConnections  vpnConnections
+    * vpnConnections  VPN连接对象数组
     * pageInfo  pageInfo
     * requestId  请求ID
     * totalCount  租户下连接总数
@@ -96,7 +96,7 @@ class ListVpnConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vpnConnections  vpnConnections
+    * vpnConnections  VPN连接对象数组
     * pageInfo  pageInfo
     * requestId  请求ID
     * totalCount  租户下连接总数
@@ -114,7 +114,7 @@ class ListVpnConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vpnConnections  vpnConnections
+    * vpnConnections  VPN连接对象数组
     * pageInfo  pageInfo
     * requestId  请求ID
     * totalCount  租户下连接总数
@@ -219,7 +219,7 @@ class ListVpnConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpnConnections
-    *  vpnConnections
+    *  VPN连接对象数组
     *
     * @return \HuaweiCloud\SDK\Vpn\V5\Model\ResponseVpnConnection[]|null
     */
@@ -231,7 +231,7 @@ class ListVpnConnectionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets vpnConnections
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\ResponseVpnConnection[]|null $vpnConnections vpnConnections
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\ResponseVpnConnection[]|null $vpnConnections VPN连接对象数组
     *
     * @return $this
     */

@@ -20,17 +20,17 @@ class InstanceRestartRequsetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * restart  空值
+    * restart  restart
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'restart' => 'object'
+            'restart' => '\HuaweiCloud\SDK\Rds\V3\Model\RestartConfiguration'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * restart  空值
+    * restart  restart
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class InstanceRestartRequsetBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * restart  空值
+    * restart  restart
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class InstanceRestartRequsetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * restart  空值
+    * restart  restart
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class InstanceRestartRequsetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * restart  空值
+    * restart  restart
     *
     * @var string[]
     */
@@ -177,9 +177,9 @@ class InstanceRestartRequsetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets restart
-    *  空值
+    *  restart
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\RestartConfiguration
     */
     public function getRestart()
     {
@@ -189,7 +189,7 @@ class InstanceRestartRequsetBody implements ModelInterface, ArrayAccess
     /**
     * Sets restart
     *
-    * @param object $restart 空值
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\RestartConfiguration $restart restart
     *
     * @return $this
     */

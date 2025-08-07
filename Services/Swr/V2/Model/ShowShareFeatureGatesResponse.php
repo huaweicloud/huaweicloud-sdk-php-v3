@@ -29,6 +29,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableCciService  是否支持对接cci服务
     * enableImageLabel  是否支持镜像标签
     * enablePipeline  是否支持流水线服务
+    * enableAuthorizationToken  是否支持增强型临时登录指令。设置为true时，前端获取登录指令时可以选择获取增强型登录指令。
+    * enableResource  是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
     * enableListV3  是否支持list v3接口
     *
     * @var string[]
@@ -42,6 +44,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableCciService' => 'bool',
             'enableImageLabel' => 'bool',
             'enablePipeline' => 'bool',
+            'enableAuthorizationToken' => 'bool',
+            'enableResource' => 'bool',
             'enableListV3' => 'bool'
     ];
 
@@ -55,6 +59,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableCciService  是否支持对接cci服务
     * enableImageLabel  是否支持镜像标签
     * enablePipeline  是否支持流水线服务
+    * enableAuthorizationToken  是否支持增强型临时登录指令。设置为true时，前端获取登录指令时可以选择获取增强型登录指令。
+    * enableResource  是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
     * enableListV3  是否支持list v3接口
     *
     * @var string[]
@@ -68,6 +74,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
         'enableCciService' => null,
         'enableImageLabel' => null,
         'enablePipeline' => null,
+        'enableAuthorizationToken' => null,
+        'enableResource' => null,
         'enableListV3' => null
     ];
 
@@ -102,6 +110,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableCciService  是否支持对接cci服务
     * enableImageLabel  是否支持镜像标签
     * enablePipeline  是否支持流水线服务
+    * enableAuthorizationToken  是否支持增强型临时登录指令。设置为true时，前端获取登录指令时可以选择获取增强型登录指令。
+    * enableResource  是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
     * enableListV3  是否支持list v3接口
     *
     * @var string[]
@@ -115,6 +125,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableCciService' => 'enable_cci_service',
             'enableImageLabel' => 'enable_image_label',
             'enablePipeline' => 'enable_pipeline',
+            'enableAuthorizationToken' => 'enable_authorization_token',
+            'enableResource' => 'enable_resource',
             'enableListV3' => 'enable_list_v3'
     ];
 
@@ -128,6 +140,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableCciService  是否支持对接cci服务
     * enableImageLabel  是否支持镜像标签
     * enablePipeline  是否支持流水线服务
+    * enableAuthorizationToken  是否支持增强型临时登录指令。设置为true时，前端获取登录指令时可以选择获取增强型登录指令。
+    * enableResource  是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
     * enableListV3  是否支持list v3接口
     *
     * @var string[]
@@ -141,6 +155,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableCciService' => 'setEnableCciService',
             'enableImageLabel' => 'setEnableImageLabel',
             'enablePipeline' => 'setEnablePipeline',
+            'enableAuthorizationToken' => 'setEnableAuthorizationToken',
+            'enableResource' => 'setEnableResource',
             'enableListV3' => 'setEnableListV3'
     ];
 
@@ -154,6 +170,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableCciService  是否支持对接cci服务
     * enableImageLabel  是否支持镜像标签
     * enablePipeline  是否支持流水线服务
+    * enableAuthorizationToken  是否支持增强型临时登录指令。设置为true时，前端获取登录指令时可以选择获取增强型登录指令。
+    * enableResource  是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
     * enableListV3  是否支持list v3接口
     *
     * @var string[]
@@ -167,6 +185,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableCciService' => 'getEnableCciService',
             'enableImageLabel' => 'getEnableImageLabel',
             'enablePipeline' => 'getEnablePipeline',
+            'enableAuthorizationToken' => 'getEnableAuthorizationToken',
+            'enableResource' => 'getEnableResource',
             'enableListV3' => 'getEnableListV3'
     ];
 
@@ -236,6 +256,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
         $this->container['enableCciService'] = isset($data['enableCciService']) ? $data['enableCciService'] : null;
         $this->container['enableImageLabel'] = isset($data['enableImageLabel']) ? $data['enableImageLabel'] : null;
         $this->container['enablePipeline'] = isset($data['enablePipeline']) ? $data['enablePipeline'] : null;
+        $this->container['enableAuthorizationToken'] = isset($data['enableAuthorizationToken']) ? $data['enableAuthorizationToken'] : null;
+        $this->container['enableResource'] = isset($data['enableResource']) ? $data['enableResource'] : null;
         $this->container['enableListV3'] = isset($data['enableListV3']) ? $data['enableListV3'] : null;
     }
 
@@ -450,6 +472,54 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     public function setEnablePipeline($enablePipeline)
     {
         $this->container['enablePipeline'] = $enablePipeline;
+        return $this;
+    }
+
+    /**
+    * Gets enableAuthorizationToken
+    *  是否支持增强型临时登录指令。设置为true时，前端获取登录指令时可以选择获取增强型登录指令。
+    *
+    * @return bool|null
+    */
+    public function getEnableAuthorizationToken()
+    {
+        return $this->container['enableAuthorizationToken'];
+    }
+
+    /**
+    * Sets enableAuthorizationToken
+    *
+    * @param bool|null $enableAuthorizationToken 是否支持增强型临时登录指令。设置为true时，前端获取登录指令时可以选择获取增强型登录指令。
+    *
+    * @return $this
+    */
+    public function setEnableAuthorizationToken($enableAuthorizationToken)
+    {
+        $this->container['enableAuthorizationToken'] = $enableAuthorizationToken;
+        return $this;
+    }
+
+    /**
+    * Gets enableResource
+    *  是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
+    *
+    * @return bool|null
+    */
+    public function getEnableResource()
+    {
+        return $this->container['enableResource'];
+    }
+
+    /**
+    * Sets enableResource
+    *
+    * @param bool|null $enableResource 是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
+    *
+    * @return $this
+    */
+    public function setEnableResource($enableResource)
+    {
+        $this->container['enableResource'] = $enableResource;
         return $this;
     }
 
