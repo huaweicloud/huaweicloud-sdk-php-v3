@@ -32,10 +32,10 @@ class ExportImageSecurityReportTaskRequestInfo implements ModelInterface, ArrayA
     * imageId  镜像id
     * latestVersion  仅关注最新版本镜像
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  创建时间开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     * hasMaliciousFile  是否存在恶意文件
     * hasVul  是否存在软件漏洞
     * hasUnsafeSetting  是否存在基线检查
@@ -92,10 +92,10 @@ class ExportImageSecurityReportTaskRequestInfo implements ModelInterface, ArrayA
     * imageId  镜像id
     * latestVersion  仅关注最新版本镜像
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  创建时间开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     * hasMaliciousFile  是否存在恶意文件
     * hasVul  是否存在软件漏洞
     * hasUnsafeSetting  是否存在基线检查
@@ -173,10 +173,10 @@ class ExportImageSecurityReportTaskRequestInfo implements ModelInterface, ArrayA
     * imageId  镜像id
     * latestVersion  仅关注最新版本镜像
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  创建时间开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     * hasMaliciousFile  是否存在恶意文件
     * hasVul  是否存在软件漏洞
     * hasUnsafeSetting  是否存在基线检查
@@ -233,10 +233,10 @@ class ExportImageSecurityReportTaskRequestInfo implements ModelInterface, ArrayA
     * imageId  镜像id
     * latestVersion  仅关注最新版本镜像
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  创建时间开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     * hasMaliciousFile  是否存在恶意文件
     * hasVul  是否存在软件漏洞
     * hasUnsafeSetting  是否存在基线检查
@@ -293,10 +293,10 @@ class ExportImageSecurityReportTaskRequestInfo implements ModelInterface, ArrayA
     * imageId  镜像id
     * latestVersion  仅关注最新版本镜像
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  创建时间开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     * hasMaliciousFile  是否存在恶意文件
     * hasVul  是否存在软件漏洞
     * hasUnsafeSetting  是否存在基线检查
@@ -863,7 +863,7 @@ class ExportImageSecurityReportTaskRequestInfo implements ModelInterface, ArrayA
 
     /**
     * Gets startLatestUpdateTime
-    *  创建时间开始日期，时间单位 毫秒（ms）
+    *  创建时间开始日期，时间单位：毫秒（ms）
     *
     * @return int|null
     */
@@ -875,7 +875,7 @@ class ExportImageSecurityReportTaskRequestInfo implements ModelInterface, ArrayA
     /**
     * Sets startLatestUpdateTime
     *
-    * @param int|null $startLatestUpdateTime 创建时间开始日期，时间单位 毫秒（ms）
+    * @param int|null $startLatestUpdateTime 创建时间开始日期，时间单位：毫秒（ms）
     *
     * @return $this
     */
@@ -887,7 +887,7 @@ class ExportImageSecurityReportTaskRequestInfo implements ModelInterface, ArrayA
 
     /**
     * Gets endLatestUpdateTime
-    *  创建时间结束日期，时间单位 毫秒（ms）
+    *  创建时间结束日期，时间单位：毫秒（ms）
     *
     * @return int|null
     */
@@ -899,7 +899,7 @@ class ExportImageSecurityReportTaskRequestInfo implements ModelInterface, ArrayA
     /**
     * Sets endLatestUpdateTime
     *
-    * @param int|null $endLatestUpdateTime 创建时间结束日期，时间单位 毫秒（ms）
+    * @param int|null $endLatestUpdateTime 创建时间结束日期，时间单位：毫秒（ms）
     *
     * @return $this
     */
@@ -911,7 +911,7 @@ class ExportImageSecurityReportTaskRequestInfo implements ModelInterface, ArrayA
 
     /**
     * Gets startLatestScanTime
-    *  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
+    *  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
     *
     * @return int|null
     */
@@ -923,7 +923,7 @@ class ExportImageSecurityReportTaskRequestInfo implements ModelInterface, ArrayA
     /**
     * Sets startLatestScanTime
     *
-    * @param int|null $startLatestScanTime 最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
+    * @param int|null $startLatestScanTime 最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
     *
     * @return $this
     */
@@ -935,7 +935,7 @@ class ExportImageSecurityReportTaskRequestInfo implements ModelInterface, ArrayA
 
     /**
     * Gets endLatestScanTime
-    *  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    *  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     *
     * @return int|null
     */
@@ -947,7 +947,7 @@ class ExportImageSecurityReportTaskRequestInfo implements ModelInterface, ArrayA
     /**
     * Sets endLatestScanTime
     *
-    * @param int|null $endLatestScanTime 最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * @param int|null $endLatestScanTime 最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     *
     * @return $this
     */

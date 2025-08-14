@@ -22,24 +22,28 @@ class CreateDigitalAssetResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * assetId  数字资产ID。
+    * produceId  ai标识ID。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'assetId' => 'string',
+            'produceId' => 'string',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * assetId  数字资产ID。
+    * produceId  ai标识ID。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'assetId' => null,
+        'produceId' => null,
         'xRequestId' => null
     ];
 
@@ -67,36 +71,42 @@ class CreateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * assetId  数字资产ID。
+    * produceId  ai标识ID。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'assetId' => 'asset_id',
+            'produceId' => 'produce_id',
             'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * assetId  数字资产ID。
+    * produceId  ai标识ID。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'assetId' => 'setAssetId',
+            'produceId' => 'setProduceId',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * assetId  数字资产ID。
+    * produceId  ai标识ID。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'assetId' => 'getAssetId',
+            'produceId' => 'getProduceId',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -159,6 +169,7 @@ class CreateDigitalAssetResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
+        $this->container['produceId'] = isset($data['produceId']) ? $data['produceId'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -175,6 +186,12 @@ class CreateDigitalAssetResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['assetId']) && (mb_strlen($this->container['assetId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'assetId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['produceId']) && (mb_strlen($this->container['produceId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'produceId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['produceId']) && (mb_strlen($this->container['produceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'produceId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -211,6 +228,30 @@ class CreateDigitalAssetResponse implements ModelInterface, ArrayAccess
     public function setAssetId($assetId)
     {
         $this->container['assetId'] = $assetId;
+        return $this;
+    }
+
+    /**
+    * Gets produceId
+    *  ai标识ID。
+    *
+    * @return string|null
+    */
+    public function getProduceId()
+    {
+        return $this->container['produceId'];
+    }
+
+    /**
+    * Sets produceId
+    *
+    * @param string|null $produceId ai标识ID。
+    *
+    * @return $this
+    */
+    public function setProduceId($produceId)
+    {
+        $this->container['produceId'] = $produceId;
         return $this;
     }
 

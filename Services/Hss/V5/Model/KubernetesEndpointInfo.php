@@ -26,7 +26,7 @@ class KubernetesEndpointInfo implements ModelInterface, ArrayAccess
     * namespace  命名空间
     * creationTimestamp  创建时间戳
     * clusterName  集群名称
-    * clusterType  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
+    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     * associationService  是否关联服务
     *
     * @var string[]
@@ -50,7 +50,7 @@ class KubernetesEndpointInfo implements ModelInterface, ArrayAccess
     * namespace  命名空间
     * creationTimestamp  创建时间戳
     * clusterName  集群名称
-    * clusterType  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
+    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     * associationService  是否关联服务
     *
     * @var string[]
@@ -95,7 +95,7 @@ class KubernetesEndpointInfo implements ModelInterface, ArrayAccess
     * namespace  命名空间
     * creationTimestamp  创建时间戳
     * clusterName  集群名称
-    * clusterType  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
+    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     * associationService  是否关联服务
     *
     * @var string[]
@@ -119,7 +119,7 @@ class KubernetesEndpointInfo implements ModelInterface, ArrayAccess
     * namespace  命名空间
     * creationTimestamp  创建时间戳
     * clusterName  集群名称
-    * clusterType  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
+    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     * associationService  是否关联服务
     *
     * @var string[]
@@ -143,7 +143,7 @@ class KubernetesEndpointInfo implements ModelInterface, ArrayAccess
     * namespace  命名空间
     * creationTimestamp  创建时间戳
     * clusterName  集群名称
-    * clusterType  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
+    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     * associationService  是否关联服务
     *
     * @var string[]
@@ -437,7 +437,7 @@ class KubernetesEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterType
-    *  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
+    *  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     *
     * @return string|null
     */
@@ -449,7 +449,7 @@ class KubernetesEndpointInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterType
     *
-    * @param string|null $clusterType 集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
+    * @param string|null $clusterType 集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     *
     * @return $this
     */

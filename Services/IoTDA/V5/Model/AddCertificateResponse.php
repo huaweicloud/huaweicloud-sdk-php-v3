@@ -28,6 +28,9 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
     * verifyCode  CA证书验证码。
     * provisionEnable  是否开启自注册能力，当为true时该功能必须配合自注册模板使用，true：是，false：否。
     * templateId  绑定的自注册模板ID。
+    * ocspEnable  是否开启该CA证书下的设备证书OCSP校验，当为true且设备证书信息中包含OCSP url时则平台会校验证书的状态，当证书状态为revoked时平台会拒绝设备连接，true：开启，false：关闭。
+    * ocspServerCaId  ocsp服务器端CA证书id，仅当ocsp服务器开启SSL时配置，平台使用该CA证书认证ocsp服务器。
+    * ocspSslEnable  ocsp服务器是否开启SSL加密，开启后必须配置OCSP服务器CA证书。
     * createDate  创建证书日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * effectiveDate  CA证书生效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * expiryDate  CA证书失效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
@@ -42,6 +45,9 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
             'verifyCode' => 'string',
             'provisionEnable' => 'bool',
             'templateId' => 'string',
+            'ocspEnable' => 'bool',
+            'ocspServerCaId' => 'string',
+            'ocspSslEnable' => 'bool',
             'createDate' => 'string',
             'effectiveDate' => 'string',
             'expiryDate' => 'string'
@@ -56,6 +62,9 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
     * verifyCode  CA证书验证码。
     * provisionEnable  是否开启自注册能力，当为true时该功能必须配合自注册模板使用，true：是，false：否。
     * templateId  绑定的自注册模板ID。
+    * ocspEnable  是否开启该CA证书下的设备证书OCSP校验，当为true且设备证书信息中包含OCSP url时则平台会校验证书的状态，当证书状态为revoked时平台会拒绝设备连接，true：开启，false：关闭。
+    * ocspServerCaId  ocsp服务器端CA证书id，仅当ocsp服务器开启SSL时配置，平台使用该CA证书认证ocsp服务器。
+    * ocspSslEnable  ocsp服务器是否开启SSL加密，开启后必须配置OCSP服务器CA证书。
     * createDate  创建证书日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * effectiveDate  CA证书生效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * expiryDate  CA证书失效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
@@ -70,6 +79,9 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
         'verifyCode' => null,
         'provisionEnable' => null,
         'templateId' => null,
+        'ocspEnable' => null,
+        'ocspServerCaId' => null,
+        'ocspSslEnable' => null,
         'createDate' => null,
         'effectiveDate' => null,
         'expiryDate' => null
@@ -105,6 +117,9 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
     * verifyCode  CA证书验证码。
     * provisionEnable  是否开启自注册能力，当为true时该功能必须配合自注册模板使用，true：是，false：否。
     * templateId  绑定的自注册模板ID。
+    * ocspEnable  是否开启该CA证书下的设备证书OCSP校验，当为true且设备证书信息中包含OCSP url时则平台会校验证书的状态，当证书状态为revoked时平台会拒绝设备连接，true：开启，false：关闭。
+    * ocspServerCaId  ocsp服务器端CA证书id，仅当ocsp服务器开启SSL时配置，平台使用该CA证书认证ocsp服务器。
+    * ocspSslEnable  ocsp服务器是否开启SSL加密，开启后必须配置OCSP服务器CA证书。
     * createDate  创建证书日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * effectiveDate  CA证书生效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * expiryDate  CA证书失效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
@@ -119,6 +134,9 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
             'verifyCode' => 'verify_code',
             'provisionEnable' => 'provision_enable',
             'templateId' => 'template_id',
+            'ocspEnable' => 'ocsp_enable',
+            'ocspServerCaId' => 'ocsp_server_ca_id',
+            'ocspSslEnable' => 'ocsp_ssl_enable',
             'createDate' => 'create_date',
             'effectiveDate' => 'effective_date',
             'expiryDate' => 'expiry_date'
@@ -133,6 +151,9 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
     * verifyCode  CA证书验证码。
     * provisionEnable  是否开启自注册能力，当为true时该功能必须配合自注册模板使用，true：是，false：否。
     * templateId  绑定的自注册模板ID。
+    * ocspEnable  是否开启该CA证书下的设备证书OCSP校验，当为true且设备证书信息中包含OCSP url时则平台会校验证书的状态，当证书状态为revoked时平台会拒绝设备连接，true：开启，false：关闭。
+    * ocspServerCaId  ocsp服务器端CA证书id，仅当ocsp服务器开启SSL时配置，平台使用该CA证书认证ocsp服务器。
+    * ocspSslEnable  ocsp服务器是否开启SSL加密，开启后必须配置OCSP服务器CA证书。
     * createDate  创建证书日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * effectiveDate  CA证书生效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * expiryDate  CA证书失效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
@@ -147,6 +168,9 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
             'verifyCode' => 'setVerifyCode',
             'provisionEnable' => 'setProvisionEnable',
             'templateId' => 'setTemplateId',
+            'ocspEnable' => 'setOcspEnable',
+            'ocspServerCaId' => 'setOcspServerCaId',
+            'ocspSslEnable' => 'setOcspSslEnable',
             'createDate' => 'setCreateDate',
             'effectiveDate' => 'setEffectiveDate',
             'expiryDate' => 'setExpiryDate'
@@ -161,6 +185,9 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
     * verifyCode  CA证书验证码。
     * provisionEnable  是否开启自注册能力，当为true时该功能必须配合自注册模板使用，true：是，false：否。
     * templateId  绑定的自注册模板ID。
+    * ocspEnable  是否开启该CA证书下的设备证书OCSP校验，当为true且设备证书信息中包含OCSP url时则平台会校验证书的状态，当证书状态为revoked时平台会拒绝设备连接，true：开启，false：关闭。
+    * ocspServerCaId  ocsp服务器端CA证书id，仅当ocsp服务器开启SSL时配置，平台使用该CA证书认证ocsp服务器。
+    * ocspSslEnable  ocsp服务器是否开启SSL加密，开启后必须配置OCSP服务器CA证书。
     * createDate  创建证书日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * effectiveDate  CA证书生效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * expiryDate  CA证书失效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
@@ -175,6 +202,9 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
             'verifyCode' => 'getVerifyCode',
             'provisionEnable' => 'getProvisionEnable',
             'templateId' => 'getTemplateId',
+            'ocspEnable' => 'getOcspEnable',
+            'ocspServerCaId' => 'getOcspServerCaId',
+            'ocspSslEnable' => 'getOcspSslEnable',
             'createDate' => 'getCreateDate',
             'effectiveDate' => 'getEffectiveDate',
             'expiryDate' => 'getExpiryDate'
@@ -245,6 +275,9 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
         $this->container['verifyCode'] = isset($data['verifyCode']) ? $data['verifyCode'] : null;
         $this->container['provisionEnable'] = isset($data['provisionEnable']) ? $data['provisionEnable'] : null;
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
+        $this->container['ocspEnable'] = isset($data['ocspEnable']) ? $data['ocspEnable'] : null;
+        $this->container['ocspServerCaId'] = isset($data['ocspServerCaId']) ? $data['ocspServerCaId'] : null;
+        $this->container['ocspSslEnable'] = isset($data['ocspSslEnable']) ? $data['ocspSslEnable'] : null;
         $this->container['createDate'] = isset($data['createDate']) ? $data['createDate'] : null;
         $this->container['effectiveDate'] = isset($data['effectiveDate']) ? $data['effectiveDate'] : null;
         $this->container['expiryDate'] = isset($data['expiryDate']) ? $data['expiryDate'] : null;
@@ -437,6 +470,78 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
     public function setTemplateId($templateId)
     {
         $this->container['templateId'] = $templateId;
+        return $this;
+    }
+
+    /**
+    * Gets ocspEnable
+    *  是否开启该CA证书下的设备证书OCSP校验，当为true且设备证书信息中包含OCSP url时则平台会校验证书的状态，当证书状态为revoked时平台会拒绝设备连接，true：开启，false：关闭。
+    *
+    * @return bool|null
+    */
+    public function getOcspEnable()
+    {
+        return $this->container['ocspEnable'];
+    }
+
+    /**
+    * Sets ocspEnable
+    *
+    * @param bool|null $ocspEnable 是否开启该CA证书下的设备证书OCSP校验，当为true且设备证书信息中包含OCSP url时则平台会校验证书的状态，当证书状态为revoked时平台会拒绝设备连接，true：开启，false：关闭。
+    *
+    * @return $this
+    */
+    public function setOcspEnable($ocspEnable)
+    {
+        $this->container['ocspEnable'] = $ocspEnable;
+        return $this;
+    }
+
+    /**
+    * Gets ocspServerCaId
+    *  ocsp服务器端CA证书id，仅当ocsp服务器开启SSL时配置，平台使用该CA证书认证ocsp服务器。
+    *
+    * @return string|null
+    */
+    public function getOcspServerCaId()
+    {
+        return $this->container['ocspServerCaId'];
+    }
+
+    /**
+    * Sets ocspServerCaId
+    *
+    * @param string|null $ocspServerCaId ocsp服务器端CA证书id，仅当ocsp服务器开启SSL时配置，平台使用该CA证书认证ocsp服务器。
+    *
+    * @return $this
+    */
+    public function setOcspServerCaId($ocspServerCaId)
+    {
+        $this->container['ocspServerCaId'] = $ocspServerCaId;
+        return $this;
+    }
+
+    /**
+    * Gets ocspSslEnable
+    *  ocsp服务器是否开启SSL加密，开启后必须配置OCSP服务器CA证书。
+    *
+    * @return bool|null
+    */
+    public function getOcspSslEnable()
+    {
+        return $this->container['ocspSslEnable'];
+    }
+
+    /**
+    * Sets ocspSslEnable
+    *
+    * @param bool|null $ocspSslEnable ocsp服务器是否开启SSL加密，开启后必须配置OCSP服务器CA证书。
+    *
+    * @return $this
+    */
+    public function setOcspSslEnable($ocspSslEnable)
+    {
+        $this->container['ocspSslEnable'] = $ocspSslEnable;
         return $this;
     }
 

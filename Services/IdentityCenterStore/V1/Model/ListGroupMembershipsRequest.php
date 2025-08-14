@@ -24,7 +24,7 @@ class ListGroupMembershipsRequest implements ModelInterface, ArrayAccess
     * identityStoreId  身份源的全局唯一标识符（ID）
     * limit  每个请求返回的最大结果数
     * marker  分页标记
-    * groupId  身份源中IAM身份中心用户组的全局唯一标识符（ID）
+    * groupId  身份源中IdentityCenter用户组的全局唯一标识符（ID）
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class ListGroupMembershipsRequest implements ModelInterface, ArrayAccess
     * identityStoreId  身份源的全局唯一标识符（ID）
     * limit  每个请求返回的最大结果数
     * marker  分页标记
-    * groupId  身份源中IAM身份中心用户组的全局唯一标识符（ID）
+    * groupId  身份源中IdentityCenter用户组的全局唯一标识符（ID）
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListGroupMembershipsRequest implements ModelInterface, ArrayAccess
     * identityStoreId  身份源的全局唯一标识符（ID）
     * limit  每个请求返回的最大结果数
     * marker  分页标记
-    * groupId  身份源中IAM身份中心用户组的全局唯一标识符（ID）
+    * groupId  身份源中IdentityCenter用户组的全局唯一标识符（ID）
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ListGroupMembershipsRequest implements ModelInterface, ArrayAccess
     * identityStoreId  身份源的全局唯一标识符（ID）
     * limit  每个请求返回的最大结果数
     * marker  分页标记
-    * groupId  身份源中IAM身份中心用户组的全局唯一标识符（ID）
+    * groupId  身份源中IdentityCenter用户组的全局唯一标识符（ID）
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class ListGroupMembershipsRequest implements ModelInterface, ArrayAccess
     * identityStoreId  身份源的全局唯一标识符（ID）
     * limit  每个请求返回的最大结果数
     * marker  分页标记
-    * groupId  身份源中IAM身份中心用户组的全局唯一标识符（ID）
+    * groupId  身份源中IdentityCenter用户组的全局唯一标识符（ID）
     *
     * @var string[]
     */
@@ -202,9 +202,6 @@ class ListGroupMembershipsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['xSecurityToken']) && (mb_strlen($this->container['xSecurityToken']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'xSecurityToken', the character length must be smaller than or equal to 2048.";
-            }
         if ($this->container['identityStoreId'] === null) {
             $invalidProperties[] = "'identityStoreId' can't be null";
         }
@@ -356,7 +353,7 @@ class ListGroupMembershipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  身份源中IAM身份中心用户组的全局唯一标识符（ID）
+    *  身份源中IdentityCenter用户组的全局唯一标识符（ID）
     *
     * @return string
     */
@@ -368,7 +365,7 @@ class ListGroupMembershipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string $groupId 身份源中IAM身份中心用户组的全局唯一标识符（ID）
+    * @param string $groupId 身份源中IdentityCenter用户组的全局唯一标识符（ID）
     *
     * @return $this
     */

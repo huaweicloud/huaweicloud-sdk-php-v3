@@ -26,7 +26,7 @@ class ListClusterAuditLogsRequest implements ModelInterface, ArrayAccess
     * hostName  主机名称
     * hostId  主机id
     * hostIp  主机ip
-    * verb  审计日志对应的动作，包含以下几种： - create 创建资源 - delete 删除资源 - deletecollection 批量资源集合 - patch 修改资源 - update 更新资源 - get 获取资源 - list 获取资源列表 - watch 监控资源
+    * verb  审计日志对应的动作，包含以下几种： - create：创建资源 - delete：删除资源 - deletecollection：批量资源集合 - patch：修改资源 - update：更新资源 - get：获取资源 - list：获取资源列表 - watch：监控资源
     * startTime  查询日志范围的最小时间
     * endTime  查询日志范围的最大时间
     * limit  每页显示个数，默认为10
@@ -58,7 +58,7 @@ class ListClusterAuditLogsRequest implements ModelInterface, ArrayAccess
     * hostName  主机名称
     * hostId  主机id
     * hostIp  主机ip
-    * verb  审计日志对应的动作，包含以下几种： - create 创建资源 - delete 删除资源 - deletecollection 批量资源集合 - patch 修改资源 - update 更新资源 - get 获取资源 - list 获取资源列表 - watch 监控资源
+    * verb  审计日志对应的动作，包含以下几种： - create：创建资源 - delete：删除资源 - deletecollection：批量资源集合 - patch：修改资源 - update：更新资源 - get：获取资源 - list：获取资源列表 - watch：监控资源
     * startTime  查询日志范围的最小时间
     * endTime  查询日志范围的最大时间
     * limit  每页显示个数，默认为10
@@ -111,7 +111,7 @@ class ListClusterAuditLogsRequest implements ModelInterface, ArrayAccess
     * hostName  主机名称
     * hostId  主机id
     * hostIp  主机ip
-    * verb  审计日志对应的动作，包含以下几种： - create 创建资源 - delete 删除资源 - deletecollection 批量资源集合 - patch 修改资源 - update 更新资源 - get 获取资源 - list 获取资源列表 - watch 监控资源
+    * verb  审计日志对应的动作，包含以下几种： - create：创建资源 - delete：删除资源 - deletecollection：批量资源集合 - patch：修改资源 - update：更新资源 - get：获取资源 - list：获取资源列表 - watch：监控资源
     * startTime  查询日志范围的最小时间
     * endTime  查询日志范围的最大时间
     * limit  每页显示个数，默认为10
@@ -143,7 +143,7 @@ class ListClusterAuditLogsRequest implements ModelInterface, ArrayAccess
     * hostName  主机名称
     * hostId  主机id
     * hostIp  主机ip
-    * verb  审计日志对应的动作，包含以下几种： - create 创建资源 - delete 删除资源 - deletecollection 批量资源集合 - patch 修改资源 - update 更新资源 - get 获取资源 - list 获取资源列表 - watch 监控资源
+    * verb  审计日志对应的动作，包含以下几种： - create：创建资源 - delete：删除资源 - deletecollection：批量资源集合 - patch：修改资源 - update：更新资源 - get：获取资源 - list：获取资源列表 - watch：监控资源
     * startTime  查询日志范围的最小时间
     * endTime  查询日志范围的最大时间
     * limit  每页显示个数，默认为10
@@ -175,7 +175,7 @@ class ListClusterAuditLogsRequest implements ModelInterface, ArrayAccess
     * hostName  主机名称
     * hostId  主机id
     * hostIp  主机ip
-    * verb  审计日志对应的动作，包含以下几种： - create 创建资源 - delete 删除资源 - deletecollection 批量资源集合 - patch 修改资源 - update 更新资源 - get 获取资源 - list 获取资源列表 - watch 监控资源
+    * verb  审计日志对应的动作，包含以下几种： - create：创建资源 - delete：删除资源 - deletecollection：批量资源集合 - patch：修改资源 - update：更新资源 - get：获取资源 - list：获取资源列表 - watch：监控资源
     * startTime  查询日志范围的最小时间
     * endTime  查询日志范围的最大时间
     * limit  每页显示个数，默认为10
@@ -547,7 +547,7 @@ class ListClusterAuditLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets verb
-    *  审计日志对应的动作，包含以下几种： - create 创建资源 - delete 删除资源 - deletecollection 批量资源集合 - patch 修改资源 - update 更新资源 - get 获取资源 - list 获取资源列表 - watch 监控资源
+    *  审计日志对应的动作，包含以下几种： - create：创建资源 - delete：删除资源 - deletecollection：批量资源集合 - patch：修改资源 - update：更新资源 - get：获取资源 - list：获取资源列表 - watch：监控资源
     *
     * @return string|null
     */
@@ -559,7 +559,7 @@ class ListClusterAuditLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets verb
     *
-    * @param string|null $verb 审计日志对应的动作，包含以下几种： - create 创建资源 - delete 删除资源 - deletecollection 批量资源集合 - patch 修改资源 - update 更新资源 - get 获取资源 - list 获取资源列表 - watch 监控资源
+    * @param string|null $verb 审计日志对应的动作，包含以下几种： - create：创建资源 - delete：删除资源 - deletecollection：批量资源集合 - patch：修改资源 - update：更新资源 - get：获取资源 - list：获取资源列表 - watch：监控资源
     *
     * @return $this
     */

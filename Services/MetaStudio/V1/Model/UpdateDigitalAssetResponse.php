@@ -23,6 +23,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * projectId  租户id
     * assetId  资产ID。
+    * produceId  ai标识ID。
     * assetName  资产名称。
     * assetDescription  资产描述。
     * appUserId  第三方用户ID。 > * 即创建资产是通过X-App-UserId头域传入的值。
@@ -47,6 +48,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'projectId' => 'string',
             'assetId' => 'string',
+            'produceId' => 'string',
             'assetName' => 'string',
             'assetDescription' => 'string',
             'appUserId' => 'string',
@@ -71,6 +73,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * projectId  租户id
     * assetId  资产ID。
+    * produceId  ai标识ID。
     * assetName  资产名称。
     * assetDescription  资产描述。
     * appUserId  第三方用户ID。 > * 即创建资产是通过X-App-UserId头域传入的值。
@@ -95,6 +98,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'projectId' => null,
         'assetId' => null,
+        'produceId' => null,
         'assetName' => null,
         'assetDescription' => null,
         'appUserId' => null,
@@ -140,6 +144,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * projectId  租户id
     * assetId  资产ID。
+    * produceId  ai标识ID。
     * assetName  资产名称。
     * assetDescription  资产描述。
     * appUserId  第三方用户ID。 > * 即创建资产是通过X-App-UserId头域传入的值。
@@ -164,6 +169,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'projectId' => 'project_id',
             'assetId' => 'asset_id',
+            'produceId' => 'produce_id',
             'assetName' => 'asset_name',
             'assetDescription' => 'asset_description',
             'appUserId' => 'app_user_id',
@@ -188,6 +194,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * projectId  租户id
     * assetId  资产ID。
+    * produceId  ai标识ID。
     * assetName  资产名称。
     * assetDescription  资产描述。
     * appUserId  第三方用户ID。 > * 即创建资产是通过X-App-UserId头域传入的值。
@@ -212,6 +219,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'projectId' => 'setProjectId',
             'assetId' => 'setAssetId',
+            'produceId' => 'setProduceId',
             'assetName' => 'setAssetName',
             'assetDescription' => 'setAssetDescription',
             'appUserId' => 'setAppUserId',
@@ -236,6 +244,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * projectId  租户id
     * assetId  资产ID。
+    * produceId  ai标识ID。
     * assetName  资产名称。
     * assetDescription  资产描述。
     * appUserId  第三方用户ID。 > * 即创建资产是通过X-App-UserId头域传入的值。
@@ -260,6 +269,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'projectId' => 'getProjectId',
             'assetId' => 'getAssetId',
+            'produceId' => 'getProduceId',
             'assetName' => 'getAssetName',
             'assetDescription' => 'getAssetDescription',
             'appUserId' => 'getAppUserId',
@@ -421,6 +431,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     {
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
+        $this->container['produceId'] = isset($data['produceId']) ? $data['produceId'] : null;
         $this->container['assetName'] = isset($data['assetName']) ? $data['assetName'] : null;
         $this->container['assetDescription'] = isset($data['assetDescription']) ? $data['assetDescription'] : null;
         $this->container['appUserId'] = isset($data['appUserId']) ? $data['appUserId'] : null;
@@ -460,6 +471,12 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['assetId']) && (mb_strlen($this->container['assetId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'assetId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['produceId']) && (mb_strlen($this->container['produceId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'produceId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['produceId']) && (mb_strlen($this->container['produceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'produceId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['assetName']) && (mb_strlen($this->container['assetName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'assetName', the character length must be smaller than or equal to 256.";
@@ -592,6 +609,30 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     public function setAssetId($assetId)
     {
         $this->container['assetId'] = $assetId;
+        return $this;
+    }
+
+    /**
+    * Gets produceId
+    *  ai标识ID。
+    *
+    * @return string|null
+    */
+    public function getProduceId()
+    {
+        return $this->container['produceId'];
+    }
+
+    /**
+    * Sets produceId
+    *
+    * @param string|null $produceId ai标识ID。
+    *
+    * @return $this
+    */
+    public function setProduceId($produceId)
+    {
+        $this->container['produceId'] = $produceId;
         return $this;
     }
 

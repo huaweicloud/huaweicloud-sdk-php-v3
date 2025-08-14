@@ -25,6 +25,7 @@ class KeystoreDetails implements ModelInterface, ArrayAccess
     * keystoreAlias  密钥库别名
     * keystoreType  密钥库类型
     * hsmClusterId  DHSM集群id，要求集群当前未创建专属密钥库
+    * clusterId  集群ID。当类型为DEFAULT时，cluster_id为”0”。当类型为DHSM时，cluster_id为hsm_cluster_id。当类型为CDMS时，默认密码卡集群，集群ID为“1”。自定义密码卡集群，为cdms_cluster_id
     * createTime  密钥库创建时间，UTC时间戳。
     *
     * @var string[]
@@ -35,6 +36,7 @@ class KeystoreDetails implements ModelInterface, ArrayAccess
             'keystoreAlias' => 'string',
             'keystoreType' => 'string',
             'hsmClusterId' => 'string',
+            'clusterId' => 'string',
             'createTime' => 'string'
     ];
 
@@ -45,6 +47,7 @@ class KeystoreDetails implements ModelInterface, ArrayAccess
     * keystoreAlias  密钥库别名
     * keystoreType  密钥库类型
     * hsmClusterId  DHSM集群id，要求集群当前未创建专属密钥库
+    * clusterId  集群ID。当类型为DEFAULT时，cluster_id为”0”。当类型为DHSM时，cluster_id为hsm_cluster_id。当类型为CDMS时，默认密码卡集群，集群ID为“1”。自定义密码卡集群，为cdms_cluster_id
     * createTime  密钥库创建时间，UTC时间戳。
     *
     * @var string[]
@@ -55,6 +58,7 @@ class KeystoreDetails implements ModelInterface, ArrayAccess
         'keystoreAlias' => null,
         'keystoreType' => null,
         'hsmClusterId' => null,
+        'clusterId' => null,
         'createTime' => null
     ];
 
@@ -86,6 +90,7 @@ class KeystoreDetails implements ModelInterface, ArrayAccess
     * keystoreAlias  密钥库别名
     * keystoreType  密钥库类型
     * hsmClusterId  DHSM集群id，要求集群当前未创建专属密钥库
+    * clusterId  集群ID。当类型为DEFAULT时，cluster_id为”0”。当类型为DHSM时，cluster_id为hsm_cluster_id。当类型为CDMS时，默认密码卡集群，集群ID为“1”。自定义密码卡集群，为cdms_cluster_id
     * createTime  密钥库创建时间，UTC时间戳。
     *
     * @var string[]
@@ -96,6 +101,7 @@ class KeystoreDetails implements ModelInterface, ArrayAccess
             'keystoreAlias' => 'keystore_alias',
             'keystoreType' => 'keystore_type',
             'hsmClusterId' => 'hsm_cluster_id',
+            'clusterId' => 'cluster_id',
             'createTime' => 'create_time'
     ];
 
@@ -106,6 +112,7 @@ class KeystoreDetails implements ModelInterface, ArrayAccess
     * keystoreAlias  密钥库别名
     * keystoreType  密钥库类型
     * hsmClusterId  DHSM集群id，要求集群当前未创建专属密钥库
+    * clusterId  集群ID。当类型为DEFAULT时，cluster_id为”0”。当类型为DHSM时，cluster_id为hsm_cluster_id。当类型为CDMS时，默认密码卡集群，集群ID为“1”。自定义密码卡集群，为cdms_cluster_id
     * createTime  密钥库创建时间，UTC时间戳。
     *
     * @var string[]
@@ -116,6 +123,7 @@ class KeystoreDetails implements ModelInterface, ArrayAccess
             'keystoreAlias' => 'setKeystoreAlias',
             'keystoreType' => 'setKeystoreType',
             'hsmClusterId' => 'setHsmClusterId',
+            'clusterId' => 'setClusterId',
             'createTime' => 'setCreateTime'
     ];
 
@@ -126,6 +134,7 @@ class KeystoreDetails implements ModelInterface, ArrayAccess
     * keystoreAlias  密钥库别名
     * keystoreType  密钥库类型
     * hsmClusterId  DHSM集群id，要求集群当前未创建专属密钥库
+    * clusterId  集群ID。当类型为DEFAULT时，cluster_id为”0”。当类型为DHSM时，cluster_id为hsm_cluster_id。当类型为CDMS时，默认密码卡集群，集群ID为“1”。自定义密码卡集群，为cdms_cluster_id
     * createTime  密钥库创建时间，UTC时间戳。
     *
     * @var string[]
@@ -136,6 +145,7 @@ class KeystoreDetails implements ModelInterface, ArrayAccess
             'keystoreAlias' => 'getKeystoreAlias',
             'keystoreType' => 'getKeystoreType',
             'hsmClusterId' => 'getHsmClusterId',
+            'clusterId' => 'getClusterId',
             'createTime' => 'getCreateTime'
     ];
 
@@ -202,6 +212,7 @@ class KeystoreDetails implements ModelInterface, ArrayAccess
         $this->container['keystoreAlias'] = isset($data['keystoreAlias']) ? $data['keystoreAlias'] : null;
         $this->container['keystoreType'] = isset($data['keystoreType']) ? $data['keystoreType'] : null;
         $this->container['hsmClusterId'] = isset($data['hsmClusterId']) ? $data['hsmClusterId'] : null;
+        $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
     }
 
@@ -344,6 +355,30 @@ class KeystoreDetails implements ModelInterface, ArrayAccess
     public function setHsmClusterId($hsmClusterId)
     {
         $this->container['hsmClusterId'] = $hsmClusterId;
+        return $this;
+    }
+
+    /**
+    * Gets clusterId
+    *  集群ID。当类型为DEFAULT时，cluster_id为”0”。当类型为DHSM时，cluster_id为hsm_cluster_id。当类型为CDMS时，默认密码卡集群，集群ID为“1”。自定义密码卡集群，为cdms_cluster_id
+    *
+    * @return string|null
+    */
+    public function getClusterId()
+    {
+        return $this->container['clusterId'];
+    }
+
+    /**
+    * Sets clusterId
+    *
+    * @param string|null $clusterId 集群ID。当类型为DEFAULT时，cluster_id为”0”。当类型为DHSM时，cluster_id为hsm_cluster_id。当类型为CDMS时，默认密码卡集群，集群ID为“1”。自定义密码卡集群，为cdms_cluster_id
+    *
+    * @return $this
+    */
+    public function setClusterId($clusterId)
+    {
+        $this->container['clusterId'] = $clusterId;
         return $this;
     }
 

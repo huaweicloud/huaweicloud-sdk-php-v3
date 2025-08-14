@@ -21,8 +21,8 @@ class ServicePortInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * desc  服务名称
-    * type  类型，可取值集合[http,https]
-    * protocol  默认tcp。可取值集合[tcp,udp]
+    * type  类型，可取值集合[http，https]
+    * protocol  默认tcp。可取值集合[tcp，udp]
     * userPort  用户端口
     * port  容器内部端口
     *
@@ -39,8 +39,8 @@ class ServicePortInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * desc  服务名称
-    * type  类型，可取值集合[http,https]
-    * protocol  默认tcp。可取值集合[tcp,udp]
+    * type  类型，可取值集合[http，https]
+    * protocol  默认tcp。可取值集合[tcp，udp]
     * userPort  用户端口
     * port  容器内部端口
     *
@@ -78,8 +78,8 @@ class ServicePortInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * desc  服务名称
-    * type  类型，可取值集合[http,https]
-    * protocol  默认tcp。可取值集合[tcp,udp]
+    * type  类型，可取值集合[http，https]
+    * protocol  默认tcp。可取值集合[tcp，udp]
     * userPort  用户端口
     * port  容器内部端口
     *
@@ -96,8 +96,8 @@ class ServicePortInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * desc  服务名称
-    * type  类型，可取值集合[http,https]
-    * protocol  默认tcp。可取值集合[tcp,udp]
+    * type  类型，可取值集合[http，https]
+    * protocol  默认tcp。可取值集合[tcp，udp]
     * userPort  用户端口
     * port  容器内部端口
     *
@@ -114,8 +114,8 @@ class ServicePortInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * desc  服务名称
-    * type  类型，可取值集合[http,https]
-    * protocol  默认tcp。可取值集合[tcp,udp]
+    * type  类型，可取值集合[http，https]
+    * protocol  默认tcp。可取值集合[tcp，udp]
     * userPort  用户端口
     * port  容器内部端口
     *
@@ -290,7 +290,7 @@ class ServicePortInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型，可取值集合[http,https]
+    *  类型，可取值集合[http，https]
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class ServicePortInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 类型，可取值集合[http,https]
+    * @param string|null $type 类型，可取值集合[http，https]
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ServicePortInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  默认tcp。可取值集合[tcp,udp]
+    *  默认tcp。可取值集合[tcp，udp]
     *
     * @return string
     */
@@ -326,7 +326,7 @@ class ServicePortInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string $protocol 默认tcp。可取值集合[tcp,udp]
+    * @param string $protocol 默认tcp。可取值集合[tcp，udp]
     *
     * @return $this
     */

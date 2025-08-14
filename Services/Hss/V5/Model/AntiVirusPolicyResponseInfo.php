@@ -31,7 +31,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * nextStartTime  下次启动时间，毫秒
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * invalidate  失效，包含如下:   - true ：是   - fasle ：否
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * hostInfoList  主机信息
@@ -73,7 +73,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * nextStartTime  下次启动时间，毫秒
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * invalidate  失效，包含如下:   - true ：是   - fasle ：否
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * hostInfoList  主机信息
@@ -136,7 +136,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * nextStartTime  下次启动时间，毫秒
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * invalidate  失效，包含如下:   - true ：是   - fasle ：否
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * hostInfoList  主机信息
@@ -178,7 +178,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * nextStartTime  下次启动时间，毫秒
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * invalidate  失效，包含如下:   - true ：是   - fasle ：否
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * hostInfoList  主机信息
@@ -220,7 +220,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * nextStartTime  下次启动时间，毫秒
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * invalidate  失效，包含如下:   - true ：是   - fasle ：否
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * hostInfoList  主机信息
@@ -683,7 +683,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    *  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     *
     * @return string|null
     */
@@ -695,7 +695,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * @param string|null $action 处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     *
     * @return $this
     */

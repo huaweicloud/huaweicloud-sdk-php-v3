@@ -23,13 +23,17 @@ class Compress implements ModelInterface, ArrayAccess
     * status  智能压缩开关（on：开启，off：关闭）。
     * type  智能压缩类型（gzip：gzip压缩，br：brotli压缩）。
     * fileType  压缩格式，内容总长度不可超过200个字符，  多种格式用“,”分割，每组内容不可超过50个字符， 开启状态下，首次传空时默认值为.js,.html,.css,.xml,.json,.shtml,.htm，否则为上次设置的结果。
+    * compressMinLength  压缩区间最小范围
+    * compressMaxLength  压缩区间最大范围
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'status' => 'string',
             'type' => 'string',
-            'fileType' => 'string'
+            'fileType' => 'string',
+            'compressMinLength' => 'int',
+            'compressMaxLength' => 'int'
     ];
 
     /**
@@ -37,13 +41,17 @@ class Compress implements ModelInterface, ArrayAccess
     * status  智能压缩开关（on：开启，off：关闭）。
     * type  智能压缩类型（gzip：gzip压缩，br：brotli压缩）。
     * fileType  压缩格式，内容总长度不可超过200个字符，  多种格式用“,”分割，每组内容不可超过50个字符， 开启状态下，首次传空时默认值为.js,.html,.css,.xml,.json,.shtml,.htm，否则为上次设置的结果。
+    * compressMinLength  压缩区间最小范围
+    * compressMaxLength  压缩区间最大范围
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'status' => null,
         'type' => null,
-        'fileType' => null
+        'fileType' => null,
+        'compressMinLength' => 'int64',
+        'compressMaxLength' => 'int64'
     ];
 
     /**
@@ -72,13 +80,17 @@ class Compress implements ModelInterface, ArrayAccess
     * status  智能压缩开关（on：开启，off：关闭）。
     * type  智能压缩类型（gzip：gzip压缩，br：brotli压缩）。
     * fileType  压缩格式，内容总长度不可超过200个字符，  多种格式用“,”分割，每组内容不可超过50个字符， 开启状态下，首次传空时默认值为.js,.html,.css,.xml,.json,.shtml,.htm，否则为上次设置的结果。
+    * compressMinLength  压缩区间最小范围
+    * compressMaxLength  压缩区间最大范围
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'status' => 'status',
             'type' => 'type',
-            'fileType' => 'file_type'
+            'fileType' => 'file_type',
+            'compressMinLength' => 'compress_min_length',
+            'compressMaxLength' => 'compress_max_length'
     ];
 
     /**
@@ -86,13 +98,17 @@ class Compress implements ModelInterface, ArrayAccess
     * status  智能压缩开关（on：开启，off：关闭）。
     * type  智能压缩类型（gzip：gzip压缩，br：brotli压缩）。
     * fileType  压缩格式，内容总长度不可超过200个字符，  多种格式用“,”分割，每组内容不可超过50个字符， 开启状态下，首次传空时默认值为.js,.html,.css,.xml,.json,.shtml,.htm，否则为上次设置的结果。
+    * compressMinLength  压缩区间最小范围
+    * compressMaxLength  压缩区间最大范围
     *
     * @var string[]
     */
     protected static $setters = [
             'status' => 'setStatus',
             'type' => 'setType',
-            'fileType' => 'setFileType'
+            'fileType' => 'setFileType',
+            'compressMinLength' => 'setCompressMinLength',
+            'compressMaxLength' => 'setCompressMaxLength'
     ];
 
     /**
@@ -100,13 +116,17 @@ class Compress implements ModelInterface, ArrayAccess
     * status  智能压缩开关（on：开启，off：关闭）。
     * type  智能压缩类型（gzip：gzip压缩，br：brotli压缩）。
     * fileType  压缩格式，内容总长度不可超过200个字符，  多种格式用“,”分割，每组内容不可超过50个字符， 开启状态下，首次传空时默认值为.js,.html,.css,.xml,.json,.shtml,.htm，否则为上次设置的结果。
+    * compressMinLength  压缩区间最小范围
+    * compressMaxLength  压缩区间最大范围
     *
     * @var string[]
     */
     protected static $getters = [
             'status' => 'getStatus',
             'type' => 'getType',
-            'fileType' => 'getFileType'
+            'fileType' => 'getFileType',
+            'compressMinLength' => 'getCompressMinLength',
+            'compressMaxLength' => 'getCompressMaxLength'
     ];
 
     /**
@@ -170,6 +190,8 @@ class Compress implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['fileType'] = isset($data['fileType']) ? $data['fileType'] : null;
+        $this->container['compressMinLength'] = isset($data['compressMinLength']) ? $data['compressMinLength'] : null;
+        $this->container['compressMaxLength'] = isset($data['compressMaxLength']) ? $data['compressMaxLength'] : null;
     }
 
     /**
@@ -183,6 +205,18 @@ class Compress implements ModelInterface, ArrayAccess
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
+            if (!is_null($this->container['compressMinLength']) && ($this->container['compressMinLength'] > 31457280)) {
+                $invalidProperties[] = "invalid value for 'compressMinLength', must be smaller than or equal to 31457280.";
+            }
+            if (!is_null($this->container['compressMinLength']) && ($this->container['compressMinLength'] < 0)) {
+                $invalidProperties[] = "invalid value for 'compressMinLength', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['compressMaxLength']) && ($this->container['compressMaxLength'] > 31457280)) {
+                $invalidProperties[] = "invalid value for 'compressMaxLength', must be smaller than or equal to 31457280.";
+            }
+            if (!is_null($this->container['compressMaxLength']) && ($this->container['compressMaxLength'] < 0)) {
+                $invalidProperties[] = "invalid value for 'compressMaxLength', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -266,6 +300,54 @@ class Compress implements ModelInterface, ArrayAccess
     public function setFileType($fileType)
     {
         $this->container['fileType'] = $fileType;
+        return $this;
+    }
+
+    /**
+    * Gets compressMinLength
+    *  压缩区间最小范围
+    *
+    * @return int|null
+    */
+    public function getCompressMinLength()
+    {
+        return $this->container['compressMinLength'];
+    }
+
+    /**
+    * Sets compressMinLength
+    *
+    * @param int|null $compressMinLength 压缩区间最小范围
+    *
+    * @return $this
+    */
+    public function setCompressMinLength($compressMinLength)
+    {
+        $this->container['compressMinLength'] = $compressMinLength;
+        return $this;
+    }
+
+    /**
+    * Gets compressMaxLength
+    *  压缩区间最大范围
+    *
+    * @return int|null
+    */
+    public function getCompressMaxLength()
+    {
+        return $this->container['compressMaxLength'];
+    }
+
+    /**
+    * Sets compressMaxLength
+    *
+    * @param int|null $compressMaxLength 压缩区间最大范围
+    *
+    * @return $this
+    */
+    public function setCompressMaxLength($compressMaxLength)
+    {
+        $this->container['compressMaxLength'] = $compressMaxLength;
         return $this;
     }
 

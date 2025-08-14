@@ -20,41 +20,43 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID
-    * enterpriseProjectId  企业项目ID
-    * hostId  服务器ID
-    * agentId  Agent ID
-    * hostName  服务器名称
-    * hostIp  弹性公网IP地址
-    * privateIp  私有IP地址
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * osName  系统名称
-    * hostStatus  服务器状态，包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
-    * ransomProtectionStatus  勒索防护状态，包含如下4种。   - closed ：关闭。   - opened ：开启。   - opening ：开启中。   - closing ：关闭中。
-    * agentVersion  agent版本
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * protectPolicyId  防护策略ID
-    * protectPolicyName  防护策略名称
+    * projectId  **参数解释**: 项目ID **取值范围**: 字符长度0-128
+    * enterpriseProjectId  **参数解释**: 企业项目ID **取值范围**: 字符长度0-128
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度0-128
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度0-128
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度0-128
+    * hostIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128
+    * osType  **参数解释**: 操作系统类型 **取值范围**:   包含如下2种。     - Linux ：Linux。     - Windows ：Windows。
+    * osName  **参数解释**: 系统名称 **取值范围**: 字符长度0-128
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
+    * ransomProtectionStatus  **参数解释**: 勒索防护状态 **取值范围**: 包含如下6种。   - closed ：未开启。   - opened ：防护中。   - opening ：开启中。   - closing ：关闭中。   - protect_failed：防护失败。   - protect_degraded：防护降级
+    * ransomProtectionFailReason  **参数解释**: 勒索防护失败细分原因 **取值范围**: 包含如下4种。   - driver_load_failed ：驱动加载失败。   - protect_interrupted ：防护中断。   - decoy_deploy_totally_failed ：全部诱饵部署失败。   - decoy_deploy_partially_failed ：部分诱饵部署失败。
+    * failedDecoyDir  **参数解释**: 诱饵防护失败的目录（仅部分诱饵部署失败状态有值） **取值范围**: 字符长度0-512
+    * agentVersion  **参数解释**: agent版本 **取值范围**: 字符长度1-128
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度1-128
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128
+    * protectPolicyId  **参数解释**: 防护策略ID **取值范围**: 字符长度1-128
+    * protectPolicyName  **参数解释**: 防护策略名称 **取值范围**: 字符长度1-128
     * backupError  backupError
-    * backupProtectionStatus  是否开启备份，包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
-    * countProtectEvent  防护事件数
-    * countBackuped  已有备份数
-    * agentStatus  Agent状态
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
-    * hostSource  服务器类型，包含如下3种输入。   - ecs ：ecs。   - outside ：线下主机。   - workspace ：云桌面。
-    * vaultId  存储库ID
-    * vaultName  存储库名称
-    * vaultSize  总容量，单位GB
-    * vaultUsed  已使用容量，单位MB
-    * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小
-    * vaultChargingMode  存储库创建模式，按需：post_paid，包周期：pre_paid
-    * vaultStatus  存储库状态。   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
-    * backupPolicyId  备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用
-    * backupPolicyName  备份策略名称
-    * backupPolicyEnabled  策略是否启用
-    * resourcesNum  已绑定服务器（个）
+    * backupProtectionStatus  **参数解释**: 是否开启备份 **取值范围**: 包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
+    * countProtectEvent  **参数解释**: 防护事件数 **取值范围**: 取值0-2097152
+    * countBackuped  **参数解释**: 已有备份数 **取值范围**: 取值0-2097152
+    * agentStatus  **参数解释**: Agent状态 **取值范围**: 字符长度1-128
+    * version  **参数解释**: 主机开通的版本    **取值范围**: 包含如下7种输入：   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * hostSource  **参数解释**: 服务器类型 **取值范围**: 包含如下3种输入：   - ecs ：弹性云服务器。   - outside ：线下主机。   - workspace ：云桌面。
+    * vaultId  **参数解释**: 存储库ID **取值范围**: 字符长度0-128
+    * vaultName  **参数解释**: 存储库名称 **取值范围**: 字符长度0-128
+    * vaultSize  **参数解释**: 总容量，单位GB **取值范围**: 取值0-2097152
+    * vaultUsed  **参数解释**: 已使用容量，单位MB **取值范围**: 取值0-2097152
+    * vaultAllocated  **参数解释**: 已分配容量，单位GB，指绑定的服务器大小 **取值范围**: 取值0-2097152
+    * vaultChargingMode  **参数解释**: 存储库创建模式 **取值范围**: 包含如下2种： - 按需：post_paid - 包周期：pre_paid
+    * vaultStatus  **参数解释**: 存储库状态。 **取值范围**: 包含如下5种：   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
+    * backupPolicyId  **参数解释**: 备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用。 **取值范围**: 字符长度1-128
+    * backupPolicyName  **参数解释**: 备份策略名称 **取值范围**: 字符长度1-128
+    * backupPolicyEnabled  **参数解释**: 策略是否启用 **取值范围**: 包含如下2种：   - true ：策略已启用。   - false ：策略未启用。
+    * resourcesNum  **参数解释**: 已绑定服务器（个） **取值范围**: 取值0-2097152
     *
     * @var string[]
     */
@@ -70,6 +72,8 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
             'osName' => 'string',
             'hostStatus' => 'string',
             'ransomProtectionStatus' => 'string',
+            'ransomProtectionFailReason' => 'string',
+            'failedDecoyDir' => 'string',
             'agentVersion' => 'string',
             'protectStatus' => 'string',
             'groupId' => 'string',
@@ -98,41 +102,43 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID
-    * enterpriseProjectId  企业项目ID
-    * hostId  服务器ID
-    * agentId  Agent ID
-    * hostName  服务器名称
-    * hostIp  弹性公网IP地址
-    * privateIp  私有IP地址
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * osName  系统名称
-    * hostStatus  服务器状态，包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
-    * ransomProtectionStatus  勒索防护状态，包含如下4种。   - closed ：关闭。   - opened ：开启。   - opening ：开启中。   - closing ：关闭中。
-    * agentVersion  agent版本
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * protectPolicyId  防护策略ID
-    * protectPolicyName  防护策略名称
+    * projectId  **参数解释**: 项目ID **取值范围**: 字符长度0-128
+    * enterpriseProjectId  **参数解释**: 企业项目ID **取值范围**: 字符长度0-128
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度0-128
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度0-128
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度0-128
+    * hostIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128
+    * osType  **参数解释**: 操作系统类型 **取值范围**:   包含如下2种。     - Linux ：Linux。     - Windows ：Windows。
+    * osName  **参数解释**: 系统名称 **取值范围**: 字符长度0-128
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
+    * ransomProtectionStatus  **参数解释**: 勒索防护状态 **取值范围**: 包含如下6种。   - closed ：未开启。   - opened ：防护中。   - opening ：开启中。   - closing ：关闭中。   - protect_failed：防护失败。   - protect_degraded：防护降级
+    * ransomProtectionFailReason  **参数解释**: 勒索防护失败细分原因 **取值范围**: 包含如下4种。   - driver_load_failed ：驱动加载失败。   - protect_interrupted ：防护中断。   - decoy_deploy_totally_failed ：全部诱饵部署失败。   - decoy_deploy_partially_failed ：部分诱饵部署失败。
+    * failedDecoyDir  **参数解释**: 诱饵防护失败的目录（仅部分诱饵部署失败状态有值） **取值范围**: 字符长度0-512
+    * agentVersion  **参数解释**: agent版本 **取值范围**: 字符长度1-128
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度1-128
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128
+    * protectPolicyId  **参数解释**: 防护策略ID **取值范围**: 字符长度1-128
+    * protectPolicyName  **参数解释**: 防护策略名称 **取值范围**: 字符长度1-128
     * backupError  backupError
-    * backupProtectionStatus  是否开启备份，包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
-    * countProtectEvent  防护事件数
-    * countBackuped  已有备份数
-    * agentStatus  Agent状态
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
-    * hostSource  服务器类型，包含如下3种输入。   - ecs ：ecs。   - outside ：线下主机。   - workspace ：云桌面。
-    * vaultId  存储库ID
-    * vaultName  存储库名称
-    * vaultSize  总容量，单位GB
-    * vaultUsed  已使用容量，单位MB
-    * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小
-    * vaultChargingMode  存储库创建模式，按需：post_paid，包周期：pre_paid
-    * vaultStatus  存储库状态。   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
-    * backupPolicyId  备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用
-    * backupPolicyName  备份策略名称
-    * backupPolicyEnabled  策略是否启用
-    * resourcesNum  已绑定服务器（个）
+    * backupProtectionStatus  **参数解释**: 是否开启备份 **取值范围**: 包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
+    * countProtectEvent  **参数解释**: 防护事件数 **取值范围**: 取值0-2097152
+    * countBackuped  **参数解释**: 已有备份数 **取值范围**: 取值0-2097152
+    * agentStatus  **参数解释**: Agent状态 **取值范围**: 字符长度1-128
+    * version  **参数解释**: 主机开通的版本    **取值范围**: 包含如下7种输入：   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * hostSource  **参数解释**: 服务器类型 **取值范围**: 包含如下3种输入：   - ecs ：弹性云服务器。   - outside ：线下主机。   - workspace ：云桌面。
+    * vaultId  **参数解释**: 存储库ID **取值范围**: 字符长度0-128
+    * vaultName  **参数解释**: 存储库名称 **取值范围**: 字符长度0-128
+    * vaultSize  **参数解释**: 总容量，单位GB **取值范围**: 取值0-2097152
+    * vaultUsed  **参数解释**: 已使用容量，单位MB **取值范围**: 取值0-2097152
+    * vaultAllocated  **参数解释**: 已分配容量，单位GB，指绑定的服务器大小 **取值范围**: 取值0-2097152
+    * vaultChargingMode  **参数解释**: 存储库创建模式 **取值范围**: 包含如下2种： - 按需：post_paid - 包周期：pre_paid
+    * vaultStatus  **参数解释**: 存储库状态。 **取值范围**: 包含如下5种：   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
+    * backupPolicyId  **参数解释**: 备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用。 **取值范围**: 字符长度1-128
+    * backupPolicyName  **参数解释**: 备份策略名称 **取值范围**: 字符长度1-128
+    * backupPolicyEnabled  **参数解释**: 策略是否启用 **取值范围**: 包含如下2种：   - true ：策略已启用。   - false ：策略未启用。
+    * resourcesNum  **参数解释**: 已绑定服务器（个） **取值范围**: 取值0-2097152
     *
     * @var string[]
     */
@@ -148,6 +154,8 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
         'osName' => null,
         'hostStatus' => null,
         'ransomProtectionStatus' => null,
+        'ransomProtectionFailReason' => null,
+        'failedDecoyDir' => null,
         'agentVersion' => null,
         'protectStatus' => null,
         'groupId' => null,
@@ -197,41 +205,43 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID
-    * enterpriseProjectId  企业项目ID
-    * hostId  服务器ID
-    * agentId  Agent ID
-    * hostName  服务器名称
-    * hostIp  弹性公网IP地址
-    * privateIp  私有IP地址
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * osName  系统名称
-    * hostStatus  服务器状态，包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
-    * ransomProtectionStatus  勒索防护状态，包含如下4种。   - closed ：关闭。   - opened ：开启。   - opening ：开启中。   - closing ：关闭中。
-    * agentVersion  agent版本
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * protectPolicyId  防护策略ID
-    * protectPolicyName  防护策略名称
+    * projectId  **参数解释**: 项目ID **取值范围**: 字符长度0-128
+    * enterpriseProjectId  **参数解释**: 企业项目ID **取值范围**: 字符长度0-128
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度0-128
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度0-128
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度0-128
+    * hostIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128
+    * osType  **参数解释**: 操作系统类型 **取值范围**:   包含如下2种。     - Linux ：Linux。     - Windows ：Windows。
+    * osName  **参数解释**: 系统名称 **取值范围**: 字符长度0-128
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
+    * ransomProtectionStatus  **参数解释**: 勒索防护状态 **取值范围**: 包含如下6种。   - closed ：未开启。   - opened ：防护中。   - opening ：开启中。   - closing ：关闭中。   - protect_failed：防护失败。   - protect_degraded：防护降级
+    * ransomProtectionFailReason  **参数解释**: 勒索防护失败细分原因 **取值范围**: 包含如下4种。   - driver_load_failed ：驱动加载失败。   - protect_interrupted ：防护中断。   - decoy_deploy_totally_failed ：全部诱饵部署失败。   - decoy_deploy_partially_failed ：部分诱饵部署失败。
+    * failedDecoyDir  **参数解释**: 诱饵防护失败的目录（仅部分诱饵部署失败状态有值） **取值范围**: 字符长度0-512
+    * agentVersion  **参数解释**: agent版本 **取值范围**: 字符长度1-128
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度1-128
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128
+    * protectPolicyId  **参数解释**: 防护策略ID **取值范围**: 字符长度1-128
+    * protectPolicyName  **参数解释**: 防护策略名称 **取值范围**: 字符长度1-128
     * backupError  backupError
-    * backupProtectionStatus  是否开启备份，包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
-    * countProtectEvent  防护事件数
-    * countBackuped  已有备份数
-    * agentStatus  Agent状态
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
-    * hostSource  服务器类型，包含如下3种输入。   - ecs ：ecs。   - outside ：线下主机。   - workspace ：云桌面。
-    * vaultId  存储库ID
-    * vaultName  存储库名称
-    * vaultSize  总容量，单位GB
-    * vaultUsed  已使用容量，单位MB
-    * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小
-    * vaultChargingMode  存储库创建模式，按需：post_paid，包周期：pre_paid
-    * vaultStatus  存储库状态。   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
-    * backupPolicyId  备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用
-    * backupPolicyName  备份策略名称
-    * backupPolicyEnabled  策略是否启用
-    * resourcesNum  已绑定服务器（个）
+    * backupProtectionStatus  **参数解释**: 是否开启备份 **取值范围**: 包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
+    * countProtectEvent  **参数解释**: 防护事件数 **取值范围**: 取值0-2097152
+    * countBackuped  **参数解释**: 已有备份数 **取值范围**: 取值0-2097152
+    * agentStatus  **参数解释**: Agent状态 **取值范围**: 字符长度1-128
+    * version  **参数解释**: 主机开通的版本    **取值范围**: 包含如下7种输入：   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * hostSource  **参数解释**: 服务器类型 **取值范围**: 包含如下3种输入：   - ecs ：弹性云服务器。   - outside ：线下主机。   - workspace ：云桌面。
+    * vaultId  **参数解释**: 存储库ID **取值范围**: 字符长度0-128
+    * vaultName  **参数解释**: 存储库名称 **取值范围**: 字符长度0-128
+    * vaultSize  **参数解释**: 总容量，单位GB **取值范围**: 取值0-2097152
+    * vaultUsed  **参数解释**: 已使用容量，单位MB **取值范围**: 取值0-2097152
+    * vaultAllocated  **参数解释**: 已分配容量，单位GB，指绑定的服务器大小 **取值范围**: 取值0-2097152
+    * vaultChargingMode  **参数解释**: 存储库创建模式 **取值范围**: 包含如下2种： - 按需：post_paid - 包周期：pre_paid
+    * vaultStatus  **参数解释**: 存储库状态。 **取值范围**: 包含如下5种：   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
+    * backupPolicyId  **参数解释**: 备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用。 **取值范围**: 字符长度1-128
+    * backupPolicyName  **参数解释**: 备份策略名称 **取值范围**: 字符长度1-128
+    * backupPolicyEnabled  **参数解释**: 策略是否启用 **取值范围**: 包含如下2种：   - true ：策略已启用。   - false ：策略未启用。
+    * resourcesNum  **参数解释**: 已绑定服务器（个） **取值范围**: 取值0-2097152
     *
     * @var string[]
     */
@@ -247,6 +257,8 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
             'osName' => 'os_name',
             'hostStatus' => 'host_status',
             'ransomProtectionStatus' => 'ransom_protection_status',
+            'ransomProtectionFailReason' => 'ransom_protection_fail_reason',
+            'failedDecoyDir' => 'failed_decoy_dir',
             'agentVersion' => 'agent_version',
             'protectStatus' => 'protect_status',
             'groupId' => 'group_id',
@@ -275,41 +287,43 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID
-    * enterpriseProjectId  企业项目ID
-    * hostId  服务器ID
-    * agentId  Agent ID
-    * hostName  服务器名称
-    * hostIp  弹性公网IP地址
-    * privateIp  私有IP地址
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * osName  系统名称
-    * hostStatus  服务器状态，包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
-    * ransomProtectionStatus  勒索防护状态，包含如下4种。   - closed ：关闭。   - opened ：开启。   - opening ：开启中。   - closing ：关闭中。
-    * agentVersion  agent版本
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * protectPolicyId  防护策略ID
-    * protectPolicyName  防护策略名称
+    * projectId  **参数解释**: 项目ID **取值范围**: 字符长度0-128
+    * enterpriseProjectId  **参数解释**: 企业项目ID **取值范围**: 字符长度0-128
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度0-128
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度0-128
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度0-128
+    * hostIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128
+    * osType  **参数解释**: 操作系统类型 **取值范围**:   包含如下2种。     - Linux ：Linux。     - Windows ：Windows。
+    * osName  **参数解释**: 系统名称 **取值范围**: 字符长度0-128
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
+    * ransomProtectionStatus  **参数解释**: 勒索防护状态 **取值范围**: 包含如下6种。   - closed ：未开启。   - opened ：防护中。   - opening ：开启中。   - closing ：关闭中。   - protect_failed：防护失败。   - protect_degraded：防护降级
+    * ransomProtectionFailReason  **参数解释**: 勒索防护失败细分原因 **取值范围**: 包含如下4种。   - driver_load_failed ：驱动加载失败。   - protect_interrupted ：防护中断。   - decoy_deploy_totally_failed ：全部诱饵部署失败。   - decoy_deploy_partially_failed ：部分诱饵部署失败。
+    * failedDecoyDir  **参数解释**: 诱饵防护失败的目录（仅部分诱饵部署失败状态有值） **取值范围**: 字符长度0-512
+    * agentVersion  **参数解释**: agent版本 **取值范围**: 字符长度1-128
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度1-128
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128
+    * protectPolicyId  **参数解释**: 防护策略ID **取值范围**: 字符长度1-128
+    * protectPolicyName  **参数解释**: 防护策略名称 **取值范围**: 字符长度1-128
     * backupError  backupError
-    * backupProtectionStatus  是否开启备份，包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
-    * countProtectEvent  防护事件数
-    * countBackuped  已有备份数
-    * agentStatus  Agent状态
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
-    * hostSource  服务器类型，包含如下3种输入。   - ecs ：ecs。   - outside ：线下主机。   - workspace ：云桌面。
-    * vaultId  存储库ID
-    * vaultName  存储库名称
-    * vaultSize  总容量，单位GB
-    * vaultUsed  已使用容量，单位MB
-    * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小
-    * vaultChargingMode  存储库创建模式，按需：post_paid，包周期：pre_paid
-    * vaultStatus  存储库状态。   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
-    * backupPolicyId  备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用
-    * backupPolicyName  备份策略名称
-    * backupPolicyEnabled  策略是否启用
-    * resourcesNum  已绑定服务器（个）
+    * backupProtectionStatus  **参数解释**: 是否开启备份 **取值范围**: 包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
+    * countProtectEvent  **参数解释**: 防护事件数 **取值范围**: 取值0-2097152
+    * countBackuped  **参数解释**: 已有备份数 **取值范围**: 取值0-2097152
+    * agentStatus  **参数解释**: Agent状态 **取值范围**: 字符长度1-128
+    * version  **参数解释**: 主机开通的版本    **取值范围**: 包含如下7种输入：   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * hostSource  **参数解释**: 服务器类型 **取值范围**: 包含如下3种输入：   - ecs ：弹性云服务器。   - outside ：线下主机。   - workspace ：云桌面。
+    * vaultId  **参数解释**: 存储库ID **取值范围**: 字符长度0-128
+    * vaultName  **参数解释**: 存储库名称 **取值范围**: 字符长度0-128
+    * vaultSize  **参数解释**: 总容量，单位GB **取值范围**: 取值0-2097152
+    * vaultUsed  **参数解释**: 已使用容量，单位MB **取值范围**: 取值0-2097152
+    * vaultAllocated  **参数解释**: 已分配容量，单位GB，指绑定的服务器大小 **取值范围**: 取值0-2097152
+    * vaultChargingMode  **参数解释**: 存储库创建模式 **取值范围**: 包含如下2种： - 按需：post_paid - 包周期：pre_paid
+    * vaultStatus  **参数解释**: 存储库状态。 **取值范围**: 包含如下5种：   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
+    * backupPolicyId  **参数解释**: 备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用。 **取值范围**: 字符长度1-128
+    * backupPolicyName  **参数解释**: 备份策略名称 **取值范围**: 字符长度1-128
+    * backupPolicyEnabled  **参数解释**: 策略是否启用 **取值范围**: 包含如下2种：   - true ：策略已启用。   - false ：策略未启用。
+    * resourcesNum  **参数解释**: 已绑定服务器（个） **取值范围**: 取值0-2097152
     *
     * @var string[]
     */
@@ -325,6 +339,8 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
             'osName' => 'setOsName',
             'hostStatus' => 'setHostStatus',
             'ransomProtectionStatus' => 'setRansomProtectionStatus',
+            'ransomProtectionFailReason' => 'setRansomProtectionFailReason',
+            'failedDecoyDir' => 'setFailedDecoyDir',
             'agentVersion' => 'setAgentVersion',
             'protectStatus' => 'setProtectStatus',
             'groupId' => 'setGroupId',
@@ -353,41 +369,43 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID
-    * enterpriseProjectId  企业项目ID
-    * hostId  服务器ID
-    * agentId  Agent ID
-    * hostName  服务器名称
-    * hostIp  弹性公网IP地址
-    * privateIp  私有IP地址
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * osName  系统名称
-    * hostStatus  服务器状态，包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
-    * ransomProtectionStatus  勒索防护状态，包含如下4种。   - closed ：关闭。   - opened ：开启。   - opening ：开启中。   - closing ：关闭中。
-    * agentVersion  agent版本
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
-    * groupId  服务器组ID
-    * groupName  服务器组名称
-    * protectPolicyId  防护策略ID
-    * protectPolicyName  防护策略名称
+    * projectId  **参数解释**: 项目ID **取值范围**: 字符长度0-128
+    * enterpriseProjectId  **参数解释**: 企业项目ID **取值范围**: 字符长度0-128
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度0-128
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度0-128
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度0-128
+    * hostIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128
+    * osType  **参数解释**: 操作系统类型 **取值范围**:   包含如下2种。     - Linux ：Linux。     - Windows ：Windows。
+    * osName  **参数解释**: 系统名称 **取值范围**: 字符长度0-128
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
+    * ransomProtectionStatus  **参数解释**: 勒索防护状态 **取值范围**: 包含如下6种。   - closed ：未开启。   - opened ：防护中。   - opening ：开启中。   - closing ：关闭中。   - protect_failed：防护失败。   - protect_degraded：防护降级
+    * ransomProtectionFailReason  **参数解释**: 勒索防护失败细分原因 **取值范围**: 包含如下4种。   - driver_load_failed ：驱动加载失败。   - protect_interrupted ：防护中断。   - decoy_deploy_totally_failed ：全部诱饵部署失败。   - decoy_deploy_partially_failed ：部分诱饵部署失败。
+    * failedDecoyDir  **参数解释**: 诱饵防护失败的目录（仅部分诱饵部署失败状态有值） **取值范围**: 字符长度0-512
+    * agentVersion  **参数解释**: agent版本 **取值范围**: 字符长度1-128
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度1-128
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128
+    * protectPolicyId  **参数解释**: 防护策略ID **取值范围**: 字符长度1-128
+    * protectPolicyName  **参数解释**: 防护策略名称 **取值范围**: 字符长度1-128
     * backupError  backupError
-    * backupProtectionStatus  是否开启备份，包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
-    * countProtectEvent  防护事件数
-    * countBackuped  已有备份数
-    * agentStatus  Agent状态
-    * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
-    * hostSource  服务器类型，包含如下3种输入。   - ecs ：ecs。   - outside ：线下主机。   - workspace ：云桌面。
-    * vaultId  存储库ID
-    * vaultName  存储库名称
-    * vaultSize  总容量，单位GB
-    * vaultUsed  已使用容量，单位MB
-    * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小
-    * vaultChargingMode  存储库创建模式，按需：post_paid，包周期：pre_paid
-    * vaultStatus  存储库状态。   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
-    * backupPolicyId  备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用
-    * backupPolicyName  备份策略名称
-    * backupPolicyEnabled  策略是否启用
-    * resourcesNum  已绑定服务器（个）
+    * backupProtectionStatus  **参数解释**: 是否开启备份 **取值范围**: 包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
+    * countProtectEvent  **参数解释**: 防护事件数 **取值范围**: 取值0-2097152
+    * countBackuped  **参数解释**: 已有备份数 **取值范围**: 取值0-2097152
+    * agentStatus  **参数解释**: Agent状态 **取值范围**: 字符长度1-128
+    * version  **参数解释**: 主机开通的版本    **取值范围**: 包含如下7种输入：   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * hostSource  **参数解释**: 服务器类型 **取值范围**: 包含如下3种输入：   - ecs ：弹性云服务器。   - outside ：线下主机。   - workspace ：云桌面。
+    * vaultId  **参数解释**: 存储库ID **取值范围**: 字符长度0-128
+    * vaultName  **参数解释**: 存储库名称 **取值范围**: 字符长度0-128
+    * vaultSize  **参数解释**: 总容量，单位GB **取值范围**: 取值0-2097152
+    * vaultUsed  **参数解释**: 已使用容量，单位MB **取值范围**: 取值0-2097152
+    * vaultAllocated  **参数解释**: 已分配容量，单位GB，指绑定的服务器大小 **取值范围**: 取值0-2097152
+    * vaultChargingMode  **参数解释**: 存储库创建模式 **取值范围**: 包含如下2种： - 按需：post_paid - 包周期：pre_paid
+    * vaultStatus  **参数解释**: 存储库状态。 **取值范围**: 包含如下5种：   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
+    * backupPolicyId  **参数解释**: 备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用。 **取值范围**: 字符长度1-128
+    * backupPolicyName  **参数解释**: 备份策略名称 **取值范围**: 字符长度1-128
+    * backupPolicyEnabled  **参数解释**: 策略是否启用 **取值范围**: 包含如下2种：   - true ：策略已启用。   - false ：策略未启用。
+    * resourcesNum  **参数解释**: 已绑定服务器（个） **取值范围**: 取值0-2097152
     *
     * @var string[]
     */
@@ -403,6 +421,8 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
             'osName' => 'getOsName',
             'hostStatus' => 'getHostStatus',
             'ransomProtectionStatus' => 'getRansomProtectionStatus',
+            'ransomProtectionFailReason' => 'getRansomProtectionFailReason',
+            'failedDecoyDir' => 'getFailedDecoyDir',
             'agentVersion' => 'getAgentVersion',
             'protectStatus' => 'getProtectStatus',
             'groupId' => 'getGroupId',
@@ -498,6 +518,8 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
         $this->container['osName'] = isset($data['osName']) ? $data['osName'] : null;
         $this->container['hostStatus'] = isset($data['hostStatus']) ? $data['hostStatus'] : null;
         $this->container['ransomProtectionStatus'] = isset($data['ransomProtectionStatus']) ? $data['ransomProtectionStatus'] : null;
+        $this->container['ransomProtectionFailReason'] = isset($data['ransomProtectionFailReason']) ? $data['ransomProtectionFailReason'] : null;
+        $this->container['failedDecoyDir'] = isset($data['failedDecoyDir']) ? $data['failedDecoyDir'] : null;
         $this->container['agentVersion'] = isset($data['agentVersion']) ? $data['agentVersion'] : null;
         $this->container['protectStatus'] = isset($data['protectStatus']) ? $data['protectStatus'] : null;
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
@@ -597,6 +619,18 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['ransomProtectionStatus']) && (mb_strlen($this->container['ransomProtectionStatus']) < 0)) {
                 $invalidProperties[] = "invalid value for 'ransomProtectionStatus', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['ransomProtectionFailReason']) && (mb_strlen($this->container['ransomProtectionFailReason']) > 128)) {
+                $invalidProperties[] = "invalid value for 'ransomProtectionFailReason', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['ransomProtectionFailReason']) && (mb_strlen($this->container['ransomProtectionFailReason']) < 1)) {
+                $invalidProperties[] = "invalid value for 'ransomProtectionFailReason', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['failedDecoyDir']) && (mb_strlen($this->container['failedDecoyDir']) > 512)) {
+                $invalidProperties[] = "invalid value for 'failedDecoyDir', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['failedDecoyDir']) && (mb_strlen($this->container['failedDecoyDir']) < 0)) {
+                $invalidProperties[] = "invalid value for 'failedDecoyDir', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['agentVersion']) && (mb_strlen($this->container['agentVersion']) > 128)) {
                 $invalidProperties[] = "invalid value for 'agentVersion', the character length must be smaller than or equal to 128.";
@@ -746,7 +780,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  **参数解释**: 项目ID **取值范围**: 字符长度0-128
     *
     * @return string|null
     */
@@ -758,7 +792,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId **参数解释**: 项目ID **取值范围**: 字符长度0-128
     *
     * @return $this
     */
@@ -770,7 +804,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID
+    *  **参数解释**: 企业项目ID **取值范围**: 字符长度0-128
     *
     * @return string|null
     */
@@ -782,7 +816,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID **取值范围**: 字符长度0-128
     *
     * @return $this
     */
@@ -794,7 +828,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  **参数解释**: 服务器ID **取值范围**: 字符长度0-128
     *
     * @return string|null
     */
@@ -806,7 +840,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器ID
+    * @param string|null $hostId **参数解释**: 服务器ID **取值范围**: 字符长度0-128
     *
     * @return $this
     */
@@ -818,7 +852,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  Agent ID
+    *  **参数解释**: Agent ID **取值范围**: 字符长度0-128
     *
     * @return string|null
     */
@@ -830,7 +864,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId Agent ID
+    * @param string|null $agentId **参数解释**: Agent ID **取值范围**: 字符长度0-128
     *
     * @return $this
     */
@@ -842,7 +876,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **取值范围**: 字符长度0-128
     *
     * @return string|null
     */
@@ -854,7 +888,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **取值范围**: 字符长度0-128
     *
     * @return $this
     */
@@ -866,7 +900,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  弹性公网IP地址
+    *  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128
     *
     * @return string|null
     */
@@ -878,7 +912,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 弹性公网IP地址
+    * @param string|null $hostIp **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128
     *
     * @return $this
     */
@@ -890,7 +924,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  私有IP地址
+    *  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128
     *
     * @return string|null
     */
@@ -902,7 +936,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp 私有IP地址
+    * @param string|null $privateIp **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128
     *
     * @return $this
     */
@@ -914,7 +948,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    *  **参数解释**: 操作系统类型 **取值范围**:   包含如下2种。     - Linux ：Linux。     - Windows ：Windows。
     *
     * @return string|null
     */
@@ -926,7 +960,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * @param string|null $osType **参数解释**: 操作系统类型 **取值范围**:   包含如下2种。     - Linux ：Linux。     - Windows ：Windows。
     *
     * @return $this
     */
@@ -938,7 +972,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osName
-    *  系统名称
+    *  **参数解释**: 系统名称 **取值范围**: 字符长度0-128
     *
     * @return string|null
     */
@@ -950,7 +984,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osName
     *
-    * @param string|null $osName 系统名称
+    * @param string|null $osName **参数解释**: 系统名称 **取值范围**: 字符长度0-128
     *
     * @return $this
     */
@@ -962,7 +996,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostStatus
-    *  服务器状态，包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
+    *  **参数解释**: 服务器状态 **取值范围**: 包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
     *
     * @return string|null
     */
@@ -974,7 +1008,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostStatus
     *
-    * @param string|null $hostStatus 服务器状态，包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
+    * @param string|null $hostStatus **参数解释**: 服务器状态 **取值范围**: 包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
     *
     * @return $this
     */
@@ -986,7 +1020,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ransomProtectionStatus
-    *  勒索防护状态，包含如下4种。   - closed ：关闭。   - opened ：开启。   - opening ：开启中。   - closing ：关闭中。
+    *  **参数解释**: 勒索防护状态 **取值范围**: 包含如下6种。   - closed ：未开启。   - opened ：防护中。   - opening ：开启中。   - closing ：关闭中。   - protect_failed：防护失败。   - protect_degraded：防护降级
     *
     * @return string|null
     */
@@ -998,7 +1032,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ransomProtectionStatus
     *
-    * @param string|null $ransomProtectionStatus 勒索防护状态，包含如下4种。   - closed ：关闭。   - opened ：开启。   - opening ：开启中。   - closing ：关闭中。
+    * @param string|null $ransomProtectionStatus **参数解释**: 勒索防护状态 **取值范围**: 包含如下6种。   - closed ：未开启。   - opened ：防护中。   - opening ：开启中。   - closing ：关闭中。   - protect_failed：防护失败。   - protect_degraded：防护降级
     *
     * @return $this
     */
@@ -1009,8 +1043,56 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets ransomProtectionFailReason
+    *  **参数解释**: 勒索防护失败细分原因 **取值范围**: 包含如下4种。   - driver_load_failed ：驱动加载失败。   - protect_interrupted ：防护中断。   - decoy_deploy_totally_failed ：全部诱饵部署失败。   - decoy_deploy_partially_failed ：部分诱饵部署失败。
+    *
+    * @return string|null
+    */
+    public function getRansomProtectionFailReason()
+    {
+        return $this->container['ransomProtectionFailReason'];
+    }
+
+    /**
+    * Sets ransomProtectionFailReason
+    *
+    * @param string|null $ransomProtectionFailReason **参数解释**: 勒索防护失败细分原因 **取值范围**: 包含如下4种。   - driver_load_failed ：驱动加载失败。   - protect_interrupted ：防护中断。   - decoy_deploy_totally_failed ：全部诱饵部署失败。   - decoy_deploy_partially_failed ：部分诱饵部署失败。
+    *
+    * @return $this
+    */
+    public function setRansomProtectionFailReason($ransomProtectionFailReason)
+    {
+        $this->container['ransomProtectionFailReason'] = $ransomProtectionFailReason;
+        return $this;
+    }
+
+    /**
+    * Gets failedDecoyDir
+    *  **参数解释**: 诱饵防护失败的目录（仅部分诱饵部署失败状态有值） **取值范围**: 字符长度0-512
+    *
+    * @return string|null
+    */
+    public function getFailedDecoyDir()
+    {
+        return $this->container['failedDecoyDir'];
+    }
+
+    /**
+    * Sets failedDecoyDir
+    *
+    * @param string|null $failedDecoyDir **参数解释**: 诱饵防护失败的目录（仅部分诱饵部署失败状态有值） **取值范围**: 字符长度0-512
+    *
+    * @return $this
+    */
+    public function setFailedDecoyDir($failedDecoyDir)
+    {
+        $this->container['failedDecoyDir'] = $failedDecoyDir;
+        return $this;
+    }
+
+    /**
     * Gets agentVersion
-    *  agent版本
+    *  **参数解释**: agent版本 **取值范围**: 字符长度1-128
     *
     * @return string|null
     */
@@ -1022,7 +1104,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentVersion
     *
-    * @param string|null $agentVersion agent版本
+    * @param string|null $agentVersion **参数解释**: agent版本 **取值范围**: 字符长度1-128
     *
     * @return $this
     */
@@ -1034,7 +1116,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    *  **参数解释**: 防护状态 **取值范围**: 包含如下2种。 - closed ：未防护。 - opened ：防护中。
     *
     * @return string|null
     */
@@ -1046,7 +1128,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus 防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * @param string|null $protectStatus **参数解释**: 防护状态 **取值范围**: 包含如下2种。 - closed ：未防护。 - opened ：防护中。
     *
     * @return $this
     */
@@ -1058,7 +1140,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  服务器组ID
+    *  **参数解释**: 服务器组ID **取值范围**: 字符长度1-128
     *
     * @return string|null
     */
@@ -1070,7 +1152,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 服务器组ID
+    * @param string|null $groupId **参数解释**: 服务器组ID **取值范围**: 字符长度1-128
     *
     * @return $this
     */
@@ -1082,7 +1164,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  服务器组名称
+    *  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128
     *
     * @return string|null
     */
@@ -1094,7 +1176,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 服务器组名称
+    * @param string|null $groupName **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128
     *
     * @return $this
     */
@@ -1106,7 +1188,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectPolicyId
-    *  防护策略ID
+    *  **参数解释**: 防护策略ID **取值范围**: 字符长度1-128
     *
     * @return string|null
     */
@@ -1118,7 +1200,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectPolicyId
     *
-    * @param string|null $protectPolicyId 防护策略ID
+    * @param string|null $protectPolicyId **参数解释**: 防护策略ID **取值范围**: 字符长度1-128
     *
     * @return $this
     */
@@ -1130,7 +1212,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectPolicyName
-    *  防护策略名称
+    *  **参数解释**: 防护策略名称 **取值范围**: 字符长度1-128
     *
     * @return string|null
     */
@@ -1142,7 +1224,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectPolicyName
     *
-    * @param string|null $protectPolicyName 防护策略名称
+    * @param string|null $protectPolicyName **参数解释**: 防护策略名称 **取值范围**: 字符长度1-128
     *
     * @return $this
     */
@@ -1178,7 +1260,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupProtectionStatus
-    *  是否开启备份，包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
+    *  **参数解释**: 是否开启备份 **取值范围**: 包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
     *
     * @return string|null
     */
@@ -1190,7 +1272,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets backupProtectionStatus
     *
-    * @param string|null $backupProtectionStatus 是否开启备份，包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
+    * @param string|null $backupProtectionStatus **参数解释**: 是否开启备份 **取值范围**: 包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
     *
     * @return $this
     */
@@ -1202,7 +1284,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets countProtectEvent
-    *  防护事件数
+    *  **参数解释**: 防护事件数 **取值范围**: 取值0-2097152
     *
     * @return int|null
     */
@@ -1214,7 +1296,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets countProtectEvent
     *
-    * @param int|null $countProtectEvent 防护事件数
+    * @param int|null $countProtectEvent **参数解释**: 防护事件数 **取值范围**: 取值0-2097152
     *
     * @return $this
     */
@@ -1226,7 +1308,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets countBackuped
-    *  已有备份数
+    *  **参数解释**: 已有备份数 **取值范围**: 取值0-2097152
     *
     * @return int|null
     */
@@ -1238,7 +1320,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets countBackuped
     *
-    * @param int|null $countBackuped 已有备份数
+    * @param int|null $countBackuped **参数解释**: 已有备份数 **取值范围**: 取值0-2097152
     *
     * @return $this
     */
@@ -1250,7 +1332,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentStatus
-    *  Agent状态
+    *  **参数解释**: Agent状态 **取值范围**: 字符长度1-128
     *
     * @return string|null
     */
@@ -1262,7 +1344,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentStatus
     *
-    * @param string|null $agentStatus Agent状态
+    * @param string|null $agentStatus **参数解释**: Agent状态 **取值范围**: 字符长度1-128
     *
     * @return $this
     */
@@ -1274,7 +1356,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    *  **参数解释**: 主机开通的版本    **取值范围**: 包含如下7种输入：   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
     *
     * @return string|null
     */
@@ -1286,7 +1368,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * @param string|null $version **参数解释**: 主机开通的版本    **取值范围**: 包含如下7种输入：   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
     *
     * @return $this
     */
@@ -1298,7 +1380,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostSource
-    *  服务器类型，包含如下3种输入。   - ecs ：ecs。   - outside ：线下主机。   - workspace ：云桌面。
+    *  **参数解释**: 服务器类型 **取值范围**: 包含如下3种输入：   - ecs ：弹性云服务器。   - outside ：线下主机。   - workspace ：云桌面。
     *
     * @return string|null
     */
@@ -1310,7 +1392,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostSource
     *
-    * @param string|null $hostSource 服务器类型，包含如下3种输入。   - ecs ：ecs。   - outside ：线下主机。   - workspace ：云桌面。
+    * @param string|null $hostSource **参数解释**: 服务器类型 **取值范围**: 包含如下3种输入：   - ecs ：弹性云服务器。   - outside ：线下主机。   - workspace ：云桌面。
     *
     * @return $this
     */
@@ -1322,7 +1404,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vaultId
-    *  存储库ID
+    *  **参数解释**: 存储库ID **取值范围**: 字符长度0-128
     *
     * @return string|null
     */
@@ -1334,7 +1416,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vaultId
     *
-    * @param string|null $vaultId 存储库ID
+    * @param string|null $vaultId **参数解释**: 存储库ID **取值范围**: 字符长度0-128
     *
     * @return $this
     */
@@ -1346,7 +1428,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vaultName
-    *  存储库名称
+    *  **参数解释**: 存储库名称 **取值范围**: 字符长度0-128
     *
     * @return string|null
     */
@@ -1358,7 +1440,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vaultName
     *
-    * @param string|null $vaultName 存储库名称
+    * @param string|null $vaultName **参数解释**: 存储库名称 **取值范围**: 字符长度0-128
     *
     * @return $this
     */
@@ -1370,7 +1452,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vaultSize
-    *  总容量，单位GB
+    *  **参数解释**: 总容量，单位GB **取值范围**: 取值0-2097152
     *
     * @return int|null
     */
@@ -1382,7 +1464,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vaultSize
     *
-    * @param int|null $vaultSize 总容量，单位GB
+    * @param int|null $vaultSize **参数解释**: 总容量，单位GB **取值范围**: 取值0-2097152
     *
     * @return $this
     */
@@ -1394,7 +1476,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vaultUsed
-    *  已使用容量，单位MB
+    *  **参数解释**: 已使用容量，单位MB **取值范围**: 取值0-2097152
     *
     * @return int|null
     */
@@ -1406,7 +1488,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vaultUsed
     *
-    * @param int|null $vaultUsed 已使用容量，单位MB
+    * @param int|null $vaultUsed **参数解释**: 已使用容量，单位MB **取值范围**: 取值0-2097152
     *
     * @return $this
     */
@@ -1418,7 +1500,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vaultAllocated
-    *  已分配容量，单位GB，指绑定的服务器大小
+    *  **参数解释**: 已分配容量，单位GB，指绑定的服务器大小 **取值范围**: 取值0-2097152
     *
     * @return int|null
     */
@@ -1430,7 +1512,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vaultAllocated
     *
-    * @param int|null $vaultAllocated 已分配容量，单位GB，指绑定的服务器大小
+    * @param int|null $vaultAllocated **参数解释**: 已分配容量，单位GB，指绑定的服务器大小 **取值范围**: 取值0-2097152
     *
     * @return $this
     */
@@ -1442,7 +1524,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vaultChargingMode
-    *  存储库创建模式，按需：post_paid，包周期：pre_paid
+    *  **参数解释**: 存储库创建模式 **取值范围**: 包含如下2种： - 按需：post_paid - 包周期：pre_paid
     *
     * @return string|null
     */
@@ -1454,7 +1536,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vaultChargingMode
     *
-    * @param string|null $vaultChargingMode 存储库创建模式，按需：post_paid，包周期：pre_paid
+    * @param string|null $vaultChargingMode **参数解释**: 存储库创建模式 **取值范围**: 包含如下2种： - 按需：post_paid - 包周期：pre_paid
     *
     * @return $this
     */
@@ -1466,7 +1548,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vaultStatus
-    *  存储库状态。   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
+    *  **参数解释**: 存储库状态。 **取值范围**: 包含如下5种：   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
     *
     * @return string|null
     */
@@ -1478,7 +1560,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vaultStatus
     *
-    * @param string|null $vaultStatus 存储库状态。   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
+    * @param string|null $vaultStatus **参数解释**: 存储库状态。 **取值范围**: 包含如下5种：   - available ：可用。   - lock ：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
     *
     * @return $this
     */
@@ -1490,7 +1572,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupPolicyId
-    *  备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用
+    *  **参数解释**: 备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用。 **取值范围**: 字符长度1-128
     *
     * @return string|null
     */
@@ -1502,7 +1584,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets backupPolicyId
     *
-    * @param string|null $backupPolicyId 备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用
+    * @param string|null $backupPolicyId **参数解释**: 备份策略ID，若为空，则为未绑定状态，若不为空，通过backup_policy_enabled字段判断策略是否启用。 **取值范围**: 字符长度1-128
     *
     * @return $this
     */
@@ -1514,7 +1596,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupPolicyName
-    *  备份策略名称
+    *  **参数解释**: 备份策略名称 **取值范围**: 字符长度1-128
     *
     * @return string|null
     */
@@ -1526,7 +1608,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets backupPolicyName
     *
-    * @param string|null $backupPolicyName 备份策略名称
+    * @param string|null $backupPolicyName **参数解释**: 备份策略名称 **取值范围**: 字符长度1-128
     *
     * @return $this
     */
@@ -1538,7 +1620,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupPolicyEnabled
-    *  策略是否启用
+    *  **参数解释**: 策略是否启用 **取值范围**: 包含如下2种：   - true ：策略已启用。   - false ：策略未启用。
     *
     * @return bool|null
     */
@@ -1550,7 +1632,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets backupPolicyEnabled
     *
-    * @param bool|null $backupPolicyEnabled 策略是否启用
+    * @param bool|null $backupPolicyEnabled **参数解释**: 策略是否启用 **取值范围**: 包含如下2种：   - true ：策略已启用。   - false ：策略未启用。
     *
     * @return $this
     */
@@ -1562,7 +1644,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourcesNum
-    *  已绑定服务器（个）
+    *  **参数解释**: 已绑定服务器（个） **取值范围**: 取值0-2097152
     *
     * @return int|null
     */
@@ -1574,7 +1656,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourcesNum
     *
-    * @param int|null $resourcesNum 已绑定服务器（个）
+    * @param int|null $resourcesNum **参数解释**: 已绑定服务器（个） **取值范围**: 取值0-2097152
     *
     * @return $this
     */

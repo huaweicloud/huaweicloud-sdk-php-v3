@@ -2690,6 +2690,133 @@ class ConfigClient extends Client
     }
 
     /**
+     * 查询规则的合规总结
+     *
+     * 根据规则ID查询此规则的合规总结
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function collectPolicyAssignmentsStatesSummary($request)
+    {
+        return $this->collectPolicyAssignmentsStatesSummaryWithHttpInfo($request);
+    }
+
+    public function collectPolicyAssignmentsStatesSummaryWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/policy-assignments/{policy_assignment_id}/policy-states/summary';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceName'] !== null) {
+            $queryParams['resource_name'] = $localVarParams['resourceName'];
+        }
+        if ($localVarParams['policyAssignmentId'] !== null) {
+            $pathParams['policy_assignment_id'] = $localVarParams['policyAssignmentId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\CollectPolicyAssignmentsStatesSummaryResponse',
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\CollectPolicyAssignmentsStatesSummaryRequest');
+    }
+
+    /**
+     * 查询用户的合规总结
+     *
+     * 查询用户的合规总结
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function collectPolicyStatesSummary($request)
+    {
+        return $this->collectPolicyStatesSummaryWithHttpInfo($request);
+    }
+
+    public function collectPolicyStatesSummaryWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/policy-states/summary';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\CollectPolicyStatesSummaryResponse',
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\CollectPolicyStatesSummaryRequest');
+    }
+
+    /**
      * 列举修正最新记录
      *
      * 列举合规规则修正最新记录。
@@ -2758,6 +2885,77 @@ class ConfigClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Config\V1\Model\CollectRemediationExecutionStatusesSummaryResponse',
             $requestType='\HuaweiCloud\SDK\Config\V1\Model\CollectRemediationExecutionStatusesSummaryRequest');
+    }
+
+    /**
+     * 查询用户资源的合规总结
+     *
+     * 查询用户资源的合规总结
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function collectResourcesPolicyStatesSummary($request)
+    {
+        return $this->collectResourcesPolicyStatesSummaryWithHttpInfo($request);
+    }
+
+    public function collectResourcesPolicyStatesSummaryWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/resources/policy-states/summary';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $queryParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['resourceName'] !== null) {
+            $queryParams['resource_name'] = $localVarParams['resourceName'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\CollectResourcesPolicyStatesSummaryResponse',
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\CollectResourcesPolicyStatesSummaryRequest');
     }
 
     /**
@@ -5605,6 +5803,74 @@ class ConfigClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Config\V1\Model\CountTrackedResourcesResponse',
             $requestType='\HuaweiCloud\SDK\Config\V1\Model\CountTrackedResourcesRequest');
+    }
+
+    /**
+     * 列举所有已对接的云服务
+     *
+     * 查询所有已对接Config的云服务、资源。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAllProviders($request)
+    {
+        return $this->listAllProvidersWithHttpInfo($request);
+    }
+
+    public function listAllProvidersWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/all-providers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\ListAllProvidersResponse',
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\ListAllProvidersRequest');
     }
 
     /**

@@ -20,7 +20,7 @@ class InstanceAccessControlAttributeConfigurationDto implements ModelInterface, 
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accessControlAttributes  IAM身份中心实例中ABAC配置的属性
+    * accessControlAttributes  IAM Identity Center实例中ABAC配置的属性
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class InstanceAccessControlAttributeConfigurationDto implements ModelInterface, 
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accessControlAttributes  IAM身份中心实例中ABAC配置的属性
+    * accessControlAttributes  IAM Identity Center实例中ABAC配置的属性
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class InstanceAccessControlAttributeConfigurationDto implements ModelInterface, 
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accessControlAttributes  IAM身份中心实例中ABAC配置的属性
+    * accessControlAttributes  IAM Identity Center实例中ABAC配置的属性
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class InstanceAccessControlAttributeConfigurationDto implements ModelInterface, 
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accessControlAttributes  IAM身份中心实例中ABAC配置的属性
+    * accessControlAttributes  IAM Identity Center实例中ABAC配置的属性
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class InstanceAccessControlAttributeConfigurationDto implements ModelInterface, 
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accessControlAttributes  IAM身份中心实例中ABAC配置的属性
+    * accessControlAttributes  IAM Identity Center实例中ABAC配置的属性
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class InstanceAccessControlAttributeConfigurationDto implements ModelInterface, 
 
     /**
     * Gets accessControlAttributes
-    *  IAM身份中心实例中ABAC配置的属性
+    *  IAM Identity Center实例中ABAC配置的属性
     *
     * @return \HuaweiCloud\SDK\IdentityCenter\V1\Model\AccessControlAttributeDto[]
     */
@@ -189,7 +189,7 @@ class InstanceAccessControlAttributeConfigurationDto implements ModelInterface, 
     /**
     * Sets accessControlAttributes
     *
-    * @param \HuaweiCloud\SDK\IdentityCenter\V1\Model\AccessControlAttributeDto[] $accessControlAttributes IAM身份中心实例中ABAC配置的属性
+    * @param \HuaweiCloud\SDK\IdentityCenter\V1\Model\AccessControlAttributeDto[] $accessControlAttributes IAM Identity Center实例中ABAC配置的属性
     *
     * @return $this
     */

@@ -20,13 +20,13 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示个数
-    * policyName  防护策略名称
-    * protectPolicyId  防护策略id
-    * operatingSystem  策略支持的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 取值0-2000000 **默认取值**: 0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * policyName  **参数解释**: 防护策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-255 **默认取值**: 不涉及
+    * protectPolicyId  **参数解释**: 防护策略id **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
+    * operatingSystem  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示个数
-    * policyName  防护策略名称
-    * protectPolicyId  防护策略id
-    * operatingSystem  策略支持的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 取值0-2000000 **默认取值**: 0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * policyName  **参数解释**: 防护策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-255 **默认取值**: 不涉及
+    * protectPolicyId  **参数解释**: 防护策略id **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
+    * operatingSystem  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示个数
-    * policyName  防护策略名称
-    * protectPolicyId  防护策略id
-    * operatingSystem  策略支持的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 取值0-2000000 **默认取值**: 0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * policyName  **参数解释**: 防护策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-255 **默认取值**: 不涉及
+    * protectPolicyId  **参数解释**: 防护策略id **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
+    * operatingSystem  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示个数
-    * policyName  防护策略名称
-    * protectPolicyId  防护策略id
-    * operatingSystem  策略支持的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 取值0-2000000 **默认取值**: 0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * policyName  **参数解释**: 防护策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-255 **默认取值**: 不涉及
+    * protectPolicyId  **参数解释**: 防护策略id **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
+    * operatingSystem  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示个数
-    * policyName  防护策略名称
-    * protectPolicyId  防护策略id
-    * operatingSystem  策略支持的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 取值0-2000000 **默认取值**: 0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * policyName  **参数解释**: 防护策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-255 **默认取值**: 不涉及
+    * protectPolicyId  **参数解释**: 防护策略id **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
+    * operatingSystem  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -254,11 +254,14 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
             }
-            if (!is_null($this->container['policyName']) && (mb_strlen($this->container['policyName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'policyName', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['policyName']) && (mb_strlen($this->container['policyName']) > 255)) {
+                $invalidProperties[] = "invalid value for 'policyName', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['policyName']) && (mb_strlen($this->container['policyName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'policyName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['policyName']) && !preg_match("/^[A-Za-z0-9\\u4E00-\\u9FA5,\\.\\u3002\\uff0c_-]+$/", $this->container['policyName'])) {
+                $invalidProperties[] = "invalid value for 'policyName', must be conform to the pattern /^[A-Za-z0-9\\u4E00-\\u9FA5,\\.\\u3002\\uff0c_-]+$/.";
             }
             if (!is_null($this->container['protectPolicyId']) && (mb_strlen($this->container['protectPolicyId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'protectPolicyId', the character length must be smaller than or equal to 128.";
@@ -266,11 +269,17 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['protectPolicyId']) && (mb_strlen($this->container['protectPolicyId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'protectPolicyId', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['protectPolicyId']) && !preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['protectPolicyId'])) {
+                $invalidProperties[] = "invalid value for 'protectPolicyId', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
+            }
             if (!is_null($this->container['operatingSystem']) && (mb_strlen($this->container['operatingSystem']) > 128)) {
                 $invalidProperties[] = "invalid value for 'operatingSystem', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['operatingSystem']) && (mb_strlen($this->container['operatingSystem']) < 0)) {
                 $invalidProperties[] = "invalid value for 'operatingSystem', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['operatingSystem']) && !preg_match("/^Windows|Linux$/", $this->container['operatingSystem'])) {
+                $invalidProperties[] = "invalid value for 'operatingSystem', must be conform to the pattern /^Windows|Linux$/.";
             }
         return $invalidProperties;
     }
@@ -288,7 +297,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  Region ID
+    *  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -300,7 +309,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string|null $region Region ID
+    * @param string|null $region **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -312,7 +321,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return string|null
     */
@@ -324,7 +333,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return $this
     */
@@ -336,7 +345,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置
+    *  **参数解释**: 指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 取值0-2000000 **默认取值**: 0
     *
     * @return int|null
     */
@@ -348,7 +357,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置
+    * @param int|null $offset **参数解释**: 指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 取值0-2000000 **默认取值**: 0
     *
     * @return $this
     */
@@ -360,7 +369,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示个数
+    *  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return int|null
     */
@@ -372,7 +381,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示个数
+    * @param int|null $limit **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return $this
     */
@@ -384,7 +393,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyName
-    *  防护策略名称
+    *  **参数解释**: 防护策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-255 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -396,7 +405,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets policyName
     *
-    * @param string|null $policyName 防护策略名称
+    * @param string|null $policyName **参数解释**: 防护策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-255 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -408,7 +417,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectPolicyId
-    *  防护策略id
+    *  **参数解释**: 防护策略id **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -420,7 +429,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protectPolicyId
     *
-    * @param string|null $protectPolicyId 防护策略id
+    * @param string|null $protectPolicyId **参数解释**: 防护策略id **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -432,7 +441,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets operatingSystem
-    *  策略支持的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    *  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -444,7 +453,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets operatingSystem
     *
-    * @param string|null $operatingSystem 策略支持的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * @param string|null $operatingSystem **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
     *
     * @return $this
     */

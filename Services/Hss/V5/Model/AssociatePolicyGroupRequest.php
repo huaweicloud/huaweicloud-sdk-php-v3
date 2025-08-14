@@ -21,8 +21,7 @@ class AssociatePolicyGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * contentType  缺省值:application/json; charset=utf-8
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * body  body
     *
     * @var string[]
@@ -30,15 +29,13 @@ class AssociatePolicyGroupRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'region' => 'string',
             'enterpriseProjectId' => 'string',
-            'contentType' => 'string',
             'body' => '\HuaweiCloud\SDK\Hss\V5\Model\AssociatePolicyGroupRequestInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * contentType  缺省值:application/json; charset=utf-8
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * body  body
     *
     * @var string[]
@@ -46,7 +43,6 @@ class AssociatePolicyGroupRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'region' => null,
         'enterpriseProjectId' => null,
-        'contentType' => null,
         'body' => null
     ];
 
@@ -74,8 +70,7 @@ class AssociatePolicyGroupRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * contentType  缺省值:application/json; charset=utf-8
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * body  body
     *
     * @var string[]
@@ -83,15 +78,13 @@ class AssociatePolicyGroupRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'region' => 'region',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'contentType' => 'Content-Type',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * contentType  缺省值:application/json; charset=utf-8
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * body  body
     *
     * @var string[]
@@ -99,15 +92,13 @@ class AssociatePolicyGroupRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'region' => 'setRegion',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'contentType' => 'setContentType',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * contentType  缺省值:application/json; charset=utf-8
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * body  body
     *
     * @var string[]
@@ -115,7 +106,6 @@ class AssociatePolicyGroupRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'region' => 'getRegion',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'contentType' => 'getContentType',
             'body' => 'getBody'
     ];
 
@@ -179,7 +169,6 @@ class AssociatePolicyGroupRequest implements ModelInterface, ArrayAccess
     {
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -208,12 +197,6 @@ class AssociatePolicyGroupRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
-            }
-            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) > 128)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -255,7 +238,7 @@ class AssociatePolicyGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return string|null
     */
@@ -267,37 +250,13 @@ class AssociatePolicyGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return $this
     */
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
-        return $this;
-    }
-
-    /**
-    * Gets contentType
-    *  缺省值:application/json; charset=utf-8
-    *
-    * @return string|null
-    */
-    public function getContentType()
-    {
-        return $this->container['contentType'];
-    }
-
-    /**
-    * Sets contentType
-    *
-    * @param string|null $contentType 缺省值:application/json; charset=utf-8
-    *
-    * @return $this
-    */
-    public function setContentType($contentType)
-    {
-        $this->container['contentType'] = $contentType;
         return $this;
     }
 

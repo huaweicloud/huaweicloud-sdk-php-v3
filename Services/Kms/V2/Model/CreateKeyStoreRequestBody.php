@@ -23,13 +23,17 @@ class CreateKeyStoreRequestBody implements ModelInterface, ArrayAccess
     * keystoreAlias  专属密钥库别名，取值范围为1到255个字符，满足正则匹配“^[a-zA-Z0-9:/_-]{1,255}$”，且不与已有的专属密钥库别名重名。
     * hsmClusterId  DHSM集群Id，要求集群当前未创建专属密钥库。
     * hsmCaCert  DHSM集群的CA证书
+    * clusterId  集群ID。当类型为DHSM时，cluster_id为hsm_cluster_id。当类型为CDMS时，为cdms_cluster_id
+    * keystoreType  专属密钥库集群类型。DHSM表示专属加密服务集群，CDMS表示密码卡集群,DEFAULT表示KMS原有集群
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'keystoreAlias' => 'string',
             'hsmClusterId' => 'string',
-            'hsmCaCert' => 'string'
+            'hsmCaCert' => 'string',
+            'clusterId' => 'string',
+            'keystoreType' => 'string'
     ];
 
     /**
@@ -37,13 +41,17 @@ class CreateKeyStoreRequestBody implements ModelInterface, ArrayAccess
     * keystoreAlias  专属密钥库别名，取值范围为1到255个字符，满足正则匹配“^[a-zA-Z0-9:/_-]{1,255}$”，且不与已有的专属密钥库别名重名。
     * hsmClusterId  DHSM集群Id，要求集群当前未创建专属密钥库。
     * hsmCaCert  DHSM集群的CA证书
+    * clusterId  集群ID。当类型为DHSM时，cluster_id为hsm_cluster_id。当类型为CDMS时，为cdms_cluster_id
+    * keystoreType  专属密钥库集群类型。DHSM表示专属加密服务集群，CDMS表示密码卡集群,DEFAULT表示KMS原有集群
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'keystoreAlias' => null,
         'hsmClusterId' => null,
-        'hsmCaCert' => null
+        'hsmCaCert' => null,
+        'clusterId' => null,
+        'keystoreType' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class CreateKeyStoreRequestBody implements ModelInterface, ArrayAccess
     * keystoreAlias  专属密钥库别名，取值范围为1到255个字符，满足正则匹配“^[a-zA-Z0-9:/_-]{1,255}$”，且不与已有的专属密钥库别名重名。
     * hsmClusterId  DHSM集群Id，要求集群当前未创建专属密钥库。
     * hsmCaCert  DHSM集群的CA证书
+    * clusterId  集群ID。当类型为DHSM时，cluster_id为hsm_cluster_id。当类型为CDMS时，为cdms_cluster_id
+    * keystoreType  专属密钥库集群类型。DHSM表示专属加密服务集群，CDMS表示密码卡集群,DEFAULT表示KMS原有集群
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'keystoreAlias' => 'keystore_alias',
             'hsmClusterId' => 'hsm_cluster_id',
-            'hsmCaCert' => 'hsm_ca_cert'
+            'hsmCaCert' => 'hsm_ca_cert',
+            'clusterId' => 'cluster_id',
+            'keystoreType' => 'keystore_type'
     ];
 
     /**
@@ -86,13 +98,17 @@ class CreateKeyStoreRequestBody implements ModelInterface, ArrayAccess
     * keystoreAlias  专属密钥库别名，取值范围为1到255个字符，满足正则匹配“^[a-zA-Z0-9:/_-]{1,255}$”，且不与已有的专属密钥库别名重名。
     * hsmClusterId  DHSM集群Id，要求集群当前未创建专属密钥库。
     * hsmCaCert  DHSM集群的CA证书
+    * clusterId  集群ID。当类型为DHSM时，cluster_id为hsm_cluster_id。当类型为CDMS时，为cdms_cluster_id
+    * keystoreType  专属密钥库集群类型。DHSM表示专属加密服务集群，CDMS表示密码卡集群,DEFAULT表示KMS原有集群
     *
     * @var string[]
     */
     protected static $setters = [
             'keystoreAlias' => 'setKeystoreAlias',
             'hsmClusterId' => 'setHsmClusterId',
-            'hsmCaCert' => 'setHsmCaCert'
+            'hsmCaCert' => 'setHsmCaCert',
+            'clusterId' => 'setClusterId',
+            'keystoreType' => 'setKeystoreType'
     ];
 
     /**
@@ -100,13 +116,17 @@ class CreateKeyStoreRequestBody implements ModelInterface, ArrayAccess
     * keystoreAlias  专属密钥库别名，取值范围为1到255个字符，满足正则匹配“^[a-zA-Z0-9:/_-]{1,255}$”，且不与已有的专属密钥库别名重名。
     * hsmClusterId  DHSM集群Id，要求集群当前未创建专属密钥库。
     * hsmCaCert  DHSM集群的CA证书
+    * clusterId  集群ID。当类型为DHSM时，cluster_id为hsm_cluster_id。当类型为CDMS时，为cdms_cluster_id
+    * keystoreType  专属密钥库集群类型。DHSM表示专属加密服务集群，CDMS表示密码卡集群,DEFAULT表示KMS原有集群
     *
     * @var string[]
     */
     protected static $getters = [
             'keystoreAlias' => 'getKeystoreAlias',
             'hsmClusterId' => 'getHsmClusterId',
-            'hsmCaCert' => 'getHsmCaCert'
+            'hsmCaCert' => 'getHsmCaCert',
+            'clusterId' => 'getClusterId',
+            'keystoreType' => 'getKeystoreType'
     ];
 
     /**
@@ -149,7 +169,24 @@ class CreateKeyStoreRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const KEYSTORE_TYPE__DEFAULT = 'DEFAULT';
+    const KEYSTORE_TYPE_DHSM = 'DHSM';
+    const KEYSTORE_TYPE_CDMS = 'CDMS';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getKeystoreTypeAllowableValues()
+    {
+        return [
+            self::KEYSTORE_TYPE__DEFAULT,
+            self::KEYSTORE_TYPE_DHSM,
+            self::KEYSTORE_TYPE_CDMS,
+        ];
+    }
 
 
     /**
@@ -170,6 +207,8 @@ class CreateKeyStoreRequestBody implements ModelInterface, ArrayAccess
         $this->container['keystoreAlias'] = isset($data['keystoreAlias']) ? $data['keystoreAlias'] : null;
         $this->container['hsmClusterId'] = isset($data['hsmClusterId']) ? $data['hsmClusterId'] : null;
         $this->container['hsmCaCert'] = isset($data['hsmCaCert']) ? $data['hsmCaCert'] : null;
+        $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
+        $this->container['keystoreType'] = isset($data['keystoreType']) ? $data['keystoreType'] : null;
     }
 
     /**
@@ -192,12 +231,14 @@ class CreateKeyStoreRequestBody implements ModelInterface, ArrayAccess
             if (!preg_match("/^[a-zA-Z0-9:\/_-]{1,255}$/", $this->container['keystoreAlias'])) {
                 $invalidProperties[] = "invalid value for 'keystoreAlias', must be conform to the pattern /^[a-zA-Z0-9:\/_-]{1,255}$/.";
             }
-        if ($this->container['hsmClusterId'] === null) {
-            $invalidProperties[] = "'hsmClusterId' can't be null";
-        }
-        if ($this->container['hsmCaCert'] === null) {
-            $invalidProperties[] = "'hsmCaCert' can't be null";
-        }
+            $allowedValues = $this->getKeystoreTypeAllowableValues();
+                if (!is_null($this->container['keystoreType']) && !in_array($this->container['keystoreType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'keystoreType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -240,7 +281,7 @@ class CreateKeyStoreRequestBody implements ModelInterface, ArrayAccess
     * Gets hsmClusterId
     *  DHSM集群Id，要求集群当前未创建专属密钥库。
     *
-    * @return string
+    * @return string|null
     */
     public function getHsmClusterId()
     {
@@ -250,7 +291,7 @@ class CreateKeyStoreRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets hsmClusterId
     *
-    * @param string $hsmClusterId DHSM集群Id，要求集群当前未创建专属密钥库。
+    * @param string|null $hsmClusterId DHSM集群Id，要求集群当前未创建专属密钥库。
     *
     * @return $this
     */
@@ -264,7 +305,7 @@ class CreateKeyStoreRequestBody implements ModelInterface, ArrayAccess
     * Gets hsmCaCert
     *  DHSM集群的CA证书
     *
-    * @return string
+    * @return string|null
     */
     public function getHsmCaCert()
     {
@@ -274,13 +315,61 @@ class CreateKeyStoreRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets hsmCaCert
     *
-    * @param string $hsmCaCert DHSM集群的CA证书
+    * @param string|null $hsmCaCert DHSM集群的CA证书
     *
     * @return $this
     */
     public function setHsmCaCert($hsmCaCert)
     {
         $this->container['hsmCaCert'] = $hsmCaCert;
+        return $this;
+    }
+
+    /**
+    * Gets clusterId
+    *  集群ID。当类型为DHSM时，cluster_id为hsm_cluster_id。当类型为CDMS时，为cdms_cluster_id
+    *
+    * @return string|null
+    */
+    public function getClusterId()
+    {
+        return $this->container['clusterId'];
+    }
+
+    /**
+    * Sets clusterId
+    *
+    * @param string|null $clusterId 集群ID。当类型为DHSM时，cluster_id为hsm_cluster_id。当类型为CDMS时，为cdms_cluster_id
+    *
+    * @return $this
+    */
+    public function setClusterId($clusterId)
+    {
+        $this->container['clusterId'] = $clusterId;
+        return $this;
+    }
+
+    /**
+    * Gets keystoreType
+    *  专属密钥库集群类型。DHSM表示专属加密服务集群，CDMS表示密码卡集群,DEFAULT表示KMS原有集群
+    *
+    * @return string|null
+    */
+    public function getKeystoreType()
+    {
+        return $this->container['keystoreType'];
+    }
+
+    /**
+    * Sets keystoreType
+    *
+    * @param string|null $keystoreType 专属密钥库集群类型。DHSM表示专属加密服务集群，CDMS表示密码卡集群,DEFAULT表示KMS原有集群
+    *
+    * @return $this
+    */
+    public function setKeystoreType($keystoreType)
+    {
+        $this->container['keystoreType'] = $keystoreType;
         return $this;
     }
 

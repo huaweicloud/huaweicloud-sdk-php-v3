@@ -22,7 +22,7 @@ class EventProcessResInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * processName  **参数解释**： 进程名称 **取值范围**： 字符长度1-128位
     * processPath  **参数解释**： 进程路径 **取值范围**： 字符长度1-256位
-    * processPid  进程ID
+    * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
     * processUid  **参数解释**： 进程名称 **取值范围**： 最小值0，最大值2147483647
     * processUsername  **参数解释**： 运行进程的用户名 **取值范围**： 字符长度1-128位
     * processCmdline  **参数解释**： 进程命令行 **约束限制**： 不涉及
@@ -54,7 +54,7 @@ class EventProcessResInfo implements ModelInterface, ArrayAccess
     * virtCmd  **参数解释**： 虚拟化命令 **取值范围**： 字符长度1-64位
     * virtProcessName  **参数解释**： 虚拟化进程名称 **取值范围**： 字符长度1-64位
     * escapeMode  **参数解释**： 逃逸方式 **取值范围**： 字符长度1-64位
-    * escapeCmd  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-128位
+    * escapeCmd  **参数解释**： 逃逸后执行的命令 **取值范围**： 字符长度1-128位
     * processHash  **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-64位
     * mode  **参数解释**： 文件属性 **取值范围**： 字符长度1-64位
     * rule  **参数解释**： 规则 **取值范围**： 字符长度1-64位
@@ -122,7 +122,7 @@ class EventProcessResInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * processName  **参数解释**： 进程名称 **取值范围**： 字符长度1-128位
     * processPath  **参数解释**： 进程路径 **取值范围**： 字符长度1-256位
-    * processPid  进程ID
+    * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
     * processUid  **参数解释**： 进程名称 **取值范围**： 最小值0，最大值2147483647
     * processUsername  **参数解释**： 运行进程的用户名 **取值范围**： 字符长度1-128位
     * processCmdline  **参数解释**： 进程命令行 **约束限制**： 不涉及
@@ -154,7 +154,7 @@ class EventProcessResInfo implements ModelInterface, ArrayAccess
     * virtCmd  **参数解释**： 虚拟化命令 **取值范围**： 字符长度1-64位
     * virtProcessName  **参数解释**： 虚拟化进程名称 **取值范围**： 字符长度1-64位
     * escapeMode  **参数解释**： 逃逸方式 **取值范围**： 字符长度1-64位
-    * escapeCmd  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-128位
+    * escapeCmd  **参数解释**： 逃逸后执行的命令 **取值范围**： 字符长度1-128位
     * processHash  **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-64位
     * mode  **参数解释**： 文件属性 **取值范围**： 字符长度1-64位
     * rule  **参数解释**： 规则 **取值范围**： 字符长度1-64位
@@ -243,7 +243,7 @@ class EventProcessResInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * processName  **参数解释**： 进程名称 **取值范围**： 字符长度1-128位
     * processPath  **参数解释**： 进程路径 **取值范围**： 字符长度1-256位
-    * processPid  进程ID
+    * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
     * processUid  **参数解释**： 进程名称 **取值范围**： 最小值0，最大值2147483647
     * processUsername  **参数解释**： 运行进程的用户名 **取值范围**： 字符长度1-128位
     * processCmdline  **参数解释**： 进程命令行 **约束限制**： 不涉及
@@ -275,7 +275,7 @@ class EventProcessResInfo implements ModelInterface, ArrayAccess
     * virtCmd  **参数解释**： 虚拟化命令 **取值范围**： 字符长度1-64位
     * virtProcessName  **参数解释**： 虚拟化进程名称 **取值范围**： 字符长度1-64位
     * escapeMode  **参数解释**： 逃逸方式 **取值范围**： 字符长度1-64位
-    * escapeCmd  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-128位
+    * escapeCmd  **参数解释**： 逃逸后执行的命令 **取值范围**： 字符长度1-128位
     * processHash  **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-64位
     * mode  **参数解释**： 文件属性 **取值范围**： 字符长度1-64位
     * rule  **参数解释**： 规则 **取值范围**： 字符长度1-64位
@@ -343,7 +343,7 @@ class EventProcessResInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * processName  **参数解释**： 进程名称 **取值范围**： 字符长度1-128位
     * processPath  **参数解释**： 进程路径 **取值范围**： 字符长度1-256位
-    * processPid  进程ID
+    * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
     * processUid  **参数解释**： 进程名称 **取值范围**： 最小值0，最大值2147483647
     * processUsername  **参数解释**： 运行进程的用户名 **取值范围**： 字符长度1-128位
     * processCmdline  **参数解释**： 进程命令行 **约束限制**： 不涉及
@@ -375,7 +375,7 @@ class EventProcessResInfo implements ModelInterface, ArrayAccess
     * virtCmd  **参数解释**： 虚拟化命令 **取值范围**： 字符长度1-64位
     * virtProcessName  **参数解释**： 虚拟化进程名称 **取值范围**： 字符长度1-64位
     * escapeMode  **参数解释**： 逃逸方式 **取值范围**： 字符长度1-64位
-    * escapeCmd  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-128位
+    * escapeCmd  **参数解释**： 逃逸后执行的命令 **取值范围**： 字符长度1-128位
     * processHash  **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-64位
     * mode  **参数解释**： 文件属性 **取值范围**： 字符长度1-64位
     * rule  **参数解释**： 规则 **取值范围**： 字符长度1-64位
@@ -443,7 +443,7 @@ class EventProcessResInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * processName  **参数解释**： 进程名称 **取值范围**： 字符长度1-128位
     * processPath  **参数解释**： 进程路径 **取值范围**： 字符长度1-256位
-    * processPid  进程ID
+    * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
     * processUid  **参数解释**： 进程名称 **取值范围**： 最小值0，最大值2147483647
     * processUsername  **参数解释**： 运行进程的用户名 **取值范围**： 字符长度1-128位
     * processCmdline  **参数解释**： 进程命令行 **约束限制**： 不涉及
@@ -475,7 +475,7 @@ class EventProcessResInfo implements ModelInterface, ArrayAccess
     * virtCmd  **参数解释**： 虚拟化命令 **取值范围**： 字符长度1-64位
     * virtProcessName  **参数解释**： 虚拟化进程名称 **取值范围**： 字符长度1-64位
     * escapeMode  **参数解释**： 逃逸方式 **取值范围**： 字符长度1-64位
-    * escapeCmd  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-128位
+    * escapeCmd  **参数解释**： 逃逸后执行的命令 **取值范围**： 字符长度1-128位
     * processHash  **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-64位
     * mode  **参数解释**： 文件属性 **取值范围**： 字符长度1-64位
     * rule  **参数解释**： 规则 **取值范围**： 字符长度1-64位
@@ -915,7 +915,7 @@ class EventProcessResInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets processPid
-    *  进程ID
+    *  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -927,7 +927,7 @@ class EventProcessResInfo implements ModelInterface, ArrayAccess
     /**
     * Sets processPid
     *
-    * @param int|null $processPid 进程ID
+    * @param int|null $processPid **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -1683,7 +1683,7 @@ class EventProcessResInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets escapeCmd
-    *  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-128位
+    *  **参数解释**： 逃逸后执行的命令 **取值范围**： 字符长度1-128位
     *
     * @return string|null
     */
@@ -1695,7 +1695,7 @@ class EventProcessResInfo implements ModelInterface, ArrayAccess
     /**
     * Sets escapeCmd
     *
-    * @param string|null $escapeCmd **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-128位
+    * @param string|null $escapeCmd **参数解释**： 逃逸后执行的命令 **取值范围**： 字符长度1-128位
     *
     * @return $this
     */

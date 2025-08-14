@@ -48,7 +48,7 @@ class QueryTemplatesItems implements ModelInterface, ArrayAccess
             'nickName' => 'string',
             'id' => 'string',
             'uuid' => 'string',
-            'template' => '\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\QueryTemplate',
+            'template' => '\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\QueryTemplateVo',
             'type' => 'string',
             'public' => 'bool',
             'name' => 'string',
@@ -481,7 +481,7 @@ class QueryTemplatesItems implements ModelInterface, ArrayAccess
     * Gets template
     *  template
     *
-    * @return \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\QueryTemplate|null
+    * @return \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\QueryTemplateVo|null
     */
     public function getTemplate()
     {
@@ -491,7 +491,7 @@ class QueryTemplatesItems implements ModelInterface, ArrayAccess
     /**
     * Sets template
     *
-    * @param \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\QueryTemplate|null $template template
+    * @param \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\QueryTemplateVo|null $template template
     *
     * @return $this
     */

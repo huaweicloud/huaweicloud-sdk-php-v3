@@ -22,13 +22,13 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * hostId  **参数解释**: 主机ID **取值范围**: 字符长度1-128位
     * laddr  **参数解释**: 监听ip **取值范围**: 字符长度1-128位
-    * status  **参数解释**: 端口状态 **取值范围**: normal: 正常 danger: 危险 unknown: 未知
+    * status  **参数解释**: 端口状态 **取值范围**: - normal: 正常 - danger: 危险 - unknown: 未知
     * port  **参数解释**: 端口号 **取值范围**: 最小值0，最大值65535
-    * type  **参数解释**: 端口类型：目前包括TCP，UDP两种 **取值范围**: TCP: TCP类型的端口 UDP: UDP类型的端口
+    * type  **参数解释**: 端口类型：目前包括TCP，UDP两种 **取值范围**: - TCP: TCP类型的端口 - UDP: UDP类型的端口
     * pid  **参数解释**: 进程ID **取值范围**: 最小值1，最大值65535
     * path  **参数解释**: 进程可执行文件路径 **取值范围**: 字符长度1-256位
     * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
-    * containerId  **参数解释**: 容器 ID **取值范围**: 字符长度0-128位
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度0-128位
     *
     * @var string[]
     */
@@ -48,13 +48,13 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * hostId  **参数解释**: 主机ID **取值范围**: 字符长度1-128位
     * laddr  **参数解释**: 监听ip **取值范围**: 字符长度1-128位
-    * status  **参数解释**: 端口状态 **取值范围**: normal: 正常 danger: 危险 unknown: 未知
+    * status  **参数解释**: 端口状态 **取值范围**: - normal: 正常 - danger: 危险 - unknown: 未知
     * port  **参数解释**: 端口号 **取值范围**: 最小值0，最大值65535
-    * type  **参数解释**: 端口类型：目前包括TCP，UDP两种 **取值范围**: TCP: TCP类型的端口 UDP: UDP类型的端口
+    * type  **参数解释**: 端口类型：目前包括TCP，UDP两种 **取值范围**: - TCP: TCP类型的端口 - UDP: UDP类型的端口
     * pid  **参数解释**: 进程ID **取值范围**: 最小值1，最大值65535
     * path  **参数解释**: 进程可执行文件路径 **取值范围**: 字符长度1-256位
     * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
-    * containerId  **参数解释**: 容器 ID **取值范围**: 字符长度0-128位
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度0-128位
     *
     * @var string[]
     */
@@ -95,13 +95,13 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * hostId  **参数解释**: 主机ID **取值范围**: 字符长度1-128位
     * laddr  **参数解释**: 监听ip **取值范围**: 字符长度1-128位
-    * status  **参数解释**: 端口状态 **取值范围**: normal: 正常 danger: 危险 unknown: 未知
+    * status  **参数解释**: 端口状态 **取值范围**: - normal: 正常 - danger: 危险 - unknown: 未知
     * port  **参数解释**: 端口号 **取值范围**: 最小值0，最大值65535
-    * type  **参数解释**: 端口类型：目前包括TCP，UDP两种 **取值范围**: TCP: TCP类型的端口 UDP: UDP类型的端口
+    * type  **参数解释**: 端口类型：目前包括TCP，UDP两种 **取值范围**: - TCP: TCP类型的端口 - UDP: UDP类型的端口
     * pid  **参数解释**: 进程ID **取值范围**: 最小值1，最大值65535
     * path  **参数解释**: 进程可执行文件路径 **取值范围**: 字符长度1-256位
     * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
-    * containerId  **参数解释**: 容器 ID **取值范围**: 字符长度0-128位
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度0-128位
     *
     * @var string[]
     */
@@ -121,13 +121,13 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * hostId  **参数解释**: 主机ID **取值范围**: 字符长度1-128位
     * laddr  **参数解释**: 监听ip **取值范围**: 字符长度1-128位
-    * status  **参数解释**: 端口状态 **取值范围**: normal: 正常 danger: 危险 unknown: 未知
+    * status  **参数解释**: 端口状态 **取值范围**: - normal: 正常 - danger: 危险 - unknown: 未知
     * port  **参数解释**: 端口号 **取值范围**: 最小值0，最大值65535
-    * type  **参数解释**: 端口类型：目前包括TCP，UDP两种 **取值范围**: TCP: TCP类型的端口 UDP: UDP类型的端口
+    * type  **参数解释**: 端口类型：目前包括TCP，UDP两种 **取值范围**: - TCP: TCP类型的端口 - UDP: UDP类型的端口
     * pid  **参数解释**: 进程ID **取值范围**: 最小值1，最大值65535
     * path  **参数解释**: 进程可执行文件路径 **取值范围**: 字符长度1-256位
     * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
-    * containerId  **参数解释**: 容器 ID **取值范围**: 字符长度0-128位
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度0-128位
     *
     * @var string[]
     */
@@ -147,13 +147,13 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * hostId  **参数解释**: 主机ID **取值范围**: 字符长度1-128位
     * laddr  **参数解释**: 监听ip **取值范围**: 字符长度1-128位
-    * status  **参数解释**: 端口状态 **取值范围**: normal: 正常 danger: 危险 unknown: 未知
+    * status  **参数解释**: 端口状态 **取值范围**: - normal: 正常 - danger: 危险 - unknown: 未知
     * port  **参数解释**: 端口号 **取值范围**: 最小值0，最大值65535
-    * type  **参数解释**: 端口类型：目前包括TCP，UDP两种 **取值范围**: TCP: TCP类型的端口 UDP: UDP类型的端口
+    * type  **参数解释**: 端口类型：目前包括TCP，UDP两种 **取值范围**: - TCP: TCP类型的端口 - UDP: UDP类型的端口
     * pid  **参数解释**: 进程ID **取值范围**: 最小值1，最大值65535
     * path  **参数解释**: 进程可执行文件路径 **取值范围**: 字符长度1-256位
     * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
-    * containerId  **参数解释**: 容器 ID **取值范围**: 字符长度0-128位
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度0-128位
     *
     * @var string[]
     */
@@ -364,7 +364,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**: 端口状态 **取值范围**: normal: 正常 danger: 危险 unknown: 未知
+    *  **参数解释**: 端口状态 **取值范围**: - normal: 正常 - danger: 危险 - unknown: 未知
     *
     * @return string|null
     */
@@ -376,7 +376,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**: 端口状态 **取值范围**: normal: 正常 danger: 危险 unknown: 未知
+    * @param string|null $status **参数解释**: 端口状态 **取值范围**: - normal: 正常 - danger: 危险 - unknown: 未知
     *
     * @return $this
     */
@@ -412,7 +412,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**: 端口类型：目前包括TCP，UDP两种 **取值范围**: TCP: TCP类型的端口 UDP: UDP类型的端口
+    *  **参数解释**: 端口类型：目前包括TCP，UDP两种 **取值范围**: - TCP: TCP类型的端口 - UDP: UDP类型的端口
     *
     * @return string|null
     */
@@ -424,7 +424,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**: 端口类型：目前包括TCP，UDP两种 **取值范围**: TCP: TCP类型的端口 UDP: UDP类型的端口
+    * @param string|null $type **参数解释**: 端口类型：目前包括TCP，UDP两种 **取值范围**: - TCP: TCP类型的端口 - UDP: UDP类型的端口
     *
     * @return $this
     */
@@ -508,7 +508,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerId
-    *  **参数解释**: 容器 ID **取值范围**: 字符长度0-128位
+    *  **参数解释**: 容器ID **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -520,7 +520,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerId
     *
-    * @param string|null $containerId **参数解释**: 容器 ID **取值范围**: 字符长度0-128位
+    * @param string|null $containerId **参数解释**: 容器ID **取值范围**: 字符长度0-128位
     *
     * @return $this
     */

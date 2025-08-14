@@ -25,12 +25,12 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * name  WebAppAndService资产的名称
     * category  返回的资产类别 - 0: 主机 - 1: 容器
-    * catalogue  资产类型 - web-app       web应用 - web-service   web服务 - database      数据库
-    * hostName  服务器名称(可选).可让用户根据主机名字搜索
-    * hostId  服务器id(可选).可让用户根据主机id搜索
-    * hostIp  服务器ip(可选).可让用户根据主机ip搜索
-    * version  WebAppAndService资产版本.可让用户根据版本搜索
-    * installDir  WebAppAndService资产安装目录.可让用户根据安装目录搜索
+    * catalogue  资产类型 - web-app：web应用 - web-service：web服务 - database：数据库
+    * hostName  服务器名称(可选)，可让用户根据主机名字搜索
+    * hostId  服务器id(可选)，可让用户根据主机id搜索
+    * hostIp  服务器ip(可选)，可让用户根据主机ip搜索
+    * version  WebAppAndService资产版本，可让用户根据版本搜索
+    * installDir  WebAppAndService资产安装目录，可让用户根据安装目录搜索
     * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
@@ -57,12 +57,12 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * name  WebAppAndService资产的名称
     * category  返回的资产类别 - 0: 主机 - 1: 容器
-    * catalogue  资产类型 - web-app       web应用 - web-service   web服务 - database      数据库
-    * hostName  服务器名称(可选).可让用户根据主机名字搜索
-    * hostId  服务器id(可选).可让用户根据主机id搜索
-    * hostIp  服务器ip(可选).可让用户根据主机ip搜索
-    * version  WebAppAndService资产版本.可让用户根据版本搜索
-    * installDir  WebAppAndService资产安装目录.可让用户根据安装目录搜索
+    * catalogue  资产类型 - web-app：web应用 - web-service：web服务 - database：数据库
+    * hostName  服务器名称(可选)，可让用户根据主机名字搜索
+    * hostId  服务器id(可选)，可让用户根据主机id搜索
+    * hostIp  服务器ip(可选)，可让用户根据主机ip搜索
+    * version  WebAppAndService资产版本，可让用户根据版本搜索
+    * installDir  WebAppAndService资产安装目录，可让用户根据安装目录搜索
     * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
@@ -110,12 +110,12 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * name  WebAppAndService资产的名称
     * category  返回的资产类别 - 0: 主机 - 1: 容器
-    * catalogue  资产类型 - web-app       web应用 - web-service   web服务 - database      数据库
-    * hostName  服务器名称(可选).可让用户根据主机名字搜索
-    * hostId  服务器id(可选).可让用户根据主机id搜索
-    * hostIp  服务器ip(可选).可让用户根据主机ip搜索
-    * version  WebAppAndService资产版本.可让用户根据版本搜索
-    * installDir  WebAppAndService资产安装目录.可让用户根据安装目录搜索
+    * catalogue  资产类型 - web-app：web应用 - web-service：web服务 - database：数据库
+    * hostName  服务器名称(可选)，可让用户根据主机名字搜索
+    * hostId  服务器id(可选)，可让用户根据主机id搜索
+    * hostIp  服务器ip(可选)，可让用户根据主机ip搜索
+    * version  WebAppAndService资产版本，可让用户根据版本搜索
+    * installDir  WebAppAndService资产安装目录，可让用户根据安装目录搜索
     * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
@@ -142,12 +142,12 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * name  WebAppAndService资产的名称
     * category  返回的资产类别 - 0: 主机 - 1: 容器
-    * catalogue  资产类型 - web-app       web应用 - web-service   web服务 - database      数据库
-    * hostName  服务器名称(可选).可让用户根据主机名字搜索
-    * hostId  服务器id(可选).可让用户根据主机id搜索
-    * hostIp  服务器ip(可选).可让用户根据主机ip搜索
-    * version  WebAppAndService资产版本.可让用户根据版本搜索
-    * installDir  WebAppAndService资产安装目录.可让用户根据安装目录搜索
+    * catalogue  资产类型 - web-app：web应用 - web-service：web服务 - database：数据库
+    * hostName  服务器名称(可选)，可让用户根据主机名字搜索
+    * hostId  服务器id(可选)，可让用户根据主机id搜索
+    * hostIp  服务器ip(可选)，可让用户根据主机ip搜索
+    * version  WebAppAndService资产版本，可让用户根据版本搜索
+    * installDir  WebAppAndService资产安装目录，可让用户根据安装目录搜索
     * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
@@ -174,12 +174,12 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * name  WebAppAndService资产的名称
     * category  返回的资产类别 - 0: 主机 - 1: 容器
-    * catalogue  资产类型 - web-app       web应用 - web-service   web服务 - database      数据库
-    * hostName  服务器名称(可选).可让用户根据主机名字搜索
-    * hostId  服务器id(可选).可让用户根据主机id搜索
-    * hostIp  服务器ip(可选).可让用户根据主机ip搜索
-    * version  WebAppAndService资产版本.可让用户根据版本搜索
-    * installDir  WebAppAndService资产安装目录.可让用户根据安装目录搜索
+    * catalogue  资产类型 - web-app：web应用 - web-service：web服务 - database：数据库
+    * hostName  服务器名称(可选)，可让用户根据主机名字搜索
+    * hostId  服务器id(可选)，可让用户根据主机id搜索
+    * hostIp  服务器ip(可选)，可让用户根据主机ip搜索
+    * version  WebAppAndService资产版本，可让用户根据版本搜索
+    * installDir  WebAppAndService资产安装目录，可让用户根据安装目录搜索
     * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
@@ -493,7 +493,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets catalogue
-    *  资产类型 - web-app       web应用 - web-service   web服务 - database      数据库
+    *  资产类型 - web-app：web应用 - web-service：web服务 - database：数据库
     *
     * @return string
     */
@@ -505,7 +505,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets catalogue
     *
-    * @param string $catalogue 资产类型 - web-app       web应用 - web-service   web服务 - database      数据库
+    * @param string $catalogue 资产类型 - web-app：web应用 - web-service：web服务 - database：数据库
     *
     * @return $this
     */
@@ -517,7 +517,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称(可选).可让用户根据主机名字搜索
+    *  服务器名称(可选)，可让用户根据主机名字搜索
     *
     * @return string|null
     */
@@ -529,7 +529,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称(可选).可让用户根据主机名字搜索
+    * @param string|null $hostName 服务器名称(可选)，可让用户根据主机名字搜索
     *
     * @return $this
     */
@@ -541,7 +541,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器id(可选).可让用户根据主机id搜索
+    *  服务器id(可选)，可让用户根据主机id搜索
     *
     * @return string|null
     */
@@ -553,7 +553,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器id(可选).可让用户根据主机id搜索
+    * @param string|null $hostId 服务器id(可选)，可让用户根据主机id搜索
     *
     * @return $this
     */
@@ -565,7 +565,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  服务器ip(可选).可让用户根据主机ip搜索
+    *  服务器ip(可选)，可让用户根据主机ip搜索
     *
     * @return string|null
     */
@@ -577,7 +577,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 服务器ip(可选).可让用户根据主机ip搜索
+    * @param string|null $hostIp 服务器ip(可选)，可让用户根据主机ip搜索
     *
     * @return $this
     */
@@ -589,7 +589,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  WebAppAndService资产版本.可让用户根据版本搜索
+    *  WebAppAndService资产版本，可让用户根据版本搜索
     *
     * @return string|null
     */
@@ -601,7 +601,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version WebAppAndService资产版本.可让用户根据版本搜索
+    * @param string|null $version WebAppAndService资产版本，可让用户根据版本搜索
     *
     * @return $this
     */
@@ -613,7 +613,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets installDir
-    *  WebAppAndService资产安装目录.可让用户根据安装目录搜索
+    *  WebAppAndService资产安装目录，可让用户根据安装目录搜索
     *
     * @return string|null
     */
@@ -625,7 +625,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets installDir
     *
-    * @param string|null $installDir WebAppAndService资产安装目录.可让用户根据安装目录搜索
+    * @param string|null $installDir WebAppAndService资产安装目录，可让用户根据安装目录搜索
     *
     * @return $this
     */

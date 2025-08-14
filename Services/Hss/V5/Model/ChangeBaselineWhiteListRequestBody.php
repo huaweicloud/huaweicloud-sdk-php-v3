@@ -21,8 +21,8 @@ class ChangeBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  被修改的白名单id
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
-    * hostIdList  rule_type为specific_host时,该字段为待修改的白名单主机id列表, rule_type为all_host时无该字段
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
+    * hostIdList  rule_type为specific_host时，该字段为待修改的白名单主机id列表，rule_type为all_host时无该字段
     * description  基线白名单备注
     *
     * @var string[]
@@ -37,8 +37,8 @@ class ChangeBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  被修改的白名单id
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
-    * hostIdList  rule_type为specific_host时,该字段为待修改的白名单主机id列表, rule_type为all_host时无该字段
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
+    * hostIdList  rule_type为specific_host时，该字段为待修改的白名单主机id列表，rule_type为all_host时无该字段
     * description  基线白名单备注
     *
     * @var string[]
@@ -74,8 +74,8 @@ class ChangeBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  被修改的白名单id
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
-    * hostIdList  rule_type为specific_host时,该字段为待修改的白名单主机id列表, rule_type为all_host时无该字段
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
+    * hostIdList  rule_type为specific_host时，该字段为待修改的白名单主机id列表，rule_type为all_host时无该字段
     * description  基线白名单备注
     *
     * @var string[]
@@ -90,8 +90,8 @@ class ChangeBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  被修改的白名单id
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
-    * hostIdList  rule_type为specific_host时,该字段为待修改的白名单主机id列表, rule_type为all_host时无该字段
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
+    * hostIdList  rule_type为specific_host时，该字段为待修改的白名单主机id列表，rule_type为all_host时无该字段
     * description  基线白名单备注
     *
     * @var string[]
@@ -106,8 +106,8 @@ class ChangeBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  被修改的白名单id
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
-    * hostIdList  rule_type为specific_host时,该字段为待修改的白名单主机id列表, rule_type为all_host时无该字段
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
+    * hostIdList  rule_type为specific_host时，该字段为待修改的白名单主机id列表，rule_type为all_host时无该字段
     * description  基线白名单备注
     *
     * @var string[]
@@ -264,7 +264,7 @@ class ChangeBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleType
-    *  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    *  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     *
     * @return string
     */
@@ -276,7 +276,7 @@ class ChangeBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets ruleType
     *
-    * @param string $ruleType 基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    * @param string $ruleType 基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class ChangeBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIdList
-    *  rule_type为specific_host时,该字段为待修改的白名单主机id列表, rule_type为all_host时无该字段
+    *  rule_type为specific_host时，该字段为待修改的白名单主机id列表，rule_type为all_host时无该字段
     *
     * @return string[]|null
     */
@@ -300,7 +300,7 @@ class ChangeBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[]|null $hostIdList rule_type为specific_host时,该字段为待修改的白名单主机id列表, rule_type为all_host时无该字段
+    * @param string[]|null $hostIdList rule_type为specific_host时，该字段为待修改的白名单主机id列表，rule_type为all_host时无该字段
     *
     * @return $this
     */

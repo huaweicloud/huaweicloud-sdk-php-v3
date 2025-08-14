@@ -20,27 +20,27 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * filePath  文件路径
-    * fileAlias  文件别名
-    * fileSize  文件大小
-    * fileMtime  文件最后一次修改时间
-    * fileAtime  文件最后一次访问时间
-    * fileCtime  文件最后一次状态改变时间
-    * fileHash  文件hash,当前为sha256
-    * fileMd5  文件md5
-    * fileSha256  文件sha256
-    * fileType  文件类型
-    * fileContent  文件内容
-    * fileAttr  文件属性
-    * fileOperation  文件操作类型
-    * fileAction  文件动作
-    * fileChangeAttr  变更前后的属性
-    * fileNewPath  新文件路径
-    * fileDesc  文件描述
-    * fileKeyWord  文件关键字
-    * isDir  是否目录
-    * fdInfo  文件句柄信息
-    * fdCount  文件句柄数量
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAlias  **参数解释**： 文件别名 **取值范围**： 字符长度1-256位
+    * fileSize  **参数解释**： 文件大小 **取值范围**： 最小值0，最大值2147483647
+    * fileMtime  **参数解释**： 文件最后一次修改时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileAtime  **参数解释**： 文件最后一次访问时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileCtime  **参数解释**： 文件最后一次状态改变时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileHash  **参数解释**： 文件hash,当前为sha256 **取值范围**： 字符长度1-256位
+    * fileMd5  **参数解释**： 文件md5 **取值范围**： 字符长度1-256位
+    * fileSha256  **参数解释**： 文件sha256 **取值范围**： 字符长度1-256位
+    * fileType  **参数解释**： 文件类型 **取值范围**： 字符长度1-256位
+    * fileContent  **参数解释**： 文件内容 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+    * fileOperation  **参数解释**： 文件操作类型 **取值范围**： 最小值0，最大值2147483647
+    * fileAction  **参数解释**： 文件动作 **取值范围**： 字符长度1-256位
+    * fileChangeAttr  **参数解释**： 变更前后的属性 **取值范围**： 字符长度1-256位
+    * fileNewPath  **参数解释**： 新文件路径 **取值范围**： 字符长度1-256位
+    * fileDesc  **参数解释**： 文件描述 **取值范围**： 字符长度1-256位
+    * fileKeyWord  **参数解释**： 文件关键字 **取值范围**： 字符长度1-256位
+    * isDir  **参数解释**： 是否目录 **取值范围**： - true：是目录 - false：不是目录
+    * fdInfo  **参数解释**： 文件句柄信息 **取值范围**： 字符长度1-256位
+    * fdCount  **参数解释**： 文件句柄数量 **取值范围**： 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -70,27 +70,27 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * filePath  文件路径
-    * fileAlias  文件别名
-    * fileSize  文件大小
-    * fileMtime  文件最后一次修改时间
-    * fileAtime  文件最后一次访问时间
-    * fileCtime  文件最后一次状态改变时间
-    * fileHash  文件hash,当前为sha256
-    * fileMd5  文件md5
-    * fileSha256  文件sha256
-    * fileType  文件类型
-    * fileContent  文件内容
-    * fileAttr  文件属性
-    * fileOperation  文件操作类型
-    * fileAction  文件动作
-    * fileChangeAttr  变更前后的属性
-    * fileNewPath  新文件路径
-    * fileDesc  文件描述
-    * fileKeyWord  文件关键字
-    * isDir  是否目录
-    * fdInfo  文件句柄信息
-    * fdCount  文件句柄数量
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAlias  **参数解释**： 文件别名 **取值范围**： 字符长度1-256位
+    * fileSize  **参数解释**： 文件大小 **取值范围**： 最小值0，最大值2147483647
+    * fileMtime  **参数解释**： 文件最后一次修改时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileAtime  **参数解释**： 文件最后一次访问时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileCtime  **参数解释**： 文件最后一次状态改变时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileHash  **参数解释**： 文件hash,当前为sha256 **取值范围**： 字符长度1-256位
+    * fileMd5  **参数解释**： 文件md5 **取值范围**： 字符长度1-256位
+    * fileSha256  **参数解释**： 文件sha256 **取值范围**： 字符长度1-256位
+    * fileType  **参数解释**： 文件类型 **取值范围**： 字符长度1-256位
+    * fileContent  **参数解释**： 文件内容 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+    * fileOperation  **参数解释**： 文件操作类型 **取值范围**： 最小值0，最大值2147483647
+    * fileAction  **参数解释**： 文件动作 **取值范围**： 字符长度1-256位
+    * fileChangeAttr  **参数解释**： 变更前后的属性 **取值范围**： 字符长度1-256位
+    * fileNewPath  **参数解释**： 新文件路径 **取值范围**： 字符长度1-256位
+    * fileDesc  **参数解释**： 文件描述 **取值范围**： 字符长度1-256位
+    * fileKeyWord  **参数解释**： 文件关键字 **取值范围**： 字符长度1-256位
+    * isDir  **参数解释**： 是否目录 **取值范围**： - true：是目录 - false：不是目录
+    * fdInfo  **参数解释**： 文件句柄信息 **取值范围**： 字符长度1-256位
+    * fdCount  **参数解释**： 文件句柄数量 **取值范围**： 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -141,27 +141,27 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * filePath  文件路径
-    * fileAlias  文件别名
-    * fileSize  文件大小
-    * fileMtime  文件最后一次修改时间
-    * fileAtime  文件最后一次访问时间
-    * fileCtime  文件最后一次状态改变时间
-    * fileHash  文件hash,当前为sha256
-    * fileMd5  文件md5
-    * fileSha256  文件sha256
-    * fileType  文件类型
-    * fileContent  文件内容
-    * fileAttr  文件属性
-    * fileOperation  文件操作类型
-    * fileAction  文件动作
-    * fileChangeAttr  变更前后的属性
-    * fileNewPath  新文件路径
-    * fileDesc  文件描述
-    * fileKeyWord  文件关键字
-    * isDir  是否目录
-    * fdInfo  文件句柄信息
-    * fdCount  文件句柄数量
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAlias  **参数解释**： 文件别名 **取值范围**： 字符长度1-256位
+    * fileSize  **参数解释**： 文件大小 **取值范围**： 最小值0，最大值2147483647
+    * fileMtime  **参数解释**： 文件最后一次修改时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileAtime  **参数解释**： 文件最后一次访问时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileCtime  **参数解释**： 文件最后一次状态改变时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileHash  **参数解释**： 文件hash,当前为sha256 **取值范围**： 字符长度1-256位
+    * fileMd5  **参数解释**： 文件md5 **取值范围**： 字符长度1-256位
+    * fileSha256  **参数解释**： 文件sha256 **取值范围**： 字符长度1-256位
+    * fileType  **参数解释**： 文件类型 **取值范围**： 字符长度1-256位
+    * fileContent  **参数解释**： 文件内容 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+    * fileOperation  **参数解释**： 文件操作类型 **取值范围**： 最小值0，最大值2147483647
+    * fileAction  **参数解释**： 文件动作 **取值范围**： 字符长度1-256位
+    * fileChangeAttr  **参数解释**： 变更前后的属性 **取值范围**： 字符长度1-256位
+    * fileNewPath  **参数解释**： 新文件路径 **取值范围**： 字符长度1-256位
+    * fileDesc  **参数解释**： 文件描述 **取值范围**： 字符长度1-256位
+    * fileKeyWord  **参数解释**： 文件关键字 **取值范围**： 字符长度1-256位
+    * isDir  **参数解释**： 是否目录 **取值范围**： - true：是目录 - false：不是目录
+    * fdInfo  **参数解释**： 文件句柄信息 **取值范围**： 字符长度1-256位
+    * fdCount  **参数解释**： 文件句柄数量 **取值范围**： 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -191,27 +191,27 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * filePath  文件路径
-    * fileAlias  文件别名
-    * fileSize  文件大小
-    * fileMtime  文件最后一次修改时间
-    * fileAtime  文件最后一次访问时间
-    * fileCtime  文件最后一次状态改变时间
-    * fileHash  文件hash,当前为sha256
-    * fileMd5  文件md5
-    * fileSha256  文件sha256
-    * fileType  文件类型
-    * fileContent  文件内容
-    * fileAttr  文件属性
-    * fileOperation  文件操作类型
-    * fileAction  文件动作
-    * fileChangeAttr  变更前后的属性
-    * fileNewPath  新文件路径
-    * fileDesc  文件描述
-    * fileKeyWord  文件关键字
-    * isDir  是否目录
-    * fdInfo  文件句柄信息
-    * fdCount  文件句柄数量
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAlias  **参数解释**： 文件别名 **取值范围**： 字符长度1-256位
+    * fileSize  **参数解释**： 文件大小 **取值范围**： 最小值0，最大值2147483647
+    * fileMtime  **参数解释**： 文件最后一次修改时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileAtime  **参数解释**： 文件最后一次访问时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileCtime  **参数解释**： 文件最后一次状态改变时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileHash  **参数解释**： 文件hash,当前为sha256 **取值范围**： 字符长度1-256位
+    * fileMd5  **参数解释**： 文件md5 **取值范围**： 字符长度1-256位
+    * fileSha256  **参数解释**： 文件sha256 **取值范围**： 字符长度1-256位
+    * fileType  **参数解释**： 文件类型 **取值范围**： 字符长度1-256位
+    * fileContent  **参数解释**： 文件内容 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+    * fileOperation  **参数解释**： 文件操作类型 **取值范围**： 最小值0，最大值2147483647
+    * fileAction  **参数解释**： 文件动作 **取值范围**： 字符长度1-256位
+    * fileChangeAttr  **参数解释**： 变更前后的属性 **取值范围**： 字符长度1-256位
+    * fileNewPath  **参数解释**： 新文件路径 **取值范围**： 字符长度1-256位
+    * fileDesc  **参数解释**： 文件描述 **取值范围**： 字符长度1-256位
+    * fileKeyWord  **参数解释**： 文件关键字 **取值范围**： 字符长度1-256位
+    * isDir  **参数解释**： 是否目录 **取值范围**： - true：是目录 - false：不是目录
+    * fdInfo  **参数解释**： 文件句柄信息 **取值范围**： 字符长度1-256位
+    * fdCount  **参数解释**： 文件句柄数量 **取值范围**： 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -241,27 +241,27 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * filePath  文件路径
-    * fileAlias  文件别名
-    * fileSize  文件大小
-    * fileMtime  文件最后一次修改时间
-    * fileAtime  文件最后一次访问时间
-    * fileCtime  文件最后一次状态改变时间
-    * fileHash  文件hash,当前为sha256
-    * fileMd5  文件md5
-    * fileSha256  文件sha256
-    * fileType  文件类型
-    * fileContent  文件内容
-    * fileAttr  文件属性
-    * fileOperation  文件操作类型
-    * fileAction  文件动作
-    * fileChangeAttr  变更前后的属性
-    * fileNewPath  新文件路径
-    * fileDesc  文件描述
-    * fileKeyWord  文件关键字
-    * isDir  是否目录
-    * fdInfo  文件句柄信息
-    * fdCount  文件句柄数量
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAlias  **参数解释**： 文件别名 **取值范围**： 字符长度1-256位
+    * fileSize  **参数解释**： 文件大小 **取值范围**： 最小值0，最大值2147483647
+    * fileMtime  **参数解释**： 文件最后一次修改时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileAtime  **参数解释**： 文件最后一次访问时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileCtime  **参数解释**： 文件最后一次状态改变时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileHash  **参数解释**： 文件hash,当前为sha256 **取值范围**： 字符长度1-256位
+    * fileMd5  **参数解释**： 文件md5 **取值范围**： 字符长度1-256位
+    * fileSha256  **参数解释**： 文件sha256 **取值范围**： 字符长度1-256位
+    * fileType  **参数解释**： 文件类型 **取值范围**： 字符长度1-256位
+    * fileContent  **参数解释**： 文件内容 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+    * fileOperation  **参数解释**： 文件操作类型 **取值范围**： 最小值0，最大值2147483647
+    * fileAction  **参数解释**： 文件动作 **取值范围**： 字符长度1-256位
+    * fileChangeAttr  **参数解释**： 变更前后的属性 **取值范围**： 字符长度1-256位
+    * fileNewPath  **参数解释**： 新文件路径 **取值范围**： 字符长度1-256位
+    * fileDesc  **参数解释**： 文件描述 **取值范围**： 字符长度1-256位
+    * fileKeyWord  **参数解释**： 文件关键字 **取值范围**： 字符长度1-256位
+    * isDir  **参数解释**： 是否目录 **取值范围**： - true：是目录 - false：不是目录
+    * fdInfo  **参数解释**： 文件句柄信息 **取值范围**： 字符长度1-256位
+    * fdCount  **参数解释**： 文件句柄数量 **取值范围**： 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -472,7 +472,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets filePath
-    *  文件路径
+    *  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -484,7 +484,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets filePath
     *
-    * @param string|null $filePath 文件路径
+    * @param string|null $filePath **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -496,7 +496,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileAlias
-    *  文件别名
+    *  **参数解释**： 文件别名 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -508,7 +508,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileAlias
     *
-    * @param string|null $fileAlias 文件别名
+    * @param string|null $fileAlias **参数解释**： 文件别名 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -520,7 +520,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileSize
-    *  文件大小
+    *  **参数解释**： 文件大小 **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -532,7 +532,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileSize
     *
-    * @param int|null $fileSize 文件大小
+    * @param int|null $fileSize **参数解释**： 文件大小 **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -544,7 +544,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileMtime
-    *  文件最后一次修改时间
+    *  **参数解释**： 文件最后一次修改时间 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -556,7 +556,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileMtime
     *
-    * @param int|null $fileMtime 文件最后一次修改时间
+    * @param int|null $fileMtime **参数解释**： 文件最后一次修改时间 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -568,7 +568,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileAtime
-    *  文件最后一次访问时间
+    *  **参数解释**： 文件最后一次访问时间 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -580,7 +580,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileAtime
     *
-    * @param int|null $fileAtime 文件最后一次访问时间
+    * @param int|null $fileAtime **参数解释**： 文件最后一次访问时间 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -592,7 +592,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileCtime
-    *  文件最后一次状态改变时间
+    *  **参数解释**： 文件最后一次状态改变时间 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -604,7 +604,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileCtime
     *
-    * @param int|null $fileCtime 文件最后一次状态改变时间
+    * @param int|null $fileCtime **参数解释**： 文件最后一次状态改变时间 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -616,7 +616,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileHash
-    *  文件hash,当前为sha256
+    *  **参数解释**： 文件hash,当前为sha256 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -628,7 +628,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileHash
     *
-    * @param string|null $fileHash 文件hash,当前为sha256
+    * @param string|null $fileHash **参数解释**： 文件hash,当前为sha256 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -640,7 +640,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileMd5
-    *  文件md5
+    *  **参数解释**： 文件md5 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -652,7 +652,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileMd5
     *
-    * @param string|null $fileMd5 文件md5
+    * @param string|null $fileMd5 **参数解释**： 文件md5 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -664,7 +664,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileSha256
-    *  文件sha256
+    *  **参数解释**： 文件sha256 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -676,7 +676,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileSha256
     *
-    * @param string|null $fileSha256 文件sha256
+    * @param string|null $fileSha256 **参数解释**： 文件sha256 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -688,7 +688,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileType
-    *  文件类型
+    *  **参数解释**： 文件类型 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -700,7 +700,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileType
     *
-    * @param string|null $fileType 文件类型
+    * @param string|null $fileType **参数解释**： 文件类型 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -712,7 +712,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileContent
-    *  文件内容
+    *  **参数解释**： 文件内容 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -724,7 +724,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileContent
     *
-    * @param string|null $fileContent 文件内容
+    * @param string|null $fileContent **参数解释**： 文件内容 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -736,7 +736,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileAttr
-    *  文件属性
+    *  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -748,7 +748,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileAttr
     *
-    * @param string|null $fileAttr 文件属性
+    * @param string|null $fileAttr **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -760,7 +760,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileOperation
-    *  文件操作类型
+    *  **参数解释**： 文件操作类型 **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -772,7 +772,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileOperation
     *
-    * @param int|null $fileOperation 文件操作类型
+    * @param int|null $fileOperation **参数解释**： 文件操作类型 **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -784,7 +784,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileAction
-    *  文件动作
+    *  **参数解释**： 文件动作 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -796,7 +796,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileAction
     *
-    * @param string|null $fileAction 文件动作
+    * @param string|null $fileAction **参数解释**： 文件动作 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -808,7 +808,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileChangeAttr
-    *  变更前后的属性
+    *  **参数解释**： 变更前后的属性 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -820,7 +820,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileChangeAttr
     *
-    * @param string|null $fileChangeAttr 变更前后的属性
+    * @param string|null $fileChangeAttr **参数解释**： 变更前后的属性 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -832,7 +832,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileNewPath
-    *  新文件路径
+    *  **参数解释**： 新文件路径 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -844,7 +844,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileNewPath
     *
-    * @param string|null $fileNewPath 新文件路径
+    * @param string|null $fileNewPath **参数解释**： 新文件路径 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -856,7 +856,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileDesc
-    *  文件描述
+    *  **参数解释**： 文件描述 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -868,7 +868,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileDesc
     *
-    * @param string|null $fileDesc 文件描述
+    * @param string|null $fileDesc **参数解释**： 文件描述 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -880,7 +880,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileKeyWord
-    *  文件关键字
+    *  **参数解释**： 文件关键字 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -892,7 +892,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileKeyWord
     *
-    * @param string|null $fileKeyWord 文件关键字
+    * @param string|null $fileKeyWord **参数解释**： 文件关键字 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -904,7 +904,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDir
-    *  是否目录
+    *  **参数解释**： 是否目录 **取值范围**： - true：是目录 - false：不是目录
     *
     * @return bool|null
     */
@@ -916,7 +916,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isDir
     *
-    * @param bool|null $isDir 是否目录
+    * @param bool|null $isDir **参数解释**： 是否目录 **取值范围**： - true：是目录 - false：不是目录
     *
     * @return $this
     */
@@ -928,7 +928,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fdInfo
-    *  文件句柄信息
+    *  **参数解释**： 文件句柄信息 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -940,7 +940,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fdInfo
     *
-    * @param string|null $fdInfo 文件句柄信息
+    * @param string|null $fdInfo **参数解释**： 文件句柄信息 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -952,7 +952,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fdCount
-    *  文件句柄数量
+    *  **参数解释**： 文件句柄数量 **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -964,7 +964,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fdCount
     *
-    * @param int|null $fdCount 文件句柄数量
+    * @param int|null $fdCount **参数解释**： 文件句柄数量 **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */

@@ -24,7 +24,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     * taskName  任务名称
     * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * startTime  启动时间，毫秒
     * taskStatus  任务状态，包含如下2种   - scanning ：扫描中   - finish ：扫描完成
     * hostNum  关联服务器数
@@ -60,7 +60,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     * taskName  任务名称
     * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * startTime  启动时间，毫秒
     * taskStatus  任务状态，包含如下2种   - scanning ：扫描中   - finish ：扫描完成
     * hostNum  关联服务器数
@@ -117,7 +117,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     * taskName  任务名称
     * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * startTime  启动时间，毫秒
     * taskStatus  任务状态，包含如下2种   - scanning ：扫描中   - finish ：扫描完成
     * hostNum  关联服务器数
@@ -153,7 +153,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     * taskName  任务名称
     * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * startTime  启动时间，毫秒
     * taskStatus  任务状态，包含如下2种   - scanning ：扫描中   - finish ：扫描完成
     * hostNum  关联服务器数
@@ -189,7 +189,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     * taskName  任务名称
     * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * startTime  启动时间，毫秒
     * taskStatus  任务状态，包含如下2种   - scanning ：扫描中   - finish ：扫描完成
     * hostNum  关联服务器数
@@ -467,7 +467,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    *  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     *
     * @return string|null
     */
@@ -479,7 +479,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * @param string|null $action 处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     *
     * @return $this
     */

@@ -23,7 +23,7 @@ class DeleteAccountAssignmentReqBody implements ModelInterface, ArrayAccess
     * permissionSetId  权限集唯一标识
     * principalId  IAM身份中心中的一个实体身份唯一标识，例如用户或用户组
     * principalType  实体类型.
-    * targetId  目标账号身份标识
+    * targetId  目标账户身份标识
     * targetType  目标类型.
     *
     * @var string[]
@@ -41,7 +41,7 @@ class DeleteAccountAssignmentReqBody implements ModelInterface, ArrayAccess
     * permissionSetId  权限集唯一标识
     * principalId  IAM身份中心中的一个实体身份唯一标识，例如用户或用户组
     * principalType  实体类型.
-    * targetId  目标账号身份标识
+    * targetId  目标账户身份标识
     * targetType  目标类型.
     *
     * @var string[]
@@ -80,7 +80,7 @@ class DeleteAccountAssignmentReqBody implements ModelInterface, ArrayAccess
     * permissionSetId  权限集唯一标识
     * principalId  IAM身份中心中的一个实体身份唯一标识，例如用户或用户组
     * principalType  实体类型.
-    * targetId  目标账号身份标识
+    * targetId  目标账户身份标识
     * targetType  目标类型.
     *
     * @var string[]
@@ -98,7 +98,7 @@ class DeleteAccountAssignmentReqBody implements ModelInterface, ArrayAccess
     * permissionSetId  权限集唯一标识
     * principalId  IAM身份中心中的一个实体身份唯一标识，例如用户或用户组
     * principalType  实体类型.
-    * targetId  目标账号身份标识
+    * targetId  目标账户身份标识
     * targetType  目标类型.
     *
     * @var string[]
@@ -116,7 +116,7 @@ class DeleteAccountAssignmentReqBody implements ModelInterface, ArrayAccess
     * permissionSetId  权限集唯一标识
     * principalId  IAM身份中心中的一个实体身份唯一标识，例如用户或用户组
     * principalType  实体类型.
-    * targetId  目标账号身份标识
+    * targetId  目标账户身份标识
     * targetType  目标类型.
     *
     * @var string[]
@@ -358,7 +358,7 @@ class DeleteAccountAssignmentReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetId
-    *  目标账号身份标识
+    *  目标账户身份标识
     *
     * @return string
     */
@@ -370,7 +370,7 @@ class DeleteAccountAssignmentReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets targetId
     *
-    * @param string $targetId 目标账号身份标识
+    * @param string $targetId 目标账户身份标识
     *
     * @return $this
     */

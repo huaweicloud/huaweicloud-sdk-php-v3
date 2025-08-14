@@ -31,7 +31,7 @@ class CreateAntiVirusPolicyRequestBody implements ModelInterface, ArrayAccess
     * fileTypes  文件类型集合型，包含如下:   - 0 ：全部   - 1 : 可执行   - 2 : 压缩   - 3 : 脚本   - 4 : 文档   - 5 : 图片   - 6 : 音视频
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * whetherPaidTask  此次扫描任务是否付费
     * taskId  任务ID
     * hostIds  策略管理主机列表
@@ -69,7 +69,7 @@ class CreateAntiVirusPolicyRequestBody implements ModelInterface, ArrayAccess
     * fileTypes  文件类型集合型，包含如下:   - 0 ：全部   - 1 : 可执行   - 2 : 压缩   - 3 : 脚本   - 4 : 文档   - 5 : 图片   - 6 : 音视频
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * whetherPaidTask  此次扫描任务是否付费
     * taskId  任务ID
     * hostIds  策略管理主机列表
@@ -128,7 +128,7 @@ class CreateAntiVirusPolicyRequestBody implements ModelInterface, ArrayAccess
     * fileTypes  文件类型集合型，包含如下:   - 0 ：全部   - 1 : 可执行   - 2 : 压缩   - 3 : 脚本   - 4 : 文档   - 5 : 图片   - 6 : 音视频
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * whetherPaidTask  此次扫描任务是否付费
     * taskId  任务ID
     * hostIds  策略管理主机列表
@@ -166,7 +166,7 @@ class CreateAntiVirusPolicyRequestBody implements ModelInterface, ArrayAccess
     * fileTypes  文件类型集合型，包含如下:   - 0 ：全部   - 1 : 可执行   - 2 : 压缩   - 3 : 脚本   - 4 : 文档   - 5 : 图片   - 6 : 音视频
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * whetherPaidTask  此次扫描任务是否付费
     * taskId  任务ID
     * hostIds  策略管理主机列表
@@ -204,7 +204,7 @@ class CreateAntiVirusPolicyRequestBody implements ModelInterface, ArrayAccess
     * fileTypes  文件类型集合型，包含如下:   - 0 ：全部   - 1 : 可执行   - 2 : 压缩   - 3 : 脚本   - 4 : 文档   - 5 : 图片   - 6 : 音视频
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * whetherPaidTask  此次扫描任务是否付费
     * taskId  任务ID
     * hostIds  策略管理主机列表
@@ -667,7 +667,7 @@ class CreateAntiVirusPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    *  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     *
     * @return string
     */
@@ -679,7 +679,7 @@ class CreateAntiVirusPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action 处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * @param string $action 处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     *
     * @return $this
     */

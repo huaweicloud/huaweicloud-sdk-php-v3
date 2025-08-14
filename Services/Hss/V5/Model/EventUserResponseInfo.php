@@ -20,23 +20,23 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * userId  用户uid
-    * userGid  用户gid
-    * userName  用户名称
-    * userGroupName  用户组名称
-    * userHomeDir  用户home目录
-    * loginIp  用户登录ip
-    * serviceType  服务类型，包含如下:   - system   - mysql   - redis
-    * servicePort  登录服务端口
-    * loginMode  登录方式
-    * loginLastTime  用户最后一次登录时间
-    * loginFailCount  用户登录失败次数
-    * pwdHash  口令hash
-    * pwdWithFuzzing  匿名化处理后的口令
-    * pwdUsedDays  密码使用的天数
-    * pwdMinDays  口令的最短有效期限
-    * pwdMaxDays  口令的最长有效期限
-    * pwdWarnLeftDays  口令无效时提前告警天数
+    * userId  **参数解释**： 用户uid **取值范围**： 最小值0，最大值2147483647
+    * userGid  **参数解释**： 用户gid **取值范围**： 最小值0，最大值2147483647
+    * userName  **参数解释**： 用户名称 **取值范围**： 字符长度1-256位
+    * userGroupName  **参数解释**： 用户组名称 **取值范围**： 字符长度1-256位
+    * userHomeDir  **参数解释**： 用户home目录 **取值范围**： 字符长度1-256位
+    * loginIp  **参数解释**： 用户登录IP **取值范围**： 字符长度1-256位
+    * serviceType  **参数解释**： 服务类型 **取值范围**： - system：系统 - mysql：数据库 - redis：Redis
+    * servicePort  **参数解释**： 登录服务端口 **取值范围**： 最小值0，最大值2147483647
+    * loginMode  **参数解释**： 登录方式 **取值范围**： 最小值0，最大值2147483647
+    * loginLastTime  **参数解释**： 用户最后一次登录时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * loginFailCount  **参数解释**： 用户登录失败次数 **取值范围**： 最小值0，最大值2147483647
+    * pwdHash  **参数解释**： 口令hash **取值范围**： 字符长度1-256位
+    * pwdWithFuzzing  **参数解释**： 匿名化处理后的口令 **取值范围**： 字符长度1-256位
+    * pwdUsedDays  **参数解释**： 密码使用的天数 **取值范围**： 最小值0，最大值2147483647
+    * pwdMinDays  **参数解释**： 口令的最短有效期限 **取值范围**： 最小值0，最大值2147483647
+    * pwdMaxDays  **参数解释**： 口令的最长有效期限 **取值范围**： 最小值0，最大值2147483647
+    * pwdWarnLeftDays  **参数解释**： 口令无效时提前告警天数 **取值范围**： 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -62,23 +62,23 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * userId  用户uid
-    * userGid  用户gid
-    * userName  用户名称
-    * userGroupName  用户组名称
-    * userHomeDir  用户home目录
-    * loginIp  用户登录ip
-    * serviceType  服务类型，包含如下:   - system   - mysql   - redis
-    * servicePort  登录服务端口
-    * loginMode  登录方式
-    * loginLastTime  用户最后一次登录时间
-    * loginFailCount  用户登录失败次数
-    * pwdHash  口令hash
-    * pwdWithFuzzing  匿名化处理后的口令
-    * pwdUsedDays  密码使用的天数
-    * pwdMinDays  口令的最短有效期限
-    * pwdMaxDays  口令的最长有效期限
-    * pwdWarnLeftDays  口令无效时提前告警天数
+    * userId  **参数解释**： 用户uid **取值范围**： 最小值0，最大值2147483647
+    * userGid  **参数解释**： 用户gid **取值范围**： 最小值0，最大值2147483647
+    * userName  **参数解释**： 用户名称 **取值范围**： 字符长度1-256位
+    * userGroupName  **参数解释**： 用户组名称 **取值范围**： 字符长度1-256位
+    * userHomeDir  **参数解释**： 用户home目录 **取值范围**： 字符长度1-256位
+    * loginIp  **参数解释**： 用户登录IP **取值范围**： 字符长度1-256位
+    * serviceType  **参数解释**： 服务类型 **取值范围**： - system：系统 - mysql：数据库 - redis：Redis
+    * servicePort  **参数解释**： 登录服务端口 **取值范围**： 最小值0，最大值2147483647
+    * loginMode  **参数解释**： 登录方式 **取值范围**： 最小值0，最大值2147483647
+    * loginLastTime  **参数解释**： 用户最后一次登录时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * loginFailCount  **参数解释**： 用户登录失败次数 **取值范围**： 最小值0，最大值2147483647
+    * pwdHash  **参数解释**： 口令hash **取值范围**： 字符长度1-256位
+    * pwdWithFuzzing  **参数解释**： 匿名化处理后的口令 **取值范围**： 字符长度1-256位
+    * pwdUsedDays  **参数解释**： 密码使用的天数 **取值范围**： 最小值0，最大值2147483647
+    * pwdMinDays  **参数解释**： 口令的最短有效期限 **取值范围**： 最小值0，最大值2147483647
+    * pwdMaxDays  **参数解释**： 口令的最长有效期限 **取值范围**： 最小值0，最大值2147483647
+    * pwdWarnLeftDays  **参数解释**： 口令无效时提前告警天数 **取值范围**： 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -125,23 +125,23 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * userId  用户uid
-    * userGid  用户gid
-    * userName  用户名称
-    * userGroupName  用户组名称
-    * userHomeDir  用户home目录
-    * loginIp  用户登录ip
-    * serviceType  服务类型，包含如下:   - system   - mysql   - redis
-    * servicePort  登录服务端口
-    * loginMode  登录方式
-    * loginLastTime  用户最后一次登录时间
-    * loginFailCount  用户登录失败次数
-    * pwdHash  口令hash
-    * pwdWithFuzzing  匿名化处理后的口令
-    * pwdUsedDays  密码使用的天数
-    * pwdMinDays  口令的最短有效期限
-    * pwdMaxDays  口令的最长有效期限
-    * pwdWarnLeftDays  口令无效时提前告警天数
+    * userId  **参数解释**： 用户uid **取值范围**： 最小值0，最大值2147483647
+    * userGid  **参数解释**： 用户gid **取值范围**： 最小值0，最大值2147483647
+    * userName  **参数解释**： 用户名称 **取值范围**： 字符长度1-256位
+    * userGroupName  **参数解释**： 用户组名称 **取值范围**： 字符长度1-256位
+    * userHomeDir  **参数解释**： 用户home目录 **取值范围**： 字符长度1-256位
+    * loginIp  **参数解释**： 用户登录IP **取值范围**： 字符长度1-256位
+    * serviceType  **参数解释**： 服务类型 **取值范围**： - system：系统 - mysql：数据库 - redis：Redis
+    * servicePort  **参数解释**： 登录服务端口 **取值范围**： 最小值0，最大值2147483647
+    * loginMode  **参数解释**： 登录方式 **取值范围**： 最小值0，最大值2147483647
+    * loginLastTime  **参数解释**： 用户最后一次登录时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * loginFailCount  **参数解释**： 用户登录失败次数 **取值范围**： 最小值0，最大值2147483647
+    * pwdHash  **参数解释**： 口令hash **取值范围**： 字符长度1-256位
+    * pwdWithFuzzing  **参数解释**： 匿名化处理后的口令 **取值范围**： 字符长度1-256位
+    * pwdUsedDays  **参数解释**： 密码使用的天数 **取值范围**： 最小值0，最大值2147483647
+    * pwdMinDays  **参数解释**： 口令的最短有效期限 **取值范围**： 最小值0，最大值2147483647
+    * pwdMaxDays  **参数解释**： 口令的最长有效期限 **取值范围**： 最小值0，最大值2147483647
+    * pwdWarnLeftDays  **参数解释**： 口令无效时提前告警天数 **取值范围**： 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -167,23 +167,23 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * userId  用户uid
-    * userGid  用户gid
-    * userName  用户名称
-    * userGroupName  用户组名称
-    * userHomeDir  用户home目录
-    * loginIp  用户登录ip
-    * serviceType  服务类型，包含如下:   - system   - mysql   - redis
-    * servicePort  登录服务端口
-    * loginMode  登录方式
-    * loginLastTime  用户最后一次登录时间
-    * loginFailCount  用户登录失败次数
-    * pwdHash  口令hash
-    * pwdWithFuzzing  匿名化处理后的口令
-    * pwdUsedDays  密码使用的天数
-    * pwdMinDays  口令的最短有效期限
-    * pwdMaxDays  口令的最长有效期限
-    * pwdWarnLeftDays  口令无效时提前告警天数
+    * userId  **参数解释**： 用户uid **取值范围**： 最小值0，最大值2147483647
+    * userGid  **参数解释**： 用户gid **取值范围**： 最小值0，最大值2147483647
+    * userName  **参数解释**： 用户名称 **取值范围**： 字符长度1-256位
+    * userGroupName  **参数解释**： 用户组名称 **取值范围**： 字符长度1-256位
+    * userHomeDir  **参数解释**： 用户home目录 **取值范围**： 字符长度1-256位
+    * loginIp  **参数解释**： 用户登录IP **取值范围**： 字符长度1-256位
+    * serviceType  **参数解释**： 服务类型 **取值范围**： - system：系统 - mysql：数据库 - redis：Redis
+    * servicePort  **参数解释**： 登录服务端口 **取值范围**： 最小值0，最大值2147483647
+    * loginMode  **参数解释**： 登录方式 **取值范围**： 最小值0，最大值2147483647
+    * loginLastTime  **参数解释**： 用户最后一次登录时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * loginFailCount  **参数解释**： 用户登录失败次数 **取值范围**： 最小值0，最大值2147483647
+    * pwdHash  **参数解释**： 口令hash **取值范围**： 字符长度1-256位
+    * pwdWithFuzzing  **参数解释**： 匿名化处理后的口令 **取值范围**： 字符长度1-256位
+    * pwdUsedDays  **参数解释**： 密码使用的天数 **取值范围**： 最小值0，最大值2147483647
+    * pwdMinDays  **参数解释**： 口令的最短有效期限 **取值范围**： 最小值0，最大值2147483647
+    * pwdMaxDays  **参数解释**： 口令的最长有效期限 **取值范围**： 最小值0，最大值2147483647
+    * pwdWarnLeftDays  **参数解释**： 口令无效时提前告警天数 **取值范围**： 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -209,23 +209,23 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * userId  用户uid
-    * userGid  用户gid
-    * userName  用户名称
-    * userGroupName  用户组名称
-    * userHomeDir  用户home目录
-    * loginIp  用户登录ip
-    * serviceType  服务类型，包含如下:   - system   - mysql   - redis
-    * servicePort  登录服务端口
-    * loginMode  登录方式
-    * loginLastTime  用户最后一次登录时间
-    * loginFailCount  用户登录失败次数
-    * pwdHash  口令hash
-    * pwdWithFuzzing  匿名化处理后的口令
-    * pwdUsedDays  密码使用的天数
-    * pwdMinDays  口令的最短有效期限
-    * pwdMaxDays  口令的最长有效期限
-    * pwdWarnLeftDays  口令无效时提前告警天数
+    * userId  **参数解释**： 用户uid **取值范围**： 最小值0，最大值2147483647
+    * userGid  **参数解释**： 用户gid **取值范围**： 最小值0，最大值2147483647
+    * userName  **参数解释**： 用户名称 **取值范围**： 字符长度1-256位
+    * userGroupName  **参数解释**： 用户组名称 **取值范围**： 字符长度1-256位
+    * userHomeDir  **参数解释**： 用户home目录 **取值范围**： 字符长度1-256位
+    * loginIp  **参数解释**： 用户登录IP **取值范围**： 字符长度1-256位
+    * serviceType  **参数解释**： 服务类型 **取值范围**： - system：系统 - mysql：数据库 - redis：Redis
+    * servicePort  **参数解释**： 登录服务端口 **取值范围**： 最小值0，最大值2147483647
+    * loginMode  **参数解释**： 登录方式 **取值范围**： 最小值0，最大值2147483647
+    * loginLastTime  **参数解释**： 用户最后一次登录时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * loginFailCount  **参数解释**： 用户登录失败次数 **取值范围**： 最小值0，最大值2147483647
+    * pwdHash  **参数解释**： 口令hash **取值范围**： 字符长度1-256位
+    * pwdWithFuzzing  **参数解释**： 匿名化处理后的口令 **取值范围**： 字符长度1-256位
+    * pwdUsedDays  **参数解释**： 密码使用的天数 **取值范围**： 最小值0，最大值2147483647
+    * pwdMinDays  **参数解释**： 口令的最短有效期限 **取值范围**： 最小值0，最大值2147483647
+    * pwdMaxDays  **参数解释**： 口令的最长有效期限 **取值范围**： 最小值0，最大值2147483647
+    * pwdWarnLeftDays  **参数解释**： 口令无效时提前告警天数 **取值范围**： 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -431,7 +431,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  用户uid
+    *  **参数解释**： 用户uid **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -443,7 +443,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param int|null $userId 用户uid
+    * @param int|null $userId **参数解释**： 用户uid **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -455,7 +455,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userGid
-    *  用户gid
+    *  **参数解释**： 用户gid **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -467,7 +467,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userGid
     *
-    * @param int|null $userGid 用户gid
+    * @param int|null $userGid **参数解释**： 用户gid **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -479,7 +479,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  用户名称
+    *  **参数解释**： 用户名称 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -491,7 +491,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 用户名称
+    * @param string|null $userName **参数解释**： 用户名称 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -503,7 +503,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userGroupName
-    *  用户组名称
+    *  **参数解释**： 用户组名称 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -515,7 +515,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userGroupName
     *
-    * @param string|null $userGroupName 用户组名称
+    * @param string|null $userGroupName **参数解释**： 用户组名称 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -527,7 +527,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userHomeDir
-    *  用户home目录
+    *  **参数解释**： 用户home目录 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -539,7 +539,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userHomeDir
     *
-    * @param string|null $userHomeDir 用户home目录
+    * @param string|null $userHomeDir **参数解释**： 用户home目录 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -551,7 +551,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginIp
-    *  用户登录ip
+    *  **参数解释**： 用户登录IP **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -563,7 +563,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets loginIp
     *
-    * @param string|null $loginIp 用户登录ip
+    * @param string|null $loginIp **参数解释**： 用户登录IP **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -575,7 +575,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
-    *  服务类型，包含如下:   - system   - mysql   - redis
+    *  **参数解释**： 服务类型 **取值范围**： - system：系统 - mysql：数据库 - redis：Redis
     *
     * @return string|null
     */
@@ -587,7 +587,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param string|null $serviceType 服务类型，包含如下:   - system   - mysql   - redis
+    * @param string|null $serviceType **参数解释**： 服务类型 **取值范围**： - system：系统 - mysql：数据库 - redis：Redis
     *
     * @return $this
     */
@@ -599,7 +599,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets servicePort
-    *  登录服务端口
+    *  **参数解释**： 登录服务端口 **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -611,7 +611,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets servicePort
     *
-    * @param int|null $servicePort 登录服务端口
+    * @param int|null $servicePort **参数解释**： 登录服务端口 **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -623,7 +623,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginMode
-    *  登录方式
+    *  **参数解释**： 登录方式 **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -635,7 +635,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets loginMode
     *
-    * @param int|null $loginMode 登录方式
+    * @param int|null $loginMode **参数解释**： 登录方式 **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -647,7 +647,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginLastTime
-    *  用户最后一次登录时间
+    *  **参数解释**： 用户最后一次登录时间 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -659,7 +659,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets loginLastTime
     *
-    * @param int|null $loginLastTime 用户最后一次登录时间
+    * @param int|null $loginLastTime **参数解释**： 用户最后一次登录时间 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -671,7 +671,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginFailCount
-    *  用户登录失败次数
+    *  **参数解释**： 用户登录失败次数 **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -683,7 +683,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets loginFailCount
     *
-    * @param int|null $loginFailCount 用户登录失败次数
+    * @param int|null $loginFailCount **参数解释**： 用户登录失败次数 **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -695,7 +695,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdHash
-    *  口令hash
+    *  **参数解释**： 口令hash **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -707,7 +707,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pwdHash
     *
-    * @param string|null $pwdHash 口令hash
+    * @param string|null $pwdHash **参数解释**： 口令hash **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -719,7 +719,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdWithFuzzing
-    *  匿名化处理后的口令
+    *  **参数解释**： 匿名化处理后的口令 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -731,7 +731,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pwdWithFuzzing
     *
-    * @param string|null $pwdWithFuzzing 匿名化处理后的口令
+    * @param string|null $pwdWithFuzzing **参数解释**： 匿名化处理后的口令 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -743,7 +743,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdUsedDays
-    *  密码使用的天数
+    *  **参数解释**： 密码使用的天数 **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -755,7 +755,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pwdUsedDays
     *
-    * @param int|null $pwdUsedDays 密码使用的天数
+    * @param int|null $pwdUsedDays **参数解释**： 密码使用的天数 **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -767,7 +767,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdMinDays
-    *  口令的最短有效期限
+    *  **参数解释**： 口令的最短有效期限 **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -779,7 +779,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pwdMinDays
     *
-    * @param int|null $pwdMinDays 口令的最短有效期限
+    * @param int|null $pwdMinDays **参数解释**： 口令的最短有效期限 **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -791,7 +791,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdMaxDays
-    *  口令的最长有效期限
+    *  **参数解释**： 口令的最长有效期限 **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -803,7 +803,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pwdMaxDays
     *
-    * @param int|null $pwdMaxDays 口令的最长有效期限
+    * @param int|null $pwdMaxDays **参数解释**： 口令的最长有效期限 **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -815,7 +815,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdWarnLeftDays
-    *  口令无效时提前告警天数
+    *  **参数解释**： 口令无效时提前告警天数 **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -827,7 +827,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pwdWarnLeftDays
     *
-    * @param int|null $pwdWarnLeftDays 口令无效时提前告警天数
+    * @param int|null $pwdWarnLeftDays **参数解释**： 口令无效时提前告警天数 **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */

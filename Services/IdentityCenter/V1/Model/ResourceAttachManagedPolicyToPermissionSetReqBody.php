@@ -181,6 +181,9 @@ class ResourceAttachManagedPolicyToPermissionSetReqBody implements ModelInterfac
             if (!is_null($this->container['managedRoleName']) && (mb_strlen($this->container['managedRoleName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'managedRoleName', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['managedRoleName']) && !preg_match("/^[\\w+=_.@-]+$/", $this->container['managedRoleName'])) {
+                $invalidProperties[] = "invalid value for 'managedRoleName', must be conform to the pattern /^[\\w+=_.@-]+$/.";
+            }
         return $invalidProperties;
     }
 

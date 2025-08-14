@@ -20,10 +20,10 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * privateIp  服务器私有IP
-    * publicIp  弹性公网IP地址
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * startTime  启动时间，毫秒
     * runDuration  运行时长，秒
@@ -35,12 +35,12 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
     * deleted  是否删除，包含如下:   - true ：已删除   - false : 未删除
     * whetherUsingQuota  是否使用病毒查杀按次计费配额
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * hostStatus  服务器状态
     * agentStatus  Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     * osName  操作系统名称
-    * osVersion  操作系统版本
+    * osVersion  系统版本
     *
     * @var string[]
     */
@@ -70,10 +70,10 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * privateIp  服务器私有IP
-    * publicIp  弹性公网IP地址
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * startTime  启动时间，毫秒
     * runDuration  运行时长，秒
@@ -85,12 +85,12 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
     * deleted  是否删除，包含如下:   - true ：已删除   - false : 未删除
     * whetherUsingQuota  是否使用病毒查杀按次计费配额
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * hostStatus  服务器状态
     * agentStatus  Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     * osName  操作系统名称
-    * osVersion  操作系统版本
+    * osVersion  系统版本
     *
     * @var string[]
     */
@@ -141,10 +141,10 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * privateIp  服务器私有IP
-    * publicIp  弹性公网IP地址
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * startTime  启动时间，毫秒
     * runDuration  运行时长，秒
@@ -156,12 +156,12 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
     * deleted  是否删除，包含如下:   - true ：已删除   - false : 未删除
     * whetherUsingQuota  是否使用病毒查杀按次计费配额
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * hostStatus  服务器状态
     * agentStatus  Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     * osName  操作系统名称
-    * osVersion  操作系统版本
+    * osVersion  系统版本
     *
     * @var string[]
     */
@@ -191,10 +191,10 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * privateIp  服务器私有IP
-    * publicIp  弹性公网IP地址
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * startTime  启动时间，毫秒
     * runDuration  运行时长，秒
@@ -206,12 +206,12 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
     * deleted  是否删除，包含如下:   - true ：已删除   - false : 未删除
     * whetherUsingQuota  是否使用病毒查杀按次计费配额
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * hostStatus  服务器状态
     * agentStatus  Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     * osName  操作系统名称
-    * osVersion  操作系统版本
+    * osVersion  系统版本
     *
     * @var string[]
     */
@@ -241,10 +241,10 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * privateIp  服务器私有IP
-    * publicIp  弹性公网IP地址
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * startTime  启动时间，毫秒
     * runDuration  运行时长，秒
@@ -256,12 +256,12 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
     * deleted  是否删除，包含如下:   - true ：已删除   - false : 未删除
     * whetherUsingQuota  是否使用病毒查杀按次计费配额
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * hostStatus  服务器状态
     * agentStatus  Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     * osName  操作系统名称
-    * osVersion  操作系统版本
+    * osVersion  系统版本
     *
     * @var string[]
     */
@@ -405,8 +405,8 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['privateIp']) && !preg_match("/^.*$/", $this->container['privateIp'])) {
                 $invalidProperties[] = "invalid value for 'privateIp', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) > 128)) {
-                $invalidProperties[] = "invalid value for 'publicIp', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) > 256)) {
+                $invalidProperties[] = "invalid value for 'publicIp', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) < 1)) {
                 $invalidProperties[] = "invalid value for 'publicIp', the character length must be bigger than or equal to 1.";
@@ -489,12 +489,6 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['osName']) && (mb_strlen($this->container['osName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'osName', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['osVersion']) && (mb_strlen($this->container['osVersion']) > 64)) {
-                $invalidProperties[] = "invalid value for 'osVersion', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['osVersion']) && (mb_strlen($this->container['osVersion']) < 1)) {
-                $invalidProperties[] = "invalid value for 'osVersion', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -511,7 +505,7 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    *  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     *
     * @return string|null
     */
@@ -523,7 +517,7 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * @param string|null $hostId **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     *
     * @return $this
     */
@@ -559,7 +553,7 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  服务器私有IP
+    *  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     *
     * @return string|null
     */
@@ -571,7 +565,7 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp 服务器私有IP
+    * @param string|null $privateIp **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     *
     * @return $this
     */
@@ -583,7 +577,7 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  弹性公网IP地址
+    *  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -595,7 +589,7 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp 弹性公网IP地址
+    * @param string|null $publicIp **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -871,7 +865,7 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    *  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     *
     * @return string|null
     */
@@ -883,7 +877,7 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * @param string|null $osType **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     *
     * @return $this
     */
@@ -991,7 +985,7 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osVersion
-    *  操作系统版本
+    *  系统版本
     *
     * @return string|null
     */
@@ -1003,7 +997,7 @@ class AntiVirusTaskHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osVersion
     *
-    * @param string|null $osVersion 操作系统版本
+    * @param string|null $osVersion 系统版本
     *
     * @return $this
     */

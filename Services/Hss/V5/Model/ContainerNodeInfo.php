@@ -20,27 +20,27 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentId  **参数解释** AgentId标识 **取值范围** 只能由英文字母、数字、特殊字符组成, 长度范围为[0-64]个字符
-    * hostId  **参数解释** 服务器ID **取值范围** 只能由英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * hostName  **参数解释** 服务器名称 **取值范围** 只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * hostStatus  **参数解释** 服务器状态 **取值范围** - ACTIVE ：正在运行 - SHUTOFF ：关机 - BUILDING ：创建中 - ERROR ：故障
-    * agentStatus  **参数解释** Agent状态 **取值范围**         - not_installed ：未安装 - online ：在线 - offline ：离线
-    * protectStatus  **参数解释** 防护状态 **取值范围**         - closed ：防护关闭状态 - opened ：防护开启状态
-    * protectInterrupt  **参数解释** 防护是否中断 **取值范围**         - true: 防护中断 - false: 防护未中断
-    * protectDegradation  **参数解释** 防护是否降级 **取值范围**         - true: 防护降级 - false: 防护未降级
-    * degradationReason  **参数解释** 防护降级原因 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[1-32]个字符
-    * containerTags  **参数解释** 标签：用来识别cce集群节点和自建集群节点 **取值范围**         - cce：cce节点 - self：自建节点 - other：其它节点
-    * privateIp  **参数解释** 私有IP地址 **取值范围**         只能由数字、特殊字符组成, 长度范围为[0-128]个字符
-    * publicIp  **参数解释** 弹性公网IP地址 **取值范围**         只能由数字、特殊字符组成, 长度范围为[0-128]个字符
-    * resourceId  **参数解释** 主机安全配额ID（UUID） **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * groupName  **参数解释** 服务器组名称 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * enterpriseProjectName  **参数解释** 所属企业项目名称 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-256]个字符
-    * detectResult  **参数解释** 云主机安全检测结果 **取值范围**           - undetected ：未检测 - clean ：无风险 - risk ：有风险 - scanning ：检测中
-    * asset  **参数解释** 资产风险 **取值范围**         0-2147483647
-    * vulnerability  **参数解释** 漏洞风险 **取值范围**         0-2147483647
-    * intrusion  **参数解释** 入侵风险 **取值范围**         0-2147483647
-    * policyGroupId  **参数解释** 策略组ID **取值范围**         只能由英文字母、数字、特殊字符组成, 长度范围为[1-128]个字符
-    * policyGroupName  **参数解释** 策略组名称 **取值范围**         只能由中文字母、英文字母、数字、特殊字符组成, 长度范围为[1-128]个字符
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度0-64位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度0-128位
+    * hostName  **参数解释**: 节点名称 **取值范围**: 字符长度0-128位
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种。   - ACTIVE：正在运行。   - SHUTOFF：关机。   - BUILDING：创建中。   - ERROR：故障。
+    * agentStatus  **参数解释**: Agent状态 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种。   - closed ：关闭。   - opened ：开启。
+    * protectInterrupt  **参数解释**: 防护是否中断 **取值范围**:   - ture：防护中断。   - false：防护未中断。
+    * protectDegradation  **参数解释**: 防护是否降级 **取值范围**:   - ture：防护降级。   - false：防护未降级。
+    * degradationReason  **参数解释**: 防护降级原因 **取值范围**: 字符长度1-32位
+    * containerTags  **参数解释**: 用来识别cce容器节点和自建节点的标签 **取值范围**: 包含如下3种。 - cce：cce节点 - self：自建节点 - other：其他节点
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
+    * publicIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128位
+    * resourceId  **参数解释**: 主机安全配额ID（UUID） **取值范围**: 字符长度0-128位
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128位
+    * enterpriseProjectName  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度0-256位
+    * detectResult  **参数解释**: 云主机安全检测结果 **取值范围**: 包含如下4种。 - undetected：未检测。 - clean：无风险。 - risk：有风险。 - scanning：检测中。
+    * asset  **参数解释**: 资产风险 **取值范围**: 取值0-2097152
+    * vulnerability  **参数解释**: 漏洞风险 **取值范围**: 取值0-2097152
+    * intrusion  **参数解释**: 入侵风险 **取值范围**: 取值0-2097152
+    * policyGroupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-128位
+    * policyGroupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
     *
     * @var string[]
     */
@@ -70,27 +70,27 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentId  **参数解释** AgentId标识 **取值范围** 只能由英文字母、数字、特殊字符组成, 长度范围为[0-64]个字符
-    * hostId  **参数解释** 服务器ID **取值范围** 只能由英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * hostName  **参数解释** 服务器名称 **取值范围** 只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * hostStatus  **参数解释** 服务器状态 **取值范围** - ACTIVE ：正在运行 - SHUTOFF ：关机 - BUILDING ：创建中 - ERROR ：故障
-    * agentStatus  **参数解释** Agent状态 **取值范围**         - not_installed ：未安装 - online ：在线 - offline ：离线
-    * protectStatus  **参数解释** 防护状态 **取值范围**         - closed ：防护关闭状态 - opened ：防护开启状态
-    * protectInterrupt  **参数解释** 防护是否中断 **取值范围**         - true: 防护中断 - false: 防护未中断
-    * protectDegradation  **参数解释** 防护是否降级 **取值范围**         - true: 防护降级 - false: 防护未降级
-    * degradationReason  **参数解释** 防护降级原因 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[1-32]个字符
-    * containerTags  **参数解释** 标签：用来识别cce集群节点和自建集群节点 **取值范围**         - cce：cce节点 - self：自建节点 - other：其它节点
-    * privateIp  **参数解释** 私有IP地址 **取值范围**         只能由数字、特殊字符组成, 长度范围为[0-128]个字符
-    * publicIp  **参数解释** 弹性公网IP地址 **取值范围**         只能由数字、特殊字符组成, 长度范围为[0-128]个字符
-    * resourceId  **参数解释** 主机安全配额ID（UUID） **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * groupName  **参数解释** 服务器组名称 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * enterpriseProjectName  **参数解释** 所属企业项目名称 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-256]个字符
-    * detectResult  **参数解释** 云主机安全检测结果 **取值范围**           - undetected ：未检测 - clean ：无风险 - risk ：有风险 - scanning ：检测中
-    * asset  **参数解释** 资产风险 **取值范围**         0-2147483647
-    * vulnerability  **参数解释** 漏洞风险 **取值范围**         0-2147483647
-    * intrusion  **参数解释** 入侵风险 **取值范围**         0-2147483647
-    * policyGroupId  **参数解释** 策略组ID **取值范围**         只能由英文字母、数字、特殊字符组成, 长度范围为[1-128]个字符
-    * policyGroupName  **参数解释** 策略组名称 **取值范围**         只能由中文字母、英文字母、数字、特殊字符组成, 长度范围为[1-128]个字符
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度0-64位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度0-128位
+    * hostName  **参数解释**: 节点名称 **取值范围**: 字符长度0-128位
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种。   - ACTIVE：正在运行。   - SHUTOFF：关机。   - BUILDING：创建中。   - ERROR：故障。
+    * agentStatus  **参数解释**: Agent状态 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种。   - closed ：关闭。   - opened ：开启。
+    * protectInterrupt  **参数解释**: 防护是否中断 **取值范围**:   - ture：防护中断。   - false：防护未中断。
+    * protectDegradation  **参数解释**: 防护是否降级 **取值范围**:   - ture：防护降级。   - false：防护未降级。
+    * degradationReason  **参数解释**: 防护降级原因 **取值范围**: 字符长度1-32位
+    * containerTags  **参数解释**: 用来识别cce容器节点和自建节点的标签 **取值范围**: 包含如下3种。 - cce：cce节点 - self：自建节点 - other：其他节点
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
+    * publicIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128位
+    * resourceId  **参数解释**: 主机安全配额ID（UUID） **取值范围**: 字符长度0-128位
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128位
+    * enterpriseProjectName  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度0-256位
+    * detectResult  **参数解释**: 云主机安全检测结果 **取值范围**: 包含如下4种。 - undetected：未检测。 - clean：无风险。 - risk：有风险。 - scanning：检测中。
+    * asset  **参数解释**: 资产风险 **取值范围**: 取值0-2097152
+    * vulnerability  **参数解释**: 漏洞风险 **取值范围**: 取值0-2097152
+    * intrusion  **参数解释**: 入侵风险 **取值范围**: 取值0-2097152
+    * policyGroupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-128位
+    * policyGroupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
     *
     * @var string[]
     */
@@ -141,27 +141,27 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentId  **参数解释** AgentId标识 **取值范围** 只能由英文字母、数字、特殊字符组成, 长度范围为[0-64]个字符
-    * hostId  **参数解释** 服务器ID **取值范围** 只能由英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * hostName  **参数解释** 服务器名称 **取值范围** 只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * hostStatus  **参数解释** 服务器状态 **取值范围** - ACTIVE ：正在运行 - SHUTOFF ：关机 - BUILDING ：创建中 - ERROR ：故障
-    * agentStatus  **参数解释** Agent状态 **取值范围**         - not_installed ：未安装 - online ：在线 - offline ：离线
-    * protectStatus  **参数解释** 防护状态 **取值范围**         - closed ：防护关闭状态 - opened ：防护开启状态
-    * protectInterrupt  **参数解释** 防护是否中断 **取值范围**         - true: 防护中断 - false: 防护未中断
-    * protectDegradation  **参数解释** 防护是否降级 **取值范围**         - true: 防护降级 - false: 防护未降级
-    * degradationReason  **参数解释** 防护降级原因 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[1-32]个字符
-    * containerTags  **参数解释** 标签：用来识别cce集群节点和自建集群节点 **取值范围**         - cce：cce节点 - self：自建节点 - other：其它节点
-    * privateIp  **参数解释** 私有IP地址 **取值范围**         只能由数字、特殊字符组成, 长度范围为[0-128]个字符
-    * publicIp  **参数解释** 弹性公网IP地址 **取值范围**         只能由数字、特殊字符组成, 长度范围为[0-128]个字符
-    * resourceId  **参数解释** 主机安全配额ID（UUID） **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * groupName  **参数解释** 服务器组名称 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * enterpriseProjectName  **参数解释** 所属企业项目名称 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-256]个字符
-    * detectResult  **参数解释** 云主机安全检测结果 **取值范围**           - undetected ：未检测 - clean ：无风险 - risk ：有风险 - scanning ：检测中
-    * asset  **参数解释** 资产风险 **取值范围**         0-2147483647
-    * vulnerability  **参数解释** 漏洞风险 **取值范围**         0-2147483647
-    * intrusion  **参数解释** 入侵风险 **取值范围**         0-2147483647
-    * policyGroupId  **参数解释** 策略组ID **取值范围**         只能由英文字母、数字、特殊字符组成, 长度范围为[1-128]个字符
-    * policyGroupName  **参数解释** 策略组名称 **取值范围**         只能由中文字母、英文字母、数字、特殊字符组成, 长度范围为[1-128]个字符
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度0-64位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度0-128位
+    * hostName  **参数解释**: 节点名称 **取值范围**: 字符长度0-128位
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种。   - ACTIVE：正在运行。   - SHUTOFF：关机。   - BUILDING：创建中。   - ERROR：故障。
+    * agentStatus  **参数解释**: Agent状态 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种。   - closed ：关闭。   - opened ：开启。
+    * protectInterrupt  **参数解释**: 防护是否中断 **取值范围**:   - ture：防护中断。   - false：防护未中断。
+    * protectDegradation  **参数解释**: 防护是否降级 **取值范围**:   - ture：防护降级。   - false：防护未降级。
+    * degradationReason  **参数解释**: 防护降级原因 **取值范围**: 字符长度1-32位
+    * containerTags  **参数解释**: 用来识别cce容器节点和自建节点的标签 **取值范围**: 包含如下3种。 - cce：cce节点 - self：自建节点 - other：其他节点
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
+    * publicIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128位
+    * resourceId  **参数解释**: 主机安全配额ID（UUID） **取值范围**: 字符长度0-128位
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128位
+    * enterpriseProjectName  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度0-256位
+    * detectResult  **参数解释**: 云主机安全检测结果 **取值范围**: 包含如下4种。 - undetected：未检测。 - clean：无风险。 - risk：有风险。 - scanning：检测中。
+    * asset  **参数解释**: 资产风险 **取值范围**: 取值0-2097152
+    * vulnerability  **参数解释**: 漏洞风险 **取值范围**: 取值0-2097152
+    * intrusion  **参数解释**: 入侵风险 **取值范围**: 取值0-2097152
+    * policyGroupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-128位
+    * policyGroupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
     *
     * @var string[]
     */
@@ -191,27 +191,27 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentId  **参数解释** AgentId标识 **取值范围** 只能由英文字母、数字、特殊字符组成, 长度范围为[0-64]个字符
-    * hostId  **参数解释** 服务器ID **取值范围** 只能由英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * hostName  **参数解释** 服务器名称 **取值范围** 只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * hostStatus  **参数解释** 服务器状态 **取值范围** - ACTIVE ：正在运行 - SHUTOFF ：关机 - BUILDING ：创建中 - ERROR ：故障
-    * agentStatus  **参数解释** Agent状态 **取值范围**         - not_installed ：未安装 - online ：在线 - offline ：离线
-    * protectStatus  **参数解释** 防护状态 **取值范围**         - closed ：防护关闭状态 - opened ：防护开启状态
-    * protectInterrupt  **参数解释** 防护是否中断 **取值范围**         - true: 防护中断 - false: 防护未中断
-    * protectDegradation  **参数解释** 防护是否降级 **取值范围**         - true: 防护降级 - false: 防护未降级
-    * degradationReason  **参数解释** 防护降级原因 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[1-32]个字符
-    * containerTags  **参数解释** 标签：用来识别cce集群节点和自建集群节点 **取值范围**         - cce：cce节点 - self：自建节点 - other：其它节点
-    * privateIp  **参数解释** 私有IP地址 **取值范围**         只能由数字、特殊字符组成, 长度范围为[0-128]个字符
-    * publicIp  **参数解释** 弹性公网IP地址 **取值范围**         只能由数字、特殊字符组成, 长度范围为[0-128]个字符
-    * resourceId  **参数解释** 主机安全配额ID（UUID） **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * groupName  **参数解释** 服务器组名称 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * enterpriseProjectName  **参数解释** 所属企业项目名称 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-256]个字符
-    * detectResult  **参数解释** 云主机安全检测结果 **取值范围**           - undetected ：未检测 - clean ：无风险 - risk ：有风险 - scanning ：检测中
-    * asset  **参数解释** 资产风险 **取值范围**         0-2147483647
-    * vulnerability  **参数解释** 漏洞风险 **取值范围**         0-2147483647
-    * intrusion  **参数解释** 入侵风险 **取值范围**         0-2147483647
-    * policyGroupId  **参数解释** 策略组ID **取值范围**         只能由英文字母、数字、特殊字符组成, 长度范围为[1-128]个字符
-    * policyGroupName  **参数解释** 策略组名称 **取值范围**         只能由中文字母、英文字母、数字、特殊字符组成, 长度范围为[1-128]个字符
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度0-64位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度0-128位
+    * hostName  **参数解释**: 节点名称 **取值范围**: 字符长度0-128位
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种。   - ACTIVE：正在运行。   - SHUTOFF：关机。   - BUILDING：创建中。   - ERROR：故障。
+    * agentStatus  **参数解释**: Agent状态 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种。   - closed ：关闭。   - opened ：开启。
+    * protectInterrupt  **参数解释**: 防护是否中断 **取值范围**:   - ture：防护中断。   - false：防护未中断。
+    * protectDegradation  **参数解释**: 防护是否降级 **取值范围**:   - ture：防护降级。   - false：防护未降级。
+    * degradationReason  **参数解释**: 防护降级原因 **取值范围**: 字符长度1-32位
+    * containerTags  **参数解释**: 用来识别cce容器节点和自建节点的标签 **取值范围**: 包含如下3种。 - cce：cce节点 - self：自建节点 - other：其他节点
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
+    * publicIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128位
+    * resourceId  **参数解释**: 主机安全配额ID（UUID） **取值范围**: 字符长度0-128位
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128位
+    * enterpriseProjectName  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度0-256位
+    * detectResult  **参数解释**: 云主机安全检测结果 **取值范围**: 包含如下4种。 - undetected：未检测。 - clean：无风险。 - risk：有风险。 - scanning：检测中。
+    * asset  **参数解释**: 资产风险 **取值范围**: 取值0-2097152
+    * vulnerability  **参数解释**: 漏洞风险 **取值范围**: 取值0-2097152
+    * intrusion  **参数解释**: 入侵风险 **取值范围**: 取值0-2097152
+    * policyGroupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-128位
+    * policyGroupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
     *
     * @var string[]
     */
@@ -241,27 +241,27 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentId  **参数解释** AgentId标识 **取值范围** 只能由英文字母、数字、特殊字符组成, 长度范围为[0-64]个字符
-    * hostId  **参数解释** 服务器ID **取值范围** 只能由英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * hostName  **参数解释** 服务器名称 **取值范围** 只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * hostStatus  **参数解释** 服务器状态 **取值范围** - ACTIVE ：正在运行 - SHUTOFF ：关机 - BUILDING ：创建中 - ERROR ：故障
-    * agentStatus  **参数解释** Agent状态 **取值范围**         - not_installed ：未安装 - online ：在线 - offline ：离线
-    * protectStatus  **参数解释** 防护状态 **取值范围**         - closed ：防护关闭状态 - opened ：防护开启状态
-    * protectInterrupt  **参数解释** 防护是否中断 **取值范围**         - true: 防护中断 - false: 防护未中断
-    * protectDegradation  **参数解释** 防护是否降级 **取值范围**         - true: 防护降级 - false: 防护未降级
-    * degradationReason  **参数解释** 防护降级原因 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[1-32]个字符
-    * containerTags  **参数解释** 标签：用来识别cce集群节点和自建集群节点 **取值范围**         - cce：cce节点 - self：自建节点 - other：其它节点
-    * privateIp  **参数解释** 私有IP地址 **取值范围**         只能由数字、特殊字符组成, 长度范围为[0-128]个字符
-    * publicIp  **参数解释** 弹性公网IP地址 **取值范围**         只能由数字、特殊字符组成, 长度范围为[0-128]个字符
-    * resourceId  **参数解释** 主机安全配额ID（UUID） **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * groupName  **参数解释** 服务器组名称 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
-    * enterpriseProjectName  **参数解释** 所属企业项目名称 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-256]个字符
-    * detectResult  **参数解释** 云主机安全检测结果 **取值范围**           - undetected ：未检测 - clean ：无风险 - risk ：有风险 - scanning ：检测中
-    * asset  **参数解释** 资产风险 **取值范围**         0-2147483647
-    * vulnerability  **参数解释** 漏洞风险 **取值范围**         0-2147483647
-    * intrusion  **参数解释** 入侵风险 **取值范围**         0-2147483647
-    * policyGroupId  **参数解释** 策略组ID **取值范围**         只能由英文字母、数字、特殊字符组成, 长度范围为[1-128]个字符
-    * policyGroupName  **参数解释** 策略组名称 **取值范围**         只能由中文字母、英文字母、数字、特殊字符组成, 长度范围为[1-128]个字符
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度0-64位
+    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度0-128位
+    * hostName  **参数解释**: 节点名称 **取值范围**: 字符长度0-128位
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种。   - ACTIVE：正在运行。   - SHUTOFF：关机。   - BUILDING：创建中。   - ERROR：故障。
+    * agentStatus  **参数解释**: Agent状态 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种。   - closed ：关闭。   - opened ：开启。
+    * protectInterrupt  **参数解释**: 防护是否中断 **取值范围**:   - ture：防护中断。   - false：防护未中断。
+    * protectDegradation  **参数解释**: 防护是否降级 **取值范围**:   - ture：防护降级。   - false：防护未降级。
+    * degradationReason  **参数解释**: 防护降级原因 **取值范围**: 字符长度1-32位
+    * containerTags  **参数解释**: 用来识别cce容器节点和自建节点的标签 **取值范围**: 包含如下3种。 - cce：cce节点 - self：自建节点 - other：其他节点
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
+    * publicIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128位
+    * resourceId  **参数解释**: 主机安全配额ID（UUID） **取值范围**: 字符长度0-128位
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128位
+    * enterpriseProjectName  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度0-256位
+    * detectResult  **参数解释**: 云主机安全检测结果 **取值范围**: 包含如下4种。 - undetected：未检测。 - clean：无风险。 - risk：有风险。 - scanning：检测中。
+    * asset  **参数解释**: 资产风险 **取值范围**: 取值0-2097152
+    * vulnerability  **参数解释**: 漏洞风险 **取值范围**: 取值0-2097152
+    * intrusion  **参数解释**: 入侵风险 **取值范围**: 取值0-2097152
+    * policyGroupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-128位
+    * policyGroupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
     *
     * @var string[]
     */
@@ -462,20 +462,20 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['detectResult']) && (mb_strlen($this->container['detectResult']) < 1)) {
                 $invalidProperties[] = "invalid value for 'detectResult', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['asset']) && ($this->container['asset'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'asset', must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['asset']) && ($this->container['asset'] > 2097152)) {
+                $invalidProperties[] = "invalid value for 'asset', must be smaller than or equal to 2097152.";
             }
             if (!is_null($this->container['asset']) && ($this->container['asset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'asset', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['vulnerability']) && ($this->container['vulnerability'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'vulnerability', must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['vulnerability']) && ($this->container['vulnerability'] > 2097152)) {
+                $invalidProperties[] = "invalid value for 'vulnerability', must be smaller than or equal to 2097152.";
             }
             if (!is_null($this->container['vulnerability']) && ($this->container['vulnerability'] < 0)) {
                 $invalidProperties[] = "invalid value for 'vulnerability', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['intrusion']) && ($this->container['intrusion'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'intrusion', must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['intrusion']) && ($this->container['intrusion'] > 2097152)) {
+                $invalidProperties[] = "invalid value for 'intrusion', must be smaller than or equal to 2097152.";
             }
             if (!is_null($this->container['intrusion']) && ($this->container['intrusion'] < 0)) {
                 $invalidProperties[] = "invalid value for 'intrusion', must be bigger than or equal to 0.";
@@ -508,7 +508,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  **参数解释** AgentId标识 **取值范围** 只能由英文字母、数字、特殊字符组成, 长度范围为[0-64]个字符
+    *  **参数解释**: Agent ID **取值范围**: 字符长度0-64位
     *
     * @return string|null
     */
@@ -520,7 +520,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId **参数解释** AgentId标识 **取值范围** 只能由英文字母、数字、特殊字符组成, 长度范围为[0-64]个字符
+    * @param string|null $agentId **参数解释**: Agent ID **取值范围**: 字符长度0-64位
     *
     * @return $this
     */
@@ -532,7 +532,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  **参数解释** 服务器ID **取值范围** 只能由英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
+    *  **参数解释**: 服务器ID **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -544,7 +544,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId **参数解释** 服务器ID **取值范围** 只能由英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
+    * @param string|null $hostId **参数解释**: 服务器ID **取值范围**: 字符长度0-128位
     *
     * @return $this
     */
@@ -556,7 +556,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  **参数解释** 服务器名称 **取值范围** 只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
+    *  **参数解释**: 节点名称 **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -568,7 +568,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName **参数解释** 服务器名称 **取值范围** 只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
+    * @param string|null $hostName **参数解释**: 节点名称 **取值范围**: 字符长度0-128位
     *
     * @return $this
     */
@@ -580,7 +580,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostStatus
-    *  **参数解释** 服务器状态 **取值范围** - ACTIVE ：正在运行 - SHUTOFF ：关机 - BUILDING ：创建中 - ERROR ：故障
+    *  **参数解释**: 服务器状态 **取值范围**: 包含如下4种。   - ACTIVE：正在运行。   - SHUTOFF：关机。   - BUILDING：创建中。   - ERROR：故障。
     *
     * @return string|null
     */
@@ -592,7 +592,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostStatus
     *
-    * @param string|null $hostStatus **参数解释** 服务器状态 **取值范围** - ACTIVE ：正在运行 - SHUTOFF ：关机 - BUILDING ：创建中 - ERROR ：故障
+    * @param string|null $hostStatus **参数解释**: 服务器状态 **取值范围**: 包含如下4种。   - ACTIVE：正在运行。   - SHUTOFF：关机。   - BUILDING：创建中。   - ERROR：故障。
     *
     * @return $this
     */
@@ -604,7 +604,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentStatus
-    *  **参数解释** Agent状态 **取值范围**         - not_installed ：未安装 - online ：在线 - offline ：离线
+    *  **参数解释**: Agent状态 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。
     *
     * @return string|null
     */
@@ -616,7 +616,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentStatus
     *
-    * @param string|null $agentStatus **参数解释** Agent状态 **取值范围**         - not_installed ：未安装 - online ：在线 - offline ：离线
+    * @param string|null $agentStatus **参数解释**: Agent状态 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。
     *
     * @return $this
     */
@@ -628,7 +628,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  **参数解释** 防护状态 **取值范围**         - closed ：防护关闭状态 - opened ：防护开启状态
+    *  **参数解释**: 防护状态 **取值范围**: 包含如下2种。   - closed ：关闭。   - opened ：开启。
     *
     * @return string|null
     */
@@ -640,7 +640,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus **参数解释** 防护状态 **取值范围**         - closed ：防护关闭状态 - opened ：防护开启状态
+    * @param string|null $protectStatus **参数解释**: 防护状态 **取值范围**: 包含如下2种。   - closed ：关闭。   - opened ：开启。
     *
     * @return $this
     */
@@ -652,7 +652,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectInterrupt
-    *  **参数解释** 防护是否中断 **取值范围**         - true: 防护中断 - false: 防护未中断
+    *  **参数解释**: 防护是否中断 **取值范围**:   - ture：防护中断。   - false：防护未中断。
     *
     * @return bool|null
     */
@@ -664,7 +664,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectInterrupt
     *
-    * @param bool|null $protectInterrupt **参数解释** 防护是否中断 **取值范围**         - true: 防护中断 - false: 防护未中断
+    * @param bool|null $protectInterrupt **参数解释**: 防护是否中断 **取值范围**:   - ture：防护中断。   - false：防护未中断。
     *
     * @return $this
     */
@@ -676,7 +676,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectDegradation
-    *  **参数解释** 防护是否降级 **取值范围**         - true: 防护降级 - false: 防护未降级
+    *  **参数解释**: 防护是否降级 **取值范围**:   - ture：防护降级。   - false：防护未降级。
     *
     * @return bool|null
     */
@@ -688,7 +688,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectDegradation
     *
-    * @param bool|null $protectDegradation **参数解释** 防护是否降级 **取值范围**         - true: 防护降级 - false: 防护未降级
+    * @param bool|null $protectDegradation **参数解释**: 防护是否降级 **取值范围**:   - ture：防护降级。   - false：防护未降级。
     *
     * @return $this
     */
@@ -700,7 +700,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets degradationReason
-    *  **参数解释** 防护降级原因 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[1-32]个字符
+    *  **参数解释**: 防护降级原因 **取值范围**: 字符长度1-32位
     *
     * @return string|null
     */
@@ -712,7 +712,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets degradationReason
     *
-    * @param string|null $degradationReason **参数解释** 防护降级原因 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[1-32]个字符
+    * @param string|null $degradationReason **参数解释**: 防护降级原因 **取值范围**: 字符长度1-32位
     *
     * @return $this
     */
@@ -724,7 +724,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerTags
-    *  **参数解释** 标签：用来识别cce集群节点和自建集群节点 **取值范围**         - cce：cce节点 - self：自建节点 - other：其它节点
+    *  **参数解释**: 用来识别cce容器节点和自建节点的标签 **取值范围**: 包含如下3种。 - cce：cce节点 - self：自建节点 - other：其他节点
     *
     * @return string|null
     */
@@ -736,7 +736,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerTags
     *
-    * @param string|null $containerTags **参数解释** 标签：用来识别cce集群节点和自建集群节点 **取值范围**         - cce：cce节点 - self：自建节点 - other：其它节点
+    * @param string|null $containerTags **参数解释**: 用来识别cce容器节点和自建节点的标签 **取值范围**: 包含如下3种。 - cce：cce节点 - self：自建节点 - other：其他节点
     *
     * @return $this
     */
@@ -748,7 +748,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  **参数解释** 私有IP地址 **取值范围**         只能由数字、特殊字符组成, 长度范围为[0-128]个字符
+    *  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -760,7 +760,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp **参数解释** 私有IP地址 **取值范围**         只能由数字、特殊字符组成, 长度范围为[0-128]个字符
+    * @param string|null $privateIp **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
     *
     * @return $this
     */
@@ -772,7 +772,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  **参数解释** 弹性公网IP地址 **取值范围**         只能由数字、特殊字符组成, 长度范围为[0-128]个字符
+    *  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -784,7 +784,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp **参数解释** 弹性公网IP地址 **取值范围**         只能由数字、特殊字符组成, 长度范围为[0-128]个字符
+    * @param string|null $publicIp **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128位
     *
     * @return $this
     */
@@ -796,7 +796,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  **参数解释** 主机安全配额ID（UUID） **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
+    *  **参数解释**: 主机安全配额ID（UUID） **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -808,7 +808,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId **参数解释** 主机安全配额ID（UUID） **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
+    * @param string|null $resourceId **参数解释**: 主机安全配额ID（UUID） **取值范围**: 字符长度0-128位
     *
     * @return $this
     */
@@ -820,7 +820,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  **参数解释** 服务器组名称 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
+    *  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -832,7 +832,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName **参数解释** 服务器组名称 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-128]个字符
+    * @param string|null $groupName **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -844,7 +844,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectName
-    *  **参数解释** 所属企业项目名称 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-256]个字符
+    *  **参数解释**: 所属企业项目名称 **取值范围**: 字符长度0-256位
     *
     * @return string|null
     */
@@ -856,7 +856,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectName
     *
-    * @param string|null $enterpriseProjectName **参数解释** 所属企业项目名称 **取值范围**         只能由中文字符、英文字母、数字、特殊字符组成, 长度范围为[0-256]个字符
+    * @param string|null $enterpriseProjectName **参数解释**: 所属企业项目名称 **取值范围**: 字符长度0-256位
     *
     * @return $this
     */
@@ -868,7 +868,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets detectResult
-    *  **参数解释** 云主机安全检测结果 **取值范围**           - undetected ：未检测 - clean ：无风险 - risk ：有风险 - scanning ：检测中
+    *  **参数解释**: 云主机安全检测结果 **取值范围**: 包含如下4种。 - undetected：未检测。 - clean：无风险。 - risk：有风险。 - scanning：检测中。
     *
     * @return string|null
     */
@@ -880,7 +880,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets detectResult
     *
-    * @param string|null $detectResult **参数解释** 云主机安全检测结果 **取值范围**           - undetected ：未检测 - clean ：无风险 - risk ：有风险 - scanning ：检测中
+    * @param string|null $detectResult **参数解释**: 云主机安全检测结果 **取值范围**: 包含如下4种。 - undetected：未检测。 - clean：无风险。 - risk：有风险。 - scanning：检测中。
     *
     * @return $this
     */
@@ -892,7 +892,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets asset
-    *  **参数解释** 资产风险 **取值范围**         0-2147483647
+    *  **参数解释**: 资产风险 **取值范围**: 取值0-2097152
     *
     * @return int|null
     */
@@ -904,7 +904,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets asset
     *
-    * @param int|null $asset **参数解释** 资产风险 **取值范围**         0-2147483647
+    * @param int|null $asset **参数解释**: 资产风险 **取值范围**: 取值0-2097152
     *
     * @return $this
     */
@@ -916,7 +916,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulnerability
-    *  **参数解释** 漏洞风险 **取值范围**         0-2147483647
+    *  **参数解释**: 漏洞风险 **取值范围**: 取值0-2097152
     *
     * @return int|null
     */
@@ -928,7 +928,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vulnerability
     *
-    * @param int|null $vulnerability **参数解释** 漏洞风险 **取值范围**         0-2147483647
+    * @param int|null $vulnerability **参数解释**: 漏洞风险 **取值范围**: 取值0-2097152
     *
     * @return $this
     */
@@ -940,7 +940,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets intrusion
-    *  **参数解释** 入侵风险 **取值范围**         0-2147483647
+    *  **参数解释**: 入侵风险 **取值范围**: 取值0-2097152
     *
     * @return int|null
     */
@@ -952,7 +952,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets intrusion
     *
-    * @param int|null $intrusion **参数解释** 入侵风险 **取值范围**         0-2147483647
+    * @param int|null $intrusion **参数解释**: 入侵风险 **取值范围**: 取值0-2097152
     *
     * @return $this
     */
@@ -964,7 +964,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyGroupId
-    *  **参数解释** 策略组ID **取值范围**         只能由英文字母、数字、特殊字符组成, 长度范围为[1-128]个字符
+    *  **参数解释**: 策略组ID **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -976,7 +976,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets policyGroupId
     *
-    * @param string|null $policyGroupId **参数解释** 策略组ID **取值范围**         只能由英文字母、数字、特殊字符组成, 长度范围为[1-128]个字符
+    * @param string|null $policyGroupId **参数解释**: 策略组ID **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -988,7 +988,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyGroupName
-    *  **参数解释** 策略组名称 **取值范围**         只能由中文字母、英文字母、数字、特殊字符组成, 长度范围为[1-128]个字符
+    *  **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -1000,7 +1000,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets policyGroupName
     *
-    * @param string|null $policyGroupName **参数解释** 策略组名称 **取值范围**         只能由中文字母、英文字母、数字、特殊字符组成, 长度范围为[1-128]个字符
+    * @param string|null $policyGroupName **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class DetachManagedPolicyFromPermissionSetRequest implements ModelInterface, Arr
     /**
     * Array of property to type mappings. Used for (de)serialization
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）。
+    * instanceId  IAM Identity Center实例的全局唯一标识符（ID）
     * permissionSetId  权限集的全局唯一标识符（ID）
     * body  body
     *
@@ -37,7 +37,7 @@ class DetachManagedPolicyFromPermissionSetRequest implements ModelInterface, Arr
     /**
     * Array of property to format mappings. Used for (de)serialization
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）。
+    * instanceId  IAM Identity Center实例的全局唯一标识符（ID）
     * permissionSetId  权限集的全局唯一标识符（ID）
     * body  body
     *
@@ -74,7 +74,7 @@ class DetachManagedPolicyFromPermissionSetRequest implements ModelInterface, Arr
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）。
+    * instanceId  IAM Identity Center实例的全局唯一标识符（ID）
     * permissionSetId  权限集的全局唯一标识符（ID）
     * body  body
     *
@@ -90,7 +90,7 @@ class DetachManagedPolicyFromPermissionSetRequest implements ModelInterface, Arr
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）。
+    * instanceId  IAM Identity Center实例的全局唯一标识符（ID）
     * permissionSetId  权限集的全局唯一标识符（ID）
     * body  body
     *
@@ -106,7 +106,7 @@ class DetachManagedPolicyFromPermissionSetRequest implements ModelInterface, Arr
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）。
+    * instanceId  IAM Identity Center实例的全局唯一标识符（ID）
     * permissionSetId  权限集的全局唯一标识符（ID）
     * body  body
     *
@@ -191,9 +191,6 @@ class DetachManagedPolicyFromPermissionSetRequest implements ModelInterface, Arr
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['xSecurityToken']) && (mb_strlen($this->container['xSecurityToken']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'xSecurityToken', the character length must be smaller than or equal to 2048.";
-            }
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
@@ -246,7 +243,7 @@ class DetachManagedPolicyFromPermissionSetRequest implements ModelInterface, Arr
 
     /**
     * Gets instanceId
-    *  IAM身份中心实例的全局唯一标识符（ID）。
+    *  IAM Identity Center实例的全局唯一标识符（ID）
     *
     * @return string
     */
@@ -258,7 +255,7 @@ class DetachManagedPolicyFromPermissionSetRequest implements ModelInterface, Arr
     /**
     * Sets instanceId
     *
-    * @param string $instanceId IAM身份中心实例的全局唯一标识符（ID）。
+    * @param string $instanceId IAM Identity Center实例的全局唯一标识符（ID）
     *
     * @return $this
     */

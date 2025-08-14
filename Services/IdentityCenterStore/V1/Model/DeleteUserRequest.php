@@ -22,7 +22,7 @@ class DeleteUserRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * identityStoreId  身份源的全局唯一标识符（ID）
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class DeleteUserRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * identityStoreId  身份源的全局唯一标识符（ID）
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteUserRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * identityStoreId  身份源的全局唯一标识符（ID）
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class DeleteUserRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * identityStoreId  身份源的全局唯一标识符（ID）
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class DeleteUserRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * identityStoreId  身份源的全局唯一标识符（ID）
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @var string[]
     */
@@ -180,9 +180,6 @@ class DeleteUserRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['xSecurityToken']) && (mb_strlen($this->container['xSecurityToken']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'xSecurityToken', the character length must be smaller than or equal to 2048.";
-            }
         if ($this->container['identityStoreId'] === null) {
             $invalidProperties[] = "'identityStoreId' can't be null";
         }
@@ -271,7 +268,7 @@ class DeleteUserRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    *  身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @return string
     */
@@ -283,7 +280,7 @@ class DeleteUserRequest implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string $userId 身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * @param string $userId 身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @return $this
     */

@@ -20,9 +20,9 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     * variationType  **参数解释**: 变更类型 **取值范围**: - add：新建 - delete：删除 - modify：修改
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
@@ -46,9 +46,9 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     * variationType  **参数解释**: 变更类型 **取值范围**: - add：新建 - delete：删除 - modify：修改
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
@@ -93,9 +93,9 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     * variationType  **参数解释**: 变更类型 **取值范围**: - add：新建 - delete：删除 - modify：修改
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
@@ -119,9 +119,9 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     * variationType  **参数解释**: 变更类型 **取值范围**: - add：新建 - delete：删除 - modify：修改
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
@@ -145,9 +145,9 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     * variationType  **参数解释**: 变更类型 **取值范围**: - add：新建 - delete：删除 - modify：修改
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
@@ -322,7 +322,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    *  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     *
     * @return string|null
     */
@@ -334,7 +334,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * @param string|null $agentId **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -370,7 +370,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    *  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     *
     * @return string|null
     */
@@ -382,7 +382,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * @param string|null $hostId **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class BatchStartProtectionRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * ransomProtectionStatus  勒索防护是否开启，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启，protection_policy_id必填一项
-    * protectionPolicyId  防护策略ID,若ransom_protection_status为opened,则该字段必选
+    * protectionPolicyId  防护策略ID，若ransom_protection_status为opened，则该字段必选
     * backupProtectionStatus  是否服务器备份，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启服务器备份，则vault_id必填
     * vaultId  需要绑定的存储库ID，若backup_protection_status为opened，则该字段必填
     * hostIdList  开启防护的host id列表
@@ -42,7 +42,7 @@ class BatchStartProtectionRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * ransomProtectionStatus  勒索防护是否开启，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启，protection_policy_id必填一项
-    * protectionPolicyId  防护策略ID,若ransom_protection_status为opened,则该字段必选
+    * protectionPolicyId  防护策略ID，若ransom_protection_status为opened，则该字段必选
     * backupProtectionStatus  是否服务器备份，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启服务器备份，则vault_id必填
     * vaultId  需要绑定的存储库ID，若backup_protection_status为opened，则该字段必填
     * hostIdList  开启防护的host id列表
@@ -83,7 +83,7 @@ class BatchStartProtectionRequestInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * ransomProtectionStatus  勒索防护是否开启，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启，protection_policy_id必填一项
-    * protectionPolicyId  防护策略ID,若ransom_protection_status为opened,则该字段必选
+    * protectionPolicyId  防护策略ID，若ransom_protection_status为opened，则该字段必选
     * backupProtectionStatus  是否服务器备份，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启服务器备份，则vault_id必填
     * vaultId  需要绑定的存储库ID，若backup_protection_status为opened，则该字段必填
     * hostIdList  开启防护的host id列表
@@ -103,7 +103,7 @@ class BatchStartProtectionRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * ransomProtectionStatus  勒索防护是否开启，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启，protection_policy_id必填一项
-    * protectionPolicyId  防护策略ID,若ransom_protection_status为opened,则该字段必选
+    * protectionPolicyId  防护策略ID，若ransom_protection_status为opened，则该字段必选
     * backupProtectionStatus  是否服务器备份，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启服务器备份，则vault_id必填
     * vaultId  需要绑定的存储库ID，若backup_protection_status为opened，则该字段必填
     * hostIdList  开启防护的host id列表
@@ -123,7 +123,7 @@ class BatchStartProtectionRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * ransomProtectionStatus  勒索防护是否开启，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启，protection_policy_id必填一项
-    * protectionPolicyId  防护策略ID,若ransom_protection_status为opened,则该字段必选
+    * protectionPolicyId  防护策略ID，若ransom_protection_status为opened，则该字段必选
     * backupProtectionStatus  是否服务器备份，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启服务器备份，则vault_id必填
     * vaultId  需要绑定的存储库ID，若backup_protection_status为opened，则该字段必填
     * hostIdList  开启防护的host id列表
@@ -319,7 +319,7 @@ class BatchStartProtectionRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectionPolicyId
-    *  防护策略ID,若ransom_protection_status为opened,则该字段必选
+    *  防护策略ID，若ransom_protection_status为opened，则该字段必选
     *
     * @return string|null
     */
@@ -331,7 +331,7 @@ class BatchStartProtectionRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectionPolicyId
     *
-    * @param string|null $protectionPolicyId 防护策略ID,若ransom_protection_status为opened,则该字段必选
+    * @param string|null $protectionPolicyId 防护策略ID，若ransom_protection_status为opened，则该字段必选
     *
     * @return $this
     */

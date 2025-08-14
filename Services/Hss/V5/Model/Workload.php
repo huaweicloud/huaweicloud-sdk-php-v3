@@ -22,7 +22,7 @@ class Workload implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * workloadId  工作负载ID
     * workloadName  工作负载名称
-    * workloadType  工作负载类型,包含如下：   - deployments：无状态负载   - statefulsets：有状态负载   - daemonsets：守护进程表
+    * workloadType  工作负载类型，包含如下：   - deployments：无状态负载   - statefulsets：有状态负载   - daemonsets：守护进程表
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class Workload implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * workloadId  工作负载ID
     * workloadName  工作负载名称
-    * workloadType  工作负载类型,包含如下：   - deployments：无状态负载   - statefulsets：有状态负载   - daemonsets：守护进程表
+    * workloadType  工作负载类型，包含如下：   - deployments：无状态负载   - statefulsets：有状态负载   - daemonsets：守护进程表
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class Workload implements ModelInterface, ArrayAccess
     * and the value is the original name
     * workloadId  工作负载ID
     * workloadName  工作负载名称
-    * workloadType  工作负载类型,包含如下：   - deployments：无状态负载   - statefulsets：有状态负载   - daemonsets：守护进程表
+    * workloadType  工作负载类型，包含如下：   - deployments：无状态负载   - statefulsets：有状态负载   - daemonsets：守护进程表
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class Workload implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * workloadId  工作负载ID
     * workloadName  工作负载名称
-    * workloadType  工作负载类型,包含如下：   - deployments：无状态负载   - statefulsets：有状态负载   - daemonsets：守护进程表
+    * workloadType  工作负载类型，包含如下：   - deployments：无状态负载   - statefulsets：有状态负载   - daemonsets：守护进程表
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class Workload implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * workloadId  工作负载ID
     * workloadName  工作负载名称
-    * workloadType  工作负载类型,包含如下：   - deployments：无状态负载   - statefulsets：有状态负载   - daemonsets：守护进程表
+    * workloadType  工作负载类型，包含如下：   - deployments：无状态负载   - statefulsets：有状态负载   - daemonsets：守护进程表
     *
     * @var string[]
     */
@@ -271,7 +271,7 @@ class Workload implements ModelInterface, ArrayAccess
 
     /**
     * Gets workloadType
-    *  工作负载类型,包含如下：   - deployments：无状态负载   - statefulsets：有状态负载   - daemonsets：守护进程表
+    *  工作负载类型，包含如下：   - deployments：无状态负载   - statefulsets：有状态负载   - daemonsets：守护进程表
     *
     * @return string
     */
@@ -283,7 +283,7 @@ class Workload implements ModelInterface, ArrayAccess
     /**
     * Sets workloadType
     *
-    * @param string $workloadType 工作负载类型,包含如下：   - deployments：无状态负载   - statefulsets：有状态负载   - daemonsets：守护进程表
+    * @param string $workloadType 工作负载类型，包含如下：   - deployments：无状态负载   - statefulsets：有状态负载   - daemonsets：守护进程表
     *
     * @return $this
     */

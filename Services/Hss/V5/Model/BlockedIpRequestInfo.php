@@ -20,9 +20,9 @@ class BlockedIpRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * srcIp  攻击源IP
-    * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
+    * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class BlockedIpRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * srcIp  攻击源IP
-    * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
+    * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class BlockedIpRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * srcIp  攻击源IP
-    * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
+    * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class BlockedIpRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * srcIp  攻击源IP
-    * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
+    * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class BlockedIpRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * srcIp  攻击源IP
-    * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
+    * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
     *
     * @var string[]
     */
@@ -217,7 +217,7 @@ class BlockedIpRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    *  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     *
     * @return string
     */
@@ -229,7 +229,7 @@ class BlockedIpRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string $hostId **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * @param string $hostId **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     *
     * @return $this
     */
@@ -265,7 +265,7 @@ class BlockedIpRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginType
-    *  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
+    *  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
     *
     * @return string
     */
@@ -277,7 +277,7 @@ class BlockedIpRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets loginType
     *
-    * @param string $loginType 登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
+    * @param string $loginType 登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
     *
     * @return $this
     */

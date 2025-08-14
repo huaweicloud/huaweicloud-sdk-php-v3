@@ -21,7 +21,7 @@ class KubernetesEndpointPortInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  ID
-    * endpointId  关联端点 ID
+    * endpointId  关联端点ID
     * name  端口名
     * protocol  服务协议
     * port  端口号
@@ -41,7 +41,7 @@ class KubernetesEndpointPortInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  ID
-    * endpointId  关联端点 ID
+    * endpointId  关联端点ID
     * name  端口名
     * protocol  服务协议
     * port  端口号
@@ -82,7 +82,7 @@ class KubernetesEndpointPortInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  ID
-    * endpointId  关联端点 ID
+    * endpointId  关联端点ID
     * name  端口名
     * protocol  服务协议
     * port  端口号
@@ -102,7 +102,7 @@ class KubernetesEndpointPortInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  ID
-    * endpointId  关联端点 ID
+    * endpointId  关联端点ID
     * name  端口名
     * protocol  服务协议
     * port  端口号
@@ -122,7 +122,7 @@ class KubernetesEndpointPortInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  ID
-    * endpointId  关联端点 ID
+    * endpointId  关联端点ID
     * name  端口名
     * protocol  服务协议
     * port  端口号
@@ -289,7 +289,7 @@ class KubernetesEndpointPortInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpointId
-    *  关联端点 ID
+    *  关联端点ID
     *
     * @return string|null
     */
@@ -301,7 +301,7 @@ class KubernetesEndpointPortInfo implements ModelInterface, ArrayAccess
     /**
     * Sets endpointId
     *
-    * @param string|null $endpointId 关联端点 ID
+    * @param string|null $endpointId 关联端点ID
     *
     * @return $this
     */

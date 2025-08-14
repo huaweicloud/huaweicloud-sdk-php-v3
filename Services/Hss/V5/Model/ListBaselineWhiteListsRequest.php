@@ -25,7 +25,7 @@ class ListBaselineWhiteListsRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * checkRuleName  基线检查的检查项名称
     * osType  基线检查的操作系统 - Linux - Windows
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     * tag  基线检查中检查项的检查类型 - 访问控制 - 服务配置
     * description  基线检查白名单备注
     *
@@ -49,7 +49,7 @@ class ListBaselineWhiteListsRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * checkRuleName  基线检查的检查项名称
     * osType  基线检查的操作系统 - Linux - Windows
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     * tag  基线检查中检查项的检查类型 - 访问控制 - 服务配置
     * description  基线检查白名单备注
     *
@@ -94,7 +94,7 @@ class ListBaselineWhiteListsRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * checkRuleName  基线检查的检查项名称
     * osType  基线检查的操作系统 - Linux - Windows
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     * tag  基线检查中检查项的检查类型 - 访问控制 - 服务配置
     * description  基线检查白名单备注
     *
@@ -118,7 +118,7 @@ class ListBaselineWhiteListsRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * checkRuleName  基线检查的检查项名称
     * osType  基线检查的操作系统 - Linux - Windows
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     * tag  基线检查中检查项的检查类型 - 访问控制 - 服务配置
     * description  基线检查白名单备注
     *
@@ -142,7 +142,7 @@ class ListBaselineWhiteListsRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * checkRuleName  基线检查的检查项名称
     * osType  基线检查的操作系统 - Linux - Windows
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     * tag  基线检查中检查项的检查类型 - 访问控制 - 服务配置
     * description  基线检查白名单备注
     *
@@ -443,7 +443,7 @@ class ListBaselineWhiteListsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleType
-    *  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    *  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     *
     * @return string|null
     */
@@ -455,7 +455,7 @@ class ListBaselineWhiteListsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ruleType
     *
-    * @param string|null $ruleType 基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    * @param string|null $ruleType 基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     *
     * @return $this
     */

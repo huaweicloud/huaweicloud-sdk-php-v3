@@ -31,7 +31,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     * imageId  镜像id
     * checkName  基线名称
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
-    * resultType  结果类型，包含如下： - pass ： 已通过 - failed : 未通过
+    * resultType  结果类型，包含如下： - pass：已通过 - failed：未通过
     * checkRuleName  检查项名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
@@ -69,7 +69,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     * imageId  镜像id
     * checkName  基线名称
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
-    * resultType  结果类型，包含如下： - pass ： 已通过 - failed : 未通过
+    * resultType  结果类型，包含如下： - pass：已通过 - failed：未通过
     * checkRuleName  检查项名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
@@ -128,7 +128,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     * imageId  镜像id
     * checkName  基线名称
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
-    * resultType  结果类型，包含如下： - pass ： 已通过 - failed : 未通过
+    * resultType  结果类型，包含如下： - pass：已通过 - failed：未通过
     * checkRuleName  检查项名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
@@ -166,7 +166,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     * imageId  镜像id
     * checkName  基线名称
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
-    * resultType  结果类型，包含如下： - pass ： 已通过 - failed : 未通过
+    * resultType  结果类型，包含如下： - pass：已通过 - failed：未通过
     * checkRuleName  检查项名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
@@ -204,7 +204,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     * imageId  镜像id
     * checkName  基线名称
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
-    * resultType  结果类型，包含如下： - pass ： 已通过 - failed : 未通过
+    * resultType  结果类型，包含如下： - pass：已通过 - failed：未通过
     * checkRuleName  检查项名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
@@ -697,7 +697,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resultType
-    *  结果类型，包含如下： - pass ： 已通过 - failed : 未通过
+    *  结果类型，包含如下： - pass：已通过 - failed：未通过
     *
     * @return string|null
     */
@@ -709,7 +709,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resultType
     *
-    * @param string|null $resultType 结果类型，包含如下： - pass ： 已通过 - failed : 未通过
+    * @param string|null $resultType 结果类型，包含如下： - pass：已通过 - failed：未通过
     *
     * @return $this
     */

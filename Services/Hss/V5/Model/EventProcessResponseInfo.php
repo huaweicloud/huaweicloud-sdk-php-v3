@@ -20,47 +20,47 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * processName  进程名称
-    * processPath  进程文件路径
-    * processPid  进程id
-    * processUid  进程用户id
-    * processUsername  运行进程的用户名
-    * processCmdline  进程文件命令行
-    * processFilename  进程文件名
-    * processStartTime  进程启动时间
-    * processGid  进程组ID
-    * processEgid  进程有效组ID
-    * processEuid  进程有效用户ID
-    * ancestorProcessPath  祖父进程文件路径
-    * ancestorProcessPid  祖父进程id
-    * ancestorProcessCmdline  祖父进程文件命令行
-    * parentProcessName  父进程名称
-    * parentProcessPath  父进程文件路径
-    * parentProcessPid  父进程id
-    * parentProcessUid  父进程用户id
-    * parentProcessCmdline  父进程文件命令行
-    * parentProcessFilename  父进程文件名
-    * parentProcessStartTime  父进程启动时间
-    * parentProcessGid  父进程组ID
-    * parentProcessEgid  父进程有效组ID
-    * parentProcessEuid  父进程有效用户ID
-    * childProcessName  子进程名称
-    * childProcessPath  子进程文件路径
-    * childProcessPid  子进程id
-    * childProcessUid  子进程用户id
-    * childProcessCmdline  子进程文件命令行
-    * childProcessFilename  子进程文件名
-    * childProcessStartTime  子进程启动时间
-    * childProcessGid  子进程组ID
-    * childProcessEgid  子进程有效组ID
-    * childProcessEuid  子进程有效用户ID
-    * virtCmd  虚拟化命令
-    * virtProcessName  虚拟化进程名称
-    * escapeMode  逃逸方式
-    * escapeCmd  逃逸后后执行的命令
-    * processHash  进程启动文件hash
-    * processFileHash  进程文件hash
-    * parentProcessFileHash  父进程文件hash
+    * processName  **参数解释**： 进程名称 **取值范围**： 字符长度1-256位
+    * processPath  **参数解释**： 进程文件路径 **取值范围**： 字符长度1-256位
+    * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
+    * processUid  **参数解释**： 进程用户ID **取值范围**： 最小值0，最大值2147483647
+    * processUsername  **参数解释**： 运行进程的用户名 **取值范围**： 字符长度1-256位
+    * processCmdline  **参数解释**： 进程文件命令行 **取值范围**： 字符长度1-256位
+    * processFilename  **参数解释**： 进程文件名 **取值范围**： 字符长度1-256位
+    * processStartTime  **参数解释**： 进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * processGid  **参数解释**： 进程组ID **取值范围**： 最小值0，最大值2147483647
+    * processEgid  **参数解释**： 进程有效组ID **取值范围**： 最小值0，最大值2147483647
+    * processEuid  **参数解释**： 进程有效用户ID **取值范围**： 最小值0，最大值2147483647
+    * ancestorProcessPath  **参数解释**： 祖父进程文件路径 **取值范围**： 字符长度1-256位
+    * ancestorProcessPid  **参数解释**： 祖父进程ID **取值范围**： 最小值0，最大值2147483647
+    * ancestorProcessCmdline  **参数解释**： 祖父进程文件命令行 **取值范围**： 字符长度1-512位
+    * parentProcessName  **参数解释**： 父进程名称 **取值范围**： 字符长度1-256位
+    * parentProcessPath  **参数解释**： 父进程文件路径 **取值范围**： 字符长度1-256位
+    * parentProcessPid  **参数解释**： 父进程ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessUid  **参数解释**： 父进程用户ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessCmdline  **参数解释**： 父进程文件命令行 **取值范围**： 字符长度1-512位
+    * parentProcessFilename  **参数解释**： 父进程文件名 **取值范围**： 字符长度1-256位
+    * parentProcessStartTime  **参数解释**： 父进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * parentProcessGid  **参数解释**： 父进程组ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessEgid  **参数解释**： 父进程有效组ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessEuid  **参数解释**： 父进程有效用户ID **取值范围**： 最小值0，最大值2147483647
+    * childProcessName  **参数解释**： 子进程名称 **取值范围**： 字符长度1-256位
+    * childProcessPath  **参数解释**： 子进程文件路径 **取值范围**： 字符长度1-256位
+    * childProcessPid  **参数解释**： 子进程id **取值范围**： 最小值0，最大值2147483647
+    * childProcessUid  **参数解释**： 子进程用户id **取值范围**： 最小值0，最大值2147483647
+    * childProcessCmdline  **参数解释**： 子进程文件命令行 **取值范围**： 字符长度1-256位
+    * childProcessFilename  **参数解释**： 子进程文件名 **取值范围**： 字符长度1-256位
+    * childProcessStartTime  **参数解释**： 子进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * childProcessGid  **参数解释**： 子进程组ID **取值范围**： 最小值0，最大值2147483647
+    * childProcessEgid  **参数解释**： 子进程有效组ID **取值范围**： 最小值0，最大值2147483647
+    * childProcessEuid  **参数解释**： 子进程有效用户ID **取值范围**： 最小值0，最大值2147483647
+    * virtCmd  **参数解释**： 虚拟化命令 **取值范围**： 字符长度1-256位
+    * virtProcessName  **参数解释**： 虚拟化进程名称 **取值范围**： 字符长度1-256位
+    * escapeMode  **参数解释**： 逃逸方式 **取值范围**： 字符长度1-256位
+    * escapeCmd  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-256位
+    * processHash  **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-256位
+    * processFileHash  **参数解释**： 进程文件hash **取值范围**： 字符长度1-256位
+    * parentProcessFileHash  **参数解释**： 父进程文件hash **取值范围**： 字符长度1-256位
     * block  是否阻断成功，1阻断成功 0阻断失败
     *
     * @var string[]
@@ -112,47 +112,47 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * processName  进程名称
-    * processPath  进程文件路径
-    * processPid  进程id
-    * processUid  进程用户id
-    * processUsername  运行进程的用户名
-    * processCmdline  进程文件命令行
-    * processFilename  进程文件名
-    * processStartTime  进程启动时间
-    * processGid  进程组ID
-    * processEgid  进程有效组ID
-    * processEuid  进程有效用户ID
-    * ancestorProcessPath  祖父进程文件路径
-    * ancestorProcessPid  祖父进程id
-    * ancestorProcessCmdline  祖父进程文件命令行
-    * parentProcessName  父进程名称
-    * parentProcessPath  父进程文件路径
-    * parentProcessPid  父进程id
-    * parentProcessUid  父进程用户id
-    * parentProcessCmdline  父进程文件命令行
-    * parentProcessFilename  父进程文件名
-    * parentProcessStartTime  父进程启动时间
-    * parentProcessGid  父进程组ID
-    * parentProcessEgid  父进程有效组ID
-    * parentProcessEuid  父进程有效用户ID
-    * childProcessName  子进程名称
-    * childProcessPath  子进程文件路径
-    * childProcessPid  子进程id
-    * childProcessUid  子进程用户id
-    * childProcessCmdline  子进程文件命令行
-    * childProcessFilename  子进程文件名
-    * childProcessStartTime  子进程启动时间
-    * childProcessGid  子进程组ID
-    * childProcessEgid  子进程有效组ID
-    * childProcessEuid  子进程有效用户ID
-    * virtCmd  虚拟化命令
-    * virtProcessName  虚拟化进程名称
-    * escapeMode  逃逸方式
-    * escapeCmd  逃逸后后执行的命令
-    * processHash  进程启动文件hash
-    * processFileHash  进程文件hash
-    * parentProcessFileHash  父进程文件hash
+    * processName  **参数解释**： 进程名称 **取值范围**： 字符长度1-256位
+    * processPath  **参数解释**： 进程文件路径 **取值范围**： 字符长度1-256位
+    * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
+    * processUid  **参数解释**： 进程用户ID **取值范围**： 最小值0，最大值2147483647
+    * processUsername  **参数解释**： 运行进程的用户名 **取值范围**： 字符长度1-256位
+    * processCmdline  **参数解释**： 进程文件命令行 **取值范围**： 字符长度1-256位
+    * processFilename  **参数解释**： 进程文件名 **取值范围**： 字符长度1-256位
+    * processStartTime  **参数解释**： 进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * processGid  **参数解释**： 进程组ID **取值范围**： 最小值0，最大值2147483647
+    * processEgid  **参数解释**： 进程有效组ID **取值范围**： 最小值0，最大值2147483647
+    * processEuid  **参数解释**： 进程有效用户ID **取值范围**： 最小值0，最大值2147483647
+    * ancestorProcessPath  **参数解释**： 祖父进程文件路径 **取值范围**： 字符长度1-256位
+    * ancestorProcessPid  **参数解释**： 祖父进程ID **取值范围**： 最小值0，最大值2147483647
+    * ancestorProcessCmdline  **参数解释**： 祖父进程文件命令行 **取值范围**： 字符长度1-512位
+    * parentProcessName  **参数解释**： 父进程名称 **取值范围**： 字符长度1-256位
+    * parentProcessPath  **参数解释**： 父进程文件路径 **取值范围**： 字符长度1-256位
+    * parentProcessPid  **参数解释**： 父进程ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessUid  **参数解释**： 父进程用户ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessCmdline  **参数解释**： 父进程文件命令行 **取值范围**： 字符长度1-512位
+    * parentProcessFilename  **参数解释**： 父进程文件名 **取值范围**： 字符长度1-256位
+    * parentProcessStartTime  **参数解释**： 父进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * parentProcessGid  **参数解释**： 父进程组ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessEgid  **参数解释**： 父进程有效组ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessEuid  **参数解释**： 父进程有效用户ID **取值范围**： 最小值0，最大值2147483647
+    * childProcessName  **参数解释**： 子进程名称 **取值范围**： 字符长度1-256位
+    * childProcessPath  **参数解释**： 子进程文件路径 **取值范围**： 字符长度1-256位
+    * childProcessPid  **参数解释**： 子进程id **取值范围**： 最小值0，最大值2147483647
+    * childProcessUid  **参数解释**： 子进程用户id **取值范围**： 最小值0，最大值2147483647
+    * childProcessCmdline  **参数解释**： 子进程文件命令行 **取值范围**： 字符长度1-256位
+    * childProcessFilename  **参数解释**： 子进程文件名 **取值范围**： 字符长度1-256位
+    * childProcessStartTime  **参数解释**： 子进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * childProcessGid  **参数解释**： 子进程组ID **取值范围**： 最小值0，最大值2147483647
+    * childProcessEgid  **参数解释**： 子进程有效组ID **取值范围**： 最小值0，最大值2147483647
+    * childProcessEuid  **参数解释**： 子进程有效用户ID **取值范围**： 最小值0，最大值2147483647
+    * virtCmd  **参数解释**： 虚拟化命令 **取值范围**： 字符长度1-256位
+    * virtProcessName  **参数解释**： 虚拟化进程名称 **取值范围**： 字符长度1-256位
+    * escapeMode  **参数解释**： 逃逸方式 **取值范围**： 字符长度1-256位
+    * escapeCmd  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-256位
+    * processHash  **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-256位
+    * processFileHash  **参数解释**： 进程文件hash **取值范围**： 字符长度1-256位
+    * parentProcessFileHash  **参数解释**： 父进程文件hash **取值范围**： 字符长度1-256位
     * block  是否阻断成功，1阻断成功 0阻断失败
     *
     * @var string[]
@@ -225,47 +225,47 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * processName  进程名称
-    * processPath  进程文件路径
-    * processPid  进程id
-    * processUid  进程用户id
-    * processUsername  运行进程的用户名
-    * processCmdline  进程文件命令行
-    * processFilename  进程文件名
-    * processStartTime  进程启动时间
-    * processGid  进程组ID
-    * processEgid  进程有效组ID
-    * processEuid  进程有效用户ID
-    * ancestorProcessPath  祖父进程文件路径
-    * ancestorProcessPid  祖父进程id
-    * ancestorProcessCmdline  祖父进程文件命令行
-    * parentProcessName  父进程名称
-    * parentProcessPath  父进程文件路径
-    * parentProcessPid  父进程id
-    * parentProcessUid  父进程用户id
-    * parentProcessCmdline  父进程文件命令行
-    * parentProcessFilename  父进程文件名
-    * parentProcessStartTime  父进程启动时间
-    * parentProcessGid  父进程组ID
-    * parentProcessEgid  父进程有效组ID
-    * parentProcessEuid  父进程有效用户ID
-    * childProcessName  子进程名称
-    * childProcessPath  子进程文件路径
-    * childProcessPid  子进程id
-    * childProcessUid  子进程用户id
-    * childProcessCmdline  子进程文件命令行
-    * childProcessFilename  子进程文件名
-    * childProcessStartTime  子进程启动时间
-    * childProcessGid  子进程组ID
-    * childProcessEgid  子进程有效组ID
-    * childProcessEuid  子进程有效用户ID
-    * virtCmd  虚拟化命令
-    * virtProcessName  虚拟化进程名称
-    * escapeMode  逃逸方式
-    * escapeCmd  逃逸后后执行的命令
-    * processHash  进程启动文件hash
-    * processFileHash  进程文件hash
-    * parentProcessFileHash  父进程文件hash
+    * processName  **参数解释**： 进程名称 **取值范围**： 字符长度1-256位
+    * processPath  **参数解释**： 进程文件路径 **取值范围**： 字符长度1-256位
+    * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
+    * processUid  **参数解释**： 进程用户ID **取值范围**： 最小值0，最大值2147483647
+    * processUsername  **参数解释**： 运行进程的用户名 **取值范围**： 字符长度1-256位
+    * processCmdline  **参数解释**： 进程文件命令行 **取值范围**： 字符长度1-256位
+    * processFilename  **参数解释**： 进程文件名 **取值范围**： 字符长度1-256位
+    * processStartTime  **参数解释**： 进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * processGid  **参数解释**： 进程组ID **取值范围**： 最小值0，最大值2147483647
+    * processEgid  **参数解释**： 进程有效组ID **取值范围**： 最小值0，最大值2147483647
+    * processEuid  **参数解释**： 进程有效用户ID **取值范围**： 最小值0，最大值2147483647
+    * ancestorProcessPath  **参数解释**： 祖父进程文件路径 **取值范围**： 字符长度1-256位
+    * ancestorProcessPid  **参数解释**： 祖父进程ID **取值范围**： 最小值0，最大值2147483647
+    * ancestorProcessCmdline  **参数解释**： 祖父进程文件命令行 **取值范围**： 字符长度1-512位
+    * parentProcessName  **参数解释**： 父进程名称 **取值范围**： 字符长度1-256位
+    * parentProcessPath  **参数解释**： 父进程文件路径 **取值范围**： 字符长度1-256位
+    * parentProcessPid  **参数解释**： 父进程ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessUid  **参数解释**： 父进程用户ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessCmdline  **参数解释**： 父进程文件命令行 **取值范围**： 字符长度1-512位
+    * parentProcessFilename  **参数解释**： 父进程文件名 **取值范围**： 字符长度1-256位
+    * parentProcessStartTime  **参数解释**： 父进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * parentProcessGid  **参数解释**： 父进程组ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessEgid  **参数解释**： 父进程有效组ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessEuid  **参数解释**： 父进程有效用户ID **取值范围**： 最小值0，最大值2147483647
+    * childProcessName  **参数解释**： 子进程名称 **取值范围**： 字符长度1-256位
+    * childProcessPath  **参数解释**： 子进程文件路径 **取值范围**： 字符长度1-256位
+    * childProcessPid  **参数解释**： 子进程id **取值范围**： 最小值0，最大值2147483647
+    * childProcessUid  **参数解释**： 子进程用户id **取值范围**： 最小值0，最大值2147483647
+    * childProcessCmdline  **参数解释**： 子进程文件命令行 **取值范围**： 字符长度1-256位
+    * childProcessFilename  **参数解释**： 子进程文件名 **取值范围**： 字符长度1-256位
+    * childProcessStartTime  **参数解释**： 子进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * childProcessGid  **参数解释**： 子进程组ID **取值范围**： 最小值0，最大值2147483647
+    * childProcessEgid  **参数解释**： 子进程有效组ID **取值范围**： 最小值0，最大值2147483647
+    * childProcessEuid  **参数解释**： 子进程有效用户ID **取值范围**： 最小值0，最大值2147483647
+    * virtCmd  **参数解释**： 虚拟化命令 **取值范围**： 字符长度1-256位
+    * virtProcessName  **参数解释**： 虚拟化进程名称 **取值范围**： 字符长度1-256位
+    * escapeMode  **参数解释**： 逃逸方式 **取值范围**： 字符长度1-256位
+    * escapeCmd  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-256位
+    * processHash  **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-256位
+    * processFileHash  **参数解释**： 进程文件hash **取值范围**： 字符长度1-256位
+    * parentProcessFileHash  **参数解释**： 父进程文件hash **取值范围**： 字符长度1-256位
     * block  是否阻断成功，1阻断成功 0阻断失败
     *
     * @var string[]
@@ -317,47 +317,47 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * processName  进程名称
-    * processPath  进程文件路径
-    * processPid  进程id
-    * processUid  进程用户id
-    * processUsername  运行进程的用户名
-    * processCmdline  进程文件命令行
-    * processFilename  进程文件名
-    * processStartTime  进程启动时间
-    * processGid  进程组ID
-    * processEgid  进程有效组ID
-    * processEuid  进程有效用户ID
-    * ancestorProcessPath  祖父进程文件路径
-    * ancestorProcessPid  祖父进程id
-    * ancestorProcessCmdline  祖父进程文件命令行
-    * parentProcessName  父进程名称
-    * parentProcessPath  父进程文件路径
-    * parentProcessPid  父进程id
-    * parentProcessUid  父进程用户id
-    * parentProcessCmdline  父进程文件命令行
-    * parentProcessFilename  父进程文件名
-    * parentProcessStartTime  父进程启动时间
-    * parentProcessGid  父进程组ID
-    * parentProcessEgid  父进程有效组ID
-    * parentProcessEuid  父进程有效用户ID
-    * childProcessName  子进程名称
-    * childProcessPath  子进程文件路径
-    * childProcessPid  子进程id
-    * childProcessUid  子进程用户id
-    * childProcessCmdline  子进程文件命令行
-    * childProcessFilename  子进程文件名
-    * childProcessStartTime  子进程启动时间
-    * childProcessGid  子进程组ID
-    * childProcessEgid  子进程有效组ID
-    * childProcessEuid  子进程有效用户ID
-    * virtCmd  虚拟化命令
-    * virtProcessName  虚拟化进程名称
-    * escapeMode  逃逸方式
-    * escapeCmd  逃逸后后执行的命令
-    * processHash  进程启动文件hash
-    * processFileHash  进程文件hash
-    * parentProcessFileHash  父进程文件hash
+    * processName  **参数解释**： 进程名称 **取值范围**： 字符长度1-256位
+    * processPath  **参数解释**： 进程文件路径 **取值范围**： 字符长度1-256位
+    * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
+    * processUid  **参数解释**： 进程用户ID **取值范围**： 最小值0，最大值2147483647
+    * processUsername  **参数解释**： 运行进程的用户名 **取值范围**： 字符长度1-256位
+    * processCmdline  **参数解释**： 进程文件命令行 **取值范围**： 字符长度1-256位
+    * processFilename  **参数解释**： 进程文件名 **取值范围**： 字符长度1-256位
+    * processStartTime  **参数解释**： 进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * processGid  **参数解释**： 进程组ID **取值范围**： 最小值0，最大值2147483647
+    * processEgid  **参数解释**： 进程有效组ID **取值范围**： 最小值0，最大值2147483647
+    * processEuid  **参数解释**： 进程有效用户ID **取值范围**： 最小值0，最大值2147483647
+    * ancestorProcessPath  **参数解释**： 祖父进程文件路径 **取值范围**： 字符长度1-256位
+    * ancestorProcessPid  **参数解释**： 祖父进程ID **取值范围**： 最小值0，最大值2147483647
+    * ancestorProcessCmdline  **参数解释**： 祖父进程文件命令行 **取值范围**： 字符长度1-512位
+    * parentProcessName  **参数解释**： 父进程名称 **取值范围**： 字符长度1-256位
+    * parentProcessPath  **参数解释**： 父进程文件路径 **取值范围**： 字符长度1-256位
+    * parentProcessPid  **参数解释**： 父进程ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessUid  **参数解释**： 父进程用户ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessCmdline  **参数解释**： 父进程文件命令行 **取值范围**： 字符长度1-512位
+    * parentProcessFilename  **参数解释**： 父进程文件名 **取值范围**： 字符长度1-256位
+    * parentProcessStartTime  **参数解释**： 父进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * parentProcessGid  **参数解释**： 父进程组ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessEgid  **参数解释**： 父进程有效组ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessEuid  **参数解释**： 父进程有效用户ID **取值范围**： 最小值0，最大值2147483647
+    * childProcessName  **参数解释**： 子进程名称 **取值范围**： 字符长度1-256位
+    * childProcessPath  **参数解释**： 子进程文件路径 **取值范围**： 字符长度1-256位
+    * childProcessPid  **参数解释**： 子进程id **取值范围**： 最小值0，最大值2147483647
+    * childProcessUid  **参数解释**： 子进程用户id **取值范围**： 最小值0，最大值2147483647
+    * childProcessCmdline  **参数解释**： 子进程文件命令行 **取值范围**： 字符长度1-256位
+    * childProcessFilename  **参数解释**： 子进程文件名 **取值范围**： 字符长度1-256位
+    * childProcessStartTime  **参数解释**： 子进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * childProcessGid  **参数解释**： 子进程组ID **取值范围**： 最小值0，最大值2147483647
+    * childProcessEgid  **参数解释**： 子进程有效组ID **取值范围**： 最小值0，最大值2147483647
+    * childProcessEuid  **参数解释**： 子进程有效用户ID **取值范围**： 最小值0，最大值2147483647
+    * virtCmd  **参数解释**： 虚拟化命令 **取值范围**： 字符长度1-256位
+    * virtProcessName  **参数解释**： 虚拟化进程名称 **取值范围**： 字符长度1-256位
+    * escapeMode  **参数解释**： 逃逸方式 **取值范围**： 字符长度1-256位
+    * escapeCmd  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-256位
+    * processHash  **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-256位
+    * processFileHash  **参数解释**： 进程文件hash **取值范围**： 字符长度1-256位
+    * parentProcessFileHash  **参数解释**： 父进程文件hash **取值范围**： 字符长度1-256位
     * block  是否阻断成功，1阻断成功 0阻断失败
     *
     * @var string[]
@@ -409,47 +409,47 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * processName  进程名称
-    * processPath  进程文件路径
-    * processPid  进程id
-    * processUid  进程用户id
-    * processUsername  运行进程的用户名
-    * processCmdline  进程文件命令行
-    * processFilename  进程文件名
-    * processStartTime  进程启动时间
-    * processGid  进程组ID
-    * processEgid  进程有效组ID
-    * processEuid  进程有效用户ID
-    * ancestorProcessPath  祖父进程文件路径
-    * ancestorProcessPid  祖父进程id
-    * ancestorProcessCmdline  祖父进程文件命令行
-    * parentProcessName  父进程名称
-    * parentProcessPath  父进程文件路径
-    * parentProcessPid  父进程id
-    * parentProcessUid  父进程用户id
-    * parentProcessCmdline  父进程文件命令行
-    * parentProcessFilename  父进程文件名
-    * parentProcessStartTime  父进程启动时间
-    * parentProcessGid  父进程组ID
-    * parentProcessEgid  父进程有效组ID
-    * parentProcessEuid  父进程有效用户ID
-    * childProcessName  子进程名称
-    * childProcessPath  子进程文件路径
-    * childProcessPid  子进程id
-    * childProcessUid  子进程用户id
-    * childProcessCmdline  子进程文件命令行
-    * childProcessFilename  子进程文件名
-    * childProcessStartTime  子进程启动时间
-    * childProcessGid  子进程组ID
-    * childProcessEgid  子进程有效组ID
-    * childProcessEuid  子进程有效用户ID
-    * virtCmd  虚拟化命令
-    * virtProcessName  虚拟化进程名称
-    * escapeMode  逃逸方式
-    * escapeCmd  逃逸后后执行的命令
-    * processHash  进程启动文件hash
-    * processFileHash  进程文件hash
-    * parentProcessFileHash  父进程文件hash
+    * processName  **参数解释**： 进程名称 **取值范围**： 字符长度1-256位
+    * processPath  **参数解释**： 进程文件路径 **取值范围**： 字符长度1-256位
+    * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
+    * processUid  **参数解释**： 进程用户ID **取值范围**： 最小值0，最大值2147483647
+    * processUsername  **参数解释**： 运行进程的用户名 **取值范围**： 字符长度1-256位
+    * processCmdline  **参数解释**： 进程文件命令行 **取值范围**： 字符长度1-256位
+    * processFilename  **参数解释**： 进程文件名 **取值范围**： 字符长度1-256位
+    * processStartTime  **参数解释**： 进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * processGid  **参数解释**： 进程组ID **取值范围**： 最小值0，最大值2147483647
+    * processEgid  **参数解释**： 进程有效组ID **取值范围**： 最小值0，最大值2147483647
+    * processEuid  **参数解释**： 进程有效用户ID **取值范围**： 最小值0，最大值2147483647
+    * ancestorProcessPath  **参数解释**： 祖父进程文件路径 **取值范围**： 字符长度1-256位
+    * ancestorProcessPid  **参数解释**： 祖父进程ID **取值范围**： 最小值0，最大值2147483647
+    * ancestorProcessCmdline  **参数解释**： 祖父进程文件命令行 **取值范围**： 字符长度1-512位
+    * parentProcessName  **参数解释**： 父进程名称 **取值范围**： 字符长度1-256位
+    * parentProcessPath  **参数解释**： 父进程文件路径 **取值范围**： 字符长度1-256位
+    * parentProcessPid  **参数解释**： 父进程ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessUid  **参数解释**： 父进程用户ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessCmdline  **参数解释**： 父进程文件命令行 **取值范围**： 字符长度1-512位
+    * parentProcessFilename  **参数解释**： 父进程文件名 **取值范围**： 字符长度1-256位
+    * parentProcessStartTime  **参数解释**： 父进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * parentProcessGid  **参数解释**： 父进程组ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessEgid  **参数解释**： 父进程有效组ID **取值范围**： 最小值0，最大值2147483647
+    * parentProcessEuid  **参数解释**： 父进程有效用户ID **取值范围**： 最小值0，最大值2147483647
+    * childProcessName  **参数解释**： 子进程名称 **取值范围**： 字符长度1-256位
+    * childProcessPath  **参数解释**： 子进程文件路径 **取值范围**： 字符长度1-256位
+    * childProcessPid  **参数解释**： 子进程id **取值范围**： 最小值0，最大值2147483647
+    * childProcessUid  **参数解释**： 子进程用户id **取值范围**： 最小值0，最大值2147483647
+    * childProcessCmdline  **参数解释**： 子进程文件命令行 **取值范围**： 字符长度1-256位
+    * childProcessFilename  **参数解释**： 子进程文件名 **取值范围**： 字符长度1-256位
+    * childProcessStartTime  **参数解释**： 子进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
+    * childProcessGid  **参数解释**： 子进程组ID **取值范围**： 最小值0，最大值2147483647
+    * childProcessEgid  **参数解释**： 子进程有效组ID **取值范围**： 最小值0，最大值2147483647
+    * childProcessEuid  **参数解释**： 子进程有效用户ID **取值范围**： 最小值0，最大值2147483647
+    * virtCmd  **参数解释**： 虚拟化命令 **取值范围**： 字符长度1-256位
+    * virtProcessName  **参数解释**： 虚拟化进程名称 **取值范围**： 字符长度1-256位
+    * escapeMode  **参数解释**： 逃逸方式 **取值范围**： 字符长度1-256位
+    * escapeCmd  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-256位
+    * processHash  **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-256位
+    * processFileHash  **参数解释**： 进程文件hash **取值范围**： 字符长度1-256位
+    * parentProcessFileHash  **参数解释**： 父进程文件hash **取值范围**： 字符长度1-256位
     * block  是否阻断成功，1阻断成功 0阻断失败
     *
     * @var string[]
@@ -811,7 +811,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets processName
-    *  进程名称
+    *  **参数解释**： 进程名称 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -823,7 +823,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets processName
     *
-    * @param string|null $processName 进程名称
+    * @param string|null $processName **参数解释**： 进程名称 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -835,7 +835,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets processPath
-    *  进程文件路径
+    *  **参数解释**： 进程文件路径 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -847,7 +847,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets processPath
     *
-    * @param string|null $processPath 进程文件路径
+    * @param string|null $processPath **参数解释**： 进程文件路径 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -859,7 +859,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets processPid
-    *  进程id
+    *  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -871,7 +871,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets processPid
     *
-    * @param int|null $processPid 进程id
+    * @param int|null $processPid **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -883,7 +883,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets processUid
-    *  进程用户id
+    *  **参数解释**： 进程用户ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -895,7 +895,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets processUid
     *
-    * @param int|null $processUid 进程用户id
+    * @param int|null $processUid **参数解释**： 进程用户ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -907,7 +907,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets processUsername
-    *  运行进程的用户名
+    *  **参数解释**： 运行进程的用户名 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -919,7 +919,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets processUsername
     *
-    * @param string|null $processUsername 运行进程的用户名
+    * @param string|null $processUsername **参数解释**： 运行进程的用户名 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -931,7 +931,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets processCmdline
-    *  进程文件命令行
+    *  **参数解释**： 进程文件命令行 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -943,7 +943,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets processCmdline
     *
-    * @param string|null $processCmdline 进程文件命令行
+    * @param string|null $processCmdline **参数解释**： 进程文件命令行 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -955,7 +955,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets processFilename
-    *  进程文件名
+    *  **参数解释**： 进程文件名 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -967,7 +967,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets processFilename
     *
-    * @param string|null $processFilename 进程文件名
+    * @param string|null $processFilename **参数解释**： 进程文件名 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -979,7 +979,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets processStartTime
-    *  进程启动时间
+    *  **参数解释**： 进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -991,7 +991,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets processStartTime
     *
-    * @param int|null $processStartTime 进程启动时间
+    * @param int|null $processStartTime **参数解释**： 进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -1003,7 +1003,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets processGid
-    *  进程组ID
+    *  **参数解释**： 进程组ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -1015,7 +1015,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets processGid
     *
-    * @param int|null $processGid 进程组ID
+    * @param int|null $processGid **参数解释**： 进程组ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -1027,7 +1027,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets processEgid
-    *  进程有效组ID
+    *  **参数解释**： 进程有效组ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -1039,7 +1039,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets processEgid
     *
-    * @param int|null $processEgid 进程有效组ID
+    * @param int|null $processEgid **参数解释**： 进程有效组ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -1051,7 +1051,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets processEuid
-    *  进程有效用户ID
+    *  **参数解释**： 进程有效用户ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -1063,7 +1063,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets processEuid
     *
-    * @param int|null $processEuid 进程有效用户ID
+    * @param int|null $processEuid **参数解释**： 进程有效用户ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -1075,7 +1075,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ancestorProcessPath
-    *  祖父进程文件路径
+    *  **参数解释**： 祖父进程文件路径 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1087,7 +1087,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ancestorProcessPath
     *
-    * @param string|null $ancestorProcessPath 祖父进程文件路径
+    * @param string|null $ancestorProcessPath **参数解释**： 祖父进程文件路径 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1099,7 +1099,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ancestorProcessPid
-    *  祖父进程id
+    *  **参数解释**： 祖父进程ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -1111,7 +1111,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ancestorProcessPid
     *
-    * @param int|null $ancestorProcessPid 祖父进程id
+    * @param int|null $ancestorProcessPid **参数解释**： 祖父进程ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -1123,7 +1123,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ancestorProcessCmdline
-    *  祖父进程文件命令行
+    *  **参数解释**： 祖父进程文件命令行 **取值范围**： 字符长度1-512位
     *
     * @return string|null
     */
@@ -1135,7 +1135,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ancestorProcessCmdline
     *
-    * @param string|null $ancestorProcessCmdline 祖父进程文件命令行
+    * @param string|null $ancestorProcessCmdline **参数解释**： 祖父进程文件命令行 **取值范围**： 字符长度1-512位
     *
     * @return $this
     */
@@ -1147,7 +1147,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentProcessName
-    *  父进程名称
+    *  **参数解释**： 父进程名称 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1159,7 +1159,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets parentProcessName
     *
-    * @param string|null $parentProcessName 父进程名称
+    * @param string|null $parentProcessName **参数解释**： 父进程名称 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1171,7 +1171,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentProcessPath
-    *  父进程文件路径
+    *  **参数解释**： 父进程文件路径 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1183,7 +1183,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets parentProcessPath
     *
-    * @param string|null $parentProcessPath 父进程文件路径
+    * @param string|null $parentProcessPath **参数解释**： 父进程文件路径 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1195,7 +1195,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentProcessPid
-    *  父进程id
+    *  **参数解释**： 父进程ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -1207,7 +1207,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets parentProcessPid
     *
-    * @param int|null $parentProcessPid 父进程id
+    * @param int|null $parentProcessPid **参数解释**： 父进程ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -1219,7 +1219,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentProcessUid
-    *  父进程用户id
+    *  **参数解释**： 父进程用户ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -1231,7 +1231,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets parentProcessUid
     *
-    * @param int|null $parentProcessUid 父进程用户id
+    * @param int|null $parentProcessUid **参数解释**： 父进程用户ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -1243,7 +1243,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentProcessCmdline
-    *  父进程文件命令行
+    *  **参数解释**： 父进程文件命令行 **取值范围**： 字符长度1-512位
     *
     * @return string|null
     */
@@ -1255,7 +1255,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets parentProcessCmdline
     *
-    * @param string|null $parentProcessCmdline 父进程文件命令行
+    * @param string|null $parentProcessCmdline **参数解释**： 父进程文件命令行 **取值范围**： 字符长度1-512位
     *
     * @return $this
     */
@@ -1267,7 +1267,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentProcessFilename
-    *  父进程文件名
+    *  **参数解释**： 父进程文件名 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1279,7 +1279,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets parentProcessFilename
     *
-    * @param string|null $parentProcessFilename 父进程文件名
+    * @param string|null $parentProcessFilename **参数解释**： 父进程文件名 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1291,7 +1291,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentProcessStartTime
-    *  父进程启动时间
+    *  **参数解释**： 父进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -1303,7 +1303,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets parentProcessStartTime
     *
-    * @param int|null $parentProcessStartTime 父进程启动时间
+    * @param int|null $parentProcessStartTime **参数解释**： 父进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -1315,7 +1315,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentProcessGid
-    *  父进程组ID
+    *  **参数解释**： 父进程组ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -1327,7 +1327,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets parentProcessGid
     *
-    * @param int|null $parentProcessGid 父进程组ID
+    * @param int|null $parentProcessGid **参数解释**： 父进程组ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -1339,7 +1339,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentProcessEgid
-    *  父进程有效组ID
+    *  **参数解释**： 父进程有效组ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -1351,7 +1351,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets parentProcessEgid
     *
-    * @param int|null $parentProcessEgid 父进程有效组ID
+    * @param int|null $parentProcessEgid **参数解释**： 父进程有效组ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -1363,7 +1363,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentProcessEuid
-    *  父进程有效用户ID
+    *  **参数解释**： 父进程有效用户ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -1375,7 +1375,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets parentProcessEuid
     *
-    * @param int|null $parentProcessEuid 父进程有效用户ID
+    * @param int|null $parentProcessEuid **参数解释**： 父进程有效用户ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -1387,7 +1387,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets childProcessName
-    *  子进程名称
+    *  **参数解释**： 子进程名称 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1399,7 +1399,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets childProcessName
     *
-    * @param string|null $childProcessName 子进程名称
+    * @param string|null $childProcessName **参数解释**： 子进程名称 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1411,7 +1411,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets childProcessPath
-    *  子进程文件路径
+    *  **参数解释**： 子进程文件路径 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1423,7 +1423,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets childProcessPath
     *
-    * @param string|null $childProcessPath 子进程文件路径
+    * @param string|null $childProcessPath **参数解释**： 子进程文件路径 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1435,7 +1435,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets childProcessPid
-    *  子进程id
+    *  **参数解释**： 子进程id **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -1447,7 +1447,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets childProcessPid
     *
-    * @param int|null $childProcessPid 子进程id
+    * @param int|null $childProcessPid **参数解释**： 子进程id **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -1459,7 +1459,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets childProcessUid
-    *  子进程用户id
+    *  **参数解释**： 子进程用户id **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -1471,7 +1471,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets childProcessUid
     *
-    * @param int|null $childProcessUid 子进程用户id
+    * @param int|null $childProcessUid **参数解释**： 子进程用户id **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -1483,7 +1483,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets childProcessCmdline
-    *  子进程文件命令行
+    *  **参数解释**： 子进程文件命令行 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1495,7 +1495,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets childProcessCmdline
     *
-    * @param string|null $childProcessCmdline 子进程文件命令行
+    * @param string|null $childProcessCmdline **参数解释**： 子进程文件命令行 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1507,7 +1507,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets childProcessFilename
-    *  子进程文件名
+    *  **参数解释**： 子进程文件名 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1519,7 +1519,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets childProcessFilename
     *
-    * @param string|null $childProcessFilename 子进程文件名
+    * @param string|null $childProcessFilename **参数解释**： 子进程文件名 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1531,7 +1531,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets childProcessStartTime
-    *  子进程启动时间
+    *  **参数解释**： 子进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -1543,7 +1543,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets childProcessStartTime
     *
-    * @param int|null $childProcessStartTime 子进程启动时间
+    * @param int|null $childProcessStartTime **参数解释**： 子进程启动时间 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -1555,7 +1555,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets childProcessGid
-    *  子进程组ID
+    *  **参数解释**： 子进程组ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -1567,7 +1567,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets childProcessGid
     *
-    * @param int|null $childProcessGid 子进程组ID
+    * @param int|null $childProcessGid **参数解释**： 子进程组ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -1579,7 +1579,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets childProcessEgid
-    *  子进程有效组ID
+    *  **参数解释**： 子进程有效组ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -1591,7 +1591,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets childProcessEgid
     *
-    * @param int|null $childProcessEgid 子进程有效组ID
+    * @param int|null $childProcessEgid **参数解释**： 子进程有效组ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -1603,7 +1603,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets childProcessEuid
-    *  子进程有效用户ID
+    *  **参数解释**： 子进程有效用户ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -1615,7 +1615,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets childProcessEuid
     *
-    * @param int|null $childProcessEuid 子进程有效用户ID
+    * @param int|null $childProcessEuid **参数解释**： 子进程有效用户ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -1627,7 +1627,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets virtCmd
-    *  虚拟化命令
+    *  **参数解释**： 虚拟化命令 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1639,7 +1639,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets virtCmd
     *
-    * @param string|null $virtCmd 虚拟化命令
+    * @param string|null $virtCmd **参数解释**： 虚拟化命令 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1651,7 +1651,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets virtProcessName
-    *  虚拟化进程名称
+    *  **参数解释**： 虚拟化进程名称 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1663,7 +1663,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets virtProcessName
     *
-    * @param string|null $virtProcessName 虚拟化进程名称
+    * @param string|null $virtProcessName **参数解释**： 虚拟化进程名称 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1675,7 +1675,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets escapeMode
-    *  逃逸方式
+    *  **参数解释**： 逃逸方式 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1687,7 +1687,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets escapeMode
     *
-    * @param string|null $escapeMode 逃逸方式
+    * @param string|null $escapeMode **参数解释**： 逃逸方式 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1699,7 +1699,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets escapeCmd
-    *  逃逸后后执行的命令
+    *  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1711,7 +1711,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets escapeCmd
     *
-    * @param string|null $escapeCmd 逃逸后后执行的命令
+    * @param string|null $escapeCmd **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1723,7 +1723,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets processHash
-    *  进程启动文件hash
+    *  **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1735,7 +1735,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets processHash
     *
-    * @param string|null $processHash 进程启动文件hash
+    * @param string|null $processHash **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1747,7 +1747,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets processFileHash
-    *  进程文件hash
+    *  **参数解释**： 进程文件hash **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1759,7 +1759,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets processFileHash
     *
-    * @param string|null $processFileHash 进程文件hash
+    * @param string|null $processFileHash **参数解释**： 进程文件hash **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1771,7 +1771,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentProcessFileHash
-    *  父进程文件hash
+    *  **参数解释**： 父进程文件hash **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1783,7 +1783,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets parentProcessFileHash
     *
-    * @param string|null $parentProcessFileHash 父进程文件hash
+    * @param string|null $parentProcessFileHash **参数解释**： 父进程文件hash **取值范围**： 字符长度1-256位
     *
     * @return $this
     */

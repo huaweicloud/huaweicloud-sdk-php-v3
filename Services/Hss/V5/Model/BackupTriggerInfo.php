@@ -22,7 +22,7 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**: 调度器id **取值范围**: 字符长度0-256
     * name  **参数解释**: 调度器名称 **取值范围**: 字符长度0-256
-    * type  **参数解释**: 调度器类型,目前只支持 time,定时调度。 **取值范围**: 字符长度0-256
+    * type  **参数解释**: 调度器类型，目前只支持time，定时调度。 **取值范围**: 字符长度0-256
     * properties  properties
     *
     * @var string[]
@@ -38,7 +38,7 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**: 调度器id **取值范围**: 字符长度0-256
     * name  **参数解释**: 调度器名称 **取值范围**: 字符长度0-256
-    * type  **参数解释**: 调度器类型,目前只支持 time,定时调度。 **取值范围**: 字符长度0-256
+    * type  **参数解释**: 调度器类型，目前只支持time，定时调度。 **取值范围**: 字符长度0-256
     * properties  properties
     *
     * @var string[]
@@ -75,7 +75,7 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  **参数解释**: 调度器id **取值范围**: 字符长度0-256
     * name  **参数解释**: 调度器名称 **取值范围**: 字符长度0-256
-    * type  **参数解释**: 调度器类型,目前只支持 time,定时调度。 **取值范围**: 字符长度0-256
+    * type  **参数解释**: 调度器类型，目前只支持time，定时调度。 **取值范围**: 字符长度0-256
     * properties  properties
     *
     * @var string[]
@@ -91,7 +91,7 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**: 调度器id **取值范围**: 字符长度0-256
     * name  **参数解释**: 调度器名称 **取值范围**: 字符长度0-256
-    * type  **参数解释**: 调度器类型,目前只支持 time,定时调度。 **取值范围**: 字符长度0-256
+    * type  **参数解释**: 调度器类型，目前只支持time，定时调度。 **取值范围**: 字符长度0-256
     * properties  properties
     *
     * @var string[]
@@ -107,7 +107,7 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**: 调度器id **取值范围**: 字符长度0-256
     * name  **参数解释**: 调度器名称 **取值范围**: 字符长度0-256
-    * type  **参数解释**: 调度器类型,目前只支持 time,定时调度。 **取值范围**: 字符长度0-256
+    * type  **参数解释**: 调度器类型，目前只支持time，定时调度。 **取值范围**: 字符长度0-256
     * properties  properties
     *
     * @var string[]
@@ -273,7 +273,7 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**: 调度器类型,目前只支持 time,定时调度。 **取值范围**: 字符长度0-256
+    *  **参数解释**: 调度器类型，目前只支持time，定时调度。 **取值范围**: 字符长度0-256
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**: 调度器类型,目前只支持 time,定时调度。 **取值范围**: 字符长度0-256
+    * @param string|null $type **参数解释**: 调度器类型，目前只支持time，定时调度。 **取值范围**: 字符长度0-256
     *
     * @return $this
     */

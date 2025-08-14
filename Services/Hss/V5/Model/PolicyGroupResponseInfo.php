@@ -24,11 +24,11 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     * groupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-256位
     * description  **参数解释**: 策略组描述 **取值范围**: 字符长度0-64位
     * hostNum  **参数解释**: 关联服务器数 **取值范围**: 取值0-1000000
-    * defaultGroup  **参数解释**: 是否是默认策略组 **取值范围**: true: 是默认策略组 false: 不是默认策略组
-    * deletable  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: true: 支持删除 false: 不支持删除
-    * supportOs  **参数解释**: 支持的操作系统 **取值范围**: Linux: 支持Linux操作系统 Windows: 支持Windows操作系统
-    * supportVersion  **参数解释**: 支持的版本 **取值范围**: hss.version.advanced: 专业版 hss.version.enterprise: 企业版 hss.version.premium: 旗舰版 hss.version.wtp: 网页防篡改版 hss.version.container.enterprise: 容器版
-    * protectMode  **参数解释**: 防护模式 **取值范围**: high_detection: 高检出模式 equalization: 均衡模式
+    * defaultGroup  **参数解释**: 是否是默认策略组 **取值范围**: - true: 是默认策略组 - false: 不是默认策略组
+    * deletable  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: - true: 支持删除 - false: 不支持删除
+    * supportOs  **参数解释**: 支持的操作系统 **取值范围**: - Linux: 支持Linux操作系统 - Windows: 支持Windows操作系统
+    * supportVersion  **参数解释**: 支持的版本 **取值范围**: - hss.version.advanced: 专业版 - hss.version.enterprise: 企业版 - hss.version.premium: 旗舰版 - hss.version.wtp: 网页防篡改版 - hss.version.container.enterprise: 容器版
+    * protectMode  **参数解释**: 防护模式 **取值范围**: - high_detection: 高检出模式 - equalization: 均衡模式
     *
     * @var string[]
     */
@@ -50,11 +50,11 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     * groupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-256位
     * description  **参数解释**: 策略组描述 **取值范围**: 字符长度0-64位
     * hostNum  **参数解释**: 关联服务器数 **取值范围**: 取值0-1000000
-    * defaultGroup  **参数解释**: 是否是默认策略组 **取值范围**: true: 是默认策略组 false: 不是默认策略组
-    * deletable  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: true: 支持删除 false: 不支持删除
-    * supportOs  **参数解释**: 支持的操作系统 **取值范围**: Linux: 支持Linux操作系统 Windows: 支持Windows操作系统
-    * supportVersion  **参数解释**: 支持的版本 **取值范围**: hss.version.advanced: 专业版 hss.version.enterprise: 企业版 hss.version.premium: 旗舰版 hss.version.wtp: 网页防篡改版 hss.version.container.enterprise: 容器版
-    * protectMode  **参数解释**: 防护模式 **取值范围**: high_detection: 高检出模式 equalization: 均衡模式
+    * defaultGroup  **参数解释**: 是否是默认策略组 **取值范围**: - true: 是默认策略组 - false: 不是默认策略组
+    * deletable  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: - true: 支持删除 - false: 不支持删除
+    * supportOs  **参数解释**: 支持的操作系统 **取值范围**: - Linux: 支持Linux操作系统 - Windows: 支持Windows操作系统
+    * supportVersion  **参数解释**: 支持的版本 **取值范围**: - hss.version.advanced: 专业版 - hss.version.enterprise: 企业版 - hss.version.premium: 旗舰版 - hss.version.wtp: 网页防篡改版 - hss.version.container.enterprise: 容器版
+    * protectMode  **参数解释**: 防护模式 **取值范围**: - high_detection: 高检出模式 - equalization: 均衡模式
     *
     * @var string[]
     */
@@ -97,11 +97,11 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     * groupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-256位
     * description  **参数解释**: 策略组描述 **取值范围**: 字符长度0-64位
     * hostNum  **参数解释**: 关联服务器数 **取值范围**: 取值0-1000000
-    * defaultGroup  **参数解释**: 是否是默认策略组 **取值范围**: true: 是默认策略组 false: 不是默认策略组
-    * deletable  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: true: 支持删除 false: 不支持删除
-    * supportOs  **参数解释**: 支持的操作系统 **取值范围**: Linux: 支持Linux操作系统 Windows: 支持Windows操作系统
-    * supportVersion  **参数解释**: 支持的版本 **取值范围**: hss.version.advanced: 专业版 hss.version.enterprise: 企业版 hss.version.premium: 旗舰版 hss.version.wtp: 网页防篡改版 hss.version.container.enterprise: 容器版
-    * protectMode  **参数解释**: 防护模式 **取值范围**: high_detection: 高检出模式 equalization: 均衡模式
+    * defaultGroup  **参数解释**: 是否是默认策略组 **取值范围**: - true: 是默认策略组 - false: 不是默认策略组
+    * deletable  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: - true: 支持删除 - false: 不支持删除
+    * supportOs  **参数解释**: 支持的操作系统 **取值范围**: - Linux: 支持Linux操作系统 - Windows: 支持Windows操作系统
+    * supportVersion  **参数解释**: 支持的版本 **取值范围**: - hss.version.advanced: 专业版 - hss.version.enterprise: 企业版 - hss.version.premium: 旗舰版 - hss.version.wtp: 网页防篡改版 - hss.version.container.enterprise: 容器版
+    * protectMode  **参数解释**: 防护模式 **取值范围**: - high_detection: 高检出模式 - equalization: 均衡模式
     *
     * @var string[]
     */
@@ -123,11 +123,11 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     * groupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-256位
     * description  **参数解释**: 策略组描述 **取值范围**: 字符长度0-64位
     * hostNum  **参数解释**: 关联服务器数 **取值范围**: 取值0-1000000
-    * defaultGroup  **参数解释**: 是否是默认策略组 **取值范围**: true: 是默认策略组 false: 不是默认策略组
-    * deletable  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: true: 支持删除 false: 不支持删除
-    * supportOs  **参数解释**: 支持的操作系统 **取值范围**: Linux: 支持Linux操作系统 Windows: 支持Windows操作系统
-    * supportVersion  **参数解释**: 支持的版本 **取值范围**: hss.version.advanced: 专业版 hss.version.enterprise: 企业版 hss.version.premium: 旗舰版 hss.version.wtp: 网页防篡改版 hss.version.container.enterprise: 容器版
-    * protectMode  **参数解释**: 防护模式 **取值范围**: high_detection: 高检出模式 equalization: 均衡模式
+    * defaultGroup  **参数解释**: 是否是默认策略组 **取值范围**: - true: 是默认策略组 - false: 不是默认策略组
+    * deletable  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: - true: 支持删除 - false: 不支持删除
+    * supportOs  **参数解释**: 支持的操作系统 **取值范围**: - Linux: 支持Linux操作系统 - Windows: 支持Windows操作系统
+    * supportVersion  **参数解释**: 支持的版本 **取值范围**: - hss.version.advanced: 专业版 - hss.version.enterprise: 企业版 - hss.version.premium: 旗舰版 - hss.version.wtp: 网页防篡改版 - hss.version.container.enterprise: 容器版
+    * protectMode  **参数解释**: 防护模式 **取值范围**: - high_detection: 高检出模式 - equalization: 均衡模式
     *
     * @var string[]
     */
@@ -149,11 +149,11 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     * groupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-256位
     * description  **参数解释**: 策略组描述 **取值范围**: 字符长度0-64位
     * hostNum  **参数解释**: 关联服务器数 **取值范围**: 取值0-1000000
-    * defaultGroup  **参数解释**: 是否是默认策略组 **取值范围**: true: 是默认策略组 false: 不是默认策略组
-    * deletable  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: true: 支持删除 false: 不支持删除
-    * supportOs  **参数解释**: 支持的操作系统 **取值范围**: Linux: 支持Linux操作系统 Windows: 支持Windows操作系统
-    * supportVersion  **参数解释**: 支持的版本 **取值范围**: hss.version.advanced: 专业版 hss.version.enterprise: 企业版 hss.version.premium: 旗舰版 hss.version.wtp: 网页防篡改版 hss.version.container.enterprise: 容器版
-    * protectMode  **参数解释**: 防护模式 **取值范围**: high_detection: 高检出模式 equalization: 均衡模式
+    * defaultGroup  **参数解释**: 是否是默认策略组 **取值范围**: - true: 是默认策略组 - false: 不是默认策略组
+    * deletable  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: - true: 支持删除 - false: 不支持删除
+    * supportOs  **参数解释**: 支持的操作系统 **取值范围**: - Linux: 支持Linux操作系统 - Windows: 支持Windows操作系统
+    * supportVersion  **参数解释**: 支持的版本 **取值范围**: - hss.version.advanced: 专业版 - hss.version.enterprise: 企业版 - hss.version.premium: 旗舰版 - hss.version.wtp: 网页防篡改版 - hss.version.container.enterprise: 容器版
+    * protectMode  **参数解释**: 防护模式 **取值范围**: - high_detection: 高检出模式 - equalization: 均衡模式
     *
     * @var string[]
     */
@@ -400,7 +400,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultGroup
-    *  **参数解释**: 是否是默认策略组 **取值范围**: true: 是默认策略组 false: 不是默认策略组
+    *  **参数解释**: 是否是默认策略组 **取值范围**: - true: 是默认策略组 - false: 不是默认策略组
     *
     * @return bool|null
     */
@@ -412,7 +412,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets defaultGroup
     *
-    * @param bool|null $defaultGroup **参数解释**: 是否是默认策略组 **取值范围**: true: 是默认策略组 false: 不是默认策略组
+    * @param bool|null $defaultGroup **参数解释**: 是否是默认策略组 **取值范围**: - true: 是默认策略组 - false: 不是默认策略组
     *
     * @return $this
     */
@@ -424,7 +424,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets deletable
-    *  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: true: 支持删除 false: 不支持删除
+    *  **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: - true: 支持删除 - false: 不支持删除
     *
     * @return bool|null
     */
@@ -436,7 +436,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets deletable
     *
-    * @param bool|null $deletable **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: true: 支持删除 false: 不支持删除
+    * @param bool|null $deletable **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: - true: 支持删除 - false: 不支持删除
     *
     * @return $this
     */
@@ -448,7 +448,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportOs
-    *  **参数解释**: 支持的操作系统 **取值范围**: Linux: 支持Linux操作系统 Windows: 支持Windows操作系统
+    *  **参数解释**: 支持的操作系统 **取值范围**: - Linux: 支持Linux操作系统 - Windows: 支持Windows操作系统
     *
     * @return string|null
     */
@@ -460,7 +460,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets supportOs
     *
-    * @param string|null $supportOs **参数解释**: 支持的操作系统 **取值范围**: Linux: 支持Linux操作系统 Windows: 支持Windows操作系统
+    * @param string|null $supportOs **参数解释**: 支持的操作系统 **取值范围**: - Linux: 支持Linux操作系统 - Windows: 支持Windows操作系统
     *
     * @return $this
     */
@@ -472,7 +472,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportVersion
-    *  **参数解释**: 支持的版本 **取值范围**: hss.version.advanced: 专业版 hss.version.enterprise: 企业版 hss.version.premium: 旗舰版 hss.version.wtp: 网页防篡改版 hss.version.container.enterprise: 容器版
+    *  **参数解释**: 支持的版本 **取值范围**: - hss.version.advanced: 专业版 - hss.version.enterprise: 企业版 - hss.version.premium: 旗舰版 - hss.version.wtp: 网页防篡改版 - hss.version.container.enterprise: 容器版
     *
     * @return string|null
     */
@@ -484,7 +484,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets supportVersion
     *
-    * @param string|null $supportVersion **参数解释**: 支持的版本 **取值范围**: hss.version.advanced: 专业版 hss.version.enterprise: 企业版 hss.version.premium: 旗舰版 hss.version.wtp: 网页防篡改版 hss.version.container.enterprise: 容器版
+    * @param string|null $supportVersion **参数解释**: 支持的版本 **取值范围**: - hss.version.advanced: 专业版 - hss.version.enterprise: 企业版 - hss.version.premium: 旗舰版 - hss.version.wtp: 网页防篡改版 - hss.version.container.enterprise: 容器版
     *
     * @return $this
     */
@@ -496,7 +496,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectMode
-    *  **参数解释**: 防护模式 **取值范围**: high_detection: 高检出模式 equalization: 均衡模式
+    *  **参数解释**: 防护模式 **取值范围**: - high_detection: 高检出模式 - equalization: 均衡模式
     *
     * @return string|null
     */
@@ -508,7 +508,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectMode
     *
-    * @param string|null $protectMode **参数解释**: 防护模式 **取值范围**: high_detection: 高检出模式 equalization: 均衡模式
+    * @param string|null $protectMode **参数解释**: 防护模式 **取值范围**: - high_detection: 高检出模式 - equalization: 均衡模式
     *
     * @return $this
     */

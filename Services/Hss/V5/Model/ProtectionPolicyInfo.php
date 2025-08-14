@@ -22,18 +22,18 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * policyId  **参数解释**: 策略ID **取值范围**: 字符长度0-128
     * policyName  **参数解释**: 防护策略名称 **取值范围**: 字符长度1-128
-    * protectionMode  **参数解释**: 防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **取值范围**: 字符长度0-128
-    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度0-128
-    * deployMode  **参数解释**: 是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。   **取值范围**: 字符长度0-128
+    * protectionMode  **参数解释**: 防护动作 **取值范围**: 包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
+    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **取值范围**: 包含如下1种，默认为开启防护诱饵防护。   - opened ：开启。
+    * deployMode  **参数解释**: 是否开启动态诱饵防护 **取值范围**: 包含如下2种，默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  **参数解释**: 防护目录 **取值范围**: 字符长度1-128
     * protectionType  **参数解释**: 防护文件类型，例如：docx，txt，avi **取值范围**: 字符长度1-128
     * excludeDirectory  **参数解释**: 排除目录，选填 **取值范围**: 字符长度1-128
-    * runtimeDetectionStatus  **参数解释**: 是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度0-128
+    * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * runtimeDetectionDirectory  **参数解释**: 运行时检测目录，现在为保留字段 **取值范围**: 字符长度1-128
     * countAssociatedServer  **参数解释**: 关联server个数 **取值范围**: 取值范围0-2097152
     * operatingSystem  **参数解释**: 操作系统类型。 - Linux - Windows **取值范围**: 字符长度1-128
     * processWhitelist  进程白名单
-    * defaultPolicy  **参数解释**: 是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略 **取值范围**: 取值大小0-10
+    * defaultPolicy  **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
     * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度1-128
     *
     * @var string[]
@@ -60,18 +60,18 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * policyId  **参数解释**: 策略ID **取值范围**: 字符长度0-128
     * policyName  **参数解释**: 防护策略名称 **取值范围**: 字符长度1-128
-    * protectionMode  **参数解释**: 防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **取值范围**: 字符长度0-128
-    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度0-128
-    * deployMode  **参数解释**: 是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。   **取值范围**: 字符长度0-128
+    * protectionMode  **参数解释**: 防护动作 **取值范围**: 包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
+    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **取值范围**: 包含如下1种，默认为开启防护诱饵防护。   - opened ：开启。
+    * deployMode  **参数解释**: 是否开启动态诱饵防护 **取值范围**: 包含如下2种，默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  **参数解释**: 防护目录 **取值范围**: 字符长度1-128
     * protectionType  **参数解释**: 防护文件类型，例如：docx，txt，avi **取值范围**: 字符长度1-128
     * excludeDirectory  **参数解释**: 排除目录，选填 **取值范围**: 字符长度1-128
-    * runtimeDetectionStatus  **参数解释**: 是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度0-128
+    * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * runtimeDetectionDirectory  **参数解释**: 运行时检测目录，现在为保留字段 **取值范围**: 字符长度1-128
     * countAssociatedServer  **参数解释**: 关联server个数 **取值范围**: 取值范围0-2097152
     * operatingSystem  **参数解释**: 操作系统类型。 - Linux - Windows **取值范围**: 字符长度1-128
     * processWhitelist  进程白名单
-    * defaultPolicy  **参数解释**: 是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略 **取值范围**: 取值大小0-10
+    * defaultPolicy  **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
     * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度1-128
     *
     * @var string[]
@@ -119,18 +119,18 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * policyId  **参数解释**: 策略ID **取值范围**: 字符长度0-128
     * policyName  **参数解释**: 防护策略名称 **取值范围**: 字符长度1-128
-    * protectionMode  **参数解释**: 防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **取值范围**: 字符长度0-128
-    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度0-128
-    * deployMode  **参数解释**: 是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。   **取值范围**: 字符长度0-128
+    * protectionMode  **参数解释**: 防护动作 **取值范围**: 包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
+    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **取值范围**: 包含如下1种，默认为开启防护诱饵防护。   - opened ：开启。
+    * deployMode  **参数解释**: 是否开启动态诱饵防护 **取值范围**: 包含如下2种，默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  **参数解释**: 防护目录 **取值范围**: 字符长度1-128
     * protectionType  **参数解释**: 防护文件类型，例如：docx，txt，avi **取值范围**: 字符长度1-128
     * excludeDirectory  **参数解释**: 排除目录，选填 **取值范围**: 字符长度1-128
-    * runtimeDetectionStatus  **参数解释**: 是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度0-128
+    * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * runtimeDetectionDirectory  **参数解释**: 运行时检测目录，现在为保留字段 **取值范围**: 字符长度1-128
     * countAssociatedServer  **参数解释**: 关联server个数 **取值范围**: 取值范围0-2097152
     * operatingSystem  **参数解释**: 操作系统类型。 - Linux - Windows **取值范围**: 字符长度1-128
     * processWhitelist  进程白名单
-    * defaultPolicy  **参数解释**: 是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略 **取值范围**: 取值大小0-10
+    * defaultPolicy  **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
     * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度1-128
     *
     * @var string[]
@@ -157,18 +157,18 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * policyId  **参数解释**: 策略ID **取值范围**: 字符长度0-128
     * policyName  **参数解释**: 防护策略名称 **取值范围**: 字符长度1-128
-    * protectionMode  **参数解释**: 防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **取值范围**: 字符长度0-128
-    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度0-128
-    * deployMode  **参数解释**: 是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。   **取值范围**: 字符长度0-128
+    * protectionMode  **参数解释**: 防护动作 **取值范围**: 包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
+    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **取值范围**: 包含如下1种，默认为开启防护诱饵防护。   - opened ：开启。
+    * deployMode  **参数解释**: 是否开启动态诱饵防护 **取值范围**: 包含如下2种，默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  **参数解释**: 防护目录 **取值范围**: 字符长度1-128
     * protectionType  **参数解释**: 防护文件类型，例如：docx，txt，avi **取值范围**: 字符长度1-128
     * excludeDirectory  **参数解释**: 排除目录，选填 **取值范围**: 字符长度1-128
-    * runtimeDetectionStatus  **参数解释**: 是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度0-128
+    * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * runtimeDetectionDirectory  **参数解释**: 运行时检测目录，现在为保留字段 **取值范围**: 字符长度1-128
     * countAssociatedServer  **参数解释**: 关联server个数 **取值范围**: 取值范围0-2097152
     * operatingSystem  **参数解释**: 操作系统类型。 - Linux - Windows **取值范围**: 字符长度1-128
     * processWhitelist  进程白名单
-    * defaultPolicy  **参数解释**: 是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略 **取值范围**: 取值大小0-10
+    * defaultPolicy  **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
     * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度1-128
     *
     * @var string[]
@@ -195,18 +195,18 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * policyId  **参数解释**: 策略ID **取值范围**: 字符长度0-128
     * policyName  **参数解释**: 防护策略名称 **取值范围**: 字符长度1-128
-    * protectionMode  **参数解释**: 防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **取值范围**: 字符长度0-128
-    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度0-128
-    * deployMode  **参数解释**: 是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。   **取值范围**: 字符长度0-128
+    * protectionMode  **参数解释**: 防护动作 **取值范围**: 包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
+    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **取值范围**: 包含如下1种，默认为开启防护诱饵防护。   - opened ：开启。
+    * deployMode  **参数解释**: 是否开启动态诱饵防护 **取值范围**: 包含如下2种，默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  **参数解释**: 防护目录 **取值范围**: 字符长度1-128
     * protectionType  **参数解释**: 防护文件类型，例如：docx，txt，avi **取值范围**: 字符长度1-128
     * excludeDirectory  **参数解释**: 排除目录，选填 **取值范围**: 字符长度1-128
-    * runtimeDetectionStatus  **参数解释**: 是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度0-128
+    * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * runtimeDetectionDirectory  **参数解释**: 运行时检测目录，现在为保留字段 **取值范围**: 字符长度1-128
     * countAssociatedServer  **参数解释**: 关联server个数 **取值范围**: 取值范围0-2097152
     * operatingSystem  **参数解释**: 操作系统类型。 - Linux - Windows **取值范围**: 字符长度1-128
     * processWhitelist  进程白名单
-    * defaultPolicy  **参数解释**: 是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略 **取值范围**: 取值大小0-10
+    * defaultPolicy  **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
     * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度1-128
     *
     * @var string[]
@@ -460,7 +460,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectionMode
-    *  **参数解释**: 防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **取值范围**: 字符长度0-128
+    *  **参数解释**: 防护动作 **取值范围**: 包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
     *
     * @return string|null
     */
@@ -472,7 +472,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectionMode
     *
-    * @param string|null $protectionMode **参数解释**: 防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **取值范围**: 字符长度0-128
+    * @param string|null $protectionMode **参数解释**: 防护动作 **取值范围**: 包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
     *
     * @return $this
     */
@@ -484,7 +484,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets baitProtectionStatus
-    *  **参数解释**: 是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度0-128
+    *  **参数解释**: 是否开启诱饵防护 **取值范围**: 包含如下1种，默认为开启防护诱饵防护。   - opened ：开启。
     *
     * @return string|null
     */
@@ -496,7 +496,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets baitProtectionStatus
     *
-    * @param string|null $baitProtectionStatus **参数解释**: 是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度0-128
+    * @param string|null $baitProtectionStatus **参数解释**: 是否开启诱饵防护 **取值范围**: 包含如下1种，默认为开启防护诱饵防护。   - opened ：开启。
     *
     * @return $this
     */
@@ -508,7 +508,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets deployMode
-    *  **参数解释**: 是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。   **取值范围**: 字符长度0-128
+    *  **参数解释**: 是否开启动态诱饵防护 **取值范围**: 包含如下2种，默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     *
     * @return string|null
     */
@@ -520,7 +520,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets deployMode
     *
-    * @param string|null $deployMode **参数解释**: 是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。   **取值范围**: 字符长度0-128
+    * @param string|null $deployMode **参数解释**: 是否开启动态诱饵防护 **取值范围**: 包含如下2种，默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     *
     * @return $this
     */
@@ -604,7 +604,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets runtimeDetectionStatus
-    *  **参数解释**: 是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度0-128
+    *  **参数解释**: 是否运行时检测 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     *
     * @return string|null
     */
@@ -616,7 +616,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets runtimeDetectionStatus
     *
-    * @param string|null $runtimeDetectionStatus **参数解释**: 是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度0-128
+    * @param string|null $runtimeDetectionStatus **参数解释**: 是否运行时检测 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     *
     * @return $this
     */
@@ -724,7 +724,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultPolicy
-    *  **参数解释**: 是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略 **取值范围**: 取值大小0-10
+    *  **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
     *
     * @return int|null
     */
@@ -736,7 +736,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets defaultPolicy
     *
-    * @param int|null $defaultPolicy **参数解释**: 是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略 **取值范围**: 取值大小0-10
+    * @param int|null $defaultPolicy **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
     *
     * @return $this
     */

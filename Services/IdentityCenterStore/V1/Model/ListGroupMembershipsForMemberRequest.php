@@ -202,9 +202,6 @@ class ListGroupMembershipsForMemberRequest implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['xSecurityToken']) && (mb_strlen($this->container['xSecurityToken']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'xSecurityToken', the character length must be smaller than or equal to 2048.";
-            }
         if ($this->container['identityStoreId'] === null) {
             $invalidProperties[] = "'identityStoreId' can't be null";
         }

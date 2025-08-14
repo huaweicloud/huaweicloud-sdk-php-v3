@@ -25,6 +25,9 @@ class ListTtscVocabularyGroupsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
+    * limit  每页显示的条目数量。
+    * offset  偏移量，表示从此偏移量开始查询。
+    * groupId  分组id
     *
     * @var string[]
     */
@@ -33,7 +36,10 @@ class ListTtscVocabularyGroupsRequest implements ModelInterface, ArrayAccess
             'authorization' => 'string',
             'xSdkDate' => 'string',
             'xProjectId' => 'string',
-            'xAppUserId' => 'string'
+            'xAppUserId' => 'string',
+            'limit' => 'int',
+            'offset' => 'int',
+            'groupId' => 'string'
     ];
 
     /**
@@ -43,6 +49,9 @@ class ListTtscVocabularyGroupsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
+    * limit  每页显示的条目数量。
+    * offset  偏移量，表示从此偏移量开始查询。
+    * groupId  分组id
     *
     * @var string[]
     */
@@ -51,7 +60,10 @@ class ListTtscVocabularyGroupsRequest implements ModelInterface, ArrayAccess
         'authorization' => null,
         'xSdkDate' => null,
         'xProjectId' => null,
-        'xAppUserId' => null
+        'xAppUserId' => null,
+        'limit' => 'uint32',
+        'offset' => 'uint32',
+        'groupId' => null
     ];
 
     /**
@@ -82,6 +94,9 @@ class ListTtscVocabularyGroupsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
+    * limit  每页显示的条目数量。
+    * offset  偏移量，表示从此偏移量开始查询。
+    * groupId  分组id
     *
     * @var string[]
     */
@@ -90,7 +105,10 @@ class ListTtscVocabularyGroupsRequest implements ModelInterface, ArrayAccess
             'authorization' => 'Authorization',
             'xSdkDate' => 'X-Sdk-Date',
             'xProjectId' => 'X-Project-Id',
-            'xAppUserId' => 'X-App-UserId'
+            'xAppUserId' => 'X-App-UserId',
+            'limit' => 'limit',
+            'offset' => 'offset',
+            'groupId' => 'group_id'
     ];
 
     /**
@@ -100,6 +118,9 @@ class ListTtscVocabularyGroupsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
+    * limit  每页显示的条目数量。
+    * offset  偏移量，表示从此偏移量开始查询。
+    * groupId  分组id
     *
     * @var string[]
     */
@@ -108,7 +129,10 @@ class ListTtscVocabularyGroupsRequest implements ModelInterface, ArrayAccess
             'authorization' => 'setAuthorization',
             'xSdkDate' => 'setXSdkDate',
             'xProjectId' => 'setXProjectId',
-            'xAppUserId' => 'setXAppUserId'
+            'xAppUserId' => 'setXAppUserId',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset',
+            'groupId' => 'setGroupId'
     ];
 
     /**
@@ -118,6 +142,9 @@ class ListTtscVocabularyGroupsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
+    * limit  每页显示的条目数量。
+    * offset  偏移量，表示从此偏移量开始查询。
+    * groupId  分组id
     *
     * @var string[]
     */
@@ -126,7 +153,10 @@ class ListTtscVocabularyGroupsRequest implements ModelInterface, ArrayAccess
             'authorization' => 'getAuthorization',
             'xSdkDate' => 'getXSdkDate',
             'xProjectId' => 'getXProjectId',
-            'xAppUserId' => 'getXAppUserId'
+            'xAppUserId' => 'getXAppUserId',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset',
+            'groupId' => 'getGroupId'
     ];
 
     /**
@@ -192,6 +222,9 @@ class ListTtscVocabularyGroupsRequest implements ModelInterface, ArrayAccess
         $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
         $this->container['xProjectId'] = isset($data['xProjectId']) ? $data['xProjectId'] : null;
         $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
     }
 
     /**
@@ -231,6 +264,24 @@ class ListTtscVocabularyGroupsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['xAppUserId']) && (mb_strlen($this->container['xAppUserId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'xAppUserId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -363,6 +414,78 @@ class ListTtscVocabularyGroupsRequest implements ModelInterface, ArrayAccess
     public function setXAppUserId($xAppUserId)
     {
         $this->container['xAppUserId'] = $xAppUserId;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每页显示的条目数量。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页显示的条目数量。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  偏移量，表示从此偏移量开始查询。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 偏移量，表示从此偏移量开始查询。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  分组id
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 分组id
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
         return $this;
     }
 

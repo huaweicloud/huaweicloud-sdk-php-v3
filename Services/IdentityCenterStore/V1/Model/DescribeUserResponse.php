@@ -35,7 +35,7 @@ class DescribeUserResponse implements ModelInterface, ArrayAccess
     * profileUrl  与用户关联的URL
     * timezone  用户时区
     * title  用户头衔
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     * userName  用户名，用于标识用户的唯一字符串
     * userType  用户类型
     * createdAt  创建用户时的时间戳
@@ -91,7 +91,7 @@ class DescribeUserResponse implements ModelInterface, ArrayAccess
     * profileUrl  与用户关联的URL
     * timezone  用户时区
     * title  用户头衔
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     * userName  用户名，用于标识用户的唯一字符串
     * userType  用户类型
     * createdAt  创建用户时的时间戳
@@ -168,7 +168,7 @@ class DescribeUserResponse implements ModelInterface, ArrayAccess
     * profileUrl  与用户关联的URL
     * timezone  用户时区
     * title  用户头衔
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     * userName  用户名，用于标识用户的唯一字符串
     * userType  用户类型
     * createdAt  创建用户时的时间戳
@@ -224,7 +224,7 @@ class DescribeUserResponse implements ModelInterface, ArrayAccess
     * profileUrl  与用户关联的URL
     * timezone  用户时区
     * title  用户头衔
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     * userName  用户名，用于标识用户的唯一字符串
     * userType  用户类型
     * createdAt  创建用户时的时间戳
@@ -280,7 +280,7 @@ class DescribeUserResponse implements ModelInterface, ArrayAccess
     * profileUrl  与用户关联的URL
     * timezone  用户时区
     * title  用户头衔
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     * userName  用户名，用于标识用户的唯一字符串
     * userType  用户类型
     * createdAt  创建用户时的时间戳
@@ -863,7 +863,7 @@ class DescribeUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    *  身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @return string|null
     */
@@ -875,7 +875,7 @@ class DescribeUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string|null $userId 身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * @param string|null $userId 身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class CreateAppWhitelistPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * policyName  策略名称
-    * policyType  **参数解释**： 进程白名单策略类型进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
+    * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
     * learningDays  **参数解释**: 策略学习天数 **取值范围**: 最小值1，最大值1000
     * specifiedDir  **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否 **默认取值**： 不涉及
     * intercept  **参数解释**： 是否开启阻断 **取值范围**: - true：是 - false：否
@@ -49,7 +49,7 @@ class CreateAppWhitelistPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * policyName  策略名称
-    * policyType  **参数解释**： 进程白名单策略类型进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
+    * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
     * learningDays  **参数解释**: 策略学习天数 **取值范围**: 最小值1，最大值1000
     * specifiedDir  **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否 **默认取值**： 不涉及
     * intercept  **参数解释**： 是否开启阻断 **取值范围**: - true：是 - false：否
@@ -98,7 +98,7 @@ class CreateAppWhitelistPolicyRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * policyName  策略名称
-    * policyType  **参数解释**： 进程白名单策略类型进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
+    * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
     * learningDays  **参数解释**: 策略学习天数 **取值范围**: 最小值1，最大值1000
     * specifiedDir  **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否 **默认取值**： 不涉及
     * intercept  **参数解释**： 是否开启阻断 **取值范围**: - true：是 - false：否
@@ -126,7 +126,7 @@ class CreateAppWhitelistPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * policyName  策略名称
-    * policyType  **参数解释**： 进程白名单策略类型进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
+    * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
     * learningDays  **参数解释**: 策略学习天数 **取值范围**: 最小值1，最大值1000
     * specifiedDir  **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否 **默认取值**： 不涉及
     * intercept  **参数解释**： 是否开启阻断 **取值范围**: - true：是 - false：否
@@ -154,7 +154,7 @@ class CreateAppWhitelistPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * policyName  策略名称
-    * policyType  **参数解释**： 进程白名单策略类型进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
+    * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
     * learningDays  **参数解释**: 策略学习天数 **取值范围**: 最小值1，最大值1000
     * specifiedDir  **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否 **默认取值**： 不涉及
     * intercept  **参数解释**： 是否开启阻断 **取值范围**: - true：是 - false：否
@@ -339,7 +339,7 @@ class CreateAppWhitelistPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyType
-    *  **参数解释**： 进程白名单策略类型进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
+    *  **参数解释**： 进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
     *
     * @return string
     */
@@ -351,7 +351,7 @@ class CreateAppWhitelistPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets policyType
     *
-    * @param string $policyType **参数解释**： 进程白名单策略类型进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
+    * @param string $policyType **参数解释**： 进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
     *
     * @return $this
     */

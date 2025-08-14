@@ -22,28 +22,36 @@ class UpdateNoticeRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * noticeType  通知类型
     * enabledEventTypeNames  开启的通知的种类
+    * sendSwitch  是否开启消息通知。
     * paramConfig  通知参数配置
+    * useProjectNotice  是否使用项目级消息通知设置。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'noticeType' => 'string',
             'enabledEventTypeNames' => 'string[]',
-            'paramConfig' => 'string'
+            'sendSwitch' => 'string',
+            'paramConfig' => 'string',
+            'useProjectNotice' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * noticeType  通知类型
     * enabledEventTypeNames  开启的通知的种类
+    * sendSwitch  是否开启消息通知。
     * paramConfig  通知参数配置
+    * useProjectNotice  是否使用项目级消息通知设置。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'noticeType' => null,
         'enabledEventTypeNames' => null,
-        'paramConfig' => null
+        'sendSwitch' => null,
+        'paramConfig' => null,
+        'useProjectNotice' => null
     ];
 
     /**
@@ -71,42 +79,54 @@ class UpdateNoticeRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * noticeType  通知类型
     * enabledEventTypeNames  开启的通知的种类
+    * sendSwitch  是否开启消息通知。
     * paramConfig  通知参数配置
+    * useProjectNotice  是否使用项目级消息通知设置。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'noticeType' => 'notice_type',
             'enabledEventTypeNames' => 'enabled_event_type_names',
-            'paramConfig' => 'param_config'
+            'sendSwitch' => 'send_switch',
+            'paramConfig' => 'param_config',
+            'useProjectNotice' => 'use_project_notice'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * noticeType  通知类型
     * enabledEventTypeNames  开启的通知的种类
+    * sendSwitch  是否开启消息通知。
     * paramConfig  通知参数配置
+    * useProjectNotice  是否使用项目级消息通知设置。
     *
     * @var string[]
     */
     protected static $setters = [
             'noticeType' => 'setNoticeType',
             'enabledEventTypeNames' => 'setEnabledEventTypeNames',
-            'paramConfig' => 'setParamConfig'
+            'sendSwitch' => 'setSendSwitch',
+            'paramConfig' => 'setParamConfig',
+            'useProjectNotice' => 'setUseProjectNotice'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * noticeType  通知类型
     * enabledEventTypeNames  开启的通知的种类
+    * sendSwitch  是否开启消息通知。
     * paramConfig  通知参数配置
+    * useProjectNotice  是否使用项目级消息通知设置。
     *
     * @var string[]
     */
     protected static $getters = [
             'noticeType' => 'getNoticeType',
             'enabledEventTypeNames' => 'getEnabledEventTypeNames',
-            'paramConfig' => 'getParamConfig'
+            'sendSwitch' => 'getSendSwitch',
+            'paramConfig' => 'getParamConfig',
+            'useProjectNotice' => 'getUseProjectNotice'
     ];
 
     /**
@@ -169,7 +189,9 @@ class UpdateNoticeRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['noticeType'] = isset($data['noticeType']) ? $data['noticeType'] : null;
         $this->container['enabledEventTypeNames'] = isset($data['enabledEventTypeNames']) ? $data['enabledEventTypeNames'] : null;
+        $this->container['sendSwitch'] = isset($data['sendSwitch']) ? $data['sendSwitch'] : null;
         $this->container['paramConfig'] = isset($data['paramConfig']) ? $data['paramConfig'] : null;
+        $this->container['useProjectNotice'] = isset($data['useProjectNotice']) ? $data['useProjectNotice'] : null;
     }
 
     /**
@@ -249,6 +271,30 @@ class UpdateNoticeRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets sendSwitch
+    *  是否开启消息通知。
+    *
+    * @return string|null
+    */
+    public function getSendSwitch()
+    {
+        return $this->container['sendSwitch'];
+    }
+
+    /**
+    * Sets sendSwitch
+    *
+    * @param string|null $sendSwitch 是否开启消息通知。
+    *
+    * @return $this
+    */
+    public function setSendSwitch($sendSwitch)
+    {
+        $this->container['sendSwitch'] = $sendSwitch;
+        return $this;
+    }
+
+    /**
     * Gets paramConfig
     *  通知参数配置
     *
@@ -269,6 +315,30 @@ class UpdateNoticeRequestBody implements ModelInterface, ArrayAccess
     public function setParamConfig($paramConfig)
     {
         $this->container['paramConfig'] = $paramConfig;
+        return $this;
+    }
+
+    /**
+    * Gets useProjectNotice
+    *  是否使用项目级消息通知设置。
+    *
+    * @return string|null
+    */
+    public function getUseProjectNotice()
+    {
+        return $this->container['useProjectNotice'];
+    }
+
+    /**
+    * Sets useProjectNotice
+    *
+    * @param string|null $useProjectNotice 是否使用项目级消息通知设置。
+    *
+    * @return $this
+    */
+    public function setUseProjectNotice($useProjectNotice)
+    {
+        $this->container['useProjectNotice'] = $useProjectNotice;
         return $this;
     }
 

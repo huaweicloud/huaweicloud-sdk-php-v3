@@ -24,10 +24,10 @@ class CheckFeatureRuleInfo implements ModelInterface, ArrayAccess
     * chkFeatureName  检测规则标识
     * chkFeatureDesc  检测规则描述
     * featureConfigure  检测特性规则配置信息
-    * protectiveAction  防护动作,包含如下 -1 检测   -2 检测并阻断/拦截
-    * optionalProtectiveAction  可选防护动作,包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
-    * enabled  开启状态,包含如下 -0 开启 -1 关闭
-    * editable  是否可编辑配置信息,包含如下 -0 否   -1 是
+    * protectiveAction  防护动作，包含如下 -1 检测   -2 检测并阻断/拦截
+    * optionalProtectiveAction  可选防护动作，包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
+    * enabled  开启状态，包含如下 -0 开启 -1 关闭
+    * editable  是否可编辑配置信息，包含如下 -0 否   -1 是
     *
     * @var string[]
     */
@@ -48,10 +48,10 @@ class CheckFeatureRuleInfo implements ModelInterface, ArrayAccess
     * chkFeatureName  检测规则标识
     * chkFeatureDesc  检测规则描述
     * featureConfigure  检测特性规则配置信息
-    * protectiveAction  防护动作,包含如下 -1 检测   -2 检测并阻断/拦截
-    * optionalProtectiveAction  可选防护动作,包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
-    * enabled  开启状态,包含如下 -0 开启 -1 关闭
-    * editable  是否可编辑配置信息,包含如下 -0 否   -1 是
+    * protectiveAction  防护动作，包含如下 -1 检测   -2 检测并阻断/拦截
+    * optionalProtectiveAction  可选防护动作，包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
+    * enabled  开启状态，包含如下 -0 开启 -1 关闭
+    * editable  是否可编辑配置信息，包含如下 -0 否   -1 是
     *
     * @var string[]
     */
@@ -93,10 +93,10 @@ class CheckFeatureRuleInfo implements ModelInterface, ArrayAccess
     * chkFeatureName  检测规则标识
     * chkFeatureDesc  检测规则描述
     * featureConfigure  检测特性规则配置信息
-    * protectiveAction  防护动作,包含如下 -1 检测   -2 检测并阻断/拦截
-    * optionalProtectiveAction  可选防护动作,包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
-    * enabled  开启状态,包含如下 -0 开启 -1 关闭
-    * editable  是否可编辑配置信息,包含如下 -0 否   -1 是
+    * protectiveAction  防护动作，包含如下 -1 检测   -2 检测并阻断/拦截
+    * optionalProtectiveAction  可选防护动作，包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
+    * enabled  开启状态，包含如下 -0 开启 -1 关闭
+    * editable  是否可编辑配置信息，包含如下 -0 否   -1 是
     *
     * @var string[]
     */
@@ -117,10 +117,10 @@ class CheckFeatureRuleInfo implements ModelInterface, ArrayAccess
     * chkFeatureName  检测规则标识
     * chkFeatureDesc  检测规则描述
     * featureConfigure  检测特性规则配置信息
-    * protectiveAction  防护动作,包含如下 -1 检测   -2 检测并阻断/拦截
-    * optionalProtectiveAction  可选防护动作,包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
-    * enabled  开启状态,包含如下 -0 开启 -1 关闭
-    * editable  是否可编辑配置信息,包含如下 -0 否   -1 是
+    * protectiveAction  防护动作，包含如下 -1 检测   -2 检测并阻断/拦截
+    * optionalProtectiveAction  可选防护动作，包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
+    * enabled  开启状态，包含如下 -0 开启 -1 关闭
+    * editable  是否可编辑配置信息，包含如下 -0 否   -1 是
     *
     * @var string[]
     */
@@ -141,10 +141,10 @@ class CheckFeatureRuleInfo implements ModelInterface, ArrayAccess
     * chkFeatureName  检测规则标识
     * chkFeatureDesc  检测规则描述
     * featureConfigure  检测特性规则配置信息
-    * protectiveAction  防护动作,包含如下 -1 检测   -2 检测并阻断/拦截
-    * optionalProtectiveAction  可选防护动作,包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
-    * enabled  开启状态,包含如下 -0 开启 -1 关闭
-    * editable  是否可编辑配置信息,包含如下 -0 否   -1 是
+    * protectiveAction  防护动作，包含如下 -1 检测   -2 检测并阻断/拦截
+    * optionalProtectiveAction  可选防护动作，包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
+    * enabled  开启状态，包含如下 -0 开启 -1 关闭
+    * editable  是否可编辑配置信息，包含如下 -0 否   -1 是
     *
     * @var string[]
     */
@@ -395,7 +395,7 @@ class CheckFeatureRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectiveAction
-    *  防护动作,包含如下 -1 检测   -2 检测并阻断/拦截
+    *  防护动作，包含如下 -1 检测   -2 检测并阻断/拦截
     *
     * @return int|null
     */
@@ -407,7 +407,7 @@ class CheckFeatureRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectiveAction
     *
-    * @param int|null $protectiveAction 防护动作,包含如下 -1 检测   -2 检测并阻断/拦截
+    * @param int|null $protectiveAction 防护动作，包含如下 -1 检测   -2 检测并阻断/拦截
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class CheckFeatureRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets optionalProtectiveAction
-    *  可选防护动作,包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
+    *  可选防护动作，包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
     *
     * @return int|null
     */
@@ -431,7 +431,7 @@ class CheckFeatureRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets optionalProtectiveAction
     *
-    * @param int|null $optionalProtectiveAction 可选防护动作,包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
+    * @param int|null $optionalProtectiveAction 可选防护动作，包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
     *
     * @return $this
     */
@@ -443,7 +443,7 @@ class CheckFeatureRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  开启状态,包含如下 -0 开启 -1 关闭
+    *  开启状态，包含如下 -0 开启 -1 关闭
     *
     * @return int|null
     */
@@ -455,7 +455,7 @@ class CheckFeatureRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param int|null $enabled 开启状态,包含如下 -0 开启 -1 关闭
+    * @param int|null $enabled 开启状态，包含如下 -0 开启 -1 关闭
     *
     * @return $this
     */
@@ -467,7 +467,7 @@ class CheckFeatureRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets editable
-    *  是否可编辑配置信息,包含如下 -0 否   -1 是
+    *  是否可编辑配置信息，包含如下 -0 否   -1 是
     *
     * @return int|null
     */
@@ -479,7 +479,7 @@ class CheckFeatureRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets editable
     *
-    * @param int|null $editable 是否可编辑配置信息,包含如下 -0 否   -1 是
+    * @param int|null $editable 是否可编辑配置信息，包含如下 -0 否   -1 是
     *
     * @return $this
     */

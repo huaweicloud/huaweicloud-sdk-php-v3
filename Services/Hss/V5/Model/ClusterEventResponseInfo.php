@@ -28,7 +28,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     * eventId  事件id
     * eventType  事件类型
     * eventContent  事件内容
-    * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * handleStatus  处理状态，包含如下:   - unhandled：未处理   - handled：已处理
     * createTime  创建时间
     * updateTime  更新时间
     * projectId  项目ID
@@ -68,7 +68,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     * eventId  事件id
     * eventType  事件类型
     * eventContent  事件内容
-    * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * handleStatus  处理状态，包含如下:   - unhandled：未处理   - handled：已处理
     * createTime  创建时间
     * updateTime  更新时间
     * projectId  项目ID
@@ -129,7 +129,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     * eventId  事件id
     * eventType  事件类型
     * eventContent  事件内容
-    * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * handleStatus  处理状态，包含如下:   - unhandled：未处理   - handled：已处理
     * createTime  创建时间
     * updateTime  更新时间
     * projectId  项目ID
@@ -169,7 +169,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     * eventId  事件id
     * eventType  事件类型
     * eventContent  事件内容
-    * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * handleStatus  处理状态，包含如下:   - unhandled：未处理   - handled：已处理
     * createTime  创建时间
     * updateTime  更新时间
     * projectId  项目ID
@@ -209,7 +209,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     * eventId  事件id
     * eventType  事件类型
     * eventContent  事件内容
-    * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * handleStatus  处理状态，包含如下:   - unhandled：未处理   - handled：已处理
     * createTime  创建时间
     * updateTime  更新时间
     * projectId  项目ID
@@ -621,7 +621,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets handleStatus
-    *  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    *  处理状态，包含如下:   - unhandled：未处理   - handled：已处理
     *
     * @return string|null
     */
@@ -633,7 +633,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets handleStatus
     *
-    * @param string|null $handleStatus 处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * @param string|null $handleStatus 处理状态，包含如下:   - unhandled：未处理   - handled：已处理
     *
     * @return $this
     */

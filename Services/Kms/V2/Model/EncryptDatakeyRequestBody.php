@@ -25,6 +25,9 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     * datakeyPlainLength  DEK明文字节长度，取值范围为1~1024。 DEK明文字节长度，取值为“64”。
     * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
+    * pin  指定PIN码保护。仅四级密评场景支持该参数。
+    * pinType  pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
+    * keySpec  指定生成的密钥算法。有效值： SM2、RSA。
     *
     * @var string[]
     */
@@ -33,7 +36,10 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
             'plainText' => 'string',
             'datakeyPlainLength' => 'string',
             'additionalAuthenticatedData' => 'string',
-            'sequence' => 'string'
+            'sequence' => 'string',
+            'pin' => 'string',
+            'pinType' => 'string',
+            'keySpec' => 'string'
     ];
 
     /**
@@ -43,6 +49,9 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     * datakeyPlainLength  DEK明文字节长度，取值范围为1~1024。 DEK明文字节长度，取值为“64”。
     * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
+    * pin  指定PIN码保护。仅四级密评场景支持该参数。
+    * pinType  pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
+    * keySpec  指定生成的密钥算法。有效值： SM2、RSA。
     *
     * @var string[]
     */
@@ -51,7 +60,10 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
         'plainText' => null,
         'datakeyPlainLength' => null,
         'additionalAuthenticatedData' => null,
-        'sequence' => null
+        'sequence' => null,
+        'pin' => null,
+        'pinType' => null,
+        'keySpec' => null
     ];
 
     /**
@@ -82,6 +94,9 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     * datakeyPlainLength  DEK明文字节长度，取值范围为1~1024。 DEK明文字节长度，取值为“64”。
     * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
+    * pin  指定PIN码保护。仅四级密评场景支持该参数。
+    * pinType  pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
+    * keySpec  指定生成的密钥算法。有效值： SM2、RSA。
     *
     * @var string[]
     */
@@ -90,7 +105,10 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
             'plainText' => 'plain_text',
             'datakeyPlainLength' => 'datakey_plain_length',
             'additionalAuthenticatedData' => 'additional_authenticated_data',
-            'sequence' => 'sequence'
+            'sequence' => 'sequence',
+            'pin' => 'pin',
+            'pinType' => 'pin_type',
+            'keySpec' => 'key_spec'
     ];
 
     /**
@@ -100,6 +118,9 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     * datakeyPlainLength  DEK明文字节长度，取值范围为1~1024。 DEK明文字节长度，取值为“64”。
     * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
+    * pin  指定PIN码保护。仅四级密评场景支持该参数。
+    * pinType  pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
+    * keySpec  指定生成的密钥算法。有效值： SM2、RSA。
     *
     * @var string[]
     */
@@ -108,7 +129,10 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
             'plainText' => 'setPlainText',
             'datakeyPlainLength' => 'setDatakeyPlainLength',
             'additionalAuthenticatedData' => 'setAdditionalAuthenticatedData',
-            'sequence' => 'setSequence'
+            'sequence' => 'setSequence',
+            'pin' => 'setPin',
+            'pinType' => 'setPinType',
+            'keySpec' => 'setKeySpec'
     ];
 
     /**
@@ -118,6 +142,9 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     * datakeyPlainLength  DEK明文字节长度，取值范围为1~1024。 DEK明文字节长度，取值为“64”。
     * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
+    * pin  指定PIN码保护。仅四级密评场景支持该参数。
+    * pinType  pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
+    * keySpec  指定生成的密钥算法。有效值： SM2、RSA。
     *
     * @var string[]
     */
@@ -126,7 +153,10 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
             'plainText' => 'getPlainText',
             'datakeyPlainLength' => 'getDatakeyPlainLength',
             'additionalAuthenticatedData' => 'getAdditionalAuthenticatedData',
-            'sequence' => 'getSequence'
+            'sequence' => 'getSequence',
+            'pin' => 'getPin',
+            'pinType' => 'getPinType',
+            'keySpec' => 'getKeySpec'
     ];
 
     /**
@@ -169,7 +199,22 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const KEY_SPEC_SM2 = 'SM2';
+    const KEY_SPEC_RSA = 'RSA';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getKeySpecAllowableValues()
+    {
+        return [
+            self::KEY_SPEC_SM2,
+            self::KEY_SPEC_RSA,
+        ];
+    }
 
 
     /**
@@ -192,6 +237,9 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
         $this->container['datakeyPlainLength'] = isset($data['datakeyPlainLength']) ? $data['datakeyPlainLength'] : null;
         $this->container['additionalAuthenticatedData'] = isset($data['additionalAuthenticatedData']) ? $data['additionalAuthenticatedData'] : null;
         $this->container['sequence'] = isset($data['sequence']) ? $data['sequence'] : null;
+        $this->container['pin'] = isset($data['pin']) ? $data['pin'] : null;
+        $this->container['pinType'] = isset($data['pinType']) ? $data['pinType'] : null;
+        $this->container['keySpec'] = isset($data['keySpec']) ? $data['keySpec'] : null;
     }
 
     /**
@@ -241,6 +289,14 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['sequence']) && (mb_strlen($this->container['sequence']) < 0)) {
                 $invalidProperties[] = "invalid value for 'sequence', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getKeySpecAllowableValues();
+                if (!is_null($this->container['keySpec']) && !in_array($this->container['keySpec'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'keySpec', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -372,6 +428,78 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     public function setSequence($sequence)
     {
         $this->container['sequence'] = $sequence;
+        return $this;
+    }
+
+    /**
+    * Gets pin
+    *  指定PIN码保护。仅四级密评场景支持该参数。
+    *
+    * @return string|null
+    */
+    public function getPin()
+    {
+        return $this->container['pin'];
+    }
+
+    /**
+    * Sets pin
+    *
+    * @param string|null $pin 指定PIN码保护。仅四级密评场景支持该参数。
+    *
+    * @return $this
+    */
+    public function setPin($pin)
+    {
+        $this->container['pin'] = $pin;
+        return $this;
+    }
+
+    /**
+    * Gets pinType
+    *  pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
+    *
+    * @return string|null
+    */
+    public function getPinType()
+    {
+        return $this->container['pinType'];
+    }
+
+    /**
+    * Sets pinType
+    *
+    * @param string|null $pinType pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
+    *
+    * @return $this
+    */
+    public function setPinType($pinType)
+    {
+        $this->container['pinType'] = $pinType;
+        return $this;
+    }
+
+    /**
+    * Gets keySpec
+    *  指定生成的密钥算法。有效值： SM2、RSA。
+    *
+    * @return string|null
+    */
+    public function getKeySpec()
+    {
+        return $this->container['keySpec'];
+    }
+
+    /**
+    * Sets keySpec
+    *
+    * @param string|null $keySpec 指定生成的密钥算法。有效值： SM2、RSA。
+    *
+    * @return $this
+    */
+    public function setKeySpec($keySpec)
+    {
+        $this->container['keySpec'] = $keySpec;
         return $this;
     }
 

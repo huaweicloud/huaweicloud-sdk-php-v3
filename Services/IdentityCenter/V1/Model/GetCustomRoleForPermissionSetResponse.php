@@ -159,8 +159,8 @@ class GetCustomRoleForPermissionSetResponse implements ModelInterface, ArrayAcce
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['customRole']) && (mb_strlen($this->container['customRole']) > 131072)) {
-                $invalidProperties[] = "invalid value for 'customRole', the character length must be smaller than or equal to 131072.";
+            if (!is_null($this->container['customRole']) && (mb_strlen($this->container['customRole']) > 10240)) {
+                $invalidProperties[] = "invalid value for 'customRole', the character length must be smaller than or equal to 10240.";
             }
             if (!is_null($this->container['customRole']) && (mb_strlen($this->container['customRole']) < 1)) {
                 $invalidProperties[] = "invalid value for 'customRole', the character length must be bigger than or equal to 1.";

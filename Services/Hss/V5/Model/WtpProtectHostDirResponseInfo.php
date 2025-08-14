@@ -25,7 +25,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     * excludeFilePath  排除文件路径
     * exclueFilePath  排除文件路径
     * localBackupDir  本地备份路径
-    * protectStatus  防护状态（closed-未开启，opened-防护中, opening-开启中, closing-关闭中, open_failed-防护失败)
+    * protectStatus  防护状态（closed-未开启，opened-防护中，opening-开启中，closing-关闭中，open_failed-防护失败）
     * error  失败原因
     *
     * @var string[]
@@ -47,7 +47,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     * excludeFilePath  排除文件路径
     * exclueFilePath  排除文件路径
     * localBackupDir  本地备份路径
-    * protectStatus  防护状态（closed-未开启，opened-防护中, opening-开启中, closing-关闭中, open_failed-防护失败)
+    * protectStatus  防护状态（closed-未开启，opened-防护中，opening-开启中，closing-关闭中，open_failed-防护失败）
     * error  失败原因
     *
     * @var string[]
@@ -90,7 +90,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     * excludeFilePath  排除文件路径
     * exclueFilePath  排除文件路径
     * localBackupDir  本地备份路径
-    * protectStatus  防护状态（closed-未开启，opened-防护中, opening-开启中, closing-关闭中, open_failed-防护失败)
+    * protectStatus  防护状态（closed-未开启，opened-防护中，opening-开启中，closing-关闭中，open_failed-防护失败）
     * error  失败原因
     *
     * @var string[]
@@ -112,7 +112,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     * excludeFilePath  排除文件路径
     * exclueFilePath  排除文件路径
     * localBackupDir  本地备份路径
-    * protectStatus  防护状态（closed-未开启，opened-防护中, opening-开启中, closing-关闭中, open_failed-防护失败)
+    * protectStatus  防护状态（closed-未开启，opened-防护中，opening-开启中，closing-关闭中，open_failed-防护失败）
     * error  失败原因
     *
     * @var string[]
@@ -134,7 +134,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     * excludeFilePath  排除文件路径
     * exclueFilePath  排除文件路径
     * localBackupDir  本地备份路径
-    * protectStatus  防护状态（closed-未开启，opened-防护中, opening-开启中, closing-关闭中, open_failed-防护失败)
+    * protectStatus  防护状态（closed-未开启，opened-防护中，opening-开启中，closing-关闭中，open_failed-防护失败）
     * error  失败原因
     *
     * @var string[]
@@ -431,7 +431,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  防护状态（closed-未开启，opened-防护中, opening-开启中, closing-关闭中, open_failed-防护失败)
+    *  防护状态（closed-未开启，opened-防护中，opening-开启中，closing-关闭中，open_failed-防护失败）
     *
     * @return string|null
     */
@@ -443,7 +443,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus 防护状态（closed-未开启，opened-防护中, opening-开启中, closing-关闭中, open_failed-防护失败)
+    * @param string|null $protectStatus 防护状态（closed-未开启，opened-防护中，opening-开启中，closing-关闭中，open_failed-防护失败）
     *
     * @return $this
     */

@@ -884,6 +884,9 @@ class CesAsyncClient extends Client
         if ($localVarParams['eventType'] !== null) {
             $queryParams['event_type'] = $localVarParams['eventType'];
         }
+        if ($localVarParams['subEventType'] !== null) {
+            $queryParams['sub_event_type'] = $localVarParams['subEventType'];
+        }
         if ($localVarParams['eventSource'] !== null) {
             $queryParams['event_source'] = $localVarParams['eventSource'];
         }
@@ -975,6 +978,9 @@ class CesAsyncClient extends Client
         }
         if ($localVarParams['eventType'] !== null) {
             $queryParams['event_type'] = $localVarParams['eventType'];
+        }
+        if ($localVarParams['subEventType'] !== null) {
+            $queryParams['sub_event_type'] = $localVarParams['subEventType'];
         }
         if ($localVarParams['eventName'] !== null) {
             $queryParams['event_name'] = $localVarParams['eventName'];

@@ -20,7 +20,7 @@ class ContainerExtraLinuxInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * os  操作系统: - ubt : ubuntu - centos : centos - debian, - redhat, - opensuse, - kylin - uos - euleros
+    * os  操作系统: - ubt : ubuntu - centos : centos - debian - redhat - opensuse - kylin - uos - euleros
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ContainerExtraLinuxInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * os  操作系统: - ubt : ubuntu - centos : centos - debian, - redhat, - opensuse, - kylin - uos - euleros
+    * os  操作系统: - ubt : ubuntu - centos : centos - debian - redhat - opensuse - kylin - uos - euleros
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ContainerExtraLinuxInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * os  操作系统: - ubt : ubuntu - centos : centos - debian, - redhat, - opensuse, - kylin - uos - euleros
+    * os  操作系统: - ubt : ubuntu - centos : centos - debian - redhat - opensuse - kylin - uos - euleros
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ContainerExtraLinuxInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * os  操作系统: - ubt : ubuntu - centos : centos - debian, - redhat, - opensuse, - kylin - uos - euleros
+    * os  操作系统: - ubt : ubuntu - centos : centos - debian - redhat - opensuse - kylin - uos - euleros
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ContainerExtraLinuxInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * os  操作系统: - ubt : ubuntu - centos : centos - debian, - redhat, - opensuse, - kylin - uos - euleros
+    * os  操作系统: - ubt : ubuntu - centos : centos - debian - redhat - opensuse - kylin - uos - euleros
     *
     * @var string[]
     */
@@ -183,7 +183,7 @@ class ContainerExtraLinuxInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets os
-    *  操作系统: - ubt : ubuntu - centos : centos - debian, - redhat, - opensuse, - kylin - uos - euleros
+    *  操作系统: - ubt : ubuntu - centos : centos - debian - redhat - opensuse - kylin - uos - euleros
     *
     * @return string|null
     */
@@ -195,7 +195,7 @@ class ContainerExtraLinuxInfo implements ModelInterface, ArrayAccess
     /**
     * Sets os
     *
-    * @param string|null $os 操作系统: - ubt : ubuntu - centos : centos - debian, - redhat, - opensuse, - kylin - uos - euleros
+    * @param string|null $os 操作系统: - ubt : ubuntu - centos : centos - debian - redhat - opensuse - kylin - uos - euleros
     *
     * @return $this
     */

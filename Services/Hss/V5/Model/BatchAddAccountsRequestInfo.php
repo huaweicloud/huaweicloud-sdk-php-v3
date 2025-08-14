@@ -20,7 +20,7 @@ class BatchAddAccountsRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dataList  账号列表表详情
+    * dataList  账号列表详情
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchAddAccountsRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dataList  账号列表表详情
+    * dataList  账号列表详情
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchAddAccountsRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dataList  账号列表表详情
+    * dataList  账号列表详情
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchAddAccountsRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dataList  账号列表表详情
+    * dataList  账号列表详情
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchAddAccountsRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dataList  账号列表表详情
+    * dataList  账号列表详情
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class BatchAddAccountsRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  账号列表表详情
+    *  账号列表详情
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\AddAccountsRequestInfo[]|null
     */
@@ -186,7 +186,7 @@ class BatchAddAccountsRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\AddAccountsRequestInfo[]|null $dataList 账号列表表详情
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\AddAccountsRequestInfo[]|null $dataList 账号列表详情
     *
     * @return $this
     */

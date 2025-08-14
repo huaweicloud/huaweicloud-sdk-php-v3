@@ -20,8 +20,8 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
     * userName  用户名
@@ -33,7 +33,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * recentScanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
-    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
+    * containerName  **参数解释**： 容器实例名称，只有容器类型的告警有 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -56,8 +56,8 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
     * userName  用户名
@@ -69,7 +69,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * recentScanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
-    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
+    * containerName  **参数解释**： 容器实例名称，只有容器类型的告警有 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -113,8 +113,8 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
     * userName  用户名
@@ -126,7 +126,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * recentScanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
-    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
+    * containerName  **参数解释**： 容器实例名称，只有容器类型的告警有 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -149,8 +149,8 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
     * userName  用户名
@@ -162,7 +162,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * recentScanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
-    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
+    * containerName  **参数解释**： 容器实例名称，只有容器类型的告警有 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -185,8 +185,8 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
     * userName  用户名
@@ -198,7 +198,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * recentScanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
-    * containerName  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
+    * containerName  **参数解释**： 容器实例名称，只有容器类型的告警有 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -380,7 +380,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    *  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     *
     * @return string|null
     */
@@ -392,7 +392,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * @param string|null $agentId **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -404,7 +404,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    *  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     *
     * @return string|null
     */
@@ -416,7 +416,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * @param string|null $hostId **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     *
     * @return $this
     */
@@ -692,7 +692,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerName
-    *  **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
+    *  **参数解释**： 容器实例名称，只有容器类型的告警有 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -704,7 +704,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerName
     *
-    * @param string|null $containerName **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
+    * @param string|null $containerName **参数解释**： 容器实例名称，只有容器类型的告警有 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */

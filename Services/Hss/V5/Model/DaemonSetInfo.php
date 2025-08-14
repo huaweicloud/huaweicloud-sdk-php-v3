@@ -23,7 +23,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
     * name  daemonset名称
     * namespaceName  命名空间名称
     * clusterId  集群id
-    * clusterType  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
+    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws 亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     * clusterName  集群名称
     * status  状态，包含以下几种 -Running：正常运行 -Failed：存在异常
     * podsNum  实例个数
@@ -51,7 +51,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
     * name  daemonset名称
     * namespaceName  命名空间名称
     * clusterId  集群id
-    * clusterType  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
+    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws 亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     * clusterName  集群名称
     * status  状态，包含以下几种 -Running：正常运行 -Failed：存在异常
     * podsNum  实例个数
@@ -100,7 +100,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
     * name  daemonset名称
     * namespaceName  命名空间名称
     * clusterId  集群id
-    * clusterType  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
+    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws 亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     * clusterName  集群名称
     * status  状态，包含以下几种 -Running：正常运行 -Failed：存在异常
     * podsNum  实例个数
@@ -128,7 +128,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
     * name  daemonset名称
     * namespaceName  命名空间名称
     * clusterId  集群id
-    * clusterType  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
+    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws 亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     * clusterName  集群名称
     * status  状态，包含以下几种 -Running：正常运行 -Failed：存在异常
     * podsNum  实例个数
@@ -156,7 +156,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
     * name  daemonset名称
     * namespaceName  命名空间名称
     * clusterId  集群id
-    * clusterType  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
+    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws 亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     * clusterName  集群名称
     * status  状态，包含以下几种 -Running：正常运行 -Failed：存在异常
     * podsNum  实例个数
@@ -399,7 +399,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterType
-    *  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
+    *  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws 亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     *
     * @return string|null
     */
@@ -411,7 +411,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterType
     *
-    * @param string|null $clusterType 集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
+    * @param string|null $clusterType 集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws 亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     *
     * @return $this
     */

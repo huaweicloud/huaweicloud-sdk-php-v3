@@ -21,7 +21,7 @@ class ListAccountsForProvisionedPermissionSetResponse implements ModelInterface,
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accountIds  账号ID列表
+    * accountIds  账户ID列表
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListAccountsForProvisionedPermissionSetResponse implements ModelInterface,
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accountIds  账号ID列表
+    * accountIds  账户ID列表
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListAccountsForProvisionedPermissionSetResponse implements ModelInterface,
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accountIds  账号ID列表
+    * accountIds  账户ID列表
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListAccountsForProvisionedPermissionSetResponse implements ModelInterface,
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accountIds  账号ID列表
+    * accountIds  账户ID列表
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListAccountsForProvisionedPermissionSetResponse implements ModelInterface,
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accountIds  账号ID列表
+    * accountIds  账户ID列表
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ListAccountsForProvisionedPermissionSetResponse implements ModelInterface,
 
     /**
     * Gets accountIds
-    *  账号ID列表
+    *  账户ID列表
     *
     * @return string[]|null
     */
@@ -198,7 +198,7 @@ class ListAccountsForProvisionedPermissionSetResponse implements ModelInterface,
     /**
     * Sets accountIds
     *
-    * @param string[]|null $accountIds 账号ID列表
+    * @param string[]|null $accountIds 账户ID列表
     *
     * @return $this
     */

@@ -23,7 +23,7 @@ class CreateAntiVirusTaskRequestInfo implements ModelInterface, ArrayAccess
     * taskName  任务名称
     * taskId  任务ID 创建病毒扫描任务时,task_id是null.重新扫描时，task_id不是null,是当前任务的ID
     * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * hostIds  策略管理主机列表
     *
     * @var string[]
@@ -41,7 +41,7 @@ class CreateAntiVirusTaskRequestInfo implements ModelInterface, ArrayAccess
     * taskName  任务名称
     * taskId  任务ID 创建病毒扫描任务时,task_id是null.重新扫描时，task_id不是null,是当前任务的ID
     * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * hostIds  策略管理主机列表
     *
     * @var string[]
@@ -80,7 +80,7 @@ class CreateAntiVirusTaskRequestInfo implements ModelInterface, ArrayAccess
     * taskName  任务名称
     * taskId  任务ID 创建病毒扫描任务时,task_id是null.重新扫描时，task_id不是null,是当前任务的ID
     * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * hostIds  策略管理主机列表
     *
     * @var string[]
@@ -98,7 +98,7 @@ class CreateAntiVirusTaskRequestInfo implements ModelInterface, ArrayAccess
     * taskName  任务名称
     * taskId  任务ID 创建病毒扫描任务时,task_id是null.重新扫描时，task_id不是null,是当前任务的ID
     * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * hostIds  策略管理主机列表
     *
     * @var string[]
@@ -116,7 +116,7 @@ class CreateAntiVirusTaskRequestInfo implements ModelInterface, ArrayAccess
     * taskName  任务名称
     * taskId  任务ID 创建病毒扫描任务时,task_id是null.重新扫描时，task_id不是null,是当前任务的ID
     * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
-    * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     * hostIds  策略管理主机列表
     *
     * @var string[]
@@ -323,7 +323,7 @@ class CreateAntiVirusTaskRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    *  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     *
     * @return string
     */
@@ -335,7 +335,7 @@ class CreateAntiVirusTaskRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action 处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+    * @param string $action 处置动作，包含如下:   - auto：自动处置   - manual：人工处置
     *
     * @return $this
     */

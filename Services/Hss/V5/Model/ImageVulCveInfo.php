@@ -22,7 +22,7 @@ class ImageVulCveInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * cveId  cve id
     * cvssScore  CVSS分数
-    * publishTime  公布时间，时间单位 毫秒（ms）
+    * publishTime  公布时间，时间单位：毫秒（ms）
     * description  cve描述
     *
     * @var string[]
@@ -38,7 +38,7 @@ class ImageVulCveInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * cveId  cve id
     * cvssScore  CVSS分数
-    * publishTime  公布时间，时间单位 毫秒（ms）
+    * publishTime  公布时间，时间单位：毫秒（ms）
     * description  cve描述
     *
     * @var string[]
@@ -75,7 +75,7 @@ class ImageVulCveInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * cveId  cve id
     * cvssScore  CVSS分数
-    * publishTime  公布时间，时间单位 毫秒（ms）
+    * publishTime  公布时间，时间单位：毫秒（ms）
     * description  cve描述
     *
     * @var string[]
@@ -91,7 +91,7 @@ class ImageVulCveInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * cveId  cve id
     * cvssScore  CVSS分数
-    * publishTime  公布时间，时间单位 毫秒（ms）
+    * publishTime  公布时间，时间单位：毫秒（ms）
     * description  cve描述
     *
     * @var string[]
@@ -107,7 +107,7 @@ class ImageVulCveInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * cveId  cve id
     * cvssScore  CVSS分数
-    * publishTime  公布时间，时间单位 毫秒（ms）
+    * publishTime  公布时间，时间单位：毫秒（ms）
     * description  cve描述
     *
     * @var string[]
@@ -279,7 +279,7 @@ class ImageVulCveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publishTime
-    *  公布时间，时间单位 毫秒（ms）
+    *  公布时间，时间单位：毫秒（ms）
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class ImageVulCveInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publishTime
     *
-    * @param int|null $publishTime 公布时间，时间单位 毫秒（ms）
+    * @param int|null $publishTime 公布时间，时间单位：毫秒（ms）
     *
     * @return $this
     */

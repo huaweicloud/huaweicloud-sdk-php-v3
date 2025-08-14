@@ -30,10 +30,10 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * latestVersion  仅关注最新版本镜像
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  创建时间开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     *
     * @var string[]
     */
@@ -66,10 +66,10 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * latestVersion  仅关注最新版本镜像
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  创建时间开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     *
     * @var string[]
     */
@@ -123,10 +123,10 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * latestVersion  仅关注最新版本镜像
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  创建时间开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     *
     * @var string[]
     */
@@ -159,10 +159,10 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * latestVersion  仅关注最新版本镜像
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  创建时间开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     *
     * @var string[]
     */
@@ -195,10 +195,10 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * latestVersion  仅关注最新版本镜像
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  创建时间开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     *
     * @var string[]
     */
@@ -635,7 +635,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets startLatestUpdateTime
-    *  创建时间开始日期，时间单位 毫秒（ms）
+    *  创建时间开始日期，时间单位：毫秒（ms）
     *
     * @return int|null
     */
@@ -647,7 +647,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets startLatestUpdateTime
     *
-    * @param int|null $startLatestUpdateTime 创建时间开始日期，时间单位 毫秒（ms）
+    * @param int|null $startLatestUpdateTime 创建时间开始日期，时间单位：毫秒（ms）
     *
     * @return $this
     */
@@ -659,7 +659,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets endLatestUpdateTime
-    *  创建时间结束日期，时间单位 毫秒（ms）
+    *  创建时间结束日期，时间单位：毫秒（ms）
     *
     * @return int|null
     */
@@ -671,7 +671,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets endLatestUpdateTime
     *
-    * @param int|null $endLatestUpdateTime 创建时间结束日期，时间单位 毫秒（ms）
+    * @param int|null $endLatestUpdateTime 创建时间结束日期，时间单位：毫秒（ms）
     *
     * @return $this
     */
@@ -683,7 +683,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets startLatestScanTime
-    *  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
+    *  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
     *
     * @return int|null
     */
@@ -695,7 +695,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets startLatestScanTime
     *
-    * @param int|null $startLatestScanTime 最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
+    * @param int|null $startLatestScanTime 最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
     *
     * @return $this
     */
@@ -707,7 +707,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets endLatestScanTime
-    *  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    *  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     *
     * @return int|null
     */
@@ -719,7 +719,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets endLatestScanTime
     *
-    * @param int|null $endLatestScanTime 最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * @param int|null $endLatestScanTime 最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     *
     * @return $this
     */

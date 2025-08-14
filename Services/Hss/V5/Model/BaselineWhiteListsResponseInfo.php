@@ -21,7 +21,7 @@ class BaselineWhiteListsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  基线白名单标识
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     * osType  基线检查的操作系统 - Linux - Windows
     * indexVersion  基线检查的检查项标识
     * checkType  基线检查的基线名称
@@ -47,7 +47,7 @@ class BaselineWhiteListsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  基线白名单标识
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     * osType  基线检查的操作系统 - Linux - Windows
     * indexVersion  基线检查的检查项标识
     * checkType  基线检查的基线名称
@@ -94,7 +94,7 @@ class BaselineWhiteListsResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  基线白名单标识
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     * osType  基线检查的操作系统 - Linux - Windows
     * indexVersion  基线检查的检查项标识
     * checkType  基线检查的基线名称
@@ -120,7 +120,7 @@ class BaselineWhiteListsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  基线白名单标识
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     * osType  基线检查的操作系统 - Linux - Windows
     * indexVersion  基线检查的检查项标识
     * checkType  基线检查的基线名称
@@ -146,7 +146,7 @@ class BaselineWhiteListsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  基线白名单标识
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     * osType  基线检查的操作系统 - Linux - Windows
     * indexVersion  基线检查的检查项标识
     * checkType  基线检查的基线名称
@@ -367,7 +367,7 @@ class BaselineWhiteListsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleType
-    *  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    *  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     *
     * @return string|null
     */
@@ -379,7 +379,7 @@ class BaselineWhiteListsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ruleType
     *
-    * @param string|null $ruleType 基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    * @param string|null $ruleType 基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     *
     * @return $this
     */

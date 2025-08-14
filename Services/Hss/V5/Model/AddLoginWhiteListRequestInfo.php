@@ -20,9 +20,9 @@ class AddLoginWhiteListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * privateIp  服务器私有IP
-    * loginIp  登录源IP
-    * loginUserName  登录用户名
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * loginIp  **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
+    * loginUserName  **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
     * remarks  备注
     * handleEvent  是否同时处理相关告警事件
     *
@@ -38,9 +38,9 @@ class AddLoginWhiteListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * privateIp  服务器私有IP
-    * loginIp  登录源IP
-    * loginUserName  登录用户名
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * loginIp  **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
+    * loginUserName  **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
     * remarks  备注
     * handleEvent  是否同时处理相关告警事件
     *
@@ -77,9 +77,9 @@ class AddLoginWhiteListRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * privateIp  服务器私有IP
-    * loginIp  登录源IP
-    * loginUserName  登录用户名
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * loginIp  **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
+    * loginUserName  **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
     * remarks  备注
     * handleEvent  是否同时处理相关告警事件
     *
@@ -95,9 +95,9 @@ class AddLoginWhiteListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * privateIp  服务器私有IP
-    * loginIp  登录源IP
-    * loginUserName  登录用户名
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * loginIp  **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
+    * loginUserName  **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
     * remarks  备注
     * handleEvent  是否同时处理相关告警事件
     *
@@ -113,9 +113,9 @@ class AddLoginWhiteListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * privateIp  服务器私有IP
-    * loginIp  登录源IP
-    * loginUserName  登录用户名
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * loginIp  **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
+    * loginUserName  **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
     * remarks  备注
     * handleEvent  是否同时处理相关告警事件
     *
@@ -248,7 +248,7 @@ class AddLoginWhiteListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  服务器私有IP
+    *  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     *
     * @return string
     */
@@ -260,7 +260,7 @@ class AddLoginWhiteListRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string $privateIp 服务器私有IP
+    * @param string $privateIp **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     *
     * @return $this
     */
@@ -272,7 +272,7 @@ class AddLoginWhiteListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginIp
-    *  登录源IP
+    *  **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
     *
     * @return string
     */
@@ -284,7 +284,7 @@ class AddLoginWhiteListRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets loginIp
     *
-    * @param string $loginIp 登录源IP
+    * @param string $loginIp **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -296,7 +296,7 @@ class AddLoginWhiteListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginUserName
-    *  登录用户名
+    *  **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
     *
     * @return string
     */
@@ -308,7 +308,7 @@ class AddLoginWhiteListRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets loginUserName
     *
-    * @param string $loginUserName 登录用户名
+    * @param string $loginUserName **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */

@@ -28,10 +28,10 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * localImageType  镜像类型，包含如下:  - other_image : 非SWR镜像  - swr_image : SWR镜像
     * imageSize  镜像大小，单位字节
-    * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间搜索开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间搜索结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间搜索开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间搜索结束日期，时间单位：毫秒（ms）
     * hasVul  是否存在软件漏洞
     * hostName  本地镜像所关联服务器的名称
     * hostId  本地镜像所关联服务器的ID
@@ -78,10 +78,10 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * localImageType  镜像类型，包含如下:  - other_image : 非SWR镜像  - swr_image : SWR镜像
     * imageSize  镜像大小，单位字节
-    * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间搜索开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间搜索结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间搜索开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间搜索结束日期，时间单位：毫秒（ms）
     * hasVul  是否存在软件漏洞
     * hostName  本地镜像所关联服务器的名称
     * hostId  本地镜像所关联服务器的ID
@@ -149,10 +149,10 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * localImageType  镜像类型，包含如下:  - other_image : 非SWR镜像  - swr_image : SWR镜像
     * imageSize  镜像大小，单位字节
-    * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间搜索开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间搜索结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间搜索开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间搜索结束日期，时间单位：毫秒（ms）
     * hasVul  是否存在软件漏洞
     * hostName  本地镜像所关联服务器的名称
     * hostId  本地镜像所关联服务器的ID
@@ -199,10 +199,10 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * localImageType  镜像类型，包含如下:  - other_image : 非SWR镜像  - swr_image : SWR镜像
     * imageSize  镜像大小，单位字节
-    * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间搜索开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间搜索结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间搜索开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间搜索结束日期，时间单位：毫秒（ms）
     * hasVul  是否存在软件漏洞
     * hostName  本地镜像所关联服务器的名称
     * hostId  本地镜像所关联服务器的ID
@@ -249,10 +249,10 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * localImageType  镜像类型，包含如下:  - other_image : 非SWR镜像  - swr_image : SWR镜像
     * imageSize  镜像大小，单位字节
-    * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间搜索开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间搜索结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间搜索开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间搜索结束日期，时间单位：毫秒（ms）
     * hasVul  是否存在软件漏洞
     * hostName  本地镜像所关联服务器的名称
     * hostId  本地镜像所关联服务器的ID
@@ -715,7 +715,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startLatestUpdateTime
-    *  最近更新时间搜索开始日期，时间单位 毫秒（ms）
+    *  最近更新时间搜索开始日期，时间单位：毫秒（ms）
     *
     * @return int|null
     */
@@ -727,7 +727,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startLatestUpdateTime
     *
-    * @param int|null $startLatestUpdateTime 最近更新时间搜索开始日期，时间单位 毫秒（ms）
+    * @param int|null $startLatestUpdateTime 最近更新时间搜索开始日期，时间单位：毫秒（ms）
     *
     * @return $this
     */
@@ -739,7 +739,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endLatestUpdateTime
-    *  最近更新时间搜索结束日期，时间单位 毫秒（ms）
+    *  最近更新时间搜索结束日期，时间单位：毫秒（ms）
     *
     * @return int|null
     */
@@ -751,7 +751,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endLatestUpdateTime
     *
-    * @param int|null $endLatestUpdateTime 最近更新时间搜索结束日期，时间单位 毫秒（ms）
+    * @param int|null $endLatestUpdateTime 最近更新时间搜索结束日期，时间单位：毫秒（ms）
     *
     * @return $this
     */
@@ -763,7 +763,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startLatestScanTime
-    *  最近一次扫描完成时间搜索开始日期，时间单位 毫秒（ms）
+    *  最近一次扫描完成时间搜索开始日期，时间单位：毫秒（ms）
     *
     * @return int|null
     */
@@ -775,7 +775,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startLatestScanTime
     *
-    * @param int|null $startLatestScanTime 最近一次扫描完成时间搜索开始日期，时间单位 毫秒（ms）
+    * @param int|null $startLatestScanTime 最近一次扫描完成时间搜索开始日期，时间单位：毫秒（ms）
     *
     * @return $this
     */
@@ -787,7 +787,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endLatestScanTime
-    *  最近一次扫描完成时间搜索结束日期，时间单位 毫秒（ms）
+    *  最近一次扫描完成时间搜索结束日期，时间单位：毫秒（ms）
     *
     * @return int|null
     */
@@ -799,7 +799,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endLatestScanTime
     *
-    * @param int|null $endLatestScanTime 最近一次扫描完成时间搜索结束日期，时间单位 毫秒（ms）
+    * @param int|null $endLatestScanTime 最近一次扫描完成时间搜索结束日期，时间单位：毫秒（ms）
     *
     * @return $this
     */

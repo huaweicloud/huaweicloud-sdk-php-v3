@@ -21,8 +21,8 @@ class ListRansomwareProtectionNodesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  总数
-    * dataList  查询勒索防护服务器列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 取值0-65535
+    * dataList  **参数解释**: 查询勒索防护服务器列表 **取值范围**: 取值0-65535个ProtectionServerInfo对象
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListRansomwareProtectionNodesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  总数
-    * dataList  查询勒索防护服务器列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 取值0-65535
+    * dataList  **参数解释**: 查询勒索防护服务器列表 **取值范围**: 取值0-65535个ProtectionServerInfo对象
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListRansomwareProtectionNodesResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  总数
-    * dataList  查询勒索防护服务器列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 取值0-65535
+    * dataList  **参数解释**: 查询勒索防护服务器列表 **取值范围**: 取值0-65535个ProtectionServerInfo对象
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListRansomwareProtectionNodesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  总数
-    * dataList  查询勒索防护服务器列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 取值0-65535
+    * dataList  **参数解释**: 查询勒索防护服务器列表 **取值范围**: 取值0-65535个ProtectionServerInfo对象
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListRansomwareProtectionNodesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  总数
-    * dataList  查询勒索防护服务器列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 取值0-65535
+    * dataList  **参数解释**: 查询勒索防护服务器列表 **取值范围**: 取值0-65535个ProtectionServerInfo对象
     *
     * @var string[]
     */
@@ -170,8 +170,8 @@ class ListRansomwareProtectionNodesResponse implements ModelInterface, ArrayAcce
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 2097152)) {
-                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 2097152.";
+            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 65535)) {
+                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 65535.";
             }
             if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] < 0)) {
                 $invalidProperties[] = "invalid value for 'totalNum', must be bigger than or equal to 0.";
@@ -192,7 +192,7 @@ class ListRansomwareProtectionNodesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets totalNum
-    *  总数
+    *  **参数解释**: 总数 **取值范围**: 取值0-65535
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListRansomwareProtectionNodesResponse implements ModelInterface, ArrayAcce
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 总数
+    * @param int|null $totalNum **参数解释**: 总数 **取值范围**: 取值0-65535
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListRansomwareProtectionNodesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets dataList
-    *  查询勒索防护服务器列表
+    *  **参数解释**: 查询勒索防护服务器列表 **取值范围**: 取值0-65535个ProtectionServerInfo对象
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\ProtectionServerInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListRansomwareProtectionNodesResponse implements ModelInterface, ArrayAcce
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\ProtectionServerInfo[]|null $dataList 查询勒索防护服务器列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\ProtectionServerInfo[]|null $dataList **参数解释**: 查询勒索防护服务器列表 **取值范围**: 取值0-65535个ProtectionServerInfo对象
     *
     * @return $this
     */

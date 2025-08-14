@@ -34,7 +34,7 @@ class UserDto implements ModelInterface, ArrayAccess
     * profileUrl  与用户关联的URL
     * timezone  用户时区
     * title  用户头衔
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     * userName  用户名，用于标识用户的唯一字符串
     * userType  用户类型
     * createdAt  创建用户时的时间戳
@@ -88,7 +88,7 @@ class UserDto implements ModelInterface, ArrayAccess
     * profileUrl  与用户关联的URL
     * timezone  用户时区
     * title  用户头衔
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     * userName  用户名，用于标识用户的唯一字符串
     * userType  用户类型
     * createdAt  创建用户时的时间戳
@@ -163,7 +163,7 @@ class UserDto implements ModelInterface, ArrayAccess
     * profileUrl  与用户关联的URL
     * timezone  用户时区
     * title  用户头衔
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     * userName  用户名，用于标识用户的唯一字符串
     * userType  用户类型
     * createdAt  创建用户时的时间戳
@@ -217,7 +217,7 @@ class UserDto implements ModelInterface, ArrayAccess
     * profileUrl  与用户关联的URL
     * timezone  用户时区
     * title  用户头衔
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     * userName  用户名，用于标识用户的唯一字符串
     * userType  用户类型
     * createdAt  创建用户时的时间戳
@@ -271,7 +271,7 @@ class UserDto implements ModelInterface, ArrayAccess
     * profileUrl  与用户关联的URL
     * timezone  用户时区
     * title  用户头衔
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     * userName  用户名，用于标识用户的唯一字符串
     * userType  用户类型
     * createdAt  创建用户时的时间戳
@@ -502,8 +502,8 @@ class UserDto implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['userName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'userName', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/[\\w+=,.@-]+/", $this->container['userName'])) {
-                $invalidProperties[] = "invalid value for 'userName', must be conform to the pattern /[\\w+=,.@-]+/.";
+            if (!preg_match("/[\\p{L}\\p{M}\\p{S}\\p{N}\\p{P}]+/", $this->container['userName'])) {
+                $invalidProperties[] = "invalid value for 'userName', must be conform to the pattern /[\\p{L}\\p{M}\\p{S}\\p{N}\\p{P}]+/.";
             }
             if (!is_null($this->container['userType']) && (mb_strlen($this->container['userType']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'userType', the character length must be smaller than or equal to 1024.";
@@ -881,7 +881,7 @@ class UserDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    *  身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @return string
     */
@@ -893,7 +893,7 @@ class UserDto implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string $userId 身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * @param string $userId 身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @return $this
     */

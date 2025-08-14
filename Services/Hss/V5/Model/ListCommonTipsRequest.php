@@ -22,7 +22,7 @@ class ListCommonTipsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * limit  每页显示个数，默认200
-    * type  提示信息的类型，包含如下： - host_name ：主机名称。 - host_id：主机id。 - public_ip：公网ip。 - private_ip ：私网ip。 - vpc_id ：vpc id。 - cluster_id ：集群 id。 - host_tags：主机标签。
+    * type  提示信息的类型，包含如下： - host_name：主机名称。 - host_id：主机id。 - public_ip：公网ip。 - private_ip：私网ip。 - vpc_id：vpc id。 - cluster_id：集群id。 - host_tags：主机标签。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ListCommonTipsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * limit  每页显示个数，默认200
-    * type  提示信息的类型，包含如下： - host_name ：主机名称。 - host_id：主机id。 - public_ip：公网ip。 - private_ip ：私网ip。 - vpc_id ：vpc id。 - cluster_id ：集群 id。 - host_tags：主机标签。
+    * type  提示信息的类型，包含如下： - host_name：主机名称。 - host_id：主机id。 - public_ip：公网ip。 - private_ip：私网ip。 - vpc_id：vpc id。 - cluster_id：集群id。 - host_tags：主机标签。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListCommonTipsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * limit  每页显示个数，默认200
-    * type  提示信息的类型，包含如下： - host_name ：主机名称。 - host_id：主机id。 - public_ip：公网ip。 - private_ip ：私网ip。 - vpc_id ：vpc id。 - cluster_id ：集群 id。 - host_tags：主机标签。
+    * type  提示信息的类型，包含如下： - host_name：主机名称。 - host_id：主机id。 - public_ip：公网ip。 - private_ip：私网ip。 - vpc_id：vpc id。 - cluster_id：集群id。 - host_tags：主机标签。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ListCommonTipsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * limit  每页显示个数，默认200
-    * type  提示信息的类型，包含如下： - host_name ：主机名称。 - host_id：主机id。 - public_ip：公网ip。 - private_ip ：私网ip。 - vpc_id ：vpc id。 - cluster_id ：集群 id。 - host_tags：主机标签。
+    * type  提示信息的类型，包含如下： - host_name：主机名称。 - host_id：主机id。 - public_ip：公网ip。 - private_ip：私网ip。 - vpc_id：vpc id。 - cluster_id：集群id。 - host_tags：主机标签。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ListCommonTipsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * limit  每页显示个数，默认200
-    * type  提示信息的类型，包含如下： - host_name ：主机名称。 - host_id：主机id。 - public_ip：公网ip。 - private_ip ：私网ip。 - vpc_id ：vpc id。 - cluster_id ：集群 id。 - host_tags：主机标签。
+    * type  提示信息的类型，包含如下： - host_name：主机名称。 - host_id：主机id。 - public_ip：公网ip。 - private_ip：私网ip。 - vpc_id：vpc id。 - cluster_id：集群id。 - host_tags：主机标签。
     *
     * @var string[]
     */
@@ -271,7 +271,7 @@ class ListCommonTipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  提示信息的类型，包含如下： - host_name ：主机名称。 - host_id：主机id。 - public_ip：公网ip。 - private_ip ：私网ip。 - vpc_id ：vpc id。 - cluster_id ：集群 id。 - host_tags：主机标签。
+    *  提示信息的类型，包含如下： - host_name：主机名称。 - host_id：主机id。 - public_ip：公网ip。 - private_ip：私网ip。 - vpc_id：vpc id。 - cluster_id：集群id。 - host_tags：主机标签。
     *
     * @return string|null
     */
@@ -283,7 +283,7 @@ class ListCommonTipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 提示信息的类型，包含如下： - host_name ：主机名称。 - host_id：主机id。 - public_ip：公网ip。 - private_ip ：私网ip。 - vpc_id ：vpc id。 - cluster_id ：集群 id。 - host_tags：主机标签。
+    * @param string|null $type 提示信息的类型，包含如下： - host_name：主机名称。 - host_id：主机id。 - public_ip：公网ip。 - private_ip：私网ip。 - vpc_id：vpc id。 - cluster_id：集群id。 - host_tags：主机标签。
     *
     * @return $this
     */

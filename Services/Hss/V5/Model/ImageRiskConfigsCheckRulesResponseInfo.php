@@ -26,7 +26,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * checkRuleName  检查项
     * checkRuleId  检查项ID
-    * scanResult  检测结果，包含如下：   - pass    通过   - failed  未通过
+    * scanResult  检测结果，包含如下：   - pass：通过   - failed：未通过
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * checkRuleName  检查项
     * checkRuleId  检查项ID
-    * scanResult  检测结果，包含如下：   - pass    通过   - failed  未通过
+    * scanResult  检测结果，包含如下：   - pass：通过   - failed：未通过
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * checkRuleName  检查项
     * checkRuleId  检查项ID
-    * scanResult  检测结果，包含如下：   - pass    通过   - failed  未通过
+    * scanResult  检测结果，包含如下：   - pass：通过   - failed：未通过
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * checkRuleName  检查项
     * checkRuleId  检查项ID
-    * scanResult  检测结果，包含如下：   - pass    通过   - failed  未通过
+    * scanResult  检测结果，包含如下：   - pass：通过   - failed：未通过
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * checkRuleName  检查项
     * checkRuleId  检查项ID
-    * scanResult  检测结果，包含如下：   - pass    通过   - failed  未通过
+    * scanResult  检测结果，包含如下：   - pass：通过   - failed：未通过
     *
     * @var string[]
     */
@@ -426,7 +426,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
 
     /**
     * Gets scanResult
-    *  检测结果，包含如下：   - pass    通过   - failed  未通过
+    *  检测结果，包含如下：   - pass：通过   - failed：未通过
     *
     * @return string|null
     */
@@ -438,7 +438,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     /**
     * Sets scanResult
     *
-    * @param string|null $scanResult 检测结果，包含如下：   - pass    通过   - failed  未通过
+    * @param string|null $scanResult 检测结果，包含如下：   - pass：通过   - failed：未通过
     *
     * @return $this
     */

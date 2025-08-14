@@ -24,8 +24,8 @@ class ListAppWhitelistPolicyRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * policyName  策略名称
-    * policyType  进程白名单策略类型进程白名单策略类型 - allow # 允许指定/授权进程运行 - block # 阻止潜在恶意软件运行
-    * learningStatus  **策略学习状态**： 策略学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
+    * policyType  **参数解释**： 进程白名单策略类型 **约束限制**: 不涉及 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行  **默认取值**: 不涉及
+    * learningStatus  **参数解释**： 策略学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     * intercept  **参数解释**： 是否开启阻断 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
     *
     * @var string[]
@@ -46,8 +46,8 @@ class ListAppWhitelistPolicyRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * policyName  策略名称
-    * policyType  进程白名单策略类型进程白名单策略类型 - allow # 允许指定/授权进程运行 - block # 阻止潜在恶意软件运行
-    * learningStatus  **策略学习状态**： 策略学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
+    * policyType  **参数解释**： 进程白名单策略类型 **约束限制**: 不涉及 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行  **默认取值**: 不涉及
+    * learningStatus  **参数解释**： 策略学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     * intercept  **参数解释**： 是否开启阻断 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
     *
     * @var string[]
@@ -89,8 +89,8 @@ class ListAppWhitelistPolicyRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * policyName  策略名称
-    * policyType  进程白名单策略类型进程白名单策略类型 - allow # 允许指定/授权进程运行 - block # 阻止潜在恶意软件运行
-    * learningStatus  **策略学习状态**： 策略学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
+    * policyType  **参数解释**： 进程白名单策略类型 **约束限制**: 不涉及 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行  **默认取值**: 不涉及
+    * learningStatus  **参数解释**： 策略学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     * intercept  **参数解释**： 是否开启阻断 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
     *
     * @var string[]
@@ -111,8 +111,8 @@ class ListAppWhitelistPolicyRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * policyName  策略名称
-    * policyType  进程白名单策略类型进程白名单策略类型 - allow # 允许指定/授权进程运行 - block # 阻止潜在恶意软件运行
-    * learningStatus  **策略学习状态**： 策略学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
+    * policyType  **参数解释**： 进程白名单策略类型 **约束限制**: 不涉及 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行  **默认取值**: 不涉及
+    * learningStatus  **参数解释**： 策略学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     * intercept  **参数解释**： 是否开启阻断 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
     *
     * @var string[]
@@ -133,8 +133,8 @@ class ListAppWhitelistPolicyRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * policyName  策略名称
-    * policyType  进程白名单策略类型进程白名单策略类型 - allow # 允许指定/授权进程运行 - block # 阻止潜在恶意软件运行
-    * learningStatus  **策略学习状态**： 策略学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
+    * policyType  **参数解释**： 进程白名单策略类型 **约束限制**: 不涉及 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行  **默认取值**: 不涉及
+    * learningStatus  **参数解释**： 策略学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     * intercept  **参数解释**： 是否开启阻断 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
     *
     * @var string[]
@@ -384,7 +384,7 @@ class ListAppWhitelistPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyType
-    *  进程白名单策略类型进程白名单策略类型 - allow # 允许指定/授权进程运行 - block # 阻止潜在恶意软件运行
+    *  **参数解释**： 进程白名单策略类型 **约束限制**: 不涉及 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -396,7 +396,7 @@ class ListAppWhitelistPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets policyType
     *
-    * @param string|null $policyType 进程白名单策略类型进程白名单策略类型 - allow # 允许指定/授权进程运行 - block # 阻止潜在恶意软件运行
+    * @param string|null $policyType **参数解释**： 进程白名单策略类型 **约束限制**: 不涉及 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -408,7 +408,7 @@ class ListAppWhitelistPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets learningStatus
-    *  **策略学习状态**： 策略学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
+    *  **参数解释**： 策略学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -420,7 +420,7 @@ class ListAppWhitelistPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets learningStatus
     *
-    * @param string|null $learningStatus **策略学习状态**： 策略学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
+    * @param string|null $learningStatus **参数解释**： 策略学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     *
     * @return $this
     */

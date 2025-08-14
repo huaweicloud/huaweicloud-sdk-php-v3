@@ -22,7 +22,7 @@ class ResourceProductDataObjectInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
     * isAutoRenew  是否自动续费
-    * versionInfo  版本信息,key对应的值为主机开通的版本，包含如下6种输入：   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * versionInfo  版本信息，key对应的值为主机开通的版本，包含如下6种输入：   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ResourceProductDataObjectInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
     * isAutoRenew  是否自动续费
-    * versionInfo  版本信息,key对应的值为主机开通的版本，包含如下6种输入：   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * versionInfo  版本信息，key对应的值为主机开通的版本，包含如下6种输入：   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ResourceProductDataObjectInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
     * isAutoRenew  是否自动续费
-    * versionInfo  版本信息,key对应的值为主机开通的版本，包含如下6种输入：   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * versionInfo  版本信息，key对应的值为主机开通的版本，包含如下6种输入：   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ResourceProductDataObjectInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
     * isAutoRenew  是否自动续费
-    * versionInfo  版本信息,key对应的值为主机开通的版本，包含如下6种输入：   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * versionInfo  版本信息，key对应的值为主机开通的版本，包含如下6种输入：   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ResourceProductDataObjectInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
     * isAutoRenew  是否自动续费
-    * versionInfo  版本信息,key对应的值为主机开通的版本，包含如下6种输入：   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * versionInfo  版本信息，key对应的值为主机开通的版本，包含如下6种输入：   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
     *
     * @var string[]
     */
@@ -250,7 +250,7 @@ class ResourceProductDataObjectInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets versionInfo
-    *  版本信息,key对应的值为主机开通的版本，包含如下6种输入：   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    *  版本信息，key对应的值为主机开通的版本，包含如下6种输入：   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
     *
     * @return map[string,\HuaweiCloud\SDK\Hss\V5\Model\ShowPeriodResponseInfo[]]|null
     */
@@ -262,7 +262,7 @@ class ResourceProductDataObjectInfo implements ModelInterface, ArrayAccess
     /**
     * Sets versionInfo
     *
-    * @param map[string,\HuaweiCloud\SDK\Hss\V5\Model\ShowPeriodResponseInfo[]]|null $versionInfo 版本信息,key对应的值为主机开通的版本，包含如下6种输入：   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * @param map[string,\HuaweiCloud\SDK\Hss\V5\Model\ShowPeriodResponseInfo[]]|null $versionInfo 版本信息，key对应的值为主机开通的版本，包含如下6种输入：   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
     *
     * @return $this
     */

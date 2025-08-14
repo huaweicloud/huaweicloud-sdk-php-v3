@@ -38,6 +38,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
     * productName  产品层级跨纬规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
     * resourceLevel  产品层级跨纬规则需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
+    * tags  租户标签列表
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'alarmTemplateId' => 'string',
             'productName' => 'string',
-            'resourceLevel' => 'string'
+            'resourceLevel' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceTag[]'
     ];
 
     /**
@@ -82,6 +84,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
     * productName  产品层级跨纬规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
     * resourceLevel  产品层级跨纬规则需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
+    * tags  租户标签列表
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'alarmTemplateId' => null,
         'productName' => null,
-        'resourceLevel' => null
+        'resourceLevel' => null,
+        'tags' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
     * productName  产品层级跨纬规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
     * resourceLevel  产品层级跨纬规则需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
+    * tags  租户标签列表
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'alarmTemplateId' => 'alarm_template_id',
             'productName' => 'product_name',
-            'resourceLevel' => 'resource_level'
+            'resourceLevel' => 'resource_level',
+            'tags' => 'tags'
     ];
 
     /**
@@ -191,6 +197,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
     * productName  产品层级跨纬规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
     * resourceLevel  产品层级跨纬规则需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
+    * tags  租户标签列表
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'alarmTemplateId' => 'setAlarmTemplateId',
             'productName' => 'setProductName',
-            'resourceLevel' => 'setResourceLevel'
+            'resourceLevel' => 'setResourceLevel',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -235,6 +243,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
     * productName  产品层级跨纬规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
     * resourceLevel  产品层级跨纬规则需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
+    * tags  租户标签列表
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'alarmTemplateId' => 'getAlarmTemplateId',
             'productName' => 'getProductName',
-            'resourceLevel' => 'getResourceLevel'
+            'resourceLevel' => 'getResourceLevel',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -350,6 +360,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
         $this->container['alarmTemplateId'] = isset($data['alarmTemplateId']) ? $data['alarmTemplateId'] : null;
         $this->container['productName'] = isset($data['productName']) ? $data['productName'] : null;
         $this->container['resourceLevel'] = isset($data['resourceLevel']) ? $data['resourceLevel'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -880,6 +891,30 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     public function setResourceLevel($resourceLevel)
     {
         $this->container['resourceLevel'] = $resourceLevel;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  租户标签列表
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceTag[]|null $tags 租户标签列表
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

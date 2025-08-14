@@ -21,14 +21,14 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * processPid  进程ID
-    * isParent  是否是父进程
-    * fileHash  文件哈希
-    * filePath  文件路径
-    * fileAttr  文件属性
-    * privateIp  服务器私有IP
-    * loginIp  登录源IP
-    * loginUserName  登录用户名
+    * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
+    * isParent  **参数解释**： 是否是父进程 **取值范围**： - true：是父进程 - false：不是父进程
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * loginIp  **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
+    * loginUserName  **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
     * keyword  告警事件关键字，仅用于告警白名单
     * hash  告警事件hash，仅用于告警白名单
     *
@@ -51,14 +51,14 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * processPid  进程ID
-    * isParent  是否是父进程
-    * fileHash  文件哈希
-    * filePath  文件路径
-    * fileAttr  文件属性
-    * privateIp  服务器私有IP
-    * loginIp  登录源IP
-    * loginUserName  登录用户名
+    * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
+    * isParent  **参数解释**： 是否是父进程 **取值范围**： - true：是父进程 - false：不是父进程
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * loginIp  **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
+    * loginUserName  **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
     * keyword  告警事件关键字，仅用于告警白名单
     * hash  告警事件hash，仅用于告警白名单
     *
@@ -102,14 +102,14 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * processPid  进程ID
-    * isParent  是否是父进程
-    * fileHash  文件哈希
-    * filePath  文件路径
-    * fileAttr  文件属性
-    * privateIp  服务器私有IP
-    * loginIp  登录源IP
-    * loginUserName  登录用户名
+    * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
+    * isParent  **参数解释**： 是否是父进程 **取值范围**： - true：是父进程 - false：不是父进程
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * loginIp  **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
+    * loginUserName  **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
     * keyword  告警事件关键字，仅用于告警白名单
     * hash  告警事件hash，仅用于告警白名单
     *
@@ -132,14 +132,14 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * processPid  进程ID
-    * isParent  是否是父进程
-    * fileHash  文件哈希
-    * filePath  文件路径
-    * fileAttr  文件属性
-    * privateIp  服务器私有IP
-    * loginIp  登录源IP
-    * loginUserName  登录用户名
+    * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
+    * isParent  **参数解释**： 是否是父进程 **取值范围**： - true：是父进程 - false：不是父进程
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * loginIp  **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
+    * loginUserName  **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
     * keyword  告警事件关键字，仅用于告警白名单
     * hash  告警事件hash，仅用于告警白名单
     *
@@ -162,14 +162,14 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * processPid  进程ID
-    * isParent  是否是父进程
-    * fileHash  文件哈希
-    * filePath  文件路径
-    * fileAttr  文件属性
-    * privateIp  服务器私有IP
-    * loginIp  登录源IP
-    * loginUserName  登录用户名
+    * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
+    * isParent  **参数解释**： 是否是父进程 **取值范围**： - true：是父进程 - false：不是父进程
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * loginIp  **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
+    * loginUserName  **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
     * keyword  告警事件关键字，仅用于告警白名单
     * hash  告警事件hash，仅用于告警白名单
     *
@@ -359,7 +359,7 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets processPid
-    *  进程ID
+    *  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -371,7 +371,7 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets processPid
     *
-    * @param int|null $processPid 进程ID
+    * @param int|null $processPid **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -383,7 +383,7 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isParent
-    *  是否是父进程
+    *  **参数解释**： 是否是父进程 **取值范围**： - true：是父进程 - false：不是父进程
     *
     * @return bool|null
     */
@@ -395,7 +395,7 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isParent
     *
-    * @param bool|null $isParent 是否是父进程
+    * @param bool|null $isParent **参数解释**： 是否是父进程 **取值范围**： - true：是父进程 - false：不是父进程
     *
     * @return $this
     */
@@ -407,7 +407,7 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileHash
-    *  文件哈希
+    *  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -419,7 +419,7 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileHash
     *
-    * @param string|null $fileHash 文件哈希
+    * @param string|null $fileHash **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -431,7 +431,7 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets filePath
-    *  文件路径
+    *  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -443,7 +443,7 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets filePath
     *
-    * @param string|null $filePath 文件路径
+    * @param string|null $filePath **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -455,7 +455,7 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileAttr
-    *  文件属性
+    *  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -467,7 +467,7 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileAttr
     *
-    * @param string|null $fileAttr 文件属性
+    * @param string|null $fileAttr **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -479,7 +479,7 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  服务器私有IP
+    *  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     *
     * @return string|null
     */
@@ -491,7 +491,7 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp 服务器私有IP
+    * @param string|null $privateIp **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     *
     * @return $this
     */
@@ -503,7 +503,7 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginIp
-    *  登录源IP
+    *  **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -515,7 +515,7 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets loginIp
     *
-    * @param string|null $loginIp 登录源IP
+    * @param string|null $loginIp **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -527,7 +527,7 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginUserName
-    *  登录用户名
+    *  **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -539,7 +539,7 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets loginUserName
     *
-    * @param string|null $loginUserName 登录用户名
+    * @param string|null $loginUserName **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */

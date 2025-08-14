@@ -24,7 +24,7 @@ class GroupDto implements ModelInterface, ArrayAccess
     * displayName  包含用户组显示名称的字符串
     * externalId  外部身份源分配给此资源的标识符
     * externalIds  包含外部身份提供商颁发给此资源的标识符的对象列表
-    * groupId  身份源中IAM身份中心用户组的全局唯一标识符（ID）
+    * groupId  身份源中IdentityCenter用户组的全局唯一标识符（ID）
     * identityStoreId  身份源的全局唯一标识符（ID）
     * createdAt  创建时的时间戳
     * createdBy  创建者
@@ -52,7 +52,7 @@ class GroupDto implements ModelInterface, ArrayAccess
     * displayName  包含用户组显示名称的字符串
     * externalId  外部身份源分配给此资源的标识符
     * externalIds  包含外部身份提供商颁发给此资源的标识符的对象列表
-    * groupId  身份源中IAM身份中心用户组的全局唯一标识符（ID）
+    * groupId  身份源中IdentityCenter用户组的全局唯一标识符（ID）
     * identityStoreId  身份源的全局唯一标识符（ID）
     * createdAt  创建时的时间戳
     * createdBy  创建者
@@ -101,7 +101,7 @@ class GroupDto implements ModelInterface, ArrayAccess
     * displayName  包含用户组显示名称的字符串
     * externalId  外部身份源分配给此资源的标识符
     * externalIds  包含外部身份提供商颁发给此资源的标识符的对象列表
-    * groupId  身份源中IAM身份中心用户组的全局唯一标识符（ID）
+    * groupId  身份源中IdentityCenter用户组的全局唯一标识符（ID）
     * identityStoreId  身份源的全局唯一标识符（ID）
     * createdAt  创建时的时间戳
     * createdBy  创建者
@@ -129,7 +129,7 @@ class GroupDto implements ModelInterface, ArrayAccess
     * displayName  包含用户组显示名称的字符串
     * externalId  外部身份源分配给此资源的标识符
     * externalIds  包含外部身份提供商颁发给此资源的标识符的对象列表
-    * groupId  身份源中IAM身份中心用户组的全局唯一标识符（ID）
+    * groupId  身份源中IdentityCenter用户组的全局唯一标识符（ID）
     * identityStoreId  身份源的全局唯一标识符（ID）
     * createdAt  创建时的时间戳
     * createdBy  创建者
@@ -157,7 +157,7 @@ class GroupDto implements ModelInterface, ArrayAccess
     * displayName  包含用户组显示名称的字符串
     * externalId  外部身份源分配给此资源的标识符
     * externalIds  包含外部身份提供商颁发给此资源的标识符的对象列表
-    * groupId  身份源中IAM身份中心用户组的全局唯一标识符（ID）
+    * groupId  身份源中IdentityCenter用户组的全局唯一标识符（ID）
     * identityStoreId  身份源的全局唯一标识符（ID）
     * createdAt  创建时的时间戳
     * createdBy  创建者
@@ -411,7 +411,7 @@ class GroupDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  身份源中IAM身份中心用户组的全局唯一标识符（ID）
+    *  身份源中IdentityCenter用户组的全局唯一标识符（ID）
     *
     * @return string
     */
@@ -423,7 +423,7 @@ class GroupDto implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string $groupId 身份源中IAM身份中心用户组的全局唯一标识符（ID）
+    * @param string $groupId 身份源中IdentityCenter用户组的全局唯一标识符（ID）
     *
     * @return $this
     */

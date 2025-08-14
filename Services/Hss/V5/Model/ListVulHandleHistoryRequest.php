@@ -21,16 +21,16 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectId  企业项目ID
-    * status  漏洞状态,包含如下:   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
+    * status  漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     * vulId  漏洞ID
-    * vulType  漏洞类型,包含如下:   - linux_vul : Linux漏洞   - windows_vul : Windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * assetValue  资产重要性,包含如下:   - important : 重要资产   - common  : 一般资产   - test  : 测试资产
+    * vulType  漏洞类型，包含如下:   - linux_vul：Linux漏洞   - windows_vul：Windows漏洞   - web_cms：Web-CMS漏洞   - app_vul：应用漏洞   - urgent_vul：应急漏洞
+    * assetValue  资产重要性，包含如下:   - important：重要资产   - common：一般资产   - test：测试资产
     * groupName  服务器组
     * hostName  服务器名称
-    * hostIp  服务器IP。
-    * clusterId  集群ID。
-    * sortKey  排序字段，包含如下:   - handle_time : 处置时间
-    * sortDir  排序顺序，若sort_key不为空,设置返回结果按照sort_key升序或降序排序,默认降序排序,包含如下:   - asc : 升序   - desc : 降序
+    * hostIp  服务器IP
+    * clusterId  集群ID
+    * sortKey  排序字段，包含如下：   - handle_time：处置时间
+    * sortDir  排序顺序，若sort_key不为空，设置返回结果按照sort_key升序或降序排序，默认降序排序，包含如下：   - asc：升序   - desc：降序
     * publicIp  服务器公网IP
     * privateIp  服务器私网IP
     * limit  每页个数
@@ -59,16 +59,16 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectId  企业项目ID
-    * status  漏洞状态,包含如下:   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
+    * status  漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     * vulId  漏洞ID
-    * vulType  漏洞类型,包含如下:   - linux_vul : Linux漏洞   - windows_vul : Windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * assetValue  资产重要性,包含如下:   - important : 重要资产   - common  : 一般资产   - test  : 测试资产
+    * vulType  漏洞类型，包含如下:   - linux_vul：Linux漏洞   - windows_vul：Windows漏洞   - web_cms：Web-CMS漏洞   - app_vul：应用漏洞   - urgent_vul：应急漏洞
+    * assetValue  资产重要性，包含如下:   - important：重要资产   - common：一般资产   - test：测试资产
     * groupName  服务器组
     * hostName  服务器名称
-    * hostIp  服务器IP。
-    * clusterId  集群ID。
-    * sortKey  排序字段，包含如下:   - handle_time : 处置时间
-    * sortDir  排序顺序，若sort_key不为空,设置返回结果按照sort_key升序或降序排序,默认降序排序,包含如下:   - asc : 升序   - desc : 降序
+    * hostIp  服务器IP
+    * clusterId  集群ID
+    * sortKey  排序字段，包含如下：   - handle_time：处置时间
+    * sortDir  排序顺序，若sort_key不为空，设置返回结果按照sort_key升序或降序排序，默认降序排序，包含如下：   - asc：升序   - desc：降序
     * publicIp  服务器公网IP
     * privateIp  服务器私网IP
     * limit  每页个数
@@ -118,16 +118,16 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * enterpriseProjectId  企业项目ID
-    * status  漏洞状态,包含如下:   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
+    * status  漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     * vulId  漏洞ID
-    * vulType  漏洞类型,包含如下:   - linux_vul : Linux漏洞   - windows_vul : Windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * assetValue  资产重要性,包含如下:   - important : 重要资产   - common  : 一般资产   - test  : 测试资产
+    * vulType  漏洞类型，包含如下:   - linux_vul：Linux漏洞   - windows_vul：Windows漏洞   - web_cms：Web-CMS漏洞   - app_vul：应用漏洞   - urgent_vul：应急漏洞
+    * assetValue  资产重要性，包含如下:   - important：重要资产   - common：一般资产   - test：测试资产
     * groupName  服务器组
     * hostName  服务器名称
-    * hostIp  服务器IP。
-    * clusterId  集群ID。
-    * sortKey  排序字段，包含如下:   - handle_time : 处置时间
-    * sortDir  排序顺序，若sort_key不为空,设置返回结果按照sort_key升序或降序排序,默认降序排序,包含如下:   - asc : 升序   - desc : 降序
+    * hostIp  服务器IP
+    * clusterId  集群ID
+    * sortKey  排序字段，包含如下：   - handle_time：处置时间
+    * sortDir  排序顺序，若sort_key不为空，设置返回结果按照sort_key升序或降序排序，默认降序排序，包含如下：   - asc：升序   - desc：降序
     * publicIp  服务器公网IP
     * privateIp  服务器私网IP
     * limit  每页个数
@@ -156,16 +156,16 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectId  企业项目ID
-    * status  漏洞状态,包含如下:   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
+    * status  漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     * vulId  漏洞ID
-    * vulType  漏洞类型,包含如下:   - linux_vul : Linux漏洞   - windows_vul : Windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * assetValue  资产重要性,包含如下:   - important : 重要资产   - common  : 一般资产   - test  : 测试资产
+    * vulType  漏洞类型，包含如下:   - linux_vul：Linux漏洞   - windows_vul：Windows漏洞   - web_cms：Web-CMS漏洞   - app_vul：应用漏洞   - urgent_vul：应急漏洞
+    * assetValue  资产重要性，包含如下:   - important：重要资产   - common：一般资产   - test：测试资产
     * groupName  服务器组
     * hostName  服务器名称
-    * hostIp  服务器IP。
-    * clusterId  集群ID。
-    * sortKey  排序字段，包含如下:   - handle_time : 处置时间
-    * sortDir  排序顺序，若sort_key不为空,设置返回结果按照sort_key升序或降序排序,默认降序排序,包含如下:   - asc : 升序   - desc : 降序
+    * hostIp  服务器IP
+    * clusterId  集群ID
+    * sortKey  排序字段，包含如下：   - handle_time：处置时间
+    * sortDir  排序顺序，若sort_key不为空，设置返回结果按照sort_key升序或降序排序，默认降序排序，包含如下：   - asc：升序   - desc：降序
     * publicIp  服务器公网IP
     * privateIp  服务器私网IP
     * limit  每页个数
@@ -194,16 +194,16 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectId  企业项目ID
-    * status  漏洞状态,包含如下:   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
+    * status  漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     * vulId  漏洞ID
-    * vulType  漏洞类型,包含如下:   - linux_vul : Linux漏洞   - windows_vul : Windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * assetValue  资产重要性,包含如下:   - important : 重要资产   - common  : 一般资产   - test  : 测试资产
+    * vulType  漏洞类型，包含如下:   - linux_vul：Linux漏洞   - windows_vul：Windows漏洞   - web_cms：Web-CMS漏洞   - app_vul：应用漏洞   - urgent_vul：应急漏洞
+    * assetValue  资产重要性，包含如下:   - important：重要资产   - common：一般资产   - test：测试资产
     * groupName  服务器组
     * hostName  服务器名称
-    * hostIp  服务器IP。
-    * clusterId  集群ID。
-    * sortKey  排序字段，包含如下:   - handle_time : 处置时间
-    * sortDir  排序顺序，若sort_key不为空,设置返回结果按照sort_key升序或降序排序,默认降序排序,包含如下:   - asc : 升序   - desc : 降序
+    * hostIp  服务器IP
+    * clusterId  集群ID
+    * sortKey  排序字段，包含如下：   - handle_time：处置时间
+    * sortDir  排序顺序，若sort_key不为空，设置返回结果按照sort_key升序或降序排序，默认降序排序，包含如下：   - asc：升序   - desc：降序
     * publicIp  服务器公网IP
     * privateIp  服务器私网IP
     * limit  每页个数
@@ -489,7 +489,7 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  漏洞状态,包含如下:   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
+    *  漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     *
     * @return string[]|null
     */
@@ -501,7 +501,7 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 漏洞状态,包含如下:   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
+    * @param string[]|null $status 漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     *
     * @return $this
     */
@@ -537,7 +537,7 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulType
-    *  漏洞类型,包含如下:   - linux_vul : Linux漏洞   - windows_vul : Windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
+    *  漏洞类型，包含如下:   - linux_vul：Linux漏洞   - windows_vul：Windows漏洞   - web_cms：Web-CMS漏洞   - app_vul：应用漏洞   - urgent_vul：应急漏洞
     *
     * @return string|null
     */
@@ -549,7 +549,7 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets vulType
     *
-    * @param string|null $vulType 漏洞类型,包含如下:   - linux_vul : Linux漏洞   - windows_vul : Windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
+    * @param string|null $vulType 漏洞类型，包含如下:   - linux_vul：Linux漏洞   - windows_vul：Windows漏洞   - web_cms：Web-CMS漏洞   - app_vul：应用漏洞   - urgent_vul：应急漏洞
     *
     * @return $this
     */
@@ -561,7 +561,7 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetValue
-    *  资产重要性,包含如下:   - important : 重要资产   - common  : 一般资产   - test  : 测试资产
+    *  资产重要性，包含如下:   - important：重要资产   - common：一般资产   - test：测试资产
     *
     * @return string|null
     */
@@ -573,7 +573,7 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string|null $assetValue 资产重要性,包含如下:   - important : 重要资产   - common  : 一般资产   - test  : 测试资产
+    * @param string|null $assetValue 资产重要性，包含如下:   - important：重要资产   - common：一般资产   - test：测试资产
     *
     * @return $this
     */
@@ -633,7 +633,7 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  服务器IP。
+    *  服务器IP
     *
     * @return string|null
     */
@@ -645,7 +645,7 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 服务器IP。
+    * @param string|null $hostIp 服务器IP
     *
     * @return $this
     */
@@ -657,7 +657,7 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群ID。
+    *  集群ID
     *
     * @return string|null
     */
@@ -669,7 +669,7 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群ID。
+    * @param string|null $clusterId 集群ID
     *
     * @return $this
     */
@@ -681,7 +681,7 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  排序字段，包含如下:   - handle_time : 处置时间
+    *  排序字段，包含如下：   - handle_time：处置时间
     *
     * @return string|null
     */
@@ -693,7 +693,7 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 排序字段，包含如下:   - handle_time : 处置时间
+    * @param string|null $sortKey 排序字段，包含如下：   - handle_time：处置时间
     *
     * @return $this
     */
@@ -705,7 +705,7 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortDir
-    *  排序顺序，若sort_key不为空,设置返回结果按照sort_key升序或降序排序,默认降序排序,包含如下:   - asc : 升序   - desc : 降序
+    *  排序顺序，若sort_key不为空，设置返回结果按照sort_key升序或降序排序，默认降序排序，包含如下：   - asc：升序   - desc：降序
     *
     * @return string|null
     */
@@ -717,7 +717,7 @@ class ListVulHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir 排序顺序，若sort_key不为空,设置返回结果按照sort_key升序或降序排序,默认降序排序,包含如下:   - asc : 升序   - desc : 降序
+    * @param string|null $sortDir 排序顺序，若sort_key不为空，设置返回结果按照sort_key升序或降序排序，默认降序排序，包含如下：   - asc：升序   - desc：降序
     *
     * @return $this
     */

@@ -20,25 +20,25 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
-    * regionId  区域
-    * containerId  容器ID
-    * containerName  容器名称
-    * imageName  镜像名称
-    * status  容器状态，包含以下几种： -Running 运行中 -Terminated 终止 -Waiting 等待
-    * createTime  创建时间
-    * cpuLimit  cpu限制
-    * memoryLimit  内存限制
-    * restartCount  重启次数
-    * podName  所属pod名称
-    * clusterName  所属集群
-    * clusterId  集群id
-    * clusterType  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
-    * risky  是否有风险
-    * lowRisk  低危风险数量
-    * mediumRisk  中危风险数量
-    * highRisk  高危风险数量
-    * fatalRisk  致命风险数量
+    * id  **参数解释**: ID **取值范围**: 字符长度0-255位
+    * regionId  **参数解释**: 区域 **取值范围**: 字符长度0-255位
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度0-255位
+    * containerName  **参数解释**: 容器名称 **取值范围**: 字符长度0-255位
+    * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-255位
+    * status  **参数解释**: 容器状态 **取值范围**: - Running：运行中。 - Terminated：终止。 - Waiting：等待。
+    * createTime  **参数解释**: 创建时间 **取值范围**: 取值0-4071095999000
+    * cpuLimit  **参数解释**: cpu限制 **取值范围**: 字符长度0-64位
+    * memoryLimit  **参数解释**: 内存限制 **取值范围**: 字符长度0-64位
+    * restartCount  **参数解释**: 重启次数 **取值范围**: 取值0-20
+    * podName  **参数解释**: 所属pod名称 **取值范围**: 字符长度0-64位
+    * clusterName  **参数解释**: 所属集群 **取值范围**: 字符长度0-64位
+    * clusterId  **参数解释**: 集群id **取值范围**: 字符长度0-64位
+    * clusterType  **参数解释**: 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
+    * risky  **参数解释**: 是否有风险 **取值范围**: true和false，true代表有风险，false代表无风险
+    * lowRisk  **参数解释**: 低危风险数量 **取值范围**: 取值0-2147483647
+    * mediumRisk  **参数解释**: 中危风险数量 **取值范围**: 取值0-2147483647
+    * highRisk  **参数解释**: 高危风险数量 **取值范围**: 取值0-2147483647
+    * fatalRisk  **参数解释**: 致命风险数量 **取值范围**: 取值0-2147483647
     *
     * @var string[]
     */
@@ -66,25 +66,25 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
-    * regionId  区域
-    * containerId  容器ID
-    * containerName  容器名称
-    * imageName  镜像名称
-    * status  容器状态，包含以下几种： -Running 运行中 -Terminated 终止 -Waiting 等待
-    * createTime  创建时间
-    * cpuLimit  cpu限制
-    * memoryLimit  内存限制
-    * restartCount  重启次数
-    * podName  所属pod名称
-    * clusterName  所属集群
-    * clusterId  集群id
-    * clusterType  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
-    * risky  是否有风险
-    * lowRisk  低危风险数量
-    * mediumRisk  中危风险数量
-    * highRisk  高危风险数量
-    * fatalRisk  致命风险数量
+    * id  **参数解释**: ID **取值范围**: 字符长度0-255位
+    * regionId  **参数解释**: 区域 **取值范围**: 字符长度0-255位
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度0-255位
+    * containerName  **参数解释**: 容器名称 **取值范围**: 字符长度0-255位
+    * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-255位
+    * status  **参数解释**: 容器状态 **取值范围**: - Running：运行中。 - Terminated：终止。 - Waiting：等待。
+    * createTime  **参数解释**: 创建时间 **取值范围**: 取值0-4071095999000
+    * cpuLimit  **参数解释**: cpu限制 **取值范围**: 字符长度0-64位
+    * memoryLimit  **参数解释**: 内存限制 **取值范围**: 字符长度0-64位
+    * restartCount  **参数解释**: 重启次数 **取值范围**: 取值0-20
+    * podName  **参数解释**: 所属pod名称 **取值范围**: 字符长度0-64位
+    * clusterName  **参数解释**: 所属集群 **取值范围**: 字符长度0-64位
+    * clusterId  **参数解释**: 集群id **取值范围**: 字符长度0-64位
+    * clusterType  **参数解释**: 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
+    * risky  **参数解释**: 是否有风险 **取值范围**: true和false，true代表有风险，false代表无风险
+    * lowRisk  **参数解释**: 低危风险数量 **取值范围**: 取值0-2147483647
+    * mediumRisk  **参数解释**: 中危风险数量 **取值范围**: 取值0-2147483647
+    * highRisk  **参数解释**: 高危风险数量 **取值范围**: 取值0-2147483647
+    * fatalRisk  **参数解释**: 致命风险数量 **取值范围**: 取值0-2147483647
     *
     * @var string[]
     */
@@ -133,25 +133,25 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
-    * regionId  区域
-    * containerId  容器ID
-    * containerName  容器名称
-    * imageName  镜像名称
-    * status  容器状态，包含以下几种： -Running 运行中 -Terminated 终止 -Waiting 等待
-    * createTime  创建时间
-    * cpuLimit  cpu限制
-    * memoryLimit  内存限制
-    * restartCount  重启次数
-    * podName  所属pod名称
-    * clusterName  所属集群
-    * clusterId  集群id
-    * clusterType  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
-    * risky  是否有风险
-    * lowRisk  低危风险数量
-    * mediumRisk  中危风险数量
-    * highRisk  高危风险数量
-    * fatalRisk  致命风险数量
+    * id  **参数解释**: ID **取值范围**: 字符长度0-255位
+    * regionId  **参数解释**: 区域 **取值范围**: 字符长度0-255位
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度0-255位
+    * containerName  **参数解释**: 容器名称 **取值范围**: 字符长度0-255位
+    * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-255位
+    * status  **参数解释**: 容器状态 **取值范围**: - Running：运行中。 - Terminated：终止。 - Waiting：等待。
+    * createTime  **参数解释**: 创建时间 **取值范围**: 取值0-4071095999000
+    * cpuLimit  **参数解释**: cpu限制 **取值范围**: 字符长度0-64位
+    * memoryLimit  **参数解释**: 内存限制 **取值范围**: 字符长度0-64位
+    * restartCount  **参数解释**: 重启次数 **取值范围**: 取值0-20
+    * podName  **参数解释**: 所属pod名称 **取值范围**: 字符长度0-64位
+    * clusterName  **参数解释**: 所属集群 **取值范围**: 字符长度0-64位
+    * clusterId  **参数解释**: 集群id **取值范围**: 字符长度0-64位
+    * clusterType  **参数解释**: 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
+    * risky  **参数解释**: 是否有风险 **取值范围**: true和false，true代表有风险，false代表无风险
+    * lowRisk  **参数解释**: 低危风险数量 **取值范围**: 取值0-2147483647
+    * mediumRisk  **参数解释**: 中危风险数量 **取值范围**: 取值0-2147483647
+    * highRisk  **参数解释**: 高危风险数量 **取值范围**: 取值0-2147483647
+    * fatalRisk  **参数解释**: 致命风险数量 **取值范围**: 取值0-2147483647
     *
     * @var string[]
     */
@@ -179,25 +179,25 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
-    * regionId  区域
-    * containerId  容器ID
-    * containerName  容器名称
-    * imageName  镜像名称
-    * status  容器状态，包含以下几种： -Running 运行中 -Terminated 终止 -Waiting 等待
-    * createTime  创建时间
-    * cpuLimit  cpu限制
-    * memoryLimit  内存限制
-    * restartCount  重启次数
-    * podName  所属pod名称
-    * clusterName  所属集群
-    * clusterId  集群id
-    * clusterType  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
-    * risky  是否有风险
-    * lowRisk  低危风险数量
-    * mediumRisk  中危风险数量
-    * highRisk  高危风险数量
-    * fatalRisk  致命风险数量
+    * id  **参数解释**: ID **取值范围**: 字符长度0-255位
+    * regionId  **参数解释**: 区域 **取值范围**: 字符长度0-255位
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度0-255位
+    * containerName  **参数解释**: 容器名称 **取值范围**: 字符长度0-255位
+    * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-255位
+    * status  **参数解释**: 容器状态 **取值范围**: - Running：运行中。 - Terminated：终止。 - Waiting：等待。
+    * createTime  **参数解释**: 创建时间 **取值范围**: 取值0-4071095999000
+    * cpuLimit  **参数解释**: cpu限制 **取值范围**: 字符长度0-64位
+    * memoryLimit  **参数解释**: 内存限制 **取值范围**: 字符长度0-64位
+    * restartCount  **参数解释**: 重启次数 **取值范围**: 取值0-20
+    * podName  **参数解释**: 所属pod名称 **取值范围**: 字符长度0-64位
+    * clusterName  **参数解释**: 所属集群 **取值范围**: 字符长度0-64位
+    * clusterId  **参数解释**: 集群id **取值范围**: 字符长度0-64位
+    * clusterType  **参数解释**: 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
+    * risky  **参数解释**: 是否有风险 **取值范围**: true和false，true代表有风险，false代表无风险
+    * lowRisk  **参数解释**: 低危风险数量 **取值范围**: 取值0-2147483647
+    * mediumRisk  **参数解释**: 中危风险数量 **取值范围**: 取值0-2147483647
+    * highRisk  **参数解释**: 高危风险数量 **取值范围**: 取值0-2147483647
+    * fatalRisk  **参数解释**: 致命风险数量 **取值范围**: 取值0-2147483647
     *
     * @var string[]
     */
@@ -225,25 +225,25 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
-    * regionId  区域
-    * containerId  容器ID
-    * containerName  容器名称
-    * imageName  镜像名称
-    * status  容器状态，包含以下几种： -Running 运行中 -Terminated 终止 -Waiting 等待
-    * createTime  创建时间
-    * cpuLimit  cpu限制
-    * memoryLimit  内存限制
-    * restartCount  重启次数
-    * podName  所属pod名称
-    * clusterName  所属集群
-    * clusterId  集群id
-    * clusterType  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
-    * risky  是否有风险
-    * lowRisk  低危风险数量
-    * mediumRisk  中危风险数量
-    * highRisk  高危风险数量
-    * fatalRisk  致命风险数量
+    * id  **参数解释**: ID **取值范围**: 字符长度0-255位
+    * regionId  **参数解释**: 区域 **取值范围**: 字符长度0-255位
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度0-255位
+    * containerName  **参数解释**: 容器名称 **取值范围**: 字符长度0-255位
+    * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-255位
+    * status  **参数解释**: 容器状态 **取值范围**: - Running：运行中。 - Terminated：终止。 - Waiting：等待。
+    * createTime  **参数解释**: 创建时间 **取值范围**: 取值0-4071095999000
+    * cpuLimit  **参数解释**: cpu限制 **取值范围**: 字符长度0-64位
+    * memoryLimit  **参数解释**: 内存限制 **取值范围**: 字符长度0-64位
+    * restartCount  **参数解释**: 重启次数 **取值范围**: 取值0-20
+    * podName  **参数解释**: 所属pod名称 **取值范围**: 字符长度0-64位
+    * clusterName  **参数解释**: 所属集群 **取值范围**: 字符长度0-64位
+    * clusterId  **参数解释**: 集群id **取值范围**: 字符长度0-64位
+    * clusterType  **参数解释**: 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
+    * risky  **参数解释**: 是否有风险 **取值范围**: true和false，true代表有风险，false代表无风险
+    * lowRisk  **参数解释**: 低危风险数量 **取值范围**: 取值0-2147483647
+    * mediumRisk  **参数解释**: 中危风险数量 **取值范围**: 取值0-2147483647
+    * highRisk  **参数解释**: 高危风险数量 **取值范围**: 取值0-2147483647
+    * fatalRisk  **参数解释**: 致命风险数量 **取值范围**: 取值0-2147483647
     *
     * @var string[]
     */
@@ -392,8 +392,8 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
                 $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 9223372036854775807)) {
-                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 9223372036854775807.";
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 4071095999000)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 4071095999000.";
             }
             if (!is_null($this->container['createTime']) && ($this->container['createTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 0.";
@@ -480,7 +480,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  **参数解释**: ID **取值范围**: 字符长度0-255位
     *
     * @return string|null
     */
@@ -492,7 +492,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id **参数解释**: ID **取值范围**: 字符长度0-255位
     *
     * @return $this
     */
@@ -504,7 +504,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
-    *  区域
+    *  **参数解释**: 区域 **取值范围**: 字符长度0-255位
     *
     * @return string|null
     */
@@ -516,7 +516,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets regionId
     *
-    * @param string|null $regionId 区域
+    * @param string|null $regionId **参数解释**: 区域 **取值范围**: 字符长度0-255位
     *
     * @return $this
     */
@@ -528,7 +528,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerId
-    *  容器ID
+    *  **参数解释**: 容器ID **取值范围**: 字符长度0-255位
     *
     * @return string|null
     */
@@ -540,7 +540,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerId
     *
-    * @param string|null $containerId 容器ID
+    * @param string|null $containerId **参数解释**: 容器ID **取值范围**: 字符长度0-255位
     *
     * @return $this
     */
@@ -552,7 +552,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerName
-    *  容器名称
+    *  **参数解释**: 容器名称 **取值范围**: 字符长度0-255位
     *
     * @return string|null
     */
@@ -564,7 +564,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerName
     *
-    * @param string|null $containerName 容器名称
+    * @param string|null $containerName **参数解释**: 容器名称 **取值范围**: 字符长度0-255位
     *
     * @return $this
     */
@@ -576,7 +576,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageName
-    *  镜像名称
+    *  **参数解释**: 镜像名称 **取值范围**: 字符长度0-255位
     *
     * @return string|null
     */
@@ -588,7 +588,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageName
     *
-    * @param string|null $imageName 镜像名称
+    * @param string|null $imageName **参数解释**: 镜像名称 **取值范围**: 字符长度0-255位
     *
     * @return $this
     */
@@ -600,7 +600,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  容器状态，包含以下几种： -Running 运行中 -Terminated 终止 -Waiting 等待
+    *  **参数解释**: 容器状态 **取值范围**: - Running：运行中。 - Terminated：终止。 - Waiting：等待。
     *
     * @return string|null
     */
@@ -612,7 +612,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 容器状态，包含以下几种： -Running 运行中 -Terminated 终止 -Waiting 等待
+    * @param string|null $status **参数解释**: 容器状态 **取值范围**: - Running：运行中。 - Terminated：终止。 - Waiting：等待。
     *
     * @return $this
     */
@@ -624,7 +624,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  **参数解释**: 创建时间 **取值范围**: 取值0-4071095999000
     *
     * @return int|null
     */
@@ -636,7 +636,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 创建时间
+    * @param int|null $createTime **参数解释**: 创建时间 **取值范围**: 取值0-4071095999000
     *
     * @return $this
     */
@@ -648,7 +648,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cpuLimit
-    *  cpu限制
+    *  **参数解释**: cpu限制 **取值范围**: 字符长度0-64位
     *
     * @return string|null
     */
@@ -660,7 +660,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cpuLimit
     *
-    * @param string|null $cpuLimit cpu限制
+    * @param string|null $cpuLimit **参数解释**: cpu限制 **取值范围**: 字符长度0-64位
     *
     * @return $this
     */
@@ -672,7 +672,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets memoryLimit
-    *  内存限制
+    *  **参数解释**: 内存限制 **取值范围**: 字符长度0-64位
     *
     * @return string|null
     */
@@ -684,7 +684,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets memoryLimit
     *
-    * @param string|null $memoryLimit 内存限制
+    * @param string|null $memoryLimit **参数解释**: 内存限制 **取值范围**: 字符长度0-64位
     *
     * @return $this
     */
@@ -696,7 +696,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets restartCount
-    *  重启次数
+    *  **参数解释**: 重启次数 **取值范围**: 取值0-20
     *
     * @return int|null
     */
@@ -708,7 +708,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets restartCount
     *
-    * @param int|null $restartCount 重启次数
+    * @param int|null $restartCount **参数解释**: 重启次数 **取值范围**: 取值0-20
     *
     * @return $this
     */
@@ -720,7 +720,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets podName
-    *  所属pod名称
+    *  **参数解释**: 所属pod名称 **取值范围**: 字符长度0-64位
     *
     * @return string|null
     */
@@ -732,7 +732,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets podName
     *
-    * @param string|null $podName 所属pod名称
+    * @param string|null $podName **参数解释**: 所属pod名称 **取值范围**: 字符长度0-64位
     *
     * @return $this
     */
@@ -744,7 +744,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterName
-    *  所属集群
+    *  **参数解释**: 所属集群 **取值范围**: 字符长度0-64位
     *
     * @return string|null
     */
@@ -756,7 +756,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterName
     *
-    * @param string|null $clusterName 所属集群
+    * @param string|null $clusterName **参数解释**: 所属集群 **取值范围**: 字符长度0-64位
     *
     * @return $this
     */
@@ -768,7 +768,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群id
+    *  **参数解释**: 集群id **取值范围**: 字符长度0-64位
     *
     * @return string|null
     */
@@ -780,7 +780,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群id
+    * @param string|null $clusterId **参数解释**: 集群id **取值范围**: 字符长度0-64位
     *
     * @return $this
     */
@@ -792,7 +792,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterType
-    *  集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
+    *  **参数解释**: 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
     *
     * @return string|null
     */
@@ -804,7 +804,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterType
     *
-    * @param string|null $clusterType 集群类型，包含以下几种： -k8s 原生集群 -cce CCE集群 -ali 阿里云集群 -tencent 腾讯云集群 -azure 微软云集群 -aws 亚马逊集群 -self_built_hw 华为云自建集群 -self_built_idc IDC自建集群
+    * @param string|null $clusterType **参数解释**: 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
     *
     * @return $this
     */
@@ -816,7 +816,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets risky
-    *  是否有风险
+    *  **参数解释**: 是否有风险 **取值范围**: true和false，true代表有风险，false代表无风险
     *
     * @return bool|null
     */
@@ -828,7 +828,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets risky
     *
-    * @param bool|null $risky 是否有风险
+    * @param bool|null $risky **参数解释**: 是否有风险 **取值范围**: true和false，true代表有风险，false代表无风险
     *
     * @return $this
     */
@@ -840,7 +840,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets lowRisk
-    *  低危风险数量
+    *  **参数解释**: 低危风险数量 **取值范围**: 取值0-2147483647
     *
     * @return int|null
     */
@@ -852,7 +852,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets lowRisk
     *
-    * @param int|null $lowRisk 低危风险数量
+    * @param int|null $lowRisk **参数解释**: 低危风险数量 **取值范围**: 取值0-2147483647
     *
     * @return $this
     */
@@ -864,7 +864,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets mediumRisk
-    *  中危风险数量
+    *  **参数解释**: 中危风险数量 **取值范围**: 取值0-2147483647
     *
     * @return int|null
     */
@@ -876,7 +876,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets mediumRisk
     *
-    * @param int|null $mediumRisk 中危风险数量
+    * @param int|null $mediumRisk **参数解释**: 中危风险数量 **取值范围**: 取值0-2147483647
     *
     * @return $this
     */
@@ -888,7 +888,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets highRisk
-    *  高危风险数量
+    *  **参数解释**: 高危风险数量 **取值范围**: 取值0-2147483647
     *
     * @return int|null
     */
@@ -900,7 +900,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets highRisk
     *
-    * @param int|null $highRisk 高危风险数量
+    * @param int|null $highRisk **参数解释**: 高危风险数量 **取值范围**: 取值0-2147483647
     *
     * @return $this
     */
@@ -912,7 +912,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fatalRisk
-    *  致命风险数量
+    *  **参数解释**: 致命风险数量 **取值范围**: 取值0-2147483647
     *
     * @return int|null
     */
@@ -924,7 +924,7 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fatalRisk
     *
-    * @param int|null $fatalRisk 致命风险数量
+    * @param int|null $fatalRisk **参数解释**: 致命风险数量 **取值范围**: 取值0-2147483647
     *
     * @return $this
     */

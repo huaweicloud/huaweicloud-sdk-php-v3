@@ -20,7 +20,7 @@ class EmailDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * primary  一个布尔值，表示这是否为用户的主电子邮箱
+    * primary  一个布尔值，表示这是否是用户的主电子邮箱
     * type  表示电子邮箱类型的字符串
     * value  包含电子邮箱地址的字符串
     * verificationStatus  电子邮箱地址的验证状态
@@ -36,7 +36,7 @@ class EmailDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * primary  一个布尔值，表示这是否为用户的主电子邮箱
+    * primary  一个布尔值，表示这是否是用户的主电子邮箱
     * type  表示电子邮箱类型的字符串
     * value  包含电子邮箱地址的字符串
     * verificationStatus  电子邮箱地址的验证状态
@@ -73,7 +73,7 @@ class EmailDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * primary  一个布尔值，表示这是否为用户的主电子邮箱
+    * primary  一个布尔值，表示这是否是用户的主电子邮箱
     * type  表示电子邮箱类型的字符串
     * value  包含电子邮箱地址的字符串
     * verificationStatus  电子邮箱地址的验证状态
@@ -89,7 +89,7 @@ class EmailDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * primary  一个布尔值，表示这是否为用户的主电子邮箱
+    * primary  一个布尔值，表示这是否是用户的主电子邮箱
     * type  表示电子邮箱类型的字符串
     * value  包含电子邮箱地址的字符串
     * verificationStatus  电子邮箱地址的验证状态
@@ -105,7 +105,7 @@ class EmailDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * primary  一个布尔值，表示这是否为用户的主电子邮箱
+    * primary  一个布尔值，表示这是否是用户的主电子邮箱
     * type  表示电子邮箱类型的字符串
     * value  包含电子邮箱地址的字符串
     * verificationStatus  电子邮箱地址的验证状态
@@ -257,7 +257,7 @@ class EmailDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets primary
-    *  一个布尔值，表示这是否为用户的主电子邮箱
+    *  一个布尔值，表示这是否是用户的主电子邮箱
     *
     * @return bool
     */
@@ -269,7 +269,7 @@ class EmailDto implements ModelInterface, ArrayAccess
     /**
     * Sets primary
     *
-    * @param bool $primary 一个布尔值，表示这是否为用户的主电子邮箱
+    * @param bool $primary 一个布尔值，表示这是否是用户的主电子邮箱
     *
     * @return $this
     */

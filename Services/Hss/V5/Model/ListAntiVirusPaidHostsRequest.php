@@ -28,7 +28,7 @@ class ListAntiVirusPaidHostsRequest implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  服务器公网IP
     * groupId  服务器组ID
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full：全盘扫描   - custom : 自定义扫描
     * startType  启动类型，包含如下:   - now ：立即启动   - period : 周期启动
     *
     * @var string[]
@@ -56,7 +56,7 @@ class ListAntiVirusPaidHostsRequest implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  服务器公网IP
     * groupId  服务器组ID
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full：全盘扫描   - custom : 自定义扫描
     * startType  启动类型，包含如下:   - now ：立即启动   - period : 周期启动
     *
     * @var string[]
@@ -105,7 +105,7 @@ class ListAntiVirusPaidHostsRequest implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  服务器公网IP
     * groupId  服务器组ID
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full：全盘扫描   - custom : 自定义扫描
     * startType  启动类型，包含如下:   - now ：立即启动   - period : 周期启动
     *
     * @var string[]
@@ -133,7 +133,7 @@ class ListAntiVirusPaidHostsRequest implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  服务器公网IP
     * groupId  服务器组ID
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full：全盘扫描   - custom : 自定义扫描
     * startType  启动类型，包含如下:   - now ：立即启动   - period : 周期启动
     *
     * @var string[]
@@ -161,7 +161,7 @@ class ListAntiVirusPaidHostsRequest implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  服务器公网IP
     * groupId  服务器组ID
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full：全盘扫描   - custom : 自定义扫描
     * startType  启动类型，包含如下:   - now ：立即启动   - period : 周期启动
     *
     * @var string[]
@@ -549,7 +549,7 @@ class ListAntiVirusPaidHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanType
-    *  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    *  任务类型，包含如下:   - quick ：快速扫描   - full：全盘扫描   - custom : 自定义扫描
     *
     * @return string
     */
@@ -561,7 +561,7 @@ class ListAntiVirusPaidHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets scanType
     *
-    * @param string $scanType 任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * @param string $scanType 任务类型，包含如下:   - quick ：快速扫描   - full：全盘扫描   - custom : 自定义扫描
     *
     * @return $this
     */

@@ -37,6 +37,7 @@ class TaskByServerSource implements ModelInterface, ArrayAccess
     * existServer  是否使用已有虚拟机
     * usePublicIp  是否使用公网IP
     * cloneServer  cloneServer
+    * subtaskInfo  当前子任务及进度
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class TaskByServerSource implements ModelInterface, ArrayAccess
             'logCollectStatus' => 'string',
             'existServer' => 'bool',
             'usePublicIp' => 'bool',
-            'cloneServer' => '\HuaweiCloud\SDK\Sms\V3\Model\CloneServer'
+            'cloneServer' => '\HuaweiCloud\SDK\Sms\V3\Model\CloneServer',
+            'subtaskInfo' => 'string'
     ];
 
     /**
@@ -79,6 +81,7 @@ class TaskByServerSource implements ModelInterface, ArrayAccess
     * existServer  是否使用已有虚拟机
     * usePublicIp  是否使用公网IP
     * cloneServer  cloneServer
+    * subtaskInfo  当前子任务及进度
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class TaskByServerSource implements ModelInterface, ArrayAccess
         'logCollectStatus' => null,
         'existServer' => null,
         'usePublicIp' => null,
-        'cloneServer' => null
+        'cloneServer' => null,
+        'subtaskInfo' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class TaskByServerSource implements ModelInterface, ArrayAccess
     * existServer  是否使用已有虚拟机
     * usePublicIp  是否使用公网IP
     * cloneServer  cloneServer
+    * subtaskInfo  当前子任务及进度
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class TaskByServerSource implements ModelInterface, ArrayAccess
             'logCollectStatus' => 'log_collect_status',
             'existServer' => 'exist_server',
             'usePublicIp' => 'use_public_ip',
-            'cloneServer' => 'clone_server'
+            'cloneServer' => 'clone_server',
+            'subtaskInfo' => 'subtask_info'
     ];
 
     /**
@@ -184,6 +190,7 @@ class TaskByServerSource implements ModelInterface, ArrayAccess
     * existServer  是否使用已有虚拟机
     * usePublicIp  是否使用公网IP
     * cloneServer  cloneServer
+    * subtaskInfo  当前子任务及进度
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class TaskByServerSource implements ModelInterface, ArrayAccess
             'logCollectStatus' => 'setLogCollectStatus',
             'existServer' => 'setExistServer',
             'usePublicIp' => 'setUsePublicIp',
-            'cloneServer' => 'setCloneServer'
+            'cloneServer' => 'setCloneServer',
+            'subtaskInfo' => 'setSubtaskInfo'
     ];
 
     /**
@@ -226,6 +234,7 @@ class TaskByServerSource implements ModelInterface, ArrayAccess
     * existServer  是否使用已有虚拟机
     * usePublicIp  是否使用公网IP
     * cloneServer  cloneServer
+    * subtaskInfo  当前子任务及进度
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class TaskByServerSource implements ModelInterface, ArrayAccess
             'logCollectStatus' => 'getLogCollectStatus',
             'existServer' => 'getExistServer',
             'usePublicIp' => 'getUsePublicIp',
-            'cloneServer' => 'getCloneServer'
+            'cloneServer' => 'getCloneServer',
+            'subtaskInfo' => 'getSubtaskInfo'
     ];
 
     /**
@@ -324,6 +334,7 @@ class TaskByServerSource implements ModelInterface, ArrayAccess
         $this->container['existServer'] = isset($data['existServer']) ? $data['existServer'] : null;
         $this->container['usePublicIp'] = isset($data['usePublicIp']) ? $data['usePublicIp'] : null;
         $this->container['cloneServer'] = isset($data['cloneServer']) ? $data['cloneServer'] : null;
+        $this->container['subtaskInfo'] = isset($data['subtaskInfo']) ? $data['subtaskInfo'] : null;
     }
 
     /**
@@ -405,6 +416,12 @@ class TaskByServerSource implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['logCollectStatus']) && (mb_strlen($this->container['logCollectStatus']) < 0)) {
                 $invalidProperties[] = "invalid value for 'logCollectStatus', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['subtaskInfo']) && (mb_strlen($this->container['subtaskInfo']) > 255)) {
+                $invalidProperties[] = "invalid value for 'subtaskInfo', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['subtaskInfo']) && (mb_strlen($this->container['subtaskInfo']) < 0)) {
+                $invalidProperties[] = "invalid value for 'subtaskInfo', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -825,6 +842,30 @@ class TaskByServerSource implements ModelInterface, ArrayAccess
     public function setCloneServer($cloneServer)
     {
         $this->container['cloneServer'] = $cloneServer;
+        return $this;
+    }
+
+    /**
+    * Gets subtaskInfo
+    *  当前子任务及进度
+    *
+    * @return string|null
+    */
+    public function getSubtaskInfo()
+    {
+        return $this->container['subtaskInfo'];
+    }
+
+    /**
+    * Sets subtaskInfo
+    *
+    * @param string|null $subtaskInfo 当前子任务及进度
+    *
+    * @return $this
+    */
+    public function setSubtaskInfo($subtaskInfo)
+    {
+        $this->container['subtaskInfo'] = $subtaskInfo;
         return $this;
     }
 

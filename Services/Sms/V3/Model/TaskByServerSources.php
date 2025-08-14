@@ -44,6 +44,7 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * logExpire  分享链接有效期
     * logUploadTime  日志上传时间
     * logShareUrl  分享链接url
+    * subtaskInfo  当前子任务及进度
     *
     * @var string[]
     */
@@ -71,7 +72,8 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
             'logBucket' => 'string',
             'logExpire' => 'int',
             'logUploadTime' => 'int',
-            'logShareUrl' => 'string'
+            'logShareUrl' => 'string',
+            'subtaskInfo' => 'string'
     ];
 
     /**
@@ -100,6 +102,7 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * logExpire  分享链接有效期
     * logUploadTime  日志上传时间
     * logShareUrl  分享链接url
+    * subtaskInfo  当前子任务及进度
     *
     * @var string[]
     */
@@ -127,7 +130,8 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
         'logBucket' => null,
         'logExpire' => 'int64',
         'logUploadTime' => 'int64',
-        'logShareUrl' => null
+        'logShareUrl' => null,
+        'subtaskInfo' => null
     ];
 
     /**
@@ -177,6 +181,7 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * logExpire  分享链接有效期
     * logUploadTime  日志上传时间
     * logShareUrl  分享链接url
+    * subtaskInfo  当前子任务及进度
     *
     * @var string[]
     */
@@ -204,7 +209,8 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
             'logBucket' => 'log_bucket',
             'logExpire' => 'log_expire',
             'logUploadTime' => 'log_upload_time',
-            'logShareUrl' => 'log_share_url'
+            'logShareUrl' => 'log_share_url',
+            'subtaskInfo' => 'subtask_info'
     ];
 
     /**
@@ -233,6 +239,7 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * logExpire  分享链接有效期
     * logUploadTime  日志上传时间
     * logShareUrl  分享链接url
+    * subtaskInfo  当前子任务及进度
     *
     * @var string[]
     */
@@ -260,7 +267,8 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
             'logBucket' => 'setLogBucket',
             'logExpire' => 'setLogExpire',
             'logUploadTime' => 'setLogUploadTime',
-            'logShareUrl' => 'setLogShareUrl'
+            'logShareUrl' => 'setLogShareUrl',
+            'subtaskInfo' => 'setSubtaskInfo'
     ];
 
     /**
@@ -289,6 +297,7 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * logExpire  分享链接有效期
     * logUploadTime  日志上传时间
     * logShareUrl  分享链接url
+    * subtaskInfo  当前子任务及进度
     *
     * @var string[]
     */
@@ -316,7 +325,8 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
             'logBucket' => 'getLogBucket',
             'logExpire' => 'getLogExpire',
             'logUploadTime' => 'getLogUploadTime',
-            'logShareUrl' => 'getLogShareUrl'
+            'logShareUrl' => 'getLogShareUrl',
+            'subtaskInfo' => 'getSubtaskInfo'
     ];
 
     /**
@@ -401,6 +411,7 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
         $this->container['logExpire'] = isset($data['logExpire']) ? $data['logExpire'] : null;
         $this->container['logUploadTime'] = isset($data['logUploadTime']) ? $data['logUploadTime'] : null;
         $this->container['logShareUrl'] = isset($data['logShareUrl']) ? $data['logShareUrl'] : null;
+        $this->container['subtaskInfo'] = isset($data['subtaskInfo']) ? $data['subtaskInfo'] : null;
     }
 
     /**
@@ -524,6 +535,12 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['logShareUrl']) && (mb_strlen($this->container['logShareUrl']) < 0)) {
                 $invalidProperties[] = "invalid value for 'logShareUrl', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['subtaskInfo']) && (mb_strlen($this->container['subtaskInfo']) > 255)) {
+                $invalidProperties[] = "invalid value for 'subtaskInfo', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['subtaskInfo']) && (mb_strlen($this->container['subtaskInfo']) < 0)) {
+                $invalidProperties[] = "invalid value for 'subtaskInfo', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -1112,6 +1129,30 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     public function setLogShareUrl($logShareUrl)
     {
         $this->container['logShareUrl'] = $logShareUrl;
+        return $this;
+    }
+
+    /**
+    * Gets subtaskInfo
+    *  当前子任务及进度
+    *
+    * @return string|null
+    */
+    public function getSubtaskInfo()
+    {
+        return $this->container['subtaskInfo'];
+    }
+
+    /**
+    * Sets subtaskInfo
+    *
+    * @param string|null $subtaskInfo 当前子任务及进度
+    *
+    * @return $this
+    */
+    public function setSubtaskInfo($subtaskInfo)
+    {
+        $this->container['subtaskInfo'] = $subtaskInfo;
         return $this;
     }
 

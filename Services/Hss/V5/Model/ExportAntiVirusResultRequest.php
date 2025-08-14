@@ -26,13 +26,13 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  服务器公网IP
-    * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * severityList  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 致命
+    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled：已处理
+    * severityList  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * malwareName  病毒名称
     * filePath  文件路径
     * exportSize  导出条数
-    * fileHash  文件hash,当前为sha256
+    * fileHash  文件hash，当前为sha256
     * taskName  任务名称
     * manualIsolate  是否使用手动隔离按钮
     * body  body
@@ -66,13 +66,13 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  服务器公网IP
-    * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * severityList  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 致命
+    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled：已处理
+    * severityList  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * malwareName  病毒名称
     * filePath  文件路径
     * exportSize  导出条数
-    * fileHash  文件hash,当前为sha256
+    * fileHash  文件hash，当前为sha256
     * taskName  任务名称
     * manualIsolate  是否使用手动隔离按钮
     * body  body
@@ -127,13 +127,13 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  服务器公网IP
-    * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * severityList  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 致命
+    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled：已处理
+    * severityList  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * malwareName  病毒名称
     * filePath  文件路径
     * exportSize  导出条数
-    * fileHash  文件hash,当前为sha256
+    * fileHash  文件hash，当前为sha256
     * taskName  任务名称
     * manualIsolate  是否使用手动隔离按钮
     * body  body
@@ -167,13 +167,13 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  服务器公网IP
-    * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * severityList  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 致命
+    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled：已处理
+    * severityList  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * malwareName  病毒名称
     * filePath  文件路径
     * exportSize  导出条数
-    * fileHash  文件hash,当前为sha256
+    * fileHash  文件hash，当前为sha256
     * taskName  任务名称
     * manualIsolate  是否使用手动隔离按钮
     * body  body
@@ -207,13 +207,13 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  服务器公网IP
-    * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * severityList  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 致命
+    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled：已处理
+    * severityList  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * malwareName  病毒名称
     * filePath  文件路径
     * exportSize  导出条数
-    * fileHash  文件hash,当前为sha256
+    * fileHash  文件hash，当前为sha256
     * taskName  任务名称
     * manualIsolate  是否使用手动隔离按钮
     * body  body
@@ -591,7 +591,7 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets handleStatus
-    *  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    *  处置状态，包含如下:   - unhandled：未处理   - handled：已处理
     *
     * @return string|null
     */
@@ -603,7 +603,7 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
     /**
     * Sets handleStatus
     *
-    * @param string|null $handleStatus 处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * @param string|null $handleStatus 处置状态，包含如下:   - unhandled：未处理   - handled：已处理
     *
     * @return $this
     */
@@ -615,7 +615,7 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets severityList
-    *  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 致命
+    *  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
     *
     * @return string[]|null
     */
@@ -627,7 +627,7 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
     /**
     * Sets severityList
     *
-    * @param string[]|null $severityList 威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 致命
+    * @param string[]|null $severityList 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
     *
     * @return $this
     */
@@ -735,7 +735,7 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileHash
-    *  文件hash,当前为sha256
+    *  文件hash，当前为sha256
     *
     * @return string|null
     */
@@ -747,7 +747,7 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fileHash
     *
-    * @param string|null $fileHash 文件hash,当前为sha256
+    * @param string|null $fileHash 文件hash，当前为sha256
     *
     * @return $this
     */

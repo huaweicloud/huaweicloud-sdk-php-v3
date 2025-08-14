@@ -25,7 +25,7 @@ class ListClusterEventLogsRequest implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * namespace  产生事件的命名空间
     * eventName  事件名称
-    * eventType  事件类型，包含以下几种： - Warning 警告事件 - Normal 普通事件
+    * eventType  事件类型，包含以下几种： - Warning：警告事件 - Normal：普通事件
     * resourceType  产生事件的资源类型
     * resourceName  产生事件的资源名称
     * reason  事件的触发原因
@@ -61,7 +61,7 @@ class ListClusterEventLogsRequest implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * namespace  产生事件的命名空间
     * eventName  事件名称
-    * eventType  事件类型，包含以下几种： - Warning 警告事件 - Normal 普通事件
+    * eventType  事件类型，包含以下几种： - Warning：警告事件 - Normal：普通事件
     * resourceType  产生事件的资源类型
     * resourceName  产生事件的资源名称
     * reason  事件的触发原因
@@ -118,7 +118,7 @@ class ListClusterEventLogsRequest implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * namespace  产生事件的命名空间
     * eventName  事件名称
-    * eventType  事件类型，包含以下几种： - Warning 警告事件 - Normal 普通事件
+    * eventType  事件类型，包含以下几种： - Warning：警告事件 - Normal：普通事件
     * resourceType  产生事件的资源类型
     * resourceName  产生事件的资源名称
     * reason  事件的触发原因
@@ -154,7 +154,7 @@ class ListClusterEventLogsRequest implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * namespace  产生事件的命名空间
     * eventName  事件名称
-    * eventType  事件类型，包含以下几种： - Warning 警告事件 - Normal 普通事件
+    * eventType  事件类型，包含以下几种： - Warning：警告事件 - Normal：普通事件
     * resourceType  产生事件的资源类型
     * resourceName  产生事件的资源名称
     * reason  事件的触发原因
@@ -190,7 +190,7 @@ class ListClusterEventLogsRequest implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * namespace  产生事件的命名空间
     * eventName  事件名称
-    * eventType  事件类型，包含以下几种： - Warning 警告事件 - Normal 普通事件
+    * eventType  事件类型，包含以下几种： - Warning：警告事件 - Normal：普通事件
     * resourceType  产生事件的资源类型
     * resourceName  产生事件的资源名称
     * reason  事件的触发原因
@@ -566,7 +566,7 @@ class ListClusterEventLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventType
-    *  事件类型，包含以下几种： - Warning 警告事件 - Normal 普通事件
+    *  事件类型，包含以下几种： - Warning：警告事件 - Normal：普通事件
     *
     * @return string|null
     */
@@ -578,7 +578,7 @@ class ListClusterEventLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param string|null $eventType 事件类型，包含以下几种： - Warning 警告事件 - Normal 普通事件
+    * @param string|null $eventType 事件类型，包含以下几种： - Warning：警告事件 - Normal：普通事件
     *
     * @return $this
     */

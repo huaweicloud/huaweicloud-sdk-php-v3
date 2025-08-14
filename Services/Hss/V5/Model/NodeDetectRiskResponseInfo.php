@@ -27,7 +27,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
     * protectNodeNum  集群开启防护节点数量
     * nodeTotalNum  集群节点总数
     * clusterId  集群id
-    * chargingMode  付费模式 | on_demand 按需 free 免费
+    * chargingMode  付费模式包括： - on_demand：按需 - free：免费
     *
     * @var string[]
     */
@@ -51,7 +51,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
     * protectNodeNum  集群开启防护节点数量
     * nodeTotalNum  集群节点总数
     * clusterId  集群id
-    * chargingMode  付费模式 | on_demand 按需 free 免费
+    * chargingMode  付费模式包括： - on_demand：按需 - free：免费
     *
     * @var string[]
     */
@@ -96,7 +96,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
     * protectNodeNum  集群开启防护节点数量
     * nodeTotalNum  集群节点总数
     * clusterId  集群id
-    * chargingMode  付费模式 | on_demand 按需 free 免费
+    * chargingMode  付费模式包括： - on_demand：按需 - free：免费
     *
     * @var string[]
     */
@@ -120,7 +120,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
     * protectNodeNum  集群开启防护节点数量
     * nodeTotalNum  集群节点总数
     * clusterId  集群id
-    * chargingMode  付费模式 | on_demand 按需 free 免费
+    * chargingMode  付费模式包括： - on_demand：按需 - free：免费
     *
     * @var string[]
     */
@@ -144,7 +144,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
     * protectNodeNum  集群开启防护节点数量
     * nodeTotalNum  集群节点总数
     * clusterId  集群id
-    * chargingMode  付费模式 | on_demand 按需 free 免费
+    * chargingMode  付费模式包括： - on_demand：按需 - free：免费
     *
     * @var string[]
     */
@@ -461,7 +461,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  付费模式 | on_demand 按需 free 免费
+    *  付费模式包括： - on_demand：按需 - free：免费
     *
     * @return string|null
     */
@@ -473,7 +473,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string|null $chargingMode 付费模式 | on_demand 按需 free 免费
+    * @param string|null $chargingMode 付费模式包括： - on_demand：按需 - free：免费
     *
     * @return $this
     */

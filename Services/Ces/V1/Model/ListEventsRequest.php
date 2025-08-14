@@ -21,6 +21,7 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * eventType  事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
+    * subEventType  事件子类, 枚举类型：SUB_EVENT.OPS 运维事件, SUB_EVENT.PLAN 计划事件，SUB_EVENT.CUSTOM 自定义事件
     * eventName  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
     * from  查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
     * to  查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
@@ -31,6 +32,7 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'eventType' => 'string',
+            'subEventType' => 'string',
             'eventName' => 'string',
             'from' => 'int',
             'to' => 'int',
@@ -41,6 +43,7 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * eventType  事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
+    * subEventType  事件子类, 枚举类型：SUB_EVENT.OPS 运维事件, SUB_EVENT.PLAN 计划事件，SUB_EVENT.CUSTOM 自定义事件
     * eventName  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
     * from  查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
     * to  查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
@@ -51,6 +54,7 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'eventType' => null,
+        'subEventType' => null,
         'eventName' => null,
         'from' => 'int64',
         'to' => 'int64',
@@ -82,6 +86,7 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * eventType  事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
+    * subEventType  事件子类, 枚举类型：SUB_EVENT.OPS 运维事件, SUB_EVENT.PLAN 计划事件，SUB_EVENT.CUSTOM 自定义事件
     * eventName  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
     * from  查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
     * to  查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
@@ -92,6 +97,7 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'eventType' => 'event_type',
+            'subEventType' => 'sub_event_type',
             'eventName' => 'event_name',
             'from' => 'from',
             'to' => 'to',
@@ -102,6 +108,7 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * eventType  事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
+    * subEventType  事件子类, 枚举类型：SUB_EVENT.OPS 运维事件, SUB_EVENT.PLAN 计划事件，SUB_EVENT.CUSTOM 自定义事件
     * eventName  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
     * from  查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
     * to  查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
@@ -112,6 +119,7 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'eventType' => 'setEventType',
+            'subEventType' => 'setSubEventType',
             'eventName' => 'setEventName',
             'from' => 'setFrom',
             'to' => 'setTo',
@@ -122,6 +130,7 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * eventType  事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
+    * subEventType  事件子类, 枚举类型：SUB_EVENT.OPS 运维事件, SUB_EVENT.PLAN 计划事件，SUB_EVENT.CUSTOM 自定义事件
     * eventName  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
     * from  查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
     * to  查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
@@ -132,6 +141,7 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'eventType' => 'getEventType',
+            'subEventType' => 'getSubEventType',
             'eventName' => 'getEventName',
             'from' => 'getFrom',
             'to' => 'getTo',
@@ -181,6 +191,9 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     }
     const EVENT_TYPE_EVENT_SYS = 'EVENT.SYS';
     const EVENT_TYPE_EVENT_CUSTOM = 'EVENT.CUSTOM';
+    const SUB_EVENT_TYPE_SUB_EVENT_OPS = 'SUB_EVENT.OPS';
+    const SUB_EVENT_TYPE_SUB_EVENT_PLAN = 'SUB_EVENT.PLAN';
+    const SUB_EVENT_TYPE_SUB_EVENT_CUSTOM = 'SUB_EVENT.CUSTOM';
     
 
     /**
@@ -193,6 +206,20 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
         return [
             self::EVENT_TYPE_EVENT_SYS,
             self::EVENT_TYPE_EVENT_CUSTOM,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSubEventTypeAllowableValues()
+    {
+        return [
+            self::SUB_EVENT_TYPE_SUB_EVENT_OPS,
+            self::SUB_EVENT_TYPE_SUB_EVENT_PLAN,
+            self::SUB_EVENT_TYPE_SUB_EVENT_CUSTOM,
         ];
     }
 
@@ -213,6 +240,7 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
+        $this->container['subEventType'] = isset($data['subEventType']) ? $data['subEventType'] : null;
         $this->container['eventName'] = isset($data['eventName']) ? $data['eventName'] : null;
         $this->container['from'] = isset($data['from']) ? $data['from'] : null;
         $this->container['to'] = isset($data['to']) ? $data['to'] : null;
@@ -232,6 +260,14 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['eventType']) && !in_array($this->container['eventType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'eventType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getSubEventTypeAllowableValues();
+                if (!is_null($this->container['subEventType']) && !in_array($this->container['subEventType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'subEventType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -271,6 +307,30 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     public function setEventType($eventType)
     {
         $this->container['eventType'] = $eventType;
+        return $this;
+    }
+
+    /**
+    * Gets subEventType
+    *  事件子类, 枚举类型：SUB_EVENT.OPS 运维事件, SUB_EVENT.PLAN 计划事件，SUB_EVENT.CUSTOM 自定义事件
+    *
+    * @return string|null
+    */
+    public function getSubEventType()
+    {
+        return $this->container['subEventType'];
+    }
+
+    /**
+    * Sets subEventType
+    *
+    * @param string|null $subEventType 事件子类, 枚举类型：SUB_EVENT.OPS 运维事件, SUB_EVENT.PLAN 计划事件，SUB_EVENT.CUSTOM 自定义事件
+    *
+    * @return $this
+    */
+    public function setSubEventType($subEventType)
+    {
+        $this->container['subEventType'] = $subEventType;
         return $this;
     }
 

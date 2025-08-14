@@ -25,6 +25,8 @@ class CreateEcDatakeyPairRequestBody implements ModelInterface, ArrayAccess
     * withPlainText  是否返回明文私钥，默认为true
     * additionalAuthenticatedData  认证加密的额外信息，请不要填写敏感信息
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
+    * pin  指定PIN码保护。仅四级密评场景支持该参数。
+    * pinType  pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class CreateEcDatakeyPairRequestBody implements ModelInterface, ArrayAccess
             'keySpec' => 'string',
             'withPlainText' => 'bool',
             'additionalAuthenticatedData' => 'string',
-            'sequence' => 'string'
+            'sequence' => 'string',
+            'pin' => 'string',
+            'pinType' => 'string'
     ];
 
     /**
@@ -43,6 +47,8 @@ class CreateEcDatakeyPairRequestBody implements ModelInterface, ArrayAccess
     * withPlainText  是否返回明文私钥，默认为true
     * additionalAuthenticatedData  认证加密的额外信息，请不要填写敏感信息
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
+    * pin  指定PIN码保护。仅四级密评场景支持该参数。
+    * pinType  pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class CreateEcDatakeyPairRequestBody implements ModelInterface, ArrayAccess
         'keySpec' => null,
         'withPlainText' => null,
         'additionalAuthenticatedData' => null,
-        'sequence' => null
+        'sequence' => null,
+        'pin' => null,
+        'pinType' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class CreateEcDatakeyPairRequestBody implements ModelInterface, ArrayAccess
     * withPlainText  是否返回明文私钥，默认为true
     * additionalAuthenticatedData  认证加密的额外信息，请不要填写敏感信息
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
+    * pin  指定PIN码保护。仅四级密评场景支持该参数。
+    * pinType  pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class CreateEcDatakeyPairRequestBody implements ModelInterface, ArrayAccess
             'keySpec' => 'key_spec',
             'withPlainText' => 'with_plain_text',
             'additionalAuthenticatedData' => 'additional_authenticated_data',
-            'sequence' => 'sequence'
+            'sequence' => 'sequence',
+            'pin' => 'pin',
+            'pinType' => 'pin_type'
     ];
 
     /**
@@ -100,6 +112,8 @@ class CreateEcDatakeyPairRequestBody implements ModelInterface, ArrayAccess
     * withPlainText  是否返回明文私钥，默认为true
     * additionalAuthenticatedData  认证加密的额外信息，请不要填写敏感信息
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
+    * pin  指定PIN码保护。仅四级密评场景支持该参数。
+    * pinType  pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class CreateEcDatakeyPairRequestBody implements ModelInterface, ArrayAccess
             'keySpec' => 'setKeySpec',
             'withPlainText' => 'setWithPlainText',
             'additionalAuthenticatedData' => 'setAdditionalAuthenticatedData',
-            'sequence' => 'setSequence'
+            'sequence' => 'setSequence',
+            'pin' => 'setPin',
+            'pinType' => 'setPinType'
     ];
 
     /**
@@ -118,6 +134,8 @@ class CreateEcDatakeyPairRequestBody implements ModelInterface, ArrayAccess
     * withPlainText  是否返回明文私钥，默认为true
     * additionalAuthenticatedData  认证加密的额外信息，请不要填写敏感信息
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
+    * pin  指定PIN码保护。仅四级密评场景支持该参数。
+    * pinType  pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class CreateEcDatakeyPairRequestBody implements ModelInterface, ArrayAccess
             'keySpec' => 'getKeySpec',
             'withPlainText' => 'getWithPlainText',
             'additionalAuthenticatedData' => 'getAdditionalAuthenticatedData',
-            'sequence' => 'getSequence'
+            'sequence' => 'getSequence',
+            'pin' => 'getPin',
+            'pinType' => 'getPinType'
     ];
 
     /**
@@ -213,6 +233,8 @@ class CreateEcDatakeyPairRequestBody implements ModelInterface, ArrayAccess
         $this->container['withPlainText'] = isset($data['withPlainText']) ? $data['withPlainText'] : null;
         $this->container['additionalAuthenticatedData'] = isset($data['additionalAuthenticatedData']) ? $data['additionalAuthenticatedData'] : null;
         $this->container['sequence'] = isset($data['sequence']) ? $data['sequence'] : null;
+        $this->container['pin'] = isset($data['pin']) ? $data['pin'] : null;
+        $this->container['pinType'] = isset($data['pinType']) ? $data['pinType'] : null;
     }
 
     /**
@@ -386,6 +408,54 @@ class CreateEcDatakeyPairRequestBody implements ModelInterface, ArrayAccess
     public function setSequence($sequence)
     {
         $this->container['sequence'] = $sequence;
+        return $this;
+    }
+
+    /**
+    * Gets pin
+    *  指定PIN码保护。仅四级密评场景支持该参数。
+    *
+    * @return string|null
+    */
+    public function getPin()
+    {
+        return $this->container['pin'];
+    }
+
+    /**
+    * Sets pin
+    *
+    * @param string|null $pin 指定PIN码保护。仅四级密评场景支持该参数。
+    *
+    * @return $this
+    */
+    public function setPin($pin)
+    {
+        $this->container['pin'] = $pin;
+        return $this;
+    }
+
+    /**
+    * Gets pinType
+    *  pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
+    *
+    * @return string|null
+    */
+    public function getPinType()
+    {
+        return $this->container['pinType'];
+    }
+
+    /**
+    * Sets pinType
+    *
+    * @param string|null $pinType pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
+    *
+    * @return $this
+    */
+    public function setPinType($pinType)
+    {
+        $this->container['pinType'] = $pinType;
         return $this;
     }
 

@@ -23,10 +23,10 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * resultId  病毒查杀结果ID
     * eventType  事件类型
-    * occurTime  发生时间，毫秒
-    * fileHash  文件哈希
-    * filePath  文件路径
-    * fileAttr  文件属性
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -45,10 +45,10 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * resultId  病毒查杀结果ID
     * eventType  事件类型
-    * occurTime  发生时间，毫秒
-    * fileHash  文件哈希
-    * filePath  文件路径
-    * fileAttr  文件属性
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -88,10 +88,10 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * resultId  病毒查杀结果ID
     * eventType  事件类型
-    * occurTime  发生时间，毫秒
-    * fileHash  文件哈希
-    * filePath  文件路径
-    * fileAttr  文件属性
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -110,10 +110,10 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * resultId  病毒查杀结果ID
     * eventType  事件类型
-    * occurTime  发生时间，毫秒
-    * fileHash  文件哈希
-    * filePath  文件路径
-    * fileAttr  文件属性
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -132,10 +132,10 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * resultId  病毒查杀结果ID
     * eventType  事件类型
-    * occurTime  发生时间，毫秒
-    * fileHash  文件哈希
-    * filePath  文件路径
-    * fileAttr  文件属性
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -357,7 +357,7 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets occurTime
-    *  发生时间，毫秒
+    *  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -369,7 +369,7 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets occurTime
     *
-    * @param int|null $occurTime 发生时间，毫秒
+    * @param int|null $occurTime **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -381,7 +381,7 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileHash
-    *  文件哈希
+    *  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     *
     * @return string
     */
@@ -393,7 +393,7 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileHash
     *
-    * @param string $fileHash 文件哈希
+    * @param string $fileHash **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -405,7 +405,7 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets filePath
-    *  文件路径
+    *  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     *
     * @return string
     */
@@ -417,7 +417,7 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets filePath
     *
-    * @param string $filePath 文件路径
+    * @param string $filePath **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -429,7 +429,7 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileAttr
-    *  文件属性
+    *  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     *
     * @return string
     */
@@ -441,7 +441,7 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileAttr
     *
-    * @param string $fileAttr 文件属性
+    * @param string $fileAttr **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */

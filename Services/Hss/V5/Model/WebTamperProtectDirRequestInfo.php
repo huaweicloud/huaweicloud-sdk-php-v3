@@ -20,7 +20,7 @@ class WebTamperProtectDirRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * protectDirList  protect dir list
+    * protectDirList  防护目录列表
     * excludeFileType  排除文件类型
     * exclueFileType  排除文件类型
     * protectMode  防护模式，包含如下4种   - recovery ：恢复模式   - alarm ：告警模式
@@ -36,7 +36,7 @@ class WebTamperProtectDirRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * protectDirList  protect dir list
+    * protectDirList  防护目录列表
     * excludeFileType  排除文件类型
     * exclueFileType  排除文件类型
     * protectMode  防护模式，包含如下4种   - recovery ：恢复模式   - alarm ：告警模式
@@ -73,7 +73,7 @@ class WebTamperProtectDirRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * protectDirList  protect dir list
+    * protectDirList  防护目录列表
     * excludeFileType  排除文件类型
     * exclueFileType  排除文件类型
     * protectMode  防护模式，包含如下4种   - recovery ：恢复模式   - alarm ：告警模式
@@ -89,7 +89,7 @@ class WebTamperProtectDirRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * protectDirList  protect dir list
+    * protectDirList  防护目录列表
     * excludeFileType  排除文件类型
     * exclueFileType  排除文件类型
     * protectMode  防护模式，包含如下4种   - recovery ：恢复模式   - alarm ：告警模式
@@ -105,7 +105,7 @@ class WebTamperProtectDirRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * protectDirList  protect dir list
+    * protectDirList  防护目录列表
     * excludeFileType  排除文件类型
     * exclueFileType  排除文件类型
     * protectMode  防护模式，包含如下4种   - recovery ：恢复模式   - alarm ：告警模式
@@ -228,7 +228,7 @@ class WebTamperProtectDirRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectDirList
-    *  protect dir list
+    *  防护目录列表
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\WebTamperProtectHostDirRequestInfo[]|null
     */
@@ -240,7 +240,7 @@ class WebTamperProtectDirRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectDirList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\WebTamperProtectHostDirRequestInfo[]|null $protectDirList protect dir list
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\WebTamperProtectHostDirRequestInfo[]|null $protectDirList 防护目录列表
     *
     * @return $this
     */

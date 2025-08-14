@@ -26,7 +26,7 @@ class ShowK8sContainerDetailResponse implements ModelInterface, ArrayAccess
     * servicePassword  服务密码
     * servicePortList  容器各服务端口信息
     * enableSimulate  数据仿真，默认关闭。开启后将在沙箱中注入仿真数据 - open : 开启 - close : 关闭
-    * hosts  沙箱域名 使用 ',' 隔开
+    * hosts  沙箱域名，域名之间使用 ',' 隔开
     * extra  extra
     *
     * @var string[]
@@ -48,7 +48,7 @@ class ShowK8sContainerDetailResponse implements ModelInterface, ArrayAccess
     * servicePassword  服务密码
     * servicePortList  容器各服务端口信息
     * enableSimulate  数据仿真，默认关闭。开启后将在沙箱中注入仿真数据 - open : 开启 - close : 关闭
-    * hosts  沙箱域名 使用 ',' 隔开
+    * hosts  沙箱域名，域名之间使用 ',' 隔开
     * extra  extra
     *
     * @var string[]
@@ -91,7 +91,7 @@ class ShowK8sContainerDetailResponse implements ModelInterface, ArrayAccess
     * servicePassword  服务密码
     * servicePortList  容器各服务端口信息
     * enableSimulate  数据仿真，默认关闭。开启后将在沙箱中注入仿真数据 - open : 开启 - close : 关闭
-    * hosts  沙箱域名 使用 ',' 隔开
+    * hosts  沙箱域名，域名之间使用 ',' 隔开
     * extra  extra
     *
     * @var string[]
@@ -113,7 +113,7 @@ class ShowK8sContainerDetailResponse implements ModelInterface, ArrayAccess
     * servicePassword  服务密码
     * servicePortList  容器各服务端口信息
     * enableSimulate  数据仿真，默认关闭。开启后将在沙箱中注入仿真数据 - open : 开启 - close : 关闭
-    * hosts  沙箱域名 使用 ',' 隔开
+    * hosts  沙箱域名，域名之间使用 ',' 隔开
     * extra  extra
     *
     * @var string[]
@@ -135,7 +135,7 @@ class ShowK8sContainerDetailResponse implements ModelInterface, ArrayAccess
     * servicePassword  服务密码
     * servicePortList  容器各服务端口信息
     * enableSimulate  数据仿真，默认关闭。开启后将在沙箱中注入仿真数据 - open : 开启 - close : 关闭
-    * hosts  沙箱域名 使用 ',' 隔开
+    * hosts  沙箱域名，域名之间使用 ',' 隔开
     * extra  extra
     *
     * @var string[]
@@ -403,7 +403,7 @@ class ShowK8sContainerDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets hosts
-    *  沙箱域名 使用 ',' 隔开
+    *  沙箱域名，域名之间使用 ',' 隔开
     *
     * @return string|null
     */
@@ -415,7 +415,7 @@ class ShowK8sContainerDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets hosts
     *
-    * @param string|null $hosts 沙箱域名 使用 ',' 隔开
+    * @param string|null $hosts 沙箱域名，域名之间使用 ',' 隔开
     *
     * @return $this
     */

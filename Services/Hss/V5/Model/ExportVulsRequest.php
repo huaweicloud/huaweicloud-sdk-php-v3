@@ -29,7 +29,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * category  导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
     * limit  limit
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * repairPriority  修复优先级 Critical 紧急 High  高 Medium 中 Low 低
+    * repairPriority  修复优先级 Critical：紧急 High：高 Medium：中 Low：低
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * cveId  漏洞编号
     * labelList  漏洞标签
@@ -71,7 +71,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * category  导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
     * limit  limit
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * repairPriority  修复优先级 Critical 紧急 High  高 Medium 中 Low 低
+    * repairPriority  修复优先级 Critical：紧急 High：高 Medium：中 Low：低
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * cveId  漏洞编号
     * labelList  漏洞标签
@@ -134,7 +134,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * category  导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
     * limit  limit
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * repairPriority  修复优先级 Critical 紧急 High  高 Medium 中 Low 低
+    * repairPriority  修复优先级 Critical：紧急 High：高 Medium：中 Low：低
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * cveId  漏洞编号
     * labelList  漏洞标签
@@ -176,7 +176,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * category  导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
     * limit  limit
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * repairPriority  修复优先级 Critical 紧急 High  高 Medium 中 Low 低
+    * repairPriority  修复优先级 Critical：紧急 High：高 Medium：中 Low：低
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * cveId  漏洞编号
     * labelList  漏洞标签
@@ -218,7 +218,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * category  导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
     * limit  limit
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * repairPriority  修复优先级 Critical 紧急 High  高 Medium 中 Low 低
+    * repairPriority  修复优先级 Critical：紧急 High：高 Medium：中 Low：低
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * cveId  漏洞编号
     * labelList  漏洞标签
@@ -668,7 +668,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets repairPriority
-    *  修复优先级 Critical 紧急 High  高 Medium 中 Low 低
+    *  修复优先级 Critical：紧急 High：高 Medium：中 Low：低
     *
     * @return string|null
     */
@@ -680,7 +680,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets repairPriority
     *
-    * @param string|null $repairPriority 修复优先级 Critical 紧急 High  高 Medium 中 Low 低
+    * @param string|null $repairPriority 修复优先级 Critical：紧急 High：高 Medium：中 Low：低
     *
     * @return $this
     */

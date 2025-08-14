@@ -21,10 +21,10 @@ class ListPermissionSetsProvisionedToAccountRequest implements ModelInterface, A
     /**
     * Array of property to type mappings. Used for (de)serialization
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）。
-    * limit  每个请求返回的最大结果数
+    * instanceId  IAM Identity Center实例的全局唯一标识符（ID）
+    * limit  每个请求返回的最大结果数。
     * marker  分页标记
-    * accountId  账号的唯一身份标识
+    * accountId  指定账户的唯一身份标识
     * provisioningStatus  权限集授权状态
     *
     * @var string[]
@@ -41,10 +41,10 @@ class ListPermissionSetsProvisionedToAccountRequest implements ModelInterface, A
     /**
     * Array of property to format mappings. Used for (de)serialization
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）。
-    * limit  每个请求返回的最大结果数
+    * instanceId  IAM Identity Center实例的全局唯一标识符（ID）
+    * limit  每个请求返回的最大结果数。
     * marker  分页标记
-    * accountId  账号的唯一身份标识
+    * accountId  指定账户的唯一身份标识
     * provisioningStatus  权限集授权状态
     *
     * @var string[]
@@ -82,10 +82,10 @@ class ListPermissionSetsProvisionedToAccountRequest implements ModelInterface, A
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）。
-    * limit  每个请求返回的最大结果数
+    * instanceId  IAM Identity Center实例的全局唯一标识符（ID）
+    * limit  每个请求返回的最大结果数。
     * marker  分页标记
-    * accountId  账号的唯一身份标识
+    * accountId  指定账户的唯一身份标识
     * provisioningStatus  权限集授权状态
     *
     * @var string[]
@@ -102,10 +102,10 @@ class ListPermissionSetsProvisionedToAccountRequest implements ModelInterface, A
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）。
-    * limit  每个请求返回的最大结果数
+    * instanceId  IAM Identity Center实例的全局唯一标识符（ID）
+    * limit  每个请求返回的最大结果数。
     * marker  分页标记
-    * accountId  账号的唯一身份标识
+    * accountId  指定账户的唯一身份标识
     * provisioningStatus  权限集授权状态
     *
     * @var string[]
@@ -122,10 +122,10 @@ class ListPermissionSetsProvisionedToAccountRequest implements ModelInterface, A
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）。
-    * limit  每个请求返回的最大结果数
+    * instanceId  IAM Identity Center实例的全局唯一标识符（ID）
+    * limit  每个请求返回的最大结果数。
     * marker  分页标记
-    * accountId  账号的唯一身份标识
+    * accountId  指定账户的唯一身份标识
     * provisioningStatus  权限集授权状态
     *
     * @var string[]
@@ -228,9 +228,6 @@ class ListPermissionSetsProvisionedToAccountRequest implements ModelInterface, A
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['xSecurityToken']) && (mb_strlen($this->container['xSecurityToken']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'xSecurityToken', the character length must be smaller than or equal to 2048.";
-            }
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
@@ -306,7 +303,7 @@ class ListPermissionSetsProvisionedToAccountRequest implements ModelInterface, A
 
     /**
     * Gets instanceId
-    *  IAM身份中心实例的全局唯一标识符（ID）。
+    *  IAM Identity Center实例的全局唯一标识符（ID）
     *
     * @return string
     */
@@ -318,7 +315,7 @@ class ListPermissionSetsProvisionedToAccountRequest implements ModelInterface, A
     /**
     * Sets instanceId
     *
-    * @param string $instanceId IAM身份中心实例的全局唯一标识符（ID）。
+    * @param string $instanceId IAM Identity Center实例的全局唯一标识符（ID）
     *
     * @return $this
     */
@@ -330,7 +327,7 @@ class ListPermissionSetsProvisionedToAccountRequest implements ModelInterface, A
 
     /**
     * Gets limit
-    *  每个请求返回的最大结果数
+    *  每个请求返回的最大结果数。
     *
     * @return int|null
     */
@@ -342,7 +339,7 @@ class ListPermissionSetsProvisionedToAccountRequest implements ModelInterface, A
     /**
     * Sets limit
     *
-    * @param int|null $limit 每个请求返回的最大结果数
+    * @param int|null $limit 每个请求返回的最大结果数。
     *
     * @return $this
     */
@@ -378,7 +375,7 @@ class ListPermissionSetsProvisionedToAccountRequest implements ModelInterface, A
 
     /**
     * Gets accountId
-    *  账号的唯一身份标识
+    *  指定账户的唯一身份标识
     *
     * @return string
     */
@@ -390,7 +387,7 @@ class ListPermissionSetsProvisionedToAccountRequest implements ModelInterface, A
     /**
     * Sets accountId
     *
-    * @param string $accountId 账号的唯一身份标识
+    * @param string $accountId 指定账户的唯一身份标识
     *
     * @return $this
     */

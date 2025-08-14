@@ -24,8 +24,8 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     * name  资产指纹名字
     * version  资产指纹-数据库-版本
     * agentId  agent_id
-    * installPath  install_path
-    * configPath  config_path 配置文件路径
+    * installPath  安装路径
+    * configPath  配置文件路径
     * uid  uid
     * gid  gid
     * mode  mode
@@ -72,8 +72,8 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     * name  资产指纹名字
     * version  资产指纹-数据库-版本
     * agentId  agent_id
-    * installPath  install_path
-    * configPath  config_path 配置文件路径
+    * installPath  安装路径
+    * configPath  配置文件路径
     * uid  uid
     * gid  gid
     * mode  mode
@@ -141,8 +141,8 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     * name  资产指纹名字
     * version  资产指纹-数据库-版本
     * agentId  agent_id
-    * installPath  install_path
-    * configPath  config_path 配置文件路径
+    * installPath  安装路径
+    * configPath  配置文件路径
     * uid  uid
     * gid  gid
     * mode  mode
@@ -189,8 +189,8 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     * name  资产指纹名字
     * version  资产指纹-数据库-版本
     * agentId  agent_id
-    * installPath  install_path
-    * configPath  config_path 配置文件路径
+    * installPath  安装路径
+    * configPath  配置文件路径
     * uid  uid
     * gid  gid
     * mode  mode
@@ -237,8 +237,8 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     * name  资产指纹名字
     * version  资产指纹-数据库-版本
     * agentId  agent_id
-    * installPath  install_path
-    * configPath  config_path 配置文件路径
+    * installPath  安装路径
+    * configPath  配置文件路径
     * uid  uid
     * gid  gid
     * mode  mode
@@ -551,7 +551,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets installPath
-    *  install_path
+    *  安装路径
     *
     * @return string|null
     */
@@ -563,7 +563,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets installPath
     *
-    * @param string|null $installPath install_path
+    * @param string|null $installPath 安装路径
     *
     * @return $this
     */
@@ -575,7 +575,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets configPath
-    *  config_path 配置文件路径
+    *  配置文件路径
     *
     * @return string|null
     */
@@ -587,7 +587,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets configPath
     *
-    * @param string|null $configPath config_path 配置文件路径
+    * @param string|null $configPath 配置文件路径
     *
     * @return $this
     */

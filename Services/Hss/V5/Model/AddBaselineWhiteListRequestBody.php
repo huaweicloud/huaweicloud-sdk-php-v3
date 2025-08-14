@@ -21,8 +21,8 @@ class AddBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * osType  基线检查的操作系统 - Linux - Windows
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
-    * hostIdList  rule_type为specific_host时,该字段为待添加的白名单主机id列表, rule_type为all_host时无该字段
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
+    * hostIdList  rule_type为specific_host时，该字段为待添加的白名单主机id列表，rule_type为all_host时无该字段
     * ruleList  待添加的白名单的检查项列表
     * description  基线白名单备注
     *
@@ -39,8 +39,8 @@ class AddBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * osType  基线检查的操作系统 - Linux - Windows
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
-    * hostIdList  rule_type为specific_host时,该字段为待添加的白名单主机id列表, rule_type为all_host时无该字段
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
+    * hostIdList  rule_type为specific_host时，该字段为待添加的白名单主机id列表，rule_type为all_host时无该字段
     * ruleList  待添加的白名单的检查项列表
     * description  基线白名单备注
     *
@@ -78,8 +78,8 @@ class AddBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * osType  基线检查的操作系统 - Linux - Windows
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
-    * hostIdList  rule_type为specific_host时,该字段为待添加的白名单主机id列表, rule_type为all_host时无该字段
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
+    * hostIdList  rule_type为specific_host时，该字段为待添加的白名单主机id列表，rule_type为all_host时无该字段
     * ruleList  待添加的白名单的检查项列表
     * description  基线白名单备注
     *
@@ -96,8 +96,8 @@ class AddBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * osType  基线检查的操作系统 - Linux - Windows
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
-    * hostIdList  rule_type为specific_host时,该字段为待添加的白名单主机id列表, rule_type为all_host时无该字段
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
+    * hostIdList  rule_type为specific_host时，该字段为待添加的白名单主机id列表，rule_type为all_host时无该字段
     * ruleList  待添加的白名单的检查项列表
     * description  基线白名单备注
     *
@@ -114,8 +114,8 @@ class AddBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * osType  基线检查的操作系统 - Linux - Windows
-    * ruleType  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
-    * hostIdList  rule_type为specific_host时,该字段为待添加的白名单主机id列表, rule_type为all_host时无该字段
+    * ruleType  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
+    * hostIdList  rule_type为specific_host时，该字段为待添加的白名单主机id列表，rule_type为all_host时无该字段
     * ruleList  待添加的白名单的检查项列表
     * description  基线白名单备注
     *
@@ -278,7 +278,7 @@ class AddBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleType
-    *  基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    *  基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     *
     * @return string
     */
@@ -290,7 +290,7 @@ class AddBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets ruleType
     *
-    * @param string $ruleType 基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+    * @param string $ruleType 基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
     *
     * @return $this
     */
@@ -302,7 +302,7 @@ class AddBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIdList
-    *  rule_type为specific_host时,该字段为待添加的白名单主机id列表, rule_type为all_host时无该字段
+    *  rule_type为specific_host时，该字段为待添加的白名单主机id列表，rule_type为all_host时无该字段
     *
     * @return string[]|null
     */
@@ -314,7 +314,7 @@ class AddBaselineWhiteListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[]|null $hostIdList rule_type为specific_host时,该字段为待添加的白名单主机id列表, rule_type为all_host时无该字段
+    * @param string[]|null $hostIdList rule_type为specific_host时，该字段为待添加的白名单主机id列表，rule_type为all_host时无该字段
     *
     * @return $this
     */

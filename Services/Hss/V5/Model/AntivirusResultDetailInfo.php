@@ -22,11 +22,11 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * resultId  病毒查杀结果ID
     * malwareName  病毒名称
-    * filePath  文件路径
-    * fileHash  文件哈希
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  文件属主
-    * fileAttr  文件属性
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
     * updateTime  更新时间，毫秒
@@ -52,11 +52,11 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * resultId  病毒查杀结果ID
     * malwareName  病毒名称
-    * filePath  文件路径
-    * fileHash  文件哈希
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  文件属主
-    * fileAttr  文件属性
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
     * updateTime  更新时间，毫秒
@@ -103,11 +103,11 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * resultId  病毒查杀结果ID
     * malwareName  病毒名称
-    * filePath  文件路径
-    * fileHash  文件哈希
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  文件属主
-    * fileAttr  文件属性
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
     * updateTime  更新时间，毫秒
@@ -133,11 +133,11 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * resultId  病毒查杀结果ID
     * malwareName  病毒名称
-    * filePath  文件路径
-    * fileHash  文件哈希
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  文件属主
-    * fileAttr  文件属性
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
     * updateTime  更新时间，毫秒
@@ -163,11 +163,11 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * resultId  病毒查杀结果ID
     * malwareName  病毒名称
-    * filePath  文件路径
-    * fileHash  文件哈希
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  文件属主
-    * fileAttr  文件属性
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
     * updateTime  更新时间，毫秒
@@ -377,7 +377,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets filePath
-    *  文件路径
+    *  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -389,7 +389,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets filePath
     *
-    * @param string|null $filePath 文件路径
+    * @param string|null $filePath **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -401,7 +401,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileHash
-    *  文件哈希
+    *  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -413,7 +413,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileHash
     *
-    * @param string|null $fileHash 文件哈希
+    * @param string|null $fileHash **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -473,7 +473,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileAttr
-    *  文件属性
+    *  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -485,7 +485,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileAttr
     *
-    * @param string|null $fileAttr 文件属性
+    * @param string|null $fileAttr **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */

@@ -25,6 +25,7 @@ class QueueScalingPolicy implements ModelInterface, ArrayAccess
     * impactStopTime  结束时间
     * minCu  最小cu数量
     * maxCu  最大cu数量
+    * inheritElasticResourcePoolMaxCu  是否继承资源池最大CU
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class QueueScalingPolicy implements ModelInterface, ArrayAccess
             'impactStartTime' => 'string',
             'impactStopTime' => 'string',
             'minCu' => 'int',
-            'maxCu' => 'int'
+            'maxCu' => 'int',
+            'inheritElasticResourcePoolMaxCu' => 'bool'
     ];
 
     /**
@@ -43,6 +45,7 @@ class QueueScalingPolicy implements ModelInterface, ArrayAccess
     * impactStopTime  结束时间
     * minCu  最小cu数量
     * maxCu  最大cu数量
+    * inheritElasticResourcePoolMaxCu  是否继承资源池最大CU
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class QueueScalingPolicy implements ModelInterface, ArrayAccess
         'impactStartTime' => null,
         'impactStopTime' => null,
         'minCu' => 'int32',
-        'maxCu' => 'int32'
+        'maxCu' => 'int32',
+        'inheritElasticResourcePoolMaxCu' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class QueueScalingPolicy implements ModelInterface, ArrayAccess
     * impactStopTime  结束时间
     * minCu  最小cu数量
     * maxCu  最大cu数量
+    * inheritElasticResourcePoolMaxCu  是否继承资源池最大CU
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class QueueScalingPolicy implements ModelInterface, ArrayAccess
             'impactStartTime' => 'impact_start_time',
             'impactStopTime' => 'impact_stop_time',
             'minCu' => 'min_cu',
-            'maxCu' => 'max_cu'
+            'maxCu' => 'max_cu',
+            'inheritElasticResourcePoolMaxCu' => 'inherit_elastic_resource_pool_max_cu'
     ];
 
     /**
@@ -100,6 +106,7 @@ class QueueScalingPolicy implements ModelInterface, ArrayAccess
     * impactStopTime  结束时间
     * minCu  最小cu数量
     * maxCu  最大cu数量
+    * inheritElasticResourcePoolMaxCu  是否继承资源池最大CU
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class QueueScalingPolicy implements ModelInterface, ArrayAccess
             'impactStartTime' => 'setImpactStartTime',
             'impactStopTime' => 'setImpactStopTime',
             'minCu' => 'setMinCu',
-            'maxCu' => 'setMaxCu'
+            'maxCu' => 'setMaxCu',
+            'inheritElasticResourcePoolMaxCu' => 'setInheritElasticResourcePoolMaxCu'
     ];
 
     /**
@@ -118,6 +126,7 @@ class QueueScalingPolicy implements ModelInterface, ArrayAccess
     * impactStopTime  结束时间
     * minCu  最小cu数量
     * maxCu  最大cu数量
+    * inheritElasticResourcePoolMaxCu  是否继承资源池最大CU
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class QueueScalingPolicy implements ModelInterface, ArrayAccess
             'impactStartTime' => 'getImpactStartTime',
             'impactStopTime' => 'getImpactStopTime',
             'minCu' => 'getMinCu',
-            'maxCu' => 'getMaxCu'
+            'maxCu' => 'getMaxCu',
+            'inheritElasticResourcePoolMaxCu' => 'getInheritElasticResourcePoolMaxCu'
     ];
 
     /**
@@ -192,6 +202,7 @@ class QueueScalingPolicy implements ModelInterface, ArrayAccess
         $this->container['impactStopTime'] = isset($data['impactStopTime']) ? $data['impactStopTime'] : null;
         $this->container['minCu'] = isset($data['minCu']) ? $data['minCu'] : null;
         $this->container['maxCu'] = isset($data['maxCu']) ? $data['maxCu'] : null;
+        $this->container['inheritElasticResourcePoolMaxCu'] = isset($data['inheritElasticResourcePoolMaxCu']) ? $data['inheritElasticResourcePoolMaxCu'] : null;
     }
 
     /**
@@ -348,6 +359,30 @@ class QueueScalingPolicy implements ModelInterface, ArrayAccess
     public function setMaxCu($maxCu)
     {
         $this->container['maxCu'] = $maxCu;
+        return $this;
+    }
+
+    /**
+    * Gets inheritElasticResourcePoolMaxCu
+    *  是否继承资源池最大CU
+    *
+    * @return bool|null
+    */
+    public function getInheritElasticResourcePoolMaxCu()
+    {
+        return $this->container['inheritElasticResourcePoolMaxCu'];
+    }
+
+    /**
+    * Sets inheritElasticResourcePoolMaxCu
+    *
+    * @param bool|null $inheritElasticResourcePoolMaxCu 是否继承资源池最大CU
+    *
+    * @return $this
+    */
+    public function setInheritElasticResourcePoolMaxCu($inheritElasticResourcePoolMaxCu)
+    {
+        $this->container['inheritElasticResourcePoolMaxCu'] = $inheritElasticResourcePoolMaxCu;
         return $this;
     }
 

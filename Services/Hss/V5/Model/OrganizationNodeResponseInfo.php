@@ -22,7 +22,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * parentId  父节点Id
     * id  节点Id
-    * urn  组织的统一资源名称,格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
+    * urn  组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
     * name  名称
     * orgType  节点类型，unit:组织单元、account:账号
     * delegated  组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。
@@ -42,7 +42,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * parentId  父节点Id
     * id  节点Id
-    * urn  组织的统一资源名称,格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
+    * urn  组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
     * name  名称
     * orgType  节点类型，unit:组织单元、account:账号
     * delegated  组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。
@@ -83,7 +83,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * parentId  父节点Id
     * id  节点Id
-    * urn  组织的统一资源名称,格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
+    * urn  组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
     * name  名称
     * orgType  节点类型，unit:组织单元、account:账号
     * delegated  组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。
@@ -103,7 +103,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * parentId  父节点Id
     * id  节点Id
-    * urn  组织的统一资源名称,格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
+    * urn  组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
     * name  名称
     * orgType  节点类型，unit:组织单元、account:账号
     * delegated  组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。
@@ -123,7 +123,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * parentId  父节点Id
     * id  节点Id
-    * urn  组织的统一资源名称,格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
+    * urn  组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
     * name  名称
     * orgType  节点类型，unit:组织单元、account:账号
     * delegated  组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。
@@ -322,7 +322,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets urn
-    *  组织的统一资源名称,格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
+    *  组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
     *
     * @return string|null
     */
@@ -334,7 +334,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets urn
     *
-    * @param string|null $urn 组织的统一资源名称,格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
+    * @param string|null $urn 组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
     *
     * @return $this
     */

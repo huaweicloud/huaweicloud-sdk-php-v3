@@ -60,6 +60,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * totalDiskIo  主机的磁盘I/O值，单位是MB/s
     * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
     * needMigrationTest  是否开启迁移演练
+    * subtaskInfo  当前子任务及进度
     *
     * @var string[]
     */
@@ -102,7 +103,8 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'agentMemUsage' => 'double',
             'totalDiskIo' => 'double',
             'agentDiskIo' => 'double',
-            'needMigrationTest' => 'bool'
+            'needMigrationTest' => 'bool',
+            'subtaskInfo' => 'string'
     ];
 
     /**
@@ -146,6 +148,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * totalDiskIo  主机的磁盘I/O值，单位是MB/s
     * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
     * needMigrationTest  是否开启迁移演练
+    * subtaskInfo  当前子任务及进度
     *
     * @var string[]
     */
@@ -188,7 +191,8 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
         'agentMemUsage' => 'double',
         'totalDiskIo' => 'double',
         'agentDiskIo' => 'double',
-        'needMigrationTest' => null
+        'needMigrationTest' => null,
+        'subtaskInfo' => null
     ];
 
     /**
@@ -253,6 +257,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * totalDiskIo  主机的磁盘I/O值，单位是MB/s
     * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
     * needMigrationTest  是否开启迁移演练
+    * subtaskInfo  当前子任务及进度
     *
     * @var string[]
     */
@@ -295,7 +300,8 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'agentMemUsage' => 'agent_mem_usage',
             'totalDiskIo' => 'total_disk_io',
             'agentDiskIo' => 'agent_disk_io',
-            'needMigrationTest' => 'need_migration_test'
+            'needMigrationTest' => 'need_migration_test',
+            'subtaskInfo' => 'subtask_info'
     ];
 
     /**
@@ -339,6 +345,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * totalDiskIo  主机的磁盘I/O值，单位是MB/s
     * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
     * needMigrationTest  是否开启迁移演练
+    * subtaskInfo  当前子任务及进度
     *
     * @var string[]
     */
@@ -381,7 +388,8 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'agentMemUsage' => 'setAgentMemUsage',
             'totalDiskIo' => 'setTotalDiskIo',
             'agentDiskIo' => 'setAgentDiskIo',
-            'needMigrationTest' => 'setNeedMigrationTest'
+            'needMigrationTest' => 'setNeedMigrationTest',
+            'subtaskInfo' => 'setSubtaskInfo'
     ];
 
     /**
@@ -425,6 +433,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * totalDiskIo  主机的磁盘I/O值，单位是MB/s
     * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
     * needMigrationTest  是否开启迁移演练
+    * subtaskInfo  当前子任务及进度
     *
     * @var string[]
     */
@@ -467,7 +476,8 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'agentMemUsage' => 'getAgentMemUsage',
             'totalDiskIo' => 'getTotalDiskIo',
             'agentDiskIo' => 'getAgentDiskIo',
-            'needMigrationTest' => 'getNeedMigrationTest'
+            'needMigrationTest' => 'getNeedMigrationTest',
+            'subtaskInfo' => 'getSubtaskInfo'
     ];
 
     /**
@@ -614,6 +624,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
         $this->container['totalDiskIo'] = isset($data['totalDiskIo']) ? $data['totalDiskIo'] : null;
         $this->container['agentDiskIo'] = isset($data['agentDiskIo']) ? $data['agentDiskIo'] : null;
         $this->container['needMigrationTest'] = isset($data['needMigrationTest']) ? $data['needMigrationTest'] : null;
+        $this->container['subtaskInfo'] = isset($data['subtaskInfo']) ? $data['subtaskInfo'] : null;
     }
 
     /**
@@ -827,6 +838,12 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['agentDiskIo']) && ($this->container['agentDiskIo'] < 0)) {
                 $invalidProperties[] = "invalid value for 'agentDiskIo', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['subtaskInfo']) && (mb_strlen($this->container['subtaskInfo']) > 255)) {
+                $invalidProperties[] = "invalid value for 'subtaskInfo', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['subtaskInfo']) && (mb_strlen($this->container['subtaskInfo']) < 0)) {
+                $invalidProperties[] = "invalid value for 'subtaskInfo', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -1775,6 +1792,30 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     public function setNeedMigrationTest($needMigrationTest)
     {
         $this->container['needMigrationTest'] = $needMigrationTest;
+        return $this;
+    }
+
+    /**
+    * Gets subtaskInfo
+    *  当前子任务及进度
+    *
+    * @return string|null
+    */
+    public function getSubtaskInfo()
+    {
+        return $this->container['subtaskInfo'];
+    }
+
+    /**
+    * Sets subtaskInfo
+    *
+    * @param string|null $subtaskInfo 当前子任务及进度
+    *
+    * @return $this
+    */
+    public function setSubtaskInfo($subtaskInfo)
+    {
+        $this->container['subtaskInfo'] = $subtaskInfo;
         return $this;
     }
 

@@ -24,7 +24,7 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     * enableTimingOff  定时开关状态
     * timingOffConfigInfo  timingOffConfigInfo
     * enableRaspProtect  动态网页防篡改开启状态
-    * raspPath  rasp path
+    * raspPath  动态网页防篡改的Tomcat bin目录
     * enablePrivilegedProcess  特权进程状态
     * privilegedProcessInfo  privilegedProcessInfo
     *
@@ -46,7 +46,7 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     * enableTimingOff  定时开关状态
     * timingOffConfigInfo  timingOffConfigInfo
     * enableRaspProtect  动态网页防篡改开启状态
-    * raspPath  rasp path
+    * raspPath  动态网页防篡改的Tomcat bin目录
     * enablePrivilegedProcess  特权进程状态
     * privilegedProcessInfo  privilegedProcessInfo
     *
@@ -89,7 +89,7 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     * enableTimingOff  定时开关状态
     * timingOffConfigInfo  timingOffConfigInfo
     * enableRaspProtect  动态网页防篡改开启状态
-    * raspPath  rasp path
+    * raspPath  动态网页防篡改的Tomcat bin目录
     * enablePrivilegedProcess  特权进程状态
     * privilegedProcessInfo  privilegedProcessInfo
     *
@@ -111,7 +111,7 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     * enableTimingOff  定时开关状态
     * timingOffConfigInfo  timingOffConfigInfo
     * enableRaspProtect  动态网页防篡改开启状态
-    * raspPath  rasp path
+    * raspPath  动态网页防篡改的Tomcat bin目录
     * enablePrivilegedProcess  特权进程状态
     * privilegedProcessInfo  privilegedProcessInfo
     *
@@ -133,7 +133,7 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     * enableTimingOff  定时开关状态
     * timingOffConfigInfo  timingOffConfigInfo
     * enableRaspProtect  动态网页防篡改开启状态
-    * raspPath  rasp path
+    * raspPath  动态网页防篡改的Tomcat bin目录
     * enablePrivilegedProcess  特权进程状态
     * privilegedProcessInfo  privilegedProcessInfo
     *
@@ -342,7 +342,7 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
 
     /**
     * Gets raspPath
-    *  rasp path
+    *  动态网页防篡改的Tomcat bin目录
     *
     * @return string|null
     */
@@ -354,7 +354,7 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     /**
     * Sets raspPath
     *
-    * @param string|null $raspPath rasp path
+    * @param string|null $raspPath 动态网页防篡改的Tomcat bin目录
     *
     * @return $this
     */

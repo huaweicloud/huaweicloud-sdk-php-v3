@@ -20,8 +20,8 @@ class LoginWhiteIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enabled  白名单启用状态, 包含如下:   - true : 已启用   - false : 已禁用
-    * whiteIp  白名单IP或IP网段,IP网段由IP地址和掩码组成,以'/'连接。
+    * enabled  白名单启用状态，包含如下：   - true：已启用   - false：已禁用
+    * whiteIp  白名单IP或IP网段，IP网段由IP地址和掩码组成，以‘/’连接。
     * totalNum  服务器ID总数
     * hostIdList  服务器ID列表
     *
@@ -36,8 +36,8 @@ class LoginWhiteIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enabled  白名单启用状态, 包含如下:   - true : 已启用   - false : 已禁用
-    * whiteIp  白名单IP或IP网段,IP网段由IP地址和掩码组成,以'/'连接。
+    * enabled  白名单启用状态，包含如下：   - true：已启用   - false：已禁用
+    * whiteIp  白名单IP或IP网段，IP网段由IP地址和掩码组成，以‘/’连接。
     * totalNum  服务器ID总数
     * hostIdList  服务器ID列表
     *
@@ -73,8 +73,8 @@ class LoginWhiteIpResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enabled  白名单启用状态, 包含如下:   - true : 已启用   - false : 已禁用
-    * whiteIp  白名单IP或IP网段,IP网段由IP地址和掩码组成,以'/'连接。
+    * enabled  白名单启用状态，包含如下：   - true：已启用   - false：已禁用
+    * whiteIp  白名单IP或IP网段，IP网段由IP地址和掩码组成，以‘/’连接。
     * totalNum  服务器ID总数
     * hostIdList  服务器ID列表
     *
@@ -89,8 +89,8 @@ class LoginWhiteIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enabled  白名单启用状态, 包含如下:   - true : 已启用   - false : 已禁用
-    * whiteIp  白名单IP或IP网段,IP网段由IP地址和掩码组成,以'/'连接。
+    * enabled  白名单启用状态，包含如下：   - true：已启用   - false：已禁用
+    * whiteIp  白名单IP或IP网段，IP网段由IP地址和掩码组成，以‘/’连接。
     * totalNum  服务器ID总数
     * hostIdList  服务器ID列表
     *
@@ -105,8 +105,8 @@ class LoginWhiteIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enabled  白名单启用状态, 包含如下:   - true : 已启用   - false : 已禁用
-    * whiteIp  白名单IP或IP网段,IP网段由IP地址和掩码组成,以'/'连接。
+    * enabled  白名单启用状态，包含如下：   - true：已启用   - false：已禁用
+    * whiteIp  白名单IP或IP网段，IP网段由IP地址和掩码组成，以‘/’连接。
     * totalNum  服务器ID总数
     * hostIdList  服务器ID列表
     *
@@ -207,7 +207,7 @@ class LoginWhiteIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  白名单启用状态, 包含如下:   - true : 已启用   - false : 已禁用
+    *  白名单启用状态，包含如下：   - true：已启用   - false：已禁用
     *
     * @return bool|null
     */
@@ -219,7 +219,7 @@ class LoginWhiteIpResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool|null $enabled 白名单启用状态, 包含如下:   - true : 已启用   - false : 已禁用
+    * @param bool|null $enabled 白名单启用状态，包含如下：   - true：已启用   - false：已禁用
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class LoginWhiteIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets whiteIp
-    *  白名单IP或IP网段,IP网段由IP地址和掩码组成,以'/'连接。
+    *  白名单IP或IP网段，IP网段由IP地址和掩码组成，以‘/’连接。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class LoginWhiteIpResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets whiteIp
     *
-    * @param string|null $whiteIp 白名单IP或IP网段,IP网段由IP地址和掩码组成,以'/'连接。
+    * @param string|null $whiteIp 白名单IP或IP网段，IP网段由IP地址和掩码组成，以‘/’连接。
     *
     * @return $this
     */

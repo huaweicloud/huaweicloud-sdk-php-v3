@@ -20,14 +20,14 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * publicIp  弹性公网IP地址
-    * privateIp  服务器私有IP
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * policyName  策略名称
     * eventNum  **参数解释**: 主机发生事件数 **取值范围**: 最小值0，最大值2147483647
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * learningStatus  **参数解释**： 服务器名称 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     * applyStatus  **参数解释**： 是否应用 **取值范围**: - true：是 - false：否
     * intercept  是否开启阻断
@@ -54,14 +54,14 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * publicIp  弹性公网IP地址
-    * privateIp  服务器私有IP
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * policyName  策略名称
     * eventNum  **参数解释**: 主机发生事件数 **取值范围**: 最小值0，最大值2147483647
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * learningStatus  **参数解释**： 服务器名称 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     * applyStatus  **参数解释**： 是否应用 **取值范围**: - true：是 - false：否
     * intercept  是否开启阻断
@@ -109,14 +109,14 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * publicIp  弹性公网IP地址
-    * privateIp  服务器私有IP
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * policyName  策略名称
     * eventNum  **参数解释**: 主机发生事件数 **取值范围**: 最小值0，最大值2147483647
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * learningStatus  **参数解释**： 服务器名称 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     * applyStatus  **参数解释**： 是否应用 **取值范围**: - true：是 - false：否
     * intercept  是否开启阻断
@@ -143,14 +143,14 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * publicIp  弹性公网IP地址
-    * privateIp  服务器私有IP
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * policyName  策略名称
     * eventNum  **参数解释**: 主机发生事件数 **取值范围**: 最小值0，最大值2147483647
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * learningStatus  **参数解释**： 服务器名称 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     * applyStatus  **参数解释**： 是否应用 **取值范围**: - true：是 - false：否
     * intercept  是否开启阻断
@@ -177,14 +177,14 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * publicIp  弹性公网IP地址
-    * privateIp  服务器私有IP
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * policyName  策略名称
     * eventNum  **参数解释**: 主机发生事件数 **取值范围**: 最小值0，最大值2147483647
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * learningStatus  **参数解释**： 服务器名称 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     * applyStatus  **参数解释**： 是否应用 **取值范围**: - true：是 - false：否
     * intercept  是否开启阻断
@@ -308,8 +308,8 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hostName']) && !preg_match("/^.*$/", $this->container['hostName'])) {
                 $invalidProperties[] = "invalid value for 'hostName', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) > 128)) {
-                $invalidProperties[] = "invalid value for 'publicIp', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) > 256)) {
+                $invalidProperties[] = "invalid value for 'publicIp', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) < 1)) {
                 $invalidProperties[] = "invalid value for 'publicIp', the character length must be bigger than or equal to 1.";
@@ -393,7 +393,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    *  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     *
     * @return string|null
     */
@@ -405,7 +405,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * @param string|null $hostId **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     *
     * @return $this
     */
@@ -441,7 +441,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  弹性公网IP地址
+    *  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -453,7 +453,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp 弹性公网IP地址
+    * @param string|null $publicIp **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -465,7 +465,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  服务器私有IP
+    *  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     *
     * @return string|null
     */
@@ -477,7 +477,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp 服务器私有IP
+    * @param string|null $privateIp **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     *
     * @return $this
     */
@@ -561,7 +561,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    *  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     *
     * @return string|null
     */
@@ -573,7 +573,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * @param string|null $osType **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     *
     * @return $this
     */

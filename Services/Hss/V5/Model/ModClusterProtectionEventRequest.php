@@ -21,7 +21,7 @@ class ModClusterProtectionEventRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * totalNum  总数
-    * opr  操作类型 ignore 忽略 handle 处理 addWhiteImage 加白
+    * opr  操作类型，包含以下几种： - ignore：忽略 - handle：处理 - addWhiteImage：加白
     * dataList  事件ID列表
     *
     * @var string[]
@@ -35,7 +35,7 @@ class ModClusterProtectionEventRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * totalNum  总数
-    * opr  操作类型 ignore 忽略 handle 处理 addWhiteImage 加白
+    * opr  操作类型，包含以下几种： - ignore：忽略 - handle：处理 - addWhiteImage：加白
     * dataList  事件ID列表
     *
     * @var string[]
@@ -70,7 +70,7 @@ class ModClusterProtectionEventRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * totalNum  总数
-    * opr  操作类型 ignore 忽略 handle 处理 addWhiteImage 加白
+    * opr  操作类型，包含以下几种： - ignore：忽略 - handle：处理 - addWhiteImage：加白
     * dataList  事件ID列表
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ModClusterProtectionEventRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * totalNum  总数
-    * opr  操作类型 ignore 忽略 handle 处理 addWhiteImage 加白
+    * opr  操作类型，包含以下几种： - ignore：忽略 - handle：处理 - addWhiteImage：加白
     * dataList  事件ID列表
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ModClusterProtectionEventRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * totalNum  总数
-    * opr  操作类型 ignore 忽略 handle 处理 addWhiteImage 加白
+    * opr  操作类型，包含以下几种： - ignore：忽略 - handle：处理 - addWhiteImage：加白
     * dataList  事件ID列表
     *
     * @var string[]
@@ -238,7 +238,7 @@ class ModClusterProtectionEventRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets opr
-    *  操作类型 ignore 忽略 handle 处理 addWhiteImage 加白
+    *  操作类型，包含以下几种： - ignore：忽略 - handle：处理 - addWhiteImage：加白
     *
     * @return string
     */
@@ -250,7 +250,7 @@ class ModClusterProtectionEventRequest implements ModelInterface, ArrayAccess
     /**
     * Sets opr
     *
-    * @param string $opr 操作类型 ignore 忽略 handle 处理 addWhiteImage 加白
+    * @param string $opr 操作类型，包含以下几种： - ignore：忽略 - handle：处理 - addWhiteImage：加白
     *
     * @return $this
     */

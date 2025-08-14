@@ -159,8 +159,8 @@ class GetCustomPolicyForPermissionSetResponse implements ModelInterface, ArrayAc
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['customPolicy']) && (mb_strlen($this->container['customPolicy']) > 131072)) {
-                $invalidProperties[] = "invalid value for 'customPolicy', the character length must be smaller than or equal to 131072.";
+            if (!is_null($this->container['customPolicy']) && (mb_strlen($this->container['customPolicy']) > 10240)) {
+                $invalidProperties[] = "invalid value for 'customPolicy', the character length must be smaller than or equal to 10240.";
             }
             if (!is_null($this->container['customPolicy']) && (mb_strlen($this->container['customPolicy']) < 1)) {
                 $invalidProperties[] = "invalid value for 'customPolicy', the character length must be bigger than or equal to 1.";

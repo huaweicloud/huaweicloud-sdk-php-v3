@@ -32,10 +32,10 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * instanceName  企业镜像实例名称
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  创建时间开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     * hasMaliciousFile  是否存在恶意文件
     * hasUnsafeSetting  是否存在基线检查
     * hasVul  是否存在软件漏洞
@@ -80,10 +80,10 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * instanceName  企业镜像实例名称
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  创建时间开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     * hasMaliciousFile  是否存在恶意文件
     * hasUnsafeSetting  是否存在基线检查
     * hasVul  是否存在软件漏洞
@@ -149,10 +149,10 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * instanceName  企业镜像实例名称
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  创建时间开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     * hasMaliciousFile  是否存在恶意文件
     * hasUnsafeSetting  是否存在基线检查
     * hasVul  是否存在软件漏洞
@@ -197,10 +197,10 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * instanceName  企业镜像实例名称
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  创建时间开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     * hasMaliciousFile  是否存在恶意文件
     * hasUnsafeSetting  是否存在基线检查
     * hasVul  是否存在软件漏洞
@@ -245,10 +245,10 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * instanceName  企业镜像实例名称
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
-    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * startLatestUpdateTime  创建时间开始日期，时间单位：毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位：毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     * hasMaliciousFile  是否存在恶意文件
     * hasUnsafeSetting  是否存在基线检查
     * hasVul  是否存在软件漏洞
@@ -785,7 +785,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startLatestUpdateTime
-    *  创建时间开始日期，时间单位 毫秒（ms）
+    *  创建时间开始日期，时间单位：毫秒（ms）
     *
     * @return int|null
     */
@@ -797,7 +797,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startLatestUpdateTime
     *
-    * @param int|null $startLatestUpdateTime 创建时间开始日期，时间单位 毫秒（ms）
+    * @param int|null $startLatestUpdateTime 创建时间开始日期，时间单位：毫秒（ms）
     *
     * @return $this
     */
@@ -809,7 +809,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endLatestUpdateTime
-    *  创建时间结束日期，时间单位 毫秒（ms）
+    *  创建时间结束日期，时间单位：毫秒（ms）
     *
     * @return int|null
     */
@@ -821,7 +821,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endLatestUpdateTime
     *
-    * @param int|null $endLatestUpdateTime 创建时间结束日期，时间单位 毫秒（ms）
+    * @param int|null $endLatestUpdateTime 创建时间结束日期，时间单位：毫秒（ms）
     *
     * @return $this
     */
@@ -833,7 +833,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startLatestScanTime
-    *  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
+    *  最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
     *
     * @return int|null
     */
@@ -845,7 +845,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startLatestScanTime
     *
-    * @param int|null $startLatestScanTime 最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
+    * @param int|null $startLatestScanTime 最近一次扫描完成时间开始日期，时间单位：毫秒（ms）
     *
     * @return $this
     */
@@ -857,7 +857,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endLatestScanTime
-    *  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    *  最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     *
     * @return int|null
     */
@@ -869,7 +869,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endLatestScanTime
     *
-    * @param int|null $endLatestScanTime 最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
+    * @param int|null $endLatestScanTime 最近一次扫描完成时间结束日期，时间单位：毫秒（ms）
     *
     * @return $this
     */

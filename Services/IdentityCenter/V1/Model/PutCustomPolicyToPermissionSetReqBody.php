@@ -161,8 +161,8 @@ class PutCustomPolicyToPermissionSetReqBody implements ModelInterface, ArrayAcce
         if ($this->container['customPolicy'] === null) {
             $invalidProperties[] = "'customPolicy' can't be null";
         }
-            if ((mb_strlen($this->container['customPolicy']) > 131072)) {
-                $invalidProperties[] = "invalid value for 'customPolicy', the character length must be smaller than or equal to 131072.";
+            if ((mb_strlen($this->container['customPolicy']) > 10240)) {
+                $invalidProperties[] = "invalid value for 'customPolicy', the character length must be smaller than or equal to 10240.";
             }
             if ((mb_strlen($this->container['customPolicy']) < 1)) {
                 $invalidProperties[] = "invalid value for 'customPolicy', the character length must be bigger than or equal to 1.";

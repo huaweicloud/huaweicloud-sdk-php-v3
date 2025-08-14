@@ -33,7 +33,7 @@ class AopWorkflowInfo implements ModelInterface, ArrayAccess
     * workspaceId  工作空间ID
     * versionId  流程版本ID
     * currentApprovalVersionId  当前待审核版本号
-    * currentRejectedVersoinId  当前拒绝的版本号
+    * currentRejectedVersionId  当前拒绝的版本号
     * aopType  aop的类型有以下的值     NORMAL, 通用     SURVEY, 调查     HEMOSTASIS,止血     EASE;缓解
     * engineType  引擎的类型分为共享版和专项版
     * dataclassId  数据类的ID
@@ -54,7 +54,7 @@ class AopWorkflowInfo implements ModelInterface, ArrayAccess
             'workspaceId' => 'string',
             'versionId' => 'string',
             'currentApprovalVersionId' => 'string',
-            'currentRejectedVersoinId' => 'string',
+            'currentRejectedVersionId' => 'string',
             'aopType' => 'string',
             'engineType' => 'string',
             'dataclassId' => 'string'
@@ -75,7 +75,7 @@ class AopWorkflowInfo implements ModelInterface, ArrayAccess
     * workspaceId  工作空间ID
     * versionId  流程版本ID
     * currentApprovalVersionId  当前待审核版本号
-    * currentRejectedVersoinId  当前拒绝的版本号
+    * currentRejectedVersionId  当前拒绝的版本号
     * aopType  aop的类型有以下的值     NORMAL, 通用     SURVEY, 调查     HEMOSTASIS,止血     EASE;缓解
     * engineType  引擎的类型分为共享版和专项版
     * dataclassId  数据类的ID
@@ -96,7 +96,7 @@ class AopWorkflowInfo implements ModelInterface, ArrayAccess
         'workspaceId' => null,
         'versionId' => null,
         'currentApprovalVersionId' => null,
-        'currentRejectedVersoinId' => null,
+        'currentRejectedVersionId' => null,
         'aopType' => null,
         'engineType' => null,
         'dataclassId' => null
@@ -138,7 +138,7 @@ class AopWorkflowInfo implements ModelInterface, ArrayAccess
     * workspaceId  工作空间ID
     * versionId  流程版本ID
     * currentApprovalVersionId  当前待审核版本号
-    * currentRejectedVersoinId  当前拒绝的版本号
+    * currentRejectedVersionId  当前拒绝的版本号
     * aopType  aop的类型有以下的值     NORMAL, 通用     SURVEY, 调查     HEMOSTASIS,止血     EASE;缓解
     * engineType  引擎的类型分为共享版和专项版
     * dataclassId  数据类的ID
@@ -159,7 +159,7 @@ class AopWorkflowInfo implements ModelInterface, ArrayAccess
             'workspaceId' => 'workspace_id',
             'versionId' => 'version_id',
             'currentApprovalVersionId' => 'current_approval_version_id',
-            'currentRejectedVersoinId' => 'current_rejected_versoin_id',
+            'currentRejectedVersionId' => 'current_rejected_version_id',
             'aopType' => 'aop_type',
             'engineType' => 'engine_type',
             'dataclassId' => 'dataclass_id'
@@ -180,7 +180,7 @@ class AopWorkflowInfo implements ModelInterface, ArrayAccess
     * workspaceId  工作空间ID
     * versionId  流程版本ID
     * currentApprovalVersionId  当前待审核版本号
-    * currentRejectedVersoinId  当前拒绝的版本号
+    * currentRejectedVersionId  当前拒绝的版本号
     * aopType  aop的类型有以下的值     NORMAL, 通用     SURVEY, 调查     HEMOSTASIS,止血     EASE;缓解
     * engineType  引擎的类型分为共享版和专项版
     * dataclassId  数据类的ID
@@ -201,7 +201,7 @@ class AopWorkflowInfo implements ModelInterface, ArrayAccess
             'workspaceId' => 'setWorkspaceId',
             'versionId' => 'setVersionId',
             'currentApprovalVersionId' => 'setCurrentApprovalVersionId',
-            'currentRejectedVersoinId' => 'setCurrentRejectedVersoinId',
+            'currentRejectedVersionId' => 'setCurrentRejectedVersionId',
             'aopType' => 'setAopType',
             'engineType' => 'setEngineType',
             'dataclassId' => 'setDataclassId'
@@ -222,7 +222,7 @@ class AopWorkflowInfo implements ModelInterface, ArrayAccess
     * workspaceId  工作空间ID
     * versionId  流程版本ID
     * currentApprovalVersionId  当前待审核版本号
-    * currentRejectedVersoinId  当前拒绝的版本号
+    * currentRejectedVersionId  当前拒绝的版本号
     * aopType  aop的类型有以下的值     NORMAL, 通用     SURVEY, 调查     HEMOSTASIS,止血     EASE;缓解
     * engineType  引擎的类型分为共享版和专项版
     * dataclassId  数据类的ID
@@ -243,7 +243,7 @@ class AopWorkflowInfo implements ModelInterface, ArrayAccess
             'workspaceId' => 'getWorkspaceId',
             'versionId' => 'getVersionId',
             'currentApprovalVersionId' => 'getCurrentApprovalVersionId',
-            'currentRejectedVersoinId' => 'getCurrentRejectedVersoinId',
+            'currentRejectedVersionId' => 'getCurrentRejectedVersionId',
             'aopType' => 'getAopType',
             'engineType' => 'getEngineType',
             'dataclassId' => 'getDataclassId'
@@ -320,7 +320,7 @@ class AopWorkflowInfo implements ModelInterface, ArrayAccess
         $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
         $this->container['versionId'] = isset($data['versionId']) ? $data['versionId'] : null;
         $this->container['currentApprovalVersionId'] = isset($data['currentApprovalVersionId']) ? $data['currentApprovalVersionId'] : null;
-        $this->container['currentRejectedVersoinId'] = isset($data['currentRejectedVersoinId']) ? $data['currentRejectedVersoinId'] : null;
+        $this->container['currentRejectedVersionId'] = isset($data['currentRejectedVersionId']) ? $data['currentRejectedVersionId'] : null;
         $this->container['aopType'] = isset($data['aopType']) ? $data['aopType'] : null;
         $this->container['engineType'] = isset($data['engineType']) ? $data['engineType'] : null;
         $this->container['dataclassId'] = isset($data['dataclassId']) ? $data['dataclassId'] : null;
@@ -406,11 +406,11 @@ class AopWorkflowInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['currentApprovalVersionId']) && (mb_strlen($this->container['currentApprovalVersionId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'currentApprovalVersionId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['currentRejectedVersoinId']) && (mb_strlen($this->container['currentRejectedVersoinId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'currentRejectedVersoinId', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['currentRejectedVersionId']) && (mb_strlen($this->container['currentRejectedVersionId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'currentRejectedVersionId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['currentRejectedVersoinId']) && (mb_strlen($this->container['currentRejectedVersoinId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'currentRejectedVersoinId', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['currentRejectedVersionId']) && (mb_strlen($this->container['currentRejectedVersionId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'currentRejectedVersionId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['aopType']) && (mb_strlen($this->container['aopType']) > 64)) {
                 $invalidProperties[] = "invalid value for 'aopType', the character length must be smaller than or equal to 64.";
@@ -757,26 +757,26 @@ class AopWorkflowInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets currentRejectedVersoinId
+    * Gets currentRejectedVersionId
     *  当前拒绝的版本号
     *
     * @return string|null
     */
-    public function getCurrentRejectedVersoinId()
+    public function getCurrentRejectedVersionId()
     {
-        return $this->container['currentRejectedVersoinId'];
+        return $this->container['currentRejectedVersionId'];
     }
 
     /**
-    * Sets currentRejectedVersoinId
+    * Sets currentRejectedVersionId
     *
-    * @param string|null $currentRejectedVersoinId 当前拒绝的版本号
+    * @param string|null $currentRejectedVersionId 当前拒绝的版本号
     *
     * @return $this
     */
-    public function setCurrentRejectedVersoinId($currentRejectedVersoinId)
+    public function setCurrentRejectedVersionId($currentRejectedVersionId)
     {
-        $this->container['currentRejectedVersoinId'] = $currentRejectedVersoinId;
+        $this->container['currentRejectedVersionId'] = $currentRejectedVersionId;
         return $this;
     }
 

@@ -20,6 +20,7 @@ class MetadataList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * ecmResStatus  裸机的冻结状态
     * chargingMode  裸金属服务器的计费类型。1：按包年包月计费（即prePaid：预付费方式）。
     * meteringOrderId  按“包年/包月”计费的裸金属服务器对应的订单ID。
     * meteringProductId  按“包年/包月”计费的裸金属服务器对应的产品ID
@@ -38,6 +39,7 @@ class MetadataList implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'ecmResStatus' => 'string',
             'chargingMode' => 'string',
             'meteringOrderId' => 'string',
             'meteringProductId' => 'string',
@@ -56,6 +58,7 @@ class MetadataList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * ecmResStatus  裸机的冻结状态
     * chargingMode  裸金属服务器的计费类型。1：按包年包月计费（即prePaid：预付费方式）。
     * meteringOrderId  按“包年/包月”计费的裸金属服务器对应的订单ID。
     * meteringProductId  按“包年/包月”计费的裸金属服务器对应的产品ID
@@ -74,6 +77,7 @@ class MetadataList implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'ecmResStatus' => null,
         'chargingMode' => null,
         'meteringOrderId' => null,
         'meteringProductId' => null,
@@ -113,6 +117,7 @@ class MetadataList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * ecmResStatus  裸机的冻结状态
     * chargingMode  裸金属服务器的计费类型。1：按包年包月计费（即prePaid：预付费方式）。
     * meteringOrderId  按“包年/包月”计费的裸金属服务器对应的订单ID。
     * meteringProductId  按“包年/包月”计费的裸金属服务器对应的产品ID
@@ -131,6 +136,7 @@ class MetadataList implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'ecmResStatus' => 'EcmResStatus',
             'chargingMode' => 'chargingMode',
             'meteringOrderId' => 'metering.order_id',
             'meteringProductId' => 'metering.product_id',
@@ -149,6 +155,7 @@ class MetadataList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * ecmResStatus  裸机的冻结状态
     * chargingMode  裸金属服务器的计费类型。1：按包年包月计费（即prePaid：预付费方式）。
     * meteringOrderId  按“包年/包月”计费的裸金属服务器对应的订单ID。
     * meteringProductId  按“包年/包月”计费的裸金属服务器对应的产品ID
@@ -167,6 +174,7 @@ class MetadataList implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'ecmResStatus' => 'setEcmResStatus',
             'chargingMode' => 'setChargingMode',
             'meteringOrderId' => 'setMeteringOrderId',
             'meteringProductId' => 'setMeteringProductId',
@@ -185,6 +193,7 @@ class MetadataList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * ecmResStatus  裸机的冻结状态
     * chargingMode  裸金属服务器的计费类型。1：按包年包月计费（即prePaid：预付费方式）。
     * meteringOrderId  按“包年/包月”计费的裸金属服务器对应的订单ID。
     * meteringProductId  按“包年/包月”计费的裸金属服务器对应的产品ID
@@ -203,6 +212,7 @@ class MetadataList implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'ecmResStatus' => 'getEcmResStatus',
             'chargingMode' => 'getChargingMode',
             'meteringOrderId' => 'getMeteringOrderId',
             'meteringProductId' => 'getMeteringProductId',
@@ -337,6 +347,7 @@ class MetadataList implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['ecmResStatus'] = isset($data['ecmResStatus']) ? $data['ecmResStatus'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['meteringOrderId'] = isset($data['meteringOrderId']) ? $data['meteringOrderId'] : null;
         $this->container['meteringProductId'] = isset($data['meteringProductId']) ? $data['meteringProductId'] : null;
@@ -405,6 +416,30 @@ class MetadataList implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets ecmResStatus
+    *  裸机的冻结状态
+    *
+    * @return string|null
+    */
+    public function getEcmResStatus()
+    {
+        return $this->container['ecmResStatus'];
+    }
+
+    /**
+    * Sets ecmResStatus
+    *
+    * @param string|null $ecmResStatus 裸机的冻结状态
+    *
+    * @return $this
+    */
+    public function setEcmResStatus($ecmResStatus)
+    {
+        $this->container['ecmResStatus'] = $ecmResStatus;
+        return $this;
     }
 
     /**

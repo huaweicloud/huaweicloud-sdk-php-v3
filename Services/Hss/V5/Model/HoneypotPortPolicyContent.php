@@ -20,7 +20,7 @@ class HoneypotPortPolicyContent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * policyName  策略名称
     * portsList  端口与协议
     * whiteIp  ip白名单
@@ -40,7 +40,7 @@ class HoneypotPortPolicyContent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * policyName  策略名称
     * portsList  端口与协议
     * whiteIp  ip白名单
@@ -81,7 +81,7 @@ class HoneypotPortPolicyContent implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * policyName  策略名称
     * portsList  端口与协议
     * whiteIp  ip白名单
@@ -101,7 +101,7 @@ class HoneypotPortPolicyContent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * policyName  策略名称
     * portsList  端口与协议
     * whiteIp  ip白名单
@@ -121,7 +121,7 @@ class HoneypotPortPolicyContent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * policyName  策略名称
     * portsList  端口与协议
     * whiteIp  ip白名单
@@ -259,7 +259,7 @@ class HoneypotPortPolicyContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    *  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     *
     * @return string
     */
@@ -271,7 +271,7 @@ class HoneypotPortPolicyContent implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string $osType 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * @param string $osType **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     *
     * @return $this
     */

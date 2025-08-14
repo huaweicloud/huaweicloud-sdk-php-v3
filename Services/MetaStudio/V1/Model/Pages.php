@@ -20,8 +20,8 @@ class Pages implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * offset  与第一条数据的偏移量
-    * limit  页面大小
+    * offset  页面起始页,从0开始
+    * limit  每页显示的条目数量
     * count  总数量
     *
     * @var string[]
@@ -34,14 +34,14 @@ class Pages implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * offset  与第一条数据的偏移量
-    * limit  页面大小
+    * offset  页面起始页,从0开始
+    * limit  每页显示的条目数量
     * count  总数量
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'offset' => null,
+        'offset' => 'int32',
         'limit' => null,
         'count' => null
     ];
@@ -69,8 +69,8 @@ class Pages implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * offset  与第一条数据的偏移量
-    * limit  页面大小
+    * offset  页面起始页,从0开始
+    * limit  每页显示的条目数量
     * count  总数量
     *
     * @var string[]
@@ -83,8 +83,8 @@ class Pages implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * offset  与第一条数据的偏移量
-    * limit  页面大小
+    * offset  页面起始页,从0开始
+    * limit  每页显示的条目数量
     * count  总数量
     *
     * @var string[]
@@ -97,8 +97,8 @@ class Pages implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * offset  与第一条数据的偏移量
-    * limit  页面大小
+    * offset  页面起始页,从0开始
+    * limit  每页显示的条目数量
     * count  总数量
     *
     * @var string[]
@@ -180,20 +180,20 @@ class Pages implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 1000000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 1000000.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000000.";
             }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['count']) && ($this->container['count'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['count']) && ($this->container['count'] > 1000000)) {
+                $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 1000000.";
             }
             if (!is_null($this->container['count']) && ($this->container['count'] < 0)) {
                 $invalidProperties[] = "invalid value for 'count', must be bigger than or equal to 0.";
@@ -214,7 +214,7 @@ class Pages implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  与第一条数据的偏移量
+    *  页面起始页,从0开始
     *
     * @return int|null
     */
@@ -226,7 +226,7 @@ class Pages implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 与第一条数据的偏移量
+    * @param int|null $offset 页面起始页,从0开始
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class Pages implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  页面大小
+    *  每页显示的条目数量
     *
     * @return int|null
     */
@@ -250,7 +250,7 @@ class Pages implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 页面大小
+    * @param int|null $limit 每页显示的条目数量
     *
     * @return $this
     */

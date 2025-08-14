@@ -27,7 +27,8 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
     * origin  密钥来源，默认为“kms”，枚举如下： - kms：表示密钥材料由kms生成。 - external：表示密钥材料由外部导入。
     * enterpriseProjectId  企业多项目ID。 - 用户未开通企业多项目时，不需要输入该字段。 - 用户开通企业多项目时，创建资源可以输入该字段。若用户户不输入该字段，默认创建属于默认企业多项目ID（ID为“0”）的资源。 注意：若用户没有默认企业多项目ID（ID为“0”）下的创建权限，则接口报错。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
-    * keystoreId  密钥库ID，默认使用KMS默认密钥库
+    * keystoreId  密钥库ID，默认为0，使用KMS默认密钥库；设置为1，则指定管理面CDMS集群；设置为2，则指定租户面共享CDMS集群；若需指定其他CDMS集群，需先执行创建密钥库操作
+    * vmId  虚机ID，密钥创建的虚机，仅四级密评场景生效
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
             'origin' => 'string',
             'enterpriseProjectId' => 'string',
             'sequence' => 'string',
-            'keystoreId' => 'string'
+            'keystoreId' => 'string',
+            'vmId' => 'string'
     ];
 
     /**
@@ -51,7 +53,8 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
     * origin  密钥来源，默认为“kms”，枚举如下： - kms：表示密钥材料由kms生成。 - external：表示密钥材料由外部导入。
     * enterpriseProjectId  企业多项目ID。 - 用户未开通企业多项目时，不需要输入该字段。 - 用户开通企业多项目时，创建资源可以输入该字段。若用户户不输入该字段，默认创建属于默认企业多项目ID（ID为“0”）的资源。 注意：若用户没有默认企业多项目ID（ID为“0”）下的创建权限，则接口报错。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
-    * keystoreId  密钥库ID，默认使用KMS默认密钥库
+    * keystoreId  密钥库ID，默认为0，使用KMS默认密钥库；设置为1，则指定管理面CDMS集群；设置为2，则指定租户面共享CDMS集群；若需指定其他CDMS集群，需先执行创建密钥库操作
+    * vmId  虚机ID，密钥创建的虚机，仅四级密评场景生效
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
         'origin' => null,
         'enterpriseProjectId' => null,
         'sequence' => null,
-        'keystoreId' => null
+        'keystoreId' => null,
+        'vmId' => null
     ];
 
     /**
@@ -96,7 +100,8 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
     * origin  密钥来源，默认为“kms”，枚举如下： - kms：表示密钥材料由kms生成。 - external：表示密钥材料由外部导入。
     * enterpriseProjectId  企业多项目ID。 - 用户未开通企业多项目时，不需要输入该字段。 - 用户开通企业多项目时，创建资源可以输入该字段。若用户户不输入该字段，默认创建属于默认企业多项目ID（ID为“0”）的资源。 注意：若用户没有默认企业多项目ID（ID为“0”）下的创建权限，则接口报错。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
-    * keystoreId  密钥库ID，默认使用KMS默认密钥库
+    * keystoreId  密钥库ID，默认为0，使用KMS默认密钥库；设置为1，则指定管理面CDMS集群；设置为2，则指定租户面共享CDMS集群；若需指定其他CDMS集群，需先执行创建密钥库操作
+    * vmId  虚机ID，密钥创建的虚机，仅四级密评场景生效
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
             'origin' => 'origin',
             'enterpriseProjectId' => 'enterprise_project_id',
             'sequence' => 'sequence',
-            'keystoreId' => 'keystore_id'
+            'keystoreId' => 'keystore_id',
+            'vmId' => 'vm_id'
     ];
 
     /**
@@ -120,7 +126,8 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
     * origin  密钥来源，默认为“kms”，枚举如下： - kms：表示密钥材料由kms生成。 - external：表示密钥材料由外部导入。
     * enterpriseProjectId  企业多项目ID。 - 用户未开通企业多项目时，不需要输入该字段。 - 用户开通企业多项目时，创建资源可以输入该字段。若用户户不输入该字段，默认创建属于默认企业多项目ID（ID为“0”）的资源。 注意：若用户没有默认企业多项目ID（ID为“0”）下的创建权限，则接口报错。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
-    * keystoreId  密钥库ID，默认使用KMS默认密钥库
+    * keystoreId  密钥库ID，默认为0，使用KMS默认密钥库；设置为1，则指定管理面CDMS集群；设置为2，则指定租户面共享CDMS集群；若需指定其他CDMS集群，需先执行创建密钥库操作
+    * vmId  虚机ID，密钥创建的虚机，仅四级密评场景生效
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
             'origin' => 'setOrigin',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'sequence' => 'setSequence',
-            'keystoreId' => 'setKeystoreId'
+            'keystoreId' => 'setKeystoreId',
+            'vmId' => 'setVmId'
     ];
 
     /**
@@ -144,7 +152,8 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
     * origin  密钥来源，默认为“kms”，枚举如下： - kms：表示密钥材料由kms生成。 - external：表示密钥材料由外部导入。
     * enterpriseProjectId  企业多项目ID。 - 用户未开通企业多项目时，不需要输入该字段。 - 用户开通企业多项目时，创建资源可以输入该字段。若用户户不输入该字段，默认创建属于默认企业多项目ID（ID为“0”）的资源。 注意：若用户没有默认企业多项目ID（ID为“0”）下的创建权限，则接口报错。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
-    * keystoreId  密钥库ID，默认使用KMS默认密钥库
+    * keystoreId  密钥库ID，默认为0，使用KMS默认密钥库；设置为1，则指定管理面CDMS集群；设置为2，则指定租户面共享CDMS集群；若需指定其他CDMS集群，需先执行创建密钥库操作
+    * vmId  虚机ID，密钥创建的虚机，仅四级密评场景生效
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
             'origin' => 'getOrigin',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'sequence' => 'getSequence',
-            'keystoreId' => 'getKeystoreId'
+            'keystoreId' => 'getKeystoreId',
+            'vmId' => 'getVmId'
     ];
 
     /**
@@ -282,6 +292,7 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['sequence'] = isset($data['sequence']) ? $data['sequence'] : null;
         $this->container['keystoreId'] = isset($data['keystoreId']) ? $data['keystoreId'] : null;
+        $this->container['vmId'] = isset($data['vmId']) ? $data['vmId'] : null;
     }
 
     /**
@@ -527,7 +538,7 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets keystoreId
-    *  密钥库ID，默认使用KMS默认密钥库
+    *  密钥库ID，默认为0，使用KMS默认密钥库；设置为1，则指定管理面CDMS集群；设置为2，则指定租户面共享CDMS集群；若需指定其他CDMS集群，需先执行创建密钥库操作
     *
     * @return string|null
     */
@@ -539,13 +550,37 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets keystoreId
     *
-    * @param string|null $keystoreId 密钥库ID，默认使用KMS默认密钥库
+    * @param string|null $keystoreId 密钥库ID，默认为0，使用KMS默认密钥库；设置为1，则指定管理面CDMS集群；设置为2，则指定租户面共享CDMS集群；若需指定其他CDMS集群，需先执行创建密钥库操作
     *
     * @return $this
     */
     public function setKeystoreId($keystoreId)
     {
         $this->container['keystoreId'] = $keystoreId;
+        return $this;
+    }
+
+    /**
+    * Gets vmId
+    *  虚机ID，密钥创建的虚机，仅四级密评场景生效
+    *
+    * @return string|null
+    */
+    public function getVmId()
+    {
+        return $this->container['vmId'];
+    }
+
+    /**
+    * Sets vmId
+    *
+    * @param string|null $vmId 虚机ID，密钥创建的虚机，仅四级密评场景生效
+    *
+    * @return $this
+    */
+    public function setVmId($vmId)
+    {
+        $this->container['vmId'] = $vmId;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class PermissionSetProvisioningStatusDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accountId  账号的唯一身份标识
+    * accountId  指定账户的唯一身份标识.
     * createdDate  权限集创建日期
     * failureReason  失败原因
     * permissionSetId  权限集唯一标识
@@ -40,7 +40,7 @@ class PermissionSetProvisioningStatusDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accountId  账号的唯一身份标识
+    * accountId  指定账户的唯一身份标识.
     * createdDate  权限集创建日期
     * failureReason  失败原因
     * permissionSetId  权限集唯一标识
@@ -81,7 +81,7 @@ class PermissionSetProvisioningStatusDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accountId  账号的唯一身份标识
+    * accountId  指定账户的唯一身份标识.
     * createdDate  权限集创建日期
     * failureReason  失败原因
     * permissionSetId  权限集唯一标识
@@ -101,7 +101,7 @@ class PermissionSetProvisioningStatusDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accountId  账号的唯一身份标识
+    * accountId  指定账户的唯一身份标识.
     * createdDate  权限集创建日期
     * failureReason  失败原因
     * permissionSetId  权限集唯一标识
@@ -121,7 +121,7 @@ class PermissionSetProvisioningStatusDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accountId  账号的唯一身份标识
+    * accountId  指定账户的唯一身份标识.
     * createdDate  权限集创建日期
     * failureReason  失败原因
     * permissionSetId  权限集唯一标识
@@ -269,7 +269,7 @@ class PermissionSetProvisioningStatusDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountId
-    *  账号的唯一身份标识
+    *  指定账户的唯一身份标识.
     *
     * @return string|null
     */
@@ -281,7 +281,7 @@ class PermissionSetProvisioningStatusDto implements ModelInterface, ArrayAccess
     /**
     * Sets accountId
     *
-    * @param string|null $accountId 账号的唯一身份标识
+    * @param string|null $accountId 指定账户的唯一身份标识.
     *
     * @return $this
     */

@@ -21,8 +21,8 @@ class ListUserChangeHistoriesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  **参数解释**: 账号变动总数 **取值范围**: 0-10000000
-    * dataList  **参数解释**: 账号历史变动记录列表 **取值范围**: 0-200
+    * totalNum  **参数解释**: 账号变动总数 **取值范围**: 最小值0，最大值10000000
+    * dataList  **参数解释**: 账号历史变动记录列表 **取值范围**: 最小值0，最大值200
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListUserChangeHistoriesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  **参数解释**: 账号变动总数 **取值范围**: 0-10000000
-    * dataList  **参数解释**: 账号历史变动记录列表 **取值范围**: 0-200
+    * totalNum  **参数解释**: 账号变动总数 **取值范围**: 最小值0，最大值10000000
+    * dataList  **参数解释**: 账号历史变动记录列表 **取值范围**: 最小值0，最大值200
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListUserChangeHistoriesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  **参数解释**: 账号变动总数 **取值范围**: 0-10000000
-    * dataList  **参数解释**: 账号历史变动记录列表 **取值范围**: 0-200
+    * totalNum  **参数解释**: 账号变动总数 **取值范围**: 最小值0，最大值10000000
+    * dataList  **参数解释**: 账号历史变动记录列表 **取值范围**: 最小值0，最大值200
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListUserChangeHistoriesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  **参数解释**: 账号变动总数 **取值范围**: 0-10000000
-    * dataList  **参数解释**: 账号历史变动记录列表 **取值范围**: 0-200
+    * totalNum  **参数解释**: 账号变动总数 **取值范围**: 最小值0，最大值10000000
+    * dataList  **参数解释**: 账号历史变动记录列表 **取值范围**: 最小值0，最大值200
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListUserChangeHistoriesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  **参数解释**: 账号变动总数 **取值范围**: 0-10000000
-    * dataList  **参数解释**: 账号历史变动记录列表 **取值范围**: 0-200
+    * totalNum  **参数解释**: 账号变动总数 **取值范围**: 最小值0，最大值10000000
+    * dataList  **参数解释**: 账号历史变动记录列表 **取值范围**: 最小值0，最大值200
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListUserChangeHistoriesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  **参数解释**: 账号变动总数 **取值范围**: 0-10000000
+    *  **参数解释**: 账号变动总数 **取值范围**: 最小值0，最大值10000000
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListUserChangeHistoriesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum **参数解释**: 账号变动总数 **取值范围**: 0-10000000
+    * @param int|null $totalNum **参数解释**: 账号变动总数 **取值范围**: 最小值0，最大值10000000
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListUserChangeHistoriesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  **参数解释**: 账号历史变动记录列表 **取值范围**: 0-200
+    *  **参数解释**: 账号历史变动记录列表 **取值范围**: 最小值0，最大值200
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\UserChangeHistoryResponseInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListUserChangeHistoriesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\UserChangeHistoryResponseInfo[]|null $dataList **参数解释**: 账号历史变动记录列表 **取值范围**: 0-200
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\UserChangeHistoryResponseInfo[]|null $dataList **参数解释**: 账号历史变动记录列表 **取值范围**: 最小值0，最大值200
     *
     * @return $this
     */

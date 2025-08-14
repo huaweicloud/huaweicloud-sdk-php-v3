@@ -20,7 +20,7 @@ class PhoneNumberDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * primary  一个布尔值，表示这是否为用户的主电话号码
+    * primary  一个布尔值，表示这是否是用户的主电话号码
     * type  表示电话号码类型的字符串
     * value  包含电话号码的字符串
     *
@@ -34,7 +34,7 @@ class PhoneNumberDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * primary  一个布尔值，表示这是否为用户的主电话号码
+    * primary  一个布尔值，表示这是否是用户的主电话号码
     * type  表示电话号码类型的字符串
     * value  包含电话号码的字符串
     *
@@ -69,7 +69,7 @@ class PhoneNumberDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * primary  一个布尔值，表示这是否为用户的主电话号码
+    * primary  一个布尔值，表示这是否是用户的主电话号码
     * type  表示电话号码类型的字符串
     * value  包含电话号码的字符串
     *
@@ -83,7 +83,7 @@ class PhoneNumberDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * primary  一个布尔值，表示这是否为用户的主电话号码
+    * primary  一个布尔值，表示这是否是用户的主电话号码
     * type  表示电话号码类型的字符串
     * value  包含电话号码的字符串
     *
@@ -97,7 +97,7 @@ class PhoneNumberDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * primary  一个布尔值，表示这是否为用户的主电话号码
+    * primary  一个布尔值，表示这是否是用户的主电话号码
     * type  表示电话号码类型的字符串
     * value  包含电话号码的字符串
     *
@@ -214,7 +214,7 @@ class PhoneNumberDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets primary
-    *  一个布尔值，表示这是否为用户的主电话号码
+    *  一个布尔值，表示这是否是用户的主电话号码
     *
     * @return bool|null
     */
@@ -226,7 +226,7 @@ class PhoneNumberDto implements ModelInterface, ArrayAccess
     /**
     * Sets primary
     *
-    * @param bool|null $primary 一个布尔值，表示这是否为用户的主电话号码
+    * @param bool|null $primary 一个布尔值，表示这是否是用户的主电话号码
     *
     * @return $this
     */

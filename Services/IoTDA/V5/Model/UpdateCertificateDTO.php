@@ -22,24 +22,36 @@ class UpdateCertificateDTO implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * provisionEnable  是否开启自注册能力，当为true时该功能必须配合预调配功能使用，true：是，false：否。
     * templateId  预调配模板ID，该CA证书绑定的预调配模板id，当该字段传null时表示解除绑定关系。
+    * ocspEnable  是否开启该CA证书下的设备证书OCSP校验，当为true且设备证书信息中包含OCSP url时则平台会校验证书的状态，当证书状态为revoked时平台会拒绝设备连接，true：开启，false：关闭。
+    * ocspSslEnable  访问ocsp服务器是否开启SSL，开启后必须配置服务器CA证书校验。
+    * ocspServerCaId  ocsp服务器端CA证书id，当ocsp服务器为https协议时需要配置，否则认证失败。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'provisionEnable' => 'bool',
-            'templateId' => 'string'
+            'templateId' => 'string',
+            'ocspEnable' => 'bool',
+            'ocspSslEnable' => 'bool',
+            'ocspServerCaId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * provisionEnable  是否开启自注册能力，当为true时该功能必须配合预调配功能使用，true：是，false：否。
     * templateId  预调配模板ID，该CA证书绑定的预调配模板id，当该字段传null时表示解除绑定关系。
+    * ocspEnable  是否开启该CA证书下的设备证书OCSP校验，当为true且设备证书信息中包含OCSP url时则平台会校验证书的状态，当证书状态为revoked时平台会拒绝设备连接，true：开启，false：关闭。
+    * ocspSslEnable  访问ocsp服务器是否开启SSL，开启后必须配置服务器CA证书校验。
+    * ocspServerCaId  ocsp服务器端CA证书id，当ocsp服务器为https协议时需要配置，否则认证失败。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'provisionEnable' => null,
-        'templateId' => null
+        'templateId' => null,
+        'ocspEnable' => null,
+        'ocspSslEnable' => null,
+        'ocspServerCaId' => null
     ];
 
     /**
@@ -67,36 +79,54 @@ class UpdateCertificateDTO implements ModelInterface, ArrayAccess
     * and the value is the original name
     * provisionEnable  是否开启自注册能力，当为true时该功能必须配合预调配功能使用，true：是，false：否。
     * templateId  预调配模板ID，该CA证书绑定的预调配模板id，当该字段传null时表示解除绑定关系。
+    * ocspEnable  是否开启该CA证书下的设备证书OCSP校验，当为true且设备证书信息中包含OCSP url时则平台会校验证书的状态，当证书状态为revoked时平台会拒绝设备连接，true：开启，false：关闭。
+    * ocspSslEnable  访问ocsp服务器是否开启SSL，开启后必须配置服务器CA证书校验。
+    * ocspServerCaId  ocsp服务器端CA证书id，当ocsp服务器为https协议时需要配置，否则认证失败。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'provisionEnable' => 'provision_enable',
-            'templateId' => 'template_id'
+            'templateId' => 'template_id',
+            'ocspEnable' => 'ocsp_enable',
+            'ocspSslEnable' => 'ocsp_ssl_enable',
+            'ocspServerCaId' => 'ocsp_server_ca_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * provisionEnable  是否开启自注册能力，当为true时该功能必须配合预调配功能使用，true：是，false：否。
     * templateId  预调配模板ID，该CA证书绑定的预调配模板id，当该字段传null时表示解除绑定关系。
+    * ocspEnable  是否开启该CA证书下的设备证书OCSP校验，当为true且设备证书信息中包含OCSP url时则平台会校验证书的状态，当证书状态为revoked时平台会拒绝设备连接，true：开启，false：关闭。
+    * ocspSslEnable  访问ocsp服务器是否开启SSL，开启后必须配置服务器CA证书校验。
+    * ocspServerCaId  ocsp服务器端CA证书id，当ocsp服务器为https协议时需要配置，否则认证失败。
     *
     * @var string[]
     */
     protected static $setters = [
             'provisionEnable' => 'setProvisionEnable',
-            'templateId' => 'setTemplateId'
+            'templateId' => 'setTemplateId',
+            'ocspEnable' => 'setOcspEnable',
+            'ocspSslEnable' => 'setOcspSslEnable',
+            'ocspServerCaId' => 'setOcspServerCaId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * provisionEnable  是否开启自注册能力，当为true时该功能必须配合预调配功能使用，true：是，false：否。
     * templateId  预调配模板ID，该CA证书绑定的预调配模板id，当该字段传null时表示解除绑定关系。
+    * ocspEnable  是否开启该CA证书下的设备证书OCSP校验，当为true且设备证书信息中包含OCSP url时则平台会校验证书的状态，当证书状态为revoked时平台会拒绝设备连接，true：开启，false：关闭。
+    * ocspSslEnable  访问ocsp服务器是否开启SSL，开启后必须配置服务器CA证书校验。
+    * ocspServerCaId  ocsp服务器端CA证书id，当ocsp服务器为https协议时需要配置，否则认证失败。
     *
     * @var string[]
     */
     protected static $getters = [
             'provisionEnable' => 'getProvisionEnable',
-            'templateId' => 'getTemplateId'
+            'templateId' => 'getTemplateId',
+            'ocspEnable' => 'getOcspEnable',
+            'ocspSslEnable' => 'getOcspSslEnable',
+            'ocspServerCaId' => 'getOcspServerCaId'
     ];
 
     /**
@@ -159,6 +189,9 @@ class UpdateCertificateDTO implements ModelInterface, ArrayAccess
     {
         $this->container['provisionEnable'] = isset($data['provisionEnable']) ? $data['provisionEnable'] : null;
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
+        $this->container['ocspEnable'] = isset($data['ocspEnable']) ? $data['ocspEnable'] : null;
+        $this->container['ocspSslEnable'] = isset($data['ocspSslEnable']) ? $data['ocspSslEnable'] : null;
+        $this->container['ocspServerCaId'] = isset($data['ocspServerCaId']) ? $data['ocspServerCaId'] : null;
     }
 
     /**
@@ -171,6 +204,9 @@ class UpdateCertificateDTO implements ModelInterface, ArrayAccess
         $invalidProperties = [];
             if (!is_null($this->container['templateId']) && !preg_match("/^[a-fA-F0-9]{24}$/", $this->container['templateId'])) {
                 $invalidProperties[] = "invalid value for 'templateId', must be conform to the pattern /^[a-fA-F0-9]{24}$/.";
+            }
+            if (!is_null($this->container['ocspServerCaId']) && !preg_match("/^[a-f0-9-]{1,36}$/", $this->container['ocspServerCaId'])) {
+                $invalidProperties[] = "invalid value for 'ocspServerCaId', must be conform to the pattern /^[a-f0-9-]{1,36}$/.";
             }
         return $invalidProperties;
     }
@@ -231,6 +267,78 @@ class UpdateCertificateDTO implements ModelInterface, ArrayAccess
     public function setTemplateId($templateId)
     {
         $this->container['templateId'] = $templateId;
+        return $this;
+    }
+
+    /**
+    * Gets ocspEnable
+    *  是否开启该CA证书下的设备证书OCSP校验，当为true且设备证书信息中包含OCSP url时则平台会校验证书的状态，当证书状态为revoked时平台会拒绝设备连接，true：开启，false：关闭。
+    *
+    * @return bool|null
+    */
+    public function getOcspEnable()
+    {
+        return $this->container['ocspEnable'];
+    }
+
+    /**
+    * Sets ocspEnable
+    *
+    * @param bool|null $ocspEnable 是否开启该CA证书下的设备证书OCSP校验，当为true且设备证书信息中包含OCSP url时则平台会校验证书的状态，当证书状态为revoked时平台会拒绝设备连接，true：开启，false：关闭。
+    *
+    * @return $this
+    */
+    public function setOcspEnable($ocspEnable)
+    {
+        $this->container['ocspEnable'] = $ocspEnable;
+        return $this;
+    }
+
+    /**
+    * Gets ocspSslEnable
+    *  访问ocsp服务器是否开启SSL，开启后必须配置服务器CA证书校验。
+    *
+    * @return bool|null
+    */
+    public function getOcspSslEnable()
+    {
+        return $this->container['ocspSslEnable'];
+    }
+
+    /**
+    * Sets ocspSslEnable
+    *
+    * @param bool|null $ocspSslEnable 访问ocsp服务器是否开启SSL，开启后必须配置服务器CA证书校验。
+    *
+    * @return $this
+    */
+    public function setOcspSslEnable($ocspSslEnable)
+    {
+        $this->container['ocspSslEnable'] = $ocspSslEnable;
+        return $this;
+    }
+
+    /**
+    * Gets ocspServerCaId
+    *  ocsp服务器端CA证书id，当ocsp服务器为https协议时需要配置，否则认证失败。
+    *
+    * @return string|null
+    */
+    public function getOcspServerCaId()
+    {
+        return $this->container['ocspServerCaId'];
+    }
+
+    /**
+    * Sets ocspServerCaId
+    *
+    * @param string|null $ocspServerCaId ocsp服务器端CA证书id，当ocsp服务器为https协议时需要配置，否则认证失败。
+    *
+    * @return $this
+    */
+    public function setOcspServerCaId($ocspServerCaId)
+    {
+        $this->container['ocspServerCaId'] = $ocspServerCaId;
         return $this;
     }
 

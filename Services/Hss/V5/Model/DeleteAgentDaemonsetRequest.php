@@ -20,10 +20,10 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * region  Region ID
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * clusterId  集群id
-    * invokedService  调用服务,默认hss，cce集成防护调用场景使用，包括:    - hss： hss服务    - cce： cce服务，cce集成防护调用需要传参cce
+    * clusterId  **参数解释**:  集群id **约束限制**: 不涉及 **取值范围**: 长度范围1-256位 **默认取值**: 不涉及
+    * invokedService  **参数解释**: 调用服务，cce集成防护调用场景使用。 **约束限制**: 不涉及 **取值范围**: 包含以下两种： - hss：hss服务。 - cce：cce服务，cce集成防护调用需要传参cce。  **默认取值**: hss
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * region  Region ID
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * clusterId  集群id
-    * invokedService  调用服务,默认hss，cce集成防护调用场景使用，包括:    - hss： hss服务    - cce： cce服务，cce集成防护调用需要传参cce
+    * clusterId  **参数解释**:  集群id **约束限制**: 不涉及 **取值范围**: 长度范围1-256位 **默认取值**: 不涉及
+    * invokedService  **参数解释**: 调用服务，cce集成防护调用场景使用。 **约束限制**: 不涉及 **取值范围**: 包含以下两种： - hss：hss服务。 - cce：cce服务，cce集成防护调用需要传参cce。  **默认取值**: hss
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * region  Region ID
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * clusterId  集群id
-    * invokedService  调用服务,默认hss，cce集成防护调用场景使用，包括:    - hss： hss服务    - cce： cce服务，cce集成防护调用需要传参cce
+    * clusterId  **参数解释**:  集群id **约束限制**: 不涉及 **取值范围**: 长度范围1-256位 **默认取值**: 不涉及
+    * invokedService  **参数解释**: 调用服务，cce集成防护调用场景使用。 **约束限制**: 不涉及 **取值范围**: 包含以下两种： - hss：hss服务。 - cce：cce服务，cce集成防护调用需要传参cce。  **默认取值**: hss
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * region  Region ID
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * clusterId  集群id
-    * invokedService  调用服务,默认hss，cce集成防护调用场景使用，包括:    - hss： hss服务    - cce： cce服务，cce集成防护调用需要传参cce
+    * clusterId  **参数解释**:  集群id **约束限制**: 不涉及 **取值范围**: 长度范围1-256位 **默认取值**: 不涉及
+    * invokedService  **参数解释**: 调用服务，cce集成防护调用场景使用。 **约束限制**: 不涉及 **取值范围**: 包含以下两种： - hss：hss服务。 - cce：cce服务，cce集成防护调用需要传参cce。  **默认取值**: hss
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * region  Region ID
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * clusterId  集群id
-    * invokedService  调用服务,默认hss，cce集成防护调用场景使用，包括:    - hss： hss服务    - cce： cce服务，cce集成防护调用需要传参cce
+    * clusterId  **参数解释**:  集群id **约束限制**: 不涉及 **取值范围**: 长度范围1-256位 **默认取值**: 不涉及
+    * invokedService  **参数解释**: 调用服务，cce集成防护调用场景使用。 **约束限制**: 不涉及 **取值范围**: 包含以下两种： - hss：hss服务。 - cce：cce服务，cce集成防护调用需要传参cce。  **默认取值**: hss
     *
     * @var string[]
     */
@@ -246,7 +246,7 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  Region ID
+    *  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -258,7 +258,7 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string|null $region Region ID
+    * @param string|null $region **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -294,7 +294,7 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群id
+    *  **参数解释**:  集群id **约束限制**: 不涉及 **取值范围**: 长度范围1-256位 **默认取值**: 不涉及
     *
     * @return string
     */
@@ -306,7 +306,7 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId 集群id
+    * @param string $clusterId **参数解释**:  集群id **约束限制**: 不涉及 **取值范围**: 长度范围1-256位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -318,7 +318,7 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets invokedService
-    *  调用服务,默认hss，cce集成防护调用场景使用，包括:    - hss： hss服务    - cce： cce服务，cce集成防护调用需要传参cce
+    *  **参数解释**: 调用服务，cce集成防护调用场景使用。 **约束限制**: 不涉及 **取值范围**: 包含以下两种： - hss：hss服务。 - cce：cce服务，cce集成防护调用需要传参cce。  **默认取值**: hss
     *
     * @return string|null
     */
@@ -330,7 +330,7 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets invokedService
     *
-    * @param string|null $invokedService 调用服务,默认hss，cce集成防护调用场景使用，包括:    - hss： hss服务    - cce： cce服务，cce集成防护调用需要传参cce
+    * @param string|null $invokedService **参数解释**: 调用服务，cce集成防护调用场景使用。 **约束限制**: 不涉及 **取值范围**: 包含以下两种： - hss：hss服务。 - cce：cce服务，cce集成防护调用需要传参cce。  **默认取值**: hss
     *
     * @return $this
     */

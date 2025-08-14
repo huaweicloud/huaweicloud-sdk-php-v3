@@ -23,15 +23,15 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     * resultId  病毒查杀结果ID
     * malwareType  病毒类型
     * malwareName  病毒名称
-    * severity  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 致命
+    * severity  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
     * taskId  任务ID
     * taskName  任务名称
     * fileInfo  fileInfo
     * resourceInfo  resourceInfo
     * eventType  事件类型
-    * occurTime  发生时间，毫秒
-    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * handleStatus  **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
+    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
     * memo  备注信息
     * operateAcceptList  支持的处理操作
     * operateDetailList  操作详情信息列表（页面不展示）
@@ -63,15 +63,15 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     * resultId  病毒查杀结果ID
     * malwareType  病毒类型
     * malwareName  病毒名称
-    * severity  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 致命
+    * severity  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
     * taskId  任务ID
     * taskName  任务名称
     * fileInfo  fileInfo
     * resourceInfo  resourceInfo
     * eventType  事件类型
-    * occurTime  发生时间，毫秒
-    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * handleStatus  **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
+    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
     * memo  备注信息
     * operateAcceptList  支持的处理操作
     * operateDetailList  操作详情信息列表（页面不展示）
@@ -124,15 +124,15 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     * resultId  病毒查杀结果ID
     * malwareType  病毒类型
     * malwareName  病毒名称
-    * severity  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 致命
+    * severity  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
     * taskId  任务ID
     * taskName  任务名称
     * fileInfo  fileInfo
     * resourceInfo  resourceInfo
     * eventType  事件类型
-    * occurTime  发生时间，毫秒
-    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * handleStatus  **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
+    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
     * memo  备注信息
     * operateAcceptList  支持的处理操作
     * operateDetailList  操作详情信息列表（页面不展示）
@@ -164,15 +164,15 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     * resultId  病毒查杀结果ID
     * malwareType  病毒类型
     * malwareName  病毒名称
-    * severity  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 致命
+    * severity  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
     * taskId  任务ID
     * taskName  任务名称
     * fileInfo  fileInfo
     * resourceInfo  resourceInfo
     * eventType  事件类型
-    * occurTime  发生时间，毫秒
-    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * handleStatus  **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
+    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
     * memo  备注信息
     * operateAcceptList  支持的处理操作
     * operateDetailList  操作详情信息列表（页面不展示）
@@ -204,15 +204,15 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     * resultId  病毒查杀结果ID
     * malwareType  病毒类型
     * malwareName  病毒名称
-    * severity  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 致命
+    * severity  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
     * taskId  任务ID
     * taskName  任务名称
     * fileInfo  fileInfo
     * resourceInfo  resourceInfo
     * eventType  事件类型
-    * occurTime  发生时间，毫秒
-    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * handleStatus  **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
+    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
     * memo  备注信息
     * operateAcceptList  支持的处理操作
     * operateDetailList  操作详情信息列表（页面不展示）
@@ -450,7 +450,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 致命
+    *  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
     *
     * @return string|null
     */
@@ -462,7 +462,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity 威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 致命
+    * @param string|null $severity 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
     *
     * @return $this
     */
@@ -594,7 +594,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets occurTime
-    *  发生时间，毫秒
+    *  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -606,7 +606,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets occurTime
     *
-    * @param int|null $occurTime 发生时间，毫秒
+    * @param int|null $occurTime **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -618,7 +618,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets handleStatus
-    *  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
+    *  **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
     *
     * @return string|null
     */
@@ -630,7 +630,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets handleStatus
     *
-    * @param string|null $handleStatus 处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
+    * @param string|null $handleStatus **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
     *
     * @return $this
     */
@@ -642,7 +642,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets handleMethod
-    *  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
+    *  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
     *
     * @return string|null
     */
@@ -654,7 +654,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets handleMethod
     *
-    * @param string|null $handleMethod 处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
+    * @param string|null $handleMethod 处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
     *
     * @return $this
     */

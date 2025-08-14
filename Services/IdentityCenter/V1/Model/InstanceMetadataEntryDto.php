@@ -20,8 +20,8 @@ class InstanceMetadataEntryDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * identityStoreId  关联到IAM身份中心实例的身份源的全局唯一标识符（ID）
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）
+    * identityStoreId  关联到IAM身份中心实例的身份源的全局唯一标识符（ID）。
+    * instanceId  Identity Center实例的全局唯一标识符（ID）
     * alias  用户为身份源标识符定义的别名
     * instanceUrn  实例的统一资源名称（URN）
     *
@@ -36,8 +36,8 @@ class InstanceMetadataEntryDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * identityStoreId  关联到IAM身份中心实例的身份源的全局唯一标识符（ID）
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）
+    * identityStoreId  关联到IAM身份中心实例的身份源的全局唯一标识符（ID）。
+    * instanceId  Identity Center实例的全局唯一标识符（ID）
     * alias  用户为身份源标识符定义的别名
     * instanceUrn  实例的统一资源名称（URN）
     *
@@ -73,8 +73,8 @@ class InstanceMetadataEntryDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * identityStoreId  关联到IAM身份中心实例的身份源的全局唯一标识符（ID）
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）
+    * identityStoreId  关联到IAM身份中心实例的身份源的全局唯一标识符（ID）。
+    * instanceId  Identity Center实例的全局唯一标识符（ID）
     * alias  用户为身份源标识符定义的别名
     * instanceUrn  实例的统一资源名称（URN）
     *
@@ -89,8 +89,8 @@ class InstanceMetadataEntryDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * identityStoreId  关联到IAM身份中心实例的身份源的全局唯一标识符（ID）
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）
+    * identityStoreId  关联到IAM身份中心实例的身份源的全局唯一标识符（ID）。
+    * instanceId  Identity Center实例的全局唯一标识符（ID）
     * alias  用户为身份源标识符定义的别名
     * instanceUrn  实例的统一资源名称（URN）
     *
@@ -105,8 +105,8 @@ class InstanceMetadataEntryDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * identityStoreId  关联到IAM身份中心实例的身份源的全局唯一标识符（ID）
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）
+    * identityStoreId  关联到IAM身份中心实例的身份源的全局唯一标识符（ID）。
+    * instanceId  Identity Center实例的全局唯一标识符（ID）
     * alias  用户为身份源标识符定义的别名
     * instanceUrn  实例的统一资源名称（URN）
     *
@@ -231,7 +231,7 @@ class InstanceMetadataEntryDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets identityStoreId
-    *  关联到IAM身份中心实例的身份源的全局唯一标识符（ID）
+    *  关联到IAM身份中心实例的身份源的全局唯一标识符（ID）。
     *
     * @return string
     */
@@ -243,7 +243,7 @@ class InstanceMetadataEntryDto implements ModelInterface, ArrayAccess
     /**
     * Sets identityStoreId
     *
-    * @param string $identityStoreId 关联到IAM身份中心实例的身份源的全局唯一标识符（ID）
+    * @param string $identityStoreId 关联到IAM身份中心实例的身份源的全局唯一标识符（ID）。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class InstanceMetadataEntryDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  IAM身份中心实例的全局唯一标识符（ID）
+    *  Identity Center实例的全局唯一标识符（ID）
     *
     * @return string
     */
@@ -267,7 +267,7 @@ class InstanceMetadataEntryDto implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId IAM身份中心实例的全局唯一标识符（ID）
+    * @param string $instanceId Identity Center实例的全局唯一标识符（ID）
     *
     * @return $this
     */

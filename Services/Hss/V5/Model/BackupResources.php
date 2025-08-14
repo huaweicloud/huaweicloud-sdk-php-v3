@@ -21,7 +21,7 @@ class BackupResources implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * vaultId  **参数解释**: 选择需要绑定的存储库ID，不为空 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
-    * resourceList  需要开启备份功能的主机情况列表
+    * resourceList  **参数解释**: 需要开启备份功能的主机情况列表 **约束限制**: 不涉及 **取值范围**: 取值0-20条主机id **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class BackupResources implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * vaultId  **参数解释**: 选择需要绑定的存储库ID，不为空 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
-    * resourceList  需要开启备份功能的主机情况列表
+    * resourceList  **参数解释**: 需要开启备份功能的主机情况列表 **约束限制**: 不涉及 **取值范围**: 取值0-20条主机id **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class BackupResources implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * vaultId  **参数解释**: 选择需要绑定的存储库ID，不为空 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
-    * resourceList  需要开启备份功能的主机情况列表
+    * resourceList  **参数解释**: 需要开启备份功能的主机情况列表 **约束限制**: 不涉及 **取值范围**: 取值0-20条主机id **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class BackupResources implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * vaultId  **参数解释**: 选择需要绑定的存储库ID，不为空 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
-    * resourceList  需要开启备份功能的主机情况列表
+    * resourceList  **参数解释**: 需要开启备份功能的主机情况列表 **约束限制**: 不涉及 **取值范围**: 取值0-20条主机id **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class BackupResources implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * vaultId  **参数解释**: 选择需要绑定的存储库ID，不为空 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
-    * resourceList  需要开启备份功能的主机情况列表
+    * resourceList  **参数解释**: 需要开启备份功能的主机情况列表 **约束限制**: 不涉及 **取值范围**: 取值0-20条主机id **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class BackupResources implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceList
-    *  需要开启备份功能的主机情况列表
+    *  **参数解释**: 需要开启备份功能的主机情况列表 **约束限制**: 不涉及 **取值范围**: 取值0-20条主机id **默认取值**: 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\ResourceInfo[]|null
     */
@@ -227,7 +227,7 @@ class BackupResources implements ModelInterface, ArrayAccess
     /**
     * Sets resourceList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\ResourceInfo[]|null $resourceList 需要开启备份功能的主机情况列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\ResourceInfo[]|null $resourceList **参数解释**: 需要开启备份功能的主机情况列表 **约束限制**: 不涉及 **取值范围**: 取值0-20条主机id **默认取值**: 不涉及
     *
     * @return $this
     */

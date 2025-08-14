@@ -21,10 +21,10 @@ class SystemUserWhiteListResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectName  企业项目名称
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * privateIp  服务器私有IP
-    * publicIp  弹性公网IP地址
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * systemUserNameList  系统用户名列表
     * updateTime  更新时间，毫秒
     * remarks  备注
@@ -45,10 +45,10 @@ class SystemUserWhiteListResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectName  企业项目名称
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * privateIp  服务器私有IP
-    * publicIp  弹性公网IP地址
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * systemUserNameList  系统用户名列表
     * updateTime  更新时间，毫秒
     * remarks  备注
@@ -90,10 +90,10 @@ class SystemUserWhiteListResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * enterpriseProjectName  企业项目名称
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * privateIp  服务器私有IP
-    * publicIp  弹性公网IP地址
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * systemUserNameList  系统用户名列表
     * updateTime  更新时间，毫秒
     * remarks  备注
@@ -114,10 +114,10 @@ class SystemUserWhiteListResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectName  企业项目名称
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * privateIp  服务器私有IP
-    * publicIp  弹性公网IP地址
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * systemUserNameList  系统用户名列表
     * updateTime  更新时间，毫秒
     * remarks  备注
@@ -138,10 +138,10 @@ class SystemUserWhiteListResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectName  企业项目名称
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * privateIp  服务器私有IP
-    * publicIp  弹性公网IP地址
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * systemUserNameList  系统用户名列表
     * updateTime  更新时间，毫秒
     * remarks  备注
@@ -271,8 +271,8 @@ class SystemUserWhiteListResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['privateIp']) && !preg_match("/^.*$/", $this->container['privateIp'])) {
                 $invalidProperties[] = "invalid value for 'privateIp', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) > 128)) {
-                $invalidProperties[] = "invalid value for 'publicIp', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) > 256)) {
+                $invalidProperties[] = "invalid value for 'publicIp', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) < 1)) {
                 $invalidProperties[] = "invalid value for 'publicIp', the character length must be bigger than or equal to 1.";
@@ -332,7 +332,7 @@ class SystemUserWhiteListResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    *  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     *
     * @return string|null
     */
@@ -344,7 +344,7 @@ class SystemUserWhiteListResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * @param string|null $hostId **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class SystemUserWhiteListResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  服务器私有IP
+    *  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     *
     * @return string|null
     */
@@ -392,7 +392,7 @@ class SystemUserWhiteListResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp 服务器私有IP
+    * @param string|null $privateIp **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     *
     * @return $this
     */
@@ -404,7 +404,7 @@ class SystemUserWhiteListResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  弹性公网IP地址
+    *  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -416,7 +416,7 @@ class SystemUserWhiteListResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp 弹性公网IP地址
+    * @param string|null $publicIp **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */

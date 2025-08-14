@@ -21,13 +21,13 @@ class MultiCloudClusterCreateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  集群名称
-    * provider  集群服务商:   - ali：阿里   - tencent：腾讯   - azure：微软   - aws：亚马逊   - self_built_hw：华为自建   - self_built_idc：IDC自建
+    * provider  **参数解释** 集群服务商 **约束限制**   - ali：阿里。   - tencent：腾讯。   - azure：微软。   - aws：亚马逊。   - self_built_hw：华为自建。   - self_built_idc：IDC自建。  **取值范围** 字符长度范围0-64 **默认取值** 不涉及
     * server  集群apiserver地址
     * imageRepo  镜像仓地址
     * imageRepoUsername  镜像仓用户名
     * imageRepoPassword  镜像仓密码
     * organization  组织
-    * imageRepoType  镜像仓类型： - harbor Harbor镜像仓 - quay Quay镜像仓 - jfrog Jfrog镜像仓 - other 其他镜像仓
+    * imageRepoType  **参数解释** 镜像仓类型 **约束限制** - harbor：Harbor镜像仓。 - quay：Quay镜像仓。 - jfrog：Jfrog镜像仓。 - other：其他镜像仓。  **取值范围** 字符长度范围0-64 **默认取值** 不涉及
     * currentExpirationDate  当前有效期结束时间
     * certificateExpirationDate  证书有效期结束时间
     * kubeConfig  kubeconfig文件
@@ -63,13 +63,13 @@ class MultiCloudClusterCreateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  集群名称
-    * provider  集群服务商:   - ali：阿里   - tencent：腾讯   - azure：微软   - aws：亚马逊   - self_built_hw：华为自建   - self_built_idc：IDC自建
+    * provider  **参数解释** 集群服务商 **约束限制**   - ali：阿里。   - tencent：腾讯。   - azure：微软。   - aws：亚马逊。   - self_built_hw：华为自建。   - self_built_idc：IDC自建。  **取值范围** 字符长度范围0-64 **默认取值** 不涉及
     * server  集群apiserver地址
     * imageRepo  镜像仓地址
     * imageRepoUsername  镜像仓用户名
     * imageRepoPassword  镜像仓密码
     * organization  组织
-    * imageRepoType  镜像仓类型： - harbor Harbor镜像仓 - quay Quay镜像仓 - jfrog Jfrog镜像仓 - other 其他镜像仓
+    * imageRepoType  **参数解释** 镜像仓类型 **约束限制** - harbor：Harbor镜像仓。 - quay：Quay镜像仓。 - jfrog：Jfrog镜像仓。 - other：其他镜像仓。  **取值范围** 字符长度范围0-64 **默认取值** 不涉及
     * currentExpirationDate  当前有效期结束时间
     * certificateExpirationDate  证书有效期结束时间
     * kubeConfig  kubeconfig文件
@@ -126,13 +126,13 @@ class MultiCloudClusterCreateRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  集群名称
-    * provider  集群服务商:   - ali：阿里   - tencent：腾讯   - azure：微软   - aws：亚马逊   - self_built_hw：华为自建   - self_built_idc：IDC自建
+    * provider  **参数解释** 集群服务商 **约束限制**   - ali：阿里。   - tencent：腾讯。   - azure：微软。   - aws：亚马逊。   - self_built_hw：华为自建。   - self_built_idc：IDC自建。  **取值范围** 字符长度范围0-64 **默认取值** 不涉及
     * server  集群apiserver地址
     * imageRepo  镜像仓地址
     * imageRepoUsername  镜像仓用户名
     * imageRepoPassword  镜像仓密码
     * organization  组织
-    * imageRepoType  镜像仓类型： - harbor Harbor镜像仓 - quay Quay镜像仓 - jfrog Jfrog镜像仓 - other 其他镜像仓
+    * imageRepoType  **参数解释** 镜像仓类型 **约束限制** - harbor：Harbor镜像仓。 - quay：Quay镜像仓。 - jfrog：Jfrog镜像仓。 - other：其他镜像仓。  **取值范围** 字符长度范围0-64 **默认取值** 不涉及
     * currentExpirationDate  当前有效期结束时间
     * certificateExpirationDate  证书有效期结束时间
     * kubeConfig  kubeconfig文件
@@ -168,13 +168,13 @@ class MultiCloudClusterCreateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  集群名称
-    * provider  集群服务商:   - ali：阿里   - tencent：腾讯   - azure：微软   - aws：亚马逊   - self_built_hw：华为自建   - self_built_idc：IDC自建
+    * provider  **参数解释** 集群服务商 **约束限制**   - ali：阿里。   - tencent：腾讯。   - azure：微软。   - aws：亚马逊。   - self_built_hw：华为自建。   - self_built_idc：IDC自建。  **取值范围** 字符长度范围0-64 **默认取值** 不涉及
     * server  集群apiserver地址
     * imageRepo  镜像仓地址
     * imageRepoUsername  镜像仓用户名
     * imageRepoPassword  镜像仓密码
     * organization  组织
-    * imageRepoType  镜像仓类型： - harbor Harbor镜像仓 - quay Quay镜像仓 - jfrog Jfrog镜像仓 - other 其他镜像仓
+    * imageRepoType  **参数解释** 镜像仓类型 **约束限制** - harbor：Harbor镜像仓。 - quay：Quay镜像仓。 - jfrog：Jfrog镜像仓。 - other：其他镜像仓。  **取值范围** 字符长度范围0-64 **默认取值** 不涉及
     * currentExpirationDate  当前有效期结束时间
     * certificateExpirationDate  证书有效期结束时间
     * kubeConfig  kubeconfig文件
@@ -210,13 +210,13 @@ class MultiCloudClusterCreateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  集群名称
-    * provider  集群服务商:   - ali：阿里   - tencent：腾讯   - azure：微软   - aws：亚马逊   - self_built_hw：华为自建   - self_built_idc：IDC自建
+    * provider  **参数解释** 集群服务商 **约束限制**   - ali：阿里。   - tencent：腾讯。   - azure：微软。   - aws：亚马逊。   - self_built_hw：华为自建。   - self_built_idc：IDC自建。  **取值范围** 字符长度范围0-64 **默认取值** 不涉及
     * server  集群apiserver地址
     * imageRepo  镜像仓地址
     * imageRepoUsername  镜像仓用户名
     * imageRepoPassword  镜像仓密码
     * organization  组织
-    * imageRepoType  镜像仓类型： - harbor Harbor镜像仓 - quay Quay镜像仓 - jfrog Jfrog镜像仓 - other 其他镜像仓
+    * imageRepoType  **参数解释** 镜像仓类型 **约束限制** - harbor：Harbor镜像仓。 - quay：Quay镜像仓。 - jfrog：Jfrog镜像仓。 - other：其他镜像仓。  **取值范围** 字符长度范围0-64 **默认取值** 不涉及
     * currentExpirationDate  当前有效期结束时间
     * certificateExpirationDate  证书有效期结束时间
     * kubeConfig  kubeconfig文件
@@ -512,7 +512,7 @@ class MultiCloudClusterCreateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets provider
-    *  集群服务商:   - ali：阿里   - tencent：腾讯   - azure：微软   - aws：亚马逊   - self_built_hw：华为自建   - self_built_idc：IDC自建
+    *  **参数解释** 集群服务商 **约束限制**   - ali：阿里。   - tencent：腾讯。   - azure：微软。   - aws：亚马逊。   - self_built_hw：华为自建。   - self_built_idc：IDC自建。  **取值范围** 字符长度范围0-64 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -524,7 +524,7 @@ class MultiCloudClusterCreateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets provider
     *
-    * @param string|null $provider 集群服务商:   - ali：阿里   - tencent：腾讯   - azure：微软   - aws：亚马逊   - self_built_hw：华为自建   - self_built_idc：IDC自建
+    * @param string|null $provider **参数解释** 集群服务商 **约束限制**   - ali：阿里。   - tencent：腾讯。   - azure：微软。   - aws：亚马逊。   - self_built_hw：华为自建。   - self_built_idc：IDC自建。  **取值范围** 字符长度范围0-64 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -656,7 +656,7 @@ class MultiCloudClusterCreateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageRepoType
-    *  镜像仓类型： - harbor Harbor镜像仓 - quay Quay镜像仓 - jfrog Jfrog镜像仓 - other 其他镜像仓
+    *  **参数解释** 镜像仓类型 **约束限制** - harbor：Harbor镜像仓。 - quay：Quay镜像仓。 - jfrog：Jfrog镜像仓。 - other：其他镜像仓。  **取值范围** 字符长度范围0-64 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -668,7 +668,7 @@ class MultiCloudClusterCreateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets imageRepoType
     *
-    * @param string|null $imageRepoType 镜像仓类型： - harbor Harbor镜像仓 - quay Quay镜像仓 - jfrog Jfrog镜像仓 - other 其他镜像仓
+    * @param string|null $imageRepoType **参数解释** 镜像仓类型 **约束限制** - harbor：Harbor镜像仓。 - quay：Quay镜像仓。 - jfrog：Jfrog镜像仓。 - other：其他镜像仓。  **取值范围** 字符长度范围0-64 **默认取值** 不涉及
     *
     * @return $this
     */

@@ -24,7 +24,7 @@ class AddressDto implements ModelInterface, ArrayAccess
     * formatted  包含要显示的地址的格式化版本的字符串
     * locality  地址位置
     * postalCode  邮政编码
-    * primary  一个布尔值，表示这是否为用户的主地址
+    * primary  一个布尔值，表示这是否是用户的主地址
     * region  区域
     * streetAddress  街道
     * type  表示地址类型的字符串
@@ -48,7 +48,7 @@ class AddressDto implements ModelInterface, ArrayAccess
     * formatted  包含要显示的地址的格式化版本的字符串
     * locality  地址位置
     * postalCode  邮政编码
-    * primary  一个布尔值，表示这是否为用户的主地址
+    * primary  一个布尔值，表示这是否是用户的主地址
     * region  区域
     * streetAddress  街道
     * type  表示地址类型的字符串
@@ -93,7 +93,7 @@ class AddressDto implements ModelInterface, ArrayAccess
     * formatted  包含要显示的地址的格式化版本的字符串
     * locality  地址位置
     * postalCode  邮政编码
-    * primary  一个布尔值，表示这是否为用户的主地址
+    * primary  一个布尔值，表示这是否是用户的主地址
     * region  区域
     * streetAddress  街道
     * type  表示地址类型的字符串
@@ -117,7 +117,7 @@ class AddressDto implements ModelInterface, ArrayAccess
     * formatted  包含要显示的地址的格式化版本的字符串
     * locality  地址位置
     * postalCode  邮政编码
-    * primary  一个布尔值，表示这是否为用户的主地址
+    * primary  一个布尔值，表示这是否是用户的主地址
     * region  区域
     * streetAddress  街道
     * type  表示地址类型的字符串
@@ -141,7 +141,7 @@ class AddressDto implements ModelInterface, ArrayAccess
     * formatted  包含要显示的地址的格式化版本的字符串
     * locality  地址位置
     * postalCode  邮政编码
-    * primary  一个布尔值，表示这是否为用户的主地址
+    * primary  一个布尔值，表示这是否是用户的主地址
     * region  区域
     * streetAddress  街道
     * type  表示地址类型的字符串
@@ -410,7 +410,7 @@ class AddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets primary
-    *  一个布尔值，表示这是否为用户的主地址
+    *  一个布尔值，表示这是否是用户的主地址
     *
     * @return bool|null
     */
@@ -422,7 +422,7 @@ class AddressDto implements ModelInterface, ArrayAccess
     /**
     * Sets primary
     *
-    * @param bool|null $primary 一个布尔值，表示这是否为用户的主地址
+    * @param bool|null $primary 一个布尔值，表示这是否是用户的主地址
     *
     * @return $this
     */

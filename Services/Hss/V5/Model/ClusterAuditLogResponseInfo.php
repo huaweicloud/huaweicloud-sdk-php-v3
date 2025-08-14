@@ -24,7 +24,7 @@ class ClusterAuditLogResponseInfo implements ModelInterface, ArrayAccess
     * clusterId  集群id
     * time  日志产生的时间
     * content  审计日志的内容，json格式的字符串
-    * clusterType  集群类型，包含以下几种： - cce: cce集群 - ali: 阿里云集群 - tencent: 腾讯云集群 - azure: 微软云集群 - aws: 亚马逊集群 - self_built_hw: 华为云自建集群 - self_built_idc: IDC自建集群
+    * clusterType  集群类型，包含以下几种： - cce：cce集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     * hostId  主机ID
     * hostName  主机名称
     * hostIp  主机ip
@@ -50,7 +50,7 @@ class ClusterAuditLogResponseInfo implements ModelInterface, ArrayAccess
     * clusterId  集群id
     * time  日志产生的时间
     * content  审计日志的内容，json格式的字符串
-    * clusterType  集群类型，包含以下几种： - cce: cce集群 - ali: 阿里云集群 - tencent: 腾讯云集群 - azure: 微软云集群 - aws: 亚马逊集群 - self_built_hw: 华为云自建集群 - self_built_idc: IDC自建集群
+    * clusterType  集群类型，包含以下几种： - cce：cce集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     * hostId  主机ID
     * hostName  主机名称
     * hostIp  主机ip
@@ -97,7 +97,7 @@ class ClusterAuditLogResponseInfo implements ModelInterface, ArrayAccess
     * clusterId  集群id
     * time  日志产生的时间
     * content  审计日志的内容，json格式的字符串
-    * clusterType  集群类型，包含以下几种： - cce: cce集群 - ali: 阿里云集群 - tencent: 腾讯云集群 - azure: 微软云集群 - aws: 亚马逊集群 - self_built_hw: 华为云自建集群 - self_built_idc: IDC自建集群
+    * clusterType  集群类型，包含以下几种： - cce：cce集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     * hostId  主机ID
     * hostName  主机名称
     * hostIp  主机ip
@@ -123,7 +123,7 @@ class ClusterAuditLogResponseInfo implements ModelInterface, ArrayAccess
     * clusterId  集群id
     * time  日志产生的时间
     * content  审计日志的内容，json格式的字符串
-    * clusterType  集群类型，包含以下几种： - cce: cce集群 - ali: 阿里云集群 - tencent: 腾讯云集群 - azure: 微软云集群 - aws: 亚马逊集群 - self_built_hw: 华为云自建集群 - self_built_idc: IDC自建集群
+    * clusterType  集群类型，包含以下几种： - cce：cce集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     * hostId  主机ID
     * hostName  主机名称
     * hostIp  主机ip
@@ -149,7 +149,7 @@ class ClusterAuditLogResponseInfo implements ModelInterface, ArrayAccess
     * clusterId  集群id
     * time  日志产生的时间
     * content  审计日志的内容，json格式的字符串
-    * clusterType  集群类型，包含以下几种： - cce: cce集群 - ali: 阿里云集群 - tencent: 腾讯云集群 - azure: 微软云集群 - aws: 亚马逊集群 - self_built_hw: 华为云自建集群 - self_built_idc: IDC自建集群
+    * clusterType  集群类型，包含以下几种： - cce：cce集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     * hostId  主机ID
     * hostName  主机名称
     * hostIp  主机ip
@@ -412,7 +412,7 @@ class ClusterAuditLogResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterType
-    *  集群类型，包含以下几种： - cce: cce集群 - ali: 阿里云集群 - tencent: 腾讯云集群 - azure: 微软云集群 - aws: 亚马逊集群 - self_built_hw: 华为云自建集群 - self_built_idc: IDC自建集群
+    *  集群类型，包含以下几种： - cce：cce集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     *
     * @return string|null
     */
@@ -424,7 +424,7 @@ class ClusterAuditLogResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterType
     *
-    * @param string|null $clusterType 集群类型，包含以下几种： - cce: cce集群 - ali: 阿里云集群 - tencent: 腾讯云集群 - azure: 微软云集群 - aws: 亚马逊集群 - self_built_hw: 华为云自建集群 - self_built_idc: IDC自建集群
+    * @param string|null $clusterType 集群类型，包含以下几种： - cce：cce集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     *
     * @return $this
     */

@@ -20,31 +20,31 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainId  租户账号ID
-    * projectId  项目ID
-    * enterpriseProjectId  企业项目ID
-    * regionName  Region名称
-    * vpcId  VPC ID
-    * cloudId  云主机ID
-    * vmName  虚拟机名称
-    * vmUuid  虚拟机UUID，即主机ID
-    * containerId  容器ID
-    * containerStatus  容器状态
-    * podUid  pod uid
-    * podName  pod name
-    * namespace  namespace
-    * clusterId  集群id
-    * clusterName  集群名称
-    * imageId  镜像ID
-    * imageName  镜像名称
-    * hostAttr  主机属性
-    * service  业务服务
-    * microService  微服务
-    * sysArch  系统CPU架构
-    * osBit  操作系统位数
-    * osType  操作系统类型
-    * osName  操作系统名称
-    * osVersion  操作系统版本
+    * domainId  **参数解释**： 租户账号ID **取值范围**： 字符长度1-256位
+    * projectId  **参数解释**： 项目ID **取值范围**： 字符长度1-256位
+    * enterpriseProjectId  **参数解释**： 企业项目ID **取值范围**： 字符长度1-256位
+    * regionName  **参数解释**： Region名称 **取值范围**： 字符长度1-256位
+    * vpcId  **参数解释**： VPC ID **取值范围**： 字符长度1-256位
+    * cloudId  **参数解释**： 云主机ID **取值范围**： 字符长度1-256位
+    * vmName  **参数解释**： 虚拟机名称 **取值范围**： 字符长度1-256位
+    * vmUuid  **参数解释**： 虚拟机UUID，即主机ID **取值范围**： 字符长度1-256位
+    * containerId  **参数解释**： 容器ID **取值范围**： 字符长度1-256位
+    * containerStatus  **参数解释**： 容器状态 **取值范围**： 字符长度1-256位
+    * podUid  **参数解释**： pod uid **取值范围**： 字符长度1-256位
+    * podName  **参数解释**： pod name **取值范围**： 字符长度1-256位
+    * namespace  **参数解释**： namespace **取值范围**： 字符长度1-256位
+    * clusterId  **参数解释**： 集群ID **取值范围**： 字符长度1-256位
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 字符长度1-256位
+    * imageId  **参数解释**： 镜像ID **取值范围**： 字符长度1-256位
+    * imageName  **参数解释**： 镜像名称 **取值范围**： 字符长度1-256位
+    * hostAttr  **参数解释**： 主机属性 **取值范围**： 字符长度1-256位
+    * service  **参数解释**： 业务服务 **取值范围**： 字符长度1-256位
+    * microService  **参数解释**： 微服务 **取值范围**： 字符长度1-256位
+    * sysArch  **参数解释**： 系统CPU架构 **取值范围**： 字符长度1-256位
+    * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度1-256位
+    * osType  **参数解释**： 操作系统类型 **取值范围**： 字符长度1-256位
+    * osName  **参数解释**： 操作系统名称 **取值范围**： 字符长度1-256位
+    * osVersion  **参数解释**： 操作系统版本 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -78,31 +78,31 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainId  租户账号ID
-    * projectId  项目ID
-    * enterpriseProjectId  企业项目ID
-    * regionName  Region名称
-    * vpcId  VPC ID
-    * cloudId  云主机ID
-    * vmName  虚拟机名称
-    * vmUuid  虚拟机UUID，即主机ID
-    * containerId  容器ID
-    * containerStatus  容器状态
-    * podUid  pod uid
-    * podName  pod name
-    * namespace  namespace
-    * clusterId  集群id
-    * clusterName  集群名称
-    * imageId  镜像ID
-    * imageName  镜像名称
-    * hostAttr  主机属性
-    * service  业务服务
-    * microService  微服务
-    * sysArch  系统CPU架构
-    * osBit  操作系统位数
-    * osType  操作系统类型
-    * osName  操作系统名称
-    * osVersion  操作系统版本
+    * domainId  **参数解释**： 租户账号ID **取值范围**： 字符长度1-256位
+    * projectId  **参数解释**： 项目ID **取值范围**： 字符长度1-256位
+    * enterpriseProjectId  **参数解释**： 企业项目ID **取值范围**： 字符长度1-256位
+    * regionName  **参数解释**： Region名称 **取值范围**： 字符长度1-256位
+    * vpcId  **参数解释**： VPC ID **取值范围**： 字符长度1-256位
+    * cloudId  **参数解释**： 云主机ID **取值范围**： 字符长度1-256位
+    * vmName  **参数解释**： 虚拟机名称 **取值范围**： 字符长度1-256位
+    * vmUuid  **参数解释**： 虚拟机UUID，即主机ID **取值范围**： 字符长度1-256位
+    * containerId  **参数解释**： 容器ID **取值范围**： 字符长度1-256位
+    * containerStatus  **参数解释**： 容器状态 **取值范围**： 字符长度1-256位
+    * podUid  **参数解释**： pod uid **取值范围**： 字符长度1-256位
+    * podName  **参数解释**： pod name **取值范围**： 字符长度1-256位
+    * namespace  **参数解释**： namespace **取值范围**： 字符长度1-256位
+    * clusterId  **参数解释**： 集群ID **取值范围**： 字符长度1-256位
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 字符长度1-256位
+    * imageId  **参数解释**： 镜像ID **取值范围**： 字符长度1-256位
+    * imageName  **参数解释**： 镜像名称 **取值范围**： 字符长度1-256位
+    * hostAttr  **参数解释**： 主机属性 **取值范围**： 字符长度1-256位
+    * service  **参数解释**： 业务服务 **取值范围**： 字符长度1-256位
+    * microService  **参数解释**： 微服务 **取值范围**： 字符长度1-256位
+    * sysArch  **参数解释**： 系统CPU架构 **取值范围**： 字符长度1-256位
+    * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度1-256位
+    * osType  **参数解释**： 操作系统类型 **取值范围**： 字符长度1-256位
+    * osName  **参数解释**： 操作系统名称 **取值范围**： 字符长度1-256位
+    * osVersion  **参数解释**： 操作系统版本 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -157,31 +157,31 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainId  租户账号ID
-    * projectId  项目ID
-    * enterpriseProjectId  企业项目ID
-    * regionName  Region名称
-    * vpcId  VPC ID
-    * cloudId  云主机ID
-    * vmName  虚拟机名称
-    * vmUuid  虚拟机UUID，即主机ID
-    * containerId  容器ID
-    * containerStatus  容器状态
-    * podUid  pod uid
-    * podName  pod name
-    * namespace  namespace
-    * clusterId  集群id
-    * clusterName  集群名称
-    * imageId  镜像ID
-    * imageName  镜像名称
-    * hostAttr  主机属性
-    * service  业务服务
-    * microService  微服务
-    * sysArch  系统CPU架构
-    * osBit  操作系统位数
-    * osType  操作系统类型
-    * osName  操作系统名称
-    * osVersion  操作系统版本
+    * domainId  **参数解释**： 租户账号ID **取值范围**： 字符长度1-256位
+    * projectId  **参数解释**： 项目ID **取值范围**： 字符长度1-256位
+    * enterpriseProjectId  **参数解释**： 企业项目ID **取值范围**： 字符长度1-256位
+    * regionName  **参数解释**： Region名称 **取值范围**： 字符长度1-256位
+    * vpcId  **参数解释**： VPC ID **取值范围**： 字符长度1-256位
+    * cloudId  **参数解释**： 云主机ID **取值范围**： 字符长度1-256位
+    * vmName  **参数解释**： 虚拟机名称 **取值范围**： 字符长度1-256位
+    * vmUuid  **参数解释**： 虚拟机UUID，即主机ID **取值范围**： 字符长度1-256位
+    * containerId  **参数解释**： 容器ID **取值范围**： 字符长度1-256位
+    * containerStatus  **参数解释**： 容器状态 **取值范围**： 字符长度1-256位
+    * podUid  **参数解释**： pod uid **取值范围**： 字符长度1-256位
+    * podName  **参数解释**： pod name **取值范围**： 字符长度1-256位
+    * namespace  **参数解释**： namespace **取值范围**： 字符长度1-256位
+    * clusterId  **参数解释**： 集群ID **取值范围**： 字符长度1-256位
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 字符长度1-256位
+    * imageId  **参数解释**： 镜像ID **取值范围**： 字符长度1-256位
+    * imageName  **参数解释**： 镜像名称 **取值范围**： 字符长度1-256位
+    * hostAttr  **参数解释**： 主机属性 **取值范围**： 字符长度1-256位
+    * service  **参数解释**： 业务服务 **取值范围**： 字符长度1-256位
+    * microService  **参数解释**： 微服务 **取值范围**： 字符长度1-256位
+    * sysArch  **参数解释**： 系统CPU架构 **取值范围**： 字符长度1-256位
+    * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度1-256位
+    * osType  **参数解释**： 操作系统类型 **取值范围**： 字符长度1-256位
+    * osName  **参数解释**： 操作系统名称 **取值范围**： 字符长度1-256位
+    * osVersion  **参数解释**： 操作系统版本 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -215,31 +215,31 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainId  租户账号ID
-    * projectId  项目ID
-    * enterpriseProjectId  企业项目ID
-    * regionName  Region名称
-    * vpcId  VPC ID
-    * cloudId  云主机ID
-    * vmName  虚拟机名称
-    * vmUuid  虚拟机UUID，即主机ID
-    * containerId  容器ID
-    * containerStatus  容器状态
-    * podUid  pod uid
-    * podName  pod name
-    * namespace  namespace
-    * clusterId  集群id
-    * clusterName  集群名称
-    * imageId  镜像ID
-    * imageName  镜像名称
-    * hostAttr  主机属性
-    * service  业务服务
-    * microService  微服务
-    * sysArch  系统CPU架构
-    * osBit  操作系统位数
-    * osType  操作系统类型
-    * osName  操作系统名称
-    * osVersion  操作系统版本
+    * domainId  **参数解释**： 租户账号ID **取值范围**： 字符长度1-256位
+    * projectId  **参数解释**： 项目ID **取值范围**： 字符长度1-256位
+    * enterpriseProjectId  **参数解释**： 企业项目ID **取值范围**： 字符长度1-256位
+    * regionName  **参数解释**： Region名称 **取值范围**： 字符长度1-256位
+    * vpcId  **参数解释**： VPC ID **取值范围**： 字符长度1-256位
+    * cloudId  **参数解释**： 云主机ID **取值范围**： 字符长度1-256位
+    * vmName  **参数解释**： 虚拟机名称 **取值范围**： 字符长度1-256位
+    * vmUuid  **参数解释**： 虚拟机UUID，即主机ID **取值范围**： 字符长度1-256位
+    * containerId  **参数解释**： 容器ID **取值范围**： 字符长度1-256位
+    * containerStatus  **参数解释**： 容器状态 **取值范围**： 字符长度1-256位
+    * podUid  **参数解释**： pod uid **取值范围**： 字符长度1-256位
+    * podName  **参数解释**： pod name **取值范围**： 字符长度1-256位
+    * namespace  **参数解释**： namespace **取值范围**： 字符长度1-256位
+    * clusterId  **参数解释**： 集群ID **取值范围**： 字符长度1-256位
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 字符长度1-256位
+    * imageId  **参数解释**： 镜像ID **取值范围**： 字符长度1-256位
+    * imageName  **参数解释**： 镜像名称 **取值范围**： 字符长度1-256位
+    * hostAttr  **参数解释**： 主机属性 **取值范围**： 字符长度1-256位
+    * service  **参数解释**： 业务服务 **取值范围**： 字符长度1-256位
+    * microService  **参数解释**： 微服务 **取值范围**： 字符长度1-256位
+    * sysArch  **参数解释**： 系统CPU架构 **取值范围**： 字符长度1-256位
+    * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度1-256位
+    * osType  **参数解释**： 操作系统类型 **取值范围**： 字符长度1-256位
+    * osName  **参数解释**： 操作系统名称 **取值范围**： 字符长度1-256位
+    * osVersion  **参数解释**： 操作系统版本 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -273,31 +273,31 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainId  租户账号ID
-    * projectId  项目ID
-    * enterpriseProjectId  企业项目ID
-    * regionName  Region名称
-    * vpcId  VPC ID
-    * cloudId  云主机ID
-    * vmName  虚拟机名称
-    * vmUuid  虚拟机UUID，即主机ID
-    * containerId  容器ID
-    * containerStatus  容器状态
-    * podUid  pod uid
-    * podName  pod name
-    * namespace  namespace
-    * clusterId  集群id
-    * clusterName  集群名称
-    * imageId  镜像ID
-    * imageName  镜像名称
-    * hostAttr  主机属性
-    * service  业务服务
-    * microService  微服务
-    * sysArch  系统CPU架构
-    * osBit  操作系统位数
-    * osType  操作系统类型
-    * osName  操作系统名称
-    * osVersion  操作系统版本
+    * domainId  **参数解释**： 租户账号ID **取值范围**： 字符长度1-256位
+    * projectId  **参数解释**： 项目ID **取值范围**： 字符长度1-256位
+    * enterpriseProjectId  **参数解释**： 企业项目ID **取值范围**： 字符长度1-256位
+    * regionName  **参数解释**： Region名称 **取值范围**： 字符长度1-256位
+    * vpcId  **参数解释**： VPC ID **取值范围**： 字符长度1-256位
+    * cloudId  **参数解释**： 云主机ID **取值范围**： 字符长度1-256位
+    * vmName  **参数解释**： 虚拟机名称 **取值范围**： 字符长度1-256位
+    * vmUuid  **参数解释**： 虚拟机UUID，即主机ID **取值范围**： 字符长度1-256位
+    * containerId  **参数解释**： 容器ID **取值范围**： 字符长度1-256位
+    * containerStatus  **参数解释**： 容器状态 **取值范围**： 字符长度1-256位
+    * podUid  **参数解释**： pod uid **取值范围**： 字符长度1-256位
+    * podName  **参数解释**： pod name **取值范围**： 字符长度1-256位
+    * namespace  **参数解释**： namespace **取值范围**： 字符长度1-256位
+    * clusterId  **参数解释**： 集群ID **取值范围**： 字符长度1-256位
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 字符长度1-256位
+    * imageId  **参数解释**： 镜像ID **取值范围**： 字符长度1-256位
+    * imageName  **参数解释**： 镜像名称 **取值范围**： 字符长度1-256位
+    * hostAttr  **参数解释**： 主机属性 **取值范围**： 字符长度1-256位
+    * service  **参数解释**： 业务服务 **取值范围**： 字符长度1-256位
+    * microService  **参数解释**： 微服务 **取值范围**： 字符长度1-256位
+    * sysArch  **参数解释**： 系统CPU架构 **取值范围**： 字符长度1-256位
+    * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度1-256位
+    * osType  **参数解释**： 操作系统类型 **取值范围**： 字符长度1-256位
+    * osName  **参数解释**： 操作系统名称 **取值范围**： 字符长度1-256位
+    * osVersion  **参数解释**： 操作系统版本 **取值范围**： 字符长度1-256位
     *
     * @var string[]
     */
@@ -513,7 +513,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  租户账号ID
+    *  **参数解释**： 租户账号ID **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -525,7 +525,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 租户账号ID
+    * @param string|null $domainId **参数解释**： 租户账号ID **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -537,7 +537,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  **参数解释**： 项目ID **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -549,7 +549,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId **参数解释**： 项目ID **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -561,7 +561,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID
+    *  **参数解释**： 企业项目ID **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -573,7 +573,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -585,7 +585,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionName
-    *  Region名称
+    *  **参数解释**： Region名称 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -597,7 +597,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets regionName
     *
-    * @param string|null $regionName Region名称
+    * @param string|null $regionName **参数解释**： Region名称 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -609,7 +609,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  VPC ID
+    *  **参数解释**： VPC ID **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -621,7 +621,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId VPC ID
+    * @param string|null $vpcId **参数解释**： VPC ID **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -633,7 +633,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudId
-    *  云主机ID
+    *  **参数解释**： 云主机ID **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -645,7 +645,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cloudId
     *
-    * @param string|null $cloudId 云主机ID
+    * @param string|null $cloudId **参数解释**： 云主机ID **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -657,7 +657,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vmName
-    *  虚拟机名称
+    *  **参数解释**： 虚拟机名称 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -669,7 +669,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vmName
     *
-    * @param string|null $vmName 虚拟机名称
+    * @param string|null $vmName **参数解释**： 虚拟机名称 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -681,7 +681,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vmUuid
-    *  虚拟机UUID，即主机ID
+    *  **参数解释**： 虚拟机UUID，即主机ID **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -693,7 +693,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vmUuid
     *
-    * @param string|null $vmUuid 虚拟机UUID，即主机ID
+    * @param string|null $vmUuid **参数解释**： 虚拟机UUID，即主机ID **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -705,7 +705,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerId
-    *  容器ID
+    *  **参数解释**： 容器ID **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -717,7 +717,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerId
     *
-    * @param string|null $containerId 容器ID
+    * @param string|null $containerId **参数解释**： 容器ID **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -729,7 +729,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerStatus
-    *  容器状态
+    *  **参数解释**： 容器状态 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -741,7 +741,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerStatus
     *
-    * @param string|null $containerStatus 容器状态
+    * @param string|null $containerStatus **参数解释**： 容器状态 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -753,7 +753,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets podUid
-    *  pod uid
+    *  **参数解释**： pod uid **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -765,7 +765,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets podUid
     *
-    * @param string|null $podUid pod uid
+    * @param string|null $podUid **参数解释**： pod uid **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -777,7 +777,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets podName
-    *  pod name
+    *  **参数解释**： pod name **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -789,7 +789,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets podName
     *
-    * @param string|null $podName pod name
+    * @param string|null $podName **参数解释**： pod name **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -801,7 +801,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  namespace
+    *  **参数解释**： namespace **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -813,7 +813,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace namespace
+    * @param string|null $namespace **参数解释**： namespace **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -825,7 +825,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群id
+    *  **参数解释**： 集群ID **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -837,7 +837,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群id
+    * @param string|null $clusterId **参数解释**： 集群ID **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -849,7 +849,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterName
-    *  集群名称
+    *  **参数解释**： 集群名称 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -861,7 +861,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterName
     *
-    * @param string|null $clusterName 集群名称
+    * @param string|null $clusterName **参数解释**： 集群名称 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -873,7 +873,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageId
-    *  镜像ID
+    *  **参数解释**： 镜像ID **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -885,7 +885,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageId
     *
-    * @param string|null $imageId 镜像ID
+    * @param string|null $imageId **参数解释**： 镜像ID **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -897,7 +897,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageName
-    *  镜像名称
+    *  **参数解释**： 镜像名称 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -909,7 +909,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageName
     *
-    * @param string|null $imageName 镜像名称
+    * @param string|null $imageName **参数解释**： 镜像名称 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -921,7 +921,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostAttr
-    *  主机属性
+    *  **参数解释**： 主机属性 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -933,7 +933,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostAttr
     *
-    * @param string|null $hostAttr 主机属性
+    * @param string|null $hostAttr **参数解释**： 主机属性 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -945,7 +945,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets service
-    *  业务服务
+    *  **参数解释**： 业务服务 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -957,7 +957,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets service
     *
-    * @param string|null $service 业务服务
+    * @param string|null $service **参数解释**： 业务服务 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -969,7 +969,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets microService
-    *  微服务
+    *  **参数解释**： 微服务 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -981,7 +981,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets microService
     *
-    * @param string|null $microService 微服务
+    * @param string|null $microService **参数解释**： 微服务 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -993,7 +993,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets sysArch
-    *  系统CPU架构
+    *  **参数解释**： 系统CPU架构 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1005,7 +1005,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets sysArch
     *
-    * @param string|null $sysArch 系统CPU架构
+    * @param string|null $sysArch **参数解释**： 系统CPU架构 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1017,7 +1017,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osBit
-    *  操作系统位数
+    *  **参数解释**： 操作系统位数 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1029,7 +1029,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osBit
     *
-    * @param string|null $osBit 操作系统位数
+    * @param string|null $osBit **参数解释**： 操作系统位数 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1041,7 +1041,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  操作系统类型
+    *  **参数解释**： 操作系统类型 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1053,7 +1053,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType 操作系统类型
+    * @param string|null $osType **参数解释**： 操作系统类型 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1065,7 +1065,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osName
-    *  操作系统名称
+    *  **参数解释**： 操作系统名称 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1077,7 +1077,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osName
     *
-    * @param string|null $osName 操作系统名称
+    * @param string|null $osName **参数解释**： 操作系统名称 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -1089,7 +1089,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osVersion
-    *  操作系统版本
+    *  **参数解释**： 操作系统版本 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1101,7 +1101,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osVersion
     *
-    * @param string|null $osVersion 操作系统版本
+    * @param string|null $osVersion **参数解释**： 操作系统版本 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */

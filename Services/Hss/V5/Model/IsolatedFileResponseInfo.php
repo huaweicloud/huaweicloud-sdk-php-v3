@@ -20,20 +20,20 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * fileHash  文件哈希
-    * filePath  文件路径
-    * fileAttr  文件属性
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
-    * privateIp  服务器私有IP
-    * publicIp  弹性公网IP地址
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
-    * eventName  事件名称
+    * eventName  **参数解释**： 事件名称 **取值范围**： 字符长度1-256位
     * agentEventInfo  agentEventInfo
     * antivirusResultInfo  antivirusResultInfo
     *
@@ -60,20 +60,20 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * fileHash  文件哈希
-    * filePath  文件路径
-    * fileAttr  文件属性
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
-    * privateIp  服务器私有IP
-    * publicIp  弹性公网IP地址
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
-    * eventName  事件名称
+    * eventName  **参数解释**： 事件名称 **取值范围**： 字符长度1-256位
     * agentEventInfo  agentEventInfo
     * antivirusResultInfo  antivirusResultInfo
     *
@@ -121,20 +121,20 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * fileHash  文件哈希
-    * filePath  文件路径
-    * fileAttr  文件属性
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
-    * privateIp  服务器私有IP
-    * publicIp  弹性公网IP地址
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
-    * eventName  事件名称
+    * eventName  **参数解释**： 事件名称 **取值范围**： 字符长度1-256位
     * agentEventInfo  agentEventInfo
     * antivirusResultInfo  antivirusResultInfo
     *
@@ -161,20 +161,20 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * fileHash  文件哈希
-    * filePath  文件路径
-    * fileAttr  文件属性
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
-    * privateIp  服务器私有IP
-    * publicIp  弹性公网IP地址
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
-    * eventName  事件名称
+    * eventName  **参数解释**： 事件名称 **取值范围**： 字符长度1-256位
     * agentEventInfo  agentEventInfo
     * antivirusResultInfo  antivirusResultInfo
     *
@@ -201,20 +201,20 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * fileHash  文件哈希
-    * filePath  文件路径
-    * fileAttr  文件属性
+    * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
+    * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
-    * privateIp  服务器私有IP
-    * publicIp  弹性公网IP地址
+    * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
-    * eventName  事件名称
+    * eventName  **参数解释**： 事件名称 **取值范围**： 字符长度1-256位
     * agentEventInfo  agentEventInfo
     * antivirusResultInfo  antivirusResultInfo
     *
@@ -392,8 +392,8 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
         if ($this->container['publicIp'] === null) {
             $invalidProperties[] = "'publicIp' can't be null";
         }
-            if ((mb_strlen($this->container['publicIp']) > 128)) {
-                $invalidProperties[] = "invalid value for 'publicIp', the character length must be smaller than or equal to 128.";
+            if ((mb_strlen($this->container['publicIp']) > 256)) {
+                $invalidProperties[] = "invalid value for 'publicIp', the character length must be smaller than or equal to 256.";
             }
             if ((mb_strlen($this->container['publicIp']) < 1)) {
                 $invalidProperties[] = "invalid value for 'publicIp', the character length must be bigger than or equal to 1.";
@@ -459,7 +459,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    *  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     *
     * @return string
     */
@@ -471,7 +471,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string $osType 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * @param string $osType **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     *
     * @return $this
     */
@@ -483,7 +483,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    *  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     *
     * @return string
     */
@@ -495,7 +495,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string $hostId **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+    * @param string $hostId **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     *
     * @return $this
     */
@@ -531,7 +531,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileHash
-    *  文件哈希
+    *  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     *
     * @return string
     */
@@ -543,7 +543,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileHash
     *
-    * @param string $fileHash 文件哈希
+    * @param string $fileHash **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -555,7 +555,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets filePath
-    *  文件路径
+    *  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     *
     * @return string
     */
@@ -567,7 +567,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets filePath
     *
-    * @param string $filePath 文件路径
+    * @param string $filePath **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -579,7 +579,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileAttr
-    *  文件属性
+    *  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     *
     * @return string
     */
@@ -591,7 +591,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileAttr
     *
-    * @param string $fileAttr 文件属性
+    * @param string $fileAttr **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -627,7 +627,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  服务器私有IP
+    *  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     *
     * @return string
     */
@@ -639,7 +639,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string $privateIp 服务器私有IP
+    * @param string $privateIp **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     *
     * @return $this
     */
@@ -651,7 +651,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  弹性公网IP地址
+    *  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     *
     * @return string
     */
@@ -663,7 +663,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string $publicIp 弹性公网IP地址
+    * @param string $publicIp **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -771,7 +771,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventName
-    *  事件名称
+    *  **参数解释**： 事件名称 **取值范围**： 字符长度1-256位
     *
     * @return string
     */
@@ -783,7 +783,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets eventName
     *
-    * @param string $eventName 事件名称
+    * @param string $eventName **参数解释**： 事件名称 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */

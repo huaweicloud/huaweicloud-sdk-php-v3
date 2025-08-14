@@ -28,6 +28,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     * eventLevel  事件级别。  枚举类型：Critical, Major, Minor, Info
     * eventUser  事件用户。  支持字母 数字_ -/空格 ，最大长度64。
     * eventType  事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
+    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
     * dimensions  一个或者多个资源维度。
     *
     * @var string[]
@@ -41,6 +42,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
             'eventLevel' => 'string',
             'eventUser' => 'string',
             'eventType' => 'string',
+            'subEventType' => 'string',
             'dimensions' => '\HuaweiCloud\SDK\Ces\V1\Model\MetricsDimension[]'
     ];
 
@@ -54,6 +56,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     * eventLevel  事件级别。  枚举类型：Critical, Major, Minor, Info
     * eventUser  事件用户。  支持字母 数字_ -/空格 ，最大长度64。
     * eventType  事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
+    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
     * dimensions  一个或者多个资源维度。
     *
     * @var string[]
@@ -67,6 +70,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
         'eventLevel' => null,
         'eventUser' => null,
         'eventType' => null,
+        'subEventType' => null,
         'dimensions' => null
     ];
 
@@ -101,6 +105,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     * eventLevel  事件级别。  枚举类型：Critical, Major, Minor, Info
     * eventUser  事件用户。  支持字母 数字_ -/空格 ，最大长度64。
     * eventType  事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
+    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
     * dimensions  一个或者多个资源维度。
     *
     * @var string[]
@@ -114,6 +119,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
             'eventLevel' => 'event_level',
             'eventUser' => 'event_user',
             'eventType' => 'event_type',
+            'subEventType' => 'sub_event_type',
             'dimensions' => 'dimensions'
     ];
 
@@ -127,6 +133,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     * eventLevel  事件级别。  枚举类型：Critical, Major, Minor, Info
     * eventUser  事件用户。  支持字母 数字_ -/空格 ，最大长度64。
     * eventType  事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
+    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
     * dimensions  一个或者多个资源维度。
     *
     * @var string[]
@@ -140,6 +147,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
             'eventLevel' => 'setEventLevel',
             'eventUser' => 'setEventUser',
             'eventType' => 'setEventType',
+            'subEventType' => 'setSubEventType',
             'dimensions' => 'setDimensions'
     ];
 
@@ -153,6 +161,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     * eventLevel  事件级别。  枚举类型：Critical, Major, Minor, Info
     * eventUser  事件用户。  支持字母 数字_ -/空格 ，最大长度64。
     * eventType  事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
+    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
     * dimensions  一个或者多个资源维度。
     *
     * @var string[]
@@ -166,6 +175,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
             'eventLevel' => 'getEventLevel',
             'eventUser' => 'getEventUser',
             'eventType' => 'getEventType',
+            'subEventType' => 'getSubEventType',
             'dimensions' => 'getDimensions'
     ];
 
@@ -216,6 +226,9 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     const EVENT_LEVEL_MAJOR = 'Major';
     const EVENT_LEVEL_MINOR = 'Minor';
     const EVENT_LEVEL_INFO = 'Info';
+    const SUB_EVENT_TYPE_SUB_EVENT_OPS = 'SUB_EVENT.OPS';
+    const SUB_EVENT_TYPE_SUB_EVENT_PLAN = 'SUB_EVENT.PLAN';
+    const SUB_EVENT_TYPE_SUB_EVENT_CUSTOM = 'SUB_EVENT.CUSTOM';
     
 
     /**
@@ -247,6 +260,20 @@ class EventItemDetail implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSubEventTypeAllowableValues()
+    {
+        return [
+            self::SUB_EVENT_TYPE_SUB_EVENT_OPS,
+            self::SUB_EVENT_TYPE_SUB_EVENT_PLAN,
+            self::SUB_EVENT_TYPE_SUB_EVENT_CUSTOM,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -271,6 +298,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
         $this->container['eventLevel'] = isset($data['eventLevel']) ? $data['eventLevel'] : null;
         $this->container['eventUser'] = isset($data['eventUser']) ? $data['eventUser'] : null;
         $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
+        $this->container['subEventType'] = isset($data['subEventType']) ? $data['subEventType'] : null;
         $this->container['dimensions'] = isset($data['dimensions']) ? $data['dimensions'] : null;
     }
 
@@ -325,6 +353,14 @@ class EventItemDetail implements ModelInterface, ArrayAccess
             if (!is_null($this->container['eventUser']) && !preg_match("/([a-z]|[A-Z]|_|-|\/){0,64}/", $this->container['eventUser'])) {
                 $invalidProperties[] = "invalid value for 'eventUser', must be conform to the pattern /([a-z]|[A-Z]|_|-|\/){0,64}/.";
             }
+            $allowedValues = $this->getSubEventTypeAllowableValues();
+                if (!is_null($this->container['subEventType']) && !in_array($this->container['subEventType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'subEventType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -528,6 +564,30 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     public function setEventType($eventType)
     {
         $this->container['eventType'] = $eventType;
+        return $this;
+    }
+
+    /**
+    * Gets subEventType
+    *  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
+    *
+    * @return string|null
+    */
+    public function getSubEventType()
+    {
+        return $this->container['subEventType'];
+    }
+
+    /**
+    * Sets subEventType
+    *
+    * @param string|null $subEventType 事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
+    *
+    * @return $this
+    */
+    public function setSubEventType($subEventType)
+    {
+        $this->container['subEventType'] = $subEventType;
         return $this;
     }
 

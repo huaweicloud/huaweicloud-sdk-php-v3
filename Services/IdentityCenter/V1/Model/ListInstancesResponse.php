@@ -21,7 +21,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instances  IAM身份中心实例信息列表
+    * instances  IAM身份中心实例信息列表。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instances  IAM身份中心实例信息列表
+    * instances  IAM身份中心实例信息列表。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instances  IAM身份中心实例信息列表
+    * instances  IAM身份中心实例信息列表。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instances  IAM身份中心实例信息列表
+    * instances  IAM身份中心实例信息列表。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instances  IAM身份中心实例信息列表
+    * instances  IAM身份中心实例信息列表。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instances
-    *  IAM身份中心实例信息列表
+    *  IAM身份中心实例信息列表。
     *
     * @return \HuaweiCloud\SDK\IdentityCenter\V1\Model\InstanceMetadataEntryDto[]|null
     */
@@ -198,7 +198,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param \HuaweiCloud\SDK\IdentityCenter\V1\Model\InstanceMetadataEntryDto[]|null $instances IAM身份中心实例信息列表
+    * @param \HuaweiCloud\SDK\IdentityCenter\V1\Model\InstanceMetadataEntryDto[]|null $instances IAM身份中心实例信息列表。
     *
     * @return $this
     */

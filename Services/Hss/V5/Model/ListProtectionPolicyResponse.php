@@ -21,8 +21,8 @@ class ListProtectionPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  策略总数
-    * dataList  查询防护策略列表
+    * totalNum  **参数解释**: 策略总数 **取值范围**: 取值0-2097152
+    * dataList  **参数解释**: 查询防护策略列表 **取值范围**: 取值0-2097152
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListProtectionPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  策略总数
-    * dataList  查询防护策略列表
+    * totalNum  **参数解释**: 策略总数 **取值范围**: 取值0-2097152
+    * dataList  **参数解释**: 查询防护策略列表 **取值范围**: 取值0-2097152
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListProtectionPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  策略总数
-    * dataList  查询防护策略列表
+    * totalNum  **参数解释**: 策略总数 **取值范围**: 取值0-2097152
+    * dataList  **参数解释**: 查询防护策略列表 **取值范围**: 取值0-2097152
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListProtectionPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  策略总数
-    * dataList  查询防护策略列表
+    * totalNum  **参数解释**: 策略总数 **取值范围**: 取值0-2097152
+    * dataList  **参数解释**: 查询防护策略列表 **取值范围**: 取值0-2097152
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListProtectionPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  策略总数
-    * dataList  查询防护策略列表
+    * totalNum  **参数解释**: 策略总数 **取值范围**: 取值0-2097152
+    * dataList  **参数解释**: 查询防护策略列表 **取值范围**: 取值0-2097152
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListProtectionPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  策略总数
+    *  **参数解释**: 策略总数 **取值范围**: 取值0-2097152
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListProtectionPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 策略总数
+    * @param int|null $totalNum **参数解释**: 策略总数 **取值范围**: 取值0-2097152
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListProtectionPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  查询防护策略列表
+    *  **参数解释**: 查询防护策略列表 **取值范围**: 取值0-2097152
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\ProtectionPolicyInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListProtectionPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\ProtectionPolicyInfo[]|null $dataList 查询防护策略列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\ProtectionPolicyInfo[]|null $dataList **参数解释**: 查询防护策略列表 **取值范围**: 取值0-2097152
     *
     * @return $this
     */

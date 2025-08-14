@@ -25,7 +25,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
     * offset  偏移量：指定返回记录的开始位置
     * templateName  模板名称
     * templateType  模板类型
-    * targetKind  策略模板应用资源类型，多个资源类型通过分号份隔连接
+    * targetKind  策略模板应用资源类型，多个资源类型通过分号分隔连接
     * tag  标签
     * level  推荐等级
     *
@@ -49,7 +49,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
     * offset  偏移量：指定返回记录的开始位置
     * templateName  模板名称
     * templateType  模板类型
-    * targetKind  策略模板应用资源类型，多个资源类型通过分号份隔连接
+    * targetKind  策略模板应用资源类型，多个资源类型通过分号分隔连接
     * tag  标签
     * level  推荐等级
     *
@@ -94,7 +94,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
     * offset  偏移量：指定返回记录的开始位置
     * templateName  模板名称
     * templateType  模板类型
-    * targetKind  策略模板应用资源类型，多个资源类型通过分号份隔连接
+    * targetKind  策略模板应用资源类型，多个资源类型通过分号分隔连接
     * tag  标签
     * level  推荐等级
     *
@@ -118,7 +118,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
     * offset  偏移量：指定返回记录的开始位置
     * templateName  模板名称
     * templateType  模板类型
-    * targetKind  策略模板应用资源类型，多个资源类型通过分号份隔连接
+    * targetKind  策略模板应用资源类型，多个资源类型通过分号分隔连接
     * tag  标签
     * level  推荐等级
     *
@@ -142,7 +142,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
     * offset  偏移量：指定返回记录的开始位置
     * templateName  模板名称
     * templateType  模板类型
-    * targetKind  策略模板应用资源类型，多个资源类型通过分号份隔连接
+    * targetKind  策略模板应用资源类型，多个资源类型通过分号分隔连接
     * tag  标签
     * level  推荐等级
     *
@@ -443,7 +443,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
 
     /**
     * Gets targetKind
-    *  策略模板应用资源类型，多个资源类型通过分号份隔连接
+    *  策略模板应用资源类型，多个资源类型通过分号分隔连接
     *
     * @return string|null
     */
@@ -455,7 +455,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
     /**
     * Sets targetKind
     *
-    * @param string|null $targetKind 策略模板应用资源类型，多个资源类型通过分号份隔连接
+    * @param string|null $targetKind 策略模板应用资源类型，多个资源类型通过分号分隔连接
     *
     * @return $this
     */

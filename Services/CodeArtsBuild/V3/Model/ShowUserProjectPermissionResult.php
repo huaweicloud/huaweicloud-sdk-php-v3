@@ -24,8 +24,16 @@ class ShowUserProjectPermissionResult implements ModelInterface, ArrayAccess
     * createPermission  用户是否有创建权限
     * modifyPermission  用户是否有修改权限
     * groupPermission  用户是否有分类权限
+    * deletePermission  用户是否有删除权限。
+    * viewPermission  用户是否有查看权限。
+    * executePermission  用户是否有执行权限。
+    * copyPermission  用户是否有克隆权限。
+    * forbiddenPermission  用户是否有禁用权限。
+    * managerPermission  用户是否有管理权限。
     * roleId  角色ID
     * roleName  角色名
+    * roleIds  角色编码集合。
+    * roleNames  角色名称集合。
     *
     * @var string[]
     */
@@ -34,8 +42,16 @@ class ShowUserProjectPermissionResult implements ModelInterface, ArrayAccess
             'createPermission' => 'bool',
             'modifyPermission' => 'bool',
             'groupPermission' => 'bool',
+            'deletePermission' => 'bool',
+            'viewPermission' => 'bool',
+            'executePermission' => 'bool',
+            'copyPermission' => 'bool',
+            'forbiddenPermission' => 'bool',
+            'managerPermission' => 'bool',
             'roleId' => 'string',
-            'roleName' => 'string'
+            'roleName' => 'string',
+            'roleIds' => 'string[]',
+            'roleNames' => 'string[]'
     ];
 
     /**
@@ -44,8 +60,16 @@ class ShowUserProjectPermissionResult implements ModelInterface, ArrayAccess
     * createPermission  用户是否有创建权限
     * modifyPermission  用户是否有修改权限
     * groupPermission  用户是否有分类权限
+    * deletePermission  用户是否有删除权限。
+    * viewPermission  用户是否有查看权限。
+    * executePermission  用户是否有执行权限。
+    * copyPermission  用户是否有克隆权限。
+    * forbiddenPermission  用户是否有禁用权限。
+    * managerPermission  用户是否有管理权限。
     * roleId  角色ID
     * roleName  角色名
+    * roleIds  角色编码集合。
+    * roleNames  角色名称集合。
     *
     * @var string[]
     */
@@ -54,8 +78,16 @@ class ShowUserProjectPermissionResult implements ModelInterface, ArrayAccess
         'createPermission' => null,
         'modifyPermission' => null,
         'groupPermission' => null,
+        'deletePermission' => null,
+        'viewPermission' => null,
+        'executePermission' => null,
+        'copyPermission' => null,
+        'forbiddenPermission' => null,
+        'managerPermission' => null,
         'roleId' => null,
-        'roleName' => null
+        'roleName' => null,
+        'roleIds' => null,
+        'roleNames' => null
     ];
 
     /**
@@ -85,8 +117,16 @@ class ShowUserProjectPermissionResult implements ModelInterface, ArrayAccess
     * createPermission  用户是否有创建权限
     * modifyPermission  用户是否有修改权限
     * groupPermission  用户是否有分类权限
+    * deletePermission  用户是否有删除权限。
+    * viewPermission  用户是否有查看权限。
+    * executePermission  用户是否有执行权限。
+    * copyPermission  用户是否有克隆权限。
+    * forbiddenPermission  用户是否有禁用权限。
+    * managerPermission  用户是否有管理权限。
     * roleId  角色ID
     * roleName  角色名
+    * roleIds  角色编码集合。
+    * roleNames  角色名称集合。
     *
     * @var string[]
     */
@@ -95,8 +135,16 @@ class ShowUserProjectPermissionResult implements ModelInterface, ArrayAccess
             'createPermission' => 'create_permission',
             'modifyPermission' => 'modify_permission',
             'groupPermission' => 'group_permission',
+            'deletePermission' => 'delete_permission',
+            'viewPermission' => 'view_permission',
+            'executePermission' => 'execute_permission',
+            'copyPermission' => 'copy_permission',
+            'forbiddenPermission' => 'forbidden_permission',
+            'managerPermission' => 'manager_permission',
             'roleId' => 'role_id',
-            'roleName' => 'role_name'
+            'roleName' => 'role_name',
+            'roleIds' => 'role_ids',
+            'roleNames' => 'role_names'
     ];
 
     /**
@@ -105,8 +153,16 @@ class ShowUserProjectPermissionResult implements ModelInterface, ArrayAccess
     * createPermission  用户是否有创建权限
     * modifyPermission  用户是否有修改权限
     * groupPermission  用户是否有分类权限
+    * deletePermission  用户是否有删除权限。
+    * viewPermission  用户是否有查看权限。
+    * executePermission  用户是否有执行权限。
+    * copyPermission  用户是否有克隆权限。
+    * forbiddenPermission  用户是否有禁用权限。
+    * managerPermission  用户是否有管理权限。
     * roleId  角色ID
     * roleName  角色名
+    * roleIds  角色编码集合。
+    * roleNames  角色名称集合。
     *
     * @var string[]
     */
@@ -115,8 +171,16 @@ class ShowUserProjectPermissionResult implements ModelInterface, ArrayAccess
             'createPermission' => 'setCreatePermission',
             'modifyPermission' => 'setModifyPermission',
             'groupPermission' => 'setGroupPermission',
+            'deletePermission' => 'setDeletePermission',
+            'viewPermission' => 'setViewPermission',
+            'executePermission' => 'setExecutePermission',
+            'copyPermission' => 'setCopyPermission',
+            'forbiddenPermission' => 'setForbiddenPermission',
+            'managerPermission' => 'setManagerPermission',
             'roleId' => 'setRoleId',
-            'roleName' => 'setRoleName'
+            'roleName' => 'setRoleName',
+            'roleIds' => 'setRoleIds',
+            'roleNames' => 'setRoleNames'
     ];
 
     /**
@@ -125,8 +189,16 @@ class ShowUserProjectPermissionResult implements ModelInterface, ArrayAccess
     * createPermission  用户是否有创建权限
     * modifyPermission  用户是否有修改权限
     * groupPermission  用户是否有分类权限
+    * deletePermission  用户是否有删除权限。
+    * viewPermission  用户是否有查看权限。
+    * executePermission  用户是否有执行权限。
+    * copyPermission  用户是否有克隆权限。
+    * forbiddenPermission  用户是否有禁用权限。
+    * managerPermission  用户是否有管理权限。
     * roleId  角色ID
     * roleName  角色名
+    * roleIds  角色编码集合。
+    * roleNames  角色名称集合。
     *
     * @var string[]
     */
@@ -135,8 +207,16 @@ class ShowUserProjectPermissionResult implements ModelInterface, ArrayAccess
             'createPermission' => 'getCreatePermission',
             'modifyPermission' => 'getModifyPermission',
             'groupPermission' => 'getGroupPermission',
+            'deletePermission' => 'getDeletePermission',
+            'viewPermission' => 'getViewPermission',
+            'executePermission' => 'getExecutePermission',
+            'copyPermission' => 'getCopyPermission',
+            'forbiddenPermission' => 'getForbiddenPermission',
+            'managerPermission' => 'getManagerPermission',
             'roleId' => 'getRoleId',
-            'roleName' => 'getRoleName'
+            'roleName' => 'getRoleName',
+            'roleIds' => 'getRoleIds',
+            'roleNames' => 'getRoleNames'
     ];
 
     /**
@@ -201,8 +281,16 @@ class ShowUserProjectPermissionResult implements ModelInterface, ArrayAccess
         $this->container['createPermission'] = isset($data['createPermission']) ? $data['createPermission'] : null;
         $this->container['modifyPermission'] = isset($data['modifyPermission']) ? $data['modifyPermission'] : null;
         $this->container['groupPermission'] = isset($data['groupPermission']) ? $data['groupPermission'] : null;
+        $this->container['deletePermission'] = isset($data['deletePermission']) ? $data['deletePermission'] : null;
+        $this->container['viewPermission'] = isset($data['viewPermission']) ? $data['viewPermission'] : null;
+        $this->container['executePermission'] = isset($data['executePermission']) ? $data['executePermission'] : null;
+        $this->container['copyPermission'] = isset($data['copyPermission']) ? $data['copyPermission'] : null;
+        $this->container['forbiddenPermission'] = isset($data['forbiddenPermission']) ? $data['forbiddenPermission'] : null;
+        $this->container['managerPermission'] = isset($data['managerPermission']) ? $data['managerPermission'] : null;
         $this->container['roleId'] = isset($data['roleId']) ? $data['roleId'] : null;
         $this->container['roleName'] = isset($data['roleName']) ? $data['roleName'] : null;
+        $this->container['roleIds'] = isset($data['roleIds']) ? $data['roleIds'] : null;
+        $this->container['roleNames'] = isset($data['roleNames']) ? $data['roleNames'] : null;
     }
 
     /**
@@ -324,6 +412,150 @@ class ShowUserProjectPermissionResult implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets deletePermission
+    *  用户是否有删除权限。
+    *
+    * @return bool|null
+    */
+    public function getDeletePermission()
+    {
+        return $this->container['deletePermission'];
+    }
+
+    /**
+    * Sets deletePermission
+    *
+    * @param bool|null $deletePermission 用户是否有删除权限。
+    *
+    * @return $this
+    */
+    public function setDeletePermission($deletePermission)
+    {
+        $this->container['deletePermission'] = $deletePermission;
+        return $this;
+    }
+
+    /**
+    * Gets viewPermission
+    *  用户是否有查看权限。
+    *
+    * @return bool|null
+    */
+    public function getViewPermission()
+    {
+        return $this->container['viewPermission'];
+    }
+
+    /**
+    * Sets viewPermission
+    *
+    * @param bool|null $viewPermission 用户是否有查看权限。
+    *
+    * @return $this
+    */
+    public function setViewPermission($viewPermission)
+    {
+        $this->container['viewPermission'] = $viewPermission;
+        return $this;
+    }
+
+    /**
+    * Gets executePermission
+    *  用户是否有执行权限。
+    *
+    * @return bool|null
+    */
+    public function getExecutePermission()
+    {
+        return $this->container['executePermission'];
+    }
+
+    /**
+    * Sets executePermission
+    *
+    * @param bool|null $executePermission 用户是否有执行权限。
+    *
+    * @return $this
+    */
+    public function setExecutePermission($executePermission)
+    {
+        $this->container['executePermission'] = $executePermission;
+        return $this;
+    }
+
+    /**
+    * Gets copyPermission
+    *  用户是否有克隆权限。
+    *
+    * @return bool|null
+    */
+    public function getCopyPermission()
+    {
+        return $this->container['copyPermission'];
+    }
+
+    /**
+    * Sets copyPermission
+    *
+    * @param bool|null $copyPermission 用户是否有克隆权限。
+    *
+    * @return $this
+    */
+    public function setCopyPermission($copyPermission)
+    {
+        $this->container['copyPermission'] = $copyPermission;
+        return $this;
+    }
+
+    /**
+    * Gets forbiddenPermission
+    *  用户是否有禁用权限。
+    *
+    * @return bool|null
+    */
+    public function getForbiddenPermission()
+    {
+        return $this->container['forbiddenPermission'];
+    }
+
+    /**
+    * Sets forbiddenPermission
+    *
+    * @param bool|null $forbiddenPermission 用户是否有禁用权限。
+    *
+    * @return $this
+    */
+    public function setForbiddenPermission($forbiddenPermission)
+    {
+        $this->container['forbiddenPermission'] = $forbiddenPermission;
+        return $this;
+    }
+
+    /**
+    * Gets managerPermission
+    *  用户是否有管理权限。
+    *
+    * @return bool|null
+    */
+    public function getManagerPermission()
+    {
+        return $this->container['managerPermission'];
+    }
+
+    /**
+    * Sets managerPermission
+    *
+    * @param bool|null $managerPermission 用户是否有管理权限。
+    *
+    * @return $this
+    */
+    public function setManagerPermission($managerPermission)
+    {
+        $this->container['managerPermission'] = $managerPermission;
+        return $this;
+    }
+
+    /**
     * Gets roleId
     *  角色ID
     *
@@ -368,6 +600,54 @@ class ShowUserProjectPermissionResult implements ModelInterface, ArrayAccess
     public function setRoleName($roleName)
     {
         $this->container['roleName'] = $roleName;
+        return $this;
+    }
+
+    /**
+    * Gets roleIds
+    *  角色编码集合。
+    *
+    * @return string[]|null
+    */
+    public function getRoleIds()
+    {
+        return $this->container['roleIds'];
+    }
+
+    /**
+    * Sets roleIds
+    *
+    * @param string[]|null $roleIds 角色编码集合。
+    *
+    * @return $this
+    */
+    public function setRoleIds($roleIds)
+    {
+        $this->container['roleIds'] = $roleIds;
+        return $this;
+    }
+
+    /**
+    * Gets roleNames
+    *  角色名称集合。
+    *
+    * @return string[]|null
+    */
+    public function getRoleNames()
+    {
+        return $this->container['roleNames'];
+    }
+
+    /**
+    * Sets roleNames
+    *
+    * @param string[]|null $roleNames 角色名称集合。
+    *
+    * @return $this
+    */
+    public function setRoleNames($roleNames)
+    {
+        $this->container['roleNames'] = $roleNames;
         return $this;
     }
 

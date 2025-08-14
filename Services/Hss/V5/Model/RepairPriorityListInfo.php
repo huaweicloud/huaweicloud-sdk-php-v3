@@ -20,8 +20,8 @@ class RepairPriorityListInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * repairPriority  修复优先级 Critical 紧急 High 高 Medium 中 Low 低
-    * hostNum  当前修复优先级对应的主机数量
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低
+    * hostNum  **参数解释**: 当前修复优先级对应的主机数量 **取值范围**: 取值0-2147483647
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class RepairPriorityListInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * repairPriority  修复优先级 Critical 紧急 High 高 Medium 中 Low 低
-    * hostNum  当前修复优先级对应的主机数量
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低
+    * hostNum  **参数解释**: 当前修复优先级对应的主机数量 **取值范围**: 取值0-2147483647
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class RepairPriorityListInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * repairPriority  修复优先级 Critical 紧急 High 高 Medium 中 Low 低
-    * hostNum  当前修复优先级对应的主机数量
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低
+    * hostNum  **参数解释**: 当前修复优先级对应的主机数量 **取值范围**: 取值0-2147483647
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class RepairPriorityListInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * repairPriority  修复优先级 Critical 紧急 High 高 Medium 中 Low 低
-    * hostNum  当前修复优先级对应的主机数量
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低
+    * hostNum  **参数解释**: 当前修复优先级对应的主机数量 **取值范围**: 取值0-2147483647
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class RepairPriorityListInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * repairPriority  修复优先级 Critical 紧急 High 高 Medium 中 Low 低
-    * hostNum  当前修复优先级对应的主机数量
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低
+    * hostNum  **参数解释**: 当前修复优先级对应的主机数量 **取值范围**: 取值0-2147483647
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class RepairPriorityListInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets repairPriority
-    *  修复优先级 Critical 紧急 High 高 Medium 中 Low 低
+    *  **参数解释**: 修复优先级 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class RepairPriorityListInfo implements ModelInterface, ArrayAccess
     /**
     * Sets repairPriority
     *
-    * @param string|null $repairPriority 修复优先级 Critical 紧急 High 高 Medium 中 Low 低
+    * @param string|null $repairPriority **参数解释**: 修复优先级 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class RepairPriorityListInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostNum
-    *  当前修复优先级对应的主机数量
+    *  **参数解释**: 当前修复优先级对应的主机数量 **取值范围**: 取值0-2147483647
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class RepairPriorityListInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostNum
     *
-    * @param int|null $hostNum 当前修复优先级对应的主机数量
+    * @param int|null $hostNum **参数解释**: 当前修复优先级对应的主机数量 **取值范围**: 取值0-2147483647
     *
     * @return $this
     */

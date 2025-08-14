@@ -21,7 +21,7 @@ class NameDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * familyName  用户的姓氏
-    * formatted  包含要显示的名称的格式化版本的字符串
+    * formatted  包含要显示的名称的格式化版本的字符串display.
     * givenName  用户的名字
     * honorificPrefix  用户的尊称前缀
     * honorificSuffix  用户的尊称后缀
@@ -41,7 +41,7 @@ class NameDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * familyName  用户的姓氏
-    * formatted  包含要显示的名称的格式化版本的字符串
+    * formatted  包含要显示的名称的格式化版本的字符串display.
     * givenName  用户的名字
     * honorificPrefix  用户的尊称前缀
     * honorificSuffix  用户的尊称后缀
@@ -82,7 +82,7 @@ class NameDto implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * familyName  用户的姓氏
-    * formatted  包含要显示的名称的格式化版本的字符串
+    * formatted  包含要显示的名称的格式化版本的字符串display.
     * givenName  用户的名字
     * honorificPrefix  用户的尊称前缀
     * honorificSuffix  用户的尊称后缀
@@ -102,7 +102,7 @@ class NameDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * familyName  用户的姓氏
-    * formatted  包含要显示的名称的格式化版本的字符串
+    * formatted  包含要显示的名称的格式化版本的字符串display.
     * givenName  用户的名字
     * honorificPrefix  用户的尊称前缀
     * honorificSuffix  用户的尊称后缀
@@ -122,7 +122,7 @@ class NameDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * familyName  用户的姓氏
-    * formatted  包含要显示的名称的格式化版本的字符串
+    * formatted  包含要显示的名称的格式化版本的字符串display.
     * givenName  用户的名字
     * honorificPrefix  用户的尊称前缀
     * honorificSuffix  用户的尊称后缀
@@ -313,7 +313,7 @@ class NameDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets formatted
-    *  包含要显示的名称的格式化版本的字符串
+    *  包含要显示的名称的格式化版本的字符串display.
     *
     * @return string|null
     */
@@ -325,7 +325,7 @@ class NameDto implements ModelInterface, ArrayAccess
     /**
     * Sets formatted
     *
-    * @param string|null $formatted 包含要显示的名称的格式化版本的字符串
+    * @param string|null $formatted 包含要显示的名称的格式化版本的字符串display.
     *
     * @return $this
     */

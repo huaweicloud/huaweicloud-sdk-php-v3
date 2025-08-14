@@ -22,7 +22,7 @@ class ShowTemplateVersionMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * templateId  模板的唯一ID，由模板服务随机生成
-    * templateName  用户希望创建的模板名称
+    * templateName  模板（Template）的名字。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * versionDescription  模板版本的描述。可用于客户识别自己的模板版本
     * createTime  版本创建时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     *
@@ -38,7 +38,7 @@ class ShowTemplateVersionMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * templateId  模板的唯一ID，由模板服务随机生成
-    * templateName  用户希望创建的模板名称
+    * templateName  模板（Template）的名字。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * versionDescription  模板版本的描述。可用于客户识别自己的模板版本
     * createTime  版本创建时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     *
@@ -75,7 +75,7 @@ class ShowTemplateVersionMetadataResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * templateId  模板的唯一ID，由模板服务随机生成
-    * templateName  用户希望创建的模板名称
+    * templateName  模板（Template）的名字。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * versionDescription  模板版本的描述。可用于客户识别自己的模板版本
     * createTime  版本创建时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     *
@@ -91,7 +91,7 @@ class ShowTemplateVersionMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * templateId  模板的唯一ID，由模板服务随机生成
-    * templateName  用户希望创建的模板名称
+    * templateName  模板（Template）的名字。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * versionDescription  模板版本的描述。可用于客户识别自己的模板版本
     * createTime  版本创建时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     *
@@ -107,7 +107,7 @@ class ShowTemplateVersionMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * templateId  模板的唯一ID，由模板服务随机生成
-    * templateName  用户希望创建的模板名称
+    * templateName  模板（Template）的名字。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * versionDescription  模板版本的描述。可用于客户识别自己的模板版本
     * createTime  版本创建时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     *
@@ -265,7 +265,7 @@ class ShowTemplateVersionMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateName
-    *  用户希望创建的模板名称
+    *  模板（Template）的名字。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     *
     * @return string
     */
@@ -277,7 +277,7 @@ class ShowTemplateVersionMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets templateName
     *
-    * @param string $templateName 用户希望创建的模板名称
+    * @param string $templateName 模板（Template）的名字。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     *
     * @return $this
     */

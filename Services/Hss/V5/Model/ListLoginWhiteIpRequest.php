@@ -21,7 +21,7 @@ class ListLoginWhiteIpRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * whiteIp  白名单IP/IP网段,IP网段由IP地址和掩码组成,以'/'连接。
+    * whiteIp  白名单IP/IP网段，IP网段由IP地址和掩码组成，以‘/’连接。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ListLoginWhiteIpRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * whiteIp  白名单IP/IP网段,IP网段由IP地址和掩码组成,以'/'连接。
+    * whiteIp  白名单IP/IP网段，IP网段由IP地址和掩码组成，以‘/’连接。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ListLoginWhiteIpRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * whiteIp  白名单IP/IP网段,IP网段由IP地址和掩码组成,以'/'连接。
+    * whiteIp  白名单IP/IP网段，IP网段由IP地址和掩码组成，以‘/’连接。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ListLoginWhiteIpRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * whiteIp  白名单IP/IP网段,IP网段由IP地址和掩码组成,以'/'连接。
+    * whiteIp  白名单IP/IP网段，IP网段由IP地址和掩码组成，以‘/’连接。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ListLoginWhiteIpRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * whiteIp  白名单IP/IP网段,IP网段由IP地址和掩码组成,以'/'连接。
+    * whiteIp  白名单IP/IP网段，IP网段由IP地址和掩码组成，以‘/’连接。
     *
     * @var string[]
     */
@@ -224,7 +224,7 @@ class ListLoginWhiteIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets whiteIp
-    *  白名单IP/IP网段,IP网段由IP地址和掩码组成,以'/'连接。
+    *  白名单IP/IP网段，IP网段由IP地址和掩码组成，以‘/’连接。
     *
     * @return string|null
     */
@@ -236,7 +236,7 @@ class ListLoginWhiteIpRequest implements ModelInterface, ArrayAccess
     /**
     * Sets whiteIp
     *
-    * @param string|null $whiteIp 白名单IP/IP网段,IP网段由IP地址和掩码组成,以'/'连接。
+    * @param string|null $whiteIp 白名单IP/IP网段，IP网段由IP地址和掩码组成，以‘/’连接。
     *
     * @return $this
     */

@@ -22,24 +22,28 @@ class KeKInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * keyId  密钥ID。
     * domainId  用户域ID。
+    * regionId  region ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'keyId' => 'string',
-            'domainId' => 'string'
+            'domainId' => 'string',
+            'regionId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * keyId  密钥ID。
     * domainId  用户域ID。
+    * regionId  region ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'keyId' => null,
-        'domainId' => null
+        'domainId' => null,
+        'regionId' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class KeKInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * keyId  密钥ID。
     * domainId  用户域ID。
+    * regionId  region ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'keyId' => 'key_id',
-            'domainId' => 'domain_id'
+            'domainId' => 'domain_id',
+            'regionId' => 'region_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * keyId  密钥ID。
     * domainId  用户域ID。
+    * regionId  region ID。
     *
     * @var string[]
     */
     protected static $setters = [
             'keyId' => 'setKeyId',
-            'domainId' => 'setDomainId'
+            'domainId' => 'setDomainId',
+            'regionId' => 'setRegionId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * keyId  密钥ID。
     * domainId  用户域ID。
+    * regionId  region ID。
     *
     * @var string[]
     */
     protected static $getters = [
             'keyId' => 'getKeyId',
-            'domainId' => 'getDomainId'
+            'domainId' => 'getDomainId',
+            'regionId' => 'getRegionId'
     ];
 
     /**
@@ -159,6 +169,7 @@ class KeKInfo implements ModelInterface, ArrayAccess
     {
         $this->container['keyId'] = isset($data['keyId']) ? $data['keyId'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
+        $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
     }
 
     /**
@@ -243,6 +254,30 @@ class KeKInfo implements ModelInterface, ArrayAccess
     public function setDomainId($domainId)
     {
         $this->container['domainId'] = $domainId;
+        return $this;
+    }
+
+    /**
+    * Gets regionId
+    *  region ID。
+    *
+    * @return string|null
+    */
+    public function getRegionId()
+    {
+        return $this->container['regionId'];
+    }
+
+    /**
+    * Sets regionId
+    *
+    * @param string|null $regionId region ID。
+    *
+    * @return $this
+    */
+    public function setRegionId($regionId)
+    {
+        $this->container['regionId'] = $regionId;
         return $this;
     }
 

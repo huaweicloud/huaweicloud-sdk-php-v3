@@ -23,7 +23,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
     * vaultId  存储库ID
     * vaultName  存储库名称
     * vaultSize  存储库总容量，单位GB
-    * vaultUsed  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G,则已使用容量为60G。
+    * vaultUsed  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G，则已使用容量为60G。
     * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小，例如绑定了1台主机，主机大小40G，则已分配容量为40G。
     * vaultChargingMode  存储库创建模式：   - 按需：post_paid   - 包周期：pre_paid
     * vaultStatus  存储库状态。   - available：可用。   - lock：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
@@ -53,7 +53,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
     * vaultId  存储库ID
     * vaultName  存储库名称
     * vaultSize  存储库总容量，单位GB
-    * vaultUsed  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G,则已使用容量为60G。
+    * vaultUsed  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G，则已使用容量为60G。
     * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小，例如绑定了1台主机，主机大小40G，则已分配容量为40G。
     * vaultChargingMode  存储库创建模式：   - 按需：post_paid   - 包周期：pre_paid
     * vaultStatus  存储库状态。   - available：可用。   - lock：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
@@ -104,7 +104,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
     * vaultId  存储库ID
     * vaultName  存储库名称
     * vaultSize  存储库总容量，单位GB
-    * vaultUsed  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G,则已使用容量为60G。
+    * vaultUsed  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G，则已使用容量为60G。
     * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小，例如绑定了1台主机，主机大小40G，则已分配容量为40G。
     * vaultChargingMode  存储库创建模式：   - 按需：post_paid   - 包周期：pre_paid
     * vaultStatus  存储库状态。   - available：可用。   - lock：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
@@ -134,7 +134,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
     * vaultId  存储库ID
     * vaultName  存储库名称
     * vaultSize  存储库总容量，单位GB
-    * vaultUsed  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G,则已使用容量为60G。
+    * vaultUsed  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G，则已使用容量为60G。
     * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小，例如绑定了1台主机，主机大小40G，则已分配容量为40G。
     * vaultChargingMode  存储库创建模式：   - 按需：post_paid   - 包周期：pre_paid
     * vaultStatus  存储库状态。   - available：可用。   - lock：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
@@ -164,7 +164,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
     * vaultId  存储库ID
     * vaultName  存储库名称
     * vaultSize  存储库总容量，单位GB
-    * vaultUsed  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G,则已使用容量为60G。
+    * vaultUsed  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G，则已使用容量为60G。
     * vaultAllocated  已分配容量，单位GB，指绑定的服务器大小，例如绑定了1台主机，主机大小40G，则已分配容量为40G。
     * vaultChargingMode  存储库创建模式：   - 按需：post_paid   - 包周期：pre_paid
     * vaultStatus  存储库状态。   - available：可用。   - lock：被锁定。   - frozen：冻结。   - deleting：删除中。   - error：错误。
@@ -416,7 +416,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vaultUsed
-    *  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G,则已使用容量为60G。
+    *  已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G，则已使用容量为60G。
     *
     * @return int|null
     */
@@ -428,7 +428,7 @@ class BackupVaultInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vaultUsed
     *
-    * @param int|null $vaultUsed 已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G,则已使用容量为60G。
+    * @param int|null $vaultUsed 已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G，则已使用容量为60G。
     *
     * @return $this
     */

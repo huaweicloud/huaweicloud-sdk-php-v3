@@ -202,9 +202,6 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['xSecurityToken']) && (mb_strlen($this->container['xSecurityToken']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'xSecurityToken', the character length must be smaller than or equal to 2048.";
-            }
             if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 24)) {
                 $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 24.";
             }

@@ -22,13 +22,13 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * policyName  策略名称
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
-    * deployMode  是否开启动态诱饵，包含如下2种, 默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
-    * protectionDirectory  防护目录,多个目录请用英文分号隔开，最多支持填写20个防护目录
+    * deployMode  是否开启动态诱饵，包含如下2种，默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
+    * protectionDirectory  防护目录，多个目录请用英文分号隔开，最多支持填写20个防护目录
     * protectionType  防护文件类型，例如：docx，txt，avi
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * processWhitelist  进程白名单
-    * aiProtectionStatus  是否开启AI勒索防护，包含如下2种, 默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
+    * aiProtectionStatus  是否开启AI勒索防护，包含如下2种，默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
     *
     * @var string[]
     */
@@ -48,13 +48,13 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * policyName  策略名称
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
-    * deployMode  是否开启动态诱饵，包含如下2种, 默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
-    * protectionDirectory  防护目录,多个目录请用英文分号隔开，最多支持填写20个防护目录
+    * deployMode  是否开启动态诱饵，包含如下2种，默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
+    * protectionDirectory  防护目录，多个目录请用英文分号隔开，最多支持填写20个防护目录
     * protectionType  防护文件类型，例如：docx，txt，avi
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * processWhitelist  进程白名单
-    * aiProtectionStatus  是否开启AI勒索防护，包含如下2种, 默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
+    * aiProtectionStatus  是否开启AI勒索防护，包含如下2种，默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
     *
     * @var string[]
     */
@@ -95,13 +95,13 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * policyName  策略名称
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
-    * deployMode  是否开启动态诱饵，包含如下2种, 默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
-    * protectionDirectory  防护目录,多个目录请用英文分号隔开，最多支持填写20个防护目录
+    * deployMode  是否开启动态诱饵，包含如下2种，默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
+    * protectionDirectory  防护目录，多个目录请用英文分号隔开，最多支持填写20个防护目录
     * protectionType  防护文件类型，例如：docx，txt，avi
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * processWhitelist  进程白名单
-    * aiProtectionStatus  是否开启AI勒索防护，包含如下2种, 默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
+    * aiProtectionStatus  是否开启AI勒索防护，包含如下2种，默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
     *
     * @var string[]
     */
@@ -121,13 +121,13 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * policyName  策略名称
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
-    * deployMode  是否开启动态诱饵，包含如下2种, 默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
-    * protectionDirectory  防护目录,多个目录请用英文分号隔开，最多支持填写20个防护目录
+    * deployMode  是否开启动态诱饵，包含如下2种，默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
+    * protectionDirectory  防护目录，多个目录请用英文分号隔开，最多支持填写20个防护目录
     * protectionType  防护文件类型，例如：docx，txt，avi
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * processWhitelist  进程白名单
-    * aiProtectionStatus  是否开启AI勒索防护，包含如下2种, 默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
+    * aiProtectionStatus  是否开启AI勒索防护，包含如下2种，默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
     *
     * @var string[]
     */
@@ -147,13 +147,13 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * policyName  策略名称
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
-    * deployMode  是否开启动态诱饵，包含如下2种, 默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
-    * protectionDirectory  防护目录,多个目录请用英文分号隔开，最多支持填写20个防护目录
+    * deployMode  是否开启动态诱饵，包含如下2种，默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
+    * protectionDirectory  防护目录，多个目录请用英文分号隔开，最多支持填写20个防护目录
     * protectionType  防护文件类型，例如：docx，txt，avi
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * processWhitelist  进程白名单
-    * aiProtectionStatus  是否开启AI勒索防护，包含如下2种, 默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
+    * aiProtectionStatus  是否开启AI勒索防护，包含如下2种，默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
     *
     * @var string[]
     */
@@ -376,7 +376,7 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets deployMode
-    *  是否开启动态诱饵，包含如下2种, 默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
+    *  是否开启动态诱饵，包含如下2种，默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     *
     * @return string|null
     */
@@ -388,7 +388,7 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets deployMode
     *
-    * @param string|null $deployMode 是否开启动态诱饵，包含如下2种, 默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
+    * @param string|null $deployMode 是否开启动态诱饵，包含如下2种，默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     *
     * @return $this
     */
@@ -400,7 +400,7 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectionDirectory
-    *  防护目录,多个目录请用英文分号隔开，最多支持填写20个防护目录
+    *  防护目录，多个目录请用英文分号隔开，最多支持填写20个防护目录
     *
     * @return string
     */
@@ -412,7 +412,7 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectionDirectory
     *
-    * @param string $protectionDirectory 防护目录,多个目录请用英文分号隔开，最多支持填写20个防护目录
+    * @param string $protectionDirectory 防护目录，多个目录请用英文分号隔开，最多支持填写20个防护目录
     *
     * @return $this
     */
@@ -520,7 +520,7 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets aiProtectionStatus
-    *  是否开启AI勒索防护，包含如下2种, 默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
+    *  是否开启AI勒索防护，包含如下2种，默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
     *
     * @return string|null
     */
@@ -532,7 +532,7 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets aiProtectionStatus
     *
-    * @param string|null $aiProtectionStatus 是否开启AI勒索防护，包含如下2种, 默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
+    * @param string|null $aiProtectionStatus 是否开启AI勒索防护，包含如下2种，默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
     *
     * @return $this
     */

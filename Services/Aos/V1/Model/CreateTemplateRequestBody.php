@@ -23,7 +23,7 @@ class CreateTemplateRequestBody implements ModelInterface, ArrayAccess
     * versionDescription  模板版本的描述。可用于客户识别自己的模板版本
     * templateBody  HCL模板，描述了模板中使用的资源 template_body 和 template_uri 有且仅有一个存在
     * templateUri  HCL模板的obs链接，该模板描述了资源的目标状态  对应的文件应该是纯tf文件或zip压缩包  纯tf文件需要以`.tf`或者`.tf.json`结尾，并遵守hcl语法  压缩包目前只支持zip格式，文件需要以\".zip\"结尾。解压后的文件不得包含\".tfvars\"文件  template_body 和 template_uri 有且仅有一个存在
-    * templateName  用户希望创建的模板名称
+    * templateName  模板（Template）的名字。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * templateDescription  模板的描述。可用于客户识别自己的模板
     *
     * @var string[]
@@ -41,7 +41,7 @@ class CreateTemplateRequestBody implements ModelInterface, ArrayAccess
     * versionDescription  模板版本的描述。可用于客户识别自己的模板版本
     * templateBody  HCL模板，描述了模板中使用的资源 template_body 和 template_uri 有且仅有一个存在
     * templateUri  HCL模板的obs链接，该模板描述了资源的目标状态  对应的文件应该是纯tf文件或zip压缩包  纯tf文件需要以`.tf`或者`.tf.json`结尾，并遵守hcl语法  压缩包目前只支持zip格式，文件需要以\".zip\"结尾。解压后的文件不得包含\".tfvars\"文件  template_body 和 template_uri 有且仅有一个存在
-    * templateName  用户希望创建的模板名称
+    * templateName  模板（Template）的名字。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * templateDescription  模板的描述。可用于客户识别自己的模板
     *
     * @var string[]
@@ -80,7 +80,7 @@ class CreateTemplateRequestBody implements ModelInterface, ArrayAccess
     * versionDescription  模板版本的描述。可用于客户识别自己的模板版本
     * templateBody  HCL模板，描述了模板中使用的资源 template_body 和 template_uri 有且仅有一个存在
     * templateUri  HCL模板的obs链接，该模板描述了资源的目标状态  对应的文件应该是纯tf文件或zip压缩包  纯tf文件需要以`.tf`或者`.tf.json`结尾，并遵守hcl语法  压缩包目前只支持zip格式，文件需要以\".zip\"结尾。解压后的文件不得包含\".tfvars\"文件  template_body 和 template_uri 有且仅有一个存在
-    * templateName  用户希望创建的模板名称
+    * templateName  模板（Template）的名字。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * templateDescription  模板的描述。可用于客户识别自己的模板
     *
     * @var string[]
@@ -98,7 +98,7 @@ class CreateTemplateRequestBody implements ModelInterface, ArrayAccess
     * versionDescription  模板版本的描述。可用于客户识别自己的模板版本
     * templateBody  HCL模板，描述了模板中使用的资源 template_body 和 template_uri 有且仅有一个存在
     * templateUri  HCL模板的obs链接，该模板描述了资源的目标状态  对应的文件应该是纯tf文件或zip压缩包  纯tf文件需要以`.tf`或者`.tf.json`结尾，并遵守hcl语法  压缩包目前只支持zip格式，文件需要以\".zip\"结尾。解压后的文件不得包含\".tfvars\"文件  template_body 和 template_uri 有且仅有一个存在
-    * templateName  用户希望创建的模板名称
+    * templateName  模板（Template）的名字。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * templateDescription  模板的描述。可用于客户识别自己的模板
     *
     * @var string[]
@@ -116,7 +116,7 @@ class CreateTemplateRequestBody implements ModelInterface, ArrayAccess
     * versionDescription  模板版本的描述。可用于客户识别自己的模板版本
     * templateBody  HCL模板，描述了模板中使用的资源 template_body 和 template_uri 有且仅有一个存在
     * templateUri  HCL模板的obs链接，该模板描述了资源的目标状态  对应的文件应该是纯tf文件或zip压缩包  纯tf文件需要以`.tf`或者`.tf.json`结尾，并遵守hcl语法  压缩包目前只支持zip格式，文件需要以\".zip\"结尾。解压后的文件不得包含\".tfvars\"文件  template_body 和 template_uri 有且仅有一个存在
-    * templateName  用户希望创建的模板名称
+    * templateName  模板（Template）的名字。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * templateDescription  模板的描述。可用于客户识别自己的模板
     *
     * @var string[]
@@ -323,7 +323,7 @@ class CreateTemplateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateName
-    *  用户希望创建的模板名称
+    *  模板（Template）的名字。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     *
     * @return string
     */
@@ -335,7 +335,7 @@ class CreateTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets templateName
     *
-    * @param string $templateName 用户希望创建的模板名称
+    * @param string $templateName 模板（Template）的名字。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     *
     * @return $this
     */

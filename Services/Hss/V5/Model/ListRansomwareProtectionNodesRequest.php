@@ -26,7 +26,7 @@ class ListRansomwareProtectionNodesRequest implements ModelInterface, ArrayAcces
     * hostName  服务器名称
     * hostId  服务器ID
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * hostIp  服务器IP地址,服务器公网IP地址
+    * hostIp  服务器IP地址，服务器公网IP地址
     * privateIp  服务器私有IP
     * hostStatus  主机状态，包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。
     * ransomProtectionStatus  勒索防护状态，包含如下6种。   - closed ：未开启。   - opened ：防护中。   - opening ：开启中。   - closing ：关闭中。   - protect_failed：防护失败。   - protect_degraded：防护降级。
@@ -68,7 +68,7 @@ class ListRansomwareProtectionNodesRequest implements ModelInterface, ArrayAcces
     * hostName  服务器名称
     * hostId  服务器ID
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * hostIp  服务器IP地址,服务器公网IP地址
+    * hostIp  服务器IP地址，服务器公网IP地址
     * privateIp  服务器私有IP
     * hostStatus  主机状态，包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。
     * ransomProtectionStatus  勒索防护状态，包含如下6种。   - closed ：未开启。   - opened ：防护中。   - opening ：开启中。   - closing ：关闭中。   - protect_failed：防护失败。   - protect_degraded：防护降级。
@@ -131,7 +131,7 @@ class ListRansomwareProtectionNodesRequest implements ModelInterface, ArrayAcces
     * hostName  服务器名称
     * hostId  服务器ID
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * hostIp  服务器IP地址,服务器公网IP地址
+    * hostIp  服务器IP地址，服务器公网IP地址
     * privateIp  服务器私有IP
     * hostStatus  主机状态，包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。
     * ransomProtectionStatus  勒索防护状态，包含如下6种。   - closed ：未开启。   - opened ：防护中。   - opening ：开启中。   - closing ：关闭中。   - protect_failed：防护失败。   - protect_degraded：防护降级。
@@ -173,7 +173,7 @@ class ListRansomwareProtectionNodesRequest implements ModelInterface, ArrayAcces
     * hostName  服务器名称
     * hostId  服务器ID
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * hostIp  服务器IP地址,服务器公网IP地址
+    * hostIp  服务器IP地址，服务器公网IP地址
     * privateIp  服务器私有IP
     * hostStatus  主机状态，包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。
     * ransomProtectionStatus  勒索防护状态，包含如下6种。   - closed ：未开启。   - opened ：防护中。   - opening ：开启中。   - closing ：关闭中。   - protect_failed：防护失败。   - protect_degraded：防护降级。
@@ -215,7 +215,7 @@ class ListRansomwareProtectionNodesRequest implements ModelInterface, ArrayAcces
     * hostName  服务器名称
     * hostId  服务器ID
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
-    * hostIp  服务器IP地址,服务器公网IP地址
+    * hostIp  服务器IP地址，服务器公网IP地址
     * privateIp  服务器私有IP
     * hostStatus  主机状态，包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。
     * ransomProtectionStatus  勒索防护状态，包含如下6种。   - closed ：未开启。   - opened ：防护中。   - opening ：开启中。   - closing ：关闭中。   - protect_failed：防护失败。   - protect_degraded：防护降级。
@@ -638,7 +638,7 @@ class ListRansomwareProtectionNodesRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets hostIp
-    *  服务器IP地址,服务器公网IP地址
+    *  服务器IP地址，服务器公网IP地址
     *
     * @return string|null
     */
@@ -650,7 +650,7 @@ class ListRansomwareProtectionNodesRequest implements ModelInterface, ArrayAcces
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 服务器IP地址,服务器公网IP地址
+    * @param string|null $hostIp 服务器IP地址，服务器公网IP地址
     *
     * @return $this
     */

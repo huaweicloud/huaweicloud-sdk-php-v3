@@ -27,10 +27,10 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
-    * chargingMode  付费模式：   on_demand 按需   free 免费
+    * chargingMode  **参数解释**: 付费模式           **约束限制**: 不涉及 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。  **默认取值**: 不涉及
     * preferPacketCycle  优先使用包周期配额；默认0
     * protectType  cce集群防护类型
-    * protectStatus  防护状态：   protecting 防护中   part_protect  部分防护   creating 开启中   error_protect 防护异常   unprotect 未防护   wait_protect 待防护
+    * protectStatus  **参数解释**: 防护状态           **约束限制**: 不涉及 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。  **默认取值**: 不涉及
     * clusterType  集群类型
     * failReason  fail reason
     *
@@ -61,10 +61,10 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
-    * chargingMode  付费模式：   on_demand 按需   free 免费
+    * chargingMode  **参数解释**: 付费模式           **约束限制**: 不涉及 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。  **默认取值**: 不涉及
     * preferPacketCycle  优先使用包周期配额；默认0
     * protectType  cce集群防护类型
-    * protectStatus  防护状态：   protecting 防护中   part_protect  部分防护   creating 开启中   error_protect 防护异常   unprotect 未防护   wait_protect 待防护
+    * protectStatus  **参数解释**: 防护状态           **约束限制**: 不涉及 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。  **默认取值**: 不涉及
     * clusterType  集群类型
     * failReason  fail reason
     *
@@ -116,10 +116,10 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
-    * chargingMode  付费模式：   on_demand 按需   free 免费
+    * chargingMode  **参数解释**: 付费模式           **约束限制**: 不涉及 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。  **默认取值**: 不涉及
     * preferPacketCycle  优先使用包周期配额；默认0
     * protectType  cce集群防护类型
-    * protectStatus  防护状态：   protecting 防护中   part_protect  部分防护   creating 开启中   error_protect 防护异常   unprotect 未防护   wait_protect 待防护
+    * protectStatus  **参数解释**: 防护状态           **约束限制**: 不涉及 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。  **默认取值**: 不涉及
     * clusterType  集群类型
     * failReason  fail reason
     *
@@ -150,10 +150,10 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
-    * chargingMode  付费模式：   on_demand 按需   free 免费
+    * chargingMode  **参数解释**: 付费模式           **约束限制**: 不涉及 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。  **默认取值**: 不涉及
     * preferPacketCycle  优先使用包周期配额；默认0
     * protectType  cce集群防护类型
-    * protectStatus  防护状态：   protecting 防护中   part_protect  部分防护   creating 开启中   error_protect 防护异常   unprotect 未防护   wait_protect 待防护
+    * protectStatus  **参数解释**: 防护状态           **约束限制**: 不涉及 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。  **默认取值**: 不涉及
     * clusterType  集群类型
     * failReason  fail reason
     *
@@ -184,10 +184,10 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
-    * chargingMode  付费模式：   on_demand 按需   free 免费
+    * chargingMode  **参数解释**: 付费模式           **约束限制**: 不涉及 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。  **默认取值**: 不涉及
     * preferPacketCycle  优先使用包周期配额；默认0
     * protectType  cce集群防护类型
-    * protectStatus  防护状态：   protecting 防护中   part_protect  部分防护   creating 开启中   error_protect 防护异常   unprotect 未防护   wait_protect 待防护
+    * protectStatus  **参数解释**: 防护状态           **约束限制**: 不涉及 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。  **默认取值**: 不涉及
     * clusterType  集群类型
     * failReason  fail reason
     *
@@ -531,7 +531,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  付费模式：   on_demand 按需   free 免费
+    *  **参数解释**: 付费模式           **约束限制**: 不涉及 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -543,7 +543,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string|null $chargingMode 付费模式：   on_demand 按需   free 免费
+    * @param string|null $chargingMode **参数解释**: 付费模式           **约束限制**: 不涉及 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -603,7 +603,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  防护状态：   protecting 防护中   part_protect  部分防护   creating 开启中   error_protect 防护异常   unprotect 未防护   wait_protect 待防护
+    *  **参数解释**: 防护状态           **约束限制**: 不涉及 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -615,7 +615,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus 防护状态：   protecting 防护中   part_protect  部分防护   creating 开启中   error_protect 防护异常   unprotect 未防护   wait_protect 待防护
+    * @param string|null $protectStatus **参数解释**: 防护状态           **约束限制**: 不涉及 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。  **默认取值**: 不涉及
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class DescribeInstanceAccessControlAttributeConfigurationRequest implements Mode
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）。
+    * instanceId  IAM Identity Center实例的全局唯一标识符（ID）
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class DescribeInstanceAccessControlAttributeConfigurationRequest implements Mode
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）。
+    * instanceId  IAM Identity Center实例的全局唯一标识符（ID）
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class DescribeInstanceAccessControlAttributeConfigurationRequest implements Mode
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）。
+    * instanceId  IAM Identity Center实例的全局唯一标识符（ID）
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class DescribeInstanceAccessControlAttributeConfigurationRequest implements Mode
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）。
+    * instanceId  IAM Identity Center实例的全局唯一标识符（ID）
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class DescribeInstanceAccessControlAttributeConfigurationRequest implements Mode
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  IAM身份中心实例的全局唯一标识符（ID）。
+    * instanceId  IAM Identity Center实例的全局唯一标识符（ID）
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     *
     * @var string[]
@@ -175,9 +175,6 @@ class DescribeInstanceAccessControlAttributeConfigurationRequest implements Mode
             if (!preg_match("/^[a-zA-Z0-9-]{1,64}$/", $this->container['instanceId'])) {
                 $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-zA-Z0-9-]{1,64}$/.";
             }
-            if (!is_null($this->container['xSecurityToken']) && (mb_strlen($this->container['xSecurityToken']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'xSecurityToken', the character length must be smaller than or equal to 2048.";
-            }
         return $invalidProperties;
     }
 
@@ -194,7 +191,7 @@ class DescribeInstanceAccessControlAttributeConfigurationRequest implements Mode
 
     /**
     * Gets instanceId
-    *  IAM身份中心实例的全局唯一标识符（ID）。
+    *  IAM Identity Center实例的全局唯一标识符（ID）
     *
     * @return string
     */
@@ -206,7 +203,7 @@ class DescribeInstanceAccessControlAttributeConfigurationRequest implements Mode
     /**
     * Sets instanceId
     *
-    * @param string $instanceId IAM身份中心实例的全局唯一标识符（ID）。
+    * @param string $instanceId IAM Identity Center实例的全局唯一标识符（ID）
     *
     * @return $this
     */

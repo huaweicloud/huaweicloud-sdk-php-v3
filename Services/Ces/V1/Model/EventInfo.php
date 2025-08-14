@@ -22,6 +22,7 @@ class EventInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * eventName  事件名称。
     * eventType  事件类型。
+    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
     * eventCount  选择查询的时间范围内，此事件发生的数量。
     * latestOccurTime  此事件最近一次发生的时间。
     * latestEventSource  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
@@ -31,6 +32,7 @@ class EventInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'eventName' => 'string',
             'eventType' => 'string',
+            'subEventType' => 'string',
             'eventCount' => 'int',
             'latestOccurTime' => 'int',
             'latestEventSource' => 'string'
@@ -40,6 +42,7 @@ class EventInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * eventName  事件名称。
     * eventType  事件类型。
+    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
     * eventCount  选择查询的时间范围内，此事件发生的数量。
     * latestOccurTime  此事件最近一次发生的时间。
     * latestEventSource  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
@@ -49,6 +52,7 @@ class EventInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'eventName' => null,
         'eventType' => null,
+        'subEventType' => null,
         'eventCount' => 'int32',
         'latestOccurTime' => 'int64',
         'latestEventSource' => null
@@ -79,6 +83,7 @@ class EventInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * eventName  事件名称。
     * eventType  事件类型。
+    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
     * eventCount  选择查询的时间范围内，此事件发生的数量。
     * latestOccurTime  此事件最近一次发生的时间。
     * latestEventSource  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
@@ -88,6 +93,7 @@ class EventInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'eventName' => 'event_name',
             'eventType' => 'event_type',
+            'subEventType' => 'sub_event_type',
             'eventCount' => 'event_count',
             'latestOccurTime' => 'latest_occur_time',
             'latestEventSource' => 'latest_event_source'
@@ -97,6 +103,7 @@ class EventInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * eventName  事件名称。
     * eventType  事件类型。
+    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
     * eventCount  选择查询的时间范围内，此事件发生的数量。
     * latestOccurTime  此事件最近一次发生的时间。
     * latestEventSource  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
@@ -106,6 +113,7 @@ class EventInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'eventName' => 'setEventName',
             'eventType' => 'setEventType',
+            'subEventType' => 'setSubEventType',
             'eventCount' => 'setEventCount',
             'latestOccurTime' => 'setLatestOccurTime',
             'latestEventSource' => 'setLatestEventSource'
@@ -115,6 +123,7 @@ class EventInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * eventName  事件名称。
     * eventType  事件类型。
+    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
     * eventCount  选择查询的时间范围内，此事件发生的数量。
     * latestOccurTime  此事件最近一次发生的时间。
     * latestEventSource  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
@@ -124,6 +133,7 @@ class EventInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'eventName' => 'getEventName',
             'eventType' => 'getEventType',
+            'subEventType' => 'getSubEventType',
             'eventCount' => 'getEventCount',
             'latestOccurTime' => 'getLatestOccurTime',
             'latestEventSource' => 'getLatestEventSource'
@@ -169,7 +179,24 @@ class EventInfo implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const SUB_EVENT_TYPE_SUB_EVENT_OPS = 'SUB_EVENT.OPS';
+    const SUB_EVENT_TYPE_SUB_EVENT_PLAN = 'SUB_EVENT.PLAN';
+    const SUB_EVENT_TYPE_SUB_EVENT_CUSTOM = 'SUB_EVENT.CUSTOM';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSubEventTypeAllowableValues()
+    {
+        return [
+            self::SUB_EVENT_TYPE_SUB_EVENT_OPS,
+            self::SUB_EVENT_TYPE_SUB_EVENT_PLAN,
+            self::SUB_EVENT_TYPE_SUB_EVENT_CUSTOM,
+        ];
+    }
 
 
     /**
@@ -189,6 +216,7 @@ class EventInfo implements ModelInterface, ArrayAccess
     {
         $this->container['eventName'] = isset($data['eventName']) ? $data['eventName'] : null;
         $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
+        $this->container['subEventType'] = isset($data['subEventType']) ? $data['subEventType'] : null;
         $this->container['eventCount'] = isset($data['eventCount']) ? $data['eventCount'] : null;
         $this->container['latestOccurTime'] = isset($data['latestOccurTime']) ? $data['latestOccurTime'] : null;
         $this->container['latestEventSource'] = isset($data['latestEventSource']) ? $data['latestEventSource'] : null;
@@ -202,6 +230,14 @@ class EventInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getSubEventTypeAllowableValues();
+                if (!is_null($this->container['subEventType']) && !in_array($this->container['subEventType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'subEventType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -261,6 +297,30 @@ class EventInfo implements ModelInterface, ArrayAccess
     public function setEventType($eventType)
     {
         $this->container['eventType'] = $eventType;
+        return $this;
+    }
+
+    /**
+    * Gets subEventType
+    *  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
+    *
+    * @return string|null
+    */
+    public function getSubEventType()
+    {
+        return $this->container['subEventType'];
+    }
+
+    /**
+    * Sets subEventType
+    *
+    * @param string|null $subEventType 事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
+    *
+    * @return $this
+    */
+    public function setSubEventType($subEventType)
+    {
+        $this->container['subEventType'] = $subEventType;
         return $this;
     }
 

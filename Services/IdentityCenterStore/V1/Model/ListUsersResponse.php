@@ -22,7 +22,7 @@ class ListUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * pageInfo  pageInfo
-    * users  身份源中的用户列表
+    * users  IdentityStore中的用户列表。
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ListUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * pageInfo  pageInfo
-    * users  身份源中的用户列表
+    * users  IdentityStore中的用户列表。
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ListUsersResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * pageInfo  pageInfo
-    * users  身份源中的用户列表
+    * users  IdentityStore中的用户列表。
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ListUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * pageInfo  pageInfo
-    * users  身份源中的用户列表
+    * users  IdentityStore中的用户列表。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * pageInfo  pageInfo
-    * users  身份源中的用户列表
+    * users  IdentityStore中的用户列表。
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class ListUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets users
-    *  身份源中的用户列表
+    *  IdentityStore中的用户列表。
     *
     * @return \HuaweiCloud\SDK\IdentityCenterStore\V1\Model\UserDto[]|null
     */
@@ -222,7 +222,7 @@ class ListUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets users
     *
-    * @param \HuaweiCloud\SDK\IdentityCenterStore\V1\Model\UserDto[]|null $users 身份源中的用户列表
+    * @param \HuaweiCloud\SDK\IdentityCenterStore\V1\Model\UserDto[]|null $users IdentityStore中的用户列表。
     *
     * @return $this
     */

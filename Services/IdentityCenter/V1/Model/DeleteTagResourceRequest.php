@@ -21,7 +21,7 @@ class DeleteTagResourceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
-    * resourceType  资源类型 identitycenter:permissionset（权限集）
+    * resourceType  资源类型 identitycenter:permissionset权限集
     * resourceId  权限集的唯一标识符（ID）。
     * body  body
     *
@@ -37,7 +37,7 @@ class DeleteTagResourceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
-    * resourceType  资源类型 identitycenter:permissionset（权限集）
+    * resourceType  资源类型 identitycenter:permissionset权限集
     * resourceId  权限集的唯一标识符（ID）。
     * body  body
     *
@@ -74,7 +74,7 @@ class DeleteTagResourceRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
-    * resourceType  资源类型 identitycenter:permissionset（权限集）
+    * resourceType  资源类型 identitycenter:permissionset权限集
     * resourceId  权限集的唯一标识符（ID）。
     * body  body
     *
@@ -90,7 +90,7 @@ class DeleteTagResourceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
-    * resourceType  资源类型 identitycenter:permissionset（权限集）
+    * resourceType  资源类型 identitycenter:permissionset权限集
     * resourceId  权限集的唯一标识符（ID）。
     * body  body
     *
@@ -106,7 +106,7 @@ class DeleteTagResourceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
-    * resourceType  资源类型 identitycenter:permissionset（权限集）
+    * resourceType  资源类型 identitycenter:permissionset权限集
     * resourceId  权限集的唯一标识符（ID）。
     * body  body
     *
@@ -204,9 +204,6 @@ class DeleteTagResourceRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['xSecurityToken']) && (mb_strlen($this->container['xSecurityToken']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'xSecurityToken', the character length must be smaller than or equal to 2048.";
-            }
         if ($this->container['resourceType'] === null) {
             $invalidProperties[] = "'resourceType' can't be null";
         }
@@ -267,7 +264,7 @@ class DeleteTagResourceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  资源类型 identitycenter:permissionset（权限集）
+    *  资源类型 identitycenter:permissionset权限集
     *
     * @return string
     */
@@ -279,7 +276,7 @@ class DeleteTagResourceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 资源类型 identitycenter:permissionset（权限集）
+    * @param string $resourceType 资源类型 identitycenter:permissionset权限集
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class GetUserIdResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * identityStoreId  身份源的全局唯一标识符（ID）
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class GetUserIdResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * identityStoreId  身份源的全局唯一标识符（ID）
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class GetUserIdResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * identityStoreId  身份源的全局唯一标识符（ID）
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class GetUserIdResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * identityStoreId  身份源的全局唯一标识符（ID）
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class GetUserIdResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * identityStoreId  身份源的全局唯一标识符（ID）
-    * userId  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * userId  身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @var string[]
     */
@@ -228,7 +228,7 @@ class GetUserIdResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  身份源中IAM身份中心用户的全局唯一标识符（ID）
+    *  身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @return string|null
     */
@@ -240,7 +240,7 @@ class GetUserIdResponse implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string|null $userId 身份源中IAM身份中心用户的全局唯一标识符（ID）
+    * @param string|null $userId 身份源中IdentityCenter用户的全局唯一标识符（ID）
     *
     * @return $this
     */
