@@ -21,7 +21,7 @@ class UnlockRepositoryResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * locked  锁定状态
+    * locked  锁定状态 - true 已锁定 - false 未锁定
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class UnlockRepositoryResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * locked  锁定状态
+    * locked  锁定状态 - true 已锁定 - false 未锁定
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class UnlockRepositoryResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * locked  锁定状态
+    * locked  锁定状态 - true 已锁定 - false 未锁定
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class UnlockRepositoryResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * locked  锁定状态
+    * locked  锁定状态 - true 已锁定 - false 未锁定
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class UnlockRepositoryResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * locked  锁定状态
+    * locked  锁定状态 - true 已锁定 - false 未锁定
     *
     * @var string[]
     */
@@ -130,7 +130,22 @@ class UnlockRepositoryResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const LOCKED_TRUE = 'true';
+    const LOCKED_FALSE = 'false';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getLockedAllowableValues()
+    {
+        return [
+            self::LOCKED_TRUE,
+            self::LOCKED_FALSE,
+        ];
+    }
 
 
     /**
@@ -159,12 +174,14 @@ class UnlockRepositoryResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['locked']) && (mb_strlen($this->container['locked']) > 1000)) {
-                $invalidProperties[] = "invalid value for 'locked', the character length must be smaller than or equal to 1000.";
+            $allowedValues = $this->getLockedAllowableValues();
+                if (!is_null($this->container['locked']) && !in_array($this->container['locked'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'locked', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['locked']) && (mb_strlen($this->container['locked']) < 0)) {
-                $invalidProperties[] = "invalid value for 'locked', the character length must be bigger than or equal to 0.";
-            }
+
         return $invalidProperties;
     }
 
@@ -181,7 +198,7 @@ class UnlockRepositoryResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets locked
-    *  锁定状态
+    *  锁定状态 - true 已锁定 - false 未锁定
     *
     * @return string|null
     */
@@ -193,7 +210,7 @@ class UnlockRepositoryResponse implements ModelInterface, ArrayAccess
     /**
     * Sets locked
     *
-    * @param string|null $locked 锁定状态
+    * @param string|null $locked 锁定状态 - true 已锁定 - false 未锁定
     *
     * @return $this
     */

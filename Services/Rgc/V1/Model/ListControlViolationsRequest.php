@@ -20,7 +20,7 @@ class ListControlViolationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accountId  账户ID。
+    * accountId  纳管账号ID。
     * organizationalUnitId  注册OU ID。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ListControlViolationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accountId  账户ID。
+    * accountId  纳管账号ID。
     * organizationalUnitId  注册OU ID。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ListControlViolationsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accountId  账户ID。
+    * accountId  纳管账号ID。
     * organizationalUnitId  注册OU ID。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ListControlViolationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accountId  账户ID。
+    * accountId  纳管账号ID。
     * organizationalUnitId  注册OU ID。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ListControlViolationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accountId  账户ID。
+    * accountId  纳管账号ID。
     * organizationalUnitId  注册OU ID。
     *
     * @var string[]
@@ -197,7 +197,7 @@ class ListControlViolationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountId
-    *  账户ID。
+    *  纳管账号ID。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class ListControlViolationsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets accountId
     *
-    * @param string|null $accountId 账户ID。
+    * @param string|null $accountId 纳管账号ID。
     *
     * @return $this
     */

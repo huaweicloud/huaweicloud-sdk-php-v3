@@ -21,7 +21,7 @@ class ShowManagedAccountTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * accountId  纳管账号ID。
     * accountName  纳管账号名称。
     * blueprintProductId  模板ID。
@@ -47,7 +47,7 @@ class ShowManagedAccountTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * accountId  纳管账号ID。
     * accountName  纳管账号名称。
     * blueprintProductId  模板ID。
@@ -94,7 +94,7 @@ class ShowManagedAccountTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * accountId  纳管账号ID。
     * accountName  纳管账号名称。
     * blueprintProductId  模板ID。
@@ -120,7 +120,7 @@ class ShowManagedAccountTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * accountId  纳管账号ID。
     * accountName  纳管账号名称。
     * blueprintProductId  模板ID。
@@ -146,7 +146,7 @@ class ShowManagedAccountTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * accountId  纳管账号ID。
     * accountName  纳管账号名称。
     * blueprintProductId  模板ID。
@@ -314,7 +314,7 @@ class ShowManagedAccountTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets manageAccountId
-    *  管理纳管账号ID。
+    *  管理员账号ID。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class ShowManagedAccountTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets manageAccountId
     *
-    * @param string|null $manageAccountId 管理纳管账号ID。
+    * @param string|null $manageAccountId 管理员账号ID。
     *
     * @return $this
     */

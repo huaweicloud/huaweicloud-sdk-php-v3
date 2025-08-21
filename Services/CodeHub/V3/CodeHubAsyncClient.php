@@ -3589,11 +3589,11 @@ class CodeHubAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/octet-stream']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/octet-stream'],
                 []
             );
         }

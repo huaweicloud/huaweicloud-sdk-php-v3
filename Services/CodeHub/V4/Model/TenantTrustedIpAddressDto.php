@@ -20,20 +20,20 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  关联结果
-    * userId  用户id
-    * domainId  租户id
-    * ipRange  ip范围
-    * ipType  格式类型，指定ip，ip范围，CIDR
-    * ipStart  起始ip
-    * ipEnd  结束ip
-    * viewFlag  是否允许访问代码仓库
-    * downloadFlag  是否允许下载代码
-    * uploadFlag  是否允许提交代码
-    * remark  备注
-    * createdAt  创建时间
-    * updatedAt  更新时间
-    * orderFlag  排序
+    * id  **参数解释：** ip白名单id。
+    * userId  **参数解释：** 用户id。
+    * domainId  **参数解释：** 租户id。
+    * ipRange  **参数解释：** ip范围。
+    * ipType  **参数解释：** 格式类型。 - 0，表示指定IP。 - 1，表示ip范围。 - 2，表示CIDR。
+    * ipStart  **参数解释：** 起始ip。
+    * ipEnd  **参数解释：** 结束ip。
+    * viewFlag  **参数解释：** 是否允许访问代码仓库。 - 0，表示禁止访问。 - 1，表示允许访问。
+    * downloadFlag  **参数解释：** 是否允许下载代码。 - 0，表示禁止下载。 - 1，表示允许下载。
+    * uploadFlag  **参数解释：** 是否允许提交代码。 - 0，表示禁止提交。 - 1，表示允许提交。
+    * remark  **参数解释：** 备注。 **取值范围：** 字符串长度不少于0，不超过200。
+    * createdAt  **参数解释：** 创建时间。 **参数解释：** MMM dd, yyyy hh:mm:ss a
+    * updatedAt  **参数解释：** 更新时间。 **参数解释：** MMM dd, yyyy hh:mm:ss a
+    * orderFlag  **参数解释：** 排序。 - 0，表示默认规则。 - 1，表示自定义规则。
     *
     * @var string[]
     */
@@ -56,20 +56,20 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  关联结果
-    * userId  用户id
-    * domainId  租户id
-    * ipRange  ip范围
-    * ipType  格式类型，指定ip，ip范围，CIDR
-    * ipStart  起始ip
-    * ipEnd  结束ip
-    * viewFlag  是否允许访问代码仓库
-    * downloadFlag  是否允许下载代码
-    * uploadFlag  是否允许提交代码
-    * remark  备注
-    * createdAt  创建时间
-    * updatedAt  更新时间
-    * orderFlag  排序
+    * id  **参数解释：** ip白名单id。
+    * userId  **参数解释：** 用户id。
+    * domainId  **参数解释：** 租户id。
+    * ipRange  **参数解释：** ip范围。
+    * ipType  **参数解释：** 格式类型。 - 0，表示指定IP。 - 1，表示ip范围。 - 2，表示CIDR。
+    * ipStart  **参数解释：** 起始ip。
+    * ipEnd  **参数解释：** 结束ip。
+    * viewFlag  **参数解释：** 是否允许访问代码仓库。 - 0，表示禁止访问。 - 1，表示允许访问。
+    * downloadFlag  **参数解释：** 是否允许下载代码。 - 0，表示禁止下载。 - 1，表示允许下载。
+    * uploadFlag  **参数解释：** 是否允许提交代码。 - 0，表示禁止提交。 - 1，表示允许提交。
+    * remark  **参数解释：** 备注。 **取值范围：** 字符串长度不少于0，不超过200。
+    * createdAt  **参数解释：** 创建时间。 **参数解释：** MMM dd, yyyy hh:mm:ss a
+    * updatedAt  **参数解释：** 更新时间。 **参数解释：** MMM dd, yyyy hh:mm:ss a
+    * orderFlag  **参数解释：** 排序。 - 0，表示默认规则。 - 1，表示自定义规则。
     *
     * @var string[]
     */
@@ -113,20 +113,20 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  关联结果
-    * userId  用户id
-    * domainId  租户id
-    * ipRange  ip范围
-    * ipType  格式类型，指定ip，ip范围，CIDR
-    * ipStart  起始ip
-    * ipEnd  结束ip
-    * viewFlag  是否允许访问代码仓库
-    * downloadFlag  是否允许下载代码
-    * uploadFlag  是否允许提交代码
-    * remark  备注
-    * createdAt  创建时间
-    * updatedAt  更新时间
-    * orderFlag  排序
+    * id  **参数解释：** ip白名单id。
+    * userId  **参数解释：** 用户id。
+    * domainId  **参数解释：** 租户id。
+    * ipRange  **参数解释：** ip范围。
+    * ipType  **参数解释：** 格式类型。 - 0，表示指定IP。 - 1，表示ip范围。 - 2，表示CIDR。
+    * ipStart  **参数解释：** 起始ip。
+    * ipEnd  **参数解释：** 结束ip。
+    * viewFlag  **参数解释：** 是否允许访问代码仓库。 - 0，表示禁止访问。 - 1，表示允许访问。
+    * downloadFlag  **参数解释：** 是否允许下载代码。 - 0，表示禁止下载。 - 1，表示允许下载。
+    * uploadFlag  **参数解释：** 是否允许提交代码。 - 0，表示禁止提交。 - 1，表示允许提交。
+    * remark  **参数解释：** 备注。 **取值范围：** 字符串长度不少于0，不超过200。
+    * createdAt  **参数解释：** 创建时间。 **参数解释：** MMM dd, yyyy hh:mm:ss a
+    * updatedAt  **参数解释：** 更新时间。 **参数解释：** MMM dd, yyyy hh:mm:ss a
+    * orderFlag  **参数解释：** 排序。 - 0，表示默认规则。 - 1，表示自定义规则。
     *
     * @var string[]
     */
@@ -149,20 +149,20 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  关联结果
-    * userId  用户id
-    * domainId  租户id
-    * ipRange  ip范围
-    * ipType  格式类型，指定ip，ip范围，CIDR
-    * ipStart  起始ip
-    * ipEnd  结束ip
-    * viewFlag  是否允许访问代码仓库
-    * downloadFlag  是否允许下载代码
-    * uploadFlag  是否允许提交代码
-    * remark  备注
-    * createdAt  创建时间
-    * updatedAt  更新时间
-    * orderFlag  排序
+    * id  **参数解释：** ip白名单id。
+    * userId  **参数解释：** 用户id。
+    * domainId  **参数解释：** 租户id。
+    * ipRange  **参数解释：** ip范围。
+    * ipType  **参数解释：** 格式类型。 - 0，表示指定IP。 - 1，表示ip范围。 - 2，表示CIDR。
+    * ipStart  **参数解释：** 起始ip。
+    * ipEnd  **参数解释：** 结束ip。
+    * viewFlag  **参数解释：** 是否允许访问代码仓库。 - 0，表示禁止访问。 - 1，表示允许访问。
+    * downloadFlag  **参数解释：** 是否允许下载代码。 - 0，表示禁止下载。 - 1，表示允许下载。
+    * uploadFlag  **参数解释：** 是否允许提交代码。 - 0，表示禁止提交。 - 1，表示允许提交。
+    * remark  **参数解释：** 备注。 **取值范围：** 字符串长度不少于0，不超过200。
+    * createdAt  **参数解释：** 创建时间。 **参数解释：** MMM dd, yyyy hh:mm:ss a
+    * updatedAt  **参数解释：** 更新时间。 **参数解释：** MMM dd, yyyy hh:mm:ss a
+    * orderFlag  **参数解释：** 排序。 - 0，表示默认规则。 - 1，表示自定义规则。
     *
     * @var string[]
     */
@@ -185,20 +185,20 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  关联结果
-    * userId  用户id
-    * domainId  租户id
-    * ipRange  ip范围
-    * ipType  格式类型，指定ip，ip范围，CIDR
-    * ipStart  起始ip
-    * ipEnd  结束ip
-    * viewFlag  是否允许访问代码仓库
-    * downloadFlag  是否允许下载代码
-    * uploadFlag  是否允许提交代码
-    * remark  备注
-    * createdAt  创建时间
-    * updatedAt  更新时间
-    * orderFlag  排序
+    * id  **参数解释：** ip白名单id。
+    * userId  **参数解释：** 用户id。
+    * domainId  **参数解释：** 租户id。
+    * ipRange  **参数解释：** ip范围。
+    * ipType  **参数解释：** 格式类型。 - 0，表示指定IP。 - 1，表示ip范围。 - 2，表示CIDR。
+    * ipStart  **参数解释：** 起始ip。
+    * ipEnd  **参数解释：** 结束ip。
+    * viewFlag  **参数解释：** 是否允许访问代码仓库。 - 0，表示禁止访问。 - 1，表示允许访问。
+    * downloadFlag  **参数解释：** 是否允许下载代码。 - 0，表示禁止下载。 - 1，表示允许下载。
+    * uploadFlag  **参数解释：** 是否允许提交代码。 - 0，表示禁止提交。 - 1，表示允许提交。
+    * remark  **参数解释：** 备注。 **取值范围：** 字符串长度不少于0，不超过200。
+    * createdAt  **参数解释：** 创建时间。 **参数解释：** MMM dd, yyyy hh:mm:ss a
+    * updatedAt  **参数解释：** 更新时间。 **参数解释：** MMM dd, yyyy hh:mm:ss a
+    * orderFlag  **参数解释：** 排序。 - 0，表示默认规则。 - 1，表示自定义规则。
     *
     * @var string[]
     */
@@ -259,7 +259,84 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const IP_TYPE_0 = 0;
+    const IP_TYPE_1 = 1;
+    const IP_TYPE_2 = 2;
+    const VIEW_FLAG_0 = 0;
+    const VIEW_FLAG_1 = 1;
+    const DOWNLOAD_FLAG_0 = 0;
+    const DOWNLOAD_FLAG_1 = 1;
+    const UPLOAD_FLAG_0 = 0;
+    const UPLOAD_FLAG_1 = 1;
+    const ORDER_FLAG_0 = 0;
+    const ORDER_FLAG_1 = 1;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getIpTypeAllowableValues()
+    {
+        return [
+            self::IP_TYPE_0,
+            self::IP_TYPE_1,
+            self::IP_TYPE_2,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getViewFlagAllowableValues()
+    {
+        return [
+            self::VIEW_FLAG_0,
+            self::VIEW_FLAG_1,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getDownloadFlagAllowableValues()
+    {
+        return [
+            self::DOWNLOAD_FLAG_0,
+            self::DOWNLOAD_FLAG_1,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getUploadFlagAllowableValues()
+    {
+        return [
+            self::UPLOAD_FLAG_0,
+            self::UPLOAD_FLAG_1,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getOrderFlagAllowableValues()
+    {
+        return [
+            self::ORDER_FLAG_0,
+            self::ORDER_FLAG_1,
+        ];
+    }
 
 
     /**
@@ -325,6 +402,14 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
             if (!is_null($this->container['ipRange']) && (mb_strlen($this->container['ipRange']) < 1)) {
                 $invalidProperties[] = "invalid value for 'ipRange', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getIpTypeAllowableValues();
+                if (!is_null($this->container['ipType']) && !in_array($this->container['ipType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'ipType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['ipStart']) && (mb_strlen($this->container['ipStart']) > 1000)) {
                 $invalidProperties[] = "invalid value for 'ipStart', the character length must be smaller than or equal to 1000.";
             }
@@ -337,6 +422,30 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
             if (!is_null($this->container['ipEnd']) && (mb_strlen($this->container['ipEnd']) < 0)) {
                 $invalidProperties[] = "invalid value for 'ipEnd', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getViewFlagAllowableValues();
+                if (!is_null($this->container['viewFlag']) && !in_array($this->container['viewFlag'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'viewFlag', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getDownloadFlagAllowableValues();
+                if (!is_null($this->container['downloadFlag']) && !in_array($this->container['downloadFlag'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'downloadFlag', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getUploadFlagAllowableValues();
+                if (!is_null($this->container['uploadFlag']) && !in_array($this->container['uploadFlag'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'uploadFlag', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['remark']) && (mb_strlen($this->container['remark']) > 200)) {
                 $invalidProperties[] = "invalid value for 'remark', the character length must be smaller than or equal to 200.";
             }
@@ -355,12 +464,14 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
             if (!is_null($this->container['updatedAt']) && (mb_strlen($this->container['updatedAt']) < 0)) {
                 $invalidProperties[] = "invalid value for 'updatedAt', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['orderFlag']) && ($this->container['orderFlag'] > 100)) {
-                $invalidProperties[] = "invalid value for 'orderFlag', must be smaller than or equal to 100.";
+            $allowedValues = $this->getOrderFlagAllowableValues();
+                if (!is_null($this->container['orderFlag']) && !in_array($this->container['orderFlag'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'orderFlag', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['orderFlag']) && ($this->container['orderFlag'] < 0)) {
-                $invalidProperties[] = "invalid value for 'orderFlag', must be bigger than or equal to 0.";
-            }
+
         return $invalidProperties;
     }
 
@@ -377,7 +488,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  关联结果
+    *  **参数解释：** ip白名单id。
     *
     * @return string|null
     */
@@ -389,7 +500,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 关联结果
+    * @param string|null $id **参数解释：** ip白名单id。
     *
     * @return $this
     */
@@ -401,7 +512,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  用户id
+    *  **参数解释：** 用户id。
     *
     * @return int|null
     */
@@ -413,7 +524,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param int|null $userId 用户id
+    * @param int|null $userId **参数解释：** 用户id。
     *
     * @return $this
     */
@@ -425,7 +536,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  租户id
+    *  **参数解释：** 租户id。
     *
     * @return string|null
     */
@@ -437,7 +548,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 租户id
+    * @param string|null $domainId **参数解释：** 租户id。
     *
     * @return $this
     */
@@ -449,7 +560,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipRange
-    *  ip范围
+    *  **参数解释：** ip范围。
     *
     * @return string|null
     */
@@ -461,7 +572,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
     /**
     * Sets ipRange
     *
-    * @param string|null $ipRange ip范围
+    * @param string|null $ipRange **参数解释：** ip范围。
     *
     * @return $this
     */
@@ -473,7 +584,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipType
-    *  格式类型，指定ip，ip范围，CIDR
+    *  **参数解释：** 格式类型。 - 0，表示指定IP。 - 1，表示ip范围。 - 2，表示CIDR。
     *
     * @return int|null
     */
@@ -485,7 +596,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
     /**
     * Sets ipType
     *
-    * @param int|null $ipType 格式类型，指定ip，ip范围，CIDR
+    * @param int|null $ipType **参数解释：** 格式类型。 - 0，表示指定IP。 - 1，表示ip范围。 - 2，表示CIDR。
     *
     * @return $this
     */
@@ -497,7 +608,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipStart
-    *  起始ip
+    *  **参数解释：** 起始ip。
     *
     * @return string|null
     */
@@ -509,7 +620,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
     /**
     * Sets ipStart
     *
-    * @param string|null $ipStart 起始ip
+    * @param string|null $ipStart **参数解释：** 起始ip。
     *
     * @return $this
     */
@@ -521,7 +632,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipEnd
-    *  结束ip
+    *  **参数解释：** 结束ip。
     *
     * @return string|null
     */
@@ -533,7 +644,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
     /**
     * Sets ipEnd
     *
-    * @param string|null $ipEnd 结束ip
+    * @param string|null $ipEnd **参数解释：** 结束ip。
     *
     * @return $this
     */
@@ -545,7 +656,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets viewFlag
-    *  是否允许访问代码仓库
+    *  **参数解释：** 是否允许访问代码仓库。 - 0，表示禁止访问。 - 1，表示允许访问。
     *
     * @return int|null
     */
@@ -557,7 +668,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
     /**
     * Sets viewFlag
     *
-    * @param int|null $viewFlag 是否允许访问代码仓库
+    * @param int|null $viewFlag **参数解释：** 是否允许访问代码仓库。 - 0，表示禁止访问。 - 1，表示允许访问。
     *
     * @return $this
     */
@@ -569,7 +680,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets downloadFlag
-    *  是否允许下载代码
+    *  **参数解释：** 是否允许下载代码。 - 0，表示禁止下载。 - 1，表示允许下载。
     *
     * @return int|null
     */
@@ -581,7 +692,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
     /**
     * Sets downloadFlag
     *
-    * @param int|null $downloadFlag 是否允许下载代码
+    * @param int|null $downloadFlag **参数解释：** 是否允许下载代码。 - 0，表示禁止下载。 - 1，表示允许下载。
     *
     * @return $this
     */
@@ -593,7 +704,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets uploadFlag
-    *  是否允许提交代码
+    *  **参数解释：** 是否允许提交代码。 - 0，表示禁止提交。 - 1，表示允许提交。
     *
     * @return int|null
     */
@@ -605,7 +716,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
     /**
     * Sets uploadFlag
     *
-    * @param int|null $uploadFlag 是否允许提交代码
+    * @param int|null $uploadFlag **参数解释：** 是否允许提交代码。 - 0，表示禁止提交。 - 1，表示允许提交。
     *
     * @return $this
     */
@@ -617,7 +728,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets remark
-    *  备注
+    *  **参数解释：** 备注。 **取值范围：** 字符串长度不少于0，不超过200。
     *
     * @return string|null
     */
@@ -629,7 +740,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
     /**
     * Sets remark
     *
-    * @param string|null $remark 备注
+    * @param string|null $remark **参数解释：** 备注。 **取值范围：** 字符串长度不少于0，不超过200。
     *
     * @return $this
     */
@@ -641,7 +752,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  创建时间
+    *  **参数解释：** 创建时间。 **参数解释：** MMM dd, yyyy hh:mm:ss a
     *
     * @return string|null
     */
@@ -653,7 +764,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 创建时间
+    * @param string|null $createdAt **参数解释：** 创建时间。 **参数解释：** MMM dd, yyyy hh:mm:ss a
     *
     * @return $this
     */
@@ -665,7 +776,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  更新时间
+    *  **参数解释：** 更新时间。 **参数解释：** MMM dd, yyyy hh:mm:ss a
     *
     * @return string|null
     */
@@ -677,7 +788,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string|null $updatedAt 更新时间
+    * @param string|null $updatedAt **参数解释：** 更新时间。 **参数解释：** MMM dd, yyyy hh:mm:ss a
     *
     * @return $this
     */
@@ -689,7 +800,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderFlag
-    *  排序
+    *  **参数解释：** 排序。 - 0，表示默认规则。 - 1，表示自定义规则。
     *
     * @return int|null
     */
@@ -701,7 +812,7 @@ class TenantTrustedIpAddressDto implements ModelInterface, ArrayAccess
     /**
     * Sets orderFlag
     *
-    * @param int|null $orderFlag 排序
+    * @param int|null $orderFlag **参数解释：** 排序。 - 0，表示默认规则。 - 1，表示自定义规则。
     *
     * @return $this
     */

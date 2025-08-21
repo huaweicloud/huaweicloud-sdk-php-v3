@@ -20,8 +20,8 @@ class ListTenantTrustedIpAddressesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * offset  偏移量
-    * limit  返回数量
+    * offset  **参数解释：** 偏移量，从0开始。
+    * limit  **参数解释：** 返回数量。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ListTenantTrustedIpAddressesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * offset  偏移量
-    * limit  返回数量
+    * offset  **参数解释：** 偏移量，从0开始。
+    * limit  **参数解释：** 返回数量。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ListTenantTrustedIpAddressesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * offset  偏移量
-    * limit  返回数量
+    * offset  **参数解释：** 偏移量，从0开始。
+    * limit  **参数解释：** 返回数量。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ListTenantTrustedIpAddressesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * offset  偏移量
-    * limit  返回数量
+    * offset  **参数解释：** 偏移量，从0开始。
+    * limit  **参数解释：** 返回数量。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ListTenantTrustedIpAddressesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * offset  偏移量
-    * limit  返回数量
+    * offset  **参数解释：** 偏移量，从0开始。
+    * limit  **参数解释：** 返回数量。
     *
     * @var string[]
     */
@@ -169,6 +169,18 @@ class ListTenantTrustedIpAddressesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -185,7 +197,7 @@ class ListTenantTrustedIpAddressesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量
+    *  **参数解释：** 偏移量，从0开始。
     *
     * @return int|null
     */
@@ -197,7 +209,7 @@ class ListTenantTrustedIpAddressesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量
+    * @param int|null $offset **参数解释：** 偏移量，从0开始。
     *
     * @return $this
     */
@@ -209,7 +221,7 @@ class ListTenantTrustedIpAddressesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  返回数量
+    *  **参数解释：** 返回数量。
     *
     * @return int|null
     */
@@ -221,7 +233,7 @@ class ListTenantTrustedIpAddressesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 返回数量
+    * @param int|null $limit **参数解释：** 返回数量。
     *
     * @return $this
     */

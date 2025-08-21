@@ -20,8 +20,8 @@ class DeleteGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目id
-    * groupId  代码组id
+    * projectId  **参数解释：** 项目的32位uuid，项目唯一标识，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/en-us/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **取值范围：** 字符串长度32。
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DeleteGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目id
-    * groupId  代码组id
+    * projectId  **参数解释：** 项目的32位uuid，项目唯一标识，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/en-us/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **取值范围：** 字符串长度32。
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DeleteGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目id
-    * groupId  代码组id
+    * projectId  **参数解释：** 项目的32位uuid，项目唯一标识，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/en-us/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **取值范围：** 字符串长度32。
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DeleteGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目id
-    * groupId  代码组id
+    * projectId  **参数解释：** 项目的32位uuid，项目唯一标识，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/en-us/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **取值范围：** 字符串长度32。
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DeleteGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目id
-    * groupId  代码组id
+    * projectId  **参数解释：** 项目的32位uuid，项目唯一标识，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/en-us/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **取值范围：** 字符串长度32。
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
     *
     * @var string[]
     */
@@ -203,7 +203,7 @@ class DeleteGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目id
+    *  **参数解释：** 项目的32位uuid，项目唯一标识，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/en-us/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **取值范围：** 字符串长度32。
     *
     * @return string
     */
@@ -215,7 +215,7 @@ class DeleteGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目id
+    * @param string $projectId **参数解释：** 项目的32位uuid，项目唯一标识，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/en-us/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **取值范围：** 字符串长度32。
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class DeleteGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  代码组id
+    *  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
     *
     * @return int
     */
@@ -239,7 +239,7 @@ class DeleteGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param int $groupId 代码组id
+    * @param int $groupId **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
     *
     * @return $this
     */

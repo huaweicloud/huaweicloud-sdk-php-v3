@@ -22,28 +22,28 @@ class ListAiOpsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  指定待查询的集群ID。
     * limit  分页参数，列表当前分页的数量限制。
-    * start  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
             'limit' => 'int',
-            'start' => 'int'
+            'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  指定待查询的集群ID。
     * limit  分页参数，列表当前分页的数量限制。
-    * start  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'clusterId' => null,
         'limit' => null,
-        'start' => null
+        'offset' => null
     ];
 
     /**
@@ -71,42 +71,42 @@ class ListAiOpsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clusterId  指定待查询的集群ID。
     * limit  分页参数，列表当前分页的数量限制。
-    * start  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
             'limit' => 'limit',
-            'start' => 'start'
+            'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  指定待查询的集群ID。
     * limit  分页参数，列表当前分页的数量限制。
-    * start  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     *
     * @var string[]
     */
     protected static $setters = [
             'clusterId' => 'setClusterId',
             'limit' => 'setLimit',
-            'start' => 'setStart'
+            'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  指定待查询的集群ID。
     * limit  分页参数，列表当前分页的数量限制。
-    * start  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     *
     * @var string[]
     */
     protected static $getters = [
             'clusterId' => 'getClusterId',
             'limit' => 'getLimit',
-            'start' => 'getStart'
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -169,7 +169,7 @@ class ListAiOpsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['start'] = isset($data['start']) ? $data['start'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**
@@ -246,26 +246,26 @@ class ListAiOpsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets start
+    * Gets offset
     *  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     *
     * @return int|null
     */
-    public function getStart()
+    public function getOffset()
     {
-        return $this->container['start'];
+        return $this->container['offset'];
     }
 
     /**
-    * Sets start
+    * Sets offset
     *
-    * @param int|null $start 偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * @param int|null $offset 偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     *
     * @return $this
     */
-    public function setStart($start)
+    public function setOffset($offset)
     {
-        $this->container['start'] = $start;
+        $this->container['offset'] = $offset;
         return $this;
     }
 

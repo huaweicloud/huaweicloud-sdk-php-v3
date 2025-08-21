@@ -20,7 +20,7 @@ class ListManagedAccountsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * controlId  启用的控制策略信息。
+    * controlId  控制策略ID。
     * limit  分页页面的最大值。
     * marker  页面标记。
     *
@@ -34,7 +34,7 @@ class ListManagedAccountsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * controlId  启用的控制策略信息。
+    * controlId  控制策略ID。
     * limit  分页页面的最大值。
     * marker  页面标记。
     *
@@ -69,7 +69,7 @@ class ListManagedAccountsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * controlId  启用的控制策略信息。
+    * controlId  控制策略ID。
     * limit  分页页面的最大值。
     * marker  页面标记。
     *
@@ -83,7 +83,7 @@ class ListManagedAccountsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * controlId  启用的控制策略信息。
+    * controlId  控制策略ID。
     * limit  分页页面的最大值。
     * marker  页面标记。
     *
@@ -97,7 +97,7 @@ class ListManagedAccountsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * controlId  启用的控制策略信息。
+    * controlId  控制策略ID。
     * limit  分页页面的最大值。
     * marker  页面标记。
     *
@@ -220,7 +220,7 @@ class ListManagedAccountsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets controlId
-    *  启用的控制策略信息。
+    *  控制策略ID。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class ListManagedAccountsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets controlId
     *
-    * @param string|null $controlId 启用的控制策略信息。
+    * @param string|null $controlId 控制策略ID。
     *
     * @return $this
     */

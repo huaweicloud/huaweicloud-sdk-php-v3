@@ -21,7 +21,7 @@ class UpgradeDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  待升级的集群的ID。
-    * start  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * limit  查询返回终端节点服务的连接列表限制每页个数，即每页返回的个数。
     * actionMode  查询升级行为。 - 查询集群版本升级详情：不填写该参数。 - 查询切换AZ详情：当前仅支持AZ_MIGRATION。
     *
@@ -29,7 +29,7 @@ class UpgradeDetailRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
-            'start' => 'int',
+            'offset' => 'int',
             'limit' => 'int',
             'actionMode' => 'string'
     ];
@@ -37,7 +37,7 @@ class UpgradeDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  待升级的集群的ID。
-    * start  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * limit  查询返回终端节点服务的连接列表限制每页个数，即每页返回的个数。
     * actionMode  查询升级行为。 - 查询集群版本升级详情：不填写该参数。 - 查询切换AZ详情：当前仅支持AZ_MIGRATION。
     *
@@ -45,7 +45,7 @@ class UpgradeDetailRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'clusterId' => null,
-        'start' => null,
+        'offset' => null,
         'limit' => null,
         'actionMode' => null
     ];
@@ -74,7 +74,7 @@ class UpgradeDetailRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterId  待升级的集群的ID。
-    * start  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * limit  查询返回终端节点服务的连接列表限制每页个数，即每页返回的个数。
     * actionMode  查询升级行为。 - 查询集群版本升级详情：不填写该参数。 - 查询切换AZ详情：当前仅支持AZ_MIGRATION。
     *
@@ -82,7 +82,7 @@ class UpgradeDetailRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
-            'start' => 'start',
+            'offset' => 'offset',
             'limit' => 'limit',
             'actionMode' => 'action_mode'
     ];
@@ -90,7 +90,7 @@ class UpgradeDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  待升级的集群的ID。
-    * start  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * limit  查询返回终端节点服务的连接列表限制每页个数，即每页返回的个数。
     * actionMode  查询升级行为。 - 查询集群版本升级详情：不填写该参数。 - 查询切换AZ详情：当前仅支持AZ_MIGRATION。
     *
@@ -98,7 +98,7 @@ class UpgradeDetailRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'clusterId' => 'setClusterId',
-            'start' => 'setStart',
+            'offset' => 'setOffset',
             'limit' => 'setLimit',
             'actionMode' => 'setActionMode'
     ];
@@ -106,7 +106,7 @@ class UpgradeDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  待升级的集群的ID。
-    * start  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * limit  查询返回终端节点服务的连接列表限制每页个数，即每页返回的个数。
     * actionMode  查询升级行为。 - 查询集群版本升级详情：不填写该参数。 - 查询切换AZ详情：当前仅支持AZ_MIGRATION。
     *
@@ -114,7 +114,7 @@ class UpgradeDetailRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'clusterId' => 'getClusterId',
-            'start' => 'getStart',
+            'offset' => 'getOffset',
             'limit' => 'getLimit',
             'actionMode' => 'getActionMode'
     ];
@@ -178,7 +178,7 @@ class UpgradeDetailRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
-        $this->container['start'] = isset($data['start']) ? $data['start'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['actionMode'] = isset($data['actionMode']) ? $data['actionMode'] : null;
     }
@@ -233,26 +233,26 @@ class UpgradeDetailRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets start
+    * Gets offset
     *  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     *
     * @return int|null
     */
-    public function getStart()
+    public function getOffset()
     {
-        return $this->container['start'];
+        return $this->container['offset'];
     }
 
     /**
-    * Sets start
+    * Sets offset
     *
-    * @param int|null $start 偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * @param int|null $offset 偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     *
     * @return $this
     */
-    public function setStart($start)
+    public function setOffset($offset)
     {
-        $this->container['start'] = $start;
+        $this->container['offset'] = $offset;
         return $this;
     }
 

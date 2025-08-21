@@ -23,13 +23,17 @@ class UpdateSnapshotSettingReq implements ModelInterface, ArrayAccess
     * bucket  备份使用的OBS桶的桶名。
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * basePath  快照在OBS桶中的存放路径。
+    * maxSnapshotBytesPerSeconds  配置每个节点的最大备份速率（每秒），即当备份的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际备份速率不一定能达到该值，会受OBS、磁盘等影响。
+    * maxRestoreBytesPerSeconds  配置每个节点的最大恢复速率（每秒），即当恢复的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际恢复速率不一定能达到该值，会受OBS、磁盘等影响。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'bucket' => 'string',
             'agency' => 'string',
-            'basePath' => 'string'
+            'basePath' => 'string',
+            'maxSnapshotBytesPerSeconds' => 'string',
+            'maxRestoreBytesPerSeconds' => 'string'
     ];
 
     /**
@@ -37,13 +41,17 @@ class UpdateSnapshotSettingReq implements ModelInterface, ArrayAccess
     * bucket  备份使用的OBS桶的桶名。
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * basePath  快照在OBS桶中的存放路径。
+    * maxSnapshotBytesPerSeconds  配置每个节点的最大备份速率（每秒），即当备份的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际备份速率不一定能达到该值，会受OBS、磁盘等影响。
+    * maxRestoreBytesPerSeconds  配置每个节点的最大恢复速率（每秒），即当恢复的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际恢复速率不一定能达到该值，会受OBS、磁盘等影响。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'bucket' => null,
         'agency' => null,
-        'basePath' => null
+        'basePath' => null,
+        'maxSnapshotBytesPerSeconds' => null,
+        'maxRestoreBytesPerSeconds' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class UpdateSnapshotSettingReq implements ModelInterface, ArrayAccess
     * bucket  备份使用的OBS桶的桶名。
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * basePath  快照在OBS桶中的存放路径。
+    * maxSnapshotBytesPerSeconds  配置每个节点的最大备份速率（每秒），即当备份的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际备份速率不一定能达到该值，会受OBS、磁盘等影响。
+    * maxRestoreBytesPerSeconds  配置每个节点的最大恢复速率（每秒），即当恢复的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际恢复速率不一定能达到该值，会受OBS、磁盘等影响。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'bucket' => 'bucket',
             'agency' => 'agency',
-            'basePath' => 'base_path'
+            'basePath' => 'base_path',
+            'maxSnapshotBytesPerSeconds' => 'maxSnapshotBytesPerSeconds',
+            'maxRestoreBytesPerSeconds' => 'maxRestoreBytesPerSeconds'
     ];
 
     /**
@@ -86,13 +98,17 @@ class UpdateSnapshotSettingReq implements ModelInterface, ArrayAccess
     * bucket  备份使用的OBS桶的桶名。
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * basePath  快照在OBS桶中的存放路径。
+    * maxSnapshotBytesPerSeconds  配置每个节点的最大备份速率（每秒），即当备份的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际备份速率不一定能达到该值，会受OBS、磁盘等影响。
+    * maxRestoreBytesPerSeconds  配置每个节点的最大恢复速率（每秒），即当恢复的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际恢复速率不一定能达到该值，会受OBS、磁盘等影响。
     *
     * @var string[]
     */
     protected static $setters = [
             'bucket' => 'setBucket',
             'agency' => 'setAgency',
-            'basePath' => 'setBasePath'
+            'basePath' => 'setBasePath',
+            'maxSnapshotBytesPerSeconds' => 'setMaxSnapshotBytesPerSeconds',
+            'maxRestoreBytesPerSeconds' => 'setMaxRestoreBytesPerSeconds'
     ];
 
     /**
@@ -100,13 +116,17 @@ class UpdateSnapshotSettingReq implements ModelInterface, ArrayAccess
     * bucket  备份使用的OBS桶的桶名。
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * basePath  快照在OBS桶中的存放路径。
+    * maxSnapshotBytesPerSeconds  配置每个节点的最大备份速率（每秒），即当备份的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际备份速率不一定能达到该值，会受OBS、磁盘等影响。
+    * maxRestoreBytesPerSeconds  配置每个节点的最大恢复速率（每秒），即当恢复的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际恢复速率不一定能达到该值，会受OBS、磁盘等影响。
     *
     * @var string[]
     */
     protected static $getters = [
             'bucket' => 'getBucket',
             'agency' => 'getAgency',
-            'basePath' => 'getBasePath'
+            'basePath' => 'getBasePath',
+            'maxSnapshotBytesPerSeconds' => 'getMaxSnapshotBytesPerSeconds',
+            'maxRestoreBytesPerSeconds' => 'getMaxRestoreBytesPerSeconds'
     ];
 
     /**
@@ -170,6 +190,8 @@ class UpdateSnapshotSettingReq implements ModelInterface, ArrayAccess
         $this->container['bucket'] = isset($data['bucket']) ? $data['bucket'] : null;
         $this->container['agency'] = isset($data['agency']) ? $data['agency'] : null;
         $this->container['basePath'] = isset($data['basePath']) ? $data['basePath'] : null;
+        $this->container['maxSnapshotBytesPerSeconds'] = isset($data['maxSnapshotBytesPerSeconds']) ? $data['maxSnapshotBytesPerSeconds'] : null;
+        $this->container['maxRestoreBytesPerSeconds'] = isset($data['maxRestoreBytesPerSeconds']) ? $data['maxRestoreBytesPerSeconds'] : null;
     }
 
     /**
@@ -272,6 +294,54 @@ class UpdateSnapshotSettingReq implements ModelInterface, ArrayAccess
     public function setBasePath($basePath)
     {
         $this->container['basePath'] = $basePath;
+        return $this;
+    }
+
+    /**
+    * Gets maxSnapshotBytesPerSeconds
+    *  配置每个节点的最大备份速率（每秒），即当备份的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际备份速率不一定能达到该值，会受OBS、磁盘等影响。
+    *
+    * @return string|null
+    */
+    public function getMaxSnapshotBytesPerSeconds()
+    {
+        return $this->container['maxSnapshotBytesPerSeconds'];
+    }
+
+    /**
+    * Sets maxSnapshotBytesPerSeconds
+    *
+    * @param string|null $maxSnapshotBytesPerSeconds 配置每个节点的最大备份速率（每秒），即当备份的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际备份速率不一定能达到该值，会受OBS、磁盘等影响。
+    *
+    * @return $this
+    */
+    public function setMaxSnapshotBytesPerSeconds($maxSnapshotBytesPerSeconds)
+    {
+        $this->container['maxSnapshotBytesPerSeconds'] = $maxSnapshotBytesPerSeconds;
+        return $this;
+    }
+
+    /**
+    * Gets maxRestoreBytesPerSeconds
+    *  配置每个节点的最大恢复速率（每秒），即当恢复的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际恢复速率不一定能达到该值，会受OBS、磁盘等影响。
+    *
+    * @return string|null
+    */
+    public function getMaxRestoreBytesPerSeconds()
+    {
+        return $this->container['maxRestoreBytesPerSeconds'];
+    }
+
+    /**
+    * Sets maxRestoreBytesPerSeconds
+    *
+    * @param string|null $maxRestoreBytesPerSeconds 配置每个节点的最大恢复速率（每秒），即当恢复的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际恢复速率不一定能达到该值，会受OBS、磁盘等影响。
+    *
+    * @return $this
+    */
+    public function setMaxRestoreBytesPerSeconds($maxRestoreBytesPerSeconds)
+    {
+        $this->container['maxRestoreBytesPerSeconds'] = $maxRestoreBytesPerSeconds;
         return $this;
     }
 

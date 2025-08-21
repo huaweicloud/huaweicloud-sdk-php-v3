@@ -20,7 +20,7 @@ class TargetControl implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * controlIdentifier  控制策略标识。
     * state  控制策略启用状态。
     * version  控制策略当前版本号。
@@ -28,11 +28,11 @@ class TargetControl implements ModelInterface, ArrayAccess
     * description  控制策略描述信息。
     * controlObjective  控制策略目标。
     * behavior  控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
-    * owner  纳管账号的创建来源，包括CUSTOM和RGC。
+    * owner  控制策略来源。
     * regionalPreference  区域选项，取值有两种分别是：区域的regional和全局的global。
     * guidance  控制策略必须性。
     * service  控制策略所属服务。
-    * implementation  服务控制策略（SCP），配置规则。
+    * implementation  策略类别。
     *
     * @var string[]
     */
@@ -54,7 +54,7 @@ class TargetControl implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * controlIdentifier  控制策略标识。
     * state  控制策略启用状态。
     * version  控制策略当前版本号。
@@ -62,11 +62,11 @@ class TargetControl implements ModelInterface, ArrayAccess
     * description  控制策略描述信息。
     * controlObjective  控制策略目标。
     * behavior  控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
-    * owner  纳管账号的创建来源，包括CUSTOM和RGC。
+    * owner  控制策略来源。
     * regionalPreference  区域选项，取值有两种分别是：区域的regional和全局的global。
     * guidance  控制策略必须性。
     * service  控制策略所属服务。
-    * implementation  服务控制策略（SCP），配置规则。
+    * implementation  策略类别。
     *
     * @var string[]
     */
@@ -109,7 +109,7 @@ class TargetControl implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * controlIdentifier  控制策略标识。
     * state  控制策略启用状态。
     * version  控制策略当前版本号。
@@ -117,11 +117,11 @@ class TargetControl implements ModelInterface, ArrayAccess
     * description  控制策略描述信息。
     * controlObjective  控制策略目标。
     * behavior  控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
-    * owner  纳管账号的创建来源，包括CUSTOM和RGC。
+    * owner  控制策略来源。
     * regionalPreference  区域选项，取值有两种分别是：区域的regional和全局的global。
     * guidance  控制策略必须性。
     * service  控制策略所属服务。
-    * implementation  服务控制策略（SCP），配置规则。
+    * implementation  策略类别。
     *
     * @var string[]
     */
@@ -143,7 +143,7 @@ class TargetControl implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * controlIdentifier  控制策略标识。
     * state  控制策略启用状态。
     * version  控制策略当前版本号。
@@ -151,11 +151,11 @@ class TargetControl implements ModelInterface, ArrayAccess
     * description  控制策略描述信息。
     * controlObjective  控制策略目标。
     * behavior  控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
-    * owner  纳管账号的创建来源，包括CUSTOM和RGC。
+    * owner  控制策略来源。
     * regionalPreference  区域选项，取值有两种分别是：区域的regional和全局的global。
     * guidance  控制策略必须性。
     * service  控制策略所属服务。
-    * implementation  服务控制策略（SCP），配置规则。
+    * implementation  策略类别。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class TargetControl implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * controlIdentifier  控制策略标识。
     * state  控制策略启用状态。
     * version  控制策略当前版本号。
@@ -185,11 +185,11 @@ class TargetControl implements ModelInterface, ArrayAccess
     * description  控制策略描述信息。
     * controlObjective  控制策略目标。
     * behavior  控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
-    * owner  纳管账号的创建来源，包括CUSTOM和RGC。
+    * owner  控制策略来源。
     * regionalPreference  区域选项，取值有两种分别是：区域的regional和全局的global。
     * guidance  控制策略必须性。
     * service  控制策略所属服务。
-    * implementation  服务控制策略（SCP），配置规则。
+    * implementation  策略类别。
     *
     * @var string[]
     */
@@ -384,7 +384,7 @@ class TargetControl implements ModelInterface, ArrayAccess
 
     /**
     * Gets manageAccountId
-    *  管理纳管账号ID。
+    *  管理员账号ID。
     *
     * @return string|null
     */
@@ -396,7 +396,7 @@ class TargetControl implements ModelInterface, ArrayAccess
     /**
     * Sets manageAccountId
     *
-    * @param string|null $manageAccountId 管理纳管账号ID。
+    * @param string|null $manageAccountId 管理员账号ID。
     *
     * @return $this
     */
@@ -576,7 +576,7 @@ class TargetControl implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
-    *  纳管账号的创建来源，包括CUSTOM和RGC。
+    *  控制策略来源。
     *
     * @return string|null
     */
@@ -588,7 +588,7 @@ class TargetControl implements ModelInterface, ArrayAccess
     /**
     * Sets owner
     *
-    * @param string|null $owner 纳管账号的创建来源，包括CUSTOM和RGC。
+    * @param string|null $owner 控制策略来源。
     *
     * @return $this
     */
@@ -672,7 +672,7 @@ class TargetControl implements ModelInterface, ArrayAccess
 
     /**
     * Gets implementation
-    *  服务控制策略（SCP），配置规则。
+    *  策略类别。
     *
     * @return string|null
     */
@@ -684,7 +684,7 @@ class TargetControl implements ModelInterface, ArrayAccess
     /**
     * Sets implementation
     *
-    * @param string|null $implementation 服务控制策略（SCP），配置规则。
+    * @param string|null $implementation 策略类别。
     *
     * @return $this
     */

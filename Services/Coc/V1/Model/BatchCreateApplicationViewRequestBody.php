@@ -20,9 +20,9 @@ class BatchCreateApplicationViewRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * applicationList  应用列表
-    * componentList  组件列表
-    * groupList  分组列表
+    * applicationList  **参数解释：** 应用信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * componentList  **参数解释：** 组件信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * groupList  **参数解释：** 分组信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class BatchCreateApplicationViewRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * applicationList  应用列表
-    * componentList  组件列表
-    * groupList  分组列表
+    * applicationList  **参数解释：** 应用信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * componentList  **参数解释：** 组件信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * groupList  **参数解释：** 分组信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class BatchCreateApplicationViewRequestBody implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * applicationList  应用列表
-    * componentList  组件列表
-    * groupList  分组列表
+    * applicationList  **参数解释：** 应用信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * componentList  **参数解释：** 组件信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * groupList  **参数解释：** 分组信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class BatchCreateApplicationViewRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * applicationList  应用列表
-    * componentList  组件列表
-    * groupList  分组列表
+    * applicationList  **参数解释：** 应用信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * componentList  **参数解释：** 组件信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * groupList  **参数解释：** 分组信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class BatchCreateApplicationViewRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * applicationList  应用列表
-    * componentList  组件列表
-    * groupList  分组列表
+    * applicationList  **参数解释：** 应用信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * componentList  **参数解释：** 组件信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * groupList  **参数解释：** 分组信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -199,7 +199,7 @@ class BatchCreateApplicationViewRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Gets applicationList
-    *  应用列表
+    *  **参数解释：** 应用信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewRequestBodyApplicationList[]
     */
@@ -211,7 +211,7 @@ class BatchCreateApplicationViewRequestBody implements ModelInterface, ArrayAcce
     /**
     * Sets applicationList
     *
-    * @param \HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewRequestBodyApplicationList[] $applicationList 应用列表
+    * @param \HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewRequestBodyApplicationList[] $applicationList **参数解释：** 应用信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -223,7 +223,7 @@ class BatchCreateApplicationViewRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Gets componentList
-    *  组件列表
+    *  **参数解释：** 组件信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewRequestBodyComponentList[]|null
     */
@@ -235,7 +235,7 @@ class BatchCreateApplicationViewRequestBody implements ModelInterface, ArrayAcce
     /**
     * Sets componentList
     *
-    * @param \HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewRequestBodyComponentList[]|null $componentList 组件列表
+    * @param \HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewRequestBodyComponentList[]|null $componentList **参数解释：** 组件信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class BatchCreateApplicationViewRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Gets groupList
-    *  分组列表
+    *  **参数解释：** 分组信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewRequestBodyGroupList[]|null
     */
@@ -259,7 +259,7 @@ class BatchCreateApplicationViewRequestBody implements ModelInterface, ArrayAcce
     /**
     * Sets groupList
     *
-    * @param \HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewRequestBodyGroupList[]|null $groupList 分组列表
+    * @param \HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewRequestBodyGroupList[]|null $groupList **参数解释：** 分组信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */

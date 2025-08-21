@@ -20,7 +20,7 @@ class ChangeEastWestFirewallStatusResponseData implements ModelInterface, ArrayA
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  东西向防护对象ID，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * id  **参数解释**： VPC边界防护对象id **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ChangeEastWestFirewallStatusResponseData implements ModelInterface, ArrayA
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  东西向防护对象ID，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * id  **参数解释**： VPC边界防护对象id **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ChangeEastWestFirewallStatusResponseData implements ModelInterface, ArrayA
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  东西向防护对象ID，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * id  **参数解释**： VPC边界防护对象id **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ChangeEastWestFirewallStatusResponseData implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  东西向防护对象ID，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * id  **参数解释**： VPC边界防护对象id **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ChangeEastWestFirewallStatusResponseData implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  东西向防护对象ID，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * id  **参数解释**： VPC边界防护对象id **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class ChangeEastWestFirewallStatusResponseData implements ModelInterface, ArrayA
 
     /**
     * Gets id
-    *  东西向防护对象ID，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    *  **参数解释**： VPC边界防护对象id **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class ChangeEastWestFirewallStatusResponseData implements ModelInterface, ArrayA
     /**
     * Sets id
     *
-    * @param string|null $id 东西向防护对象ID，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * @param string|null $id **参数解释**： VPC边界防护对象id **取值范围**： 不涉及
     *
     * @return $this
     */

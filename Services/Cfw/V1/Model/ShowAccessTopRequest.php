@@ -22,8 +22,8 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * fwInstanceId  **参数解释**： 防火墙ID，用户创建防火墙实例后产生的唯一ID，配置后可区分不同防火墙，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
-    * direction  **参数解释**： 会话方向 **约束限制**： 不涉及 **取值范围**： in2out为出云方向 out2in为入云方向 **默认取值**： 不涉及
     * range  **参数解释**： 时间范围  **约束限制**： 不涉及 **取值范围**： 0为近一时 1近一天 2近七天   **默认取值**： 不涉及
+    * direction  **参数解释**： 会话方向 **约束限制**： 不涉及 **取值范围**： in2out为出云方向 out2in为入云方向 **默认取值**： 不涉及
     * startTime  **参数解释**： 开始时间 **约束限制**： 不涉及 **取值范围**： 毫秒级时间戳 **默认取值**： 不涉及
     * endTime  **参数解释**： 结束时间 **约束限制**： 不涉及 **取值范围**： 毫秒级时间戳 **默认取值**： 不涉及
     * vgwId  **参数解释**： VGW ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
@@ -36,8 +36,8 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'projectId' => 'string',
             'fwInstanceId' => 'string',
-            'direction' => 'string',
             'range' => 'int',
+            'direction' => 'string',
             'startTime' => 'int',
             'endTime' => 'int',
             'vgwId' => 'string[]',
@@ -50,8 +50,8 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * fwInstanceId  **参数解释**： 防火墙ID，用户创建防火墙实例后产生的唯一ID，配置后可区分不同防火墙，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
-    * direction  **参数解释**： 会话方向 **约束限制**： 不涉及 **取值范围**： in2out为出云方向 out2in为入云方向 **默认取值**： 不涉及
     * range  **参数解释**： 时间范围  **约束限制**： 不涉及 **取值范围**： 0为近一时 1近一天 2近七天   **默认取值**： 不涉及
+    * direction  **参数解释**： 会话方向 **约束限制**： 不涉及 **取值范围**： in2out为出云方向 out2in为入云方向 **默认取值**： 不涉及
     * startTime  **参数解释**： 开始时间 **约束限制**： 不涉及 **取值范围**： 毫秒级时间戳 **默认取值**： 不涉及
     * endTime  **参数解释**： 结束时间 **约束限制**： 不涉及 **取值范围**： 毫秒级时间戳 **默认取值**： 不涉及
     * vgwId  **参数解释**： VGW ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
@@ -64,8 +64,8 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'projectId' => null,
         'fwInstanceId' => null,
-        'direction' => null,
         'range' => 'int32',
+        'direction' => null,
         'startTime' => 'int64',
         'endTime' => 'int64',
         'vgwId' => null,
@@ -99,8 +99,8 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * fwInstanceId  **参数解释**： 防火墙ID，用户创建防火墙实例后产生的唯一ID，配置后可区分不同防火墙，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
-    * direction  **参数解释**： 会话方向 **约束限制**： 不涉及 **取值范围**： in2out为出云方向 out2in为入云方向 **默认取值**： 不涉及
     * range  **参数解释**： 时间范围  **约束限制**： 不涉及 **取值范围**： 0为近一时 1近一天 2近七天   **默认取值**： 不涉及
+    * direction  **参数解释**： 会话方向 **约束限制**： 不涉及 **取值范围**： in2out为出云方向 out2in为入云方向 **默认取值**： 不涉及
     * startTime  **参数解释**： 开始时间 **约束限制**： 不涉及 **取值范围**： 毫秒级时间戳 **默认取值**： 不涉及
     * endTime  **参数解释**： 结束时间 **约束限制**： 不涉及 **取值范围**： 毫秒级时间戳 **默认取值**： 不涉及
     * vgwId  **参数解释**： VGW ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
@@ -113,8 +113,8 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'projectId' => 'project_id',
             'fwInstanceId' => 'fw_instance_id',
-            'direction' => 'direction',
             'range' => 'range',
+            'direction' => 'direction',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'vgwId' => 'vgw_id',
@@ -127,8 +127,8 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * fwInstanceId  **参数解释**： 防火墙ID，用户创建防火墙实例后产生的唯一ID，配置后可区分不同防火墙，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
-    * direction  **参数解释**： 会话方向 **约束限制**： 不涉及 **取值范围**： in2out为出云方向 out2in为入云方向 **默认取值**： 不涉及
     * range  **参数解释**： 时间范围  **约束限制**： 不涉及 **取值范围**： 0为近一时 1近一天 2近七天   **默认取值**： 不涉及
+    * direction  **参数解释**： 会话方向 **约束限制**： 不涉及 **取值范围**： in2out为出云方向 out2in为入云方向 **默认取值**： 不涉及
     * startTime  **参数解释**： 开始时间 **约束限制**： 不涉及 **取值范围**： 毫秒级时间戳 **默认取值**： 不涉及
     * endTime  **参数解释**： 结束时间 **约束限制**： 不涉及 **取值范围**： 毫秒级时间戳 **默认取值**： 不涉及
     * vgwId  **参数解释**： VGW ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
@@ -141,8 +141,8 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'projectId' => 'setProjectId',
             'fwInstanceId' => 'setFwInstanceId',
-            'direction' => 'setDirection',
             'range' => 'setRange',
+            'direction' => 'setDirection',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'vgwId' => 'setVgwId',
@@ -155,8 +155,8 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * fwInstanceId  **参数解释**： 防火墙ID，用户创建防火墙实例后产生的唯一ID，配置后可区分不同防火墙，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
-    * direction  **参数解释**： 会话方向 **约束限制**： 不涉及 **取值范围**： in2out为出云方向 out2in为入云方向 **默认取值**： 不涉及
     * range  **参数解释**： 时间范围  **约束限制**： 不涉及 **取值范围**： 0为近一时 1近一天 2近七天   **默认取值**： 不涉及
+    * direction  **参数解释**： 会话方向 **约束限制**： 不涉及 **取值范围**： in2out为出云方向 out2in为入云方向 **默认取值**： 不涉及
     * startTime  **参数解释**： 开始时间 **约束限制**： 不涉及 **取值范围**： 毫秒级时间戳 **默认取值**： 不涉及
     * endTime  **参数解释**： 结束时间 **约束限制**： 不涉及 **取值范围**： 毫秒级时间戳 **默认取值**： 不涉及
     * vgwId  **参数解释**： VGW ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
@@ -169,8 +169,8 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'projectId' => 'getProjectId',
             'fwInstanceId' => 'getFwInstanceId',
-            'direction' => 'getDirection',
             'range' => 'getRange',
+            'direction' => 'getDirection',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'vgwId' => 'getVgwId',
@@ -219,11 +219,11 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const DIRECTION_IN2OUT = 'in2out';
-    const DIRECTION_OUT2IN = 'out2in';
     const RANGE_0 = 0;
     const RANGE_1 = 1;
     const RANGE_2 = 2;
+    const DIRECTION_IN2OUT = 'in2out';
+    const DIRECTION_OUT2IN = 'out2in';
     const LOG_TYPE_INTERNET = 'internet';
     const LOG_TYPE_NAT = 'nat';
     const LOG_TYPE_VPC = 'vpc';
@@ -243,11 +243,12 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
     *
     * @return string[]
     */
-    public function getDirectionAllowableValues()
+    public function getRangeAllowableValues()
     {
         return [
-            self::DIRECTION_IN2OUT,
-            self::DIRECTION_OUT2IN,
+            self::RANGE_0,
+            self::RANGE_1,
+            self::RANGE_2,
         ];
     }
 
@@ -256,12 +257,11 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
     *
     * @return string[]
     */
-    public function getRangeAllowableValues()
+    public function getDirectionAllowableValues()
     {
         return [
-            self::RANGE_0,
-            self::RANGE_1,
-            self::RANGE_2,
+            self::DIRECTION_IN2OUT,
+            self::DIRECTION_OUT2IN,
         ];
     }
 
@@ -317,8 +317,8 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
     {
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['fwInstanceId'] = isset($data['fwInstanceId']) ? $data['fwInstanceId'] : null;
-        $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;
         $this->container['range'] = isset($data['range']) ? $data['range'] : null;
+        $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['vgwId'] = isset($data['vgwId']) ? $data['vgwId'] : null;
@@ -347,17 +347,9 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
         if ($this->container['fwInstanceId'] === null) {
             $invalidProperties[] = "'fwInstanceId' can't be null";
         }
-            if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/", $this->container['fwInstanceId'])) {
-                $invalidProperties[] = "invalid value for 'fwInstanceId', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.";
+            if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/", $this->container['fwInstanceId'])) {
+                $invalidProperties[] = "invalid value for 'fwInstanceId', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/.";
             }
-            $allowedValues = $this->getDirectionAllowableValues();
-                if (!is_null($this->container['direction']) && !in_array($this->container['direction'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'direction', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             $allowedValues = $this->getRangeAllowableValues();
                 if (!is_null($this->container['range']) && !in_array($this->container['range'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -366,14 +358,22 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['startTime']) && ($this->container['startTime'] > 4294967295000)) {
-                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 4294967295000.";
+            $allowedValues = $this->getDirectionAllowableValues();
+                if (!is_null($this->container['direction']) && !in_array($this->container['direction'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'direction', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['startTime']) && ($this->container['startTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 9223372036854775807.";
             }
             if (!is_null($this->container['startTime']) && ($this->container['startTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'startTime', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['endTime']) && ($this->container['endTime'] > 4294967295000)) {
-                $invalidProperties[] = "invalid value for 'endTime', must be smaller than or equal to 4294967295000.";
+            if (!is_null($this->container['endTime']) && ($this->container['endTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'endTime', must be smaller than or equal to 9223372036854775807.";
             }
             if (!is_null($this->container['endTime']) && ($this->container['endTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'endTime', must be bigger than or equal to 0.";
@@ -460,30 +460,6 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets direction
-    *  **参数解释**： 会话方向 **约束限制**： 不涉及 **取值范围**： in2out为出云方向 out2in为入云方向 **默认取值**： 不涉及
-    *
-    * @return string|null
-    */
-    public function getDirection()
-    {
-        return $this->container['direction'];
-    }
-
-    /**
-    * Sets direction
-    *
-    * @param string|null $direction **参数解释**： 会话方向 **约束限制**： 不涉及 **取值范围**： in2out为出云方向 out2in为入云方向 **默认取值**： 不涉及
-    *
-    * @return $this
-    */
-    public function setDirection($direction)
-    {
-        $this->container['direction'] = $direction;
-        return $this;
-    }
-
-    /**
     * Gets range
     *  **参数解释**： 时间范围  **约束限制**： 不涉及 **取值范围**： 0为近一时 1近一天 2近七天   **默认取值**： 不涉及
     *
@@ -504,6 +480,30 @@ class ShowAccessTopRequest implements ModelInterface, ArrayAccess
     public function setRange($range)
     {
         $this->container['range'] = $range;
+        return $this;
+    }
+
+    /**
+    * Gets direction
+    *  **参数解释**： 会话方向 **约束限制**： 不涉及 **取值范围**： in2out为出云方向 out2in为入云方向 **默认取值**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getDirection()
+    {
+        return $this->container['direction'];
+    }
+
+    /**
+    * Sets direction
+    *
+    * @param string|null $direction **参数解释**： 会话方向 **约束限制**： 不涉及 **取值范围**： in2out为出云方向 out2in为入云方向 **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setDirection($direction)
+    {
+        $this->container['direction'] = $direction;
         return $this;
     }
 

@@ -26,7 +26,7 @@ class ListCustomerIpsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\HttpListCustomerIpsResponseData'
+            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\CustomerIpsPageInfo'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ListCustomerIpsResponse implements ModelInterface, ArrayAccess
     * Gets data
     *  data
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\HttpListCustomerIpsResponseData|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\CustomerIpsPageInfo|null
     */
     public function getData()
     {
@@ -187,7 +187,7 @@ class ListCustomerIpsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\HttpListCustomerIpsResponseData|null $data data
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\CustomerIpsPageInfo|null $data data
     *
     * @return $this
     */

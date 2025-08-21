@@ -41,8 +41,8 @@ class EngineReference implements ModelInterface, ArrayAccess
             'subnetCidrV6' => 'string',
             'subnetGateway' => 'string',
             'publicIpId' => 'string',
-            'serviceLimit' => 'int',
-            'instanceLimit' => 'int',
+            'serviceLimit' => 'string',
+            'instanceLimit' => 'string',
             'inputs' => 'map[string,string]'
     ];
 
@@ -69,8 +69,8 @@ class EngineReference implements ModelInterface, ArrayAccess
         'subnetCidrV6' => null,
         'subnetGateway' => null,
         'publicIpId' => null,
-        'serviceLimit' => 'int32',
-        'instanceLimit' => 'int32',
+        'serviceLimit' => null,
+        'instanceLimit' => null,
         'inputs' => null
     ];
 
@@ -443,7 +443,7 @@ class EngineReference implements ModelInterface, ArrayAccess
     * Gets serviceLimit
     *  微服务引擎可支持的微服务总数
     *
-    * @return int|null
+    * @return string|null
     */
     public function getServiceLimit()
     {
@@ -453,7 +453,7 @@ class EngineReference implements ModelInterface, ArrayAccess
     /**
     * Sets serviceLimit
     *
-    * @param int|null $serviceLimit 微服务引擎可支持的微服务总数
+    * @param string|null $serviceLimit 微服务引擎可支持的微服务总数
     *
     * @return $this
     */
@@ -467,7 +467,7 @@ class EngineReference implements ModelInterface, ArrayAccess
     * Gets instanceLimit
     *  微服务引擎可支持的实例总数
     *
-    * @return int|null
+    * @return string|null
     */
     public function getInstanceLimit()
     {
@@ -477,7 +477,7 @@ class EngineReference implements ModelInterface, ArrayAccess
     /**
     * Sets instanceLimit
     *
-    * @param int|null $instanceLimit 微服务引擎可支持的实例总数
+    * @param string|null $instanceLimit 微服务引擎可支持的实例总数
     *
     * @return $this
     */

@@ -25,7 +25,7 @@ class EnableControlRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Rgc\V1\Model\ControlOperateReqBody'
+            'body' => '\HuaweiCloud\SDK\Rgc\V1\Model\EnableControlOperateReqBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class EnableControlRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Rgc\V1\Model\ControlOperateReqBody|null
+    * @return \HuaweiCloud\SDK\Rgc\V1\Model\EnableControlOperateReqBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class EnableControlRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Rgc\V1\Model\ControlOperateReqBody|null $body body
+    * @param \HuaweiCloud\SDK\Rgc\V1\Model\EnableControlOperateReqBody|null $body body
     *
     * @return $this
     */

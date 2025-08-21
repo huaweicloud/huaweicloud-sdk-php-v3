@@ -20,8 +20,8 @@ class ManagedAccount implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * landingZoneVersion  Landing Zone版本。
-    * manageAccountId  管理纳管账号ID。
+    * landingZoneVersion  纳管账号的Landing Zone版本。
+    * manageAccountId  管理员账号ID。
     * accountId  纳管账号ID。
     * accountName  纳管账号名称。
     * accountType  纳管账号类型。
@@ -36,8 +36,8 @@ class ManagedAccount implements ModelInterface, ArrayAccess
     * blueprintStatus  模板部署状态，包括失败, 完成, 进行中。
     * isBlueprintHasMultiAccountResource  模板是否包含多账号资源。
     * regions  区域信息。
-    * createdAt  组织里某个注册OU下的纳管账号被创建的时间。
-    * updatedAt  组织里某个注册OU下的纳管账号最后一次更新的时间。
+    * createdAt  纳管账号的创建时间。
+    * updatedAt  纳管账号的更新时间。
     *
     * @var string[]
     */
@@ -64,8 +64,8 @@ class ManagedAccount implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * landingZoneVersion  Landing Zone版本。
-    * manageAccountId  管理纳管账号ID。
+    * landingZoneVersion  纳管账号的Landing Zone版本。
+    * manageAccountId  管理员账号ID。
     * accountId  纳管账号ID。
     * accountName  纳管账号名称。
     * accountType  纳管账号类型。
@@ -80,8 +80,8 @@ class ManagedAccount implements ModelInterface, ArrayAccess
     * blueprintStatus  模板部署状态，包括失败, 完成, 进行中。
     * isBlueprintHasMultiAccountResource  模板是否包含多账号资源。
     * regions  区域信息。
-    * createdAt  组织里某个注册OU下的纳管账号被创建的时间。
-    * updatedAt  组织里某个注册OU下的纳管账号最后一次更新的时间。
+    * createdAt  纳管账号的创建时间。
+    * updatedAt  纳管账号的更新时间。
     *
     * @var string[]
     */
@@ -129,8 +129,8 @@ class ManagedAccount implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * landingZoneVersion  Landing Zone版本。
-    * manageAccountId  管理纳管账号ID。
+    * landingZoneVersion  纳管账号的Landing Zone版本。
+    * manageAccountId  管理员账号ID。
     * accountId  纳管账号ID。
     * accountName  纳管账号名称。
     * accountType  纳管账号类型。
@@ -145,8 +145,8 @@ class ManagedAccount implements ModelInterface, ArrayAccess
     * blueprintStatus  模板部署状态，包括失败, 完成, 进行中。
     * isBlueprintHasMultiAccountResource  模板是否包含多账号资源。
     * regions  区域信息。
-    * createdAt  组织里某个注册OU下的纳管账号被创建的时间。
-    * updatedAt  组织里某个注册OU下的纳管账号最后一次更新的时间。
+    * createdAt  纳管账号的创建时间。
+    * updatedAt  纳管账号的更新时间。
     *
     * @var string[]
     */
@@ -173,8 +173,8 @@ class ManagedAccount implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * landingZoneVersion  Landing Zone版本。
-    * manageAccountId  管理纳管账号ID。
+    * landingZoneVersion  纳管账号的Landing Zone版本。
+    * manageAccountId  管理员账号ID。
     * accountId  纳管账号ID。
     * accountName  纳管账号名称。
     * accountType  纳管账号类型。
@@ -189,8 +189,8 @@ class ManagedAccount implements ModelInterface, ArrayAccess
     * blueprintStatus  模板部署状态，包括失败, 完成, 进行中。
     * isBlueprintHasMultiAccountResource  模板是否包含多账号资源。
     * regions  区域信息。
-    * createdAt  组织里某个注册OU下的纳管账号被创建的时间。
-    * updatedAt  组织里某个注册OU下的纳管账号最后一次更新的时间。
+    * createdAt  纳管账号的创建时间。
+    * updatedAt  纳管账号的更新时间。
     *
     * @var string[]
     */
@@ -217,8 +217,8 @@ class ManagedAccount implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * landingZoneVersion  Landing Zone版本。
-    * manageAccountId  管理纳管账号ID。
+    * landingZoneVersion  纳管账号的Landing Zone版本。
+    * manageAccountId  管理员账号ID。
     * accountId  纳管账号ID。
     * accountName  纳管账号名称。
     * accountType  纳管账号类型。
@@ -233,8 +233,8 @@ class ManagedAccount implements ModelInterface, ArrayAccess
     * blueprintStatus  模板部署状态，包括失败, 完成, 进行中。
     * isBlueprintHasMultiAccountResource  模板是否包含多账号资源。
     * regions  区域信息。
-    * createdAt  组织里某个注册OU下的纳管账号被创建的时间。
-    * updatedAt  组织里某个注册OU下的纳管账号最后一次更新的时间。
+    * createdAt  纳管账号的创建时间。
+    * updatedAt  纳管账号的更新时间。
     *
     * @var string[]
     */
@@ -445,7 +445,7 @@ class ManagedAccount implements ModelInterface, ArrayAccess
 
     /**
     * Gets landingZoneVersion
-    *  Landing Zone版本。
+    *  纳管账号的Landing Zone版本。
     *
     * @return string|null
     */
@@ -457,7 +457,7 @@ class ManagedAccount implements ModelInterface, ArrayAccess
     /**
     * Sets landingZoneVersion
     *
-    * @param string|null $landingZoneVersion Landing Zone版本。
+    * @param string|null $landingZoneVersion 纳管账号的Landing Zone版本。
     *
     * @return $this
     */
@@ -469,7 +469,7 @@ class ManagedAccount implements ModelInterface, ArrayAccess
 
     /**
     * Gets manageAccountId
-    *  管理纳管账号ID。
+    *  管理员账号ID。
     *
     * @return string|null
     */
@@ -481,7 +481,7 @@ class ManagedAccount implements ModelInterface, ArrayAccess
     /**
     * Sets manageAccountId
     *
-    * @param string|null $manageAccountId 管理纳管账号ID。
+    * @param string|null $manageAccountId 管理员账号ID。
     *
     * @return $this
     */
@@ -829,7 +829,7 @@ class ManagedAccount implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  组织里某个注册OU下的纳管账号被创建的时间。
+    *  纳管账号的创建时间。
     *
     * @return \DateTime|null
     */
@@ -841,7 +841,7 @@ class ManagedAccount implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param \DateTime|null $createdAt 组织里某个注册OU下的纳管账号被创建的时间。
+    * @param \DateTime|null $createdAt 纳管账号的创建时间。
     *
     * @return $this
     */
@@ -853,7 +853,7 @@ class ManagedAccount implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  组织里某个注册OU下的纳管账号最后一次更新的时间。
+    *  纳管账号的更新时间。
     *
     * @return \DateTime|null
     */
@@ -865,7 +865,7 @@ class ManagedAccount implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param \DateTime|null $updatedAt 组织里某个注册OU下的纳管账号最后一次更新的时间。
+    * @param \DateTime|null $updatedAt 纳管账号的更新时间。
     *
     * @return $this
     */

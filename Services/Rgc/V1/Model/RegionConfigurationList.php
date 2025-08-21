@@ -21,7 +21,7 @@ class RegionConfigurationList implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * region  区域名字。
-    * regionConfigurationStatus  纳管账号类型LOGGING,SECURITY。
+    * regionConfigurationStatus  区域状态。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class RegionConfigurationList implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * region  区域名字。
-    * regionConfigurationStatus  纳管账号类型LOGGING,SECURITY。
+    * regionConfigurationStatus  区域状态。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class RegionConfigurationList implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * region  区域名字。
-    * regionConfigurationStatus  纳管账号类型LOGGING,SECURITY。
+    * regionConfigurationStatus  区域状态。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class RegionConfigurationList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * region  区域名字。
-    * regionConfigurationStatus  纳管账号类型LOGGING,SECURITY。
+    * regionConfigurationStatus  区域状态。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class RegionConfigurationList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * region  区域名字。
-    * regionConfigurationStatus  纳管账号类型LOGGING,SECURITY。
+    * regionConfigurationStatus  区域状态。
     *
     * @var string[]
     */
@@ -247,7 +247,7 @@ class RegionConfigurationList implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionConfigurationStatus
-    *  纳管账号类型LOGGING,SECURITY。
+    *  区域状态。
     *
     * @return string
     */
@@ -259,7 +259,7 @@ class RegionConfigurationList implements ModelInterface, ArrayAccess
     /**
     * Sets regionConfigurationStatus
     *
-    * @param string $regionConfigurationStatus 纳管账号类型LOGGING,SECURITY。
+    * @param string $regionConfigurationStatus 区域状态。
     *
     * @return $this
     */

@@ -45,7 +45,7 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'parentId' => null,
+        'parentId' => 'int32',
         'visibility' => null,
         'description' => null
     ];
@@ -206,10 +206,13 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 256)) {
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+            if ((mb_strlen($this->container['name']) > 256)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+            if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['parentId']) && ($this->container['parentId'] > 2147483647)) {
@@ -250,7 +253,7 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
     * Gets name
     *  代码组名称
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -260,7 +263,7 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 代码组名称
+    * @param string $name 代码组名称
     *
     * @return $this
     */

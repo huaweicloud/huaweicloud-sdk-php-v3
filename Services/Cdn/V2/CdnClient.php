@@ -27,6 +27,71 @@ class CdnClient extends Client
 
 
     /**
+     * 应用域名模板。
+     *
+     * 应用域名模板。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function applyDomainTemplate($request)
+    {
+        return $this->applyDomainTemplateWithHttpInfo($request);
+    }
+
+    public function applyDomainTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/cdn/configuration/templates/{tml_id}/apply';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['tmlId'] !== null) {
+            $pathParams['tml_id'] = $localVarParams['tmlId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ApplyDomainTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ApplyDomainTemplateRequest');
+    }
+
+    /**
      * 批量域名复制
      *
      * 批量域名复制接口。
@@ -276,6 +341,68 @@ class CdnClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\CreateDomainResponse',
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\CreateDomainRequest');
+    }
+
+    /**
+     * 创建域名模板。
+     *
+     * 创建域名模板。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createDomainTemplate($request)
+    {
+        return $this->createDomainTemplateWithHttpInfo($request);
+    }
+
+    public function createDomainTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/cdn/configuration/templates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\CreateDomainTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\CreateDomainTemplateRequest');
     }
 
     /**
@@ -664,6 +791,68 @@ class CdnClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\DeleteDomainResponse',
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\DeleteDomainRequest');
+    }
+
+    /**
+     * 删除域名模板。
+     *
+     * 删除域名模板。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDomainTemplate($request)
+    {
+        return $this->deleteDomainTemplateWithHttpInfo($request);
+    }
+
+    public function deleteDomainTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/cdn/configuration/templates/{tml_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['tmlId'] !== null) {
+            $pathParams['tml_id'] = $localVarParams['tmlId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\DeleteDomainTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\DeleteDomainTemplateRequest');
     }
 
     /**
@@ -1550,6 +1739,80 @@ class CdnClient extends Client
     }
 
     /**
+     * 查询域名模板应用记录。
+     *
+     * 查询域名模板应用记录。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAppliedTemplateRecord($request)
+    {
+        return $this->showAppliedTemplateRecordWithHttpInfo($request);
+    }
+
+    public function showAppliedTemplateRecordWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/cdn/configuration/tml-apply-records';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['tmlId'] !== null) {
+            $queryParams['tml_id'] = $localVarParams['tmlId'];
+        }
+        if ($localVarParams['tmlName'] !== null) {
+            $queryParams['tml_name'] = $localVarParams['tmlName'];
+        }
+        if ($localVarParams['operatorId'] !== null) {
+            $queryParams['operator_id'] = $localVarParams['operatorId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowAppliedTemplateRecordResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowAppliedTemplateRecordRequest');
+    }
+
+    /**
      * 查询域名带宽峰值类数据
      *
      * - 查询域名带宽峰值类数据。
@@ -2121,6 +2384,80 @@ class CdnClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowDomainStatsResponse',
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowDomainStatsRequest');
+    }
+
+    /**
+     * 查询域名模板列表
+     *
+     * 查询域名模板列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDomainTemplate($request)
+    {
+        return $this->showDomainTemplateWithHttpInfo($request);
+    }
+
+    public function showDomainTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/cdn/configuration/templates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['tmlName'] !== null) {
+            $queryParams['tml_name'] = $localVarParams['tmlName'];
+        }
+        if ($localVarParams['tmlId'] !== null) {
+            $queryParams['tml_id'] = $localVarParams['tmlId'];
+        }
+        if ($localVarParams['tmlType'] !== null) {
+            $queryParams['tml_type'] = $localVarParams['tmlType'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowDomainTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowDomainTemplateRequest');
     }
 
     /**
@@ -3009,6 +3346,71 @@ class CdnClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdateDomainMultiCertificatesResponse',
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdateDomainMultiCertificatesRequest');
+    }
+
+    /**
+     * 修改域名模板。
+     *
+     * 修改域名模板。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDomainTemplate($request)
+    {
+        return $this->updateDomainTemplateWithHttpInfo($request);
+    }
+
+    public function updateDomainTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/cdn/configuration/templates/{tml_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['tmlId'] !== null) {
+            $pathParams['tml_id'] = $localVarParams['tmlId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdateDomainTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdateDomainTemplateRequest');
     }
 
     /**

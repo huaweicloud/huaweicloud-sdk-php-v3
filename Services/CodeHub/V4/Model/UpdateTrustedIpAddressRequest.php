@@ -20,8 +20,8 @@ class UpdateTrustedIpAddressRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  仓库id
-    * ipId  ip的id
+    * id  **参数解释：** 仓库id，代码仓首页，Repository ID后的数字Id。
+    * ipId  **参数解释：** ip白名单id。
     * body  body
     *
     * @var string[]
@@ -34,8 +34,8 @@ class UpdateTrustedIpAddressRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  仓库id
-    * ipId  ip的id
+    * id  **参数解释：** 仓库id，代码仓首页，Repository ID后的数字Id。
+    * ipId  **参数解释：** ip白名单id。
     * body  body
     *
     * @var string[]
@@ -69,8 +69,8 @@ class UpdateTrustedIpAddressRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  仓库id
-    * ipId  ip的id
+    * id  **参数解释：** 仓库id，代码仓首页，Repository ID后的数字Id。
+    * ipId  **参数解释：** ip白名单id。
     * body  body
     *
     * @var string[]
@@ -83,8 +83,8 @@ class UpdateTrustedIpAddressRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  仓库id
-    * ipId  ip的id
+    * id  **参数解释：** 仓库id，代码仓首页，Repository ID后的数字Id。
+    * ipId  **参数解释：** ip白名单id。
     * body  body
     *
     * @var string[]
@@ -97,8 +97,8 @@ class UpdateTrustedIpAddressRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  仓库id
-    * ipId  ip的id
+    * id  **参数解释：** 仓库id，代码仓首页，Repository ID后的数字Id。
+    * ipId  **参数解释：** ip白名单id。
     * body  body
     *
     * @var string[]
@@ -214,7 +214,7 @@ class UpdateTrustedIpAddressRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  仓库id
+    *  **参数解释：** 仓库id，代码仓首页，Repository ID后的数字Id。
     *
     * @return int
     */
@@ -226,7 +226,7 @@ class UpdateTrustedIpAddressRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int $id 仓库id
+    * @param int $id **参数解释：** 仓库id，代码仓首页，Repository ID后的数字Id。
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class UpdateTrustedIpAddressRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipId
-    *  ip的id
+    *  **参数解释：** ip白名单id。
     *
     * @return int
     */
@@ -250,7 +250,7 @@ class UpdateTrustedIpAddressRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ipId
     *
-    * @param int $ipId ip的id
+    * @param int $ipId **参数解释：** ip白名单id。
     *
     * @return $this
     */

@@ -21,22 +21,30 @@ class BatchCreateApplicationViewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * applicationIds  **参数解释：** 应用id列表。 **取值范围：** 不涉及。
+    * componentIds  **参数解释：** 组件id列表。 **取值范围：** 不涉及。
+    * groupIds  **参数解释：** 分组id列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'object'
+            'applicationIds' => 'string[]',
+            'componentIds' => 'string[]',
+            'groupIds' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * applicationIds  **参数解释：** 应用id列表。 **取值范围：** 不涉及。
+    * componentIds  **参数解释：** 组件id列表。 **取值范围：** 不涉及。
+    * groupIds  **参数解释：** 分组id列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'applicationIds' => null,
+        'componentIds' => null,
+        'groupIds' => null
     ];
 
     /**
@@ -62,32 +70,44 @@ class BatchCreateApplicationViewResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * applicationIds  **参数解释：** 应用id列表。 **取值范围：** 不涉及。
+    * componentIds  **参数解释：** 组件id列表。 **取值范围：** 不涉及。
+    * groupIds  **参数解释：** 分组id列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'applicationIds' => 'application_ids',
+            'componentIds' => 'component_ids',
+            'groupIds' => 'group_ids'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * applicationIds  **参数解释：** 应用id列表。 **取值范围：** 不涉及。
+    * componentIds  **参数解释：** 组件id列表。 **取值范围：** 不涉及。
+    * groupIds  **参数解释：** 分组id列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'applicationIds' => 'setApplicationIds',
+            'componentIds' => 'setComponentIds',
+            'groupIds' => 'setGroupIds'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * applicationIds  **参数解释：** 应用id列表。 **取值范围：** 不涉及。
+    * componentIds  **参数解释：** 组件id列表。 **取值范围：** 不涉及。
+    * groupIds  **参数解释：** 分组id列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'applicationIds' => 'getApplicationIds',
+            'componentIds' => 'getComponentIds',
+            'groupIds' => 'getGroupIds'
     ];
 
     /**
@@ -148,7 +168,9 @@ class BatchCreateApplicationViewResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['applicationIds'] = isset($data['applicationIds']) ? $data['applicationIds'] : null;
+        $this->container['componentIds'] = isset($data['componentIds']) ? $data['componentIds'] : null;
+        $this->container['groupIds'] = isset($data['groupIds']) ? $data['groupIds'] : null;
     }
 
     /**
@@ -174,26 +196,74 @@ class BatchCreateApplicationViewResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets applicationIds
+    *  **参数解释：** 应用id列表。 **取值范围：** 不涉及。
     *
-    * @return object|null
+    * @return string[]|null
     */
-    public function getBody()
+    public function getApplicationIds()
     {
-        return $this->container['body'];
+        return $this->container['applicationIds'];
     }
 
     /**
-    * Sets body
+    * Sets applicationIds
     *
-    * @param object|null $body body
+    * @param string[]|null $applicationIds **参数解释：** 应用id列表。 **取值范围：** 不涉及。
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setApplicationIds($applicationIds)
     {
-        $this->container['body'] = $body;
+        $this->container['applicationIds'] = $applicationIds;
+        return $this;
+    }
+
+    /**
+    * Gets componentIds
+    *  **参数解释：** 组件id列表。 **取值范围：** 不涉及。
+    *
+    * @return string[]|null
+    */
+    public function getComponentIds()
+    {
+        return $this->container['componentIds'];
+    }
+
+    /**
+    * Sets componentIds
+    *
+    * @param string[]|null $componentIds **参数解释：** 组件id列表。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setComponentIds($componentIds)
+    {
+        $this->container['componentIds'] = $componentIds;
+        return $this;
+    }
+
+    /**
+    * Gets groupIds
+    *  **参数解释：** 分组id列表。 **取值范围：** 不涉及。
+    *
+    * @return string[]|null
+    */
+    public function getGroupIds()
+    {
+        return $this->container['groupIds'];
+    }
+
+    /**
+    * Sets groupIds
+    *
+    * @param string[]|null $groupIds **参数解释：** 分组id列表。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setGroupIds($groupIds)
+    {
+        $this->container['groupIds'] = $groupIds;
         return $this;
     }
 

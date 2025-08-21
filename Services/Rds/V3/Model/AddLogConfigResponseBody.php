@@ -20,7 +20,7 @@ class AddLogConfigResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * logConfigs  实例日志配置信息。
+    * logConfigs  实例日志配置信息，最多20条。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class AddLogConfigResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * logConfigs  实例日志配置信息。
+    * logConfigs  实例日志配置信息，最多20条。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class AddLogConfigResponseBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * logConfigs  实例日志配置信息。
+    * logConfigs  实例日志配置信息，最多20条。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class AddLogConfigResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * logConfigs  实例日志配置信息。
+    * logConfigs  实例日志配置信息，最多20条。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class AddLogConfigResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * logConfigs  实例日志配置信息。
+    * logConfigs  实例日志配置信息，最多20条。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class AddLogConfigResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets logConfigs
-    *  实例日志配置信息。
+    *  实例日志配置信息，最多20条。
     *
     * @return \HuaweiCloud\SDK\Rds\V3\Model\AddLogConfigs[]
     */
@@ -189,7 +189,7 @@ class AddLogConfigResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets logConfigs
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\AddLogConfigs[] $logConfigs 实例日志配置信息。
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\AddLogConfigs[] $logConfigs 实例日志配置信息，最多20条。
     *
     * @return $this
     */

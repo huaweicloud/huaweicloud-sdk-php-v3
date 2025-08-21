@@ -20,22 +20,22 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  动作（0：只记录日志，1：重置/拦截）
-    * affectedOs  操作系统
-    * attackType  攻击类型
-    * configStatus  规则状态（0：初始化，1：配置中，2：配置成功，3：配置失败）
-    * content  内容json存储
-    * dstPortType  目的端口类型
-    * dstPorts  目的端口
-    * groupId  防火墙集群id
-    * ipsCfwId  cfw侧自定义ips规则id
-    * ipsId  山石侧规则id
-    * ipsName  ips规则名称
-    * protocol  协议
-    * severity  严重程度（critical：致命，high：高危，medium:中危，low:低危）
-    * software  影响软件
-    * srcPortType  源端口类型
-    * srcPorts  源端口
+    * action  **参数解释**： 动作 **取值范围**： 0：只记录日志，1：重置/拦截
+    * affectedOs  **参数解释**： 影响操作系统 **取值范围**： 0 any、1 Windows、2 Linux、3 FreeBSD、4 Solaris、5 other Unix、6 网络设备、7 Mac OS、8 ios、9 android、10 others
+    * attackType  **参数解释**： 攻击类型 **约束限制**： 不涉及 **取值范围**： 1：访问控制、2：漏洞扫描、3：邮件攻击、4：漏洞攻击、5：Web攻击、6：密码攻击、7：劫持攻击、8：协议异常、9：特洛伊木马、10：蠕虫、11：缓冲区溢出、12：黑客工具、13：间谍软件、14：DDos泛洪、15：应用层DDos攻击、16：其他可疑行为、17：可疑DNS活动、18：网络钓鱼、19：垃圾邮件、20：其他攻击 **默认取值**： 不涉及
+    * configStatus  **参数解释**： 规则状态 **取值范围**： 0：初始化，1：配置中，2：配置成功，3：配置失败
+    * content  **参数解释**： 匹配IPS攻击的内容 **取值范围**： 不涉及
+    * dstPortType  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
+    * dstPorts  **参数解释**： 端口 **取值范围**： 1 - 65535
+    * ipsCfwId  **参数解释**： cfw侧自定义IPS规则id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
+    * ipsId  **参数解释**： ips规则id **取值范围**： 不涉及
+    * ipsName  **参数解释**： ips规则名称 **取值范围**： 不涉及
+    * protocol  **参数解释**： 协议类型 **取值范围**： 1 FTP、2 TELNET、3 SMTP、4 DNS_TCP、5 DNS_UDP、6 DHCP、7 TFTP、8 FINGER、9 HTTP、10 POP3、11 SUNRPC_TCP、12 SUNRPC_UDP、13 NNTP、14 MSRPC_TCP、15 MSRPC_UDP、16 NETBIOS_NAME_TCP、17 NETBIOS_NAME_UDP、18 NETBIOS_SMB、19 NETBIOS_DATAGRAM、20 IMAP4、21 SNMP、22 LDAP、23 MSSQL、24 ORACLE
+    * severity  **参数解释**： 严重程度 **取值范围**： critical：致命，high：高危，medium:中危，low:低危
+    * software  **参数解释**： 影响软件 **取值范围**： 0 ANY、1 ADOBE、2 APACHE、3 APPLE、4 CA、5 CISCO、6 GOOGLE_CHROME、7 HP、8 IBM、9 IE、10 IIS、11 MC_AFEE、12 MEDIA_PLAYER、13 MICROSOFT_NET、14 MICROSOFT_EDGE、15 MICROSOFT_EXCHANGE、16 MICROSOFT_OFFICE、17 MICROSOFT_OUTLOOK、18 MICROSOFT_SHARE_POINT、19 MICROSOFT_WINDOWS、20 MOZILLA、21 MSSQL、22 MYSQL、23 NOVELL、24 ORACLE、25 SAMBA、26 SAMSUNG、27 SAP、28 SCADA、29 SQUID、30 SUN、31 SYMANTEC、32 TREND_MICRO、33 VMWARE、34 WORD_PRESS、35 Others
+    * srcPortType  **参数解释**： 端口类型，-1 Any，0 包含，1 排除 **取值范围**： 不涉及
+    * srcPorts  **参数解释**： 端口 **取值范围**： 不涉及
+    * groupId  **参数解释**： 集群ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -47,7 +47,6 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
             'content' => 'string',
             'dstPortType' => 'int',
             'dstPorts' => 'string',
-            'groupId' => 'string',
             'ipsCfwId' => 'string',
             'ipsId' => 'string',
             'ipsName' => 'string',
@@ -55,27 +54,28 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
             'severity' => 'int',
             'software' => 'int',
             'srcPortType' => 'int',
-            'srcPorts' => 'string'
+            'srcPorts' => 'string',
+            'groupId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  动作（0：只记录日志，1：重置/拦截）
-    * affectedOs  操作系统
-    * attackType  攻击类型
-    * configStatus  规则状态（0：初始化，1：配置中，2：配置成功，3：配置失败）
-    * content  内容json存储
-    * dstPortType  目的端口类型
-    * dstPorts  目的端口
-    * groupId  防火墙集群id
-    * ipsCfwId  cfw侧自定义ips规则id
-    * ipsId  山石侧规则id
-    * ipsName  ips规则名称
-    * protocol  协议
-    * severity  严重程度（critical：致命，high：高危，medium:中危，low:低危）
-    * software  影响软件
-    * srcPortType  源端口类型
-    * srcPorts  源端口
+    * action  **参数解释**： 动作 **取值范围**： 0：只记录日志，1：重置/拦截
+    * affectedOs  **参数解释**： 影响操作系统 **取值范围**： 0 any、1 Windows、2 Linux、3 FreeBSD、4 Solaris、5 other Unix、6 网络设备、7 Mac OS、8 ios、9 android、10 others
+    * attackType  **参数解释**： 攻击类型 **约束限制**： 不涉及 **取值范围**： 1：访问控制、2：漏洞扫描、3：邮件攻击、4：漏洞攻击、5：Web攻击、6：密码攻击、7：劫持攻击、8：协议异常、9：特洛伊木马、10：蠕虫、11：缓冲区溢出、12：黑客工具、13：间谍软件、14：DDos泛洪、15：应用层DDos攻击、16：其他可疑行为、17：可疑DNS活动、18：网络钓鱼、19：垃圾邮件、20：其他攻击 **默认取值**： 不涉及
+    * configStatus  **参数解释**： 规则状态 **取值范围**： 0：初始化，1：配置中，2：配置成功，3：配置失败
+    * content  **参数解释**： 匹配IPS攻击的内容 **取值范围**： 不涉及
+    * dstPortType  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
+    * dstPorts  **参数解释**： 端口 **取值范围**： 1 - 65535
+    * ipsCfwId  **参数解释**： cfw侧自定义IPS规则id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
+    * ipsId  **参数解释**： ips规则id **取值范围**： 不涉及
+    * ipsName  **参数解释**： ips规则名称 **取值范围**： 不涉及
+    * protocol  **参数解释**： 协议类型 **取值范围**： 1 FTP、2 TELNET、3 SMTP、4 DNS_TCP、5 DNS_UDP、6 DHCP、7 TFTP、8 FINGER、9 HTTP、10 POP3、11 SUNRPC_TCP、12 SUNRPC_UDP、13 NNTP、14 MSRPC_TCP、15 MSRPC_UDP、16 NETBIOS_NAME_TCP、17 NETBIOS_NAME_UDP、18 NETBIOS_SMB、19 NETBIOS_DATAGRAM、20 IMAP4、21 SNMP、22 LDAP、23 MSSQL、24 ORACLE
+    * severity  **参数解释**： 严重程度 **取值范围**： critical：致命，high：高危，medium:中危，low:低危
+    * software  **参数解释**： 影响软件 **取值范围**： 0 ANY、1 ADOBE、2 APACHE、3 APPLE、4 CA、5 CISCO、6 GOOGLE_CHROME、7 HP、8 IBM、9 IE、10 IIS、11 MC_AFEE、12 MEDIA_PLAYER、13 MICROSOFT_NET、14 MICROSOFT_EDGE、15 MICROSOFT_EXCHANGE、16 MICROSOFT_OFFICE、17 MICROSOFT_OUTLOOK、18 MICROSOFT_SHARE_POINT、19 MICROSOFT_WINDOWS、20 MOZILLA、21 MSSQL、22 MYSQL、23 NOVELL、24 ORACLE、25 SAMBA、26 SAMSUNG、27 SAP、28 SCADA、29 SQUID、30 SUN、31 SYMANTEC、32 TREND_MICRO、33 VMWARE、34 WORD_PRESS、35 Others
+    * srcPortType  **参数解释**： 端口类型，-1 Any，0 包含，1 排除 **取值范围**： 不涉及
+    * srcPorts  **参数解释**： 端口 **取值范围**： 不涉及
+    * groupId  **参数解释**： 集群ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -87,7 +87,6 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
         'content' => null,
         'dstPortType' => 'int32',
         'dstPorts' => null,
-        'groupId' => null,
         'ipsCfwId' => null,
         'ipsId' => null,
         'ipsName' => null,
@@ -95,7 +94,8 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
         'severity' => 'int32',
         'software' => 'int32',
         'srcPortType' => 'int32',
-        'srcPorts' => null
+        'srcPorts' => null,
+        'groupId' => null
     ];
 
     /**
@@ -121,22 +121,22 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  动作（0：只记录日志，1：重置/拦截）
-    * affectedOs  操作系统
-    * attackType  攻击类型
-    * configStatus  规则状态（0：初始化，1：配置中，2：配置成功，3：配置失败）
-    * content  内容json存储
-    * dstPortType  目的端口类型
-    * dstPorts  目的端口
-    * groupId  防火墙集群id
-    * ipsCfwId  cfw侧自定义ips规则id
-    * ipsId  山石侧规则id
-    * ipsName  ips规则名称
-    * protocol  协议
-    * severity  严重程度（critical：致命，high：高危，medium:中危，low:低危）
-    * software  影响软件
-    * srcPortType  源端口类型
-    * srcPorts  源端口
+    * action  **参数解释**： 动作 **取值范围**： 0：只记录日志，1：重置/拦截
+    * affectedOs  **参数解释**： 影响操作系统 **取值范围**： 0 any、1 Windows、2 Linux、3 FreeBSD、4 Solaris、5 other Unix、6 网络设备、7 Mac OS、8 ios、9 android、10 others
+    * attackType  **参数解释**： 攻击类型 **约束限制**： 不涉及 **取值范围**： 1：访问控制、2：漏洞扫描、3：邮件攻击、4：漏洞攻击、5：Web攻击、6：密码攻击、7：劫持攻击、8：协议异常、9：特洛伊木马、10：蠕虫、11：缓冲区溢出、12：黑客工具、13：间谍软件、14：DDos泛洪、15：应用层DDos攻击、16：其他可疑行为、17：可疑DNS活动、18：网络钓鱼、19：垃圾邮件、20：其他攻击 **默认取值**： 不涉及
+    * configStatus  **参数解释**： 规则状态 **取值范围**： 0：初始化，1：配置中，2：配置成功，3：配置失败
+    * content  **参数解释**： 匹配IPS攻击的内容 **取值范围**： 不涉及
+    * dstPortType  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
+    * dstPorts  **参数解释**： 端口 **取值范围**： 1 - 65535
+    * ipsCfwId  **参数解释**： cfw侧自定义IPS规则id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
+    * ipsId  **参数解释**： ips规则id **取值范围**： 不涉及
+    * ipsName  **参数解释**： ips规则名称 **取值范围**： 不涉及
+    * protocol  **参数解释**： 协议类型 **取值范围**： 1 FTP、2 TELNET、3 SMTP、4 DNS_TCP、5 DNS_UDP、6 DHCP、7 TFTP、8 FINGER、9 HTTP、10 POP3、11 SUNRPC_TCP、12 SUNRPC_UDP、13 NNTP、14 MSRPC_TCP、15 MSRPC_UDP、16 NETBIOS_NAME_TCP、17 NETBIOS_NAME_UDP、18 NETBIOS_SMB、19 NETBIOS_DATAGRAM、20 IMAP4、21 SNMP、22 LDAP、23 MSSQL、24 ORACLE
+    * severity  **参数解释**： 严重程度 **取值范围**： critical：致命，high：高危，medium:中危，low:低危
+    * software  **参数解释**： 影响软件 **取值范围**： 0 ANY、1 ADOBE、2 APACHE、3 APPLE、4 CA、5 CISCO、6 GOOGLE_CHROME、7 HP、8 IBM、9 IE、10 IIS、11 MC_AFEE、12 MEDIA_PLAYER、13 MICROSOFT_NET、14 MICROSOFT_EDGE、15 MICROSOFT_EXCHANGE、16 MICROSOFT_OFFICE、17 MICROSOFT_OUTLOOK、18 MICROSOFT_SHARE_POINT、19 MICROSOFT_WINDOWS、20 MOZILLA、21 MSSQL、22 MYSQL、23 NOVELL、24 ORACLE、25 SAMBA、26 SAMSUNG、27 SAP、28 SCADA、29 SQUID、30 SUN、31 SYMANTEC、32 TREND_MICRO、33 VMWARE、34 WORD_PRESS、35 Others
+    * srcPortType  **参数解释**： 端口类型，-1 Any，0 包含，1 排除 **取值范围**： 不涉及
+    * srcPorts  **参数解释**： 端口 **取值范围**： 不涉及
+    * groupId  **参数解释**： 集群ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -148,7 +148,6 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
             'content' => 'content',
             'dstPortType' => 'dst_port_type',
             'dstPorts' => 'dst_ports',
-            'groupId' => 'group_id',
             'ipsCfwId' => 'ips_cfw_id',
             'ipsId' => 'ips_id',
             'ipsName' => 'ips_name',
@@ -156,27 +155,28 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
             'severity' => 'severity',
             'software' => 'software',
             'srcPortType' => 'src_port_type',
-            'srcPorts' => 'src_ports'
+            'srcPorts' => 'src_ports',
+            'groupId' => 'group_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  动作（0：只记录日志，1：重置/拦截）
-    * affectedOs  操作系统
-    * attackType  攻击类型
-    * configStatus  规则状态（0：初始化，1：配置中，2：配置成功，3：配置失败）
-    * content  内容json存储
-    * dstPortType  目的端口类型
-    * dstPorts  目的端口
-    * groupId  防火墙集群id
-    * ipsCfwId  cfw侧自定义ips规则id
-    * ipsId  山石侧规则id
-    * ipsName  ips规则名称
-    * protocol  协议
-    * severity  严重程度（critical：致命，high：高危，medium:中危，low:低危）
-    * software  影响软件
-    * srcPortType  源端口类型
-    * srcPorts  源端口
+    * action  **参数解释**： 动作 **取值范围**： 0：只记录日志，1：重置/拦截
+    * affectedOs  **参数解释**： 影响操作系统 **取值范围**： 0 any、1 Windows、2 Linux、3 FreeBSD、4 Solaris、5 other Unix、6 网络设备、7 Mac OS、8 ios、9 android、10 others
+    * attackType  **参数解释**： 攻击类型 **约束限制**： 不涉及 **取值范围**： 1：访问控制、2：漏洞扫描、3：邮件攻击、4：漏洞攻击、5：Web攻击、6：密码攻击、7：劫持攻击、8：协议异常、9：特洛伊木马、10：蠕虫、11：缓冲区溢出、12：黑客工具、13：间谍软件、14：DDos泛洪、15：应用层DDos攻击、16：其他可疑行为、17：可疑DNS活动、18：网络钓鱼、19：垃圾邮件、20：其他攻击 **默认取值**： 不涉及
+    * configStatus  **参数解释**： 规则状态 **取值范围**： 0：初始化，1：配置中，2：配置成功，3：配置失败
+    * content  **参数解释**： 匹配IPS攻击的内容 **取值范围**： 不涉及
+    * dstPortType  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
+    * dstPorts  **参数解释**： 端口 **取值范围**： 1 - 65535
+    * ipsCfwId  **参数解释**： cfw侧自定义IPS规则id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
+    * ipsId  **参数解释**： ips规则id **取值范围**： 不涉及
+    * ipsName  **参数解释**： ips规则名称 **取值范围**： 不涉及
+    * protocol  **参数解释**： 协议类型 **取值范围**： 1 FTP、2 TELNET、3 SMTP、4 DNS_TCP、5 DNS_UDP、6 DHCP、7 TFTP、8 FINGER、9 HTTP、10 POP3、11 SUNRPC_TCP、12 SUNRPC_UDP、13 NNTP、14 MSRPC_TCP、15 MSRPC_UDP、16 NETBIOS_NAME_TCP、17 NETBIOS_NAME_UDP、18 NETBIOS_SMB、19 NETBIOS_DATAGRAM、20 IMAP4、21 SNMP、22 LDAP、23 MSSQL、24 ORACLE
+    * severity  **参数解释**： 严重程度 **取值范围**： critical：致命，high：高危，medium:中危，low:低危
+    * software  **参数解释**： 影响软件 **取值范围**： 0 ANY、1 ADOBE、2 APACHE、3 APPLE、4 CA、5 CISCO、6 GOOGLE_CHROME、7 HP、8 IBM、9 IE、10 IIS、11 MC_AFEE、12 MEDIA_PLAYER、13 MICROSOFT_NET、14 MICROSOFT_EDGE、15 MICROSOFT_EXCHANGE、16 MICROSOFT_OFFICE、17 MICROSOFT_OUTLOOK、18 MICROSOFT_SHARE_POINT、19 MICROSOFT_WINDOWS、20 MOZILLA、21 MSSQL、22 MYSQL、23 NOVELL、24 ORACLE、25 SAMBA、26 SAMSUNG、27 SAP、28 SCADA、29 SQUID、30 SUN、31 SYMANTEC、32 TREND_MICRO、33 VMWARE、34 WORD_PRESS、35 Others
+    * srcPortType  **参数解释**： 端口类型，-1 Any，0 包含，1 排除 **取值范围**： 不涉及
+    * srcPorts  **参数解释**： 端口 **取值范围**： 不涉及
+    * groupId  **参数解释**： 集群ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -188,7 +188,6 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
             'content' => 'setContent',
             'dstPortType' => 'setDstPortType',
             'dstPorts' => 'setDstPorts',
-            'groupId' => 'setGroupId',
             'ipsCfwId' => 'setIpsCfwId',
             'ipsId' => 'setIpsId',
             'ipsName' => 'setIpsName',
@@ -196,27 +195,28 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
             'severity' => 'setSeverity',
             'software' => 'setSoftware',
             'srcPortType' => 'setSrcPortType',
-            'srcPorts' => 'setSrcPorts'
+            'srcPorts' => 'setSrcPorts',
+            'groupId' => 'setGroupId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  动作（0：只记录日志，1：重置/拦截）
-    * affectedOs  操作系统
-    * attackType  攻击类型
-    * configStatus  规则状态（0：初始化，1：配置中，2：配置成功，3：配置失败）
-    * content  内容json存储
-    * dstPortType  目的端口类型
-    * dstPorts  目的端口
-    * groupId  防火墙集群id
-    * ipsCfwId  cfw侧自定义ips规则id
-    * ipsId  山石侧规则id
-    * ipsName  ips规则名称
-    * protocol  协议
-    * severity  严重程度（critical：致命，high：高危，medium:中危，low:低危）
-    * software  影响软件
-    * srcPortType  源端口类型
-    * srcPorts  源端口
+    * action  **参数解释**： 动作 **取值范围**： 0：只记录日志，1：重置/拦截
+    * affectedOs  **参数解释**： 影响操作系统 **取值范围**： 0 any、1 Windows、2 Linux、3 FreeBSD、4 Solaris、5 other Unix、6 网络设备、7 Mac OS、8 ios、9 android、10 others
+    * attackType  **参数解释**： 攻击类型 **约束限制**： 不涉及 **取值范围**： 1：访问控制、2：漏洞扫描、3：邮件攻击、4：漏洞攻击、5：Web攻击、6：密码攻击、7：劫持攻击、8：协议异常、9：特洛伊木马、10：蠕虫、11：缓冲区溢出、12：黑客工具、13：间谍软件、14：DDos泛洪、15：应用层DDos攻击、16：其他可疑行为、17：可疑DNS活动、18：网络钓鱼、19：垃圾邮件、20：其他攻击 **默认取值**： 不涉及
+    * configStatus  **参数解释**： 规则状态 **取值范围**： 0：初始化，1：配置中，2：配置成功，3：配置失败
+    * content  **参数解释**： 匹配IPS攻击的内容 **取值范围**： 不涉及
+    * dstPortType  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
+    * dstPorts  **参数解释**： 端口 **取值范围**： 1 - 65535
+    * ipsCfwId  **参数解释**： cfw侧自定义IPS规则id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
+    * ipsId  **参数解释**： ips规则id **取值范围**： 不涉及
+    * ipsName  **参数解释**： ips规则名称 **取值范围**： 不涉及
+    * protocol  **参数解释**： 协议类型 **取值范围**： 1 FTP、2 TELNET、3 SMTP、4 DNS_TCP、5 DNS_UDP、6 DHCP、7 TFTP、8 FINGER、9 HTTP、10 POP3、11 SUNRPC_TCP、12 SUNRPC_UDP、13 NNTP、14 MSRPC_TCP、15 MSRPC_UDP、16 NETBIOS_NAME_TCP、17 NETBIOS_NAME_UDP、18 NETBIOS_SMB、19 NETBIOS_DATAGRAM、20 IMAP4、21 SNMP、22 LDAP、23 MSSQL、24 ORACLE
+    * severity  **参数解释**： 严重程度 **取值范围**： critical：致命，high：高危，medium:中危，low:低危
+    * software  **参数解释**： 影响软件 **取值范围**： 0 ANY、1 ADOBE、2 APACHE、3 APPLE、4 CA、5 CISCO、6 GOOGLE_CHROME、7 HP、8 IBM、9 IE、10 IIS、11 MC_AFEE、12 MEDIA_PLAYER、13 MICROSOFT_NET、14 MICROSOFT_EDGE、15 MICROSOFT_EXCHANGE、16 MICROSOFT_OFFICE、17 MICROSOFT_OUTLOOK、18 MICROSOFT_SHARE_POINT、19 MICROSOFT_WINDOWS、20 MOZILLA、21 MSSQL、22 MYSQL、23 NOVELL、24 ORACLE、25 SAMBA、26 SAMSUNG、27 SAP、28 SCADA、29 SQUID、30 SUN、31 SYMANTEC、32 TREND_MICRO、33 VMWARE、34 WORD_PRESS、35 Others
+    * srcPortType  **参数解释**： 端口类型，-1 Any，0 包含，1 排除 **取值范围**： 不涉及
+    * srcPorts  **参数解释**： 端口 **取值范围**： 不涉及
+    * groupId  **参数解释**： 集群ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -228,7 +228,6 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
             'content' => 'getContent',
             'dstPortType' => 'getDstPortType',
             'dstPorts' => 'getDstPorts',
-            'groupId' => 'getGroupId',
             'ipsCfwId' => 'getIpsCfwId',
             'ipsId' => 'getIpsId',
             'ipsName' => 'getIpsName',
@@ -236,7 +235,8 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
             'severity' => 'getSeverity',
             'software' => 'getSoftware',
             'srcPortType' => 'getSrcPortType',
-            'srcPorts' => 'getSrcPorts'
+            'srcPorts' => 'getSrcPorts',
+            'groupId' => 'getGroupId'
     ];
 
     /**
@@ -304,7 +304,6 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
         $this->container['content'] = isset($data['content']) ? $data['content'] : null;
         $this->container['dstPortType'] = isset($data['dstPortType']) ? $data['dstPortType'] : null;
         $this->container['dstPorts'] = isset($data['dstPorts']) ? $data['dstPorts'] : null;
-        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['ipsCfwId'] = isset($data['ipsCfwId']) ? $data['ipsCfwId'] : null;
         $this->container['ipsId'] = isset($data['ipsId']) ? $data['ipsId'] : null;
         $this->container['ipsName'] = isset($data['ipsName']) ? $data['ipsName'] : null;
@@ -313,6 +312,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
         $this->container['software'] = isset($data['software']) ? $data['software'] : null;
         $this->container['srcPortType'] = isset($data['srcPortType']) ? $data['srcPortType'] : null;
         $this->container['srcPorts'] = isset($data['srcPorts']) ? $data['srcPorts'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
     }
 
     /**
@@ -339,7 +339,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  动作（0：只记录日志，1：重置/拦截）
+    *  **参数解释**： 动作 **取值范围**： 0：只记录日志，1：重置/拦截
     *
     * @return int|null
     */
@@ -351,7 +351,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param int|null $action 动作（0：只记录日志，1：重置/拦截）
+    * @param int|null $action **参数解释**： 动作 **取值范围**： 0：只记录日志，1：重置/拦截
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets affectedOs
-    *  操作系统
+    *  **参数解释**： 影响操作系统 **取值范围**： 0 any、1 Windows、2 Linux、3 FreeBSD、4 Solaris、5 other Unix、6 网络设备、7 Mac OS、8 ios、9 android、10 others
     *
     * @return int|null
     */
@@ -375,7 +375,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
     /**
     * Sets affectedOs
     *
-    * @param int|null $affectedOs 操作系统
+    * @param int|null $affectedOs **参数解释**： 影响操作系统 **取值范围**： 0 any、1 Windows、2 Linux、3 FreeBSD、4 Solaris、5 other Unix、6 网络设备、7 Mac OS、8 ios、9 android、10 others
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets attackType
-    *  攻击类型
+    *  **参数解释**： 攻击类型 **约束限制**： 不涉及 **取值范围**： 1：访问控制、2：漏洞扫描、3：邮件攻击、4：漏洞攻击、5：Web攻击、6：密码攻击、7：劫持攻击、8：协议异常、9：特洛伊木马、10：蠕虫、11：缓冲区溢出、12：黑客工具、13：间谍软件、14：DDos泛洪、15：应用层DDos攻击、16：其他可疑行为、17：可疑DNS活动、18：网络钓鱼、19：垃圾邮件、20：其他攻击 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -399,7 +399,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
     /**
     * Sets attackType
     *
-    * @param int|null $attackType 攻击类型
+    * @param int|null $attackType **参数解释**： 攻击类型 **约束限制**： 不涉及 **取值范围**： 1：访问控制、2：漏洞扫描、3：邮件攻击、4：漏洞攻击、5：Web攻击、6：密码攻击、7：劫持攻击、8：协议异常、9：特洛伊木马、10：蠕虫、11：缓冲区溢出、12：黑客工具、13：间谍软件、14：DDos泛洪、15：应用层DDos攻击、16：其他可疑行为、17：可疑DNS活动、18：网络钓鱼、19：垃圾邮件、20：其他攻击 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -411,7 +411,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets configStatus
-    *  规则状态（0：初始化，1：配置中，2：配置成功，3：配置失败）
+    *  **参数解释**： 规则状态 **取值范围**： 0：初始化，1：配置中，2：配置成功，3：配置失败
     *
     * @return int|null
     */
@@ -423,7 +423,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
     /**
     * Sets configStatus
     *
-    * @param int|null $configStatus 规则状态（0：初始化，1：配置中，2：配置成功，3：配置失败）
+    * @param int|null $configStatus **参数解释**： 规则状态 **取值范围**： 0：初始化，1：配置中，2：配置成功，3：配置失败
     *
     * @return $this
     */
@@ -435,7 +435,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets content
-    *  内容json存储
+    *  **参数解释**： 匹配IPS攻击的内容 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -447,7 +447,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
     /**
     * Sets content
     *
-    * @param string|null $content 内容json存储
+    * @param string|null $content **参数解释**： 匹配IPS攻击的内容 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -459,7 +459,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dstPortType
-    *  目的端口类型
+    *  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
     *
     * @return int|null
     */
@@ -471,7 +471,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
     /**
     * Sets dstPortType
     *
-    * @param int|null $dstPortType 目的端口类型
+    * @param int|null $dstPortType **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
     *
     * @return $this
     */
@@ -483,7 +483,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dstPorts
-    *  目的端口
+    *  **参数解释**： 端口 **取值范围**： 1 - 65535
     *
     * @return string|null
     */
@@ -495,7 +495,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
     /**
     * Sets dstPorts
     *
-    * @param string|null $dstPorts 目的端口
+    * @param string|null $dstPorts **参数解释**： 端口 **取值范围**： 1 - 65535
     *
     * @return $this
     */
@@ -506,32 +506,8 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets groupId
-    *  防火墙集群id
-    *
-    * @return string|null
-    */
-    public function getGroupId()
-    {
-        return $this->container['groupId'];
-    }
-
-    /**
-    * Sets groupId
-    *
-    * @param string|null $groupId 防火墙集群id
-    *
-    * @return $this
-    */
-    public function setGroupId($groupId)
-    {
-        $this->container['groupId'] = $groupId;
-        return $this;
-    }
-
-    /**
     * Gets ipsCfwId
-    *  cfw侧自定义ips规则id
+    *  **参数解释**： cfw侧自定义IPS规则id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -543,7 +519,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
     /**
     * Sets ipsCfwId
     *
-    * @param string|null $ipsCfwId cfw侧自定义ips规则id
+    * @param string|null $ipsCfwId **参数解释**： cfw侧自定义IPS规则id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -555,7 +531,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipsId
-    *  山石侧规则id
+    *  **参数解释**： ips规则id **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -567,7 +543,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
     /**
     * Sets ipsId
     *
-    * @param string|null $ipsId 山石侧规则id
+    * @param string|null $ipsId **参数解释**： ips规则id **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -579,7 +555,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipsName
-    *  ips规则名称
+    *  **参数解释**： ips规则名称 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -591,7 +567,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
     /**
     * Sets ipsName
     *
-    * @param string|null $ipsName ips规则名称
+    * @param string|null $ipsName **参数解释**： ips规则名称 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -603,7 +579,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  协议
+    *  **参数解释**： 协议类型 **取值范围**： 1 FTP、2 TELNET、3 SMTP、4 DNS_TCP、5 DNS_UDP、6 DHCP、7 TFTP、8 FINGER、9 HTTP、10 POP3、11 SUNRPC_TCP、12 SUNRPC_UDP、13 NNTP、14 MSRPC_TCP、15 MSRPC_UDP、16 NETBIOS_NAME_TCP、17 NETBIOS_NAME_UDP、18 NETBIOS_SMB、19 NETBIOS_DATAGRAM、20 IMAP4、21 SNMP、22 LDAP、23 MSSQL、24 ORACLE
     *
     * @return int|null
     */
@@ -615,7 +591,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param int|null $protocol 协议
+    * @param int|null $protocol **参数解释**： 协议类型 **取值范围**： 1 FTP、2 TELNET、3 SMTP、4 DNS_TCP、5 DNS_UDP、6 DHCP、7 TFTP、8 FINGER、9 HTTP、10 POP3、11 SUNRPC_TCP、12 SUNRPC_UDP、13 NNTP、14 MSRPC_TCP、15 MSRPC_UDP、16 NETBIOS_NAME_TCP、17 NETBIOS_NAME_UDP、18 NETBIOS_SMB、19 NETBIOS_DATAGRAM、20 IMAP4、21 SNMP、22 LDAP、23 MSSQL、24 ORACLE
     *
     * @return $this
     */
@@ -627,7 +603,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  严重程度（critical：致命，high：高危，medium:中危，low:低危）
+    *  **参数解释**： 严重程度 **取值范围**： critical：致命，high：高危，medium:中危，low:低危
     *
     * @return int|null
     */
@@ -639,7 +615,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param int|null $severity 严重程度（critical：致命，high：高危，medium:中危，low:低危）
+    * @param int|null $severity **参数解释**： 严重程度 **取值范围**： critical：致命，high：高危，medium:中危，low:低危
     *
     * @return $this
     */
@@ -651,7 +627,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets software
-    *  影响软件
+    *  **参数解释**： 影响软件 **取值范围**： 0 ANY、1 ADOBE、2 APACHE、3 APPLE、4 CA、5 CISCO、6 GOOGLE_CHROME、7 HP、8 IBM、9 IE、10 IIS、11 MC_AFEE、12 MEDIA_PLAYER、13 MICROSOFT_NET、14 MICROSOFT_EDGE、15 MICROSOFT_EXCHANGE、16 MICROSOFT_OFFICE、17 MICROSOFT_OUTLOOK、18 MICROSOFT_SHARE_POINT、19 MICROSOFT_WINDOWS、20 MOZILLA、21 MSSQL、22 MYSQL、23 NOVELL、24 ORACLE、25 SAMBA、26 SAMSUNG、27 SAP、28 SCADA、29 SQUID、30 SUN、31 SYMANTEC、32 TREND_MICRO、33 VMWARE、34 WORD_PRESS、35 Others
     *
     * @return int|null
     */
@@ -663,7 +639,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
     /**
     * Sets software
     *
-    * @param int|null $software 影响软件
+    * @param int|null $software **参数解释**： 影响软件 **取值范围**： 0 ANY、1 ADOBE、2 APACHE、3 APPLE、4 CA、5 CISCO、6 GOOGLE_CHROME、7 HP、8 IBM、9 IE、10 IIS、11 MC_AFEE、12 MEDIA_PLAYER、13 MICROSOFT_NET、14 MICROSOFT_EDGE、15 MICROSOFT_EXCHANGE、16 MICROSOFT_OFFICE、17 MICROSOFT_OUTLOOK、18 MICROSOFT_SHARE_POINT、19 MICROSOFT_WINDOWS、20 MOZILLA、21 MSSQL、22 MYSQL、23 NOVELL、24 ORACLE、25 SAMBA、26 SAMSUNG、27 SAP、28 SCADA、29 SQUID、30 SUN、31 SYMANTEC、32 TREND_MICRO、33 VMWARE、34 WORD_PRESS、35 Others
     *
     * @return $this
     */
@@ -675,7 +651,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcPortType
-    *  源端口类型
+    *  **参数解释**： 端口类型，-1 Any，0 包含，1 排除 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -687,7 +663,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcPortType
     *
-    * @param int|null $srcPortType 源端口类型
+    * @param int|null $srcPortType **参数解释**： 端口类型，-1 Any，0 包含，1 排除 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -699,7 +675,7 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcPorts
-    *  源端口
+    *  **参数解释**： 端口 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -711,13 +687,37 @@ class CustomerIpsListVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcPorts
     *
-    * @param string|null $srcPorts 源端口
+    * @param string|null $srcPorts **参数解释**： 端口 **取值范围**： 不涉及
     *
     * @return $this
     */
     public function setSrcPorts($srcPorts)
     {
         $this->container['srcPorts'] = $srcPorts;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  **参数解释**： 集群ID **取值范围**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId **参数解释**： 集群ID **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
         return $this;
     }
 

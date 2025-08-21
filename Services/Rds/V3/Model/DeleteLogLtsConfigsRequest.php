@@ -20,7 +20,7 @@ class DeleteLogLtsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  引擎。
+    * engine  引擎，暂只支持mysql。
     * xLanguage  语言。
     * body  body
     *
@@ -34,7 +34,7 @@ class DeleteLogLtsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  引擎。
+    * engine  引擎，暂只支持mysql。
     * xLanguage  语言。
     * body  body
     *
@@ -69,7 +69,7 @@ class DeleteLogLtsConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  引擎。
+    * engine  引擎，暂只支持mysql。
     * xLanguage  语言。
     * body  body
     *
@@ -83,7 +83,7 @@ class DeleteLogLtsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  引擎。
+    * engine  引擎，暂只支持mysql。
     * xLanguage  语言。
     * body  body
     *
@@ -97,7 +97,7 @@ class DeleteLogLtsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  引擎。
+    * engine  引擎，暂只支持mysql。
     * xLanguage  语言。
     * body  body
     *
@@ -150,8 +150,6 @@ class DeleteLogLtsConfigsRequest implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const ENGINE_MYSQL = 'mysql';
-    const ENGINE_POSTGRESQL = 'postgresql';
-    const ENGINE_SQLSERVER = 'sqlserver';
     const X_LANGUAGE_ZH_CN = 'zh-cn';
     const X_LANGUAGE_EN_US = 'en-us';
     
@@ -165,8 +163,6 @@ class DeleteLogLtsConfigsRequest implements ModelInterface, ArrayAccess
     {
         return [
             self::ENGINE_MYSQL,
-            self::ENGINE_POSTGRESQL,
-            self::ENGINE_SQLSERVER,
         ];
     }
 
@@ -247,7 +243,7 @@ class DeleteLogLtsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  引擎。
+    *  引擎，暂只支持mysql。
     *
     * @return string
     */
@@ -259,7 +255,7 @@ class DeleteLogLtsConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string $engine 引擎。
+    * @param string $engine 引擎，暂只支持mysql。
     *
     * @return $this
     */

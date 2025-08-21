@@ -272,8 +272,8 @@ class ShowAttackTrendRequest implements ModelInterface, ArrayAccess
         if ($this->container['fwInstanceId'] === null) {
             $invalidProperties[] = "'fwInstanceId' can't be null";
         }
-            if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/", $this->container['fwInstanceId'])) {
-                $invalidProperties[] = "invalid value for 'fwInstanceId', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.";
+            if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/", $this->container['fwInstanceId'])) {
+                $invalidProperties[] = "invalid value for 'fwInstanceId', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/.";
             }
             $allowedValues = $this->getRangeAllowableValues();
                 if (!is_null($this->container['range']) && !in_array($this->container['range'], $allowedValues, true)) {
@@ -294,14 +294,14 @@ class ShowAttackTrendRequest implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['startTime']) && ($this->container['startTime'] > 4294967295000)) {
-                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 4294967295000.";
+            if (!is_null($this->container['startTime']) && ($this->container['startTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 9223372036854775807.";
             }
             if (!is_null($this->container['startTime']) && ($this->container['startTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'startTime', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['endTime']) && ($this->container['endTime'] > 4294967295000)) {
-                $invalidProperties[] = "invalid value for 'endTime', must be smaller than or equal to 4294967295000.";
+            if (!is_null($this->container['endTime']) && ($this->container['endTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'endTime', must be smaller than or equal to 9223372036854775807.";
             }
             if (!is_null($this->container['endTime']) && ($this->container['endTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'endTime', must be bigger than or equal to 0.";

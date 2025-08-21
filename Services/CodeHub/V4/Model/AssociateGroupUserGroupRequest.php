@@ -20,9 +20,9 @@ class AssociateGroupUserGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目id
-    * groupId  代码组 ID
-    * userGroupId  成员组 ID
+    * projectId  **参数解释：** 项目的32位uuid，项目唯一标识，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/en-us/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **取值范围：** 字符串长度32。
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * userGroupId  **参数解释：** 成员组id。 **取值范围：** 字符串长度32。
     *
     * @var string[]
     */
@@ -34,15 +34,15 @@ class AssociateGroupUserGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目id
-    * groupId  代码组 ID
-    * userGroupId  成员组 ID
+    * projectId  **参数解释：** 项目的32位uuid，项目唯一标识，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/en-us/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **取值范围：** 字符串长度32。
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * userGroupId  **参数解释：** 成员组id。 **取值范围：** 字符串长度32。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'projectId' => null,
-        'groupId' => null,
+        'groupId' => 'int32',
         'userGroupId' => null
     ];
 
@@ -69,9 +69,9 @@ class AssociateGroupUserGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目id
-    * groupId  代码组 ID
-    * userGroupId  成员组 ID
+    * projectId  **参数解释：** 项目的32位uuid，项目唯一标识，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/en-us/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **取值范围：** 字符串长度32。
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * userGroupId  **参数解释：** 成员组id。 **取值范围：** 字符串长度32。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class AssociateGroupUserGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目id
-    * groupId  代码组 ID
-    * userGroupId  成员组 ID
+    * projectId  **参数解释：** 项目的32位uuid，项目唯一标识，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/en-us/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **取值范围：** 字符串长度32。
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * userGroupId  **参数解释：** 成员组id。 **取值范围：** 字符串长度32。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class AssociateGroupUserGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目id
-    * groupId  代码组 ID
-    * userGroupId  成员组 ID
+    * projectId  **参数解释：** 项目的32位uuid，项目唯一标识，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/en-us/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **取值范围：** 字符串长度32。
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * userGroupId  **参数解释：** 成员组id。 **取值范围：** 字符串长度32。
     *
     * @var string[]
     */
@@ -201,8 +201,8 @@ class AssociateGroupUserGroupRequest implements ModelInterface, ArrayAccess
         if ($this->container['userGroupId'] === null) {
             $invalidProperties[] = "'userGroupId' can't be null";
         }
-            if ((mb_strlen($this->container['userGroupId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'userGroupId', the character length must be smaller than or equal to 64.";
+            if ((mb_strlen($this->container['userGroupId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'userGroupId', the character length must be smaller than or equal to 32.";
             }
             if ((mb_strlen($this->container['userGroupId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'userGroupId', the character length must be bigger than or equal to 32.";
@@ -223,7 +223,7 @@ class AssociateGroupUserGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目id
+    *  **参数解释：** 项目的32位uuid，项目唯一标识，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/en-us/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **取值范围：** 字符串长度32。
     *
     * @return string
     */
@@ -235,7 +235,7 @@ class AssociateGroupUserGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目id
+    * @param string $projectId **参数解释：** 项目的32位uuid，项目唯一标识，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/en-us/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **取值范围：** 字符串长度32。
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class AssociateGroupUserGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  代码组 ID
+    *  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
     *
     * @return int
     */
@@ -259,7 +259,7 @@ class AssociateGroupUserGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param int $groupId 代码组 ID
+    * @param int $groupId **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
     *
     * @return $this
     */
@@ -271,7 +271,7 @@ class AssociateGroupUserGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets userGroupId
-    *  成员组 ID
+    *  **参数解释：** 成员组id。 **取值范围：** 字符串长度32。
     *
     * @return string
     */
@@ -283,7 +283,7 @@ class AssociateGroupUserGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets userGroupId
     *
-    * @param string $userGroupId 成员组 ID
+    * @param string $userGroupId **参数解释：** 成员组id。 **取值范围：** 字符串长度32。
     *
     * @return $this
     */

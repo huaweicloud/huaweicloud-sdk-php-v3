@@ -20,8 +20,8 @@ class ControlViolation implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accountId  控制策略纳管账号ID。
-    * accountName  控制策略纳管账号名称。
+    * accountId  纳管账号ID。
+    * accountName  纳管账号名称。
     * displayName  控制策略显示名称。
     * name  控制策略名称。
     * controlId  控制策略ID。
@@ -52,8 +52,8 @@ class ControlViolation implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accountId  控制策略纳管账号ID。
-    * accountName  控制策略纳管账号名称。
+    * accountId  纳管账号ID。
+    * accountName  纳管账号名称。
     * displayName  控制策略显示名称。
     * name  控制策略名称。
     * controlId  控制策略ID。
@@ -105,8 +105,8 @@ class ControlViolation implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accountId  控制策略纳管账号ID。
-    * accountName  控制策略纳管账号名称。
+    * accountId  纳管账号ID。
+    * accountName  纳管账号名称。
     * displayName  控制策略显示名称。
     * name  控制策略名称。
     * controlId  控制策略ID。
@@ -137,8 +137,8 @@ class ControlViolation implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accountId  控制策略纳管账号ID。
-    * accountName  控制策略纳管账号名称。
+    * accountId  纳管账号ID。
+    * accountName  纳管账号名称。
     * displayName  控制策略显示名称。
     * name  控制策略名称。
     * controlId  控制策略ID。
@@ -169,8 +169,8 @@ class ControlViolation implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accountId  控制策略纳管账号ID。
-    * accountName  控制策略纳管账号名称。
+    * accountId  纳管账号ID。
+    * accountName  纳管账号名称。
     * displayName  控制策略显示名称。
     * name  控制策略名称。
     * controlId  控制策略ID。
@@ -370,7 +370,7 @@ class ControlViolation implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountId
-    *  控制策略纳管账号ID。
+    *  纳管账号ID。
     *
     * @return string|null
     */
@@ -382,7 +382,7 @@ class ControlViolation implements ModelInterface, ArrayAccess
     /**
     * Sets accountId
     *
-    * @param string|null $accountId 控制策略纳管账号ID。
+    * @param string|null $accountId 纳管账号ID。
     *
     * @return $this
     */
@@ -394,7 +394,7 @@ class ControlViolation implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountName
-    *  控制策略纳管账号名称。
+    *  纳管账号名称。
     *
     * @return string|null
     */
@@ -406,7 +406,7 @@ class ControlViolation implements ModelInterface, ArrayAccess
     /**
     * Sets accountName
     *
-    * @param string|null $accountName 控制策略纳管账号名称。
+    * @param string|null $accountName 纳管账号名称。
     *
     * @return $this
     */

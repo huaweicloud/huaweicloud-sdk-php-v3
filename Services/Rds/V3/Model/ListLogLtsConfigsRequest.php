@@ -20,7 +20,7 @@ class ListLogLtsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  引擎。
+    * engine  引擎，暂只支持mysql。
     * enterpriseProjectId  企业项目ID。默认为空。
     * instanceId  实例ID。默认为空。
     * instanceName  实例名称。默认为空。
@@ -46,7 +46,7 @@ class ListLogLtsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  引擎。
+    * engine  引擎，暂只支持mysql。
     * enterpriseProjectId  企业项目ID。默认为空。
     * instanceId  实例ID。默认为空。
     * instanceName  实例名称。默认为空。
@@ -93,7 +93,7 @@ class ListLogLtsConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  引擎。
+    * engine  引擎，暂只支持mysql。
     * enterpriseProjectId  企业项目ID。默认为空。
     * instanceId  实例ID。默认为空。
     * instanceName  实例名称。默认为空。
@@ -119,7 +119,7 @@ class ListLogLtsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  引擎。
+    * engine  引擎，暂只支持mysql。
     * enterpriseProjectId  企业项目ID。默认为空。
     * instanceId  实例ID。默认为空。
     * instanceName  实例名称。默认为空。
@@ -145,7 +145,7 @@ class ListLogLtsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  引擎。
+    * engine  引擎，暂只支持mysql。
     * enterpriseProjectId  企业项目ID。默认为空。
     * instanceId  实例ID。默认为空。
     * instanceName  实例名称。默认为空。
@@ -210,8 +210,6 @@ class ListLogLtsConfigsRequest implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const ENGINE_MYSQL = 'mysql';
-    const ENGINE_POSTGRESQL = 'postgresql';
-    const ENGINE_SQLSERVER = 'sqlserver';
     const X_LANGUAGE_ZH_CN = 'zh-cn';
     const X_LANGUAGE_EN_US = 'en-us';
     
@@ -225,8 +223,6 @@ class ListLogLtsConfigsRequest implements ModelInterface, ArrayAccess
     {
         return [
             self::ENGINE_MYSQL,
-            self::ENGINE_POSTGRESQL,
-            self::ENGINE_SQLSERVER,
         ];
     }
 
@@ -313,7 +309,7 @@ class ListLogLtsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  引擎。
+    *  引擎，暂只支持mysql。
     *
     * @return string
     */
@@ -325,7 +321,7 @@ class ListLogLtsConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string $engine 引擎。
+    * @param string $engine 引擎，暂只支持mysql。
     *
     * @return $this
     */

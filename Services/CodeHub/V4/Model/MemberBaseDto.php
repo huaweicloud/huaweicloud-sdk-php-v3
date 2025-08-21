@@ -180,8 +180,8 @@ class MemberBaseDto implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 128)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 10)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 10.";
             }
             if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 1)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";

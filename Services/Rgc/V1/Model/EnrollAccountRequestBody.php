@@ -20,7 +20,7 @@ class EnrollAccountRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * parentOrganizationalUnitId  注册OU 标识。
+    * parentOrganizationalUnitId  父注册OU ID。
     * blueprint  blueprint
     *
     * @var string[]
@@ -32,7 +32,7 @@ class EnrollAccountRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * parentOrganizationalUnitId  注册OU 标识。
+    * parentOrganizationalUnitId  父注册OU ID。
     * blueprint  blueprint
     *
     * @var string[]
@@ -65,7 +65,7 @@ class EnrollAccountRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * parentOrganizationalUnitId  注册OU 标识。
+    * parentOrganizationalUnitId  父注册OU ID。
     * blueprint  blueprint
     *
     * @var string[]
@@ -77,7 +77,7 @@ class EnrollAccountRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * parentOrganizationalUnitId  注册OU 标识。
+    * parentOrganizationalUnitId  父注册OU ID。
     * blueprint  blueprint
     *
     * @var string[]
@@ -89,7 +89,7 @@ class EnrollAccountRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * parentOrganizationalUnitId  注册OU 标识。
+    * parentOrganizationalUnitId  父注册OU ID。
     * blueprint  blueprint
     *
     * @var string[]
@@ -197,7 +197,7 @@ class EnrollAccountRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentOrganizationalUnitId
-    *  注册OU 标识。
+    *  父注册OU ID。
     *
     * @return string
     */
@@ -209,7 +209,7 @@ class EnrollAccountRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets parentOrganizationalUnitId
     *
-    * @param string $parentOrganizationalUnitId 注册OU 标识。
+    * @param string $parentOrganizationalUnitId 父注册OU ID。
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  待升级的集群的ID。
     * upgradeType  升级目标版本类型： - same：相同版本。 - cross： 跨版本。
-    * start  指定查询起始值，默认值为0。
+    * offset  指定查询起始值，默认值为0。
     * limit  指定查询个数，默认值为10。
     *
     * @var string[]
@@ -30,7 +30,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'clusterId' => 'string',
             'upgradeType' => 'string',
-            'start' => 'string',
+            'offset' => 'string',
             'limit' => 'string'
     ];
 
@@ -38,7 +38,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  待升级的集群的ID。
     * upgradeType  升级目标版本类型： - same：相同版本。 - cross： 跨版本。
-    * start  指定查询起始值，默认值为0。
+    * offset  指定查询起始值，默认值为0。
     * limit  指定查询个数，默认值为10。
     *
     * @var string[]
@@ -46,7 +46,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'clusterId' => null,
         'upgradeType' => null,
-        'start' => null,
+        'offset' => null,
         'limit' => null
     ];
 
@@ -75,7 +75,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clusterId  待升级的集群的ID。
     * upgradeType  升级目标版本类型： - same：相同版本。 - cross： 跨版本。
-    * start  指定查询起始值，默认值为0。
+    * offset  指定查询起始值，默认值为0。
     * limit  指定查询个数，默认值为10。
     *
     * @var string[]
@@ -83,7 +83,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
             'upgradeType' => 'upgrade_type',
-            'start' => 'start',
+            'offset' => 'offset',
             'limit' => 'limit'
     ];
 
@@ -91,7 +91,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  待升级的集群的ID。
     * upgradeType  升级目标版本类型： - same：相同版本。 - cross： 跨版本。
-    * start  指定查询起始值，默认值为0。
+    * offset  指定查询起始值，默认值为0。
     * limit  指定查询个数，默认值为10。
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'clusterId' => 'setClusterId',
             'upgradeType' => 'setUpgradeType',
-            'start' => 'setStart',
+            'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
 
@@ -107,7 +107,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  待升级的集群的ID。
     * upgradeType  升级目标版本类型： - same：相同版本。 - cross： 跨版本。
-    * start  指定查询起始值，默认值为0。
+    * offset  指定查询起始值，默认值为0。
     * limit  指定查询个数，默认值为10。
     *
     * @var string[]
@@ -115,7 +115,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'clusterId' => 'getClusterId',
             'upgradeType' => 'getUpgradeType',
-            'start' => 'getStart',
+            'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
 
@@ -179,7 +179,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['upgradeType'] = isset($data['upgradeType']) ? $data['upgradeType'] : null;
-        $this->container['start'] = isset($data['start']) ? $data['start'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
@@ -260,26 +260,26 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets start
+    * Gets offset
     *  指定查询起始值，默认值为0。
     *
     * @return string|null
     */
-    public function getStart()
+    public function getOffset()
     {
-        return $this->container['start'];
+        return $this->container['offset'];
     }
 
     /**
-    * Sets start
+    * Sets offset
     *
-    * @param string|null $start 指定查询起始值，默认值为0。
+    * @param string|null $offset 指定查询起始值，默认值为0。
     *
     * @return $this
     */
-    public function setStart($start)
+    public function setOffset($offset)
     {
-        $this->container['start'] = $start;
+        $this->container['offset'] = $offset;
         return $this;
     }
 

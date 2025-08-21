@@ -27,10 +27,10 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
-    * alarmNotifications  告警触发的动作
-    * okNotifications  告警恢复触发的动作
-    * notificationBeginTime  告警通知开启时间
-    * notificationEndTime  告警通知关闭时间
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * enterpriseProjectId  企业项目ID
     * enabled  是否开启告警规则。true:开启，false:关闭。
@@ -73,10 +73,10 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
-    * alarmNotifications  告警触发的动作
-    * okNotifications  告警恢复触发的动作
-    * notificationBeginTime  告警通知开启时间
-    * notificationEndTime  告警通知关闭时间
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * enterpriseProjectId  企业项目ID
     * enabled  是否开启告警规则。true:开启，false:关闭。
@@ -140,10 +140,10 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
-    * alarmNotifications  告警触发的动作
-    * okNotifications  告警恢复触发的动作
-    * notificationBeginTime  告警通知开启时间
-    * notificationEndTime  告警通知关闭时间
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * enterpriseProjectId  企业项目ID
     * enabled  是否开启告警规则。true:开启，false:关闭。
@@ -186,10 +186,10 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
-    * alarmNotifications  告警触发的动作
-    * okNotifications  告警恢复触发的动作
-    * notificationBeginTime  告警通知开启时间
-    * notificationEndTime  告警通知关闭时间
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * enterpriseProjectId  企业项目ID
     * enabled  是否开启告警规则。true:开启，false:关闭。
@@ -232,10 +232,10 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
-    * alarmNotifications  告警触发的动作
-    * okNotifications  告警恢复触发的动作
-    * notificationBeginTime  告警通知开启时间
-    * notificationEndTime  告警通知关闭时间
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * enterpriseProjectId  企业项目ID
     * enabled  是否开启告警规则。true:开启，false:关闭。
@@ -659,7 +659,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmNotifications
-    *  告警触发的动作
+    *  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null
     */
@@ -671,7 +671,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets alarmNotifications
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null $alarmNotifications 告警触发的动作
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null $alarmNotifications **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -683,7 +683,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets okNotifications
-    *  告警恢复触发的动作
+    *  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null
     */
@@ -695,7 +695,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets okNotifications
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null $okNotifications 告警恢复触发的动作
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null $okNotifications **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -707,7 +707,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationBeginTime
-    *  告警通知开启时间
+    *  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -719,7 +719,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets notificationBeginTime
     *
-    * @param string|null $notificationBeginTime 告警通知开启时间
+    * @param string|null $notificationBeginTime **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -731,7 +731,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationEndTime
-    *  告警通知关闭时间
+    *  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -743,7 +743,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets notificationEndTime
     *
-    * @param string|null $notificationEndTime 告警通知关闭时间
+    * @param string|null $notificationEndTime **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class BatchCreateApplicationViewRequestBodySyncRules implements ModelInterface, 
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * epId  企业项目id
-    * ruleTags  关联标签
+    * epId  **参数解释：** 企业项目id。 **约束限制：** 不涉及。 **取值范围：** 请选择[[企业管理](https://support.huaweicloud.com/usermanual-em/em_eps_qs_0400.html)](tag:hws)[[企业管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-em/em_eps_qs_0400.html)](tag:hws_hk)中存在的项目ID。 **默认取值：** 不涉及。
+    * ruleTags  **参数解释：** 关联标签。 **约束限制：** 不涉及。 **取值范围：** 可自定义。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class BatchCreateApplicationViewRequestBodySyncRules implements ModelInterface, 
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * epId  企业项目id
-    * ruleTags  关联标签
+    * epId  **参数解释：** 企业项目id。 **约束限制：** 不涉及。 **取值范围：** 请选择[[企业管理](https://support.huaweicloud.com/usermanual-em/em_eps_qs_0400.html)](tag:hws)[[企业管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-em/em_eps_qs_0400.html)](tag:hws_hk)中存在的项目ID。 **默认取值：** 不涉及。
+    * ruleTags  **参数解释：** 关联标签。 **约束限制：** 不涉及。 **取值范围：** 可自定义。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BatchCreateApplicationViewRequestBodySyncRules implements ModelInterface, 
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * epId  企业项目id
-    * ruleTags  关联标签
+    * epId  **参数解释：** 企业项目id。 **约束限制：** 不涉及。 **取值范围：** 请选择[[企业管理](https://support.huaweicloud.com/usermanual-em/em_eps_qs_0400.html)](tag:hws)[[企业管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-em/em_eps_qs_0400.html)](tag:hws_hk)中存在的项目ID。 **默认取值：** 不涉及。
+    * ruleTags  **参数解释：** 关联标签。 **约束限制：** 不涉及。 **取值范围：** 可自定义。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BatchCreateApplicationViewRequestBodySyncRules implements ModelInterface, 
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * epId  企业项目id
-    * ruleTags  关联标签
+    * epId  **参数解释：** 企业项目id。 **约束限制：** 不涉及。 **取值范围：** 请选择[[企业管理](https://support.huaweicloud.com/usermanual-em/em_eps_qs_0400.html)](tag:hws)[[企业管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-em/em_eps_qs_0400.html)](tag:hws_hk)中存在的项目ID。 **默认取值：** 不涉及。
+    * ruleTags  **参数解释：** 关联标签。 **约束限制：** 不涉及。 **取值范围：** 可自定义。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BatchCreateApplicationViewRequestBodySyncRules implements ModelInterface, 
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * epId  企业项目id
-    * ruleTags  关联标签
+    * epId  **参数解释：** 企业项目id。 **约束限制：** 不涉及。 **取值范围：** 请选择[[企业管理](https://support.huaweicloud.com/usermanual-em/em_eps_qs_0400.html)](tag:hws)[[企业管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-em/em_eps_qs_0400.html)](tag:hws_hk)中存在的项目ID。 **默认取值：** 不涉及。
+    * ruleTags  **参数解释：** 关联标签。 **约束限制：** 不涉及。 **取值范围：** 可自定义。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -169,6 +169,18 @@ class BatchCreateApplicationViewRequestBodySyncRules implements ModelInterface, 
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['epId']) && (mb_strlen($this->container['epId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'epId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['epId']) && (mb_strlen($this->container['epId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'epId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['ruleTags']) && (mb_strlen($this->container['ruleTags']) > 4200)) {
+                $invalidProperties[] = "invalid value for 'ruleTags', the character length must be smaller than or equal to 4200.";
+            }
+            if (!is_null($this->container['ruleTags']) && (mb_strlen($this->container['ruleTags']) < 0)) {
+                $invalidProperties[] = "invalid value for 'ruleTags', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -185,7 +197,7 @@ class BatchCreateApplicationViewRequestBodySyncRules implements ModelInterface, 
 
     /**
     * Gets epId
-    *  企业项目id
+    *  **参数解释：** 企业项目id。 **约束限制：** 不涉及。 **取值范围：** 请选择[[企业管理](https://support.huaweicloud.com/usermanual-em/em_eps_qs_0400.html)](tag:hws)[[企业管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-em/em_eps_qs_0400.html)](tag:hws_hk)中存在的项目ID。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +209,7 @@ class BatchCreateApplicationViewRequestBodySyncRules implements ModelInterface, 
     /**
     * Sets epId
     *
-    * @param string|null $epId 企业项目id
+    * @param string|null $epId **参数解释：** 企业项目id。 **约束限制：** 不涉及。 **取值范围：** 请选择[[企业管理](https://support.huaweicloud.com/usermanual-em/em_eps_qs_0400.html)](tag:hws)[[企业管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-em/em_eps_qs_0400.html)](tag:hws_hk)中存在的项目ID。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -209,7 +221,7 @@ class BatchCreateApplicationViewRequestBodySyncRules implements ModelInterface, 
 
     /**
     * Gets ruleTags
-    *  关联标签
+    *  **参数解释：** 关联标签。 **约束限制：** 不涉及。 **取值范围：** 可自定义。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -221,7 +233,7 @@ class BatchCreateApplicationViewRequestBodySyncRules implements ModelInterface, 
     /**
     * Sets ruleTags
     *
-    * @param string|null $ruleTags 关联标签
+    * @param string|null $ruleTags **参数解释：** 关联标签。 **约束限制：** 不涉及。 **取值范围：** 可自定义。 **默认取值：** 不涉及。
     *
     * @return $this
     */

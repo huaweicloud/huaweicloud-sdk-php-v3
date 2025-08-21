@@ -26,7 +26,7 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
     * nullable  变量是否可以为空。
     * sensitive  变量是否为敏感字段。
     * type  变量类型。
-    * validations  validations
+    * validations  模板的部署参数变量的校验规则。
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
     * nullable  变量是否可以为空。
     * sensitive  变量是否为敏感字段。
     * type  变量类型。
-    * validations  validations
+    * validations  模板的部署参数变量的校验规则。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
     * nullable  变量是否可以为空。
     * sensitive  变量是否为敏感字段。
     * type  变量类型。
-    * validations  validations
+    * validations  模板的部署参数变量的校验规则。
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
     * nullable  变量是否可以为空。
     * sensitive  变量是否为敏感字段。
     * type  变量类型。
-    * validations  validations
+    * validations  模板的部署参数变量的校验规则。
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
     * nullable  变量是否可以为空。
     * sensitive  变量是否为敏感字段。
     * type  变量类型。
-    * validations  validations
+    * validations  模板的部署参数变量的校验规则。
     *
     * @var string[]
     */
@@ -384,7 +384,7 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets validations
-    *  validations
+    *  模板的部署参数变量的校验规则。
     *
     * @return \HuaweiCloud\SDK\Rgc\V1\Model\TemplateParamVariableValidation[]|null
     */
@@ -396,7 +396,7 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
     /**
     * Sets validations
     *
-    * @param \HuaweiCloud\SDK\Rgc\V1\Model\TemplateParamVariableValidation[]|null $validations validations
+    * @param \HuaweiCloud\SDK\Rgc\V1\Model\TemplateParamVariableValidation[]|null $validations 模板的部署参数变量的校验规则。
     *
     * @return $this
     */

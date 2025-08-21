@@ -24,8 +24,8 @@ class ShowOperationResponse implements ModelInterface, ArrayAccess
     * operationId  操作ID。
     * percentageComplete  完成进度百分比。
     * status  状态。
-    * percentageDetails  创建账号、纳管注册OU、纳管账号的详细进度信息。
-    * message  创建账号、纳管注册OU、纳管账号的错误信息描述。
+    * percentageDetails  创建账号、注册OU、纳管账号的详细进度信息。
+    * message  创建账号、注册OU、纳管账号的错误信息描述。
     *
     * @var string[]
     */
@@ -42,8 +42,8 @@ class ShowOperationResponse implements ModelInterface, ArrayAccess
     * operationId  操作ID。
     * percentageComplete  完成进度百分比。
     * status  状态。
-    * percentageDetails  创建账号、纳管注册OU、纳管账号的详细进度信息。
-    * message  创建账号、纳管注册OU、纳管账号的错误信息描述。
+    * percentageDetails  创建账号、注册OU、纳管账号的详细进度信息。
+    * message  创建账号、注册OU、纳管账号的错误信息描述。
     *
     * @var string[]
     */
@@ -81,8 +81,8 @@ class ShowOperationResponse implements ModelInterface, ArrayAccess
     * operationId  操作ID。
     * percentageComplete  完成进度百分比。
     * status  状态。
-    * percentageDetails  创建账号、纳管注册OU、纳管账号的详细进度信息。
-    * message  创建账号、纳管注册OU、纳管账号的错误信息描述。
+    * percentageDetails  创建账号、注册OU、纳管账号的详细进度信息。
+    * message  创建账号、注册OU、纳管账号的错误信息描述。
     *
     * @var string[]
     */
@@ -99,8 +99,8 @@ class ShowOperationResponse implements ModelInterface, ArrayAccess
     * operationId  操作ID。
     * percentageComplete  完成进度百分比。
     * status  状态。
-    * percentageDetails  创建账号、纳管注册OU、纳管账号的详细进度信息。
-    * message  创建账号、纳管注册OU、纳管账号的错误信息描述。
+    * percentageDetails  创建账号、注册OU、纳管账号的详细进度信息。
+    * message  创建账号、注册OU、纳管账号的错误信息描述。
     *
     * @var string[]
     */
@@ -117,8 +117,8 @@ class ShowOperationResponse implements ModelInterface, ArrayAccess
     * operationId  操作ID。
     * percentageComplete  完成进度百分比。
     * status  状态。
-    * percentageDetails  创建账号、纳管注册OU、纳管账号的详细进度信息。
-    * message  创建账号、纳管注册OU、纳管账号的错误信息描述。
+    * percentageDetails  创建账号、注册OU、纳管账号的详细进度信息。
+    * message  创建账号、注册OU、纳管账号的错误信息描述。
     *
     * @var string[]
     */
@@ -309,7 +309,7 @@ class ShowOperationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets percentageDetails
-    *  创建账号、纳管注册OU、纳管账号的详细进度信息。
+    *  创建账号、注册OU、纳管账号的详细进度信息。
     *
     * @return \HuaweiCloud\SDK\Rgc\V1\Model\OrganizationalPercentageDetail[]|null
     */
@@ -321,7 +321,7 @@ class ShowOperationResponse implements ModelInterface, ArrayAccess
     /**
     * Sets percentageDetails
     *
-    * @param \HuaweiCloud\SDK\Rgc\V1\Model\OrganizationalPercentageDetail[]|null $percentageDetails 创建账号、纳管注册OU、纳管账号的详细进度信息。
+    * @param \HuaweiCloud\SDK\Rgc\V1\Model\OrganizationalPercentageDetail[]|null $percentageDetails 创建账号、注册OU、纳管账号的详细进度信息。
     *
     * @return $this
     */
@@ -333,7 +333,7 @@ class ShowOperationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
-    *  创建账号、纳管注册OU、纳管账号的错误信息描述。
+    *  创建账号、注册OU、纳管账号的错误信息描述。
     *
     * @return string|null
     */
@@ -345,7 +345,7 @@ class ShowOperationResponse implements ModelInterface, ArrayAccess
     /**
     * Sets message
     *
-    * @param string|null $message 创建账号、纳管注册OU、纳管账号的错误信息描述。
+    * @param string|null $message 创建账号、注册OU、纳管账号的错误信息描述。
     *
     * @return $this
     */

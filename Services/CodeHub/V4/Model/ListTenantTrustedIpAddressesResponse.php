@@ -21,7 +21,7 @@ class ListTenantTrustedIpAddressesResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  租户ip白名单列表
+    * body  body
     * xTotal  xTotal
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListTenantTrustedIpAddressesResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  租户ip白名单列表
+    * body  body
     * xTotal  xTotal
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListTenantTrustedIpAddressesResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  租户ip白名单列表
+    * body  body
     * xTotal  xTotal
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListTenantTrustedIpAddressesResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  租户ip白名单列表
+    * body  body
     * xTotal  xTotal
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListTenantTrustedIpAddressesResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  租户ip白名单列表
+    * body  body
     * xTotal  xTotal
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ListTenantTrustedIpAddressesResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets body
-    *  租户ip白名单列表
+    *  body
     *
     * @return \HuaweiCloud\SDK\CodeHub\V4\Model\TenantTrustedIpAddressDto[]|null
     */
@@ -198,7 +198,7 @@ class ListTenantTrustedIpAddressesResponse implements ModelInterface, ArrayAcces
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\CodeHub\V4\Model\TenantTrustedIpAddressDto[]|null $body 租户ip白名单列表
+    * @param \HuaweiCloud\SDK\CodeHub\V4\Model\TenantTrustedIpAddressDto[]|null $body body
     *
     * @return $this
     */

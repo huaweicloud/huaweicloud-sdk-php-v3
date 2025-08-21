@@ -25,6 +25,7 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
     * name  规则名字
     * description  规则描述
     * policyFilter  policyFilter
+    * policyFilterV2  policyFilterV2
     * period  触发周期值，可选值：One_Hour, Three_Hours, Six_Hours, Twelve_Hours, TwentyFour_Hours
     * state  规则状态
     * created  规则创建时间
@@ -45,6 +46,7 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'policyFilter' => '\HuaweiCloud\SDK\Config\V1\Model\PolicyFilterDefinition',
+            'policyFilterV2' => '\HuaweiCloud\SDK\Config\V1\Model\PolicyFilterDefinitionV2',
             'period' => 'string',
             'state' => 'string',
             'created' => 'string',
@@ -65,6 +67,7 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
     * name  规则名字
     * description  规则描述
     * policyFilter  policyFilter
+    * policyFilterV2  policyFilterV2
     * period  触发周期值，可选值：One_Hour, Three_Hours, Six_Hours, Twelve_Hours, TwentyFour_Hours
     * state  规则状态
     * created  规则创建时间
@@ -85,6 +88,7 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'policyFilter' => null,
+        'policyFilterV2' => null,
         'period' => null,
         'state' => null,
         'created' => null,
@@ -126,6 +130,7 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
     * name  规则名字
     * description  规则描述
     * policyFilter  policyFilter
+    * policyFilterV2  policyFilterV2
     * period  触发周期值，可选值：One_Hour, Three_Hours, Six_Hours, Twelve_Hours, TwentyFour_Hours
     * state  规则状态
     * created  规则创建时间
@@ -146,6 +151,7 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'policyFilter' => 'policy_filter',
+            'policyFilterV2' => 'policy_filter_v2',
             'period' => 'period',
             'state' => 'state',
             'created' => 'created',
@@ -166,6 +172,7 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
     * name  规则名字
     * description  规则描述
     * policyFilter  policyFilter
+    * policyFilterV2  policyFilterV2
     * period  触发周期值，可选值：One_Hour, Three_Hours, Six_Hours, Twelve_Hours, TwentyFour_Hours
     * state  规则状态
     * created  规则创建时间
@@ -186,6 +193,7 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'policyFilter' => 'setPolicyFilter',
+            'policyFilterV2' => 'setPolicyFilterV2',
             'period' => 'setPeriod',
             'state' => 'setState',
             'created' => 'setCreated',
@@ -206,6 +214,7 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
     * name  规则名字
     * description  规则描述
     * policyFilter  policyFilter
+    * policyFilterV2  policyFilterV2
     * period  触发周期值，可选值：One_Hour, Three_Hours, Six_Hours, Twelve_Hours, TwentyFour_Hours
     * state  规则状态
     * created  规则创建时间
@@ -226,6 +235,7 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'policyFilter' => 'getPolicyFilter',
+            'policyFilterV2' => 'getPolicyFilterV2',
             'period' => 'getPeriod',
             'state' => 'getState',
             'created' => 'getCreated',
@@ -317,6 +327,7 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['policyFilter'] = isset($data['policyFilter']) ? $data['policyFilter'] : null;
+        $this->container['policyFilterV2'] = isset($data['policyFilterV2']) ? $data['policyFilterV2'] : null;
         $this->container['period'] = isset($data['period']) ? $data['period'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
@@ -477,6 +488,30 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
     public function setPolicyFilter($policyFilter)
     {
         $this->container['policyFilter'] = $policyFilter;
+        return $this;
+    }
+
+    /**
+    * Gets policyFilterV2
+    *  policyFilterV2
+    *
+    * @return \HuaweiCloud\SDK\Config\V1\Model\PolicyFilterDefinitionV2|null
+    */
+    public function getPolicyFilterV2()
+    {
+        return $this->container['policyFilterV2'];
+    }
+
+    /**
+    * Sets policyFilterV2
+    *
+    * @param \HuaweiCloud\SDK\Config\V1\Model\PolicyFilterDefinitionV2|null $policyFilterV2 policyFilterV2
+    *
+    * @return $this
+    */
+    public function setPolicyFilterV2($policyFilterV2)
+    {
+        $this->container['policyFilterV2'] = $policyFilterV2;
         return $this;
     }
 

@@ -21,22 +21,30 @@ class ShowRecycleBinResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recycleBin  recycleBin
+    * projectId  项目ID
+    * switch  回收站配置开关
+    * policy  policy
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'recycleBin' => '\HuaweiCloud\SDK\Ecs\V2\Model\RecycleBin'
+            'projectId' => 'string',
+            'switch' => 'string',
+            'policy' => '\HuaweiCloud\SDK\Ecs\V2\Model\RecycleBinPolicys'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recycleBin  recycleBin
+    * projectId  项目ID
+    * switch  回收站配置开关
+    * policy  policy
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'recycleBin' => null
+        'projectId' => null,
+        'switch' => null,
+        'policy' => null
     ];
 
     /**
@@ -62,32 +70,44 @@ class ShowRecycleBinResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recycleBin  recycleBin
+    * projectId  项目ID
+    * switch  回收站配置开关
+    * policy  policy
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'recycleBin' => 'recycle_bin'
+            'projectId' => 'project_id',
+            'switch' => 'switch',
+            'policy' => 'policy'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recycleBin  recycleBin
+    * projectId  项目ID
+    * switch  回收站配置开关
+    * policy  policy
     *
     * @var string[]
     */
     protected static $setters = [
-            'recycleBin' => 'setRecycleBin'
+            'projectId' => 'setProjectId',
+            'switch' => 'setSwitch',
+            'policy' => 'setPolicy'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recycleBin  recycleBin
+    * projectId  项目ID
+    * switch  回收站配置开关
+    * policy  policy
     *
     * @var string[]
     */
     protected static $getters = [
-            'recycleBin' => 'getRecycleBin'
+            'projectId' => 'getProjectId',
+            'switch' => 'getSwitch',
+            'policy' => 'getPolicy'
     ];
 
     /**
@@ -148,7 +168,9 @@ class ShowRecycleBinResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['recycleBin'] = isset($data['recycleBin']) ? $data['recycleBin'] : null;
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['switch'] = isset($data['switch']) ? $data['switch'] : null;
+        $this->container['policy'] = isset($data['policy']) ? $data['policy'] : null;
     }
 
     /**
@@ -174,26 +196,74 @@ class ShowRecycleBinResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets recycleBin
-    *  recycleBin
+    * Gets projectId
+    *  项目ID
     *
-    * @return \HuaweiCloud\SDK\Ecs\V2\Model\RecycleBin|null
+    * @return string|null
     */
-    public function getRecycleBin()
+    public function getProjectId()
     {
-        return $this->container['recycleBin'];
+        return $this->container['projectId'];
     }
 
     /**
-    * Sets recycleBin
+    * Sets projectId
     *
-    * @param \HuaweiCloud\SDK\Ecs\V2\Model\RecycleBin|null $recycleBin recycleBin
+    * @param string|null $projectId 项目ID
     *
     * @return $this
     */
-    public function setRecycleBin($recycleBin)
+    public function setProjectId($projectId)
     {
-        $this->container['recycleBin'] = $recycleBin;
+        $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets switch
+    *  回收站配置开关
+    *
+    * @return string|null
+    */
+    public function getSwitch()
+    {
+        return $this->container['switch'];
+    }
+
+    /**
+    * Sets switch
+    *
+    * @param string|null $switch 回收站配置开关
+    *
+    * @return $this
+    */
+    public function setSwitch($switch)
+    {
+        $this->container['switch'] = $switch;
+        return $this;
+    }
+
+    /**
+    * Gets policy
+    *  policy
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\RecycleBinPolicys|null
+    */
+    public function getPolicy()
+    {
+        return $this->container['policy'];
+    }
+
+    /**
+    * Sets policy
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\RecycleBinPolicys|null $policy policy
+    *
+    * @return $this
+    */
+    public function setPolicy($policy)
+    {
+        $this->container['policy'] = $policy;
         return $this;
     }
 

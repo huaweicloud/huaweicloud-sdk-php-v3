@@ -22,7 +22,7 @@ class ShowBestPracticeStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * operationId  操作Id
-    * status  状态：进行中，成功，成败
+    * status  状态：进行中，成功，失败
     * percentageComplete  检测进度
     * errorMessages  错误消息
     *
@@ -38,7 +38,7 @@ class ShowBestPracticeStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * operationId  操作Id
-    * status  状态：进行中，成功，成败
+    * status  状态：进行中，成功，失败
     * percentageComplete  检测进度
     * errorMessages  错误消息
     *
@@ -75,7 +75,7 @@ class ShowBestPracticeStatusResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * operationId  操作Id
-    * status  状态：进行中，成功，成败
+    * status  状态：进行中，成功，失败
     * percentageComplete  检测进度
     * errorMessages  错误消息
     *
@@ -91,7 +91,7 @@ class ShowBestPracticeStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * operationId  操作Id
-    * status  状态：进行中，成功，成败
+    * status  状态：进行中，成功，失败
     * percentageComplete  检测进度
     * errorMessages  错误消息
     *
@@ -107,7 +107,7 @@ class ShowBestPracticeStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * operationId  操作Id
-    * status  状态：进行中，成功，成败
+    * status  状态：进行中，成功，失败
     * percentageComplete  检测进度
     * errorMessages  错误消息
     *
@@ -238,7 +238,7 @@ class ShowBestPracticeStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态：进行中，成功，成败
+    *  状态：进行中，成功，失败
     *
     * @return string|null
     */
@@ -250,7 +250,7 @@ class ShowBestPracticeStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态：进行中，成功，成败
+    * @param string|null $status 状态：进行中，成功，失败
     *
     * @return $this
     */

@@ -283,14 +283,14 @@ class ListSecuritySensitiveDataDetailsRequest implements ModelInterface, ArrayAc
             if (!is_null($this->container['databaseName']) && (mb_strlen($this->container['databaseName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'databaseName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['findStartTime']) && ($this->container['findStartTime'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'findStartTime', must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['findStartTime']) && ($this->container['findStartTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'findStartTime', must be smaller than or equal to 9223372036854775807.";
             }
             if (!is_null($this->container['findStartTime']) && ($this->container['findStartTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'findStartTime', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['findEndTime']) && ($this->container['findEndTime'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'findEndTime', must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['findEndTime']) && ($this->container['findEndTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'findEndTime', must be smaller than or equal to 9223372036854775807.";
             }
             if (!is_null($this->container['findEndTime']) && ($this->container['findEndTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'findEndTime', must be bigger than or equal to 0.";

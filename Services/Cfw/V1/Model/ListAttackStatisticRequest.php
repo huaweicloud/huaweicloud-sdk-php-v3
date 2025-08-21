@@ -29,6 +29,7 @@ class ListAttackStatisticRequest implements ModelInterface, ArrayAccess
     * endTime  **参数解释**： 结束时间 **约束限制**： 不涉及 **取值范围**： 毫秒级时间戳 **默认取值**： 不涉及
     * vgwId  **参数解释**： VGW ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * item  **参数解释**： 聚合类型 **约束限制**： 不涉及 **取值范围**： dst TOP攻击目的统计 src TOP攻击来源统计 **默认取值**： 不涉及
+    * size  **参数解释**： 聚合条数 **约束限制**： 不涉及 **取值范围**： 0到100条 **默认取值**： 50
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class ListAttackStatisticRequest implements ModelInterface, ArrayAccess
             'startTime' => 'int',
             'endTime' => 'int',
             'vgwId' => 'string[]',
-            'item' => 'string'
+            'item' => 'string',
+            'size' => 'int'
     ];
 
     /**
@@ -55,6 +57,7 @@ class ListAttackStatisticRequest implements ModelInterface, ArrayAccess
     * endTime  **参数解释**： 结束时间 **约束限制**： 不涉及 **取值范围**： 毫秒级时间戳 **默认取值**： 不涉及
     * vgwId  **参数解释**： VGW ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * item  **参数解释**： 聚合类型 **约束限制**： 不涉及 **取值范围**： dst TOP攻击目的统计 src TOP攻击来源统计 **默认取值**： 不涉及
+    * size  **参数解释**： 聚合条数 **约束限制**： 不涉及 **取值范围**： 0到100条 **默认取值**： 50
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class ListAttackStatisticRequest implements ModelInterface, ArrayAccess
         'startTime' => 'int64',
         'endTime' => 'int64',
         'vgwId' => null,
-        'item' => null
+        'item' => null,
+        'size' => 'int32'
     ];
 
     /**
@@ -102,6 +106,7 @@ class ListAttackStatisticRequest implements ModelInterface, ArrayAccess
     * endTime  **参数解释**： 结束时间 **约束限制**： 不涉及 **取值范围**： 毫秒级时间戳 **默认取值**： 不涉及
     * vgwId  **参数解释**： VGW ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * item  **参数解释**： 聚合类型 **约束限制**： 不涉及 **取值范围**： dst TOP攻击目的统计 src TOP攻击来源统计 **默认取值**： 不涉及
+    * size  **参数解释**： 聚合条数 **约束限制**： 不涉及 **取值范围**： 0到100条 **默认取值**： 50
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class ListAttackStatisticRequest implements ModelInterface, ArrayAccess
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'vgwId' => 'vgw_id',
-            'item' => 'item'
+            'item' => 'item',
+            'size' => 'size'
     ];
 
     /**
@@ -128,6 +134,7 @@ class ListAttackStatisticRequest implements ModelInterface, ArrayAccess
     * endTime  **参数解释**： 结束时间 **约束限制**： 不涉及 **取值范围**： 毫秒级时间戳 **默认取值**： 不涉及
     * vgwId  **参数解释**： VGW ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * item  **参数解释**： 聚合类型 **约束限制**： 不涉及 **取值范围**： dst TOP攻击目的统计 src TOP攻击来源统计 **默认取值**： 不涉及
+    * size  **参数解释**： 聚合条数 **约束限制**： 不涉及 **取值范围**： 0到100条 **默认取值**： 50
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class ListAttackStatisticRequest implements ModelInterface, ArrayAccess
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'vgwId' => 'setVgwId',
-            'item' => 'setItem'
+            'item' => 'setItem',
+            'size' => 'setSize'
     ];
 
     /**
@@ -154,6 +162,7 @@ class ListAttackStatisticRequest implements ModelInterface, ArrayAccess
     * endTime  **参数解释**： 结束时间 **约束限制**： 不涉及 **取值范围**： 毫秒级时间戳 **默认取值**： 不涉及
     * vgwId  **参数解释**： VGW ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * item  **参数解释**： 聚合类型 **约束限制**： 不涉及 **取值范围**： dst TOP攻击目的统计 src TOP攻击来源统计 **默认取值**： 不涉及
+    * size  **参数解释**： 聚合条数 **约束限制**： 不涉及 **取值范围**： 0到100条 **默认取值**： 50
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class ListAttackStatisticRequest implements ModelInterface, ArrayAccess
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'vgwId' => 'getVgwId',
-            'item' => 'getItem'
+            'item' => 'getItem',
+            'size' => 'getSize'
     ];
 
     /**
@@ -302,6 +312,7 @@ class ListAttackStatisticRequest implements ModelInterface, ArrayAccess
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['vgwId'] = isset($data['vgwId']) ? $data['vgwId'] : null;
         $this->container['item'] = isset($data['item']) ? $data['item'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
     }
 
     /**
@@ -324,8 +335,8 @@ class ListAttackStatisticRequest implements ModelInterface, ArrayAccess
         if ($this->container['fwInstanceId'] === null) {
             $invalidProperties[] = "'fwInstanceId' can't be null";
         }
-            if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/", $this->container['fwInstanceId'])) {
-                $invalidProperties[] = "invalid value for 'fwInstanceId', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.";
+            if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/", $this->container['fwInstanceId'])) {
+                $invalidProperties[] = "invalid value for 'fwInstanceId', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/.";
             }
             $allowedValues = $this->getRangeAllowableValues();
                 if (!is_null($this->container['range']) && !in_array($this->container['range'], $allowedValues, true)) {
@@ -354,14 +365,14 @@ class ListAttackStatisticRequest implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['startTime']) && ($this->container['startTime'] > 4294967295000)) {
-                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 4294967295000.";
+            if (!is_null($this->container['startTime']) && ($this->container['startTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 9223372036854775807.";
             }
             if (!is_null($this->container['startTime']) && ($this->container['startTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'startTime', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['endTime']) && ($this->container['endTime'] > 4294967295000)) {
-                $invalidProperties[] = "invalid value for 'endTime', must be smaller than or equal to 4294967295000.";
+            if (!is_null($this->container['endTime']) && ($this->container['endTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'endTime', must be smaller than or equal to 9223372036854775807.";
             }
             if (!is_null($this->container['endTime']) && ($this->container['endTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'endTime', must be bigger than or equal to 0.";
@@ -377,6 +388,12 @@ class ListAttackStatisticRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['size']) && ($this->container['size'] > 100)) {
+                $invalidProperties[] = "invalid value for 'size', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['size']) && ($this->container['size'] < 1)) {
+                $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -604,6 +621,30 @@ class ListAttackStatisticRequest implements ModelInterface, ArrayAccess
     public function setItem($item)
     {
         $this->container['item'] = $item;
+        return $this;
+    }
+
+    /**
+    * Gets size
+    *  **参数解释**： 聚合条数 **约束限制**： 不涉及 **取值范围**： 0到100条 **默认取值**： 50
+    *
+    * @return int|null
+    */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+    * Sets size
+    *
+    * @param int|null $size **参数解释**： 聚合条数 **约束限制**： 不涉及 **取值范围**： 0到100条 **默认取值**： 50
+    *
+    * @return $this
+    */
+    public function setSize($size)
+    {
+        $this->container['size'] = $size;
         return $this;
     }
 

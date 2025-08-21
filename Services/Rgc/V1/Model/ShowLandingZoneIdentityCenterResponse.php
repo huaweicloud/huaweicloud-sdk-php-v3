@@ -23,8 +23,8 @@ class ShowLandingZoneIdentityCenterResponse implements ModelInterface, ArrayAcce
     * Array of property to type mappings. Used for (de)serialization
     * identityStoreId  Identity Center目录ID。
     * userPortalUrl  Identity Center登录URL。
-    * permissionSets  permissionSets
-    * groups  groups
+    * permissionSets  Identity Center权限集。
+    * groups  Identity Center用户组。
     *
     * @var string[]
     */
@@ -39,8 +39,8 @@ class ShowLandingZoneIdentityCenterResponse implements ModelInterface, ArrayAcce
     * Array of property to format mappings. Used for (de)serialization
     * identityStoreId  Identity Center目录ID。
     * userPortalUrl  Identity Center登录URL。
-    * permissionSets  permissionSets
-    * groups  groups
+    * permissionSets  Identity Center权限集。
+    * groups  Identity Center用户组。
     *
     * @var string[]
     */
@@ -76,8 +76,8 @@ class ShowLandingZoneIdentityCenterResponse implements ModelInterface, ArrayAcce
     * and the value is the original name
     * identityStoreId  Identity Center目录ID。
     * userPortalUrl  Identity Center登录URL。
-    * permissionSets  permissionSets
-    * groups  groups
+    * permissionSets  Identity Center权限集。
+    * groups  Identity Center用户组。
     *
     * @var string[]
     */
@@ -92,8 +92,8 @@ class ShowLandingZoneIdentityCenterResponse implements ModelInterface, ArrayAcce
     * Array of attributes to setter functions (for deserialization of responses)
     * identityStoreId  Identity Center目录ID。
     * userPortalUrl  Identity Center登录URL。
-    * permissionSets  permissionSets
-    * groups  groups
+    * permissionSets  Identity Center权限集。
+    * groups  Identity Center用户组。
     *
     * @var string[]
     */
@@ -108,8 +108,8 @@ class ShowLandingZoneIdentityCenterResponse implements ModelInterface, ArrayAcce
     * Array of attributes to getter functions (for serialization of requests)
     * identityStoreId  Identity Center目录ID。
     * userPortalUrl  Identity Center登录URL。
-    * permissionSets  permissionSets
-    * groups  groups
+    * permissionSets  Identity Center权限集。
+    * groups  Identity Center用户组。
     *
     * @var string[]
     */
@@ -268,7 +268,7 @@ class ShowLandingZoneIdentityCenterResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets permissionSets
-    *  permissionSets
+    *  Identity Center权限集。
     *
     * @return \HuaweiCloud\SDK\Rgc\V1\Model\PermissionSet[]|null
     */
@@ -280,7 +280,7 @@ class ShowLandingZoneIdentityCenterResponse implements ModelInterface, ArrayAcce
     /**
     * Sets permissionSets
     *
-    * @param \HuaweiCloud\SDK\Rgc\V1\Model\PermissionSet[]|null $permissionSets permissionSets
+    * @param \HuaweiCloud\SDK\Rgc\V1\Model\PermissionSet[]|null $permissionSets Identity Center权限集。
     *
     * @return $this
     */
@@ -292,7 +292,7 @@ class ShowLandingZoneIdentityCenterResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets groups
-    *  groups
+    *  Identity Center用户组。
     *
     * @return \HuaweiCloud\SDK\Rgc\V1\Model\IdentityCenterGroup[]|null
     */
@@ -304,7 +304,7 @@ class ShowLandingZoneIdentityCenterResponse implements ModelInterface, ArrayAcce
     /**
     * Sets groups
     *
-    * @param \HuaweiCloud\SDK\Rgc\V1\Model\IdentityCenterGroup[]|null $groups groups
+    * @param \HuaweiCloud\SDK\Rgc\V1\Model\IdentityCenterGroup[]|null $groups Identity Center用户组。
     *
     * @return $this
     */

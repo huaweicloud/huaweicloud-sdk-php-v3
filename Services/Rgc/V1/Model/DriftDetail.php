@@ -20,7 +20,7 @@ class DriftDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * managedAccountId  管理纳管账号ID。
+    * managedAccountId  管理员账号ID。
     * driftType  漂移类型。
     * driftTargetId  漂移发生的纳管账号ID或注册OU ID。
     * driftTargetType  漂移目标类型，类型有account、ou和policy。
@@ -42,7 +42,7 @@ class DriftDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * managedAccountId  管理纳管账号ID。
+    * managedAccountId  管理员账号ID。
     * driftType  漂移类型。
     * driftTargetId  漂移发生的纳管账号ID或注册OU ID。
     * driftTargetType  漂移目标类型，类型有account、ou和policy。
@@ -85,7 +85,7 @@ class DriftDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * managedAccountId  管理纳管账号ID。
+    * managedAccountId  管理员账号ID。
     * driftType  漂移类型。
     * driftTargetId  漂移发生的纳管账号ID或注册OU ID。
     * driftTargetType  漂移目标类型，类型有account、ou和policy。
@@ -107,7 +107,7 @@ class DriftDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * managedAccountId  管理纳管账号ID。
+    * managedAccountId  管理员账号ID。
     * driftType  漂移类型。
     * driftTargetId  漂移发生的纳管账号ID或注册OU ID。
     * driftTargetType  漂移目标类型，类型有account、ou和policy。
@@ -129,7 +129,7 @@ class DriftDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * managedAccountId  管理纳管账号ID。
+    * managedAccountId  管理员账号ID。
     * driftType  漂移类型。
     * driftTargetId  漂移发生的纳管账号ID或注册OU ID。
     * driftTargetType  漂移目标类型，类型有account、ou和policy。
@@ -282,7 +282,7 @@ class DriftDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets managedAccountId
-    *  管理纳管账号ID。
+    *  管理员账号ID。
     *
     * @return string|null
     */
@@ -294,7 +294,7 @@ class DriftDetail implements ModelInterface, ArrayAccess
     /**
     * Sets managedAccountId
     *
-    * @param string|null $managedAccountId 管理纳管账号ID。
+    * @param string|null $managedAccountId 管理员账号ID。
     *
     * @return $this
     */

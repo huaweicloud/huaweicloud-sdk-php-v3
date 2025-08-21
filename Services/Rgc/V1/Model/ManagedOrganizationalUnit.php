@@ -20,16 +20,16 @@ class ManagedOrganizationalUnit implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * organizationalUnitId  注册OU ID。
     * organizationalUnitName  注册OU名称。
     * organizationalUnitStatus  注册OU状态。
     * organizationalUnitType  organizationalUnitType
     * parentOrganizationalUnitId  父注册OU ID。
     * parentOrganizationalUnitName  父注册OU名称。
-    * createdAt  组织里某个注册OU下的纳管账号被创建的时间。
-    * landingZoneVersion  Landing Zone版本。
-    * updatedAt  组织里某个注册OU下的纳管账号最后一次更新的时间。
+    * createdAt  注册OU的创建时间。
+    * landingZoneVersion  注册OU的Landing Zone版本。
+    * updatedAt  注册OU的更新时间。
     * message  错误信息描述。
     *
     * @var string[]
@@ -50,16 +50,16 @@ class ManagedOrganizationalUnit implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * organizationalUnitId  注册OU ID。
     * organizationalUnitName  注册OU名称。
     * organizationalUnitStatus  注册OU状态。
     * organizationalUnitType  organizationalUnitType
     * parentOrganizationalUnitId  父注册OU ID。
     * parentOrganizationalUnitName  父注册OU名称。
-    * createdAt  组织里某个注册OU下的纳管账号被创建的时间。
-    * landingZoneVersion  Landing Zone版本。
-    * updatedAt  组织里某个注册OU下的纳管账号最后一次更新的时间。
+    * createdAt  注册OU的创建时间。
+    * landingZoneVersion  注册OU的Landing Zone版本。
+    * updatedAt  注册OU的更新时间。
     * message  错误信息描述。
     *
     * @var string[]
@@ -101,16 +101,16 @@ class ManagedOrganizationalUnit implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * organizationalUnitId  注册OU ID。
     * organizationalUnitName  注册OU名称。
     * organizationalUnitStatus  注册OU状态。
     * organizationalUnitType  organizationalUnitType
     * parentOrganizationalUnitId  父注册OU ID。
     * parentOrganizationalUnitName  父注册OU名称。
-    * createdAt  组织里某个注册OU下的纳管账号被创建的时间。
-    * landingZoneVersion  Landing Zone版本。
-    * updatedAt  组织里某个注册OU下的纳管账号最后一次更新的时间。
+    * createdAt  注册OU的创建时间。
+    * landingZoneVersion  注册OU的Landing Zone版本。
+    * updatedAt  注册OU的更新时间。
     * message  错误信息描述。
     *
     * @var string[]
@@ -131,16 +131,16 @@ class ManagedOrganizationalUnit implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * organizationalUnitId  注册OU ID。
     * organizationalUnitName  注册OU名称。
     * organizationalUnitStatus  注册OU状态。
     * organizationalUnitType  organizationalUnitType
     * parentOrganizationalUnitId  父注册OU ID。
     * parentOrganizationalUnitName  父注册OU名称。
-    * createdAt  组织里某个注册OU下的纳管账号被创建的时间。
-    * landingZoneVersion  Landing Zone版本。
-    * updatedAt  组织里某个注册OU下的纳管账号最后一次更新的时间。
+    * createdAt  注册OU的创建时间。
+    * landingZoneVersion  注册OU的Landing Zone版本。
+    * updatedAt  注册OU的更新时间。
     * message  错误信息描述。
     *
     * @var string[]
@@ -161,16 +161,16 @@ class ManagedOrganizationalUnit implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * organizationalUnitId  注册OU ID。
     * organizationalUnitName  注册OU名称。
     * organizationalUnitStatus  注册OU状态。
     * organizationalUnitType  organizationalUnitType
     * parentOrganizationalUnitId  父注册OU ID。
     * parentOrganizationalUnitName  父注册OU名称。
-    * createdAt  组织里某个注册OU下的纳管账号被创建的时间。
-    * landingZoneVersion  Landing Zone版本。
-    * updatedAt  组织里某个注册OU下的纳管账号最后一次更新的时间。
+    * createdAt  注册OU的创建时间。
+    * landingZoneVersion  注册OU的Landing Zone版本。
+    * updatedAt  注册OU的更新时间。
     * message  错误信息描述。
     *
     * @var string[]
@@ -338,7 +338,7 @@ class ManagedOrganizationalUnit implements ModelInterface, ArrayAccess
 
     /**
     * Gets manageAccountId
-    *  管理纳管账号ID。
+    *  管理员账号ID。
     *
     * @return string|null
     */
@@ -350,7 +350,7 @@ class ManagedOrganizationalUnit implements ModelInterface, ArrayAccess
     /**
     * Sets manageAccountId
     *
-    * @param string|null $manageAccountId 管理纳管账号ID。
+    * @param string|null $manageAccountId 管理员账号ID。
     *
     * @return $this
     */
@@ -506,7 +506,7 @@ class ManagedOrganizationalUnit implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  组织里某个注册OU下的纳管账号被创建的时间。
+    *  注册OU的创建时间。
     *
     * @return \DateTime|null
     */
@@ -518,7 +518,7 @@ class ManagedOrganizationalUnit implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param \DateTime|null $createdAt 组织里某个注册OU下的纳管账号被创建的时间。
+    * @param \DateTime|null $createdAt 注册OU的创建时间。
     *
     * @return $this
     */
@@ -530,7 +530,7 @@ class ManagedOrganizationalUnit implements ModelInterface, ArrayAccess
 
     /**
     * Gets landingZoneVersion
-    *  Landing Zone版本。
+    *  注册OU的Landing Zone版本。
     *
     * @return string|null
     */
@@ -542,7 +542,7 @@ class ManagedOrganizationalUnit implements ModelInterface, ArrayAccess
     /**
     * Sets landingZoneVersion
     *
-    * @param string|null $landingZoneVersion Landing Zone版本。
+    * @param string|null $landingZoneVersion 注册OU的Landing Zone版本。
     *
     * @return $this
     */
@@ -554,7 +554,7 @@ class ManagedOrganizationalUnit implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  组织里某个注册OU下的纳管账号最后一次更新的时间。
+    *  注册OU的更新时间。
     *
     * @return \DateTime|null
     */
@@ -566,7 +566,7 @@ class ManagedOrganizationalUnit implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param \DateTime|null $updatedAt 组织里某个注册OU下的纳管账号最后一次更新的时间。
+    * @param \DateTime|null $updatedAt 注册OU的更新时间。
     *
     * @return $this
     */

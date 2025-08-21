@@ -20,7 +20,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * portType  **参数解释**： 端口类型，-1 Any，0 包含，1 排除 **取值范围**： 不涉及
+    * portType  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
     * ports  **参数解释**： 端口 **取值范围**： 不涉及
     *
     * @var string[]
@@ -32,7 +32,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * portType  **参数解释**： 端口类型，-1 Any，0 包含，1 排除 **取值范围**： 不涉及
+    * portType  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
     * ports  **参数解释**： 端口 **取值范围**： 不涉及
     *
     * @var string[]
@@ -65,7 +65,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * portType  **参数解释**： 端口类型，-1 Any，0 包含，1 排除 **取值范围**： 不涉及
+    * portType  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
     * ports  **参数解释**： 端口 **取值范围**： 不涉及
     *
     * @var string[]
@@ -77,7 +77,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * portType  **参数解释**： 端口类型，-1 Any，0 包含，1 排除 **取值范围**： 不涉及
+    * portType  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
     * ports  **参数解释**： 端口 **取值范围**： 不涉及
     *
     * @var string[]
@@ -89,7 +89,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * portType  **参数解释**： 端口类型，-1 Any，0 包含，1 排除 **取值范围**： 不涉及
+    * portType  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
     * ports  **参数解释**： 端口 **取值范围**： 不涉及
     *
     * @var string[]
@@ -175,8 +175,8 @@ class Port implements ModelInterface, ArrayAccess
             if (!is_null($this->container['portType']) && ($this->container['portType'] < -1)) {
                 $invalidProperties[] = "invalid value for 'portType', must be bigger than or equal to -1.";
             }
-            if (!is_null($this->container['ports']) && (mb_strlen($this->container['ports']) > 6535)) {
-                $invalidProperties[] = "invalid value for 'ports', the character length must be smaller than or equal to 6535.";
+            if (!is_null($this->container['ports']) && (mb_strlen($this->container['ports']) > 65535)) {
+                $invalidProperties[] = "invalid value for 'ports', the character length must be smaller than or equal to 65535.";
             }
             if (!is_null($this->container['ports']) && (mb_strlen($this->container['ports']) < 1)) {
                 $invalidProperties[] = "invalid value for 'ports', the character length must be bigger than or equal to 1.";
@@ -197,7 +197,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets portType
-    *  **参数解释**： 端口类型，-1 Any，0 包含，1 排除 **取值范围**： 不涉及
+    *  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
     *
     * @return int|null
     */
@@ -209,7 +209,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets portType
     *
-    * @param int|null $portType **参数解释**： 端口类型，-1 Any，0 包含，1 排除 **取值范围**： 不涉及
+    * @param int|null $portType **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
     *
     * @return $this
     */

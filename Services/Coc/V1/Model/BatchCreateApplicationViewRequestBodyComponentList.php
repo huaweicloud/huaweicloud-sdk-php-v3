@@ -20,8 +20,8 @@ class BatchCreateApplicationViewRequestBodyComponentList implements ModelInterfa
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  名称
-    * parentName  父节点code
+    * name  **参数解释：** 组件名称。 **约束限制：** 不涉及。 **取值范围：** 由中文、英文字母、数字、中划线、下划线组成，长度在3~50个字符之间。 **默认取值：** 不涉及。
+    * parentName  **参数解释：** 父节点名称。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度3到50个字符。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class BatchCreateApplicationViewRequestBodyComponentList implements ModelInterfa
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  名称
-    * parentName  父节点code
+    * name  **参数解释：** 组件名称。 **约束限制：** 不涉及。 **取值范围：** 由中文、英文字母、数字、中划线、下划线组成，长度在3~50个字符之间。 **默认取值：** 不涉及。
+    * parentName  **参数解释：** 父节点名称。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度3到50个字符。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BatchCreateApplicationViewRequestBodyComponentList implements ModelInterfa
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  名称
-    * parentName  父节点code
+    * name  **参数解释：** 组件名称。 **约束限制：** 不涉及。 **取值范围：** 由中文、英文字母、数字、中划线、下划线组成，长度在3~50个字符之间。 **默认取值：** 不涉及。
+    * parentName  **参数解释：** 父节点名称。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度3到50个字符。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BatchCreateApplicationViewRequestBodyComponentList implements ModelInterfa
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  名称
-    * parentName  父节点code
+    * name  **参数解释：** 组件名称。 **约束限制：** 不涉及。 **取值范围：** 由中文、英文字母、数字、中划线、下划线组成，长度在3~50个字符之间。 **默认取值：** 不涉及。
+    * parentName  **参数解释：** 父节点名称。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度3到50个字符。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BatchCreateApplicationViewRequestBodyComponentList implements ModelInterfa
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  名称
-    * parentName  父节点code
+    * name  **参数解释：** 组件名称。 **约束限制：** 不涉及。 **取值范围：** 由中文、英文字母、数字、中划线、下划线组成，长度在3~50个字符之间。 **默认取值：** 不涉及。
+    * parentName  **参数解释：** 父节点名称。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度3到50个字符。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -169,6 +169,18 @@ class BatchCreateApplicationViewRequestBodyComponentList implements ModelInterfa
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 50)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 50.";
+            }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 3)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['parentName']) && (mb_strlen($this->container['parentName']) > 50)) {
+                $invalidProperties[] = "invalid value for 'parentName', the character length must be smaller than or equal to 50.";
+            }
+            if (!is_null($this->container['parentName']) && (mb_strlen($this->container['parentName']) < 3)) {
+                $invalidProperties[] = "invalid value for 'parentName', the character length must be bigger than or equal to 3.";
+            }
         return $invalidProperties;
     }
 
@@ -185,7 +197,7 @@ class BatchCreateApplicationViewRequestBodyComponentList implements ModelInterfa
 
     /**
     * Gets name
-    *  名称
+    *  **参数解释：** 组件名称。 **约束限制：** 不涉及。 **取值范围：** 由中文、英文字母、数字、中划线、下划线组成，长度在3~50个字符之间。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +209,7 @@ class BatchCreateApplicationViewRequestBodyComponentList implements ModelInterfa
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string|null $name **参数解释：** 组件名称。 **约束限制：** 不涉及。 **取值范围：** 由中文、英文字母、数字、中划线、下划线组成，长度在3~50个字符之间。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -209,7 +221,7 @@ class BatchCreateApplicationViewRequestBodyComponentList implements ModelInterfa
 
     /**
     * Gets parentName
-    *  父节点code
+    *  **参数解释：** 父节点名称。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度3到50个字符。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -221,7 +233,7 @@ class BatchCreateApplicationViewRequestBodyComponentList implements ModelInterfa
     /**
     * Sets parentName
     *
-    * @param string|null $parentName 父节点code
+    * @param string|null $parentName **参数解释：** 父节点名称。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度3到50个字符。 **默认取值：** 不涉及。
     *
     * @return $this
     */

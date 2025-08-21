@@ -22,8 +22,8 @@ class ShowControlResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * identifier  控制策略ID。
-    * implementation  服务控制策略（SCP），配置规则。
-    * guidance  控制策略必须性。
+    * implementation  策略类别。
+    * guidance  实施建议。
     * resource  治理资源。
     * service  控制策略所属服务。
     * behavior  控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
@@ -31,7 +31,7 @@ class ShowControlResponse implements ModelInterface, ArrayAccess
     * framework  治理策略来自的框架。
     * artifacts  控制策略内容。
     * aliases  控制策略别名。
-    * owner  纳管账号的创建来源，包括CUSTOM和RGC。
+    * owner  控制策略来源。
     * severity  控制策略严重性。
     * version  控制策略版本。
     * releaseDate  控制策略发布时间。
@@ -58,8 +58,8 @@ class ShowControlResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * identifier  控制策略ID。
-    * implementation  服务控制策略（SCP），配置规则。
-    * guidance  控制策略必须性。
+    * implementation  策略类别。
+    * guidance  实施建议。
     * resource  治理资源。
     * service  控制策略所属服务。
     * behavior  控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
@@ -67,7 +67,7 @@ class ShowControlResponse implements ModelInterface, ArrayAccess
     * framework  治理策略来自的框架。
     * artifacts  控制策略内容。
     * aliases  控制策略别名。
-    * owner  纳管账号的创建来源，包括CUSTOM和RGC。
+    * owner  控制策略来源。
     * severity  控制策略严重性。
     * version  控制策略版本。
     * releaseDate  控制策略发布时间。
@@ -115,8 +115,8 @@ class ShowControlResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * identifier  控制策略ID。
-    * implementation  服务控制策略（SCP），配置规则。
-    * guidance  控制策略必须性。
+    * implementation  策略类别。
+    * guidance  实施建议。
     * resource  治理资源。
     * service  控制策略所属服务。
     * behavior  控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
@@ -124,7 +124,7 @@ class ShowControlResponse implements ModelInterface, ArrayAccess
     * framework  治理策略来自的框架。
     * artifacts  控制策略内容。
     * aliases  控制策略别名。
-    * owner  纳管账号的创建来源，包括CUSTOM和RGC。
+    * owner  控制策略来源。
     * severity  控制策略严重性。
     * version  控制策略版本。
     * releaseDate  控制策略发布时间。
@@ -151,8 +151,8 @@ class ShowControlResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * identifier  控制策略ID。
-    * implementation  服务控制策略（SCP），配置规则。
-    * guidance  控制策略必须性。
+    * implementation  策略类别。
+    * guidance  实施建议。
     * resource  治理资源。
     * service  控制策略所属服务。
     * behavior  控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
@@ -160,7 +160,7 @@ class ShowControlResponse implements ModelInterface, ArrayAccess
     * framework  治理策略来自的框架。
     * artifacts  控制策略内容。
     * aliases  控制策略别名。
-    * owner  纳管账号的创建来源，包括CUSTOM和RGC。
+    * owner  控制策略来源。
     * severity  控制策略严重性。
     * version  控制策略版本。
     * releaseDate  控制策略发布时间。
@@ -187,8 +187,8 @@ class ShowControlResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * identifier  控制策略ID。
-    * implementation  服务控制策略（SCP），配置规则。
-    * guidance  控制策略必须性。
+    * implementation  策略类别。
+    * guidance  实施建议。
     * resource  治理资源。
     * service  控制策略所属服务。
     * behavior  控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
@@ -196,7 +196,7 @@ class ShowControlResponse implements ModelInterface, ArrayAccess
     * framework  治理策略来自的框架。
     * artifacts  控制策略内容。
     * aliases  控制策略别名。
-    * owner  纳管账号的创建来源，包括CUSTOM和RGC。
+    * owner  控制策略来源。
     * severity  控制策略严重性。
     * version  控制策略版本。
     * releaseDate  控制策略发布时间。
@@ -396,7 +396,7 @@ class ShowControlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets implementation
-    *  服务控制策略（SCP），配置规则。
+    *  策略类别。
     *
     * @return string|null
     */
@@ -408,7 +408,7 @@ class ShowControlResponse implements ModelInterface, ArrayAccess
     /**
     * Sets implementation
     *
-    * @param string|null $implementation 服务控制策略（SCP），配置规则。
+    * @param string|null $implementation 策略类别。
     *
     * @return $this
     */
@@ -420,7 +420,7 @@ class ShowControlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets guidance
-    *  控制策略必须性。
+    *  实施建议。
     *
     * @return string|null
     */
@@ -432,7 +432,7 @@ class ShowControlResponse implements ModelInterface, ArrayAccess
     /**
     * Sets guidance
     *
-    * @param string|null $guidance 控制策略必须性。
+    * @param string|null $guidance 实施建议。
     *
     * @return $this
     */
@@ -612,7 +612,7 @@ class ShowControlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
-    *  纳管账号的创建来源，包括CUSTOM和RGC。
+    *  控制策略来源。
     *
     * @return string|null
     */
@@ -624,7 +624,7 @@ class ShowControlResponse implements ModelInterface, ArrayAccess
     /**
     * Sets owner
     *
-    * @param string|null $owner 纳管账号的创建来源，包括CUSTOM和RGC。
+    * @param string|null $owner 控制策略来源。
     *
     * @return $this
     */

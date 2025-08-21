@@ -21,7 +21,7 @@ class ListCertsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  指定待查询的集群ID。
-    * start  指定查询起始值，默认值为1，即从第1个证书开始查询。
+    * offset  指定查询起始值，默认值为1，即从第1个证书开始查询。
     * limit  指定查询个数，默认值为10，即一次查询10个证书信息。
     * certsType  证书类型。defaultCerts为默认证书类型，不指定查询证书类型默认查找自定义证书列表。
     *
@@ -29,7 +29,7 @@ class ListCertsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
-            'start' => 'string',
+            'offset' => 'string',
             'limit' => 'string',
             'certsType' => 'string'
     ];
@@ -37,7 +37,7 @@ class ListCertsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  指定待查询的集群ID。
-    * start  指定查询起始值，默认值为1，即从第1个证书开始查询。
+    * offset  指定查询起始值，默认值为1，即从第1个证书开始查询。
     * limit  指定查询个数，默认值为10，即一次查询10个证书信息。
     * certsType  证书类型。defaultCerts为默认证书类型，不指定查询证书类型默认查找自定义证书列表。
     *
@@ -45,7 +45,7 @@ class ListCertsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'clusterId' => null,
-        'start' => null,
+        'offset' => null,
         'limit' => null,
         'certsType' => null
     ];
@@ -74,7 +74,7 @@ class ListCertsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterId  指定待查询的集群ID。
-    * start  指定查询起始值，默认值为1，即从第1个证书开始查询。
+    * offset  指定查询起始值，默认值为1，即从第1个证书开始查询。
     * limit  指定查询个数，默认值为10，即一次查询10个证书信息。
     * certsType  证书类型。defaultCerts为默认证书类型，不指定查询证书类型默认查找自定义证书列表。
     *
@@ -82,7 +82,7 @@ class ListCertsRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
-            'start' => 'start',
+            'offset' => 'offset',
             'limit' => 'limit',
             'certsType' => 'certsType'
     ];
@@ -90,7 +90,7 @@ class ListCertsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  指定待查询的集群ID。
-    * start  指定查询起始值，默认值为1，即从第1个证书开始查询。
+    * offset  指定查询起始值，默认值为1，即从第1个证书开始查询。
     * limit  指定查询个数，默认值为10，即一次查询10个证书信息。
     * certsType  证书类型。defaultCerts为默认证书类型，不指定查询证书类型默认查找自定义证书列表。
     *
@@ -98,7 +98,7 @@ class ListCertsRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'clusterId' => 'setClusterId',
-            'start' => 'setStart',
+            'offset' => 'setOffset',
             'limit' => 'setLimit',
             'certsType' => 'setCertsType'
     ];
@@ -106,7 +106,7 @@ class ListCertsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  指定待查询的集群ID。
-    * start  指定查询起始值，默认值为1，即从第1个证书开始查询。
+    * offset  指定查询起始值，默认值为1，即从第1个证书开始查询。
     * limit  指定查询个数，默认值为10，即一次查询10个证书信息。
     * certsType  证书类型。defaultCerts为默认证书类型，不指定查询证书类型默认查找自定义证书列表。
     *
@@ -114,7 +114,7 @@ class ListCertsRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'clusterId' => 'getClusterId',
-            'start' => 'getStart',
+            'offset' => 'getOffset',
             'limit' => 'getLimit',
             'certsType' => 'getCertsType'
     ];
@@ -178,7 +178,7 @@ class ListCertsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
-        $this->container['start'] = isset($data['start']) ? $data['start'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['certsType'] = isset($data['certsType']) ? $data['certsType'] : null;
     }
@@ -233,26 +233,26 @@ class ListCertsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets start
+    * Gets offset
     *  指定查询起始值，默认值为1，即从第1个证书开始查询。
     *
     * @return string|null
     */
-    public function getStart()
+    public function getOffset()
     {
-        return $this->container['start'];
+        return $this->container['offset'];
     }
 
     /**
-    * Sets start
+    * Sets offset
     *
-    * @param string|null $start 指定查询起始值，默认值为1，即从第1个证书开始查询。
+    * @param string|null $offset 指定查询起始值，默认值为1，即从第1个证书开始查询。
     *
     * @return $this
     */
-    public function setStart($start)
+    public function setOffset($offset)
     {
-        $this->container['start'] = $start;
+        $this->container['offset'] = $offset;
         return $this;
     }
 

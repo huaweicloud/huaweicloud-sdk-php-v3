@@ -21,26 +21,22 @@ class ListManageableGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  仓库ip白名单列表
-    * xTotal  xTotal
+    * body  拥有管理权限的代码组列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\CodeHub\V4\Model\GroupsManageableDto[]',
-            'xTotal' => 'string'
+            'body' => '\HuaweiCloud\SDK\CodeHub\V4\Model\ManageableGroupDto[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  仓库ip白名单列表
-    * xTotal  xTotal
+    * body  拥有管理权限的代码组列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null,
-        'xTotal' => null
+        'body' => null
     ];
 
     /**
@@ -66,38 +62,32 @@ class ListManageableGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  仓库ip白名单列表
-    * xTotal  xTotal
+    * body  拥有管理权限的代码组列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body',
-            'xTotal' => 'X-Total'
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  仓库ip白名单列表
-    * xTotal  xTotal
+    * body  拥有管理权限的代码组列表
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody',
-            'xTotal' => 'setXTotal'
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  仓库ip白名单列表
-    * xTotal  xTotal
+    * body  拥有管理权限的代码组列表
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody',
-            'xTotal' => 'getXTotal'
+            'body' => 'getBody'
     ];
 
     /**
@@ -159,7 +149,6 @@ class ListManageableGroupsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
-        $this->container['xTotal'] = isset($data['xTotal']) ? $data['xTotal'] : null;
     }
 
     /**
@@ -186,9 +175,9 @@ class ListManageableGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
-    *  仓库ip白名单列表
+    *  拥有管理权限的代码组列表
     *
-    * @return \HuaweiCloud\SDK\CodeHub\V4\Model\GroupsManageableDto[]|null
+    * @return \HuaweiCloud\SDK\CodeHub\V4\Model\ManageableGroupDto[]|null
     */
     public function getBody()
     {
@@ -198,37 +187,13 @@ class ListManageableGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\CodeHub\V4\Model\GroupsManageableDto[]|null $body 仓库ip白名单列表
+    * @param \HuaweiCloud\SDK\CodeHub\V4\Model\ManageableGroupDto[]|null $body 拥有管理权限的代码组列表
     *
     * @return $this
     */
     public function setBody($body)
     {
         $this->container['body'] = $body;
-        return $this;
-    }
-
-    /**
-    * Gets xTotal
-    *  xTotal
-    *
-    * @return string|null
-    */
-    public function getXTotal()
-    {
-        return $this->container['xTotal'];
-    }
-
-    /**
-    * Sets xTotal
-    *
-    * @param string|null $xTotal xTotal
-    *
-    * @return $this
-    */
-    public function setXTotal($xTotal)
-    {
-        $this->container['xTotal'] = $xTotal;
         return $this;
     }
 

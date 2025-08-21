@@ -27,9 +27,9 @@ class Control implements ModelInterface, ArrayAccess
     * resource  治理资源。
     * framework  治理策略来自的框架。
     * service  控制策略所属服务。
-    * implementation  服务控制策略（SCP），配置规则。
+    * implementation  策略类别。
     * behavior  控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
-    * owner  纳管账号的创建来源，包括CUSTOM和RGC。
+    * owner  控制策略来源。
     * severity  控制策略严重性。
     * controlObjective  控制策略目标。
     * version  控制策略版本。
@@ -63,9 +63,9 @@ class Control implements ModelInterface, ArrayAccess
     * resource  治理资源。
     * framework  治理策略来自的框架。
     * service  控制策略所属服务。
-    * implementation  服务控制策略（SCP），配置规则。
+    * implementation  策略类别。
     * behavior  控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
-    * owner  纳管账号的创建来源，包括CUSTOM和RGC。
+    * owner  控制策略来源。
     * severity  控制策略严重性。
     * controlObjective  控制策略目标。
     * version  控制策略版本。
@@ -120,9 +120,9 @@ class Control implements ModelInterface, ArrayAccess
     * resource  治理资源。
     * framework  治理策略来自的框架。
     * service  控制策略所属服务。
-    * implementation  服务控制策略（SCP），配置规则。
+    * implementation  策略类别。
     * behavior  控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
-    * owner  纳管账号的创建来源，包括CUSTOM和RGC。
+    * owner  控制策略来源。
     * severity  控制策略严重性。
     * controlObjective  控制策略目标。
     * version  控制策略版本。
@@ -156,9 +156,9 @@ class Control implements ModelInterface, ArrayAccess
     * resource  治理资源。
     * framework  治理策略来自的框架。
     * service  控制策略所属服务。
-    * implementation  服务控制策略（SCP），配置规则。
+    * implementation  策略类别。
     * behavior  控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
-    * owner  纳管账号的创建来源，包括CUSTOM和RGC。
+    * owner  控制策略来源。
     * severity  控制策略严重性。
     * controlObjective  控制策略目标。
     * version  控制策略版本。
@@ -192,9 +192,9 @@ class Control implements ModelInterface, ArrayAccess
     * resource  治理资源。
     * framework  治理策略来自的框架。
     * service  控制策略所属服务。
-    * implementation  服务控制策略（SCP），配置规则。
+    * implementation  策略类别。
     * behavior  控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
-    * owner  纳管账号的创建来源，包括CUSTOM和RGC。
+    * owner  控制策略来源。
     * severity  控制策略严重性。
     * controlObjective  控制策略目标。
     * version  控制策略版本。
@@ -551,7 +551,7 @@ class Control implements ModelInterface, ArrayAccess
 
     /**
     * Gets implementation
-    *  服务控制策略（SCP），配置规则。
+    *  策略类别。
     *
     * @return string|null
     */
@@ -563,7 +563,7 @@ class Control implements ModelInterface, ArrayAccess
     /**
     * Sets implementation
     *
-    * @param string|null $implementation 服务控制策略（SCP），配置规则。
+    * @param string|null $implementation 策略类别。
     *
     * @return $this
     */
@@ -599,7 +599,7 @@ class Control implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
-    *  纳管账号的创建来源，包括CUSTOM和RGC。
+    *  控制策略来源。
     *
     * @return string|null
     */
@@ -611,7 +611,7 @@ class Control implements ModelInterface, ArrayAccess
     /**
     * Sets owner
     *
-    * @param string|null $owner 纳管账号的创建来源，包括CUSTOM和RGC。
+    * @param string|null $owner 控制策略来源。
     *
     * @return $this
     */

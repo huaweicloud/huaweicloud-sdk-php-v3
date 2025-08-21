@@ -23,8 +23,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * title  增值税发票标题
     * type  增值税发票类型，取值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
     * invoiceTag  增值税发票左上角标志。取值包含：通行费、代开、成品油、收购、机动车、旅客运输服务。 当\"advanced_mode\"设置为\"true\"时才返回。
-    * sumAmount  小计金额，当传入多页PDF时返回此字段。
-    * sumTax  小计税额，当传入多页PDF时返回此字段。
+    * sumAmount  小计金额，当传入为全电发票时返回此字段。
+    * sumTax  小计税额，当传入为全电发票时返回此字段。
     * serialNumber  发票联次。  当\"advanced_mode\"设置为\"true\"时才返回。
     * attribution  发票归属地。  当\"advanced_mode\"设置为\"true\"时才返回。
     * supervisionSeal  发票监制章。  当\"advanced_mode\"设置为\"true\"时才返回。
@@ -141,8 +141,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * title  增值税发票标题
     * type  增值税发票类型，取值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
     * invoiceTag  增值税发票左上角标志。取值包含：通行费、代开、成品油、收购、机动车、旅客运输服务。 当\"advanced_mode\"设置为\"true\"时才返回。
-    * sumAmount  小计金额，当传入多页PDF时返回此字段。
-    * sumTax  小计税额，当传入多页PDF时返回此字段。
+    * sumAmount  小计金额，当传入为全电发票时返回此字段。
+    * sumTax  小计税额，当传入为全电发票时返回此字段。
     * serialNumber  发票联次。  当\"advanced_mode\"设置为\"true\"时才返回。
     * attribution  发票归属地。  当\"advanced_mode\"设置为\"true\"时才返回。
     * supervisionSeal  发票监制章。  当\"advanced_mode\"设置为\"true\"时才返回。
@@ -280,8 +280,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * title  增值税发票标题
     * type  增值税发票类型，取值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
     * invoiceTag  增值税发票左上角标志。取值包含：通行费、代开、成品油、收购、机动车、旅客运输服务。 当\"advanced_mode\"设置为\"true\"时才返回。
-    * sumAmount  小计金额，当传入多页PDF时返回此字段。
-    * sumTax  小计税额，当传入多页PDF时返回此字段。
+    * sumAmount  小计金额，当传入为全电发票时返回此字段。
+    * sumTax  小计税额，当传入为全电发票时返回此字段。
     * serialNumber  发票联次。  当\"advanced_mode\"设置为\"true\"时才返回。
     * attribution  发票归属地。  当\"advanced_mode\"设置为\"true\"时才返回。
     * supervisionSeal  发票监制章。  当\"advanced_mode\"设置为\"true\"时才返回。
@@ -398,8 +398,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * title  增值税发票标题
     * type  增值税发票类型，取值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
     * invoiceTag  增值税发票左上角标志。取值包含：通行费、代开、成品油、收购、机动车、旅客运输服务。 当\"advanced_mode\"设置为\"true\"时才返回。
-    * sumAmount  小计金额，当传入多页PDF时返回此字段。
-    * sumTax  小计税额，当传入多页PDF时返回此字段。
+    * sumAmount  小计金额，当传入为全电发票时返回此字段。
+    * sumTax  小计税额，当传入为全电发票时返回此字段。
     * serialNumber  发票联次。  当\"advanced_mode\"设置为\"true\"时才返回。
     * attribution  发票归属地。  当\"advanced_mode\"设置为\"true\"时才返回。
     * supervisionSeal  发票监制章。  当\"advanced_mode\"设置为\"true\"时才返回。
@@ -516,8 +516,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * title  增值税发票标题
     * type  增值税发票类型，取值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
     * invoiceTag  增值税发票左上角标志。取值包含：通行费、代开、成品油、收购、机动车、旅客运输服务。 当\"advanced_mode\"设置为\"true\"时才返回。
-    * sumAmount  小计金额，当传入多页PDF时返回此字段。
-    * sumTax  小计税额，当传入多页PDF时返回此字段。
+    * sumAmount  小计金额，当传入为全电发票时返回此字段。
+    * sumTax  小计税额，当传入为全电发票时返回此字段。
     * serialNumber  发票联次。  当\"advanced_mode\"设置为\"true\"时才返回。
     * attribution  发票归属地。  当\"advanced_mode\"设置为\"true\"时才返回。
     * supervisionSeal  发票监制章。  当\"advanced_mode\"设置为\"true\"时才返回。
@@ -840,7 +840,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets sumAmount
-    *  小计金额，当传入多页PDF时返回此字段。
+    *  小计金额，当传入为全电发票时返回此字段。
     *
     * @return string|null
     */
@@ -852,7 +852,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets sumAmount
     *
-    * @param string|null $sumAmount 小计金额，当传入多页PDF时返回此字段。
+    * @param string|null $sumAmount 小计金额，当传入为全电发票时返回此字段。
     *
     * @return $this
     */
@@ -864,7 +864,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets sumTax
-    *  小计税额，当传入多页PDF时返回此字段。
+    *  小计税额，当传入为全电发票时返回此字段。
     *
     * @return string|null
     */
@@ -876,7 +876,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets sumTax
     *
-    * @param string|null $sumTax 小计税额，当传入多页PDF时返回此字段。
+    * @param string|null $sumTax 小计税额，当传入为全电发票时返回此字段。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ShowAvailableUpdatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * baselineUpdateAvailable  Landing Zone基础配置是否可用。
+    * baselineUpdateAvailable  用户当前的Landing Zone版本是否为最新版本。
     * controlUpdateAvailable  当前账号下是否有新的控制策略。
     * landingZoneUpdateAvailable  Landing Zone是否可更新。
     * serviceLandingZoneVersion  Landing Zone当前最新的版本号。
@@ -39,7 +39,7 @@ class ShowAvailableUpdatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * baselineUpdateAvailable  Landing Zone基础配置是否可用。
+    * baselineUpdateAvailable  用户当前的Landing Zone版本是否为最新版本。
     * controlUpdateAvailable  当前账号下是否有新的控制策略。
     * landingZoneUpdateAvailable  Landing Zone是否可更新。
     * serviceLandingZoneVersion  Landing Zone当前最新的版本号。
@@ -78,7 +78,7 @@ class ShowAvailableUpdatesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * baselineUpdateAvailable  Landing Zone基础配置是否可用。
+    * baselineUpdateAvailable  用户当前的Landing Zone版本是否为最新版本。
     * controlUpdateAvailable  当前账号下是否有新的控制策略。
     * landingZoneUpdateAvailable  Landing Zone是否可更新。
     * serviceLandingZoneVersion  Landing Zone当前最新的版本号。
@@ -96,7 +96,7 @@ class ShowAvailableUpdatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * baselineUpdateAvailable  Landing Zone基础配置是否可用。
+    * baselineUpdateAvailable  用户当前的Landing Zone版本是否为最新版本。
     * controlUpdateAvailable  当前账号下是否有新的控制策略。
     * landingZoneUpdateAvailable  Landing Zone是否可更新。
     * serviceLandingZoneVersion  Landing Zone当前最新的版本号。
@@ -114,7 +114,7 @@ class ShowAvailableUpdatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * baselineUpdateAvailable  Landing Zone基础配置是否可用。
+    * baselineUpdateAvailable  用户当前的Landing Zone版本是否为最新版本。
     * controlUpdateAvailable  当前账号下是否有新的控制策略。
     * landingZoneUpdateAvailable  Landing Zone是否可更新。
     * serviceLandingZoneVersion  Landing Zone当前最新的版本号。
@@ -231,7 +231,7 @@ class ShowAvailableUpdatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets baselineUpdateAvailable
-    *  Landing Zone基础配置是否可用。
+    *  用户当前的Landing Zone版本是否为最新版本。
     *
     * @return bool|null
     */
@@ -243,7 +243,7 @@ class ShowAvailableUpdatesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets baselineUpdateAvailable
     *
-    * @param bool|null $baselineUpdateAvailable Landing Zone基础配置是否可用。
+    * @param bool|null $baselineUpdateAvailable 用户当前的Landing Zone版本是否为最新版本。
     *
     * @return $this
     */

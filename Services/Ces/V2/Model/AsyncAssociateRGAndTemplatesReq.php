@@ -24,8 +24,8 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发通知列表
     * okNotifications  告警恢复通知列表
-    * notificationBeginTime  告警通知开启时间
-    * notificationEndTime  告警通知关闭时间
+    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * enterpriseProjectId  企业项目ID
     * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
@@ -52,8 +52,8 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发通知列表
     * okNotifications  告警恢复通知列表
-    * notificationBeginTime  告警通知开启时间
-    * notificationEndTime  告警通知关闭时间
+    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * enterpriseProjectId  企业项目ID
     * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
@@ -101,8 +101,8 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发通知列表
     * okNotifications  告警恢复通知列表
-    * notificationBeginTime  告警通知开启时间
-    * notificationEndTime  告警通知关闭时间
+    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * enterpriseProjectId  企业项目ID
     * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
@@ -129,8 +129,8 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发通知列表
     * okNotifications  告警恢复通知列表
-    * notificationBeginTime  告警通知开启时间
-    * notificationEndTime  告警通知关闭时间
+    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * enterpriseProjectId  企业项目ID
     * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
@@ -157,8 +157,8 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发通知列表
     * okNotifications  告警恢复通知列表
-    * notificationBeginTime  告警通知开启时间
-    * notificationEndTime  告警通知关闭时间
+    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * enterpriseProjectId  企业项目ID
     * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
@@ -430,7 +430,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationBeginTime
-    *  告警通知开启时间
+    *  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     /**
     * Sets notificationBeginTime
     *
-    * @param string|null $notificationBeginTime 告警通知开启时间
+    * @param string|null $notificationBeginTime **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationEndTime
-    *  告警通知关闭时间
+    *  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -466,7 +466,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     /**
     * Sets notificationEndTime
     *
-    * @param string|null $notificationEndTime 告警通知关闭时间
+    * @param string|null $notificationEndTime **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */

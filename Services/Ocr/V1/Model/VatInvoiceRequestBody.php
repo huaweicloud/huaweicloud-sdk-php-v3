@@ -25,6 +25,7 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
     * advancedMode  默认为false，如果传参为true，则返回更多字段
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * pageNum  页码，默认为1，返回第一页结果。如果传参不大于PDF页数，则返回对应PDF页的结果。
+    * ofdToImageMode  OFD转图片的模式开关。针对输入文件为OFD时，有两种处理方案： 方案一：直接解析OFD文件，并提取结构化信息 方案二：转成图片后再进行识别，该方案更鲁棒，但是时延会显著增加 取值范围包括： •  false：选择方案一 •  true：选择方案二 未传入该参数时默认为false，即选择方案一。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
             'url' => 'string',
             'advancedMode' => 'bool',
             'returnTextLocation' => 'bool',
-            'pageNum' => 'int'
+            'pageNum' => 'int',
+            'ofdToImageMode' => 'bool'
     ];
 
     /**
@@ -43,6 +45,7 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
     * advancedMode  默认为false，如果传参为true，则返回更多字段
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * pageNum  页码，默认为1，返回第一页结果。如果传参不大于PDF页数，则返回对应PDF页的结果。
+    * ofdToImageMode  OFD转图片的模式开关。针对输入文件为OFD时，有两种处理方案： 方案一：直接解析OFD文件，并提取结构化信息 方案二：转成图片后再进行识别，该方案更鲁棒，但是时延会显著增加 取值范围包括： •  false：选择方案一 •  true：选择方案二 未传入该参数时默认为false，即选择方案一。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
         'url' => null,
         'advancedMode' => null,
         'returnTextLocation' => null,
-        'pageNum' => 'int32'
+        'pageNum' => 'int32',
+        'ofdToImageMode' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
     * advancedMode  默认为false，如果传参为true，则返回更多字段
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * pageNum  页码，默认为1，返回第一页结果。如果传参不大于PDF页数，则返回对应PDF页的结果。
+    * ofdToImageMode  OFD转图片的模式开关。针对输入文件为OFD时，有两种处理方案： 方案一：直接解析OFD文件，并提取结构化信息 方案二：转成图片后再进行识别，该方案更鲁棒，但是时延会显著增加 取值范围包括： •  false：选择方案一 •  true：选择方案二 未传入该参数时默认为false，即选择方案一。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
             'url' => 'url',
             'advancedMode' => 'advanced_mode',
             'returnTextLocation' => 'return_text_location',
-            'pageNum' => 'page_num'
+            'pageNum' => 'page_num',
+            'ofdToImageMode' => 'ofd_to_image_mode'
     ];
 
     /**
@@ -100,6 +106,7 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
     * advancedMode  默认为false，如果传参为true，则返回更多字段
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * pageNum  页码，默认为1，返回第一页结果。如果传参不大于PDF页数，则返回对应PDF页的结果。
+    * ofdToImageMode  OFD转图片的模式开关。针对输入文件为OFD时，有两种处理方案： 方案一：直接解析OFD文件，并提取结构化信息 方案二：转成图片后再进行识别，该方案更鲁棒，但是时延会显著增加 取值范围包括： •  false：选择方案一 •  true：选择方案二 未传入该参数时默认为false，即选择方案一。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
             'url' => 'setUrl',
             'advancedMode' => 'setAdvancedMode',
             'returnTextLocation' => 'setReturnTextLocation',
-            'pageNum' => 'setPageNum'
+            'pageNum' => 'setPageNum',
+            'ofdToImageMode' => 'setOfdToImageMode'
     ];
 
     /**
@@ -118,6 +126,7 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
     * advancedMode  默认为false，如果传参为true，则返回更多字段
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * pageNum  页码，默认为1，返回第一页结果。如果传参不大于PDF页数，则返回对应PDF页的结果。
+    * ofdToImageMode  OFD转图片的模式开关。针对输入文件为OFD时，有两种处理方案： 方案一：直接解析OFD文件，并提取结构化信息 方案二：转成图片后再进行识别，该方案更鲁棒，但是时延会显著增加 取值范围包括： •  false：选择方案一 •  true：选择方案二 未传入该参数时默认为false，即选择方案一。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
             'url' => 'getUrl',
             'advancedMode' => 'getAdvancedMode',
             'returnTextLocation' => 'getReturnTextLocation',
-            'pageNum' => 'getPageNum'
+            'pageNum' => 'getPageNum',
+            'ofdToImageMode' => 'getOfdToImageMode'
     ];
 
     /**
@@ -192,6 +202,7 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
         $this->container['advancedMode'] = isset($data['advancedMode']) ? $data['advancedMode'] : null;
         $this->container['returnTextLocation'] = isset($data['returnTextLocation']) ? $data['returnTextLocation'] : null;
         $this->container['pageNum'] = isset($data['pageNum']) ? $data['pageNum'] : null;
+        $this->container['ofdToImageMode'] = isset($data['ofdToImageMode']) ? $data['ofdToImageMode'] : null;
     }
 
     /**
@@ -333,6 +344,30 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
     public function setPageNum($pageNum)
     {
         $this->container['pageNum'] = $pageNum;
+        return $this;
+    }
+
+    /**
+    * Gets ofdToImageMode
+    *  OFD转图片的模式开关。针对输入文件为OFD时，有两种处理方案： 方案一：直接解析OFD文件，并提取结构化信息 方案二：转成图片后再进行识别，该方案更鲁棒，但是时延会显著增加 取值范围包括： •  false：选择方案一 •  true：选择方案二 未传入该参数时默认为false，即选择方案一。
+    *
+    * @return bool|null
+    */
+    public function getOfdToImageMode()
+    {
+        return $this->container['ofdToImageMode'];
+    }
+
+    /**
+    * Sets ofdToImageMode
+    *
+    * @param bool|null $ofdToImageMode OFD转图片的模式开关。针对输入文件为OFD时，有两种处理方案： 方案一：直接解析OFD文件，并提取结构化信息 方案二：转成图片后再进行识别，该方案更鲁棒，但是时延会显著增加 取值范围包括： •  false：选择方案一 •  true：选择方案二 未传入该参数时默认为false，即选择方案一。
+    *
+    * @return $this
+    */
+    public function setOfdToImageMode($ofdToImageMode)
+    {
+        $this->container['ofdToImageMode'] = $ofdToImageMode;
         return $this;
     }
 

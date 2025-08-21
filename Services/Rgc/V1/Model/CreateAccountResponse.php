@@ -21,7 +21,7 @@ class CreateAccountResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * operationId  创建账号、纳管账号、纳管注册OU的操作ID。
+    * operationId  创建账号、纳管账号、注册OU的操作ID。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateAccountResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * operationId  创建账号、纳管账号、纳管注册OU的操作ID。
+    * operationId  创建账号、纳管账号、注册OU的操作ID。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateAccountResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * operationId  创建账号、纳管账号、纳管注册OU的操作ID。
+    * operationId  创建账号、纳管账号、注册OU的操作ID。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateAccountResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * operationId  创建账号、纳管账号、纳管注册OU的操作ID。
+    * operationId  创建账号、纳管账号、注册OU的操作ID。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateAccountResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * operationId  创建账号、纳管账号、纳管注册OU的操作ID。
+    * operationId  创建账号、纳管账号、注册OU的操作ID。
     *
     * @var string[]
     */
@@ -181,7 +181,7 @@ class CreateAccountResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets operationId
-    *  创建账号、纳管账号、纳管注册OU的操作ID。
+    *  创建账号、纳管账号、注册OU的操作ID。
     *
     * @return string|null
     */
@@ -193,7 +193,7 @@ class CreateAccountResponse implements ModelInterface, ArrayAccess
     /**
     * Sets operationId
     *
-    * @param string|null $operationId 创建账号、纳管账号、纳管注册OU的操作ID。
+    * @param string|null $operationId 创建账号、纳管账号、注册OU的操作ID。
     *
     * @return $this
     */

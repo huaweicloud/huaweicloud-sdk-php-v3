@@ -532,9 +532,9 @@ class CocClient extends Client
     }
 
     /**
-     * 批量创建应用视图
+     * 批量创建应用，分组，组件
      *
-     * 批量创建应用视图
+     * 批量创建应用，分组，组件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -567,11 +567,11 @@ class CocClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -3953,6 +3953,142 @@ class CocClient extends Client
     }
 
     /**
+     * 查询用户在云厂商的资源总数
+     *
+     * 查询用户在云厂商（阿里云、AWS、Azure和HCS）的资源总数。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function countMultiCloudResources($request)
+    {
+        return $this->countMultiCloudResourcesWithHttpInfo($request);
+    }
+
+    public function countMultiCloudResourcesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/multicloud-resources/count';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vendor'] !== null) {
+            $queryParams['vendor'] = $localVarParams['vendor'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['resourceIdList'] !== null) {
+            $queryParams['resource_id_list'] = $localVarParams['resourceIdList'];
+        }
+        if ($localVarParams['nameList'] !== null) {
+            $queryParams['name_list'] = $localVarParams['nameList'];
+        }
+        if ($localVarParams['regionIdList'] !== null) {
+            $queryParams['region_id_list'] = $localVarParams['regionIdList'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\CountMultiCloudResourcesResponse',
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\CountMultiCloudResourcesRequest');
+    }
+
+    /**
+     * 手动从云厂商同步用户资源
+     *
+     * 手动从云厂商同步用户资源。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function syncMultiCloudResource($request)
+    {
+        return $this->syncMultiCloudResourceWithHttpInfo($request);
+    }
+
+    public function syncMultiCloudResourceWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/multicloud-resources/sync';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\SyncMultiCloudResourceResponse',
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\SyncMultiCloudResourceRequest');
+    }
+
+    /**
      * 查询用户各种资源总数
      *
      * 查询用户各种资源总数
@@ -4026,19 +4162,22 @@ class CocClient extends Client
     /**
      * 查询用户所有资源
      *
-     * 查询用户所有资源
+     * 查询租户所有资源：
+     * - 查询租户所有资源等相关信息，便于租户详细了解资源总体情况。
+     * - 请求参数provider（云服务名称），type（云资源类型），limit（查询条数）必填，单次最大查询条数：500。
+     * - 返回信息包括：资源ID，资源名称，云服务名称，资源类型，项目ID，租户ID，区域ID，企业项目ID，资源标签，资源详细属性，资源ingest属性，uniagentID，uniagent状态，是否托管，是否可运维。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function listResource($request)
+    public function listResources($request)
     {
-        return $this->listResourceWithHttpInfo($request);
+        return $this->listResourcesWithHttpInfo($request);
     }
 
-    public function listResourceWithHttpInfo($request)
+    public function listResourcesWithHttpInfo($request)
     {
         $resourcePath = '/v1/resources';
         $formParams = [];
@@ -4068,6 +4207,9 @@ class CocClient extends Client
         }
         if ($localVarParams['resourceIdList'] !== null) {
             $queryParams['resource_id_list'] = $localVarParams['resourceIdList'];
+        }
+        if ($localVarParams['ipList'] !== null) {
+            $queryParams['ip_list'] = $localVarParams['ipList'];
         }
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
@@ -4123,13 +4265,46 @@ class CocClient extends Client
         if ($localVarParams['isDelegated'] !== null) {
             $queryParams['is_delegated'] = $localVarParams['isDelegated'];
         }
+        if ($localVarParams['isCollected'] !== null) {
+            $queryParams['is_collected'] = $localVarParams['isCollected'];
+        }
+        if ($localVarParams['flavorName'] !== null) {
+            $queryParams['flavor_name'] = $localVarParams['flavorName'];
+        }
+        if ($localVarParams['chargingMode'] !== null) {
+            $queryParams['charging_mode'] = $localVarParams['chargingMode'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['orderField'] !== null) {
+            $queryParams['order_field'] = $localVarParams['orderField'];
+        }
+        if ($localVarParams['direction'] !== null) {
+            $queryParams['direction'] = $localVarParams['direction'];
+        }
+        if ($localVarParams['showAssociatedGroups'] !== null) {
+            $queryParams['show_associated_groups'] = $localVarParams['showAssociatedGroups'];
+        }
+        if ($localVarParams['operable'] !== null) {
+            $queryParams['operable'] = $localVarParams['operable'];
+        }
+        if ($localVarParams['createSince'] !== null) {
+            $queryParams['create_since'] = $localVarParams['createSince'];
+        }
+        if ($localVarParams['createUntil'] !== null) {
+            $queryParams['create_until'] = $localVarParams['createUntil'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -4147,8 +4322,8 @@ class CocClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListResourceResponse',
-            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListResourceRequest');
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListResourcesResponse',
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListResourcesRequest');
     }
 
     /**

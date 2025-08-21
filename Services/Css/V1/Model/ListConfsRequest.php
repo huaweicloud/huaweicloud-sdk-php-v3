@@ -21,28 +21,28 @@ class ListConfsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  指定查询集群ID。
-    * start  指定查询起始值，默认值为1。
+    * offset  指定查询起始值，默认值为1。
     * limit  指定查询个数，默认值为10。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
-            'start' => 'string',
+            'offset' => 'string',
             'limit' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  指定查询集群ID。
-    * start  指定查询起始值，默认值为1。
+    * offset  指定查询起始值，默认值为1。
     * limit  指定查询个数，默认值为10。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'clusterId' => null,
-        'start' => null,
+        'offset' => null,
         'limit' => null
     ];
 
@@ -70,42 +70,42 @@ class ListConfsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterId  指定查询集群ID。
-    * start  指定查询起始值，默认值为1。
+    * offset  指定查询起始值，默认值为1。
     * limit  指定查询个数，默认值为10。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
-            'start' => 'start',
+            'offset' => 'offset',
             'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  指定查询集群ID。
-    * start  指定查询起始值，默认值为1。
+    * offset  指定查询起始值，默认值为1。
     * limit  指定查询个数，默认值为10。
     *
     * @var string[]
     */
     protected static $setters = [
             'clusterId' => 'setClusterId',
-            'start' => 'setStart',
+            'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  指定查询集群ID。
-    * start  指定查询起始值，默认值为1。
+    * offset  指定查询起始值，默认值为1。
     * limit  指定查询个数，默认值为10。
     *
     * @var string[]
     */
     protected static $getters = [
             'clusterId' => 'getClusterId',
-            'start' => 'getStart',
+            'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
 
@@ -168,7 +168,7 @@ class ListConfsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
-        $this->container['start'] = isset($data['start']) ? $data['start'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
@@ -222,26 +222,26 @@ class ListConfsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets start
+    * Gets offset
     *  指定查询起始值，默认值为1。
     *
     * @return string|null
     */
-    public function getStart()
+    public function getOffset()
     {
-        return $this->container['start'];
+        return $this->container['offset'];
     }
 
     /**
-    * Sets start
+    * Sets offset
     *
-    * @param string|null $start 指定查询起始值，默认值为1。
+    * @param string|null $offset 指定查询起始值，默认值为1。
     *
     * @return $this
     */
-    public function setStart($start)
+    public function setOffset($offset)
     {
-        $this->container['start'] = $start;
+        $this->container['offset'] = $offset;
         return $this;
     }
 

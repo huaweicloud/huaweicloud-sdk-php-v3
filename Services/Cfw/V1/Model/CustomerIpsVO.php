@@ -21,13 +21,13 @@ class CustomerIpsVO implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * action  **参数解释**： 动作 **取值范围**： 0：只记录日志，1：重置/拦截
+    * groupId  **参数解释**： 防火墙集群id **取值范围**： 不涉及
     * affectedOs  **参数解释**： 影响操作系统 **取值范围**： 0 any、1 Windows、2 Linux、3 FreeBSD、4 Solaris、5 other Unix、6 网络设备、7 Mac OS、8 ios、9 android、10 others
     * attackType  **参数解释**： 攻击类型 **取值范围**： 1：访问控制、2：漏洞扫描、3：邮件攻击、4：漏洞攻击、5：Web攻击、6：密码攻击、7：劫持攻击、8：协议异常、9：特洛伊木马、10：蠕虫、11：缓冲区溢出、12：黑客工具、13：间谍软件、14：DDos泛洪、15：应用层DDos攻击、16：其他可疑行为、17：可疑DNS活动、18：网络钓鱼、19：垃圾邮件、20：其他攻击
     * configStatus  **参数解释**： 规则状态 **取值范围**： 0：初始化，1：配置中，2：配置成功，3：配置失败
     * contents  **参数解释**： 匹配IPS攻击的内容 **取值范围**：
     * direction  **参数解释**： 默认：null，0：客户端到服务端，1：服务端到客户端 **取值范围**： 不涉及
     * dstPort  dstPort
-    * groupId  **参数解释**： 防火墙集群id **取值范围**： 不涉及
     * ipsCfwId  **参数解释**： cfw侧自定义IPS规则id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * ipsId  **参数解释**： ips规则id **取值范围**： 不涉及
     * ipsName  **参数解释**： ips规则名称 **取值范围**： 不涉及
@@ -40,13 +40,13 @@ class CustomerIpsVO implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'action' => 'int',
+            'groupId' => 'string',
             'affectedOs' => 'int',
             'attackType' => 'int',
             'configStatus' => 'int',
             'contents' => '\HuaweiCloud\SDK\Cfw\V1\Model\IpsContent[]',
             'direction' => 'int',
             'dstPort' => '\HuaweiCloud\SDK\Cfw\V1\Model\Port',
-            'groupId' => 'string',
             'ipsCfwId' => 'string',
             'ipsId' => 'string',
             'ipsName' => 'string',
@@ -59,13 +59,13 @@ class CustomerIpsVO implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * action  **参数解释**： 动作 **取值范围**： 0：只记录日志，1：重置/拦截
+    * groupId  **参数解释**： 防火墙集群id **取值范围**： 不涉及
     * affectedOs  **参数解释**： 影响操作系统 **取值范围**： 0 any、1 Windows、2 Linux、3 FreeBSD、4 Solaris、5 other Unix、6 网络设备、7 Mac OS、8 ios、9 android、10 others
     * attackType  **参数解释**： 攻击类型 **取值范围**： 1：访问控制、2：漏洞扫描、3：邮件攻击、4：漏洞攻击、5：Web攻击、6：密码攻击、7：劫持攻击、8：协议异常、9：特洛伊木马、10：蠕虫、11：缓冲区溢出、12：黑客工具、13：间谍软件、14：DDos泛洪、15：应用层DDos攻击、16：其他可疑行为、17：可疑DNS活动、18：网络钓鱼、19：垃圾邮件、20：其他攻击
     * configStatus  **参数解释**： 规则状态 **取值范围**： 0：初始化，1：配置中，2：配置成功，3：配置失败
     * contents  **参数解释**： 匹配IPS攻击的内容 **取值范围**：
     * direction  **参数解释**： 默认：null，0：客户端到服务端，1：服务端到客户端 **取值范围**： 不涉及
     * dstPort  dstPort
-    * groupId  **参数解释**： 防火墙集群id **取值范围**： 不涉及
     * ipsCfwId  **参数解释**： cfw侧自定义IPS规则id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * ipsId  **参数解释**： ips规则id **取值范围**： 不涉及
     * ipsName  **参数解释**： ips规则名称 **取值范围**： 不涉及
@@ -78,13 +78,13 @@ class CustomerIpsVO implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'action' => 'int32',
+        'groupId' => null,
         'affectedOs' => 'int32',
         'attackType' => 'int32',
         'configStatus' => 'int32',
         'contents' => null,
         'direction' => 'int32',
         'dstPort' => null,
-        'groupId' => null,
         'ipsCfwId' => null,
         'ipsId' => null,
         'ipsName' => null,
@@ -118,13 +118,13 @@ class CustomerIpsVO implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * action  **参数解释**： 动作 **取值范围**： 0：只记录日志，1：重置/拦截
+    * groupId  **参数解释**： 防火墙集群id **取值范围**： 不涉及
     * affectedOs  **参数解释**： 影响操作系统 **取值范围**： 0 any、1 Windows、2 Linux、3 FreeBSD、4 Solaris、5 other Unix、6 网络设备、7 Mac OS、8 ios、9 android、10 others
     * attackType  **参数解释**： 攻击类型 **取值范围**： 1：访问控制、2：漏洞扫描、3：邮件攻击、4：漏洞攻击、5：Web攻击、6：密码攻击、7：劫持攻击、8：协议异常、9：特洛伊木马、10：蠕虫、11：缓冲区溢出、12：黑客工具、13：间谍软件、14：DDos泛洪、15：应用层DDos攻击、16：其他可疑行为、17：可疑DNS活动、18：网络钓鱼、19：垃圾邮件、20：其他攻击
     * configStatus  **参数解释**： 规则状态 **取值范围**： 0：初始化，1：配置中，2：配置成功，3：配置失败
     * contents  **参数解释**： 匹配IPS攻击的内容 **取值范围**：
     * direction  **参数解释**： 默认：null，0：客户端到服务端，1：服务端到客户端 **取值范围**： 不涉及
     * dstPort  dstPort
-    * groupId  **参数解释**： 防火墙集群id **取值范围**： 不涉及
     * ipsCfwId  **参数解释**： cfw侧自定义IPS规则id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * ipsId  **参数解释**： ips规则id **取值范围**： 不涉及
     * ipsName  **参数解释**： ips规则名称 **取值范围**： 不涉及
@@ -137,13 +137,13 @@ class CustomerIpsVO implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'action' => 'action',
+            'groupId' => 'group_id',
             'affectedOs' => 'affected_os',
             'attackType' => 'attack_type',
             'configStatus' => 'config_status',
             'contents' => 'contents',
             'direction' => 'direction',
             'dstPort' => 'dst_port',
-            'groupId' => 'group_id',
             'ipsCfwId' => 'ips_cfw_id',
             'ipsId' => 'ips_id',
             'ipsName' => 'ips_name',
@@ -156,13 +156,13 @@ class CustomerIpsVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * action  **参数解释**： 动作 **取值范围**： 0：只记录日志，1：重置/拦截
+    * groupId  **参数解释**： 防火墙集群id **取值范围**： 不涉及
     * affectedOs  **参数解释**： 影响操作系统 **取值范围**： 0 any、1 Windows、2 Linux、3 FreeBSD、4 Solaris、5 other Unix、6 网络设备、7 Mac OS、8 ios、9 android、10 others
     * attackType  **参数解释**： 攻击类型 **取值范围**： 1：访问控制、2：漏洞扫描、3：邮件攻击、4：漏洞攻击、5：Web攻击、6：密码攻击、7：劫持攻击、8：协议异常、9：特洛伊木马、10：蠕虫、11：缓冲区溢出、12：黑客工具、13：间谍软件、14：DDos泛洪、15：应用层DDos攻击、16：其他可疑行为、17：可疑DNS活动、18：网络钓鱼、19：垃圾邮件、20：其他攻击
     * configStatus  **参数解释**： 规则状态 **取值范围**： 0：初始化，1：配置中，2：配置成功，3：配置失败
     * contents  **参数解释**： 匹配IPS攻击的内容 **取值范围**：
     * direction  **参数解释**： 默认：null，0：客户端到服务端，1：服务端到客户端 **取值范围**： 不涉及
     * dstPort  dstPort
-    * groupId  **参数解释**： 防火墙集群id **取值范围**： 不涉及
     * ipsCfwId  **参数解释**： cfw侧自定义IPS规则id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * ipsId  **参数解释**： ips规则id **取值范围**： 不涉及
     * ipsName  **参数解释**： ips规则名称 **取值范围**： 不涉及
@@ -175,13 +175,13 @@ class CustomerIpsVO implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'action' => 'setAction',
+            'groupId' => 'setGroupId',
             'affectedOs' => 'setAffectedOs',
             'attackType' => 'setAttackType',
             'configStatus' => 'setConfigStatus',
             'contents' => 'setContents',
             'direction' => 'setDirection',
             'dstPort' => 'setDstPort',
-            'groupId' => 'setGroupId',
             'ipsCfwId' => 'setIpsCfwId',
             'ipsId' => 'setIpsId',
             'ipsName' => 'setIpsName',
@@ -194,13 +194,13 @@ class CustomerIpsVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * action  **参数解释**： 动作 **取值范围**： 0：只记录日志，1：重置/拦截
+    * groupId  **参数解释**： 防火墙集群id **取值范围**： 不涉及
     * affectedOs  **参数解释**： 影响操作系统 **取值范围**： 0 any、1 Windows、2 Linux、3 FreeBSD、4 Solaris、5 other Unix、6 网络设备、7 Mac OS、8 ios、9 android、10 others
     * attackType  **参数解释**： 攻击类型 **取值范围**： 1：访问控制、2：漏洞扫描、3：邮件攻击、4：漏洞攻击、5：Web攻击、6：密码攻击、7：劫持攻击、8：协议异常、9：特洛伊木马、10：蠕虫、11：缓冲区溢出、12：黑客工具、13：间谍软件、14：DDos泛洪、15：应用层DDos攻击、16：其他可疑行为、17：可疑DNS活动、18：网络钓鱼、19：垃圾邮件、20：其他攻击
     * configStatus  **参数解释**： 规则状态 **取值范围**： 0：初始化，1：配置中，2：配置成功，3：配置失败
     * contents  **参数解释**： 匹配IPS攻击的内容 **取值范围**：
     * direction  **参数解释**： 默认：null，0：客户端到服务端，1：服务端到客户端 **取值范围**： 不涉及
     * dstPort  dstPort
-    * groupId  **参数解释**： 防火墙集群id **取值范围**： 不涉及
     * ipsCfwId  **参数解释**： cfw侧自定义IPS规则id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * ipsId  **参数解释**： ips规则id **取值范围**： 不涉及
     * ipsName  **参数解释**： ips规则名称 **取值范围**： 不涉及
@@ -213,13 +213,13 @@ class CustomerIpsVO implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'action' => 'getAction',
+            'groupId' => 'getGroupId',
             'affectedOs' => 'getAffectedOs',
             'attackType' => 'getAttackType',
             'configStatus' => 'getConfigStatus',
             'contents' => 'getContents',
             'direction' => 'getDirection',
             'dstPort' => 'getDstPort',
-            'groupId' => 'getGroupId',
             'ipsCfwId' => 'getIpsCfwId',
             'ipsId' => 'getIpsId',
             'ipsName' => 'getIpsName',
@@ -269,55 +269,7 @@ class CustomerIpsVO implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ACTION_0 = 0;
-    const ACTION_1 = 1;
-    const AFFECTED_OS_0 = 0;
-    const AFFECTED_OS_1 = 1;
-    const AFFECTED_OS_2 = 2;
-    const AFFECTED_OS_3 = 3;
-    const AFFECTED_OS_4 = 4;
-    const AFFECTED_OS_5 = 5;
-    const AFFECTED_OS_6 = 6;
-    const AFFECTED_OS_7 = 7;
-    const AFFECTED_OS_8 = 8;
-    const AFFECTED_OS_9 = 9;
-    const AFFECTED_OS_10 = 10;
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getActionAllowableValues()
-    {
-        return [
-            self::ACTION_0,
-            self::ACTION_1,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getAffectedOsAllowableValues()
-    {
-        return [
-            self::AFFECTED_OS_0,
-            self::AFFECTED_OS_1,
-            self::AFFECTED_OS_2,
-            self::AFFECTED_OS_3,
-            self::AFFECTED_OS_4,
-            self::AFFECTED_OS_5,
-            self::AFFECTED_OS_6,
-            self::AFFECTED_OS_7,
-            self::AFFECTED_OS_8,
-            self::AFFECTED_OS_9,
-            self::AFFECTED_OS_10,
-        ];
-    }
 
 
     /**
@@ -336,13 +288,13 @@ class CustomerIpsVO implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['affectedOs'] = isset($data['affectedOs']) ? $data['affectedOs'] : null;
         $this->container['attackType'] = isset($data['attackType']) ? $data['attackType'] : null;
         $this->container['configStatus'] = isset($data['configStatus']) ? $data['configStatus'] : null;
         $this->container['contents'] = isset($data['contents']) ? $data['contents'] : null;
         $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;
         $this->container['dstPort'] = isset($data['dstPort']) ? $data['dstPort'] : null;
-        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['ipsCfwId'] = isset($data['ipsCfwId']) ? $data['ipsCfwId'] : null;
         $this->container['ipsId'] = isset($data['ipsId']) ? $data['ipsId'] : null;
         $this->container['ipsName'] = isset($data['ipsName']) ? $data['ipsName'] : null;
@@ -360,22 +312,6 @@ class CustomerIpsVO implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getActionAllowableValues();
-                if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'action', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            $allowedValues = $this->getAffectedOsAllowableValues();
-                if (!is_null($this->container['affectedOs']) && !in_array($this->container['affectedOs'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'affectedOs', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             if (!is_null($this->container['attackType']) && ($this->container['attackType'] > 20)) {
                 $invalidProperties[] = "invalid value for 'attackType', must be smaller than or equal to 20.";
             }
@@ -393,9 +329,6 @@ class CustomerIpsVO implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['direction']) && ($this->container['direction'] < 0)) {
                 $invalidProperties[] = "invalid value for 'direction', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['groupId']) && !preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/", $this->container['groupId'])) {
-                $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.";
             }
             if (!is_null($this->container['ipsCfwId']) && !preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/", $this->container['ipsCfwId'])) {
                 $invalidProperties[] = "invalid value for 'ipsCfwId', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.";
@@ -465,6 +398,30 @@ class CustomerIpsVO implements ModelInterface, ArrayAccess
     public function setAction($action)
     {
         $this->container['action'] = $action;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  **参数解释**： 防火墙集群id **取值范围**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId **参数解释**： 防火墙集群id **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
         return $this;
     }
 
@@ -609,30 +566,6 @@ class CustomerIpsVO implements ModelInterface, ArrayAccess
     public function setDstPort($dstPort)
     {
         $this->container['dstPort'] = $dstPort;
-        return $this;
-    }
-
-    /**
-    * Gets groupId
-    *  **参数解释**： 防火墙集群id **取值范围**： 不涉及
-    *
-    * @return string|null
-    */
-    public function getGroupId()
-    {
-        return $this->container['groupId'];
-    }
-
-    /**
-    * Sets groupId
-    *
-    * @param string|null $groupId **参数解释**： 防火墙集群id **取值范围**： 不涉及
-    *
-    * @return $this
-    */
-    public function setGroupId($groupId)
-    {
-        $this->container['groupId'] = $groupId;
         return $this;
     }
 

@@ -24,7 +24,7 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
     * ipsRuleId  高级ips规则id
     * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹xshell
     * param  包含特殊参数的JSON字符串
-    * status  status
+    * status  开关状态：0表示关闭、1表示开启
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
     * ipsRuleId  高级ips规则id
     * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹xshell
     * param  包含特殊参数的JSON字符串
-    * status  status
+    * status  开关状态：0表示关闭、1表示开启
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
     * ipsRuleId  高级ips规则id
     * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹xshell
     * param  包含特殊参数的JSON字符串
-    * status  status
+    * status  开关状态：0表示关闭、1表示开启
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
     * ipsRuleId  高级ips规则id
     * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹xshell
     * param  包含特殊参数的JSON字符串
-    * status  status
+    * status  开关状态：0表示关闭、1表示开启
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
     * ipsRuleId  高级ips规则id
     * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹xshell
     * param  包含特殊参数的JSON字符串
-    * status  status
+    * status  开关状态：0表示关闭、1表示开启
     *
     * @var string[]
     */
@@ -314,7 +314,7 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  status
+    *  开关状态：0表示关闭、1表示开启
     *
     * @return int|null
     */
@@ -326,7 +326,7 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status status
+    * @param int|null $status 开关状态：0表示关闭、1表示开启
     *
     * @return $this
     */

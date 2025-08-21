@@ -21,7 +21,7 @@ class ShowComplianceStatusForAccountRequest implements ModelInterface, ArrayAcce
     /**
     * Array of property to type mappings. Used for (de)serialization
     * managedAccountId  纳管账号ID。
-    * controlId  启用的控制策略信息。
+    * controlId  控制策略ID。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ShowComplianceStatusForAccountRequest implements ModelInterface, ArrayAcce
     /**
     * Array of property to format mappings. Used for (de)serialization
     * managedAccountId  纳管账号ID。
-    * controlId  启用的控制策略信息。
+    * controlId  控制策略ID。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ShowComplianceStatusForAccountRequest implements ModelInterface, ArrayAcce
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * managedAccountId  纳管账号ID。
-    * controlId  启用的控制策略信息。
+    * controlId  控制策略ID。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ShowComplianceStatusForAccountRequest implements ModelInterface, ArrayAcce
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * managedAccountId  纳管账号ID。
-    * controlId  启用的控制策略信息。
+    * controlId  控制策略ID。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ShowComplianceStatusForAccountRequest implements ModelInterface, ArrayAcce
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * managedAccountId  纳管账号ID。
-    * controlId  启用的控制策略信息。
+    * controlId  控制策略ID。
     *
     * @var string[]
     */
@@ -227,7 +227,7 @@ class ShowComplianceStatusForAccountRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets controlId
-    *  启用的控制策略信息。
+    *  控制策略ID。
     *
     * @return string|null
     */
@@ -239,7 +239,7 @@ class ShowComplianceStatusForAccountRequest implements ModelInterface, ArrayAcce
     /**
     * Sets controlId
     *
-    * @param string|null $controlId 启用的控制策略信息。
+    * @param string|null $controlId 控制策略ID。
     *
     * @return $this
     */

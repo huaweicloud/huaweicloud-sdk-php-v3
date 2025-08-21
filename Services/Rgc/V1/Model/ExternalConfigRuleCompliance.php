@@ -22,7 +22,7 @@ class ExternalConfigRuleCompliance implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * ruleName  合规规则。
     * status  合规状态。
-    * controlId  控制策略ID。
+    * controlId  外部规则ID。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ExternalConfigRuleCompliance implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * ruleName  合规规则。
     * status  合规状态。
-    * controlId  控制策略ID。
+    * controlId  外部规则ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ExternalConfigRuleCompliance implements ModelInterface, ArrayAccess
     * and the value is the original name
     * ruleName  合规规则。
     * status  合规状态。
-    * controlId  控制策略ID。
+    * controlId  外部规则ID。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ExternalConfigRuleCompliance implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * ruleName  合规规则。
     * status  合规状态。
-    * controlId  控制策略ID。
+    * controlId  外部规则ID。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ExternalConfigRuleCompliance implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * ruleName  合规规则。
     * status  合规状态。
-    * controlId  控制策略ID。
+    * controlId  外部规则ID。
     *
     * @var string[]
     */
@@ -250,7 +250,7 @@ class ExternalConfigRuleCompliance implements ModelInterface, ArrayAccess
 
     /**
     * Gets controlId
-    *  控制策略ID。
+    *  外部规则ID。
     *
     * @return string|null
     */
@@ -262,7 +262,7 @@ class ExternalConfigRuleCompliance implements ModelInterface, ArrayAccess
     /**
     * Sets controlId
     *
-    * @param string|null $controlId 控制策略ID。
+    * @param string|null $controlId 外部规则ID。
     *
     * @return $this
     */

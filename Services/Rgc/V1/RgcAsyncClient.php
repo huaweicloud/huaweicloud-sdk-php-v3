@@ -88,6 +88,68 @@ class RgcAsyncClient extends Client
     }
 
     /**
+     * 查询治理成熟度的账号详情
+     *
+     * 查询治理成熟度的账号详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showBestPracticeAccountInfoAsync($request)
+    {
+        return $this->showBestPracticeAccountInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function showBestPracticeAccountInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/best-practice/account-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rgc\V1\Model\ShowBestPracticeAccountInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Rgc\V1\Model\ShowBestPracticeAccountInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询最近一次成功的治理成熟度检测的详情
      *
      * 查询最近一次成功的治理成熟度检测的详情。
@@ -1208,9 +1270,9 @@ class RgcAsyncClient extends Client
     }
 
     /**
-     * 查询注册账号开启的控制策略
+     * 查询纳管账号开启的控制策略
      *
-     * 查询组织里某个注册账号下开启的某个控制策略的详细信息。
+     * 查询组织里某个纳管账号下开启的某个控制策略的详细信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

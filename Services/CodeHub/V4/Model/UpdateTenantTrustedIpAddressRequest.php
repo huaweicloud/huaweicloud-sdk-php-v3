@@ -20,7 +20,7 @@ class UpdateTenantTrustedIpAddressRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ipId  ip的ip
+    * ipId  **参数解释：** ip白名单id。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdateTenantTrustedIpAddressRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ipId  ip的ip
+    * ipId  **参数解释：** ip白名单id。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateTenantTrustedIpAddressRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ipId  ip的ip
+    * ipId  **参数解释：** ip白名单id。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateTenantTrustedIpAddressRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ipId  ip的ip
+    * ipId  **参数解释：** ip白名单id。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateTenantTrustedIpAddressRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ipId  ip的ip
+    * ipId  **参数解释：** ip白名单id。
     * body  body
     *
     * @var string[]
@@ -194,7 +194,7 @@ class UpdateTenantTrustedIpAddressRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipId
-    *  ip的ip
+    *  **参数解释：** ip白名单id。
     *
     * @return int
     */
@@ -206,7 +206,7 @@ class UpdateTenantTrustedIpAddressRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ipId
     *
-    * @param int $ipId ip的ip
+    * @param int $ipId **参数解释：** ip白名单id。
     *
     * @return $this
     */

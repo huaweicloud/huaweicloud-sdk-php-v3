@@ -21,15 +21,15 @@ class CreateManagedOrganizationalUnitResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * organizationalUnitId  注册OU ID。
     * organizationalUnitName  注册OU名称。
     * organizationalUnitStatus  注册OU状态。
     * organizationalUnitType  organizationalUnitType
     * parentOrganizationalUnitId  父注册OU ID。
     * parentOrganizationalUnitName  父注册OU名称。
-    * createdAt  组织里某个注册OU下的纳管账号被创建的时间。
-    * landingZoneVersion  Landing Zone版本。
+    * createdAt  注册OU的创建时间。
+    * landingZoneVersion  注册OU的Landing Zone版本。
     *
     * @var string[]
     */
@@ -47,15 +47,15 @@ class CreateManagedOrganizationalUnitResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * organizationalUnitId  注册OU ID。
     * organizationalUnitName  注册OU名称。
     * organizationalUnitStatus  注册OU状态。
     * organizationalUnitType  organizationalUnitType
     * parentOrganizationalUnitId  父注册OU ID。
     * parentOrganizationalUnitName  父注册OU名称。
-    * createdAt  组织里某个注册OU下的纳管账号被创建的时间。
-    * landingZoneVersion  Landing Zone版本。
+    * createdAt  注册OU的创建时间。
+    * landingZoneVersion  注册OU的Landing Zone版本。
     *
     * @var string[]
     */
@@ -94,15 +94,15 @@ class CreateManagedOrganizationalUnitResponse implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * organizationalUnitId  注册OU ID。
     * organizationalUnitName  注册OU名称。
     * organizationalUnitStatus  注册OU状态。
     * organizationalUnitType  organizationalUnitType
     * parentOrganizationalUnitId  父注册OU ID。
     * parentOrganizationalUnitName  父注册OU名称。
-    * createdAt  组织里某个注册OU下的纳管账号被创建的时间。
-    * landingZoneVersion  Landing Zone版本。
+    * createdAt  注册OU的创建时间。
+    * landingZoneVersion  注册OU的Landing Zone版本。
     *
     * @var string[]
     */
@@ -120,15 +120,15 @@ class CreateManagedOrganizationalUnitResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * organizationalUnitId  注册OU ID。
     * organizationalUnitName  注册OU名称。
     * organizationalUnitStatus  注册OU状态。
     * organizationalUnitType  organizationalUnitType
     * parentOrganizationalUnitId  父注册OU ID。
     * parentOrganizationalUnitName  父注册OU名称。
-    * createdAt  组织里某个注册OU下的纳管账号被创建的时间。
-    * landingZoneVersion  Landing Zone版本。
+    * createdAt  注册OU的创建时间。
+    * landingZoneVersion  注册OU的Landing Zone版本。
     *
     * @var string[]
     */
@@ -146,15 +146,15 @@ class CreateManagedOrganizationalUnitResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * manageAccountId  管理纳管账号ID。
+    * manageAccountId  管理员账号ID。
     * organizationalUnitId  注册OU ID。
     * organizationalUnitName  注册OU名称。
     * organizationalUnitStatus  注册OU状态。
     * organizationalUnitType  organizationalUnitType
     * parentOrganizationalUnitId  父注册OU ID。
     * parentOrganizationalUnitName  父注册OU名称。
-    * createdAt  组织里某个注册OU下的纳管账号被创建的时间。
-    * landingZoneVersion  Landing Zone版本。
+    * createdAt  注册OU的创建时间。
+    * landingZoneVersion  注册OU的Landing Zone版本。
     *
     * @var string[]
     */
@@ -311,7 +311,7 @@ class CreateManagedOrganizationalUnitResponse implements ModelInterface, ArrayAc
 
     /**
     * Gets manageAccountId
-    *  管理纳管账号ID。
+    *  管理员账号ID。
     *
     * @return string|null
     */
@@ -323,7 +323,7 @@ class CreateManagedOrganizationalUnitResponse implements ModelInterface, ArrayAc
     /**
     * Sets manageAccountId
     *
-    * @param string|null $manageAccountId 管理纳管账号ID。
+    * @param string|null $manageAccountId 管理员账号ID。
     *
     * @return $this
     */
@@ -479,7 +479,7 @@ class CreateManagedOrganizationalUnitResponse implements ModelInterface, ArrayAc
 
     /**
     * Gets createdAt
-    *  组织里某个注册OU下的纳管账号被创建的时间。
+    *  注册OU的创建时间。
     *
     * @return \DateTime|null
     */
@@ -491,7 +491,7 @@ class CreateManagedOrganizationalUnitResponse implements ModelInterface, ArrayAc
     /**
     * Sets createdAt
     *
-    * @param \DateTime|null $createdAt 组织里某个注册OU下的纳管账号被创建的时间。
+    * @param \DateTime|null $createdAt 注册OU的创建时间。
     *
     * @return $this
     */
@@ -503,7 +503,7 @@ class CreateManagedOrganizationalUnitResponse implements ModelInterface, ArrayAc
 
     /**
     * Gets landingZoneVersion
-    *  Landing Zone版本。
+    *  注册OU的Landing Zone版本。
     *
     * @return string|null
     */
@@ -515,7 +515,7 @@ class CreateManagedOrganizationalUnitResponse implements ModelInterface, ArrayAc
     /**
     * Sets landingZoneVersion
     *
-    * @param string|null $landingZoneVersion Landing Zone版本。
+    * @param string|null $landingZoneVersion 注册OU的Landing Zone版本。
     *
     * @return $this
     */

@@ -21,22 +21,22 @@ class UpdateCustomerIpsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'object'
+            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\UpdateCustomerIpsRespData'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'data' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class UpdateCustomerIpsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * data  data
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'data' => 'data'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * data  data
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'data' => 'setData'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * data  data
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'data' => 'getData'
     ];
 
     /**
@@ -148,7 +148,7 @@ class UpdateCustomerIpsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class UpdateCustomerIpsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets data
+    *  data
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\UpdateCustomerIpsRespData|null
     */
-    public function getBody()
+    public function getData()
     {
-        return $this->container['body'];
+        return $this->container['data'];
     }
 
     /**
-    * Sets body
+    * Sets data
     *
-    * @param object|null $body body
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\UpdateCustomerIpsRespData|null $data data
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setData($data)
     {
-        $this->container['body'] = $body;
+        $this->container['data'] = $data;
         return $this;
     }
 

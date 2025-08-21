@@ -20,10 +20,10 @@ class BatchCreateApplicationViewRequestBodyApplicationList implements ModelInter
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  名称
-    * description  描述
-    * parentName  父节点名称
-    * level  层级，从1开始
+    * name  **参数解释：** 应用名称。 **约束限制：** 不涉及。 **取值范围：** 由中文、英文字母、数字、中划线、下划线组成，长度在3~50个字符之间。 **默认取值：** 不涉及。
+    * description  **参数解释：** 应用描述。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度在0到256个字符之间。 **默认取值：** 不涉及。
+    * parentName  **参数解释：** 父节点名称。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度3到50个字符。 **默认取值：** 不涉及。
+    * level  **参数解释：** 层级，默认应用层级为1，子应用层级为2。 **约束限制：** 不涉及。 **取值范围：** - 1：应用层级。 - 2：子应用层级。 **默认取值：** 默认应用层级为1。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class BatchCreateApplicationViewRequestBodyApplicationList implements ModelInter
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  名称
-    * description  描述
-    * parentName  父节点名称
-    * level  层级，从1开始
+    * name  **参数解释：** 应用名称。 **约束限制：** 不涉及。 **取值范围：** 由中文、英文字母、数字、中划线、下划线组成，长度在3~50个字符之间。 **默认取值：** 不涉及。
+    * description  **参数解释：** 应用描述。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度在0到256个字符之间。 **默认取值：** 不涉及。
+    * parentName  **参数解释：** 父节点名称。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度3到50个字符。 **默认取值：** 不涉及。
+    * level  **参数解释：** 层级，默认应用层级为1，子应用层级为2。 **约束限制：** 不涉及。 **取值范围：** - 1：应用层级。 - 2：子应用层级。 **默认取值：** 默认应用层级为1。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class BatchCreateApplicationViewRequestBodyApplicationList implements ModelInter
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  名称
-    * description  描述
-    * parentName  父节点名称
-    * level  层级，从1开始
+    * name  **参数解释：** 应用名称。 **约束限制：** 不涉及。 **取值范围：** 由中文、英文字母、数字、中划线、下划线组成，长度在3~50个字符之间。 **默认取值：** 不涉及。
+    * description  **参数解释：** 应用描述。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度在0到256个字符之间。 **默认取值：** 不涉及。
+    * parentName  **参数解释：** 父节点名称。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度3到50个字符。 **默认取值：** 不涉及。
+    * level  **参数解释：** 层级，默认应用层级为1，子应用层级为2。 **约束限制：** 不涉及。 **取值范围：** - 1：应用层级。 - 2：子应用层级。 **默认取值：** 默认应用层级为1。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class BatchCreateApplicationViewRequestBodyApplicationList implements ModelInter
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  名称
-    * description  描述
-    * parentName  父节点名称
-    * level  层级，从1开始
+    * name  **参数解释：** 应用名称。 **约束限制：** 不涉及。 **取值范围：** 由中文、英文字母、数字、中划线、下划线组成，长度在3~50个字符之间。 **默认取值：** 不涉及。
+    * description  **参数解释：** 应用描述。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度在0到256个字符之间。 **默认取值：** 不涉及。
+    * parentName  **参数解释：** 父节点名称。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度3到50个字符。 **默认取值：** 不涉及。
+    * level  **参数解释：** 层级，默认应用层级为1，子应用层级为2。 **约束限制：** 不涉及。 **取值范围：** - 1：应用层级。 - 2：子应用层级。 **默认取值：** 默认应用层级为1。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class BatchCreateApplicationViewRequestBodyApplicationList implements ModelInter
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  名称
-    * description  描述
-    * parentName  父节点名称
-    * level  层级，从1开始
+    * name  **参数解释：** 应用名称。 **约束限制：** 不涉及。 **取值范围：** 由中文、英文字母、数字、中划线、下划线组成，长度在3~50个字符之间。 **默认取值：** 不涉及。
+    * description  **参数解释：** 应用描述。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度在0到256个字符之间。 **默认取值：** 不涉及。
+    * parentName  **参数解释：** 父节点名称。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度3到50个字符。 **默认取值：** 不涉及。
+    * level  **参数解释：** 层级，默认应用层级为1，子应用层级为2。 **约束限制：** 不涉及。 **取值范围：** - 1：应用层级。 - 2：子应用层级。 **默认取值：** 默认应用层级为1。
     *
     * @var string[]
     */
@@ -191,6 +191,30 @@ class BatchCreateApplicationViewRequestBodyApplicationList implements ModelInter
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 50)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 50.";
+            }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 3)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 256)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['parentName']) && (mb_strlen($this->container['parentName']) > 50)) {
+                $invalidProperties[] = "invalid value for 'parentName', the character length must be smaller than or equal to 50.";
+            }
+            if (!is_null($this->container['parentName']) && (mb_strlen($this->container['parentName']) < 3)) {
+                $invalidProperties[] = "invalid value for 'parentName', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['level']) && (mb_strlen($this->container['level']) > 1)) {
+                $invalidProperties[] = "invalid value for 'level', the character length must be smaller than or equal to 1.";
+            }
+            if (!is_null($this->container['level']) && (mb_strlen($this->container['level']) < 1)) {
+                $invalidProperties[] = "invalid value for 'level', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -207,7 +231,7 @@ class BatchCreateApplicationViewRequestBodyApplicationList implements ModelInter
 
     /**
     * Gets name
-    *  名称
+    *  **参数解释：** 应用名称。 **约束限制：** 不涉及。 **取值范围：** 由中文、英文字母、数字、中划线、下划线组成，长度在3~50个字符之间。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +243,7 @@ class BatchCreateApplicationViewRequestBodyApplicationList implements ModelInter
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string|null $name **参数解释：** 应用名称。 **约束限制：** 不涉及。 **取值范围：** 由中文、英文字母、数字、中划线、下划线组成，长度在3~50个字符之间。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -231,7 +255,7 @@ class BatchCreateApplicationViewRequestBodyApplicationList implements ModelInter
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释：** 应用描述。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度在0到256个字符之间。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -243,7 +267,7 @@ class BatchCreateApplicationViewRequestBodyApplicationList implements ModelInter
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释：** 应用描述。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度在0到256个字符之间。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -255,7 +279,7 @@ class BatchCreateApplicationViewRequestBodyApplicationList implements ModelInter
 
     /**
     * Gets parentName
-    *  父节点名称
+    *  **参数解释：** 父节点名称。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度3到50个字符。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -267,7 +291,7 @@ class BatchCreateApplicationViewRequestBodyApplicationList implements ModelInter
     /**
     * Sets parentName
     *
-    * @param string|null $parentName 父节点名称
+    * @param string|null $parentName **参数解释：** 父节点名称。 **约束限制：** 不涉及。 **取值范围：** 字符串，长度3到50个字符。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -279,7 +303,7 @@ class BatchCreateApplicationViewRequestBodyApplicationList implements ModelInter
 
     /**
     * Gets level
-    *  层级，从1开始
+    *  **参数解释：** 层级，默认应用层级为1，子应用层级为2。 **约束限制：** 不涉及。 **取值范围：** - 1：应用层级。 - 2：子应用层级。 **默认取值：** 默认应用层级为1。
     *
     * @return string|null
     */
@@ -291,7 +315,7 @@ class BatchCreateApplicationViewRequestBodyApplicationList implements ModelInter
     /**
     * Sets level
     *
-    * @param string|null $level 层级，从1开始
+    * @param string|null $level **参数解释：** 层级，默认应用层级为1，子应用层级为2。 **约束限制：** 不涉及。 **取值范围：** - 1：应用层级。 - 2：子应用层级。 **默认取值：** 默认应用层级为1。
     *
     * @return $this
     */

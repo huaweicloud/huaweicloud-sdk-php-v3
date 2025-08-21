@@ -23,7 +23,7 @@ class ShowControlsForOrganizationalUnitResponse implements ModelInterface, Array
     * Array of property to type mappings. Used for (de)serialization
     * control  control
     * regions  区域信息。
-    * state  是否允许启用控制策略。
+    * state  状态。
     * message  状态说明。
     * version  控制策略当前版本。
     *
@@ -41,7 +41,7 @@ class ShowControlsForOrganizationalUnitResponse implements ModelInterface, Array
     * Array of property to format mappings. Used for (de)serialization
     * control  control
     * regions  区域信息。
-    * state  是否允许启用控制策略。
+    * state  状态。
     * message  状态说明。
     * version  控制策略当前版本。
     *
@@ -80,7 +80,7 @@ class ShowControlsForOrganizationalUnitResponse implements ModelInterface, Array
     * and the value is the original name
     * control  control
     * regions  区域信息。
-    * state  是否允许启用控制策略。
+    * state  状态。
     * message  状态说明。
     * version  控制策略当前版本。
     *
@@ -98,7 +98,7 @@ class ShowControlsForOrganizationalUnitResponse implements ModelInterface, Array
     * Array of attributes to setter functions (for deserialization of responses)
     * control  control
     * regions  区域信息。
-    * state  是否允许启用控制策略。
+    * state  状态。
     * message  状态说明。
     * version  控制策略当前版本。
     *
@@ -116,7 +116,7 @@ class ShowControlsForOrganizationalUnitResponse implements ModelInterface, Array
     * Array of attributes to getter functions (for serialization of requests)
     * control  control
     * regions  区域信息。
-    * state  是否允许启用控制策略。
+    * state  状态。
     * message  状态说明。
     * version  控制策略当前版本。
     *
@@ -273,7 +273,7 @@ class ShowControlsForOrganizationalUnitResponse implements ModelInterface, Array
 
     /**
     * Gets state
-    *  是否允许启用控制策略。
+    *  状态。
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class ShowControlsForOrganizationalUnitResponse implements ModelInterface, Array
     /**
     * Sets state
     *
-    * @param string|null $state 是否允许启用控制策略。
+    * @param string|null $state 状态。
     *
     * @return $this
     */
