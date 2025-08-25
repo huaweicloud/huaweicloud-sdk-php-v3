@@ -23,13 +23,15 @@ class UserForList implements ModelInterface, ArrayAccess
     * name  数据库用户名称。
     * databases  数据库及其权限。
     * hosts  授权用户登录主机IP列表 • 若IP地址为%，则表示允许所有地址访问MySQL实例。 • 若IP地址为“10.10.10.%”，则表示10.10.10.X的IP地址都可以访问该MySQL实例。 • 支持添加多个IP地址。
+    * comment  数据库用户备注
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
             'databases' => '\HuaweiCloud\SDK\Rds\V3\Model\DatabaseWithPrivilegeObject[]',
-            'hosts' => 'string[]'
+            'hosts' => 'string[]',
+            'comment' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class UserForList implements ModelInterface, ArrayAccess
     * name  数据库用户名称。
     * databases  数据库及其权限。
     * hosts  授权用户登录主机IP列表 • 若IP地址为%，则表示允许所有地址访问MySQL实例。 • 若IP地址为“10.10.10.%”，则表示10.10.10.X的IP地址都可以访问该MySQL实例。 • 支持添加多个IP地址。
+    * comment  数据库用户备注
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
         'databases' => null,
-        'hosts' => null
+        'hosts' => null,
+        'comment' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class UserForList implements ModelInterface, ArrayAccess
     * name  数据库用户名称。
     * databases  数据库及其权限。
     * hosts  授权用户登录主机IP列表 • 若IP地址为%，则表示允许所有地址访问MySQL实例。 • 若IP地址为“10.10.10.%”，则表示10.10.10.X的IP地址都可以访问该MySQL实例。 • 支持添加多个IP地址。
+    * comment  数据库用户备注
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
             'databases' => 'databases',
-            'hosts' => 'hosts'
+            'hosts' => 'hosts',
+            'comment' => 'comment'
     ];
 
     /**
@@ -86,13 +92,15 @@ class UserForList implements ModelInterface, ArrayAccess
     * name  数据库用户名称。
     * databases  数据库及其权限。
     * hosts  授权用户登录主机IP列表 • 若IP地址为%，则表示允许所有地址访问MySQL实例。 • 若IP地址为“10.10.10.%”，则表示10.10.10.X的IP地址都可以访问该MySQL实例。 • 支持添加多个IP地址。
+    * comment  数据库用户备注
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
             'databases' => 'setDatabases',
-            'hosts' => 'setHosts'
+            'hosts' => 'setHosts',
+            'comment' => 'setComment'
     ];
 
     /**
@@ -100,13 +108,15 @@ class UserForList implements ModelInterface, ArrayAccess
     * name  数据库用户名称。
     * databases  数据库及其权限。
     * hosts  授权用户登录主机IP列表 • 若IP地址为%，则表示允许所有地址访问MySQL实例。 • 若IP地址为“10.10.10.%”，则表示10.10.10.X的IP地址都可以访问该MySQL实例。 • 支持添加多个IP地址。
+    * comment  数据库用户备注
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
             'databases' => 'getDatabases',
-            'hosts' => 'getHosts'
+            'hosts' => 'getHosts',
+            'comment' => 'getComment'
     ];
 
     /**
@@ -170,6 +180,7 @@ class UserForList implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['databases'] = isset($data['databases']) ? $data['databases'] : null;
         $this->container['hosts'] = isset($data['hosts']) ? $data['hosts'] : null;
+        $this->container['comment'] = isset($data['comment']) ? $data['comment'] : null;
     }
 
     /**
@@ -188,6 +199,9 @@ class UserForList implements ModelInterface, ArrayAccess
         }
         if ($this->container['hosts'] === null) {
             $invalidProperties[] = "'hosts' can't be null";
+        }
+        if ($this->container['comment'] === null) {
+            $invalidProperties[] = "'comment' can't be null";
         }
         return $invalidProperties;
     }
@@ -272,6 +286,30 @@ class UserForList implements ModelInterface, ArrayAccess
     public function setHosts($hosts)
     {
         $this->container['hosts'] = $hosts;
+        return $this;
+    }
+
+    /**
+    * Gets comment
+    *  数据库用户备注
+    *
+    * @return string
+    */
+    public function getComment()
+    {
+        return $this->container['comment'];
+    }
+
+    /**
+    * Sets comment
+    *
+    * @param string $comment 数据库用户备注
+    *
+    * @return $this
+    */
+    public function setComment($comment)
+    {
+        $this->container['comment'] = $comment;
         return $this;
     }
 
