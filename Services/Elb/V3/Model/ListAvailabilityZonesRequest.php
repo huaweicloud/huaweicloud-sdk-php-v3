@@ -20,8 +20,8 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * publicBorderGroup  参数解释：网络公共边界组。
-    * loadbalancerId  参数解释：负载均衡器ID。
+    * publicBorderGroup  **参数解释**：公网边界组。  **约束限制**：不涉及  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  **默认取值**：不涉及
+    * loadbalancerId  **参数解释**：负载均衡器ID。传入可查询对应ELB支持的可用区列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * publicBorderGroup  参数解释：网络公共边界组。
-    * loadbalancerId  参数解释：负载均衡器ID。
+    * publicBorderGroup  **参数解释**：公网边界组。  **约束限制**：不涉及  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  **默认取值**：不涉及
+    * loadbalancerId  **参数解释**：负载均衡器ID。传入可查询对应ELB支持的可用区列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * publicBorderGroup  参数解释：网络公共边界组。
-    * loadbalancerId  参数解释：负载均衡器ID。
+    * publicBorderGroup  **参数解释**：公网边界组。  **约束限制**：不涉及  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  **默认取值**：不涉及
+    * loadbalancerId  **参数解释**：负载均衡器ID。传入可查询对应ELB支持的可用区列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * publicBorderGroup  参数解释：网络公共边界组。
-    * loadbalancerId  参数解释：负载均衡器ID。
+    * publicBorderGroup  **参数解释**：公网边界组。  **约束限制**：不涉及  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  **默认取值**：不涉及
+    * loadbalancerId  **参数解释**：负载均衡器ID。传入可查询对应ELB支持的可用区列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * publicBorderGroup  参数解释：网络公共边界组。
-    * loadbalancerId  参数解释：负载均衡器ID。
+    * publicBorderGroup  **参数解释**：公网边界组。  **约束限制**：不涉及  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  **默认取值**：不涉及
+    * loadbalancerId  **参数解释**：负载均衡器ID。传入可查询对应ELB支持的可用区列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBorderGroup
-    *  参数解释：网络公共边界组。
+    *  **参数解释**：公网边界组。  **约束限制**：不涉及  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets publicBorderGroup
     *
-    * @param string|null $publicBorderGroup 参数解释：网络公共边界组。
+    * @param string|null $publicBorderGroup **参数解释**：公网边界组。  **约束限制**：不涉及  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets loadbalancerId
-    *  参数解释：负载均衡器ID。
+    *  **参数解释**：负载均衡器ID。传入可查询对应ELB支持的可用区列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets loadbalancerId
     *
-    * @param string|null $loadbalancerId 参数解释：负载均衡器ID。
+    * @param string|null $loadbalancerId **参数解释**：负载均衡器ID。传入可查询对应ELB支持的可用区列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

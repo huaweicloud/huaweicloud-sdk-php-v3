@@ -20,14 +20,14 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
-    * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
-    * enterpriseProjectId  参数解释：所属的企业项目ID。 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:logtanks:list权限。 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
-    * id  云日志记录ID。 支持多值查询，查询条件格式：id=xxx&id=xxx。
-    * loadbalancerId  负载均衡器ID。 支持多值查询，查询条件格式：loadbalancer_id=xxx&loadbalancer_id=xxx。
-    * logGroupId  云日志分组ID。 支持多值查询，查询条件格式：log_group_id=xxx&log_group_id=xxx。
-    * logTopicId  云日志主题ID 支持多值查询，查询条件格式：log_topic_id=xxx&log_topic_id=xxx。
+    * limit  **参数解释**：每页返回的个数。  **约束限制**：不涉及  **取值范围**：0-2000  **默认取值**：2000
+    * marker  **参数解释**：上一页最后一条记录的ID。  **约束限制**： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。  **取值范围**：不涉及  **默认取值**：不涉及
+    * pageReverse  **参数解释**：是否反向查询。  **约束限制**： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。  **取值范围**： - true：查询上一页。 - false：查询下一页。  **默认取值**：false
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。 支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  **约束限制**： - 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:logtanks:list权限。 - 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  **取值范围**：不涉及  **默认取值**：不涉及  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * id  **参数解释**：云日志记录ID。 支持多值查询，查询条件格式：id=xxx&id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * loadbalancerId  **参数解释**：负载均衡器ID。 支持多值查询，查询条件格式：loadbalancer_id=xxx&loadbalancer_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logGroupId  **参数解释**：云日志分组ID。 支持多值查询，查询条件格式：log_group_id=xxx&log_group_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logTopicId  **参数解释**：云日志主题ID 支持多值查询，查询条件格式：log_topic_id=xxx&log_topic_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
-    * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
-    * enterpriseProjectId  参数解释：所属的企业项目ID。 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:logtanks:list权限。 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
-    * id  云日志记录ID。 支持多值查询，查询条件格式：id=xxx&id=xxx。
-    * loadbalancerId  负载均衡器ID。 支持多值查询，查询条件格式：loadbalancer_id=xxx&loadbalancer_id=xxx。
-    * logGroupId  云日志分组ID。 支持多值查询，查询条件格式：log_group_id=xxx&log_group_id=xxx。
-    * logTopicId  云日志主题ID 支持多值查询，查询条件格式：log_topic_id=xxx&log_topic_id=xxx。
+    * limit  **参数解释**：每页返回的个数。  **约束限制**：不涉及  **取值范围**：0-2000  **默认取值**：2000
+    * marker  **参数解释**：上一页最后一条记录的ID。  **约束限制**： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。  **取值范围**：不涉及  **默认取值**：不涉及
+    * pageReverse  **参数解释**：是否反向查询。  **约束限制**： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。  **取值范围**： - true：查询上一页。 - false：查询下一页。  **默认取值**：false
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。 支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  **约束限制**： - 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:logtanks:list权限。 - 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  **取值范围**：不涉及  **默认取值**：不涉及  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * id  **参数解释**：云日志记录ID。 支持多值查询，查询条件格式：id=xxx&id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * loadbalancerId  **参数解释**：负载均衡器ID。 支持多值查询，查询条件格式：loadbalancer_id=xxx&loadbalancer_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logGroupId  **参数解释**：云日志分组ID。 支持多值查询，查询条件格式：log_group_id=xxx&log_group_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logTopicId  **参数解释**：云日志主题ID 支持多值查询，查询条件格式：log_topic_id=xxx&log_topic_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
-    * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
-    * enterpriseProjectId  参数解释：所属的企业项目ID。 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:logtanks:list权限。 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
-    * id  云日志记录ID。 支持多值查询，查询条件格式：id=xxx&id=xxx。
-    * loadbalancerId  负载均衡器ID。 支持多值查询，查询条件格式：loadbalancer_id=xxx&loadbalancer_id=xxx。
-    * logGroupId  云日志分组ID。 支持多值查询，查询条件格式：log_group_id=xxx&log_group_id=xxx。
-    * logTopicId  云日志主题ID 支持多值查询，查询条件格式：log_topic_id=xxx&log_topic_id=xxx。
+    * limit  **参数解释**：每页返回的个数。  **约束限制**：不涉及  **取值范围**：0-2000  **默认取值**：2000
+    * marker  **参数解释**：上一页最后一条记录的ID。  **约束限制**： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。  **取值范围**：不涉及  **默认取值**：不涉及
+    * pageReverse  **参数解释**：是否反向查询。  **约束限制**： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。  **取值范围**： - true：查询上一页。 - false：查询下一页。  **默认取值**：false
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。 支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  **约束限制**： - 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:logtanks:list权限。 - 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  **取值范围**：不涉及  **默认取值**：不涉及  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * id  **参数解释**：云日志记录ID。 支持多值查询，查询条件格式：id=xxx&id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * loadbalancerId  **参数解释**：负载均衡器ID。 支持多值查询，查询条件格式：loadbalancer_id=xxx&loadbalancer_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logGroupId  **参数解释**：云日志分组ID。 支持多值查询，查询条件格式：log_group_id=xxx&log_group_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logTopicId  **参数解释**：云日志主题ID 支持多值查询，查询条件格式：log_topic_id=xxx&log_topic_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
-    * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
-    * enterpriseProjectId  参数解释：所属的企业项目ID。 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:logtanks:list权限。 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
-    * id  云日志记录ID。 支持多值查询，查询条件格式：id=xxx&id=xxx。
-    * loadbalancerId  负载均衡器ID。 支持多值查询，查询条件格式：loadbalancer_id=xxx&loadbalancer_id=xxx。
-    * logGroupId  云日志分组ID。 支持多值查询，查询条件格式：log_group_id=xxx&log_group_id=xxx。
-    * logTopicId  云日志主题ID 支持多值查询，查询条件格式：log_topic_id=xxx&log_topic_id=xxx。
+    * limit  **参数解释**：每页返回的个数。  **约束限制**：不涉及  **取值范围**：0-2000  **默认取值**：2000
+    * marker  **参数解释**：上一页最后一条记录的ID。  **约束限制**： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。  **取值范围**：不涉及  **默认取值**：不涉及
+    * pageReverse  **参数解释**：是否反向查询。  **约束限制**： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。  **取值范围**： - true：查询上一页。 - false：查询下一页。  **默认取值**：false
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。 支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  **约束限制**： - 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:logtanks:list权限。 - 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  **取值范围**：不涉及  **默认取值**：不涉及  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * id  **参数解释**：云日志记录ID。 支持多值查询，查询条件格式：id=xxx&id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * loadbalancerId  **参数解释**：负载均衡器ID。 支持多值查询，查询条件格式：loadbalancer_id=xxx&loadbalancer_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logGroupId  **参数解释**：云日志分组ID。 支持多值查询，查询条件格式：log_group_id=xxx&log_group_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logTopicId  **参数解释**：云日志主题ID 支持多值查询，查询条件格式：log_topic_id=xxx&log_topic_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
-    * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
-    * enterpriseProjectId  参数解释：所属的企业项目ID。 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:logtanks:list权限。 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
-    * id  云日志记录ID。 支持多值查询，查询条件格式：id=xxx&id=xxx。
-    * loadbalancerId  负载均衡器ID。 支持多值查询，查询条件格式：loadbalancer_id=xxx&loadbalancer_id=xxx。
-    * logGroupId  云日志分组ID。 支持多值查询，查询条件格式：log_group_id=xxx&log_group_id=xxx。
-    * logTopicId  云日志主题ID 支持多值查询，查询条件格式：log_topic_id=xxx&log_topic_id=xxx。
+    * limit  **参数解释**：每页返回的个数。  **约束限制**：不涉及  **取值范围**：0-2000  **默认取值**：2000
+    * marker  **参数解释**：上一页最后一条记录的ID。  **约束限制**： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。  **取值范围**：不涉及  **默认取值**：不涉及
+    * pageReverse  **参数解释**：是否反向查询。  **约束限制**： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。  **取值范围**： - true：查询上一页。 - false：查询下一页。  **默认取值**：false
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。 支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  **约束限制**： - 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:logtanks:list权限。 - 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  **取值范围**：不涉及  **默认取值**：不涉及  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * id  **参数解释**：云日志记录ID。 支持多值查询，查询条件格式：id=xxx&id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * loadbalancerId  **参数解释**：负载均衡器ID。 支持多值查询，查询条件格式：loadbalancer_id=xxx&loadbalancer_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logGroupId  **参数解释**：云日志分组ID。 支持多值查询，查询条件格式：log_group_id=xxx&log_group_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logTopicId  **参数解释**：云日志主题ID 支持多值查询，查询条件格式：log_topic_id=xxx&log_topic_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -257,7 +257,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
+    *  **参数解释**：每页返回的个数。  **约束限制**：不涉及  **取值范围**：0-2000  **默认取值**：2000
     *
     * @return int|null
     */
@@ -269,7 +269,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
+    * @param int|null $limit **参数解释**：每页返回的个数。  **约束限制**：不涉及  **取值范围**：0-2000  **默认取值**：2000
     *
     * @return $this
     */
@@ -281,7 +281,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
-    *  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
+    *  **参数解释**：上一页最后一条记录的ID。  **约束限制**： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -293,7 +293,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker 上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
+    * @param string|null $marker **参数解释**：上一页最后一条记录的ID。  **约束限制**： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -305,7 +305,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets pageReverse
-    *  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
+    *  **参数解释**：是否反向查询。  **约束限制**： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。  **取值范围**： - true：查询上一页。 - false：查询下一页。  **默认取值**：false
     *
     * @return bool|null
     */
@@ -317,7 +317,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets pageReverse
     *
-    * @param bool|null $pageReverse 是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
+    * @param bool|null $pageReverse **参数解释**：是否反向查询。  **约束限制**： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。  **取值范围**： - true：查询上一页。 - false：查询下一页。  **默认取值**：false
     *
     * @return $this
     */
@@ -329,7 +329,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  参数解释：所属的企业项目ID。 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:logtanks:list权限。 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    *  **参数解释**：资源所属的企业项目ID。 支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  **约束限制**： - 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:logtanks:list权限。 - 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  **取值范围**：不涉及  **默认取值**：不涉及  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @return string[]|null
     */
@@ -341,7 +341,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string[]|null $enterpriseProjectId 参数解释：所属的企业项目ID。 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:logtanks:list权限。 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * @param string[]|null $enterpriseProjectId **参数解释**：资源所属的企业项目ID。 支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  **约束限制**： - 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:logtanks:list权限。 - 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  **取值范围**：不涉及  **默认取值**：不涉及  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @return $this
     */
@@ -353,7 +353,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  云日志记录ID。 支持多值查询，查询条件格式：id=xxx&id=xxx。
+    *  **参数解释**：云日志记录ID。 支持多值查询，查询条件格式：id=xxx&id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string[]|null
     */
@@ -365,7 +365,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id 云日志记录ID。 支持多值查询，查询条件格式：id=xxx&id=xxx。
+    * @param string[]|null $id **参数解释**：云日志记录ID。 支持多值查询，查询条件格式：id=xxx&id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -377,7 +377,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets loadbalancerId
-    *  负载均衡器ID。 支持多值查询，查询条件格式：loadbalancer_id=xxx&loadbalancer_id=xxx。
+    *  **参数解释**：负载均衡器ID。 支持多值查询，查询条件格式：loadbalancer_id=xxx&loadbalancer_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string[]|null
     */
@@ -389,7 +389,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets loadbalancerId
     *
-    * @param string[]|null $loadbalancerId 负载均衡器ID。 支持多值查询，查询条件格式：loadbalancer_id=xxx&loadbalancer_id=xxx。
+    * @param string[]|null $loadbalancerId **参数解释**：负载均衡器ID。 支持多值查询，查询条件格式：loadbalancer_id=xxx&loadbalancer_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -401,7 +401,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets logGroupId
-    *  云日志分组ID。 支持多值查询，查询条件格式：log_group_id=xxx&log_group_id=xxx。
+    *  **参数解释**：云日志分组ID。 支持多值查询，查询条件格式：log_group_id=xxx&log_group_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string[]|null
     */
@@ -413,7 +413,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets logGroupId
     *
-    * @param string[]|null $logGroupId 云日志分组ID。 支持多值查询，查询条件格式：log_group_id=xxx&log_group_id=xxx。
+    * @param string[]|null $logGroupId **参数解释**：云日志分组ID。 支持多值查询，查询条件格式：log_group_id=xxx&log_group_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -425,7 +425,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets logTopicId
-    *  云日志主题ID 支持多值查询，查询条件格式：log_topic_id=xxx&log_topic_id=xxx。
+    *  **参数解释**：云日志主题ID 支持多值查询，查询条件格式：log_topic_id=xxx&log_topic_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string[]|null
     */
@@ -437,7 +437,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets logTopicId
     *
-    * @param string[]|null $logTopicId 云日志主题ID 支持多值查询，查询条件格式：log_topic_id=xxx&log_topic_id=xxx。
+    * @param string[]|null $logTopicId **参数解释**：云日志主题ID 支持多值查询，查询条件格式：log_topic_id=xxx&log_topic_id=xxx。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

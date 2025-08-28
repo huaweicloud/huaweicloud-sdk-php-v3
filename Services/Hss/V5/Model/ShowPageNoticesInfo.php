@@ -21,11 +21,11 @@ class ShowPageNoticesInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * pageLocation  页面位置
-    * type  通知类型，包含如下两种。 - links :超链接 - text  :文本
+    * type  通知类型，包含如下两种。 - links：超链接 - text：文本
     * content  通知内容
     * title  通知标题
     * url  超链接
-    * level  通知等级，包含如下3种。 - error :紧急 - warn :重要 - prompt :提示
+    * level  **参数解释** 通知等级 **取值范围** - error：紧急 - warn：重要 - prompt：提示
     *
     * @var string[]
     */
@@ -41,11 +41,11 @@ class ShowPageNoticesInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * pageLocation  页面位置
-    * type  通知类型，包含如下两种。 - links :超链接 - text  :文本
+    * type  通知类型，包含如下两种。 - links：超链接 - text：文本
     * content  通知内容
     * title  通知标题
     * url  超链接
-    * level  通知等级，包含如下3种。 - error :紧急 - warn :重要 - prompt :提示
+    * level  **参数解释** 通知等级 **取值范围** - error：紧急 - warn：重要 - prompt：提示
     *
     * @var string[]
     */
@@ -82,11 +82,11 @@ class ShowPageNoticesInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * pageLocation  页面位置
-    * type  通知类型，包含如下两种。 - links :超链接 - text  :文本
+    * type  通知类型，包含如下两种。 - links：超链接 - text：文本
     * content  通知内容
     * title  通知标题
     * url  超链接
-    * level  通知等级，包含如下3种。 - error :紧急 - warn :重要 - prompt :提示
+    * level  **参数解释** 通知等级 **取值范围** - error：紧急 - warn：重要 - prompt：提示
     *
     * @var string[]
     */
@@ -102,11 +102,11 @@ class ShowPageNoticesInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * pageLocation  页面位置
-    * type  通知类型，包含如下两种。 - links :超链接 - text  :文本
+    * type  通知类型，包含如下两种。 - links：超链接 - text：文本
     * content  通知内容
     * title  通知标题
     * url  超链接
-    * level  通知等级，包含如下3种。 - error :紧急 - warn :重要 - prompt :提示
+    * level  **参数解释** 通知等级 **取值范围** - error：紧急 - warn：重要 - prompt：提示
     *
     * @var string[]
     */
@@ -122,11 +122,11 @@ class ShowPageNoticesInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * pageLocation  页面位置
-    * type  通知类型，包含如下两种。 - links :超链接 - text  :文本
+    * type  通知类型，包含如下两种。 - links：超链接 - text：文本
     * content  通知内容
     * title  通知标题
     * url  超链接
-    * level  通知等级，包含如下3种。 - error :紧急 - warn :重要 - prompt :提示
+    * level  **参数解释** 通知等级 **取值范围** - error：紧急 - warn：重要 - prompt：提示
     *
     * @var string[]
     */
@@ -289,7 +289,7 @@ class ShowPageNoticesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  通知类型，包含如下两种。 - links :超链接 - text  :文本
+    *  通知类型，包含如下两种。 - links：超链接 - text：文本
     *
     * @return string|null
     */
@@ -301,7 +301,7 @@ class ShowPageNoticesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 通知类型，包含如下两种。 - links :超链接 - text  :文本
+    * @param string|null $type 通知类型，包含如下两种。 - links：超链接 - text：文本
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class ShowPageNoticesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets level
-    *  通知等级，包含如下3种。 - error :紧急 - warn :重要 - prompt :提示
+    *  **参数解释** 通知等级 **取值范围** - error：紧急 - warn：重要 - prompt：提示
     *
     * @return string|null
     */
@@ -397,7 +397,7 @@ class ShowPageNoticesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param string|null $level 通知等级，包含如下3种。 - error :紧急 - warn :重要 - prompt :提示
+    * @param string|null $level **参数解释** 通知等级 **取值范围** - error：紧急 - warn：重要 - prompt：提示
     *
     * @return $this
     */

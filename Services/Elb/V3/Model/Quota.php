@@ -20,27 +20,27 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  参数解释：项目ID。
-    * loadbalancer  负载均衡器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * certificate  证书配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * listener  监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * l7policy  转发策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * conditionPerPolicy  单个转发策略下所有转发规则的condition总数配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * pool  后端服务器组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * healthmonitor  健康检查配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * member  后端服务器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * membersPerPool  单个pool下的member的配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * listenersPerPool  单个pool器关联的监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * ipgroup  IP地址组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * ipgroupBindings  单个IP地址组可以关联的监听器数量配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * ipgroupMaxLength  单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * securityPolicy  自定义安全策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * listenersPerLoadbalancer  单个LB实例下的监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
-    * ipgroupsPerListener  单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * poolsPerL7policy  单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * l7policiesPerListener  单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * freeInstanceMembersPerPool  单个pool实例下的免费member配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * freeInstanceListenersPerLoadbalancer  单个LB实例下的免费监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
+    * loadbalancer  **参数解释**：负载均衡器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * certificate  **参数解释**：证书配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * listener  **参数解释**：监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * l7policy  **参数解释**：转发策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * conditionPerPolicy  **参数解释**：单个转发策略下所有转发规则的condition总数配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * pool  **参数解释**：后端服务器组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * healthmonitor  **参数解释**：健康检查配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * member  **参数解释**：后端服务器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * membersPerPool  **参数解释**：单个pool下的member的配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * listenersPerPool  **参数解释**：单个pool关联的监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * ipgroup  **参数解释**：IP地址组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * ipgroupBindings  **参数解释**：单个IP地址组可以关联的监听器数量配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * ipgroupMaxLength  **参数解释**：单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * securityPolicy  **参数解释**：自定义安全策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * listenersPerLoadbalancer  **参数解释**：单个LB实例下的监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
+    * ipgroupsPerListener  **参数解释**：单个监听器下的IP地址组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * poolsPerL7policy  **参数解释**：单个转发策略下的后端服务器组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * l7policiesPerListener  **参数解释**：单个监听器下的转发策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceMembersPerPool  **参数解释**：单个pool实例下的免费member配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceListenersPerLoadbalancer  **参数解释**：单个LB实例下的免费监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @var string[]
     */
@@ -70,27 +70,27 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  参数解释：项目ID。
-    * loadbalancer  负载均衡器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * certificate  证书配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * listener  监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * l7policy  转发策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * conditionPerPolicy  单个转发策略下所有转发规则的condition总数配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * pool  后端服务器组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * healthmonitor  健康检查配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * member  后端服务器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * membersPerPool  单个pool下的member的配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * listenersPerPool  单个pool器关联的监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * ipgroup  IP地址组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * ipgroupBindings  单个IP地址组可以关联的监听器数量配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * ipgroupMaxLength  单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * securityPolicy  自定义安全策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * listenersPerLoadbalancer  单个LB实例下的监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
-    * ipgroupsPerListener  单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * poolsPerL7policy  单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * l7policiesPerListener  单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * freeInstanceMembersPerPool  单个pool实例下的免费member配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * freeInstanceListenersPerLoadbalancer  单个LB实例下的免费监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
+    * loadbalancer  **参数解释**：负载均衡器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * certificate  **参数解释**：证书配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * listener  **参数解释**：监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * l7policy  **参数解释**：转发策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * conditionPerPolicy  **参数解释**：单个转发策略下所有转发规则的condition总数配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * pool  **参数解释**：后端服务器组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * healthmonitor  **参数解释**：健康检查配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * member  **参数解释**：后端服务器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * membersPerPool  **参数解释**：单个pool下的member的配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * listenersPerPool  **参数解释**：单个pool关联的监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * ipgroup  **参数解释**：IP地址组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * ipgroupBindings  **参数解释**：单个IP地址组可以关联的监听器数量配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * ipgroupMaxLength  **参数解释**：单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * securityPolicy  **参数解释**：自定义安全策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * listenersPerLoadbalancer  **参数解释**：单个LB实例下的监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
+    * ipgroupsPerListener  **参数解释**：单个监听器下的IP地址组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * poolsPerL7policy  **参数解释**：单个转发策略下的后端服务器组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * l7policiesPerListener  **参数解释**：单个监听器下的转发策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceMembersPerPool  **参数解释**：单个pool实例下的免费member配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceListenersPerLoadbalancer  **参数解释**：单个LB实例下的免费监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @var string[]
     */
@@ -141,27 +141,27 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  参数解释：项目ID。
-    * loadbalancer  负载均衡器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * certificate  证书配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * listener  监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * l7policy  转发策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * conditionPerPolicy  单个转发策略下所有转发规则的condition总数配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * pool  后端服务器组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * healthmonitor  健康检查配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * member  后端服务器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * membersPerPool  单个pool下的member的配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * listenersPerPool  单个pool器关联的监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * ipgroup  IP地址组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * ipgroupBindings  单个IP地址组可以关联的监听器数量配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * ipgroupMaxLength  单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * securityPolicy  自定义安全策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * listenersPerLoadbalancer  单个LB实例下的监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
-    * ipgroupsPerListener  单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * poolsPerL7policy  单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * l7policiesPerListener  单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * freeInstanceMembersPerPool  单个pool实例下的免费member配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * freeInstanceListenersPerLoadbalancer  单个LB实例下的免费监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
+    * loadbalancer  **参数解释**：负载均衡器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * certificate  **参数解释**：证书配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * listener  **参数解释**：监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * l7policy  **参数解释**：转发策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * conditionPerPolicy  **参数解释**：单个转发策略下所有转发规则的condition总数配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * pool  **参数解释**：后端服务器组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * healthmonitor  **参数解释**：健康检查配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * member  **参数解释**：后端服务器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * membersPerPool  **参数解释**：单个pool下的member的配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * listenersPerPool  **参数解释**：单个pool关联的监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * ipgroup  **参数解释**：IP地址组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * ipgroupBindings  **参数解释**：单个IP地址组可以关联的监听器数量配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * ipgroupMaxLength  **参数解释**：单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * securityPolicy  **参数解释**：自定义安全策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * listenersPerLoadbalancer  **参数解释**：单个LB实例下的监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
+    * ipgroupsPerListener  **参数解释**：单个监听器下的IP地址组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * poolsPerL7policy  **参数解释**：单个转发策略下的后端服务器组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * l7policiesPerListener  **参数解释**：单个监听器下的转发策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceMembersPerPool  **参数解释**：单个pool实例下的免费member配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceListenersPerLoadbalancer  **参数解释**：单个LB实例下的免费监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @var string[]
     */
@@ -191,27 +191,27 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  参数解释：项目ID。
-    * loadbalancer  负载均衡器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * certificate  证书配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * listener  监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * l7policy  转发策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * conditionPerPolicy  单个转发策略下所有转发规则的condition总数配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * pool  后端服务器组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * healthmonitor  健康检查配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * member  后端服务器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * membersPerPool  单个pool下的member的配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * listenersPerPool  单个pool器关联的监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * ipgroup  IP地址组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * ipgroupBindings  单个IP地址组可以关联的监听器数量配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * ipgroupMaxLength  单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * securityPolicy  自定义安全策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * listenersPerLoadbalancer  单个LB实例下的监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
-    * ipgroupsPerListener  单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * poolsPerL7policy  单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * l7policiesPerListener  单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * freeInstanceMembersPerPool  单个pool实例下的免费member配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * freeInstanceListenersPerLoadbalancer  单个LB实例下的免费监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
+    * loadbalancer  **参数解释**：负载均衡器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * certificate  **参数解释**：证书配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * listener  **参数解释**：监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * l7policy  **参数解释**：转发策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * conditionPerPolicy  **参数解释**：单个转发策略下所有转发规则的condition总数配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * pool  **参数解释**：后端服务器组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * healthmonitor  **参数解释**：健康检查配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * member  **参数解释**：后端服务器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * membersPerPool  **参数解释**：单个pool下的member的配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * listenersPerPool  **参数解释**：单个pool关联的监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * ipgroup  **参数解释**：IP地址组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * ipgroupBindings  **参数解释**：单个IP地址组可以关联的监听器数量配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * ipgroupMaxLength  **参数解释**：单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * securityPolicy  **参数解释**：自定义安全策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * listenersPerLoadbalancer  **参数解释**：单个LB实例下的监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
+    * ipgroupsPerListener  **参数解释**：单个监听器下的IP地址组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * poolsPerL7policy  **参数解释**：单个转发策略下的后端服务器组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * l7policiesPerListener  **参数解释**：单个监听器下的转发策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceMembersPerPool  **参数解释**：单个pool实例下的免费member配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceListenersPerLoadbalancer  **参数解释**：单个LB实例下的免费监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @var string[]
     */
@@ -241,27 +241,27 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  参数解释：项目ID。
-    * loadbalancer  负载均衡器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * certificate  证书配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * listener  监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * l7policy  转发策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * conditionPerPolicy  单个转发策略下所有转发规则的condition总数配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * pool  后端服务器组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * healthmonitor  健康检查配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * member  后端服务器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * membersPerPool  单个pool下的member的配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * listenersPerPool  单个pool器关联的监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * ipgroup  IP地址组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * ipgroupBindings  单个IP地址组可以关联的监听器数量配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * ipgroupMaxLength  单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * securityPolicy  自定义安全策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
-    * listenersPerLoadbalancer  单个LB实例下的监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
-    * ipgroupsPerListener  单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * poolsPerL7policy  单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * l7policiesPerListener  单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * freeInstanceMembersPerPool  单个pool实例下的免费member配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * freeInstanceListenersPerLoadbalancer  单个LB实例下的免费监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
+    * loadbalancer  **参数解释**：负载均衡器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * certificate  **参数解释**：证书配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * listener  **参数解释**：监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * l7policy  **参数解释**：转发策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * conditionPerPolicy  **参数解释**：单个转发策略下所有转发规则的condition总数配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * pool  **参数解释**：后端服务器组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * healthmonitor  **参数解释**：健康检查配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * member  **参数解释**：后端服务器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * membersPerPool  **参数解释**：单个pool下的member的配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * listenersPerPool  **参数解释**：单个pool关联的监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * ipgroup  **参数解释**：IP地址组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * ipgroupBindings  **参数解释**：单个IP地址组可以关联的监听器数量配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * ipgroupMaxLength  **参数解释**：单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * securityPolicy  **参数解释**：自定义安全策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * listenersPerLoadbalancer  **参数解释**：单个LB实例下的监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
+    * ipgroupsPerListener  **参数解释**：单个监听器下的IP地址组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * poolsPerL7policy  **参数解释**：单个转发策略下的后端服务器组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * l7policiesPerListener  **参数解释**：单个监听器下的转发策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceMembersPerPool  **参数解释**：单个pool实例下的免费member配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceListenersPerLoadbalancer  **参数解释**：单个LB实例下的免费监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @var string[]
     */
@@ -457,7 +457,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  参数解释：项目ID。
+    *  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     *
     * @return string
     */
@@ -469,7 +469,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 参数解释：项目ID。
+    * @param string $projectId **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     *
     * @return $this
     */
@@ -481,7 +481,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets loadbalancer
-    *  负载均衡器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *  **参数解释**：负载均衡器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return int
     */
@@ -493,7 +493,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets loadbalancer
     *
-    * @param int $loadbalancer 负载均衡器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * @param int $loadbalancer **参数解释**：负载均衡器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return $this
     */
@@ -505,7 +505,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificate
-    *  证书配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *  **参数解释**：证书配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return int
     */
@@ -517,7 +517,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets certificate
     *
-    * @param int $certificate 证书配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * @param int $certificate **参数解释**：证书配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return $this
     */
@@ -529,7 +529,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets listener
-    *  监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *  **参数解释**：监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return int
     */
@@ -541,7 +541,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets listener
     *
-    * @param int $listener 监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * @param int $listener **参数解释**：监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return $this
     */
@@ -553,7 +553,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets l7policy
-    *  转发策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *  **参数解释**：转发策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return int
     */
@@ -565,7 +565,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets l7policy
     *
-    * @param int $l7policy 转发策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * @param int $l7policy **参数解释**：转发策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return $this
     */
@@ -577,7 +577,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets conditionPerPolicy
-    *  单个转发策略下所有转发规则的condition总数配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *  **参数解释**：单个转发策略下所有转发规则的condition总数配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return int
     */
@@ -589,7 +589,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets conditionPerPolicy
     *
-    * @param int $conditionPerPolicy 单个转发策略下所有转发规则的condition总数配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * @param int $conditionPerPolicy **参数解释**：单个转发策略下所有转发规则的condition总数配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return $this
     */
@@ -601,7 +601,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets pool
-    *  后端服务器组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *  **参数解释**：后端服务器组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return int
     */
@@ -613,7 +613,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets pool
     *
-    * @param int $pool 后端服务器组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * @param int $pool **参数解释**：后端服务器组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return $this
     */
@@ -625,7 +625,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets healthmonitor
-    *  健康检查配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *  **参数解释**：健康检查配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return int
     */
@@ -637,7 +637,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets healthmonitor
     *
-    * @param int $healthmonitor 健康检查配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * @param int $healthmonitor **参数解释**：健康检查配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return $this
     */
@@ -649,7 +649,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets member
-    *  后端服务器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *  **参数解释**：后端服务器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return int
     */
@@ -661,7 +661,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets member
     *
-    * @param int $member 后端服务器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * @param int $member **参数解释**：后端服务器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return $this
     */
@@ -673,7 +673,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets membersPerPool
-    *  单个pool下的member的配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *  **参数解释**：单个pool下的member的配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return int
     */
@@ -685,7 +685,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets membersPerPool
     *
-    * @param int $membersPerPool 单个pool下的member的配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * @param int $membersPerPool **参数解释**：单个pool下的member的配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return $this
     */
@@ -697,7 +697,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets listenersPerPool
-    *  单个pool器关联的监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *  **参数解释**：单个pool关联的监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return int
     */
@@ -709,7 +709,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets listenersPerPool
     *
-    * @param int $listenersPerPool 单个pool器关联的监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * @param int $listenersPerPool **参数解释**：单个pool关联的监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return $this
     */
@@ -721,7 +721,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipgroup
-    *  IP地址组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    *  **参数解释**：IP地址组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     *
     * @return int
     */
@@ -733,7 +733,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets ipgroup
     *
-    * @param int $ipgroup IP地址组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * @param int $ipgroup **参数解释**：IP地址组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     *
     * @return $this
     */
@@ -745,7 +745,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipgroupBindings
-    *  单个IP地址组可以关联的监听器数量配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    *  **参数解释**：单个IP地址组可以关联的监听器数量配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     *
     * @return int
     */
@@ -757,7 +757,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets ipgroupBindings
     *
-    * @param int $ipgroupBindings 单个IP地址组可以关联的监听器数量配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * @param int $ipgroupBindings **参数解释**：单个IP地址组可以关联的监听器数量配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     *
     * @return $this
     */
@@ -769,7 +769,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipgroupMaxLength
-    *  单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    *  **参数解释**：单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     *
     * @return int
     */
@@ -781,7 +781,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets ipgroupMaxLength
     *
-    * @param int $ipgroupMaxLength 单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * @param int $ipgroupMaxLength **参数解释**：单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     *
     * @return $this
     */
@@ -793,7 +793,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityPolicy
-    *  自定义安全策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    *  **参数解释**：自定义安全策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     *
     * @return int
     */
@@ -805,7 +805,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets securityPolicy
     *
-    * @param int $securityPolicy 自定义安全策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * @param int $securityPolicy **参数解释**：自定义安全策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     *
     * @return $this
     */
@@ -817,7 +817,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets listenersPerLoadbalancer
-    *  单个LB实例下的监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
+    *  **参数解释**：单个LB实例下的监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
     *
     * @return int
     */
@@ -829,7 +829,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets listenersPerLoadbalancer
     *
-    * @param int $listenersPerLoadbalancer 单个LB实例下的监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
+    * @param int $listenersPerLoadbalancer **参数解释**：单个LB实例下的监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
     *
     * @return $this
     */
@@ -841,7 +841,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipgroupsPerListener
-    *  单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *  **参数解释**：单个监听器下的IP地址组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return int
     */
@@ -853,7 +853,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets ipgroupsPerListener
     *
-    * @param int $ipgroupsPerListener 单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * @param int $ipgroupsPerListener **参数解释**：单个监听器下的IP地址组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return $this
     */
@@ -865,7 +865,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets poolsPerL7policy
-    *  单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *  **参数解释**：单个转发策略下的后端服务器组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return int
     */
@@ -877,7 +877,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets poolsPerL7policy
     *
-    * @param int $poolsPerL7policy 单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * @param int $poolsPerL7policy **参数解释**：单个转发策略下的后端服务器组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return $this
     */
@@ -889,7 +889,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets l7policiesPerListener
-    *  单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *  **参数解释**：单个监听器下的转发策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return int
     */
@@ -901,7 +901,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets l7policiesPerListener
     *
-    * @param int $l7policiesPerListener 单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * @param int $l7policiesPerListener **参数解释**：单个监听器下的转发策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return $this
     */
@@ -913,7 +913,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeInstanceMembersPerPool
-    *  单个pool实例下的免费member配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *  **参数解释**：单个pool实例下的免费member配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return int
     */
@@ -925,7 +925,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets freeInstanceMembersPerPool
     *
-    * @param int $freeInstanceMembersPerPool 单个pool实例下的免费member配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * @param int $freeInstanceMembersPerPool **参数解释**：单个pool实例下的免费member配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return $this
     */
@@ -937,7 +937,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeInstanceListenersPerLoadbalancer
-    *  单个LB实例下的免费监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *  **参数解释**：单个LB实例下的免费监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return int
     */
@@ -949,7 +949,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets freeInstanceListenersPerLoadbalancer
     *
-    * @param int $freeInstanceListenersPerLoadbalancer 单个LB实例下的免费监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * @param int $freeInstanceListenersPerLoadbalancer **参数解释**：单个LB实例下的免费监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return $this
     */

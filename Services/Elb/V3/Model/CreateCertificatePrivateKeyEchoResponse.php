@@ -21,8 +21,8 @@ class CreateCertificatePrivateKeyEchoResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * requestId  请求ID。  注：自动生成 。
-    * privateKeyEcho  证书回显开关，项目粒度的,默认情况下,\"private_key_echo\"是true,证书的返回体中展示私钥。 当值为false时,证书的返回体中不展示私钥。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * privateKeyEcho  **参数解释**：ELB证书的私钥回显开关。  **取值范围**： - true：开启回显，证书的列表、详情、创建和更新接口响应字段将会显示私钥内容。 - false：关闭回显，证书的所有接口响应不显私钥内容，使用脱敏内容（*****）代替。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class CreateCertificatePrivateKeyEchoResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * requestId  请求ID。  注：自动生成 。
-    * privateKeyEcho  证书回显开关，项目粒度的,默认情况下,\"private_key_echo\"是true,证书的返回体中展示私钥。 当值为false时,证书的返回体中不展示私钥。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * privateKeyEcho  **参数解释**：ELB证书的私钥回显开关。  **取值范围**： - true：开启回显，证书的列表、详情、创建和更新接口响应字段将会显示私钥内容。 - false：关闭回显，证书的所有接口响应不显私钥内容，使用脱敏内容（*****）代替。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class CreateCertificatePrivateKeyEchoResponse implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * requestId  请求ID。  注：自动生成 。
-    * privateKeyEcho  证书回显开关，项目粒度的,默认情况下,\"private_key_echo\"是true,证书的返回体中展示私钥。 当值为false时,证书的返回体中不展示私钥。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * privateKeyEcho  **参数解释**：ELB证书的私钥回显开关。  **取值范围**： - true：开启回显，证书的列表、详情、创建和更新接口响应字段将会显示私钥内容。 - false：关闭回显，证书的所有接口响应不显私钥内容，使用脱敏内容（*****）代替。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class CreateCertificatePrivateKeyEchoResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * requestId  请求ID。  注：自动生成 。
-    * privateKeyEcho  证书回显开关，项目粒度的,默认情况下,\"private_key_echo\"是true,证书的返回体中展示私钥。 当值为false时,证书的返回体中不展示私钥。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * privateKeyEcho  **参数解释**：ELB证书的私钥回显开关。  **取值范围**： - true：开启回显，证书的列表、详情、创建和更新接口响应字段将会显示私钥内容。 - false：关闭回显，证书的所有接口响应不显私钥内容，使用脱敏内容（*****）代替。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class CreateCertificatePrivateKeyEchoResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * requestId  请求ID。  注：自动生成 。
-    * privateKeyEcho  证书回显开关，项目粒度的,默认情况下,\"private_key_echo\"是true,证书的返回体中展示私钥。 当值为false时,证书的返回体中不展示私钥。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * privateKeyEcho  **参数解释**：ELB证书的私钥回显开关。  **取值范围**： - true：开启回显，证书的列表、详情、创建和更新接口响应字段将会显示私钥内容。 - false：关闭回显，证书的所有接口响应不显私钥内容，使用脱敏内容（*****）代替。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class CreateCertificatePrivateKeyEchoResponse implements ModelInterface, ArrayAc
 
     /**
     * Gets requestId
-    *  请求ID。  注：自动生成 。
+    *  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class CreateCertificatePrivateKeyEchoResponse implements ModelInterface, ArrayAc
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求ID。  注：自动生成 。
+    * @param string|null $requestId **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class CreateCertificatePrivateKeyEchoResponse implements ModelInterface, ArrayAc
 
     /**
     * Gets privateKeyEcho
-    *  证书回显开关，项目粒度的,默认情况下,\"private_key_echo\"是true,证书的返回体中展示私钥。 当值为false时,证书的返回体中不展示私钥。
+    *  **参数解释**：ELB证书的私钥回显开关。  **取值范围**： - true：开启回显，证书的列表、详情、创建和更新接口响应字段将会显示私钥内容。 - false：关闭回显，证书的所有接口响应不显私钥内容，使用脱敏内容（*****）代替。
     *
     * @return bool|null
     */
@@ -222,7 +222,7 @@ class CreateCertificatePrivateKeyEchoResponse implements ModelInterface, ArrayAc
     /**
     * Sets privateKeyEcho
     *
-    * @param bool|null $privateKeyEcho 证书回显开关，项目粒度的,默认情况下,\"private_key_echo\"是true,证书的返回体中展示私钥。 当值为false时,证书的返回体中不展示私钥。
+    * @param bool|null $privateKeyEcho **参数解释**：ELB证书的私钥回显开关。  **取值范围**： - true：开启回显，证书的列表、详情、创建和更新接口响应字段将会显示私钥内容。 - false：关闭回显，证书的所有接口响应不显私钥内容，使用脱敏内容（*****）代替。
     *
     * @return $this
     */

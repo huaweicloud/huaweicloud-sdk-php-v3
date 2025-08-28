@@ -20,8 +20,8 @@ class UpdateRedirectPoolsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * poolId  参数解释：所在后端服务器组ID。
-    * weight  参数解释：转发策略主机组的权重。请求将根据该权重进行负载分发到不同的主机组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值范围：0-100
+    * poolId  **参数解释**：所在后端服务器组ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * weight  **参数解释**：转发策略服务器组的权重。请求将根据该权重进行负载分发到不同的服务器组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  **约束限制**：不涉及  **取值范围**：0-100  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UpdateRedirectPoolsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * poolId  参数解释：所在后端服务器组ID。
-    * weight  参数解释：转发策略主机组的权重。请求将根据该权重进行负载分发到不同的主机组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值范围：0-100
+    * poolId  **参数解释**：所在后端服务器组ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * weight  **参数解释**：转发策略服务器组的权重。请求将根据该权重进行负载分发到不同的服务器组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  **约束限制**：不涉及  **取值范围**：0-100  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UpdateRedirectPoolsConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * poolId  参数解释：所在后端服务器组ID。
-    * weight  参数解释：转发策略主机组的权重。请求将根据该权重进行负载分发到不同的主机组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值范围：0-100
+    * poolId  **参数解释**：所在后端服务器组ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * weight  **参数解释**：转发策略服务器组的权重。请求将根据该权重进行负载分发到不同的服务器组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  **约束限制**：不涉及  **取值范围**：0-100  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UpdateRedirectPoolsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * poolId  参数解释：所在后端服务器组ID。
-    * weight  参数解释：转发策略主机组的权重。请求将根据该权重进行负载分发到不同的主机组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值范围：0-100
+    * poolId  **参数解释**：所在后端服务器组ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * weight  **参数解释**：转发策略服务器组的权重。请求将根据该权重进行负载分发到不同的服务器组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  **约束限制**：不涉及  **取值范围**：0-100  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UpdateRedirectPoolsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * poolId  参数解释：所在后端服务器组ID。
-    * weight  参数解释：转发策略主机组的权重。请求将根据该权重进行负载分发到不同的主机组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值范围：0-100
+    * poolId  **参数解释**：所在后端服务器组ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * weight  **参数解释**：转发策略服务器组的权重。请求将根据该权重进行负载分发到不同的服务器组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  **约束限制**：不涉及  **取值范围**：0-100  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class UpdateRedirectPoolsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets poolId
-    *  参数解释：所在后端服务器组ID。
+    *  **参数解释**：所在后端服务器组ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class UpdateRedirectPoolsConfig implements ModelInterface, ArrayAccess
     /**
     * Sets poolId
     *
-    * @param string $poolId 参数解释：所在后端服务器组ID。
+    * @param string $poolId **参数解释**：所在后端服务器组ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class UpdateRedirectPoolsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets weight
-    *  参数解释：转发策略主机组的权重。请求将根据该权重进行负载分发到不同的主机组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值范围：0-100
+    *  **参数解释**：转发策略服务器组的权重。请求将根据该权重进行负载分发到不同的服务器组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  **约束限制**：不涉及  **取值范围**：0-100  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -224,7 +224,7 @@ class UpdateRedirectPoolsConfig implements ModelInterface, ArrayAccess
     /**
     * Sets weight
     *
-    * @param string|null $weight 参数解释：转发策略主机组的权重。请求将根据该权重进行负载分发到不同的主机组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值范围：0-100
+    * @param string|null $weight **参数解释**：转发策略服务器组的权重。请求将根据该权重进行负载分发到不同的服务器组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  **约束限制**：不涉及  **取值范围**：0-100  **默认取值**：不涉及
     *
     * @return $this
     */

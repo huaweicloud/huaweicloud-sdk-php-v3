@@ -20,8 +20,8 @@ class Extension implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * epId  ep id
-    * epServiceId  ep service id
+    * epId  **参数解释**：EP ID.  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * epServiceId  **参数解释**：EP Service ID.  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Extension implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * epId  ep id
-    * epServiceId  ep service id
+    * epId  **参数解释**：EP ID.  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * epServiceId  **参数解释**：EP Service ID.  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Extension implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * epId  ep id
-    * epServiceId  ep service id
+    * epId  **参数解释**：EP ID.  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * epServiceId  **参数解释**：EP Service ID.  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Extension implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * epId  ep id
-    * epServiceId  ep service id
+    * epId  **参数解释**：EP ID.  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * epServiceId  **参数解释**：EP Service ID.  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Extension implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * epId  ep id
-    * epServiceId  ep service id
+    * epId  **参数解释**：EP ID.  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * epServiceId  **参数解释**：EP Service ID.  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class Extension implements ModelInterface, ArrayAccess
 
     /**
     * Gets epId
-    *  ep id
+    *  **参数解释**：EP ID.  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class Extension implements ModelInterface, ArrayAccess
     /**
     * Sets epId
     *
-    * @param string|null $epId ep id
+    * @param string|null $epId **参数解释**：EP ID.  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class Extension implements ModelInterface, ArrayAccess
 
     /**
     * Gets epServiceId
-    *  ep service id
+    *  **参数解释**：EP Service ID.  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class Extension implements ModelInterface, ArrayAccess
     /**
     * Sets epServiceId
     *
-    * @param string|null $epServiceId ep service id
+    * @param string|null $epServiceId **参数解释**：EP Service ID.  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

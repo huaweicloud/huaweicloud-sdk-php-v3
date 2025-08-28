@@ -26,6 +26,7 @@ class SetRDSBackupCnfReq implements ModelInterface, ArrayAccess
     * keepday  自定义设置快照保留的天数，范围是1～90。系统在半点时刻会自动删除超过保留天数的快照。  > 当enable为true时该字段为必选字段
     * enable  是否开启自动创建快照策略。 - true：表示开启自动创建快照策略。 - false：表示关闭自动创建快照策略。
     * deleteAuto  表示关闭自动创建快照策略时，是否需要清除所有自动创建的快照。 默认为“false”，表示不会删除之前已自动创建的快照。 设置为true，表示在关闭自动创建快照策略的同时，删除所有已创建的快照。
+    * frequency  自动创建快照的执行频次。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class SetRDSBackupCnfReq implements ModelInterface, ArrayAccess
             'period' => 'string',
             'keepday' => 'int',
             'enable' => 'string',
-            'deleteAuto' => 'string'
+            'deleteAuto' => 'string',
+            'frequency' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class SetRDSBackupCnfReq implements ModelInterface, ArrayAccess
     * keepday  自定义设置快照保留的天数，范围是1～90。系统在半点时刻会自动删除超过保留天数的快照。  > 当enable为true时该字段为必选字段
     * enable  是否开启自动创建快照策略。 - true：表示开启自动创建快照策略。 - false：表示关闭自动创建快照策略。
     * deleteAuto  表示关闭自动创建快照策略时，是否需要清除所有自动创建的快照。 默认为“false”，表示不会删除之前已自动创建的快照。 设置为true，表示在关闭自动创建快照策略的同时，删除所有已创建的快照。
+    * frequency  自动创建快照的执行频次。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class SetRDSBackupCnfReq implements ModelInterface, ArrayAccess
         'period' => null,
         'keepday' => null,
         'enable' => null,
-        'deleteAuto' => null
+        'deleteAuto' => null,
+        'frequency' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class SetRDSBackupCnfReq implements ModelInterface, ArrayAccess
     * keepday  自定义设置快照保留的天数，范围是1～90。系统在半点时刻会自动删除超过保留天数的快照。  > 当enable为true时该字段为必选字段
     * enable  是否开启自动创建快照策略。 - true：表示开启自动创建快照策略。 - false：表示关闭自动创建快照策略。
     * deleteAuto  表示关闭自动创建快照策略时，是否需要清除所有自动创建的快照。 默认为“false”，表示不会删除之前已自动创建的快照。 设置为true，表示在关闭自动创建快照策略的同时，删除所有已创建的快照。
+    * frequency  自动创建快照的执行频次。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class SetRDSBackupCnfReq implements ModelInterface, ArrayAccess
             'period' => 'period',
             'keepday' => 'keepday',
             'enable' => 'enable',
-            'deleteAuto' => 'delete_auto'
+            'deleteAuto' => 'delete_auto',
+            'frequency' => 'frequency'
     ];
 
     /**
@@ -107,6 +113,7 @@ class SetRDSBackupCnfReq implements ModelInterface, ArrayAccess
     * keepday  自定义设置快照保留的天数，范围是1～90。系统在半点时刻会自动删除超过保留天数的快照。  > 当enable为true时该字段为必选字段
     * enable  是否开启自动创建快照策略。 - true：表示开启自动创建快照策略。 - false：表示关闭自动创建快照策略。
     * deleteAuto  表示关闭自动创建快照策略时，是否需要清除所有自动创建的快照。 默认为“false”，表示不会删除之前已自动创建的快照。 设置为true，表示在关闭自动创建快照策略的同时，删除所有已创建的快照。
+    * frequency  自动创建快照的执行频次。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class SetRDSBackupCnfReq implements ModelInterface, ArrayAccess
             'period' => 'setPeriod',
             'keepday' => 'setKeepday',
             'enable' => 'setEnable',
-            'deleteAuto' => 'setDeleteAuto'
+            'deleteAuto' => 'setDeleteAuto',
+            'frequency' => 'setFrequency'
     ];
 
     /**
@@ -127,6 +135,7 @@ class SetRDSBackupCnfReq implements ModelInterface, ArrayAccess
     * keepday  自定义设置快照保留的天数，范围是1～90。系统在半点时刻会自动删除超过保留天数的快照。  > 当enable为true时该字段为必选字段
     * enable  是否开启自动创建快照策略。 - true：表示开启自动创建快照策略。 - false：表示关闭自动创建快照策略。
     * deleteAuto  表示关闭自动创建快照策略时，是否需要清除所有自动创建的快照。 默认为“false”，表示不会删除之前已自动创建的快照。 设置为true，表示在关闭自动创建快照策略的同时，删除所有已创建的快照。
+    * frequency  自动创建快照的执行频次。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class SetRDSBackupCnfReq implements ModelInterface, ArrayAccess
             'period' => 'getPeriod',
             'keepday' => 'getKeepday',
             'enable' => 'getEnable',
-            'deleteAuto' => 'getDeleteAuto'
+            'deleteAuto' => 'getDeleteAuto',
+            'frequency' => 'getFrequency'
     ];
 
     /**
@@ -203,6 +213,7 @@ class SetRDSBackupCnfReq implements ModelInterface, ArrayAccess
         $this->container['keepday'] = isset($data['keepday']) ? $data['keepday'] : null;
         $this->container['enable'] = isset($data['enable']) ? $data['enable'] : null;
         $this->container['deleteAuto'] = isset($data['deleteAuto']) ? $data['deleteAuto'] : null;
+        $this->container['frequency'] = isset($data['frequency']) ? $data['frequency'] : null;
     }
 
     /**
@@ -371,6 +382,30 @@ class SetRDSBackupCnfReq implements ModelInterface, ArrayAccess
     public function setDeleteAuto($deleteAuto)
     {
         $this->container['deleteAuto'] = $deleteAuto;
+        return $this;
+    }
+
+    /**
+    * Gets frequency
+    *  自动创建快照的执行频次。
+    *
+    * @return string|null
+    */
+    public function getFrequency()
+    {
+        return $this->container['frequency'];
+    }
+
+    /**
+    * Sets frequency
+    *
+    * @param string|null $frequency 自动创建快照的执行频次。
+    *
+    * @return $this
+    */
+    public function setFrequency($frequency)
+    {
+        $this->container['frequency'] = $frequency;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class TimingRangeConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * timeRange  时间范围
-    * description  描述
+    * timeRange  **参数解释**: 自动关闭防护的时间段范围 **取值范围**: 字符长度0-512位
+    * description  **参数解释**: 自动关闭防护的时间段描述 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class TimingRangeConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * timeRange  时间范围
-    * description  描述
+    * timeRange  **参数解释**: 自动关闭防护的时间段范围 **取值范围**: 字符长度0-512位
+    * description  **参数解释**: 自动关闭防护的时间段描述 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class TimingRangeConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * timeRange  时间范围
-    * description  描述
+    * timeRange  **参数解释**: 自动关闭防护的时间段范围 **取值范围**: 字符长度0-512位
+    * description  **参数解释**: 自动关闭防护的时间段描述 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class TimingRangeConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * timeRange  时间范围
-    * description  描述
+    * timeRange  **参数解释**: 自动关闭防护的时间段范围 **取值范围**: 字符长度0-512位
+    * description  **参数解释**: 自动关闭防护的时间段描述 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class TimingRangeConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * timeRange  时间范围
-    * description  描述
+    * timeRange  **参数解释**: 自动关闭防护的时间段范围 **取值范围**: 字符长度0-512位
+    * description  **参数解释**: 自动关闭防护的时间段描述 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class TimingRangeConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeRange
-    *  时间范围
+    *  **参数解释**: 自动关闭防护的时间段范围 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class TimingRangeConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets timeRange
     *
-    * @param string|null $timeRange 时间范围
+    * @param string|null $timeRange **参数解释**: 自动关闭防护的时间段范围 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class TimingRangeConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释**: 自动关闭防护的时间段描述 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class TimingRangeConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释**: 自动关闭防护的时间段描述 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */

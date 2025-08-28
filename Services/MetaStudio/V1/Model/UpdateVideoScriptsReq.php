@@ -24,10 +24,9 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     * scriptDescription  **参数解释**： 剧本描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 不涉及。 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL：竖屏。
     * modelAssetId  **参数解释**： 数字人模型资产ID。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
-    * modelAssetType  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人  **默认取值**： 不涉及
+    * modelAssetType  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人  **默认取值**： 不涉及
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * sceneAssetId  **参数解释**： 场景资产ID。 **约束限制**： 分身数字人视频制作不需要填写该参数。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
@@ -45,7 +44,6 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
             'modelAssetType' => 'string',
             'voiceConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceConfig',
             'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VideoConfig',
-            'sceneAssetId' => 'string',
             'privData' => 'string',
             'backgroundMusicConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundMusicConfig',
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
@@ -60,10 +58,9 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     * scriptDescription  **参数解释**： 剧本描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 不涉及。 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL：竖屏。
     * modelAssetId  **参数解释**： 数字人模型资产ID。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
-    * modelAssetType  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人  **默认取值**： 不涉及
+    * modelAssetType  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人  **默认取值**： 不涉及
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * sceneAssetId  **参数解释**： 场景资产ID。 **约束限制**： 分身数字人视频制作不需要填写该参数。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
@@ -81,7 +78,6 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
         'modelAssetType' => null,
         'voiceConfig' => null,
         'videoConfig' => null,
-        'sceneAssetId' => null,
         'privData' => null,
         'backgroundMusicConfig' => null,
         'reviewConfig' => null,
@@ -117,10 +113,9 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     * scriptDescription  **参数解释**： 剧本描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 不涉及。 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL：竖屏。
     * modelAssetId  **参数解释**： 数字人模型资产ID。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
-    * modelAssetType  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人  **默认取值**： 不涉及
+    * modelAssetType  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人  **默认取值**： 不涉及
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * sceneAssetId  **参数解释**： 场景资产ID。 **约束限制**： 分身数字人视频制作不需要填写该参数。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
@@ -138,7 +133,6 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
             'modelAssetType' => 'model_asset_type',
             'voiceConfig' => 'voice_config',
             'videoConfig' => 'video_config',
-            'sceneAssetId' => 'scene_asset_id',
             'privData' => 'priv_data',
             'backgroundMusicConfig' => 'background_music_config',
             'reviewConfig' => 'review_config',
@@ -153,10 +147,9 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     * scriptDescription  **参数解释**： 剧本描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 不涉及。 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL：竖屏。
     * modelAssetId  **参数解释**： 数字人模型资产ID。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
-    * modelAssetType  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人  **默认取值**： 不涉及
+    * modelAssetType  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人  **默认取值**： 不涉及
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * sceneAssetId  **参数解释**： 场景资产ID。 **约束限制**： 分身数字人视频制作不需要填写该参数。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
@@ -174,7 +167,6 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
             'modelAssetType' => 'setModelAssetType',
             'voiceConfig' => 'setVoiceConfig',
             'videoConfig' => 'setVideoConfig',
-            'sceneAssetId' => 'setSceneAssetId',
             'privData' => 'setPrivData',
             'backgroundMusicConfig' => 'setBackgroundMusicConfig',
             'reviewConfig' => 'setReviewConfig',
@@ -189,10 +181,9 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     * scriptDescription  **参数解释**： 剧本描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 不涉及。 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL：竖屏。
     * modelAssetId  **参数解释**： 数字人模型资产ID。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
-    * modelAssetType  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人  **默认取值**： 不涉及
+    * modelAssetType  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人  **默认取值**： 不涉及
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * sceneAssetId  **参数解释**： 场景资产ID。 **约束限制**： 分身数字人视频制作不需要填写该参数。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
@@ -210,7 +201,6 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
             'modelAssetType' => 'getModelAssetType',
             'voiceConfig' => 'getVoiceConfig',
             'videoConfig' => 'getVideoConfig',
-            'sceneAssetId' => 'getSceneAssetId',
             'privData' => 'getPrivData',
             'backgroundMusicConfig' => 'getBackgroundMusicConfig',
             'reviewConfig' => 'getReviewConfig',
@@ -262,7 +252,6 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     const VIEW_MODE_LANDSCAPE = 'LANDSCAPE';
     const VIEW_MODE_VERTICAL = 'VERTICAL';
     const MODEL_ASSET_TYPE_HUMAN_MODEL_2_D = 'HUMAN_MODEL_2D';
-    const MODEL_ASSET_TYPE_HUMAN_MODEL_3_D = 'HUMAN_MODEL_3D';
     
 
     /**
@@ -287,7 +276,6 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     {
         return [
             self::MODEL_ASSET_TYPE_HUMAN_MODEL_2_D,
-            self::MODEL_ASSET_TYPE_HUMAN_MODEL_3_D,
         ];
     }
 
@@ -314,7 +302,6 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
         $this->container['modelAssetType'] = isset($data['modelAssetType']) ? $data['modelAssetType'] : null;
         $this->container['voiceConfig'] = isset($data['voiceConfig']) ? $data['voiceConfig'] : null;
         $this->container['videoConfig'] = isset($data['videoConfig']) ? $data['videoConfig'] : null;
-        $this->container['sceneAssetId'] = isset($data['sceneAssetId']) ? $data['sceneAssetId'] : null;
         $this->container['privData'] = isset($data['privData']) ? $data['privData'] : null;
         $this->container['backgroundMusicConfig'] = isset($data['backgroundMusicConfig']) ? $data['backgroundMusicConfig'] : null;
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
@@ -365,12 +352,6 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['sceneAssetId']) && (mb_strlen($this->container['sceneAssetId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'sceneAssetId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['sceneAssetId']) && (mb_strlen($this->container['sceneAssetId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'sceneAssetId', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['privData']) && (mb_strlen($this->container['privData']) > 8192)) {
                 $invalidProperties[] = "invalid value for 'privData', the character length must be smaller than or equal to 8192.";
             }
@@ -489,7 +470,7 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelAssetType
-    *  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人  **默认取值**： 不涉及
+    *  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人  **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -501,7 +482,7 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     /**
     * Sets modelAssetType
     *
-    * @param string|null $modelAssetType **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人  **默认取值**： 不涉及
+    * @param string|null $modelAssetType **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人  **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -556,30 +537,6 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     public function setVideoConfig($videoConfig)
     {
         $this->container['videoConfig'] = $videoConfig;
-        return $this;
-    }
-
-    /**
-    * Gets sceneAssetId
-    *  **参数解释**： 场景资产ID。 **约束限制**： 分身数字人视频制作不需要填写该参数。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
-    *
-    * @return string|null
-    */
-    public function getSceneAssetId()
-    {
-        return $this->container['sceneAssetId'];
-    }
-
-    /**
-    * Sets sceneAssetId
-    *
-    * @param string|null $sceneAssetId **参数解释**： 场景资产ID。 **约束限制**： 分身数字人视频制作不需要填写该参数。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
-    *
-    * @return $this
-    */
-    public function setSceneAssetId($sceneAssetId)
-    {
-        $this->container['sceneAssetId'] = $sceneAssetId;
         return $this;
     }
 

@@ -20,9 +20,9 @@ class CreateLogtankOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * loadbalancerId  负载均衡器id
-    * logGroupId  日志组别id，其他（非ELB）服务提供
-    * logTopicId  日志订阅主题id，其他（非ELB）服务提供
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logGroupId  **参数解释**：日志组别id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logTopicId  **参数解释**：日志订阅主题id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class CreateLogtankOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * loadbalancerId  负载均衡器id
-    * logGroupId  日志组别id，其他（非ELB）服务提供
-    * logTopicId  日志订阅主题id，其他（非ELB）服务提供
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logGroupId  **参数解释**：日志组别id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logTopicId  **参数解释**：日志订阅主题id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class CreateLogtankOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * loadbalancerId  负载均衡器id
-    * logGroupId  日志组别id，其他（非ELB）服务提供
-    * logTopicId  日志订阅主题id，其他（非ELB）服务提供
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logGroupId  **参数解释**：日志组别id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logTopicId  **参数解释**：日志订阅主题id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class CreateLogtankOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * loadbalancerId  负载均衡器id
-    * logGroupId  日志组别id，其他（非ELB）服务提供
-    * logTopicId  日志订阅主题id，其他（非ELB）服务提供
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logGroupId  **参数解释**：日志组别id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logTopicId  **参数解释**：日志订阅主题id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class CreateLogtankOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * loadbalancerId  负载均衡器id
-    * logGroupId  日志组别id，其他（非ELB）服务提供
-    * logTopicId  日志订阅主题id，其他（非ELB）服务提供
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logGroupId  **参数解释**：日志组别id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logTopicId  **参数解释**：日志订阅主题id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -223,7 +223,7 @@ class CreateLogtankOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets loadbalancerId
-    *  负载均衡器id
+    *  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string
     */
@@ -235,7 +235,7 @@ class CreateLogtankOption implements ModelInterface, ArrayAccess
     /**
     * Sets loadbalancerId
     *
-    * @param string $loadbalancerId 负载均衡器id
+    * @param string $loadbalancerId **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class CreateLogtankOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets logGroupId
-    *  日志组别id，其他（非ELB）服务提供
+    *  **参数解释**：日志组别id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string
     */
@@ -259,7 +259,7 @@ class CreateLogtankOption implements ModelInterface, ArrayAccess
     /**
     * Sets logGroupId
     *
-    * @param string $logGroupId 日志组别id，其他（非ELB）服务提供
+    * @param string $logGroupId **参数解释**：日志组别id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -271,7 +271,7 @@ class CreateLogtankOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets logTopicId
-    *  日志订阅主题id，其他（非ELB）服务提供
+    *  **参数解释**：日志订阅主题id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string
     */
@@ -283,7 +283,7 @@ class CreateLogtankOption implements ModelInterface, ArrayAccess
     /**
     * Sets logTopicId
     *
-    * @param string $logTopicId 日志订阅主题id，其他（非ELB）服务提供
+    * @param string $logTopicId **参数解释**：日志订阅主题id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

@@ -23,13 +23,23 @@ class UpdateLogSettingReq implements ModelInterface, ArrayAccess
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * logBasePath  日志在OBS桶中的备份路径。
     * logBucket  用于存储日志的OBS桶的桶名。
+    * indexPrefix  设置保存日志的索引前缀。
+    * keepDays  修改日志保存的天数。
+    * targetClusterId  设置保存日志的目标集群ID。
+    * autoEnable  集群日志是否开启自动备份。
+    * period  集群日志备份开始时间。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'agency' => 'string',
             'logBasePath' => 'string',
-            'logBucket' => 'string'
+            'logBucket' => 'string',
+            'indexPrefix' => 'string',
+            'keepDays' => 'int',
+            'targetClusterId' => 'string',
+            'autoEnable' => 'bool',
+            'period' => 'string'
     ];
 
     /**
@@ -37,13 +47,23 @@ class UpdateLogSettingReq implements ModelInterface, ArrayAccess
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * logBasePath  日志在OBS桶中的备份路径。
     * logBucket  用于存储日志的OBS桶的桶名。
+    * indexPrefix  设置保存日志的索引前缀。
+    * keepDays  修改日志保存的天数。
+    * targetClusterId  设置保存日志的目标集群ID。
+    * autoEnable  集群日志是否开启自动备份。
+    * period  集群日志备份开始时间。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'agency' => null,
         'logBasePath' => null,
-        'logBucket' => null
+        'logBucket' => null,
+        'indexPrefix' => null,
+        'keepDays' => 'int32',
+        'targetClusterId' => null,
+        'autoEnable' => null,
+        'period' => null
     ];
 
     /**
@@ -72,13 +92,23 @@ class UpdateLogSettingReq implements ModelInterface, ArrayAccess
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * logBasePath  日志在OBS桶中的备份路径。
     * logBucket  用于存储日志的OBS桶的桶名。
+    * indexPrefix  设置保存日志的索引前缀。
+    * keepDays  修改日志保存的天数。
+    * targetClusterId  设置保存日志的目标集群ID。
+    * autoEnable  集群日志是否开启自动备份。
+    * period  集群日志备份开始时间。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'agency' => 'agency',
             'logBasePath' => 'log_base_path',
-            'logBucket' => 'log_bucket'
+            'logBucket' => 'log_bucket',
+            'indexPrefix' => 'index_prefix',
+            'keepDays' => 'keep_days',
+            'targetClusterId' => 'target_cluster_id',
+            'autoEnable' => 'auto_enable',
+            'period' => 'period'
     ];
 
     /**
@@ -86,13 +116,23 @@ class UpdateLogSettingReq implements ModelInterface, ArrayAccess
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * logBasePath  日志在OBS桶中的备份路径。
     * logBucket  用于存储日志的OBS桶的桶名。
+    * indexPrefix  设置保存日志的索引前缀。
+    * keepDays  修改日志保存的天数。
+    * targetClusterId  设置保存日志的目标集群ID。
+    * autoEnable  集群日志是否开启自动备份。
+    * period  集群日志备份开始时间。
     *
     * @var string[]
     */
     protected static $setters = [
             'agency' => 'setAgency',
             'logBasePath' => 'setLogBasePath',
-            'logBucket' => 'setLogBucket'
+            'logBucket' => 'setLogBucket',
+            'indexPrefix' => 'setIndexPrefix',
+            'keepDays' => 'setKeepDays',
+            'targetClusterId' => 'setTargetClusterId',
+            'autoEnable' => 'setAutoEnable',
+            'period' => 'setPeriod'
     ];
 
     /**
@@ -100,13 +140,23 @@ class UpdateLogSettingReq implements ModelInterface, ArrayAccess
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * logBasePath  日志在OBS桶中的备份路径。
     * logBucket  用于存储日志的OBS桶的桶名。
+    * indexPrefix  设置保存日志的索引前缀。
+    * keepDays  修改日志保存的天数。
+    * targetClusterId  设置保存日志的目标集群ID。
+    * autoEnable  集群日志是否开启自动备份。
+    * period  集群日志备份开始时间。
     *
     * @var string[]
     */
     protected static $getters = [
             'agency' => 'getAgency',
             'logBasePath' => 'getLogBasePath',
-            'logBucket' => 'getLogBucket'
+            'logBucket' => 'getLogBucket',
+            'indexPrefix' => 'getIndexPrefix',
+            'keepDays' => 'getKeepDays',
+            'targetClusterId' => 'getTargetClusterId',
+            'autoEnable' => 'getAutoEnable',
+            'period' => 'getPeriod'
     ];
 
     /**
@@ -170,6 +220,11 @@ class UpdateLogSettingReq implements ModelInterface, ArrayAccess
         $this->container['agency'] = isset($data['agency']) ? $data['agency'] : null;
         $this->container['logBasePath'] = isset($data['logBasePath']) ? $data['logBasePath'] : null;
         $this->container['logBucket'] = isset($data['logBucket']) ? $data['logBucket'] : null;
+        $this->container['indexPrefix'] = isset($data['indexPrefix']) ? $data['indexPrefix'] : null;
+        $this->container['keepDays'] = isset($data['keepDays']) ? $data['keepDays'] : null;
+        $this->container['targetClusterId'] = isset($data['targetClusterId']) ? $data['targetClusterId'] : null;
+        $this->container['autoEnable'] = isset($data['autoEnable']) ? $data['autoEnable'] : null;
+        $this->container['period'] = isset($data['period']) ? $data['period'] : null;
     }
 
     /**
@@ -272,6 +327,126 @@ class UpdateLogSettingReq implements ModelInterface, ArrayAccess
     public function setLogBucket($logBucket)
     {
         $this->container['logBucket'] = $logBucket;
+        return $this;
+    }
+
+    /**
+    * Gets indexPrefix
+    *  设置保存日志的索引前缀。
+    *
+    * @return string|null
+    */
+    public function getIndexPrefix()
+    {
+        return $this->container['indexPrefix'];
+    }
+
+    /**
+    * Sets indexPrefix
+    *
+    * @param string|null $indexPrefix 设置保存日志的索引前缀。
+    *
+    * @return $this
+    */
+    public function setIndexPrefix($indexPrefix)
+    {
+        $this->container['indexPrefix'] = $indexPrefix;
+        return $this;
+    }
+
+    /**
+    * Gets keepDays
+    *  修改日志保存的天数。
+    *
+    * @return int|null
+    */
+    public function getKeepDays()
+    {
+        return $this->container['keepDays'];
+    }
+
+    /**
+    * Sets keepDays
+    *
+    * @param int|null $keepDays 修改日志保存的天数。
+    *
+    * @return $this
+    */
+    public function setKeepDays($keepDays)
+    {
+        $this->container['keepDays'] = $keepDays;
+        return $this;
+    }
+
+    /**
+    * Gets targetClusterId
+    *  设置保存日志的目标集群ID。
+    *
+    * @return string|null
+    */
+    public function getTargetClusterId()
+    {
+        return $this->container['targetClusterId'];
+    }
+
+    /**
+    * Sets targetClusterId
+    *
+    * @param string|null $targetClusterId 设置保存日志的目标集群ID。
+    *
+    * @return $this
+    */
+    public function setTargetClusterId($targetClusterId)
+    {
+        $this->container['targetClusterId'] = $targetClusterId;
+        return $this;
+    }
+
+    /**
+    * Gets autoEnable
+    *  集群日志是否开启自动备份。
+    *
+    * @return bool|null
+    */
+    public function getAutoEnable()
+    {
+        return $this->container['autoEnable'];
+    }
+
+    /**
+    * Sets autoEnable
+    *
+    * @param bool|null $autoEnable 集群日志是否开启自动备份。
+    *
+    * @return $this
+    */
+    public function setAutoEnable($autoEnable)
+    {
+        $this->container['autoEnable'] = $autoEnable;
+        return $this;
+    }
+
+    /**
+    * Gets period
+    *  集群日志备份开始时间。
+    *
+    * @return string|null
+    */
+    public function getPeriod()
+    {
+        return $this->container['period'];
+    }
+
+    /**
+    * Sets period
+    *
+    * @param string|null $period 集群日志备份开始时间。
+    *
+    * @return $this
+    */
+    public function setPeriod($period)
+    {
+        $this->container['period'] = $period;
         return $this;
     }
 

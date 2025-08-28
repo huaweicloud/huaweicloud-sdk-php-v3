@@ -20,12 +20,12 @@ class ShowLoadBalancerPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * loadbalancerId  负载均衡器ID。
-    * portId  port id。  支持多值查询，查询条件格式：*port_id=xxx&port_id=xxx*。
-    * ipAddress  ipv4 地址。  支持多值查询，查询条件格式：*ip_address=xxx&ip_address=xxx*。
-    * ipv6Address  ipv6 地址。  支持多值查询，查询条件格式：*ipv6_address=xxx&ipv6_address=xxx*。
-    * type  port类型。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
-    * virsubnetId  虚拟网络id。  支持多值查询，查询条件格式：*virsubnet_id=xxx&virsubnet_id=xxx*。
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * portId  **参数解释**：负载均衡器占用的端口ID。  支持多值查询，查询条件格式：*port_id=xxx&port_id=xxx*。
+    * ipAddress  **参数解释**：负载均衡器占用的私有IPv4地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*ip_address=xxx&ip_address=xxx*。
+    * ipv6Address  **参数解释**：负载均衡器占用的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*ipv6_address=xxx&ipv6_address=xxx*。
+    * type  **参数解释**：子网端口类型。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
+    * virsubnetId  **参数解释**：子网端口所在下联面子网网络ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*virsubnet_id=xxx&virsubnet_id=xxx*。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class ShowLoadBalancerPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * loadbalancerId  负载均衡器ID。
-    * portId  port id。  支持多值查询，查询条件格式：*port_id=xxx&port_id=xxx*。
-    * ipAddress  ipv4 地址。  支持多值查询，查询条件格式：*ip_address=xxx&ip_address=xxx*。
-    * ipv6Address  ipv6 地址。  支持多值查询，查询条件格式：*ipv6_address=xxx&ipv6_address=xxx*。
-    * type  port类型。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
-    * virsubnetId  虚拟网络id。  支持多值查询，查询条件格式：*virsubnet_id=xxx&virsubnet_id=xxx*。
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * portId  **参数解释**：负载均衡器占用的端口ID。  支持多值查询，查询条件格式：*port_id=xxx&port_id=xxx*。
+    * ipAddress  **参数解释**：负载均衡器占用的私有IPv4地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*ip_address=xxx&ip_address=xxx*。
+    * ipv6Address  **参数解释**：负载均衡器占用的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*ipv6_address=xxx&ipv6_address=xxx*。
+    * type  **参数解释**：子网端口类型。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
+    * virsubnetId  **参数解释**：子网端口所在下联面子网网络ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*virsubnet_id=xxx&virsubnet_id=xxx*。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class ShowLoadBalancerPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * loadbalancerId  负载均衡器ID。
-    * portId  port id。  支持多值查询，查询条件格式：*port_id=xxx&port_id=xxx*。
-    * ipAddress  ipv4 地址。  支持多值查询，查询条件格式：*ip_address=xxx&ip_address=xxx*。
-    * ipv6Address  ipv6 地址。  支持多值查询，查询条件格式：*ipv6_address=xxx&ipv6_address=xxx*。
-    * type  port类型。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
-    * virsubnetId  虚拟网络id。  支持多值查询，查询条件格式：*virsubnet_id=xxx&virsubnet_id=xxx*。
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * portId  **参数解释**：负载均衡器占用的端口ID。  支持多值查询，查询条件格式：*port_id=xxx&port_id=xxx*。
+    * ipAddress  **参数解释**：负载均衡器占用的私有IPv4地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*ip_address=xxx&ip_address=xxx*。
+    * ipv6Address  **参数解释**：负载均衡器占用的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*ipv6_address=xxx&ipv6_address=xxx*。
+    * type  **参数解释**：子网端口类型。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
+    * virsubnetId  **参数解释**：子网端口所在下联面子网网络ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*virsubnet_id=xxx&virsubnet_id=xxx*。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class ShowLoadBalancerPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * loadbalancerId  负载均衡器ID。
-    * portId  port id。  支持多值查询，查询条件格式：*port_id=xxx&port_id=xxx*。
-    * ipAddress  ipv4 地址。  支持多值查询，查询条件格式：*ip_address=xxx&ip_address=xxx*。
-    * ipv6Address  ipv6 地址。  支持多值查询，查询条件格式：*ipv6_address=xxx&ipv6_address=xxx*。
-    * type  port类型。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
-    * virsubnetId  虚拟网络id。  支持多值查询，查询条件格式：*virsubnet_id=xxx&virsubnet_id=xxx*。
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * portId  **参数解释**：负载均衡器占用的端口ID。  支持多值查询，查询条件格式：*port_id=xxx&port_id=xxx*。
+    * ipAddress  **参数解释**：负载均衡器占用的私有IPv4地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*ip_address=xxx&ip_address=xxx*。
+    * ipv6Address  **参数解释**：负载均衡器占用的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*ipv6_address=xxx&ipv6_address=xxx*。
+    * type  **参数解释**：子网端口类型。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
+    * virsubnetId  **参数解释**：子网端口所在下联面子网网络ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*virsubnet_id=xxx&virsubnet_id=xxx*。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class ShowLoadBalancerPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * loadbalancerId  负载均衡器ID。
-    * portId  port id。  支持多值查询，查询条件格式：*port_id=xxx&port_id=xxx*。
-    * ipAddress  ipv4 地址。  支持多值查询，查询条件格式：*ip_address=xxx&ip_address=xxx*。
-    * ipv6Address  ipv6 地址。  支持多值查询，查询条件格式：*ipv6_address=xxx&ipv6_address=xxx*。
-    * type  port类型。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
-    * virsubnetId  虚拟网络id。  支持多值查询，查询条件格式：*virsubnet_id=xxx&virsubnet_id=xxx*。
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * portId  **参数解释**：负载均衡器占用的端口ID。  支持多值查询，查询条件格式：*port_id=xxx&port_id=xxx*。
+    * ipAddress  **参数解释**：负载均衡器占用的私有IPv4地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*ip_address=xxx&ip_address=xxx*。
+    * ipv6Address  **参数解释**：负载均衡器占用的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*ipv6_address=xxx&ipv6_address=xxx*。
+    * type  **参数解释**：子网端口类型。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
+    * virsubnetId  **参数解释**：子网端口所在下联面子网网络ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*virsubnet_id=xxx&virsubnet_id=xxx*。
     *
     * @var string[]
     */
@@ -232,7 +232,7 @@ class ShowLoadBalancerPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets loadbalancerId
-    *  负载均衡器ID。
+    *  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string
     */
@@ -244,7 +244,7 @@ class ShowLoadBalancerPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets loadbalancerId
     *
-    * @param string $loadbalancerId 负载均衡器ID。
+    * @param string $loadbalancerId **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class ShowLoadBalancerPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets portId
-    *  port id。  支持多值查询，查询条件格式：*port_id=xxx&port_id=xxx*。
+    *  **参数解释**：负载均衡器占用的端口ID。  支持多值查询，查询条件格式：*port_id=xxx&port_id=xxx*。
     *
     * @return string[]|null
     */
@@ -268,7 +268,7 @@ class ShowLoadBalancerPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets portId
     *
-    * @param string[]|null $portId port id。  支持多值查询，查询条件格式：*port_id=xxx&port_id=xxx*。
+    * @param string[]|null $portId **参数解释**：负载均衡器占用的端口ID。  支持多值查询，查询条件格式：*port_id=xxx&port_id=xxx*。
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ShowLoadBalancerPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipAddress
-    *  ipv4 地址。  支持多值查询，查询条件格式：*ip_address=xxx&ip_address=xxx*。
+    *  **参数解释**：负载均衡器占用的私有IPv4地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*ip_address=xxx&ip_address=xxx*。
     *
     * @return string[]|null
     */
@@ -292,7 +292,7 @@ class ShowLoadBalancerPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ipAddress
     *
-    * @param string[]|null $ipAddress ipv4 地址。  支持多值查询，查询条件格式：*ip_address=xxx&ip_address=xxx*。
+    * @param string[]|null $ipAddress **参数解释**：负载均衡器占用的私有IPv4地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*ip_address=xxx&ip_address=xxx*。
     *
     * @return $this
     */
@@ -304,7 +304,7 @@ class ShowLoadBalancerPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Address
-    *  ipv6 地址。  支持多值查询，查询条件格式：*ipv6_address=xxx&ipv6_address=xxx*。
+    *  **参数解释**：负载均衡器占用的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*ipv6_address=xxx&ipv6_address=xxx*。
     *
     * @return string[]|null
     */
@@ -316,7 +316,7 @@ class ShowLoadBalancerPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6Address
     *
-    * @param string[]|null $ipv6Address ipv6 地址。  支持多值查询，查询条件格式：*ipv6_address=xxx&ipv6_address=xxx*。
+    * @param string[]|null $ipv6Address **参数解释**：负载均衡器占用的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*ipv6_address=xxx&ipv6_address=xxx*。
     *
     * @return $this
     */
@@ -328,7 +328,7 @@ class ShowLoadBalancerPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  port类型。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
+    *  **参数解释**：子网端口类型。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
     *
     * @return string[]|null
     */
@@ -340,7 +340,7 @@ class ShowLoadBalancerPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string[]|null $type port类型。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
+    * @param string[]|null $type **参数解释**：子网端口类型。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class ShowLoadBalancerPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets virsubnetId
-    *  虚拟网络id。  支持多值查询，查询条件格式：*virsubnet_id=xxx&virsubnet_id=xxx*。
+    *  **参数解释**：子网端口所在下联面子网网络ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*virsubnet_id=xxx&virsubnet_id=xxx*。
     *
     * @return string[]|null
     */
@@ -364,7 +364,7 @@ class ShowLoadBalancerPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets virsubnetId
     *
-    * @param string[]|null $virsubnetId 虚拟网络id。  支持多值查询，查询条件格式：*virsubnet_id=xxx&virsubnet_id=xxx*。
+    * @param string[]|null $virsubnetId **参数解释**：子网端口所在下联面子网网络ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*virsubnet_id=xxx&virsubnet_id=xxx*。
     *
     * @return $this
     */

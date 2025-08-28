@@ -20,9 +20,9 @@ class FixtedResponseConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * statusCode  参数解释：返回码。支持200~299,400~499,500~599。
-    * contentType  参数解释：返回body的格式。  取值范围： - text/plain - text/css - text/html - application/javascript - application/json
-    * messageBody  参数解释：返回消息内容。
+    * statusCode  **参数解释**：返回码。  **取值范围**：200~299、400~499和500~599。
+    * contentType  **参数解释**：返回body的格式。  **取值范围**： - text/plain - text/css - text/html - application/javascript - application/json
+    * messageBody  **参数解释**：返回消息内容。  **取值范围**：不涉及
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     * trafficLimitConfig  trafficLimitConfig
@@ -40,9 +40,9 @@ class FixtedResponseConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * statusCode  参数解释：返回码。支持200~299,400~499,500~599。
-    * contentType  参数解释：返回body的格式。  取值范围： - text/plain - text/css - text/html - application/javascript - application/json
-    * messageBody  参数解释：返回消息内容。
+    * statusCode  **参数解释**：返回码。  **取值范围**：200~299、400~499和500~599。
+    * contentType  **参数解释**：返回body的格式。  **取值范围**： - text/plain - text/css - text/html - application/javascript - application/json
+    * messageBody  **参数解释**：返回消息内容。  **取值范围**：不涉及
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     * trafficLimitConfig  trafficLimitConfig
@@ -81,9 +81,9 @@ class FixtedResponseConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * statusCode  参数解释：返回码。支持200~299,400~499,500~599。
-    * contentType  参数解释：返回body的格式。  取值范围： - text/plain - text/css - text/html - application/javascript - application/json
-    * messageBody  参数解释：返回消息内容。
+    * statusCode  **参数解释**：返回码。  **取值范围**：200~299、400~499和500~599。
+    * contentType  **参数解释**：返回body的格式。  **取值范围**： - text/plain - text/css - text/html - application/javascript - application/json
+    * messageBody  **参数解释**：返回消息内容。  **取值范围**：不涉及
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     * trafficLimitConfig  trafficLimitConfig
@@ -101,9 +101,9 @@ class FixtedResponseConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * statusCode  参数解释：返回码。支持200~299,400~499,500~599。
-    * contentType  参数解释：返回body的格式。  取值范围： - text/plain - text/css - text/html - application/javascript - application/json
-    * messageBody  参数解释：返回消息内容。
+    * statusCode  **参数解释**：返回码。  **取值范围**：200~299、400~499和500~599。
+    * contentType  **参数解释**：返回body的格式。  **取值范围**： - text/plain - text/css - text/html - application/javascript - application/json
+    * messageBody  **参数解释**：返回消息内容。  **取值范围**：不涉及
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     * trafficLimitConfig  trafficLimitConfig
@@ -121,9 +121,9 @@ class FixtedResponseConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * statusCode  参数解释：返回码。支持200~299,400~499,500~599。
-    * contentType  参数解释：返回body的格式。  取值范围： - text/plain - text/css - text/html - application/javascript - application/json
-    * messageBody  参数解释：返回消息内容。
+    * statusCode  **参数解释**：返回码。  **取值范围**：200~299、400~499和500~599。
+    * contentType  **参数解释**：返回body的格式。  **取值范围**： - text/plain - text/css - text/html - application/javascript - application/json
+    * messageBody  **参数解释**：返回消息内容。  **取值范围**：不涉及
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     * trafficLimitConfig  trafficLimitConfig
@@ -279,7 +279,7 @@ class FixtedResponseConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets statusCode
-    *  参数解释：返回码。支持200~299,400~499,500~599。
+    *  **参数解释**：返回码。  **取值范围**：200~299、400~499和500~599。
     *
     * @return string
     */
@@ -291,7 +291,7 @@ class FixtedResponseConfig implements ModelInterface, ArrayAccess
     /**
     * Sets statusCode
     *
-    * @param string $statusCode 参数解释：返回码。支持200~299,400~499,500~599。
+    * @param string $statusCode **参数解释**：返回码。  **取值范围**：200~299、400~499和500~599。
     *
     * @return $this
     */
@@ -303,7 +303,7 @@ class FixtedResponseConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets contentType
-    *  参数解释：返回body的格式。  取值范围： - text/plain - text/css - text/html - application/javascript - application/json
+    *  **参数解释**：返回body的格式。  **取值范围**： - text/plain - text/css - text/html - application/javascript - application/json
     *
     * @return string
     */
@@ -315,7 +315,7 @@ class FixtedResponseConfig implements ModelInterface, ArrayAccess
     /**
     * Sets contentType
     *
-    * @param string $contentType 参数解释：返回body的格式。  取值范围： - text/plain - text/css - text/html - application/javascript - application/json
+    * @param string $contentType **参数解释**：返回body的格式。  **取值范围**： - text/plain - text/css - text/html - application/javascript - application/json
     *
     * @return $this
     */
@@ -327,7 +327,7 @@ class FixtedResponseConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageBody
-    *  参数解释：返回消息内容。
+    *  **参数解释**：返回消息内容。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -339,7 +339,7 @@ class FixtedResponseConfig implements ModelInterface, ArrayAccess
     /**
     * Sets messageBody
     *
-    * @param string $messageBody 参数解释：返回消息内容。
+    * @param string $messageBody **参数解释**：返回消息内容。  **取值范围**：不涉及
     *
     * @return $this
     */

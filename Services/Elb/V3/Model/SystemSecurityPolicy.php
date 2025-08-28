@@ -20,10 +20,10 @@ class SystemSecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  系统安全策略的名称。
-    * protocols  系统安全策略的TLS协议列表。
-    * ciphers  系统安全策略的加密套件列表。
-    * projectId  项目id。
+    * name  **参数解释**：系统安全策略的名称。  **取值范围**：不涉及
+    * protocols  **参数解释**：系统安全策略的TLS协议列表。  **取值范围**：不涉及
+    * ciphers  **参数解释**：系统安全策略的加密套件列表。  **取值范围**：不涉及
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class SystemSecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  系统安全策略的名称。
-    * protocols  系统安全策略的TLS协议列表。
-    * ciphers  系统安全策略的加密套件列表。
-    * projectId  项目id。
+    * name  **参数解释**：系统安全策略的名称。  **取值范围**：不涉及
+    * protocols  **参数解释**：系统安全策略的TLS协议列表。  **取值范围**：不涉及
+    * ciphers  **参数解释**：系统安全策略的加密套件列表。  **取值范围**：不涉及
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class SystemSecurityPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  系统安全策略的名称。
-    * protocols  系统安全策略的TLS协议列表。
-    * ciphers  系统安全策略的加密套件列表。
-    * projectId  项目id。
+    * name  **参数解释**：系统安全策略的名称。  **取值范围**：不涉及
+    * protocols  **参数解释**：系统安全策略的TLS协议列表。  **取值范围**：不涉及
+    * ciphers  **参数解释**：系统安全策略的加密套件列表。  **取值范围**：不涉及
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class SystemSecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  系统安全策略的名称。
-    * protocols  系统安全策略的TLS协议列表。
-    * ciphers  系统安全策略的加密套件列表。
-    * projectId  项目id。
+    * name  **参数解释**：系统安全策略的名称。  **取值范围**：不涉及
+    * protocols  **参数解释**：系统安全策略的TLS协议列表。  **取值范围**：不涉及
+    * ciphers  **参数解释**：系统安全策略的加密套件列表。  **取值范围**：不涉及
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class SystemSecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  系统安全策略的名称。
-    * protocols  系统安全策略的TLS协议列表。
-    * ciphers  系统安全策略的加密套件列表。
-    * projectId  项目id。
+    * name  **参数解释**：系统安全策略的名称。  **取值范围**：不涉及
+    * protocols  **参数解释**：系统安全策略的TLS协议列表。  **取值范围**：不涉及
+    * ciphers  **参数解释**：系统安全策略的加密套件列表。  **取值范围**：不涉及
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class SystemSecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  系统安全策略的名称。
+    *  **参数解释**：系统安全策略的名称。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class SystemSecurityPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 系统安全策略的名称。
+    * @param string $name **参数解释**：系统安全策略的名称。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class SystemSecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocols
-    *  系统安全策略的TLS协议列表。
+    *  **参数解释**：系统安全策略的TLS协议列表。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -255,7 +255,7 @@ class SystemSecurityPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets protocols
     *
-    * @param string $protocols 系统安全策略的TLS协议列表。
+    * @param string $protocols **参数解释**：系统安全策略的TLS协议列表。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class SystemSecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets ciphers
-    *  系统安全策略的加密套件列表。
+    *  **参数解释**：系统安全策略的加密套件列表。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -279,7 +279,7 @@ class SystemSecurityPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets ciphers
     *
-    * @param string $ciphers 系统安全策略的加密套件列表。
+    * @param string $ciphers **参数解释**：系统安全策略的加密套件列表。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class SystemSecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目id。
+    *  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     *
     * @return string
     */
@@ -303,7 +303,7 @@ class SystemSecurityPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目id。
+    * @param string $projectId **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     *
     * @return $this
     */

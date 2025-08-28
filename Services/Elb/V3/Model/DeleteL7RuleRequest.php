@@ -20,8 +20,8 @@ class DeleteL7RuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * l7policyId  策略ID。
-    * l7ruleId  规则ID。
+    * l7policyId  **参数解释**：策略ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * l7ruleId  **参数解释**：规则ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DeleteL7RuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * l7policyId  策略ID。
-    * l7ruleId  规则ID。
+    * l7policyId  **参数解释**：策略ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * l7ruleId  **参数解释**：规则ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DeleteL7RuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * l7policyId  策略ID。
-    * l7ruleId  规则ID。
+    * l7policyId  **参数解释**：策略ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * l7ruleId  **参数解释**：规则ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DeleteL7RuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * l7policyId  策略ID。
-    * l7ruleId  规则ID。
+    * l7policyId  **参数解释**：策略ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * l7ruleId  **参数解释**：规则ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DeleteL7RuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * l7policyId  策略ID。
-    * l7ruleId  规则ID。
+    * l7policyId  **参数解释**：策略ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * l7ruleId  **参数解释**：规则ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class DeleteL7RuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets l7policyId
-    *  策略ID。
+    *  **参数解释**：策略ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class DeleteL7RuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets l7policyId
     *
-    * @param string $l7policyId 策略ID。
+    * @param string $l7policyId **参数解释**：策略ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class DeleteL7RuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets l7ruleId
-    *  规则ID。
+    *  **参数解释**：规则ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class DeleteL7RuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets l7ruleId
     *
-    * @param string $l7ruleId 规则ID。
+    * @param string $l7ruleId **参数解释**：规则ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

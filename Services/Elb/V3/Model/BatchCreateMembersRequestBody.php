@@ -20,7 +20,7 @@ class BatchCreateMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * members  后端服务器对象。
+    * members  **参数解释**：批量添加member请求参数。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchCreateMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * members  后端服务器对象。
+    * members  **参数解释**：批量添加member请求参数。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchCreateMembersRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * members  后端服务器对象。
+    * members  **参数解释**：批量添加member请求参数。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchCreateMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * members  后端服务器对象。
+    * members  **参数解释**：批量添加member请求参数。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchCreateMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * members  后端服务器对象。
+    * members  **参数解释**：批量添加member请求参数。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class BatchCreateMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets members
-    *  后端服务器对象。
+    *  **参数解释**：批量添加member请求参数。  **约束限制**：不涉及
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\BatchCreateMembersOption[]
     */
@@ -189,7 +189,7 @@ class BatchCreateMembersRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets members
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\BatchCreateMembersOption[] $members 后端服务器对象。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\BatchCreateMembersOption[] $members **参数解释**：批量添加member请求参数。  **约束限制**：不涉及
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class ListLoadbalancerFeatureRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * loadbalancerId  ELB实例ID。
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListLoadbalancerFeatureRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * loadbalancerId  ELB实例ID。
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListLoadbalancerFeatureRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * loadbalancerId  ELB实例ID。
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListLoadbalancerFeatureRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * loadbalancerId  ELB实例ID。
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListLoadbalancerFeatureRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * loadbalancerId  ELB实例ID。
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ListLoadbalancerFeatureRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets loadbalancerId
-    *  ELB实例ID。
+    *  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class ListLoadbalancerFeatureRequest implements ModelInterface, ArrayAccess
     /**
     * Sets loadbalancerId
     *
-    * @param string $loadbalancerId ELB实例ID。
+    * @param string $loadbalancerId **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

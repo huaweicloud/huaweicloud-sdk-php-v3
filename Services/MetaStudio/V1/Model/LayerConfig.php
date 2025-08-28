@@ -23,6 +23,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     * layerType  **参数解释**： 图层类型。 **约束限制**： 不涉及。 **取值范围**： * HUMAN:  人物图层 * IMAGE： 素材图片图层 * VIDEO： 素材视频图层 * TEXT: 素材文字图层  **默认取值**： 不涉及
     * assetId  **参数解释**： 图层所需资产的资产id，外部资产信息无需填写。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     * groupId  **参数解释**： 多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * sequenceNo  **参数解释**： 播放到对应的段落，显示对应的图层。该字段向前兼容，可以不填，字段可选。 只支持直播业务。 **约束限制**： 段落sequence_no。 **默认取值**： 不涉及。
     * position  position
     * size  size
     * rotation  rotation
@@ -36,6 +37,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
             'layerType' => 'string',
             'assetId' => 'string',
             'groupId' => 'string',
+            'sequenceNo' => 'int',
             'position' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerPositionConfig',
             'size' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerSizeConfig',
             'rotation' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerRotationConfig',
@@ -49,6 +51,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     * layerType  **参数解释**： 图层类型。 **约束限制**： 不涉及。 **取值范围**： * HUMAN:  人物图层 * IMAGE： 素材图片图层 * VIDEO： 素材视频图层 * TEXT: 素材文字图层  **默认取值**： 不涉及
     * assetId  **参数解释**： 图层所需资产的资产id，外部资产信息无需填写。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     * groupId  **参数解释**： 多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * sequenceNo  **参数解释**： 播放到对应的段落，显示对应的图层。该字段向前兼容，可以不填，字段可选。 只支持直播业务。 **约束限制**： 段落sequence_no。 **默认取值**： 不涉及。
     * position  position
     * size  size
     * rotation  rotation
@@ -62,6 +65,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
         'layerType' => null,
         'assetId' => null,
         'groupId' => null,
+        'sequenceNo' => 'int32',
         'position' => null,
         'size' => null,
         'rotation' => null,
@@ -96,6 +100,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     * layerType  **参数解释**： 图层类型。 **约束限制**： 不涉及。 **取值范围**： * HUMAN:  人物图层 * IMAGE： 素材图片图层 * VIDEO： 素材视频图层 * TEXT: 素材文字图层  **默认取值**： 不涉及
     * assetId  **参数解释**： 图层所需资产的资产id，外部资产信息无需填写。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     * groupId  **参数解释**： 多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * sequenceNo  **参数解释**： 播放到对应的段落，显示对应的图层。该字段向前兼容，可以不填，字段可选。 只支持直播业务。 **约束限制**： 段落sequence_no。 **默认取值**： 不涉及。
     * position  position
     * size  size
     * rotation  rotation
@@ -109,6 +114,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
             'layerType' => 'layer_type',
             'assetId' => 'asset_id',
             'groupId' => 'group_id',
+            'sequenceNo' => 'sequence_no',
             'position' => 'position',
             'size' => 'size',
             'rotation' => 'rotation',
@@ -122,6 +128,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     * layerType  **参数解释**： 图层类型。 **约束限制**： 不涉及。 **取值范围**： * HUMAN:  人物图层 * IMAGE： 素材图片图层 * VIDEO： 素材视频图层 * TEXT: 素材文字图层  **默认取值**： 不涉及
     * assetId  **参数解释**： 图层所需资产的资产id，外部资产信息无需填写。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     * groupId  **参数解释**： 多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * sequenceNo  **参数解释**： 播放到对应的段落，显示对应的图层。该字段向前兼容，可以不填，字段可选。 只支持直播业务。 **约束限制**： 段落sequence_no。 **默认取值**： 不涉及。
     * position  position
     * size  size
     * rotation  rotation
@@ -135,6 +142,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
             'layerType' => 'setLayerType',
             'assetId' => 'setAssetId',
             'groupId' => 'setGroupId',
+            'sequenceNo' => 'setSequenceNo',
             'position' => 'setPosition',
             'size' => 'setSize',
             'rotation' => 'setRotation',
@@ -148,6 +156,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     * layerType  **参数解释**： 图层类型。 **约束限制**： 不涉及。 **取值范围**： * HUMAN:  人物图层 * IMAGE： 素材图片图层 * VIDEO： 素材视频图层 * TEXT: 素材文字图层  **默认取值**： 不涉及
     * assetId  **参数解释**： 图层所需资产的资产id，外部资产信息无需填写。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     * groupId  **参数解释**： 多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * sequenceNo  **参数解释**： 播放到对应的段落，显示对应的图层。该字段向前兼容，可以不填，字段可选。 只支持直播业务。 **约束限制**： 段落sequence_no。 **默认取值**： 不涉及。
     * position  position
     * size  size
     * rotation  rotation
@@ -161,6 +170,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
             'layerType' => 'getLayerType',
             'assetId' => 'getAssetId',
             'groupId' => 'getGroupId',
+            'sequenceNo' => 'getSequenceNo',
             'position' => 'getPosition',
             'size' => 'getSize',
             'rotation' => 'getRotation',
@@ -249,6 +259,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
         $this->container['layerType'] = isset($data['layerType']) ? $data['layerType'] : null;
         $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
+        $this->container['sequenceNo'] = isset($data['sequenceNo']) ? $data['sequenceNo'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['rotation'] = isset($data['rotation']) ? $data['rotation'] : null;
@@ -287,6 +298,12 @@ class LayerConfig implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['sequenceNo']) && ($this->container['sequenceNo'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'sequenceNo', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['sequenceNo']) && ($this->container['sequenceNo'] < 0)) {
+                $invalidProperties[] = "invalid value for 'sequenceNo', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -371,6 +388,30 @@ class LayerConfig implements ModelInterface, ArrayAccess
     public function setGroupId($groupId)
     {
         $this->container['groupId'] = $groupId;
+        return $this;
+    }
+
+    /**
+    * Gets sequenceNo
+    *  **参数解释**： 播放到对应的段落，显示对应的图层。该字段向前兼容，可以不填，字段可选。 只支持直播业务。 **约束限制**： 段落sequence_no。 **默认取值**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getSequenceNo()
+    {
+        return $this->container['sequenceNo'];
+    }
+
+    /**
+    * Sets sequenceNo
+    *
+    * @param int|null $sequenceNo **参数解释**： 播放到对应的段落，显示对应的图层。该字段向前兼容，可以不填，字段可选。 只支持直播业务。 **约束限制**： 段落sequence_no。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setSequenceNo($sequenceNo)
+    {
+        $this->container['sequenceNo'] = $sequenceNo;
         return $this;
     }
 

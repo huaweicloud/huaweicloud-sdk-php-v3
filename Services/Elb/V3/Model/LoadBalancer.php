@@ -20,56 +20,56 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  参数解释：负载均衡器ID。
-    * description  参数解释：负载均衡器描述信息。
-    * provisioningStatus  参数解释：负载均衡器的配置状态。  取值范围： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
-    * adminStateUp  参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
-    * provider  参数解释：负载均衡器的生产者名称。固定为vlb。
-    * pools  参数解释：负载均衡器直接关联的后端服务器组的ID列表。
-    * listeners  参数解释：负载均衡器关联的监听器的ID列表。
-    * operatingStatus  参数解释：负载均衡器的操作状态。  取值范围： - ONLINE：在线。 - FROZEN：已冻结。
-    * name  参数解释：负载均衡器的名称。
-    * projectId  参数解释：负载均衡器所属的项目ID。
-    * vipSubnetCidrId  参数解释：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。
-    * vipAddress  参数解释：负载均衡器的IPv4虚拟IP地址。
-    * vipPortId  参数解释：负载均衡器的IPv4对应的port ID。 [创建弹性负载均衡时，会自动为负载均衡创建一个port并关联一个默认的安全组，这个安全组对所有流量不生效。 ](tag:dt,hcso_dt)
-    * tags  参数解释：负载均衡的标签列表。
-    * createdAt  参数解释：负载均衡器的创建时间。  取值范围： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
-    * updatedAt  参数解释：负载均衡器的更新时间。  取值范围; 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
-    * guaranteed  参数解释：是否独享型LB。  取值范围： - false：共享型。 - true：独享型。
-    * vpcId  参数解释：负载均衡器所在VPC ID。
-    * eips  参数解释：负载均衡器绑定的EIP。  约束限制：只支持绑定一个EIP。  注：该字段与publicips一致。
-    * ipv6VipAddress  参数解释：双栈类型负载均衡器的IPv6地址。  [不支持IPv6，请勿使用。](tag:dt)
-    * ipv6VipVirsubnetId  参数解释：双栈类型负载均衡器所在子网的IPv6网络ID，也称为该负载均衡器实例的前端子网。  [不支持IPv6，请勿使用。](tag:dt)
-    * ipv6VipPortId  参数解释：双栈类型负载均衡器的IPv6对应的port ID。  [不支持IPv6，请勿使用。](tag:dt)
-    * availabilityZoneList  参数解释：负载均衡器所在的可用区列表。
-    * enterpriseProjectId  参数解释：企业项目ID。创建时不传则返回\"0\"，表示资源属于default企业项目。  注意：\"0\"并不是真实存在的企业项目ID，在创建、更新和查询时不能作为请求参数传入。  [不支持该字段，请勿使用](tag:dt,hcso_dt)
-    * billingInfo  参数解释：资源账单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
-    * l4FlavorId  参数解释：网络型规格ID。  对于弹性扩缩容实例，表示上限规格。  约束限制： - 当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,fcs)
-    * l4ScaleFlavorId  参数解释：四层弹性Flavor ID。  不支持该字段，请勿使用。
-    * l7FlavorId  参数解释：应用型ID。 对于弹性扩缩容实例，表示上限规格ID。  约束限制： - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
-    * l7ScaleFlavorId  参数解释：七层弹性Flavor ID。  不支持该字段，请勿使用。
-    * gwFlavorId  网关型LB的Flavor ID。  [使用说明：当gw_flavor_id不传时，会使用默认gateway flavor （默认gateway flavor根据不同局点有所不同，具体以实际值为准）。 ](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)  不支持该字段，请勿使用。
-    * loadbalancerType  参数解释：负载均衡器类别。  取值范围： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  默认取值：null。  不支持该字段，请勿使用。
-    * publicips  参数解释：负载均衡器绑定的公网IP。只支持绑定一个公网IP。  注：该字段与eips一致。
-    * globalEips  参数解释：负载均衡器绑定的global eip。  约束限制：只支持绑定一个globaleip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
-    * elbVirsubnetIds  参数解释：下联面子网的网络ID列表。
-    * elbVirsubnetType  参数解释：下联面子网类型。  取值范围： - ipv4：ipv4 - dualstack：双栈
-    * ipTargetEnable  参数解释：是否启用跨VPC后端转发。 [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他云、云下数据中心的服务器。](tag:srg,fcs)  约束限制： - 开启后不能关闭。 - 使用共享VPC的实例使用此特性时，需确保共享资源所有者已开通VPC对等连接，否则通信异常。 [- 仅独享型负载均衡器支持该特性。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt) [- 网关型LB不支持该特性。](tag:hws_eu)  取值范围： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
-    * frozenScene  参数解释：负载均衡器的冻结场景。 [若负载均衡器有多个冻结场景，用逗号分隔。  取值范围： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。](tag:hws,hws_hk)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
-    * deletionProtectionEnable  参数解释：是否开启删除保护。  约束限制： - 仅当前局点启用删除保护特性后才会返回该字段。 - 退场时需要先关闭所有资源的删除保护开关。  取值范围： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * id  **参数解释**：负载均衡器ID。  **取值范围**：不涉及
+    * description  **参数解释**：负载均衡器描述信息。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：负载均衡器的配置状态。  **取值范围**： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
+    * adminStateUp  **参数解释**：负载均衡器的启用状态。  **取值范围**： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
+    * provider  **参数解释**：负载均衡器的生产者名称。固定为vlb。  **取值范围**：不涉及
+    * pools  **参数解释**：负载均衡器直接关联的后端服务器组的ID列表。
+    * listeners  **参数解释**：负载均衡器关联的监听器的ID列表。
+    * operatingStatus  **参数解释**：负载均衡器的操作状态。  **取值范围**： - ONLINE：在线。 - FROZEN：已冻结。
+    * name  **参数解释**：负载均衡器的名称。  **取值范围**：不涉及
+    * projectId  **参数解释**：负载均衡器所属的项目ID。  **取值范围**：不涉及
+    * vipSubnetCidrId  **参数解释**：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。  **取值范围**：不涉及
+    * vipAddress  **参数解释**：负载均衡器的IPv4私网IP地址。  **取值范围**：不涉及
+    * vipPortId  **参数解释**：负载均衡器的IPv4对应的port ID。 [创建弹性负载均衡时，会自动为负载均衡创建一个port并关联一个默认的安全组，这个安全组对所有流量不生效。 ](tag:dt,hcso_dt)  **取值范围**：不涉及
+    * tags  **参数解释**：负载均衡的标签列表。
+    * createdAt  **参数解释**：负载均衡器的创建时间。  **取值范围**： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
+    * updatedAt  **参数解释**：负载均衡器的更新时间。  **取值范围**： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
+    * guaranteed  **参数解释**：是否独享型LB。  **取值范围**： - false：共享型。 - true：独享型。
+    * vpcId  **参数解释**：负载均衡器所在VPC ID。  **取值范围**：不涉及
+    * eips  **参数解释**：负载均衡器绑定的EIP。  > 该字段与publicips一致。
+    * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
+    * ipv6VipVirsubnetId  **参数解释**：双栈类型负载均衡器所在子网的IPv6网络ID，也称为该负载均衡器实例的前端子网。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
+    * ipv6VipPortId  **参数解释**：双栈类型负载均衡器的IPv6对应的port ID。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
+    * availabilityZoneList  **参数解释**：负载均衡器所在的可用区列表。  **取值范围**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * billingInfo  **参数解释**：资源账单信息。  **取值范围**： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * l4FlavorId  **参数解释**：负载均衡器4层规格ID。 若当前负载均衡器是弹性规格实例，则该字段表示4层上限规格。  **取值范围**：不涉及  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,fcs)
+    * l4ScaleFlavorId  **参数解释**：四层弹性规格ID。  **取值范围**：不涉及  > 该字段已经废弃，请勿使用。
+    * l7FlavorId  **参数解释**：负载均衡器7层规格ID。 若当前负载均衡器是弹性规格实例，则该字段表示7层上限规格。  **取值范围**：不涉及  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
+    * l7ScaleFlavorId  **参数解释**：七层弹性Flavor ID。  **取值范围**：不涉及  > 该字段已经废弃，请勿使用。
+    * gwFlavorId  **参数解释**：网关型负载均衡器的规格ID。  **取值范围**：不涉及  不支持该字段，请勿使用。
+    * loadbalancerType  **参数解释**：负载均衡器类别。  **取值范围**： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  不支持该字段，请勿使用。
+    * publicips  **参数解释**：负载均衡器绑定的公网IP。  > 该字段与eips一致。
+    * globalEips  **参数解释**：负载均衡器绑定的global eip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
+    * elbVirsubnetIds  **参数解释**：下联面子网的网络ID列表。  **取值范围**：不涉及
+    * elbVirsubnetType  **参数解释**：下联面子网类型。  **取值范围**： - ipv4：仅支持IPv4 - dualstack：双栈，同时支持IPv4和IPv6。
+    * ipTargetEnable  **参数解释**：是否启用IP类型后端转发。 [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、云下数据中心的服务器。](tag:srg,fcs)  **取值范围**： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * frozenScene  **参数解释**：负载均衡器的冻结场景。 若负载均衡器有多个冻结场景，用逗号分隔。  **取值范围**： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
+    * deletionProtectionEnable  **参数解释**：是否开启删除保护。仅当前局点启用删除保护特性后才会返回该字段。  **取值范围**： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
     * autoscaling  autoscaling
-    * publicBorderGroup  参数解释：LB所属AZ组。
-    * chargeMode  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
-    * serviceLbMode  参数解释：lb 模式，默认为lb，ep模式LB支持跨租户访问。  不支持该字段，请勿使用。
-    * instanceType  参数解释：标识实例归属哪个内部服务。  不支持该字段，请勿使用。
-    * instanceId  参数解释：标识实例绑定内部服务的实例id。  不支持该字段，请勿使用。
-    * proxyProtocolExtensions  参数解释：pp扩展。  不支持该字段，请勿使用。
-    * wafFailureAction  参数解释：WAF故障时的流量处理策略。  约束限制：只有绑定了waf的LB实例，该字段才会生效。  取值范围：discard:丢弃，forward: 转发到后端。  默认取值：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
-    * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护。 - consoleProtection: 控制台修改保护。  默认取值：nonProtection
-    * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
-    * logGroupId  参数解释：LB所绑定的logtank对应的group id
-    * logTopicId  参数解释：LB所绑定的logtank对应的topic id
+    * publicBorderGroup  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    * chargeMode  **参数解释**：负载均衡器实例的计费模式。  **取值范围**： - flavor：按规格计费。 - lcu：按使用量计费。 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    * serviceLbMode  **参数解释**：LB模式。  **取值范围**： - lb：默认模式，不支持跨租户访问。 - ep：ep模式，LB支持跨租户访问。  不支持该字段，请勿使用。
+    * instanceType  **参数解释**：标识实例归属哪个内部服务。  **取值范围**：不涉及  不支持该字段，请勿使用。
+    * instanceId  **参数解释**：标识实例绑定内部服务的实例ID。  **取值范围**：不涉及  不支持该字段，请勿使用。
+    * proxyProtocolExtensions  **参数解释**：pp扩展。  不支持该字段，请勿使用。
+    * wafFailureAction  **参数解释**：WAF故障时的流量处理策略。  **取值范围**：discard:丢弃，forward: 转发到后端。  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
+    * protectionStatus  **参数解释**：修改保护状态。  **取值范围**： - nonProtection：不保护。 - consoleProtection：控制台修改保护。
+    * protectionReason  **参数解释**：设置保护的原因。作为protection_status的转态设置的原因。  **取值范围**：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
+    * logGroupId  **参数解释**：LB所关联的云日志服务（LTS）的日志组ID。  **取值范围**：不涉及
+    * logTopicId  **参数解释**：LB所关联的云日志服务（LTS）的日志组下的日志流ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -128,56 +128,56 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  参数解释：负载均衡器ID。
-    * description  参数解释：负载均衡器描述信息。
-    * provisioningStatus  参数解释：负载均衡器的配置状态。  取值范围： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
-    * adminStateUp  参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
-    * provider  参数解释：负载均衡器的生产者名称。固定为vlb。
-    * pools  参数解释：负载均衡器直接关联的后端服务器组的ID列表。
-    * listeners  参数解释：负载均衡器关联的监听器的ID列表。
-    * operatingStatus  参数解释：负载均衡器的操作状态。  取值范围： - ONLINE：在线。 - FROZEN：已冻结。
-    * name  参数解释：负载均衡器的名称。
-    * projectId  参数解释：负载均衡器所属的项目ID。
-    * vipSubnetCidrId  参数解释：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。
-    * vipAddress  参数解释：负载均衡器的IPv4虚拟IP地址。
-    * vipPortId  参数解释：负载均衡器的IPv4对应的port ID。 [创建弹性负载均衡时，会自动为负载均衡创建一个port并关联一个默认的安全组，这个安全组对所有流量不生效。 ](tag:dt,hcso_dt)
-    * tags  参数解释：负载均衡的标签列表。
-    * createdAt  参数解释：负载均衡器的创建时间。  取值范围： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
-    * updatedAt  参数解释：负载均衡器的更新时间。  取值范围; 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
-    * guaranteed  参数解释：是否独享型LB。  取值范围： - false：共享型。 - true：独享型。
-    * vpcId  参数解释：负载均衡器所在VPC ID。
-    * eips  参数解释：负载均衡器绑定的EIP。  约束限制：只支持绑定一个EIP。  注：该字段与publicips一致。
-    * ipv6VipAddress  参数解释：双栈类型负载均衡器的IPv6地址。  [不支持IPv6，请勿使用。](tag:dt)
-    * ipv6VipVirsubnetId  参数解释：双栈类型负载均衡器所在子网的IPv6网络ID，也称为该负载均衡器实例的前端子网。  [不支持IPv6，请勿使用。](tag:dt)
-    * ipv6VipPortId  参数解释：双栈类型负载均衡器的IPv6对应的port ID。  [不支持IPv6，请勿使用。](tag:dt)
-    * availabilityZoneList  参数解释：负载均衡器所在的可用区列表。
-    * enterpriseProjectId  参数解释：企业项目ID。创建时不传则返回\"0\"，表示资源属于default企业项目。  注意：\"0\"并不是真实存在的企业项目ID，在创建、更新和查询时不能作为请求参数传入。  [不支持该字段，请勿使用](tag:dt,hcso_dt)
-    * billingInfo  参数解释：资源账单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
-    * l4FlavorId  参数解释：网络型规格ID。  对于弹性扩缩容实例，表示上限规格。  约束限制： - 当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,fcs)
-    * l4ScaleFlavorId  参数解释：四层弹性Flavor ID。  不支持该字段，请勿使用。
-    * l7FlavorId  参数解释：应用型ID。 对于弹性扩缩容实例，表示上限规格ID。  约束限制： - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
-    * l7ScaleFlavorId  参数解释：七层弹性Flavor ID。  不支持该字段，请勿使用。
-    * gwFlavorId  网关型LB的Flavor ID。  [使用说明：当gw_flavor_id不传时，会使用默认gateway flavor （默认gateway flavor根据不同局点有所不同，具体以实际值为准）。 ](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)  不支持该字段，请勿使用。
-    * loadbalancerType  参数解释：负载均衡器类别。  取值范围： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  默认取值：null。  不支持该字段，请勿使用。
-    * publicips  参数解释：负载均衡器绑定的公网IP。只支持绑定一个公网IP。  注：该字段与eips一致。
-    * globalEips  参数解释：负载均衡器绑定的global eip。  约束限制：只支持绑定一个globaleip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
-    * elbVirsubnetIds  参数解释：下联面子网的网络ID列表。
-    * elbVirsubnetType  参数解释：下联面子网类型。  取值范围： - ipv4：ipv4 - dualstack：双栈
-    * ipTargetEnable  参数解释：是否启用跨VPC后端转发。 [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他云、云下数据中心的服务器。](tag:srg,fcs)  约束限制： - 开启后不能关闭。 - 使用共享VPC的实例使用此特性时，需确保共享资源所有者已开通VPC对等连接，否则通信异常。 [- 仅独享型负载均衡器支持该特性。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt) [- 网关型LB不支持该特性。](tag:hws_eu)  取值范围： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
-    * frozenScene  参数解释：负载均衡器的冻结场景。 [若负载均衡器有多个冻结场景，用逗号分隔。  取值范围： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。](tag:hws,hws_hk)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
-    * deletionProtectionEnable  参数解释：是否开启删除保护。  约束限制： - 仅当前局点启用删除保护特性后才会返回该字段。 - 退场时需要先关闭所有资源的删除保护开关。  取值范围： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * id  **参数解释**：负载均衡器ID。  **取值范围**：不涉及
+    * description  **参数解释**：负载均衡器描述信息。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：负载均衡器的配置状态。  **取值范围**： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
+    * adminStateUp  **参数解释**：负载均衡器的启用状态。  **取值范围**： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
+    * provider  **参数解释**：负载均衡器的生产者名称。固定为vlb。  **取值范围**：不涉及
+    * pools  **参数解释**：负载均衡器直接关联的后端服务器组的ID列表。
+    * listeners  **参数解释**：负载均衡器关联的监听器的ID列表。
+    * operatingStatus  **参数解释**：负载均衡器的操作状态。  **取值范围**： - ONLINE：在线。 - FROZEN：已冻结。
+    * name  **参数解释**：负载均衡器的名称。  **取值范围**：不涉及
+    * projectId  **参数解释**：负载均衡器所属的项目ID。  **取值范围**：不涉及
+    * vipSubnetCidrId  **参数解释**：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。  **取值范围**：不涉及
+    * vipAddress  **参数解释**：负载均衡器的IPv4私网IP地址。  **取值范围**：不涉及
+    * vipPortId  **参数解释**：负载均衡器的IPv4对应的port ID。 [创建弹性负载均衡时，会自动为负载均衡创建一个port并关联一个默认的安全组，这个安全组对所有流量不生效。 ](tag:dt,hcso_dt)  **取值范围**：不涉及
+    * tags  **参数解释**：负载均衡的标签列表。
+    * createdAt  **参数解释**：负载均衡器的创建时间。  **取值范围**： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
+    * updatedAt  **参数解释**：负载均衡器的更新时间。  **取值范围**： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
+    * guaranteed  **参数解释**：是否独享型LB。  **取值范围**： - false：共享型。 - true：独享型。
+    * vpcId  **参数解释**：负载均衡器所在VPC ID。  **取值范围**：不涉及
+    * eips  **参数解释**：负载均衡器绑定的EIP。  > 该字段与publicips一致。
+    * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
+    * ipv6VipVirsubnetId  **参数解释**：双栈类型负载均衡器所在子网的IPv6网络ID，也称为该负载均衡器实例的前端子网。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
+    * ipv6VipPortId  **参数解释**：双栈类型负载均衡器的IPv6对应的port ID。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
+    * availabilityZoneList  **参数解释**：负载均衡器所在的可用区列表。  **取值范围**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * billingInfo  **参数解释**：资源账单信息。  **取值范围**： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * l4FlavorId  **参数解释**：负载均衡器4层规格ID。 若当前负载均衡器是弹性规格实例，则该字段表示4层上限规格。  **取值范围**：不涉及  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,fcs)
+    * l4ScaleFlavorId  **参数解释**：四层弹性规格ID。  **取值范围**：不涉及  > 该字段已经废弃，请勿使用。
+    * l7FlavorId  **参数解释**：负载均衡器7层规格ID。 若当前负载均衡器是弹性规格实例，则该字段表示7层上限规格。  **取值范围**：不涉及  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
+    * l7ScaleFlavorId  **参数解释**：七层弹性Flavor ID。  **取值范围**：不涉及  > 该字段已经废弃，请勿使用。
+    * gwFlavorId  **参数解释**：网关型负载均衡器的规格ID。  **取值范围**：不涉及  不支持该字段，请勿使用。
+    * loadbalancerType  **参数解释**：负载均衡器类别。  **取值范围**： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  不支持该字段，请勿使用。
+    * publicips  **参数解释**：负载均衡器绑定的公网IP。  > 该字段与eips一致。
+    * globalEips  **参数解释**：负载均衡器绑定的global eip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
+    * elbVirsubnetIds  **参数解释**：下联面子网的网络ID列表。  **取值范围**：不涉及
+    * elbVirsubnetType  **参数解释**：下联面子网类型。  **取值范围**： - ipv4：仅支持IPv4 - dualstack：双栈，同时支持IPv4和IPv6。
+    * ipTargetEnable  **参数解释**：是否启用IP类型后端转发。 [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、云下数据中心的服务器。](tag:srg,fcs)  **取值范围**： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * frozenScene  **参数解释**：负载均衡器的冻结场景。 若负载均衡器有多个冻结场景，用逗号分隔。  **取值范围**： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
+    * deletionProtectionEnable  **参数解释**：是否开启删除保护。仅当前局点启用删除保护特性后才会返回该字段。  **取值范围**： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
     * autoscaling  autoscaling
-    * publicBorderGroup  参数解释：LB所属AZ组。
-    * chargeMode  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
-    * serviceLbMode  参数解释：lb 模式，默认为lb，ep模式LB支持跨租户访问。  不支持该字段，请勿使用。
-    * instanceType  参数解释：标识实例归属哪个内部服务。  不支持该字段，请勿使用。
-    * instanceId  参数解释：标识实例绑定内部服务的实例id。  不支持该字段，请勿使用。
-    * proxyProtocolExtensions  参数解释：pp扩展。  不支持该字段，请勿使用。
-    * wafFailureAction  参数解释：WAF故障时的流量处理策略。  约束限制：只有绑定了waf的LB实例，该字段才会生效。  取值范围：discard:丢弃，forward: 转发到后端。  默认取值：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
-    * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护。 - consoleProtection: 控制台修改保护。  默认取值：nonProtection
-    * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
-    * logGroupId  参数解释：LB所绑定的logtank对应的group id
-    * logTopicId  参数解释：LB所绑定的logtank对应的topic id
+    * publicBorderGroup  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    * chargeMode  **参数解释**：负载均衡器实例的计费模式。  **取值范围**： - flavor：按规格计费。 - lcu：按使用量计费。 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    * serviceLbMode  **参数解释**：LB模式。  **取值范围**： - lb：默认模式，不支持跨租户访问。 - ep：ep模式，LB支持跨租户访问。  不支持该字段，请勿使用。
+    * instanceType  **参数解释**：标识实例归属哪个内部服务。  **取值范围**：不涉及  不支持该字段，请勿使用。
+    * instanceId  **参数解释**：标识实例绑定内部服务的实例ID。  **取值范围**：不涉及  不支持该字段，请勿使用。
+    * proxyProtocolExtensions  **参数解释**：pp扩展。  不支持该字段，请勿使用。
+    * wafFailureAction  **参数解释**：WAF故障时的流量处理策略。  **取值范围**：discard:丢弃，forward: 转发到后端。  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
+    * protectionStatus  **参数解释**：修改保护状态。  **取值范围**： - nonProtection：不保护。 - consoleProtection：控制台修改保护。
+    * protectionReason  **参数解释**：设置保护的原因。作为protection_status的转态设置的原因。  **取值范围**：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
+    * logGroupId  **参数解释**：LB所关联的云日志服务（LTS）的日志组ID。  **取值范围**：不涉及
+    * logTopicId  **参数解释**：LB所关联的云日志服务（LTS）的日志组下的日志流ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -257,56 +257,56 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  参数解释：负载均衡器ID。
-    * description  参数解释：负载均衡器描述信息。
-    * provisioningStatus  参数解释：负载均衡器的配置状态。  取值范围： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
-    * adminStateUp  参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
-    * provider  参数解释：负载均衡器的生产者名称。固定为vlb。
-    * pools  参数解释：负载均衡器直接关联的后端服务器组的ID列表。
-    * listeners  参数解释：负载均衡器关联的监听器的ID列表。
-    * operatingStatus  参数解释：负载均衡器的操作状态。  取值范围： - ONLINE：在线。 - FROZEN：已冻结。
-    * name  参数解释：负载均衡器的名称。
-    * projectId  参数解释：负载均衡器所属的项目ID。
-    * vipSubnetCidrId  参数解释：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。
-    * vipAddress  参数解释：负载均衡器的IPv4虚拟IP地址。
-    * vipPortId  参数解释：负载均衡器的IPv4对应的port ID。 [创建弹性负载均衡时，会自动为负载均衡创建一个port并关联一个默认的安全组，这个安全组对所有流量不生效。 ](tag:dt,hcso_dt)
-    * tags  参数解释：负载均衡的标签列表。
-    * createdAt  参数解释：负载均衡器的创建时间。  取值范围： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
-    * updatedAt  参数解释：负载均衡器的更新时间。  取值范围; 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
-    * guaranteed  参数解释：是否独享型LB。  取值范围： - false：共享型。 - true：独享型。
-    * vpcId  参数解释：负载均衡器所在VPC ID。
-    * eips  参数解释：负载均衡器绑定的EIP。  约束限制：只支持绑定一个EIP。  注：该字段与publicips一致。
-    * ipv6VipAddress  参数解释：双栈类型负载均衡器的IPv6地址。  [不支持IPv6，请勿使用。](tag:dt)
-    * ipv6VipVirsubnetId  参数解释：双栈类型负载均衡器所在子网的IPv6网络ID，也称为该负载均衡器实例的前端子网。  [不支持IPv6，请勿使用。](tag:dt)
-    * ipv6VipPortId  参数解释：双栈类型负载均衡器的IPv6对应的port ID。  [不支持IPv6，请勿使用。](tag:dt)
-    * availabilityZoneList  参数解释：负载均衡器所在的可用区列表。
-    * enterpriseProjectId  参数解释：企业项目ID。创建时不传则返回\"0\"，表示资源属于default企业项目。  注意：\"0\"并不是真实存在的企业项目ID，在创建、更新和查询时不能作为请求参数传入。  [不支持该字段，请勿使用](tag:dt,hcso_dt)
-    * billingInfo  参数解释：资源账单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
-    * l4FlavorId  参数解释：网络型规格ID。  对于弹性扩缩容实例，表示上限规格。  约束限制： - 当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,fcs)
-    * l4ScaleFlavorId  参数解释：四层弹性Flavor ID。  不支持该字段，请勿使用。
-    * l7FlavorId  参数解释：应用型ID。 对于弹性扩缩容实例，表示上限规格ID。  约束限制： - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
-    * l7ScaleFlavorId  参数解释：七层弹性Flavor ID。  不支持该字段，请勿使用。
-    * gwFlavorId  网关型LB的Flavor ID。  [使用说明：当gw_flavor_id不传时，会使用默认gateway flavor （默认gateway flavor根据不同局点有所不同，具体以实际值为准）。 ](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)  不支持该字段，请勿使用。
-    * loadbalancerType  参数解释：负载均衡器类别。  取值范围： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  默认取值：null。  不支持该字段，请勿使用。
-    * publicips  参数解释：负载均衡器绑定的公网IP。只支持绑定一个公网IP。  注：该字段与eips一致。
-    * globalEips  参数解释：负载均衡器绑定的global eip。  约束限制：只支持绑定一个globaleip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
-    * elbVirsubnetIds  参数解释：下联面子网的网络ID列表。
-    * elbVirsubnetType  参数解释：下联面子网类型。  取值范围： - ipv4：ipv4 - dualstack：双栈
-    * ipTargetEnable  参数解释：是否启用跨VPC后端转发。 [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他云、云下数据中心的服务器。](tag:srg,fcs)  约束限制： - 开启后不能关闭。 - 使用共享VPC的实例使用此特性时，需确保共享资源所有者已开通VPC对等连接，否则通信异常。 [- 仅独享型负载均衡器支持该特性。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt) [- 网关型LB不支持该特性。](tag:hws_eu)  取值范围： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
-    * frozenScene  参数解释：负载均衡器的冻结场景。 [若负载均衡器有多个冻结场景，用逗号分隔。  取值范围： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。](tag:hws,hws_hk)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
-    * deletionProtectionEnable  参数解释：是否开启删除保护。  约束限制： - 仅当前局点启用删除保护特性后才会返回该字段。 - 退场时需要先关闭所有资源的删除保护开关。  取值范围： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * id  **参数解释**：负载均衡器ID。  **取值范围**：不涉及
+    * description  **参数解释**：负载均衡器描述信息。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：负载均衡器的配置状态。  **取值范围**： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
+    * adminStateUp  **参数解释**：负载均衡器的启用状态。  **取值范围**： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
+    * provider  **参数解释**：负载均衡器的生产者名称。固定为vlb。  **取值范围**：不涉及
+    * pools  **参数解释**：负载均衡器直接关联的后端服务器组的ID列表。
+    * listeners  **参数解释**：负载均衡器关联的监听器的ID列表。
+    * operatingStatus  **参数解释**：负载均衡器的操作状态。  **取值范围**： - ONLINE：在线。 - FROZEN：已冻结。
+    * name  **参数解释**：负载均衡器的名称。  **取值范围**：不涉及
+    * projectId  **参数解释**：负载均衡器所属的项目ID。  **取值范围**：不涉及
+    * vipSubnetCidrId  **参数解释**：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。  **取值范围**：不涉及
+    * vipAddress  **参数解释**：负载均衡器的IPv4私网IP地址。  **取值范围**：不涉及
+    * vipPortId  **参数解释**：负载均衡器的IPv4对应的port ID。 [创建弹性负载均衡时，会自动为负载均衡创建一个port并关联一个默认的安全组，这个安全组对所有流量不生效。 ](tag:dt,hcso_dt)  **取值范围**：不涉及
+    * tags  **参数解释**：负载均衡的标签列表。
+    * createdAt  **参数解释**：负载均衡器的创建时间。  **取值范围**： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
+    * updatedAt  **参数解释**：负载均衡器的更新时间。  **取值范围**： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
+    * guaranteed  **参数解释**：是否独享型LB。  **取值范围**： - false：共享型。 - true：独享型。
+    * vpcId  **参数解释**：负载均衡器所在VPC ID。  **取值范围**：不涉及
+    * eips  **参数解释**：负载均衡器绑定的EIP。  > 该字段与publicips一致。
+    * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
+    * ipv6VipVirsubnetId  **参数解释**：双栈类型负载均衡器所在子网的IPv6网络ID，也称为该负载均衡器实例的前端子网。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
+    * ipv6VipPortId  **参数解释**：双栈类型负载均衡器的IPv6对应的port ID。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
+    * availabilityZoneList  **参数解释**：负载均衡器所在的可用区列表。  **取值范围**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * billingInfo  **参数解释**：资源账单信息。  **取值范围**： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * l4FlavorId  **参数解释**：负载均衡器4层规格ID。 若当前负载均衡器是弹性规格实例，则该字段表示4层上限规格。  **取值范围**：不涉及  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,fcs)
+    * l4ScaleFlavorId  **参数解释**：四层弹性规格ID。  **取值范围**：不涉及  > 该字段已经废弃，请勿使用。
+    * l7FlavorId  **参数解释**：负载均衡器7层规格ID。 若当前负载均衡器是弹性规格实例，则该字段表示7层上限规格。  **取值范围**：不涉及  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
+    * l7ScaleFlavorId  **参数解释**：七层弹性Flavor ID。  **取值范围**：不涉及  > 该字段已经废弃，请勿使用。
+    * gwFlavorId  **参数解释**：网关型负载均衡器的规格ID。  **取值范围**：不涉及  不支持该字段，请勿使用。
+    * loadbalancerType  **参数解释**：负载均衡器类别。  **取值范围**： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  不支持该字段，请勿使用。
+    * publicips  **参数解释**：负载均衡器绑定的公网IP。  > 该字段与eips一致。
+    * globalEips  **参数解释**：负载均衡器绑定的global eip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
+    * elbVirsubnetIds  **参数解释**：下联面子网的网络ID列表。  **取值范围**：不涉及
+    * elbVirsubnetType  **参数解释**：下联面子网类型。  **取值范围**： - ipv4：仅支持IPv4 - dualstack：双栈，同时支持IPv4和IPv6。
+    * ipTargetEnable  **参数解释**：是否启用IP类型后端转发。 [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、云下数据中心的服务器。](tag:srg,fcs)  **取值范围**： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * frozenScene  **参数解释**：负载均衡器的冻结场景。 若负载均衡器有多个冻结场景，用逗号分隔。  **取值范围**： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
+    * deletionProtectionEnable  **参数解释**：是否开启删除保护。仅当前局点启用删除保护特性后才会返回该字段。  **取值范围**： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
     * autoscaling  autoscaling
-    * publicBorderGroup  参数解释：LB所属AZ组。
-    * chargeMode  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
-    * serviceLbMode  参数解释：lb 模式，默认为lb，ep模式LB支持跨租户访问。  不支持该字段，请勿使用。
-    * instanceType  参数解释：标识实例归属哪个内部服务。  不支持该字段，请勿使用。
-    * instanceId  参数解释：标识实例绑定内部服务的实例id。  不支持该字段，请勿使用。
-    * proxyProtocolExtensions  参数解释：pp扩展。  不支持该字段，请勿使用。
-    * wafFailureAction  参数解释：WAF故障时的流量处理策略。  约束限制：只有绑定了waf的LB实例，该字段才会生效。  取值范围：discard:丢弃，forward: 转发到后端。  默认取值：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
-    * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护。 - consoleProtection: 控制台修改保护。  默认取值：nonProtection
-    * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
-    * logGroupId  参数解释：LB所绑定的logtank对应的group id
-    * logTopicId  参数解释：LB所绑定的logtank对应的topic id
+    * publicBorderGroup  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    * chargeMode  **参数解释**：负载均衡器实例的计费模式。  **取值范围**： - flavor：按规格计费。 - lcu：按使用量计费。 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    * serviceLbMode  **参数解释**：LB模式。  **取值范围**： - lb：默认模式，不支持跨租户访问。 - ep：ep模式，LB支持跨租户访问。  不支持该字段，请勿使用。
+    * instanceType  **参数解释**：标识实例归属哪个内部服务。  **取值范围**：不涉及  不支持该字段，请勿使用。
+    * instanceId  **参数解释**：标识实例绑定内部服务的实例ID。  **取值范围**：不涉及  不支持该字段，请勿使用。
+    * proxyProtocolExtensions  **参数解释**：pp扩展。  不支持该字段，请勿使用。
+    * wafFailureAction  **参数解释**：WAF故障时的流量处理策略。  **取值范围**：discard:丢弃，forward: 转发到后端。  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
+    * protectionStatus  **参数解释**：修改保护状态。  **取值范围**： - nonProtection：不保护。 - consoleProtection：控制台修改保护。
+    * protectionReason  **参数解释**：设置保护的原因。作为protection_status的转态设置的原因。  **取值范围**：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
+    * logGroupId  **参数解释**：LB所关联的云日志服务（LTS）的日志组ID。  **取值范围**：不涉及
+    * logTopicId  **参数解释**：LB所关联的云日志服务（LTS）的日志组下的日志流ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -365,56 +365,56 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  参数解释：负载均衡器ID。
-    * description  参数解释：负载均衡器描述信息。
-    * provisioningStatus  参数解释：负载均衡器的配置状态。  取值范围： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
-    * adminStateUp  参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
-    * provider  参数解释：负载均衡器的生产者名称。固定为vlb。
-    * pools  参数解释：负载均衡器直接关联的后端服务器组的ID列表。
-    * listeners  参数解释：负载均衡器关联的监听器的ID列表。
-    * operatingStatus  参数解释：负载均衡器的操作状态。  取值范围： - ONLINE：在线。 - FROZEN：已冻结。
-    * name  参数解释：负载均衡器的名称。
-    * projectId  参数解释：负载均衡器所属的项目ID。
-    * vipSubnetCidrId  参数解释：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。
-    * vipAddress  参数解释：负载均衡器的IPv4虚拟IP地址。
-    * vipPortId  参数解释：负载均衡器的IPv4对应的port ID。 [创建弹性负载均衡时，会自动为负载均衡创建一个port并关联一个默认的安全组，这个安全组对所有流量不生效。 ](tag:dt,hcso_dt)
-    * tags  参数解释：负载均衡的标签列表。
-    * createdAt  参数解释：负载均衡器的创建时间。  取值范围： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
-    * updatedAt  参数解释：负载均衡器的更新时间。  取值范围; 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
-    * guaranteed  参数解释：是否独享型LB。  取值范围： - false：共享型。 - true：独享型。
-    * vpcId  参数解释：负载均衡器所在VPC ID。
-    * eips  参数解释：负载均衡器绑定的EIP。  约束限制：只支持绑定一个EIP。  注：该字段与publicips一致。
-    * ipv6VipAddress  参数解释：双栈类型负载均衡器的IPv6地址。  [不支持IPv6，请勿使用。](tag:dt)
-    * ipv6VipVirsubnetId  参数解释：双栈类型负载均衡器所在子网的IPv6网络ID，也称为该负载均衡器实例的前端子网。  [不支持IPv6，请勿使用。](tag:dt)
-    * ipv6VipPortId  参数解释：双栈类型负载均衡器的IPv6对应的port ID。  [不支持IPv6，请勿使用。](tag:dt)
-    * availabilityZoneList  参数解释：负载均衡器所在的可用区列表。
-    * enterpriseProjectId  参数解释：企业项目ID。创建时不传则返回\"0\"，表示资源属于default企业项目。  注意：\"0\"并不是真实存在的企业项目ID，在创建、更新和查询时不能作为请求参数传入。  [不支持该字段，请勿使用](tag:dt,hcso_dt)
-    * billingInfo  参数解释：资源账单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
-    * l4FlavorId  参数解释：网络型规格ID。  对于弹性扩缩容实例，表示上限规格。  约束限制： - 当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,fcs)
-    * l4ScaleFlavorId  参数解释：四层弹性Flavor ID。  不支持该字段，请勿使用。
-    * l7FlavorId  参数解释：应用型ID。 对于弹性扩缩容实例，表示上限规格ID。  约束限制： - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
-    * l7ScaleFlavorId  参数解释：七层弹性Flavor ID。  不支持该字段，请勿使用。
-    * gwFlavorId  网关型LB的Flavor ID。  [使用说明：当gw_flavor_id不传时，会使用默认gateway flavor （默认gateway flavor根据不同局点有所不同，具体以实际值为准）。 ](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)  不支持该字段，请勿使用。
-    * loadbalancerType  参数解释：负载均衡器类别。  取值范围： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  默认取值：null。  不支持该字段，请勿使用。
-    * publicips  参数解释：负载均衡器绑定的公网IP。只支持绑定一个公网IP。  注：该字段与eips一致。
-    * globalEips  参数解释：负载均衡器绑定的global eip。  约束限制：只支持绑定一个globaleip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
-    * elbVirsubnetIds  参数解释：下联面子网的网络ID列表。
-    * elbVirsubnetType  参数解释：下联面子网类型。  取值范围： - ipv4：ipv4 - dualstack：双栈
-    * ipTargetEnable  参数解释：是否启用跨VPC后端转发。 [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他云、云下数据中心的服务器。](tag:srg,fcs)  约束限制： - 开启后不能关闭。 - 使用共享VPC的实例使用此特性时，需确保共享资源所有者已开通VPC对等连接，否则通信异常。 [- 仅独享型负载均衡器支持该特性。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt) [- 网关型LB不支持该特性。](tag:hws_eu)  取值范围： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
-    * frozenScene  参数解释：负载均衡器的冻结场景。 [若负载均衡器有多个冻结场景，用逗号分隔。  取值范围： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。](tag:hws,hws_hk)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
-    * deletionProtectionEnable  参数解释：是否开启删除保护。  约束限制： - 仅当前局点启用删除保护特性后才会返回该字段。 - 退场时需要先关闭所有资源的删除保护开关。  取值范围： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * id  **参数解释**：负载均衡器ID。  **取值范围**：不涉及
+    * description  **参数解释**：负载均衡器描述信息。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：负载均衡器的配置状态。  **取值范围**： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
+    * adminStateUp  **参数解释**：负载均衡器的启用状态。  **取值范围**： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
+    * provider  **参数解释**：负载均衡器的生产者名称。固定为vlb。  **取值范围**：不涉及
+    * pools  **参数解释**：负载均衡器直接关联的后端服务器组的ID列表。
+    * listeners  **参数解释**：负载均衡器关联的监听器的ID列表。
+    * operatingStatus  **参数解释**：负载均衡器的操作状态。  **取值范围**： - ONLINE：在线。 - FROZEN：已冻结。
+    * name  **参数解释**：负载均衡器的名称。  **取值范围**：不涉及
+    * projectId  **参数解释**：负载均衡器所属的项目ID。  **取值范围**：不涉及
+    * vipSubnetCidrId  **参数解释**：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。  **取值范围**：不涉及
+    * vipAddress  **参数解释**：负载均衡器的IPv4私网IP地址。  **取值范围**：不涉及
+    * vipPortId  **参数解释**：负载均衡器的IPv4对应的port ID。 [创建弹性负载均衡时，会自动为负载均衡创建一个port并关联一个默认的安全组，这个安全组对所有流量不生效。 ](tag:dt,hcso_dt)  **取值范围**：不涉及
+    * tags  **参数解释**：负载均衡的标签列表。
+    * createdAt  **参数解释**：负载均衡器的创建时间。  **取值范围**： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
+    * updatedAt  **参数解释**：负载均衡器的更新时间。  **取值范围**： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
+    * guaranteed  **参数解释**：是否独享型LB。  **取值范围**： - false：共享型。 - true：独享型。
+    * vpcId  **参数解释**：负载均衡器所在VPC ID。  **取值范围**：不涉及
+    * eips  **参数解释**：负载均衡器绑定的EIP。  > 该字段与publicips一致。
+    * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
+    * ipv6VipVirsubnetId  **参数解释**：双栈类型负载均衡器所在子网的IPv6网络ID，也称为该负载均衡器实例的前端子网。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
+    * ipv6VipPortId  **参数解释**：双栈类型负载均衡器的IPv6对应的port ID。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
+    * availabilityZoneList  **参数解释**：负载均衡器所在的可用区列表。  **取值范围**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * billingInfo  **参数解释**：资源账单信息。  **取值范围**： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * l4FlavorId  **参数解释**：负载均衡器4层规格ID。 若当前负载均衡器是弹性规格实例，则该字段表示4层上限规格。  **取值范围**：不涉及  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,fcs)
+    * l4ScaleFlavorId  **参数解释**：四层弹性规格ID。  **取值范围**：不涉及  > 该字段已经废弃，请勿使用。
+    * l7FlavorId  **参数解释**：负载均衡器7层规格ID。 若当前负载均衡器是弹性规格实例，则该字段表示7层上限规格。  **取值范围**：不涉及  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
+    * l7ScaleFlavorId  **参数解释**：七层弹性Flavor ID。  **取值范围**：不涉及  > 该字段已经废弃，请勿使用。
+    * gwFlavorId  **参数解释**：网关型负载均衡器的规格ID。  **取值范围**：不涉及  不支持该字段，请勿使用。
+    * loadbalancerType  **参数解释**：负载均衡器类别。  **取值范围**： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  不支持该字段，请勿使用。
+    * publicips  **参数解释**：负载均衡器绑定的公网IP。  > 该字段与eips一致。
+    * globalEips  **参数解释**：负载均衡器绑定的global eip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
+    * elbVirsubnetIds  **参数解释**：下联面子网的网络ID列表。  **取值范围**：不涉及
+    * elbVirsubnetType  **参数解释**：下联面子网类型。  **取值范围**： - ipv4：仅支持IPv4 - dualstack：双栈，同时支持IPv4和IPv6。
+    * ipTargetEnable  **参数解释**：是否启用IP类型后端转发。 [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、云下数据中心的服务器。](tag:srg,fcs)  **取值范围**： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * frozenScene  **参数解释**：负载均衡器的冻结场景。 若负载均衡器有多个冻结场景，用逗号分隔。  **取值范围**： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
+    * deletionProtectionEnable  **参数解释**：是否开启删除保护。仅当前局点启用删除保护特性后才会返回该字段。  **取值范围**： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
     * autoscaling  autoscaling
-    * publicBorderGroup  参数解释：LB所属AZ组。
-    * chargeMode  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
-    * serviceLbMode  参数解释：lb 模式，默认为lb，ep模式LB支持跨租户访问。  不支持该字段，请勿使用。
-    * instanceType  参数解释：标识实例归属哪个内部服务。  不支持该字段，请勿使用。
-    * instanceId  参数解释：标识实例绑定内部服务的实例id。  不支持该字段，请勿使用。
-    * proxyProtocolExtensions  参数解释：pp扩展。  不支持该字段，请勿使用。
-    * wafFailureAction  参数解释：WAF故障时的流量处理策略。  约束限制：只有绑定了waf的LB实例，该字段才会生效。  取值范围：discard:丢弃，forward: 转发到后端。  默认取值：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
-    * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护。 - consoleProtection: 控制台修改保护。  默认取值：nonProtection
-    * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
-    * logGroupId  参数解释：LB所绑定的logtank对应的group id
-    * logTopicId  参数解释：LB所绑定的logtank对应的topic id
+    * publicBorderGroup  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    * chargeMode  **参数解释**：负载均衡器实例的计费模式。  **取值范围**： - flavor：按规格计费。 - lcu：按使用量计费。 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    * serviceLbMode  **参数解释**：LB模式。  **取值范围**： - lb：默认模式，不支持跨租户访问。 - ep：ep模式，LB支持跨租户访问。  不支持该字段，请勿使用。
+    * instanceType  **参数解释**：标识实例归属哪个内部服务。  **取值范围**：不涉及  不支持该字段，请勿使用。
+    * instanceId  **参数解释**：标识实例绑定内部服务的实例ID。  **取值范围**：不涉及  不支持该字段，请勿使用。
+    * proxyProtocolExtensions  **参数解释**：pp扩展。  不支持该字段，请勿使用。
+    * wafFailureAction  **参数解释**：WAF故障时的流量处理策略。  **取值范围**：discard:丢弃，forward: 转发到后端。  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
+    * protectionStatus  **参数解释**：修改保护状态。  **取值范围**： - nonProtection：不保护。 - consoleProtection：控制台修改保护。
+    * protectionReason  **参数解释**：设置保护的原因。作为protection_status的转态设置的原因。  **取值范围**：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
+    * logGroupId  **参数解释**：LB所关联的云日志服务（LTS）的日志组ID。  **取值范围**：不涉及
+    * logTopicId  **参数解释**：LB所关联的云日志服务（LTS）的日志组下的日志流ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -473,56 +473,56 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  参数解释：负载均衡器ID。
-    * description  参数解释：负载均衡器描述信息。
-    * provisioningStatus  参数解释：负载均衡器的配置状态。  取值范围： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
-    * adminStateUp  参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
-    * provider  参数解释：负载均衡器的生产者名称。固定为vlb。
-    * pools  参数解释：负载均衡器直接关联的后端服务器组的ID列表。
-    * listeners  参数解释：负载均衡器关联的监听器的ID列表。
-    * operatingStatus  参数解释：负载均衡器的操作状态。  取值范围： - ONLINE：在线。 - FROZEN：已冻结。
-    * name  参数解释：负载均衡器的名称。
-    * projectId  参数解释：负载均衡器所属的项目ID。
-    * vipSubnetCidrId  参数解释：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。
-    * vipAddress  参数解释：负载均衡器的IPv4虚拟IP地址。
-    * vipPortId  参数解释：负载均衡器的IPv4对应的port ID。 [创建弹性负载均衡时，会自动为负载均衡创建一个port并关联一个默认的安全组，这个安全组对所有流量不生效。 ](tag:dt,hcso_dt)
-    * tags  参数解释：负载均衡的标签列表。
-    * createdAt  参数解释：负载均衡器的创建时间。  取值范围： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
-    * updatedAt  参数解释：负载均衡器的更新时间。  取值范围; 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
-    * guaranteed  参数解释：是否独享型LB。  取值范围： - false：共享型。 - true：独享型。
-    * vpcId  参数解释：负载均衡器所在VPC ID。
-    * eips  参数解释：负载均衡器绑定的EIP。  约束限制：只支持绑定一个EIP。  注：该字段与publicips一致。
-    * ipv6VipAddress  参数解释：双栈类型负载均衡器的IPv6地址。  [不支持IPv6，请勿使用。](tag:dt)
-    * ipv6VipVirsubnetId  参数解释：双栈类型负载均衡器所在子网的IPv6网络ID，也称为该负载均衡器实例的前端子网。  [不支持IPv6，请勿使用。](tag:dt)
-    * ipv6VipPortId  参数解释：双栈类型负载均衡器的IPv6对应的port ID。  [不支持IPv6，请勿使用。](tag:dt)
-    * availabilityZoneList  参数解释：负载均衡器所在的可用区列表。
-    * enterpriseProjectId  参数解释：企业项目ID。创建时不传则返回\"0\"，表示资源属于default企业项目。  注意：\"0\"并不是真实存在的企业项目ID，在创建、更新和查询时不能作为请求参数传入。  [不支持该字段，请勿使用](tag:dt,hcso_dt)
-    * billingInfo  参数解释：资源账单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
-    * l4FlavorId  参数解释：网络型规格ID。  对于弹性扩缩容实例，表示上限规格。  约束限制： - 当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,fcs)
-    * l4ScaleFlavorId  参数解释：四层弹性Flavor ID。  不支持该字段，请勿使用。
-    * l7FlavorId  参数解释：应用型ID。 对于弹性扩缩容实例，表示上限规格ID。  约束限制： - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
-    * l7ScaleFlavorId  参数解释：七层弹性Flavor ID。  不支持该字段，请勿使用。
-    * gwFlavorId  网关型LB的Flavor ID。  [使用说明：当gw_flavor_id不传时，会使用默认gateway flavor （默认gateway flavor根据不同局点有所不同，具体以实际值为准）。 ](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)  不支持该字段，请勿使用。
-    * loadbalancerType  参数解释：负载均衡器类别。  取值范围： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  默认取值：null。  不支持该字段，请勿使用。
-    * publicips  参数解释：负载均衡器绑定的公网IP。只支持绑定一个公网IP。  注：该字段与eips一致。
-    * globalEips  参数解释：负载均衡器绑定的global eip。  约束限制：只支持绑定一个globaleip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
-    * elbVirsubnetIds  参数解释：下联面子网的网络ID列表。
-    * elbVirsubnetType  参数解释：下联面子网类型。  取值范围： - ipv4：ipv4 - dualstack：双栈
-    * ipTargetEnable  参数解释：是否启用跨VPC后端转发。 [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他云、云下数据中心的服务器。](tag:srg,fcs)  约束限制： - 开启后不能关闭。 - 使用共享VPC的实例使用此特性时，需确保共享资源所有者已开通VPC对等连接，否则通信异常。 [- 仅独享型负载均衡器支持该特性。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt) [- 网关型LB不支持该特性。](tag:hws_eu)  取值范围： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
-    * frozenScene  参数解释：负载均衡器的冻结场景。 [若负载均衡器有多个冻结场景，用逗号分隔。  取值范围： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。](tag:hws,hws_hk)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
-    * deletionProtectionEnable  参数解释：是否开启删除保护。  约束限制： - 仅当前局点启用删除保护特性后才会返回该字段。 - 退场时需要先关闭所有资源的删除保护开关。  取值范围： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * id  **参数解释**：负载均衡器ID。  **取值范围**：不涉及
+    * description  **参数解释**：负载均衡器描述信息。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：负载均衡器的配置状态。  **取值范围**： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
+    * adminStateUp  **参数解释**：负载均衡器的启用状态。  **取值范围**： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
+    * provider  **参数解释**：负载均衡器的生产者名称。固定为vlb。  **取值范围**：不涉及
+    * pools  **参数解释**：负载均衡器直接关联的后端服务器组的ID列表。
+    * listeners  **参数解释**：负载均衡器关联的监听器的ID列表。
+    * operatingStatus  **参数解释**：负载均衡器的操作状态。  **取值范围**： - ONLINE：在线。 - FROZEN：已冻结。
+    * name  **参数解释**：负载均衡器的名称。  **取值范围**：不涉及
+    * projectId  **参数解释**：负载均衡器所属的项目ID。  **取值范围**：不涉及
+    * vipSubnetCidrId  **参数解释**：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。  **取值范围**：不涉及
+    * vipAddress  **参数解释**：负载均衡器的IPv4私网IP地址。  **取值范围**：不涉及
+    * vipPortId  **参数解释**：负载均衡器的IPv4对应的port ID。 [创建弹性负载均衡时，会自动为负载均衡创建一个port并关联一个默认的安全组，这个安全组对所有流量不生效。 ](tag:dt,hcso_dt)  **取值范围**：不涉及
+    * tags  **参数解释**：负载均衡的标签列表。
+    * createdAt  **参数解释**：负载均衡器的创建时间。  **取值范围**： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
+    * updatedAt  **参数解释**：负载均衡器的更新时间。  **取值范围**： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
+    * guaranteed  **参数解释**：是否独享型LB。  **取值范围**： - false：共享型。 - true：独享型。
+    * vpcId  **参数解释**：负载均衡器所在VPC ID。  **取值范围**：不涉及
+    * eips  **参数解释**：负载均衡器绑定的EIP。  > 该字段与publicips一致。
+    * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
+    * ipv6VipVirsubnetId  **参数解释**：双栈类型负载均衡器所在子网的IPv6网络ID，也称为该负载均衡器实例的前端子网。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
+    * ipv6VipPortId  **参数解释**：双栈类型负载均衡器的IPv6对应的port ID。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
+    * availabilityZoneList  **参数解释**：负载均衡器所在的可用区列表。  **取值范围**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * billingInfo  **参数解释**：资源账单信息。  **取值范围**： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * l4FlavorId  **参数解释**：负载均衡器4层规格ID。 若当前负载均衡器是弹性规格实例，则该字段表示4层上限规格。  **取值范围**：不涉及  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,fcs)
+    * l4ScaleFlavorId  **参数解释**：四层弹性规格ID。  **取值范围**：不涉及  > 该字段已经废弃，请勿使用。
+    * l7FlavorId  **参数解释**：负载均衡器7层规格ID。 若当前负载均衡器是弹性规格实例，则该字段表示7层上限规格。  **取值范围**：不涉及  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
+    * l7ScaleFlavorId  **参数解释**：七层弹性Flavor ID。  **取值范围**：不涉及  > 该字段已经废弃，请勿使用。
+    * gwFlavorId  **参数解释**：网关型负载均衡器的规格ID。  **取值范围**：不涉及  不支持该字段，请勿使用。
+    * loadbalancerType  **参数解释**：负载均衡器类别。  **取值范围**： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  不支持该字段，请勿使用。
+    * publicips  **参数解释**：负载均衡器绑定的公网IP。  > 该字段与eips一致。
+    * globalEips  **参数解释**：负载均衡器绑定的global eip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
+    * elbVirsubnetIds  **参数解释**：下联面子网的网络ID列表。  **取值范围**：不涉及
+    * elbVirsubnetType  **参数解释**：下联面子网类型。  **取值范围**： - ipv4：仅支持IPv4 - dualstack：双栈，同时支持IPv4和IPv6。
+    * ipTargetEnable  **参数解释**：是否启用IP类型后端转发。 [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、云下数据中心的服务器。](tag:srg,fcs)  **取值范围**： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * frozenScene  **参数解释**：负载均衡器的冻结场景。 若负载均衡器有多个冻结场景，用逗号分隔。  **取值范围**： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
+    * deletionProtectionEnable  **参数解释**：是否开启删除保护。仅当前局点启用删除保护特性后才会返回该字段。  **取值范围**： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
     * autoscaling  autoscaling
-    * publicBorderGroup  参数解释：LB所属AZ组。
-    * chargeMode  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
-    * serviceLbMode  参数解释：lb 模式，默认为lb，ep模式LB支持跨租户访问。  不支持该字段，请勿使用。
-    * instanceType  参数解释：标识实例归属哪个内部服务。  不支持该字段，请勿使用。
-    * instanceId  参数解释：标识实例绑定内部服务的实例id。  不支持该字段，请勿使用。
-    * proxyProtocolExtensions  参数解释：pp扩展。  不支持该字段，请勿使用。
-    * wafFailureAction  参数解释：WAF故障时的流量处理策略。  约束限制：只有绑定了waf的LB实例，该字段才会生效。  取值范围：discard:丢弃，forward: 转发到后端。  默认取值：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
-    * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护。 - consoleProtection: 控制台修改保护。  默认取值：nonProtection
-    * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
-    * logGroupId  参数解释：LB所绑定的logtank对应的group id
-    * logTopicId  参数解释：LB所绑定的logtank对应的topic id
+    * publicBorderGroup  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    * chargeMode  **参数解释**：负载均衡器实例的计费模式。  **取值范围**： - flavor：按规格计费。 - lcu：按使用量计费。 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    * serviceLbMode  **参数解释**：LB模式。  **取值范围**： - lb：默认模式，不支持跨租户访问。 - ep：ep模式，LB支持跨租户访问。  不支持该字段，请勿使用。
+    * instanceType  **参数解释**：标识实例归属哪个内部服务。  **取值范围**：不涉及  不支持该字段，请勿使用。
+    * instanceId  **参数解释**：标识实例绑定内部服务的实例ID。  **取值范围**：不涉及  不支持该字段，请勿使用。
+    * proxyProtocolExtensions  **参数解释**：pp扩展。  不支持该字段，请勿使用。
+    * wafFailureAction  **参数解释**：WAF故障时的流量处理策略。  **取值范围**：discard:丢弃，forward: 转发到后端。  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
+    * protectionStatus  **参数解释**：修改保护状态。  **取值范围**： - nonProtection：不保护。 - consoleProtection：控制台修改保护。
+    * protectionReason  **参数解释**：设置保护的原因。作为protection_status的转态设置的原因。  **取值范围**：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
+    * logGroupId  **参数解释**：LB所关联的云日志服务（LTS）的日志组ID。  **取值范围**：不涉及
+    * logTopicId  **参数解释**：LB所关联的云日志服务（LTS）的日志组下的日志流ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -953,7 +953,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  参数解释：负载均衡器ID。
+    *  **参数解释**：负载均衡器ID。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -965,7 +965,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 参数解释：负载均衡器ID。
+    * @param string $id **参数解释**：负载均衡器ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -977,7 +977,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  参数解释：负载均衡器描述信息。
+    *  **参数解释**：负载均衡器描述信息。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -989,7 +989,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 参数解释：负载均衡器描述信息。
+    * @param string $description **参数解释**：负载均衡器描述信息。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -1001,7 +1001,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets provisioningStatus
-    *  参数解释：负载均衡器的配置状态。  取值范围： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
+    *  **参数解释**：负载均衡器的配置状态。  **取值范围**： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
     *
     * @return string
     */
@@ -1013,7 +1013,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets provisioningStatus
     *
-    * @param string $provisioningStatus 参数解释：负载均衡器的配置状态。  取值范围： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
+    * @param string $provisioningStatus **参数解释**：负载均衡器的配置状态。  **取值范围**： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
     *
     * @return $this
     */
@@ -1025,7 +1025,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminStateUp
-    *  参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
+    *  **参数解释**：负载均衡器的启用状态。  **取值范围**： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
     *
     * @return bool
     */
@@ -1037,7 +1037,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets adminStateUp
     *
-    * @param bool $adminStateUp 参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
+    * @param bool $adminStateUp **参数解释**：负载均衡器的启用状态。  **取值范围**： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
     *
     * @return $this
     */
@@ -1049,7 +1049,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets provider
-    *  参数解释：负载均衡器的生产者名称。固定为vlb。
+    *  **参数解释**：负载均衡器的生产者名称。固定为vlb。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -1061,7 +1061,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets provider
     *
-    * @param string $provider 参数解释：负载均衡器的生产者名称。固定为vlb。
+    * @param string $provider **参数解释**：负载均衡器的生产者名称。固定为vlb。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -1073,7 +1073,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets pools
-    *  参数解释：负载均衡器直接关联的后端服务器组的ID列表。
+    *  **参数解释**：负载均衡器直接关联的后端服务器组的ID列表。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\PoolRef[]
     */
@@ -1085,7 +1085,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets pools
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\PoolRef[] $pools 参数解释：负载均衡器直接关联的后端服务器组的ID列表。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\PoolRef[] $pools **参数解释**：负载均衡器直接关联的后端服务器组的ID列表。
     *
     * @return $this
     */
@@ -1097,7 +1097,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets listeners
-    *  参数解释：负载均衡器关联的监听器的ID列表。
+    *  **参数解释**：负载均衡器关联的监听器的ID列表。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[]
     */
@@ -1109,7 +1109,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets listeners
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[] $listeners 参数解释：负载均衡器关联的监听器的ID列表。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[] $listeners **参数解释**：负载均衡器关联的监听器的ID列表。
     *
     * @return $this
     */
@@ -1121,7 +1121,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets operatingStatus
-    *  参数解释：负载均衡器的操作状态。  取值范围： - ONLINE：在线。 - FROZEN：已冻结。
+    *  **参数解释**：负载均衡器的操作状态。  **取值范围**： - ONLINE：在线。 - FROZEN：已冻结。
     *
     * @return string
     */
@@ -1133,7 +1133,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets operatingStatus
     *
-    * @param string $operatingStatus 参数解释：负载均衡器的操作状态。  取值范围： - ONLINE：在线。 - FROZEN：已冻结。
+    * @param string $operatingStatus **参数解释**：负载均衡器的操作状态。  **取值范围**： - ONLINE：在线。 - FROZEN：已冻结。
     *
     * @return $this
     */
@@ -1145,7 +1145,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  参数解释：负载均衡器的名称。
+    *  **参数解释**：负载均衡器的名称。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -1157,7 +1157,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 参数解释：负载均衡器的名称。
+    * @param string $name **参数解释**：负载均衡器的名称。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -1169,7 +1169,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  参数解释：负载均衡器所属的项目ID。
+    *  **参数解释**：负载均衡器所属的项目ID。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -1181,7 +1181,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 参数解释：负载均衡器所属的项目ID。
+    * @param string $projectId **参数解释**：负载均衡器所属的项目ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -1193,7 +1193,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets vipSubnetCidrId
-    *  参数解释：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。
+    *  **参数解释**：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -1205,7 +1205,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets vipSubnetCidrId
     *
-    * @param string $vipSubnetCidrId 参数解释：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。
+    * @param string $vipSubnetCidrId **参数解释**：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -1217,7 +1217,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets vipAddress
-    *  参数解释：负载均衡器的IPv4虚拟IP地址。
+    *  **参数解释**：负载均衡器的IPv4私网IP地址。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -1229,7 +1229,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets vipAddress
     *
-    * @param string $vipAddress 参数解释：负载均衡器的IPv4虚拟IP地址。
+    * @param string $vipAddress **参数解释**：负载均衡器的IPv4私网IP地址。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -1241,7 +1241,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets vipPortId
-    *  参数解释：负载均衡器的IPv4对应的port ID。 [创建弹性负载均衡时，会自动为负载均衡创建一个port并关联一个默认的安全组，这个安全组对所有流量不生效。 ](tag:dt,hcso_dt)
+    *  **参数解释**：负载均衡器的IPv4对应的port ID。 [创建弹性负载均衡时，会自动为负载均衡创建一个port并关联一个默认的安全组，这个安全组对所有流量不生效。 ](tag:dt,hcso_dt)  **取值范围**：不涉及
     *
     * @return string
     */
@@ -1253,7 +1253,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets vipPortId
     *
-    * @param string $vipPortId 参数解释：负载均衡器的IPv4对应的port ID。 [创建弹性负载均衡时，会自动为负载均衡创建一个port并关联一个默认的安全组，这个安全组对所有流量不生效。 ](tag:dt,hcso_dt)
+    * @param string $vipPortId **参数解释**：负载均衡器的IPv4对应的port ID。 [创建弹性负载均衡时，会自动为负载均衡创建一个port并关联一个默认的安全组，这个安全组对所有流量不生效。 ](tag:dt,hcso_dt)  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -1265,7 +1265,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  参数解释：负载均衡的标签列表。
+    *  **参数解释**：负载均衡的标签列表。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\Tag[]
     */
@@ -1277,7 +1277,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\Tag[] $tags 参数解释：负载均衡的标签列表。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\Tag[] $tags **参数解释**：负载均衡的标签列表。
     *
     * @return $this
     */
@@ -1289,7 +1289,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  参数解释：负载均衡器的创建时间。  取值范围： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
+    *  **参数解释**：负载均衡器的创建时间。  **取值范围**： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
     *
     * @return string
     */
@@ -1301,7 +1301,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string $createdAt 参数解释：负载均衡器的创建时间。  取值范围： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
+    * @param string $createdAt **参数解释**：负载均衡器的创建时间。  **取值范围**： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
     *
     * @return $this
     */
@@ -1313,7 +1313,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  参数解释：负载均衡器的更新时间。  取值范围; 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
+    *  **参数解释**：负载均衡器的更新时间。  **取值范围**： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
     *
     * @return string
     */
@@ -1325,7 +1325,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string $updatedAt 参数解释：负载均衡器的更新时间。  取值范围; 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
+    * @param string $updatedAt **参数解释**：负载均衡器的更新时间。  **取值范围**： 格式：yyyy-MM-dd'T'HH:mm:ss'Z'
     *
     * @return $this
     */
@@ -1337,7 +1337,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets guaranteed
-    *  参数解释：是否独享型LB。  取值范围： - false：共享型。 - true：独享型。
+    *  **参数解释**：是否独享型LB。  **取值范围**： - false：共享型。 - true：独享型。
     *
     * @return bool
     */
@@ -1349,7 +1349,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets guaranteed
     *
-    * @param bool $guaranteed 参数解释：是否独享型LB。  取值范围： - false：共享型。 - true：独享型。
+    * @param bool $guaranteed **参数解释**：是否独享型LB。  **取值范围**： - false：共享型。 - true：独享型。
     *
     * @return $this
     */
@@ -1361,7 +1361,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  参数解释：负载均衡器所在VPC ID。
+    *  **参数解释**：负载均衡器所在VPC ID。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -1373,7 +1373,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string $vpcId 参数解释：负载均衡器所在VPC ID。
+    * @param string $vpcId **参数解释**：负载均衡器所在VPC ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -1385,7 +1385,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets eips
-    *  参数解释：负载均衡器绑定的EIP。  约束限制：只支持绑定一个EIP。  注：该字段与publicips一致。
+    *  **参数解释**：负载均衡器绑定的EIP。  > 该字段与publicips一致。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\EipInfo[]
     */
@@ -1397,7 +1397,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets eips
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\EipInfo[] $eips 参数解释：负载均衡器绑定的EIP。  约束限制：只支持绑定一个EIP。  注：该字段与publicips一致。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\EipInfo[] $eips **参数解释**：负载均衡器绑定的EIP。  > 该字段与publicips一致。
     *
     * @return $this
     */
@@ -1409,7 +1409,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6VipAddress
-    *  参数解释：双栈类型负载均衡器的IPv6地址。  [不支持IPv6，请勿使用。](tag:dt)
+    *  **参数解释**：双栈类型负载均衡器的IPv6地址。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
     *
     * @return string
     */
@@ -1421,7 +1421,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6VipAddress
     *
-    * @param string $ipv6VipAddress 参数解释：双栈类型负载均衡器的IPv6地址。  [不支持IPv6，请勿使用。](tag:dt)
+    * @param string $ipv6VipAddress **参数解释**：双栈类型负载均衡器的IPv6地址。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
     *
     * @return $this
     */
@@ -1433,7 +1433,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6VipVirsubnetId
-    *  参数解释：双栈类型负载均衡器所在子网的IPv6网络ID，也称为该负载均衡器实例的前端子网。  [不支持IPv6，请勿使用。](tag:dt)
+    *  **参数解释**：双栈类型负载均衡器所在子网的IPv6网络ID，也称为该负载均衡器实例的前端子网。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
     *
     * @return string
     */
@@ -1445,7 +1445,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6VipVirsubnetId
     *
-    * @param string $ipv6VipVirsubnetId 参数解释：双栈类型负载均衡器所在子网的IPv6网络ID，也称为该负载均衡器实例的前端子网。  [不支持IPv6，请勿使用。](tag:dt)
+    * @param string $ipv6VipVirsubnetId **参数解释**：双栈类型负载均衡器所在子网的IPv6网络ID，也称为该负载均衡器实例的前端子网。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
     *
     * @return $this
     */
@@ -1457,7 +1457,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6VipPortId
-    *  参数解释：双栈类型负载均衡器的IPv6对应的port ID。  [不支持IPv6，请勿使用。](tag:dt)
+    *  **参数解释**：双栈类型负载均衡器的IPv6对应的port ID。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
     *
     * @return string
     */
@@ -1469,7 +1469,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6VipPortId
     *
-    * @param string $ipv6VipPortId 参数解释：双栈类型负载均衡器的IPv6对应的port ID。  [不支持IPv6，请勿使用。](tag:dt)
+    * @param string $ipv6VipPortId **参数解释**：双栈类型负载均衡器的IPv6对应的port ID。  **取值范围**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
     *
     * @return $this
     */
@@ -1481,7 +1481,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZoneList
-    *  参数解释：负载均衡器所在的可用区列表。
+    *  **参数解释**：负载均衡器所在的可用区列表。  **取值范围**：不涉及
     *
     * @return string[]
     */
@@ -1493,7 +1493,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZoneList
     *
-    * @param string[] $availabilityZoneList 参数解释：负载均衡器所在的可用区列表。
+    * @param string[] $availabilityZoneList **参数解释**：负载均衡器所在的可用区列表。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -1505,7 +1505,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  参数解释：企业项目ID。创建时不传则返回\"0\"，表示资源属于default企业项目。  注意：\"0\"并不是真实存在的企业项目ID，在创建、更新和查询时不能作为请求参数传入。  [不支持该字段，请勿使用](tag:dt,hcso_dt)
+    *  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @return string
     */
@@ -1517,7 +1517,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string $enterpriseProjectId 参数解释：企业项目ID。创建时不传则返回\"0\"，表示资源属于default企业项目。  注意：\"0\"并不是真实存在的企业项目ID，在创建、更新和查询时不能作为请求参数传入。  [不支持该字段，请勿使用](tag:dt,hcso_dt)
+    * @param string $enterpriseProjectId **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @return $this
     */
@@ -1529,7 +1529,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets billingInfo
-    *  参数解释：资源账单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    *  **参数解释**：资源账单信息。  **取值范围**： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     *
     * @return string
     */
@@ -1541,7 +1541,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets billingInfo
     *
-    * @param string $billingInfo 参数解释：资源账单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * @param string $billingInfo **参数解释**：资源账单信息。  **取值范围**： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     *
     * @return $this
     */
@@ -1553,7 +1553,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets l4FlavorId
-    *  参数解释：网络型规格ID。  对于弹性扩缩容实例，表示上限规格。  约束限制： - 当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,fcs)
+    *  **参数解释**：负载均衡器4层规格ID。 若当前负载均衡器是弹性规格实例，则该字段表示4层上限规格。  **取值范围**：不涉及  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,fcs)
     *
     * @return string
     */
@@ -1565,7 +1565,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets l4FlavorId
     *
-    * @param string $l4FlavorId 参数解释：网络型规格ID。  对于弹性扩缩容实例，表示上限规格。  约束限制： - 当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,fcs)
+    * @param string $l4FlavorId **参数解释**：负载均衡器4层规格ID。 若当前负载均衡器是弹性规格实例，则该字段表示4层上限规格。  **取值范围**：不涉及  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,fcs)
     *
     * @return $this
     */
@@ -1577,7 +1577,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets l4ScaleFlavorId
-    *  参数解释：四层弹性Flavor ID。  不支持该字段，请勿使用。
+    *  **参数解释**：四层弹性规格ID。  **取值范围**：不涉及  > 该字段已经废弃，请勿使用。
     *
     * @return string
     */
@@ -1589,7 +1589,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets l4ScaleFlavorId
     *
-    * @param string $l4ScaleFlavorId 参数解释：四层弹性Flavor ID。  不支持该字段，请勿使用。
+    * @param string $l4ScaleFlavorId **参数解释**：四层弹性规格ID。  **取值范围**：不涉及  > 该字段已经废弃，请勿使用。
     *
     * @return $this
     */
@@ -1601,7 +1601,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets l7FlavorId
-    *  参数解释：应用型ID。 对于弹性扩缩容实例，表示上限规格ID。  约束限制： - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
+    *  **参数解释**：负载均衡器7层规格ID。 若当前负载均衡器是弹性规格实例，则该字段表示7层上限规格。  **取值范围**：不涉及  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
     *
     * @return string
     */
@@ -1613,7 +1613,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets l7FlavorId
     *
-    * @param string $l7FlavorId 参数解释：应用型ID。 对于弹性扩缩容实例，表示上限规格ID。  约束限制： - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
+    * @param string $l7FlavorId **参数解释**：负载均衡器7层规格ID。 若当前负载均衡器是弹性规格实例，则该字段表示7层上限规格。  **取值范围**：不涉及  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
     *
     * @return $this
     */
@@ -1625,7 +1625,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets l7ScaleFlavorId
-    *  参数解释：七层弹性Flavor ID。  不支持该字段，请勿使用。
+    *  **参数解释**：七层弹性Flavor ID。  **取值范围**：不涉及  > 该字段已经废弃，请勿使用。
     *
     * @return string
     */
@@ -1637,7 +1637,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets l7ScaleFlavorId
     *
-    * @param string $l7ScaleFlavorId 参数解释：七层弹性Flavor ID。  不支持该字段，请勿使用。
+    * @param string $l7ScaleFlavorId **参数解释**：七层弹性Flavor ID。  **取值范围**：不涉及  > 该字段已经废弃，请勿使用。
     *
     * @return $this
     */
@@ -1649,7 +1649,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets gwFlavorId
-    *  网关型LB的Flavor ID。  [使用说明：当gw_flavor_id不传时，会使用默认gateway flavor （默认gateway flavor根据不同局点有所不同，具体以实际值为准）。 ](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)  不支持该字段，请勿使用。
+    *  **参数解释**：网关型负载均衡器的规格ID。  **取值范围**：不涉及  不支持该字段，请勿使用。
     *
     * @return string|null
     */
@@ -1661,7 +1661,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets gwFlavorId
     *
-    * @param string|null $gwFlavorId 网关型LB的Flavor ID。  [使用说明：当gw_flavor_id不传时，会使用默认gateway flavor （默认gateway flavor根据不同局点有所不同，具体以实际值为准）。 ](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)  不支持该字段，请勿使用。
+    * @param string|null $gwFlavorId **参数解释**：网关型负载均衡器的规格ID。  **取值范围**：不涉及  不支持该字段，请勿使用。
     *
     * @return $this
     */
@@ -1673,7 +1673,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets loadbalancerType
-    *  参数解释：负载均衡器类别。  取值范围： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  默认取值：null。  不支持该字段，请勿使用。
+    *  **参数解释**：负载均衡器类别。  **取值范围**： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  不支持该字段，请勿使用。
     *
     * @return string|null
     */
@@ -1685,7 +1685,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets loadbalancerType
     *
-    * @param string|null $loadbalancerType 参数解释：负载均衡器类别。  取值范围： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  默认取值：null。  不支持该字段，请勿使用。
+    * @param string|null $loadbalancerType **参数解释**：负载均衡器类别。  **取值范围**： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  不支持该字段，请勿使用。
     *
     * @return $this
     */
@@ -1697,7 +1697,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicips
-    *  参数解释：负载均衡器绑定的公网IP。只支持绑定一个公网IP。  注：该字段与eips一致。
+    *  **参数解释**：负载均衡器绑定的公网IP。  > 该字段与eips一致。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\PublicIpInfo[]
     */
@@ -1709,7 +1709,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets publicips
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\PublicIpInfo[] $publicips 参数解释：负载均衡器绑定的公网IP。只支持绑定一个公网IP。  注：该字段与eips一致。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\PublicIpInfo[] $publicips **参数解释**：负载均衡器绑定的公网IP。  > 该字段与eips一致。
     *
     * @return $this
     */
@@ -1721,7 +1721,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalEips
-    *  参数解释：负载均衡器绑定的global eip。  约束限制：只支持绑定一个globaleip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
+    *  **参数解释**：负载均衡器绑定的global eip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\GlobalEipInfo[]
     */
@@ -1733,7 +1733,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets globalEips
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\GlobalEipInfo[] $globalEips 参数解释：负载均衡器绑定的global eip。  约束限制：只支持绑定一个globaleip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\GlobalEipInfo[] $globalEips **参数解释**：负载均衡器绑定的global eip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
     *
     * @return $this
     */
@@ -1745,7 +1745,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets elbVirsubnetIds
-    *  参数解释：下联面子网的网络ID列表。
+    *  **参数解释**：下联面子网的网络ID列表。  **取值范围**：不涉及
     *
     * @return string[]
     */
@@ -1757,7 +1757,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets elbVirsubnetIds
     *
-    * @param string[] $elbVirsubnetIds 参数解释：下联面子网的网络ID列表。
+    * @param string[] $elbVirsubnetIds **参数解释**：下联面子网的网络ID列表。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -1769,7 +1769,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets elbVirsubnetType
-    *  参数解释：下联面子网类型。  取值范围： - ipv4：ipv4 - dualstack：双栈
+    *  **参数解释**：下联面子网类型。  **取值范围**： - ipv4：仅支持IPv4 - dualstack：双栈，同时支持IPv4和IPv6。
     *
     * @return string
     */
@@ -1781,7 +1781,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets elbVirsubnetType
     *
-    * @param string $elbVirsubnetType 参数解释：下联面子网类型。  取值范围： - ipv4：ipv4 - dualstack：双栈
+    * @param string $elbVirsubnetType **参数解释**：下联面子网类型。  **取值范围**： - ipv4：仅支持IPv4 - dualstack：双栈，同时支持IPv4和IPv6。
     *
     * @return $this
     */
@@ -1793,7 +1793,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipTargetEnable
-    *  参数解释：是否启用跨VPC后端转发。 [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他云、云下数据中心的服务器。](tag:srg,fcs)  约束限制： - 开启后不能关闭。 - 使用共享VPC的实例使用此特性时，需确保共享资源所有者已开通VPC对等连接，否则通信异常。 [- 仅独享型负载均衡器支持该特性。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt) [- 网关型LB不支持该特性。](tag:hws_eu)  取值范围： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    *  **参数解释**：是否启用IP类型后端转发。 [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、云下数据中心的服务器。](tag:srg,fcs)  **取值范围**： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
     *
     * @return bool
     */
@@ -1805,7 +1805,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets ipTargetEnable
     *
-    * @param bool $ipTargetEnable 参数解释：是否启用跨VPC后端转发。 [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他云、云下数据中心的服务器。](tag:srg,fcs)  约束限制： - 开启后不能关闭。 - 使用共享VPC的实例使用此特性时，需确保共享资源所有者已开通VPC对等连接，否则通信异常。 [- 仅独享型负载均衡器支持该特性。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt) [- 网关型LB不支持该特性。](tag:hws_eu)  取值范围： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * @param bool $ipTargetEnable **参数解释**：是否启用IP类型后端转发。 [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、云下数据中心的服务器。](tag:srg,fcs)  **取值范围**： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
     *
     * @return $this
     */
@@ -1817,7 +1817,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets frozenScene
-    *  参数解释：负载均衡器的冻结场景。 [若负载均衡器有多个冻结场景，用逗号分隔。  取值范围： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。](tag:hws,hws_hk)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
+    *  **参数解释**：负载均衡器的冻结场景。 若负载均衡器有多个冻结场景，用逗号分隔。  **取值范围**： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
     *
     * @return string
     */
@@ -1829,7 +1829,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets frozenScene
     *
-    * @param string $frozenScene 参数解释：负载均衡器的冻结场景。 [若负载均衡器有多个冻结场景，用逗号分隔。  取值范围： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。](tag:hws,hws_hk)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
+    * @param string $frozenScene **参数解释**：负载均衡器的冻结场景。 若负载均衡器有多个冻结场景，用逗号分隔。  **取值范围**： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
     *
     * @return $this
     */
@@ -1841,7 +1841,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets deletionProtectionEnable
-    *  参数解释：是否开启删除保护。  约束限制： - 仅当前局点启用删除保护特性后才会返回该字段。 - 退场时需要先关闭所有资源的删除保护开关。  取值范围： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    *  **参数解释**：是否开启删除保护。仅当前局点启用删除保护特性后才会返回该字段。  **取值范围**： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
     *
     * @return bool|null
     */
@@ -1853,7 +1853,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets deletionProtectionEnable
     *
-    * @param bool|null $deletionProtectionEnable 参数解释：是否开启删除保护。  约束限制： - 仅当前局点启用删除保护特性后才会返回该字段。 - 退场时需要先关闭所有资源的删除保护开关。  取值范围： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * @param bool|null $deletionProtectionEnable **参数解释**：是否开启删除保护。仅当前局点启用删除保护特性后才会返回该字段。  **取值范围**： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
     *
     * @return $this
     */
@@ -1889,7 +1889,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBorderGroup
-    *  参数解释：LB所属AZ组。
+    *  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     *
     * @return string|null
     */
@@ -1901,7 +1901,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets publicBorderGroup
     *
-    * @param string|null $publicBorderGroup 参数解释：LB所属AZ组。
+    * @param string|null $publicBorderGroup **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     *
     * @return $this
     */
@@ -1913,7 +1913,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    *  **参数解释**：负载均衡器实例的计费模式。  **取值范围**： - flavor：按规格计费。 - lcu：按使用量计费。 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     *
     * @return string|null
     */
@@ -1925,7 +1925,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string|null $chargeMode 参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    * @param string|null $chargeMode **参数解释**：负载均衡器实例的计费模式。  **取值范围**： - flavor：按规格计费。 - lcu：按使用量计费。 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     *
     * @return $this
     */
@@ -1937,7 +1937,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceLbMode
-    *  参数解释：lb 模式，默认为lb，ep模式LB支持跨租户访问。  不支持该字段，请勿使用。
+    *  **参数解释**：LB模式。  **取值范围**： - lb：默认模式，不支持跨租户访问。 - ep：ep模式，LB支持跨租户访问。  不支持该字段，请勿使用。
     *
     * @return string|null
     */
@@ -1949,7 +1949,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets serviceLbMode
     *
-    * @param string|null $serviceLbMode 参数解释：lb 模式，默认为lb，ep模式LB支持跨租户访问。  不支持该字段，请勿使用。
+    * @param string|null $serviceLbMode **参数解释**：LB模式。  **取值范围**： - lb：默认模式，不支持跨租户访问。 - ep：ep模式，LB支持跨租户访问。  不支持该字段，请勿使用。
     *
     * @return $this
     */
@@ -1961,7 +1961,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceType
-    *  参数解释：标识实例归属哪个内部服务。  不支持该字段，请勿使用。
+    *  **参数解释**：标识实例归属哪个内部服务。  **取值范围**：不涉及  不支持该字段，请勿使用。
     *
     * @return string|null
     */
@@ -1973,7 +1973,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets instanceType
     *
-    * @param string|null $instanceType 参数解释：标识实例归属哪个内部服务。  不支持该字段，请勿使用。
+    * @param string|null $instanceType **参数解释**：标识实例归属哪个内部服务。  **取值范围**：不涉及  不支持该字段，请勿使用。
     *
     * @return $this
     */
@@ -1985,7 +1985,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  参数解释：标识实例绑定内部服务的实例id。  不支持该字段，请勿使用。
+    *  **参数解释**：标识实例绑定内部服务的实例ID。  **取值范围**：不涉及  不支持该字段，请勿使用。
     *
     * @return string|null
     */
@@ -1997,7 +1997,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 参数解释：标识实例绑定内部服务的实例id。  不支持该字段，请勿使用。
+    * @param string|null $instanceId **参数解释**：标识实例绑定内部服务的实例ID。  **取值范围**：不涉及  不支持该字段，请勿使用。
     *
     * @return $this
     */
@@ -2009,7 +2009,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets proxyProtocolExtensions
-    *  参数解释：pp扩展。  不支持该字段，请勿使用。
+    *  **参数解释**：pp扩展。  不支持该字段，请勿使用。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\ProxyProtocolExtension[]|null
     */
@@ -2021,7 +2021,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets proxyProtocolExtensions
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\ProxyProtocolExtension[]|null $proxyProtocolExtensions 参数解释：pp扩展。  不支持该字段，请勿使用。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\ProxyProtocolExtension[]|null $proxyProtocolExtensions **参数解释**：pp扩展。  不支持该字段，请勿使用。
     *
     * @return $this
     */
@@ -2033,7 +2033,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets wafFailureAction
-    *  参数解释：WAF故障时的流量处理策略。  约束限制：只有绑定了waf的LB实例，该字段才会生效。  取值范围：discard:丢弃，forward: 转发到后端。  默认取值：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
+    *  **参数解释**：WAF故障时的流量处理策略。  **取值范围**：discard:丢弃，forward: 转发到后端。  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
     *
     * @return string|null
     */
@@ -2045,7 +2045,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets wafFailureAction
     *
-    * @param string|null $wafFailureAction 参数解释：WAF故障时的流量处理策略。  约束限制：只有绑定了waf的LB实例，该字段才会生效。  取值范围：discard:丢弃，forward: 转发到后端。  默认取值：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
+    * @param string|null $wafFailureAction **参数解释**：WAF故障时的流量处理策略。  **取值范围**：discard:丢弃，forward: 转发到后端。  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
     *
     * @return $this
     */
@@ -2057,7 +2057,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectionStatus
-    *  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护。 - consoleProtection: 控制台修改保护。  默认取值：nonProtection
+    *  **参数解释**：修改保护状态。  **取值范围**： - nonProtection：不保护。 - consoleProtection：控制台修改保护。
     *
     * @return string|null
     */
@@ -2069,7 +2069,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets protectionStatus
     *
-    * @param string|null $protectionStatus 参数解释：修改保护状态。  取值范围： - nonProtection: 不保护。 - consoleProtection: 控制台修改保护。  默认取值：nonProtection
+    * @param string|null $protectionStatus **参数解释**：修改保护状态。  **取值范围**： - nonProtection：不保护。 - consoleProtection：控制台修改保护。
     *
     * @return $this
     */
@@ -2081,7 +2081,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectionReason
-    *  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
+    *  **参数解释**：设置保护的原因。作为protection_status的转态设置的原因。  **取值范围**：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     *
     * @return string|null
     */
@@ -2093,7 +2093,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets protectionReason
     *
-    * @param string|null $protectionReason 参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
+    * @param string|null $protectionReason **参数解释**：设置保护的原因。作为protection_status的转态设置的原因。  **取值范围**：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     *
     * @return $this
     */
@@ -2105,7 +2105,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets logGroupId
-    *  参数解释：LB所绑定的logtank对应的group id
+    *  **参数解释**：LB所关联的云日志服务（LTS）的日志组ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -2117,7 +2117,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets logGroupId
     *
-    * @param string|null $logGroupId 参数解释：LB所绑定的logtank对应的group id
+    * @param string|null $logGroupId **参数解释**：LB所关联的云日志服务（LTS）的日志组ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -2129,7 +2129,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets logTopicId
-    *  参数解释：LB所绑定的logtank对应的topic id
+    *  **参数解释**：LB所关联的云日志服务（LTS）的日志组下的日志流ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -2141,7 +2141,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets logTopicId
     *
-    * @param string|null $logTopicId 参数解释：LB所绑定的logtank对应的topic id
+    * @param string|null $logTopicId **参数解释**：LB所关联的云日志服务（LTS）的日志组下的日志流ID。  **取值范围**：不涉及
     *
     * @return $this
     */

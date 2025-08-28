@@ -28,8 +28,8 @@ class MainJob implements ModelInterface, ArrayAccess
     * errorCode  任务的错误码
     * errorMsg  任务的错误信息
     * projectId  项目ID
-    * resourceId  参数解释：资源ID。
-    * subJobs  子任务列表
+    * resourceId  **参数解释**：资源ID。
+    * subJobs  **参数解释**：子任务列表。
     *
     * @var string[]
     */
@@ -56,8 +56,8 @@ class MainJob implements ModelInterface, ArrayAccess
     * errorCode  任务的错误码
     * errorMsg  任务的错误信息
     * projectId  项目ID
-    * resourceId  参数解释：资源ID。
-    * subJobs  子任务列表
+    * resourceId  **参数解释**：资源ID。
+    * subJobs  **参数解释**：子任务列表。
     *
     * @var string[]
     */
@@ -105,8 +105,8 @@ class MainJob implements ModelInterface, ArrayAccess
     * errorCode  任务的错误码
     * errorMsg  任务的错误信息
     * projectId  项目ID
-    * resourceId  参数解释：资源ID。
-    * subJobs  子任务列表
+    * resourceId  **参数解释**：资源ID。
+    * subJobs  **参数解释**：子任务列表。
     *
     * @var string[]
     */
@@ -133,8 +133,8 @@ class MainJob implements ModelInterface, ArrayAccess
     * errorCode  任务的错误码
     * errorMsg  任务的错误信息
     * projectId  项目ID
-    * resourceId  参数解释：资源ID。
-    * subJobs  子任务列表
+    * resourceId  **参数解释**：资源ID。
+    * subJobs  **参数解释**：子任务列表。
     *
     * @var string[]
     */
@@ -161,8 +161,8 @@ class MainJob implements ModelInterface, ArrayAccess
     * errorCode  任务的错误码
     * errorMsg  任务的错误信息
     * projectId  项目ID
-    * resourceId  参数解释：资源ID。
-    * subJobs  子任务列表
+    * resourceId  **参数解释**：资源ID。
+    * subJobs  **参数解释**：子任务列表。
     *
     * @var string[]
     */
@@ -500,7 +500,7 @@ class MainJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  参数解释：资源ID。
+    *  **参数解释**：资源ID。
     *
     * @return string|null
     */
@@ -512,7 +512,7 @@ class MainJob implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 参数解释：资源ID。
+    * @param string|null $resourceId **参数解释**：资源ID。
     *
     * @return $this
     */
@@ -524,7 +524,7 @@ class MainJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets subJobs
-    *  子任务列表
+    *  **参数解释**：子任务列表。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\SubJob[]|null
     */
@@ -536,7 +536,7 @@ class MainJob implements ModelInterface, ArrayAccess
     /**
     * Sets subJobs
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\SubJob[]|null $subJobs 子任务列表
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\SubJob[]|null $subJobs **参数解释**：子任务列表。
     *
     * @return $this
     */

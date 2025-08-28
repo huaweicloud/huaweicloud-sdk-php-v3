@@ -21,9 +21,9 @@ class ListHealthMonitorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * requestId  请求ID。  注：自动生成 。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * pageInfo  pageInfo
-    * healthmonitors  健康检查对象。
+    * healthmonitors  **参数解释**：健康检查对象。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListHealthMonitorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * requestId  请求ID。  注：自动生成 。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * pageInfo  pageInfo
-    * healthmonitors  健康检查对象。
+    * healthmonitors  **参数解释**：健康检查对象。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListHealthMonitorsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * requestId  请求ID。  注：自动生成 。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * pageInfo  pageInfo
-    * healthmonitors  健康检查对象。
+    * healthmonitors  **参数解释**：健康检查对象。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListHealthMonitorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * requestId  请求ID。  注：自动生成 。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * pageInfo  pageInfo
-    * healthmonitors  健康检查对象。
+    * healthmonitors  **参数解释**：健康检查对象。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListHealthMonitorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * requestId  请求ID。  注：自动生成 。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * pageInfo  pageInfo
-    * healthmonitors  健康检查对象。
+    * healthmonitors  **参数解释**：健康检查对象。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ListHealthMonitorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestId
-    *  请求ID。  注：自动生成 。
+    *  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class ListHealthMonitorsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求ID。  注：自动生成 。
+    * @param string|null $requestId **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ListHealthMonitorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets healthmonitors
-    *  健康检查对象。
+    *  **参数解释**：健康检查对象。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\HealthMonitor[]|null
     */
@@ -257,7 +257,7 @@ class ListHealthMonitorsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets healthmonitors
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\HealthMonitor[]|null $healthmonitors 健康检查对象。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\HealthMonitor[]|null $healthmonitors **参数解释**：健康检查对象。
     *
     * @return $this
     */

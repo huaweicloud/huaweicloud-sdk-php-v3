@@ -20,11 +20,11 @@ class Logtank implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  云日志ID。
-    * projectId  参数解释：项目ID。
-    * loadbalancerId  负载均衡器ID。
-    * logGroupId  云日志分组ID。
-    * logTopicId  云日志主题ID。
+    * id  **参数解释**：云日志ID。  **取值范围**：不涉及
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **取值范围**：不涉及
+    * logGroupId  **参数解释**：云日志分组ID。  **取值范围**：不涉及
+    * logTopicId  **参数解释**：云日志主题ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class Logtank implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  云日志ID。
-    * projectId  参数解释：项目ID。
-    * loadbalancerId  负载均衡器ID。
-    * logGroupId  云日志分组ID。
-    * logTopicId  云日志主题ID。
+    * id  **参数解释**：云日志ID。  **取值范围**：不涉及
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **取值范围**：不涉及
+    * logGroupId  **参数解释**：云日志分组ID。  **取值范围**：不涉及
+    * logTopicId  **参数解释**：云日志主题ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class Logtank implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  云日志ID。
-    * projectId  参数解释：项目ID。
-    * loadbalancerId  负载均衡器ID。
-    * logGroupId  云日志分组ID。
-    * logTopicId  云日志主题ID。
+    * id  **参数解释**：云日志ID。  **取值范围**：不涉及
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **取值范围**：不涉及
+    * logGroupId  **参数解释**：云日志分组ID。  **取值范围**：不涉及
+    * logTopicId  **参数解释**：云日志主题ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class Logtank implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  云日志ID。
-    * projectId  参数解释：项目ID。
-    * loadbalancerId  负载均衡器ID。
-    * logGroupId  云日志分组ID。
-    * logTopicId  云日志主题ID。
+    * id  **参数解释**：云日志ID。  **取值范围**：不涉及
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **取值范围**：不涉及
+    * logGroupId  **参数解释**：云日志分组ID。  **取值范围**：不涉及
+    * logTopicId  **参数解释**：云日志主题ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class Logtank implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  云日志ID。
-    * projectId  参数解释：项目ID。
-    * loadbalancerId  负载均衡器ID。
-    * logGroupId  云日志分组ID。
-    * logTopicId  云日志主题ID。
+    * id  **参数解释**：云日志ID。  **取值范围**：不涉及
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
+    * loadbalancerId  **参数解释**：负载均衡器ID。  **取值范围**：不涉及
+    * logGroupId  **参数解释**：云日志分组ID。  **取值范围**：不涉及
+    * logTopicId  **参数解释**：云日志主题ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -233,7 +233,7 @@ class Logtank implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  云日志ID。
+    *  **参数解释**：云日志ID。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -245,7 +245,7 @@ class Logtank implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 云日志ID。
+    * @param string $id **参数解释**：云日志ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -257,7 +257,7 @@ class Logtank implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  参数解释：项目ID。
+    *  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     *
     * @return string
     */
@@ -269,7 +269,7 @@ class Logtank implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 参数解释：项目ID。
+    * @param string $projectId **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     *
     * @return $this
     */
@@ -281,7 +281,7 @@ class Logtank implements ModelInterface, ArrayAccess
 
     /**
     * Gets loadbalancerId
-    *  负载均衡器ID。
+    *  **参数解释**：负载均衡器ID。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -293,7 +293,7 @@ class Logtank implements ModelInterface, ArrayAccess
     /**
     * Sets loadbalancerId
     *
-    * @param string $loadbalancerId 负载均衡器ID。
+    * @param string $loadbalancerId **参数解释**：负载均衡器ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -305,7 +305,7 @@ class Logtank implements ModelInterface, ArrayAccess
 
     /**
     * Gets logGroupId
-    *  云日志分组ID。
+    *  **参数解释**：云日志分组ID。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -317,7 +317,7 @@ class Logtank implements ModelInterface, ArrayAccess
     /**
     * Sets logGroupId
     *
-    * @param string $logGroupId 云日志分组ID。
+    * @param string $logGroupId **参数解释**：云日志分组ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -329,7 +329,7 @@ class Logtank implements ModelInterface, ArrayAccess
 
     /**
     * Gets logTopicId
-    *  云日志主题ID。
+    *  **参数解释**：云日志主题ID。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -341,7 +341,7 @@ class Logtank implements ModelInterface, ArrayAccess
     /**
     * Sets logTopicId
     *
-    * @param string $logTopicId 云日志主题ID。
+    * @param string $logTopicId **参数解释**：云日志主题ID。  **取值范围**：不涉及
     *
     * @return $this
     */

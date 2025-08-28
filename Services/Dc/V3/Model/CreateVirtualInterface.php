@@ -27,6 +27,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     * serviceType  接入网关类型：VGW/GDGW/LGW
     * vlan  对接客户侧vlan。当关联物理连接选择托管专线时，vlan需要和托管专线保持一致。
     * bandwidth  虚拟接口接入带宽
+    * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
     * localGatewayV4Ip  云侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * remoteGatewayV4Ip  客户侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * addressFamily  接口的地址簇类型，ipv4，ipv6
@@ -56,6 +57,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
             'serviceType' => 'string',
             'vlan' => 'int',
             'bandwidth' => 'int',
+            'priority' => 'string',
             'localGatewayV4Ip' => 'string',
             'remoteGatewayV4Ip' => 'string',
             'addressFamily' => 'string',
@@ -85,6 +87,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     * serviceType  接入网关类型：VGW/GDGW/LGW
     * vlan  对接客户侧vlan。当关联物理连接选择托管专线时，vlan需要和托管专线保持一致。
     * bandwidth  虚拟接口接入带宽
+    * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
     * localGatewayV4Ip  云侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * remoteGatewayV4Ip  客户侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * addressFamily  接口的地址簇类型，ipv4，ipv6
@@ -114,6 +117,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
         'serviceType' => null,
         'vlan' => 'int32',
         'bandwidth' => 'int32',
+        'priority' => null,
         'localGatewayV4Ip' => null,
         'remoteGatewayV4Ip' => null,
         'addressFamily' => null,
@@ -164,6 +168,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     * serviceType  接入网关类型：VGW/GDGW/LGW
     * vlan  对接客户侧vlan。当关联物理连接选择托管专线时，vlan需要和托管专线保持一致。
     * bandwidth  虚拟接口接入带宽
+    * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
     * localGatewayV4Ip  云侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * remoteGatewayV4Ip  客户侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * addressFamily  接口的地址簇类型，ipv4，ipv6
@@ -193,6 +198,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
             'serviceType' => 'service_type',
             'vlan' => 'vlan',
             'bandwidth' => 'bandwidth',
+            'priority' => 'priority',
             'localGatewayV4Ip' => 'local_gateway_v4_ip',
             'remoteGatewayV4Ip' => 'remote_gateway_v4_ip',
             'addressFamily' => 'address_family',
@@ -222,6 +228,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     * serviceType  接入网关类型：VGW/GDGW/LGW
     * vlan  对接客户侧vlan。当关联物理连接选择托管专线时，vlan需要和托管专线保持一致。
     * bandwidth  虚拟接口接入带宽
+    * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
     * localGatewayV4Ip  云侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * remoteGatewayV4Ip  客户侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * addressFamily  接口的地址簇类型，ipv4，ipv6
@@ -251,6 +258,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
             'serviceType' => 'setServiceType',
             'vlan' => 'setVlan',
             'bandwidth' => 'setBandwidth',
+            'priority' => 'setPriority',
             'localGatewayV4Ip' => 'setLocalGatewayV4Ip',
             'remoteGatewayV4Ip' => 'setRemoteGatewayV4Ip',
             'addressFamily' => 'setAddressFamily',
@@ -280,6 +288,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     * serviceType  接入网关类型：VGW/GDGW/LGW
     * vlan  对接客户侧vlan。当关联物理连接选择托管专线时，vlan需要和托管专线保持一致。
     * bandwidth  虚拟接口接入带宽
+    * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
     * localGatewayV4Ip  云侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * remoteGatewayV4Ip  客户侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * addressFamily  接口的地址簇类型，ipv4，ipv6
@@ -309,6 +318,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
             'serviceType' => 'getServiceType',
             'vlan' => 'getVlan',
             'bandwidth' => 'getBandwidth',
+            'priority' => 'getPriority',
             'localGatewayV4Ip' => 'getLocalGatewayV4Ip',
             'remoteGatewayV4Ip' => 'getRemoteGatewayV4Ip',
             'addressFamily' => 'getAddressFamily',
@@ -374,6 +384,8 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     const SERVICE_TYPE_VGW = 'VGW';
     const SERVICE_TYPE_GDGW = 'GDGW';
     const SERVICE_TYPE_LGW = 'LGW';
+    const PRIORITY_NORMAL = 'normal';
+    const PRIORITY_LOW = 'low';
     const ROUTE_MODE__STATIC = 'static';
     const ROUTE_MODE_BGP = 'bgp';
     
@@ -402,6 +414,19 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
             self::SERVICE_TYPE_VGW,
             self::SERVICE_TYPE_GDGW,
             self::SERVICE_TYPE_LGW,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPriorityAllowableValues()
+    {
+        return [
+            self::PRIORITY_NORMAL,
+            self::PRIORITY_LOW,
         ];
     }
 
@@ -441,6 +466,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
         $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
         $this->container['vlan'] = isset($data['vlan']) ? $data['vlan'] : null;
         $this->container['bandwidth'] = isset($data['bandwidth']) ? $data['bandwidth'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['localGatewayV4Ip'] = isset($data['localGatewayV4Ip']) ? $data['localGatewayV4Ip'] : null;
         $this->container['remoteGatewayV4Ip'] = isset($data['remoteGatewayV4Ip']) ? $data['remoteGatewayV4Ip'] : null;
         $this->container['addressFamily'] = isset($data['addressFamily']) ? $data['addressFamily'] : null;
@@ -521,6 +547,14 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
             if (($this->container['bandwidth'] < 2)) {
                 $invalidProperties[] = "invalid value for 'bandwidth', must be bigger than or equal to 2.";
             }
+            $allowedValues = $this->getPriorityAllowableValues();
+                if (!is_null($this->container['priority']) && !in_array($this->container['priority'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'priority', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['vgwId'] === null) {
             $invalidProperties[] = "'vgwId' can't be null";
         }
@@ -747,6 +781,30 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     public function setBandwidth($bandwidth)
     {
         $this->container['bandwidth'] = $bandwidth;
+        return $this;
+    }
+
+    /**
+    * Gets priority
+    *  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
+    *
+    * @return string|null
+    */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+    * Sets priority
+    *
+    * @param string|null $priority 虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
+    *
+    * @return $this
+    */
+    public function setPriority($priority)
+    {
+        $this->container['priority'] = $priority;
         return $this;
     }
 

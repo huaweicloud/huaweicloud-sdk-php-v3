@@ -180,9 +180,6 @@ class UpdateIpGroupRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
         if ($this->container['ips'] === null) {
             $invalidProperties[] = "'ips' can't be null";
         }
@@ -204,7 +201,7 @@ class UpdateIpGroupRequestBody implements ModelInterface, ArrayAccess
     * Gets name
     *  地址组名称
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -214,7 +211,7 @@ class UpdateIpGroupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 地址组名称
+    * @param string|null $name 地址组名称
     *
     * @return $this
     */

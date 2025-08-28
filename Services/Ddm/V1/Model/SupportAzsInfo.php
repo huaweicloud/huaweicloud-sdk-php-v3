@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Elb\V3\Model;
+namespace HuaweiCloud\SDK\Ddm\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UpadateIpGroupIpOption implements ModelInterface, ArrayAccess
+class SupportAzsInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,34 @@ class UpadateIpGroupIpOption implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UpadateIpGroupIpOption';
+    protected static $openAPIModelName = 'SupportAzsInfo';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ip  参数解释：IP地址或者IP地址段。支持IPv4、IPv6。IP地址段格式为ip-ip，例如192.168.1.2-192.168.2.253或者2001:0DB8:02de::0e12-2001:0DB8:02de::0e13，终止IP需要大于起始IP。 若传入IP地址不存在，则新增；否则更新已有IP地址的描述信息。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
-    * description  参数解释：备注信息。
+    * code  可用区编码。
+    * name  可用区名称。
+    * favored  是否支持。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'ip' => 'string',
-            'description' => 'string'
+            'code' => 'string',
+            'name' => 'string',
+            'favored' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ip  参数解释：IP地址或者IP地址段。支持IPv4、IPv6。IP地址段格式为ip-ip，例如192.168.1.2-192.168.2.253或者2001:0DB8:02de::0e12-2001:0DB8:02de::0e13，终止IP需要大于起始IP。 若传入IP地址不存在，则新增；否则更新已有IP地址的描述信息。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
-    * description  参数解释：备注信息。
+    * code  可用区编码。
+    * name  可用区名称。
+    * favored  是否支持。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'ip' => null,
-        'description' => null
+        'code' => null,
+        'name' => null,
+        'favored' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class UpadateIpGroupIpOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ip  参数解释：IP地址或者IP地址段。支持IPv4、IPv6。IP地址段格式为ip-ip，例如192.168.1.2-192.168.2.253或者2001:0DB8:02de::0e12-2001:0DB8:02de::0e13，终止IP需要大于起始IP。 若传入IP地址不存在，则新增；否则更新已有IP地址的描述信息。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
-    * description  参数解释：备注信息。
+    * code  可用区编码。
+    * name  可用区名称。
+    * favored  是否支持。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'ip' => 'ip',
-            'description' => 'description'
+            'code' => 'code',
+            'name' => 'name',
+            'favored' => 'favored'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ip  参数解释：IP地址或者IP地址段。支持IPv4、IPv6。IP地址段格式为ip-ip，例如192.168.1.2-192.168.2.253或者2001:0DB8:02de::0e12-2001:0DB8:02de::0e13，终止IP需要大于起始IP。 若传入IP地址不存在，则新增；否则更新已有IP地址的描述信息。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
-    * description  参数解释：备注信息。
+    * code  可用区编码。
+    * name  可用区名称。
+    * favored  是否支持。
     *
     * @var string[]
     */
     protected static $setters = [
-            'ip' => 'setIp',
-            'description' => 'setDescription'
+            'code' => 'setCode',
+            'name' => 'setName',
+            'favored' => 'setFavored'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ip  参数解释：IP地址或者IP地址段。支持IPv4、IPv6。IP地址段格式为ip-ip，例如192.168.1.2-192.168.2.253或者2001:0DB8:02de::0e12-2001:0DB8:02de::0e13，终止IP需要大于起始IP。 若传入IP地址不存在，则新增；否则更新已有IP地址的描述信息。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
-    * description  参数解释：备注信息。
+    * code  可用区编码。
+    * name  可用区名称。
+    * favored  是否支持。
     *
     * @var string[]
     */
     protected static $getters = [
-            'ip' => 'getIp',
-            'description' => 'getDescription'
+            'code' => 'getCode',
+            'name' => 'getName',
+            'favored' => 'getFavored'
     ];
 
     /**
@@ -157,8 +167,9 @@ class UpadateIpGroupIpOption implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['favored'] = isset($data['favored']) ? $data['favored'] : null;
     }
 
     /**
@@ -169,15 +180,6 @@ class UpadateIpGroupIpOption implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['ip'] === null) {
-            $invalidProperties[] = "'ip' can't be null";
-        }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -193,50 +195,74 @@ class UpadateIpGroupIpOption implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets ip
-    *  参数解释：IP地址或者IP地址段。支持IPv4、IPv6。IP地址段格式为ip-ip，例如192.168.1.2-192.168.2.253或者2001:0DB8:02de::0e12-2001:0DB8:02de::0e13，终止IP需要大于起始IP。 若传入IP地址不存在，则新增；否则更新已有IP地址的描述信息。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
+    * Gets code
+    *  可用区编码。
     *
-    * @return string
+    * @return string|null
     */
-    public function getIp()
+    public function getCode()
     {
-        return $this->container['ip'];
+        return $this->container['code'];
     }
 
     /**
-    * Sets ip
+    * Sets code
     *
-    * @param string $ip 参数解释：IP地址或者IP地址段。支持IPv4、IPv6。IP地址段格式为ip-ip，例如192.168.1.2-192.168.2.253或者2001:0DB8:02de::0e12-2001:0DB8:02de::0e13，终止IP需要大于起始IP。 若传入IP地址不存在，则新增；否则更新已有IP地址的描述信息。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
+    * @param string|null $code 可用区编码。
     *
     * @return $this
     */
-    public function setIp($ip)
+    public function setCode($code)
     {
-        $this->container['ip'] = $ip;
+        $this->container['code'] = $code;
         return $this;
     }
 
     /**
-    * Gets description
-    *  参数解释：备注信息。
+    * Gets name
+    *  可用区名称。
     *
     * @return string|null
     */
-    public function getDescription()
+    public function getName()
     {
-        return $this->container['description'];
+        return $this->container['name'];
     }
 
     /**
-    * Sets description
+    * Sets name
     *
-    * @param string|null $description 参数解释：备注信息。
+    * @param string|null $name 可用区名称。
     *
     * @return $this
     */
-    public function setDescription($description)
+    public function setName($name)
     {
-        $this->container['description'] = $description;
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets favored
+    *  是否支持。
+    *
+    * @return bool|null
+    */
+    public function getFavored()
+    {
+        return $this->container['favored'];
+    }
+
+    /**
+    * Sets favored
+    *
+    * @param bool|null $favored 是否支持。
+    *
+    * @return $this
+    */
+    public function setFavored($favored)
+    {
+        $this->container['favored'] = $favored;
         return $this;
     }
 

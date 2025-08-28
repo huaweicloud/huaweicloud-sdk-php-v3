@@ -20,7 +20,7 @@ class ShowListenerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * listenerId  监听器ID。
+    * listenerId  **参数解释**：监听器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ShowListenerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * listenerId  监听器ID。
+    * listenerId  **参数解释**：监听器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ShowListenerRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * listenerId  监听器ID。
+    * listenerId  **参数解释**：监听器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowListenerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * listenerId  监听器ID。
+    * listenerId  **参数解释**：监听器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowListenerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * listenerId  监听器ID。
+    * listenerId  **参数解释**：监听器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ShowListenerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets listenerId
-    *  监听器ID。
+    *  **参数解释**：监听器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class ShowListenerRequest implements ModelInterface, ArrayAccess
     /**
     * Sets listenerId
     *
-    * @param string $listenerId 监听器ID。
+    * @param string $listenerId **参数解释**：监听器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

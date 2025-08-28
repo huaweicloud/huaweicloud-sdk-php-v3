@@ -25,7 +25,7 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * type  自定义读法类型 CHINESE_G2P：拼音
+    * type  自定义读法类型。 - CHINESE_G2P：拼音 - PHONETIC_SYMBOL：音标 - CONTINUUM：连读 - ALIAS：别名 - SAY_AS：数字英文读法
     * ttsServiceName  声音模型名称
     * isVocabularyConfigEnable  是否应用词表配置，从周边服务传递
     * groupId  分组id
@@ -63,7 +63,7 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * type  自定义读法类型 CHINESE_G2P：拼音
+    * type  自定义读法类型。 - CHINESE_G2P：拼音 - PHONETIC_SYMBOL：音标 - CONTINUUM：连读 - ALIAS：别名 - SAY_AS：数字英文读法
     * ttsServiceName  声音模型名称
     * isVocabularyConfigEnable  是否应用词表配置，从周边服务传递
     * groupId  分组id
@@ -122,7 +122,7 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * type  自定义读法类型 CHINESE_G2P：拼音
+    * type  自定义读法类型。 - CHINESE_G2P：拼音 - PHONETIC_SYMBOL：音标 - CONTINUUM：连读 - ALIAS：别名 - SAY_AS：数字英文读法
     * ttsServiceName  声音模型名称
     * isVocabularyConfigEnable  是否应用词表配置，从周边服务传递
     * groupId  分组id
@@ -160,7 +160,7 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * type  自定义读法类型 CHINESE_G2P：拼音
+    * type  自定义读法类型。 - CHINESE_G2P：拼音 - PHONETIC_SYMBOL：音标 - CONTINUUM：连读 - ALIAS：别名 - SAY_AS：数字英文读法
     * ttsServiceName  声音模型名称
     * isVocabularyConfigEnable  是否应用词表配置，从周边服务传递
     * groupId  分组id
@@ -198,7 +198,7 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * type  自定义读法类型 CHINESE_G2P：拼音
+    * type  自定义读法类型。 - CHINESE_G2P：拼音 - PHONETIC_SYMBOL：音标 - CONTINUUM：连读 - ALIAS：别名 - SAY_AS：数字英文读法
     * ttsServiceName  声音模型名称
     * isVocabularyConfigEnable  是否应用词表配置，从周边服务传递
     * groupId  分组id
@@ -538,7 +538,7 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  自定义读法类型 CHINESE_G2P：拼音
+    *  自定义读法类型。 - CHINESE_G2P：拼音 - PHONETIC_SYMBOL：音标 - CONTINUUM：连读 - ALIAS：别名 - SAY_AS：数字英文读法
     *
     * @return string|null
     */
@@ -550,7 +550,7 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 自定义读法类型 CHINESE_G2P：拼音
+    * @param string|null $type 自定义读法类型。 - CHINESE_G2P：拼音 - PHONETIC_SYMBOL：音标 - CONTINUUM：连读 - ALIAS：别名 - SAY_AS：数字英文读法
     *
     * @return $this
     */

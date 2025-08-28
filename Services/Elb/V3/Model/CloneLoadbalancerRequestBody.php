@@ -20,7 +20,7 @@ class CloneLoadbalancerRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  参数解释：单次最大复制数量。  取值范围：1-10  默认取值：1
+    * count  **参数解释**：单次最大复制数量。  **约束限制**：不涉及  **取值范围**：1-10  **默认取值**：1
     * targetLoadbalancerParam  targetLoadbalancerParam
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CloneLoadbalancerRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  参数解释：单次最大复制数量。  取值范围：1-10  默认取值：1
+    * count  **参数解释**：单次最大复制数量。  **约束限制**：不涉及  **取值范围**：1-10  **默认取值**：1
     * targetLoadbalancerParam  targetLoadbalancerParam
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CloneLoadbalancerRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  参数解释：单次最大复制数量。  取值范围：1-10  默认取值：1
+    * count  **参数解释**：单次最大复制数量。  **约束限制**：不涉及  **取值范围**：1-10  **默认取值**：1
     * targetLoadbalancerParam  targetLoadbalancerParam
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CloneLoadbalancerRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  参数解释：单次最大复制数量。  取值范围：1-10  默认取值：1
+    * count  **参数解释**：单次最大复制数量。  **约束限制**：不涉及  **取值范围**：1-10  **默认取值**：1
     * targetLoadbalancerParam  targetLoadbalancerParam
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CloneLoadbalancerRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  参数解释：单次最大复制数量。  取值范围：1-10  默认取值：1
+    * count  **参数解释**：单次最大复制数量。  **约束限制**：不涉及  **取值范围**：1-10  **默认取值**：1
     * targetLoadbalancerParam  targetLoadbalancerParam
     *
     * @var string[]
@@ -188,7 +188,7 @@ class CloneLoadbalancerRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  参数解释：单次最大复制数量。  取值范围：1-10  默认取值：1
+    *  **参数解释**：单次最大复制数量。  **约束限制**：不涉及  **取值范围**：1-10  **默认取值**：1
     *
     * @return int|null
     */
@@ -200,7 +200,7 @@ class CloneLoadbalancerRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 参数解释：单次最大复制数量。  取值范围：1-10  默认取值：1
+    * @param int|null $count **参数解释**：单次最大复制数量。  **约束限制**：不涉及  **取值范围**：1-10  **默认取值**：1
     *
     * @return $this
     */

@@ -22,24 +22,28 @@ class OpExternalInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * reviewIdList  审核详情id列表
     * algorithmFailureReason  算法侧失败原因
+    * adminAuditFailureReason  管理员驳回的原因
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'reviewIdList' => 'string[]',
-            'algorithmFailureReason' => 'string'
+            'algorithmFailureReason' => 'string',
+            'adminAuditFailureReason' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * reviewIdList  审核详情id列表
     * algorithmFailureReason  算法侧失败原因
+    * adminAuditFailureReason  管理员驳回的原因
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'reviewIdList' => null,
-        'algorithmFailureReason' => null
+        'algorithmFailureReason' => null,
+        'adminAuditFailureReason' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class OpExternalInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * reviewIdList  审核详情id列表
     * algorithmFailureReason  算法侧失败原因
+    * adminAuditFailureReason  管理员驳回的原因
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'reviewIdList' => 'review_id_list',
-            'algorithmFailureReason' => 'algorithm_failure_reason'
+            'algorithmFailureReason' => 'algorithm_failure_reason',
+            'adminAuditFailureReason' => 'admin_audit_failure_reason'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * reviewIdList  审核详情id列表
     * algorithmFailureReason  算法侧失败原因
+    * adminAuditFailureReason  管理员驳回的原因
     *
     * @var string[]
     */
     protected static $setters = [
             'reviewIdList' => 'setReviewIdList',
-            'algorithmFailureReason' => 'setAlgorithmFailureReason'
+            'algorithmFailureReason' => 'setAlgorithmFailureReason',
+            'adminAuditFailureReason' => 'setAdminAuditFailureReason'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * reviewIdList  审核详情id列表
     * algorithmFailureReason  算法侧失败原因
+    * adminAuditFailureReason  管理员驳回的原因
     *
     * @var string[]
     */
     protected static $getters = [
             'reviewIdList' => 'getReviewIdList',
-            'algorithmFailureReason' => 'getAlgorithmFailureReason'
+            'algorithmFailureReason' => 'getAlgorithmFailureReason',
+            'adminAuditFailureReason' => 'getAdminAuditFailureReason'
     ];
 
     /**
@@ -159,6 +169,7 @@ class OpExternalInfo implements ModelInterface, ArrayAccess
     {
         $this->container['reviewIdList'] = isset($data['reviewIdList']) ? $data['reviewIdList'] : null;
         $this->container['algorithmFailureReason'] = isset($data['algorithmFailureReason']) ? $data['algorithmFailureReason'] : null;
+        $this->container['adminAuditFailureReason'] = isset($data['adminAuditFailureReason']) ? $data['adminAuditFailureReason'] : null;
     }
 
     /**
@@ -174,6 +185,12 @@ class OpExternalInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['algorithmFailureReason']) && (mb_strlen($this->container['algorithmFailureReason']) < 0)) {
                 $invalidProperties[] = "invalid value for 'algorithmFailureReason', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['adminAuditFailureReason']) && (mb_strlen($this->container['adminAuditFailureReason']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'adminAuditFailureReason', the character length must be smaller than or equal to 4096.";
+            }
+            if (!is_null($this->container['adminAuditFailureReason']) && (mb_strlen($this->container['adminAuditFailureReason']) < 0)) {
+                $invalidProperties[] = "invalid value for 'adminAuditFailureReason', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -234,6 +251,30 @@ class OpExternalInfo implements ModelInterface, ArrayAccess
     public function setAlgorithmFailureReason($algorithmFailureReason)
     {
         $this->container['algorithmFailureReason'] = $algorithmFailureReason;
+        return $this;
+    }
+
+    /**
+    * Gets adminAuditFailureReason
+    *  管理员驳回的原因
+    *
+    * @return string|null
+    */
+    public function getAdminAuditFailureReason()
+    {
+        return $this->container['adminAuditFailureReason'];
+    }
+
+    /**
+    * Sets adminAuditFailureReason
+    *
+    * @param string|null $adminAuditFailureReason 管理员驳回的原因
+    *
+    * @return $this
+    */
+    public function setAdminAuditFailureReason($adminAuditFailureReason)
+    {
+        $this->container['adminAuditFailureReason'] = $adminAuditFailureReason;
         return $this;
     }
 

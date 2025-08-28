@@ -21,9 +21,9 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * loadbalancerList  新实例相关信息
-    * requestId  请求id
-    * jobId  实例复制任务id
+    * loadbalancerList  loadbalancerList
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * jobId  **参数解释**：实例复制任务ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * loadbalancerList  新实例相关信息
-    * requestId  请求id
-    * jobId  实例复制任务id
+    * loadbalancerList  loadbalancerList
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * jobId  **参数解释**：实例复制任务ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * loadbalancerList  新实例相关信息
-    * requestId  请求id
-    * jobId  实例复制任务id
+    * loadbalancerList  loadbalancerList
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * jobId  **参数解释**：实例复制任务ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * loadbalancerList  新实例相关信息
-    * requestId  请求id
-    * jobId  实例复制任务id
+    * loadbalancerList  loadbalancerList
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * jobId  **参数解释**：实例复制任务ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * loadbalancerList  新实例相关信息
-    * requestId  请求id
-    * jobId  实例复制任务id
+    * loadbalancerList  loadbalancerList
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * jobId  **参数解释**：实例复制任务ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets loadbalancerList
-    *  新实例相关信息
+    *  loadbalancerList
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\CloneLoadbalancerResponseBodyLoadbalancerList[]|null
     */
@@ -209,7 +209,7 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets loadbalancerList
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\CloneLoadbalancerResponseBodyLoadbalancerList[]|null $loadbalancerList 新实例相关信息
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\CloneLoadbalancerResponseBodyLoadbalancerList[]|null $loadbalancerList loadbalancerList
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestId
-    *  请求id
+    *  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求id
+    * @param string|null $requestId **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  实例复制任务id
+    *  **参数解释**：实例复制任务ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 实例复制任务id
+    * @param string|null $jobId **参数解释**：实例复制任务ID。  **取值范围**：不涉及
     *
     * @return $this
     */

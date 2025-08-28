@@ -20,20 +20,19 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  内核模块名称
-    * fileName  文件名称
-    * version  内核模块版本号
-    * srcversion  源码版本号
-    * path  文件路径
-    * size  文件大小
-    * mode  文件权限
-    * uid  文件用户ID
-    * ctime  文件创建时间
-    * mtime  最后修改时间
-    * hash  文件哈希
-    * desc  内核模块描述信息
-    * recordTime  扫描时间
-    * firstScanTime  首次扫描时间
+    * name  **参数解释**: 内核模块名称 **取值范围**: 字符长度0-256
+    * fileName  **参数解释**: 文件名称 **取值范围**: 字符长度0-256
+    * version  **参数解释**: 内核模块版本号 **取值范围**: 字符长度0-64
+    * srcversion  **参数解释**: 源码版本号 **取值范围**: 字符长度0-64
+    * path  **参数解释**: 文件路径 **取值范围**: 字符长度0-1024
+    * size  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值2147483647
+    * mode  **参数解释**: 文件权限 **取值范围**: 字符长度0-32
+    * uid  **参数解释**: 文件用户ID **取值范围**: 最小值0，最大值2147483647
+    * ctime  **参数解释**: 文件创建时间 **取值范围**: 最小值0，最大值2^63-1
+    * mtime  **参数解释**: 最后修改时间 **取值范围**: 最小值0，最大值2^63-1
+    * hash  **参数解释**: 文件哈希 **取值范围**: 字符长度0-64
+    * desc  **参数解释**: 内核模块描述信息 **取值范围**: 字符长度0-256
+    * recordTime  **参数解释**: 扫描时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @var string[]
     */
@@ -50,26 +49,24 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
             'mtime' => 'int',
             'hash' => 'string',
             'desc' => 'string',
-            'recordTime' => 'int',
-            'firstScanTime' => 'int'
+            'recordTime' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  内核模块名称
-    * fileName  文件名称
-    * version  内核模块版本号
-    * srcversion  源码版本号
-    * path  文件路径
-    * size  文件大小
-    * mode  文件权限
-    * uid  文件用户ID
-    * ctime  文件创建时间
-    * mtime  最后修改时间
-    * hash  文件哈希
-    * desc  内核模块描述信息
-    * recordTime  扫描时间
-    * firstScanTime  首次扫描时间
+    * name  **参数解释**: 内核模块名称 **取值范围**: 字符长度0-256
+    * fileName  **参数解释**: 文件名称 **取值范围**: 字符长度0-256
+    * version  **参数解释**: 内核模块版本号 **取值范围**: 字符长度0-64
+    * srcversion  **参数解释**: 源码版本号 **取值范围**: 字符长度0-64
+    * path  **参数解释**: 文件路径 **取值范围**: 字符长度0-1024
+    * size  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值2147483647
+    * mode  **参数解释**: 文件权限 **取值范围**: 字符长度0-32
+    * uid  **参数解释**: 文件用户ID **取值范围**: 最小值0，最大值2147483647
+    * ctime  **参数解释**: 文件创建时间 **取值范围**: 最小值0，最大值2^63-1
+    * mtime  **参数解释**: 最后修改时间 **取值范围**: 最小值0，最大值2^63-1
+    * hash  **参数解释**: 文件哈希 **取值范围**: 字符长度0-64
+    * desc  **参数解释**: 内核模块描述信息 **取值范围**: 字符长度0-256
+    * recordTime  **参数解释**: 扫描时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @var string[]
     */
@@ -79,15 +76,14 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
         'version' => null,
         'srcversion' => null,
         'path' => null,
-        'size' => 'int64',
+        'size' => 'int32',
         'mode' => null,
         'uid' => 'int32',
         'ctime' => 'int64',
         'mtime' => 'int64',
         'hash' => null,
         'desc' => null,
-        'recordTime' => 'int64',
-        'firstScanTime' => 'int64'
+        'recordTime' => 'int64'
     ];
 
     /**
@@ -113,20 +109,19 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  内核模块名称
-    * fileName  文件名称
-    * version  内核模块版本号
-    * srcversion  源码版本号
-    * path  文件路径
-    * size  文件大小
-    * mode  文件权限
-    * uid  文件用户ID
-    * ctime  文件创建时间
-    * mtime  最后修改时间
-    * hash  文件哈希
-    * desc  内核模块描述信息
-    * recordTime  扫描时间
-    * firstScanTime  首次扫描时间
+    * name  **参数解释**: 内核模块名称 **取值范围**: 字符长度0-256
+    * fileName  **参数解释**: 文件名称 **取值范围**: 字符长度0-256
+    * version  **参数解释**: 内核模块版本号 **取值范围**: 字符长度0-64
+    * srcversion  **参数解释**: 源码版本号 **取值范围**: 字符长度0-64
+    * path  **参数解释**: 文件路径 **取值范围**: 字符长度0-1024
+    * size  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值2147483647
+    * mode  **参数解释**: 文件权限 **取值范围**: 字符长度0-32
+    * uid  **参数解释**: 文件用户ID **取值范围**: 最小值0，最大值2147483647
+    * ctime  **参数解释**: 文件创建时间 **取值范围**: 最小值0，最大值2^63-1
+    * mtime  **参数解释**: 最后修改时间 **取值范围**: 最小值0，最大值2^63-1
+    * hash  **参数解释**: 文件哈希 **取值范围**: 字符长度0-64
+    * desc  **参数解释**: 内核模块描述信息 **取值范围**: 字符长度0-256
+    * recordTime  **参数解释**: 扫描时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @var string[]
     */
@@ -143,26 +138,24 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
             'mtime' => 'mtime',
             'hash' => 'hash',
             'desc' => 'desc',
-            'recordTime' => 'record_time',
-            'firstScanTime' => 'first_scan_time'
+            'recordTime' => 'record_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  内核模块名称
-    * fileName  文件名称
-    * version  内核模块版本号
-    * srcversion  源码版本号
-    * path  文件路径
-    * size  文件大小
-    * mode  文件权限
-    * uid  文件用户ID
-    * ctime  文件创建时间
-    * mtime  最后修改时间
-    * hash  文件哈希
-    * desc  内核模块描述信息
-    * recordTime  扫描时间
-    * firstScanTime  首次扫描时间
+    * name  **参数解释**: 内核模块名称 **取值范围**: 字符长度0-256
+    * fileName  **参数解释**: 文件名称 **取值范围**: 字符长度0-256
+    * version  **参数解释**: 内核模块版本号 **取值范围**: 字符长度0-64
+    * srcversion  **参数解释**: 源码版本号 **取值范围**: 字符长度0-64
+    * path  **参数解释**: 文件路径 **取值范围**: 字符长度0-1024
+    * size  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值2147483647
+    * mode  **参数解释**: 文件权限 **取值范围**: 字符长度0-32
+    * uid  **参数解释**: 文件用户ID **取值范围**: 最小值0，最大值2147483647
+    * ctime  **参数解释**: 文件创建时间 **取值范围**: 最小值0，最大值2^63-1
+    * mtime  **参数解释**: 最后修改时间 **取值范围**: 最小值0，最大值2^63-1
+    * hash  **参数解释**: 文件哈希 **取值范围**: 字符长度0-64
+    * desc  **参数解释**: 内核模块描述信息 **取值范围**: 字符长度0-256
+    * recordTime  **参数解释**: 扫描时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @var string[]
     */
@@ -179,26 +172,24 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
             'mtime' => 'setMtime',
             'hash' => 'setHash',
             'desc' => 'setDesc',
-            'recordTime' => 'setRecordTime',
-            'firstScanTime' => 'setFirstScanTime'
+            'recordTime' => 'setRecordTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  内核模块名称
-    * fileName  文件名称
-    * version  内核模块版本号
-    * srcversion  源码版本号
-    * path  文件路径
-    * size  文件大小
-    * mode  文件权限
-    * uid  文件用户ID
-    * ctime  文件创建时间
-    * mtime  最后修改时间
-    * hash  文件哈希
-    * desc  内核模块描述信息
-    * recordTime  扫描时间
-    * firstScanTime  首次扫描时间
+    * name  **参数解释**: 内核模块名称 **取值范围**: 字符长度0-256
+    * fileName  **参数解释**: 文件名称 **取值范围**: 字符长度0-256
+    * version  **参数解释**: 内核模块版本号 **取值范围**: 字符长度0-64
+    * srcversion  **参数解释**: 源码版本号 **取值范围**: 字符长度0-64
+    * path  **参数解释**: 文件路径 **取值范围**: 字符长度0-1024
+    * size  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值2147483647
+    * mode  **参数解释**: 文件权限 **取值范围**: 字符长度0-32
+    * uid  **参数解释**: 文件用户ID **取值范围**: 最小值0，最大值2147483647
+    * ctime  **参数解释**: 文件创建时间 **取值范围**: 最小值0，最大值2^63-1
+    * mtime  **参数解释**: 最后修改时间 **取值范围**: 最小值0，最大值2^63-1
+    * hash  **参数解释**: 文件哈希 **取值范围**: 字符长度0-64
+    * desc  **参数解释**: 内核模块描述信息 **取值范围**: 字符长度0-256
+    * recordTime  **参数解释**: 扫描时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @var string[]
     */
@@ -215,8 +206,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
             'mtime' => 'getMtime',
             'hash' => 'getHash',
             'desc' => 'getDesc',
-            'recordTime' => 'getRecordTime',
-            'firstScanTime' => 'getFirstScanTime'
+            'recordTime' => 'getRecordTime'
     ];
 
     /**
@@ -290,7 +280,6 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
         $this->container['hash'] = isset($data['hash']) ? $data['hash'] : null;
         $this->container['desc'] = isset($data['desc']) ? $data['desc'] : null;
         $this->container['recordTime'] = isset($data['recordTime']) ? $data['recordTime'] : null;
-        $this->container['firstScanTime'] = isset($data['firstScanTime']) ? $data['firstScanTime'] : null;
     }
 
     /**
@@ -337,6 +326,12 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['mode']) && (mb_strlen($this->container['mode']) < 0)) {
                 $invalidProperties[] = "invalid value for 'mode', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['hash']) && (mb_strlen($this->container['hash']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hash', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['hash']) && (mb_strlen($this->container['hash']) < 0)) {
+                $invalidProperties[] = "invalid value for 'hash', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['desc']) && (mb_strlen($this->container['desc']) > 256)) {
                 $invalidProperties[] = "invalid value for 'desc', the character length must be smaller than or equal to 256.";
             }
@@ -359,7 +354,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  内核模块名称
+    *  **参数解释**: 内核模块名称 **取值范围**: 字符长度0-256
     *
     * @return string|null
     */
@@ -371,7 +366,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 内核模块名称
+    * @param string|null $name **参数解释**: 内核模块名称 **取值范围**: 字符长度0-256
     *
     * @return $this
     */
@@ -383,7 +378,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileName
-    *  文件名称
+    *  **参数解释**: 文件名称 **取值范围**: 字符长度0-256
     *
     * @return string|null
     */
@@ -395,7 +390,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileName
     *
-    * @param string|null $fileName 文件名称
+    * @param string|null $fileName **参数解释**: 文件名称 **取值范围**: 字符长度0-256
     *
     * @return $this
     */
@@ -407,7 +402,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  内核模块版本号
+    *  **参数解释**: 内核模块版本号 **取值范围**: 字符长度0-64
     *
     * @return string|null
     */
@@ -419,7 +414,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 内核模块版本号
+    * @param string|null $version **参数解释**: 内核模块版本号 **取值范围**: 字符长度0-64
     *
     * @return $this
     */
@@ -431,7 +426,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcversion
-    *  源码版本号
+    *  **参数解释**: 源码版本号 **取值范围**: 字符长度0-64
     *
     * @return string|null
     */
@@ -443,7 +438,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets srcversion
     *
-    * @param string|null $srcversion 源码版本号
+    * @param string|null $srcversion **参数解释**: 源码版本号 **取值范围**: 字符长度0-64
     *
     * @return $this
     */
@@ -455,7 +450,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  文件路径
+    *  **参数解释**: 文件路径 **取值范围**: 字符长度0-1024
     *
     * @return string|null
     */
@@ -467,7 +462,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string|null $path 文件路径
+    * @param string|null $path **参数解释**: 文件路径 **取值范围**: 字符长度0-1024
     *
     * @return $this
     */
@@ -479,7 +474,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  文件大小
+    *  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -491,7 +486,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 文件大小
+    * @param int|null $size **参数解释**: 文件大小 **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -503,7 +498,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  文件权限
+    *  **参数解释**: 文件权限 **取值范围**: 字符长度0-32
     *
     * @return string|null
     */
@@ -515,7 +510,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string|null $mode 文件权限
+    * @param string|null $mode **参数解释**: 文件权限 **取值范围**: 字符长度0-32
     *
     * @return $this
     */
@@ -527,7 +522,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets uid
-    *  文件用户ID
+    *  **参数解释**: 文件用户ID **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -539,7 +534,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets uid
     *
-    * @param int|null $uid 文件用户ID
+    * @param int|null $uid **参数解释**: 文件用户ID **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -551,7 +546,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ctime
-    *  文件创建时间
+    *  **参数解释**: 文件创建时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @return int|null
     */
@@ -563,7 +558,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ctime
     *
-    * @param int|null $ctime 文件创建时间
+    * @param int|null $ctime **参数解释**: 文件创建时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @return $this
     */
@@ -575,7 +570,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets mtime
-    *  最后修改时间
+    *  **参数解释**: 最后修改时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @return int|null
     */
@@ -587,7 +582,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets mtime
     *
-    * @param int|null $mtime 最后修改时间
+    * @param int|null $mtime **参数解释**: 最后修改时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @return $this
     */
@@ -599,7 +594,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hash
-    *  文件哈希
+    *  **参数解释**: 文件哈希 **取值范围**: 字符长度0-64
     *
     * @return string|null
     */
@@ -611,7 +606,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hash
     *
-    * @param string|null $hash 文件哈希
+    * @param string|null $hash **参数解释**: 文件哈希 **取值范围**: 字符长度0-64
     *
     * @return $this
     */
@@ -623,7 +618,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets desc
-    *  内核模块描述信息
+    *  **参数解释**: 内核模块描述信息 **取值范围**: 字符长度0-256
     *
     * @return string|null
     */
@@ -635,7 +630,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets desc
     *
-    * @param string|null $desc 内核模块描述信息
+    * @param string|null $desc **参数解释**: 内核模块描述信息 **取值范围**: 字符长度0-256
     *
     * @return $this
     */
@@ -647,7 +642,7 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordTime
-    *  扫描时间
+    *  **参数解释**: 扫描时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @return int|null
     */
@@ -659,37 +654,13 @@ class KernelModuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets recordTime
     *
-    * @param int|null $recordTime 扫描时间
+    * @param int|null $recordTime **参数解释**: 扫描时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @return $this
     */
     public function setRecordTime($recordTime)
     {
         $this->container['recordTime'] = $recordTime;
-        return $this;
-    }
-
-    /**
-    * Gets firstScanTime
-    *  首次扫描时间
-    *
-    * @return int|null
-    */
-    public function getFirstScanTime()
-    {
-        return $this->container['firstScanTime'];
-    }
-
-    /**
-    * Sets firstScanTime
-    *
-    * @param int|null $firstScanTime 首次扫描时间
-    *
-    * @return $this
-    */
-    public function setFirstScanTime($firstScanTime)
-    {
-        $this->container['firstScanTime'] = $firstScanTime;
         return $this;
     }
 

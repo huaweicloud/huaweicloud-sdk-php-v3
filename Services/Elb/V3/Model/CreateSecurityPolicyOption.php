@@ -20,11 +20,11 @@ class CreateSecurityPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  自定义安全策略的名称。默认空字符串\"\"。
-    * description  自定义安全策略的描述信息。默认空字符串\"\"。
-    * enterpriseProjectId  所属企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
-    * protocols  自定义安全策略选择的TLS协议列表。取值：TLSv1, TLSv1.1, TLSv1.2, TLSv1.3
-    * ciphers  自定义安全策略的加密套件列表。支持以下加密套件：  ECDHE-RSA-AES256-GCM-SHA384,ECDHE-RSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384,ECDHE-ECDSA-AES128-GCM-SHA256, AES128-GCM-SHA256,AES256-GCM-SHA384,ECDHE-ECDSA-AES128-SHA256, ECDHE-RSA-AES128-SHA256,AES128-SHA256,AES256-SHA256, ECDHE-ECDSA-AES256-SHA384,ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA,ECDHE-RSA-AES128-SHA,ECDHE-RSA-AES256-SHA, ECDHE-ECDSA-AES256-SHA,AES128-SHA,AES256-SHA,CAMELLIA128-SHA, DES-CBC3-SHA,CAMELLIA256-SHA,ECDHE-RSA-CHACHA20-POLY1305, ECDHE-ECDSA-CHACHA20-POLY1305,TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256,TLS_AES_128_CCM_8_SHA256  使用说明： - 协议和加密套件必须匹配，即ciphers中必须至少有一种有与协议匹配的加密套件。  > 协议与加密套件的匹配关系可参考系统安全策略
+    * name  **参数解释**：自定义安全策略的名称。  **约束限制**：不涉及  **取值范围**：0到255个字符。  **默认取值**：不涉及
+    * description  **参数解释**：自定义安全策略的描述信息。  **约束限制**：不涉及  **取值范围**：0到255个字符。  **默认取值**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。创建时不传则资源属于default企业项目，返回enterprise_project_id=\"0\"。  **约束限制**：不能传入空字符串\"\"、\"0\"或不存在的企业项目ID。  **取值范围**：不涉及  **默认取值**：\"0\"  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * protocols  **参数解释**：自定义安全策略选择的TLS协议列表。  **约束限制**：不涉及  **取值范围**：TLSv1, TLSv1.1, TLSv1.2, TLSv1.3  **默认取值**：不涉及
+    * ciphers  **参数解释**：自定义安全策略的加密套件列表。  **约束限制**：协议和加密套件必须匹配，即ciphers中必须至少有一种与协议匹配的加密套件。  **取值范围**：ECDHE-RSA-AES256-GCM-SHA384,ECDHE-RSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384,ECDHE-ECDSA-AES128-GCM-SHA256, AES128-GCM-SHA256,AES256-GCM-SHA384,ECDHE-ECDSA-AES128-SHA256, ECDHE-RSA-AES128-SHA256,AES128-SHA256,AES256-SHA256, ECDHE-ECDSA-AES256-SHA384,ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA,ECDHE-RSA-AES128-SHA,ECDHE-RSA-AES256-SHA, ECDHE-ECDSA-AES256-SHA,AES128-SHA,AES256-SHA,CAMELLIA128-SHA, DES-CBC3-SHA,CAMELLIA256-SHA,ECDHE-RSA-CHACHA20-POLY1305, ECDHE-ECDSA-CHACHA20-POLY1305,TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256,TLS_AES_128_CCM_8_SHA256  **默认取值**：不涉及  > 协议与加密套件的匹配关系可参考系统安全策略
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class CreateSecurityPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  自定义安全策略的名称。默认空字符串\"\"。
-    * description  自定义安全策略的描述信息。默认空字符串\"\"。
-    * enterpriseProjectId  所属企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
-    * protocols  自定义安全策略选择的TLS协议列表。取值：TLSv1, TLSv1.1, TLSv1.2, TLSv1.3
-    * ciphers  自定义安全策略的加密套件列表。支持以下加密套件：  ECDHE-RSA-AES256-GCM-SHA384,ECDHE-RSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384,ECDHE-ECDSA-AES128-GCM-SHA256, AES128-GCM-SHA256,AES256-GCM-SHA384,ECDHE-ECDSA-AES128-SHA256, ECDHE-RSA-AES128-SHA256,AES128-SHA256,AES256-SHA256, ECDHE-ECDSA-AES256-SHA384,ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA,ECDHE-RSA-AES128-SHA,ECDHE-RSA-AES256-SHA, ECDHE-ECDSA-AES256-SHA,AES128-SHA,AES256-SHA,CAMELLIA128-SHA, DES-CBC3-SHA,CAMELLIA256-SHA,ECDHE-RSA-CHACHA20-POLY1305, ECDHE-ECDSA-CHACHA20-POLY1305,TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256,TLS_AES_128_CCM_8_SHA256  使用说明： - 协议和加密套件必须匹配，即ciphers中必须至少有一种有与协议匹配的加密套件。  > 协议与加密套件的匹配关系可参考系统安全策略
+    * name  **参数解释**：自定义安全策略的名称。  **约束限制**：不涉及  **取值范围**：0到255个字符。  **默认取值**：不涉及
+    * description  **参数解释**：自定义安全策略的描述信息。  **约束限制**：不涉及  **取值范围**：0到255个字符。  **默认取值**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。创建时不传则资源属于default企业项目，返回enterprise_project_id=\"0\"。  **约束限制**：不能传入空字符串\"\"、\"0\"或不存在的企业项目ID。  **取值范围**：不涉及  **默认取值**：\"0\"  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * protocols  **参数解释**：自定义安全策略选择的TLS协议列表。  **约束限制**：不涉及  **取值范围**：TLSv1, TLSv1.1, TLSv1.2, TLSv1.3  **默认取值**：不涉及
+    * ciphers  **参数解释**：自定义安全策略的加密套件列表。  **约束限制**：协议和加密套件必须匹配，即ciphers中必须至少有一种与协议匹配的加密套件。  **取值范围**：ECDHE-RSA-AES256-GCM-SHA384,ECDHE-RSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384,ECDHE-ECDSA-AES128-GCM-SHA256, AES128-GCM-SHA256,AES256-GCM-SHA384,ECDHE-ECDSA-AES128-SHA256, ECDHE-RSA-AES128-SHA256,AES128-SHA256,AES256-SHA256, ECDHE-ECDSA-AES256-SHA384,ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA,ECDHE-RSA-AES128-SHA,ECDHE-RSA-AES256-SHA, ECDHE-ECDSA-AES256-SHA,AES128-SHA,AES256-SHA,CAMELLIA128-SHA, DES-CBC3-SHA,CAMELLIA256-SHA,ECDHE-RSA-CHACHA20-POLY1305, ECDHE-ECDSA-CHACHA20-POLY1305,TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256,TLS_AES_128_CCM_8_SHA256  **默认取值**：不涉及  > 协议与加密套件的匹配关系可参考系统安全策略
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class CreateSecurityPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  自定义安全策略的名称。默认空字符串\"\"。
-    * description  自定义安全策略的描述信息。默认空字符串\"\"。
-    * enterpriseProjectId  所属企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
-    * protocols  自定义安全策略选择的TLS协议列表。取值：TLSv1, TLSv1.1, TLSv1.2, TLSv1.3
-    * ciphers  自定义安全策略的加密套件列表。支持以下加密套件：  ECDHE-RSA-AES256-GCM-SHA384,ECDHE-RSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384,ECDHE-ECDSA-AES128-GCM-SHA256, AES128-GCM-SHA256,AES256-GCM-SHA384,ECDHE-ECDSA-AES128-SHA256, ECDHE-RSA-AES128-SHA256,AES128-SHA256,AES256-SHA256, ECDHE-ECDSA-AES256-SHA384,ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA,ECDHE-RSA-AES128-SHA,ECDHE-RSA-AES256-SHA, ECDHE-ECDSA-AES256-SHA,AES128-SHA,AES256-SHA,CAMELLIA128-SHA, DES-CBC3-SHA,CAMELLIA256-SHA,ECDHE-RSA-CHACHA20-POLY1305, ECDHE-ECDSA-CHACHA20-POLY1305,TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256,TLS_AES_128_CCM_8_SHA256  使用说明： - 协议和加密套件必须匹配，即ciphers中必须至少有一种有与协议匹配的加密套件。  > 协议与加密套件的匹配关系可参考系统安全策略
+    * name  **参数解释**：自定义安全策略的名称。  **约束限制**：不涉及  **取值范围**：0到255个字符。  **默认取值**：不涉及
+    * description  **参数解释**：自定义安全策略的描述信息。  **约束限制**：不涉及  **取值范围**：0到255个字符。  **默认取值**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。创建时不传则资源属于default企业项目，返回enterprise_project_id=\"0\"。  **约束限制**：不能传入空字符串\"\"、\"0\"或不存在的企业项目ID。  **取值范围**：不涉及  **默认取值**：\"0\"  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * protocols  **参数解释**：自定义安全策略选择的TLS协议列表。  **约束限制**：不涉及  **取值范围**：TLSv1, TLSv1.1, TLSv1.2, TLSv1.3  **默认取值**：不涉及
+    * ciphers  **参数解释**：自定义安全策略的加密套件列表。  **约束限制**：协议和加密套件必须匹配，即ciphers中必须至少有一种与协议匹配的加密套件。  **取值范围**：ECDHE-RSA-AES256-GCM-SHA384,ECDHE-RSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384,ECDHE-ECDSA-AES128-GCM-SHA256, AES128-GCM-SHA256,AES256-GCM-SHA384,ECDHE-ECDSA-AES128-SHA256, ECDHE-RSA-AES128-SHA256,AES128-SHA256,AES256-SHA256, ECDHE-ECDSA-AES256-SHA384,ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA,ECDHE-RSA-AES128-SHA,ECDHE-RSA-AES256-SHA, ECDHE-ECDSA-AES256-SHA,AES128-SHA,AES256-SHA,CAMELLIA128-SHA, DES-CBC3-SHA,CAMELLIA256-SHA,ECDHE-RSA-CHACHA20-POLY1305, ECDHE-ECDSA-CHACHA20-POLY1305,TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256,TLS_AES_128_CCM_8_SHA256  **默认取值**：不涉及  > 协议与加密套件的匹配关系可参考系统安全策略
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class CreateSecurityPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  自定义安全策略的名称。默认空字符串\"\"。
-    * description  自定义安全策略的描述信息。默认空字符串\"\"。
-    * enterpriseProjectId  所属企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
-    * protocols  自定义安全策略选择的TLS协议列表。取值：TLSv1, TLSv1.1, TLSv1.2, TLSv1.3
-    * ciphers  自定义安全策略的加密套件列表。支持以下加密套件：  ECDHE-RSA-AES256-GCM-SHA384,ECDHE-RSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384,ECDHE-ECDSA-AES128-GCM-SHA256, AES128-GCM-SHA256,AES256-GCM-SHA384,ECDHE-ECDSA-AES128-SHA256, ECDHE-RSA-AES128-SHA256,AES128-SHA256,AES256-SHA256, ECDHE-ECDSA-AES256-SHA384,ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA,ECDHE-RSA-AES128-SHA,ECDHE-RSA-AES256-SHA, ECDHE-ECDSA-AES256-SHA,AES128-SHA,AES256-SHA,CAMELLIA128-SHA, DES-CBC3-SHA,CAMELLIA256-SHA,ECDHE-RSA-CHACHA20-POLY1305, ECDHE-ECDSA-CHACHA20-POLY1305,TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256,TLS_AES_128_CCM_8_SHA256  使用说明： - 协议和加密套件必须匹配，即ciphers中必须至少有一种有与协议匹配的加密套件。  > 协议与加密套件的匹配关系可参考系统安全策略
+    * name  **参数解释**：自定义安全策略的名称。  **约束限制**：不涉及  **取值范围**：0到255个字符。  **默认取值**：不涉及
+    * description  **参数解释**：自定义安全策略的描述信息。  **约束限制**：不涉及  **取值范围**：0到255个字符。  **默认取值**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。创建时不传则资源属于default企业项目，返回enterprise_project_id=\"0\"。  **约束限制**：不能传入空字符串\"\"、\"0\"或不存在的企业项目ID。  **取值范围**：不涉及  **默认取值**：\"0\"  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * protocols  **参数解释**：自定义安全策略选择的TLS协议列表。  **约束限制**：不涉及  **取值范围**：TLSv1, TLSv1.1, TLSv1.2, TLSv1.3  **默认取值**：不涉及
+    * ciphers  **参数解释**：自定义安全策略的加密套件列表。  **约束限制**：协议和加密套件必须匹配，即ciphers中必须至少有一种与协议匹配的加密套件。  **取值范围**：ECDHE-RSA-AES256-GCM-SHA384,ECDHE-RSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384,ECDHE-ECDSA-AES128-GCM-SHA256, AES128-GCM-SHA256,AES256-GCM-SHA384,ECDHE-ECDSA-AES128-SHA256, ECDHE-RSA-AES128-SHA256,AES128-SHA256,AES256-SHA256, ECDHE-ECDSA-AES256-SHA384,ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA,ECDHE-RSA-AES128-SHA,ECDHE-RSA-AES256-SHA, ECDHE-ECDSA-AES256-SHA,AES128-SHA,AES256-SHA,CAMELLIA128-SHA, DES-CBC3-SHA,CAMELLIA256-SHA,ECDHE-RSA-CHACHA20-POLY1305, ECDHE-ECDSA-CHACHA20-POLY1305,TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256,TLS_AES_128_CCM_8_SHA256  **默认取值**：不涉及  > 协议与加密套件的匹配关系可参考系统安全策略
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class CreateSecurityPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  自定义安全策略的名称。默认空字符串\"\"。
-    * description  自定义安全策略的描述信息。默认空字符串\"\"。
-    * enterpriseProjectId  所属企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
-    * protocols  自定义安全策略选择的TLS协议列表。取值：TLSv1, TLSv1.1, TLSv1.2, TLSv1.3
-    * ciphers  自定义安全策略的加密套件列表。支持以下加密套件：  ECDHE-RSA-AES256-GCM-SHA384,ECDHE-RSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384,ECDHE-ECDSA-AES128-GCM-SHA256, AES128-GCM-SHA256,AES256-GCM-SHA384,ECDHE-ECDSA-AES128-SHA256, ECDHE-RSA-AES128-SHA256,AES128-SHA256,AES256-SHA256, ECDHE-ECDSA-AES256-SHA384,ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA,ECDHE-RSA-AES128-SHA,ECDHE-RSA-AES256-SHA, ECDHE-ECDSA-AES256-SHA,AES128-SHA,AES256-SHA,CAMELLIA128-SHA, DES-CBC3-SHA,CAMELLIA256-SHA,ECDHE-RSA-CHACHA20-POLY1305, ECDHE-ECDSA-CHACHA20-POLY1305,TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256,TLS_AES_128_CCM_8_SHA256  使用说明： - 协议和加密套件必须匹配，即ciphers中必须至少有一种有与协议匹配的加密套件。  > 协议与加密套件的匹配关系可参考系统安全策略
+    * name  **参数解释**：自定义安全策略的名称。  **约束限制**：不涉及  **取值范围**：0到255个字符。  **默认取值**：不涉及
+    * description  **参数解释**：自定义安全策略的描述信息。  **约束限制**：不涉及  **取值范围**：0到255个字符。  **默认取值**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。创建时不传则资源属于default企业项目，返回enterprise_project_id=\"0\"。  **约束限制**：不能传入空字符串\"\"、\"0\"或不存在的企业项目ID。  **取值范围**：不涉及  **默认取值**：\"0\"  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * protocols  **参数解释**：自定义安全策略选择的TLS协议列表。  **约束限制**：不涉及  **取值范围**：TLSv1, TLSv1.1, TLSv1.2, TLSv1.3  **默认取值**：不涉及
+    * ciphers  **参数解释**：自定义安全策略的加密套件列表。  **约束限制**：协议和加密套件必须匹配，即ciphers中必须至少有一种与协议匹配的加密套件。  **取值范围**：ECDHE-RSA-AES256-GCM-SHA384,ECDHE-RSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384,ECDHE-ECDSA-AES128-GCM-SHA256, AES128-GCM-SHA256,AES256-GCM-SHA384,ECDHE-ECDSA-AES128-SHA256, ECDHE-RSA-AES128-SHA256,AES128-SHA256,AES256-SHA256, ECDHE-ECDSA-AES256-SHA384,ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA,ECDHE-RSA-AES128-SHA,ECDHE-RSA-AES256-SHA, ECDHE-ECDSA-AES256-SHA,AES128-SHA,AES256-SHA,CAMELLIA128-SHA, DES-CBC3-SHA,CAMELLIA256-SHA,ECDHE-RSA-CHACHA20-POLY1305, ECDHE-ECDSA-CHACHA20-POLY1305,TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256,TLS_AES_128_CCM_8_SHA256  **默认取值**：不涉及  > 协议与加密套件的匹配关系可参考系统安全策略
     *
     * @var string[]
     */
@@ -269,18 +269,6 @@ class CreateSecurityPolicyOption implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 255)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
-            }
         if ($this->container['protocols'] === null) {
             $invalidProperties[] = "'protocols' can't be null";
         }
@@ -303,7 +291,7 @@ class CreateSecurityPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  自定义安全策略的名称。默认空字符串\"\"。
+    *  **参数解释**：自定义安全策略的名称。  **约束限制**：不涉及  **取值范围**：0到255个字符。  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -315,7 +303,7 @@ class CreateSecurityPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 自定义安全策略的名称。默认空字符串\"\"。
+    * @param string|null $name **参数解释**：自定义安全策略的名称。  **约束限制**：不涉及  **取值范围**：0到255个字符。  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -327,7 +315,7 @@ class CreateSecurityPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  自定义安全策略的描述信息。默认空字符串\"\"。
+    *  **参数解释**：自定义安全策略的描述信息。  **约束限制**：不涉及  **取值范围**：0到255个字符。  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -339,7 +327,7 @@ class CreateSecurityPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 自定义安全策略的描述信息。默认空字符串\"\"。
+    * @param string|null $description **参数解释**：自定义安全策略的描述信息。  **约束限制**：不涉及  **取值范围**：0到255个字符。  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -351,7 +339,7 @@ class CreateSecurityPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  所属企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    *  **参数解释**：资源所属的企业项目ID。创建时不传则资源属于default企业项目，返回enterprise_project_id=\"0\"。  **约束限制**：不能传入空字符串\"\"、\"0\"或不存在的企业项目ID。  **取值范围**：不涉及  **默认取值**：\"0\"  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @return string|null
     */
@@ -363,7 +351,7 @@ class CreateSecurityPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 所属企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * @param string|null $enterpriseProjectId **参数解释**：资源所属的企业项目ID。创建时不传则资源属于default企业项目，返回enterprise_project_id=\"0\"。  **约束限制**：不能传入空字符串\"\"、\"0\"或不存在的企业项目ID。  **取值范围**：不涉及  **默认取值**：\"0\"  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @return $this
     */
@@ -375,7 +363,7 @@ class CreateSecurityPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocols
-    *  自定义安全策略选择的TLS协议列表。取值：TLSv1, TLSv1.1, TLSv1.2, TLSv1.3
+    *  **参数解释**：自定义安全策略选择的TLS协议列表。  **约束限制**：不涉及  **取值范围**：TLSv1, TLSv1.1, TLSv1.2, TLSv1.3  **默认取值**：不涉及
     *
     * @return string[]
     */
@@ -387,7 +375,7 @@ class CreateSecurityPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets protocols
     *
-    * @param string[] $protocols 自定义安全策略选择的TLS协议列表。取值：TLSv1, TLSv1.1, TLSv1.2, TLSv1.3
+    * @param string[] $protocols **参数解释**：自定义安全策略选择的TLS协议列表。  **约束限制**：不涉及  **取值范围**：TLSv1, TLSv1.1, TLSv1.2, TLSv1.3  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -399,7 +387,7 @@ class CreateSecurityPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ciphers
-    *  自定义安全策略的加密套件列表。支持以下加密套件：  ECDHE-RSA-AES256-GCM-SHA384,ECDHE-RSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384,ECDHE-ECDSA-AES128-GCM-SHA256, AES128-GCM-SHA256,AES256-GCM-SHA384,ECDHE-ECDSA-AES128-SHA256, ECDHE-RSA-AES128-SHA256,AES128-SHA256,AES256-SHA256, ECDHE-ECDSA-AES256-SHA384,ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA,ECDHE-RSA-AES128-SHA,ECDHE-RSA-AES256-SHA, ECDHE-ECDSA-AES256-SHA,AES128-SHA,AES256-SHA,CAMELLIA128-SHA, DES-CBC3-SHA,CAMELLIA256-SHA,ECDHE-RSA-CHACHA20-POLY1305, ECDHE-ECDSA-CHACHA20-POLY1305,TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256,TLS_AES_128_CCM_8_SHA256  使用说明： - 协议和加密套件必须匹配，即ciphers中必须至少有一种有与协议匹配的加密套件。  > 协议与加密套件的匹配关系可参考系统安全策略
+    *  **参数解释**：自定义安全策略的加密套件列表。  **约束限制**：协议和加密套件必须匹配，即ciphers中必须至少有一种与协议匹配的加密套件。  **取值范围**：ECDHE-RSA-AES256-GCM-SHA384,ECDHE-RSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384,ECDHE-ECDSA-AES128-GCM-SHA256, AES128-GCM-SHA256,AES256-GCM-SHA384,ECDHE-ECDSA-AES128-SHA256, ECDHE-RSA-AES128-SHA256,AES128-SHA256,AES256-SHA256, ECDHE-ECDSA-AES256-SHA384,ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA,ECDHE-RSA-AES128-SHA,ECDHE-RSA-AES256-SHA, ECDHE-ECDSA-AES256-SHA,AES128-SHA,AES256-SHA,CAMELLIA128-SHA, DES-CBC3-SHA,CAMELLIA256-SHA,ECDHE-RSA-CHACHA20-POLY1305, ECDHE-ECDSA-CHACHA20-POLY1305,TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256,TLS_AES_128_CCM_8_SHA256  **默认取值**：不涉及  > 协议与加密套件的匹配关系可参考系统安全策略
     *
     * @return string[]
     */
@@ -411,7 +399,7 @@ class CreateSecurityPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets ciphers
     *
-    * @param string[] $ciphers 自定义安全策略的加密套件列表。支持以下加密套件：  ECDHE-RSA-AES256-GCM-SHA384,ECDHE-RSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384,ECDHE-ECDSA-AES128-GCM-SHA256, AES128-GCM-SHA256,AES256-GCM-SHA384,ECDHE-ECDSA-AES128-SHA256, ECDHE-RSA-AES128-SHA256,AES128-SHA256,AES256-SHA256, ECDHE-ECDSA-AES256-SHA384,ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA,ECDHE-RSA-AES128-SHA,ECDHE-RSA-AES256-SHA, ECDHE-ECDSA-AES256-SHA,AES128-SHA,AES256-SHA,CAMELLIA128-SHA, DES-CBC3-SHA,CAMELLIA256-SHA,ECDHE-RSA-CHACHA20-POLY1305, ECDHE-ECDSA-CHACHA20-POLY1305,TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256,TLS_AES_128_CCM_8_SHA256  使用说明： - 协议和加密套件必须匹配，即ciphers中必须至少有一种有与协议匹配的加密套件。  > 协议与加密套件的匹配关系可参考系统安全策略
+    * @param string[] $ciphers **参数解释**：自定义安全策略的加密套件列表。  **约束限制**：协议和加密套件必须匹配，即ciphers中必须至少有一种与协议匹配的加密套件。  **取值范围**：ECDHE-RSA-AES256-GCM-SHA384,ECDHE-RSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384,ECDHE-ECDSA-AES128-GCM-SHA256, AES128-GCM-SHA256,AES256-GCM-SHA384,ECDHE-ECDSA-AES128-SHA256, ECDHE-RSA-AES128-SHA256,AES128-SHA256,AES256-SHA256, ECDHE-ECDSA-AES256-SHA384,ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA,ECDHE-RSA-AES128-SHA,ECDHE-RSA-AES256-SHA, ECDHE-ECDSA-AES256-SHA,AES128-SHA,AES256-SHA,CAMELLIA128-SHA, DES-CBC3-SHA,CAMELLIA256-SHA,ECDHE-RSA-CHACHA20-POLY1305, ECDHE-ECDSA-CHACHA20-POLY1305,TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256,TLS_AES_128_CCM_8_SHA256  **默认取值**：不涉及  > 协议与加密套件的匹配关系可参考系统安全策略
     *
     * @return $this
     */

@@ -23,6 +23,8 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * logBasePath  日志在OBS桶中的备份路径。
     * logBucket  用于存储日志的OBS桶的桶名。
+    * autoEnable  集群日志是否开启自动备份。
+    * period  集群日志备份开始时间。
     * indexPrefix  保存日志的索引前缀。action等于real_time_log_collect时必选
     * keepDays  日志保存时间。action等于real_time_log_collect时必选
     * targetClusterId  保存日志的目标集群。action等于real_time_log_collect时必选
@@ -33,6 +35,8 @@ class StartLogsReq implements ModelInterface, ArrayAccess
             'agency' => 'string',
             'logBasePath' => 'string',
             'logBucket' => 'string',
+            'autoEnable' => 'bool',
+            'period' => 'string',
             'indexPrefix' => 'string',
             'keepDays' => 'int',
             'targetClusterId' => 'string'
@@ -43,6 +47,8 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * logBasePath  日志在OBS桶中的备份路径。
     * logBucket  用于存储日志的OBS桶的桶名。
+    * autoEnable  集群日志是否开启自动备份。
+    * period  集群日志备份开始时间。
     * indexPrefix  保存日志的索引前缀。action等于real_time_log_collect时必选
     * keepDays  日志保存时间。action等于real_time_log_collect时必选
     * targetClusterId  保存日志的目标集群。action等于real_time_log_collect时必选
@@ -53,6 +59,8 @@ class StartLogsReq implements ModelInterface, ArrayAccess
         'agency' => null,
         'logBasePath' => null,
         'logBucket' => null,
+        'autoEnable' => null,
+        'period' => null,
         'indexPrefix' => null,
         'keepDays' => 'int32',
         'targetClusterId' => null
@@ -84,6 +92,8 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * logBasePath  日志在OBS桶中的备份路径。
     * logBucket  用于存储日志的OBS桶的桶名。
+    * autoEnable  集群日志是否开启自动备份。
+    * period  集群日志备份开始时间。
     * indexPrefix  保存日志的索引前缀。action等于real_time_log_collect时必选
     * keepDays  日志保存时间。action等于real_time_log_collect时必选
     * targetClusterId  保存日志的目标集群。action等于real_time_log_collect时必选
@@ -94,6 +104,8 @@ class StartLogsReq implements ModelInterface, ArrayAccess
             'agency' => 'agency',
             'logBasePath' => 'log_base_path',
             'logBucket' => 'log_bucket',
+            'autoEnable' => 'auto_enable',
+            'period' => 'period',
             'indexPrefix' => 'index_prefix',
             'keepDays' => 'keep_days',
             'targetClusterId' => 'target_cluster_id'
@@ -104,6 +116,8 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * logBasePath  日志在OBS桶中的备份路径。
     * logBucket  用于存储日志的OBS桶的桶名。
+    * autoEnable  集群日志是否开启自动备份。
+    * period  集群日志备份开始时间。
     * indexPrefix  保存日志的索引前缀。action等于real_time_log_collect时必选
     * keepDays  日志保存时间。action等于real_time_log_collect时必选
     * targetClusterId  保存日志的目标集群。action等于real_time_log_collect时必选
@@ -114,6 +128,8 @@ class StartLogsReq implements ModelInterface, ArrayAccess
             'agency' => 'setAgency',
             'logBasePath' => 'setLogBasePath',
             'logBucket' => 'setLogBucket',
+            'autoEnable' => 'setAutoEnable',
+            'period' => 'setPeriod',
             'indexPrefix' => 'setIndexPrefix',
             'keepDays' => 'setKeepDays',
             'targetClusterId' => 'setTargetClusterId'
@@ -124,6 +140,8 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * logBasePath  日志在OBS桶中的备份路径。
     * logBucket  用于存储日志的OBS桶的桶名。
+    * autoEnable  集群日志是否开启自动备份。
+    * period  集群日志备份开始时间。
     * indexPrefix  保存日志的索引前缀。action等于real_time_log_collect时必选
     * keepDays  日志保存时间。action等于real_time_log_collect时必选
     * targetClusterId  保存日志的目标集群。action等于real_time_log_collect时必选
@@ -134,6 +152,8 @@ class StartLogsReq implements ModelInterface, ArrayAccess
             'agency' => 'getAgency',
             'logBasePath' => 'getLogBasePath',
             'logBucket' => 'getLogBucket',
+            'autoEnable' => 'getAutoEnable',
+            'period' => 'getPeriod',
             'indexPrefix' => 'getIndexPrefix',
             'keepDays' => 'getKeepDays',
             'targetClusterId' => 'getTargetClusterId'
@@ -200,6 +220,8 @@ class StartLogsReq implements ModelInterface, ArrayAccess
         $this->container['agency'] = isset($data['agency']) ? $data['agency'] : null;
         $this->container['logBasePath'] = isset($data['logBasePath']) ? $data['logBasePath'] : null;
         $this->container['logBucket'] = isset($data['logBucket']) ? $data['logBucket'] : null;
+        $this->container['autoEnable'] = isset($data['autoEnable']) ? $data['autoEnable'] : null;
+        $this->container['period'] = isset($data['period']) ? $data['period'] : null;
         $this->container['indexPrefix'] = isset($data['indexPrefix']) ? $data['indexPrefix'] : null;
         $this->container['keepDays'] = isset($data['keepDays']) ? $data['keepDays'] : null;
         $this->container['targetClusterId'] = isset($data['targetClusterId']) ? $data['targetClusterId'] : null;
@@ -311,6 +333,54 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     public function setLogBucket($logBucket)
     {
         $this->container['logBucket'] = $logBucket;
+        return $this;
+    }
+
+    /**
+    * Gets autoEnable
+    *  集群日志是否开启自动备份。
+    *
+    * @return bool|null
+    */
+    public function getAutoEnable()
+    {
+        return $this->container['autoEnable'];
+    }
+
+    /**
+    * Sets autoEnable
+    *
+    * @param bool|null $autoEnable 集群日志是否开启自动备份。
+    *
+    * @return $this
+    */
+    public function setAutoEnable($autoEnable)
+    {
+        $this->container['autoEnable'] = $autoEnable;
+        return $this;
+    }
+
+    /**
+    * Gets period
+    *  集群日志备份开始时间。
+    *
+    * @return string|null
+    */
+    public function getPeriod()
+    {
+        return $this->container['period'];
+    }
+
+    /**
+    * Sets period
+    *
+    * @param string|null $period 集群日志备份开始时间。
+    *
+    * @return $this
+    */
+    public function setPeriod($period)
+    {
+        $this->container['period'] = $period;
         return $this;
     }
 

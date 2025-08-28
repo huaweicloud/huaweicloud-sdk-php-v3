@@ -169,6 +169,12 @@ class UpdateRecycleBinPolicyOption implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['retentionHour'] === null) {
+            $invalidProperties[] = "'retentionHour' can't be null";
+        }
+        if ($this->container['recycleThresholdDay'] === null) {
+            $invalidProperties[] = "'recycleThresholdDay' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,7 +193,7 @@ class UpdateRecycleBinPolicyOption implements ModelInterface, ArrayAccess
     * Gets retentionHour
     *  虚拟机进入回收站后多久删除
     *
-    * @return int|null
+    * @return int
     */
     public function getRetentionHour()
     {
@@ -197,7 +203,7 @@ class UpdateRecycleBinPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets retentionHour
     *
-    * @param int|null $retentionHour 虚拟机进入回收站后多久删除
+    * @param int $retentionHour 虚拟机进入回收站后多久删除
     *
     * @return $this
     */
@@ -211,7 +217,7 @@ class UpdateRecycleBinPolicyOption implements ModelInterface, ArrayAccess
     * Gets recycleThresholdDay
     *  创建多久的虚拟机可以进入回收站
     *
-    * @return int|null
+    * @return int
     */
     public function getRecycleThresholdDay()
     {
@@ -221,7 +227,7 @@ class UpdateRecycleBinPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets recycleThresholdDay
     *
-    * @param int|null $recycleThresholdDay 创建多久的虚拟机可以进入回收站
+    * @param int $recycleThresholdDay 创建多久的虚拟机可以进入回收站
     *
     * @return $this
     */

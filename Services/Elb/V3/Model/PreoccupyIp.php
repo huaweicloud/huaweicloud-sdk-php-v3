@@ -20,7 +20,7 @@ class PreoccupyIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  预占IP总数
+    * total  **参数解释**：预占IP总数。  **取值范围**：大于等于0整数。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class PreoccupyIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  预占IP总数
+    * total  **参数解释**：预占IP总数。  **取值范围**：大于等于0整数。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class PreoccupyIp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  预占IP总数
+    * total  **参数解释**：预占IP总数。  **取值范围**：大于等于0整数。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class PreoccupyIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  预占IP总数
+    * total  **参数解释**：预占IP总数。  **取值范围**：大于等于0整数。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class PreoccupyIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  预占IP总数
+    * total  **参数解释**：预占IP总数。  **取值范围**：大于等于0整数。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class PreoccupyIp implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  预占IP总数
+    *  **参数解释**：预占IP总数。  **取值范围**：大于等于0整数。
     *
     * @return int
     */
@@ -189,7 +189,7 @@ class PreoccupyIp implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int $total 预占IP总数
+    * @param int $total **参数解释**：预占IP总数。  **取值范围**：大于等于0整数。
     *
     * @return $this
     */

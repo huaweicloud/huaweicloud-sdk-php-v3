@@ -21,8 +21,8 @@ class UpgradeLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * requestId  请求ID。 注：自动生成 。
-    * jobId  升级的任务ID。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * jobId  **参数解释**：升级的任务ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class UpgradeLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * requestId  请求ID。 注：自动生成 。
-    * jobId  升级的任务ID。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * jobId  **参数解释**：升级的任务ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class UpgradeLoadbalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * requestId  请求ID。 注：自动生成 。
-    * jobId  升级的任务ID。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * jobId  **参数解释**：升级的任务ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class UpgradeLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * requestId  请求ID。 注：自动生成 。
-    * jobId  升级的任务ID。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * jobId  **参数解释**：升级的任务ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class UpgradeLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * requestId  请求ID。 注：自动生成 。
-    * jobId  升级的任务ID。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * jobId  **参数解释**：升级的任务ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class UpgradeLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestId
-    *  请求ID。 注：自动生成 。
+    *  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class UpgradeLoadbalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求ID。 注：自动生成 。
+    * @param string|null $requestId **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class UpgradeLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  升级的任务ID。
+    *  **参数解释**：升级的任务ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class UpgradeLoadbalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 升级的任务ID。
+    * @param string|null $jobId **参数解释**：升级的任务ID。  **取值范围**：不涉及
     *
     * @return $this
     */

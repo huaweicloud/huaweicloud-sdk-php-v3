@@ -21,21 +21,33 @@ class ShrinkClusterReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * shrink  需要缩容的节点类型和数量集合。
+    * agencyName  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
+    * operationType  操作类型。
+    * clusterLoadCheck  是否需要检查集群负载。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'shrink' => '\HuaweiCloud\SDK\Css\V1\Model\ShrinkNodeReq[]'
+            'shrink' => '\HuaweiCloud\SDK\Css\V1\Model\ShrinkNodeReq[]',
+            'agencyName' => 'string',
+            'operationType' => 'string',
+            'clusterLoadCheck' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * shrink  需要缩容的节点类型和数量集合。
+    * agencyName  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
+    * operationType  操作类型。
+    * clusterLoadCheck  是否需要检查集群负载。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'shrink' => null
+        'shrink' => null,
+        'agencyName' => null,
+        'operationType' => null,
+        'clusterLoadCheck' => null
     ];
 
     /**
@@ -62,31 +74,49 @@ class ShrinkClusterReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * shrink  需要缩容的节点类型和数量集合。
+    * agencyName  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
+    * operationType  操作类型。
+    * clusterLoadCheck  是否需要检查集群负载。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'shrink' => 'shrink'
+            'shrink' => 'shrink',
+            'agencyName' => 'agency_name',
+            'operationType' => 'operation_type',
+            'clusterLoadCheck' => 'cluster_load_check'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * shrink  需要缩容的节点类型和数量集合。
+    * agencyName  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
+    * operationType  操作类型。
+    * clusterLoadCheck  是否需要检查集群负载。
     *
     * @var string[]
     */
     protected static $setters = [
-            'shrink' => 'setShrink'
+            'shrink' => 'setShrink',
+            'agencyName' => 'setAgencyName',
+            'operationType' => 'setOperationType',
+            'clusterLoadCheck' => 'setClusterLoadCheck'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * shrink  需要缩容的节点类型和数量集合。
+    * agencyName  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
+    * operationType  操作类型。
+    * clusterLoadCheck  是否需要检查集群负载。
     *
     * @var string[]
     */
     protected static $getters = [
-            'shrink' => 'getShrink'
+            'shrink' => 'getShrink',
+            'agencyName' => 'getAgencyName',
+            'operationType' => 'getOperationType',
+            'clusterLoadCheck' => 'getClusterLoadCheck'
     ];
 
     /**
@@ -148,6 +178,9 @@ class ShrinkClusterReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['shrink'] = isset($data['shrink']) ? $data['shrink'] : null;
+        $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
+        $this->container['operationType'] = isset($data['operationType']) ? $data['operationType'] : null;
+        $this->container['clusterLoadCheck'] = isset($data['clusterLoadCheck']) ? $data['clusterLoadCheck'] : null;
     }
 
     /**
@@ -196,6 +229,78 @@ class ShrinkClusterReq implements ModelInterface, ArrayAccess
     public function setShrink($shrink)
     {
         $this->container['shrink'] = $shrink;
+        return $this;
+    }
+
+    /**
+    * Gets agencyName
+    *  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
+    *
+    * @return string|null
+    */
+    public function getAgencyName()
+    {
+        return $this->container['agencyName'];
+    }
+
+    /**
+    * Sets agencyName
+    *
+    * @param string|null $agencyName 委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
+    *
+    * @return $this
+    */
+    public function setAgencyName($agencyName)
+    {
+        $this->container['agencyName'] = $agencyName;
+        return $this;
+    }
+
+    /**
+    * Gets operationType
+    *  操作类型。
+    *
+    * @return string|null
+    */
+    public function getOperationType()
+    {
+        return $this->container['operationType'];
+    }
+
+    /**
+    * Sets operationType
+    *
+    * @param string|null $operationType 操作类型。
+    *
+    * @return $this
+    */
+    public function setOperationType($operationType)
+    {
+        $this->container['operationType'] = $operationType;
+        return $this;
+    }
+
+    /**
+    * Gets clusterLoadCheck
+    *  是否需要检查集群负载。
+    *
+    * @return bool|null
+    */
+    public function getClusterLoadCheck()
+    {
+        return $this->container['clusterLoadCheck'];
+    }
+
+    /**
+    * Sets clusterLoadCheck
+    *
+    * @param bool|null $clusterLoadCheck 是否需要检查集群负载。
+    *
+    * @return $this
+    */
+    public function setClusterLoadCheck($clusterLoadCheck)
+    {
+        $this->container['clusterLoadCheck'] = $clusterLoadCheck;
         return $this;
     }
 

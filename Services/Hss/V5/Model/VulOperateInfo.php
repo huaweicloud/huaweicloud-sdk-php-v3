@@ -20,8 +20,8 @@ class VulOperateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vulId  漏洞ID
-    * hostIdList  主机列表
+    * vulId  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 主机列表 **约束限制**: 不涉及 **取值范围**: 取值1-500 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class VulOperateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vulId  漏洞ID
-    * hostIdList  主机列表
+    * vulId  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 主机列表 **约束限制**: 不涉及 **取值范围**: 取值1-500 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class VulOperateInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vulId  漏洞ID
-    * hostIdList  主机列表
+    * vulId  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 主机列表 **约束限制**: 不涉及 **取值范围**: 取值1-500 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class VulOperateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vulId  漏洞ID
-    * hostIdList  主机列表
+    * vulId  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 主机列表 **约束限制**: 不涉及 **取值范围**: 取值1-500 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class VulOperateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vulId  漏洞ID
-    * hostIdList  主机列表
+    * vulId  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 主机列表 **约束限制**: 不涉及 **取值范围**: 取值1-500 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class VulOperateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulId
-    *  漏洞ID
+    *  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64 **默认取值**: 不涉及
     *
     * @return string
     */
@@ -209,7 +209,7 @@ class VulOperateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vulId
     *
-    * @param string $vulId 漏洞ID
+    * @param string $vulId **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class VulOperateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIdList
-    *  主机列表
+    *  **参数解释**: 主机列表 **约束限制**: 不涉及 **取值范围**: 取值1-500 **默认取值**: 不涉及
     *
     * @return string[]
     */
@@ -233,7 +233,7 @@ class VulOperateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[] $hostIdList 主机列表
+    * @param string[] $hostIdList **参数解释**: 主机列表 **约束限制**: 不涉及 **取值范围**: 取值1-500 **默认取值**: 不涉及
     *
     * @return $this
     */

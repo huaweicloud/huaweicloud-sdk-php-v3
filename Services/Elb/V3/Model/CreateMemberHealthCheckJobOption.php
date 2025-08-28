@@ -20,8 +20,8 @@ class CreateMemberHealthCheckJobOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * listenerId  参数解释：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。
-    * subject  参数法解释：检查项。  取值范围： - securityGroup：安全组检查。 - networkAcl：子网ACL配置检查。 - config：健康检查端口配置检查。 - all：所有检查项。
+    * listenerId  **参数解释**：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。  **取值范围**：不涉及
+    * subject  参数法解释：检查项。  **取值范围**： - securityGroup：安全组检查。 - networkAcl：子网ACL配置检查。 - config：健康检查端口配置检查。 - all：所有检查项。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CreateMemberHealthCheckJobOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * listenerId  参数解释：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。
-    * subject  参数法解释：检查项。  取值范围： - securityGroup：安全组检查。 - networkAcl：子网ACL配置检查。 - config：健康检查端口配置检查。 - all：所有检查项。
+    * listenerId  **参数解释**：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。  **取值范围**：不涉及
+    * subject  参数法解释：检查项。  **取值范围**： - securityGroup：安全组检查。 - networkAcl：子网ACL配置检查。 - config：健康检查端口配置检查。 - all：所有检查项。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CreateMemberHealthCheckJobOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * listenerId  参数解释：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。
-    * subject  参数法解释：检查项。  取值范围： - securityGroup：安全组检查。 - networkAcl：子网ACL配置检查。 - config：健康检查端口配置检查。 - all：所有检查项。
+    * listenerId  **参数解释**：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。  **取值范围**：不涉及
+    * subject  参数法解释：检查项。  **取值范围**： - securityGroup：安全组检查。 - networkAcl：子网ACL配置检查。 - config：健康检查端口配置检查。 - all：所有检查项。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CreateMemberHealthCheckJobOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * listenerId  参数解释：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。
-    * subject  参数法解释：检查项。  取值范围： - securityGroup：安全组检查。 - networkAcl：子网ACL配置检查。 - config：健康检查端口配置检查。 - all：所有检查项。
+    * listenerId  **参数解释**：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。  **取值范围**：不涉及
+    * subject  参数法解释：检查项。  **取值范围**： - securityGroup：安全组检查。 - networkAcl：子网ACL配置检查。 - config：健康检查端口配置检查。 - all：所有检查项。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CreateMemberHealthCheckJobOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * listenerId  参数解释：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。
-    * subject  参数法解释：检查项。  取值范围： - securityGroup：安全组检查。 - networkAcl：子网ACL配置检查。 - config：健康检查端口配置检查。 - all：所有检查项。
+    * listenerId  **参数解释**：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。  **取值范围**：不涉及
+    * subject  参数法解释：检查项。  **取值范围**： - securityGroup：安全组检查。 - networkAcl：子网ACL配置检查。 - config：健康检查端口配置检查。 - all：所有检查项。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class CreateMemberHealthCheckJobOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets listenerId
-    *  参数解释：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。
+    *  **参数解释**：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class CreateMemberHealthCheckJobOption implements ModelInterface, ArrayAccess
     /**
     * Sets listenerId
     *
-    * @param string $listenerId 参数解释：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。
+    * @param string $listenerId **参数解释**：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class CreateMemberHealthCheckJobOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets subject
-    *  参数法解释：检查项。  取值范围： - securityGroup：安全组检查。 - networkAcl：子网ACL配置检查。 - config：健康检查端口配置检查。 - all：所有检查项。
+    *  参数法解释：检查项。  **取值范围**： - securityGroup：安全组检查。 - networkAcl：子网ACL配置检查。 - config：健康检查端口配置检查。 - all：所有检查项。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class CreateMemberHealthCheckJobOption implements ModelInterface, ArrayAccess
     /**
     * Sets subject
     *
-    * @param string $subject 参数法解释：检查项。  取值范围： - securityGroup：安全组检查。 - networkAcl：子网ACL配置检查。 - config：健康检查端口配置检查。 - all：所有检查项。
+    * @param string $subject 参数法解释：检查项。  **取值范围**： - securityGroup：安全组检查。 - networkAcl：子网ACL配置检查。 - config：健康检查端口配置检查。 - all：所有检查项。
     *
     * @return $this
     */

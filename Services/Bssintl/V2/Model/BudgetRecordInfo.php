@@ -25,8 +25,8 @@ class BudgetRecordInfo implements ModelInterface, ArrayAccess
     * operationTime  |参数名称：操作时间| |参数的约束及描述：UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ。|
     * operator  |参数名称：操作员或系统system| |参数的约束及描述：范围限制：0-64|
     * budgetType  |参数名称：预算模式| |参数的约束及描述：范围限制：0-10。MONTHLY：月度预算 PACKAGE：一次性预算|
-    * partnerCorpName  |参数名称：伙伴名称| |参数的约束及描述：范围限制：0-64|
-    * partnerAccountName  |参数名称：伙伴账号名| |参数的约束及描述：范围限制：0-256|
+    * partnerCorpName  |参数名称：伙伴名称| |参数的约束及描述：范围限制：0-256|
+    * partnerAccountName  |参数名称：伙伴账号名| |参数的约束及描述：范围限制：0-128|
     *
     * @var string[]
     */
@@ -47,8 +47,8 @@ class BudgetRecordInfo implements ModelInterface, ArrayAccess
     * operationTime  |参数名称：操作时间| |参数的约束及描述：UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ。|
     * operator  |参数名称：操作员或系统system| |参数的约束及描述：范围限制：0-64|
     * budgetType  |参数名称：预算模式| |参数的约束及描述：范围限制：0-10。MONTHLY：月度预算 PACKAGE：一次性预算|
-    * partnerCorpName  |参数名称：伙伴名称| |参数的约束及描述：范围限制：0-64|
-    * partnerAccountName  |参数名称：伙伴账号名| |参数的约束及描述：范围限制：0-256|
+    * partnerCorpName  |参数名称：伙伴名称| |参数的约束及描述：范围限制：0-256|
+    * partnerAccountName  |参数名称：伙伴账号名| |参数的约束及描述：范围限制：0-128|
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class BudgetRecordInfo implements ModelInterface, ArrayAccess
     * operationTime  |参数名称：操作时间| |参数的约束及描述：UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ。|
     * operator  |参数名称：操作员或系统system| |参数的约束及描述：范围限制：0-64|
     * budgetType  |参数名称：预算模式| |参数的约束及描述：范围限制：0-10。MONTHLY：月度预算 PACKAGE：一次性预算|
-    * partnerCorpName  |参数名称：伙伴名称| |参数的约束及描述：范围限制：0-64|
-    * partnerAccountName  |参数名称：伙伴账号名| |参数的约束及描述：范围限制：0-256|
+    * partnerCorpName  |参数名称：伙伴名称| |参数的约束及描述：范围限制：0-256|
+    * partnerAccountName  |参数名称：伙伴账号名| |参数的约束及描述：范围限制：0-128|
     *
     * @var string[]
     */
@@ -112,8 +112,8 @@ class BudgetRecordInfo implements ModelInterface, ArrayAccess
     * operationTime  |参数名称：操作时间| |参数的约束及描述：UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ。|
     * operator  |参数名称：操作员或系统system| |参数的约束及描述：范围限制：0-64|
     * budgetType  |参数名称：预算模式| |参数的约束及描述：范围限制：0-10。MONTHLY：月度预算 PACKAGE：一次性预算|
-    * partnerCorpName  |参数名称：伙伴名称| |参数的约束及描述：范围限制：0-64|
-    * partnerAccountName  |参数名称：伙伴账号名| |参数的约束及描述：范围限制：0-256|
+    * partnerCorpName  |参数名称：伙伴名称| |参数的约束及描述：范围限制：0-256|
+    * partnerAccountName  |参数名称：伙伴账号名| |参数的约束及描述：范围限制：0-128|
     *
     * @var string[]
     */
@@ -134,8 +134,8 @@ class BudgetRecordInfo implements ModelInterface, ArrayAccess
     * operationTime  |参数名称：操作时间| |参数的约束及描述：UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ。|
     * operator  |参数名称：操作员或系统system| |参数的约束及描述：范围限制：0-64|
     * budgetType  |参数名称：预算模式| |参数的约束及描述：范围限制：0-10。MONTHLY：月度预算 PACKAGE：一次性预算|
-    * partnerCorpName  |参数名称：伙伴名称| |参数的约束及描述：范围限制：0-64|
-    * partnerAccountName  |参数名称：伙伴账号名| |参数的约束及描述：范围限制：0-256|
+    * partnerCorpName  |参数名称：伙伴名称| |参数的约束及描述：范围限制：0-256|
+    * partnerAccountName  |参数名称：伙伴账号名| |参数的约束及描述：范围限制：0-128|
     *
     * @var string[]
     */
@@ -254,14 +254,14 @@ class BudgetRecordInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['budgetType']) && (mb_strlen($this->container['budgetType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'budgetType', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['partnerCorpName']) && (mb_strlen($this->container['partnerCorpName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'partnerCorpName', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['partnerCorpName']) && (mb_strlen($this->container['partnerCorpName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'partnerCorpName', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['partnerCorpName']) && (mb_strlen($this->container['partnerCorpName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'partnerCorpName', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['partnerAccountName']) && (mb_strlen($this->container['partnerAccountName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'partnerAccountName', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['partnerAccountName']) && (mb_strlen($this->container['partnerAccountName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'partnerAccountName', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['partnerAccountName']) && (mb_strlen($this->container['partnerAccountName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'partnerAccountName', the character length must be bigger than or equal to 0.";
@@ -402,7 +402,7 @@ class BudgetRecordInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets partnerCorpName
-    *  |参数名称：伙伴名称| |参数的约束及描述：范围限制：0-64|
+    *  |参数名称：伙伴名称| |参数的约束及描述：范围限制：0-256|
     *
     * @return string|null
     */
@@ -414,7 +414,7 @@ class BudgetRecordInfo implements ModelInterface, ArrayAccess
     /**
     * Sets partnerCorpName
     *
-    * @param string|null $partnerCorpName |参数名称：伙伴名称| |参数的约束及描述：范围限制：0-64|
+    * @param string|null $partnerCorpName |参数名称：伙伴名称| |参数的约束及描述：范围限制：0-256|
     *
     * @return $this
     */
@@ -426,7 +426,7 @@ class BudgetRecordInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets partnerAccountName
-    *  |参数名称：伙伴账号名| |参数的约束及描述：范围限制：0-256|
+    *  |参数名称：伙伴账号名| |参数的约束及描述：范围限制：0-128|
     *
     * @return string|null
     */
@@ -438,7 +438,7 @@ class BudgetRecordInfo implements ModelInterface, ArrayAccess
     /**
     * Sets partnerAccountName
     *
-    * @param string|null $partnerAccountName |参数名称：伙伴账号名| |参数的约束及描述：范围限制：0-256|
+    * @param string|null $partnerAccountName |参数名称：伙伴账号名| |参数的约束及描述：范围限制：0-128|
     *
     * @return $this
     */

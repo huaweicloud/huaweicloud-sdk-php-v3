@@ -21,7 +21,7 @@ class BatchUpdatePoliciesPriorityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * requestId  请求ID。
+    * requestId  **参数解释**：请求ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class BatchUpdatePoliciesPriorityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * requestId  请求ID。
+    * requestId  **参数解释**：请求ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class BatchUpdatePoliciesPriorityResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * requestId  请求ID。
+    * requestId  **参数解释**：请求ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class BatchUpdatePoliciesPriorityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * requestId  请求ID。
+    * requestId  **参数解释**：请求ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class BatchUpdatePoliciesPriorityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * requestId  请求ID。
+    * requestId  **参数解释**：请求ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class BatchUpdatePoliciesPriorityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestId
-    *  请求ID。
+    *  **参数解释**：请求ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class BatchUpdatePoliciesPriorityResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求ID。
+    * @param string|null $requestId **参数解释**：请求ID。  **取值范围**：不涉及
     *
     * @return $this
     */

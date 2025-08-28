@@ -20,12 +20,12 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * code  参数解释：可用区唯一编码。
-    * state  参数解释：可用区状态。  取值范围：ACTIVE。
-    * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
-    * publicBorderGroup  参数解释：网络公共边界组，如：center
-    * category  参数解释：范围编码。  取值范围：0表示center，21表示homezone。
-    * specCode  参数解释：可用区的产品编码，仅边缘场景有效。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * code  **参数解释**：可用区唯一编码。  **取值范围**：不涉及
+    * state  **参数解释**：可用区状态。  **取值范围**：ACTIVE。
+    * protocol  [**参数解释**：未售罄的LB规格类别。  **取值范围**：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [**参数解释**：LB规格类别。  **取值范围**：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
+    * publicBorderGroup  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组
+    * category  **参数解释**：可用区子类型编码。该字段主要用于区分在边缘场景下，边缘AZ的类型。  **取值范围**：0表示center，21表示homezone，41表示IES。
+    * specCode  **参数解释**：可用区的产品编码，用于控制台购买ELB前查询定价，仅边缘场景有效。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * code  参数解释：可用区唯一编码。
-    * state  参数解释：可用区状态。  取值范围：ACTIVE。
-    * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
-    * publicBorderGroup  参数解释：网络公共边界组，如：center
-    * category  参数解释：范围编码。  取值范围：0表示center，21表示homezone。
-    * specCode  参数解释：可用区的产品编码，仅边缘场景有效。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * code  **参数解释**：可用区唯一编码。  **取值范围**：不涉及
+    * state  **参数解释**：可用区状态。  **取值范围**：ACTIVE。
+    * protocol  [**参数解释**：未售罄的LB规格类别。  **取值范围**：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [**参数解释**：LB规格类别。  **取值范围**：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
+    * publicBorderGroup  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组
+    * category  **参数解释**：可用区子类型编码。该字段主要用于区分在边缘场景下，边缘AZ的类型。  **取值范围**：0表示center，21表示homezone，41表示IES。
+    * specCode  **参数解释**：可用区的产品编码，用于控制台购买ELB前查询定价，仅边缘场景有效。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * code  参数解释：可用区唯一编码。
-    * state  参数解释：可用区状态。  取值范围：ACTIVE。
-    * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
-    * publicBorderGroup  参数解释：网络公共边界组，如：center
-    * category  参数解释：范围编码。  取值范围：0表示center，21表示homezone。
-    * specCode  参数解释：可用区的产品编码，仅边缘场景有效。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * code  **参数解释**：可用区唯一编码。  **取值范围**：不涉及
+    * state  **参数解释**：可用区状态。  **取值范围**：ACTIVE。
+    * protocol  [**参数解释**：未售罄的LB规格类别。  **取值范围**：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [**参数解释**：LB规格类别。  **取值范围**：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
+    * publicBorderGroup  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组
+    * category  **参数解释**：可用区子类型编码。该字段主要用于区分在边缘场景下，边缘AZ的类型。  **取值范围**：0表示center，21表示homezone，41表示IES。
+    * specCode  **参数解释**：可用区的产品编码，用于控制台购买ELB前查询定价，仅边缘场景有效。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * code  参数解释：可用区唯一编码。
-    * state  参数解释：可用区状态。  取值范围：ACTIVE。
-    * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
-    * publicBorderGroup  参数解释：网络公共边界组，如：center
-    * category  参数解释：范围编码。  取值范围：0表示center，21表示homezone。
-    * specCode  参数解释：可用区的产品编码，仅边缘场景有效。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * code  **参数解释**：可用区唯一编码。  **取值范围**：不涉及
+    * state  **参数解释**：可用区状态。  **取值范围**：ACTIVE。
+    * protocol  [**参数解释**：未售罄的LB规格类别。  **取值范围**：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [**参数解释**：LB规格类别。  **取值范围**：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
+    * publicBorderGroup  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组
+    * category  **参数解释**：可用区子类型编码。该字段主要用于区分在边缘场景下，边缘AZ的类型。  **取值范围**：0表示center，21表示homezone，41表示IES。
+    * specCode  **参数解释**：可用区的产品编码，用于控制台购买ELB前查询定价，仅边缘场景有效。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * code  参数解释：可用区唯一编码。
-    * state  参数解释：可用区状态。  取值范围：ACTIVE。
-    * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
-    * publicBorderGroup  参数解释：网络公共边界组，如：center
-    * category  参数解释：范围编码。  取值范围：0表示center，21表示homezone。
-    * specCode  参数解释：可用区的产品编码，仅边缘场景有效。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * code  **参数解释**：可用区唯一编码。  **取值范围**：不涉及
+    * state  **参数解释**：可用区状态。  **取值范围**：ACTIVE。
+    * protocol  [**参数解释**：未售罄的LB规格类别。  **取值范围**：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [**参数解释**：LB规格类别。  **取值范围**：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
+    * publicBorderGroup  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组
+    * category  **参数解释**：可用区子类型编码。该字段主要用于区分在边缘场景下，边缘AZ的类型。  **取值范围**：0表示center，21表示homezone，41表示IES。
+    * specCode  **参数解释**：可用区的产品编码，用于控制台购买ELB前查询定价，仅边缘场景有效。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -244,7 +244,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  参数解释：可用区唯一编码。
+    *  **参数解释**：可用区唯一编码。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -256,7 +256,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param string $code 参数解释：可用区唯一编码。
+    * @param string $code **参数解释**：可用区唯一编码。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -268,7 +268,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  参数解释：可用区状态。  取值范围：ACTIVE。
+    *  **参数解释**：可用区状态。  **取值范围**：ACTIVE。
     *
     * @return string
     */
@@ -280,7 +280,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string $state 参数解释：可用区状态。  取值范围：ACTIVE。
+    * @param string $state **参数解释**：可用区状态。  **取值范围**：ACTIVE。
     *
     * @return $this
     */
@@ -292,7 +292,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
+    *  [**参数解释**：未售罄的LB规格类别。  **取值范围**：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [**参数解释**：LB规格类别。  **取值范围**：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
     *
     * @return string[]
     */
@@ -304,7 +304,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string[] $protocol [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
+    * @param string[] $protocol [**参数解释**：未售罄的LB规格类别。  **取值范围**：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [**参数解释**：LB规格类别。  **取值范围**：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
     *
     * @return $this
     */
@@ -316,7 +316,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBorderGroup
-    *  参数解释：网络公共边界组，如：center
+    *  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组
     *
     * @return string
     */
@@ -328,7 +328,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     /**
     * Sets publicBorderGroup
     *
-    * @param string $publicBorderGroup 参数解释：网络公共边界组，如：center
+    * @param string $publicBorderGroup **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组
     *
     * @return $this
     */
@@ -340,7 +340,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  参数解释：范围编码。  取值范围：0表示center，21表示homezone。
+    *  **参数解释**：可用区子类型编码。该字段主要用于区分在边缘场景下，边缘AZ的类型。  **取值范围**：0表示center，21表示homezone，41表示IES。
     *
     * @return int
     */
@@ -352,7 +352,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param int $category 参数解释：范围编码。  取值范围：0表示center，21表示homezone。
+    * @param int $category **参数解释**：可用区子类型编码。该字段主要用于区分在边缘场景下，边缘AZ的类型。  **取值范围**：0表示center，21表示homezone，41表示IES。
     *
     * @return $this
     */
@@ -364,7 +364,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Gets specCode
-    *  参数解释：可用区的产品编码，仅边缘场景有效。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    *  **参数解释**：可用区的产品编码，用于控制台购买ELB前查询定价，仅边缘场景有效。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @return string|null
     */
@@ -376,7 +376,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     /**
     * Sets specCode
     *
-    * @param string|null $specCode 参数解释：可用区的产品编码，仅边缘场景有效。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * @param string|null $specCode **参数解释**：可用区的产品编码，用于控制台购买ELB前查询定价，仅边缘场景有效。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @return $this
     */

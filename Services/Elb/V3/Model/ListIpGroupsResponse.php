@@ -21,8 +21,8 @@ class ListIpGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ipgroups  参数解释：IP地址组列表返回对象。
-    * requestId  参数解释：请求ID。  注：自动生成 。
+    * ipgroups  **参数解释**：IP地址组列表返回对象。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -35,8 +35,8 @@ class ListIpGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ipgroups  参数解释：IP地址组列表返回对象。
-    * requestId  参数解释：请求ID。  注：自动生成 。
+    * ipgroups  **参数解释**：IP地址组列表返回对象。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -70,8 +70,8 @@ class ListIpGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ipgroups  参数解释：IP地址组列表返回对象。
-    * requestId  参数解释：请求ID。  注：自动生成 。
+    * ipgroups  **参数解释**：IP地址组列表返回对象。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -84,8 +84,8 @@ class ListIpGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ipgroups  参数解释：IP地址组列表返回对象。
-    * requestId  参数解释：请求ID。  注：自动生成 。
+    * ipgroups  **参数解释**：IP地址组列表返回对象。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -98,8 +98,8 @@ class ListIpGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ipgroups  参数解释：IP地址组列表返回对象。
-    * requestId  参数解释：请求ID。  注：自动生成 。
+    * ipgroups  **参数解释**：IP地址组列表返回对象。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -197,7 +197,7 @@ class ListIpGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipgroups
-    *  参数解释：IP地址组列表返回对象。
+    *  **参数解释**：IP地址组列表返回对象。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\IpGroup[]|null
     */
@@ -209,7 +209,7 @@ class ListIpGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ipgroups
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\IpGroup[]|null $ipgroups 参数解释：IP地址组列表返回对象。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\IpGroup[]|null $ipgroups **参数解释**：IP地址组列表返回对象。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ListIpGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestId
-    *  参数解释：请求ID。  注：自动生成 。
+    *  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class ListIpGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 参数解释：请求ID。  注：自动生成 。
+    * @param string|null $requestId **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return $this
     */

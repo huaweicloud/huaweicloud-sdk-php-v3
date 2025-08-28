@@ -20,8 +20,8 @@ class CreateRedirectPoolsStickySessionConfig implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enable  参数解释：转发策略主机组会话保持开启的开关。  默认取值：false，表示关闭主机组会话保持。
-    * timeout  参数解释：会话保持的时间。  取值范围：1-1440（分钟）  默认取值：1440  [荷兰region不支持QUIC。](tag:dt)
+    * enable  **参数解释**：转发策略服务器组会话保持开启的开关。  **约束限制**：不涉及  **取值范围**：true 开启，false不开启  **默认取值**：false，表示关闭服务器组会话保持。
+    * timeout  **参数解释**：会话保持的时间。  **约束限制**：不涉及  **取值范围**：1-1440（分钟）  **默认取值**：1440  [荷兰region不支持QUIC。](tag:dt)
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CreateRedirectPoolsStickySessionConfig implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enable  参数解释：转发策略主机组会话保持开启的开关。  默认取值：false，表示关闭主机组会话保持。
-    * timeout  参数解释：会话保持的时间。  取值范围：1-1440（分钟）  默认取值：1440  [荷兰region不支持QUIC。](tag:dt)
+    * enable  **参数解释**：转发策略服务器组会话保持开启的开关。  **约束限制**：不涉及  **取值范围**：true 开启，false不开启  **默认取值**：false，表示关闭服务器组会话保持。
+    * timeout  **参数解释**：会话保持的时间。  **约束限制**：不涉及  **取值范围**：1-1440（分钟）  **默认取值**：1440  [荷兰region不支持QUIC。](tag:dt)
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CreateRedirectPoolsStickySessionConfig implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enable  参数解释：转发策略主机组会话保持开启的开关。  默认取值：false，表示关闭主机组会话保持。
-    * timeout  参数解释：会话保持的时间。  取值范围：1-1440（分钟）  默认取值：1440  [荷兰region不支持QUIC。](tag:dt)
+    * enable  **参数解释**：转发策略服务器组会话保持开启的开关。  **约束限制**：不涉及  **取值范围**：true 开启，false不开启  **默认取值**：false，表示关闭服务器组会话保持。
+    * timeout  **参数解释**：会话保持的时间。  **约束限制**：不涉及  **取值范围**：1-1440（分钟）  **默认取值**：1440  [荷兰region不支持QUIC。](tag:dt)
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CreateRedirectPoolsStickySessionConfig implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enable  参数解释：转发策略主机组会话保持开启的开关。  默认取值：false，表示关闭主机组会话保持。
-    * timeout  参数解释：会话保持的时间。  取值范围：1-1440（分钟）  默认取值：1440  [荷兰region不支持QUIC。](tag:dt)
+    * enable  **参数解释**：转发策略服务器组会话保持开启的开关。  **约束限制**：不涉及  **取值范围**：true 开启，false不开启  **默认取值**：false，表示关闭服务器组会话保持。
+    * timeout  **参数解释**：会话保持的时间。  **约束限制**：不涉及  **取值范围**：1-1440（分钟）  **默认取值**：1440  [荷兰region不支持QUIC。](tag:dt)
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CreateRedirectPoolsStickySessionConfig implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enable  参数解释：转发策略主机组会话保持开启的开关。  默认取值：false，表示关闭主机组会话保持。
-    * timeout  参数解释：会话保持的时间。  取值范围：1-1440（分钟）  默认取值：1440  [荷兰region不支持QUIC。](tag:dt)
+    * enable  **参数解释**：转发策略服务器组会话保持开启的开关。  **约束限制**：不涉及  **取值范围**：true 开启，false不开启  **默认取值**：false，表示关闭服务器组会话保持。
+    * timeout  **参数解释**：会话保持的时间。  **约束限制**：不涉及  **取值范围**：1-1440（分钟）  **默认取值**：1440  [荷兰region不支持QUIC。](tag:dt)
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class CreateRedirectPoolsStickySessionConfig implements ModelInterface, ArrayAcc
 
     /**
     * Gets enable
-    *  参数解释：转发策略主机组会话保持开启的开关。  默认取值：false，表示关闭主机组会话保持。
+    *  **参数解释**：转发策略服务器组会话保持开启的开关。  **约束限制**：不涉及  **取值范围**：true 开启，false不开启  **默认取值**：false，表示关闭服务器组会话保持。
     *
     * @return bool|null
     */
@@ -197,7 +197,7 @@ class CreateRedirectPoolsStickySessionConfig implements ModelInterface, ArrayAcc
     /**
     * Sets enable
     *
-    * @param bool|null $enable 参数解释：转发策略主机组会话保持开启的开关。  默认取值：false，表示关闭主机组会话保持。
+    * @param bool|null $enable **参数解释**：转发策略服务器组会话保持开启的开关。  **约束限制**：不涉及  **取值范围**：true 开启，false不开启  **默认取值**：false，表示关闭服务器组会话保持。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class CreateRedirectPoolsStickySessionConfig implements ModelInterface, ArrayAcc
 
     /**
     * Gets timeout
-    *  参数解释：会话保持的时间。  取值范围：1-1440（分钟）  默认取值：1440  [荷兰region不支持QUIC。](tag:dt)
+    *  **参数解释**：会话保持的时间。  **约束限制**：不涉及  **取值范围**：1-1440（分钟）  **默认取值**：1440  [荷兰region不支持QUIC。](tag:dt)
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class CreateRedirectPoolsStickySessionConfig implements ModelInterface, ArrayAcc
     /**
     * Sets timeout
     *
-    * @param int|null $timeout 参数解释：会话保持的时间。  取值范围：1-1440（分钟）  默认取值：1440  [荷兰region不支持QUIC。](tag:dt)
+    * @param int|null $timeout **参数解释**：会话保持的时间。  **约束限制**：不涉及  **取值范围**：1-1440（分钟）  **默认取值**：1440  [荷兰region不支持QUIC。](tag:dt)
     *
     * @return $this
     */

@@ -20,10 +20,10 @@ class LoadBalancerStatusHealthMonitor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  协议类型。取值：TCP、UDP_CONNECT或HTTP。
-    * id  健康检查器ID。
-    * name  健康检查器名称。
-    * provisioningStatus  健康检查器的配置状态。取值：ACTIVE表示使用中。
+    * type  **参数解释**：健康检查器协议类型。  **取值范围**：TCP、UDP_CONNECT、HTTP。
+    * id  **参数解释**：健康检查器ID。  **取值范围**：不涉及
+    * name  **参数解释**：健康检查器名称。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：健康检查器的配置状态。  **取值范围**：ACTIVE表示使用中。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class LoadBalancerStatusHealthMonitor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  协议类型。取值：TCP、UDP_CONNECT或HTTP。
-    * id  健康检查器ID。
-    * name  健康检查器名称。
-    * provisioningStatus  健康检查器的配置状态。取值：ACTIVE表示使用中。
+    * type  **参数解释**：健康检查器协议类型。  **取值范围**：TCP、UDP_CONNECT、HTTP。
+    * id  **参数解释**：健康检查器ID。  **取值范围**：不涉及
+    * name  **参数解释**：健康检查器名称。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：健康检查器的配置状态。  **取值范围**：ACTIVE表示使用中。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class LoadBalancerStatusHealthMonitor implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  协议类型。取值：TCP、UDP_CONNECT或HTTP。
-    * id  健康检查器ID。
-    * name  健康检查器名称。
-    * provisioningStatus  健康检查器的配置状态。取值：ACTIVE表示使用中。
+    * type  **参数解释**：健康检查器协议类型。  **取值范围**：TCP、UDP_CONNECT、HTTP。
+    * id  **参数解释**：健康检查器ID。  **取值范围**：不涉及
+    * name  **参数解释**：健康检查器名称。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：健康检查器的配置状态。  **取值范围**：ACTIVE表示使用中。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class LoadBalancerStatusHealthMonitor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  协议类型。取值：TCP、UDP_CONNECT或HTTP。
-    * id  健康检查器ID。
-    * name  健康检查器名称。
-    * provisioningStatus  健康检查器的配置状态。取值：ACTIVE表示使用中。
+    * type  **参数解释**：健康检查器协议类型。  **取值范围**：TCP、UDP_CONNECT、HTTP。
+    * id  **参数解释**：健康检查器ID。  **取值范围**：不涉及
+    * name  **参数解释**：健康检查器名称。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：健康检查器的配置状态。  **取值范围**：ACTIVE表示使用中。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class LoadBalancerStatusHealthMonitor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  协议类型。取值：TCP、UDP_CONNECT或HTTP。
-    * id  健康检查器ID。
-    * name  健康检查器名称。
-    * provisioningStatus  健康检查器的配置状态。取值：ACTIVE表示使用中。
+    * type  **参数解释**：健康检查器协议类型。  **取值范围**：TCP、UDP_CONNECT、HTTP。
+    * id  **参数解释**：健康检查器ID。  **取值范围**：不涉及
+    * name  **参数解释**：健康检查器名称。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：健康检查器的配置状态。  **取值范围**：ACTIVE表示使用中。
     *
     * @var string[]
     */
@@ -213,7 +213,7 @@ class LoadBalancerStatusHealthMonitor implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  协议类型。取值：TCP、UDP_CONNECT或HTTP。
+    *  **参数解释**：健康检查器协议类型。  **取值范围**：TCP、UDP_CONNECT、HTTP。
     *
     * @return string|null
     */
@@ -225,7 +225,7 @@ class LoadBalancerStatusHealthMonitor implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 协议类型。取值：TCP、UDP_CONNECT或HTTP。
+    * @param string|null $type **参数解释**：健康检查器协议类型。  **取值范围**：TCP、UDP_CONNECT、HTTP。
     *
     * @return $this
     */
@@ -237,7 +237,7 @@ class LoadBalancerStatusHealthMonitor implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  健康检查器ID。
+    *  **参数解释**：健康检查器ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -249,7 +249,7 @@ class LoadBalancerStatusHealthMonitor implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 健康检查器ID。
+    * @param string|null $id **参数解释**：健康检查器ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -261,7 +261,7 @@ class LoadBalancerStatusHealthMonitor implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  健康检查器名称。
+    *  **参数解释**：健康检查器名称。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -273,7 +273,7 @@ class LoadBalancerStatusHealthMonitor implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 健康检查器名称。
+    * @param string|null $name **参数解释**：健康检查器名称。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -285,7 +285,7 @@ class LoadBalancerStatusHealthMonitor implements ModelInterface, ArrayAccess
 
     /**
     * Gets provisioningStatus
-    *  健康检查器的配置状态。取值：ACTIVE表示使用中。
+    *  **参数解释**：健康检查器的配置状态。  **取值范围**：ACTIVE表示使用中。
     *
     * @return string|null
     */
@@ -297,7 +297,7 @@ class LoadBalancerStatusHealthMonitor implements ModelInterface, ArrayAccess
     /**
     * Sets provisioningStatus
     *
-    * @param string|null $provisioningStatus 健康检查器的配置状态。取值：ACTIVE表示使用中。
+    * @param string|null $provisioningStatus **参数解释**：健康检查器的配置状态。  **取值范围**：ACTIVE表示使用中。
     *
     * @return $this
     */

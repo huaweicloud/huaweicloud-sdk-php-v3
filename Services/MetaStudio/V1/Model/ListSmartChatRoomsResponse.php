@@ -23,6 +23,8 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * count  **参数解释**： 智能交互对话总数。
     * countConcurrency  **参数解释**： 智能交互对话总并发路数。
+    * countClientNums  **参数解释**： 智能交互对话按接入端计费总路数。
+    * countClientNumsToken  **参数解释**： 智能交互对话按接入端计费（Token）总路数。
     * smartChatRooms  智能交互对话列表。
     * xRequestId  xRequestId
     *
@@ -31,6 +33,8 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'count' => 'int',
             'countConcurrency' => 'int',
+            'countClientNums' => 'int',
+            'countClientNumsToken' => 'int',
             'smartChatRooms' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatRoomBaseInfo[]',
             'xRequestId' => 'string'
     ];
@@ -39,6 +43,8 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * count  **参数解释**： 智能交互对话总数。
     * countConcurrency  **参数解释**： 智能交互对话总并发路数。
+    * countClientNums  **参数解释**： 智能交互对话按接入端计费总路数。
+    * countClientNumsToken  **参数解释**： 智能交互对话按接入端计费（Token）总路数。
     * smartChatRooms  智能交互对话列表。
     * xRequestId  xRequestId
     *
@@ -47,6 +53,8 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'count' => 'int32',
         'countConcurrency' => 'int32',
+        'countClientNums' => 'int32',
+        'countClientNumsToken' => 'int32',
         'smartChatRooms' => null,
         'xRequestId' => null
     ];
@@ -76,6 +84,8 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * count  **参数解释**： 智能交互对话总数。
     * countConcurrency  **参数解释**： 智能交互对话总并发路数。
+    * countClientNums  **参数解释**： 智能交互对话按接入端计费总路数。
+    * countClientNumsToken  **参数解释**： 智能交互对话按接入端计费（Token）总路数。
     * smartChatRooms  智能交互对话列表。
     * xRequestId  xRequestId
     *
@@ -84,6 +94,8 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'count' => 'count',
             'countConcurrency' => 'count_concurrency',
+            'countClientNums' => 'count_client_nums',
+            'countClientNumsToken' => 'count_client_nums_token',
             'smartChatRooms' => 'smart_chat_rooms',
             'xRequestId' => 'X-Request-Id'
     ];
@@ -92,6 +104,8 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * count  **参数解释**： 智能交互对话总数。
     * countConcurrency  **参数解释**： 智能交互对话总并发路数。
+    * countClientNums  **参数解释**： 智能交互对话按接入端计费总路数。
+    * countClientNumsToken  **参数解释**： 智能交互对话按接入端计费（Token）总路数。
     * smartChatRooms  智能交互对话列表。
     * xRequestId  xRequestId
     *
@@ -100,6 +114,8 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'count' => 'setCount',
             'countConcurrency' => 'setCountConcurrency',
+            'countClientNums' => 'setCountClientNums',
+            'countClientNumsToken' => 'setCountClientNumsToken',
             'smartChatRooms' => 'setSmartChatRooms',
             'xRequestId' => 'setXRequestId'
     ];
@@ -108,6 +124,8 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * count  **参数解释**： 智能交互对话总数。
     * countConcurrency  **参数解释**： 智能交互对话总并发路数。
+    * countClientNums  **参数解释**： 智能交互对话按接入端计费总路数。
+    * countClientNumsToken  **参数解释**： 智能交互对话按接入端计费（Token）总路数。
     * smartChatRooms  智能交互对话列表。
     * xRequestId  xRequestId
     *
@@ -116,6 +134,8 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'count' => 'getCount',
             'countConcurrency' => 'getCountConcurrency',
+            'countClientNums' => 'getCountClientNums',
+            'countClientNumsToken' => 'getCountClientNumsToken',
             'smartChatRooms' => 'getSmartChatRooms',
             'xRequestId' => 'getXRequestId'
     ];
@@ -180,6 +200,8 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['countConcurrency'] = isset($data['countConcurrency']) ? $data['countConcurrency'] : null;
+        $this->container['countClientNums'] = isset($data['countClientNums']) ? $data['countClientNums'] : null;
+        $this->container['countClientNumsToken'] = isset($data['countClientNumsToken']) ? $data['countClientNumsToken'] : null;
         $this->container['smartChatRooms'] = isset($data['smartChatRooms']) ? $data['smartChatRooms'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
@@ -203,6 +225,18 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['countConcurrency']) && ($this->container['countConcurrency'] < 0)) {
                 $invalidProperties[] = "invalid value for 'countConcurrency', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['countClientNums']) && ($this->container['countClientNums'] > 1024000)) {
+                $invalidProperties[] = "invalid value for 'countClientNums', must be smaller than or equal to 1024000.";
+            }
+            if (!is_null($this->container['countClientNums']) && ($this->container['countClientNums'] < 0)) {
+                $invalidProperties[] = "invalid value for 'countClientNums', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['countClientNumsToken']) && ($this->container['countClientNumsToken'] > 1024000)) {
+                $invalidProperties[] = "invalid value for 'countClientNumsToken', must be smaller than or equal to 1024000.";
+            }
+            if (!is_null($this->container['countClientNumsToken']) && ($this->container['countClientNumsToken'] < 0)) {
+                $invalidProperties[] = "invalid value for 'countClientNumsToken', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -263,6 +297,54 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     public function setCountConcurrency($countConcurrency)
     {
         $this->container['countConcurrency'] = $countConcurrency;
+        return $this;
+    }
+
+    /**
+    * Gets countClientNums
+    *  **参数解释**： 智能交互对话按接入端计费总路数。
+    *
+    * @return int|null
+    */
+    public function getCountClientNums()
+    {
+        return $this->container['countClientNums'];
+    }
+
+    /**
+    * Sets countClientNums
+    *
+    * @param int|null $countClientNums **参数解释**： 智能交互对话按接入端计费总路数。
+    *
+    * @return $this
+    */
+    public function setCountClientNums($countClientNums)
+    {
+        $this->container['countClientNums'] = $countClientNums;
+        return $this;
+    }
+
+    /**
+    * Gets countClientNumsToken
+    *  **参数解释**： 智能交互对话按接入端计费（Token）总路数。
+    *
+    * @return int|null
+    */
+    public function getCountClientNumsToken()
+    {
+        return $this->container['countClientNumsToken'];
+    }
+
+    /**
+    * Sets countClientNumsToken
+    *
+    * @param int|null $countClientNumsToken **参数解释**： 智能交互对话按接入端计费（Token）总路数。
+    *
+    * @return $this
+    */
+    public function setCountClientNumsToken($countClientNumsToken)
+    {
+        $this->container['countClientNumsToken'] = $countClientNumsToken;
         return $this;
     }
 

@@ -20,13 +20,13 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  参数解释：检查项名称
-    * reason  参数解释：异常原因
-    * severity  参数解释：重要级别，分为Major(严重)和Tips(提示)
-    * subject  参数解释：检查类别，config表示配置检查
-    * jobId  参数解释：任务ID。
-    * reasonTemplate  参数解释：异常原因模板
-    * reasonParams  参数解释：异常结果变量参数表，用于结合异常原因模板动态生成异常原因
+    * name  **参数解释**：检查项名称。  **取值范围**：不涉及
+    * reason  **参数解释**：异常原因。  **取值范围**：不涉及
+    * severity  **参数解释**：重要级别，分为Major(严重)和Tips(提示)。  **取值范围**：不涉及
+    * subject  **参数解释**：检查类别，config表示配置检查。  **取值范围**：不涉及
+    * jobId  **参数解释**：任务ID。  **取值范围**：不涉及
+    * reasonTemplate  **参数解释**：异常原因模板。  **取值范围**：不涉及
+    * reasonParams  **参数解释**：异常结果变量参数表，用于结合异常原因模板动态生成异常原因。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  参数解释：检查项名称
-    * reason  参数解释：异常原因
-    * severity  参数解释：重要级别，分为Major(严重)和Tips(提示)
-    * subject  参数解释：检查类别，config表示配置检查
-    * jobId  参数解释：任务ID。
-    * reasonTemplate  参数解释：异常原因模板
-    * reasonParams  参数解释：异常结果变量参数表，用于结合异常原因模板动态生成异常原因
+    * name  **参数解释**：检查项名称。  **取值范围**：不涉及
+    * reason  **参数解释**：异常原因。  **取值范围**：不涉及
+    * severity  **参数解释**：重要级别，分为Major(严重)和Tips(提示)。  **取值范围**：不涉及
+    * subject  **参数解释**：检查类别，config表示配置检查。  **取值范围**：不涉及
+    * jobId  **参数解释**：任务ID。  **取值范围**：不涉及
+    * reasonTemplate  **参数解释**：异常原因模板。  **取值范围**：不涉及
+    * reasonParams  **参数解释**：异常结果变量参数表，用于结合异常原因模板动态生成异常原因。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  参数解释：检查项名称
-    * reason  参数解释：异常原因
-    * severity  参数解释：重要级别，分为Major(严重)和Tips(提示)
-    * subject  参数解释：检查类别，config表示配置检查
-    * jobId  参数解释：任务ID。
-    * reasonTemplate  参数解释：异常原因模板
-    * reasonParams  参数解释：异常结果变量参数表，用于结合异常原因模板动态生成异常原因
+    * name  **参数解释**：检查项名称。  **取值范围**：不涉及
+    * reason  **参数解释**：异常原因。  **取值范围**：不涉及
+    * severity  **参数解释**：重要级别，分为Major(严重)和Tips(提示)。  **取值范围**：不涉及
+    * subject  **参数解释**：检查类别，config表示配置检查。  **取值范围**：不涉及
+    * jobId  **参数解释**：任务ID。  **取值范围**：不涉及
+    * reasonTemplate  **参数解释**：异常原因模板。  **取值范围**：不涉及
+    * reasonParams  **参数解释**：异常结果变量参数表，用于结合异常原因模板动态生成异常原因。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  参数解释：检查项名称
-    * reason  参数解释：异常原因
-    * severity  参数解释：重要级别，分为Major(严重)和Tips(提示)
-    * subject  参数解释：检查类别，config表示配置检查
-    * jobId  参数解释：任务ID。
-    * reasonTemplate  参数解释：异常原因模板
-    * reasonParams  参数解释：异常结果变量参数表，用于结合异常原因模板动态生成异常原因
+    * name  **参数解释**：检查项名称。  **取值范围**：不涉及
+    * reason  **参数解释**：异常原因。  **取值范围**：不涉及
+    * severity  **参数解释**：重要级别，分为Major(严重)和Tips(提示)。  **取值范围**：不涉及
+    * subject  **参数解释**：检查类别，config表示配置检查。  **取值范围**：不涉及
+    * jobId  **参数解释**：任务ID。  **取值范围**：不涉及
+    * reasonTemplate  **参数解释**：异常原因模板。  **取值范围**：不涉及
+    * reasonParams  **参数解释**：异常结果变量参数表，用于结合异常原因模板动态生成异常原因。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  参数解释：检查项名称
-    * reason  参数解释：异常原因
-    * severity  参数解释：重要级别，分为Major(严重)和Tips(提示)
-    * subject  参数解释：检查类别，config表示配置检查
-    * jobId  参数解释：任务ID。
-    * reasonTemplate  参数解释：异常原因模板
-    * reasonParams  参数解释：异常结果变量参数表，用于结合异常原因模板动态生成异常原因
+    * name  **参数解释**：检查项名称。  **取值范围**：不涉及
+    * reason  **参数解释**：异常原因。  **取值范围**：不涉及
+    * severity  **参数解释**：重要级别，分为Major(严重)和Tips(提示)。  **取值范围**：不涉及
+    * subject  **参数解释**：检查类别，config表示配置检查。  **取值范围**：不涉及
+    * jobId  **参数解释**：任务ID。  **取值范围**：不涉及
+    * reasonTemplate  **参数解释**：异常原因模板。  **取值范围**：不涉及
+    * reasonParams  **参数解释**：异常结果变量参数表，用于结合异常原因模板动态生成异常原因。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  参数解释：检查项名称
+    *  **参数解释**：检查项名称。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 参数解释：检查项名称
+    * @param string|null $name **参数解释**：检查项名称。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets reason
-    *  参数解释：异常原因
+    *  **参数解释**：异常原因。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
     /**
     * Sets reason
     *
-    * @param string|null $reason 参数解释：异常原因
+    * @param string|null $reason **参数解释**：异常原因。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  参数解释：重要级别，分为Major(严重)和Tips(提示)
+    *  **参数解释**：重要级别，分为Major(严重)和Tips(提示)。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity 参数解释：重要级别，分为Major(严重)和Tips(提示)
+    * @param string|null $severity **参数解释**：重要级别，分为Major(严重)和Tips(提示)。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets subject
-    *  参数解释：检查类别，config表示配置检查
+    *  **参数解释**：检查类别，config表示配置检查。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -324,7 +324,7 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
     /**
     * Sets subject
     *
-    * @param string|null $subject 参数解释：检查类别，config表示配置检查
+    * @param string|null $subject **参数解释**：检查类别，config表示配置检查。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  参数解释：任务ID。
+    *  **参数解释**：任务ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 参数解释：任务ID。
+    * @param string|null $jobId **参数解释**：任务ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets reasonTemplate
-    *  参数解释：异常原因模板
+    *  **参数解释**：异常原因模板。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
     /**
     * Sets reasonTemplate
     *
-    * @param string|null $reasonTemplate 参数解释：异常原因模板
+    * @param string|null $reasonTemplate **参数解释**：异常原因模板。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets reasonParams
-    *  参数解释：异常结果变量参数表，用于结合异常原因模板动态生成异常原因
+    *  **参数解释**：异常结果变量参数表，用于结合异常原因模板动态生成异常原因。  **取值范围**：不涉及
     *
     * @return string[]|null
     */
@@ -396,7 +396,7 @@ class MemberCheckJobResultItem implements ModelInterface, ArrayAccess
     /**
     * Sets reasonParams
     *
-    * @param string[]|null $reasonParams 参数解释：异常结果变量参数表，用于结合异常原因模板动态生成异常原因
+    * @param string[]|null $reasonParams **参数解释**：异常结果变量参数表，用于结合异常原因模板动态生成异常原因。  **取值范围**：不涉及
     *
     * @return $this
     */

@@ -21,9 +21,9 @@ class RestoreLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * requestId  请求ID。 注：自动生成 。
-    * type  ELB实例的类型，v2或者v3。
-    * jobId  还原负载均衡器的任务ID。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * type  **参数解释**：ELB实例的类型。  **取值范围**： - v2：共享型ELB。 - v3：独享型ELB。
+    * jobId  **参数解释**：还原负载均衡器的任务ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class RestoreLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * requestId  请求ID。 注：自动生成 。
-    * type  ELB实例的类型，v2或者v3。
-    * jobId  还原负载均衡器的任务ID。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * type  **参数解释**：ELB实例的类型。  **取值范围**： - v2：共享型ELB。 - v3：独享型ELB。
+    * jobId  **参数解释**：还原负载均衡器的任务ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class RestoreLoadbalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * requestId  请求ID。 注：自动生成 。
-    * type  ELB实例的类型，v2或者v3。
-    * jobId  还原负载均衡器的任务ID。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * type  **参数解释**：ELB实例的类型。  **取值范围**： - v2：共享型ELB。 - v3：独享型ELB。
+    * jobId  **参数解释**：还原负载均衡器的任务ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class RestoreLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * requestId  请求ID。 注：自动生成 。
-    * type  ELB实例的类型，v2或者v3。
-    * jobId  还原负载均衡器的任务ID。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * type  **参数解释**：ELB实例的类型。  **取值范围**： - v2：共享型ELB。 - v3：独享型ELB。
+    * jobId  **参数解释**：还原负载均衡器的任务ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class RestoreLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * requestId  请求ID。 注：自动生成 。
-    * type  ELB实例的类型，v2或者v3。
-    * jobId  还原负载均衡器的任务ID。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    * type  **参数解释**：ELB实例的类型。  **取值范围**： - v2：共享型ELB。 - v3：独享型ELB。
+    * jobId  **参数解释**：还原负载均衡器的任务ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class RestoreLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestId
-    *  请求ID。 注：自动生成 。
+    *  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class RestoreLoadbalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求ID。 注：自动生成 。
+    * @param string|null $requestId **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class RestoreLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  ELB实例的类型，v2或者v3。
+    *  **参数解释**：ELB实例的类型。  **取值范围**： - v2：共享型ELB。 - v3：独享型ELB。
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class RestoreLoadbalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type ELB实例的类型，v2或者v3。
+    * @param string|null $type **参数解释**：ELB实例的类型。  **取值范围**： - v2：共享型ELB。 - v3：独享型ELB。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class RestoreLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  还原负载均衡器的任务ID。
+    *  **参数解释**：还原负载均衡器的任务ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class RestoreLoadbalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 还原负载均衡器的任务ID。
+    * @param string|null $jobId **参数解释**：还原负载均衡器的任务ID。  **取值范围**：不涉及
     *
     * @return $this
     */

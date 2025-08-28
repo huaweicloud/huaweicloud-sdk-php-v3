@@ -20,11 +20,11 @@ class LocalPort implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * portId  port ID。
-    * ipAddress  port IPv4地址。
-    * ipv6Address  port IPv6地址。
-    * type  port 类型。  取值范围： - l4_hc：四层dnat转发时健康检查使用的地址。 - l4 四层fullnat 转发时健康检查及业务转发使用的地址。 - l7 七层健康检查及业务转发使用的地址。
-    * virsubnetId  port 虚拟子网ID。
+    * portId  **参数解释**：负载均衡器占用的端口ID。  **取值范围**：不涉及
+    * ipAddress  **参数解释**：负载均衡器占用的私有IPv4地址。  **取值范围**：不涉及
+    * ipv6Address  **参数解释**：负载均衡器占用的IPv6地址。  **取值范围**：不涉及
+    * type  **参数解释**：子网端口类型。  **取值范围**： - l4_hc：四层dnat转发时健康检查使用的地址。 - l4 四层fullnat 转发时健康检查及业务转发使用的地址。 - l7 七层健康检查及业务转发使用的地址。
+    * virsubnetId  **参数解释**：子网端口所在下联面子网网络ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class LocalPort implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * portId  port ID。
-    * ipAddress  port IPv4地址。
-    * ipv6Address  port IPv6地址。
-    * type  port 类型。  取值范围： - l4_hc：四层dnat转发时健康检查使用的地址。 - l4 四层fullnat 转发时健康检查及业务转发使用的地址。 - l7 七层健康检查及业务转发使用的地址。
-    * virsubnetId  port 虚拟子网ID。
+    * portId  **参数解释**：负载均衡器占用的端口ID。  **取值范围**：不涉及
+    * ipAddress  **参数解释**：负载均衡器占用的私有IPv4地址。  **取值范围**：不涉及
+    * ipv6Address  **参数解释**：负载均衡器占用的IPv6地址。  **取值范围**：不涉及
+    * type  **参数解释**：子网端口类型。  **取值范围**： - l4_hc：四层dnat转发时健康检查使用的地址。 - l4 四层fullnat 转发时健康检查及业务转发使用的地址。 - l7 七层健康检查及业务转发使用的地址。
+    * virsubnetId  **参数解释**：子网端口所在下联面子网网络ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class LocalPort implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * portId  port ID。
-    * ipAddress  port IPv4地址。
-    * ipv6Address  port IPv6地址。
-    * type  port 类型。  取值范围： - l4_hc：四层dnat转发时健康检查使用的地址。 - l4 四层fullnat 转发时健康检查及业务转发使用的地址。 - l7 七层健康检查及业务转发使用的地址。
-    * virsubnetId  port 虚拟子网ID。
+    * portId  **参数解释**：负载均衡器占用的端口ID。  **取值范围**：不涉及
+    * ipAddress  **参数解释**：负载均衡器占用的私有IPv4地址。  **取值范围**：不涉及
+    * ipv6Address  **参数解释**：负载均衡器占用的IPv6地址。  **取值范围**：不涉及
+    * type  **参数解释**：子网端口类型。  **取值范围**： - l4_hc：四层dnat转发时健康检查使用的地址。 - l4 四层fullnat 转发时健康检查及业务转发使用的地址。 - l7 七层健康检查及业务转发使用的地址。
+    * virsubnetId  **参数解释**：子网端口所在下联面子网网络ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class LocalPort implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * portId  port ID。
-    * ipAddress  port IPv4地址。
-    * ipv6Address  port IPv6地址。
-    * type  port 类型。  取值范围： - l4_hc：四层dnat转发时健康检查使用的地址。 - l4 四层fullnat 转发时健康检查及业务转发使用的地址。 - l7 七层健康检查及业务转发使用的地址。
-    * virsubnetId  port 虚拟子网ID。
+    * portId  **参数解释**：负载均衡器占用的端口ID。  **取值范围**：不涉及
+    * ipAddress  **参数解释**：负载均衡器占用的私有IPv4地址。  **取值范围**：不涉及
+    * ipv6Address  **参数解释**：负载均衡器占用的IPv6地址。  **取值范围**：不涉及
+    * type  **参数解释**：子网端口类型。  **取值范围**： - l4_hc：四层dnat转发时健康检查使用的地址。 - l4 四层fullnat 转发时健康检查及业务转发使用的地址。 - l7 七层健康检查及业务转发使用的地址。
+    * virsubnetId  **参数解释**：子网端口所在下联面子网网络ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class LocalPort implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * portId  port ID。
-    * ipAddress  port IPv4地址。
-    * ipv6Address  port IPv6地址。
-    * type  port 类型。  取值范围： - l4_hc：四层dnat转发时健康检查使用的地址。 - l4 四层fullnat 转发时健康检查及业务转发使用的地址。 - l7 七层健康检查及业务转发使用的地址。
-    * virsubnetId  port 虚拟子网ID。
+    * portId  **参数解释**：负载均衡器占用的端口ID。  **取值范围**：不涉及
+    * ipAddress  **参数解释**：负载均衡器占用的私有IPv4地址。  **取值范围**：不涉及
+    * ipv6Address  **参数解释**：负载均衡器占用的IPv6地址。  **取值范围**：不涉及
+    * type  **参数解释**：子网端口类型。  **取值范围**： - l4_hc：四层dnat转发时健康检查使用的地址。 - l4 四层fullnat 转发时健康检查及业务转发使用的地址。 - l7 七层健康检查及业务转发使用的地址。
+    * virsubnetId  **参数解释**：子网端口所在下联面子网网络ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class LocalPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets portId
-    *  port ID。
+    *  **参数解释**：负载均衡器占用的端口ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class LocalPort implements ModelInterface, ArrayAccess
     /**
     * Sets portId
     *
-    * @param string|null $portId port ID。
+    * @param string|null $portId **参数解释**：负载均衡器占用的端口ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class LocalPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipAddress
-    *  port IPv4地址。
+    *  **参数解释**：负载均衡器占用的私有IPv4地址。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class LocalPort implements ModelInterface, ArrayAccess
     /**
     * Sets ipAddress
     *
-    * @param string|null $ipAddress port IPv4地址。
+    * @param string|null $ipAddress **参数解释**：负载均衡器占用的私有IPv4地址。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class LocalPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Address
-    *  port IPv6地址。
+    *  **参数解释**：负载均衡器占用的IPv6地址。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class LocalPort implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6Address
     *
-    * @param string|null $ipv6Address port IPv6地址。
+    * @param string|null $ipv6Address **参数解释**：负载均衡器占用的IPv6地址。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class LocalPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  port 类型。  取值范围： - l4_hc：四层dnat转发时健康检查使用的地址。 - l4 四层fullnat 转发时健康检查及业务转发使用的地址。 - l7 七层健康检查及业务转发使用的地址。
+    *  **参数解释**：子网端口类型。  **取值范围**： - l4_hc：四层dnat转发时健康检查使用的地址。 - l4 四层fullnat 转发时健康检查及业务转发使用的地址。 - l7 七层健康检查及业务转发使用的地址。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class LocalPort implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type port 类型。  取值范围： - l4_hc：四层dnat转发时健康检查使用的地址。 - l4 四层fullnat 转发时健康检查及业务转发使用的地址。 - l7 七层健康检查及业务转发使用的地址。
+    * @param string|null $type **参数解释**：子网端口类型。  **取值范围**： - l4_hc：四层dnat转发时健康检查使用的地址。 - l4 四层fullnat 转发时健康检查及业务转发使用的地址。 - l7 七层健康检查及业务转发使用的地址。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class LocalPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets virsubnetId
-    *  port 虚拟子网ID。
+    *  **参数解释**：子网端口所在下联面子网网络ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class LocalPort implements ModelInterface, ArrayAccess
     /**
     * Sets virsubnetId
     *
-    * @param string|null $virsubnetId port 虚拟子网ID。
+    * @param string|null $virsubnetId **参数解释**：子网端口所在下联面子网网络ID。  **取值范围**：不涉及
     *
     * @return $this
     */

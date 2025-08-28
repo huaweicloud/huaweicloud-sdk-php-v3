@@ -21,9 +21,9 @@ class ListRecycleBinLoadBalancersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * loadbalancers  回收站中的弹性负载均衡器实例列表。
+    * loadbalancers  **参数解释**：回收站中的弹性负载均衡器实例列表。  **取值范围**：不涉及
     * pageInfo  pageInfo
-    * requestId  请求ID。  注：自动生成 。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListRecycleBinLoadBalancersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * loadbalancers  回收站中的弹性负载均衡器实例列表。
+    * loadbalancers  **参数解释**：回收站中的弹性负载均衡器实例列表。  **取值范围**：不涉及
     * pageInfo  pageInfo
-    * requestId  请求ID。  注：自动生成 。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListRecycleBinLoadBalancersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * loadbalancers  回收站中的弹性负载均衡器实例列表。
+    * loadbalancers  **参数解释**：回收站中的弹性负载均衡器实例列表。  **取值范围**：不涉及
     * pageInfo  pageInfo
-    * requestId  请求ID。  注：自动生成 。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListRecycleBinLoadBalancersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * loadbalancers  回收站中的弹性负载均衡器实例列表。
+    * loadbalancers  **参数解释**：回收站中的弹性负载均衡器实例列表。  **取值范围**：不涉及
     * pageInfo  pageInfo
-    * requestId  请求ID。  注：自动生成 。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListRecycleBinLoadBalancersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * loadbalancers  回收站中的弹性负载均衡器实例列表。
+    * loadbalancers  **参数解释**：回收站中的弹性负载均衡器实例列表。  **取值范围**：不涉及
     * pageInfo  pageInfo
-    * requestId  请求ID。  注：自动生成 。
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ListRecycleBinLoadBalancersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets loadbalancers
-    *  回收站中的弹性负载均衡器实例列表。
+    *  **参数解释**：回收站中的弹性负载均衡器实例列表。  **取值范围**：不涉及
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\RecycleLoadBalancer[]|null
     */
@@ -209,7 +209,7 @@ class ListRecycleBinLoadBalancersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets loadbalancers
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\RecycleLoadBalancer[]|null $loadbalancers 回收站中的弹性负载均衡器实例列表。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\RecycleLoadBalancer[]|null $loadbalancers **参数解释**：回收站中的弹性负载均衡器实例列表。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ListRecycleBinLoadBalancersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestId
-    *  请求ID。  注：自动生成 。
+    *  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class ListRecycleBinLoadBalancersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求ID。  注：自动生成 。
+    * @param string|null $requestId **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return $this
     */

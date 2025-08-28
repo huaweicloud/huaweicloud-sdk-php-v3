@@ -158,6 +158,9 @@ class UpdateRecycleBinReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['recycleBin'] === null) {
+            $invalidProperties[] = "'recycleBin' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class UpdateRecycleBinReq implements ModelInterface, ArrayAccess
     * Gets recycleBin
     *  recycleBin
     *
-    * @return \HuaweiCloud\SDK\Ecs\V2\Model\UpdateRecycleBinOption|null
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\UpdateRecycleBinOption
     */
     public function getRecycleBin()
     {
@@ -186,7 +189,7 @@ class UpdateRecycleBinReq implements ModelInterface, ArrayAccess
     /**
     * Sets recycleBin
     *
-    * @param \HuaweiCloud\SDK\Ecs\V2\Model\UpdateRecycleBinOption|null $recycleBin recycleBin
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\UpdateRecycleBinOption $recycleBin recycleBin
     *
     * @return $this
     */

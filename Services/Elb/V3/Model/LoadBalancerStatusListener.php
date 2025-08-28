@@ -20,12 +20,12 @@ class LoadBalancerStatusListener implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  监听器的名称。
-    * provisioningStatus  监听器的配置状态。  取值： - ACTIVE：使用中。
-    * pools  监听器下的后端主机组操作状态。
-    * l7policies  监听器下的7层转发策略操作状态。
-    * id  监听器ID。
-    * operatingStatus  监听器的操作状态。  取值： - ONLINE：创建时默认状态，表示监听器正常运行。 - DEGRADED：该监听器下存在l7policy或l7rule的Provisioning_status=ERROR时返回这个状态。 或者状态树该监听器下存在member的operating_status=OFFLINE。 - DISABLED：负载均衡器或监听器的admin_state_up=false。  说明： DEGRADED和DISABLED状态仅在当前接口返回，查询监听器详情等其他接口返回字段operating_status不存在这两个状态值。
+    * name  **参数解释**：监听器的名称。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：监听器的配置状态。  **取值范围**： - ACTIVE：使用中。
+    * pools  **参数解释**：监听器下的所有后端服务器组的状态信息。
+    * l7policies  **参数解释**：监听器下的7层转发策略的状态信息。
+    * id  **参数解释**：监听器ID。  **取值范围**：不涉及
+    * operatingStatus  **参数解释**：监听器的操作状态。  **取值范围**： - ONLINE：创建时默认状态，表示监听器正常运行。 - DEGRADED：该监听器下存在l7policy或l7rule的Provisioning_status=ERROR时返回这个状态。或者状态树该监听器下存在member的operating_status=OFFLINE。 - DISABLED：负载均衡器或监听器的admin_state_up=false。  > DEGRADED和DISABLED状态仅在当前接口返回，查询监听器详情等其他接口返回字段operating_status不存在这两个状态值。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class LoadBalancerStatusListener implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  监听器的名称。
-    * provisioningStatus  监听器的配置状态。  取值： - ACTIVE：使用中。
-    * pools  监听器下的后端主机组操作状态。
-    * l7policies  监听器下的7层转发策略操作状态。
-    * id  监听器ID。
-    * operatingStatus  监听器的操作状态。  取值： - ONLINE：创建时默认状态，表示监听器正常运行。 - DEGRADED：该监听器下存在l7policy或l7rule的Provisioning_status=ERROR时返回这个状态。 或者状态树该监听器下存在member的operating_status=OFFLINE。 - DISABLED：负载均衡器或监听器的admin_state_up=false。  说明： DEGRADED和DISABLED状态仅在当前接口返回，查询监听器详情等其他接口返回字段operating_status不存在这两个状态值。
+    * name  **参数解释**：监听器的名称。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：监听器的配置状态。  **取值范围**： - ACTIVE：使用中。
+    * pools  **参数解释**：监听器下的所有后端服务器组的状态信息。
+    * l7policies  **参数解释**：监听器下的7层转发策略的状态信息。
+    * id  **参数解释**：监听器ID。  **取值范围**：不涉及
+    * operatingStatus  **参数解释**：监听器的操作状态。  **取值范围**： - ONLINE：创建时默认状态，表示监听器正常运行。 - DEGRADED：该监听器下存在l7policy或l7rule的Provisioning_status=ERROR时返回这个状态。或者状态树该监听器下存在member的operating_status=OFFLINE。 - DISABLED：负载均衡器或监听器的admin_state_up=false。  > DEGRADED和DISABLED状态仅在当前接口返回，查询监听器详情等其他接口返回字段operating_status不存在这两个状态值。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class LoadBalancerStatusListener implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  监听器的名称。
-    * provisioningStatus  监听器的配置状态。  取值： - ACTIVE：使用中。
-    * pools  监听器下的后端主机组操作状态。
-    * l7policies  监听器下的7层转发策略操作状态。
-    * id  监听器ID。
-    * operatingStatus  监听器的操作状态。  取值： - ONLINE：创建时默认状态，表示监听器正常运行。 - DEGRADED：该监听器下存在l7policy或l7rule的Provisioning_status=ERROR时返回这个状态。 或者状态树该监听器下存在member的operating_status=OFFLINE。 - DISABLED：负载均衡器或监听器的admin_state_up=false。  说明： DEGRADED和DISABLED状态仅在当前接口返回，查询监听器详情等其他接口返回字段operating_status不存在这两个状态值。
+    * name  **参数解释**：监听器的名称。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：监听器的配置状态。  **取值范围**： - ACTIVE：使用中。
+    * pools  **参数解释**：监听器下的所有后端服务器组的状态信息。
+    * l7policies  **参数解释**：监听器下的7层转发策略的状态信息。
+    * id  **参数解释**：监听器ID。  **取值范围**：不涉及
+    * operatingStatus  **参数解释**：监听器的操作状态。  **取值范围**： - ONLINE：创建时默认状态，表示监听器正常运行。 - DEGRADED：该监听器下存在l7policy或l7rule的Provisioning_status=ERROR时返回这个状态。或者状态树该监听器下存在member的operating_status=OFFLINE。 - DISABLED：负载均衡器或监听器的admin_state_up=false。  > DEGRADED和DISABLED状态仅在当前接口返回，查询监听器详情等其他接口返回字段operating_status不存在这两个状态值。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class LoadBalancerStatusListener implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  监听器的名称。
-    * provisioningStatus  监听器的配置状态。  取值： - ACTIVE：使用中。
-    * pools  监听器下的后端主机组操作状态。
-    * l7policies  监听器下的7层转发策略操作状态。
-    * id  监听器ID。
-    * operatingStatus  监听器的操作状态。  取值： - ONLINE：创建时默认状态，表示监听器正常运行。 - DEGRADED：该监听器下存在l7policy或l7rule的Provisioning_status=ERROR时返回这个状态。 或者状态树该监听器下存在member的operating_status=OFFLINE。 - DISABLED：负载均衡器或监听器的admin_state_up=false。  说明： DEGRADED和DISABLED状态仅在当前接口返回，查询监听器详情等其他接口返回字段operating_status不存在这两个状态值。
+    * name  **参数解释**：监听器的名称。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：监听器的配置状态。  **取值范围**： - ACTIVE：使用中。
+    * pools  **参数解释**：监听器下的所有后端服务器组的状态信息。
+    * l7policies  **参数解释**：监听器下的7层转发策略的状态信息。
+    * id  **参数解释**：监听器ID。  **取值范围**：不涉及
+    * operatingStatus  **参数解释**：监听器的操作状态。  **取值范围**： - ONLINE：创建时默认状态，表示监听器正常运行。 - DEGRADED：该监听器下存在l7policy或l7rule的Provisioning_status=ERROR时返回这个状态。或者状态树该监听器下存在member的operating_status=OFFLINE。 - DISABLED：负载均衡器或监听器的admin_state_up=false。  > DEGRADED和DISABLED状态仅在当前接口返回，查询监听器详情等其他接口返回字段operating_status不存在这两个状态值。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class LoadBalancerStatusListener implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  监听器的名称。
-    * provisioningStatus  监听器的配置状态。  取值： - ACTIVE：使用中。
-    * pools  监听器下的后端主机组操作状态。
-    * l7policies  监听器下的7层转发策略操作状态。
-    * id  监听器ID。
-    * operatingStatus  监听器的操作状态。  取值： - ONLINE：创建时默认状态，表示监听器正常运行。 - DEGRADED：该监听器下存在l7policy或l7rule的Provisioning_status=ERROR时返回这个状态。 或者状态树该监听器下存在member的operating_status=OFFLINE。 - DISABLED：负载均衡器或监听器的admin_state_up=false。  说明： DEGRADED和DISABLED状态仅在当前接口返回，查询监听器详情等其他接口返回字段operating_status不存在这两个状态值。
+    * name  **参数解释**：监听器的名称。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：监听器的配置状态。  **取值范围**： - ACTIVE：使用中。
+    * pools  **参数解释**：监听器下的所有后端服务器组的状态信息。
+    * l7policies  **参数解释**：监听器下的7层转发策略的状态信息。
+    * id  **参数解释**：监听器ID。  **取值范围**：不涉及
+    * operatingStatus  **参数解释**：监听器的操作状态。  **取值范围**： - ONLINE：创建时默认状态，表示监听器正常运行。 - DEGRADED：该监听器下存在l7policy或l7rule的Provisioning_status=ERROR时返回这个状态。或者状态树该监听器下存在member的operating_status=OFFLINE。 - DISABLED：负载均衡器或监听器的admin_state_up=false。  > DEGRADED和DISABLED状态仅在当前接口返回，查询监听器详情等其他接口返回字段operating_status不存在这两个状态值。
     *
     * @var string[]
     */
@@ -235,7 +235,7 @@ class LoadBalancerStatusListener implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  监听器的名称。
+    *  **参数解释**：监听器的名称。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -247,7 +247,7 @@ class LoadBalancerStatusListener implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 监听器的名称。
+    * @param string|null $name **参数解释**：监听器的名称。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -259,7 +259,7 @@ class LoadBalancerStatusListener implements ModelInterface, ArrayAccess
 
     /**
     * Gets provisioningStatus
-    *  监听器的配置状态。  取值： - ACTIVE：使用中。
+    *  **参数解释**：监听器的配置状态。  **取值范围**： - ACTIVE：使用中。
     *
     * @return string|null
     */
@@ -271,7 +271,7 @@ class LoadBalancerStatusListener implements ModelInterface, ArrayAccess
     /**
     * Sets provisioningStatus
     *
-    * @param string|null $provisioningStatus 监听器的配置状态。  取值： - ACTIVE：使用中。
+    * @param string|null $provisioningStatus **参数解释**：监听器的配置状态。  **取值范围**： - ACTIVE：使用中。
     *
     * @return $this
     */
@@ -283,7 +283,7 @@ class LoadBalancerStatusListener implements ModelInterface, ArrayAccess
 
     /**
     * Gets pools
-    *  监听器下的后端主机组操作状态。
+    *  **参数解释**：监听器下的所有后端服务器组的状态信息。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\LoadBalancerStatusPool[]|null
     */
@@ -295,7 +295,7 @@ class LoadBalancerStatusListener implements ModelInterface, ArrayAccess
     /**
     * Sets pools
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\LoadBalancerStatusPool[]|null $pools 监听器下的后端主机组操作状态。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\LoadBalancerStatusPool[]|null $pools **参数解释**：监听器下的所有后端服务器组的状态信息。
     *
     * @return $this
     */
@@ -307,7 +307,7 @@ class LoadBalancerStatusListener implements ModelInterface, ArrayAccess
 
     /**
     * Gets l7policies
-    *  监听器下的7层转发策略操作状态。
+    *  **参数解释**：监听器下的7层转发策略的状态信息。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\LoadBalancerStatusPolicy[]|null
     */
@@ -319,7 +319,7 @@ class LoadBalancerStatusListener implements ModelInterface, ArrayAccess
     /**
     * Sets l7policies
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\LoadBalancerStatusPolicy[]|null $l7policies 监听器下的7层转发策略操作状态。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\LoadBalancerStatusPolicy[]|null $l7policies **参数解释**：监听器下的7层转发策略的状态信息。
     *
     * @return $this
     */
@@ -331,7 +331,7 @@ class LoadBalancerStatusListener implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  监听器ID。
+    *  **参数解释**：监听器ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -343,7 +343,7 @@ class LoadBalancerStatusListener implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 监听器ID。
+    * @param string|null $id **参数解释**：监听器ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -355,7 +355,7 @@ class LoadBalancerStatusListener implements ModelInterface, ArrayAccess
 
     /**
     * Gets operatingStatus
-    *  监听器的操作状态。  取值： - ONLINE：创建时默认状态，表示监听器正常运行。 - DEGRADED：该监听器下存在l7policy或l7rule的Provisioning_status=ERROR时返回这个状态。 或者状态树该监听器下存在member的operating_status=OFFLINE。 - DISABLED：负载均衡器或监听器的admin_state_up=false。  说明： DEGRADED和DISABLED状态仅在当前接口返回，查询监听器详情等其他接口返回字段operating_status不存在这两个状态值。
+    *  **参数解释**：监听器的操作状态。  **取值范围**： - ONLINE：创建时默认状态，表示监听器正常运行。 - DEGRADED：该监听器下存在l7policy或l7rule的Provisioning_status=ERROR时返回这个状态。或者状态树该监听器下存在member的operating_status=OFFLINE。 - DISABLED：负载均衡器或监听器的admin_state_up=false。  > DEGRADED和DISABLED状态仅在当前接口返回，查询监听器详情等其他接口返回字段operating_status不存在这两个状态值。
     *
     * @return string|null
     */
@@ -367,7 +367,7 @@ class LoadBalancerStatusListener implements ModelInterface, ArrayAccess
     /**
     * Sets operatingStatus
     *
-    * @param string|null $operatingStatus 监听器的操作状态。  取值： - ONLINE：创建时默认状态，表示监听器正常运行。 - DEGRADED：该监听器下存在l7policy或l7rule的Provisioning_status=ERROR时返回这个状态。 或者状态树该监听器下存在member的operating_status=OFFLINE。 - DISABLED：负载均衡器或监听器的admin_state_up=false。  说明： DEGRADED和DISABLED状态仅在当前接口返回，查询监听器详情等其他接口返回字段operating_status不存在这两个状态值。
+    * @param string|null $operatingStatus **参数解释**：监听器的操作状态。  **取值范围**： - ONLINE：创建时默认状态，表示监听器正常运行。 - DEGRADED：该监听器下存在l7policy或l7rule的Provisioning_status=ERROR时返回这个状态。或者状态树该监听器下存在member的operating_status=OFFLINE。 - DISABLED：负载均衡器或监听器的admin_state_up=false。  > DEGRADED和DISABLED状态仅在当前接口返回，查询监听器详情等其他接口返回字段operating_status不存在这两个状态值。
     *
     * @return $this
     */

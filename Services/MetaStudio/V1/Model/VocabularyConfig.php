@@ -23,7 +23,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     * id  id
     * key  原始词
     * value  设置的自定义读法
-    * type  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
+    * type  TTSS支持配置的词表类型 - CHINESE_G2P：拼音 - PHONETIC_SYMBOL：音标 - CONTINUUM：连读 - ALIAS：别名 - SAY_AS：数字英文读法
     * groupId  分组id
     * createTime  创建时间。
     * updateTime  更新时间。
@@ -45,7 +45,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     * id  id
     * key  原始词
     * value  设置的自定义读法
-    * type  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
+    * type  TTSS支持配置的词表类型 - CHINESE_G2P：拼音 - PHONETIC_SYMBOL：音标 - CONTINUUM：连读 - ALIAS：别名 - SAY_AS：数字英文读法
     * groupId  分组id
     * createTime  创建时间。
     * updateTime  更新时间。
@@ -88,7 +88,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     * id  id
     * key  原始词
     * value  设置的自定义读法
-    * type  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
+    * type  TTSS支持配置的词表类型 - CHINESE_G2P：拼音 - PHONETIC_SYMBOL：音标 - CONTINUUM：连读 - ALIAS：别名 - SAY_AS：数字英文读法
     * groupId  分组id
     * createTime  创建时间。
     * updateTime  更新时间。
@@ -110,7 +110,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     * id  id
     * key  原始词
     * value  设置的自定义读法
-    * type  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
+    * type  TTSS支持配置的词表类型 - CHINESE_G2P：拼音 - PHONETIC_SYMBOL：音标 - CONTINUUM：连读 - ALIAS：别名 - SAY_AS：数字英文读法
     * groupId  分组id
     * createTime  创建时间。
     * updateTime  更新时间。
@@ -132,7 +132,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     * id  id
     * key  原始词
     * value  设置的自定义读法
-    * type  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
+    * type  TTSS支持配置的词表类型 - CHINESE_G2P：拼音 - PHONETIC_SYMBOL：音标 - CONTINUUM：连读 - ALIAS：别名 - SAY_AS：数字英文读法
     * groupId  分组id
     * createTime  创建时间。
     * updateTime  更新时间。
@@ -354,7 +354,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
+    *  TTSS支持配置的词表类型 - CHINESE_G2P：拼音 - PHONETIC_SYMBOL：音标 - CONTINUUM：连读 - ALIAS：别名 - SAY_AS：数字英文读法
     *
     * @return string|null
     */
@@ -366,7 +366,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
+    * @param string|null $type TTSS支持配置的词表类型 - CHINESE_G2P：拼音 - PHONETIC_SYMBOL：音标 - CONTINUUM：连读 - ALIAS：别名 - SAY_AS：数字英文读法
     *
     * @return $this
     */

@@ -20,9 +20,9 @@ class LoadbalancerFeature implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * feature  参数解释：特性名称。
-    * type  参数解释：特性值(value字段)的类型，如：INT，表示整型。
-    * value  参数解释：特性值。如开关类型的特性取值true/false，表示特性开启关闭；配额类型的特性取值整数，表示限制配额。
+    * feature  **参数解释**：特性名称。  **取值范围**：不涉及
+    * type  **参数解释**：特性值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
+    * value  **参数解释**：特性值。如开关类型的特性取值true/false，表示特性开启关闭；配额类型的特性取值整数，表示限制配额。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class LoadbalancerFeature implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * feature  参数解释：特性名称。
-    * type  参数解释：特性值(value字段)的类型，如：INT，表示整型。
-    * value  参数解释：特性值。如开关类型的特性取值true/false，表示特性开启关闭；配额类型的特性取值整数，表示限制配额。
+    * feature  **参数解释**：特性名称。  **取值范围**：不涉及
+    * type  **参数解释**：特性值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
+    * value  **参数解释**：特性值。如开关类型的特性取值true/false，表示特性开启关闭；配额类型的特性取值整数，表示限制配额。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class LoadbalancerFeature implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * feature  参数解释：特性名称。
-    * type  参数解释：特性值(value字段)的类型，如：INT，表示整型。
-    * value  参数解释：特性值。如开关类型的特性取值true/false，表示特性开启关闭；配额类型的特性取值整数，表示限制配额。
+    * feature  **参数解释**：特性名称。  **取值范围**：不涉及
+    * type  **参数解释**：特性值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
+    * value  **参数解释**：特性值。如开关类型的特性取值true/false，表示特性开启关闭；配额类型的特性取值整数，表示限制配额。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class LoadbalancerFeature implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * feature  参数解释：特性名称。
-    * type  参数解释：特性值(value字段)的类型，如：INT，表示整型。
-    * value  参数解释：特性值。如开关类型的特性取值true/false，表示特性开启关闭；配额类型的特性取值整数，表示限制配额。
+    * feature  **参数解释**：特性名称。  **取值范围**：不涉及
+    * type  **参数解释**：特性值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
+    * value  **参数解释**：特性值。如开关类型的特性取值true/false，表示特性开启关闭；配额类型的特性取值整数，表示限制配额。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class LoadbalancerFeature implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * feature  参数解释：特性名称。
-    * type  参数解释：特性值(value字段)的类型，如：INT，表示整型。
-    * value  参数解释：特性值。如开关类型的特性取值true/false，表示特性开启关闭；配额类型的特性取值整数，表示限制配额。
+    * feature  **参数解释**：特性名称。  **取值范围**：不涉及
+    * type  **参数解释**：特性值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
+    * value  **参数解释**：特性值。如开关类型的特性取值true/false，表示特性开启关闭；配额类型的特性取值整数，表示限制配额。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class LoadbalancerFeature implements ModelInterface, ArrayAccess
 
     /**
     * Gets feature
-    *  参数解释：特性名称。
+    *  **参数解释**：特性名称。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class LoadbalancerFeature implements ModelInterface, ArrayAccess
     /**
     * Sets feature
     *
-    * @param string $feature 参数解释：特性名称。
+    * @param string $feature **参数解释**：特性名称。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class LoadbalancerFeature implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  参数解释：特性值(value字段)的类型，如：INT，表示整型。
+    *  **参数解释**：特性值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class LoadbalancerFeature implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 参数解释：特性值(value字段)的类型，如：INT，表示整型。
+    * @param string $type **参数解释**：特性值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class LoadbalancerFeature implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  参数解释：特性值。如开关类型的特性取值true/false，表示特性开启关闭；配额类型的特性取值整数，表示限制配额。
+    *  **参数解释**：特性值。如开关类型的特性取值true/false，表示特性开启关闭；配额类型的特性取值整数，表示限制配额。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class LoadbalancerFeature implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 参数解释：特性值。如开关类型的特性取值true/false，表示特性开启关闭；配额类型的特性取值整数，表示限制配额。
+    * @param string $value **参数解释**：特性值。如开关类型的特性取值true/false，表示特性开启关闭；配额类型的特性取值整数，表示限制配额。  **取值范围**：不涉及
     *
     * @return $this
     */

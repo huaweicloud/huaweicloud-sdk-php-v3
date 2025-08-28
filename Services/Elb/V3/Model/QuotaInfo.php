@@ -20,10 +20,10 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * quotaKey  资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length、ipgroups_per_listener、pools_per_l7policy、l7policies_per_listener、free_instance_members_per_pool、free_instance_listeners_per_loadbalancer。
-    * quotaLimit  总配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * used  已使用配额。
-    * unit  配额单位。  取值：count，表示个数。
+    * quotaKey  **参数解释**：配额类型。  **取值范围**：loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length、ipgroups_per_listener、pools_per_l7policy、l7policies_per_listener、free_instance_members_per_pool、free_instance_listeners_per_loadbalancer。
+    * quotaLimit  **参数解释**：总配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * used  **参数解释**：已使用配额。  **取值范围**：大于等于0。
+    * unit  **参数解释**：配额单位。  **取值范围**：count，表示个数。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * quotaKey  资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length、ipgroups_per_listener、pools_per_l7policy、l7policies_per_listener、free_instance_members_per_pool、free_instance_listeners_per_loadbalancer。
-    * quotaLimit  总配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * used  已使用配额。
-    * unit  配额单位。  取值：count，表示个数。
+    * quotaKey  **参数解释**：配额类型。  **取值范围**：loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length、ipgroups_per_listener、pools_per_l7policy、l7policies_per_listener、free_instance_members_per_pool、free_instance_listeners_per_loadbalancer。
+    * quotaLimit  **参数解释**：总配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * used  **参数解释**：已使用配额。  **取值范围**：大于等于0。
+    * unit  **参数解释**：配额单位。  **取值范围**：count，表示个数。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class QuotaInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * quotaKey  资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length、ipgroups_per_listener、pools_per_l7policy、l7policies_per_listener、free_instance_members_per_pool、free_instance_listeners_per_loadbalancer。
-    * quotaLimit  总配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * used  已使用配额。
-    * unit  配额单位。  取值：count，表示个数。
+    * quotaKey  **参数解释**：配额类型。  **取值范围**：loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length、ipgroups_per_listener、pools_per_l7policy、l7policies_per_listener、free_instance_members_per_pool、free_instance_listeners_per_loadbalancer。
+    * quotaLimit  **参数解释**：总配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * used  **参数解释**：已使用配额。  **取值范围**：大于等于0。
+    * unit  **参数解释**：配额单位。  **取值范围**：count，表示个数。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * quotaKey  资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length、ipgroups_per_listener、pools_per_l7policy、l7policies_per_listener、free_instance_members_per_pool、free_instance_listeners_per_loadbalancer。
-    * quotaLimit  总配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * used  已使用配额。
-    * unit  配额单位。  取值：count，表示个数。
+    * quotaKey  **参数解释**：配额类型。  **取值范围**：loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length、ipgroups_per_listener、pools_per_l7policy、l7policies_per_listener、free_instance_members_per_pool、free_instance_listeners_per_loadbalancer。
+    * quotaLimit  **参数解释**：总配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * used  **参数解释**：已使用配额。  **取值范围**：大于等于0。
+    * unit  **参数解释**：配额单位。  **取值范围**：count，表示个数。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * quotaKey  资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length、ipgroups_per_listener、pools_per_l7policy、l7policies_per_listener、free_instance_members_per_pool、free_instance_listeners_per_loadbalancer。
-    * quotaLimit  总配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-    * used  已使用配额。
-    * unit  配额单位。  取值：count，表示个数。
+    * quotaKey  **参数解释**：配额类型。  **取值范围**：loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length、ipgroups_per_listener、pools_per_l7policy、l7policies_per_listener、free_instance_members_per_pool、free_instance_listeners_per_loadbalancer。
+    * quotaLimit  **参数解释**：总配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * used  **参数解释**：已使用配额。  **取值范围**：大于等于0。
+    * unit  **参数解释**：配额单位。  **取值范围**：count，表示个数。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaKey
-    *  资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length、ipgroups_per_listener、pools_per_l7policy、l7policies_per_listener、free_instance_members_per_pool、free_instance_listeners_per_loadbalancer。
+    *  **参数解释**：配额类型。  **取值范围**：loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length、ipgroups_per_listener、pools_per_l7policy、l7policies_per_listener、free_instance_members_per_pool、free_instance_listeners_per_loadbalancer。
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
     /**
     * Sets quotaKey
     *
-    * @param string $quotaKey 资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length、ipgroups_per_listener、pools_per_l7policy、l7policies_per_listener、free_instance_members_per_pool、free_instance_listeners_per_loadbalancer。
+    * @param string $quotaKey **参数解释**：配额类型。  **取值范围**：loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length、ipgroups_per_listener、pools_per_l7policy、l7policies_per_listener、free_instance_members_per_pool、free_instance_listeners_per_loadbalancer。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaLimit
-    *  总配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *  **参数解释**：总配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return int
     */
@@ -255,7 +255,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
     /**
     * Sets quotaLimit
     *
-    * @param int $quotaLimit 总配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * @param int $quotaLimit **参数解释**：总配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets used
-    *  已使用配额。
+    *  **参数解释**：已使用配额。  **取值范围**：大于等于0。
     *
     * @return int
     */
@@ -279,7 +279,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
     /**
     * Sets used
     *
-    * @param int $used 已使用配额。
+    * @param int $used **参数解释**：已使用配额。  **取值范围**：大于等于0。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
-    *  配额单位。  取值：count，表示个数。
+    *  **参数解释**：配额单位。  **取值范围**：count，表示个数。
     *
     * @return string
     */
@@ -303,7 +303,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param string $unit 配额单位。  取值：count，表示个数。
+    * @param string $unit **参数解释**：配额单位。  **取值范围**：count，表示个数。
     *
     * @return $this
     */

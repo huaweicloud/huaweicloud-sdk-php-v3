@@ -26,8 +26,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种。   - ACTIVE：正在运行。   - SHUTOFF：关机。   - BUILDING：创建中。   - ERROR：故障。
     * agentStatus  **参数解释**: Agent状态 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。
     * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种。   - closed ：关闭。   - opened ：开启。
-    * protectInterrupt  **参数解释**: 防护是否中断 **取值范围**:   - ture：防护中断。   - false：防护未中断。
-    * protectDegradation  **参数解释**: 防护是否降级 **取值范围**:   - ture：防护降级。   - false：防护未降级。
+    * protectInterrupt  **参数解释**: 防护是否中断 **取值范围**:   - true：防护中断。   - false：防护未中断。
+    * protectDegradation  **参数解释**: 防护是否降级 **取值范围**:   - true：防护降级。   - false：防护未降级。
     * degradationReason  **参数解释**: 防护降级原因 **取值范围**: 字符长度1-32位
     * containerTags  **参数解释**: 用来识别cce容器节点和自建节点的标签 **取值范围**: 包含如下3种。 - cce：cce节点 - self：自建节点 - other：其他节点
     * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
@@ -76,8 +76,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种。   - ACTIVE：正在运行。   - SHUTOFF：关机。   - BUILDING：创建中。   - ERROR：故障。
     * agentStatus  **参数解释**: Agent状态 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。
     * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种。   - closed ：关闭。   - opened ：开启。
-    * protectInterrupt  **参数解释**: 防护是否中断 **取值范围**:   - ture：防护中断。   - false：防护未中断。
-    * protectDegradation  **参数解释**: 防护是否降级 **取值范围**:   - ture：防护降级。   - false：防护未降级。
+    * protectInterrupt  **参数解释**: 防护是否中断 **取值范围**:   - true：防护中断。   - false：防护未中断。
+    * protectDegradation  **参数解释**: 防护是否降级 **取值范围**:   - true：防护降级。   - false：防护未降级。
     * degradationReason  **参数解释**: 防护降级原因 **取值范围**: 字符长度1-32位
     * containerTags  **参数解释**: 用来识别cce容器节点和自建节点的标签 **取值范围**: 包含如下3种。 - cce：cce节点 - self：自建节点 - other：其他节点
     * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
@@ -147,8 +147,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种。   - ACTIVE：正在运行。   - SHUTOFF：关机。   - BUILDING：创建中。   - ERROR：故障。
     * agentStatus  **参数解释**: Agent状态 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。
     * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种。   - closed ：关闭。   - opened ：开启。
-    * protectInterrupt  **参数解释**: 防护是否中断 **取值范围**:   - ture：防护中断。   - false：防护未中断。
-    * protectDegradation  **参数解释**: 防护是否降级 **取值范围**:   - ture：防护降级。   - false：防护未降级。
+    * protectInterrupt  **参数解释**: 防护是否中断 **取值范围**:   - true：防护中断。   - false：防护未中断。
+    * protectDegradation  **参数解释**: 防护是否降级 **取值范围**:   - true：防护降级。   - false：防护未降级。
     * degradationReason  **参数解释**: 防护降级原因 **取值范围**: 字符长度1-32位
     * containerTags  **参数解释**: 用来识别cce容器节点和自建节点的标签 **取值范围**: 包含如下3种。 - cce：cce节点 - self：自建节点 - other：其他节点
     * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
@@ -197,8 +197,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种。   - ACTIVE：正在运行。   - SHUTOFF：关机。   - BUILDING：创建中。   - ERROR：故障。
     * agentStatus  **参数解释**: Agent状态 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。
     * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种。   - closed ：关闭。   - opened ：开启。
-    * protectInterrupt  **参数解释**: 防护是否中断 **取值范围**:   - ture：防护中断。   - false：防护未中断。
-    * protectDegradation  **参数解释**: 防护是否降级 **取值范围**:   - ture：防护降级。   - false：防护未降级。
+    * protectInterrupt  **参数解释**: 防护是否中断 **取值范围**:   - true：防护中断。   - false：防护未中断。
+    * protectDegradation  **参数解释**: 防护是否降级 **取值范围**:   - true：防护降级。   - false：防护未降级。
     * degradationReason  **参数解释**: 防护降级原因 **取值范围**: 字符长度1-32位
     * containerTags  **参数解释**: 用来识别cce容器节点和自建节点的标签 **取值范围**: 包含如下3种。 - cce：cce节点 - self：自建节点 - other：其他节点
     * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
@@ -247,8 +247,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种。   - ACTIVE：正在运行。   - SHUTOFF：关机。   - BUILDING：创建中。   - ERROR：故障。
     * agentStatus  **参数解释**: Agent状态 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。
     * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种。   - closed ：关闭。   - opened ：开启。
-    * protectInterrupt  **参数解释**: 防护是否中断 **取值范围**:   - ture：防护中断。   - false：防护未中断。
-    * protectDegradation  **参数解释**: 防护是否降级 **取值范围**:   - ture：防护降级。   - false：防护未降级。
+    * protectInterrupt  **参数解释**: 防护是否中断 **取值范围**:   - true：防护中断。   - false：防护未中断。
+    * protectDegradation  **参数解释**: 防护是否降级 **取值范围**:   - true：防护降级。   - false：防护未降级。
     * degradationReason  **参数解释**: 防护降级原因 **取值范围**: 字符长度1-32位
     * containerTags  **参数解释**: 用来识别cce容器节点和自建节点的标签 **取值范围**: 包含如下3种。 - cce：cce节点 - self：自建节点 - other：其他节点
     * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
@@ -652,7 +652,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectInterrupt
-    *  **参数解释**: 防护是否中断 **取值范围**:   - ture：防护中断。   - false：防护未中断。
+    *  **参数解释**: 防护是否中断 **取值范围**:   - true：防护中断。   - false：防护未中断。
     *
     * @return bool|null
     */
@@ -664,7 +664,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectInterrupt
     *
-    * @param bool|null $protectInterrupt **参数解释**: 防护是否中断 **取值范围**:   - ture：防护中断。   - false：防护未中断。
+    * @param bool|null $protectInterrupt **参数解释**: 防护是否中断 **取值范围**:   - true：防护中断。   - false：防护未中断。
     *
     * @return $this
     */
@@ -676,7 +676,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectDegradation
-    *  **参数解释**: 防护是否降级 **取值范围**:   - ture：防护降级。   - false：防护未降级。
+    *  **参数解释**: 防护是否降级 **取值范围**:   - true：防护降级。   - false：防护未降级。
     *
     * @return bool|null
     */
@@ -688,7 +688,7 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectDegradation
     *
-    * @param bool|null $protectDegradation **参数解释**: 防护是否降级 **取值范围**:   - ture：防护降级。   - false：防护未降级。
+    * @param bool|null $protectDegradation **参数解释**: 防护是否降级 **取值范围**:   - true：防护降级。   - false：防护未降级。
     *
     * @return $this
     */

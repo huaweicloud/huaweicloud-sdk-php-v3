@@ -20,11 +20,11 @@ class LoadBalancerStatusPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  匹配后动作。  取值： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：转发到监听器。
-    * id  转发策略ID。
-    * provisioningStatus  转发策略的配置状态。  取值范围： - ACTIVE: 默认值，表示正常。 [- ERROR: 表示当前策略与同一监听器下的其他策略存在相同的规则配置。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs)
-    * name  转发策略名称。
-    * rules  转发规则状态信息。
+    * action  **参数解释**：匹配后动作。  **取值范围**： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：转发到监听器。
+    * id  **参数解释**：转发策略ID。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：转发策略的配置状态。  **取值范围**： - ACTIVE: 默认值，表示正常。 [- ERROR: 表示当前策略与同一监听器下的其他策略存在相同的规则配置。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs)
+    * name  **参数解释**：转发策略名称。  **取值范围**：不涉及
+    * rules  **参数解释**：当前转发策略下的所有转发规则状的态信息。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class LoadBalancerStatusPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  匹配后动作。  取值： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：转发到监听器。
-    * id  转发策略ID。
-    * provisioningStatus  转发策略的配置状态。  取值范围： - ACTIVE: 默认值，表示正常。 [- ERROR: 表示当前策略与同一监听器下的其他策略存在相同的规则配置。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs)
-    * name  转发策略名称。
-    * rules  转发规则状态信息。
+    * action  **参数解释**：匹配后动作。  **取值范围**： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：转发到监听器。
+    * id  **参数解释**：转发策略ID。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：转发策略的配置状态。  **取值范围**： - ACTIVE: 默认值，表示正常。 [- ERROR: 表示当前策略与同一监听器下的其他策略存在相同的规则配置。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs)
+    * name  **参数解释**：转发策略名称。  **取值范围**：不涉及
+    * rules  **参数解释**：当前转发策略下的所有转发规则状的态信息。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class LoadBalancerStatusPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  匹配后动作。  取值： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：转发到监听器。
-    * id  转发策略ID。
-    * provisioningStatus  转发策略的配置状态。  取值范围： - ACTIVE: 默认值，表示正常。 [- ERROR: 表示当前策略与同一监听器下的其他策略存在相同的规则配置。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs)
-    * name  转发策略名称。
-    * rules  转发规则状态信息。
+    * action  **参数解释**：匹配后动作。  **取值范围**： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：转发到监听器。
+    * id  **参数解释**：转发策略ID。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：转发策略的配置状态。  **取值范围**： - ACTIVE: 默认值，表示正常。 [- ERROR: 表示当前策略与同一监听器下的其他策略存在相同的规则配置。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs)
+    * name  **参数解释**：转发策略名称。  **取值范围**：不涉及
+    * rules  **参数解释**：当前转发策略下的所有转发规则状的态信息。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class LoadBalancerStatusPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  匹配后动作。  取值： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：转发到监听器。
-    * id  转发策略ID。
-    * provisioningStatus  转发策略的配置状态。  取值范围： - ACTIVE: 默认值，表示正常。 [- ERROR: 表示当前策略与同一监听器下的其他策略存在相同的规则配置。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs)
-    * name  转发策略名称。
-    * rules  转发规则状态信息。
+    * action  **参数解释**：匹配后动作。  **取值范围**： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：转发到监听器。
+    * id  **参数解释**：转发策略ID。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：转发策略的配置状态。  **取值范围**： - ACTIVE: 默认值，表示正常。 [- ERROR: 表示当前策略与同一监听器下的其他策略存在相同的规则配置。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs)
+    * name  **参数解释**：转发策略名称。  **取值范围**：不涉及
+    * rules  **参数解释**：当前转发策略下的所有转发规则状的态信息。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class LoadBalancerStatusPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  匹配后动作。  取值： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：转发到监听器。
-    * id  转发策略ID。
-    * provisioningStatus  转发策略的配置状态。  取值范围： - ACTIVE: 默认值，表示正常。 [- ERROR: 表示当前策略与同一监听器下的其他策略存在相同的规则配置。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs)
-    * name  转发策略名称。
-    * rules  转发规则状态信息。
+    * action  **参数解释**：匹配后动作。  **取值范围**： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：转发到监听器。
+    * id  **参数解释**：转发策略ID。  **取值范围**：不涉及
+    * provisioningStatus  **参数解释**：转发策略的配置状态。  **取值范围**： - ACTIVE: 默认值，表示正常。 [- ERROR: 表示当前策略与同一监听器下的其他策略存在相同的规则配置。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs)
+    * name  **参数解释**：转发策略名称。  **取值范围**：不涉及
+    * rules  **参数解释**：当前转发策略下的所有转发规则状的态信息。
     *
     * @var string[]
     */
@@ -224,7 +224,7 @@ class LoadBalancerStatusPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  匹配后动作。  取值： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：转发到监听器。
+    *  **参数解释**：匹配后动作。  **取值范围**： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：转发到监听器。
     *
     * @return string|null
     */
@@ -236,7 +236,7 @@ class LoadBalancerStatusPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 匹配后动作。  取值： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：转发到监听器。
+    * @param string|null $action **参数解释**：匹配后动作。  **取值范围**： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：转发到监听器。
     *
     * @return $this
     */
@@ -248,7 +248,7 @@ class LoadBalancerStatusPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  转发策略ID。
+    *  **参数解释**：转发策略ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -260,7 +260,7 @@ class LoadBalancerStatusPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 转发策略ID。
+    * @param string|null $id **参数解释**：转发策略ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -272,7 +272,7 @@ class LoadBalancerStatusPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets provisioningStatus
-    *  转发策略的配置状态。  取值范围： - ACTIVE: 默认值，表示正常。 [- ERROR: 表示当前策略与同一监听器下的其他策略存在相同的规则配置。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs)
+    *  **参数解释**：转发策略的配置状态。  **取值范围**： - ACTIVE: 默认值，表示正常。 [- ERROR: 表示当前策略与同一监听器下的其他策略存在相同的规则配置。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs)
     *
     * @return string|null
     */
@@ -284,7 +284,7 @@ class LoadBalancerStatusPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets provisioningStatus
     *
-    * @param string|null $provisioningStatus 转发策略的配置状态。  取值范围： - ACTIVE: 默认值，表示正常。 [- ERROR: 表示当前策略与同一监听器下的其他策略存在相同的规则配置。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs)
+    * @param string|null $provisioningStatus **参数解释**：转发策略的配置状态。  **取值范围**： - ACTIVE: 默认值，表示正常。 [- ERROR: 表示当前策略与同一监听器下的其他策略存在相同的规则配置。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs)
     *
     * @return $this
     */
@@ -296,7 +296,7 @@ class LoadBalancerStatusPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  转发策略名称。
+    *  **参数解释**：转发策略名称。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -308,7 +308,7 @@ class LoadBalancerStatusPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 转发策略名称。
+    * @param string|null $name **参数解释**：转发策略名称。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -320,7 +320,7 @@ class LoadBalancerStatusPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets rules
-    *  转发规则状态信息。
+    *  **参数解释**：当前转发策略下的所有转发规则状的态信息。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\LoadBalancerStatusL7Rule[]|null
     */
@@ -332,7 +332,7 @@ class LoadBalancerStatusPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets rules
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\LoadBalancerStatusL7Rule[]|null $rules 转发规则状态信息。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\LoadBalancerStatusL7Rule[]|null $rules **参数解释**：当前转发策略下的所有转发规则状的态信息。
     *
     * @return $this
     */

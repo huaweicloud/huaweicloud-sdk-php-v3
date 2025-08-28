@@ -21,21 +21,25 @@ class UpdateClusterNameReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * displayName  修改后集群名称。
+    * desc  修改后集群描述。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'displayName' => 'string'
+            'displayName' => 'string',
+            'desc' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * displayName  修改后集群名称。
+    * desc  修改后集群描述。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'displayName' => null
+        'displayName' => null,
+        'desc' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class UpdateClusterNameReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * displayName  修改后集群名称。
+    * desc  修改后集群描述。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'displayName' => 'display_name'
+            'displayName' => 'display_name',
+            'desc' => 'desc'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * displayName  修改后集群名称。
+    * desc  修改后集群描述。
     *
     * @var string[]
     */
     protected static $setters = [
-            'displayName' => 'setDisplayName'
+            'displayName' => 'setDisplayName',
+            'desc' => 'setDesc'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * displayName  修改后集群名称。
+    * desc  修改后集群描述。
     *
     * @var string[]
     */
     protected static $getters = [
-            'displayName' => 'getDisplayName'
+            'displayName' => 'getDisplayName',
+            'desc' => 'getDesc'
     ];
 
     /**
@@ -148,6 +158,7 @@ class UpdateClusterNameReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
+        $this->container['desc'] = isset($data['desc']) ? $data['desc'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class UpdateClusterNameReq implements ModelInterface, ArrayAccess
     public function setDisplayName($displayName)
     {
         $this->container['displayName'] = $displayName;
+        return $this;
+    }
+
+    /**
+    * Gets desc
+    *  修改后集群描述。
+    *
+    * @return string|null
+    */
+    public function getDesc()
+    {
+        return $this->container['desc'];
+    }
+
+    /**
+    * Sets desc
+    *
+    * @param string|null $desc 修改后集群描述。
+    *
+    * @return $this
+    */
+    public function setDesc($desc)
+    {
+        $this->container['desc'] = $desc;
         return $this;
     }
 

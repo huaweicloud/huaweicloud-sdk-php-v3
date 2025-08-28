@@ -27,7 +27,7 @@ class WebTamperTimingOffConfigInfoRequestInfo implements ModelInterface, ArrayAc
     */
     protected static $openAPITypes = [
             'weekOffList' => 'int[]',
-            'timingRangeList' => '\HuaweiCloud\SDK\Hss\V5\Model\TimingRangeConfigInfo[]'
+            'timingRangeList' => '\HuaweiCloud\SDK\Hss\V5\Model\TimingRangeConfigRequestInfo[]'
     ];
 
     /**
@@ -211,7 +211,7 @@ class WebTamperTimingOffConfigInfoRequestInfo implements ModelInterface, ArrayAc
     * Gets timingRangeList
     *  时间段
     *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\TimingRangeConfigInfo[]|null
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\TimingRangeConfigRequestInfo[]|null
     */
     public function getTimingRangeList()
     {
@@ -221,7 +221,7 @@ class WebTamperTimingOffConfigInfoRequestInfo implements ModelInterface, ArrayAc
     /**
     * Sets timingRangeList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\TimingRangeConfigInfo[]|null $timingRangeList 时间段
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\TimingRangeConfigRequestInfo[]|null $timingRangeList 时间段
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class IpGroupIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ip  参数解释：IP地址，可以是具体的IP地址或者IP地址段。
+    * ip  **参数解释**：需要从IP地址组中删除的IP地址，可以是单个IP地址、IP地址段和连续IP地址范围。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class IpGroupIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ip  参数解释：IP地址，可以是具体的IP地址或者IP地址段。
+    * ip  **参数解释**：需要从IP地址组中删除的IP地址，可以是单个IP地址、IP地址段和连续IP地址范围。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class IpGroupIp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ip  参数解释：IP地址，可以是具体的IP地址或者IP地址段。
+    * ip  **参数解释**：需要从IP地址组中删除的IP地址，可以是单个IP地址、IP地址段和连续IP地址范围。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class IpGroupIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ip  参数解释：IP地址，可以是具体的IP地址或者IP地址段。
+    * ip  **参数解释**：需要从IP地址组中删除的IP地址，可以是单个IP地址、IP地址段和连续IP地址范围。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class IpGroupIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ip  参数解释：IP地址，可以是具体的IP地址或者IP地址段。
+    * ip  **参数解释**：需要从IP地址组中删除的IP地址，可以是单个IP地址、IP地址段和连续IP地址范围。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class IpGroupIp implements ModelInterface, ArrayAccess
 
     /**
     * Gets ip
-    *  参数解释：IP地址，可以是具体的IP地址或者IP地址段。
+    *  **参数解释**：需要从IP地址组中删除的IP地址，可以是单个IP地址、IP地址段和连续IP地址范围。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class IpGroupIp implements ModelInterface, ArrayAccess
     /**
     * Sets ip
     *
-    * @param string $ip 参数解释：IP地址，可以是具体的IP地址或者IP地址段。
+    * @param string $ip **参数解释**：需要从IP地址组中删除的IP地址，可以是单个IP地址、IP地址段和连续IP地址范围。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

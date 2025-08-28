@@ -20,9 +20,9 @@ class RecycleBinResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  参数解释：项目ID。
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     * policy  policy
-    * enable  是否启用回收站。  取值： - true：启用回收站。 - false：不启用回收站。
+    * enable  **参数解释**：是否启用回收站。  **取值范围**： - true：启用回收站。 - false：不启用回收站。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class RecycleBinResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  参数解释：项目ID。
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     * policy  policy
-    * enable  是否启用回收站。  取值： - true：启用回收站。 - false：不启用回收站。
+    * enable  **参数解释**：是否启用回收站。  **取值范围**： - true：启用回收站。 - false：不启用回收站。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class RecycleBinResponseBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  参数解释：项目ID。
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     * policy  policy
-    * enable  是否启用回收站。  取值： - true：启用回收站。 - false：不启用回收站。
+    * enable  **参数解释**：是否启用回收站。  **取值范围**： - true：启用回收站。 - false：不启用回收站。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class RecycleBinResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  参数解释：项目ID。
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     * policy  policy
-    * enable  是否启用回收站。  取值： - true：启用回收站。 - false：不启用回收站。
+    * enable  **参数解释**：是否启用回收站。  **取值范围**： - true：启用回收站。 - false：不启用回收站。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class RecycleBinResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  参数解释：项目ID。
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     * policy  policy
-    * enable  是否启用回收站。  取值： - true：启用回收站。 - false：不启用回收站。
+    * enable  **参数解释**：是否启用回收站。  **取值范围**： - true：启用回收站。 - false：不启用回收站。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class RecycleBinResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  参数解释：项目ID。
+    *  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class RecycleBinResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 参数解释：项目ID。
+    * @param string|null $projectId **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class RecycleBinResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enable
-    *  是否启用回收站。  取值： - true：启用回收站。 - false：不启用回收站。
+    *  **参数解释**：是否启用回收站。  **取值范围**： - true：启用回收站。 - false：不启用回收站。
     *
     * @return bool|null
     */
@@ -256,7 +256,7 @@ class RecycleBinResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param bool|null $enable 是否启用回收站。  取值： - true：启用回收站。 - false：不启用回收站。
+    * @param bool|null $enable **参数解释**：是否启用回收站。  **取值范围**： - true：启用回收站。 - false：不启用回收站。
     *
     * @return $this
     */

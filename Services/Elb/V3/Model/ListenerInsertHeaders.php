@@ -20,16 +20,16 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xForwardedElbIp  参数解释：X-Forwarded-ELB-IP设为true可以将ELB实例的eip地址从报文的http头中带到后端服务器。
-    * xForwardedPort  参数解释：X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端服务器。
-    * xForwardedForPort  X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端服务器。
-    * xForwardedHost  参数解释：X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端服务器。
-    * xForwardedProto  参数解释：X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端服务器。
-    * xRealIp  参数解释：X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端服务器。
-    * xForwardedElbId  参数解释：X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端服务器。
-    * xForwardedTlsCertificateId  参数解释：X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端服务器。
-    * xForwardedTlsProtocol  参数解释：X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端服务器。
-    * xForwardedTlsCipher  参数解释：X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端服务器。
+    * xForwardedElbIp  **参数解释**：X-Forwarded-ELB-IP设为true可以将ELB实例的eip地址从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedPort  **参数解释**：X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedForPort  **参数解释**：X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedHost  **参数解释**：X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedProto  **参数解释**：X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xRealIp  **参数解释**：X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedElbId  **参数解释**：X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedTlsCertificateId  **参数解释**：X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedTlsProtocol  **参数解释**：X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedTlsCipher  **参数解释**：X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xForwardedElbIp  参数解释：X-Forwarded-ELB-IP设为true可以将ELB实例的eip地址从报文的http头中带到后端服务器。
-    * xForwardedPort  参数解释：X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端服务器。
-    * xForwardedForPort  X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端服务器。
-    * xForwardedHost  参数解释：X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端服务器。
-    * xForwardedProto  参数解释：X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端服务器。
-    * xRealIp  参数解释：X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端服务器。
-    * xForwardedElbId  参数解释：X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端服务器。
-    * xForwardedTlsCertificateId  参数解释：X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端服务器。
-    * xForwardedTlsProtocol  参数解释：X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端服务器。
-    * xForwardedTlsCipher  参数解释：X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端服务器。
+    * xForwardedElbIp  **参数解释**：X-Forwarded-ELB-IP设为true可以将ELB实例的eip地址从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedPort  **参数解释**：X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedForPort  **参数解释**：X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedHost  **参数解释**：X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedProto  **参数解释**：X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xRealIp  **参数解释**：X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedElbId  **参数解释**：X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedTlsCertificateId  **参数解释**：X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedTlsProtocol  **参数解释**：X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedTlsCipher  **参数解释**：X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xForwardedElbIp  参数解释：X-Forwarded-ELB-IP设为true可以将ELB实例的eip地址从报文的http头中带到后端服务器。
-    * xForwardedPort  参数解释：X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端服务器。
-    * xForwardedForPort  X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端服务器。
-    * xForwardedHost  参数解释：X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端服务器。
-    * xForwardedProto  参数解释：X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端服务器。
-    * xRealIp  参数解释：X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端服务器。
-    * xForwardedElbId  参数解释：X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端服务器。
-    * xForwardedTlsCertificateId  参数解释：X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端服务器。
-    * xForwardedTlsProtocol  参数解释：X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端服务器。
-    * xForwardedTlsCipher  参数解释：X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端服务器。
+    * xForwardedElbIp  **参数解释**：X-Forwarded-ELB-IP设为true可以将ELB实例的eip地址从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedPort  **参数解释**：X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedForPort  **参数解释**：X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedHost  **参数解释**：X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedProto  **参数解释**：X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xRealIp  **参数解释**：X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedElbId  **参数解释**：X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedTlsCertificateId  **参数解释**：X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedTlsProtocol  **参数解释**：X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedTlsCipher  **参数解释**：X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xForwardedElbIp  参数解释：X-Forwarded-ELB-IP设为true可以将ELB实例的eip地址从报文的http头中带到后端服务器。
-    * xForwardedPort  参数解释：X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端服务器。
-    * xForwardedForPort  X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端服务器。
-    * xForwardedHost  参数解释：X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端服务器。
-    * xForwardedProto  参数解释：X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端服务器。
-    * xRealIp  参数解释：X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端服务器。
-    * xForwardedElbId  参数解释：X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端服务器。
-    * xForwardedTlsCertificateId  参数解释：X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端服务器。
-    * xForwardedTlsProtocol  参数解释：X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端服务器。
-    * xForwardedTlsCipher  参数解释：X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端服务器。
+    * xForwardedElbIp  **参数解释**：X-Forwarded-ELB-IP设为true可以将ELB实例的eip地址从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedPort  **参数解释**：X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedForPort  **参数解释**：X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedHost  **参数解释**：X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedProto  **参数解释**：X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xRealIp  **参数解释**：X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedElbId  **参数解释**：X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedTlsCertificateId  **参数解释**：X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedTlsProtocol  **参数解释**：X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedTlsCipher  **参数解释**：X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xForwardedElbIp  参数解释：X-Forwarded-ELB-IP设为true可以将ELB实例的eip地址从报文的http头中带到后端服务器。
-    * xForwardedPort  参数解释：X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端服务器。
-    * xForwardedForPort  X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端服务器。
-    * xForwardedHost  参数解释：X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端服务器。
-    * xForwardedProto  参数解释：X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端服务器。
-    * xRealIp  参数解释：X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端服务器。
-    * xForwardedElbId  参数解释：X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端服务器。
-    * xForwardedTlsCertificateId  参数解释：X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端服务器。
-    * xForwardedTlsProtocol  参数解释：X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端服务器。
-    * xForwardedTlsCipher  参数解释：X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端服务器。
+    * xForwardedElbIp  **参数解释**：X-Forwarded-ELB-IP设为true可以将ELB实例的eip地址从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedPort  **参数解释**：X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedForPort  **参数解释**：X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedHost  **参数解释**：X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedProto  **参数解释**：X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xRealIp  **参数解释**：X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedElbId  **参数解释**：X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedTlsCertificateId  **参数解释**：X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedTlsProtocol  **参数解释**：X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * xForwardedTlsCipher  **参数解释**：X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -273,7 +273,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
 
     /**
     * Gets xForwardedElbIp
-    *  参数解释：X-Forwarded-ELB-IP设为true可以将ELB实例的eip地址从报文的http头中带到后端服务器。
+    *  **参数解释**：X-Forwarded-ELB-IP设为true可以将ELB实例的eip地址从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return bool|null
     */
@@ -285,7 +285,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
     /**
     * Sets xForwardedElbIp
     *
-    * @param bool|null $xForwardedElbIp 参数解释：X-Forwarded-ELB-IP设为true可以将ELB实例的eip地址从报文的http头中带到后端服务器。
+    * @param bool|null $xForwardedElbIp **参数解释**：X-Forwarded-ELB-IP设为true可以将ELB实例的eip地址从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -297,7 +297,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
 
     /**
     * Gets xForwardedPort
-    *  参数解释：X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端服务器。
+    *  **参数解释**：X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return bool|null
     */
@@ -309,7 +309,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
     /**
     * Sets xForwardedPort
     *
-    * @param bool|null $xForwardedPort 参数解释：X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端服务器。
+    * @param bool|null $xForwardedPort **参数解释**：X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -321,7 +321,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
 
     /**
     * Gets xForwardedForPort
-    *  X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端服务器。
+    *  **参数解释**：X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return bool|null
     */
@@ -333,7 +333,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
     /**
     * Sets xForwardedForPort
     *
-    * @param bool|null $xForwardedForPort X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端服务器。
+    * @param bool|null $xForwardedForPort **参数解释**：X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -345,7 +345,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
 
     /**
     * Gets xForwardedHost
-    *  参数解释：X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端服务器。
+    *  **参数解释**：X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return bool|null
     */
@@ -357,7 +357,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
     /**
     * Sets xForwardedHost
     *
-    * @param bool|null $xForwardedHost 参数解释：X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端服务器。
+    * @param bool|null $xForwardedHost **参数解释**：X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -369,7 +369,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
 
     /**
     * Gets xForwardedProto
-    *  参数解释：X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端服务器。
+    *  **参数解释**：X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return bool|null
     */
@@ -381,7 +381,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
     /**
     * Sets xForwardedProto
     *
-    * @param bool|null $xForwardedProto 参数解释：X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端服务器。
+    * @param bool|null $xForwardedProto **参数解释**：X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -393,7 +393,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
 
     /**
     * Gets xRealIp
-    *  参数解释：X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端服务器。
+    *  **参数解释**：X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return bool|null
     */
@@ -405,7 +405,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
     /**
     * Sets xRealIp
     *
-    * @param bool|null $xRealIp 参数解释：X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端服务器。
+    * @param bool|null $xRealIp **参数解释**：X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -417,7 +417,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
 
     /**
     * Gets xForwardedElbId
-    *  参数解释：X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端服务器。
+    *  **参数解释**：X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return bool|null
     */
@@ -429,7 +429,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
     /**
     * Sets xForwardedElbId
     *
-    * @param bool|null $xForwardedElbId 参数解释：X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端服务器。
+    * @param bool|null $xForwardedElbId **参数解释**：X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -441,7 +441,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
 
     /**
     * Gets xForwardedTlsCertificateId
-    *  参数解释：X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端服务器。
+    *  **参数解释**：X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return bool|null
     */
@@ -453,7 +453,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
     /**
     * Sets xForwardedTlsCertificateId
     *
-    * @param bool|null $xForwardedTlsCertificateId 参数解释：X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端服务器。
+    * @param bool|null $xForwardedTlsCertificateId **参数解释**：X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -465,7 +465,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
 
     /**
     * Gets xForwardedTlsProtocol
-    *  参数解释：X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端服务器。
+    *  **参数解释**：X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return bool|null
     */
@@ -477,7 +477,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
     /**
     * Sets xForwardedTlsProtocol
     *
-    * @param bool|null $xForwardedTlsProtocol 参数解释：X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端服务器。
+    * @param bool|null $xForwardedTlsProtocol **参数解释**：X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -489,7 +489,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
 
     /**
     * Gets xForwardedTlsCipher
-    *  参数解释：X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端服务器。
+    *  **参数解释**：X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return bool|null
     */
@@ -501,7 +501,7 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
     /**
     * Sets xForwardedTlsCipher
     *
-    * @param bool|null $xForwardedTlsCipher 参数解释：X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端服务器。
+    * @param bool|null $xForwardedTlsCipher **参数解释**：X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端服务器。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

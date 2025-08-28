@@ -22,6 +22,7 @@ class StartAutoCreateSnapshotsReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * indices  指定要恢复的索引名称，多个索引用逗号隔开，默认恢复所有索引。支持使用“\\*”匹配多个索引，例如：2018-06\\*，表示恢复名称前缀是2018-06的所有索引的数据。 0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?特殊字符。 默认值为\\*，表示恢复所有索引。
     * keepday  设置快照保留的天数，范围是1～90。系统在半点时刻会自动删除超过保留天数的快照。
+    * frequency  自动创建快照的执行频次。
     * period  每天创建快照的时刻，只支持整点，后面需加上时区，格式为“HH:mm z”，“HH:mm”表示整点时间，“z”表示时区。比如“00:00 GMT+08:00”、“01:00 GMT+08:00”等。
     * prefix  自动创建的快照名称前缀，需要用户自己手动输入。只能包含1~32位小写字母、数字、中划线或者下划线，并且以小写字母开头。
     *
@@ -30,6 +31,7 @@ class StartAutoCreateSnapshotsReq implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'indices' => 'string',
             'keepday' => 'int',
+            'frequency' => 'string',
             'period' => 'string',
             'prefix' => 'string'
     ];
@@ -38,6 +40,7 @@ class StartAutoCreateSnapshotsReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * indices  指定要恢复的索引名称，多个索引用逗号隔开，默认恢复所有索引。支持使用“\\*”匹配多个索引，例如：2018-06\\*，表示恢复名称前缀是2018-06的所有索引的数据。 0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?特殊字符。 默认值为\\*，表示恢复所有索引。
     * keepday  设置快照保留的天数，范围是1～90。系统在半点时刻会自动删除超过保留天数的快照。
+    * frequency  自动创建快照的执行频次。
     * period  每天创建快照的时刻，只支持整点，后面需加上时区，格式为“HH:mm z”，“HH:mm”表示整点时间，“z”表示时区。比如“00:00 GMT+08:00”、“01:00 GMT+08:00”等。
     * prefix  自动创建的快照名称前缀，需要用户自己手动输入。只能包含1~32位小写字母、数字、中划线或者下划线，并且以小写字母开头。
     *
@@ -46,6 +49,7 @@ class StartAutoCreateSnapshotsReq implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'indices' => null,
         'keepday' => null,
+        'frequency' => null,
         'period' => null,
         'prefix' => null
     ];
@@ -75,6 +79,7 @@ class StartAutoCreateSnapshotsReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * indices  指定要恢复的索引名称，多个索引用逗号隔开，默认恢复所有索引。支持使用“\\*”匹配多个索引，例如：2018-06\\*，表示恢复名称前缀是2018-06的所有索引的数据。 0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?特殊字符。 默认值为\\*，表示恢复所有索引。
     * keepday  设置快照保留的天数，范围是1～90。系统在半点时刻会自动删除超过保留天数的快照。
+    * frequency  自动创建快照的执行频次。
     * period  每天创建快照的时刻，只支持整点，后面需加上时区，格式为“HH:mm z”，“HH:mm”表示整点时间，“z”表示时区。比如“00:00 GMT+08:00”、“01:00 GMT+08:00”等。
     * prefix  自动创建的快照名称前缀，需要用户自己手动输入。只能包含1~32位小写字母、数字、中划线或者下划线，并且以小写字母开头。
     *
@@ -83,6 +88,7 @@ class StartAutoCreateSnapshotsReq implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'indices' => 'indices',
             'keepday' => 'keepday',
+            'frequency' => 'frequency',
             'period' => 'period',
             'prefix' => 'prefix'
     ];
@@ -91,6 +97,7 @@ class StartAutoCreateSnapshotsReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * indices  指定要恢复的索引名称，多个索引用逗号隔开，默认恢复所有索引。支持使用“\\*”匹配多个索引，例如：2018-06\\*，表示恢复名称前缀是2018-06的所有索引的数据。 0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?特殊字符。 默认值为\\*，表示恢复所有索引。
     * keepday  设置快照保留的天数，范围是1～90。系统在半点时刻会自动删除超过保留天数的快照。
+    * frequency  自动创建快照的执行频次。
     * period  每天创建快照的时刻，只支持整点，后面需加上时区，格式为“HH:mm z”，“HH:mm”表示整点时间，“z”表示时区。比如“00:00 GMT+08:00”、“01:00 GMT+08:00”等。
     * prefix  自动创建的快照名称前缀，需要用户自己手动输入。只能包含1~32位小写字母、数字、中划线或者下划线，并且以小写字母开头。
     *
@@ -99,6 +106,7 @@ class StartAutoCreateSnapshotsReq implements ModelInterface, ArrayAccess
     protected static $setters = [
             'indices' => 'setIndices',
             'keepday' => 'setKeepday',
+            'frequency' => 'setFrequency',
             'period' => 'setPeriod',
             'prefix' => 'setPrefix'
     ];
@@ -107,6 +115,7 @@ class StartAutoCreateSnapshotsReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * indices  指定要恢复的索引名称，多个索引用逗号隔开，默认恢复所有索引。支持使用“\\*”匹配多个索引，例如：2018-06\\*，表示恢复名称前缀是2018-06的所有索引的数据。 0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?特殊字符。 默认值为\\*，表示恢复所有索引。
     * keepday  设置快照保留的天数，范围是1～90。系统在半点时刻会自动删除超过保留天数的快照。
+    * frequency  自动创建快照的执行频次。
     * period  每天创建快照的时刻，只支持整点，后面需加上时区，格式为“HH:mm z”，“HH:mm”表示整点时间，“z”表示时区。比如“00:00 GMT+08:00”、“01:00 GMT+08:00”等。
     * prefix  自动创建的快照名称前缀，需要用户自己手动输入。只能包含1~32位小写字母、数字、中划线或者下划线，并且以小写字母开头。
     *
@@ -115,6 +124,7 @@ class StartAutoCreateSnapshotsReq implements ModelInterface, ArrayAccess
     protected static $getters = [
             'indices' => 'getIndices',
             'keepday' => 'getKeepday',
+            'frequency' => 'getFrequency',
             'period' => 'getPeriod',
             'prefix' => 'getPrefix'
     ];
@@ -179,6 +189,7 @@ class StartAutoCreateSnapshotsReq implements ModelInterface, ArrayAccess
     {
         $this->container['indices'] = isset($data['indices']) ? $data['indices'] : null;
         $this->container['keepday'] = isset($data['keepday']) ? $data['keepday'] : null;
+        $this->container['frequency'] = isset($data['frequency']) ? $data['frequency'] : null;
         $this->container['period'] = isset($data['period']) ? $data['period'] : null;
         $this->container['prefix'] = isset($data['prefix']) ? $data['prefix'] : null;
     }
@@ -259,6 +270,30 @@ class StartAutoCreateSnapshotsReq implements ModelInterface, ArrayAccess
     public function setKeepday($keepday)
     {
         $this->container['keepday'] = $keepday;
+        return $this;
+    }
+
+    /**
+    * Gets frequency
+    *  自动创建快照的执行频次。
+    *
+    * @return string|null
+    */
+    public function getFrequency()
+    {
+        return $this->container['frequency'];
+    }
+
+    /**
+    * Sets frequency
+    *
+    * @param string|null $frequency 自动创建快照的执行频次。
+    *
+    * @return $this
+    */
+    public function setFrequency($frequency)
+    {
+        $this->container['frequency'] = $frequency;
         return $this;
     }
 

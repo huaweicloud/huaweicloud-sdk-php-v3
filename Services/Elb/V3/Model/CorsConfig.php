@@ -20,12 +20,12 @@ class CorsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * allowOrigin  参数解释：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  约束限制： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
-    * allowMethods  参数解释：选择跨域访问时允许的 HTTP 方法。
-    * allowHeaders  参数解释：允许跨域的 Header 列表。
-    * exposeHeaders  参数解释：允许暴露的Header列表。
-    * allowCredentials  参数解释：是否允许携带凭证信息。  取值范围： - true：是。 - false：否。
-    * maxAge  参数解释：预检请求在浏览器的最大缓存时间，单位：秒。  取值范围：-1~172800。
+    * allowOrigin  **参数解释**：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  **约束限制**： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
+    * allowMethods  **参数解释**：选择跨域访问时允许的 HTTP 方法。  **取值范围**：不涉及
+    * allowHeaders  **参数解释**：允许跨域的 Header 列表。  **取值范围**：不涉及
+    * exposeHeaders  **参数解释**：允许暴露的Header列表。  **取值范围**：不涉及
+    * allowCredentials  **参数解释**：是否允许携带凭证信息。  **取值范围**： - true：是。 - false：否。
+    * maxAge  **参数解释**：预检请求在浏览器的最大缓存时间，单位：秒。  **取值范围**：-1~172800
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class CorsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * allowOrigin  参数解释：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  约束限制： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
-    * allowMethods  参数解释：选择跨域访问时允许的 HTTP 方法。
-    * allowHeaders  参数解释：允许跨域的 Header 列表。
-    * exposeHeaders  参数解释：允许暴露的Header列表。
-    * allowCredentials  参数解释：是否允许携带凭证信息。  取值范围： - true：是。 - false：否。
-    * maxAge  参数解释：预检请求在浏览器的最大缓存时间，单位：秒。  取值范围：-1~172800。
+    * allowOrigin  **参数解释**：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  **约束限制**： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
+    * allowMethods  **参数解释**：选择跨域访问时允许的 HTTP 方法。  **取值范围**：不涉及
+    * allowHeaders  **参数解释**：允许跨域的 Header 列表。  **取值范围**：不涉及
+    * exposeHeaders  **参数解释**：允许暴露的Header列表。  **取值范围**：不涉及
+    * allowCredentials  **参数解释**：是否允许携带凭证信息。  **取值范围**： - true：是。 - false：否。
+    * maxAge  **参数解释**：预检请求在浏览器的最大缓存时间，单位：秒。  **取值范围**：-1~172800
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class CorsConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * allowOrigin  参数解释：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  约束限制： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
-    * allowMethods  参数解释：选择跨域访问时允许的 HTTP 方法。
-    * allowHeaders  参数解释：允许跨域的 Header 列表。
-    * exposeHeaders  参数解释：允许暴露的Header列表。
-    * allowCredentials  参数解释：是否允许携带凭证信息。  取值范围： - true：是。 - false：否。
-    * maxAge  参数解释：预检请求在浏览器的最大缓存时间，单位：秒。  取值范围：-1~172800。
+    * allowOrigin  **参数解释**：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  **约束限制**： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
+    * allowMethods  **参数解释**：选择跨域访问时允许的 HTTP 方法。  **取值范围**：不涉及
+    * allowHeaders  **参数解释**：允许跨域的 Header 列表。  **取值范围**：不涉及
+    * exposeHeaders  **参数解释**：允许暴露的Header列表。  **取值范围**：不涉及
+    * allowCredentials  **参数解释**：是否允许携带凭证信息。  **取值范围**： - true：是。 - false：否。
+    * maxAge  **参数解释**：预检请求在浏览器的最大缓存时间，单位：秒。  **取值范围**：-1~172800
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class CorsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * allowOrigin  参数解释：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  约束限制： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
-    * allowMethods  参数解释：选择跨域访问时允许的 HTTP 方法。
-    * allowHeaders  参数解释：允许跨域的 Header 列表。
-    * exposeHeaders  参数解释：允许暴露的Header列表。
-    * allowCredentials  参数解释：是否允许携带凭证信息。  取值范围： - true：是。 - false：否。
-    * maxAge  参数解释：预检请求在浏览器的最大缓存时间，单位：秒。  取值范围：-1~172800。
+    * allowOrigin  **参数解释**：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  **约束限制**： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
+    * allowMethods  **参数解释**：选择跨域访问时允许的 HTTP 方法。  **取值范围**：不涉及
+    * allowHeaders  **参数解释**：允许跨域的 Header 列表。  **取值范围**：不涉及
+    * exposeHeaders  **参数解释**：允许暴露的Header列表。  **取值范围**：不涉及
+    * allowCredentials  **参数解释**：是否允许携带凭证信息。  **取值范围**： - true：是。 - false：否。
+    * maxAge  **参数解释**：预检请求在浏览器的最大缓存时间，单位：秒。  **取值范围**：-1~172800
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class CorsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * allowOrigin  参数解释：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  约束限制： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
-    * allowMethods  参数解释：选择跨域访问时允许的 HTTP 方法。
-    * allowHeaders  参数解释：允许跨域的 Header 列表。
-    * exposeHeaders  参数解释：允许暴露的Header列表。
-    * allowCredentials  参数解释：是否允许携带凭证信息。  取值范围： - true：是。 - false：否。
-    * maxAge  参数解释：预检请求在浏览器的最大缓存时间，单位：秒。  取值范围：-1~172800。
+    * allowOrigin  **参数解释**：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  **约束限制**： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
+    * allowMethods  **参数解释**：选择跨域访问时允许的 HTTP 方法。  **取值范围**：不涉及
+    * allowHeaders  **参数解释**：允许跨域的 Header 列表。  **取值范围**：不涉及
+    * exposeHeaders  **参数解释**：允许暴露的Header列表。  **取值范围**：不涉及
+    * allowCredentials  **参数解释**：是否允许携带凭证信息。  **取值范围**： - true：是。 - false：否。
+    * maxAge  **参数解释**：预检请求在浏览器的最大缓存时间，单位：秒。  **取值范围**：-1~172800
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets allowOrigin
-    *  参数解释：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  约束限制： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
+    *  **参数解释**：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  **约束限制**： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
     *
     * @return string[]|null
     */
@@ -241,7 +241,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
     /**
     * Sets allowOrigin
     *
-    * @param string[]|null $allowOrigin 参数解释：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  约束限制： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
+    * @param string[]|null $allowOrigin **参数解释**：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  **约束限制**： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets allowMethods
-    *  参数解释：选择跨域访问时允许的 HTTP 方法。
+    *  **参数解释**：选择跨域访问时允许的 HTTP 方法。  **取值范围**：不涉及
     *
     * @return string[]|null
     */
@@ -265,7 +265,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
     /**
     * Sets allowMethods
     *
-    * @param string[]|null $allowMethods 参数解释：选择跨域访问时允许的 HTTP 方法。
+    * @param string[]|null $allowMethods **参数解释**：选择跨域访问时允许的 HTTP 方法。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets allowHeaders
-    *  参数解释：允许跨域的 Header 列表。
+    *  **参数解释**：允许跨域的 Header 列表。  **取值范围**：不涉及
     *
     * @return string[]|null
     */
@@ -289,7 +289,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
     /**
     * Sets allowHeaders
     *
-    * @param string[]|null $allowHeaders 参数解释：允许跨域的 Header 列表。
+    * @param string[]|null $allowHeaders **参数解释**：允许跨域的 Header 列表。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets exposeHeaders
-    *  参数解释：允许暴露的Header列表。
+    *  **参数解释**：允许暴露的Header列表。  **取值范围**：不涉及
     *
     * @return string[]|null
     */
@@ -313,7 +313,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
     /**
     * Sets exposeHeaders
     *
-    * @param string[]|null $exposeHeaders 参数解释：允许暴露的Header列表。
+    * @param string[]|null $exposeHeaders **参数解释**：允许暴露的Header列表。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets allowCredentials
-    *  参数解释：是否允许携带凭证信息。  取值范围： - true：是。 - false：否。
+    *  **参数解释**：是否允许携带凭证信息。  **取值范围**： - true：是。 - false：否。
     *
     * @return bool|null
     */
@@ -337,7 +337,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
     /**
     * Sets allowCredentials
     *
-    * @param bool|null $allowCredentials 参数解释：是否允许携带凭证信息。  取值范围： - true：是。 - false：否。
+    * @param bool|null $allowCredentials **参数解释**：是否允许携带凭证信息。  **取值范围**： - true：是。 - false：否。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxAge
-    *  参数解释：预检请求在浏览器的最大缓存时间，单位：秒。  取值范围：-1~172800。
+    *  **参数解释**：预检请求在浏览器的最大缓存时间，单位：秒。  **取值范围**：-1~172800
     *
     * @return int|null
     */
@@ -361,7 +361,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
     /**
     * Sets maxAge
     *
-    * @param int|null $maxAge 参数解释：预检请求在浏览器的最大缓存时间，单位：秒。  取值范围：-1~172800。
+    * @param int|null $maxAge **参数解释**：预检请求在浏览器的最大缓存时间，单位：秒。  **取值范围**：-1~172800
     *
     * @return $this
     */

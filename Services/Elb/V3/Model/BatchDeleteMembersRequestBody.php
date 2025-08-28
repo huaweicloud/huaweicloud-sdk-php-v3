@@ -20,7 +20,7 @@ class BatchDeleteMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * members  批量删除后端服务器请求body。
+    * members  **参数解释**：批量删除后端服务器请求body。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchDeleteMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * members  批量删除后端服务器请求body。
+    * members  **参数解释**：批量删除后端服务器请求body。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchDeleteMembersRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * members  批量删除后端服务器请求body。
+    * members  **参数解释**：批量删除后端服务器请求body。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchDeleteMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * members  批量删除后端服务器请求body。
+    * members  **参数解释**：批量删除后端服务器请求body。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchDeleteMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * members  批量删除后端服务器请求body。
+    * members  **参数解释**：批量删除后端服务器请求body。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class BatchDeleteMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets members
-    *  批量删除后端服务器请求body。
+    *  **参数解释**：批量删除后端服务器请求body。  **约束限制**：不涉及
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\BatchDeleteMembersOption[]
     */
@@ -189,7 +189,7 @@ class BatchDeleteMembersRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets members
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\BatchDeleteMembersOption[] $members 批量删除后端服务器请求body。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\BatchDeleteMembersOption[] $members **参数解释**：批量删除后端服务器请求body。  **约束限制**：不涉及
     *
     * @return $this
     */

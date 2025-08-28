@@ -3003,9 +3003,9 @@ class CssClient extends Client
     }
 
     /**
-     * 开启日志功能
+     * 开启日志备份或日志采集功能
      *
-     * 该接口用于开启日志功能。
+     * 该接口用于开启集群的日志备份或日志采集功能开关。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3712,9 +3712,9 @@ class CssClient extends Client
     }
 
     /**
-     * 修改集群名称
+     * 修改集群名称或描述
      *
-     * 该接口用于修改集群名称。
+     * 该接口用于修改集群名称或描述。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4143,6 +4143,12 @@ class CssClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['migrateData'] !== null) {
+            $queryParams['migrateData'] = $localVarParams['migrateData'];
+        }
+        if ($localVarParams['agency'] !== null) {
+            $queryParams['agency'] = $localVarParams['agency'];
         }
         if ($localVarParams['clusterId'] !== null) {
             $pathParams['cluster_id'] = $localVarParams['clusterId'];

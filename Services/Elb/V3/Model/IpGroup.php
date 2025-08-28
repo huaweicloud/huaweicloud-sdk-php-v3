@@ -20,15 +20,15 @@ class IpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  参数解释：IP地址组的ID。
-    * name  参数解释：IP地址组的名称。
-    * description  参数解释：IP地址组的描述信息。
-    * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * listeners  参数解释：与IP地址组关联的监听器的ID列表。
-    * projectId  参数解释：IP地址组的项目ID。
-    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
-    * createdAt  参数解释：IP地址组的创建时间。
-    * updatedAt  参数解释：IP地址组的更新时间。
+    * id  **参数解释**：IP地址组的ID。  **取值范围**：不涉及
+    * name  **参数解释**：IP地址组的名称。  **取值范围**：不涉及
+    * description  **参数解释**：IP地址组的描述信息。  **取值范围**：不涉及
+    * ipList  **参数解释**：IP地址组中包含的IP地址列表。[]表示任意IP。
+    * listeners  **参数解释**：与IP地址组关联的监听器的ID列表。
+    * projectId  **参数解释**：IP地址组的项目ID。  **取值范围**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * createdAt  **参数解释**：IP地址组的创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  **参数解释**：IP地址组的更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class IpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  参数解释：IP地址组的ID。
-    * name  参数解释：IP地址组的名称。
-    * description  参数解释：IP地址组的描述信息。
-    * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * listeners  参数解释：与IP地址组关联的监听器的ID列表。
-    * projectId  参数解释：IP地址组的项目ID。
-    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
-    * createdAt  参数解释：IP地址组的创建时间。
-    * updatedAt  参数解释：IP地址组的更新时间。
+    * id  **参数解释**：IP地址组的ID。  **取值范围**：不涉及
+    * name  **参数解释**：IP地址组的名称。  **取值范围**：不涉及
+    * description  **参数解释**：IP地址组的描述信息。  **取值范围**：不涉及
+    * ipList  **参数解释**：IP地址组中包含的IP地址列表。[]表示任意IP。
+    * listeners  **参数解释**：与IP地址组关联的监听器的ID列表。
+    * projectId  **参数解释**：IP地址组的项目ID。  **取值范围**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * createdAt  **参数解释**：IP地址组的创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  **参数解释**：IP地址组的更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  参数解释：IP地址组的ID。
-    * name  参数解释：IP地址组的名称。
-    * description  参数解释：IP地址组的描述信息。
-    * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * listeners  参数解释：与IP地址组关联的监听器的ID列表。
-    * projectId  参数解释：IP地址组的项目ID。
-    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
-    * createdAt  参数解释：IP地址组的创建时间。
-    * updatedAt  参数解释：IP地址组的更新时间。
+    * id  **参数解释**：IP地址组的ID。  **取值范围**：不涉及
+    * name  **参数解释**：IP地址组的名称。  **取值范围**：不涉及
+    * description  **参数解释**：IP地址组的描述信息。  **取值范围**：不涉及
+    * ipList  **参数解释**：IP地址组中包含的IP地址列表。[]表示任意IP。
+    * listeners  **参数解释**：与IP地址组关联的监听器的ID列表。
+    * projectId  **参数解释**：IP地址组的项目ID。  **取值范围**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * createdAt  **参数解释**：IP地址组的创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  **参数解释**：IP地址组的更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class IpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  参数解释：IP地址组的ID。
-    * name  参数解释：IP地址组的名称。
-    * description  参数解释：IP地址组的描述信息。
-    * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * listeners  参数解释：与IP地址组关联的监听器的ID列表。
-    * projectId  参数解释：IP地址组的项目ID。
-    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
-    * createdAt  参数解释：IP地址组的创建时间。
-    * updatedAt  参数解释：IP地址组的更新时间。
+    * id  **参数解释**：IP地址组的ID。  **取值范围**：不涉及
+    * name  **参数解释**：IP地址组的名称。  **取值范围**：不涉及
+    * description  **参数解释**：IP地址组的描述信息。  **取值范围**：不涉及
+    * ipList  **参数解释**：IP地址组中包含的IP地址列表。[]表示任意IP。
+    * listeners  **参数解释**：与IP地址组关联的监听器的ID列表。
+    * projectId  **参数解释**：IP地址组的项目ID。  **取值范围**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * createdAt  **参数解释**：IP地址组的创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  **参数解释**：IP地址组的更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class IpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  参数解释：IP地址组的ID。
-    * name  参数解释：IP地址组的名称。
-    * description  参数解释：IP地址组的描述信息。
-    * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * listeners  参数解释：与IP地址组关联的监听器的ID列表。
-    * projectId  参数解释：IP地址组的项目ID。
-    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
-    * createdAt  参数解释：IP地址组的创建时间。
-    * updatedAt  参数解释：IP地址组的更新时间。
+    * id  **参数解释**：IP地址组的ID。  **取值范围**：不涉及
+    * name  **参数解释**：IP地址组的名称。  **取值范围**：不涉及
+    * description  **参数解释**：IP地址组的描述信息。  **取值范围**：不涉及
+    * ipList  **参数解释**：IP地址组中包含的IP地址列表。[]表示任意IP。
+    * listeners  **参数解释**：与IP地址组关联的监听器的ID列表。
+    * projectId  **参数解释**：IP地址组的项目ID。  **取值范围**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * createdAt  **参数解释**：IP地址组的创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  **参数解释**：IP地址组的更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @var string[]
     */
@@ -286,7 +286,7 @@ class IpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  参数解释：IP地址组的ID。
+    *  **参数解释**：IP地址组的ID。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -298,7 +298,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 参数解释：IP地址组的ID。
+    * @param string $id **参数解释**：IP地址组的ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class IpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  参数解释：IP地址组的名称。
+    *  **参数解释**：IP地址组的名称。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -322,7 +322,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 参数解释：IP地址组的名称。
+    * @param string $name **参数解释**：IP地址组的名称。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class IpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  参数解释：IP地址组的描述信息。
+    *  **参数解释**：IP地址组的描述信息。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -346,7 +346,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 参数解释：IP地址组的描述信息。
+    * @param string $description **参数解释**：IP地址组的描述信息。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class IpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipList
-    *  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
+    *  **参数解释**：IP地址组中包含的IP地址列表。[]表示任意IP。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\IpInfo[]
     */
@@ -370,7 +370,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets ipList
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\IpInfo[] $ipList 参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\IpInfo[] $ipList **参数解释**：IP地址组中包含的IP地址列表。[]表示任意IP。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class IpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets listeners
-    *  参数解释：与IP地址组关联的监听器的ID列表。
+    *  **参数解释**：与IP地址组关联的监听器的ID列表。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[]
     */
@@ -394,7 +394,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets listeners
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[] $listeners 参数解释：与IP地址组关联的监听器的ID列表。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[] $listeners **参数解释**：与IP地址组关联的监听器的ID列表。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class IpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  参数解释：IP地址组的项目ID。
+    *  **参数解释**：IP地址组的项目ID。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -418,7 +418,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 参数解释：IP地址组的项目ID。
+    * @param string $projectId **参数解释**：IP地址组的项目ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class IpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    *  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * @param string|null $enterpriseProjectId **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class IpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  参数解释：IP地址组的创建时间。
+    *  **参数解释**：IP地址组的创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @return string
     */
@@ -466,7 +466,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string $createdAt 参数解释：IP地址组的创建时间。
+    * @param string $createdAt **参数解释**：IP地址组的创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @return $this
     */
@@ -478,7 +478,7 @@ class IpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  参数解释：IP地址组的更新时间。
+    *  **参数解释**：IP地址组的更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @return string
     */
@@ -490,7 +490,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string $updatedAt 参数解释：IP地址组的更新时间。
+    * @param string $updatedAt **参数解释**：IP地址组的更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @return $this
     */

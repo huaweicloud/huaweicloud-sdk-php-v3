@@ -3039,6 +3039,68 @@ class BssintlAsyncClient extends Client
     }
 
     /**
+     * 查询消费配额
+     *
+     * 功能描述：客户可以查询自身的消费配额信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showCustomerExpenditureQuotaAsync($request)
+    {
+        return $this->showCustomerExpenditureQuotaAsyncWithHttpInfo($request);
+    }
+    
+    public function showCustomerExpenditureQuotaAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/accounts/customer-accounts/expenditure-quota';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowCustomerExpenditureQuotaResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowCustomerExpenditureQuotaRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询汇总账单
      *
      * 客户在自建平台查询自身的消费汇总账单，此账单按月汇总消费数据。

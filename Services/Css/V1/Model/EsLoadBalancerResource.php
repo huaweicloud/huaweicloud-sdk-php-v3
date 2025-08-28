@@ -22,7 +22,7 @@ class EsLoadBalancerResource implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  负载均衡器ID。
     * name  负载均衡器名称。
-    * guaranteed  是否独享型LB。 - false：共享型。 - true：独享型。
+    * guaranteed  Indicates whether the LB is an exclusive LB. - false：共享型。 - true：独享型。
     * billingInfo  资源账单信息 - 空：按需计费。 - 非空：包周期计费。
     * description  描述信息。
     * vpcId  负载均衡器所属VPC ID。
@@ -50,7 +50,7 @@ class EsLoadBalancerResource implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  负载均衡器ID。
     * name  负载均衡器名称。
-    * guaranteed  是否独享型LB。 - false：共享型。 - true：独享型。
+    * guaranteed  Indicates whether the LB is an exclusive LB. - false：共享型。 - true：独享型。
     * billingInfo  资源账单信息 - 空：按需计费。 - 非空：包周期计费。
     * description  描述信息。
     * vpcId  负载均衡器所属VPC ID。
@@ -99,7 +99,7 @@ class EsLoadBalancerResource implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  负载均衡器ID。
     * name  负载均衡器名称。
-    * guaranteed  是否独享型LB。 - false：共享型。 - true：独享型。
+    * guaranteed  Indicates whether the LB is an exclusive LB. - false：共享型。 - true：独享型。
     * billingInfo  资源账单信息 - 空：按需计费。 - 非空：包周期计费。
     * description  描述信息。
     * vpcId  负载均衡器所属VPC ID。
@@ -127,7 +127,7 @@ class EsLoadBalancerResource implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  负载均衡器ID。
     * name  负载均衡器名称。
-    * guaranteed  是否独享型LB。 - false：共享型。 - true：独享型。
+    * guaranteed  Indicates whether the LB is an exclusive LB. - false：共享型。 - true：独享型。
     * billingInfo  资源账单信息 - 空：按需计费。 - 非空：包周期计费。
     * description  描述信息。
     * vpcId  负载均衡器所属VPC ID。
@@ -155,7 +155,7 @@ class EsLoadBalancerResource implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  负载均衡器ID。
     * name  负载均衡器名称。
-    * guaranteed  是否独享型LB。 - false：共享型。 - true：独享型。
+    * guaranteed  Indicates whether the LB is an exclusive LB. - false：共享型。 - true：独享型。
     * billingInfo  资源账单信息 - 空：按需计费。 - 非空：包周期计费。
     * description  描述信息。
     * vpcId  负载均衡器所属VPC ID。
@@ -321,7 +321,7 @@ class EsLoadBalancerResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets guaranteed
-    *  是否独享型LB。 - false：共享型。 - true：独享型。
+    *  Indicates whether the LB is an exclusive LB. - false：共享型。 - true：独享型。
     *
     * @return string|null
     */
@@ -333,7 +333,7 @@ class EsLoadBalancerResource implements ModelInterface, ArrayAccess
     /**
     * Sets guaranteed
     *
-    * @param string|null $guaranteed 是否独享型LB。 - false：共享型。 - true：独享型。
+    * @param string|null $guaranteed Indicates whether the LB is an exclusive LB. - false：共享型。 - true：独享型。
     *
     * @return $this
     */

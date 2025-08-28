@@ -10,14 +10,8 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     /**
      * Possible values of this enum
      */
-    const ZH_CN = 'zh_CN';
-    const EN_US = 'en_US';
     const CN = 'CN';
     const EN = 'EN';
-    const ESP = 'ESP';
-    const POR = 'por';
-    const ARABIC = 'Arabic';
-    const THAI = 'Thai';
     
     /**
      * Gets allowable values of the enum
@@ -26,14 +20,8 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     public static function getAllowableEnumValues()
     {
         return [
-            self::ZH_CN,
-            self::EN_US,
             self::CN,
             self::EN,
-            self::ESP,
-            self::POR,
-            self::ARABIC,
-            self::THAI,
         ];
     }
 }

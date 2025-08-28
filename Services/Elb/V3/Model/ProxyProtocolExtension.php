@@ -20,8 +20,8 @@ class ProxyProtocolExtension implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vipAddress  ipv4 vip地址
-    * ipv6VipAddress  ipv6 vip地址
+    * vipAddress  **参数解释**：ipv4 vip地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * ipv6VipAddress  **参数解释**：ipv6 vip地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * extension  extension
     *
     * @var string[]
@@ -34,8 +34,8 @@ class ProxyProtocolExtension implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vipAddress  ipv4 vip地址
-    * ipv6VipAddress  ipv6 vip地址
+    * vipAddress  **参数解释**：ipv4 vip地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * ipv6VipAddress  **参数解释**：ipv6 vip地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * extension  extension
     *
     * @var string[]
@@ -69,8 +69,8 @@ class ProxyProtocolExtension implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vipAddress  ipv4 vip地址
-    * ipv6VipAddress  ipv6 vip地址
+    * vipAddress  **参数解释**：ipv4 vip地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * ipv6VipAddress  **参数解释**：ipv6 vip地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * extension  extension
     *
     * @var string[]
@@ -83,8 +83,8 @@ class ProxyProtocolExtension implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vipAddress  ipv4 vip地址
-    * ipv6VipAddress  ipv6 vip地址
+    * vipAddress  **参数解释**：ipv4 vip地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * ipv6VipAddress  **参数解释**：ipv6 vip地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * extension  extension
     *
     * @var string[]
@@ -97,8 +97,8 @@ class ProxyProtocolExtension implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vipAddress  ipv4 vip地址
-    * ipv6VipAddress  ipv6 vip地址
+    * vipAddress  **参数解释**：ipv4 vip地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * ipv6VipAddress  **参数解释**：ipv6 vip地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * extension  extension
     *
     * @var string[]
@@ -199,7 +199,7 @@ class ProxyProtocolExtension implements ModelInterface, ArrayAccess
 
     /**
     * Gets vipAddress
-    *  ipv4 vip地址
+    *  **参数解释**：ipv4 vip地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -211,7 +211,7 @@ class ProxyProtocolExtension implements ModelInterface, ArrayAccess
     /**
     * Sets vipAddress
     *
-    * @param string|null $vipAddress ipv4 vip地址
+    * @param string|null $vipAddress **参数解释**：ipv4 vip地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -223,7 +223,7 @@ class ProxyProtocolExtension implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6VipAddress
-    *  ipv6 vip地址
+    *  **参数解释**：ipv6 vip地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -235,7 +235,7 @@ class ProxyProtocolExtension implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6VipAddress
     *
-    * @param string|null $ipv6VipAddress ipv6 vip地址
+    * @param string|null $ipv6VipAddress **参数解释**：ipv6 vip地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class UpdatePoolSlowStartOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enable  慢启动的开关，默认值：false； true：开启； false：关闭
-    * duration  慢启动的持续时间，单位：s。默认：30； 取值范围：30~1200
+    * enable  **参数解释**：慢启动的开关。  **约束限制**：不涉及  **取值范围**：true 开启，false 关闭。  **默认取值**：不涉及
+    * duration  **参数解释**：慢启动的持续时间。  **约束限制**：不涉及  **取值范围**：30~1200，单位：秒。  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UpdatePoolSlowStartOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enable  慢启动的开关，默认值：false； true：开启； false：关闭
-    * duration  慢启动的持续时间，单位：s。默认：30； 取值范围：30~1200
+    * enable  **参数解释**：慢启动的开关。  **约束限制**：不涉及  **取值范围**：true 开启，false 关闭。  **默认取值**：不涉及
+    * duration  **参数解释**：慢启动的持续时间。  **约束限制**：不涉及  **取值范围**：30~1200，单位：秒。  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UpdatePoolSlowStartOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enable  慢启动的开关，默认值：false； true：开启； false：关闭
-    * duration  慢启动的持续时间，单位：s。默认：30； 取值范围：30~1200
+    * enable  **参数解释**：慢启动的开关。  **约束限制**：不涉及  **取值范围**：true 开启，false 关闭。  **默认取值**：不涉及
+    * duration  **参数解释**：慢启动的持续时间。  **约束限制**：不涉及  **取值范围**：30~1200，单位：秒。  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UpdatePoolSlowStartOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enable  慢启动的开关，默认值：false； true：开启； false：关闭
-    * duration  慢启动的持续时间，单位：s。默认：30； 取值范围：30~1200
+    * enable  **参数解释**：慢启动的开关。  **约束限制**：不涉及  **取值范围**：true 开启，false 关闭。  **默认取值**：不涉及
+    * duration  **参数解释**：慢启动的持续时间。  **约束限制**：不涉及  **取值范围**：30~1200，单位：秒。  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UpdatePoolSlowStartOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enable  慢启动的开关，默认值：false； true：开启； false：关闭
-    * duration  慢启动的持续时间，单位：s。默认：30； 取值范围：30~1200
+    * enable  **参数解释**：慢启动的开关。  **约束限制**：不涉及  **取值范围**：true 开启，false 关闭。  **默认取值**：不涉及
+    * duration  **参数解释**：慢启动的持续时间。  **约束限制**：不涉及  **取值范围**：30~1200，单位：秒。  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class UpdatePoolSlowStartOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets enable
-    *  慢启动的开关，默认值：false； true：开启； false：关闭
+    *  **参数解释**：慢启动的开关。  **约束限制**：不涉及  **取值范围**：true 开启，false 关闭。  **默认取值**：不涉及
     *
     * @return bool|null
     */
@@ -203,7 +203,7 @@ class UpdatePoolSlowStartOption implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param bool|null $enable 慢启动的开关，默认值：false； true：开启； false：关闭
+    * @param bool|null $enable **参数解释**：慢启动的开关。  **约束限制**：不涉及  **取值范围**：true 开启，false 关闭。  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class UpdatePoolSlowStartOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
-    *  慢启动的持续时间，单位：s。默认：30； 取值范围：30~1200
+    *  **参数解释**：慢启动的持续时间。  **约束限制**：不涉及  **取值范围**：30~1200，单位：秒。  **默认取值**：不涉及
     *
     * @return int|null
     */
@@ -227,7 +227,7 @@ class UpdatePoolSlowStartOption implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param int|null $duration 慢启动的持续时间，单位：s。默认：30； 取值范围：30~1200
+    * @param int|null $duration **参数解释**：慢启动的持续时间。  **约束限制**：不涉及  **取值范围**：30~1200，单位：秒。  **默认取值**：不涉及
     *
     * @return $this
     */

@@ -2818,6 +2818,71 @@ class LtsClient extends Client
     }
 
     /**
+     * 查询日志流索引
+     *
+     * 查询日志流索引。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listLogStreamIndex($request)
+    {
+        return $this->listLogStreamIndexWithHttpInfo($request);
+    }
+
+    public function listLogStreamIndexWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/groups/{group_id}/stream/{stream_id}/index/config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['streamId'] !== null) {
+            $pathParams['stream_id'] = $localVarParams['streamId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\ListLogStreamIndexResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\ListLogStreamIndexRequest');
+    }
+
+    /**
      * 查询日志流信息
      *
      * 该接口用于查询LTS日志流信息。

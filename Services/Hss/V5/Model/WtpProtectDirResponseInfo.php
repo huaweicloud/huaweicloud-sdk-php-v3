@@ -20,10 +20,10 @@ class WtpProtectDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * protectDirList  防护目录列表
+    * protectDirList  **参数解释**: 防护目录列表 **取值范围**: 最少0条，最多50条
     * exclueFileType  排除文件类型
-    * excludeFileType  排除文件类型
-    * protectMode  防护模式，包含如下4种   - recovery ：恢复模式   - alarm ：告警模式
+    * excludeFileType  **参数解释**: 排除文件类型 **取值范围**: 字符长度0-512位
+    * protectMode  **参数解释**: 防护模式 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class WtpProtectDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * protectDirList  防护目录列表
+    * protectDirList  **参数解释**: 防护目录列表 **取值范围**: 最少0条，最多50条
     * exclueFileType  排除文件类型
-    * excludeFileType  排除文件类型
-    * protectMode  防护模式，包含如下4种   - recovery ：恢复模式   - alarm ：告警模式
+    * excludeFileType  **参数解释**: 排除文件类型 **取值范围**: 字符长度0-512位
+    * protectMode  **参数解释**: 防护模式 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class WtpProtectDirResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * protectDirList  防护目录列表
+    * protectDirList  **参数解释**: 防护目录列表 **取值范围**: 最少0条，最多50条
     * exclueFileType  排除文件类型
-    * excludeFileType  排除文件类型
-    * protectMode  防护模式，包含如下4种   - recovery ：恢复模式   - alarm ：告警模式
+    * excludeFileType  **参数解释**: 排除文件类型 **取值范围**: 字符长度0-512位
+    * protectMode  **参数解释**: 防护模式 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class WtpProtectDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * protectDirList  防护目录列表
+    * protectDirList  **参数解释**: 防护目录列表 **取值范围**: 最少0条，最多50条
     * exclueFileType  排除文件类型
-    * excludeFileType  排除文件类型
-    * protectMode  防护模式，包含如下4种   - recovery ：恢复模式   - alarm ：告警模式
+    * excludeFileType  **参数解释**: 排除文件类型 **取值范围**: 字符长度0-512位
+    * protectMode  **参数解释**: 防护模式 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class WtpProtectDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * protectDirList  防护目录列表
+    * protectDirList  **参数解释**: 防护目录列表 **取值范围**: 最少0条，最多50条
     * exclueFileType  排除文件类型
-    * excludeFileType  排除文件类型
-    * protectMode  防护模式，包含如下4种   - recovery ：恢复模式   - alarm ：告警模式
+    * excludeFileType  **参数解释**: 排除文件类型 **取值范围**: 字符长度0-512位
+    * protectMode  **参数解释**: 防护模式 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式。
     *
     * @var string[]
     */
@@ -209,9 +209,6 @@ class WtpProtectDirResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['protectMode']) && (mb_strlen($this->container['protectMode']) < 0)) {
                 $invalidProperties[] = "invalid value for 'protectMode', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['protectMode']) && !preg_match("/^recovery|alarm$/", $this->container['protectMode'])) {
-                $invalidProperties[] = "invalid value for 'protectMode', must be conform to the pattern /^recovery|alarm$/.";
-            }
         return $invalidProperties;
     }
 
@@ -228,7 +225,7 @@ class WtpProtectDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectDirList
-    *  防护目录列表
+    *  **参数解释**: 防护目录列表 **取值范围**: 最少0条，最多50条
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\WtpProtectHostDirResponseInfo[]|null
     */
@@ -240,7 +237,7 @@ class WtpProtectDirResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectDirList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\WtpProtectHostDirResponseInfo[]|null $protectDirList 防护目录列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\WtpProtectHostDirResponseInfo[]|null $protectDirList **参数解释**: 防护目录列表 **取值范围**: 最少0条，最多50条
     *
     * @return $this
     */
@@ -276,7 +273,7 @@ class WtpProtectDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets excludeFileType
-    *  排除文件类型
+    *  **参数解释**: 排除文件类型 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -288,7 +285,7 @@ class WtpProtectDirResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets excludeFileType
     *
-    * @param string|null $excludeFileType 排除文件类型
+    * @param string|null $excludeFileType **参数解释**: 排除文件类型 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */
@@ -300,7 +297,7 @@ class WtpProtectDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectMode
-    *  防护模式，包含如下4种   - recovery ：恢复模式   - alarm ：告警模式
+    *  **参数解释**: 防护模式 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式。
     *
     * @return string|null
     */
@@ -312,7 +309,7 @@ class WtpProtectDirResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectMode
     *
-    * @param string|null $protectMode 防护模式，包含如下4种   - recovery ：恢复模式   - alarm ：告警模式
+    * @param string|null $protectMode **参数解释**: 防护模式 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式。
     *
     * @return $this
     */

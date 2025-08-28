@@ -36,6 +36,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * assetName  输出视频资产名称。
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     * jobId  任务ID。
+    * jobIds  批量查询的任务ID
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             'scriptId' => 'string',
             'assetName' => 'string',
             'jobType' => 'string',
-            'jobId' => 'string'
+            'jobId' => 'string',
+            'jobIds' => 'string[]'
     ];
 
     /**
@@ -76,6 +78,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * assetName  输出视频资产名称。
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     * jobId  任务ID。
+    * jobIds  批量查询的任务ID
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
         'scriptId' => null,
         'assetName' => null,
         'jobType' => null,
-        'jobId' => null
+        'jobId' => null,
+        'jobIds' => null
     ];
 
     /**
@@ -137,6 +141,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * assetName  输出视频资产名称。
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     * jobId  任务ID。
+    * jobIds  批量查询的任务ID
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             'scriptId' => 'script_id',
             'assetName' => 'asset_name',
             'jobType' => 'job_type',
-            'jobId' => 'job_id'
+            'jobId' => 'job_id',
+            'jobIds' => 'job_ids'
     ];
 
     /**
@@ -177,6 +183,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * assetName  输出视频资产名称。
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     * jobId  任务ID。
+    * jobIds  批量查询的任务ID
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             'scriptId' => 'setScriptId',
             'assetName' => 'setAssetName',
             'jobType' => 'setJobType',
-            'jobId' => 'setJobId'
+            'jobId' => 'setJobId',
+            'jobIds' => 'setJobIds'
     ];
 
     /**
@@ -217,6 +225,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * assetName  输出视频资产名称。
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     * jobId  任务ID。
+    * jobIds  批量查询的任务ID
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             'scriptId' => 'getScriptId',
             'assetName' => 'getAssetName',
             'jobType' => 'getJobType',
-            'jobId' => 'getJobId'
+            'jobId' => 'getJobId',
+            'jobIds' => 'getJobIds'
     ];
 
     /**
@@ -313,6 +323,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
         $this->container['assetName'] = isset($data['assetName']) ? $data['assetName'] : null;
         $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['jobIds'] = isset($data['jobIds']) ? $data['jobIds'] : null;
     }
 
     /**
@@ -808,6 +819,30 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     public function setJobId($jobId)
     {
         $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets jobIds
+    *  批量查询的任务ID
+    *
+    * @return string[]|null
+    */
+    public function getJobIds()
+    {
+        return $this->container['jobIds'];
+    }
+
+    /**
+    * Sets jobIds
+    *
+    * @param string[]|null $jobIds 批量查询的任务ID
+    *
+    * @return $this
+    */
+    public function setJobIds($jobIds)
+    {
+        $this->container['jobIds'] = $jobIds;
         return $this;
     }
 

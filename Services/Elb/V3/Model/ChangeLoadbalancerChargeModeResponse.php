@@ -21,10 +21,10 @@ class ChangeLoadbalancerChargeModeResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * eipIdList  转包周期下单成功的EIP ID列表
-    * loadbalancerIdList  转包周期下单成功的LB ID列表
-    * orderId  转包周期订单号
-    * requestId  请求的UUIID
+    * eipIdList  **参数解释**：转包周期下单成功的EIP ID列表。  **取值范围**：不涉及
+    * loadbalancerIdList  **参数解释**：转包周期下单成功的LB ID列表。  **取值范围**：不涉及
+    * orderId  **参数解释**：转包周期订单号。  **取值范围**：不涉及
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
@@ -37,10 +37,10 @@ class ChangeLoadbalancerChargeModeResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * eipIdList  转包周期下单成功的EIP ID列表
-    * loadbalancerIdList  转包周期下单成功的LB ID列表
-    * orderId  转包周期订单号
-    * requestId  请求的UUIID
+    * eipIdList  **参数解释**：转包周期下单成功的EIP ID列表。  **取值范围**：不涉及
+    * loadbalancerIdList  **参数解释**：转包周期下单成功的LB ID列表。  **取值范围**：不涉及
+    * orderId  **参数解释**：转包周期订单号。  **取值范围**：不涉及
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
@@ -74,10 +74,10 @@ class ChangeLoadbalancerChargeModeResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * eipIdList  转包周期下单成功的EIP ID列表
-    * loadbalancerIdList  转包周期下单成功的LB ID列表
-    * orderId  转包周期订单号
-    * requestId  请求的UUIID
+    * eipIdList  **参数解释**：转包周期下单成功的EIP ID列表。  **取值范围**：不涉及
+    * loadbalancerIdList  **参数解释**：转包周期下单成功的LB ID列表。  **取值范围**：不涉及
+    * orderId  **参数解释**：转包周期订单号。  **取值范围**：不涉及
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
@@ -90,10 +90,10 @@ class ChangeLoadbalancerChargeModeResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * eipIdList  转包周期下单成功的EIP ID列表
-    * loadbalancerIdList  转包周期下单成功的LB ID列表
-    * orderId  转包周期订单号
-    * requestId  请求的UUIID
+    * eipIdList  **参数解释**：转包周期下单成功的EIP ID列表。  **取值范围**：不涉及
+    * loadbalancerIdList  **参数解释**：转包周期下单成功的LB ID列表。  **取值范围**：不涉及
+    * orderId  **参数解释**：转包周期订单号。  **取值范围**：不涉及
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
@@ -106,10 +106,10 @@ class ChangeLoadbalancerChargeModeResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * eipIdList  转包周期下单成功的EIP ID列表
-    * loadbalancerIdList  转包周期下单成功的LB ID列表
-    * orderId  转包周期订单号
-    * requestId  请求的UUIID
+    * eipIdList  **参数解释**：转包周期下单成功的EIP ID列表。  **取值范围**：不涉及
+    * loadbalancerIdList  **参数解释**：转包周期下单成功的LB ID列表。  **取值范围**：不涉及
+    * orderId  **参数解释**：转包周期订单号。  **取值范围**：不涉及
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class ChangeLoadbalancerChargeModeResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets eipIdList
-    *  转包周期下单成功的EIP ID列表
+    *  **参数解释**：转包周期下单成功的EIP ID列表。  **取值范围**：不涉及
     *
     * @return string[]|null
     */
@@ -220,7 +220,7 @@ class ChangeLoadbalancerChargeModeResponse implements ModelInterface, ArrayAcces
     /**
     * Sets eipIdList
     *
-    * @param string[]|null $eipIdList 转包周期下单成功的EIP ID列表
+    * @param string[]|null $eipIdList **参数解释**：转包周期下单成功的EIP ID列表。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class ChangeLoadbalancerChargeModeResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets loadbalancerIdList
-    *  转包周期下单成功的LB ID列表
+    *  **参数解释**：转包周期下单成功的LB ID列表。  **取值范围**：不涉及
     *
     * @return string[]|null
     */
@@ -244,7 +244,7 @@ class ChangeLoadbalancerChargeModeResponse implements ModelInterface, ArrayAcces
     /**
     * Sets loadbalancerIdList
     *
-    * @param string[]|null $loadbalancerIdList 转包周期下单成功的LB ID列表
+    * @param string[]|null $loadbalancerIdList **参数解释**：转包周期下单成功的LB ID列表。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class ChangeLoadbalancerChargeModeResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets orderId
-    *  转包周期订单号
+    *  **参数解释**：转包周期订单号。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -268,7 +268,7 @@ class ChangeLoadbalancerChargeModeResponse implements ModelInterface, ArrayAcces
     /**
     * Sets orderId
     *
-    * @param string|null $orderId 转包周期订单号
+    * @param string|null $orderId **参数解释**：转包周期订单号。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ChangeLoadbalancerChargeModeResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets requestId
-    *  请求的UUIID
+    *  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return string|null
     */
@@ -292,7 +292,7 @@ class ChangeLoadbalancerChargeModeResponse implements ModelInterface, ArrayAcces
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求的UUIID
+    * @param string|null $requestId **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return $this
     */

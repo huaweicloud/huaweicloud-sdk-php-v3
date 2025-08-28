@@ -28,7 +28,7 @@ class BaseJob implements ModelInterface, ArrayAccess
     * errorCode  任务的错误码
     * errorMsg  任务的错误信息
     * projectId  项目ID
-    * resourceId  参数解释：资源ID。
+    * resourceId  **参数解释**：资源ID。
     *
     * @var string[]
     */
@@ -54,7 +54,7 @@ class BaseJob implements ModelInterface, ArrayAccess
     * errorCode  任务的错误码
     * errorMsg  任务的错误信息
     * projectId  项目ID
-    * resourceId  参数解释：资源ID。
+    * resourceId  **参数解释**：资源ID。
     *
     * @var string[]
     */
@@ -101,7 +101,7 @@ class BaseJob implements ModelInterface, ArrayAccess
     * errorCode  任务的错误码
     * errorMsg  任务的错误信息
     * projectId  项目ID
-    * resourceId  参数解释：资源ID。
+    * resourceId  **参数解释**：资源ID。
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class BaseJob implements ModelInterface, ArrayAccess
     * errorCode  任务的错误码
     * errorMsg  任务的错误信息
     * projectId  项目ID
-    * resourceId  参数解释：资源ID。
+    * resourceId  **参数解释**：资源ID。
     *
     * @var string[]
     */
@@ -153,7 +153,7 @@ class BaseJob implements ModelInterface, ArrayAccess
     * errorCode  任务的错误码
     * errorMsg  任务的错误信息
     * projectId  项目ID
-    * resourceId  参数解释：资源ID。
+    * resourceId  **参数解释**：资源ID。
     *
     * @var string[]
     */
@@ -489,7 +489,7 @@ class BaseJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  参数解释：资源ID。
+    *  **参数解释**：资源ID。
     *
     * @return string|null
     */
@@ -501,7 +501,7 @@ class BaseJob implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 参数解释：资源ID。
+    * @param string|null $resourceId **参数解释**：资源ID。
     *
     * @return $this
     */

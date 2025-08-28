@@ -21,7 +21,7 @@ class ShowPageNoticesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * pageLocation  访问页面位置，包含下面这些页面 - hostMgmt : 主机管理-云服务器 - hostProtectQuota : 主机管理-防护配额 - containerNodeList : 容器管理-容器节点管理 - containerProtectQuota : 容器管理-容器防护配额 - containerMirror : 容器管理-容器镜像 - container : 容器管理-容器 - clusterAgent : 容器管理-集群Agent管理 - vulView : 漏洞管理-漏洞视图 - vulHostView : 漏洞管理-主机视图 - ransomwareProtection : 勒索病毒防护 - policyMgmt : 策略管理 - antiVirus : 病毒查杀 - hostAlarm : 安全告警事件-主机安全告警 - containerAlarm : 安全告警事件-容器安全告警
+    * pageLocation  **参数解释** 访问页面位置 **取值范围** - hostMgmt：主机管理-云服务器 - hostProtectQuota：主机管理-防护配额 - containerNodeList：容器管理-容器节点管理 - containerProtectQuota：容器管理-容器防护配额 - containerMirror：容器管理-容器镜像 - container：容器管理-容器 - clusterAgent：容器管理-集群Agent管理 - vulView：漏洞管理-漏洞视图 - vulHostView：漏洞管理-主机视图 - ransomwareProtection：勒索病毒防护 - policyMgmt：策略管理 - antiVirus：病毒查杀 - hostAlarm：安全告警事件-主机安全告警 - containerAlarm：安全告警事件-容器安全告警
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ShowPageNoticesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * pageLocation  访问页面位置，包含下面这些页面 - hostMgmt : 主机管理-云服务器 - hostProtectQuota : 主机管理-防护配额 - containerNodeList : 容器管理-容器节点管理 - containerProtectQuota : 容器管理-容器防护配额 - containerMirror : 容器管理-容器镜像 - container : 容器管理-容器 - clusterAgent : 容器管理-集群Agent管理 - vulView : 漏洞管理-漏洞视图 - vulHostView : 漏洞管理-主机视图 - ransomwareProtection : 勒索病毒防护 - policyMgmt : 策略管理 - antiVirus : 病毒查杀 - hostAlarm : 安全告警事件-主机安全告警 - containerAlarm : 安全告警事件-容器安全告警
+    * pageLocation  **参数解释** 访问页面位置 **取值范围** - hostMgmt：主机管理-云服务器 - hostProtectQuota：主机管理-防护配额 - containerNodeList：容器管理-容器节点管理 - containerProtectQuota：容器管理-容器防护配额 - containerMirror：容器管理-容器镜像 - container：容器管理-容器 - clusterAgent：容器管理-集群Agent管理 - vulView：漏洞管理-漏洞视图 - vulHostView：漏洞管理-主机视图 - ransomwareProtection：勒索病毒防护 - policyMgmt：策略管理 - antiVirus：病毒查杀 - hostAlarm：安全告警事件-主机安全告警 - containerAlarm：安全告警事件-容器安全告警
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ShowPageNoticesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * pageLocation  访问页面位置，包含下面这些页面 - hostMgmt : 主机管理-云服务器 - hostProtectQuota : 主机管理-防护配额 - containerNodeList : 容器管理-容器节点管理 - containerProtectQuota : 容器管理-容器防护配额 - containerMirror : 容器管理-容器镜像 - container : 容器管理-容器 - clusterAgent : 容器管理-集群Agent管理 - vulView : 漏洞管理-漏洞视图 - vulHostView : 漏洞管理-主机视图 - ransomwareProtection : 勒索病毒防护 - policyMgmt : 策略管理 - antiVirus : 病毒查杀 - hostAlarm : 安全告警事件-主机安全告警 - containerAlarm : 安全告警事件-容器安全告警
+    * pageLocation  **参数解释** 访问页面位置 **取值范围** - hostMgmt：主机管理-云服务器 - hostProtectQuota：主机管理-防护配额 - containerNodeList：容器管理-容器节点管理 - containerProtectQuota：容器管理-容器防护配额 - containerMirror：容器管理-容器镜像 - container：容器管理-容器 - clusterAgent：容器管理-集群Agent管理 - vulView：漏洞管理-漏洞视图 - vulHostView：漏洞管理-主机视图 - ransomwareProtection：勒索病毒防护 - policyMgmt：策略管理 - antiVirus：病毒查杀 - hostAlarm：安全告警事件-主机安全告警 - containerAlarm：安全告警事件-容器安全告警
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ShowPageNoticesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * pageLocation  访问页面位置，包含下面这些页面 - hostMgmt : 主机管理-云服务器 - hostProtectQuota : 主机管理-防护配额 - containerNodeList : 容器管理-容器节点管理 - containerProtectQuota : 容器管理-容器防护配额 - containerMirror : 容器管理-容器镜像 - container : 容器管理-容器 - clusterAgent : 容器管理-集群Agent管理 - vulView : 漏洞管理-漏洞视图 - vulHostView : 漏洞管理-主机视图 - ransomwareProtection : 勒索病毒防护 - policyMgmt : 策略管理 - antiVirus : 病毒查杀 - hostAlarm : 安全告警事件-主机安全告警 - containerAlarm : 安全告警事件-容器安全告警
+    * pageLocation  **参数解释** 访问页面位置 **取值范围** - hostMgmt：主机管理-云服务器 - hostProtectQuota：主机管理-防护配额 - containerNodeList：容器管理-容器节点管理 - containerProtectQuota：容器管理-容器防护配额 - containerMirror：容器管理-容器镜像 - container：容器管理-容器 - clusterAgent：容器管理-集群Agent管理 - vulView：漏洞管理-漏洞视图 - vulHostView：漏洞管理-主机视图 - ransomwareProtection：勒索病毒防护 - policyMgmt：策略管理 - antiVirus：病毒查杀 - hostAlarm：安全告警事件-主机安全告警 - containerAlarm：安全告警事件-容器安全告警
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ShowPageNoticesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * pageLocation  访问页面位置，包含下面这些页面 - hostMgmt : 主机管理-云服务器 - hostProtectQuota : 主机管理-防护配额 - containerNodeList : 容器管理-容器节点管理 - containerProtectQuota : 容器管理-容器防护配额 - containerMirror : 容器管理-容器镜像 - container : 容器管理-容器 - clusterAgent : 容器管理-集群Agent管理 - vulView : 漏洞管理-漏洞视图 - vulHostView : 漏洞管理-主机视图 - ransomwareProtection : 勒索病毒防护 - policyMgmt : 策略管理 - antiVirus : 病毒查杀 - hostAlarm : 安全告警事件-主机安全告警 - containerAlarm : 安全告警事件-容器安全告警
+    * pageLocation  **参数解释** 访问页面位置 **取值范围** - hostMgmt：主机管理-云服务器 - hostProtectQuota：主机管理-防护配额 - containerNodeList：容器管理-容器节点管理 - containerProtectQuota：容器管理-容器防护配额 - containerMirror：容器管理-容器镜像 - container：容器管理-容器 - clusterAgent：容器管理-集群Agent管理 - vulView：漏洞管理-漏洞视图 - vulHostView：漏洞管理-主机视图 - ransomwareProtection：勒索病毒防护 - policyMgmt：策略管理 - antiVirus：病毒查杀 - hostAlarm：安全告警事件-主机安全告警 - containerAlarm：安全告警事件-容器安全告警
     *
     * @var string[]
     */
@@ -227,7 +227,7 @@ class ShowPageNoticesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets pageLocation
-    *  访问页面位置，包含下面这些页面 - hostMgmt : 主机管理-云服务器 - hostProtectQuota : 主机管理-防护配额 - containerNodeList : 容器管理-容器节点管理 - containerProtectQuota : 容器管理-容器防护配额 - containerMirror : 容器管理-容器镜像 - container : 容器管理-容器 - clusterAgent : 容器管理-集群Agent管理 - vulView : 漏洞管理-漏洞视图 - vulHostView : 漏洞管理-主机视图 - ransomwareProtection : 勒索病毒防护 - policyMgmt : 策略管理 - antiVirus : 病毒查杀 - hostAlarm : 安全告警事件-主机安全告警 - containerAlarm : 安全告警事件-容器安全告警
+    *  **参数解释** 访问页面位置 **取值范围** - hostMgmt：主机管理-云服务器 - hostProtectQuota：主机管理-防护配额 - containerNodeList：容器管理-容器节点管理 - containerProtectQuota：容器管理-容器防护配额 - containerMirror：容器管理-容器镜像 - container：容器管理-容器 - clusterAgent：容器管理-集群Agent管理 - vulView：漏洞管理-漏洞视图 - vulHostView：漏洞管理-主机视图 - ransomwareProtection：勒索病毒防护 - policyMgmt：策略管理 - antiVirus：病毒查杀 - hostAlarm：安全告警事件-主机安全告警 - containerAlarm：安全告警事件-容器安全告警
     *
     * @return string|null
     */
@@ -239,7 +239,7 @@ class ShowPageNoticesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets pageLocation
     *
-    * @param string|null $pageLocation 访问页面位置，包含下面这些页面 - hostMgmt : 主机管理-云服务器 - hostProtectQuota : 主机管理-防护配额 - containerNodeList : 容器管理-容器节点管理 - containerProtectQuota : 容器管理-容器防护配额 - containerMirror : 容器管理-容器镜像 - container : 容器管理-容器 - clusterAgent : 容器管理-集群Agent管理 - vulView : 漏洞管理-漏洞视图 - vulHostView : 漏洞管理-主机视图 - ransomwareProtection : 勒索病毒防护 - policyMgmt : 策略管理 - antiVirus : 病毒查杀 - hostAlarm : 安全告警事件-主机安全告警 - containerAlarm : 安全告警事件-容器安全告警
+    * @param string|null $pageLocation **参数解释** 访问页面位置 **取值范围** - hostMgmt：主机管理-云服务器 - hostProtectQuota：主机管理-防护配额 - containerNodeList：容器管理-容器节点管理 - containerProtectQuota：容器管理-容器防护配额 - containerMirror：容器管理-容器镜像 - container：容器管理-容器 - clusterAgent：容器管理-集群Agent管理 - vulView：漏洞管理-漏洞视图 - vulHostView：漏洞管理-主机视图 - ransomwareProtection：勒索病毒防护 - policyMgmt：策略管理 - antiVirus：病毒查杀 - hostAlarm：安全告警事件-主机安全告警 - containerAlarm：安全告警事件-容器安全告警
     *
     * @return $this
     */

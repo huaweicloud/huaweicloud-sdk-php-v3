@@ -25,7 +25,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     * serverCertId  服务器证书ID。
     * cacertName  ca证书名称。
     * cacertId  ca证书ID。
-    * elbEnable  elb开关信息。
+    * elbEnable  是否开启elb。 - true: 打开elb - false： 关闭elb
     * authenticationType  认证方式。
     * loadBalancer  loadBalancer
     * healthmonitors  healthmonitors
@@ -49,7 +49,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     * serverCertId  服务器证书ID。
     * cacertName  ca证书名称。
     * cacertId  ca证书ID。
-    * elbEnable  elb开关信息。
+    * elbEnable  是否开启elb。 - true: 打开elb - false： 关闭elb
     * authenticationType  认证方式。
     * loadBalancer  loadBalancer
     * healthmonitors  healthmonitors
@@ -94,7 +94,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     * serverCertId  服务器证书ID。
     * cacertName  ca证书名称。
     * cacertId  ca证书ID。
-    * elbEnable  elb开关信息。
+    * elbEnable  是否开启elb。 - true: 打开elb - false： 关闭elb
     * authenticationType  认证方式。
     * loadBalancer  loadBalancer
     * healthmonitors  healthmonitors
@@ -118,7 +118,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     * serverCertId  服务器证书ID。
     * cacertName  ca证书名称。
     * cacertId  ca证书ID。
-    * elbEnable  elb开关信息。
+    * elbEnable  是否开启elb。 - true: 打开elb - false： 关闭elb
     * authenticationType  认证方式。
     * loadBalancer  loadBalancer
     * healthmonitors  healthmonitors
@@ -142,7 +142,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     * serverCertId  服务器证书ID。
     * cacertName  ca证书名称。
     * cacertId  ca证书ID。
-    * elbEnable  elb开关信息。
+    * elbEnable  是否开启elb。 - true: 打开elb - false： 关闭elb
     * authenticationType  认证方式。
     * loadBalancer  loadBalancer
     * healthmonitors  healthmonitors
@@ -348,7 +348,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets elbEnable
-    *  elb开关信息。
+    *  是否开启elb。 - true: 打开elb - false： 关闭elb
     *
     * @return bool|null
     */
@@ -360,7 +360,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets elbEnable
     *
-    * @param bool|null $elbEnable elb开关信息。
+    * @param bool|null $elbEnable 是否开启elb。 - true: 打开elb - false： 关闭elb
     *
     * @return $this
     */

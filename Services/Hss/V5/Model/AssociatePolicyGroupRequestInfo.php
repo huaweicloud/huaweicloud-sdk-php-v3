@@ -21,9 +21,9 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * targetPolicyGroupId  **参数解释**: 部署的目标策略组ID **约束限制**: 需查询ListPolicyGroup接口，仅支持传其返回参数data_list中support_version等于hss.version.premium或hss.version.container.enterprise的group_id **取值范围**: 只能由英文字母、数字及“-”组成，字符长度36-64位 **默认取值**: 不涉及
-    * operateAll  **参数解释**: 是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，会自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list，如果为false的话，需要填写host_id_list **约束限制**: 不涉及 **取值范围**: - true: 自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list - false: 非全量部署，仅对指定的主机/pod实例/工作负载/集群部署策略， 需要填写host_id_list **默认取值**: 不涉及
-    * deployType  策略部署类型: - host: 主机 - pod: pod实例 - workload: 工作负载 - cluster: 集群
-    * hostIdList  **参数解释**: 需要部署策略组的主机/pod实例/负载/集群ID列表 **约束限制**: 不涉及 **取值范围**: 最少0条，最多10000条 **默认取值**: 不涉及
+    * operateAll  **参数解释**: 是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，会自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list，如果为false的话，需要填写host_id_list **约束限制**: 不涉及 **取值范围**: - true: 自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list。 - false: 非全量部署，仅对指定的主机/pod实例/工作负载/集群部署策略，需要填写host_id_list。  **默认取值**: 不涉及
+    * deployType  **参数解释**: 需要部署策略组的实例类型（预留字段） **约束限制**: 不涉及 **取值范围**: - host: 主机。 - pod: pod实例。 - workload: 工作负载。 - cluster: 集群。  **默认取值**: host
+    * hostIdList  **参数解释**: 需要部署策略组的已开启旗舰版或容器版防护的主机/pod实例/负载/集群ID列表 **约束限制**: 需查询ListHostStatus接口，仅支持传其返回参数data_list中version等于hss.version.premium或hss.version.container.enterprise的host_id **取值范围**: 最少0条，最多10000条 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -37,9 +37,9 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * targetPolicyGroupId  **参数解释**: 部署的目标策略组ID **约束限制**: 需查询ListPolicyGroup接口，仅支持传其返回参数data_list中support_version等于hss.version.premium或hss.version.container.enterprise的group_id **取值范围**: 只能由英文字母、数字及“-”组成，字符长度36-64位 **默认取值**: 不涉及
-    * operateAll  **参数解释**: 是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，会自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list，如果为false的话，需要填写host_id_list **约束限制**: 不涉及 **取值范围**: - true: 自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list - false: 非全量部署，仅对指定的主机/pod实例/工作负载/集群部署策略， 需要填写host_id_list **默认取值**: 不涉及
-    * deployType  策略部署类型: - host: 主机 - pod: pod实例 - workload: 工作负载 - cluster: 集群
-    * hostIdList  **参数解释**: 需要部署策略组的主机/pod实例/负载/集群ID列表 **约束限制**: 不涉及 **取值范围**: 最少0条，最多10000条 **默认取值**: 不涉及
+    * operateAll  **参数解释**: 是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，会自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list，如果为false的话，需要填写host_id_list **约束限制**: 不涉及 **取值范围**: - true: 自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list。 - false: 非全量部署，仅对指定的主机/pod实例/工作负载/集群部署策略，需要填写host_id_list。  **默认取值**: 不涉及
+    * deployType  **参数解释**: 需要部署策略组的实例类型（预留字段） **约束限制**: 不涉及 **取值范围**: - host: 主机。 - pod: pod实例。 - workload: 工作负载。 - cluster: 集群。  **默认取值**: host
+    * hostIdList  **参数解释**: 需要部署策略组的已开启旗舰版或容器版防护的主机/pod实例/负载/集群ID列表 **约束限制**: 需查询ListHostStatus接口，仅支持传其返回参数data_list中version等于hss.version.premium或hss.version.container.enterprise的host_id **取值范围**: 最少0条，最多10000条 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -74,9 +74,9 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * targetPolicyGroupId  **参数解释**: 部署的目标策略组ID **约束限制**: 需查询ListPolicyGroup接口，仅支持传其返回参数data_list中support_version等于hss.version.premium或hss.version.container.enterprise的group_id **取值范围**: 只能由英文字母、数字及“-”组成，字符长度36-64位 **默认取值**: 不涉及
-    * operateAll  **参数解释**: 是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，会自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list，如果为false的话，需要填写host_id_list **约束限制**: 不涉及 **取值范围**: - true: 自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list - false: 非全量部署，仅对指定的主机/pod实例/工作负载/集群部署策略， 需要填写host_id_list **默认取值**: 不涉及
-    * deployType  策略部署类型: - host: 主机 - pod: pod实例 - workload: 工作负载 - cluster: 集群
-    * hostIdList  **参数解释**: 需要部署策略组的主机/pod实例/负载/集群ID列表 **约束限制**: 不涉及 **取值范围**: 最少0条，最多10000条 **默认取值**: 不涉及
+    * operateAll  **参数解释**: 是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，会自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list，如果为false的话，需要填写host_id_list **约束限制**: 不涉及 **取值范围**: - true: 自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list。 - false: 非全量部署，仅对指定的主机/pod实例/工作负载/集群部署策略，需要填写host_id_list。  **默认取值**: 不涉及
+    * deployType  **参数解释**: 需要部署策略组的实例类型（预留字段） **约束限制**: 不涉及 **取值范围**: - host: 主机。 - pod: pod实例。 - workload: 工作负载。 - cluster: 集群。  **默认取值**: host
+    * hostIdList  **参数解释**: 需要部署策略组的已开启旗舰版或容器版防护的主机/pod实例/负载/集群ID列表 **约束限制**: 需查询ListHostStatus接口，仅支持传其返回参数data_list中version等于hss.version.premium或hss.version.container.enterprise的host_id **取值范围**: 最少0条，最多10000条 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -90,9 +90,9 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * targetPolicyGroupId  **参数解释**: 部署的目标策略组ID **约束限制**: 需查询ListPolicyGroup接口，仅支持传其返回参数data_list中support_version等于hss.version.premium或hss.version.container.enterprise的group_id **取值范围**: 只能由英文字母、数字及“-”组成，字符长度36-64位 **默认取值**: 不涉及
-    * operateAll  **参数解释**: 是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，会自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list，如果为false的话，需要填写host_id_list **约束限制**: 不涉及 **取值范围**: - true: 自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list - false: 非全量部署，仅对指定的主机/pod实例/工作负载/集群部署策略， 需要填写host_id_list **默认取值**: 不涉及
-    * deployType  策略部署类型: - host: 主机 - pod: pod实例 - workload: 工作负载 - cluster: 集群
-    * hostIdList  **参数解释**: 需要部署策略组的主机/pod实例/负载/集群ID列表 **约束限制**: 不涉及 **取值范围**: 最少0条，最多10000条 **默认取值**: 不涉及
+    * operateAll  **参数解释**: 是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，会自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list，如果为false的话，需要填写host_id_list **约束限制**: 不涉及 **取值范围**: - true: 自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list。 - false: 非全量部署，仅对指定的主机/pod实例/工作负载/集群部署策略，需要填写host_id_list。  **默认取值**: 不涉及
+    * deployType  **参数解释**: 需要部署策略组的实例类型（预留字段） **约束限制**: 不涉及 **取值范围**: - host: 主机。 - pod: pod实例。 - workload: 工作负载。 - cluster: 集群。  **默认取值**: host
+    * hostIdList  **参数解释**: 需要部署策略组的已开启旗舰版或容器版防护的主机/pod实例/负载/集群ID列表 **约束限制**: 需查询ListHostStatus接口，仅支持传其返回参数data_list中version等于hss.version.premium或hss.version.container.enterprise的host_id **取值范围**: 最少0条，最多10000条 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -106,9 +106,9 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * targetPolicyGroupId  **参数解释**: 部署的目标策略组ID **约束限制**: 需查询ListPolicyGroup接口，仅支持传其返回参数data_list中support_version等于hss.version.premium或hss.version.container.enterprise的group_id **取值范围**: 只能由英文字母、数字及“-”组成，字符长度36-64位 **默认取值**: 不涉及
-    * operateAll  **参数解释**: 是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，会自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list，如果为false的话，需要填写host_id_list **约束限制**: 不涉及 **取值范围**: - true: 自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list - false: 非全量部署，仅对指定的主机/pod实例/工作负载/集群部署策略， 需要填写host_id_list **默认取值**: 不涉及
-    * deployType  策略部署类型: - host: 主机 - pod: pod实例 - workload: 工作负载 - cluster: 集群
-    * hostIdList  **参数解释**: 需要部署策略组的主机/pod实例/负载/集群ID列表 **约束限制**: 不涉及 **取值范围**: 最少0条，最多10000条 **默认取值**: 不涉及
+    * operateAll  **参数解释**: 是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，会自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list，如果为false的话，需要填写host_id_list **约束限制**: 不涉及 **取值范围**: - true: 自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list。 - false: 非全量部署，仅对指定的主机/pod实例/工作负载/集群部署策略，需要填写host_id_list。  **默认取值**: 不涉及
+    * deployType  **参数解释**: 需要部署策略组的实例类型（预留字段） **约束限制**: 不涉及 **取值范围**: - host: 主机。 - pod: pod实例。 - workload: 工作负载。 - cluster: 集群。  **默认取值**: host
+    * hostIdList  **参数解释**: 需要部署策略组的已开启旗舰版或容器版防护的主机/pod实例/负载/集群ID列表 **约束限制**: 需查询ListHostStatus接口，仅支持传其返回参数data_list中version等于hss.version.premium或hss.version.container.enterprise的host_id **取值范围**: 最少0条，最多10000条 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -246,7 +246,7 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets operateAll
-    *  **参数解释**: 是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，会自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list，如果为false的话，需要填写host_id_list **约束限制**: 不涉及 **取值范围**: - true: 自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list - false: 非全量部署，仅对指定的主机/pod实例/工作负载/集群部署策略， 需要填写host_id_list **默认取值**: 不涉及
+    *  **参数解释**: 是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，会自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list，如果为false的话，需要填写host_id_list **约束限制**: 不涉及 **取值范围**: - true: 自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list。 - false: 非全量部署，仅对指定的主机/pod实例/工作负载/集群部署策略，需要填写host_id_list。  **默认取值**: 不涉及
     *
     * @return bool|null
     */
@@ -258,7 +258,7 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets operateAll
     *
-    * @param bool|null $operateAll **参数解释**: 是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，会自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list，如果为false的话，需要填写host_id_list **约束限制**: 不涉及 **取值范围**: - true: 自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list - false: 非全量部署，仅对指定的主机/pod实例/工作负载/集群部署策略， 需要填写host_id_list **默认取值**: 不涉及
+    * @param bool|null $operateAll **参数解释**: 是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，会自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list，如果为false的话，需要填写host_id_list **约束限制**: 不涉及 **取值范围**: - true: 自动筛选符合策略组支持版本和操作系统版本的全量主机/pod实例/工作负载/集群部署策略，不需填写host_id_list。 - false: 非全量部署，仅对指定的主机/pod实例/工作负载/集群部署策略，需要填写host_id_list。  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -270,7 +270,7 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets deployType
-    *  策略部署类型: - host: 主机 - pod: pod实例 - workload: 工作负载 - cluster: 集群
+    *  **参数解释**: 需要部署策略组的实例类型（预留字段） **约束限制**: 不涉及 **取值范围**: - host: 主机。 - pod: pod实例。 - workload: 工作负载。 - cluster: 集群。  **默认取值**: host
     *
     * @return string|null
     */
@@ -282,7 +282,7 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets deployType
     *
-    * @param string|null $deployType 策略部署类型: - host: 主机 - pod: pod实例 - workload: 工作负载 - cluster: 集群
+    * @param string|null $deployType **参数解释**: 需要部署策略组的实例类型（预留字段） **约束限制**: 不涉及 **取值范围**: - host: 主机。 - pod: pod实例。 - workload: 工作负载。 - cluster: 集群。  **默认取值**: host
     *
     * @return $this
     */
@@ -294,7 +294,7 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIdList
-    *  **参数解释**: 需要部署策略组的主机/pod实例/负载/集群ID列表 **约束限制**: 不涉及 **取值范围**: 最少0条，最多10000条 **默认取值**: 不涉及
+    *  **参数解释**: 需要部署策略组的已开启旗舰版或容器版防护的主机/pod实例/负载/集群ID列表 **约束限制**: 需查询ListHostStatus接口，仅支持传其返回参数data_list中version等于hss.version.premium或hss.version.container.enterprise的host_id **取值范围**: 最少0条，最多10000条 **默认取值**: 不涉及
     *
     * @return string[]|null
     */
@@ -306,7 +306,7 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[]|null $hostIdList **参数解释**: 需要部署策略组的主机/pod实例/负载/集群ID列表 **约束限制**: 不涉及 **取值范围**: 最少0条，最多10000条 **默认取值**: 不涉及
+    * @param string[]|null $hostIdList **参数解释**: 需要部署策略组的已开启旗舰版或容器版防护的主机/pod实例/负载/集群ID列表 **约束限制**: 需查询ListHostStatus接口，仅支持传其返回参数data_list中version等于hss.version.premium或hss.version.container.enterprise的host_id **取值范围**: 最少0条，最多10000条 **默认取值**: 不涉及
     *
     * @return $this
     */

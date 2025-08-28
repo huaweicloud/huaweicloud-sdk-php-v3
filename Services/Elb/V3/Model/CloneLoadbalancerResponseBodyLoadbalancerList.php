@@ -20,7 +20,7 @@ class CloneLoadbalancerResponseBodyLoadbalancerList implements ModelInterface, A
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  新实例id
+    * id  **参数解释**：新实例的ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class CloneLoadbalancerResponseBodyLoadbalancerList implements ModelInterface, A
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  新实例id
+    * id  **参数解释**：新实例的ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class CloneLoadbalancerResponseBodyLoadbalancerList implements ModelInterface, A
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  新实例id
+    * id  **参数解释**：新实例的ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CloneLoadbalancerResponseBodyLoadbalancerList implements ModelInterface, A
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  新实例id
+    * id  **参数解释**：新实例的ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CloneLoadbalancerResponseBodyLoadbalancerList implements ModelInterface, A
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  新实例id
+    * id  **参数解释**：新实例的ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class CloneLoadbalancerResponseBodyLoadbalancerList implements ModelInterface, A
 
     /**
     * Gets id
-    *  新实例id
+    *  **参数解释**：新实例的ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class CloneLoadbalancerResponseBodyLoadbalancerList implements ModelInterface, A
     /**
     * Sets id
     *
-    * @param string|null $id 新实例id
+    * @param string|null $id **参数解释**：新实例的ID。  **取值范围**：不涉及
     *
     * @return $this
     */

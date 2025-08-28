@@ -20,17 +20,17 @@ class FeatureConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  参数解释：配置的ID。
-    * createdAt  参数解释：创建时间。
-    * updatedAt  参数解释：更新时间。
-    * service  参数解释：所属服务，固定ELB。
-    * tenantId  参数解释：租户ID，含义同project_id。
-    * feature  参数解释：特性名称。
-    * switch  参数解释：特性配置启用开关，表示当前配置是否生效。  取值范围： - true：特性配置已生效。 - false: 特性配置未生效。
-    * type  参数解释：特性配置值(value字段)的类型，如：INT，表示整型。
-    * value  参数解释：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。
-    * description  参数解释：特性配置描述。
-    * caller  参数解释：配置创建者。
+    * id  **参数解释**：配置的ID。  **取值范围**：不涉及
+    * createdAt  **参数解释**：创建时间。  **取值范围**：不涉及
+    * updatedAt  **参数解释**：更新时间。  **取值范围**：不涉及
+    * service  **参数解释**：所属服务，固定ELB。  **取值范围**：不涉及
+    * tenantId  **参数解释**：租户ID，含义同project_id。  **取值范围**：不涉及
+    * feature  **参数解释**：特性名称。  **取值范围**：不涉及
+    * switch  **参数解释**：特性配置启用开关，表示当前配置是否生效。  **取值范围**： - true：特性配置已生效。 - false: 特性配置未生效。
+    * type  **参数解释**：特性配置值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
+    * value  **参数解释**：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。  **取值范围**：不涉及
+    * description  **参数解释**：特性配置描述。  **取值范围**：不涉及
+    * caller  **参数解释**：配置创建者。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class FeatureConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  参数解释：配置的ID。
-    * createdAt  参数解释：创建时间。
-    * updatedAt  参数解释：更新时间。
-    * service  参数解释：所属服务，固定ELB。
-    * tenantId  参数解释：租户ID，含义同project_id。
-    * feature  参数解释：特性名称。
-    * switch  参数解释：特性配置启用开关，表示当前配置是否生效。  取值范围： - true：特性配置已生效。 - false: 特性配置未生效。
-    * type  参数解释：特性配置值(value字段)的类型，如：INT，表示整型。
-    * value  参数解释：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。
-    * description  参数解释：特性配置描述。
-    * caller  参数解释：配置创建者。
+    * id  **参数解释**：配置的ID。  **取值范围**：不涉及
+    * createdAt  **参数解释**：创建时间。  **取值范围**：不涉及
+    * updatedAt  **参数解释**：更新时间。  **取值范围**：不涉及
+    * service  **参数解释**：所属服务，固定ELB。  **取值范围**：不涉及
+    * tenantId  **参数解释**：租户ID，含义同project_id。  **取值范围**：不涉及
+    * feature  **参数解释**：特性名称。  **取值范围**：不涉及
+    * switch  **参数解释**：特性配置启用开关，表示当前配置是否生效。  **取值范围**： - true：特性配置已生效。 - false: 特性配置未生效。
+    * type  **参数解释**：特性配置值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
+    * value  **参数解释**：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。  **取值范围**：不涉及
+    * description  **参数解释**：特性配置描述。  **取值范围**：不涉及
+    * caller  **参数解释**：配置创建者。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  参数解释：配置的ID。
-    * createdAt  参数解释：创建时间。
-    * updatedAt  参数解释：更新时间。
-    * service  参数解释：所属服务，固定ELB。
-    * tenantId  参数解释：租户ID，含义同project_id。
-    * feature  参数解释：特性名称。
-    * switch  参数解释：特性配置启用开关，表示当前配置是否生效。  取值范围： - true：特性配置已生效。 - false: 特性配置未生效。
-    * type  参数解释：特性配置值(value字段)的类型，如：INT，表示整型。
-    * value  参数解释：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。
-    * description  参数解释：特性配置描述。
-    * caller  参数解释：配置创建者。
+    * id  **参数解释**：配置的ID。  **取值范围**：不涉及
+    * createdAt  **参数解释**：创建时间。  **取值范围**：不涉及
+    * updatedAt  **参数解释**：更新时间。  **取值范围**：不涉及
+    * service  **参数解释**：所属服务，固定ELB。  **取值范围**：不涉及
+    * tenantId  **参数解释**：租户ID，含义同project_id。  **取值范围**：不涉及
+    * feature  **参数解释**：特性名称。  **取值范围**：不涉及
+    * switch  **参数解释**：特性配置启用开关，表示当前配置是否生效。  **取值范围**： - true：特性配置已生效。 - false: 特性配置未生效。
+    * type  **参数解释**：特性配置值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
+    * value  **参数解释**：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。  **取值范围**：不涉及
+    * description  **参数解释**：特性配置描述。  **取值范围**：不涉及
+    * caller  **参数解释**：配置创建者。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class FeatureConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  参数解释：配置的ID。
-    * createdAt  参数解释：创建时间。
-    * updatedAt  参数解释：更新时间。
-    * service  参数解释：所属服务，固定ELB。
-    * tenantId  参数解释：租户ID，含义同project_id。
-    * feature  参数解释：特性名称。
-    * switch  参数解释：特性配置启用开关，表示当前配置是否生效。  取值范围： - true：特性配置已生效。 - false: 特性配置未生效。
-    * type  参数解释：特性配置值(value字段)的类型，如：INT，表示整型。
-    * value  参数解释：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。
-    * description  参数解释：特性配置描述。
-    * caller  参数解释：配置创建者。
+    * id  **参数解释**：配置的ID。  **取值范围**：不涉及
+    * createdAt  **参数解释**：创建时间。  **取值范围**：不涉及
+    * updatedAt  **参数解释**：更新时间。  **取值范围**：不涉及
+    * service  **参数解释**：所属服务，固定ELB。  **取值范围**：不涉及
+    * tenantId  **参数解释**：租户ID，含义同project_id。  **取值范围**：不涉及
+    * feature  **参数解释**：特性名称。  **取值范围**：不涉及
+    * switch  **参数解释**：特性配置启用开关，表示当前配置是否生效。  **取值范围**： - true：特性配置已生效。 - false: 特性配置未生效。
+    * type  **参数解释**：特性配置值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
+    * value  **参数解释**：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。  **取值范围**：不涉及
+    * description  **参数解释**：特性配置描述。  **取值范围**：不涉及
+    * caller  **参数解释**：配置创建者。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class FeatureConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  参数解释：配置的ID。
-    * createdAt  参数解释：创建时间。
-    * updatedAt  参数解释：更新时间。
-    * service  参数解释：所属服务，固定ELB。
-    * tenantId  参数解释：租户ID，含义同project_id。
-    * feature  参数解释：特性名称。
-    * switch  参数解释：特性配置启用开关，表示当前配置是否生效。  取值范围： - true：特性配置已生效。 - false: 特性配置未生效。
-    * type  参数解释：特性配置值(value字段)的类型，如：INT，表示整型。
-    * value  参数解释：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。
-    * description  参数解释：特性配置描述。
-    * caller  参数解释：配置创建者。
+    * id  **参数解释**：配置的ID。  **取值范围**：不涉及
+    * createdAt  **参数解释**：创建时间。  **取值范围**：不涉及
+    * updatedAt  **参数解释**：更新时间。  **取值范围**：不涉及
+    * service  **参数解释**：所属服务，固定ELB。  **取值范围**：不涉及
+    * tenantId  **参数解释**：租户ID，含义同project_id。  **取值范围**：不涉及
+    * feature  **参数解释**：特性名称。  **取值范围**：不涉及
+    * switch  **参数解释**：特性配置启用开关，表示当前配置是否生效。  **取值范围**： - true：特性配置已生效。 - false: 特性配置未生效。
+    * type  **参数解释**：特性配置值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
+    * value  **参数解释**：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。  **取值范围**：不涉及
+    * description  **参数解释**：特性配置描述。  **取值范围**：不涉及
+    * caller  **参数解释**：配置创建者。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -317,7 +317,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  参数解释：配置的ID。
+    *  **参数解释**：配置的ID。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -329,7 +329,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 参数解释：配置的ID。
+    * @param string $id **参数解释**：配置的ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -341,7 +341,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  参数解释：创建时间。
+    *  **参数解释**：创建时间。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -353,7 +353,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string $createdAt 参数解释：创建时间。
+    * @param string $createdAt **参数解释**：创建时间。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -365,7 +365,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  参数解释：更新时间。
+    *  **参数解释**：更新时间。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -377,7 +377,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string $updatedAt 参数解释：更新时间。
+    * @param string $updatedAt **参数解释**：更新时间。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -389,7 +389,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets service
-    *  参数解释：所属服务，固定ELB。
+    *  **参数解释**：所属服务，固定ELB。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -401,7 +401,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     /**
     * Sets service
     *
-    * @param string $service 参数解释：所属服务，固定ELB。
+    * @param string $service **参数解释**：所属服务，固定ELB。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -413,7 +413,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
-    *  参数解释：租户ID，含义同project_id。
+    *  **参数解释**：租户ID，含义同project_id。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -425,7 +425,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string $tenantId 参数解释：租户ID，含义同project_id。
+    * @param string $tenantId **参数解释**：租户ID，含义同project_id。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -437,7 +437,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets feature
-    *  参数解释：特性名称。
+    *  **参数解释**：特性名称。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -449,7 +449,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     /**
     * Sets feature
     *
-    * @param string $feature 参数解释：特性名称。
+    * @param string $feature **参数解释**：特性名称。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -461,7 +461,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets switch
-    *  参数解释：特性配置启用开关，表示当前配置是否生效。  取值范围： - true：特性配置已生效。 - false: 特性配置未生效。
+    *  **参数解释**：特性配置启用开关，表示当前配置是否生效。  **取值范围**： - true：特性配置已生效。 - false: 特性配置未生效。
     *
     * @return bool
     */
@@ -473,7 +473,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     /**
     * Sets switch
     *
-    * @param bool $switch 参数解释：特性配置启用开关，表示当前配置是否生效。  取值范围： - true：特性配置已生效。 - false: 特性配置未生效。
+    * @param bool $switch **参数解释**：特性配置启用开关，表示当前配置是否生效。  **取值范围**： - true：特性配置已生效。 - false: 特性配置未生效。
     *
     * @return $this
     */
@@ -485,7 +485,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  参数解释：特性配置值(value字段)的类型，如：INT，表示整型。
+    *  **参数解释**：特性配置值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -497,7 +497,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 参数解释：特性配置值(value字段)的类型，如：INT，表示整型。
+    * @param string $type **参数解释**：特性配置值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -509,7 +509,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  参数解释：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。
+    *  **参数解释**：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -521,7 +521,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 参数解释：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。
+    * @param string $value **参数解释**：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -533,7 +533,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  参数解释：特性配置描述。
+    *  **参数解释**：特性配置描述。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -545,7 +545,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 参数解释：特性配置描述。
+    * @param string $description **参数解释**：特性配置描述。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -557,7 +557,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets caller
-    *  参数解释：配置创建者。
+    *  **参数解释**：配置创建者。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -569,7 +569,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     /**
     * Sets caller
     *
-    * @param string $caller 参数解释：配置创建者。
+    * @param string $caller **参数解释**：配置创建者。  **取值范围**：不涉及
     *
     * @return $this
     */

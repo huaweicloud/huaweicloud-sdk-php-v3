@@ -20,13 +20,13 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * protectDir  防护目录
-    * excludeChildDir  排除子目录
-    * excludeFilePath  排除文件路径
+    * protectDir  **参数解释**: 防护目录 **取值范围**: 字符长度0-512位
+    * excludeChildDir  **参数解释**: 排除子目录 **取值范围**: 字符长度0-512位
+    * excludeFilePath  **参数解释**: 排除文件路径 **取值范围**: 字符长度0-512位
     * exclueFilePath  排除文件路径
-    * localBackupDir  本地备份路径
-    * protectStatus  防护状态（closed-未开启，opened-防护中，opening-开启中，closing-关闭中，open_failed-防护失败）
-    * error  失败原因
+    * localBackupDir  **参数解释**: 本地备份路径 **取值范围**: 字符长度0-512位
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: - closed ：未开启。 - opened ：防护中。 - opening ：开启中。 - closing ：关闭中。 - open_failed ：防护失败。
+    * error  **参数解释**: 失败原因，当防护状态为open_failed时存在失败原因 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * protectDir  防护目录
-    * excludeChildDir  排除子目录
-    * excludeFilePath  排除文件路径
+    * protectDir  **参数解释**: 防护目录 **取值范围**: 字符长度0-512位
+    * excludeChildDir  **参数解释**: 排除子目录 **取值范围**: 字符长度0-512位
+    * excludeFilePath  **参数解释**: 排除文件路径 **取值范围**: 字符长度0-512位
     * exclueFilePath  排除文件路径
-    * localBackupDir  本地备份路径
-    * protectStatus  防护状态（closed-未开启，opened-防护中，opening-开启中，closing-关闭中，open_failed-防护失败）
-    * error  失败原因
+    * localBackupDir  **参数解释**: 本地备份路径 **取值范围**: 字符长度0-512位
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: - closed ：未开启。 - opened ：防护中。 - opening ：开启中。 - closing ：关闭中。 - open_failed ：防护失败。
+    * error  **参数解释**: 失败原因，当防护状态为open_failed时存在失败原因 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * protectDir  防护目录
-    * excludeChildDir  排除子目录
-    * excludeFilePath  排除文件路径
+    * protectDir  **参数解释**: 防护目录 **取值范围**: 字符长度0-512位
+    * excludeChildDir  **参数解释**: 排除子目录 **取值范围**: 字符长度0-512位
+    * excludeFilePath  **参数解释**: 排除文件路径 **取值范围**: 字符长度0-512位
     * exclueFilePath  排除文件路径
-    * localBackupDir  本地备份路径
-    * protectStatus  防护状态（closed-未开启，opened-防护中，opening-开启中，closing-关闭中，open_failed-防护失败）
-    * error  失败原因
+    * localBackupDir  **参数解释**: 本地备份路径 **取值范围**: 字符长度0-512位
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: - closed ：未开启。 - opened ：防护中。 - opening ：开启中。 - closing ：关闭中。 - open_failed ：防护失败。
+    * error  **参数解释**: 失败原因，当防护状态为open_failed时存在失败原因 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * protectDir  防护目录
-    * excludeChildDir  排除子目录
-    * excludeFilePath  排除文件路径
+    * protectDir  **参数解释**: 防护目录 **取值范围**: 字符长度0-512位
+    * excludeChildDir  **参数解释**: 排除子目录 **取值范围**: 字符长度0-512位
+    * excludeFilePath  **参数解释**: 排除文件路径 **取值范围**: 字符长度0-512位
     * exclueFilePath  排除文件路径
-    * localBackupDir  本地备份路径
-    * protectStatus  防护状态（closed-未开启，opened-防护中，opening-开启中，closing-关闭中，open_failed-防护失败）
-    * error  失败原因
+    * localBackupDir  **参数解释**: 本地备份路径 **取值范围**: 字符长度0-512位
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: - closed ：未开启。 - opened ：防护中。 - opening ：开启中。 - closing ：关闭中。 - open_failed ：防护失败。
+    * error  **参数解释**: 失败原因，当防护状态为open_failed时存在失败原因 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * protectDir  防护目录
-    * excludeChildDir  排除子目录
-    * excludeFilePath  排除文件路径
+    * protectDir  **参数解释**: 防护目录 **取值范围**: 字符长度0-512位
+    * excludeChildDir  **参数解释**: 排除子目录 **取值范围**: 字符长度0-512位
+    * excludeFilePath  **参数解释**: 排除文件路径 **取值范围**: 字符长度0-512位
     * exclueFilePath  排除文件路径
-    * localBackupDir  本地备份路径
-    * protectStatus  防护状态（closed-未开启，opened-防护中，opening-开启中，closing-关闭中，open_failed-防护失败）
-    * error  失败原因
+    * localBackupDir  **参数解释**: 本地备份路径 **取值范围**: 字符长度0-512位
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: - closed ：未开启。 - opened ：防护中。 - opening ：开启中。 - closing ：关闭中。 - open_failed ：防护失败。
+    * error  **参数解释**: 失败原因，当防护状态为open_failed时存在失败原因 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -189,28 +189,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const PROTECT_STATUS_CLOSED = 'closed';
-    const PROTECT_STATUS_OPENED = 'opened';
-    const PROTECT_STATUS_OPENING = 'opening';
-    const PROTECT_STATUS_CLOSING = 'closing';
-    const PROTECT_STATUS_OPEN_FAILED = 'open_failed';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getProtectStatusAllowableValues()
-    {
-        return [
-            self::PROTECT_STATUS_CLOSED,
-            self::PROTECT_STATUS_OPENED,
-            self::PROTECT_STATUS_OPENING,
-            self::PROTECT_STATUS_CLOSING,
-            self::PROTECT_STATUS_OPEN_FAILED,
-        ];
-    }
 
 
     /**
@@ -275,14 +254,6 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['localBackupDir']) && (mb_strlen($this->container['localBackupDir']) < 0)) {
                 $invalidProperties[] = "invalid value for 'localBackupDir', the character length must be bigger than or equal to 0.";
             }
-            $allowedValues = $this->getProtectStatusAllowableValues();
-                if (!is_null($this->container['protectStatus']) && !in_array($this->container['protectStatus'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'protectStatus', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             if (!is_null($this->container['protectStatus']) && (mb_strlen($this->container['protectStatus']) > 128)) {
                 $invalidProperties[] = "invalid value for 'protectStatus', the character length must be smaller than or equal to 128.";
             }
@@ -311,7 +282,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectDir
-    *  防护目录
+    *  **参数解释**: 防护目录 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -323,7 +294,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectDir
     *
-    * @param string|null $protectDir 防护目录
+    * @param string|null $protectDir **参数解释**: 防护目录 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */
@@ -335,7 +306,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets excludeChildDir
-    *  排除子目录
+    *  **参数解释**: 排除子目录 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -347,7 +318,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets excludeChildDir
     *
-    * @param string|null $excludeChildDir 排除子目录
+    * @param string|null $excludeChildDir **参数解释**: 排除子目录 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */
@@ -359,7 +330,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets excludeFilePath
-    *  排除文件路径
+    *  **参数解释**: 排除文件路径 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -371,7 +342,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets excludeFilePath
     *
-    * @param string|null $excludeFilePath 排除文件路径
+    * @param string|null $excludeFilePath **参数解释**: 排除文件路径 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */
@@ -407,7 +378,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets localBackupDir
-    *  本地备份路径
+    *  **参数解释**: 本地备份路径 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -419,7 +390,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets localBackupDir
     *
-    * @param string|null $localBackupDir 本地备份路径
+    * @param string|null $localBackupDir **参数解释**: 本地备份路径 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */
@@ -431,7 +402,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  防护状态（closed-未开启，opened-防护中，opening-开启中，closing-关闭中，open_failed-防护失败）
+    *  **参数解释**: 防护状态 **取值范围**: - closed ：未开启。 - opened ：防护中。 - opening ：开启中。 - closing ：关闭中。 - open_failed ：防护失败。
     *
     * @return string|null
     */
@@ -443,7 +414,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus 防护状态（closed-未开启，opened-防护中，opening-开启中，closing-关闭中，open_failed-防护失败）
+    * @param string|null $protectStatus **参数解释**: 防护状态 **取值范围**: - closed ：未开启。 - opened ：防护中。 - opening ：开启中。 - closing ：关闭中。 - open_failed ：防护失败。
     *
     * @return $this
     */
@@ -455,7 +426,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets error
-    *  失败原因
+    *  **参数解释**: 失败原因，当防护状态为open_failed时存在失败原因 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -467,7 +438,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets error
     *
-    * @param string|null $error 失败原因
+    * @param string|null $error **参数解释**: 失败原因，当防护状态为open_failed时存在失败原因 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */

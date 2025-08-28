@@ -22,24 +22,32 @@ class UpdateInstanceRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  指定替换集群ID。
     * instanceId  指定替换节点ID。
+    * migrateData  是否迁移数据。
+    * agency  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
-            'instanceId' => 'string'
+            'instanceId' => 'string',
+            'migrateData' => 'string',
+            'agency' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  指定替换集群ID。
     * instanceId  指定替换节点ID。
+    * migrateData  是否迁移数据。
+    * agency  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'clusterId' => null,
-        'instanceId' => null
+        'instanceId' => null,
+        'migrateData' => null,
+        'agency' => null
     ];
 
     /**
@@ -67,36 +75,48 @@ class UpdateInstanceRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clusterId  指定替换集群ID。
     * instanceId  指定替换节点ID。
+    * migrateData  是否迁移数据。
+    * agency  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
-            'instanceId' => 'instance_id'
+            'instanceId' => 'instance_id',
+            'migrateData' => 'migrateData',
+            'agency' => 'agency'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  指定替换集群ID。
     * instanceId  指定替换节点ID。
+    * migrateData  是否迁移数据。
+    * agency  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
     *
     * @var string[]
     */
     protected static $setters = [
             'clusterId' => 'setClusterId',
-            'instanceId' => 'setInstanceId'
+            'instanceId' => 'setInstanceId',
+            'migrateData' => 'setMigrateData',
+            'agency' => 'setAgency'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  指定替换集群ID。
     * instanceId  指定替换节点ID。
+    * migrateData  是否迁移数据。
+    * agency  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
     *
     * @var string[]
     */
     protected static $getters = [
             'clusterId' => 'getClusterId',
-            'instanceId' => 'getInstanceId'
+            'instanceId' => 'getInstanceId',
+            'migrateData' => 'getMigrateData',
+            'agency' => 'getAgency'
     ];
 
     /**
@@ -159,6 +179,8 @@ class UpdateInstanceRequest implements ModelInterface, ArrayAccess
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['migrateData'] = isset($data['migrateData']) ? $data['migrateData'] : null;
+        $this->container['agency'] = isset($data['agency']) ? $data['agency'] : null;
     }
 
     /**
@@ -234,6 +256,54 @@ class UpdateInstanceRequest implements ModelInterface, ArrayAccess
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets migrateData
+    *  是否迁移数据。
+    *
+    * @return string|null
+    */
+    public function getMigrateData()
+    {
+        return $this->container['migrateData'];
+    }
+
+    /**
+    * Sets migrateData
+    *
+    * @param string|null $migrateData 是否迁移数据。
+    *
+    * @return $this
+    */
+    public function setMigrateData($migrateData)
+    {
+        $this->container['migrateData'] = $migrateData;
+        return $this;
+    }
+
+    /**
+    * Gets agency
+    *  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
+    *
+    * @return string|null
+    */
+    public function getAgency()
+    {
+        return $this->container['agency'];
+    }
+
+    /**
+    * Sets agency
+    *
+    * @param string|null $agency 委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
+    *
+    * @return $this
+    */
+    public function setAgency($agency)
+    {
+        $this->container['agency'] = $agency;
         return $this;
     }
 

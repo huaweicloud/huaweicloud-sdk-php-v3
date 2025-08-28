@@ -20,23 +20,23 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * description  参数解释：IP地址组的描述信息
-    * name  参数解释：IP地址组的名称
-    * ipList  参数解释：IP地址组中包含的IP列表。
+    * description  **参数解释**：IP地址组的描述信息。  **约束限制**：不涉及  **取值范围**：长度为0-255个字符。  **默认取值**：不涉及
+    * name  **参数解释**：IP地址组的名称  **约束限制**：不涉及  **取值范围**：长度为0-255个字符。  **默认取值**：不涉及
+    * ipList  **参数解释**：IP地址组的IP列表。 注意：只支持全量更新，即IP地址组中的ip_list将被全量覆盖，不在请求参数中的IP地址将被移除。  **约束限制**：不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'description' => 'string',
             'name' => 'string',
-            'ipList' => '\HuaweiCloud\SDK\Elb\V3\Model\UpadateIpGroupIpOption[]'
+            'ipList' => '\HuaweiCloud\SDK\Elb\V3\Model\UpdateIpGroupIpOption[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * description  参数解释：IP地址组的描述信息
-    * name  参数解释：IP地址组的名称
-    * ipList  参数解释：IP地址组中包含的IP列表。
+    * description  **参数解释**：IP地址组的描述信息。  **约束限制**：不涉及  **取值范围**：长度为0-255个字符。  **默认取值**：不涉及
+    * name  **参数解释**：IP地址组的名称  **约束限制**：不涉及  **取值范围**：长度为0-255个字符。  **默认取值**：不涉及
+    * ipList  **参数解释**：IP地址组的IP列表。 注意：只支持全量更新，即IP地址组中的ip_list将被全量覆盖，不在请求参数中的IP地址将被移除。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * description  参数解释：IP地址组的描述信息
-    * name  参数解释：IP地址组的名称
-    * ipList  参数解释：IP地址组中包含的IP列表。
+    * description  **参数解释**：IP地址组的描述信息。  **约束限制**：不涉及  **取值范围**：长度为0-255个字符。  **默认取值**：不涉及
+    * name  **参数解释**：IP地址组的名称  **约束限制**：不涉及  **取值范围**：长度为0-255个字符。  **默认取值**：不涉及
+    * ipList  **参数解释**：IP地址组的IP列表。 注意：只支持全量更新，即IP地址组中的ip_list将被全量覆盖，不在请求参数中的IP地址将被移除。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * description  参数解释：IP地址组的描述信息
-    * name  参数解释：IP地址组的名称
-    * ipList  参数解释：IP地址组中包含的IP列表。
+    * description  **参数解释**：IP地址组的描述信息。  **约束限制**：不涉及  **取值范围**：长度为0-255个字符。  **默认取值**：不涉及
+    * name  **参数解释**：IP地址组的名称  **约束限制**：不涉及  **取值范围**：长度为0-255个字符。  **默认取值**：不涉及
+    * ipList  **参数解释**：IP地址组的IP列表。 注意：只支持全量更新，即IP地址组中的ip_list将被全量覆盖，不在请求参数中的IP地址将被移除。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * description  参数解释：IP地址组的描述信息
-    * name  参数解释：IP地址组的名称
-    * ipList  参数解释：IP地址组中包含的IP列表。
+    * description  **参数解释**：IP地址组的描述信息。  **约束限制**：不涉及  **取值范围**：长度为0-255个字符。  **默认取值**：不涉及
+    * name  **参数解释**：IP地址组的名称  **约束限制**：不涉及  **取值范围**：长度为0-255个字符。  **默认取值**：不涉及
+    * ipList  **参数解释**：IP地址组的IP列表。 注意：只支持全量更新，即IP地址组中的ip_list将被全量覆盖，不在请求参数中的IP地址将被移除。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  参数解释：IP地址组的描述信息
+    *  **参数解释**：IP地址组的描述信息。  **约束限制**：不涉及  **取值范围**：长度为0-255个字符。  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -220,7 +220,7 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 参数解释：IP地址组的描述信息
+    * @param string|null $description **参数解释**：IP地址组的描述信息。  **约束限制**：不涉及  **取值范围**：长度为0-255个字符。  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  参数解释：IP地址组的名称
+    *  **参数解释**：IP地址组的名称  **约束限制**：不涉及  **取值范围**：长度为0-255个字符。  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 参数解释：IP地址组的名称
+    * @param string|null $name **参数解释**：IP地址组的名称  **约束限制**：不涉及  **取值范围**：长度为0-255个字符。  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -256,9 +256,9 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipList
-    *  参数解释：IP地址组中包含的IP列表。
+    *  **参数解释**：IP地址组的IP列表。 注意：只支持全量更新，即IP地址组中的ip_list将被全量覆盖，不在请求参数中的IP地址将被移除。  **约束限制**：不涉及
     *
-    * @return \HuaweiCloud\SDK\Elb\V3\Model\UpadateIpGroupIpOption[]|null
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\UpdateIpGroupIpOption[]|null
     */
     public function getIpList()
     {
@@ -268,7 +268,7 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Sets ipList
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\UpadateIpGroupIpOption[]|null $ipList 参数解释：IP地址组中包含的IP列表。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\UpdateIpGroupIpOption[]|null $ipList **参数解释**：IP地址组的IP列表。 注意：只支持全量更新，即IP地址组中的ip_list将被全量覆盖，不在请求参数中的IP地址将被移除。  **约束限制**：不涉及
     *
     * @return $this
     */

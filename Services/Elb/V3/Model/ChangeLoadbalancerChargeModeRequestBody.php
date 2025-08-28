@@ -20,8 +20,8 @@ class ChangeLoadbalancerChargeModeRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * loadbalancerIds  需要修改计费类型的负载均衡器ID列表。
-    * chargeMode  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:hws)
+    * loadbalancerIds  **参数解释**：需要修改计费类型的负载均衡器ID列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * chargeMode  **参数解释**：计费模式。  **约束限制**：不涉及  **取值范围**：仅支持设置为'prepaid'-包周期计费。  **默认取值**：不涉及
     * prepaidOptions  prepaidOptions
     *
     * @var string[]
@@ -34,8 +34,8 @@ class ChangeLoadbalancerChargeModeRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * loadbalancerIds  需要修改计费类型的负载均衡器ID列表。
-    * chargeMode  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:hws)
+    * loadbalancerIds  **参数解释**：需要修改计费类型的负载均衡器ID列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * chargeMode  **参数解释**：计费模式。  **约束限制**：不涉及  **取值范围**：仅支持设置为'prepaid'-包周期计费。  **默认取值**：不涉及
     * prepaidOptions  prepaidOptions
     *
     * @var string[]
@@ -69,8 +69,8 @@ class ChangeLoadbalancerChargeModeRequestBody implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * loadbalancerIds  需要修改计费类型的负载均衡器ID列表。
-    * chargeMode  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:hws)
+    * loadbalancerIds  **参数解释**：需要修改计费类型的负载均衡器ID列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * chargeMode  **参数解释**：计费模式。  **约束限制**：不涉及  **取值范围**：仅支持设置为'prepaid'-包周期计费。  **默认取值**：不涉及
     * prepaidOptions  prepaidOptions
     *
     * @var string[]
@@ -83,8 +83,8 @@ class ChangeLoadbalancerChargeModeRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * loadbalancerIds  需要修改计费类型的负载均衡器ID列表。
-    * chargeMode  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:hws)
+    * loadbalancerIds  **参数解释**：需要修改计费类型的负载均衡器ID列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * chargeMode  **参数解释**：计费模式。  **约束限制**：不涉及  **取值范围**：仅支持设置为'prepaid'-包周期计费。  **默认取值**：不涉及
     * prepaidOptions  prepaidOptions
     *
     * @var string[]
@@ -97,8 +97,8 @@ class ChangeLoadbalancerChargeModeRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * loadbalancerIds  需要修改计费类型的负载均衡器ID列表。
-    * chargeMode  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:hws)
+    * loadbalancerIds  **参数解释**：需要修改计费类型的负载均衡器ID列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * chargeMode  **参数解释**：计费模式。  **约束限制**：不涉及  **取值范围**：仅支持设置为'prepaid'-包周期计费。  **默认取值**：不涉及
     * prepaidOptions  prepaidOptions
     *
     * @var string[]
@@ -229,7 +229,7 @@ class ChangeLoadbalancerChargeModeRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets loadbalancerIds
-    *  需要修改计费类型的负载均衡器ID列表。
+    *  **参数解释**：需要修改计费类型的负载均衡器ID列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string[]
     */
@@ -241,7 +241,7 @@ class ChangeLoadbalancerChargeModeRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets loadbalancerIds
     *
-    * @param string[] $loadbalancerIds 需要修改计费类型的负载均衡器ID列表。
+    * @param string[] $loadbalancerIds **参数解释**：需要修改计费类型的负载均衡器ID列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class ChangeLoadbalancerChargeModeRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets chargeMode
-    *  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:hws)
+    *  **参数解释**：计费模式。  **约束限制**：不涉及  **取值范围**：仅支持设置为'prepaid'-包周期计费。  **默认取值**：不涉及
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class ChangeLoadbalancerChargeModeRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets chargeMode
     *
-    * @param string $chargeMode 计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:hws)
+    * @param string $chargeMode **参数解释**：计费模式。  **约束限制**：不涉及  **取值范围**：仅支持设置为'prepaid'-包周期计费。  **默认取值**：不涉及
     *
     * @return $this
     */

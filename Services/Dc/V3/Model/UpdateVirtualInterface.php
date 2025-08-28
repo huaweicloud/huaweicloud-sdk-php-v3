@@ -23,6 +23,7 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
     * name  虚拟接口名字
     * description  虚拟接口描述信息
     * bandwidth  虚拟接口带宽配置
+    * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs
     * serviceEpGroup  用于公网专线,用户访问公网服务地址列表。[（预留字段，暂不支持）](tag:dt)
     * enableBfd  是否使能bfd功能：true或false。[（预留字段，暂不支持）](tag:dt)
@@ -35,6 +36,7 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'bandwidth' => 'int',
+            'priority' => 'string',
             'remoteEpGroup' => 'string[]',
             'serviceEpGroup' => 'string[]',
             'enableBfd' => 'bool',
@@ -47,6 +49,7 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
     * name  虚拟接口名字
     * description  虚拟接口描述信息
     * bandwidth  虚拟接口带宽配置
+    * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs
     * serviceEpGroup  用于公网专线,用户访问公网服务地址列表。[（预留字段，暂不支持）](tag:dt)
     * enableBfd  是否使能bfd功能：true或false。[（预留字段，暂不支持）](tag:dt)
@@ -59,6 +62,7 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'bandwidth' => 'int32',
+        'priority' => null,
         'remoteEpGroup' => null,
         'serviceEpGroup' => null,
         'enableBfd' => null,
@@ -92,6 +96,7 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
     * name  虚拟接口名字
     * description  虚拟接口描述信息
     * bandwidth  虚拟接口带宽配置
+    * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs
     * serviceEpGroup  用于公网专线,用户访问公网服务地址列表。[（预留字段，暂不支持）](tag:dt)
     * enableBfd  是否使能bfd功能：true或false。[（预留字段，暂不支持）](tag:dt)
@@ -104,6 +109,7 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'bandwidth' => 'bandwidth',
+            'priority' => 'priority',
             'remoteEpGroup' => 'remote_ep_group',
             'serviceEpGroup' => 'service_ep_group',
             'enableBfd' => 'enable_bfd',
@@ -116,6 +122,7 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
     * name  虚拟接口名字
     * description  虚拟接口描述信息
     * bandwidth  虚拟接口带宽配置
+    * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs
     * serviceEpGroup  用于公网专线,用户访问公网服务地址列表。[（预留字段，暂不支持）](tag:dt)
     * enableBfd  是否使能bfd功能：true或false。[（预留字段，暂不支持）](tag:dt)
@@ -128,6 +135,7 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'bandwidth' => 'setBandwidth',
+            'priority' => 'setPriority',
             'remoteEpGroup' => 'setRemoteEpGroup',
             'serviceEpGroup' => 'setServiceEpGroup',
             'enableBfd' => 'setEnableBfd',
@@ -140,6 +148,7 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
     * name  虚拟接口名字
     * description  虚拟接口描述信息
     * bandwidth  虚拟接口带宽配置
+    * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs
     * serviceEpGroup  用于公网专线,用户访问公网服务地址列表。[（预留字段，暂不支持）](tag:dt)
     * enableBfd  是否使能bfd功能：true或false。[（预留字段，暂不支持）](tag:dt)
@@ -152,6 +161,7 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'bandwidth' => 'getBandwidth',
+            'priority' => 'getPriority',
             'remoteEpGroup' => 'getRemoteEpGroup',
             'serviceEpGroup' => 'getServiceEpGroup',
             'enableBfd' => 'getEnableBfd',
@@ -199,9 +209,24 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const PRIORITY_NORMAL = 'normal';
+    const PRIORITY_LOW = 'low';
     const STATUS_ACCEPTED = 'ACCEPTED';
     const STATUS_REJECTED = 'REJECTED';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPriorityAllowableValues()
+    {
+        return [
+            self::PRIORITY_NORMAL,
+            self::PRIORITY_LOW,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -235,6 +260,7 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['bandwidth'] = isset($data['bandwidth']) ? $data['bandwidth'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['remoteEpGroup'] = isset($data['remoteEpGroup']) ? $data['remoteEpGroup'] : null;
         $this->container['serviceEpGroup'] = isset($data['serviceEpGroup']) ? $data['serviceEpGroup'] : null;
         $this->container['enableBfd'] = isset($data['enableBfd']) ? $data['enableBfd'] : null;
@@ -268,6 +294,14 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
             if (!is_null($this->container['bandwidth']) && ($this->container['bandwidth'] < 2)) {
                 $invalidProperties[] = "invalid value for 'bandwidth', must be bigger than or equal to 2.";
             }
+            $allowedValues = $this->getPriorityAllowableValues();
+                if (!is_null($this->container['priority']) && !in_array($this->container['priority'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'priority', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -359,6 +393,30 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
     public function setBandwidth($bandwidth)
     {
         $this->container['bandwidth'] = $bandwidth;
+        return $this;
+    }
+
+    /**
+    * Gets priority
+    *  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
+    *
+    * @return string|null
+    */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+    * Sets priority
+    *
+    * @param string|null $priority 虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
+    *
+    * @return $this
+    */
+    public function setPriority($priority)
+    {
+        $this->container['priority'] = $priority;
         return $this;
     }
 

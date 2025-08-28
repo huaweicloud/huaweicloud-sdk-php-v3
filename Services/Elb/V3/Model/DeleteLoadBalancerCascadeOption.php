@@ -20,8 +20,8 @@ class DeleteLoadBalancerCascadeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * unboundedPool  参数解释：是否删除关联的后端服务器组。  约束限制： - 共享型负载均衡器仅支持传参为true。 [- 若开启多挂特性，且后端服务器组关联了多个LB，则无论传入何值，都不会删除后端服务器组。](tag: hws,hws_hk)  取值范围： - true：删除该后端服务器组。 - false：仅解绑后端服务器组，不删除。  默认取值：true
-    * publicIp  参数解释：删除负载均衡器后是否删除关联的公网IP。  取值范围： - true：删除关联的EIP。 - false：仅解绑关联的EIP，不删除。
+    * unboundedPool  **参数解释**：是否删除关联的后端服务器组。  **约束限制**： - 共享型负载均衡器仅支持传参为true。 [- 若开启多挂特性，且后端服务器组关联了多个LB，则无论传入何值，都不会删除后端服务器组。](tag: hws,hws_hk)  **取值范围**： - true：删除该后端服务器组。 - false：仅解绑后端服务器组，不删除。  **默认取值**：true
+    * publicIp  **参数解释**：删除负载均衡器后是否删除关联的公网IP。  **约束限制**：不涉及          **取值范围**： - true：删除关联的EIP。 - false：仅解绑关联的EIP，不删除。  **默认取值**：false
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DeleteLoadBalancerCascadeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * unboundedPool  参数解释：是否删除关联的后端服务器组。  约束限制： - 共享型负载均衡器仅支持传参为true。 [- 若开启多挂特性，且后端服务器组关联了多个LB，则无论传入何值，都不会删除后端服务器组。](tag: hws,hws_hk)  取值范围： - true：删除该后端服务器组。 - false：仅解绑后端服务器组，不删除。  默认取值：true
-    * publicIp  参数解释：删除负载均衡器后是否删除关联的公网IP。  取值范围： - true：删除关联的EIP。 - false：仅解绑关联的EIP，不删除。
+    * unboundedPool  **参数解释**：是否删除关联的后端服务器组。  **约束限制**： - 共享型负载均衡器仅支持传参为true。 [- 若开启多挂特性，且后端服务器组关联了多个LB，则无论传入何值，都不会删除后端服务器组。](tag: hws,hws_hk)  **取值范围**： - true：删除该后端服务器组。 - false：仅解绑后端服务器组，不删除。  **默认取值**：true
+    * publicIp  **参数解释**：删除负载均衡器后是否删除关联的公网IP。  **约束限制**：不涉及          **取值范围**： - true：删除关联的EIP。 - false：仅解绑关联的EIP，不删除。  **默认取值**：false
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DeleteLoadBalancerCascadeOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * unboundedPool  参数解释：是否删除关联的后端服务器组。  约束限制： - 共享型负载均衡器仅支持传参为true。 [- 若开启多挂特性，且后端服务器组关联了多个LB，则无论传入何值，都不会删除后端服务器组。](tag: hws,hws_hk)  取值范围： - true：删除该后端服务器组。 - false：仅解绑后端服务器组，不删除。  默认取值：true
-    * publicIp  参数解释：删除负载均衡器后是否删除关联的公网IP。  取值范围： - true：删除关联的EIP。 - false：仅解绑关联的EIP，不删除。
+    * unboundedPool  **参数解释**：是否删除关联的后端服务器组。  **约束限制**： - 共享型负载均衡器仅支持传参为true。 [- 若开启多挂特性，且后端服务器组关联了多个LB，则无论传入何值，都不会删除后端服务器组。](tag: hws,hws_hk)  **取值范围**： - true：删除该后端服务器组。 - false：仅解绑后端服务器组，不删除。  **默认取值**：true
+    * publicIp  **参数解释**：删除负载均衡器后是否删除关联的公网IP。  **约束限制**：不涉及          **取值范围**： - true：删除关联的EIP。 - false：仅解绑关联的EIP，不删除。  **默认取值**：false
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DeleteLoadBalancerCascadeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * unboundedPool  参数解释：是否删除关联的后端服务器组。  约束限制： - 共享型负载均衡器仅支持传参为true。 [- 若开启多挂特性，且后端服务器组关联了多个LB，则无论传入何值，都不会删除后端服务器组。](tag: hws,hws_hk)  取值范围： - true：删除该后端服务器组。 - false：仅解绑后端服务器组，不删除。  默认取值：true
-    * publicIp  参数解释：删除负载均衡器后是否删除关联的公网IP。  取值范围： - true：删除关联的EIP。 - false：仅解绑关联的EIP，不删除。
+    * unboundedPool  **参数解释**：是否删除关联的后端服务器组。  **约束限制**： - 共享型负载均衡器仅支持传参为true。 [- 若开启多挂特性，且后端服务器组关联了多个LB，则无论传入何值，都不会删除后端服务器组。](tag: hws,hws_hk)  **取值范围**： - true：删除该后端服务器组。 - false：仅解绑后端服务器组，不删除。  **默认取值**：true
+    * publicIp  **参数解释**：删除负载均衡器后是否删除关联的公网IP。  **约束限制**：不涉及          **取值范围**： - true：删除关联的EIP。 - false：仅解绑关联的EIP，不删除。  **默认取值**：false
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DeleteLoadBalancerCascadeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * unboundedPool  参数解释：是否删除关联的后端服务器组。  约束限制： - 共享型负载均衡器仅支持传参为true。 [- 若开启多挂特性，且后端服务器组关联了多个LB，则无论传入何值，都不会删除后端服务器组。](tag: hws,hws_hk)  取值范围： - true：删除该后端服务器组。 - false：仅解绑后端服务器组，不删除。  默认取值：true
-    * publicIp  参数解释：删除负载均衡器后是否删除关联的公网IP。  取值范围： - true：删除关联的EIP。 - false：仅解绑关联的EIP，不删除。
+    * unboundedPool  **参数解释**：是否删除关联的后端服务器组。  **约束限制**： - 共享型负载均衡器仅支持传参为true。 [- 若开启多挂特性，且后端服务器组关联了多个LB，则无论传入何值，都不会删除后端服务器组。](tag: hws,hws_hk)  **取值范围**： - true：删除该后端服务器组。 - false：仅解绑后端服务器组，不删除。  **默认取值**：true
+    * publicIp  **参数解释**：删除负载均衡器后是否删除关联的公网IP。  **约束限制**：不涉及          **取值范围**： - true：删除关联的EIP。 - false：仅解绑关联的EIP，不删除。  **默认取值**：false
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class DeleteLoadBalancerCascadeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets unboundedPool
-    *  参数解释：是否删除关联的后端服务器组。  约束限制： - 共享型负载均衡器仅支持传参为true。 [- 若开启多挂特性，且后端服务器组关联了多个LB，则无论传入何值，都不会删除后端服务器组。](tag: hws,hws_hk)  取值范围： - true：删除该后端服务器组。 - false：仅解绑后端服务器组，不删除。  默认取值：true
+    *  **参数解释**：是否删除关联的后端服务器组。  **约束限制**： - 共享型负载均衡器仅支持传参为true。 [- 若开启多挂特性，且后端服务器组关联了多个LB，则无论传入何值，都不会删除后端服务器组。](tag: hws,hws_hk)  **取值范围**： - true：删除该后端服务器组。 - false：仅解绑后端服务器组，不删除。  **默认取值**：true
     *
     * @return bool|null
     */
@@ -197,7 +197,7 @@ class DeleteLoadBalancerCascadeOption implements ModelInterface, ArrayAccess
     /**
     * Sets unboundedPool
     *
-    * @param bool|null $unboundedPool 参数解释：是否删除关联的后端服务器组。  约束限制： - 共享型负载均衡器仅支持传参为true。 [- 若开启多挂特性，且后端服务器组关联了多个LB，则无论传入何值，都不会删除后端服务器组。](tag: hws,hws_hk)  取值范围： - true：删除该后端服务器组。 - false：仅解绑后端服务器组，不删除。  默认取值：true
+    * @param bool|null $unboundedPool **参数解释**：是否删除关联的后端服务器组。  **约束限制**： - 共享型负载均衡器仅支持传参为true。 [- 若开启多挂特性，且后端服务器组关联了多个LB，则无论传入何值，都不会删除后端服务器组。](tag: hws,hws_hk)  **取值范围**： - true：删除该后端服务器组。 - false：仅解绑后端服务器组，不删除。  **默认取值**：true
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class DeleteLoadBalancerCascadeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  参数解释：删除负载均衡器后是否删除关联的公网IP。  取值范围： - true：删除关联的EIP。 - false：仅解绑关联的EIP，不删除。
+    *  **参数解释**：删除负载均衡器后是否删除关联的公网IP。  **约束限制**：不涉及          **取值范围**： - true：删除关联的EIP。 - false：仅解绑关联的EIP，不删除。  **默认取值**：false
     *
     * @return bool|null
     */
@@ -221,7 +221,7 @@ class DeleteLoadBalancerCascadeOption implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param bool|null $publicIp 参数解释：删除负载均衡器后是否删除关联的公网IP。  取值范围： - true：删除关联的EIP。 - false：仅解绑关联的EIP，不删除。
+    * @param bool|null $publicIp **参数解释**：删除负载均衡器后是否删除关联的公网IP。  **约束限制**：不涉及          **取值范围**： - true：删除关联的EIP。 - false：仅解绑关联的EIP，不删除。  **默认取值**：false
     *
     * @return $this
     */

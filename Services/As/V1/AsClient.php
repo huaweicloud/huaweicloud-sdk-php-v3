@@ -763,6 +763,71 @@ class AsClient extends Client
     }
 
     /**
+     * 关闭暖池
+     *
+     * 关闭伸缩组的暖池
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function closeWarmPool($request)
+    {
+        return $this->closeWarmPoolWithHttpInfo($request);
+    }
+
+    public function closeWarmPoolWithHttpInfo($request)
+    {
+        $resourcePath = '/autoscaling-api/{project_id}/scaling-groups/{scaling_group_id}/warm-pool';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['scalingGroupId'] !== null) {
+            $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\_As\V1\Model\CloseWarmPoolResponse',
+            $requestType='\HuaweiCloud\SDK\_As\V1\Model\CloseWarmPoolRequest');
+    }
+
+    /**
      * 创建计划任务
      *
      * 创建计划任务
@@ -2878,6 +2943,77 @@ class AsClient extends Client
     }
 
     /**
+     * 查询暖池内实例信息
+     *
+     * 查询暖池内实例信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listWarmPoolInstances($request)
+    {
+        return $this->listWarmPoolInstancesWithHttpInfo($request);
+    }
+
+    public function listWarmPoolInstancesWithHttpInfo($request)
+    {
+        $resourcePath = '/autoscaling-api/{project_id}/scaling-groups/{scaling_group_id}/warm-pool-instances';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['scalingGroupId'] !== null) {
+            $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\_As\V1\Model\ListWarmPoolInstancesResponse',
+            $requestType='\HuaweiCloud\SDK\_As\V1\Model\ListWarmPoolInstancesRequest');
+    }
+
+    /**
      * 停止弹性伸缩组
      *
      * 启用或停止一个指定弹性伸缩组。已停用状态的伸缩组，不会自动触发任何伸缩活动。当伸缩组正在进行伸缩活动，即使停用，正在进行的伸缩活动也不会立即停止。
@@ -3011,6 +3147,74 @@ class AsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\_As\V1\Model\PauseScalingPolicyResponse',
             $requestType='\HuaweiCloud\SDK\_As\V1\Model\PauseScalingPolicyRequest');
+    }
+
+    /**
+     * 开启暖池
+     *
+     * 开启并修改暖池参数
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function putWarmPool($request)
+    {
+        return $this->putWarmPoolWithHttpInfo($request);
+    }
+
+    public function putWarmPoolWithHttpInfo($request)
+    {
+        $resourcePath = '/autoscaling-api/{project_id}/scaling-groups/{scaling_group_id}/warm-pool';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['scalingGroupId'] !== null) {
+            $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\_As\V1\Model\PutWarmPoolResponse',
+            $requestType='\HuaweiCloud\SDK\_As\V1\Model\PutWarmPoolRequest');
     }
 
     /**
@@ -3537,6 +3741,71 @@ class AsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\_As\V1\Model\ShowScalingPolicyResponse',
             $requestType='\HuaweiCloud\SDK\_As\V1\Model\ShowScalingPolicyRequest');
+    }
+
+    /**
+     * 查询暖池信息
+     *
+     * 查询暖池信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showWarmPool($request)
+    {
+        return $this->showWarmPoolWithHttpInfo($request);
+    }
+
+    public function showWarmPoolWithHttpInfo($request)
+    {
+        $resourcePath = '/autoscaling-api/{project_id}/scaling-groups/{scaling_group_id}/warm-pool';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['scalingGroupId'] !== null) {
+            $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\_As\V1\Model\ShowWarmPoolResponse',
+            $requestType='\HuaweiCloud\SDK\_As\V1\Model\ShowWarmPoolRequest');
     }
 
     /**

@@ -20,27 +20,27 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
-    * certificate  证书的内容。PEM编码格式。
-    * description  证书的描述。
-    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
-    * id  证书ID。
-    * name  证书的名称。
-    * privateKey  服务器证书的私钥。PEM编码格式。  当type为client时，该参数被忽略，不影响证书的创建和使用。  当type为server时，该字段必须符合格式要求，且私钥必须是有效的。
-    * type  SSL证书的类型。分为服务器证书(server)、CA证书(client)。默认值：server。
-    * createdAt  证书创建时间。
-    * updatedAt  证书更新时间。
-    * expireTime  证书使用截止时间。
-    * projectId  证书所在项目ID。
-    * encCertificate  HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
-    * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
-    * scmCertificateId  SCM证书ID。
-    * commonName  证书绑定的主域名。
-    * fingerprint  证书指纹。
-    * subjectAlternativeNames  证书绑定的所有域名。
-    * source  参数解释：证书来源 取值范围：无  默认取值：当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
-    * protectionStatus  参数解释：修改保护状态  约束限制：无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值：nonProtection
-    * protectionReason  参数解释：设置修改保护的原因  约束限制：仅当protection_status为consoleProtection时有效  取值范围：无  默认取值：空
+    * adminStateUp  **参数解释**：证书的管理状态。该字段当前无用，设置为true或者false都不影响证书使用。  **取值范围**： - true：表示证书可用。 - false：表示证书不可用。
+    * certificate  **参数解释**：证书内容。支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式，最大长度65536个字符。
+    * description  **参数解释**：证书的描述。  **取值范围**：0-255个字符。
+    * domain  **参数解释**：服务器证书所签域名。  **取值范围**：总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。 - 普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符，只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。 - 泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com。
+    * id  **参数解释**：ELB证书管理对象ID。  **取值范围**：由32位数字和小写字母组成。
+    * name  **参数解释**：证书的名称。  **取值范围**：0-255个字符。
+    * privateKey  **参数解释**：服务器证书的私钥。  **取值范围**：PEM编码格式，最大长度8192个字符。
+    * type  **参数解释**：证书的类型。  **取值范围**： - server：服务器证书。 - client：CA证书。 - server_sm：服务器SM双证书。
+    * createdAt  **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * expireTime  **参数解释**：证书有效期的截止时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
+    * encCertificate  **参数解释**：服务器SM双证书的证书内容。 支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式。最大长度65536字符。
+    * encPrivateKey  **参数解释**：服务器SM双证书的私钥。  **取值范围**：PEM编码格式，最大长度8192个字符。
+    * scmCertificateId  **参数解释**：云证书管理服务（CCM）中的证书ID。  **取值范围**：不涉及
+    * commonName  **参数解释**：证书绑定的主域名。  **取值范围**：不涉及
+    * fingerprint  **参数解释**：证书指纹。  **取值范围**：不涉及
+    * subjectAlternativeNames  **参数解释**：证书绑定的域名列表。  **取值范围**：不涉及
+    * source  **参数解释**：标记当前证书来源。  **取值范围**： - scm：表示关联云证书管理服务（CCM）中的证书。 - 空值：表示自有证书。
+    * protectionStatus  **参数解释**：修改保护状态。  **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护，即禁止通过控制台修改。
+    * protectionReason  **参数解释**：修改保护的原因。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -70,27 +70,27 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
-    * certificate  证书的内容。PEM编码格式。
-    * description  证书的描述。
-    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
-    * id  证书ID。
-    * name  证书的名称。
-    * privateKey  服务器证书的私钥。PEM编码格式。  当type为client时，该参数被忽略，不影响证书的创建和使用。  当type为server时，该字段必须符合格式要求，且私钥必须是有效的。
-    * type  SSL证书的类型。分为服务器证书(server)、CA证书(client)。默认值：server。
-    * createdAt  证书创建时间。
-    * updatedAt  证书更新时间。
-    * expireTime  证书使用截止时间。
-    * projectId  证书所在项目ID。
-    * encCertificate  HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
-    * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
-    * scmCertificateId  SCM证书ID。
-    * commonName  证书绑定的主域名。
-    * fingerprint  证书指纹。
-    * subjectAlternativeNames  证书绑定的所有域名。
-    * source  参数解释：证书来源 取值范围：无  默认取值：当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
-    * protectionStatus  参数解释：修改保护状态  约束限制：无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值：nonProtection
-    * protectionReason  参数解释：设置修改保护的原因  约束限制：仅当protection_status为consoleProtection时有效  取值范围：无  默认取值：空
+    * adminStateUp  **参数解释**：证书的管理状态。该字段当前无用，设置为true或者false都不影响证书使用。  **取值范围**： - true：表示证书可用。 - false：表示证书不可用。
+    * certificate  **参数解释**：证书内容。支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式，最大长度65536个字符。
+    * description  **参数解释**：证书的描述。  **取值范围**：0-255个字符。
+    * domain  **参数解释**：服务器证书所签域名。  **取值范围**：总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。 - 普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符，只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。 - 泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com。
+    * id  **参数解释**：ELB证书管理对象ID。  **取值范围**：由32位数字和小写字母组成。
+    * name  **参数解释**：证书的名称。  **取值范围**：0-255个字符。
+    * privateKey  **参数解释**：服务器证书的私钥。  **取值范围**：PEM编码格式，最大长度8192个字符。
+    * type  **参数解释**：证书的类型。  **取值范围**： - server：服务器证书。 - client：CA证书。 - server_sm：服务器SM双证书。
+    * createdAt  **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * expireTime  **参数解释**：证书有效期的截止时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
+    * encCertificate  **参数解释**：服务器SM双证书的证书内容。 支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式。最大长度65536字符。
+    * encPrivateKey  **参数解释**：服务器SM双证书的私钥。  **取值范围**：PEM编码格式，最大长度8192个字符。
+    * scmCertificateId  **参数解释**：云证书管理服务（CCM）中的证书ID。  **取值范围**：不涉及
+    * commonName  **参数解释**：证书绑定的主域名。  **取值范围**：不涉及
+    * fingerprint  **参数解释**：证书指纹。  **取值范围**：不涉及
+    * subjectAlternativeNames  **参数解释**：证书绑定的域名列表。  **取值范围**：不涉及
+    * source  **参数解释**：标记当前证书来源。  **取值范围**： - scm：表示关联云证书管理服务（CCM）中的证书。 - 空值：表示自有证书。
+    * protectionStatus  **参数解释**：修改保护状态。  **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护，即禁止通过控制台修改。
+    * protectionReason  **参数解释**：修改保护的原因。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -141,27 +141,27 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
-    * certificate  证书的内容。PEM编码格式。
-    * description  证书的描述。
-    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
-    * id  证书ID。
-    * name  证书的名称。
-    * privateKey  服务器证书的私钥。PEM编码格式。  当type为client时，该参数被忽略，不影响证书的创建和使用。  当type为server时，该字段必须符合格式要求，且私钥必须是有效的。
-    * type  SSL证书的类型。分为服务器证书(server)、CA证书(client)。默认值：server。
-    * createdAt  证书创建时间。
-    * updatedAt  证书更新时间。
-    * expireTime  证书使用截止时间。
-    * projectId  证书所在项目ID。
-    * encCertificate  HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
-    * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
-    * scmCertificateId  SCM证书ID。
-    * commonName  证书绑定的主域名。
-    * fingerprint  证书指纹。
-    * subjectAlternativeNames  证书绑定的所有域名。
-    * source  参数解释：证书来源 取值范围：无  默认取值：当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
-    * protectionStatus  参数解释：修改保护状态  约束限制：无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值：nonProtection
-    * protectionReason  参数解释：设置修改保护的原因  约束限制：仅当protection_status为consoleProtection时有效  取值范围：无  默认取值：空
+    * adminStateUp  **参数解释**：证书的管理状态。该字段当前无用，设置为true或者false都不影响证书使用。  **取值范围**： - true：表示证书可用。 - false：表示证书不可用。
+    * certificate  **参数解释**：证书内容。支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式，最大长度65536个字符。
+    * description  **参数解释**：证书的描述。  **取值范围**：0-255个字符。
+    * domain  **参数解释**：服务器证书所签域名。  **取值范围**：总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。 - 普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符，只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。 - 泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com。
+    * id  **参数解释**：ELB证书管理对象ID。  **取值范围**：由32位数字和小写字母组成。
+    * name  **参数解释**：证书的名称。  **取值范围**：0-255个字符。
+    * privateKey  **参数解释**：服务器证书的私钥。  **取值范围**：PEM编码格式，最大长度8192个字符。
+    * type  **参数解释**：证书的类型。  **取值范围**： - server：服务器证书。 - client：CA证书。 - server_sm：服务器SM双证书。
+    * createdAt  **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * expireTime  **参数解释**：证书有效期的截止时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
+    * encCertificate  **参数解释**：服务器SM双证书的证书内容。 支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式。最大长度65536字符。
+    * encPrivateKey  **参数解释**：服务器SM双证书的私钥。  **取值范围**：PEM编码格式，最大长度8192个字符。
+    * scmCertificateId  **参数解释**：云证书管理服务（CCM）中的证书ID。  **取值范围**：不涉及
+    * commonName  **参数解释**：证书绑定的主域名。  **取值范围**：不涉及
+    * fingerprint  **参数解释**：证书指纹。  **取值范围**：不涉及
+    * subjectAlternativeNames  **参数解释**：证书绑定的域名列表。  **取值范围**：不涉及
+    * source  **参数解释**：标记当前证书来源。  **取值范围**： - scm：表示关联云证书管理服务（CCM）中的证书。 - 空值：表示自有证书。
+    * protectionStatus  **参数解释**：修改保护状态。  **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护，即禁止通过控制台修改。
+    * protectionReason  **参数解释**：修改保护的原因。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -191,27 +191,27 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
-    * certificate  证书的内容。PEM编码格式。
-    * description  证书的描述。
-    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
-    * id  证书ID。
-    * name  证书的名称。
-    * privateKey  服务器证书的私钥。PEM编码格式。  当type为client时，该参数被忽略，不影响证书的创建和使用。  当type为server时，该字段必须符合格式要求，且私钥必须是有效的。
-    * type  SSL证书的类型。分为服务器证书(server)、CA证书(client)。默认值：server。
-    * createdAt  证书创建时间。
-    * updatedAt  证书更新时间。
-    * expireTime  证书使用截止时间。
-    * projectId  证书所在项目ID。
-    * encCertificate  HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
-    * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
-    * scmCertificateId  SCM证书ID。
-    * commonName  证书绑定的主域名。
-    * fingerprint  证书指纹。
-    * subjectAlternativeNames  证书绑定的所有域名。
-    * source  参数解释：证书来源 取值范围：无  默认取值：当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
-    * protectionStatus  参数解释：修改保护状态  约束限制：无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值：nonProtection
-    * protectionReason  参数解释：设置修改保护的原因  约束限制：仅当protection_status为consoleProtection时有效  取值范围：无  默认取值：空
+    * adminStateUp  **参数解释**：证书的管理状态。该字段当前无用，设置为true或者false都不影响证书使用。  **取值范围**： - true：表示证书可用。 - false：表示证书不可用。
+    * certificate  **参数解释**：证书内容。支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式，最大长度65536个字符。
+    * description  **参数解释**：证书的描述。  **取值范围**：0-255个字符。
+    * domain  **参数解释**：服务器证书所签域名。  **取值范围**：总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。 - 普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符，只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。 - 泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com。
+    * id  **参数解释**：ELB证书管理对象ID。  **取值范围**：由32位数字和小写字母组成。
+    * name  **参数解释**：证书的名称。  **取值范围**：0-255个字符。
+    * privateKey  **参数解释**：服务器证书的私钥。  **取值范围**：PEM编码格式，最大长度8192个字符。
+    * type  **参数解释**：证书的类型。  **取值范围**： - server：服务器证书。 - client：CA证书。 - server_sm：服务器SM双证书。
+    * createdAt  **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * expireTime  **参数解释**：证书有效期的截止时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
+    * encCertificate  **参数解释**：服务器SM双证书的证书内容。 支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式。最大长度65536字符。
+    * encPrivateKey  **参数解释**：服务器SM双证书的私钥。  **取值范围**：PEM编码格式，最大长度8192个字符。
+    * scmCertificateId  **参数解释**：云证书管理服务（CCM）中的证书ID。  **取值范围**：不涉及
+    * commonName  **参数解释**：证书绑定的主域名。  **取值范围**：不涉及
+    * fingerprint  **参数解释**：证书指纹。  **取值范围**：不涉及
+    * subjectAlternativeNames  **参数解释**：证书绑定的域名列表。  **取值范围**：不涉及
+    * source  **参数解释**：标记当前证书来源。  **取值范围**： - scm：表示关联云证书管理服务（CCM）中的证书。 - 空值：表示自有证书。
+    * protectionStatus  **参数解释**：修改保护状态。  **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护，即禁止通过控制台修改。
+    * protectionReason  **参数解释**：修改保护的原因。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -241,27 +241,27 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
-    * certificate  证书的内容。PEM编码格式。
-    * description  证书的描述。
-    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
-    * id  证书ID。
-    * name  证书的名称。
-    * privateKey  服务器证书的私钥。PEM编码格式。  当type为client时，该参数被忽略，不影响证书的创建和使用。  当type为server时，该字段必须符合格式要求，且私钥必须是有效的。
-    * type  SSL证书的类型。分为服务器证书(server)、CA证书(client)。默认值：server。
-    * createdAt  证书创建时间。
-    * updatedAt  证书更新时间。
-    * expireTime  证书使用截止时间。
-    * projectId  证书所在项目ID。
-    * encCertificate  HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
-    * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
-    * scmCertificateId  SCM证书ID。
-    * commonName  证书绑定的主域名。
-    * fingerprint  证书指纹。
-    * subjectAlternativeNames  证书绑定的所有域名。
-    * source  参数解释：证书来源 取值范围：无  默认取值：当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
-    * protectionStatus  参数解释：修改保护状态  约束限制：无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值：nonProtection
-    * protectionReason  参数解释：设置修改保护的原因  约束限制：仅当protection_status为consoleProtection时有效  取值范围：无  默认取值：空
+    * adminStateUp  **参数解释**：证书的管理状态。该字段当前无用，设置为true或者false都不影响证书使用。  **取值范围**： - true：表示证书可用。 - false：表示证书不可用。
+    * certificate  **参数解释**：证书内容。支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式，最大长度65536个字符。
+    * description  **参数解释**：证书的描述。  **取值范围**：0-255个字符。
+    * domain  **参数解释**：服务器证书所签域名。  **取值范围**：总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。 - 普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符，只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。 - 泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com。
+    * id  **参数解释**：ELB证书管理对象ID。  **取值范围**：由32位数字和小写字母组成。
+    * name  **参数解释**：证书的名称。  **取值范围**：0-255个字符。
+    * privateKey  **参数解释**：服务器证书的私钥。  **取值范围**：PEM编码格式，最大长度8192个字符。
+    * type  **参数解释**：证书的类型。  **取值范围**： - server：服务器证书。 - client：CA证书。 - server_sm：服务器SM双证书。
+    * createdAt  **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * expireTime  **参数解释**：证书有效期的截止时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * projectId  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
+    * encCertificate  **参数解释**：服务器SM双证书的证书内容。 支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式。最大长度65536字符。
+    * encPrivateKey  **参数解释**：服务器SM双证书的私钥。  **取值范围**：PEM编码格式，最大长度8192个字符。
+    * scmCertificateId  **参数解释**：云证书管理服务（CCM）中的证书ID。  **取值范围**：不涉及
+    * commonName  **参数解释**：证书绑定的主域名。  **取值范围**：不涉及
+    * fingerprint  **参数解释**：证书指纹。  **取值范围**：不涉及
+    * subjectAlternativeNames  **参数解释**：证书绑定的域名列表。  **取值范围**：不涉及
+    * source  **参数解释**：标记当前证书来源。  **取值范围**： - scm：表示关联云证书管理服务（CCM）中的证书。 - 空值：表示自有证书。
+    * protectionStatus  **参数解释**：修改保护状态。  **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护，即禁止通过控制台修改。
+    * protectionReason  **参数解释**：修改保护的原因。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -471,7 +471,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminStateUp
-    *  证书的管理状态。  不支持该字段，请勿使用。
+    *  **参数解释**：证书的管理状态。该字段当前无用，设置为true或者false都不影响证书使用。  **取值范围**： - true：表示证书可用。 - false：表示证书不可用。
     *
     * @return bool
     */
@@ -483,7 +483,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets adminStateUp
     *
-    * @param bool $adminStateUp 证书的管理状态。  不支持该字段，请勿使用。
+    * @param bool $adminStateUp **参数解释**：证书的管理状态。该字段当前无用，设置为true或者false都不影响证书使用。  **取值范围**： - true：表示证书可用。 - false：表示证书不可用。
     *
     * @return $this
     */
@@ -495,7 +495,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificate
-    *  证书的内容。PEM编码格式。
+    *  **参数解释**：证书内容。支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式，最大长度65536个字符。
     *
     * @return string
     */
@@ -507,7 +507,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets certificate
     *
-    * @param string $certificate 证书的内容。PEM编码格式。
+    * @param string $certificate **参数解释**：证书内容。支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式，最大长度65536个字符。
     *
     * @return $this
     */
@@ -519,7 +519,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  证书的描述。
+    *  **参数解释**：证书的描述。  **取值范围**：0-255个字符。
     *
     * @return string
     */
@@ -531,7 +531,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 证书的描述。
+    * @param string $description **参数解释**：证书的描述。  **取值范围**：0-255个字符。
     *
     * @return $this
     */
@@ -543,7 +543,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
-    *  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
+    *  **参数解释**：服务器证书所签域名。  **取值范围**：总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。 - 普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符，只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。 - 泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com。
     *
     * @return string
     */
@@ -555,7 +555,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets domain
     *
-    * @param string $domain 服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
+    * @param string $domain **参数解释**：服务器证书所签域名。  **取值范围**：总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。 - 普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符，只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。 - 泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com。
     *
     * @return $this
     */
@@ -567,7 +567,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  证书ID。
+    *  **参数解释**：ELB证书管理对象ID。  **取值范围**：由32位数字和小写字母组成。
     *
     * @return string
     */
@@ -579,7 +579,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 证书ID。
+    * @param string $id **参数解释**：ELB证书管理对象ID。  **取值范围**：由32位数字和小写字母组成。
     *
     * @return $this
     */
@@ -591,7 +591,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  证书的名称。
+    *  **参数解释**：证书的名称。  **取值范围**：0-255个字符。
     *
     * @return string
     */
@@ -603,7 +603,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 证书的名称。
+    * @param string $name **参数解释**：证书的名称。  **取值范围**：0-255个字符。
     *
     * @return $this
     */
@@ -615,7 +615,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateKey
-    *  服务器证书的私钥。PEM编码格式。  当type为client时，该参数被忽略，不影响证书的创建和使用。  当type为server时，该字段必须符合格式要求，且私钥必须是有效的。
+    *  **参数解释**：服务器证书的私钥。  **取值范围**：PEM编码格式，最大长度8192个字符。
     *
     * @return string
     */
@@ -627,7 +627,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateKey
     *
-    * @param string $privateKey 服务器证书的私钥。PEM编码格式。  当type为client时，该参数被忽略，不影响证书的创建和使用。  当type为server时，该字段必须符合格式要求，且私钥必须是有效的。
+    * @param string $privateKey **参数解释**：服务器证书的私钥。  **取值范围**：PEM编码格式，最大长度8192个字符。
     *
     * @return $this
     */
@@ -639,7 +639,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  SSL证书的类型。分为服务器证书(server)、CA证书(client)。默认值：server。
+    *  **参数解释**：证书的类型。  **取值范围**： - server：服务器证书。 - client：CA证书。 - server_sm：服务器SM双证书。
     *
     * @return string
     */
@@ -651,7 +651,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type SSL证书的类型。分为服务器证书(server)、CA证书(client)。默认值：server。
+    * @param string $type **参数解释**：证书的类型。  **取值范围**： - server：服务器证书。 - client：CA证书。 - server_sm：服务器SM双证书。
     *
     * @return $this
     */
@@ -663,7 +663,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  证书创建时间。
+    *  **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @return string
     */
@@ -675,7 +675,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string $createdAt 证书创建时间。
+    * @param string $createdAt **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @return $this
     */
@@ -687,7 +687,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  证书更新时间。
+    *  **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @return string
     */
@@ -699,7 +699,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string $updatedAt 证书更新时间。
+    * @param string $updatedAt **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @return $this
     */
@@ -711,7 +711,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets expireTime
-    *  证书使用截止时间。
+    *  **参数解释**：证书有效期的截止时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @return string
     */
@@ -723,7 +723,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets expireTime
     *
-    * @param string $expireTime 证书使用截止时间。
+    * @param string $expireTime **参数解释**：证书有效期的截止时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @return $this
     */
@@ -735,7 +735,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  证书所在项目ID。
+    *  **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     *
     * @return string
     */
@@ -747,7 +747,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 证书所在项目ID。
+    * @param string $projectId **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
     *
     * @return $this
     */
@@ -759,7 +759,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets encCertificate
-    *  HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
+    *  **参数解释**：服务器SM双证书的证书内容。 支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式。最大长度65536字符。
     *
     * @return string|null
     */
@@ -771,7 +771,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets encCertificate
     *
-    * @param string|null $encCertificate HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
+    * @param string|null $encCertificate **参数解释**：服务器SM双证书的证书内容。 支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式。最大长度65536字符。
     *
     * @return $this
     */
@@ -783,7 +783,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets encPrivateKey
-    *  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
+    *  **参数解释**：服务器SM双证书的私钥。  **取值范围**：PEM编码格式，最大长度8192个字符。
     *
     * @return string|null
     */
@@ -795,7 +795,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets encPrivateKey
     *
-    * @param string|null $encPrivateKey HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
+    * @param string|null $encPrivateKey **参数解释**：服务器SM双证书的私钥。  **取值范围**：PEM编码格式，最大长度8192个字符。
     *
     * @return $this
     */
@@ -807,7 +807,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scmCertificateId
-    *  SCM证书ID。
+    *  **参数解释**：云证书管理服务（CCM）中的证书ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -819,7 +819,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scmCertificateId
     *
-    * @param string|null $scmCertificateId SCM证书ID。
+    * @param string|null $scmCertificateId **参数解释**：云证书管理服务（CCM）中的证书ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -831,7 +831,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets commonName
-    *  证书绑定的主域名。
+    *  **参数解释**：证书绑定的主域名。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -843,7 +843,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets commonName
     *
-    * @param string|null $commonName 证书绑定的主域名。
+    * @param string|null $commonName **参数解释**：证书绑定的主域名。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -855,7 +855,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fingerprint
-    *  证书指纹。
+    *  **参数解释**：证书指纹。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -867,7 +867,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fingerprint
     *
-    * @param string|null $fingerprint 证书指纹。
+    * @param string|null $fingerprint **参数解释**：证书指纹。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -879,7 +879,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets subjectAlternativeNames
-    *  证书绑定的所有域名。
+    *  **参数解释**：证书绑定的域名列表。  **取值范围**：不涉及
     *
     * @return string[]|null
     */
@@ -891,7 +891,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets subjectAlternativeNames
     *
-    * @param string[]|null $subjectAlternativeNames 证书绑定的所有域名。
+    * @param string[]|null $subjectAlternativeNames **参数解释**：证书绑定的域名列表。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -903,7 +903,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets source
-    *  参数解释：证书来源 取值范围：无  默认取值：当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+    *  **参数解释**：标记当前证书来源。  **取值范围**： - scm：表示关联云证书管理服务（CCM）中的证书。 - 空值：表示自有证书。
     *
     * @return string|null
     */
@@ -915,7 +915,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets source
     *
-    * @param string|null $source 参数解释：证书来源 取值范围：无  默认取值：当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+    * @param string|null $source **参数解释**：标记当前证书来源。  **取值范围**： - scm：表示关联云证书管理服务（CCM）中的证书。 - 空值：表示自有证书。
     *
     * @return $this
     */
@@ -927,7 +927,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectionStatus
-    *  参数解释：修改保护状态  约束限制：无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值：nonProtection
+    *  **参数解释**：修改保护状态。  **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护，即禁止通过控制台修改。
     *
     * @return string|null
     */
@@ -939,7 +939,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectionStatus
     *
-    * @param string|null $protectionStatus 参数解释：修改保护状态  约束限制：无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值：nonProtection
+    * @param string|null $protectionStatus **参数解释**：修改保护状态。  **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护，即禁止通过控制台修改。
     *
     * @return $this
     */
@@ -951,7 +951,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectionReason
-    *  参数解释：设置修改保护的原因  约束限制：仅当protection_status为consoleProtection时有效  取值范围：无  默认取值：空
+    *  **参数解释**：修改保护的原因。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -963,7 +963,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectionReason
     *
-    * @param string|null $protectionReason 参数解释：设置修改保护的原因  约束限制：仅当protection_status为consoleProtection时有效  取值范围：无  默认取值：空
+    * @param string|null $protectionReason **参数解释**：修改保护的原因。  **取值范围**：不涉及
     *
     * @return $this
     */

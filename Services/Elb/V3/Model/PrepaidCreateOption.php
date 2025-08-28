@@ -20,10 +20,10 @@ class PrepaidCreateOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * periodType  参数解释：预付费实例的订购周期类型，当前支持月和年。  取值范围：  - month：月。  - year：年。
-    * periodNum  参数解释：预付费实例的订购周期数。  取值范围： - period_type为month时，为[1,9]。 - period_type为year时，为[1,3]。
-    * autoRenew  参数解释：自动续订开关。  取值范围： - true：开启自动续订。 - false：关闭自动续订。
-    * autoPay  参数解释：自动支付开关。下单订购后，是否自动从客户的账户中支付。  约束限制：开启自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择关闭自动支付，然后在用户费用中心，选择代金券支付。  取值范围：  - true：开启自动支付。  - false：关闭自动支付。
+    * periodType  **参数解释**：预付费实例的订购周期类型，当前支持月和年。  **约束限制**：不涉及  **取值范围**：  - month：月  - year：年 **默认取值**：不涉及
+    * periodNum  **参数解释**：预付费实例的订购周期数。  **约束限制**：不涉及  **取值范围**： - period_type为month时，为[1,9]。 - period_type为year时，为[1,3]。  **默认取值**：不涉及
+    * autoRenew  **参数解释**：自动续订开关。  **约束限制**：不涉及  **取值范围**： - true：开启自动续订。 - false：关闭自动续订。  **默认取值**：不涉及
+    * autoPay  **参数解释**：自动支付开关。下单订购后，是否自动从客户的账户中支付。  **约束限制**：开启自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择关闭自动支付，然后在用户费用中心，选择代金券支付。  **取值范围**：  - true：开启自动支付。  - false：关闭自动支付。  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class PrepaidCreateOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * periodType  参数解释：预付费实例的订购周期类型，当前支持月和年。  取值范围：  - month：月。  - year：年。
-    * periodNum  参数解释：预付费实例的订购周期数。  取值范围： - period_type为month时，为[1,9]。 - period_type为year时，为[1,3]。
-    * autoRenew  参数解释：自动续订开关。  取值范围： - true：开启自动续订。 - false：关闭自动续订。
-    * autoPay  参数解释：自动支付开关。下单订购后，是否自动从客户的账户中支付。  约束限制：开启自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择关闭自动支付，然后在用户费用中心，选择代金券支付。  取值范围：  - true：开启自动支付。  - false：关闭自动支付。
+    * periodType  **参数解释**：预付费实例的订购周期类型，当前支持月和年。  **约束限制**：不涉及  **取值范围**：  - month：月  - year：年 **默认取值**：不涉及
+    * periodNum  **参数解释**：预付费实例的订购周期数。  **约束限制**：不涉及  **取值范围**： - period_type为month时，为[1,9]。 - period_type为year时，为[1,3]。  **默认取值**：不涉及
+    * autoRenew  **参数解释**：自动续订开关。  **约束限制**：不涉及  **取值范围**： - true：开启自动续订。 - false：关闭自动续订。  **默认取值**：不涉及
+    * autoPay  **参数解释**：自动支付开关。下单订购后，是否自动从客户的账户中支付。  **约束限制**：开启自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择关闭自动支付，然后在用户费用中心，选择代金券支付。  **取值范围**：  - true：开启自动支付。  - false：关闭自动支付。  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class PrepaidCreateOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * periodType  参数解释：预付费实例的订购周期类型，当前支持月和年。  取值范围：  - month：月。  - year：年。
-    * periodNum  参数解释：预付费实例的订购周期数。  取值范围： - period_type为month时，为[1,9]。 - period_type为year时，为[1,3]。
-    * autoRenew  参数解释：自动续订开关。  取值范围： - true：开启自动续订。 - false：关闭自动续订。
-    * autoPay  参数解释：自动支付开关。下单订购后，是否自动从客户的账户中支付。  约束限制：开启自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择关闭自动支付，然后在用户费用中心，选择代金券支付。  取值范围：  - true：开启自动支付。  - false：关闭自动支付。
+    * periodType  **参数解释**：预付费实例的订购周期类型，当前支持月和年。  **约束限制**：不涉及  **取值范围**：  - month：月  - year：年 **默认取值**：不涉及
+    * periodNum  **参数解释**：预付费实例的订购周期数。  **约束限制**：不涉及  **取值范围**： - period_type为month时，为[1,9]。 - period_type为year时，为[1,3]。  **默认取值**：不涉及
+    * autoRenew  **参数解释**：自动续订开关。  **约束限制**：不涉及  **取值范围**： - true：开启自动续订。 - false：关闭自动续订。  **默认取值**：不涉及
+    * autoPay  **参数解释**：自动支付开关。下单订购后，是否自动从客户的账户中支付。  **约束限制**：开启自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择关闭自动支付，然后在用户费用中心，选择代金券支付。  **取值范围**：  - true：开启自动支付。  - false：关闭自动支付。  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class PrepaidCreateOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * periodType  参数解释：预付费实例的订购周期类型，当前支持月和年。  取值范围：  - month：月。  - year：年。
-    * periodNum  参数解释：预付费实例的订购周期数。  取值范围： - period_type为month时，为[1,9]。 - period_type为year时，为[1,3]。
-    * autoRenew  参数解释：自动续订开关。  取值范围： - true：开启自动续订。 - false：关闭自动续订。
-    * autoPay  参数解释：自动支付开关。下单订购后，是否自动从客户的账户中支付。  约束限制：开启自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择关闭自动支付，然后在用户费用中心，选择代金券支付。  取值范围：  - true：开启自动支付。  - false：关闭自动支付。
+    * periodType  **参数解释**：预付费实例的订购周期类型，当前支持月和年。  **约束限制**：不涉及  **取值范围**：  - month：月  - year：年 **默认取值**：不涉及
+    * periodNum  **参数解释**：预付费实例的订购周期数。  **约束限制**：不涉及  **取值范围**： - period_type为month时，为[1,9]。 - period_type为year时，为[1,3]。  **默认取值**：不涉及
+    * autoRenew  **参数解释**：自动续订开关。  **约束限制**：不涉及  **取值范围**： - true：开启自动续订。 - false：关闭自动续订。  **默认取值**：不涉及
+    * autoPay  **参数解释**：自动支付开关。下单订购后，是否自动从客户的账户中支付。  **约束限制**：开启自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择关闭自动支付，然后在用户费用中心，选择代金券支付。  **取值范围**：  - true：开启自动支付。  - false：关闭自动支付。  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class PrepaidCreateOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * periodType  参数解释：预付费实例的订购周期类型，当前支持月和年。  取值范围：  - month：月。  - year：年。
-    * periodNum  参数解释：预付费实例的订购周期数。  取值范围： - period_type为month时，为[1,9]。 - period_type为year时，为[1,3]。
-    * autoRenew  参数解释：自动续订开关。  取值范围： - true：开启自动续订。 - false：关闭自动续订。
-    * autoPay  参数解释：自动支付开关。下单订购后，是否自动从客户的账户中支付。  约束限制：开启自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择关闭自动支付，然后在用户费用中心，选择代金券支付。  取值范围：  - true：开启自动支付。  - false：关闭自动支付。
+    * periodType  **参数解释**：预付费实例的订购周期类型，当前支持月和年。  **约束限制**：不涉及  **取值范围**：  - month：月  - year：年 **默认取值**：不涉及
+    * periodNum  **参数解释**：预付费实例的订购周期数。  **约束限制**：不涉及  **取值范围**： - period_type为month时，为[1,9]。 - period_type为year时，为[1,3]。  **默认取值**：不涉及
+    * autoRenew  **参数解释**：自动续订开关。  **约束限制**：不涉及  **取值范围**： - true：开启自动续订。 - false：关闭自动续订。  **默认取值**：不涉及
+    * autoPay  **参数解释**：自动支付开关。下单订购后，是否自动从客户的账户中支付。  **约束限制**：开启自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择关闭自动支付，然后在用户费用中心，选择代金券支付。  **取值范围**：  - true：开启自动支付。  - false：关闭自动支付。  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -239,7 +239,7 @@ class PrepaidCreateOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  参数解释：预付费实例的订购周期类型，当前支持月和年。  取值范围：  - month：月。  - year：年。
+    *  **参数解释**：预付费实例的订购周期类型，当前支持月和年。  **约束限制**：不涉及  **取值范围**：  - month：月  - year：年 **默认取值**：不涉及
     *
     * @return string
     */
@@ -251,7 +251,7 @@ class PrepaidCreateOption implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param string $periodType 参数解释：预付费实例的订购周期类型，当前支持月和年。  取值范围：  - month：月。  - year：年。
+    * @param string $periodType **参数解释**：预付费实例的订购周期类型，当前支持月和年。  **约束限制**：不涉及  **取值范围**：  - month：月  - year：年 **默认取值**：不涉及
     *
     * @return $this
     */
@@ -263,7 +263,7 @@ class PrepaidCreateOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodNum
-    *  参数解释：预付费实例的订购周期数。  取值范围： - period_type为month时，为[1,9]。 - period_type为year时，为[1,3]。
+    *  **参数解释**：预付费实例的订购周期数。  **约束限制**：不涉及  **取值范围**： - period_type为month时，为[1,9]。 - period_type为year时，为[1,3]。  **默认取值**：不涉及
     *
     * @return int|null
     */
@@ -275,7 +275,7 @@ class PrepaidCreateOption implements ModelInterface, ArrayAccess
     /**
     * Sets periodNum
     *
-    * @param int|null $periodNum 参数解释：预付费实例的订购周期数。  取值范围： - period_type为month时，为[1,9]。 - period_type为year时，为[1,3]。
+    * @param int|null $periodNum **参数解释**：预付费实例的订购周期数。  **约束限制**：不涉及  **取值范围**： - period_type为month时，为[1,9]。 - period_type为year时，为[1,3]。  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -287,7 +287,7 @@ class PrepaidCreateOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoRenew
-    *  参数解释：自动续订开关。  取值范围： - true：开启自动续订。 - false：关闭自动续订。
+    *  **参数解释**：自动续订开关。  **约束限制**：不涉及  **取值范围**： - true：开启自动续订。 - false：关闭自动续订。  **默认取值**：不涉及
     *
     * @return bool|null
     */
@@ -299,7 +299,7 @@ class PrepaidCreateOption implements ModelInterface, ArrayAccess
     /**
     * Sets autoRenew
     *
-    * @param bool|null $autoRenew 参数解释：自动续订开关。  取值范围： - true：开启自动续订。 - false：关闭自动续订。
+    * @param bool|null $autoRenew **参数解释**：自动续订开关。  **约束限制**：不涉及  **取值范围**： - true：开启自动续订。 - false：关闭自动续订。  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -311,7 +311,7 @@ class PrepaidCreateOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoPay
-    *  参数解释：自动支付开关。下单订购后，是否自动从客户的账户中支付。  约束限制：开启自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择关闭自动支付，然后在用户费用中心，选择代金券支付。  取值范围：  - true：开启自动支付。  - false：关闭自动支付。
+    *  **参数解释**：自动支付开关。下单订购后，是否自动从客户的账户中支付。  **约束限制**：开启自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择关闭自动支付，然后在用户费用中心，选择代金券支付。  **取值范围**：  - true：开启自动支付。  - false：关闭自动支付。  **默认取值**：不涉及
     *
     * @return bool|null
     */
@@ -323,7 +323,7 @@ class PrepaidCreateOption implements ModelInterface, ArrayAccess
     /**
     * Sets autoPay
     *
-    * @param bool|null $autoPay 参数解释：自动支付开关。下单订购后，是否自动从客户的账户中支付。  约束限制：开启自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择关闭自动支付，然后在用户费用中心，选择代金券支付。  取值范围：  - true：开启自动支付。  - false：关闭自动支付。
+    * @param bool|null $autoPay **参数解释**：自动支付开关。下单订购后，是否自动从客户的账户中支付。  **约束限制**：开启自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择关闭自动支付，然后在用户费用中心，选择代金券支付。  **取值范围**：  - true：开启自动支付。  - false：关闭自动支付。  **默认取值**：不涉及
     *
     * @return $this
     */

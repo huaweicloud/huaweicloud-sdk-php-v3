@@ -1,0 +1,341 @@
+<?php
+
+namespace HuaweiCloud\SDK\Das\V3\Model;
+
+use \ArrayAccess;
+use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
+use HuaweiCloud\SDK\Core\Utils\ModelInterface;
+use HuaweiCloud\SDK\Core\SdkResponse;
+
+class CreateShareConnectionsRequestBody implements ModelInterface, ArrayAccess
+{
+    const DISCRIMINATOR = null;
+
+    /**
+    * The original name of the model.
+    *
+    * @var string
+    */
+    protected static $openAPIModelName = 'CreateShareConnectionsRequestBody';
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    * sharedConnId  共享连接ID
+    * expiredTime  过期时间
+    * users  用户
+    *
+    * @var string[]
+    */
+    protected static $openAPITypes = [
+            'sharedConnId' => 'string',
+            'expiredTime' => 'string',
+            'users' => '\HuaweiCloud\SDK\Das\V3\Model\ShareConnUserInfo[]'
+    ];
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    * sharedConnId  共享连接ID
+    * expiredTime  过期时间
+    * users  用户
+    *
+    * @var string[]
+    */
+    protected static $openAPIFormats = [
+        'sharedConnId' => null,
+        'expiredTime' => null,
+        'users' => null
+    ];
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPITypes()
+    {
+        return self::$openAPITypes;
+    }
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPIFormats()
+    {
+        return self::$openAPIFormats;
+    }
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    * sharedConnId  共享连接ID
+    * expiredTime  过期时间
+    * users  用户
+    *
+    * @var string[]
+    */
+    protected static $attributeMap = [
+            'sharedConnId' => 'shared_conn_id',
+            'expiredTime' => 'expired_time',
+            'users' => 'users'
+    ];
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    * sharedConnId  共享连接ID
+    * expiredTime  过期时间
+    * users  用户
+    *
+    * @var string[]
+    */
+    protected static $setters = [
+            'sharedConnId' => 'setSharedConnId',
+            'expiredTime' => 'setExpiredTime',
+            'users' => 'setUsers'
+    ];
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    * sharedConnId  共享连接ID
+    * expiredTime  过期时间
+    * users  用户
+    *
+    * @var string[]
+    */
+    protected static $getters = [
+            'sharedConnId' => 'getSharedConnId',
+            'expiredTime' => 'getExpiredTime',
+            'users' => 'getUsers'
+    ];
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    *
+    * @return array
+    */
+    public static function attributeMap()
+    {
+        return self::$attributeMap;
+    }
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    *
+    * @return array
+    */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    *
+    * @return array
+    */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+    * The original name of the model.
+    *
+    * @return string
+    */
+    public function getModelName()
+    {
+        return self::$openAPIModelName;
+    }
+    
+
+
+    /**
+    * Associative array for storing property values
+    *
+    * @var mixed[]
+    */
+    protected $container = [];
+
+    /**
+    * Constructor
+    *
+    * @param mixed[] $data Associated array of property values
+    *                      initializing the model
+    */
+    public function __construct(array $data = null)
+    {
+        $this->container['sharedConnId'] = isset($data['sharedConnId']) ? $data['sharedConnId'] : null;
+        $this->container['expiredTime'] = isset($data['expiredTime']) ? $data['expiredTime'] : null;
+        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
+    }
+
+    /**
+    * Show all the invalid properties with reasons.
+    *
+    * @return array invalid properties with reasons
+    */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+        if ($this->container['sharedConnId'] === null) {
+            $invalidProperties[] = "'sharedConnId' can't be null";
+        }
+        if ($this->container['users'] === null) {
+            $invalidProperties[] = "'users' can't be null";
+        }
+        return $invalidProperties;
+    }
+
+    /**
+    * Validate all the properties in the model
+    * return true if all passed
+    *
+    * @return bool True if all properties are valid
+    */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets sharedConnId
+    *  共享连接ID
+    *
+    * @return string
+    */
+    public function getSharedConnId()
+    {
+        return $this->container['sharedConnId'];
+    }
+
+    /**
+    * Sets sharedConnId
+    *
+    * @param string $sharedConnId 共享连接ID
+    *
+    * @return $this
+    */
+    public function setSharedConnId($sharedConnId)
+    {
+        $this->container['sharedConnId'] = $sharedConnId;
+        return $this;
+    }
+
+    /**
+    * Gets expiredTime
+    *  过期时间
+    *
+    * @return string|null
+    */
+    public function getExpiredTime()
+    {
+        return $this->container['expiredTime'];
+    }
+
+    /**
+    * Sets expiredTime
+    *
+    * @param string|null $expiredTime 过期时间
+    *
+    * @return $this
+    */
+    public function setExpiredTime($expiredTime)
+    {
+        $this->container['expiredTime'] = $expiredTime;
+        return $this;
+    }
+
+    /**
+    * Gets users
+    *  用户
+    *
+    * @return \HuaweiCloud\SDK\Das\V3\Model\ShareConnUserInfo[]
+    */
+    public function getUsers()
+    {
+        return $this->container['users'];
+    }
+
+    /**
+    * Sets users
+    *
+    * @param \HuaweiCloud\SDK\Das\V3\Model\ShareConnUserInfo[] $users 用户
+    *
+    * @return $this
+    */
+    public function setUsers($users)
+    {
+        $this->container['users'] = $users;
+        return $this;
+    }
+
+    /**
+    * Returns true if offset exists. False otherwise.
+    *
+    * @param integer $offset Offset
+    *
+    * @return boolean
+    */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+    * Gets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return mixed
+    */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+    * Sets value based on offset.
+    *
+    * @param integer $offset Offset
+    * @param mixed   $value  Value to be set
+    *
+    * @return void
+    */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+                $this->container[] = $value;
+            } else {
+                $this->container[$offset] = $value;
+        }
+    }
+
+    /**
+    * Unsets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return void
+    */
+    public function offsetUnset($offset)
+    {
+        unset($this->container[$offset]);
+    }
+
+    /**
+    * Gets the string presentation of the object
+    *
+    * @return string
+    */
+    public function __toString()
+    {
+        return json_encode(
+            ObjectSerializer::sanitizeForSerialization($this),
+            JSON_PRETTY_PRINT
+        );
+    }
+}
+

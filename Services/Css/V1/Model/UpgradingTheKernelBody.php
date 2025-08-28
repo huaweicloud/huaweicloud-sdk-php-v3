@@ -24,7 +24,8 @@ class UpgradingTheKernelBody implements ModelInterface, ArrayAccess
     * upgradeType  升级类型。 - same：同版本。 - cross：跨版本。
     * indicesBackupCheck  是否进行备份校验。 - true：进行校验。 - false：不进行校验。
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
-    * checkLoad  是否校验负载。默认为true。 - true：进行校验。 - false：不进行校验。
+    * clusterLoadCheck  是否校验负载。默认为true。 - true：进行校验。 - false：不进行校验。
+    * batchSize  数据节点迁移数据并发度。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class UpgradingTheKernelBody implements ModelInterface, ArrayAccess
             'upgradeType' => 'string',
             'indicesBackupCheck' => 'bool',
             'agency' => 'string',
-            'checkLoad' => 'bool'
+            'clusterLoadCheck' => 'bool',
+            'batchSize' => 'int'
     ];
 
     /**
@@ -42,7 +44,8 @@ class UpgradingTheKernelBody implements ModelInterface, ArrayAccess
     * upgradeType  升级类型。 - same：同版本。 - cross：跨版本。
     * indicesBackupCheck  是否进行备份校验。 - true：进行校验。 - false：不进行校验。
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
-    * checkLoad  是否校验负载。默认为true。 - true：进行校验。 - false：不进行校验。
+    * clusterLoadCheck  是否校验负载。默认为true。 - true：进行校验。 - false：不进行校验。
+    * batchSize  数据节点迁移数据并发度。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class UpgradingTheKernelBody implements ModelInterface, ArrayAccess
         'upgradeType' => null,
         'indicesBackupCheck' => null,
         'agency' => null,
-        'checkLoad' => null
+        'clusterLoadCheck' => null,
+        'batchSize' => 'int32'
     ];
 
     /**
@@ -81,7 +85,8 @@ class UpgradingTheKernelBody implements ModelInterface, ArrayAccess
     * upgradeType  升级类型。 - same：同版本。 - cross：跨版本。
     * indicesBackupCheck  是否进行备份校验。 - true：进行校验。 - false：不进行校验。
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
-    * checkLoad  是否校验负载。默认为true。 - true：进行校验。 - false：不进行校验。
+    * clusterLoadCheck  是否校验负载。默认为true。 - true：进行校验。 - false：不进行校验。
+    * batchSize  数据节点迁移数据并发度。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class UpgradingTheKernelBody implements ModelInterface, ArrayAccess
             'upgradeType' => 'upgrade_type',
             'indicesBackupCheck' => 'indices_backup_check',
             'agency' => 'agency',
-            'checkLoad' => 'check_load'
+            'clusterLoadCheck' => 'cluster_load_check',
+            'batchSize' => 'batch_size'
     ];
 
     /**
@@ -99,7 +105,8 @@ class UpgradingTheKernelBody implements ModelInterface, ArrayAccess
     * upgradeType  升级类型。 - same：同版本。 - cross：跨版本。
     * indicesBackupCheck  是否进行备份校验。 - true：进行校验。 - false：不进行校验。
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
-    * checkLoad  是否校验负载。默认为true。 - true：进行校验。 - false：不进行校验。
+    * clusterLoadCheck  是否校验负载。默认为true。 - true：进行校验。 - false：不进行校验。
+    * batchSize  数据节点迁移数据并发度。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class UpgradingTheKernelBody implements ModelInterface, ArrayAccess
             'upgradeType' => 'setUpgradeType',
             'indicesBackupCheck' => 'setIndicesBackupCheck',
             'agency' => 'setAgency',
-            'checkLoad' => 'setCheckLoad'
+            'clusterLoadCheck' => 'setClusterLoadCheck',
+            'batchSize' => 'setBatchSize'
     ];
 
     /**
@@ -117,7 +125,8 @@ class UpgradingTheKernelBody implements ModelInterface, ArrayAccess
     * upgradeType  升级类型。 - same：同版本。 - cross：跨版本。
     * indicesBackupCheck  是否进行备份校验。 - true：进行校验。 - false：不进行校验。
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
-    * checkLoad  是否校验负载。默认为true。 - true：进行校验。 - false：不进行校验。
+    * clusterLoadCheck  是否校验负载。默认为true。 - true：进行校验。 - false：不进行校验。
+    * batchSize  数据节点迁移数据并发度。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class UpgradingTheKernelBody implements ModelInterface, ArrayAccess
             'upgradeType' => 'getUpgradeType',
             'indicesBackupCheck' => 'getIndicesBackupCheck',
             'agency' => 'getAgency',
-            'checkLoad' => 'getCheckLoad'
+            'clusterLoadCheck' => 'getClusterLoadCheck',
+            'batchSize' => 'getBatchSize'
     ];
 
     /**
@@ -206,7 +216,8 @@ class UpgradingTheKernelBody implements ModelInterface, ArrayAccess
         $this->container['upgradeType'] = isset($data['upgradeType']) ? $data['upgradeType'] : null;
         $this->container['indicesBackupCheck'] = isset($data['indicesBackupCheck']) ? $data['indicesBackupCheck'] : null;
         $this->container['agency'] = isset($data['agency']) ? $data['agency'] : null;
-        $this->container['checkLoad'] = isset($data['checkLoad']) ? $data['checkLoad'] : null;
+        $this->container['clusterLoadCheck'] = isset($data['clusterLoadCheck']) ? $data['clusterLoadCheck'] : null;
+        $this->container['batchSize'] = isset($data['batchSize']) ? $data['batchSize'] : null;
     }
 
     /**
@@ -348,26 +359,50 @@ class UpgradingTheKernelBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets checkLoad
+    * Gets clusterLoadCheck
     *  是否校验负载。默认为true。 - true：进行校验。 - false：不进行校验。
     *
     * @return bool|null
     */
-    public function getCheckLoad()
+    public function getClusterLoadCheck()
     {
-        return $this->container['checkLoad'];
+        return $this->container['clusterLoadCheck'];
     }
 
     /**
-    * Sets checkLoad
+    * Sets clusterLoadCheck
     *
-    * @param bool|null $checkLoad 是否校验负载。默认为true。 - true：进行校验。 - false：不进行校验。
+    * @param bool|null $clusterLoadCheck 是否校验负载。默认为true。 - true：进行校验。 - false：不进行校验。
     *
     * @return $this
     */
-    public function setCheckLoad($checkLoad)
+    public function setClusterLoadCheck($clusterLoadCheck)
     {
-        $this->container['checkLoad'] = $checkLoad;
+        $this->container['clusterLoadCheck'] = $clusterLoadCheck;
+        return $this;
+    }
+
+    /**
+    * Gets batchSize
+    *  数据节点迁移数据并发度。
+    *
+    * @return int|null
+    */
+    public function getBatchSize()
+    {
+        return $this->container['batchSize'];
+    }
+
+    /**
+    * Sets batchSize
+    *
+    * @param int|null $batchSize 数据节点迁移数据并发度。
+    *
+    * @return $this
+    */
+    public function setBatchSize($batchSize)
+    {
+        $this->container['batchSize'] = $batchSize;
         return $this;
     }
 

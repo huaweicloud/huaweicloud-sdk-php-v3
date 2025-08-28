@@ -30,6 +30,10 @@ class CustomerAccountChangeRecord implements ModelInterface, ArrayAccess
     * billCycle  |参数名称：账期| |参数约束及描述：账期|
     * paymentChannelId  |参数名称：交易渠道| |参数约束及描述：交易渠道|
     * paymentChannelNo  |参数名称：交易渠道流水号| |参数约束及描述：交易渠道流水号|
+    * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包年/包月：与账单交易时间一致（交易类型为调帐时为账单的计费开始时间和结束时间），按需/分期：为账单的计费开始时间和结束时间。|
+    * accountName  |参数名称：账号名称| |参数约束及描述：账号名称，范围限制：0-128|
+    * cloudServiceTypeName  |参数名称：云服务类型名称| |参数约束及描述：产品的云服务名称，范围限制：0-200|
+    * resourceTypeName  |参数名称：资源类型名称，该字段为预留字段。| |参数约束及描述：产品的资源类型名称，范围限制：0-200|
     *
     * @var string[]
     */
@@ -43,7 +47,11 @@ class CustomerAccountChangeRecord implements ModelInterface, ArrayAccess
             'revenueExpenseType' => 'string',
             'billCycle' => 'string',
             'paymentChannelId' => 'string',
-            'paymentChannelNo' => 'string'
+            'paymentChannelNo' => 'string',
+            'consumeTime' => 'string',
+            'accountName' => 'string',
+            'cloudServiceTypeName' => 'string',
+            'resourceTypeName' => 'string'
     ];
 
     /**
@@ -58,6 +66,10 @@ class CustomerAccountChangeRecord implements ModelInterface, ArrayAccess
     * billCycle  |参数名称：账期| |参数约束及描述：账期|
     * paymentChannelId  |参数名称：交易渠道| |参数约束及描述：交易渠道|
     * paymentChannelNo  |参数名称：交易渠道流水号| |参数约束及描述：交易渠道流水号|
+    * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包年/包月：与账单交易时间一致（交易类型为调帐时为账单的计费开始时间和结束时间），按需/分期：为账单的计费开始时间和结束时间。|
+    * accountName  |参数名称：账号名称| |参数约束及描述：账号名称，范围限制：0-128|
+    * cloudServiceTypeName  |参数名称：云服务类型名称| |参数约束及描述：产品的云服务名称，范围限制：0-200|
+    * resourceTypeName  |参数名称：资源类型名称，该字段为预留字段。| |参数约束及描述：产品的资源类型名称，范围限制：0-200|
     *
     * @var string[]
     */
@@ -71,7 +83,11 @@ class CustomerAccountChangeRecord implements ModelInterface, ArrayAccess
         'revenueExpenseType' => null,
         'billCycle' => null,
         'paymentChannelId' => null,
-        'paymentChannelNo' => null
+        'paymentChannelNo' => null,
+        'consumeTime' => null,
+        'accountName' => null,
+        'cloudServiceTypeName' => null,
+        'resourceTypeName' => null
     ];
 
     /**
@@ -107,6 +123,10 @@ class CustomerAccountChangeRecord implements ModelInterface, ArrayAccess
     * billCycle  |参数名称：账期| |参数约束及描述：账期|
     * paymentChannelId  |参数名称：交易渠道| |参数约束及描述：交易渠道|
     * paymentChannelNo  |参数名称：交易渠道流水号| |参数约束及描述：交易渠道流水号|
+    * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包年/包月：与账单交易时间一致（交易类型为调帐时为账单的计费开始时间和结束时间），按需/分期：为账单的计费开始时间和结束时间。|
+    * accountName  |参数名称：账号名称| |参数约束及描述：账号名称，范围限制：0-128|
+    * cloudServiceTypeName  |参数名称：云服务类型名称| |参数约束及描述：产品的云服务名称，范围限制：0-200|
+    * resourceTypeName  |参数名称：资源类型名称，该字段为预留字段。| |参数约束及描述：产品的资源类型名称，范围限制：0-200|
     *
     * @var string[]
     */
@@ -120,7 +140,11 @@ class CustomerAccountChangeRecord implements ModelInterface, ArrayAccess
             'revenueExpenseType' => 'revenue_expense_type',
             'billCycle' => 'bill_cycle',
             'paymentChannelId' => 'payment_channel_id',
-            'paymentChannelNo' => 'payment_channel_no'
+            'paymentChannelNo' => 'payment_channel_no',
+            'consumeTime' => 'consume_time',
+            'accountName' => 'account_name',
+            'cloudServiceTypeName' => 'cloud_service_type_name',
+            'resourceTypeName' => 'resource_type_name'
     ];
 
     /**
@@ -135,6 +159,10 @@ class CustomerAccountChangeRecord implements ModelInterface, ArrayAccess
     * billCycle  |参数名称：账期| |参数约束及描述：账期|
     * paymentChannelId  |参数名称：交易渠道| |参数约束及描述：交易渠道|
     * paymentChannelNo  |参数名称：交易渠道流水号| |参数约束及描述：交易渠道流水号|
+    * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包年/包月：与账单交易时间一致（交易类型为调帐时为账单的计费开始时间和结束时间），按需/分期：为账单的计费开始时间和结束时间。|
+    * accountName  |参数名称：账号名称| |参数约束及描述：账号名称，范围限制：0-128|
+    * cloudServiceTypeName  |参数名称：云服务类型名称| |参数约束及描述：产品的云服务名称，范围限制：0-200|
+    * resourceTypeName  |参数名称：资源类型名称，该字段为预留字段。| |参数约束及描述：产品的资源类型名称，范围限制：0-200|
     *
     * @var string[]
     */
@@ -148,7 +176,11 @@ class CustomerAccountChangeRecord implements ModelInterface, ArrayAccess
             'revenueExpenseType' => 'setRevenueExpenseType',
             'billCycle' => 'setBillCycle',
             'paymentChannelId' => 'setPaymentChannelId',
-            'paymentChannelNo' => 'setPaymentChannelNo'
+            'paymentChannelNo' => 'setPaymentChannelNo',
+            'consumeTime' => 'setConsumeTime',
+            'accountName' => 'setAccountName',
+            'cloudServiceTypeName' => 'setCloudServiceTypeName',
+            'resourceTypeName' => 'setResourceTypeName'
     ];
 
     /**
@@ -163,6 +195,10 @@ class CustomerAccountChangeRecord implements ModelInterface, ArrayAccess
     * billCycle  |参数名称：账期| |参数约束及描述：账期|
     * paymentChannelId  |参数名称：交易渠道| |参数约束及描述：交易渠道|
     * paymentChannelNo  |参数名称：交易渠道流水号| |参数约束及描述：交易渠道流水号|
+    * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包年/包月：与账单交易时间一致（交易类型为调帐时为账单的计费开始时间和结束时间），按需/分期：为账单的计费开始时间和结束时间。|
+    * accountName  |参数名称：账号名称| |参数约束及描述：账号名称，范围限制：0-128|
+    * cloudServiceTypeName  |参数名称：云服务类型名称| |参数约束及描述：产品的云服务名称，范围限制：0-200|
+    * resourceTypeName  |参数名称：资源类型名称，该字段为预留字段。| |参数约束及描述：产品的资源类型名称，范围限制：0-200|
     *
     * @var string[]
     */
@@ -176,7 +212,11 @@ class CustomerAccountChangeRecord implements ModelInterface, ArrayAccess
             'revenueExpenseType' => 'getRevenueExpenseType',
             'billCycle' => 'getBillCycle',
             'paymentChannelId' => 'getPaymentChannelId',
-            'paymentChannelNo' => 'getPaymentChannelNo'
+            'paymentChannelNo' => 'getPaymentChannelNo',
+            'consumeTime' => 'getConsumeTime',
+            'accountName' => 'getAccountName',
+            'cloudServiceTypeName' => 'getCloudServiceTypeName',
+            'resourceTypeName' => 'getResourceTypeName'
     ];
 
     /**
@@ -247,6 +287,10 @@ class CustomerAccountChangeRecord implements ModelInterface, ArrayAccess
         $this->container['billCycle'] = isset($data['billCycle']) ? $data['billCycle'] : null;
         $this->container['paymentChannelId'] = isset($data['paymentChannelId']) ? $data['paymentChannelId'] : null;
         $this->container['paymentChannelNo'] = isset($data['paymentChannelNo']) ? $data['paymentChannelNo'] : null;
+        $this->container['consumeTime'] = isset($data['consumeTime']) ? $data['consumeTime'] : null;
+        $this->container['accountName'] = isset($data['accountName']) ? $data['accountName'] : null;
+        $this->container['cloudServiceTypeName'] = isset($data['cloudServiceTypeName']) ? $data['cloudServiceTypeName'] : null;
+        $this->container['resourceTypeName'] = isset($data['resourceTypeName']) ? $data['resourceTypeName'] : null;
     }
 
     /**
@@ -508,6 +552,102 @@ class CustomerAccountChangeRecord implements ModelInterface, ArrayAccess
     public function setPaymentChannelNo($paymentChannelNo)
     {
         $this->container['paymentChannelNo'] = $paymentChannelNo;
+        return $this;
+    }
+
+    /**
+    * Gets consumeTime
+    *  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包年/包月：与账单交易时间一致（交易类型为调帐时为账单的计费开始时间和结束时间），按需/分期：为账单的计费开始时间和结束时间。|
+    *
+    * @return string|null
+    */
+    public function getConsumeTime()
+    {
+        return $this->container['consumeTime'];
+    }
+
+    /**
+    * Sets consumeTime
+    *
+    * @param string|null $consumeTime |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包年/包月：与账单交易时间一致（交易类型为调帐时为账单的计费开始时间和结束时间），按需/分期：为账单的计费开始时间和结束时间。|
+    *
+    * @return $this
+    */
+    public function setConsumeTime($consumeTime)
+    {
+        $this->container['consumeTime'] = $consumeTime;
+        return $this;
+    }
+
+    /**
+    * Gets accountName
+    *  |参数名称：账号名称| |参数约束及描述：账号名称，范围限制：0-128|
+    *
+    * @return string|null
+    */
+    public function getAccountName()
+    {
+        return $this->container['accountName'];
+    }
+
+    /**
+    * Sets accountName
+    *
+    * @param string|null $accountName |参数名称：账号名称| |参数约束及描述：账号名称，范围限制：0-128|
+    *
+    * @return $this
+    */
+    public function setAccountName($accountName)
+    {
+        $this->container['accountName'] = $accountName;
+        return $this;
+    }
+
+    /**
+    * Gets cloudServiceTypeName
+    *  |参数名称：云服务类型名称| |参数约束及描述：产品的云服务名称，范围限制：0-200|
+    *
+    * @return string|null
+    */
+    public function getCloudServiceTypeName()
+    {
+        return $this->container['cloudServiceTypeName'];
+    }
+
+    /**
+    * Sets cloudServiceTypeName
+    *
+    * @param string|null $cloudServiceTypeName |参数名称：云服务类型名称| |参数约束及描述：产品的云服务名称，范围限制：0-200|
+    *
+    * @return $this
+    */
+    public function setCloudServiceTypeName($cloudServiceTypeName)
+    {
+        $this->container['cloudServiceTypeName'] = $cloudServiceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets resourceTypeName
+    *  |参数名称：资源类型名称，该字段为预留字段。| |参数约束及描述：产品的资源类型名称，范围限制：0-200|
+    *
+    * @return string|null
+    */
+    public function getResourceTypeName()
+    {
+        return $this->container['resourceTypeName'];
+    }
+
+    /**
+    * Sets resourceTypeName
+    *
+    * @param string|null $resourceTypeName |参数名称：资源类型名称，该字段为预留字段。| |参数约束及描述：产品的资源类型名称，范围限制：0-200|
+    *
+    * @return $this
+    */
+    public function setResourceTypeName($resourceTypeName)
+    {
+        $this->container['resourceTypeName'] = $resourceTypeName;
         return $this;
     }
 

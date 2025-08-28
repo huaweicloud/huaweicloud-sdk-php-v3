@@ -21,7 +21,7 @@ class ShowIpGroupRelatedListenersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * listeners  IP地址组关联的所有监听器ID列表
+    * listeners  **参数解释**：IP地址组关联的所有监听器ID列表。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowIpGroupRelatedListenersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * listeners  IP地址组关联的所有监听器ID列表
+    * listeners  **参数解释**：IP地址组关联的所有监听器ID列表。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowIpGroupRelatedListenersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * listeners  IP地址组关联的所有监听器ID列表
+    * listeners  **参数解释**：IP地址组关联的所有监听器ID列表。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowIpGroupRelatedListenersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * listeners  IP地址组关联的所有监听器ID列表
+    * listeners  **参数解释**：IP地址组关联的所有监听器ID列表。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowIpGroupRelatedListenersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * listeners  IP地址组关联的所有监听器ID列表
+    * listeners  **参数解释**：IP地址组关联的所有监听器ID列表。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowIpGroupRelatedListenersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets listeners
-    *  IP地址组关联的所有监听器ID列表
+    *  **参数解释**：IP地址组关联的所有监听器ID列表。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[]|null
     */
@@ -187,7 +187,7 @@ class ShowIpGroupRelatedListenersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets listeners
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[]|null $listeners IP地址组关联的所有监听器ID列表
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[]|null $listeners **参数解释**：IP地址组关联的所有监听器ID列表。
     *
     * @return $this
     */

@@ -20,11 +20,11 @@ class LoadBalancerStatusMember implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * provisioningStatus  后端服务器配置状态。取值：ACTIVE表示使用中。
-    * address  后端服务器的IP地址。
-    * protocolPort  后端服务器的端口号。取值范围[1, 65535]。
-    * id  后端服务器ID。
-    * operatingStatus  后端服务器的操作状态。  取值： - ONLINE：后端服务器正常运行。 - NO_MONITOR：后端服务器健康检查未开启。 - DISABLED：后端服务器不可用。所属负载均衡器或后端服务器组或该后端服务器的admin_state_up=false时， 会出现该状态。注意该状态仅在当前接口中返回。 - OFFLINE：关联ECS已下线。
+    * provisioningStatus  **参数解释**：后端服务器配置状态。  **取值范围**：ACTIVE表示使用中。
+    * address  **参数解释**：后端服务器的IP地址。  **取值范围**：不涉及
+    * protocolPort  **参数解释**：后端服务器的端口号。  **取值范围**：1-65535
+    * id  **参数解释**：后端服务器ID。  **取值范围**：不涉及
+    * operatingStatus  **参数解释**：后端服务器的操作状态。  **取值范围**： - ONLINE：后端服务器正常运行。 - NO_MONITOR：后端服务器健康检查未开启。 - DISABLED：后端服务器不可用。所属负载均衡器或后端服务器组或该后端服务器的admin_state_up=false时，会出现该状态。注意该状态仅在当前接口中返回。 - OFFLINE：关联ECS已下线。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class LoadBalancerStatusMember implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * provisioningStatus  后端服务器配置状态。取值：ACTIVE表示使用中。
-    * address  后端服务器的IP地址。
-    * protocolPort  后端服务器的端口号。取值范围[1, 65535]。
-    * id  后端服务器ID。
-    * operatingStatus  后端服务器的操作状态。  取值： - ONLINE：后端服务器正常运行。 - NO_MONITOR：后端服务器健康检查未开启。 - DISABLED：后端服务器不可用。所属负载均衡器或后端服务器组或该后端服务器的admin_state_up=false时， 会出现该状态。注意该状态仅在当前接口中返回。 - OFFLINE：关联ECS已下线。
+    * provisioningStatus  **参数解释**：后端服务器配置状态。  **取值范围**：ACTIVE表示使用中。
+    * address  **参数解释**：后端服务器的IP地址。  **取值范围**：不涉及
+    * protocolPort  **参数解释**：后端服务器的端口号。  **取值范围**：1-65535
+    * id  **参数解释**：后端服务器ID。  **取值范围**：不涉及
+    * operatingStatus  **参数解释**：后端服务器的操作状态。  **取值范围**： - ONLINE：后端服务器正常运行。 - NO_MONITOR：后端服务器健康检查未开启。 - DISABLED：后端服务器不可用。所属负载均衡器或后端服务器组或该后端服务器的admin_state_up=false时，会出现该状态。注意该状态仅在当前接口中返回。 - OFFLINE：关联ECS已下线。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class LoadBalancerStatusMember implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * provisioningStatus  后端服务器配置状态。取值：ACTIVE表示使用中。
-    * address  后端服务器的IP地址。
-    * protocolPort  后端服务器的端口号。取值范围[1, 65535]。
-    * id  后端服务器ID。
-    * operatingStatus  后端服务器的操作状态。  取值： - ONLINE：后端服务器正常运行。 - NO_MONITOR：后端服务器健康检查未开启。 - DISABLED：后端服务器不可用。所属负载均衡器或后端服务器组或该后端服务器的admin_state_up=false时， 会出现该状态。注意该状态仅在当前接口中返回。 - OFFLINE：关联ECS已下线。
+    * provisioningStatus  **参数解释**：后端服务器配置状态。  **取值范围**：ACTIVE表示使用中。
+    * address  **参数解释**：后端服务器的IP地址。  **取值范围**：不涉及
+    * protocolPort  **参数解释**：后端服务器的端口号。  **取值范围**：1-65535
+    * id  **参数解释**：后端服务器ID。  **取值范围**：不涉及
+    * operatingStatus  **参数解释**：后端服务器的操作状态。  **取值范围**： - ONLINE：后端服务器正常运行。 - NO_MONITOR：后端服务器健康检查未开启。 - DISABLED：后端服务器不可用。所属负载均衡器或后端服务器组或该后端服务器的admin_state_up=false时，会出现该状态。注意该状态仅在当前接口中返回。 - OFFLINE：关联ECS已下线。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class LoadBalancerStatusMember implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * provisioningStatus  后端服务器配置状态。取值：ACTIVE表示使用中。
-    * address  后端服务器的IP地址。
-    * protocolPort  后端服务器的端口号。取值范围[1, 65535]。
-    * id  后端服务器ID。
-    * operatingStatus  后端服务器的操作状态。  取值： - ONLINE：后端服务器正常运行。 - NO_MONITOR：后端服务器健康检查未开启。 - DISABLED：后端服务器不可用。所属负载均衡器或后端服务器组或该后端服务器的admin_state_up=false时， 会出现该状态。注意该状态仅在当前接口中返回。 - OFFLINE：关联ECS已下线。
+    * provisioningStatus  **参数解释**：后端服务器配置状态。  **取值范围**：ACTIVE表示使用中。
+    * address  **参数解释**：后端服务器的IP地址。  **取值范围**：不涉及
+    * protocolPort  **参数解释**：后端服务器的端口号。  **取值范围**：1-65535
+    * id  **参数解释**：后端服务器ID。  **取值范围**：不涉及
+    * operatingStatus  **参数解释**：后端服务器的操作状态。  **取值范围**： - ONLINE：后端服务器正常运行。 - NO_MONITOR：后端服务器健康检查未开启。 - DISABLED：后端服务器不可用。所属负载均衡器或后端服务器组或该后端服务器的admin_state_up=false时，会出现该状态。注意该状态仅在当前接口中返回。 - OFFLINE：关联ECS已下线。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class LoadBalancerStatusMember implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * provisioningStatus  后端服务器配置状态。取值：ACTIVE表示使用中。
-    * address  后端服务器的IP地址。
-    * protocolPort  后端服务器的端口号。取值范围[1, 65535]。
-    * id  后端服务器ID。
-    * operatingStatus  后端服务器的操作状态。  取值： - ONLINE：后端服务器正常运行。 - NO_MONITOR：后端服务器健康检查未开启。 - DISABLED：后端服务器不可用。所属负载均衡器或后端服务器组或该后端服务器的admin_state_up=false时， 会出现该状态。注意该状态仅在当前接口中返回。 - OFFLINE：关联ECS已下线。
+    * provisioningStatus  **参数解释**：后端服务器配置状态。  **取值范围**：ACTIVE表示使用中。
+    * address  **参数解释**：后端服务器的IP地址。  **取值范围**：不涉及
+    * protocolPort  **参数解释**：后端服务器的端口号。  **取值范围**：1-65535
+    * id  **参数解释**：后端服务器ID。  **取值范围**：不涉及
+    * operatingStatus  **参数解释**：后端服务器的操作状态。  **取值范围**： - ONLINE：后端服务器正常运行。 - NO_MONITOR：后端服务器健康检查未开启。 - DISABLED：后端服务器不可用。所属负载均衡器或后端服务器组或该后端服务器的admin_state_up=false时，会出现该状态。注意该状态仅在当前接口中返回。 - OFFLINE：关联ECS已下线。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class LoadBalancerStatusMember implements ModelInterface, ArrayAccess
 
     /**
     * Gets provisioningStatus
-    *  后端服务器配置状态。取值：ACTIVE表示使用中。
+    *  **参数解释**：后端服务器配置状态。  **取值范围**：ACTIVE表示使用中。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class LoadBalancerStatusMember implements ModelInterface, ArrayAccess
     /**
     * Sets provisioningStatus
     *
-    * @param string|null $provisioningStatus 后端服务器配置状态。取值：ACTIVE表示使用中。
+    * @param string|null $provisioningStatus **参数解释**：后端服务器配置状态。  **取值范围**：ACTIVE表示使用中。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class LoadBalancerStatusMember implements ModelInterface, ArrayAccess
 
     /**
     * Gets address
-    *  后端服务器的IP地址。
+    *  **参数解释**：后端服务器的IP地址。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class LoadBalancerStatusMember implements ModelInterface, ArrayAccess
     /**
     * Sets address
     *
-    * @param string|null $address 后端服务器的IP地址。
+    * @param string|null $address **参数解释**：后端服务器的IP地址。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class LoadBalancerStatusMember implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocolPort
-    *  后端服务器的端口号。取值范围[1, 65535]。
+    *  **参数解释**：后端服务器的端口号。  **取值范围**：1-65535
     *
     * @return int|null
     */
@@ -278,7 +278,7 @@ class LoadBalancerStatusMember implements ModelInterface, ArrayAccess
     /**
     * Sets protocolPort
     *
-    * @param int|null $protocolPort 后端服务器的端口号。取值范围[1, 65535]。
+    * @param int|null $protocolPort **参数解释**：后端服务器的端口号。  **取值范围**：1-65535
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class LoadBalancerStatusMember implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  后端服务器ID。
+    *  **参数解释**：后端服务器ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class LoadBalancerStatusMember implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 后端服务器ID。
+    * @param string|null $id **参数解释**：后端服务器ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class LoadBalancerStatusMember implements ModelInterface, ArrayAccess
 
     /**
     * Gets operatingStatus
-    *  后端服务器的操作状态。  取值： - ONLINE：后端服务器正常运行。 - NO_MONITOR：后端服务器健康检查未开启。 - DISABLED：后端服务器不可用。所属负载均衡器或后端服务器组或该后端服务器的admin_state_up=false时， 会出现该状态。注意该状态仅在当前接口中返回。 - OFFLINE：关联ECS已下线。
+    *  **参数解释**：后端服务器的操作状态。  **取值范围**： - ONLINE：后端服务器正常运行。 - NO_MONITOR：后端服务器健康检查未开启。 - DISABLED：后端服务器不可用。所属负载均衡器或后端服务器组或该后端服务器的admin_state_up=false时，会出现该状态。注意该状态仅在当前接口中返回。 - OFFLINE：关联ECS已下线。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class LoadBalancerStatusMember implements ModelInterface, ArrayAccess
     /**
     * Sets operatingStatus
     *
-    * @param string|null $operatingStatus 后端服务器的操作状态。  取值： - ONLINE：后端服务器正常运行。 - NO_MONITOR：后端服务器健康检查未开启。 - DISABLED：后端服务器不可用。所属负载均衡器或后端服务器组或该后端服务器的admin_state_up=false时， 会出现该状态。注意该状态仅在当前接口中返回。 - OFFLINE：关联ECS已下线。
+    * @param string|null $operatingStatus **参数解释**：后端服务器的操作状态。  **取值范围**： - ONLINE：后端服务器正常运行。 - NO_MONITOR：后端服务器健康检查未开启。 - DISABLED：后端服务器不可用。所属负载均衡器或后端服务器组或该后端服务器的admin_state_up=false时，会出现该状态。注意该状态仅在当前接口中返回。 - OFFLINE：关联ECS已下线。
     *
     * @return $this
     */

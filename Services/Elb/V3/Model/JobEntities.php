@@ -20,8 +20,8 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceId  子任务关联的资源ID
-    * resourceType  子任务关联的资源类型
+    * resourceId  **参数解释**：子任务关联的资源ID。  **取值范围**：不涉及
+    * resourceType  **参数解释**：子任务关联的资源类型。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceId  子任务关联的资源ID
-    * resourceType  子任务关联的资源类型
+    * resourceId  **参数解释**：子任务关联的资源ID。  **取值范围**：不涉及
+    * resourceType  **参数解释**：子任务关联的资源类型。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class JobEntities implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceId  子任务关联的资源ID
-    * resourceType  子任务关联的资源类型
+    * resourceId  **参数解释**：子任务关联的资源ID。  **取值范围**：不涉及
+    * resourceType  **参数解释**：子任务关联的资源类型。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceId  子任务关联的资源ID
-    * resourceType  子任务关联的资源类型
+    * resourceId  **参数解释**：子任务关联的资源ID。  **取值范围**：不涉及
+    * resourceType  **参数解释**：子任务关联的资源类型。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceId  子任务关联的资源ID
-    * resourceType  子任务关联的资源类型
+    * resourceId  **参数解释**：子任务关联的资源ID。  **取值范围**：不涉及
+    * resourceType  **参数解释**：子任务关联的资源类型。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  子任务关联的资源ID
+    *  **参数解释**：子任务关联的资源ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class JobEntities implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 子任务关联的资源ID
+    * @param string|null $resourceId **参数解释**：子任务关联的资源ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  子任务关联的资源类型
+    *  **参数解释**：子任务关联的资源类型。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class JobEntities implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string|null $resourceType 子任务关联的资源类型
+    * @param string|null $resourceType **参数解释**：子任务关联的资源类型。  **取值范围**：不涉及
     *
     * @return $this
     */

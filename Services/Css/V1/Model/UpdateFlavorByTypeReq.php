@@ -20,30 +20,42 @@ class UpdateFlavorByTypeReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * needCheckReplica  是否需要检查副本，取值范围为true或false。默认开启校验。 - true: 开启副本校验。 - false: 忽略副本校验。  >Master和Client节点不是数据节点，因此不需要进行副本校验。即使选择true，也不会进行副本校验。
     * newFlavorId  变更后节点规格ID。 该参数通过[获取实例规格列表](ListFlavors.xml)接口获取，根据name属性所需要的规格，选择对应的flavor_id。 仅支持同一个Esasticsearch引擎版本下的节点规格变更。
+    * operationType  操作类型。
+    * needCheckReplica  是否需要检查副本，取值范围为true或false。默认开启校验。 - true: 开启副本校验。 - false: 忽略副本校验。  >Master和Client节点不是数据节点，因此不需要进行副本校验。即使选择true，也不会进行副本校验。
     * isAutoPay  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。该参数适用于包周期集群。  - 1: 是（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券)。  - 0: 否（需要客户手动去支付，客户可以选择折扣和优惠券）。默认值为“0”。
+    * needCheckClusterStatus  是否需要检查集群状态，取值范围为true或false。默认开启校验。
+    * clusterLoadCheck  是否需要检查集群负载，取值范围为true或false。默认开启校验。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'needCheckReplica' => 'bool',
             'newFlavorId' => 'string',
-            'isAutoPay' => 'int'
+            'operationType' => 'string',
+            'needCheckReplica' => 'bool',
+            'isAutoPay' => 'int',
+            'needCheckClusterStatus' => 'bool',
+            'clusterLoadCheck' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * needCheckReplica  是否需要检查副本，取值范围为true或false。默认开启校验。 - true: 开启副本校验。 - false: 忽略副本校验。  >Master和Client节点不是数据节点，因此不需要进行副本校验。即使选择true，也不会进行副本校验。
     * newFlavorId  变更后节点规格ID。 该参数通过[获取实例规格列表](ListFlavors.xml)接口获取，根据name属性所需要的规格，选择对应的flavor_id。 仅支持同一个Esasticsearch引擎版本下的节点规格变更。
+    * operationType  操作类型。
+    * needCheckReplica  是否需要检查副本，取值范围为true或false。默认开启校验。 - true: 开启副本校验。 - false: 忽略副本校验。  >Master和Client节点不是数据节点，因此不需要进行副本校验。即使选择true，也不会进行副本校验。
     * isAutoPay  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。该参数适用于包周期集群。  - 1: 是（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券)。  - 0: 否（需要客户手动去支付，客户可以选择折扣和优惠券）。默认值为“0”。
+    * needCheckClusterStatus  是否需要检查集群状态，取值范围为true或false。默认开启校验。
+    * clusterLoadCheck  是否需要检查集群负载，取值范围为true或false。默认开启校验。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'needCheckReplica' => null,
         'newFlavorId' => null,
-        'isAutoPay' => null
+        'operationType' => null,
+        'needCheckReplica' => null,
+        'isAutoPay' => null,
+        'needCheckClusterStatus' => null,
+        'clusterLoadCheck' => null
     ];
 
     /**
@@ -69,44 +81,62 @@ class UpdateFlavorByTypeReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * needCheckReplica  是否需要检查副本，取值范围为true或false。默认开启校验。 - true: 开启副本校验。 - false: 忽略副本校验。  >Master和Client节点不是数据节点，因此不需要进行副本校验。即使选择true，也不会进行副本校验。
     * newFlavorId  变更后节点规格ID。 该参数通过[获取实例规格列表](ListFlavors.xml)接口获取，根据name属性所需要的规格，选择对应的flavor_id。 仅支持同一个Esasticsearch引擎版本下的节点规格变更。
+    * operationType  操作类型。
+    * needCheckReplica  是否需要检查副本，取值范围为true或false。默认开启校验。 - true: 开启副本校验。 - false: 忽略副本校验。  >Master和Client节点不是数据节点，因此不需要进行副本校验。即使选择true，也不会进行副本校验。
     * isAutoPay  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。该参数适用于包周期集群。  - 1: 是（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券)。  - 0: 否（需要客户手动去支付，客户可以选择折扣和优惠券）。默认值为“0”。
+    * needCheckClusterStatus  是否需要检查集群状态，取值范围为true或false。默认开启校验。
+    * clusterLoadCheck  是否需要检查集群负载，取值范围为true或false。默认开启校验。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'needCheckReplica' => 'need_check_replica',
             'newFlavorId' => 'new_flavor_id',
-            'isAutoPay' => 'is_auto_pay'
+            'operationType' => 'operation_type',
+            'needCheckReplica' => 'need_check_replica',
+            'isAutoPay' => 'is_auto_pay',
+            'needCheckClusterStatus' => 'need_check_cluster_status',
+            'clusterLoadCheck' => 'cluster_load_check'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * needCheckReplica  是否需要检查副本，取值范围为true或false。默认开启校验。 - true: 开启副本校验。 - false: 忽略副本校验。  >Master和Client节点不是数据节点，因此不需要进行副本校验。即使选择true，也不会进行副本校验。
     * newFlavorId  变更后节点规格ID。 该参数通过[获取实例规格列表](ListFlavors.xml)接口获取，根据name属性所需要的规格，选择对应的flavor_id。 仅支持同一个Esasticsearch引擎版本下的节点规格变更。
+    * operationType  操作类型。
+    * needCheckReplica  是否需要检查副本，取值范围为true或false。默认开启校验。 - true: 开启副本校验。 - false: 忽略副本校验。  >Master和Client节点不是数据节点，因此不需要进行副本校验。即使选择true，也不会进行副本校验。
     * isAutoPay  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。该参数适用于包周期集群。  - 1: 是（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券)。  - 0: 否（需要客户手动去支付，客户可以选择折扣和优惠券）。默认值为“0”。
+    * needCheckClusterStatus  是否需要检查集群状态，取值范围为true或false。默认开启校验。
+    * clusterLoadCheck  是否需要检查集群负载，取值范围为true或false。默认开启校验。
     *
     * @var string[]
     */
     protected static $setters = [
-            'needCheckReplica' => 'setNeedCheckReplica',
             'newFlavorId' => 'setNewFlavorId',
-            'isAutoPay' => 'setIsAutoPay'
+            'operationType' => 'setOperationType',
+            'needCheckReplica' => 'setNeedCheckReplica',
+            'isAutoPay' => 'setIsAutoPay',
+            'needCheckClusterStatus' => 'setNeedCheckClusterStatus',
+            'clusterLoadCheck' => 'setClusterLoadCheck'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * needCheckReplica  是否需要检查副本，取值范围为true或false。默认开启校验。 - true: 开启副本校验。 - false: 忽略副本校验。  >Master和Client节点不是数据节点，因此不需要进行副本校验。即使选择true，也不会进行副本校验。
     * newFlavorId  变更后节点规格ID。 该参数通过[获取实例规格列表](ListFlavors.xml)接口获取，根据name属性所需要的规格，选择对应的flavor_id。 仅支持同一个Esasticsearch引擎版本下的节点规格变更。
+    * operationType  操作类型。
+    * needCheckReplica  是否需要检查副本，取值范围为true或false。默认开启校验。 - true: 开启副本校验。 - false: 忽略副本校验。  >Master和Client节点不是数据节点，因此不需要进行副本校验。即使选择true，也不会进行副本校验。
     * isAutoPay  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。该参数适用于包周期集群。  - 1: 是（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券)。  - 0: 否（需要客户手动去支付，客户可以选择折扣和优惠券）。默认值为“0”。
+    * needCheckClusterStatus  是否需要检查集群状态，取值范围为true或false。默认开启校验。
+    * clusterLoadCheck  是否需要检查集群负载，取值范围为true或false。默认开启校验。
     *
     * @var string[]
     */
     protected static $getters = [
-            'needCheckReplica' => 'getNeedCheckReplica',
             'newFlavorId' => 'getNewFlavorId',
-            'isAutoPay' => 'getIsAutoPay'
+            'operationType' => 'getOperationType',
+            'needCheckReplica' => 'getNeedCheckReplica',
+            'isAutoPay' => 'getIsAutoPay',
+            'needCheckClusterStatus' => 'getNeedCheckClusterStatus',
+            'clusterLoadCheck' => 'getClusterLoadCheck'
     ];
 
     /**
@@ -167,9 +197,12 @@ class UpdateFlavorByTypeReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['needCheckReplica'] = isset($data['needCheckReplica']) ? $data['needCheckReplica'] : null;
         $this->container['newFlavorId'] = isset($data['newFlavorId']) ? $data['newFlavorId'] : null;
+        $this->container['operationType'] = isset($data['operationType']) ? $data['operationType'] : null;
+        $this->container['needCheckReplica'] = isset($data['needCheckReplica']) ? $data['needCheckReplica'] : null;
         $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : null;
+        $this->container['needCheckClusterStatus'] = isset($data['needCheckClusterStatus']) ? $data['needCheckClusterStatus'] : null;
+        $this->container['clusterLoadCheck'] = isset($data['clusterLoadCheck']) ? $data['clusterLoadCheck'] : null;
     }
 
     /**
@@ -198,30 +231,6 @@ class UpdateFlavorByTypeReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets needCheckReplica
-    *  是否需要检查副本，取值范围为true或false。默认开启校验。 - true: 开启副本校验。 - false: 忽略副本校验。  >Master和Client节点不是数据节点，因此不需要进行副本校验。即使选择true，也不会进行副本校验。
-    *
-    * @return bool|null
-    */
-    public function getNeedCheckReplica()
-    {
-        return $this->container['needCheckReplica'];
-    }
-
-    /**
-    * Sets needCheckReplica
-    *
-    * @param bool|null $needCheckReplica 是否需要检查副本，取值范围为true或false。默认开启校验。 - true: 开启副本校验。 - false: 忽略副本校验。  >Master和Client节点不是数据节点，因此不需要进行副本校验。即使选择true，也不会进行副本校验。
-    *
-    * @return $this
-    */
-    public function setNeedCheckReplica($needCheckReplica)
-    {
-        $this->container['needCheckReplica'] = $needCheckReplica;
-        return $this;
-    }
-
-    /**
     * Gets newFlavorId
     *  变更后节点规格ID。 该参数通过[获取实例规格列表](ListFlavors.xml)接口获取，根据name属性所需要的规格，选择对应的flavor_id。 仅支持同一个Esasticsearch引擎版本下的节点规格变更。
     *
@@ -246,6 +255,54 @@ class UpdateFlavorByTypeReq implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets operationType
+    *  操作类型。
+    *
+    * @return string|null
+    */
+    public function getOperationType()
+    {
+        return $this->container['operationType'];
+    }
+
+    /**
+    * Sets operationType
+    *
+    * @param string|null $operationType 操作类型。
+    *
+    * @return $this
+    */
+    public function setOperationType($operationType)
+    {
+        $this->container['operationType'] = $operationType;
+        return $this;
+    }
+
+    /**
+    * Gets needCheckReplica
+    *  是否需要检查副本，取值范围为true或false。默认开启校验。 - true: 开启副本校验。 - false: 忽略副本校验。  >Master和Client节点不是数据节点，因此不需要进行副本校验。即使选择true，也不会进行副本校验。
+    *
+    * @return bool|null
+    */
+    public function getNeedCheckReplica()
+    {
+        return $this->container['needCheckReplica'];
+    }
+
+    /**
+    * Sets needCheckReplica
+    *
+    * @param bool|null $needCheckReplica 是否需要检查副本，取值范围为true或false。默认开启校验。 - true: 开启副本校验。 - false: 忽略副本校验。  >Master和Client节点不是数据节点，因此不需要进行副本校验。即使选择true，也不会进行副本校验。
+    *
+    * @return $this
+    */
+    public function setNeedCheckReplica($needCheckReplica)
+    {
+        $this->container['needCheckReplica'] = $needCheckReplica;
+        return $this;
+    }
+
+    /**
     * Gets isAutoPay
     *  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。该参数适用于包周期集群。  - 1: 是（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券)。  - 0: 否（需要客户手动去支付，客户可以选择折扣和优惠券）。默认值为“0”。
     *
@@ -266,6 +323,54 @@ class UpdateFlavorByTypeReq implements ModelInterface, ArrayAccess
     public function setIsAutoPay($isAutoPay)
     {
         $this->container['isAutoPay'] = $isAutoPay;
+        return $this;
+    }
+
+    /**
+    * Gets needCheckClusterStatus
+    *  是否需要检查集群状态，取值范围为true或false。默认开启校验。
+    *
+    * @return bool|null
+    */
+    public function getNeedCheckClusterStatus()
+    {
+        return $this->container['needCheckClusterStatus'];
+    }
+
+    /**
+    * Sets needCheckClusterStatus
+    *
+    * @param bool|null $needCheckClusterStatus 是否需要检查集群状态，取值范围为true或false。默认开启校验。
+    *
+    * @return $this
+    */
+    public function setNeedCheckClusterStatus($needCheckClusterStatus)
+    {
+        $this->container['needCheckClusterStatus'] = $needCheckClusterStatus;
+        return $this;
+    }
+
+    /**
+    * Gets clusterLoadCheck
+    *  是否需要检查集群负载，取值范围为true或false。默认开启校验。
+    *
+    * @return bool|null
+    */
+    public function getClusterLoadCheck()
+    {
+        return $this->container['clusterLoadCheck'];
+    }
+
+    /**
+    * Sets clusterLoadCheck
+    *
+    * @param bool|null $clusterLoadCheck 是否需要检查集群负载，取值范围为true或false。默认开启校验。
+    *
+    * @return $this
+    */
+    public function setClusterLoadCheck($clusterLoadCheck)
+    {
+        $this->container['clusterLoadCheck'] = $clusterLoadCheck;
         return $this;
     }
 

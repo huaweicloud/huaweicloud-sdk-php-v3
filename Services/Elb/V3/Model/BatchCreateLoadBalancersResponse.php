@@ -21,10 +21,10 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * loadbalancerIds  批创负载均衡器ID（UUID）的列表。
-    * jobId  批量创建负载均衡器的job ID。
-    * orderId  订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
-    * requestId  请求ID。 注：自动生成 。
+    * loadbalancerIds  **参数解释**：批创负载均衡器ID（UUID）的列表。  **取值范围**：不涉及
+    * jobId  **参数解释**：批量创建负载均衡器的job ID。  **取值范围**：不涉及
+    * orderId  **参数解释**：订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
@@ -37,10 +37,10 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * loadbalancerIds  批创负载均衡器ID（UUID）的列表。
-    * jobId  批量创建负载均衡器的job ID。
-    * orderId  订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
-    * requestId  请求ID。 注：自动生成 。
+    * loadbalancerIds  **参数解释**：批创负载均衡器ID（UUID）的列表。  **取值范围**：不涉及
+    * jobId  **参数解释**：批量创建负载均衡器的job ID。  **取值范围**：不涉及
+    * orderId  **参数解释**：订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
@@ -74,10 +74,10 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * loadbalancerIds  批创负载均衡器ID（UUID）的列表。
-    * jobId  批量创建负载均衡器的job ID。
-    * orderId  订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
-    * requestId  请求ID。 注：自动生成 。
+    * loadbalancerIds  **参数解释**：批创负载均衡器ID（UUID）的列表。  **取值范围**：不涉及
+    * jobId  **参数解释**：批量创建负载均衡器的job ID。  **取值范围**：不涉及
+    * orderId  **参数解释**：订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
@@ -90,10 +90,10 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * loadbalancerIds  批创负载均衡器ID（UUID）的列表。
-    * jobId  批量创建负载均衡器的job ID。
-    * orderId  订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
-    * requestId  请求ID。 注：自动生成 。
+    * loadbalancerIds  **参数解释**：批创负载均衡器ID（UUID）的列表。  **取值范围**：不涉及
+    * jobId  **参数解释**：批量创建负载均衡器的job ID。  **取值范围**：不涉及
+    * orderId  **参数解释**：订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
@@ -106,10 +106,10 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * loadbalancerIds  批创负载均衡器ID（UUID）的列表。
-    * jobId  批量创建负载均衡器的job ID。
-    * orderId  订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
-    * requestId  请求ID。 注：自动生成 。
+    * loadbalancerIds  **参数解释**：批创负载均衡器ID（UUID）的列表。  **取值范围**：不涉及
+    * jobId  **参数解释**：批量创建负载均衡器的job ID。  **取值范围**：不涉及
+    * orderId  **参数解释**：订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
@@ -220,7 +220,7 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets loadbalancerIds
-    *  批创负载均衡器ID（UUID）的列表。
+    *  **参数解释**：批创负载均衡器ID（UUID）的列表。  **取值范围**：不涉及
     *
     * @return string[]|null
     */
@@ -232,7 +232,7 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets loadbalancerIds
     *
-    * @param string[]|null $loadbalancerIds 批创负载均衡器ID（UUID）的列表。
+    * @param string[]|null $loadbalancerIds **参数解释**：批创负载均衡器ID（UUID）的列表。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  批量创建负载均衡器的job ID。
+    *  **参数解释**：批量创建负载均衡器的job ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 批量创建负载均衡器的job ID。
+    * @param string|null $jobId **参数解释**：批量创建负载均衡器的job ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -268,7 +268,7 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    *  **参数解释**：订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     *
     * @return string|null
     */
@@ -280,7 +280,7 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId 订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * @param string|null $orderId **参数解释**：订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     *
     * @return $this
     */
@@ -292,7 +292,7 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestId
-    *  请求ID。 注：自动生成 。
+    *  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return string|null
     */
@@ -304,7 +304,7 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求ID。 注：自动生成 。
+    * @param string|null $requestId **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @return $this
     */

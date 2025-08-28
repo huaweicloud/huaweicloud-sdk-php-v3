@@ -20,8 +20,8 @@ class SlowStart implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enable  参数解释：慢启动的开关。  取值范围： - true：开启。 - false：关闭。  默认取值：false
-    * duration  参数解释：慢启动的持续时间。  取值范围：30-1200，单位：秒。  默认取值：30
+    * enable  **参数解释**：慢启动的开关。  **取值范围**： - true：开启。 - false：关闭。
+    * duration  **参数解释**：慢启动的持续时间。  **取值范围**：30-1200，单位：秒。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class SlowStart implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enable  参数解释：慢启动的开关。  取值范围： - true：开启。 - false：关闭。  默认取值：false
-    * duration  参数解释：慢启动的持续时间。  取值范围：30-1200，单位：秒。  默认取值：30
+    * enable  **参数解释**：慢启动的开关。  **取值范围**： - true：开启。 - false：关闭。
+    * duration  **参数解释**：慢启动的持续时间。  **取值范围**：30-1200，单位：秒。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class SlowStart implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enable  参数解释：慢启动的开关。  取值范围： - true：开启。 - false：关闭。  默认取值：false
-    * duration  参数解释：慢启动的持续时间。  取值范围：30-1200，单位：秒。  默认取值：30
+    * enable  **参数解释**：慢启动的开关。  **取值范围**： - true：开启。 - false：关闭。
+    * duration  **参数解释**：慢启动的持续时间。  **取值范围**：30-1200，单位：秒。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class SlowStart implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enable  参数解释：慢启动的开关。  取值范围： - true：开启。 - false：关闭。  默认取值：false
-    * duration  参数解释：慢启动的持续时间。  取值范围：30-1200，单位：秒。  默认取值：30
+    * enable  **参数解释**：慢启动的开关。  **取值范围**： - true：开启。 - false：关闭。
+    * duration  **参数解释**：慢启动的持续时间。  **取值范围**：30-1200，单位：秒。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class SlowStart implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enable  参数解释：慢启动的开关。  取值范围： - true：开启。 - false：关闭。  默认取值：false
-    * duration  参数解释：慢启动的持续时间。  取值范围：30-1200，单位：秒。  默认取值：30
+    * enable  **参数解释**：慢启动的开关。  **取值范围**： - true：开启。 - false：关闭。
+    * duration  **参数解释**：慢启动的持续时间。  **取值范围**：30-1200，单位：秒。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class SlowStart implements ModelInterface, ArrayAccess
 
     /**
     * Gets enable
-    *  参数解释：慢启动的开关。  取值范围： - true：开启。 - false：关闭。  默认取值：false
+    *  **参数解释**：慢启动的开关。  **取值范围**： - true：开启。 - false：关闭。
     *
     * @return bool
     */
@@ -209,7 +209,7 @@ class SlowStart implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param bool $enable 参数解释：慢启动的开关。  取值范围： - true：开启。 - false：关闭。  默认取值：false
+    * @param bool $enable **参数解释**：慢启动的开关。  **取值范围**： - true：开启。 - false：关闭。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class SlowStart implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
-    *  参数解释：慢启动的持续时间。  取值范围：30-1200，单位：秒。  默认取值：30
+    *  **参数解释**：慢启动的持续时间。  **取值范围**：30-1200，单位：秒。
     *
     * @return int
     */
@@ -233,7 +233,7 @@ class SlowStart implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param int $duration 参数解释：慢启动的持续时间。  取值范围：30-1200，单位：秒。  默认取值：30
+    * @param int $duration **参数解释**：慢启动的持续时间。  **取值范围**：30-1200，单位：秒。
     *
     * @return $this
     */

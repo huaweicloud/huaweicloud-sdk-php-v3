@@ -27,7 +27,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * coverUrl  对话封面图URL
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
+    * billingMode  计费模式，默认值CONCURRENCY * CONCURRENCY：并发计费 * CLIENT：按接入端计费 * CLIENT_TOKENS: 按接入端计费（TOKENS）
+    * reuseResource  是否允许使用未分配的并发数（端模式下不能复用），默认不使用。
     * concurrency  **参数解释**： 并发路数。
+    * clientNums  **参数解释**： 允许接入终端端数量。
     * voiceConfigList  语音配置参数列表。
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
@@ -44,7 +47,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             'coverUrl' => 'string',
             'modelInfos' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ModelInfo',
             'voiceConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceConfig',
+            'billingMode' => 'string',
+            'reuseResource' => 'bool',
             'concurrency' => 'int',
+            'clientNums' => 'int',
             'voiceConfigList' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceConfigRsp[]',
             'defaultLanguage' => 'string',
             'createTime' => 'string',
@@ -61,7 +67,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * coverUrl  对话封面图URL
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
+    * billingMode  计费模式，默认值CONCURRENCY * CONCURRENCY：并发计费 * CLIENT：按接入端计费 * CLIENT_TOKENS: 按接入端计费（TOKENS）
+    * reuseResource  是否允许使用未分配的并发数（端模式下不能复用），默认不使用。
     * concurrency  **参数解释**： 并发路数。
+    * clientNums  **参数解释**： 允许接入终端端数量。
     * voiceConfigList  语音配置参数列表。
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
@@ -78,7 +87,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
         'coverUrl' => null,
         'modelInfos' => null,
         'voiceConfig' => null,
+        'billingMode' => null,
+        'reuseResource' => null,
         'concurrency' => 'int32',
+        'clientNums' => 'int32',
         'voiceConfigList' => null,
         'defaultLanguage' => null,
         'createTime' => null,
@@ -116,7 +128,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * coverUrl  对话封面图URL
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
+    * billingMode  计费模式，默认值CONCURRENCY * CONCURRENCY：并发计费 * CLIENT：按接入端计费 * CLIENT_TOKENS: 按接入端计费（TOKENS）
+    * reuseResource  是否允许使用未分配的并发数（端模式下不能复用），默认不使用。
     * concurrency  **参数解释**： 并发路数。
+    * clientNums  **参数解释**： 允许接入终端端数量。
     * voiceConfigList  语音配置参数列表。
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
@@ -133,7 +148,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             'coverUrl' => 'cover_url',
             'modelInfos' => 'model_infos',
             'voiceConfig' => 'voice_config',
+            'billingMode' => 'billing_mode',
+            'reuseResource' => 'reuse_resource',
             'concurrency' => 'concurrency',
+            'clientNums' => 'client_nums',
             'voiceConfigList' => 'voice_config_list',
             'defaultLanguage' => 'default_language',
             'createTime' => 'create_time',
@@ -150,7 +168,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * coverUrl  对话封面图URL
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
+    * billingMode  计费模式，默认值CONCURRENCY * CONCURRENCY：并发计费 * CLIENT：按接入端计费 * CLIENT_TOKENS: 按接入端计费（TOKENS）
+    * reuseResource  是否允许使用未分配的并发数（端模式下不能复用），默认不使用。
     * concurrency  **参数解释**： 并发路数。
+    * clientNums  **参数解释**： 允许接入终端端数量。
     * voiceConfigList  语音配置参数列表。
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
@@ -167,7 +188,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             'coverUrl' => 'setCoverUrl',
             'modelInfos' => 'setModelInfos',
             'voiceConfig' => 'setVoiceConfig',
+            'billingMode' => 'setBillingMode',
+            'reuseResource' => 'setReuseResource',
             'concurrency' => 'setConcurrency',
+            'clientNums' => 'setClientNums',
             'voiceConfigList' => 'setVoiceConfigList',
             'defaultLanguage' => 'setDefaultLanguage',
             'createTime' => 'setCreateTime',
@@ -184,7 +208,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * coverUrl  对话封面图URL
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
+    * billingMode  计费模式，默认值CONCURRENCY * CONCURRENCY：并发计费 * CLIENT：按接入端计费 * CLIENT_TOKENS: 按接入端计费（TOKENS）
+    * reuseResource  是否允许使用未分配的并发数（端模式下不能复用），默认不使用。
     * concurrency  **参数解释**： 并发路数。
+    * clientNums  **参数解释**： 允许接入终端端数量。
     * voiceConfigList  语音配置参数列表。
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
@@ -201,7 +228,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             'coverUrl' => 'getCoverUrl',
             'modelInfos' => 'getModelInfos',
             'voiceConfig' => 'getVoiceConfig',
+            'billingMode' => 'getBillingMode',
+            'reuseResource' => 'getReuseResource',
             'concurrency' => 'getConcurrency',
+            'clientNums' => 'getClientNums',
             'voiceConfigList' => 'getVoiceConfigList',
             'defaultLanguage' => 'getDefaultLanguage',
             'createTime' => 'getCreateTime',
@@ -249,6 +279,9 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const BILLING_MODE_CONCURRENCY = 'CONCURRENCY';
+    const BILLING_MODE_CLIENT = 'CLIENT';
+    const BILLING_MODE_CLIENT_TOKENS = 'CLIENT_TOKENS';
     const DEFAULT_LANGUAGE_CN = 'CN';
     const DEFAULT_LANGUAGE_EN = 'EN';
     const DEFAULT_LANGUAGE_ESP = 'ESP';
@@ -256,6 +289,20 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     const DEFAULT_LANGUAGE_ARABIC = 'Arabic';
     const DEFAULT_LANGUAGE_THAI = 'Thai';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getBillingModeAllowableValues()
+    {
+        return [
+            self::BILLING_MODE_CONCURRENCY,
+            self::BILLING_MODE_CLIENT,
+            self::BILLING_MODE_CLIENT_TOKENS,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -297,7 +344,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
         $this->container['coverUrl'] = isset($data['coverUrl']) ? $data['coverUrl'] : null;
         $this->container['modelInfos'] = isset($data['modelInfos']) ? $data['modelInfos'] : null;
         $this->container['voiceConfig'] = isset($data['voiceConfig']) ? $data['voiceConfig'] : null;
+        $this->container['billingMode'] = isset($data['billingMode']) ? $data['billingMode'] : null;
+        $this->container['reuseResource'] = isset($data['reuseResource']) ? $data['reuseResource'] : null;
         $this->container['concurrency'] = isset($data['concurrency']) ? $data['concurrency'] : null;
+        $this->container['clientNums'] = isset($data['clientNums']) ? $data['clientNums'] : null;
         $this->container['voiceConfigList'] = isset($data['voiceConfigList']) ? $data['voiceConfigList'] : null;
         $this->container['defaultLanguage'] = isset($data['defaultLanguage']) ? $data['defaultLanguage'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
@@ -343,11 +393,25 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['coverUrl']) && (mb_strlen($this->container['coverUrl']) < 0)) {
                 $invalidProperties[] = "invalid value for 'coverUrl', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getBillingModeAllowableValues();
+                if (!is_null($this->container['billingMode']) && !in_array($this->container['billingMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'billingMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['concurrency']) && ($this->container['concurrency'] > 1024)) {
                 $invalidProperties[] = "invalid value for 'concurrency', must be smaller than or equal to 1024.";
             }
             if (!is_null($this->container['concurrency']) && ($this->container['concurrency'] < 0)) {
                 $invalidProperties[] = "invalid value for 'concurrency', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['clientNums']) && ($this->container['clientNums'] > 1024)) {
+                $invalidProperties[] = "invalid value for 'clientNums', must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['clientNums']) && ($this->container['clientNums'] < 0)) {
+                $invalidProperties[] = "invalid value for 'clientNums', must be bigger than or equal to 0.";
             }
             $allowedValues = $this->getDefaultLanguageAllowableValues();
                 if (!is_null($this->container['defaultLanguage']) && !in_array($this->container['defaultLanguage'], $allowedValues, true)) {
@@ -558,6 +622,54 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets billingMode
+    *  计费模式，默认值CONCURRENCY * CONCURRENCY：并发计费 * CLIENT：按接入端计费 * CLIENT_TOKENS: 按接入端计费（TOKENS）
+    *
+    * @return string|null
+    */
+    public function getBillingMode()
+    {
+        return $this->container['billingMode'];
+    }
+
+    /**
+    * Sets billingMode
+    *
+    * @param string|null $billingMode 计费模式，默认值CONCURRENCY * CONCURRENCY：并发计费 * CLIENT：按接入端计费 * CLIENT_TOKENS: 按接入端计费（TOKENS）
+    *
+    * @return $this
+    */
+    public function setBillingMode($billingMode)
+    {
+        $this->container['billingMode'] = $billingMode;
+        return $this;
+    }
+
+    /**
+    * Gets reuseResource
+    *  是否允许使用未分配的并发数（端模式下不能复用），默认不使用。
+    *
+    * @return bool|null
+    */
+    public function getReuseResource()
+    {
+        return $this->container['reuseResource'];
+    }
+
+    /**
+    * Sets reuseResource
+    *
+    * @param bool|null $reuseResource 是否允许使用未分配的并发数（端模式下不能复用），默认不使用。
+    *
+    * @return $this
+    */
+    public function setReuseResource($reuseResource)
+    {
+        $this->container['reuseResource'] = $reuseResource;
+        return $this;
+    }
+
+    /**
     * Gets concurrency
     *  **参数解释**： 并发路数。
     *
@@ -578,6 +690,30 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     public function setConcurrency($concurrency)
     {
         $this->container['concurrency'] = $concurrency;
+        return $this;
+    }
+
+    /**
+    * Gets clientNums
+    *  **参数解释**： 允许接入终端端数量。
+    *
+    * @return int|null
+    */
+    public function getClientNums()
+    {
+        return $this->container['clientNums'];
+    }
+
+    /**
+    * Sets clientNums
+    *
+    * @param int|null $clientNums **参数解释**： 允许接入终端端数量。
+    *
+    * @return $this
+    */
+    public function setClientNums($clientNums)
+    {
+        $this->container['clientNums'] = $clientNums;
         return $this;
     }
 

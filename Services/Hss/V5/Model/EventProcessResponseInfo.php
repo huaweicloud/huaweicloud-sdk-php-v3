@@ -57,7 +57,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     * virtCmd  **参数解释**： 虚拟化命令 **取值范围**： 字符长度1-256位
     * virtProcessName  **参数解释**： 虚拟化进程名称 **取值范围**： 字符长度1-256位
     * escapeMode  **参数解释**： 逃逸方式 **取值范围**： 字符长度1-256位
-    * escapeCmd  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-256位
+    * escapeCmd  **参数解释**： 逃逸后执行的命令 **取值范围**： 字符长度1-256位
     * processHash  **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-256位
     * processFileHash  **参数解释**： 进程文件hash **取值范围**： 字符长度1-256位
     * parentProcessFileHash  **参数解释**： 父进程文件hash **取值范围**： 字符长度1-256位
@@ -149,7 +149,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     * virtCmd  **参数解释**： 虚拟化命令 **取值范围**： 字符长度1-256位
     * virtProcessName  **参数解释**： 虚拟化进程名称 **取值范围**： 字符长度1-256位
     * escapeMode  **参数解释**： 逃逸方式 **取值范围**： 字符长度1-256位
-    * escapeCmd  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-256位
+    * escapeCmd  **参数解释**： 逃逸后执行的命令 **取值范围**： 字符长度1-256位
     * processHash  **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-256位
     * processFileHash  **参数解释**： 进程文件hash **取值范围**： 字符长度1-256位
     * parentProcessFileHash  **参数解释**： 父进程文件hash **取值范围**： 字符长度1-256位
@@ -262,7 +262,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     * virtCmd  **参数解释**： 虚拟化命令 **取值范围**： 字符长度1-256位
     * virtProcessName  **参数解释**： 虚拟化进程名称 **取值范围**： 字符长度1-256位
     * escapeMode  **参数解释**： 逃逸方式 **取值范围**： 字符长度1-256位
-    * escapeCmd  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-256位
+    * escapeCmd  **参数解释**： 逃逸后执行的命令 **取值范围**： 字符长度1-256位
     * processHash  **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-256位
     * processFileHash  **参数解释**： 进程文件hash **取值范围**： 字符长度1-256位
     * parentProcessFileHash  **参数解释**： 父进程文件hash **取值范围**： 字符长度1-256位
@@ -354,7 +354,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     * virtCmd  **参数解释**： 虚拟化命令 **取值范围**： 字符长度1-256位
     * virtProcessName  **参数解释**： 虚拟化进程名称 **取值范围**： 字符长度1-256位
     * escapeMode  **参数解释**： 逃逸方式 **取值范围**： 字符长度1-256位
-    * escapeCmd  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-256位
+    * escapeCmd  **参数解释**： 逃逸后执行的命令 **取值范围**： 字符长度1-256位
     * processHash  **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-256位
     * processFileHash  **参数解释**： 进程文件hash **取值范围**： 字符长度1-256位
     * parentProcessFileHash  **参数解释**： 父进程文件hash **取值范围**： 字符长度1-256位
@@ -446,7 +446,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     * virtCmd  **参数解释**： 虚拟化命令 **取值范围**： 字符长度1-256位
     * virtProcessName  **参数解释**： 虚拟化进程名称 **取值范围**： 字符长度1-256位
     * escapeMode  **参数解释**： 逃逸方式 **取值范围**： 字符长度1-256位
-    * escapeCmd  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-256位
+    * escapeCmd  **参数解释**： 逃逸后执行的命令 **取值范围**： 字符长度1-256位
     * processHash  **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-256位
     * processFileHash  **参数解释**： 进程文件hash **取值范围**： 字符长度1-256位
     * parentProcessFileHash  **参数解释**： 父进程文件hash **取值范围**： 字符长度1-256位
@@ -1699,7 +1699,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets escapeCmd
-    *  **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-256位
+    *  **参数解释**： 逃逸后执行的命令 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -1711,7 +1711,7 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets escapeCmd
     *
-    * @param string|null $escapeCmd **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-256位
+    * @param string|null $escapeCmd **参数解释**： 逃逸后执行的命令 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */

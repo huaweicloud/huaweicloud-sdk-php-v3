@@ -24,7 +24,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     * textConfig  textConfig
     * audioDuration  语音驱动时，音频时长，单位秒。 > * 创建剧本时此参数可以不设置，音频文件上传成功后，通过更新剧本接口设置 > * 查询剧本详情时，返回音频时长，用于预估视频时长
     * audioDriveActionConfig  语音驱动时的动作配置。
-    * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
+    * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 只支持分身数字人视频制作  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。  > * 音频文件需要存放在华为云OBS
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
     * audioConfig  audioConfig
@@ -50,7 +50,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     * textConfig  textConfig
     * audioDuration  语音驱动时，音频时长，单位秒。 > * 创建剧本时此参数可以不设置，音频文件上传成功后，通过更新剧本接口设置 > * 查询剧本详情时，返回音频时长，用于预估视频时长
     * audioDriveActionConfig  语音驱动时的动作配置。
-    * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
+    * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 只支持分身数字人视频制作  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。  > * 音频文件需要存放在华为云OBS
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
     * audioConfig  audioConfig
@@ -97,7 +97,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     * textConfig  textConfig
     * audioDuration  语音驱动时，音频时长，单位秒。 > * 创建剧本时此参数可以不设置，音频文件上传成功后，通过更新剧本接口设置 > * 查询剧本详情时，返回音频时长，用于预估视频时长
     * audioDriveActionConfig  语音驱动时的动作配置。
-    * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
+    * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 只支持分身数字人视频制作  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。  > * 音频文件需要存放在华为云OBS
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
     * audioConfig  audioConfig
@@ -123,7 +123,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     * textConfig  textConfig
     * audioDuration  语音驱动时，音频时长，单位秒。 > * 创建剧本时此参数可以不设置，音频文件上传成功后，通过更新剧本接口设置 > * 查询剧本详情时，返回音频时长，用于预估视频时长
     * audioDriveActionConfig  语音驱动时的动作配置。
-    * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
+    * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 只支持分身数字人视频制作  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。  > * 音频文件需要存放在华为云OBS
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
     * audioConfig  audioConfig
@@ -149,7 +149,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     * textConfig  textConfig
     * audioDuration  语音驱动时，音频时长，单位秒。 > * 创建剧本时此参数可以不设置，音频文件上传成功后，通过更新剧本接口设置 > * 查询剧本详情时，返回音频时长，用于预估视频时长
     * audioDriveActionConfig  语音驱动时的动作配置。
-    * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
+    * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 只支持分身数字人视频制作  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。  > * 音频文件需要存放在华为云OBS
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
     * audioConfig  audioConfig
@@ -399,7 +399,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets audioDriveFileExternalUrl
-    *  语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
+    *  语音驱动音频文件外部下载URL。  > * 只支持分身数字人视频制作  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。  > * 音频文件需要存放在华为云OBS
     *
     * @return string|null
     */
@@ -411,7 +411,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     /**
     * Sets audioDriveFileExternalUrl
     *
-    * @param string|null $audioDriveFileExternalUrl 语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
+    * @param string|null $audioDriveFileExternalUrl 语音驱动音频文件外部下载URL。  > * 只支持分身数字人视频制作  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。  > * 音频文件需要存放在华为云OBS
     *
     * @return $this
     */

@@ -23,7 +23,7 @@ class PluginApiAttachInfo implements ModelInterface, ArrayAccess
     * pluginAttachId  插件绑定编码。
     * pluginId  插件编码。
     * pluginName  插件名称。支持汉字，英文，数字，中划线，下划线，且只能以英文和汉字开头，3-255字符 > 中文字符必须为UTF-8或者unicode编码。
-    * pluginType  插件类型。 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制 - third_auth: 第三方认证 - proxy_cache: 响应缓存 - proxy_mirror: 请求镜像
+    * pluginType  插件类型。 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制 - third_auth: 第三方认证 - proxy_cache: 响应缓存 - proxy_mirror: 请求镜像 - oidc_auth: OIDC认证 - jwt_auth: JWT认证
     * pluginScope  插件可见范围。global：全局可见。
     * envId  绑定API的环境编码。
     * envName  api授权绑定的环境名称
@@ -51,7 +51,7 @@ class PluginApiAttachInfo implements ModelInterface, ArrayAccess
     * pluginAttachId  插件绑定编码。
     * pluginId  插件编码。
     * pluginName  插件名称。支持汉字，英文，数字，中划线，下划线，且只能以英文和汉字开头，3-255字符 > 中文字符必须为UTF-8或者unicode编码。
-    * pluginType  插件类型。 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制 - third_auth: 第三方认证 - proxy_cache: 响应缓存 - proxy_mirror: 请求镜像
+    * pluginType  插件类型。 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制 - third_auth: 第三方认证 - proxy_cache: 响应缓存 - proxy_mirror: 请求镜像 - oidc_auth: OIDC认证 - jwt_auth: JWT认证
     * pluginScope  插件可见范围。global：全局可见。
     * envId  绑定API的环境编码。
     * envName  api授权绑定的环境名称
@@ -100,7 +100,7 @@ class PluginApiAttachInfo implements ModelInterface, ArrayAccess
     * pluginAttachId  插件绑定编码。
     * pluginId  插件编码。
     * pluginName  插件名称。支持汉字，英文，数字，中划线，下划线，且只能以英文和汉字开头，3-255字符 > 中文字符必须为UTF-8或者unicode编码。
-    * pluginType  插件类型。 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制 - third_auth: 第三方认证 - proxy_cache: 响应缓存 - proxy_mirror: 请求镜像
+    * pluginType  插件类型。 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制 - third_auth: 第三方认证 - proxy_cache: 响应缓存 - proxy_mirror: 请求镜像 - oidc_auth: OIDC认证 - jwt_auth: JWT认证
     * pluginScope  插件可见范围。global：全局可见。
     * envId  绑定API的环境编码。
     * envName  api授权绑定的环境名称
@@ -128,7 +128,7 @@ class PluginApiAttachInfo implements ModelInterface, ArrayAccess
     * pluginAttachId  插件绑定编码。
     * pluginId  插件编码。
     * pluginName  插件名称。支持汉字，英文，数字，中划线，下划线，且只能以英文和汉字开头，3-255字符 > 中文字符必须为UTF-8或者unicode编码。
-    * pluginType  插件类型。 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制 - third_auth: 第三方认证 - proxy_cache: 响应缓存 - proxy_mirror: 请求镜像
+    * pluginType  插件类型。 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制 - third_auth: 第三方认证 - proxy_cache: 响应缓存 - proxy_mirror: 请求镜像 - oidc_auth: OIDC认证 - jwt_auth: JWT认证
     * pluginScope  插件可见范围。global：全局可见。
     * envId  绑定API的环境编码。
     * envName  api授权绑定的环境名称
@@ -156,7 +156,7 @@ class PluginApiAttachInfo implements ModelInterface, ArrayAccess
     * pluginAttachId  插件绑定编码。
     * pluginId  插件编码。
     * pluginName  插件名称。支持汉字，英文，数字，中划线，下划线，且只能以英文和汉字开头，3-255字符 > 中文字符必须为UTF-8或者unicode编码。
-    * pluginType  插件类型。 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制 - third_auth: 第三方认证 - proxy_cache: 响应缓存 - proxy_mirror: 请求镜像
+    * pluginType  插件类型。 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制 - third_auth: 第三方认证 - proxy_cache: 响应缓存 - proxy_mirror: 请求镜像 - oidc_auth: OIDC认证 - jwt_auth: JWT认证
     * pluginScope  插件可见范围。global：全局可见。
     * envId  绑定API的环境编码。
     * envName  api授权绑定的环境名称
@@ -227,6 +227,8 @@ class PluginApiAttachInfo implements ModelInterface, ArrayAccess
     const PLUGIN_TYPE_THIRD_AUTH = 'third_auth';
     const PLUGIN_TYPE_PROXY_CACHE = 'proxy_cache';
     const PLUGIN_TYPE_PROXY_MIRROR = 'proxy_mirror';
+    const PLUGIN_TYPE_OIDC_AUTH = 'oidc_auth';
+    const PLUGIN_TYPE_JWT_AUTH = 'jwt_auth';
     const PLUGIN_SCOPE__GLOBAL = 'global';
     
 
@@ -246,6 +248,8 @@ class PluginApiAttachInfo implements ModelInterface, ArrayAccess
             self::PLUGIN_TYPE_THIRD_AUTH,
             self::PLUGIN_TYPE_PROXY_CACHE,
             self::PLUGIN_TYPE_PROXY_MIRROR,
+            self::PLUGIN_TYPE_OIDC_AUTH,
+            self::PLUGIN_TYPE_JWT_AUTH,
         ];
     }
 
@@ -404,7 +408,7 @@ class PluginApiAttachInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginType
-    *  插件类型。 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制 - third_auth: 第三方认证 - proxy_cache: 响应缓存 - proxy_mirror: 请求镜像
+    *  插件类型。 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制 - third_auth: 第三方认证 - proxy_cache: 响应缓存 - proxy_mirror: 请求镜像 - oidc_auth: OIDC认证 - jwt_auth: JWT认证
     *
     * @return string|null
     */
@@ -416,7 +420,7 @@ class PluginApiAttachInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pluginType
     *
-    * @param string|null $pluginType 插件类型。 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制 - third_auth: 第三方认证 - proxy_cache: 响应缓存 - proxy_mirror: 请求镜像
+    * @param string|null $pluginType 插件类型。 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制 - third_auth: 第三方认证 - proxy_cache: 响应缓存 - proxy_mirror: 请求镜像 - oidc_auth: OIDC认证 - jwt_auth: JWT认证
     *
     * @return $this
     */

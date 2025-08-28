@@ -28,8 +28,8 @@ class SubJob implements ModelInterface, ArrayAccess
     * errorCode  任务的错误码
     * errorMsg  任务的错误信息
     * projectId  项目ID
-    * resourceId  参数解释：资源ID。
-    * entities  任务关联的资源列表
+    * resourceId  **参数解释**：资源ID。
+    * entities  **参数解释**：任务关联的资源列表。
     *
     * @var string[]
     */
@@ -56,8 +56,8 @@ class SubJob implements ModelInterface, ArrayAccess
     * errorCode  任务的错误码
     * errorMsg  任务的错误信息
     * projectId  项目ID
-    * resourceId  参数解释：资源ID。
-    * entities  任务关联的资源列表
+    * resourceId  **参数解释**：资源ID。
+    * entities  **参数解释**：任务关联的资源列表。
     *
     * @var string[]
     */
@@ -105,8 +105,8 @@ class SubJob implements ModelInterface, ArrayAccess
     * errorCode  任务的错误码
     * errorMsg  任务的错误信息
     * projectId  项目ID
-    * resourceId  参数解释：资源ID。
-    * entities  任务关联的资源列表
+    * resourceId  **参数解释**：资源ID。
+    * entities  **参数解释**：任务关联的资源列表。
     *
     * @var string[]
     */
@@ -133,8 +133,8 @@ class SubJob implements ModelInterface, ArrayAccess
     * errorCode  任务的错误码
     * errorMsg  任务的错误信息
     * projectId  项目ID
-    * resourceId  参数解释：资源ID。
-    * entities  任务关联的资源列表
+    * resourceId  **参数解释**：资源ID。
+    * entities  **参数解释**：任务关联的资源列表。
     *
     * @var string[]
     */
@@ -161,8 +161,8 @@ class SubJob implements ModelInterface, ArrayAccess
     * errorCode  任务的错误码
     * errorMsg  任务的错误信息
     * projectId  项目ID
-    * resourceId  参数解释：资源ID。
-    * entities  任务关联的资源列表
+    * resourceId  **参数解释**：资源ID。
+    * entities  **参数解释**：任务关联的资源列表。
     *
     * @var string[]
     */
@@ -500,7 +500,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  参数解释：资源ID。
+    *  **参数解释**：资源ID。
     *
     * @return string|null
     */
@@ -512,7 +512,7 @@ class SubJob implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 参数解释：资源ID。
+    * @param string|null $resourceId **参数解释**：资源ID。
     *
     * @return $this
     */
@@ -524,7 +524,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets entities
-    *  任务关联的资源列表
+    *  **参数解释**：任务关联的资源列表。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\JobEntities[]|null
     */
@@ -536,7 +536,7 @@ class SubJob implements ModelInterface, ArrayAccess
     /**
     * Sets entities
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\JobEntities[]|null $entities 任务关联的资源列表
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\JobEntities[]|null $entities **参数解释**：任务关联的资源列表。
     *
     * @return $this
     */

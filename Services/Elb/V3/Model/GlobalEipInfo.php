@@ -20,9 +20,9 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * globalEipId  参数解释：global eip的id
-    * globalEipAddress  参数解释：global eip的ip地址
-    * ipVersion  参数解释：IP版本信息。   取值范围： - 4，表示IPv4 - 6，表示IPv6   [不支持IPv6，请勿设置为6。](tag:dt)
+    * globalEipId  **参数解释**：global eip的ID。  **取值范围**：不涉及
+    * globalEipAddress  **参数解释**：global eip的ip地址。  **取值范围**：不涉及
+    * ipVersion  **参数解释**：IP版本信息。   **取值范围**： - 4，表示IPv4。 - 6，表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt)
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * globalEipId  参数解释：global eip的id
-    * globalEipAddress  参数解释：global eip的ip地址
-    * ipVersion  参数解释：IP版本信息。   取值范围： - 4，表示IPv4 - 6，表示IPv6   [不支持IPv6，请勿设置为6。](tag:dt)
+    * globalEipId  **参数解释**：global eip的ID。  **取值范围**：不涉及
+    * globalEipAddress  **参数解释**：global eip的ip地址。  **取值范围**：不涉及
+    * ipVersion  **参数解释**：IP版本信息。   **取值范围**： - 4，表示IPv4。 - 6，表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt)
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * globalEipId  参数解释：global eip的id
-    * globalEipAddress  参数解释：global eip的ip地址
-    * ipVersion  参数解释：IP版本信息。   取值范围： - 4，表示IPv4 - 6，表示IPv6   [不支持IPv6，请勿设置为6。](tag:dt)
+    * globalEipId  **参数解释**：global eip的ID。  **取值范围**：不涉及
+    * globalEipAddress  **参数解释**：global eip的ip地址。  **取值范围**：不涉及
+    * ipVersion  **参数解释**：IP版本信息。   **取值范围**： - 4，表示IPv4。 - 6，表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt)
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * globalEipId  参数解释：global eip的id
-    * globalEipAddress  参数解释：global eip的ip地址
-    * ipVersion  参数解释：IP版本信息。   取值范围： - 4，表示IPv4 - 6，表示IPv6   [不支持IPv6，请勿设置为6。](tag:dt)
+    * globalEipId  **参数解释**：global eip的ID。  **取值范围**：不涉及
+    * globalEipAddress  **参数解释**：global eip的ip地址。  **取值范围**：不涉及
+    * ipVersion  **参数解释**：IP版本信息。   **取值范围**： - 4，表示IPv4。 - 6，表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt)
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * globalEipId  参数解释：global eip的id
-    * globalEipAddress  参数解释：global eip的ip地址
-    * ipVersion  参数解释：IP版本信息。   取值范围： - 4，表示IPv4 - 6，表示IPv6   [不支持IPv6，请勿设置为6。](tag:dt)
+    * globalEipId  **参数解释**：global eip的ID。  **取值范围**：不涉及
+    * globalEipAddress  **参数解释**：global eip的ip地址。  **取值范围**：不涉及
+    * ipVersion  **参数解释**：IP版本信息。   **取值范围**： - 4，表示IPv4。 - 6，表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt)
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalEipId
-    *  参数解释：global eip的id
+    *  **参数解释**：global eip的ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
     /**
     * Sets globalEipId
     *
-    * @param string|null $globalEipId 参数解释：global eip的id
+    * @param string|null $globalEipId **参数解释**：global eip的ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalEipAddress
-    *  参数解释：global eip的ip地址
+    *  **参数解释**：global eip的ip地址。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
     /**
     * Sets globalEipAddress
     *
-    * @param string|null $globalEipAddress 参数解释：global eip的ip地址
+    * @param string|null $globalEipAddress **参数解释**：global eip的ip地址。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
-    *  参数解释：IP版本信息。   取值范围： - 4，表示IPv4 - 6，表示IPv6   [不支持IPv6，请勿设置为6。](tag:dt)
+    *  **参数解释**：IP版本信息。   **取值范围**： - 4，表示IPv4。 - 6，表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt)
     *
     * @return int|null
     */
@@ -256,7 +256,7 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ipVersion
     *
-    * @param int|null $ipVersion 参数解释：IP版本信息。   取值范围： - 4，表示IPv4 - 6，表示IPv6   [不支持IPv6，请勿设置为6。](tag:dt)
+    * @param int|null $ipVersion **参数解释**：IP版本信息。   **取值范围**： - 4，表示IPv4。 - 6，表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt)
     *
     * @return $this
     */

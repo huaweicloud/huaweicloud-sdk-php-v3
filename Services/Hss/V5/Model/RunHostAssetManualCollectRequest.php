@@ -21,7 +21,7 @@ class RunHostAssetManualCollectRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * type  资产类型 - web-app：web应用 - web-service：web服务 - web-framwork：web框架 - web-site：web站点  - midware：中间件 - database：数据库 - kernel-module：内核模块
+    * type  资产类型 - web-app：web应用 - web-service：web服务 - web-framework：web框架 - web-site：web站点  - midware：中间件 - database：数据库 - kernel-module：内核模块
     * hostId  主机ID
     *
     * @var string[]
@@ -35,7 +35,7 @@ class RunHostAssetManualCollectRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * type  资产类型 - web-app：web应用 - web-service：web服务 - web-framwork：web框架 - web-site：web站点  - midware：中间件 - database：数据库 - kernel-module：内核模块
+    * type  资产类型 - web-app：web应用 - web-service：web服务 - web-framework：web框架 - web-site：web站点  - midware：中间件 - database：数据库 - kernel-module：内核模块
     * hostId  主机ID
     *
     * @var string[]
@@ -70,7 +70,7 @@ class RunHostAssetManualCollectRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * type  资产类型 - web-app：web应用 - web-service：web服务 - web-framwork：web框架 - web-site：web站点  - midware：中间件 - database：数据库 - kernel-module：内核模块
+    * type  资产类型 - web-app：web应用 - web-service：web服务 - web-framework：web框架 - web-site：web站点  - midware：中间件 - database：数据库 - kernel-module：内核模块
     * hostId  主机ID
     *
     * @var string[]
@@ -84,7 +84,7 @@ class RunHostAssetManualCollectRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * type  资产类型 - web-app：web应用 - web-service：web服务 - web-framwork：web框架 - web-site：web站点  - midware：中间件 - database：数据库 - kernel-module：内核模块
+    * type  资产类型 - web-app：web应用 - web-service：web服务 - web-framework：web框架 - web-site：web站点  - midware：中间件 - database：数据库 - kernel-module：内核模块
     * hostId  主机ID
     *
     * @var string[]
@@ -98,7 +98,7 @@ class RunHostAssetManualCollectRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * type  资产类型 - web-app：web应用 - web-service：web服务 - web-framwork：web框架 - web-site：web站点  - midware：中间件 - database：数据库 - kernel-module：内核模块
+    * type  资产类型 - web-app：web应用 - web-service：web服务 - web-framework：web框架 - web-site：web站点  - midware：中间件 - database：数据库 - kernel-module：内核模块
     * hostId  主机ID
     *
     * @var string[]
@@ -198,8 +198,8 @@ class RunHostAssetManualCollectRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['type']) < 1)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^web-app|web-service|web-framwork|web-site|midware|database|kernel-module$/", $this->container['type'])) {
-                $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /^web-app|web-service|web-framwork|web-site|midware|database|kernel-module$/.";
+            if (!preg_match("/^web-app|web-service|web-framework|web-site|midware|database|kernel-module$/", $this->container['type'])) {
+                $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /^web-app|web-service|web-framework|web-site|midware|database|kernel-module$/.";
             }
         if ($this->container['hostId'] === null) {
             $invalidProperties[] = "'hostId' can't be null";
@@ -250,7 +250,7 @@ class RunHostAssetManualCollectRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  资产类型 - web-app：web应用 - web-service：web服务 - web-framwork：web框架 - web-site：web站点  - midware：中间件 - database：数据库 - kernel-module：内核模块
+    *  资产类型 - web-app：web应用 - web-service：web服务 - web-framework：web框架 - web-site：web站点  - midware：中间件 - database：数据库 - kernel-module：内核模块
     *
     * @return string
     */
@@ -262,7 +262,7 @@ class RunHostAssetManualCollectRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 资产类型 - web-app：web应用 - web-service：web服务 - web-framwork：web框架 - web-site：web站点  - midware：中间件 - database：数据库 - kernel-module：内核模块
+    * @param string $type 资产类型 - web-app：web应用 - web-service：web服务 - web-framework：web框架 - web-site：web站点  - midware：中间件 - database：数据库 - kernel-module：内核模块
     *
     * @return $this
     */

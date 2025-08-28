@@ -20,8 +20,8 @@ class RecycleBinPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recycleThresholdHour  允许进入回收站的最小创建时间，不足此时长则删除时不满足进入回收站的条件。
-    * retentionHour  进入回收站的最大保留时长。
+    * recycleThresholdHour  **参数解释**：允许进入回收站的最小创建时间，不足此时长则删除时不满足进入回收站的条件。  **取值范围**：不涉及
+    * retentionHour  **参数解释**：进入回收站的最大保留时长。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class RecycleBinPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recycleThresholdHour  允许进入回收站的最小创建时间，不足此时长则删除时不满足进入回收站的条件。
-    * retentionHour  进入回收站的最大保留时长。
+    * recycleThresholdHour  **参数解释**：允许进入回收站的最小创建时间，不足此时长则删除时不满足进入回收站的条件。  **取值范围**：不涉及
+    * retentionHour  **参数解释**：进入回收站的最大保留时长。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class RecycleBinPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recycleThresholdHour  允许进入回收站的最小创建时间，不足此时长则删除时不满足进入回收站的条件。
-    * retentionHour  进入回收站的最大保留时长。
+    * recycleThresholdHour  **参数解释**：允许进入回收站的最小创建时间，不足此时长则删除时不满足进入回收站的条件。  **取值范围**：不涉及
+    * retentionHour  **参数解释**：进入回收站的最大保留时长。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class RecycleBinPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recycleThresholdHour  允许进入回收站的最小创建时间，不足此时长则删除时不满足进入回收站的条件。
-    * retentionHour  进入回收站的最大保留时长。
+    * recycleThresholdHour  **参数解释**：允许进入回收站的最小创建时间，不足此时长则删除时不满足进入回收站的条件。  **取值范围**：不涉及
+    * retentionHour  **参数解释**：进入回收站的最大保留时长。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class RecycleBinPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recycleThresholdHour  允许进入回收站的最小创建时间，不足此时长则删除时不满足进入回收站的条件。
-    * retentionHour  进入回收站的最大保留时长。
+    * recycleThresholdHour  **参数解释**：允许进入回收站的最小创建时间，不足此时长则删除时不满足进入回收站的条件。  **取值范围**：不涉及
+    * retentionHour  **参数解释**：进入回收站的最大保留时长。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class RecycleBinPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets recycleThresholdHour
-    *  允许进入回收站的最小创建时间，不足此时长则删除时不满足进入回收站的条件。
+    *  **参数解释**：允许进入回收站的最小创建时间，不足此时长则删除时不满足进入回收站的条件。  **取值范围**：不涉及
     *
     * @return int|null
     */
@@ -197,7 +197,7 @@ class RecycleBinPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets recycleThresholdHour
     *
-    * @param int|null $recycleThresholdHour 允许进入回收站的最小创建时间，不足此时长则删除时不满足进入回收站的条件。
+    * @param int|null $recycleThresholdHour **参数解释**：允许进入回收站的最小创建时间，不足此时长则删除时不满足进入回收站的条件。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class RecycleBinPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets retentionHour
-    *  进入回收站的最大保留时长。
+    *  **参数解释**：进入回收站的最大保留时长。  **取值范围**：不涉及
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class RecycleBinPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets retentionHour
     *
-    * @param int|null $retentionHour 进入回收站的最大保留时长。
+    * @param int|null $retentionHour **参数解释**：进入回收站的最大保留时长。  **取值范围**：不涉及
     *
     * @return $this
     */

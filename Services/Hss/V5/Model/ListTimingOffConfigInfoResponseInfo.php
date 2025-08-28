@@ -20,8 +20,8 @@ class ListTimingOffConfigInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * weekOffList  关闭防护周期
-    * timingRangeList  时间段
+    * weekOffList  **参数解释**: 自动关闭防护周期列表 **取值范围**: 最少0条，最多7条
+    * timingRangeList  **参数解释**: 自动关闭防护时间段 **取值范围**: 最少0条，最多5条
     * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
@@ -34,8 +34,8 @@ class ListTimingOffConfigInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * weekOffList  关闭防护周期
-    * timingRangeList  时间段
+    * weekOffList  **参数解释**: 自动关闭防护周期列表 **取值范围**: 最少0条，最多7条
+    * timingRangeList  **参数解释**: 自动关闭防护时间段 **取值范围**: 最少0条，最多5条
     * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
@@ -69,8 +69,8 @@ class ListTimingOffConfigInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * weekOffList  关闭防护周期
-    * timingRangeList  时间段
+    * weekOffList  **参数解释**: 自动关闭防护周期列表 **取值范围**: 最少0条，最多7条
+    * timingRangeList  **参数解释**: 自动关闭防护时间段 **取值范围**: 最少0条，最多5条
     * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
@@ -83,8 +83,8 @@ class ListTimingOffConfigInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * weekOffList  关闭防护周期
-    * timingRangeList  时间段
+    * weekOffList  **参数解释**: 自动关闭防护周期列表 **取值范围**: 最少0条，最多7条
+    * timingRangeList  **参数解释**: 自动关闭防护时间段 **取值范围**: 最少0条，最多5条
     * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
@@ -97,8 +97,8 @@ class ListTimingOffConfigInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * weekOffList  关闭防护周期
-    * timingRangeList  时间段
+    * weekOffList  **参数解释**: 自动关闭防护周期列表 **取值范围**: 最少0条，最多7条
+    * timingRangeList  **参数解释**: 自动关闭防护时间段 **取值范围**: 最少0条，最多5条
     * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
@@ -202,7 +202,7 @@ class ListTimingOffConfigInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets weekOffList
-    *  关闭防护周期
+    *  **参数解释**: 自动关闭防护周期列表 **取值范围**: 最少0条，最多7条
     *
     * @return int[]|null
     */
@@ -214,7 +214,7 @@ class ListTimingOffConfigInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets weekOffList
     *
-    * @param int[]|null $weekOffList 关闭防护周期
+    * @param int[]|null $weekOffList **参数解释**: 自动关闭防护周期列表 **取值范围**: 最少0条，最多7条
     *
     * @return $this
     */
@@ -226,7 +226,7 @@ class ListTimingOffConfigInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets timingRangeList
-    *  时间段
+    *  **参数解释**: 自动关闭防护时间段 **取值范围**: 最少0条，最多5条
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\TimingRangeConfigInfo[]|null
     */
@@ -238,7 +238,7 @@ class ListTimingOffConfigInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets timingRangeList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\TimingRangeConfigInfo[]|null $timingRangeList 时间段
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\TimingRangeConfigInfo[]|null $timingRangeList **参数解释**: 自动关闭防护时间段 **取值范围**: 最少0条，最多5条
     *
     * @return $this
     */

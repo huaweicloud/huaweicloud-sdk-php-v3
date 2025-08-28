@@ -42,6 +42,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * liveJobLog  liveJobLog
     * relationLivePlatformInfo  relationLivePlatformInfo
     * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * ONE_TIME：一次性资源 * UNKNOW：未知资源类型。
+    * isAiMarkOn  AI标识开关
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -68,6 +69,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             'liveJobLog' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveJobLog',
             'relationLivePlatformInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\PlatformLiveDetailInfo',
             'usedResourceType' => 'string',
+            'isAiMarkOn' => 'bool',
             'xRequestId' => 'string'
     ];
 
@@ -94,6 +96,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * liveJobLog  liveJobLog
     * relationLivePlatformInfo  relationLivePlatformInfo
     * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * ONE_TIME：一次性资源 * UNKNOW：未知资源类型。
+    * isAiMarkOn  AI标识开关
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -120,6 +123,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
         'liveJobLog' => null,
         'relationLivePlatformInfo' => null,
         'usedResourceType' => null,
+        'isAiMarkOn' => null,
         'xRequestId' => null
     ];
 
@@ -167,6 +171,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * liveJobLog  liveJobLog
     * relationLivePlatformInfo  relationLivePlatformInfo
     * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * ONE_TIME：一次性资源 * UNKNOW：未知资源类型。
+    * isAiMarkOn  AI标识开关
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -193,6 +198,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             'liveJobLog' => 'live_job_log',
             'relationLivePlatformInfo' => 'relation_live_platform_info',
             'usedResourceType' => 'used_resource_type',
+            'isAiMarkOn' => 'is_ai_mark_on',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -219,6 +225,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * liveJobLog  liveJobLog
     * relationLivePlatformInfo  relationLivePlatformInfo
     * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * ONE_TIME：一次性资源 * UNKNOW：未知资源类型。
+    * isAiMarkOn  AI标识开关
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -245,6 +252,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             'liveJobLog' => 'setLiveJobLog',
             'relationLivePlatformInfo' => 'setRelationLivePlatformInfo',
             'usedResourceType' => 'setUsedResourceType',
+            'isAiMarkOn' => 'setIsAiMarkOn',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -271,6 +279,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * liveJobLog  liveJobLog
     * relationLivePlatformInfo  relationLivePlatformInfo
     * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * ONE_TIME：一次性资源 * UNKNOW：未知资源类型。
+    * isAiMarkOn  AI标识开关
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -297,6 +306,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             'liveJobLog' => 'getLiveJobLog',
             'relationLivePlatformInfo' => 'getRelationLivePlatformInfo',
             'usedResourceType' => 'getUsedResourceType',
+            'isAiMarkOn' => 'getIsAiMarkOn',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -419,6 +429,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
         $this->container['liveJobLog'] = isset($data['liveJobLog']) ? $data['liveJobLog'] : null;
         $this->container['relationLivePlatformInfo'] = isset($data['relationLivePlatformInfo']) ? $data['relationLivePlatformInfo'] : null;
         $this->container['usedResourceType'] = isset($data['usedResourceType']) ? $data['usedResourceType'] : null;
+        $this->container['isAiMarkOn'] = isset($data['isAiMarkOn']) ? $data['isAiMarkOn'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -1045,6 +1056,30 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     public function setUsedResourceType($usedResourceType)
     {
         $this->container['usedResourceType'] = $usedResourceType;
+        return $this;
+    }
+
+    /**
+    * Gets isAiMarkOn
+    *  AI标识开关
+    *
+    * @return bool|null
+    */
+    public function getIsAiMarkOn()
+    {
+        return $this->container['isAiMarkOn'];
+    }
+
+    /**
+    * Sets isAiMarkOn
+    *
+    * @param bool|null $isAiMarkOn AI标识开关
+    *
+    * @return $this
+    */
+    public function setIsAiMarkOn($isAiMarkOn)
+    {
+        $this->container['isAiMarkOn'] = $isAiMarkOn;
         return $this;
     }
 

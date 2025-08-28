@@ -20,8 +20,8 @@ class ApiVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  API版本号。  取值：由高到低版本分别为v3，v2，v2.0。
-    * status  API版本的状态。  取值： - CURRENT：当前版本。 - STABLE：稳定版本。 - DEPRECATED：废弃版本。  说明： 所有支持的API版本中最高版状态为CURRENT，其他版本状态为STABLE。
+    * id  **参数解释**：API版本号。  **取值范围**：由高到低版本分别为v3，v2，v2.0。
+    * status  **参数解释**：API版本的状态。  **取值范围**： - CURRENT：当前版本，当前所支持的API版本中最高的版本。 - STABLE：稳定版本，其他可用版本。 - DEPRECATED：废弃版本。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ApiVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  API版本号。  取值：由高到低版本分别为v3，v2，v2.0。
-    * status  API版本的状态。  取值： - CURRENT：当前版本。 - STABLE：稳定版本。 - DEPRECATED：废弃版本。  说明： 所有支持的API版本中最高版状态为CURRENT，其他版本状态为STABLE。
+    * id  **参数解释**：API版本号。  **取值范围**：由高到低版本分别为v3，v2，v2.0。
+    * status  **参数解释**：API版本的状态。  **取值范围**： - CURRENT：当前版本，当前所支持的API版本中最高的版本。 - STABLE：稳定版本，其他可用版本。 - DEPRECATED：废弃版本。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ApiVersionInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  API版本号。  取值：由高到低版本分别为v3，v2，v2.0。
-    * status  API版本的状态。  取值： - CURRENT：当前版本。 - STABLE：稳定版本。 - DEPRECATED：废弃版本。  说明： 所有支持的API版本中最高版状态为CURRENT，其他版本状态为STABLE。
+    * id  **参数解释**：API版本号。  **取值范围**：由高到低版本分别为v3，v2，v2.0。
+    * status  **参数解释**：API版本的状态。  **取值范围**： - CURRENT：当前版本，当前所支持的API版本中最高的版本。 - STABLE：稳定版本，其他可用版本。 - DEPRECATED：废弃版本。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ApiVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  API版本号。  取值：由高到低版本分别为v3，v2，v2.0。
-    * status  API版本的状态。  取值： - CURRENT：当前版本。 - STABLE：稳定版本。 - DEPRECATED：废弃版本。  说明： 所有支持的API版本中最高版状态为CURRENT，其他版本状态为STABLE。
+    * id  **参数解释**：API版本号。  **取值范围**：由高到低版本分别为v3，v2，v2.0。
+    * status  **参数解释**：API版本的状态。  **取值范围**： - CURRENT：当前版本，当前所支持的API版本中最高的版本。 - STABLE：稳定版本，其他可用版本。 - DEPRECATED：废弃版本。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ApiVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  API版本号。  取值：由高到低版本分别为v3，v2，v2.0。
-    * status  API版本的状态。  取值： - CURRENT：当前版本。 - STABLE：稳定版本。 - DEPRECATED：废弃版本。  说明： 所有支持的API版本中最高版状态为CURRENT，其他版本状态为STABLE。
+    * id  **参数解释**：API版本号。  **取值范围**：由高到低版本分别为v3，v2，v2.0。
+    * status  **参数解释**：API版本的状态。  **取值范围**： - CURRENT：当前版本，当前所支持的API版本中最高的版本。 - STABLE：稳定版本，其他可用版本。 - DEPRECATED：废弃版本。
     *
     * @var string[]
     */
@@ -216,7 +216,7 @@ class ApiVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  API版本号。  取值：由高到低版本分别为v3，v2，v2.0。
+    *  **参数解释**：API版本号。  **取值范围**：由高到低版本分别为v3，v2，v2.0。
     *
     * @return string
     */
@@ -228,7 +228,7 @@ class ApiVersionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id API版本号。  取值：由高到低版本分别为v3，v2，v2.0。
+    * @param string $id **参数解释**：API版本号。  **取值范围**：由高到低版本分别为v3，v2，v2.0。
     *
     * @return $this
     */
@@ -240,7 +240,7 @@ class ApiVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  API版本的状态。  取值： - CURRENT：当前版本。 - STABLE：稳定版本。 - DEPRECATED：废弃版本。  说明： 所有支持的API版本中最高版状态为CURRENT，其他版本状态为STABLE。
+    *  **参数解释**：API版本的状态。  **取值范围**： - CURRENT：当前版本，当前所支持的API版本中最高的版本。 - STABLE：稳定版本，其他可用版本。 - DEPRECATED：废弃版本。
     *
     * @return string
     */
@@ -252,7 +252,7 @@ class ApiVersionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status API版本的状态。  取值： - CURRENT：当前版本。 - STABLE：稳定版本。 - DEPRECATED：废弃版本。  说明： 所有支持的API版本中最高版状态为CURRENT，其他版本状态为STABLE。
+    * @param string $status **参数解释**：API版本的状态。  **取值范围**： - CURRENT：当前版本，当前所支持的API版本中最高的版本。 - STABLE：稳定版本，其他可用版本。 - DEPRECATED：废弃版本。
     *
     * @return $this
     */

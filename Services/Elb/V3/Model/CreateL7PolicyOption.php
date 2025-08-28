@@ -20,23 +20,23 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  参数解释：转发策略的转发动作。  约束限制： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时， 只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  取值范围： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  [不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)
-    * adminStateUp  参数解释：转发策略的管理状态。  约束限制：只支持设置为true。
-    * description  参数解释：转发策略描述信息。
-    * listenerId  参数解释：转发策略对应的监听器ID。  约束限制： - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。
-    * name  参数解释：转发策略名称。
-    * position  参数解释：转发策略的优先级。  约束限制：不支持更新。  不支持该字段，请勿使用。
-    * priority  参数解释：转发策略的优先级。数字越小表示优先级越高。  约束限制： - 同一个监听器下不同转发策略之间不允许重复的优先级数值。  - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。 - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，按原有policy的排序逻辑，自动排序。 不同域名优先级独立。相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)  取值范围： - 当action为REDIRECT_TO_LISTENER时，支持指定为0-10000。 - 其它action取值，支持指定为1-10000。  默认取值： - 若关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，且不传入该字段，则新创建的转发策略的优先级的值为1。 - 当action为REDIRECT_TO_LISTENER时，则新创建的转发策略的优先级的值为0。 - 其它action取值，新创建的转发策略的优先级的值为同一监听器下已有转发策略的优先级的最大值+1。   + 若监听器下没有转发策略，则新建的转发策略的优先级为1。   + 若当前已有转发策略的优先级的最大值是10000，则新创建的转发策略会因超出取值范围10000而失败。此时可通过传入指定priority，或调整原有policy的优先级来避免错误。  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
-    * projectId  参数解释：转发策略所在的项目ID。
-    * redirectListenerId  参数解释：转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  约束限制： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。 [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
-    * redirectPoolId  参数解释：转发到pool的ID。  约束限制： - 当action为REDIRECT_TO_POOL时生效。 - 当action为REDIRECT_TO_LISTENER时，传入会报错。
-    * redirectUrl  参数解释：转发到的url。  约束限制：必须满足格式: protocol://host:port/path?query。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * action  **参数解释**：转发策略的转发动作。  **约束限制**： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。 [- 不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)  **取值范围**： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  **默认取值**：不涉及
+    * adminStateUp  **参数解释**：转发策略的管理状态。  **约束限制**：只支持设置为true。  **取值范围**：不涉及  **默认取值**：不涉及
+    * description  **参数解释**：转发策略描述信息。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerId  **参数解释**：转发策略对应的监听器ID。  **约束限制**： - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  **取值范围**：不涉及  **默认取值**：不涉及
+    * name  **参数解释**：转发策略名称。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * position  **参数解释**：转发策略的优先级。  **约束限制**：不支持更新。  **取值范围**：不涉及  **默认取值**：不涉及  不支持该字段，请勿使用。
+    * priority  **参数解释**：转发策略的优先级。数字越小表示优先级越高。  **约束限制**： - 同一个监听器下不同转发策略之间不允许重复的优先级数值。  - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。 - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，按原有policy的排序逻辑，自动排序。不同域名优先级独立。相同域名下，按path的compare_type排序，精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)  **取值范围**： - 当action为REDIRECT_TO_LISTENER时，支持指定为0-10000。 - 其它action取值，支持指定为1-10000。  **默认取值**： - 若关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，且不传入该字段，则新创建的转发策略的优先级的值为1。 - 当action为REDIRECT_TO_LISTENER时，则新创建的转发策略的优先级的值为0。 - 其它action取值，新创建的转发策略的优先级的值为同一监听器下已有转发策略的优先级的最大值+1。   + 若监听器下没有转发策略，则新建的转发策略的优先级为1。   + 若当前已有转发策略的优先级的最大值是10000，则新创建的转发策略会因超出取值范围10000而失败。此时可通过传入指定priority，或调整原有policy的优先级来避免错误。  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * projectId  **参数解释**：转发策略所在的项目ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * redirectListenerId  **参数解释**：转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  **约束限制**： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。  **取值范围**：不涉及  **默认取值**：不涉及
+    * redirectPoolId  **参数解释**：转发到pool的ID。  **约束限制**： - 当action为REDIRECT_TO_POOL时生效。 - 当action为REDIRECT_TO_LISTENER时，传入会报错。  **取值范围**：不涉及  **默认取值**：不涉及
+    * redirectUrl  **参数解释**：转发到的url。  **约束限制**：必须满足格式: protocol://host:port/path?query。  **取值范围**：不涉及  **默认取值**：不涉及  [不支持该字段，请勿使用。](tag:hcso_dt)
     * redirectUrlConfig  redirectUrlConfig
-    * redirectPoolsConfig  参数解释：转发到多个主机组列表。  约束限制：一个policy最多配置5个pool。
+    * redirectPoolsConfig  **参数解释**：转发到多个服务器组列表。  **约束限制**：一个policy最多配置5个pool。
     * redirectPoolsStickySessionConfig  redirectPoolsStickySessionConfig
     * fixedResponseConfig  fixedResponseConfig
     * redirectPoolsExtendConfig  redirectPoolsExtendConfig
-    * rules  参数解释：转发策略关联的转发规则对象。  约束限制： - rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。 - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
+    * rules  **参数解释**：转发策略关联的转发规则对象。  **约束限制**： - rules列表中最多含有10个rule规则（若rule中包含conditions字段，一条condition算一个规则），且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。 - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
     *
     * @var string[]
     */
@@ -62,23 +62,23 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  参数解释：转发策略的转发动作。  约束限制： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时， 只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  取值范围： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  [不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)
-    * adminStateUp  参数解释：转发策略的管理状态。  约束限制：只支持设置为true。
-    * description  参数解释：转发策略描述信息。
-    * listenerId  参数解释：转发策略对应的监听器ID。  约束限制： - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。
-    * name  参数解释：转发策略名称。
-    * position  参数解释：转发策略的优先级。  约束限制：不支持更新。  不支持该字段，请勿使用。
-    * priority  参数解释：转发策略的优先级。数字越小表示优先级越高。  约束限制： - 同一个监听器下不同转发策略之间不允许重复的优先级数值。  - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。 - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，按原有policy的排序逻辑，自动排序。 不同域名优先级独立。相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)  取值范围： - 当action为REDIRECT_TO_LISTENER时，支持指定为0-10000。 - 其它action取值，支持指定为1-10000。  默认取值： - 若关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，且不传入该字段，则新创建的转发策略的优先级的值为1。 - 当action为REDIRECT_TO_LISTENER时，则新创建的转发策略的优先级的值为0。 - 其它action取值，新创建的转发策略的优先级的值为同一监听器下已有转发策略的优先级的最大值+1。   + 若监听器下没有转发策略，则新建的转发策略的优先级为1。   + 若当前已有转发策略的优先级的最大值是10000，则新创建的转发策略会因超出取值范围10000而失败。此时可通过传入指定priority，或调整原有policy的优先级来避免错误。  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
-    * projectId  参数解释：转发策略所在的项目ID。
-    * redirectListenerId  参数解释：转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  约束限制： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。 [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
-    * redirectPoolId  参数解释：转发到pool的ID。  约束限制： - 当action为REDIRECT_TO_POOL时生效。 - 当action为REDIRECT_TO_LISTENER时，传入会报错。
-    * redirectUrl  参数解释：转发到的url。  约束限制：必须满足格式: protocol://host:port/path?query。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * action  **参数解释**：转发策略的转发动作。  **约束限制**： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。 [- 不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)  **取值范围**： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  **默认取值**：不涉及
+    * adminStateUp  **参数解释**：转发策略的管理状态。  **约束限制**：只支持设置为true。  **取值范围**：不涉及  **默认取值**：不涉及
+    * description  **参数解释**：转发策略描述信息。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerId  **参数解释**：转发策略对应的监听器ID。  **约束限制**： - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  **取值范围**：不涉及  **默认取值**：不涉及
+    * name  **参数解释**：转发策略名称。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * position  **参数解释**：转发策略的优先级。  **约束限制**：不支持更新。  **取值范围**：不涉及  **默认取值**：不涉及  不支持该字段，请勿使用。
+    * priority  **参数解释**：转发策略的优先级。数字越小表示优先级越高。  **约束限制**： - 同一个监听器下不同转发策略之间不允许重复的优先级数值。  - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。 - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，按原有policy的排序逻辑，自动排序。不同域名优先级独立。相同域名下，按path的compare_type排序，精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)  **取值范围**： - 当action为REDIRECT_TO_LISTENER时，支持指定为0-10000。 - 其它action取值，支持指定为1-10000。  **默认取值**： - 若关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，且不传入该字段，则新创建的转发策略的优先级的值为1。 - 当action为REDIRECT_TO_LISTENER时，则新创建的转发策略的优先级的值为0。 - 其它action取值，新创建的转发策略的优先级的值为同一监听器下已有转发策略的优先级的最大值+1。   + 若监听器下没有转发策略，则新建的转发策略的优先级为1。   + 若当前已有转发策略的优先级的最大值是10000，则新创建的转发策略会因超出取值范围10000而失败。此时可通过传入指定priority，或调整原有policy的优先级来避免错误。  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * projectId  **参数解释**：转发策略所在的项目ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * redirectListenerId  **参数解释**：转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  **约束限制**： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。  **取值范围**：不涉及  **默认取值**：不涉及
+    * redirectPoolId  **参数解释**：转发到pool的ID。  **约束限制**： - 当action为REDIRECT_TO_POOL时生效。 - 当action为REDIRECT_TO_LISTENER时，传入会报错。  **取值范围**：不涉及  **默认取值**：不涉及
+    * redirectUrl  **参数解释**：转发到的url。  **约束限制**：必须满足格式: protocol://host:port/path?query。  **取值范围**：不涉及  **默认取值**：不涉及  [不支持该字段，请勿使用。](tag:hcso_dt)
     * redirectUrlConfig  redirectUrlConfig
-    * redirectPoolsConfig  参数解释：转发到多个主机组列表。  约束限制：一个policy最多配置5个pool。
+    * redirectPoolsConfig  **参数解释**：转发到多个服务器组列表。  **约束限制**：一个policy最多配置5个pool。
     * redirectPoolsStickySessionConfig  redirectPoolsStickySessionConfig
     * fixedResponseConfig  fixedResponseConfig
     * redirectPoolsExtendConfig  redirectPoolsExtendConfig
-    * rules  参数解释：转发策略关联的转发规则对象。  约束限制： - rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。 - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
+    * rules  **参数解释**：转发策略关联的转发规则对象。  **约束限制**： - rules列表中最多含有10个rule规则（若rule中包含conditions字段，一条condition算一个规则），且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。 - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
     *
     * @var string[]
     */
@@ -125,23 +125,23 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  参数解释：转发策略的转发动作。  约束限制： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时， 只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  取值范围： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  [不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)
-    * adminStateUp  参数解释：转发策略的管理状态。  约束限制：只支持设置为true。
-    * description  参数解释：转发策略描述信息。
-    * listenerId  参数解释：转发策略对应的监听器ID。  约束限制： - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。
-    * name  参数解释：转发策略名称。
-    * position  参数解释：转发策略的优先级。  约束限制：不支持更新。  不支持该字段，请勿使用。
-    * priority  参数解释：转发策略的优先级。数字越小表示优先级越高。  约束限制： - 同一个监听器下不同转发策略之间不允许重复的优先级数值。  - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。 - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，按原有policy的排序逻辑，自动排序。 不同域名优先级独立。相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)  取值范围： - 当action为REDIRECT_TO_LISTENER时，支持指定为0-10000。 - 其它action取值，支持指定为1-10000。  默认取值： - 若关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，且不传入该字段，则新创建的转发策略的优先级的值为1。 - 当action为REDIRECT_TO_LISTENER时，则新创建的转发策略的优先级的值为0。 - 其它action取值，新创建的转发策略的优先级的值为同一监听器下已有转发策略的优先级的最大值+1。   + 若监听器下没有转发策略，则新建的转发策略的优先级为1。   + 若当前已有转发策略的优先级的最大值是10000，则新创建的转发策略会因超出取值范围10000而失败。此时可通过传入指定priority，或调整原有policy的优先级来避免错误。  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
-    * projectId  参数解释：转发策略所在的项目ID。
-    * redirectListenerId  参数解释：转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  约束限制： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。 [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
-    * redirectPoolId  参数解释：转发到pool的ID。  约束限制： - 当action为REDIRECT_TO_POOL时生效。 - 当action为REDIRECT_TO_LISTENER时，传入会报错。
-    * redirectUrl  参数解释：转发到的url。  约束限制：必须满足格式: protocol://host:port/path?query。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * action  **参数解释**：转发策略的转发动作。  **约束限制**： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。 [- 不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)  **取值范围**： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  **默认取值**：不涉及
+    * adminStateUp  **参数解释**：转发策略的管理状态。  **约束限制**：只支持设置为true。  **取值范围**：不涉及  **默认取值**：不涉及
+    * description  **参数解释**：转发策略描述信息。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerId  **参数解释**：转发策略对应的监听器ID。  **约束限制**： - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  **取值范围**：不涉及  **默认取值**：不涉及
+    * name  **参数解释**：转发策略名称。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * position  **参数解释**：转发策略的优先级。  **约束限制**：不支持更新。  **取值范围**：不涉及  **默认取值**：不涉及  不支持该字段，请勿使用。
+    * priority  **参数解释**：转发策略的优先级。数字越小表示优先级越高。  **约束限制**： - 同一个监听器下不同转发策略之间不允许重复的优先级数值。  - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。 - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，按原有policy的排序逻辑，自动排序。不同域名优先级独立。相同域名下，按path的compare_type排序，精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)  **取值范围**： - 当action为REDIRECT_TO_LISTENER时，支持指定为0-10000。 - 其它action取值，支持指定为1-10000。  **默认取值**： - 若关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，且不传入该字段，则新创建的转发策略的优先级的值为1。 - 当action为REDIRECT_TO_LISTENER时，则新创建的转发策略的优先级的值为0。 - 其它action取值，新创建的转发策略的优先级的值为同一监听器下已有转发策略的优先级的最大值+1。   + 若监听器下没有转发策略，则新建的转发策略的优先级为1。   + 若当前已有转发策略的优先级的最大值是10000，则新创建的转发策略会因超出取值范围10000而失败。此时可通过传入指定priority，或调整原有policy的优先级来避免错误。  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * projectId  **参数解释**：转发策略所在的项目ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * redirectListenerId  **参数解释**：转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  **约束限制**： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。  **取值范围**：不涉及  **默认取值**：不涉及
+    * redirectPoolId  **参数解释**：转发到pool的ID。  **约束限制**： - 当action为REDIRECT_TO_POOL时生效。 - 当action为REDIRECT_TO_LISTENER时，传入会报错。  **取值范围**：不涉及  **默认取值**：不涉及
+    * redirectUrl  **参数解释**：转发到的url。  **约束限制**：必须满足格式: protocol://host:port/path?query。  **取值范围**：不涉及  **默认取值**：不涉及  [不支持该字段，请勿使用。](tag:hcso_dt)
     * redirectUrlConfig  redirectUrlConfig
-    * redirectPoolsConfig  参数解释：转发到多个主机组列表。  约束限制：一个policy最多配置5个pool。
+    * redirectPoolsConfig  **参数解释**：转发到多个服务器组列表。  **约束限制**：一个policy最多配置5个pool。
     * redirectPoolsStickySessionConfig  redirectPoolsStickySessionConfig
     * fixedResponseConfig  fixedResponseConfig
     * redirectPoolsExtendConfig  redirectPoolsExtendConfig
-    * rules  参数解释：转发策略关联的转发规则对象。  约束限制： - rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。 - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
+    * rules  **参数解释**：转发策略关联的转发规则对象。  **约束限制**： - rules列表中最多含有10个rule规则（若rule中包含conditions字段，一条condition算一个规则），且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。 - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
     *
     * @var string[]
     */
@@ -167,23 +167,23 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  参数解释：转发策略的转发动作。  约束限制： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时， 只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  取值范围： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  [不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)
-    * adminStateUp  参数解释：转发策略的管理状态。  约束限制：只支持设置为true。
-    * description  参数解释：转发策略描述信息。
-    * listenerId  参数解释：转发策略对应的监听器ID。  约束限制： - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。
-    * name  参数解释：转发策略名称。
-    * position  参数解释：转发策略的优先级。  约束限制：不支持更新。  不支持该字段，请勿使用。
-    * priority  参数解释：转发策略的优先级。数字越小表示优先级越高。  约束限制： - 同一个监听器下不同转发策略之间不允许重复的优先级数值。  - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。 - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，按原有policy的排序逻辑，自动排序。 不同域名优先级独立。相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)  取值范围： - 当action为REDIRECT_TO_LISTENER时，支持指定为0-10000。 - 其它action取值，支持指定为1-10000。  默认取值： - 若关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，且不传入该字段，则新创建的转发策略的优先级的值为1。 - 当action为REDIRECT_TO_LISTENER时，则新创建的转发策略的优先级的值为0。 - 其它action取值，新创建的转发策略的优先级的值为同一监听器下已有转发策略的优先级的最大值+1。   + 若监听器下没有转发策略，则新建的转发策略的优先级为1。   + 若当前已有转发策略的优先级的最大值是10000，则新创建的转发策略会因超出取值范围10000而失败。此时可通过传入指定priority，或调整原有policy的优先级来避免错误。  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
-    * projectId  参数解释：转发策略所在的项目ID。
-    * redirectListenerId  参数解释：转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  约束限制： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。 [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
-    * redirectPoolId  参数解释：转发到pool的ID。  约束限制： - 当action为REDIRECT_TO_POOL时生效。 - 当action为REDIRECT_TO_LISTENER时，传入会报错。
-    * redirectUrl  参数解释：转发到的url。  约束限制：必须满足格式: protocol://host:port/path?query。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * action  **参数解释**：转发策略的转发动作。  **约束限制**： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。 [- 不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)  **取值范围**： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  **默认取值**：不涉及
+    * adminStateUp  **参数解释**：转发策略的管理状态。  **约束限制**：只支持设置为true。  **取值范围**：不涉及  **默认取值**：不涉及
+    * description  **参数解释**：转发策略描述信息。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerId  **参数解释**：转发策略对应的监听器ID。  **约束限制**： - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  **取值范围**：不涉及  **默认取值**：不涉及
+    * name  **参数解释**：转发策略名称。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * position  **参数解释**：转发策略的优先级。  **约束限制**：不支持更新。  **取值范围**：不涉及  **默认取值**：不涉及  不支持该字段，请勿使用。
+    * priority  **参数解释**：转发策略的优先级。数字越小表示优先级越高。  **约束限制**： - 同一个监听器下不同转发策略之间不允许重复的优先级数值。  - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。 - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，按原有policy的排序逻辑，自动排序。不同域名优先级独立。相同域名下，按path的compare_type排序，精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)  **取值范围**： - 当action为REDIRECT_TO_LISTENER时，支持指定为0-10000。 - 其它action取值，支持指定为1-10000。  **默认取值**： - 若关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，且不传入该字段，则新创建的转发策略的优先级的值为1。 - 当action为REDIRECT_TO_LISTENER时，则新创建的转发策略的优先级的值为0。 - 其它action取值，新创建的转发策略的优先级的值为同一监听器下已有转发策略的优先级的最大值+1。   + 若监听器下没有转发策略，则新建的转发策略的优先级为1。   + 若当前已有转发策略的优先级的最大值是10000，则新创建的转发策略会因超出取值范围10000而失败。此时可通过传入指定priority，或调整原有policy的优先级来避免错误。  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * projectId  **参数解释**：转发策略所在的项目ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * redirectListenerId  **参数解释**：转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  **约束限制**： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。  **取值范围**：不涉及  **默认取值**：不涉及
+    * redirectPoolId  **参数解释**：转发到pool的ID。  **约束限制**： - 当action为REDIRECT_TO_POOL时生效。 - 当action为REDIRECT_TO_LISTENER时，传入会报错。  **取值范围**：不涉及  **默认取值**：不涉及
+    * redirectUrl  **参数解释**：转发到的url。  **约束限制**：必须满足格式: protocol://host:port/path?query。  **取值范围**：不涉及  **默认取值**：不涉及  [不支持该字段，请勿使用。](tag:hcso_dt)
     * redirectUrlConfig  redirectUrlConfig
-    * redirectPoolsConfig  参数解释：转发到多个主机组列表。  约束限制：一个policy最多配置5个pool。
+    * redirectPoolsConfig  **参数解释**：转发到多个服务器组列表。  **约束限制**：一个policy最多配置5个pool。
     * redirectPoolsStickySessionConfig  redirectPoolsStickySessionConfig
     * fixedResponseConfig  fixedResponseConfig
     * redirectPoolsExtendConfig  redirectPoolsExtendConfig
-    * rules  参数解释：转发策略关联的转发规则对象。  约束限制： - rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。 - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
+    * rules  **参数解释**：转发策略关联的转发规则对象。  **约束限制**： - rules列表中最多含有10个rule规则（若rule中包含conditions字段，一条condition算一个规则），且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。 - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
     *
     * @var string[]
     */
@@ -209,23 +209,23 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  参数解释：转发策略的转发动作。  约束限制： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时， 只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  取值范围： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  [不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)
-    * adminStateUp  参数解释：转发策略的管理状态。  约束限制：只支持设置为true。
-    * description  参数解释：转发策略描述信息。
-    * listenerId  参数解释：转发策略对应的监听器ID。  约束限制： - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。
-    * name  参数解释：转发策略名称。
-    * position  参数解释：转发策略的优先级。  约束限制：不支持更新。  不支持该字段，请勿使用。
-    * priority  参数解释：转发策略的优先级。数字越小表示优先级越高。  约束限制： - 同一个监听器下不同转发策略之间不允许重复的优先级数值。  - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。 - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，按原有policy的排序逻辑，自动排序。 不同域名优先级独立。相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)  取值范围： - 当action为REDIRECT_TO_LISTENER时，支持指定为0-10000。 - 其它action取值，支持指定为1-10000。  默认取值： - 若关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，且不传入该字段，则新创建的转发策略的优先级的值为1。 - 当action为REDIRECT_TO_LISTENER时，则新创建的转发策略的优先级的值为0。 - 其它action取值，新创建的转发策略的优先级的值为同一监听器下已有转发策略的优先级的最大值+1。   + 若监听器下没有转发策略，则新建的转发策略的优先级为1。   + 若当前已有转发策略的优先级的最大值是10000，则新创建的转发策略会因超出取值范围10000而失败。此时可通过传入指定priority，或调整原有policy的优先级来避免错误。  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
-    * projectId  参数解释：转发策略所在的项目ID。
-    * redirectListenerId  参数解释：转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  约束限制： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。 [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
-    * redirectPoolId  参数解释：转发到pool的ID。  约束限制： - 当action为REDIRECT_TO_POOL时生效。 - 当action为REDIRECT_TO_LISTENER时，传入会报错。
-    * redirectUrl  参数解释：转发到的url。  约束限制：必须满足格式: protocol://host:port/path?query。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * action  **参数解释**：转发策略的转发动作。  **约束限制**： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。 [- 不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)  **取值范围**： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  **默认取值**：不涉及
+    * adminStateUp  **参数解释**：转发策略的管理状态。  **约束限制**：只支持设置为true。  **取值范围**：不涉及  **默认取值**：不涉及
+    * description  **参数解释**：转发策略描述信息。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerId  **参数解释**：转发策略对应的监听器ID。  **约束限制**： - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  **取值范围**：不涉及  **默认取值**：不涉及
+    * name  **参数解释**：转发策略名称。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * position  **参数解释**：转发策略的优先级。  **约束限制**：不支持更新。  **取值范围**：不涉及  **默认取值**：不涉及  不支持该字段，请勿使用。
+    * priority  **参数解释**：转发策略的优先级。数字越小表示优先级越高。  **约束限制**： - 同一个监听器下不同转发策略之间不允许重复的优先级数值。  - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。 - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，按原有policy的排序逻辑，自动排序。不同域名优先级独立。相同域名下，按path的compare_type排序，精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)  **取值范围**： - 当action为REDIRECT_TO_LISTENER时，支持指定为0-10000。 - 其它action取值，支持指定为1-10000。  **默认取值**： - 若关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，且不传入该字段，则新创建的转发策略的优先级的值为1。 - 当action为REDIRECT_TO_LISTENER时，则新创建的转发策略的优先级的值为0。 - 其它action取值，新创建的转发策略的优先级的值为同一监听器下已有转发策略的优先级的最大值+1。   + 若监听器下没有转发策略，则新建的转发策略的优先级为1。   + 若当前已有转发策略的优先级的最大值是10000，则新创建的转发策略会因超出取值范围10000而失败。此时可通过传入指定priority，或调整原有policy的优先级来避免错误。  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * projectId  **参数解释**：转发策略所在的项目ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * redirectListenerId  **参数解释**：转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  **约束限制**： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。  **取值范围**：不涉及  **默认取值**：不涉及
+    * redirectPoolId  **参数解释**：转发到pool的ID。  **约束限制**： - 当action为REDIRECT_TO_POOL时生效。 - 当action为REDIRECT_TO_LISTENER时，传入会报错。  **取值范围**：不涉及  **默认取值**：不涉及
+    * redirectUrl  **参数解释**：转发到的url。  **约束限制**：必须满足格式: protocol://host:port/path?query。  **取值范围**：不涉及  **默认取值**：不涉及  [不支持该字段，请勿使用。](tag:hcso_dt)
     * redirectUrlConfig  redirectUrlConfig
-    * redirectPoolsConfig  参数解释：转发到多个主机组列表。  约束限制：一个policy最多配置5个pool。
+    * redirectPoolsConfig  **参数解释**：转发到多个服务器组列表。  **约束限制**：一个policy最多配置5个pool。
     * redirectPoolsStickySessionConfig  redirectPoolsStickySessionConfig
     * fixedResponseConfig  fixedResponseConfig
     * redirectPoolsExtendConfig  redirectPoolsExtendConfig
-    * rules  参数解释：转发策略关联的转发规则对象。  约束限制： - rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。 - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
+    * rules  **参数解释**：转发策略关联的转发规则对象。  **约束限制**： - rules列表中最多含有10个rule规则（若rule中包含conditions字段，一条condition算一个规则），且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。 - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
     *
     * @var string[]
     */
@@ -398,7 +398,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  参数解释：转发策略的转发动作。  约束限制： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时， 只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  取值范围： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  [不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)
+    *  **参数解释**：转发策略的转发动作。  **约束限制**： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。 [- 不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)  **取值范围**： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  **默认取值**：不涉及
     *
     * @return string
     */
@@ -410,7 +410,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action 参数解释：转发策略的转发动作。  约束限制： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时， 只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  取值范围： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  [不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)
+    * @param string $action **参数解释**：转发策略的转发动作。  **约束限制**： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。 [- 不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)  **取值范围**： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -422,7 +422,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminStateUp
-    *  参数解释：转发策略的管理状态。  约束限制：只支持设置为true。
+    *  **参数解释**：转发策略的管理状态。  **约束限制**：只支持设置为true。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return bool|null
     */
@@ -434,7 +434,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets adminStateUp
     *
-    * @param bool|null $adminStateUp 参数解释：转发策略的管理状态。  约束限制：只支持设置为true。
+    * @param bool|null $adminStateUp **参数解释**：转发策略的管理状态。  **约束限制**：只支持设置为true。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -446,7 +446,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  参数解释：转发策略描述信息。
+    *  **参数解释**：转发策略描述信息。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -458,7 +458,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 参数解释：转发策略描述信息。
+    * @param string|null $description **参数解释**：转发策略描述信息。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -470,7 +470,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets listenerId
-    *  参数解释：转发策略对应的监听器ID。  约束限制： - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。
+    *  **参数解释**：转发策略对应的监听器ID。  **约束限制**： - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string
     */
@@ -482,7 +482,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets listenerId
     *
-    * @param string $listenerId 参数解释：转发策略对应的监听器ID。  约束限制： - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。
+    * @param string $listenerId **参数解释**：转发策略对应的监听器ID。  **约束限制**： - 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -494,7 +494,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  参数解释：转发策略名称。
+    *  **参数解释**：转发策略名称。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -506,7 +506,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 参数解释：转发策略名称。
+    * @param string|null $name **参数解释**：转发策略名称。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -518,7 +518,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets position
-    *  参数解释：转发策略的优先级。  约束限制：不支持更新。  不支持该字段，请勿使用。
+    *  **参数解释**：转发策略的优先级。  **约束限制**：不支持更新。  **取值范围**：不涉及  **默认取值**：不涉及  不支持该字段，请勿使用。
     *
     * @return int|null
     */
@@ -530,7 +530,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets position
     *
-    * @param int|null $position 参数解释：转发策略的优先级。  约束限制：不支持更新。  不支持该字段，请勿使用。
+    * @param int|null $position **参数解释**：转发策略的优先级。  **约束限制**：不支持更新。  **取值范围**：不涉及  **默认取值**：不涉及  不支持该字段，请勿使用。
     *
     * @return $this
     */
@@ -542,7 +542,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  参数解释：转发策略的优先级。数字越小表示优先级越高。  约束限制： - 同一个监听器下不同转发策略之间不允许重复的优先级数值。  - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。 - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，按原有policy的排序逻辑，自动排序。 不同域名优先级独立。相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)  取值范围： - 当action为REDIRECT_TO_LISTENER时，支持指定为0-10000。 - 其它action取值，支持指定为1-10000。  默认取值： - 若关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，且不传入该字段，则新创建的转发策略的优先级的值为1。 - 当action为REDIRECT_TO_LISTENER时，则新创建的转发策略的优先级的值为0。 - 其它action取值，新创建的转发策略的优先级的值为同一监听器下已有转发策略的优先级的最大值+1。   + 若监听器下没有转发策略，则新建的转发策略的优先级为1。   + 若当前已有转发策略的优先级的最大值是10000，则新创建的转发策略会因超出取值范围10000而失败。此时可通过传入指定priority，或调整原有policy的优先级来避免错误。  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    *  **参数解释**：转发策略的优先级。数字越小表示优先级越高。  **约束限制**： - 同一个监听器下不同转发策略之间不允许重复的优先级数值。  - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。 - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，按原有policy的排序逻辑，自动排序。不同域名优先级独立。相同域名下，按path的compare_type排序，精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)  **取值范围**： - 当action为REDIRECT_TO_LISTENER时，支持指定为0-10000。 - 其它action取值，支持指定为1-10000。  **默认取值**： - 若关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，且不传入该字段，则新创建的转发策略的优先级的值为1。 - 当action为REDIRECT_TO_LISTENER时，则新创建的转发策略的优先级的值为0。 - 其它action取值，新创建的转发策略的优先级的值为同一监听器下已有转发策略的优先级的最大值+1。   + 若监听器下没有转发策略，则新建的转发策略的优先级为1。   + 若当前已有转发策略的优先级的最大值是10000，则新创建的转发策略会因超出取值范围10000而失败。此时可通过传入指定priority，或调整原有policy的优先级来避免错误。  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
     *
     * @return int|null
     */
@@ -554,7 +554,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param int|null $priority 参数解释：转发策略的优先级。数字越小表示优先级越高。  约束限制： - 同一个监听器下不同转发策略之间不允许重复的优先级数值。  - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。 - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，按原有policy的排序逻辑，自动排序。 不同域名优先级独立。相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)  取值范围： - 当action为REDIRECT_TO_LISTENER时，支持指定为0-10000。 - 其它action取值，支持指定为1-10000。  默认取值： - 若关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，且不传入该字段，则新创建的转发策略的优先级的值为1。 - 当action为REDIRECT_TO_LISTENER时，则新创建的转发策略的优先级的值为0。 - 其它action取值，新创建的转发策略的优先级的值为同一监听器下已有转发策略的优先级的最大值+1。   + 若监听器下没有转发策略，则新建的转发策略的优先级为1。   + 若当前已有转发策略的优先级的最大值是10000，则新创建的转发策略会因超出取值范围10000而失败。此时可通过传入指定priority，或调整原有policy的优先级来避免错误。  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * @param int|null $priority **参数解释**：转发策略的优先级。数字越小表示优先级越高。  **约束限制**： - 同一个监听器下不同转发策略之间不允许重复的优先级数值。  - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。 - 当关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，按原有policy的排序逻辑，自动排序。不同域名优先级独立。相同域名下，按path的compare_type排序，精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)  **取值范围**： - 当action为REDIRECT_TO_LISTENER时，支持指定为0-10000。 - 其它action取值，支持指定为1-10000。  **默认取值**： - 若关联的监听器的高级转发策略功能（enhance_l7policy_enable）未开启，且不传入该字段，则新创建的转发策略的优先级的值为1。 - 当action为REDIRECT_TO_LISTENER时，则新创建的转发策略的优先级的值为0。 - 其它action取值，新创建的转发策略的优先级的值为同一监听器下已有转发策略的优先级的最大值+1。   + 若监听器下没有转发策略，则新建的转发策略的优先级为1。   + 若当前已有转发策略的优先级的最大值是10000，则新创建的转发策略会因超出取值范围10000而失败。此时可通过传入指定priority，或调整原有policy的优先级来避免错误。  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
     *
     * @return $this
     */
@@ -566,7 +566,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  参数解释：转发策略所在的项目ID。
+    *  **参数解释**：转发策略所在的项目ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -578,7 +578,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 参数解释：转发策略所在的项目ID。
+    * @param string|null $projectId **参数解释**：转发策略所在的项目ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -590,7 +590,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets redirectListenerId
-    *  参数解释：转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  约束限制： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。 [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+    *  **参数解释**：转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  **约束限制**： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -602,7 +602,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets redirectListenerId
     *
-    * @param string|null $redirectListenerId 参数解释：转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  约束限制： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。 [- 共享型负载均衡器下的转发策略不支持该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+    * @param string|null $redirectListenerId **参数解释**：转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  **约束限制**： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -614,7 +614,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets redirectPoolId
-    *  参数解释：转发到pool的ID。  约束限制： - 当action为REDIRECT_TO_POOL时生效。 - 当action为REDIRECT_TO_LISTENER时，传入会报错。
+    *  **参数解释**：转发到pool的ID。  **约束限制**： - 当action为REDIRECT_TO_POOL时生效。 - 当action为REDIRECT_TO_LISTENER时，传入会报错。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -626,7 +626,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets redirectPoolId
     *
-    * @param string|null $redirectPoolId 参数解释：转发到pool的ID。  约束限制： - 当action为REDIRECT_TO_POOL时生效。 - 当action为REDIRECT_TO_LISTENER时，传入会报错。
+    * @param string|null $redirectPoolId **参数解释**：转发到pool的ID。  **约束限制**： - 当action为REDIRECT_TO_POOL时生效。 - 当action为REDIRECT_TO_LISTENER时，传入会报错。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -638,7 +638,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets redirectUrl
-    *  参数解释：转发到的url。  约束限制：必须满足格式: protocol://host:port/path?query。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    *  **参数解释**：转发到的url。  **约束限制**：必须满足格式: protocol://host:port/path?query。  **取值范围**：不涉及  **默认取值**：不涉及  [不支持该字段，请勿使用。](tag:hcso_dt)
     *
     * @return string|null
     */
@@ -650,7 +650,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets redirectUrl
     *
-    * @param string|null $redirectUrl 参数解释：转发到的url。  约束限制：必须满足格式: protocol://host:port/path?query。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * @param string|null $redirectUrl **参数解释**：转发到的url。  **约束限制**：必须满足格式: protocol://host:port/path?query。  **取值范围**：不涉及  **默认取值**：不涉及  [不支持该字段，请勿使用。](tag:hcso_dt)
     *
     * @return $this
     */
@@ -686,7 +686,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets redirectPoolsConfig
-    *  参数解释：转发到多个主机组列表。  约束限制：一个policy最多配置5个pool。
+    *  **参数解释**：转发到多个服务器组列表。  **约束限制**：一个policy最多配置5个pool。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\CreateRedirectPoolsConfig[]|null
     */
@@ -698,7 +698,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets redirectPoolsConfig
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\CreateRedirectPoolsConfig[]|null $redirectPoolsConfig 参数解释：转发到多个主机组列表。  约束限制：一个policy最多配置5个pool。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\CreateRedirectPoolsConfig[]|null $redirectPoolsConfig **参数解释**：转发到多个服务器组列表。  **约束限制**：一个policy最多配置5个pool。
     *
     * @return $this
     */
@@ -782,7 +782,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets rules
-    *  参数解释：转发策略关联的转发规则对象。  约束限制： - rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。 - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
+    *  **参数解释**：转发策略关联的转发规则对象。  **约束限制**： - rules列表中最多含有10个rule规则（若rule中包含conditions字段，一条condition算一个规则），且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。 - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\CreateL7PolicyRuleOption[]|null
     */
@@ -794,7 +794,7 @@ class CreateL7PolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets rules
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\CreateL7PolicyRuleOption[]|null $rules 参数解释：转发策略关联的转发规则对象。  约束限制： - rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。 - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\CreateL7PolicyRuleOption[]|null $rules **参数解释**：转发策略关联的转发规则对象。  **约束限制**： - rules列表中最多含有10个rule规则（若rule中包含conditions字段，一条condition算一个规则），且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。 - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
     *
     * @return $this
     */

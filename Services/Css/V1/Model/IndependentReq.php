@@ -21,21 +21,25 @@ class IndependentReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  type
+    * isAutoPay  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'type' => '\HuaweiCloud\SDK\Css\V1\Model\IndependentBodyReq'
+            'type' => '\HuaweiCloud\SDK\Css\V1\Model\IndependentBodyReq',
+            'isAutoPay' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  type
+    * isAutoPay  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'type' => null
+        'type' => null,
+        'isAutoPay' => 'int32'
     ];
 
     /**
@@ -62,31 +66,37 @@ class IndependentReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  type
+    * isAutoPay  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'type' => 'type'
+            'type' => 'type',
+            'isAutoPay' => 'is_auto_pay'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  type
+    * isAutoPay  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。
     *
     * @var string[]
     */
     protected static $setters = [
-            'type' => 'setType'
+            'type' => 'setType',
+            'isAutoPay' => 'setIsAutoPay'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  type
+    * isAutoPay  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。
     *
     * @var string[]
     */
     protected static $getters = [
-            'type' => 'getType'
+            'type' => 'getType',
+            'isAutoPay' => 'getIsAutoPay'
     ];
 
     /**
@@ -148,6 +158,7 @@ class IndependentReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class IndependentReq implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets isAutoPay
+    *  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。
+    *
+    * @return int|null
+    */
+    public function getIsAutoPay()
+    {
+        return $this->container['isAutoPay'];
+    }
+
+    /**
+    * Sets isAutoPay
+    *
+    * @param int|null $isAutoPay 是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。
+    *
+    * @return $this
+    */
+    public function setIsAutoPay($isAutoPay)
+    {
+        $this->container['isAutoPay'] = $isAutoPay;
         return $this;
     }
 

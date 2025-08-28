@@ -20,8 +20,8 @@ class CreateTrafficMirrorConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * targetIds  流量镜像的目的后端服务器组ID。
-    * mirrorRequestBodyEnable  镜像请求是否携带请求体，默认true。
+    * targetIds  **参数解释**：流量镜像的目的后端服务器组ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * mirrorRequestBodyEnable  **参数解释**：镜像请求是否携带请求体，默认true。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CreateTrafficMirrorConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * targetIds  流量镜像的目的后端服务器组ID。
-    * mirrorRequestBodyEnable  镜像请求是否携带请求体，默认true。
+    * targetIds  **参数解释**：流量镜像的目的后端服务器组ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * mirrorRequestBodyEnable  **参数解释**：镜像请求是否携带请求体，默认true。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CreateTrafficMirrorConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * targetIds  流量镜像的目的后端服务器组ID。
-    * mirrorRequestBodyEnable  镜像请求是否携带请求体，默认true。
+    * targetIds  **参数解释**：流量镜像的目的后端服务器组ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * mirrorRequestBodyEnable  **参数解释**：镜像请求是否携带请求体，默认true。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CreateTrafficMirrorConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * targetIds  流量镜像的目的后端服务器组ID。
-    * mirrorRequestBodyEnable  镜像请求是否携带请求体，默认true。
+    * targetIds  **参数解释**：流量镜像的目的后端服务器组ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * mirrorRequestBodyEnable  **参数解释**：镜像请求是否携带请求体，默认true。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CreateTrafficMirrorConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * targetIds  流量镜像的目的后端服务器组ID。
-    * mirrorRequestBodyEnable  镜像请求是否携带请求体，默认true。
+    * targetIds  **参数解释**：流量镜像的目的后端服务器组ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * mirrorRequestBodyEnable  **参数解释**：镜像请求是否携带请求体，默认true。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class CreateTrafficMirrorConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetIds
-    *  流量镜像的目的后端服务器组ID。
+    *  **参数解释**：流量镜像的目的后端服务器组ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string[]|null
     */
@@ -197,7 +197,7 @@ class CreateTrafficMirrorConfig implements ModelInterface, ArrayAccess
     /**
     * Sets targetIds
     *
-    * @param string[]|null $targetIds 流量镜像的目的后端服务器组ID。
+    * @param string[]|null $targetIds **参数解释**：流量镜像的目的后端服务器组ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class CreateTrafficMirrorConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets mirrorRequestBodyEnable
-    *  镜像请求是否携带请求体，默认true。
+    *  **参数解释**：镜像请求是否携带请求体，默认true。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return bool|null
     */
@@ -221,7 +221,7 @@ class CreateTrafficMirrorConfig implements ModelInterface, ArrayAccess
     /**
     * Sets mirrorRequestBodyEnable
     *
-    * @param bool|null $mirrorRequestBodyEnable 镜像请求是否携带请求体，默认true。
+    * @param bool|null $mirrorRequestBodyEnable **参数解释**：镜像请求是否携带请求体，默认true。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

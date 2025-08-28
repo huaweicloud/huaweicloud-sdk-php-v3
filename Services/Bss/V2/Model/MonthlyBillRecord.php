@@ -35,7 +35,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
     * id  唯一标识。 该字段为预留字段。
-    * billType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 103：消费-按年付费
+    * billType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 25：消费-抹零补扣 103：消费-按年付费
     * status  支付状态。 1：已支付2：未结清3：未结算
     * officialAmount  官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
     * officialDiscountAmount  折扣金额。单位：元。
@@ -103,7 +103,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
     * id  唯一标识。 该字段为预留字段。
-    * billType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 103：消费-按年付费
+    * billType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 25：消费-抹零补扣 103：消费-按年付费
     * status  支付状态。 1：已支付2：未结清3：未结算
     * officialAmount  官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
     * officialDiscountAmount  折扣金额。单位：元。
@@ -192,7 +192,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
     * id  唯一标识。 该字段为预留字段。
-    * billType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 103：消费-按年付费
+    * billType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 25：消费-抹零补扣 103：消费-按年付费
     * status  支付状态。 1：已支付2：未结清3：未结算
     * officialAmount  官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
     * officialDiscountAmount  折扣金额。单位：元。
@@ -260,7 +260,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
     * id  唯一标识。 该字段为预留字段。
-    * billType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 103：消费-按年付费
+    * billType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 25：消费-抹零补扣 103：消费-按年付费
     * status  支付状态。 1：已支付2：未结清3：未结算
     * officialAmount  官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
     * officialDiscountAmount  折扣金额。单位：元。
@@ -328,7 +328,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
     * id  唯一标识。 该字段为预留字段。
-    * billType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 103：消费-按年付费
+    * billType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 25：消费-抹零补扣 103：消费-按年付费
     * status  支付状态。 1：已支付2：未结清3：未结算
     * officialAmount  官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
     * officialDiscountAmount  折扣金额。单位：元。
@@ -853,7 +853,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets billType
-    *  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 103：消费-按年付费
+    *  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 25：消费-抹零补扣 103：消费-按年付费
     *
     * @return int|null
     */
@@ -865,7 +865,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     /**
     * Sets billType
     *
-    * @param int|null $billType 账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 103：消费-按年付费
+    * @param int|null $billType 账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 25：消费-抹零补扣 103：消费-按年付费
     *
     * @return $this
     */

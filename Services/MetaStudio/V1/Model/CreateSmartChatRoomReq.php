@@ -27,7 +27,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * voiceConfig  voiceConfig
     * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
+    * billingMode  计费模式，默认值CONCURRENCY * CONCURRENCY：并发计费 * CLIENT：按接入端计费 * CLIENT_TOKENS: 按接入端计费（TOKENS）
+    * reuseResource  是否允许使用未分配的并发数（端模式下不能复用），默认不使用。
     * concurrency  **参数解释**： 并发路数。 **约束限制**： 默认没有并发路数，如果不配置并发数量，则无法启动智能交互对话任务。
+    * clientNums  **参数解释**： 允许接入终端端数量。
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
@@ -47,7 +50,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             'voiceConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceConfig',
             'voiceConfigList' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ChatVoiceConfig[]',
             'robotId' => 'string',
+            'billingMode' => 'string',
+            'reuseResource' => 'bool',
             'concurrency' => 'int',
+            'clientNums' => 'int',
             'defaultLanguage' => 'string',
             'backgroundConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundConfigInfo',
             'layerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerConfig[]',
@@ -67,7 +73,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * voiceConfig  voiceConfig
     * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
+    * billingMode  计费模式，默认值CONCURRENCY * CONCURRENCY：并发计费 * CLIENT：按接入端计费 * CLIENT_TOKENS: 按接入端计费（TOKENS）
+    * reuseResource  是否允许使用未分配的并发数（端模式下不能复用），默认不使用。
     * concurrency  **参数解释**： 并发路数。 **约束限制**： 默认没有并发路数，如果不配置并发数量，则无法启动智能交互对话任务。
+    * clientNums  **参数解释**： 允许接入终端端数量。
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
@@ -87,7 +96,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
         'voiceConfig' => null,
         'voiceConfigList' => null,
         'robotId' => null,
+        'billingMode' => null,
+        'reuseResource' => null,
         'concurrency' => 'int32',
+        'clientNums' => 'int32',
         'defaultLanguage' => null,
         'backgroundConfig' => null,
         'layerConfig' => null,
@@ -128,7 +140,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * voiceConfig  voiceConfig
     * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
+    * billingMode  计费模式，默认值CONCURRENCY * CONCURRENCY：并发计费 * CLIENT：按接入端计费 * CLIENT_TOKENS: 按接入端计费（TOKENS）
+    * reuseResource  是否允许使用未分配的并发数（端模式下不能复用），默认不使用。
     * concurrency  **参数解释**： 并发路数。 **约束限制**： 默认没有并发路数，如果不配置并发数量，则无法启动智能交互对话任务。
+    * clientNums  **参数解释**： 允许接入终端端数量。
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
@@ -148,7 +163,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             'voiceConfig' => 'voice_config',
             'voiceConfigList' => 'voice_config_list',
             'robotId' => 'robot_id',
+            'billingMode' => 'billing_mode',
+            'reuseResource' => 'reuse_resource',
             'concurrency' => 'concurrency',
+            'clientNums' => 'client_nums',
             'defaultLanguage' => 'default_language',
             'backgroundConfig' => 'background_config',
             'layerConfig' => 'layer_config',
@@ -168,7 +186,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * voiceConfig  voiceConfig
     * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
+    * billingMode  计费模式，默认值CONCURRENCY * CONCURRENCY：并发计费 * CLIENT：按接入端计费 * CLIENT_TOKENS: 按接入端计费（TOKENS）
+    * reuseResource  是否允许使用未分配的并发数（端模式下不能复用），默认不使用。
     * concurrency  **参数解释**： 并发路数。 **约束限制**： 默认没有并发路数，如果不配置并发数量，则无法启动智能交互对话任务。
+    * clientNums  **参数解释**： 允许接入终端端数量。
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
@@ -188,7 +209,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             'voiceConfig' => 'setVoiceConfig',
             'voiceConfigList' => 'setVoiceConfigList',
             'robotId' => 'setRobotId',
+            'billingMode' => 'setBillingMode',
+            'reuseResource' => 'setReuseResource',
             'concurrency' => 'setConcurrency',
+            'clientNums' => 'setClientNums',
             'defaultLanguage' => 'setDefaultLanguage',
             'backgroundConfig' => 'setBackgroundConfig',
             'layerConfig' => 'setLayerConfig',
@@ -208,7 +232,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * voiceConfig  voiceConfig
     * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
+    * billingMode  计费模式，默认值CONCURRENCY * CONCURRENCY：并发计费 * CLIENT：按接入端计费 * CLIENT_TOKENS: 按接入端计费（TOKENS）
+    * reuseResource  是否允许使用未分配的并发数（端模式下不能复用），默认不使用。
     * concurrency  **参数解释**： 并发路数。 **约束限制**： 默认没有并发路数，如果不配置并发数量，则无法启动智能交互对话任务。
+    * clientNums  **参数解释**： 允许接入终端端数量。
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
@@ -228,7 +255,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             'voiceConfig' => 'getVoiceConfig',
             'voiceConfigList' => 'getVoiceConfigList',
             'robotId' => 'getRobotId',
+            'billingMode' => 'getBillingMode',
+            'reuseResource' => 'getReuseResource',
             'concurrency' => 'getConcurrency',
+            'clientNums' => 'getClientNums',
             'defaultLanguage' => 'getDefaultLanguage',
             'backgroundConfig' => 'getBackgroundConfig',
             'layerConfig' => 'getLayerConfig',
@@ -279,6 +309,9 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const BILLING_MODE_CONCURRENCY = 'CONCURRENCY';
+    const BILLING_MODE_CLIENT = 'CLIENT';
+    const BILLING_MODE_CLIENT_TOKENS = 'CLIENT_TOKENS';
     const DEFAULT_LANGUAGE_CN = 'CN';
     const DEFAULT_LANGUAGE_EN = 'EN';
     const DEFAULT_LANGUAGE_ESP = 'ESP';
@@ -289,6 +322,20 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     const CHAT_VIDEO_TYPE_MOBILE = 'MOBILE';
     const CHAT_VIDEO_TYPE_HUB = 'HUB';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getBillingModeAllowableValues()
+    {
+        return [
+            self::BILLING_MODE_CONCURRENCY,
+            self::BILLING_MODE_CLIENT,
+            self::BILLING_MODE_CLIENT_TOKENS,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -344,7 +391,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
         $this->container['voiceConfig'] = isset($data['voiceConfig']) ? $data['voiceConfig'] : null;
         $this->container['voiceConfigList'] = isset($data['voiceConfigList']) ? $data['voiceConfigList'] : null;
         $this->container['robotId'] = isset($data['robotId']) ? $data['robotId'] : null;
+        $this->container['billingMode'] = isset($data['billingMode']) ? $data['billingMode'] : null;
+        $this->container['reuseResource'] = isset($data['reuseResource']) ? $data['reuseResource'] : null;
         $this->container['concurrency'] = isset($data['concurrency']) ? $data['concurrency'] : null;
+        $this->container['clientNums'] = isset($data['clientNums']) ? $data['clientNums'] : null;
         $this->container['defaultLanguage'] = isset($data['defaultLanguage']) ? $data['defaultLanguage'] : null;
         $this->container['backgroundConfig'] = isset($data['backgroundConfig']) ? $data['backgroundConfig'] : null;
         $this->container['layerConfig'] = isset($data['layerConfig']) ? $data['layerConfig'] : null;
@@ -390,11 +440,25 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['robotId']) && (mb_strlen($this->container['robotId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'robotId', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getBillingModeAllowableValues();
+                if (!is_null($this->container['billingMode']) && !in_array($this->container['billingMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'billingMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['concurrency']) && ($this->container['concurrency'] > 1024)) {
                 $invalidProperties[] = "invalid value for 'concurrency', must be smaller than or equal to 1024.";
             }
             if (!is_null($this->container['concurrency']) && ($this->container['concurrency'] < 0)) {
                 $invalidProperties[] = "invalid value for 'concurrency', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['clientNums']) && ($this->container['clientNums'] > 1024)) {
+                $invalidProperties[] = "invalid value for 'clientNums', must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['clientNums']) && ($this->container['clientNums'] < 0)) {
+                $invalidProperties[] = "invalid value for 'clientNums', must be bigger than or equal to 0.";
             }
             $allowedValues = $this->getDefaultLanguageAllowableValues();
                 if (!is_null($this->container['defaultLanguage']) && !in_array($this->container['defaultLanguage'], $allowedValues, true)) {
@@ -607,6 +671,54 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets billingMode
+    *  计费模式，默认值CONCURRENCY * CONCURRENCY：并发计费 * CLIENT：按接入端计费 * CLIENT_TOKENS: 按接入端计费（TOKENS）
+    *
+    * @return string|null
+    */
+    public function getBillingMode()
+    {
+        return $this->container['billingMode'];
+    }
+
+    /**
+    * Sets billingMode
+    *
+    * @param string|null $billingMode 计费模式，默认值CONCURRENCY * CONCURRENCY：并发计费 * CLIENT：按接入端计费 * CLIENT_TOKENS: 按接入端计费（TOKENS）
+    *
+    * @return $this
+    */
+    public function setBillingMode($billingMode)
+    {
+        $this->container['billingMode'] = $billingMode;
+        return $this;
+    }
+
+    /**
+    * Gets reuseResource
+    *  是否允许使用未分配的并发数（端模式下不能复用），默认不使用。
+    *
+    * @return bool|null
+    */
+    public function getReuseResource()
+    {
+        return $this->container['reuseResource'];
+    }
+
+    /**
+    * Sets reuseResource
+    *
+    * @param bool|null $reuseResource 是否允许使用未分配的并发数（端模式下不能复用），默认不使用。
+    *
+    * @return $this
+    */
+    public function setReuseResource($reuseResource)
+    {
+        $this->container['reuseResource'] = $reuseResource;
+        return $this;
+    }
+
+    /**
     * Gets concurrency
     *  **参数解释**： 并发路数。 **约束限制**： 默认没有并发路数，如果不配置并发数量，则无法启动智能交互对话任务。
     *
@@ -627,6 +739,30 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     public function setConcurrency($concurrency)
     {
         $this->container['concurrency'] = $concurrency;
+        return $this;
+    }
+
+    /**
+    * Gets clientNums
+    *  **参数解释**： 允许接入终端端数量。
+    *
+    * @return int|null
+    */
+    public function getClientNums()
+    {
+        return $this->container['clientNums'];
+    }
+
+    /**
+    * Sets clientNums
+    *
+    * @param int|null $clientNums **参数解释**： 允许接入终端端数量。
+    *
+    * @return $this
+    */
+    public function setClientNums($clientNums)
+    {
+        $this->container['clientNums'] = $clientNums;
         return $this;
     }
 

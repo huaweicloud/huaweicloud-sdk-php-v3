@@ -20,8 +20,8 @@ class UpdateLogtankOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * logGroupId  日志组别id，其他（非ELB）服务提供
-    * logTopicId  日志订阅主题id，其他（非ELB）服务提供
+    * logGroupId  **参数解释**：日志组别id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logTopicId  **参数解释**：日志订阅主题id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UpdateLogtankOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * logGroupId  日志组别id，其他（非ELB）服务提供
-    * logTopicId  日志订阅主题id，其他（非ELB）服务提供
+    * logGroupId  **参数解释**：日志组别id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logTopicId  **参数解释**：日志订阅主题id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UpdateLogtankOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * logGroupId  日志组别id，其他（非ELB）服务提供
-    * logTopicId  日志订阅主题id，其他（非ELB）服务提供
+    * logGroupId  **参数解释**：日志组别id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logTopicId  **参数解释**：日志订阅主题id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UpdateLogtankOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * logGroupId  日志组别id，其他（非ELB）服务提供
-    * logTopicId  日志订阅主题id，其他（非ELB）服务提供
+    * logGroupId  **参数解释**：日志组别id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logTopicId  **参数解释**：日志订阅主题id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UpdateLogtankOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * logGroupId  日志组别id，其他（非ELB）服务提供
-    * logTopicId  日志订阅主题id，其他（非ELB）服务提供
+    * logGroupId  **参数解释**：日志组别id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * logTopicId  **参数解释**：日志订阅主题id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class UpdateLogtankOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets logGroupId
-    *  日志组别id，其他（非ELB）服务提供
+    *  **参数解释**：日志组别id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class UpdateLogtankOption implements ModelInterface, ArrayAccess
     /**
     * Sets logGroupId
     *
-    * @param string|null $logGroupId 日志组别id，其他（非ELB）服务提供
+    * @param string|null $logGroupId **参数解释**：日志组别id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class UpdateLogtankOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets logTopicId
-    *  日志订阅主题id，其他（非ELB）服务提供
+    *  **参数解释**：日志订阅主题id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class UpdateLogtankOption implements ModelInterface, ArrayAccess
     /**
     * Sets logTopicId
     *
-    * @param string|null $logTopicId 日志订阅主题id，其他（非ELB）服务提供
+    * @param string|null $logTopicId **参数解释**：日志订阅主题id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

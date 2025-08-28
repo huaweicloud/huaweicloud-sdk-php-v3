@@ -20,15 +20,15 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  自定义安全安全策略的id。
-    * projectId  自定义安全策略的项目id。
-    * name  自定义安全策略的名称
-    * description  自定义安全策略的描述。
-    * listeners  自定义安全策略关联的监听器。
-    * protocols  自定义安全策略的TLS协议列表。
-    * ciphers  自定义安全策略的加密套件列表。
-    * createdAt  自定义安全策略的创建时间。
-    * updatedAt  自定义安全策略的更新时间。
+    * id  **参数解释**：自定义安全策略的ID。  **取值范围**：不涉及
+    * projectId  **参数解释**：自定义安全策略的项目ID。  **取值范围**：不涉及
+    * name  **参数解释**：自定义安全策略的名称。  **取值范围**：不涉及
+    * description  **参数解释**：自定义安全策略的描述。  **取值范围**：不涉及
+    * listeners  **参数解释**：关联的监听器。
+    * protocols  **参数解释**：自定义安全策略的TLS协议列表。  **取值范围**：不涉及
+    * ciphers  **参数解释**：自定义安全策略的加密套件列表。  **取值范围**：不涉及
+    * createdAt  **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  自定义安全安全策略的id。
-    * projectId  自定义安全策略的项目id。
-    * name  自定义安全策略的名称
-    * description  自定义安全策略的描述。
-    * listeners  自定义安全策略关联的监听器。
-    * protocols  自定义安全策略的TLS协议列表。
-    * ciphers  自定义安全策略的加密套件列表。
-    * createdAt  自定义安全策略的创建时间。
-    * updatedAt  自定义安全策略的更新时间。
+    * id  **参数解释**：自定义安全策略的ID。  **取值范围**：不涉及
+    * projectId  **参数解释**：自定义安全策略的项目ID。  **取值范围**：不涉及
+    * name  **参数解释**：自定义安全策略的名称。  **取值范围**：不涉及
+    * description  **参数解释**：自定义安全策略的描述。  **取值范围**：不涉及
+    * listeners  **参数解释**：关联的监听器。
+    * protocols  **参数解释**：自定义安全策略的TLS协议列表。  **取值范围**：不涉及
+    * ciphers  **参数解释**：自定义安全策略的加密套件列表。  **取值范围**：不涉及
+    * createdAt  **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  自定义安全安全策略的id。
-    * projectId  自定义安全策略的项目id。
-    * name  自定义安全策略的名称
-    * description  自定义安全策略的描述。
-    * listeners  自定义安全策略关联的监听器。
-    * protocols  自定义安全策略的TLS协议列表。
-    * ciphers  自定义安全策略的加密套件列表。
-    * createdAt  自定义安全策略的创建时间。
-    * updatedAt  自定义安全策略的更新时间。
+    * id  **参数解释**：自定义安全策略的ID。  **取值范围**：不涉及
+    * projectId  **参数解释**：自定义安全策略的项目ID。  **取值范围**：不涉及
+    * name  **参数解释**：自定义安全策略的名称。  **取值范围**：不涉及
+    * description  **参数解释**：自定义安全策略的描述。  **取值范围**：不涉及
+    * listeners  **参数解释**：关联的监听器。
+    * protocols  **参数解释**：自定义安全策略的TLS协议列表。  **取值范围**：不涉及
+    * ciphers  **参数解释**：自定义安全策略的加密套件列表。  **取值范围**：不涉及
+    * createdAt  **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  自定义安全安全策略的id。
-    * projectId  自定义安全策略的项目id。
-    * name  自定义安全策略的名称
-    * description  自定义安全策略的描述。
-    * listeners  自定义安全策略关联的监听器。
-    * protocols  自定义安全策略的TLS协议列表。
-    * ciphers  自定义安全策略的加密套件列表。
-    * createdAt  自定义安全策略的创建时间。
-    * updatedAt  自定义安全策略的更新时间。
+    * id  **参数解释**：自定义安全策略的ID。  **取值范围**：不涉及
+    * projectId  **参数解释**：自定义安全策略的项目ID。  **取值范围**：不涉及
+    * name  **参数解释**：自定义安全策略的名称。  **取值范围**：不涉及
+    * description  **参数解释**：自定义安全策略的描述。  **取值范围**：不涉及
+    * listeners  **参数解释**：关联的监听器。
+    * protocols  **参数解释**：自定义安全策略的TLS协议列表。  **取值范围**：不涉及
+    * ciphers  **参数解释**：自定义安全策略的加密套件列表。  **取值范围**：不涉及
+    * createdAt  **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  自定义安全安全策略的id。
-    * projectId  自定义安全策略的项目id。
-    * name  自定义安全策略的名称
-    * description  自定义安全策略的描述。
-    * listeners  自定义安全策略关联的监听器。
-    * protocols  自定义安全策略的TLS协议列表。
-    * ciphers  自定义安全策略的加密套件列表。
-    * createdAt  自定义安全策略的创建时间。
-    * updatedAt  自定义安全策略的更新时间。
+    * id  **参数解释**：自定义安全策略的ID。  **取值范围**：不涉及
+    * projectId  **参数解释**：自定义安全策略的项目ID。  **取值范围**：不涉及
+    * name  **参数解释**：自定义安全策略的名称。  **取值范围**：不涉及
+    * description  **参数解释**：自定义安全策略的描述。  **取值范围**：不涉及
+    * listeners  **参数解释**：关联的监听器。
+    * protocols  **参数解释**：自定义安全策略的TLS协议列表。  **取值范围**：不涉及
+    * ciphers  **参数解释**：自定义安全策略的加密套件列表。  **取值范围**：不涉及
+    * createdAt  **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @var string[]
     */
@@ -289,7 +289,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  自定义安全安全策略的id。
+    *  **参数解释**：自定义安全策略的ID。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -301,7 +301,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 自定义安全安全策略的id。
+    * @param string $id **参数解释**：自定义安全策略的ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -313,7 +313,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  自定义安全策略的项目id。
+    *  **参数解释**：自定义安全策略的项目ID。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -325,7 +325,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 自定义安全策略的项目id。
+    * @param string $projectId **参数解释**：自定义安全策略的项目ID。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  自定义安全策略的名称
+    *  **参数解释**：自定义安全策略的名称。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -349,7 +349,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 自定义安全策略的名称
+    * @param string $name **参数解释**：自定义安全策略的名称。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -361,7 +361,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  自定义安全策略的描述。
+    *  **参数解释**：自定义安全策略的描述。  **取值范围**：不涉及
     *
     * @return string
     */
@@ -373,7 +373,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 自定义安全策略的描述。
+    * @param string $description **参数解释**：自定义安全策略的描述。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets listeners
-    *  自定义安全策略关联的监听器。
+    *  **参数解释**：关联的监听器。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[]
     */
@@ -397,7 +397,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets listeners
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[] $listeners 自定义安全策略关联的监听器。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[] $listeners **参数解释**：关联的监听器。
     *
     * @return $this
     */
@@ -409,7 +409,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocols
-    *  自定义安全策略的TLS协议列表。
+    *  **参数解释**：自定义安全策略的TLS协议列表。  **取值范围**：不涉及
     *
     * @return string[]
     */
@@ -421,7 +421,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets protocols
     *
-    * @param string[] $protocols 自定义安全策略的TLS协议列表。
+    * @param string[] $protocols **参数解释**：自定义安全策略的TLS协议列表。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -433,7 +433,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets ciphers
-    *  自定义安全策略的加密套件列表。
+    *  **参数解释**：自定义安全策略的加密套件列表。  **取值范围**：不涉及
     *
     * @return string[]
     */
@@ -445,7 +445,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets ciphers
     *
-    * @param string[] $ciphers 自定义安全策略的加密套件列表。
+    * @param string[] $ciphers **参数解释**：自定义安全策略的加密套件列表。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -457,7 +457,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  自定义安全策略的创建时间。
+    *  **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @return string
     */
@@ -469,7 +469,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string $createdAt 自定义安全策略的创建时间。
+    * @param string $createdAt **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @return $this
     */
@@ -481,7 +481,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  自定义安全策略的更新时间。
+    *  **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @return string
     */
@@ -493,7 +493,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string $updatedAt 自定义安全策略的更新时间。
+    * @param string $updatedAt **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @return $this
     */

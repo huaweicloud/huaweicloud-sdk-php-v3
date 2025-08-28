@@ -21,6 +21,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * isActionEditable  **参数解释**： 分身数字人的动作是否可编辑 **约束限制**： 不涉及 **取值范围**： * true: 动作可编辑 * false: 动作不可编辑
+    * isLiveCopy  **参数解释**： 是否是直播间复刻任务 **约束限制**： 不涉及 **取值范围**： * true: 是直播间复刻任务 * false: 不是直播间复刻任务
     * isRealBackground  **参数解释**： 是否是实景分身数字人 **约束限制**： 实景分身数字人不做背景替换。 **取值范围**： * true: 实景分身数字人 * false: 普通分身数字人，不带背景。
     * supportLive  **参数解释**： 是否支持直播 **约束限制**： 不涉及 **取值范围**： * true: 支持直播 * false: 不支持直播。
     * modelVersion  **参数解释**： 分身数字人模型版本 **约束限制**： 不涉及 **取值范围**： * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型 * V3_3：V3.3版本模型
@@ -35,6 +36,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'isActionEditable' => 'bool',
+            'isLiveCopy' => 'bool',
             'isRealBackground' => 'bool',
             'supportLive' => 'bool',
             'modelVersion' => 'string',
@@ -49,6 +51,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * isActionEditable  **参数解释**： 分身数字人的动作是否可编辑 **约束限制**： 不涉及 **取值范围**： * true: 动作可编辑 * false: 动作不可编辑
+    * isLiveCopy  **参数解释**： 是否是直播间复刻任务 **约束限制**： 不涉及 **取值范围**： * true: 是直播间复刻任务 * false: 不是直播间复刻任务
     * isRealBackground  **参数解释**： 是否是实景分身数字人 **约束限制**： 实景分身数字人不做背景替换。 **取值范围**： * true: 实景分身数字人 * false: 普通分身数字人，不带背景。
     * supportLive  **参数解释**： 是否支持直播 **约束限制**： 不涉及 **取值范围**： * true: 支持直播 * false: 不支持直播。
     * modelVersion  **参数解释**： 分身数字人模型版本 **约束限制**： 不涉及 **取值范围**： * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型 * V3_3：V3.3版本模型
@@ -63,6 +66,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'isActionEditable' => null,
+        'isLiveCopy' => null,
         'isRealBackground' => null,
         'supportLive' => null,
         'modelVersion' => null,
@@ -98,6 +102,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * isActionEditable  **参数解释**： 分身数字人的动作是否可编辑 **约束限制**： 不涉及 **取值范围**： * true: 动作可编辑 * false: 动作不可编辑
+    * isLiveCopy  **参数解释**： 是否是直播间复刻任务 **约束限制**： 不涉及 **取值范围**： * true: 是直播间复刻任务 * false: 不是直播间复刻任务
     * isRealBackground  **参数解释**： 是否是实景分身数字人 **约束限制**： 实景分身数字人不做背景替换。 **取值范围**： * true: 实景分身数字人 * false: 普通分身数字人，不带背景。
     * supportLive  **参数解释**： 是否支持直播 **约束限制**： 不涉及 **取值范围**： * true: 支持直播 * false: 不支持直播。
     * modelVersion  **参数解释**： 分身数字人模型版本 **约束限制**： 不涉及 **取值范围**： * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型 * V3_3：V3.3版本模型
@@ -112,6 +117,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'isActionEditable' => 'is_action_editable',
+            'isLiveCopy' => 'is_live_copy',
             'isRealBackground' => 'is_real_background',
             'supportLive' => 'support_live',
             'modelVersion' => 'model_version',
@@ -126,6 +132,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * isActionEditable  **参数解释**： 分身数字人的动作是否可编辑 **约束限制**： 不涉及 **取值范围**： * true: 动作可编辑 * false: 动作不可编辑
+    * isLiveCopy  **参数解释**： 是否是直播间复刻任务 **约束限制**： 不涉及 **取值范围**： * true: 是直播间复刻任务 * false: 不是直播间复刻任务
     * isRealBackground  **参数解释**： 是否是实景分身数字人 **约束限制**： 实景分身数字人不做背景替换。 **取值范围**： * true: 实景分身数字人 * false: 普通分身数字人，不带背景。
     * supportLive  **参数解释**： 是否支持直播 **约束限制**： 不涉及 **取值范围**： * true: 支持直播 * false: 不支持直播。
     * modelVersion  **参数解释**： 分身数字人模型版本 **约束限制**： 不涉及 **取值范围**： * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型 * V3_3：V3.3版本模型
@@ -140,6 +147,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'isActionEditable' => 'setIsActionEditable',
+            'isLiveCopy' => 'setIsLiveCopy',
             'isRealBackground' => 'setIsRealBackground',
             'supportLive' => 'setSupportLive',
             'modelVersion' => 'setModelVersion',
@@ -154,6 +162,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * isActionEditable  **参数解释**： 分身数字人的动作是否可编辑 **约束限制**： 不涉及 **取值范围**： * true: 动作可编辑 * false: 动作不可编辑
+    * isLiveCopy  **参数解释**： 是否是直播间复刻任务 **约束限制**： 不涉及 **取值范围**： * true: 是直播间复刻任务 * false: 不是直播间复刻任务
     * isRealBackground  **参数解释**： 是否是实景分身数字人 **约束限制**： 实景分身数字人不做背景替换。 **取值范围**： * true: 实景分身数字人 * false: 普通分身数字人，不带背景。
     * supportLive  **参数解释**： 是否支持直播 **约束限制**： 不涉及 **取值范围**： * true: 支持直播 * false: 不支持直播。
     * modelVersion  **参数解释**： 分身数字人模型版本 **约束限制**： 不涉及 **取值范围**： * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型 * V3_3：V3.3版本模型
@@ -168,6 +177,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'isActionEditable' => 'getIsActionEditable',
+            'isLiveCopy' => 'getIsLiveCopy',
             'isRealBackground' => 'getIsRealBackground',
             'supportLive' => 'getSupportLive',
             'modelVersion' => 'getModelVersion',
@@ -257,6 +267,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['isActionEditable'] = isset($data['isActionEditable']) ? $data['isActionEditable'] : null;
+        $this->container['isLiveCopy'] = isset($data['isLiveCopy']) ? $data['isLiveCopy'] : null;
         $this->container['isRealBackground'] = isset($data['isRealBackground']) ? $data['isRealBackground'] : null;
         $this->container['supportLive'] = isset($data['supportLive']) ? $data['supportLive'] : null;
         $this->container['modelVersion'] = isset($data['modelVersion']) ? $data['modelVersion'] : null;
@@ -337,6 +348,30 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     public function setIsActionEditable($isActionEditable)
     {
         $this->container['isActionEditable'] = $isActionEditable;
+        return $this;
+    }
+
+    /**
+    * Gets isLiveCopy
+    *  **参数解释**： 是否是直播间复刻任务 **约束限制**： 不涉及 **取值范围**： * true: 是直播间复刻任务 * false: 不是直播间复刻任务
+    *
+    * @return bool|null
+    */
+    public function getIsLiveCopy()
+    {
+        return $this->container['isLiveCopy'];
+    }
+
+    /**
+    * Sets isLiveCopy
+    *
+    * @param bool|null $isLiveCopy **参数解释**： 是否是直播间复刻任务 **约束限制**： 不涉及 **取值范围**： * true: 是直播间复刻任务 * false: 不是直播间复刻任务
+    *
+    * @return $this
+    */
+    public function setIsLiveCopy($isLiveCopy)
+    {
+        $this->container['isLiveCopy'] = $isLiveCopy;
         return $this;
     }
 

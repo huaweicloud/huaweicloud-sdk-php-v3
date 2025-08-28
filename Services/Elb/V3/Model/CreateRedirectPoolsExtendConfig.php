@@ -20,7 +20,7 @@ class CreateRedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * rewriteUrlEnable  参数解释：是否开启url重定向。
+    * rewriteUrlEnable  **参数解释**：是否开启url重定向。
     * rewriteUrlConfig  rewriteUrlConfig
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
@@ -42,7 +42,7 @@ class CreateRedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * rewriteUrlEnable  参数解释：是否开启url重定向。
+    * rewriteUrlEnable  **参数解释**：是否开启url重定向。
     * rewriteUrlConfig  rewriteUrlConfig
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
@@ -85,7 +85,7 @@ class CreateRedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * rewriteUrlEnable  参数解释：是否开启url重定向。
+    * rewriteUrlEnable  **参数解释**：是否开启url重定向。
     * rewriteUrlConfig  rewriteUrlConfig
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
@@ -107,7 +107,7 @@ class CreateRedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * rewriteUrlEnable  参数解释：是否开启url重定向。
+    * rewriteUrlEnable  **参数解释**：是否开启url重定向。
     * rewriteUrlConfig  rewriteUrlConfig
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
@@ -129,7 +129,7 @@ class CreateRedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * rewriteUrlEnable  参数解释：是否开启url重定向。
+    * rewriteUrlEnable  **参数解释**：是否开启url重定向。
     * rewriteUrlConfig  rewriteUrlConfig
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
@@ -240,7 +240,7 @@ class CreateRedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets rewriteUrlEnable
-    *  参数解释：是否开启url重定向。
+    *  **参数解释**：是否开启url重定向。
     *
     * @return bool|null
     */
@@ -252,7 +252,7 @@ class CreateRedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
     /**
     * Sets rewriteUrlEnable
     *
-    * @param bool|null $rewriteUrlEnable 参数解释：是否开启url重定向。
+    * @param bool|null $rewriteUrlEnable **参数解释**：是否开启url重定向。
     *
     * @return $this
     */

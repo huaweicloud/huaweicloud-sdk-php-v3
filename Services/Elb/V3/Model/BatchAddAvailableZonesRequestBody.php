@@ -20,7 +20,7 @@ class BatchAddAvailableZonesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * availabilityZoneList  新增的可用区列表，不能为空。
+    * availabilityZoneList  **参数解释**：新增的可用区列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchAddAvailableZonesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * availabilityZoneList  新增的可用区列表，不能为空。
+    * availabilityZoneList  **参数解释**：新增的可用区列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchAddAvailableZonesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * availabilityZoneList  新增的可用区列表，不能为空。
+    * availabilityZoneList  **参数解释**：新增的可用区列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchAddAvailableZonesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * availabilityZoneList  新增的可用区列表，不能为空。
+    * availabilityZoneList  **参数解释**：新增的可用区列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchAddAvailableZonesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * availabilityZoneList  新增的可用区列表，不能为空。
+    * availabilityZoneList  **参数解释**：新增的可用区列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class BatchAddAvailableZonesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZoneList
-    *  新增的可用区列表，不能为空。
+    *  **参数解释**：新增的可用区列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string[]
     */
@@ -189,7 +189,7 @@ class BatchAddAvailableZonesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZoneList
     *
-    * @param string[] $availabilityZoneList 新增的可用区列表，不能为空。
+    * @param string[] $availabilityZoneList **参数解释**：新增的可用区列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

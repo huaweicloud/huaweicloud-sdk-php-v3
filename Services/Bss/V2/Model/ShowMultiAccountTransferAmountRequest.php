@@ -183,8 +183,8 @@ class ShowMultiAccountTransferAmountRequest implements ModelInterface, ArrayAcce
         if ($this->container['balanceType'] === null) {
             $invalidProperties[] = "'balanceType' can't be null";
         }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 21474836476)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 21474836476.";
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";

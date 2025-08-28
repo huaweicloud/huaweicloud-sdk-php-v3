@@ -20,15 +20,15 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  参数解释：processed检查完成，processing检查中，failed检查失败
+    * status  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
     * result  result
-    * createdAt  参数解释：任务创建时间。
-    * updatedAt  参数解释：任务更新时间
-    * jobId  参数解释：任务ID。
-    * checkItemTotalNum  参数解释：检查项总个数
-    * checkItemFinishedNum  参数解释：已检查完成的检查项个数
-    * listenerId  参数解释：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。
-    * memberId  参数解释：后端服务器ID。
+    * createdAt  **参数解释**：任务创建时间。  **取值范围**：不涉及
+    * updatedAt  **参数解释**：任务更新时间。  **取值范围**：不涉及
+    * jobId  **参数解释**：任务ID。
+    * checkItemTotalNum  **参数解释**：检查项总个数。  **取值范围**：不涉及
+    * checkItemFinishedNum  **参数解释**：已检查完成的检查项个数。  **取值范围**：不涉及
+    * listenerId  **参数解释**：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。  **取值范围**：不涉及
+    * memberId  **参数解释**：后端服务器ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  参数解释：processed检查完成，processing检查中，failed检查失败
+    * status  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
     * result  result
-    * createdAt  参数解释：任务创建时间。
-    * updatedAt  参数解释：任务更新时间
-    * jobId  参数解释：任务ID。
-    * checkItemTotalNum  参数解释：检查项总个数
-    * checkItemFinishedNum  参数解释：已检查完成的检查项个数
-    * listenerId  参数解释：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。
-    * memberId  参数解释：后端服务器ID。
+    * createdAt  **参数解释**：任务创建时间。  **取值范围**：不涉及
+    * updatedAt  **参数解释**：任务更新时间。  **取值范围**：不涉及
+    * jobId  **参数解释**：任务ID。
+    * checkItemTotalNum  **参数解释**：检查项总个数。  **取值范围**：不涉及
+    * checkItemFinishedNum  **参数解释**：已检查完成的检查项个数。  **取值范围**：不涉及
+    * listenerId  **参数解释**：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。  **取值范围**：不涉及
+    * memberId  **参数解释**：后端服务器ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  参数解释：processed检查完成，processing检查中，failed检查失败
+    * status  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
     * result  result
-    * createdAt  参数解释：任务创建时间。
-    * updatedAt  参数解释：任务更新时间
-    * jobId  参数解释：任务ID。
-    * checkItemTotalNum  参数解释：检查项总个数
-    * checkItemFinishedNum  参数解释：已检查完成的检查项个数
-    * listenerId  参数解释：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。
-    * memberId  参数解释：后端服务器ID。
+    * createdAt  **参数解释**：任务创建时间。  **取值范围**：不涉及
+    * updatedAt  **参数解释**：任务更新时间。  **取值范围**：不涉及
+    * jobId  **参数解释**：任务ID。
+    * checkItemTotalNum  **参数解释**：检查项总个数。  **取值范围**：不涉及
+    * checkItemFinishedNum  **参数解释**：已检查完成的检查项个数。  **取值范围**：不涉及
+    * listenerId  **参数解释**：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。  **取值范围**：不涉及
+    * memberId  **参数解释**：后端服务器ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  参数解释：processed检查完成，processing检查中，failed检查失败
+    * status  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
     * result  result
-    * createdAt  参数解释：任务创建时间。
-    * updatedAt  参数解释：任务更新时间
-    * jobId  参数解释：任务ID。
-    * checkItemTotalNum  参数解释：检查项总个数
-    * checkItemFinishedNum  参数解释：已检查完成的检查项个数
-    * listenerId  参数解释：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。
-    * memberId  参数解释：后端服务器ID。
+    * createdAt  **参数解释**：任务创建时间。  **取值范围**：不涉及
+    * updatedAt  **参数解释**：任务更新时间。  **取值范围**：不涉及
+    * jobId  **参数解释**：任务ID。
+    * checkItemTotalNum  **参数解释**：检查项总个数。  **取值范围**：不涉及
+    * checkItemFinishedNum  **参数解释**：已检查完成的检查项个数。  **取值范围**：不涉及
+    * listenerId  **参数解释**：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。  **取值范围**：不涉及
+    * memberId  **参数解释**：后端服务器ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  参数解释：processed检查完成，processing检查中，failed检查失败
+    * status  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
     * result  result
-    * createdAt  参数解释：任务创建时间。
-    * updatedAt  参数解释：任务更新时间
-    * jobId  参数解释：任务ID。
-    * checkItemTotalNum  参数解释：检查项总个数
-    * checkItemFinishedNum  参数解释：已检查完成的检查项个数
-    * listenerId  参数解释：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。
-    * memberId  参数解释：后端服务器ID。
+    * createdAt  **参数解释**：任务创建时间。  **取值范围**：不涉及
+    * updatedAt  **参数解释**：任务更新时间。  **取值范围**：不涉及
+    * jobId  **参数解释**：任务ID。
+    * checkItemTotalNum  **参数解释**：检查项总个数。  **取值范围**：不涉及
+    * checkItemFinishedNum  **参数解释**：已检查完成的检查项个数。  **取值范围**：不涉及
+    * listenerId  **参数解释**：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。  **取值范围**：不涉及
+    * memberId  **参数解释**：后端服务器ID。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -262,7 +262,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  参数解释：processed检查完成，processing检查中，failed检查失败
+    *  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 参数解释：processed检查完成，processing检查中，failed检查失败
+    * @param string|null $status **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  参数解释：任务创建时间。
+    *  **参数解释**：任务创建时间。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 参数解释：任务创建时间。
+    * @param string|null $createdAt **参数解释**：任务创建时间。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  参数解释：任务更新时间
+    *  **参数解释**：任务更新时间。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string|null $updatedAt 参数解释：任务更新时间
+    * @param string|null $updatedAt **参数解释**：任务更新时间。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  参数解释：任务ID。
+    *  **参数解释**：任务ID。
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 参数解释：任务ID。
+    * @param string|null $jobId **参数解释**：任务ID。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkItemTotalNum
-    *  参数解释：检查项总个数
+    *  **参数解释**：检查项总个数。  **取值范围**：不涉及
     *
     * @return int|null
     */
@@ -394,7 +394,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkItemTotalNum
     *
-    * @param int|null $checkItemTotalNum 参数解释：检查项总个数
+    * @param int|null $checkItemTotalNum **参数解释**：检查项总个数。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkItemFinishedNum
-    *  参数解释：已检查完成的检查项个数
+    *  **参数解释**：已检查完成的检查项个数。  **取值范围**：不涉及
     *
     * @return int|null
     */
@@ -418,7 +418,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkItemFinishedNum
     *
-    * @param int|null $checkItemFinishedNum 参数解释：已检查完成的检查项个数
+    * @param int|null $checkItemFinishedNum **参数解释**：已检查完成的检查项个数。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets listenerId
-    *  参数解释：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。
+    *  **参数解释**：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets listenerId
     *
-    * @param string|null $listenerId 参数解释：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。
+    * @param string|null $listenerId **参数解释**：后端服务器所关联的监听器，查询在该监听器下后端服务器的状态。  **取值范围**：不涉及
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets memberId
-    *  参数解释：后端服务器ID。
+    *  **参数解释**：后端服务器ID。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -466,7 +466,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets memberId
     *
-    * @param string|null $memberId 参数解释：后端服务器ID。
+    * @param string|null $memberId **参数解释**：后端服务器ID。  **取值范围**：不涉及
     *
     * @return $this
     */

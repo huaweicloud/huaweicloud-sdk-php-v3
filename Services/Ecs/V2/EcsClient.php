@@ -1261,6 +1261,68 @@ class EcsClient extends Client
     }
 
     /**
+     * 创建模板
+     *
+     * 创建启动模板。将创建一个全新的模板，并自动生成版本号为1的作为默认版本。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createLaunchTemplate($request)
+    {
+        return $this->createLaunchTemplateWithHttpInfo($request);
+    }
+
+    public function createLaunchTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/launch-templates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\CreateLaunchTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\CreateLaunchTemplateRequest');
+    }
+
+    /**
      * 创建云服务器(按需)
      *
      * 创建一台或多台[按需付费](https://support.huaweicloud.com/productdesc-ecs/ecs_01_0065.html)方式的云服务器。

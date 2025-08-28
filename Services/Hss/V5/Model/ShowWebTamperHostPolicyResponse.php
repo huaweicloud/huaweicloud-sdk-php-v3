@@ -21,15 +21,15 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * protectDirNum  防护目录数
+    * protectDirNum  **参数解释**: 防护目录数 **取值范围**: 取值0-50
     * protectDirInfo  protectDirInfo
-    * enableTimingOff  定时开关状态
+    * enableTimingOff  **参数解释**: 定时开关状态 **取值范围**: - True ：开启定时关闭防护功能。 - False ：未开启定时关闭防护功能。
     * timingOffConfigInfo  timingOffConfigInfo
-    * enableRaspProtect  动态网页防篡改开启状态
-    * raspPath  rasp path
-    * enablePrivilegedProcess  特权进程状态
-    * privilegedChildStatus  特权进程子进程可信状态
-    * privilegedProcessPathList  特权进程路径集合
+    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
+    * enablePrivilegedProcess  **参数解释**: 特权进程开启状态 **取值范围**: - True ：开启特权进程。 - False ：未开启特权进程。
+    * privilegedChildStatus  **参数解释**: 特权进程子进程可信状态，需先开启特权进程 **取值范围**: - True ：开启特权进程子进程可信。 - False ：未开启特权进程子进程可信。
+    * privilegedProcessPathList  **参数解释**: 特权进程文件路径列表 **取值范围**: 最少0条，最多10条
     * privilegedProcessInfo  privilegedProcessInfo
     *
     * @var string[]
@@ -49,15 +49,15 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * protectDirNum  防护目录数
+    * protectDirNum  **参数解释**: 防护目录数 **取值范围**: 取值0-50
     * protectDirInfo  protectDirInfo
-    * enableTimingOff  定时开关状态
+    * enableTimingOff  **参数解释**: 定时开关状态 **取值范围**: - True ：开启定时关闭防护功能。 - False ：未开启定时关闭防护功能。
     * timingOffConfigInfo  timingOffConfigInfo
-    * enableRaspProtect  动态网页防篡改开启状态
-    * raspPath  rasp path
-    * enablePrivilegedProcess  特权进程状态
-    * privilegedChildStatus  特权进程子进程可信状态
-    * privilegedProcessPathList  特权进程路径集合
+    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
+    * enablePrivilegedProcess  **参数解释**: 特权进程开启状态 **取值范围**: - True ：开启特权进程。 - False ：未开启特权进程。
+    * privilegedChildStatus  **参数解释**: 特权进程子进程可信状态，需先开启特权进程 **取值范围**: - True ：开启特权进程子进程可信。 - False ：未开启特权进程子进程可信。
+    * privilegedProcessPathList  **参数解释**: 特权进程文件路径列表 **取值范围**: 最少0条，最多10条
     * privilegedProcessInfo  privilegedProcessInfo
     *
     * @var string[]
@@ -98,15 +98,15 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * protectDirNum  防护目录数
+    * protectDirNum  **参数解释**: 防护目录数 **取值范围**: 取值0-50
     * protectDirInfo  protectDirInfo
-    * enableTimingOff  定时开关状态
+    * enableTimingOff  **参数解释**: 定时开关状态 **取值范围**: - True ：开启定时关闭防护功能。 - False ：未开启定时关闭防护功能。
     * timingOffConfigInfo  timingOffConfigInfo
-    * enableRaspProtect  动态网页防篡改开启状态
-    * raspPath  rasp path
-    * enablePrivilegedProcess  特权进程状态
-    * privilegedChildStatus  特权进程子进程可信状态
-    * privilegedProcessPathList  特权进程路径集合
+    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
+    * enablePrivilegedProcess  **参数解释**: 特权进程开启状态 **取值范围**: - True ：开启特权进程。 - False ：未开启特权进程。
+    * privilegedChildStatus  **参数解释**: 特权进程子进程可信状态，需先开启特权进程 **取值范围**: - True ：开启特权进程子进程可信。 - False ：未开启特权进程子进程可信。
+    * privilegedProcessPathList  **参数解释**: 特权进程文件路径列表 **取值范围**: 最少0条，最多10条
     * privilegedProcessInfo  privilegedProcessInfo
     *
     * @var string[]
@@ -126,15 +126,15 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * protectDirNum  防护目录数
+    * protectDirNum  **参数解释**: 防护目录数 **取值范围**: 取值0-50
     * protectDirInfo  protectDirInfo
-    * enableTimingOff  定时开关状态
+    * enableTimingOff  **参数解释**: 定时开关状态 **取值范围**: - True ：开启定时关闭防护功能。 - False ：未开启定时关闭防护功能。
     * timingOffConfigInfo  timingOffConfigInfo
-    * enableRaspProtect  动态网页防篡改开启状态
-    * raspPath  rasp path
-    * enablePrivilegedProcess  特权进程状态
-    * privilegedChildStatus  特权进程子进程可信状态
-    * privilegedProcessPathList  特权进程路径集合
+    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
+    * enablePrivilegedProcess  **参数解释**: 特权进程开启状态 **取值范围**: - True ：开启特权进程。 - False ：未开启特权进程。
+    * privilegedChildStatus  **参数解释**: 特权进程子进程可信状态，需先开启特权进程 **取值范围**: - True ：开启特权进程子进程可信。 - False ：未开启特权进程子进程可信。
+    * privilegedProcessPathList  **参数解释**: 特权进程文件路径列表 **取值范围**: 最少0条，最多10条
     * privilegedProcessInfo  privilegedProcessInfo
     *
     * @var string[]
@@ -154,15 +154,15 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * protectDirNum  防护目录数
+    * protectDirNum  **参数解释**: 防护目录数 **取值范围**: 取值0-50
     * protectDirInfo  protectDirInfo
-    * enableTimingOff  定时开关状态
+    * enableTimingOff  **参数解释**: 定时开关状态 **取值范围**: - True ：开启定时关闭防护功能。 - False ：未开启定时关闭防护功能。
     * timingOffConfigInfo  timingOffConfigInfo
-    * enableRaspProtect  动态网页防篡改开启状态
-    * raspPath  rasp path
-    * enablePrivilegedProcess  特权进程状态
-    * privilegedChildStatus  特权进程子进程可信状态
-    * privilegedProcessPathList  特权进程路径集合
+    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
+    * enablePrivilegedProcess  **参数解释**: 特权进程开启状态 **取值范围**: - True ：开启特权进程。 - False ：未开启特权进程。
+    * privilegedChildStatus  **参数解释**: 特权进程子进程可信状态，需先开启特权进程 **取值范围**: - True ：开启特权进程子进程可信。 - False ：未开启特权进程子进程可信。
+    * privilegedProcessPathList  **参数解释**: 特权进程文件路径列表 **取值范围**: 最少0条，最多10条
     * privilegedProcessInfo  privilegedProcessInfo
     *
     * @var string[]
@@ -286,7 +286,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectDirNum
-    *  防护目录数
+    *  **参数解释**: 防护目录数 **取值范围**: 取值0-50
     *
     * @return int|null
     */
@@ -298,7 +298,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protectDirNum
     *
-    * @param int|null $protectDirNum 防护目录数
+    * @param int|null $protectDirNum **参数解释**: 防护目录数 **取值范围**: 取值0-50
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableTimingOff
-    *  定时开关状态
+    *  **参数解释**: 定时开关状态 **取值范围**: - True ：开启定时关闭防护功能。 - False ：未开启定时关闭防护功能。
     *
     * @return bool|null
     */
@@ -346,7 +346,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enableTimingOff
     *
-    * @param bool|null $enableTimingOff 定时开关状态
+    * @param bool|null $enableTimingOff **参数解释**: 定时开关状态 **取值范围**: - True ：开启定时关闭防护功能。 - False ：未开启定时关闭防护功能。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableRaspProtect
-    *  动态网页防篡改开启状态
+    *  **参数解释**: 动态网页防篡改开启状态 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
     *
     * @return bool|null
     */
@@ -394,7 +394,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enableRaspProtect
     *
-    * @param bool|null $enableRaspProtect 动态网页防篡改开启状态
+    * @param bool|null $enableRaspProtect **参数解释**: 动态网页防篡改开启状态 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets raspPath
-    *  rasp path
+    *  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -418,7 +418,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets raspPath
     *
-    * @param string|null $raspPath rasp path
+    * @param string|null $raspPath **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enablePrivilegedProcess
-    *  特权进程状态
+    *  **参数解释**: 特权进程开启状态 **取值范围**: - True ：开启特权进程。 - False ：未开启特权进程。
     *
     * @return bool|null
     */
@@ -442,7 +442,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enablePrivilegedProcess
     *
-    * @param bool|null $enablePrivilegedProcess 特权进程状态
+    * @param bool|null $enablePrivilegedProcess **参数解释**: 特权进程开启状态 **取值范围**: - True ：开启特权进程。 - False ：未开启特权进程。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets privilegedChildStatus
-    *  特权进程子进程可信状态
+    *  **参数解释**: 特权进程子进程可信状态，需先开启特权进程 **取值范围**: - True ：开启特权进程子进程可信。 - False ：未开启特权进程子进程可信。
     *
     * @return bool|null
     */
@@ -466,7 +466,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets privilegedChildStatus
     *
-    * @param bool|null $privilegedChildStatus 特权进程子进程可信状态
+    * @param bool|null $privilegedChildStatus **参数解释**: 特权进程子进程可信状态，需先开启特权进程 **取值范围**: - True ：开启特权进程子进程可信。 - False ：未开启特权进程子进程可信。
     *
     * @return $this
     */
@@ -478,7 +478,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets privilegedProcessPathList
-    *  特权进程路径集合
+    *  **参数解释**: 特权进程文件路径列表 **取值范围**: 最少0条，最多10条
     *
     * @return string[]|null
     */
@@ -490,7 +490,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets privilegedProcessPathList
     *
-    * @param string[]|null $privilegedProcessPathList 特权进程路径集合
+    * @param string[]|null $privilegedProcessPathList **参数解释**: 特权进程文件路径列表 **取值范围**: 最少0条，最多10条
     *
     * @return $this
     */

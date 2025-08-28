@@ -20,7 +20,7 @@ class ShowMemberHealthCheckJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  参数解释：创建后端服务器检测任务的接口返回的job_id。
+    * jobId  **参数解释**：创建后端服务器检测任务的接口返回的job_id。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ShowMemberHealthCheckJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  参数解释：创建后端服务器检测任务的接口返回的job_id。
+    * jobId  **参数解释**：创建后端服务器检测任务的接口返回的job_id。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ShowMemberHealthCheckJobRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  参数解释：创建后端服务器检测任务的接口返回的job_id。
+    * jobId  **参数解释**：创建后端服务器检测任务的接口返回的job_id。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowMemberHealthCheckJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  参数解释：创建后端服务器检测任务的接口返回的job_id。
+    * jobId  **参数解释**：创建后端服务器检测任务的接口返回的job_id。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowMemberHealthCheckJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  参数解释：创建后端服务器检测任务的接口返回的job_id。
+    * jobId  **参数解释**：创建后端服务器检测任务的接口返回的job_id。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ShowMemberHealthCheckJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  参数解释：创建后端服务器检测任务的接口返回的job_id。
+    *  **参数解释**：创建后端服务器检测任务的接口返回的job_id。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class ShowMemberHealthCheckJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string $jobId 参数解释：创建后端服务器检测任务的接口返回的job_id。
+    * @param string $jobId **参数解释**：创建后端服务器检测任务的接口返回的job_id。
     *
     * @return $this
     */
