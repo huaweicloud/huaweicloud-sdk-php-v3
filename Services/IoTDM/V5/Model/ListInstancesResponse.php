@@ -21,9 +21,9 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  设备接入实例的总数
-    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用
-    * instances  设备接入实例的详情列表
+    * count  **参数说明**：设备接入实例的总数。
+    * marker  **参数说明**：本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
+    * instances  **参数说明**：设备接入实例的详情列表。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  设备接入实例的总数
-    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用
-    * instances  设备接入实例的详情列表
+    * count  **参数说明**：设备接入实例的总数。
+    * marker  **参数说明**：本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
+    * instances  **参数说明**：设备接入实例的详情列表。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  设备接入实例的总数
-    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用
-    * instances  设备接入实例的详情列表
+    * count  **参数说明**：设备接入实例的总数。
+    * marker  **参数说明**：本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
+    * instances  **参数说明**：设备接入实例的详情列表。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  设备接入实例的总数
-    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用
-    * instances  设备接入实例的详情列表
+    * count  **参数说明**：设备接入实例的总数。
+    * marker  **参数说明**：本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
+    * instances  **参数说明**：设备接入实例的详情列表。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  设备接入实例的总数
-    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用
-    * instances  设备接入实例的详情列表
+    * count  **参数说明**：设备接入实例的总数。
+    * marker  **参数说明**：本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
+    * instances  **参数说明**：设备接入实例的详情列表。
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  设备接入实例的总数
+    *  **参数说明**：设备接入实例的总数。
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 设备接入实例的总数
+    * @param int|null $count **参数说明**：设备接入实例的总数。
     *
     * @return $this
     */
@@ -233,7 +233,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
-    *  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用
+    *  **参数说明**：本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @return string|null
     */
@@ -245,7 +245,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker 本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用
+    * @param string|null $marker **参数说明**：本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @return $this
     */
@@ -257,7 +257,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instances
-    *  设备接入实例的详情列表
+    *  **参数说明**：设备接入实例的详情列表。
     *
     * @return \HuaweiCloud\SDK\IoTDM\V5\Model\QueryInstanceSimplify[]|null
     */
@@ -269,7 +269,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param \HuaweiCloud\SDK\IoTDM\V5\Model\QueryInstanceSimplify[]|null $instances 设备接入实例的详情列表
+    * @param \HuaweiCloud\SDK\IoTDM\V5\Model\QueryInstanceSimplify[]|null $instances **参数说明**：设备接入实例的详情列表。
     *
     * @return $this
     */

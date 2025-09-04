@@ -29,7 +29,7 @@ class UpdateInstanceGroupRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'engine' => 'string',
             'instanceId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Kafka\V2\Model\GroupCreateReq'
+            'body' => '\HuaweiCloud\SDK\Kafka\V2\Model\BatchModifyGroupDescriptionReq'
     ];
 
     /**
@@ -264,7 +264,7 @@ class UpdateInstanceGroupRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Kafka\V2\Model\GroupCreateReq|null
+    * @return \HuaweiCloud\SDK\Kafka\V2\Model\BatchModifyGroupDescriptionReq|null
     */
     public function getBody()
     {
@@ -274,7 +274,7 @@ class UpdateInstanceGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\GroupCreateReq|null $body body
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\BatchModifyGroupDescriptionReq|null $body body
     *
     * @return $this
     */

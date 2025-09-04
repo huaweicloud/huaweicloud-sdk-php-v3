@@ -21,7 +21,7 @@ class ResizeInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * orderId  **参数说明**：订单号，修改包年包月实例时返回该参数，修改按需实例时返回为空。查看订单详情请参考[[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)]\"
+    * orderId  **参数说明**：订单号，修改包年包月实例时返回该参数，修改按需实例时返回为空。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ResizeInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * orderId  **参数说明**：订单号，修改包年包月实例时返回该参数，修改按需实例时返回为空。查看订单详情请参考[[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)]\"
+    * orderId  **参数说明**：订单号，修改包年包月实例时返回该参数，修改按需实例时返回为空。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ResizeInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * orderId  **参数说明**：订单号，修改包年包月实例时返回该参数，修改按需实例时返回为空。查看订单详情请参考[[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)]\"
+    * orderId  **参数说明**：订单号，修改包年包月实例时返回该参数，修改按需实例时返回为空。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ResizeInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * orderId  **参数说明**：订单号，修改包年包月实例时返回该参数，修改按需实例时返回为空。查看订单详情请参考[[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)]\"
+    * orderId  **参数说明**：订单号，修改包年包月实例时返回该参数，修改按需实例时返回为空。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ResizeInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * orderId  **参数说明**：订单号，修改包年包月实例时返回该参数，修改按需实例时返回为空。查看订单详情请参考[[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)]\"
+    * orderId  **参数说明**：订单号，修改包年包月实例时返回该参数，修改按需实例时返回为空。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)
     *
     * @var string[]
     */
@@ -181,7 +181,7 @@ class ResizeInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  **参数说明**：订单号，修改包年包月实例时返回该参数，修改按需实例时返回为空。查看订单详情请参考[[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)]\"
+    *  **参数说明**：订单号，修改包年包月实例时返回该参数，修改按需实例时返回为空。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)
     *
     * @return string|null
     */
@@ -193,7 +193,7 @@ class ResizeInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId **参数说明**：订单号，修改包年包月实例时返回该参数，修改按需实例时返回为空。查看订单详情请参考[[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)]\"
+    * @param string|null $orderId **参数说明**：订单号，修改包年包月实例时返回该参数，修改按需实例时返回为空。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)
     *
     * @return $this
     */

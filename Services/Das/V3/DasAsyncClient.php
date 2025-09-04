@@ -587,6 +587,77 @@ class DasAsyncClient extends Client
     }
 
     /**
+     * 设置全量死锁开关
+     *
+     * 设置全量死锁开关
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeFullDeadLockSwitchAsync($request)
+    {
+        return $this->changeFullDeadLockSwitchAsyncWithHttpInfo($request);
+    }
+    
+    public function changeFullDeadLockSwitchAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/set-fulldeadlock-switch';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Das\V3\Model\ChangeFullDeadLockSwitchResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Das\V3\Model\ChangeFullDeadLockSwitchRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 设置SQL限流开关状态
      *
      * 设置SQL限流开关状态。目前仅支持MySQL数据库。
@@ -868,6 +939,77 @@ class DasAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Das\V3\Model\CreateHealthReportTaskResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Das\V3\Model\CreateHealthReportTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建快照
+     *
+     * 创建快照
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createSnapshotsAsync($request)
+    {
+        return $this->createSnapshotsAsyncWithHttpInfo($request);
+    }
+    
+    public function createSnapshotsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/connections/{connection_id}/instance/create-snapshot';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['connectionId'] !== null) {
+            $pathParams['connection_id'] = $localVarParams['connectionId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Das\V3\Model\CreateSnapshotsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Das\V3\Model\CreateSnapshotsRequest',
             $asyncRequest = true);
     }
 
@@ -3141,6 +3283,89 @@ class DasAsyncClient extends Client
     }
 
     /**
+     * 查询快照列表
+     *
+     * 查询快照列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSnapshotsAsync($request)
+    {
+        return $this->listSnapshotsAsyncWithHttpInfo($request);
+    }
+    
+    public function listSnapshotsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/connections/{connection_id}/instance/list-snapshots';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['module'] !== null) {
+            $queryParams['module'] = $localVarParams['module'];
+        }
+        if ($localVarParams['startAt'] !== null) {
+            $queryParams['start_at'] = $localVarParams['startAt'];
+        }
+        if ($localVarParams['endAt'] !== null) {
+            $queryParams['end_at'] = $localVarParams['endAt'];
+        }
+        if ($localVarParams['perPage'] !== null) {
+            $queryParams['per_page'] = $localVarParams['perPage'];
+        }
+        if ($localVarParams['curPage'] !== null) {
+            $queryParams['cur_page'] = $localVarParams['curPage'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['connectionId'] !== null) {
+            $pathParams['connection_id'] = $localVarParams['connectionId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Das\V3\Model\ListSnapshotsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Das\V3\Model\ListSnapshotsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取空间分析数据列表
      *
      * 获取空间分析数据列表。实例级别数据来源于文件系统，库级别和表级别数据来源于information_schema.tables表。空间&amp;元数据分析最多分析10000张表，若缺少库表空间数据，可能是因为数据库实例表个数过多或者账号未保存密码。如果为保存密码，请使用用户管理接口或页面录入数据库账号。 支持MySQL、GaussDB(for MySQL)和SQLServer引擎。
@@ -3760,6 +3985,154 @@ class DasAsyncClient extends Client
     }
 
     /**
+     * 获取全量死锁信息
+     *
+     * 获取全量死锁信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFullDeadLockListAsync($request)
+    {
+        return $this->showFullDeadLockListAsyncWithHttpInfo($request);
+    }
+    
+    public function showFullDeadLockListAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/show-fulldeadlock-list';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startAt'] !== null) {
+            $queryParams['start_at'] = $localVarParams['startAt'];
+        }
+        if ($localVarParams['endAt'] !== null) {
+            $queryParams['end_at'] = $localVarParams['endAt'];
+        }
+        if ($localVarParams['pageNum'] !== null) {
+            $queryParams['page_num'] = $localVarParams['pageNum'];
+        }
+        if ($localVarParams['pageSize'] !== null) {
+            $queryParams['page_size'] = $localVarParams['pageSize'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Das\V3\Model\ShowFullDeadLockListResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Das\V3\Model\ShowFullDeadLockListRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取全量死锁开关
+     *
+     * 获取全量死锁开关
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFullDeadLockSwitchAsync($request)
+    {
+        return $this->showFullDeadLockSwitchAsyncWithHttpInfo($request);
+    }
+    
+    public function showFullDeadLockSwitchAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/show-fulldeadlock-switch';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Das\V3\Model\ShowFullDeadLockSwitchResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Das\V3\Model\ShowFullDeadLockSwitchRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取实例健康诊断报告内容
      *
      * 获取实例健康诊断报告内容。
@@ -3827,6 +4200,77 @@ class DasAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Das\V3\Model\ShowInstanceHealthReportResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Das\V3\Model\ShowInstanceHealthReportRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取死锁的快照信息
+     *
+     * 获取死锁的快照信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showLatestDeadLockSnapshotAsync($request)
+    {
+        return $this->showLatestDeadLockSnapshotAsyncWithHttpInfo($request);
+    }
+    
+    public function showLatestDeadLockSnapshotAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/connections/{connection_id}/instance/show-latestdeadlock-snapshot';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['connectionId'] !== null) {
+            $pathParams['connection_id'] = $localVarParams['connectionId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Das\V3\Model\ShowLatestDeadLockSnapshotResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Das\V3\Model\ShowLatestDeadLockSnapshotRequest',
             $asyncRequest = true);
     }
 

@@ -20,11 +20,11 @@ class AdditionalParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vpcId  **参数说明**：企业版实例的VPCID
-    * subnetId  **参数说明**：企业版实例的子网ID
-    * securityGroupId  **参数说明**：企业版实例的安全组ID。请确保所选安全组已放通22端口（Linux SSH登录），3389端口（Windows远程登录）和ICMP协议（Ping）
-    * smnTopicUrn  **参数说明**：SMN的topic urn, 当企业版实例创建成功时，平台将通过该topic发送通知
-    * cipheringAlgorithm  **参数说明**：实例支持的加密算法 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
+    * vpcId  **参数说明**：企业版实例的VPCID。
+    * subnetId  **参数说明**：企业版实例的子网ID。
+    * securityGroupId  **参数说明**：企业版实例的安全组ID。请确保所选安全组已放通22端口（Linux SSH登录），3389端口（Windows远程登录）和ICMP协议（Ping）。
+    * smnTopicUrn  **参数说明**：SMN的topic urn, 当企业版实例创建成功时，平台将通过该topic发送通知。
+    * cipheringAlgorithm  **参数说明**：实例支持的加密算法。 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
     * portInfo  portInfo
     *
     * @var string[]
@@ -40,11 +40,11 @@ class AdditionalParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vpcId  **参数说明**：企业版实例的VPCID
-    * subnetId  **参数说明**：企业版实例的子网ID
-    * securityGroupId  **参数说明**：企业版实例的安全组ID。请确保所选安全组已放通22端口（Linux SSH登录），3389端口（Windows远程登录）和ICMP协议（Ping）
-    * smnTopicUrn  **参数说明**：SMN的topic urn, 当企业版实例创建成功时，平台将通过该topic发送通知
-    * cipheringAlgorithm  **参数说明**：实例支持的加密算法 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
+    * vpcId  **参数说明**：企业版实例的VPCID。
+    * subnetId  **参数说明**：企业版实例的子网ID。
+    * securityGroupId  **参数说明**：企业版实例的安全组ID。请确保所选安全组已放通22端口（Linux SSH登录），3389端口（Windows远程登录）和ICMP协议（Ping）。
+    * smnTopicUrn  **参数说明**：SMN的topic urn, 当企业版实例创建成功时，平台将通过该topic发送通知。
+    * cipheringAlgorithm  **参数说明**：实例支持的加密算法。 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
     * portInfo  portInfo
     *
     * @var string[]
@@ -81,11 +81,11 @@ class AdditionalParams implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vpcId  **参数说明**：企业版实例的VPCID
-    * subnetId  **参数说明**：企业版实例的子网ID
-    * securityGroupId  **参数说明**：企业版实例的安全组ID。请确保所选安全组已放通22端口（Linux SSH登录），3389端口（Windows远程登录）和ICMP协议（Ping）
-    * smnTopicUrn  **参数说明**：SMN的topic urn, 当企业版实例创建成功时，平台将通过该topic发送通知
-    * cipheringAlgorithm  **参数说明**：实例支持的加密算法 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
+    * vpcId  **参数说明**：企业版实例的VPCID。
+    * subnetId  **参数说明**：企业版实例的子网ID。
+    * securityGroupId  **参数说明**：企业版实例的安全组ID。请确保所选安全组已放通22端口（Linux SSH登录），3389端口（Windows远程登录）和ICMP协议（Ping）。
+    * smnTopicUrn  **参数说明**：SMN的topic urn, 当企业版实例创建成功时，平台将通过该topic发送通知。
+    * cipheringAlgorithm  **参数说明**：实例支持的加密算法。 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
     * portInfo  portInfo
     *
     * @var string[]
@@ -101,11 +101,11 @@ class AdditionalParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vpcId  **参数说明**：企业版实例的VPCID
-    * subnetId  **参数说明**：企业版实例的子网ID
-    * securityGroupId  **参数说明**：企业版实例的安全组ID。请确保所选安全组已放通22端口（Linux SSH登录），3389端口（Windows远程登录）和ICMP协议（Ping）
-    * smnTopicUrn  **参数说明**：SMN的topic urn, 当企业版实例创建成功时，平台将通过该topic发送通知
-    * cipheringAlgorithm  **参数说明**：实例支持的加密算法 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
+    * vpcId  **参数说明**：企业版实例的VPCID。
+    * subnetId  **参数说明**：企业版实例的子网ID。
+    * securityGroupId  **参数说明**：企业版实例的安全组ID。请确保所选安全组已放通22端口（Linux SSH登录），3389端口（Windows远程登录）和ICMP协议（Ping）。
+    * smnTopicUrn  **参数说明**：SMN的topic urn, 当企业版实例创建成功时，平台将通过该topic发送通知。
+    * cipheringAlgorithm  **参数说明**：实例支持的加密算法。 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
     * portInfo  portInfo
     *
     * @var string[]
@@ -121,11 +121,11 @@ class AdditionalParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vpcId  **参数说明**：企业版实例的VPCID
-    * subnetId  **参数说明**：企业版实例的子网ID
-    * securityGroupId  **参数说明**：企业版实例的安全组ID。请确保所选安全组已放通22端口（Linux SSH登录），3389端口（Windows远程登录）和ICMP协议（Ping）
-    * smnTopicUrn  **参数说明**：SMN的topic urn, 当企业版实例创建成功时，平台将通过该topic发送通知
-    * cipheringAlgorithm  **参数说明**：实例支持的加密算法 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
+    * vpcId  **参数说明**：企业版实例的VPCID。
+    * subnetId  **参数说明**：企业版实例的子网ID。
+    * securityGroupId  **参数说明**：企业版实例的安全组ID。请确保所选安全组已放通22端口（Linux SSH登录），3389端口（Windows远程登录）和ICMP协议（Ping）。
+    * smnTopicUrn  **参数说明**：SMN的topic urn, 当企业版实例创建成功时，平台将通过该topic发送通知。
+    * cipheringAlgorithm  **参数说明**：实例支持的加密算法。 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
     * portInfo  portInfo
     *
     * @var string[]
@@ -256,7 +256,7 @@ class AdditionalParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  **参数说明**：企业版实例的VPCID
+    *  **参数说明**：企业版实例的VPCID。
     *
     * @return string
     */
@@ -268,7 +268,7 @@ class AdditionalParams implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string $vpcId **参数说明**：企业版实例的VPCID
+    * @param string $vpcId **参数说明**：企业版实例的VPCID。
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class AdditionalParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  **参数说明**：企业版实例的子网ID
+    *  **参数说明**：企业版实例的子网ID。
     *
     * @return string
     */
@@ -292,7 +292,7 @@ class AdditionalParams implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string $subnetId **参数说明**：企业版实例的子网ID
+    * @param string $subnetId **参数说明**：企业版实例的子网ID。
     *
     * @return $this
     */
@@ -304,7 +304,7 @@ class AdditionalParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  **参数说明**：企业版实例的安全组ID。请确保所选安全组已放通22端口（Linux SSH登录），3389端口（Windows远程登录）和ICMP协议（Ping）
+    *  **参数说明**：企业版实例的安全组ID。请确保所选安全组已放通22端口（Linux SSH登录），3389端口（Windows远程登录）和ICMP协议（Ping）。
     *
     * @return string
     */
@@ -316,7 +316,7 @@ class AdditionalParams implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string $securityGroupId **参数说明**：企业版实例的安全组ID。请确保所选安全组已放通22端口（Linux SSH登录），3389端口（Windows远程登录）和ICMP协议（Ping）
+    * @param string $securityGroupId **参数说明**：企业版实例的安全组ID。请确保所选安全组已放通22端口（Linux SSH登录），3389端口（Windows远程登录）和ICMP协议（Ping）。
     *
     * @return $this
     */
@@ -328,7 +328,7 @@ class AdditionalParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets smnTopicUrn
-    *  **参数说明**：SMN的topic urn, 当企业版实例创建成功时，平台将通过该topic发送通知
+    *  **参数说明**：SMN的topic urn, 当企业版实例创建成功时，平台将通过该topic发送通知。
     *
     * @return string|null
     */
@@ -340,7 +340,7 @@ class AdditionalParams implements ModelInterface, ArrayAccess
     /**
     * Sets smnTopicUrn
     *
-    * @param string|null $smnTopicUrn **参数说明**：SMN的topic urn, 当企业版实例创建成功时，平台将通过该topic发送通知
+    * @param string|null $smnTopicUrn **参数说明**：SMN的topic urn, 当企业版实例创建成功时，平台将通过该topic发送通知。
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class AdditionalParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets cipheringAlgorithm
-    *  **参数说明**：实例支持的加密算法 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
+    *  **参数说明**：实例支持的加密算法。 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
     *
     * @return string|null
     */
@@ -364,7 +364,7 @@ class AdditionalParams implements ModelInterface, ArrayAccess
     /**
     * Sets cipheringAlgorithm
     *
-    * @param string|null $cipheringAlgorithm **参数说明**：实例支持的加密算法 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
+    * @param string|null $cipheringAlgorithm **参数说明**：实例支持的加密算法。 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
     *
     * @return $this
     */

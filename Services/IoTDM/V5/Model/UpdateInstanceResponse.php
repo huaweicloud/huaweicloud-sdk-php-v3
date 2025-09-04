@@ -24,16 +24,17 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
     * instanceType  **参数说明**：实例类型。 **取值范围**： - standard：标准版实例 - enterprise：企业版实例
     * instanceId  **参数说明**：实例ID。 **取值范围**：长度不超过36，由小写字母[a-f]、数字、连接符（-）的组成。
     * chargeMode  **参数说明**：实例的付费方式。 **取值范围**： - prePaid：包年/包月 - postPaid：按需计费
-    * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    * name  **参数说明**：实例名称。 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     * flavor  flavor
-    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
-    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
-    * accessInfos  **参数说明**：设备接入实例的接入信息
-    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z
-    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z
+    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - TRADING: 实例正在进行交易 - MODIFYING：实例正在变更规格 - MODIFY_FAILED: 实例变更失败 - FAILED：实例创建失败
+    * regionId  **参数说明**：实例所属region。
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合。
+    * accessInfos  **参数说明**：设备接入实例的接入信息。
+    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z。
+    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z。
     * enterpriseProjectId  **参数说明**：企业项目Id。
     * tags  **参数说明**: 设备接入实例的标签信息。如果实例有标签，则会有该字段，否则该字段为空。
-    * orderId  **参数说明**：订单号，仅包年包月实例返回该参数。[查看订单详情请参考[[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。]](tag:hws)
+    * orderId  **参数说明**：订单号，仅包年包月实例返回该参数。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)
     * operateWindow  operateWindow
     * additionalParams  additionalParams
     *
@@ -46,6 +47,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
             'name' => 'string',
             'flavor' => '\HuaweiCloud\SDK\IoTDM\V5\Model\Flavor',
             'status' => 'string',
+            'regionId' => 'string',
             'description' => 'string',
             'accessInfos' => '\HuaweiCloud\SDK\IoTDM\V5\Model\AccessInfo[]',
             'createTime' => 'string',
@@ -62,16 +64,17 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
     * instanceType  **参数说明**：实例类型。 **取值范围**： - standard：标准版实例 - enterprise：企业版实例
     * instanceId  **参数说明**：实例ID。 **取值范围**：长度不超过36，由小写字母[a-f]、数字、连接符（-）的组成。
     * chargeMode  **参数说明**：实例的付费方式。 **取值范围**： - prePaid：包年/包月 - postPaid：按需计费
-    * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    * name  **参数说明**：实例名称。 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     * flavor  flavor
-    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
-    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
-    * accessInfos  **参数说明**：设备接入实例的接入信息
-    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z
-    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z
+    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - TRADING: 实例正在进行交易 - MODIFYING：实例正在变更规格 - MODIFY_FAILED: 实例变更失败 - FAILED：实例创建失败
+    * regionId  **参数说明**：实例所属region。
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合。
+    * accessInfos  **参数说明**：设备接入实例的接入信息。
+    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z。
+    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z。
     * enterpriseProjectId  **参数说明**：企业项目Id。
     * tags  **参数说明**: 设备接入实例的标签信息。如果实例有标签，则会有该字段，否则该字段为空。
-    * orderId  **参数说明**：订单号，仅包年包月实例返回该参数。[查看订单详情请参考[[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。]](tag:hws)
+    * orderId  **参数说明**：订单号，仅包年包月实例返回该参数。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)
     * operateWindow  operateWindow
     * additionalParams  additionalParams
     *
@@ -84,6 +87,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
         'name' => null,
         'flavor' => null,
         'status' => null,
+        'regionId' => null,
         'description' => null,
         'accessInfos' => null,
         'createTime' => null,
@@ -121,16 +125,17 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
     * instanceType  **参数说明**：实例类型。 **取值范围**： - standard：标准版实例 - enterprise：企业版实例
     * instanceId  **参数说明**：实例ID。 **取值范围**：长度不超过36，由小写字母[a-f]、数字、连接符（-）的组成。
     * chargeMode  **参数说明**：实例的付费方式。 **取值范围**： - prePaid：包年/包月 - postPaid：按需计费
-    * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    * name  **参数说明**：实例名称。 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     * flavor  flavor
-    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
-    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
-    * accessInfos  **参数说明**：设备接入实例的接入信息
-    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z
-    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z
+    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - TRADING: 实例正在进行交易 - MODIFYING：实例正在变更规格 - MODIFY_FAILED: 实例变更失败 - FAILED：实例创建失败
+    * regionId  **参数说明**：实例所属region。
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合。
+    * accessInfos  **参数说明**：设备接入实例的接入信息。
+    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z。
+    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z。
     * enterpriseProjectId  **参数说明**：企业项目Id。
     * tags  **参数说明**: 设备接入实例的标签信息。如果实例有标签，则会有该字段，否则该字段为空。
-    * orderId  **参数说明**：订单号，仅包年包月实例返回该参数。[查看订单详情请参考[[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。]](tag:hws)
+    * orderId  **参数说明**：订单号，仅包年包月实例返回该参数。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)
     * operateWindow  operateWindow
     * additionalParams  additionalParams
     *
@@ -143,6 +148,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
             'name' => 'name',
             'flavor' => 'flavor',
             'status' => 'status',
+            'regionId' => 'region_id',
             'description' => 'description',
             'accessInfos' => 'access_infos',
             'createTime' => 'create_time',
@@ -159,16 +165,17 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
     * instanceType  **参数说明**：实例类型。 **取值范围**： - standard：标准版实例 - enterprise：企业版实例
     * instanceId  **参数说明**：实例ID。 **取值范围**：长度不超过36，由小写字母[a-f]、数字、连接符（-）的组成。
     * chargeMode  **参数说明**：实例的付费方式。 **取值范围**： - prePaid：包年/包月 - postPaid：按需计费
-    * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    * name  **参数说明**：实例名称。 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     * flavor  flavor
-    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
-    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
-    * accessInfos  **参数说明**：设备接入实例的接入信息
-    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z
-    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z
+    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - TRADING: 实例正在进行交易 - MODIFYING：实例正在变更规格 - MODIFY_FAILED: 实例变更失败 - FAILED：实例创建失败
+    * regionId  **参数说明**：实例所属region。
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合。
+    * accessInfos  **参数说明**：设备接入实例的接入信息。
+    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z。
+    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z。
     * enterpriseProjectId  **参数说明**：企业项目Id。
     * tags  **参数说明**: 设备接入实例的标签信息。如果实例有标签，则会有该字段，否则该字段为空。
-    * orderId  **参数说明**：订单号，仅包年包月实例返回该参数。[查看订单详情请参考[[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。]](tag:hws)
+    * orderId  **参数说明**：订单号，仅包年包月实例返回该参数。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)
     * operateWindow  operateWindow
     * additionalParams  additionalParams
     *
@@ -181,6 +188,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'flavor' => 'setFlavor',
             'status' => 'setStatus',
+            'regionId' => 'setRegionId',
             'description' => 'setDescription',
             'accessInfos' => 'setAccessInfos',
             'createTime' => 'setCreateTime',
@@ -197,16 +205,17 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
     * instanceType  **参数说明**：实例类型。 **取值范围**： - standard：标准版实例 - enterprise：企业版实例
     * instanceId  **参数说明**：实例ID。 **取值范围**：长度不超过36，由小写字母[a-f]、数字、连接符（-）的组成。
     * chargeMode  **参数说明**：实例的付费方式。 **取值范围**： - prePaid：包年/包月 - postPaid：按需计费
-    * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    * name  **参数说明**：实例名称。 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     * flavor  flavor
-    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
-    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
-    * accessInfos  **参数说明**：设备接入实例的接入信息
-    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z
-    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z
+    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - TRADING: 实例正在进行交易 - MODIFYING：实例正在变更规格 - MODIFY_FAILED: 实例变更失败 - FAILED：实例创建失败
+    * regionId  **参数说明**：实例所属region。
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合。
+    * accessInfos  **参数说明**：设备接入实例的接入信息。
+    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z。
+    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z。
     * enterpriseProjectId  **参数说明**：企业项目Id。
     * tags  **参数说明**: 设备接入实例的标签信息。如果实例有标签，则会有该字段，否则该字段为空。
-    * orderId  **参数说明**：订单号，仅包年包月实例返回该参数。[查看订单详情请参考[[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。]](tag:hws)
+    * orderId  **参数说明**：订单号，仅包年包月实例返回该参数。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)
     * operateWindow  operateWindow
     * additionalParams  additionalParams
     *
@@ -219,6 +228,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'flavor' => 'getFlavor',
             'status' => 'getStatus',
+            'regionId' => 'getRegionId',
             'description' => 'getDescription',
             'accessInfos' => 'getAccessInfos',
             'createTime' => 'getCreateTime',
@@ -294,6 +304,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['flavor'] = isset($data['flavor']) ? $data['flavor'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['accessInfos'] = isset($data['accessInfos']) ? $data['accessInfos'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
@@ -331,11 +342,14 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
                 $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 256)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'regionId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'regionId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['description']) && !preg_match("/^[A-Za-z0-9_，,.。、&\\-\\s\\u4e00-\\u9fa5]{0,256}$/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[A-Za-z0-9_，,.。、&\\-\\s\\u4e00-\\u9fa5]{0,256}$/.";
             }
             if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) > 64)) {
                 $invalidProperties[] = "invalid value for 'createTime', the character length must be smaller than or equal to 64.";
@@ -446,7 +460,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    *  **参数说明**：实例名称。 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     *
     * @return string|null
     */
@@ -458,7 +472,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    * @param string|null $name **参数说明**：实例名称。 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     *
     * @return $this
     */
@@ -494,7 +508,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
+    *  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - TRADING: 实例正在进行交易 - MODIFYING：实例正在变更规格 - MODIFY_FAILED: 实例变更失败 - FAILED：实例创建失败
     *
     * @return string|null
     */
@@ -506,7 +520,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
+    * @param string|null $status **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - TRADING: 实例正在进行交易 - MODIFYING：实例正在变更规格 - MODIFY_FAILED: 实例变更失败 - FAILED：实例创建失败
     *
     * @return $this
     */
@@ -517,8 +531,32 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets regionId
+    *  **参数说明**：实例所属region。
+    *
+    * @return string|null
+    */
+    public function getRegionId()
+    {
+        return $this->container['regionId'];
+    }
+
+    /**
+    * Sets regionId
+    *
+    * @param string|null $regionId **参数说明**：实例所属region。
+    *
+    * @return $this
+    */
+    public function setRegionId($regionId)
+    {
+        $this->container['regionId'] = $regionId;
+        return $this;
+    }
+
+    /**
     * Gets description
-    *  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
+    *  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合。
     *
     * @return string|null
     */
@@ -530,7 +568,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
+    * @param string|null $description **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合。
     *
     * @return $this
     */
@@ -542,7 +580,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessInfos
-    *  **参数说明**：设备接入实例的接入信息
+    *  **参数说明**：设备接入实例的接入信息。
     *
     * @return \HuaweiCloud\SDK\IoTDM\V5\Model\AccessInfo[]|null
     */
@@ -554,7 +592,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets accessInfos
     *
-    * @param \HuaweiCloud\SDK\IoTDM\V5\Model\AccessInfo[]|null $accessInfos **参数说明**：设备接入实例的接入信息
+    * @param \HuaweiCloud\SDK\IoTDM\V5\Model\AccessInfo[]|null $accessInfos **参数说明**：设备接入实例的接入信息。
     *
     * @return $this
     */
@@ -566,7 +604,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z
+    *  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z。
     *
     * @return string|null
     */
@@ -578,7 +616,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z
+    * @param string|null $createTime **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z。
     *
     * @return $this
     */
@@ -590,7 +628,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z
+    *  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z。
     *
     * @return string|null
     */
@@ -602,7 +640,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param string|null $updateTime **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z
+    * @param string|null $updateTime **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z。
     *
     * @return $this
     */
@@ -662,7 +700,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  **参数说明**：订单号，仅包年包月实例返回该参数。[查看订单详情请参考[[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。]](tag:hws)
+    *  **参数说明**：订单号，仅包年包月实例返回该参数。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)
     *
     * @return string|null
     */
@@ -674,7 +712,7 @@ class UpdateInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId **参数说明**：订单号，仅包年包月实例返回该参数。[查看订单详情请参考[[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。]](tag:hws)
+    * @param string|null $orderId **参数说明**：订单号，仅包年包月实例返回该参数。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)
     *
     * @return $this
     */

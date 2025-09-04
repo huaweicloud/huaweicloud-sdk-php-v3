@@ -20,10 +20,10 @@ class AdditionalParamsResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vpcId  **参数说明**：企业版实例的VPCID
-    * subnetId  **参数说明**：企业版实例的子网ID
-    * securityGroupId  **参数说明**：企业版实例的安全组ID
-    * cipheringAlgorithm  **参数说明**：实例支持的加密算法 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
+    * vpcId  **参数说明**：企业版实例的VPCID。
+    * subnetId  **参数说明**：企业版实例的子网ID。
+    * securityGroupId  **参数说明**：企业版实例的安全组ID。
+    * cipheringAlgorithm  **参数说明**：实例支持的加密算法。 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
     * forwardingInfo  forwardingInfo
     *
     * @var string[]
@@ -38,10 +38,10 @@ class AdditionalParamsResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vpcId  **参数说明**：企业版实例的VPCID
-    * subnetId  **参数说明**：企业版实例的子网ID
-    * securityGroupId  **参数说明**：企业版实例的安全组ID
-    * cipheringAlgorithm  **参数说明**：实例支持的加密算法 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
+    * vpcId  **参数说明**：企业版实例的VPCID。
+    * subnetId  **参数说明**：企业版实例的子网ID。
+    * securityGroupId  **参数说明**：企业版实例的安全组ID。
+    * cipheringAlgorithm  **参数说明**：实例支持的加密算法。 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
     * forwardingInfo  forwardingInfo
     *
     * @var string[]
@@ -77,10 +77,10 @@ class AdditionalParamsResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vpcId  **参数说明**：企业版实例的VPCID
-    * subnetId  **参数说明**：企业版实例的子网ID
-    * securityGroupId  **参数说明**：企业版实例的安全组ID
-    * cipheringAlgorithm  **参数说明**：实例支持的加密算法 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
+    * vpcId  **参数说明**：企业版实例的VPCID。
+    * subnetId  **参数说明**：企业版实例的子网ID。
+    * securityGroupId  **参数说明**：企业版实例的安全组ID。
+    * cipheringAlgorithm  **参数说明**：实例支持的加密算法。 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
     * forwardingInfo  forwardingInfo
     *
     * @var string[]
@@ -95,10 +95,10 @@ class AdditionalParamsResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vpcId  **参数说明**：企业版实例的VPCID
-    * subnetId  **参数说明**：企业版实例的子网ID
-    * securityGroupId  **参数说明**：企业版实例的安全组ID
-    * cipheringAlgorithm  **参数说明**：实例支持的加密算法 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
+    * vpcId  **参数说明**：企业版实例的VPCID。
+    * subnetId  **参数说明**：企业版实例的子网ID。
+    * securityGroupId  **参数说明**：企业版实例的安全组ID。
+    * cipheringAlgorithm  **参数说明**：实例支持的加密算法。 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
     * forwardingInfo  forwardingInfo
     *
     * @var string[]
@@ -113,10 +113,10 @@ class AdditionalParamsResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vpcId  **参数说明**：企业版实例的VPCID
-    * subnetId  **参数说明**：企业版实例的子网ID
-    * securityGroupId  **参数说明**：企业版实例的安全组ID
-    * cipheringAlgorithm  **参数说明**：实例支持的加密算法 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
+    * vpcId  **参数说明**：企业版实例的VPCID。
+    * subnetId  **参数说明**：企业版实例的子网ID。
+    * securityGroupId  **参数说明**：企业版实例的安全组ID。
+    * cipheringAlgorithm  **参数说明**：实例支持的加密算法。 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
     * forwardingInfo  forwardingInfo
     *
     * @var string[]
@@ -239,7 +239,7 @@ class AdditionalParamsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  **参数说明**：企业版实例的VPCID
+    *  **参数说明**：企业版实例的VPCID。
     *
     * @return string|null
     */
@@ -251,7 +251,7 @@ class AdditionalParamsResp implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId **参数说明**：企业版实例的VPCID
+    * @param string|null $vpcId **参数说明**：企业版实例的VPCID。
     *
     * @return $this
     */
@@ -263,7 +263,7 @@ class AdditionalParamsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  **参数说明**：企业版实例的子网ID
+    *  **参数说明**：企业版实例的子网ID。
     *
     * @return string|null
     */
@@ -275,7 +275,7 @@ class AdditionalParamsResp implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string|null $subnetId **参数说明**：企业版实例的子网ID
+    * @param string|null $subnetId **参数说明**：企业版实例的子网ID。
     *
     * @return $this
     */
@@ -287,7 +287,7 @@ class AdditionalParamsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  **参数说明**：企业版实例的安全组ID
+    *  **参数说明**：企业版实例的安全组ID。
     *
     * @return string|null
     */
@@ -299,7 +299,7 @@ class AdditionalParamsResp implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string|null $securityGroupId **参数说明**：企业版实例的安全组ID
+    * @param string|null $securityGroupId **参数说明**：企业版实例的安全组ID。
     *
     * @return $this
     */
@@ -311,7 +311,7 @@ class AdditionalParamsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets cipheringAlgorithm
-    *  **参数说明**：实例支持的加密算法 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
+    *  **参数说明**：实例支持的加密算法。 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
     *
     * @return string|null
     */
@@ -323,7 +323,7 @@ class AdditionalParamsResp implements ModelInterface, ArrayAccess
     /**
     * Sets cipheringAlgorithm
     *
-    * @param string|null $cipheringAlgorithm **参数说明**：实例支持的加密算法 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
+    * @param string|null $cipheringAlgorithm **参数说明**：实例支持的加密算法。 **取值范围**： - COMMON_ALGORITHM: 通用加密算法（支持RSA，SHA256等国际通用的密码算法） - SM_ALGORITHM: 支持SM系列商密算法（支持SM2，SM3，SM4等国密算法）
     *
     * @return $this
     */

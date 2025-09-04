@@ -25,6 +25,7 @@ class AddKeystorePermissionRequestBody implements ModelInterface, ArrayAccess
     * modify  是否有修改权限
     * usage  是否有使用权限
     * userName  用户名
+    * userId  用户ID
     * setting  是否有设置权限
     * canAbsent  是否可编辑
     *
@@ -36,6 +37,7 @@ class AddKeystorePermissionRequestBody implements ModelInterface, ArrayAccess
             'modify' => 'bool',
             'usage' => 'bool',
             'userName' => 'string',
+            'userId' => 'string',
             'setting' => 'bool',
             'canAbsent' => 'bool'
     ];
@@ -47,6 +49,7 @@ class AddKeystorePermissionRequestBody implements ModelInterface, ArrayAccess
     * modify  是否有修改权限
     * usage  是否有使用权限
     * userName  用户名
+    * userId  用户ID
     * setting  是否有设置权限
     * canAbsent  是否可编辑
     *
@@ -58,6 +61,7 @@ class AddKeystorePermissionRequestBody implements ModelInterface, ArrayAccess
         'modify' => null,
         'usage' => null,
         'userName' => null,
+        'userId' => null,
         'setting' => null,
         'canAbsent' => null
     ];
@@ -90,6 +94,7 @@ class AddKeystorePermissionRequestBody implements ModelInterface, ArrayAccess
     * modify  是否有修改权限
     * usage  是否有使用权限
     * userName  用户名
+    * userId  用户ID
     * setting  是否有设置权限
     * canAbsent  是否可编辑
     *
@@ -101,6 +106,7 @@ class AddKeystorePermissionRequestBody implements ModelInterface, ArrayAccess
             'modify' => 'modify',
             'usage' => 'usage',
             'userName' => 'user_name',
+            'userId' => 'user_id',
             'setting' => 'setting',
             'canAbsent' => 'can_absent'
     ];
@@ -112,6 +118,7 @@ class AddKeystorePermissionRequestBody implements ModelInterface, ArrayAccess
     * modify  是否有修改权限
     * usage  是否有使用权限
     * userName  用户名
+    * userId  用户ID
     * setting  是否有设置权限
     * canAbsent  是否可编辑
     *
@@ -123,6 +130,7 @@ class AddKeystorePermissionRequestBody implements ModelInterface, ArrayAccess
             'modify' => 'setModify',
             'usage' => 'setUsage',
             'userName' => 'setUserName',
+            'userId' => 'setUserId',
             'setting' => 'setSetting',
             'canAbsent' => 'setCanAbsent'
     ];
@@ -134,6 +142,7 @@ class AddKeystorePermissionRequestBody implements ModelInterface, ArrayAccess
     * modify  是否有修改权限
     * usage  是否有使用权限
     * userName  用户名
+    * userId  用户ID
     * setting  是否有设置权限
     * canAbsent  是否可编辑
     *
@@ -145,6 +154,7 @@ class AddKeystorePermissionRequestBody implements ModelInterface, ArrayAccess
             'modify' => 'getModify',
             'usage' => 'getUsage',
             'userName' => 'getUserName',
+            'userId' => 'getUserId',
             'setting' => 'getSetting',
             'canAbsent' => 'getCanAbsent'
     ];
@@ -212,6 +222,7 @@ class AddKeystorePermissionRequestBody implements ModelInterface, ArrayAccess
         $this->container['modify'] = isset($data['modify']) ? $data['modify'] : null;
         $this->container['usage'] = isset($data['usage']) ? $data['usage'] : null;
         $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
+        $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
         $this->container['setting'] = isset($data['setting']) ? $data['setting'] : null;
         $this->container['canAbsent'] = isset($data['canAbsent']) ? $data['canAbsent'] : null;
     }
@@ -376,6 +387,30 @@ class AddKeystorePermissionRequestBody implements ModelInterface, ArrayAccess
     public function setUserName($userName)
     {
         $this->container['userName'] = $userName;
+        return $this;
+    }
+
+    /**
+    * Gets userId
+    *  用户ID
+    *
+    * @return string|null
+    */
+    public function getUserId()
+    {
+        return $this->container['userId'];
+    }
+
+    /**
+    * Sets userId
+    *
+    * @param string|null $userId 用户ID
+    *
+    * @return $this
+    */
+    public function setUserId($userId)
+    {
+        $this->container['userId'] = $userId;
         return $this;
     }
 

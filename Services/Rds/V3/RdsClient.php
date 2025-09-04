@@ -3782,6 +3782,9 @@ class RdsClient extends Client
         if ($localVarParams['tags'] !== null) {
             $queryParams['tags'] = $localVarParams['tags'];
         }
+        if ($localVarParams['groupType'] !== null) {
+            $queryParams['group_type'] = $localVarParams['groupType'];
+        }
         if ($localVarParams['contentType'] !== null) {
             $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }

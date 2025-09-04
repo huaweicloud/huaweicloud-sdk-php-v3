@@ -27,6 +27,7 @@ class EpDetail implements ModelInterface, ArrayAccess
     * createdAt  创建时间，格式为UTC格式。如：2018-05-18T06:49:06Z。
     * updatedAt  修改时间，格式为UTC格式。如：2018-05-28T02:21:36Z。
     * type  项目类型： - prod：商用项目 - poc：测试项目
+    * deleteFlag  删除标识，false-未删除；true-已删除
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class EpDetail implements ModelInterface, ArrayAccess
             'status' => 'int',
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime',
-            'type' => 'string'
+            'type' => 'string',
+            'deleteFlag' => 'bool'
     ];
 
     /**
@@ -49,6 +51,7 @@ class EpDetail implements ModelInterface, ArrayAccess
     * createdAt  创建时间，格式为UTC格式。如：2018-05-18T06:49:06Z。
     * updatedAt  修改时间，格式为UTC格式。如：2018-05-28T02:21:36Z。
     * type  项目类型： - prod：商用项目 - poc：测试项目
+    * deleteFlag  删除标识，false-未删除；true-已删除
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class EpDetail implements ModelInterface, ArrayAccess
         'status' => 'int32',
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time',
-        'type' => null
+        'type' => null,
+        'deleteFlag' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class EpDetail implements ModelInterface, ArrayAccess
     * createdAt  创建时间，格式为UTC格式。如：2018-05-18T06:49:06Z。
     * updatedAt  修改时间，格式为UTC格式。如：2018-05-28T02:21:36Z。
     * type  项目类型： - prod：商用项目 - poc：测试项目
+    * deleteFlag  删除标识，false-未删除；true-已删除
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class EpDetail implements ModelInterface, ArrayAccess
             'status' => 'status',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
-            'type' => 'type'
+            'type' => 'type',
+            'deleteFlag' => 'delete_flag'
     ];
 
     /**
@@ -114,6 +120,7 @@ class EpDetail implements ModelInterface, ArrayAccess
     * createdAt  创建时间，格式为UTC格式。如：2018-05-18T06:49:06Z。
     * updatedAt  修改时间，格式为UTC格式。如：2018-05-28T02:21:36Z。
     * type  项目类型： - prod：商用项目 - poc：测试项目
+    * deleteFlag  删除标识，false-未删除；true-已删除
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class EpDetail implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
-            'type' => 'setType'
+            'type' => 'setType',
+            'deleteFlag' => 'setDeleteFlag'
     ];
 
     /**
@@ -136,6 +144,7 @@ class EpDetail implements ModelInterface, ArrayAccess
     * createdAt  创建时间，格式为UTC格式。如：2018-05-18T06:49:06Z。
     * updatedAt  修改时间，格式为UTC格式。如：2018-05-28T02:21:36Z。
     * type  项目类型： - prod：商用项目 - poc：测试项目
+    * deleteFlag  删除标识，false-未删除；true-已删除
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class EpDetail implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
-            'type' => 'getType'
+            'type' => 'getType',
+            'deleteFlag' => 'getDeleteFlag'
     ];
 
     /**
@@ -229,6 +239,7 @@ class EpDetail implements ModelInterface, ArrayAccess
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['deleteFlag'] = isset($data['deleteFlag']) ? $data['deleteFlag'] : null;
     }
 
     /**
@@ -268,6 +279,9 @@ class EpDetail implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['deleteFlag'] === null) {
+            $invalidProperties[] = "'deleteFlag' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -447,6 +461,30 @@ class EpDetail implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets deleteFlag
+    *  删除标识，false-未删除；true-已删除
+    *
+    * @return bool
+    */
+    public function getDeleteFlag()
+    {
+        return $this->container['deleteFlag'];
+    }
+
+    /**
+    * Sets deleteFlag
+    *
+    * @param bool $deleteFlag 删除标识，false-未删除；true-已删除
+    *
+    * @return $this
+    */
+    public function setDeleteFlag($deleteFlag)
+    {
+        $this->container['deleteFlag'] = $deleteFlag;
         return $this;
     }
 

@@ -22,9 +22,10 @@ class ChargeInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * chargeMode  **参数说明**：实例的付费方式。 **取值范围**： - prePaid：包年/包月 - postPaid：按需计费
     * periodType  **参数说明**：订购设备接入实例的周期类型（包年、包月等）。charge_mode为prePaid时生效，且为必选值。 **取值范围**： - month：包月 - year：包年
-    * periodNum  **参数说明**：订购设备接入实例的周期数。charge_mode为prePaid时生效，且为必选值。 **取值范围**：period_type=month（周期类型为月）时，取值为[1，9]；period_type=year（周期类型为年）时，取值为[1，3]\"
+    * periodNum  **参数说明**：订购设备接入实例的周期数。charge_mode为prePaid时生效，且为必选值。 **取值范围**：period_type=month（周期类型为月）时，取值为[1，9]；period_type=year（周期类型为年）时，取值为[1，3]\"。
     * isAutoRenew  **参数说明**：创建包年/包月实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **取值范围**： - true：自动续订 - false：默认值，不自动续订
-    * isAutoPay  **参数说明**：创建包年/包月实例时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **取值范围**：true - 自动支付，从账户余额自动扣费; false - 默认值，只提交订单不支付。[需要客户参考[\"支付包年/包月产品订单\"](https://support.huaweicloud.com/api-bpconsole/api_order_00016.html#section0)进行支付，或者在华为云官网页面使用进行支付。](tag:hws)
+    * isAutoPay  **参数说明**：创建包年/包月实例时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **取值范围**：true - 自动支付，从账户余额自动扣费; false - 默认值，只提交订单不支付。[需要客户参考[支付包年/包月产品订单](https://support.huaweicloud.com/api-bpconsole/api_order_00016.html#section0)进行支付，或者在华为云官网页面使用进行支付。](tag:hws)
+    * promotionInfos  **参数说明**：促销信息。
     *
     * @var string[]
     */
@@ -33,16 +34,18 @@ class ChargeInfo implements ModelInterface, ArrayAccess
             'periodType' => 'string',
             'periodNum' => 'int',
             'isAutoRenew' => 'bool',
-            'isAutoPay' => 'bool'
+            'isAutoPay' => 'bool',
+            'promotionInfos' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * chargeMode  **参数说明**：实例的付费方式。 **取值范围**： - prePaid：包年/包月 - postPaid：按需计费
     * periodType  **参数说明**：订购设备接入实例的周期类型（包年、包月等）。charge_mode为prePaid时生效，且为必选值。 **取值范围**： - month：包月 - year：包年
-    * periodNum  **参数说明**：订购设备接入实例的周期数。charge_mode为prePaid时生效，且为必选值。 **取值范围**：period_type=month（周期类型为月）时，取值为[1，9]；period_type=year（周期类型为年）时，取值为[1，3]\"
+    * periodNum  **参数说明**：订购设备接入实例的周期数。charge_mode为prePaid时生效，且为必选值。 **取值范围**：period_type=month（周期类型为月）时，取值为[1，9]；period_type=year（周期类型为年）时，取值为[1，3]\"。
     * isAutoRenew  **参数说明**：创建包年/包月实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **取值范围**： - true：自动续订 - false：默认值，不自动续订
-    * isAutoPay  **参数说明**：创建包年/包月实例时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **取值范围**：true - 自动支付，从账户余额自动扣费; false - 默认值，只提交订单不支付。[需要客户参考[\"支付包年/包月产品订单\"](https://support.huaweicloud.com/api-bpconsole/api_order_00016.html#section0)进行支付，或者在华为云官网页面使用进行支付。](tag:hws)
+    * isAutoPay  **参数说明**：创建包年/包月实例时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **取值范围**：true - 自动支付，从账户余额自动扣费; false - 默认值，只提交订单不支付。[需要客户参考[支付包年/包月产品订单](https://support.huaweicloud.com/api-bpconsole/api_order_00016.html#section0)进行支付，或者在华为云官网页面使用进行支付。](tag:hws)
+    * promotionInfos  **参数说明**：促销信息。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ChargeInfo implements ModelInterface, ArrayAccess
         'periodType' => null,
         'periodNum' => null,
         'isAutoRenew' => null,
-        'isAutoPay' => null
+        'isAutoPay' => null,
+        'promotionInfos' => null
     ];
 
     /**
@@ -79,9 +83,10 @@ class ChargeInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * chargeMode  **参数说明**：实例的付费方式。 **取值范围**： - prePaid：包年/包月 - postPaid：按需计费
     * periodType  **参数说明**：订购设备接入实例的周期类型（包年、包月等）。charge_mode为prePaid时生效，且为必选值。 **取值范围**： - month：包月 - year：包年
-    * periodNum  **参数说明**：订购设备接入实例的周期数。charge_mode为prePaid时生效，且为必选值。 **取值范围**：period_type=month（周期类型为月）时，取值为[1，9]；period_type=year（周期类型为年）时，取值为[1，3]\"
+    * periodNum  **参数说明**：订购设备接入实例的周期数。charge_mode为prePaid时生效，且为必选值。 **取值范围**：period_type=month（周期类型为月）时，取值为[1，9]；period_type=year（周期类型为年）时，取值为[1，3]\"。
     * isAutoRenew  **参数说明**：创建包年/包月实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **取值范围**： - true：自动续订 - false：默认值，不自动续订
-    * isAutoPay  **参数说明**：创建包年/包月实例时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **取值范围**：true - 自动支付，从账户余额自动扣费; false - 默认值，只提交订单不支付。[需要客户参考[\"支付包年/包月产品订单\"](https://support.huaweicloud.com/api-bpconsole/api_order_00016.html#section0)进行支付，或者在华为云官网页面使用进行支付。](tag:hws)
+    * isAutoPay  **参数说明**：创建包年/包月实例时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **取值范围**：true - 自动支付，从账户余额自动扣费; false - 默认值，只提交订单不支付。[需要客户参考[支付包年/包月产品订单](https://support.huaweicloud.com/api-bpconsole/api_order_00016.html#section0)进行支付，或者在华为云官网页面使用进行支付。](tag:hws)
+    * promotionInfos  **参数说明**：促销信息。
     *
     * @var string[]
     */
@@ -90,16 +95,18 @@ class ChargeInfo implements ModelInterface, ArrayAccess
             'periodType' => 'period_type',
             'periodNum' => 'period_num',
             'isAutoRenew' => 'is_auto_renew',
-            'isAutoPay' => 'is_auto_pay'
+            'isAutoPay' => 'is_auto_pay',
+            'promotionInfos' => 'promotion_infos'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * chargeMode  **参数说明**：实例的付费方式。 **取值范围**： - prePaid：包年/包月 - postPaid：按需计费
     * periodType  **参数说明**：订购设备接入实例的周期类型（包年、包月等）。charge_mode为prePaid时生效，且为必选值。 **取值范围**： - month：包月 - year：包年
-    * periodNum  **参数说明**：订购设备接入实例的周期数。charge_mode为prePaid时生效，且为必选值。 **取值范围**：period_type=month（周期类型为月）时，取值为[1，9]；period_type=year（周期类型为年）时，取值为[1，3]\"
+    * periodNum  **参数说明**：订购设备接入实例的周期数。charge_mode为prePaid时生效，且为必选值。 **取值范围**：period_type=month（周期类型为月）时，取值为[1，9]；period_type=year（周期类型为年）时，取值为[1，3]\"。
     * isAutoRenew  **参数说明**：创建包年/包月实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **取值范围**： - true：自动续订 - false：默认值，不自动续订
-    * isAutoPay  **参数说明**：创建包年/包月实例时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **取值范围**：true - 自动支付，从账户余额自动扣费; false - 默认值，只提交订单不支付。[需要客户参考[\"支付包年/包月产品订单\"](https://support.huaweicloud.com/api-bpconsole/api_order_00016.html#section0)进行支付，或者在华为云官网页面使用进行支付。](tag:hws)
+    * isAutoPay  **参数说明**：创建包年/包月实例时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **取值范围**：true - 自动支付，从账户余额自动扣费; false - 默认值，只提交订单不支付。[需要客户参考[支付包年/包月产品订单](https://support.huaweicloud.com/api-bpconsole/api_order_00016.html#section0)进行支付，或者在华为云官网页面使用进行支付。](tag:hws)
+    * promotionInfos  **参数说明**：促销信息。
     *
     * @var string[]
     */
@@ -108,16 +115,18 @@ class ChargeInfo implements ModelInterface, ArrayAccess
             'periodType' => 'setPeriodType',
             'periodNum' => 'setPeriodNum',
             'isAutoRenew' => 'setIsAutoRenew',
-            'isAutoPay' => 'setIsAutoPay'
+            'isAutoPay' => 'setIsAutoPay',
+            'promotionInfos' => 'setPromotionInfos'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * chargeMode  **参数说明**：实例的付费方式。 **取值范围**： - prePaid：包年/包月 - postPaid：按需计费
     * periodType  **参数说明**：订购设备接入实例的周期类型（包年、包月等）。charge_mode为prePaid时生效，且为必选值。 **取值范围**： - month：包月 - year：包年
-    * periodNum  **参数说明**：订购设备接入实例的周期数。charge_mode为prePaid时生效，且为必选值。 **取值范围**：period_type=month（周期类型为月）时，取值为[1，9]；period_type=year（周期类型为年）时，取值为[1，3]\"
+    * periodNum  **参数说明**：订购设备接入实例的周期数。charge_mode为prePaid时生效，且为必选值。 **取值范围**：period_type=month（周期类型为月）时，取值为[1，9]；period_type=year（周期类型为年）时，取值为[1，3]\"。
     * isAutoRenew  **参数说明**：创建包年/包月实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **取值范围**： - true：自动续订 - false：默认值，不自动续订
-    * isAutoPay  **参数说明**：创建包年/包月实例时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **取值范围**：true - 自动支付，从账户余额自动扣费; false - 默认值，只提交订单不支付。[需要客户参考[\"支付包年/包月产品订单\"](https://support.huaweicloud.com/api-bpconsole/api_order_00016.html#section0)进行支付，或者在华为云官网页面使用进行支付。](tag:hws)
+    * isAutoPay  **参数说明**：创建包年/包月实例时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **取值范围**：true - 自动支付，从账户余额自动扣费; false - 默认值，只提交订单不支付。[需要客户参考[支付包年/包月产品订单](https://support.huaweicloud.com/api-bpconsole/api_order_00016.html#section0)进行支付，或者在华为云官网页面使用进行支付。](tag:hws)
+    * promotionInfos  **参数说明**：促销信息。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ChargeInfo implements ModelInterface, ArrayAccess
             'periodType' => 'getPeriodType',
             'periodNum' => 'getPeriodNum',
             'isAutoRenew' => 'getIsAutoRenew',
-            'isAutoPay' => 'getIsAutoPay'
+            'isAutoPay' => 'getIsAutoPay',
+            'promotionInfos' => 'getPromotionInfos'
     ];
 
     /**
@@ -192,6 +202,7 @@ class ChargeInfo implements ModelInterface, ArrayAccess
         $this->container['periodNum'] = isset($data['periodNum']) ? $data['periodNum'] : null;
         $this->container['isAutoRenew'] = isset($data['isAutoRenew']) ? $data['isAutoRenew'] : null;
         $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : null;
+        $this->container['promotionInfos'] = isset($data['promotionInfos']) ? $data['promotionInfos'] : null;
     }
 
     /**
@@ -216,6 +227,12 @@ class ChargeInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['periodNum']) && ($this->container['periodNum'] < 1)) {
                 $invalidProperties[] = "invalid value for 'periodNum', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['promotionInfos']) && (mb_strlen($this->container['promotionInfos']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'promotionInfos', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['promotionInfos']) && (mb_strlen($this->container['promotionInfos']) < 0)) {
+                $invalidProperties[] = "invalid value for 'promotionInfos', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -281,7 +298,7 @@ class ChargeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodNum
-    *  **参数说明**：订购设备接入实例的周期数。charge_mode为prePaid时生效，且为必选值。 **取值范围**：period_type=month（周期类型为月）时，取值为[1，9]；period_type=year（周期类型为年）时，取值为[1，3]\"
+    *  **参数说明**：订购设备接入实例的周期数。charge_mode为prePaid时生效，且为必选值。 **取值范围**：period_type=month（周期类型为月）时，取值为[1，9]；period_type=year（周期类型为年）时，取值为[1，3]\"。
     *
     * @return int|null
     */
@@ -293,7 +310,7 @@ class ChargeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets periodNum
     *
-    * @param int|null $periodNum **参数说明**：订购设备接入实例的周期数。charge_mode为prePaid时生效，且为必选值。 **取值范围**：period_type=month（周期类型为月）时，取值为[1，9]；period_type=year（周期类型为年）时，取值为[1，3]\"
+    * @param int|null $periodNum **参数说明**：订购设备接入实例的周期数。charge_mode为prePaid时生效，且为必选值。 **取值范围**：period_type=month（周期类型为月）时，取值为[1，9]；period_type=year（周期类型为年）时，取值为[1，3]\"。
     *
     * @return $this
     */
@@ -329,7 +346,7 @@ class ChargeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoPay
-    *  **参数说明**：创建包年/包月实例时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **取值范围**：true - 自动支付，从账户余额自动扣费; false - 默认值，只提交订单不支付。[需要客户参考[\"支付包年/包月产品订单\"](https://support.huaweicloud.com/api-bpconsole/api_order_00016.html#section0)进行支付，或者在华为云官网页面使用进行支付。](tag:hws)
+    *  **参数说明**：创建包年/包月实例时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **取值范围**：true - 自动支付，从账户余额自动扣费; false - 默认值，只提交订单不支付。[需要客户参考[支付包年/包月产品订单](https://support.huaweicloud.com/api-bpconsole/api_order_00016.html#section0)进行支付，或者在华为云官网页面使用进行支付。](tag:hws)
     *
     * @return bool|null
     */
@@ -341,13 +358,37 @@ class ChargeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoPay
     *
-    * @param bool|null $isAutoPay **参数说明**：创建包年/包月实例时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **取值范围**：true - 自动支付，从账户余额自动扣费; false - 默认值，只提交订单不支付。[需要客户参考[\"支付包年/包月产品订单\"](https://support.huaweicloud.com/api-bpconsole/api_order_00016.html#section0)进行支付，或者在华为云官网页面使用进行支付。](tag:hws)
+    * @param bool|null $isAutoPay **参数说明**：创建包年/包月实例时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **取值范围**：true - 自动支付，从账户余额自动扣费; false - 默认值，只提交订单不支付。[需要客户参考[支付包年/包月产品订单](https://support.huaweicloud.com/api-bpconsole/api_order_00016.html#section0)进行支付，或者在华为云官网页面使用进行支付。](tag:hws)
     *
     * @return $this
     */
     public function setIsAutoPay($isAutoPay)
     {
         $this->container['isAutoPay'] = $isAutoPay;
+        return $this;
+    }
+
+    /**
+    * Gets promotionInfos
+    *  **参数说明**：促销信息。
+    *
+    * @return string|null
+    */
+    public function getPromotionInfos()
+    {
+        return $this->container['promotionInfos'];
+    }
+
+    /**
+    * Sets promotionInfos
+    *
+    * @param string|null $promotionInfos **参数说明**：促销信息。
+    *
+    * @return $this
+    */
+    public function setPromotionInfos($promotionInfos)
+    {
+        $this->container['promotionInfos'] = $promotionInfos;
         return $this;
     }
 

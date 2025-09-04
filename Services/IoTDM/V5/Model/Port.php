@@ -20,19 +20,21 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * appHttpsPort  **参数说明**：应用接入HTTPS协议端口，默认值：443
-    * appAmqpsPort  **参数说明**：应用接入AMQP协议端口, 默认值：5671
-    * deviceCoapPort  **参数说明**：设备接入COAP协议端口, 默认值：5683
-    * deviceCoapsPort  **参数说明**：设备接入COAPS协议端口, 默认值：5684
-    * deviceMqttPort  **参数说明**：设备接入MQTT协议端口, 默认值：1883
-    * deviceMqttsPort  **参数说明**：设备接入MQTTS协议端口, 默认值：8883
-    * deviceHttpsPort  **参数说明**：设备接入HTTPS协议端口, 默认值：443
+    * appHttpsPort  **参数说明**：应用接入HTTPS协议端口，默认值：443。
+    * appAmqpsPort  **参数说明**：应用接入AMQP协议端口, 默认值：5671。
+    * appMqttsPort  **参数说明**：应用接入MQTTS协议端口, 默认值：8883。
+    * deviceCoapPort  **参数说明**：设备接入COAP协议端口, 默认值：5683。
+    * deviceCoapsPort  **参数说明**：设备接入COAPS协议端口, 默认值：5684。
+    * deviceMqttPort  **参数说明**：设备接入MQTT协议端口, 默认值：1883。
+    * deviceMqttsPort  **参数说明**：设备接入MQTTS协议端口, 默认值：8883。
+    * deviceHttpsPort  **参数说明**：设备接入HTTPS协议端口, 默认值：443。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'appHttpsPort' => 'int',
             'appAmqpsPort' => 'int',
+            'appMqttsPort' => 'int',
             'deviceCoapPort' => 'int',
             'deviceCoapsPort' => 'int',
             'deviceMqttPort' => 'int',
@@ -42,24 +44,26 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * appHttpsPort  **参数说明**：应用接入HTTPS协议端口，默认值：443
-    * appAmqpsPort  **参数说明**：应用接入AMQP协议端口, 默认值：5671
-    * deviceCoapPort  **参数说明**：设备接入COAP协议端口, 默认值：5683
-    * deviceCoapsPort  **参数说明**：设备接入COAPS协议端口, 默认值：5684
-    * deviceMqttPort  **参数说明**：设备接入MQTT协议端口, 默认值：1883
-    * deviceMqttsPort  **参数说明**：设备接入MQTTS协议端口, 默认值：8883
-    * deviceHttpsPort  **参数说明**：设备接入HTTPS协议端口, 默认值：443
+    * appHttpsPort  **参数说明**：应用接入HTTPS协议端口，默认值：443。
+    * appAmqpsPort  **参数说明**：应用接入AMQP协议端口, 默认值：5671。
+    * appMqttsPort  **参数说明**：应用接入MQTTS协议端口, 默认值：8883。
+    * deviceCoapPort  **参数说明**：设备接入COAP协议端口, 默认值：5683。
+    * deviceCoapsPort  **参数说明**：设备接入COAPS协议端口, 默认值：5684。
+    * deviceMqttPort  **参数说明**：设备接入MQTT协议端口, 默认值：1883。
+    * deviceMqttsPort  **参数说明**：设备接入MQTTS协议端口, 默认值：8883。
+    * deviceHttpsPort  **参数说明**：设备接入HTTPS协议端口, 默认值：443。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'appHttpsPort' => null,
-        'appAmqpsPort' => null,
-        'deviceCoapPort' => null,
-        'deviceCoapsPort' => null,
-        'deviceMqttPort' => null,
-        'deviceMqttsPort' => null,
-        'deviceHttpsPort' => null
+        'appHttpsPort' => 'int32',
+        'appAmqpsPort' => 'int32',
+        'appMqttsPort' => 'int32',
+        'deviceCoapPort' => 'int32',
+        'deviceCoapsPort' => 'int32',
+        'deviceMqttPort' => 'int32',
+        'deviceMqttsPort' => 'int32',
+        'deviceHttpsPort' => 'int32'
     ];
 
     /**
@@ -85,19 +89,21 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * appHttpsPort  **参数说明**：应用接入HTTPS协议端口，默认值：443
-    * appAmqpsPort  **参数说明**：应用接入AMQP协议端口, 默认值：5671
-    * deviceCoapPort  **参数说明**：设备接入COAP协议端口, 默认值：5683
-    * deviceCoapsPort  **参数说明**：设备接入COAPS协议端口, 默认值：5684
-    * deviceMqttPort  **参数说明**：设备接入MQTT协议端口, 默认值：1883
-    * deviceMqttsPort  **参数说明**：设备接入MQTTS协议端口, 默认值：8883
-    * deviceHttpsPort  **参数说明**：设备接入HTTPS协议端口, 默认值：443
+    * appHttpsPort  **参数说明**：应用接入HTTPS协议端口，默认值：443。
+    * appAmqpsPort  **参数说明**：应用接入AMQP协议端口, 默认值：5671。
+    * appMqttsPort  **参数说明**：应用接入MQTTS协议端口, 默认值：8883。
+    * deviceCoapPort  **参数说明**：设备接入COAP协议端口, 默认值：5683。
+    * deviceCoapsPort  **参数说明**：设备接入COAPS协议端口, 默认值：5684。
+    * deviceMqttPort  **参数说明**：设备接入MQTT协议端口, 默认值：1883。
+    * deviceMqttsPort  **参数说明**：设备接入MQTTS协议端口, 默认值：8883。
+    * deviceHttpsPort  **参数说明**：设备接入HTTPS协议端口, 默认值：443。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'appHttpsPort' => 'app_https_port',
             'appAmqpsPort' => 'app_amqps_port',
+            'appMqttsPort' => 'app_mqtts_port',
             'deviceCoapPort' => 'device_coap_port',
             'deviceCoapsPort' => 'device_coaps_port',
             'deviceMqttPort' => 'device_mqtt_port',
@@ -107,19 +113,21 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * appHttpsPort  **参数说明**：应用接入HTTPS协议端口，默认值：443
-    * appAmqpsPort  **参数说明**：应用接入AMQP协议端口, 默认值：5671
-    * deviceCoapPort  **参数说明**：设备接入COAP协议端口, 默认值：5683
-    * deviceCoapsPort  **参数说明**：设备接入COAPS协议端口, 默认值：5684
-    * deviceMqttPort  **参数说明**：设备接入MQTT协议端口, 默认值：1883
-    * deviceMqttsPort  **参数说明**：设备接入MQTTS协议端口, 默认值：8883
-    * deviceHttpsPort  **参数说明**：设备接入HTTPS协议端口, 默认值：443
+    * appHttpsPort  **参数说明**：应用接入HTTPS协议端口，默认值：443。
+    * appAmqpsPort  **参数说明**：应用接入AMQP协议端口, 默认值：5671。
+    * appMqttsPort  **参数说明**：应用接入MQTTS协议端口, 默认值：8883。
+    * deviceCoapPort  **参数说明**：设备接入COAP协议端口, 默认值：5683。
+    * deviceCoapsPort  **参数说明**：设备接入COAPS协议端口, 默认值：5684。
+    * deviceMqttPort  **参数说明**：设备接入MQTT协议端口, 默认值：1883。
+    * deviceMqttsPort  **参数说明**：设备接入MQTTS协议端口, 默认值：8883。
+    * deviceHttpsPort  **参数说明**：设备接入HTTPS协议端口, 默认值：443。
     *
     * @var string[]
     */
     protected static $setters = [
             'appHttpsPort' => 'setAppHttpsPort',
             'appAmqpsPort' => 'setAppAmqpsPort',
+            'appMqttsPort' => 'setAppMqttsPort',
             'deviceCoapPort' => 'setDeviceCoapPort',
             'deviceCoapsPort' => 'setDeviceCoapsPort',
             'deviceMqttPort' => 'setDeviceMqttPort',
@@ -129,19 +137,21 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * appHttpsPort  **参数说明**：应用接入HTTPS协议端口，默认值：443
-    * appAmqpsPort  **参数说明**：应用接入AMQP协议端口, 默认值：5671
-    * deviceCoapPort  **参数说明**：设备接入COAP协议端口, 默认值：5683
-    * deviceCoapsPort  **参数说明**：设备接入COAPS协议端口, 默认值：5684
-    * deviceMqttPort  **参数说明**：设备接入MQTT协议端口, 默认值：1883
-    * deviceMqttsPort  **参数说明**：设备接入MQTTS协议端口, 默认值：8883
-    * deviceHttpsPort  **参数说明**：设备接入HTTPS协议端口, 默认值：443
+    * appHttpsPort  **参数说明**：应用接入HTTPS协议端口，默认值：443。
+    * appAmqpsPort  **参数说明**：应用接入AMQP协议端口, 默认值：5671。
+    * appMqttsPort  **参数说明**：应用接入MQTTS协议端口, 默认值：8883。
+    * deviceCoapPort  **参数说明**：设备接入COAP协议端口, 默认值：5683。
+    * deviceCoapsPort  **参数说明**：设备接入COAPS协议端口, 默认值：5684。
+    * deviceMqttPort  **参数说明**：设备接入MQTT协议端口, 默认值：1883。
+    * deviceMqttsPort  **参数说明**：设备接入MQTTS协议端口, 默认值：8883。
+    * deviceHttpsPort  **参数说明**：设备接入HTTPS协议端口, 默认值：443。
     *
     * @var string[]
     */
     protected static $getters = [
             'appHttpsPort' => 'getAppHttpsPort',
             'appAmqpsPort' => 'getAppAmqpsPort',
+            'appMqttsPort' => 'getAppMqttsPort',
             'deviceCoapPort' => 'getDeviceCoapPort',
             'deviceCoapsPort' => 'getDeviceCoapsPort',
             'deviceMqttPort' => 'getDeviceMqttPort',
@@ -209,6 +219,7 @@ class Port implements ModelInterface, ArrayAccess
     {
         $this->container['appHttpsPort'] = isset($data['appHttpsPort']) ? $data['appHttpsPort'] : null;
         $this->container['appAmqpsPort'] = isset($data['appAmqpsPort']) ? $data['appAmqpsPort'] : null;
+        $this->container['appMqttsPort'] = isset($data['appMqttsPort']) ? $data['appMqttsPort'] : null;
         $this->container['deviceCoapPort'] = isset($data['deviceCoapPort']) ? $data['deviceCoapPort'] : null;
         $this->container['deviceCoapsPort'] = isset($data['deviceCoapsPort']) ? $data['deviceCoapsPort'] : null;
         $this->container['deviceMqttPort'] = isset($data['deviceMqttPort']) ? $data['deviceMqttPort'] : null;
@@ -235,6 +246,12 @@ class Port implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['appAmqpsPort']) && ($this->container['appAmqpsPort'] < 0)) {
                 $invalidProperties[] = "invalid value for 'appAmqpsPort', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['appMqttsPort']) && ($this->container['appMqttsPort'] > 65535)) {
+                $invalidProperties[] = "invalid value for 'appMqttsPort', must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['appMqttsPort']) && ($this->container['appMqttsPort'] < 0)) {
+                $invalidProperties[] = "invalid value for 'appMqttsPort', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['deviceCoapPort']) && ($this->container['deviceCoapPort'] > 65535)) {
                 $invalidProperties[] = "invalid value for 'deviceCoapPort', must be smaller than or equal to 65535.";
@@ -282,7 +299,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets appHttpsPort
-    *  **参数说明**：应用接入HTTPS协议端口，默认值：443
+    *  **参数说明**：应用接入HTTPS协议端口，默认值：443。
     *
     * @return int|null
     */
@@ -294,7 +311,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets appHttpsPort
     *
-    * @param int|null $appHttpsPort **参数说明**：应用接入HTTPS协议端口，默认值：443
+    * @param int|null $appHttpsPort **参数说明**：应用接入HTTPS协议端口，默认值：443。
     *
     * @return $this
     */
@@ -306,7 +323,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets appAmqpsPort
-    *  **参数说明**：应用接入AMQP协议端口, 默认值：5671
+    *  **参数说明**：应用接入AMQP协议端口, 默认值：5671。
     *
     * @return int|null
     */
@@ -318,7 +335,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets appAmqpsPort
     *
-    * @param int|null $appAmqpsPort **参数说明**：应用接入AMQP协议端口, 默认值：5671
+    * @param int|null $appAmqpsPort **参数说明**：应用接入AMQP协议端口, 默认值：5671。
     *
     * @return $this
     */
@@ -329,8 +346,32 @@ class Port implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets appMqttsPort
+    *  **参数说明**：应用接入MQTTS协议端口, 默认值：8883。
+    *
+    * @return int|null
+    */
+    public function getAppMqttsPort()
+    {
+        return $this->container['appMqttsPort'];
+    }
+
+    /**
+    * Sets appMqttsPort
+    *
+    * @param int|null $appMqttsPort **参数说明**：应用接入MQTTS协议端口, 默认值：8883。
+    *
+    * @return $this
+    */
+    public function setAppMqttsPort($appMqttsPort)
+    {
+        $this->container['appMqttsPort'] = $appMqttsPort;
+        return $this;
+    }
+
+    /**
     * Gets deviceCoapPort
-    *  **参数说明**：设备接入COAP协议端口, 默认值：5683
+    *  **参数说明**：设备接入COAP协议端口, 默认值：5683。
     *
     * @return int|null
     */
@@ -342,7 +383,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets deviceCoapPort
     *
-    * @param int|null $deviceCoapPort **参数说明**：设备接入COAP协议端口, 默认值：5683
+    * @param int|null $deviceCoapPort **参数说明**：设备接入COAP协议端口, 默认值：5683。
     *
     * @return $this
     */
@@ -354,7 +395,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceCoapsPort
-    *  **参数说明**：设备接入COAPS协议端口, 默认值：5684
+    *  **参数说明**：设备接入COAPS协议端口, 默认值：5684。
     *
     * @return int|null
     */
@@ -366,7 +407,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets deviceCoapsPort
     *
-    * @param int|null $deviceCoapsPort **参数说明**：设备接入COAPS协议端口, 默认值：5684
+    * @param int|null $deviceCoapsPort **参数说明**：设备接入COAPS协议端口, 默认值：5684。
     *
     * @return $this
     */
@@ -378,7 +419,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceMqttPort
-    *  **参数说明**：设备接入MQTT协议端口, 默认值：1883
+    *  **参数说明**：设备接入MQTT协议端口, 默认值：1883。
     *
     * @return int|null
     */
@@ -390,7 +431,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets deviceMqttPort
     *
-    * @param int|null $deviceMqttPort **参数说明**：设备接入MQTT协议端口, 默认值：1883
+    * @param int|null $deviceMqttPort **参数说明**：设备接入MQTT协议端口, 默认值：1883。
     *
     * @return $this
     */
@@ -402,7 +443,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceMqttsPort
-    *  **参数说明**：设备接入MQTTS协议端口, 默认值：8883
+    *  **参数说明**：设备接入MQTTS协议端口, 默认值：8883。
     *
     * @return int|null
     */
@@ -414,7 +455,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets deviceMqttsPort
     *
-    * @param int|null $deviceMqttsPort **参数说明**：设备接入MQTTS协议端口, 默认值：8883
+    * @param int|null $deviceMqttsPort **参数说明**：设备接入MQTTS协议端口, 默认值：8883。
     *
     * @return $this
     */
@@ -426,7 +467,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceHttpsPort
-    *  **参数说明**：设备接入HTTPS协议端口, 默认值：443
+    *  **参数说明**：设备接入HTTPS协议端口, 默认值：443。
     *
     * @return int|null
     */
@@ -438,7 +479,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets deviceHttpsPort
     *
-    * @param int|null $deviceHttpsPort **参数说明**：设备接入HTTPS协议端口, 默认值：443
+    * @param int|null $deviceHttpsPort **参数说明**：设备接入HTTPS协议端口, 默认值：443。
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class IpAllowList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * address  **参数说明**：白名单ip地址
-    * description  **参数说明**：描述
+    * address  **参数说明**：白名单ip地址。
+    * description  **参数说明**：描述。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class IpAllowList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * address  **参数说明**：白名单ip地址
-    * description  **参数说明**：描述
+    * address  **参数说明**：白名单ip地址。
+    * description  **参数说明**：描述。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class IpAllowList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * address  **参数说明**：白名单ip地址
-    * description  **参数说明**：描述
+    * address  **参数说明**：白名单ip地址。
+    * description  **参数说明**：描述。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class IpAllowList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * address  **参数说明**：白名单ip地址
-    * description  **参数说明**：描述
+    * address  **参数说明**：白名单ip地址。
+    * description  **参数说明**：描述。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class IpAllowList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * address  **参数说明**：白名单ip地址
-    * description  **参数说明**：描述
+    * address  **参数说明**：白名单ip地址。
+    * description  **参数说明**：描述。
     *
     * @var string[]
     */
@@ -203,7 +203,7 @@ class IpAllowList implements ModelInterface, ArrayAccess
 
     /**
     * Gets address
-    *  **参数说明**：白名单ip地址
+    *  **参数说明**：白名单ip地址。
     *
     * @return string
     */
@@ -215,7 +215,7 @@ class IpAllowList implements ModelInterface, ArrayAccess
     /**
     * Sets address
     *
-    * @param string $address **参数说明**：白名单ip地址
+    * @param string $address **参数说明**：白名单ip地址。
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class IpAllowList implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  **参数说明**：描述
+    *  **参数说明**：描述。
     *
     * @return string|null
     */
@@ -239,7 +239,7 @@ class IpAllowList implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description **参数说明**：描述
+    * @param string|null $description **参数说明**：描述。
     *
     * @return $this
     */

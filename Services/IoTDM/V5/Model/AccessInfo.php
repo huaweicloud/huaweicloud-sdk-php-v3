@@ -20,14 +20,14 @@ class AccessInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  **参数说明**：接入地址的类型，如应用接入的HTTPS协议的取值为：APP_HTTPS，设备接入的MQTT协议的取值为：DEVICE_MQTT **取值范围**： - APP_HTTPS：应用接入HTTPS协议 - APP_AMQP：应用接入AMQP协议 - APP_MQTT：应用接入MQTT协议 - DEVICE_COAP：设备接入COAP协议 - DEVICE_MQTT：设备接入MQTT协议 - DEVICE_HTTPS：设备接入HTTPS协议
-    * port  **参数说明**：实例的应用/设备的安全接入端口
+    * type  **参数说明**：接入地址的类型，如应用接入的HTTPS协议的取值为：APP_HTTPS，设备接入的MQTT协议的取值为：DEVICE_MQTT。 **取值范围**： - APP_HTTPS：应用接入HTTPS协议 - APP_AMQP：应用接入AMQP协议 - APP_MQTT：应用接入MQTT协议 - DEVICE_COAP：设备接入COAP协议 - DEVICE_MQTT：设备接入MQTT协议 - DEVICE_HTTPS：设备接入HTTPS协议
+    * port  **参数说明**：实例的应用/设备的安全接入端口。
     * nonTlsPort  **参数说明**：实例的应用/设备的非安全接入端口。返回null时表示该类型的接入地址不支持非安全端口接入。
     * websocketPort  **参数说明**：基于WebSocket的MQTT接入端口。返回null时表示该类型的接入地址不支持WebSocket端口接入。
-    * domainName  **参数说明**：实例的接入域名
-    * privateAddresses  **参数说明**：实例的私网接入地址列表
-    * publicAddress  **参数说明**：实例的公网接入地址
-    * ipv6Address  **参数说明**：实例的ipv6接入地址列表
+    * domainName  **参数说明**：实例的接入域名。
+    * privateAddresses  **参数说明**：实例的私网接入地址列表。
+    * publicAddress  **参数说明**：实例的公网接入地址。
+    * ipv6Address  **参数说明**：实例的ipv6接入地址列表。
     * ipWhitelist  ipWhitelist
     *
     * @var string[]
@@ -46,14 +46,14 @@ class AccessInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  **参数说明**：接入地址的类型，如应用接入的HTTPS协议的取值为：APP_HTTPS，设备接入的MQTT协议的取值为：DEVICE_MQTT **取值范围**： - APP_HTTPS：应用接入HTTPS协议 - APP_AMQP：应用接入AMQP协议 - APP_MQTT：应用接入MQTT协议 - DEVICE_COAP：设备接入COAP协议 - DEVICE_MQTT：设备接入MQTT协议 - DEVICE_HTTPS：设备接入HTTPS协议
-    * port  **参数说明**：实例的应用/设备的安全接入端口
+    * type  **参数说明**：接入地址的类型，如应用接入的HTTPS协议的取值为：APP_HTTPS，设备接入的MQTT协议的取值为：DEVICE_MQTT。 **取值范围**： - APP_HTTPS：应用接入HTTPS协议 - APP_AMQP：应用接入AMQP协议 - APP_MQTT：应用接入MQTT协议 - DEVICE_COAP：设备接入COAP协议 - DEVICE_MQTT：设备接入MQTT协议 - DEVICE_HTTPS：设备接入HTTPS协议
+    * port  **参数说明**：实例的应用/设备的安全接入端口。
     * nonTlsPort  **参数说明**：实例的应用/设备的非安全接入端口。返回null时表示该类型的接入地址不支持非安全端口接入。
     * websocketPort  **参数说明**：基于WebSocket的MQTT接入端口。返回null时表示该类型的接入地址不支持WebSocket端口接入。
-    * domainName  **参数说明**：实例的接入域名
-    * privateAddresses  **参数说明**：实例的私网接入地址列表
-    * publicAddress  **参数说明**：实例的公网接入地址
-    * ipv6Address  **参数说明**：实例的ipv6接入地址列表
+    * domainName  **参数说明**：实例的接入域名。
+    * privateAddresses  **参数说明**：实例的私网接入地址列表。
+    * publicAddress  **参数说明**：实例的公网接入地址。
+    * ipv6Address  **参数说明**：实例的ipv6接入地址列表。
     * ipWhitelist  ipWhitelist
     *
     * @var string[]
@@ -93,14 +93,14 @@ class AccessInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  **参数说明**：接入地址的类型，如应用接入的HTTPS协议的取值为：APP_HTTPS，设备接入的MQTT协议的取值为：DEVICE_MQTT **取值范围**： - APP_HTTPS：应用接入HTTPS协议 - APP_AMQP：应用接入AMQP协议 - APP_MQTT：应用接入MQTT协议 - DEVICE_COAP：设备接入COAP协议 - DEVICE_MQTT：设备接入MQTT协议 - DEVICE_HTTPS：设备接入HTTPS协议
-    * port  **参数说明**：实例的应用/设备的安全接入端口
+    * type  **参数说明**：接入地址的类型，如应用接入的HTTPS协议的取值为：APP_HTTPS，设备接入的MQTT协议的取值为：DEVICE_MQTT。 **取值范围**： - APP_HTTPS：应用接入HTTPS协议 - APP_AMQP：应用接入AMQP协议 - APP_MQTT：应用接入MQTT协议 - DEVICE_COAP：设备接入COAP协议 - DEVICE_MQTT：设备接入MQTT协议 - DEVICE_HTTPS：设备接入HTTPS协议
+    * port  **参数说明**：实例的应用/设备的安全接入端口。
     * nonTlsPort  **参数说明**：实例的应用/设备的非安全接入端口。返回null时表示该类型的接入地址不支持非安全端口接入。
     * websocketPort  **参数说明**：基于WebSocket的MQTT接入端口。返回null时表示该类型的接入地址不支持WebSocket端口接入。
-    * domainName  **参数说明**：实例的接入域名
-    * privateAddresses  **参数说明**：实例的私网接入地址列表
-    * publicAddress  **参数说明**：实例的公网接入地址
-    * ipv6Address  **参数说明**：实例的ipv6接入地址列表
+    * domainName  **参数说明**：实例的接入域名。
+    * privateAddresses  **参数说明**：实例的私网接入地址列表。
+    * publicAddress  **参数说明**：实例的公网接入地址。
+    * ipv6Address  **参数说明**：实例的ipv6接入地址列表。
     * ipWhitelist  ipWhitelist
     *
     * @var string[]
@@ -119,14 +119,14 @@ class AccessInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  **参数说明**：接入地址的类型，如应用接入的HTTPS协议的取值为：APP_HTTPS，设备接入的MQTT协议的取值为：DEVICE_MQTT **取值范围**： - APP_HTTPS：应用接入HTTPS协议 - APP_AMQP：应用接入AMQP协议 - APP_MQTT：应用接入MQTT协议 - DEVICE_COAP：设备接入COAP协议 - DEVICE_MQTT：设备接入MQTT协议 - DEVICE_HTTPS：设备接入HTTPS协议
-    * port  **参数说明**：实例的应用/设备的安全接入端口
+    * type  **参数说明**：接入地址的类型，如应用接入的HTTPS协议的取值为：APP_HTTPS，设备接入的MQTT协议的取值为：DEVICE_MQTT。 **取值范围**： - APP_HTTPS：应用接入HTTPS协议 - APP_AMQP：应用接入AMQP协议 - APP_MQTT：应用接入MQTT协议 - DEVICE_COAP：设备接入COAP协议 - DEVICE_MQTT：设备接入MQTT协议 - DEVICE_HTTPS：设备接入HTTPS协议
+    * port  **参数说明**：实例的应用/设备的安全接入端口。
     * nonTlsPort  **参数说明**：实例的应用/设备的非安全接入端口。返回null时表示该类型的接入地址不支持非安全端口接入。
     * websocketPort  **参数说明**：基于WebSocket的MQTT接入端口。返回null时表示该类型的接入地址不支持WebSocket端口接入。
-    * domainName  **参数说明**：实例的接入域名
-    * privateAddresses  **参数说明**：实例的私网接入地址列表
-    * publicAddress  **参数说明**：实例的公网接入地址
-    * ipv6Address  **参数说明**：实例的ipv6接入地址列表
+    * domainName  **参数说明**：实例的接入域名。
+    * privateAddresses  **参数说明**：实例的私网接入地址列表。
+    * publicAddress  **参数说明**：实例的公网接入地址。
+    * ipv6Address  **参数说明**：实例的ipv6接入地址列表。
     * ipWhitelist  ipWhitelist
     *
     * @var string[]
@@ -145,14 +145,14 @@ class AccessInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  **参数说明**：接入地址的类型，如应用接入的HTTPS协议的取值为：APP_HTTPS，设备接入的MQTT协议的取值为：DEVICE_MQTT **取值范围**： - APP_HTTPS：应用接入HTTPS协议 - APP_AMQP：应用接入AMQP协议 - APP_MQTT：应用接入MQTT协议 - DEVICE_COAP：设备接入COAP协议 - DEVICE_MQTT：设备接入MQTT协议 - DEVICE_HTTPS：设备接入HTTPS协议
-    * port  **参数说明**：实例的应用/设备的安全接入端口
+    * type  **参数说明**：接入地址的类型，如应用接入的HTTPS协议的取值为：APP_HTTPS，设备接入的MQTT协议的取值为：DEVICE_MQTT。 **取值范围**： - APP_HTTPS：应用接入HTTPS协议 - APP_AMQP：应用接入AMQP协议 - APP_MQTT：应用接入MQTT协议 - DEVICE_COAP：设备接入COAP协议 - DEVICE_MQTT：设备接入MQTT协议 - DEVICE_HTTPS：设备接入HTTPS协议
+    * port  **参数说明**：实例的应用/设备的安全接入端口。
     * nonTlsPort  **参数说明**：实例的应用/设备的非安全接入端口。返回null时表示该类型的接入地址不支持非安全端口接入。
     * websocketPort  **参数说明**：基于WebSocket的MQTT接入端口。返回null时表示该类型的接入地址不支持WebSocket端口接入。
-    * domainName  **参数说明**：实例的接入域名
-    * privateAddresses  **参数说明**：实例的私网接入地址列表
-    * publicAddress  **参数说明**：实例的公网接入地址
-    * ipv6Address  **参数说明**：实例的ipv6接入地址列表
+    * domainName  **参数说明**：实例的接入域名。
+    * privateAddresses  **参数说明**：实例的私网接入地址列表。
+    * publicAddress  **参数说明**：实例的公网接入地址。
+    * ipv6Address  **参数说明**：实例的ipv6接入地址列表。
     * ipWhitelist  ipWhitelist
     *
     * @var string[]
@@ -286,7 +286,7 @@ class AccessInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数说明**：接入地址的类型，如应用接入的HTTPS协议的取值为：APP_HTTPS，设备接入的MQTT协议的取值为：DEVICE_MQTT **取值范围**： - APP_HTTPS：应用接入HTTPS协议 - APP_AMQP：应用接入AMQP协议 - APP_MQTT：应用接入MQTT协议 - DEVICE_COAP：设备接入COAP协议 - DEVICE_MQTT：设备接入MQTT协议 - DEVICE_HTTPS：设备接入HTTPS协议
+    *  **参数说明**：接入地址的类型，如应用接入的HTTPS协议的取值为：APP_HTTPS，设备接入的MQTT协议的取值为：DEVICE_MQTT。 **取值范围**： - APP_HTTPS：应用接入HTTPS协议 - APP_AMQP：应用接入AMQP协议 - APP_MQTT：应用接入MQTT协议 - DEVICE_COAP：设备接入COAP协议 - DEVICE_MQTT：设备接入MQTT协议 - DEVICE_HTTPS：设备接入HTTPS协议
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class AccessInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数说明**：接入地址的类型，如应用接入的HTTPS协议的取值为：APP_HTTPS，设备接入的MQTT协议的取值为：DEVICE_MQTT **取值范围**： - APP_HTTPS：应用接入HTTPS协议 - APP_AMQP：应用接入AMQP协议 - APP_MQTT：应用接入MQTT协议 - DEVICE_COAP：设备接入COAP协议 - DEVICE_MQTT：设备接入MQTT协议 - DEVICE_HTTPS：设备接入HTTPS协议
+    * @param string|null $type **参数说明**：接入地址的类型，如应用接入的HTTPS协议的取值为：APP_HTTPS，设备接入的MQTT协议的取值为：DEVICE_MQTT。 **取值范围**： - APP_HTTPS：应用接入HTTPS协议 - APP_AMQP：应用接入AMQP协议 - APP_MQTT：应用接入MQTT协议 - DEVICE_COAP：设备接入COAP协议 - DEVICE_MQTT：设备接入MQTT协议 - DEVICE_HTTPS：设备接入HTTPS协议
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class AccessInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
-    *  **参数说明**：实例的应用/设备的安全接入端口
+    *  **参数说明**：实例的应用/设备的安全接入端口。
     *
     * @return int|null
     */
@@ -322,7 +322,7 @@ class AccessInfo implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param int|null $port **参数说明**：实例的应用/设备的安全接入端口
+    * @param int|null $port **参数说明**：实例的应用/设备的安全接入端口。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class AccessInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
-    *  **参数说明**：实例的接入域名
+    *  **参数说明**：实例的接入域名。
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class AccessInfo implements ModelInterface, ArrayAccess
     /**
     * Sets domainName
     *
-    * @param string|null $domainName **参数说明**：实例的接入域名
+    * @param string|null $domainName **参数说明**：实例的接入域名。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class AccessInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateAddresses
-    *  **参数说明**：实例的私网接入地址列表
+    *  **参数说明**：实例的私网接入地址列表。
     *
     * @return string[]|null
     */
@@ -418,7 +418,7 @@ class AccessInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateAddresses
     *
-    * @param string[]|null $privateAddresses **参数说明**：实例的私网接入地址列表
+    * @param string[]|null $privateAddresses **参数说明**：实例的私网接入地址列表。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class AccessInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicAddress
-    *  **参数说明**：实例的公网接入地址
+    *  **参数说明**：实例的公网接入地址。
     *
     * @return string[]|null
     */
@@ -442,7 +442,7 @@ class AccessInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicAddress
     *
-    * @param string[]|null $publicAddress **参数说明**：实例的公网接入地址
+    * @param string[]|null $publicAddress **参数说明**：实例的公网接入地址。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class AccessInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Address
-    *  **参数说明**：实例的ipv6接入地址列表
+    *  **参数说明**：实例的ipv6接入地址列表。
     *
     * @return string[]|null
     */
@@ -466,7 +466,7 @@ class AccessInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6Address
     *
-    * @param string[]|null $ipv6Address **参数说明**：实例的ipv6接入地址列表
+    * @param string[]|null $ipv6Address **参数说明**：实例的ipv6接入地址列表。
     *
     * @return $this
     */

@@ -621,6 +621,70 @@ class EcsClient extends Client
     }
 
     /**
+     * 批量卸载卷
+     *
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDetachVolumes($request)
+    {
+        return $this->batchDetachVolumesWithHttpInfo($request);
+    }
+
+    public function batchDetachVolumesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/batchaction/detachvolumes/{volume_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['volumeId'] !== null) {
+            $pathParams['volume_id'] = $localVarParams['volumeId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchDetachVolumesResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchDetachVolumesRequest');
+    }
+
+    /**
      * 批量重启云服务器
      *
      * 根据给定的云服务器ID列表，批量重启云服务器，一次最多可以重启1000台。
@@ -742,6 +806,68 @@ class EcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchResetServersPasswordResponse',
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchResetServersPasswordRequest');
+    }
+
+    /**
+     * 批量变更云服务器规格
+     *
+     * 批量变更云服务器规格
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchResizeServers($request)
+    {
+        return $this->batchResizeServersWithHttpInfo($request);
+    }
+
+    public function batchResizeServersWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cloudservers/batch-resize';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchResizeServersResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchResizeServersRequest');
     }
 
     /**
@@ -2127,6 +2253,130 @@ class EcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\DisassociateServerVirtualIpResponse',
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\DisassociateServerVirtualIpRequest');
+    }
+
+    /**
+     * 触发云服务器内核dump
+     *
+     * 触发云服务器内核dump
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function executeServerDump($request)
+    {
+        return $this->executeServerDumpWithHttpInfo($request);
+    }
+
+    public function executeServerDumpWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/actions/trigger-crash-dump';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ExecuteServerDumpResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ExecuteServerDumpRequest');
+    }
+
+    /**
+     * 重部署云服务器
+     *
+     * 重部署云服务器
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function executeServerRedeploy($request)
+    {
+        return $this->executeServerRedeployWithHttpInfo($request);
+    }
+
+    public function executeServerRedeployWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/actions/redeploy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ExecuteServerRedeployResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ExecuteServerRedeployRequest');
     }
 
     /**
@@ -4983,6 +5233,68 @@ class EcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\RevertRecycleBinServerResponse',
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\RevertRecycleBinServerRequest');
+    }
+
+    /**
+     * 查询包周期虚拟机可以追加卷数量
+     *
+     * 查询包周期虚拟机可以追加卷数量
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAppendableVolumeQuota($request)
+    {
+        return $this->showAppendableVolumeQuotaWithHttpInfo($request);
+    }
+
+    public function showAppendableVolumeQuotaWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/appendvolumequota';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowAppendableVolumeQuotaResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowAppendableVolumeQuotaRequest');
     }
 
     /**

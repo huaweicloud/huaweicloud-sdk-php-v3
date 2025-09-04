@@ -667,6 +667,68 @@ class CdnClient extends Client
     }
 
     /**
+     * 创建运营报表订阅任务
+     *
+     * create subscription task
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createSubscriptionTask($request)
+    {
+        return $this->createSubscriptionTaskWithHttpInfo($request);
+    }
+
+    public function createSubscriptionTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/cdn/statistics/subscription-tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\CreateSubscriptionTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\CreateSubscriptionTaskRequest');
+    }
+
+    /**
      * 创建资源标签配置接口
      *
      * 用于创建资源标签。
@@ -982,6 +1044,68 @@ class CdnClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\DeleteShareCacheGroupsResponse',
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\DeleteShareCacheGroupsRequest');
+    }
+
+    /**
+     * 删除运营报表订阅任务
+     *
+     * delete subscription task
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteSubscriptionTask($request)
+    {
+        return $this->deleteSubscriptionTaskWithHttpInfo($request);
+    }
+
+    public function deleteSubscriptionTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/cdn/statistics/subscription-tasks/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\DeleteSubscriptionTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\DeleteSubscriptionTaskRequest');
     }
 
     /**
@@ -1307,6 +1431,169 @@ class CdnClient extends Client
     }
 
     /**
+     * 查询域名top ip统计分析数据
+     *
+     * - 查询域名top ip统计分析数据
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCdnDomainTopIps($request)
+    {
+        return $this->listCdnDomainTopIpsWithHttpInfo($request);
+    }
+
+    public function listCdnDomainTopIpsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/cdn/statistics/top-ips';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $queryParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($localVarParams['groupBy'] !== null) {
+            $queryParams['group_by'] = $localVarParams['groupBy'];
+        }
+        if ($localVarParams['statType'] !== null) {
+            $queryParams['stat_type'] = $localVarParams['statType'];
+        }
+        if ($localVarParams['serviceArea'] !== null) {
+            $queryParams['service_area'] = $localVarParams['serviceArea'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['includeRatio'] !== null) {
+            $queryParams['include_ratio'] = $localVarParams['includeRatio'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ListCdnDomainTopIpsResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ListCdnDomainTopIpsRequest');
+    }
+
+    /**
+     * 查询域名top回源URL数据
+     *
+     * - 查询域名top 回源URL数据
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCdnDomainTopOriginUrl($request)
+    {
+        return $this->listCdnDomainTopOriginUrlWithHttpInfo($request);
+    }
+
+    public function listCdnDomainTopOriginUrlWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/cdn/statistics/top-origin-urls';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $queryParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($localVarParams['groupBy'] !== null) {
+            $queryParams['group_by'] = $localVarParams['groupBy'];
+        }
+        if ($localVarParams['statType'] !== null) {
+            $queryParams['stat_type'] = $localVarParams['statType'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['includeRatio'] !== null) {
+            $queryParams['include_ratio'] = $localVarParams['includeRatio'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ListCdnDomainTopOriginUrlResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ListCdnDomainTopOriginUrlRequest');
+    }
+
+    /**
      * 查询统计TOP100 referer数据明细
      *
      * - 查询TOP100 referer数据。
@@ -1390,6 +1677,171 @@ class CdnClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ListCdnDomainTopRefersResponse',
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ListCdnDomainTopRefersRequest');
+    }
+
+    /**
+     * 查询域名top ua统计分析数据
+     *
+     * - 统计分析TOP UA统计数据
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCdnDomainTopUas($request)
+    {
+        return $this->listCdnDomainTopUasWithHttpInfo($request);
+    }
+
+    public function listCdnDomainTopUasWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/cdn/statistics/top-uas';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $queryParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($localVarParams['groupBy'] !== null) {
+            $queryParams['group_by'] = $localVarParams['groupBy'];
+        }
+        if ($localVarParams['statType'] !== null) {
+            $queryParams['stat_type'] = $localVarParams['statType'];
+        }
+        if ($localVarParams['serviceArea'] !== null) {
+            $queryParams['service_area'] = $localVarParams['serviceArea'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['includeRatio'] !== null) {
+            $queryParams['include_ratio'] = $localVarParams['includeRatio'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ListCdnDomainTopUasResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ListCdnDomainTopUasRequest');
+    }
+
+    /**
+     * 按域名维度查询每天客户端访问详情统计
+     *
+     * - 按域名维度查询每天客户端访问详情统计。
+     * - 支持查询90天内的数据。
+     * - ip_num查询跨度只支持1天,uv查询跨度只支持5分钟。
+     * - 起始时间和结束时间，左闭右开，需要同时指定。如查询2022-07-12 00:00:00 到 2022-07-13 00:00:00 的数据，表示取 [2022-07-12 00:00:00, 2022-07-13 00:00:00)的统计数据。
+     * - ip_num开始时间、结束时间必须传毫秒级时间戳，必须为凌晨0点整时刻点，如果传的不是凌晨0点整时刻点，返回数据可能与预期不一致。
+     * - uv必须为5分钟整时刻点，如：0分、5分、10分、15分等，如果传的不是5分钟时刻点，返回数据可能与预期不一致
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDomainClientStats($request)
+    {
+        return $this->listDomainClientStatsWithHttpInfo($request);
+    }
+
+    public function listDomainClientStatsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/cdn/statistics/domain-client-stats';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $queryParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($localVarParams['statType'] !== null) {
+            $queryParams['stat_type'] = $localVarParams['statType'];
+        }
+        if ($localVarParams['serviceArea'] !== null) {
+            $queryParams['service_area'] = $localVarParams['serviceArea'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ListDomainClientStatsResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ListDomainClientStatsRequest');
     }
 
     /**
@@ -1607,6 +2059,71 @@ class CdnClient extends Client
     }
 
     /**
+     * 分页查询运营报表订阅任务
+     *
+     * query subscription task
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSubscriptionTasks($request)
+    {
+        return $this->listSubscriptionTasksWithHttpInfo($request);
+    }
+
+    public function listSubscriptionTasksWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/cdn/statistics/subscription-tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ListSubscriptionTasksResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ListSubscriptionTasksRequest');
+    }
+
+    /**
      * 修改租户配置
      *
      * 修改租户配置，当前仅支持开启OBS和SCM委托授权。
@@ -1736,6 +2253,68 @@ class CdnClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\SetChargeModesResponse',
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\SetChargeModesRequest');
+    }
+
+    /**
+     * 设置统计配置
+     *
+     * - 设置统计配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setStatsConfig($request)
+    {
+        return $this->setStatsConfigWithHttpInfo($request);
+    }
+
+    public function setStatsConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/cdn/statistics/stats-configs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\SetStatsConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\SetStatsConfigRequest');
     }
 
     /**
@@ -2831,6 +3410,70 @@ class CdnClient extends Client
     }
 
     /**
+     * 查询统计配置
+     *
+     * - 配置类型：目前支持，
+     * - 0：热点统计。
+     * - 1：ces上报。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showStatsConfigs($request)
+    {
+        return $this->showStatsConfigsWithHttpInfo($request);
+    }
+
+    public function showStatsConfigsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/cdn/statistics/stats-configs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['configType'] !== null) {
+            $queryParams['config_type'] = $localVarParams['configType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowStatsConfigsResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowStatsConfigsRequest');
+    }
+
+    /**
      * 查询资源标签列表配置接口
      *
      * 用于查询资源标签列表。
@@ -3678,6 +4321,71 @@ class CdnClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdateShareCacheGroupsResponse',
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdateShareCacheGroupsRequest');
+    }
+
+    /**
+     * 修改运营报表订阅任务
+     *
+     * modify subscription task
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSubscriptionTask($request)
+    {
+        return $this->updateSubscriptionTaskWithHttpInfo($request);
+    }
+
+    public function updateSubscriptionTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/cdn/statistics/subscription-tasks/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdateSubscriptionTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdateSubscriptionTaskRequest');
     }
 
     /**

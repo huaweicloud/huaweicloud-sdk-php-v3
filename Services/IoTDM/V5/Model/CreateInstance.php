@@ -24,7 +24,7 @@ class CreateInstance implements ModelInterface, ArrayAccess
     * flavor  flavor
     * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     * chargeInfo  chargeInfo
-    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合
     * enterpriseProjectId  **参数说明**：企业项目Id。此字段填写明确的企业项目Id或者0(表示默认企业项目Id)时支持企业项目特性。可以企业项目管理服务中获取。 **取值范围**：长度不超过36，由小写字母[a-f]、数字、连接符（-）的组成。
     * tags  **参数说明**：设备接入实例的标签信息。
     * additionalParams  additionalParams
@@ -48,7 +48,7 @@ class CreateInstance implements ModelInterface, ArrayAccess
     * flavor  flavor
     * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     * chargeInfo  chargeInfo
-    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合
     * enterpriseProjectId  **参数说明**：企业项目Id。此字段填写明确的企业项目Id或者0(表示默认企业项目Id)时支持企业项目特性。可以企业项目管理服务中获取。 **取值范围**：长度不超过36，由小写字母[a-f]、数字、连接符（-）的组成。
     * tags  **参数说明**：设备接入实例的标签信息。
     * additionalParams  additionalParams
@@ -93,7 +93,7 @@ class CreateInstance implements ModelInterface, ArrayAccess
     * flavor  flavor
     * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     * chargeInfo  chargeInfo
-    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合
     * enterpriseProjectId  **参数说明**：企业项目Id。此字段填写明确的企业项目Id或者0(表示默认企业项目Id)时支持企业项目特性。可以企业项目管理服务中获取。 **取值范围**：长度不超过36，由小写字母[a-f]、数字、连接符（-）的组成。
     * tags  **参数说明**：设备接入实例的标签信息。
     * additionalParams  additionalParams
@@ -117,7 +117,7 @@ class CreateInstance implements ModelInterface, ArrayAccess
     * flavor  flavor
     * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     * chargeInfo  chargeInfo
-    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合
     * enterpriseProjectId  **参数说明**：企业项目Id。此字段填写明确的企业项目Id或者0(表示默认企业项目Id)时支持企业项目特性。可以企业项目管理服务中获取。 **取值范围**：长度不超过36，由小写字母[a-f]、数字、连接符（-）的组成。
     * tags  **参数说明**：设备接入实例的标签信息。
     * additionalParams  additionalParams
@@ -141,7 +141,7 @@ class CreateInstance implements ModelInterface, ArrayAccess
     * flavor  flavor
     * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     * chargeInfo  chargeInfo
-    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合
     * enterpriseProjectId  **参数说明**：企业项目Id。此字段填写明确的企业项目Id或者0(表示默认企业项目Id)时支持企业项目特性。可以企业项目管理服务中获取。 **取值范围**：长度不超过36，由小写字母[a-f]、数字、连接符（-）的组成。
     * tags  **参数说明**：设备接入实例的标签信息。
     * additionalParams  additionalParams
@@ -253,8 +253,8 @@ class CreateInstance implements ModelInterface, ArrayAccess
         if ($this->container['chargeInfo'] === null) {
             $invalidProperties[] = "'chargeInfo' can't be null";
         }
-            if (!is_null($this->container['description']) && !preg_match("/^[A-Za-z0-9_，,.。\\-\\s\\u4e00-\\u9fa5]{1,256}$/", $this->container['description'])) {
-                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[A-Za-z0-9_，,.。\\-\\s\\u4e00-\\u9fa5]{1,256}$/.";
+            if (!is_null($this->container['description']) && !preg_match("/^[A-Za-z0-9_，,.。、&\\-\\s\\u4e00-\\u9fa5]{0,256}$/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[A-Za-z0-9_，,.。、&\\-\\s\\u4e00-\\u9fa5]{0,256}$/.";
             }
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/[0-9a-f-]{1,36}/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /[0-9a-f-]{1,36}/.";
@@ -371,7 +371,7 @@ class CreateInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
+    *  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class CreateInstance implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
+    * @param string|null $description **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合
     *
     * @return $this
     */

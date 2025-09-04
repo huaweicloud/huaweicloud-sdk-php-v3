@@ -3943,6 +3943,9 @@ class RdsAsyncClient extends Client
         if ($localVarParams['tags'] !== null) {
             $queryParams['tags'] = $localVarParams['tags'];
         }
+        if ($localVarParams['groupType'] !== null) {
+            $queryParams['group_type'] = $localVarParams['groupType'];
+        }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
         }

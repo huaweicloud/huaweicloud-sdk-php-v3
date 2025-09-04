@@ -766,9 +766,9 @@ class RamClient extends Client
     }
 
     /**
-     * 检索资源使用者并去除其中的重复项
+     * 检索不同的资源使用者或者资源所有者
      *
-     * 检索您正在共享资源的不同使用者或被共享资源给您的不同使用者并去除其中的重复项。
+     * 检索您正在共享资源的不同使用者或共享给您的不同资源所有者。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -831,9 +831,9 @@ class RamClient extends Client
     }
 
     /**
-     * 检索资源使用者
+     * 检索资源使用者或者资源所有者
      *
-     * 检索共享资源的使用者。
+     * 检索共享资源的使用者或者共享给您的资源所有者。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -896,9 +896,9 @@ class RamClient extends Client
     }
 
     /**
-     * 检索共享的资源并去除其中的重复项
+     * 检索共享的不同资源
      *
-     * 检索您添加到资源共享或被共享给您的不同资源并去除其中的重复项。
+     * 检索您添加到资源共享或被共享给您的不同资源。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

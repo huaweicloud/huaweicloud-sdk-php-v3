@@ -20,8 +20,8 @@ class UpdateInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
-    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
+    * name  **参数说明**：实例名称。 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合
     * operateWindow  operateWindow
     * forwardingInfo  forwardingInfo
     * accessInfo  accessInfo
@@ -38,8 +38,8 @@ class UpdateInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
-    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
+    * name  **参数说明**：实例名称。 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合
     * operateWindow  operateWindow
     * forwardingInfo  forwardingInfo
     * accessInfo  accessInfo
@@ -77,8 +77,8 @@ class UpdateInstance implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
-    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
+    * name  **参数说明**：实例名称。 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合
     * operateWindow  operateWindow
     * forwardingInfo  forwardingInfo
     * accessInfo  accessInfo
@@ -95,8 +95,8 @@ class UpdateInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
-    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
+    * name  **参数说明**：实例名称。 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合
     * operateWindow  operateWindow
     * forwardingInfo  forwardingInfo
     * accessInfo  accessInfo
@@ -113,8 +113,8 @@ class UpdateInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
-    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
+    * name  **参数说明**：实例名称。 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合
     * operateWindow  operateWindow
     * forwardingInfo  forwardingInfo
     * accessInfo  accessInfo
@@ -205,8 +205,8 @@ class UpdateInstance implements ModelInterface, ArrayAccess
             if (!is_null($this->container['name']) && !preg_match("/^[A-Za-z0-9_\\-\\u4e00-\\u9fa5]{1,64}$/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[A-Za-z0-9_\\-\\u4e00-\\u9fa5]{1,64}$/.";
             }
-            if (!is_null($this->container['description']) && !preg_match("/^[A-Za-z0-9_，,.。\\-\\s\\u4e00-\\u9fa5]{1,256}$/", $this->container['description'])) {
-                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[A-Za-z0-9_，,.。\\-\\s\\u4e00-\\u9fa5]{1,256}$/.";
+            if (!is_null($this->container['description']) && !preg_match("/^[A-Za-z0-9_，,.。、&\\-\\s\\u4e00-\\u9fa5]{0,256}$/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[A-Za-z0-9_，,.。、&\\-\\s\\u4e00-\\u9fa5]{0,256}$/.";
             }
         return $invalidProperties;
     }
@@ -224,7 +224,7 @@ class UpdateInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    *  **参数说明**：实例名称。 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     *
     * @return string|null
     */
@@ -236,7 +236,7 @@ class UpdateInstance implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    * @param string|null $name **参数说明**：实例名称。 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     *
     * @return $this
     */
@@ -248,7 +248,7 @@ class UpdateInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
+    *  **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合
     *
     * @return string|null
     */
@@ -260,7 +260,7 @@ class UpdateInstance implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[1-256]个字符。
+    * @param string|null $description **参数说明**：设备接入实例的描述信息。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_，,.。、&-等字符的组合
     *
     * @return $this
     */

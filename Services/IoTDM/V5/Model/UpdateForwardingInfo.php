@@ -20,7 +20,7 @@ class UpdateForwardingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enableSnat  **参数说明**：是否启用SNAT配置。企业版实例开启SNAT配置后，可以在公共网络中进行外部通信。 约束：只有企业版实例支持配置SNAT配置，SNAT配置开启后将不支持关闭 **取值范围**： - true: 启用SNAT配置
+    * enableSnat  **参数说明**：是否启用SNAT配置。企业版实例开启SNAT配置后，可以在公共网络中进行外部通信。 约束：只有企业版实例支持配置SNAT配置，SNAT配置开启后将不支持关闭。 **取值范围**： - true: 启用SNAT配置
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpdateForwardingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enableSnat  **参数说明**：是否启用SNAT配置。企业版实例开启SNAT配置后，可以在公共网络中进行外部通信。 约束：只有企业版实例支持配置SNAT配置，SNAT配置开启后将不支持关闭 **取值范围**： - true: 启用SNAT配置
+    * enableSnat  **参数说明**：是否启用SNAT配置。企业版实例开启SNAT配置后，可以在公共网络中进行外部通信。 约束：只有企业版实例支持配置SNAT配置，SNAT配置开启后将不支持关闭。 **取值范围**： - true: 启用SNAT配置
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpdateForwardingInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enableSnat  **参数说明**：是否启用SNAT配置。企业版实例开启SNAT配置后，可以在公共网络中进行外部通信。 约束：只有企业版实例支持配置SNAT配置，SNAT配置开启后将不支持关闭 **取值范围**： - true: 启用SNAT配置
+    * enableSnat  **参数说明**：是否启用SNAT配置。企业版实例开启SNAT配置后，可以在公共网络中进行外部通信。 约束：只有企业版实例支持配置SNAT配置，SNAT配置开启后将不支持关闭。 **取值范围**： - true: 启用SNAT配置
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateForwardingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enableSnat  **参数说明**：是否启用SNAT配置。企业版实例开启SNAT配置后，可以在公共网络中进行外部通信。 约束：只有企业版实例支持配置SNAT配置，SNAT配置开启后将不支持关闭 **取值范围**： - true: 启用SNAT配置
+    * enableSnat  **参数说明**：是否启用SNAT配置。企业版实例开启SNAT配置后，可以在公共网络中进行外部通信。 约束：只有企业版实例支持配置SNAT配置，SNAT配置开启后将不支持关闭。 **取值范围**： - true: 启用SNAT配置
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpdateForwardingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enableSnat  **参数说明**：是否启用SNAT配置。企业版实例开启SNAT配置后，可以在公共网络中进行外部通信。 约束：只有企业版实例支持配置SNAT配置，SNAT配置开启后将不支持关闭 **取值范围**： - true: 启用SNAT配置
+    * enableSnat  **参数说明**：是否启用SNAT配置。企业版实例开启SNAT配置后，可以在公共网络中进行外部通信。 约束：只有企业版实例支持配置SNAT配置，SNAT配置开启后将不支持关闭。 **取值范围**： - true: 启用SNAT配置
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class UpdateForwardingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableSnat
-    *  **参数说明**：是否启用SNAT配置。企业版实例开启SNAT配置后，可以在公共网络中进行外部通信。 约束：只有企业版实例支持配置SNAT配置，SNAT配置开启后将不支持关闭 **取值范围**： - true: 启用SNAT配置
+    *  **参数说明**：是否启用SNAT配置。企业版实例开启SNAT配置后，可以在公共网络中进行外部通信。 约束：只有企业版实例支持配置SNAT配置，SNAT配置开启后将不支持关闭。 **取值范围**： - true: 启用SNAT配置
     *
     * @return bool
     */
@@ -189,7 +189,7 @@ class UpdateForwardingInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enableSnat
     *
-    * @param bool $enableSnat **参数说明**：是否启用SNAT配置。企业版实例开启SNAT配置后，可以在公共网络中进行外部通信。 约束：只有企业版实例支持配置SNAT配置，SNAT配置开启后将不支持关闭 **取值范围**： - true: 启用SNAT配置
+    * @param bool $enableSnat **参数说明**：是否启用SNAT配置。企业版实例开启SNAT配置后，可以在公共网络中进行外部通信。 约束：只有企业版实例支持配置SNAT配置，SNAT配置开启后将不支持关闭。 **取值范围**： - true: 启用SNAT配置
     *
     * @return $this
     */

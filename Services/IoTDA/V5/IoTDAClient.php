@@ -2744,6 +2744,343 @@ class IoTDAClient extends Client
     }
 
     /**
+     * 创建设备鉴权模板
+     *
+     * 应用服务器可调用此接口在物联网平台创建一个设备鉴权模板。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createDeviceAuthenticationTemplate($request)
+    {
+        return $this->createDeviceAuthenticationTemplateWithHttpInfo($request);
+    }
+
+    public function createDeviceAuthenticationTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/device-authentication-templates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateDeviceAuthenticationTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateDeviceAuthenticationTemplateRequest');
+    }
+
+    /**
+     * 删除设备鉴权模板
+     *
+     * 应用服务器可调用此接口在物联网平台上删除指定设备鉴权模板。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDeviceAuthenticationTemplate($request)
+    {
+        return $this->deleteDeviceAuthenticationTemplateWithHttpInfo($request);
+    }
+
+    public function deleteDeviceAuthenticationTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/device-authentication-templates/{template_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['templateId'] !== null) {
+            $pathParams['template_id'] = $localVarParams['templateId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteDeviceAuthenticationTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteDeviceAuthenticationTemplateRequest');
+    }
+
+    /**
+     * 查询设备鉴权模板列表
+     *
+     * 应用服务器可调用此接口在物联网平台查询设备鉴权模板列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDeviceAuthenticationTemplates($request)
+    {
+        return $this->listDeviceAuthenticationTemplatesWithHttpInfo($request);
+    }
+
+    public function listDeviceAuthenticationTemplatesWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/device-authentication-templates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['templateName'] !== null) {
+            $queryParams['template_name'] = $localVarParams['templateName'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListDeviceAuthenticationTemplatesResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListDeviceAuthenticationTemplatesRequest');
+    }
+
+    /**
+     * 查询设备鉴权模板详情
+     *
+     * 应用服务器可调用此接口在物联网平台查询指定设备鉴权模板ID的详细信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDeviceAuthenticationTemplate($request)
+    {
+        return $this->showDeviceAuthenticationTemplateWithHttpInfo($request);
+    }
+
+    public function showDeviceAuthenticationTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/device-authentication-templates/{template_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['templateId'] !== null) {
+            $pathParams['template_id'] = $localVarParams['templateId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDeviceAuthenticationTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDeviceAuthenticationTemplateRequest');
+    }
+
+    /**
+     * 修改设备鉴权模板
+     *
+     * 应用服务器可调用此接口在物联网平台上修改指定设备鉴权模板。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDeviceAuthenticationTemplate($request)
+    {
+        return $this->updateDeviceAuthenticationTemplateWithHttpInfo($request);
+    }
+
+    public function updateDeviceAuthenticationTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/device-authentication-templates/{template_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['templateId'] !== null) {
+            $pathParams['template_id'] = $localVarParams['templateId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDeviceAuthenticationTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDeviceAuthenticationTemplateRequest');
+    }
+
+    /**
      * 创建自定义鉴权
      *
      * 应用服务器可调用此接口在物联网平台创建一个自定义鉴权。自定义鉴权是指用户可以通过函数服务自定义实现鉴权逻辑，以对接入平台的设备进行身份认证。
@@ -3080,6 +3417,349 @@ class IoTDAClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDeviceAuthorizerResponse',
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDeviceAuthorizerRequest');
+    }
+
+    /**
+     * 删除设备证书
+     *
+     * 应用服务器可调用此接口在物联网平台删除一个设备证书。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDeviceCertificate($request)
+    {
+        return $this->deleteDeviceCertificateWithHttpInfo($request);
+    }
+
+    public function deleteDeviceCertificateWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/device-certificates/{certificate_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['certificateId'] !== null) {
+            $pathParams['certificate_id'] = $localVarParams['certificateId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteDeviceCertificateResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteDeviceCertificateRequest');
+    }
+
+    /**
+     * 查询使用指定设备证书的设备列表
+     *
+     * 应用服务器可调用此接口在物联网平台查询使用指定设备证书的设备列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDeviceByDeviceCertificate($request)
+    {
+        return $this->listDeviceByDeviceCertificateWithHttpInfo($request);
+    }
+
+    public function listDeviceByDeviceCertificateWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/device-certificates/{certificate_id}/list-device';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['certificateId'] !== null) {
+            $pathParams['certificate_id'] = $localVarParams['certificateId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListDeviceByDeviceCertificateResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListDeviceByDeviceCertificateRequest');
+    }
+
+    /**
+     * 查询设备证书列表
+     *
+     * 应用服务器可调用此接口在物联网平台查询设备证书列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDeviceCertificate($request)
+    {
+        return $this->listDeviceCertificateWithHttpInfo($request);
+    }
+
+    public function listDeviceCertificateWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/device-certificates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['commonName'] !== null) {
+            $queryParams['common_name'] = $localVarParams['commonName'];
+        }
+        if ($localVarParams['fingerprint'] !== null) {
+            $queryParams['fingerprint'] = $localVarParams['fingerprint'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListDeviceCertificateResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListDeviceCertificateRequest');
+    }
+
+    /**
+     * 查询设备证书
+     *
+     * 应用服务器可调用此接口在物联网平台更新一个设备证书状态。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDeviceCertificate($request)
+    {
+        return $this->showDeviceCertificateWithHttpInfo($request);
+    }
+
+    public function showDeviceCertificateWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/device-certificates/{certificate_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['certificateId'] !== null) {
+            $pathParams['certificate_id'] = $localVarParams['certificateId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDeviceCertificateResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDeviceCertificateRequest');
+    }
+
+    /**
+     * 更新设备证书
+     *
+     * 应用服务器可调用此接口在物联网平台更新一个设备证书状态。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDeviceCertificate($request)
+    {
+        return $this->updateDeviceCertificateWithHttpInfo($request);
+    }
+
+    public function updateDeviceCertificateWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/device-certificates/{certificate_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['certificateId'] !== null) {
+            $pathParams['certificate_id'] = $localVarParams['certificateId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDeviceCertificateResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDeviceCertificateRequest');
     }
 
     /**
@@ -4866,6 +5546,71 @@ class IoTDAClient extends Client
     }
 
     /**
+     * 删除设备影子数据
+     *
+     * 应用服务器可调用此接口删除指定设备的设备影子信息，包括对设备的期望属性信息（desired区）和设备最新上报的属性信息（reported区）中的所有数据。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDeviceShadow($request)
+    {
+        return $this->deleteDeviceShadowWithHttpInfo($request);
+    }
+
+    public function deleteDeviceShadowWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/shadow';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['deviceId'] !== null) {
+            $pathParams['device_id'] = $localVarParams['deviceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteDeviceShadowResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteDeviceShadowRequest');
+    }
+
+    /**
      * 查询设备影子数据
      *
      * 应用服务器可调用此接口查询指定设备的设备影子信息，包括对设备的期望属性信息（desired区）和设备最新上报的属性信息（reported区）。
@@ -5558,6 +6303,408 @@ class IoTDAClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListFunctionsResponse',
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListFunctionsRequest');
+    }
+
+    /**
+     * 创建鸿蒙软总线
+     *
+     * 应用服务器可调用此接口新建鸿蒙软总线。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addHarmonySoftBus($request)
+    {
+        return $this->addHarmonySoftBusWithHttpInfo($request);
+    }
+
+    public function addHarmonySoftBusWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/harmony-soft-bus';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\AddHarmonySoftBusResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\AddHarmonySoftBusRequest');
+    }
+
+    /**
+     * 同步鸿蒙软总线信息
+     *
+     * 应用服务器可调用此接口向组内设备同步鸿蒙软总线信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createSyncHarmonySoftBus($request)
+    {
+        return $this->createSyncHarmonySoftBusWithHttpInfo($request);
+    }
+
+    public function createSyncHarmonySoftBusWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/harmony-soft-bus/{bus_id}/sync';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['busId'] !== null) {
+            $pathParams['bus_id'] = $localVarParams['busId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateSyncHarmonySoftBusResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateSyncHarmonySoftBusRequest');
+    }
+
+    /**
+     * 删除鸿蒙软总线
+     *
+     * 应用服务器可调用此接口删除指定鸿蒙软总线。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteHarmonySoftBus($request)
+    {
+        return $this->deleteHarmonySoftBusWithHttpInfo($request);
+    }
+
+    public function deleteHarmonySoftBusWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/harmony-soft-bus/{bus_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['busId'] !== null) {
+            $pathParams['bus_id'] = $localVarParams['busId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteHarmonySoftBusResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteHarmonySoftBusRequest');
+    }
+
+    /**
+     * 查询鸿蒙软总线列表
+     *
+     * 应用服务器可调用此接口查询鸿蒙软总线列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listHarmonySoftBus($request)
+    {
+        return $this->listHarmonySoftBusWithHttpInfo($request);
+    }
+
+    public function listHarmonySoftBusWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/harmony-soft-bus';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $queryParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['appId'] !== null) {
+            $queryParams['app_id'] = $localVarParams['appId'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListHarmonySoftBusResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListHarmonySoftBusRequest');
+    }
+
+    /**
+     * 重置鸿蒙软总线秘钥
+     *
+     * 应用服务器可调用此接口重置鸿蒙软总线秘钥, 重置后状态变为未同步需要用户调用同步接口想组内设备同步最新秘钥。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function resetHarmonySoftBusKey($request)
+    {
+        return $this->resetHarmonySoftBusKeyWithHttpInfo($request);
+    }
+
+    public function resetHarmonySoftBusKeyWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/harmony-soft-bus/{bus_id}/reset-bus-key';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['busId'] !== null) {
+            $pathParams['bus_id'] = $localVarParams['busId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ResetHarmonySoftBusKeyResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ResetHarmonySoftBusKeyRequest');
+    }
+
+    /**
+     * 查询鸿蒙软总线
+     *
+     * 应用服务器可调用此接口查询指定ID的鸿蒙软总线。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showHarmonySoftBus($request)
+    {
+        return $this->showHarmonySoftBusWithHttpInfo($request);
+    }
+
+    public function showHarmonySoftBusWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/harmony-soft-bus/{bus_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['busId'] !== null) {
+            $pathParams['bus_id'] = $localVarParams['busId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowHarmonySoftBusResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowHarmonySoftBusRequest');
     }
 
     /**
@@ -8588,6 +9735,371 @@ class IoTDAClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateRuleResponse',
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateRuleRequest');
+    }
+
+    /**
+     * 创建或更新安全态势感知配置
+     *
+     * #### 接口说明
+     * 应用服务器调用该接口创建安全态势感知配置。
+     * #### 限制
+     * #### 目前支持的安全配置项有：
+     * 
+     * | 配置名              | 默认告警级别 |   默认安全级别   | 设备维度 | 平台检测/设备上报 | 配置结构体   | 说明        |
+     * | :------------------ | :----------- | :--------------- | :------- | :---------------- | :----------------- | :-----------|
+     * | DEVICE_MEMORY_CHECK | CRITICAL  | ADVANCE_SECURITY | 是       | 设备上报          | [{\&quot;key\&quot;:\&quot;memory_threshold\&quot;,\&quot;value\&quot;:80},{\&quot;key\&quot;:\&quot;report_period\&quot;,\&quot;value\&quot;:1}] | 设备内存泄漏检测，report_period：上报周期单位(小时) 取值范围[1, 24]；memory_threshold内存检测阈值百分比，取值范围：[1, 100] |
+     * | DEVICE_PORT_CHECK   | CRITICAL     | ADVANCE_SECURITY | 是       | 设备上报          | [{\&quot;key\&quot;:\&quot;safety_ports\&quot;,\&quot;value\&quot;:[80,8080]},{\&quot;key\&quot;:\&quot;report_period\&quot;,\&quot;value\&quot;:1}] | 设备异常端口检测，report_period：上报周期单位(小时) 取值范围[1, 24]；safety_ports：安全端口白名单，数组，取值范围:[1, 65535] |
+     * | DEVICE_CPU_USAGE_CHECK | CRITICAL  | ADVANCE_SECURITY | 是       | 设备上报          | [{\&quot;key\&quot;:\&quot;cpu_usage_threshold\&quot;,\&quot;value\&quot;:80},{\&quot;key\&quot;:\&quot;report_period\&quot;,\&quot;value\&quot;:1}] | 设备CPU使用率检测，report_period：上报周期单位(小时) 取值范围[1, 24]；cpu_usage_threshold：CPU检测阈值百分比，取值范围：[1, 100] |
+     * | DEVICE_DISK_SPACE_CHECK | CRITICAL  | ADVANCE_SECURITY | 是       | 设备上报          | [{\&quot;key\&quot;:\&quot;disk_space_threshold\&quot;,\&quot;value\&quot;:80},{\&quot;key\&quot;:\&quot;report_period\&quot;,\&quot;value\&quot;:1}] | 设备磁盘使用率检测，report_period：上报周期单位(小时) 取值范围[1, 24]；disk_space_threshold：磁盘检测阈值百分比，取值范围：[1, 100] |
+     * | DEVICE_BATTERY_PERCENTAGE_CHECK | CRITICAL  | ADVANCE_SECURITY | 是       | 设备上报          | [{\&quot;key\&quot;:\&quot;battery_percentage_threshold\&quot;,\&quot;value\&quot;:20},{\&quot;key\&quot;:\&quot;report_period\&quot;,\&quot;value\&quot;:1}] | 设备电池电量检测，report_period：上报周期单位(小时) 取值范围[1, 24]；battery_percentage_threshold：电池检测阈值百分比，取值范围：[1, 100] |
+     * | DEVICE_LOGIN_LOCAL_CHECK | MINOR  | BASIC_SECURITY | 是       | 设备上报          | NA | 设备本地登录检测 |
+     * | DEVICE_MALICIOUS_IP_CHECK | MINOR  | BASIC_SECURITY | 是       | 设备上报          | {\&quot;key\&quot;:\&quot;safety_ips\&quot;,\&quot;value\&quot;:[\&quot;192.168.0.0/16\&quot;]} | 设备恶意ip检测 |
+     * | DEVICE_LOGIN_BRUTE_FORCE_CHECK | MINOR  | BASIC_SECURITY | 是       | 设备上报          | NA | 设备暴力破解登录检测 |
+     * | DEVICE_FILE_TAMPER_CHECK | MINOR  | BASIC_SECURITY | 是       | 设备上报          | NA | 设备本地文件篡改检测 |
+     * | INSECURE_TLS_PROTOCOL_CHECK | MAJOR  | ULTIMATE_SECURITY | 是       | 平台检测          | NA | 设备使用不安全的TLS协议接入检测 |
+     * | INSECURE_CIPHER_SUITE_CHECK | MAJOR  | ULTIMATE_SECURITY | 是       | 平台检测          | NA | 设备使用不安全TLS加密套件接入检测 |
+     * | CONNECT_MULTIPLE_TIMES_CHECK | CRITICAL  | ULTIMATE_SECURITY | 是       | 平台检测          | NA | 设备单位时间内多次建链检测 |
+     * | SECRET_COMPLEXITY_CHECK | MAJOR  | ULTIMATE_SECURITY | 是       | 平台检测          | NA | 设备弱密码检测 |
+     * | TLS_CONNECT_CHECK | MINOR  | ULTIMATE_SECURITY | 是       | 平台检测          | NA | 设备是否使用TLS加密通讯协议检测 |
+     * | DEVICE_AUTH_FAIL_CHECK | CRITICAL  | ULTIMATE_SECURITY | 是       | 平台检测          | NA | 设备鉴权失败检测 |
+     * | DEVICE_OFFLINE_CHECK | CRITICAL  | ULTIMATE_SECURITY | 是       | 平台检测          | NA | 设备异常离线检测 |
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createSecurityProfile($request)
+    {
+        return $this->createSecurityProfileWithHttpInfo($request);
+    }
+
+    public function createSecurityProfileWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/security-profiles';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateSecurityProfileResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateSecurityProfileRequest');
+    }
+
+    /**
+     * 删除某个具体id的安全态势感知配置信息
+     *
+     * 应用服务器可调用此接口删除某个具体id的安全态势感知配置信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteSecurityProfile($request)
+    {
+        return $this->deleteSecurityProfileWithHttpInfo($request);
+    }
+
+    public function deleteSecurityProfileWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/security-profiles/{profile_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['profileId'] !== null) {
+            $pathParams['profile_id'] = $localVarParams['profileId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteSecurityProfileResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteSecurityProfileRequest');
+    }
+
+    /**
+     * 查询安全态势感知配置信息列表
+     *
+     * 接口说明：应用服务器调用该接口查询安全态势感知配置列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSecurityProfiles($request)
+    {
+        return $this->listSecurityProfilesWithHttpInfo($request);
+    }
+
+    public function listSecurityProfilesWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/security-profiles';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['securityType'] !== null) {
+            $queryParams['security_type'] = $localVarParams['securityType'];
+        }
+        if ($localVarParams['targetType'] !== null) {
+            $queryParams['target_type'] = $localVarParams['targetType'];
+        }
+        if ($localVarParams['targetId'] !== null) {
+            $queryParams['target_id'] = $localVarParams['targetId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListSecurityProfilesResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListSecurityProfilesRequest');
+    }
+
+    /**
+     * 查询某个具体id的安全态势感知配置详情
+     *
+     * 应用服务器可调用此接口查询某个具体id的安全态势感知配置详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSecurityProfile($request)
+    {
+        return $this->showSecurityProfileWithHttpInfo($request);
+    }
+
+    public function showSecurityProfileWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/security-profiles/{profile_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['profileId'] !== null) {
+            $pathParams['profile_id'] = $localVarParams['profileId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowSecurityProfileResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowSecurityProfileRequest');
+    }
+
+    /**
+     * 更新某个具体id的安全态势感知配置信息
+     *
+     * 应用服务器可调用此接口更新某个具体id的安全态势感知配置信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSecurityProfile($request)
+    {
+        return $this->updateSecurityProfileWithHttpInfo($request);
+    }
+
+    public function updateSecurityProfileWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/security-profiles/{profile_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['profileId'] !== null) {
+            $pathParams['profile_id'] = $localVarParams['profileId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateSecurityProfileResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateSecurityProfileRequest');
     }
 
     /**

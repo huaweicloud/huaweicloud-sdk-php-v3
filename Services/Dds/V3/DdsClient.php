@@ -2547,6 +2547,65 @@ class DdsClient extends Client
     }
 
     /**
+     * 查询备份下载策略
+     *
+     * 查询备份下载策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBackupDownloadPolicy($request)
+    {
+        return $this->listBackupDownloadPolicyWithHttpInfo($request);
+    }
+
+    public function listBackupDownloadPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/backups/download-policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dds\V3\Model\ListBackupDownloadPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Dds\V3\Model\ListBackupDownloadPolicyRequest');
+    }
+
+    /**
      * 查询备份列表
      *
      * 根据指定条件查询备份列表。
@@ -4966,6 +5025,68 @@ class DdsClient extends Client
     }
 
     /**
+     * 创建备份下载策略
+     *
+     * 创建备份下载策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function saveBackupDownloadPolicy($request)
+    {
+        return $this->saveBackupDownloadPolicyWithHttpInfo($request);
+    }
+
+    public function saveBackupDownloadPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/backups/download-policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dds\V3\Model\SaveBackupDownloadPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Dds\V3\Model\SaveBackupDownloadPolicyRequest');
+    }
+
+    /**
      * 设置审计日志策略
      *
      * 设置审计日志策略。
@@ -7229,6 +7350,68 @@ class DdsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dds\V3\Model\SwitchoverReplicaSetResponse',
             $requestType='\HuaweiCloud\SDK\Dds\V3\Model\SwitchoverReplicaSetRequest');
+    }
+
+    /**
+     * 更新备份下载策略
+     *
+     * 更新备份下载策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateBackupDownloadPolicy($request)
+    {
+        return $this->updateBackupDownloadPolicyWithHttpInfo($request);
+    }
+
+    public function updateBackupDownloadPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/backups/download-policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dds\V3\Model\UpdateBackupDownloadPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Dds\V3\Model\UpdateBackupDownloadPolicyRequest');
     }
 
     /**

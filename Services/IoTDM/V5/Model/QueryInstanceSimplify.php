@@ -25,9 +25,9 @@ class QueryInstanceSimplify implements ModelInterface, ArrayAccess
     * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     * chargeMode  **参数说明**：实例的付费方式。 **取值范围**： - prePaid：包年/包月 - postPaid：按需计费
     * flavor  flavor
-    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
-    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z
-    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z
+    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - TRADING: 实例正在进行交易 - MODIFYING：实例正在变更规格 - MODIFY_FAILED: 实例变更失败 - FAILED：实例创建失败
+    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z。
+    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z。
     * enterpriseProjectId  **参数说明**：企业项目Id。
     *
     * @var string[]
@@ -51,9 +51,9 @@ class QueryInstanceSimplify implements ModelInterface, ArrayAccess
     * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     * chargeMode  **参数说明**：实例的付费方式。 **取值范围**： - prePaid：包年/包月 - postPaid：按需计费
     * flavor  flavor
-    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
-    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z
-    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z
+    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - TRADING: 实例正在进行交易 - MODIFYING：实例正在变更规格 - MODIFY_FAILED: 实例变更失败 - FAILED：实例创建失败
+    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z。
+    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z。
     * enterpriseProjectId  **参数说明**：企业项目Id。
     *
     * @var string[]
@@ -98,9 +98,9 @@ class QueryInstanceSimplify implements ModelInterface, ArrayAccess
     * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     * chargeMode  **参数说明**：实例的付费方式。 **取值范围**： - prePaid：包年/包月 - postPaid：按需计费
     * flavor  flavor
-    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
-    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z
-    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z
+    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - TRADING: 实例正在进行交易 - MODIFYING：实例正在变更规格 - MODIFY_FAILED: 实例变更失败 - FAILED：实例创建失败
+    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z。
+    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z。
     * enterpriseProjectId  **参数说明**：企业项目Id。
     *
     * @var string[]
@@ -124,9 +124,9 @@ class QueryInstanceSimplify implements ModelInterface, ArrayAccess
     * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     * chargeMode  **参数说明**：实例的付费方式。 **取值范围**： - prePaid：包年/包月 - postPaid：按需计费
     * flavor  flavor
-    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
-    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z
-    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z
+    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - TRADING: 实例正在进行交易 - MODIFYING：实例正在变更规格 - MODIFY_FAILED: 实例变更失败 - FAILED：实例创建失败
+    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z。
+    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z。
     * enterpriseProjectId  **参数说明**：企业项目Id。
     *
     * @var string[]
@@ -150,9 +150,9 @@ class QueryInstanceSimplify implements ModelInterface, ArrayAccess
     * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
     * chargeMode  **参数说明**：实例的付费方式。 **取值范围**： - prePaid：包年/包月 - postPaid：按需计费
     * flavor  flavor
-    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
-    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z
-    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z
+    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - TRADING: 实例正在进行交易 - MODIFYING：实例正在变更规格 - MODIFY_FAILED: 实例变更失败 - FAILED：实例创建失败
+    * createTime  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z。
+    * updateTime  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z。
     * enterpriseProjectId  **参数说明**：企业项目Id。
     *
     * @var string[]
@@ -415,7 +415,7 @@ class QueryInstanceSimplify implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
+    *  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - TRADING: 实例正在进行交易 - MODIFYING：实例正在变更规格 - MODIFY_FAILED: 实例变更失败 - FAILED：实例创建失败
     *
     * @return string|null
     */
@@ -427,7 +427,7 @@ class QueryInstanceSimplify implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
+    * @param string|null $status **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - TRADING: 实例正在进行交易 - MODIFYING：实例正在变更规格 - MODIFY_FAILED: 实例变更失败 - FAILED：实例创建失败
     *
     * @return $this
     */
@@ -439,7 +439,7 @@ class QueryInstanceSimplify implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z
+    *  **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z。
     *
     * @return string|null
     */
@@ -451,7 +451,7 @@ class QueryInstanceSimplify implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z
+    * @param string|null $createTime **参数说明**：实例的创建时间。时间格式例如：2023-01-28T06:57:52Z。
     *
     * @return $this
     */
@@ -463,7 +463,7 @@ class QueryInstanceSimplify implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z
+    *  **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z。
     *
     * @return string|null
     */
@@ -475,7 +475,7 @@ class QueryInstanceSimplify implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param string|null $updateTime **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z
+    * @param string|null $updateTime **参数说明**：实例的最近一次更新的时间。时间格式例如：2023-01-28T06:57:52Z。
     *
     * @return $this
     */

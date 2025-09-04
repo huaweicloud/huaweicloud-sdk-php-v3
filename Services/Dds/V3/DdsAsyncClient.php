@@ -2663,6 +2663,68 @@ class DdsAsyncClient extends Client
     }
 
     /**
+     * 查询备份下载策略
+     *
+     * 查询备份下载策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBackupDownloadPolicyAsync($request)
+    {
+        return $this->listBackupDownloadPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function listBackupDownloadPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/backups/download-policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dds\V3\Model\ListBackupDownloadPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dds\V3\Model\ListBackupDownloadPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询备份列表
      *
      * 根据指定条件查询备份列表。
@@ -5187,6 +5249,71 @@ class DdsAsyncClient extends Client
     }
 
     /**
+     * 创建备份下载策略
+     *
+     * 创建备份下载策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function saveBackupDownloadPolicyAsync($request)
+    {
+        return $this->saveBackupDownloadPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function saveBackupDownloadPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/backups/download-policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dds\V3\Model\SaveBackupDownloadPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dds\V3\Model\SaveBackupDownloadPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 设置审计日志策略
      *
      * 设置审计日志策略。
@@ -7554,6 +7681,71 @@ class DdsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dds\V3\Model\SwitchoverReplicaSetResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dds\V3\Model\SwitchoverReplicaSetRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新备份下载策略
+     *
+     * 更新备份下载策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateBackupDownloadPolicyAsync($request)
+    {
+        return $this->updateBackupDownloadPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function updateBackupDownloadPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/backups/download-policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dds\V3\Model\UpdateBackupDownloadPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dds\V3\Model\UpdateBackupDownloadPolicyRequest',
             $asyncRequest = true);
     }
 

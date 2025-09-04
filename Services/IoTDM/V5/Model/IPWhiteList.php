@@ -20,8 +20,8 @@ class IPWhiteList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enable  **参数说明**：启用Ip白名单访问控制
-    * allowList  允许访问企业版实例的IP地址列表
+    * enable  **参数说明**：启用Ip白名单访问控制。
+    * allowList  **参数说明**：允许访问企业版实例的IP地址列表。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class IPWhiteList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enable  **参数说明**：启用Ip白名单访问控制
-    * allowList  允许访问企业版实例的IP地址列表
+    * enable  **参数说明**：启用Ip白名单访问控制。
+    * allowList  **参数说明**：允许访问企业版实例的IP地址列表。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class IPWhiteList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enable  **参数说明**：启用Ip白名单访问控制
-    * allowList  允许访问企业版实例的IP地址列表
+    * enable  **参数说明**：启用Ip白名单访问控制。
+    * allowList  **参数说明**：允许访问企业版实例的IP地址列表。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class IPWhiteList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enable  **参数说明**：启用Ip白名单访问控制
-    * allowList  允许访问企业版实例的IP地址列表
+    * enable  **参数说明**：启用Ip白名单访问控制。
+    * allowList  **参数说明**：允许访问企业版实例的IP地址列表。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class IPWhiteList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enable  **参数说明**：启用Ip白名单访问控制
-    * allowList  允许访问企业版实例的IP地址列表
+    * enable  **参数说明**：启用Ip白名单访问控制。
+    * allowList  **参数说明**：允许访问企业版实例的IP地址列表。
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class IPWhiteList implements ModelInterface, ArrayAccess
 
     /**
     * Gets enable
-    *  **参数说明**：启用Ip白名单访问控制
+    *  **参数说明**：启用Ip白名单访问控制。
     *
     * @return bool
     */
@@ -200,7 +200,7 @@ class IPWhiteList implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param bool $enable **参数说明**：启用Ip白名单访问控制
+    * @param bool $enable **参数说明**：启用Ip白名单访问控制。
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class IPWhiteList implements ModelInterface, ArrayAccess
 
     /**
     * Gets allowList
-    *  允许访问企业版实例的IP地址列表
+    *  **参数说明**：允许访问企业版实例的IP地址列表。
     *
     * @return \HuaweiCloud\SDK\IoTDM\V5\Model\IpAllowList[]|null
     */
@@ -224,7 +224,7 @@ class IPWhiteList implements ModelInterface, ArrayAccess
     /**
     * Sets allowList
     *
-    * @param \HuaweiCloud\SDK\IoTDM\V5\Model\IpAllowList[]|null $allowList 允许访问企业版实例的IP地址列表
+    * @param \HuaweiCloud\SDK\IoTDM\V5\Model\IpAllowList[]|null $allowList **参数说明**：允许访问企业版实例的IP地址列表。
     *
     * @return $this
     */

@@ -1,0 +1,370 @@
+<?php
+
+namespace HuaweiCloud\SDK\CodeArtsBuild\V3\Model;
+
+use \ArrayAccess;
+use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
+use HuaweiCloud\SDK\Core\Utils\ModelInterface;
+use HuaweiCloud\SDK\Core\SdkResponse;
+
+class RolePermissionsRequestBody implements ModelInterface, ArrayAccess
+{
+    const DISCRIMINATOR = null;
+
+    /**
+    * The original name of the model.
+    *
+    * @var string
+    */
+    protected static $openAPIModelName = 'RolePermissionsRequestBody';
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    * projectId  CodeArts项目ID。获取方式请参考[获取CodeArts项目ID](https://support.huaweicloud.com/api-codeci/cloudbuild_03_0022.html)。
+    * jobIds  任务id集合
+    * projectSwitch  是否同步最新项目权限
+    * permissions  角色权限信息
+    *
+    * @var string[]
+    */
+    protected static $openAPITypes = [
+            'projectId' => 'string',
+            'jobIds' => 'string[]',
+            'projectSwitch' => 'bool',
+            'permissions' => '\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\JobRolePermission[]'
+    ];
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    * projectId  CodeArts项目ID。获取方式请参考[获取CodeArts项目ID](https://support.huaweicloud.com/api-codeci/cloudbuild_03_0022.html)。
+    * jobIds  任务id集合
+    * projectSwitch  是否同步最新项目权限
+    * permissions  角色权限信息
+    *
+    * @var string[]
+    */
+    protected static $openAPIFormats = [
+        'projectId' => null,
+        'jobIds' => null,
+        'projectSwitch' => null,
+        'permissions' => null
+    ];
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPITypes()
+    {
+        return self::$openAPITypes;
+    }
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPIFormats()
+    {
+        return self::$openAPIFormats;
+    }
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    * projectId  CodeArts项目ID。获取方式请参考[获取CodeArts项目ID](https://support.huaweicloud.com/api-codeci/cloudbuild_03_0022.html)。
+    * jobIds  任务id集合
+    * projectSwitch  是否同步最新项目权限
+    * permissions  角色权限信息
+    *
+    * @var string[]
+    */
+    protected static $attributeMap = [
+            'projectId' => 'project_id',
+            'jobIds' => 'job_ids',
+            'projectSwitch' => 'project_switch',
+            'permissions' => 'permissions'
+    ];
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  CodeArts项目ID。获取方式请参考[获取CodeArts项目ID](https://support.huaweicloud.com/api-codeci/cloudbuild_03_0022.html)。
+    * jobIds  任务id集合
+    * projectSwitch  是否同步最新项目权限
+    * permissions  角色权限信息
+    *
+    * @var string[]
+    */
+    protected static $setters = [
+            'projectId' => 'setProjectId',
+            'jobIds' => 'setJobIds',
+            'projectSwitch' => 'setProjectSwitch',
+            'permissions' => 'setPermissions'
+    ];
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    * projectId  CodeArts项目ID。获取方式请参考[获取CodeArts项目ID](https://support.huaweicloud.com/api-codeci/cloudbuild_03_0022.html)。
+    * jobIds  任务id集合
+    * projectSwitch  是否同步最新项目权限
+    * permissions  角色权限信息
+    *
+    * @var string[]
+    */
+    protected static $getters = [
+            'projectId' => 'getProjectId',
+            'jobIds' => 'getJobIds',
+            'projectSwitch' => 'getProjectSwitch',
+            'permissions' => 'getPermissions'
+    ];
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    *
+    * @return array
+    */
+    public static function attributeMap()
+    {
+        return self::$attributeMap;
+    }
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    *
+    * @return array
+    */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    *
+    * @return array
+    */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+    * The original name of the model.
+    *
+    * @return string
+    */
+    public function getModelName()
+    {
+        return self::$openAPIModelName;
+    }
+    
+
+
+    /**
+    * Associative array for storing property values
+    *
+    * @var mixed[]
+    */
+    protected $container = [];
+
+    /**
+    * Constructor
+    *
+    * @param mixed[] $data Associated array of property values
+    *                      initializing the model
+    */
+    public function __construct(array $data = null)
+    {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['jobIds'] = isset($data['jobIds']) ? $data['jobIds'] : null;
+        $this->container['projectSwitch'] = isset($data['projectSwitch']) ? $data['projectSwitch'] : null;
+        $this->container['permissions'] = isset($data['permissions']) ? $data['permissions'] : null;
+    }
+
+    /**
+    * Show all the invalid properties with reasons.
+    *
+    * @return array invalid properties with reasons
+    */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+        return $invalidProperties;
+    }
+
+    /**
+    * Validate all the properties in the model
+    * return true if all passed
+    *
+    * @return bool True if all properties are valid
+    */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  CodeArts项目ID。获取方式请参考[获取CodeArts项目ID](https://support.huaweicloud.com/api-codeci/cloudbuild_03_0022.html)。
+    *
+    * @return string|null
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string|null $projectId CodeArts项目ID。获取方式请参考[获取CodeArts项目ID](https://support.huaweicloud.com/api-codeci/cloudbuild_03_0022.html)。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets jobIds
+    *  任务id集合
+    *
+    * @return string[]|null
+    */
+    public function getJobIds()
+    {
+        return $this->container['jobIds'];
+    }
+
+    /**
+    * Sets jobIds
+    *
+    * @param string[]|null $jobIds 任务id集合
+    *
+    * @return $this
+    */
+    public function setJobIds($jobIds)
+    {
+        $this->container['jobIds'] = $jobIds;
+        return $this;
+    }
+
+    /**
+    * Gets projectSwitch
+    *  是否同步最新项目权限
+    *
+    * @return bool|null
+    */
+    public function getProjectSwitch()
+    {
+        return $this->container['projectSwitch'];
+    }
+
+    /**
+    * Sets projectSwitch
+    *
+    * @param bool|null $projectSwitch 是否同步最新项目权限
+    *
+    * @return $this
+    */
+    public function setProjectSwitch($projectSwitch)
+    {
+        $this->container['projectSwitch'] = $projectSwitch;
+        return $this;
+    }
+
+    /**
+    * Gets permissions
+    *  角色权限信息
+    *
+    * @return \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\JobRolePermission[]|null
+    */
+    public function getPermissions()
+    {
+        return $this->container['permissions'];
+    }
+
+    /**
+    * Sets permissions
+    *
+    * @param \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\JobRolePermission[]|null $permissions 角色权限信息
+    *
+    * @return $this
+    */
+    public function setPermissions($permissions)
+    {
+        $this->container['permissions'] = $permissions;
+        return $this;
+    }
+
+    /**
+    * Returns true if offset exists. False otherwise.
+    *
+    * @param integer $offset Offset
+    *
+    * @return boolean
+    */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+    * Gets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return mixed
+    */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+    * Sets value based on offset.
+    *
+    * @param integer $offset Offset
+    * @param mixed   $value  Value to be set
+    *
+    * @return void
+    */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+                $this->container[] = $value;
+            } else {
+                $this->container[$offset] = $value;
+        }
+    }
+
+    /**
+    * Unsets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return void
+    */
+    public function offsetUnset($offset)
+    {
+        unset($this->container[$offset]);
+    }
+
+    /**
+    * Gets the string presentation of the object
+    *
+    * @return string
+    */
+    public function __toString()
+    {
+        return json_encode(
+            ObjectSerializer::sanitizeForSerialization($this),
+            JSON_PRETTY_PRINT
+        );
+    }
+}
+

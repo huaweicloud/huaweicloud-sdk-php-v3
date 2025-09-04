@@ -65,11 +65,11 @@ class IoTDMAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
+                [],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -134,11 +134,11 @@ class IoTDMAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -268,11 +268,11 @@ class IoTDMAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
+                [],
                 []
             );
         }
@@ -546,11 +546,11 @@ class IoTDMAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
+                [],
                 ['application/json;charset=UTF-8']
             );
         }

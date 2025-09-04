@@ -20,7 +20,7 @@ class BindInstanceTags implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tags  实例标签
+    * tags  **参数说明**：实例标签。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BindInstanceTags implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tags  实例标签
+    * tags  **参数说明**：实例标签。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BindInstanceTags implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tags  实例标签
+    * tags  **参数说明**：实例标签。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BindInstanceTags implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tags  实例标签
+    * tags  **参数说明**：实例标签。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BindInstanceTags implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tags  实例标签
+    * tags  **参数说明**：实例标签。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class BindInstanceTags implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  实例标签
+    *  **参数说明**：实例标签。
     *
     * @return \HuaweiCloud\SDK\IoTDM\V5\Model\Tag[]
     */
@@ -189,7 +189,7 @@ class BindInstanceTags implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\IoTDM\V5\Model\Tag[] $tags 实例标签
+    * @param \HuaweiCloud\SDK\IoTDM\V5\Model\Tag[] $tags **参数说明**：实例标签。
     *
     * @return $this
     */
