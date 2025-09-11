@@ -20,7 +20,7 @@ class ShowUpgradeCandidateVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID，此参数是用户创建实例的唯一标识。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
     * xLanguage  语言[zh-cn, en-us]。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ShowUpgradeCandidateVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID，此参数是用户创建实例的唯一标识。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
     * xLanguage  语言[zh-cn, en-us]。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ShowUpgradeCandidateVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID，此参数是用户创建实例的唯一标识。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
     * xLanguage  语言[zh-cn, en-us]。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ShowUpgradeCandidateVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID，此参数是用户创建实例的唯一标识。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
     * xLanguage  语言[zh-cn, en-us]。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ShowUpgradeCandidateVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID，此参数是用户创建实例的唯一标识。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
     * xLanguage  语言[zh-cn, en-us]。
     *
     * @var string[]
@@ -187,11 +187,14 @@ class ShowUpgradeCandidateVersionsRequest implements ModelInterface, ArrayAccess
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
-            if ((mb_strlen($this->container['instanceId']) > 100)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 100.";
+            if ((mb_strlen($this->container['instanceId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['instanceId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['instanceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 1.";
+            }
+            if (!preg_match("/^[a-zA-Z0-9]{1,36}$/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-zA-Z0-9]{1,36}$/.";
             }
             $allowedValues = $this->getXLanguageAllowableValues();
                 if (!is_null($this->container['xLanguage']) && !in_array($this->container['xLanguage'], $allowedValues, true)) {
@@ -217,7 +220,7 @@ class ShowUpgradeCandidateVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**: 实例ID，此参数是用户创建实例的唯一标识。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
     *
     * @return string
     */
@@ -229,7 +232,7 @@ class ShowUpgradeCandidateVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释**: 实例ID，此参数是用户创建实例的唯一标识。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
     *
     * @return $this
     */

@@ -21,29 +21,29 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
-    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
-    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'notificationEnabled' => 'bool',
-            'alarmNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\Notification[]',
-            'okNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\Notification[]',
+            'alarmNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\NotificationResp[]',
+            'okNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\NotificationResp[]',
             'notificationBeginTime' => 'string',
             'notificationEndTime' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
-    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
-    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
     * @var string[]
     */
@@ -78,11 +78,11 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
-    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
-    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
     * @var string[]
     */
@@ -96,11 +96,11 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
-    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
-    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
     * @var string[]
     */
@@ -114,11 +114,11 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
-    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
-    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
     * @var string[]
     */
@@ -237,7 +237,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationEnabled
-    *  是否开启告警通知。true:开启，false:关闭。
+    *  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
     *
     * @return bool|null
     */
@@ -249,7 +249,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets notificationEnabled
     *
-    * @param bool|null $notificationEnabled 是否开启告警通知。true:开启，false:关闭。
+    * @param bool|null $notificationEnabled **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
     *
     * @return $this
     */
@@ -261,9 +261,9 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmNotifications
-    *  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    *  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\NotificationResp[]|null
     */
     public function getAlarmNotifications()
     {
@@ -273,7 +273,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmNotifications
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null $alarmNotifications **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\NotificationResp[]|null $alarmNotifications **参数解释**： 触发告警时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
     *
     * @return $this
     */
@@ -285,9 +285,9 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets okNotifications
-    *  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    *  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\NotificationResp[]|null
     */
     public function getOkNotifications()
     {
@@ -297,7 +297,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets okNotifications
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null $okNotifications **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\NotificationResp[]|null $okNotifications **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
     *
     * @return $this
     */
@@ -309,7 +309,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationBeginTime
-    *  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    *  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
     * @return string|null
     */
@@ -321,7 +321,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets notificationBeginTime
     *
-    * @param string|null $notificationBeginTime **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * @param string|null $notificationBeginTime **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
     * @return $this
     */
@@ -333,7 +333,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationEndTime
-    *  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    *  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
     * @return string|null
     */
@@ -345,7 +345,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets notificationEndTime
     *
-    * @param string|null $notificationEndTime **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * @param string|null $notificationEndTime **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
     * @return $this
     */

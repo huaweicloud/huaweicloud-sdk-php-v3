@@ -22,7 +22,7 @@ class InstanceTaskDetail implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * taskId  任务ID。
     * taskName  任务名称。
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class InstanceTaskDetail implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * taskId  任务ID。
     * taskName  任务名称。
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class InstanceTaskDetail implements ModelInterface, ArrayAccess
     * and the value is the original name
     * taskId  任务ID。
     * taskName  任务名称。
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class InstanceTaskDetail implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * taskId  任务ID。
     * taskName  任务名称。
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class InstanceTaskDetail implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * taskId  任务ID。
     * taskName  任务名称。
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -244,7 +244,7 @@ class InstanceTaskDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class InstanceTaskDetail implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例ID。
+    * @param string|null $instanceId **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */

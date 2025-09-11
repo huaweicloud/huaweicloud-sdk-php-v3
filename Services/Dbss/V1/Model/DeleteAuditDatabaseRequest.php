@@ -20,7 +20,7 @@ class DeleteAuditDatabaseRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
+    * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * dbId  数据库ID，可在查询数据库列表接口ID字段获取。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class DeleteAuditDatabaseRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
+    * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * dbId  数据库ID，可在查询数据库列表接口ID字段获取。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class DeleteAuditDatabaseRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
+    * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * dbId  数据库ID，可在查询数据库列表接口ID字段获取。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class DeleteAuditDatabaseRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
+    * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * dbId  数据库ID，可在查询数据库列表接口ID字段获取。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class DeleteAuditDatabaseRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
+    * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * dbId  数据库ID，可在查询数据库列表接口ID字段获取。
     *
     * @var string[]
@@ -172,6 +172,12 @@ class DeleteAuditDatabaseRequest implements ModelInterface, ArrayAccess
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
+            if ((mb_strlen($this->container['instanceId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['instanceId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 32.";
+            }
         if ($this->container['dbId'] === null) {
             $invalidProperties[] = "'dbId' can't be null";
         }
@@ -191,7 +197,7 @@ class DeleteAuditDatabaseRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。可在查询实例列表接口的ID字段获取。
+    *  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -203,7 +209,7 @@ class DeleteAuditDatabaseRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。可在查询实例列表接口的ID字段获取。
+    * @param string $instanceId **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     *
     * @return $this
     */

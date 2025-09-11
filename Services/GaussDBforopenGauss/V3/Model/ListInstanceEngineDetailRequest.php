@@ -20,7 +20,7 @@ class ListInstanceEngineDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  语言。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100
     *
@@ -34,7 +34,7 @@ class ListInstanceEngineDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  语言。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100
     *
@@ -69,7 +69,7 @@ class ListInstanceEngineDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  语言。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100
     *
@@ -83,7 +83,7 @@ class ListInstanceEngineDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  语言。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100
     *
@@ -97,7 +97,7 @@ class ListInstanceEngineDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  语言。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100
     *
@@ -219,7 +219,7 @@ class ListInstanceEngineDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  语言。
+    *  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     *
     * @return string|null
     */
@@ -231,7 +231,7 @@ class ListInstanceEngineDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage 语言。
+    * @param string|null $xLanguage **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     *
     * @return $this
     */

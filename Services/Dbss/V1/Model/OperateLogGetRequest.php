@@ -179,28 +179,9 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ACTION_CREATE = 'CREATE';
-    const ACTION_DELETE = 'DELETE';
-    const ACTION_DOWNLOAD = 'DOWNLOAD';
-    const ACTION_UPDATE = 'UPDATE';
     const RESULT_SUCCESS = 'success';
     const RESULT_FAIL = 'fail';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getActionAllowableValues()
-    {
-        return [
-            self::ACTION_CREATE,
-            self::ACTION_DELETE,
-            self::ACTION_DOWNLOAD,
-            self::ACTION_UPDATE,
-        ];
-    }
 
     /**
     * Gets allowable values of the enum
@@ -247,14 +228,9 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getActionAllowableValues();
-                if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'action', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
+        if ($this->container['time'] === null) {
+            $invalidProperties[] = "'time' can't be null";
+        }
             $allowedValues = $this->getResultAllowableValues();
                 if (!is_null($this->container['result']) && !in_array($this->container['result'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -263,6 +239,12 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['page'] === null) {
+            $invalidProperties[] = "'page' can't be null";
+        }
+        if ($this->container['size'] === null) {
+            $invalidProperties[] = "'size' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -281,7 +263,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     * Gets time
     *  time
     *
-    * @return \HuaweiCloud\SDK\Dbss\V1\Model\TimeRangeBean|null
+    * @return \HuaweiCloud\SDK\Dbss\V1\Model\TimeRangeBean
     */
     public function getTime()
     {
@@ -291,7 +273,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets time
     *
-    * @param \HuaweiCloud\SDK\Dbss\V1\Model\TimeRangeBean|null $time time
+    * @param \HuaweiCloud\SDK\Dbss\V1\Model\TimeRangeBean $time time
     *
     * @return $this
     */
@@ -377,7 +359,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     * Gets page
     *  页数
     *
-    * @return string|null
+    * @return string
     */
     public function getPage()
     {
@@ -387,7 +369,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets page
     *
-    * @param string|null $page 页数
+    * @param string $page 页数
     *
     * @return $this
     */
@@ -401,7 +383,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     * Gets size
     *  每页条数
     *
-    * @return string|null
+    * @return string
     */
     public function getSize()
     {
@@ -411,7 +393,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param string|null $size 每页条数
+    * @param string $size 每页条数
     *
     * @return $this
     */

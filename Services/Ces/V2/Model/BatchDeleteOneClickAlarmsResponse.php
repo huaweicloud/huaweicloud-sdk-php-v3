@@ -21,7 +21,7 @@ class BatchDeleteOneClickAlarmsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * oneClickAlarmIds  成功删除的一键告警ID列表
+    * oneClickAlarmIds  **参数解释**： 成功删除的一键告警ID列表。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class BatchDeleteOneClickAlarmsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * oneClickAlarmIds  成功删除的一键告警ID列表
+    * oneClickAlarmIds  **参数解释**： 成功删除的一键告警ID列表。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class BatchDeleteOneClickAlarmsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * oneClickAlarmIds  成功删除的一键告警ID列表
+    * oneClickAlarmIds  **参数解释**： 成功删除的一键告警ID列表。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class BatchDeleteOneClickAlarmsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * oneClickAlarmIds  成功删除的一键告警ID列表
+    * oneClickAlarmIds  **参数解释**： 成功删除的一键告警ID列表。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class BatchDeleteOneClickAlarmsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * oneClickAlarmIds  成功删除的一键告警ID列表
+    * oneClickAlarmIds  **参数解释**： 成功删除的一键告警ID列表。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class BatchDeleteOneClickAlarmsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets oneClickAlarmIds
-    *  成功删除的一键告警ID列表
+    *  **参数解释**： 成功删除的一键告警ID列表。
     *
     * @return string[]|null
     */
@@ -187,7 +187,7 @@ class BatchDeleteOneClickAlarmsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets oneClickAlarmIds
     *
-    * @param string[]|null $oneClickAlarmIds 成功删除的一键告警ID列表
+    * @param string[]|null $oneClickAlarmIds **参数解释**： 成功删除的一键告警ID列表。
     *
     * @return $this
     */

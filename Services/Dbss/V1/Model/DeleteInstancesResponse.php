@@ -21,7 +21,7 @@ class DeleteInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * result  响应状态
+    * result  操作结果  - success: 成功  - failed: 失败
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class DeleteInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * result  响应状态
+    * result  操作结果  - success: 成功  - failed: 失败
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class DeleteInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * result  响应状态
+    * result  操作结果  - success: 成功  - failed: 失败
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class DeleteInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * result  响应状态
+    * result  操作结果  - success: 成功  - failed: 失败
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class DeleteInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * result  响应状态
+    * result  操作结果  - success: 成功  - failed: 失败
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class DeleteInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  响应状态
+    *  操作结果  - success: 成功  - failed: 失败
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class DeleteInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result 响应状态
+    * @param string|null $result 操作结果  - success: 成功  - failed: 失败
     *
     * @return $this
     */

@@ -33,8 +33,8 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
             'upgradeTypeList' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UpgradeTypeInfo[]',
             'targetVersion' => 'string',
             'upgradeCandidateVersions' => 'string[]',
-            'hotfixUpgradeInfos' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfo[]',
-            'hotfixRollbackInfos' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfo[]'
+            'hotfixUpgradeInfos' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfoResult[]',
+            'hotfixRollbackInfos' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfoResult[]'
     ];
 
     /**
@@ -299,7 +299,7 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
     * Gets hotfixUpgradeInfos
     *  可以升级的热补丁信息。
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfo[]|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfoResult[]|null
     */
     public function getHotfixUpgradeInfos()
     {
@@ -309,7 +309,7 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
     /**
     * Sets hotfixUpgradeInfos
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfo[]|null $hotfixUpgradeInfos 可以升级的热补丁信息。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfoResult[]|null $hotfixUpgradeInfos 可以升级的热补丁信息。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
     * Gets hotfixRollbackInfos
     *  可以回滚的热补丁信息。
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfo[]|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfoResult[]|null
     */
     public function getHotfixRollbackInfos()
     {
@@ -333,7 +333,7 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
     /**
     * Sets hotfixRollbackInfos
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfo[]|null $hotfixRollbackInfos 可以回滚的热补丁信息。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfoResult[]|null $hotfixRollbackInfos 可以回滚的热补丁信息。
     *
     * @return $this
     */

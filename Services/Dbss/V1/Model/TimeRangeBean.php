@@ -149,32 +149,7 @@ class TimeRangeBean implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const TIME_RANGE_HALF_HOUR = 'HALF_HOUR';
-    const TIME_RANGE_HOUR = 'HOUR';
-    const TIME_RANGE_THREE_HOUR = 'THREE_HOUR';
-    const TIME_RANGE_TWELVE_HOUR = 'TWELVE_HOUR';
-    const TIME_RANGE_DAY = 'DAY';
-    const TIME_RANGE_WEEK = 'WEEK';
-    const TIME_RANGE_MONTH = 'MONTH';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getTimeRangeAllowableValues()
-    {
-        return [
-            self::TIME_RANGE_HALF_HOUR,
-            self::TIME_RANGE_HOUR,
-            self::TIME_RANGE_THREE_HOUR,
-            self::TIME_RANGE_TWELVE_HOUR,
-            self::TIME_RANGE_DAY,
-            self::TIME_RANGE_WEEK,
-            self::TIME_RANGE_MONTH,
-        ];
-    }
 
 
     /**
@@ -205,14 +180,6 @@ class TimeRangeBean implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getTimeRangeAllowableValues();
-                if (!is_null($this->container['timeRange']) && !in_array($this->container['timeRange'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'timeRange', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 

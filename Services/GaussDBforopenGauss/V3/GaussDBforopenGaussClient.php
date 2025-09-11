@@ -27,6 +27,74 @@ class GaussDBforopenGaussClient extends Client
 
 
     /**
+     * 新增客户端接入认证配置
+     *
+     * 新增客户端接入认证配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addHbaConfs($request)
+    {
+        return $this->addHbaConfsWithHttpInfo($request);
+    }
+
+    public function addHbaConfsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/hba-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\AddHbaConfsResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\AddHbaConfsRequest');
+    }
+
+    /**
      * 添加实例标签。
      *
      * 对指定实例添加用户标签信息。
@@ -302,7 +370,7 @@ class GaussDBforopenGaussClient extends Client
     }
 
     /**
-     * 查询批量实例可升级的版本和升级类型。
+     * 查询批量实例可升级的版本和升级类型
      *
      * 查询批量实例可升级的版本和升级类型。
      * 
@@ -1298,6 +1366,74 @@ class GaussDBforopenGaussClient extends Client
     }
 
     /**
+     * 创建只读节点
+     *
+     * 创建只读节点。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createReadonlyNodes($request)
+    {
+        return $this->createReadonlyNodesWithHttpInfo($request);
+    }
+
+    public function createReadonlyNodesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/readonly-nodes';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CreateReadonlyNodesResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CreateReadonlyNodesRequest');
+    }
+
+    /**
      * 恢复到新实例
      *
      * 根据备份恢复新实例。
@@ -1694,6 +1830,74 @@ class GaussDBforopenGaussClient extends Client
     }
 
     /**
+     * 删除客户端接入认证配置
+     *
+     * 删除客户端接入认证配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteHbaConfs($request)
+    {
+        return $this->deleteHbaConfsWithHttpInfo($request);
+    }
+
+    public function deleteHbaConfsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/hba-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DeleteHbaConfsResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DeleteHbaConfsRequest');
+    }
+
+    /**
      * 删除实例
      *
      * 删除数据库实例。
@@ -1954,6 +2158,74 @@ class GaussDBforopenGaussClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DeleteManualBackupResponse',
             $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DeleteManualBackupRequest');
+    }
+
+    /**
+     * 删除只读节点
+     *
+     * 删除只读节点。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteReadonlyNodes($request)
+    {
+        return $this->deleteReadonlyNodesWithHttpInfo($request);
+    }
+
+    public function deleteReadonlyNodesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/readonly-nodes';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DeleteReadonlyNodesResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DeleteReadonlyNodesRequest');
     }
 
     /**
@@ -2631,9 +2903,9 @@ class GaussDBforopenGaussClient extends Client
     }
 
     /**
-     * 表信息导出
+     * 导出表信息
      *
-     * 表信息导出
+     * 导出表信息
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3655,6 +3927,86 @@ class GaussDBforopenGaussClient extends Client
     }
 
     /**
+     * 查询数据库表列表
+     *
+     * 查询指定实例的数据库表列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDatabaseSchemaTables($request)
+    {
+        return $this->listDatabaseSchemaTablesWithHttpInfo($request);
+    }
+
+    public function listDatabaseSchemaTablesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/tables';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['dbName'] !== null) {
+            $queryParams['db_name'] = $localVarParams['dbName'];
+        }
+        if ($localVarParams['schemaName'] !== null) {
+            $queryParams['schema_name'] = $localVarParams['schemaName'];
+        }
+        if ($localVarParams['tableNameKeyword'] !== null) {
+            $queryParams['table_name_keyword'] = $localVarParams['tableNameKeyword'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListDatabaseSchemaTablesResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListDatabaseSchemaTablesRequest');
+    }
+
+    /**
      * 查询数据库SCHEMA列表
      *
      * 查询指定实例的数据库SCHEMA列表。
@@ -3726,6 +4078,71 @@ class GaussDBforopenGaussClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListDatabaseSchemasResponse',
             $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListDatabaseSchemasRequest');
+    }
+
+    /**
+     * 查询数据盘空间概况
+     *
+     * 查询数据盘空间概况。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDatabaseVolumeSummary($request)
+    {
+        return $this->listDatabaseVolumeSummaryWithHttpInfo($request);
+    }
+
+    public function listDatabaseVolumeSummaryWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/database-volume-summary';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListDatabaseVolumeSummaryResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListDatabaseVolumeSummaryRequest');
     }
 
     /**
@@ -4584,6 +5001,154 @@ class GaussDBforopenGaussClient extends Client
     }
 
     /**
+     * 查询客户端接入认证配置修改历史
+     *
+     * 查询实例的客户端接入认证配置修改历史。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listHbaInfoHistory($request)
+    {
+        return $this->listHbaInfoHistoryWithHttpInfo($request);
+    }
+
+    public function listHbaInfoHistoryWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/hba-info/history';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListHbaInfoHistoryResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListHbaInfoHistoryRequest');
+    }
+
+    /**
+     * 查询客户端接入认证配置
+     *
+     * 查询客户端接入认证配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listHbaInfos($request)
+    {
+        return $this->listHbaInfosWithHttpInfo($request);
+    }
+
+    public function listHbaInfosWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/hba-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListHbaInfosResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListHbaInfosRequest');
+    }
+
+    /**
      * 查询参数模板的修改历史
      *
      * 查询参数模板的修改历史记录。
@@ -5206,6 +5771,210 @@ class GaussDBforopenGaussClient extends Client
     }
 
     /**
+     * 查询关键视图下发节点信息
+     *
+     * 查询该实例下可用于执行会话查杀功能的节点 (非日志类型的CN或DN节点) 和其所包含的CN、DN组件信息。该接口是会话查杀功能的前提，其返回值中的每一对节点和组件ID是后续查杀会话接口的入参。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listKeyViewExecuteNode($request)
+    {
+        return $this->listKeyViewExecuteNodeWithHttpInfo($request);
+    }
+
+    public function listKeyViewExecuteNodeWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/key-view-execute-node';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListKeyViewExecuteNodeResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListKeyViewExecuteNodeRequest');
+    }
+
+    /**
+     * 查询KMS秘钥列表
+     *
+     * 查询当前可使用的kms秘钥列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listKmsTdeKey($request)
+    {
+        return $this->listKmsTdeKeyWithHttpInfo($request);
+    }
+
+    public function listKmsTdeKeyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/kms/list-keys/{kms_project_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['kmsProjectName'] !== null) {
+            $pathParams['kms_project_name'] = $localVarParams['kmsProjectName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListKmsTdeKeyResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListKmsTdeKeyRequest');
+    }
+
+    /**
+     * 查询实例列表指标
+     *
+     * 查询实例列表指标。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listMetricDatas($request)
+    {
+        return $this->listMetricDatasWithHttpInfo($request);
+    }
+
+    public function listMetricDatasWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/metric-data';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $queryParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListMetricDatasResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListMetricDatasRequest');
+    }
+
+    /**
      * 获取参数模板列表
      *
      * 获取参数模板列表，包括所有数据库的默认参数模板和用户创建的参数模板。
@@ -5531,6 +6300,139 @@ class GaussDBforopenGaussClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListProjectTagsResponse',
             $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListProjectTagsRequest');
+    }
+
+    /**
+     * 查询只读节点信息
+     *
+     * 查询实例的只读节点列表，以及实例可支持的最大只读节点数。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listReadonlyNodes($request)
+    {
+        return $this->listReadonlyNodesWithHttpInfo($request);
+    }
+
+    public function listReadonlyNodesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/readonly-nodes';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListReadonlyNodesResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListReadonlyNodesRequest');
+    }
+
+    /**
+     * 查询实时会话
+     *
+     * 查询数据库实例节点的实时会话列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRealTimeSessions($request)
+    {
+        return $this->listRealTimeSessionsWithHttpInfo($request);
+    }
+
+    public function listRealTimeSessionsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/real-time-session';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListRealTimeSessionsResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListRealTimeSessionsRequest');
     }
 
     /**
@@ -5984,7 +6886,7 @@ class GaussDBforopenGaussClient extends Client
     /**
      * 识别SQL文本中的表信息
      *
-     * 识别SQL文本中的表信息
+     * 识别SQL文本中的表信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6047,6 +6949,86 @@ class GaussDBforopenGaussClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListSchemaAndTableResponse',
             $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListSchemaAndTableRequest');
+    }
+
+    /**
+     * 查询实时会话统计
+     *
+     * 查询数据库实例节点的实时会话统计信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSessionStatistics($request)
+    {
+        return $this->listSessionStatisticsWithHttpInfo($request);
+    }
+
+    public function listSessionStatisticsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/session-statistics';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['dimension'] !== null) {
+            $queryParams['dimension'] = $localVarParams['dimension'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['orderField'] !== null) {
+            $queryParams['order_field'] = $localVarParams['orderField'];
+        }
+        if ($localVarParams['order'] !== null) {
+            $queryParams['order'] = $localVarParams['order'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListSessionStatisticsResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListSessionStatisticsRequest');
     }
 
     /**
@@ -6177,6 +7159,154 @@ class GaussDBforopenGaussClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListSupportKernelPluginsResponse',
             $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListSupportKernelPluginsRequest');
+    }
+
+    /**
+     * 查询表定义信息
+     *
+     * 查询表定义信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTableDefinition($request)
+    {
+        return $this->listTableDefinitionWithHttpInfo($request);
+    }
+
+    public function listTableDefinitionWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/table-definition';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['databaseName'] !== null) {
+            $queryParams['database_name'] = $localVarParams['databaseName'];
+        }
+        if ($localVarParams['schemaName'] !== null) {
+            $queryParams['schema_name'] = $localVarParams['schemaName'];
+        }
+        if ($localVarParams['tableName'] !== null) {
+            $queryParams['table_name'] = $localVarParams['tableName'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'table_definition']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'table_definition'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTableDefinitionResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTableDefinitionRequest');
+    }
+
+    /**
+     * 查询指定表的表定义信息列表
+     *
+     * 查询指定表的表定义信息列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTableDefinitions($request)
+    {
+        return $this->listTableDefinitionsWithHttpInfo($request);
+    }
+
+    public function listTableDefinitionsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/list-table-definition';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['databaseName'] !== null) {
+            $queryParams['database_name'] = $localVarParams['databaseName'];
+        }
+        if ($localVarParams['schemaName'] !== null) {
+            $queryParams['schema_name'] = $localVarParams['schemaName'];
+        }
+        if ($localVarParams['tableName'] !== null) {
+            $queryParams['table_name'] = $localVarParams['tableName'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTableDefinitionsResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTableDefinitionsRequest');
     }
 
     /**
@@ -6322,6 +7452,74 @@ class GaussDBforopenGaussClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ModifyEpsQuotaResponse',
             $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ModifyEpsQuotaRequest');
+    }
+
+    /**
+     * 修改客户端接入认证配置
+     *
+     * 修改客户端接入认证配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyHbaConf($request)
+    {
+        return $this->modifyHbaConfWithHttpInfo($request);
+    }
+
+    public function modifyHbaConfWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/hba-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ModifyHbaConfResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ModifyHbaConfRequest');
     }
 
     /**
@@ -6656,6 +7854,74 @@ class GaussDBforopenGaussClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RestartInstanceResponse',
             $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RestartInstanceRequest');
+    }
+
+    /**
+     * 恢复客户端接入认证配置信息
+     *
+     * 恢复客户端接入认证配置信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function restoreHbaInfo($request)
+    {
+        return $this->restoreHbaInfoWithHttpInfo($request);
+    }
+
+    public function restoreHbaInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/restore-hba-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RestoreHbaInfoResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RestoreHbaInfoRequest');
     }
 
     /**
@@ -7256,6 +8522,74 @@ class GaussDBforopenGaussClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\SetRecyclePolicyResponse',
             $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\SetRecyclePolicyRequest');
+    }
+
+    /**
+     * 实例告警信息汇总统计
+     *
+     * 实例告警信息汇总统计。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAlarmStatistics($request)
+    {
+        return $this->showAlarmStatisticsWithHttpInfo($request);
+    }
+
+    public function showAlarmStatisticsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/alarm-statistics';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['topNum'] !== null) {
+            $queryParams['top_num'] = $localVarParams['topNum'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowAlarmStatisticsResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowAlarmStatisticsRequest');
     }
 
     /**
@@ -7933,6 +9267,86 @@ class GaussDBforopenGaussClient extends Client
     }
 
     /**
+     * 查询实例指标数据
+     *
+     * 查询实例指标数据。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showInstanceMetricData($request)
+    {
+        return $this->showInstanceMetricDataWithHttpInfo($request);
+    }
+
+    public function showInstanceMetricDataWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/metric-data';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['metric'] !== null) {
+            $queryParams['metric'] = $localVarParams['metric'];
+        }
+        if ($localVarParams['nodeId'] !== null) {
+            $queryParams['node_id'] = $localVarParams['nodeId'];
+        }
+        if ($localVarParams['componentId'] !== null) {
+            $queryParams['component_id'] = $localVarParams['componentId'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowInstanceMetricDataResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowInstanceMetricDataRequest');
+    }
+
+    /**
      * 获取指定实例的参数模板
      *
      * 获取指定实例的参数模板。
@@ -8134,6 +9548,68 @@ class GaussDBforopenGaussClient extends Client
     }
 
     /**
+     * 实例状态统计
+     *
+     * 实例状态统计。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showInstancesStatistics($request)
+    {
+        return $this->showInstancesStatisticsWithHttpInfo($request);
+    }
+
+    public function showInstancesStatisticsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/instances-statistics';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowInstancesStatisticsResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowInstancesStatisticsRequest');
+    }
+
+    /**
      * 获取指定ID的任务信息。
      *
      * 获取指定ID的任务信息。
@@ -8193,6 +9669,139 @@ class GaussDBforopenGaussClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowJobDetailResponse',
             $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowJobDetailRequest');
+    }
+
+    /**
+     * 查询KMS秘钥详情
+     *
+     * 查询KMS秘钥详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showKmsKeyDetail($request)
+    {
+        return $this->showKmsKeyDetailWithHttpInfo($request);
+    }
+
+    public function showKmsKeyDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/kms/{kms_key_id}/describe-key/{kms_project_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['kmsKeyId'] !== null) {
+            $pathParams['kms_key_id'] = $localVarParams['kmsKeyId'];
+        }
+        if ($localVarParams['kmsProjectName'] !== null) {
+            $pathParams['kms_project_name'] = $localVarParams['kmsProjectName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowKmsKeyDetailResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowKmsKeyDetailRequest');
+    }
+
+    /**
+     * 查询指标分组的指标名称
+     *
+     * 查询指标分组的指标名称。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showMetricNames($request)
+    {
+        return $this->showMetricNamesWithHttpInfo($request);
+    }
+
+    public function showMetricNamesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/metric-name';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['groupName'] !== null) {
+            $queryParams['group_name'] = $localVarParams['groupName'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowMetricNamesResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowMetricNamesRequest');
     }
 
     /**
@@ -8387,6 +9996,71 @@ class GaussDBforopenGaussClient extends Client
     }
 
     /**
+     * 查询实时会话概览
+     *
+     * 查询数据库实例节点的实时会话概览信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSessionOverview($request)
+    {
+        return $this->showSessionOverviewWithHttpInfo($request);
+    }
+
+    public function showSessionOverviewWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/session-overview';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowSessionOverviewResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowSessionOverviewRequest');
+    }
+
+    /**
      * 查询慢日志下载信息
      *
      * 查询慢日志下载信息
@@ -8449,6 +10123,154 @@ class GaussDBforopenGaussClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowSlowLogDownloadResponse',
             $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowSlowLogDownloadRequest');
+    }
+
+    /**
+     * 查询SQL执行计划信息
+     *
+     * 查询等待事件的SQL执行计划信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSlowSqlPlan($request)
+    {
+        return $this->showSlowSqlPlanWithHttpInfo($request);
+    }
+
+    public function showSlowSqlPlanWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/slow-sql/optimization/plan';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['pid'] !== null) {
+            $queryParams['pid'] = $localVarParams['pid'];
+        }
+        if ($localVarParams['nodeId'] !== null) {
+            $queryParams['node_id'] = $localVarParams['nodeId'];
+        }
+        if ($localVarParams['compId'] !== null) {
+            $queryParams['comp_id'] = $localVarParams['compId'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowSlowSqlPlanResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowSlowSqlPlanRequest');
+    }
+
+    /**
+     * 查询SQL堆栈信息
+     *
+     * 查询等待事件的SQL堆栈信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSlowSqlStack($request)
+    {
+        return $this->showSlowSqlStackWithHttpInfo($request);
+    }
+
+    public function showSlowSqlStackWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/slow-sql/optimization/stack';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['pid'] !== null) {
+            $queryParams['pid'] = $localVarParams['pid'];
+        }
+        if ($localVarParams['nodeId'] !== null) {
+            $queryParams['node_id'] = $localVarParams['nodeId'];
+        }
+        if ($localVarParams['compId'] !== null) {
+            $queryParams['comp_id'] = $localVarParams['compId'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowSlowSqlStackResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowSlowSqlStackRequest');
     }
 
     /**
@@ -8718,9 +10540,9 @@ class GaussDBforopenGaussClient extends Client
     }
 
     /**
-     * 启动数据库
+     * 启动实例/节点
      *
-     * 启动数据库，同时支持节点级别的启动操作
+     * 启动实例/节点。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8919,9 +10741,77 @@ class GaussDBforopenGaussClient extends Client
     }
 
     /**
-     * 停止数据库
+     * 结束空闲会话
      *
-     * 停止数据库,同时支持节点级别的停止操作
+     * 结束空闲会话。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function stopFreeSession($request)
+    {
+        return $this->stopFreeSessionWithHttpInfo($request);
+    }
+
+    public function stopFreeSessionWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/kill-free-session';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\StopFreeSessionResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\StopFreeSessionRequest');
+    }
+
+    /**
+     * 停止实例/节点
+     *
+     * 停止数据库，同时支持节点级别的停止操作。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8984,6 +10874,74 @@ class GaussDBforopenGaussClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\StopInstanceResponse',
             $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\StopInstanceRequest');
+    }
+
+    /**
+     * 结束会话
+     *
+     * 查杀指定会话列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function stopSession($request)
+    {
+        return $this->stopSessionWithHttpInfo($request);
+    }
+
+    public function stopSessionWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/kill-session';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\StopSessionResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\StopSessionRequest');
     }
 
     /**
@@ -9052,6 +11010,142 @@ class GaussDBforopenGaussClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\SwitchConfigurationResponse',
             $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\SwitchConfigurationRequest');
+    }
+
+    /**
+     * 开启透明加密
+     *
+     * 开启透明加密。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function switchKmsTde($request)
+    {
+        return $this->switchKmsTdeWithHttpInfo($request);
+    }
+
+    public function switchKmsTdeWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/kms-tde/switch';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\SwitchKmsTdeResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\SwitchKmsTdeRequest');
+    }
+
+    /**
+     * 分布式实例一主一备一日志形态切换到一主两备形态
+     *
+     * 当前只支持分布式独立部署一主一备一日志切换至一主两备形态。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function switchReplica($request)
+    {
+        return $this->switchReplicaWithHttpInfo($request);
+    }
+
+    public function switchReplicaWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/switch-replica';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\SwitchReplicaResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\SwitchReplicaRequest');
     }
 
     /**
@@ -9395,6 +11489,74 @@ class GaussDBforopenGaussClient extends Client
     }
 
     /**
+     * 修改重分布参数
+     *
+     * 修改重分布参数。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateRedistributionControl($request)
+    {
+        return $this->updateRedistributionControlWithHttpInfo($request);
+    }
+
+    public function updateRedistributionControlWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/redistribution-parameters';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UpdateRedistributionControlResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UpdateRedistributionControlRequest');
+    }
+
+    /**
      * 实例内核版本升级
      *
      * GaussDB(for openGauss)实例版本升级。包括灰度升级，就地升级，热补丁升级等三种升级方式。
@@ -9679,6 +11841,216 @@ class GaussDBforopenGaussClient extends Client
     }
 
     /**
+     * 关联LTS日志流
+     *
+     * 关联LTS日志流。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function bindLtsConfig($request)
+    {
+        return $this->bindLtsConfigWithHttpInfo($request);
+    }
+
+    public function bindLtsConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/logs/lts-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BindLtsConfigResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BindLtsConfigRequest');
+    }
+
+    /**
+     * 查看LTS日志配置信息
+     *
+     * 查看LTS日志配置信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listLtsConfigs($request)
+    {
+        return $this->listLtsConfigsWithHttpInfo($request);
+    }
+
+    public function listLtsConfigsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/logs/lts-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceName'] !== null) {
+            $queryParams['instance_name'] = $localVarParams['instanceName'];
+        }
+        if ($localVarParams['instanceMode'] !== null) {
+            $queryParams['instance_mode'] = $localVarParams['instanceMode'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListLtsConfigsResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListLtsConfigsRequest');
+    }
+
+    /**
+     * 解除关联LTS日志流
+     *
+     * 解除关联LTS日志流。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function unbindLtsConfig($request)
+    {
+        return $this->unbindLtsConfigWithHttpInfo($request);
+    }
+
+    public function unbindLtsConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/logs/lts-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UnbindLtsConfigResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UnbindLtsConfigRequest');
+    }
+
+    /**
      * 创建限流任务
      *
      * 根据具体范围和类型，进行限流任务的创建
@@ -9806,6 +12178,74 @@ class GaussDBforopenGaussClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DeleteLimitTaskResponse',
             $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DeleteLimitTaskRequest');
+    }
+
+    /**
+     * 查询实例全量SQL聚合统计列表
+     *
+     * 查询GaussDB数据库实例全量SQL聚合统计列表，主要统计各唯一SQL ID下的SQL记录总数量以及相关时间指标的平均值。支持增强型条件过滤， 如可以对SQL文本（query字段）进行多条件合并查询，对total_sql_time、sql_count字段进行大于、小于、区间范围等条件的过滤。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listEnhanceFullSqlStatistics($request)
+    {
+        return $this->listEnhanceFullSqlStatisticsWithHttpInfo($request);
+    }
+
+    public function listEnhanceFullSqlStatisticsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/list-full-sql-statistics';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListEnhanceFullSqlStatisticsResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListEnhanceFullSqlStatisticsRequest');
     }
 
     /**
@@ -9972,6 +12412,278 @@ class GaussDBforopenGaussClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListNodeLimitSqlModelResponse',
             $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListNodeLimitSqlModelRequest');
+    }
+
+    /**
+     * 查询慢SQL详情
+     *
+     * 根据归一化SQLID，查询该SQL模板详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSlowSqlDetails($request)
+    {
+        return $this->listSlowSqlDetailsWithHttpInfo($request);
+    }
+
+    public function listSlowSqlDetailsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/slow-sql-detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListSlowSqlDetailsResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListSlowSqlDetailsRequest');
+    }
+
+    /**
+     * 查询慢SQL列表
+     *
+     * 查询慢SQL列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSlowSqls($request)
+    {
+        return $this->listSlowSqlsWithHttpInfo($request);
+    }
+
+    public function listSlowSqlsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/slow-sql-list';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListSlowSqlsResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListSlowSqlsRequest');
+    }
+
+    /**
+     * 查询慢SQL节点信息
+     *
+     * 根据实例ID查询慢SQL节点信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSqlExcuteNodes($request)
+    {
+        return $this->listSqlExcuteNodesWithHttpInfo($request);
+    }
+
+    public function listSqlExcuteNodesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/slow-sql-execute-node';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListSqlExcuteNodesResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListSqlExcuteNodesRequest');
+    }
+
+    /**
+     * 查询全局慢SQL详情
+     *
+     * 根据唯一SQLID，查询指定组件的慢SQL详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showGlobalSlowSqlDetail($request)
+    {
+        return $this->showGlobalSlowSqlDetailWithHttpInfo($request);
+    }
+
+    public function showGlobalSlowSqlDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/global-slow-sql-detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowGlobalSlowSqlDetailResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowGlobalSlowSqlDetailRequest');
     }
 
     /**
@@ -10167,6 +12879,340 @@ class GaussDBforopenGaussClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UpdateLimitTaskResponse',
             $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UpdateLimitTaskRequest');
+    }
+
+    /**
+     * 查询TopSQL列表
+     *
+     * 查询TopSQL列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTopSqls($request)
+    {
+        return $this->listTopSqlsWithHttpInfo($request);
+    }
+
+    public function listTopSqlsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/top-sql-list';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTopSqlsResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTopSqlsRequest');
+    }
+
+    /**
+     * 采集WDR快照报告
+     *
+     * 采集WDR快照报告。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function collectWdrSnapshot($request)
+    {
+        return $this->collectWdrSnapshotWithHttpInfo($request);
+    }
+
+    public function collectWdrSnapshotWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/wdr-snapshots/collect';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CollectWdrSnapshotResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CollectWdrSnapshotRequest');
+    }
+
+    /**
+     * 生成WDR快照
+     *
+     * 生成WDR快照。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createWdrSnapshot($request)
+    {
+        return $this->createWdrSnapshotWithHttpInfo($request);
+    }
+
+    public function createWdrSnapshotWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/wdr-snapshots';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CreateWdrSnapshotResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CreateWdrSnapshotRequest');
+    }
+
+    /**
+     * 查询WDR快照开关状态
+     *
+     * 查询WDR快照开关状态。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showWdrSnapshotStatus($request)
+    {
+        return $this->showWdrSnapshotStatusWithHttpInfo($request);
+    }
+
+    public function showWdrSnapshotStatusWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/wdr-snapshot/status';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowWdrSnapshotStatusResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowWdrSnapshotStatusRequest');
+    }
+
+    /**
+     * 打开或关闭WDR快照开关
+     *
+     * 打开或关闭WDR快照开关。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function switchWdrSnapshotStatus($request)
+    {
+        return $this->switchWdrSnapshotStatusWithHttpInfo($request);
+    }
+
+    public function switchWdrSnapshotStatusWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/wdr-snapshot/status';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\SwitchWdrSnapshotStatusResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\SwitchWdrSnapshotStatusRequest');
     }
 
     protected function callApi(

@@ -22,7 +22,7 @@ class Accessory implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  附件ID
     * artifactId  附件制品ID
-    * subjectArtifactId  附件所属制品ID.
+    * subjectArtifactId  附件所属的父制品ID.
     * size  附件的大小
     * digest  附件的sha256值
     * type  附件的类型
@@ -37,14 +37,14 @@ class Accessory implements ModelInterface, ArrayAccess
             'size' => 'int',
             'digest' => 'string',
             'type' => 'string',
-            'createdAt' => '\DateTime'
+            'createdAt' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  附件ID
     * artifactId  附件制品ID
-    * subjectArtifactId  附件所属制品ID.
+    * subjectArtifactId  附件所属的父制品ID.
     * size  附件的大小
     * digest  附件的sha256值
     * type  附件的类型
@@ -59,7 +59,7 @@ class Accessory implements ModelInterface, ArrayAccess
         'size' => 'int64',
         'digest' => null,
         'type' => null,
-        'createdAt' => 'date-time'
+        'createdAt' => null
     ];
 
     /**
@@ -87,7 +87,7 @@ class Accessory implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  附件ID
     * artifactId  附件制品ID
-    * subjectArtifactId  附件所属制品ID.
+    * subjectArtifactId  附件所属的父制品ID.
     * size  附件的大小
     * digest  附件的sha256值
     * type  附件的类型
@@ -109,7 +109,7 @@ class Accessory implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  附件ID
     * artifactId  附件制品ID
-    * subjectArtifactId  附件所属制品ID.
+    * subjectArtifactId  附件所属的父制品ID.
     * size  附件的大小
     * digest  附件的sha256值
     * type  附件的类型
@@ -131,7 +131,7 @@ class Accessory implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  附件ID
     * artifactId  附件制品ID
-    * subjectArtifactId  附件所属制品ID.
+    * subjectArtifactId  附件所属的父制品ID.
     * size  附件的大小
     * digest  附件的sha256值
     * type  附件的类型
@@ -309,7 +309,7 @@ class Accessory implements ModelInterface, ArrayAccess
 
     /**
     * Gets subjectArtifactId
-    *  附件所属制品ID.
+    *  附件所属的父制品ID.
     *
     * @return int|null
     */
@@ -321,7 +321,7 @@ class Accessory implements ModelInterface, ArrayAccess
     /**
     * Sets subjectArtifactId
     *
-    * @param int|null $subjectArtifactId 附件所属制品ID.
+    * @param int|null $subjectArtifactId 附件所属的父制品ID.
     *
     * @return $this
     */
@@ -407,7 +407,7 @@ class Accessory implements ModelInterface, ArrayAccess
     * Gets createdAt
     *  附件的创建时间
     *
-    * @return \DateTime|null
+    * @return string|null
     */
     public function getCreatedAt()
     {
@@ -417,7 +417,7 @@ class Accessory implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param \DateTime|null $createdAt 附件的创建时间
+    * @param string|null $createdAt 附件的创建时间
     *
     * @return $this
     */

@@ -20,11 +20,11 @@ class ImmutableRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  不可变规则ID
-    * namespaceId  namespaceId
-    * namespaceName  namespaceName
-    * priority  priority
-    * disabled  不可变规则是否生效
+    * id  不可变策略ID
+    * namespaceId  命名空间ID
+    * namespaceName  命名空间名称
+    * priority  优先级，保留字段
+    * disabled  不可变策略是否生效
     * action  预留字段，仅支持填immutable
     * template  预留字段，仅支持填immutable_template
     * tagSelectors  制品版本选择器，目前只支持长度为1
@@ -46,11 +46,11 @@ class ImmutableRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  不可变规则ID
-    * namespaceId  namespaceId
-    * namespaceName  namespaceName
-    * priority  priority
-    * disabled  不可变规则是否生效
+    * id  不可变策略ID
+    * namespaceId  命名空间ID
+    * namespaceName  命名空间名称
+    * priority  优先级，保留字段
+    * disabled  不可变策略是否生效
     * action  预留字段，仅支持填immutable
     * template  预留字段，仅支持填immutable_template
     * tagSelectors  制品版本选择器，目前只支持长度为1
@@ -93,11 +93,11 @@ class ImmutableRule implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  不可变规则ID
-    * namespaceId  namespaceId
-    * namespaceName  namespaceName
-    * priority  priority
-    * disabled  不可变规则是否生效
+    * id  不可变策略ID
+    * namespaceId  命名空间ID
+    * namespaceName  命名空间名称
+    * priority  优先级，保留字段
+    * disabled  不可变策略是否生效
     * action  预留字段，仅支持填immutable
     * template  预留字段，仅支持填immutable_template
     * tagSelectors  制品版本选择器，目前只支持长度为1
@@ -119,11 +119,11 @@ class ImmutableRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  不可变规则ID
-    * namespaceId  namespaceId
-    * namespaceName  namespaceName
-    * priority  priority
-    * disabled  不可变规则是否生效
+    * id  不可变策略ID
+    * namespaceId  命名空间ID
+    * namespaceName  命名空间名称
+    * priority  优先级，保留字段
+    * disabled  不可变策略是否生效
     * action  预留字段，仅支持填immutable
     * template  预留字段，仅支持填immutable_template
     * tagSelectors  制品版本选择器，目前只支持长度为1
@@ -145,11 +145,11 @@ class ImmutableRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  不可变规则ID
-    * namespaceId  namespaceId
-    * namespaceName  namespaceName
-    * priority  priority
-    * disabled  不可变规则是否生效
+    * id  不可变策略ID
+    * namespaceId  命名空间ID
+    * namespaceName  命名空间名称
+    * priority  优先级，保留字段
+    * disabled  不可变策略是否生效
     * action  预留字段，仅支持填immutable
     * template  预留字段，仅支持填immutable_template
     * tagSelectors  制品版本选择器，目前只支持长度为1
@@ -262,7 +262,7 @@ class ImmutableRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  不可变规则ID
+    *  不可变策略ID
     *
     * @return int|null
     */
@@ -274,7 +274,7 @@ class ImmutableRule implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 不可变规则ID
+    * @param int|null $id 不可变策略ID
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class ImmutableRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespaceId
-    *  namespaceId
+    *  命名空间ID
     *
     * @return int|null
     */
@@ -298,7 +298,7 @@ class ImmutableRule implements ModelInterface, ArrayAccess
     /**
     * Sets namespaceId
     *
-    * @param int|null $namespaceId namespaceId
+    * @param int|null $namespaceId 命名空间ID
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class ImmutableRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespaceName
-    *  namespaceName
+    *  命名空间名称
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class ImmutableRule implements ModelInterface, ArrayAccess
     /**
     * Sets namespaceName
     *
-    * @param string|null $namespaceName namespaceName
+    * @param string|null $namespaceName 命名空间名称
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class ImmutableRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  priority
+    *  优先级，保留字段
     *
     * @return int|null
     */
@@ -346,7 +346,7 @@ class ImmutableRule implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param int|null $priority priority
+    * @param int|null $priority 优先级，保留字段
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class ImmutableRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets disabled
-    *  不可变规则是否生效
+    *  不可变策略是否生效
     *
     * @return bool|null
     */
@@ -370,7 +370,7 @@ class ImmutableRule implements ModelInterface, ArrayAccess
     /**
     * Sets disabled
     *
-    * @param bool|null $disabled 不可变规则是否生效
+    * @param bool|null $disabled 不可变策略是否生效
     *
     * @return $this
     */

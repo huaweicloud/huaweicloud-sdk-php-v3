@@ -53,7 +53,7 @@ class InternalEndpoint implements ModelInterface, ArrayAccess
             'description' => 'string',
             'status' => 'string',
             'statusText' => 'string',
-            'createdAt' => '\DateTime'
+            'createdAt' => 'string'
     ];
 
     /**
@@ -91,7 +91,7 @@ class InternalEndpoint implements ModelInterface, ArrayAccess
         'description' => null,
         'status' => null,
         'statusText' => null,
-        'createdAt' => 'date-time'
+        'createdAt' => null
     ];
 
     /**
@@ -695,7 +695,7 @@ class InternalEndpoint implements ModelInterface, ArrayAccess
     * Gets createdAt
     *  访问控制的创建时间
     *
-    * @return \DateTime|null
+    * @return string|null
     */
     public function getCreatedAt()
     {
@@ -705,7 +705,7 @@ class InternalEndpoint implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param \DateTime|null $createdAt 访问控制的创建时间
+    * @param string|null $createdAt 访问控制的创建时间
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ShowInstanceResourceInstancesCountResponse implements ModelInterface, Arra
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalCount  资源实例数量
+    * totalCount  资源数量
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowInstanceResourceInstancesCountResponse implements ModelInterface, Arra
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalCount  资源实例数量
+    * totalCount  资源数量
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowInstanceResourceInstancesCountResponse implements ModelInterface, Arra
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalCount  资源实例数量
+    * totalCount  资源数量
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowInstanceResourceInstancesCountResponse implements ModelInterface, Arra
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalCount  资源实例数量
+    * totalCount  资源数量
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowInstanceResourceInstancesCountResponse implements ModelInterface, Arra
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalCount  资源实例数量
+    * totalCount  资源数量
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowInstanceResourceInstancesCountResponse implements ModelInterface, Arra
 
     /**
     * Gets totalCount
-    *  资源实例数量
+    *  资源数量
     *
     * @return int|null
     */
@@ -187,7 +187,7 @@ class ShowInstanceResourceInstancesCountResponse implements ModelInterface, Arra
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount 资源实例数量
+    * @param int|null $totalCount 资源数量
     *
     * @return $this
     */

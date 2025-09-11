@@ -23,9 +23,9 @@ class BuildHistory implements ModelInterface, ArrayAccess
     * createdAt  构建时间
     * createdBy  构建命令
     * emptyLayer  是否空层
-    * mediaType  层格式
-    * size  层大小
-    * digest  层sha256信息
+    * mediaType  镜像层格式
+    * size  镜像层大小
+    * digest  镜像层sha256信息
     *
     * @var string[]
     */
@@ -43,9 +43,9 @@ class BuildHistory implements ModelInterface, ArrayAccess
     * createdAt  构建时间
     * createdBy  构建命令
     * emptyLayer  是否空层
-    * mediaType  层格式
-    * size  层大小
-    * digest  层sha256信息
+    * mediaType  镜像层格式
+    * size  镜像层大小
+    * digest  镜像层sha256信息
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class BuildHistory implements ModelInterface, ArrayAccess
     * createdAt  构建时间
     * createdBy  构建命令
     * emptyLayer  是否空层
-    * mediaType  层格式
-    * size  层大小
-    * digest  层sha256信息
+    * mediaType  镜像层格式
+    * size  镜像层大小
+    * digest  镜像层sha256信息
     *
     * @var string[]
     */
@@ -104,9 +104,9 @@ class BuildHistory implements ModelInterface, ArrayAccess
     * createdAt  构建时间
     * createdBy  构建命令
     * emptyLayer  是否空层
-    * mediaType  层格式
-    * size  层大小
-    * digest  层sha256信息
+    * mediaType  镜像层格式
+    * size  镜像层大小
+    * digest  镜像层sha256信息
     *
     * @var string[]
     */
@@ -124,9 +124,9 @@ class BuildHistory implements ModelInterface, ArrayAccess
     * createdAt  构建时间
     * createdBy  构建命令
     * emptyLayer  是否空层
-    * mediaType  层格式
-    * size  层大小
-    * digest  层sha256信息
+    * mediaType  镜像层格式
+    * size  镜像层大小
+    * digest  镜像层sha256信息
     *
     * @var string[]
     */
@@ -319,7 +319,7 @@ class BuildHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets mediaType
-    *  层格式
+    *  镜像层格式
     *
     * @return string
     */
@@ -331,7 +331,7 @@ class BuildHistory implements ModelInterface, ArrayAccess
     /**
     * Sets mediaType
     *
-    * @param string $mediaType 层格式
+    * @param string $mediaType 镜像层格式
     *
     * @return $this
     */
@@ -343,7 +343,7 @@ class BuildHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  层大小
+    *  镜像层大小
     *
     * @return int
     */
@@ -355,7 +355,7 @@ class BuildHistory implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int $size 层大小
+    * @param int $size 镜像层大小
     *
     * @return $this
     */
@@ -367,7 +367,7 @@ class BuildHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets digest
-    *  层sha256信息
+    *  镜像层sha256信息
     *
     * @return string
     */
@@ -379,7 +379,7 @@ class BuildHistory implements ModelInterface, ArrayAccess
     /**
     * Sets digest
     *
-    * @param string $digest 层sha256信息
+    * @param string $digest 镜像层sha256信息
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class BatchCreateAgentInvocationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * invocations  创建任务的信息列表
+    * invocations  **参数解释**: 创建任务的信息列表 **取值范围**: 数组长度范围为[0,100]
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class BatchCreateAgentInvocationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * invocations  创建任务的信息列表
+    * invocations  **参数解释**: 创建任务的信息列表 **取值范围**: 数组长度范围为[0,100]
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class BatchCreateAgentInvocationsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * invocations  创建任务的信息列表
+    * invocations  **参数解释**: 创建任务的信息列表 **取值范围**: 数组长度范围为[0,100]
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class BatchCreateAgentInvocationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * invocations  创建任务的信息列表
+    * invocations  **参数解释**: 创建任务的信息列表 **取值范围**: 数组长度范围为[0,100]
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class BatchCreateAgentInvocationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * invocations  创建任务的信息列表
+    * invocations  **参数解释**: 创建任务的信息列表 **取值范围**: 数组长度范围为[0,100]
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class BatchCreateAgentInvocationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocations
-    *  创建任务的信息列表
+    *  **参数解释**: 创建任务的信息列表 **取值范围**: 数组长度范围为[0,100]
     *
     * @return \HuaweiCloud\SDK\Ces\V3\Model\BatchCreateInvocationInfo[]|null
     */
@@ -187,7 +187,7 @@ class BatchCreateAgentInvocationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets invocations
     *
-    * @param \HuaweiCloud\SDK\Ces\V3\Model\BatchCreateInvocationInfo[]|null $invocations 创建任务的信息列表
+    * @param \HuaweiCloud\SDK\Ces\V3\Model\BatchCreateInvocationInfo[]|null $invocations **参数解释**: 创建任务的信息列表 **取值范围**: 数组长度范围为[0,100]
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class BatchEnableAlarmsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmIds  需要批量启停的告警规则的ID列表
-    * alarmEnabled  是否开启告警规则。true:开启，false:关闭。
+    * alarmIds  **参数解释**： 需要批量启停的告警规则的ID列表。 **约束限制**： 告警规则的ID的数量最多为100个，最少1个。
+    * alarmEnabled  **参数解释**： 是否开启告警规则。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class BatchEnableAlarmsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmIds  需要批量启停的告警规则的ID列表
-    * alarmEnabled  是否开启告警规则。true:开启，false:关闭。
+    * alarmIds  **参数解释**： 需要批量启停的告警规则的ID列表。 **约束限制**： 告警规则的ID的数量最多为100个，最少1个。
+    * alarmEnabled  **参数解释**： 是否开启告警规则。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BatchEnableAlarmsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmIds  需要批量启停的告警规则的ID列表
-    * alarmEnabled  是否开启告警规则。true:开启，false:关闭。
+    * alarmIds  **参数解释**： 需要批量启停的告警规则的ID列表。 **约束限制**： 告警规则的ID的数量最多为100个，最少1个。
+    * alarmEnabled  **参数解释**： 是否开启告警规则。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BatchEnableAlarmsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmIds  需要批量启停的告警规则的ID列表
-    * alarmEnabled  是否开启告警规则。true:开启，false:关闭。
+    * alarmIds  **参数解释**： 需要批量启停的告警规则的ID列表。 **约束限制**： 告警规则的ID的数量最多为100个，最少1个。
+    * alarmEnabled  **参数解释**： 是否开启告警规则。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BatchEnableAlarmsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmIds  需要批量启停的告警规则的ID列表
-    * alarmEnabled  是否开启告警规则。true:开启，false:关闭。
+    * alarmIds  **参数解释**： 需要批量启停的告警规则的ID列表。 **约束限制**： 告警规则的ID的数量最多为100个，最少1个。
+    * alarmEnabled  **参数解释**： 是否开启告警规则。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class BatchEnableAlarmsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmIds
-    *  需要批量启停的告警规则的ID列表
+    *  **参数解释**： 需要批量启停的告警规则的ID列表。 **约束限制**： 告警规则的ID的数量最多为100个，最少1个。
     *
     * @return string[]
     */
@@ -203,7 +203,7 @@ class BatchEnableAlarmsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmIds
     *
-    * @param string[] $alarmIds 需要批量启停的告警规则的ID列表
+    * @param string[] $alarmIds **参数解释**： 需要批量启停的告警规则的ID列表。 **约束限制**： 告警规则的ID的数量最多为100个，最少1个。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class BatchEnableAlarmsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmEnabled
-    *  是否开启告警规则。true:开启，false:关闭。
+    *  **参数解释**： 是否开启告警规则。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
     *
     * @return bool
     */
@@ -227,7 +227,7 @@ class BatchEnableAlarmsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmEnabled
     *
-    * @param bool $alarmEnabled 是否开启告警规则。true:开启，false:关闭。
+    * @param bool $alarmEnabled **参数解释**： 是否开启告警规则。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
     *
     * @return $this
     */

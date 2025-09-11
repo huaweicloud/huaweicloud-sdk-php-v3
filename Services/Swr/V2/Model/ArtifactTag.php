@@ -34,8 +34,8 @@ class ArtifactTag implements ModelInterface, ArrayAccess
             'repositoryId' => 'int',
             'artifactId' => 'int',
             'name' => 'string',
-            'pushTime' => '\DateTime',
-            'pullTime' => '\DateTime'
+            'pushTime' => 'string',
+            'pullTime' => 'string'
     ];
 
     /**
@@ -54,8 +54,8 @@ class ArtifactTag implements ModelInterface, ArrayAccess
         'repositoryId' => 'int64',
         'artifactId' => 'int64',
         'name' => null,
-        'pushTime' => 'date-time',
-        'pullTime' => 'date-time'
+        'pushTime' => null,
+        'pullTime' => null
     ];
 
     /**
@@ -327,7 +327,7 @@ class ArtifactTag implements ModelInterface, ArrayAccess
     * Gets pushTime
     *  tag的上传时间
     *
-    * @return \DateTime|null
+    * @return string|null
     */
     public function getPushTime()
     {
@@ -337,7 +337,7 @@ class ArtifactTag implements ModelInterface, ArrayAccess
     /**
     * Sets pushTime
     *
-    * @param \DateTime|null $pushTime tag的上传时间
+    * @param string|null $pushTime tag的上传时间
     *
     * @return $this
     */
@@ -351,7 +351,7 @@ class ArtifactTag implements ModelInterface, ArrayAccess
     * Gets pullTime
     *  tag的下载时间
     *
-    * @return \DateTime|null
+    * @return string|null
     */
     public function getPullTime()
     {
@@ -361,7 +361,7 @@ class ArtifactTag implements ModelInterface, ArrayAccess
     /**
     * Sets pullTime
     *
-    * @param \DateTime|null $pullTime tag的下载时间
+    * @param string|null $pullTime tag的下载时间
     *
     * @return $this
     */

@@ -21,17 +21,17 @@ class ListCesTargetProjectTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tags  租户标签列表
+    * tags  **参数解释**： 租户标签列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\Ces\V2\Model\Tag[]'
+            'tags' => '\HuaweiCloud\SDK\Ces\V2\Model\TagResp[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tags  租户标签列表
+    * tags  **参数解释**： 租户标签列表。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListCesTargetProjectTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tags  租户标签列表
+    * tags  **参数解释**： 租户标签列表。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListCesTargetProjectTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tags  租户标签列表
+    * tags  **参数解释**： 租户标签列表。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListCesTargetProjectTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tags  租户标签列表
+    * tags  **参数解释**： 租户标签列表。
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class ListCesTargetProjectTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  租户标签列表
+    *  **参数解释**： 租户标签列表。
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\Tag[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\TagResp[]|null
     */
     public function getTags()
     {
@@ -187,7 +187,7 @@ class ListCesTargetProjectTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Tag[]|null $tags 租户标签列表
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\TagResp[]|null $tags **参数解释**： 租户标签列表。
     *
     * @return $this
     */

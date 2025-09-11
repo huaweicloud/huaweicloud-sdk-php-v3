@@ -20,8 +20,8 @@ class ListSchemaAndTableRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sqlText  SQL文本
-    * instanceId  实例ID
+    * sqlText  **参数解释**: SQL文本。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ListSchemaAndTableRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sqlText  SQL文本
-    * instanceId  实例ID
+    * sqlText  **参数解释**: SQL文本。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ListSchemaAndTableRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sqlText  SQL文本
-    * instanceId  实例ID
+    * sqlText  **参数解释**: SQL文本。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ListSchemaAndTableRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sqlText  SQL文本
-    * instanceId  实例ID
+    * sqlText  **参数解释**: SQL文本。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ListSchemaAndTableRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sqlText  SQL文本
-    * instanceId  实例ID
+    * sqlText  **参数解释**: SQL文本。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -172,9 +172,6 @@ class ListSchemaAndTableRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['sqlText'] === null) {
             $invalidProperties[] = "'sqlText' can't be null";
         }
-        if ($this->container['instanceId'] === null) {
-            $invalidProperties[] = "'instanceId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -191,7 +188,7 @@ class ListSchemaAndTableRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets sqlText
-    *  SQL文本
+    *  **参数解释**: SQL文本。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return string
     */
@@ -203,7 +200,7 @@ class ListSchemaAndTableRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets sqlText
     *
-    * @param string $sqlText SQL文本
+    * @param string $sqlText **参数解释**: SQL文本。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */
@@ -215,9 +212,9 @@ class ListSchemaAndTableRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID
+    *  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
     *
-    * @return string
+    * @return string|null
     */
     public function getInstanceId()
     {
@@ -227,7 +224,7 @@ class ListSchemaAndTableRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID
+    * @param string|null $instanceId **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
     *
     * @return $this
     */

@@ -25,7 +25,7 @@ class CreateWebhookPolicyRequestBody implements ModelInterface, ArrayAccess
     * targets  触发器目标参数
     * scopeRules  作用范围规则
     * eventTypes  触发器触发条件，当前支持PUSH_ARTIFACT
-    * enabled  是否使用
+    * enabled  是否启用
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class CreateWebhookPolicyRequestBody implements ModelInterface, ArrayAccess
     * targets  触发器目标参数
     * scopeRules  作用范围规则
     * eventTypes  触发器触发条件，当前支持PUSH_ARTIFACT
-    * enabled  是否使用
+    * enabled  是否启用
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class CreateWebhookPolicyRequestBody implements ModelInterface, ArrayAccess
     * targets  触发器目标参数
     * scopeRules  作用范围规则
     * eventTypes  触发器触发条件，当前支持PUSH_ARTIFACT
-    * enabled  是否使用
+    * enabled  是否启用
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class CreateWebhookPolicyRequestBody implements ModelInterface, ArrayAccess
     * targets  触发器目标参数
     * scopeRules  作用范围规则
     * eventTypes  触发器触发条件，当前支持PUSH_ARTIFACT
-    * enabled  是否使用
+    * enabled  是否启用
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class CreateWebhookPolicyRequestBody implements ModelInterface, ArrayAccess
     * targets  触发器目标参数
     * scopeRules  作用范围规则
     * eventTypes  触发器触发条件，当前支持PUSH_ARTIFACT
-    * enabled  是否使用
+    * enabled  是否启用
     *
     * @var string[]
     */
@@ -364,7 +364,7 @@ class CreateWebhookPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  是否使用
+    *  是否启用
     *
     * @return bool
     */
@@ -376,7 +376,7 @@ class CreateWebhookPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool $enabled 是否使用
+    * @param bool $enabled 是否启用
     *
     * @return $this
     */

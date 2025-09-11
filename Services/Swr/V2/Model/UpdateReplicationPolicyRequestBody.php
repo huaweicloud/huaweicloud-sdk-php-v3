@@ -21,7 +21,7 @@ class UpdateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  策略名称, 1-256字符组成，只能包含英文大小写、数字、汉字、中划线和下划线。
-    * description  策略描述描述
+    * description  策略描述
     * srcRegistry  srcRegistry
     * destRegistry  destRegistry
     * destNamespace  目标命名空间名，默认为空值
@@ -29,7 +29,7 @@ class UpdateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     * repoScopeMode  repo的选择方式，regular，selection
     * trigger  trigger
     * override  是否覆盖，默认为false
-    * enabled  是否使用，默认为false
+    * enabled  是否启用，默认为false
     *
     * @var string[]
     */
@@ -49,7 +49,7 @@ class UpdateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  策略名称, 1-256字符组成，只能包含英文大小写、数字、汉字、中划线和下划线。
-    * description  策略描述描述
+    * description  策略描述
     * srcRegistry  srcRegistry
     * destRegistry  destRegistry
     * destNamespace  目标命名空间名，默认为空值
@@ -57,7 +57,7 @@ class UpdateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     * repoScopeMode  repo的选择方式，regular，selection
     * trigger  trigger
     * override  是否覆盖，默认为false
-    * enabled  是否使用，默认为false
+    * enabled  是否启用，默认为false
     *
     * @var string[]
     */
@@ -98,7 +98,7 @@ class UpdateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  策略名称, 1-256字符组成，只能包含英文大小写、数字、汉字、中划线和下划线。
-    * description  策略描述描述
+    * description  策略描述
     * srcRegistry  srcRegistry
     * destRegistry  destRegistry
     * destNamespace  目标命名空间名，默认为空值
@@ -106,7 +106,7 @@ class UpdateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     * repoScopeMode  repo的选择方式，regular，selection
     * trigger  trigger
     * override  是否覆盖，默认为false
-    * enabled  是否使用，默认为false
+    * enabled  是否启用，默认为false
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class UpdateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  策略名称, 1-256字符组成，只能包含英文大小写、数字、汉字、中划线和下划线。
-    * description  策略描述描述
+    * description  策略描述
     * srcRegistry  srcRegistry
     * destRegistry  destRegistry
     * destNamespace  目标命名空间名，默认为空值
@@ -134,7 +134,7 @@ class UpdateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     * repoScopeMode  repo的选择方式，regular，selection
     * trigger  trigger
     * override  是否覆盖，默认为false
-    * enabled  是否使用，默认为false
+    * enabled  是否启用，默认为false
     *
     * @var string[]
     */
@@ -154,7 +154,7 @@ class UpdateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  策略名称, 1-256字符组成，只能包含英文大小写、数字、汉字、中划线和下划线。
-    * description  策略描述描述
+    * description  策略描述
     * srcRegistry  srcRegistry
     * destRegistry  destRegistry
     * destNamespace  目标命名空间名，默认为空值
@@ -162,7 +162,7 @@ class UpdateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     * repoScopeMode  repo的选择方式，regular，selection
     * trigger  trigger
     * override  是否覆盖，默认为false
-    * enabled  是否使用，默认为false
+    * enabled  是否启用，默认为false
     *
     * @var string[]
     */
@@ -312,7 +312,7 @@ class UpdateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  策略描述描述
+    *  策略描述
     *
     * @return string|null
     */
@@ -324,7 +324,7 @@ class UpdateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 策略描述描述
+    * @param string|null $description 策略描述
     *
     * @return $this
     */
@@ -504,7 +504,7 @@ class UpdateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  是否使用，默认为false
+    *  是否启用，默认为false
     *
     * @return bool
     */
@@ -516,7 +516,7 @@ class UpdateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool $enabled 是否使用，默认为false
+    * @param bool $enabled 是否启用，默认为false
     *
     * @return $this
     */

@@ -209,40 +209,10 @@ class AuditAgentRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const MODE_0 = 0;
-    const MODE_1 = 1;
-    const AGENT_TYPE_APP = 'APP';
-    const AGENT_TYPE_DB = 'DB';
     const AGENT_OS_LINUX64_X86 = 'LINUX64_X86';
     const AGENT_OS_LINUX64_ARM = 'LINUX64_ARM';
     const AGENT_OS_WINDOWS64 = 'WINDOWS64';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getModeAllowableValues()
-    {
-        return [
-            self::MODE_0,
-            self::MODE_1,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getAgentTypeAllowableValues()
-    {
-        return [
-            self::AGENT_TYPE_APP,
-            self::AGENT_TYPE_DB,
-        ];
-    }
 
     /**
     * Gets allowable values of the enum
@@ -299,25 +269,9 @@ class AuditAgentRequest implements ModelInterface, ArrayAccess
         if ($this->container['mode'] === null) {
             $invalidProperties[] = "'mode' can't be null";
         }
-            $allowedValues = $this->getModeAllowableValues();
-                if (!is_null($this->container['mode']) && !in_array($this->container['mode'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'mode', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         if ($this->container['agentType'] === null) {
             $invalidProperties[] = "'agentType' can't be null";
         }
-            $allowedValues = $this->getAgentTypeAllowableValues();
-                if (!is_null($this->container['agentType']) && !in_array($this->container['agentType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'agentType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         if ($this->container['agentOs'] === null) {
             $invalidProperties[] = "'agentOs' can't be null";
         }

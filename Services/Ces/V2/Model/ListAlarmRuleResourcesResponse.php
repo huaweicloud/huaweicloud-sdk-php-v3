@@ -21,20 +21,20 @@ class ListAlarmRuleResourcesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resources  资源信息
-    * count  资源总数
+    * resources  **参数解释**： 资源信息。
+    * count  **参数解释**： 资源总数。 **取值范围**： [0,2147483647]
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\Dimension[][]',
+            'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\DimensionResp[][]',
             'count' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resources  资源信息
-    * count  资源总数
+    * resources  **参数解释**： 资源信息。
+    * count  **参数解释**： 资源总数。 **取值范围**： [0,2147483647]
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListAlarmRuleResourcesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resources  资源信息
-    * count  资源总数
+    * resources  **参数解释**： 资源信息。
+    * count  **参数解释**： 资源总数。 **取值范围**： [0,2147483647]
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListAlarmRuleResourcesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resources  资源信息
-    * count  资源总数
+    * resources  **参数解释**： 资源信息。
+    * count  **参数解释**： 资源总数。 **取值范围**： [0,2147483647]
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListAlarmRuleResourcesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resources  资源信息
-    * count  资源总数
+    * resources  **参数解释**： 资源信息。
+    * count  **参数解释**： 资源总数。 **取值范围**： [0,2147483647]
     *
     * @var string[]
     */
@@ -192,9 +192,9 @@ class ListAlarmRuleResourcesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
-    *  资源信息
+    *  **参数解释**： 资源信息。
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\Dimension[][]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\DimensionResp[][]|null
     */
     public function getResources()
     {
@@ -204,7 +204,7 @@ class ListAlarmRuleResourcesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Dimension[][]|null $resources 资源信息
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\DimensionResp[][]|null $resources **参数解释**： 资源信息。
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListAlarmRuleResourcesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  资源总数
+    *  **参数解释**： 资源总数。 **取值范围**： [0,2147483647]
     *
     * @return int|null
     */
@@ -228,7 +228,7 @@ class ListAlarmRuleResourcesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 资源总数
+    * @param int|null $count **参数解释**： 资源总数。 **取值范围**： [0,2147483647]
     *
     * @return $this
     */

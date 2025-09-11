@@ -21,7 +21,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * time  time
-    * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
+    * riskLevels  风险级别 - HIGH：高 - MEDIUM：中 - LOW：低 - NO_RISK：无
     * clientIp  客户端IP
     * clientName  客户端名称
     * dbIp  数据库IP
@@ -55,7 +55,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * time  time
-    * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
+    * riskLevels  风险级别 - HIGH：高 - MEDIUM：中 - LOW：低 - NO_RISK：无
     * clientIp  客户端IP
     * clientName  客户端名称
     * dbIp  数据库IP
@@ -110,7 +110,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * time  time
-    * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
+    * riskLevels  风险级别 - HIGH：高 - MEDIUM：中 - LOW：低 - NO_RISK：无
     * clientIp  客户端IP
     * clientName  客户端名称
     * dbIp  数据库IP
@@ -144,7 +144,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * time  time
-    * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
+    * riskLevels  风险级别 - HIGH：高 - MEDIUM：中 - LOW：低 - NO_RISK：无
     * clientIp  客户端IP
     * clientName  客户端名称
     * dbIp  数据库IP
@@ -178,7 +178,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * time  time
-    * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
+    * riskLevels  风险级别 - HIGH：高 - MEDIUM：中 - LOW：低 - NO_RISK：无
     * clientIp  客户端IP
     * clientName  客户端名称
     * dbIp  数据库IP
@@ -249,26 +249,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const RISK_LEVELS_HIGH = 'HIGH';
-    const RISK_LEVELS_MEDIUM = 'MEDIUM';
-    const RISK_LEVELS_LOW = 'LOW';
-    const RISK_LEVELS_NO_RISK = 'NO_RISK';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getRiskLevelsAllowableValues()
-    {
-        return [
-            self::RISK_LEVELS_HIGH,
-            self::RISK_LEVELS_MEDIUM,
-            self::RISK_LEVELS_LOW,
-            self::RISK_LEVELS_NO_RISK,
-        ];
-    }
 
 
     /**
@@ -312,14 +293,15 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
         if ($this->container['time'] === null) {
             $invalidProperties[] = "'time' can't be null";
         }
-            $allowedValues = $this->getRiskLevelsAllowableValues();
-                if (!is_null($this->container['riskLevels']) && !in_array($this->container['riskLevels'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'riskLevels', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
+        if ($this->container['page'] === null) {
+            $invalidProperties[] = "'page' can't be null";
+        }
+        if ($this->container['size'] === null) {
+            $invalidProperties[] = "'size' can't be null";
+        }
+        if ($this->container['timeOrder'] === null) {
+            $invalidProperties[] = "'timeOrder' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -360,7 +342,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskLevels
-    *  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
+    *  风险级别 - HIGH：高 - MEDIUM：中 - LOW：低 - NO_RISK：无
     *
     * @return string|null
     */
@@ -372,7 +354,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     /**
     * Sets riskLevels
     *
-    * @param string|null $riskLevels 风险级别 - HIGH - MEDIUM - LOW - NO_RISK
+    * @param string|null $riskLevels 风险级别 - HIGH：高 - MEDIUM：中 - LOW：低 - NO_RISK：无
     *
     * @return $this
     */
@@ -578,7 +560,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     * Gets page
     *  页码
     *
-    * @return int|null
+    * @return int
     */
     public function getPage()
     {
@@ -588,7 +570,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     /**
     * Sets page
     *
-    * @param int|null $page 页码
+    * @param int $page 页码
     *
     * @return $this
     */
@@ -602,7 +584,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     * Gets size
     *  条数
     *
-    * @return int|null
+    * @return int
     */
     public function getSize()
     {
@@ -612,7 +594,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 条数
+    * @param int $size 条数
     *
     * @return $this
     */
@@ -626,7 +608,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     * Gets timeOrder
     *  时间顺序 - DESC - ASC
     *
-    * @return string|null
+    * @return string
     */
     public function getTimeOrder()
     {
@@ -636,7 +618,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     /**
     * Sets timeOrder
     *
-    * @param string|null $timeOrder 时间顺序 - DESC - ASC
+    * @param string $timeOrder 时间顺序 - DESC - ASC
     *
     * @return $this
     */

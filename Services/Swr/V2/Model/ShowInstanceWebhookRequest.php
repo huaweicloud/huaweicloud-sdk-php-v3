@@ -22,7 +22,7 @@ class ShowInstanceWebhookRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  企业仓库实例ID
     * namespaceName  命名空间名称
-    * policyId  触发器策略ID
+    * policyId  触发器ID
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ShowInstanceWebhookRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  企业仓库实例ID
     * namespaceName  命名空间名称
-    * policyId  触发器策略ID
+    * policyId  触发器ID
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowInstanceWebhookRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * instanceId  企业仓库实例ID
     * namespaceName  命名空间名称
-    * policyId  触发器策略ID
+    * policyId  触发器ID
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ShowInstanceWebhookRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  企业仓库实例ID
     * namespaceName  命名空间名称
-    * policyId  触发器策略ID
+    * policyId  触发器ID
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ShowInstanceWebhookRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  企业仓库实例ID
     * namespaceName  命名空间名称
-    * policyId  触发器策略ID
+    * policyId  触发器ID
     *
     * @var string[]
     */
@@ -253,7 +253,7 @@ class ShowInstanceWebhookRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyId
-    *  触发器策略ID
+    *  触发器ID
     *
     * @return int
     */
@@ -265,7 +265,7 @@ class ShowInstanceWebhookRequest implements ModelInterface, ArrayAccess
     /**
     * Sets policyId
     *
-    * @param int $policyId 触发器策略ID
+    * @param int $policyId 触发器ID
     *
     * @return $this
     */

@@ -23,24 +23,28 @@ class ListAuditRuleRisksResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * rules  风险规则列表
     * total  总数
+    * customizeTotal  自定义规则总数
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'rules' => '\HuaweiCloud\SDK\Dbss\V1\Model\RuleRiskResponseRules[]',
-            'total' => 'int'
+            'total' => 'int',
+            'customizeTotal' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * rules  风险规则列表
     * total  总数
+    * customizeTotal  自定义规则总数
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'rules' => null,
-        'total' => 'int32'
+        'total' => 'int32',
+        'customizeTotal' => 'int32'
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListAuditRuleRisksResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * rules  风险规则列表
     * total  总数
+    * customizeTotal  自定义规则总数
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'rules' => 'rules',
-            'total' => 'total'
+            'total' => 'total',
+            'customizeTotal' => 'customize_total'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * rules  风险规则列表
     * total  总数
+    * customizeTotal  自定义规则总数
     *
     * @var string[]
     */
     protected static $setters = [
             'rules' => 'setRules',
-            'total' => 'setTotal'
+            'total' => 'setTotal',
+            'customizeTotal' => 'setCustomizeTotal'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * rules  风险规则列表
     * total  总数
+    * customizeTotal  自定义规则总数
     *
     * @var string[]
     */
     protected static $getters = [
             'rules' => 'getRules',
-            'total' => 'getTotal'
+            'total' => 'getTotal',
+            'customizeTotal' => 'getCustomizeTotal'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListAuditRuleRisksResponse implements ModelInterface, ArrayAccess
     {
         $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['customizeTotal'] = isset($data['customizeTotal']) ? $data['customizeTotal'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class ListAuditRuleRisksResponse implements ModelInterface, ArrayAccess
     public function setTotal($total)
     {
         $this->container['total'] = $total;
+        return $this;
+    }
+
+    /**
+    * Gets customizeTotal
+    *  自定义规则总数
+    *
+    * @return int|null
+    */
+    public function getCustomizeTotal()
+    {
+        return $this->container['customizeTotal'];
+    }
+
+    /**
+    * Sets customizeTotal
+    *
+    * @param int|null $customizeTotal 自定义规则总数
+    *
+    * @return $this
+    */
+    public function setCustomizeTotal($customizeTotal)
+    {
+        $this->container['customizeTotal'] = $customizeTotal;
         return $this;
     }
 

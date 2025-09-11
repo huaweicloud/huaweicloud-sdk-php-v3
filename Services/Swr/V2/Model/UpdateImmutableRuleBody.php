@@ -21,7 +21,7 @@ class UpdateImmutableRuleBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * priority  优先级，默认值为0
-    * disabled  不可变规则是否生效，默认值为false
+    * disabled  不可变策略是否生效，默认值为false
     * action  预留字段，支持填immutable
     * template  预留字段，支持填immutable_template
     * tagSelectors  制品版本选择器，目前只支持长度为1
@@ -41,7 +41,7 @@ class UpdateImmutableRuleBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * priority  优先级，默认值为0
-    * disabled  不可变规则是否生效，默认值为false
+    * disabled  不可变策略是否生效，默认值为false
     * action  预留字段，支持填immutable
     * template  预留字段，支持填immutable_template
     * tagSelectors  制品版本选择器，目前只支持长度为1
@@ -82,7 +82,7 @@ class UpdateImmutableRuleBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * priority  优先级，默认值为0
-    * disabled  不可变规则是否生效，默认值为false
+    * disabled  不可变策略是否生效，默认值为false
     * action  预留字段，支持填immutable
     * template  预留字段，支持填immutable_template
     * tagSelectors  制品版本选择器，目前只支持长度为1
@@ -102,7 +102,7 @@ class UpdateImmutableRuleBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * priority  优先级，默认值为0
-    * disabled  不可变规则是否生效，默认值为false
+    * disabled  不可变策略是否生效，默认值为false
     * action  预留字段，支持填immutable
     * template  预留字段，支持填immutable_template
     * tagSelectors  制品版本选择器，目前只支持长度为1
@@ -122,7 +122,7 @@ class UpdateImmutableRuleBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * priority  优先级，默认值为0
-    * disabled  不可变规则是否生效，默认值为false
+    * disabled  不可变策略是否生效，默认值为false
     * action  预留字段，支持填immutable
     * template  预留字段，支持填immutable_template
     * tagSelectors  制品版本选择器，目前只支持长度为1
@@ -259,7 +259,7 @@ class UpdateImmutableRuleBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets disabled
-    *  不可变规则是否生效，默认值为false
+    *  不可变策略是否生效，默认值为false
     *
     * @return bool|null
     */
@@ -271,7 +271,7 @@ class UpdateImmutableRuleBody implements ModelInterface, ArrayAccess
     /**
     * Sets disabled
     *
-    * @param bool|null $disabled 不可变规则是否生效，默认值为false
+    * @param bool|null $disabled 不可变策略是否生效，默认值为false
     *
     * @return $this
     */

@@ -25,7 +25,7 @@ class ScheduleTaskDetail implements ModelInterface, ArrayAccess
     * status  任务状态。
     * createTime  任务创建时间,格式为yyyy-mm-ddThh:mm:ssZ。
     * startTime  任务开始时间,格式为yyyy-mm-ddThh:mm:ssZ。
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * instanceName  实例名称。
     * taskContent  任务信息。
     *
@@ -49,7 +49,7 @@ class ScheduleTaskDetail implements ModelInterface, ArrayAccess
     * status  任务状态。
     * createTime  任务创建时间,格式为yyyy-mm-ddThh:mm:ssZ。
     * startTime  任务开始时间,格式为yyyy-mm-ddThh:mm:ssZ。
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * instanceName  实例名称。
     * taskContent  任务信息。
     *
@@ -94,7 +94,7 @@ class ScheduleTaskDetail implements ModelInterface, ArrayAccess
     * status  任务状态。
     * createTime  任务创建时间,格式为yyyy-mm-ddThh:mm:ssZ。
     * startTime  任务开始时间,格式为yyyy-mm-ddThh:mm:ssZ。
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * instanceName  实例名称。
     * taskContent  任务信息。
     *
@@ -118,7 +118,7 @@ class ScheduleTaskDetail implements ModelInterface, ArrayAccess
     * status  任务状态。
     * createTime  任务创建时间,格式为yyyy-mm-ddThh:mm:ssZ。
     * startTime  任务开始时间,格式为yyyy-mm-ddThh:mm:ssZ。
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * instanceName  实例名称。
     * taskContent  任务信息。
     *
@@ -142,7 +142,7 @@ class ScheduleTaskDetail implements ModelInterface, ArrayAccess
     * status  任务状态。
     * createTime  任务创建时间,格式为yyyy-mm-ddThh:mm:ssZ。
     * startTime  任务开始时间,格式为yyyy-mm-ddThh:mm:ssZ。
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * instanceName  实例名称。
     * taskContent  任务信息。
     *
@@ -371,7 +371,7 @@ class ScheduleTaskDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class ScheduleTaskDetail implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例ID。
+    * @param string|null $instanceId **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */

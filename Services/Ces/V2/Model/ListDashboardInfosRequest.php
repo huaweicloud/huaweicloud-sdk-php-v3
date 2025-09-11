@@ -20,11 +20,11 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseId  企业项目Id
-    * isFavorite  指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
-    * dashboardName  监控看板名称
-    * dashboardId  监控看板id
-    * dashboardType  监控看板类型, monitor_dashboard表示监控大盘,other表示自定义看板
+    * enterpriseId  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID），all_granted_eps（代表所有企业项目ID）。           **默认取值**： 不涉及。
+    * isFavorite  **参数解释**： 指定企业项目下监控看板是否收藏。 **约束限制**： 填此参数时，enterprise_id必填。 **取值范围**： - true:收藏 - false:未收藏          **默认取值**： 不涉及。
+    * dashboardName  **参数解释**： 监控看板名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-          **默认取值**： 不涉及。
+    * dashboardId  **参数解释**： 监控看板id。 **约束限制**： 不涉及。 **取值范围**： 以db开头，包含22个字母和数字，长度为24个字符 **默认取值**： 不涉及。
+    * dashboardType  **参数解释**： 监控看板类型。 **约束限制**： 不涉及。 **取值范围**： - monitor_dashboard:表示监控大盘 - other:表示自定义看板 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseId  企业项目Id
-    * isFavorite  指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
-    * dashboardName  监控看板名称
-    * dashboardId  监控看板id
-    * dashboardType  监控看板类型, monitor_dashboard表示监控大盘,other表示自定义看板
+    * enterpriseId  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID），all_granted_eps（代表所有企业项目ID）。           **默认取值**： 不涉及。
+    * isFavorite  **参数解释**： 指定企业项目下监控看板是否收藏。 **约束限制**： 填此参数时，enterprise_id必填。 **取值范围**： - true:收藏 - false:未收藏          **默认取值**： 不涉及。
+    * dashboardName  **参数解释**： 监控看板名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-          **默认取值**： 不涉及。
+    * dashboardId  **参数解释**： 监控看板id。 **约束限制**： 不涉及。 **取值范围**： 以db开头，包含22个字母和数字，长度为24个字符 **默认取值**： 不涉及。
+    * dashboardType  **参数解释**： 监控看板类型。 **约束限制**： 不涉及。 **取值范围**： - monitor_dashboard:表示监控大盘 - other:表示自定义看板 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseId  企业项目Id
-    * isFavorite  指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
-    * dashboardName  监控看板名称
-    * dashboardId  监控看板id
-    * dashboardType  监控看板类型, monitor_dashboard表示监控大盘,other表示自定义看板
+    * enterpriseId  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID），all_granted_eps（代表所有企业项目ID）。           **默认取值**： 不涉及。
+    * isFavorite  **参数解释**： 指定企业项目下监控看板是否收藏。 **约束限制**： 填此参数时，enterprise_id必填。 **取值范围**： - true:收藏 - false:未收藏          **默认取值**： 不涉及。
+    * dashboardName  **参数解释**： 监控看板名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-          **默认取值**： 不涉及。
+    * dashboardId  **参数解释**： 监控看板id。 **约束限制**： 不涉及。 **取值范围**： 以db开头，包含22个字母和数字，长度为24个字符 **默认取值**： 不涉及。
+    * dashboardType  **参数解释**： 监控看板类型。 **约束限制**： 不涉及。 **取值范围**： - monitor_dashboard:表示监控大盘 - other:表示自定义看板 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseId  企业项目Id
-    * isFavorite  指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
-    * dashboardName  监控看板名称
-    * dashboardId  监控看板id
-    * dashboardType  监控看板类型, monitor_dashboard表示监控大盘,other表示自定义看板
+    * enterpriseId  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID），all_granted_eps（代表所有企业项目ID）。           **默认取值**： 不涉及。
+    * isFavorite  **参数解释**： 指定企业项目下监控看板是否收藏。 **约束限制**： 填此参数时，enterprise_id必填。 **取值范围**： - true:收藏 - false:未收藏          **默认取值**： 不涉及。
+    * dashboardName  **参数解释**： 监控看板名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-          **默认取值**： 不涉及。
+    * dashboardId  **参数解释**： 监控看板id。 **约束限制**： 不涉及。 **取值范围**： 以db开头，包含22个字母和数字，长度为24个字符 **默认取值**： 不涉及。
+    * dashboardType  **参数解释**： 监控看板类型。 **约束限制**： 不涉及。 **取值范围**： - monitor_dashboard:表示监控大盘 - other:表示自定义看板 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseId  企业项目Id
-    * isFavorite  指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
-    * dashboardName  监控看板名称
-    * dashboardId  监控看板id
-    * dashboardType  监控看板类型, monitor_dashboard表示监控大盘,other表示自定义看板
+    * enterpriseId  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID），all_granted_eps（代表所有企业项目ID）。           **默认取值**： 不涉及。
+    * isFavorite  **参数解释**： 指定企业项目下监控看板是否收藏。 **约束限制**： 填此参数时，enterprise_id必填。 **取值范围**： - true:收藏 - false:未收藏          **默认取值**： 不涉及。
+    * dashboardName  **参数解释**： 监控看板名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-          **默认取值**： 不涉及。
+    * dashboardId  **参数解释**： 监控看板id。 **约束限制**： 不涉及。 **取值范围**： 以db开头，包含22个字母和数字，长度为24个字符 **默认取值**： 不涉及。
+    * dashboardType  **参数解释**： 监控看板类型。 **约束限制**： 不涉及。 **取值范围**： - monitor_dashboard:表示监控大盘 - other:表示自定义看板 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -256,7 +256,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseId
-    *  企业项目Id
+    *  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID），all_granted_eps（代表所有企业项目ID）。           **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -268,7 +268,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseId
     *
-    * @param string|null $enterpriseId 企业项目Id
+    * @param string|null $enterpriseId **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID），all_granted_eps（代表所有企业项目ID）。           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isFavorite
-    *  指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
+    *  **参数解释**： 指定企业项目下监控看板是否收藏。 **约束限制**： 填此参数时，enterprise_id必填。 **取值范围**： - true:收藏 - false:未收藏          **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -292,7 +292,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isFavorite
     *
-    * @param bool|null $isFavorite 指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
+    * @param bool|null $isFavorite **参数解释**： 指定企业项目下监控看板是否收藏。 **约束限制**： 填此参数时，enterprise_id必填。 **取值范围**： - true:收藏 - false:未收藏          **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -304,7 +304,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardName
-    *  监控看板名称
+    *  **参数解释**： 监控看板名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-          **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -316,7 +316,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardName
     *
-    * @param string|null $dashboardName 监控看板名称
+    * @param string|null $dashboardName **参数解释**： 监控看板名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-          **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -328,7 +328,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardId
-    *  监控看板id
+    *  **参数解释**： 监控看板id。 **约束限制**： 不涉及。 **取值范围**： 以db开头，包含22个字母和数字，长度为24个字符 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -340,7 +340,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardId
     *
-    * @param string|null $dashboardId 监控看板id
+    * @param string|null $dashboardId **参数解释**： 监控看板id。 **约束限制**： 不涉及。 **取值范围**： 以db开头，包含22个字母和数字，长度为24个字符 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardType
-    *  监控看板类型, monitor_dashboard表示监控大盘,other表示自定义看板
+    *  **参数解释**： 监控看板类型。 **约束限制**： 不涉及。 **取值范围**： - monitor_dashboard:表示监控大盘 - other:表示自定义看板 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -364,7 +364,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardType
     *
-    * @param string|null $dashboardType 监控看板类型, monitor_dashboard表示监控大盘,other表示自定义看板
+    * @param string|null $dashboardType **参数解释**： 监控看板类型。 **约束限制**： 不涉及。 **取值范围**： - monitor_dashboard:表示监控大盘 - other:表示自定义看板 **默认取值**： 不涉及。
     *
     * @return $this
     */

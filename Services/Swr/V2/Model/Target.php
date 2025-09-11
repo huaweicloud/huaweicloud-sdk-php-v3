@@ -20,7 +20,7 @@ class Target implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  触发器类型，可选http
+    * type  触发类型，可选http
     * address  触发地址，不可修改
     * authHeader  请求头，格式为key1:value1;key2:value2
     * skipCertVerify  是否跳过证书认证
@@ -38,7 +38,7 @@ class Target implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  触发器类型，可选http
+    * type  触发类型，可选http
     * address  触发地址，不可修改
     * authHeader  请求头，格式为key1:value1;key2:value2
     * skipCertVerify  是否跳过证书认证
@@ -77,7 +77,7 @@ class Target implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  触发器类型，可选http
+    * type  触发类型，可选http
     * address  触发地址，不可修改
     * authHeader  请求头，格式为key1:value1;key2:value2
     * skipCertVerify  是否跳过证书认证
@@ -95,7 +95,7 @@ class Target implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  触发器类型，可选http
+    * type  触发类型，可选http
     * address  触发地址，不可修改
     * authHeader  请求头，格式为key1:value1;key2:value2
     * skipCertVerify  是否跳过证书认证
@@ -113,7 +113,7 @@ class Target implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  触发器类型，可选http
+    * type  触发类型，可选http
     * address  触发地址，不可修改
     * authHeader  请求头，格式为key1:value1;key2:value2
     * skipCertVerify  是否跳过证书认证
@@ -227,7 +227,7 @@ class Target implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  触发器类型，可选http
+    *  触发类型，可选http
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class Target implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 触发器类型，可选http
+    * @param string $type 触发类型，可选http
     *
     * @return $this
     */

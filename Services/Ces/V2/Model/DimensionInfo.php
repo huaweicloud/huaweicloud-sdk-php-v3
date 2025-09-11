@@ -20,9 +20,9 @@ class DimensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
-    * filterType  资源类型, all_instances: 全部资源, specific_instances: 指定资源
-    * values  维度值列表
+    * name  **参数描述**： 维度名称。 **约束限制** 不涉及 **取值范围**： 多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”。必须以字母开头，只能包含0-9/a-z/A-Z/_/-，多维度用\",\"分隔，每个维度的最大长度为32。总长度为[1,131]个字符。目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk **默认取值** 不涉及
+    * filterType  **参数描述**： 资源类型。 **约束限制** 不涉及 **取值范围**： - all_instances: 全部资源 - specific_instances: 指定资源 **默认取值** 不涉及
+    * values  **参数描述**： 维度值列表。 **约束限制** 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class DimensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
-    * filterType  资源类型, all_instances: 全部资源, specific_instances: 指定资源
-    * values  维度值列表
+    * name  **参数描述**： 维度名称。 **约束限制** 不涉及 **取值范围**： 多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”。必须以字母开头，只能包含0-9/a-z/A-Z/_/-，多维度用\",\"分隔，每个维度的最大长度为32。总长度为[1,131]个字符。目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk **默认取值** 不涉及
+    * filterType  **参数描述**： 资源类型。 **约束限制** 不涉及 **取值范围**： - all_instances: 全部资源 - specific_instances: 指定资源 **默认取值** 不涉及
+    * values  **参数描述**： 维度值列表。 **约束限制** 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class DimensionInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
-    * filterType  资源类型, all_instances: 全部资源, specific_instances: 指定资源
-    * values  维度值列表
+    * name  **参数描述**： 维度名称。 **约束限制** 不涉及 **取值范围**： 多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”。必须以字母开头，只能包含0-9/a-z/A-Z/_/-，多维度用\",\"分隔，每个维度的最大长度为32。总长度为[1,131]个字符。目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk **默认取值** 不涉及
+    * filterType  **参数描述**： 资源类型。 **约束限制** 不涉及 **取值范围**： - all_instances: 全部资源 - specific_instances: 指定资源 **默认取值** 不涉及
+    * values  **参数描述**： 维度值列表。 **约束限制** 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class DimensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
-    * filterType  资源类型, all_instances: 全部资源, specific_instances: 指定资源
-    * values  维度值列表
+    * name  **参数描述**： 维度名称。 **约束限制** 不涉及 **取值范围**： 多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”。必须以字母开头，只能包含0-9/a-z/A-Z/_/-，多维度用\",\"分隔，每个维度的最大长度为32。总长度为[1,131]个字符。目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk **默认取值** 不涉及
+    * filterType  **参数描述**： 资源类型。 **约束限制** 不涉及 **取值范围**： - all_instances: 全部资源 - specific_instances: 指定资源 **默认取值** 不涉及
+    * values  **参数描述**： 维度值列表。 **约束限制** 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class DimensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
-    * filterType  资源类型, all_instances: 全部资源, specific_instances: 指定资源
-    * values  维度值列表
+    * name  **参数描述**： 维度名称。 **约束限制** 不涉及 **取值范围**： 多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”。必须以字母开头，只能包含0-9/a-z/A-Z/_/-，多维度用\",\"分隔，每个维度的最大长度为32。总长度为[1,131]个字符。目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk **默认取值** 不涉及
+    * filterType  **参数描述**： 资源类型。 **约束限制** 不涉及 **取值范围**： - all_instances: 全部资源 - specific_instances: 指定资源 **默认取值** 不涉及
+    * values  **参数描述**： 维度值列表。 **约束限制** 不涉及
     *
     * @var string[]
     */
@@ -234,7 +234,7 @@ class DimensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
+    *  **参数描述**： 维度名称。 **约束限制** 不涉及 **取值范围**： 多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”。必须以字母开头，只能包含0-9/a-z/A-Z/_/-，多维度用\",\"分隔，每个维度的最大长度为32。总长度为[1,131]个字符。目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk **默认取值** 不涉及
     *
     * @return string
     */
@@ -246,7 +246,7 @@ class DimensionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
+    * @param string $name **参数描述**： 维度名称。 **约束限制** 不涉及 **取值范围**： 多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”。必须以字母开头，只能包含0-9/a-z/A-Z/_/-，多维度用\",\"分隔，每个维度的最大长度为32。总长度为[1,131]个字符。目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk **默认取值** 不涉及
     *
     * @return $this
     */
@@ -258,7 +258,7 @@ class DimensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets filterType
-    *  资源类型, all_instances: 全部资源, specific_instances: 指定资源
+    *  **参数描述**： 资源类型。 **约束限制** 不涉及 **取值范围**： - all_instances: 全部资源 - specific_instances: 指定资源 **默认取值** 不涉及
     *
     * @return string
     */
@@ -270,7 +270,7 @@ class DimensionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets filterType
     *
-    * @param string $filterType 资源类型, all_instances: 全部资源, specific_instances: 指定资源
+    * @param string $filterType **参数描述**： 资源类型。 **约束限制** 不涉及 **取值范围**： - all_instances: 全部资源 - specific_instances: 指定资源 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -282,7 +282,7 @@ class DimensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  维度值列表
+    *  **参数描述**： 维度值列表。 **约束限制** 不涉及
     *
     * @return string[]|null
     */
@@ -294,7 +294,7 @@ class DimensionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param string[]|null $values 维度值列表
+    * @param string[]|null $values **参数描述**： 维度值列表。 **约束限制** 不涉及
     *
     * @return $this
     */

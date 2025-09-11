@@ -21,7 +21,7 @@ class CreateImmutableRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  规则ID
+    * id  策略ID
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateImmutableRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  规则ID
+    * id  策略ID
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateImmutableRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  规则ID
+    * id  策略ID
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateImmutableRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  规则ID
+    * id  策略ID
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateImmutableRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  规则ID
+    * id  策略ID
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class CreateImmutableRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  规则ID
+    *  策略ID
     *
     * @return int|null
     */
@@ -187,7 +187,7 @@ class CreateImmutableRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 规则ID
+    * @param int|null $id 策略ID
     *
     * @return $this
     */

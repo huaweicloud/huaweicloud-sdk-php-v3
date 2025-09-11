@@ -22,10 +22,10 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
-    * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
+    * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
     * templateType  templateType
     * createTime  告警模板的创建时间
-    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
+    * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     * policies  告警模板策略列表
     *
     * @var string[]
@@ -42,10 +42,10 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
-    * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
+    * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
     * templateType  templateType
     * createTime  告警模板的创建时间
-    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
+    * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     * policies  告警模板策略列表
     *
     * @var string[]
@@ -83,10 +83,10 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
-    * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
+    * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
     * templateType  templateType
     * createTime  告警模板的创建时间
-    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
+    * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     * policies  告警模板策略列表
     *
     * @var string[]
@@ -103,10 +103,10 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
-    * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
+    * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
     * templateType  templateType
     * createTime  告警模板的创建时间
-    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
+    * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     * policies  告警模板策略列表
     *
     * @var string[]
@@ -123,10 +123,10 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
-    * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
+    * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
     * templateType  templateType
     * createTime  告警模板的创建时间
-    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
+    * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     * policies  告警模板策略列表
     *
     * @var string[]
@@ -281,7 +281,7 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateName
-    *  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
+    *  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -293,7 +293,7 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets templateName
     *
-    * @param string|null $templateName 告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
+    * @param string|null $templateName **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -353,7 +353,7 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateDescription
-    *  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
+    *  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     *
     * @return string|null
     */
@@ -365,7 +365,7 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets templateDescription
     *
-    * @param string|null $templateDescription 告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
+    * @param string|null $templateDescription **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     *
     * @return $this
     */

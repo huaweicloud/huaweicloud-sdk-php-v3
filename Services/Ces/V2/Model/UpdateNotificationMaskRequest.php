@@ -20,7 +20,7 @@ class UpdateNotificationMaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * notificationMaskId  屏蔽规则ID
+    * notificationMaskId  **参数解释**： 屏蔽规则ID。    **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字，长度为[1,64]个字符。           **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdateNotificationMaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * notificationMaskId  屏蔽规则ID
+    * notificationMaskId  **参数解释**： 屏蔽规则ID。    **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字，长度为[1,64]个字符。           **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateNotificationMaskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * notificationMaskId  屏蔽规则ID
+    * notificationMaskId  **参数解释**： 屏蔽规则ID。    **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字，长度为[1,64]个字符。           **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateNotificationMaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * notificationMaskId  屏蔽规则ID
+    * notificationMaskId  **参数解释**： 屏蔽规则ID。    **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字，长度为[1,64]个字符。           **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateNotificationMaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * notificationMaskId  屏蔽规则ID
+    * notificationMaskId  **参数解释**： 屏蔽规则ID。    **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字，长度为[1,64]个字符。           **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -197,7 +197,7 @@ class UpdateNotificationMaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationMaskId
-    *  屏蔽规则ID
+    *  **参数解释**： 屏蔽规则ID。    **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字，长度为[1,64]个字符。           **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -209,7 +209,7 @@ class UpdateNotificationMaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets notificationMaskId
     *
-    * @param string $notificationMaskId 屏蔽规则ID
+    * @param string $notificationMaskId **参数解释**： 屏蔽规则ID。    **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字，长度为[1,64]个字符。           **默认取值**： 不涉及。
     *
     * @return $this
     */

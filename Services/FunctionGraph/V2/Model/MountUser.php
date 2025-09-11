@@ -26,8 +26,8 @@ class MountUser implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'userId' => 'string',
-            'userGroupId' => 'string'
+            'userId' => 'int',
+            'userGroupId' => 'int'
     ];
 
     /**
@@ -193,7 +193,7 @@ class MountUser implements ModelInterface, ArrayAccess
     * Gets userId
     *  用户ID(-1~65534的非0整数)
     *
-    * @return string
+    * @return int
     */
     public function getUserId()
     {
@@ -203,7 +203,7 @@ class MountUser implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string $userId 用户ID(-1~65534的非0整数)
+    * @param int $userId 用户ID(-1~65534的非0整数)
     *
     * @return $this
     */
@@ -217,7 +217,7 @@ class MountUser implements ModelInterface, ArrayAccess
     * Gets userGroupId
     *  用户组ID(-1~65534的非0整数)
     *
-    * @return string
+    * @return int
     */
     public function getUserGroupId()
     {
@@ -227,7 +227,7 @@ class MountUser implements ModelInterface, ArrayAccess
     /**
     * Sets userGroupId
     *
-    * @param string $userGroupId 用户组ID(-1~65534的非0整数)
+    * @param int $userGroupId 用户组ID(-1~65534的非0整数)
     *
     * @return $this
     */

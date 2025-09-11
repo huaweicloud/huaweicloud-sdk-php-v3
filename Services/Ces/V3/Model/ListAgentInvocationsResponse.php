@@ -21,8 +21,8 @@ class ListAgentInvocationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * invocations  任务列表
-    * count  任务列表总量
+    * invocations  **参数解释**: 任务列表 **取值范围**: 返回数组长度为[0,100]
+    * count  **参数解释**: 任务列表总量 **取值范围**: 数字范围为[0,9999999999999]
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListAgentInvocationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * invocations  任务列表
-    * count  任务列表总量
+    * invocations  **参数解释**: 任务列表 **取值范围**: 返回数组长度为[0,100]
+    * count  **参数解释**: 任务列表总量 **取值范围**: 数字范围为[0,9999999999999]
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListAgentInvocationsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * invocations  任务列表
-    * count  任务列表总量
+    * invocations  **参数解释**: 任务列表 **取值范围**: 返回数组长度为[0,100]
+    * count  **参数解释**: 任务列表总量 **取值范围**: 数字范围为[0,9999999999999]
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListAgentInvocationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * invocations  任务列表
-    * count  任务列表总量
+    * invocations  **参数解释**: 任务列表 **取值范围**: 返回数组长度为[0,100]
+    * count  **参数解释**: 任务列表总量 **取值范围**: 数字范围为[0,9999999999999]
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListAgentInvocationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * invocations  任务列表
-    * count  任务列表总量
+    * invocations  **参数解释**: 任务列表 **取值范围**: 返回数组长度为[0,100]
+    * count  **参数解释**: 任务列表总量 **取值范围**: 数字范围为[0,9999999999999]
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListAgentInvocationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocations
-    *  任务列表
+    *  **参数解释**: 任务列表 **取值范围**: 返回数组长度为[0,100]
     *
     * @return \HuaweiCloud\SDK\Ces\V3\Model\InvocationInfo[]|null
     */
@@ -204,7 +204,7 @@ class ListAgentInvocationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets invocations
     *
-    * @param \HuaweiCloud\SDK\Ces\V3\Model\InvocationInfo[]|null $invocations 任务列表
+    * @param \HuaweiCloud\SDK\Ces\V3\Model\InvocationInfo[]|null $invocations **参数解释**: 任务列表 **取值范围**: 返回数组长度为[0,100]
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListAgentInvocationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  任务列表总量
+    *  **参数解释**: 任务列表总量 **取值范围**: 数字范围为[0,9999999999999]
     *
     * @return int|null
     */
@@ -228,7 +228,7 @@ class ListAgentInvocationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 任务列表总量
+    * @param int|null $count **参数解释**: 任务列表总量 **取值范围**: 数字范围为[0,9999999999999]
     *
     * @return $this
     */

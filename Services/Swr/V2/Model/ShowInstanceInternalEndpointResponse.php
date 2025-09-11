@@ -54,7 +54,7 @@ class ShowInstanceInternalEndpointResponse implements ModelInterface, ArrayAcces
             'description' => 'string',
             'status' => 'string',
             'statusText' => 'string',
-            'createdAt' => '\DateTime'
+            'createdAt' => 'string'
     ];
 
     /**
@@ -92,7 +92,7 @@ class ShowInstanceInternalEndpointResponse implements ModelInterface, ArrayAcces
         'description' => null,
         'status' => null,
         'statusText' => null,
-        'createdAt' => 'date-time'
+        'createdAt' => null
     ];
 
     /**
@@ -696,7 +696,7 @@ class ShowInstanceInternalEndpointResponse implements ModelInterface, ArrayAcces
     * Gets createdAt
     *  访问控制的创建时间
     *
-    * @return \DateTime|null
+    * @return string|null
     */
     public function getCreatedAt()
     {
@@ -706,7 +706,7 @@ class ShowInstanceInternalEndpointResponse implements ModelInterface, ArrayAcces
     /**
     * Sets createdAt
     *
-    * @param \DateTime|null $createdAt 访问控制的创建时间
+    * @param string|null $createdAt 访问控制的创建时间
     *
     * @return $this
     */

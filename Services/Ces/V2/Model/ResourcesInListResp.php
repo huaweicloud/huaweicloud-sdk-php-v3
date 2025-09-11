@@ -20,23 +20,23 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceGroupId  资源分组ID，监控范围为资源分组时存在该值
-    * resourceGroupName  资源分组名称，监控范围为资源分组时存在该值
-    * dimensions  维度信息
+    * resourceGroupId  **参数解释**： 资源分组ID，监控范围为资源分组时存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
+    * resourceGroupName  **参数解释**： 资源分组名称，监控范围为资源分组时存在该值。 **取值范围**： 长度为[1,128]个字符。
+    * dimensions  **参数解释**： 维度信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'resourceGroupId' => 'string',
             'resourceGroupName' => 'string',
-            'dimensions' => '\HuaweiCloud\SDK\Ces\V2\Model\MetricDimension[]'
+            'dimensions' => '\HuaweiCloud\SDK\Ces\V2\Model\MetricDimensionResp[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceGroupId  资源分组ID，监控范围为资源分组时存在该值
-    * resourceGroupName  资源分组名称，监控范围为资源分组时存在该值
-    * dimensions  维度信息
+    * resourceGroupId  **参数解释**： 资源分组ID，监控范围为资源分组时存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
+    * resourceGroupName  **参数解释**： 资源分组名称，监控范围为资源分组时存在该值。 **取值范围**： 长度为[1,128]个字符。
+    * dimensions  **参数解释**： 维度信息。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceGroupId  资源分组ID，监控范围为资源分组时存在该值
-    * resourceGroupName  资源分组名称，监控范围为资源分组时存在该值
-    * dimensions  维度信息
+    * resourceGroupId  **参数解释**： 资源分组ID，监控范围为资源分组时存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
+    * resourceGroupName  **参数解释**： 资源分组名称，监控范围为资源分组时存在该值。 **取值范围**： 长度为[1,128]个字符。
+    * dimensions  **参数解释**： 维度信息。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceGroupId  资源分组ID，监控范围为资源分组时存在该值
-    * resourceGroupName  资源分组名称，监控范围为资源分组时存在该值
-    * dimensions  维度信息
+    * resourceGroupId  **参数解释**： 资源分组ID，监控范围为资源分组时存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
+    * resourceGroupName  **参数解释**： 资源分组名称，监控范围为资源分组时存在该值。 **取值范围**： 长度为[1,128]个字符。
+    * dimensions  **参数解释**： 维度信息。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceGroupId  资源分组ID，监控范围为资源分组时存在该值
-    * resourceGroupName  资源分组名称，监控范围为资源分组时存在该值
-    * dimensions  维度信息
+    * resourceGroupId  **参数解释**： 资源分组ID，监控范围为资源分组时存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
+    * resourceGroupName  **参数解释**： 资源分组名称，监控范围为资源分组时存在该值。 **取值范围**： 长度为[1,128]个字符。
+    * dimensions  **参数解释**： 维度信息。
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceGroupId
-    *  资源分组ID，监控范围为资源分组时存在该值
+    *  **参数解释**： 资源分组ID，监控范围为资源分组时存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
     *
     * @return string|null
     */
@@ -217,7 +217,7 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
     /**
     * Sets resourceGroupId
     *
-    * @param string|null $resourceGroupId 资源分组ID，监控范围为资源分组时存在该值
+    * @param string|null $resourceGroupId **参数解释**： 资源分组ID，监控范围为资源分组时存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceGroupName
-    *  资源分组名称，监控范围为资源分组时存在该值
+    *  **参数解释**： 资源分组名称，监控范围为资源分组时存在该值。 **取值范围**： 长度为[1,128]个字符。
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
     /**
     * Sets resourceGroupName
     *
-    * @param string|null $resourceGroupName 资源分组名称，监控范围为资源分组时存在该值
+    * @param string|null $resourceGroupName **参数解释**： 资源分组名称，监控范围为资源分组时存在该值。 **取值范围**： 长度为[1,128]个字符。
     *
     * @return $this
     */
@@ -253,9 +253,9 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensions
-    *  维度信息
+    *  **参数解释**： 维度信息。
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\MetricDimension[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\MetricDimensionResp[]|null
     */
     public function getDimensions()
     {
@@ -265,7 +265,7 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
     /**
     * Sets dimensions
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\MetricDimension[]|null $dimensions 维度信息
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\MetricDimensionResp[]|null $dimensions **参数解释**： 维度信息。
     *
     * @return $this
     */

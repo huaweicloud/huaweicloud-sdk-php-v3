@@ -20,10 +20,10 @@ class MetricExtraInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * originMetricName  原始指标名称
-    * metricPrefix  指标名称前缀
-    * customProcName  用户进程名称
-    * metricType  指标类型
+    * originMetricName  **参数解释**： 原始指标名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。          **默认取值**： 不涉及。
+    * metricPrefix  **参数解释**： 指标名称前缀。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。          **默认取值**： 不涉及。
+    * customProcName  **参数解释**： 用户进程名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,250]个字符。          **默认取值**： 不涉及。
+    * metricType  **参数解释**： 指标类型。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,32]个字符。          **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class MetricExtraInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * originMetricName  原始指标名称
-    * metricPrefix  指标名称前缀
-    * customProcName  用户进程名称
-    * metricType  指标类型
+    * originMetricName  **参数解释**： 原始指标名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。          **默认取值**： 不涉及。
+    * metricPrefix  **参数解释**： 指标名称前缀。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。          **默认取值**： 不涉及。
+    * customProcName  **参数解释**： 用户进程名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,250]个字符。          **默认取值**： 不涉及。
+    * metricType  **参数解释**： 指标类型。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,32]个字符。          **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class MetricExtraInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * originMetricName  原始指标名称
-    * metricPrefix  指标名称前缀
-    * customProcName  用户进程名称
-    * metricType  指标类型
+    * originMetricName  **参数解释**： 原始指标名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。          **默认取值**： 不涉及。
+    * metricPrefix  **参数解释**： 指标名称前缀。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。          **默认取值**： 不涉及。
+    * customProcName  **参数解释**： 用户进程名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,250]个字符。          **默认取值**： 不涉及。
+    * metricType  **参数解释**： 指标类型。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,32]个字符。          **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class MetricExtraInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * originMetricName  原始指标名称
-    * metricPrefix  指标名称前缀
-    * customProcName  用户进程名称
-    * metricType  指标类型
+    * originMetricName  **参数解释**： 原始指标名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。          **默认取值**： 不涉及。
+    * metricPrefix  **参数解释**： 指标名称前缀。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。          **默认取值**： 不涉及。
+    * customProcName  **参数解释**： 用户进程名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,250]个字符。          **默认取值**： 不涉及。
+    * metricType  **参数解释**： 指标类型。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,32]个字符。          **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class MetricExtraInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * originMetricName  原始指标名称
-    * metricPrefix  指标名称前缀
-    * customProcName  用户进程名称
-    * metricType  指标类型
+    * originMetricName  **参数解释**： 原始指标名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。          **默认取值**： 不涉及。
+    * metricPrefix  **参数解释**： 指标名称前缀。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。          **默认取值**： 不涉及。
+    * customProcName  **参数解释**： 用户进程名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,250]个字符。          **默认取值**： 不涉及。
+    * metricType  **参数解释**： 指标类型。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,32]个字符。          **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -243,7 +243,7 @@ class MetricExtraInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets originMetricName
-    *  原始指标名称
+    *  **参数解释**： 原始指标名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。          **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -255,7 +255,7 @@ class MetricExtraInfo implements ModelInterface, ArrayAccess
     /**
     * Sets originMetricName
     *
-    * @param string $originMetricName 原始指标名称
+    * @param string $originMetricName **参数解释**： 原始指标名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。          **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class MetricExtraInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricPrefix
-    *  指标名称前缀
+    *  **参数解释**： 指标名称前缀。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。          **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -279,7 +279,7 @@ class MetricExtraInfo implements ModelInterface, ArrayAccess
     /**
     * Sets metricPrefix
     *
-    * @param string|null $metricPrefix 指标名称前缀
+    * @param string|null $metricPrefix **参数解释**： 指标名称前缀。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。          **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class MetricExtraInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets customProcName
-    *  用户进程名称
+    *  **参数解释**： 用户进程名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,250]个字符。          **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -303,7 +303,7 @@ class MetricExtraInfo implements ModelInterface, ArrayAccess
     /**
     * Sets customProcName
     *
-    * @param string|null $customProcName 用户进程名称
+    * @param string|null $customProcName **参数解释**： 用户进程名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,250]个字符。          **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class MetricExtraInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricType
-    *  指标类型
+    *  **参数解释**： 指标类型。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,32]个字符。          **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -327,7 +327,7 @@ class MetricExtraInfo implements ModelInterface, ArrayAccess
     /**
     * Sets metricType
     *
-    * @param string|null $metricType 指标类型
+    * @param string|null $metricType **参数解释**： 指标类型。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,32]个字符。          **默认取值**： 不涉及。
     *
     * @return $this
     */

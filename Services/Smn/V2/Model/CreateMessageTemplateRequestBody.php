@@ -183,9 +183,6 @@ class CreateMessageTemplateRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['messageTemplateName'] === null) {
             $invalidProperties[] = "'messageTemplateName' can't be null";
         }
-        if ($this->container['protocol'] === null) {
-            $invalidProperties[] = "'protocol' can't be null";
-        }
         if ($this->container['content'] === null) {
             $invalidProperties[] = "'content' can't be null";
         }
@@ -231,7 +228,7 @@ class CreateMessageTemplateRequestBody implements ModelInterface, ArrayAccess
     * Gets protocol
     *  模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
     *
-    * @return string
+    * @return string|null
     */
     public function getProtocol()
     {
@@ -241,7 +238,7 @@ class CreateMessageTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string $protocol 模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
+    * @param string|null $protocol 模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
     *
     * @return $this
     */

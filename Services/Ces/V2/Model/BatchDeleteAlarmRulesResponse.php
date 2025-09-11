@@ -21,7 +21,7 @@ class BatchDeleteAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmIds  成功删除的告警规则ID列表
+    * alarmIds  **参数解释**： 成功删除的告警规则ID列表
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class BatchDeleteAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmIds  成功删除的告警规则ID列表
+    * alarmIds  **参数解释**： 成功删除的告警规则ID列表
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class BatchDeleteAlarmRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmIds  成功删除的告警规则ID列表
+    * alarmIds  **参数解释**： 成功删除的告警规则ID列表
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class BatchDeleteAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmIds  成功删除的告警规则ID列表
+    * alarmIds  **参数解释**： 成功删除的告警规则ID列表
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class BatchDeleteAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmIds  成功删除的告警规则ID列表
+    * alarmIds  **参数解释**： 成功删除的告警规则ID列表
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class BatchDeleteAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmIds
-    *  成功删除的告警规则ID列表
+    *  **参数解释**： 成功删除的告警规则ID列表
     *
     * @return string[]|null
     */
@@ -187,7 +187,7 @@ class BatchDeleteAlarmRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmIds
     *
-    * @param string[]|null $alarmIds 成功删除的告警规则ID列表
+    * @param string[]|null $alarmIds **参数解释**： 成功删除的告警规则ID列表
     *
     * @return $this
     */

@@ -22,11 +22,11 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
     * Array of property to type mappings. Used for (de)serialization
     * notificationMaskIds  关联编号
     * maskType  maskType
-    * startDate  屏蔽起始日期，yyyy-MM-dd。
-    * startTime  屏蔽起始时间，HH:mm:ss。
-    * endDate  屏蔽截止日期，yyyy-MM-dd。
-    * endTime  屏蔽截止时间，HH:mm:ss。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -44,11 +44,11 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
     * Array of property to format mappings. Used for (de)serialization
     * notificationMaskIds  关联编号
     * maskType  maskType
-    * startDate  屏蔽起始日期，yyyy-MM-dd。
-    * startTime  屏蔽起始时间，HH:mm:ss。
-    * endDate  屏蔽截止日期，yyyy-MM-dd。
-    * endTime  屏蔽截止时间，HH:mm:ss。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -87,11 +87,11 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
     * and the value is the original name
     * notificationMaskIds  关联编号
     * maskType  maskType
-    * startDate  屏蔽起始日期，yyyy-MM-dd。
-    * startTime  屏蔽起始时间，HH:mm:ss。
-    * endDate  屏蔽截止日期，yyyy-MM-dd。
-    * endTime  屏蔽截止时间，HH:mm:ss。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -109,11 +109,11 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
     * Array of attributes to setter functions (for deserialization of responses)
     * notificationMaskIds  关联编号
     * maskType  maskType
-    * startDate  屏蔽起始日期，yyyy-MM-dd。
-    * startTime  屏蔽起始时间，HH:mm:ss。
-    * endDate  屏蔽截止日期，yyyy-MM-dd。
-    * endTime  屏蔽截止时间，HH:mm:ss。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -131,11 +131,11 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
     * Array of attributes to getter functions (for serialization of requests)
     * notificationMaskIds  关联编号
     * maskType  maskType
-    * startDate  屏蔽起始日期，yyyy-MM-dd。
-    * startTime  屏蔽起始时间，HH:mm:ss。
-    * endDate  屏蔽截止日期，yyyy-MM-dd。
-    * endTime  屏蔽截止时间，HH:mm:ss。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -315,7 +315,7 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
 
     /**
     * Gets startDate
-    *  屏蔽起始日期，yyyy-MM-dd。
+    *  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     *
     * @return \DateTime|null
     */
@@ -327,7 +327,7 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
     /**
     * Sets startDate
     *
-    * @param \DateTime|null $startDate 屏蔽起始日期，yyyy-MM-dd。
+    * @param \DateTime|null $startDate **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -339,7 +339,7 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
 
     /**
     * Gets startTime
-    *  屏蔽起始时间，HH:mm:ss。
+    *  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -351,7 +351,7 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 屏蔽起始时间，HH:mm:ss。
+    * @param string|null $startTime **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
 
     /**
     * Gets endDate
-    *  屏蔽截止日期，yyyy-MM-dd。
+    *  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     *
     * @return \DateTime|null
     */
@@ -375,7 +375,7 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
     /**
     * Sets endDate
     *
-    * @param \DateTime|null $endDate 屏蔽截止日期，yyyy-MM-dd。
+    * @param \DateTime|null $endDate **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
 
     /**
     * Gets endTime
-    *  屏蔽截止时间，HH:mm:ss。
+    *  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -399,7 +399,7 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 屏蔽截止时间，HH:mm:ss。
+    * @param string|null $endTime **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -411,7 +411,7 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
 
     /**
     * Gets effectiveTimezone
-    *  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    *  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -423,7 +423,7 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
     /**
     * Sets effectiveTimezone
     *
-    * @param string|null $effectiveTimezone 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * @param string|null $effectiveTimezone **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @return $this
     */

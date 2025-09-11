@@ -26,7 +26,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
     * beginTime  备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * status  备份状态，取值：  - BUILDING: 备份中。 - COMPLETED: 备份完成。 - FAILED：备份失败。 - DELETING：备份删除中。
     * type  备份类型，取值： - “manual”: 手动全量备份
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
     * beginTime  备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * status  备份状态，取值：  - BUILDING: 备份中。 - COMPLETED: 备份完成。 - FAILED：备份失败。 - DELETING：备份删除中。
     * type  备份类型，取值： - “manual”: 手动全量备份
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
     * beginTime  备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * status  备份状态，取值：  - BUILDING: 备份中。 - COMPLETED: 备份完成。 - FAILED：备份失败。 - DELETING：备份删除中。
     * type  备份类型，取值： - “manual”: 手动全量备份
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
     * beginTime  备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * status  备份状态，取值：  - BUILDING: 备份中。 - COMPLETED: 备份完成。 - FAILED：备份失败。 - DELETING：备份删除中。
     * type  备份类型，取值： - “manual”: 手动全量备份
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
     * beginTime  备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * status  备份状态，取值：  - BUILDING: 备份中。 - COMPLETED: 备份完成。 - FAILED：备份失败。 - DELETING：备份删除中。
     * type  备份类型，取值： - “manual”: 手动全量备份
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -453,7 +453,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return string
     */
@@ -465,7 +465,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */

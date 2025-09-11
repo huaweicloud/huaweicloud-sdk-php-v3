@@ -25,7 +25,7 @@ class DomainNameInfo implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * instanceId  实例ID
     * type  域名类型(default/custom)
-    * domainName  域名，只能由字母、数字、中划线、星号组成， 星号只能在开头，中划线不能在开头或末 尾，至少包含两个字符串，单个字符串不 超过63个字符，字符串间以点分割，且总 长度不超过100个字符。例如： example.com 或 *example.com。
+    * domainName  域名，只能由字母、数字、中划线、星号组成， 星号只能在开头，中划线不能在开头或末 尾，至少包含两个字符串，单个字符串不 超过63个字符，字符串间以点分割，且总 长度不超过100个字符。例如： example.com 或 *.example.com。
     * certificateId  SCM服务的证书ID
     * createdAt  增加域名的时间
     * updatedAt  更新域名的时间
@@ -51,7 +51,7 @@ class DomainNameInfo implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * instanceId  实例ID
     * type  域名类型(default/custom)
-    * domainName  域名，只能由字母、数字、中划线、星号组成， 星号只能在开头，中划线不能在开头或末 尾，至少包含两个字符串，单个字符串不 超过63个字符，字符串间以点分割，且总 长度不超过100个字符。例如： example.com 或 *example.com。
+    * domainName  域名，只能由字母、数字、中划线、星号组成， 星号只能在开头，中划线不能在开头或末 尾，至少包含两个字符串，单个字符串不 超过63个字符，字符串间以点分割，且总 长度不超过100个字符。例如： example.com 或 *.example.com。
     * certificateId  SCM服务的证书ID
     * createdAt  增加域名的时间
     * updatedAt  更新域名的时间
@@ -98,7 +98,7 @@ class DomainNameInfo implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * instanceId  实例ID
     * type  域名类型(default/custom)
-    * domainName  域名，只能由字母、数字、中划线、星号组成， 星号只能在开头，中划线不能在开头或末 尾，至少包含两个字符串，单个字符串不 超过63个字符，字符串间以点分割，且总 长度不超过100个字符。例如： example.com 或 *example.com。
+    * domainName  域名，只能由字母、数字、中划线、星号组成， 星号只能在开头，中划线不能在开头或末 尾，至少包含两个字符串，单个字符串不 超过63个字符，字符串间以点分割，且总 长度不超过100个字符。例如： example.com 或 *.example.com。
     * certificateId  SCM服务的证书ID
     * createdAt  增加域名的时间
     * updatedAt  更新域名的时间
@@ -124,7 +124,7 @@ class DomainNameInfo implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * instanceId  实例ID
     * type  域名类型(default/custom)
-    * domainName  域名，只能由字母、数字、中划线、星号组成， 星号只能在开头，中划线不能在开头或末 尾，至少包含两个字符串，单个字符串不 超过63个字符，字符串间以点分割，且总 长度不超过100个字符。例如： example.com 或 *example.com。
+    * domainName  域名，只能由字母、数字、中划线、星号组成， 星号只能在开头，中划线不能在开头或末 尾，至少包含两个字符串，单个字符串不 超过63个字符，字符串间以点分割，且总 长度不超过100个字符。例如： example.com 或 *.example.com。
     * certificateId  SCM服务的证书ID
     * createdAt  增加域名的时间
     * updatedAt  更新域名的时间
@@ -150,7 +150,7 @@ class DomainNameInfo implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * instanceId  实例ID
     * type  域名类型(default/custom)
-    * domainName  域名，只能由字母、数字、中划线、星号组成， 星号只能在开头，中划线不能在开头或末 尾，至少包含两个字符串，单个字符串不 超过63个字符，字符串间以点分割，且总 长度不超过100个字符。例如： example.com 或 *example.com。
+    * domainName  域名，只能由字母、数字、中划线、星号组成， 星号只能在开头，中划线不能在开头或末 尾，至少包含两个字符串，单个字符串不 超过63个字符，字符串间以点分割，且总 长度不超过100个字符。例如： example.com 或 *.example.com。
     * certificateId  SCM服务的证书ID
     * createdAt  增加域名的时间
     * updatedAt  更新域名的时间
@@ -382,7 +382,7 @@ class DomainNameInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
-    *  域名，只能由字母、数字、中划线、星号组成， 星号只能在开头，中划线不能在开头或末 尾，至少包含两个字符串，单个字符串不 超过63个字符，字符串间以点分割，且总 长度不超过100个字符。例如： example.com 或 *example.com。
+    *  域名，只能由字母、数字、中划线、星号组成， 星号只能在开头，中划线不能在开头或末 尾，至少包含两个字符串，单个字符串不 超过63个字符，字符串间以点分割，且总 长度不超过100个字符。例如： example.com 或 *.example.com。
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class DomainNameInfo implements ModelInterface, ArrayAccess
     /**
     * Sets domainName
     *
-    * @param string|null $domainName 域名，只能由字母、数字、中划线、星号组成， 星号只能在开头，中划线不能在开头或末 尾，至少包含两个字符串，单个字符串不 超过63个字符，字符串间以点分割，且总 长度不超过100个字符。例如： example.com 或 *example.com。
+    * @param string|null $domainName 域名，只能由字母、数字、中划线、星号组成， 星号只能在开头，中划线不能在开头或末 尾，至少包含两个字符串，单个字符串不 超过63个字符，字符串间以点分割，且总 长度不超过100个字符。例如： example.com 或 *.example.com。
     *
     * @return $this
     */

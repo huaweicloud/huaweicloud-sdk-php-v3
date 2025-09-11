@@ -620,6 +620,71 @@ class CesAsyncClient extends Client
     }
 
     /**
+     * 批量查询指标数据
+     *
+     * 批量查询指标数据
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchListSpecifiedMetricDataAsync($request)
+    {
+        return $this->batchListSpecifiedMetricDataAsyncWithHttpInfo($request);
+    }
+    
+    public function batchListSpecifiedMetricDataAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/batch-query-metric-data';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\BatchListSpecifiedMetricDataResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\BatchListSpecifiedMetricDataRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 批量修改告警通知屏蔽规则的屏蔽时间
      *
      * 批量修改告警通知屏蔽规则的屏蔽时间
@@ -1545,9 +1610,9 @@ class CesAsyncClient extends Client
     }
 
     /**
-     * 查询主机监控维度指标信息
+     * 查询主机监控原始维度值
      *
-     * 根据ECS/BMS资源ID查询磁盘、挂载点、进程、显卡、RAID控制器维度指标信息；维度NPU已经为原始值，不需要调用该接口进行额外查询获取指标信息
+     * 根据ECS/BMS资源ID及特殊维度值(仅支持磁盘、挂载点、进程、显卡、RAID控制器)查询该特殊维度对应的原始维度值；其他维度无需调用该接口
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2078,6 +2143,9 @@ class CesAsyncClient extends Client
         }
         if ($localVarParams['templateName'] !== null) {
             $queryParams['template_name'] = $localVarParams['templateName'];
+        }
+        if ($localVarParams['productName'] !== null) {
+            $queryParams['product_name'] = $localVarParams['productName'];
         }
 
         if ($multipart) {

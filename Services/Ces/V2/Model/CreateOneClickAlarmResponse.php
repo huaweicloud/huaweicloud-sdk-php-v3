@@ -21,7 +21,7 @@ class CreateOneClickAlarmResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * oneClickAlarmId  一键告警ID
+    * oneClickAlarmId  **参数解释**： 一键告警ID。 **约束限制**： 不涉及。 **取值范围**： 只能为字母或者数字，字符长度为[1,64] **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateOneClickAlarmResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * oneClickAlarmId  一键告警ID
+    * oneClickAlarmId  **参数解释**： 一键告警ID。 **约束限制**： 不涉及。 **取值范围**： 只能为字母或者数字，字符长度为[1,64] **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateOneClickAlarmResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * oneClickAlarmId  一键告警ID
+    * oneClickAlarmId  **参数解释**： 一键告警ID。 **约束限制**： 不涉及。 **取值范围**： 只能为字母或者数字，字符长度为[1,64] **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateOneClickAlarmResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * oneClickAlarmId  一键告警ID
+    * oneClickAlarmId  **参数解释**： 一键告警ID。 **约束限制**： 不涉及。 **取值范围**： 只能为字母或者数字，字符长度为[1,64] **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateOneClickAlarmResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * oneClickAlarmId  一键告警ID
+    * oneClickAlarmId  **参数解释**： 一键告警ID。 **约束限制**： 不涉及。 **取值范围**： 只能为字母或者数字，字符长度为[1,64] **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -184,7 +184,7 @@ class CreateOneClickAlarmResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets oneClickAlarmId
-    *  一键告警ID
+    *  **参数解释**： 一键告警ID。 **约束限制**： 不涉及。 **取值范围**： 只能为字母或者数字，字符长度为[1,64] **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -196,7 +196,7 @@ class CreateOneClickAlarmResponse implements ModelInterface, ArrayAccess
     /**
     * Sets oneClickAlarmId
     *
-    * @param string|null $oneClickAlarmId 一键告警ID
+    * @param string|null $oneClickAlarmId **参数解释**： 一键告警ID。 **约束限制**： 不涉及。 **取值范围**： 只能为字母或者数字，字符长度为[1,64] **默认取值**： 不涉及。
     *
     * @return $this
     */

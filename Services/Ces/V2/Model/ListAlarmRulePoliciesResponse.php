@@ -21,20 +21,20 @@ class ListAlarmRulePoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * policies  策略信息
-    * count  指定告警规则对应的策略总数
+    * policies  **参数解释**： 告警策略信息列表。
+    * count  **参数解释**： 指定告警规则对应的策略总数。 **取值范围**： 0-100
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\ListPolicy[]',
+            'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\ListPolicyResp[]',
             'count' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * policies  策略信息
-    * count  指定告警规则对应的策略总数
+    * policies  **参数解释**： 告警策略信息列表。
+    * count  **参数解释**： 指定告警规则对应的策略总数。 **取值范围**： 0-100
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListAlarmRulePoliciesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * policies  策略信息
-    * count  指定告警规则对应的策略总数
+    * policies  **参数解释**： 告警策略信息列表。
+    * count  **参数解释**： 指定告警规则对应的策略总数。 **取值范围**： 0-100
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListAlarmRulePoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * policies  策略信息
-    * count  指定告警规则对应的策略总数
+    * policies  **参数解释**： 告警策略信息列表。
+    * count  **参数解释**： 指定告警规则对应的策略总数。 **取值范围**： 0-100
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListAlarmRulePoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * policies  策略信息
-    * count  指定告警规则对应的策略总数
+    * policies  **参数解释**： 告警策略信息列表。
+    * count  **参数解释**： 指定告警规则对应的策略总数。 **取值范围**： 0-100
     *
     * @var string[]
     */
@@ -192,9 +192,9 @@ class ListAlarmRulePoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets policies
-    *  策略信息
+    *  **参数解释**： 告警策略信息列表。
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\ListPolicy[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ListPolicyResp[]|null
     */
     public function getPolicies()
     {
@@ -204,7 +204,7 @@ class ListAlarmRulePoliciesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets policies
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ListPolicy[]|null $policies 策略信息
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ListPolicyResp[]|null $policies **参数解释**： 告警策略信息列表。
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListAlarmRulePoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  指定告警规则对应的策略总数
+    *  **参数解释**： 指定告警规则对应的策略总数。 **取值范围**： 0-100
     *
     * @return int|null
     */
@@ -228,7 +228,7 @@ class ListAlarmRulePoliciesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 指定告警规则对应的策略总数
+    * @param int|null $count **参数解释**： 指定告警规则对应的策略总数。 **取值范围**： 0-100
     *
     * @return $this
     */

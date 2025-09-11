@@ -20,7 +20,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
+    * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
     * relationIds  关联编号，relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略ID；
     * resources  关联资源，relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的资源信息；
@@ -29,11 +29,11 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     * resourceLevel  dimension: 子维度,product: 云产品
     * productName  资源为云产品时的云产品名称
     * maskType  maskType
-    * startDate  屏蔽起始日期，yyyy-MM-dd。
-    * startTime  屏蔽起始时间，HH:mm:ss。
-    * endDate  屏蔽截止日期，yyyy-MM-dd。
-    * endTime  屏蔽截止时间，HH:mm:ss。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -56,7 +56,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
+    * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
     * relationIds  关联编号，relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略ID；
     * resources  关联资源，relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的资源信息；
@@ -65,11 +65,11 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     * resourceLevel  dimension: 子维度,product: 云产品
     * productName  资源为云产品时的云产品名称
     * maskType  maskType
-    * startDate  屏蔽起始日期，yyyy-MM-dd。
-    * startTime  屏蔽起始时间，HH:mm:ss。
-    * endDate  屏蔽截止日期，yyyy-MM-dd。
-    * endTime  屏蔽截止时间，HH:mm:ss。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
+    * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
     * relationIds  关联编号，relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略ID；
     * resources  关联资源，relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的资源信息；
@@ -122,11 +122,11 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     * resourceLevel  dimension: 子维度,product: 云产品
     * productName  资源为云产品时的云产品名称
     * maskType  maskType
-    * startDate  屏蔽起始日期，yyyy-MM-dd。
-    * startTime  屏蔽起始时间，HH:mm:ss。
-    * endDate  屏蔽截止日期，yyyy-MM-dd。
-    * endTime  屏蔽截止时间，HH:mm:ss。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -149,7 +149,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
+    * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
     * relationIds  关联编号，relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略ID；
     * resources  关联资源，relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的资源信息；
@@ -158,11 +158,11 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     * resourceLevel  dimension: 子维度,product: 云产品
     * productName  资源为云产品时的云产品名称
     * maskType  maskType
-    * startDate  屏蔽起始日期，yyyy-MM-dd。
-    * startTime  屏蔽起始时间，HH:mm:ss。
-    * endDate  屏蔽截止日期，yyyy-MM-dd。
-    * endTime  屏蔽截止时间，HH:mm:ss。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
+    * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
     * relationIds  关联编号，relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略ID；
     * resources  关联资源，relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的资源信息；
@@ -194,11 +194,11 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     * resourceLevel  dimension: 子维度,product: 云产品
     * productName  资源为云产品时的云产品名称
     * maskType  maskType
-    * startDate  屏蔽起始日期，yyyy-MM-dd。
-    * startTime  屏蔽起始时间，HH:mm:ss。
-    * endDate  屏蔽截止日期，yyyy-MM-dd。
-    * endTime  屏蔽截止时间，HH:mm:ss。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -322,8 +322,8 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
             if (!is_null($this->container['maskName']) && (mb_strlen($this->container['maskName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'maskName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['maskName']) && !preg_match("/^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['maskName'])) {
-                $invalidProperties[] = "invalid value for 'maskName', must be conform to the pattern /^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
+            if (!is_null($this->container['maskName']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['maskName'])) {
+                $invalidProperties[] = "invalid value for 'maskName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
             }
         if ($this->container['relationType'] === null) {
             $invalidProperties[] = "'relationType' can't be null";
@@ -385,7 +385,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets maskName
-    *  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
+    *  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -397,7 +397,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets maskName
     *
-    * @param string|null $maskName 屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
+    * @param string|null $maskName **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -601,7 +601,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets startDate
-    *  屏蔽起始日期，yyyy-MM-dd。
+    *  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     *
     * @return \DateTime|null
     */
@@ -613,7 +613,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets startDate
     *
-    * @param \DateTime|null $startDate 屏蔽起始日期，yyyy-MM-dd。
+    * @param \DateTime|null $startDate **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -625,7 +625,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets startTime
-    *  屏蔽起始时间，HH:mm:ss。
+    *  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -637,7 +637,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 屏蔽起始时间，HH:mm:ss。
+    * @param string|null $startTime **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -649,7 +649,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets endDate
-    *  屏蔽截止日期，yyyy-MM-dd。
+    *  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     *
     * @return \DateTime|null
     */
@@ -661,7 +661,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets endDate
     *
-    * @param \DateTime|null $endDate 屏蔽截止日期，yyyy-MM-dd。
+    * @param \DateTime|null $endDate **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -673,7 +673,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets endTime
-    *  屏蔽截止时间，HH:mm:ss。
+    *  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -685,7 +685,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 屏蔽截止时间，HH:mm:ss。
+    * @param string|null $endTime **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -697,7 +697,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets effectiveTimezone
-    *  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    *  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -709,7 +709,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets effectiveTimezone
     *
-    * @param string|null $effectiveTimezone 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * @param string|null $effectiveTimezone **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @return $this
     */

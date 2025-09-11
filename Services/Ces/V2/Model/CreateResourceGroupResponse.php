@@ -21,7 +21,7 @@ class CreateResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
+    * groupId  **参数解释**： 资源分组ID     **约束限制**： 不涉及。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。       **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
+    * groupId  **参数解释**： 资源分组ID     **约束限制**： 不涉及。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。       **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateResourceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
+    * groupId  **参数解释**： 资源分组ID     **约束限制**： 不涉及。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。       **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
+    * groupId  **参数解释**： 资源分组ID     **约束限制**： 不涉及。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。       **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
+    * groupId  **参数解释**： 资源分组ID     **约束限制**： 不涉及。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。       **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -184,7 +184,7 @@ class CreateResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
+    *  **参数解释**： 资源分组ID     **约束限制**： 不涉及。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。       **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -196,7 +196,7 @@ class CreateResourceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
+    * @param string|null $groupId **参数解释**： 资源分组ID     **约束限制**： 不涉及。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。       **默认取值**： 不涉及。
     *
     * @return $this
     */

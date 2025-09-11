@@ -22,7 +22,7 @@ class CreateRegistryRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  目标仓库名称，1-64字符组成，只能包含英文大小写、数字、汉字、中划线和下划线。
     * description  目标仓库描述
-    * type  仓库类型，swr-pro(开源harbor仓库)、swr-pro-internal(SWR企业版仓库)、huawei-SWR(SWR共享版仓库)
+    * type  仓库类型，swr-pro(开源harbor仓库)、swr-pro-internal(SWR企业版仓库)、huawei-SWR(SWR基础版仓库)
     * projectId  企业仓库实例所属的项目ID，当type为swr-pro-internal时必填
     * regionId  区域ID，当type为swr-pro-internal时必填
     * instanceId  企业仓库实例ID，当type为swr-pro-internal时必填
@@ -50,7 +50,7 @@ class CreateRegistryRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  目标仓库名称，1-64字符组成，只能包含英文大小写、数字、汉字、中划线和下划线。
     * description  目标仓库描述
-    * type  仓库类型，swr-pro(开源harbor仓库)、swr-pro-internal(SWR企业版仓库)、huawei-SWR(SWR共享版仓库)
+    * type  仓库类型，swr-pro(开源harbor仓库)、swr-pro-internal(SWR企业版仓库)、huawei-SWR(SWR基础版仓库)
     * projectId  企业仓库实例所属的项目ID，当type为swr-pro-internal时必填
     * regionId  区域ID，当type为swr-pro-internal时必填
     * instanceId  企业仓库实例ID，当type为swr-pro-internal时必填
@@ -99,7 +99,7 @@ class CreateRegistryRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  目标仓库名称，1-64字符组成，只能包含英文大小写、数字、汉字、中划线和下划线。
     * description  目标仓库描述
-    * type  仓库类型，swr-pro(开源harbor仓库)、swr-pro-internal(SWR企业版仓库)、huawei-SWR(SWR共享版仓库)
+    * type  仓库类型，swr-pro(开源harbor仓库)、swr-pro-internal(SWR企业版仓库)、huawei-SWR(SWR基础版仓库)
     * projectId  企业仓库实例所属的项目ID，当type为swr-pro-internal时必填
     * regionId  区域ID，当type为swr-pro-internal时必填
     * instanceId  企业仓库实例ID，当type为swr-pro-internal时必填
@@ -127,7 +127,7 @@ class CreateRegistryRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  目标仓库名称，1-64字符组成，只能包含英文大小写、数字、汉字、中划线和下划线。
     * description  目标仓库描述
-    * type  仓库类型，swr-pro(开源harbor仓库)、swr-pro-internal(SWR企业版仓库)、huawei-SWR(SWR共享版仓库)
+    * type  仓库类型，swr-pro(开源harbor仓库)、swr-pro-internal(SWR企业版仓库)、huawei-SWR(SWR基础版仓库)
     * projectId  企业仓库实例所属的项目ID，当type为swr-pro-internal时必填
     * regionId  区域ID，当type为swr-pro-internal时必填
     * instanceId  企业仓库实例ID，当type为swr-pro-internal时必填
@@ -155,7 +155,7 @@ class CreateRegistryRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  目标仓库名称，1-64字符组成，只能包含英文大小写、数字、汉字、中划线和下划线。
     * description  目标仓库描述
-    * type  仓库类型，swr-pro(开源harbor仓库)、swr-pro-internal(SWR企业版仓库)、huawei-SWR(SWR共享版仓库)
+    * type  仓库类型，swr-pro(开源harbor仓库)、swr-pro-internal(SWR企业版仓库)、huawei-SWR(SWR基础版仓库)
     * projectId  企业仓库实例所属的项目ID，当type为swr-pro-internal时必填
     * regionId  区域ID，当type为swr-pro-internal时必填
     * instanceId  企业仓库实例ID，当type为swr-pro-internal时必填
@@ -336,7 +336,7 @@ class CreateRegistryRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  仓库类型，swr-pro(开源harbor仓库)、swr-pro-internal(SWR企业版仓库)、huawei-SWR(SWR共享版仓库)
+    *  仓库类型，swr-pro(开源harbor仓库)、swr-pro-internal(SWR企业版仓库)、huawei-SWR(SWR基础版仓库)
     *
     * @return string
     */
@@ -348,7 +348,7 @@ class CreateRegistryRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 仓库类型，swr-pro(开源harbor仓库)、swr-pro-internal(SWR企业版仓库)、huawei-SWR(SWR共享版仓库)
+    * @param string $type 仓库类型，swr-pro(开源harbor仓库)、swr-pro-internal(SWR企业版仓库)、huawei-SWR(SWR基础版仓库)
     *
     * @return $this
     */

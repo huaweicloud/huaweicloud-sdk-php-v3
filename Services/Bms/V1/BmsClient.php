@@ -1204,6 +1204,71 @@ class BmsClient extends Client
     }
 
     /**
+     * 编辑port
+     *
+     * 编辑port
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyVmNic($request)
+    {
+        return $this->modifyVmNicWithHttpInfo($request);
+    }
+
+    public function modifyVmNicWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/baremetalservers/nics/{nic_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['nicId'] !== null) {
+            $pathParams['nic_id'] = $localVarParams['nicId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bms\V1\Model\ModifyVmNicResponse',
+            $requestType='\HuaweiCloud\SDK\Bms\V1\Model\ModifyVmNicRequest');
+    }
+
+    /**
      * 重装裸金属服务器操作系统
      *
      * 重装裸金属服务器的操作系统。快速发放裸金属服务器支持裸金属服务器数据盘不变的情况下，使用原镜像重装系统盘。重装操作系统支持密码或者密钥注入
@@ -1331,6 +1396,65 @@ class BmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bms\V1\Model\ResetPwdOneClickResponse',
             $requestType='\HuaweiCloud\SDK\Bms\V1\Model\ResetPwdOneClickRequest');
+    }
+
+    /**
+     * 查询可用资源
+     *
+     * 查询可用资源
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAvailableResource($request)
+    {
+        return $this->showAvailableResourceWithHttpInfo($request);
+    }
+
+    public function showAvailableResourceWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/baremetalservers/available_resource';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bms\V1\Model\ShowAvailableResourceResponse',
+            $requestType='\HuaweiCloud\SDK\Bms\V1\Model\ShowAvailableResourceRequest');
     }
 
     /**

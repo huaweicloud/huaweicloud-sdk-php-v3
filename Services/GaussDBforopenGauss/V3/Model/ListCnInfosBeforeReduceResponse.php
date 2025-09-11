@@ -21,7 +21,7 @@ class ListCnInfosBeforeReduceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * maxReductionNum  单次缩容允许最大步长。
     * nodes  节点信息列表。
     *
@@ -35,7 +35,7 @@ class ListCnInfosBeforeReduceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * maxReductionNum  单次缩容允许最大步长。
     * nodes  节点信息列表。
     *
@@ -70,7 +70,7 @@ class ListCnInfosBeforeReduceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * maxReductionNum  单次缩容允许最大步长。
     * nodes  节点信息列表。
     *
@@ -84,7 +84,7 @@ class ListCnInfosBeforeReduceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * maxReductionNum  单次缩容允许最大步长。
     * nodes  节点信息列表。
     *
@@ -98,7 +98,7 @@ class ListCnInfosBeforeReduceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * maxReductionNum  单次缩容允许最大步长。
     * nodes  节点信息列表。
     *
@@ -197,7 +197,7 @@ class ListCnInfosBeforeReduceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class ListCnInfosBeforeReduceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例ID。
+    * @param string|null $instanceId **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */

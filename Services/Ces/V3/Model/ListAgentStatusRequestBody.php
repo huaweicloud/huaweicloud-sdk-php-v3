@@ -20,10 +20,10 @@ class ListAgentStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceIds  机器实例id列表
-    * uniagentStatus  uniagent运行状态，不传查所有状态,none无，running运行中，silent静默中，unknown故障
-    * extensionName  插件名称，不传查所有插件，目前仅支持telescope
-    * extensionStatus  插件状态，不传查所有状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
+    * instanceIds  **参数解释**: 机器实例id列表 **约束限制**: 包含的机器实例id最多为2000个，最少为1个
+    * uniagentStatus  **参数解释**: uniagent运行状态，不传值则查出所有状态 **约束限制**: 不涉及。 **取值范围**: - none: 未安装 - running: 运行中 - silent: 静默状态，用于大规模插件异常时，紧急规避的一种措施，现象是kill掉telescope，只保留uniagent的心跳功能 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障 **默认取值**: 不涉及
+    * extensionName  **参数解释**: 插件名称，不传查所有插件 **约束限制**: 当前仅支持查询telescope插件 **取值范围**: - telescope: 主机监控插件telescope **默认取值**: telescope
+    * extensionStatus  **参数解释**: 插件状态，不传查所有状态  **约束限制**: 不涉及 **取值范围**: - none: 未安装 - running: 运行中 - stopped：已停止 - fault: 进程故障，应该运行的插件，没运行，属于客户端故障 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ListAgentStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceIds  机器实例id列表
-    * uniagentStatus  uniagent运行状态，不传查所有状态,none无，running运行中，silent静默中，unknown故障
-    * extensionName  插件名称，不传查所有插件，目前仅支持telescope
-    * extensionStatus  插件状态，不传查所有状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
+    * instanceIds  **参数解释**: 机器实例id列表 **约束限制**: 包含的机器实例id最多为2000个，最少为1个
+    * uniagentStatus  **参数解释**: uniagent运行状态，不传值则查出所有状态 **约束限制**: 不涉及。 **取值范围**: - none: 未安装 - running: 运行中 - silent: 静默状态，用于大规模插件异常时，紧急规避的一种措施，现象是kill掉telescope，只保留uniagent的心跳功能 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障 **默认取值**: 不涉及
+    * extensionName  **参数解释**: 插件名称，不传查所有插件 **约束限制**: 当前仅支持查询telescope插件 **取值范围**: - telescope: 主机监控插件telescope **默认取值**: telescope
+    * extensionStatus  **参数解释**: 插件状态，不传查所有状态  **约束限制**: 不涉及 **取值范围**: - none: 未安装 - running: 运行中 - stopped：已停止 - fault: 进程故障，应该运行的插件，没运行，属于客户端故障 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ListAgentStatusRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceIds  机器实例id列表
-    * uniagentStatus  uniagent运行状态，不传查所有状态,none无，running运行中，silent静默中，unknown故障
-    * extensionName  插件名称，不传查所有插件，目前仅支持telescope
-    * extensionStatus  插件状态，不传查所有状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
+    * instanceIds  **参数解释**: 机器实例id列表 **约束限制**: 包含的机器实例id最多为2000个，最少为1个
+    * uniagentStatus  **参数解释**: uniagent运行状态，不传值则查出所有状态 **约束限制**: 不涉及。 **取值范围**: - none: 未安装 - running: 运行中 - silent: 静默状态，用于大规模插件异常时，紧急规避的一种措施，现象是kill掉telescope，只保留uniagent的心跳功能 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障 **默认取值**: 不涉及
+    * extensionName  **参数解释**: 插件名称，不传查所有插件 **约束限制**: 当前仅支持查询telescope插件 **取值范围**: - telescope: 主机监控插件telescope **默认取值**: telescope
+    * extensionStatus  **参数解释**: 插件状态，不传查所有状态  **约束限制**: 不涉及 **取值范围**: - none: 未安装 - running: 运行中 - stopped：已停止 - fault: 进程故障，应该运行的插件，没运行，属于客户端故障 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ListAgentStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceIds  机器实例id列表
-    * uniagentStatus  uniagent运行状态，不传查所有状态,none无，running运行中，silent静默中，unknown故障
-    * extensionName  插件名称，不传查所有插件，目前仅支持telescope
-    * extensionStatus  插件状态，不传查所有状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
+    * instanceIds  **参数解释**: 机器实例id列表 **约束限制**: 包含的机器实例id最多为2000个，最少为1个
+    * uniagentStatus  **参数解释**: uniagent运行状态，不传值则查出所有状态 **约束限制**: 不涉及。 **取值范围**: - none: 未安装 - running: 运行中 - silent: 静默状态，用于大规模插件异常时，紧急规避的一种措施，现象是kill掉telescope，只保留uniagent的心跳功能 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障 **默认取值**: 不涉及
+    * extensionName  **参数解释**: 插件名称，不传查所有插件 **约束限制**: 当前仅支持查询telescope插件 **取值范围**: - telescope: 主机监控插件telescope **默认取值**: telescope
+    * extensionStatus  **参数解释**: 插件状态，不传查所有状态  **约束限制**: 不涉及 **取值范围**: - none: 未安装 - running: 运行中 - stopped：已停止 - fault: 进程故障，应该运行的插件，没运行，属于客户端故障 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ListAgentStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceIds  机器实例id列表
-    * uniagentStatus  uniagent运行状态，不传查所有状态,none无，running运行中，silent静默中，unknown故障
-    * extensionName  插件名称，不传查所有插件，目前仅支持telescope
-    * extensionStatus  插件状态，不传查所有状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
+    * instanceIds  **参数解释**: 机器实例id列表 **约束限制**: 包含的机器实例id最多为2000个，最少为1个
+    * uniagentStatus  **参数解释**: uniagent运行状态，不传值则查出所有状态 **约束限制**: 不涉及。 **取值范围**: - none: 未安装 - running: 运行中 - silent: 静默状态，用于大规模插件异常时，紧急规避的一种措施，现象是kill掉telescope，只保留uniagent的心跳功能 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障 **默认取值**: 不涉及
+    * extensionName  **参数解释**: 插件名称，不传查所有插件 **约束限制**: 当前仅支持查询telescope插件 **取值范围**: - telescope: 主机监控插件telescope **默认取值**: telescope
+    * extensionStatus  **参数解释**: 插件状态，不传查所有状态  **约束限制**: 不涉及 **取值范围**: - none: 未安装 - running: 运行中 - stopped：已停止 - fault: 进程故障，应该运行的插件，没运行，属于客户端故障 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -287,7 +287,7 @@ class ListAgentStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceIds
-    *  机器实例id列表
+    *  **参数解释**: 机器实例id列表 **约束限制**: 包含的机器实例id最多为2000个，最少为1个
     *
     * @return string[]
     */
@@ -299,7 +299,7 @@ class ListAgentStatusRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets instanceIds
     *
-    * @param string[] $instanceIds 机器实例id列表
+    * @param string[] $instanceIds **参数解释**: 机器实例id列表 **约束限制**: 包含的机器实例id最多为2000个，最少为1个
     *
     * @return $this
     */
@@ -311,7 +311,7 @@ class ListAgentStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets uniagentStatus
-    *  uniagent运行状态，不传查所有状态,none无，running运行中，silent静默中，unknown故障
+    *  **参数解释**: uniagent运行状态，不传值则查出所有状态 **约束限制**: 不涉及。 **取值范围**: - none: 未安装 - running: 运行中 - silent: 静默状态，用于大规模插件异常时，紧急规避的一种措施，现象是kill掉telescope，只保留uniagent的心跳功能 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -323,7 +323,7 @@ class ListAgentStatusRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets uniagentStatus
     *
-    * @param string|null $uniagentStatus uniagent运行状态，不传查所有状态,none无，running运行中，silent静默中，unknown故障
+    * @param string|null $uniagentStatus **参数解释**: uniagent运行状态，不传值则查出所有状态 **约束限制**: 不涉及。 **取值范围**: - none: 未安装 - running: 运行中 - silent: 静默状态，用于大规模插件异常时，紧急规避的一种措施，现象是kill掉telescope，只保留uniagent的心跳功能 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -335,7 +335,7 @@ class ListAgentStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets extensionName
-    *  插件名称，不传查所有插件，目前仅支持telescope
+    *  **参数解释**: 插件名称，不传查所有插件 **约束限制**: 当前仅支持查询telescope插件 **取值范围**: - telescope: 主机监控插件telescope **默认取值**: telescope
     *
     * @return string|null
     */
@@ -347,7 +347,7 @@ class ListAgentStatusRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets extensionName
     *
-    * @param string|null $extensionName 插件名称，不传查所有插件，目前仅支持telescope
+    * @param string|null $extensionName **参数解释**: 插件名称，不传查所有插件 **约束限制**: 当前仅支持查询telescope插件 **取值范围**: - telescope: 主机监控插件telescope **默认取值**: telescope
     *
     * @return $this
     */
@@ -359,7 +359,7 @@ class ListAgentStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets extensionStatus
-    *  插件状态，不传查所有状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
+    *  **参数解释**: 插件状态，不传查所有状态  **约束限制**: 不涉及 **取值范围**: - none: 未安装 - running: 运行中 - stopped：已停止 - fault: 进程故障，应该运行的插件，没运行，属于客户端故障 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -371,7 +371,7 @@ class ListAgentStatusRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets extensionStatus
     *
-    * @param string|null $extensionStatus 插件状态，不传查所有状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
+    * @param string|null $extensionStatus **参数解释**: 插件状态，不传查所有状态  **约束限制**: 不涉及 **取值范围**: - none: 未安装 - running: 运行中 - stopped：已停止 - fault: 进程故障，应该运行的插件，没运行，属于客户端故障 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障 **默认取值**: 不涉及
     *
     * @return $this
     */

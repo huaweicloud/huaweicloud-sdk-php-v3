@@ -21,17 +21,17 @@ class ListDisasterRecoveryRecordResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * records  操作记录
+    * records  **参数解释**: 操作记录。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'records' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RecordInfoResponse[]'
+            'records' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RecordInfoResponseResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * records  操作记录
+    * records  **参数解释**: 操作记录。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListDisasterRecoveryRecordResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * records  操作记录
+    * records  **参数解释**: 操作记录。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListDisasterRecoveryRecordResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * records  操作记录
+    * records  **参数解释**: 操作记录。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListDisasterRecoveryRecordResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * records  操作记录
+    * records  **参数解释**: 操作记录。
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class ListDisasterRecoveryRecordResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets records
-    *  操作记录
+    *  **参数解释**: 操作记录。
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RecordInfoResponse[]|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RecordInfoResponseResult[]|null
     */
     public function getRecords()
     {
@@ -187,7 +187,7 @@ class ListDisasterRecoveryRecordResponse implements ModelInterface, ArrayAccess
     /**
     * Sets records
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RecordInfoResponse[]|null $records 操作记录
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RecordInfoResponseResult[]|null $records **参数解释**: 操作记录。
     *
     * @return $this
     */

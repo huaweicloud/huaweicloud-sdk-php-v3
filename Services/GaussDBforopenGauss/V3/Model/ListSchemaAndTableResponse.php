@@ -21,7 +21,7 @@ class ListSchemaAndTableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * databaseTables  数据库表信息列表
+    * databaseTables  **参数解释**: 数据库表信息列表。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListSchemaAndTableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * databaseTables  数据库表信息列表
+    * databaseTables  **参数解释**: 数据库表信息列表。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListSchemaAndTableResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * databaseTables  数据库表信息列表
+    * databaseTables  **参数解释**: 数据库表信息列表。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListSchemaAndTableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * databaseTables  数据库表信息列表
+    * databaseTables  **参数解释**: 数据库表信息列表。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListSchemaAndTableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * databaseTables  数据库表信息列表
+    * databaseTables  **参数解释**: 数据库表信息列表。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListSchemaAndTableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets databaseTables
-    *  数据库表信息列表
+    *  **参数解释**: 数据库表信息列表。
     *
     * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DatabaseSchemaTableResult[]|null
     */
@@ -187,7 +187,7 @@ class ListSchemaAndTableResponse implements ModelInterface, ArrayAccess
     /**
     * Sets databaseTables
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DatabaseSchemaTableResult[]|null $databaseTables 数据库表信息列表
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DatabaseSchemaTableResult[]|null $databaseTables **参数解释**: 数据库表信息列表。
     *
     * @return $this
     */

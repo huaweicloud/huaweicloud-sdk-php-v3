@@ -42,8 +42,8 @@ class SignatureExecutionSubTask implements ModelInterface, ArrayAccess
             'digest' => 'string',
             'status' => 'string',
             'statusText' => 'string',
-            'createdAt' => '\DateTime',
-            'updatedAt' => '\DateTime'
+            'createdAt' => 'string',
+            'updatedAt' => 'string'
     ];
 
     /**
@@ -70,8 +70,8 @@ class SignatureExecutionSubTask implements ModelInterface, ArrayAccess
         'digest' => null,
         'status' => null,
         'statusText' => null,
-        'createdAt' => 'date-time',
-        'updatedAt' => 'date-time'
+        'createdAt' => null,
+        'updatedAt' => null
     ];
 
     /**
@@ -467,7 +467,7 @@ class SignatureExecutionSubTask implements ModelInterface, ArrayAccess
     * Gets createdAt
     *  创建时间
     *
-    * @return \DateTime|null
+    * @return string|null
     */
     public function getCreatedAt()
     {
@@ -477,7 +477,7 @@ class SignatureExecutionSubTask implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param \DateTime|null $createdAt 创建时间
+    * @param string|null $createdAt 创建时间
     *
     * @return $this
     */
@@ -491,7 +491,7 @@ class SignatureExecutionSubTask implements ModelInterface, ArrayAccess
     * Gets updatedAt
     *  更新时间
     *
-    * @return \DateTime|null
+    * @return string|null
     */
     public function getUpdatedAt()
     {
@@ -501,7 +501,7 @@ class SignatureExecutionSubTask implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param \DateTime|null $updatedAt 更新时间
+    * @param string|null $updatedAt 更新时间
     *
     * @return $this
     */

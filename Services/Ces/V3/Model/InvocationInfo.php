@@ -20,20 +20,20 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * invocationId  任务id
-    * instanceId  主机id
-    * instanceName  主机名称
-    * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
-    * intranetIps  内网ip列表
-    * elasticIps  弹性公网ip列表
-    * invocationType  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚，RETRY重试)
-    * invocationStatus  任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
-    * invocationTarget  任务对象，目前支持telescope
-    * createTime  任务创建时间
-    * updateTime  任务更新时间
-    * currentVersion  当前版本
-    * targetVersion  目标版本
-    * resultMsg  任务执行结果信息
+    * invocationId  **参数解释**: 任务id **取值范围**: 以字母或数字开头，后续可以包含字母、数字、下划线（_）或连字符（-），长度至少为1，且不允许出现其他字符
+    * instanceId  **参数解释**: 主机id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
+    * instanceName  **参数解释**: 主机名称 **取值范围**: 字符串长度范围为[1,128]
+    * instanceType  **参数解释**: 主机类型，仅支持ECS弹性云服务器和BMS裸金属服务器 **取值范围**: - ECS: 弹性云服务器 - BMS：裸金属服务器
+    * intranetIps  **参数解释**: 内网ip列表 **取值范围**: 返回数组长度为[0,10]，数组内元素格式为：长度为1到15个字符的字符串，其中每个字符可以是数字（0-9）或任意其他单个字符
+    * elasticIps  **参数解释**: 弹性公网ip列表 **取值范围**: 返回数组长度为[0,10]，数组内元素格式为：长度为1到15个字符的字符串，其中每个字符可以是数字（0-9）或任意其他单个字符
+    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试
+    * invocationStatus  **参数解释**: 任务状态 **取值范围**: - PENDING：待执行 - RUNNING：运行中 - TIMEOUT：超时 - FAILED：失败 - SUCCEEDED：成功 - CANCELED：取消 - ROLLBACKED：已回退
+    * invocationTarget  **参数解释**: 任务对象, 支持telescope监控 **取值范围**: - telescope: 主机监控插件telescope
+    * createTime  **参数解释**: 任务创建时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
+    * updateTime  **参数解释**: 任务更新时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
+    * currentVersion  **参数解释**: 当前版本 **取值范围**: 字符串长度范围为[1,64]
+    * targetVersion  **参数解释**: 目标版本 **取值范围**: 字符串长度范围为[1,64]
+    * resultMsg  **参数解释**: 任务执行结果信息 **取值范围**: 字符串长度范围为[1,5000]
     *
     * @var string[]
     */
@@ -56,20 +56,20 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * invocationId  任务id
-    * instanceId  主机id
-    * instanceName  主机名称
-    * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
-    * intranetIps  内网ip列表
-    * elasticIps  弹性公网ip列表
-    * invocationType  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚，RETRY重试)
-    * invocationStatus  任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
-    * invocationTarget  任务对象，目前支持telescope
-    * createTime  任务创建时间
-    * updateTime  任务更新时间
-    * currentVersion  当前版本
-    * targetVersion  目标版本
-    * resultMsg  任务执行结果信息
+    * invocationId  **参数解释**: 任务id **取值范围**: 以字母或数字开头，后续可以包含字母、数字、下划线（_）或连字符（-），长度至少为1，且不允许出现其他字符
+    * instanceId  **参数解释**: 主机id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
+    * instanceName  **参数解释**: 主机名称 **取值范围**: 字符串长度范围为[1,128]
+    * instanceType  **参数解释**: 主机类型，仅支持ECS弹性云服务器和BMS裸金属服务器 **取值范围**: - ECS: 弹性云服务器 - BMS：裸金属服务器
+    * intranetIps  **参数解释**: 内网ip列表 **取值范围**: 返回数组长度为[0,10]，数组内元素格式为：长度为1到15个字符的字符串，其中每个字符可以是数字（0-9）或任意其他单个字符
+    * elasticIps  **参数解释**: 弹性公网ip列表 **取值范围**: 返回数组长度为[0,10]，数组内元素格式为：长度为1到15个字符的字符串，其中每个字符可以是数字（0-9）或任意其他单个字符
+    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试
+    * invocationStatus  **参数解释**: 任务状态 **取值范围**: - PENDING：待执行 - RUNNING：运行中 - TIMEOUT：超时 - FAILED：失败 - SUCCEEDED：成功 - CANCELED：取消 - ROLLBACKED：已回退
+    * invocationTarget  **参数解释**: 任务对象, 支持telescope监控 **取值范围**: - telescope: 主机监控插件telescope
+    * createTime  **参数解释**: 任务创建时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
+    * updateTime  **参数解释**: 任务更新时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
+    * currentVersion  **参数解释**: 当前版本 **取值范围**: 字符串长度范围为[1,64]
+    * targetVersion  **参数解释**: 目标版本 **取值范围**: 字符串长度范围为[1,64]
+    * resultMsg  **参数解释**: 任务执行结果信息 **取值范围**: 字符串长度范围为[1,5000]
     *
     * @var string[]
     */
@@ -113,20 +113,20 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * invocationId  任务id
-    * instanceId  主机id
-    * instanceName  主机名称
-    * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
-    * intranetIps  内网ip列表
-    * elasticIps  弹性公网ip列表
-    * invocationType  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚，RETRY重试)
-    * invocationStatus  任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
-    * invocationTarget  任务对象，目前支持telescope
-    * createTime  任务创建时间
-    * updateTime  任务更新时间
-    * currentVersion  当前版本
-    * targetVersion  目标版本
-    * resultMsg  任务执行结果信息
+    * invocationId  **参数解释**: 任务id **取值范围**: 以字母或数字开头，后续可以包含字母、数字、下划线（_）或连字符（-），长度至少为1，且不允许出现其他字符
+    * instanceId  **参数解释**: 主机id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
+    * instanceName  **参数解释**: 主机名称 **取值范围**: 字符串长度范围为[1,128]
+    * instanceType  **参数解释**: 主机类型，仅支持ECS弹性云服务器和BMS裸金属服务器 **取值范围**: - ECS: 弹性云服务器 - BMS：裸金属服务器
+    * intranetIps  **参数解释**: 内网ip列表 **取值范围**: 返回数组长度为[0,10]，数组内元素格式为：长度为1到15个字符的字符串，其中每个字符可以是数字（0-9）或任意其他单个字符
+    * elasticIps  **参数解释**: 弹性公网ip列表 **取值范围**: 返回数组长度为[0,10]，数组内元素格式为：长度为1到15个字符的字符串，其中每个字符可以是数字（0-9）或任意其他单个字符
+    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试
+    * invocationStatus  **参数解释**: 任务状态 **取值范围**: - PENDING：待执行 - RUNNING：运行中 - TIMEOUT：超时 - FAILED：失败 - SUCCEEDED：成功 - CANCELED：取消 - ROLLBACKED：已回退
+    * invocationTarget  **参数解释**: 任务对象, 支持telescope监控 **取值范围**: - telescope: 主机监控插件telescope
+    * createTime  **参数解释**: 任务创建时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
+    * updateTime  **参数解释**: 任务更新时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
+    * currentVersion  **参数解释**: 当前版本 **取值范围**: 字符串长度范围为[1,64]
+    * targetVersion  **参数解释**: 目标版本 **取值范围**: 字符串长度范围为[1,64]
+    * resultMsg  **参数解释**: 任务执行结果信息 **取值范围**: 字符串长度范围为[1,5000]
     *
     * @var string[]
     */
@@ -149,20 +149,20 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * invocationId  任务id
-    * instanceId  主机id
-    * instanceName  主机名称
-    * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
-    * intranetIps  内网ip列表
-    * elasticIps  弹性公网ip列表
-    * invocationType  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚，RETRY重试)
-    * invocationStatus  任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
-    * invocationTarget  任务对象，目前支持telescope
-    * createTime  任务创建时间
-    * updateTime  任务更新时间
-    * currentVersion  当前版本
-    * targetVersion  目标版本
-    * resultMsg  任务执行结果信息
+    * invocationId  **参数解释**: 任务id **取值范围**: 以字母或数字开头，后续可以包含字母、数字、下划线（_）或连字符（-），长度至少为1，且不允许出现其他字符
+    * instanceId  **参数解释**: 主机id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
+    * instanceName  **参数解释**: 主机名称 **取值范围**: 字符串长度范围为[1,128]
+    * instanceType  **参数解释**: 主机类型，仅支持ECS弹性云服务器和BMS裸金属服务器 **取值范围**: - ECS: 弹性云服务器 - BMS：裸金属服务器
+    * intranetIps  **参数解释**: 内网ip列表 **取值范围**: 返回数组长度为[0,10]，数组内元素格式为：长度为1到15个字符的字符串，其中每个字符可以是数字（0-9）或任意其他单个字符
+    * elasticIps  **参数解释**: 弹性公网ip列表 **取值范围**: 返回数组长度为[0,10]，数组内元素格式为：长度为1到15个字符的字符串，其中每个字符可以是数字（0-9）或任意其他单个字符
+    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试
+    * invocationStatus  **参数解释**: 任务状态 **取值范围**: - PENDING：待执行 - RUNNING：运行中 - TIMEOUT：超时 - FAILED：失败 - SUCCEEDED：成功 - CANCELED：取消 - ROLLBACKED：已回退
+    * invocationTarget  **参数解释**: 任务对象, 支持telescope监控 **取值范围**: - telescope: 主机监控插件telescope
+    * createTime  **参数解释**: 任务创建时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
+    * updateTime  **参数解释**: 任务更新时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
+    * currentVersion  **参数解释**: 当前版本 **取值范围**: 字符串长度范围为[1,64]
+    * targetVersion  **参数解释**: 目标版本 **取值范围**: 字符串长度范围为[1,64]
+    * resultMsg  **参数解释**: 任务执行结果信息 **取值范围**: 字符串长度范围为[1,5000]
     *
     * @var string[]
     */
@@ -185,20 +185,20 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * invocationId  任务id
-    * instanceId  主机id
-    * instanceName  主机名称
-    * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
-    * intranetIps  内网ip列表
-    * elasticIps  弹性公网ip列表
-    * invocationType  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚，RETRY重试)
-    * invocationStatus  任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
-    * invocationTarget  任务对象，目前支持telescope
-    * createTime  任务创建时间
-    * updateTime  任务更新时间
-    * currentVersion  当前版本
-    * targetVersion  目标版本
-    * resultMsg  任务执行结果信息
+    * invocationId  **参数解释**: 任务id **取值范围**: 以字母或数字开头，后续可以包含字母、数字、下划线（_）或连字符（-），长度至少为1，且不允许出现其他字符
+    * instanceId  **参数解释**: 主机id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
+    * instanceName  **参数解释**: 主机名称 **取值范围**: 字符串长度范围为[1,128]
+    * instanceType  **参数解释**: 主机类型，仅支持ECS弹性云服务器和BMS裸金属服务器 **取值范围**: - ECS: 弹性云服务器 - BMS：裸金属服务器
+    * intranetIps  **参数解释**: 内网ip列表 **取值范围**: 返回数组长度为[0,10]，数组内元素格式为：长度为1到15个字符的字符串，其中每个字符可以是数字（0-9）或任意其他单个字符
+    * elasticIps  **参数解释**: 弹性公网ip列表 **取值范围**: 返回数组长度为[0,10]，数组内元素格式为：长度为1到15个字符的字符串，其中每个字符可以是数字（0-9）或任意其他单个字符
+    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试
+    * invocationStatus  **参数解释**: 任务状态 **取值范围**: - PENDING：待执行 - RUNNING：运行中 - TIMEOUT：超时 - FAILED：失败 - SUCCEEDED：成功 - CANCELED：取消 - ROLLBACKED：已回退
+    * invocationTarget  **参数解释**: 任务对象, 支持telescope监控 **取值范围**: - telescope: 主机监控插件telescope
+    * createTime  **参数解释**: 任务创建时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
+    * updateTime  **参数解释**: 任务更新时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
+    * currentVersion  **参数解释**: 当前版本 **取值范围**: 字符串长度范围为[1,64]
+    * targetVersion  **参数解释**: 目标版本 **取值范围**: 字符串长度范围为[1,64]
+    * resultMsg  **参数解释**: 任务执行结果信息 **取值范围**: 字符串长度范围为[1,5000]
     *
     * @var string[]
     */
@@ -463,7 +463,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocationId
-    *  任务id
+    *  **参数解释**: 任务id **取值范围**: 以字母或数字开头，后续可以包含字母、数字、下划线（_）或连字符（-），长度至少为1，且不允许出现其他字符
     *
     * @return string|null
     */
@@ -475,7 +475,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets invocationId
     *
-    * @param string|null $invocationId 任务id
+    * @param string|null $invocationId **参数解释**: 任务id **取值范围**: 以字母或数字开头，后续可以包含字母、数字、下划线（_）或连字符（-），长度至少为1，且不允许出现其他字符
     *
     * @return $this
     */
@@ -487,7 +487,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  主机id
+    *  **参数解释**: 主机id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
     *
     * @return string|null
     */
@@ -499,7 +499,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 主机id
+    * @param string|null $instanceId **参数解释**: 主机id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
     *
     * @return $this
     */
@@ -511,7 +511,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceName
-    *  主机名称
+    *  **参数解释**: 主机名称 **取值范围**: 字符串长度范围为[1,128]
     *
     * @return string|null
     */
@@ -523,7 +523,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instanceName
     *
-    * @param string|null $instanceName 主机名称
+    * @param string|null $instanceName **参数解释**: 主机名称 **取值范围**: 字符串长度范围为[1,128]
     *
     * @return $this
     */
@@ -535,7 +535,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceType
-    *  主机类型，ECS弹性云服务器，BMS裸金属服务器
+    *  **参数解释**: 主机类型，仅支持ECS弹性云服务器和BMS裸金属服务器 **取值范围**: - ECS: 弹性云服务器 - BMS：裸金属服务器
     *
     * @return string|null
     */
@@ -547,7 +547,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instanceType
     *
-    * @param string|null $instanceType 主机类型，ECS弹性云服务器，BMS裸金属服务器
+    * @param string|null $instanceType **参数解释**: 主机类型，仅支持ECS弹性云服务器和BMS裸金属服务器 **取值范围**: - ECS: 弹性云服务器 - BMS：裸金属服务器
     *
     * @return $this
     */
@@ -559,7 +559,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets intranetIps
-    *  内网ip列表
+    *  **参数解释**: 内网ip列表 **取值范围**: 返回数组长度为[0,10]，数组内元素格式为：长度为1到15个字符的字符串，其中每个字符可以是数字（0-9）或任意其他单个字符
     *
     * @return string[]|null
     */
@@ -571,7 +571,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets intranetIps
     *
-    * @param string[]|null $intranetIps 内网ip列表
+    * @param string[]|null $intranetIps **参数解释**: 内网ip列表 **取值范围**: 返回数组长度为[0,10]，数组内元素格式为：长度为1到15个字符的字符串，其中每个字符可以是数字（0-9）或任意其他单个字符
     *
     * @return $this
     */
@@ -583,7 +583,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets elasticIps
-    *  弹性公网ip列表
+    *  **参数解释**: 弹性公网ip列表 **取值范围**: 返回数组长度为[0,10]，数组内元素格式为：长度为1到15个字符的字符串，其中每个字符可以是数字（0-9）或任意其他单个字符
     *
     * @return string[]|null
     */
@@ -595,7 +595,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets elasticIps
     *
-    * @param string[]|null $elasticIps 弹性公网ip列表
+    * @param string[]|null $elasticIps **参数解释**: 弹性公网ip列表 **取值范围**: 返回数组长度为[0,10]，数组内元素格式为：长度为1到15个字符的字符串，其中每个字符可以是数字（0-9）或任意其他单个字符
     *
     * @return $this
     */
@@ -607,7 +607,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocationType
-    *  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚，RETRY重试)
+    *  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试
     *
     * @return string|null
     */
@@ -619,7 +619,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets invocationType
     *
-    * @param string|null $invocationType 任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚，RETRY重试)
+    * @param string|null $invocationType **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试
     *
     * @return $this
     */
@@ -631,7 +631,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocationStatus
-    *  任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
+    *  **参数解释**: 任务状态 **取值范围**: - PENDING：待执行 - RUNNING：运行中 - TIMEOUT：超时 - FAILED：失败 - SUCCEEDED：成功 - CANCELED：取消 - ROLLBACKED：已回退
     *
     * @return string|null
     */
@@ -643,7 +643,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets invocationStatus
     *
-    * @param string|null $invocationStatus 任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
+    * @param string|null $invocationStatus **参数解释**: 任务状态 **取值范围**: - PENDING：待执行 - RUNNING：运行中 - TIMEOUT：超时 - FAILED：失败 - SUCCEEDED：成功 - CANCELED：取消 - ROLLBACKED：已回退
     *
     * @return $this
     */
@@ -655,7 +655,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocationTarget
-    *  任务对象，目前支持telescope
+    *  **参数解释**: 任务对象, 支持telescope监控 **取值范围**: - telescope: 主机监控插件telescope
     *
     * @return string|null
     */
@@ -667,7 +667,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets invocationTarget
     *
-    * @param string|null $invocationTarget 任务对象，目前支持telescope
+    * @param string|null $invocationTarget **参数解释**: 任务对象, 支持telescope监控 **取值范围**: - telescope: 主机监控插件telescope
     *
     * @return $this
     */
@@ -679,7 +679,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  任务创建时间
+    *  **参数解释**: 任务创建时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
     *
     * @return int|null
     */
@@ -691,7 +691,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 任务创建时间
+    * @param int|null $createTime **参数解释**: 任务创建时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
     *
     * @return $this
     */
@@ -703,7 +703,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  任务更新时间
+    *  **参数解释**: 任务更新时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
     *
     * @return int|null
     */
@@ -715,7 +715,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 任务更新时间
+    * @param int|null $updateTime **参数解释**: 任务更新时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
     *
     * @return $this
     */
@@ -727,7 +727,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets currentVersion
-    *  当前版本
+    *  **参数解释**: 当前版本 **取值范围**: 字符串长度范围为[1,64]
     *
     * @return string|null
     */
@@ -739,7 +739,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets currentVersion
     *
-    * @param string|null $currentVersion 当前版本
+    * @param string|null $currentVersion **参数解释**: 当前版本 **取值范围**: 字符串长度范围为[1,64]
     *
     * @return $this
     */
@@ -751,7 +751,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetVersion
-    *  目标版本
+    *  **参数解释**: 目标版本 **取值范围**: 字符串长度范围为[1,64]
     *
     * @return string|null
     */
@@ -763,7 +763,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets targetVersion
     *
-    * @param string|null $targetVersion 目标版本
+    * @param string|null $targetVersion **参数解释**: 目标版本 **取值范围**: 字符串长度范围为[1,64]
     *
     * @return $this
     */
@@ -775,7 +775,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resultMsg
-    *  任务执行结果信息
+    *  **参数解释**: 任务执行结果信息 **取值范围**: 字符串长度范围为[1,5000]
     *
     * @return string|null
     */
@@ -787,7 +787,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resultMsg
     *
-    * @param string|null $resultMsg 任务执行结果信息
+    * @param string|null $resultMsg **参数解释**: 任务执行结果信息 **取值范围**: 字符串长度范围为[1,5000]
     *
     * @return $this
     */

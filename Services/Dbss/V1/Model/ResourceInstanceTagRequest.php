@@ -25,7 +25,7 @@ class ResourceInstanceTagRequest implements ModelInterface, ArrayAccess
     * tags  包含标签，最多包含50个key，每个key下面的value最多10个，每个key对应的value可以为空数组但结构体不能缺失。Key不能重复，同一个key中values不能重复。结果返回包含所有标签的资源列表，key之间是与的关系，key-value结构中value是或的关系。无tag过滤条件时返回全量数据
     * tagsAny  包含任意标签，最多包含50个key，每个key下面的value最多10个, 每个key对应的value可以为空数组但结构体不能缺失。Key不能重复，同一个key中values不能重复。结果返回包含标签的资源列表，key之间是或的关系，key-value结构中value是或的关系。无过滤条件时返回全量数据
     * notTagsAny  不包含任意标签，最多包含50个key，每个key下面的value最多10个, 每个key对应的value可以为空数组但结构体不能缺失。Key不能重复，同一个key中values不能重复。结果返回不包含标签的资源列表，key之间是或的关系，key-value结构中value是或的关系。无过滤条件时返回全量数据
-    * sysTags  sysTags
+    * sysTags  仅op_service权限可以使用此字段做资源实例过滤条件。 目前TMS调用时只包含一个tag结构体。 key：_sys_enterprise_project_id value：企业项目id列表 目前TMS调用时，key下面只包含一个value。0表示默认企业项目 sys_tags和租户标签过滤条件（without_any_tag 、tags、tags_any、not_tags、not_tags_any）不能同时使用 无sys_tags时按照tag接口处理，无tag过滤条件时返回全量数据
     * withoutAnyTag  不包含任意一个标签，该字段为true时查询所有不带标签的资源，此时忽略 “tags”、“tags_any”、“not_tags”、“not_tags_any”字段
     *
     * @var string[]
@@ -36,7 +36,7 @@ class ResourceInstanceTagRequest implements ModelInterface, ArrayAccess
             'tags' => '\HuaweiCloud\SDK\Dbss\V1\Model\TagKeyValuesBean[]',
             'tagsAny' => '\HuaweiCloud\SDK\Dbss\V1\Model\TagKeyValuesBean[]',
             'notTagsAny' => '\HuaweiCloud\SDK\Dbss\V1\Model\TagKeyValuesBean[]',
-            'sysTags' => '\HuaweiCloud\SDK\Dbss\V1\Model\TagKeyValuesBean',
+            'sysTags' => '\HuaweiCloud\SDK\Dbss\V1\Model\TagKeyValuesBean[]',
             'withoutAnyTag' => 'bool'
     ];
 
@@ -47,7 +47,7 @@ class ResourceInstanceTagRequest implements ModelInterface, ArrayAccess
     * tags  包含标签，最多包含50个key，每个key下面的value最多10个，每个key对应的value可以为空数组但结构体不能缺失。Key不能重复，同一个key中values不能重复。结果返回包含所有标签的资源列表，key之间是与的关系，key-value结构中value是或的关系。无tag过滤条件时返回全量数据
     * tagsAny  包含任意标签，最多包含50个key，每个key下面的value最多10个, 每个key对应的value可以为空数组但结构体不能缺失。Key不能重复，同一个key中values不能重复。结果返回包含标签的资源列表，key之间是或的关系，key-value结构中value是或的关系。无过滤条件时返回全量数据
     * notTagsAny  不包含任意标签，最多包含50个key，每个key下面的value最多10个, 每个key对应的value可以为空数组但结构体不能缺失。Key不能重复，同一个key中values不能重复。结果返回不包含标签的资源列表，key之间是或的关系，key-value结构中value是或的关系。无过滤条件时返回全量数据
-    * sysTags  sysTags
+    * sysTags  仅op_service权限可以使用此字段做资源实例过滤条件。 目前TMS调用时只包含一个tag结构体。 key：_sys_enterprise_project_id value：企业项目id列表 目前TMS调用时，key下面只包含一个value。0表示默认企业项目 sys_tags和租户标签过滤条件（without_any_tag 、tags、tags_any、not_tags、not_tags_any）不能同时使用 无sys_tags时按照tag接口处理，无tag过滤条件时返回全量数据
     * withoutAnyTag  不包含任意一个标签，该字段为true时查询所有不带标签的资源，此时忽略 “tags”、“tags_any”、“not_tags”、“not_tags_any”字段
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ResourceInstanceTagRequest implements ModelInterface, ArrayAccess
     * tags  包含标签，最多包含50个key，每个key下面的value最多10个，每个key对应的value可以为空数组但结构体不能缺失。Key不能重复，同一个key中values不能重复。结果返回包含所有标签的资源列表，key之间是与的关系，key-value结构中value是或的关系。无tag过滤条件时返回全量数据
     * tagsAny  包含任意标签，最多包含50个key，每个key下面的value最多10个, 每个key对应的value可以为空数组但结构体不能缺失。Key不能重复，同一个key中values不能重复。结果返回包含标签的资源列表，key之间是或的关系，key-value结构中value是或的关系。无过滤条件时返回全量数据
     * notTagsAny  不包含任意标签，最多包含50个key，每个key下面的value最多10个, 每个key对应的value可以为空数组但结构体不能缺失。Key不能重复，同一个key中values不能重复。结果返回不包含标签的资源列表，key之间是或的关系，key-value结构中value是或的关系。无过滤条件时返回全量数据
-    * sysTags  sysTags
+    * sysTags  仅op_service权限可以使用此字段做资源实例过滤条件。 目前TMS调用时只包含一个tag结构体。 key：_sys_enterprise_project_id value：企业项目id列表 目前TMS调用时，key下面只包含一个value。0表示默认企业项目 sys_tags和租户标签过滤条件（without_any_tag 、tags、tags_any、not_tags、not_tags_any）不能同时使用 无sys_tags时按照tag接口处理，无tag过滤条件时返回全量数据
     * withoutAnyTag  不包含任意一个标签，该字段为true时查询所有不带标签的资源，此时忽略 “tags”、“tags_any”、“not_tags”、“not_tags_any”字段
     *
     * @var string[]
@@ -112,7 +112,7 @@ class ResourceInstanceTagRequest implements ModelInterface, ArrayAccess
     * tags  包含标签，最多包含50个key，每个key下面的value最多10个，每个key对应的value可以为空数组但结构体不能缺失。Key不能重复，同一个key中values不能重复。结果返回包含所有标签的资源列表，key之间是与的关系，key-value结构中value是或的关系。无tag过滤条件时返回全量数据
     * tagsAny  包含任意标签，最多包含50个key，每个key下面的value最多10个, 每个key对应的value可以为空数组但结构体不能缺失。Key不能重复，同一个key中values不能重复。结果返回包含标签的资源列表，key之间是或的关系，key-value结构中value是或的关系。无过滤条件时返回全量数据
     * notTagsAny  不包含任意标签，最多包含50个key，每个key下面的value最多10个, 每个key对应的value可以为空数组但结构体不能缺失。Key不能重复，同一个key中values不能重复。结果返回不包含标签的资源列表，key之间是或的关系，key-value结构中value是或的关系。无过滤条件时返回全量数据
-    * sysTags  sysTags
+    * sysTags  仅op_service权限可以使用此字段做资源实例过滤条件。 目前TMS调用时只包含一个tag结构体。 key：_sys_enterprise_project_id value：企业项目id列表 目前TMS调用时，key下面只包含一个value。0表示默认企业项目 sys_tags和租户标签过滤条件（without_any_tag 、tags、tags_any、not_tags、not_tags_any）不能同时使用 无sys_tags时按照tag接口处理，无tag过滤条件时返回全量数据
     * withoutAnyTag  不包含任意一个标签，该字段为true时查询所有不带标签的资源，此时忽略 “tags”、“tags_any”、“not_tags”、“not_tags_any”字段
     *
     * @var string[]
@@ -134,7 +134,7 @@ class ResourceInstanceTagRequest implements ModelInterface, ArrayAccess
     * tags  包含标签，最多包含50个key，每个key下面的value最多10个，每个key对应的value可以为空数组但结构体不能缺失。Key不能重复，同一个key中values不能重复。结果返回包含所有标签的资源列表，key之间是与的关系，key-value结构中value是或的关系。无tag过滤条件时返回全量数据
     * tagsAny  包含任意标签，最多包含50个key，每个key下面的value最多10个, 每个key对应的value可以为空数组但结构体不能缺失。Key不能重复，同一个key中values不能重复。结果返回包含标签的资源列表，key之间是或的关系，key-value结构中value是或的关系。无过滤条件时返回全量数据
     * notTagsAny  不包含任意标签，最多包含50个key，每个key下面的value最多10个, 每个key对应的value可以为空数组但结构体不能缺失。Key不能重复，同一个key中values不能重复。结果返回不包含标签的资源列表，key之间是或的关系，key-value结构中value是或的关系。无过滤条件时返回全量数据
-    * sysTags  sysTags
+    * sysTags  仅op_service权限可以使用此字段做资源实例过滤条件。 目前TMS调用时只包含一个tag结构体。 key：_sys_enterprise_project_id value：企业项目id列表 目前TMS调用时，key下面只包含一个value。0表示默认企业项目 sys_tags和租户标签过滤条件（without_any_tag 、tags、tags_any、not_tags、not_tags_any）不能同时使用 无sys_tags时按照tag接口处理，无tag过滤条件时返回全量数据
     * withoutAnyTag  不包含任意一个标签，该字段为true时查询所有不带标签的资源，此时忽略 “tags”、“tags_any”、“not_tags”、“not_tags_any”字段
     *
     * @var string[]
@@ -360,9 +360,9 @@ class ResourceInstanceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sysTags
-    *  sysTags
+    *  仅op_service权限可以使用此字段做资源实例过滤条件。 目前TMS调用时只包含一个tag结构体。 key：_sys_enterprise_project_id value：企业项目id列表 目前TMS调用时，key下面只包含一个value。0表示默认企业项目 sys_tags和租户标签过滤条件（without_any_tag 、tags、tags_any、not_tags、not_tags_any）不能同时使用 无sys_tags时按照tag接口处理，无tag过滤条件时返回全量数据
     *
-    * @return \HuaweiCloud\SDK\Dbss\V1\Model\TagKeyValuesBean|null
+    * @return \HuaweiCloud\SDK\Dbss\V1\Model\TagKeyValuesBean[]|null
     */
     public function getSysTags()
     {
@@ -372,7 +372,7 @@ class ResourceInstanceTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sysTags
     *
-    * @param \HuaweiCloud\SDK\Dbss\V1\Model\TagKeyValuesBean|null $sysTags sysTags
+    * @param \HuaweiCloud\SDK\Dbss\V1\Model\TagKeyValuesBean[]|null $sysTags 仅op_service权限可以使用此字段做资源实例过滤条件。 目前TMS调用时只包含一个tag结构体。 key：_sys_enterprise_project_id value：企业项目id列表 目前TMS调用时，key下面只包含一个value。0表示默认企业项目 sys_tags和租户标签过滤条件（without_any_tag 、tags、tags_any、not_tags、not_tags_any）不能同时使用 无sys_tags时按照tag接口处理，无tag过滤条件时返回全量数据
     *
     * @return $this
     */

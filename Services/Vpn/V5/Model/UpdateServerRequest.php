@@ -26,6 +26,7 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
     * sslOptions  sslOptions
     * clientAuthType  客户端认证类型
     * dnsServers  DNS服务器列表，最多两个DNS
+    * idpName  身份提供商名称。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
             'serverCertificate' => '\HuaweiCloud\SDK\Vpn\V5\Model\UpdateServerRequestServerCertificate',
             'sslOptions' => '\HuaweiCloud\SDK\Vpn\V5\Model\UpdateServerRequestSslOptions',
             'clientAuthType' => 'string',
-            'dnsServers' => 'string[]'
+            'dnsServers' => 'string[]',
+            'idpName' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
     * sslOptions  sslOptions
     * clientAuthType  客户端认证类型
     * dnsServers  DNS服务器列表，最多两个DNS
+    * idpName  身份提供商名称。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
         'serverCertificate' => null,
         'sslOptions' => null,
         'clientAuthType' => null,
-        'dnsServers' => null
+        'dnsServers' => null,
+        'idpName' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
     * sslOptions  sslOptions
     * clientAuthType  客户端认证类型
     * dnsServers  DNS服务器列表，最多两个DNS
+    * idpName  身份提供商名称。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
             'serverCertificate' => 'server_certificate',
             'sslOptions' => 'ssl_options',
             'clientAuthType' => 'client_auth_type',
-            'dnsServers' => 'dns_servers'
+            'dnsServers' => 'dns_servers',
+            'idpName' => 'idp_name'
     ];
 
     /**
@@ -107,6 +113,7 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
     * sslOptions  sslOptions
     * clientAuthType  客户端认证类型
     * dnsServers  DNS服务器列表，最多两个DNS
+    * idpName  身份提供商名称。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
             'serverCertificate' => 'setServerCertificate',
             'sslOptions' => 'setSslOptions',
             'clientAuthType' => 'setClientAuthType',
-            'dnsServers' => 'setDnsServers'
+            'dnsServers' => 'setDnsServers',
+            'idpName' => 'setIdpName'
     ];
 
     /**
@@ -127,6 +135,7 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
     * sslOptions  sslOptions
     * clientAuthType  客户端认证类型
     * dnsServers  DNS服务器列表，最多两个DNS
+    * idpName  身份提供商名称。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
             'serverCertificate' => 'getServerCertificate',
             'sslOptions' => 'getSslOptions',
             'clientAuthType' => 'getClientAuthType',
-            'dnsServers' => 'getDnsServers'
+            'dnsServers' => 'getDnsServers',
+            'idpName' => 'getIdpName'
     ];
 
     /**
@@ -181,6 +191,8 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
     }
     const CLIENT_AUTH_TYPE_CERT = 'CERT';
     const CLIENT_AUTH_TYPE_LOCAL_PASSWORD = 'LOCAL_PASSWORD';
+    const CLIENT_AUTH_TYPE_IAM = 'IAM';
+    const CLIENT_AUTH_TYPE_FEDERATED = 'FEDERATED';
     
 
     /**
@@ -193,6 +205,8 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
         return [
             self::CLIENT_AUTH_TYPE_CERT,
             self::CLIENT_AUTH_TYPE_LOCAL_PASSWORD,
+            self::CLIENT_AUTH_TYPE_IAM,
+            self::CLIENT_AUTH_TYPE_FEDERATED,
         ];
     }
 
@@ -218,6 +232,7 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
         $this->container['sslOptions'] = isset($data['sslOptions']) ? $data['sslOptions'] : null;
         $this->container['clientAuthType'] = isset($data['clientAuthType']) ? $data['clientAuthType'] : null;
         $this->container['dnsServers'] = isset($data['dnsServers']) ? $data['dnsServers'] : null;
+        $this->container['idpName'] = isset($data['idpName']) ? $data['idpName'] : null;
     }
 
     /**
@@ -397,6 +412,30 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
     public function setDnsServers($dnsServers)
     {
         $this->container['dnsServers'] = $dnsServers;
+        return $this;
+    }
+
+    /**
+    * Gets idpName
+    *  身份提供商名称。
+    *
+    * @return string|null
+    */
+    public function getIdpName()
+    {
+        return $this->container['idpName'];
+    }
+
+    /**
+    * Sets idpName
+    *
+    * @param string|null $idpName 身份提供商名称。
+    *
+    * @return $this
+    */
+    public function setIdpName($idpName)
+    {
+        $this->container['idpName'] = $idpName;
         return $this;
     }
 

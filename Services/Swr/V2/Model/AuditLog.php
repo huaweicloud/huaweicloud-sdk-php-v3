@@ -20,7 +20,7 @@ class AuditLog implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  audit log ID
+    * id  Audit log ID
     * operation  操作(e.g., create, update, delete)
     * resourceType  资源类型
     * resource  资源名称
@@ -35,12 +35,12 @@ class AuditLog implements ModelInterface, ArrayAccess
             'resourceType' => 'string',
             'resource' => 'string',
             'username' => 'string',
-            'opTime' => '\DateTime'
+            'opTime' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  audit log ID
+    * id  Audit log ID
     * operation  操作(e.g., create, update, delete)
     * resourceType  资源类型
     * resource  资源名称
@@ -55,7 +55,7 @@ class AuditLog implements ModelInterface, ArrayAccess
         'resourceType' => null,
         'resource' => null,
         'username' => null,
-        'opTime' => 'date-time'
+        'opTime' => null
     ];
 
     /**
@@ -81,7 +81,7 @@ class AuditLog implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  audit log ID
+    * id  Audit log ID
     * operation  操作(e.g., create, update, delete)
     * resourceType  资源类型
     * resource  资源名称
@@ -101,7 +101,7 @@ class AuditLog implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  audit log ID
+    * id  Audit log ID
     * operation  操作(e.g., create, update, delete)
     * resourceType  资源类型
     * resource  资源名称
@@ -121,7 +121,7 @@ class AuditLog implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  audit log ID
+    * id  Audit log ID
     * operation  操作(e.g., create, update, delete)
     * resourceType  资源类型
     * resource  资源名称
@@ -229,7 +229,7 @@ class AuditLog implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  audit log ID
+    *  Audit log ID
     *
     * @return int|null
     */
@@ -241,7 +241,7 @@ class AuditLog implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id audit log ID
+    * @param int|null $id Audit log ID
     *
     * @return $this
     */
@@ -351,7 +351,7 @@ class AuditLog implements ModelInterface, ArrayAccess
     * Gets opTime
     *  操作时间
     *
-    * @return \DateTime|null
+    * @return string|null
     */
     public function getOpTime()
     {
@@ -361,7 +361,7 @@ class AuditLog implements ModelInterface, ArrayAccess
     /**
     * Sets opTime
     *
-    * @param \DateTime|null $opTime 操作时间
+    * @param string|null $opTime 操作时间
     *
     * @return $this
     */

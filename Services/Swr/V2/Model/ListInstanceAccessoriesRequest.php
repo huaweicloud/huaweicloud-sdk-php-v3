@@ -26,7 +26,7 @@ class ListInstanceAccessoriesRequest implements ModelInterface, ArrayAccess
     * reference  制品摘要
     * offset  起始索引，默认值为0。**注意：offset和limit参数需要配套使用，offset必须为0或者为limit的倍数。**
     * limit  返回条数，默认为10，最大值为100。**注意：offset和limit参数需要配套使用，offset必须为0或者为limit的倍数。**
-    * type  附件类型，signature.cosign
+    * type  附件类型，支持的附件类型有：signature.cosign
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class ListInstanceAccessoriesRequest implements ModelInterface, ArrayAccess
     * reference  制品摘要
     * offset  起始索引，默认值为0。**注意：offset和limit参数需要配套使用，offset必须为0或者为limit的倍数。**
     * limit  返回条数，默认为10，最大值为100。**注意：offset和limit参数需要配套使用，offset必须为0或者为limit的倍数。**
-    * type  附件类型，signature.cosign
+    * type  附件类型，支持的附件类型有：signature.cosign
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListInstanceAccessoriesRequest implements ModelInterface, ArrayAccess
     * reference  制品摘要
     * offset  起始索引，默认值为0。**注意：offset和limit参数需要配套使用，offset必须为0或者为limit的倍数。**
     * limit  返回条数，默认为10，最大值为100。**注意：offset和limit参数需要配套使用，offset必须为0或者为limit的倍数。**
-    * type  附件类型，signature.cosign
+    * type  附件类型，支持的附件类型有：signature.cosign
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class ListInstanceAccessoriesRequest implements ModelInterface, ArrayAccess
     * reference  制品摘要
     * offset  起始索引，默认值为0。**注意：offset和limit参数需要配套使用，offset必须为0或者为limit的倍数。**
     * limit  返回条数，默认为10，最大值为100。**注意：offset和limit参数需要配套使用，offset必须为0或者为limit的倍数。**
-    * type  附件类型，signature.cosign
+    * type  附件类型，支持的附件类型有：signature.cosign
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class ListInstanceAccessoriesRequest implements ModelInterface, ArrayAccess
     * reference  制品摘要
     * offset  起始索引，默认值为0。**注意：offset和limit参数需要配套使用，offset必须为0或者为limit的倍数。**
     * limit  返回条数，默认为10，最大值为100。**注意：offset和limit参数需要配套使用，offset必须为0或者为limit的倍数。**
-    * type  附件类型，signature.cosign
+    * type  附件类型，支持的附件类型有：signature.cosign
     *
     * @var string[]
     */
@@ -423,7 +423,7 @@ class ListInstanceAccessoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  附件类型，signature.cosign
+    *  附件类型，支持的附件类型有：signature.cosign
     *
     * @return string|null
     */
@@ -435,7 +435,7 @@ class ListInstanceAccessoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 附件类型，signature.cosign
+    * @param string|null $type 附件类型，支持的附件类型有：signature.cosign
     *
     * @return $this
     */

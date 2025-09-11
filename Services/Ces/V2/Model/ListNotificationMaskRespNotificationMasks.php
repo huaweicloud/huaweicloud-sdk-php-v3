@@ -21,9 +21,9 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Array of property to type mappings. Used for (de)serialization
     * notificationMaskId  屏蔽规则ID
-    * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
+    * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
-    * relationId  关联编号
+    * relationId  **参数解释**： 关联ID       **约束限制**： 不涉及。 **取值范围**： 取值为告警规则ID、告警策略ID。只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * resourceType  resourceType
     * metricNames  关联指标名称，relation_type为RESOURCE时存在该字段
     * productMetrics  按云产品维度屏蔽时的指标信息
@@ -34,11 +34,11 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     * maskType  maskType
     * createTime  告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
     * updateTime  告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
-    * startDate  屏蔽起始日期，yyyy-MM-dd。
-    * startTime  屏蔽起始时间，HH:mm:ss。
-    * endDate  屏蔽截止日期，yyyy-MM-dd。
-    * endTime  屏蔽截止时间，HH:mm:ss。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     * policies  告警策略列表。
     *
     * @var string[]
@@ -69,9 +69,9 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Array of property to format mappings. Used for (de)serialization
     * notificationMaskId  屏蔽规则ID
-    * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
+    * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
-    * relationId  关联编号
+    * relationId  **参数解释**： 关联ID       **约束限制**： 不涉及。 **取值范围**： 取值为告警规则ID、告警策略ID。只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * resourceType  resourceType
     * metricNames  关联指标名称，relation_type为RESOURCE时存在该字段
     * productMetrics  按云产品维度屏蔽时的指标信息
@@ -82,11 +82,11 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     * maskType  maskType
     * createTime  告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
     * updateTime  告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
-    * startDate  屏蔽起始日期，yyyy-MM-dd。
-    * startTime  屏蔽起始时间，HH:mm:ss。
-    * endDate  屏蔽截止日期，yyyy-MM-dd。
-    * endTime  屏蔽截止时间，HH:mm:ss。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     * policies  告警策略列表。
     *
     * @var string[]
@@ -138,9 +138,9 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * notificationMaskId  屏蔽规则ID
-    * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
+    * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
-    * relationId  关联编号
+    * relationId  **参数解释**： 关联ID       **约束限制**： 不涉及。 **取值范围**： 取值为告警规则ID、告警策略ID。只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * resourceType  resourceType
     * metricNames  关联指标名称，relation_type为RESOURCE时存在该字段
     * productMetrics  按云产品维度屏蔽时的指标信息
@@ -151,11 +151,11 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     * maskType  maskType
     * createTime  告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
     * updateTime  告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
-    * startDate  屏蔽起始日期，yyyy-MM-dd。
-    * startTime  屏蔽起始时间，HH:mm:ss。
-    * endDate  屏蔽截止日期，yyyy-MM-dd。
-    * endTime  屏蔽截止时间，HH:mm:ss。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     * policies  告警策略列表。
     *
     * @var string[]
@@ -186,9 +186,9 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * notificationMaskId  屏蔽规则ID
-    * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
+    * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
-    * relationId  关联编号
+    * relationId  **参数解释**： 关联ID       **约束限制**： 不涉及。 **取值范围**： 取值为告警规则ID、告警策略ID。只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * resourceType  resourceType
     * metricNames  关联指标名称，relation_type为RESOURCE时存在该字段
     * productMetrics  按云产品维度屏蔽时的指标信息
@@ -199,11 +199,11 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     * maskType  maskType
     * createTime  告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
     * updateTime  告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
-    * startDate  屏蔽起始日期，yyyy-MM-dd。
-    * startTime  屏蔽起始时间，HH:mm:ss。
-    * endDate  屏蔽截止日期，yyyy-MM-dd。
-    * endTime  屏蔽截止时间，HH:mm:ss。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     * policies  告警策略列表。
     *
     * @var string[]
@@ -234,9 +234,9 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * notificationMaskId  屏蔽规则ID
-    * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
+    * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
-    * relationId  关联编号
+    * relationId  **参数解释**： 关联ID       **约束限制**： 不涉及。 **取值范围**： 取值为告警规则ID、告警策略ID。只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * resourceType  resourceType
     * metricNames  关联指标名称，relation_type为RESOURCE时存在该字段
     * productMetrics  按云产品维度屏蔽时的指标信息
@@ -247,11 +247,11 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     * maskType  maskType
     * createTime  告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
     * updateTime  告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
-    * startDate  屏蔽起始日期，yyyy-MM-dd。
-    * startTime  屏蔽起始时间，HH:mm:ss。
-    * endDate  屏蔽截止日期，yyyy-MM-dd。
-    * endTime  屏蔽截止时间，HH:mm:ss。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
+    * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     * policies  告警策略列表。
     *
     * @var string[]
@@ -400,8 +400,8 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
             if (!is_null($this->container['maskName']) && (mb_strlen($this->container['maskName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'maskName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['maskName']) && !preg_match("/^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['maskName'])) {
-                $invalidProperties[] = "invalid value for 'maskName', must be conform to the pattern /^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
+            if (!is_null($this->container['maskName']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['maskName'])) {
+                $invalidProperties[] = "invalid value for 'maskName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
             }
         if ($this->container['relationType'] === null) {
             $invalidProperties[] = "'relationType' can't be null";
@@ -496,7 +496,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Gets maskName
-    *  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
+    *  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -508,7 +508,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Sets maskName
     *
-    * @param string|null $maskName 屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
+    * @param string|null $maskName **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -544,7 +544,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Gets relationId
-    *  关联编号
+    *  **参数解释**： 关联ID       **约束限制**： 不涉及。 **取值范围**： 取值为告警规则ID、告警策略ID。只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -556,7 +556,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Sets relationId
     *
-    * @param string|null $relationId 关联编号
+    * @param string|null $relationId **参数解释**： 关联ID       **约束限制**： 不涉及。 **取值范围**： 取值为告警规则ID、告警策略ID。只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -808,7 +808,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Gets startDate
-    *  屏蔽起始日期，yyyy-MM-dd。
+    *  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     *
     * @return \DateTime|null
     */
@@ -820,7 +820,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Sets startDate
     *
-    * @param \DateTime|null $startDate 屏蔽起始日期，yyyy-MM-dd。
+    * @param \DateTime|null $startDate **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -832,7 +832,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Gets startTime
-    *  屏蔽起始时间，HH:mm:ss。
+    *  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -844,7 +844,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 屏蔽起始时间，HH:mm:ss。
+    * @param string|null $startTime **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -856,7 +856,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Gets endDate
-    *  屏蔽截止日期，yyyy-MM-dd。
+    *  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     *
     * @return \DateTime|null
     */
@@ -868,7 +868,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Sets endDate
     *
-    * @param \DateTime|null $endDate 屏蔽截止日期，yyyy-MM-dd。
+    * @param \DateTime|null $endDate **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -880,7 +880,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Gets endTime
-    *  屏蔽截止时间，HH:mm:ss。
+    *  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -892,7 +892,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 屏蔽截止时间，HH:mm:ss。
+    * @param string|null $endTime **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -904,7 +904,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Gets effectiveTimezone
-    *  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    *  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -916,7 +916,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Sets effectiveTimezone
     *
-    * @param string|null $effectiveTimezone 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * @param string|null $effectiveTimezone **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @return $this
     */

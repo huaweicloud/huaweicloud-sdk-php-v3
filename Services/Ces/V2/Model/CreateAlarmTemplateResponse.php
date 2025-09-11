@@ -21,22 +21,26 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
+    * overwriteResult  overwriteResult
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'templateId' => 'string'
+            'templateId' => 'string',
+            'overwriteResult' => '\HuaweiCloud\SDK\Ces\V2\Model\OverwriteResultResp'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
+    * overwriteResult  overwriteResult
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'templateId' => null
+        'templateId' => null,
+        'overwriteResult' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
+    * overwriteResult  overwriteResult
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'templateId' => 'template_id'
+            'templateId' => 'template_id',
+            'overwriteResult' => 'overwrite_result'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
+    * overwriteResult  overwriteResult
     *
     * @var string[]
     */
     protected static $setters = [
-            'templateId' => 'setTemplateId'
+            'templateId' => 'setTemplateId',
+            'overwriteResult' => 'setOverwriteResult'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
+    * overwriteResult  overwriteResult
     *
     * @var string[]
     */
     protected static $getters = [
-            'templateId' => 'getTemplateId'
+            'templateId' => 'getTemplateId',
+            'overwriteResult' => 'getOverwriteResult'
     ];
 
     /**
@@ -149,6 +159,7 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
+        $this->container['overwriteResult'] = isset($data['overwriteResult']) ? $data['overwriteResult'] : null;
     }
 
     /**
@@ -184,7 +195,7 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateId
-    *  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    *  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -196,13 +207,37 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets templateId
     *
-    * @param string|null $templateId 告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * @param string|null $templateId **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     *
     * @return $this
     */
     public function setTemplateId($templateId)
     {
         $this->container['templateId'] = $templateId;
+        return $this;
+    }
+
+    /**
+    * Gets overwriteResult
+    *  overwriteResult
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\OverwriteResultResp|null
+    */
+    public function getOverwriteResult()
+    {
+        return $this->container['overwriteResult'];
+    }
+
+    /**
+    * Sets overwriteResult
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\OverwriteResultResp|null $overwriteResult overwriteResult
+    *
+    * @return $this
+    */
+    public function setOverwriteResult($overwriteResult)
+    {
+        $this->container['overwriteResult'] = $overwriteResult;
         return $this;
     }
 

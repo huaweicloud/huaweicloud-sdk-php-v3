@@ -21,7 +21,7 @@ class CreateOneDashboardResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dashboardId  监控看板id
+    * dashboardId  **参数描述**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateOneDashboardResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dashboardId  监控看板id
+    * dashboardId  **参数描述**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateOneDashboardResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dashboardId  监控看板id
+    * dashboardId  **参数描述**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateOneDashboardResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dashboardId  监控看板id
+    * dashboardId  **参数描述**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateOneDashboardResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dashboardId  监控看板id
+    * dashboardId  **参数描述**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
     *
     * @var string[]
     */
@@ -178,7 +178,7 @@ class CreateOneDashboardResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardId
-    *  监控看板id
+    *  **参数描述**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
     *
     * @return string|null
     */
@@ -190,7 +190,7 @@ class CreateOneDashboardResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardId
     *
-    * @param string|null $dashboardId 监控看板id
+    * @param string|null $dashboardId **参数描述**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
     *
     * @return $this
     */

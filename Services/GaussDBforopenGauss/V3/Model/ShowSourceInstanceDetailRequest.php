@@ -20,7 +20,7 @@ class ShowSourceInstanceDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  语言。默认值：en-us。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * instanceId  原实例ID。  (instance_id 、restore_time为一组)
     * restoreTime  UNIX时间戳格式，单位是毫秒，时区是UTC，某时间点实例的信息。  (instance_id 、restore_time为一组)
     * backupId  备份ID。  (backup_id为一组)  备份ID不为空时，可以不需要实例ID和时间戳。
@@ -36,7 +36,7 @@ class ShowSourceInstanceDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  语言。默认值：en-us。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * instanceId  原实例ID。  (instance_id 、restore_time为一组)
     * restoreTime  UNIX时间戳格式，单位是毫秒，时区是UTC，某时间点实例的信息。  (instance_id 、restore_time为一组)
     * backupId  备份ID。  (backup_id为一组)  备份ID不为空时，可以不需要实例ID和时间戳。
@@ -73,7 +73,7 @@ class ShowSourceInstanceDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  语言。默认值：en-us。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * instanceId  原实例ID。  (instance_id 、restore_time为一组)
     * restoreTime  UNIX时间戳格式，单位是毫秒，时区是UTC，某时间点实例的信息。  (instance_id 、restore_time为一组)
     * backupId  备份ID。  (backup_id为一组)  备份ID不为空时，可以不需要实例ID和时间戳。
@@ -89,7 +89,7 @@ class ShowSourceInstanceDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  语言。默认值：en-us。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * instanceId  原实例ID。  (instance_id 、restore_time为一组)
     * restoreTime  UNIX时间戳格式，单位是毫秒，时区是UTC，某时间点实例的信息。  (instance_id 、restore_time为一组)
     * backupId  备份ID。  (backup_id为一组)  备份ID不为空时，可以不需要实例ID和时间戳。
@@ -105,7 +105,7 @@ class ShowSourceInstanceDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  语言。默认值：en-us。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * instanceId  原实例ID。  (instance_id 、restore_time为一组)
     * restoreTime  UNIX时间戳格式，单位是毫秒，时区是UTC，某时间点实例的信息。  (instance_id 、restore_time为一组)
     * backupId  备份ID。  (backup_id为一组)  备份ID不为空时，可以不需要实例ID和时间戳。
@@ -230,7 +230,7 @@ class ShowSourceInstanceDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  语言。默认值：en-us。
+    *  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     *
     * @return string|null
     */
@@ -242,7 +242,7 @@ class ShowSourceInstanceDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage 语言。默认值：en-us。
+    * @param string|null $xLanguage **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     *
     * @return $this
     */

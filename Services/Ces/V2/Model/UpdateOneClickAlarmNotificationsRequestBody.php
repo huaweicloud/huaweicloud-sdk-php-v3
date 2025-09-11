@@ -20,12 +20,12 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * notificationEnabled  **参数解释**： 是否开启告警通知。 **约束限制**： 值为true时，其他必选字段均需填，值为false时，其他所有字段不可选。 **取值范围**： - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： 不涉及。
-    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
-    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * notificationEnabled  **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 包含的通知信息的数量最多为10个。 **默认取值**： 不涉及。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 包含的通知信息的数量最多为10个。 **默认取值**： 不涉及。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
     * notificationPolicyIds  关联的通知策略ID列表
     *
@@ -44,12 +44,12 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * notificationEnabled  **参数解释**： 是否开启告警通知。 **约束限制**： 值为true时，其他必选字段均需填，值为false时，其他所有字段不可选。 **取值范围**： - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： 不涉及。
-    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
-    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * notificationEnabled  **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 包含的通知信息的数量最多为10个。 **默认取值**： 不涉及。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 包含的通知信息的数量最多为10个。 **默认取值**： 不涉及。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
     * notificationPolicyIds  关联的通知策略ID列表
     *
@@ -89,12 +89,12 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * notificationEnabled  **参数解释**： 是否开启告警通知。 **约束限制**： 值为true时，其他必选字段均需填，值为false时，其他所有字段不可选。 **取值范围**： - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： 不涉及。
-    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
-    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * notificationEnabled  **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 包含的通知信息的数量最多为10个。 **默认取值**： 不涉及。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 包含的通知信息的数量最多为10个。 **默认取值**： 不涉及。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
     * notificationPolicyIds  关联的通知策略ID列表
     *
@@ -113,12 +113,12 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * notificationEnabled  **参数解释**： 是否开启告警通知。 **约束限制**： 值为true时，其他必选字段均需填，值为false时，其他所有字段不可选。 **取值范围**： - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： 不涉及。
-    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
-    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * notificationEnabled  **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 包含的通知信息的数量最多为10个。 **默认取值**： 不涉及。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 包含的通知信息的数量最多为10个。 **默认取值**： 不涉及。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
     * notificationPolicyIds  关联的通知策略ID列表
     *
@@ -137,12 +137,12 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * notificationEnabled  **参数解释**： 是否开启告警通知。 **约束限制**： 值为true时，其他必选字段均需填，值为false时，其他所有字段不可选。 **取值范围**： - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： 不涉及。
-    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
-    * notificationBeginTime  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
-    * notificationEndTime  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
-    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * notificationEnabled  **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 包含的通知信息的数量最多为10个。 **默认取值**： 不涉及。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 包含的通知信息的数量最多为10个。 **默认取值**： 不涉及。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
     * notificationPolicyIds  关联的通知策略ID列表
     *
@@ -312,7 +312,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
 
     /**
     * Gets notificationEnabled
-    *  **参数解释**： 是否开启告警通知。 **约束限制**： 值为true时，其他必选字段均需填，值为false时，其他所有字段不可选。 **取值范围**： - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： 不涉及。
+    *  **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
     *
     * @return bool
     */
@@ -324,7 +324,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
     /**
     * Sets notificationEnabled
     *
-    * @param bool $notificationEnabled **参数解释**： 是否开启告警通知。 **约束限制**： 值为true时，其他必选字段均需填，值为false时，其他所有字段不可选。 **取值范围**： - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： 不涉及。
+    * @param bool $notificationEnabled **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
 
     /**
     * Gets alarmNotifications
-    *  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    *  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 包含的通知信息的数量最多为10个。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null
     */
@@ -348,7 +348,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
     /**
     * Sets alarmNotifications
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null $alarmNotifications **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null $alarmNotifications **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 包含的通知信息的数量最多为10个。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
 
     /**
     * Gets okNotifications
-    *  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    *  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 包含的通知信息的数量最多为10个。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null
     */
@@ -372,7 +372,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
     /**
     * Sets okNotifications
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null $okNotifications **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Notification[]|null $okNotifications **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 包含的通知信息的数量最多为10个。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
 
     /**
     * Gets notificationBeginTime
-    *  **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    *  **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -396,7 +396,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
     /**
     * Sets notificationBeginTime
     *
-    * @param string|null $notificationBeginTime **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * @param string|null $notificationBeginTime **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -408,7 +408,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
 
     /**
     * Gets notificationEndTime
-    *  **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    *  **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -420,7 +420,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
     /**
     * Sets notificationEndTime
     *
-    * @param string|null $notificationEndTime **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * @param string|null $notificationEndTime **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -432,7 +432,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
 
     /**
     * Gets effectiveTimezone
-    *  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    *  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -444,7 +444,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
     /**
     * Sets effectiveTimezone
     *
-    * @param string|null $effectiveTimezone 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    * @param string|null $effectiveTimezone **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
     *
     * @return $this
     */

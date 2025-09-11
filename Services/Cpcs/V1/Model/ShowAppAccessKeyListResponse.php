@@ -22,21 +22,25 @@ class ShowAppAccessKeyListResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * result  访问密钥列表
+    * totalNum  满足条件的密钥总数
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'result' => '\HuaweiCloud\SDK\Cpcs\V1\Model\AccessKeyInfo[]'
+            'result' => '\HuaweiCloud\SDK\Cpcs\V1\Model\AccessKeyInfo[]',
+            'totalNum' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * result  访问密钥列表
+    * totalNum  满足条件的密钥总数
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'result' => null
+        'result' => null,
+        'totalNum' => 'int32'
     ];
 
     /**
@@ -63,31 +67,37 @@ class ShowAppAccessKeyListResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * result  访问密钥列表
+    * totalNum  满足条件的密钥总数
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'result' => 'result'
+            'result' => 'result',
+            'totalNum' => 'total_num'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * result  访问密钥列表
+    * totalNum  满足条件的密钥总数
     *
     * @var string[]
     */
     protected static $setters = [
-            'result' => 'setResult'
+            'result' => 'setResult',
+            'totalNum' => 'setTotalNum'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * result  访问密钥列表
+    * totalNum  满足条件的密钥总数
     *
     * @var string[]
     */
     protected static $getters = [
-            'result' => 'getResult'
+            'result' => 'getResult',
+            'totalNum' => 'getTotalNum'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ShowAppAccessKeyListResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['totalNum'] = isset($data['totalNum']) ? $data['totalNum'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ShowAppAccessKeyListResponse implements ModelInterface, ArrayAccess
     public function setResult($result)
     {
         $this->container['result'] = $result;
+        return $this;
+    }
+
+    /**
+    * Gets totalNum
+    *  满足条件的密钥总数
+    *
+    * @return int|null
+    */
+    public function getTotalNum()
+    {
+        return $this->container['totalNum'];
+    }
+
+    /**
+    * Sets totalNum
+    *
+    * @param int|null $totalNum 满足条件的密钥总数
+    *
+    * @return $this
+    */
+    public function setTotalNum($totalNum)
+    {
+        $this->container['totalNum'] = $totalNum;
         return $this;
     }
 

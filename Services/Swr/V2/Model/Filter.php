@@ -21,7 +21,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  过滤类型，可选name，tag
-    * value  过滤类型对应的正则表达式(name对应的是命名空间及制品仓库，例如library/_**tag对应的是版本，例如：**repo和tag正则表达式有多个时，用逗号分隔，且在最外层加{}，如library/{test,test*,*test})
+    * value  过滤类型对应的正则表达式(type为name时，对应的是命名空间及制品仓库，例如library/_**； type为tag时，对应的是制品版本，例如：**repo和**tag； 正则表达式有多个时，用英文逗号分隔，且在最外层加{}，如library/{test,test*,*test})
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  过滤类型，可选name，tag
-    * value  过滤类型对应的正则表达式(name对应的是命名空间及制品仓库，例如library/_**tag对应的是版本，例如：**repo和tag正则表达式有多个时，用逗号分隔，且在最外层加{}，如library/{test,test*,*test})
+    * value  过滤类型对应的正则表达式(type为name时，对应的是命名空间及制品仓库，例如library/_**； type为tag时，对应的是制品版本，例如：**repo和**tag； 正则表达式有多个时，用英文逗号分隔，且在最外层加{}，如library/{test,test*,*test})
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class Filter implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  过滤类型，可选name，tag
-    * value  过滤类型对应的正则表达式(name对应的是命名空间及制品仓库，例如library/_**tag对应的是版本，例如：**repo和tag正则表达式有多个时，用逗号分隔，且在最外层加{}，如library/{test,test*,*test})
+    * value  过滤类型对应的正则表达式(type为name时，对应的是命名空间及制品仓库，例如library/_**； type为tag时，对应的是制品版本，例如：**repo和**tag； 正则表达式有多个时，用英文逗号分隔，且在最外层加{}，如library/{test,test*,*test})
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  过滤类型，可选name，tag
-    * value  过滤类型对应的正则表达式(name对应的是命名空间及制品仓库，例如library/_**tag对应的是版本，例如：**repo和tag正则表达式有多个时，用逗号分隔，且在最外层加{}，如library/{test,test*,*test})
+    * value  过滤类型对应的正则表达式(type为name时，对应的是命名空间及制品仓库，例如library/_**； type为tag时，对应的是制品版本，例如：**repo和**tag； 正则表达式有多个时，用英文逗号分隔，且在最外层加{}，如library/{test,test*,*test})
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  过滤类型，可选name，tag
-    * value  过滤类型对应的正则表达式(name对应的是命名空间及制品仓库，例如library/_**tag对应的是版本，例如：**repo和tag正则表达式有多个时，用逗号分隔，且在最外层加{}，如library/{test,test*,*test})
+    * value  过滤类型对应的正则表达式(type为name时，对应的是命名空间及制品仓库，例如library/_**； type为tag时，对应的是制品版本，例如：**repo和**tag； 正则表达式有多个时，用英文逗号分隔，且在最外层加{}，如library/{test,test*,*test})
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class Filter implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  过滤类型对应的正则表达式(name对应的是命名空间及制品仓库，例如library/_**tag对应的是版本，例如：**repo和tag正则表达式有多个时，用逗号分隔，且在最外层加{}，如library/{test,test*,*test})
+    *  过滤类型对应的正则表达式(type为name时，对应的是命名空间及制品仓库，例如library/_**； type为tag时，对应的是制品版本，例如：**repo和**tag； 正则表达式有多个时，用英文逗号分隔，且在最外层加{}，如library/{test,test*,*test})
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 过滤类型对应的正则表达式(name对应的是命名空间及制品仓库，例如library/_**tag对应的是版本，例如：**repo和tag正则表达式有多个时，用逗号分隔，且在最外层加{}，如library/{test,test*,*test})
+    * @param string $value 过滤类型对应的正则表达式(type为name时，对应的是命名空间及制品仓库，例如library/_**； type为tag时，对应的是制品版本，例如：**repo和**tag； 正则表达式有多个时，用英文逗号分隔，且在最外层加{}，如library/{test,test*,*test})
     *
     * @return $this
     */

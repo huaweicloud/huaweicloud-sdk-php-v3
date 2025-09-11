@@ -5528,6 +5528,71 @@ class EcsAsyncClient extends Client
     }
 
     /**
+     * 查询flavor的容量
+     *
+     * 查询flavor的容量
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFlavorCapacityAsync($request)
+    {
+        return $this->showFlavorCapacityAsyncWithHttpInfo($request);
+    }
+    
+    public function showFlavorCapacityAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/cloudservers/flavors/{flavor_id}/resources';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['flavorId'] !== null) {
+            $pathParams['flavor_id'] = $localVarParams['flavorId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowFlavorCapacityResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowFlavorCapacityRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询云服务器元数据配置
      *
      * 查询云服务器元数据配置，通过本接口，您可以查询指定云服务器的元数据配置。
@@ -5783,6 +5848,71 @@ class EcsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询虚拟机可挂载网卡
+     *
+     * 查询虚拟机可挂载网卡
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showServerAttachableNicNumAsync($request)
+    {
+        return $this->showServerAttachableNicNumAsyncWithHttpInfo($request);
+    }
+    
+    public function showServerAttachableNicNumAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/os-interface_extension';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerAttachableNicNumResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerAttachableNicNumRequest',
             $asyncRequest = true);
     }
 

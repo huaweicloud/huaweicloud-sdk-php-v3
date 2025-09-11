@@ -29,7 +29,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     * repoScopeMode  repo的选择方式，regular，selection
     * trigger  trigger
     * override  是否覆盖，默认为false
-    * enabled  是否使用，默认为false
+    * enabled  是否启用，默认为false
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     * repoScopeMode  repo的选择方式，regular，selection
     * trigger  trigger
     * override  是否覆盖，默认为false
-    * enabled  是否使用，默认为false
+    * enabled  是否启用，默认为false
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     * repoScopeMode  repo的选择方式，regular，selection
     * trigger  trigger
     * override  是否覆盖，默认为false
-    * enabled  是否使用，默认为false
+    * enabled  是否启用，默认为false
     *
     * @var string[]
     */
@@ -134,7 +134,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     * repoScopeMode  repo的选择方式，regular，selection
     * trigger  trigger
     * override  是否覆盖，默认为false
-    * enabled  是否使用，默认为false
+    * enabled  是否启用，默认为false
     *
     * @var string[]
     */
@@ -162,7 +162,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     * repoScopeMode  repo的选择方式，regular，selection
     * trigger  trigger
     * override  是否覆盖，默认为false
-    * enabled  是否使用，默认为false
+    * enabled  是否启用，默认为false
     *
     * @var string[]
     */
@@ -504,7 +504,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  是否使用，默认为false
+    *  是否启用，默认为false
     *
     * @return bool
     */
@@ -516,7 +516,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool $enabled 是否使用，默认为false
+    * @param bool $enabled 是否启用，默认为false
     *
     * @return $this
     */

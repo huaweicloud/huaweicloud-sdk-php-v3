@@ -20,14 +20,14 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceIds  主机id列表（INSTALL和UPDATE时必须）
-    * invocationType  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALL_HOST设置远程安装主机，REMOTE_INSTALL执行远程安装
-    * invocationTarget  任务对象，目前仅支持telescope
-    * invocationIds  任务ID列表（ROLLBACK和RETRY时必须）
-    * versionType  插件升级时需要选择升级“基础版本”还是“增强版本”，传值“BASIC_VERSION”表示升级成基础版本，传值“ADVANCE_VERSION”表示升级成增强版本
-    * origin  Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
-    * version  版本号
-    * remoteInstallMeta  创建远程安装任务时需要下发的被安装主机相关信息
+    * instanceIds  **参数解释**: 主机id列表（INSTALL和UPDATE时必须） **取值范围**: 数组长度范围为[1,100]
+    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试 - SET_REMOTE_INSTALLER：设置远程安装主机 - REMOTE_INSTALL：执行远程安装
+    * invocationTarget  **参数解释**: 任务对象，目前仅支持telescope **取值范围**: - telescope：主机监控插件telescope
+    * invocationIds  **参数解释**: 任务ID列表（ROLLBACK和RETRY时必须） **取值范围**: 数组长度范围为[1,100]
+    * versionType  **参数解释**: 插件升级时需要选择升级“基础版本”还是“增强版本” **取值范围**: - BASIC_VERSION: 升级成基础版本 - ADVANCE_VERSION: 升级成增强版本
+    * origin  **参数解释**: Agent任务接口调用源 **取值范围**: - CES: 由Console调用 - APICOM_BMS: 由裸金属服务器调用 - ADMIN_SERVER: 由运维平台调用
+    * version  **参数解释**: 版本号 **取值范围**: 数组长度范围为[0,64]
+    * remoteInstallMeta  **参数解释**: 创建远程安装任务时需要下发的被安装主机相关信息 **取值范围**: 数组长度范围为[0,100]
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceIds  主机id列表（INSTALL和UPDATE时必须）
-    * invocationType  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALL_HOST设置远程安装主机，REMOTE_INSTALL执行远程安装
-    * invocationTarget  任务对象，目前仅支持telescope
-    * invocationIds  任务ID列表（ROLLBACK和RETRY时必须）
-    * versionType  插件升级时需要选择升级“基础版本”还是“增强版本”，传值“BASIC_VERSION”表示升级成基础版本，传值“ADVANCE_VERSION”表示升级成增强版本
-    * origin  Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
-    * version  版本号
-    * remoteInstallMeta  创建远程安装任务时需要下发的被安装主机相关信息
+    * instanceIds  **参数解释**: 主机id列表（INSTALL和UPDATE时必须） **取值范围**: 数组长度范围为[1,100]
+    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试 - SET_REMOTE_INSTALLER：设置远程安装主机 - REMOTE_INSTALL：执行远程安装
+    * invocationTarget  **参数解释**: 任务对象，目前仅支持telescope **取值范围**: - telescope：主机监控插件telescope
+    * invocationIds  **参数解释**: 任务ID列表（ROLLBACK和RETRY时必须） **取值范围**: 数组长度范围为[1,100]
+    * versionType  **参数解释**: 插件升级时需要选择升级“基础版本”还是“增强版本” **取值范围**: - BASIC_VERSION: 升级成基础版本 - ADVANCE_VERSION: 升级成增强版本
+    * origin  **参数解释**: Agent任务接口调用源 **取值范围**: - CES: 由Console调用 - APICOM_BMS: 由裸金属服务器调用 - ADMIN_SERVER: 由运维平台调用
+    * version  **参数解释**: 版本号 **取值范围**: 数组长度范围为[0,64]
+    * remoteInstallMeta  **参数解释**: 创建远程安装任务时需要下发的被安装主机相关信息 **取值范围**: 数组长度范围为[0,100]
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceIds  主机id列表（INSTALL和UPDATE时必须）
-    * invocationType  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALL_HOST设置远程安装主机，REMOTE_INSTALL执行远程安装
-    * invocationTarget  任务对象，目前仅支持telescope
-    * invocationIds  任务ID列表（ROLLBACK和RETRY时必须）
-    * versionType  插件升级时需要选择升级“基础版本”还是“增强版本”，传值“BASIC_VERSION”表示升级成基础版本，传值“ADVANCE_VERSION”表示升级成增强版本
-    * origin  Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
-    * version  版本号
-    * remoteInstallMeta  创建远程安装任务时需要下发的被安装主机相关信息
+    * instanceIds  **参数解释**: 主机id列表（INSTALL和UPDATE时必须） **取值范围**: 数组长度范围为[1,100]
+    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试 - SET_REMOTE_INSTALLER：设置远程安装主机 - REMOTE_INSTALL：执行远程安装
+    * invocationTarget  **参数解释**: 任务对象，目前仅支持telescope **取值范围**: - telescope：主机监控插件telescope
+    * invocationIds  **参数解释**: 任务ID列表（ROLLBACK和RETRY时必须） **取值范围**: 数组长度范围为[1,100]
+    * versionType  **参数解释**: 插件升级时需要选择升级“基础版本”还是“增强版本” **取值范围**: - BASIC_VERSION: 升级成基础版本 - ADVANCE_VERSION: 升级成增强版本
+    * origin  **参数解释**: Agent任务接口调用源 **取值范围**: - CES: 由Console调用 - APICOM_BMS: 由裸金属服务器调用 - ADMIN_SERVER: 由运维平台调用
+    * version  **参数解释**: 版本号 **取值范围**: 数组长度范围为[0,64]
+    * remoteInstallMeta  **参数解释**: 创建远程安装任务时需要下发的被安装主机相关信息 **取值范围**: 数组长度范围为[0,100]
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceIds  主机id列表（INSTALL和UPDATE时必须）
-    * invocationType  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALL_HOST设置远程安装主机，REMOTE_INSTALL执行远程安装
-    * invocationTarget  任务对象，目前仅支持telescope
-    * invocationIds  任务ID列表（ROLLBACK和RETRY时必须）
-    * versionType  插件升级时需要选择升级“基础版本”还是“增强版本”，传值“BASIC_VERSION”表示升级成基础版本，传值“ADVANCE_VERSION”表示升级成增强版本
-    * origin  Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
-    * version  版本号
-    * remoteInstallMeta  创建远程安装任务时需要下发的被安装主机相关信息
+    * instanceIds  **参数解释**: 主机id列表（INSTALL和UPDATE时必须） **取值范围**: 数组长度范围为[1,100]
+    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试 - SET_REMOTE_INSTALLER：设置远程安装主机 - REMOTE_INSTALL：执行远程安装
+    * invocationTarget  **参数解释**: 任务对象，目前仅支持telescope **取值范围**: - telescope：主机监控插件telescope
+    * invocationIds  **参数解释**: 任务ID列表（ROLLBACK和RETRY时必须） **取值范围**: 数组长度范围为[1,100]
+    * versionType  **参数解释**: 插件升级时需要选择升级“基础版本”还是“增强版本” **取值范围**: - BASIC_VERSION: 升级成基础版本 - ADVANCE_VERSION: 升级成增强版本
+    * origin  **参数解释**: Agent任务接口调用源 **取值范围**: - CES: 由Console调用 - APICOM_BMS: 由裸金属服务器调用 - ADMIN_SERVER: 由运维平台调用
+    * version  **参数解释**: 版本号 **取值范围**: 数组长度范围为[0,64]
+    * remoteInstallMeta  **参数解释**: 创建远程安装任务时需要下发的被安装主机相关信息 **取值范围**: 数组长度范围为[0,100]
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceIds  主机id列表（INSTALL和UPDATE时必须）
-    * invocationType  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALL_HOST设置远程安装主机，REMOTE_INSTALL执行远程安装
-    * invocationTarget  任务对象，目前仅支持telescope
-    * invocationIds  任务ID列表（ROLLBACK和RETRY时必须）
-    * versionType  插件升级时需要选择升级“基础版本”还是“增强版本”，传值“BASIC_VERSION”表示升级成基础版本，传值“ADVANCE_VERSION”表示升级成增强版本
-    * origin  Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
-    * version  版本号
-    * remoteInstallMeta  创建远程安装任务时需要下发的被安装主机相关信息
+    * instanceIds  **参数解释**: 主机id列表（INSTALL和UPDATE时必须） **取值范围**: 数组长度范围为[1,100]
+    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试 - SET_REMOTE_INSTALLER：设置远程安装主机 - REMOTE_INSTALL：执行远程安装
+    * invocationTarget  **参数解释**: 任务对象，目前仅支持telescope **取值范围**: - telescope：主机监控插件telescope
+    * invocationIds  **参数解释**: 任务ID列表（ROLLBACK和RETRY时必须） **取值范围**: 数组长度范围为[1,100]
+    * versionType  **参数解释**: 插件升级时需要选择升级“基础版本”还是“增强版本” **取值范围**: - BASIC_VERSION: 升级成基础版本 - ADVANCE_VERSION: 升级成增强版本
+    * origin  **参数解释**: Agent任务接口调用源 **取值范围**: - CES: 由Console调用 - APICOM_BMS: 由裸金属服务器调用 - ADMIN_SERVER: 由运维平台调用
+    * version  **参数解释**: 版本号 **取值范围**: 数组长度范围为[0,64]
+    * remoteInstallMeta  **参数解释**: 创建远程安装任务时需要下发的被安装主机相关信息 **取值范围**: 数组长度范围为[0,100]
     *
     * @var string[]
     */
@@ -203,7 +203,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     const INVOCATION_TYPE_UPDATE = 'UPDATE';
     const INVOCATION_TYPE_ROLLBACK = 'ROLLBACK';
     const INVOCATION_TYPE_RETRY = 'RETRY';
-    const INVOCATION_TYPE_SET_REMOTE_INSTALL_HOST = 'SET_REMOTE_INSTALL_HOST';
+    const INVOCATION_TYPE_SET_REMOTE_INSTALLER = 'SET_REMOTE_INSTALLER';
     const INVOCATION_TYPE_REMOTE_INSTALL = 'REMOTE_INSTALL';
     const INVOCATION_TARGET_TELESCOPE = 'telescope';
     const VERSION_TYPE_BASIC_VERSION = 'BASIC_VERSION';
@@ -225,7 +225,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
             self::INVOCATION_TYPE_UPDATE,
             self::INVOCATION_TYPE_ROLLBACK,
             self::INVOCATION_TYPE_RETRY,
-            self::INVOCATION_TYPE_SET_REMOTE_INSTALL_HOST,
+            self::INVOCATION_TYPE_SET_REMOTE_INSTALLER,
             self::INVOCATION_TYPE_REMOTE_INSTALL,
         ];
     }
@@ -363,7 +363,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceIds
-    *  主机id列表（INSTALL和UPDATE时必须）
+    *  **参数解释**: 主机id列表（INSTALL和UPDATE时必须） **取值范围**: 数组长度范围为[1,100]
     *
     * @return string[]|null
     */
@@ -375,7 +375,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets instanceIds
     *
-    * @param string[]|null $instanceIds 主机id列表（INSTALL和UPDATE时必须）
+    * @param string[]|null $instanceIds **参数解释**: 主机id列表（INSTALL和UPDATE时必须） **取值范围**: 数组长度范围为[1,100]
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocationType
-    *  任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALL_HOST设置远程安装主机，REMOTE_INSTALL执行远程安装
+    *  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试 - SET_REMOTE_INSTALLER：设置远程安装主机 - REMOTE_INSTALL：执行远程安装
     *
     * @return string
     */
@@ -399,7 +399,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets invocationType
     *
-    * @param string $invocationType 任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALL_HOST设置远程安装主机，REMOTE_INSTALL执行远程安装
+    * @param string $invocationType **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试 - SET_REMOTE_INSTALLER：设置远程安装主机 - REMOTE_INSTALL：执行远程安装
     *
     * @return $this
     */
@@ -411,7 +411,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocationTarget
-    *  任务对象，目前仅支持telescope
+    *  **参数解释**: 任务对象，目前仅支持telescope **取值范围**: - telescope：主机监控插件telescope
     *
     * @return string|null
     */
@@ -423,7 +423,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets invocationTarget
     *
-    * @param string|null $invocationTarget 任务对象，目前仅支持telescope
+    * @param string|null $invocationTarget **参数解释**: 任务对象，目前仅支持telescope **取值范围**: - telescope：主机监控插件telescope
     *
     * @return $this
     */
@@ -435,7 +435,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocationIds
-    *  任务ID列表（ROLLBACK和RETRY时必须）
+    *  **参数解释**: 任务ID列表（ROLLBACK和RETRY时必须） **取值范围**: 数组长度范围为[1,100]
     *
     * @return string[]|null
     */
@@ -447,7 +447,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets invocationIds
     *
-    * @param string[]|null $invocationIds 任务ID列表（ROLLBACK和RETRY时必须）
+    * @param string[]|null $invocationIds **参数解释**: 任务ID列表（ROLLBACK和RETRY时必须） **取值范围**: 数组长度范围为[1,100]
     *
     * @return $this
     */
@@ -459,7 +459,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets versionType
-    *  插件升级时需要选择升级“基础版本”还是“增强版本”，传值“BASIC_VERSION”表示升级成基础版本，传值“ADVANCE_VERSION”表示升级成增强版本
+    *  **参数解释**: 插件升级时需要选择升级“基础版本”还是“增强版本” **取值范围**: - BASIC_VERSION: 升级成基础版本 - ADVANCE_VERSION: 升级成增强版本
     *
     * @return string|null
     */
@@ -471,7 +471,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets versionType
     *
-    * @param string|null $versionType 插件升级时需要选择升级“基础版本”还是“增强版本”，传值“BASIC_VERSION”表示升级成基础版本，传值“ADVANCE_VERSION”表示升级成增强版本
+    * @param string|null $versionType **参数解释**: 插件升级时需要选择升级“基础版本”还是“增强版本” **取值范围**: - BASIC_VERSION: 升级成基础版本 - ADVANCE_VERSION: 升级成增强版本
     *
     * @return $this
     */
@@ -483,7 +483,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets origin
-    *  Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
+    *  **参数解释**: Agent任务接口调用源 **取值范围**: - CES: 由Console调用 - APICOM_BMS: 由裸金属服务器调用 - ADMIN_SERVER: 由运维平台调用
     *
     * @return string|null
     */
@@ -495,7 +495,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets origin
     *
-    * @param string|null $origin Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
+    * @param string|null $origin **参数解释**: Agent任务接口调用源 **取值范围**: - CES: 由Console调用 - APICOM_BMS: 由裸金属服务器调用 - ADMIN_SERVER: 由运维平台调用
     *
     * @return $this
     */
@@ -507,7 +507,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  版本号
+    *  **参数解释**: 版本号 **取值范围**: 数组长度范围为[0,64]
     *
     * @return string|null
     */
@@ -519,7 +519,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 版本号
+    * @param string|null $version **参数解释**: 版本号 **取值范围**: 数组长度范围为[0,64]
     *
     * @return $this
     */
@@ -531,7 +531,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets remoteInstallMeta
-    *  创建远程安装任务时需要下发的被安装主机相关信息
+    *  **参数解释**: 创建远程安装任务时需要下发的被安装主机相关信息 **取值范围**: 数组长度范围为[0,100]
     *
     * @return \HuaweiCloud\SDK\Ces\V3\Model\RemoteInstallHostInfo[]|null
     */
@@ -543,7 +543,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets remoteInstallMeta
     *
-    * @param \HuaweiCloud\SDK\Ces\V3\Model\RemoteInstallHostInfo[]|null $remoteInstallMeta 创建远程安装任务时需要下发的被安装主机相关信息
+    * @param \HuaweiCloud\SDK\Ces\V3\Model\RemoteInstallHostInfo[]|null $remoteInstallMeta **参数解释**: 创建远程安装任务时需要下发的被安装主机相关信息 **取值范围**: 数组长度范围为[0,100]
     *
     * @return $this
     */

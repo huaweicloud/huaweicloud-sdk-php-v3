@@ -20,7 +20,7 @@ class ExpandInstanceStorage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * newSize  **参数解释**：   磁盘扩容后单节点有效存储容量（GB/节点）。   该容量必须大于当前单节点有效容量，小于等于集群规格支持的单节点最大容量，扩容容量为规格支持的步长倍数。  集群规格配置详情可根据 [集群规格详情](ShowClusterFlavor.xml) 查询。    **约束限制**：    不涉及。   **取值范围**：   不涉及。   **默认取值**：   不涉及。
+    * newSize  **参数解释**：   磁盘扩容后单节点有效存储容量（GB/节点）。    该容量必须大于当前单节点有效容量，小于等于集群规格支持的单节点最大容量，扩容容量为规格支持的步长倍数。  集群规格配置详情可根据 [集群规格详情](ShowClusterFlavor.xml) 查询。     **约束限制**：    不涉及。   **取值范围**：    不涉及。   **默认取值**：    不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ExpandInstanceStorage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * newSize  **参数解释**：   磁盘扩容后单节点有效存储容量（GB/节点）。   该容量必须大于当前单节点有效容量，小于等于集群规格支持的单节点最大容量，扩容容量为规格支持的步长倍数。  集群规格配置详情可根据 [集群规格详情](ShowClusterFlavor.xml) 查询。    **约束限制**：    不涉及。   **取值范围**：   不涉及。   **默认取值**：   不涉及。
+    * newSize  **参数解释**：   磁盘扩容后单节点有效存储容量（GB/节点）。    该容量必须大于当前单节点有效容量，小于等于集群规格支持的单节点最大容量，扩容容量为规格支持的步长倍数。  集群规格配置详情可根据 [集群规格详情](ShowClusterFlavor.xml) 查询。     **约束限制**：    不涉及。   **取值范围**：    不涉及。   **默认取值**：    不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ExpandInstanceStorage implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * newSize  **参数解释**：   磁盘扩容后单节点有效存储容量（GB/节点）。   该容量必须大于当前单节点有效容量，小于等于集群规格支持的单节点最大容量，扩容容量为规格支持的步长倍数。  集群规格配置详情可根据 [集群规格详情](ShowClusterFlavor.xml) 查询。    **约束限制**：    不涉及。   **取值范围**：   不涉及。   **默认取值**：   不涉及。
+    * newSize  **参数解释**：   磁盘扩容后单节点有效存储容量（GB/节点）。    该容量必须大于当前单节点有效容量，小于等于集群规格支持的单节点最大容量，扩容容量为规格支持的步长倍数。  集群规格配置详情可根据 [集群规格详情](ShowClusterFlavor.xml) 查询。     **约束限制**：    不涉及。   **取值范围**：    不涉及。   **默认取值**：    不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ExpandInstanceStorage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * newSize  **参数解释**：   磁盘扩容后单节点有效存储容量（GB/节点）。   该容量必须大于当前单节点有效容量，小于等于集群规格支持的单节点最大容量，扩容容量为规格支持的步长倍数。  集群规格配置详情可根据 [集群规格详情](ShowClusterFlavor.xml) 查询。    **约束限制**：    不涉及。   **取值范围**：   不涉及。   **默认取值**：   不涉及。
+    * newSize  **参数解释**：   磁盘扩容后单节点有效存储容量（GB/节点）。    该容量必须大于当前单节点有效容量，小于等于集群规格支持的单节点最大容量，扩容容量为规格支持的步长倍数。  集群规格配置详情可根据 [集群规格详情](ShowClusterFlavor.xml) 查询。     **约束限制**：    不涉及。   **取值范围**：    不涉及。   **默认取值**：    不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ExpandInstanceStorage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * newSize  **参数解释**：   磁盘扩容后单节点有效存储容量（GB/节点）。   该容量必须大于当前单节点有效容量，小于等于集群规格支持的单节点最大容量，扩容容量为规格支持的步长倍数。  集群规格配置详情可根据 [集群规格详情](ShowClusterFlavor.xml) 查询。    **约束限制**：    不涉及。   **取值范围**：   不涉及。   **默认取值**：   不涉及。
+    * newSize  **参数解释**：   磁盘扩容后单节点有效存储容量（GB/节点）。    该容量必须大于当前单节点有效容量，小于等于集群规格支持的单节点最大容量，扩容容量为规格支持的步长倍数。  集群规格配置详情可根据 [集群规格详情](ShowClusterFlavor.xml) 查询。     **约束限制**：    不涉及。   **取值范围**：    不涉及。   **默认取值**：    不涉及。
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class ExpandInstanceStorage implements ModelInterface, ArrayAccess
 
     /**
     * Gets newSize
-    *  **参数解释**：   磁盘扩容后单节点有效存储容量（GB/节点）。   该容量必须大于当前单节点有效容量，小于等于集群规格支持的单节点最大容量，扩容容量为规格支持的步长倍数。  集群规格配置详情可根据 [集群规格详情](ShowClusterFlavor.xml) 查询。    **约束限制**：    不涉及。   **取值范围**：   不涉及。   **默认取值**：   不涉及。
+    *  **参数解释**：   磁盘扩容后单节点有效存储容量（GB/节点）。    该容量必须大于当前单节点有效容量，小于等于集群规格支持的单节点最大容量，扩容容量为规格支持的步长倍数。  集群规格配置详情可根据 [集群规格详情](ShowClusterFlavor.xml) 查询。     **约束限制**：    不涉及。   **取值范围**：    不涉及。   **默认取值**：    不涉及。
     *
     * @return int
     */
@@ -192,7 +192,7 @@ class ExpandInstanceStorage implements ModelInterface, ArrayAccess
     /**
     * Sets newSize
     *
-    * @param int $newSize **参数解释**：   磁盘扩容后单节点有效存储容量（GB/节点）。   该容量必须大于当前单节点有效容量，小于等于集群规格支持的单节点最大容量，扩容容量为规格支持的步长倍数。  集群规格配置详情可根据 [集群规格详情](ShowClusterFlavor.xml) 查询。    **约束限制**：    不涉及。   **取值范围**：   不涉及。   **默认取值**：   不涉及。
+    * @param int $newSize **参数解释**：   磁盘扩容后单节点有效存储容量（GB/节点）。    该容量必须大于当前单节点有效容量，小于等于集群规格支持的单节点最大容量，扩容容量为规格支持的步长倍数。  集群规格配置详情可根据 [集群规格详情](ShowClusterFlavor.xml) 查询。     **约束限制**：    不涉及。   **取值范围**：    不涉及。   **默认取值**：    不涉及。
     *
     * @return $this
     */

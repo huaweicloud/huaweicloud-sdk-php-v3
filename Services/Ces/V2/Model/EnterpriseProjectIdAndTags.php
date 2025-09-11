@@ -20,7 +20,7 @@ class EnterpriseProjectIdAndTags implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 由字母、数字、_和-组成，长度为[1,128]个字符 **默认取值** 不涉及
     * tag  tag
     *
     * @var string[]
@@ -32,7 +32,7 @@ class EnterpriseProjectIdAndTags implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 由字母、数字、_和-组成，长度为[1,128]个字符 **默认取值** 不涉及
     * tag  tag
     *
     * @var string[]
@@ -65,7 +65,7 @@ class EnterpriseProjectIdAndTags implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 由字母、数字、_和-组成，长度为[1,128]个字符 **默认取值** 不涉及
     * tag  tag
     *
     * @var string[]
@@ -77,7 +77,7 @@ class EnterpriseProjectIdAndTags implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 由字母、数字、_和-组成，长度为[1,128]个字符 **默认取值** 不涉及
     * tag  tag
     *
     * @var string[]
@@ -89,7 +89,7 @@ class EnterpriseProjectIdAndTags implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 由字母、数字、_和-组成，长度为[1,128]个字符 **默认取值** 不涉及
     * tag  tag
     *
     * @var string[]
@@ -194,7 +194,7 @@ class EnterpriseProjectIdAndTags implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID
+    *  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 由字母、数字、_和-组成，长度为[1,128]个字符 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -206,7 +206,7 @@ class EnterpriseProjectIdAndTags implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID
+    * @param string|null $enterpriseProjectId **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 由字母、数字、_和-组成，长度为[1,128]个字符 **默认取值** 不涉及
     *
     * @return $this
     */

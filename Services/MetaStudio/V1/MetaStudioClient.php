@@ -669,468 +669,6 @@ class MetaStudioClient extends Client
     }
 
     /**
-     * 创建热词表
-     *
-     * 该接口用于创建热词表。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function createAsrVocabulary($request)
-    {
-        return $this->createAsrVocabularyWithHttpInfo($request);
-    }
-
-    public function createAsrVocabularyWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/digital-human-chat/asr-vocabulary';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
-        }
-        if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
-        }
-        if ($localVarParams['xProjectId'] !== null) {
-            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
-        }
-        if ($localVarParams['xAppUserId'] !== null) {
-            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateAsrVocabularyResponse',
-            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateAsrVocabularyRequest');
-    }
-
-    /**
-     * 删除热词表
-     *
-     * 该接口用于删除热词表。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function deleteAsrVocabulary($request)
-    {
-        return $this->deleteAsrVocabularyWithHttpInfo($request);
-    }
-
-    public function deleteAsrVocabularyWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/digital-human-chat/asr-vocabulary/{asr_vocabulary_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
-        }
-        if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
-        }
-        if ($localVarParams['xProjectId'] !== null) {
-            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
-        }
-        if ($localVarParams['xAppUserId'] !== null) {
-            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
-        }
-        if ($localVarParams['asrVocabularyId'] !== null) {
-            $pathParams['asr_vocabulary_id'] = $localVarParams['asrVocabularyId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='DELETE',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\DeleteAsrVocabularyResponse',
-            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\DeleteAsrVocabularyRequest');
-    }
-
-    /**
-     * 查询热词表列表
-     *
-     * 该接口用于查询热词表列表。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listAsrVocabulary($request)
-    {
-        return $this->listAsrVocabularyWithHttpInfo($request);
-    }
-
-    public function listAsrVocabularyWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/digital-human-chat/asr-vocabulary';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['vocabularyType'] !== null) {
-            $queryParams['vocabulary_type'] = $localVarParams['vocabularyType'];
-        }
-        if ($localVarParams['language'] !== null) {
-            $queryParams['language'] = $localVarParams['language'];
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
-        }
-        if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
-        }
-        if ($localVarParams['xProjectId'] !== null) {
-            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
-        }
-        if ($localVarParams['xAppUserId'] !== null) {
-            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListAsrVocabularyResponse',
-            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListAsrVocabularyRequest');
-    }
-
-    /**
-     * 查询热词表详情
-     *
-     * 该接口用于查询热词表详情。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showAsrVocabulary($request)
-    {
-        return $this->showAsrVocabularyWithHttpInfo($request);
-    }
-
-    public function showAsrVocabularyWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/digital-human-chat/asr-vocabulary/{asr_vocabulary_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
-        }
-        if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
-        }
-        if ($localVarParams['xProjectId'] !== null) {
-            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
-        }
-        if ($localVarParams['xAppUserId'] !== null) {
-            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
-        }
-        if ($localVarParams['asrVocabularyId'] !== null) {
-            $pathParams['asr_vocabulary_id'] = $localVarParams['asrVocabularyId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowAsrVocabularyResponse',
-            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowAsrVocabularyRequest');
-    }
-
-    /**
-     * 查询热词表关联详情
-     *
-     * 该接口用于查询热词表关联详情。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showAsrVocabularyAssociation($request)
-    {
-        return $this->showAsrVocabularyAssociationWithHttpInfo($request);
-    }
-
-    public function showAsrVocabularyAssociationWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/digital-human-chat/asr-vocabulary/association/{asr_vocabulary_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
-        }
-        if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
-        }
-        if ($localVarParams['xProjectId'] !== null) {
-            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
-        }
-        if ($localVarParams['xAppUserId'] !== null) {
-            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
-        }
-        if ($localVarParams['asrVocabularyId'] !== null) {
-            $pathParams['asr_vocabulary_id'] = $localVarParams['asrVocabularyId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowAsrVocabularyAssociationResponse',
-            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowAsrVocabularyAssociationRequest');
-    }
-
-    /**
-     * 修改热词表
-     *
-     * 该接口用于修改热词表。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function updateAsrVocabulary($request)
-    {
-        return $this->updateAsrVocabularyWithHttpInfo($request);
-    }
-
-    public function updateAsrVocabularyWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/digital-human-chat/asr-vocabulary/{asr_vocabulary_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
-        }
-        if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
-        }
-        if ($localVarParams['xProjectId'] !== null) {
-            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
-        }
-        if ($localVarParams['xAppUserId'] !== null) {
-            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
-        }
-        if ($localVarParams['asrVocabularyId'] !== null) {
-            $pathParams['asr_vocabulary_id'] = $localVarParams['asrVocabularyId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateAsrVocabularyResponse',
-            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateAsrVocabularyRequest');
-    }
-
-    /**
      * 删除导入导出任务
      *
      * 删除导入导出任务
@@ -16200,6 +15738,145 @@ class MetaStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowResourceUsageResponse',
             $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowResourceUsageRequest');
+    }
+
+    /**
+     * 签署云服务声明
+     *
+     * 签署云服务声明。调用此接口前请知悉[[metastudio隐私协议](https://www.huaweicloud.com/declaration/tsa_metastudio.html)](tag:hws)[[metastudio隐私协议](https://www.huaweicloud.com/intl/en-us/declaration-sg/tsa-metastudio.html)](tag:hws_hk)。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function signAgreement($request)
+    {
+        return $this->signAgreementWithHttpInfo($request);
+    }
+
+    public function signAgreementWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/tenants/service-agreements/signed';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\SignAgreementResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\SignAgreementRequest');
+    }
+
+    /**
+     * 签署特殊云服务声明
+     *
+     * 签署特殊云服务声明,目前可签署自动支付协议。开启自动支付协议之后,调用下单接口时，华为云将进行自动扣费。若因账户余额不足导致扣费失败，系统会生成待支付订单，您可前往费用中心-我的订单查看，届时您需手动完成支付。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function signSpecialAgreement($request)
+    {
+        return $this->signSpecialAgreementWithHttpInfo($request);
+    }
+
+    public function signSpecialAgreementWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/tenants/special-agreements/signed';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\SignSpecialAgreementResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\SignSpecialAgreementRequest');
     }
 
     /**

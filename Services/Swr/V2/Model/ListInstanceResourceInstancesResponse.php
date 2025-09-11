@@ -21,8 +21,8 @@ class ListInstanceResourceInstancesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resources  资源实例列表
-    * totalCount  资源实例数量
+    * resources  资源列表
+    * totalCount  资源数量
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListInstanceResourceInstancesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resources  资源实例列表
-    * totalCount  资源实例数量
+    * resources  资源列表
+    * totalCount  资源数量
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListInstanceResourceInstancesResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resources  资源实例列表
-    * totalCount  资源实例数量
+    * resources  资源列表
+    * totalCount  资源数量
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListInstanceResourceInstancesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resources  资源实例列表
-    * totalCount  资源实例数量
+    * resources  资源列表
+    * totalCount  资源数量
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListInstanceResourceInstancesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resources  资源实例列表
-    * totalCount  资源实例数量
+    * resources  资源列表
+    * totalCount  资源数量
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListInstanceResourceInstancesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets resources
-    *  资源实例列表
+    *  资源列表
     *
     * @return \HuaweiCloud\SDK\Swr\V2\Model\Resource[]|null
     */
@@ -198,7 +198,7 @@ class ListInstanceResourceInstancesResponse implements ModelInterface, ArrayAcce
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Swr\V2\Model\Resource[]|null $resources 资源实例列表
+    * @param \HuaweiCloud\SDK\Swr\V2\Model\Resource[]|null $resources 资源列表
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListInstanceResourceInstancesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets totalCount
-    *  资源实例数量
+    *  资源数量
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListInstanceResourceInstancesResponse implements ModelInterface, ArrayAcce
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount 资源实例数量
+    * @param int|null $totalCount 资源数量
     *
     * @return $this
     */

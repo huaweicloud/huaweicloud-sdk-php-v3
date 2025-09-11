@@ -21,11 +21,11 @@ class WebhookPolicyDetail implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  触发器ID
-    * name  触发器策略名称
-    * description  触发器策略描述
+    * name  触发器名称
+    * description  触发器描述
     * targets  触发目标
     * eventTypes  事件类型
-    * enabled  是否使用，可选true或false
+    * enabled  是否启用，可选true或false
     * namespaceId  命名空间ID
     * namespaceName  命名空间名
     * creator  创建者
@@ -53,11 +53,11 @@ class WebhookPolicyDetail implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  触发器ID
-    * name  触发器策略名称
-    * description  触发器策略描述
+    * name  触发器名称
+    * description  触发器描述
     * targets  触发目标
     * eventTypes  事件类型
-    * enabled  是否使用，可选true或false
+    * enabled  是否启用，可选true或false
     * namespaceId  命名空间ID
     * namespaceName  命名空间名
     * creator  创建者
@@ -106,11 +106,11 @@ class WebhookPolicyDetail implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  触发器ID
-    * name  触发器策略名称
-    * description  触发器策略描述
+    * name  触发器名称
+    * description  触发器描述
     * targets  触发目标
     * eventTypes  事件类型
-    * enabled  是否使用，可选true或false
+    * enabled  是否启用，可选true或false
     * namespaceId  命名空间ID
     * namespaceName  命名空间名
     * creator  创建者
@@ -138,11 +138,11 @@ class WebhookPolicyDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  触发器ID
-    * name  触发器策略名称
-    * description  触发器策略描述
+    * name  触发器名称
+    * description  触发器描述
     * targets  触发目标
     * eventTypes  事件类型
-    * enabled  是否使用，可选true或false
+    * enabled  是否启用，可选true或false
     * namespaceId  命名空间ID
     * namespaceName  命名空间名
     * creator  创建者
@@ -170,11 +170,11 @@ class WebhookPolicyDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  触发器ID
-    * name  触发器策略名称
-    * description  触发器策略描述
+    * name  触发器名称
+    * description  触发器描述
     * targets  触发目标
     * eventTypes  事件类型
-    * enabled  是否使用，可选true或false
+    * enabled  是否启用，可选true或false
     * namespaceId  命名空间ID
     * namespaceName  命名空间名
     * creator  创建者
@@ -319,7 +319,7 @@ class WebhookPolicyDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  触发器策略名称
+    *  触发器名称
     *
     * @return string|null
     */
@@ -331,7 +331,7 @@ class WebhookPolicyDetail implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 触发器策略名称
+    * @param string|null $name 触发器名称
     *
     * @return $this
     */
@@ -343,7 +343,7 @@ class WebhookPolicyDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  触发器策略描述
+    *  触发器描述
     *
     * @return string|null
     */
@@ -355,7 +355,7 @@ class WebhookPolicyDetail implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 触发器策略描述
+    * @param string|null $description 触发器描述
     *
     * @return $this
     */
@@ -415,7 +415,7 @@ class WebhookPolicyDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  是否使用，可选true或false
+    *  是否启用，可选true或false
     *
     * @return bool|null
     */
@@ -427,7 +427,7 @@ class WebhookPolicyDetail implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool|null $enabled 是否使用，可选true或false
+    * @param bool|null $enabled 是否启用，可选true或false
     *
     * @return $this
     */

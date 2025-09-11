@@ -20,9 +20,9 @@ class ResourceNameItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceName  资源名称条件值
-    * operator  实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   all表示全部
-    * resourceNameIsIgnoreCase  资源名称忽略大小写
+    * resourceName  **参数解释** 资源名称条件值 **约束限制** 不涉及 **取值范围** 长度[0,128]个字符 **默认取值** 不涉及
+    * operator  **参数解释** 实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。 **约束限制** 不涉及 **取值范围** - include: 表示包含 - prefix: 表示前缀 - suffix: 表示后缀 - notInclude: 表示不包含 - equal: 表示相等 - all: 表示全部 **默认取值** 不涉及
+    * resourceNameIsIgnoreCase  **参数解释** 资源名称忽略大小写 **约束限制** 不涉及 **取值范围** - true: 名称忽略大小写 - false: 名称不忽略大小写 **默认取值** false
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ResourceNameItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceName  资源名称条件值
-    * operator  实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   all表示全部
-    * resourceNameIsIgnoreCase  资源名称忽略大小写
+    * resourceName  **参数解释** 资源名称条件值 **约束限制** 不涉及 **取值范围** 长度[0,128]个字符 **默认取值** 不涉及
+    * operator  **参数解释** 实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。 **约束限制** 不涉及 **取值范围** - include: 表示包含 - prefix: 表示前缀 - suffix: 表示后缀 - notInclude: 表示不包含 - equal: 表示相等 - all: 表示全部 **默认取值** 不涉及
+    * resourceNameIsIgnoreCase  **参数解释** 资源名称忽略大小写 **约束限制** 不涉及 **取值范围** - true: 名称忽略大小写 - false: 名称不忽略大小写 **默认取值** false
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ResourceNameItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceName  资源名称条件值
-    * operator  实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   all表示全部
-    * resourceNameIsIgnoreCase  资源名称忽略大小写
+    * resourceName  **参数解释** 资源名称条件值 **约束限制** 不涉及 **取值范围** 长度[0,128]个字符 **默认取值** 不涉及
+    * operator  **参数解释** 实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。 **约束限制** 不涉及 **取值范围** - include: 表示包含 - prefix: 表示前缀 - suffix: 表示后缀 - notInclude: 表示不包含 - equal: 表示相等 - all: 表示全部 **默认取值** 不涉及
+    * resourceNameIsIgnoreCase  **参数解释** 资源名称忽略大小写 **约束限制** 不涉及 **取值范围** - true: 名称忽略大小写 - false: 名称不忽略大小写 **默认取值** false
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ResourceNameItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceName  资源名称条件值
-    * operator  实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   all表示全部
-    * resourceNameIsIgnoreCase  资源名称忽略大小写
+    * resourceName  **参数解释** 资源名称条件值 **约束限制** 不涉及 **取值范围** 长度[0,128]个字符 **默认取值** 不涉及
+    * operator  **参数解释** 实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。 **约束限制** 不涉及 **取值范围** - include: 表示包含 - prefix: 表示前缀 - suffix: 表示后缀 - notInclude: 表示不包含 - equal: 表示相等 - all: 表示全部 **默认取值** 不涉及
+    * resourceNameIsIgnoreCase  **参数解释** 资源名称忽略大小写 **约束限制** 不涉及 **取值范围** - true: 名称忽略大小写 - false: 名称不忽略大小写 **默认取值** false
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ResourceNameItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceName  资源名称条件值
-    * operator  实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   all表示全部
-    * resourceNameIsIgnoreCase  资源名称忽略大小写
+    * resourceName  **参数解释** 资源名称条件值 **约束限制** 不涉及 **取值范围** 长度[0,128]个字符 **默认取值** 不涉及
+    * operator  **参数解释** 实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。 **约束限制** 不涉及 **取值范围** - include: 表示包含 - prefix: 表示前缀 - suffix: 表示后缀 - notInclude: 表示不包含 - equal: 表示相等 - all: 表示全部 **默认取值** 不涉及
+    * resourceNameIsIgnoreCase  **参数解释** 资源名称忽略大小写 **约束限制** 不涉及 **取值范围** - true: 名称忽略大小写 - false: 名称不忽略大小写 **默认取值** false
     *
     * @var string[]
     */
@@ -236,7 +236,7 @@ class ResourceNameItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
-    *  资源名称条件值
+    *  **参数解释** 资源名称条件值 **约束限制** 不涉及 **取值范围** 长度[0,128]个字符 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -248,7 +248,7 @@ class ResourceNameItem implements ModelInterface, ArrayAccess
     /**
     * Sets resourceName
     *
-    * @param string|null $resourceName 资源名称条件值
+    * @param string|null $resourceName **参数解释** 资源名称条件值 **约束限制** 不涉及 **取值范围** 长度[0,128]个字符 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -260,7 +260,7 @@ class ResourceNameItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets operator
-    *  实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   all表示全部
+    *  **参数解释** 实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。 **约束限制** 不涉及 **取值范围** - include: 表示包含 - prefix: 表示前缀 - suffix: 表示后缀 - notInclude: 表示不包含 - equal: 表示相等 - all: 表示全部 **默认取值** 不涉及
     *
     * @return string
     */
@@ -272,7 +272,7 @@ class ResourceNameItem implements ModelInterface, ArrayAccess
     /**
     * Sets operator
     *
-    * @param string $operator 实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   all表示全部
+    * @param string $operator **参数解释** 实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。 **约束限制** 不涉及 **取值范围** - include: 表示包含 - prefix: 表示前缀 - suffix: 表示后缀 - notInclude: 表示不包含 - equal: 表示相等 - all: 表示全部 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -284,7 +284,7 @@ class ResourceNameItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceNameIsIgnoreCase
-    *  资源名称忽略大小写
+    *  **参数解释** 资源名称忽略大小写 **约束限制** 不涉及 **取值范围** - true: 名称忽略大小写 - false: 名称不忽略大小写 **默认取值** false
     *
     * @return bool|null
     */
@@ -296,7 +296,7 @@ class ResourceNameItem implements ModelInterface, ArrayAccess
     /**
     * Sets resourceNameIsIgnoreCase
     *
-    * @param bool|null $resourceNameIsIgnoreCase 资源名称忽略大小写
+    * @param bool|null $resourceNameIsIgnoreCase **参数解释** 资源名称忽略大小写 **约束限制** 不涉及 **取值范围** - true: 名称忽略大小写 - false: 名称不忽略大小写 **默认取值** false
     *
     * @return $this
     */

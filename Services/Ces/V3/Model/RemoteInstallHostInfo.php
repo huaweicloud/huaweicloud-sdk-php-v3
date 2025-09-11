@@ -20,12 +20,12 @@ class RemoteInstallHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceName  被远程安装的主机名称
-    * remoteIp  被远程安装的主机IP
-    * userName  被远程安装的主机的登录用户名
-    * port  被远程安装的主机的登录端口
-    * password  被远程安装的主机的登录密码
-    * remoteUsePem  被远程安装的主机远程连接是否采用秘钥方式（false时为密码方式）
+    * instanceName  **参数解释**: 被远程安装的主机名称 **取值范围**: 数组长度范围为[1,128]
+    * remoteIp  **参数解释**: 被远程安装的主机IP **取值范围**: 仅由数字(0-9)和小数点(.)组成的字符串，字符串长度为[1,15]
+    * userName  **参数解释**: 被远程安装的主机的登录用户名 **取值范围**: 数组长度范围为[1,16]
+    * port  **参数解释**: 被远程安装的主机的登录端口 **取值范围**: 数组长度范围为[1,5]
+    * password  **参数解释**: 被远程安装的主机的登录密码 **取值范围**: 数组长度范围为[1,3000]
+    * remoteUsePem  **参数解释**: 被远程安装的主机远程连接是否采用密钥方式（false时为密码方式） **取值范围**: - false: 密码方式 - true: 密钥方式
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class RemoteInstallHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceName  被远程安装的主机名称
-    * remoteIp  被远程安装的主机IP
-    * userName  被远程安装的主机的登录用户名
-    * port  被远程安装的主机的登录端口
-    * password  被远程安装的主机的登录密码
-    * remoteUsePem  被远程安装的主机远程连接是否采用秘钥方式（false时为密码方式）
+    * instanceName  **参数解释**: 被远程安装的主机名称 **取值范围**: 数组长度范围为[1,128]
+    * remoteIp  **参数解释**: 被远程安装的主机IP **取值范围**: 仅由数字(0-9)和小数点(.)组成的字符串，字符串长度为[1,15]
+    * userName  **参数解释**: 被远程安装的主机的登录用户名 **取值范围**: 数组长度范围为[1,16]
+    * port  **参数解释**: 被远程安装的主机的登录端口 **取值范围**: 数组长度范围为[1,5]
+    * password  **参数解释**: 被远程安装的主机的登录密码 **取值范围**: 数组长度范围为[1,3000]
+    * remoteUsePem  **参数解释**: 被远程安装的主机远程连接是否采用密钥方式（false时为密码方式） **取值范围**: - false: 密码方式 - true: 密钥方式
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class RemoteInstallHostInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceName  被远程安装的主机名称
-    * remoteIp  被远程安装的主机IP
-    * userName  被远程安装的主机的登录用户名
-    * port  被远程安装的主机的登录端口
-    * password  被远程安装的主机的登录密码
-    * remoteUsePem  被远程安装的主机远程连接是否采用秘钥方式（false时为密码方式）
+    * instanceName  **参数解释**: 被远程安装的主机名称 **取值范围**: 数组长度范围为[1,128]
+    * remoteIp  **参数解释**: 被远程安装的主机IP **取值范围**: 仅由数字(0-9)和小数点(.)组成的字符串，字符串长度为[1,15]
+    * userName  **参数解释**: 被远程安装的主机的登录用户名 **取值范围**: 数组长度范围为[1,16]
+    * port  **参数解释**: 被远程安装的主机的登录端口 **取值范围**: 数组长度范围为[1,5]
+    * password  **参数解释**: 被远程安装的主机的登录密码 **取值范围**: 数组长度范围为[1,3000]
+    * remoteUsePem  **参数解释**: 被远程安装的主机远程连接是否采用密钥方式（false时为密码方式） **取值范围**: - false: 密码方式 - true: 密钥方式
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class RemoteInstallHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceName  被远程安装的主机名称
-    * remoteIp  被远程安装的主机IP
-    * userName  被远程安装的主机的登录用户名
-    * port  被远程安装的主机的登录端口
-    * password  被远程安装的主机的登录密码
-    * remoteUsePem  被远程安装的主机远程连接是否采用秘钥方式（false时为密码方式）
+    * instanceName  **参数解释**: 被远程安装的主机名称 **取值范围**: 数组长度范围为[1,128]
+    * remoteIp  **参数解释**: 被远程安装的主机IP **取值范围**: 仅由数字(0-9)和小数点(.)组成的字符串，字符串长度为[1,15]
+    * userName  **参数解释**: 被远程安装的主机的登录用户名 **取值范围**: 数组长度范围为[1,16]
+    * port  **参数解释**: 被远程安装的主机的登录端口 **取值范围**: 数组长度范围为[1,5]
+    * password  **参数解释**: 被远程安装的主机的登录密码 **取值范围**: 数组长度范围为[1,3000]
+    * remoteUsePem  **参数解释**: 被远程安装的主机远程连接是否采用密钥方式（false时为密码方式） **取值范围**: - false: 密码方式 - true: 密钥方式
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class RemoteInstallHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceName  被远程安装的主机名称
-    * remoteIp  被远程安装的主机IP
-    * userName  被远程安装的主机的登录用户名
-    * port  被远程安装的主机的登录端口
-    * password  被远程安装的主机的登录密码
-    * remoteUsePem  被远程安装的主机远程连接是否采用秘钥方式（false时为密码方式）
+    * instanceName  **参数解释**: 被远程安装的主机名称 **取值范围**: 数组长度范围为[1,128]
+    * remoteIp  **参数解释**: 被远程安装的主机IP **取值范围**: 仅由数字(0-9)和小数点(.)组成的字符串，字符串长度为[1,15]
+    * userName  **参数解释**: 被远程安装的主机的登录用户名 **取值范围**: 数组长度范围为[1,16]
+    * port  **参数解释**: 被远程安装的主机的登录端口 **取值范围**: 数组长度范围为[1,5]
+    * password  **参数解释**: 被远程安装的主机的登录密码 **取值范围**: 数组长度范围为[1,3000]
+    * remoteUsePem  **参数解释**: 被远程安装的主机远程连接是否采用密钥方式（false时为密码方式） **取值范围**: - false: 密码方式 - true: 密钥方式
     *
     * @var string[]
     */
@@ -256,7 +256,7 @@ class RemoteInstallHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceName
-    *  被远程安装的主机名称
+    *  **参数解释**: 被远程安装的主机名称 **取值范围**: 数组长度范围为[1,128]
     *
     * @return string|null
     */
@@ -268,7 +268,7 @@ class RemoteInstallHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instanceName
     *
-    * @param string|null $instanceName 被远程安装的主机名称
+    * @param string|null $instanceName **参数解释**: 被远程安装的主机名称 **取值范围**: 数组长度范围为[1,128]
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class RemoteInstallHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets remoteIp
-    *  被远程安装的主机IP
+    *  **参数解释**: 被远程安装的主机IP **取值范围**: 仅由数字(0-9)和小数点(.)组成的字符串，字符串长度为[1,15]
     *
     * @return string|null
     */
@@ -292,7 +292,7 @@ class RemoteInstallHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets remoteIp
     *
-    * @param string|null $remoteIp 被远程安装的主机IP
+    * @param string|null $remoteIp **参数解释**: 被远程安装的主机IP **取值范围**: 仅由数字(0-9)和小数点(.)组成的字符串，字符串长度为[1,15]
     *
     * @return $this
     */
@@ -304,7 +304,7 @@ class RemoteInstallHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  被远程安装的主机的登录用户名
+    *  **参数解释**: 被远程安装的主机的登录用户名 **取值范围**: 数组长度范围为[1,16]
     *
     * @return string|null
     */
@@ -316,7 +316,7 @@ class RemoteInstallHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 被远程安装的主机的登录用户名
+    * @param string|null $userName **参数解释**: 被远程安装的主机的登录用户名 **取值范围**: 数组长度范围为[1,16]
     *
     * @return $this
     */
@@ -328,7 +328,7 @@ class RemoteInstallHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
-    *  被远程安装的主机的登录端口
+    *  **参数解释**: 被远程安装的主机的登录端口 **取值范围**: 数组长度范围为[1,5]
     *
     * @return string|null
     */
@@ -340,7 +340,7 @@ class RemoteInstallHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param string|null $port 被远程安装的主机的登录端口
+    * @param string|null $port **参数解释**: 被远程安装的主机的登录端口 **取值范围**: 数组长度范围为[1,5]
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class RemoteInstallHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets password
-    *  被远程安装的主机的登录密码
+    *  **参数解释**: 被远程安装的主机的登录密码 **取值范围**: 数组长度范围为[1,3000]
     *
     * @return string|null
     */
@@ -364,7 +364,7 @@ class RemoteInstallHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets password
     *
-    * @param string|null $password 被远程安装的主机的登录密码
+    * @param string|null $password **参数解释**: 被远程安装的主机的登录密码 **取值范围**: 数组长度范围为[1,3000]
     *
     * @return $this
     */
@@ -376,7 +376,7 @@ class RemoteInstallHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets remoteUsePem
-    *  被远程安装的主机远程连接是否采用秘钥方式（false时为密码方式）
+    *  **参数解释**: 被远程安装的主机远程连接是否采用密钥方式（false时为密码方式） **取值范围**: - false: 密码方式 - true: 密钥方式
     *
     * @return bool|null
     */
@@ -388,7 +388,7 @@ class RemoteInstallHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets remoteUsePem
     *
-    * @param bool|null $remoteUsePem 被远程安装的主机远程连接是否采用秘钥方式（false时为密码方式）
+    * @param bool|null $remoteUsePem **参数解释**: 被远程安装的主机远程连接是否采用密钥方式（false时为密码方式） **取值范围**: - false: 密码方式 - true: 密钥方式
     *
     * @return $this
     */

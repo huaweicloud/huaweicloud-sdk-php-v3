@@ -22,7 +22,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     * Array of property to type mappings. Used for (de)serialization
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * service  服务类别，如SYS.ECS
-    * dimName  资源维度信息，多个维度按字母序使用逗号分割
+    * dimName  资源维度信息，多个维度按字母序使用逗号分隔
     * limit  分页查询时每页的条目数，取值[1,100]，默认值为100
     * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
     * status  按状态信息进行过滤，取值只能为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未设置告警规则的资源）
@@ -54,7 +54,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     * Array of property to format mappings. Used for (de)serialization
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * service  服务类别，如SYS.ECS
-    * dimName  资源维度信息，多个维度按字母序使用逗号分割
+    * dimName  资源维度信息，多个维度按字母序使用逗号分隔
     * limit  分页查询时每页的条目数，取值[1,100]，默认值为100
     * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
     * status  按状态信息进行过滤，取值只能为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未设置告警规则的资源）
@@ -107,7 +107,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     * and the value is the original name
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * service  服务类别，如SYS.ECS
-    * dimName  资源维度信息，多个维度按字母序使用逗号分割
+    * dimName  资源维度信息，多个维度按字母序使用逗号分隔
     * limit  分页查询时每页的条目数，取值[1,100]，默认值为100
     * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
     * status  按状态信息进行过滤，取值只能为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未设置告警规则的资源）
@@ -139,7 +139,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     * Array of attributes to setter functions (for deserialization of responses)
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * service  服务类别，如SYS.ECS
-    * dimName  资源维度信息，多个维度按字母序使用逗号分割
+    * dimName  资源维度信息，多个维度按字母序使用逗号分隔
     * limit  分页查询时每页的条目数，取值[1,100]，默认值为100
     * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
     * status  按状态信息进行过滤，取值只能为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未设置告警规则的资源）
@@ -171,7 +171,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     * Array of attributes to getter functions (for serialization of requests)
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * service  服务类别，如SYS.ECS
-    * dimName  资源维度信息，多个维度按字母序使用逗号分割
+    * dimName  资源维度信息，多个维度按字母序使用逗号分隔
     * limit  分页查询时每页的条目数，取值[1,100]，默认值为100
     * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
     * status  按状态信息进行过滤，取值只能为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未设置告警规则的资源）
@@ -462,7 +462,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
 
     /**
     * Gets dimName
-    *  资源维度信息，多个维度按字母序使用逗号分割
+    *  资源维度信息，多个维度按字母序使用逗号分隔
     *
     * @return string|null
     */
@@ -474,7 +474,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     /**
     * Sets dimName
     *
-    * @param string|null $dimName 资源维度信息，多个维度按字母序使用逗号分割
+    * @param string|null $dimName 资源维度信息，多个维度按字母序使用逗号分隔
     *
     * @return $this
     */

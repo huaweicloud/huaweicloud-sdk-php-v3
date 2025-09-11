@@ -22,7 +22,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  企业仓库实例名称，小写字母或数字开头，后面跟小写字母、数字、点、下划线或中划线（其中点、下划线、中划线不能直接连续），小写字母或数字结尾，3-64个字符。
     * description  企业仓库实例描述
-    * spec  企业仓库实例规格，目前支持基础版(swr.ee.basic)，企业版(swr.ee.professional)
+    * spec  企业仓库实例规格，目前支持企业版(swr.ee.professional)
     * vpcId  用户虚拟私有云ID
     * subnetId  用户子网的网络ID
     * projectId  vpc和子网所在项目编号
@@ -54,7 +54,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  企业仓库实例名称，小写字母或数字开头，后面跟小写字母、数字、点、下划线或中划线（其中点、下划线、中划线不能直接连续），小写字母或数字结尾，3-64个字符。
     * description  企业仓库实例描述
-    * spec  企业仓库实例规格，目前支持基础版(swr.ee.basic)，企业版(swr.ee.professional)
+    * spec  企业仓库实例规格，目前支持企业版(swr.ee.professional)
     * vpcId  用户虚拟私有云ID
     * subnetId  用户子网的网络ID
     * projectId  vpc和子网所在项目编号
@@ -107,7 +107,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  企业仓库实例名称，小写字母或数字开头，后面跟小写字母、数字、点、下划线或中划线（其中点、下划线、中划线不能直接连续），小写字母或数字结尾，3-64个字符。
     * description  企业仓库实例描述
-    * spec  企业仓库实例规格，目前支持基础版(swr.ee.basic)，企业版(swr.ee.professional)
+    * spec  企业仓库实例规格，目前支持企业版(swr.ee.professional)
     * vpcId  用户虚拟私有云ID
     * subnetId  用户子网的网络ID
     * projectId  vpc和子网所在项目编号
@@ -139,7 +139,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  企业仓库实例名称，小写字母或数字开头，后面跟小写字母、数字、点、下划线或中划线（其中点、下划线、中划线不能直接连续），小写字母或数字结尾，3-64个字符。
     * description  企业仓库实例描述
-    * spec  企业仓库实例规格，目前支持基础版(swr.ee.basic)，企业版(swr.ee.professional)
+    * spec  企业仓库实例规格，目前支持企业版(swr.ee.professional)
     * vpcId  用户虚拟私有云ID
     * subnetId  用户子网的网络ID
     * projectId  vpc和子网所在项目编号
@@ -171,7 +171,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  企业仓库实例名称，小写字母或数字开头，后面跟小写字母、数字、点、下划线或中划线（其中点、下划线、中划线不能直接连续），小写字母或数字结尾，3-64个字符。
     * description  企业仓库实例描述
-    * spec  企业仓库实例规格，目前支持基础版(swr.ee.basic)，企业版(swr.ee.professional)
+    * spec  企业仓库实例规格，目前支持企业版(swr.ee.professional)
     * vpcId  用户虚拟私有云ID
     * subnetId  用户子网的网络ID
     * projectId  vpc和子网所在项目编号
@@ -429,7 +429,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets spec
-    *  企业仓库实例规格，目前支持基础版(swr.ee.basic)，企业版(swr.ee.professional)
+    *  企业仓库实例规格，目前支持企业版(swr.ee.professional)
     *
     * @return string
     */
@@ -441,7 +441,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets spec
     *
-    * @param string $spec 企业仓库实例规格，目前支持基础版(swr.ee.basic)，企业版(swr.ee.professional)
+    * @param string $spec 企业仓库实例规格，目前支持企业版(swr.ee.professional)
     *
     * @return $this
     */

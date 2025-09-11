@@ -21,8 +21,8 @@ class ListInstanceWebhooksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * policies  触发器策略列表
-    * total  触发器策略总数
+    * policies  触发器列表
+    * total  触发器总数
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListInstanceWebhooksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * policies  触发器策略列表
-    * total  触发器策略总数
+    * policies  触发器列表
+    * total  触发器总数
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListInstanceWebhooksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * policies  触发器策略列表
-    * total  触发器策略总数
+    * policies  触发器列表
+    * total  触发器总数
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListInstanceWebhooksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * policies  触发器策略列表
-    * total  触发器策略总数
+    * policies  触发器列表
+    * total  触发器总数
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListInstanceWebhooksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * policies  触发器策略列表
-    * total  触发器策略总数
+    * policies  触发器列表
+    * total  触发器总数
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListInstanceWebhooksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets policies
-    *  触发器策略列表
+    *  触发器列表
     *
     * @return \HuaweiCloud\SDK\Swr\V2\Model\WebhookPolicyDetail[]|null
     */
@@ -198,7 +198,7 @@ class ListInstanceWebhooksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets policies
     *
-    * @param \HuaweiCloud\SDK\Swr\V2\Model\WebhookPolicyDetail[]|null $policies 触发器策略列表
+    * @param \HuaweiCloud\SDK\Swr\V2\Model\WebhookPolicyDetail[]|null $policies 触发器列表
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListInstanceWebhooksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  触发器策略总数
+    *  触发器总数
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListInstanceWebhooksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 触发器策略总数
+    * @param int|null $total 触发器总数
     *
     * @return $this
     */

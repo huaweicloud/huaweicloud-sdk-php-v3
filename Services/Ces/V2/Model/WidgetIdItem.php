@@ -20,7 +20,7 @@ class WidgetIdItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * widgetId  视图id
+    * widgetId  **参数解释** 视图id **取值范围** 字符串必须以wg开头，包含22个字母和数字，长度为24个字符。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class WidgetIdItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * widgetId  视图id
+    * widgetId  **参数解释** 视图id **取值范围** 字符串必须以wg开头，包含22个字母和数字，长度为24个字符。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class WidgetIdItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * widgetId  视图id
+    * widgetId  **参数解释** 视图id **取值范围** 字符串必须以wg开头，包含22个字母和数字，长度为24个字符。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class WidgetIdItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * widgetId  视图id
+    * widgetId  **参数解释** 视图id **取值范围** 字符串必须以wg开头，包含22个字母和数字，长度为24个字符。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class WidgetIdItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * widgetId  视图id
+    * widgetId  **参数解释** 视图id **取值范围** 字符串必须以wg开头，包含22个字母和数字，长度为24个字符。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class WidgetIdItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets widgetId
-    *  视图id
+    *  **参数解释** 视图id **取值范围** 字符串必须以wg开头，包含22个字母和数字，长度为24个字符。
     *
     * @return string|null
     */
@@ -189,7 +189,7 @@ class WidgetIdItem implements ModelInterface, ArrayAccess
     /**
     * Sets widgetId
     *
-    * @param string|null $widgetId 视图id
+    * @param string|null $widgetId **参数解释** 视图id **取值范围** 字符串必须以wg开头，包含22个字母和数字，长度为24个字符。
     *
     * @return $this
     */

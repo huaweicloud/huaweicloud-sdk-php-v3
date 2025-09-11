@@ -24,6 +24,10 @@ class UpdateFunctionAsyncInvokeConfigRequestBody implements ModelInterface, Arra
     * maxAsyncRetryAttempts  异步调用失败后的最大重试次数，默认值为1。取值范围[0，3]。
     * destinationConfig  destinationConfig
     * enableAsyncStatusLog  开启异步调用状态持久化
+    * logGroupId  自定义日志查询组id。
+    * logStreamId  自定义日志查询流id。
+    * logGroupName  自定义日志查询组名称。
+    * logStreamName  自定义日志查询流名称。
     *
     * @var string[]
     */
@@ -31,7 +35,11 @@ class UpdateFunctionAsyncInvokeConfigRequestBody implements ModelInterface, Arra
             'maxAsyncEventAgeInSeconds' => 'int',
             'maxAsyncRetryAttempts' => 'int',
             'destinationConfig' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\FuncAsyncDestinationConfig',
-            'enableAsyncStatusLog' => 'bool'
+            'enableAsyncStatusLog' => 'bool',
+            'logGroupId' => 'string',
+            'logStreamId' => 'string',
+            'logGroupName' => 'string',
+            'logStreamName' => 'string'
     ];
 
     /**
@@ -40,6 +48,10 @@ class UpdateFunctionAsyncInvokeConfigRequestBody implements ModelInterface, Arra
     * maxAsyncRetryAttempts  异步调用失败后的最大重试次数，默认值为1。取值范围[0，3]。
     * destinationConfig  destinationConfig
     * enableAsyncStatusLog  开启异步调用状态持久化
+    * logGroupId  自定义日志查询组id。
+    * logStreamId  自定义日志查询流id。
+    * logGroupName  自定义日志查询组名称。
+    * logStreamName  自定义日志查询流名称。
     *
     * @var string[]
     */
@@ -47,7 +59,11 @@ class UpdateFunctionAsyncInvokeConfigRequestBody implements ModelInterface, Arra
         'maxAsyncEventAgeInSeconds' => null,
         'maxAsyncRetryAttempts' => null,
         'destinationConfig' => null,
-        'enableAsyncStatusLog' => null
+        'enableAsyncStatusLog' => null,
+        'logGroupId' => null,
+        'logStreamId' => null,
+        'logGroupName' => null,
+        'logStreamName' => null
     ];
 
     /**
@@ -77,6 +93,10 @@ class UpdateFunctionAsyncInvokeConfigRequestBody implements ModelInterface, Arra
     * maxAsyncRetryAttempts  异步调用失败后的最大重试次数，默认值为1。取值范围[0，3]。
     * destinationConfig  destinationConfig
     * enableAsyncStatusLog  开启异步调用状态持久化
+    * logGroupId  自定义日志查询组id。
+    * logStreamId  自定义日志查询流id。
+    * logGroupName  自定义日志查询组名称。
+    * logStreamName  自定义日志查询流名称。
     *
     * @var string[]
     */
@@ -84,7 +104,11 @@ class UpdateFunctionAsyncInvokeConfigRequestBody implements ModelInterface, Arra
             'maxAsyncEventAgeInSeconds' => 'max_async_event_age_in_seconds',
             'maxAsyncRetryAttempts' => 'max_async_retry_attempts',
             'destinationConfig' => 'destination_config',
-            'enableAsyncStatusLog' => 'enable_async_status_log'
+            'enableAsyncStatusLog' => 'enable_async_status_log',
+            'logGroupId' => 'log_group_id',
+            'logStreamId' => 'log_stream_id',
+            'logGroupName' => 'log_group_name',
+            'logStreamName' => 'log_stream_name'
     ];
 
     /**
@@ -93,6 +117,10 @@ class UpdateFunctionAsyncInvokeConfigRequestBody implements ModelInterface, Arra
     * maxAsyncRetryAttempts  异步调用失败后的最大重试次数，默认值为1。取值范围[0，3]。
     * destinationConfig  destinationConfig
     * enableAsyncStatusLog  开启异步调用状态持久化
+    * logGroupId  自定义日志查询组id。
+    * logStreamId  自定义日志查询流id。
+    * logGroupName  自定义日志查询组名称。
+    * logStreamName  自定义日志查询流名称。
     *
     * @var string[]
     */
@@ -100,7 +128,11 @@ class UpdateFunctionAsyncInvokeConfigRequestBody implements ModelInterface, Arra
             'maxAsyncEventAgeInSeconds' => 'setMaxAsyncEventAgeInSeconds',
             'maxAsyncRetryAttempts' => 'setMaxAsyncRetryAttempts',
             'destinationConfig' => 'setDestinationConfig',
-            'enableAsyncStatusLog' => 'setEnableAsyncStatusLog'
+            'enableAsyncStatusLog' => 'setEnableAsyncStatusLog',
+            'logGroupId' => 'setLogGroupId',
+            'logStreamId' => 'setLogStreamId',
+            'logGroupName' => 'setLogGroupName',
+            'logStreamName' => 'setLogStreamName'
     ];
 
     /**
@@ -109,6 +141,10 @@ class UpdateFunctionAsyncInvokeConfigRequestBody implements ModelInterface, Arra
     * maxAsyncRetryAttempts  异步调用失败后的最大重试次数，默认值为1。取值范围[0，3]。
     * destinationConfig  destinationConfig
     * enableAsyncStatusLog  开启异步调用状态持久化
+    * logGroupId  自定义日志查询组id。
+    * logStreamId  自定义日志查询流id。
+    * logGroupName  自定义日志查询组名称。
+    * logStreamName  自定义日志查询流名称。
     *
     * @var string[]
     */
@@ -116,7 +152,11 @@ class UpdateFunctionAsyncInvokeConfigRequestBody implements ModelInterface, Arra
             'maxAsyncEventAgeInSeconds' => 'getMaxAsyncEventAgeInSeconds',
             'maxAsyncRetryAttempts' => 'getMaxAsyncRetryAttempts',
             'destinationConfig' => 'getDestinationConfig',
-            'enableAsyncStatusLog' => 'getEnableAsyncStatusLog'
+            'enableAsyncStatusLog' => 'getEnableAsyncStatusLog',
+            'logGroupId' => 'getLogGroupId',
+            'logStreamId' => 'getLogStreamId',
+            'logGroupName' => 'getLogGroupName',
+            'logStreamName' => 'getLogStreamName'
     ];
 
     /**
@@ -181,6 +221,10 @@ class UpdateFunctionAsyncInvokeConfigRequestBody implements ModelInterface, Arra
         $this->container['maxAsyncRetryAttempts'] = isset($data['maxAsyncRetryAttempts']) ? $data['maxAsyncRetryAttempts'] : null;
         $this->container['destinationConfig'] = isset($data['destinationConfig']) ? $data['destinationConfig'] : null;
         $this->container['enableAsyncStatusLog'] = isset($data['enableAsyncStatusLog']) ? $data['enableAsyncStatusLog'] : null;
+        $this->container['logGroupId'] = isset($data['logGroupId']) ? $data['logGroupId'] : null;
+        $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : null;
+        $this->container['logGroupName'] = isset($data['logGroupName']) ? $data['logGroupName'] : null;
+        $this->container['logStreamName'] = isset($data['logStreamName']) ? $data['logStreamName'] : null;
     }
 
     /**
@@ -310,6 +354,102 @@ class UpdateFunctionAsyncInvokeConfigRequestBody implements ModelInterface, Arra
     public function setEnableAsyncStatusLog($enableAsyncStatusLog)
     {
         $this->container['enableAsyncStatusLog'] = $enableAsyncStatusLog;
+        return $this;
+    }
+
+    /**
+    * Gets logGroupId
+    *  自定义日志查询组id。
+    *
+    * @return string|null
+    */
+    public function getLogGroupId()
+    {
+        return $this->container['logGroupId'];
+    }
+
+    /**
+    * Sets logGroupId
+    *
+    * @param string|null $logGroupId 自定义日志查询组id。
+    *
+    * @return $this
+    */
+    public function setLogGroupId($logGroupId)
+    {
+        $this->container['logGroupId'] = $logGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets logStreamId
+    *  自定义日志查询流id。
+    *
+    * @return string|null
+    */
+    public function getLogStreamId()
+    {
+        return $this->container['logStreamId'];
+    }
+
+    /**
+    * Sets logStreamId
+    *
+    * @param string|null $logStreamId 自定义日志查询流id。
+    *
+    * @return $this
+    */
+    public function setLogStreamId($logStreamId)
+    {
+        $this->container['logStreamId'] = $logStreamId;
+        return $this;
+    }
+
+    /**
+    * Gets logGroupName
+    *  自定义日志查询组名称。
+    *
+    * @return string|null
+    */
+    public function getLogGroupName()
+    {
+        return $this->container['logGroupName'];
+    }
+
+    /**
+    * Sets logGroupName
+    *
+    * @param string|null $logGroupName 自定义日志查询组名称。
+    *
+    * @return $this
+    */
+    public function setLogGroupName($logGroupName)
+    {
+        $this->container['logGroupName'] = $logGroupName;
+        return $this;
+    }
+
+    /**
+    * Gets logStreamName
+    *  自定义日志查询流名称。
+    *
+    * @return string|null
+    */
+    public function getLogStreamName()
+    {
+        return $this->container['logStreamName'];
+    }
+
+    /**
+    * Sets logStreamName
+    *
+    * @param string|null $logStreamName 自定义日志查询流名称。
+    *
+    * @return $this
+    */
+    public function setLogStreamName($logStreamName)
+    {
+        $this->container['logStreamName'] = $logStreamName;
         return $this;
     }
 

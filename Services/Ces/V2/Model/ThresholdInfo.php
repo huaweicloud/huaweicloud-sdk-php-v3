@@ -20,8 +20,8 @@ class ThresholdInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * threshold  监控视图辅助线的阈值
-    * thresholdColor  监控视图辅助线的颜色,\"#B50E65\"紫色,\"#F23030\"红色,\"#FF8800\"橙色,\"#F2E70C\"黄色
+    * threshold  **参数解释** 监控视图辅助线的阈值 **约束限制** 不涉及 **取值范围** 最小值为0，最大值为2147483647 **默认取值** 不涉及
+    * thresholdColor  **参数解释** 监控视图辅助线的颜色 **约束限制** 不涉及           **取值范围** - \"#B50E65\":紫色 - \"#F23030\":红色 - \"#FF8800\":橙色 - \"#F2E70C\":黄色 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ThresholdInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * threshold  监控视图辅助线的阈值
-    * thresholdColor  监控视图辅助线的颜色,\"#B50E65\"紫色,\"#F23030\"红色,\"#FF8800\"橙色,\"#F2E70C\"黄色
+    * threshold  **参数解释** 监控视图辅助线的阈值 **约束限制** 不涉及 **取值范围** 最小值为0，最大值为2147483647 **默认取值** 不涉及
+    * thresholdColor  **参数解释** 监控视图辅助线的颜色 **约束限制** 不涉及           **取值范围** - \"#B50E65\":紫色 - \"#F23030\":红色 - \"#FF8800\":橙色 - \"#F2E70C\":黄色 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ThresholdInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * threshold  监控视图辅助线的阈值
-    * thresholdColor  监控视图辅助线的颜色,\"#B50E65\"紫色,\"#F23030\"红色,\"#FF8800\"橙色,\"#F2E70C\"黄色
+    * threshold  **参数解释** 监控视图辅助线的阈值 **约束限制** 不涉及 **取值范围** 最小值为0，最大值为2147483647 **默认取值** 不涉及
+    * thresholdColor  **参数解释** 监控视图辅助线的颜色 **约束限制** 不涉及           **取值范围** - \"#B50E65\":紫色 - \"#F23030\":红色 - \"#FF8800\":橙色 - \"#F2E70C\":黄色 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ThresholdInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * threshold  监控视图辅助线的阈值
-    * thresholdColor  监控视图辅助线的颜色,\"#B50E65\"紫色,\"#F23030\"红色,\"#FF8800\"橙色,\"#F2E70C\"黄色
+    * threshold  **参数解释** 监控视图辅助线的阈值 **约束限制** 不涉及 **取值范围** 最小值为0，最大值为2147483647 **默认取值** 不涉及
+    * thresholdColor  **参数解释** 监控视图辅助线的颜色 **约束限制** 不涉及           **取值范围** - \"#B50E65\":紫色 - \"#F23030\":红色 - \"#FF8800\":橙色 - \"#F2E70C\":黄色 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ThresholdInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * threshold  监控视图辅助线的阈值
-    * thresholdColor  监控视图辅助线的颜色,\"#B50E65\"紫色,\"#F23030\"红色,\"#FF8800\"橙色,\"#F2E70C\"黄色
+    * threshold  **参数解释** 监控视图辅助线的阈值 **约束限制** 不涉及 **取值范围** 最小值为0，最大值为2147483647 **默认取值** 不涉及
+    * thresholdColor  **参数解释** 监控视图辅助线的颜色 **约束限制** 不涉及           **取值范围** - \"#B50E65\":紫色 - \"#F23030\":红色 - \"#FF8800\":橙色 - \"#F2E70C\":黄色 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -224,7 +224,7 @@ class ThresholdInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets threshold
-    *  监控视图辅助线的阈值
+    *  **参数解释** 监控视图辅助线的阈值 **约束限制** 不涉及 **取值范围** 最小值为0，最大值为2147483647 **默认取值** 不涉及
     *
     * @return float
     */
@@ -236,7 +236,7 @@ class ThresholdInfo implements ModelInterface, ArrayAccess
     /**
     * Sets threshold
     *
-    * @param float $threshold 监控视图辅助线的阈值
+    * @param float $threshold **参数解释** 监控视图辅助线的阈值 **约束限制** 不涉及 **取值范围** 最小值为0，最大值为2147483647 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -248,7 +248,7 @@ class ThresholdInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets thresholdColor
-    *  监控视图辅助线的颜色,\"#B50E65\"紫色,\"#F23030\"红色,\"#FF8800\"橙色,\"#F2E70C\"黄色
+    *  **参数解释** 监控视图辅助线的颜色 **约束限制** 不涉及           **取值范围** - \"#B50E65\":紫色 - \"#F23030\":红色 - \"#FF8800\":橙色 - \"#F2E70C\":黄色 **默认取值** 不涉及
     *
     * @return string
     */
@@ -260,7 +260,7 @@ class ThresholdInfo implements ModelInterface, ArrayAccess
     /**
     * Sets thresholdColor
     *
-    * @param string $thresholdColor 监控视图辅助线的颜色,\"#B50E65\"紫色,\"#F23030\"红色,\"#FF8800\"橙色,\"#F2E70C\"黄色
+    * @param string $thresholdColor **参数解释** 监控视图辅助线的颜色 **约束限制** 不涉及           **取值范围** - \"#B50E65\":紫色 - \"#F23030\":红色 - \"#FF8800\":橙色 - \"#F2E70C\":黄色 **默认取值** 不涉及
     *
     * @return $this
     */

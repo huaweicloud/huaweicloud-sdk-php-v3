@@ -28,6 +28,7 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
     * clientCaCertificates  客户端证书列表。隧道协议类型是SSL且认证方式是证书认证时，必填
     * sslOptions  sslOptions
     * dnsServers  DNS服务器列表，最多两个DNS
+    * idpName  身份提供商名称。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
             'serverCertificate' => '\HuaweiCloud\SDK\Vpn\V5\Model\CreateServerRequestServerCertificate',
             'clientCaCertificates' => '\HuaweiCloud\SDK\Vpn\V5\Model\CreateServerRequestClientCaCertificates[]',
             'sslOptions' => '\HuaweiCloud\SDK\Vpn\V5\Model\CreateServerRequestSslOptions',
-            'dnsServers' => 'string[]'
+            'dnsServers' => 'string[]',
+            'idpName' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
     * clientCaCertificates  客户端证书列表。隧道协议类型是SSL且认证方式是证书认证时，必填
     * sslOptions  sslOptions
     * dnsServers  DNS服务器列表，最多两个DNS
+    * idpName  身份提供商名称。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
         'serverCertificate' => null,
         'clientCaCertificates' => null,
         'sslOptions' => null,
-        'dnsServers' => null
+        'dnsServers' => null,
+        'idpName' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
     * clientCaCertificates  客户端证书列表。隧道协议类型是SSL且认证方式是证书认证时，必填
     * sslOptions  sslOptions
     * dnsServers  DNS服务器列表，最多两个DNS
+    * idpName  身份提供商名称。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
             'serverCertificate' => 'server_certificate',
             'clientCaCertificates' => 'client_ca_certificates',
             'sslOptions' => 'ssl_options',
-            'dnsServers' => 'dns_servers'
+            'dnsServers' => 'dns_servers',
+            'idpName' => 'idp_name'
     ];
 
     /**
@@ -121,6 +127,7 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
     * clientCaCertificates  客户端证书列表。隧道协议类型是SSL且认证方式是证书认证时，必填
     * sslOptions  sslOptions
     * dnsServers  DNS服务器列表，最多两个DNS
+    * idpName  身份提供商名称。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
             'serverCertificate' => 'setServerCertificate',
             'clientCaCertificates' => 'setClientCaCertificates',
             'sslOptions' => 'setSslOptions',
-            'dnsServers' => 'setDnsServers'
+            'dnsServers' => 'setDnsServers',
+            'idpName' => 'setIdpName'
     ];
 
     /**
@@ -145,6 +153,7 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
     * clientCaCertificates  客户端证书列表。隧道协议类型是SSL且认证方式是证书认证时，必填
     * sslOptions  sslOptions
     * dnsServers  DNS服务器列表，最多两个DNS
+    * idpName  身份提供商名称。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
             'serverCertificate' => 'getServerCertificate',
             'clientCaCertificates' => 'getClientCaCertificates',
             'sslOptions' => 'getSslOptions',
-            'dnsServers' => 'getDnsServers'
+            'dnsServers' => 'getDnsServers',
+            'idpName' => 'getIdpName'
     ];
 
     /**
@@ -202,6 +212,8 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
     const TUNNEL_PROTOCOL_SSL = 'SSL';
     const CLIENT_AUTH_TYPE_CERT = 'CERT';
     const CLIENT_AUTH_TYPE_LOCAL_PASSWORD = 'LOCAL_PASSWORD';
+    const CLIENT_AUTH_TYPE_IAM = 'IAM';
+    const CLIENT_AUTH_TYPE_FEDERATED = 'FEDERATED';
     
 
     /**
@@ -226,6 +238,8 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
         return [
             self::CLIENT_AUTH_TYPE_CERT,
             self::CLIENT_AUTH_TYPE_LOCAL_PASSWORD,
+            self::CLIENT_AUTH_TYPE_IAM,
+            self::CLIENT_AUTH_TYPE_FEDERATED,
         ];
     }
 
@@ -253,6 +267,7 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
         $this->container['clientCaCertificates'] = isset($data['clientCaCertificates']) ? $data['clientCaCertificates'] : null;
         $this->container['sslOptions'] = isset($data['sslOptions']) ? $data['sslOptions'] : null;
         $this->container['dnsServers'] = isset($data['dnsServers']) ? $data['dnsServers'] : null;
+        $this->container['idpName'] = isset($data['idpName']) ? $data['idpName'] : null;
     }
 
     /**
@@ -494,6 +509,30 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
     public function setDnsServers($dnsServers)
     {
         $this->container['dnsServers'] = $dnsServers;
+        return $this;
+    }
+
+    /**
+    * Gets idpName
+    *  身份提供商名称。
+    *
+    * @return string|null
+    */
+    public function getIdpName()
+    {
+        return $this->container['idpName'];
+    }
+
+    /**
+    * Sets idpName
+    *
+    * @param string|null $idpName 身份提供商名称。
+    *
+    * @return $this
+    */
+    public function setIdpName($idpName)
+    {
+        $this->container['idpName'] = $idpName;
         return $this;
     }
 

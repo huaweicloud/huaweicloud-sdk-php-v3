@@ -155,7 +155,7 @@ class AlarmLogRequestTime implements ModelInterface, ArrayAccess
     const TIME_RANGE_TWELVE_HOUR = 'TWELVE_HOUR';
     const TIME_RANGE_DAY = 'DAY';
     const TIME_RANGE_WEEK = 'WEEK';
-    const TIME_RANGE_MONTH = 'MONTH;';
+    const TIME_RANGE_MONTH = 'MONTH';
     
 
     /**

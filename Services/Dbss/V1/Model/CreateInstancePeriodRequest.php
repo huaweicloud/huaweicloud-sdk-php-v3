@@ -384,6 +384,9 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
         if ($this->container['productInfos'] === null) {
             $invalidProperties[] = "'productInfos' can't be null";
         }
+        if ($this->container['isAutoRenew'] === null) {
+            $invalidProperties[] = "'isAutoRenew' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -810,7 +813,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     * Gets isAutoRenew
     *  自动续费 - 1: 自动续费 - 0: 不自动续费
     *
-    * @return int|null
+    * @return int
     */
     public function getIsAutoRenew()
     {
@@ -820,7 +823,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoRenew
     *
-    * @param int|null $isAutoRenew 自动续费 - 1: 自动续费 - 0: 不自动续费
+    * @param int $isAutoRenew 自动续费 - 1: 自动续费 - 0: 不自动续费
     *
     * @return $this
     */

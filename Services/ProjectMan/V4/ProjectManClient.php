@@ -1838,6 +1838,221 @@ class ProjectManClient extends Client
     }
 
     /**
+     * 创建工作项
+     *
+     * 创建IPD项目的工作项
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createIpdProjectIssue($request)
+    {
+        return $this->createIpdProjectIssueWithHttpInfo($request);
+    }
+
+    public function createIpdProjectIssueWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/ipdprojectservice/projects/{project_id}/issues';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\CreateIpdProjectIssueResponse',
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\CreateIpdProjectIssueRequest');
+    }
+
+    /**
+     * 上传issue附件
+     *
+     * 上传issue附件
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createIpdProjectIssueAttachment($request)
+    {
+        return $this->createIpdProjectIssueAttachmentWithHttpInfo($request);
+    }
+
+    public function createIpdProjectIssueAttachmentWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/ipdprojectservice/projects/{project_id}/issues/{issue_id}/attachments/upload';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = true;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['issueId'] !== null) {
+            $pathParams['issue_id'] = $localVarParams['issueId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        foreach ($httpBody::attributeMap() as $k => $v) {
+            $getter = $httpBody::getters()[$k];
+            $value = $httpBody->$getter();
+            $formParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['multipart/form-data']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\CreateIpdProjectIssueAttachmentResponse',
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\CreateIpdProjectIssueAttachmentRequest');
+    }
+
+    /**
+     * 查询项目工作项列表
+     *
+     * 查询Ipd项目的工作项列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listIpdProjectIssues($request)
+    {
+        return $this->listIpdProjectIssuesWithHttpInfo($request);
+    }
+
+    public function listIpdProjectIssuesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/ipdprojectservice/projects/{project_id}/issues/query';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['isBacklog'] !== null) {
+            $queryParams['is_backlog'] = $localVarParams['isBacklog'];
+        }
+        if ($localVarParams['issueType'] !== null) {
+            $queryParams['issue_type'] = $localVarParams['issueType'];
+        }
+        if ($localVarParams['srcDomainId'] !== null) {
+            $queryParams['src_domain_id'] = $localVarParams['srcDomainId'];
+        }
+        if ($localVarParams['view'] !== null) {
+            $queryParams['view'] = $localVarParams['view'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ListIpdProjectIssuesResponse',
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ListIpdProjectIssuesRequest');
+    }
+
+    /**
      * 查询字段模板列表
      *
      * 工作项类型中查询字段模板列表
@@ -2237,6 +2452,399 @@ class ProjectManClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\TransferWorkItemFlowResponse',
             $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\TransferWorkItemFlowRequest');
+    }
+
+    /**
+     * 根据ID下载工作项附件
+     *
+     * 根据ID下载工作项附件
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function downloadIpdIssueAttachment($request)
+    {
+        return $this->downloadIpdIssueAttachmentWithHttpInfo($request);
+    }
+
+    public function downloadIpdIssueAttachmentWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/ipdprojectservice/projects/{project_id}/attachments/download/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\DownloadIpdIssueAttachmentResponse',
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\DownloadIpdIssueAttachmentRequest');
+    }
+
+    /**
+     * 查询工作项附件列表
+     *
+     * 查询工作项附件列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showIpdAttachmentByWorkItemId($request)
+    {
+        return $this->showIpdAttachmentByWorkItemIdWithHttpInfo($request);
+    }
+
+    public function showIpdAttachmentByWorkItemIdWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/ipdprojectservice/projects/{project_id}/attachments';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['issueId'] !== null) {
+            $queryParams['issue_id'] = $localVarParams['issueId'];
+        }
+        if ($localVarParams['sourceProjectId'] !== null) {
+            $queryParams['source_project_id'] = $localVarParams['sourceProjectId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ShowIpdAttachmentByWorkItemIdResponse',
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ShowIpdAttachmentByWorkItemIdRequest');
+    }
+
+    /**
+     * 新增需求规划
+     *
+     * 新增需求规划
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createScrumPlanToProject($request)
+    {
+        return $this->createScrumPlanToProjectWithHttpInfo($request);
+    }
+
+    public function createScrumPlanToProjectWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/plan/{project_id}/management';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\CreateScrumPlanToProjectResponse',
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\CreateScrumPlanToProjectRequest');
+    }
+
+    /**
+     * 删除规划(支持批量)
+     *
+     * 删除规划(支持批量)
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteScrumPlanInProject($request)
+    {
+        return $this->deleteScrumPlanInProjectWithHttpInfo($request);
+    }
+
+    public function deleteScrumPlanInProjectWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/plan/{project_id}/management';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\DeleteScrumPlanInProjectResponse',
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\DeleteScrumPlanInProjectRequest');
+    }
+
+    /**
+     * 查询项目下当前用户可见的所有规划，分页
+     *
+     * 查询项目下当前用户可见的所有规划，分页
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showScrumPlansByCondition($request)
+    {
+        return $this->showScrumPlansByConditionWithHttpInfo($request);
+    }
+
+    public function showScrumPlansByConditionWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/plan/{project_id}/managements';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ShowScrumPlansByConditionResponse',
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ShowScrumPlansByConditionRequest');
+    }
+
+    /**
+     * 更新需求规划
+     *
+     * 更新需求规划
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateScrumPlanInProject($request)
+    {
+        return $this->updateScrumPlanInProjectWithHttpInfo($request);
+    }
+
+    public function updateScrumPlanInProjectWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/plan/{project_id}/management/{plan_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['planId'] !== null) {
+            $pathParams['plan_id'] = $localVarParams['planId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\UpdateScrumPlanInProjectResponse',
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\UpdateScrumPlanInProjectRequest');
     }
 
     /**
@@ -5531,6 +6139,65 @@ class ProjectManClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\UploadIssueImgResponse',
             $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\UploadIssueImgRequest');
+    }
+
+    /**
+     * 查询所有的严重程度
+     *
+     * 查询所有的严重程度
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showScrumIssueSeverities($request)
+    {
+        return $this->showScrumIssueSeveritiesWithHttpInfo($request);
+    }
+
+    public function showScrumIssueSeveritiesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/issue-severity/all';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ShowScrumIssueSeveritiesResponse',
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ShowScrumIssueSeveritiesRequest');
     }
 
     protected function callApi(

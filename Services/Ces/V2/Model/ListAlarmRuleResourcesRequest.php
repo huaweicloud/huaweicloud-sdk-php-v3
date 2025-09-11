@@ -20,9 +20,9 @@ class ListAlarmRuleResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmId  Alarm实例ID
-    * offset  分页偏移量
-    * limit  分页大小
+    * alarmId  **参数解释**： 告警规则ID。 **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位的字母或数字。          **默认取值**： 不涉及。
+    * offset  **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为10000。 **默认取值**： 0
+    * limit  **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为100。 **默认取值**： 10
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ListAlarmRuleResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmId  Alarm实例ID
-    * offset  分页偏移量
-    * limit  分页大小
+    * alarmId  **参数解释**： 告警规则ID。 **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位的字母或数字。          **默认取值**： 不涉及。
+    * offset  **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为10000。 **默认取值**： 0
+    * limit  **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为100。 **默认取值**： 10
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ListAlarmRuleResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmId  Alarm实例ID
-    * offset  分页偏移量
-    * limit  分页大小
+    * alarmId  **参数解释**： 告警规则ID。 **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位的字母或数字。          **默认取值**： 不涉及。
+    * offset  **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为10000。 **默认取值**： 0
+    * limit  **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为100。 **默认取值**： 10
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ListAlarmRuleResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmId  Alarm实例ID
-    * offset  分页偏移量
-    * limit  分页大小
+    * alarmId  **参数解释**： 告警规则ID。 **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位的字母或数字。          **默认取值**： 不涉及。
+    * offset  **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为10000。 **默认取值**： 0
+    * limit  **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为100。 **默认取值**： 10
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ListAlarmRuleResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmId  Alarm实例ID
-    * offset  分页偏移量
-    * limit  分页大小
+    * alarmId  **参数解释**： 告警规则ID。 **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位的字母或数字。          **默认取值**： 不涉及。
+    * offset  **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为10000。 **默认取值**： 0
+    * limit  **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为100。 **默认取值**： 10
     *
     * @var string[]
     */
@@ -214,7 +214,7 @@ class ListAlarmRuleResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmId
-    *  Alarm实例ID
+    *  **参数解释**： 告警规则ID。 **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位的字母或数字。          **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -226,7 +226,7 @@ class ListAlarmRuleResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmId
     *
-    * @param string $alarmId Alarm实例ID
+    * @param string $alarmId **参数解释**： 告警规则ID。 **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位的字母或数字。          **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class ListAlarmRuleResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  分页偏移量
+    *  **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为10000。 **默认取值**： 0
     *
     * @return int|null
     */
@@ -250,7 +250,7 @@ class ListAlarmRuleResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 分页偏移量
+    * @param int|null $offset **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为10000。 **默认取值**： 0
     *
     * @return $this
     */
@@ -262,7 +262,7 @@ class ListAlarmRuleResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  分页大小
+    *  **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为100。 **默认取值**： 10
     *
     * @return int|null
     */
@@ -274,7 +274,7 @@ class ListAlarmRuleResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 分页大小
+    * @param int|null $limit **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为100。 **默认取值**： 10
     *
     * @return $this
     */

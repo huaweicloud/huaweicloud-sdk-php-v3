@@ -20,7 +20,7 @@ class RegionInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例id。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * projectId  实例项目id。
     * projectName  实例项目名称。
     * regionCode  regionCode编码。
@@ -38,7 +38,7 @@ class RegionInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例id。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * projectId  实例项目id。
     * projectName  实例项目名称。
     * regionCode  regionCode编码。
@@ -77,7 +77,7 @@ class RegionInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例id。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * projectId  实例项目id。
     * projectName  实例项目名称。
     * regionCode  regionCode编码。
@@ -95,7 +95,7 @@ class RegionInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例id。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * projectId  实例项目id。
     * projectName  实例项目名称。
     * regionCode  regionCode编码。
@@ -113,7 +113,7 @@ class RegionInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例id。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * projectId  实例项目id。
     * projectName  实例项目名称。
     * regionCode  regionCode编码。
@@ -218,7 +218,7 @@ class RegionInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例id。
+    *  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class RegionInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例id。
+    * @param string|null $instanceId **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */

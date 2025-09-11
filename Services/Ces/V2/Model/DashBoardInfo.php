@@ -20,17 +20,17 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dashboardId  监控看板id
-    * dashboardName  自定义监控看板名称
-    * enterpriseId  企业项目Id
-    * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
-    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
-    * creatorName  监控看板的创建用户名
-    * createTime  监控看板创建时间
-    * widgetsNum  看板下的视图总数
-    * namespace  命名空间
-    * subProduct  子产品标识
-    * dashboardTemplateId  监控大盘模板id
+    * dashboardId  **参数描述**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
+    * dashboardName  **参数解释** 自定义监控看板名称 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
+    * enterpriseId  **参数解释** 企业项目ID **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。
+    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
+    * isFavorite  **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
+    * creatorName  **参数解释** 监控看板的创建用户名 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
+    * createTime  **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
+    * widgetsNum  **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
+    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
+    * subProduct  **参数解释** 子产品标识 **取值范围** 长度为[1,128]个字符
+    * dashboardTemplateId  **参数解释** 监控大盘模板id **取值范围** 以mb开头，包含22个字母和数字，长度为24个字符
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dashboardId  监控看板id
-    * dashboardName  自定义监控看板名称
-    * enterpriseId  企业项目Id
-    * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
-    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
-    * creatorName  监控看板的创建用户名
-    * createTime  监控看板创建时间
-    * widgetsNum  看板下的视图总数
-    * namespace  命名空间
-    * subProduct  子产品标识
-    * dashboardTemplateId  监控大盘模板id
+    * dashboardId  **参数描述**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
+    * dashboardName  **参数解释** 自定义监控看板名称 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
+    * enterpriseId  **参数解释** 企业项目ID **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。
+    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
+    * isFavorite  **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
+    * creatorName  **参数解释** 监控看板的创建用户名 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
+    * createTime  **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
+    * widgetsNum  **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
+    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
+    * subProduct  **参数解释** 子产品标识 **取值范围** 长度为[1,128]个字符
+    * dashboardTemplateId  **参数解释** 监控大盘模板id **取值范围** 以mb开头，包含22个字母和数字，长度为24个字符
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dashboardId  监控看板id
-    * dashboardName  自定义监控看板名称
-    * enterpriseId  企业项目Id
-    * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
-    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
-    * creatorName  监控看板的创建用户名
-    * createTime  监控看板创建时间
-    * widgetsNum  看板下的视图总数
-    * namespace  命名空间
-    * subProduct  子产品标识
-    * dashboardTemplateId  监控大盘模板id
+    * dashboardId  **参数描述**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
+    * dashboardName  **参数解释** 自定义监控看板名称 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
+    * enterpriseId  **参数解释** 企业项目ID **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。
+    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
+    * isFavorite  **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
+    * creatorName  **参数解释** 监控看板的创建用户名 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
+    * createTime  **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
+    * widgetsNum  **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
+    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
+    * subProduct  **参数解释** 子产品标识 **取值范围** 长度为[1,128]个字符
+    * dashboardTemplateId  **参数解释** 监控大盘模板id **取值范围** 以mb开头，包含22个字母和数字，长度为24个字符
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dashboardId  监控看板id
-    * dashboardName  自定义监控看板名称
-    * enterpriseId  企业项目Id
-    * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
-    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
-    * creatorName  监控看板的创建用户名
-    * createTime  监控看板创建时间
-    * widgetsNum  看板下的视图总数
-    * namespace  命名空间
-    * subProduct  子产品标识
-    * dashboardTemplateId  监控大盘模板id
+    * dashboardId  **参数描述**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
+    * dashboardName  **参数解释** 自定义监控看板名称 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
+    * enterpriseId  **参数解释** 企业项目ID **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。
+    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
+    * isFavorite  **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
+    * creatorName  **参数解释** 监控看板的创建用户名 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
+    * createTime  **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
+    * widgetsNum  **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
+    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
+    * subProduct  **参数解释** 子产品标识 **取值范围** 长度为[1,128]个字符
+    * dashboardTemplateId  **参数解释** 监控大盘模板id **取值范围** 以mb开头，包含22个字母和数字，长度为24个字符
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dashboardId  监控看板id
-    * dashboardName  自定义监控看板名称
-    * enterpriseId  企业项目Id
-    * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
-    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
-    * creatorName  监控看板的创建用户名
-    * createTime  监控看板创建时间
-    * widgetsNum  看板下的视图总数
-    * namespace  命名空间
-    * subProduct  子产品标识
-    * dashboardTemplateId  监控大盘模板id
+    * dashboardId  **参数描述**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
+    * dashboardName  **参数解释** 自定义监控看板名称 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
+    * enterpriseId  **参数解释** 企业项目ID **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。
+    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
+    * isFavorite  **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
+    * creatorName  **参数解释** 监控看板的创建用户名 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
+    * createTime  **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
+    * widgetsNum  **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
+    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
+    * subProduct  **参数解释** 子产品标识 **取值范围** 长度为[1,128]个字符
+    * dashboardTemplateId  **参数解释** 监控大盘模板id **取值范围** 以mb开头，包含22个字母和数字，长度为24个字符
     *
     * @var string[]
     */
@@ -344,7 +344,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardId
-    *  监控看板id
+    *  **参数描述**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
     *
     * @return string|null
     */
@@ -356,7 +356,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardId
     *
-    * @param string|null $dashboardId 监控看板id
+    * @param string|null $dashboardId **参数描述**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
     *
     * @return $this
     */
@@ -368,7 +368,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardName
-    *  自定义监控看板名称
+    *  **参数解释** 自定义监控看板名称 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
     *
     * @return string|null
     */
@@ -380,7 +380,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardName
     *
-    * @param string|null $dashboardName 自定义监控看板名称
+    * @param string|null $dashboardName **参数解释** 自定义监控看板名称 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
     *
     * @return $this
     */
@@ -392,7 +392,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseId
-    *  企业项目Id
+    *  **参数解释** 企业项目ID **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。
     *
     * @return string|null
     */
@@ -404,7 +404,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseId
     *
-    * @param string|null $enterpriseId 企业项目Id
+    * @param string|null $enterpriseId **参数解释** 企业项目ID **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。
     *
     * @return $this
     */
@@ -416,7 +416,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets rowWidgetNum
-    *  监控视图展示模式，0表示自定义坐标，1代表每行一个
+    *  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
     *
     * @return int|null
     */
@@ -428,7 +428,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets rowWidgetNum
     *
-    * @param int|null $rowWidgetNum 监控视图展示模式，0表示自定义坐标，1代表每行一个
+    * @param int|null $rowWidgetNum **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
     *
     * @return $this
     */
@@ -440,7 +440,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isFavorite
-    *  监控看板是否标记收藏, true: 收藏, false: 未收藏
+    *  **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
     *
     * @return bool|null
     */
@@ -452,7 +452,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isFavorite
     *
-    * @param bool|null $isFavorite 监控看板是否标记收藏, true: 收藏, false: 未收藏
+    * @param bool|null $isFavorite **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
     *
     * @return $this
     */
@@ -464,7 +464,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets creatorName
-    *  监控看板的创建用户名
+    *  **参数解释** 监控看板的创建用户名 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
     *
     * @return string|null
     */
@@ -476,7 +476,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets creatorName
     *
-    * @param string|null $creatorName 监控看板的创建用户名
+    * @param string|null $creatorName **参数解释** 监控看板的创建用户名 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
     *
     * @return $this
     */
@@ -488,7 +488,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  监控看板创建时间
+    *  **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
     *
     * @return int|null
     */
@@ -500,7 +500,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 监控看板创建时间
+    * @param int|null $createTime **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
     *
     * @return $this
     */
@@ -512,7 +512,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets widgetsNum
-    *  看板下的视图总数
+    *  **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
     *
     * @return int|null
     */
@@ -524,7 +524,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets widgetsNum
     *
-    * @param int|null $widgetsNum 看板下的视图总数
+    * @param int|null $widgetsNum **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
     *
     * @return $this
     */
@@ -536,7 +536,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  命名空间
+    *  **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
     *
     * @return string|null
     */
@@ -548,7 +548,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 命名空间
+    * @param string|null $namespace **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
     *
     * @return $this
     */
@@ -560,7 +560,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets subProduct
-    *  子产品标识
+    *  **参数解释** 子产品标识 **取值范围** 长度为[1,128]个字符
     *
     * @return string|null
     */
@@ -572,7 +572,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets subProduct
     *
-    * @param string|null $subProduct 子产品标识
+    * @param string|null $subProduct **参数解释** 子产品标识 **取值范围** 长度为[1,128]个字符
     *
     * @return $this
     */
@@ -584,7 +584,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardTemplateId
-    *  监控大盘模板id
+    *  **参数解释** 监控大盘模板id **取值范围** 以mb开头，包含22个字母和数字，长度为24个字符
     *
     * @return string|null
     */
@@ -596,7 +596,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardTemplateId
     *
-    * @param string|null $dashboardTemplateId 监控大盘模板id
+    * @param string|null $dashboardTemplateId **参数解释** 监控大盘模板id **取值范围** 以mb开头，包含22个字母和数字，长度为24个字符
     *
     * @return $this
     */

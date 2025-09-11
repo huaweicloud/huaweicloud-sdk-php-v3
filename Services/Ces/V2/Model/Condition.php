@@ -20,7 +20,7 @@ class Condition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID） **默认取值** 不涉及
     * instanceName  instanceName
     * tag  tag
     *
@@ -28,13 +28,13 @@ class Condition implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'enterpriseProjectId' => 'string',
-            'instanceName' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceNameItem',
+            'instanceName' => '\HuaweiCloud\SDK\Ces\V2\Model\CombResourceName',
             'tag' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceGroupTagRelation'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID） **默认取值** 不涉及
     * instanceName  instanceName
     * tag  tag
     *
@@ -69,7 +69,7 @@ class Condition implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID） **默认取值** 不涉及
     * instanceName  instanceName
     * tag  tag
     *
@@ -83,7 +83,7 @@ class Condition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID） **默认取值** 不涉及
     * instanceName  instanceName
     * tag  tag
     *
@@ -97,7 +97,7 @@ class Condition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID） **默认取值** 不涉及
     * instanceName  instanceName
     * tag  tag
     *
@@ -199,7 +199,7 @@ class Condition implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID
+    *  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID） **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -211,7 +211,7 @@ class Condition implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID
+    * @param string|null $enterpriseProjectId **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID） **默认取值** 不涉及
     *
     * @return $this
     */
@@ -225,7 +225,7 @@ class Condition implements ModelInterface, ArrayAccess
     * Gets instanceName
     *  instanceName
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceNameItem|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\CombResourceName|null
     */
     public function getInstanceName()
     {
@@ -235,7 +235,7 @@ class Condition implements ModelInterface, ArrayAccess
     /**
     * Sets instanceName
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceNameItem|null $instanceName instanceName
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\CombResourceName|null $instanceName instanceName
     *
     * @return $this
     */

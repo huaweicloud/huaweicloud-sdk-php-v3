@@ -20,10 +20,10 @@ class HierarchicalValue implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * critical  紧急级别的阈值
-    * major  重要级别的阈值
-    * minor  次要级别的阈值
-    * info  提示级别的阈值
+    * critical  **参数解释**： 紧急级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
+    * major  **参数解释**： 重要级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
+    * minor  **参数解释**： 次要级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
+    * info  **参数解释**： 提示级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class HierarchicalValue implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * critical  紧急级别的阈值
-    * major  重要级别的阈值
-    * minor  次要级别的阈值
-    * info  提示级别的阈值
+    * critical  **参数解释**： 紧急级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
+    * major  **参数解释**： 重要级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
+    * minor  **参数解释**： 次要级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
+    * info  **参数解释**： 提示级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class HierarchicalValue implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * critical  紧急级别的阈值
-    * major  重要级别的阈值
-    * minor  次要级别的阈值
-    * info  提示级别的阈值
+    * critical  **参数解释**： 紧急级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
+    * major  **参数解释**： 重要级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
+    * minor  **参数解释**： 次要级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
+    * info  **参数解释**： 提示级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class HierarchicalValue implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * critical  紧急级别的阈值
-    * major  重要级别的阈值
-    * minor  次要级别的阈值
-    * info  提示级别的阈值
+    * critical  **参数解释**： 紧急级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
+    * major  **参数解释**： 重要级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
+    * minor  **参数解释**： 次要级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
+    * info  **参数解释**： 提示级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class HierarchicalValue implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * critical  紧急级别的阈值
-    * major  重要级别的阈值
-    * minor  次要级别的阈值
-    * info  提示级别的阈值
+    * critical  **参数解释**： 紧急级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
+    * major  **参数解释**： 重要级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
+    * minor  **参数解释**： 次要级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
+    * info  **参数解释**： 提示级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -231,7 +231,7 @@ class HierarchicalValue implements ModelInterface, ArrayAccess
 
     /**
     * Gets critical
-    *  紧急级别的阈值
+    *  **参数解释**： 紧急级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
     *
     * @return double|null
     */
@@ -243,7 +243,7 @@ class HierarchicalValue implements ModelInterface, ArrayAccess
     /**
     * Sets critical
     *
-    * @param double|null $critical 紧急级别的阈值
+    * @param double|null $critical **参数解释**： 紧急级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class HierarchicalValue implements ModelInterface, ArrayAccess
 
     /**
     * Gets major
-    *  重要级别的阈值
+    *  **参数解释**： 重要级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
     *
     * @return double|null
     */
@@ -267,7 +267,7 @@ class HierarchicalValue implements ModelInterface, ArrayAccess
     /**
     * Sets major
     *
-    * @param double|null $major 重要级别的阈值
+    * @param double|null $major **参数解释**： 重要级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class HierarchicalValue implements ModelInterface, ArrayAccess
 
     /**
     * Gets minor
-    *  次要级别的阈值
+    *  **参数解释**： 次要级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
     *
     * @return double|null
     */
@@ -291,7 +291,7 @@ class HierarchicalValue implements ModelInterface, ArrayAccess
     /**
     * Sets minor
     *
-    * @param double|null $minor 次要级别的阈值
+    * @param double|null $minor **参数解释**： 次要级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -303,7 +303,7 @@ class HierarchicalValue implements ModelInterface, ArrayAccess
 
     /**
     * Gets info
-    *  提示级别的阈值
+    *  **参数解释**： 提示级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
     *
     * @return double|null
     */
@@ -315,7 +315,7 @@ class HierarchicalValue implements ModelInterface, ArrayAccess
     /**
     * Sets info
     *
-    * @param double|null $info 提示级别的阈值
+    * @param double|null $info **参数解释**： 提示级别的阈值。 **约束限制**： 不涉及。 **取值范围**： [-1.7976931348623157e+108, 1.7976931348623157e+108]           **默认取值**： 不涉及。
     *
     * @return $this
     */

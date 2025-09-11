@@ -20,7 +20,7 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dbClassification  数据库分类 - ECS:自建数据库
+    * dbClassification  数据库分类 - RDS: RDS数据库 - ECS:自建数据库
     * name  数据库名称
     * type  数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - GAUSSDBOPENGAUSS - GREENPLUM - HIGHGO - SHENTONG - GBASE8A - GBASE8S - GBASEXDM - MONGODB - DDS
     * version  数据库版本
@@ -46,7 +46,7 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dbClassification  数据库分类 - ECS:自建数据库
+    * dbClassification  数据库分类 - RDS: RDS数据库 - ECS:自建数据库
     * name  数据库名称
     * type  数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - GAUSSDBOPENGAUSS - GREENPLUM - HIGHGO - SHENTONG - GBASE8A - GBASE8S - GBASEXDM - MONGODB - DDS
     * version  数据库版本
@@ -93,7 +93,7 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dbClassification  数据库分类 - ECS:自建数据库
+    * dbClassification  数据库分类 - RDS: RDS数据库 - ECS:自建数据库
     * name  数据库名称
     * type  数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - GAUSSDBOPENGAUSS - GREENPLUM - HIGHGO - SHENTONG - GBASE8A - GBASE8S - GBASEXDM - MONGODB - DDS
     * version  数据库版本
@@ -119,7 +119,7 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dbClassification  数据库分类 - ECS:自建数据库
+    * dbClassification  数据库分类 - RDS: RDS数据库 - ECS:自建数据库
     * name  数据库名称
     * type  数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - GAUSSDBOPENGAUSS - GREENPLUM - HIGHGO - SHENTONG - GBASE8A - GBASE8S - GBASEXDM - MONGODB - DDS
     * version  数据库版本
@@ -145,7 +145,7 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dbClassification  数据库分类 - ECS:自建数据库
+    * dbClassification  数据库分类 - RDS: RDS数据库 - ECS:自建数据库
     * name  数据库名称
     * type  数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - GAUSSDBOPENGAUSS - GREENPLUM - HIGHGO - SHENTONG - GBASE8A - GBASE8S - GBASEXDM - MONGODB - DDS
     * version  数据库版本
@@ -309,7 +309,7 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbClassification
-    *  数据库分类 - ECS:自建数据库
+    *  数据库分类 - RDS: RDS数据库 - ECS:自建数据库
     *
     * @return string
     */
@@ -321,7 +321,7 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
     /**
     * Sets dbClassification
     *
-    * @param string $dbClassification 数据库分类 - ECS:自建数据库
+    * @param string $dbClassification 数据库分类 - RDS: RDS数据库 - ECS:自建数据库
     *
     * @return $this
     */

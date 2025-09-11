@@ -30,7 +30,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
     * properties  properties
     * location  location
-    * unit  单位
+    * unit  **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -60,7 +60,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
     * properties  properties
     * location  location
-    * unit  单位
+    * unit  **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -111,7 +111,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
     * properties  properties
     * location  location
-    * unit  单位
+    * unit  **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -141,7 +141,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
     * properties  properties
     * location  location
-    * unit  单位
+    * unit  **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -171,7 +171,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
     * properties  properties
     * location  location
-    * unit  单位
+    * unit  **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -608,7 +608,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
-    *  单位
+    *  **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -620,7 +620,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param string|null $unit 单位
+    * @param string|null $unit **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
     *
     * @return $this
     */

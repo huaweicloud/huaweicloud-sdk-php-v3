@@ -20,8 +20,8 @@ class ResourceDimension implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
-    * value  资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。
+    * name  **参数解释** 资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 由字母开头，后面可以包含字母、数字、_或-，长度为[1,32]个字符 **默认取值** 不涉及
+    * value  **参数解释** 资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制** 不涉及 **取值范围** 长度为[1,256]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ResourceDimension implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
-    * value  资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。
+    * name  **参数解释** 资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 由字母开头，后面可以包含字母、数字、_或-，长度为[1,32]个字符 **默认取值** 不涉及
+    * value  **参数解释** 资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制** 不涉及 **取值范围** 长度为[1,256]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ResourceDimension implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
-    * value  资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。
+    * name  **参数解释** 资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 由字母开头，后面可以包含字母、数字、_或-，长度为[1,32]个字符 **默认取值** 不涉及
+    * value  **参数解释** 资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制** 不涉及 **取值范围** 长度为[1,256]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ResourceDimension implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
-    * value  资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。
+    * name  **参数解释** 资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 由字母开头，后面可以包含字母、数字、_或-，长度为[1,32]个字符 **默认取值** 不涉及
+    * value  **参数解释** 资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制** 不涉及 **取值范围** 长度为[1,256]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ResourceDimension implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
-    * value  资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。
+    * name  **参数解释** 资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 由字母开头，后面可以包含字母、数字、_或-，长度为[1,32]个字符 **默认取值** 不涉及
+    * value  **参数解释** 资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制** 不涉及 **取值范围** 长度为[1,256]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -172,14 +172,26 @@ class ResourceDimension implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-            if (!preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){1,32}$/", $this->container['name'])) {
-                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){1,32}$/.";
+            if ((mb_strlen($this->container['name']) > 32)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
+            if (!preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-)*$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-)*$/.";
             }
         if ($this->container['value'] === null) {
             $invalidProperties[] = "'value' can't be null";
         }
-            if (!preg_match("/^((([a-z]|[A-Z]|[0-9]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.)*)|\\*){1,256}$/", $this->container['value'])) {
-                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^((([a-z]|[A-Z]|[0-9]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.)*)|\\*){1,256}$/.";
+            if ((mb_strlen($this->container['value']) > 256)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 256.";
+            }
+            if ((mb_strlen($this->container['value']) < 1)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 1.";
+            }
+            if (!preg_match("/^((([a-z]|[A-Z]|[0-9]|\\*|_|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\\.|\\*|\/|#|\\(|\\))*))$/", $this->container['value'])) {
+                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^((([a-z]|[A-Z]|[0-9]|\\*|_|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\\.|\\*|\/|#|\\(|\\))*))$/.";
             }
         return $invalidProperties;
     }
@@ -197,7 +209,7 @@ class ResourceDimension implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
+    *  **参数解释** 资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 由字母开头，后面可以包含字母、数字、_或-，长度为[1,32]个字符 **默认取值** 不涉及
     *
     * @return string
     */
@@ -209,7 +221,7 @@ class ResourceDimension implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
+    * @param string $name **参数解释** 资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 由字母开头，后面可以包含字母、数字、_或-，长度为[1,32]个字符 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -221,7 +233,7 @@ class ResourceDimension implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。
+    *  **参数解释** 资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制** 不涉及 **取值范围** 长度为[1,256]个字符 **默认取值** 不涉及
     *
     * @return string
     */
@@ -233,7 +245,7 @@ class ResourceDimension implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。
+    * @param string $value **参数解释** 资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制** 不涉及 **取值范围** 长度为[1,256]个字符 **默认取值** 不涉及
     *
     * @return $this
     */

@@ -20,11 +20,11 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  机器id
-    * invocationId  任务id
-    * retStatus  任务结果, successful成功，error失败
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * instanceId  **参数解释**: 机器id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
+    * invocationId  **参数解释**: 任务id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
+    * retStatus  **参数解释**: 任务结果, successful成功，error失败 **取值范围**: - successful: 成功 - error: 失败
+    * errorCode  **参数解释**: 错误码 **取值范围**: 以\"invocationmgr.\"开头且后跟4位数字的完整字符串
+    * errorMsg  **参数解释**: 错误信息 **取值范围**: 数组长度范围为[1,128]
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  机器id
-    * invocationId  任务id
-    * retStatus  任务结果, successful成功，error失败
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * instanceId  **参数解释**: 机器id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
+    * invocationId  **参数解释**: 任务id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
+    * retStatus  **参数解释**: 任务结果, successful成功，error失败 **取值范围**: - successful: 成功 - error: 失败
+    * errorCode  **参数解释**: 错误码 **取值范围**: 以\"invocationmgr.\"开头且后跟4位数字的完整字符串
+    * errorMsg  **参数解释**: 错误信息 **取值范围**: 数组长度范围为[1,128]
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  机器id
-    * invocationId  任务id
-    * retStatus  任务结果, successful成功，error失败
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * instanceId  **参数解释**: 机器id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
+    * invocationId  **参数解释**: 任务id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
+    * retStatus  **参数解释**: 任务结果, successful成功，error失败 **取值范围**: - successful: 成功 - error: 失败
+    * errorCode  **参数解释**: 错误码 **取值范围**: 以\"invocationmgr.\"开头且后跟4位数字的完整字符串
+    * errorMsg  **参数解释**: 错误信息 **取值范围**: 数组长度范围为[1,128]
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  机器id
-    * invocationId  任务id
-    * retStatus  任务结果, successful成功，error失败
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * instanceId  **参数解释**: 机器id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
+    * invocationId  **参数解释**: 任务id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
+    * retStatus  **参数解释**: 任务结果, successful成功，error失败 **取值范围**: - successful: 成功 - error: 失败
+    * errorCode  **参数解释**: 错误码 **取值范围**: 以\"invocationmgr.\"开头且后跟4位数字的完整字符串
+    * errorMsg  **参数解释**: 错误信息 **取值范围**: 数组长度范围为[1,128]
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  机器id
-    * invocationId  任务id
-    * retStatus  任务结果, successful成功，error失败
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * instanceId  **参数解释**: 机器id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
+    * invocationId  **参数解释**: 任务id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
+    * retStatus  **参数解释**: 任务结果, successful成功，error失败 **取值范围**: - successful: 成功 - error: 失败
+    * errorCode  **参数解释**: 错误码 **取值范围**: 以\"invocationmgr.\"开头且后跟4位数字的完整字符串
+    * errorMsg  **参数解释**: 错误信息 **取值范围**: 数组长度范围为[1,128]
     *
     * @var string[]
     */
@@ -256,7 +256,7 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  机器id
+    *  **参数解释**: 机器id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
     *
     * @return string|null
     */
@@ -268,7 +268,7 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 机器id
+    * @param string|null $instanceId **参数解释**: 机器id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocationId
-    *  任务id
+    *  **参数解释**: 任务id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
     *
     * @return string|null
     */
@@ -292,7 +292,7 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets invocationId
     *
-    * @param string|null $invocationId 任务id
+    * @param string|null $invocationId **参数解释**: 任务id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
     *
     * @return $this
     */
@@ -304,7 +304,7 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets retStatus
-    *  任务结果, successful成功，error失败
+    *  **参数解释**: 任务结果, successful成功，error失败 **取值范围**: - successful: 成功 - error: 失败
     *
     * @return string|null
     */
@@ -316,7 +316,7 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets retStatus
     *
-    * @param string|null $retStatus 任务结果, successful成功，error失败
+    * @param string|null $retStatus **参数解释**: 任务结果, successful成功，error失败 **取值范围**: - successful: 成功 - error: 失败
     *
     * @return $this
     */
@@ -328,7 +328,7 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  错误码
+    *  **参数解释**: 错误码 **取值范围**: 以\"invocationmgr.\"开头且后跟4位数字的完整字符串
     *
     * @return string|null
     */
@@ -340,7 +340,7 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string|null $errorCode 错误码
+    * @param string|null $errorCode **参数解释**: 错误码 **取值范围**: 以\"invocationmgr.\"开头且后跟4位数字的完整字符串
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorMsg
-    *  错误信息
+    *  **参数解释**: 错误信息 **取值范围**: 数组长度范围为[1,128]
     *
     * @return string|null
     */
@@ -364,7 +364,7 @@ class BatchCreateInvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string|null $errorMsg 错误信息
+    * @param string|null $errorMsg **参数解释**: 错误信息 **取值范围**: 数组长度范围为[1,128]
     *
     * @return $this
     */

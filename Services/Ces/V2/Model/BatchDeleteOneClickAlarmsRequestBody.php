@@ -20,7 +20,7 @@ class BatchDeleteOneClickAlarmsRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * oneClickAlarmIds  需要批量删除的一键告警ID列表
+    * oneClickAlarmIds  **参数解释**： 需要批量删除的一键告警ID列表。 **约束限制**： 一键告警ID数量最多为100个，至少1个。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchDeleteOneClickAlarmsRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * oneClickAlarmIds  需要批量删除的一键告警ID列表
+    * oneClickAlarmIds  **参数解释**： 需要批量删除的一键告警ID列表。 **约束限制**： 一键告警ID数量最多为100个，至少1个。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchDeleteOneClickAlarmsRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * oneClickAlarmIds  需要批量删除的一键告警ID列表
+    * oneClickAlarmIds  **参数解释**： 需要批量删除的一键告警ID列表。 **约束限制**： 一键告警ID数量最多为100个，至少1个。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchDeleteOneClickAlarmsRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * oneClickAlarmIds  需要批量删除的一键告警ID列表
+    * oneClickAlarmIds  **参数解释**： 需要批量删除的一键告警ID列表。 **约束限制**： 一键告警ID数量最多为100个，至少1个。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchDeleteOneClickAlarmsRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * oneClickAlarmIds  需要批量删除的一键告警ID列表
+    * oneClickAlarmIds  **参数解释**： 需要批量删除的一键告警ID列表。 **约束限制**： 一键告警ID数量最多为100个，至少1个。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class BatchDeleteOneClickAlarmsRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets oneClickAlarmIds
-    *  需要批量删除的一键告警ID列表
+    *  **参数解释**： 需要批量删除的一键告警ID列表。 **约束限制**： 一键告警ID数量最多为100个，至少1个。
     *
     * @return string[]
     */
@@ -189,7 +189,7 @@ class BatchDeleteOneClickAlarmsRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets oneClickAlarmIds
     *
-    * @param string[] $oneClickAlarmIds 需要批量删除的一键告警ID列表
+    * @param string[] $oneClickAlarmIds **参数解释**： 需要批量删除的一键告警ID列表。 **约束限制**： 一键告警ID数量最多为100个，至少1个。
     *
     * @return $this
     */

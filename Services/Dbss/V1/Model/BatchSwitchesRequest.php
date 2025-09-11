@@ -184,6 +184,12 @@ class BatchSwitchesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['ids'] === null) {
+            $invalidProperties[] = "'ids' can't be null";
+        }
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
+        }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -210,7 +216,7 @@ class BatchSwitchesRequest implements ModelInterface, ArrayAccess
     * Gets ids
     *  规则ID,多个ID中间逗号分隔。可在查询风险规则策略接口ID字段获取。
     *
-    * @return string|null
+    * @return string
     */
     public function getIds()
     {
@@ -220,7 +226,7 @@ class BatchSwitchesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ids
     *
-    * @param string|null $ids 规则ID,多个ID中间逗号分隔。可在查询风险规则策略接口ID字段获取。
+    * @param string $ids 规则ID,多个ID中间逗号分隔。可在查询风险规则策略接口ID字段获取。
     *
     * @return $this
     */
@@ -234,7 +240,7 @@ class BatchSwitchesRequest implements ModelInterface, ArrayAccess
     * Gets status
     *  开关状态 - OFF: 关闭 - ON: 开启
     *
-    * @return string|null
+    * @return string
     */
     public function getStatus()
     {
@@ -244,7 +250,7 @@ class BatchSwitchesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 开关状态 - OFF: 关闭 - ON: 开启
+    * @param string $status 开关状态 - OFF: 关闭 - ON: 开启
     *
     * @return $this
     */

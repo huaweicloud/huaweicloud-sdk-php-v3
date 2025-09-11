@@ -20,21 +20,21 @@ class WidgetMetric implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * namespace  服务维度
+    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值** 不涉及
     * dimensions  dimensions
-    * metricName  多个指标名称，用逗号隔开
-    * alias  监控视图的指标别名列表
+    * metricName  **参数解释** 多个指标名称 **约束限制** 不涉及 **取值范围** 长度为[1,1080]个字符，多个指标名称之间用逗号隔开 **默认取值** 不涉及
+    * alias  **参数解释** 监控视图的指标别名列表 **约束限制** 当资源类型为指定资源时才允许传该参数
     * extraInfo  extraInfo
-    * rollupEnable  **参数解释** 是否开启聚合 **约束限制** 当RollupEnable开启时，RollupFilter和RollupDimension必填 **取值范围** true，表示开启聚合；false表示不开启聚合 **默认取值** false
+    * rollupEnable  **参数解释** 是否开启聚合 **约束限制** 当rollup_enable开启时，rollup_filter和rollup_dimension必填 **取值范围** - true：表示开启聚合 - false：表示不开启聚合 **默认取值** false
     * rollupFilter  rollupFilter
-    * rollupDimension  聚合维度
-    * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
-    * yesterdayCompareEnable  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
-    * metricDimension  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
-    * topNum  展示数据数量
-    * unit  单位
-    * order  排序字段，asc正序，desc倒序
-    * topnMetricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * rollupDimension  **参数解释** 聚合维度 **约束限制** 不涉及 **取值范围** 长度为[1,32]个字符 **默认取值** 不涉及
+    * lastWeekCompareEnable  **参数解释** 是否展示同比（上周同一时间）数据 **约束限制** 不涉及 **取值范围** - true:展示 - false:不展示 **默认取值** 不涉及
+    * yesterdayCompareEnable  **参数解释** 是否展示环比（昨天同一时间）数据 **约束限制** 不涉及 **取值范围** - true:展示 - false:不展示 **默认取值** 不涉及
+    * metricDimension  **参数解释** 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，多维度用\",\"分隔，每个维度的最大长度为32。总长度为[1,131]个字符。目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk **约束限制** 不涉及           **取值范围** 长度为[1,131]个字符 **默认取值** 不涉及
+    * topNum  **参数解释** 展示数据数量 **约束限制** 不涉及                 **取值范围** 最小值为1，最大值为200 **默认取值** 不涉及
+    * unit  **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
+    * order  **参数解释** 排序字段 **约束限制** 不涉及                **取值范围** - asc:正序 - desc:倒序 **默认取值** 不涉及
+    * topnMetricName  **参数解释** 资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 长度为[1,96]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -58,21 +58,21 @@ class WidgetMetric implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * namespace  服务维度
+    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值** 不涉及
     * dimensions  dimensions
-    * metricName  多个指标名称，用逗号隔开
-    * alias  监控视图的指标别名列表
+    * metricName  **参数解释** 多个指标名称 **约束限制** 不涉及 **取值范围** 长度为[1,1080]个字符，多个指标名称之间用逗号隔开 **默认取值** 不涉及
+    * alias  **参数解释** 监控视图的指标别名列表 **约束限制** 当资源类型为指定资源时才允许传该参数
     * extraInfo  extraInfo
-    * rollupEnable  **参数解释** 是否开启聚合 **约束限制** 当RollupEnable开启时，RollupFilter和RollupDimension必填 **取值范围** true，表示开启聚合；false表示不开启聚合 **默认取值** false
+    * rollupEnable  **参数解释** 是否开启聚合 **约束限制** 当rollup_enable开启时，rollup_filter和rollup_dimension必填 **取值范围** - true：表示开启聚合 - false：表示不开启聚合 **默认取值** false
     * rollupFilter  rollupFilter
-    * rollupDimension  聚合维度
-    * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
-    * yesterdayCompareEnable  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
-    * metricDimension  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
-    * topNum  展示数据数量
-    * unit  单位
-    * order  排序字段，asc正序，desc倒序
-    * topnMetricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * rollupDimension  **参数解释** 聚合维度 **约束限制** 不涉及 **取值范围** 长度为[1,32]个字符 **默认取值** 不涉及
+    * lastWeekCompareEnable  **参数解释** 是否展示同比（上周同一时间）数据 **约束限制** 不涉及 **取值范围** - true:展示 - false:不展示 **默认取值** 不涉及
+    * yesterdayCompareEnable  **参数解释** 是否展示环比（昨天同一时间）数据 **约束限制** 不涉及 **取值范围** - true:展示 - false:不展示 **默认取值** 不涉及
+    * metricDimension  **参数解释** 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，多维度用\",\"分隔，每个维度的最大长度为32。总长度为[1,131]个字符。目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk **约束限制** 不涉及           **取值范围** 长度为[1,131]个字符 **默认取值** 不涉及
+    * topNum  **参数解释** 展示数据数量 **约束限制** 不涉及                 **取值范围** 最小值为1，最大值为200 **默认取值** 不涉及
+    * unit  **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
+    * order  **参数解释** 排序字段 **约束限制** 不涉及                **取值范围** - asc:正序 - desc:倒序 **默认取值** 不涉及
+    * topnMetricName  **参数解释** 资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 长度为[1,96]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -117,21 +117,21 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * namespace  服务维度
+    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值** 不涉及
     * dimensions  dimensions
-    * metricName  多个指标名称，用逗号隔开
-    * alias  监控视图的指标别名列表
+    * metricName  **参数解释** 多个指标名称 **约束限制** 不涉及 **取值范围** 长度为[1,1080]个字符，多个指标名称之间用逗号隔开 **默认取值** 不涉及
+    * alias  **参数解释** 监控视图的指标别名列表 **约束限制** 当资源类型为指定资源时才允许传该参数
     * extraInfo  extraInfo
-    * rollupEnable  **参数解释** 是否开启聚合 **约束限制** 当RollupEnable开启时，RollupFilter和RollupDimension必填 **取值范围** true，表示开启聚合；false表示不开启聚合 **默认取值** false
+    * rollupEnable  **参数解释** 是否开启聚合 **约束限制** 当rollup_enable开启时，rollup_filter和rollup_dimension必填 **取值范围** - true：表示开启聚合 - false：表示不开启聚合 **默认取值** false
     * rollupFilter  rollupFilter
-    * rollupDimension  聚合维度
-    * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
-    * yesterdayCompareEnable  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
-    * metricDimension  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
-    * topNum  展示数据数量
-    * unit  单位
-    * order  排序字段，asc正序，desc倒序
-    * topnMetricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * rollupDimension  **参数解释** 聚合维度 **约束限制** 不涉及 **取值范围** 长度为[1,32]个字符 **默认取值** 不涉及
+    * lastWeekCompareEnable  **参数解释** 是否展示同比（上周同一时间）数据 **约束限制** 不涉及 **取值范围** - true:展示 - false:不展示 **默认取值** 不涉及
+    * yesterdayCompareEnable  **参数解释** 是否展示环比（昨天同一时间）数据 **约束限制** 不涉及 **取值范围** - true:展示 - false:不展示 **默认取值** 不涉及
+    * metricDimension  **参数解释** 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，多维度用\",\"分隔，每个维度的最大长度为32。总长度为[1,131]个字符。目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk **约束限制** 不涉及           **取值范围** 长度为[1,131]个字符 **默认取值** 不涉及
+    * topNum  **参数解释** 展示数据数量 **约束限制** 不涉及                 **取值范围** 最小值为1，最大值为200 **默认取值** 不涉及
+    * unit  **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
+    * order  **参数解释** 排序字段 **约束限制** 不涉及                **取值范围** - asc:正序 - desc:倒序 **默认取值** 不涉及
+    * topnMetricName  **参数解释** 资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 长度为[1,96]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -155,21 +155,21 @@ class WidgetMetric implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * namespace  服务维度
+    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值** 不涉及
     * dimensions  dimensions
-    * metricName  多个指标名称，用逗号隔开
-    * alias  监控视图的指标别名列表
+    * metricName  **参数解释** 多个指标名称 **约束限制** 不涉及 **取值范围** 长度为[1,1080]个字符，多个指标名称之间用逗号隔开 **默认取值** 不涉及
+    * alias  **参数解释** 监控视图的指标别名列表 **约束限制** 当资源类型为指定资源时才允许传该参数
     * extraInfo  extraInfo
-    * rollupEnable  **参数解释** 是否开启聚合 **约束限制** 当RollupEnable开启时，RollupFilter和RollupDimension必填 **取值范围** true，表示开启聚合；false表示不开启聚合 **默认取值** false
+    * rollupEnable  **参数解释** 是否开启聚合 **约束限制** 当rollup_enable开启时，rollup_filter和rollup_dimension必填 **取值范围** - true：表示开启聚合 - false：表示不开启聚合 **默认取值** false
     * rollupFilter  rollupFilter
-    * rollupDimension  聚合维度
-    * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
-    * yesterdayCompareEnable  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
-    * metricDimension  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
-    * topNum  展示数据数量
-    * unit  单位
-    * order  排序字段，asc正序，desc倒序
-    * topnMetricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * rollupDimension  **参数解释** 聚合维度 **约束限制** 不涉及 **取值范围** 长度为[1,32]个字符 **默认取值** 不涉及
+    * lastWeekCompareEnable  **参数解释** 是否展示同比（上周同一时间）数据 **约束限制** 不涉及 **取值范围** - true:展示 - false:不展示 **默认取值** 不涉及
+    * yesterdayCompareEnable  **参数解释** 是否展示环比（昨天同一时间）数据 **约束限制** 不涉及 **取值范围** - true:展示 - false:不展示 **默认取值** 不涉及
+    * metricDimension  **参数解释** 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，多维度用\",\"分隔，每个维度的最大长度为32。总长度为[1,131]个字符。目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk **约束限制** 不涉及           **取值范围** 长度为[1,131]个字符 **默认取值** 不涉及
+    * topNum  **参数解释** 展示数据数量 **约束限制** 不涉及                 **取值范围** 最小值为1，最大值为200 **默认取值** 不涉及
+    * unit  **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
+    * order  **参数解释** 排序字段 **约束限制** 不涉及                **取值范围** - asc:正序 - desc:倒序 **默认取值** 不涉及
+    * topnMetricName  **参数解释** 资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 长度为[1,96]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -193,21 +193,21 @@ class WidgetMetric implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * namespace  服务维度
+    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值** 不涉及
     * dimensions  dimensions
-    * metricName  多个指标名称，用逗号隔开
-    * alias  监控视图的指标别名列表
+    * metricName  **参数解释** 多个指标名称 **约束限制** 不涉及 **取值范围** 长度为[1,1080]个字符，多个指标名称之间用逗号隔开 **默认取值** 不涉及
+    * alias  **参数解释** 监控视图的指标别名列表 **约束限制** 当资源类型为指定资源时才允许传该参数
     * extraInfo  extraInfo
-    * rollupEnable  **参数解释** 是否开启聚合 **约束限制** 当RollupEnable开启时，RollupFilter和RollupDimension必填 **取值范围** true，表示开启聚合；false表示不开启聚合 **默认取值** false
+    * rollupEnable  **参数解释** 是否开启聚合 **约束限制** 当rollup_enable开启时，rollup_filter和rollup_dimension必填 **取值范围** - true：表示开启聚合 - false：表示不开启聚合 **默认取值** false
     * rollupFilter  rollupFilter
-    * rollupDimension  聚合维度
-    * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
-    * yesterdayCompareEnable  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
-    * metricDimension  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
-    * topNum  展示数据数量
-    * unit  单位
-    * order  排序字段，asc正序，desc倒序
-    * topnMetricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * rollupDimension  **参数解释** 聚合维度 **约束限制** 不涉及 **取值范围** 长度为[1,32]个字符 **默认取值** 不涉及
+    * lastWeekCompareEnable  **参数解释** 是否展示同比（上周同一时间）数据 **约束限制** 不涉及 **取值范围** - true:展示 - false:不展示 **默认取值** 不涉及
+    * yesterdayCompareEnable  **参数解释** 是否展示环比（昨天同一时间）数据 **约束限制** 不涉及 **取值范围** - true:展示 - false:不展示 **默认取值** 不涉及
+    * metricDimension  **参数解释** 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，多维度用\",\"分隔，每个维度的最大长度为32。总长度为[1,131]个字符。目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk **约束限制** 不涉及           **取值范围** 长度为[1,131]个字符 **默认取值** 不涉及
+    * topNum  **参数解释** 展示数据数量 **约束限制** 不涉及                 **取值范围** 最小值为1，最大值为200 **默认取值** 不涉及
+    * unit  **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
+    * order  **参数解释** 排序字段 **约束限制** 不涉及                **取值范围** - asc:正序 - desc:倒序 **默认取值** 不涉及
+    * topnMetricName  **参数解释** 资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 长度为[1,96]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -417,7 +417,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  服务维度
+    *  **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值** 不涉及
     *
     * @return string
     */
@@ -429,7 +429,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string $namespace 服务维度
+    * @param string $namespace **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -465,7 +465,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricName
-    *  多个指标名称，用逗号隔开
+    *  **参数解释** 多个指标名称 **约束限制** 不涉及 **取值范围** 长度为[1,1080]个字符，多个指标名称之间用逗号隔开 **默认取值** 不涉及
     *
     * @return string
     */
@@ -477,7 +477,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     /**
     * Sets metricName
     *
-    * @param string $metricName 多个指标名称，用逗号隔开
+    * @param string $metricName **参数解释** 多个指标名称 **约束限制** 不涉及 **取值范围** 长度为[1,1080]个字符，多个指标名称之间用逗号隔开 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -489,7 +489,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets alias
-    *  监控视图的指标别名列表
+    *  **参数解释** 监控视图的指标别名列表 **约束限制** 当资源类型为指定资源时才允许传该参数
     *
     * @return string[]|null
     */
@@ -501,7 +501,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     /**
     * Sets alias
     *
-    * @param string[]|null $alias 监控视图的指标别名列表
+    * @param string[]|null $alias **参数解释** 监控视图的指标别名列表 **约束限制** 当资源类型为指定资源时才允许传该参数
     *
     * @return $this
     */
@@ -537,7 +537,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets rollupEnable
-    *  **参数解释** 是否开启聚合 **约束限制** 当RollupEnable开启时，RollupFilter和RollupDimension必填 **取值范围** true，表示开启聚合；false表示不开启聚合 **默认取值** false
+    *  **参数解释** 是否开启聚合 **约束限制** 当rollup_enable开启时，rollup_filter和rollup_dimension必填 **取值范围** - true：表示开启聚合 - false：表示不开启聚合 **默认取值** false
     *
     * @return bool|null
     */
@@ -549,7 +549,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     /**
     * Sets rollupEnable
     *
-    * @param bool|null $rollupEnable **参数解释** 是否开启聚合 **约束限制** 当RollupEnable开启时，RollupFilter和RollupDimension必填 **取值范围** true，表示开启聚合；false表示不开启聚合 **默认取值** false
+    * @param bool|null $rollupEnable **参数解释** 是否开启聚合 **约束限制** 当rollup_enable开启时，rollup_filter和rollup_dimension必填 **取值范围** - true：表示开启聚合 - false：表示不开启聚合 **默认取值** false
     *
     * @return $this
     */
@@ -585,7 +585,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets rollupDimension
-    *  聚合维度
+    *  **参数解释** 聚合维度 **约束限制** 不涉及 **取值范围** 长度为[1,32]个字符 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -597,7 +597,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     /**
     * Sets rollupDimension
     *
-    * @param string|null $rollupDimension 聚合维度
+    * @param string|null $rollupDimension **参数解释** 聚合维度 **约束限制** 不涉及 **取值范围** 长度为[1,32]个字符 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -609,7 +609,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastWeekCompareEnable
-    *  是否展示同比（上周同一时间）数据，true:展示，false:不展示
+    *  **参数解释** 是否展示同比（上周同一时间）数据 **约束限制** 不涉及 **取值范围** - true:展示 - false:不展示 **默认取值** 不涉及
     *
     * @return bool|null
     */
@@ -621,7 +621,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     /**
     * Sets lastWeekCompareEnable
     *
-    * @param bool|null $lastWeekCompareEnable 是否展示同比（上周同一时间）数据，true:展示，false:不展示
+    * @param bool|null $lastWeekCompareEnable **参数解释** 是否展示同比（上周同一时间）数据 **约束限制** 不涉及 **取值范围** - true:展示 - false:不展示 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -633,7 +633,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets yesterdayCompareEnable
-    *  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
+    *  **参数解释** 是否展示环比（昨天同一时间）数据 **约束限制** 不涉及 **取值范围** - true:展示 - false:不展示 **默认取值** 不涉及
     *
     * @return bool|null
     */
@@ -645,7 +645,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     /**
     * Sets yesterdayCompareEnable
     *
-    * @param bool|null $yesterdayCompareEnable 是否展示环比（昨天同一时间）数据，true:展示，false:不展示
+    * @param bool|null $yesterdayCompareEnable **参数解释** 是否展示环比（昨天同一时间）数据 **约束限制** 不涉及 **取值范围** - true:展示 - false:不展示 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -657,7 +657,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricDimension
-    *  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
+    *  **参数解释** 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，多维度用\",\"分隔，每个维度的最大长度为32。总长度为[1,131]个字符。目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk **约束限制** 不涉及           **取值范围** 长度为[1,131]个字符 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -669,7 +669,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     /**
     * Sets metricDimension
     *
-    * @param string|null $metricDimension 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
+    * @param string|null $metricDimension **参数解释** 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，多维度用\",\"分隔，每个维度的最大长度为32。总长度为[1,131]个字符。目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk **约束限制** 不涉及           **取值范围** 长度为[1,131]个字符 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -681,7 +681,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets topNum
-    *  展示数据数量
+    *  **参数解释** 展示数据数量 **约束限制** 不涉及                 **取值范围** 最小值为1，最大值为200 **默认取值** 不涉及
     *
     * @return int|null
     */
@@ -693,7 +693,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     /**
     * Sets topNum
     *
-    * @param int|null $topNum 展示数据数量
+    * @param int|null $topNum **参数解释** 展示数据数量 **约束限制** 不涉及                 **取值范围** 最小值为1，最大值为200 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -705,7 +705,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
-    *  单位
+    *  **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -717,7 +717,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param string|null $unit 单位
+    * @param string|null $unit **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -729,7 +729,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets order
-    *  排序字段，asc正序，desc倒序
+    *  **参数解释** 排序字段 **约束限制** 不涉及                **取值范围** - asc:正序 - desc:倒序 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -741,7 +741,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     /**
     * Sets order
     *
-    * @param string|null $order 排序字段，asc正序，desc倒序
+    * @param string|null $order **参数解释** 排序字段 **约束限制** 不涉及                **取值范围** - asc:正序 - desc:倒序 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -753,7 +753,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets topnMetricName
-    *  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    *  **参数解释** 资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 长度为[1,96]个字符 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -765,7 +765,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     /**
     * Sets topnMetricName
     *
-    * @param string|null $topnMetricName 资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * @param string|null $topnMetricName **参数解释** 资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 长度为[1,96]个字符 **默认取值** 不涉及
     *
     * @return $this
     */

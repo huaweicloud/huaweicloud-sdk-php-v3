@@ -20,7 +20,7 @@ class ShowCrossCloudDisasterInstanceMonitorRequest implements ModelInterface, Ar
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  语言。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * instanceId  实例id。
     * disasterType  容灾类型
     *
@@ -34,7 +34,7 @@ class ShowCrossCloudDisasterInstanceMonitorRequest implements ModelInterface, Ar
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  语言。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * instanceId  实例id。
     * disasterType  容灾类型
     *
@@ -69,7 +69,7 @@ class ShowCrossCloudDisasterInstanceMonitorRequest implements ModelInterface, Ar
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  语言。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * instanceId  实例id。
     * disasterType  容灾类型
     *
@@ -83,7 +83,7 @@ class ShowCrossCloudDisasterInstanceMonitorRequest implements ModelInterface, Ar
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  语言。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * instanceId  实例id。
     * disasterType  容灾类型
     *
@@ -97,7 +97,7 @@ class ShowCrossCloudDisasterInstanceMonitorRequest implements ModelInterface, Ar
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  语言。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * instanceId  实例id。
     * disasterType  容灾类型
     *
@@ -245,7 +245,7 @@ class ShowCrossCloudDisasterInstanceMonitorRequest implements ModelInterface, Ar
 
     /**
     * Gets xLanguage
-    *  语言。
+    *  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class ShowCrossCloudDisasterInstanceMonitorRequest implements ModelInterface, Ar
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage 语言。
+    * @param string|null $xLanguage **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     *
     * @return $this
     */

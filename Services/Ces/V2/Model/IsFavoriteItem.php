@@ -20,7 +20,7 @@ class IsFavoriteItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
+    * isFavorite  **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class IsFavoriteItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
+    * isFavorite  **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class IsFavoriteItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
+    * isFavorite  **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class IsFavoriteItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
+    * isFavorite  **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class IsFavoriteItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
+    * isFavorite  **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class IsFavoriteItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets isFavorite
-    *  监控看板是否标记收藏, true: 收藏, false: 未收藏
+    *  **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
     *
     * @return bool|null
     */
@@ -186,7 +186,7 @@ class IsFavoriteItem implements ModelInterface, ArrayAccess
     /**
     * Sets isFavorite
     *
-    * @param bool|null $isFavorite 监控看板是否标记收藏, true: 收藏, false: 未收藏
+    * @param bool|null $isFavorite **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
     *
     * @return $this
     */

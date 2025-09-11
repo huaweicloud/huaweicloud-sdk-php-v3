@@ -21,7 +21,7 @@ class ListInstanceAllArtifactsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  企业仓库实例ID
-    * marker  分页查询时的查询标记，使用上一次接口调用返回的nextMarker值。默认值为1。**注意：marker和limit参数需要配套使用。**
+    * marker  分页查询时的查询标记，使用上一次接口调用返回的next_marker值。默认值为1。**注意：marker和limit参数需要配套使用。**
     * limit  返回条数，默认为10，最大值为100。**注意：marker和limit参数需要配套使用。**
     *
     * @var string[]
@@ -35,7 +35,7 @@ class ListInstanceAllArtifactsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  企业仓库实例ID
-    * marker  分页查询时的查询标记，使用上一次接口调用返回的nextMarker值。默认值为1。**注意：marker和limit参数需要配套使用。**
+    * marker  分页查询时的查询标记，使用上一次接口调用返回的next_marker值。默认值为1。**注意：marker和limit参数需要配套使用。**
     * limit  返回条数，默认为10，最大值为100。**注意：marker和limit参数需要配套使用。**
     *
     * @var string[]
@@ -70,7 +70,7 @@ class ListInstanceAllArtifactsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  企业仓库实例ID
-    * marker  分页查询时的查询标记，使用上一次接口调用返回的nextMarker值。默认值为1。**注意：marker和limit参数需要配套使用。**
+    * marker  分页查询时的查询标记，使用上一次接口调用返回的next_marker值。默认值为1。**注意：marker和limit参数需要配套使用。**
     * limit  返回条数，默认为10，最大值为100。**注意：marker和limit参数需要配套使用。**
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ListInstanceAllArtifactsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  企业仓库实例ID
-    * marker  分页查询时的查询标记，使用上一次接口调用返回的nextMarker值。默认值为1。**注意：marker和limit参数需要配套使用。**
+    * marker  分页查询时的查询标记，使用上一次接口调用返回的next_marker值。默认值为1。**注意：marker和limit参数需要配套使用。**
     * limit  返回条数，默认为10，最大值为100。**注意：marker和limit参数需要配套使用。**
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ListInstanceAllArtifactsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  企业仓库实例ID
-    * marker  分页查询时的查询标记，使用上一次接口调用返回的nextMarker值。默认值为1。**注意：marker和limit参数需要配套使用。**
+    * marker  分页查询时的查询标记，使用上一次接口调用返回的next_marker值。默认值为1。**注意：marker和limit参数需要配套使用。**
     * limit  返回条数，默认为10，最大值为100。**注意：marker和limit参数需要配套使用。**
     *
     * @var string[]
@@ -229,7 +229,7 @@ class ListInstanceAllArtifactsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
-    *  分页查询时的查询标记，使用上一次接口调用返回的nextMarker值。默认值为1。**注意：marker和limit参数需要配套使用。**
+    *  分页查询时的查询标记，使用上一次接口调用返回的next_marker值。默认值为1。**注意：marker和limit参数需要配套使用。**
     *
     * @return int|null
     */
@@ -241,7 +241,7 @@ class ListInstanceAllArtifactsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param int|null $marker 分页查询时的查询标记，使用上一次接口调用返回的nextMarker值。默认值为1。**注意：marker和limit参数需要配套使用。**
+    * @param int|null $marker 分页查询时的查询标记，使用上一次接口调用返回的next_marker值。默认值为1。**注意：marker和limit参数需要配套使用。**
     *
     * @return $this
     */

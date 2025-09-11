@@ -20,9 +20,9 @@ class ExtensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  插件名称
-    * status  插件状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
-    * version  插件版本
+    * name  **参数解释**: 插件名称 **取值范围**: 数组长度为[1,64]
+    * status  **参数解释**:  插件状态 **取值范围**: - none: 未安装 - running: 运行中 - stopped: 已停止 - fault: 故障（进程异常） - unknown: 故障（连接异常）
+    * version  **参数解释**: 插件版本 **取值范围**: 数组长度为[1,32]
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ExtensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  插件名称
-    * status  插件状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
-    * version  插件版本
+    * name  **参数解释**: 插件名称 **取值范围**: 数组长度为[1,64]
+    * status  **参数解释**:  插件状态 **取值范围**: - none: 未安装 - running: 运行中 - stopped: 已停止 - fault: 故障（进程异常） - unknown: 故障（连接异常）
+    * version  **参数解释**: 插件版本 **取值范围**: 数组长度为[1,32]
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ExtensionInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  插件名称
-    * status  插件状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
-    * version  插件版本
+    * name  **参数解释**: 插件名称 **取值范围**: 数组长度为[1,64]
+    * status  **参数解释**:  插件状态 **取值范围**: - none: 未安装 - running: 运行中 - stopped: 已停止 - fault: 故障（进程异常） - unknown: 故障（连接异常）
+    * version  **参数解释**: 插件版本 **取值范围**: 数组长度为[1,32]
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ExtensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  插件名称
-    * status  插件状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
-    * version  插件版本
+    * name  **参数解释**: 插件名称 **取值范围**: 数组长度为[1,64]
+    * status  **参数解释**:  插件状态 **取值范围**: - none: 未安装 - running: 运行中 - stopped: 已停止 - fault: 故障（进程异常） - unknown: 故障（连接异常）
+    * version  **参数解释**: 插件版本 **取值范围**: 数组长度为[1,32]
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ExtensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  插件名称
-    * status  插件状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
-    * version  插件版本
+    * name  **参数解释**: 插件名称 **取值范围**: 数组长度为[1,64]
+    * status  **参数解释**:  插件状态 **取值范围**: - none: 未安装 - running: 运行中 - stopped: 已停止 - fault: 故障（进程异常） - unknown: 故障（连接异常）
+    * version  **参数解释**: 插件版本 **取值范围**: 数组长度为[1,32]
     *
     * @var string[]
     */
@@ -237,7 +237,7 @@ class ExtensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  插件名称
+    *  **参数解释**: 插件名称 **取值范围**: 数组长度为[1,64]
     *
     * @return string|null
     */
@@ -249,7 +249,7 @@ class ExtensionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 插件名称
+    * @param string|null $name **参数解释**: 插件名称 **取值范围**: 数组长度为[1,64]
     *
     * @return $this
     */
@@ -261,7 +261,7 @@ class ExtensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  插件状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
+    *  **参数解释**:  插件状态 **取值范围**: - none: 未安装 - running: 运行中 - stopped: 已停止 - fault: 故障（进程异常） - unknown: 故障（连接异常）
     *
     * @return string|null
     */
@@ -273,7 +273,7 @@ class ExtensionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 插件状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
+    * @param string|null $status **参数解释**:  插件状态 **取值范围**: - none: 未安装 - running: 运行中 - stopped: 已停止 - fault: 故障（进程异常） - unknown: 故障（连接异常）
     *
     * @return $this
     */
@@ -285,7 +285,7 @@ class ExtensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  插件版本
+    *  **参数解释**: 插件版本 **取值范围**: 数组长度为[1,32]
     *
     * @return string|null
     */
@@ -297,7 +297,7 @@ class ExtensionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 插件版本
+    * @param string|null $version **参数解释**: 插件版本 **取值范围**: 数组长度为[1,32]
     *
     * @return $this
     */

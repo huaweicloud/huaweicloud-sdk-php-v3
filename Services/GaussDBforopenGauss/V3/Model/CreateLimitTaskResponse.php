@@ -30,7 +30,7 @@ class CreateLimitTaskResponse implements ModelInterface, ArrayAccess
     * sqlModel  SQL模板,仅当任务类型为SQL_ID时，返回该值且与请求参数相同。
     * keyWords  关键词，仅当任务类型为SQL_TYPE时，返回该值且与请求参数相同。
     * status  限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
-    * instanceId  实例id。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * ruleName  规则名。
     * parallelSize  并发数，与请求参数相同。
     * cpuUtilization  cpu利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留正整数。
@@ -82,7 +82,7 @@ class CreateLimitTaskResponse implements ModelInterface, ArrayAccess
     * sqlModel  SQL模板,仅当任务类型为SQL_ID时，返回该值且与请求参数相同。
     * keyWords  关键词，仅当任务类型为SQL_TYPE时，返回该值且与请求参数相同。
     * status  限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
-    * instanceId  实例id。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * ruleName  规则名。
     * parallelSize  并发数，与请求参数相同。
     * cpuUtilization  cpu利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留正整数。
@@ -155,7 +155,7 @@ class CreateLimitTaskResponse implements ModelInterface, ArrayAccess
     * sqlModel  SQL模板,仅当任务类型为SQL_ID时，返回该值且与请求参数相同。
     * keyWords  关键词，仅当任务类型为SQL_TYPE时，返回该值且与请求参数相同。
     * status  限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
-    * instanceId  实例id。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * ruleName  规则名。
     * parallelSize  并发数，与请求参数相同。
     * cpuUtilization  cpu利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留正整数。
@@ -207,7 +207,7 @@ class CreateLimitTaskResponse implements ModelInterface, ArrayAccess
     * sqlModel  SQL模板,仅当任务类型为SQL_ID时，返回该值且与请求参数相同。
     * keyWords  关键词，仅当任务类型为SQL_TYPE时，返回该值且与请求参数相同。
     * status  限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
-    * instanceId  实例id。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * ruleName  规则名。
     * parallelSize  并发数，与请求参数相同。
     * cpuUtilization  cpu利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留正整数。
@@ -259,7 +259,7 @@ class CreateLimitTaskResponse implements ModelInterface, ArrayAccess
     * sqlModel  SQL模板,仅当任务类型为SQL_ID时，返回该值且与请求参数相同。
     * keyWords  关键词，仅当任务类型为SQL_TYPE时，返回该值且与请求参数相同。
     * status  限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
-    * instanceId  实例id。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * ruleName  规则名。
     * parallelSize  并发数，与请求参数相同。
     * cpuUtilization  cpu利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留正整数。
@@ -622,7 +622,7 @@ class CreateLimitTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例id。
+    *  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return string|null
     */
@@ -634,7 +634,7 @@ class CreateLimitTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例id。
+    * @param string|null $instanceId **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */

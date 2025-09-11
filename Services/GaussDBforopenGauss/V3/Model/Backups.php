@@ -29,7 +29,7 @@ class Backups implements ModelInterface, ArrayAccess
     * size  备份大小(单位：MB)
     * type  备份类型
     * datastore  datastore
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class Backups implements ModelInterface, ArrayAccess
     * size  备份大小(单位：MB)
     * type  备份类型
     * datastore  datastore
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class Backups implements ModelInterface, ArrayAccess
     * size  备份大小(单位：MB)
     * type  备份类型
     * datastore  datastore
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -134,7 +134,7 @@ class Backups implements ModelInterface, ArrayAccess
     * size  备份大小(单位：MB)
     * type  备份类型
     * datastore  datastore
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -162,7 +162,7 @@ class Backups implements ModelInterface, ArrayAccess
     * size  备份大小(单位：MB)
     * type  备份类型
     * datastore  datastore
-    * instanceId  实例ID。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -537,7 +537,7 @@ class Backups implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return string|null
     */
@@ -549,7 +549,7 @@ class Backups implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例ID。
+    * @param string|null $instanceId **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */

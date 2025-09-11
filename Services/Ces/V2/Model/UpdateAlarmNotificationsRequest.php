@@ -20,7 +20,7 @@ class UpdateAlarmNotificationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmId  告警规则ID
+    * alarmId  **参数解释**： 告警规则ID **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位字母或数字。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdateAlarmNotificationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmId  告警规则ID
+    * alarmId  **参数解释**： 告警规则ID **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位字母或数字。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateAlarmNotificationsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmId  告警规则ID
+    * alarmId  **参数解释**： 告警规则ID **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位字母或数字。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateAlarmNotificationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmId  告警规则ID
+    * alarmId  **参数解释**： 告警规则ID **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位字母或数字。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateAlarmNotificationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmId  告警规则ID
+    * alarmId  **参数解释**： 告警规则ID **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位字母或数字。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -191,7 +191,7 @@ class UpdateAlarmNotificationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmId
-    *  告警规则ID
+    *  **参数解释**： 告警规则ID **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位字母或数字。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class UpdateAlarmNotificationsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmId
     *
-    * @param string $alarmId 告警规则ID
+    * @param string $alarmId **参数解释**： 告警规则ID **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位字母或数字。 **默认取值**： 不涉及。
     *
     * @return $this
     */

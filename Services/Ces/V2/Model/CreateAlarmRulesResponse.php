@@ -21,7 +21,7 @@ class CreateAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmId  告警规则id，以al开头，包含22个数字或字母
+    * alarmId  **参数解释**： 告警规则id。     **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22个数字或字母。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmId  告警规则id，以al开头，包含22个数字或字母
+    * alarmId  **参数解释**： 告警规则id。     **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22个数字或字母。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateAlarmRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmId  告警规则id，以al开头，包含22个数字或字母
+    * alarmId  **参数解释**： 告警规则id。     **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22个数字或字母。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmId  告警规则id，以al开头，包含22个数字或字母
+    * alarmId  **参数解释**： 告警规则id。     **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22个数字或字母。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmId  告警规则id，以al开头，包含22个数字或字母
+    * alarmId  **参数解释**： 告警规则id。     **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22个数字或字母。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -178,7 +178,7 @@ class CreateAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmId
-    *  告警规则id，以al开头，包含22个数字或字母
+    *  **参数解释**： 告警规则id。     **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22个数字或字母。           **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -190,7 +190,7 @@ class CreateAlarmRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmId
     *
-    * @param string|null $alarmId 告警规则id，以al开头，包含22个数字或字母
+    * @param string|null $alarmId **参数解释**： 告警规则id。     **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22个数字或字母。           **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -21,20 +21,20 @@ class ListAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarms  告警规则列表
-    * count  告警规则总数
+    * alarms  **参数解释**： 告警规则列表。 **取值范围**： 长度为[1,100]个字符。
+    * count  **参数解释**： 告警规则总数。 **取值范围**： [0,10000]
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'alarms' => '\HuaweiCloud\SDK\Ces\V2\Model\ListAlarmResponseAlarms[]',
+            'alarms' => '\HuaweiCloud\SDK\Ces\V2\Model\ListAlarmRespBodyAlarms[]',
             'count' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarms  告警规则列表
-    * count  告警规则总数
+    * alarms  **参数解释**： 告警规则列表。 **取值范围**： 长度为[1,100]个字符。
+    * count  **参数解释**： 告警规则总数。 **取值范围**： [0,10000]
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListAlarmRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarms  告警规则列表
-    * count  告警规则总数
+    * alarms  **参数解释**： 告警规则列表。 **取值范围**： 长度为[1,100]个字符。
+    * count  **参数解释**： 告警规则总数。 **取值范围**： [0,10000]
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarms  告警规则列表
-    * count  告警规则总数
+    * alarms  **参数解释**： 告警规则列表。 **取值范围**： 长度为[1,100]个字符。
+    * count  **参数解释**： 告警规则总数。 **取值范围**： [0,10000]
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarms  告警规则列表
-    * count  告警规则总数
+    * alarms  **参数解释**： 告警规则列表。 **取值范围**： 长度为[1,100]个字符。
+    * count  **参数解释**： 告警规则总数。 **取值范围**： [0,10000]
     *
     * @var string[]
     */
@@ -192,9 +192,9 @@ class ListAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarms
-    *  告警规则列表
+    *  **参数解释**： 告警规则列表。 **取值范围**： 长度为[1,100]个字符。
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\ListAlarmResponseAlarms[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ListAlarmRespBodyAlarms[]|null
     */
     public function getAlarms()
     {
@@ -204,7 +204,7 @@ class ListAlarmRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarms
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ListAlarmResponseAlarms[]|null $alarms 告警规则列表
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ListAlarmRespBodyAlarms[]|null $alarms **参数解释**： 告警规则列表。 **取值范围**： 长度为[1,100]个字符。
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  告警规则总数
+    *  **参数解释**： 告警规则总数。 **取值范围**： [0,10000]
     *
     * @return int|null
     */
@@ -228,7 +228,7 @@ class ListAlarmRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 告警规则总数
+    * @param int|null $count **参数解释**： 告警规则总数。 **取值范围**： [0,10000]
     *
     * @return $this
     */

@@ -20,9 +20,9 @@ class ResourceGroupTagRelation implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  TMS标签键规范。
-    * operator  tag操作符，含义是标签key与value的关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   当operator为equal，value为空字符串时表示为全部   all表示全部
-    * value  TMS标签值规范。
+    * key  **参数解释** TMS标签键规范 **约束限制** 不涉及 **取值范围** 长度为[1,128]个字符 **默认取值** 不涉及
+    * operator  **参数解释** tag操作符，含义是标签key与value的关系 **约束限制** 不涉及 **取值范围** - include: 表示包含 - prefix: 表示前缀 - suffix: 表示后缀 - notInclude: 表示不包含 - equal: 表示相等，当operator为equal，value为空字符串时表示为全部 - all: 表示全部 **默认取值** 不涉及
+    * value  **参数解释** TMS标签值规范 **约束限制** 不涉及 **取值范围** 长度为[0，255]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ResourceGroupTagRelation implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  TMS标签键规范。
-    * operator  tag操作符，含义是标签key与value的关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   当operator为equal，value为空字符串时表示为全部   all表示全部
-    * value  TMS标签值规范。
+    * key  **参数解释** TMS标签键规范 **约束限制** 不涉及 **取值范围** 长度为[1,128]个字符 **默认取值** 不涉及
+    * operator  **参数解释** tag操作符，含义是标签key与value的关系 **约束限制** 不涉及 **取值范围** - include: 表示包含 - prefix: 表示前缀 - suffix: 表示后缀 - notInclude: 表示不包含 - equal: 表示相等，当operator为equal，value为空字符串时表示为全部 - all: 表示全部 **默认取值** 不涉及
+    * value  **参数解释** TMS标签值规范 **约束限制** 不涉及 **取值范围** 长度为[0，255]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ResourceGroupTagRelation implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  TMS标签键规范。
-    * operator  tag操作符，含义是标签key与value的关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   当operator为equal，value为空字符串时表示为全部   all表示全部
-    * value  TMS标签值规范。
+    * key  **参数解释** TMS标签键规范 **约束限制** 不涉及 **取值范围** 长度为[1,128]个字符 **默认取值** 不涉及
+    * operator  **参数解释** tag操作符，含义是标签key与value的关系 **约束限制** 不涉及 **取值范围** - include: 表示包含 - prefix: 表示前缀 - suffix: 表示后缀 - notInclude: 表示不包含 - equal: 表示相等，当operator为equal，value为空字符串时表示为全部 - all: 表示全部 **默认取值** 不涉及
+    * value  **参数解释** TMS标签值规范 **约束限制** 不涉及 **取值范围** 长度为[0，255]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ResourceGroupTagRelation implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  TMS标签键规范。
-    * operator  tag操作符，含义是标签key与value的关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   当operator为equal，value为空字符串时表示为全部   all表示全部
-    * value  TMS标签值规范。
+    * key  **参数解释** TMS标签键规范 **约束限制** 不涉及 **取值范围** 长度为[1,128]个字符 **默认取值** 不涉及
+    * operator  **参数解释** tag操作符，含义是标签key与value的关系 **约束限制** 不涉及 **取值范围** - include: 表示包含 - prefix: 表示前缀 - suffix: 表示后缀 - notInclude: 表示不包含 - equal: 表示相等，当operator为equal，value为空字符串时表示为全部 - all: 表示全部 **默认取值** 不涉及
+    * value  **参数解释** TMS标签值规范 **约束限制** 不涉及 **取值范围** 长度为[0，255]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ResourceGroupTagRelation implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  TMS标签键规范。
-    * operator  tag操作符，含义是标签key与value的关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   当operator为equal，value为空字符串时表示为全部   all表示全部
-    * value  TMS标签值规范。
+    * key  **参数解释** TMS标签键规范 **约束限制** 不涉及 **取值范围** 长度为[1,128]个字符 **默认取值** 不涉及
+    * operator  **参数解释** tag操作符，含义是标签key与value的关系 **约束限制** 不涉及 **取值范围** - include: 表示包含 - prefix: 表示前缀 - suffix: 表示后缀 - notInclude: 表示不包含 - equal: 表示相等，当operator为equal，value为空字符串时表示为全部 - all: 表示全部 **默认取值** 不涉及
+    * value  **参数解释** TMS标签值规范 **约束限制** 不涉及 **取值范围** 长度为[0，255]个字符 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -248,7 +248,7 @@ class ResourceGroupTagRelation implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  TMS标签键规范。
+    *  **参数解释** TMS标签键规范 **约束限制** 不涉及 **取值范围** 长度为[1,128]个字符 **默认取值** 不涉及
     *
     * @return string
     */
@@ -260,7 +260,7 @@ class ResourceGroupTagRelation implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key TMS标签键规范。
+    * @param string $key **参数解释** TMS标签键规范 **约束限制** 不涉及 **取值范围** 长度为[1,128]个字符 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -272,7 +272,7 @@ class ResourceGroupTagRelation implements ModelInterface, ArrayAccess
 
     /**
     * Gets operator
-    *  tag操作符，含义是标签key与value的关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   当operator为equal，value为空字符串时表示为全部   all表示全部
+    *  **参数解释** tag操作符，含义是标签key与value的关系 **约束限制** 不涉及 **取值范围** - include: 表示包含 - prefix: 表示前缀 - suffix: 表示后缀 - notInclude: 表示不包含 - equal: 表示相等，当operator为equal，value为空字符串时表示为全部 - all: 表示全部 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -284,7 +284,7 @@ class ResourceGroupTagRelation implements ModelInterface, ArrayAccess
     /**
     * Sets operator
     *
-    * @param string|null $operator tag操作符，含义是标签key与value的关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   当operator为equal，value为空字符串时表示为全部   all表示全部
+    * @param string|null $operator **参数解释** tag操作符，含义是标签key与value的关系 **约束限制** 不涉及 **取值范围** - include: 表示包含 - prefix: 表示前缀 - suffix: 表示后缀 - notInclude: 表示不包含 - equal: 表示相等，当operator为equal，value为空字符串时表示为全部 - all: 表示全部 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -296,7 +296,7 @@ class ResourceGroupTagRelation implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  TMS标签值规范。
+    *  **参数解释** TMS标签值规范 **约束限制** 不涉及 **取值范围** 长度为[0，255]个字符 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -308,7 +308,7 @@ class ResourceGroupTagRelation implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value TMS标签值规范。
+    * @param string|null $value **参数解释** TMS标签值规范 **约束限制** 不涉及 **取值范围** 长度为[0，255]个字符 **默认取值** 不涉及
     *
     * @return $this
     */

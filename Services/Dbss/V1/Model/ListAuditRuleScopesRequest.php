@@ -20,9 +20,9 @@ class ListAuditRuleScopesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
-    * offset  偏移量
-    * limit  查询记录数
+    * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
+    * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
+    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为100
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ListAuditRuleScopesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
-    * offset  偏移量
-    * limit  查询记录数
+    * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
+    * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
+    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为100
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ListAuditRuleScopesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
-    * offset  偏移量
-    * limit  查询记录数
+    * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
+    * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
+    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为100
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ListAuditRuleScopesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
-    * offset  偏移量
-    * limit  查询记录数
+    * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
+    * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
+    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为100
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ListAuditRuleScopesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
-    * offset  偏移量
-    * limit  查询记录数
+    * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
+    * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
+    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为100
     *
     * @var string[]
     */
@@ -183,6 +183,12 @@ class ListAuditRuleScopesRequest implements ModelInterface, ArrayAccess
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
+            if ((mb_strlen($this->container['instanceId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['instanceId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 32.";
+            }
         return $invalidProperties;
     }
 
@@ -199,7 +205,7 @@ class ListAuditRuleScopesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。可在查询实例列表接口的ID字段获取。
+    *  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -211,7 +217,7 @@ class ListAuditRuleScopesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。可在查询实例列表接口的ID字段获取。
+    * @param string $instanceId **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -223,7 +229,7 @@ class ListAuditRuleScopesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量
+    *  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
     *
     * @return string|null
     */
@@ -235,7 +241,7 @@ class ListAuditRuleScopesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 偏移量
+    * @param string|null $offset **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
     *
     * @return $this
     */
@@ -247,7 +253,7 @@ class ListAuditRuleScopesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询记录数
+    *  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为100
     *
     * @return string|null
     */
@@ -259,7 +265,7 @@ class ListAuditRuleScopesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 查询记录数
+    * @param string|null $limit **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为100
     *
     * @return $this
     */

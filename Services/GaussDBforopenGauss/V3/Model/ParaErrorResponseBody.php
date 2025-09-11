@@ -20,8 +20,8 @@ class ParaErrorResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  错误码。
-    * errorMsg  错误消息。
+    * errorCode  **参数解释**: 错误码。 **取值范围**: 不涉及。
+    * errorMsg  **参数解释**: 错误消息。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ParaErrorResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  错误码。
-    * errorMsg  错误消息。
+    * errorCode  **参数解释**: 错误码。 **取值范围**: 不涉及。
+    * errorMsg  **参数解释**: 错误消息。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ParaErrorResponseBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  错误码。
-    * errorMsg  错误消息。
+    * errorCode  **参数解释**: 错误码。 **取值范围**: 不涉及。
+    * errorMsg  **参数解释**: 错误消息。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ParaErrorResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  错误码。
-    * errorMsg  错误消息。
+    * errorCode  **参数解释**: 错误码。 **取值范围**: 不涉及。
+    * errorMsg  **参数解释**: 错误消息。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ParaErrorResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  错误码。
-    * errorMsg  错误消息。
+    * errorCode  **参数解释**: 错误码。 **取值范围**: 不涉及。
+    * errorMsg  **参数解释**: 错误消息。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class ParaErrorResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  错误码。
+    *  **参数解释**: 错误码。 **取值范围**: 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class ParaErrorResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string $errorCode 错误码。
+    * @param string $errorCode **参数解释**: 错误码。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class ParaErrorResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorMsg
-    *  错误消息。
+    *  **参数解释**: 错误消息。 **取值范围**: 不涉及。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class ParaErrorResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string $errorMsg 错误消息。
+    * @param string $errorMsg **参数解释**: 错误消息。 **取值范围**: 不涉及。
     *
     * @return $this
     */

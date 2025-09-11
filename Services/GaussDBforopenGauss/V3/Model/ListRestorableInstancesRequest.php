@@ -20,7 +20,7 @@ class ListRestorableInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  语言。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * sourceInstanceId  源实例id，需要恢复的实例ID。
     * backupId  实例备份信息ID，根据备份ID查询实例拓扑信息，过滤查询出来的实例，包含节点数，副本数等。参数为空时，根据restore_time查询。。
     * restoreTime  恢复点，当备份ID为空时，通过此参数查询实例拓扑信息，过滤实例列表。
@@ -40,7 +40,7 @@ class ListRestorableInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  语言。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * sourceInstanceId  源实例id，需要恢复的实例ID。
     * backupId  实例备份信息ID，根据备份ID查询实例拓扑信息，过滤查询出来的实例，包含节点数，副本数等。参数为空时，根据restore_time查询。。
     * restoreTime  恢复点，当备份ID为空时，通过此参数查询实例拓扑信息，过滤实例列表。
@@ -81,7 +81,7 @@ class ListRestorableInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  语言。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * sourceInstanceId  源实例id，需要恢复的实例ID。
     * backupId  实例备份信息ID，根据备份ID查询实例拓扑信息，过滤查询出来的实例，包含节点数，副本数等。参数为空时，根据restore_time查询。。
     * restoreTime  恢复点，当备份ID为空时，通过此参数查询实例拓扑信息，过滤实例列表。
@@ -101,7 +101,7 @@ class ListRestorableInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  语言。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * sourceInstanceId  源实例id，需要恢复的实例ID。
     * backupId  实例备份信息ID，根据备份ID查询实例拓扑信息，过滤查询出来的实例，包含节点数，副本数等。参数为空时，根据restore_time查询。。
     * restoreTime  恢复点，当备份ID为空时，通过此参数查询实例拓扑信息，过滤实例列表。
@@ -121,7 +121,7 @@ class ListRestorableInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  语言。
+    * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * sourceInstanceId  源实例id，需要恢复的实例ID。
     * backupId  实例备份信息ID，根据备份ID查询实例拓扑信息，过滤查询出来的实例，包含节点数，副本数等。参数为空时，根据restore_time查询。。
     * restoreTime  恢复点，当备份ID为空时，通过此参数查询实例拓扑信息，过滤实例列表。
@@ -232,7 +232,7 @@ class ListRestorableInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  语言。
+    *  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class ListRestorableInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage 语言。
+    * @param string|null $xLanguage **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     *
     * @return $this
     */

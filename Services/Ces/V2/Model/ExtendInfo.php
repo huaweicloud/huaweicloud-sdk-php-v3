@@ -21,7 +21,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * filter  表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
-    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}'
+    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}''
     * displayTime  展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
     * refreshTime  刷新时间 0秒表示不刷新,10秒，1分钟，5分钟，20分钟
     * from  开始时间
@@ -51,7 +51,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * filter  表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
-    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}'
+    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}''
     * displayTime  展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
     * refreshTime  刷新时间 0秒表示不刷新,10秒，1分钟，5分钟，20分钟
     * from  开始时间
@@ -69,8 +69,8 @@ class ExtendInfo implements ModelInterface, ArrayAccess
         'period' => null,
         'displayTime' => 'int32',
         'refreshTime' => 'int32',
-        'from' => null,
-        'to' => null,
+        'from' => 'int64',
+        'to' => 'int64',
         'screenColor' => null,
         'enableScreenAutoPlay' => null,
         'timeInterval' => 'int32',
@@ -102,7 +102,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * filter  表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
-    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}'
+    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}''
     * displayTime  展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
     * refreshTime  刷新时间 0秒表示不刷新,10秒，1分钟，5分钟，20分钟
     * from  开始时间
@@ -132,7 +132,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * filter  表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
-    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}'
+    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}''
     * displayTime  展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
     * refreshTime  刷新时间 0秒表示不刷新,10秒，1分钟，5分钟，20分钟
     * from  开始时间
@@ -162,7 +162,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * filter  表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
-    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}'
+    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}''
     * displayTime  展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
     * refreshTime  刷新时间 0秒表示不刷新,10秒，1分钟，5分钟，20分钟
     * from  开始时间
@@ -463,7 +463,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets period
-    *  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}'
+    *  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}''
     *
     * @return string|null
     */
@@ -475,7 +475,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets period
     *
-    * @param string|null $period '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}'
+    * @param string|null $period '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}''
     *
     * @return $this
     */

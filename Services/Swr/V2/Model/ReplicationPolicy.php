@@ -22,15 +22,15 @@ class ReplicationPolicy implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  策略ID
     * name  策略名称
-    * description  策略描述描述
+    * description  策略描述
     * srcRegistry  srcRegistry
     * destRegistry  destRegistry
     * destNamespace  目标命名空间名，默认为空值
     * filters  源资源过滤器
-    * repoScopeMode  repo的范围模式
+    * repoScopeMode  repo过滤类型
     * trigger  trigger
     * override  是否覆盖
-    * enabled  是否使用
+    * enabled  是否启用
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -56,15 +56,15 @@ class ReplicationPolicy implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  策略ID
     * name  策略名称
-    * description  策略描述描述
+    * description  策略描述
     * srcRegistry  srcRegistry
     * destRegistry  destRegistry
     * destNamespace  目标命名空间名，默认为空值
     * filters  源资源过滤器
-    * repoScopeMode  repo的范围模式
+    * repoScopeMode  repo过滤类型
     * trigger  trigger
     * override  是否覆盖
-    * enabled  是否使用
+    * enabled  是否启用
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -111,15 +111,15 @@ class ReplicationPolicy implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  策略ID
     * name  策略名称
-    * description  策略描述描述
+    * description  策略描述
     * srcRegistry  srcRegistry
     * destRegistry  destRegistry
     * destNamespace  目标命名空间名，默认为空值
     * filters  源资源过滤器
-    * repoScopeMode  repo的范围模式
+    * repoScopeMode  repo过滤类型
     * trigger  trigger
     * override  是否覆盖
-    * enabled  是否使用
+    * enabled  是否启用
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -145,15 +145,15 @@ class ReplicationPolicy implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  策略ID
     * name  策略名称
-    * description  策略描述描述
+    * description  策略描述
     * srcRegistry  srcRegistry
     * destRegistry  destRegistry
     * destNamespace  目标命名空间名，默认为空值
     * filters  源资源过滤器
-    * repoScopeMode  repo的范围模式
+    * repoScopeMode  repo过滤类型
     * trigger  trigger
     * override  是否覆盖
-    * enabled  是否使用
+    * enabled  是否启用
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -179,15 +179,15 @@ class ReplicationPolicy implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  策略ID
     * name  策略名称
-    * description  策略描述描述
+    * description  策略描述
     * srcRegistry  srcRegistry
     * destRegistry  destRegistry
     * destNamespace  目标命名空间名，默认为空值
     * filters  源资源过滤器
-    * repoScopeMode  repo的范围模式
+    * repoScopeMode  repo过滤类型
     * trigger  trigger
     * override  是否覆盖
-    * enabled  是否使用
+    * enabled  是否启用
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -354,7 +354,7 @@ class ReplicationPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  策略描述描述
+    *  策略描述
     *
     * @return string|null
     */
@@ -366,7 +366,7 @@ class ReplicationPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 策略描述描述
+    * @param string|null $description 策略描述
     *
     * @return $this
     */
@@ -474,7 +474,7 @@ class ReplicationPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets repoScopeMode
-    *  repo的范围模式
+    *  repo过滤类型
     *
     * @return string|null
     */
@@ -486,7 +486,7 @@ class ReplicationPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets repoScopeMode
     *
-    * @param string|null $repoScopeMode repo的范围模式
+    * @param string|null $repoScopeMode repo过滤类型
     *
     * @return $this
     */
@@ -546,7 +546,7 @@ class ReplicationPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  是否使用
+    *  是否启用
     *
     * @return bool|null
     */
@@ -558,7 +558,7 @@ class ReplicationPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool|null $enabled 是否使用
+    * @param bool|null $enabled 是否启用
     *
     * @return $this
     */

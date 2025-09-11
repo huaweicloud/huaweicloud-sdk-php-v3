@@ -26,7 +26,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     * feature  风险规则特征
     * status  风险规则状态。 - ON: 开启 - OFF: 关闭
     * rank  风险规则优先级。数字越小优先级越高。
-    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK]
+    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     * ruleType  规则类型
     *
     * @var string[]
@@ -50,7 +50,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     * feature  风险规则特征
     * status  风险规则状态。 - ON: 开启 - OFF: 关闭
     * rank  风险规则优先级。数字越小优先级越高。
-    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK]
+    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     * ruleType  规则类型
     *
     * @var string[]
@@ -95,7 +95,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     * feature  风险规则特征
     * status  风险规则状态。 - ON: 开启 - OFF: 关闭
     * rank  风险规则优先级。数字越小优先级越高。
-    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK]
+    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     * ruleType  规则类型
     *
     * @var string[]
@@ -119,7 +119,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     * feature  风险规则特征
     * status  风险规则状态。 - ON: 开启 - OFF: 关闭
     * rank  风险规则优先级。数字越小优先级越高。
-    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK]
+    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     * ruleType  规则类型
     *
     * @var string[]
@@ -143,7 +143,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     * feature  风险规则特征
     * status  风险规则状态。 - ON: 开启 - OFF: 关闭
     * rank  风险规则优先级。数字越小优先级越高。
-    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK]
+    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     * ruleType  规则类型
     *
     * @var string[]
@@ -407,7 +407,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskLevel
-    *  风险级别 - LOW - MEDIUM - HIGH - NO_RISK]
+    *  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     *
     * @return string|null
     */
@@ -419,7 +419,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     /**
     * Sets riskLevel
     *
-    * @param string|null $riskLevel 风险级别 - LOW - MEDIUM - HIGH - NO_RISK]
+    * @param string|null $riskLevel 风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     *
     * @return $this
     */

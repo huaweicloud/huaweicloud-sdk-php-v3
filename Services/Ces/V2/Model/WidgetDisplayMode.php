@@ -20,7 +20,7 @@ class WidgetDisplayMode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
+    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class WidgetDisplayMode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
+    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class WidgetDisplayMode implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
+    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class WidgetDisplayMode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
+    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class WidgetDisplayMode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
+    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class WidgetDisplayMode implements ModelInterface, ArrayAccess
 
     /**
     * Gets rowWidgetNum
-    *  监控视图展示模式，0表示自定义坐标，1代表每行一个
+    *  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
     *
     * @return int|null
     */
@@ -192,7 +192,7 @@ class WidgetDisplayMode implements ModelInterface, ArrayAccess
     /**
     * Sets rowWidgetNum
     *
-    * @param int|null $rowWidgetNum 监控视图展示模式，0表示自定义坐标，1代表每行一个
+    * @param int|null $rowWidgetNum **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
     *
     * @return $this
     */

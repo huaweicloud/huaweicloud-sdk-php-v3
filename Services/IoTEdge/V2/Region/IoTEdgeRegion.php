@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class IoTEdgeRegion {
 
-    public static $REGION = array("https://iotedge-api.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://iotedge-api.cn-east-3.myhuaweicloud.com"=>"cn-east-3",);
+    public static $REGION = array("https://iotedge-api.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://iotedge-api.cn-east-3.myhuaweicloud.com"=>"cn-east-3","https://iotedge-api.cn-south-1.myhuaweicloud.com"=>"cn-south-1",);
 
     public static function valueOf($regionId)
     {

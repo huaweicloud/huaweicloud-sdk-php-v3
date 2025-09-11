@@ -20,8 +20,8 @@ class UpgradeErrorResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  错误码。
-    * errorMsg  错误消息。
+    * errorCode  **参数解释**: 错误码。 **取值范围**: 不涉及。
+    * errorMsg  **参数解释**: 错误消息。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UpgradeErrorResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  错误码。
-    * errorMsg  错误消息。
+    * errorCode  **参数解释**: 错误码。 **取值范围**: 不涉及。
+    * errorMsg  **参数解释**: 错误消息。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UpgradeErrorResponseBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  错误码。
-    * errorMsg  错误消息。
+    * errorCode  **参数解释**: 错误码。 **取值范围**: 不涉及。
+    * errorMsg  **参数解释**: 错误消息。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UpgradeErrorResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  错误码。
-    * errorMsg  错误消息。
+    * errorCode  **参数解释**: 错误码。 **取值范围**: 不涉及。
+    * errorMsg  **参数解释**: 错误消息。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UpgradeErrorResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  错误码。
-    * errorMsg  错误消息。
+    * errorCode  **参数解释**: 错误码。 **取值范围**: 不涉及。
+    * errorMsg  **参数解释**: 错误消息。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -172,21 +172,9 @@ class UpgradeErrorResponseBody implements ModelInterface, ArrayAccess
         if ($this->container['errorCode'] === null) {
             $invalidProperties[] = "'errorCode' can't be null";
         }
-            if ((mb_strlen($this->container['errorCode']) > 1000)) {
-                $invalidProperties[] = "invalid value for 'errorCode', the character length must be smaller than or equal to 1000.";
-            }
-            if ((mb_strlen($this->container['errorCode']) < 0)) {
-                $invalidProperties[] = "invalid value for 'errorCode', the character length must be bigger than or equal to 0.";
-            }
         if ($this->container['errorMsg'] === null) {
             $invalidProperties[] = "'errorMsg' can't be null";
         }
-            if ((mb_strlen($this->container['errorMsg']) > 1000)) {
-                $invalidProperties[] = "invalid value for 'errorMsg', the character length must be smaller than or equal to 1000.";
-            }
-            if ((mb_strlen($this->container['errorMsg']) < 0)) {
-                $invalidProperties[] = "invalid value for 'errorMsg', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -203,7 +191,7 @@ class UpgradeErrorResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  错误码。
+    *  **参数解释**: 错误码。 **取值范围**: 不涉及。
     *
     * @return string
     */
@@ -215,7 +203,7 @@ class UpgradeErrorResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string $errorCode 错误码。
+    * @param string $errorCode **参数解释**: 错误码。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -227,7 +215,7 @@ class UpgradeErrorResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorMsg
-    *  错误消息。
+    *  **参数解释**: 错误消息。 **取值范围**: 不涉及。
     *
     * @return string
     */
@@ -239,7 +227,7 @@ class UpgradeErrorResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string $errorMsg 错误消息。
+    * @param string $errorMsg **参数解释**: 错误消息。 **取值范围**: 不涉及。
     *
     * @return $this
     */

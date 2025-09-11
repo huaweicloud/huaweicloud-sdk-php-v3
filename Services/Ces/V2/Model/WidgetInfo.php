@@ -20,47 +20,47 @@ class WidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  视图分区id
-    * metrics  指标列表
-    * title  监控视图标题
-    * threshold  监控视图指标的阈值
-    * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
-    * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
+    * groupId  **参数解释** 视图分组id **取值范围** 字符串必须以dg开头，包含22个字母和数字，长度为24个字符或者为default，default代表不分组
+    * metrics  **参数解释** 指标列表
+    * title  **参数解释** 监控视图标题 **取值范围** 长度为[1,128]个字符，允许包括以下内容：1、中文汉字；2、拉丁字母；3、英文大小写字母；4、数字(0-9)；5、符号： ” \" ≤ < > & % _ : / ; “ ' ? + , ~ ， （ ） º ( ) [ . -
+    * threshold  **参数解释** 监控视图指标的阈值 **取值范围** 最小值为0，最大值为1.7976931348623157e+308
+    * thresholdEnabled  **参数解释** 阈值是否展示 **取值范围** - true:展示 - false:不展示
+    * view  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图
+    * metricDisplayMode  **参数解释** 指标展示类型 **取值范围** - single:单指标展示 - multiple:多指标展示
     * properties  properties
     * location  location
-    * unit  单位
-    * createTime  监控看板创建时间
+    * unit  **参数解释** 单位 **取值范围** 长度为[0,32]个字符
+    * createTime  **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'groupId' => 'string',
-            'metrics' => '\HuaweiCloud\SDK\Ces\V2\Model\WidgetMetric[]',
+            'metrics' => '\HuaweiCloud\SDK\Ces\V2\Model\WidgetMetricResp[]',
             'title' => 'string',
             'threshold' => 'double',
             'thresholdEnabled' => 'bool',
             'view' => 'string',
             'metricDisplayMode' => 'string',
-            'properties' => '\HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoProperties',
-            'location' => '\HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoLocation',
+            'properties' => '\HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoRespProperties',
+            'location' => '\HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoRespLocation',
             'unit' => 'string',
             'createTime' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  视图分区id
-    * metrics  指标列表
-    * title  监控视图标题
-    * threshold  监控视图指标的阈值
-    * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
-    * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
+    * groupId  **参数解释** 视图分组id **取值范围** 字符串必须以dg开头，包含22个字母和数字，长度为24个字符或者为default，default代表不分组
+    * metrics  **参数解释** 指标列表
+    * title  **参数解释** 监控视图标题 **取值范围** 长度为[1,128]个字符，允许包括以下内容：1、中文汉字；2、拉丁字母；3、英文大小写字母；4、数字(0-9)；5、符号： ” \" ≤ < > & % _ : / ; “ ' ? + , ~ ， （ ） º ( ) [ . -
+    * threshold  **参数解释** 监控视图指标的阈值 **取值范围** 最小值为0，最大值为1.7976931348623157e+308
+    * thresholdEnabled  **参数解释** 阈值是否展示 **取值范围** - true:展示 - false:不展示
+    * view  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图
+    * metricDisplayMode  **参数解释** 指标展示类型 **取值范围** - single:单指标展示 - multiple:多指标展示
     * properties  properties
     * location  location
-    * unit  单位
-    * createTime  监控看板创建时间
+    * unit  **参数解释** 单位 **取值范围** 长度为[0,32]个字符
+    * createTime  **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  视图分区id
-    * metrics  指标列表
-    * title  监控视图标题
-    * threshold  监控视图指标的阈值
-    * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
-    * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
+    * groupId  **参数解释** 视图分组id **取值范围** 字符串必须以dg开头，包含22个字母和数字，长度为24个字符或者为default，default代表不分组
+    * metrics  **参数解释** 指标列表
+    * title  **参数解释** 监控视图标题 **取值范围** 长度为[1,128]个字符，允许包括以下内容：1、中文汉字；2、拉丁字母；3、英文大小写字母；4、数字(0-9)；5、符号： ” \" ≤ < > & % _ : / ; “ ' ? + , ~ ， （ ） º ( ) [ . -
+    * threshold  **参数解释** 监控视图指标的阈值 **取值范围** 最小值为0，最大值为1.7976931348623157e+308
+    * thresholdEnabled  **参数解释** 阈值是否展示 **取值范围** - true:展示 - false:不展示
+    * view  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图
+    * metricDisplayMode  **参数解释** 指标展示类型 **取值范围** - single:单指标展示 - multiple:多指标展示
     * properties  properties
     * location  location
-    * unit  单位
-    * createTime  监控看板创建时间
+    * unit  **参数解释** 单位 **取值范围** 长度为[0,32]个字符
+    * createTime  **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class WidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  视图分区id
-    * metrics  指标列表
-    * title  监控视图标题
-    * threshold  监控视图指标的阈值
-    * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
-    * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
+    * groupId  **参数解释** 视图分组id **取值范围** 字符串必须以dg开头，包含22个字母和数字，长度为24个字符或者为default，default代表不分组
+    * metrics  **参数解释** 指标列表
+    * title  **参数解释** 监控视图标题 **取值范围** 长度为[1,128]个字符，允许包括以下内容：1、中文汉字；2、拉丁字母；3、英文大小写字母；4、数字(0-9)；5、符号： ” \" ≤ < > & % _ : / ; “ ' ? + , ~ ， （ ） º ( ) [ . -
+    * threshold  **参数解释** 监控视图指标的阈值 **取值范围** 最小值为0，最大值为1.7976931348623157e+308
+    * thresholdEnabled  **参数解释** 阈值是否展示 **取值范围** - true:展示 - false:不展示
+    * view  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图
+    * metricDisplayMode  **参数解释** 指标展示类型 **取值范围** - single:单指标展示 - multiple:多指标展示
     * properties  properties
     * location  location
-    * unit  单位
-    * createTime  监控看板创建时间
+    * unit  **参数解释** 单位 **取值范围** 长度为[0,32]个字符
+    * createTime  **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class WidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  视图分区id
-    * metrics  指标列表
-    * title  监控视图标题
-    * threshold  监控视图指标的阈值
-    * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
-    * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
+    * groupId  **参数解释** 视图分组id **取值范围** 字符串必须以dg开头，包含22个字母和数字，长度为24个字符或者为default，default代表不分组
+    * metrics  **参数解释** 指标列表
+    * title  **参数解释** 监控视图标题 **取值范围** 长度为[1,128]个字符，允许包括以下内容：1、中文汉字；2、拉丁字母；3、英文大小写字母；4、数字(0-9)；5、符号： ” \" ≤ < > & % _ : / ; “ ' ? + , ~ ， （ ） º ( ) [ . -
+    * threshold  **参数解释** 监控视图指标的阈值 **取值范围** 最小值为0，最大值为1.7976931348623157e+308
+    * thresholdEnabled  **参数解释** 阈值是否展示 **取值范围** - true:展示 - false:不展示
+    * view  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图
+    * metricDisplayMode  **参数解释** 指标展示类型 **取值范围** - single:单指标展示 - multiple:多指标展示
     * properties  properties
     * location  location
-    * unit  单位
-    * createTime  监控看板创建时间
+    * unit  **参数解释** 单位 **取值范围** 长度为[0,32]个字符
+    * createTime  **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
     *
     * @var string[]
     */
@@ -309,19 +309,13 @@ class WidgetInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['groupId']) && !preg_match("/^dg([a-z]|[A-Z]|[0-9]){22}|default$/", $this->container['groupId'])) {
                 $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /^dg([a-z]|[A-Z]|[0-9]){22}|default$/.";
             }
-        if ($this->container['metrics'] === null) {
-            $invalidProperties[] = "'metrics' can't be null";
-        }
-        if ($this->container['title'] === null) {
-            $invalidProperties[] = "'title' can't be null";
-        }
-            if ((mb_strlen($this->container['title']) > 128)) {
+            if (!is_null($this->container['title']) && (mb_strlen($this->container['title']) > 128)) {
                 $invalidProperties[] = "invalid value for 'title', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['title']) < 1)) {
+            if (!is_null($this->container['title']) && (mb_strlen($this->container['title']) < 1)) {
                 $invalidProperties[] = "invalid value for 'title', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^([\\u4E00-\\u9FFF]|[\\u00C0-\\u0204]|[a-z]|[A-Z]|[0-9]|[\\\"”≤<>&%_:\/;“'?+,~，（） º\\\\(\\\\)\\\\[\\\\.\\\\-])( *([\\u4E00-\\u9FFF]|[\\u00C0-\\u0204]|[a-z]|[A-Z]|[0-9]|[\\\"”≤<>&%_:\/;“'?+,~，（） º\\\\(\\\\)\\\\[\\\\.\\\\-]))*$/", $this->container['title'])) {
+            if (!is_null($this->container['title']) && !preg_match("/^([\\u4E00-\\u9FFF]|[\\u00C0-\\u0204]|[a-z]|[A-Z]|[0-9]|[\\\"”≤<>&%_:\/;“'?+,~，（） º\\\\(\\\\)\\\\[\\\\.\\\\-])( *([\\u4E00-\\u9FFF]|[\\u00C0-\\u0204]|[a-z]|[A-Z]|[0-9]|[\\\"”≤<>&%_:\/;“'?+,~，（） º\\\\(\\\\)\\\\[\\\\.\\\\-]))*$/", $this->container['title'])) {
                 $invalidProperties[] = "invalid value for 'title', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[\\u00C0-\\u0204]|[a-z]|[A-Z]|[0-9]|[\\\"”≤<>&%_:\/;“'?+,~，（） º\\\\(\\\\)\\\\[\\\\.\\\\-])( *([\\u4E00-\\u9FFF]|[\\u00C0-\\u0204]|[a-z]|[A-Z]|[0-9]|[\\\"”≤<>&%_:\/;“'?+,~，（） º\\\\(\\\\)\\\\[\\\\.\\\\-]))*$/.";
             }
             if (!is_null($this->container['threshold']) && ($this->container['threshold'] > 1.7976931348623157E+308)) {
@@ -330,12 +324,6 @@ class WidgetInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['threshold']) && ($this->container['threshold'] < 0)) {
                 $invalidProperties[] = "invalid value for 'threshold', must be bigger than or equal to 0.";
             }
-        if ($this->container['thresholdEnabled'] === null) {
-            $invalidProperties[] = "'thresholdEnabled' can't be null";
-        }
-        if ($this->container['view'] === null) {
-            $invalidProperties[] = "'view' can't be null";
-        }
             $allowedValues = $this->getViewAllowableValues();
                 if (!is_null($this->container['view']) && !in_array($this->container['view'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -344,9 +332,6 @@ class WidgetInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['metricDisplayMode'] === null) {
-            $invalidProperties[] = "'metricDisplayMode' can't be null";
-        }
             $allowedValues = $this->getMetricDisplayModeAllowableValues();
                 if (!is_null($this->container['metricDisplayMode']) && !in_array($this->container['metricDisplayMode'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -355,9 +340,6 @@ class WidgetInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['location'] === null) {
-            $invalidProperties[] = "'location' can't be null";
-        }
             if (!is_null($this->container['unit']) && (mb_strlen($this->container['unit']) > 32)) {
                 $invalidProperties[] = "invalid value for 'unit', the character length must be smaller than or equal to 32.";
             }
@@ -386,7 +368,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  视图分区id
+    *  **参数解释** 视图分组id **取值范围** 字符串必须以dg开头，包含22个字母和数字，长度为24个字符或者为default，default代表不分组
     *
     * @return string|null
     */
@@ -398,7 +380,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 视图分区id
+    * @param string|null $groupId **参数解释** 视图分组id **取值范围** 字符串必须以dg开头，包含22个字母和数字，长度为24个字符或者为default，default代表不分组
     *
     * @return $this
     */
@@ -410,9 +392,9 @@ class WidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets metrics
-    *  指标列表
+    *  **参数解释** 指标列表
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\WidgetMetric[]
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\WidgetMetricResp[]|null
     */
     public function getMetrics()
     {
@@ -422,7 +404,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets metrics
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\WidgetMetric[] $metrics 指标列表
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\WidgetMetricResp[]|null $metrics **参数解释** 指标列表
     *
     * @return $this
     */
@@ -434,9 +416,9 @@ class WidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets title
-    *  监控视图标题
+    *  **参数解释** 监控视图标题 **取值范围** 长度为[1,128]个字符，允许包括以下内容：1、中文汉字；2、拉丁字母；3、英文大小写字母；4、数字(0-9)；5、符号： ” \" ≤ < > & % _ : / ; “ ' ? + , ~ ， （ ） º ( ) [ . -
     *
-    * @return string
+    * @return string|null
     */
     public function getTitle()
     {
@@ -446,7 +428,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets title
     *
-    * @param string $title 监控视图标题
+    * @param string|null $title **参数解释** 监控视图标题 **取值范围** 长度为[1,128]个字符，允许包括以下内容：1、中文汉字；2、拉丁字母；3、英文大小写字母；4、数字(0-9)；5、符号： ” \" ≤ < > & % _ : / ; “ ' ? + , ~ ， （ ） º ( ) [ . -
     *
     * @return $this
     */
@@ -458,7 +440,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets threshold
-    *  监控视图指标的阈值
+    *  **参数解释** 监控视图指标的阈值 **取值范围** 最小值为0，最大值为1.7976931348623157e+308
     *
     * @return double|null
     */
@@ -470,7 +452,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets threshold
     *
-    * @param double|null $threshold 监控视图指标的阈值
+    * @param double|null $threshold **参数解释** 监控视图指标的阈值 **取值范围** 最小值为0，最大值为1.7976931348623157e+308
     *
     * @return $this
     */
@@ -482,9 +464,9 @@ class WidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets thresholdEnabled
-    *  阈值是否展示，true:展示，false:不展示
+    *  **参数解释** 阈值是否展示 **取值范围** - true:展示 - false:不展示
     *
-    * @return bool
+    * @return bool|null
     */
     public function getThresholdEnabled()
     {
@@ -494,7 +476,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets thresholdEnabled
     *
-    * @param bool $thresholdEnabled 阈值是否展示，true:展示，false:不展示
+    * @param bool|null $thresholdEnabled **参数解释** 阈值是否展示 **取值范围** - true:展示 - false:不展示
     *
     * @return $this
     */
@@ -506,9 +488,9 @@ class WidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets view
-    *  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
+    *  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图
     *
-    * @return string
+    * @return string|null
     */
     public function getView()
     {
@@ -518,7 +500,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets view
     *
-    * @param string $view 监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
+    * @param string|null $view **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图
     *
     * @return $this
     */
@@ -530,9 +512,9 @@ class WidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricDisplayMode
-    *  指标展示类型，single 单指标展示，multiple 多指标展示
+    *  **参数解释** 指标展示类型 **取值范围** - single:单指标展示 - multiple:多指标展示
     *
-    * @return string
+    * @return string|null
     */
     public function getMetricDisplayMode()
     {
@@ -542,7 +524,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets metricDisplayMode
     *
-    * @param string $metricDisplayMode 指标展示类型，single 单指标展示，multiple 多指标展示
+    * @param string|null $metricDisplayMode **参数解释** 指标展示类型 **取值范围** - single:单指标展示 - multiple:多指标展示
     *
     * @return $this
     */
@@ -556,7 +538,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     * Gets properties
     *  properties
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoProperties|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoRespProperties|null
     */
     public function getProperties()
     {
@@ -566,7 +548,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets properties
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoProperties|null $properties properties
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoRespProperties|null $properties properties
     *
     * @return $this
     */
@@ -580,7 +562,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     * Gets location
     *  location
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoLocation
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoRespLocation|null
     */
     public function getLocation()
     {
@@ -590,7 +572,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets location
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoLocation $location location
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoRespLocation|null $location location
     *
     * @return $this
     */
@@ -602,7 +584,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
-    *  单位
+    *  **参数解释** 单位 **取值范围** 长度为[0,32]个字符
     *
     * @return string|null
     */
@@ -614,7 +596,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param string|null $unit 单位
+    * @param string|null $unit **参数解释** 单位 **取值范围** 长度为[0,32]个字符
     *
     * @return $this
     */
@@ -626,7 +608,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  监控看板创建时间
+    *  **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
     *
     * @return int|null
     */
@@ -638,7 +620,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 监控看板创建时间
+    * @param int|null $createTime **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
     *
     * @return $this
     */

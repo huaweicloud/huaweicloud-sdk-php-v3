@@ -20,7 +20,7 @@ class EnterpriseIdItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseId  企业项目Id
+    * enterpriseId  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class EnterpriseIdItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseId  企业项目Id
+    * enterpriseId  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class EnterpriseIdItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseId  企业项目Id
+    * enterpriseId  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class EnterpriseIdItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseId  企业项目Id
+    * enterpriseId  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class EnterpriseIdItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseId  企业项目Id
+    * enterpriseId  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class EnterpriseIdItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseId
-    *  企业项目Id
+    *  **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -189,7 +189,7 @@ class EnterpriseIdItem implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseId
     *
-    * @param string|null $enterpriseId 企业项目Id
+    * @param string|null $enterpriseId **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。 **默认取值** 不涉及
     *
     * @return $this
     */

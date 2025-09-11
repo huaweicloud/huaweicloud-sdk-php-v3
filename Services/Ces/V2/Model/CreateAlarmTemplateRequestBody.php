@@ -20,11 +20,11 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
-    * templateType  自定义告警模板类型 0：指标 2： 事件
-    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
-    * isOverwrite  是否对模板名称已经存在的告警模板进行覆盖。true:覆盖同名告警模板；false：不覆盖，新建告警模板。
-    * policies  告警模板策略列表
+    * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
+    * templateType  **参数解释**： 自定义告警模板类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - 0：指标。 - 2： 事件。           **默认取值**： 0
+    * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
+    * isOverwrite  **参数解释**： 是否对模板名称已经存在的告警模板进行覆盖。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:覆盖同名告警模板。 - false：不覆盖，新建告警模板。           **默认取值**： false
+    * policies  **参数解释**： 告警模板策略列表。 **约束限制**： 不超过1000个策略。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
-    * templateType  自定义告警模板类型 0：指标 2： 事件
-    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
-    * isOverwrite  是否对模板名称已经存在的告警模板进行覆盖。true:覆盖同名告警模板；false：不覆盖，新建告警模板。
-    * policies  告警模板策略列表
+    * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
+    * templateType  **参数解释**： 自定义告警模板类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - 0：指标。 - 2： 事件。           **默认取值**： 0
+    * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
+    * isOverwrite  **参数解释**： 是否对模板名称已经存在的告警模板进行覆盖。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:覆盖同名告警模板。 - false：不覆盖，新建告警模板。           **默认取值**： false
+    * policies  **参数解释**： 告警模板策略列表。 **约束限制**： 不超过1000个策略。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
-    * templateType  自定义告警模板类型 0：指标 2： 事件
-    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
-    * isOverwrite  是否对模板名称已经存在的告警模板进行覆盖。true:覆盖同名告警模板；false：不覆盖，新建告警模板。
-    * policies  告警模板策略列表
+    * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
+    * templateType  **参数解释**： 自定义告警模板类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - 0：指标。 - 2： 事件。           **默认取值**： 0
+    * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
+    * isOverwrite  **参数解释**： 是否对模板名称已经存在的告警模板进行覆盖。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:覆盖同名告警模板。 - false：不覆盖，新建告警模板。           **默认取值**： false
+    * policies  **参数解释**： 告警模板策略列表。 **约束限制**： 不超过1000个策略。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
-    * templateType  自定义告警模板类型 0：指标 2： 事件
-    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
-    * isOverwrite  是否对模板名称已经存在的告警模板进行覆盖。true:覆盖同名告警模板；false：不覆盖，新建告警模板。
-    * policies  告警模板策略列表
+    * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
+    * templateType  **参数解释**： 自定义告警模板类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - 0：指标。 - 2： 事件。           **默认取值**： 0
+    * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
+    * isOverwrite  **参数解释**： 是否对模板名称已经存在的告警模板进行覆盖。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:覆盖同名告警模板。 - false：不覆盖，新建告警模板。           **默认取值**： false
+    * policies  **参数解释**： 告警模板策略列表。 **约束限制**： 不超过1000个策略。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
-    * templateType  自定义告警模板类型 0：指标 2： 事件
-    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
-    * isOverwrite  是否对模板名称已经存在的告警模板进行覆盖。true:覆盖同名告警模板；false：不覆盖，新建告警模板。
-    * policies  告警模板策略列表
+    * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
+    * templateType  **参数解释**： 自定义告警模板类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - 0：指标。 - 2： 事件。           **默认取值**： 0
+    * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
+    * isOverwrite  **参数解释**： 是否对模板名称已经存在的告警模板进行覆盖。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:覆盖同名告警模板。 - false：不覆盖，新建告警模板。           **默认取值**： false
+    * policies  **参数解释**： 告警模板策略列表。 **约束限制**： 不超过1000个策略。
     *
     * @var string[]
     */
@@ -265,7 +265,7 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateName
-    *  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
+    *  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -277,7 +277,7 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets templateName
     *
-    * @param string $templateName 告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
+    * @param string $templateName **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -289,7 +289,7 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateType
-    *  自定义告警模板类型 0：指标 2： 事件
+    *  **参数解释**： 自定义告警模板类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - 0：指标。 - 2： 事件。           **默认取值**： 0
     *
     * @return int|null
     */
@@ -301,7 +301,7 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets templateType
     *
-    * @param int|null $templateType 自定义告警模板类型 0：指标 2： 事件
+    * @param int|null $templateType **参数解释**： 自定义告警模板类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - 0：指标。 - 2： 事件。           **默认取值**： 0
     *
     * @return $this
     */
@@ -313,7 +313,7 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateDescription
-    *  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
+    *  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     *
     * @return string|null
     */
@@ -325,7 +325,7 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets templateDescription
     *
-    * @param string|null $templateDescription 告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
+    * @param string|null $templateDescription **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets isOverwrite
-    *  是否对模板名称已经存在的告警模板进行覆盖。true:覆盖同名告警模板；false：不覆盖，新建告警模板。
+    *  **参数解释**： 是否对模板名称已经存在的告警模板进行覆盖。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:覆盖同名告警模板。 - false：不覆盖，新建告警模板。           **默认取值**： false
     *
     * @return bool|null
     */
@@ -349,7 +349,7 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets isOverwrite
     *
-    * @param bool|null $isOverwrite 是否对模板名称已经存在的告警模板进行覆盖。true:覆盖同名告警模板；false：不覆盖，新建告警模板。
+    * @param bool|null $isOverwrite **参数解释**： 是否对模板名称已经存在的告警模板进行覆盖。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:覆盖同名告警模板。 - false：不覆盖，新建告警模板。           **默认取值**： false
     *
     * @return $this
     */
@@ -361,7 +361,7 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets policies
-    *  告警模板策略列表
+    *  **参数解释**： 告警模板策略列表。 **约束限制**： 不超过1000个策略。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\Policies[]
     */
@@ -373,7 +373,7 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets policies
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Policies[] $policies 告警模板策略列表
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Policies[] $policies **参数解释**： 告警模板策略列表。 **约束限制**： 不超过1000个策略。
     *
     * @return $this
     */

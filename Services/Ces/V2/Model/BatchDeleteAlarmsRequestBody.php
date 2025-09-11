@@ -20,7 +20,7 @@ class BatchDeleteAlarmsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmIds  需要批量删除的告警规则的ID列表
+    * alarmIds  **参数解释**： 需要批量删除的告警规则的ID列表。 **约束限制**： 告警规则ID最多为10个，最少为1个。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchDeleteAlarmsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmIds  需要批量删除的告警规则的ID列表
+    * alarmIds  **参数解释**： 需要批量删除的告警规则的ID列表。 **约束限制**： 告警规则ID最多为10个，最少为1个。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchDeleteAlarmsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmIds  需要批量删除的告警规则的ID列表
+    * alarmIds  **参数解释**： 需要批量删除的告警规则的ID列表。 **约束限制**： 告警规则ID最多为10个，最少为1个。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchDeleteAlarmsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmIds  需要批量删除的告警规则的ID列表
+    * alarmIds  **参数解释**： 需要批量删除的告警规则的ID列表。 **约束限制**： 告警规则ID最多为10个，最少为1个。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchDeleteAlarmsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmIds  需要批量删除的告警规则的ID列表
+    * alarmIds  **参数解释**： 需要批量删除的告警规则的ID列表。 **约束限制**： 告警规则ID最多为10个，最少为1个。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class BatchDeleteAlarmsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmIds
-    *  需要批量删除的告警规则的ID列表
+    *  **参数解释**： 需要批量删除的告警规则的ID列表。 **约束限制**： 告警规则ID最多为10个，最少为1个。
     *
     * @return string[]
     */
@@ -189,7 +189,7 @@ class BatchDeleteAlarmsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmIds
     *
-    * @param string[] $alarmIds 需要批量删除的告警规则的ID列表
+    * @param string[] $alarmIds **参数解释**： 需要批量删除的告警规则的ID列表。 **约束限制**： 告警规则ID最多为10个，最少为1个。
     *
     * @return $this
     */

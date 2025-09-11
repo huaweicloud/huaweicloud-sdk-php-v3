@@ -20,9 +20,9 @@ class CcspServiceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterNum  当前租户拥有的专属密码服务集群数量
-    * instanceNum  当前租户拥有的专属密码服务实例数量
-    * instanceQuota  当前租户的可创建的专属密码服务实例配额数
+    * clusterNum  当前租户拥有的密码服务集群数量
+    * instanceNum  当前租户拥有的密码服务实例数量
+    * instanceQuota  当前租户的可创建的密码服务实例配额数
     * instanceDistribution  instanceDistribution
     *
     * @var string[]
@@ -36,9 +36,9 @@ class CcspServiceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterNum  当前租户拥有的专属密码服务集群数量
-    * instanceNum  当前租户拥有的专属密码服务实例数量
-    * instanceQuota  当前租户的可创建的专属密码服务实例配额数
+    * clusterNum  当前租户拥有的密码服务集群数量
+    * instanceNum  当前租户拥有的密码服务实例数量
+    * instanceQuota  当前租户的可创建的密码服务实例配额数
     * instanceDistribution  instanceDistribution
     *
     * @var string[]
@@ -73,9 +73,9 @@ class CcspServiceInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterNum  当前租户拥有的专属密码服务集群数量
-    * instanceNum  当前租户拥有的专属密码服务实例数量
-    * instanceQuota  当前租户的可创建的专属密码服务实例配额数
+    * clusterNum  当前租户拥有的密码服务集群数量
+    * instanceNum  当前租户拥有的密码服务实例数量
+    * instanceQuota  当前租户的可创建的密码服务实例配额数
     * instanceDistribution  instanceDistribution
     *
     * @var string[]
@@ -89,9 +89,9 @@ class CcspServiceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterNum  当前租户拥有的专属密码服务集群数量
-    * instanceNum  当前租户拥有的专属密码服务实例数量
-    * instanceQuota  当前租户的可创建的专属密码服务实例配额数
+    * clusterNum  当前租户拥有的密码服务集群数量
+    * instanceNum  当前租户拥有的密码服务实例数量
+    * instanceQuota  当前租户的可创建的密码服务实例配额数
     * instanceDistribution  instanceDistribution
     *
     * @var string[]
@@ -105,9 +105,9 @@ class CcspServiceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterNum  当前租户拥有的专属密码服务集群数量
-    * instanceNum  当前租户拥有的专属密码服务实例数量
-    * instanceQuota  当前租户的可创建的专属密码服务实例配额数
+    * clusterNum  当前租户拥有的密码服务集群数量
+    * instanceNum  当前租户拥有的密码服务实例数量
+    * instanceQuota  当前租户的可创建的密码服务实例配额数
     * instanceDistribution  instanceDistribution
     *
     * @var string[]
@@ -219,7 +219,7 @@ class CcspServiceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterNum
-    *  当前租户拥有的专属密码服务集群数量
+    *  当前租户拥有的密码服务集群数量
     *
     * @return int
     */
@@ -231,7 +231,7 @@ class CcspServiceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterNum
     *
-    * @param int $clusterNum 当前租户拥有的专属密码服务集群数量
+    * @param int $clusterNum 当前租户拥有的密码服务集群数量
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class CcspServiceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceNum
-    *  当前租户拥有的专属密码服务实例数量
+    *  当前租户拥有的密码服务实例数量
     *
     * @return int
     */
@@ -255,7 +255,7 @@ class CcspServiceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instanceNum
     *
-    * @param int $instanceNum 当前租户拥有的专属密码服务实例数量
+    * @param int $instanceNum 当前租户拥有的密码服务实例数量
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class CcspServiceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceQuota
-    *  当前租户的可创建的专属密码服务实例配额数
+    *  当前租户的可创建的密码服务实例配额数
     *
     * @return int
     */
@@ -279,7 +279,7 @@ class CcspServiceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instanceQuota
     *
-    * @param int $instanceQuota 当前租户的可创建的专属密码服务实例配额数
+    * @param int $instanceQuota 当前租户的可创建的密码服务实例配额数
     *
     * @return $this
     */

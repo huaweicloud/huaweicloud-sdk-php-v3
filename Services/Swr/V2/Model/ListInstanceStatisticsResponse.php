@@ -28,12 +28,12 @@ class ListInstanceStatisticsResponse implements ModelInterface, ArrayAccess
     * imageRepoQuota  镜像的配额
     * replicaPolicyQuota  镜像同步策略的配额
     * retentionPolicyQuota  镜像老化策略的配额
-    * notifyPolicyQuota  触发器策略的配额
+    * notifyPolicyQuota  触发器的配额
     * replicaRegistryQuota  镜像同步的目标仓库配额
     * signPolicyQuota  镜像签名策略的配额
     * replicaPolicyCount  镜像同步策略总数
     * retentionPolicyCount  镜像老化策略的总数
-    * notifyPolicyCount  触发器策略的总数
+    * notifyPolicyCount  触发器的总数
     * replicaRegistryCount  镜像同步策略的目标仓库总数
     * intranetEndpointQuota  内网访问控制的配额
     * intranetEndpointCount  内网访问控制的总数
@@ -72,12 +72,12 @@ class ListInstanceStatisticsResponse implements ModelInterface, ArrayAccess
     * imageRepoQuota  镜像的配额
     * replicaPolicyQuota  镜像同步策略的配额
     * retentionPolicyQuota  镜像老化策略的配额
-    * notifyPolicyQuota  触发器策略的配额
+    * notifyPolicyQuota  触发器的配额
     * replicaRegistryQuota  镜像同步的目标仓库配额
     * signPolicyQuota  镜像签名策略的配额
     * replicaPolicyCount  镜像同步策略总数
     * retentionPolicyCount  镜像老化策略的总数
-    * notifyPolicyCount  触发器策略的总数
+    * notifyPolicyCount  触发器的总数
     * replicaRegistryCount  镜像同步策略的目标仓库总数
     * intranetEndpointQuota  内网访问控制的配额
     * intranetEndpointCount  内网访问控制的总数
@@ -137,12 +137,12 @@ class ListInstanceStatisticsResponse implements ModelInterface, ArrayAccess
     * imageRepoQuota  镜像的配额
     * replicaPolicyQuota  镜像同步策略的配额
     * retentionPolicyQuota  镜像老化策略的配额
-    * notifyPolicyQuota  触发器策略的配额
+    * notifyPolicyQuota  触发器的配额
     * replicaRegistryQuota  镜像同步的目标仓库配额
     * signPolicyQuota  镜像签名策略的配额
     * replicaPolicyCount  镜像同步策略总数
     * retentionPolicyCount  镜像老化策略的总数
-    * notifyPolicyCount  触发器策略的总数
+    * notifyPolicyCount  触发器的总数
     * replicaRegistryCount  镜像同步策略的目标仓库总数
     * intranetEndpointQuota  内网访问控制的配额
     * intranetEndpointCount  内网访问控制的总数
@@ -181,12 +181,12 @@ class ListInstanceStatisticsResponse implements ModelInterface, ArrayAccess
     * imageRepoQuota  镜像的配额
     * replicaPolicyQuota  镜像同步策略的配额
     * retentionPolicyQuota  镜像老化策略的配额
-    * notifyPolicyQuota  触发器策略的配额
+    * notifyPolicyQuota  触发器的配额
     * replicaRegistryQuota  镜像同步的目标仓库配额
     * signPolicyQuota  镜像签名策略的配额
     * replicaPolicyCount  镜像同步策略总数
     * retentionPolicyCount  镜像老化策略的总数
-    * notifyPolicyCount  触发器策略的总数
+    * notifyPolicyCount  触发器的总数
     * replicaRegistryCount  镜像同步策略的目标仓库总数
     * intranetEndpointQuota  内网访问控制的配额
     * intranetEndpointCount  内网访问控制的总数
@@ -225,12 +225,12 @@ class ListInstanceStatisticsResponse implements ModelInterface, ArrayAccess
     * imageRepoQuota  镜像的配额
     * replicaPolicyQuota  镜像同步策略的配额
     * retentionPolicyQuota  镜像老化策略的配额
-    * notifyPolicyQuota  触发器策略的配额
+    * notifyPolicyQuota  触发器的配额
     * replicaRegistryQuota  镜像同步的目标仓库配额
     * signPolicyQuota  镜像签名策略的配额
     * replicaPolicyCount  镜像同步策略总数
     * retentionPolicyCount  镜像老化策略的总数
-    * notifyPolicyCount  触发器策略的总数
+    * notifyPolicyCount  触发器的总数
     * replicaRegistryCount  镜像同步策略的目标仓库总数
     * intranetEndpointQuota  内网访问控制的配额
     * intranetEndpointCount  内网访问控制的总数
@@ -530,7 +530,7 @@ class ListInstanceStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets notifyPolicyQuota
-    *  触发器策略的配额
+    *  触发器的配额
     *
     * @return int|null
     */
@@ -542,7 +542,7 @@ class ListInstanceStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets notifyPolicyQuota
     *
-    * @param int|null $notifyPolicyQuota 触发器策略的配额
+    * @param int|null $notifyPolicyQuota 触发器的配额
     *
     * @return $this
     */
@@ -650,7 +650,7 @@ class ListInstanceStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets notifyPolicyCount
-    *  触发器策略的总数
+    *  触发器的总数
     *
     * @return int|null
     */
@@ -662,7 +662,7 @@ class ListInstanceStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets notifyPolicyCount
     *
-    * @param int|null $notifyPolicyCount 触发器策略的总数
+    * @param int|null $notifyPolicyCount 触发器的总数
     *
     * @return $this
     */

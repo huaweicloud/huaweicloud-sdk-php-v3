@@ -23,24 +23,32 @@ class ShowVmMonitorResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * datapoints  指标的时间序列
     * metricName  指标名称，比如:cpu_util
+    * max  最大值，未计算默认为0
+    * average  平均值，未计算默认为0
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'datapoints' => '\HuaweiCloud\SDK\Cpcs\V1\Model\Datapoint[]',
-            'metricName' => 'string'
+            'metricName' => 'string',
+            'max' => 'double',
+            'average' => 'double'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * datapoints  指标的时间序列
     * metricName  指标名称，比如:cpu_util
+    * max  最大值，未计算默认为0
+    * average  平均值，未计算默认为0
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'datapoints' => null,
-        'metricName' => null
+        'metricName' => null,
+        'max' => 'double',
+        'average' => 'double'
     ];
 
     /**
@@ -68,36 +76,48 @@ class ShowVmMonitorResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * datapoints  指标的时间序列
     * metricName  指标名称，比如:cpu_util
+    * max  最大值，未计算默认为0
+    * average  平均值，未计算默认为0
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'datapoints' => 'datapoints',
-            'metricName' => 'metric_name'
+            'metricName' => 'metric_name',
+            'max' => 'max',
+            'average' => 'average'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * datapoints  指标的时间序列
     * metricName  指标名称，比如:cpu_util
+    * max  最大值，未计算默认为0
+    * average  平均值，未计算默认为0
     *
     * @var string[]
     */
     protected static $setters = [
             'datapoints' => 'setDatapoints',
-            'metricName' => 'setMetricName'
+            'metricName' => 'setMetricName',
+            'max' => 'setMax',
+            'average' => 'setAverage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * datapoints  指标的时间序列
     * metricName  指标名称，比如:cpu_util
+    * max  最大值，未计算默认为0
+    * average  平均值，未计算默认为0
     *
     * @var string[]
     */
     protected static $getters = [
             'datapoints' => 'getDatapoints',
-            'metricName' => 'getMetricName'
+            'metricName' => 'getMetricName',
+            'max' => 'getMax',
+            'average' => 'getAverage'
     ];
 
     /**
@@ -160,6 +180,8 @@ class ShowVmMonitorResponse implements ModelInterface, ArrayAccess
     {
         $this->container['datapoints'] = isset($data['datapoints']) ? $data['datapoints'] : null;
         $this->container['metricName'] = isset($data['metricName']) ? $data['metricName'] : null;
+        $this->container['max'] = isset($data['max']) ? $data['max'] : null;
+        $this->container['average'] = isset($data['average']) ? $data['average'] : null;
     }
 
     /**
@@ -229,6 +251,54 @@ class ShowVmMonitorResponse implements ModelInterface, ArrayAccess
     public function setMetricName($metricName)
     {
         $this->container['metricName'] = $metricName;
+        return $this;
+    }
+
+    /**
+    * Gets max
+    *  最大值，未计算默认为0
+    *
+    * @return double|null
+    */
+    public function getMax()
+    {
+        return $this->container['max'];
+    }
+
+    /**
+    * Sets max
+    *
+    * @param double|null $max 最大值，未计算默认为0
+    *
+    * @return $this
+    */
+    public function setMax($max)
+    {
+        $this->container['max'] = $max;
+        return $this;
+    }
+
+    /**
+    * Gets average
+    *  平均值，未计算默认为0
+    *
+    * @return double|null
+    */
+    public function getAverage()
+    {
+        return $this->container['average'];
+    }
+
+    /**
+    * Sets average
+    *
+    * @param double|null $average 平均值，未计算默认为0
+    *
+    * @return $this
+    */
+    public function setAverage($average)
+    {
+        $this->container['average'] = $average;
         return $this;
     }
 

@@ -29,7 +29,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     * sqlModel  SQL模板,仅当任务类型为SQL_ID时，返回该值。
     * keyWords  关键词，仅当任务类型为SQL_TYPE时，返回该值。
     * status  限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
-    * instanceId  实例id。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * ruleName  规则名。
     * parallelSize  并发数。
     * startTime  限流任务开始时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
@@ -79,7 +79,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     * sqlModel  SQL模板,仅当任务类型为SQL_ID时，返回该值。
     * keyWords  关键词，仅当任务类型为SQL_TYPE时，返回该值。
     * status  限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
-    * instanceId  实例id。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * ruleName  规则名。
     * parallelSize  并发数。
     * startTime  限流任务开始时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
@@ -150,7 +150,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     * sqlModel  SQL模板,仅当任务类型为SQL_ID时，返回该值。
     * keyWords  关键词，仅当任务类型为SQL_TYPE时，返回该值。
     * status  限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
-    * instanceId  实例id。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * ruleName  规则名。
     * parallelSize  并发数。
     * startTime  限流任务开始时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
@@ -200,7 +200,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     * sqlModel  SQL模板,仅当任务类型为SQL_ID时，返回该值。
     * keyWords  关键词，仅当任务类型为SQL_TYPE时，返回该值。
     * status  限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
-    * instanceId  实例id。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * ruleName  规则名。
     * parallelSize  并发数。
     * startTime  限流任务开始时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
@@ -250,7 +250,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     * sqlModel  SQL模板,仅当任务类型为SQL_ID时，返回该值。
     * keyWords  关键词，仅当任务类型为SQL_TYPE时，返回该值。
     * status  限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
-    * instanceId  实例id。
+    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * ruleName  规则名。
     * parallelSize  并发数。
     * startTime  限流任务开始时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
@@ -610,7 +610,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例id。
+    *  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return string|null
     */
@@ -622,7 +622,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例id。
+    * @param string|null $instanceId **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */

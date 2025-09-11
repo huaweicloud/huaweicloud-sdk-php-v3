@@ -20,8 +20,8 @@ class DatabaseSchemaTableResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tableName  表名称
-    * schemaName  schema名称
+    * tableName  **参数解释**: 表名称。 **取值范围**: 不涉及。
+    * schemaName  **参数解释**: schema名称。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DatabaseSchemaTableResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tableName  表名称
-    * schemaName  schema名称
+    * tableName  **参数解释**: 表名称。 **取值范围**: 不涉及。
+    * schemaName  **参数解释**: schema名称。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DatabaseSchemaTableResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tableName  表名称
-    * schemaName  schema名称
+    * tableName  **参数解释**: 表名称。 **取值范围**: 不涉及。
+    * schemaName  **参数解释**: schema名称。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DatabaseSchemaTableResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tableName  表名称
-    * schemaName  schema名称
+    * tableName  **参数解释**: 表名称。 **取值范围**: 不涉及。
+    * schemaName  **参数解释**: schema名称。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DatabaseSchemaTableResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tableName  表名称
-    * schemaName  schema名称
+    * tableName  **参数解释**: 表名称。 **取值范围**: 不涉及。
+    * schemaName  **参数解释**: schema名称。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class DatabaseSchemaTableResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableName
-    *  表名称
+    *  **参数解释**: 表名称。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class DatabaseSchemaTableResult implements ModelInterface, ArrayAccess
     /**
     * Sets tableName
     *
-    * @param string|null $tableName 表名称
+    * @param string|null $tableName **参数解释**: 表名称。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class DatabaseSchemaTableResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets schemaName
-    *  schema名称
+    *  **参数解释**: schema名称。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class DatabaseSchemaTableResult implements ModelInterface, ArrayAccess
     /**
     * Sets schemaName
     *
-    * @param string|null $schemaName schema名称
+    * @param string|null $schemaName **参数解释**: schema名称。 **取值范围**: 不涉及。
     *
     * @return $this
     */

@@ -20,21 +20,29 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * page  当前页
+    * size  每页大小
     * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'page' => 'int',
+            'size' => 'int',
             'riskLevels' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * page  当前页
+    * size  每页大小
     * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'page' => 'int32',
+        'size' => 'int32',
         'riskLevels' => null
     ];
 
@@ -61,31 +69,43 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * page  当前页
+    * size  每页大小
     * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'page' => 'page',
+            'size' => 'size',
             'riskLevels' => 'risk_levels'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * page  当前页
+    * size  每页大小
     * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
     *
     * @var string[]
     */
     protected static $setters = [
+            'page' => 'setPage',
+            'size' => 'setSize',
             'riskLevels' => 'setRiskLevels'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * page  当前页
+    * size  每页大小
     * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
     *
     * @var string[]
     */
     protected static $getters = [
+            'page' => 'getPage',
+            'size' => 'getSize',
             'riskLevels' => 'getRiskLevels'
     ];
 
@@ -147,6 +167,8 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['riskLevels'] = isset($data['riskLevels']) ? $data['riskLevels'] : null;
     }
 
@@ -170,6 +192,54 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets page
+    *  当前页
+    *
+    * @return int|null
+    */
+    public function getPage()
+    {
+        return $this->container['page'];
+    }
+
+    /**
+    * Sets page
+    *
+    * @param int|null $page 当前页
+    *
+    * @return $this
+    */
+    public function setPage($page)
+    {
+        $this->container['page'] = $page;
+        return $this;
+    }
+
+    /**
+    * Gets size
+    *  每页大小
+    *
+    * @return int|null
+    */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+    * Sets size
+    *
+    * @param int|null $size 每页大小
+    *
+    * @return $this
+    */
+    public function setSize($size)
+    {
+        $this->container['size'] = $size;
+        return $this;
     }
 
     /**

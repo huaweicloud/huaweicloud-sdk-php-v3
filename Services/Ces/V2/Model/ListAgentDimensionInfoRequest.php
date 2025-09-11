@@ -22,7 +22,7 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  **参数描述**： 资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制**： 不涉及。 **取值范围**： 字符串长度为36。 **默认取值**： 不涉及。
     * dimName  **参数描述**： 维度名称。 **约束限制**： 不涉及。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。 **默认取值**： 不涉及。
-    * dimValue  **参数描述**： 维度值。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
+    * dimValue  **参数描述**： 维度值(建议：同一个instance_id下相同dim_value对应的原始维度值origin_value是一样的，无需多次调用，建议根据instance_id + dim_value作为key进行缓存重复使用)。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
     * offset  **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为2147483647。 **默认取值**： 0
     * limit  **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为1000。 **默认取值**： 1000
     *
@@ -40,7 +40,7 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  **参数描述**： 资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制**： 不涉及。 **取值范围**： 字符串长度为36。 **默认取值**： 不涉及。
     * dimName  **参数描述**： 维度名称。 **约束限制**： 不涉及。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。 **默认取值**： 不涉及。
-    * dimValue  **参数描述**： 维度值。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
+    * dimValue  **参数描述**： 维度值(建议：同一个instance_id下相同dim_value对应的原始维度值origin_value是一样的，无需多次调用，建议根据instance_id + dim_value作为key进行缓存重复使用)。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
     * offset  **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为2147483647。 **默认取值**： 0
     * limit  **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为1000。 **默认取值**： 1000
     *
@@ -79,7 +79,7 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * instanceId  **参数描述**： 资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制**： 不涉及。 **取值范围**： 字符串长度为36。 **默认取值**： 不涉及。
     * dimName  **参数描述**： 维度名称。 **约束限制**： 不涉及。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。 **默认取值**： 不涉及。
-    * dimValue  **参数描述**： 维度值。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
+    * dimValue  **参数描述**： 维度值(建议：同一个instance_id下相同dim_value对应的原始维度值origin_value是一样的，无需多次调用，建议根据instance_id + dim_value作为key进行缓存重复使用)。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
     * offset  **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为2147483647。 **默认取值**： 0
     * limit  **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为1000。 **默认取值**： 1000
     *
@@ -97,7 +97,7 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  **参数描述**： 资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制**： 不涉及。 **取值范围**： 字符串长度为36。 **默认取值**： 不涉及。
     * dimName  **参数描述**： 维度名称。 **约束限制**： 不涉及。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。 **默认取值**： 不涉及。
-    * dimValue  **参数描述**： 维度值。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
+    * dimValue  **参数描述**： 维度值(建议：同一个instance_id下相同dim_value对应的原始维度值origin_value是一样的，无需多次调用，建议根据instance_id + dim_value作为key进行缓存重复使用)。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
     * offset  **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为2147483647。 **默认取值**： 0
     * limit  **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为1000。 **默认取值**： 1000
     *
@@ -115,7 +115,7 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  **参数描述**： 资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制**： 不涉及。 **取值范围**： 字符串长度为36。 **默认取值**： 不涉及。
     * dimName  **参数描述**： 维度名称。 **约束限制**： 不涉及。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。 **默认取值**： 不涉及。
-    * dimValue  **参数描述**： 维度值。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
+    * dimValue  **参数描述**： 维度值(建议：同一个instance_id下相同dim_value对应的原始维度值origin_value是一样的，无需多次调用，建议根据instance_id + dim_value作为key进行缓存重复使用)。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
     * offset  **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为2147483647。 **默认取值**： 0
     * limit  **参数描述**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为1000。 **默认取值**： 1000
     *
@@ -331,7 +331,7 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimValue
-    *  **参数描述**： 维度值。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
+    *  **参数描述**： 维度值(建议：同一个instance_id下相同dim_value对应的原始维度值origin_value是一样的，无需多次调用，建议根据instance_id + dim_value作为key进行缓存重复使用)。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -343,7 +343,7 @@ class ListAgentDimensionInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dimValue
     *
-    * @param string|null $dimValue **参数描述**： 维度值。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
+    * @param string|null $dimValue **参数描述**： 维度值(建议：同一个instance_id下相同dim_value对应的原始维度值origin_value是一样的，无需多次调用，建议根据instance_id + dim_value作为key进行缓存重复使用)。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
     *
     * @return $this
     */

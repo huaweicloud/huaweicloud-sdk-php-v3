@@ -21,7 +21,7 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * time  time
-    * risk  风险级别 - LOW - MEDIUM - HIGH
+    * risk  风险级别 - LOW: 低 - MEDIUM：中 - HIGH：高
     * type  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
     * status  告警确认状态 - DONE: 已确认 - UNDO: 未确认
     * page  页码
@@ -31,7 +31,7 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'time' => '\HuaweiCloud\SDK\Dbss\V1\Model\AlarmLogRequestTime',
-            'risk' => 'string',
+            'risk' => 'string[]',
             'type' => 'string',
             'status' => 'string',
             'page' => 'int',
@@ -41,7 +41,7 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * time  time
-    * risk  风险级别 - LOW - MEDIUM - HIGH
+    * risk  风险级别 - LOW: 低 - MEDIUM：中 - HIGH：高
     * type  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
     * status  告警确认状态 - DONE: 已确认 - UNDO: 未确认
     * page  页码
@@ -82,7 +82,7 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * time  time
-    * risk  风险级别 - LOW - MEDIUM - HIGH
+    * risk  风险级别 - LOW: 低 - MEDIUM：中 - HIGH：高
     * type  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
     * status  告警确认状态 - DONE: 已确认 - UNDO: 未确认
     * page  页码
@@ -102,7 +102,7 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * time  time
-    * risk  风险级别 - LOW - MEDIUM - HIGH
+    * risk  风险级别 - LOW: 低 - MEDIUM：中 - HIGH：高
     * type  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
     * status  告警确认状态 - DONE: 已确认 - UNDO: 未确认
     * page  页码
@@ -122,7 +122,7 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * time  time
-    * risk  风险级别 - LOW - MEDIUM - HIGH
+    * risk  风险级别 - LOW: 低 - MEDIUM：中 - HIGH：高
     * type  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
     * status  告警确认状态 - DONE: 已确认 - UNDO: 未确认
     * page  页码
@@ -179,26 +179,9 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const RISK_LOW = 'LOW';
-    const RISK_MEDIUM = 'MEDIUM';
-    const RISK_HIGH = 'HIGH';
     const STATUS_DONE = 'DONE';
     const STATUS_UNDO = 'UNDO';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getRiskAllowableValues()
-    {
-        return [
-            self::RISK_LOW,
-            self::RISK_MEDIUM,
-            self::RISK_HIGH,
-        ];
-    }
 
     /**
     * Gets allowable values of the enum
@@ -248,14 +231,6 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
         if ($this->container['time'] === null) {
             $invalidProperties[] = "'time' can't be null";
         }
-            $allowedValues = $this->getRiskAllowableValues();
-                if (!is_null($this->container['risk']) && !in_array($this->container['risk'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'risk', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -264,6 +239,12 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['page'] === null) {
+            $invalidProperties[] = "'page' can't be null";
+        }
+        if ($this->container['size'] === null) {
+            $invalidProperties[] = "'size' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -304,9 +285,9 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets risk
-    *  风险级别 - LOW - MEDIUM - HIGH
+    *  风险级别 - LOW: 低 - MEDIUM：中 - HIGH：高
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getRisk()
     {
@@ -316,7 +297,7 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     /**
     * Sets risk
     *
-    * @param string|null $risk 风险级别 - LOW - MEDIUM - HIGH
+    * @param string[]|null $risk 风险级别 - LOW: 低 - MEDIUM：中 - HIGH：高
     *
     * @return $this
     */
@@ -378,7 +359,7 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     * Gets page
     *  页码
     *
-    * @return int|null
+    * @return int
     */
     public function getPage()
     {
@@ -388,7 +369,7 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     /**
     * Sets page
     *
-    * @param int|null $page 页码
+    * @param int $page 页码
     *
     * @return $this
     */
@@ -402,7 +383,7 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     * Gets size
     *  每页条数
     *
-    * @return int|null
+    * @return int
     */
     public function getSize()
     {
@@ -412,7 +393,7 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 每页条数
+    * @param int $size 每页条数
     *
     * @return $this
     */

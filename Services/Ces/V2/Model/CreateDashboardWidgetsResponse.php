@@ -21,7 +21,7 @@ class CreateDashboardWidgetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * widgetIds  批量创建监控视图返回结果
+    * widgetIds  **参数解释** 批量创建监控视图返回结果
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateDashboardWidgetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * widgetIds  批量创建监控视图返回结果
+    * widgetIds  **参数解释** 批量创建监控视图返回结果
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateDashboardWidgetsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * widgetIds  批量创建监控视图返回结果
+    * widgetIds  **参数解释** 批量创建监控视图返回结果
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateDashboardWidgetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * widgetIds  批量创建监控视图返回结果
+    * widgetIds  **参数解释** 批量创建监控视图返回结果
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateDashboardWidgetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * widgetIds  批量创建监控视图返回结果
+    * widgetIds  **参数解释** 批量创建监控视图返回结果
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class CreateDashboardWidgetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets widgetIds
-    *  批量创建监控视图返回结果
+    *  **参数解释** 批量创建监控视图返回结果
     *
     * @return string[]|null
     */
@@ -187,7 +187,7 @@ class CreateDashboardWidgetsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets widgetIds
     *
-    * @param string[]|null $widgetIds 批量创建监控视图返回结果
+    * @param string[]|null $widgetIds **参数解释** 批量创建监控视图返回结果
     *
     * @return $this
     */

@@ -20,19 +20,19 @@ class UpdateAlarmRulePoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmId  Alarm实例ID
+    * alarmId  **参数解释**： 告警规则ID。 **约束限制**： 不涉及。 **取值范围**： 以al开头，只能由大写字母、小写字母、数字组成，且长度为24个字符。           **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'alarmId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Ces\V2\Model\PoliciesReqV2'
+            'body' => '\HuaweiCloud\SDK\Ces\V2\Model\UpdateAlarmRulePoliciesReqBodyV2'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmId  Alarm实例ID
+    * alarmId  **参数解释**： 告警规则ID。 **约束限制**： 不涉及。 **取值范围**： 以al开头，只能由大写字母、小写字母、数字组成，且长度为24个字符。           **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateAlarmRulePoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmId  Alarm实例ID
+    * alarmId  **参数解释**： 告警规则ID。 **约束限制**： 不涉及。 **取值范围**： 以al开头，只能由大写字母、小写字母、数字组成，且长度为24个字符。           **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateAlarmRulePoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmId  Alarm实例ID
+    * alarmId  **参数解释**： 告警规则ID。 **约束限制**： 不涉及。 **取值范围**： 以al开头，只能由大写字母、小写字母、数字组成，且长度为24个字符。           **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateAlarmRulePoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmId  Alarm实例ID
+    * alarmId  **参数解释**： 告警规则ID。 **约束限制**： 不涉及。 **取值范围**： 以al开头，只能由大写字母、小写字母、数字组成，且长度为24个字符。           **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -191,7 +191,7 @@ class UpdateAlarmRulePoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmId
-    *  Alarm实例ID
+    *  **参数解释**： 告警规则ID。 **约束限制**： 不涉及。 **取值范围**： 以al开头，只能由大写字母、小写字母、数字组成，且长度为24个字符。           **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class UpdateAlarmRulePoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmId
     *
-    * @param string $alarmId Alarm实例ID
+    * @param string $alarmId **参数解释**： 告警规则ID。 **约束限制**： 不涉及。 **取值范围**： 以al开头，只能由大写字母、小写字母、数字组成，且长度为24个字符。           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -217,7 +217,7 @@ class UpdateAlarmRulePoliciesRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\PoliciesReqV2|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\UpdateAlarmRulePoliciesReqBodyV2|null
     */
     public function getBody()
     {
@@ -227,7 +227,7 @@ class UpdateAlarmRulePoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\PoliciesReqV2|null $body body
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\UpdateAlarmRulePoliciesReqBodyV2|null $body body
     *
     * @return $this
     */

@@ -30,6 +30,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * clientCaCertificates  客户端CA证书列表
     * sslOptions  sslOptions
     * dnsServers  DNS服务器列表
+    * idpName  身份提供商名称。
     * status  服务端状态
     * createdAt  创建时间
     * updatedAt  更新时间
@@ -47,6 +48,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
             'clientCaCertificates' => '\HuaweiCloud\SDK\Vpn\V5\Model\QueryClientCaCertificateBody[]',
             'sslOptions' => '\HuaweiCloud\SDK\Vpn\V5\Model\ShowServerResponseSslOptions',
             'dnsServers' => 'string[]',
+            'idpName' => 'string',
             'status' => 'string',
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime'
@@ -64,6 +66,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * clientCaCertificates  客户端CA证书列表
     * sslOptions  sslOptions
     * dnsServers  DNS服务器列表
+    * idpName  身份提供商名称。
     * status  服务端状态
     * createdAt  创建时间
     * updatedAt  更新时间
@@ -81,6 +84,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
         'clientCaCertificates' => null,
         'sslOptions' => null,
         'dnsServers' => null,
+        'idpName' => null,
         'status' => null,
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time'
@@ -119,6 +123,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * clientCaCertificates  客户端CA证书列表
     * sslOptions  sslOptions
     * dnsServers  DNS服务器列表
+    * idpName  身份提供商名称。
     * status  服务端状态
     * createdAt  创建时间
     * updatedAt  更新时间
@@ -136,6 +141,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
             'clientCaCertificates' => 'client_ca_certificates',
             'sslOptions' => 'ssl_options',
             'dnsServers' => 'dns_servers',
+            'idpName' => 'idp_name',
             'status' => 'status',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at'
@@ -153,6 +159,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * clientCaCertificates  客户端CA证书列表
     * sslOptions  sslOptions
     * dnsServers  DNS服务器列表
+    * idpName  身份提供商名称。
     * status  服务端状态
     * createdAt  创建时间
     * updatedAt  更新时间
@@ -170,6 +177,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
             'clientCaCertificates' => 'setClientCaCertificates',
             'sslOptions' => 'setSslOptions',
             'dnsServers' => 'setDnsServers',
+            'idpName' => 'setIdpName',
             'status' => 'setStatus',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt'
@@ -187,6 +195,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * clientCaCertificates  客户端CA证书列表
     * sslOptions  sslOptions
     * dnsServers  DNS服务器列表
+    * idpName  身份提供商名称。
     * status  服务端状态
     * createdAt  创建时间
     * updatedAt  更新时间
@@ -204,6 +213,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
             'clientCaCertificates' => 'getClientCaCertificates',
             'sslOptions' => 'getSslOptions',
             'dnsServers' => 'getDnsServers',
+            'idpName' => 'getIdpName',
             'status' => 'getStatus',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt'
@@ -277,6 +287,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
         $this->container['clientCaCertificates'] = isset($data['clientCaCertificates']) ? $data['clientCaCertificates'] : null;
         $this->container['sslOptions'] = isset($data['sslOptions']) ? $data['sslOptions'] : null;
         $this->container['dnsServers'] = isset($data['dnsServers']) ? $data['dnsServers'] : null;
+        $this->container['idpName'] = isset($data['idpName']) ? $data['idpName'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
@@ -541,6 +552,30 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     public function setDnsServers($dnsServers)
     {
         $this->container['dnsServers'] = $dnsServers;
+        return $this;
+    }
+
+    /**
+    * Gets idpName
+    *  身份提供商名称。
+    *
+    * @return string|null
+    */
+    public function getIdpName()
+    {
+        return $this->container['idpName'];
+    }
+
+    /**
+    * Sets idpName
+    *
+    * @param string|null $idpName 身份提供商名称。
+    *
+    * @return $this
+    */
+    public function setIdpName($idpName)
+    {
+        $this->container['idpName'] = $idpName;
         return $this;
     }
 

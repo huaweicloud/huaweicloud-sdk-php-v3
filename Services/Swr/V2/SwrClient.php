@@ -4517,9 +4517,9 @@ class SwrClient extends Client
     }
 
     /**
-     * 创建触发器策略
+     * 创建触发器
      *
-     * 创建触发器策略
+     * 创建触发器
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4857,9 +4857,9 @@ class SwrClient extends Client
     }
 
     /**
-     * 删除制品
+     * 删除制品版本
      *
-     * 删除制品
+     * 删除制品版本
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5587,9 +5587,80 @@ class SwrClient extends Client
     }
 
     /**
-     * 删除触发器策略
+     * 删除制品的Tag
      *
-     * 删除触发器策略
+     * 删除制品Tag
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteInstanceTag($request)
+    {
+        return $this->deleteInstanceTagWithHttpInfo($request);
+    }
+
+    public function deleteInstanceTagWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/instances/{instance_id}/namespaces/{namespace_name}/repositories/{repository_name}/tags/{tag_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['namespaceName'] !== null) {
+            $pathParams['namespace_name'] = $localVarParams['namespaceName'];
+        }
+        if ($localVarParams['repositoryName'] !== null) {
+            $pathParams['repository_name'] = $localVarParams['repositoryName'];
+        }
+        if ($localVarParams['tagName'] !== null) {
+            $pathParams['tag_name'] = $localVarParams['tagName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Swr\V2\Model\DeleteInstanceTagResponse',
+            $requestType='\HuaweiCloud\SDK\Swr\V2\Model\DeleteInstanceTagRequest');
+    }
+
+    /**
+     * 删除触发器
+     *
+     * 删除触发器
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6417,7 +6488,7 @@ class SwrClient extends Client
     /**
      * 获取仓库实例的所有制品版本列表
      *
-     * 获取仓库实例的所有制品版本列表（此接口只在企业仓库实例版本大于25.6.0以上的版本才支持）
+     * 获取仓库实例的所有制品版本列表
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8327,9 +8398,9 @@ class SwrClient extends Client
     }
 
     /**
-     * 获取触发器策略列表
+     * 获取触发器列表
      *
-     * 获取触发器策略列表
+     * 获取触发器列表
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8756,9 +8827,9 @@ class SwrClient extends Client
     }
 
     /**
-     * 获取制品详情
+     * 获取制品版本详情
      *
-     * 获取制品详情
+     * 获取制品版本详情
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9616,9 +9687,9 @@ class SwrClient extends Client
     }
 
     /**
-     * 获取触发器策略详情
+     * 获取触发器详情
      *
-     * 获取触发器策略详情
+     * 获取触发器详情
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10026,7 +10097,7 @@ class SwrClient extends Client
     /**
      * 更新公网访问白名单
      *
-     * 更新公网访问白名单，更新为全量更新方式
+     * 更新公网访问白名单，更新方式为全量更新方式
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10574,9 +10645,9 @@ class SwrClient extends Client
     }
 
     /**
-     * 修改触发器策略
+     * 修改触发器
      *
-     * 修改触发器策略
+     * 修改触发器
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

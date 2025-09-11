@@ -20,8 +20,8 @@ class CombRelation implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * logicalOperator  逻辑运算符  ALL 所有条件匹配成功  ANY 任意条件匹配成功
-    * conditions  组合匹配资源分组的匹配条件
+    * logicalOperator  **参数解释** 逻辑运算符。 **约束限制** 不涉及。 **取值范围** - ALL: 所有条件匹配成功。 - ANY: 任意条件匹配成功。 **默认取值** 不涉及。
+    * conditions  **参数解释** 组合匹配资源分组的匹配条件。 **约束限制** 不超过50个条件。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CombRelation implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * logicalOperator  逻辑运算符  ALL 所有条件匹配成功  ANY 任意条件匹配成功
-    * conditions  组合匹配资源分组的匹配条件
+    * logicalOperator  **参数解释** 逻辑运算符。 **约束限制** 不涉及。 **取值范围** - ALL: 所有条件匹配成功。 - ANY: 任意条件匹配成功。 **默认取值** 不涉及。
+    * conditions  **参数解释** 组合匹配资源分组的匹配条件。 **约束限制** 不超过50个条件。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CombRelation implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * logicalOperator  逻辑运算符  ALL 所有条件匹配成功  ANY 任意条件匹配成功
-    * conditions  组合匹配资源分组的匹配条件
+    * logicalOperator  **参数解释** 逻辑运算符。 **约束限制** 不涉及。 **取值范围** - ALL: 所有条件匹配成功。 - ANY: 任意条件匹配成功。 **默认取值** 不涉及。
+    * conditions  **参数解释** 组合匹配资源分组的匹配条件。 **约束限制** 不超过50个条件。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CombRelation implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * logicalOperator  逻辑运算符  ALL 所有条件匹配成功  ANY 任意条件匹配成功
-    * conditions  组合匹配资源分组的匹配条件
+    * logicalOperator  **参数解释** 逻辑运算符。 **约束限制** 不涉及。 **取值范围** - ALL: 所有条件匹配成功。 - ANY: 任意条件匹配成功。 **默认取值** 不涉及。
+    * conditions  **参数解释** 组合匹配资源分组的匹配条件。 **约束限制** 不超过50个条件。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CombRelation implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * logicalOperator  逻辑运算符  ALL 所有条件匹配成功  ANY 任意条件匹配成功
-    * conditions  组合匹配资源分组的匹配条件
+    * logicalOperator  **参数解释** 逻辑运算符。 **约束限制** 不涉及。 **取值范围** - ALL: 所有条件匹配成功。 - ANY: 任意条件匹配成功。 **默认取值** 不涉及。
+    * conditions  **参数解释** 组合匹配资源分组的匹配条件。 **约束限制** 不超过50个条件。
     *
     * @var string[]
     */
@@ -214,7 +214,7 @@ class CombRelation implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalOperator
-    *  逻辑运算符  ALL 所有条件匹配成功  ANY 任意条件匹配成功
+    *  **参数解释** 逻辑运算符。 **约束限制** 不涉及。 **取值范围** - ALL: 所有条件匹配成功。 - ANY: 任意条件匹配成功。 **默认取值** 不涉及。
     *
     * @return string
     */
@@ -226,7 +226,7 @@ class CombRelation implements ModelInterface, ArrayAccess
     /**
     * Sets logicalOperator
     *
-    * @param string $logicalOperator 逻辑运算符  ALL 所有条件匹配成功  ANY 任意条件匹配成功
+    * @param string $logicalOperator **参数解释** 逻辑运算符。 **约束限制** 不涉及。 **取值范围** - ALL: 所有条件匹配成功。 - ANY: 任意条件匹配成功。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class CombRelation implements ModelInterface, ArrayAccess
 
     /**
     * Gets conditions
-    *  组合匹配资源分组的匹配条件
+    *  **参数解释** 组合匹配资源分组的匹配条件。 **约束限制** 不超过50个条件。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\Condition[]
     */
@@ -250,7 +250,7 @@ class CombRelation implements ModelInterface, ArrayAccess
     /**
     * Sets conditions
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Condition[] $conditions 组合匹配资源分组的匹配条件
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Condition[] $conditions **参数解释** 组合匹配资源分组的匹配条件。 **约束限制** 不超过50个条件。
     *
     * @return $this
     */

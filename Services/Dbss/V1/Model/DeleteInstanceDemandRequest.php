@@ -20,7 +20,7 @@ class DeleteInstanceDemandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  实例ID。可在查询实例列表接口的ID字段获取。
+    * id  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * deletePublicip  是否删除弹性IP
     * deleteVolume  是否删除磁盘
     *
@@ -34,7 +34,7 @@ class DeleteInstanceDemandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  实例ID。可在查询实例列表接口的ID字段获取。
+    * id  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * deletePublicip  是否删除弹性IP
     * deleteVolume  是否删除磁盘
     *
@@ -69,7 +69,7 @@ class DeleteInstanceDemandRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  实例ID。可在查询实例列表接口的ID字段获取。
+    * id  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * deletePublicip  是否删除弹性IP
     * deleteVolume  是否删除磁盘
     *
@@ -83,7 +83,7 @@ class DeleteInstanceDemandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  实例ID。可在查询实例列表接口的ID字段获取。
+    * id  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * deletePublicip  是否删除弹性IP
     * deleteVolume  是否删除磁盘
     *
@@ -97,7 +97,7 @@ class DeleteInstanceDemandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  实例ID。可在查询实例列表接口的ID字段获取。
+    * id  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * deletePublicip  是否删除弹性IP
     * deleteVolume  是否删除磁盘
     *
@@ -199,7 +199,7 @@ class DeleteInstanceDemandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  实例ID。可在查询实例列表接口的ID字段获取。
+    *  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -211,7 +211,7 @@ class DeleteInstanceDemandRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 实例ID。可在查询实例列表接口的ID字段获取。
+    * @param string $id **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     *
     * @return $this
     */
