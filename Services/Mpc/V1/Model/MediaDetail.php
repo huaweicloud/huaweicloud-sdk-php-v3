@@ -26,6 +26,7 @@ class MediaDetail implements ModelInterface, ArrayAccess
     * replaceSubIndex  被替换的子索引文件
     * outputThumbnailPara  outputThumbnailPara
     * outputWatermarkParas  outputWatermarkParas
+    * metadata  输出文件的metadata信息
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class MediaDetail implements ModelInterface, ArrayAccess
             'outputVideoParas' => '\HuaweiCloud\SDK\Mpc\V1\Model\OutputVideoPara[]',
             'replaceSubIndex' => 'string[]',
             'outputThumbnailPara' => '\HuaweiCloud\SDK\Mpc\V1\Model\OutputThumbnailPara',
-            'outputWatermarkParas' => '\HuaweiCloud\SDK\Mpc\V1\Model\OutputWatermarkPara'
+            'outputWatermarkParas' => '\HuaweiCloud\SDK\Mpc\V1\Model\OutputWatermarkPara',
+            'metadata' => '\HuaweiCloud\SDK\Mpc\V1\Model\FileMetaData[]'
     ];
 
     /**
@@ -46,6 +48,7 @@ class MediaDetail implements ModelInterface, ArrayAccess
     * replaceSubIndex  被替换的子索引文件
     * outputThumbnailPara  outputThumbnailPara
     * outputWatermarkParas  outputWatermarkParas
+    * metadata  输出文件的metadata信息
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class MediaDetail implements ModelInterface, ArrayAccess
         'outputVideoParas' => null,
         'replaceSubIndex' => null,
         'outputThumbnailPara' => null,
-        'outputWatermarkParas' => null
+        'outputWatermarkParas' => null,
+        'metadata' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class MediaDetail implements ModelInterface, ArrayAccess
     * replaceSubIndex  被替换的子索引文件
     * outputThumbnailPara  outputThumbnailPara
     * outputWatermarkParas  outputWatermarkParas
+    * metadata  输出文件的metadata信息
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class MediaDetail implements ModelInterface, ArrayAccess
             'outputVideoParas' => 'output_video_paras',
             'replaceSubIndex' => 'replace_sub_index',
             'outputThumbnailPara' => 'output_thumbnail_para',
-            'outputWatermarkParas' => 'output_watermark_paras'
+            'outputWatermarkParas' => 'output_watermark_paras',
+            'metadata' => 'metadata'
     ];
 
     /**
@@ -107,6 +113,7 @@ class MediaDetail implements ModelInterface, ArrayAccess
     * replaceSubIndex  被替换的子索引文件
     * outputThumbnailPara  outputThumbnailPara
     * outputWatermarkParas  outputWatermarkParas
+    * metadata  输出文件的metadata信息
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class MediaDetail implements ModelInterface, ArrayAccess
             'outputVideoParas' => 'setOutputVideoParas',
             'replaceSubIndex' => 'setReplaceSubIndex',
             'outputThumbnailPara' => 'setOutputThumbnailPara',
-            'outputWatermarkParas' => 'setOutputWatermarkParas'
+            'outputWatermarkParas' => 'setOutputWatermarkParas',
+            'metadata' => 'setMetadata'
     ];
 
     /**
@@ -127,6 +135,7 @@ class MediaDetail implements ModelInterface, ArrayAccess
     * replaceSubIndex  被替换的子索引文件
     * outputThumbnailPara  outputThumbnailPara
     * outputWatermarkParas  outputWatermarkParas
+    * metadata  输出文件的metadata信息
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class MediaDetail implements ModelInterface, ArrayAccess
             'outputVideoParas' => 'getOutputVideoParas',
             'replaceSubIndex' => 'getReplaceSubIndex',
             'outputThumbnailPara' => 'getOutputThumbnailPara',
-            'outputWatermarkParas' => 'getOutputWatermarkParas'
+            'outputWatermarkParas' => 'getOutputWatermarkParas',
+            'metadata' => 'getMetadata'
     ];
 
     /**
@@ -203,6 +213,7 @@ class MediaDetail implements ModelInterface, ArrayAccess
         $this->container['replaceSubIndex'] = isset($data['replaceSubIndex']) ? $data['replaceSubIndex'] : null;
         $this->container['outputThumbnailPara'] = isset($data['outputThumbnailPara']) ? $data['outputThumbnailPara'] : null;
         $this->container['outputWatermarkParas'] = isset($data['outputWatermarkParas']) ? $data['outputWatermarkParas'] : null;
+        $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class MediaDetail implements ModelInterface, ArrayAccess
     public function setOutputWatermarkParas($outputWatermarkParas)
     {
         $this->container['outputWatermarkParas'] = $outputWatermarkParas;
+        return $this;
+    }
+
+    /**
+    * Gets metadata
+    *  输出文件的metadata信息
+    *
+    * @return \HuaweiCloud\SDK\Mpc\V1\Model\FileMetaData[]|null
+    */
+    public function getMetadata()
+    {
+        return $this->container['metadata'];
+    }
+
+    /**
+    * Sets metadata
+    *
+    * @param \HuaweiCloud\SDK\Mpc\V1\Model\FileMetaData[]|null $metadata 输出文件的metadata信息
+    *
+    * @return $this
+    */
+    public function setMetadata($metadata)
+    {
+        $this->container['metadata'] = $metadata;
         return $this;
     }
 

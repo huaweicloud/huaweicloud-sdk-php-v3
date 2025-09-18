@@ -22,11 +22,11 @@ class RegionBandwidthPackageSpecification implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * localRegionId  RegionID。
     * remoteRegionId  RegionID。
-    * id  互通Region带宽包的规格ID。
-    * name  互通Region带宽包的规格名字。
-    * enName  互通Region带宽包的规格英文名字。
-    * esName  互通Region带宽包的规格西语名字。
-    * ptName  互通Region带宽包的规格葡语名字。
+    * id  互通区域带宽包的规格ID。
+    * name  互通区域带宽包的规格名称。
+    * enName  互通区域带宽包的规格英文名称。
+    * esName  互通区域带宽包的规格西语名称。
+    * ptName  互通区域带宽包的规格葡语名称。
     * specCodes  带宽包产品规格列表。
     *
     * @var string[]
@@ -46,11 +46,11 @@ class RegionBandwidthPackageSpecification implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * localRegionId  RegionID。
     * remoteRegionId  RegionID。
-    * id  互通Region带宽包的规格ID。
-    * name  互通Region带宽包的规格名字。
-    * enName  互通Region带宽包的规格英文名字。
-    * esName  互通Region带宽包的规格西语名字。
-    * ptName  互通Region带宽包的规格葡语名字。
+    * id  互通区域带宽包的规格ID。
+    * name  互通区域带宽包的规格名称。
+    * enName  互通区域带宽包的规格英文名称。
+    * esName  互通区域带宽包的规格西语名称。
+    * ptName  互通区域带宽包的规格葡语名称。
     * specCodes  带宽包产品规格列表。
     *
     * @var string[]
@@ -91,11 +91,11 @@ class RegionBandwidthPackageSpecification implements ModelInterface, ArrayAccess
     * and the value is the original name
     * localRegionId  RegionID。
     * remoteRegionId  RegionID。
-    * id  互通Region带宽包的规格ID。
-    * name  互通Region带宽包的规格名字。
-    * enName  互通Region带宽包的规格英文名字。
-    * esName  互通Region带宽包的规格西语名字。
-    * ptName  互通Region带宽包的规格葡语名字。
+    * id  互通区域带宽包的规格ID。
+    * name  互通区域带宽包的规格名称。
+    * enName  互通区域带宽包的规格英文名称。
+    * esName  互通区域带宽包的规格西语名称。
+    * ptName  互通区域带宽包的规格葡语名称。
     * specCodes  带宽包产品规格列表。
     *
     * @var string[]
@@ -115,11 +115,11 @@ class RegionBandwidthPackageSpecification implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * localRegionId  RegionID。
     * remoteRegionId  RegionID。
-    * id  互通Region带宽包的规格ID。
-    * name  互通Region带宽包的规格名字。
-    * enName  互通Region带宽包的规格英文名字。
-    * esName  互通Region带宽包的规格西语名字。
-    * ptName  互通Region带宽包的规格葡语名字。
+    * id  互通区域带宽包的规格ID。
+    * name  互通区域带宽包的规格名称。
+    * enName  互通区域带宽包的规格英文名称。
+    * esName  互通区域带宽包的规格西语名称。
+    * ptName  互通区域带宽包的规格葡语名称。
     * specCodes  带宽包产品规格列表。
     *
     * @var string[]
@@ -139,11 +139,11 @@ class RegionBandwidthPackageSpecification implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * localRegionId  RegionID。
     * remoteRegionId  RegionID。
-    * id  互通Region带宽包的规格ID。
-    * name  互通Region带宽包的规格名字。
-    * enName  互通Region带宽包的规格英文名字。
-    * esName  互通Region带宽包的规格西语名字。
-    * ptName  互通Region带宽包的规格葡语名字。
+    * id  互通区域带宽包的规格ID。
+    * name  互通区域带宽包的规格名称。
+    * enName  互通区域带宽包的规格英文名称。
+    * esName  互通区域带宽包的规格西语名称。
+    * ptName  互通区域带宽包的规格葡语名称。
     * specCodes  带宽包产品规格列表。
     *
     * @var string[]
@@ -347,7 +347,7 @@ class RegionBandwidthPackageSpecification implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  互通Region带宽包的规格ID。
+    *  互通区域带宽包的规格ID。
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class RegionBandwidthPackageSpecification implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 互通Region带宽包的规格ID。
+    * @param string|null $id 互通区域带宽包的规格ID。
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class RegionBandwidthPackageSpecification implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  互通Region带宽包的规格名字。
+    *  互通区域带宽包的规格名称。
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class RegionBandwidthPackageSpecification implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 互通Region带宽包的规格名字。
+    * @param string|null $name 互通区域带宽包的规格名称。
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class RegionBandwidthPackageSpecification implements ModelInterface, ArrayAccess
 
     /**
     * Gets enName
-    *  互通Region带宽包的规格英文名字。
+    *  互通区域带宽包的规格英文名称。
     *
     * @return string|null
     */
@@ -407,7 +407,7 @@ class RegionBandwidthPackageSpecification implements ModelInterface, ArrayAccess
     /**
     * Sets enName
     *
-    * @param string|null $enName 互通Region带宽包的规格英文名字。
+    * @param string|null $enName 互通区域带宽包的规格英文名称。
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class RegionBandwidthPackageSpecification implements ModelInterface, ArrayAccess
 
     /**
     * Gets esName
-    *  互通Region带宽包的规格西语名字。
+    *  互通区域带宽包的规格西语名称。
     *
     * @return string|null
     */
@@ -431,7 +431,7 @@ class RegionBandwidthPackageSpecification implements ModelInterface, ArrayAccess
     /**
     * Sets esName
     *
-    * @param string|null $esName 互通Region带宽包的规格西语名字。
+    * @param string|null $esName 互通区域带宽包的规格西语名称。
     *
     * @return $this
     */
@@ -443,7 +443,7 @@ class RegionBandwidthPackageSpecification implements ModelInterface, ArrayAccess
 
     /**
     * Gets ptName
-    *  互通Region带宽包的规格葡语名字。
+    *  互通区域带宽包的规格葡语名称。
     *
     * @return string|null
     */
@@ -455,7 +455,7 @@ class RegionBandwidthPackageSpecification implements ModelInterface, ArrayAccess
     /**
     * Sets ptName
     *
-    * @param string|null $ptName 互通Region带宽包的规格葡语名字。
+    * @param string|null $ptName 互通区域带宽包的规格葡语名称。
     *
     * @return $this
     */

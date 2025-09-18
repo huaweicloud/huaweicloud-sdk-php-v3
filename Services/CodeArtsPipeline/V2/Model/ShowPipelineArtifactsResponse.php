@@ -21,7 +21,7 @@ class ShowPipelineArtifactsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * artifacts  产物列表
+    * artifacts  **参数解释**： 流水线任务产物列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowPipelineArtifactsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * artifacts  产物列表
+    * artifacts  **参数解释**： 流水线任务产物列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowPipelineArtifactsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * artifacts  产物列表
+    * artifacts  **参数解释**： 流水线任务产物列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowPipelineArtifactsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * artifacts  产物列表
+    * artifacts  **参数解释**： 流水线任务产物列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowPipelineArtifactsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * artifacts  产物列表
+    * artifacts  **参数解释**： 流水线任务产物列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowPipelineArtifactsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets artifacts
-    *  产物列表
+    *  **参数解释**： 流水线任务产物列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\Artifact[]|null
     */
@@ -187,7 +187,7 @@ class ShowPipelineArtifactsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets artifacts
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\Artifact[]|null $artifacts 产物列表
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\Artifact[]|null $artifacts **参数解释**： 流水线任务产物列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

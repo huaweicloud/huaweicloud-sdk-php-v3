@@ -22,8 +22,8 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  实例ID。
     * description  实例描述。不支持 <>。
-    * nameEn  功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
-    * nameCn  功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
+    * nameEn  功能说明：站点分组自定义的英文名称。 取值范围：1-255个字符。
+    * nameCn  功能说明：站点分组自定义的中文名称。 取值范围：1-64个字符。
     *
     * @var string[]
     */
@@ -38,8 +38,8 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  实例ID。
     * description  实例描述。不支持 <>。
-    * nameEn  功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
-    * nameCn  功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
+    * nameEn  功能说明：站点分组自定义的英文名称。 取值范围：1-255个字符。
+    * nameCn  功能说明：站点分组自定义的中文名称。 取值范围：1-64个字符。
     *
     * @var string[]
     */
@@ -75,8 +75,8 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  实例ID。
     * description  实例描述。不支持 <>。
-    * nameEn  功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
-    * nameCn  功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
+    * nameEn  功能说明：站点分组自定义的英文名称。 取值范围：1-255个字符。
+    * nameCn  功能说明：站点分组自定义的中文名称。 取值范围：1-64个字符。
     *
     * @var string[]
     */
@@ -91,8 +91,8 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  实例ID。
     * description  实例描述。不支持 <>。
-    * nameEn  功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
-    * nameCn  功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
+    * nameEn  功能说明：站点分组自定义的英文名称。 取值范围：1-255个字符。
+    * nameCn  功能说明：站点分组自定义的中文名称。 取值范围：1-64个字符。
     *
     * @var string[]
     */
@@ -107,8 +107,8 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  实例ID。
     * description  实例描述。不支持 <>。
-    * nameEn  功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
-    * nameCn  功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
+    * nameEn  功能说明：站点分组自定义的英文名称。 取值范围：1-255个字符。
+    * nameCn  功能说明：站点分组自定义的中文名称。 取值范围：1-64个字符。
     *
     * @var string[]
     */
@@ -288,7 +288,7 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameEn
-    *  功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
+    *  功能说明：站点分组自定义的英文名称。 取值范围：1-255个字符。
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nameEn
     *
-    * @param string|null $nameEn 功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
+    * @param string|null $nameEn 功能说明：站点分组自定义的英文名称。 取值范围：1-255个字符。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameCn
-    *  功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
+    *  功能说明：站点分组自定义的中文名称。 取值范围：1-64个字符。
     *
     * @return string|null
     */
@@ -324,7 +324,7 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nameCn
     *
-    * @param string|null $nameCn 功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
+    * @param string|null $nameCn 功能说明：站点分组自定义的中文名称。 取值范围：1-64个字符。
     *
     * @return $this
     */

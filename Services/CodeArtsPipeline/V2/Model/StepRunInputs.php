@@ -20,8 +20,8 @@ class StepRunInputs implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  输入参数名
-    * value  输入参数值
+    * key  **参数解释**： 输入参数名。 **取值范围**： 不涉及。
+    * value  **参数解释**： 输入参数值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class StepRunInputs implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  输入参数名
-    * value  输入参数值
+    * key  **参数解释**： 输入参数名。 **取值范围**： 不涉及。
+    * value  **参数解释**： 输入参数值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class StepRunInputs implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  输入参数名
-    * value  输入参数值
+    * key  **参数解释**： 输入参数名。 **取值范围**： 不涉及。
+    * value  **参数解释**： 输入参数值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class StepRunInputs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  输入参数名
-    * value  输入参数值
+    * key  **参数解释**： 输入参数名。 **取值范围**： 不涉及。
+    * value  **参数解释**： 输入参数值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class StepRunInputs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  输入参数名
-    * value  输入参数值
+    * key  **参数解释**： 输入参数名。 **取值范围**： 不涉及。
+    * value  **参数解释**： 输入参数值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class StepRunInputs implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  输入参数名
+    *  **参数解释**： 输入参数名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class StepRunInputs implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 输入参数名
+    * @param string|null $key **参数解释**： 输入参数名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class StepRunInputs implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  输入参数值
+    *  **参数解释**： 输入参数值。 **取值范围**： 不涉及。
     *
     * @return object|null
     */
@@ -221,7 +221,7 @@ class StepRunInputs implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param object|null $value 输入参数值
+    * @param object|null $value **参数解释**： 输入参数值。 **取值范围**： 不涉及。
     *
     * @return $this
     */

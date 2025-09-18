@@ -33,6 +33,7 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
     * enableAreaBandwidth  是否启用传统的大区带宽。
     * enableChange95  是否支持95转按需。
     * enableSpecCode  是否支持多SKU产品功能。
+    * cesEnabled  是否支持CES监控。
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
             'bindLimit' => 'int',
             'enableAreaBandwidth' => 'bool',
             'enableChange95' => 'bool',
-            'enableSpecCode' => 'bool'
+            'enableSpecCode' => 'bool',
+            'cesEnabled' => 'bool'
     ];
 
     /**
@@ -67,6 +69,7 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
     * enableAreaBandwidth  是否启用传统的大区带宽。
     * enableChange95  是否支持95转按需。
     * enableSpecCode  是否支持多SKU产品功能。
+    * cesEnabled  是否支持CES监控。
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
         'bindLimit' => null,
         'enableAreaBandwidth' => null,
         'enableChange95' => null,
-        'enableSpecCode' => null
+        'enableSpecCode' => null,
+        'cesEnabled' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
     * enableAreaBandwidth  是否启用传统的大区带宽。
     * enableChange95  是否支持95转按需。
     * enableSpecCode  是否支持多SKU产品功能。
+    * cesEnabled  是否支持CES监控。
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
             'bindLimit' => 'bind_limit',
             'enableAreaBandwidth' => 'enable_area_bandwidth',
             'enableChange95' => 'enable_change_95',
-            'enableSpecCode' => 'enable_spec_code'
+            'enableSpecCode' => 'enable_spec_code',
+            'cesEnabled' => 'ces_enabled'
     ];
 
     /**
@@ -156,6 +162,7 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
     * enableAreaBandwidth  是否启用传统的大区带宽。
     * enableChange95  是否支持95转按需。
     * enableSpecCode  是否支持多SKU产品功能。
+    * cesEnabled  是否支持CES监控。
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
             'bindLimit' => 'setBindLimit',
             'enableAreaBandwidth' => 'setEnableAreaBandwidth',
             'enableChange95' => 'setEnableChange95',
-            'enableSpecCode' => 'setEnableSpecCode'
+            'enableSpecCode' => 'setEnableSpecCode',
+            'cesEnabled' => 'setCesEnabled'
     ];
 
     /**
@@ -190,6 +198,7 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
     * enableAreaBandwidth  是否启用传统的大区带宽。
     * enableChange95  是否支持95转按需。
     * enableSpecCode  是否支持多SKU产品功能。
+    * cesEnabled  是否支持CES监控。
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
             'bindLimit' => 'getBindLimit',
             'enableAreaBandwidth' => 'getEnableAreaBandwidth',
             'enableChange95' => 'getEnableChange95',
-            'enableSpecCode' => 'getEnableSpecCode'
+            'enableSpecCode' => 'getEnableSpecCode',
+            'cesEnabled' => 'getCesEnabled'
     ];
 
     /**
@@ -352,6 +362,7 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
         $this->container['enableAreaBandwidth'] = isset($data['enableAreaBandwidth']) ? $data['enableAreaBandwidth'] : null;
         $this->container['enableChange95'] = isset($data['enableChange95']) ? $data['enableChange95'] : null;
         $this->container['enableSpecCode'] = isset($data['enableSpecCode']) ? $data['enableSpecCode'] : null;
+        $this->container['cesEnabled'] = isset($data['cesEnabled']) ? $data['cesEnabled'] : null;
     }
 
     /**
@@ -733,6 +744,30 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
     public function setEnableSpecCode($enableSpecCode)
     {
         $this->container['enableSpecCode'] = $enableSpecCode;
+        return $this;
+    }
+
+    /**
+    * Gets cesEnabled
+    *  是否支持CES监控。
+    *
+    * @return bool|null
+    */
+    public function getCesEnabled()
+    {
+        return $this->container['cesEnabled'];
+    }
+
+    /**
+    * Sets cesEnabled
+    *
+    * @param bool|null $cesEnabled 是否支持CES监控。
+    *
+    * @return $this
+    */
+    public function setCesEnabled($cesEnabled)
+    {
+        $this->container['cesEnabled'] = $cesEnabled;
         return $this;
     }
 

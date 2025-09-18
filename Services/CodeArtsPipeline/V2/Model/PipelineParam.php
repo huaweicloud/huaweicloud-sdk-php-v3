@@ -20,12 +20,12 @@ class PipelineParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  流水线参数名字
-    * value  流水线参数值
-    * description  流水线参数描述
-    * paramType  流水线参数类型
-    * isStatic  是否静态参数
-    * isDefault  是否默认参数
+    * name  **参数解释**： 流水线参数名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * value  **参数解释**： 流水线参数值 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线参数描述 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * paramType  **参数解释**： 流水线参数类型 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isStatic  **参数解释**： 是否静态参数。 **约束限制**： 不涉及。 **取值范围**： - true：是静态参数。 - false：不是静态参数。 **默认取值**： 不涉及。
+    * isDefault  **参数解释**： 是否默认参数。 **约束限制**： 不涉及。 **取值范围**： - true：是默认参数。 - false：不是默认参数。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class PipelineParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  流水线参数名字
-    * value  流水线参数值
-    * description  流水线参数描述
-    * paramType  流水线参数类型
-    * isStatic  是否静态参数
-    * isDefault  是否默认参数
+    * name  **参数解释**： 流水线参数名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * value  **参数解释**： 流水线参数值 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线参数描述 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * paramType  **参数解释**： 流水线参数类型 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isStatic  **参数解释**： 是否静态参数。 **约束限制**： 不涉及。 **取值范围**： - true：是静态参数。 - false：不是静态参数。 **默认取值**： 不涉及。
+    * isDefault  **参数解释**： 是否默认参数。 **约束限制**： 不涉及。 **取值范围**： - true：是默认参数。 - false：不是默认参数。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class PipelineParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  流水线参数名字
-    * value  流水线参数值
-    * description  流水线参数描述
-    * paramType  流水线参数类型
-    * isStatic  是否静态参数
-    * isDefault  是否默认参数
+    * name  **参数解释**： 流水线参数名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * value  **参数解释**： 流水线参数值 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线参数描述 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * paramType  **参数解释**： 流水线参数类型 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isStatic  **参数解释**： 是否静态参数。 **约束限制**： 不涉及。 **取值范围**： - true：是静态参数。 - false：不是静态参数。 **默认取值**： 不涉及。
+    * isDefault  **参数解释**： 是否默认参数。 **约束限制**： 不涉及。 **取值范围**： - true：是默认参数。 - false：不是默认参数。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class PipelineParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  流水线参数名字
-    * value  流水线参数值
-    * description  流水线参数描述
-    * paramType  流水线参数类型
-    * isStatic  是否静态参数
-    * isDefault  是否默认参数
+    * name  **参数解释**： 流水线参数名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * value  **参数解释**： 流水线参数值 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线参数描述 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * paramType  **参数解释**： 流水线参数类型 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isStatic  **参数解释**： 是否静态参数。 **约束限制**： 不涉及。 **取值范围**： - true：是静态参数。 - false：不是静态参数。 **默认取值**： 不涉及。
+    * isDefault  **参数解释**： 是否默认参数。 **约束限制**： 不涉及。 **取值范围**： - true：是默认参数。 - false：不是默认参数。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class PipelineParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  流水线参数名字
-    * value  流水线参数值
-    * description  流水线参数描述
-    * paramType  流水线参数类型
-    * isStatic  是否静态参数
-    * isDefault  是否默认参数
+    * name  **参数解释**： 流水线参数名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * value  **参数解释**： 流水线参数值 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线参数描述 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * paramType  **参数解释**： 流水线参数类型 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isStatic  **参数解释**： 是否静态参数。 **约束限制**： 不涉及。 **取值范围**： - true：是静态参数。 - false：不是静态参数。 **默认取值**： 不涉及。
+    * isDefault  **参数解释**： 是否默认参数。 **约束限制**： 不涉及。 **取值范围**： - true：是默认参数。 - false：不是默认参数。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -247,7 +247,7 @@ class PipelineParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  流水线参数名字
+    *  **参数解释**： 流水线参数名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -259,7 +259,7 @@ class PipelineParam implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 流水线参数名字
+    * @param string $name **参数解释**： 流水线参数名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -271,7 +271,7 @@ class PipelineParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  流水线参数值
+    *  **参数解释**： 流水线参数值 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -283,7 +283,7 @@ class PipelineParam implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 流水线参数值
+    * @param string $value **参数解释**： 流水线参数值 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -295,7 +295,7 @@ class PipelineParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  流水线参数描述
+    *  **参数解释**： 流水线参数描述 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -307,7 +307,7 @@ class PipelineParam implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 流水线参数描述
+    * @param string $description **参数解释**： 流水线参数描述 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -319,7 +319,7 @@ class PipelineParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets paramType
-    *  流水线参数类型
+    *  **参数解释**： 流水线参数类型 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -331,7 +331,7 @@ class PipelineParam implements ModelInterface, ArrayAccess
     /**
     * Sets paramType
     *
-    * @param string $paramType 流水线参数类型
+    * @param string $paramType **参数解释**： 流水线参数类型 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -343,7 +343,7 @@ class PipelineParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets isStatic
-    *  是否静态参数
+    *  **参数解释**： 是否静态参数。 **约束限制**： 不涉及。 **取值范围**： - true：是静态参数。 - false：不是静态参数。 **默认取值**： 不涉及。
     *
     * @return bool
     */
@@ -355,7 +355,7 @@ class PipelineParam implements ModelInterface, ArrayAccess
     /**
     * Sets isStatic
     *
-    * @param bool $isStatic 是否静态参数
+    * @param bool $isStatic **参数解释**： 是否静态参数。 **约束限制**： 不涉及。 **取值范围**： - true：是静态参数。 - false：不是静态参数。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -367,7 +367,7 @@ class PipelineParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDefault
-    *  是否默认参数
+    *  **参数解释**： 是否默认参数。 **约束限制**： 不涉及。 **取值范围**： - true：是默认参数。 - false：不是默认参数。 **默认取值**： 不涉及。
     *
     * @return bool
     */
@@ -379,7 +379,7 @@ class PipelineParam implements ModelInterface, ArrayAccess
     /**
     * Sets isDefault
     *
-    * @param bool $isDefault 是否默认参数
+    * @param bool $isDefault **参数解释**： 是否默认参数。 **约束限制**： 不涉及。 **取值范围**： - true：是默认参数。 - false：不是默认参数。 **默认取值**： 不涉及。
     *
     * @return $this
     */

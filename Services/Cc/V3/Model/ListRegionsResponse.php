@@ -22,24 +22,28 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * requestId  请求ID。
-    * regions  网络实例列表。
+    * pageInfo  pageInfo
+    * regions  区域列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'requestId' => 'string',
+            'pageInfo' => '\HuaweiCloud\SDK\Cc\V3\Model\PageInfo',
             'regions' => '\HuaweiCloud\SDK\Cc\V3\Model\Region[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * requestId  请求ID。
-    * regions  网络实例列表。
+    * pageInfo  pageInfo
+    * regions  区域列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'requestId' => null,
+        'pageInfo' => null,
         'regions' => null
     ];
 
@@ -67,36 +71,42 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * requestId  请求ID。
-    * regions  网络实例列表。
+    * pageInfo  pageInfo
+    * regions  区域列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'requestId' => 'request_id',
+            'pageInfo' => 'page_info',
             'regions' => 'regions'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * requestId  请求ID。
-    * regions  网络实例列表。
+    * pageInfo  pageInfo
+    * regions  区域列表。
     *
     * @var string[]
     */
     protected static $setters = [
             'requestId' => 'setRequestId',
+            'pageInfo' => 'setPageInfo',
             'regions' => 'setRegions'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * requestId  请求ID。
-    * regions  网络实例列表。
+    * pageInfo  pageInfo
+    * regions  区域列表。
     *
     * @var string[]
     */
     protected static $getters = [
             'requestId' => 'getRequestId',
+            'pageInfo' => 'getPageInfo',
             'regions' => 'getRegions'
     ];
 
@@ -159,6 +169,7 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
         $this->container['regions'] = isset($data['regions']) ? $data['regions'] : null;
     }
 
@@ -221,8 +232,32 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
+        return $this;
+    }
+
+    /**
     * Gets regions
-    *  网络实例列表。
+    *  区域列表。
     *
     * @return \HuaweiCloud\SDK\Cc\V3\Model\Region[]
     */
@@ -234,7 +269,7 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets regions
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\Region[] $regions 网络实例列表。
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\Region[] $regions 区域列表。
     *
     * @return $this
     */

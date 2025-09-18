@@ -23,7 +23,7 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
     * domainId  实例所属账号ID。
     * cloudConnectionId  云连接实例ID。
     * regionId  RegionID。
-    * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
+    * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 云连接实例下可加载的Region数 - cloud_connection_route: 云连接实例下可加载的路由数 - region_network_instance: 云连接实例下某个Region下可加载的网络实例数
     * quotaNumber  配额数量。
     * quotaUsed  配额使用数量。
     *
@@ -43,7 +43,7 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
     * domainId  实例所属账号ID。
     * cloudConnectionId  云连接实例ID。
     * regionId  RegionID。
-    * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
+    * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 云连接实例下可加载的Region数 - cloud_connection_route: 云连接实例下可加载的路由数 - region_network_instance: 云连接实例下某个Region下可加载的网络实例数
     * quotaNumber  配额数量。
     * quotaUsed  配额使用数量。
     *
@@ -84,7 +84,7 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
     * domainId  实例所属账号ID。
     * cloudConnectionId  云连接实例ID。
     * regionId  RegionID。
-    * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
+    * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 云连接实例下可加载的Region数 - cloud_connection_route: 云连接实例下可加载的路由数 - region_network_instance: 云连接实例下某个Region下可加载的网络实例数
     * quotaNumber  配额数量。
     * quotaUsed  配额使用数量。
     *
@@ -104,7 +104,7 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
     * domainId  实例所属账号ID。
     * cloudConnectionId  云连接实例ID。
     * regionId  RegionID。
-    * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
+    * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 云连接实例下可加载的Region数 - cloud_connection_route: 云连接实例下可加载的路由数 - region_network_instance: 云连接实例下某个Region下可加载的网络实例数
     * quotaNumber  配额数量。
     * quotaUsed  配额使用数量。
     *
@@ -124,7 +124,7 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
     * domainId  实例所属账号ID。
     * cloudConnectionId  云连接实例ID。
     * regionId  RegionID。
-    * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
+    * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 云连接实例下可加载的Region数 - cloud_connection_route: 云连接实例下可加载的路由数 - region_network_instance: 云连接实例下某个Region下可加载的网络实例数
     * quotaNumber  配额数量。
     * quotaUsed  配额使用数量。
     *
@@ -247,14 +247,14 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
         if ($this->container['cloudConnectionId'] === null) {
             $invalidProperties[] = "'cloudConnectionId' can't be null";
         }
-            if ((mb_strlen($this->container['cloudConnectionId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 32.";
+            if ((mb_strlen($this->container['cloudConnectionId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['cloudConnectionId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 36.";
+            if ((mb_strlen($this->container['cloudConnectionId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 32.";
             }
-            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['cloudConnectionId'])) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{32}|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['cloudConnectionId'])) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{32}|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['regionId'] === null) {
             $invalidProperties[] = "'regionId' can't be null";
@@ -373,7 +373,7 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaType
-    *  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
+    *  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 云连接实例下可加载的Region数 - cloud_connection_route: 云连接实例下可加载的路由数 - region_network_instance: 云连接实例下某个Region下可加载的网络实例数
     *
     * @return string|null
     */
@@ -385,7 +385,7 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
     /**
     * Sets quotaType
     *
-    * @param string|null $quotaType 配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
+    * @param string|null $quotaType 配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 云连接实例下可加载的Region数 - cloud_connection_route: 云连接实例下可加载的路由数 - region_network_instance: 云连接实例下某个Region下可加载的网络实例数
     *
     * @return $this
     */

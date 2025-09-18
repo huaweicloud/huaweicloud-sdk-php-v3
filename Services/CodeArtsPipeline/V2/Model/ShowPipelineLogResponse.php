@@ -21,12 +21,11 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hasMore  是否有更多日志
-    * endOffset  查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。
-    * startOffset  查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。
-    * log  日志内容
-    * location  日志存储位置
-    * stepRunId  所属步骤ID
+    * hasMore  **参数解释**： 是否有更多日志。 **取值范围**： - true：有更多日志。 - false：没有更多日志。
+    * endOffset  **参数解释**： 查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。 **取值范围**： 不涉及。
+    * startOffset  **参数解释**： 查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。 **取值范围**： 不涉及。
+    * log  **参数解释**： 日志内容。 **取值范围**： 不涉及。
+    * stepRunId  **参数解释**： 所属步骤ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -35,18 +34,16 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
             'endOffset' => 'string',
             'startOffset' => 'string',
             'log' => 'string',
-            'location' => 'string',
             'stepRunId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hasMore  是否有更多日志
-    * endOffset  查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。
-    * startOffset  查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。
-    * log  日志内容
-    * location  日志存储位置
-    * stepRunId  所属步骤ID
+    * hasMore  **参数解释**： 是否有更多日志。 **取值范围**： - true：有更多日志。 - false：没有更多日志。
+    * endOffset  **参数解释**： 查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。 **取值范围**： 不涉及。
+    * startOffset  **参数解释**： 查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。 **取值范围**： 不涉及。
+    * log  **参数解释**： 日志内容。 **取值范围**： 不涉及。
+    * stepRunId  **参数解释**： 所属步骤ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -55,7 +52,6 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
         'endOffset' => null,
         'startOffset' => null,
         'log' => null,
-        'location' => null,
         'stepRunId' => null
     ];
 
@@ -82,12 +78,11 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hasMore  是否有更多日志
-    * endOffset  查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。
-    * startOffset  查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。
-    * log  日志内容
-    * location  日志存储位置
-    * stepRunId  所属步骤ID
+    * hasMore  **参数解释**： 是否有更多日志。 **取值范围**： - true：有更多日志。 - false：没有更多日志。
+    * endOffset  **参数解释**： 查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。 **取值范围**： 不涉及。
+    * startOffset  **参数解释**： 查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。 **取值范围**： 不涉及。
+    * log  **参数解释**： 日志内容。 **取值范围**： 不涉及。
+    * stepRunId  **参数解释**： 所属步骤ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -96,18 +91,16 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
             'endOffset' => 'end_offset',
             'startOffset' => 'start_offset',
             'log' => 'log',
-            'location' => 'location',
             'stepRunId' => 'step_run_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hasMore  是否有更多日志
-    * endOffset  查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。
-    * startOffset  查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。
-    * log  日志内容
-    * location  日志存储位置
-    * stepRunId  所属步骤ID
+    * hasMore  **参数解释**： 是否有更多日志。 **取值范围**： - true：有更多日志。 - false：没有更多日志。
+    * endOffset  **参数解释**： 查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。 **取值范围**： 不涉及。
+    * startOffset  **参数解释**： 查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。 **取值范围**： 不涉及。
+    * log  **参数解释**： 日志内容。 **取值范围**： 不涉及。
+    * stepRunId  **参数解释**： 所属步骤ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -116,18 +109,16 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
             'endOffset' => 'setEndOffset',
             'startOffset' => 'setStartOffset',
             'log' => 'setLog',
-            'location' => 'setLocation',
             'stepRunId' => 'setStepRunId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hasMore  是否有更多日志
-    * endOffset  查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。
-    * startOffset  查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。
-    * log  日志内容
-    * location  日志存储位置
-    * stepRunId  所属步骤ID
+    * hasMore  **参数解释**： 是否有更多日志。 **取值范围**： - true：有更多日志。 - false：没有更多日志。
+    * endOffset  **参数解释**： 查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。 **取值范围**： 不涉及。
+    * startOffset  **参数解释**： 查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。 **取值范围**： 不涉及。
+    * log  **参数解释**： 日志内容。 **取值范围**： 不涉及。
+    * stepRunId  **参数解释**： 所属步骤ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -136,7 +127,6 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
             'endOffset' => 'getEndOffset',
             'startOffset' => 'getStartOffset',
             'log' => 'getLog',
-            'location' => 'getLocation',
             'stepRunId' => 'getStepRunId'
     ];
 
@@ -202,7 +192,6 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
         $this->container['endOffset'] = isset($data['endOffset']) ? $data['endOffset'] : null;
         $this->container['startOffset'] = isset($data['startOffset']) ? $data['startOffset'] : null;
         $this->container['log'] = isset($data['log']) ? $data['log'] : null;
-        $this->container['location'] = isset($data['location']) ? $data['location'] : null;
         $this->container['stepRunId'] = isset($data['stepRunId']) ? $data['stepRunId'] : null;
     }
 
@@ -230,7 +219,7 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets hasMore
-    *  是否有更多日志
+    *  **参数解释**： 是否有更多日志。 **取值范围**： - true：有更多日志。 - false：没有更多日志。
     *
     * @return bool|null
     */
@@ -242,7 +231,7 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets hasMore
     *
-    * @param bool|null $hasMore 是否有更多日志
+    * @param bool|null $hasMore **参数解释**： 是否有更多日志。 **取值范围**： - true：有更多日志。 - false：没有更多日志。
     *
     * @return $this
     */
@@ -254,7 +243,7 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets endOffset
-    *  查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。
+    *  **参数解释**： 查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -266,7 +255,7 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets endOffset
     *
-    * @param string|null $endOffset 查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。
+    * @param string|null $endOffset **参数解释**： 查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -278,7 +267,7 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets startOffset
-    *  查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。
+    *  **参数解释**： 查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -290,7 +279,7 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets startOffset
     *
-    * @param string|null $startOffset 查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。
+    * @param string|null $startOffset **参数解释**： 查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -302,7 +291,7 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets log
-    *  日志内容
+    *  **参数解释**： 日志内容。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -314,7 +303,7 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets log
     *
-    * @param string|null $log 日志内容
+    * @param string|null $log **参数解释**： 日志内容。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -325,32 +314,8 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets location
-    *  日志存储位置
-    *
-    * @return string|null
-    */
-    public function getLocation()
-    {
-        return $this->container['location'];
-    }
-
-    /**
-    * Sets location
-    *
-    * @param string|null $location 日志存储位置
-    *
-    * @return $this
-    */
-    public function setLocation($location)
-    {
-        $this->container['location'] = $location;
-        return $this;
-    }
-
-    /**
     * Gets stepRunId
-    *  所属步骤ID
+    *  **参数解释**： 所属步骤ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -362,7 +327,7 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets stepRunId
     *
-    * @param string|null $stepRunId 所属步骤ID
+    * @param string|null $stepRunId **参数解释**： 所属步骤ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */

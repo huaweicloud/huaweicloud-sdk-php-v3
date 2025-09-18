@@ -20,11 +20,11 @@ class PipelineLatestRunStageStatusList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  阶段名
-    * sequence  阶段序列号
-    * status  阶段状态
-    * startTime  阶段开始时间
-    * endTime  阶段结束时间
+    * name  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
+    * sequence  **参数解释**： 阶段序列号，0代表第一个流水线阶段。 **取值范围**： 大于等于零。
+    * status  **参数解释**： 流水线阶段状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
+    * startTime  **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class PipelineLatestRunStageStatusList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  阶段名
-    * sequence  阶段序列号
-    * status  阶段状态
-    * startTime  阶段开始时间
-    * endTime  阶段结束时间
+    * name  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
+    * sequence  **参数解释**： 阶段序列号，0代表第一个流水线阶段。 **取值范围**： 大于等于零。
+    * status  **参数解释**： 流水线阶段状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
+    * startTime  **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class PipelineLatestRunStageStatusList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  阶段名
-    * sequence  阶段序列号
-    * status  阶段状态
-    * startTime  阶段开始时间
-    * endTime  阶段结束时间
+    * name  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
+    * sequence  **参数解释**： 阶段序列号，0代表第一个流水线阶段。 **取值范围**： 大于等于零。
+    * status  **参数解释**： 流水线阶段状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
+    * startTime  **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class PipelineLatestRunStageStatusList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  阶段名
-    * sequence  阶段序列号
-    * status  阶段状态
-    * startTime  阶段开始时间
-    * endTime  阶段结束时间
+    * name  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
+    * sequence  **参数解释**： 阶段序列号，0代表第一个流水线阶段。 **取值范围**： 大于等于零。
+    * status  **参数解释**： 流水线阶段状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
+    * startTime  **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class PipelineLatestRunStageStatusList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  阶段名
-    * sequence  阶段序列号
-    * status  阶段状态
-    * startTime  阶段开始时间
-    * endTime  阶段结束时间
+    * name  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
+    * sequence  **参数解释**： 阶段序列号，0代表第一个流水线阶段。 **取值范围**： 大于等于零。
+    * status  **参数解释**： 流水线阶段状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
+    * startTime  **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class PipelineLatestRunStageStatusList implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  阶段名
+    *  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class PipelineLatestRunStageStatusList implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 阶段名
+    * @param string|null $name **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class PipelineLatestRunStageStatusList implements ModelInterface, ArrayAccess
 
     /**
     * Gets sequence
-    *  阶段序列号
+    *  **参数解释**： 阶段序列号，0代表第一个流水线阶段。 **取值范围**： 大于等于零。
     *
     * @return int|null
     */
@@ -254,7 +254,7 @@ class PipelineLatestRunStageStatusList implements ModelInterface, ArrayAccess
     /**
     * Sets sequence
     *
-    * @param int|null $sequence 阶段序列号
+    * @param int|null $sequence **参数解释**： 阶段序列号，0代表第一个流水线阶段。 **取值范围**： 大于等于零。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class PipelineLatestRunStageStatusList implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  阶段状态
+    *  **参数解释**： 流水线阶段状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class PipelineLatestRunStageStatusList implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 阶段状态
+    * @param string|null $status **参数解释**： 流水线阶段状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class PipelineLatestRunStageStatusList implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  阶段开始时间
+    *  **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class PipelineLatestRunStageStatusList implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 阶段开始时间
+    * @param string|null $startTime **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class PipelineLatestRunStageStatusList implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  阶段结束时间
+    *  **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class PipelineLatestRunStageStatusList implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 阶段结束时间
+    * @param string|null $endTime **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */

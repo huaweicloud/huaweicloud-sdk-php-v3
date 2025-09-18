@@ -21,8 +21,8 @@ class BatchResizeServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * orderId  订单号，创建包年包月的弹性云服务器时返回该参数。
-    * jobId  任务ID，变更按需的弹性云服务器规格时返回该参数。
+    * orderId  orderId
+    * jobId  jobId
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class BatchResizeServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * orderId  订单号，创建包年包月的弹性云服务器时返回该参数。
-    * jobId  任务ID，变更按需的弹性云服务器规格时返回该参数。
+    * orderId  orderId
+    * jobId  jobId
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class BatchResizeServersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * orderId  订单号，创建包年包月的弹性云服务器时返回该参数。
-    * jobId  任务ID，变更按需的弹性云服务器规格时返回该参数。
+    * orderId  orderId
+    * jobId  jobId
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class BatchResizeServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * orderId  订单号，创建包年包月的弹性云服务器时返回该参数。
-    * jobId  任务ID，变更按需的弹性云服务器规格时返回该参数。
+    * orderId  orderId
+    * jobId  jobId
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class BatchResizeServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * orderId  订单号，创建包年包月的弹性云服务器时返回该参数。
-    * jobId  任务ID，变更按需的弹性云服务器规格时返回该参数。
+    * orderId  orderId
+    * jobId  jobId
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class BatchResizeServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  订单号，创建包年包月的弹性云服务器时返回该参数。
+    *  orderId
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class BatchResizeServersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId 订单号，创建包年包月的弹性云服务器时返回该参数。
+    * @param string|null $orderId orderId
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class BatchResizeServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  任务ID，变更按需的弹性云服务器规格时返回该参数。
+    *  jobId
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class BatchResizeServersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 任务ID，变更按需的弹性云服务器规格时返回该参数。
+    * @param string|null $jobId jobId
     *
     * @return $this
     */

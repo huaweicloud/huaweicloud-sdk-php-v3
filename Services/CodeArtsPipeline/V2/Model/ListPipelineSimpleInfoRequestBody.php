@@ -20,17 +20,17 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pipelineName  流水线名字。参数存在，则进行模糊匹配
-    * projectIds  CodeArts项目ids。该参数存在，则获取对应项目下的流水线列表，逗号分隔，id个数取值[0,10]；如果不存在，则获取调用方所属租户的流水线列表
-    * creatorIds  创建人id。该参数存在，逗号分隔，id个数取值[0,10]
-    * executorIds  执行人id。该参数存在，逗号分隔，id个数取值[0,10]；
-    * status  流水线运行状态。取值范围：waiting,running,verifying,handling,suspending,completed
-    * outcome  流水线结果，标记流水线。error、success、aborted
-    * sortKey  用于排序的字段。取值为：pipeline_name,create_time,start_time
-    * sortDir  排序类型。asc按排序字段升序，desc按排序字段降序
-    * gitUrl  codehub搜索链接：git@codehub.XXX.git；gitee搜索链接：git@gitee.com.XXX.git；github搜索链接：git@github.com.XXX.git等
-    * offset  偏移量。表示从此偏移量开始查询，offset大于等于0，默认取值为0
-    * limit  每次查询的条目数量。取值[10-50]，默认取值为10
+    * pipelineName  **参数解释**： 流水线名字。查询时进行模糊匹配。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectIds  **参数解释**： 项目id，有多个值时用逗号分隔，id个数取值[0,10]，非必选。如果该参数有值，则获取对应项目下的流水线列表；如果没有值，则获取用户有权限的所有项目的流水线列表 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * creatorIds  **参数解释**： 创建人id，有多个值时用逗号分隔，id个数取值[0,10]，非必选 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * executorIds  **参数解释**： 执行人id。有多个值时用逗号分隔，id个数取值[0,10]，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 流水线运行状态。 **约束限制**： 不涉及。 **取值范围**： - waiting：等待中。 - running：运行中。 - verifying：待审核。 - suspending：挂起。 - completed：执行完成。 **默认取值**： 不涉及。
+    * outcome  **参数解释**： 流水线执行结果。 **约束限制**： 不涉及。 **取值范围**： - success：成功。 - error：失败。 - aborted：终止。 **默认取值**： 不涉及。
+    * sortKey  **参数解释**： 用于排序的字段，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sortDir  **参数解释**： 排序方式。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
+    * gitUrl  **参数解释**： 代码仓地址。仅支持codehub仓库，如：git@codehub.XXX.git **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量。表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： offset大于等于0。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 每次查询的条目数量。 **约束限制**： 不涉及。 **取值范围**： 取值[10-50]。 **默认取值**： 10。
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pipelineName  流水线名字。参数存在，则进行模糊匹配
-    * projectIds  CodeArts项目ids。该参数存在，则获取对应项目下的流水线列表，逗号分隔，id个数取值[0,10]；如果不存在，则获取调用方所属租户的流水线列表
-    * creatorIds  创建人id。该参数存在，逗号分隔，id个数取值[0,10]
-    * executorIds  执行人id。该参数存在，逗号分隔，id个数取值[0,10]；
-    * status  流水线运行状态。取值范围：waiting,running,verifying,handling,suspending,completed
-    * outcome  流水线结果，标记流水线。error、success、aborted
-    * sortKey  用于排序的字段。取值为：pipeline_name,create_time,start_time
-    * sortDir  排序类型。asc按排序字段升序，desc按排序字段降序
-    * gitUrl  codehub搜索链接：git@codehub.XXX.git；gitee搜索链接：git@gitee.com.XXX.git；github搜索链接：git@github.com.XXX.git等
-    * offset  偏移量。表示从此偏移量开始查询，offset大于等于0，默认取值为0
-    * limit  每次查询的条目数量。取值[10-50]，默认取值为10
+    * pipelineName  **参数解释**： 流水线名字。查询时进行模糊匹配。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectIds  **参数解释**： 项目id，有多个值时用逗号分隔，id个数取值[0,10]，非必选。如果该参数有值，则获取对应项目下的流水线列表；如果没有值，则获取用户有权限的所有项目的流水线列表 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * creatorIds  **参数解释**： 创建人id，有多个值时用逗号分隔，id个数取值[0,10]，非必选 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * executorIds  **参数解释**： 执行人id。有多个值时用逗号分隔，id个数取值[0,10]，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 流水线运行状态。 **约束限制**： 不涉及。 **取值范围**： - waiting：等待中。 - running：运行中。 - verifying：待审核。 - suspending：挂起。 - completed：执行完成。 **默认取值**： 不涉及。
+    * outcome  **参数解释**： 流水线执行结果。 **约束限制**： 不涉及。 **取值范围**： - success：成功。 - error：失败。 - aborted：终止。 **默认取值**： 不涉及。
+    * sortKey  **参数解释**： 用于排序的字段，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sortDir  **参数解释**： 排序方式。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
+    * gitUrl  **参数解释**： 代码仓地址。仅支持codehub仓库，如：git@codehub.XXX.git **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量。表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： offset大于等于0。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 每次查询的条目数量。 **约束限制**： 不涉及。 **取值范围**： 取值[10-50]。 **默认取值**： 10。
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pipelineName  流水线名字。参数存在，则进行模糊匹配
-    * projectIds  CodeArts项目ids。该参数存在，则获取对应项目下的流水线列表，逗号分隔，id个数取值[0,10]；如果不存在，则获取调用方所属租户的流水线列表
-    * creatorIds  创建人id。该参数存在，逗号分隔，id个数取值[0,10]
-    * executorIds  执行人id。该参数存在，逗号分隔，id个数取值[0,10]；
-    * status  流水线运行状态。取值范围：waiting,running,verifying,handling,suspending,completed
-    * outcome  流水线结果，标记流水线。error、success、aborted
-    * sortKey  用于排序的字段。取值为：pipeline_name,create_time,start_time
-    * sortDir  排序类型。asc按排序字段升序，desc按排序字段降序
-    * gitUrl  codehub搜索链接：git@codehub.XXX.git；gitee搜索链接：git@gitee.com.XXX.git；github搜索链接：git@github.com.XXX.git等
-    * offset  偏移量。表示从此偏移量开始查询，offset大于等于0，默认取值为0
-    * limit  每次查询的条目数量。取值[10-50]，默认取值为10
+    * pipelineName  **参数解释**： 流水线名字。查询时进行模糊匹配。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectIds  **参数解释**： 项目id，有多个值时用逗号分隔，id个数取值[0,10]，非必选。如果该参数有值，则获取对应项目下的流水线列表；如果没有值，则获取用户有权限的所有项目的流水线列表 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * creatorIds  **参数解释**： 创建人id，有多个值时用逗号分隔，id个数取值[0,10]，非必选 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * executorIds  **参数解释**： 执行人id。有多个值时用逗号分隔，id个数取值[0,10]，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 流水线运行状态。 **约束限制**： 不涉及。 **取值范围**： - waiting：等待中。 - running：运行中。 - verifying：待审核。 - suspending：挂起。 - completed：执行完成。 **默认取值**： 不涉及。
+    * outcome  **参数解释**： 流水线执行结果。 **约束限制**： 不涉及。 **取值范围**： - success：成功。 - error：失败。 - aborted：终止。 **默认取值**： 不涉及。
+    * sortKey  **参数解释**： 用于排序的字段，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sortDir  **参数解释**： 排序方式。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
+    * gitUrl  **参数解释**： 代码仓地址。仅支持codehub仓库，如：git@codehub.XXX.git **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量。表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： offset大于等于0。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 每次查询的条目数量。 **约束限制**： 不涉及。 **取值范围**： 取值[10-50]。 **默认取值**： 10。
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pipelineName  流水线名字。参数存在，则进行模糊匹配
-    * projectIds  CodeArts项目ids。该参数存在，则获取对应项目下的流水线列表，逗号分隔，id个数取值[0,10]；如果不存在，则获取调用方所属租户的流水线列表
-    * creatorIds  创建人id。该参数存在，逗号分隔，id个数取值[0,10]
-    * executorIds  执行人id。该参数存在，逗号分隔，id个数取值[0,10]；
-    * status  流水线运行状态。取值范围：waiting,running,verifying,handling,suspending,completed
-    * outcome  流水线结果，标记流水线。error、success、aborted
-    * sortKey  用于排序的字段。取值为：pipeline_name,create_time,start_time
-    * sortDir  排序类型。asc按排序字段升序，desc按排序字段降序
-    * gitUrl  codehub搜索链接：git@codehub.XXX.git；gitee搜索链接：git@gitee.com.XXX.git；github搜索链接：git@github.com.XXX.git等
-    * offset  偏移量。表示从此偏移量开始查询，offset大于等于0，默认取值为0
-    * limit  每次查询的条目数量。取值[10-50]，默认取值为10
+    * pipelineName  **参数解释**： 流水线名字。查询时进行模糊匹配。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectIds  **参数解释**： 项目id，有多个值时用逗号分隔，id个数取值[0,10]，非必选。如果该参数有值，则获取对应项目下的流水线列表；如果没有值，则获取用户有权限的所有项目的流水线列表 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * creatorIds  **参数解释**： 创建人id，有多个值时用逗号分隔，id个数取值[0,10]，非必选 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * executorIds  **参数解释**： 执行人id。有多个值时用逗号分隔，id个数取值[0,10]，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 流水线运行状态。 **约束限制**： 不涉及。 **取值范围**： - waiting：等待中。 - running：运行中。 - verifying：待审核。 - suspending：挂起。 - completed：执行完成。 **默认取值**： 不涉及。
+    * outcome  **参数解释**： 流水线执行结果。 **约束限制**： 不涉及。 **取值范围**： - success：成功。 - error：失败。 - aborted：终止。 **默认取值**： 不涉及。
+    * sortKey  **参数解释**： 用于排序的字段，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sortDir  **参数解释**： 排序方式。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
+    * gitUrl  **参数解释**： 代码仓地址。仅支持codehub仓库，如：git@codehub.XXX.git **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量。表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： offset大于等于0。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 每次查询的条目数量。 **约束限制**： 不涉及。 **取值范围**： 取值[10-50]。 **默认取值**： 10。
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pipelineName  流水线名字。参数存在，则进行模糊匹配
-    * projectIds  CodeArts项目ids。该参数存在，则获取对应项目下的流水线列表，逗号分隔，id个数取值[0,10]；如果不存在，则获取调用方所属租户的流水线列表
-    * creatorIds  创建人id。该参数存在，逗号分隔，id个数取值[0,10]
-    * executorIds  执行人id。该参数存在，逗号分隔，id个数取值[0,10]；
-    * status  流水线运行状态。取值范围：waiting,running,verifying,handling,suspending,completed
-    * outcome  流水线结果，标记流水线。error、success、aborted
-    * sortKey  用于排序的字段。取值为：pipeline_name,create_time,start_time
-    * sortDir  排序类型。asc按排序字段升序，desc按排序字段降序
-    * gitUrl  codehub搜索链接：git@codehub.XXX.git；gitee搜索链接：git@gitee.com.XXX.git；github搜索链接：git@github.com.XXX.git等
-    * offset  偏移量。表示从此偏移量开始查询，offset大于等于0，默认取值为0
-    * limit  每次查询的条目数量。取值[10-50]，默认取值为10
+    * pipelineName  **参数解释**： 流水线名字。查询时进行模糊匹配。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectIds  **参数解释**： 项目id，有多个值时用逗号分隔，id个数取值[0,10]，非必选。如果该参数有值，则获取对应项目下的流水线列表；如果没有值，则获取用户有权限的所有项目的流水线列表 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * creatorIds  **参数解释**： 创建人id，有多个值时用逗号分隔，id个数取值[0,10]，非必选 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * executorIds  **参数解释**： 执行人id。有多个值时用逗号分隔，id个数取值[0,10]，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 流水线运行状态。 **约束限制**： 不涉及。 **取值范围**： - waiting：等待中。 - running：运行中。 - verifying：待审核。 - suspending：挂起。 - completed：执行完成。 **默认取值**： 不涉及。
+    * outcome  **参数解释**： 流水线执行结果。 **约束限制**： 不涉及。 **取值范围**： - success：成功。 - error：失败。 - aborted：终止。 **默认取值**： 不涉及。
+    * sortKey  **参数解释**： 用于排序的字段，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sortDir  **参数解释**： 排序方式。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
+    * gitUrl  **参数解释**： 代码仓地址。仅支持codehub仓库，如：git@codehub.XXX.git **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量。表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： offset大于等于0。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 每次查询的条目数量。 **约束限制**： 不涉及。 **取值范围**： 取值[10-50]。 **默认取值**： 10。
     *
     * @var string[]
     */
@@ -284,7 +284,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelineName
-    *  流水线名字。参数存在，则进行模糊匹配
+    *  **参数解释**： 流水线名字。查询时进行模糊匹配。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -296,7 +296,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets pipelineName
     *
-    * @param string|null $pipelineName 流水线名字。参数存在，则进行模糊匹配
+    * @param string|null $pipelineName **参数解释**： 流水线名字。查询时进行模糊匹配。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -308,7 +308,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectIds
-    *  CodeArts项目ids。该参数存在，则获取对应项目下的流水线列表，逗号分隔，id个数取值[0,10]；如果不存在，则获取调用方所属租户的流水线列表
+    *  **参数解释**： 项目id，有多个值时用逗号分隔，id个数取值[0,10]，非必选。如果该参数有值，则获取对应项目下的流水线列表；如果没有值，则获取用户有权限的所有项目的流水线列表 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -320,7 +320,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets projectIds
     *
-    * @param string|null $projectIds CodeArts项目ids。该参数存在，则获取对应项目下的流水线列表，逗号分隔，id个数取值[0,10]；如果不存在，则获取调用方所属租户的流水线列表
+    * @param string|null $projectIds **参数解释**： 项目id，有多个值时用逗号分隔，id个数取值[0,10]，非必选。如果该参数有值，则获取对应项目下的流水线列表；如果没有值，则获取用户有权限的所有项目的流水线列表 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets creatorIds
-    *  创建人id。该参数存在，逗号分隔，id个数取值[0,10]
+    *  **参数解释**： 创建人id，有多个值时用逗号分隔，id个数取值[0,10]，非必选 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -344,7 +344,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets creatorIds
     *
-    * @param string|null $creatorIds 创建人id。该参数存在，逗号分隔，id个数取值[0,10]
+    * @param string|null $creatorIds **参数解释**： 创建人id，有多个值时用逗号分隔，id个数取值[0,10]，非必选 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets executorIds
-    *  执行人id。该参数存在，逗号分隔，id个数取值[0,10]；
+    *  **参数解释**： 执行人id。有多个值时用逗号分隔，id个数取值[0,10]，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -368,7 +368,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets executorIds
     *
-    * @param string|null $executorIds 执行人id。该参数存在，逗号分隔，id个数取值[0,10]；
+    * @param string|null $executorIds **参数解释**： 执行人id。有多个值时用逗号分隔，id个数取值[0,10]，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  流水线运行状态。取值范围：waiting,running,verifying,handling,suspending,completed
+    *  **参数解释**： 流水线运行状态。 **约束限制**： 不涉及。 **取值范围**： - waiting：等待中。 - running：运行中。 - verifying：待审核。 - suspending：挂起。 - completed：执行完成。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -392,7 +392,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 流水线运行状态。取值范围：waiting,running,verifying,handling,suspending,completed
+    * @param string|null $status **参数解释**： 流水线运行状态。 **约束限制**： 不涉及。 **取值范围**： - waiting：等待中。 - running：运行中。 - verifying：待审核。 - suspending：挂起。 - completed：执行完成。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -404,7 +404,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets outcome
-    *  流水线结果，标记流水线。error、success、aborted
+    *  **参数解释**： 流水线执行结果。 **约束限制**： 不涉及。 **取值范围**： - success：成功。 - error：失败。 - aborted：终止。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -416,7 +416,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets outcome
     *
-    * @param string|null $outcome 流水线结果，标记流水线。error、success、aborted
+    * @param string|null $outcome **参数解释**： 流水线执行结果。 **约束限制**： 不涉及。 **取值范围**： - success：成功。 - error：失败。 - aborted：终止。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -428,7 +428,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  用于排序的字段。取值为：pipeline_name,create_time,start_time
+    *  **参数解释**： 用于排序的字段，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -440,7 +440,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 用于排序的字段。取值为：pipeline_name,create_time,start_time
+    * @param string|null $sortKey **参数解释**： 用于排序的字段，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -452,7 +452,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortDir
-    *  排序类型。asc按排序字段升序，desc按排序字段降序
+    *  **参数解释**： 排序方式。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -464,7 +464,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir 排序类型。asc按排序字段升序，desc按排序字段降序
+    * @param string|null $sortDir **参数解释**： 排序方式。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -476,7 +476,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitUrl
-    *  codehub搜索链接：git@codehub.XXX.git；gitee搜索链接：git@gitee.com.XXX.git；github搜索链接：git@github.com.XXX.git等
+    *  **参数解释**： 代码仓地址。仅支持codehub仓库，如：git@codehub.XXX.git **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -488,7 +488,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets gitUrl
     *
-    * @param string|null $gitUrl codehub搜索链接：git@codehub.XXX.git；gitee搜索链接：git@gitee.com.XXX.git；github搜索链接：git@github.com.XXX.git等
+    * @param string|null $gitUrl **参数解释**： 代码仓地址。仅支持codehub仓库，如：git@codehub.XXX.git **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -500,7 +500,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量。表示从此偏移量开始查询，offset大于等于0，默认取值为0
+    *  **参数解释**： 偏移量。表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： offset大于等于0。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -512,7 +512,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量。表示从此偏移量开始查询，offset大于等于0，默认取值为0
+    * @param int|null $offset **参数解释**： 偏移量。表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： offset大于等于0。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -524,7 +524,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每次查询的条目数量。取值[10-50]，默认取值为10
+    *  **参数解释**： 每次查询的条目数量。 **约束限制**： 不涉及。 **取值范围**： 取值[10-50]。 **默认取值**： 10。
     *
     * @return int|null
     */
@@ -536,7 +536,7 @@ class ListPipelineSimpleInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每次查询的条目数量。取值[10-50]，默认取值为10
+    * @param int|null $limit **参数解释**： 每次查询的条目数量。 **约束限制**： 不涉及。 **取值范围**： 取值[10-50]。 **默认取值**： 10。
     *
     * @return $this
     */

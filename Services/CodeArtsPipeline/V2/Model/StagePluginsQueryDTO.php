@@ -20,16 +20,16 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * useCondition  用于区分插件为流水线可使用/模板可使用
-    * compId  微服务ID
-    * compName  微服务名
-    * cloudId  局点ID
-    * strategyId  策略ID
-    * category  流水线类型
-    * publishTab  是否发布流水线
-    * platform  部署平台
-    * compExtendType  组件类型
-    * deployType  部署类型
+    * useCondition  **参数解释**： 用于区分插件为流水线可使用/模板可使用。 **约束限制**： 不涉及。 **取值范围**： - pipeline：流水线可使用。 - template：模板可使用。 **默认取值**： 不涉及。
+    * compId  **参数解释**： 微服务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * compName  **参数解释**： 微服务名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * cloudId  **参数解释**： 局点ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * strategyId  **参数解释**： 策略ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * category  **参数解释**： 流水线类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publishTab  **参数解释**： 是否发布流水线。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * platform  **参数解释**： 部署平台。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * compExtendType  **参数解释**： 组件类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * deployType  **参数解释**： 部署类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * useCondition  用于区分插件为流水线可使用/模板可使用
-    * compId  微服务ID
-    * compName  微服务名
-    * cloudId  局点ID
-    * strategyId  策略ID
-    * category  流水线类型
-    * publishTab  是否发布流水线
-    * platform  部署平台
-    * compExtendType  组件类型
-    * deployType  部署类型
+    * useCondition  **参数解释**： 用于区分插件为流水线可使用/模板可使用。 **约束限制**： 不涉及。 **取值范围**： - pipeline：流水线可使用。 - template：模板可使用。 **默认取值**： 不涉及。
+    * compId  **参数解释**： 微服务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * compName  **参数解释**： 微服务名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * cloudId  **参数解释**： 局点ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * strategyId  **参数解释**： 策略ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * category  **参数解释**： 流水线类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publishTab  **参数解释**： 是否发布流水线。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * platform  **参数解释**： 部署平台。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * compExtendType  **参数解释**： 组件类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * deployType  **参数解释**： 部署类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * useCondition  用于区分插件为流水线可使用/模板可使用
-    * compId  微服务ID
-    * compName  微服务名
-    * cloudId  局点ID
-    * strategyId  策略ID
-    * category  流水线类型
-    * publishTab  是否发布流水线
-    * platform  部署平台
-    * compExtendType  组件类型
-    * deployType  部署类型
+    * useCondition  **参数解释**： 用于区分插件为流水线可使用/模板可使用。 **约束限制**： 不涉及。 **取值范围**： - pipeline：流水线可使用。 - template：模板可使用。 **默认取值**： 不涉及。
+    * compId  **参数解释**： 微服务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * compName  **参数解释**： 微服务名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * cloudId  **参数解释**： 局点ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * strategyId  **参数解释**： 策略ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * category  **参数解释**： 流水线类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publishTab  **参数解释**： 是否发布流水线。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * platform  **参数解释**： 部署平台。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * compExtendType  **参数解释**： 组件类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * deployType  **参数解释**： 部署类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * useCondition  用于区分插件为流水线可使用/模板可使用
-    * compId  微服务ID
-    * compName  微服务名
-    * cloudId  局点ID
-    * strategyId  策略ID
-    * category  流水线类型
-    * publishTab  是否发布流水线
-    * platform  部署平台
-    * compExtendType  组件类型
-    * deployType  部署类型
+    * useCondition  **参数解释**： 用于区分插件为流水线可使用/模板可使用。 **约束限制**： 不涉及。 **取值范围**： - pipeline：流水线可使用。 - template：模板可使用。 **默认取值**： 不涉及。
+    * compId  **参数解释**： 微服务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * compName  **参数解释**： 微服务名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * cloudId  **参数解释**： 局点ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * strategyId  **参数解释**： 策略ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * category  **参数解释**： 流水线类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publishTab  **参数解释**： 是否发布流水线。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * platform  **参数解释**： 部署平台。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * compExtendType  **参数解释**： 组件类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * deployType  **参数解释**： 部署类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * useCondition  用于区分插件为流水线可使用/模板可使用
-    * compId  微服务ID
-    * compName  微服务名
-    * cloudId  局点ID
-    * strategyId  策略ID
-    * category  流水线类型
-    * publishTab  是否发布流水线
-    * platform  部署平台
-    * compExtendType  组件类型
-    * deployType  部署类型
+    * useCondition  **参数解释**： 用于区分插件为流水线可使用/模板可使用。 **约束限制**： 不涉及。 **取值范围**： - pipeline：流水线可使用。 - template：模板可使用。 **默认取值**： 不涉及。
+    * compId  **参数解释**： 微服务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * compName  **参数解释**： 微服务名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * cloudId  **参数解释**： 局点ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * strategyId  **参数解释**： 策略ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * category  **参数解释**： 流水线类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publishTab  **参数解释**： 是否发布流水线。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * platform  **参数解释**： 部署平台。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * compExtendType  **参数解释**： 组件类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * deployType  **参数解释**： 部署类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -273,7 +273,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets useCondition
-    *  用于区分插件为流水线可使用/模板可使用
+    *  **参数解释**： 用于区分插件为流水线可使用/模板可使用。 **约束限制**： 不涉及。 **取值范围**： - pipeline：流水线可使用。 - template：模板可使用。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets useCondition
     *
-    * @param string|null $useCondition 用于区分插件为流水线可使用/模板可使用
+    * @param string|null $useCondition **参数解释**： 用于区分插件为流水线可使用/模板可使用。 **约束限制**： 不涉及。 **取值范围**： - pipeline：流水线可使用。 - template：模板可使用。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -297,7 +297,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets compId
-    *  微服务ID
+    *  **参数解释**： 微服务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets compId
     *
-    * @param string|null $compId 微服务ID
+    * @param string|null $compId **参数解释**： 微服务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -321,7 +321,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets compName
-    *  微服务名
+    *  **参数解释**： 微服务名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -333,7 +333,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets compName
     *
-    * @param string|null $compName 微服务名
+    * @param string|null $compName **参数解释**： 微服务名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -345,7 +345,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudId
-    *  局点ID
+    *  **参数解释**： 局点ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -357,7 +357,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets cloudId
     *
-    * @param string|null $cloudId 局点ID
+    * @param string|null $cloudId **参数解释**： 局点ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -369,7 +369,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets strategyId
-    *  策略ID
+    *  **参数解释**： 策略ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -381,7 +381,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets strategyId
     *
-    * @param string|null $strategyId 策略ID
+    * @param string|null $strategyId **参数解释**： 策略ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -393,7 +393,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  流水线类型
+    *  **参数解释**： 流水线类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -405,7 +405,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category 流水线类型
+    * @param string|null $category **参数解释**： 流水线类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -417,7 +417,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets publishTab
-    *  是否发布流水线
+    *  **参数解释**： 是否发布流水线。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -429,7 +429,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets publishTab
     *
-    * @param string|null $publishTab 是否发布流水线
+    * @param string|null $publishTab **参数解释**： 是否发布流水线。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -441,7 +441,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets platform
-    *  部署平台
+    *  **参数解释**： 部署平台。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -453,7 +453,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets platform
     *
-    * @param string|null $platform 部署平台
+    * @param string|null $platform **参数解释**： 部署平台。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -465,7 +465,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets compExtendType
-    *  组件类型
+    *  **参数解释**： 组件类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -477,7 +477,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets compExtendType
     *
-    * @param string|null $compExtendType 组件类型
+    * @param string|null $compExtendType **参数解释**： 组件类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -489,7 +489,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets deployType
-    *  部署类型
+    *  **参数解释**： 部署类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -501,7 +501,7 @@ class StagePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets deployType
     *
-    * @param string|null $deployType 部署类型
+    * @param string|null $deployType **参数解释**： 部署类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

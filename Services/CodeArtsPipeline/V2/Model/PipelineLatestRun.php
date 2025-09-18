@@ -20,20 +20,20 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pipelineId  流水线ID
-    * pipelineRunId  流水线运行实例ID
-    * executorId  执行人ID
-    * executorName  执行人名称
-    * stageStatusList  阶段状态信息
-    * status  流水线状态
-    * runNumber  运行序号
-    * triggerType  触发类型
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * pipelineRunId  **参数解释**： 流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * executorId  **参数解释**： 执行人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * executorName  **参数解释**： 执行人名称。 **取值范围**： 不涉及。
+    * stageStatusList  **参数解释**： 阶段状态信息列表，包含各阶段的详细状态信息。 **约束限制**： 不涉及。
+    * status  **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
+    * runNumber  **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
+    * triggerType  **参数解释**： 触发类型。 **取值范围**： - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。
     * buildParams  buildParams
     * artifactParams  artifactParams
-    * startTime  开始时间
-    * endTime  结束时间
-    * modifyUrl  修改页地址
-    * detailUrl  详情页地址
+    * startTime  **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
+    * modifyUrl  **参数解释**： 修改页地址。 **取值范围**： 不涉及。
+    * detailUrl  **参数解释**： 详情页地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -56,20 +56,20 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pipelineId  流水线ID
-    * pipelineRunId  流水线运行实例ID
-    * executorId  执行人ID
-    * executorName  执行人名称
-    * stageStatusList  阶段状态信息
-    * status  流水线状态
-    * runNumber  运行序号
-    * triggerType  触发类型
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * pipelineRunId  **参数解释**： 流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * executorId  **参数解释**： 执行人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * executorName  **参数解释**： 执行人名称。 **取值范围**： 不涉及。
+    * stageStatusList  **参数解释**： 阶段状态信息列表，包含各阶段的详细状态信息。 **约束限制**： 不涉及。
+    * status  **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
+    * runNumber  **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
+    * triggerType  **参数解释**： 触发类型。 **取值范围**： - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。
     * buildParams  buildParams
     * artifactParams  artifactParams
-    * startTime  开始时间
-    * endTime  结束时间
-    * modifyUrl  修改页地址
-    * detailUrl  详情页地址
+    * startTime  **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
+    * modifyUrl  **参数解释**： 修改页地址。 **取值范围**： 不涉及。
+    * detailUrl  **参数解释**： 详情页地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,20 +113,20 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pipelineId  流水线ID
-    * pipelineRunId  流水线运行实例ID
-    * executorId  执行人ID
-    * executorName  执行人名称
-    * stageStatusList  阶段状态信息
-    * status  流水线状态
-    * runNumber  运行序号
-    * triggerType  触发类型
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * pipelineRunId  **参数解释**： 流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * executorId  **参数解释**： 执行人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * executorName  **参数解释**： 执行人名称。 **取值范围**： 不涉及。
+    * stageStatusList  **参数解释**： 阶段状态信息列表，包含各阶段的详细状态信息。 **约束限制**： 不涉及。
+    * status  **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
+    * runNumber  **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
+    * triggerType  **参数解释**： 触发类型。 **取值范围**： - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。
     * buildParams  buildParams
     * artifactParams  artifactParams
-    * startTime  开始时间
-    * endTime  结束时间
-    * modifyUrl  修改页地址
-    * detailUrl  详情页地址
+    * startTime  **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
+    * modifyUrl  **参数解释**： 修改页地址。 **取值范围**： 不涉及。
+    * detailUrl  **参数解释**： 详情页地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -149,20 +149,20 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pipelineId  流水线ID
-    * pipelineRunId  流水线运行实例ID
-    * executorId  执行人ID
-    * executorName  执行人名称
-    * stageStatusList  阶段状态信息
-    * status  流水线状态
-    * runNumber  运行序号
-    * triggerType  触发类型
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * pipelineRunId  **参数解释**： 流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * executorId  **参数解释**： 执行人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * executorName  **参数解释**： 执行人名称。 **取值范围**： 不涉及。
+    * stageStatusList  **参数解释**： 阶段状态信息列表，包含各阶段的详细状态信息。 **约束限制**： 不涉及。
+    * status  **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
+    * runNumber  **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
+    * triggerType  **参数解释**： 触发类型。 **取值范围**： - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。
     * buildParams  buildParams
     * artifactParams  artifactParams
-    * startTime  开始时间
-    * endTime  结束时间
-    * modifyUrl  修改页地址
-    * detailUrl  详情页地址
+    * startTime  **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
+    * modifyUrl  **参数解释**： 修改页地址。 **取值范围**： 不涉及。
+    * detailUrl  **参数解释**： 详情页地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,20 +185,20 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pipelineId  流水线ID
-    * pipelineRunId  流水线运行实例ID
-    * executorId  执行人ID
-    * executorName  执行人名称
-    * stageStatusList  阶段状态信息
-    * status  流水线状态
-    * runNumber  运行序号
-    * triggerType  触发类型
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * pipelineRunId  **参数解释**： 流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * executorId  **参数解释**： 执行人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * executorName  **参数解释**： 执行人名称。 **取值范围**： 不涉及。
+    * stageStatusList  **参数解释**： 阶段状态信息列表，包含各阶段的详细状态信息。 **约束限制**： 不涉及。
+    * status  **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
+    * runNumber  **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
+    * triggerType  **参数解释**： 触发类型。 **取值范围**： - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。
     * buildParams  buildParams
     * artifactParams  artifactParams
-    * startTime  开始时间
-    * endTime  结束时间
-    * modifyUrl  修改页地址
-    * detailUrl  详情页地址
+    * startTime  **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
+    * modifyUrl  **参数解释**： 修改页地址。 **取值范围**： 不涉及。
+    * detailUrl  **参数解释**： 详情页地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -317,7 +317,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelineId
-    *  流水线ID
+    *  **参数解释**： 流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -329,7 +329,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
     /**
     * Sets pipelineId
     *
-    * @param string|null $pipelineId 流水线ID
+    * @param string|null $pipelineId **参数解释**： 流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */
@@ -341,7 +341,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelineRunId
-    *  流水线运行实例ID
+    *  **参数解释**： 流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -353,7 +353,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
     /**
     * Sets pipelineRunId
     *
-    * @param string|null $pipelineRunId 流水线运行实例ID
+    * @param string|null $pipelineRunId **参数解释**： 流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */
@@ -365,7 +365,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets executorId
-    *  执行人ID
+    *  **参数解释**： 执行人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -377,7 +377,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
     /**
     * Sets executorId
     *
-    * @param string|null $executorId 执行人ID
+    * @param string|null $executorId **参数解释**： 执行人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */
@@ -389,7 +389,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets executorName
-    *  执行人名称
+    *  **参数解释**： 执行人名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -401,7 +401,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
     /**
     * Sets executorName
     *
-    * @param string|null $executorName 执行人名称
+    * @param string|null $executorName **参数解释**： 执行人名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -413,7 +413,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets stageStatusList
-    *  阶段状态信息
+    *  **参数解释**： 阶段状态信息列表，包含各阶段的详细状态信息。 **约束限制**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineLatestRunStageStatusList[]|null
     */
@@ -425,7 +425,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
     /**
     * Sets stageStatusList
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineLatestRunStageStatusList[]|null $stageStatusList 阶段状态信息
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineLatestRunStageStatusList[]|null $stageStatusList **参数解释**： 阶段状态信息列表，包含各阶段的详细状态信息。 **约束限制**： 不涉及。
     *
     * @return $this
     */
@@ -437,7 +437,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  流水线状态
+    *  **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
     *
     * @return string|null
     */
@@ -449,7 +449,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 流水线状态
+    * @param string|null $status **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
     *
     * @return $this
     */
@@ -461,7 +461,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets runNumber
-    *  运行序号
+    *  **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
     *
     * @return int|null
     */
@@ -473,7 +473,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
     /**
     * Sets runNumber
     *
-    * @param int|null $runNumber 运行序号
+    * @param int|null $runNumber **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
     *
     * @return $this
     */
@@ -485,7 +485,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets triggerType
-    *  触发类型
+    *  **参数解释**： 触发类型。 **取值范围**： - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。
     *
     * @return string|null
     */
@@ -497,7 +497,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
     /**
     * Sets triggerType
     *
-    * @param string|null $triggerType 触发类型
+    * @param string|null $triggerType **参数解释**： 触发类型。 **取值范围**： - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。
     *
     * @return $this
     */
@@ -557,7 +557,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  开始时间
+    *  **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -569,7 +569,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime 开始时间
+    * @param int|null $startTime **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -581,7 +581,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间
+    *  **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -593,7 +593,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int|null $endTime 结束时间
+    * @param int|null $endTime **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -605,7 +605,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets modifyUrl
-    *  修改页地址
+    *  **参数解释**： 修改页地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -617,7 +617,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
     /**
     * Sets modifyUrl
     *
-    * @param string|null $modifyUrl 修改页地址
+    * @param string|null $modifyUrl **参数解释**： 修改页地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -629,7 +629,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets detailUrl
-    *  详情页地址
+    *  **参数解释**： 详情页地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -641,7 +641,7 @@ class PipelineLatestRun implements ModelInterface, ArrayAccess
     /**
     * Sets detailUrl
     *
-    * @param string|null $detailUrl 详情页地址
+    * @param string|null $detailUrl **参数解释**： 详情页地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */

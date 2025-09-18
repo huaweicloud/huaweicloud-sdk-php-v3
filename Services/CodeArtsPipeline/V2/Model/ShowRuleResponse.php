@@ -21,19 +21,19 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  规则ID
-    * type  规则类型
-    * name  规则名称
-    * version  规则版本
-    * layoutContent  布局内容
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * creator  创建人
-    * createTime  创建时间
-    * updater  更新人
-    * updateTime  更新时间
-    * content  规则属性列表
+    * id  **参数解释**： 规则ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * type  **参数解释**： 规则类型。 **取值范围**： - Build：构建。 - Gate：代码检查。 - Test：测试。
+    * name  **参数解释**： 规则名称。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 规则是否有效。 **取值范围**： true:有效，false:无效
+    * version  **参数解释**： 规则版本。 **取值范围**： 不涉及。
+    * pluginId  **参数解释**： 扩展插件唯一ID。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
+    * pluginVersion  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * creator  **参数解释**： 规则创建人。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 规则创建时间。 **取值范围**： 不涉及。
+    * updater  **参数解释**： 规则最后更新人。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 规则最后更新时间。 **取值范围**： 不涉及。
+    * content  **参数解释**： 规则详细属性。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -41,8 +41,8 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
             'id' => 'string',
             'type' => 'string',
             'name' => 'string',
+            'isValid' => 'bool',
             'version' => 'string',
-            'layoutContent' => 'string',
             'pluginId' => 'string',
             'pluginName' => 'string',
             'pluginVersion' => 'string',
@@ -55,19 +55,19 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  规则ID
-    * type  规则类型
-    * name  规则名称
-    * version  规则版本
-    * layoutContent  布局内容
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * creator  创建人
-    * createTime  创建时间
-    * updater  更新人
-    * updateTime  更新时间
-    * content  规则属性列表
+    * id  **参数解释**： 规则ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * type  **参数解释**： 规则类型。 **取值范围**： - Build：构建。 - Gate：代码检查。 - Test：测试。
+    * name  **参数解释**： 规则名称。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 规则是否有效。 **取值范围**： true:有效，false:无效
+    * version  **参数解释**： 规则版本。 **取值范围**： 不涉及。
+    * pluginId  **参数解释**： 扩展插件唯一ID。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
+    * pluginVersion  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * creator  **参数解释**： 规则创建人。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 规则创建时间。 **取值范围**： 不涉及。
+    * updater  **参数解释**： 规则最后更新人。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 规则最后更新时间。 **取值范围**： 不涉及。
+    * content  **参数解释**： 规则详细属性。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -75,8 +75,8 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
         'id' => null,
         'type' => null,
         'name' => null,
+        'isValid' => null,
         'version' => null,
-        'layoutContent' => null,
         'pluginId' => null,
         'pluginName' => null,
         'pluginVersion' => null,
@@ -110,19 +110,19 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  规则ID
-    * type  规则类型
-    * name  规则名称
-    * version  规则版本
-    * layoutContent  布局内容
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * creator  创建人
-    * createTime  创建时间
-    * updater  更新人
-    * updateTime  更新时间
-    * content  规则属性列表
+    * id  **参数解释**： 规则ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * type  **参数解释**： 规则类型。 **取值范围**： - Build：构建。 - Gate：代码检查。 - Test：测试。
+    * name  **参数解释**： 规则名称。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 规则是否有效。 **取值范围**： true:有效，false:无效
+    * version  **参数解释**： 规则版本。 **取值范围**： 不涉及。
+    * pluginId  **参数解释**： 扩展插件唯一ID。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
+    * pluginVersion  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * creator  **参数解释**： 规则创建人。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 规则创建时间。 **取值范围**： 不涉及。
+    * updater  **参数解释**： 规则最后更新人。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 规则最后更新时间。 **取值范围**： 不涉及。
+    * content  **参数解释**： 规则详细属性。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -130,8 +130,8 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
             'id' => 'id',
             'type' => 'type',
             'name' => 'name',
+            'isValid' => 'is_valid',
             'version' => 'version',
-            'layoutContent' => 'layout_content',
             'pluginId' => 'plugin_id',
             'pluginName' => 'plugin_name',
             'pluginVersion' => 'plugin_version',
@@ -144,19 +144,19 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  规则ID
-    * type  规则类型
-    * name  规则名称
-    * version  规则版本
-    * layoutContent  布局内容
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * creator  创建人
-    * createTime  创建时间
-    * updater  更新人
-    * updateTime  更新时间
-    * content  规则属性列表
+    * id  **参数解释**： 规则ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * type  **参数解释**： 规则类型。 **取值范围**： - Build：构建。 - Gate：代码检查。 - Test：测试。
+    * name  **参数解释**： 规则名称。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 规则是否有效。 **取值范围**： true:有效，false:无效
+    * version  **参数解释**： 规则版本。 **取值范围**： 不涉及。
+    * pluginId  **参数解释**： 扩展插件唯一ID。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
+    * pluginVersion  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * creator  **参数解释**： 规则创建人。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 规则创建时间。 **取值范围**： 不涉及。
+    * updater  **参数解释**： 规则最后更新人。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 规则最后更新时间。 **取值范围**： 不涉及。
+    * content  **参数解释**： 规则详细属性。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -164,8 +164,8 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'type' => 'setType',
             'name' => 'setName',
+            'isValid' => 'setIsValid',
             'version' => 'setVersion',
-            'layoutContent' => 'setLayoutContent',
             'pluginId' => 'setPluginId',
             'pluginName' => 'setPluginName',
             'pluginVersion' => 'setPluginVersion',
@@ -178,19 +178,19 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  规则ID
-    * type  规则类型
-    * name  规则名称
-    * version  规则版本
-    * layoutContent  布局内容
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * creator  创建人
-    * createTime  创建时间
-    * updater  更新人
-    * updateTime  更新时间
-    * content  规则属性列表
+    * id  **参数解释**： 规则ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * type  **参数解释**： 规则类型。 **取值范围**： - Build：构建。 - Gate：代码检查。 - Test：测试。
+    * name  **参数解释**： 规则名称。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 规则是否有效。 **取值范围**： true:有效，false:无效
+    * version  **参数解释**： 规则版本。 **取值范围**： 不涉及。
+    * pluginId  **参数解释**： 扩展插件唯一ID。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
+    * pluginVersion  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * creator  **参数解释**： 规则创建人。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 规则创建时间。 **取值范围**： 不涉及。
+    * updater  **参数解释**： 规则最后更新人。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 规则最后更新时间。 **取值范围**： 不涉及。
+    * content  **参数解释**： 规则详细属性。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -198,8 +198,8 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'type' => 'getType',
             'name' => 'getName',
+            'isValid' => 'getIsValid',
             'version' => 'getVersion',
-            'layoutContent' => 'getLayoutContent',
             'pluginId' => 'getPluginId',
             'pluginName' => 'getPluginName',
             'pluginVersion' => 'getPluginVersion',
@@ -271,8 +271,8 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['isValid'] = isset($data['isValid']) ? $data['isValid'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
-        $this->container['layoutContent'] = isset($data['layoutContent']) ? $data['layoutContent'] : null;
         $this->container['pluginId'] = isset($data['pluginId']) ? $data['pluginId'] : null;
         $this->container['pluginName'] = isset($data['pluginName']) ? $data['pluginName'] : null;
         $this->container['pluginVersion'] = isset($data['pluginVersion']) ? $data['pluginVersion'] : null;
@@ -310,7 +310,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  规则ID
+    *  **参数解释**： 规则ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 规则ID
+    * @param string|null $id **参数解释**： 规则ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  规则类型
+    *  **参数解释**： 规则类型。 **取值范围**： - Build：构建。 - Gate：代码检查。 - Test：测试。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 规则类型
+    * @param string|null $type **参数解释**： 规则类型。 **取值范围**： - Build：构建。 - Gate：代码检查。 - Test：测试。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  规则名称
+    *  **参数解释**： 规则名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 规则名称
+    * @param string|null $name **参数解释**： 规则名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -381,8 +381,32 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets isValid
+    *  **参数解释**： 规则是否有效。 **取值范围**： true:有效，false:无效
+    *
+    * @return bool|null
+    */
+    public function getIsValid()
+    {
+        return $this->container['isValid'];
+    }
+
+    /**
+    * Sets isValid
+    *
+    * @param bool|null $isValid **参数解释**： 规则是否有效。 **取值范围**： true:有效，false:无效
+    *
+    * @return $this
+    */
+    public function setIsValid($isValid)
+    {
+        $this->container['isValid'] = $isValid;
+        return $this;
+    }
+
+    /**
     * Gets version
-    *  规则版本
+    *  **参数解释**： 规则版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -394,7 +418,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 规则版本
+    * @param string|null $version **参数解释**： 规则版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -405,32 +429,8 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets layoutContent
-    *  布局内容
-    *
-    * @return string|null
-    */
-    public function getLayoutContent()
-    {
-        return $this->container['layoutContent'];
-    }
-
-    /**
-    * Sets layoutContent
-    *
-    * @param string|null $layoutContent 布局内容
-    *
-    * @return $this
-    */
-    public function setLayoutContent($layoutContent)
-    {
-        $this->container['layoutContent'] = $layoutContent;
-        return $this;
-    }
-
-    /**
     * Gets pluginId
-    *  插件ID
+    *  **参数解释**： 扩展插件唯一ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pluginId
     *
-    * @param string|null $pluginId 插件ID
+    * @param string|null $pluginId **参数解释**： 扩展插件唯一ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginName
-    *  插件名称
+    *  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -466,7 +466,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 插件名称
+    * @param string|null $pluginName **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -478,7 +478,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginVersion
-    *  插件版本号
+    *  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -490,7 +490,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pluginVersion
     *
-    * @param string|null $pluginVersion 插件版本号
+    * @param string|null $pluginVersion **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -502,7 +502,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets creator
-    *  创建人
+    *  **参数解释**： 规则创建人。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -514,7 +514,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets creator
     *
-    * @param string|null $creator 创建人
+    * @param string|null $creator **参数解释**： 规则创建人。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -526,7 +526,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  **参数解释**： 规则创建时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -538,7 +538,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime 创建时间
+    * @param string|null $createTime **参数解释**： 规则创建时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -550,7 +550,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updater
-    *  更新人
+    *  **参数解释**： 规则最后更新人。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -562,7 +562,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updater
     *
-    * @param string|null $updater 更新人
+    * @param string|null $updater **参数解释**： 规则最后更新人。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -574,7 +574,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  **参数解释**： 规则最后更新时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -586,7 +586,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param string|null $updateTime 更新时间
+    * @param string|null $updateTime **参数解释**： 规则最后更新时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -598,7 +598,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets content
-    *  规则属性列表
+    *  **参数解释**： 规则详细属性。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleContent[]|null
     */
@@ -610,7 +610,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets content
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleContent[]|null $content 规则属性列表
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleContent[]|null $content **参数解释**： 规则详细属性。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -20,9 +20,9 @@ class PipelineMoveToGroupResponseVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * code  响应码 [\"failed\", \"success\"]
-    * pipelineId  流水线ID
-    * pipelineName  流水线名
+    * code  **参数解释**： 响应码。 **取值范围**： - failed：失败。 - success：成功。
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * pipelineName  **参数解释**： 流水线名。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class PipelineMoveToGroupResponseVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * code  响应码 [\"failed\", \"success\"]
-    * pipelineId  流水线ID
-    * pipelineName  流水线名
+    * code  **参数解释**： 响应码。 **取值范围**： - failed：失败。 - success：成功。
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * pipelineName  **参数解释**： 流水线名。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class PipelineMoveToGroupResponseVo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * code  响应码 [\"failed\", \"success\"]
-    * pipelineId  流水线ID
-    * pipelineName  流水线名
+    * code  **参数解释**： 响应码。 **取值范围**： - failed：失败。 - success：成功。
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * pipelineName  **参数解释**： 流水线名。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class PipelineMoveToGroupResponseVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * code  响应码 [\"failed\", \"success\"]
-    * pipelineId  流水线ID
-    * pipelineName  流水线名
+    * code  **参数解释**： 响应码。 **取值范围**： - failed：失败。 - success：成功。
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * pipelineName  **参数解释**： 流水线名。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class PipelineMoveToGroupResponseVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * code  响应码 [\"failed\", \"success\"]
-    * pipelineId  流水线ID
-    * pipelineName  流水线名
+    * code  **参数解释**： 响应码。 **取值范围**： - failed：失败。 - success：成功。
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * pipelineName  **参数解释**： 流水线名。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class PipelineMoveToGroupResponseVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  响应码 [\"failed\", \"success\"]
+    *  **参数解释**： 响应码。 **取值范围**： - failed：失败。 - success：成功。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class PipelineMoveToGroupResponseVo implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param string $code 响应码 [\"failed\", \"success\"]
+    * @param string $code **参数解释**： 响应码。 **取值范围**： - failed：失败。 - success：成功。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class PipelineMoveToGroupResponseVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelineId
-    *  流水线ID
+    *  **参数解释**： 流水线ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class PipelineMoveToGroupResponseVo implements ModelInterface, ArrayAccess
     /**
     * Sets pipelineId
     *
-    * @param string $pipelineId 流水线ID
+    * @param string $pipelineId **参数解释**： 流水线ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class PipelineMoveToGroupResponseVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelineName
-    *  流水线名
+    *  **参数解释**： 流水线名。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class PipelineMoveToGroupResponseVo implements ModelInterface, ArrayAccess
     /**
     * Sets pipelineName
     *
-    * @param string $pipelineName 流水线名
+    * @param string $pipelineName **参数解释**： 流水线名。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -30,8 +30,8 @@ class ShowPipleineStatusResponse implements ModelInterface, ArrayAccess
     * parameters  流水线参数
     * states  流水线执行情况
     * elapsedTime  执行耗时
-    * status  流水线运行状态
-    * outcome  流水线执行结果
+    * status  流水线运行状态。取值及含义：waiting：等待；running：执行中；verifying：待审核；suspending：挂起；completed：完成。
+    * outcome  流水线执行结果。取值及含义：success：成功；error：失败；aborted：终止
     * detailUrl  流水线详情页地址
     *
     * @var string[]
@@ -62,8 +62,8 @@ class ShowPipleineStatusResponse implements ModelInterface, ArrayAccess
     * parameters  流水线参数
     * states  流水线执行情况
     * elapsedTime  执行耗时
-    * status  流水线运行状态
-    * outcome  流水线执行结果
+    * status  流水线运行状态。取值及含义：waiting：等待；running：执行中；verifying：待审核；suspending：挂起；completed：完成。
+    * outcome  流水线执行结果。取值及含义：success：成功；error：失败；aborted：终止
     * detailUrl  流水线详情页地址
     *
     * @var string[]
@@ -115,8 +115,8 @@ class ShowPipleineStatusResponse implements ModelInterface, ArrayAccess
     * parameters  流水线参数
     * states  流水线执行情况
     * elapsedTime  执行耗时
-    * status  流水线运行状态
-    * outcome  流水线执行结果
+    * status  流水线运行状态。取值及含义：waiting：等待；running：执行中；verifying：待审核；suspending：挂起；completed：完成。
+    * outcome  流水线执行结果。取值及含义：success：成功；error：失败；aborted：终止
     * detailUrl  流水线详情页地址
     *
     * @var string[]
@@ -147,8 +147,8 @@ class ShowPipleineStatusResponse implements ModelInterface, ArrayAccess
     * parameters  流水线参数
     * states  流水线执行情况
     * elapsedTime  执行耗时
-    * status  流水线运行状态
-    * outcome  流水线执行结果
+    * status  流水线运行状态。取值及含义：waiting：等待；running：执行中；verifying：待审核；suspending：挂起；completed：完成。
+    * outcome  流水线执行结果。取值及含义：success：成功；error：失败；aborted：终止
     * detailUrl  流水线详情页地址
     *
     * @var string[]
@@ -179,8 +179,8 @@ class ShowPipleineStatusResponse implements ModelInterface, ArrayAccess
     * parameters  流水线参数
     * states  流水线执行情况
     * elapsedTime  执行耗时
-    * status  流水线运行状态
-    * outcome  流水线执行结果
+    * status  流水线运行状态。取值及含义：waiting：等待；running：执行中；verifying：待审核；suspending：挂起；completed：完成。
+    * outcome  流水线执行结果。取值及含义：success：成功；error：失败；aborted：终止
     * detailUrl  流水线详情页地址
     *
     * @var string[]
@@ -512,7 +512,7 @@ class ShowPipleineStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  流水线运行状态
+    *  流水线运行状态。取值及含义：waiting：等待；running：执行中；verifying：待审核；suspending：挂起；completed：完成。
     *
     * @return string|null
     */
@@ -524,7 +524,7 @@ class ShowPipleineStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 流水线运行状态
+    * @param string|null $status 流水线运行状态。取值及含义：waiting：等待；running：执行中；verifying：待审核；suspending：挂起；completed：完成。
     *
     * @return $this
     */
@@ -536,7 +536,7 @@ class ShowPipleineStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets outcome
-    *  流水线执行结果
+    *  流水线执行结果。取值及含义：success：成功；error：失败；aborted：终止
     *
     * @return string|null
     */
@@ -548,7 +548,7 @@ class ShowPipleineStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets outcome
     *
-    * @param string|null $outcome 流水线执行结果
+    * @param string|null $outcome 流水线执行结果。取值及含义：success：成功；error：失败；aborted：终止
     *
     * @return $this
     */

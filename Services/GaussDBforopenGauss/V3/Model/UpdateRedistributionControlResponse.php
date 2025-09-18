@@ -21,7 +21,7 @@ class UpdateRedistributionControlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * result  任务流id
+    * result  **参数解释**: 修改重分布参数的任务ID。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class UpdateRedistributionControlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * result  任务流id
+    * result  **参数解释**: 修改重分布参数的任务ID。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class UpdateRedistributionControlResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * result  任务流id
+    * result  **参数解释**: 修改重分布参数的任务ID。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class UpdateRedistributionControlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * result  任务流id
+    * result  **参数解释**: 修改重分布参数的任务ID。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class UpdateRedistributionControlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * result  任务流id
+    * result  **参数解释**: 修改重分布参数的任务ID。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class UpdateRedistributionControlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  任务流id
+    *  **参数解释**: 修改重分布参数的任务ID。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class UpdateRedistributionControlResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result 任务流id
+    * @param string|null $result **参数解释**: 修改重分布参数的任务ID。 **取值范围**: 不涉及。
     *
     * @return $this
     */

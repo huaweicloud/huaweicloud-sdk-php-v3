@@ -21,23 +21,21 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  模板ID
-    * name  模板名称
-    * icon  模板图标
-    * manifestVersion  流水线结构定义版本，新版默认为3.0
-    * language  模板语言
-    * description  模板描述
-    * isSystem  是否系统模板
-    * region  所属局点
-    * domainId  所属租户ID
-    * variables  使用的自定义参数
-    * creatorId  创建人ID
-    * updaterId  编辑人ID
-    * createTime  创建日期
-    * updateTime  更新日期
-    * isCollect  是否收藏
-    * isShowSource  是否显示流水线源
-    * definition  模板编排json，包含stages
+    * id  **参数解释**： 模板ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * name  **参数解释**： 模板名称。 **取值范围**： 不涉及。
+    * icon  **参数解释**： 模板图标。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 版本。 **取值范围**： 默认3.0。
+    * language  **参数解释**： 模板语言。 **取值范围**： - java。 - python。 - nodejs。 - go。 - net。 - cpp。 - php。 - other。 - none。
+    * description  **参数解释**： 模板描述。 **取值范围**： 不涉及。
+    * isSystem  **参数解释**： 是否系统模板。 **取值范围**： - true：是系统模板。 - false：不是系统模板。
+    * region  **参数解释**： 模板局点。 **取值范围**： 不涉及。
+    * domainId  **参数解释**： 模板所属租户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * variables  **参数解释**： 自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * creatorId  **参数解释**： 模板创建人ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * updaterId  **参数解释**： 模板更新人ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * isCollect  **参数解释**： 是否收藏。 **取值范围**： - true：收藏。 - false：不收藏。
+    * isShowSource  **参数解释**： 是否展示流水线源。 **取值范围**： - true：展示流水线源。 - false：不展示流水线源。
+    * definition  **参数解释**： 模板编排json，包含stages。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -54,8 +52,6 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
             'variables' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CustomVariable[]',
             'creatorId' => 'string',
             'updaterId' => 'string',
-            'createTime' => 'int',
-            'updateTime' => 'int',
             'isCollect' => 'string',
             'isShowSource' => 'bool',
             'definition' => 'string'
@@ -63,23 +59,21 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  模板ID
-    * name  模板名称
-    * icon  模板图标
-    * manifestVersion  流水线结构定义版本，新版默认为3.0
-    * language  模板语言
-    * description  模板描述
-    * isSystem  是否系统模板
-    * region  所属局点
-    * domainId  所属租户ID
-    * variables  使用的自定义参数
-    * creatorId  创建人ID
-    * updaterId  编辑人ID
-    * createTime  创建日期
-    * updateTime  更新日期
-    * isCollect  是否收藏
-    * isShowSource  是否显示流水线源
-    * definition  模板编排json，包含stages
+    * id  **参数解释**： 模板ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * name  **参数解释**： 模板名称。 **取值范围**： 不涉及。
+    * icon  **参数解释**： 模板图标。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 版本。 **取值范围**： 默认3.0。
+    * language  **参数解释**： 模板语言。 **取值范围**： - java。 - python。 - nodejs。 - go。 - net。 - cpp。 - php。 - other。 - none。
+    * description  **参数解释**： 模板描述。 **取值范围**： 不涉及。
+    * isSystem  **参数解释**： 是否系统模板。 **取值范围**： - true：是系统模板。 - false：不是系统模板。
+    * region  **参数解释**： 模板局点。 **取值范围**： 不涉及。
+    * domainId  **参数解释**： 模板所属租户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * variables  **参数解释**： 自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * creatorId  **参数解释**： 模板创建人ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * updaterId  **参数解释**： 模板更新人ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * isCollect  **参数解释**： 是否收藏。 **取值范围**： - true：收藏。 - false：不收藏。
+    * isShowSource  **参数解释**： 是否展示流水线源。 **取值范围**： - true：展示流水线源。 - false：不展示流水线源。
+    * definition  **参数解释**： 模板编排json，包含stages。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -96,8 +90,6 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
         'variables' => null,
         'creatorId' => null,
         'updaterId' => null,
-        'createTime' => 'int64',
-        'updateTime' => 'int64',
         'isCollect' => null,
         'isShowSource' => null,
         'definition' => null
@@ -126,23 +118,21 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  模板ID
-    * name  模板名称
-    * icon  模板图标
-    * manifestVersion  流水线结构定义版本，新版默认为3.0
-    * language  模板语言
-    * description  模板描述
-    * isSystem  是否系统模板
-    * region  所属局点
-    * domainId  所属租户ID
-    * variables  使用的自定义参数
-    * creatorId  创建人ID
-    * updaterId  编辑人ID
-    * createTime  创建日期
-    * updateTime  更新日期
-    * isCollect  是否收藏
-    * isShowSource  是否显示流水线源
-    * definition  模板编排json，包含stages
+    * id  **参数解释**： 模板ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * name  **参数解释**： 模板名称。 **取值范围**： 不涉及。
+    * icon  **参数解释**： 模板图标。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 版本。 **取值范围**： 默认3.0。
+    * language  **参数解释**： 模板语言。 **取值范围**： - java。 - python。 - nodejs。 - go。 - net。 - cpp。 - php。 - other。 - none。
+    * description  **参数解释**： 模板描述。 **取值范围**： 不涉及。
+    * isSystem  **参数解释**： 是否系统模板。 **取值范围**： - true：是系统模板。 - false：不是系统模板。
+    * region  **参数解释**： 模板局点。 **取值范围**： 不涉及。
+    * domainId  **参数解释**： 模板所属租户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * variables  **参数解释**： 自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * creatorId  **参数解释**： 模板创建人ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * updaterId  **参数解释**： 模板更新人ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * isCollect  **参数解释**： 是否收藏。 **取值范围**： - true：收藏。 - false：不收藏。
+    * isShowSource  **参数解释**： 是否展示流水线源。 **取值范围**： - true：展示流水线源。 - false：不展示流水线源。
+    * definition  **参数解释**： 模板编排json，包含stages。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -159,8 +149,6 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
             'variables' => 'variables',
             'creatorId' => 'creator_id',
             'updaterId' => 'updater_id',
-            'createTime' => 'create_time',
-            'updateTime' => 'update_time',
             'isCollect' => 'is_collect',
             'isShowSource' => 'is_show_source',
             'definition' => 'definition'
@@ -168,23 +156,21 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  模板ID
-    * name  模板名称
-    * icon  模板图标
-    * manifestVersion  流水线结构定义版本，新版默认为3.0
-    * language  模板语言
-    * description  模板描述
-    * isSystem  是否系统模板
-    * region  所属局点
-    * domainId  所属租户ID
-    * variables  使用的自定义参数
-    * creatorId  创建人ID
-    * updaterId  编辑人ID
-    * createTime  创建日期
-    * updateTime  更新日期
-    * isCollect  是否收藏
-    * isShowSource  是否显示流水线源
-    * definition  模板编排json，包含stages
+    * id  **参数解释**： 模板ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * name  **参数解释**： 模板名称。 **取值范围**： 不涉及。
+    * icon  **参数解释**： 模板图标。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 版本。 **取值范围**： 默认3.0。
+    * language  **参数解释**： 模板语言。 **取值范围**： - java。 - python。 - nodejs。 - go。 - net。 - cpp。 - php。 - other。 - none。
+    * description  **参数解释**： 模板描述。 **取值范围**： 不涉及。
+    * isSystem  **参数解释**： 是否系统模板。 **取值范围**： - true：是系统模板。 - false：不是系统模板。
+    * region  **参数解释**： 模板局点。 **取值范围**： 不涉及。
+    * domainId  **参数解释**： 模板所属租户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * variables  **参数解释**： 自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * creatorId  **参数解释**： 模板创建人ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * updaterId  **参数解释**： 模板更新人ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * isCollect  **参数解释**： 是否收藏。 **取值范围**： - true：收藏。 - false：不收藏。
+    * isShowSource  **参数解释**： 是否展示流水线源。 **取值范围**： - true：展示流水线源。 - false：不展示流水线源。
+    * definition  **参数解释**： 模板编排json，包含stages。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -201,8 +187,6 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
             'variables' => 'setVariables',
             'creatorId' => 'setCreatorId',
             'updaterId' => 'setUpdaterId',
-            'createTime' => 'setCreateTime',
-            'updateTime' => 'setUpdateTime',
             'isCollect' => 'setIsCollect',
             'isShowSource' => 'setIsShowSource',
             'definition' => 'setDefinition'
@@ -210,23 +194,21 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  模板ID
-    * name  模板名称
-    * icon  模板图标
-    * manifestVersion  流水线结构定义版本，新版默认为3.0
-    * language  模板语言
-    * description  模板描述
-    * isSystem  是否系统模板
-    * region  所属局点
-    * domainId  所属租户ID
-    * variables  使用的自定义参数
-    * creatorId  创建人ID
-    * updaterId  编辑人ID
-    * createTime  创建日期
-    * updateTime  更新日期
-    * isCollect  是否收藏
-    * isShowSource  是否显示流水线源
-    * definition  模板编排json，包含stages
+    * id  **参数解释**： 模板ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * name  **参数解释**： 模板名称。 **取值范围**： 不涉及。
+    * icon  **参数解释**： 模板图标。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 版本。 **取值范围**： 默认3.0。
+    * language  **参数解释**： 模板语言。 **取值范围**： - java。 - python。 - nodejs。 - go。 - net。 - cpp。 - php。 - other。 - none。
+    * description  **参数解释**： 模板描述。 **取值范围**： 不涉及。
+    * isSystem  **参数解释**： 是否系统模板。 **取值范围**： - true：是系统模板。 - false：不是系统模板。
+    * region  **参数解释**： 模板局点。 **取值范围**： 不涉及。
+    * domainId  **参数解释**： 模板所属租户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * variables  **参数解释**： 自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * creatorId  **参数解释**： 模板创建人ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * updaterId  **参数解释**： 模板更新人ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * isCollect  **参数解释**： 是否收藏。 **取值范围**： - true：收藏。 - false：不收藏。
+    * isShowSource  **参数解释**： 是否展示流水线源。 **取值范围**： - true：展示流水线源。 - false：不展示流水线源。
+    * definition  **参数解释**： 模板编排json，包含stages。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -243,8 +225,6 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
             'variables' => 'getVariables',
             'creatorId' => 'getCreatorId',
             'updaterId' => 'getUpdaterId',
-            'createTime' => 'getCreateTime',
-            'updateTime' => 'getUpdateTime',
             'isCollect' => 'getIsCollect',
             'isShowSource' => 'getIsShowSource',
             'definition' => 'getDefinition'
@@ -320,8 +300,6 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
         $this->container['variables'] = isset($data['variables']) ? $data['variables'] : null;
         $this->container['creatorId'] = isset($data['creatorId']) ? $data['creatorId'] : null;
         $this->container['updaterId'] = isset($data['updaterId']) ? $data['updaterId'] : null;
-        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
-        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['isCollect'] = isset($data['isCollect']) ? $data['isCollect'] : null;
         $this->container['isShowSource'] = isset($data['isShowSource']) ? $data['isShowSource'] : null;
         $this->container['definition'] = isset($data['definition']) ? $data['definition'] : null;
@@ -351,7 +329,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  模板ID
+    *  **参数解释**： 模板ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -363,7 +341,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 模板ID
+    * @param string|null $id **参数解释**： 模板ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -375,7 +353,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  模板名称
+    *  **参数解释**： 模板名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -387,7 +365,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 模板名称
+    * @param string|null $name **参数解释**： 模板名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -399,7 +377,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets icon
-    *  模板图标
+    *  **参数解释**： 模板图标。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -411,7 +389,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets icon
     *
-    * @param string|null $icon 模板图标
+    * @param string|null $icon **参数解释**： 模板图标。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -423,7 +401,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets manifestVersion
-    *  流水线结构定义版本，新版默认为3.0
+    *  **参数解释**： 版本。 **取值范围**： 默认3.0。
     *
     * @return string|null
     */
@@ -435,7 +413,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets manifestVersion
     *
-    * @param string|null $manifestVersion 流水线结构定义版本，新版默认为3.0
+    * @param string|null $manifestVersion **参数解释**： 版本。 **取值范围**： 默认3.0。
     *
     * @return $this
     */
@@ -447,7 +425,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  模板语言
+    *  **参数解释**： 模板语言。 **取值范围**： - java。 - python。 - nodejs。 - go。 - net。 - cpp。 - php。 - other。 - none。
     *
     * @return string|null
     */
@@ -459,7 +437,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 模板语言
+    * @param string|null $language **参数解释**： 模板语言。 **取值范围**： - java。 - python。 - nodejs。 - go。 - net。 - cpp。 - php。 - other。 - none。
     *
     * @return $this
     */
@@ -471,7 +449,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  模板描述
+    *  **参数解释**： 模板描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -483,7 +461,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 模板描述
+    * @param string|null $description **参数解释**： 模板描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -495,7 +473,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSystem
-    *  是否系统模板
+    *  **参数解释**： 是否系统模板。 **取值范围**： - true：是系统模板。 - false：不是系统模板。
     *
     * @return bool|null
     */
@@ -507,7 +485,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isSystem
     *
-    * @param bool|null $isSystem 是否系统模板
+    * @param bool|null $isSystem **参数解释**： 是否系统模板。 **取值范围**： - true：是系统模板。 - false：不是系统模板。
     *
     * @return $this
     */
@@ -519,7 +497,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  所属局点
+    *  **参数解释**： 模板局点。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -531,7 +509,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string|null $region 所属局点
+    * @param string|null $region **参数解释**： 模板局点。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -543,7 +521,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  所属租户ID
+    *  **参数解释**： 模板所属租户ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -555,7 +533,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 所属租户ID
+    * @param string|null $domainId **参数解释**： 模板所属租户ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -567,7 +545,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets variables
-    *  使用的自定义参数
+    *  **参数解释**： 自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CustomVariable[]|null
     */
@@ -579,7 +557,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets variables
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CustomVariable[]|null $variables 使用的自定义参数
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CustomVariable[]|null $variables **参数解释**： 自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -591,7 +569,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets creatorId
-    *  创建人ID
+    *  **参数解释**： 模板创建人ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -603,7 +581,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets creatorId
     *
-    * @param string|null $creatorId 创建人ID
+    * @param string|null $creatorId **参数解释**： 模板创建人ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -615,7 +593,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updaterId
-    *  编辑人ID
+    *  **参数解释**： 模板更新人ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -627,7 +605,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updaterId
     *
-    * @param string|null $updaterId 编辑人ID
+    * @param string|null $updaterId **参数解释**： 模板更新人ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -638,56 +616,8 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets createTime
-    *  创建日期
-    *
-    * @return int|null
-    */
-    public function getCreateTime()
-    {
-        return $this->container['createTime'];
-    }
-
-    /**
-    * Sets createTime
-    *
-    * @param int|null $createTime 创建日期
-    *
-    * @return $this
-    */
-    public function setCreateTime($createTime)
-    {
-        $this->container['createTime'] = $createTime;
-        return $this;
-    }
-
-    /**
-    * Gets updateTime
-    *  更新日期
-    *
-    * @return int|null
-    */
-    public function getUpdateTime()
-    {
-        return $this->container['updateTime'];
-    }
-
-    /**
-    * Sets updateTime
-    *
-    * @param int|null $updateTime 更新日期
-    *
-    * @return $this
-    */
-    public function setUpdateTime($updateTime)
-    {
-        $this->container['updateTime'] = $updateTime;
-        return $this;
-    }
-
-    /**
     * Gets isCollect
-    *  是否收藏
+    *  **参数解释**： 是否收藏。 **取值范围**： - true：收藏。 - false：不收藏。
     *
     * @return string|null
     */
@@ -699,7 +629,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isCollect
     *
-    * @param string|null $isCollect 是否收藏
+    * @param string|null $isCollect **参数解释**： 是否收藏。 **取值范围**： - true：收藏。 - false：不收藏。
     *
     * @return $this
     */
@@ -711,7 +641,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isShowSource
-    *  是否显示流水线源
+    *  **参数解释**： 是否展示流水线源。 **取值范围**： - true：展示流水线源。 - false：不展示流水线源。
     *
     * @return bool|null
     */
@@ -723,7 +653,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isShowSource
     *
-    * @param bool|null $isShowSource 是否显示流水线源
+    * @param bool|null $isShowSource **参数解释**： 是否展示流水线源。 **取值范围**： - true：展示流水线源。 - false：不展示流水线源。
     *
     * @return $this
     */
@@ -735,7 +665,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets definition
-    *  模板编排json，包含stages
+    *  **参数解释**： 模板编排json，包含stages。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -747,7 +677,7 @@ class ShowPipelineTemplateDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets definition
     *
-    * @param string|null $definition 模板编排json，包含stages
+    * @param string|null $definition **参数解释**： 模板编排json，包含stages。 **取值范围**： 不涉及。
     *
     * @return $this
     */

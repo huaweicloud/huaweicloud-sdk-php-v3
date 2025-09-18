@@ -20,13 +20,13 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * language  创建模板时，用户选择的语言
-    * isSystem  是否系统模板
-    * name  模板名称
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0，默认为0
-    * limit  每次查询的条目数量，默认为10。
-    * sortKey  用于排序的字段，非必选。取值为：name，create_time
-    * sortDir  排序类型，非必选。asc按排序字段升序，desc按排序字段降序
+    * language  **参数解释**： 模板语言。 **约束限制**： 不涉及。 **取值范围**： - java。 - python。 - nodejs。 - go。 - net。 - cpp。 - php。 - other。 - none。 **默认取值**： 不涉及。
+    * isSystem  **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板 - false：不是系统模板。 **默认取值**： 不涉及。
+    * name  **参数解释**： 模板名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： offset大于等于0。 **默认取值**： 默认为0。
+    * limit  **参数解释**： 每次查询的条目数量。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 默认为10。
+    * sortKey  **参数解释**： 用于排序的字段，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sortDir  **参数解释**：   排序类型，非必选。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * language  创建模板时，用户选择的语言
-    * isSystem  是否系统模板
-    * name  模板名称
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0，默认为0
-    * limit  每次查询的条目数量，默认为10。
-    * sortKey  用于排序的字段，非必选。取值为：name，create_time
-    * sortDir  排序类型，非必选。asc按排序字段升序，desc按排序字段降序
+    * language  **参数解释**： 模板语言。 **约束限制**： 不涉及。 **取值范围**： - java。 - python。 - nodejs。 - go。 - net。 - cpp。 - php。 - other。 - none。 **默认取值**： 不涉及。
+    * isSystem  **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板 - false：不是系统模板。 **默认取值**： 不涉及。
+    * name  **参数解释**： 模板名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： offset大于等于0。 **默认取值**： 默认为0。
+    * limit  **参数解释**： 每次查询的条目数量。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 默认为10。
+    * sortKey  **参数解释**： 用于排序的字段，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sortDir  **参数解释**：   排序类型，非必选。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * language  创建模板时，用户选择的语言
-    * isSystem  是否系统模板
-    * name  模板名称
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0，默认为0
-    * limit  每次查询的条目数量，默认为10。
-    * sortKey  用于排序的字段，非必选。取值为：name，create_time
-    * sortDir  排序类型，非必选。asc按排序字段升序，desc按排序字段降序
+    * language  **参数解释**： 模板语言。 **约束限制**： 不涉及。 **取值范围**： - java。 - python。 - nodejs。 - go。 - net。 - cpp。 - php。 - other。 - none。 **默认取值**： 不涉及。
+    * isSystem  **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板 - false：不是系统模板。 **默认取值**： 不涉及。
+    * name  **参数解释**： 模板名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： offset大于等于0。 **默认取值**： 默认为0。
+    * limit  **参数解释**： 每次查询的条目数量。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 默认为10。
+    * sortKey  **参数解释**： 用于排序的字段，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sortDir  **参数解释**：   排序类型，非必选。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * language  创建模板时，用户选择的语言
-    * isSystem  是否系统模板
-    * name  模板名称
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0，默认为0
-    * limit  每次查询的条目数量，默认为10。
-    * sortKey  用于排序的字段，非必选。取值为：name，create_time
-    * sortDir  排序类型，非必选。asc按排序字段升序，desc按排序字段降序
+    * language  **参数解释**： 模板语言。 **约束限制**： 不涉及。 **取值范围**： - java。 - python。 - nodejs。 - go。 - net。 - cpp。 - php。 - other。 - none。 **默认取值**： 不涉及。
+    * isSystem  **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板 - false：不是系统模板。 **默认取值**： 不涉及。
+    * name  **参数解释**： 模板名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： offset大于等于0。 **默认取值**： 默认为0。
+    * limit  **参数解释**： 每次查询的条目数量。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 默认为10。
+    * sortKey  **参数解释**： 用于排序的字段，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sortDir  **参数解释**：   排序类型，非必选。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * language  创建模板时，用户选择的语言
-    * isSystem  是否系统模板
-    * name  模板名称
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0，默认为0
-    * limit  每次查询的条目数量，默认为10。
-    * sortKey  用于排序的字段，非必选。取值为：name，create_time
-    * sortDir  排序类型，非必选。asc按排序字段升序，desc按排序字段降序
+    * language  **参数解释**： 模板语言。 **约束限制**： 不涉及。 **取值范围**： - java。 - python。 - nodejs。 - go。 - net。 - cpp。 - php。 - other。 - none。 **默认取值**： 不涉及。
+    * isSystem  **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板 - false：不是系统模板。 **默认取值**： 不涉及。
+    * name  **参数解释**： 模板名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： offset大于等于0。 **默认取值**： 默认为0。
+    * limit  **参数解释**： 每次查询的条目数量。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 默认为10。
+    * sortKey  **参数解释**： 用于排序的字段，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sortDir  **参数解释**：   排序类型，非必选。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  创建模板时，用户选择的语言
+    *  **参数解释**： 模板语言。 **约束限制**： 不涉及。 **取值范围**： - java。 - python。 - nodejs。 - go。 - net。 - cpp。 - php。 - other。 - none。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 创建模板时，用户选择的语言
+    * @param string|null $language **参数解释**： 模板语言。 **约束限制**： 不涉及。 **取值范围**： - java。 - python。 - nodejs。 - go。 - net。 - cpp。 - php。 - other。 - none。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSystem
-    *  是否系统模板
+    *  **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板 - false：不是系统模板。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -276,7 +276,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
     /**
     * Sets isSystem
     *
-    * @param bool|null $isSystem 是否系统模板
+    * @param bool|null $isSystem **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板 - false：不是系统模板。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  模板名称
+    *  **参数解释**： 模板名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 模板名称
+    * @param string|null $name **参数解释**： 模板名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，表示从此偏移量开始查询，offset大于等于0，默认为0
+    *  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： offset大于等于0。 **默认取值**： 默认为0。
     *
     * @return int|null
     */
@@ -324,7 +324,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量，表示从此偏移量开始查询，offset大于等于0，默认为0
+    * @param int|null $offset **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： offset大于等于0。 **默认取值**： 默认为0。
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每次查询的条目数量，默认为10。
+    *  **参数解释**： 每次查询的条目数量。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 默认为10。
     *
     * @return int|null
     */
@@ -348,7 +348,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每次查询的条目数量，默认为10。
+    * @param int|null $limit **参数解释**： 每次查询的条目数量。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 默认为10。
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  用于排序的字段，非必选。取值为：name，create_time
+    *  **参数解释**： 用于排序的字段，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 用于排序的字段，非必选。取值为：name，create_time
+    * @param string|null $sortKey **参数解释**： 用于排序的字段，非必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortDir
-    *  排序类型，非必选。asc按排序字段升序，desc按排序字段降序
+    *  **参数解释**：   排序类型，非必选。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -396,7 +396,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir 排序类型，非必选。asc按排序字段升序，desc按排序字段降序
+    * @param string|null $sortDir **参数解释**：   排序类型，非必选。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
     *
     * @return $this
     */

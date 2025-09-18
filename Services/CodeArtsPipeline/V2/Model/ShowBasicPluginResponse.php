@@ -21,15 +21,16 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  类型
-    * name  名称
-    * friendlyName  展示名
-    * category  业务类型
-    * description  描述
-    * version  版本
-    * versionDescription  版本说明
-    * inputs  输入信息
-    * outputs  输出信息
+    * type  **参数解释**： 插件类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 插件名称。 **取值范围**： 不涉及。
+    * friendlyName  **参数解释**： 插件展示名。 **取值范围**： 不涉及。
+    * category  **参数解释**： 业务类型。 **取值范围**： 不涉及。
+    * description  **参数解释**： 插件描述。 **取值范围**： 不涉及。
+    * version  **参数解释**： 插件版本。 **取值范围**： 不涉及。
+    * versionDescription  **参数解释**： 插件版本说明。 **取值范围**： 不涉及。
+    * inputs  **参数解释**： 输入信息。 **取值范围**： 不涉及。
+    * dataSourceBindings  **参数解释**： 数据源绑定信息。 **取值范围**： 不涉及。
+    * outputs  **参数解释**： 输出信息。 **取值范围**： 不涉及。
     * execution  execution
     *
     * @var string[]
@@ -43,21 +44,23 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
             'version' => 'string',
             'versionDescription' => 'string',
             'inputs' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\NewExtensionInputs[]',
+            'dataSourceBindings' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\NewExtensionDataSourceBindings[]',
             'outputs' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\NewExtensionOutputs[]',
             'execution' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\NewExtensionExecution'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  类型
-    * name  名称
-    * friendlyName  展示名
-    * category  业务类型
-    * description  描述
-    * version  版本
-    * versionDescription  版本说明
-    * inputs  输入信息
-    * outputs  输出信息
+    * type  **参数解释**： 插件类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 插件名称。 **取值范围**： 不涉及。
+    * friendlyName  **参数解释**： 插件展示名。 **取值范围**： 不涉及。
+    * category  **参数解释**： 业务类型。 **取值范围**： 不涉及。
+    * description  **参数解释**： 插件描述。 **取值范围**： 不涉及。
+    * version  **参数解释**： 插件版本。 **取值范围**： 不涉及。
+    * versionDescription  **参数解释**： 插件版本说明。 **取值范围**： 不涉及。
+    * inputs  **参数解释**： 输入信息。 **取值范围**： 不涉及。
+    * dataSourceBindings  **参数解释**： 数据源绑定信息。 **取值范围**： 不涉及。
+    * outputs  **参数解释**： 输出信息。 **取值范围**： 不涉及。
     * execution  execution
     *
     * @var string[]
@@ -71,6 +74,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
         'version' => null,
         'versionDescription' => null,
         'inputs' => null,
+        'dataSourceBindings' => null,
         'outputs' => null,
         'execution' => null
     ];
@@ -98,15 +102,16 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  类型
-    * name  名称
-    * friendlyName  展示名
-    * category  业务类型
-    * description  描述
-    * version  版本
-    * versionDescription  版本说明
-    * inputs  输入信息
-    * outputs  输出信息
+    * type  **参数解释**： 插件类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 插件名称。 **取值范围**： 不涉及。
+    * friendlyName  **参数解释**： 插件展示名。 **取值范围**： 不涉及。
+    * category  **参数解释**： 业务类型。 **取值范围**： 不涉及。
+    * description  **参数解释**： 插件描述。 **取值范围**： 不涉及。
+    * version  **参数解释**： 插件版本。 **取值范围**： 不涉及。
+    * versionDescription  **参数解释**： 插件版本说明。 **取值范围**： 不涉及。
+    * inputs  **参数解释**： 输入信息。 **取值范围**： 不涉及。
+    * dataSourceBindings  **参数解释**： 数据源绑定信息。 **取值范围**： 不涉及。
+    * outputs  **参数解释**： 输出信息。 **取值范围**： 不涉及。
     * execution  execution
     *
     * @var string[]
@@ -120,21 +125,23 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
             'version' => 'version',
             'versionDescription' => 'version_description',
             'inputs' => 'inputs',
+            'dataSourceBindings' => 'data_source_bindings',
             'outputs' => 'outputs',
             'execution' => 'execution'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  类型
-    * name  名称
-    * friendlyName  展示名
-    * category  业务类型
-    * description  描述
-    * version  版本
-    * versionDescription  版本说明
-    * inputs  输入信息
-    * outputs  输出信息
+    * type  **参数解释**： 插件类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 插件名称。 **取值范围**： 不涉及。
+    * friendlyName  **参数解释**： 插件展示名。 **取值范围**： 不涉及。
+    * category  **参数解释**： 业务类型。 **取值范围**： 不涉及。
+    * description  **参数解释**： 插件描述。 **取值范围**： 不涉及。
+    * version  **参数解释**： 插件版本。 **取值范围**： 不涉及。
+    * versionDescription  **参数解释**： 插件版本说明。 **取值范围**： 不涉及。
+    * inputs  **参数解释**： 输入信息。 **取值范围**： 不涉及。
+    * dataSourceBindings  **参数解释**： 数据源绑定信息。 **取值范围**： 不涉及。
+    * outputs  **参数解释**： 输出信息。 **取值范围**： 不涉及。
     * execution  execution
     *
     * @var string[]
@@ -148,21 +155,23 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
             'version' => 'setVersion',
             'versionDescription' => 'setVersionDescription',
             'inputs' => 'setInputs',
+            'dataSourceBindings' => 'setDataSourceBindings',
             'outputs' => 'setOutputs',
             'execution' => 'setExecution'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  类型
-    * name  名称
-    * friendlyName  展示名
-    * category  业务类型
-    * description  描述
-    * version  版本
-    * versionDescription  版本说明
-    * inputs  输入信息
-    * outputs  输出信息
+    * type  **参数解释**： 插件类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 插件名称。 **取值范围**： 不涉及。
+    * friendlyName  **参数解释**： 插件展示名。 **取值范围**： 不涉及。
+    * category  **参数解释**： 业务类型。 **取值范围**： 不涉及。
+    * description  **参数解释**： 插件描述。 **取值范围**： 不涉及。
+    * version  **参数解释**： 插件版本。 **取值范围**： 不涉及。
+    * versionDescription  **参数解释**： 插件版本说明。 **取值范围**： 不涉及。
+    * inputs  **参数解释**： 输入信息。 **取值范围**： 不涉及。
+    * dataSourceBindings  **参数解释**： 数据源绑定信息。 **取值范围**： 不涉及。
+    * outputs  **参数解释**： 输出信息。 **取值范围**： 不涉及。
     * execution  execution
     *
     * @var string[]
@@ -176,6 +185,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
             'version' => 'getVersion',
             'versionDescription' => 'getVersionDescription',
             'inputs' => 'getInputs',
+            'dataSourceBindings' => 'getDataSourceBindings',
             'outputs' => 'getOutputs',
             'execution' => 'getExecution'
     ];
@@ -246,6 +256,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['versionDescription'] = isset($data['versionDescription']) ? $data['versionDescription'] : null;
         $this->container['inputs'] = isset($data['inputs']) ? $data['inputs'] : null;
+        $this->container['dataSourceBindings'] = isset($data['dataSourceBindings']) ? $data['dataSourceBindings'] : null;
         $this->container['outputs'] = isset($data['outputs']) ? $data['outputs'] : null;
         $this->container['execution'] = isset($data['execution']) ? $data['execution'] : null;
     }
@@ -274,7 +285,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型
+    *  **参数解释**： 插件类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -286,7 +297,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 类型
+    * @param string|null $type **参数解释**： 插件类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -298,7 +309,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  **参数解释**： 插件名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -310,7 +321,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string|null $name **参数解释**： 插件名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -322,7 +333,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets friendlyName
-    *  展示名
+    *  **参数解释**： 插件展示名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -334,7 +345,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
     /**
     * Sets friendlyName
     *
-    * @param string|null $friendlyName 展示名
+    * @param string|null $friendlyName **参数解释**： 插件展示名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -346,7 +357,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  业务类型
+    *  **参数解释**： 业务类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -358,7 +369,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category 业务类型
+    * @param string|null $category **参数解释**： 业务类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -370,7 +381,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释**： 插件描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -382,7 +393,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释**： 插件描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -394,7 +405,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  版本
+    *  **参数解释**： 插件版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -406,7 +417,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 版本
+    * @param string|null $version **参数解释**： 插件版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -418,7 +429,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets versionDescription
-    *  版本说明
+    *  **参数解释**： 插件版本说明。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -430,7 +441,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
     /**
     * Sets versionDescription
     *
-    * @param string|null $versionDescription 版本说明
+    * @param string|null $versionDescription **参数解释**： 插件版本说明。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -442,7 +453,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets inputs
-    *  输入信息
+    *  **参数解释**： 输入信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\NewExtensionInputs[]|null
     */
@@ -454,7 +465,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
     /**
     * Sets inputs
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\NewExtensionInputs[]|null $inputs 输入信息
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\NewExtensionInputs[]|null $inputs **参数解释**： 输入信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -465,8 +476,32 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets dataSourceBindings
+    *  **参数解释**： 数据源绑定信息。 **取值范围**： 不涉及。
+    *
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\NewExtensionDataSourceBindings[]|null
+    */
+    public function getDataSourceBindings()
+    {
+        return $this->container['dataSourceBindings'];
+    }
+
+    /**
+    * Sets dataSourceBindings
+    *
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\NewExtensionDataSourceBindings[]|null $dataSourceBindings **参数解释**： 数据源绑定信息。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDataSourceBindings($dataSourceBindings)
+    {
+        $this->container['dataSourceBindings'] = $dataSourceBindings;
+        return $this;
+    }
+
+    /**
     * Gets outputs
-    *  输出信息
+    *  **参数解释**： 输出信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\NewExtensionOutputs[]|null
     */
@@ -478,7 +513,7 @@ class ShowBasicPluginResponse implements ModelInterface, ArrayAccess
     /**
     * Sets outputs
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\NewExtensionOutputs[]|null $outputs 输出信息
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\NewExtensionOutputs[]|null $outputs **参数解释**： 输出信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -20,16 +20,16 @@ class PipelineVariable implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  参数名称
-    * sequence  序号
-    * type  类型
-    * value  默认值
-    * isSecret  是否私密
-    * description  描述
-    * isRuntime  是否运行时设置
-    * limits  限定枚举值
-    * isReset  自增长参数是否被重置
-    * latestValue  自增长参数最新值
+    * name  **参数解释**： 自定义参数名称。 **取值范围**： 仅支持大小写英文字母、数字、“_”，不超过128个字符。
+    * sequence  **参数解释**： 序号。 **取值范围**： [1, 2147483647]。
+    * type  **参数解释**： 自定义参数的类型。 **取值范围**： 不涉及。
+    * value  **参数解释**： 自定义参数的默认值。 **取值范围**： 不涉及。
+    * isSecret  **参数解释**： 是否为私密参数。 **取值范围**： - true：是私密参数。 - false：不是私密参数。
+    * description  **参数解释**： 自定义参数描述。 **取值范围**： 不涉及。
+    * isRuntime  **参数解释**： 是否运行时设置。 **取值范围**： - true：运行时设置。 - false：非运行时设置。
+    * limits  **参数解释**： 限定枚举值列表。 **取值范围**： 不涉及。
+    * isReset  **参数解释**： 自增长参数是否被重置。 **取值范围**： - true：被重置。 - false：不被重置。
+    * latestValue  **参数解释**： 自增长参数最新值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class PipelineVariable implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  参数名称
-    * sequence  序号
-    * type  类型
-    * value  默认值
-    * isSecret  是否私密
-    * description  描述
-    * isRuntime  是否运行时设置
-    * limits  限定枚举值
-    * isReset  自增长参数是否被重置
-    * latestValue  自增长参数最新值
+    * name  **参数解释**： 自定义参数名称。 **取值范围**： 仅支持大小写英文字母、数字、“_”，不超过128个字符。
+    * sequence  **参数解释**： 序号。 **取值范围**： [1, 2147483647]。
+    * type  **参数解释**： 自定义参数的类型。 **取值范围**： 不涉及。
+    * value  **参数解释**： 自定义参数的默认值。 **取值范围**： 不涉及。
+    * isSecret  **参数解释**： 是否为私密参数。 **取值范围**： - true：是私密参数。 - false：不是私密参数。
+    * description  **参数解释**： 自定义参数描述。 **取值范围**： 不涉及。
+    * isRuntime  **参数解释**： 是否运行时设置。 **取值范围**： - true：运行时设置。 - false：非运行时设置。
+    * limits  **参数解释**： 限定枚举值列表。 **取值范围**： 不涉及。
+    * isReset  **参数解释**： 自增长参数是否被重置。 **取值范围**： - true：被重置。 - false：不被重置。
+    * latestValue  **参数解释**： 自增长参数最新值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class PipelineVariable implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  参数名称
-    * sequence  序号
-    * type  类型
-    * value  默认值
-    * isSecret  是否私密
-    * description  描述
-    * isRuntime  是否运行时设置
-    * limits  限定枚举值
-    * isReset  自增长参数是否被重置
-    * latestValue  自增长参数最新值
+    * name  **参数解释**： 自定义参数名称。 **取值范围**： 仅支持大小写英文字母、数字、“_”，不超过128个字符。
+    * sequence  **参数解释**： 序号。 **取值范围**： [1, 2147483647]。
+    * type  **参数解释**： 自定义参数的类型。 **取值范围**： 不涉及。
+    * value  **参数解释**： 自定义参数的默认值。 **取值范围**： 不涉及。
+    * isSecret  **参数解释**： 是否为私密参数。 **取值范围**： - true：是私密参数。 - false：不是私密参数。
+    * description  **参数解释**： 自定义参数描述。 **取值范围**： 不涉及。
+    * isRuntime  **参数解释**： 是否运行时设置。 **取值范围**： - true：运行时设置。 - false：非运行时设置。
+    * limits  **参数解释**： 限定枚举值列表。 **取值范围**： 不涉及。
+    * isReset  **参数解释**： 自增长参数是否被重置。 **取值范围**： - true：被重置。 - false：不被重置。
+    * latestValue  **参数解释**： 自增长参数最新值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class PipelineVariable implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  参数名称
-    * sequence  序号
-    * type  类型
-    * value  默认值
-    * isSecret  是否私密
-    * description  描述
-    * isRuntime  是否运行时设置
-    * limits  限定枚举值
-    * isReset  自增长参数是否被重置
-    * latestValue  自增长参数最新值
+    * name  **参数解释**： 自定义参数名称。 **取值范围**： 仅支持大小写英文字母、数字、“_”，不超过128个字符。
+    * sequence  **参数解释**： 序号。 **取值范围**： [1, 2147483647]。
+    * type  **参数解释**： 自定义参数的类型。 **取值范围**： 不涉及。
+    * value  **参数解释**： 自定义参数的默认值。 **取值范围**： 不涉及。
+    * isSecret  **参数解释**： 是否为私密参数。 **取值范围**： - true：是私密参数。 - false：不是私密参数。
+    * description  **参数解释**： 自定义参数描述。 **取值范围**： 不涉及。
+    * isRuntime  **参数解释**： 是否运行时设置。 **取值范围**： - true：运行时设置。 - false：非运行时设置。
+    * limits  **参数解释**： 限定枚举值列表。 **取值范围**： 不涉及。
+    * isReset  **参数解释**： 自增长参数是否被重置。 **取值范围**： - true：被重置。 - false：不被重置。
+    * latestValue  **参数解释**： 自增长参数最新值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class PipelineVariable implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  参数名称
-    * sequence  序号
-    * type  类型
-    * value  默认值
-    * isSecret  是否私密
-    * description  描述
-    * isRuntime  是否运行时设置
-    * limits  限定枚举值
-    * isReset  自增长参数是否被重置
-    * latestValue  自增长参数最新值
+    * name  **参数解释**： 自定义参数名称。 **取值范围**： 仅支持大小写英文字母、数字、“_”，不超过128个字符。
+    * sequence  **参数解释**： 序号。 **取值范围**： [1, 2147483647]。
+    * type  **参数解释**： 自定义参数的类型。 **取值范围**： 不涉及。
+    * value  **参数解释**： 自定义参数的默认值。 **取值范围**： 不涉及。
+    * isSecret  **参数解释**： 是否为私密参数。 **取值范围**： - true：是私密参数。 - false：不是私密参数。
+    * description  **参数解释**： 自定义参数描述。 **取值范围**： 不涉及。
+    * isRuntime  **参数解释**： 是否运行时设置。 **取值范围**： - true：运行时设置。 - false：非运行时设置。
+    * limits  **参数解释**： 限定枚举值列表。 **取值范围**： 不涉及。
+    * isReset  **参数解释**： 自增长参数是否被重置。 **取值范围**： - true：被重置。 - false：不被重置。
+    * latestValue  **参数解释**： 自增长参数最新值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -273,7 +273,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  参数名称
+    *  **参数解释**： 自定义参数名称。 **取值范围**： 仅支持大小写英文字母、数字、“_”，不超过128个字符。
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 参数名称
+    * @param string|null $name **参数解释**： 自定义参数名称。 **取值范围**： 仅支持大小写英文字母、数字、“_”，不超过128个字符。
     *
     * @return $this
     */
@@ -297,7 +297,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets sequence
-    *  序号
+    *  **参数解释**： 序号。 **取值范围**： [1, 2147483647]。
     *
     * @return int|null
     */
@@ -309,7 +309,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
     /**
     * Sets sequence
     *
-    * @param int|null $sequence 序号
+    * @param int|null $sequence **参数解释**： 序号。 **取值范围**： [1, 2147483647]。
     *
     * @return $this
     */
@@ -321,7 +321,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型
+    *  **参数解释**： 自定义参数的类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -333,7 +333,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 类型
+    * @param string|null $type **参数解释**： 自定义参数的类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -345,7 +345,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  默认值
+    *  **参数解释**： 自定义参数的默认值。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -357,7 +357,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 默认值
+    * @param string|null $value **参数解释**： 自定义参数的默认值。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -369,7 +369,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSecret
-    *  是否私密
+    *  **参数解释**： 是否为私密参数。 **取值范围**： - true：是私密参数。 - false：不是私密参数。
     *
     * @return bool|null
     */
@@ -381,7 +381,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
     /**
     * Sets isSecret
     *
-    * @param bool|null $isSecret 是否私密
+    * @param bool|null $isSecret **参数解释**： 是否为私密参数。 **取值范围**： - true：是私密参数。 - false：不是私密参数。
     *
     * @return $this
     */
@@ -393,7 +393,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释**： 自定义参数描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -405,7 +405,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释**： 自定义参数描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -417,7 +417,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets isRuntime
-    *  是否运行时设置
+    *  **参数解释**： 是否运行时设置。 **取值范围**： - true：运行时设置。 - false：非运行时设置。
     *
     * @return bool|null
     */
@@ -429,7 +429,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
     /**
     * Sets isRuntime
     *
-    * @param bool|null $isRuntime 是否运行时设置
+    * @param bool|null $isRuntime **参数解释**： 是否运行时设置。 **取值范围**： - true：运行时设置。 - false：非运行时设置。
     *
     * @return $this
     */
@@ -441,7 +441,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets limits
-    *  限定枚举值
+    *  **参数解释**： 限定枚举值列表。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -453,7 +453,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
     /**
     * Sets limits
     *
-    * @param string[]|null $limits 限定枚举值
+    * @param string[]|null $limits **参数解释**： 限定枚举值列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -465,7 +465,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets isReset
-    *  自增长参数是否被重置
+    *  **参数解释**： 自增长参数是否被重置。 **取值范围**： - true：被重置。 - false：不被重置。
     *
     * @return bool|null
     */
@@ -477,7 +477,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
     /**
     * Sets isReset
     *
-    * @param bool|null $isReset 自增长参数是否被重置
+    * @param bool|null $isReset **参数解释**： 自增长参数是否被重置。 **取值范围**： - true：被重置。 - false：不被重置。
     *
     * @return $this
     */
@@ -489,7 +489,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestValue
-    *  自增长参数最新值
+    *  **参数解释**： 自增长参数最新值。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -501,7 +501,7 @@ class PipelineVariable implements ModelInterface, ArrayAccess
     /**
     * Sets latestValue
     *
-    * @param string|null $latestValue 自增长参数最新值
+    * @param string|null $latestValue **参数解释**： 自增长参数最新值。 **取值范围**： 不涉及。
     *
     * @return $this
     */

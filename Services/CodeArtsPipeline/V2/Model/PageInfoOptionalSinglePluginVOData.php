@@ -20,13 +20,13 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  名称
-    * displayName  展示名
-    * pluginAttribution  属性
-    * iconUrl  图标URL
-    * description  描述
-    * publisherId  发布商ID
-    * manifestVersion  版本
+    * name  **参数解释**： 扩展插件唯一标识。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 扩展插件在插件市场和流水线显示的名称。 **取值范围**： 不涉及。
+    * pluginAttribution  **参数解释**： 标识是否为官方插件。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 图标URL。 **取值范围**： 不涉及。
+    * description  **参数解释**： 插件描述。 **取值范围**： 不涉及。
+    * publisherId  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  名称
-    * displayName  展示名
-    * pluginAttribution  属性
-    * iconUrl  图标URL
-    * description  描述
-    * publisherId  发布商ID
-    * manifestVersion  版本
+    * name  **参数解释**： 扩展插件唯一标识。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 扩展插件在插件市场和流水线显示的名称。 **取值范围**： 不涉及。
+    * pluginAttribution  **参数解释**： 标识是否为官方插件。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 图标URL。 **取值范围**： 不涉及。
+    * description  **参数解释**： 插件描述。 **取值范围**： 不涉及。
+    * publisherId  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  名称
-    * displayName  展示名
-    * pluginAttribution  属性
-    * iconUrl  图标URL
-    * description  描述
-    * publisherId  发布商ID
-    * manifestVersion  版本
+    * name  **参数解释**： 扩展插件唯一标识。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 扩展插件在插件市场和流水线显示的名称。 **取值范围**： 不涉及。
+    * pluginAttribution  **参数解释**： 标识是否为官方插件。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 图标URL。 **取值范围**： 不涉及。
+    * description  **参数解释**： 插件描述。 **取值范围**： 不涉及。
+    * publisherId  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  名称
-    * displayName  展示名
-    * pluginAttribution  属性
-    * iconUrl  图标URL
-    * description  描述
-    * publisherId  发布商ID
-    * manifestVersion  版本
+    * name  **参数解释**： 扩展插件唯一标识。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 扩展插件在插件市场和流水线显示的名称。 **取值范围**： 不涉及。
+    * pluginAttribution  **参数解释**： 标识是否为官方插件。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 图标URL。 **取值范围**： 不涉及。
+    * description  **参数解释**： 插件描述。 **取值范围**： 不涉及。
+    * publisherId  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  名称
-    * displayName  展示名
-    * pluginAttribution  属性
-    * iconUrl  图标URL
-    * description  描述
-    * publisherId  发布商ID
-    * manifestVersion  版本
+    * name  **参数解释**： 扩展插件唯一标识。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 扩展插件在插件市场和流水线显示的名称。 **取值范围**： 不涉及。
+    * pluginAttribution  **参数解释**： 标识是否为官方插件。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 图标URL。 **取值范围**： 不涉及。
+    * description  **参数解释**： 插件描述。 **取值范围**： 不涉及。
+    * publisherId  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  **参数解释**： 扩展插件唯一标识。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string|null $name **参数解释**： 扩展插件唯一标识。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayName
-    *  展示名
+    *  **参数解释**： 扩展插件在插件市场和流水线显示的名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
     /**
     * Sets displayName
     *
-    * @param string|null $displayName 展示名
+    * @param string|null $displayName **参数解释**： 扩展插件在插件市场和流水线显示的名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginAttribution
-    *  属性
+    *  **参数解释**： 标识是否为官方插件。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
     /**
     * Sets pluginAttribution
     *
-    * @param string|null $pluginAttribution 属性
+    * @param string|null $pluginAttribution **参数解释**： 标识是否为官方插件。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
 
     /**
     * Gets iconUrl
-    *  图标URL
+    *  **参数解释**： 图标URL。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -324,7 +324,7 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
     /**
     * Sets iconUrl
     *
-    * @param string|null $iconUrl 图标URL
+    * @param string|null $iconUrl **参数解释**： 图标URL。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释**： 插件描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释**： 插件描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
 
     /**
     * Gets publisherId
-    *  发布商ID
+    *  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
     /**
     * Sets publisherId
     *
-    * @param string|null $publisherId 发布商ID
+    * @param string|null $publisherId **参数解释**： 发布商ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
 
     /**
     * Gets manifestVersion
-    *  版本
+    *  **参数解释**： 版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -396,7 +396,7 @@ class PageInfoOptionalSinglePluginVOData implements ModelInterface, ArrayAccess
     /**
     * Sets manifestVersion
     *
-    * @param string|null $manifestVersion 版本
+    * @param string|null $manifestVersion **参数解释**： 版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */

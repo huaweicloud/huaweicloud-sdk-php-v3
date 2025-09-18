@@ -20,21 +20,21 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  步骤名称
-    * task  步骤插件
-    * businessType  插件业务类型
-    * inputs  输入参数
-    * sequence  序列号
-    * officialTaskVersion  官方插件版本号
-    * identifier  唯一标识符
-    * multiStepEditable  是否可编辑
-    * id  步骤ID
-    * endpointIds  扩展点
-    * lastDispatchId  上次下发任务ID
-    * status  状态
-    * message  错误消息
-    * startTime  开始时间
-    * endTime  结束时间
+    * name  **参数解释**： 步骤名称。 **取值范围**： 不涉及。
+    * task  **参数解释**： 步骤插件名。 **取值范围**： 不涉及。
+    * businessType  **参数解释**： 插件业务类型。 **取值范围**： - Normal：通用。 - Build：构建。 - Test：测试。 - Check：代码检查。 - Deploy：部署。
+    * inputs  **参数解释**： 输入参数。 **取值范围**： 不涉及。
+    * sequence  **参数解释**： 序列号。 **取值范围**： 不涉及。
+    * officialTaskVersion  **参数解释**： 官方插件版本号。 **取值范围**： 不涉及。
+    * identifier  **参数解释**： 唯一标识符。 **取值范围**： 不涉及。
+    * multiStepEditable  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
+    * id  **参数解释**： 步骤ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * endpointIds  **参数解释**： 扩展点ID列表。 **取值范围**： 不涉及。
+    * lastDispatchId  **参数解释**： 上次下发任务ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * status  **参数解释**： 状态。 **取值范围**： - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。
+    * message  **参数解释**： 错误消息。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 步骤开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 步骤结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -58,21 +58,21 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  步骤名称
-    * task  步骤插件
-    * businessType  插件业务类型
-    * inputs  输入参数
-    * sequence  序列号
-    * officialTaskVersion  官方插件版本号
-    * identifier  唯一标识符
-    * multiStepEditable  是否可编辑
-    * id  步骤ID
-    * endpointIds  扩展点
-    * lastDispatchId  上次下发任务ID
-    * status  状态
-    * message  错误消息
-    * startTime  开始时间
-    * endTime  结束时间
+    * name  **参数解释**： 步骤名称。 **取值范围**： 不涉及。
+    * task  **参数解释**： 步骤插件名。 **取值范围**： 不涉及。
+    * businessType  **参数解释**： 插件业务类型。 **取值范围**： - Normal：通用。 - Build：构建。 - Test：测试。 - Check：代码检查。 - Deploy：部署。
+    * inputs  **参数解释**： 输入参数。 **取值范围**： 不涉及。
+    * sequence  **参数解释**： 序列号。 **取值范围**： 不涉及。
+    * officialTaskVersion  **参数解释**： 官方插件版本号。 **取值范围**： 不涉及。
+    * identifier  **参数解释**： 唯一标识符。 **取值范围**： 不涉及。
+    * multiStepEditable  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
+    * id  **参数解释**： 步骤ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * endpointIds  **参数解释**： 扩展点ID列表。 **取值范围**： 不涉及。
+    * lastDispatchId  **参数解释**： 上次下发任务ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * status  **参数解释**： 状态。 **取值范围**： - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。
+    * message  **参数解释**： 错误消息。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 步骤开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 步骤结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -117,21 +117,21 @@ class StepRun implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  步骤名称
-    * task  步骤插件
-    * businessType  插件业务类型
-    * inputs  输入参数
-    * sequence  序列号
-    * officialTaskVersion  官方插件版本号
-    * identifier  唯一标识符
-    * multiStepEditable  是否可编辑
-    * id  步骤ID
-    * endpointIds  扩展点
-    * lastDispatchId  上次下发任务ID
-    * status  状态
-    * message  错误消息
-    * startTime  开始时间
-    * endTime  结束时间
+    * name  **参数解释**： 步骤名称。 **取值范围**： 不涉及。
+    * task  **参数解释**： 步骤插件名。 **取值范围**： 不涉及。
+    * businessType  **参数解释**： 插件业务类型。 **取值范围**： - Normal：通用。 - Build：构建。 - Test：测试。 - Check：代码检查。 - Deploy：部署。
+    * inputs  **参数解释**： 输入参数。 **取值范围**： 不涉及。
+    * sequence  **参数解释**： 序列号。 **取值范围**： 不涉及。
+    * officialTaskVersion  **参数解释**： 官方插件版本号。 **取值范围**： 不涉及。
+    * identifier  **参数解释**： 唯一标识符。 **取值范围**： 不涉及。
+    * multiStepEditable  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
+    * id  **参数解释**： 步骤ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * endpointIds  **参数解释**： 扩展点ID列表。 **取值范围**： 不涉及。
+    * lastDispatchId  **参数解释**： 上次下发任务ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * status  **参数解释**： 状态。 **取值范围**： - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。
+    * message  **参数解释**： 错误消息。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 步骤开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 步骤结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -155,21 +155,21 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  步骤名称
-    * task  步骤插件
-    * businessType  插件业务类型
-    * inputs  输入参数
-    * sequence  序列号
-    * officialTaskVersion  官方插件版本号
-    * identifier  唯一标识符
-    * multiStepEditable  是否可编辑
-    * id  步骤ID
-    * endpointIds  扩展点
-    * lastDispatchId  上次下发任务ID
-    * status  状态
-    * message  错误消息
-    * startTime  开始时间
-    * endTime  结束时间
+    * name  **参数解释**： 步骤名称。 **取值范围**： 不涉及。
+    * task  **参数解释**： 步骤插件名。 **取值范围**： 不涉及。
+    * businessType  **参数解释**： 插件业务类型。 **取值范围**： - Normal：通用。 - Build：构建。 - Test：测试。 - Check：代码检查。 - Deploy：部署。
+    * inputs  **参数解释**： 输入参数。 **取值范围**： 不涉及。
+    * sequence  **参数解释**： 序列号。 **取值范围**： 不涉及。
+    * officialTaskVersion  **参数解释**： 官方插件版本号。 **取值范围**： 不涉及。
+    * identifier  **参数解释**： 唯一标识符。 **取值范围**： 不涉及。
+    * multiStepEditable  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
+    * id  **参数解释**： 步骤ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * endpointIds  **参数解释**： 扩展点ID列表。 **取值范围**： 不涉及。
+    * lastDispatchId  **参数解释**： 上次下发任务ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * status  **参数解释**： 状态。 **取值范围**： - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。
+    * message  **参数解释**： 错误消息。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 步骤开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 步骤结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -193,21 +193,21 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  步骤名称
-    * task  步骤插件
-    * businessType  插件业务类型
-    * inputs  输入参数
-    * sequence  序列号
-    * officialTaskVersion  官方插件版本号
-    * identifier  唯一标识符
-    * multiStepEditable  是否可编辑
-    * id  步骤ID
-    * endpointIds  扩展点
-    * lastDispatchId  上次下发任务ID
-    * status  状态
-    * message  错误消息
-    * startTime  开始时间
-    * endTime  结束时间
+    * name  **参数解释**： 步骤名称。 **取值范围**： 不涉及。
+    * task  **参数解释**： 步骤插件名。 **取值范围**： 不涉及。
+    * businessType  **参数解释**： 插件业务类型。 **取值范围**： - Normal：通用。 - Build：构建。 - Test：测试。 - Check：代码检查。 - Deploy：部署。
+    * inputs  **参数解释**： 输入参数。 **取值范围**： 不涉及。
+    * sequence  **参数解释**： 序列号。 **取值范围**： 不涉及。
+    * officialTaskVersion  **参数解释**： 官方插件版本号。 **取值范围**： 不涉及。
+    * identifier  **参数解释**： 唯一标识符。 **取值范围**： 不涉及。
+    * multiStepEditable  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
+    * id  **参数解释**： 步骤ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * endpointIds  **参数解释**： 扩展点ID列表。 **取值范围**： 不涉及。
+    * lastDispatchId  **参数解释**： 上次下发任务ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * status  **参数解释**： 状态。 **取值范围**： - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。
+    * message  **参数解释**： 错误消息。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 步骤开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 步骤结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -328,7 +328,7 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  步骤名称
+    *  **参数解释**： 步骤名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -340,7 +340,7 @@ class StepRun implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 步骤名称
+    * @param string|null $name **参数解释**： 步骤名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets task
-    *  步骤插件
+    *  **参数解释**： 步骤插件名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -364,7 +364,7 @@ class StepRun implements ModelInterface, ArrayAccess
     /**
     * Sets task
     *
-    * @param string|null $task 步骤插件
+    * @param string|null $task **参数解释**： 步骤插件名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -376,7 +376,7 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets businessType
-    *  插件业务类型
+    *  **参数解释**： 插件业务类型。 **取值范围**： - Normal：通用。 - Build：构建。 - Test：测试。 - Check：代码检查。 - Deploy：部署。
     *
     * @return string|null
     */
@@ -388,7 +388,7 @@ class StepRun implements ModelInterface, ArrayAccess
     /**
     * Sets businessType
     *
-    * @param string|null $businessType 插件业务类型
+    * @param string|null $businessType **参数解释**： 插件业务类型。 **取值范围**： - Normal：通用。 - Build：构建。 - Test：测试。 - Check：代码检查。 - Deploy：部署。
     *
     * @return $this
     */
@@ -400,7 +400,7 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets inputs
-    *  输入参数
+    *  **参数解释**： 输入参数。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StepRunInputs[]|null
     */
@@ -412,7 +412,7 @@ class StepRun implements ModelInterface, ArrayAccess
     /**
     * Sets inputs
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StepRunInputs[]|null $inputs 输入参数
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StepRunInputs[]|null $inputs **参数解释**： 输入参数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -424,7 +424,7 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets sequence
-    *  序列号
+    *  **参数解释**： 序列号。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -436,7 +436,7 @@ class StepRun implements ModelInterface, ArrayAccess
     /**
     * Sets sequence
     *
-    * @param int|null $sequence 序列号
+    * @param int|null $sequence **参数解释**： 序列号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -448,7 +448,7 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets officialTaskVersion
-    *  官方插件版本号
+    *  **参数解释**： 官方插件版本号。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -460,7 +460,7 @@ class StepRun implements ModelInterface, ArrayAccess
     /**
     * Sets officialTaskVersion
     *
-    * @param string|null $officialTaskVersion 官方插件版本号
+    * @param string|null $officialTaskVersion **参数解释**： 官方插件版本号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -472,7 +472,7 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets identifier
-    *  唯一标识符
+    *  **参数解释**： 唯一标识符。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -484,7 +484,7 @@ class StepRun implements ModelInterface, ArrayAccess
     /**
     * Sets identifier
     *
-    * @param string|null $identifier 唯一标识符
+    * @param string|null $identifier **参数解释**： 唯一标识符。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -496,7 +496,7 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets multiStepEditable
-    *  是否可编辑
+    *  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
     *
     * @return int|null
     */
@@ -508,7 +508,7 @@ class StepRun implements ModelInterface, ArrayAccess
     /**
     * Sets multiStepEditable
     *
-    * @param int|null $multiStepEditable 是否可编辑
+    * @param int|null $multiStepEditable **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
     *
     * @return $this
     */
@@ -520,7 +520,7 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  步骤ID
+    *  **参数解释**： 步骤ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -532,7 +532,7 @@ class StepRun implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 步骤ID
+    * @param string|null $id **参数解释**： 步骤ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -544,7 +544,7 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpointIds
-    *  扩展点
+    *  **参数解释**： 扩展点ID列表。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -556,7 +556,7 @@ class StepRun implements ModelInterface, ArrayAccess
     /**
     * Sets endpointIds
     *
-    * @param string[]|null $endpointIds 扩展点
+    * @param string[]|null $endpointIds **参数解释**： 扩展点ID列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -568,7 +568,7 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastDispatchId
-    *  上次下发任务ID
+    *  **参数解释**： 上次下发任务ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -580,7 +580,7 @@ class StepRun implements ModelInterface, ArrayAccess
     /**
     * Sets lastDispatchId
     *
-    * @param string|null $lastDispatchId 上次下发任务ID
+    * @param string|null $lastDispatchId **参数解释**： 上次下发任务ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -592,7 +592,7 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  **参数解释**： 状态。 **取值范围**： - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。
     *
     * @return string|null
     */
@@ -604,7 +604,7 @@ class StepRun implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。
     *
     * @return $this
     */
@@ -616,7 +616,7 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
-    *  错误消息
+    *  **参数解释**： 错误消息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -628,7 +628,7 @@ class StepRun implements ModelInterface, ArrayAccess
     /**
     * Sets message
     *
-    * @param string|null $message 错误消息
+    * @param string|null $message **参数解释**： 错误消息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -640,7 +640,7 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  开始时间
+    *  **参数解释**： 步骤开始时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -652,7 +652,7 @@ class StepRun implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime 开始时间
+    * @param int|null $startTime **参数解释**： 步骤开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -664,7 +664,7 @@ class StepRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间
+    *  **参数解释**： 步骤结束时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -676,7 +676,7 @@ class StepRun implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int|null $endTime 结束时间
+    * @param int|null $endTime **参数解释**： 步骤结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */

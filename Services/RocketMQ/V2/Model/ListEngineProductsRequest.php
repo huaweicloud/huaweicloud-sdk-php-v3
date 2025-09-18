@@ -208,9 +208,6 @@ class ListEngineProductsRequest implements ModelInterface, ArrayAccess
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
-        if ($this->container['productId'] === null) {
-            $invalidProperties[] = "'productId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -277,7 +274,7 @@ class ListEngineProductsRequest implements ModelInterface, ArrayAccess
     * Gets productId
     *  **参数解释**： 产品ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string
+    * @return string|null
     */
     public function getProductId()
     {
@@ -287,7 +284,7 @@ class ListEngineProductsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string $productId **参数解释**： 产品ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string|null $productId **参数解释**： 产品ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ShowAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * switchOption  自动扩容开关。 - on：开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 默认值为on。
+    * switchOption  **参数解释：** 自动扩容开关。 **取值范围：** - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。
     * policy  policy
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ShowAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * switchOption  自动扩容开关。 - on：开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 默认值为on。
+    * switchOption  **参数解释：** 自动扩容开关。 **取值范围：** - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。
     * policy  policy
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ShowAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * switchOption  自动扩容开关。 - on：开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 默认值为on。
+    * switchOption  **参数解释：** 自动扩容开关。 **取值范围：** - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。
     * policy  policy
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ShowAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * switchOption  自动扩容开关。 - on：开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 默认值为on。
+    * switchOption  **参数解释：** 自动扩容开关。 **取值范围：** - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。
     * policy  policy
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ShowAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * switchOption  自动扩容开关。 - on：开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 默认值为on。
+    * switchOption  **参数解释：** 自动扩容开关。 **取值范围：** - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。
     * policy  policy
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ShowAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets switchOption
-    *  自动扩容开关。 - on：开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 默认值为on。
+    *  **参数解释：** 自动扩容开关。 **取值范围：** - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class ShowAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets switchOption
     *
-    * @param string|null $switchOption 自动扩容开关。 - on：开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 默认值为on。
+    * @param string|null $switchOption **参数解释：** 自动扩容开关。 **取值范围：** - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。
     *
     * @return $this
     */

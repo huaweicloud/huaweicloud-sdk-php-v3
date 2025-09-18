@@ -22,28 +22,24 @@ class UpdateLtsInfoConfigRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * enabled  是否开启全量日志   - false: 不开启   - true: 开启
     * ltsIdInfo  ltsIdInfo
-    * enabale  该参数废弃，请忽略
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'enabled' => 'bool',
-            'ltsIdInfo' => '\HuaweiCloud\SDK\Waf\V1\Model\LtsIdInfo',
-            'enabale' => 'bool'
+            'ltsIdInfo' => '\HuaweiCloud\SDK\Waf\V1\Model\LtsIdInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enabled  是否开启全量日志   - false: 不开启   - true: 开启
     * ltsIdInfo  ltsIdInfo
-    * enabale  该参数废弃，请忽略
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'enabled' => null,
-        'ltsIdInfo' => null,
-        'enabale' => null
+        'ltsIdInfo' => null
     ];
 
     /**
@@ -71,42 +67,36 @@ class UpdateLtsInfoConfigRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * enabled  是否开启全量日志   - false: 不开启   - true: 开启
     * ltsIdInfo  ltsIdInfo
-    * enabale  该参数废弃，请忽略
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'enabled' => 'enabled',
-            'ltsIdInfo' => 'ltsIdInfo',
-            'enabale' => 'enabale'
+            'ltsIdInfo' => 'ltsIdInfo'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enabled  是否开启全量日志   - false: 不开启   - true: 开启
     * ltsIdInfo  ltsIdInfo
-    * enabale  该参数废弃，请忽略
     *
     * @var string[]
     */
     protected static $setters = [
             'enabled' => 'setEnabled',
-            'ltsIdInfo' => 'setLtsIdInfo',
-            'enabale' => 'setEnabale'
+            'ltsIdInfo' => 'setLtsIdInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enabled  是否开启全量日志   - false: 不开启   - true: 开启
     * ltsIdInfo  ltsIdInfo
-    * enabale  该参数废弃，请忽略
     *
     * @var string[]
     */
     protected static $getters = [
             'enabled' => 'getEnabled',
-            'ltsIdInfo' => 'getLtsIdInfo',
-            'enabale' => 'getEnabale'
+            'ltsIdInfo' => 'getLtsIdInfo'
     ];
 
     /**
@@ -169,7 +159,6 @@ class UpdateLtsInfoConfigRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
         $this->container['ltsIdInfo'] = isset($data['ltsIdInfo']) ? $data['ltsIdInfo'] : null;
-        $this->container['enabale'] = isset($data['enabale']) ? $data['enabale'] : null;
     }
 
     /**
@@ -239,30 +228,6 @@ class UpdateLtsInfoConfigRequestBody implements ModelInterface, ArrayAccess
     public function setLtsIdInfo($ltsIdInfo)
     {
         $this->container['ltsIdInfo'] = $ltsIdInfo;
-        return $this;
-    }
-
-    /**
-    * Gets enabale
-    *  该参数废弃，请忽略
-    *
-    * @return bool|null
-    */
-    public function getEnabale()
-    {
-        return $this->container['enabale'];
-    }
-
-    /**
-    * Sets enabale
-    *
-    * @param bool|null $enabale 该参数废弃，请忽略
-    *
-    * @return $this
-    */
-    public function setEnabale($enabale)
-    {
-        $this->container['enabale'] = $enabale;
         return $this;
     }
 

@@ -158,6 +158,9 @@ class VolumeBatchDetachRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['serverinfo'] === null) {
+            $invalidProperties[] = "'serverinfo' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class VolumeBatchDetachRequest implements ModelInterface, ArrayAccess
     * Gets serverinfo
     *  serverinfo
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getServerinfo()
     {
@@ -186,7 +189,7 @@ class VolumeBatchDetachRequest implements ModelInterface, ArrayAccess
     /**
     * Sets serverinfo
     *
-    * @param string[]|null $serverinfo serverinfo
+    * @param string[] $serverinfo serverinfo
     *
     * @return $this
     */

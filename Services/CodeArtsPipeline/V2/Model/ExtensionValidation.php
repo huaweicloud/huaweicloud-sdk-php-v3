@@ -20,11 +20,11 @@ class ExtensionValidation implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * requiredMessage  消息
-    * regex  正则
-    * regexMessage  正则消息
-    * maxLength  最大长度
-    * minLength  最小长度
+    * requiredMessage  **参数解释**： 若插件输入项为必填而实际未填写时，提示的信息。 **取值范围**： 不涉及。
+    * regex  **参数解释**： 插件输入项值的校验正则表达式。 **取值范围**： 不涉及。
+    * regexMessage  **参数解释**： 若插件输入项的值不满足regex中的正则表达式时，提示的信息。 **取值范围**： 不涉及。
+    * maxLength  **参数解释**： 插件输入项值的最大长度。 **取值范围**： 不涉及。
+    * minLength  **参数解释**： 插件输入项值的最小长度。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ExtensionValidation implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * requiredMessage  消息
-    * regex  正则
-    * regexMessage  正则消息
-    * maxLength  最大长度
-    * minLength  最小长度
+    * requiredMessage  **参数解释**： 若插件输入项为必填而实际未填写时，提示的信息。 **取值范围**： 不涉及。
+    * regex  **参数解释**： 插件输入项值的校验正则表达式。 **取值范围**： 不涉及。
+    * regexMessage  **参数解释**： 若插件输入项的值不满足regex中的正则表达式时，提示的信息。 **取值范围**： 不涉及。
+    * maxLength  **参数解释**： 插件输入项值的最大长度。 **取值范围**： 不涉及。
+    * minLength  **参数解释**： 插件输入项值的最小长度。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ExtensionValidation implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * requiredMessage  消息
-    * regex  正则
-    * regexMessage  正则消息
-    * maxLength  最大长度
-    * minLength  最小长度
+    * requiredMessage  **参数解释**： 若插件输入项为必填而实际未填写时，提示的信息。 **取值范围**： 不涉及。
+    * regex  **参数解释**： 插件输入项值的校验正则表达式。 **取值范围**： 不涉及。
+    * regexMessage  **参数解释**： 若插件输入项的值不满足regex中的正则表达式时，提示的信息。 **取值范围**： 不涉及。
+    * maxLength  **参数解释**： 插件输入项值的最大长度。 **取值范围**： 不涉及。
+    * minLength  **参数解释**： 插件输入项值的最小长度。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ExtensionValidation implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * requiredMessage  消息
-    * regex  正则
-    * regexMessage  正则消息
-    * maxLength  最大长度
-    * minLength  最小长度
+    * requiredMessage  **参数解释**： 若插件输入项为必填而实际未填写时，提示的信息。 **取值范围**： 不涉及。
+    * regex  **参数解释**： 插件输入项值的校验正则表达式。 **取值范围**： 不涉及。
+    * regexMessage  **参数解释**： 若插件输入项的值不满足regex中的正则表达式时，提示的信息。 **取值范围**： 不涉及。
+    * maxLength  **参数解释**： 插件输入项值的最大长度。 **取值范围**： 不涉及。
+    * minLength  **参数解释**： 插件输入项值的最小长度。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ExtensionValidation implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * requiredMessage  消息
-    * regex  正则
-    * regexMessage  正则消息
-    * maxLength  最大长度
-    * minLength  最小长度
+    * requiredMessage  **参数解释**： 若插件输入项为必填而实际未填写时，提示的信息。 **取值范围**： 不涉及。
+    * regex  **参数解释**： 插件输入项值的校验正则表达式。 **取值范围**： 不涉及。
+    * regexMessage  **参数解释**： 若插件输入项的值不满足regex中的正则表达式时，提示的信息。 **取值范围**： 不涉及。
+    * maxLength  **参数解释**： 插件输入项值的最大长度。 **取值范围**： 不涉及。
+    * minLength  **参数解释**： 插件输入项值的最小长度。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class ExtensionValidation implements ModelInterface, ArrayAccess
 
     /**
     * Gets requiredMessage
-    *  消息
+    *  **参数解释**： 若插件输入项为必填而实际未填写时，提示的信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class ExtensionValidation implements ModelInterface, ArrayAccess
     /**
     * Sets requiredMessage
     *
-    * @param string|null $requiredMessage 消息
+    * @param string|null $requiredMessage **参数解释**： 若插件输入项为必填而实际未填写时，提示的信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class ExtensionValidation implements ModelInterface, ArrayAccess
 
     /**
     * Gets regex
-    *  正则
+    *  **参数解释**： 插件输入项值的校验正则表达式。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class ExtensionValidation implements ModelInterface, ArrayAccess
     /**
     * Sets regex
     *
-    * @param string|null $regex 正则
+    * @param string|null $regex **参数解释**： 插件输入项值的校验正则表达式。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class ExtensionValidation implements ModelInterface, ArrayAccess
 
     /**
     * Gets regexMessage
-    *  正则消息
+    *  **参数解释**： 若插件输入项的值不满足regex中的正则表达式时，提示的信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class ExtensionValidation implements ModelInterface, ArrayAccess
     /**
     * Sets regexMessage
     *
-    * @param string|null $regexMessage 正则消息
+    * @param string|null $regexMessage **参数解释**： 若插件输入项的值不满足regex中的正则表达式时，提示的信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class ExtensionValidation implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxLength
-    *  最大长度
+    *  **参数解释**： 插件输入项值的最大长度。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -302,7 +302,7 @@ class ExtensionValidation implements ModelInterface, ArrayAccess
     /**
     * Sets maxLength
     *
-    * @param int|null $maxLength 最大长度
+    * @param int|null $maxLength **参数解释**： 插件输入项值的最大长度。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ExtensionValidation implements ModelInterface, ArrayAccess
 
     /**
     * Gets minLength
-    *  最小长度
+    *  **参数解释**： 插件输入项值的最小长度。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -326,7 +326,7 @@ class ExtensionValidation implements ModelInterface, ArrayAccess
     /**
     * Sets minLength
     *
-    * @param int|null $minLength 最小长度
+    * @param int|null $minLength **参数解释**： 插件输入项值的最小长度。 **取值范围**： 不涉及。
     *
     * @return $this
     */

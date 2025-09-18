@@ -1720,6 +1720,77 @@ class CodeArtsDeployClient extends Client
     }
 
     /**
+     * 获取部署任务状态
+     *
+     * 获取部署任务状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkDeployStatus($request)
+    {
+        return $this->checkDeployStatusWithHttpInfo($request);
+    }
+
+    public function checkDeployStatusWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/tasks/{task_id}/state';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['recordId'] !== null) {
+            $queryParams['record_id'] = $localVarParams['recordId'];
+        }
+        if ($localVarParams['stepState'] !== null) {
+            $queryParams['step_state'] = $localVarParams['stepState'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\CheckDeployStatusResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\CheckDeployStatusRequest');
+    }
+
+    /**
      * 应用下创建环境
      *
      * 应用下创建环境。
@@ -2424,6 +2495,77 @@ class CodeArtsDeployClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\UpdateEnvironmentPermissionResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\UpdateEnvironmentPermissionRequest');
+    }
+
+    /**
+     * 停止部署任务
+     *
+     * 停止部署任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function stopDeployTask($request)
+    {
+        return $this->stopDeployTaskWithHttpInfo($request);
+    }
+
+    public function stopDeployTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/tasks/{task_id}/records/{record_id}/stop';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['recordId'] !== null) {
+            $pathParams['record_id'] = $localVarParams['recordId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\StopDeployTaskResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\StopDeployTaskRequest');
     }
 
     /**

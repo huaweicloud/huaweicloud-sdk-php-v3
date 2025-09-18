@@ -20,11 +20,11 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pluginName  可选的查询条件-插件名
-    * regexName  可选的查询条件-匹配名称
-    * maintainer  维护者
-    * businessType  业务类型,[Build,Gate,Deploy,Test,Normal]
-    * pluginAttribution  插件属性，official/custom
+    * pluginName  **参数解释**： 可选的查询条件-插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * regexName  **参数解释**： 可选的查询条件-匹配名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainer  **参数解释**： 维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 业务类型。 **约束限制**： 不涉及。 **取值范围**： - Build。 - Gate。 - Deploy。 - Test。 - Normal。 **默认取值**： 不涉及。
+    * pluginAttribution  **参数解释**： 插件属性。 **约束限制**： 不涉及。 **取值范围**： - official：自定义插件。 - custom：基础插件。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pluginName  可选的查询条件-插件名
-    * regexName  可选的查询条件-匹配名称
-    * maintainer  维护者
-    * businessType  业务类型,[Build,Gate,Deploy,Test,Normal]
-    * pluginAttribution  插件属性，official/custom
+    * pluginName  **参数解释**： 可选的查询条件-插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * regexName  **参数解释**： 可选的查询条件-匹配名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainer  **参数解释**： 维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 业务类型。 **约束限制**： 不涉及。 **取值范围**： - Build。 - Gate。 - Deploy。 - Test。 - Normal。 **默认取值**： 不涉及。
+    * pluginAttribution  **参数解释**： 插件属性。 **约束限制**： 不涉及。 **取值范围**： - official：自定义插件。 - custom：基础插件。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pluginName  可选的查询条件-插件名
-    * regexName  可选的查询条件-匹配名称
-    * maintainer  维护者
-    * businessType  业务类型,[Build,Gate,Deploy,Test,Normal]
-    * pluginAttribution  插件属性，official/custom
+    * pluginName  **参数解释**： 可选的查询条件-插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * regexName  **参数解释**： 可选的查询条件-匹配名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainer  **参数解释**： 维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 业务类型。 **约束限制**： 不涉及。 **取值范围**： - Build。 - Gate。 - Deploy。 - Test。 - Normal。 **默认取值**： 不涉及。
+    * pluginAttribution  **参数解释**： 插件属性。 **约束限制**： 不涉及。 **取值范围**： - official：自定义插件。 - custom：基础插件。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pluginName  可选的查询条件-插件名
-    * regexName  可选的查询条件-匹配名称
-    * maintainer  维护者
-    * businessType  业务类型,[Build,Gate,Deploy,Test,Normal]
-    * pluginAttribution  插件属性，official/custom
+    * pluginName  **参数解释**： 可选的查询条件-插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * regexName  **参数解释**： 可选的查询条件-匹配名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainer  **参数解释**： 维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 业务类型。 **约束限制**： 不涉及。 **取值范围**： - Build。 - Gate。 - Deploy。 - Test。 - Normal。 **默认取值**： 不涉及。
+    * pluginAttribution  **参数解释**： 插件属性。 **约束限制**： 不涉及。 **取值范围**： - official：自定义插件。 - custom：基础插件。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pluginName  可选的查询条件-插件名
-    * regexName  可选的查询条件-匹配名称
-    * maintainer  维护者
-    * businessType  业务类型,[Build,Gate,Deploy,Test,Normal]
-    * pluginAttribution  插件属性，official/custom
+    * pluginName  **参数解释**： 可选的查询条件-插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * regexName  **参数解释**： 可选的查询条件-匹配名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainer  **参数解释**： 维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 业务类型。 **约束限制**： 不涉及。 **取值范围**： - Build。 - Gate。 - Deploy。 - Test。 - Normal。 **默认取值**： 不涉及。
+    * pluginAttribution  **参数解释**： 插件属性。 **约束限制**： 不涉及。 **取值范围**： - official：自定义插件。 - custom：基础插件。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginName
-    *  可选的查询条件-插件名
+    *  **参数解释**： 可选的查询条件-插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 可选的查询条件-插件名
+    * @param string|null $pluginName **参数解释**： 可选的查询条件-插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets regexName
-    *  可选的查询条件-匹配名称
+    *  **参数解释**： 可选的查询条件-匹配名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets regexName
     *
-    * @param string|null $regexName 可选的查询条件-匹配名称
+    * @param string|null $regexName **参数解释**： 可选的查询条件-匹配名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets maintainer
-    *  维护者
+    *  **参数解释**： 维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets maintainer
     *
-    * @param string|null $maintainer 维护者
+    * @param string|null $maintainer **参数解释**： 维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets businessType
-    *  业务类型,[Build,Gate,Deploy,Test,Normal]
+    *  **参数解释**： 业务类型。 **约束限制**： 不涉及。 **取值范围**： - Build。 - Gate。 - Deploy。 - Test。 - Normal。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -302,7 +302,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets businessType
     *
-    * @param string[]|null $businessType 业务类型,[Build,Gate,Deploy,Test,Normal]
+    * @param string[]|null $businessType **参数解释**： 业务类型。 **约束限制**： 不涉及。 **取值范围**： - Build。 - Gate。 - Deploy。 - Test。 - Normal。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginAttribution
-    *  插件属性，official/custom
+    *  **参数解释**： 插件属性。 **约束限制**： 不涉及。 **取值范围**： - official：自定义插件。 - custom：基础插件。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginAttribution
     *
-    * @param string|null $pluginAttribution 插件属性，official/custom
+    * @param string|null $pluginAttribution **参数解释**： 插件属性。 **约束限制**： 不涉及。 **取值范围**： - official：自定义插件。 - custom：基础插件。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -20,13 +20,13 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  类型：Build,Gate,Deploy,Test,Normal
-    * name  规则名称
-    * layoutContent  布局内容
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * content  规则属性分组列表
+    * type  **参数解释**： 创建规则的类型。 **约束限制**： 不涉及。 **取值范围**： - Build。 - Gate。 - Deploy。 - Test。 - Normal。 **默认取值**： 不涉及。
+    * name  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * layoutContent  **参数解释**： 布局内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginId  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * pluginVersion  **参数解释**： 插件版本号。 **约束限制**： 必须是类似 x.xx.xx 的格式，其中：x 是 1 到 2 位的数字（范围 0 到 99）。xx 是点后跟随的数字部分，且每部分可以是 1 位或 2 位数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * content  **参数解释**： 规则属性分组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  类型：Build,Gate,Deploy,Test,Normal
-    * name  规则名称
-    * layoutContent  布局内容
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * content  规则属性分组列表
+    * type  **参数解释**： 创建规则的类型。 **约束限制**： 不涉及。 **取值范围**： - Build。 - Gate。 - Deploy。 - Test。 - Normal。 **默认取值**： 不涉及。
+    * name  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * layoutContent  **参数解释**： 布局内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginId  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * pluginVersion  **参数解释**： 插件版本号。 **约束限制**： 必须是类似 x.xx.xx 的格式，其中：x 是 1 到 2 位的数字（范围 0 到 99）。xx 是点后跟随的数字部分，且每部分可以是 1 位或 2 位数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * content  **参数解释**： 规则属性分组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  类型：Build,Gate,Deploy,Test,Normal
-    * name  规则名称
-    * layoutContent  布局内容
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * content  规则属性分组列表
+    * type  **参数解释**： 创建规则的类型。 **约束限制**： 不涉及。 **取值范围**： - Build。 - Gate。 - Deploy。 - Test。 - Normal。 **默认取值**： 不涉及。
+    * name  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * layoutContent  **参数解释**： 布局内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginId  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * pluginVersion  **参数解释**： 插件版本号。 **约束限制**： 必须是类似 x.xx.xx 的格式，其中：x 是 1 到 2 位的数字（范围 0 到 99）。xx 是点后跟随的数字部分，且每部分可以是 1 位或 2 位数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * content  **参数解释**： 规则属性分组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  类型：Build,Gate,Deploy,Test,Normal
-    * name  规则名称
-    * layoutContent  布局内容
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * content  规则属性分组列表
+    * type  **参数解释**： 创建规则的类型。 **约束限制**： 不涉及。 **取值范围**： - Build。 - Gate。 - Deploy。 - Test。 - Normal。 **默认取值**： 不涉及。
+    * name  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * layoutContent  **参数解释**： 布局内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginId  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * pluginVersion  **参数解释**： 插件版本号。 **约束限制**： 必须是类似 x.xx.xx 的格式，其中：x 是 1 到 2 位的数字（范围 0 到 99）。xx 是点后跟随的数字部分，且每部分可以是 1 位或 2 位数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * content  **参数解释**： 规则属性分组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  类型：Build,Gate,Deploy,Test,Normal
-    * name  规则名称
-    * layoutContent  布局内容
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * content  规则属性分组列表
+    * type  **参数解释**： 创建规则的类型。 **约束限制**： 不涉及。 **取值范围**： - Build。 - Gate。 - Deploy。 - Test。 - Normal。 **默认取值**： 不涉及。
+    * name  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * layoutContent  **参数解释**： 布局内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginId  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * pluginVersion  **参数解释**： 插件版本号。 **约束限制**： 必须是类似 x.xx.xx 的格式，其中：x 是 1 到 2 位的数字（范围 0 到 99）。xx 是点后跟随的数字部分，且每部分可以是 1 位或 2 位数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * content  **参数解释**： 规则属性分组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -252,7 +252,7 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型：Build,Gate,Deploy,Test,Normal
+    *  **参数解释**： 创建规则的类型。 **约束限制**： 不涉及。 **取值范围**： - Build。 - Gate。 - Deploy。 - Test。 - Normal。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -264,7 +264,7 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 类型：Build,Gate,Deploy,Test,Normal
+    * @param string $type **参数解释**： 创建规则的类型。 **约束限制**： 不涉及。 **取值范围**： - Build。 - Gate。 - Deploy。 - Test。 - Normal。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -276,7 +276,7 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  规则名称
+    *  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -288,7 +288,7 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 规则名称
+    * @param string $name **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -300,7 +300,7 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets layoutContent
-    *  布局内容
+    *  **参数解释**： 布局内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -312,7 +312,7 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets layoutContent
     *
-    * @param string $layoutContent 布局内容
+    * @param string $layoutContent **参数解释**： 布局内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginId
-    *  插件ID
+    *  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -336,7 +336,7 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets pluginId
     *
-    * @param string|null $pluginId 插件ID
+    * @param string|null $pluginId **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -348,7 +348,7 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginName
-    *  插件名称
+    *  **参数解释**： 扩展插件名称。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -360,7 +360,7 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 插件名称
+    * @param string|null $pluginName **参数解释**： 扩展插件名称。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -372,7 +372,7 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginVersion
-    *  插件版本号
+    *  **参数解释**： 插件版本号。 **约束限制**： 必须是类似 x.xx.xx 的格式，其中：x 是 1 到 2 位的数字（范围 0 到 99）。xx 是点后跟随的数字部分，且每部分可以是 1 位或 2 位数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -384,7 +384,7 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets pluginVersion
     *
-    * @param string|null $pluginVersion 插件版本号
+    * @param string|null $pluginVersion **参数解释**： 插件版本号。 **约束限制**： 必须是类似 x.xx.xx 的格式，其中：x 是 1 到 2 位的数字（范围 0 到 99）。xx 是点后跟随的数字部分，且每部分可以是 1 位或 2 位数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -396,7 +396,7 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets content
-    *  规则属性分组列表
+    *  **参数解释**： 规则属性分组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleContent[]
     */
@@ -408,7 +408,7 @@ class CreateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets content
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleContent[] $content 规则属性分组列表
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleContent[] $content **参数解释**： 规则属性分组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -20,11 +20,11 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sources  使用的源
-    * description  运行描述
-    * variables  使用的自定义参数
-    * chooseJobs  选择的任务
-    * chooseStages  选择的阶段
+    * sources  **参数解释**： 代码源信息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线运行描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 使用的自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * chooseJobs  **参数解释**： 流水线运行时选择的流水线任务。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * chooseStages  **参数解释**： 选择的流水线阶段。优先级高于choose_jobs，即stage未选择时，无视choose_jobs中该stage下的job。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sources  使用的源
-    * description  运行描述
-    * variables  使用的自定义参数
-    * chooseJobs  选择的任务
-    * chooseStages  选择的阶段
+    * sources  **参数解释**： 代码源信息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线运行描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 使用的自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * chooseJobs  **参数解释**： 流水线运行时选择的流水线任务。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * chooseStages  **参数解释**： 选择的流水线阶段。优先级高于choose_jobs，即stage未选择时，无视choose_jobs中该stage下的job。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sources  使用的源
-    * description  运行描述
-    * variables  使用的自定义参数
-    * chooseJobs  选择的任务
-    * chooseStages  选择的阶段
+    * sources  **参数解释**： 代码源信息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线运行描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 使用的自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * chooseJobs  **参数解释**： 流水线运行时选择的流水线任务。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * chooseStages  **参数解释**： 选择的流水线阶段。优先级高于choose_jobs，即stage未选择时，无视choose_jobs中该stage下的job。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sources  使用的源
-    * description  运行描述
-    * variables  使用的自定义参数
-    * chooseJobs  选择的任务
-    * chooseStages  选择的阶段
+    * sources  **参数解释**： 代码源信息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线运行描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 使用的自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * chooseJobs  **参数解释**： 流水线运行时选择的流水线任务。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * chooseStages  **参数解释**： 选择的流水线阶段。优先级高于choose_jobs，即stage未选择时，无视choose_jobs中该stage下的job。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sources  使用的源
-    * description  运行描述
-    * variables  使用的自定义参数
-    * chooseJobs  选择的任务
-    * chooseStages  选择的阶段
+    * sources  **参数解释**： 代码源信息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线运行描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 使用的自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * chooseJobs  **参数解释**： 流水线运行时选择的流水线任务。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * chooseStages  **参数解释**： 选择的流水线阶段。优先级高于choose_jobs，即stage未选择时，无视choose_jobs中该stage下的job。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets sources
-    *  使用的源
+    *  **参数解释**： 代码源信息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RunPipelineDTOSources[]|null
     */
@@ -230,7 +230,7 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets sources
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RunPipelineDTOSources[]|null $sources 使用的源
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RunPipelineDTOSources[]|null $sources **参数解释**： 代码源信息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  运行描述
+    *  **参数解释**： 流水线运行描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 运行描述
+    * @param string|null $description **参数解释**： 流水线运行描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets variables
-    *  使用的自定义参数
+    *  **参数解释**： 使用的自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RunPipelineDTOVariables[]|null
     */
@@ -278,7 +278,7 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets variables
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RunPipelineDTOVariables[]|null $variables 使用的自定义参数
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RunPipelineDTOVariables[]|null $variables **参数解释**： 使用的自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets chooseJobs
-    *  选择的任务
+    *  **参数解释**： 流水线运行时选择的流水线任务。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -302,7 +302,7 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets chooseJobs
     *
-    * @param string[]|null $chooseJobs 选择的任务
+    * @param string[]|null $chooseJobs **参数解释**： 流水线运行时选择的流水线任务。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets chooseStages
-    *  选择的阶段
+    *  **参数解释**： 选择的流水线阶段。优先级高于choose_jobs，即stage未选择时，无视choose_jobs中该stage下的job。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -326,7 +326,7 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets chooseStages
     *
-    * @param string[]|null $chooseStages 选择的阶段
+    * @param string[]|null $chooseStages **参数解释**： 选择的流水线阶段。优先级高于choose_jobs，即stage未选择时，无视choose_jobs中该stage下的job。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

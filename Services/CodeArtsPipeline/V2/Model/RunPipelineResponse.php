@@ -21,7 +21,7 @@ class RunPipelineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pipelineRunId  pipelineRunId
+    * pipelineRunId  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class RunPipelineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pipelineRunId  pipelineRunId
+    * pipelineRunId  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class RunPipelineResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pipelineRunId  pipelineRunId
+    * pipelineRunId  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class RunPipelineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pipelineRunId  pipelineRunId
+    * pipelineRunId  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class RunPipelineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pipelineRunId  pipelineRunId
+    * pipelineRunId  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class RunPipelineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelineRunId
-    *  pipelineRunId
+    *  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class RunPipelineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pipelineRunId
     *
-    * @param string|null $pipelineRunId pipelineRunId
+    * @param string|null $pipelineRunId **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */

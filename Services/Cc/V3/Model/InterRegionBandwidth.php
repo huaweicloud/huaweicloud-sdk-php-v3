@@ -311,29 +311,29 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
         if ($this->container['cloudConnectionId'] === null) {
             $invalidProperties[] = "'cloudConnectionId' can't be null";
         }
-            if ((mb_strlen($this->container['cloudConnectionId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 32.";
+            if ((mb_strlen($this->container['cloudConnectionId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['cloudConnectionId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 36.";
+            if ((mb_strlen($this->container['cloudConnectionId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 32.";
             }
-            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['cloudConnectionId'])) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{32}|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['cloudConnectionId'])) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{32}|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['bandwidthPackageId'] === null) {
             $invalidProperties[] = "'bandwidthPackageId' can't be null";
         }
-            if ((mb_strlen($this->container['bandwidthPackageId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'bandwidthPackageId', the character length must be smaller than or equal to 32.";
+            if ((mb_strlen($this->container['bandwidthPackageId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'bandwidthPackageId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['bandwidthPackageId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'bandwidthPackageId', the character length must be bigger than or equal to 36.";
+            if ((mb_strlen($this->container['bandwidthPackageId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'bandwidthPackageId', the character length must be bigger than or equal to 32.";
             }
-            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['bandwidthPackageId'])) {
-                $invalidProperties[] = "invalid value for 'bandwidthPackageId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{32}|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['bandwidthPackageId'])) {
+                $invalidProperties[] = "invalid value for 'bandwidthPackageId', must be conform to the pattern /[a-fA-F0-9]{32}|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
-            if (!is_null($this->container['bandwidth']) && ($this->container['bandwidth'] > 999999)) {
-                $invalidProperties[] = "invalid value for 'bandwidth', must be smaller than or equal to 999999.";
+            if (!is_null($this->container['bandwidth']) && ($this->container['bandwidth'] > 9999999999)) {
+                $invalidProperties[] = "invalid value for 'bandwidth', must be smaller than or equal to 9999999999.";
             }
             if (!is_null($this->container['bandwidth']) && ($this->container['bandwidth'] < 1)) {
                 $invalidProperties[] = "invalid value for 'bandwidth', must be bigger than or equal to 1.";

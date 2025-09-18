@@ -26,8 +26,8 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     * instanceId  网络实例（VPC，VGW）的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
     * destination  目的地址。
+    * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
     *
     * @var string[]
     */
@@ -38,8 +38,8 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
             'instanceId' => 'string',
             'projectId' => 'string',
             'regionId' => 'string',
-            'type' => 'string',
-            'destination' => 'string'
+            'destination' => 'string',
+            'type' => 'string'
     ];
 
     /**
@@ -50,8 +50,8 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     * instanceId  网络实例（VPC，VGW）的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
     * destination  目的地址。
+    * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
     *
     * @var string[]
     */
@@ -62,8 +62,8 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
         'instanceId' => null,
         'projectId' => null,
         'regionId' => null,
-        'type' => null,
-        'destination' => null
+        'destination' => null,
+        'type' => null
     ];
 
     /**
@@ -95,8 +95,8 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     * instanceId  网络实例（VPC，VGW）的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
     * destination  目的地址。
+    * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
     *
     * @var string[]
     */
@@ -107,8 +107,8 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
             'instanceId' => 'instance_id',
             'projectId' => 'project_id',
             'regionId' => 'region_id',
-            'type' => 'type',
-            'destination' => 'destination'
+            'destination' => 'destination',
+            'type' => 'type'
     ];
 
     /**
@@ -119,8 +119,8 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     * instanceId  网络实例（VPC，VGW）的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
     * destination  目的地址。
+    * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
     *
     * @var string[]
     */
@@ -131,8 +131,8 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
             'instanceId' => 'setInstanceId',
             'projectId' => 'setProjectId',
             'regionId' => 'setRegionId',
-            'type' => 'setType',
-            'destination' => 'setDestination'
+            'destination' => 'setDestination',
+            'type' => 'setType'
     ];
 
     /**
@@ -143,8 +143,8 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     * instanceId  网络实例（VPC，VGW）的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
     * destination  目的地址。
+    * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
     *
     * @var string[]
     */
@@ -155,8 +155,8 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
             'instanceId' => 'getInstanceId',
             'projectId' => 'getProjectId',
             'regionId' => 'getRegionId',
-            'type' => 'getType',
-            'destination' => 'getDestination'
+            'destination' => 'getDestination',
+            'type' => 'getType'
     ];
 
     /**
@@ -238,8 +238,8 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -265,14 +265,14 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
         if ($this->container['cloudConnectionId'] === null) {
             $invalidProperties[] = "'cloudConnectionId' can't be null";
         }
-            if ((mb_strlen($this->container['cloudConnectionId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 32.";
+            if ((mb_strlen($this->container['cloudConnectionId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['cloudConnectionId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 36.";
+            if ((mb_strlen($this->container['cloudConnectionId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 32.";
             }
-            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['cloudConnectionId'])) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{32}|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['cloudConnectionId'])) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{32}|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['domainId'] === null) {
             $invalidProperties[] = "'domainId' can't be null";
@@ -301,14 +301,14 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
         }
-            if ((mb_strlen($this->container['projectId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
+            if ((mb_strlen($this->container['projectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
             }
             if ((mb_strlen($this->container['projectId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
             }
-            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['projectId'])) {
-                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-([a-fA-F0-9]{4}-){3}[a-fA-F0-9]{12}|[a-fA-F0-9]{32,32}/", $this->container['projectId'])) {
+                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /[a-fA-F0-9]{8}-([a-fA-F0-9]{4}-){3}[a-fA-F0-9]{12}|[a-fA-F0-9]{32,32}/.";
             }
         if ($this->container['regionId'] === null) {
             $invalidProperties[] = "'regionId' can't be null";
@@ -318,6 +318,15 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['regionId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'regionId', the character length must be bigger than or equal to 1.";
+            }
+        if ($this->container['destination'] === null) {
+            $invalidProperties[] = "'destination' can't be null";
+        }
+            if ((mb_strlen($this->container['destination']) > 256)) {
+                $invalidProperties[] = "invalid value for 'destination', the character length must be smaller than or equal to 256.";
+            }
+            if ((mb_strlen($this->container['destination']) < 0)) {
+                $invalidProperties[] = "invalid value for 'destination', the character length must be bigger than or equal to 0.";
             }
             $allowedValues = $this->getTypeAllowableValues();
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
@@ -332,12 +341,6 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 2)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 2.";
-            }
-            if (!is_null($this->container['destination']) && (mb_strlen($this->container['destination']) > 36)) {
-                $invalidProperties[] = "invalid value for 'destination', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['destination']) && (mb_strlen($this->container['destination']) < 0)) {
-                $invalidProperties[] = "invalid value for 'destination', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -498,6 +501,30 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets destination
+    *  目的地址。
+    *
+    * @return string
+    */
+    public function getDestination()
+    {
+        return $this->container['destination'];
+    }
+
+    /**
+    * Sets destination
+    *
+    * @param string $destination 目的地址。
+    *
+    * @return $this
+    */
+    public function setDestination($destination)
+    {
+        $this->container['destination'] = $destination;
+        return $this;
+    }
+
+    /**
     * Gets type
     *  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
     *
@@ -518,30 +545,6 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
-        return $this;
-    }
-
-    /**
-    * Gets destination
-    *  目的地址。
-    *
-    * @return string|null
-    */
-    public function getDestination()
-    {
-        return $this->container['destination'];
-    }
-
-    /**
-    * Sets destination
-    *
-    * @param string|null $destination 目的地址。
-    *
-    * @return $this
-    */
-    public function setDestination($destination)
-    {
-        $this->container['destination'] = $destination;
         return $this;
     }
 

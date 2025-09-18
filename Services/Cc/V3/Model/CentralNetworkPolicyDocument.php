@@ -20,7 +20,7 @@ class CentralNetworkPolicyDocument implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * defaultPlane  中心网络默认平面的名字。
+    * defaultPlane  中心网络默认平面的名称。
     * planes  中心网络平面列表。
     * erInstances  中心网络ER实例列表。
     *
@@ -34,7 +34,7 @@ class CentralNetworkPolicyDocument implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * defaultPlane  中心网络默认平面的名字。
+    * defaultPlane  中心网络默认平面的名称。
     * planes  中心网络平面列表。
     * erInstances  中心网络ER实例列表。
     *
@@ -69,7 +69,7 @@ class CentralNetworkPolicyDocument implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * defaultPlane  中心网络默认平面的名字。
+    * defaultPlane  中心网络默认平面的名称。
     * planes  中心网络平面列表。
     * erInstances  中心网络ER实例列表。
     *
@@ -83,7 +83,7 @@ class CentralNetworkPolicyDocument implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * defaultPlane  中心网络默认平面的名字。
+    * defaultPlane  中心网络默认平面的名称。
     * planes  中心网络平面列表。
     * erInstances  中心网络ER实例列表。
     *
@@ -97,7 +97,7 @@ class CentralNetworkPolicyDocument implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * defaultPlane  中心网络默认平面的名字。
+    * defaultPlane  中心网络默认平面的名称。
     * planes  中心网络平面列表。
     * erInstances  中心网络ER实例列表。
     *
@@ -211,7 +211,7 @@ class CentralNetworkPolicyDocument implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultPlane
-    *  中心网络默认平面的名字。
+    *  中心网络默认平面的名称。
     *
     * @return string
     */
@@ -223,7 +223,7 @@ class CentralNetworkPolicyDocument implements ModelInterface, ArrayAccess
     /**
     * Sets defaultPlane
     *
-    * @param string $defaultPlane 中心网络默认平面的名字。
+    * @param string $defaultPlane 中心网络默认平面的名称。
     *
     * @return $this
     */

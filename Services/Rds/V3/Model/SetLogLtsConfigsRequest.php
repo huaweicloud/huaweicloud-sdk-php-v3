@@ -20,7 +20,7 @@ class SetLogLtsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  引擎，暂只支持mysql。
+    * engine  发动机类型。
     * xLanguage  语言。
     * body  body
     *
@@ -34,7 +34,7 @@ class SetLogLtsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  引擎，暂只支持mysql。
+    * engine  发动机类型。
     * xLanguage  语言。
     * body  body
     *
@@ -69,7 +69,7 @@ class SetLogLtsConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  引擎，暂只支持mysql。
+    * engine  发动机类型。
     * xLanguage  语言。
     * body  body
     *
@@ -83,7 +83,7 @@ class SetLogLtsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  引擎，暂只支持mysql。
+    * engine  发动机类型。
     * xLanguage  语言。
     * body  body
     *
@@ -97,7 +97,7 @@ class SetLogLtsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  引擎，暂只支持mysql。
+    * engine  发动机类型。
     * xLanguage  语言。
     * body  body
     *
@@ -243,7 +243,7 @@ class SetLogLtsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  引擎，暂只支持mysql。
+    *  发动机类型。
     *
     * @return string
     */
@@ -255,7 +255,7 @@ class SetLogLtsConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string $engine 引擎，暂只支持mysql。
+    * @param string $engine 发动机类型。
     *
     * @return $this
     */

@@ -20,14 +20,14 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * buildId  执行ID
-    * elapseTime  运行耗时
-    * endTime  执行结束时间
-    * outcome  运行结果
-    * pipelineId  流水线id
-    * pipelineName  流水线名称
-    * startTime  执行开始时间
-    * status  运行状态
+    * buildId  **参数解释**： 流水线执行ID。 **取值范围**： 不涉及。
+    * elapseTime  **参数解释**： 运行耗时，单位为毫秒。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 执行结束时间。 **取值范围**： 不涉及。
+    * outcome  **参数解释**： 运行结果。 **取值范围**： - success：成功。 - error：失败。 - aborted：终止。
+    * pipelineId  **参数解释**： 流水线id。 **取值范围**： 32位字符，由数字和字母组成。
+    * pipelineName  **参数解释**： 流水线名称。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 执行开始时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 运行状态。 **取值范围**： - waiting：等待中。 - running：运行中。 - verifying：待审核。 - suspending：挂起。 - completed：执行完成。
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * buildId  执行ID
-    * elapseTime  运行耗时
-    * endTime  执行结束时间
-    * outcome  运行结果
-    * pipelineId  流水线id
-    * pipelineName  流水线名称
-    * startTime  执行开始时间
-    * status  运行状态
+    * buildId  **参数解释**： 流水线执行ID。 **取值范围**： 不涉及。
+    * elapseTime  **参数解释**： 运行耗时，单位为毫秒。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 执行结束时间。 **取值范围**： 不涉及。
+    * outcome  **参数解释**： 运行结果。 **取值范围**： - success：成功。 - error：失败。 - aborted：终止。
+    * pipelineId  **参数解释**： 流水线id。 **取值范围**： 32位字符，由数字和字母组成。
+    * pipelineName  **参数解释**： 流水线名称。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 执行开始时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 运行状态。 **取值范围**： - waiting：等待中。 - running：运行中。 - verifying：待审核。 - suspending：挂起。 - completed：执行完成。
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * buildId  执行ID
-    * elapseTime  运行耗时
-    * endTime  执行结束时间
-    * outcome  运行结果
-    * pipelineId  流水线id
-    * pipelineName  流水线名称
-    * startTime  执行开始时间
-    * status  运行状态
+    * buildId  **参数解释**： 流水线执行ID。 **取值范围**： 不涉及。
+    * elapseTime  **参数解释**： 运行耗时，单位为毫秒。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 执行结束时间。 **取值范围**： 不涉及。
+    * outcome  **参数解释**： 运行结果。 **取值范围**： - success：成功。 - error：失败。 - aborted：终止。
+    * pipelineId  **参数解释**： 流水线id。 **取值范围**： 32位字符，由数字和字母组成。
+    * pipelineName  **参数解释**： 流水线名称。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 执行开始时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 运行状态。 **取值范围**： - waiting：等待中。 - running：运行中。 - verifying：待审核。 - suspending：挂起。 - completed：执行完成。
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * buildId  执行ID
-    * elapseTime  运行耗时
-    * endTime  执行结束时间
-    * outcome  运行结果
-    * pipelineId  流水线id
-    * pipelineName  流水线名称
-    * startTime  执行开始时间
-    * status  运行状态
+    * buildId  **参数解释**： 流水线执行ID。 **取值范围**： 不涉及。
+    * elapseTime  **参数解释**： 运行耗时，单位为毫秒。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 执行结束时间。 **取值范围**： 不涉及。
+    * outcome  **参数解释**： 运行结果。 **取值范围**： - success：成功。 - error：失败。 - aborted：终止。
+    * pipelineId  **参数解释**： 流水线id。 **取值范围**： 32位字符，由数字和字母组成。
+    * pipelineName  **参数解释**： 流水线名称。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 执行开始时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 运行状态。 **取值范围**： - waiting：等待中。 - running：运行中。 - verifying：待审核。 - suspending：挂起。 - completed：执行完成。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * buildId  执行ID
-    * elapseTime  运行耗时
-    * endTime  执行结束时间
-    * outcome  运行结果
-    * pipelineId  流水线id
-    * pipelineName  流水线名称
-    * startTime  执行开始时间
-    * status  运行状态
+    * buildId  **参数解释**： 流水线执行ID。 **取值范围**： 不涉及。
+    * elapseTime  **参数解释**： 运行耗时，单位为毫秒。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 执行结束时间。 **取值范围**： 不涉及。
+    * outcome  **参数解释**： 运行结果。 **取值范围**： - success：成功。 - error：失败。 - aborted：终止。
+    * pipelineId  **参数解释**： 流水线id。 **取值范围**： 32位字符，由数字和字母组成。
+    * pipelineName  **参数解释**： 流水线名称。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 执行开始时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 运行状态。 **取值范围**： - waiting：等待中。 - running：运行中。 - verifying：待审核。 - suspending：挂起。 - completed：执行完成。
     *
     * @var string[]
     */
@@ -272,7 +272,7 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets buildId
-    *  执行ID
+    *  **参数解释**： 流水线执行ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -284,7 +284,7 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
     /**
     * Sets buildId
     *
-    * @param string $buildId 执行ID
+    * @param string $buildId **参数解释**： 流水线执行ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -296,7 +296,7 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets elapseTime
-    *  运行耗时
+    *  **参数解释**： 运行耗时，单位为毫秒。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -308,7 +308,7 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
     /**
     * Sets elapseTime
     *
-    * @param string|null $elapseTime 运行耗时
+    * @param string|null $elapseTime **参数解释**： 运行耗时，单位为毫秒。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -320,7 +320,7 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  执行结束时间
+    *  **参数解释**： 执行结束时间。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -332,7 +332,7 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string $endTime 执行结束时间
+    * @param string $endTime **参数解释**： 执行结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -344,7 +344,7 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets outcome
-    *  运行结果
+    *  **参数解释**： 运行结果。 **取值范围**： - success：成功。 - error：失败。 - aborted：终止。
     *
     * @return string
     */
@@ -356,7 +356,7 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
     /**
     * Sets outcome
     *
-    * @param string $outcome 运行结果
+    * @param string $outcome **参数解释**： 运行结果。 **取值范围**： - success：成功。 - error：失败。 - aborted：终止。
     *
     * @return $this
     */
@@ -368,7 +368,7 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelineId
-    *  流水线id
+    *  **参数解释**： 流水线id。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string
     */
@@ -380,7 +380,7 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
     /**
     * Sets pipelineId
     *
-    * @param string $pipelineId 流水线id
+    * @param string $pipelineId **参数解释**： 流水线id。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -392,7 +392,7 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelineName
-    *  流水线名称
+    *  **参数解释**： 流水线名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -404,7 +404,7 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
     /**
     * Sets pipelineName
     *
-    * @param string $pipelineName 流水线名称
+    * @param string $pipelineName **参数解释**： 流水线名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -416,7 +416,7 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  执行开始时间
+    *  **参数解释**： 执行开始时间。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -428,7 +428,7 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string $startTime 执行开始时间
+    * @param string $startTime **参数解释**： 执行开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -440,7 +440,7 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  运行状态
+    *  **参数解释**： 运行状态。 **取值范围**： - waiting：等待中。 - running：运行中。 - verifying：待审核。 - suspending：挂起。 - completed：执行完成。
     *
     * @return string
     */
@@ -452,7 +452,7 @@ class PipelineBuildResult implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 运行状态
+    * @param string $status **参数解释**： 运行状态。 **取值范围**： - waiting：等待中。 - running：运行中。 - verifying：待审核。 - suspending：挂起。 - completed：执行完成。
     *
     * @return $this
     */

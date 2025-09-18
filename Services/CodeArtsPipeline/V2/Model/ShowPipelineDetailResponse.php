@@ -21,27 +21,28 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  流水线ID
-    * name  流水线名称
-    * description  描述
-    * manifestVersion  流水线版本
-    * region  局点
-    * domainId  所属租户ID
-    * projectId  所属项目ID
-    * componentId  所属微服务ID
-    * isPublish  是否为变更流水线
-    * creatorId  创建人ID
-    * creatorName  创建人名称
-    * updaterId  更新人ID
-    * createTime  更新人名称
-    * updateTime  更新时间
-    * isCollect  是否被当前用户收藏
-    * sources  流水线源
-    * variables  流水线自定义参数
-    * schedules  流水线定时任务设置
-    * triggers  流水线事件触发设置
-    * groupId  流水线所属分组ID
-    * definition  流水线定义
+    * id  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * name  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
+    * description  **参数解释**： 对流水线的补充描述。 **取值范围**： 不超过1024字符。
+    * manifestVersion  **参数解释**： 流水线版本，默认为3.0。 **取值范围**： 不涉及。
+    * region  **参数解释**： 当前环境所属局点。 **取值范围**： 不涉及。
+    * domainId  **参数解释**： 所属租户ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * componentId  **参数解释**： 所属微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **取值范围**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
+    * creatorId  **参数解释**： 流水线创建人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * creatorName  **参数解释**： 流水线创建人名称。 **取值范围**： 不涉及。
+    * updaterId  **参数解释**： 流水线上次更新人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * createTime  **参数解释**： 流水线创建时间。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 流水线更新时间。 **取值范围**： 不涉及。
+    * isCollect  **参数解释**： 流水线是否被当前用户收藏。 **取值范围**： - true：流水线已被收藏。 - false：流水线未被收藏。
+    * sources  **参数解释**： 流水线源列表。 **取值范围**： 不涉及。
+    * variables  **参数解释**： 流水线自定义参数。 **取值范围**： 不涉及。
+    * schedules  **参数解释**： 流水线定时任务设置。 **取值范围**： 不涉及。
+    * triggers  **参数解释**： 流水线事件触发设置。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 流水线所属分组ID。 **取值范围**： 不涉及。
+    * definition  **参数解释**： 流水线定义JSON。 **取值范围**： 不涉及。
+    * securityLevel  **参数解释**： 流水线涉密等级。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,32 +67,34 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
             'schedules' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineSchedule[]',
             'triggers' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineTrigger[]',
             'groupId' => 'string',
-            'definition' => 'string'
+            'definition' => 'string',
+            'securityLevel' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  流水线ID
-    * name  流水线名称
-    * description  描述
-    * manifestVersion  流水线版本
-    * region  局点
-    * domainId  所属租户ID
-    * projectId  所属项目ID
-    * componentId  所属微服务ID
-    * isPublish  是否为变更流水线
-    * creatorId  创建人ID
-    * creatorName  创建人名称
-    * updaterId  更新人ID
-    * createTime  更新人名称
-    * updateTime  更新时间
-    * isCollect  是否被当前用户收藏
-    * sources  流水线源
-    * variables  流水线自定义参数
-    * schedules  流水线定时任务设置
-    * triggers  流水线事件触发设置
-    * groupId  流水线所属分组ID
-    * definition  流水线定义
+    * id  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * name  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
+    * description  **参数解释**： 对流水线的补充描述。 **取值范围**： 不超过1024字符。
+    * manifestVersion  **参数解释**： 流水线版本，默认为3.0。 **取值范围**： 不涉及。
+    * region  **参数解释**： 当前环境所属局点。 **取值范围**： 不涉及。
+    * domainId  **参数解释**： 所属租户ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * componentId  **参数解释**： 所属微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **取值范围**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
+    * creatorId  **参数解释**： 流水线创建人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * creatorName  **参数解释**： 流水线创建人名称。 **取值范围**： 不涉及。
+    * updaterId  **参数解释**： 流水线上次更新人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * createTime  **参数解释**： 流水线创建时间。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 流水线更新时间。 **取值范围**： 不涉及。
+    * isCollect  **参数解释**： 流水线是否被当前用户收藏。 **取值范围**： - true：流水线已被收藏。 - false：流水线未被收藏。
+    * sources  **参数解释**： 流水线源列表。 **取值范围**： 不涉及。
+    * variables  **参数解释**： 流水线自定义参数。 **取值范围**： 不涉及。
+    * schedules  **参数解释**： 流水线定时任务设置。 **取值范围**： 不涉及。
+    * triggers  **参数解释**： 流水线事件触发设置。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 流水线所属分组ID。 **取值范围**： 不涉及。
+    * definition  **参数解释**： 流水线定义JSON。 **取值范围**： 不涉及。
+    * securityLevel  **参数解释**： 流水线涉密等级。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -116,7 +119,8 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
         'schedules' => null,
         'triggers' => null,
         'groupId' => null,
-        'definition' => null
+        'definition' => null,
+        'securityLevel' => null
     ];
 
     /**
@@ -142,27 +146,28 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  流水线ID
-    * name  流水线名称
-    * description  描述
-    * manifestVersion  流水线版本
-    * region  局点
-    * domainId  所属租户ID
-    * projectId  所属项目ID
-    * componentId  所属微服务ID
-    * isPublish  是否为变更流水线
-    * creatorId  创建人ID
-    * creatorName  创建人名称
-    * updaterId  更新人ID
-    * createTime  更新人名称
-    * updateTime  更新时间
-    * isCollect  是否被当前用户收藏
-    * sources  流水线源
-    * variables  流水线自定义参数
-    * schedules  流水线定时任务设置
-    * triggers  流水线事件触发设置
-    * groupId  流水线所属分组ID
-    * definition  流水线定义
+    * id  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * name  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
+    * description  **参数解释**： 对流水线的补充描述。 **取值范围**： 不超过1024字符。
+    * manifestVersion  **参数解释**： 流水线版本，默认为3.0。 **取值范围**： 不涉及。
+    * region  **参数解释**： 当前环境所属局点。 **取值范围**： 不涉及。
+    * domainId  **参数解释**： 所属租户ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * componentId  **参数解释**： 所属微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **取值范围**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
+    * creatorId  **参数解释**： 流水线创建人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * creatorName  **参数解释**： 流水线创建人名称。 **取值范围**： 不涉及。
+    * updaterId  **参数解释**： 流水线上次更新人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * createTime  **参数解释**： 流水线创建时间。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 流水线更新时间。 **取值范围**： 不涉及。
+    * isCollect  **参数解释**： 流水线是否被当前用户收藏。 **取值范围**： - true：流水线已被收藏。 - false：流水线未被收藏。
+    * sources  **参数解释**： 流水线源列表。 **取值范围**： 不涉及。
+    * variables  **参数解释**： 流水线自定义参数。 **取值范围**： 不涉及。
+    * schedules  **参数解释**： 流水线定时任务设置。 **取值范围**： 不涉及。
+    * triggers  **参数解释**： 流水线事件触发设置。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 流水线所属分组ID。 **取值范围**： 不涉及。
+    * definition  **参数解释**： 流水线定义JSON。 **取值范围**： 不涉及。
+    * securityLevel  **参数解释**： 流水线涉密等级。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -187,32 +192,34 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
             'schedules' => 'schedules',
             'triggers' => 'triggers',
             'groupId' => 'group_id',
-            'definition' => 'definition'
+            'definition' => 'definition',
+            'securityLevel' => 'security_level'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  流水线ID
-    * name  流水线名称
-    * description  描述
-    * manifestVersion  流水线版本
-    * region  局点
-    * domainId  所属租户ID
-    * projectId  所属项目ID
-    * componentId  所属微服务ID
-    * isPublish  是否为变更流水线
-    * creatorId  创建人ID
-    * creatorName  创建人名称
-    * updaterId  更新人ID
-    * createTime  更新人名称
-    * updateTime  更新时间
-    * isCollect  是否被当前用户收藏
-    * sources  流水线源
-    * variables  流水线自定义参数
-    * schedules  流水线定时任务设置
-    * triggers  流水线事件触发设置
-    * groupId  流水线所属分组ID
-    * definition  流水线定义
+    * id  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * name  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
+    * description  **参数解释**： 对流水线的补充描述。 **取值范围**： 不超过1024字符。
+    * manifestVersion  **参数解释**： 流水线版本，默认为3.0。 **取值范围**： 不涉及。
+    * region  **参数解释**： 当前环境所属局点。 **取值范围**： 不涉及。
+    * domainId  **参数解释**： 所属租户ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * componentId  **参数解释**： 所属微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **取值范围**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
+    * creatorId  **参数解释**： 流水线创建人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * creatorName  **参数解释**： 流水线创建人名称。 **取值范围**： 不涉及。
+    * updaterId  **参数解释**： 流水线上次更新人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * createTime  **参数解释**： 流水线创建时间。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 流水线更新时间。 **取值范围**： 不涉及。
+    * isCollect  **参数解释**： 流水线是否被当前用户收藏。 **取值范围**： - true：流水线已被收藏。 - false：流水线未被收藏。
+    * sources  **参数解释**： 流水线源列表。 **取值范围**： 不涉及。
+    * variables  **参数解释**： 流水线自定义参数。 **取值范围**： 不涉及。
+    * schedules  **参数解释**： 流水线定时任务设置。 **取值范围**： 不涉及。
+    * triggers  **参数解释**： 流水线事件触发设置。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 流水线所属分组ID。 **取值范围**： 不涉及。
+    * definition  **参数解释**： 流水线定义JSON。 **取值范围**： 不涉及。
+    * securityLevel  **参数解释**： 流水线涉密等级。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -237,32 +244,34 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
             'schedules' => 'setSchedules',
             'triggers' => 'setTriggers',
             'groupId' => 'setGroupId',
-            'definition' => 'setDefinition'
+            'definition' => 'setDefinition',
+            'securityLevel' => 'setSecurityLevel'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  流水线ID
-    * name  流水线名称
-    * description  描述
-    * manifestVersion  流水线版本
-    * region  局点
-    * domainId  所属租户ID
-    * projectId  所属项目ID
-    * componentId  所属微服务ID
-    * isPublish  是否为变更流水线
-    * creatorId  创建人ID
-    * creatorName  创建人名称
-    * updaterId  更新人ID
-    * createTime  更新人名称
-    * updateTime  更新时间
-    * isCollect  是否被当前用户收藏
-    * sources  流水线源
-    * variables  流水线自定义参数
-    * schedules  流水线定时任务设置
-    * triggers  流水线事件触发设置
-    * groupId  流水线所属分组ID
-    * definition  流水线定义
+    * id  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * name  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
+    * description  **参数解释**： 对流水线的补充描述。 **取值范围**： 不超过1024字符。
+    * manifestVersion  **参数解释**： 流水线版本，默认为3.0。 **取值范围**： 不涉及。
+    * region  **参数解释**： 当前环境所属局点。 **取值范围**： 不涉及。
+    * domainId  **参数解释**： 所属租户ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * componentId  **参数解释**： 所属微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **取值范围**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
+    * creatorId  **参数解释**： 流水线创建人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * creatorName  **参数解释**： 流水线创建人名称。 **取值范围**： 不涉及。
+    * updaterId  **参数解释**： 流水线上次更新人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * createTime  **参数解释**： 流水线创建时间。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 流水线更新时间。 **取值范围**： 不涉及。
+    * isCollect  **参数解释**： 流水线是否被当前用户收藏。 **取值范围**： - true：流水线已被收藏。 - false：流水线未被收藏。
+    * sources  **参数解释**： 流水线源列表。 **取值范围**： 不涉及。
+    * variables  **参数解释**： 流水线自定义参数。 **取值范围**： 不涉及。
+    * schedules  **参数解释**： 流水线定时任务设置。 **取值范围**： 不涉及。
+    * triggers  **参数解释**： 流水线事件触发设置。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 流水线所属分组ID。 **取值范围**： 不涉及。
+    * definition  **参数解释**： 流水线定义JSON。 **取值范围**： 不涉及。
+    * securityLevel  **参数解释**： 流水线涉密等级。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -287,7 +296,8 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
             'schedules' => 'getSchedules',
             'triggers' => 'getTriggers',
             'groupId' => 'getGroupId',
-            'definition' => 'getDefinition'
+            'definition' => 'getDefinition',
+            'securityLevel' => 'getSecurityLevel'
     ];
 
     /**
@@ -369,6 +379,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
         $this->container['triggers'] = isset($data['triggers']) ? $data['triggers'] : null;
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['definition'] = isset($data['definition']) ? $data['definition'] : null;
+        $this->container['securityLevel'] = isset($data['securityLevel']) ? $data['securityLevel'] : null;
     }
 
     /**
@@ -395,7 +406,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  流水线ID
+    *  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -407,7 +418,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 流水线ID
+    * @param string|null $id **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */
@@ -419,7 +430,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  流水线名称
+    *  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
     *
     * @return string|null
     */
@@ -431,7 +442,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 流水线名称
+    * @param string|null $name **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
     *
     * @return $this
     */
@@ -443,7 +454,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释**： 对流水线的补充描述。 **取值范围**： 不超过1024字符。
     *
     * @return string|null
     */
@@ -455,7 +466,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释**： 对流水线的补充描述。 **取值范围**： 不超过1024字符。
     *
     * @return $this
     */
@@ -467,7 +478,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets manifestVersion
-    *  流水线版本
+    *  **参数解释**： 流水线版本，默认为3.0。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -479,7 +490,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets manifestVersion
     *
-    * @param string|null $manifestVersion 流水线版本
+    * @param string|null $manifestVersion **参数解释**： 流水线版本，默认为3.0。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -491,7 +502,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  局点
+    *  **参数解释**： 当前环境所属局点。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -503,7 +514,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string|null $region 局点
+    * @param string|null $region **参数解释**： 当前环境所属局点。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -515,7 +526,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  所属租户ID
+    *  **参数解释**： 所属租户ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -527,7 +538,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 所属租户ID
+    * @param string|null $domainId **参数解释**： 所属租户ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */
@@ -539,7 +550,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  所属项目ID
+    *  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -551,7 +562,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 所属项目ID
+    * @param string|null $projectId **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */
@@ -563,7 +574,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets componentId
-    *  所属微服务ID
+    *  **参数解释**： 所属微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -575,7 +586,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets componentId
     *
-    * @param string|null $componentId 所属微服务ID
+    * @param string|null $componentId **参数解释**： 所属微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -587,7 +598,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPublish
-    *  是否为变更流水线
+    *  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
     *
     * @return bool|null
     */
@@ -599,7 +610,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isPublish
     *
-    * @param bool|null $isPublish 是否为变更流水线
+    * @param bool|null $isPublish **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
     *
     * @return $this
     */
@@ -611,7 +622,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets creatorId
-    *  创建人ID
+    *  **参数解释**： 流水线创建人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -623,7 +634,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets creatorId
     *
-    * @param string|null $creatorId 创建人ID
+    * @param string|null $creatorId **参数解释**： 流水线创建人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */
@@ -635,7 +646,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets creatorName
-    *  创建人名称
+    *  **参数解释**： 流水线创建人名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -647,7 +658,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets creatorName
     *
-    * @param string|null $creatorName 创建人名称
+    * @param string|null $creatorName **参数解释**： 流水线创建人名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -659,7 +670,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updaterId
-    *  更新人ID
+    *  **参数解释**： 流水线上次更新人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -671,7 +682,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updaterId
     *
-    * @param string|null $updaterId 更新人ID
+    * @param string|null $updaterId **参数解释**： 流水线上次更新人ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */
@@ -683,7 +694,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  更新人名称
+    *  **参数解释**： 流水线创建时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -695,7 +706,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 更新人名称
+    * @param int|null $createTime **参数解释**： 流水线创建时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -707,7 +718,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  **参数解释**： 流水线更新时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -719,7 +730,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 更新时间
+    * @param int|null $updateTime **参数解释**： 流水线更新时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -731,7 +742,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isCollect
-    *  是否被当前用户收藏
+    *  **参数解释**： 流水线是否被当前用户收藏。 **取值范围**： - true：流水线已被收藏。 - false：流水线未被收藏。
     *
     * @return bool|null
     */
@@ -743,7 +754,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isCollect
     *
-    * @param bool|null $isCollect 是否被当前用户收藏
+    * @param bool|null $isCollect **参数解释**： 流水线是否被当前用户收藏。 **取值范围**： - true：流水线已被收藏。 - false：流水线未被收藏。
     *
     * @return $this
     */
@@ -755,7 +766,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sources
-    *  流水线源
+    *  **参数解释**： 流水线源列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineSource[]|null
     */
@@ -767,7 +778,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sources
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineSource[]|null $sources 流水线源
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineSource[]|null $sources **参数解释**： 流水线源列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -779,7 +790,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets variables
-    *  流水线自定义参数
+    *  **参数解释**： 流水线自定义参数。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineVariable[]|null
     */
@@ -791,7 +802,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets variables
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineVariable[]|null $variables 流水线自定义参数
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineVariable[]|null $variables **参数解释**： 流水线自定义参数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -803,7 +814,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets schedules
-    *  流水线定时任务设置
+    *  **参数解释**： 流水线定时任务设置。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineSchedule[]|null
     */
@@ -815,7 +826,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets schedules
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineSchedule[]|null $schedules 流水线定时任务设置
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineSchedule[]|null $schedules **参数解释**： 流水线定时任务设置。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -827,7 +838,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets triggers
-    *  流水线事件触发设置
+    *  **参数解释**： 流水线事件触发设置。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineTrigger[]|null
     */
@@ -839,7 +850,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets triggers
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineTrigger[]|null $triggers 流水线事件触发设置
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineTrigger[]|null $triggers **参数解释**： 流水线事件触发设置。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -851,7 +862,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  流水线所属分组ID
+    *  **参数解释**： 流水线所属分组ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -863,7 +874,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 流水线所属分组ID
+    * @param string|null $groupId **参数解释**： 流水线所属分组ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -875,7 +886,7 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets definition
-    *  流水线定义
+    *  **参数解释**： 流水线定义JSON。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -887,13 +898,37 @@ class ShowPipelineDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets definition
     *
-    * @param string|null $definition 流水线定义
+    * @param string|null $definition **参数解释**： 流水线定义JSON。 **取值范围**： 不涉及。
     *
     * @return $this
     */
     public function setDefinition($definition)
     {
         $this->container['definition'] = $definition;
+        return $this;
+    }
+
+    /**
+    * Gets securityLevel
+    *  **参数解释**： 流水线涉密等级。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getSecurityLevel()
+    {
+        return $this->container['securityLevel'];
+    }
+
+    /**
+    * Sets securityLevel
+    *
+    * @param int|null $securityLevel **参数解释**： 流水线涉密等级。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setSecurityLevel($securityLevel)
+    {
+        $this->container['securityLevel'] = $securityLevel;
         return $this;
     }
 

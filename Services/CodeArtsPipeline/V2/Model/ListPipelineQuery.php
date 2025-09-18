@@ -20,31 +20,37 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectIds  项目ID列表
-    * componentId  组件ID
-    * name  流水线名称
-    * status  状态
-    * isPublish  是否为变更流水线
-    * creatorIds  创建人ID列表
-    * executorIds  执行人ID列表
-    * startTime  开始时间
-    * endTime  结束时间
-    * offset  起始偏移
-    * limit  查询数量
-    * sortKey  排序字段名称
-    * sortDir  排序规则
-    * groupPathId  流水线分组ID
-    * queryNew  是否只查询新版流水线
-    * byGroup  是否分组查询
+    * projectId  **参数解释**： CodeArts项目ID。 **约束限制**： 不涉及。 **取值范围**： 每个项目ID为32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * projectIds  **参数解释**： CodeArts项目ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个项目ID为32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * componentId  **参数解释**： 微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符串。 **默认取值**： 不涉及。
+    * name  **参数解释**： 流水线名称，支持模糊查询。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 流水线状态列表。 **约束限制**： 不涉及。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。 **默认取值**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：是变更流水线。 - false：非变更流水线。 **默认取值**： 不涉及。
+    * creatorId  **参数解释**： 创建人ID，用户的userId。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
+    * creatorIds  **参数解释**： 创建人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
+    * executorIds  **参数解释**： 执行人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 流水线开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endTime  **参数解释**： 流水线结束时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sortKey  **参数解释**： 排序字段名称。 **约束限制**： 不涉及。 **取值范围**： - name：流水线名。 - create_time：创建时间。 - update_time：更新时间。 **默认取值**： 不涉及。
+    * sortDir  **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
+    * groupPathId  **参数解释**： 流水线分组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * byGroup  **参数解释**： 是否分组查询。 **约束限制**： 不涉及。 **取值范围**： - true：是分组查询。 - false：不是分组查询。 **默认取值**： 不涉及。
+    * isBanned  **参数解释**： 是否包含被禁用的流水线。 **约束限制**： 不涉及。 **取值范围**： - true：包含被禁用的流水线。 - false：不包含被禁用的流水线。 **默认取值**： 不涉及。
+    * queryNew  **参数解释**： 是否只查询新版流水线。 **约束限制**： 不涉及。 **取值范围**： - true：只查询新版流水线。 - false：不只查询新版流水线。 **默认取值**： true。
+    * securityLevelList  **参数解释**： 流水线密集等级。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'projectIds' => 'string[]',
             'componentId' => 'string',
             'name' => 'string',
             'status' => 'string[]',
             'isPublish' => 'bool',
+            'creatorId' => 'string',
             'creatorIds' => 'string[]',
             'executorIds' => 'string[]',
             'startTime' => 'string',
@@ -54,37 +60,45 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
             'sortKey' => 'string',
             'sortDir' => 'string',
             'groupPathId' => 'string',
+            'byGroup' => 'bool',
+            'isBanned' => 'bool',
             'queryNew' => 'bool',
-            'byGroup' => 'bool'
+            'securityLevelList' => 'int[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectIds  项目ID列表
-    * componentId  组件ID
-    * name  流水线名称
-    * status  状态
-    * isPublish  是否为变更流水线
-    * creatorIds  创建人ID列表
-    * executorIds  执行人ID列表
-    * startTime  开始时间
-    * endTime  结束时间
-    * offset  起始偏移
-    * limit  查询数量
-    * sortKey  排序字段名称
-    * sortDir  排序规则
-    * groupPathId  流水线分组ID
-    * queryNew  是否只查询新版流水线
-    * byGroup  是否分组查询
+    * projectId  **参数解释**： CodeArts项目ID。 **约束限制**： 不涉及。 **取值范围**： 每个项目ID为32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * projectIds  **参数解释**： CodeArts项目ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个项目ID为32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * componentId  **参数解释**： 微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符串。 **默认取值**： 不涉及。
+    * name  **参数解释**： 流水线名称，支持模糊查询。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 流水线状态列表。 **约束限制**： 不涉及。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。 **默认取值**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：是变更流水线。 - false：非变更流水线。 **默认取值**： 不涉及。
+    * creatorId  **参数解释**： 创建人ID，用户的userId。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
+    * creatorIds  **参数解释**： 创建人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
+    * executorIds  **参数解释**： 执行人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 流水线开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endTime  **参数解释**： 流水线结束时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sortKey  **参数解释**： 排序字段名称。 **约束限制**： 不涉及。 **取值范围**： - name：流水线名。 - create_time：创建时间。 - update_time：更新时间。 **默认取值**： 不涉及。
+    * sortDir  **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
+    * groupPathId  **参数解释**： 流水线分组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * byGroup  **参数解释**： 是否分组查询。 **约束限制**： 不涉及。 **取值范围**： - true：是分组查询。 - false：不是分组查询。 **默认取值**： 不涉及。
+    * isBanned  **参数解释**： 是否包含被禁用的流水线。 **约束限制**： 不涉及。 **取值范围**： - true：包含被禁用的流水线。 - false：不包含被禁用的流水线。 **默认取值**： 不涉及。
+    * queryNew  **参数解释**： 是否只查询新版流水线。 **约束限制**： 不涉及。 **取值范围**： - true：只查询新版流水线。 - false：不只查询新版流水线。 **默认取值**： true。
+    * securityLevelList  **参数解释**： 流水线密集等级。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'projectIds' => null,
         'componentId' => null,
         'name' => null,
         'status' => null,
         'isPublish' => null,
+        'creatorId' => null,
         'creatorIds' => null,
         'executorIds' => null,
         'startTime' => null,
@@ -94,8 +108,10 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
         'sortKey' => null,
         'sortDir' => null,
         'groupPathId' => null,
+        'byGroup' => null,
+        'isBanned' => null,
         'queryNew' => null,
-        'byGroup' => null
+        'securityLevelList' => null
     ];
 
     /**
@@ -121,31 +137,37 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectIds  项目ID列表
-    * componentId  组件ID
-    * name  流水线名称
-    * status  状态
-    * isPublish  是否为变更流水线
-    * creatorIds  创建人ID列表
-    * executorIds  执行人ID列表
-    * startTime  开始时间
-    * endTime  结束时间
-    * offset  起始偏移
-    * limit  查询数量
-    * sortKey  排序字段名称
-    * sortDir  排序规则
-    * groupPathId  流水线分组ID
-    * queryNew  是否只查询新版流水线
-    * byGroup  是否分组查询
+    * projectId  **参数解释**： CodeArts项目ID。 **约束限制**： 不涉及。 **取值范围**： 每个项目ID为32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * projectIds  **参数解释**： CodeArts项目ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个项目ID为32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * componentId  **参数解释**： 微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符串。 **默认取值**： 不涉及。
+    * name  **参数解释**： 流水线名称，支持模糊查询。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 流水线状态列表。 **约束限制**： 不涉及。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。 **默认取值**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：是变更流水线。 - false：非变更流水线。 **默认取值**： 不涉及。
+    * creatorId  **参数解释**： 创建人ID，用户的userId。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
+    * creatorIds  **参数解释**： 创建人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
+    * executorIds  **参数解释**： 执行人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 流水线开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endTime  **参数解释**： 流水线结束时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sortKey  **参数解释**： 排序字段名称。 **约束限制**： 不涉及。 **取值范围**： - name：流水线名。 - create_time：创建时间。 - update_time：更新时间。 **默认取值**： 不涉及。
+    * sortDir  **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
+    * groupPathId  **参数解释**： 流水线分组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * byGroup  **参数解释**： 是否分组查询。 **约束限制**： 不涉及。 **取值范围**： - true：是分组查询。 - false：不是分组查询。 **默认取值**： 不涉及。
+    * isBanned  **参数解释**： 是否包含被禁用的流水线。 **约束限制**： 不涉及。 **取值范围**： - true：包含被禁用的流水线。 - false：不包含被禁用的流水线。 **默认取值**： 不涉及。
+    * queryNew  **参数解释**： 是否只查询新版流水线。 **约束限制**： 不涉及。 **取值范围**： - true：只查询新版流水线。 - false：不只查询新版流水线。 **默认取值**： true。
+    * securityLevelList  **参数解释**： 流水线密集等级。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'projectIds' => 'project_ids',
             'componentId' => 'component_id',
             'name' => 'name',
             'status' => 'status',
             'isPublish' => 'is_publish',
+            'creatorId' => 'creator_id',
             'creatorIds' => 'creator_ids',
             'executorIds' => 'executor_ids',
             'startTime' => 'start_time',
@@ -155,37 +177,45 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir',
             'groupPathId' => 'group_path_id',
+            'byGroup' => 'by_group',
+            'isBanned' => 'is_banned',
             'queryNew' => 'query_new',
-            'byGroup' => 'by_group'
+            'securityLevelList' => 'security_level_list'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectIds  项目ID列表
-    * componentId  组件ID
-    * name  流水线名称
-    * status  状态
-    * isPublish  是否为变更流水线
-    * creatorIds  创建人ID列表
-    * executorIds  执行人ID列表
-    * startTime  开始时间
-    * endTime  结束时间
-    * offset  起始偏移
-    * limit  查询数量
-    * sortKey  排序字段名称
-    * sortDir  排序规则
-    * groupPathId  流水线分组ID
-    * queryNew  是否只查询新版流水线
-    * byGroup  是否分组查询
+    * projectId  **参数解释**： CodeArts项目ID。 **约束限制**： 不涉及。 **取值范围**： 每个项目ID为32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * projectIds  **参数解释**： CodeArts项目ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个项目ID为32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * componentId  **参数解释**： 微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符串。 **默认取值**： 不涉及。
+    * name  **参数解释**： 流水线名称，支持模糊查询。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 流水线状态列表。 **约束限制**： 不涉及。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。 **默认取值**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：是变更流水线。 - false：非变更流水线。 **默认取值**： 不涉及。
+    * creatorId  **参数解释**： 创建人ID，用户的userId。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
+    * creatorIds  **参数解释**： 创建人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
+    * executorIds  **参数解释**： 执行人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 流水线开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endTime  **参数解释**： 流水线结束时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sortKey  **参数解释**： 排序字段名称。 **约束限制**： 不涉及。 **取值范围**： - name：流水线名。 - create_time：创建时间。 - update_time：更新时间。 **默认取值**： 不涉及。
+    * sortDir  **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
+    * groupPathId  **参数解释**： 流水线分组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * byGroup  **参数解释**： 是否分组查询。 **约束限制**： 不涉及。 **取值范围**： - true：是分组查询。 - false：不是分组查询。 **默认取值**： 不涉及。
+    * isBanned  **参数解释**： 是否包含被禁用的流水线。 **约束限制**： 不涉及。 **取值范围**： - true：包含被禁用的流水线。 - false：不包含被禁用的流水线。 **默认取值**： 不涉及。
+    * queryNew  **参数解释**： 是否只查询新版流水线。 **约束限制**： 不涉及。 **取值范围**： - true：只查询新版流水线。 - false：不只查询新版流水线。 **默认取值**： true。
+    * securityLevelList  **参数解释**： 流水线密集等级。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'projectIds' => 'setProjectIds',
             'componentId' => 'setComponentId',
             'name' => 'setName',
             'status' => 'setStatus',
             'isPublish' => 'setIsPublish',
+            'creatorId' => 'setCreatorId',
             'creatorIds' => 'setCreatorIds',
             'executorIds' => 'setExecutorIds',
             'startTime' => 'setStartTime',
@@ -195,37 +225,45 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir',
             'groupPathId' => 'setGroupPathId',
+            'byGroup' => 'setByGroup',
+            'isBanned' => 'setIsBanned',
             'queryNew' => 'setQueryNew',
-            'byGroup' => 'setByGroup'
+            'securityLevelList' => 'setSecurityLevelList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectIds  项目ID列表
-    * componentId  组件ID
-    * name  流水线名称
-    * status  状态
-    * isPublish  是否为变更流水线
-    * creatorIds  创建人ID列表
-    * executorIds  执行人ID列表
-    * startTime  开始时间
-    * endTime  结束时间
-    * offset  起始偏移
-    * limit  查询数量
-    * sortKey  排序字段名称
-    * sortDir  排序规则
-    * groupPathId  流水线分组ID
-    * queryNew  是否只查询新版流水线
-    * byGroup  是否分组查询
+    * projectId  **参数解释**： CodeArts项目ID。 **约束限制**： 不涉及。 **取值范围**： 每个项目ID为32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * projectIds  **参数解释**： CodeArts项目ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个项目ID为32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * componentId  **参数解释**： 微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符串。 **默认取值**： 不涉及。
+    * name  **参数解释**： 流水线名称，支持模糊查询。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 流水线状态列表。 **约束限制**： 不涉及。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。 **默认取值**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：是变更流水线。 - false：非变更流水线。 **默认取值**： 不涉及。
+    * creatorId  **参数解释**： 创建人ID，用户的userId。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
+    * creatorIds  **参数解释**： 创建人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
+    * executorIds  **参数解释**： 执行人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 流水线开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endTime  **参数解释**： 流水线结束时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sortKey  **参数解释**： 排序字段名称。 **约束限制**： 不涉及。 **取值范围**： - name：流水线名。 - create_time：创建时间。 - update_time：更新时间。 **默认取值**： 不涉及。
+    * sortDir  **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
+    * groupPathId  **参数解释**： 流水线分组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * byGroup  **参数解释**： 是否分组查询。 **约束限制**： 不涉及。 **取值范围**： - true：是分组查询。 - false：不是分组查询。 **默认取值**： 不涉及。
+    * isBanned  **参数解释**： 是否包含被禁用的流水线。 **约束限制**： 不涉及。 **取值范围**： - true：包含被禁用的流水线。 - false：不包含被禁用的流水线。 **默认取值**： 不涉及。
+    * queryNew  **参数解释**： 是否只查询新版流水线。 **约束限制**： 不涉及。 **取值范围**： - true：只查询新版流水线。 - false：不只查询新版流水线。 **默认取值**： true。
+    * securityLevelList  **参数解释**： 流水线密集等级。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'projectIds' => 'getProjectIds',
             'componentId' => 'getComponentId',
             'name' => 'getName',
             'status' => 'getStatus',
             'isPublish' => 'getIsPublish',
+            'creatorId' => 'getCreatorId',
             'creatorIds' => 'getCreatorIds',
             'executorIds' => 'getExecutorIds',
             'startTime' => 'getStartTime',
@@ -235,8 +273,10 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir',
             'groupPathId' => 'getGroupPathId',
+            'byGroup' => 'getByGroup',
+            'isBanned' => 'getIsBanned',
             'queryNew' => 'getQueryNew',
-            'byGroup' => 'getByGroup'
+            'securityLevelList' => 'getSecurityLevelList'
     ];
 
     /**
@@ -297,11 +337,13 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['projectIds'] = isset($data['projectIds']) ? $data['projectIds'] : null;
         $this->container['componentId'] = isset($data['componentId']) ? $data['componentId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['isPublish'] = isset($data['isPublish']) ? $data['isPublish'] : null;
+        $this->container['creatorId'] = isset($data['creatorId']) ? $data['creatorId'] : null;
         $this->container['creatorIds'] = isset($data['creatorIds']) ? $data['creatorIds'] : null;
         $this->container['executorIds'] = isset($data['executorIds']) ? $data['executorIds'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
@@ -311,8 +353,10 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['groupPathId'] = isset($data['groupPathId']) ? $data['groupPathId'] : null;
-        $this->container['queryNew'] = isset($data['queryNew']) ? $data['queryNew'] : null;
         $this->container['byGroup'] = isset($data['byGroup']) ? $data['byGroup'] : null;
+        $this->container['isBanned'] = isset($data['isBanned']) ? $data['isBanned'] : null;
+        $this->container['queryNew'] = isset($data['queryNew']) ? $data['queryNew'] : null;
+        $this->container['securityLevelList'] = isset($data['securityLevelList']) ? $data['securityLevelList'] : null;
     }
 
     /**
@@ -338,8 +382,32 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets projectId
+    *  **参数解释**： CodeArts项目ID。 **约束限制**： 不涉及。 **取值范围**： 每个项目ID为32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string|null $projectId **参数解释**： CodeArts项目ID。 **约束限制**： 不涉及。 **取值范围**： 每个项目ID为32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
     * Gets projectIds
-    *  项目ID列表
+    *  **参数解释**： CodeArts项目ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个项目ID为32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -351,7 +419,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     /**
     * Sets projectIds
     *
-    * @param string[]|null $projectIds 项目ID列表
+    * @param string[]|null $projectIds **参数解释**： CodeArts项目ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个项目ID为32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -363,7 +431,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets componentId
-    *  组件ID
+    *  **参数解释**： 微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符串。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -375,7 +443,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     /**
     * Sets componentId
     *
-    * @param string|null $componentId 组件ID
+    * @param string|null $componentId **参数解释**： 微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符串。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -387,7 +455,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  流水线名称
+    *  **参数解释**： 流水线名称，支持模糊查询。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -399,7 +467,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 流水线名称
+    * @param string|null $name **参数解释**： 流水线名称，支持模糊查询。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -411,7 +479,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  **参数解释**： 流水线状态列表。 **约束限制**： 不涉及。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -423,7 +491,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 状态
+    * @param string[]|null $status **参数解释**： 流水线状态列表。 **约束限制**： 不涉及。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -435,7 +503,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPublish
-    *  是否为变更流水线
+    *  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：是变更流水线。 - false：非变更流水线。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -447,7 +515,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     /**
     * Sets isPublish
     *
-    * @param bool|null $isPublish 是否为变更流水线
+    * @param bool|null $isPublish **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：是变更流水线。 - false：非变更流水线。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -458,8 +526,32 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets creatorId
+    *  **参数解释**： 创建人ID，用户的userId。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getCreatorId()
+    {
+        return $this->container['creatorId'];
+    }
+
+    /**
+    * Sets creatorId
+    *
+    * @param string|null $creatorId **参数解释**： 创建人ID，用户的userId。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setCreatorId($creatorId)
+    {
+        $this->container['creatorId'] = $creatorId;
+        return $this;
+    }
+
+    /**
     * Gets creatorIds
-    *  创建人ID列表
+    *  **参数解释**： 创建人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -471,7 +563,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     /**
     * Sets creatorIds
     *
-    * @param string[]|null $creatorIds 创建人ID列表
+    * @param string[]|null $creatorIds **参数解释**： 创建人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -483,7 +575,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets executorIds
-    *  执行人ID列表
+    *  **参数解释**： 执行人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -495,7 +587,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     /**
     * Sets executorIds
     *
-    * @param string[]|null $executorIds 执行人ID列表
+    * @param string[]|null $executorIds **参数解释**： 执行人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -507,7 +599,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  开始时间
+    *  **参数解释**： 流水线开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -519,7 +611,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 开始时间
+    * @param string|null $startTime **参数解释**： 流水线开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -531,7 +623,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间
+    *  **参数解释**： 流水线结束时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -543,7 +635,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 结束时间
+    * @param string|null $endTime **参数解释**： 流水线结束时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -555,7 +647,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  起始偏移
+    *  **参数解释**： 起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -567,7 +659,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 起始偏移
+    * @param int|null $offset **参数解释**： 起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -579,7 +671,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询数量
+    *  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -591,7 +683,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询数量
+    * @param int|null $limit **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -603,7 +695,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  排序字段名称
+    *  **参数解释**： 排序字段名称。 **约束限制**： 不涉及。 **取值范围**： - name：流水线名。 - create_time：创建时间。 - update_time：更新时间。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -615,7 +707,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 排序字段名称
+    * @param string|null $sortKey **参数解释**： 排序字段名称。 **约束限制**： 不涉及。 **取值范围**： - name：流水线名。 - create_time：创建时间。 - update_time：更新时间。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -627,7 +719,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortDir
-    *  排序规则
+    *  **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -639,7 +731,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir 排序规则
+    * @param string|null $sortDir **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -651,7 +743,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupPathId
-    *  流水线分组ID
+    *  **参数解释**： 流水线分组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -663,7 +755,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     /**
     * Sets groupPathId
     *
-    * @param string|null $groupPathId 流水线分组ID
+    * @param string|null $groupPathId **参数解释**： 流水线分组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -674,32 +766,8 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets queryNew
-    *  是否只查询新版流水线
-    *
-    * @return bool|null
-    */
-    public function getQueryNew()
-    {
-        return $this->container['queryNew'];
-    }
-
-    /**
-    * Sets queryNew
-    *
-    * @param bool|null $queryNew 是否只查询新版流水线
-    *
-    * @return $this
-    */
-    public function setQueryNew($queryNew)
-    {
-        $this->container['queryNew'] = $queryNew;
-        return $this;
-    }
-
-    /**
     * Gets byGroup
-    *  是否分组查询
+    *  **参数解释**： 是否分组查询。 **约束限制**： 不涉及。 **取值范围**： - true：是分组查询。 - false：不是分组查询。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -711,13 +779,85 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     /**
     * Sets byGroup
     *
-    * @param bool|null $byGroup 是否分组查询
+    * @param bool|null $byGroup **参数解释**： 是否分组查询。 **约束限制**： 不涉及。 **取值范围**： - true：是分组查询。 - false：不是分组查询。 **默认取值**： 不涉及。
     *
     * @return $this
     */
     public function setByGroup($byGroup)
     {
         $this->container['byGroup'] = $byGroup;
+        return $this;
+    }
+
+    /**
+    * Gets isBanned
+    *  **参数解释**： 是否包含被禁用的流水线。 **约束限制**： 不涉及。 **取值范围**： - true：包含被禁用的流水线。 - false：不包含被禁用的流水线。 **默认取值**： 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getIsBanned()
+    {
+        return $this->container['isBanned'];
+    }
+
+    /**
+    * Sets isBanned
+    *
+    * @param bool|null $isBanned **参数解释**： 是否包含被禁用的流水线。 **约束限制**： 不涉及。 **取值范围**： - true：包含被禁用的流水线。 - false：不包含被禁用的流水线。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setIsBanned($isBanned)
+    {
+        $this->container['isBanned'] = $isBanned;
+        return $this;
+    }
+
+    /**
+    * Gets queryNew
+    *  **参数解释**： 是否只查询新版流水线。 **约束限制**： 不涉及。 **取值范围**： - true：只查询新版流水线。 - false：不只查询新版流水线。 **默认取值**： true。
+    *
+    * @return bool|null
+    */
+    public function getQueryNew()
+    {
+        return $this->container['queryNew'];
+    }
+
+    /**
+    * Sets queryNew
+    *
+    * @param bool|null $queryNew **参数解释**： 是否只查询新版流水线。 **约束限制**： 不涉及。 **取值范围**： - true：只查询新版流水线。 - false：不只查询新版流水线。 **默认取值**： true。
+    *
+    * @return $this
+    */
+    public function setQueryNew($queryNew)
+    {
+        $this->container['queryNew'] = $queryNew;
+        return $this;
+    }
+
+    /**
+    * Gets securityLevelList
+    *  **参数解释**： 流水线密集等级。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
+    *
+    * @return int[]|null
+    */
+    public function getSecurityLevelList()
+    {
+        return $this->container['securityLevelList'];
+    }
+
+    /**
+    * Sets securityLevelList
+    *
+    * @param int[]|null $securityLevelList **参数解释**： 流水线密集等级。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setSecurityLevelList($securityLevelList)
+    {
+        $this->container['securityLevelList'] = $securityLevelList;
         return $this;
     }
 

@@ -20,19 +20,20 @@ class PipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  流水线名称
-    * description  流水线描述
-    * isPublish  是否为发布流水线
-    * sources  流水线源
-    * variables  流水线自定义全局变量
-    * schedules  流水线定时执行配置
-    * triggers  流水线代码事件触发配置
-    * manifestVersion  流水线结构定义版本，新版默认为3.0
-    * definition  流水线结构定义
-    * projectName  项目名称
-    * groupId  流水线组ID
-    * id  若为复制场景，则为原流水线ID
+    * name  **参数解释**： 流水线名称。 **约束限制**： 不涉及。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：变更流水线。 - false：非变更流水线。 **默认取值**： 不涉及。
+    * sources  **参数解释**： 流水线源信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 流水线自定义全局变量列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * schedules  **参数解释**： 流水线定时执行配置列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * triggers  **参数解释**： 流水线代码事件触发配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * manifestVersion  **参数解释**： 流水线结构定义版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 3.0。
+    * definition  **参数解释**： 流水线结构定义JSON。该字段结构复杂，建议使用页面编辑流水线后，从[查询流水线详情](ShowPipelineDetail.xml)接口获取。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectName  **参数解释**： 项目名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupId  **参数解释**： 流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * id  **参数解释**： 复制场景使用，为流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
     * concurrencyControl  concurrencyControl
+    * securityLevel  **参数解释**： 流水线涉密等级。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 正整数（1为最低密级）。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -49,24 +50,26 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'projectName' => 'string',
             'groupId' => 'string',
             'id' => 'string',
-            'concurrencyControl' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineConcurrencyMgmt'
+            'concurrencyControl' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineConcurrencyMgmt',
+            'securityLevel' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  流水线名称
-    * description  流水线描述
-    * isPublish  是否为发布流水线
-    * sources  流水线源
-    * variables  流水线自定义全局变量
-    * schedules  流水线定时执行配置
-    * triggers  流水线代码事件触发配置
-    * manifestVersion  流水线结构定义版本，新版默认为3.0
-    * definition  流水线结构定义
-    * projectName  项目名称
-    * groupId  流水线组ID
-    * id  若为复制场景，则为原流水线ID
+    * name  **参数解释**： 流水线名称。 **约束限制**： 不涉及。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：变更流水线。 - false：非变更流水线。 **默认取值**： 不涉及。
+    * sources  **参数解释**： 流水线源信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 流水线自定义全局变量列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * schedules  **参数解释**： 流水线定时执行配置列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * triggers  **参数解释**： 流水线代码事件触发配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * manifestVersion  **参数解释**： 流水线结构定义版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 3.0。
+    * definition  **参数解释**： 流水线结构定义JSON。该字段结构复杂，建议使用页面编辑流水线后，从[查询流水线详情](ShowPipelineDetail.xml)接口获取。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectName  **参数解释**： 项目名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupId  **参数解释**： 流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * id  **参数解释**： 复制场景使用，为流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
     * concurrencyControl  concurrencyControl
+    * securityLevel  **参数解释**： 流水线涉密等级。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 正整数（1为最低密级）。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class PipelineDTO implements ModelInterface, ArrayAccess
         'projectName' => null,
         'groupId' => null,
         'id' => null,
-        'concurrencyControl' => null
+        'concurrencyControl' => null,
+        'securityLevel' => null
     ];
 
     /**
@@ -109,19 +113,20 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  流水线名称
-    * description  流水线描述
-    * isPublish  是否为发布流水线
-    * sources  流水线源
-    * variables  流水线自定义全局变量
-    * schedules  流水线定时执行配置
-    * triggers  流水线代码事件触发配置
-    * manifestVersion  流水线结构定义版本，新版默认为3.0
-    * definition  流水线结构定义
-    * projectName  项目名称
-    * groupId  流水线组ID
-    * id  若为复制场景，则为原流水线ID
+    * name  **参数解释**： 流水线名称。 **约束限制**： 不涉及。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：变更流水线。 - false：非变更流水线。 **默认取值**： 不涉及。
+    * sources  **参数解释**： 流水线源信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 流水线自定义全局变量列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * schedules  **参数解释**： 流水线定时执行配置列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * triggers  **参数解释**： 流水线代码事件触发配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * manifestVersion  **参数解释**： 流水线结构定义版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 3.0。
+    * definition  **参数解释**： 流水线结构定义JSON。该字段结构复杂，建议使用页面编辑流水线后，从[查询流水线详情](ShowPipelineDetail.xml)接口获取。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectName  **参数解释**： 项目名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupId  **参数解释**： 流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * id  **参数解释**： 复制场景使用，为流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
     * concurrencyControl  concurrencyControl
+    * securityLevel  **参数解释**： 流水线涉密等级。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 正整数（1为最低密级）。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -138,24 +143,26 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'projectName' => 'project_name',
             'groupId' => 'group_id',
             'id' => 'id',
-            'concurrencyControl' => 'concurrency_control'
+            'concurrencyControl' => 'concurrency_control',
+            'securityLevel' => 'security_level'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  流水线名称
-    * description  流水线描述
-    * isPublish  是否为发布流水线
-    * sources  流水线源
-    * variables  流水线自定义全局变量
-    * schedules  流水线定时执行配置
-    * triggers  流水线代码事件触发配置
-    * manifestVersion  流水线结构定义版本，新版默认为3.0
-    * definition  流水线结构定义
-    * projectName  项目名称
-    * groupId  流水线组ID
-    * id  若为复制场景，则为原流水线ID
+    * name  **参数解释**： 流水线名称。 **约束限制**： 不涉及。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：变更流水线。 - false：非变更流水线。 **默认取值**： 不涉及。
+    * sources  **参数解释**： 流水线源信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 流水线自定义全局变量列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * schedules  **参数解释**： 流水线定时执行配置列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * triggers  **参数解释**： 流水线代码事件触发配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * manifestVersion  **参数解释**： 流水线结构定义版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 3.0。
+    * definition  **参数解释**： 流水线结构定义JSON。该字段结构复杂，建议使用页面编辑流水线后，从[查询流水线详情](ShowPipelineDetail.xml)接口获取。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectName  **参数解释**： 项目名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupId  **参数解释**： 流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * id  **参数解释**： 复制场景使用，为流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
     * concurrencyControl  concurrencyControl
+    * securityLevel  **参数解释**： 流水线涉密等级。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 正整数（1为最低密级）。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -172,24 +179,26 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'projectName' => 'setProjectName',
             'groupId' => 'setGroupId',
             'id' => 'setId',
-            'concurrencyControl' => 'setConcurrencyControl'
+            'concurrencyControl' => 'setConcurrencyControl',
+            'securityLevel' => 'setSecurityLevel'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  流水线名称
-    * description  流水线描述
-    * isPublish  是否为发布流水线
-    * sources  流水线源
-    * variables  流水线自定义全局变量
-    * schedules  流水线定时执行配置
-    * triggers  流水线代码事件触发配置
-    * manifestVersion  流水线结构定义版本，新版默认为3.0
-    * definition  流水线结构定义
-    * projectName  项目名称
-    * groupId  流水线组ID
-    * id  若为复制场景，则为原流水线ID
+    * name  **参数解释**： 流水线名称。 **约束限制**： 不涉及。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：变更流水线。 - false：非变更流水线。 **默认取值**： 不涉及。
+    * sources  **参数解释**： 流水线源信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 流水线自定义全局变量列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * schedules  **参数解释**： 流水线定时执行配置列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * triggers  **参数解释**： 流水线代码事件触发配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * manifestVersion  **参数解释**： 流水线结构定义版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 3.0。
+    * definition  **参数解释**： 流水线结构定义JSON。该字段结构复杂，建议使用页面编辑流水线后，从[查询流水线详情](ShowPipelineDetail.xml)接口获取。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectName  **参数解释**： 项目名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupId  **参数解释**： 流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * id  **参数解释**： 复制场景使用，为流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
     * concurrencyControl  concurrencyControl
+    * securityLevel  **参数解释**： 流水线涉密等级。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 正整数（1为最低密级）。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'projectName' => 'getProjectName',
             'groupId' => 'getGroupId',
             'id' => 'getId',
-            'concurrencyControl' => 'getConcurrencyControl'
+            'concurrencyControl' => 'getConcurrencyControl',
+            'securityLevel' => 'getSecurityLevel'
     ];
 
     /**
@@ -280,6 +290,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['concurrencyControl'] = isset($data['concurrencyControl']) ? $data['concurrencyControl'] : null;
+        $this->container['securityLevel'] = isset($data['securityLevel']) ? $data['securityLevel'] : null;
     }
 
     /**
@@ -315,7 +326,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  流水线名称
+    *  **参数解释**： 流水线名称。 **约束限制**： 不涉及。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -327,7 +338,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 流水线名称
+    * @param string $name **参数解释**： 流水线名称。 **约束限制**： 不涉及。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -339,7 +350,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  流水线描述
+    *  **参数解释**： 流水线描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -351,7 +362,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 流水线描述
+    * @param string|null $description **参数解释**： 流水线描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -363,7 +374,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPublish
-    *  是否为发布流水线
+    *  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：变更流水线。 - false：非变更流水线。 **默认取值**： 不涉及。
     *
     * @return bool
     */
@@ -375,7 +386,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets isPublish
     *
-    * @param bool $isPublish 是否为发布流水线
+    * @param bool $isPublish **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：变更流水线。 - false：非变更流水线。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -387,7 +398,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets sources
-    *  流水线源
+    *  **参数解释**： 流水线源信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CodeSource[]|null
     */
@@ -399,7 +410,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets sources
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CodeSource[]|null $sources 流水线源
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CodeSource[]|null $sources **参数解释**： 流水线源信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -411,7 +422,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets variables
-    *  流水线自定义全局变量
+    *  **参数解释**： 流水线自定义全局变量列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CustomVariable[]|null
     */
@@ -423,7 +434,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets variables
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CustomVariable[]|null $variables 流水线自定义全局变量
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CustomVariable[]|null $variables **参数解释**： 流水线自定义全局变量列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -435,7 +446,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets schedules
-    *  流水线定时执行配置
+    *  **参数解释**： 流水线定时执行配置列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineSchedule[]|null
     */
@@ -447,7 +458,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets schedules
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineSchedule[]|null $schedules 流水线定时执行配置
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineSchedule[]|null $schedules **参数解释**： 流水线定时执行配置列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -459,7 +470,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets triggers
-    *  流水线代码事件触发配置
+    *  **参数解释**： 流水线代码事件触发配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineTrigger[]|null
     */
@@ -471,7 +482,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets triggers
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineTrigger[]|null $triggers 流水线代码事件触发配置
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineTrigger[]|null $triggers **参数解释**： 流水线代码事件触发配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -483,7 +494,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets manifestVersion
-    *  流水线结构定义版本，新版默认为3.0
+    *  **参数解释**： 流水线结构定义版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 3.0。
     *
     * @return string|null
     */
@@ -495,7 +506,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets manifestVersion
     *
-    * @param string|null $manifestVersion 流水线结构定义版本，新版默认为3.0
+    * @param string|null $manifestVersion **参数解释**： 流水线结构定义版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 3.0。
     *
     * @return $this
     */
@@ -507,7 +518,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets definition
-    *  流水线结构定义
+    *  **参数解释**： 流水线结构定义JSON。该字段结构复杂，建议使用页面编辑流水线后，从[查询流水线详情](ShowPipelineDetail.xml)接口获取。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -519,7 +530,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets definition
     *
-    * @param string $definition 流水线结构定义
+    * @param string $definition **参数解释**： 流水线结构定义JSON。该字段结构复杂，建议使用页面编辑流水线后，从[查询流水线详情](ShowPipelineDetail.xml)接口获取。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -531,7 +542,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectName
-    *  项目名称
+    *  **参数解释**： 项目名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -543,7 +554,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets projectName
     *
-    * @param string|null $projectName 项目名称
+    * @param string|null $projectName **参数解释**： 项目名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -555,7 +566,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  流水线组ID
+    *  **参数解释**： 流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -567,7 +578,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 流水线组ID
+    * @param string|null $groupId **参数解释**： 流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -579,7 +590,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  若为复制场景，则为原流水线ID
+    *  **参数解释**： 复制场景使用，为流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -591,7 +602,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 若为复制场景，则为原流水线ID
+    * @param string|null $id **参数解释**： 复制场景使用，为流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -622,6 +633,30 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     public function setConcurrencyControl($concurrencyControl)
     {
         $this->container['concurrencyControl'] = $concurrencyControl;
+        return $this;
+    }
+
+    /**
+    * Gets securityLevel
+    *  **参数解释**： 流水线涉密等级。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 正整数（1为最低密级）。 **默认取值**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getSecurityLevel()
+    {
+        return $this->container['securityLevel'];
+    }
+
+    /**
+    * Sets securityLevel
+    *
+    * @param int|null $securityLevel **参数解释**： 流水线涉密等级。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 正整数（1为最低密级）。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setSecurityLevel($securityLevel)
+    {
+        $this->container['securityLevel'] = $securityLevel;
         return $this;
     }
 

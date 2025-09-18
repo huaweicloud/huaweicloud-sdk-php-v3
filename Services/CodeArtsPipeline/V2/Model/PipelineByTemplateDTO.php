@@ -20,11 +20,13 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  流水线名称
-    * description  流水线描述
-    * isPublish  是否为变更流水线
-    * sources  流水线源
-    * variables  流水线参数
+    * name  **参数解释**： 流水线名称。 **约束限制**： 不涉及。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。 **默认取值**： 不涉及。
+    * sources  **参数解释**： 流水线源列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityLevel  **参数解释**： 流水线涉密等级，非涉密场景不涉及，涉密场景必填。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * confidentialityCode  **参数解释**： 流水线涉密等级编码，非涉密场景不涉及。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 流水线参数列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -33,16 +35,20 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
             'description' => 'string',
             'isPublish' => 'bool',
             'sources' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CodeSource[]',
+            'securityLevel' => 'int',
+            'confidentialityCode' => 'string',
             'variables' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineByTemplateDTOVariables[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  流水线名称
-    * description  流水线描述
-    * isPublish  是否为变更流水线
-    * sources  流水线源
-    * variables  流水线参数
+    * name  **参数解释**： 流水线名称。 **约束限制**： 不涉及。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。 **默认取值**： 不涉及。
+    * sources  **参数解释**： 流水线源列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityLevel  **参数解释**： 流水线涉密等级，非涉密场景不涉及，涉密场景必填。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * confidentialityCode  **参数解释**： 流水线涉密等级编码，非涉密场景不涉及。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 流水线参数列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -51,6 +57,8 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
         'description' => null,
         'isPublish' => null,
         'sources' => null,
+        'securityLevel' => null,
+        'confidentialityCode' => null,
         'variables' => null
     ];
 
@@ -77,11 +85,13 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  流水线名称
-    * description  流水线描述
-    * isPublish  是否为变更流水线
-    * sources  流水线源
-    * variables  流水线参数
+    * name  **参数解释**： 流水线名称。 **约束限制**： 不涉及。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。 **默认取值**： 不涉及。
+    * sources  **参数解释**： 流水线源列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityLevel  **参数解释**： 流水线涉密等级，非涉密场景不涉及，涉密场景必填。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * confidentialityCode  **参数解释**： 流水线涉密等级编码，非涉密场景不涉及。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 流水线参数列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,16 +100,20 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
             'description' => 'description',
             'isPublish' => 'is_publish',
             'sources' => 'sources',
+            'securityLevel' => 'security_level',
+            'confidentialityCode' => 'confidentiality_code',
             'variables' => 'variables'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  流水线名称
-    * description  流水线描述
-    * isPublish  是否为变更流水线
-    * sources  流水线源
-    * variables  流水线参数
+    * name  **参数解释**： 流水线名称。 **约束限制**： 不涉及。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。 **默认取值**： 不涉及。
+    * sources  **参数解释**： 流水线源列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityLevel  **参数解释**： 流水线涉密等级，非涉密场景不涉及，涉密场景必填。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * confidentialityCode  **参数解释**： 流水线涉密等级编码，非涉密场景不涉及。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 流水线参数列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -108,16 +122,20 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'isPublish' => 'setIsPublish',
             'sources' => 'setSources',
+            'securityLevel' => 'setSecurityLevel',
+            'confidentialityCode' => 'setConfidentialityCode',
             'variables' => 'setVariables'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  流水线名称
-    * description  流水线描述
-    * isPublish  是否为变更流水线
-    * sources  流水线源
-    * variables  流水线参数
+    * name  **参数解释**： 流水线名称。 **约束限制**： 不涉及。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。 **默认取值**： 不涉及。
+    * description  **参数解释**： 流水线描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。 **默认取值**： 不涉及。
+    * sources  **参数解释**： 流水线源列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityLevel  **参数解释**： 流水线涉密等级，非涉密场景不涉及，涉密场景必填。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * confidentialityCode  **参数解释**： 流水线涉密等级编码，非涉密场景不涉及。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 流水线参数列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -126,6 +144,8 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'isPublish' => 'getIsPublish',
             'sources' => 'getSources',
+            'securityLevel' => 'getSecurityLevel',
+            'confidentialityCode' => 'getConfidentialityCode',
             'variables' => 'getVariables'
     ];
 
@@ -191,6 +211,8 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['isPublish'] = isset($data['isPublish']) ? $data['isPublish'] : null;
         $this->container['sources'] = isset($data['sources']) ? $data['sources'] : null;
+        $this->container['securityLevel'] = isset($data['securityLevel']) ? $data['securityLevel'] : null;
+        $this->container['confidentialityCode'] = isset($data['confidentialityCode']) ? $data['confidentialityCode'] : null;
         $this->container['variables'] = isset($data['variables']) ? $data['variables'] : null;
     }
 
@@ -227,7 +249,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  流水线名称
+    *  **参数解释**： 流水线名称。 **约束限制**： 不涉及。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -239,7 +261,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 流水线名称
+    * @param string $name **参数解释**： 流水线名称。 **约束限制**： 不涉及。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -251,7 +273,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  流水线描述
+    *  **参数解释**： 流水线描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -263,7 +285,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 流水线描述
+    * @param string|null $description **参数解释**： 流水线描述。 **约束限制**： 不涉及。 **取值范围**： 不超过1024字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -275,7 +297,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPublish
-    *  是否为变更流水线
+    *  **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。 **默认取值**： 不涉及。
     *
     * @return bool
     */
@@ -287,7 +309,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets isPublish
     *
-    * @param bool $isPublish 是否为变更流水线
+    * @param bool $isPublish **参数解释**： 是否为变更流水线。 **约束限制**： 不涉及。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -299,7 +321,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets sources
-    *  流水线源
+    *  **参数解释**： 流水线源列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CodeSource[]
     */
@@ -311,7 +333,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets sources
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CodeSource[] $sources 流水线源
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CodeSource[] $sources **参数解释**： 流水线源列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -322,8 +344,56 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets securityLevel
+    *  **参数解释**： 流水线涉密等级，非涉密场景不涉及，涉密场景必填。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getSecurityLevel()
+    {
+        return $this->container['securityLevel'];
+    }
+
+    /**
+    * Sets securityLevel
+    *
+    * @param int|null $securityLevel **参数解释**： 流水线涉密等级，非涉密场景不涉及，涉密场景必填。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setSecurityLevel($securityLevel)
+    {
+        $this->container['securityLevel'] = $securityLevel;
+        return $this;
+    }
+
+    /**
+    * Gets confidentialityCode
+    *  **参数解释**： 流水线涉密等级编码，非涉密场景不涉及。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getConfidentialityCode()
+    {
+        return $this->container['confidentialityCode'];
+    }
+
+    /**
+    * Sets confidentialityCode
+    *
+    * @param string|null $confidentialityCode **参数解释**： 流水线涉密等级编码，非涉密场景不涉及。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setConfidentialityCode($confidentialityCode)
+    {
+        $this->container['confidentialityCode'] = $confidentialityCode;
+        return $this;
+    }
+
+    /**
     * Gets variables
-    *  流水线参数
+    *  **参数解释**： 流水线参数列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineByTemplateDTOVariables[]|null
     */
@@ -335,7 +405,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets variables
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineByTemplateDTOVariables[]|null $variables 流水线参数
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineByTemplateDTOVariables[]|null $variables **参数解释**： 流水线参数列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

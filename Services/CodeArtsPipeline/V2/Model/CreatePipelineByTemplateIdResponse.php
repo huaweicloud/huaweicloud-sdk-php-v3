@@ -21,7 +21,7 @@ class CreatePipelineByTemplateIdResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pipelineId  流水线ID
+    * pipelineId  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreatePipelineByTemplateIdResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pipelineId  流水线ID
+    * pipelineId  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreatePipelineByTemplateIdResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pipelineId  流水线ID
+    * pipelineId  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreatePipelineByTemplateIdResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pipelineId  流水线ID
+    * pipelineId  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreatePipelineByTemplateIdResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pipelineId  流水线ID
+    * pipelineId  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class CreatePipelineByTemplateIdResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelineId
-    *  流水线ID
+    *  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class CreatePipelineByTemplateIdResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pipelineId
     *
-    * @param string|null $pipelineId 流水线ID
+    * @param string|null $pipelineId **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */

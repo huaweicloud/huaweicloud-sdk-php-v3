@@ -20,8 +20,8 @@ class UpdateRuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  规则实例ID
-    * isValid  规则实例状态
+    * id  **参数解释**： 规则ID，规则的唯一标识，通过[分页获取规则列表](ListRule.xml)接口获取，data.id即为规则ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * isValid  **参数解释**： 规则启用状态。 **约束限制**： 不涉及。 **取值范围**： - true：启用。 - false：不启用。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UpdateRuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  规则实例ID
-    * isValid  规则实例状态
+    * id  **参数解释**： 规则ID，规则的唯一标识，通过[分页获取规则列表](ListRule.xml)接口获取，data.id即为规则ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * isValid  **参数解释**： 规则启用状态。 **约束限制**： 不涉及。 **取值范围**： - true：启用。 - false：不启用。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UpdateRuleInstance implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  规则实例ID
-    * isValid  规则实例状态
+    * id  **参数解释**： 规则ID，规则的唯一标识，通过[分页获取规则列表](ListRule.xml)接口获取，data.id即为规则ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * isValid  **参数解释**： 规则启用状态。 **约束限制**： 不涉及。 **取值范围**： - true：启用。 - false：不启用。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UpdateRuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  规则实例ID
-    * isValid  规则实例状态
+    * id  **参数解释**： 规则ID，规则的唯一标识，通过[分页获取规则列表](ListRule.xml)接口获取，data.id即为规则ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * isValid  **参数解释**： 规则启用状态。 **约束限制**： 不涉及。 **取值范围**： - true：启用。 - false：不启用。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UpdateRuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  规则实例ID
-    * isValid  规则实例状态
+    * id  **参数解释**： 规则ID，规则的唯一标识，通过[分页获取规则列表](ListRule.xml)接口获取，data.id即为规则ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * isValid  **参数解释**： 规则启用状态。 **约束限制**： 不涉及。 **取值范围**： - true：启用。 - false：不启用。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class UpdateRuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  规则实例ID
+    *  **参数解释**： 规则ID，规则的唯一标识，通过[分页获取规则列表](ListRule.xml)接口获取，data.id即为规则ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class UpdateRuleInstance implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 规则实例ID
+    * @param string|null $id **参数解释**： 规则ID，规则的唯一标识，通过[分页获取规则列表](ListRule.xml)接口获取，data.id即为规则ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class UpdateRuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets isValid
-    *  规则实例状态
+    *  **参数解释**： 规则启用状态。 **约束限制**： 不涉及。 **取值范围**： - true：启用。 - false：不启用。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -221,7 +221,7 @@ class UpdateRuleInstance implements ModelInterface, ArrayAccess
     /**
     * Sets isValid
     *
-    * @param bool|null $isValid 规则实例状态
+    * @param bool|null $isValid **参数解释**： 规则启用状态。 **约束限制**： 不涉及。 **取值范围**： - true：启用。 - false：不启用。 **默认取值**： 不涉及。
     *
     * @return $this
     */

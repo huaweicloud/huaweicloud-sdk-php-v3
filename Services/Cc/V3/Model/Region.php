@@ -22,9 +22,9 @@ class Region implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  实例名称。
     * areaId  areaId
-    * id  Region ID。
-    * areaName  大区名。
-    * usedScenes  云连接使用场景 er vpc vgw。
+    * id  区域ID。
+    * areaName  大区名称。
+    * usedScenes  云连接使用场景。  - er（企业路由器） - vpc（虚拟私有云） - vgw（虚拟网关）
     *
     * @var string[]
     */
@@ -40,9 +40,9 @@ class Region implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  实例名称。
     * areaId  areaId
-    * id  Region ID。
-    * areaName  大区名。
-    * usedScenes  云连接使用场景 er vpc vgw。
+    * id  区域ID。
+    * areaName  大区名称。
+    * usedScenes  云连接使用场景。  - er（企业路由器） - vpc（虚拟私有云） - vgw（虚拟网关）
     *
     * @var string[]
     */
@@ -79,9 +79,9 @@ class Region implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  实例名称。
     * areaId  areaId
-    * id  Region ID。
-    * areaName  大区名。
-    * usedScenes  云连接使用场景 er vpc vgw。
+    * id  区域ID。
+    * areaName  大区名称。
+    * usedScenes  云连接使用场景。  - er（企业路由器） - vpc（虚拟私有云） - vgw（虚拟网关）
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class Region implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  实例名称。
     * areaId  areaId
-    * id  Region ID。
-    * areaName  大区名。
-    * usedScenes  云连接使用场景 er vpc vgw。
+    * id  区域ID。
+    * areaName  大区名称。
+    * usedScenes  云连接使用场景。  - er（企业路由器） - vpc（虚拟私有云） - vgw（虚拟网关）
     *
     * @var string[]
     */
@@ -115,9 +115,9 @@ class Region implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  实例名称。
     * areaId  areaId
-    * id  Region ID。
-    * areaName  大区名。
-    * usedScenes  云连接使用场景 er vpc vgw。
+    * id  区域ID。
+    * areaName  大区名称。
+    * usedScenes  云连接使用场景。  - er（企业路由器） - vpc（虚拟私有云） - vgw（虚拟网关）
     *
     * @var string[]
     */
@@ -310,7 +310,7 @@ class Region implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  Region ID。
+    *  区域ID。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class Region implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id Region ID。
+    * @param string|null $id 区域ID。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class Region implements ModelInterface, ArrayAccess
 
     /**
     * Gets areaName
-    *  大区名。
+    *  大区名称。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class Region implements ModelInterface, ArrayAccess
     /**
     * Sets areaName
     *
-    * @param string|null $areaName 大区名。
+    * @param string|null $areaName 大区名称。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class Region implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedScenes
-    *  云连接使用场景 er vpc vgw。
+    *  云连接使用场景。  - er（企业路由器） - vpc（虚拟私有云） - vgw（虚拟网关）
     *
     * @return string[]|null
     */
@@ -370,7 +370,7 @@ class Region implements ModelInterface, ArrayAccess
     /**
     * Sets usedScenes
     *
-    * @param string[]|null $usedScenes 云连接使用场景 er vpc vgw。
+    * @param string[]|null $usedScenes 云连接使用场景。  - er（企业路由器） - vpc（虚拟私有云） - vgw（虚拟网关）
     *
     * @return $this
     */

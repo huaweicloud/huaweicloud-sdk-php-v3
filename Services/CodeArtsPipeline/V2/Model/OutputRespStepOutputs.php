@@ -20,8 +20,8 @@ class OutputRespStepOutputs implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * stepRunId  stepRunId
-    * outputResult  outputResult
+    * stepRunId  **参数解释**： 步骤ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * outputResult  **参数解释**： 步骤输出。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class OutputRespStepOutputs implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * stepRunId  stepRunId
-    * outputResult  outputResult
+    * stepRunId  **参数解释**： 步骤ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * outputResult  **参数解释**： 步骤输出。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class OutputRespStepOutputs implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * stepRunId  stepRunId
-    * outputResult  outputResult
+    * stepRunId  **参数解释**： 步骤ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * outputResult  **参数解释**： 步骤输出。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class OutputRespStepOutputs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * stepRunId  stepRunId
-    * outputResult  outputResult
+    * stepRunId  **参数解释**： 步骤ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * outputResult  **参数解释**： 步骤输出。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class OutputRespStepOutputs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * stepRunId  stepRunId
-    * outputResult  outputResult
+    * stepRunId  **参数解释**： 步骤ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * outputResult  **参数解释**： 步骤输出。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class OutputRespStepOutputs implements ModelInterface, ArrayAccess
 
     /**
     * Gets stepRunId
-    *  stepRunId
+    *  **参数解释**： 步骤ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class OutputRespStepOutputs implements ModelInterface, ArrayAccess
     /**
     * Sets stepRunId
     *
-    * @param string|null $stepRunId stepRunId
+    * @param string|null $stepRunId **参数解释**： 步骤ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class OutputRespStepOutputs implements ModelInterface, ArrayAccess
 
     /**
     * Gets outputResult
-    *  outputResult
+    *  **参数解释**： 步骤输出。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\OutputRespOutputResult[]|null
     */
@@ -221,7 +221,7 @@ class OutputRespStepOutputs implements ModelInterface, ArrayAccess
     /**
     * Sets outputResult
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\OutputRespOutputResult[]|null $outputResult outputResult
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\OutputRespOutputResult[]|null $outputResult **参数解释**： 步骤输出。 **取值范围**： 不涉及。
     *
     * @return $this
     */

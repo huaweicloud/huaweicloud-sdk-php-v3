@@ -26,8 +26,8 @@ class PipelineStateStatus implements ModelInterface, ArrayAccess
     * startTime  执行开始时间
     * endTime  执行结束时间
     * elapsedTime  运行耗时
-    * status  运行状态
-    * outcome  运行结果
+    * status  运行状态。取值和含义：waiting：等待;running：执行中;verifying：待审核；suspending：挂起;completed：完成
+    * outcome  运行结果。取值及含义：success：成功；error：失败；aborted：终止
     * errorCode  错误码
     * errorMsg  错误信息
     * children  子任务运行信息(对任务来说是空的)
@@ -58,8 +58,8 @@ class PipelineStateStatus implements ModelInterface, ArrayAccess
     * startTime  执行开始时间
     * endTime  执行结束时间
     * elapsedTime  运行耗时
-    * status  运行状态
-    * outcome  运行结果
+    * status  运行状态。取值和含义：waiting：等待;running：执行中;verifying：待审核；suspending：挂起;completed：完成
+    * outcome  运行结果。取值及含义：success：成功；error：失败；aborted：终止
     * errorCode  错误码
     * errorMsg  错误信息
     * children  子任务运行信息(对任务来说是空的)
@@ -111,8 +111,8 @@ class PipelineStateStatus implements ModelInterface, ArrayAccess
     * startTime  执行开始时间
     * endTime  执行结束时间
     * elapsedTime  运行耗时
-    * status  运行状态
-    * outcome  运行结果
+    * status  运行状态。取值和含义：waiting：等待;running：执行中;verifying：待审核；suspending：挂起;completed：完成
+    * outcome  运行结果。取值及含义：success：成功；error：失败；aborted：终止
     * errorCode  错误码
     * errorMsg  错误信息
     * children  子任务运行信息(对任务来说是空的)
@@ -143,8 +143,8 @@ class PipelineStateStatus implements ModelInterface, ArrayAccess
     * startTime  执行开始时间
     * endTime  执行结束时间
     * elapsedTime  运行耗时
-    * status  运行状态
-    * outcome  运行结果
+    * status  运行状态。取值和含义：waiting：等待;running：执行中;verifying：待审核；suspending：挂起;completed：完成
+    * outcome  运行结果。取值及含义：success：成功；error：失败；aborted：终止
     * errorCode  错误码
     * errorMsg  错误信息
     * children  子任务运行信息(对任务来说是空的)
@@ -175,8 +175,8 @@ class PipelineStateStatus implements ModelInterface, ArrayAccess
     * startTime  执行开始时间
     * endTime  执行结束时间
     * elapsedTime  运行耗时
-    * status  运行状态
-    * outcome  运行结果
+    * status  运行状态。取值和含义：waiting：等待;running：执行中;verifying：待审核；suspending：挂起;completed：完成
+    * outcome  运行结果。取值及含义：success：成功；error：失败；aborted：终止
     * errorCode  错误码
     * errorMsg  错误信息
     * children  子任务运行信息(对任务来说是空的)
@@ -475,7 +475,7 @@ class PipelineStateStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  运行状态
+    *  运行状态。取值和含义：waiting：等待;running：执行中;verifying：待审核；suspending：挂起;completed：完成
     *
     * @return string
     */
@@ -487,7 +487,7 @@ class PipelineStateStatus implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 运行状态
+    * @param string $status 运行状态。取值和含义：waiting：等待;running：执行中;verifying：待审核；suspending：挂起;completed：完成
     *
     * @return $this
     */
@@ -499,7 +499,7 @@ class PipelineStateStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets outcome
-    *  运行结果
+    *  运行结果。取值及含义：success：成功；error：失败；aborted：终止
     *
     * @return string
     */
@@ -511,7 +511,7 @@ class PipelineStateStatus implements ModelInterface, ArrayAccess
     /**
     * Sets outcome
     *
-    * @param string $outcome 运行结果
+    * @param string $outcome 运行结果。取值及含义：success：成功；error：失败；aborted：终止
     *
     * @return $this
     */

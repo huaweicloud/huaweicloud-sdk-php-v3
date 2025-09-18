@@ -20,22 +20,22 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  阶段ID
-    * category  阶段类型
-    * name  阶段名称
-    * identifier  唯一标识
-    * runAlways  是否总是运行
-    * parallel  是否并行
-    * isSelect  是否选中
-    * sequence  序列号
-    * dependsOn  依赖
-    * condition  运行条件
-    * status  状态
-    * startTime  开始时间
-    * endTime  结束时间
-    * pre  阶段准入
-    * post  阶段准出
-    * jobs  任务
+    * id  **参数解释**： 阶段ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * category  **参数解释**： 阶段类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
+    * identifier  **参数解释**： 阶段唯一标识。 **取值范围**： 不涉及。
+    * runAlways  **参数解释**： 是否总是运行。 **取值范围**： - true：总是运行。 - false：非总是运行。
+    * parallel  **参数解释**： 是否并行。 **取值范围**： 不涉及。
+    * isSelect  **参数解释**： 是否选中。 **取值范围**： - true：选中。 - false：未选中。
+    * sequence  **参数解释**： 序列号。 **取值范围**： 大于等于0。
+    * dependsOn  **参数解释**： 依赖阶段的identifier信息。 **取值范围**： 不涉及。
+    * condition  **参数解释**： 运行条件。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
+    * startTime  **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
+    * pre  **参数解释**： 阶段准入。 **取值范围**： 不涉及。
+    * post  **参数解释**： 阶段准出。 **取值范围**： 不涉及。
+    * jobs  **参数解释**： 任务列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -60,22 +60,22 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  阶段ID
-    * category  阶段类型
-    * name  阶段名称
-    * identifier  唯一标识
-    * runAlways  是否总是运行
-    * parallel  是否并行
-    * isSelect  是否选中
-    * sequence  序列号
-    * dependsOn  依赖
-    * condition  运行条件
-    * status  状态
-    * startTime  开始时间
-    * endTime  结束时间
-    * pre  阶段准入
-    * post  阶段准出
-    * jobs  任务
+    * id  **参数解释**： 阶段ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * category  **参数解释**： 阶段类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
+    * identifier  **参数解释**： 阶段唯一标识。 **取值范围**： 不涉及。
+    * runAlways  **参数解释**： 是否总是运行。 **取值范围**： - true：总是运行。 - false：非总是运行。
+    * parallel  **参数解释**： 是否并行。 **取值范围**： 不涉及。
+    * isSelect  **参数解释**： 是否选中。 **取值范围**： - true：选中。 - false：未选中。
+    * sequence  **参数解释**： 序列号。 **取值范围**： 大于等于0。
+    * dependsOn  **参数解释**： 依赖阶段的identifier信息。 **取值范围**： 不涉及。
+    * condition  **参数解释**： 运行条件。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
+    * startTime  **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
+    * pre  **参数解释**： 阶段准入。 **取值范围**： 不涉及。
+    * post  **参数解释**： 阶段准出。 **取值范围**： 不涉及。
+    * jobs  **参数解释**： 任务列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -121,22 +121,22 @@ class StageRun implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  阶段ID
-    * category  阶段类型
-    * name  阶段名称
-    * identifier  唯一标识
-    * runAlways  是否总是运行
-    * parallel  是否并行
-    * isSelect  是否选中
-    * sequence  序列号
-    * dependsOn  依赖
-    * condition  运行条件
-    * status  状态
-    * startTime  开始时间
-    * endTime  结束时间
-    * pre  阶段准入
-    * post  阶段准出
-    * jobs  任务
+    * id  **参数解释**： 阶段ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * category  **参数解释**： 阶段类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
+    * identifier  **参数解释**： 阶段唯一标识。 **取值范围**： 不涉及。
+    * runAlways  **参数解释**： 是否总是运行。 **取值范围**： - true：总是运行。 - false：非总是运行。
+    * parallel  **参数解释**： 是否并行。 **取值范围**： 不涉及。
+    * isSelect  **参数解释**： 是否选中。 **取值范围**： - true：选中。 - false：未选中。
+    * sequence  **参数解释**： 序列号。 **取值范围**： 大于等于0。
+    * dependsOn  **参数解释**： 依赖阶段的identifier信息。 **取值范围**： 不涉及。
+    * condition  **参数解释**： 运行条件。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
+    * startTime  **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
+    * pre  **参数解释**： 阶段准入。 **取值范围**： 不涉及。
+    * post  **参数解释**： 阶段准出。 **取值范围**： 不涉及。
+    * jobs  **参数解释**： 任务列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -161,22 +161,22 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  阶段ID
-    * category  阶段类型
-    * name  阶段名称
-    * identifier  唯一标识
-    * runAlways  是否总是运行
-    * parallel  是否并行
-    * isSelect  是否选中
-    * sequence  序列号
-    * dependsOn  依赖
-    * condition  运行条件
-    * status  状态
-    * startTime  开始时间
-    * endTime  结束时间
-    * pre  阶段准入
-    * post  阶段准出
-    * jobs  任务
+    * id  **参数解释**： 阶段ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * category  **参数解释**： 阶段类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
+    * identifier  **参数解释**： 阶段唯一标识。 **取值范围**： 不涉及。
+    * runAlways  **参数解释**： 是否总是运行。 **取值范围**： - true：总是运行。 - false：非总是运行。
+    * parallel  **参数解释**： 是否并行。 **取值范围**： 不涉及。
+    * isSelect  **参数解释**： 是否选中。 **取值范围**： - true：选中。 - false：未选中。
+    * sequence  **参数解释**： 序列号。 **取值范围**： 大于等于0。
+    * dependsOn  **参数解释**： 依赖阶段的identifier信息。 **取值范围**： 不涉及。
+    * condition  **参数解释**： 运行条件。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
+    * startTime  **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
+    * pre  **参数解释**： 阶段准入。 **取值范围**： 不涉及。
+    * post  **参数解释**： 阶段准出。 **取值范围**： 不涉及。
+    * jobs  **参数解释**： 任务列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -201,22 +201,22 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  阶段ID
-    * category  阶段类型
-    * name  阶段名称
-    * identifier  唯一标识
-    * runAlways  是否总是运行
-    * parallel  是否并行
-    * isSelect  是否选中
-    * sequence  序列号
-    * dependsOn  依赖
-    * condition  运行条件
-    * status  状态
-    * startTime  开始时间
-    * endTime  结束时间
-    * pre  阶段准入
-    * post  阶段准出
-    * jobs  任务
+    * id  **参数解释**： 阶段ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * category  **参数解释**： 阶段类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
+    * identifier  **参数解释**： 阶段唯一标识。 **取值范围**： 不涉及。
+    * runAlways  **参数解释**： 是否总是运行。 **取值范围**： - true：总是运行。 - false：非总是运行。
+    * parallel  **参数解释**： 是否并行。 **取值范围**： 不涉及。
+    * isSelect  **参数解释**： 是否选中。 **取值范围**： - true：选中。 - false：未选中。
+    * sequence  **参数解释**： 序列号。 **取值范围**： 大于等于0。
+    * dependsOn  **参数解释**： 依赖阶段的identifier信息。 **取值范围**： 不涉及。
+    * condition  **参数解释**： 运行条件。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
+    * startTime  **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
+    * pre  **参数解释**： 阶段准入。 **取值范围**： 不涉及。
+    * post  **参数解释**： 阶段准出。 **取值范围**： 不涉及。
+    * jobs  **参数解释**： 任务列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -339,7 +339,7 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  阶段ID
+    *  **参数解释**： 阶段ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -351,7 +351,7 @@ class StageRun implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 阶段ID
+    * @param string|null $id **参数解释**： 阶段ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  阶段类型
+    *  **参数解释**： 阶段类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -375,7 +375,7 @@ class StageRun implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category 阶段类型
+    * @param string|null $category **参数解释**： 阶段类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  阶段名称
+    *  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
     *
     * @return string|null
     */
@@ -399,7 +399,7 @@ class StageRun implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 阶段名称
+    * @param string|null $name **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
     *
     * @return $this
     */
@@ -411,7 +411,7 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets identifier
-    *  唯一标识
+    *  **参数解释**： 阶段唯一标识。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -423,7 +423,7 @@ class StageRun implements ModelInterface, ArrayAccess
     /**
     * Sets identifier
     *
-    * @param string|null $identifier 唯一标识
+    * @param string|null $identifier **参数解释**： 阶段唯一标识。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -435,7 +435,7 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets runAlways
-    *  是否总是运行
+    *  **参数解释**： 是否总是运行。 **取值范围**： - true：总是运行。 - false：非总是运行。
     *
     * @return bool|null
     */
@@ -447,7 +447,7 @@ class StageRun implements ModelInterface, ArrayAccess
     /**
     * Sets runAlways
     *
-    * @param bool|null $runAlways 是否总是运行
+    * @param bool|null $runAlways **参数解释**： 是否总是运行。 **取值范围**： - true：总是运行。 - false：非总是运行。
     *
     * @return $this
     */
@@ -459,7 +459,7 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets parallel
-    *  是否并行
+    *  **参数解释**： 是否并行。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -471,7 +471,7 @@ class StageRun implements ModelInterface, ArrayAccess
     /**
     * Sets parallel
     *
-    * @param string|null $parallel 是否并行
+    * @param string|null $parallel **参数解释**： 是否并行。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -483,7 +483,7 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSelect
-    *  是否选中
+    *  **参数解释**： 是否选中。 **取值范围**： - true：选中。 - false：未选中。
     *
     * @return bool|null
     */
@@ -495,7 +495,7 @@ class StageRun implements ModelInterface, ArrayAccess
     /**
     * Sets isSelect
     *
-    * @param bool|null $isSelect 是否选中
+    * @param bool|null $isSelect **参数解释**： 是否选中。 **取值范围**： - true：选中。 - false：未选中。
     *
     * @return $this
     */
@@ -507,7 +507,7 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets sequence
-    *  序列号
+    *  **参数解释**： 序列号。 **取值范围**： 大于等于0。
     *
     * @return int|null
     */
@@ -519,7 +519,7 @@ class StageRun implements ModelInterface, ArrayAccess
     /**
     * Sets sequence
     *
-    * @param int|null $sequence 序列号
+    * @param int|null $sequence **参数解释**： 序列号。 **取值范围**： 大于等于0。
     *
     * @return $this
     */
@@ -531,7 +531,7 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets dependsOn
-    *  依赖
+    *  **参数解释**： 依赖阶段的identifier信息。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -543,7 +543,7 @@ class StageRun implements ModelInterface, ArrayAccess
     /**
     * Sets dependsOn
     *
-    * @param string[]|null $dependsOn 依赖
+    * @param string[]|null $dependsOn **参数解释**： 依赖阶段的identifier信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -555,7 +555,7 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets condition
-    *  运行条件
+    *  **参数解释**： 运行条件。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -567,7 +567,7 @@ class StageRun implements ModelInterface, ArrayAccess
     /**
     * Sets condition
     *
-    * @param string|null $condition 运行条件
+    * @param string|null $condition **参数解释**： 运行条件。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -579,7 +579,7 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
     *
     * @return string|null
     */
@@ -591,7 +591,7 @@ class StageRun implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
     *
     * @return $this
     */
@@ -603,7 +603,7 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  开始时间
+    *  **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -615,7 +615,7 @@ class StageRun implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime 开始时间
+    * @param int|null $startTime **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -627,7 +627,7 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间
+    *  **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -639,7 +639,7 @@ class StageRun implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int|null $endTime 结束时间
+    * @param int|null $endTime **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -651,7 +651,7 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets pre
-    *  阶段准入
+    *  **参数解释**： 阶段准入。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StepRun[]|null
     */
@@ -663,7 +663,7 @@ class StageRun implements ModelInterface, ArrayAccess
     /**
     * Sets pre
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StepRun[]|null $pre 阶段准入
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StepRun[]|null $pre **参数解释**： 阶段准入。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -675,7 +675,7 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets post
-    *  阶段准出
+    *  **参数解释**： 阶段准出。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StepRun[]|null
     */
@@ -687,7 +687,7 @@ class StageRun implements ModelInterface, ArrayAccess
     /**
     * Sets post
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StepRun[]|null $post 阶段准出
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StepRun[]|null $post **参数解释**： 阶段准出。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -699,7 +699,7 @@ class StageRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobs
-    *  任务
+    *  **参数解释**： 任务列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\JobRun[]|null
     */
@@ -711,7 +711,7 @@ class StageRun implements ModelInterface, ArrayAccess
     /**
     * Sets jobs
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\JobRun[]|null $jobs 任务
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\JobRun[]|null $jobs **参数解释**： 任务列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

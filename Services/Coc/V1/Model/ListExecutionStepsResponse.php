@@ -32,7 +32,7 @@ class ListExecutionStepsResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'errorCode' => 'string',
             'errorMsg' => 'string',
-            'data' => '\HuaweiCloud\SDK\Coc\V1\Model\ExcutionStep[]',
+            'data' => '\HuaweiCloud\SDK\Coc\V1\Model\ExecutionStep[]',
             'total' => 'int',
             'xRequestId' => 'string'
     ];
@@ -269,7 +269,7 @@ class ListExecutionStepsResponse implements ModelInterface, ArrayAccess
     * Gets data
     *  返回数据
     *
-    * @return \HuaweiCloud\SDK\Coc\V1\Model\ExcutionStep[]|null
+    * @return \HuaweiCloud\SDK\Coc\V1\Model\ExecutionStep[]|null
     */
     public function getData()
     {
@@ -279,7 +279,7 @@ class ListExecutionStepsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\Coc\V1\Model\ExcutionStep[]|null $data 返回数据
+    * @param \HuaweiCloud\SDK\Coc\V1\Model\ExecutionStep[]|null $data 返回数据
     *
     * @return $this
     */

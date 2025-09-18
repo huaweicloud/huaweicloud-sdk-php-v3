@@ -20,17 +20,17 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  CodeArts项目id
-    * projectName  CodeArts项目名字
-    * pipelineId  流水线id
-    * pipelineName  流水线名字
-    * creatorId  流水线创建人id
-    * creatorName  流水线创建人名字
-    * executorId  流水线创建人id
-    * executorName  流水线执行人名字
-    * startTime  启动时间
-    * createTime  创建时间
-    * watched  用户是否关注流水线：true（关注），false（未关注）
+    * projectId  **参数解释**： 项目id。 **取值范围**： 32位字符，由数字和字母组成。
+    * projectName  **参数解释**： 项目名称。 **取值范围**： 不涉及。
+    * pipelineId  **参数解释**： 流水线id。 **取值范围**： 32位字符，由数字和字母组成。
+    * pipelineName  **参数解释**： 流水线名称。 **取值范围**： 不涉及。
+    * creatorId  **参数解释**： 流水线创建人id。 **取值范围**： 32位字符，由数字和字母组成。
+    * creatorName  **参数解释**： 流水线创建人名字。 **取值范围**： 不涉及。
+    * executorId  **参数解释**： 流水线执行人id。 **取值范围**： 32位字符，由数字和字母组成。
+    * executorName  **参数解释**： 流水线执行人名字。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 启动时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * watched  **参数解释**： 用户是否关注流水线。 **取值范围**： - true：关注流水线。 - false：未关注流水线。
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  CodeArts项目id
-    * projectName  CodeArts项目名字
-    * pipelineId  流水线id
-    * pipelineName  流水线名字
-    * creatorId  流水线创建人id
-    * creatorName  流水线创建人名字
-    * executorId  流水线创建人id
-    * executorName  流水线执行人名字
-    * startTime  启动时间
-    * createTime  创建时间
-    * watched  用户是否关注流水线：true（关注），false（未关注）
+    * projectId  **参数解释**： 项目id。 **取值范围**： 32位字符，由数字和字母组成。
+    * projectName  **参数解释**： 项目名称。 **取值范围**： 不涉及。
+    * pipelineId  **参数解释**： 流水线id。 **取值范围**： 32位字符，由数字和字母组成。
+    * pipelineName  **参数解释**： 流水线名称。 **取值范围**： 不涉及。
+    * creatorId  **参数解释**： 流水线创建人id。 **取值范围**： 32位字符，由数字和字母组成。
+    * creatorName  **参数解释**： 流水线创建人名字。 **取值范围**： 不涉及。
+    * executorId  **参数解释**： 流水线执行人id。 **取值范围**： 32位字符，由数字和字母组成。
+    * executorName  **参数解释**： 流水线执行人名字。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 启动时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * watched  **参数解释**： 用户是否关注流水线。 **取值范围**： - true：关注流水线。 - false：未关注流水线。
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  CodeArts项目id
-    * projectName  CodeArts项目名字
-    * pipelineId  流水线id
-    * pipelineName  流水线名字
-    * creatorId  流水线创建人id
-    * creatorName  流水线创建人名字
-    * executorId  流水线创建人id
-    * executorName  流水线执行人名字
-    * startTime  启动时间
-    * createTime  创建时间
-    * watched  用户是否关注流水线：true（关注），false（未关注）
+    * projectId  **参数解释**： 项目id。 **取值范围**： 32位字符，由数字和字母组成。
+    * projectName  **参数解释**： 项目名称。 **取值范围**： 不涉及。
+    * pipelineId  **参数解释**： 流水线id。 **取值范围**： 32位字符，由数字和字母组成。
+    * pipelineName  **参数解释**： 流水线名称。 **取值范围**： 不涉及。
+    * creatorId  **参数解释**： 流水线创建人id。 **取值范围**： 32位字符，由数字和字母组成。
+    * creatorName  **参数解释**： 流水线创建人名字。 **取值范围**： 不涉及。
+    * executorId  **参数解释**： 流水线执行人id。 **取值范围**： 32位字符，由数字和字母组成。
+    * executorName  **参数解释**： 流水线执行人名字。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 启动时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * watched  **参数解释**： 用户是否关注流水线。 **取值范围**： - true：关注流水线。 - false：未关注流水线。
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  CodeArts项目id
-    * projectName  CodeArts项目名字
-    * pipelineId  流水线id
-    * pipelineName  流水线名字
-    * creatorId  流水线创建人id
-    * creatorName  流水线创建人名字
-    * executorId  流水线创建人id
-    * executorName  流水线执行人名字
-    * startTime  启动时间
-    * createTime  创建时间
-    * watched  用户是否关注流水线：true（关注），false（未关注）
+    * projectId  **参数解释**： 项目id。 **取值范围**： 32位字符，由数字和字母组成。
+    * projectName  **参数解释**： 项目名称。 **取值范围**： 不涉及。
+    * pipelineId  **参数解释**： 流水线id。 **取值范围**： 32位字符，由数字和字母组成。
+    * pipelineName  **参数解释**： 流水线名称。 **取值范围**： 不涉及。
+    * creatorId  **参数解释**： 流水线创建人id。 **取值范围**： 32位字符，由数字和字母组成。
+    * creatorName  **参数解释**： 流水线创建人名字。 **取值范围**： 不涉及。
+    * executorId  **参数解释**： 流水线执行人id。 **取值范围**： 32位字符，由数字和字母组成。
+    * executorName  **参数解释**： 流水线执行人名字。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 启动时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * watched  **参数解释**： 用户是否关注流水线。 **取值范围**： - true：关注流水线。 - false：未关注流水线。
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  CodeArts项目id
-    * projectName  CodeArts项目名字
-    * pipelineId  流水线id
-    * pipelineName  流水线名字
-    * creatorId  流水线创建人id
-    * creatorName  流水线创建人名字
-    * executorId  流水线创建人id
-    * executorName  流水线执行人名字
-    * startTime  启动时间
-    * createTime  创建时间
-    * watched  用户是否关注流水线：true（关注），false（未关注）
+    * projectId  **参数解释**： 项目id。 **取值范围**： 32位字符，由数字和字母组成。
+    * projectName  **参数解释**： 项目名称。 **取值范围**： 不涉及。
+    * pipelineId  **参数解释**： 流水线id。 **取值范围**： 32位字符，由数字和字母组成。
+    * pipelineName  **参数解释**： 流水线名称。 **取值范围**： 不涉及。
+    * creatorId  **参数解释**： 流水线创建人id。 **取值范围**： 32位字符，由数字和字母组成。
+    * creatorName  **参数解释**： 流水线创建人名字。 **取值范围**： 不涉及。
+    * executorId  **参数解释**： 流水线执行人id。 **取值范围**： 32位字符，由数字和字母组成。
+    * executorName  **参数解释**： 流水线执行人名字。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 启动时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * watched  **参数解释**： 用户是否关注流水线。 **取值范围**： - true：关注流水线。 - false：未关注流水线。
     *
     * @var string[]
     */
@@ -317,7 +317,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  CodeArts项目id
+    *  **参数解释**： 项目id。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string
     */
@@ -329,7 +329,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId CodeArts项目id
+    * @param string $projectId **参数解释**： 项目id。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -341,7 +341,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectName
-    *  CodeArts项目名字
+    *  **参数解释**： 项目名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -353,7 +353,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets projectName
     *
-    * @param string $projectName CodeArts项目名字
+    * @param string $projectName **参数解释**： 项目名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -365,7 +365,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelineId
-    *  流水线id
+    *  **参数解释**： 流水线id。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string
     */
@@ -377,7 +377,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pipelineId
     *
-    * @param string $pipelineId 流水线id
+    * @param string $pipelineId **参数解释**： 流水线id。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -389,7 +389,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelineName
-    *  流水线名字
+    *  **参数解释**： 流水线名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -401,7 +401,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pipelineName
     *
-    * @param string $pipelineName 流水线名字
+    * @param string $pipelineName **参数解释**： 流水线名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -413,7 +413,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets creatorId
-    *  流水线创建人id
+    *  **参数解释**： 流水线创建人id。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string
     */
@@ -425,7 +425,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets creatorId
     *
-    * @param string $creatorId 流水线创建人id
+    * @param string $creatorId **参数解释**： 流水线创建人id。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -437,7 +437,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets creatorName
-    *  流水线创建人名字
+    *  **参数解释**： 流水线创建人名字。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -449,7 +449,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets creatorName
     *
-    * @param string $creatorName 流水线创建人名字
+    * @param string $creatorName **参数解释**： 流水线创建人名字。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -461,7 +461,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets executorId
-    *  流水线创建人id
+    *  **参数解释**： 流水线执行人id。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string
     */
@@ -473,7 +473,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets executorId
     *
-    * @param string $executorId 流水线创建人id
+    * @param string $executorId **参数解释**： 流水线执行人id。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -485,7 +485,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets executorName
-    *  流水线执行人名字
+    *  **参数解释**： 流水线执行人名字。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -497,7 +497,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets executorName
     *
-    * @param string $executorName 流水线执行人名字
+    * @param string $executorName **参数解释**： 流水线执行人名字。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -509,7 +509,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  启动时间
+    *  **参数解释**： 启动时间。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -521,7 +521,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string $startTime 启动时间
+    * @param string $startTime **参数解释**： 启动时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -533,7 +533,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -545,7 +545,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string $createTime 创建时间
+    * @param string $createTime **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -557,7 +557,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets watched
-    *  用户是否关注流水线：true（关注），false（未关注）
+    *  **参数解释**： 用户是否关注流水线。 **取值范围**： - true：关注流水线。 - false：未关注流水线。
     *
     * @return string
     */
@@ -569,7 +569,7 @@ class PipelineBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets watched
     *
-    * @param string $watched 用户是否关注流水线：true（关注），false（未关注）
+    * @param string $watched **参数解释**： 用户是否关注流水线。 **取值范围**： - true：关注流水线。 - false：未关注流水线。
     *
     * @return $this
     */

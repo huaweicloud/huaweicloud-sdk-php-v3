@@ -413,8 +413,8 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
         if ($this->container['bandwidthType'] === null) {
             $invalidProperties[] = "'bandwidthType' can't be null";
         }
-            if (!is_null($this->container['bandwidthSize']) && ($this->container['bandwidthSize'] > 999999)) {
-                $invalidProperties[] = "invalid value for 'bandwidthSize', must be smaller than or equal to 999999.";
+            if (!is_null($this->container['bandwidthSize']) && ($this->container['bandwidthSize'] > 9999999999)) {
+                $invalidProperties[] = "invalid value for 'bandwidthSize', must be smaller than or equal to 9999999999.";
             }
             if (!is_null($this->container['bandwidthSize']) && ($this->container['bandwidthSize'] < 1)) {
                 $invalidProperties[] = "invalid value for 'bandwidthSize', must be bigger than or equal to 1.";

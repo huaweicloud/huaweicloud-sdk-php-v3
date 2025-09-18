@@ -20,15 +20,15 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * gitType  代码仓类型
-    * gitUrl  代码仓https地址
-    * sshGitUrl  代码仓ssh地址
-    * webUrl  代码仓页面地址
-    * repoName  代码仓名
-    * defaultBranch  默认分支
-    * endpointId  扩展点ID
-    * codehubId  codehub代码仓ID
-    * alias  代码仓别名
+    * gitType  **参数解释**： 代码仓类型。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。
+    * gitUrl  **参数解释**： 代码仓https地址。 **取值范围**： 不涉及。
+    * sshGitUrl  **参数解释**： 代码仓ssh地址。 **取值范围**： 不涉及。
+    * webUrl  **参数解释**： 代码仓页面地址。 **取值范围**： 不涉及。
+    * repoName  **参数解释**： 代码仓名。 **取值范围**： 不涉及。
+    * defaultBranch  **参数解释**： 默认分支。 **取值范围**： 不涉及。
+    * endpointId  **参数解释**： 扩展点ID。 **取值范围**： 不涉及。
+    * codehubId  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
+    * alias  **参数解释**： 代码仓别名。 **取值范围**： 不涉及。
     * buildParams  buildParams
     *
     * @var string[]
@@ -48,15 +48,15 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * gitType  代码仓类型
-    * gitUrl  代码仓https地址
-    * sshGitUrl  代码仓ssh地址
-    * webUrl  代码仓页面地址
-    * repoName  代码仓名
-    * defaultBranch  默认分支
-    * endpointId  扩展点ID
-    * codehubId  codehub代码仓ID
-    * alias  代码仓别名
+    * gitType  **参数解释**： 代码仓类型。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。
+    * gitUrl  **参数解释**： 代码仓https地址。 **取值范围**： 不涉及。
+    * sshGitUrl  **参数解释**： 代码仓ssh地址。 **取值范围**： 不涉及。
+    * webUrl  **参数解释**： 代码仓页面地址。 **取值范围**： 不涉及。
+    * repoName  **参数解释**： 代码仓名。 **取值范围**： 不涉及。
+    * defaultBranch  **参数解释**： 默认分支。 **取值范围**： 不涉及。
+    * endpointId  **参数解释**： 扩展点ID。 **取值范围**： 不涉及。
+    * codehubId  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
+    * alias  **参数解释**： 代码仓别名。 **取值范围**： 不涉及。
     * buildParams  buildParams
     *
     * @var string[]
@@ -97,15 +97,15 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * gitType  代码仓类型
-    * gitUrl  代码仓https地址
-    * sshGitUrl  代码仓ssh地址
-    * webUrl  代码仓页面地址
-    * repoName  代码仓名
-    * defaultBranch  默认分支
-    * endpointId  扩展点ID
-    * codehubId  codehub代码仓ID
-    * alias  代码仓别名
+    * gitType  **参数解释**： 代码仓类型。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。
+    * gitUrl  **参数解释**： 代码仓https地址。 **取值范围**： 不涉及。
+    * sshGitUrl  **参数解释**： 代码仓ssh地址。 **取值范围**： 不涉及。
+    * webUrl  **参数解释**： 代码仓页面地址。 **取值范围**： 不涉及。
+    * repoName  **参数解释**： 代码仓名。 **取值范围**： 不涉及。
+    * defaultBranch  **参数解释**： 默认分支。 **取值范围**： 不涉及。
+    * endpointId  **参数解释**： 扩展点ID。 **取值范围**： 不涉及。
+    * codehubId  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
+    * alias  **参数解释**： 代码仓别名。 **取值范围**： 不涉及。
     * buildParams  buildParams
     *
     * @var string[]
@@ -125,15 +125,15 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * gitType  代码仓类型
-    * gitUrl  代码仓https地址
-    * sshGitUrl  代码仓ssh地址
-    * webUrl  代码仓页面地址
-    * repoName  代码仓名
-    * defaultBranch  默认分支
-    * endpointId  扩展点ID
-    * codehubId  codehub代码仓ID
-    * alias  代码仓别名
+    * gitType  **参数解释**： 代码仓类型。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。
+    * gitUrl  **参数解释**： 代码仓https地址。 **取值范围**： 不涉及。
+    * sshGitUrl  **参数解释**： 代码仓ssh地址。 **取值范围**： 不涉及。
+    * webUrl  **参数解释**： 代码仓页面地址。 **取值范围**： 不涉及。
+    * repoName  **参数解释**： 代码仓名。 **取值范围**： 不涉及。
+    * defaultBranch  **参数解释**： 默认分支。 **取值范围**： 不涉及。
+    * endpointId  **参数解释**： 扩展点ID。 **取值范围**： 不涉及。
+    * codehubId  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
+    * alias  **参数解释**： 代码仓别名。 **取值范围**： 不涉及。
     * buildParams  buildParams
     *
     * @var string[]
@@ -153,15 +153,15 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * gitType  代码仓类型
-    * gitUrl  代码仓https地址
-    * sshGitUrl  代码仓ssh地址
-    * webUrl  代码仓页面地址
-    * repoName  代码仓名
-    * defaultBranch  默认分支
-    * endpointId  扩展点ID
-    * codehubId  codehub代码仓ID
-    * alias  代码仓别名
+    * gitType  **参数解释**： 代码仓类型。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。
+    * gitUrl  **参数解释**： 代码仓https地址。 **取值范围**： 不涉及。
+    * sshGitUrl  **参数解释**： 代码仓ssh地址。 **取值范围**： 不涉及。
+    * webUrl  **参数解释**： 代码仓页面地址。 **取值范围**： 不涉及。
+    * repoName  **参数解释**： 代码仓名。 **取值范围**： 不涉及。
+    * defaultBranch  **参数解释**： 默认分支。 **取值范围**： 不涉及。
+    * endpointId  **参数解释**： 扩展点ID。 **取值范围**： 不涉及。
+    * codehubId  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
+    * alias  **参数解释**： 代码仓别名。 **取值范围**： 不涉及。
     * buildParams  buildParams
     *
     * @var string[]
@@ -273,7 +273,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitType
-    *  代码仓类型
+    *  **参数解释**： 代码仓类型。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets gitType
     *
-    * @param string|null $gitType 代码仓类型
+    * @param string|null $gitType **参数解释**： 代码仓类型。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。
     *
     * @return $this
     */
@@ -297,7 +297,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitUrl
-    *  代码仓https地址
+    *  **参数解释**： 代码仓https地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets gitUrl
     *
-    * @param string|null $gitUrl 代码仓https地址
+    * @param string|null $gitUrl **参数解释**： 代码仓https地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -321,7 +321,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets sshGitUrl
-    *  代码仓ssh地址
+    *  **参数解释**： 代码仓ssh地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -333,7 +333,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets sshGitUrl
     *
-    * @param string|null $sshGitUrl 代码仓ssh地址
+    * @param string|null $sshGitUrl **参数解释**： 代码仓ssh地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -345,7 +345,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets webUrl
-    *  代码仓页面地址
+    *  **参数解释**： 代码仓页面地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -357,7 +357,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets webUrl
     *
-    * @param string|null $webUrl 代码仓页面地址
+    * @param string|null $webUrl **参数解释**： 代码仓页面地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -369,7 +369,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets repoName
-    *  代码仓名
+    *  **参数解释**： 代码仓名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -381,7 +381,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets repoName
     *
-    * @param string|null $repoName 代码仓名
+    * @param string|null $repoName **参数解释**： 代码仓名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -393,7 +393,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultBranch
-    *  默认分支
+    *  **参数解释**： 默认分支。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -405,7 +405,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets defaultBranch
     *
-    * @param string|null $defaultBranch 默认分支
+    * @param string|null $defaultBranch **参数解释**： 默认分支。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -417,7 +417,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpointId
-    *  扩展点ID
+    *  **参数解释**： 扩展点ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -429,7 +429,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets endpointId
     *
-    * @param string|null $endpointId 扩展点ID
+    * @param string|null $endpointId **参数解释**： 扩展点ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -441,7 +441,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets codehubId
-    *  codehub代码仓ID
+    *  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -453,7 +453,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets codehubId
     *
-    * @param string|null $codehubId codehub代码仓ID
+    * @param string|null $codehubId **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -465,7 +465,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets alias
-    *  代码仓别名
+    *  **参数解释**： 代码仓别名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -477,7 +477,7 @@ class RunPipelineSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets alias
     *
-    * @param string|null $alias 代码仓别名
+    * @param string|null $alias **参数解释**： 代码仓别名。 **取值范围**： 不涉及。
     *
     * @return $this
     */

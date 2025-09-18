@@ -20,12 +20,12 @@ class NewExtensionInputs implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  名称
-    * type  类型
-    * label  标签
-    * description  说明
-    * defaultValue  默认值
-    * required  必填
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * label  **参数解释**： 标签。 **取值范围**： 不涉及。
+    * description  **参数解释**： 说明。 **取值范围**： 不涉及。
+    * defaultValue  **参数解释**： 默认值。 **取值范围**： 不涉及。
+    * required  **参数解释**： 是否必填。 **取值范围**： - true：必填。 - false：非必填。
     * extendProp  extendProp
     * validation  validation
     *
@@ -44,12 +44,12 @@ class NewExtensionInputs implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  名称
-    * type  类型
-    * label  标签
-    * description  说明
-    * defaultValue  默认值
-    * required  必填
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * label  **参数解释**： 标签。 **取值范围**： 不涉及。
+    * description  **参数解释**： 说明。 **取值范围**： 不涉及。
+    * defaultValue  **参数解释**： 默认值。 **取值范围**： 不涉及。
+    * required  **参数解释**： 是否必填。 **取值范围**： - true：必填。 - false：非必填。
     * extendProp  extendProp
     * validation  validation
     *
@@ -89,12 +89,12 @@ class NewExtensionInputs implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  名称
-    * type  类型
-    * label  标签
-    * description  说明
-    * defaultValue  默认值
-    * required  必填
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * label  **参数解释**： 标签。 **取值范围**： 不涉及。
+    * description  **参数解释**： 说明。 **取值范围**： 不涉及。
+    * defaultValue  **参数解释**： 默认值。 **取值范围**： 不涉及。
+    * required  **参数解释**： 是否必填。 **取值范围**： - true：必填。 - false：非必填。
     * extendProp  extendProp
     * validation  validation
     *
@@ -113,12 +113,12 @@ class NewExtensionInputs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  名称
-    * type  类型
-    * label  标签
-    * description  说明
-    * defaultValue  默认值
-    * required  必填
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * label  **参数解释**： 标签。 **取值范围**： 不涉及。
+    * description  **参数解释**： 说明。 **取值范围**： 不涉及。
+    * defaultValue  **参数解释**： 默认值。 **取值范围**： 不涉及。
+    * required  **参数解释**： 是否必填。 **取值范围**： - true：必填。 - false：非必填。
     * extendProp  extendProp
     * validation  validation
     *
@@ -137,12 +137,12 @@ class NewExtensionInputs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  名称
-    * type  类型
-    * label  标签
-    * description  说明
-    * defaultValue  默认值
-    * required  必填
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * label  **参数解释**： 标签。 **取值范围**： 不涉及。
+    * description  **参数解释**： 说明。 **取值范围**： 不涉及。
+    * defaultValue  **参数解释**： 默认值。 **取值范围**： 不涉及。
+    * required  **参数解释**： 是否必填。 **取值范围**： - true：必填。 - false：非必填。
     * extendProp  extendProp
     * validation  validation
     *
@@ -251,7 +251,7 @@ class NewExtensionInputs implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  **参数解释**： 名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class NewExtensionInputs implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string|null $name **参数解释**： 名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class NewExtensionInputs implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型
+    *  **参数解释**： 类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -287,7 +287,7 @@ class NewExtensionInputs implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 类型
+    * @param string|null $type **参数解释**： 类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class NewExtensionInputs implements ModelInterface, ArrayAccess
 
     /**
     * Gets label
-    *  标签
+    *  **参数解释**： 标签。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class NewExtensionInputs implements ModelInterface, ArrayAccess
     /**
     * Sets label
     *
-    * @param string|null $label 标签
+    * @param string|null $label **参数解释**： 标签。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class NewExtensionInputs implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  说明
+    *  **参数解释**： 说明。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class NewExtensionInputs implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 说明
+    * @param string|null $description **参数解释**： 说明。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class NewExtensionInputs implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultValue
-    *  默认值
+    *  **参数解释**： 默认值。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class NewExtensionInputs implements ModelInterface, ArrayAccess
     /**
     * Sets defaultValue
     *
-    * @param string|null $defaultValue 默认值
+    * @param string|null $defaultValue **参数解释**： 默认值。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class NewExtensionInputs implements ModelInterface, ArrayAccess
 
     /**
     * Gets required
-    *  必填
+    *  **参数解释**： 是否必填。 **取值范围**： - true：必填。 - false：非必填。
     *
     * @return bool|null
     */
@@ -383,7 +383,7 @@ class NewExtensionInputs implements ModelInterface, ArrayAccess
     /**
     * Sets required
     *
-    * @param bool|null $required 必填
+    * @param bool|null $required **参数解释**： 是否必填。 **取值范围**： - true：必填。 - false：非必填。
     *
     * @return $this
     */

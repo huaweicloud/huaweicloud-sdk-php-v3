@@ -20,9 +20,9 @@ class FullStagePluginsRelationVOAddables implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * additionalProp1  额外属性1
-    * additionalProp2  额外属性2
-    * additionalProp3  额外属性3
+    * additionalProp1  **参数解释**： 额外属性1。 **取值范围**： 不涉及。
+    * additionalProp2  **参数解释**： 额外属性2。 **取值范围**： 不涉及。
+    * additionalProp3  **参数解释**： 额外属性3。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class FullStagePluginsRelationVOAddables implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * additionalProp1  额外属性1
-    * additionalProp2  额外属性2
-    * additionalProp3  额外属性3
+    * additionalProp1  **参数解释**： 额外属性1。 **取值范围**： 不涉及。
+    * additionalProp2  **参数解释**： 额外属性2。 **取值范围**： 不涉及。
+    * additionalProp3  **参数解释**： 额外属性3。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class FullStagePluginsRelationVOAddables implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * additionalProp1  额外属性1
-    * additionalProp2  额外属性2
-    * additionalProp3  额外属性3
+    * additionalProp1  **参数解释**： 额外属性1。 **取值范围**： 不涉及。
+    * additionalProp2  **参数解释**： 额外属性2。 **取值范围**： 不涉及。
+    * additionalProp3  **参数解释**： 额外属性3。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class FullStagePluginsRelationVOAddables implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * additionalProp1  额外属性1
-    * additionalProp2  额外属性2
-    * additionalProp3  额外属性3
+    * additionalProp1  **参数解释**： 额外属性1。 **取值范围**： 不涉及。
+    * additionalProp2  **参数解释**： 额外属性2。 **取值范围**： 不涉及。
+    * additionalProp3  **参数解释**： 额外属性3。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class FullStagePluginsRelationVOAddables implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * additionalProp1  额外属性1
-    * additionalProp2  额外属性2
-    * additionalProp3  额外属性3
+    * additionalProp1  **参数解释**： 额外属性1。 **取值范围**： 不涉及。
+    * additionalProp2  **参数解释**： 额外属性2。 **取值范围**： 不涉及。
+    * additionalProp3  **参数解释**： 额外属性3。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class FullStagePluginsRelationVOAddables implements ModelInterface, ArrayAccess
 
     /**
     * Gets additionalProp1
-    *  额外属性1
+    *  **参数解释**： 额外属性1。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -208,7 +208,7 @@ class FullStagePluginsRelationVOAddables implements ModelInterface, ArrayAccess
     /**
     * Sets additionalProp1
     *
-    * @param bool|null $additionalProp1 额外属性1
+    * @param bool|null $additionalProp1 **参数解释**： 额外属性1。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class FullStagePluginsRelationVOAddables implements ModelInterface, ArrayAccess
 
     /**
     * Gets additionalProp2
-    *  额外属性2
+    *  **参数解释**： 额外属性2。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -232,7 +232,7 @@ class FullStagePluginsRelationVOAddables implements ModelInterface, ArrayAccess
     /**
     * Sets additionalProp2
     *
-    * @param bool|null $additionalProp2 额外属性2
+    * @param bool|null $additionalProp2 **参数解释**： 额外属性2。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class FullStagePluginsRelationVOAddables implements ModelInterface, ArrayAccess
 
     /**
     * Gets additionalProp3
-    *  额外属性3
+    *  **参数解释**： 额外属性3。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -256,7 +256,7 @@ class FullStagePluginsRelationVOAddables implements ModelInterface, ArrayAccess
     /**
     * Sets additionalProp3
     *
-    * @param bool|null $additionalProp3 额外属性3
+    * @param bool|null $additionalProp3 **参数解释**： 额外属性3。 **取值范围**： 不涉及。
     *
     * @return $this
     */

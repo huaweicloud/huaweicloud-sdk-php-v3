@@ -21,8 +21,8 @@ class ShowStepOutputsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * stepOutputs  stepOutputs
-    * currentSystemTime  currentSystemTime
+    * stepOutputs  **参数解释**： 步骤输出列表，记录每个步骤输出的ID和结果信息。 **约束限制**： 不涉及。
+    * currentSystemTime  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ShowStepOutputsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * stepOutputs  stepOutputs
-    * currentSystemTime  currentSystemTime
+    * stepOutputs  **参数解释**： 步骤输出列表，记录每个步骤输出的ID和结果信息。 **约束限制**： 不涉及。
+    * currentSystemTime  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ShowStepOutputsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * stepOutputs  stepOutputs
-    * currentSystemTime  currentSystemTime
+    * stepOutputs  **参数解释**： 步骤输出列表，记录每个步骤输出的ID和结果信息。 **约束限制**： 不涉及。
+    * currentSystemTime  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ShowStepOutputsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * stepOutputs  stepOutputs
-    * currentSystemTime  currentSystemTime
+    * stepOutputs  **参数解释**： 步骤输出列表，记录每个步骤输出的ID和结果信息。 **约束限制**： 不涉及。
+    * currentSystemTime  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ShowStepOutputsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * stepOutputs  stepOutputs
-    * currentSystemTime  currentSystemTime
+    * stepOutputs  **参数解释**： 步骤输出列表，记录每个步骤输出的ID和结果信息。 **约束限制**： 不涉及。
+    * currentSystemTime  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ShowStepOutputsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets stepOutputs
-    *  stepOutputs
+    *  **参数解释**： 步骤输出列表，记录每个步骤输出的ID和结果信息。 **约束限制**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\OutputRespStepOutputs[]|null
     */
@@ -198,7 +198,7 @@ class ShowStepOutputsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets stepOutputs
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\OutputRespStepOutputs[]|null $stepOutputs stepOutputs
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\OutputRespStepOutputs[]|null $stepOutputs **参数解释**： 步骤输出列表，记录每个步骤输出的ID和结果信息。 **约束限制**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ShowStepOutputsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets currentSystemTime
-    *  currentSystemTime
+    *  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ShowStepOutputsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets currentSystemTime
     *
-    * @param int|null $currentSystemTime currentSystemTime
+    * @param int|null $currentSystemTime **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */

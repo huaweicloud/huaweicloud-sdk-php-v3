@@ -20,21 +20,21 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * publisherUniqueId  发布商ID
-    * userId  用户ID
-    * tenantId  租户ID
-    * description  描述
-    * logoUrl  图标URL
-    * website  网页地址
-    * supportUrl  地址
-    * sourceUrl  地址
-    * enName  英文名
-    * name  名称
-    * authStatus  授权状态
-    * isDelete  是否删除
-    * lastUpdateUserName  最后更新人
-    * lastUpdateUserId  最后更新人ID
-    * lastUpdateTime  最后更新时间
+    * publisherUniqueId  **参数解释**： 发布商ID。可通过[查询发布商详情](ShowPublisher.xml)查询。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * tenantId  **参数解释**： 租户ID。 **取值范围**： 不涉及。
+    * description  **参数解释**： 发布商描述。 **取值范围**： 不涉及。
+    * logoUrl  **参数解释**： 发布商图标URL。 **取值范围**： 不涉及。
+    * website  **参数解释**： 创建发布商时填入的网页地址。 **取值范围**： 不涉及。
+    * supportUrl  **参数解释**： 创建发布商时填入的帮助地址。 **取值范围**： 不涉及。
+    * sourceUrl  **参数解释**： 创建发布商时填入的源地址。 **取值范围**： 不涉及。
+    * enName  **参数解释**： 发布商英文名。 **取值范围**： 不涉及。
+    * name  **参数解释**： 发布商中文名。 **取值范围**： 不涉及。
+    * authStatus  **参数解释**： 授权状态。 **取值范围**： 不涉及。
+    * isDelete  **参数解释**： 是否删除。 **取值范围**： - 0：未删除。 - 1：已删除。
+    * lastUpdateUserName  **参数解释**： 最后更新人名称。 **取值范围**： 不涉及。
+    * lastUpdateUserId  **参数解释**： 最后更新人用户ID。 **取值范围**： 不涉及。
+    * lastUpdateTime  **参数解释**： 最后更新时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -58,21 +58,21 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * publisherUniqueId  发布商ID
-    * userId  用户ID
-    * tenantId  租户ID
-    * description  描述
-    * logoUrl  图标URL
-    * website  网页地址
-    * supportUrl  地址
-    * sourceUrl  地址
-    * enName  英文名
-    * name  名称
-    * authStatus  授权状态
-    * isDelete  是否删除
-    * lastUpdateUserName  最后更新人
-    * lastUpdateUserId  最后更新人ID
-    * lastUpdateTime  最后更新时间
+    * publisherUniqueId  **参数解释**： 发布商ID。可通过[查询发布商详情](ShowPublisher.xml)查询。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * tenantId  **参数解释**： 租户ID。 **取值范围**： 不涉及。
+    * description  **参数解释**： 发布商描述。 **取值范围**： 不涉及。
+    * logoUrl  **参数解释**： 发布商图标URL。 **取值范围**： 不涉及。
+    * website  **参数解释**： 创建发布商时填入的网页地址。 **取值范围**： 不涉及。
+    * supportUrl  **参数解释**： 创建发布商时填入的帮助地址。 **取值范围**： 不涉及。
+    * sourceUrl  **参数解释**： 创建发布商时填入的源地址。 **取值范围**： 不涉及。
+    * enName  **参数解释**： 发布商英文名。 **取值范围**： 不涉及。
+    * name  **参数解释**： 发布商中文名。 **取值范围**： 不涉及。
+    * authStatus  **参数解释**： 授权状态。 **取值范围**： 不涉及。
+    * isDelete  **参数解释**： 是否删除。 **取值范围**： - 0：未删除。 - 1：已删除。
+    * lastUpdateUserName  **参数解释**： 最后更新人名称。 **取值范围**： 不涉及。
+    * lastUpdateUserId  **参数解释**： 最后更新人用户ID。 **取值范围**： 不涉及。
+    * lastUpdateTime  **参数解释**： 最后更新时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -117,21 +117,21 @@ class PublisherVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * publisherUniqueId  发布商ID
-    * userId  用户ID
-    * tenantId  租户ID
-    * description  描述
-    * logoUrl  图标URL
-    * website  网页地址
-    * supportUrl  地址
-    * sourceUrl  地址
-    * enName  英文名
-    * name  名称
-    * authStatus  授权状态
-    * isDelete  是否删除
-    * lastUpdateUserName  最后更新人
-    * lastUpdateUserId  最后更新人ID
-    * lastUpdateTime  最后更新时间
+    * publisherUniqueId  **参数解释**： 发布商ID。可通过[查询发布商详情](ShowPublisher.xml)查询。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * tenantId  **参数解释**： 租户ID。 **取值范围**： 不涉及。
+    * description  **参数解释**： 发布商描述。 **取值范围**： 不涉及。
+    * logoUrl  **参数解释**： 发布商图标URL。 **取值范围**： 不涉及。
+    * website  **参数解释**： 创建发布商时填入的网页地址。 **取值范围**： 不涉及。
+    * supportUrl  **参数解释**： 创建发布商时填入的帮助地址。 **取值范围**： 不涉及。
+    * sourceUrl  **参数解释**： 创建发布商时填入的源地址。 **取值范围**： 不涉及。
+    * enName  **参数解释**： 发布商英文名。 **取值范围**： 不涉及。
+    * name  **参数解释**： 发布商中文名。 **取值范围**： 不涉及。
+    * authStatus  **参数解释**： 授权状态。 **取值范围**： 不涉及。
+    * isDelete  **参数解释**： 是否删除。 **取值范围**： - 0：未删除。 - 1：已删除。
+    * lastUpdateUserName  **参数解释**： 最后更新人名称。 **取值范围**： 不涉及。
+    * lastUpdateUserId  **参数解释**： 最后更新人用户ID。 **取值范围**： 不涉及。
+    * lastUpdateTime  **参数解释**： 最后更新时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -155,21 +155,21 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * publisherUniqueId  发布商ID
-    * userId  用户ID
-    * tenantId  租户ID
-    * description  描述
-    * logoUrl  图标URL
-    * website  网页地址
-    * supportUrl  地址
-    * sourceUrl  地址
-    * enName  英文名
-    * name  名称
-    * authStatus  授权状态
-    * isDelete  是否删除
-    * lastUpdateUserName  最后更新人
-    * lastUpdateUserId  最后更新人ID
-    * lastUpdateTime  最后更新时间
+    * publisherUniqueId  **参数解释**： 发布商ID。可通过[查询发布商详情](ShowPublisher.xml)查询。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * tenantId  **参数解释**： 租户ID。 **取值范围**： 不涉及。
+    * description  **参数解释**： 发布商描述。 **取值范围**： 不涉及。
+    * logoUrl  **参数解释**： 发布商图标URL。 **取值范围**： 不涉及。
+    * website  **参数解释**： 创建发布商时填入的网页地址。 **取值范围**： 不涉及。
+    * supportUrl  **参数解释**： 创建发布商时填入的帮助地址。 **取值范围**： 不涉及。
+    * sourceUrl  **参数解释**： 创建发布商时填入的源地址。 **取值范围**： 不涉及。
+    * enName  **参数解释**： 发布商英文名。 **取值范围**： 不涉及。
+    * name  **参数解释**： 发布商中文名。 **取值范围**： 不涉及。
+    * authStatus  **参数解释**： 授权状态。 **取值范围**： 不涉及。
+    * isDelete  **参数解释**： 是否删除。 **取值范围**： - 0：未删除。 - 1：已删除。
+    * lastUpdateUserName  **参数解释**： 最后更新人名称。 **取值范围**： 不涉及。
+    * lastUpdateUserId  **参数解释**： 最后更新人用户ID。 **取值范围**： 不涉及。
+    * lastUpdateTime  **参数解释**： 最后更新时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -193,21 +193,21 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * publisherUniqueId  发布商ID
-    * userId  用户ID
-    * tenantId  租户ID
-    * description  描述
-    * logoUrl  图标URL
-    * website  网页地址
-    * supportUrl  地址
-    * sourceUrl  地址
-    * enName  英文名
-    * name  名称
-    * authStatus  授权状态
-    * isDelete  是否删除
-    * lastUpdateUserName  最后更新人
-    * lastUpdateUserId  最后更新人ID
-    * lastUpdateTime  最后更新时间
+    * publisherUniqueId  **参数解释**： 发布商ID。可通过[查询发布商详情](ShowPublisher.xml)查询。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * tenantId  **参数解释**： 租户ID。 **取值范围**： 不涉及。
+    * description  **参数解释**： 发布商描述。 **取值范围**： 不涉及。
+    * logoUrl  **参数解释**： 发布商图标URL。 **取值范围**： 不涉及。
+    * website  **参数解释**： 创建发布商时填入的网页地址。 **取值范围**： 不涉及。
+    * supportUrl  **参数解释**： 创建发布商时填入的帮助地址。 **取值范围**： 不涉及。
+    * sourceUrl  **参数解释**： 创建发布商时填入的源地址。 **取值范围**： 不涉及。
+    * enName  **参数解释**： 发布商英文名。 **取值范围**： 不涉及。
+    * name  **参数解释**： 发布商中文名。 **取值范围**： 不涉及。
+    * authStatus  **参数解释**： 授权状态。 **取值范围**： 不涉及。
+    * isDelete  **参数解释**： 是否删除。 **取值范围**： - 0：未删除。 - 1：已删除。
+    * lastUpdateUserName  **参数解释**： 最后更新人名称。 **取值范围**： 不涉及。
+    * lastUpdateUserId  **参数解释**： 最后更新人用户ID。 **取值范围**： 不涉及。
+    * lastUpdateTime  **参数解释**： 最后更新时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -328,7 +328,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets publisherUniqueId
-    *  发布商ID
+    *  **参数解释**： 发布商ID。可通过[查询发布商详情](ShowPublisher.xml)查询。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -340,7 +340,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
     /**
     * Sets publisherUniqueId
     *
-    * @param string|null $publisherUniqueId 发布商ID
+    * @param string|null $publisherUniqueId **参数解释**： 发布商ID。可通过[查询发布商详情](ShowPublisher.xml)查询。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  用户ID
+    *  **参数解释**： 用户ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -364,7 +364,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string|null $userId 用户ID
+    * @param string|null $userId **参数解释**： 用户ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -376,7 +376,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
-    *  租户ID
+    *  **参数解释**： 租户ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -388,7 +388,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string|null $tenantId 租户ID
+    * @param string|null $tenantId **参数解释**： 租户ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -400,7 +400,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释**： 发布商描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -412,7 +412,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释**： 发布商描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -424,7 +424,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets logoUrl
-    *  图标URL
+    *  **参数解释**： 发布商图标URL。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -436,7 +436,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
     /**
     * Sets logoUrl
     *
-    * @param string|null $logoUrl 图标URL
+    * @param string|null $logoUrl **参数解释**： 发布商图标URL。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -448,7 +448,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets website
-    *  网页地址
+    *  **参数解释**： 创建发布商时填入的网页地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -460,7 +460,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
     /**
     * Sets website
     *
-    * @param string|null $website 网页地址
+    * @param string|null $website **参数解释**： 创建发布商时填入的网页地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -472,7 +472,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportUrl
-    *  地址
+    *  **参数解释**： 创建发布商时填入的帮助地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -484,7 +484,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
     /**
     * Sets supportUrl
     *
-    * @param string|null $supportUrl 地址
+    * @param string|null $supportUrl **参数解释**： 创建发布商时填入的帮助地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -496,7 +496,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceUrl
-    *  地址
+    *  **参数解释**： 创建发布商时填入的源地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -508,7 +508,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
     /**
     * Sets sourceUrl
     *
-    * @param string|null $sourceUrl 地址
+    * @param string|null $sourceUrl **参数解释**： 创建发布商时填入的源地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -520,7 +520,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets enName
-    *  英文名
+    *  **参数解释**： 发布商英文名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -532,7 +532,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
     /**
     * Sets enName
     *
-    * @param string|null $enName 英文名
+    * @param string|null $enName **参数解释**： 发布商英文名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -544,7 +544,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  **参数解释**： 发布商中文名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -556,7 +556,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string|null $name **参数解释**： 发布商中文名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -568,7 +568,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets authStatus
-    *  授权状态
+    *  **参数解释**： 授权状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -580,7 +580,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
     /**
     * Sets authStatus
     *
-    * @param string|null $authStatus 授权状态
+    * @param string|null $authStatus **参数解释**： 授权状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -592,7 +592,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDelete
-    *  是否删除
+    *  **参数解释**： 是否删除。 **取值范围**： - 0：未删除。 - 1：已删除。
     *
     * @return int|null
     */
@@ -604,7 +604,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
     /**
     * Sets isDelete
     *
-    * @param int|null $isDelete 是否删除
+    * @param int|null $isDelete **参数解释**： 是否删除。 **取值范围**： - 0：未删除。 - 1：已删除。
     *
     * @return $this
     */
@@ -616,7 +616,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastUpdateUserName
-    *  最后更新人
+    *  **参数解释**： 最后更新人名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -628,7 +628,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
     /**
     * Sets lastUpdateUserName
     *
-    * @param string|null $lastUpdateUserName 最后更新人
+    * @param string|null $lastUpdateUserName **参数解释**： 最后更新人名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -640,7 +640,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastUpdateUserId
-    *  最后更新人ID
+    *  **参数解释**： 最后更新人用户ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -652,7 +652,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
     /**
     * Sets lastUpdateUserId
     *
-    * @param string|null $lastUpdateUserId 最后更新人ID
+    * @param string|null $lastUpdateUserId **参数解释**： 最后更新人用户ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -664,7 +664,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastUpdateTime
-    *  最后更新时间
+    *  **参数解释**： 最后更新时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -676,7 +676,7 @@ class PublisherVO implements ModelInterface, ArrayAccess
     /**
     * Sets lastUpdateTime
     *
-    * @param string|null $lastUpdateTime 最后更新时间
+    * @param string|null $lastUpdateTime **参数解释**： 最后更新时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */

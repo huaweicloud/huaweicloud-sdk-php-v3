@@ -20,16 +20,16 @@ class RuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  规则实例ID
-    * type  规则类型ID
-    * name  规则名称
-    * version  规则版本
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * isValid  是否生效
-    * editable  是否可编辑
-    * content  规则属性列表
+    * id  **参数解释**： 规则实例ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * type  **参数解释**： 规则类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 规则名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则版本。 **取值范围**： 不涉及。
+    * pluginId  **参数解释**： 插件ID。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名称。 **取值范围**： 不涉及。
+    * pluginVersion  **参数解释**： 插件版本号。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 规则是否生效。 **取值范围**： - true：规则生效。 - false：规则不生效。
+    * editable  **参数解释**： 规则是否可编辑。 **取值范围**： - true：规则可编辑。 - false：规则不可编辑。
+    * content  **参数解释**： 规则实例集合。 **取值范围**： 不涉及。
     * parent  parent
     *
     * @var string[]
@@ -50,16 +50,16 @@ class RuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  规则实例ID
-    * type  规则类型ID
-    * name  规则名称
-    * version  规则版本
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * isValid  是否生效
-    * editable  是否可编辑
-    * content  规则属性列表
+    * id  **参数解释**： 规则实例ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * type  **参数解释**： 规则类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 规则名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则版本。 **取值范围**： 不涉及。
+    * pluginId  **参数解释**： 插件ID。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名称。 **取值范围**： 不涉及。
+    * pluginVersion  **参数解释**： 插件版本号。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 规则是否生效。 **取值范围**： - true：规则生效。 - false：规则不生效。
+    * editable  **参数解释**： 规则是否可编辑。 **取值范围**： - true：规则可编辑。 - false：规则不可编辑。
+    * content  **参数解释**： 规则实例集合。 **取值范围**： 不涉及。
     * parent  parent
     *
     * @var string[]
@@ -101,16 +101,16 @@ class RuleInstance implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  规则实例ID
-    * type  规则类型ID
-    * name  规则名称
-    * version  规则版本
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * isValid  是否生效
-    * editable  是否可编辑
-    * content  规则属性列表
+    * id  **参数解释**： 规则实例ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * type  **参数解释**： 规则类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 规则名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则版本。 **取值范围**： 不涉及。
+    * pluginId  **参数解释**： 插件ID。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名称。 **取值范围**： 不涉及。
+    * pluginVersion  **参数解释**： 插件版本号。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 规则是否生效。 **取值范围**： - true：规则生效。 - false：规则不生效。
+    * editable  **参数解释**： 规则是否可编辑。 **取值范围**： - true：规则可编辑。 - false：规则不可编辑。
+    * content  **参数解释**： 规则实例集合。 **取值范围**： 不涉及。
     * parent  parent
     *
     * @var string[]
@@ -131,16 +131,16 @@ class RuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  规则实例ID
-    * type  规则类型ID
-    * name  规则名称
-    * version  规则版本
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * isValid  是否生效
-    * editable  是否可编辑
-    * content  规则属性列表
+    * id  **参数解释**： 规则实例ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * type  **参数解释**： 规则类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 规则名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则版本。 **取值范围**： 不涉及。
+    * pluginId  **参数解释**： 插件ID。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名称。 **取值范围**： 不涉及。
+    * pluginVersion  **参数解释**： 插件版本号。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 规则是否生效。 **取值范围**： - true：规则生效。 - false：规则不生效。
+    * editable  **参数解释**： 规则是否可编辑。 **取值范围**： - true：规则可编辑。 - false：规则不可编辑。
+    * content  **参数解释**： 规则实例集合。 **取值范围**： 不涉及。
     * parent  parent
     *
     * @var string[]
@@ -161,16 +161,16 @@ class RuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  规则实例ID
-    * type  规则类型ID
-    * name  规则名称
-    * version  规则版本
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * isValid  是否生效
-    * editable  是否可编辑
-    * content  规则属性列表
+    * id  **参数解释**： 规则实例ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * type  **参数解释**： 规则类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 规则名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则版本。 **取值范围**： 不涉及。
+    * pluginId  **参数解释**： 插件ID。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名称。 **取值范围**： 不涉及。
+    * pluginVersion  **参数解释**： 插件版本号。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 规则是否生效。 **取值范围**： - true：规则生效。 - false：规则不生效。
+    * editable  **参数解释**： 规则是否可编辑。 **取值范围**： - true：规则可编辑。 - false：规则不可编辑。
+    * content  **参数解释**： 规则实例集合。 **取值范围**： 不涉及。
     * parent  parent
     *
     * @var string[]
@@ -302,7 +302,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  规则实例ID
+    *  **参数解释**： 规则实例ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string
     */
@@ -314,7 +314,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 规则实例ID
+    * @param string $id **参数解释**： 规则实例ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -326,7 +326,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  规则类型ID
+    *  **参数解释**： 规则类型。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -338,7 +338,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 规则类型ID
+    * @param string $type **参数解释**： 规则类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -350,7 +350,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  规则名称
+    *  **参数解释**： 规则名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -362,7 +362,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 规则名称
+    * @param string $name **参数解释**： 规则名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -374,7 +374,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  规则版本
+    *  **参数解释**： 规则版本。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -386,7 +386,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 规则版本
+    * @param string $version **参数解释**： 规则版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -398,7 +398,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginId
-    *  插件ID
+    *  **参数解释**： 插件ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -410,7 +410,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
     /**
     * Sets pluginId
     *
-    * @param string|null $pluginId 插件ID
+    * @param string|null $pluginId **参数解释**： 插件ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -422,7 +422,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginName
-    *  插件名称
+    *  **参数解释**： 插件名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -434,7 +434,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 插件名称
+    * @param string|null $pluginName **参数解释**： 插件名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -446,7 +446,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginVersion
-    *  插件版本号
+    *  **参数解释**： 插件版本号。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -458,7 +458,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
     /**
     * Sets pluginVersion
     *
-    * @param string|null $pluginVersion 插件版本号
+    * @param string|null $pluginVersion **参数解释**： 插件版本号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -470,7 +470,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets isValid
-    *  是否生效
+    *  **参数解释**： 规则是否生效。 **取值范围**： - true：规则生效。 - false：规则不生效。
     *
     * @return bool
     */
@@ -482,7 +482,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
     /**
     * Sets isValid
     *
-    * @param bool $isValid 是否生效
+    * @param bool $isValid **参数解释**： 规则是否生效。 **取值范围**： - true：规则生效。 - false：规则不生效。
     *
     * @return $this
     */
@@ -494,7 +494,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets editable
-    *  是否可编辑
+    *  **参数解释**： 规则是否可编辑。 **取值范围**： - true：规则可编辑。 - false：规则不可编辑。
     *
     * @return bool|null
     */
@@ -506,7 +506,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
     /**
     * Sets editable
     *
-    * @param bool|null $editable 是否可编辑
+    * @param bool|null $editable **参数解释**： 规则是否可编辑。 **取值范围**： - true：规则可编辑。 - false：规则不可编辑。
     *
     * @return $this
     */
@@ -518,7 +518,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets content
-    *  规则属性列表
+    *  **参数解释**： 规则实例集合。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleInstanceContent[]
     */
@@ -530,7 +530,7 @@ class RuleInstance implements ModelInterface, ArrayAccess
     /**
     * Sets content
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleInstanceContent[] $content 规则属性列表
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleInstanceContent[] $content **参数解释**： 规则实例集合。 **取值范围**： 不涉及。
     *
     * @return $this
     */

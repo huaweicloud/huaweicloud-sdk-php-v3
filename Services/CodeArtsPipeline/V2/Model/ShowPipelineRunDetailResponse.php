@@ -21,32 +21,32 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  流水线运行实例ID
-    * pipelineId  流水线ID
-    * manifestVersion  流水线版本
-    * name  流水线名称
-    * description  运行描述
-    * isPublish  是否为变更流水线
-    * executorId  运行人ID
-    * executorName  运行人名称
-    * status  状态
-    * triggerType  触发类型
-    * runNumber  运行序号
-    * startTime  开始时间
-    * endTime  结束时间
-    * stages  阶段信息
-    * domainId  租户ID
-    * projectId  项目ID
-    * region  局点
-    * componentId  组件ID
-    * language  语言
-    * sources  运行源信息
-    * artifacts  流水线运行产物
-    * subjectId  流水线运行实例ID
-    * groupId  分组ID
-    * groupName  分组名称
-    * detailUrl  详情页地址
-    * currentSystemTime  当前系统时间
+    * id  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * manifestVersion  **参数解释**： 流水线版本。 **取值范围**： 默认3.0。
+    * name  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
+    * description  **参数解释**： 流水线运行描述。 **取值范围**： 最长1024字符。
+    * isPublish  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
+    * executorId  **参数解释**： 运行人ID，用户的userId。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * executorName  **参数解释**： 运行人名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
+    * triggerType  **参数解释**： 流水线触发类型。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **取值范围**： 不涉及。
+    * runNumber  **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
+    * startTime  **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
+    * stages  **参数解释**： 阶段运行信息列表，包含各个阶段的详细运行信息。 **约束限制**： 不涉及。
+    * domainId  **参数解释**： 租户ID，用户账号的domainId。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * region  **参数解释**： 局点。 **取值范围**： 不涉及。
+    * componentId  **参数解释**： 微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **取值范围**： 不涉及。
+    * language  **参数解释**： 语言，暂时仅包含中英文。 **取值范围**： zh-cn, en-us。
+    * sources  **参数解释**： 流水线执行源信息。 **取值范围**： 不涉及。
+    * artifacts  **参数解释**： 流水线运行产物。 **取值范围**： 不涉及。
+    * subjectId  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 分组ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * groupName  **参数解释**： 分组名称。 **取值范围**： 不涉及。
+    * detailUrl  **参数解释**： 详情页地址。 **取值范围**： 不涉及。
+    * currentSystemTime  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,32 +81,32 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  流水线运行实例ID
-    * pipelineId  流水线ID
-    * manifestVersion  流水线版本
-    * name  流水线名称
-    * description  运行描述
-    * isPublish  是否为变更流水线
-    * executorId  运行人ID
-    * executorName  运行人名称
-    * status  状态
-    * triggerType  触发类型
-    * runNumber  运行序号
-    * startTime  开始时间
-    * endTime  结束时间
-    * stages  阶段信息
-    * domainId  租户ID
-    * projectId  项目ID
-    * region  局点
-    * componentId  组件ID
-    * language  语言
-    * sources  运行源信息
-    * artifacts  流水线运行产物
-    * subjectId  流水线运行实例ID
-    * groupId  分组ID
-    * groupName  分组名称
-    * detailUrl  详情页地址
-    * currentSystemTime  当前系统时间
+    * id  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * manifestVersion  **参数解释**： 流水线版本。 **取值范围**： 默认3.0。
+    * name  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
+    * description  **参数解释**： 流水线运行描述。 **取值范围**： 最长1024字符。
+    * isPublish  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
+    * executorId  **参数解释**： 运行人ID，用户的userId。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * executorName  **参数解释**： 运行人名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
+    * triggerType  **参数解释**： 流水线触发类型。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **取值范围**： 不涉及。
+    * runNumber  **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
+    * startTime  **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
+    * stages  **参数解释**： 阶段运行信息列表，包含各个阶段的详细运行信息。 **约束限制**： 不涉及。
+    * domainId  **参数解释**： 租户ID，用户账号的domainId。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * region  **参数解释**： 局点。 **取值范围**： 不涉及。
+    * componentId  **参数解释**： 微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **取值范围**： 不涉及。
+    * language  **参数解释**： 语言，暂时仅包含中英文。 **取值范围**： zh-cn, en-us。
+    * sources  **参数解释**： 流水线执行源信息。 **取值范围**： 不涉及。
+    * artifacts  **参数解释**： 流水线运行产物。 **取值范围**： 不涉及。
+    * subjectId  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 分组ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * groupName  **参数解释**： 分组名称。 **取值范围**： 不涉及。
+    * detailUrl  **参数解释**： 详情页地址。 **取值范围**： 不涉及。
+    * currentSystemTime  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -162,32 +162,32 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  流水线运行实例ID
-    * pipelineId  流水线ID
-    * manifestVersion  流水线版本
-    * name  流水线名称
-    * description  运行描述
-    * isPublish  是否为变更流水线
-    * executorId  运行人ID
-    * executorName  运行人名称
-    * status  状态
-    * triggerType  触发类型
-    * runNumber  运行序号
-    * startTime  开始时间
-    * endTime  结束时间
-    * stages  阶段信息
-    * domainId  租户ID
-    * projectId  项目ID
-    * region  局点
-    * componentId  组件ID
-    * language  语言
-    * sources  运行源信息
-    * artifacts  流水线运行产物
-    * subjectId  流水线运行实例ID
-    * groupId  分组ID
-    * groupName  分组名称
-    * detailUrl  详情页地址
-    * currentSystemTime  当前系统时间
+    * id  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * manifestVersion  **参数解释**： 流水线版本。 **取值范围**： 默认3.0。
+    * name  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
+    * description  **参数解释**： 流水线运行描述。 **取值范围**： 最长1024字符。
+    * isPublish  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
+    * executorId  **参数解释**： 运行人ID，用户的userId。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * executorName  **参数解释**： 运行人名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
+    * triggerType  **参数解释**： 流水线触发类型。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **取值范围**： 不涉及。
+    * runNumber  **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
+    * startTime  **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
+    * stages  **参数解释**： 阶段运行信息列表，包含各个阶段的详细运行信息。 **约束限制**： 不涉及。
+    * domainId  **参数解释**： 租户ID，用户账号的domainId。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * region  **参数解释**： 局点。 **取值范围**： 不涉及。
+    * componentId  **参数解释**： 微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **取值范围**： 不涉及。
+    * language  **参数解释**： 语言，暂时仅包含中英文。 **取值范围**： zh-cn, en-us。
+    * sources  **参数解释**： 流水线执行源信息。 **取值范围**： 不涉及。
+    * artifacts  **参数解释**： 流水线运行产物。 **取值范围**： 不涉及。
+    * subjectId  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 分组ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * groupName  **参数解释**： 分组名称。 **取值范围**： 不涉及。
+    * detailUrl  **参数解释**： 详情页地址。 **取值范围**： 不涉及。
+    * currentSystemTime  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -222,32 +222,32 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  流水线运行实例ID
-    * pipelineId  流水线ID
-    * manifestVersion  流水线版本
-    * name  流水线名称
-    * description  运行描述
-    * isPublish  是否为变更流水线
-    * executorId  运行人ID
-    * executorName  运行人名称
-    * status  状态
-    * triggerType  触发类型
-    * runNumber  运行序号
-    * startTime  开始时间
-    * endTime  结束时间
-    * stages  阶段信息
-    * domainId  租户ID
-    * projectId  项目ID
-    * region  局点
-    * componentId  组件ID
-    * language  语言
-    * sources  运行源信息
-    * artifacts  流水线运行产物
-    * subjectId  流水线运行实例ID
-    * groupId  分组ID
-    * groupName  分组名称
-    * detailUrl  详情页地址
-    * currentSystemTime  当前系统时间
+    * id  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * manifestVersion  **参数解释**： 流水线版本。 **取值范围**： 默认3.0。
+    * name  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
+    * description  **参数解释**： 流水线运行描述。 **取值范围**： 最长1024字符。
+    * isPublish  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
+    * executorId  **参数解释**： 运行人ID，用户的userId。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * executorName  **参数解释**： 运行人名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
+    * triggerType  **参数解释**： 流水线触发类型。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **取值范围**： 不涉及。
+    * runNumber  **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
+    * startTime  **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
+    * stages  **参数解释**： 阶段运行信息列表，包含各个阶段的详细运行信息。 **约束限制**： 不涉及。
+    * domainId  **参数解释**： 租户ID，用户账号的domainId。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * region  **参数解释**： 局点。 **取值范围**： 不涉及。
+    * componentId  **参数解释**： 微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **取值范围**： 不涉及。
+    * language  **参数解释**： 语言，暂时仅包含中英文。 **取值范围**： zh-cn, en-us。
+    * sources  **参数解释**： 流水线执行源信息。 **取值范围**： 不涉及。
+    * artifacts  **参数解释**： 流水线运行产物。 **取值范围**： 不涉及。
+    * subjectId  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 分组ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * groupName  **参数解释**： 分组名称。 **取值范围**： 不涉及。
+    * detailUrl  **参数解释**： 详情页地址。 **取值范围**： 不涉及。
+    * currentSystemTime  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -282,32 +282,32 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  流水线运行实例ID
-    * pipelineId  流水线ID
-    * manifestVersion  流水线版本
-    * name  流水线名称
-    * description  运行描述
-    * isPublish  是否为变更流水线
-    * executorId  运行人ID
-    * executorName  运行人名称
-    * status  状态
-    * triggerType  触发类型
-    * runNumber  运行序号
-    * startTime  开始时间
-    * endTime  结束时间
-    * stages  阶段信息
-    * domainId  租户ID
-    * projectId  项目ID
-    * region  局点
-    * componentId  组件ID
-    * language  语言
-    * sources  运行源信息
-    * artifacts  流水线运行产物
-    * subjectId  流水线运行实例ID
-    * groupId  分组ID
-    * groupName  分组名称
-    * detailUrl  详情页地址
-    * currentSystemTime  当前系统时间
+    * id  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * manifestVersion  **参数解释**： 流水线版本。 **取值范围**： 默认3.0。
+    * name  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
+    * description  **参数解释**： 流水线运行描述。 **取值范围**： 最长1024字符。
+    * isPublish  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
+    * executorId  **参数解释**： 运行人ID，用户的userId。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * executorName  **参数解释**： 运行人名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
+    * triggerType  **参数解释**： 流水线触发类型。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **取值范围**： 不涉及。
+    * runNumber  **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
+    * startTime  **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
+    * stages  **参数解释**： 阶段运行信息列表，包含各个阶段的详细运行信息。 **约束限制**： 不涉及。
+    * domainId  **参数解释**： 租户ID，用户账号的domainId。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * region  **参数解释**： 局点。 **取值范围**： 不涉及。
+    * componentId  **参数解释**： 微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **取值范围**： 不涉及。
+    * language  **参数解释**： 语言，暂时仅包含中英文。 **取值范围**： zh-cn, en-us。
+    * sources  **参数解释**： 流水线执行源信息。 **取值范围**： 不涉及。
+    * artifacts  **参数解释**： 流水线运行产物。 **取值范围**： 不涉及。
+    * subjectId  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 分组ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * groupName  **参数解释**： 分组名称。 **取值范围**： 不涉及。
+    * detailUrl  **参数解释**： 详情页地址。 **取值范围**： 不涉及。
+    * currentSystemTime  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -450,7 +450,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  流水线运行实例ID
+    *  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -462,7 +462,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 流水线运行实例ID
+    * @param string|null $id **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */
@@ -474,7 +474,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelineId
-    *  流水线ID
+    *  **参数解释**： 流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -486,7 +486,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pipelineId
     *
-    * @param string|null $pipelineId 流水线ID
+    * @param string|null $pipelineId **参数解释**： 流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */
@@ -498,7 +498,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets manifestVersion
-    *  流水线版本
+    *  **参数解释**： 流水线版本。 **取值范围**： 默认3.0。
     *
     * @return string|null
     */
@@ -510,7 +510,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets manifestVersion
     *
-    * @param string|null $manifestVersion 流水线版本
+    * @param string|null $manifestVersion **参数解释**： 流水线版本。 **取值范围**： 默认3.0。
     *
     * @return $this
     */
@@ -522,7 +522,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  流水线名称
+    *  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
     *
     * @return string|null
     */
@@ -534,7 +534,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 流水线名称
+    * @param string|null $name **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
     *
     * @return $this
     */
@@ -546,7 +546,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  运行描述
+    *  **参数解释**： 流水线运行描述。 **取值范围**： 最长1024字符。
     *
     * @return string|null
     */
@@ -558,7 +558,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 运行描述
+    * @param string|null $description **参数解释**： 流水线运行描述。 **取值范围**： 最长1024字符。
     *
     * @return $this
     */
@@ -570,7 +570,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPublish
-    *  是否为变更流水线
+    *  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
     *
     * @return bool|null
     */
@@ -582,7 +582,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isPublish
     *
-    * @param bool|null $isPublish 是否为变更流水线
+    * @param bool|null $isPublish **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
     *
     * @return $this
     */
@@ -594,7 +594,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets executorId
-    *  运行人ID
+    *  **参数解释**： 运行人ID，用户的userId。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -606,7 +606,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets executorId
     *
-    * @param string|null $executorId 运行人ID
+    * @param string|null $executorId **参数解释**： 运行人ID，用户的userId。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */
@@ -618,7 +618,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets executorName
-    *  运行人名称
+    *  **参数解释**： 运行人名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -630,7 +630,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets executorName
     *
-    * @param string|null $executorName 运行人名称
+    * @param string|null $executorName **参数解释**： 运行人名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -642,7 +642,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
     *
     * @return string|null
     */
@@ -654,7 +654,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态
+    * @param string|null $status **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
     *
     * @return $this
     */
@@ -666,7 +666,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets triggerType
-    *  触发类型
+    *  **参数解释**： 流水线触发类型。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -678,7 +678,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets triggerType
     *
-    * @param string|null $triggerType 触发类型
+    * @param string|null $triggerType **参数解释**： 流水线触发类型。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -690,7 +690,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets runNumber
-    *  运行序号
+    *  **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
     *
     * @return int|null
     */
@@ -702,7 +702,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets runNumber
     *
-    * @param int|null $runNumber 运行序号
+    * @param int|null $runNumber **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
     *
     * @return $this
     */
@@ -714,7 +714,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  开始时间
+    *  **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -726,7 +726,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime 开始时间
+    * @param int|null $startTime **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -738,7 +738,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间
+    *  **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -750,7 +750,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int|null $endTime 结束时间
+    * @param int|null $endTime **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -762,7 +762,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets stages
-    *  阶段信息
+    *  **参数解释**： 阶段运行信息列表，包含各个阶段的详细运行信息。 **约束限制**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StageRun[]|null
     */
@@ -774,7 +774,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets stages
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StageRun[]|null $stages 阶段信息
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StageRun[]|null $stages **参数解释**： 阶段运行信息列表，包含各个阶段的详细运行信息。 **约束限制**： 不涉及。
     *
     * @return $this
     */
@@ -786,7 +786,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  租户ID
+    *  **参数解释**： 租户ID，用户账号的domainId。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -798,7 +798,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 租户ID
+    * @param string|null $domainId **参数解释**： 租户ID，用户账号的domainId。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */
@@ -810,7 +810,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -822,7 +822,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */
@@ -834,7 +834,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  局点
+    *  **参数解释**： 局点。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -846,7 +846,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string|null $region 局点
+    * @param string|null $region **参数解释**： 局点。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -858,7 +858,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets componentId
-    *  组件ID
+    *  **参数解释**： 微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -870,7 +870,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets componentId
     *
-    * @param string|null $componentId 组件ID
+    * @param string|null $componentId **参数解释**： 微服务ID。可以通过[查询微服务列表](ListMicroservice.xml)接口获取，其中data.id即为微服务ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -882,7 +882,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  语言
+    *  **参数解释**： 语言，暂时仅包含中英文。 **取值范围**： zh-cn, en-us。
     *
     * @return string|null
     */
@@ -894,7 +894,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 语言
+    * @param string|null $language **参数解释**： 语言，暂时仅包含中英文。 **取值范围**： zh-cn, en-us。
     *
     * @return $this
     */
@@ -906,7 +906,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sources
-    *  运行源信息
+    *  **参数解释**： 流水线执行源信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RunPipelineSource[]|null
     */
@@ -918,7 +918,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sources
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RunPipelineSource[]|null $sources 运行源信息
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RunPipelineSource[]|null $sources **参数解释**： 流水线执行源信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -930,7 +930,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets artifacts
-    *  流水线运行产物
+    *  **参数解释**： 流水线运行产物。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PackageInfo[]|null
     */
@@ -942,7 +942,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets artifacts
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PackageInfo[]|null $artifacts 流水线运行产物
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PackageInfo[]|null $artifacts **参数解释**： 流水线运行产物。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -954,7 +954,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets subjectId
-    *  流水线运行实例ID
+    *  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -966,7 +966,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets subjectId
     *
-    * @param string|null $subjectId 流水线运行实例ID
+    * @param string|null $subjectId **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -978,7 +978,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  分组ID
+    *  **参数解释**： 分组ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -990,7 +990,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 分组ID
+    * @param string|null $groupId **参数解释**： 分组ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -1002,7 +1002,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  分组名称
+    *  **参数解释**： 分组名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1014,7 +1014,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 分组名称
+    * @param string|null $groupName **参数解释**： 分组名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1026,7 +1026,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets detailUrl
-    *  详情页地址
+    *  **参数解释**： 详情页地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1038,7 +1038,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets detailUrl
     *
-    * @param string|null $detailUrl 详情页地址
+    * @param string|null $detailUrl **参数解释**： 详情页地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1050,7 +1050,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets currentSystemTime
-    *  当前系统时间
+    *  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1062,7 +1062,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets currentSystemTime
     *
-    * @param int|null $currentSystemTime 当前系统时间
+    * @param int|null $currentSystemTime **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */

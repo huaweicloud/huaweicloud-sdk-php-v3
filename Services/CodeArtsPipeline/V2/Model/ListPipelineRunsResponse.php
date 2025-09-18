@@ -21,10 +21,10 @@ class ListPipelineRunsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * offset  起始偏移
-    * limit  查询大小
-    * total  总数
-    * pipelineRuns  流水线运行信息
+    * offset  **参数解释**： 起始偏移。 **取值范围**： 不涉及。
+    * limit  **参数解释**： 查询大小。 **取值范围**： 不涉及。
+    * total  **参数解释**： 执行记录总数。 **取值范围**： 不涉及。
+    * pipelineRuns  **参数解释**： 流水线运行信息列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -37,10 +37,10 @@ class ListPipelineRunsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * offset  起始偏移
-    * limit  查询大小
-    * total  总数
-    * pipelineRuns  流水线运行信息
+    * offset  **参数解释**： 起始偏移。 **取值范围**： 不涉及。
+    * limit  **参数解释**： 查询大小。 **取值范围**： 不涉及。
+    * total  **参数解释**： 执行记录总数。 **取值范围**： 不涉及。
+    * pipelineRuns  **参数解释**： 流水线运行信息列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -74,10 +74,10 @@ class ListPipelineRunsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * offset  起始偏移
-    * limit  查询大小
-    * total  总数
-    * pipelineRuns  流水线运行信息
+    * offset  **参数解释**： 起始偏移。 **取值范围**： 不涉及。
+    * limit  **参数解释**： 查询大小。 **取值范围**： 不涉及。
+    * total  **参数解释**： 执行记录总数。 **取值范围**： 不涉及。
+    * pipelineRuns  **参数解释**： 流水线运行信息列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,10 +90,10 @@ class ListPipelineRunsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * offset  起始偏移
-    * limit  查询大小
-    * total  总数
-    * pipelineRuns  流水线运行信息
+    * offset  **参数解释**： 起始偏移。 **取值范围**： 不涉及。
+    * limit  **参数解释**： 查询大小。 **取值范围**： 不涉及。
+    * total  **参数解释**： 执行记录总数。 **取值范围**： 不涉及。
+    * pipelineRuns  **参数解释**： 流水线运行信息列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -106,10 +106,10 @@ class ListPipelineRunsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * offset  起始偏移
-    * limit  查询大小
-    * total  总数
-    * pipelineRuns  流水线运行信息
+    * offset  **参数解释**： 起始偏移。 **取值范围**： 不涉及。
+    * limit  **参数解释**： 查询大小。 **取值范围**： 不涉及。
+    * total  **参数解释**： 执行记录总数。 **取值范围**： 不涉及。
+    * pipelineRuns  **参数解释**： 流水线运行信息列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class ListPipelineRunsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  起始偏移
+    *  **参数解释**： 起始偏移。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -220,7 +220,7 @@ class ListPipelineRunsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 起始偏移
+    * @param int|null $offset **参数解释**： 起始偏移。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class ListPipelineRunsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询大小
+    *  **参数解释**： 查询大小。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -244,7 +244,7 @@ class ListPipelineRunsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询大小
+    * @param int|null $limit **参数解释**： 查询大小。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class ListPipelineRunsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总数
+    *  **参数解释**： 执行记录总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -268,7 +268,7 @@ class ListPipelineRunsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总数
+    * @param int|null $total **参数解释**： 执行记录总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ListPipelineRunsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelineRuns
-    *  流水线运行信息
+    *  **参数解释**： 流水线运行信息列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListPipelineRunsPagePipelineRuns[]|null
     */
@@ -292,7 +292,7 @@ class ListPipelineRunsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pipelineRuns
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListPipelineRunsPagePipelineRuns[]|null $pipelineRuns 流水线运行信息
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListPipelineRunsPagePipelineRuns[]|null $pipelineRuns **参数解释**： 流水线运行信息列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

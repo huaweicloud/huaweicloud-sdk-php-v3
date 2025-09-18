@@ -20,21 +20,24 @@ class PluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * uniqueId  唯一ID
-    * iconUrl  图标URL
-    * runtimeAttribution  运行属性
-    * pluginName  插件名
-    * displayName  展示名
-    * businessType  业务类型
-    * businessTypeDisplayName  业务类型展示名
-    * description  描述
-    * isPrivate  是否私有
-    * region  局点
-    * maintainers  维护者
-    * version  版本号
-    * versionDescription  版本号说明
+    * uniqueId  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * iconUrl  **参数解释**： 插件展示图标URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * runtimeAttribution  **参数解释**： 运行属性。 **约束限制**： 不涉及。 **取值范围**： - agent：基于agent运行。 - agentless：无需agent运行。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 插件名。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **约束限制**： 仅支持输入大小写英文字母、中文、空格、数字、'-'、'_'、'.'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 业务类型。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * businessTypeDisplayName  **参数解释**： 插件业务类型展示名。 **约束限制**： 不涉及。 **取值范围**： - 构建。 - 代码检查。 - 部署。 - 测试。 - 通用。 **默认取值**： 不涉及。
+    * description  **参数解释**： 插件描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isPrivate  **参数解释**： 是否私有插件。 **约束限制**： 不涉及。 **取值范围**： - 1：私有插件。 - 0：公开插件。 **默认取值**： 0。
+    * region  **参数解释**： 局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainers  **参数解释**： 插件维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginCompositionType  **参数解释**： 插件的组合类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * manifestVersion  **参数解释**： 用于区分新旧版数据版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 插件版本号。 **约束限制**： 必须是类似 x.xx.xx（例如：1.0.2） 的格式，其中：x 是 1 到 2 位的数字（范围 0 到 99）。xx 是点后跟随的数字部分，且每部分可以是 1 位或 2 位数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * versionDescription  **参数解释**： 插件小版本版本号说明。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * executionInfo  executionInfo
-    * inputInfo  输入信息
+    * outputInfo  **参数解释**： 插件输出相关内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * inputInfo  **参数解释**： 输入信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -50,29 +53,35 @@ class PluginDTO implements ModelInterface, ArrayAccess
             'isPrivate' => 'int',
             'region' => 'string',
             'maintainers' => 'string',
+            'pluginCompositionType' => 'string',
+            'manifestVersion' => 'string',
             'version' => 'string',
             'versionDescription' => 'string',
             'executionInfo' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginDTOExecutionInfo',
+            'outputInfo' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginDTOOutputInfo[]',
             'inputInfo' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginDTOInputInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * uniqueId  唯一ID
-    * iconUrl  图标URL
-    * runtimeAttribution  运行属性
-    * pluginName  插件名
-    * displayName  展示名
-    * businessType  业务类型
-    * businessTypeDisplayName  业务类型展示名
-    * description  描述
-    * isPrivate  是否私有
-    * region  局点
-    * maintainers  维护者
-    * version  版本号
-    * versionDescription  版本号说明
+    * uniqueId  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * iconUrl  **参数解释**： 插件展示图标URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * runtimeAttribution  **参数解释**： 运行属性。 **约束限制**： 不涉及。 **取值范围**： - agent：基于agent运行。 - agentless：无需agent运行。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 插件名。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **约束限制**： 仅支持输入大小写英文字母、中文、空格、数字、'-'、'_'、'.'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 业务类型。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * businessTypeDisplayName  **参数解释**： 插件业务类型展示名。 **约束限制**： 不涉及。 **取值范围**： - 构建。 - 代码检查。 - 部署。 - 测试。 - 通用。 **默认取值**： 不涉及。
+    * description  **参数解释**： 插件描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isPrivate  **参数解释**： 是否私有插件。 **约束限制**： 不涉及。 **取值范围**： - 1：私有插件。 - 0：公开插件。 **默认取值**： 0。
+    * region  **参数解释**： 局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainers  **参数解释**： 插件维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginCompositionType  **参数解释**： 插件的组合类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * manifestVersion  **参数解释**： 用于区分新旧版数据版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 插件版本号。 **约束限制**： 必须是类似 x.xx.xx（例如：1.0.2） 的格式，其中：x 是 1 到 2 位的数字（范围 0 到 99）。xx 是点后跟随的数字部分，且每部分可以是 1 位或 2 位数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * versionDescription  **参数解释**： 插件小版本版本号说明。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * executionInfo  executionInfo
-    * inputInfo  输入信息
+    * outputInfo  **参数解释**： 插件输出相关内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * inputInfo  **参数解释**： 输入信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -88,9 +97,12 @@ class PluginDTO implements ModelInterface, ArrayAccess
         'isPrivate' => 'int32',
         'region' => null,
         'maintainers' => null,
+        'pluginCompositionType' => null,
+        'manifestVersion' => null,
         'version' => null,
         'versionDescription' => null,
         'executionInfo' => null,
+        'outputInfo' => null,
         'inputInfo' => null
     ];
 
@@ -117,21 +129,24 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * uniqueId  唯一ID
-    * iconUrl  图标URL
-    * runtimeAttribution  运行属性
-    * pluginName  插件名
-    * displayName  展示名
-    * businessType  业务类型
-    * businessTypeDisplayName  业务类型展示名
-    * description  描述
-    * isPrivate  是否私有
-    * region  局点
-    * maintainers  维护者
-    * version  版本号
-    * versionDescription  版本号说明
+    * uniqueId  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * iconUrl  **参数解释**： 插件展示图标URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * runtimeAttribution  **参数解释**： 运行属性。 **约束限制**： 不涉及。 **取值范围**： - agent：基于agent运行。 - agentless：无需agent运行。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 插件名。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **约束限制**： 仅支持输入大小写英文字母、中文、空格、数字、'-'、'_'、'.'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 业务类型。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * businessTypeDisplayName  **参数解释**： 插件业务类型展示名。 **约束限制**： 不涉及。 **取值范围**： - 构建。 - 代码检查。 - 部署。 - 测试。 - 通用。 **默认取值**： 不涉及。
+    * description  **参数解释**： 插件描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isPrivate  **参数解释**： 是否私有插件。 **约束限制**： 不涉及。 **取值范围**： - 1：私有插件。 - 0：公开插件。 **默认取值**： 0。
+    * region  **参数解释**： 局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainers  **参数解释**： 插件维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginCompositionType  **参数解释**： 插件的组合类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * manifestVersion  **参数解释**： 用于区分新旧版数据版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 插件版本号。 **约束限制**： 必须是类似 x.xx.xx（例如：1.0.2） 的格式，其中：x 是 1 到 2 位的数字（范围 0 到 99）。xx 是点后跟随的数字部分，且每部分可以是 1 位或 2 位数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * versionDescription  **参数解释**： 插件小版本版本号说明。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * executionInfo  executionInfo
-    * inputInfo  输入信息
+    * outputInfo  **参数解释**： 插件输出相关内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * inputInfo  **参数解释**： 输入信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -147,29 +162,35 @@ class PluginDTO implements ModelInterface, ArrayAccess
             'isPrivate' => 'is_private',
             'region' => 'region',
             'maintainers' => 'maintainers',
+            'pluginCompositionType' => 'plugin_composition_type',
+            'manifestVersion' => 'manifest_version',
             'version' => 'version',
             'versionDescription' => 'version_description',
             'executionInfo' => 'execution_info',
+            'outputInfo' => 'output_info',
             'inputInfo' => 'input_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * uniqueId  唯一ID
-    * iconUrl  图标URL
-    * runtimeAttribution  运行属性
-    * pluginName  插件名
-    * displayName  展示名
-    * businessType  业务类型
-    * businessTypeDisplayName  业务类型展示名
-    * description  描述
-    * isPrivate  是否私有
-    * region  局点
-    * maintainers  维护者
-    * version  版本号
-    * versionDescription  版本号说明
+    * uniqueId  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * iconUrl  **参数解释**： 插件展示图标URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * runtimeAttribution  **参数解释**： 运行属性。 **约束限制**： 不涉及。 **取值范围**： - agent：基于agent运行。 - agentless：无需agent运行。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 插件名。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **约束限制**： 仅支持输入大小写英文字母、中文、空格、数字、'-'、'_'、'.'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 业务类型。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * businessTypeDisplayName  **参数解释**： 插件业务类型展示名。 **约束限制**： 不涉及。 **取值范围**： - 构建。 - 代码检查。 - 部署。 - 测试。 - 通用。 **默认取值**： 不涉及。
+    * description  **参数解释**： 插件描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isPrivate  **参数解释**： 是否私有插件。 **约束限制**： 不涉及。 **取值范围**： - 1：私有插件。 - 0：公开插件。 **默认取值**： 0。
+    * region  **参数解释**： 局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainers  **参数解释**： 插件维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginCompositionType  **参数解释**： 插件的组合类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * manifestVersion  **参数解释**： 用于区分新旧版数据版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 插件版本号。 **约束限制**： 必须是类似 x.xx.xx（例如：1.0.2） 的格式，其中：x 是 1 到 2 位的数字（范围 0 到 99）。xx 是点后跟随的数字部分，且每部分可以是 1 位或 2 位数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * versionDescription  **参数解释**： 插件小版本版本号说明。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * executionInfo  executionInfo
-    * inputInfo  输入信息
+    * outputInfo  **参数解释**： 插件输出相关内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * inputInfo  **参数解释**： 输入信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -185,29 +206,35 @@ class PluginDTO implements ModelInterface, ArrayAccess
             'isPrivate' => 'setIsPrivate',
             'region' => 'setRegion',
             'maintainers' => 'setMaintainers',
+            'pluginCompositionType' => 'setPluginCompositionType',
+            'manifestVersion' => 'setManifestVersion',
             'version' => 'setVersion',
             'versionDescription' => 'setVersionDescription',
             'executionInfo' => 'setExecutionInfo',
+            'outputInfo' => 'setOutputInfo',
             'inputInfo' => 'setInputInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * uniqueId  唯一ID
-    * iconUrl  图标URL
-    * runtimeAttribution  运行属性
-    * pluginName  插件名
-    * displayName  展示名
-    * businessType  业务类型
-    * businessTypeDisplayName  业务类型展示名
-    * description  描述
-    * isPrivate  是否私有
-    * region  局点
-    * maintainers  维护者
-    * version  版本号
-    * versionDescription  版本号说明
+    * uniqueId  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * iconUrl  **参数解释**： 插件展示图标URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * runtimeAttribution  **参数解释**： 运行属性。 **约束限制**： 不涉及。 **取值范围**： - agent：基于agent运行。 - agentless：无需agent运行。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 插件名。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **约束限制**： 仅支持输入大小写英文字母、中文、空格、数字、'-'、'_'、'.'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 业务类型。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * businessTypeDisplayName  **参数解释**： 插件业务类型展示名。 **约束限制**： 不涉及。 **取值范围**： - 构建。 - 代码检查。 - 部署。 - 测试。 - 通用。 **默认取值**： 不涉及。
+    * description  **参数解释**： 插件描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isPrivate  **参数解释**： 是否私有插件。 **约束限制**： 不涉及。 **取值范围**： - 1：私有插件。 - 0：公开插件。 **默认取值**： 0。
+    * region  **参数解释**： 局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainers  **参数解释**： 插件维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginCompositionType  **参数解释**： 插件的组合类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * manifestVersion  **参数解释**： 用于区分新旧版数据版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 插件版本号。 **约束限制**： 必须是类似 x.xx.xx（例如：1.0.2） 的格式，其中：x 是 1 到 2 位的数字（范围 0 到 99）。xx 是点后跟随的数字部分，且每部分可以是 1 位或 2 位数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * versionDescription  **参数解释**： 插件小版本版本号说明。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * executionInfo  executionInfo
-    * inputInfo  输入信息
+    * outputInfo  **参数解释**： 插件输出相关内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * inputInfo  **参数解释**： 输入信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -223,9 +250,12 @@ class PluginDTO implements ModelInterface, ArrayAccess
             'isPrivate' => 'getIsPrivate',
             'region' => 'getRegion',
             'maintainers' => 'getMaintainers',
+            'pluginCompositionType' => 'getPluginCompositionType',
+            'manifestVersion' => 'getManifestVersion',
             'version' => 'getVersion',
             'versionDescription' => 'getVersionDescription',
             'executionInfo' => 'getExecutionInfo',
+            'outputInfo' => 'getOutputInfo',
             'inputInfo' => 'getInputInfo'
     ];
 
@@ -298,9 +328,12 @@ class PluginDTO implements ModelInterface, ArrayAccess
         $this->container['isPrivate'] = isset($data['isPrivate']) ? $data['isPrivate'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['maintainers'] = isset($data['maintainers']) ? $data['maintainers'] : null;
+        $this->container['pluginCompositionType'] = isset($data['pluginCompositionType']) ? $data['pluginCompositionType'] : null;
+        $this->container['manifestVersion'] = isset($data['manifestVersion']) ? $data['manifestVersion'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['versionDescription'] = isset($data['versionDescription']) ? $data['versionDescription'] : null;
         $this->container['executionInfo'] = isset($data['executionInfo']) ? $data['executionInfo'] : null;
+        $this->container['outputInfo'] = isset($data['outputInfo']) ? $data['outputInfo'] : null;
         $this->container['inputInfo'] = isset($data['inputInfo']) ? $data['inputInfo'] : null;
     }
 
@@ -352,7 +385,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets uniqueId
-    *  唯一ID
+    *  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -364,7 +397,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets uniqueId
     *
-    * @param string|null $uniqueId 唯一ID
+    * @param string|null $uniqueId **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -376,7 +409,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets iconUrl
-    *  图标URL
+    *  **参数解释**： 插件展示图标URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -388,7 +421,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets iconUrl
     *
-    * @param string|null $iconUrl 图标URL
+    * @param string|null $iconUrl **参数解释**： 插件展示图标URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -400,7 +433,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets runtimeAttribution
-    *  运行属性
+    *  **参数解释**： 运行属性。 **约束限制**： 不涉及。 **取值范围**： - agent：基于agent运行。 - agentless：无需agent运行。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -412,7 +445,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets runtimeAttribution
     *
-    * @param string $runtimeAttribution 运行属性
+    * @param string $runtimeAttribution **参数解释**： 运行属性。 **约束限制**： 不涉及。 **取值范围**： - agent：基于agent运行。 - agentless：无需agent运行。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -424,7 +457,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginName
-    *  插件名
+    *  **参数解释**： 插件名。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -436,7 +469,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string $pluginName 插件名
+    * @param string $pluginName **参数解释**： 插件名。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -448,7 +481,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayName
-    *  展示名
+    *  **参数解释**： 展示名。 **约束限制**： 仅支持输入大小写英文字母、中文、空格、数字、'-'、'_'、'.'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -460,7 +493,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets displayName
     *
-    * @param string $displayName 展示名
+    * @param string $displayName **参数解释**： 展示名。 **约束限制**： 仅支持输入大小写英文字母、中文、空格、数字、'-'、'_'、'.'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -472,7 +505,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets businessType
-    *  业务类型
+    *  **参数解释**： 业务类型。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -484,7 +517,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets businessType
     *
-    * @param string $businessType 业务类型
+    * @param string $businessType **参数解释**： 业务类型。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -496,7 +529,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets businessTypeDisplayName
-    *  业务类型展示名
+    *  **参数解释**： 插件业务类型展示名。 **约束限制**： 不涉及。 **取值范围**： - 构建。 - 代码检查。 - 部署。 - 测试。 - 通用。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -508,7 +541,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets businessTypeDisplayName
     *
-    * @param string $businessTypeDisplayName 业务类型展示名
+    * @param string $businessTypeDisplayName **参数解释**： 插件业务类型展示名。 **约束限制**： 不涉及。 **取值范围**： - 构建。 - 代码检查。 - 部署。 - 测试。 - 通用。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -520,7 +553,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释**： 插件描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -532,7 +565,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 描述
+    * @param string $description **参数解释**： 插件描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -544,7 +577,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPrivate
-    *  是否私有
+    *  **参数解释**： 是否私有插件。 **约束限制**： 不涉及。 **取值范围**： - 1：私有插件。 - 0：公开插件。 **默认取值**： 0。
     *
     * @return int|null
     */
@@ -556,7 +589,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets isPrivate
     *
-    * @param int|null $isPrivate 是否私有
+    * @param int|null $isPrivate **参数解释**： 是否私有插件。 **约束限制**： 不涉及。 **取值范围**： - 1：私有插件。 - 0：公开插件。 **默认取值**： 0。
     *
     * @return $this
     */
@@ -568,7 +601,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  局点
+    *  **参数解释**： 局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -580,7 +613,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string|null $region 局点
+    * @param string|null $region **参数解释**： 局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -592,7 +625,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets maintainers
-    *  维护者
+    *  **参数解释**： 插件维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -604,7 +637,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets maintainers
     *
-    * @param string|null $maintainers 维护者
+    * @param string|null $maintainers **参数解释**： 插件维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -615,8 +648,56 @@ class PluginDTO implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets pluginCompositionType
+    *  **参数解释**： 插件的组合类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getPluginCompositionType()
+    {
+        return $this->container['pluginCompositionType'];
+    }
+
+    /**
+    * Sets pluginCompositionType
+    *
+    * @param string|null $pluginCompositionType **参数解释**： 插件的组合类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setPluginCompositionType($pluginCompositionType)
+    {
+        $this->container['pluginCompositionType'] = $pluginCompositionType;
+        return $this;
+    }
+
+    /**
+    * Gets manifestVersion
+    *  **参数解释**： 用于区分新旧版数据版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getManifestVersion()
+    {
+        return $this->container['manifestVersion'];
+    }
+
+    /**
+    * Sets manifestVersion
+    *
+    * @param string|null $manifestVersion **参数解释**： 用于区分新旧版数据版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setManifestVersion($manifestVersion)
+    {
+        $this->container['manifestVersion'] = $manifestVersion;
+        return $this;
+    }
+
+    /**
     * Gets version
-    *  版本号
+    *  **参数解释**： 插件版本号。 **约束限制**： 必须是类似 x.xx.xx（例如：1.0.2） 的格式，其中：x 是 1 到 2 位的数字（范围 0 到 99）。xx 是点后跟随的数字部分，且每部分可以是 1 位或 2 位数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -628,7 +709,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 版本号
+    * @param string $version **参数解释**： 插件版本号。 **约束限制**： 必须是类似 x.xx.xx（例如：1.0.2） 的格式，其中：x 是 1 到 2 位的数字（范围 0 到 99）。xx 是点后跟随的数字部分，且每部分可以是 1 位或 2 位数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -640,7 +721,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets versionDescription
-    *  版本号说明
+    *  **参数解释**： 插件小版本版本号说明。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -652,7 +733,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets versionDescription
     *
-    * @param string|null $versionDescription 版本号说明
+    * @param string|null $versionDescription **参数解释**： 插件小版本版本号说明。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -687,8 +768,32 @@ class PluginDTO implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets outputInfo
+    *  **参数解释**： 插件输出相关内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginDTOOutputInfo[]|null
+    */
+    public function getOutputInfo()
+    {
+        return $this->container['outputInfo'];
+    }
+
+    /**
+    * Sets outputInfo
+    *
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginDTOOutputInfo[]|null $outputInfo **参数解释**： 插件输出相关内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setOutputInfo($outputInfo)
+    {
+        $this->container['outputInfo'] = $outputInfo;
+        return $this;
+    }
+
+    /**
     * Gets inputInfo
-    *  输入信息
+    *  **参数解释**： 输入信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginDTOInputInfo[]|null
     */
@@ -700,7 +805,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets inputInfo
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginDTOInputInfo[]|null $inputInfo 输入信息
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginDTOInputInfo[]|null $inputInfo **参数解释**： 输入信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

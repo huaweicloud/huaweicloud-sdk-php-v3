@@ -20,34 +20,34 @@ class RunPipelineDTOParamsBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * buildType  分支还是tag触发
-    * targetBranch  运行分支
-    * tag  运行tag
-    * eventType  触发事件类型
+    * buildType  **参数解释**： 代码仓触发类型，包含branch-分支触发，tag-标签触发等。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * eventType  **参数解释**： 流水线的触发方式。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * targetBranch  **参数解释**： 流水线触发运行分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * tag  **参数解释**： 流水线触发运行的标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'buildType' => 'string',
+            'eventType' => 'string',
             'targetBranch' => 'string',
-            'tag' => 'string',
-            'eventType' => 'string'
+            'tag' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * buildType  分支还是tag触发
-    * targetBranch  运行分支
-    * tag  运行tag
-    * eventType  触发事件类型
+    * buildType  **参数解释**： 代码仓触发类型，包含branch-分支触发，tag-标签触发等。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * eventType  **参数解释**： 流水线的触发方式。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * targetBranch  **参数解释**： 流水线触发运行分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * tag  **参数解释**： 流水线触发运行的标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'buildType' => null,
+        'eventType' => null,
         'targetBranch' => null,
-        'tag' => null,
-        'eventType' => null
+        'tag' => null
     ];
 
     /**
@@ -73,50 +73,50 @@ class RunPipelineDTOParamsBuildParams implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * buildType  分支还是tag触发
-    * targetBranch  运行分支
-    * tag  运行tag
-    * eventType  触发事件类型
+    * buildType  **参数解释**： 代码仓触发类型，包含branch-分支触发，tag-标签触发等。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * eventType  **参数解释**： 流水线的触发方式。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * targetBranch  **参数解释**： 流水线触发运行分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * tag  **参数解释**： 流水线触发运行的标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'buildType' => 'build_type',
+            'eventType' => 'event_type',
             'targetBranch' => 'target_branch',
-            'tag' => 'tag',
-            'eventType' => 'event_type'
+            'tag' => 'tag'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * buildType  分支还是tag触发
-    * targetBranch  运行分支
-    * tag  运行tag
-    * eventType  触发事件类型
+    * buildType  **参数解释**： 代码仓触发类型，包含branch-分支触发，tag-标签触发等。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * eventType  **参数解释**： 流水线的触发方式。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * targetBranch  **参数解释**： 流水线触发运行分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * tag  **参数解释**： 流水线触发运行的标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'buildType' => 'setBuildType',
+            'eventType' => 'setEventType',
             'targetBranch' => 'setTargetBranch',
-            'tag' => 'setTag',
-            'eventType' => 'setEventType'
+            'tag' => 'setTag'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * buildType  分支还是tag触发
-    * targetBranch  运行分支
-    * tag  运行tag
-    * eventType  触发事件类型
+    * buildType  **参数解释**： 代码仓触发类型，包含branch-分支触发，tag-标签触发等。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * eventType  **参数解释**： 流水线的触发方式。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * targetBranch  **参数解释**： 流水线触发运行分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * tag  **参数解释**： 流水线触发运行的标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'buildType' => 'getBuildType',
+            'eventType' => 'getEventType',
             'targetBranch' => 'getTargetBranch',
-            'tag' => 'getTag',
-            'eventType' => 'getEventType'
+            'tag' => 'getTag'
     ];
 
     /**
@@ -178,9 +178,9 @@ class RunPipelineDTOParamsBuildParams implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['buildType'] = isset($data['buildType']) ? $data['buildType'] : null;
+        $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
         $this->container['targetBranch'] = isset($data['targetBranch']) ? $data['targetBranch'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
-        $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
     }
 
     /**
@@ -210,7 +210,7 @@ class RunPipelineDTOParamsBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets buildType
-    *  分支还是tag触发
+    *  **参数解释**： 代码仓触发类型，包含branch-分支触发，tag-标签触发等。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -222,7 +222,7 @@ class RunPipelineDTOParamsBuildParams implements ModelInterface, ArrayAccess
     /**
     * Sets buildType
     *
-    * @param string $buildType 分支还是tag触发
+    * @param string $buildType **参数解释**： 代码仓触发类型，包含branch-分支触发，tag-标签触发等。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -233,56 +233,8 @@ class RunPipelineDTOParamsBuildParams implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets targetBranch
-    *  运行分支
-    *
-    * @return string|null
-    */
-    public function getTargetBranch()
-    {
-        return $this->container['targetBranch'];
-    }
-
-    /**
-    * Sets targetBranch
-    *
-    * @param string|null $targetBranch 运行分支
-    *
-    * @return $this
-    */
-    public function setTargetBranch($targetBranch)
-    {
-        $this->container['targetBranch'] = $targetBranch;
-        return $this;
-    }
-
-    /**
-    * Gets tag
-    *  运行tag
-    *
-    * @return string|null
-    */
-    public function getTag()
-    {
-        return $this->container['tag'];
-    }
-
-    /**
-    * Sets tag
-    *
-    * @param string|null $tag 运行tag
-    *
-    * @return $this
-    */
-    public function setTag($tag)
-    {
-        $this->container['tag'] = $tag;
-        return $this;
-    }
-
-    /**
     * Gets eventType
-    *  触发事件类型
+    *  **参数解释**： 流水线的触发方式。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -294,13 +246,61 @@ class RunPipelineDTOParamsBuildParams implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param string|null $eventType 触发事件类型
+    * @param string|null $eventType **参数解释**： 流水线的触发方式。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
     public function setEventType($eventType)
     {
         $this->container['eventType'] = $eventType;
+        return $this;
+    }
+
+    /**
+    * Gets targetBranch
+    *  **参数解释**： 流水线触发运行分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getTargetBranch()
+    {
+        return $this->container['targetBranch'];
+    }
+
+    /**
+    * Sets targetBranch
+    *
+    * @param string|null $targetBranch **参数解释**： 流水线触发运行分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setTargetBranch($targetBranch)
+    {
+        $this->container['targetBranch'] = $targetBranch;
+        return $this;
+    }
+
+    /**
+    * Gets tag
+    *  **参数解释**： 流水线触发运行的标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getTag()
+    {
+        return $this->container['tag'];
+    }
+
+    /**
+    * Sets tag
+    *
+    * @param string|null $tag **参数解释**： 流水线触发运行的标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setTag($tag)
+    {
+        $this->container['tag'] = $tag;
         return $this;
     }
 

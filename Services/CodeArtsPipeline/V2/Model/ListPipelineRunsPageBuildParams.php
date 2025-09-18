@@ -20,20 +20,20 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  合并请求事件类型
-    * buildType  基于分支还是tag触发
-    * commitId  代码仓提交ID
-    * eventType  运行事件类型
-    * mergeId  合并请求ID
-    * message  代码仓提交信息
-    * sourceBranch  源分支
-    * tag  标签
-    * targetBranch  目标分支
-    * codehubId  codehub代码仓ID
-    * gitUrl  代码仓https地址
-    * sourceCodehubId  源codehub代码仓ID
-    * sourceCodehubUrl  源codehub代码仓地址
-    * sourceCodehubHttpUrl  源codehub代码仓http地址
+    * action  **参数解释**： 合并请求事件类型。 **取值范围**： - open：打开。 - reopen：重开。 - update：更新。 - merge：合并。
+    * buildType  **参数解释**： 基于分支还是标签触发。 **取值范围**： - branch：分支触发。 - tag：标签触发。
+    * commitId  **参数解释**： 代码仓提交ID。 **取值范围**： 不涉及。
+    * eventType  **参数解释**： 运行事件类型。 **取值范围**： - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。
+    * mergeId  **参数解释**： 合并请求ID。 **取值范围**： 不涉及。
+    * message  **参数解释**： 代码仓提交信息。 **取值范围**： 不涉及。
+    * sourceBranch  **参数解释**： 源分支。 **取值范围**： 不涉及。
+    * tag  **参数解释**： 标签。 **取值范围**： 不涉及。
+    * targetBranch  **参数解释**： 目标分支。 **取值范围**： 不涉及。
+    * codehubId  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
+    * gitUrl  **参数解释**： 代码仓https地址。 **取值范围**： 不涉及。
+    * sourceCodehubId  **参数解释**： 源Repo代码仓ID。 **取值范围**： 不涉及。
+    * sourceCodehubUrl  **参数解释**： 源Repo代码仓地址。 **取值范围**： 不涉及。
+    * sourceCodehubHttpUrl  **参数解释**： 源Repo代码仓http地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -56,20 +56,20 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  合并请求事件类型
-    * buildType  基于分支还是tag触发
-    * commitId  代码仓提交ID
-    * eventType  运行事件类型
-    * mergeId  合并请求ID
-    * message  代码仓提交信息
-    * sourceBranch  源分支
-    * tag  标签
-    * targetBranch  目标分支
-    * codehubId  codehub代码仓ID
-    * gitUrl  代码仓https地址
-    * sourceCodehubId  源codehub代码仓ID
-    * sourceCodehubUrl  源codehub代码仓地址
-    * sourceCodehubHttpUrl  源codehub代码仓http地址
+    * action  **参数解释**： 合并请求事件类型。 **取值范围**： - open：打开。 - reopen：重开。 - update：更新。 - merge：合并。
+    * buildType  **参数解释**： 基于分支还是标签触发。 **取值范围**： - branch：分支触发。 - tag：标签触发。
+    * commitId  **参数解释**： 代码仓提交ID。 **取值范围**： 不涉及。
+    * eventType  **参数解释**： 运行事件类型。 **取值范围**： - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。
+    * mergeId  **参数解释**： 合并请求ID。 **取值范围**： 不涉及。
+    * message  **参数解释**： 代码仓提交信息。 **取值范围**： 不涉及。
+    * sourceBranch  **参数解释**： 源分支。 **取值范围**： 不涉及。
+    * tag  **参数解释**： 标签。 **取值范围**： 不涉及。
+    * targetBranch  **参数解释**： 目标分支。 **取值范围**： 不涉及。
+    * codehubId  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
+    * gitUrl  **参数解释**： 代码仓https地址。 **取值范围**： 不涉及。
+    * sourceCodehubId  **参数解释**： 源Repo代码仓ID。 **取值范围**： 不涉及。
+    * sourceCodehubUrl  **参数解释**： 源Repo代码仓地址。 **取值范围**： 不涉及。
+    * sourceCodehubHttpUrl  **参数解释**： 源Repo代码仓http地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,20 +113,20 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  合并请求事件类型
-    * buildType  基于分支还是tag触发
-    * commitId  代码仓提交ID
-    * eventType  运行事件类型
-    * mergeId  合并请求ID
-    * message  代码仓提交信息
-    * sourceBranch  源分支
-    * tag  标签
-    * targetBranch  目标分支
-    * codehubId  codehub代码仓ID
-    * gitUrl  代码仓https地址
-    * sourceCodehubId  源codehub代码仓ID
-    * sourceCodehubUrl  源codehub代码仓地址
-    * sourceCodehubHttpUrl  源codehub代码仓http地址
+    * action  **参数解释**： 合并请求事件类型。 **取值范围**： - open：打开。 - reopen：重开。 - update：更新。 - merge：合并。
+    * buildType  **参数解释**： 基于分支还是标签触发。 **取值范围**： - branch：分支触发。 - tag：标签触发。
+    * commitId  **参数解释**： 代码仓提交ID。 **取值范围**： 不涉及。
+    * eventType  **参数解释**： 运行事件类型。 **取值范围**： - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。
+    * mergeId  **参数解释**： 合并请求ID。 **取值范围**： 不涉及。
+    * message  **参数解释**： 代码仓提交信息。 **取值范围**： 不涉及。
+    * sourceBranch  **参数解释**： 源分支。 **取值范围**： 不涉及。
+    * tag  **参数解释**： 标签。 **取值范围**： 不涉及。
+    * targetBranch  **参数解释**： 目标分支。 **取值范围**： 不涉及。
+    * codehubId  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
+    * gitUrl  **参数解释**： 代码仓https地址。 **取值范围**： 不涉及。
+    * sourceCodehubId  **参数解释**： 源Repo代码仓ID。 **取值范围**： 不涉及。
+    * sourceCodehubUrl  **参数解释**： 源Repo代码仓地址。 **取值范围**： 不涉及。
+    * sourceCodehubHttpUrl  **参数解释**： 源Repo代码仓http地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -149,20 +149,20 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  合并请求事件类型
-    * buildType  基于分支还是tag触发
-    * commitId  代码仓提交ID
-    * eventType  运行事件类型
-    * mergeId  合并请求ID
-    * message  代码仓提交信息
-    * sourceBranch  源分支
-    * tag  标签
-    * targetBranch  目标分支
-    * codehubId  codehub代码仓ID
-    * gitUrl  代码仓https地址
-    * sourceCodehubId  源codehub代码仓ID
-    * sourceCodehubUrl  源codehub代码仓地址
-    * sourceCodehubHttpUrl  源codehub代码仓http地址
+    * action  **参数解释**： 合并请求事件类型。 **取值范围**： - open：打开。 - reopen：重开。 - update：更新。 - merge：合并。
+    * buildType  **参数解释**： 基于分支还是标签触发。 **取值范围**： - branch：分支触发。 - tag：标签触发。
+    * commitId  **参数解释**： 代码仓提交ID。 **取值范围**： 不涉及。
+    * eventType  **参数解释**： 运行事件类型。 **取值范围**： - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。
+    * mergeId  **参数解释**： 合并请求ID。 **取值范围**： 不涉及。
+    * message  **参数解释**： 代码仓提交信息。 **取值范围**： 不涉及。
+    * sourceBranch  **参数解释**： 源分支。 **取值范围**： 不涉及。
+    * tag  **参数解释**： 标签。 **取值范围**： 不涉及。
+    * targetBranch  **参数解释**： 目标分支。 **取值范围**： 不涉及。
+    * codehubId  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
+    * gitUrl  **参数解释**： 代码仓https地址。 **取值范围**： 不涉及。
+    * sourceCodehubId  **参数解释**： 源Repo代码仓ID。 **取值范围**： 不涉及。
+    * sourceCodehubUrl  **参数解释**： 源Repo代码仓地址。 **取值范围**： 不涉及。
+    * sourceCodehubHttpUrl  **参数解释**： 源Repo代码仓http地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,20 +185,20 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  合并请求事件类型
-    * buildType  基于分支还是tag触发
-    * commitId  代码仓提交ID
-    * eventType  运行事件类型
-    * mergeId  合并请求ID
-    * message  代码仓提交信息
-    * sourceBranch  源分支
-    * tag  标签
-    * targetBranch  目标分支
-    * codehubId  codehub代码仓ID
-    * gitUrl  代码仓https地址
-    * sourceCodehubId  源codehub代码仓ID
-    * sourceCodehubUrl  源codehub代码仓地址
-    * sourceCodehubHttpUrl  源codehub代码仓http地址
+    * action  **参数解释**： 合并请求事件类型。 **取值范围**： - open：打开。 - reopen：重开。 - update：更新。 - merge：合并。
+    * buildType  **参数解释**： 基于分支还是标签触发。 **取值范围**： - branch：分支触发。 - tag：标签触发。
+    * commitId  **参数解释**： 代码仓提交ID。 **取值范围**： 不涉及。
+    * eventType  **参数解释**： 运行事件类型。 **取值范围**： - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。
+    * mergeId  **参数解释**： 合并请求ID。 **取值范围**： 不涉及。
+    * message  **参数解释**： 代码仓提交信息。 **取值范围**： 不涉及。
+    * sourceBranch  **参数解释**： 源分支。 **取值范围**： 不涉及。
+    * tag  **参数解释**： 标签。 **取值范围**： 不涉及。
+    * targetBranch  **参数解释**： 目标分支。 **取值范围**： 不涉及。
+    * codehubId  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
+    * gitUrl  **参数解释**： 代码仓https地址。 **取值范围**： 不涉及。
+    * sourceCodehubId  **参数解释**： 源Repo代码仓ID。 **取值范围**： 不涉及。
+    * sourceCodehubUrl  **参数解释**： 源Repo代码仓地址。 **取值范围**： 不涉及。
+    * sourceCodehubHttpUrl  **参数解释**： 源Repo代码仓http地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -317,7 +317,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  合并请求事件类型
+    *  **参数解释**： 合并请求事件类型。 **取值范围**： - open：打开。 - reopen：重开。 - update：更新。 - merge：合并。
     *
     * @return string|null
     */
@@ -329,7 +329,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 合并请求事件类型
+    * @param string|null $action **参数解释**： 合并请求事件类型。 **取值范围**： - open：打开。 - reopen：重开。 - update：更新。 - merge：合并。
     *
     * @return $this
     */
@@ -341,7 +341,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets buildType
-    *  基于分支还是tag触发
+    *  **参数解释**： 基于分支还是标签触发。 **取值范围**： - branch：分支触发。 - tag：标签触发。
     *
     * @return string|null
     */
@@ -353,7 +353,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
     /**
     * Sets buildType
     *
-    * @param string|null $buildType 基于分支还是tag触发
+    * @param string|null $buildType **参数解释**： 基于分支还是标签触发。 **取值范围**： - branch：分支触发。 - tag：标签触发。
     *
     * @return $this
     */
@@ -365,7 +365,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets commitId
-    *  代码仓提交ID
+    *  **参数解释**： 代码仓提交ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -377,7 +377,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
     /**
     * Sets commitId
     *
-    * @param string|null $commitId 代码仓提交ID
+    * @param string|null $commitId **参数解释**： 代码仓提交ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -389,7 +389,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventType
-    *  运行事件类型
+    *  **参数解释**： 运行事件类型。 **取值范围**： - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。
     *
     * @return string|null
     */
@@ -401,7 +401,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param string|null $eventType 运行事件类型
+    * @param string|null $eventType **参数解释**： 运行事件类型。 **取值范围**： - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。
     *
     * @return $this
     */
@@ -413,7 +413,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets mergeId
-    *  合并请求ID
+    *  **参数解释**： 合并请求ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -425,7 +425,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
     /**
     * Sets mergeId
     *
-    * @param string|null $mergeId 合并请求ID
+    * @param string|null $mergeId **参数解释**： 合并请求ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -437,7 +437,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
-    *  代码仓提交信息
+    *  **参数解释**： 代码仓提交信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -449,7 +449,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
     /**
     * Sets message
     *
-    * @param string|null $message 代码仓提交信息
+    * @param string|null $message **参数解释**： 代码仓提交信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -461,7 +461,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceBranch
-    *  源分支
+    *  **参数解释**： 源分支。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -473,7 +473,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
     /**
     * Sets sourceBranch
     *
-    * @param string|null $sourceBranch 源分支
+    * @param string|null $sourceBranch **参数解释**： 源分支。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -485,7 +485,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets tag
-    *  标签
+    *  **参数解释**： 标签。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -497,7 +497,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
     /**
     * Sets tag
     *
-    * @param string|null $tag 标签
+    * @param string|null $tag **参数解释**： 标签。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -509,7 +509,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetBranch
-    *  目标分支
+    *  **参数解释**： 目标分支。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -521,7 +521,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
     /**
     * Sets targetBranch
     *
-    * @param string|null $targetBranch 目标分支
+    * @param string|null $targetBranch **参数解释**： 目标分支。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -533,7 +533,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets codehubId
-    *  codehub代码仓ID
+    *  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -545,7 +545,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
     /**
     * Sets codehubId
     *
-    * @param string|null $codehubId codehub代码仓ID
+    * @param string|null $codehubId **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -557,7 +557,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitUrl
-    *  代码仓https地址
+    *  **参数解释**： 代码仓https地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -569,7 +569,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
     /**
     * Sets gitUrl
     *
-    * @param string|null $gitUrl 代码仓https地址
+    * @param string|null $gitUrl **参数解释**： 代码仓https地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -581,7 +581,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceCodehubId
-    *  源codehub代码仓ID
+    *  **参数解释**： 源Repo代码仓ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -593,7 +593,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
     /**
     * Sets sourceCodehubId
     *
-    * @param string|null $sourceCodehubId 源codehub代码仓ID
+    * @param string|null $sourceCodehubId **参数解释**： 源Repo代码仓ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -605,7 +605,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceCodehubUrl
-    *  源codehub代码仓地址
+    *  **参数解释**： 源Repo代码仓地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -617,7 +617,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
     /**
     * Sets sourceCodehubUrl
     *
-    * @param string|null $sourceCodehubUrl 源codehub代码仓地址
+    * @param string|null $sourceCodehubUrl **参数解释**： 源Repo代码仓地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -629,7 +629,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceCodehubHttpUrl
-    *  源codehub代码仓http地址
+    *  **参数解释**： 源Repo代码仓http地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -641,7 +641,7 @@ class ListPipelineRunsPageBuildParams implements ModelInterface, ArrayAccess
     /**
     * Sets sourceCodehubHttpUrl
     *
-    * @param string|null $sourceCodehubHttpUrl 源codehub代码仓http地址
+    * @param string|null $sourceCodehubHttpUrl **参数解释**： 源Repo代码仓http地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */

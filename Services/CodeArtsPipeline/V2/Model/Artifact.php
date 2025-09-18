@@ -20,19 +20,19 @@ class Artifact implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID
-    * name  名称
-    * artifactVersion  版本
-    * uploadTarget  存放平台类型
-    * artifactPackageType  产物包类型
-    * artifactUri  制品仓路径
-    * artifactDownloadUrlWithId  制品仓下载链接
-    * artifactType  产物类型
-    * hashCode  哈希码
-    * jobId  构建任务ID
-    * buildNo  构建任务编号
-    * dailyBuildNumber  构建任务序号
-    * fileSize  产物大小
+    * projectId  **参数解释**： 项目ID，获取方式请参见[获取项目ID](https://support.huaweicloud.com/api-codeartsrepo/codehub_api_0014.html)。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * name  **参数解释**： 产物名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactVersion  **参数解释**： 产物版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * uploadTarget  **参数解释**： 产物存放平台。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactPackageType  **参数解释**： 产物包类型，例如jar。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactUri  **参数解释**： 制品仓文件存放路径。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactDownloadUrlWithId  **参数解释**： 制品仓下载链接。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactType  **参数解释**： 产物类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * hashCode  **参数解释**： 产物哈希码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * jobId  **参数解释**： 构建任务ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * buildNo  **参数解释**： 构建任务编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * dailyBuildNumber  **参数解释**： 构建任务序号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * fileSize  **参数解释**： 产物大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -54,19 +54,19 @@ class Artifact implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID
-    * name  名称
-    * artifactVersion  版本
-    * uploadTarget  存放平台类型
-    * artifactPackageType  产物包类型
-    * artifactUri  制品仓路径
-    * artifactDownloadUrlWithId  制品仓下载链接
-    * artifactType  产物类型
-    * hashCode  哈希码
-    * jobId  构建任务ID
-    * buildNo  构建任务编号
-    * dailyBuildNumber  构建任务序号
-    * fileSize  产物大小
+    * projectId  **参数解释**： 项目ID，获取方式请参见[获取项目ID](https://support.huaweicloud.com/api-codeartsrepo/codehub_api_0014.html)。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * name  **参数解释**： 产物名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactVersion  **参数解释**： 产物版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * uploadTarget  **参数解释**： 产物存放平台。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactPackageType  **参数解释**： 产物包类型，例如jar。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactUri  **参数解释**： 制品仓文件存放路径。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactDownloadUrlWithId  **参数解释**： 制品仓下载链接。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactType  **参数解释**： 产物类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * hashCode  **参数解释**： 产物哈希码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * jobId  **参数解释**： 构建任务ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * buildNo  **参数解释**： 构建任务编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * dailyBuildNumber  **参数解释**： 构建任务序号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * fileSize  **参数解释**： 产物大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -109,19 +109,19 @@ class Artifact implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID
-    * name  名称
-    * artifactVersion  版本
-    * uploadTarget  存放平台类型
-    * artifactPackageType  产物包类型
-    * artifactUri  制品仓路径
-    * artifactDownloadUrlWithId  制品仓下载链接
-    * artifactType  产物类型
-    * hashCode  哈希码
-    * jobId  构建任务ID
-    * buildNo  构建任务编号
-    * dailyBuildNumber  构建任务序号
-    * fileSize  产物大小
+    * projectId  **参数解释**： 项目ID，获取方式请参见[获取项目ID](https://support.huaweicloud.com/api-codeartsrepo/codehub_api_0014.html)。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * name  **参数解释**： 产物名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactVersion  **参数解释**： 产物版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * uploadTarget  **参数解释**： 产物存放平台。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactPackageType  **参数解释**： 产物包类型，例如jar。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactUri  **参数解释**： 制品仓文件存放路径。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactDownloadUrlWithId  **参数解释**： 制品仓下载链接。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactType  **参数解释**： 产物类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * hashCode  **参数解释**： 产物哈希码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * jobId  **参数解释**： 构建任务ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * buildNo  **参数解释**： 构建任务编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * dailyBuildNumber  **参数解释**： 构建任务序号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * fileSize  **参数解释**： 产物大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -143,19 +143,19 @@ class Artifact implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID
-    * name  名称
-    * artifactVersion  版本
-    * uploadTarget  存放平台类型
-    * artifactPackageType  产物包类型
-    * artifactUri  制品仓路径
-    * artifactDownloadUrlWithId  制品仓下载链接
-    * artifactType  产物类型
-    * hashCode  哈希码
-    * jobId  构建任务ID
-    * buildNo  构建任务编号
-    * dailyBuildNumber  构建任务序号
-    * fileSize  产物大小
+    * projectId  **参数解释**： 项目ID，获取方式请参见[获取项目ID](https://support.huaweicloud.com/api-codeartsrepo/codehub_api_0014.html)。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * name  **参数解释**： 产物名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactVersion  **参数解释**： 产物版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * uploadTarget  **参数解释**： 产物存放平台。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactPackageType  **参数解释**： 产物包类型，例如jar。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactUri  **参数解释**： 制品仓文件存放路径。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactDownloadUrlWithId  **参数解释**： 制品仓下载链接。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactType  **参数解释**： 产物类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * hashCode  **参数解释**： 产物哈希码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * jobId  **参数解释**： 构建任务ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * buildNo  **参数解释**： 构建任务编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * dailyBuildNumber  **参数解释**： 构建任务序号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * fileSize  **参数解释**： 产物大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -177,19 +177,19 @@ class Artifact implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID
-    * name  名称
-    * artifactVersion  版本
-    * uploadTarget  存放平台类型
-    * artifactPackageType  产物包类型
-    * artifactUri  制品仓路径
-    * artifactDownloadUrlWithId  制品仓下载链接
-    * artifactType  产物类型
-    * hashCode  哈希码
-    * jobId  构建任务ID
-    * buildNo  构建任务编号
-    * dailyBuildNumber  构建任务序号
-    * fileSize  产物大小
+    * projectId  **参数解释**： 项目ID，获取方式请参见[获取项目ID](https://support.huaweicloud.com/api-codeartsrepo/codehub_api_0014.html)。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * name  **参数解释**： 产物名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactVersion  **参数解释**： 产物版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * uploadTarget  **参数解释**： 产物存放平台。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactPackageType  **参数解释**： 产物包类型，例如jar。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactUri  **参数解释**： 制品仓文件存放路径。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactDownloadUrlWithId  **参数解释**： 制品仓下载链接。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * artifactType  **参数解释**： 产物类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * hashCode  **参数解释**： 产物哈希码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * jobId  **参数解释**： 构建任务ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * buildNo  **参数解释**： 构建任务编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * dailyBuildNumber  **参数解释**： 构建任务序号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * fileSize  **参数解释**： 产物大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -306,7 +306,7 @@ class Artifact implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  **参数解释**： 项目ID，获取方式请参见[获取项目ID](https://support.huaweicloud.com/api-codeartsrepo/codehub_api_0014.html)。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -318,7 +318,7 @@ class Artifact implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId **参数解释**： 项目ID，获取方式请参见[获取项目ID](https://support.huaweicloud.com/api-codeartsrepo/codehub_api_0014.html)。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -330,7 +330,7 @@ class Artifact implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  **参数解释**： 产物名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -342,7 +342,7 @@ class Artifact implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string|null $name **参数解释**： 产物名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -354,7 +354,7 @@ class Artifact implements ModelInterface, ArrayAccess
 
     /**
     * Gets artifactVersion
-    *  版本
+    *  **参数解释**： 产物版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -366,7 +366,7 @@ class Artifact implements ModelInterface, ArrayAccess
     /**
     * Sets artifactVersion
     *
-    * @param string|null $artifactVersion 版本
+    * @param string|null $artifactVersion **参数解释**： 产物版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -378,7 +378,7 @@ class Artifact implements ModelInterface, ArrayAccess
 
     /**
     * Gets uploadTarget
-    *  存放平台类型
+    *  **参数解释**： 产物存放平台。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -390,7 +390,7 @@ class Artifact implements ModelInterface, ArrayAccess
     /**
     * Sets uploadTarget
     *
-    * @param string|null $uploadTarget 存放平台类型
+    * @param string|null $uploadTarget **参数解释**： 产物存放平台。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -402,7 +402,7 @@ class Artifact implements ModelInterface, ArrayAccess
 
     /**
     * Gets artifactPackageType
-    *  产物包类型
+    *  **参数解释**： 产物包类型，例如jar。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -414,7 +414,7 @@ class Artifact implements ModelInterface, ArrayAccess
     /**
     * Sets artifactPackageType
     *
-    * @param string|null $artifactPackageType 产物包类型
+    * @param string|null $artifactPackageType **参数解释**： 产物包类型，例如jar。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -426,7 +426,7 @@ class Artifact implements ModelInterface, ArrayAccess
 
     /**
     * Gets artifactUri
-    *  制品仓路径
+    *  **参数解释**： 制品仓文件存放路径。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -438,7 +438,7 @@ class Artifact implements ModelInterface, ArrayAccess
     /**
     * Sets artifactUri
     *
-    * @param string|null $artifactUri 制品仓路径
+    * @param string|null $artifactUri **参数解释**： 制品仓文件存放路径。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -450,7 +450,7 @@ class Artifact implements ModelInterface, ArrayAccess
 
     /**
     * Gets artifactDownloadUrlWithId
-    *  制品仓下载链接
+    *  **参数解释**： 制品仓下载链接。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -462,7 +462,7 @@ class Artifact implements ModelInterface, ArrayAccess
     /**
     * Sets artifactDownloadUrlWithId
     *
-    * @param string|null $artifactDownloadUrlWithId 制品仓下载链接
+    * @param string|null $artifactDownloadUrlWithId **参数解释**： 制品仓下载链接。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -474,7 +474,7 @@ class Artifact implements ModelInterface, ArrayAccess
 
     /**
     * Gets artifactType
-    *  产物类型
+    *  **参数解释**： 产物类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -486,7 +486,7 @@ class Artifact implements ModelInterface, ArrayAccess
     /**
     * Sets artifactType
     *
-    * @param string|null $artifactType 产物类型
+    * @param string|null $artifactType **参数解释**： 产物类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -498,7 +498,7 @@ class Artifact implements ModelInterface, ArrayAccess
 
     /**
     * Gets hashCode
-    *  哈希码
+    *  **参数解释**： 产物哈希码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ArtifactHashCode[]|null
     */
@@ -510,7 +510,7 @@ class Artifact implements ModelInterface, ArrayAccess
     /**
     * Sets hashCode
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ArtifactHashCode[]|null $hashCode 哈希码
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ArtifactHashCode[]|null $hashCode **参数解释**： 产物哈希码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -522,7 +522,7 @@ class Artifact implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  构建任务ID
+    *  **参数解释**： 构建任务ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -534,7 +534,7 @@ class Artifact implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 构建任务ID
+    * @param string|null $jobId **参数解释**： 构建任务ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -546,7 +546,7 @@ class Artifact implements ModelInterface, ArrayAccess
 
     /**
     * Gets buildNo
-    *  构建任务编号
+    *  **参数解释**： 构建任务编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -558,7 +558,7 @@ class Artifact implements ModelInterface, ArrayAccess
     /**
     * Sets buildNo
     *
-    * @param int|null $buildNo 构建任务编号
+    * @param int|null $buildNo **参数解释**： 构建任务编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -570,7 +570,7 @@ class Artifact implements ModelInterface, ArrayAccess
 
     /**
     * Gets dailyBuildNumber
-    *  构建任务序号
+    *  **参数解释**： 构建任务序号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -582,7 +582,7 @@ class Artifact implements ModelInterface, ArrayAccess
     /**
     * Sets dailyBuildNumber
     *
-    * @param string|null $dailyBuildNumber 构建任务序号
+    * @param string|null $dailyBuildNumber **参数解释**： 构建任务序号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -594,7 +594,7 @@ class Artifact implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileSize
-    *  产物大小
+    *  **参数解释**： 产物大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -606,7 +606,7 @@ class Artifact implements ModelInterface, ArrayAccess
     /**
     * Sets fileSize
     *
-    * @param string|null $fileSize 产物大小
+    * @param string|null $fileSize **参数解释**： 产物大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

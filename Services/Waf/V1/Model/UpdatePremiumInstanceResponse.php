@@ -33,8 +33,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
     * serviceIp  **参数解释：** 独享引擎的业务面IP **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * serviceIpv6  **参数解释：** 独享引擎的业务面IPV6地址 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * floatIp  **参数解释：** 独享引擎的管理面IP **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * securityGroupId  **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * mgrSecurityGroupId  **参数解释：** 独享引擎ECS绑定的用于WAF服务的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * securityGroupIds  **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * status  **参数解释：** 独享引擎计费状态（0：正常计费,1：冻结（资源和数据会保留，但租户无法再正常使用云服务）,2：终止（资源和数据将清除）,3：受限（UDS控制用户桶访问权限）） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * runStatus  **参数解释：** '独享引擎运行状态（0：创建中,1：运行中,2：删除中,3：已删除,4：创建失败,5：已冻结,6：异常,7：更新中,8：更新失败）' **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * accessStatus  **参数解释：** 独享引擎接入状态（0：未接入，1：已接入） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -64,8 +63,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
             'serviceIp' => 'string',
             'serviceIpv6' => 'string',
             'floatIp' => 'string',
-            'securityGroupId' => 'string[]',
-            'mgrSecurityGroupId' => 'string',
+            'securityGroupIds' => 'string[]',
             'status' => 'int',
             'runStatus' => 'int',
             'accessStatus' => 'int',
@@ -95,8 +93,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
     * serviceIp  **参数解释：** 独享引擎的业务面IP **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * serviceIpv6  **参数解释：** 独享引擎的业务面IPV6地址 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * floatIp  **参数解释：** 独享引擎的管理面IP **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * securityGroupId  **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * mgrSecurityGroupId  **参数解释：** 独享引擎ECS绑定的用于WAF服务的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * securityGroupIds  **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * status  **参数解释：** 独享引擎计费状态（0：正常计费,1：冻结（资源和数据会保留，但租户无法再正常使用云服务）,2：终止（资源和数据将清除）,3：受限（UDS控制用户桶访问权限）） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * runStatus  **参数解释：** '独享引擎运行状态（0：创建中,1：运行中,2：删除中,3：已删除,4：创建失败,5：已冻结,6：异常,7：更新中,8：更新失败）' **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * accessStatus  **参数解释：** 独享引擎接入状态（0：未接入，1：已接入） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -126,8 +123,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
         'serviceIp' => null,
         'serviceIpv6' => null,
         'floatIp' => null,
-        'securityGroupId' => null,
-        'mgrSecurityGroupId' => null,
+        'securityGroupIds' => null,
         'status' => 'int32',
         'runStatus' => 'int32',
         'accessStatus' => 'int32',
@@ -178,8 +174,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
     * serviceIp  **参数解释：** 独享引擎的业务面IP **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * serviceIpv6  **参数解释：** 独享引擎的业务面IPV6地址 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * floatIp  **参数解释：** 独享引擎的管理面IP **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * securityGroupId  **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * mgrSecurityGroupId  **参数解释：** 独享引擎ECS绑定的用于WAF服务的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * securityGroupIds  **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * status  **参数解释：** 独享引擎计费状态（0：正常计费,1：冻结（资源和数据会保留，但租户无法再正常使用云服务）,2：终止（资源和数据将清除）,3：受限（UDS控制用户桶访问权限）） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * runStatus  **参数解释：** '独享引擎运行状态（0：创建中,1：运行中,2：删除中,3：已删除,4：创建失败,5：已冻结,6：异常,7：更新中,8：更新失败）' **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * accessStatus  **参数解释：** 独享引擎接入状态（0：未接入，1：已接入） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -209,8 +204,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
             'serviceIp' => 'service_ip',
             'serviceIpv6' => 'service_ipv6',
             'floatIp' => 'floatIp',
-            'securityGroupId' => 'securityGroupId',
-            'mgrSecurityGroupId' => 'mgrSecurityGroupId',
+            'securityGroupIds' => 'security_group_ids',
             'status' => 'status',
             'runStatus' => 'run_status',
             'accessStatus' => 'access_status',
@@ -240,8 +234,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
     * serviceIp  **参数解释：** 独享引擎的业务面IP **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * serviceIpv6  **参数解释：** 独享引擎的业务面IPV6地址 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * floatIp  **参数解释：** 独享引擎的管理面IP **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * securityGroupId  **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * mgrSecurityGroupId  **参数解释：** 独享引擎ECS绑定的用于WAF服务的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * securityGroupIds  **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * status  **参数解释：** 独享引擎计费状态（0：正常计费,1：冻结（资源和数据会保留，但租户无法再正常使用云服务）,2：终止（资源和数据将清除）,3：受限（UDS控制用户桶访问权限）） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * runStatus  **参数解释：** '独享引擎运行状态（0：创建中,1：运行中,2：删除中,3：已删除,4：创建失败,5：已冻结,6：异常,7：更新中,8：更新失败）' **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * accessStatus  **参数解释：** 独享引擎接入状态（0：未接入，1：已接入） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -271,8 +264,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
             'serviceIp' => 'setServiceIp',
             'serviceIpv6' => 'setServiceIpv6',
             'floatIp' => 'setFloatIp',
-            'securityGroupId' => 'setSecurityGroupId',
-            'mgrSecurityGroupId' => 'setMgrSecurityGroupId',
+            'securityGroupIds' => 'setSecurityGroupIds',
             'status' => 'setStatus',
             'runStatus' => 'setRunStatus',
             'accessStatus' => 'setAccessStatus',
@@ -302,8 +294,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
     * serviceIp  **参数解释：** 独享引擎的业务面IP **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * serviceIpv6  **参数解释：** 独享引擎的业务面IPV6地址 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * floatIp  **参数解释：** 独享引擎的管理面IP **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * securityGroupId  **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * mgrSecurityGroupId  **参数解释：** 独享引擎ECS绑定的用于WAF服务的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * securityGroupIds  **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * status  **参数解释：** 独享引擎计费状态（0：正常计费,1：冻结（资源和数据会保留，但租户无法再正常使用云服务）,2：终止（资源和数据将清除）,3：受限（UDS控制用户桶访问权限）） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * runStatus  **参数解释：** '独享引擎运行状态（0：创建中,1：运行中,2：删除中,3：已删除,4：创建失败,5：已冻结,6：异常,7：更新中,8：更新失败）' **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * accessStatus  **参数解释：** 独享引擎接入状态（0：未接入，1：已接入） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -333,8 +324,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
             'serviceIp' => 'getServiceIp',
             'serviceIpv6' => 'getServiceIpv6',
             'floatIp' => 'getFloatIp',
-            'securityGroupId' => 'getSecurityGroupId',
-            'mgrSecurityGroupId' => 'getMgrSecurityGroupId',
+            'securityGroupIds' => 'getSecurityGroupIds',
             'status' => 'getStatus',
             'runStatus' => 'getRunStatus',
             'accessStatus' => 'getAccessStatus',
@@ -420,8 +410,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['serviceIp'] = isset($data['serviceIp']) ? $data['serviceIp'] : null;
         $this->container['serviceIpv6'] = isset($data['serviceIpv6']) ? $data['serviceIpv6'] : null;
         $this->container['floatIp'] = isset($data['floatIp']) ? $data['floatIp'] : null;
-        $this->container['securityGroupId'] = isset($data['securityGroupId']) ? $data['securityGroupId'] : null;
-        $this->container['mgrSecurityGroupId'] = isset($data['mgrSecurityGroupId']) ? $data['mgrSecurityGroupId'] : null;
+        $this->container['securityGroupIds'] = isset($data['securityGroupIds']) ? $data['securityGroupIds'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['runStatus'] = isset($data['runStatus']) ? $data['runStatus'] : null;
         $this->container['accessStatus'] = isset($data['accessStatus']) ? $data['accessStatus'] : null;
@@ -748,50 +737,26 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets securityGroupId
+    * Gets securityGroupIds
     *  **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string[]|null
     */
-    public function getSecurityGroupId()
+    public function getSecurityGroupIds()
     {
-        return $this->container['securityGroupId'];
+        return $this->container['securityGroupIds'];
     }
 
     /**
-    * Sets securityGroupId
+    * Sets securityGroupIds
     *
-    * @param string[]|null $securityGroupId **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param string[]|null $securityGroupIds **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
-    public function setSecurityGroupId($securityGroupId)
+    public function setSecurityGroupIds($securityGroupIds)
     {
-        $this->container['securityGroupId'] = $securityGroupId;
-        return $this;
-    }
-
-    /**
-    * Gets mgrSecurityGroupId
-    *  **参数解释：** 独享引擎ECS绑定的用于WAF服务的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    *
-    * @return string|null
-    */
-    public function getMgrSecurityGroupId()
-    {
-        return $this->container['mgrSecurityGroupId'];
-    }
-
-    /**
-    * Sets mgrSecurityGroupId
-    *
-    * @param string|null $mgrSecurityGroupId **参数解释：** 独享引擎ECS绑定的用于WAF服务的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    *
-    * @return $this
-    */
-    public function setMgrSecurityGroupId($mgrSecurityGroupId)
-    {
-        $this->container['mgrSecurityGroupId'] = $mgrSecurityGroupId;
+        $this->container['securityGroupIds'] = $securityGroupIds;
         return $this;
     }
 

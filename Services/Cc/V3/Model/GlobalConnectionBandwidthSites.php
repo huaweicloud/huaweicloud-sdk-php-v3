@@ -24,13 +24,13 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
     * description  实例描述。不支持 <>。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * nameEn  功能说明：站点信息自定义的英文名字。 取值范围：1-255个字符
-    * nameCn  功能说明：站点信息自定义的中文名字。 取值范围：1-64个字符。
+    * regionId  RegionID。
+    * nameEn  功能说明：站点信息自定义的英文名称。 取值范围：1-255个字符
+    * nameCn  功能说明：站点信息自定义的中文名称。 取值范围：1-64个字符。
     * siteCode  功能说明：站点编码，格式为<area_code>[-<subarea_code>[-<region_code>]]。 取值范围：1-64个字符。
     * siteType  功能说明：站点类型，必须跟站点编码对应，一段编码为大区，两段编码为区域，三段编码为城域。 取值范围： - Area: 大区站点 - SubArea: 区域站点 - Region: 城域站点
     * serviceList  功能说明：站点支持的服务列表，多个服务用\",\"分隔。 取值范围：0-255个字符
     * groupList  groupList
-    * regionId  功能说明：对应华为云标准region的id，该站点继承自华为云region时才需要填写该字段。 取值范围：0-64个字符。
     * publicBorderGroup  功能说明：用于标记是中心还是边缘站点。中心：center 取值范围：0-255个字符。
     *
     * @var string[]
@@ -40,13 +40,13 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
             'description' => 'string',
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime',
+            'regionId' => 'string',
             'nameEn' => 'string',
             'nameCn' => 'string',
             'siteCode' => 'string',
             'siteType' => 'string',
             'serviceList' => 'string',
             'groupList' => '\HuaweiCloud\SDK\Cc\V3\Model\SiteGroupReferenceInfo[]',
-            'regionId' => 'string',
             'publicBorderGroup' => 'string'
     ];
 
@@ -56,13 +56,13 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
     * description  实例描述。不支持 <>。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * nameEn  功能说明：站点信息自定义的英文名字。 取值范围：1-255个字符
-    * nameCn  功能说明：站点信息自定义的中文名字。 取值范围：1-64个字符。
+    * regionId  RegionID。
+    * nameEn  功能说明：站点信息自定义的英文名称。 取值范围：1-255个字符
+    * nameCn  功能说明：站点信息自定义的中文名称。 取值范围：1-64个字符。
     * siteCode  功能说明：站点编码，格式为<area_code>[-<subarea_code>[-<region_code>]]。 取值范围：1-64个字符。
     * siteType  功能说明：站点类型，必须跟站点编码对应，一段编码为大区，两段编码为区域，三段编码为城域。 取值范围： - Area: 大区站点 - SubArea: 区域站点 - Region: 城域站点
     * serviceList  功能说明：站点支持的服务列表，多个服务用\",\"分隔。 取值范围：0-255个字符
     * groupList  groupList
-    * regionId  功能说明：对应华为云标准region的id，该站点继承自华为云region时才需要填写该字段。 取值范围：0-64个字符。
     * publicBorderGroup  功能说明：用于标记是中心还是边缘站点。中心：center 取值范围：0-255个字符。
     *
     * @var string[]
@@ -72,13 +72,13 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
         'description' => null,
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time',
+        'regionId' => null,
         'nameEn' => null,
         'nameCn' => null,
         'siteCode' => null,
         'siteType' => null,
         'serviceList' => null,
         'groupList' => null,
-        'regionId' => null,
         'publicBorderGroup' => null
     ];
 
@@ -109,13 +109,13 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
     * description  实例描述。不支持 <>。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * nameEn  功能说明：站点信息自定义的英文名字。 取值范围：1-255个字符
-    * nameCn  功能说明：站点信息自定义的中文名字。 取值范围：1-64个字符。
+    * regionId  RegionID。
+    * nameEn  功能说明：站点信息自定义的英文名称。 取值范围：1-255个字符
+    * nameCn  功能说明：站点信息自定义的中文名称。 取值范围：1-64个字符。
     * siteCode  功能说明：站点编码，格式为<area_code>[-<subarea_code>[-<region_code>]]。 取值范围：1-64个字符。
     * siteType  功能说明：站点类型，必须跟站点编码对应，一段编码为大区，两段编码为区域，三段编码为城域。 取值范围： - Area: 大区站点 - SubArea: 区域站点 - Region: 城域站点
     * serviceList  功能说明：站点支持的服务列表，多个服务用\",\"分隔。 取值范围：0-255个字符
     * groupList  groupList
-    * regionId  功能说明：对应华为云标准region的id，该站点继承自华为云region时才需要填写该字段。 取值范围：0-64个字符。
     * publicBorderGroup  功能说明：用于标记是中心还是边缘站点。中心：center 取值范围：0-255个字符。
     *
     * @var string[]
@@ -125,13 +125,13 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
             'description' => 'description',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
+            'regionId' => 'region_id',
             'nameEn' => 'name_en',
             'nameCn' => 'name_cn',
             'siteCode' => 'site_code',
             'siteType' => 'site_type',
             'serviceList' => 'service_list',
             'groupList' => 'group_list',
-            'regionId' => 'region_id',
             'publicBorderGroup' => 'public_border_group'
     ];
 
@@ -141,13 +141,13 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
     * description  实例描述。不支持 <>。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * nameEn  功能说明：站点信息自定义的英文名字。 取值范围：1-255个字符
-    * nameCn  功能说明：站点信息自定义的中文名字。 取值范围：1-64个字符。
+    * regionId  RegionID。
+    * nameEn  功能说明：站点信息自定义的英文名称。 取值范围：1-255个字符
+    * nameCn  功能说明：站点信息自定义的中文名称。 取值范围：1-64个字符。
     * siteCode  功能说明：站点编码，格式为<area_code>[-<subarea_code>[-<region_code>]]。 取值范围：1-64个字符。
     * siteType  功能说明：站点类型，必须跟站点编码对应，一段编码为大区，两段编码为区域，三段编码为城域。 取值范围： - Area: 大区站点 - SubArea: 区域站点 - Region: 城域站点
     * serviceList  功能说明：站点支持的服务列表，多个服务用\",\"分隔。 取值范围：0-255个字符
     * groupList  groupList
-    * regionId  功能说明：对应华为云标准region的id，该站点继承自华为云region时才需要填写该字段。 取值范围：0-64个字符。
     * publicBorderGroup  功能说明：用于标记是中心还是边缘站点。中心：center 取值范围：0-255个字符。
     *
     * @var string[]
@@ -157,13 +157,13 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
+            'regionId' => 'setRegionId',
             'nameEn' => 'setNameEn',
             'nameCn' => 'setNameCn',
             'siteCode' => 'setSiteCode',
             'siteType' => 'setSiteType',
             'serviceList' => 'setServiceList',
             'groupList' => 'setGroupList',
-            'regionId' => 'setRegionId',
             'publicBorderGroup' => 'setPublicBorderGroup'
     ];
 
@@ -173,13 +173,13 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
     * description  实例描述。不支持 <>。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * nameEn  功能说明：站点信息自定义的英文名字。 取值范围：1-255个字符
-    * nameCn  功能说明：站点信息自定义的中文名字。 取值范围：1-64个字符。
+    * regionId  RegionID。
+    * nameEn  功能说明：站点信息自定义的英文名称。 取值范围：1-255个字符
+    * nameCn  功能说明：站点信息自定义的中文名称。 取值范围：1-64个字符。
     * siteCode  功能说明：站点编码，格式为<area_code>[-<subarea_code>[-<region_code>]]。 取值范围：1-64个字符。
     * siteType  功能说明：站点类型，必须跟站点编码对应，一段编码为大区，两段编码为区域，三段编码为城域。 取值范围： - Area: 大区站点 - SubArea: 区域站点 - Region: 城域站点
     * serviceList  功能说明：站点支持的服务列表，多个服务用\",\"分隔。 取值范围：0-255个字符
     * groupList  groupList
-    * regionId  功能说明：对应华为云标准region的id，该站点继承自华为云region时才需要填写该字段。 取值范围：0-64个字符。
     * publicBorderGroup  功能说明：用于标记是中心还是边缘站点。中心：center 取值范围：0-255个字符。
     *
     * @var string[]
@@ -189,13 +189,13 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
+            'regionId' => 'getRegionId',
             'nameEn' => 'getNameEn',
             'nameCn' => 'getNameCn',
             'siteCode' => 'getSiteCode',
             'siteType' => 'getSiteType',
             'serviceList' => 'getServiceList',
             'groupList' => 'getGroupList',
-            'regionId' => 'getRegionId',
             'publicBorderGroup' => 'getPublicBorderGroup'
     ];
 
@@ -278,13 +278,13 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
+        $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
         $this->container['nameEn'] = isset($data['nameEn']) ? $data['nameEn'] : null;
         $this->container['nameCn'] = isset($data['nameCn']) ? $data['nameCn'] : null;
         $this->container['siteCode'] = isset($data['siteCode']) ? $data['siteCode'] : null;
         $this->container['siteType'] = isset($data['siteType']) ? $data['siteType'] : null;
         $this->container['serviceList'] = isset($data['serviceList']) ? $data['serviceList'] : null;
         $this->container['groupList'] = isset($data['groupList']) ? $data['groupList'] : null;
-        $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
         $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
     }
 
@@ -323,6 +323,15 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
         if ($this->container['updatedAt'] === null) {
             $invalidProperties[] = "'updatedAt' can't be null";
         }
+        if ($this->container['regionId'] === null) {
+            $invalidProperties[] = "'regionId' can't be null";
+        }
+            if ((mb_strlen($this->container['regionId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'regionId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['regionId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'regionId', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['nameEn']) && (mb_strlen($this->container['nameEn']) > 255)) {
                 $invalidProperties[] = "invalid value for 'nameEn', the character length must be smaller than or equal to 255.";
             }
@@ -372,12 +381,6 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['serviceList']) && !preg_match("/^[0-9a-zA-Z_.]+(,[0-9a-zA-Z_.]+)*$/", $this->container['serviceList'])) {
                 $invalidProperties[] = "invalid value for 'serviceList', must be conform to the pattern /^[0-9a-zA-Z_.]+(,[0-9a-zA-Z_.]+)*$/.";
-            }
-            if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'regionId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'regionId', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['publicBorderGroup']) && (mb_strlen($this->container['publicBorderGroup']) > 255)) {
                 $invalidProperties[] = "invalid value for 'publicBorderGroup', the character length must be smaller than or equal to 255.";
@@ -496,8 +499,32 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets regionId
+    *  RegionID。
+    *
+    * @return string
+    */
+    public function getRegionId()
+    {
+        return $this->container['regionId'];
+    }
+
+    /**
+    * Sets regionId
+    *
+    * @param string $regionId RegionID。
+    *
+    * @return $this
+    */
+    public function setRegionId($regionId)
+    {
+        $this->container['regionId'] = $regionId;
+        return $this;
+    }
+
+    /**
     * Gets nameEn
-    *  功能说明：站点信息自定义的英文名字。 取值范围：1-255个字符
+    *  功能说明：站点信息自定义的英文名称。 取值范围：1-255个字符
     *
     * @return string|null
     */
@@ -509,7 +536,7 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
     /**
     * Sets nameEn
     *
-    * @param string|null $nameEn 功能说明：站点信息自定义的英文名字。 取值范围：1-255个字符
+    * @param string|null $nameEn 功能说明：站点信息自定义的英文名称。 取值范围：1-255个字符
     *
     * @return $this
     */
@@ -521,7 +548,7 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameCn
-    *  功能说明：站点信息自定义的中文名字。 取值范围：1-64个字符。
+    *  功能说明：站点信息自定义的中文名称。 取值范围：1-64个字符。
     *
     * @return string|null
     */
@@ -533,7 +560,7 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
     /**
     * Sets nameCn
     *
-    * @param string|null $nameCn 功能说明：站点信息自定义的中文名字。 取值范围：1-64个字符。
+    * @param string|null $nameCn 功能说明：站点信息自定义的中文名称。 取值范围：1-64个字符。
     *
     * @return $this
     */
@@ -636,30 +663,6 @@ class GlobalConnectionBandwidthSites implements ModelInterface, ArrayAccess
     public function setGroupList($groupList)
     {
         $this->container['groupList'] = $groupList;
-        return $this;
-    }
-
-    /**
-    * Gets regionId
-    *  功能说明：对应华为云标准region的id，该站点继承自华为云region时才需要填写该字段。 取值范围：0-64个字符。
-    *
-    * @return string|null
-    */
-    public function getRegionId()
-    {
-        return $this->container['regionId'];
-    }
-
-    /**
-    * Sets regionId
-    *
-    * @param string|null $regionId 功能说明：对应华为云标准region的id，该站点继承自华为云region时才需要填写该字段。 取值范围：0-64个字符。
-    *
-    * @return $this
-    */
-    public function setRegionId($regionId)
-    {
-        $this->container['regionId'] = $regionId;
         return $this;
     }
 

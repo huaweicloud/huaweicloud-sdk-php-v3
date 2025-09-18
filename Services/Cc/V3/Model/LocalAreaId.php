@@ -25,7 +25,7 @@ class LocalAreaId implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'localAreaId' => '\HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef'
+            'localAreaId' => '\HuaweiCloud\SDK\Cc\V3\Model\LocalAreaIdDef'
     ];
 
     /**
@@ -179,7 +179,7 @@ class LocalAreaId implements ModelInterface, ArrayAccess
     * Gets localAreaId
     *  localAreaId
     *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\LocalAreaIdDef
     */
     public function getLocalAreaId()
     {
@@ -189,7 +189,7 @@ class LocalAreaId implements ModelInterface, ArrayAccess
     /**
     * Sets localAreaId
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef $localAreaId localAreaId
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\LocalAreaIdDef $localAreaId localAreaId
     *
     * @return $this
     */

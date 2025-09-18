@@ -20,9 +20,9 @@ class PluginPartQueryVOListAgentPluginInputVO implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pluginName  插件名
-    * displayName  展示名
-    * data  结果集
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
+    * displayName  **参数解释**： 扩展插件展示名称。 **取值范围**： 不涉及。
+    * data  **参数解释**： 插件输入项详细信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class PluginPartQueryVOListAgentPluginInputVO implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pluginName  插件名
-    * displayName  展示名
-    * data  结果集
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
+    * displayName  **参数解释**： 扩展插件展示名称。 **取值范围**： 不涉及。
+    * data  **参数解释**： 插件输入项详细信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class PluginPartQueryVOListAgentPluginInputVO implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pluginName  插件名
-    * displayName  展示名
-    * data  结果集
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
+    * displayName  **参数解释**： 扩展插件展示名称。 **取值范围**： 不涉及。
+    * data  **参数解释**： 插件输入项详细信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class PluginPartQueryVOListAgentPluginInputVO implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pluginName  插件名
-    * displayName  展示名
-    * data  结果集
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
+    * displayName  **参数解释**： 扩展插件展示名称。 **取值范围**： 不涉及。
+    * data  **参数解释**： 插件输入项详细信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class PluginPartQueryVOListAgentPluginInputVO implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pluginName  插件名
-    * displayName  展示名
-    * data  结果集
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
+    * displayName  **参数解释**： 扩展插件展示名称。 **取值范围**： 不涉及。
+    * data  **参数解释**： 插件输入项详细信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class PluginPartQueryVOListAgentPluginInputVO implements ModelInterface, ArrayAc
 
     /**
     * Gets pluginName
-    *  插件名
+    *  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class PluginPartQueryVOListAgentPluginInputVO implements ModelInterface, ArrayAc
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 插件名
+    * @param string|null $pluginName **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class PluginPartQueryVOListAgentPluginInputVO implements ModelInterface, ArrayAc
 
     /**
     * Gets displayName
-    *  展示名
+    *  **参数解释**： 扩展插件展示名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class PluginPartQueryVOListAgentPluginInputVO implements ModelInterface, ArrayAc
     /**
     * Sets displayName
     *
-    * @param string|null $displayName 展示名
+    * @param string|null $displayName **参数解释**： 扩展插件展示名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class PluginPartQueryVOListAgentPluginInputVO implements ModelInterface, ArrayAc
 
     /**
     * Gets data
-    *  结果集
+    *  **参数解释**： 插件输入项详细信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginPartQueryVOListAgentPluginInputVOData[]|null
     */
@@ -256,7 +256,7 @@ class PluginPartQueryVOListAgentPluginInputVO implements ModelInterface, ArrayAc
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginPartQueryVOListAgentPluginInputVOData[]|null $data 结果集
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginPartQueryVOListAgentPluginInputVOData[]|null $data **参数解释**： 插件输入项详细信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

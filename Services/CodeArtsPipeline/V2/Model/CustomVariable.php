@@ -20,18 +20,18 @@ class CustomVariable implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pipelineId  流水线ID
-    * name  自定义参数名称
-    * sequence  自定义参数顺序
-    * type  自定义参数类型
-    * value  自定义参数默认值
-    * isSecret  是否私密参数
-    * description  自定义参数描述
-    * isRuntime  是否运行时设置
-    * limits  参数限制
-    * isReset  是否重置
-    * latestValue  最近一次参数值
-    * runtimeValue  运行时传入值
+    * pipelineId  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * name  **参数解释**： 自定义参数名称。 **约束限制**： 不涉及。 **取值范围**： 仅支持大小写英文字母、数字、“_”，不超过128个字符。 **默认取值**： 不涉及。
+    * sequence  **参数解释**： 参数序号，从1开始。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 自定义参数类型。 **约束限制**： 不涉及。 **取值范围**： - autoIncrement：自增长参数。 - enum：枚举参数。 - string：字符串参数。 **默认取值**： 不涉及。
+    * value  **参数解释**： 自定义参数默认值。 **约束限制**： 不涉及。 **取值范围**： 最长8192字符。 **默认取值**： 不涉及。
+    * isSecret  **参数解释**： 是否私密参数。 **约束限制**： 不涉及。 **取值范围**： - true：是私密参数。 - false：不是私密参数。 **默认取值**： false。
+    * description  **参数解释**： 参数描述。 **约束限制**： 不涉及。 **取值范围**： 最长1024字符。 **默认取值**： 不涉及。
+    * isRuntime  **参数解释**： 是否运行时设置参数。 **约束限制**： 不涉及。 **取值范围**： - true：是运行时设置参数。 - false：不是运行时设置参数。 **默认取值**： false。
+    * limits  **参数解释**： 枚举值列表。 **约束限制**： 不涉及。 **取值范围**： 每个枚举值不超过1024字符。 **默认取值**： 不涉及。
+    * isReset  **参数解释**： 是否重置。自增长参数被编辑，则使用编辑后的值，否则进行末位数字递增。 **约束限制**： 不涉及。 **取值范围**： - true：使用编辑后的参数值。 - false：使用自增长参数。 **默认取值**： false。
+    * latestValue  **参数解释**： 最近一次运行的参数值。 **约束限制**： 不涉及。 **取值范围**： 最长8192字符。 **默认取值**： 不涉及。
+    * runtimeValue  **参数解释**： 流水线运行时设置参数的传入值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -52,18 +52,18 @@ class CustomVariable implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pipelineId  流水线ID
-    * name  自定义参数名称
-    * sequence  自定义参数顺序
-    * type  自定义参数类型
-    * value  自定义参数默认值
-    * isSecret  是否私密参数
-    * description  自定义参数描述
-    * isRuntime  是否运行时设置
-    * limits  参数限制
-    * isReset  是否重置
-    * latestValue  最近一次参数值
-    * runtimeValue  运行时传入值
+    * pipelineId  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * name  **参数解释**： 自定义参数名称。 **约束限制**： 不涉及。 **取值范围**： 仅支持大小写英文字母、数字、“_”，不超过128个字符。 **默认取值**： 不涉及。
+    * sequence  **参数解释**： 参数序号，从1开始。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 自定义参数类型。 **约束限制**： 不涉及。 **取值范围**： - autoIncrement：自增长参数。 - enum：枚举参数。 - string：字符串参数。 **默认取值**： 不涉及。
+    * value  **参数解释**： 自定义参数默认值。 **约束限制**： 不涉及。 **取值范围**： 最长8192字符。 **默认取值**： 不涉及。
+    * isSecret  **参数解释**： 是否私密参数。 **约束限制**： 不涉及。 **取值范围**： - true：是私密参数。 - false：不是私密参数。 **默认取值**： false。
+    * description  **参数解释**： 参数描述。 **约束限制**： 不涉及。 **取值范围**： 最长1024字符。 **默认取值**： 不涉及。
+    * isRuntime  **参数解释**： 是否运行时设置参数。 **约束限制**： 不涉及。 **取值范围**： - true：是运行时设置参数。 - false：不是运行时设置参数。 **默认取值**： false。
+    * limits  **参数解释**： 枚举值列表。 **约束限制**： 不涉及。 **取值范围**： 每个枚举值不超过1024字符。 **默认取值**： 不涉及。
+    * isReset  **参数解释**： 是否重置。自增长参数被编辑，则使用编辑后的值，否则进行末位数字递增。 **约束限制**： 不涉及。 **取值范围**： - true：使用编辑后的参数值。 - false：使用自增长参数。 **默认取值**： false。
+    * latestValue  **参数解释**： 最近一次运行的参数值。 **约束限制**： 不涉及。 **取值范围**： 最长8192字符。 **默认取值**： 不涉及。
+    * runtimeValue  **参数解释**： 流水线运行时设置参数的传入值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -105,18 +105,18 @@ class CustomVariable implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pipelineId  流水线ID
-    * name  自定义参数名称
-    * sequence  自定义参数顺序
-    * type  自定义参数类型
-    * value  自定义参数默认值
-    * isSecret  是否私密参数
-    * description  自定义参数描述
-    * isRuntime  是否运行时设置
-    * limits  参数限制
-    * isReset  是否重置
-    * latestValue  最近一次参数值
-    * runtimeValue  运行时传入值
+    * pipelineId  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * name  **参数解释**： 自定义参数名称。 **约束限制**： 不涉及。 **取值范围**： 仅支持大小写英文字母、数字、“_”，不超过128个字符。 **默认取值**： 不涉及。
+    * sequence  **参数解释**： 参数序号，从1开始。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 自定义参数类型。 **约束限制**： 不涉及。 **取值范围**： - autoIncrement：自增长参数。 - enum：枚举参数。 - string：字符串参数。 **默认取值**： 不涉及。
+    * value  **参数解释**： 自定义参数默认值。 **约束限制**： 不涉及。 **取值范围**： 最长8192字符。 **默认取值**： 不涉及。
+    * isSecret  **参数解释**： 是否私密参数。 **约束限制**： 不涉及。 **取值范围**： - true：是私密参数。 - false：不是私密参数。 **默认取值**： false。
+    * description  **参数解释**： 参数描述。 **约束限制**： 不涉及。 **取值范围**： 最长1024字符。 **默认取值**： 不涉及。
+    * isRuntime  **参数解释**： 是否运行时设置参数。 **约束限制**： 不涉及。 **取值范围**： - true：是运行时设置参数。 - false：不是运行时设置参数。 **默认取值**： false。
+    * limits  **参数解释**： 枚举值列表。 **约束限制**： 不涉及。 **取值范围**： 每个枚举值不超过1024字符。 **默认取值**： 不涉及。
+    * isReset  **参数解释**： 是否重置。自增长参数被编辑，则使用编辑后的值，否则进行末位数字递增。 **约束限制**： 不涉及。 **取值范围**： - true：使用编辑后的参数值。 - false：使用自增长参数。 **默认取值**： false。
+    * latestValue  **参数解释**： 最近一次运行的参数值。 **约束限制**： 不涉及。 **取值范围**： 最长8192字符。 **默认取值**： 不涉及。
+    * runtimeValue  **参数解释**： 流水线运行时设置参数的传入值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -137,18 +137,18 @@ class CustomVariable implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pipelineId  流水线ID
-    * name  自定义参数名称
-    * sequence  自定义参数顺序
-    * type  自定义参数类型
-    * value  自定义参数默认值
-    * isSecret  是否私密参数
-    * description  自定义参数描述
-    * isRuntime  是否运行时设置
-    * limits  参数限制
-    * isReset  是否重置
-    * latestValue  最近一次参数值
-    * runtimeValue  运行时传入值
+    * pipelineId  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * name  **参数解释**： 自定义参数名称。 **约束限制**： 不涉及。 **取值范围**： 仅支持大小写英文字母、数字、“_”，不超过128个字符。 **默认取值**： 不涉及。
+    * sequence  **参数解释**： 参数序号，从1开始。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 自定义参数类型。 **约束限制**： 不涉及。 **取值范围**： - autoIncrement：自增长参数。 - enum：枚举参数。 - string：字符串参数。 **默认取值**： 不涉及。
+    * value  **参数解释**： 自定义参数默认值。 **约束限制**： 不涉及。 **取值范围**： 最长8192字符。 **默认取值**： 不涉及。
+    * isSecret  **参数解释**： 是否私密参数。 **约束限制**： 不涉及。 **取值范围**： - true：是私密参数。 - false：不是私密参数。 **默认取值**： false。
+    * description  **参数解释**： 参数描述。 **约束限制**： 不涉及。 **取值范围**： 最长1024字符。 **默认取值**： 不涉及。
+    * isRuntime  **参数解释**： 是否运行时设置参数。 **约束限制**： 不涉及。 **取值范围**： - true：是运行时设置参数。 - false：不是运行时设置参数。 **默认取值**： false。
+    * limits  **参数解释**： 枚举值列表。 **约束限制**： 不涉及。 **取值范围**： 每个枚举值不超过1024字符。 **默认取值**： 不涉及。
+    * isReset  **参数解释**： 是否重置。自增长参数被编辑，则使用编辑后的值，否则进行末位数字递增。 **约束限制**： 不涉及。 **取值范围**： - true：使用编辑后的参数值。 - false：使用自增长参数。 **默认取值**： false。
+    * latestValue  **参数解释**： 最近一次运行的参数值。 **约束限制**： 不涉及。 **取值范围**： 最长8192字符。 **默认取值**： 不涉及。
+    * runtimeValue  **参数解释**： 流水线运行时设置参数的传入值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -169,18 +169,18 @@ class CustomVariable implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pipelineId  流水线ID
-    * name  自定义参数名称
-    * sequence  自定义参数顺序
-    * type  自定义参数类型
-    * value  自定义参数默认值
-    * isSecret  是否私密参数
-    * description  自定义参数描述
-    * isRuntime  是否运行时设置
-    * limits  参数限制
-    * isReset  是否重置
-    * latestValue  最近一次参数值
-    * runtimeValue  运行时传入值
+    * pipelineId  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * name  **参数解释**： 自定义参数名称。 **约束限制**： 不涉及。 **取值范围**： 仅支持大小写英文字母、数字、“_”，不超过128个字符。 **默认取值**： 不涉及。
+    * sequence  **参数解释**： 参数序号，从1开始。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 自定义参数类型。 **约束限制**： 不涉及。 **取值范围**： - autoIncrement：自增长参数。 - enum：枚举参数。 - string：字符串参数。 **默认取值**： 不涉及。
+    * value  **参数解释**： 自定义参数默认值。 **约束限制**： 不涉及。 **取值范围**： 最长8192字符。 **默认取值**： 不涉及。
+    * isSecret  **参数解释**： 是否私密参数。 **约束限制**： 不涉及。 **取值范围**： - true：是私密参数。 - false：不是私密参数。 **默认取值**： false。
+    * description  **参数解释**： 参数描述。 **约束限制**： 不涉及。 **取值范围**： 最长1024字符。 **默认取值**： 不涉及。
+    * isRuntime  **参数解释**： 是否运行时设置参数。 **约束限制**： 不涉及。 **取值范围**： - true：是运行时设置参数。 - false：不是运行时设置参数。 **默认取值**： false。
+    * limits  **参数解释**： 枚举值列表。 **约束限制**： 不涉及。 **取值范围**： 每个枚举值不超过1024字符。 **默认取值**： 不涉及。
+    * isReset  **参数解释**： 是否重置。自增长参数被编辑，则使用编辑后的值，否则进行末位数字递增。 **约束限制**： 不涉及。 **取值范围**： - true：使用编辑后的参数值。 - false：使用自增长参数。 **默认取值**： false。
+    * latestValue  **参数解释**： 最近一次运行的参数值。 **约束限制**： 不涉及。 **取值范围**： 最长8192字符。 **默认取值**： 不涉及。
+    * runtimeValue  **参数解释**： 流水线运行时设置参数的传入值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -295,7 +295,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelineId
-    *  流水线ID
+    *  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -307,7 +307,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
     /**
     * Sets pipelineId
     *
-    * @param string|null $pipelineId 流水线ID
+    * @param string|null $pipelineId **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -319,7 +319,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  自定义参数名称
+    *  **参数解释**： 自定义参数名称。 **约束限制**： 不涉及。 **取值范围**： 仅支持大小写英文字母、数字、“_”，不超过128个字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -331,7 +331,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 自定义参数名称
+    * @param string|null $name **参数解释**： 自定义参数名称。 **约束限制**： 不涉及。 **取值范围**： 仅支持大小写英文字母、数字、“_”，不超过128个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -343,7 +343,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets sequence
-    *  自定义参数顺序
+    *  **参数解释**： 参数序号，从1开始。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -355,7 +355,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
     /**
     * Sets sequence
     *
-    * @param int|null $sequence 自定义参数顺序
+    * @param int|null $sequence **参数解释**： 参数序号，从1开始。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -367,7 +367,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  自定义参数类型
+    *  **参数解释**： 自定义参数类型。 **约束限制**： 不涉及。 **取值范围**： - autoIncrement：自增长参数。 - enum：枚举参数。 - string：字符串参数。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -379,7 +379,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 自定义参数类型
+    * @param string|null $type **参数解释**： 自定义参数类型。 **约束限制**： 不涉及。 **取值范围**： - autoIncrement：自增长参数。 - enum：枚举参数。 - string：字符串参数。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -391,7 +391,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  自定义参数默认值
+    *  **参数解释**： 自定义参数默认值。 **约束限制**： 不涉及。 **取值范围**： 最长8192字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -403,7 +403,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 自定义参数默认值
+    * @param string|null $value **参数解释**： 自定义参数默认值。 **约束限制**： 不涉及。 **取值范围**： 最长8192字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -415,7 +415,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSecret
-    *  是否私密参数
+    *  **参数解释**： 是否私密参数。 **约束限制**： 不涉及。 **取值范围**： - true：是私密参数。 - false：不是私密参数。 **默认取值**： false。
     *
     * @return bool|null
     */
@@ -427,7 +427,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
     /**
     * Sets isSecret
     *
-    * @param bool|null $isSecret 是否私密参数
+    * @param bool|null $isSecret **参数解释**： 是否私密参数。 **约束限制**： 不涉及。 **取值范围**： - true：是私密参数。 - false：不是私密参数。 **默认取值**： false。
     *
     * @return $this
     */
@@ -439,7 +439,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  自定义参数描述
+    *  **参数解释**： 参数描述。 **约束限制**： 不涉及。 **取值范围**： 最长1024字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -451,7 +451,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 自定义参数描述
+    * @param string|null $description **参数解释**： 参数描述。 **约束限制**： 不涉及。 **取值范围**： 最长1024字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -463,7 +463,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets isRuntime
-    *  是否运行时设置
+    *  **参数解释**： 是否运行时设置参数。 **约束限制**： 不涉及。 **取值范围**： - true：是运行时设置参数。 - false：不是运行时设置参数。 **默认取值**： false。
     *
     * @return bool|null
     */
@@ -475,7 +475,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
     /**
     * Sets isRuntime
     *
-    * @param bool|null $isRuntime 是否运行时设置
+    * @param bool|null $isRuntime **参数解释**： 是否运行时设置参数。 **约束限制**： 不涉及。 **取值范围**： - true：是运行时设置参数。 - false：不是运行时设置参数。 **默认取值**： false。
     *
     * @return $this
     */
@@ -487,7 +487,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets limits
-    *  参数限制
+    *  **参数解释**： 枚举值列表。 **约束限制**： 不涉及。 **取值范围**： 每个枚举值不超过1024字符。 **默认取值**： 不涉及。
     *
     * @return object[]|null
     */
@@ -499,7 +499,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
     /**
     * Sets limits
     *
-    * @param object[]|null $limits 参数限制
+    * @param object[]|null $limits **参数解释**： 枚举值列表。 **约束限制**： 不涉及。 **取值范围**： 每个枚举值不超过1024字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -511,7 +511,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets isReset
-    *  是否重置
+    *  **参数解释**： 是否重置。自增长参数被编辑，则使用编辑后的值，否则进行末位数字递增。 **约束限制**： 不涉及。 **取值范围**： - true：使用编辑后的参数值。 - false：使用自增长参数。 **默认取值**： false。
     *
     * @return bool|null
     */
@@ -523,7 +523,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
     /**
     * Sets isReset
     *
-    * @param bool|null $isReset 是否重置
+    * @param bool|null $isReset **参数解释**： 是否重置。自增长参数被编辑，则使用编辑后的值，否则进行末位数字递增。 **约束限制**： 不涉及。 **取值范围**： - true：使用编辑后的参数值。 - false：使用自增长参数。 **默认取值**： false。
     *
     * @return $this
     */
@@ -535,7 +535,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestValue
-    *  最近一次参数值
+    *  **参数解释**： 最近一次运行的参数值。 **约束限制**： 不涉及。 **取值范围**： 最长8192字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -547,7 +547,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
     /**
     * Sets latestValue
     *
-    * @param string|null $latestValue 最近一次参数值
+    * @param string|null $latestValue **参数解释**： 最近一次运行的参数值。 **约束限制**： 不涉及。 **取值范围**： 最长8192字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -559,7 +559,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
 
     /**
     * Gets runtimeValue
-    *  运行时传入值
+    *  **参数解释**： 流水线运行时设置参数的传入值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -571,7 +571,7 @@ class CustomVariable implements ModelInterface, ArrayAccess
     /**
     * Sets runtimeValue
     *
-    * @param string|null $runtimeValue 运行时传入值
+    * @param string|null $runtimeValue **参数解释**： 流水线运行时设置参数的传入值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -203,14 +203,14 @@ class CreateSiteInformation implements ModelInterface, ArrayAccess
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
         }
-            if ((mb_strlen($this->container['projectId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
+            if ((mb_strlen($this->container['projectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
             }
             if ((mb_strlen($this->container['projectId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
             }
-            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['projectId'])) {
-                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-([a-fA-F0-9]{4}-){3}[a-fA-F0-9]{12}|[a-fA-F0-9]{32,32}/", $this->container['projectId'])) {
+                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /[a-fA-F0-9]{8}-([a-fA-F0-9]{4}-){3}[a-fA-F0-9]{12}|[a-fA-F0-9]{32,32}/.";
             }
         if ($this->container['gatewayType'] === null) {
             $invalidProperties[] = "'gatewayType' can't be null";

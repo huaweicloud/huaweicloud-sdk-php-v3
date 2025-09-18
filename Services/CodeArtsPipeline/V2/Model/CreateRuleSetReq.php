@@ -20,8 +20,8 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  策略名称
-    * rules  规则集合
+    * name  **参数解释**： 策略名称 **约束限制**： 策略名称仅支持中文、大小写英文字母、数字、‘-’、‘_’。 **取值范围**： 不超过128个字符。 **默认取值**： 不涉及。
+    * rules  **参数解释**： 规则列表 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  策略名称
-    * rules  规则集合
+    * name  **参数解释**： 策略名称 **约束限制**： 策略名称仅支持中文、大小写英文字母、数字、‘-’、‘_’。 **取值范围**： 不超过128个字符。 **默认取值**： 不涉及。
+    * rules  **参数解释**： 规则列表 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  策略名称
-    * rules  规则集合
+    * name  **参数解释**： 策略名称 **约束限制**： 策略名称仅支持中文、大小写英文字母、数字、‘-’、‘_’。 **取值范围**： 不超过128个字符。 **默认取值**： 不涉及。
+    * rules  **参数解释**： 规则列表 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  策略名称
-    * rules  规则集合
+    * name  **参数解释**： 策略名称 **约束限制**： 策略名称仅支持中文、大小写英文字母、数字、‘-’、‘_’。 **取值范围**： 不超过128个字符。 **默认取值**： 不涉及。
+    * rules  **参数解释**： 规则列表 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  策略名称
-    * rules  规则集合
+    * name  **参数解释**： 策略名称 **约束限制**： 策略名称仅支持中文、大小写英文字母、数字、‘-’、‘_’。 **取值范围**： 不超过128个字符。 **默认取值**： 不涉及。
+    * rules  **参数解释**： 规则列表 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -194,7 +194,7 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  策略名称
+    *  **参数解释**： 策略名称 **约束限制**： 策略名称仅支持中文、大小写英文字母、数字、‘-’、‘_’。 **取值范围**： 不超过128个字符。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -206,7 +206,7 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 策略名称
+    * @param string $name **参数解释**： 策略名称 **约束限制**： 策略名称仅支持中文、大小写英文字母、数字、‘-’、‘_’。 **取值范围**： 不超过128个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -218,7 +218,7 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets rules
-    *  规则集合
+    *  **参数解释**： 规则列表 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RequestRuleInstance[]
     */
@@ -230,7 +230,7 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
     /**
     * Sets rules
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RequestRuleInstance[] $rules 规则集合
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RequestRuleInstance[] $rules **参数解释**： 规则列表 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

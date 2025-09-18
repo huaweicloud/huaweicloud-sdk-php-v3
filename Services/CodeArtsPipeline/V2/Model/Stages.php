@@ -23,7 +23,7 @@ class Stages implements ModelInterface, ArrayAccess
     * result  阶段执行结果。取值及含义：success：成功；error：失败；aborted：终止
     * status  阶段执行状态。取值和含义:waiting:等待;running:执行中;verifying:待审核;suspending:挂起;completed:完成
     * name  阶段名字
-    * parameters  -
+    * parameters  阶段运行参数
     * order  阶段顺序
     * dslMethod  阶段类型
     * displayName  阶段显示名称
@@ -45,7 +45,7 @@ class Stages implements ModelInterface, ArrayAccess
     * result  阶段执行结果。取值及含义：success：成功；error：失败；aborted：终止
     * status  阶段执行状态。取值和含义:waiting:等待;running:执行中;verifying:待审核;suspending:挂起;completed:完成
     * name  阶段名字
-    * parameters  -
+    * parameters  阶段运行参数
     * order  阶段顺序
     * dslMethod  阶段类型
     * displayName  阶段显示名称
@@ -88,7 +88,7 @@ class Stages implements ModelInterface, ArrayAccess
     * result  阶段执行结果。取值及含义：success：成功；error：失败；aborted：终止
     * status  阶段执行状态。取值和含义:waiting:等待;running:执行中;verifying:待审核;suspending:挂起;completed:完成
     * name  阶段名字
-    * parameters  -
+    * parameters  阶段运行参数
     * order  阶段顺序
     * dslMethod  阶段类型
     * displayName  阶段显示名称
@@ -110,7 +110,7 @@ class Stages implements ModelInterface, ArrayAccess
     * result  阶段执行结果。取值及含义：success：成功；error：失败；aborted：终止
     * status  阶段执行状态。取值和含义:waiting:等待;running:执行中;verifying:待审核;suspending:挂起;completed:完成
     * name  阶段名字
-    * parameters  -
+    * parameters  阶段运行参数
     * order  阶段顺序
     * dslMethod  阶段类型
     * displayName  阶段显示名称
@@ -132,7 +132,7 @@ class Stages implements ModelInterface, ArrayAccess
     * result  阶段执行结果。取值及含义：success：成功；error：失败；aborted：终止
     * status  阶段执行状态。取值和含义:waiting:等待;running:执行中;verifying:待审核;suspending:挂起;completed:完成
     * name  阶段名字
-    * parameters  -
+    * parameters  阶段运行参数
     * order  阶段顺序
     * dslMethod  阶段类型
     * displayName  阶段显示名称
@@ -333,7 +333,7 @@ class Stages implements ModelInterface, ArrayAccess
 
     /**
     * Gets parameters
-    *  -
+    *  阶段运行参数
     *
     * @return object
     */
@@ -345,7 +345,7 @@ class Stages implements ModelInterface, ArrayAccess
     /**
     * Sets parameters
     *
-    * @param object $parameters -
+    * @param object $parameters 阶段运行参数
     *
     * @return $this
     */

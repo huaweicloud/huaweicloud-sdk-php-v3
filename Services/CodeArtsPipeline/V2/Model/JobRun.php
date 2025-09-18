@@ -20,24 +20,24 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  任务ID
-    * category  任务类型
-    * sequence  序列号
-    * async  是否异步
-    * name  任务名称
-    * identifier  任务唯一标识
-    * dependsOn  依赖
-    * condition  运行条件
-    * resource  执行资源
-    * isSelect  是否选中
-    * timeout  任务超时设置
-    * lastDispatchId  任务上次下发ID
-    * status  状态
-    * message  错误信息
-    * startTime  开始时间
-    * endTime  结束时间
-    * steps  步骤
-    * execId  任务执行ID
+    * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * category  **参数解释**： 任务类型。 **取值范围**： 不涉及。
+    * sequence  **参数解释**： 序列号。 **取值范围**： 不涉及。
+    * async  **参数解释**： 是否异步。 **取值范围**： - true：异步。 - false：非异步。
+    * name  **参数解释**： 任务名称。 **取值范围**： 不涉及。
+    * identifier  **参数解释**： 任务唯一标识。 **取值范围**： 不涉及。
+    * dependsOn  **参数解释**： 依赖。 **取值范围**： 不涉及。
+    * condition  **参数解释**： 运行条件。 **取值范围**： 不涉及。
+    * resource  **参数解释**： 执行资源。 **取值范围**： 不涉及。
+    * isSelect  **参数解释**： 是否选中。 **取值范围**： - true：选中。 - false：未选中。
+    * timeout  **参数解释**： 任务超时设置。 **取值范围**： 不涉及。
+    * lastDispatchId  **参数解释**： 任务上次下发ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
+    * message  **参数解释**： 错误信息。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
+    * steps  **参数解释**： 步骤。 **取值范围**： 不涉及。
+    * execId  **参数解释**： 任务执行ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class JobRun implements ModelInterface, ArrayAccess
             'id' => 'string',
             'category' => 'string',
             'sequence' => 'int',
-            'async' => 'bool',
+            'async' => 'string',
             'name' => 'string',
             'identifier' => 'string',
             'dependsOn' => 'string[]',
@@ -64,24 +64,24 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  任务ID
-    * category  任务类型
-    * sequence  序列号
-    * async  是否异步
-    * name  任务名称
-    * identifier  任务唯一标识
-    * dependsOn  依赖
-    * condition  运行条件
-    * resource  执行资源
-    * isSelect  是否选中
-    * timeout  任务超时设置
-    * lastDispatchId  任务上次下发ID
-    * status  状态
-    * message  错误信息
-    * startTime  开始时间
-    * endTime  结束时间
-    * steps  步骤
-    * execId  任务执行ID
+    * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * category  **参数解释**： 任务类型。 **取值范围**： 不涉及。
+    * sequence  **参数解释**： 序列号。 **取值范围**： 不涉及。
+    * async  **参数解释**： 是否异步。 **取值范围**： - true：异步。 - false：非异步。
+    * name  **参数解释**： 任务名称。 **取值范围**： 不涉及。
+    * identifier  **参数解释**： 任务唯一标识。 **取值范围**： 不涉及。
+    * dependsOn  **参数解释**： 依赖。 **取值范围**： 不涉及。
+    * condition  **参数解释**： 运行条件。 **取值范围**： 不涉及。
+    * resource  **参数解释**： 执行资源。 **取值范围**： 不涉及。
+    * isSelect  **参数解释**： 是否选中。 **取值范围**： - true：选中。 - false：未选中。
+    * timeout  **参数解释**： 任务超时设置。 **取值范围**： 不涉及。
+    * lastDispatchId  **参数解释**： 任务上次下发ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
+    * message  **参数解释**： 错误信息。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
+    * steps  **参数解释**： 步骤。 **取值范围**： 不涉及。
+    * execId  **参数解释**： 任务执行ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -129,24 +129,24 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  任务ID
-    * category  任务类型
-    * sequence  序列号
-    * async  是否异步
-    * name  任务名称
-    * identifier  任务唯一标识
-    * dependsOn  依赖
-    * condition  运行条件
-    * resource  执行资源
-    * isSelect  是否选中
-    * timeout  任务超时设置
-    * lastDispatchId  任务上次下发ID
-    * status  状态
-    * message  错误信息
-    * startTime  开始时间
-    * endTime  结束时间
-    * steps  步骤
-    * execId  任务执行ID
+    * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * category  **参数解释**： 任务类型。 **取值范围**： 不涉及。
+    * sequence  **参数解释**： 序列号。 **取值范围**： 不涉及。
+    * async  **参数解释**： 是否异步。 **取值范围**： - true：异步。 - false：非异步。
+    * name  **参数解释**： 任务名称。 **取值范围**： 不涉及。
+    * identifier  **参数解释**： 任务唯一标识。 **取值范围**： 不涉及。
+    * dependsOn  **参数解释**： 依赖。 **取值范围**： 不涉及。
+    * condition  **参数解释**： 运行条件。 **取值范围**： 不涉及。
+    * resource  **参数解释**： 执行资源。 **取值范围**： 不涉及。
+    * isSelect  **参数解释**： 是否选中。 **取值范围**： - true：选中。 - false：未选中。
+    * timeout  **参数解释**： 任务超时设置。 **取值范围**： 不涉及。
+    * lastDispatchId  **参数解释**： 任务上次下发ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
+    * message  **参数解释**： 错误信息。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
+    * steps  **参数解释**： 步骤。 **取值范围**： 不涉及。
+    * execId  **参数解释**： 任务执行ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -173,24 +173,24 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  任务ID
-    * category  任务类型
-    * sequence  序列号
-    * async  是否异步
-    * name  任务名称
-    * identifier  任务唯一标识
-    * dependsOn  依赖
-    * condition  运行条件
-    * resource  执行资源
-    * isSelect  是否选中
-    * timeout  任务超时设置
-    * lastDispatchId  任务上次下发ID
-    * status  状态
-    * message  错误信息
-    * startTime  开始时间
-    * endTime  结束时间
-    * steps  步骤
-    * execId  任务执行ID
+    * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * category  **参数解释**： 任务类型。 **取值范围**： 不涉及。
+    * sequence  **参数解释**： 序列号。 **取值范围**： 不涉及。
+    * async  **参数解释**： 是否异步。 **取值范围**： - true：异步。 - false：非异步。
+    * name  **参数解释**： 任务名称。 **取值范围**： 不涉及。
+    * identifier  **参数解释**： 任务唯一标识。 **取值范围**： 不涉及。
+    * dependsOn  **参数解释**： 依赖。 **取值范围**： 不涉及。
+    * condition  **参数解释**： 运行条件。 **取值范围**： 不涉及。
+    * resource  **参数解释**： 执行资源。 **取值范围**： 不涉及。
+    * isSelect  **参数解释**： 是否选中。 **取值范围**： - true：选中。 - false：未选中。
+    * timeout  **参数解释**： 任务超时设置。 **取值范围**： 不涉及。
+    * lastDispatchId  **参数解释**： 任务上次下发ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
+    * message  **参数解释**： 错误信息。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
+    * steps  **参数解释**： 步骤。 **取值范围**： 不涉及。
+    * execId  **参数解释**： 任务执行ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -217,24 +217,24 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  任务ID
-    * category  任务类型
-    * sequence  序列号
-    * async  是否异步
-    * name  任务名称
-    * identifier  任务唯一标识
-    * dependsOn  依赖
-    * condition  运行条件
-    * resource  执行资源
-    * isSelect  是否选中
-    * timeout  任务超时设置
-    * lastDispatchId  任务上次下发ID
-    * status  状态
-    * message  错误信息
-    * startTime  开始时间
-    * endTime  结束时间
-    * steps  步骤
-    * execId  任务执行ID
+    * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * category  **参数解释**： 任务类型。 **取值范围**： 不涉及。
+    * sequence  **参数解释**： 序列号。 **取值范围**： 不涉及。
+    * async  **参数解释**： 是否异步。 **取值范围**： - true：异步。 - false：非异步。
+    * name  **参数解释**： 任务名称。 **取值范围**： 不涉及。
+    * identifier  **参数解释**： 任务唯一标识。 **取值范围**： 不涉及。
+    * dependsOn  **参数解释**： 依赖。 **取值范围**： 不涉及。
+    * condition  **参数解释**： 运行条件。 **取值范围**： 不涉及。
+    * resource  **参数解释**： 执行资源。 **取值范围**： 不涉及。
+    * isSelect  **参数解释**： 是否选中。 **取值范围**： - true：选中。 - false：未选中。
+    * timeout  **参数解释**： 任务超时设置。 **取值范围**： 不涉及。
+    * lastDispatchId  **参数解释**： 任务上次下发ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
+    * message  **参数解释**： 错误信息。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
+    * steps  **参数解释**： 步骤。 **取值范围**： 不涉及。
+    * execId  **参数解释**： 任务执行ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -361,7 +361,7 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  任务ID
+    *  **参数解释**： 任务ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -373,7 +373,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 任务ID
+    * @param string|null $id **参数解释**： 任务ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  任务类型
+    *  **参数解释**： 任务类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -397,7 +397,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category 任务类型
+    * @param string|null $category **参数解释**： 任务类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -409,7 +409,7 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets sequence
-    *  序列号
+    *  **参数解释**： 序列号。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -421,7 +421,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets sequence
     *
-    * @param int|null $sequence 序列号
+    * @param int|null $sequence **参数解释**： 序列号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -433,9 +433,9 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets async
-    *  是否异步
+    *  **参数解释**： 是否异步。 **取值范围**： - true：异步。 - false：非异步。
     *
-    * @return bool|null
+    * @return string|null
     */
     public function getAsync()
     {
@@ -445,7 +445,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets async
     *
-    * @param bool|null $async 是否异步
+    * @param string|null $async **参数解释**： 是否异步。 **取值范围**： - true：异步。 - false：非异步。
     *
     * @return $this
     */
@@ -457,7 +457,7 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  任务名称
+    *  **参数解释**： 任务名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -469,7 +469,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 任务名称
+    * @param string|null $name **参数解释**： 任务名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -481,7 +481,7 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets identifier
-    *  任务唯一标识
+    *  **参数解释**： 任务唯一标识。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -493,7 +493,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets identifier
     *
-    * @param string|null $identifier 任务唯一标识
+    * @param string|null $identifier **参数解释**： 任务唯一标识。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -505,7 +505,7 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets dependsOn
-    *  依赖
+    *  **参数解释**： 依赖。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -517,7 +517,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets dependsOn
     *
-    * @param string[]|null $dependsOn 依赖
+    * @param string[]|null $dependsOn **参数解释**： 依赖。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -529,7 +529,7 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets condition
-    *  运行条件
+    *  **参数解释**： 运行条件。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -541,7 +541,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets condition
     *
-    * @param string|null $condition 运行条件
+    * @param string|null $condition **参数解释**： 运行条件。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -553,7 +553,7 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets resource
-    *  执行资源
+    *  **参数解释**： 执行资源。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -565,7 +565,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets resource
     *
-    * @param string|null $resource 执行资源
+    * @param string|null $resource **参数解释**： 执行资源。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -577,7 +577,7 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSelect
-    *  是否选中
+    *  **参数解释**： 是否选中。 **取值范围**： - true：选中。 - false：未选中。
     *
     * @return bool|null
     */
@@ -589,7 +589,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets isSelect
     *
-    * @param bool|null $isSelect 是否选中
+    * @param bool|null $isSelect **参数解释**： 是否选中。 **取值范围**： - true：选中。 - false：未选中。
     *
     * @return $this
     */
@@ -601,7 +601,7 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeout
-    *  任务超时设置
+    *  **参数解释**： 任务超时设置。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -613,7 +613,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets timeout
     *
-    * @param string|null $timeout 任务超时设置
+    * @param string|null $timeout **参数解释**： 任务超时设置。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -625,7 +625,7 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastDispatchId
-    *  任务上次下发ID
+    *  **参数解释**： 任务上次下发ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -637,7 +637,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets lastDispatchId
     *
-    * @param string|null $lastDispatchId 任务上次下发ID
+    * @param string|null $lastDispatchId **参数解释**： 任务上次下发ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -649,7 +649,7 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
     *
     * @return string|null
     */
@@ -661,7 +661,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
     *
     * @return $this
     */
@@ -673,7 +673,7 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
-    *  错误信息
+    *  **参数解释**： 错误信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -685,7 +685,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets message
     *
-    * @param string|null $message 错误信息
+    * @param string|null $message **参数解释**： 错误信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -697,7 +697,7 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  开始时间
+    *  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -709,7 +709,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime 开始时间
+    * @param int|null $startTime **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -721,7 +721,7 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间
+    *  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -733,7 +733,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int|null $endTime 结束时间
+    * @param int|null $endTime **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -745,7 +745,7 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets steps
-    *  步骤
+    *  **参数解释**： 步骤。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StepRun[]|null
     */
@@ -757,7 +757,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets steps
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StepRun[]|null $steps 步骤
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StepRun[]|null $steps **参数解释**： 步骤。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -769,7 +769,7 @@ class JobRun implements ModelInterface, ArrayAccess
 
     /**
     * Gets execId
-    *  任务执行ID
+    *  **参数解释**： 任务执行ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -781,7 +781,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets execId
     *
-    * @param string|null $execId 任务执行ID
+    * @param string|null $execId **参数解释**： 任务执行ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */

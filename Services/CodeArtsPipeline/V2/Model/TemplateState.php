@@ -26,7 +26,7 @@ class TemplateState implements ModelInterface, ArrayAccess
     * moduleOrTemplateName  模板任务名字
     * displayName  任务在流水线页面展示名字
     * dslMethod  流水线可挂载任务类型
-    * parameters  任务参数,map类型数据
+    * parameters  任务参数，map类型数据
     * isManualExecution  是否手动执行
     * jobParameterValidate  任务参数是否校验
     * isShowCodehubUrl  是否显示代码仓URL
@@ -64,7 +64,7 @@ class TemplateState implements ModelInterface, ArrayAccess
     * moduleOrTemplateName  模板任务名字
     * displayName  任务在流水线页面展示名字
     * dslMethod  流水线可挂载任务类型
-    * parameters  任务参数,map类型数据
+    * parameters  任务参数，map类型数据
     * isManualExecution  是否手动执行
     * jobParameterValidate  任务参数是否校验
     * isShowCodehubUrl  是否显示代码仓URL
@@ -123,7 +123,7 @@ class TemplateState implements ModelInterface, ArrayAccess
     * moduleOrTemplateName  模板任务名字
     * displayName  任务在流水线页面展示名字
     * dslMethod  流水线可挂载任务类型
-    * parameters  任务参数,map类型数据
+    * parameters  任务参数，map类型数据
     * isManualExecution  是否手动执行
     * jobParameterValidate  任务参数是否校验
     * isShowCodehubUrl  是否显示代码仓URL
@@ -161,7 +161,7 @@ class TemplateState implements ModelInterface, ArrayAccess
     * moduleOrTemplateName  模板任务名字
     * displayName  任务在流水线页面展示名字
     * dslMethod  流水线可挂载任务类型
-    * parameters  任务参数,map类型数据
+    * parameters  任务参数，map类型数据
     * isManualExecution  是否手动执行
     * jobParameterValidate  任务参数是否校验
     * isShowCodehubUrl  是否显示代码仓URL
@@ -199,7 +199,7 @@ class TemplateState implements ModelInterface, ArrayAccess
     * moduleOrTemplateName  模板任务名字
     * displayName  任务在流水线页面展示名字
     * dslMethod  流水线可挂载任务类型
-    * parameters  任务参数,map类型数据
+    * parameters  任务参数，map类型数据
     * isManualExecution  是否手动执行
     * jobParameterValidate  任务参数是否校验
     * isShowCodehubUrl  是否显示代码仓URL
@@ -517,7 +517,7 @@ class TemplateState implements ModelInterface, ArrayAccess
 
     /**
     * Gets parameters
-    *  任务参数,map类型数据
+    *  任务参数，map类型数据
     *
     * @return map[string,object]
     */
@@ -529,7 +529,7 @@ class TemplateState implements ModelInterface, ArrayAccess
     /**
     * Sets parameters
     *
-    * @param map[string,object] $parameters 任务参数,map类型数据
+    * @param map[string,object] $parameters 任务参数，map类型数据
     *
     * @return $this
     */

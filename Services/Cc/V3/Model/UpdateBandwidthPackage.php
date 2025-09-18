@@ -23,7 +23,8 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
     * name  实例名称。
     * description  实例描述。不支持 <>。
     * bandwidth  带宽包实例中的带宽值。
-    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 1：大陆站包周期 - 2：国际站包周期 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'bandwidth' => 'int',
-            'billingMode' => 'int'
+            'billingMode' => 'int',
+            'prepaidOptions' => '\HuaweiCloud\SDK\Cc\V3\Model\UpdatePrepaidOptions'
     ];
 
     /**
@@ -39,7 +41,8 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
     * name  实例名称。
     * description  实例描述。不支持 <>。
     * bandwidth  带宽包实例中的带宽值。
-    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 1：大陆站包周期 - 2：国际站包周期 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'bandwidth' => 'int32',
-        'billingMode' => 'int32'
+        'billingMode' => 'int32',
+        'prepaidOptions' => null
     ];
 
     /**
@@ -76,7 +80,8 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
     * name  实例名称。
     * description  实例描述。不支持 <>。
     * bandwidth  带宽包实例中的带宽值。
-    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 1：大陆站包周期 - 2：国际站包周期 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'bandwidth' => 'bandwidth',
-            'billingMode' => 'billing_mode'
+            'billingMode' => 'billing_mode',
+            'prepaidOptions' => 'prepaid_options'
     ];
 
     /**
@@ -92,7 +98,8 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
     * name  实例名称。
     * description  实例描述。不支持 <>。
     * bandwidth  带宽包实例中的带宽值。
-    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 1：大陆站包周期 - 2：国际站包周期 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'bandwidth' => 'setBandwidth',
-            'billingMode' => 'setBillingMode'
+            'billingMode' => 'setBillingMode',
+            'prepaidOptions' => 'setPrepaidOptions'
     ];
 
     /**
@@ -108,7 +116,8 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
     * name  实例名称。
     * description  实例描述。不支持 <>。
     * bandwidth  带宽包实例中的带宽值。
-    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 1：大陆站包周期 - 2：国际站包周期 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'bandwidth' => 'getBandwidth',
-            'billingMode' => 'getBillingMode'
+            'billingMode' => 'getBillingMode',
+            'prepaidOptions' => 'getPrepaidOptions'
     ];
 
     /**
@@ -159,6 +169,8 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const BILLING_MODE_1 = 1;
+    const BILLING_MODE_2 = 2;
     const BILLING_MODE_5 = 5;
     const BILLING_MODE_6 = 6;
     
@@ -171,6 +183,8 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
     public function getBillingModeAllowableValues()
     {
         return [
+            self::BILLING_MODE_1,
+            self::BILLING_MODE_2,
             self::BILLING_MODE_5,
             self::BILLING_MODE_6,
         ];
@@ -196,6 +210,7 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['bandwidth'] = isset($data['bandwidth']) ? $data['bandwidth'] : null;
         $this->container['billingMode'] = isset($data['billingMode']) ? $data['billingMode'] : null;
+        $this->container['prepaidOptions'] = isset($data['prepaidOptions']) ? $data['prepaidOptions'] : null;
     }
 
     /**
@@ -326,7 +341,7 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Gets billingMode
-    *  带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    *  带宽包实例在大陆站或国际站的计费方式： - 1：大陆站包周期 - 2：国际站包周期 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     *
     * @return int|null
     */
@@ -338,13 +353,37 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Sets billingMode
     *
-    * @param int|null $billingMode 带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    * @param int|null $billingMode 带宽包实例在大陆站或国际站的计费方式： - 1：大陆站包周期 - 2：国际站包周期 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     *
     * @return $this
     */
     public function setBillingMode($billingMode)
     {
         $this->container['billingMode'] = $billingMode;
+        return $this;
+    }
+
+    /**
+    * Gets prepaidOptions
+    *  prepaidOptions
+    *
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\UpdatePrepaidOptions|null
+    */
+    public function getPrepaidOptions()
+    {
+        return $this->container['prepaidOptions'];
+    }
+
+    /**
+    * Sets prepaidOptions
+    *
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\UpdatePrepaidOptions|null $prepaidOptions prepaidOptions
+    *
+    * @return $this
+    */
+    public function setPrepaidOptions($prepaidOptions)
+    {
+        $this->container['prepaidOptions'] = $prepaidOptions;
         return $this;
     }
 

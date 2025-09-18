@@ -21,7 +21,7 @@ class CreatePipelineByTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  实例ID
+    * taskId  **参数解释**： 实例ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreatePipelineByTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  实例ID
+    * taskId  **参数解释**： 实例ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreatePipelineByTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  实例ID
+    * taskId  **参数解释**： 实例ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreatePipelineByTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  实例ID
+    * taskId  **参数解释**： 实例ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreatePipelineByTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  实例ID
+    * taskId  **参数解释**： 实例ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class CreatePipelineByTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  实例ID
+    *  **参数解释**： 实例ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class CreatePipelineByTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string|null $taskId 实例ID
+    * @param string|null $taskId **参数解释**： 实例ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */

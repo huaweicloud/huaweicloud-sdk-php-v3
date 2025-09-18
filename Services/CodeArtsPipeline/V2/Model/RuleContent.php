@@ -20,9 +20,9 @@ class RuleContent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupName  分组名称
-    * canModifyWhenInherit  继承后的子策略是否可以修改阈值
-    * properties  规则属性列表
+    * groupName  **参数解释**： 分组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * canModifyWhenInherit  **参数解释**： 继承后的子策略是否可以修改阈值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * properties  **参数解释**： 规则属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class RuleContent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupName  分组名称
-    * canModifyWhenInherit  继承后的子策略是否可以修改阈值
-    * properties  规则属性列表
+    * groupName  **参数解释**： 分组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * canModifyWhenInherit  **参数解释**： 继承后的子策略是否可以修改阈值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * properties  **参数解释**： 规则属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class RuleContent implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupName  分组名称
-    * canModifyWhenInherit  继承后的子策略是否可以修改阈值
-    * properties  规则属性列表
+    * groupName  **参数解释**： 分组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * canModifyWhenInherit  **参数解释**： 继承后的子策略是否可以修改阈值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * properties  **参数解释**： 规则属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class RuleContent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupName  分组名称
-    * canModifyWhenInherit  继承后的子策略是否可以修改阈值
-    * properties  规则属性列表
+    * groupName  **参数解释**： 分组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * canModifyWhenInherit  **参数解释**： 继承后的子策略是否可以修改阈值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * properties  **参数解释**： 规则属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class RuleContent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupName  分组名称
-    * canModifyWhenInherit  继承后的子策略是否可以修改阈值
-    * properties  规则属性列表
+    * groupName  **参数解释**： 分组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * canModifyWhenInherit  **参数解释**： 继承后的子策略是否可以修改阈值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * properties  **参数解释**： 规则属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class RuleContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  分组名称
+    *  **参数解释**： 分组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class RuleContent implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string $groupName 分组名称
+    * @param string $groupName **参数解释**： 分组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class RuleContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets canModifyWhenInherit
-    *  继承后的子策略是否可以修改阈值
+    *  **参数解释**： 继承后的子策略是否可以修改阈值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -241,7 +241,7 @@ class RuleContent implements ModelInterface, ArrayAccess
     /**
     * Sets canModifyWhenInherit
     *
-    * @param bool|null $canModifyWhenInherit 继承后的子策略是否可以修改阈值
+    * @param bool|null $canModifyWhenInherit **参数解释**： 继承后的子策略是否可以修改阈值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class RuleContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets properties
-    *  规则属性列表
+    *  **参数解释**： 规则属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleProperty[]
     */
@@ -265,7 +265,7 @@ class RuleContent implements ModelInterface, ArrayAccess
     /**
     * Sets properties
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleProperty[] $properties 规则属性列表
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleProperty[] $properties **参数解释**： 规则属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

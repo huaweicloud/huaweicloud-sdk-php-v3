@@ -21,8 +21,8 @@ class ListProjectStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  规则实例列表
-    * total  总数
+    * data  **参数解释**： 规则实例列表。 **取值范围**： 不涉及。
+    * total  **参数解释**： 规则总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListProjectStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  规则实例列表
-    * total  总数
+    * data  **参数解释**： 规则实例列表。 **取值范围**： 不涉及。
+    * total  **参数解释**： 规则总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListProjectStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  规则实例列表
-    * total  总数
+    * data  **参数解释**： 规则实例列表。 **取值范围**： 不涉及。
+    * total  **参数解释**： 规则总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListProjectStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  规则实例列表
-    * total  总数
+    * data  **参数解释**： 规则实例列表。 **取值范围**： 不涉及。
+    * total  **参数解释**： 规则总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListProjectStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  规则实例列表
-    * total  总数
+    * data  **参数解释**： 规则实例列表。 **取值范围**： 不涉及。
+    * total  **参数解释**： 规则总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListProjectStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  规则实例列表
+    *  **参数解释**： 规则实例列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleSet[]|null
     */
@@ -198,7 +198,7 @@ class ListProjectStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleSet[]|null $data 规则实例列表
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleSet[]|null $data **参数解释**： 规则实例列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListProjectStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总数
+    *  **参数解释**： 规则总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListProjectStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总数
+    * @param int|null $total **参数解释**： 规则总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

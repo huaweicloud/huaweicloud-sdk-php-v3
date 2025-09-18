@@ -21,21 +21,25 @@ class UpdatePremiumInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * action  独享引擎操作名称
+    * params  具体的请求体
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'action' => 'string'
+            'action' => 'string',
+            'params' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * action  独享引擎操作名称
+    * params  具体的请求体
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'action' => null
+        'action' => null,
+        'params' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class UpdatePremiumInstanceRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * action  独享引擎操作名称
+    * params  具体的请求体
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'action' => 'action'
+            'action' => 'action',
+            'params' => 'params'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * action  独享引擎操作名称
+    * params  具体的请求体
     *
     * @var string[]
     */
     protected static $setters = [
-            'action' => 'setAction'
+            'action' => 'setAction',
+            'params' => 'setParams'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * action  独享引擎操作名称
+    * params  具体的请求体
     *
     * @var string[]
     */
     protected static $getters = [
-            'action' => 'getAction'
+            'action' => 'getAction',
+            'params' => 'getParams'
     ];
 
     /**
@@ -148,6 +158,7 @@ class UpdatePremiumInstanceRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['params'] = isset($data['params']) ? $data['params'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class UpdatePremiumInstanceRequestBody implements ModelInterface, ArrayAccess
     public function setAction($action)
     {
         $this->container['action'] = $action;
+        return $this;
+    }
+
+    /**
+    * Gets params
+    *  具体的请求体
+    *
+    * @return string[]|null
+    */
+    public function getParams()
+    {
+        return $this->container['params'];
+    }
+
+    /**
+    * Sets params
+    *
+    * @param string[]|null $params 具体的请求体
+    *
+    * @return $this
+    */
+    public function setParams($params)
+    {
+        $this->container['params'] = $params;
         return $this;
     }
 

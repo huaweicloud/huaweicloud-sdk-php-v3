@@ -20,12 +20,12 @@ class PluginPartQueryVOListAgentPluginOutputVOData implements ModelInterface, Ar
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * uniqueId  唯一ID
-    * pluginName  插件名
-    * version  版本
-    * workspaceId  租户ID
-    * outputKey  名称
-    * outputValue  值
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * workspaceId  **参数解释**： 租户ID。 **取值范围**： 不涉及。
+    * outputKey  **参数解释**： 定义的插件输出名称。 **取值范围**： 不涉及。
+    * outputValue  **参数解释**： 定义的插件输出内容。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class PluginPartQueryVOListAgentPluginOutputVOData implements ModelInterface, Ar
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * uniqueId  唯一ID
-    * pluginName  插件名
-    * version  版本
-    * workspaceId  租户ID
-    * outputKey  名称
-    * outputValue  值
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * workspaceId  **参数解释**： 租户ID。 **取值范围**： 不涉及。
+    * outputKey  **参数解释**： 定义的插件输出名称。 **取值范围**： 不涉及。
+    * outputValue  **参数解释**： 定义的插件输出内容。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class PluginPartQueryVOListAgentPluginOutputVOData implements ModelInterface, Ar
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * uniqueId  唯一ID
-    * pluginName  插件名
-    * version  版本
-    * workspaceId  租户ID
-    * outputKey  名称
-    * outputValue  值
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * workspaceId  **参数解释**： 租户ID。 **取值范围**： 不涉及。
+    * outputKey  **参数解释**： 定义的插件输出名称。 **取值范围**： 不涉及。
+    * outputValue  **参数解释**： 定义的插件输出内容。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class PluginPartQueryVOListAgentPluginOutputVOData implements ModelInterface, Ar
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * uniqueId  唯一ID
-    * pluginName  插件名
-    * version  版本
-    * workspaceId  租户ID
-    * outputKey  名称
-    * outputValue  值
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * workspaceId  **参数解释**： 租户ID。 **取值范围**： 不涉及。
+    * outputKey  **参数解释**： 定义的插件输出名称。 **取值范围**： 不涉及。
+    * outputValue  **参数解释**： 定义的插件输出内容。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class PluginPartQueryVOListAgentPluginOutputVOData implements ModelInterface, Ar
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * uniqueId  唯一ID
-    * pluginName  插件名
-    * version  版本
-    * workspaceId  租户ID
-    * outputKey  名称
-    * outputValue  值
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * workspaceId  **参数解释**： 租户ID。 **取值范围**： 不涉及。
+    * outputKey  **参数解释**： 定义的插件输出名称。 **取值范围**： 不涉及。
+    * outputValue  **参数解释**： 定义的插件输出内容。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class PluginPartQueryVOListAgentPluginOutputVOData implements ModelInterface, Ar
 
     /**
     * Gets uniqueId
-    *  唯一ID
+    *  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class PluginPartQueryVOListAgentPluginOutputVOData implements ModelInterface, Ar
     /**
     * Sets uniqueId
     *
-    * @param string|null $uniqueId 唯一ID
+    * @param string|null $uniqueId **参数解释**： 唯一ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class PluginPartQueryVOListAgentPluginOutputVOData implements ModelInterface, Ar
 
     /**
     * Gets pluginName
-    *  插件名
+    *  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class PluginPartQueryVOListAgentPluginOutputVOData implements ModelInterface, Ar
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 插件名
+    * @param string|null $pluginName **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class PluginPartQueryVOListAgentPluginOutputVOData implements ModelInterface, Ar
 
     /**
     * Gets version
-    *  版本
+    *  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class PluginPartQueryVOListAgentPluginOutputVOData implements ModelInterface, Ar
     /**
     * Sets version
     *
-    * @param string|null $version 版本
+    * @param string|null $version **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class PluginPartQueryVOListAgentPluginOutputVOData implements ModelInterface, Ar
 
     /**
     * Gets workspaceId
-    *  租户ID
+    *  **参数解释**： 租户ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class PluginPartQueryVOListAgentPluginOutputVOData implements ModelInterface, Ar
     /**
     * Sets workspaceId
     *
-    * @param string|null $workspaceId 租户ID
+    * @param string|null $workspaceId **参数解释**： 租户ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class PluginPartQueryVOListAgentPluginOutputVOData implements ModelInterface, Ar
 
     /**
     * Gets outputKey
-    *  名称
+    *  **参数解释**： 定义的插件输出名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class PluginPartQueryVOListAgentPluginOutputVOData implements ModelInterface, Ar
     /**
     * Sets outputKey
     *
-    * @param string|null $outputKey 名称
+    * @param string|null $outputKey **参数解释**： 定义的插件输出名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class PluginPartQueryVOListAgentPluginOutputVOData implements ModelInterface, Ar
 
     /**
     * Gets outputValue
-    *  值
+    *  **参数解释**： 定义的插件输出内容。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class PluginPartQueryVOListAgentPluginOutputVOData implements ModelInterface, Ar
     /**
     * Sets outputValue
     *
-    * @param string|null $outputValue 值
+    * @param string|null $outputValue **参数解释**： 定义的插件输出内容。 **取值范围**： 不涉及。
     *
     * @return $this
     */

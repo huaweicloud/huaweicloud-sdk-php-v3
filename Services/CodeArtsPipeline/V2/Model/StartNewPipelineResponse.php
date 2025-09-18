@@ -21,8 +21,8 @@ class StartNewPipelineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pipelineId  流水线ID
-    * buildId  流水线构建ID
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * buildId  **参数解释**： 流水线执行ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class StartNewPipelineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pipelineId  流水线ID
-    * buildId  流水线构建ID
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * buildId  **参数解释**： 流水线执行ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class StartNewPipelineResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pipelineId  流水线ID
-    * buildId  流水线构建ID
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * buildId  **参数解释**： 流水线执行ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class StartNewPipelineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pipelineId  流水线ID
-    * buildId  流水线构建ID
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * buildId  **参数解释**： 流水线执行ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class StartNewPipelineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pipelineId  流水线ID
-    * buildId  流水线构建ID
+    * pipelineId  **参数解释**： 流水线ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * buildId  **参数解释**： 流水线执行ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class StartNewPipelineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelineId
-    *  流水线ID
+    *  **参数解释**： 流水线ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class StartNewPipelineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pipelineId
     *
-    * @param string|null $pipelineId 流水线ID
+    * @param string|null $pipelineId **参数解释**： 流水线ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class StartNewPipelineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets buildId
-    *  流水线构建ID
+    *  **参数解释**： 流水线执行ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class StartNewPipelineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets buildId
     *
-    * @param string|null $buildId 流水线构建ID
+    * @param string|null $buildId **参数解释**： 流水线执行ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */

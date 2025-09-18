@@ -20,17 +20,18 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pipelineId  流水线ID
-    * name  流水线名称
-    * projectId  项目ID
-    * projectName  项目名称
-    * componentId  组件ID
-    * isPublish  是否为变更流水线
-    * isCollect  是否收藏此流水线
-    * manifestVersion  流水线版本
-    * createTime  创建时间
+    * pipelineId  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * name  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * projectName  **参数解释**： 项目名称。 **取值范围**： 不涉及。
+    * componentId  **参数解释**： 组件ID。 **取值范围**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
+    * isCollect  **参数解释**： 是否收藏此流水线。 **取值范围**： - true：已收藏流水线。 - false：未收藏流水线。
+    * manifestVersion  **参数解释**： 流水线版本。 **取值范围**： 默认3.0。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * latestRun  latestRun
-    * convertSign  旧版转新版标识
+    * convertSign  **参数解释**： 旧版转新版标识。 **取值范围**： 不涉及。
+    * securityLevel  **参数解释**： 流水线涉密等级。 **取值范围**： 正整数。 null：未设置密级。 1：最低密级。
     *
     * @var string[]
     */
@@ -45,22 +46,24 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
             'manifestVersion' => 'string',
             'createTime' => 'int',
             'latestRun' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListPipelinesPageLatestRun',
-            'convertSign' => 'int'
+            'convertSign' => 'int',
+            'securityLevel' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pipelineId  流水线ID
-    * name  流水线名称
-    * projectId  项目ID
-    * projectName  项目名称
-    * componentId  组件ID
-    * isPublish  是否为变更流水线
-    * isCollect  是否收藏此流水线
-    * manifestVersion  流水线版本
-    * createTime  创建时间
+    * pipelineId  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * name  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * projectName  **参数解释**： 项目名称。 **取值范围**： 不涉及。
+    * componentId  **参数解释**： 组件ID。 **取值范围**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
+    * isCollect  **参数解释**： 是否收藏此流水线。 **取值范围**： - true：已收藏流水线。 - false：未收藏流水线。
+    * manifestVersion  **参数解释**： 流水线版本。 **取值范围**： 默认3.0。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * latestRun  latestRun
-    * convertSign  旧版转新版标识
+    * convertSign  **参数解释**： 旧版转新版标识。 **取值范围**： 不涉及。
+    * securityLevel  **参数解释**： 流水线涉密等级。 **取值范围**： 正整数。 null：未设置密级。 1：最低密级。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
         'manifestVersion' => null,
         'createTime' => 'int64',
         'latestRun' => null,
-        'convertSign' => 'int32'
+        'convertSign' => null,
+        'securityLevel' => null
     ];
 
     /**
@@ -101,17 +105,18 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pipelineId  流水线ID
-    * name  流水线名称
-    * projectId  项目ID
-    * projectName  项目名称
-    * componentId  组件ID
-    * isPublish  是否为变更流水线
-    * isCollect  是否收藏此流水线
-    * manifestVersion  流水线版本
-    * createTime  创建时间
+    * pipelineId  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * name  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * projectName  **参数解释**： 项目名称。 **取值范围**： 不涉及。
+    * componentId  **参数解释**： 组件ID。 **取值范围**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
+    * isCollect  **参数解释**： 是否收藏此流水线。 **取值范围**： - true：已收藏流水线。 - false：未收藏流水线。
+    * manifestVersion  **参数解释**： 流水线版本。 **取值范围**： 默认3.0。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * latestRun  latestRun
-    * convertSign  旧版转新版标识
+    * convertSign  **参数解释**： 旧版转新版标识。 **取值范围**： 不涉及。
+    * securityLevel  **参数解释**： 流水线涉密等级。 **取值范围**： 正整数。 null：未设置密级。 1：最低密级。
     *
     * @var string[]
     */
@@ -126,22 +131,24 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
             'manifestVersion' => 'manifest_version',
             'createTime' => 'create_time',
             'latestRun' => 'latest_run',
-            'convertSign' => 'convert_sign'
+            'convertSign' => 'convert_sign',
+            'securityLevel' => 'security_level'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pipelineId  流水线ID
-    * name  流水线名称
-    * projectId  项目ID
-    * projectName  项目名称
-    * componentId  组件ID
-    * isPublish  是否为变更流水线
-    * isCollect  是否收藏此流水线
-    * manifestVersion  流水线版本
-    * createTime  创建时间
+    * pipelineId  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * name  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * projectName  **参数解释**： 项目名称。 **取值范围**： 不涉及。
+    * componentId  **参数解释**： 组件ID。 **取值范围**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
+    * isCollect  **参数解释**： 是否收藏此流水线。 **取值范围**： - true：已收藏流水线。 - false：未收藏流水线。
+    * manifestVersion  **参数解释**： 流水线版本。 **取值范围**： 默认3.0。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * latestRun  latestRun
-    * convertSign  旧版转新版标识
+    * convertSign  **参数解释**： 旧版转新版标识。 **取值范围**： 不涉及。
+    * securityLevel  **参数解释**： 流水线涉密等级。 **取值范围**： 正整数。 null：未设置密级。 1：最低密级。
     *
     * @var string[]
     */
@@ -156,22 +163,24 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
             'manifestVersion' => 'setManifestVersion',
             'createTime' => 'setCreateTime',
             'latestRun' => 'setLatestRun',
-            'convertSign' => 'setConvertSign'
+            'convertSign' => 'setConvertSign',
+            'securityLevel' => 'setSecurityLevel'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pipelineId  流水线ID
-    * name  流水线名称
-    * projectId  项目ID
-    * projectName  项目名称
-    * componentId  组件ID
-    * isPublish  是否为变更流水线
-    * isCollect  是否收藏此流水线
-    * manifestVersion  流水线版本
-    * createTime  创建时间
+    * pipelineId  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * name  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * projectName  **参数解释**： 项目名称。 **取值范围**： 不涉及。
+    * componentId  **参数解释**： 组件ID。 **取值范围**： 不涉及。
+    * isPublish  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
+    * isCollect  **参数解释**： 是否收藏此流水线。 **取值范围**： - true：已收藏流水线。 - false：未收藏流水线。
+    * manifestVersion  **参数解释**： 流水线版本。 **取值范围**： 默认3.0。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * latestRun  latestRun
-    * convertSign  旧版转新版标识
+    * convertSign  **参数解释**： 旧版转新版标识。 **取值范围**： 不涉及。
+    * securityLevel  **参数解释**： 流水线涉密等级。 **取值范围**： 正整数。 null：未设置密级。 1：最低密级。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
             'manifestVersion' => 'getManifestVersion',
             'createTime' => 'getCreateTime',
             'latestRun' => 'getLatestRun',
-            'convertSign' => 'getConvertSign'
+            'convertSign' => 'getConvertSign',
+            'securityLevel' => 'getSecurityLevel'
     ];
 
     /**
@@ -258,6 +268,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['latestRun'] = isset($data['latestRun']) ? $data['latestRun'] : null;
         $this->container['convertSign'] = isset($data['convertSign']) ? $data['convertSign'] : null;
+        $this->container['securityLevel'] = isset($data['securityLevel']) ? $data['securityLevel'] : null;
     }
 
     /**
@@ -284,7 +295,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelineId
-    *  流水线ID
+    *  **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -296,7 +307,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     /**
     * Sets pipelineId
     *
-    * @param string|null $pipelineId 流水线ID
+    * @param string|null $pipelineId **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */
@@ -308,7 +319,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  流水线名称
+    *  **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
     *
     * @return string|null
     */
@@ -320,7 +331,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 流水线名称
+    * @param string|null $name **参数解释**： 流水线名称。 **取值范围**： 仅包含中文、大小写英文字母、数字、'-'和'_'，且长度为[1,128]个字符。
     *
     * @return $this
     */
@@ -332,7 +343,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -344,7 +355,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId **参数解释**： 项目ID。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */
@@ -356,7 +367,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectName
-    *  项目名称
+    *  **参数解释**： 项目名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -368,7 +379,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     /**
     * Sets projectName
     *
-    * @param string|null $projectName 项目名称
+    * @param string|null $projectName **参数解释**： 项目名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -380,7 +391,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
 
     /**
     * Gets componentId
-    *  组件ID
+    *  **参数解释**： 组件ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -392,7 +403,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     /**
     * Sets componentId
     *
-    * @param string|null $componentId 组件ID
+    * @param string|null $componentId **参数解释**： 组件ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -404,7 +415,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPublish
-    *  是否为变更流水线
+    *  **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
     *
     * @return bool|null
     */
@@ -416,7 +427,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     /**
     * Sets isPublish
     *
-    * @param bool|null $isPublish 是否为变更流水线
+    * @param bool|null $isPublish **参数解释**： 是否为变更流水线。 **取值范围**： - true：是变更流水线。 - false：不是变更流水线。
     *
     * @return $this
     */
@@ -428,7 +439,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
 
     /**
     * Gets isCollect
-    *  是否收藏此流水线
+    *  **参数解释**： 是否收藏此流水线。 **取值范围**： - true：已收藏流水线。 - false：未收藏流水线。
     *
     * @return bool|null
     */
@@ -440,7 +451,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     /**
     * Sets isCollect
     *
-    * @param bool|null $isCollect 是否收藏此流水线
+    * @param bool|null $isCollect **参数解释**： 是否收藏此流水线。 **取值范围**： - true：已收藏流水线。 - false：未收藏流水线。
     *
     * @return $this
     */
@@ -452,7 +463,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
 
     /**
     * Gets manifestVersion
-    *  流水线版本
+    *  **参数解释**： 流水线版本。 **取值范围**： 默认3.0。
     *
     * @return string|null
     */
@@ -464,7 +475,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     /**
     * Sets manifestVersion
     *
-    * @param string|null $manifestVersion 流水线版本
+    * @param string|null $manifestVersion **参数解释**： 流水线版本。 **取值范围**： 默认3.0。
     *
     * @return $this
     */
@@ -476,7 +487,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -488,7 +499,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 创建时间
+    * @param int|null $createTime **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -524,7 +535,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
 
     /**
     * Gets convertSign
-    *  旧版转新版标识
+    *  **参数解释**： 旧版转新版标识。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -536,13 +547,37 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     /**
     * Sets convertSign
     *
-    * @param int|null $convertSign 旧版转新版标识
+    * @param int|null $convertSign **参数解释**： 旧版转新版标识。 **取值范围**： 不涉及。
     *
     * @return $this
     */
     public function setConvertSign($convertSign)
     {
         $this->container['convertSign'] = $convertSign;
+        return $this;
+    }
+
+    /**
+    * Gets securityLevel
+    *  **参数解释**： 流水线涉密等级。 **取值范围**： 正整数。 null：未设置密级。 1：最低密级。
+    *
+    * @return int|null
+    */
+    public function getSecurityLevel()
+    {
+        return $this->container['securityLevel'];
+    }
+
+    /**
+    * Sets securityLevel
+    *
+    * @param int|null $securityLevel **参数解释**： 流水线涉密等级。 **取值范围**： 正整数。 null：未设置密级。 1：最低密级。
+    *
+    * @return $this
+    */
+    public function setSecurityLevel($securityLevel)
+    {
+        $this->container['securityLevel'] = $securityLevel;
         return $this;
     }
 

@@ -20,30 +20,34 @@ class NewExtensionOutputs implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  名称
-    * type  类型
-    * description  描述
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * prop  **参数解释**： 扩展信息定义。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
             'type' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'prop' => 'map[string,string]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  名称
-    * type  类型
-    * description  描述
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * prop  **参数解释**： 扩展信息定义。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
         'type' => null,
-        'description' => null
+        'description' => null,
+        'prop' => null
     ];
 
     /**
@@ -69,44 +73,50 @@ class NewExtensionOutputs implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  名称
-    * type  类型
-    * description  描述
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * prop  **参数解释**： 扩展信息定义。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
             'type' => 'type',
-            'description' => 'description'
+            'description' => 'description',
+            'prop' => 'prop'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  名称
-    * type  类型
-    * description  描述
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * prop  **参数解释**： 扩展信息定义。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
             'type' => 'setType',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'prop' => 'setProp'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  名称
-    * type  类型
-    * description  描述
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * prop  **参数解释**： 扩展信息定义。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
             'type' => 'getType',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'prop' => 'getProp'
     ];
 
     /**
@@ -170,6 +180,7 @@ class NewExtensionOutputs implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['prop'] = isset($data['prop']) ? $data['prop'] : null;
     }
 
     /**
@@ -196,7 +207,7 @@ class NewExtensionOutputs implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  **参数解释**： 名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +219,7 @@ class NewExtensionOutputs implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string|null $name **参数解释**： 名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -220,7 +231,7 @@ class NewExtensionOutputs implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型
+    *  **参数解释**： 类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -232,7 +243,7 @@ class NewExtensionOutputs implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 类型
+    * @param string|null $type **参数解释**： 类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -244,7 +255,7 @@ class NewExtensionOutputs implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释**： 描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -256,13 +267,37 @@ class NewExtensionOutputs implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释**： 描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets prop
+    *  **参数解释**： 扩展信息定义。 **取值范围**： 不涉及。
+    *
+    * @return map[string,string]|null
+    */
+    public function getProp()
+    {
+        return $this->container['prop'];
+    }
+
+    /**
+    * Sets prop
+    *
+    * @param map[string,string]|null $prop **参数解释**： 扩展信息定义。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setProp($prop)
+    {
+        $this->container['prop'] = $prop;
         return $this;
     }
 

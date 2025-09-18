@@ -20,10 +20,10 @@ class LogQuery implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * startOffset  日志起始偏移
-    * endOffset  日志结束偏移
-    * limit  最大日志行数
-    * sort  排序规则[\"asc\",\"desc\"]
+    * startOffset  **参数解释**： 日志起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endOffset  **参数解释**： 日志结束偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 最大日志行数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sort  **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class LogQuery implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * startOffset  日志起始偏移
-    * endOffset  日志结束偏移
-    * limit  最大日志行数
-    * sort  排序规则[\"asc\",\"desc\"]
+    * startOffset  **参数解释**： 日志起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endOffset  **参数解释**： 日志结束偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 最大日志行数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sort  **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class LogQuery implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * startOffset  日志起始偏移
-    * endOffset  日志结束偏移
-    * limit  最大日志行数
-    * sort  排序规则[\"asc\",\"desc\"]
+    * startOffset  **参数解释**： 日志起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endOffset  **参数解释**： 日志结束偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 最大日志行数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sort  **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class LogQuery implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * startOffset  日志起始偏移
-    * endOffset  日志结束偏移
-    * limit  最大日志行数
-    * sort  排序规则[\"asc\",\"desc\"]
+    * startOffset  **参数解释**： 日志起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endOffset  **参数解释**： 日志结束偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 最大日志行数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sort  **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class LogQuery implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * startOffset  日志起始偏移
-    * endOffset  日志结束偏移
-    * limit  最大日志行数
-    * sort  排序规则[\"asc\",\"desc\"]
+    * startOffset  **参数解释**： 日志起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endOffset  **参数解释**： 日志结束偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 最大日志行数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sort  **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -213,7 +213,7 @@ class LogQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets startOffset
-    *  日志起始偏移
+    *  **参数解释**： 日志起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -225,7 +225,7 @@ class LogQuery implements ModelInterface, ArrayAccess
     /**
     * Sets startOffset
     *
-    * @param int|null $startOffset 日志起始偏移
+    * @param int|null $startOffset **参数解释**： 日志起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -237,7 +237,7 @@ class LogQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets endOffset
-    *  日志结束偏移
+    *  **参数解释**： 日志结束偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -249,7 +249,7 @@ class LogQuery implements ModelInterface, ArrayAccess
     /**
     * Sets endOffset
     *
-    * @param int|null $endOffset 日志结束偏移
+    * @param int|null $endOffset **参数解释**： 日志结束偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -261,7 +261,7 @@ class LogQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  最大日志行数
+    *  **参数解释**： 最大日志行数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int
     */
@@ -273,7 +273,7 @@ class LogQuery implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int $limit 最大日志行数
+    * @param int $limit **参数解释**： 最大日志行数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -285,7 +285,7 @@ class LogQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets sort
-    *  排序规则[\"asc\",\"desc\"]
+    *  **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -297,7 +297,7 @@ class LogQuery implements ModelInterface, ArrayAccess
     /**
     * Sets sort
     *
-    * @param string $sort 排序规则[\"asc\",\"desc\"]
+    * @param string $sort **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序 **默认取值**： 不涉及。
     *
     * @return $this
     */

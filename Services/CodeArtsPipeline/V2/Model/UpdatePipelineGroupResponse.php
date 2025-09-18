@@ -21,7 +21,7 @@ class UpdatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * success  操作是否成功
+    * success  **参数解释**： 操作是否成功。 **取值范围**： - true：操作成功。 - false：操作失败。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class UpdatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * success  操作是否成功
+    * success  **参数解释**： 操作是否成功。 **取值范围**： - true：操作成功。 - false：操作失败。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class UpdatePipelineGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * success  操作是否成功
+    * success  **参数解释**： 操作是否成功。 **取值范围**： - true：操作成功。 - false：操作失败。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class UpdatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * success  操作是否成功
+    * success  **参数解释**： 操作是否成功。 **取值范围**： - true：操作成功。 - false：操作失败。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class UpdatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * success  操作是否成功
+    * success  **参数解释**： 操作是否成功。 **取值范围**： - true：操作成功。 - false：操作失败。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class UpdatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets success
-    *  操作是否成功
+    *  **参数解释**： 操作是否成功。 **取值范围**： - true：操作成功。 - false：操作失败。
     *
     * @return bool|null
     */
@@ -187,7 +187,7 @@ class UpdatePipelineGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets success
     *
-    * @param bool|null $success 操作是否成功
+    * @param bool|null $success **参数解释**： 操作是否成功。 **取值范围**： - true：操作成功。 - false：操作失败。
     *
     * @return $this
     */

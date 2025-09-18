@@ -20,10 +20,10 @@ class PackageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  产物名
-    * packageType  产物类型
-    * version  产物版本号
-    * downloadUrl  产物下载地址
+    * name  **参数解释**： 产物名。 **取值范围**： 不涉及。
+    * packageType  **参数解释**： 产物类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 产物版本号。 **取值范围**： 不涉及。
+    * downloadUrl  **参数解释**： 产物下载地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class PackageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  产物名
-    * packageType  产物类型
-    * version  产物版本号
-    * downloadUrl  产物下载地址
+    * name  **参数解释**： 产物名。 **取值范围**： 不涉及。
+    * packageType  **参数解释**： 产物类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 产物版本号。 **取值范围**： 不涉及。
+    * downloadUrl  **参数解释**： 产物下载地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class PackageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  产物名
-    * packageType  产物类型
-    * version  产物版本号
-    * downloadUrl  产物下载地址
+    * name  **参数解释**： 产物名。 **取值范围**： 不涉及。
+    * packageType  **参数解释**： 产物类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 产物版本号。 **取值范围**： 不涉及。
+    * downloadUrl  **参数解释**： 产物下载地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class PackageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  产物名
-    * packageType  产物类型
-    * version  产物版本号
-    * downloadUrl  产物下载地址
+    * name  **参数解释**： 产物名。 **取值范围**： 不涉及。
+    * packageType  **参数解释**： 产物类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 产物版本号。 **取值范围**： 不涉及。
+    * downloadUrl  **参数解释**： 产物下载地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class PackageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  产物名
-    * packageType  产物类型
-    * version  产物版本号
-    * downloadUrl  产物下载地址
+    * name  **参数解释**： 产物名。 **取值范围**： 不涉及。
+    * packageType  **参数解释**： 产物类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 产物版本号。 **取值范围**： 不涉及。
+    * downloadUrl  **参数解释**： 产物下载地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class PackageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  产物名
+    *  **参数解释**： 产物名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class PackageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 产物名
+    * @param string|null $name **参数解释**： 产物名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class PackageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets packageType
-    *  产物类型
+    *  **参数解释**： 产物类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class PackageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets packageType
     *
-    * @param string|null $packageType 产物类型
+    * @param string|null $packageType **参数解释**： 产物类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class PackageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  产物版本号
+    *  **参数解释**： 产物版本号。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class PackageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 产物版本号
+    * @param string|null $version **参数解释**： 产物版本号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class PackageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets downloadUrl
-    *  产物下载地址
+    *  **参数解释**： 产物下载地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class PackageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets downloadUrl
     *
-    * @param string|null $downloadUrl 产物下载地址
+    * @param string|null $downloadUrl **参数解释**： 产物下载地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */

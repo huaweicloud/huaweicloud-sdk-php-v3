@@ -20,15 +20,20 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * uniqueId  唯一ID
-    * name  名称
-    * defaultValue  默认值
-    * pluginName  插件名
-    * version  版本
-    * type  类型
-    * workspaceId  租户ID
+    * uniqueId  **参数解释**： 插件输入项唯一ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 插件输入项名称。 **取值范围**： 不涉及。
+    * defaultValue  **参数解释**： 插件输入项默认值。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 插件版本。 **取值范围**： 不涉及。
+    * type  **参数解释**： 插件输入项类型。 **取值范围**： 不涉及。
+    * workspaceId  **参数解释**： 租户id。 **取值范围**： 32位字符，由数字和字母组成。
     * validation  validation
-    * layoutContent  样式信息
+    * layoutContent  **参数解释**： 插件输入项样式信息。 **取值范围**： 不涉及。
+    * extendProp  extendProp
+    * frontDataProp  **参数解释**： 前端渲染使用的数据信息。 **取值范围**： 不涉及。
+    * label  **参数解释**： 标签。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * required  **参数解释**： 是否必须。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -41,20 +46,30 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
             'type' => 'string',
             'workspaceId' => 'string',
             'validation' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ExtensionValidation',
-            'layoutContent' => 'string'
+            'layoutContent' => 'string',
+            'extendProp' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ExtensionExtendProp',
+            'frontDataProp' => 'string',
+            'label' => 'string',
+            'description' => 'string',
+            'required' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * uniqueId  唯一ID
-    * name  名称
-    * defaultValue  默认值
-    * pluginName  插件名
-    * version  版本
-    * type  类型
-    * workspaceId  租户ID
+    * uniqueId  **参数解释**： 插件输入项唯一ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 插件输入项名称。 **取值范围**： 不涉及。
+    * defaultValue  **参数解释**： 插件输入项默认值。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 插件版本。 **取值范围**： 不涉及。
+    * type  **参数解释**： 插件输入项类型。 **取值范围**： 不涉及。
+    * workspaceId  **参数解释**： 租户id。 **取值范围**： 32位字符，由数字和字母组成。
     * validation  validation
-    * layoutContent  样式信息
+    * layoutContent  **参数解释**： 插件输入项样式信息。 **取值范围**： 不涉及。
+    * extendProp  extendProp
+    * frontDataProp  **参数解释**： 前端渲染使用的数据信息。 **取值范围**： 不涉及。
+    * label  **参数解释**： 标签。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * required  **参数解释**： 是否必须。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -67,7 +82,12 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
         'type' => null,
         'workspaceId' => null,
         'validation' => null,
-        'layoutContent' => null
+        'layoutContent' => null,
+        'extendProp' => null,
+        'frontDataProp' => null,
+        'label' => null,
+        'description' => null,
+        'required' => null
     ];
 
     /**
@@ -93,15 +113,20 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * uniqueId  唯一ID
-    * name  名称
-    * defaultValue  默认值
-    * pluginName  插件名
-    * version  版本
-    * type  类型
-    * workspaceId  租户ID
+    * uniqueId  **参数解释**： 插件输入项唯一ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 插件输入项名称。 **取值范围**： 不涉及。
+    * defaultValue  **参数解释**： 插件输入项默认值。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 插件版本。 **取值范围**： 不涉及。
+    * type  **参数解释**： 插件输入项类型。 **取值范围**： 不涉及。
+    * workspaceId  **参数解释**： 租户id。 **取值范围**： 32位字符，由数字和字母组成。
     * validation  validation
-    * layoutContent  样式信息
+    * layoutContent  **参数解释**： 插件输入项样式信息。 **取值范围**： 不涉及。
+    * extendProp  extendProp
+    * frontDataProp  **参数解释**： 前端渲染使用的数据信息。 **取值范围**： 不涉及。
+    * label  **参数解释**： 标签。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * required  **参数解释**： 是否必须。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -114,20 +139,30 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
             'type' => 'type',
             'workspaceId' => 'workspace_id',
             'validation' => 'validation',
-            'layoutContent' => 'layout_content'
+            'layoutContent' => 'layout_content',
+            'extendProp' => 'extend_prop',
+            'frontDataProp' => 'front_data_prop',
+            'label' => 'label',
+            'description' => 'description',
+            'required' => 'required'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * uniqueId  唯一ID
-    * name  名称
-    * defaultValue  默认值
-    * pluginName  插件名
-    * version  版本
-    * type  类型
-    * workspaceId  租户ID
+    * uniqueId  **参数解释**： 插件输入项唯一ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 插件输入项名称。 **取值范围**： 不涉及。
+    * defaultValue  **参数解释**： 插件输入项默认值。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 插件版本。 **取值范围**： 不涉及。
+    * type  **参数解释**： 插件输入项类型。 **取值范围**： 不涉及。
+    * workspaceId  **参数解释**： 租户id。 **取值范围**： 32位字符，由数字和字母组成。
     * validation  validation
-    * layoutContent  样式信息
+    * layoutContent  **参数解释**： 插件输入项样式信息。 **取值范围**： 不涉及。
+    * extendProp  extendProp
+    * frontDataProp  **参数解释**： 前端渲染使用的数据信息。 **取值范围**： 不涉及。
+    * label  **参数解释**： 标签。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * required  **参数解释**： 是否必须。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -140,20 +175,30 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
             'type' => 'setType',
             'workspaceId' => 'setWorkspaceId',
             'validation' => 'setValidation',
-            'layoutContent' => 'setLayoutContent'
+            'layoutContent' => 'setLayoutContent',
+            'extendProp' => 'setExtendProp',
+            'frontDataProp' => 'setFrontDataProp',
+            'label' => 'setLabel',
+            'description' => 'setDescription',
+            'required' => 'setRequired'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * uniqueId  唯一ID
-    * name  名称
-    * defaultValue  默认值
-    * pluginName  插件名
-    * version  版本
-    * type  类型
-    * workspaceId  租户ID
+    * uniqueId  **参数解释**： 插件输入项唯一ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 插件输入项名称。 **取值范围**： 不涉及。
+    * defaultValue  **参数解释**： 插件输入项默认值。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 插件版本。 **取值范围**： 不涉及。
+    * type  **参数解释**： 插件输入项类型。 **取值范围**： 不涉及。
+    * workspaceId  **参数解释**： 租户id。 **取值范围**： 32位字符，由数字和字母组成。
     * validation  validation
-    * layoutContent  样式信息
+    * layoutContent  **参数解释**： 插件输入项样式信息。 **取值范围**： 不涉及。
+    * extendProp  extendProp
+    * frontDataProp  **参数解释**： 前端渲染使用的数据信息。 **取值范围**： 不涉及。
+    * label  **参数解释**： 标签。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * required  **参数解释**： 是否必须。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -166,7 +211,12 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
             'type' => 'getType',
             'workspaceId' => 'getWorkspaceId',
             'validation' => 'getValidation',
-            'layoutContent' => 'getLayoutContent'
+            'layoutContent' => 'getLayoutContent',
+            'extendProp' => 'getExtendProp',
+            'frontDataProp' => 'getFrontDataProp',
+            'label' => 'getLabel',
+            'description' => 'getDescription',
+            'required' => 'getRequired'
     ];
 
     /**
@@ -236,6 +286,11 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
         $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
         $this->container['validation'] = isset($data['validation']) ? $data['validation'] : null;
         $this->container['layoutContent'] = isset($data['layoutContent']) ? $data['layoutContent'] : null;
+        $this->container['extendProp'] = isset($data['extendProp']) ? $data['extendProp'] : null;
+        $this->container['frontDataProp'] = isset($data['frontDataProp']) ? $data['frontDataProp'] : null;
+        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['required'] = isset($data['required']) ? $data['required'] : null;
     }
 
     /**
@@ -262,7 +317,7 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
 
     /**
     * Gets uniqueId
-    *  唯一ID
+    *  **参数解释**： 插件输入项唯一ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -274,7 +329,7 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
     /**
     * Sets uniqueId
     *
-    * @param string|null $uniqueId 唯一ID
+    * @param string|null $uniqueId **参数解释**： 插件输入项唯一ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -286,7 +341,7 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
 
     /**
     * Gets name
-    *  名称
+    *  **参数解释**： 插件输入项名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -298,7 +353,7 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string|null $name **参数解释**： 插件输入项名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -310,7 +365,7 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
 
     /**
     * Gets defaultValue
-    *  默认值
+    *  **参数解释**： 插件输入项默认值。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -322,7 +377,7 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
     /**
     * Sets defaultValue
     *
-    * @param string|null $defaultValue 默认值
+    * @param string|null $defaultValue **参数解释**： 插件输入项默认值。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -334,7 +389,7 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
 
     /**
     * Gets pluginName
-    *  插件名
+    *  **参数解释**： 插件名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -346,7 +401,7 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 插件名
+    * @param string|null $pluginName **参数解释**： 插件名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -358,7 +413,7 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
 
     /**
     * Gets version
-    *  版本
+    *  **参数解释**： 插件版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -370,7 +425,7 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
     /**
     * Sets version
     *
-    * @param string|null $version 版本
+    * @param string|null $version **参数解释**： 插件版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -382,7 +437,7 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
 
     /**
     * Gets type
-    *  类型
+    *  **参数解释**： 插件输入项类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -394,7 +449,7 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
     /**
     * Sets type
     *
-    * @param string|null $type 类型
+    * @param string|null $type **参数解释**： 插件输入项类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -406,7 +461,7 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
 
     /**
     * Gets workspaceId
-    *  租户ID
+    *  **参数解释**： 租户id。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -418,7 +473,7 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
     /**
     * Sets workspaceId
     *
-    * @param string|null $workspaceId 租户ID
+    * @param string|null $workspaceId **参数解释**： 租户id。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -454,7 +509,7 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
 
     /**
     * Gets layoutContent
-    *  样式信息
+    *  **参数解释**： 插件输入项样式信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -466,13 +521,133 @@ class PluginPartQueryVOListAgentPluginInputVOData implements ModelInterface, Arr
     /**
     * Sets layoutContent
     *
-    * @param string|null $layoutContent 样式信息
+    * @param string|null $layoutContent **参数解释**： 插件输入项样式信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
     public function setLayoutContent($layoutContent)
     {
         $this->container['layoutContent'] = $layoutContent;
+        return $this;
+    }
+
+    /**
+    * Gets extendProp
+    *  extendProp
+    *
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ExtensionExtendProp|null
+    */
+    public function getExtendProp()
+    {
+        return $this->container['extendProp'];
+    }
+
+    /**
+    * Sets extendProp
+    *
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ExtensionExtendProp|null $extendProp extendProp
+    *
+    * @return $this
+    */
+    public function setExtendProp($extendProp)
+    {
+        $this->container['extendProp'] = $extendProp;
+        return $this;
+    }
+
+    /**
+    * Gets frontDataProp
+    *  **参数解释**： 前端渲染使用的数据信息。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getFrontDataProp()
+    {
+        return $this->container['frontDataProp'];
+    }
+
+    /**
+    * Sets frontDataProp
+    *
+    * @param string|null $frontDataProp **参数解释**： 前端渲染使用的数据信息。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setFrontDataProp($frontDataProp)
+    {
+        $this->container['frontDataProp'] = $frontDataProp;
+        return $this;
+    }
+
+    /**
+    * Gets label
+    *  **参数解释**： 标签。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLabel()
+    {
+        return $this->container['label'];
+    }
+
+    /**
+    * Sets label
+    *
+    * @param string|null $label **参数解释**： 标签。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setLabel($label)
+    {
+        $this->container['label'] = $label;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  **参数解释**： 描述。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description **参数解释**： 描述。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets required
+    *  **参数解释**： 是否必须。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getRequired()
+    {
+        return $this->container['required'];
+    }
+
+    /**
+    * Sets required
+    *
+    * @param string|null $required **参数解释**： 是否必须。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setRequired($required)
+    {
+        $this->container['required'] = $required;
         return $this;
     }
 

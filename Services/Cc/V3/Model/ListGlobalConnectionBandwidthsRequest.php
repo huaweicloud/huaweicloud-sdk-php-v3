@@ -20,17 +20,17 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  每页返回的个数。 取值范围：1~1000。
+    * limit  每页返回的个数。 取值范围：1~2000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     * id  根据ID查询，可查询多个ID。
-    * name  根据名字查询，可查询多个名字。
+    * name  根据名称查询，可查询多个名称。
     * enterpriseProjectId  根据企业项目ID过滤列表。
     * instanceId  根据绑定实例id过滤全域互联带宽列表。
     * instanceType  根据绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * bindingService  根据支持绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * type  根据带宽类型过滤全域互联带宽列表。带宽类型： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * adminState  根据带宽状态过滤全域互联带宽列表： - NORMAL: 正常 - FREEZED: 冻结
-    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费 - 95avr (日95计费)
+    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - '95': 按传统型95计费 - 95avr (日95计费)
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  每页返回的个数。 取值范围：1~1000。
+    * limit  每页返回的个数。 取值范围：1~2000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     * id  根据ID查询，可查询多个ID。
-    * name  根据名字查询，可查询多个名字。
+    * name  根据名称查询，可查询多个名称。
     * enterpriseProjectId  根据企业项目ID过滤列表。
     * instanceId  根据绑定实例id过滤全域互联带宽列表。
     * instanceType  根据绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * bindingService  根据支持绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * type  根据带宽类型过滤全域互联带宽列表。带宽类型： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * adminState  根据带宽状态过滤全域互联带宽列表： - NORMAL: 正常 - FREEZED: 冻结
-    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费 - 95avr (日95计费)
+    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - '95': 按传统型95计费 - 95avr (日95计费)
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  每页返回的个数。 取值范围：1~1000。
+    * limit  每页返回的个数。 取值范围：1~2000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     * id  根据ID查询，可查询多个ID。
-    * name  根据名字查询，可查询多个名字。
+    * name  根据名称查询，可查询多个名称。
     * enterpriseProjectId  根据企业项目ID过滤列表。
     * instanceId  根据绑定实例id过滤全域互联带宽列表。
     * instanceType  根据绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * bindingService  根据支持绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * type  根据带宽类型过滤全域互联带宽列表。带宽类型： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * adminState  根据带宽状态过滤全域互联带宽列表： - NORMAL: 正常 - FREEZED: 冻结
-    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费 - 95avr (日95计费)
+    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - '95': 按传统型95计费 - 95avr (日95计费)
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  每页返回的个数。 取值范围：1~1000。
+    * limit  每页返回的个数。 取值范围：1~2000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     * id  根据ID查询，可查询多个ID。
-    * name  根据名字查询，可查询多个名字。
+    * name  根据名称查询，可查询多个名称。
     * enterpriseProjectId  根据企业项目ID过滤列表。
     * instanceId  根据绑定实例id过滤全域互联带宽列表。
     * instanceType  根据绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * bindingService  根据支持绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * type  根据带宽类型过滤全域互联带宽列表。带宽类型： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * adminState  根据带宽状态过滤全域互联带宽列表： - NORMAL: 正常 - FREEZED: 冻结
-    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费 - 95avr (日95计费)
+    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - '95': 按传统型95计费 - 95avr (日95计费)
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  每页返回的个数。 取值范围：1~1000。
+    * limit  每页返回的个数。 取值范围：1~2000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     * id  根据ID查询，可查询多个ID。
-    * name  根据名字查询，可查询多个名字。
+    * name  根据名称查询，可查询多个名称。
     * enterpriseProjectId  根据企业项目ID过滤列表。
     * instanceId  根据绑定实例id过滤全域互联带宽列表。
     * instanceType  根据绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * bindingService  根据支持绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * type  根据带宽类型过滤全域互联带宽列表。带宽类型： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * adminState  根据带宽状态过滤全域互联带宽列表： - NORMAL: 正常 - FREEZED: 冻结
-    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费 - 95avr (日95计费)
+    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - '95': 按传统型95计费 - 95avr (日95计费)
     *
     * @var string[]
     */
@@ -357,8 +357,8 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
@@ -385,7 +385,7 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets limit
-    *  每页返回的个数。 取值范围：1~1000。
+    *  每页返回的个数。 取值范围：1~2000。
     *
     * @return int|null
     */
@@ -397,7 +397,7 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页返回的个数。 取值范围：1~1000。
+    * @param int|null $limit 每页返回的个数。 取值范围：1~2000。
     *
     * @return $this
     */
@@ -457,7 +457,7 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets name
-    *  根据名字查询，可查询多个名字。
+    *  根据名称查询，可查询多个名称。
     *
     * @return string[]|null
     */
@@ -469,7 +469,7 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
     /**
     * Sets name
     *
-    * @param string[]|null $name 根据名字查询，可查询多个名字。
+    * @param string[]|null $name 根据名称查询，可查询多个名称。
     *
     * @return $this
     */
@@ -625,7 +625,7 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets chargeMode
-    *  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费 - 95avr (日95计费)
+    *  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - '95': 按传统型95计费 - 95avr (日95计费)
     *
     * @return string[]|null
     */
@@ -637,7 +637,7 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
     /**
     * Sets chargeMode
     *
-    * @param string[]|null $chargeMode 根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费 - 95avr (日95计费)
+    * @param string[]|null $chargeMode 根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - '95': 按传统型95计费 - 95avr (日95计费)
     *
     * @return $this
     */

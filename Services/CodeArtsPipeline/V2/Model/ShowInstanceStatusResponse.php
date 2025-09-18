@@ -21,10 +21,10 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  实例ID
-    * taskStatus  实例创建状态，取值和含义:initializing：初始化中；processing：处理中；finished：已完成；succeeded：成功
+    * taskId  流水线创建实例ID
+    * taskStatus  实例创建状态，取值和含义：initializing：初始化中；processing：处理中；finished：已完成；succeeded：成功
     * pipelineId  流水线ID
-    * pipelineName  流水线名字
+    * pipelineName  流水线名称
     * pipelineUrl  流水线详情页面url
     *
     * @var string[]
@@ -39,10 +39,10 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  实例ID
-    * taskStatus  实例创建状态，取值和含义:initializing：初始化中；processing：处理中；finished：已完成；succeeded：成功
+    * taskId  流水线创建实例ID
+    * taskStatus  实例创建状态，取值和含义：initializing：初始化中；processing：处理中；finished：已完成；succeeded：成功
     * pipelineId  流水线ID
-    * pipelineName  流水线名字
+    * pipelineName  流水线名称
     * pipelineUrl  流水线详情页面url
     *
     * @var string[]
@@ -78,10 +78,10 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  实例ID
-    * taskStatus  实例创建状态，取值和含义:initializing：初始化中；processing：处理中；finished：已完成；succeeded：成功
+    * taskId  流水线创建实例ID
+    * taskStatus  实例创建状态，取值和含义：initializing：初始化中；processing：处理中；finished：已完成；succeeded：成功
     * pipelineId  流水线ID
-    * pipelineName  流水线名字
+    * pipelineName  流水线名称
     * pipelineUrl  流水线详情页面url
     *
     * @var string[]
@@ -96,10 +96,10 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  实例ID
-    * taskStatus  实例创建状态，取值和含义:initializing：初始化中；processing：处理中；finished：已完成；succeeded：成功
+    * taskId  流水线创建实例ID
+    * taskStatus  实例创建状态，取值和含义：initializing：初始化中；processing：处理中；finished：已完成；succeeded：成功
     * pipelineId  流水线ID
-    * pipelineName  流水线名字
+    * pipelineName  流水线名称
     * pipelineUrl  流水线详情页面url
     *
     * @var string[]
@@ -114,10 +114,10 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  实例ID
-    * taskStatus  实例创建状态，取值和含义:initializing：初始化中；processing：处理中；finished：已完成；succeeded：成功
+    * taskId  流水线创建实例ID
+    * taskStatus  实例创建状态，取值和含义：initializing：初始化中；processing：处理中；finished：已完成；succeeded：成功
     * pipelineId  流水线ID
-    * pipelineName  流水线名字
+    * pipelineName  流水线名称
     * pipelineUrl  流水线详情页面url
     *
     * @var string[]
@@ -219,7 +219,7 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  实例ID
+    *  流水线创建实例ID
     *
     * @return string|null
     */
@@ -231,7 +231,7 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string|null $taskId 实例ID
+    * @param string|null $taskId 流水线创建实例ID
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskStatus
-    *  实例创建状态，取值和含义:initializing：初始化中；processing：处理中；finished：已完成；succeeded：成功
+    *  实例创建状态，取值和含义：initializing：初始化中；processing：处理中；finished：已完成；succeeded：成功
     *
     * @return string|null
     */
@@ -255,7 +255,7 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskStatus
     *
-    * @param string|null $taskStatus 实例创建状态，取值和含义:initializing：初始化中；processing：处理中；finished：已完成；succeeded：成功
+    * @param string|null $taskStatus 实例创建状态，取值和含义：initializing：初始化中；processing：处理中；finished：已完成；succeeded：成功
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelineName
-    *  流水线名字
+    *  流水线名称
     *
     * @return string|null
     */
@@ -303,7 +303,7 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pipelineName
     *
-    * @param string|null $pipelineName 流水线名字
+    * @param string|null $pipelineName 流水线名称
     *
     * @return $this
     */

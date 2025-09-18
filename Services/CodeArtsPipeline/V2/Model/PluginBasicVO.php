@@ -20,32 +20,39 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pluginName  插件名
-    * displayName  展示名
-    * version  版本
-    * versionDescription  版本说明
-    * description  描述
-    * versionAttribution  版本属性
-    * uniqueId  唯一ID
-    * opUser  操作人
-    * opTime  操作时间
-    * pluginCompositionType  组合类型
-    * pluginAttribution  属性
-    * workspaceId  租户ID
-    * businessType  业务类型
-    * businessTypeDisplayName  业务类型展示名
-    * maintainers  维护者
-    * iconUrl  图标URL
-    * referCount  引用次数
-    * usageCount  使用次数
-    * runtimeAttribution  运行属性
-    * active  是否激活
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
+    * displayName  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
+    * dbRecordName  **参数解释**： 插件记录展示名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * versionDescription  **参数解释**： 扩展插件版本号说明。 **取值范围**： 不涉及。
+    * description  **参数解释**： 扩展插件描述。 **取值范围**： 不涉及。
+    * versionAttribution  **参数解释**： 扩展插件版本属性。 **取值范围**： - draft：草稿版本。 - formal：正式版本。
+    * uniqueId  **参数解释**： 扩展插件唯一ID。 **取值范围**： 不涉及。
+    * opUser  **参数解释**： 扩展插件最后更新人。 **取值范围**： 不涉及。
+    * opTime  **参数解释**： 扩展插件最后更新时间。 **取值范围**： 不涉及。
+    * pluginCompositionType  **参数解释**： 用于标识插件是否为多个step组成的组合插件。 **取值范围**： - multi：组合插件。 - single：非组合插件。
+    * pluginAttribution  **参数解释**： 扩展插件属性。 **取值范围**： - custom：自定义插件。 - official：官方插件。 - published：已发布的发布商插件。
+    * workspaceId  **参数解释**： 租户ID，用户的domainId。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * businessType  **参数解释**： 扩展插件业务类型。 **取值范围**： 不涉及。
+    * businessTypeDisplayName  **参数解释**： 扩展插件业务类型展示名称。 **取值范围**： 不涉及。
+    * maintainers  **参数解释**： 扩展插件维护人。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 扩展插件图标地址。 **取值范围**： 不涉及。
+    * referCount  **参数解释**： 扩展插件被流水线引用次数。 **取值范围**： 不涉及。
+    * usageCount  **参数解释**： 扩展插件被流水线使用次数。 **取值范围**： 不涉及。
+    * runtimeAttribution  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
+    * active  **参数解释**： 扩展插件是否激活。 **取值范围**： - true：激活。 - false：未激活。
+    * versionState  **参数解释**： 当前插件版本状态。 **取值范围**： 不涉及。
+    * publisherUniqueId  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    * creator  **参数解释**： 创建者名称。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 插件版本标识符。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'pluginName' => 'string',
             'displayName' => 'string',
+            'dbRecordName' => 'string',
             'version' => 'string',
             'versionDescription' => 'string',
             'description' => 'string',
@@ -63,37 +70,49 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
             'referCount' => 'int',
             'usageCount' => 'int',
             'runtimeAttribution' => 'string',
-            'active' => 'int'
+            'active' => 'int',
+            'versionState' => 'string',
+            'publisherUniqueId' => 'string',
+            'creator' => 'string',
+            'createTime' => 'string',
+            'manifestVersion' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pluginName  插件名
-    * displayName  展示名
-    * version  版本
-    * versionDescription  版本说明
-    * description  描述
-    * versionAttribution  版本属性
-    * uniqueId  唯一ID
-    * opUser  操作人
-    * opTime  操作时间
-    * pluginCompositionType  组合类型
-    * pluginAttribution  属性
-    * workspaceId  租户ID
-    * businessType  业务类型
-    * businessTypeDisplayName  业务类型展示名
-    * maintainers  维护者
-    * iconUrl  图标URL
-    * referCount  引用次数
-    * usageCount  使用次数
-    * runtimeAttribution  运行属性
-    * active  是否激活
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
+    * displayName  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
+    * dbRecordName  **参数解释**： 插件记录展示名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * versionDescription  **参数解释**： 扩展插件版本号说明。 **取值范围**： 不涉及。
+    * description  **参数解释**： 扩展插件描述。 **取值范围**： 不涉及。
+    * versionAttribution  **参数解释**： 扩展插件版本属性。 **取值范围**： - draft：草稿版本。 - formal：正式版本。
+    * uniqueId  **参数解释**： 扩展插件唯一ID。 **取值范围**： 不涉及。
+    * opUser  **参数解释**： 扩展插件最后更新人。 **取值范围**： 不涉及。
+    * opTime  **参数解释**： 扩展插件最后更新时间。 **取值范围**： 不涉及。
+    * pluginCompositionType  **参数解释**： 用于标识插件是否为多个step组成的组合插件。 **取值范围**： - multi：组合插件。 - single：非组合插件。
+    * pluginAttribution  **参数解释**： 扩展插件属性。 **取值范围**： - custom：自定义插件。 - official：官方插件。 - published：已发布的发布商插件。
+    * workspaceId  **参数解释**： 租户ID，用户的domainId。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * businessType  **参数解释**： 扩展插件业务类型。 **取值范围**： 不涉及。
+    * businessTypeDisplayName  **参数解释**： 扩展插件业务类型展示名称。 **取值范围**： 不涉及。
+    * maintainers  **参数解释**： 扩展插件维护人。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 扩展插件图标地址。 **取值范围**： 不涉及。
+    * referCount  **参数解释**： 扩展插件被流水线引用次数。 **取值范围**： 不涉及。
+    * usageCount  **参数解释**： 扩展插件被流水线使用次数。 **取值范围**： 不涉及。
+    * runtimeAttribution  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
+    * active  **参数解释**： 扩展插件是否激活。 **取值范围**： - true：激活。 - false：未激活。
+    * versionState  **参数解释**： 当前插件版本状态。 **取值范围**： 不涉及。
+    * publisherUniqueId  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    * creator  **参数解释**： 创建者名称。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 插件版本标识符。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'pluginName' => null,
         'displayName' => null,
+        'dbRecordName' => null,
         'version' => null,
         'versionDescription' => null,
         'description' => null,
@@ -111,7 +130,12 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
         'referCount' => 'int32',
         'usageCount' => 'int32',
         'runtimeAttribution' => null,
-        'active' => 'int32'
+        'active' => 'int32',
+        'versionState' => null,
+        'publisherUniqueId' => null,
+        'creator' => null,
+        'createTime' => null,
+        'manifestVersion' => null
     ];
 
     /**
@@ -137,32 +161,39 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pluginName  插件名
-    * displayName  展示名
-    * version  版本
-    * versionDescription  版本说明
-    * description  描述
-    * versionAttribution  版本属性
-    * uniqueId  唯一ID
-    * opUser  操作人
-    * opTime  操作时间
-    * pluginCompositionType  组合类型
-    * pluginAttribution  属性
-    * workspaceId  租户ID
-    * businessType  业务类型
-    * businessTypeDisplayName  业务类型展示名
-    * maintainers  维护者
-    * iconUrl  图标URL
-    * referCount  引用次数
-    * usageCount  使用次数
-    * runtimeAttribution  运行属性
-    * active  是否激活
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
+    * displayName  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
+    * dbRecordName  **参数解释**： 插件记录展示名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * versionDescription  **参数解释**： 扩展插件版本号说明。 **取值范围**： 不涉及。
+    * description  **参数解释**： 扩展插件描述。 **取值范围**： 不涉及。
+    * versionAttribution  **参数解释**： 扩展插件版本属性。 **取值范围**： - draft：草稿版本。 - formal：正式版本。
+    * uniqueId  **参数解释**： 扩展插件唯一ID。 **取值范围**： 不涉及。
+    * opUser  **参数解释**： 扩展插件最后更新人。 **取值范围**： 不涉及。
+    * opTime  **参数解释**： 扩展插件最后更新时间。 **取值范围**： 不涉及。
+    * pluginCompositionType  **参数解释**： 用于标识插件是否为多个step组成的组合插件。 **取值范围**： - multi：组合插件。 - single：非组合插件。
+    * pluginAttribution  **参数解释**： 扩展插件属性。 **取值范围**： - custom：自定义插件。 - official：官方插件。 - published：已发布的发布商插件。
+    * workspaceId  **参数解释**： 租户ID，用户的domainId。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * businessType  **参数解释**： 扩展插件业务类型。 **取值范围**： 不涉及。
+    * businessTypeDisplayName  **参数解释**： 扩展插件业务类型展示名称。 **取值范围**： 不涉及。
+    * maintainers  **参数解释**： 扩展插件维护人。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 扩展插件图标地址。 **取值范围**： 不涉及。
+    * referCount  **参数解释**： 扩展插件被流水线引用次数。 **取值范围**： 不涉及。
+    * usageCount  **参数解释**： 扩展插件被流水线使用次数。 **取值范围**： 不涉及。
+    * runtimeAttribution  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
+    * active  **参数解释**： 扩展插件是否激活。 **取值范围**： - true：激活。 - false：未激活。
+    * versionState  **参数解释**： 当前插件版本状态。 **取值范围**： 不涉及。
+    * publisherUniqueId  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    * creator  **参数解释**： 创建者名称。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 插件版本标识符。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'pluginName' => 'plugin_name',
             'displayName' => 'display_name',
+            'dbRecordName' => 'db_record_name',
             'version' => 'version',
             'versionDescription' => 'version_description',
             'description' => 'description',
@@ -180,37 +211,49 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
             'referCount' => 'refer_count',
             'usageCount' => 'usage_count',
             'runtimeAttribution' => 'runtime_attribution',
-            'active' => 'active'
+            'active' => 'active',
+            'versionState' => 'version_state',
+            'publisherUniqueId' => 'publisher_unique_id',
+            'creator' => 'creator',
+            'createTime' => 'create_time',
+            'manifestVersion' => 'manifest_version'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pluginName  插件名
-    * displayName  展示名
-    * version  版本
-    * versionDescription  版本说明
-    * description  描述
-    * versionAttribution  版本属性
-    * uniqueId  唯一ID
-    * opUser  操作人
-    * opTime  操作时间
-    * pluginCompositionType  组合类型
-    * pluginAttribution  属性
-    * workspaceId  租户ID
-    * businessType  业务类型
-    * businessTypeDisplayName  业务类型展示名
-    * maintainers  维护者
-    * iconUrl  图标URL
-    * referCount  引用次数
-    * usageCount  使用次数
-    * runtimeAttribution  运行属性
-    * active  是否激活
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
+    * displayName  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
+    * dbRecordName  **参数解释**： 插件记录展示名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * versionDescription  **参数解释**： 扩展插件版本号说明。 **取值范围**： 不涉及。
+    * description  **参数解释**： 扩展插件描述。 **取值范围**： 不涉及。
+    * versionAttribution  **参数解释**： 扩展插件版本属性。 **取值范围**： - draft：草稿版本。 - formal：正式版本。
+    * uniqueId  **参数解释**： 扩展插件唯一ID。 **取值范围**： 不涉及。
+    * opUser  **参数解释**： 扩展插件最后更新人。 **取值范围**： 不涉及。
+    * opTime  **参数解释**： 扩展插件最后更新时间。 **取值范围**： 不涉及。
+    * pluginCompositionType  **参数解释**： 用于标识插件是否为多个step组成的组合插件。 **取值范围**： - multi：组合插件。 - single：非组合插件。
+    * pluginAttribution  **参数解释**： 扩展插件属性。 **取值范围**： - custom：自定义插件。 - official：官方插件。 - published：已发布的发布商插件。
+    * workspaceId  **参数解释**： 租户ID，用户的domainId。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * businessType  **参数解释**： 扩展插件业务类型。 **取值范围**： 不涉及。
+    * businessTypeDisplayName  **参数解释**： 扩展插件业务类型展示名称。 **取值范围**： 不涉及。
+    * maintainers  **参数解释**： 扩展插件维护人。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 扩展插件图标地址。 **取值范围**： 不涉及。
+    * referCount  **参数解释**： 扩展插件被流水线引用次数。 **取值范围**： 不涉及。
+    * usageCount  **参数解释**： 扩展插件被流水线使用次数。 **取值范围**： 不涉及。
+    * runtimeAttribution  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
+    * active  **参数解释**： 扩展插件是否激活。 **取值范围**： - true：激活。 - false：未激活。
+    * versionState  **参数解释**： 当前插件版本状态。 **取值范围**： 不涉及。
+    * publisherUniqueId  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    * creator  **参数解释**： 创建者名称。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 插件版本标识符。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'pluginName' => 'setPluginName',
             'displayName' => 'setDisplayName',
+            'dbRecordName' => 'setDbRecordName',
             'version' => 'setVersion',
             'versionDescription' => 'setVersionDescription',
             'description' => 'setDescription',
@@ -228,37 +271,49 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
             'referCount' => 'setReferCount',
             'usageCount' => 'setUsageCount',
             'runtimeAttribution' => 'setRuntimeAttribution',
-            'active' => 'setActive'
+            'active' => 'setActive',
+            'versionState' => 'setVersionState',
+            'publisherUniqueId' => 'setPublisherUniqueId',
+            'creator' => 'setCreator',
+            'createTime' => 'setCreateTime',
+            'manifestVersion' => 'setManifestVersion'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pluginName  插件名
-    * displayName  展示名
-    * version  版本
-    * versionDescription  版本说明
-    * description  描述
-    * versionAttribution  版本属性
-    * uniqueId  唯一ID
-    * opUser  操作人
-    * opTime  操作时间
-    * pluginCompositionType  组合类型
-    * pluginAttribution  属性
-    * workspaceId  租户ID
-    * businessType  业务类型
-    * businessTypeDisplayName  业务类型展示名
-    * maintainers  维护者
-    * iconUrl  图标URL
-    * referCount  引用次数
-    * usageCount  使用次数
-    * runtimeAttribution  运行属性
-    * active  是否激活
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
+    * displayName  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
+    * dbRecordName  **参数解释**： 插件记录展示名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * versionDescription  **参数解释**： 扩展插件版本号说明。 **取值范围**： 不涉及。
+    * description  **参数解释**： 扩展插件描述。 **取值范围**： 不涉及。
+    * versionAttribution  **参数解释**： 扩展插件版本属性。 **取值范围**： - draft：草稿版本。 - formal：正式版本。
+    * uniqueId  **参数解释**： 扩展插件唯一ID。 **取值范围**： 不涉及。
+    * opUser  **参数解释**： 扩展插件最后更新人。 **取值范围**： 不涉及。
+    * opTime  **参数解释**： 扩展插件最后更新时间。 **取值范围**： 不涉及。
+    * pluginCompositionType  **参数解释**： 用于标识插件是否为多个step组成的组合插件。 **取值范围**： - multi：组合插件。 - single：非组合插件。
+    * pluginAttribution  **参数解释**： 扩展插件属性。 **取值范围**： - custom：自定义插件。 - official：官方插件。 - published：已发布的发布商插件。
+    * workspaceId  **参数解释**： 租户ID，用户的domainId。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * businessType  **参数解释**： 扩展插件业务类型。 **取值范围**： 不涉及。
+    * businessTypeDisplayName  **参数解释**： 扩展插件业务类型展示名称。 **取值范围**： 不涉及。
+    * maintainers  **参数解释**： 扩展插件维护人。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 扩展插件图标地址。 **取值范围**： 不涉及。
+    * referCount  **参数解释**： 扩展插件被流水线引用次数。 **取值范围**： 不涉及。
+    * usageCount  **参数解释**： 扩展插件被流水线使用次数。 **取值范围**： 不涉及。
+    * runtimeAttribution  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
+    * active  **参数解释**： 扩展插件是否激活。 **取值范围**： - true：激活。 - false：未激活。
+    * versionState  **参数解释**： 当前插件版本状态。 **取值范围**： 不涉及。
+    * publisherUniqueId  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    * creator  **参数解释**： 创建者名称。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 插件版本标识符。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'pluginName' => 'getPluginName',
             'displayName' => 'getDisplayName',
+            'dbRecordName' => 'getDbRecordName',
             'version' => 'getVersion',
             'versionDescription' => 'getVersionDescription',
             'description' => 'getDescription',
@@ -276,7 +331,12 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
             'referCount' => 'getReferCount',
             'usageCount' => 'getUsageCount',
             'runtimeAttribution' => 'getRuntimeAttribution',
-            'active' => 'getActive'
+            'active' => 'getActive',
+            'versionState' => 'getVersionState',
+            'publisherUniqueId' => 'getPublisherUniqueId',
+            'creator' => 'getCreator',
+            'createTime' => 'getCreateTime',
+            'manifestVersion' => 'getManifestVersion'
     ];
 
     /**
@@ -339,6 +399,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     {
         $this->container['pluginName'] = isset($data['pluginName']) ? $data['pluginName'] : null;
         $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
+        $this->container['dbRecordName'] = isset($data['dbRecordName']) ? $data['dbRecordName'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['versionDescription'] = isset($data['versionDescription']) ? $data['versionDescription'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -357,6 +418,11 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
         $this->container['usageCount'] = isset($data['usageCount']) ? $data['usageCount'] : null;
         $this->container['runtimeAttribution'] = isset($data['runtimeAttribution']) ? $data['runtimeAttribution'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['versionState'] = isset($data['versionState']) ? $data['versionState'] : null;
+        $this->container['publisherUniqueId'] = isset($data['publisherUniqueId']) ? $data['publisherUniqueId'] : null;
+        $this->container['creator'] = isset($data['creator']) ? $data['creator'] : null;
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['manifestVersion'] = isset($data['manifestVersion']) ? $data['manifestVersion'] : null;
     }
 
     /**
@@ -383,7 +449,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginName
-    *  插件名
+    *  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
     *
     * @return string|null
     */
@@ -395,7 +461,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 插件名
+    * @param string|null $pluginName **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
     *
     * @return $this
     */
@@ -407,7 +473,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayName
-    *  展示名
+    *  **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -419,7 +485,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets displayName
     *
-    * @param string|null $displayName 展示名
+    * @param string|null $displayName **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -430,8 +496,32 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets dbRecordName
+    *  **参数解释**： 插件记录展示名称。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDbRecordName()
+    {
+        return $this->container['dbRecordName'];
+    }
+
+    /**
+    * Sets dbRecordName
+    *
+    * @param string|null $dbRecordName **参数解释**： 插件记录展示名称。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDbRecordName($dbRecordName)
+    {
+        $this->container['dbRecordName'] = $dbRecordName;
+        return $this;
+    }
+
+    /**
     * Gets version
-    *  版本
+    *  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -443,7 +533,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 版本
+    * @param string|null $version **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -455,7 +545,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets versionDescription
-    *  版本说明
+    *  **参数解释**： 扩展插件版本号说明。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -467,7 +557,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets versionDescription
     *
-    * @param string|null $versionDescription 版本说明
+    * @param string|null $versionDescription **参数解释**： 扩展插件版本号说明。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -479,7 +569,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释**： 扩展插件描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -491,7 +581,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释**： 扩展插件描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -503,7 +593,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets versionAttribution
-    *  版本属性
+    *  **参数解释**： 扩展插件版本属性。 **取值范围**： - draft：草稿版本。 - formal：正式版本。
     *
     * @return string|null
     */
@@ -515,7 +605,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets versionAttribution
     *
-    * @param string|null $versionAttribution 版本属性
+    * @param string|null $versionAttribution **参数解释**： 扩展插件版本属性。 **取值范围**： - draft：草稿版本。 - formal：正式版本。
     *
     * @return $this
     */
@@ -527,7 +617,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets uniqueId
-    *  唯一ID
+    *  **参数解释**： 扩展插件唯一ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -539,7 +629,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets uniqueId
     *
-    * @param string|null $uniqueId 唯一ID
+    * @param string|null $uniqueId **参数解释**： 扩展插件唯一ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -551,7 +641,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets opUser
-    *  操作人
+    *  **参数解释**： 扩展插件最后更新人。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -563,7 +653,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets opUser
     *
-    * @param string|null $opUser 操作人
+    * @param string|null $opUser **参数解释**： 扩展插件最后更新人。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -575,7 +665,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets opTime
-    *  操作时间
+    *  **参数解释**： 扩展插件最后更新时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -587,7 +677,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets opTime
     *
-    * @param string|null $opTime 操作时间
+    * @param string|null $opTime **参数解释**： 扩展插件最后更新时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -599,7 +689,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginCompositionType
-    *  组合类型
+    *  **参数解释**： 用于标识插件是否为多个step组成的组合插件。 **取值范围**： - multi：组合插件。 - single：非组合插件。
     *
     * @return string|null
     */
@@ -611,7 +701,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginCompositionType
     *
-    * @param string|null $pluginCompositionType 组合类型
+    * @param string|null $pluginCompositionType **参数解释**： 用于标识插件是否为多个step组成的组合插件。 **取值范围**： - multi：组合插件。 - single：非组合插件。
     *
     * @return $this
     */
@@ -623,7 +713,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginAttribution
-    *  属性
+    *  **参数解释**： 扩展插件属性。 **取值范围**： - custom：自定义插件。 - official：官方插件。 - published：已发布的发布商插件。
     *
     * @return string|null
     */
@@ -635,7 +725,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginAttribution
     *
-    * @param string|null $pluginAttribution 属性
+    * @param string|null $pluginAttribution **参数解释**： 扩展插件属性。 **取值范围**： - custom：自定义插件。 - official：官方插件。 - published：已发布的发布商插件。
     *
     * @return $this
     */
@@ -647,7 +737,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspaceId
-    *  租户ID
+    *  **参数解释**： 租户ID，用户的domainId。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return string|null
     */
@@ -659,7 +749,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets workspaceId
     *
-    * @param string|null $workspaceId 租户ID
+    * @param string|null $workspaceId **参数解释**： 租户ID，用户的domainId。 **取值范围**： 32位字符，仅由数字和字母组成。
     *
     * @return $this
     */
@@ -671,7 +761,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets businessType
-    *  业务类型
+    *  **参数解释**： 扩展插件业务类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -683,7 +773,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets businessType
     *
-    * @param string|null $businessType 业务类型
+    * @param string|null $businessType **参数解释**： 扩展插件业务类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -695,7 +785,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets businessTypeDisplayName
-    *  业务类型展示名
+    *  **参数解释**： 扩展插件业务类型展示名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -707,7 +797,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets businessTypeDisplayName
     *
-    * @param string|null $businessTypeDisplayName 业务类型展示名
+    * @param string|null $businessTypeDisplayName **参数解释**： 扩展插件业务类型展示名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -719,7 +809,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets maintainers
-    *  维护者
+    *  **参数解释**： 扩展插件维护人。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -731,7 +821,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets maintainers
     *
-    * @param string|null $maintainers 维护者
+    * @param string|null $maintainers **参数解释**： 扩展插件维护人。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -743,7 +833,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets iconUrl
-    *  图标URL
+    *  **参数解释**： 扩展插件图标地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -755,7 +845,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets iconUrl
     *
-    * @param string|null $iconUrl 图标URL
+    * @param string|null $iconUrl **参数解释**： 扩展插件图标地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -767,7 +857,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets referCount
-    *  引用次数
+    *  **参数解释**： 扩展插件被流水线引用次数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -779,7 +869,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets referCount
     *
-    * @param int|null $referCount 引用次数
+    * @param int|null $referCount **参数解释**： 扩展插件被流水线引用次数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -791,7 +881,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets usageCount
-    *  使用次数
+    *  **参数解释**： 扩展插件被流水线使用次数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -803,7 +893,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets usageCount
     *
-    * @param int|null $usageCount 使用次数
+    * @param int|null $usageCount **参数解释**： 扩展插件被流水线使用次数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -815,7 +905,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets runtimeAttribution
-    *  运行属性
+    *  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
     *
     * @return string|null
     */
@@ -827,7 +917,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets runtimeAttribution
     *
-    * @param string|null $runtimeAttribution 运行属性
+    * @param string|null $runtimeAttribution **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
     *
     * @return $this
     */
@@ -839,7 +929,7 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets active
-    *  是否激活
+    *  **参数解释**： 扩展插件是否激活。 **取值范围**： - true：激活。 - false：未激活。
     *
     * @return int|null
     */
@@ -851,13 +941,133 @@ class PluginBasicVO implements ModelInterface, ArrayAccess
     /**
     * Sets active
     *
-    * @param int|null $active 是否激活
+    * @param int|null $active **参数解释**： 扩展插件是否激活。 **取值范围**： - true：激活。 - false：未激活。
     *
     * @return $this
     */
     public function setActive($active)
     {
         $this->container['active'] = $active;
+        return $this;
+    }
+
+    /**
+    * Gets versionState
+    *  **参数解释**： 当前插件版本状态。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getVersionState()
+    {
+        return $this->container['versionState'];
+    }
+
+    /**
+    * Sets versionState
+    *
+    * @param string|null $versionState **参数解释**： 当前插件版本状态。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setVersionState($versionState)
+    {
+        $this->container['versionState'] = $versionState;
+        return $this;
+    }
+
+    /**
+    * Gets publisherUniqueId
+    *  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getPublisherUniqueId()
+    {
+        return $this->container['publisherUniqueId'];
+    }
+
+    /**
+    * Sets publisherUniqueId
+    *
+    * @param string|null $publisherUniqueId **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setPublisherUniqueId($publisherUniqueId)
+    {
+        $this->container['publisherUniqueId'] = $publisherUniqueId;
+        return $this;
+    }
+
+    /**
+    * Gets creator
+    *  **参数解释**： 创建者名称。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getCreator()
+    {
+        return $this->container['creator'];
+    }
+
+    /**
+    * Sets creator
+    *
+    * @param string|null $creator **参数解释**： 创建者名称。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setCreator($creator)
+    {
+        $this->container['creator'] = $creator;
+        return $this;
+    }
+
+    /**
+    * Gets createTime
+    *  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getCreateTime()
+    {
+        return $this->container['createTime'];
+    }
+
+    /**
+    * Sets createTime
+    *
+    * @param string|null $createTime **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setCreateTime($createTime)
+    {
+        $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets manifestVersion
+    *  **参数解释**： 插件版本标识符。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getManifestVersion()
+    {
+        return $this->container['manifestVersion'];
+    }
+
+    /**
+    * Sets manifestVersion
+    *
+    * @param string|null $manifestVersion **参数解释**： 插件版本标识符。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setManifestVersion($manifestVersion)
+    {
+        $this->container['manifestVersion'] = $manifestVersion;
         return $this;
     }
 

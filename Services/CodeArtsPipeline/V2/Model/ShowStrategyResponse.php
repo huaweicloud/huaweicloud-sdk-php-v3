@@ -21,16 +21,19 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  规则模版实例ID
-    * name  规则模版实例名称
-    * type  类型
-    * version  版本
-    * creator  创建人
-    * createTime  创建时间
-    * updater  最近更新人
-    * updateTime  最近更新时间
-    * isValid  是否生效
-    * ruleInstances  规则实例集合
+    * id  **参数解释**： 规则模板实例ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * name  **参数解释**： 规则模板实例名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则模板类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则模板策略。 **取值范围**： 不涉及。
+    * creator  **参数解释**： 策略创建人。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 策略创建时间。 **取值范围**： 不涉及。
+    * updater  **参数解释**： 策略最近更新人。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 策略最近更新时间。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 策略是否生效。 **取值范围**： - true：策略生效。 - false：策略不生效。
+    * ruleInstances  **参数解释**： 规则实例集合。 **取值范围**： 不涉及。
+    * level  **参数解释**： 规则实例生效级别。 **取值范围**： 不涉及。
+    * isPublic  **参数解释**： 规则实例是否系统级。 **取值范围**： - true：规则实例是系统级。 - false：规则实例不是系统级。
+    * isLegacy  **参数解释**： 规则实例是1.0的数据。 **取值范围**： - true：规则实例是1.0的数据。 - false：规则实例是1.0的数据。
     *
     * @var string[]
     */
@@ -44,21 +47,27 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
             'updater' => 'string',
             'updateTime' => 'string',
             'isValid' => 'bool',
-            'ruleInstances' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleInstance[]'
+            'ruleInstances' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleInstance[]',
+            'level' => 'string',
+            'isPublic' => 'bool',
+            'isLegacy' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  规则模版实例ID
-    * name  规则模版实例名称
-    * type  类型
-    * version  版本
-    * creator  创建人
-    * createTime  创建时间
-    * updater  最近更新人
-    * updateTime  最近更新时间
-    * isValid  是否生效
-    * ruleInstances  规则实例集合
+    * id  **参数解释**： 规则模板实例ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * name  **参数解释**： 规则模板实例名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则模板类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则模板策略。 **取值范围**： 不涉及。
+    * creator  **参数解释**： 策略创建人。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 策略创建时间。 **取值范围**： 不涉及。
+    * updater  **参数解释**： 策略最近更新人。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 策略最近更新时间。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 策略是否生效。 **取值范围**： - true：策略生效。 - false：策略不生效。
+    * ruleInstances  **参数解释**： 规则实例集合。 **取值范围**： 不涉及。
+    * level  **参数解释**： 规则实例生效级别。 **取值范围**： 不涉及。
+    * isPublic  **参数解释**： 规则实例是否系统级。 **取值范围**： - true：规则实例是系统级。 - false：规则实例不是系统级。
+    * isLegacy  **参数解释**： 规则实例是1.0的数据。 **取值范围**： - true：规则实例是1.0的数据。 - false：规则实例是1.0的数据。
     *
     * @var string[]
     */
@@ -72,7 +81,10 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
         'updater' => null,
         'updateTime' => null,
         'isValid' => null,
-        'ruleInstances' => null
+        'ruleInstances' => null,
+        'level' => null,
+        'isPublic' => null,
+        'isLegacy' => null
     ];
 
     /**
@@ -98,16 +110,19 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  规则模版实例ID
-    * name  规则模版实例名称
-    * type  类型
-    * version  版本
-    * creator  创建人
-    * createTime  创建时间
-    * updater  最近更新人
-    * updateTime  最近更新时间
-    * isValid  是否生效
-    * ruleInstances  规则实例集合
+    * id  **参数解释**： 规则模板实例ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * name  **参数解释**： 规则模板实例名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则模板类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则模板策略。 **取值范围**： 不涉及。
+    * creator  **参数解释**： 策略创建人。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 策略创建时间。 **取值范围**： 不涉及。
+    * updater  **参数解释**： 策略最近更新人。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 策略最近更新时间。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 策略是否生效。 **取值范围**： - true：策略生效。 - false：策略不生效。
+    * ruleInstances  **参数解释**： 规则实例集合。 **取值范围**： 不涉及。
+    * level  **参数解释**： 规则实例生效级别。 **取值范围**： 不涉及。
+    * isPublic  **参数解释**： 规则实例是否系统级。 **取值范围**： - true：规则实例是系统级。 - false：规则实例不是系统级。
+    * isLegacy  **参数解释**： 规则实例是1.0的数据。 **取值范围**： - true：规则实例是1.0的数据。 - false：规则实例是1.0的数据。
     *
     * @var string[]
     */
@@ -121,21 +136,27 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
             'updater' => 'updater',
             'updateTime' => 'update_time',
             'isValid' => 'is_valid',
-            'ruleInstances' => 'rule_instances'
+            'ruleInstances' => 'rule_instances',
+            'level' => 'level',
+            'isPublic' => 'is_public',
+            'isLegacy' => 'is_legacy'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  规则模版实例ID
-    * name  规则模版实例名称
-    * type  类型
-    * version  版本
-    * creator  创建人
-    * createTime  创建时间
-    * updater  最近更新人
-    * updateTime  最近更新时间
-    * isValid  是否生效
-    * ruleInstances  规则实例集合
+    * id  **参数解释**： 规则模板实例ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * name  **参数解释**： 规则模板实例名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则模板类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则模板策略。 **取值范围**： 不涉及。
+    * creator  **参数解释**： 策略创建人。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 策略创建时间。 **取值范围**： 不涉及。
+    * updater  **参数解释**： 策略最近更新人。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 策略最近更新时间。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 策略是否生效。 **取值范围**： - true：策略生效。 - false：策略不生效。
+    * ruleInstances  **参数解释**： 规则实例集合。 **取值范围**： 不涉及。
+    * level  **参数解释**： 规则实例生效级别。 **取值范围**： 不涉及。
+    * isPublic  **参数解释**： 规则实例是否系统级。 **取值范围**： - true：规则实例是系统级。 - false：规则实例不是系统级。
+    * isLegacy  **参数解释**： 规则实例是1.0的数据。 **取值范围**： - true：规则实例是1.0的数据。 - false：规则实例是1.0的数据。
     *
     * @var string[]
     */
@@ -149,21 +170,27 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
             'updater' => 'setUpdater',
             'updateTime' => 'setUpdateTime',
             'isValid' => 'setIsValid',
-            'ruleInstances' => 'setRuleInstances'
+            'ruleInstances' => 'setRuleInstances',
+            'level' => 'setLevel',
+            'isPublic' => 'setIsPublic',
+            'isLegacy' => 'setIsLegacy'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  规则模版实例ID
-    * name  规则模版实例名称
-    * type  类型
-    * version  版本
-    * creator  创建人
-    * createTime  创建时间
-    * updater  最近更新人
-    * updateTime  最近更新时间
-    * isValid  是否生效
-    * ruleInstances  规则实例集合
+    * id  **参数解释**： 规则模板实例ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * name  **参数解释**： 规则模板实例名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则模板类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则模板策略。 **取值范围**： 不涉及。
+    * creator  **参数解释**： 策略创建人。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 策略创建时间。 **取值范围**： 不涉及。
+    * updater  **参数解释**： 策略最近更新人。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 策略最近更新时间。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 策略是否生效。 **取值范围**： - true：策略生效。 - false：策略不生效。
+    * ruleInstances  **参数解释**： 规则实例集合。 **取值范围**： 不涉及。
+    * level  **参数解释**： 规则实例生效级别。 **取值范围**： 不涉及。
+    * isPublic  **参数解释**： 规则实例是否系统级。 **取值范围**： - true：规则实例是系统级。 - false：规则实例不是系统级。
+    * isLegacy  **参数解释**： 规则实例是1.0的数据。 **取值范围**： - true：规则实例是1.0的数据。 - false：规则实例是1.0的数据。
     *
     * @var string[]
     */
@@ -177,7 +204,10 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
             'updater' => 'getUpdater',
             'updateTime' => 'getUpdateTime',
             'isValid' => 'getIsValid',
-            'ruleInstances' => 'getRuleInstances'
+            'ruleInstances' => 'getRuleInstances',
+            'level' => 'getLevel',
+            'isPublic' => 'getIsPublic',
+            'isLegacy' => 'getIsLegacy'
     ];
 
     /**
@@ -248,6 +278,9 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['isValid'] = isset($data['isValid']) ? $data['isValid'] : null;
         $this->container['ruleInstances'] = isset($data['ruleInstances']) ? $data['ruleInstances'] : null;
+        $this->container['level'] = isset($data['level']) ? $data['level'] : null;
+        $this->container['isPublic'] = isset($data['isPublic']) ? $data['isPublic'] : null;
+        $this->container['isLegacy'] = isset($data['isLegacy']) ? $data['isLegacy'] : null;
     }
 
     /**
@@ -274,7 +307,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  规则模版实例ID
+    *  **参数解释**： 规则模板实例ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -286,7 +319,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 规则模版实例ID
+    * @param string|null $id **参数解释**： 规则模板实例ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -298,7 +331,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  规则模版实例名称
+    *  **参数解释**： 规则模板实例名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -310,7 +343,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 规则模版实例名称
+    * @param string|null $name **参数解释**： 规则模板实例名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -322,7 +355,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型
+    *  **参数解释**： 规则模板类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -334,7 +367,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 类型
+    * @param string|null $type **参数解释**： 规则模板类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -346,7 +379,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  版本
+    *  **参数解释**： 规则模板策略。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -358,7 +391,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 版本
+    * @param string|null $version **参数解释**： 规则模板策略。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -370,7 +403,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets creator
-    *  创建人
+    *  **参数解释**： 策略创建人。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -382,7 +415,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets creator
     *
-    * @param string|null $creator 创建人
+    * @param string|null $creator **参数解释**： 策略创建人。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -394,7 +427,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  **参数解释**： 策略创建时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -406,7 +439,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime 创建时间
+    * @param string|null $createTime **参数解释**： 策略创建时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -418,7 +451,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updater
-    *  最近更新人
+    *  **参数解释**： 策略最近更新人。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -430,7 +463,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updater
     *
-    * @param string|null $updater 最近更新人
+    * @param string|null $updater **参数解释**： 策略最近更新人。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -442,7 +475,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  最近更新时间
+    *  **参数解释**： 策略最近更新时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -454,7 +487,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param string|null $updateTime 最近更新时间
+    * @param string|null $updateTime **参数解释**： 策略最近更新时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -466,7 +499,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isValid
-    *  是否生效
+    *  **参数解释**： 策略是否生效。 **取值范围**： - true：策略生效。 - false：策略不生效。
     *
     * @return bool|null
     */
@@ -478,7 +511,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isValid
     *
-    * @param bool|null $isValid 是否生效
+    * @param bool|null $isValid **参数解释**： 策略是否生效。 **取值范围**： - true：策略生效。 - false：策略不生效。
     *
     * @return $this
     */
@@ -490,7 +523,7 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleInstances
-    *  规则实例集合
+    *  **参数解释**： 规则实例集合。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleInstance[]|null
     */
@@ -502,13 +535,85 @@ class ShowStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ruleInstances
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleInstance[]|null $ruleInstances 规则实例集合
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleInstance[]|null $ruleInstances **参数解释**： 规则实例集合。 **取值范围**： 不涉及。
     *
     * @return $this
     */
     public function setRuleInstances($ruleInstances)
     {
         $this->container['ruleInstances'] = $ruleInstances;
+        return $this;
+    }
+
+    /**
+    * Gets level
+    *  **参数解释**： 规则实例生效级别。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLevel()
+    {
+        return $this->container['level'];
+    }
+
+    /**
+    * Sets level
+    *
+    * @param string|null $level **参数解释**： 规则实例生效级别。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setLevel($level)
+    {
+        $this->container['level'] = $level;
+        return $this;
+    }
+
+    /**
+    * Gets isPublic
+    *  **参数解释**： 规则实例是否系统级。 **取值范围**： - true：规则实例是系统级。 - false：规则实例不是系统级。
+    *
+    * @return bool|null
+    */
+    public function getIsPublic()
+    {
+        return $this->container['isPublic'];
+    }
+
+    /**
+    * Sets isPublic
+    *
+    * @param bool|null $isPublic **参数解释**： 规则实例是否系统级。 **取值范围**： - true：规则实例是系统级。 - false：规则实例不是系统级。
+    *
+    * @return $this
+    */
+    public function setIsPublic($isPublic)
+    {
+        $this->container['isPublic'] = $isPublic;
+        return $this;
+    }
+
+    /**
+    * Gets isLegacy
+    *  **参数解释**： 规则实例是1.0的数据。 **取值范围**： - true：规则实例是1.0的数据。 - false：规则实例是1.0的数据。
+    *
+    * @return bool|null
+    */
+    public function getIsLegacy()
+    {
+        return $this->container['isLegacy'];
+    }
+
+    /**
+    * Sets isLegacy
+    *
+    * @param bool|null $isLegacy **参数解释**： 规则实例是1.0的数据。 **取值范围**： - true：规则实例是1.0的数据。 - false：规则实例是1.0的数据。
+    *
+    * @return $this
+    */
+    public function setIsLegacy($isLegacy)
+    {
+        $this->container['isLegacy'] = $isLegacy;
         return $this;
     }
 

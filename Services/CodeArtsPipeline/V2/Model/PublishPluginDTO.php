@@ -20,9 +20,9 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pluginName  插件名
-    * version  版本
-    * publisherUniqueId  发布商ID
+    * pluginName  **参数解释**： 插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publisherUniqueId  **参数解释**： 发布商ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pluginName  插件名
-    * version  版本
-    * publisherUniqueId  发布商ID
+    * pluginName  **参数解释**： 插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publisherUniqueId  **参数解释**： 发布商ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pluginName  插件名
-    * version  版本
-    * publisherUniqueId  发布商ID
+    * pluginName  **参数解释**： 插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publisherUniqueId  **参数解释**： 发布商ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pluginName  插件名
-    * version  版本
-    * publisherUniqueId  发布商ID
+    * pluginName  **参数解释**： 插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publisherUniqueId  **参数解释**： 发布商ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pluginName  插件名
-    * version  版本
-    * publisherUniqueId  发布商ID
+    * pluginName  **参数解释**： 插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publisherUniqueId  **参数解释**： 发布商ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginName
-    *  插件名
+    *  **参数解释**： 插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string $pluginName 插件名
+    * @param string $pluginName **参数解释**： 插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  版本
+    *  **参数解释**： 版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 版本
+    * @param string $version **参数解释**： 版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets publisherUniqueId
-    *  发布商ID
+    *  **参数解释**： 发布商ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets publisherUniqueId
     *
-    * @param string $publisherUniqueId 发布商ID
+    * @param string $publisherUniqueId **参数解释**： 发布商ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

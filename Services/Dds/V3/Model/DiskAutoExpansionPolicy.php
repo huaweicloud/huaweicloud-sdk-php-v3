@@ -20,30 +20,34 @@ class DiskAutoExpansionPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * threshold  触发自动扩容阈值，只支持输入80、85和90。默认阈值为90，即当已使用存储空间达到总存储空间的90%时就会触发扩容。集群实例的自动扩容阈值指的是每个shard。
-    * step  扩容步长（s%），默认为10，支持输入10、15和20。当触发自动扩容的时候，自动扩容当前存储空间的s%（非10倍数向上取整。小数点后四舍五入，默认一次最小10G，账户余额不足时，会导致包年包月实例扩容失败）。
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * threshold  **参数解释：** 触发自动扩容阈值，只支持输入80、85和90。默认阈值为90，即当已使用存储空间达到总存储空间的90%时就会触发扩容。集群实例的自动扩容阈值指的是每个shard。 **取值范围：** 只支持输入80、85和90。
+    * step  **参数解释：** 扩容步长（s%），默认为10，支持输入10、15和20。当触发自动扩容的时候，自动扩容当前存储空间的s%（非10倍数向上取整。小数点后四舍五入，默认一次最小10G，账户余额不足时，会导致包年包月实例扩容失败）。 **取值范围：** 10、15和20。
+    * size  **参数解释：** 最大扩容上限，即当自动扩容达到上限后不再触发自动扩容。 **取值范围：** 实例规格小于8U时，自动扩容上限为5000GB；大于等于8U时，自动扩容上限为10000GB。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'instanceId' => 'string',
             'threshold' => 'int',
-            'step' => 'int'
+            'step' => 'int',
+            'size' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * threshold  触发自动扩容阈值，只支持输入80、85和90。默认阈值为90，即当已使用存储空间达到总存储空间的90%时就会触发扩容。集群实例的自动扩容阈值指的是每个shard。
-    * step  扩容步长（s%），默认为10，支持输入10、15和20。当触发自动扩容的时候，自动扩容当前存储空间的s%（非10倍数向上取整。小数点后四舍五入，默认一次最小10G，账户余额不足时，会导致包年包月实例扩容失败）。
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * threshold  **参数解释：** 触发自动扩容阈值，只支持输入80、85和90。默认阈值为90，即当已使用存储空间达到总存储空间的90%时就会触发扩容。集群实例的自动扩容阈值指的是每个shard。 **取值范围：** 只支持输入80、85和90。
+    * step  **参数解释：** 扩容步长（s%），默认为10，支持输入10、15和20。当触发自动扩容的时候，自动扩容当前存储空间的s%（非10倍数向上取整。小数点后四舍五入，默认一次最小10G，账户余额不足时，会导致包年包月实例扩容失败）。 **取值范围：** 10、15和20。
+    * size  **参数解释：** 最大扩容上限，即当自动扩容达到上限后不再触发自动扩容。 **取值范围：** 实例规格小于8U时，自动扩容上限为5000GB；大于等于8U时，自动扩容上限为10000GB。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'instanceId' => null,
         'threshold' => 'int32',
-        'step' => 'int32'
+        'step' => 'int32',
+        'size' => 'int32'
     ];
 
     /**
@@ -69,44 +73,50 @@ class DiskAutoExpansionPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。
-    * threshold  触发自动扩容阈值，只支持输入80、85和90。默认阈值为90，即当已使用存储空间达到总存储空间的90%时就会触发扩容。集群实例的自动扩容阈值指的是每个shard。
-    * step  扩容步长（s%），默认为10，支持输入10、15和20。当触发自动扩容的时候，自动扩容当前存储空间的s%（非10倍数向上取整。小数点后四舍五入，默认一次最小10G，账户余额不足时，会导致包年包月实例扩容失败）。
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * threshold  **参数解释：** 触发自动扩容阈值，只支持输入80、85和90。默认阈值为90，即当已使用存储空间达到总存储空间的90%时就会触发扩容。集群实例的自动扩容阈值指的是每个shard。 **取值范围：** 只支持输入80、85和90。
+    * step  **参数解释：** 扩容步长（s%），默认为10，支持输入10、15和20。当触发自动扩容的时候，自动扩容当前存储空间的s%（非10倍数向上取整。小数点后四舍五入，默认一次最小10G，账户余额不足时，会导致包年包月实例扩容失败）。 **取值范围：** 10、15和20。
+    * size  **参数解释：** 最大扩容上限，即当自动扩容达到上限后不再触发自动扩容。 **取值范围：** 实例规格小于8U时，自动扩容上限为5000GB；大于等于8U时，自动扩容上限为10000GB。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'instanceId' => 'instance_id',
             'threshold' => 'threshold',
-            'step' => 'step'
+            'step' => 'step',
+            'size' => 'size'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。
-    * threshold  触发自动扩容阈值，只支持输入80、85和90。默认阈值为90，即当已使用存储空间达到总存储空间的90%时就会触发扩容。集群实例的自动扩容阈值指的是每个shard。
-    * step  扩容步长（s%），默认为10，支持输入10、15和20。当触发自动扩容的时候，自动扩容当前存储空间的s%（非10倍数向上取整。小数点后四舍五入，默认一次最小10G，账户余额不足时，会导致包年包月实例扩容失败）。
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * threshold  **参数解释：** 触发自动扩容阈值，只支持输入80、85和90。默认阈值为90，即当已使用存储空间达到总存储空间的90%时就会触发扩容。集群实例的自动扩容阈值指的是每个shard。 **取值范围：** 只支持输入80、85和90。
+    * step  **参数解释：** 扩容步长（s%），默认为10，支持输入10、15和20。当触发自动扩容的时候，自动扩容当前存储空间的s%（非10倍数向上取整。小数点后四舍五入，默认一次最小10G，账户余额不足时，会导致包年包月实例扩容失败）。 **取值范围：** 10、15和20。
+    * size  **参数解释：** 最大扩容上限，即当自动扩容达到上限后不再触发自动扩容。 **取值范围：** 实例规格小于8U时，自动扩容上限为5000GB；大于等于8U时，自动扩容上限为10000GB。
     *
     * @var string[]
     */
     protected static $setters = [
             'instanceId' => 'setInstanceId',
             'threshold' => 'setThreshold',
-            'step' => 'setStep'
+            'step' => 'setStep',
+            'size' => 'setSize'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。
-    * threshold  触发自动扩容阈值，只支持输入80、85和90。默认阈值为90，即当已使用存储空间达到总存储空间的90%时就会触发扩容。集群实例的自动扩容阈值指的是每个shard。
-    * step  扩容步长（s%），默认为10，支持输入10、15和20。当触发自动扩容的时候，自动扩容当前存储空间的s%（非10倍数向上取整。小数点后四舍五入，默认一次最小10G，账户余额不足时，会导致包年包月实例扩容失败）。
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * threshold  **参数解释：** 触发自动扩容阈值，只支持输入80、85和90。默认阈值为90，即当已使用存储空间达到总存储空间的90%时就会触发扩容。集群实例的自动扩容阈值指的是每个shard。 **取值范围：** 只支持输入80、85和90。
+    * step  **参数解释：** 扩容步长（s%），默认为10，支持输入10、15和20。当触发自动扩容的时候，自动扩容当前存储空间的s%（非10倍数向上取整。小数点后四舍五入，默认一次最小10G，账户余额不足时，会导致包年包月实例扩容失败）。 **取值范围：** 10、15和20。
+    * size  **参数解释：** 最大扩容上限，即当自动扩容达到上限后不再触发自动扩容。 **取值范围：** 实例规格小于8U时，自动扩容上限为5000GB；大于等于8U时，自动扩容上限为10000GB。
     *
     * @var string[]
     */
     protected static $getters = [
             'instanceId' => 'getInstanceId',
             'threshold' => 'getThreshold',
-            'step' => 'getStep'
+            'step' => 'getStep',
+            'size' => 'getSize'
     ];
 
     /**
@@ -170,6 +180,7 @@ class DiskAutoExpansionPolicy implements ModelInterface, ArrayAccess
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
         $this->container['step'] = isset($data['step']) ? $data['step'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
     }
 
     /**
@@ -199,7 +210,7 @@ class DiskAutoExpansionPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释：** 实例ID。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -211,7 +222,7 @@ class DiskAutoExpansionPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释：** 实例ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -223,7 +234,7 @@ class DiskAutoExpansionPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets threshold
-    *  触发自动扩容阈值，只支持输入80、85和90。默认阈值为90，即当已使用存储空间达到总存储空间的90%时就会触发扩容。集群实例的自动扩容阈值指的是每个shard。
+    *  **参数解释：** 触发自动扩容阈值，只支持输入80、85和90。默认阈值为90，即当已使用存储空间达到总存储空间的90%时就会触发扩容。集群实例的自动扩容阈值指的是每个shard。 **取值范围：** 只支持输入80、85和90。
     *
     * @return int|null
     */
@@ -235,7 +246,7 @@ class DiskAutoExpansionPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets threshold
     *
-    * @param int|null $threshold 触发自动扩容阈值，只支持输入80、85和90。默认阈值为90，即当已使用存储空间达到总存储空间的90%时就会触发扩容。集群实例的自动扩容阈值指的是每个shard。
+    * @param int|null $threshold **参数解释：** 触发自动扩容阈值，只支持输入80、85和90。默认阈值为90，即当已使用存储空间达到总存储空间的90%时就会触发扩容。集群实例的自动扩容阈值指的是每个shard。 **取值范围：** 只支持输入80、85和90。
     *
     * @return $this
     */
@@ -247,7 +258,7 @@ class DiskAutoExpansionPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets step
-    *  扩容步长（s%），默认为10，支持输入10、15和20。当触发自动扩容的时候，自动扩容当前存储空间的s%（非10倍数向上取整。小数点后四舍五入，默认一次最小10G，账户余额不足时，会导致包年包月实例扩容失败）。
+    *  **参数解释：** 扩容步长（s%），默认为10，支持输入10、15和20。当触发自动扩容的时候，自动扩容当前存储空间的s%（非10倍数向上取整。小数点后四舍五入，默认一次最小10G，账户余额不足时，会导致包年包月实例扩容失败）。 **取值范围：** 10、15和20。
     *
     * @return int|null
     */
@@ -259,13 +270,37 @@ class DiskAutoExpansionPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets step
     *
-    * @param int|null $step 扩容步长（s%），默认为10，支持输入10、15和20。当触发自动扩容的时候，自动扩容当前存储空间的s%（非10倍数向上取整。小数点后四舍五入，默认一次最小10G，账户余额不足时，会导致包年包月实例扩容失败）。
+    * @param int|null $step **参数解释：** 扩容步长（s%），默认为10，支持输入10、15和20。当触发自动扩容的时候，自动扩容当前存储空间的s%（非10倍数向上取整。小数点后四舍五入，默认一次最小10G，账户余额不足时，会导致包年包月实例扩容失败）。 **取值范围：** 10、15和20。
     *
     * @return $this
     */
     public function setStep($step)
     {
         $this->container['step'] = $step;
+        return $this;
+    }
+
+    /**
+    * Gets size
+    *  **参数解释：** 最大扩容上限，即当自动扩容达到上限后不再触发自动扩容。 **取值范围：** 实例规格小于8U时，自动扩容上限为5000GB；大于等于8U时，自动扩容上限为10000GB。
+    *
+    * @return int|null
+    */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+    * Sets size
+    *
+    * @param int|null $size **参数解释：** 最大扩容上限，即当自动扩容达到上限后不再触发自动扩容。 **取值范围：** 实例规格小于8U时，自动扩容上限为5000GB；大于等于8U时，自动扩容上限为10000GB。
+    *
+    * @return $this
+    */
+    public function setSize($size)
+    {
+        $this->container['size'] = $size;
         return $this;
     }
 

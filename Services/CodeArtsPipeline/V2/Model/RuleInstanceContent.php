@@ -20,15 +20,17 @@ class RuleInstanceContent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupName  分组名称
-    * type  分组类型
-    * canModifyWhenInherit  继承后的子策略是否可以修改阈值
-    * properties  规则属性列表
+    * groupName  **参数解释**： 分组名称。 **取值范围**： 不涉及。
+    * editable  **参数解释**： 是否可编辑。 **取值范围**： 不涉及。
+    * type  **参数解释**： 分组类型。 **取值范围**： 不涉及。
+    * canModifyWhenInherit  **参数解释**： 继承后的子策略是否可以修改阈值。 **取值范围**： - true：可以修改阈值。 - false：不可以修改阈值。
+    * properties  **参数解释**： 规则属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'groupName' => 'string',
+            'editable' => 'bool',
             'type' => 'string',
             'canModifyWhenInherit' => 'bool',
             'properties' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleInstanceProperty[]'
@@ -36,15 +38,17 @@ class RuleInstanceContent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupName  分组名称
-    * type  分组类型
-    * canModifyWhenInherit  继承后的子策略是否可以修改阈值
-    * properties  规则属性列表
+    * groupName  **参数解释**： 分组名称。 **取值范围**： 不涉及。
+    * editable  **参数解释**： 是否可编辑。 **取值范围**： 不涉及。
+    * type  **参数解释**： 分组类型。 **取值范围**： 不涉及。
+    * canModifyWhenInherit  **参数解释**： 继承后的子策略是否可以修改阈值。 **取值范围**： - true：可以修改阈值。 - false：不可以修改阈值。
+    * properties  **参数解释**： 规则属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'groupName' => null,
+        'editable' => null,
         'type' => null,
         'canModifyWhenInherit' => null,
         'properties' => null
@@ -73,15 +77,17 @@ class RuleInstanceContent implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupName  分组名称
-    * type  分组类型
-    * canModifyWhenInherit  继承后的子策略是否可以修改阈值
-    * properties  规则属性列表
+    * groupName  **参数解释**： 分组名称。 **取值范围**： 不涉及。
+    * editable  **参数解释**： 是否可编辑。 **取值范围**： 不涉及。
+    * type  **参数解释**： 分组类型。 **取值范围**： 不涉及。
+    * canModifyWhenInherit  **参数解释**： 继承后的子策略是否可以修改阈值。 **取值范围**： - true：可以修改阈值。 - false：不可以修改阈值。
+    * properties  **参数解释**： 规则属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'groupName' => 'group_name',
+            'editable' => 'editable',
             'type' => 'type',
             'canModifyWhenInherit' => 'can_modify_when_inherit',
             'properties' => 'properties'
@@ -89,15 +95,17 @@ class RuleInstanceContent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupName  分组名称
-    * type  分组类型
-    * canModifyWhenInherit  继承后的子策略是否可以修改阈值
-    * properties  规则属性列表
+    * groupName  **参数解释**： 分组名称。 **取值范围**： 不涉及。
+    * editable  **参数解释**： 是否可编辑。 **取值范围**： 不涉及。
+    * type  **参数解释**： 分组类型。 **取值范围**： 不涉及。
+    * canModifyWhenInherit  **参数解释**： 继承后的子策略是否可以修改阈值。 **取值范围**： - true：可以修改阈值。 - false：不可以修改阈值。
+    * properties  **参数解释**： 规则属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'groupName' => 'setGroupName',
+            'editable' => 'setEditable',
             'type' => 'setType',
             'canModifyWhenInherit' => 'setCanModifyWhenInherit',
             'properties' => 'setProperties'
@@ -105,15 +113,17 @@ class RuleInstanceContent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupName  分组名称
-    * type  分组类型
-    * canModifyWhenInherit  继承后的子策略是否可以修改阈值
-    * properties  规则属性列表
+    * groupName  **参数解释**： 分组名称。 **取值范围**： 不涉及。
+    * editable  **参数解释**： 是否可编辑。 **取值范围**： 不涉及。
+    * type  **参数解释**： 分组类型。 **取值范围**： 不涉及。
+    * canModifyWhenInherit  **参数解释**： 继承后的子策略是否可以修改阈值。 **取值范围**： - true：可以修改阈值。 - false：不可以修改阈值。
+    * properties  **参数解释**： 规则属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'groupName' => 'getGroupName',
+            'editable' => 'getEditable',
             'type' => 'getType',
             'canModifyWhenInherit' => 'getCanModifyWhenInherit',
             'properties' => 'getProperties'
@@ -178,6 +188,7 @@ class RuleInstanceContent implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
+        $this->container['editable'] = isset($data['editable']) ? $data['editable'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['canModifyWhenInherit'] = isset($data['canModifyWhenInherit']) ? $data['canModifyWhenInherit'] : null;
         $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
@@ -219,7 +230,7 @@ class RuleInstanceContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  分组名称
+    *  **参数解释**： 分组名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -231,7 +242,7 @@ class RuleInstanceContent implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string $groupName 分组名称
+    * @param string $groupName **参数解释**： 分组名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -242,8 +253,32 @@ class RuleInstanceContent implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets editable
+    *  **参数解释**： 是否可编辑。 **取值范围**： 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getEditable()
+    {
+        return $this->container['editable'];
+    }
+
+    /**
+    * Sets editable
+    *
+    * @param bool|null $editable **参数解释**： 是否可编辑。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setEditable($editable)
+    {
+        $this->container['editable'] = $editable;
+        return $this;
+    }
+
+    /**
     * Gets type
-    *  分组类型
+    *  **参数解释**： 分组类型。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -255,7 +290,7 @@ class RuleInstanceContent implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 分组类型
+    * @param string $type **参数解释**： 分组类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -267,7 +302,7 @@ class RuleInstanceContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets canModifyWhenInherit
-    *  继承后的子策略是否可以修改阈值
+    *  **参数解释**： 继承后的子策略是否可以修改阈值。 **取值范围**： - true：可以修改阈值。 - false：不可以修改阈值。
     *
     * @return bool|null
     */
@@ -279,7 +314,7 @@ class RuleInstanceContent implements ModelInterface, ArrayAccess
     /**
     * Sets canModifyWhenInherit
     *
-    * @param bool|null $canModifyWhenInherit 继承后的子策略是否可以修改阈值
+    * @param bool|null $canModifyWhenInherit **参数解释**： 继承后的子策略是否可以修改阈值。 **取值范围**： - true：可以修改阈值。 - false：不可以修改阈值。
     *
     * @return $this
     */
@@ -291,7 +326,7 @@ class RuleInstanceContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets properties
-    *  规则属性列表
+    *  **参数解释**： 规则属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleInstanceProperty[]
     */
@@ -303,7 +338,7 @@ class RuleInstanceContent implements ModelInterface, ArrayAccess
     /**
     * Sets properties
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleInstanceProperty[] $properties 规则属性列表
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleInstanceProperty[] $properties **参数解释**： 规则属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

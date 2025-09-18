@@ -24,7 +24,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
-    * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * bordercross  全域互联带宽跨境属性。
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * bindingService  功能说明：绑定的服务类型。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络 - ALL: 所有实例类型
     * enterpriseProjectId  实例所属企业项目ID。
@@ -41,6 +41,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * tags  实例标签。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * directionalConnections  有向连接列表。
     * enableShare  功能说明: 全域互联带宽是否支持绑定多实例。 取值范围：     true-支持     false-不支持
     * instances  功能说明: 全域互联带宽绑定实例列表。
     *
@@ -68,6 +69,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
             'tags' => '\HuaweiCloud\SDK\Cc\V3\Model\Tag[]',
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime',
+            'directionalConnections' => '\HuaweiCloud\SDK\Cc\V3\Model\DirectionalConnection[]',
             'enableShare' => 'bool',
             'instances' => '\HuaweiCloud\SDK\Cc\V3\Model\GlobalConnectionBandwidthAssociatedInstance[]'
     ];
@@ -78,7 +80,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
-    * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * bordercross  全域互联带宽跨境属性。
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * bindingService  功能说明：绑定的服务类型。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络 - ALL: 所有实例类型
     * enterpriseProjectId  实例所属企业项目ID。
@@ -95,6 +97,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * tags  实例标签。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * directionalConnections  有向连接列表。
     * enableShare  功能说明: 全域互联带宽是否支持绑定多实例。 取值范围：     true-支持     false-不支持
     * instances  功能说明: 全域互联带宽绑定实例列表。
     *
@@ -122,6 +125,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
         'tags' => null,
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time',
+        'directionalConnections' => null,
         'enableShare' => null,
         'instances' => null
     ];
@@ -153,7 +157,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
-    * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * bordercross  全域互联带宽跨境属性。
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * bindingService  功能说明：绑定的服务类型。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络 - ALL: 所有实例类型
     * enterpriseProjectId  实例所属企业项目ID。
@@ -170,6 +174,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * tags  实例标签。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * directionalConnections  有向连接列表。
     * enableShare  功能说明: 全域互联带宽是否支持绑定多实例。 取值范围：     true-支持     false-不支持
     * instances  功能说明: 全域互联带宽绑定实例列表。
     *
@@ -197,6 +202,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
+            'directionalConnections' => 'directional_connections',
             'enableShare' => 'enable_share',
             'instances' => 'instances'
     ];
@@ -207,7 +213,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
-    * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * bordercross  全域互联带宽跨境属性。
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * bindingService  功能说明：绑定的服务类型。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络 - ALL: 所有实例类型
     * enterpriseProjectId  实例所属企业项目ID。
@@ -224,6 +230,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * tags  实例标签。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * directionalConnections  有向连接列表。
     * enableShare  功能说明: 全域互联带宽是否支持绑定多实例。 取值范围：     true-支持     false-不支持
     * instances  功能说明: 全域互联带宽绑定实例列表。
     *
@@ -251,6 +258,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
+            'directionalConnections' => 'setDirectionalConnections',
             'enableShare' => 'setEnableShare',
             'instances' => 'setInstances'
     ];
@@ -261,7 +269,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
-    * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * bordercross  全域互联带宽跨境属性。
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * bindingService  功能说明：绑定的服务类型。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络 - ALL: 所有实例类型
     * enterpriseProjectId  实例所属企业项目ID。
@@ -278,6 +286,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * tags  实例标签。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * directionalConnections  有向连接列表。
     * enableShare  功能说明: 全域互联带宽是否支持绑定多实例。 取值范围：     true-支持     false-不支持
     * instances  功能说明: 全域互联带宽绑定实例列表。
     *
@@ -305,6 +314,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
+            'directionalConnections' => 'getDirectionalConnections',
             'enableShare' => 'getEnableShare',
             'instances' => 'getInstances'
     ];
@@ -477,6 +487,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
+        $this->container['directionalConnections'] = isset($data['directionalConnections']) ? $data['directionalConnections'] : null;
         $this->container['enableShare'] = isset($data['enableShare']) ? $data['enableShare'] : null;
         $this->container['instances'] = isset($data['instances']) ? $data['instances'] : null;
     }
@@ -643,6 +654,9 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
         if ($this->container['updatedAt'] === null) {
             $invalidProperties[] = "'updatedAt' can't be null";
         }
+        if ($this->container['directionalConnections'] === null) {
+            $invalidProperties[] = "'directionalConnections' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -755,7 +769,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets bordercross
-    *  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    *  全域互联带宽跨境属性。
     *
     * @return bool
     */
@@ -767,7 +781,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets bordercross
     *
-    * @param bool $bordercross 功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * @param bool $bordercross 全域互联带宽跨境属性。
     *
     * @return $this
     */
@@ -1158,6 +1172,30 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     public function setUpdatedAt($updatedAt)
     {
         $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
+    * Gets directionalConnections
+    *  有向连接列表。
+    *
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\DirectionalConnection[]
+    */
+    public function getDirectionalConnections()
+    {
+        return $this->container['directionalConnections'];
+    }
+
+    /**
+    * Sets directionalConnections
+    *
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\DirectionalConnection[] $directionalConnections 有向连接列表。
+    *
+    * @return $this
+    */
+    public function setDirectionalConnections($directionalConnections)
+    {
+        $this->container['directionalConnections'] = $directionalConnections;
         return $this;
     }
 

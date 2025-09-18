@@ -28,7 +28,7 @@ class ListCloudConnectionCapabilitiesResponse implements ModelInterface, ArrayAc
     */
     protected static $openAPITypes = [
             'requestId' => 'string',
-            'capabilities' => '\HuaweiCloud\SDK\Cc\V3\Model\CloudConnectionCapability[]'
+            'capabilities' => '\HuaweiCloud\SDK\Cc\V3\Model\CloudConnectionCapabilityInfo[]'
     ];
 
     /**
@@ -224,7 +224,7 @@ class ListCloudConnectionCapabilitiesResponse implements ModelInterface, ArrayAc
     * Gets capabilities
     *  租户能力列表。
     *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\CloudConnectionCapability[]
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\CloudConnectionCapabilityInfo[]
     */
     public function getCapabilities()
     {
@@ -234,7 +234,7 @@ class ListCloudConnectionCapabilitiesResponse implements ModelInterface, ArrayAc
     /**
     * Sets capabilities
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\CloudConnectionCapability[] $capabilities 租户能力列表。
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\CloudConnectionCapabilityInfo[] $capabilities 租户能力列表。
     *
     * @return $this
     */

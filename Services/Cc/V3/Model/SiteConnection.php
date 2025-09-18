@@ -327,8 +327,8 @@ class SiteConnection implements ModelInterface, ArrayAccess
             if (!is_null($this->container['globalConnectionBandwidthId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['globalConnectionBandwidthId'])) {
                 $invalidProperties[] = "invalid value for 'globalConnectionBandwidthId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
-            if (!is_null($this->container['bandwidthSize']) && ($this->container['bandwidthSize'] > 999999)) {
-                $invalidProperties[] = "invalid value for 'bandwidthSize', must be smaller than or equal to 999999.";
+            if (!is_null($this->container['bandwidthSize']) && ($this->container['bandwidthSize'] > 9999999999)) {
+                $invalidProperties[] = "invalid value for 'bandwidthSize', must be smaller than or equal to 9999999999.";
             }
             if (!is_null($this->container['bandwidthSize']) && ($this->container['bandwidthSize'] < 1)) {
                 $invalidProperties[] = "invalid value for 'bandwidthSize', must be bigger than or equal to 1.";

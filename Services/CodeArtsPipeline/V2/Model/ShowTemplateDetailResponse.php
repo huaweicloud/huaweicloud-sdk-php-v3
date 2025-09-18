@@ -29,7 +29,7 @@ class ShowTemplateDetailResponse implements ModelInterface, ArrayAccess
     * domainId  租户ID
     * domainName  租户名字
     * isBuildIn  是否内置模板
-    * region  region
+    * region  局点
     * projectId  项目ID
     * projectName  项目名字
     * createTime  创建时间
@@ -73,7 +73,7 @@ class ShowTemplateDetailResponse implements ModelInterface, ArrayAccess
     * domainId  租户ID
     * domainName  租户名字
     * isBuildIn  是否内置模板
-    * region  region
+    * region  局点
     * projectId  项目ID
     * projectName  项目名字
     * createTime  创建时间
@@ -138,7 +138,7 @@ class ShowTemplateDetailResponse implements ModelInterface, ArrayAccess
     * domainId  租户ID
     * domainName  租户名字
     * isBuildIn  是否内置模板
-    * region  region
+    * region  局点
     * projectId  项目ID
     * projectName  项目名字
     * createTime  创建时间
@@ -182,7 +182,7 @@ class ShowTemplateDetailResponse implements ModelInterface, ArrayAccess
     * domainId  租户ID
     * domainName  租户名字
     * isBuildIn  是否内置模板
-    * region  region
+    * region  局点
     * projectId  项目ID
     * projectName  项目名字
     * createTime  创建时间
@@ -226,7 +226,7 @@ class ShowTemplateDetailResponse implements ModelInterface, ArrayAccess
     * domainId  租户ID
     * domainName  租户名字
     * isBuildIn  是否内置模板
-    * region  region
+    * region  局点
     * projectId  项目ID
     * projectName  项目名字
     * createTime  创建时间
@@ -554,7 +554,7 @@ class ShowTemplateDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  region
+    *  局点
     *
     * @return string|null
     */
@@ -566,7 +566,7 @@ class ShowTemplateDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string|null $region region
+    * @param string|null $region 局点
     *
     * @return $this
     */

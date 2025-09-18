@@ -20,16 +20,16 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pluginsList  插件列表
-    * displayName  展示名
-    * businessType  业务类型
-    * uniqueId  唯一ID
-    * conditions  条件
-    * addables  额外属性
-    * editable  是否可编辑
-    * removable  是否可移除
-    * cloneable  是否可复制
-    * disabled  禁用
+    * pluginsList  **参数解释**： 插件列表。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 扩展插件展示名。 **取值范围**： 不涉及。
+    * businessType  **参数解释**： 扩展插件业务类型。 **取值范围**： 不涉及。
+    * uniqueId  **参数解释**： 扩展插件唯一ID。 **默认取值**： 不涉及。
+    * conditions  **参数解释**： 运行条件。 **取值范围**： 不涉及。
+    * addables  **参数解释**： 额外属性。 **取值范围**： 不涉及。
+    * editable  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
+    * removable  **参数解释**： 是否可移除。 **取值范围**： - true：可移除。 - false：不可移除。
+    * cloneable  **参数解释**： 是否可复制。 **取值范围**： - true：可复制。 - false：不可复制。
+    * disabled  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pluginsList  插件列表
-    * displayName  展示名
-    * businessType  业务类型
-    * uniqueId  唯一ID
-    * conditions  条件
-    * addables  额外属性
-    * editable  是否可编辑
-    * removable  是否可移除
-    * cloneable  是否可复制
-    * disabled  禁用
+    * pluginsList  **参数解释**： 插件列表。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 扩展插件展示名。 **取值范围**： 不涉及。
+    * businessType  **参数解释**： 扩展插件业务类型。 **取值范围**： 不涉及。
+    * uniqueId  **参数解释**： 扩展插件唯一ID。 **默认取值**： 不涉及。
+    * conditions  **参数解释**： 运行条件。 **取值范围**： 不涉及。
+    * addables  **参数解释**： 额外属性。 **取值范围**： 不涉及。
+    * editable  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
+    * removable  **参数解释**： 是否可移除。 **取值范围**： - true：可移除。 - false：不可移除。
+    * cloneable  **参数解释**： 是否可复制。 **取值范围**： - true：可复制。 - false：不可复制。
+    * disabled  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pluginsList  插件列表
-    * displayName  展示名
-    * businessType  业务类型
-    * uniqueId  唯一ID
-    * conditions  条件
-    * addables  额外属性
-    * editable  是否可编辑
-    * removable  是否可移除
-    * cloneable  是否可复制
-    * disabled  禁用
+    * pluginsList  **参数解释**： 插件列表。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 扩展插件展示名。 **取值范围**： 不涉及。
+    * businessType  **参数解释**： 扩展插件业务类型。 **取值范围**： 不涉及。
+    * uniqueId  **参数解释**： 扩展插件唯一ID。 **默认取值**： 不涉及。
+    * conditions  **参数解释**： 运行条件。 **取值范围**： 不涉及。
+    * addables  **参数解释**： 额外属性。 **取值范围**： 不涉及。
+    * editable  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
+    * removable  **参数解释**： 是否可移除。 **取值范围**： - true：可移除。 - false：不可移除。
+    * cloneable  **参数解释**： 是否可复制。 **取值范围**： - true：可复制。 - false：不可复制。
+    * disabled  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pluginsList  插件列表
-    * displayName  展示名
-    * businessType  业务类型
-    * uniqueId  唯一ID
-    * conditions  条件
-    * addables  额外属性
-    * editable  是否可编辑
-    * removable  是否可移除
-    * cloneable  是否可复制
-    * disabled  禁用
+    * pluginsList  **参数解释**： 插件列表。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 扩展插件展示名。 **取值范围**： 不涉及。
+    * businessType  **参数解释**： 扩展插件业务类型。 **取值范围**： 不涉及。
+    * uniqueId  **参数解释**： 扩展插件唯一ID。 **默认取值**： 不涉及。
+    * conditions  **参数解释**： 运行条件。 **取值范围**： 不涉及。
+    * addables  **参数解释**： 额外属性。 **取值范围**： 不涉及。
+    * editable  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
+    * removable  **参数解释**： 是否可移除。 **取值范围**： - true：可移除。 - false：不可移除。
+    * cloneable  **参数解释**： 是否可复制。 **取值范围**： - true：可复制。 - false：不可复制。
+    * disabled  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pluginsList  插件列表
-    * displayName  展示名
-    * businessType  业务类型
-    * uniqueId  唯一ID
-    * conditions  条件
-    * addables  额外属性
-    * editable  是否可编辑
-    * removable  是否可移除
-    * cloneable  是否可复制
-    * disabled  禁用
+    * pluginsList  **参数解释**： 插件列表。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 扩展插件展示名。 **取值范围**： 不涉及。
+    * businessType  **参数解释**： 扩展插件业务类型。 **取值范围**： 不涉及。
+    * uniqueId  **参数解释**： 扩展插件唯一ID。 **默认取值**： 不涉及。
+    * conditions  **参数解释**： 运行条件。 **取值范围**： 不涉及。
+    * addables  **参数解释**： 额外属性。 **取值范围**： 不涉及。
+    * editable  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
+    * removable  **参数解释**： 是否可移除。 **取值范围**： - true：可移除。 - false：不可移除。
+    * cloneable  **参数解释**： 是否可复制。 **取值范围**： - true：可复制。 - false：不可复制。
+    * disabled  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
     *
     * @var string[]
     */
@@ -273,7 +273,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
 
     /**
     * Gets pluginsList
-    *  插件列表
+    *  **参数解释**： 插件列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\FullStagePluginsRelationVOPluginsList[]|null
     */
@@ -285,7 +285,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
     /**
     * Sets pluginsList
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\FullStagePluginsRelationVOPluginsList[]|null $pluginsList 插件列表
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\FullStagePluginsRelationVOPluginsList[]|null $pluginsList **参数解释**： 插件列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -297,7 +297,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
 
     /**
     * Gets displayName
-    *  展示名
+    *  **参数解释**： 扩展插件展示名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
     /**
     * Sets displayName
     *
-    * @param string|null $displayName 展示名
+    * @param string|null $displayName **参数解释**： 扩展插件展示名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -321,7 +321,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
 
     /**
     * Gets businessType
-    *  业务类型
+    *  **参数解释**： 扩展插件业务类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -333,7 +333,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
     /**
     * Sets businessType
     *
-    * @param string|null $businessType 业务类型
+    * @param string|null $businessType **参数解释**： 扩展插件业务类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -345,7 +345,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
 
     /**
     * Gets uniqueId
-    *  唯一ID
+    *  **参数解释**： 扩展插件唯一ID。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -357,7 +357,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
     /**
     * Sets uniqueId
     *
-    * @param string|null $uniqueId 唯一ID
+    * @param string|null $uniqueId **参数解释**： 扩展插件唯一ID。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -369,7 +369,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
 
     /**
     * Gets conditions
-    *  条件
+    *  **参数解释**： 运行条件。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -381,7 +381,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
     /**
     * Sets conditions
     *
-    * @param string[]|null $conditions 条件
+    * @param string[]|null $conditions **参数解释**： 运行条件。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -393,7 +393,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
 
     /**
     * Gets addables
-    *  额外属性
+    *  **参数解释**： 额外属性。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\FullStagePluginsRelationVOAddables[]|null
     */
@@ -405,7 +405,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
     /**
     * Sets addables
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\FullStagePluginsRelationVOAddables[]|null $addables 额外属性
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\FullStagePluginsRelationVOAddables[]|null $addables **参数解释**： 额外属性。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -417,7 +417,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
 
     /**
     * Gets editable
-    *  是否可编辑
+    *  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
     *
     * @return bool|null
     */
@@ -429,7 +429,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
     /**
     * Sets editable
     *
-    * @param bool|null $editable 是否可编辑
+    * @param bool|null $editable **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
     *
     * @return $this
     */
@@ -441,7 +441,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
 
     /**
     * Gets removable
-    *  是否可移除
+    *  **参数解释**： 是否可移除。 **取值范围**： - true：可移除。 - false：不可移除。
     *
     * @return bool|null
     */
@@ -453,7 +453,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
     /**
     * Sets removable
     *
-    * @param bool|null $removable 是否可移除
+    * @param bool|null $removable **参数解释**： 是否可移除。 **取值范围**： - true：可移除。 - false：不可移除。
     *
     * @return $this
     */
@@ -465,7 +465,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
 
     /**
     * Gets cloneable
-    *  是否可复制
+    *  **参数解释**： 是否可复制。 **取值范围**： - true：可复制。 - false：不可复制。
     *
     * @return bool|null
     */
@@ -477,7 +477,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
     /**
     * Sets cloneable
     *
-    * @param bool|null $cloneable 是否可复制
+    * @param bool|null $cloneable **参数解释**： 是否可复制。 **取值范围**： - true：可复制。 - false：不可复制。
     *
     * @return $this
     */
@@ -489,7 +489,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
 
     /**
     * Gets disabled
-    *  禁用
+    *  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
     *
     * @return bool|null
     */
@@ -501,7 +501,7 @@ class FullStagePluginsRelationVOFullStagePluginsItemList implements ModelInterfa
     /**
     * Sets disabled
     *
-    * @param bool|null $disabled 禁用
+    * @param bool|null $disabled **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
     *
     * @return $this
     */

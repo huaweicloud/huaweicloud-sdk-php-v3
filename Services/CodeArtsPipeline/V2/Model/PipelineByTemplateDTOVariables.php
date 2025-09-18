@@ -20,21 +20,21 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  参数名称
-    * sequence  参数序号
-    * type  参数类型
-    * value  参数值
-    * isSecret  是否私密参数
-    * description  描述
-    * isRuntime  是否运行时设置
-    * isReset  是否重置
-    * latestValue  最后一次参数值
-    * limits  枚举值
+    * name  **参数解释**： 参数名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sequence  **参数解释**： 参数序号，从1开始递增。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 参数类型。 **约束限制**： 不涉及。 **取值范围**： - autoIncrement：自增长参数。 - enum：枚举参数。 - string：字符串参数。 **默认取值**： 不涉及。
+    * value  **参数解释**： 参数值。 **约束限制**： 不涉及。 **取值范围**： 不超过8192字符。 **默认取值**： 不涉及。
+    * isSecret  **参数解释**： 是否私密参数。 **约束限制**： 不涉及。 **取值范围**： - true：是私密参数。 - false：不是私密参数。 **默认取值**： false。
+    * description  **参数解释**： 参数描述。 **约束限制**： 不涉及。 **取值范围**： 不超过512字符。 **默认取值**： 不涉及。
+    * isRuntime  **参数解释**： 是否运行时设置参数。 **约束限制**： 不涉及。 **取值范围**： - true：是运行时设置参数。 - false：不是运行时设置参数。 **默认取值**： false。
+    * isReset  **参数解释**： 是否重置。自增长参数被编辑，则使用编辑后的值，否则进行末位数字递增。 **约束限制**： 不涉及。 **取值范围**： - true：使用编辑后的参数值。 - false：使用自增长参数。 **默认取值**： false
+    * latestValue  **参数解释**： 最近一次运行的参数值。 **约束限制**： 不涉及。 **取值范围**： 不超过8192字符。 **默认取值**： 不涉及。
+    * limits  **参数解释**： 枚举值列表。 **约束限制**： 不涉及。 **取值范围**： 每个枚举值不超过1024字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'name' => 'string',
+            'name' => 'object',
             'sequence' => 'int',
             'type' => 'string',
             'value' => 'string',
@@ -48,16 +48,16 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  参数名称
-    * sequence  参数序号
-    * type  参数类型
-    * value  参数值
-    * isSecret  是否私密参数
-    * description  描述
-    * isRuntime  是否运行时设置
-    * isReset  是否重置
-    * latestValue  最后一次参数值
-    * limits  枚举值
+    * name  **参数解释**： 参数名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sequence  **参数解释**： 参数序号，从1开始递增。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 参数类型。 **约束限制**： 不涉及。 **取值范围**： - autoIncrement：自增长参数。 - enum：枚举参数。 - string：字符串参数。 **默认取值**： 不涉及。
+    * value  **参数解释**： 参数值。 **约束限制**： 不涉及。 **取值范围**： 不超过8192字符。 **默认取值**： 不涉及。
+    * isSecret  **参数解释**： 是否私密参数。 **约束限制**： 不涉及。 **取值范围**： - true：是私密参数。 - false：不是私密参数。 **默认取值**： false。
+    * description  **参数解释**： 参数描述。 **约束限制**： 不涉及。 **取值范围**： 不超过512字符。 **默认取值**： 不涉及。
+    * isRuntime  **参数解释**： 是否运行时设置参数。 **约束限制**： 不涉及。 **取值范围**： - true：是运行时设置参数。 - false：不是运行时设置参数。 **默认取值**： false。
+    * isReset  **参数解释**： 是否重置。自增长参数被编辑，则使用编辑后的值，否则进行末位数字递增。 **约束限制**： 不涉及。 **取值范围**： - true：使用编辑后的参数值。 - false：使用自增长参数。 **默认取值**： false
+    * latestValue  **参数解释**： 最近一次运行的参数值。 **约束限制**： 不涉及。 **取值范围**： 不超过8192字符。 **默认取值**： 不涉及。
+    * limits  **参数解释**： 枚举值列表。 **约束限制**： 不涉及。 **取值范围**： 每个枚举值不超过1024字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  参数名称
-    * sequence  参数序号
-    * type  参数类型
-    * value  参数值
-    * isSecret  是否私密参数
-    * description  描述
-    * isRuntime  是否运行时设置
-    * isReset  是否重置
-    * latestValue  最后一次参数值
-    * limits  枚举值
+    * name  **参数解释**： 参数名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sequence  **参数解释**： 参数序号，从1开始递增。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 参数类型。 **约束限制**： 不涉及。 **取值范围**： - autoIncrement：自增长参数。 - enum：枚举参数。 - string：字符串参数。 **默认取值**： 不涉及。
+    * value  **参数解释**： 参数值。 **约束限制**： 不涉及。 **取值范围**： 不超过8192字符。 **默认取值**： 不涉及。
+    * isSecret  **参数解释**： 是否私密参数。 **约束限制**： 不涉及。 **取值范围**： - true：是私密参数。 - false：不是私密参数。 **默认取值**： false。
+    * description  **参数解释**： 参数描述。 **约束限制**： 不涉及。 **取值范围**： 不超过512字符。 **默认取值**： 不涉及。
+    * isRuntime  **参数解释**： 是否运行时设置参数。 **约束限制**： 不涉及。 **取值范围**： - true：是运行时设置参数。 - false：不是运行时设置参数。 **默认取值**： false。
+    * isReset  **参数解释**： 是否重置。自增长参数被编辑，则使用编辑后的值，否则进行末位数字递增。 **约束限制**： 不涉及。 **取值范围**： - true：使用编辑后的参数值。 - false：使用自增长参数。 **默认取值**： false
+    * latestValue  **参数解释**： 最近一次运行的参数值。 **约束限制**： 不涉及。 **取值范围**： 不超过8192字符。 **默认取值**： 不涉及。
+    * limits  **参数解释**： 枚举值列表。 **约束限制**： 不涉及。 **取值范围**： 每个枚举值不超过1024字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  参数名称
-    * sequence  参数序号
-    * type  参数类型
-    * value  参数值
-    * isSecret  是否私密参数
-    * description  描述
-    * isRuntime  是否运行时设置
-    * isReset  是否重置
-    * latestValue  最后一次参数值
-    * limits  枚举值
+    * name  **参数解释**： 参数名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sequence  **参数解释**： 参数序号，从1开始递增。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 参数类型。 **约束限制**： 不涉及。 **取值范围**： - autoIncrement：自增长参数。 - enum：枚举参数。 - string：字符串参数。 **默认取值**： 不涉及。
+    * value  **参数解释**： 参数值。 **约束限制**： 不涉及。 **取值范围**： 不超过8192字符。 **默认取值**： 不涉及。
+    * isSecret  **参数解释**： 是否私密参数。 **约束限制**： 不涉及。 **取值范围**： - true：是私密参数。 - false：不是私密参数。 **默认取值**： false。
+    * description  **参数解释**： 参数描述。 **约束限制**： 不涉及。 **取值范围**： 不超过512字符。 **默认取值**： 不涉及。
+    * isRuntime  **参数解释**： 是否运行时设置参数。 **约束限制**： 不涉及。 **取值范围**： - true：是运行时设置参数。 - false：不是运行时设置参数。 **默认取值**： false。
+    * isReset  **参数解释**： 是否重置。自增长参数被编辑，则使用编辑后的值，否则进行末位数字递增。 **约束限制**： 不涉及。 **取值范围**： - true：使用编辑后的参数值。 - false：使用自增长参数。 **默认取值**： false
+    * latestValue  **参数解释**： 最近一次运行的参数值。 **约束限制**： 不涉及。 **取值范围**： 不超过8192字符。 **默认取值**： 不涉及。
+    * limits  **参数解释**： 枚举值列表。 **约束限制**： 不涉及。 **取值范围**： 每个枚举值不超过1024字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  参数名称
-    * sequence  参数序号
-    * type  参数类型
-    * value  参数值
-    * isSecret  是否私密参数
-    * description  描述
-    * isRuntime  是否运行时设置
-    * isReset  是否重置
-    * latestValue  最后一次参数值
-    * limits  枚举值
+    * name  **参数解释**： 参数名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sequence  **参数解释**： 参数序号，从1开始递增。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 参数类型。 **约束限制**： 不涉及。 **取值范围**： - autoIncrement：自增长参数。 - enum：枚举参数。 - string：字符串参数。 **默认取值**： 不涉及。
+    * value  **参数解释**： 参数值。 **约束限制**： 不涉及。 **取值范围**： 不超过8192字符。 **默认取值**： 不涉及。
+    * isSecret  **参数解释**： 是否私密参数。 **约束限制**： 不涉及。 **取值范围**： - true：是私密参数。 - false：不是私密参数。 **默认取值**： false。
+    * description  **参数解释**： 参数描述。 **约束限制**： 不涉及。 **取值范围**： 不超过512字符。 **默认取值**： 不涉及。
+    * isRuntime  **参数解释**： 是否运行时设置参数。 **约束限制**： 不涉及。 **取值范围**： - true：是运行时设置参数。 - false：不是运行时设置参数。 **默认取值**： false。
+    * isReset  **参数解释**： 是否重置。自增长参数被编辑，则使用编辑后的值，否则进行末位数字递增。 **约束限制**： 不涉及。 **取值范围**： - true：使用编辑后的参数值。 - false：使用自增长参数。 **默认取值**： false
+    * latestValue  **参数解释**： 最近一次运行的参数值。 **约束限制**： 不涉及。 **取值范围**： 不超过8192字符。 **默认取值**： 不涉及。
+    * limits  **参数解释**： 枚举值列表。 **约束限制**： 不涉及。 **取值范围**： 每个枚举值不超过1024字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -273,9 +273,9 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  参数名称
+    *  **参数解释**： 参数名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string|null
+    * @return object|null
     */
     public function getName()
     {
@@ -285,7 +285,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 参数名称
+    * @param object|null $name **参数解释**： 参数名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -297,7 +297,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
 
     /**
     * Gets sequence
-    *  参数序号
+    *  **参数解释**： 参数序号，从1开始递增。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -309,7 +309,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
     /**
     * Sets sequence
     *
-    * @param int|null $sequence 参数序号
+    * @param int|null $sequence **参数解释**： 参数序号，从1开始递增。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -321,7 +321,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  参数类型
+    *  **参数解释**： 参数类型。 **约束限制**： 不涉及。 **取值范围**： - autoIncrement：自增长参数。 - enum：枚举参数。 - string：字符串参数。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -333,7 +333,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 参数类型
+    * @param string|null $type **参数解释**： 参数类型。 **约束限制**： 不涉及。 **取值范围**： - autoIncrement：自增长参数。 - enum：枚举参数。 - string：字符串参数。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -345,7 +345,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  参数值
+    *  **参数解释**： 参数值。 **约束限制**： 不涉及。 **取值范围**： 不超过8192字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -357,7 +357,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 参数值
+    * @param string|null $value **参数解释**： 参数值。 **约束限制**： 不涉及。 **取值范围**： 不超过8192字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -369,7 +369,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSecret
-    *  是否私密参数
+    *  **参数解释**： 是否私密参数。 **约束限制**： 不涉及。 **取值范围**： - true：是私密参数。 - false：不是私密参数。 **默认取值**： false。
     *
     * @return bool|null
     */
@@ -381,7 +381,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
     /**
     * Sets isSecret
     *
-    * @param bool|null $isSecret 是否私密参数
+    * @param bool|null $isSecret **参数解释**： 是否私密参数。 **约束限制**： 不涉及。 **取值范围**： - true：是私密参数。 - false：不是私密参数。 **默认取值**： false。
     *
     * @return $this
     */
@@ -393,7 +393,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释**： 参数描述。 **约束限制**： 不涉及。 **取值范围**： 不超过512字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -405,7 +405,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释**： 参数描述。 **约束限制**： 不涉及。 **取值范围**： 不超过512字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -417,7 +417,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
 
     /**
     * Gets isRuntime
-    *  是否运行时设置
+    *  **参数解释**： 是否运行时设置参数。 **约束限制**： 不涉及。 **取值范围**： - true：是运行时设置参数。 - false：不是运行时设置参数。 **默认取值**： false。
     *
     * @return bool|null
     */
@@ -429,7 +429,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
     /**
     * Sets isRuntime
     *
-    * @param bool|null $isRuntime 是否运行时设置
+    * @param bool|null $isRuntime **参数解释**： 是否运行时设置参数。 **约束限制**： 不涉及。 **取值范围**： - true：是运行时设置参数。 - false：不是运行时设置参数。 **默认取值**： false。
     *
     * @return $this
     */
@@ -441,7 +441,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
 
     /**
     * Gets isReset
-    *  是否重置
+    *  **参数解释**： 是否重置。自增长参数被编辑，则使用编辑后的值，否则进行末位数字递增。 **约束限制**： 不涉及。 **取值范围**： - true：使用编辑后的参数值。 - false：使用自增长参数。 **默认取值**： false
     *
     * @return bool|null
     */
@@ -453,7 +453,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
     /**
     * Sets isReset
     *
-    * @param bool|null $isReset 是否重置
+    * @param bool|null $isReset **参数解释**： 是否重置。自增长参数被编辑，则使用编辑后的值，否则进行末位数字递增。 **约束限制**： 不涉及。 **取值范围**： - true：使用编辑后的参数值。 - false：使用自增长参数。 **默认取值**： false
     *
     * @return $this
     */
@@ -465,7 +465,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestValue
-    *  最后一次参数值
+    *  **参数解释**： 最近一次运行的参数值。 **约束限制**： 不涉及。 **取值范围**： 不超过8192字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -477,7 +477,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
     /**
     * Sets latestValue
     *
-    * @param string|null $latestValue 最后一次参数值
+    * @param string|null $latestValue **参数解释**： 最近一次运行的参数值。 **约束限制**： 不涉及。 **取值范围**： 不超过8192字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -489,7 +489,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
 
     /**
     * Gets limits
-    *  枚举值
+    *  **参数解释**： 枚举值列表。 **约束限制**： 不涉及。 **取值范围**： 每个枚举值不超过1024字符。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -501,7 +501,7 @@ class PipelineByTemplateDTOVariables implements ModelInterface, ArrayAccess
     /**
     * Sets limits
     *
-    * @param string[]|null $limits 枚举值
+    * @param string[]|null $limits **参数解释**： 枚举值列表。 **约束限制**： 不涉及。 **取值范围**： 每个枚举值不超过1024字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */

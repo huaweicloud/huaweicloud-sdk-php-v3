@@ -20,23 +20,25 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * uniqueId  唯一ID
-    * displayName  展示名
-    * pluginName  插件名
-    * disabled  禁用
-    * groupName  组名
-    * groupType  组类型
-    * pluginAttribution  属性
-    * pluginCompositionType  组合插件
-    * runtimeAttribution  运行属性
-    * allSteps  基础插件列表
-    * description  描述
-    * versionAttribution  版本属性
-    * iconUrl  图标URL
-    * multiStepEditable  可编辑
-    * location  地址
-    * publisherUniqueId  发布商ID
-    * manifestVersion  版本
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名。 **取值范围**： 不涉及。
+    * disabled  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
+    * groupName  **参数解释**： 组名。 **取值范围**： 不涉及。
+    * groupType  **参数解释**： 组类型。 **取值范围**： 不涉及。
+    * standard  **参数解释**： 是否标准化的插件。 **取值范围**： - true：是。 - false：否。
+    * dbRecordName  **参数解释**： 插件记录名称。 **取值范围**： 不涉及。
+    * pluginAttribution  **参数解释**： 插件属性。 **取值范围**： 不涉及。
+    * pluginCompositionType  **参数解释**： 组合插件。 **取值范围**： 不涉及。
+    * runtimeAttribution  **参数解释**： 插件运行属性。 **取值范围**： 不涉及。
+    * allSteps  **参数解释**： 基础插件列表。 **取值范围**： 不涉及。
+    * description  **参数解释**： 插件描述。 **取值范围**： 不涉及。
+    * versionAttribution  **参数解释**： 插件版本属性。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 插件图标URL。 **取值范围**： 不涉及。
+    * multiStepEditable  **参数解释**： 插件可编辑。 **取值范围**： 不涉及。
+    * location  **参数解释**： 插件地址。 **取值范围**： 不涉及。
+    * publisherUniqueId  **参数解释**： 插件发布商ID。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 插件版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -47,10 +49,12 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
             'disabled' => 'bool',
             'groupName' => 'string',
             'groupType' => 'string',
+            'standard' => 'bool',
+            'dbRecordName' => 'string',
             'pluginAttribution' => 'string',
             'pluginCompositionType' => 'string',
             'runtimeAttribution' => 'string',
-            'allSteps' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\FullStagePluginsRelationVOAllSteps[]',
+            'allSteps' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PageInfoBusinessTypeDefinitionVOAllSteps[]',
             'description' => 'string',
             'versionAttribution' => 'string',
             'iconUrl' => 'string',
@@ -62,23 +66,25 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * uniqueId  唯一ID
-    * displayName  展示名
-    * pluginName  插件名
-    * disabled  禁用
-    * groupName  组名
-    * groupType  组类型
-    * pluginAttribution  属性
-    * pluginCompositionType  组合插件
-    * runtimeAttribution  运行属性
-    * allSteps  基础插件列表
-    * description  描述
-    * versionAttribution  版本属性
-    * iconUrl  图标URL
-    * multiStepEditable  可编辑
-    * location  地址
-    * publisherUniqueId  发布商ID
-    * manifestVersion  版本
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名。 **取值范围**： 不涉及。
+    * disabled  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
+    * groupName  **参数解释**： 组名。 **取值范围**： 不涉及。
+    * groupType  **参数解释**： 组类型。 **取值范围**： 不涉及。
+    * standard  **参数解释**： 是否标准化的插件。 **取值范围**： - true：是。 - false：否。
+    * dbRecordName  **参数解释**： 插件记录名称。 **取值范围**： 不涉及。
+    * pluginAttribution  **参数解释**： 插件属性。 **取值范围**： 不涉及。
+    * pluginCompositionType  **参数解释**： 组合插件。 **取值范围**： 不涉及。
+    * runtimeAttribution  **参数解释**： 插件运行属性。 **取值范围**： 不涉及。
+    * allSteps  **参数解释**： 基础插件列表。 **取值范围**： 不涉及。
+    * description  **参数解释**： 插件描述。 **取值范围**： 不涉及。
+    * versionAttribution  **参数解释**： 插件版本属性。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 插件图标URL。 **取值范围**： 不涉及。
+    * multiStepEditable  **参数解释**： 插件可编辑。 **取值范围**： 不涉及。
+    * location  **参数解释**： 插件地址。 **取值范围**： 不涉及。
+    * publisherUniqueId  **参数解释**： 插件发布商ID。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 插件版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,6 +95,8 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
         'disabled' => null,
         'groupName' => null,
         'groupType' => null,
+        'standard' => null,
+        'dbRecordName' => null,
         'pluginAttribution' => null,
         'pluginCompositionType' => null,
         'runtimeAttribution' => null,
@@ -125,23 +133,25 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * uniqueId  唯一ID
-    * displayName  展示名
-    * pluginName  插件名
-    * disabled  禁用
-    * groupName  组名
-    * groupType  组类型
-    * pluginAttribution  属性
-    * pluginCompositionType  组合插件
-    * runtimeAttribution  运行属性
-    * allSteps  基础插件列表
-    * description  描述
-    * versionAttribution  版本属性
-    * iconUrl  图标URL
-    * multiStepEditable  可编辑
-    * location  地址
-    * publisherUniqueId  发布商ID
-    * manifestVersion  版本
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名。 **取值范围**： 不涉及。
+    * disabled  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
+    * groupName  **参数解释**： 组名。 **取值范围**： 不涉及。
+    * groupType  **参数解释**： 组类型。 **取值范围**： 不涉及。
+    * standard  **参数解释**： 是否标准化的插件。 **取值范围**： - true：是。 - false：否。
+    * dbRecordName  **参数解释**： 插件记录名称。 **取值范围**： 不涉及。
+    * pluginAttribution  **参数解释**： 插件属性。 **取值范围**： 不涉及。
+    * pluginCompositionType  **参数解释**： 组合插件。 **取值范围**： 不涉及。
+    * runtimeAttribution  **参数解释**： 插件运行属性。 **取值范围**： 不涉及。
+    * allSteps  **参数解释**： 基础插件列表。 **取值范围**： 不涉及。
+    * description  **参数解释**： 插件描述。 **取值范围**： 不涉及。
+    * versionAttribution  **参数解释**： 插件版本属性。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 插件图标URL。 **取值范围**： 不涉及。
+    * multiStepEditable  **参数解释**： 插件可编辑。 **取值范围**： 不涉及。
+    * location  **参数解释**： 插件地址。 **取值范围**： 不涉及。
+    * publisherUniqueId  **参数解释**： 插件发布商ID。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 插件版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -152,6 +162,8 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
             'disabled' => 'disabled',
             'groupName' => 'group_name',
             'groupType' => 'group_type',
+            'standard' => 'standard',
+            'dbRecordName' => 'db_record_name',
             'pluginAttribution' => 'plugin_attribution',
             'pluginCompositionType' => 'plugin_composition_type',
             'runtimeAttribution' => 'runtime_attribution',
@@ -167,23 +179,25 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * uniqueId  唯一ID
-    * displayName  展示名
-    * pluginName  插件名
-    * disabled  禁用
-    * groupName  组名
-    * groupType  组类型
-    * pluginAttribution  属性
-    * pluginCompositionType  组合插件
-    * runtimeAttribution  运行属性
-    * allSteps  基础插件列表
-    * description  描述
-    * versionAttribution  版本属性
-    * iconUrl  图标URL
-    * multiStepEditable  可编辑
-    * location  地址
-    * publisherUniqueId  发布商ID
-    * manifestVersion  版本
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名。 **取值范围**： 不涉及。
+    * disabled  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
+    * groupName  **参数解释**： 组名。 **取值范围**： 不涉及。
+    * groupType  **参数解释**： 组类型。 **取值范围**： 不涉及。
+    * standard  **参数解释**： 是否标准化的插件。 **取值范围**： - true：是。 - false：否。
+    * dbRecordName  **参数解释**： 插件记录名称。 **取值范围**： 不涉及。
+    * pluginAttribution  **参数解释**： 插件属性。 **取值范围**： 不涉及。
+    * pluginCompositionType  **参数解释**： 组合插件。 **取值范围**： 不涉及。
+    * runtimeAttribution  **参数解释**： 插件运行属性。 **取值范围**： 不涉及。
+    * allSteps  **参数解释**： 基础插件列表。 **取值范围**： 不涉及。
+    * description  **参数解释**： 插件描述。 **取值范围**： 不涉及。
+    * versionAttribution  **参数解释**： 插件版本属性。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 插件图标URL。 **取值范围**： 不涉及。
+    * multiStepEditable  **参数解释**： 插件可编辑。 **取值范围**： 不涉及。
+    * location  **参数解释**： 插件地址。 **取值范围**： 不涉及。
+    * publisherUniqueId  **参数解释**： 插件发布商ID。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 插件版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -194,6 +208,8 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
             'disabled' => 'setDisabled',
             'groupName' => 'setGroupName',
             'groupType' => 'setGroupType',
+            'standard' => 'setStandard',
+            'dbRecordName' => 'setDbRecordName',
             'pluginAttribution' => 'setPluginAttribution',
             'pluginCompositionType' => 'setPluginCompositionType',
             'runtimeAttribution' => 'setRuntimeAttribution',
@@ -209,23 +225,25 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * uniqueId  唯一ID
-    * displayName  展示名
-    * pluginName  插件名
-    * disabled  禁用
-    * groupName  组名
-    * groupType  组类型
-    * pluginAttribution  属性
-    * pluginCompositionType  组合插件
-    * runtimeAttribution  运行属性
-    * allSteps  基础插件列表
-    * description  描述
-    * versionAttribution  版本属性
-    * iconUrl  图标URL
-    * multiStepEditable  可编辑
-    * location  地址
-    * publisherUniqueId  发布商ID
-    * manifestVersion  版本
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名。 **取值范围**： 不涉及。
+    * disabled  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
+    * groupName  **参数解释**： 组名。 **取值范围**： 不涉及。
+    * groupType  **参数解释**： 组类型。 **取值范围**： 不涉及。
+    * standard  **参数解释**： 是否标准化的插件。 **取值范围**： - true：是。 - false：否。
+    * dbRecordName  **参数解释**： 插件记录名称。 **取值范围**： 不涉及。
+    * pluginAttribution  **参数解释**： 插件属性。 **取值范围**： 不涉及。
+    * pluginCompositionType  **参数解释**： 组合插件。 **取值范围**： 不涉及。
+    * runtimeAttribution  **参数解释**： 插件运行属性。 **取值范围**： 不涉及。
+    * allSteps  **参数解释**： 基础插件列表。 **取值范围**： 不涉及。
+    * description  **参数解释**： 插件描述。 **取值范围**： 不涉及。
+    * versionAttribution  **参数解释**： 插件版本属性。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 插件图标URL。 **取值范围**： 不涉及。
+    * multiStepEditable  **参数解释**： 插件可编辑。 **取值范围**： 不涉及。
+    * location  **参数解释**： 插件地址。 **取值范围**： 不涉及。
+    * publisherUniqueId  **参数解释**： 插件发布商ID。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 插件版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -236,6 +254,8 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
             'disabled' => 'getDisabled',
             'groupName' => 'getGroupName',
             'groupType' => 'getGroupType',
+            'standard' => 'getStandard',
+            'dbRecordName' => 'getDbRecordName',
             'pluginAttribution' => 'getPluginAttribution',
             'pluginCompositionType' => 'getPluginCompositionType',
             'runtimeAttribution' => 'getRuntimeAttribution',
@@ -313,6 +333,8 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
         $this->container['disabled'] = isset($data['disabled']) ? $data['disabled'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['groupType'] = isset($data['groupType']) ? $data['groupType'] : null;
+        $this->container['standard'] = isset($data['standard']) ? $data['standard'] : null;
+        $this->container['dbRecordName'] = isset($data['dbRecordName']) ? $data['dbRecordName'] : null;
         $this->container['pluginAttribution'] = isset($data['pluginAttribution']) ? $data['pluginAttribution'] : null;
         $this->container['pluginCompositionType'] = isset($data['pluginCompositionType']) ? $data['pluginCompositionType'] : null;
         $this->container['runtimeAttribution'] = isset($data['runtimeAttribution']) ? $data['runtimeAttribution'] : null;
@@ -350,7 +372,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Gets uniqueId
-    *  唯一ID
+    *  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -362,7 +384,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Sets uniqueId
     *
-    * @param string|null $uniqueId 唯一ID
+    * @param string|null $uniqueId **参数解释**： 唯一ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -374,7 +396,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Gets displayName
-    *  展示名
+    *  **参数解释**： 展示名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -386,7 +408,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Sets displayName
     *
-    * @param string|null $displayName 展示名
+    * @param string|null $displayName **参数解释**： 展示名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -398,7 +420,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Gets pluginName
-    *  插件名
+    *  **参数解释**： 插件名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -410,7 +432,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 插件名
+    * @param string|null $pluginName **参数解释**： 插件名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -422,7 +444,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Gets disabled
-    *  禁用
+    *  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
     *
     * @return bool|null
     */
@@ -434,7 +456,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Sets disabled
     *
-    * @param bool|null $disabled 禁用
+    * @param bool|null $disabled **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
     *
     * @return $this
     */
@@ -446,7 +468,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Gets groupName
-    *  组名
+    *  **参数解释**： 组名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -458,7 +480,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 组名
+    * @param string|null $groupName **参数解释**： 组名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -470,7 +492,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Gets groupType
-    *  组类型
+    *  **参数解释**： 组类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -482,7 +504,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Sets groupType
     *
-    * @param string|null $groupType 组类型
+    * @param string|null $groupType **参数解释**： 组类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -493,8 +515,56 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     }
 
     /**
+    * Gets standard
+    *  **参数解释**： 是否标准化的插件。 **取值范围**： - true：是。 - false：否。
+    *
+    * @return bool|null
+    */
+    public function getStandard()
+    {
+        return $this->container['standard'];
+    }
+
+    /**
+    * Sets standard
+    *
+    * @param bool|null $standard **参数解释**： 是否标准化的插件。 **取值范围**： - true：是。 - false：否。
+    *
+    * @return $this
+    */
+    public function setStandard($standard)
+    {
+        $this->container['standard'] = $standard;
+        return $this;
+    }
+
+    /**
+    * Gets dbRecordName
+    *  **参数解释**： 插件记录名称。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDbRecordName()
+    {
+        return $this->container['dbRecordName'];
+    }
+
+    /**
+    * Sets dbRecordName
+    *
+    * @param string|null $dbRecordName **参数解释**： 插件记录名称。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDbRecordName($dbRecordName)
+    {
+        $this->container['dbRecordName'] = $dbRecordName;
+        return $this;
+    }
+
+    /**
     * Gets pluginAttribution
-    *  属性
+    *  **参数解释**： 插件属性。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -506,7 +576,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Sets pluginAttribution
     *
-    * @param string|null $pluginAttribution 属性
+    * @param string|null $pluginAttribution **参数解释**： 插件属性。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -518,7 +588,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Gets pluginCompositionType
-    *  组合插件
+    *  **参数解释**： 组合插件。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -530,7 +600,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Sets pluginCompositionType
     *
-    * @param string|null $pluginCompositionType 组合插件
+    * @param string|null $pluginCompositionType **参数解释**： 组合插件。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -542,7 +612,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Gets runtimeAttribution
-    *  运行属性
+    *  **参数解释**： 插件运行属性。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -554,7 +624,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Sets runtimeAttribution
     *
-    * @param string|null $runtimeAttribution 运行属性
+    * @param string|null $runtimeAttribution **参数解释**： 插件运行属性。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -566,9 +636,9 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Gets allSteps
-    *  基础插件列表
+    *  **参数解释**： 基础插件列表。 **取值范围**： 不涉及。
     *
-    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\FullStagePluginsRelationVOAllSteps[]|null
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PageInfoBusinessTypeDefinitionVOAllSteps[]|null
     */
     public function getAllSteps()
     {
@@ -578,7 +648,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Sets allSteps
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\FullStagePluginsRelationVOAllSteps[]|null $allSteps 基础插件列表
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PageInfoBusinessTypeDefinitionVOAllSteps[]|null $allSteps **参数解释**： 基础插件列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -590,7 +660,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释**： 插件描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -602,7 +672,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释**： 插件描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -614,7 +684,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Gets versionAttribution
-    *  版本属性
+    *  **参数解释**： 插件版本属性。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -626,7 +696,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Sets versionAttribution
     *
-    * @param string|null $versionAttribution 版本属性
+    * @param string|null $versionAttribution **参数解释**： 插件版本属性。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -638,7 +708,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Gets iconUrl
-    *  图标URL
+    *  **参数解释**： 插件图标URL。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -650,7 +720,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Sets iconUrl
     *
-    * @param string|null $iconUrl 图标URL
+    * @param string|null $iconUrl **参数解释**： 插件图标URL。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -662,7 +732,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Gets multiStepEditable
-    *  可编辑
+    *  **参数解释**： 插件可编辑。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -674,7 +744,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Sets multiStepEditable
     *
-    * @param int|null $multiStepEditable 可编辑
+    * @param int|null $multiStepEditable **参数解释**： 插件可编辑。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -686,7 +756,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Gets location
-    *  地址
+    *  **参数解释**： 插件地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -698,7 +768,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Sets location
     *
-    * @param string|null $location 地址
+    * @param string|null $location **参数解释**： 插件地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -710,7 +780,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Gets publisherUniqueId
-    *  发布商ID
+    *  **参数解释**： 插件发布商ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -722,7 +792,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Sets publisherUniqueId
     *
-    * @param string|null $publisherUniqueId 发布商ID
+    * @param string|null $publisherUniqueId **参数解释**： 插件发布商ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -734,7 +804,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
 
     /**
     * Gets manifestVersion
-    *  版本
+    *  **参数解释**： 插件版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -746,7 +816,7 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
     /**
     * Sets manifestVersion
     *
-    * @param string|null $manifestVersion 版本
+    * @param string|null $manifestVersion **参数解释**： 插件版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */

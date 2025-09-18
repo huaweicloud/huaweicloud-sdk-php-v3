@@ -20,14 +20,14 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  模板名称
-    * description  模板描述
-    * language  模板语言
-    * variables  variables
-    * definition  模板编排json，包含stages
-    * isSystem  是否系统模板
-    * domainId  所属租户ID
-    * isShowSource  是否显示流水线源
+    * name  **参数解释**： 模板名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 模板描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * language  **参数解释**： 模板语言。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * definition  **参数解释**： 模板编排json，包含stages。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isSystem  **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板。 - false：不是系统模板。 **默认取值**： 不涉及。
+    * domainId  **参数解释**： 租户id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * isShowSource  **参数解释**： 是否显示流水线源。 **约束限制**： 不涉及。 **取值范围**： - true：显示流水线源。 - false：不显示流水线源。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -35,7 +35,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'language' => 'string',
-            'variables' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CustomVariable',
+            'variables' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CustomVariable[]',
             'definition' => 'string',
             'isSystem' => 'bool',
             'domainId' => 'string',
@@ -44,14 +44,14 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  模板名称
-    * description  模板描述
-    * language  模板语言
-    * variables  variables
-    * definition  模板编排json，包含stages
-    * isSystem  是否系统模板
-    * domainId  所属租户ID
-    * isShowSource  是否显示流水线源
+    * name  **参数解释**： 模板名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 模板描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * language  **参数解释**： 模板语言。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * definition  **参数解释**： 模板编排json，包含stages。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isSystem  **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板。 - false：不是系统模板。 **默认取值**： 不涉及。
+    * domainId  **参数解释**： 租户id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * isShowSource  **参数解释**： 是否显示流水线源。 **约束限制**： 不涉及。 **取值范围**： - true：显示流水线源。 - false：不显示流水线源。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  模板名称
-    * description  模板描述
-    * language  模板语言
-    * variables  variables
-    * definition  模板编排json，包含stages
-    * isSystem  是否系统模板
-    * domainId  所属租户ID
-    * isShowSource  是否显示流水线源
+    * name  **参数解释**： 模板名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 模板描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * language  **参数解释**： 模板语言。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * definition  **参数解释**： 模板编排json，包含stages。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isSystem  **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板。 - false：不是系统模板。 **默认取值**： 不涉及。
+    * domainId  **参数解释**： 租户id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * isShowSource  **参数解释**： 是否显示流水线源。 **约束限制**： 不涉及。 **取值范围**： - true：显示流水线源。 - false：不显示流水线源。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  模板名称
-    * description  模板描述
-    * language  模板语言
-    * variables  variables
-    * definition  模板编排json，包含stages
-    * isSystem  是否系统模板
-    * domainId  所属租户ID
-    * isShowSource  是否显示流水线源
+    * name  **参数解释**： 模板名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 模板描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * language  **参数解释**： 模板语言。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * definition  **参数解释**： 模板编排json，包含stages。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isSystem  **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板。 - false：不是系统模板。 **默认取值**： 不涉及。
+    * domainId  **参数解释**： 租户id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * isShowSource  **参数解释**： 是否显示流水线源。 **约束限制**： 不涉及。 **取值范围**： - true：显示流水线源。 - false：不显示流水线源。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  模板名称
-    * description  模板描述
-    * language  模板语言
-    * variables  variables
-    * definition  模板编排json，包含stages
-    * isSystem  是否系统模板
-    * domainId  所属租户ID
-    * isShowSource  是否显示流水线源
+    * name  **参数解释**： 模板名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 模板描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * language  **参数解释**： 模板语言。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variables  **参数解释**： 自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * definition  **参数解释**： 模板编排json，包含stages。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isSystem  **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板。 - false：不是系统模板。 **默认取值**： 不涉及。
+    * domainId  **参数解释**： 租户id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * isShowSource  **参数解释**： 是否显示流水线源。 **约束限制**： 不涉及。 **取值范围**： - true：显示流水线源。 - false：不显示流水线源。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -269,7 +269,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  模板名称
+    *  **参数解释**： 模板名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -281,7 +281,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 模板名称
+    * @param string $name **参数解释**： 模板名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -293,7 +293,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  模板描述
+    *  **参数解释**： 模板描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -305,7 +305,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 模板描述
+    * @param string|null $description **参数解释**： 模板描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -317,7 +317,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  模板语言
+    *  **参数解释**： 模板语言。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -329,7 +329,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string $language 模板语言
+    * @param string $language **参数解释**： 模板语言。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -341,9 +341,9 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets variables
-    *  variables
+    *  **参数解释**： 自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CustomVariable|null
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CustomVariable[]|null
     */
     public function getVariables()
     {
@@ -353,7 +353,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets variables
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CustomVariable|null $variables variables
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CustomVariable[]|null $variables **参数解释**： 自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -365,7 +365,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets definition
-    *  模板编排json，包含stages
+    *  **参数解释**： 模板编排json，包含stages。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -377,7 +377,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets definition
     *
-    * @param string $definition 模板编排json，包含stages
+    * @param string $definition **参数解释**： 模板编排json，包含stages。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -389,7 +389,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSystem
-    *  是否系统模板
+    *  **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板。 - false：不是系统模板。 **默认取值**： 不涉及。
     *
     * @return bool
     */
@@ -401,7 +401,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets isSystem
     *
-    * @param bool $isSystem 是否系统模板
+    * @param bool $isSystem **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板。 - false：不是系统模板。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -413,7 +413,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  所属租户ID
+    *  **参数解释**： 租户id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -425,7 +425,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string $domainId 所属租户ID
+    * @param string $domainId **参数解释**： 租户id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -437,7 +437,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isShowSource
-    *  是否显示流水线源
+    *  **参数解释**： 是否显示流水线源。 **约束限制**： 不涉及。 **取值范围**： - true：显示流水线源。 - false：不显示流水线源。 **默认取值**： 不涉及。
     *
     * @return bool
     */
@@ -449,7 +449,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets isShowSource
     *
-    * @param bool $isShowSource 是否显示流水线源
+    * @param bool $isShowSource **参数解释**： 是否显示流水线源。 **约束限制**： 不涉及。 **取值范围**： - true：显示流水线源。 - false：不显示流水线源。 **默认取值**： 不涉及。
     *
     * @return $this
     */

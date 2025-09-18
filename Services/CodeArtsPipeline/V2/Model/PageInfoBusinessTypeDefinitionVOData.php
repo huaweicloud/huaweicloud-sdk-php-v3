@@ -20,15 +20,16 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * businessType  业务类型
-    * displayName  展示名
-    * uniqueId  唯一ID
-    * editable  可编辑
-    * removable  可移除
-    * cloneable  可复制
-    * disabled  禁用
-    * conditions  条件
-    * pluginsList  插件列表
+    * businessType  **参数解释**： 业务类型。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **取值范围**： 不涉及。
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * editable  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
+    * removable  **参数解释**： 是否可移除。 **取值范围**： - true：可移除。 - false：不可移除。
+    * cloneable  **参数解释**： 是否可复制。 **取值范围**： - true：可复制。 - false：不可复制。
+    * disabled  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
+    * addables  **参数解释**： 是否可添加。 **取值范围**： 不涉及。
+    * conditions  **参数解释**： 条件。 **取值范围**： 不涉及。
+    * pluginsList  **参数解释**： 插件列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -40,21 +41,23 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
             'removable' => 'bool',
             'cloneable' => 'bool',
             'disabled' => 'bool',
+            'addables' => 'map[string,bool][]',
             'conditions' => 'string[]',
             'pluginsList' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PageInfoBusinessTypeDefinitionVOPluginsList[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * businessType  业务类型
-    * displayName  展示名
-    * uniqueId  唯一ID
-    * editable  可编辑
-    * removable  可移除
-    * cloneable  可复制
-    * disabled  禁用
-    * conditions  条件
-    * pluginsList  插件列表
+    * businessType  **参数解释**： 业务类型。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **取值范围**： 不涉及。
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * editable  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
+    * removable  **参数解释**： 是否可移除。 **取值范围**： - true：可移除。 - false：不可移除。
+    * cloneable  **参数解释**： 是否可复制。 **取值范围**： - true：可复制。 - false：不可复制。
+    * disabled  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
+    * addables  **参数解释**： 是否可添加。 **取值范围**： 不涉及。
+    * conditions  **参数解释**： 条件。 **取值范围**： 不涉及。
+    * pluginsList  **参数解释**： 插件列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,6 +69,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
         'removable' => null,
         'cloneable' => null,
         'disabled' => null,
+        'addables' => null,
         'conditions' => null,
         'pluginsList' => null
     ];
@@ -93,15 +97,16 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * businessType  业务类型
-    * displayName  展示名
-    * uniqueId  唯一ID
-    * editable  可编辑
-    * removable  可移除
-    * cloneable  可复制
-    * disabled  禁用
-    * conditions  条件
-    * pluginsList  插件列表
+    * businessType  **参数解释**： 业务类型。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **取值范围**： 不涉及。
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * editable  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
+    * removable  **参数解释**： 是否可移除。 **取值范围**： - true：可移除。 - false：不可移除。
+    * cloneable  **参数解释**： 是否可复制。 **取值范围**： - true：可复制。 - false：不可复制。
+    * disabled  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
+    * addables  **参数解释**： 是否可添加。 **取值范围**： 不涉及。
+    * conditions  **参数解释**： 条件。 **取值范围**： 不涉及。
+    * pluginsList  **参数解释**： 插件列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,21 +118,23 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
             'removable' => 'removable',
             'cloneable' => 'cloneable',
             'disabled' => 'disabled',
+            'addables' => 'addables',
             'conditions' => 'conditions',
             'pluginsList' => 'plugins_list'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * businessType  业务类型
-    * displayName  展示名
-    * uniqueId  唯一ID
-    * editable  可编辑
-    * removable  可移除
-    * cloneable  可复制
-    * disabled  禁用
-    * conditions  条件
-    * pluginsList  插件列表
+    * businessType  **参数解释**： 业务类型。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **取值范围**： 不涉及。
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * editable  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
+    * removable  **参数解释**： 是否可移除。 **取值范围**： - true：可移除。 - false：不可移除。
+    * cloneable  **参数解释**： 是否可复制。 **取值范围**： - true：可复制。 - false：不可复制。
+    * disabled  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
+    * addables  **参数解释**： 是否可添加。 **取值范围**： 不涉及。
+    * conditions  **参数解释**： 条件。 **取值范围**： 不涉及。
+    * pluginsList  **参数解释**： 插件列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -139,21 +146,23 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
             'removable' => 'setRemovable',
             'cloneable' => 'setCloneable',
             'disabled' => 'setDisabled',
+            'addables' => 'setAddables',
             'conditions' => 'setConditions',
             'pluginsList' => 'setPluginsList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * businessType  业务类型
-    * displayName  展示名
-    * uniqueId  唯一ID
-    * editable  可编辑
-    * removable  可移除
-    * cloneable  可复制
-    * disabled  禁用
-    * conditions  条件
-    * pluginsList  插件列表
+    * businessType  **参数解释**： 业务类型。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **取值范围**： 不涉及。
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * editable  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
+    * removable  **参数解释**： 是否可移除。 **取值范围**： - true：可移除。 - false：不可移除。
+    * cloneable  **参数解释**： 是否可复制。 **取值范围**： - true：可复制。 - false：不可复制。
+    * disabled  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
+    * addables  **参数解释**： 是否可添加。 **取值范围**： 不涉及。
+    * conditions  **参数解释**： 条件。 **取值范围**： 不涉及。
+    * pluginsList  **参数解释**： 插件列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -165,6 +174,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
             'removable' => 'getRemovable',
             'cloneable' => 'getCloneable',
             'disabled' => 'getDisabled',
+            'addables' => 'getAddables',
             'conditions' => 'getConditions',
             'pluginsList' => 'getPluginsList'
     ];
@@ -234,6 +244,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
         $this->container['removable'] = isset($data['removable']) ? $data['removable'] : null;
         $this->container['cloneable'] = isset($data['cloneable']) ? $data['cloneable'] : null;
         $this->container['disabled'] = isset($data['disabled']) ? $data['disabled'] : null;
+        $this->container['addables'] = isset($data['addables']) ? $data['addables'] : null;
         $this->container['conditions'] = isset($data['conditions']) ? $data['conditions'] : null;
         $this->container['pluginsList'] = isset($data['pluginsList']) ? $data['pluginsList'] : null;
     }
@@ -262,7 +273,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
 
     /**
     * Gets businessType
-    *  业务类型
+    *  **参数解释**： 业务类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -274,7 +285,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
     /**
     * Sets businessType
     *
-    * @param string|null $businessType 业务类型
+    * @param string|null $businessType **参数解释**： 业务类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -286,7 +297,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
 
     /**
     * Gets displayName
-    *  展示名
+    *  **参数解释**： 展示名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -298,7 +309,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
     /**
     * Sets displayName
     *
-    * @param string|null $displayName 展示名
+    * @param string|null $displayName **参数解释**： 展示名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -310,7 +321,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
 
     /**
     * Gets uniqueId
-    *  唯一ID
+    *  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -322,7 +333,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
     /**
     * Sets uniqueId
     *
-    * @param string|null $uniqueId 唯一ID
+    * @param string|null $uniqueId **参数解释**： 唯一ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -334,7 +345,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
 
     /**
     * Gets editable
-    *  可编辑
+    *  **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
     *
     * @return bool|null
     */
@@ -346,7 +357,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
     /**
     * Sets editable
     *
-    * @param bool|null $editable 可编辑
+    * @param bool|null $editable **参数解释**： 是否可编辑。 **取值范围**： - true：可编辑。 - false：不可编辑。
     *
     * @return $this
     */
@@ -358,7 +369,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
 
     /**
     * Gets removable
-    *  可移除
+    *  **参数解释**： 是否可移除。 **取值范围**： - true：可移除。 - false：不可移除。
     *
     * @return bool|null
     */
@@ -370,7 +381,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
     /**
     * Sets removable
     *
-    * @param bool|null $removable 可移除
+    * @param bool|null $removable **参数解释**： 是否可移除。 **取值范围**： - true：可移除。 - false：不可移除。
     *
     * @return $this
     */
@@ -382,7 +393,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
 
     /**
     * Gets cloneable
-    *  可复制
+    *  **参数解释**： 是否可复制。 **取值范围**： - true：可复制。 - false：不可复制。
     *
     * @return bool|null
     */
@@ -394,7 +405,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
     /**
     * Sets cloneable
     *
-    * @param bool|null $cloneable 可复制
+    * @param bool|null $cloneable **参数解释**： 是否可复制。 **取值范围**： - true：可复制。 - false：不可复制。
     *
     * @return $this
     */
@@ -406,7 +417,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
 
     /**
     * Gets disabled
-    *  禁用
+    *  **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
     *
     * @return bool|null
     */
@@ -418,7 +429,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
     /**
     * Sets disabled
     *
-    * @param bool|null $disabled 禁用
+    * @param bool|null $disabled **参数解释**： 是否禁用。 **取值范围**： - true：禁用。 - false：未禁用。
     *
     * @return $this
     */
@@ -429,8 +440,32 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
     }
 
     /**
+    * Gets addables
+    *  **参数解释**： 是否可添加。 **取值范围**： 不涉及。
+    *
+    * @return map[string,bool][]|null
+    */
+    public function getAddables()
+    {
+        return $this->container['addables'];
+    }
+
+    /**
+    * Sets addables
+    *
+    * @param map[string,bool][]|null $addables **参数解释**： 是否可添加。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setAddables($addables)
+    {
+        $this->container['addables'] = $addables;
+        return $this;
+    }
+
+    /**
     * Gets conditions
-    *  条件
+    *  **参数解释**： 条件。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -442,7 +477,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
     /**
     * Sets conditions
     *
-    * @param string[]|null $conditions 条件
+    * @param string[]|null $conditions **参数解释**： 条件。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -454,7 +489,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
 
     /**
     * Gets pluginsList
-    *  插件列表
+    *  **参数解释**： 插件列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PageInfoBusinessTypeDefinitionVOPluginsList[]|null
     */
@@ -466,7 +501,7 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
     /**
     * Sets pluginsList
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PageInfoBusinessTypeDefinitionVOPluginsList[]|null $pluginsList 插件列表
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PageInfoBusinessTypeDefinitionVOPluginsList[]|null $pluginsList **参数解释**： 插件列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

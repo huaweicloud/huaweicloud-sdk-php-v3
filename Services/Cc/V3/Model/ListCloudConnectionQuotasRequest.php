@@ -20,7 +20,7 @@ class ListCloudConnectionQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  每页返回的个数。 取值范围：1~1000。
+    * limit  每页返回的个数。 取值范围：1~2000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
     * cloudConnectionId  云连接ID。当查询cloud_connection_region、cloud_connection_route、region_network_instance三种类型的配额时需要填写此参数。
@@ -38,7 +38,7 @@ class ListCloudConnectionQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  每页返回的个数。 取值范围：1~1000。
+    * limit  每页返回的个数。 取值范围：1~2000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
     * cloudConnectionId  云连接ID。当查询cloud_connection_region、cloud_connection_route、region_network_instance三种类型的配额时需要填写此参数。
@@ -77,7 +77,7 @@ class ListCloudConnectionQuotasRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  每页返回的个数。 取值范围：1~1000。
+    * limit  每页返回的个数。 取值范围：1~2000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
     * cloudConnectionId  云连接ID。当查询cloud_connection_region、cloud_connection_route、region_network_instance三种类型的配额时需要填写此参数。
@@ -95,7 +95,7 @@ class ListCloudConnectionQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  每页返回的个数。 取值范围：1~1000。
+    * limit  每页返回的个数。 取值范围：1~2000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
     * cloudConnectionId  云连接ID。当查询cloud_connection_region、cloud_connection_route、region_network_instance三种类型的配额时需要填写此参数。
@@ -113,7 +113,7 @@ class ListCloudConnectionQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  每页返回的个数。 取值范围：1~1000。
+    * limit  每页返回的个数。 取值范围：1~2000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
     * cloudConnectionId  云连接ID。当查询cloud_connection_region、cloud_connection_route、region_network_instance三种类型的配额时需要填写此参数。
@@ -221,8 +221,8 @@ class ListCloudConnectionQuotasRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
@@ -233,9 +233,6 @@ class ListCloudConnectionQuotasRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 1)) {
                 $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['quotaType'] === null) {
-            $invalidProperties[] = "'quotaType' can't be null";
-        }
             $allowedValues = $this->getQuotaTypeAllowableValues();
                 if (!is_null($this->container['quotaType']) && !in_array($this->container['quotaType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -244,12 +241,6 @@ class ListCloudConnectionQuotasRequest implements ModelInterface, ArrayAccess
                 );
             }
 
-            if ((mb_strlen($this->container['quotaType']) > 36)) {
-                $invalidProperties[] = "invalid value for 'quotaType', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['quotaType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'quotaType', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['cloudConnectionId']) && (mb_strlen($this->container['cloudConnectionId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 36.";
             }
@@ -278,7 +269,7 @@ class ListCloudConnectionQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页返回的个数。 取值范围：1~1000。
+    *  每页返回的个数。 取值范围：1~2000。
     *
     * @return int|null
     */
@@ -290,7 +281,7 @@ class ListCloudConnectionQuotasRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页返回的个数。 取值范围：1~1000。
+    * @param int|null $limit 每页返回的个数。 取值范围：1~2000。
     *
     * @return $this
     */
@@ -328,7 +319,7 @@ class ListCloudConnectionQuotasRequest implements ModelInterface, ArrayAccess
     * Gets quotaType
     *  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
     *
-    * @return string
+    * @return string|null
     */
     public function getQuotaType()
     {
@@ -338,7 +329,7 @@ class ListCloudConnectionQuotasRequest implements ModelInterface, ArrayAccess
     /**
     * Sets quotaType
     *
-    * @param string $quotaType 配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
+    * @param string|null $quotaType 配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
     *
     * @return $this
     */

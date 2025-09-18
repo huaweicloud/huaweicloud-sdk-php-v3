@@ -21,8 +21,8 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  创建状态
-    * ruleId  规则ID
+    * status  **参数解释**： 是否调用成功。 **取值范围**： - true：调用成功。 - false：调用失败。
+    * ruleId  **参数解释**： 规则ID，规则的唯一标识，通过[分页获取规则列表](ListRule.xml)接口获取，data.id即为规则ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  创建状态
-    * ruleId  规则ID
+    * status  **参数解释**： 是否调用成功。 **取值范围**： - true：调用成功。 - false：调用失败。
+    * ruleId  **参数解释**： 规则ID，规则的唯一标识，通过[分页获取规则列表](ListRule.xml)接口获取，data.id即为规则ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  创建状态
-    * ruleId  规则ID
+    * status  **参数解释**： 是否调用成功。 **取值范围**： - true：调用成功。 - false：调用失败。
+    * ruleId  **参数解释**： 规则ID，规则的唯一标识，通过[分页获取规则列表](ListRule.xml)接口获取，data.id即为规则ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  创建状态
-    * ruleId  规则ID
+    * status  **参数解释**： 是否调用成功。 **取值范围**： - true：调用成功。 - false：调用失败。
+    * ruleId  **参数解释**： 规则ID，规则的唯一标识，通过[分页获取规则列表](ListRule.xml)接口获取，data.id即为规则ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  创建状态
-    * ruleId  规则ID
+    * status  **参数解释**： 是否调用成功。 **取值范围**： - true：调用成功。 - false：调用失败。
+    * ruleId  **参数解释**： 规则ID，规则的唯一标识，通过[分页获取规则列表](ListRule.xml)接口获取，data.id即为规则ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  创建状态
+    *  **参数解释**： 是否调用成功。 **取值范围**： - true：调用成功。 - false：调用失败。
     *
     * @return bool|null
     */
@@ -198,7 +198,7 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param bool|null $status 创建状态
+    * @param bool|null $status **参数解释**： 是否调用成功。 **取值范围**： - true：调用成功。 - false：调用失败。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleId
-    *  规则ID
+    *  **参数解释**： 规则ID，规则的唯一标识，通过[分页获取规则列表](ListRule.xml)接口获取，data.id即为规则ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ruleId
     *
-    * @param string|null $ruleId 规则ID
+    * @param string|null $ruleId **参数解释**： 规则ID，规则的唯一标识，通过[分页获取规则列表](ListRule.xml)接口获取，data.id即为规则ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -20,11 +20,11 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pluginName  插件名
-    * displayName  展示名
-    * version  版本号
-    * pluginAttribution  插件属性,custom/official
-    * versionAttribution  版本属性,draft/formal
+    * pluginName  **参数解释**： 插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 版本号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginAttribution  **参数解释**： 插件属性。 **约束限制**： 不涉及。 **取值范围**： - custom：自定义插件。 - official：官方插件。 **默认取值**： 不涉及。
+    * versionAttribution  **参数解释**： 版本属性。 **约束限制**： 不涉及。 **取值范围**： - draft：草稿版本。 - formal：正式版本。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pluginName  插件名
-    * displayName  展示名
-    * version  版本号
-    * pluginAttribution  插件属性,custom/official
-    * versionAttribution  版本属性,draft/formal
+    * pluginName  **参数解释**： 插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 版本号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginAttribution  **参数解释**： 插件属性。 **约束限制**： 不涉及。 **取值范围**： - custom：自定义插件。 - official：官方插件。 **默认取值**： 不涉及。
+    * versionAttribution  **参数解释**： 版本属性。 **约束限制**： 不涉及。 **取值范围**： - draft：草稿版本。 - formal：正式版本。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pluginName  插件名
-    * displayName  展示名
-    * version  版本号
-    * pluginAttribution  插件属性,custom/official
-    * versionAttribution  版本属性,draft/formal
+    * pluginName  **参数解释**： 插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 版本号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginAttribution  **参数解释**： 插件属性。 **约束限制**： 不涉及。 **取值范围**： - custom：自定义插件。 - official：官方插件。 **默认取值**： 不涉及。
+    * versionAttribution  **参数解释**： 版本属性。 **约束限制**： 不涉及。 **取值范围**： - draft：草稿版本。 - formal：正式版本。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pluginName  插件名
-    * displayName  展示名
-    * version  版本号
-    * pluginAttribution  插件属性,custom/official
-    * versionAttribution  版本属性,draft/formal
+    * pluginName  **参数解释**： 插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 版本号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginAttribution  **参数解释**： 插件属性。 **约束限制**： 不涉及。 **取值范围**： - custom：自定义插件。 - official：官方插件。 **默认取值**： 不涉及。
+    * versionAttribution  **参数解释**： 版本属性。 **约束限制**： 不涉及。 **取值范围**： - draft：草稿版本。 - formal：正式版本。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pluginName  插件名
-    * displayName  展示名
-    * version  版本号
-    * pluginAttribution  插件属性,custom/official
-    * versionAttribution  版本属性,draft/formal
+    * pluginName  **参数解释**： 插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 版本号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginAttribution  **参数解释**： 插件属性。 **约束限制**： 不涉及。 **取值范围**： - custom：自定义插件。 - official：官方插件。 **默认取值**： 不涉及。
+    * versionAttribution  **参数解释**： 版本属性。 **约束限制**： 不涉及。 **取值范围**： - draft：草稿版本。 - formal：正式版本。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -230,7 +230,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginName
-    *  插件名
+    *  **参数解释**： 插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -242,7 +242,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string $pluginName 插件名
+    * @param string $pluginName **参数解释**： 插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -254,7 +254,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayName
-    *  展示名
+    *  **参数解释**： 展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -266,7 +266,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets displayName
     *
-    * @param string $displayName 展示名
+    * @param string $displayName **参数解释**： 展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  版本号
+    *  **参数解释**： 版本号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -290,7 +290,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 版本号
+    * @param string $version **参数解释**： 版本号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -302,7 +302,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginAttribution
-    *  插件属性,custom/official
+    *  **参数解释**： 插件属性。 **约束限制**： 不涉及。 **取值范围**： - custom：自定义插件。 - official：官方插件。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -314,7 +314,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginAttribution
     *
-    * @param string $pluginAttribution 插件属性,custom/official
+    * @param string $pluginAttribution **参数解释**： 插件属性。 **约束限制**： 不涉及。 **取值范围**： - custom：自定义插件。 - official：官方插件。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -326,7 +326,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets versionAttribution
-    *  版本属性,draft/formal
+    *  **参数解释**： 版本属性。 **约束限制**： 不涉及。 **取值范围**： - draft：草稿版本。 - formal：正式版本。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -338,7 +338,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets versionAttribution
     *
-    * @param string|null $versionAttribution 版本属性,draft/formal
+    * @param string|null $versionAttribution **参数解释**： 版本属性。 **约束限制**： 不涉及。 **取值范围**： - draft：草稿版本。 - formal：正式版本。 **默认取值**： 不涉及。
     *
     * @return $this
     */

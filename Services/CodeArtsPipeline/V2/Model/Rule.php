@@ -20,12 +20,12 @@ class Rule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  规则ID
-    * type  规则类型
-    * name  规则名称
-    * version  规则版本
-    * operator  最近操作人员
-    * operateTime  最近操作时间
+    * id  **参数解释**： 规则ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 规则名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则版本。 **取值范围**： 不涉及。
+    * operator  **参数解释**： 最近操作人员。 **取值范围**： 不涉及。
+    * operateTime  **参数解释**： 最近操作时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class Rule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  规则ID
-    * type  规则类型
-    * name  规则名称
-    * version  规则版本
-    * operator  最近操作人员
-    * operateTime  最近操作时间
+    * id  **参数解释**： 规则ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 规则名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则版本。 **取值范围**： 不涉及。
+    * operator  **参数解释**： 最近操作人员。 **取值范围**： 不涉及。
+    * operateTime  **参数解释**： 最近操作时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class Rule implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  规则ID
-    * type  规则类型
-    * name  规则名称
-    * version  规则版本
-    * operator  最近操作人员
-    * operateTime  最近操作时间
+    * id  **参数解释**： 规则ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 规则名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则版本。 **取值范围**： 不涉及。
+    * operator  **参数解释**： 最近操作人员。 **取值范围**： 不涉及。
+    * operateTime  **参数解释**： 最近操作时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class Rule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  规则ID
-    * type  规则类型
-    * name  规则名称
-    * version  规则版本
-    * operator  最近操作人员
-    * operateTime  最近操作时间
+    * id  **参数解释**： 规则ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 规则名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则版本。 **取值范围**： 不涉及。
+    * operator  **参数解释**： 最近操作人员。 **取值范围**： 不涉及。
+    * operateTime  **参数解释**： 最近操作时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class Rule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  规则ID
-    * type  规则类型
-    * name  规则名称
-    * version  规则版本
-    * operator  最近操作人员
-    * operateTime  最近操作时间
+    * id  **参数解释**： 规则ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 规则名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则版本。 **取值范围**： 不涉及。
+    * operator  **参数解释**： 最近操作人员。 **取值范围**： 不涉及。
+    * operateTime  **参数解释**： 最近操作时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -250,7 +250,7 @@ class Rule implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  规则ID
+    *  **参数解释**： 规则ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -262,7 +262,7 @@ class Rule implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 规则ID
+    * @param string $id **参数解释**： 规则ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -274,7 +274,7 @@ class Rule implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  规则类型
+    *  **参数解释**： 规则类型。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -286,7 +286,7 @@ class Rule implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 规则类型
+    * @param string $type **参数解释**： 规则类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -298,7 +298,7 @@ class Rule implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  规则名称
+    *  **参数解释**： 规则名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -310,7 +310,7 @@ class Rule implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 规则名称
+    * @param string $name **参数解释**： 规则名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -322,7 +322,7 @@ class Rule implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  规则版本
+    *  **参数解释**： 规则版本。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -334,7 +334,7 @@ class Rule implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 规则版本
+    * @param string $version **参数解释**： 规则版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -346,7 +346,7 @@ class Rule implements ModelInterface, ArrayAccess
 
     /**
     * Gets operator
-    *  最近操作人员
+    *  **参数解释**： 最近操作人员。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -358,7 +358,7 @@ class Rule implements ModelInterface, ArrayAccess
     /**
     * Sets operator
     *
-    * @param string $operator 最近操作人员
+    * @param string $operator **参数解释**： 最近操作人员。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -370,7 +370,7 @@ class Rule implements ModelInterface, ArrayAccess
 
     /**
     * Gets operateTime
-    *  最近操作时间
+    *  **参数解释**： 最近操作时间。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -382,7 +382,7 @@ class Rule implements ModelInterface, ArrayAccess
     /**
     * Sets operateTime
     *
-    * @param int $operateTime 最近操作时间
+    * @param int $operateTime **参数解释**： 最近操作时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */

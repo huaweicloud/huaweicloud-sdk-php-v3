@@ -21,13 +21,13 @@ class ListCentralNetworkPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * centralNetworkId  中心网络的ID。
-    * limit  每页返回的个数。 取值范围：1~1000。
+    * limit  每页返回的个数。 取值范围：1~2000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     * sortKey  排序字段。
     * sortDir  指定排序是升序还是降序（asc为升序，desc为降序）。
     * id  根据ID查询，可查询多个ID。
     * state  根据状态查询，可查询多个状态。
-    * version  根据版本查询，可查询多个名字。
+    * version  根据版本查询，可查询多个版本。
     * isApplied  是否被应用。
     *
     * @var string[]
@@ -47,13 +47,13 @@ class ListCentralNetworkPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * centralNetworkId  中心网络的ID。
-    * limit  每页返回的个数。 取值范围：1~1000。
+    * limit  每页返回的个数。 取值范围：1~2000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     * sortKey  排序字段。
     * sortDir  指定排序是升序还是降序（asc为升序，desc为降序）。
     * id  根据ID查询，可查询多个ID。
     * state  根据状态查询，可查询多个状态。
-    * version  根据版本查询，可查询多个名字。
+    * version  根据版本查询，可查询多个版本。
     * isApplied  是否被应用。
     *
     * @var string[]
@@ -94,13 +94,13 @@ class ListCentralNetworkPoliciesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * centralNetworkId  中心网络的ID。
-    * limit  每页返回的个数。 取值范围：1~1000。
+    * limit  每页返回的个数。 取值范围：1~2000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     * sortKey  排序字段。
     * sortDir  指定排序是升序还是降序（asc为升序，desc为降序）。
     * id  根据ID查询，可查询多个ID。
     * state  根据状态查询，可查询多个状态。
-    * version  根据版本查询，可查询多个名字。
+    * version  根据版本查询，可查询多个版本。
     * isApplied  是否被应用。
     *
     * @var string[]
@@ -120,13 +120,13 @@ class ListCentralNetworkPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * centralNetworkId  中心网络的ID。
-    * limit  每页返回的个数。 取值范围：1~1000。
+    * limit  每页返回的个数。 取值范围：1~2000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     * sortKey  排序字段。
     * sortDir  指定排序是升序还是降序（asc为升序，desc为降序）。
     * id  根据ID查询，可查询多个ID。
     * state  根据状态查询，可查询多个状态。
-    * version  根据版本查询，可查询多个名字。
+    * version  根据版本查询，可查询多个版本。
     * isApplied  是否被应用。
     *
     * @var string[]
@@ -146,13 +146,13 @@ class ListCentralNetworkPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * centralNetworkId  中心网络的ID。
-    * limit  每页返回的个数。 取值范围：1~1000。
+    * limit  每页返回的个数。 取值范围：1~2000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     * sortKey  排序字段。
     * sortDir  指定排序是升序还是降序（asc为升序，desc为降序）。
     * id  根据ID查询，可查询多个ID。
     * state  根据状态查询，可查询多个状态。
-    * version  根据版本查询，可查询多个名字。
+    * version  根据版本查询，可查询多个版本。
     * isApplied  是否被应用。
     *
     * @var string[]
@@ -258,8 +258,8 @@ class ListCentralNetworkPoliciesRequest implements ModelInterface, ArrayAccess
             if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['centralNetworkId'])) {
                 $invalidProperties[] = "invalid value for 'centralNetworkId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
@@ -316,7 +316,7 @@ class ListCentralNetworkPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页返回的个数。 取值范围：1~1000。
+    *  每页返回的个数。 取值范围：1~2000。
     *
     * @return int|null
     */
@@ -328,7 +328,7 @@ class ListCentralNetworkPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页返回的个数。 取值范围：1~1000。
+    * @param int|null $limit 每页返回的个数。 取值范围：1~2000。
     *
     * @return $this
     */
@@ -460,7 +460,7 @@ class ListCentralNetworkPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  根据版本查询，可查询多个名字。
+    *  根据版本查询，可查询多个版本。
     *
     * @return \HuaweiCloud\SDK\Cc\V3\Model\Version[]|null
     */
@@ -472,7 +472,7 @@ class ListCentralNetworkPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\Version[]|null $version 根据版本查询，可查询多个名字。
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\Version[]|null $version 根据版本查询，可查询多个版本。
     *
     * @return $this
     */

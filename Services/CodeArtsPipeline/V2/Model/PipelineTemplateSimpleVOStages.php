@@ -20,8 +20,8 @@ class PipelineTemplateSimpleVOStages implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  阶段名称
-    * sequence  序列号
+    * name  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
+    * sequence  **参数解释**： 阶段顺序。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class PipelineTemplateSimpleVOStages implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  阶段名称
-    * sequence  序列号
+    * name  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
+    * sequence  **参数解释**： 阶段顺序。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class PipelineTemplateSimpleVOStages implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  阶段名称
-    * sequence  序列号
+    * name  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
+    * sequence  **参数解释**： 阶段顺序。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class PipelineTemplateSimpleVOStages implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  阶段名称
-    * sequence  序列号
+    * name  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
+    * sequence  **参数解释**： 阶段顺序。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class PipelineTemplateSimpleVOStages implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  阶段名称
-    * sequence  序列号
+    * name  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
+    * sequence  **参数解释**： 阶段顺序。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class PipelineTemplateSimpleVOStages implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  阶段名称
+    *  **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class PipelineTemplateSimpleVOStages implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 阶段名称
+    * @param string|null $name **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class PipelineTemplateSimpleVOStages implements ModelInterface, ArrayAccess
 
     /**
     * Gets sequence
-    *  序列号
+    *  **参数解释**： 阶段顺序。 **取值范围**： 大于等于0。
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class PipelineTemplateSimpleVOStages implements ModelInterface, ArrayAccess
     /**
     * Sets sequence
     *
-    * @param int|null $sequence 序列号
+    * @param int|null $sequence **参数解释**： 阶段顺序。 **取值范围**： 大于等于0。
     *
     * @return $this
     */

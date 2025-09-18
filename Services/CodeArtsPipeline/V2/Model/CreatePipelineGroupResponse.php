@@ -21,18 +21,18 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  分组ID
-    * domainId  租户ID
-    * projectId  项目ID
-    * name  分组名
-    * parentId  父分组ID
-    * pathId  分组路径ID
-    * ordinal  序号
-    * creator  创建用户ID
-    * updater  更新用户ID
-    * createTime  创建时间
-    * updateTime  更新时间
-    * children  子分组列表
+    * id  **参数解释**： 分组ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * domainId  **参数解释**： 租户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * name  **参数解释**： 分组名。 **取值范围**： 32位字符，由数字和字母组成。
+    * parentId  **参数解释**： 父分组ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * pathId  **参数解释**： 分组路径ID。例如id1.id2.id3 代表分组id3的父分组为id2，分组id2的父分组为id1。 **取值范围**： 不涉及。
+    * ordinal  **参数解释**： 序号。 **取值范围**： 大于等于1。
+    * creator  **参数解释**： 创建用户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * updater  **参数解释**： 更新用户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * children  **参数解释**： 流水线分组详情。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -53,18 +53,18 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  分组ID
-    * domainId  租户ID
-    * projectId  项目ID
-    * name  分组名
-    * parentId  父分组ID
-    * pathId  分组路径ID
-    * ordinal  序号
-    * creator  创建用户ID
-    * updater  更新用户ID
-    * createTime  创建时间
-    * updateTime  更新时间
-    * children  子分组列表
+    * id  **参数解释**： 分组ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * domainId  **参数解释**： 租户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * name  **参数解释**： 分组名。 **取值范围**： 32位字符，由数字和字母组成。
+    * parentId  **参数解释**： 父分组ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * pathId  **参数解释**： 分组路径ID。例如id1.id2.id3 代表分组id3的父分组为id2，分组id2的父分组为id1。 **取值范围**： 不涉及。
+    * ordinal  **参数解释**： 序号。 **取值范围**： 大于等于1。
+    * creator  **参数解释**： 创建用户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * updater  **参数解释**： 更新用户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * children  **参数解释**： 流水线分组详情。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -106,18 +106,18 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  分组ID
-    * domainId  租户ID
-    * projectId  项目ID
-    * name  分组名
-    * parentId  父分组ID
-    * pathId  分组路径ID
-    * ordinal  序号
-    * creator  创建用户ID
-    * updater  更新用户ID
-    * createTime  创建时间
-    * updateTime  更新时间
-    * children  子分组列表
+    * id  **参数解释**： 分组ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * domainId  **参数解释**： 租户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * name  **参数解释**： 分组名。 **取值范围**： 32位字符，由数字和字母组成。
+    * parentId  **参数解释**： 父分组ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * pathId  **参数解释**： 分组路径ID。例如id1.id2.id3 代表分组id3的父分组为id2，分组id2的父分组为id1。 **取值范围**： 不涉及。
+    * ordinal  **参数解释**： 序号。 **取值范围**： 大于等于1。
+    * creator  **参数解释**： 创建用户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * updater  **参数解释**： 更新用户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * children  **参数解释**： 流水线分组详情。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -138,18 +138,18 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  分组ID
-    * domainId  租户ID
-    * projectId  项目ID
-    * name  分组名
-    * parentId  父分组ID
-    * pathId  分组路径ID
-    * ordinal  序号
-    * creator  创建用户ID
-    * updater  更新用户ID
-    * createTime  创建时间
-    * updateTime  更新时间
-    * children  子分组列表
+    * id  **参数解释**： 分组ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * domainId  **参数解释**： 租户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * name  **参数解释**： 分组名。 **取值范围**： 32位字符，由数字和字母组成。
+    * parentId  **参数解释**： 父分组ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * pathId  **参数解释**： 分组路径ID。例如id1.id2.id3 代表分组id3的父分组为id2，分组id2的父分组为id1。 **取值范围**： 不涉及。
+    * ordinal  **参数解释**： 序号。 **取值范围**： 大于等于1。
+    * creator  **参数解释**： 创建用户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * updater  **参数解释**： 更新用户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * children  **参数解释**： 流水线分组详情。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -170,18 +170,18 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  分组ID
-    * domainId  租户ID
-    * projectId  项目ID
-    * name  分组名
-    * parentId  父分组ID
-    * pathId  分组路径ID
-    * ordinal  序号
-    * creator  创建用户ID
-    * updater  更新用户ID
-    * createTime  创建时间
-    * updateTime  更新时间
-    * children  子分组列表
+    * id  **参数解释**： 分组ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * domainId  **参数解释**： 租户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * name  **参数解释**： 分组名。 **取值范围**： 32位字符，由数字和字母组成。
+    * parentId  **参数解释**： 父分组ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * pathId  **参数解释**： 分组路径ID。例如id1.id2.id3 代表分组id3的父分组为id2，分组id2的父分组为id1。 **取值范围**： 不涉及。
+    * ordinal  **参数解释**： 序号。 **取值范围**： 大于等于1。
+    * creator  **参数解释**： 创建用户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * updater  **参数解释**： 更新用户ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * children  **参数解释**： 流水线分组详情。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -296,7 +296,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  分组ID
+    *  **参数解释**： 分组ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -308,7 +308,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 分组ID
+    * @param string|null $id **参数解释**： 分组ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -320,7 +320,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  租户ID
+    *  **参数解释**： 租户ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -332,7 +332,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 租户ID
+    * @param string|null $domainId **参数解释**： 租户ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -344,7 +344,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  **参数解释**： 项目ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -356,7 +356,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId **参数解释**： 项目ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -368,7 +368,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  分组名
+    *  **参数解释**： 分组名。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -380,7 +380,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 分组名
+    * @param string|null $name **参数解释**： 分组名。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -392,7 +392,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
-    *  父分组ID
+    *  **参数解释**： 父分组ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -404,7 +404,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param string|null $parentId 父分组ID
+    * @param string|null $parentId **参数解释**： 父分组ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -416,7 +416,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pathId
-    *  分组路径ID
+    *  **参数解释**： 分组路径ID。例如id1.id2.id3 代表分组id3的父分组为id2，分组id2的父分组为id1。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -428,7 +428,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pathId
     *
-    * @param string|null $pathId 分组路径ID
+    * @param string|null $pathId **参数解释**： 分组路径ID。例如id1.id2.id3 代表分组id3的父分组为id2，分组id2的父分组为id1。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -440,7 +440,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ordinal
-    *  序号
+    *  **参数解释**： 序号。 **取值范围**： 大于等于1。
     *
     * @return int|null
     */
@@ -452,7 +452,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ordinal
     *
-    * @param int|null $ordinal 序号
+    * @param int|null $ordinal **参数解释**： 序号。 **取值范围**： 大于等于1。
     *
     * @return $this
     */
@@ -464,7 +464,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets creator
-    *  创建用户ID
+    *  **参数解释**： 创建用户ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -476,7 +476,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets creator
     *
-    * @param string|null $creator 创建用户ID
+    * @param string|null $creator **参数解释**： 创建用户ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -488,7 +488,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updater
-    *  更新用户ID
+    *  **参数解释**： 更新用户ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -500,7 +500,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updater
     *
-    * @param string|null $updater 更新用户ID
+    * @param string|null $updater **参数解释**： 更新用户ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -512,7 +512,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -524,7 +524,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 创建时间
+    * @param int|null $createTime **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -536,7 +536,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  **参数解释**： 更新时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -548,7 +548,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 更新时间
+    * @param int|null $updateTime **参数解释**： 更新时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -560,7 +560,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets children
-    *  子分组列表
+    *  **参数解释**： 流水线分组详情。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineGroupVo[]|null
     */
@@ -572,7 +572,7 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets children
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineGroupVo[]|null $children 子分组列表
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineGroupVo[]|null $children **参数解释**： 流水线分组详情。 **取值范围**： 不涉及。
     *
     * @return $this
     */

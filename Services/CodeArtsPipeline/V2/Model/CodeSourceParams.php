@@ -20,15 +20,15 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * gitType  代码仓类型
-    * codehubId  codehub代码仓ID
-    * endpointId  扩展点ID
-    * defaultBranch  默认分支
-    * gitUrl  代码仓https地址
-    * sshGitUrl  代码仓ssh地址
-    * webUrl  代码仓页面地址
-    * repoName  代码仓名称
-    * alias  代码仓别名
+    * gitType  **参数解释**： 代码仓类型。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
+    * codehubId  **参数解释**： CodeArts Repo代码仓ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endpointId  **参数解释**： 代码源扩展点ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * defaultBranch  **参数解释**： 默认分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * gitUrl  **参数解释**： Git仓库https地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sshGitUrl  **参数解释**： ssh_git链接地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * webUrl  **参数解释**： 网页url。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * repoName  **参数解释**： 流水线源名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * alias  **参数解释**： 代码仓别名。 **约束限制**： 不涉及。 **取值范围**： 仅支持输入大小写英文字母、数字、“_”，至多128个字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * gitType  代码仓类型
-    * codehubId  codehub代码仓ID
-    * endpointId  扩展点ID
-    * defaultBranch  默认分支
-    * gitUrl  代码仓https地址
-    * sshGitUrl  代码仓ssh地址
-    * webUrl  代码仓页面地址
-    * repoName  代码仓名称
-    * alias  代码仓别名
+    * gitType  **参数解释**： 代码仓类型。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
+    * codehubId  **参数解释**： CodeArts Repo代码仓ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endpointId  **参数解释**： 代码源扩展点ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * defaultBranch  **参数解释**： 默认分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * gitUrl  **参数解释**： Git仓库https地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sshGitUrl  **参数解释**： ssh_git链接地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * webUrl  **参数解释**： 网页url。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * repoName  **参数解释**： 流水线源名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * alias  **参数解释**： 代码仓别名。 **约束限制**： 不涉及。 **取值范围**： 仅支持输入大小写英文字母、数字、“_”，至多128个字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * gitType  代码仓类型
-    * codehubId  codehub代码仓ID
-    * endpointId  扩展点ID
-    * defaultBranch  默认分支
-    * gitUrl  代码仓https地址
-    * sshGitUrl  代码仓ssh地址
-    * webUrl  代码仓页面地址
-    * repoName  代码仓名称
-    * alias  代码仓别名
+    * gitType  **参数解释**： 代码仓类型。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
+    * codehubId  **参数解释**： CodeArts Repo代码仓ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endpointId  **参数解释**： 代码源扩展点ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * defaultBranch  **参数解释**： 默认分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * gitUrl  **参数解释**： Git仓库https地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sshGitUrl  **参数解释**： ssh_git链接地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * webUrl  **参数解释**： 网页url。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * repoName  **参数解释**： 流水线源名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * alias  **参数解释**： 代码仓别名。 **约束限制**： 不涉及。 **取值范围**： 仅支持输入大小写英文字母、数字、“_”，至多128个字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * gitType  代码仓类型
-    * codehubId  codehub代码仓ID
-    * endpointId  扩展点ID
-    * defaultBranch  默认分支
-    * gitUrl  代码仓https地址
-    * sshGitUrl  代码仓ssh地址
-    * webUrl  代码仓页面地址
-    * repoName  代码仓名称
-    * alias  代码仓别名
+    * gitType  **参数解释**： 代码仓类型。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
+    * codehubId  **参数解释**： CodeArts Repo代码仓ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endpointId  **参数解释**： 代码源扩展点ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * defaultBranch  **参数解释**： 默认分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * gitUrl  **参数解释**： Git仓库https地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sshGitUrl  **参数解释**： ssh_git链接地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * webUrl  **参数解释**： 网页url。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * repoName  **参数解释**： 流水线源名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * alias  **参数解释**： 代码仓别名。 **约束限制**： 不涉及。 **取值范围**： 仅支持输入大小写英文字母、数字、“_”，至多128个字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * gitType  代码仓类型
-    * codehubId  codehub代码仓ID
-    * endpointId  扩展点ID
-    * defaultBranch  默认分支
-    * gitUrl  代码仓https地址
-    * sshGitUrl  代码仓ssh地址
-    * webUrl  代码仓页面地址
-    * repoName  代码仓名称
-    * alias  代码仓别名
+    * gitType  **参数解释**： 代码仓类型。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
+    * codehubId  **参数解释**： CodeArts Repo代码仓ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endpointId  **参数解释**： 代码源扩展点ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * defaultBranch  **参数解释**： 默认分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * gitUrl  **参数解释**： Git仓库https地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sshGitUrl  **参数解释**： ssh_git链接地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * webUrl  **参数解释**： 网页url。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * repoName  **参数解释**： 流水线源名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * alias  **参数解释**： 代码仓别名。 **约束限制**： 不涉及。 **取值范围**： 仅支持输入大小写英文字母、数字、“_”，至多128个字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -262,7 +262,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitType
-    *  代码仓类型
+    *  **参数解释**： 代码仓类型。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets gitType
     *
-    * @param string|null $gitType 代码仓类型
+    * @param string|null $gitType **参数解释**： 代码仓类型。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets codehubId
-    *  codehub代码仓ID
+    *  **参数解释**： CodeArts Repo代码仓ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets codehubId
     *
-    * @param string|null $codehubId codehub代码仓ID
+    * @param string|null $codehubId **参数解释**： CodeArts Repo代码仓ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpointId
-    *  扩展点ID
+    *  **参数解释**： 代码源扩展点ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets endpointId
     *
-    * @param string|null $endpointId 扩展点ID
+    * @param string|null $endpointId **参数解释**： 代码源扩展点ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultBranch
-    *  默认分支
+    *  **参数解释**： 默认分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets defaultBranch
     *
-    * @param string|null $defaultBranch 默认分支
+    * @param string|null $defaultBranch **参数解释**： 默认分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitUrl
-    *  代码仓https地址
+    *  **参数解释**： Git仓库https地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets gitUrl
     *
-    * @param string|null $gitUrl 代码仓https地址
+    * @param string|null $gitUrl **参数解释**： Git仓库https地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets sshGitUrl
-    *  代码仓ssh地址
+    *  **参数解释**： ssh_git链接地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets sshGitUrl
     *
-    * @param string|null $sshGitUrl 代码仓ssh地址
+    * @param string|null $sshGitUrl **参数解释**： ssh_git链接地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets webUrl
-    *  代码仓页面地址
+    *  **参数解释**： 网页url。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -418,7 +418,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets webUrl
     *
-    * @param string|null $webUrl 代码仓页面地址
+    * @param string|null $webUrl **参数解释**： 网页url。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets repoName
-    *  代码仓名称
+    *  **参数解释**： 流水线源名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets repoName
     *
-    * @param string|null $repoName 代码仓名称
+    * @param string|null $repoName **参数解释**： 流水线源名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets alias
-    *  代码仓别名
+    *  **参数解释**： 代码仓别名。 **约束限制**： 不涉及。 **取值范围**： 仅支持输入大小写英文字母、数字、“_”，至多128个字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -466,7 +466,7 @@ class CodeSourceParams implements ModelInterface, ArrayAccess
     /**
     * Sets alias
     *
-    * @param string|null $alias 代码仓别名
+    * @param string|null $alias **参数解释**： 代码仓别名。 **约束限制**： 不涉及。 **取值范围**： 仅支持输入大小写英文字母、数字、“_”，至多128个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */

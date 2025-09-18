@@ -20,18 +20,18 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * uniqueId  唯一ID
-    * iconUrl  图标URL
-    * runtimeAttribution  运行属性
-    * pluginName  插件名
-    * displayName  展示名
-    * businessType  业务类型
-    * businessTypeDisplayName  业务类型展示名
-    * description  描述
-    * isPrivate  是否私有
-    * region  局点
-    * maintainers  维护者
-    * pluginCompositionType  组合插件类型
+    * uniqueId  **参数解释**： 扩展插件UUID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * iconUrl  **参数解释**： 扩展插件图标URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * runtimeAttribution  **参数解释**： 运行属性。 **约束限制**： 不涉及。 **取值范围**： - agent：基于agent运行。 - agentless：无需agent运行。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * displayName  **参数解释**： 扩展插件展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 扩展插件业务类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessTypeDisplayName  **参数解释**： 扩展插件业务类型展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 扩展插件描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isPrivate  **参数解释**： 是否私有。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * region  **参数解释**： 局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainers  **参数解释**： 维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginCompositionType  **参数解释**： 标识是否为多个step组成的组。 **约束限制**： 不涉及。 **取值范围**： - single：单step插件。 - multi：组合插件。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -52,18 +52,18 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * uniqueId  唯一ID
-    * iconUrl  图标URL
-    * runtimeAttribution  运行属性
-    * pluginName  插件名
-    * displayName  展示名
-    * businessType  业务类型
-    * businessTypeDisplayName  业务类型展示名
-    * description  描述
-    * isPrivate  是否私有
-    * region  局点
-    * maintainers  维护者
-    * pluginCompositionType  组合插件类型
+    * uniqueId  **参数解释**： 扩展插件UUID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * iconUrl  **参数解释**： 扩展插件图标URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * runtimeAttribution  **参数解释**： 运行属性。 **约束限制**： 不涉及。 **取值范围**： - agent：基于agent运行。 - agentless：无需agent运行。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * displayName  **参数解释**： 扩展插件展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 扩展插件业务类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessTypeDisplayName  **参数解释**： 扩展插件业务类型展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 扩展插件描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isPrivate  **参数解释**： 是否私有。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * region  **参数解释**： 局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainers  **参数解释**： 维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginCompositionType  **参数解释**： 标识是否为多个step组成的组。 **约束限制**： 不涉及。 **取值范围**： - single：单step插件。 - multi：组合插件。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -105,18 +105,18 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * uniqueId  唯一ID
-    * iconUrl  图标URL
-    * runtimeAttribution  运行属性
-    * pluginName  插件名
-    * displayName  展示名
-    * businessType  业务类型
-    * businessTypeDisplayName  业务类型展示名
-    * description  描述
-    * isPrivate  是否私有
-    * region  局点
-    * maintainers  维护者
-    * pluginCompositionType  组合插件类型
+    * uniqueId  **参数解释**： 扩展插件UUID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * iconUrl  **参数解释**： 扩展插件图标URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * runtimeAttribution  **参数解释**： 运行属性。 **约束限制**： 不涉及。 **取值范围**： - agent：基于agent运行。 - agentless：无需agent运行。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * displayName  **参数解释**： 扩展插件展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 扩展插件业务类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessTypeDisplayName  **参数解释**： 扩展插件业务类型展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 扩展插件描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isPrivate  **参数解释**： 是否私有。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * region  **参数解释**： 局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainers  **参数解释**： 维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginCompositionType  **参数解释**： 标识是否为多个step组成的组。 **约束限制**： 不涉及。 **取值范围**： - single：单step插件。 - multi：组合插件。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -137,18 +137,18 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * uniqueId  唯一ID
-    * iconUrl  图标URL
-    * runtimeAttribution  运行属性
-    * pluginName  插件名
-    * displayName  展示名
-    * businessType  业务类型
-    * businessTypeDisplayName  业务类型展示名
-    * description  描述
-    * isPrivate  是否私有
-    * region  局点
-    * maintainers  维护者
-    * pluginCompositionType  组合插件类型
+    * uniqueId  **参数解释**： 扩展插件UUID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * iconUrl  **参数解释**： 扩展插件图标URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * runtimeAttribution  **参数解释**： 运行属性。 **约束限制**： 不涉及。 **取值范围**： - agent：基于agent运行。 - agentless：无需agent运行。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * displayName  **参数解释**： 扩展插件展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 扩展插件业务类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessTypeDisplayName  **参数解释**： 扩展插件业务类型展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 扩展插件描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isPrivate  **参数解释**： 是否私有。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * region  **参数解释**： 局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainers  **参数解释**： 维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginCompositionType  **参数解释**： 标识是否为多个step组成的组。 **约束限制**： 不涉及。 **取值范围**： - single：单step插件。 - multi：组合插件。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -169,18 +169,18 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * uniqueId  唯一ID
-    * iconUrl  图标URL
-    * runtimeAttribution  运行属性
-    * pluginName  插件名
-    * displayName  展示名
-    * businessType  业务类型
-    * businessTypeDisplayName  业务类型展示名
-    * description  描述
-    * isPrivate  是否私有
-    * region  局点
-    * maintainers  维护者
-    * pluginCompositionType  组合插件类型
+    * uniqueId  **参数解释**： 扩展插件UUID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * iconUrl  **参数解释**： 扩展插件图标URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * runtimeAttribution  **参数解释**： 运行属性。 **约束限制**： 不涉及。 **取值范围**： - agent：基于agent运行。 - agentless：无需agent运行。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * displayName  **参数解释**： 扩展插件展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 扩展插件业务类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessTypeDisplayName  **参数解释**： 扩展插件业务类型展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * description  **参数解释**： 扩展插件描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * isPrivate  **参数解释**： 是否私有。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * region  **参数解释**： 局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainers  **参数解释**： 维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginCompositionType  **参数解释**： 标识是否为多个step组成的组。 **约束限制**： 不涉及。 **取值范围**： - single：单step插件。 - multi：组合插件。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -307,7 +307,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets uniqueId
-    *  唯一ID
+    *  **参数解释**： 扩展插件UUID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -319,7 +319,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     /**
     * Sets uniqueId
     *
-    * @param string|null $uniqueId 唯一ID
+    * @param string|null $uniqueId **参数解释**： 扩展插件UUID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -331,7 +331,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets iconUrl
-    *  图标URL
+    *  **参数解释**： 扩展插件图标URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -343,7 +343,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     /**
     * Sets iconUrl
     *
-    * @param string|null $iconUrl 图标URL
+    * @param string|null $iconUrl **参数解释**： 扩展插件图标URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -355,7 +355,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets runtimeAttribution
-    *  运行属性
+    *  **参数解释**： 运行属性。 **约束限制**： 不涉及。 **取值范围**： - agent：基于agent运行。 - agentless：无需agent运行。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -367,7 +367,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     /**
     * Sets runtimeAttribution
     *
-    * @param string|null $runtimeAttribution 运行属性
+    * @param string|null $runtimeAttribution **参数解释**： 运行属性。 **约束限制**： 不涉及。 **取值范围**： - agent：基于agent运行。 - agentless：无需agent运行。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -379,7 +379,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginName
-    *  插件名
+    *  **参数解释**： 扩展插件唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -391,7 +391,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string $pluginName 插件名
+    * @param string $pluginName **参数解释**： 扩展插件唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -403,7 +403,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayName
-    *  展示名
+    *  **参数解释**： 扩展插件展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -415,7 +415,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     /**
     * Sets displayName
     *
-    * @param string $displayName 展示名
+    * @param string $displayName **参数解释**： 扩展插件展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -427,7 +427,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets businessType
-    *  业务类型
+    *  **参数解释**： 扩展插件业务类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -439,7 +439,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     /**
     * Sets businessType
     *
-    * @param string $businessType 业务类型
+    * @param string $businessType **参数解释**： 扩展插件业务类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -451,7 +451,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets businessTypeDisplayName
-    *  业务类型展示名
+    *  **参数解释**： 扩展插件业务类型展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -463,7 +463,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     /**
     * Sets businessTypeDisplayName
     *
-    * @param string $businessTypeDisplayName 业务类型展示名
+    * @param string $businessTypeDisplayName **参数解释**： 扩展插件业务类型展示名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -475,7 +475,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释**： 扩展插件描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -487,7 +487,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释**： 扩展插件描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -499,7 +499,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPrivate
-    *  是否私有
+    *  **参数解释**： 是否私有。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -511,7 +511,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     /**
     * Sets isPrivate
     *
-    * @param int|null $isPrivate 是否私有
+    * @param int|null $isPrivate **参数解释**： 是否私有。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -523,7 +523,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  局点
+    *  **参数解释**： 局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -535,7 +535,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string|null $region 局点
+    * @param string|null $region **参数解释**： 局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -547,7 +547,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets maintainers
-    *  维护者
+    *  **参数解释**： 维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -559,7 +559,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     /**
     * Sets maintainers
     *
-    * @param string|null $maintainers 维护者
+    * @param string|null $maintainers **参数解释**： 维护者。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -571,7 +571,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginCompositionType
-    *  组合插件类型
+    *  **参数解释**： 标识是否为多个step组成的组。 **约束限制**： 不涉及。 **取值范围**： - single：单step插件。 - multi：组合插件。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -583,7 +583,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginCompositionType
     *
-    * @param string|null $pluginCompositionType 组合插件类型
+    * @param string|null $pluginCompositionType **参数解释**： 标识是否为多个step组成的组。 **约束限制**： 不涉及。 **取值范围**： - single：单step插件。 - multi：组合插件。 **默认取值**： 不涉及。
     *
     * @return $this
     */

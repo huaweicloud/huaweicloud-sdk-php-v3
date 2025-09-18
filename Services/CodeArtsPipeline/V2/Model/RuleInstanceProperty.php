@@ -20,12 +20,12 @@ class RuleInstanceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  属性键
-    * type  类型
-    * name  展示名称
-    * operator  比较运算符
-    * value  属性值
-    * valueType  数据类型
+    * key  **参数解释**： 规则属性键。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 展示名称。 **取值范围**： 不涉及。
+    * operator  **参数解释**： 比较运算符。 **取值范围**： 不涉及。
+    * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
+    * valueType  **参数解释**： 数据类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class RuleInstanceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  属性键
-    * type  类型
-    * name  展示名称
-    * operator  比较运算符
-    * value  属性值
-    * valueType  数据类型
+    * key  **参数解释**： 规则属性键。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 展示名称。 **取值范围**： 不涉及。
+    * operator  **参数解释**： 比较运算符。 **取值范围**： 不涉及。
+    * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
+    * valueType  **参数解释**： 数据类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class RuleInstanceProperty implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  属性键
-    * type  类型
-    * name  展示名称
-    * operator  比较运算符
-    * value  属性值
-    * valueType  数据类型
+    * key  **参数解释**： 规则属性键。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 展示名称。 **取值范围**： 不涉及。
+    * operator  **参数解释**： 比较运算符。 **取值范围**： 不涉及。
+    * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
+    * valueType  **参数解释**： 数据类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class RuleInstanceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  属性键
-    * type  类型
-    * name  展示名称
-    * operator  比较运算符
-    * value  属性值
-    * valueType  数据类型
+    * key  **参数解释**： 规则属性键。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 展示名称。 **取值范围**： 不涉及。
+    * operator  **参数解释**： 比较运算符。 **取值范围**： 不涉及。
+    * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
+    * valueType  **参数解释**： 数据类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class RuleInstanceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  属性键
-    * type  类型
-    * name  展示名称
-    * operator  比较运算符
-    * value  属性值
-    * valueType  数据类型
+    * key  **参数解释**： 规则属性键。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则类型。 **取值范围**： 不涉及。
+    * name  **参数解释**： 展示名称。 **取值范围**： 不涉及。
+    * operator  **参数解释**： 比较运算符。 **取值范围**： 不涉及。
+    * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
+    * valueType  **参数解释**： 数据类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -250,7 +250,7 @@ class RuleInstanceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  属性键
+    *  **参数解释**： 规则属性键。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -262,7 +262,7 @@ class RuleInstanceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 属性键
+    * @param string $key **参数解释**： 规则属性键。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -274,7 +274,7 @@ class RuleInstanceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型
+    *  **参数解释**： 规则类型。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -286,7 +286,7 @@ class RuleInstanceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 类型
+    * @param string $type **参数解释**： 规则类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -298,7 +298,7 @@ class RuleInstanceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  展示名称
+    *  **参数解释**： 展示名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -310,7 +310,7 @@ class RuleInstanceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 展示名称
+    * @param string $name **参数解释**： 展示名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -322,7 +322,7 @@ class RuleInstanceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets operator
-    *  比较运算符
+    *  **参数解释**： 比较运算符。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -334,7 +334,7 @@ class RuleInstanceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets operator
     *
-    * @param string|null $operator 比较运算符
+    * @param string|null $operator **参数解释**： 比较运算符。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -346,7 +346,7 @@ class RuleInstanceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  属性值
+    *  **参数解释**： 属性值。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -358,7 +358,7 @@ class RuleInstanceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 属性值
+    * @param string $value **参数解释**： 属性值。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -370,7 +370,7 @@ class RuleInstanceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets valueType
-    *  数据类型
+    *  **参数解释**： 数据类型。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -382,7 +382,7 @@ class RuleInstanceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets valueType
     *
-    * @param string $valueType 数据类型
+    * @param string $valueType **参数解释**： 数据类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */

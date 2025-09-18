@@ -21,8 +21,8 @@ class SwitchStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  状态
-    * ruleSetId  策略ID
+    * status  **参数解释**： 更新状态是否成功。 **取值范围**： - true：状态更新成功。 - false：状态更新失败。
+    * ruleSetId  **参数解释**： 更新的策略ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class SwitchStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  状态
-    * ruleSetId  策略ID
+    * status  **参数解释**： 更新状态是否成功。 **取值范围**： - true：状态更新成功。 - false：状态更新失败。
+    * ruleSetId  **参数解释**： 更新的策略ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class SwitchStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  状态
-    * ruleSetId  策略ID
+    * status  **参数解释**： 更新状态是否成功。 **取值范围**： - true：状态更新成功。 - false：状态更新失败。
+    * ruleSetId  **参数解释**： 更新的策略ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class SwitchStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  状态
-    * ruleSetId  策略ID
+    * status  **参数解释**： 更新状态是否成功。 **取值范围**： - true：状态更新成功。 - false：状态更新失败。
+    * ruleSetId  **参数解释**： 更新的策略ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class SwitchStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  状态
-    * ruleSetId  策略ID
+    * status  **参数解释**： 更新状态是否成功。 **取值范围**： - true：状态更新成功。 - false：状态更新失败。
+    * ruleSetId  **参数解释**： 更新的策略ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class SwitchStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  **参数解释**： 更新状态是否成功。 **取值范围**： - true：状态更新成功。 - false：状态更新失败。
     *
     * @return bool|null
     */
@@ -198,7 +198,7 @@ class SwitchStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param bool|null $status 状态
+    * @param bool|null $status **参数解释**： 更新状态是否成功。 **取值范围**： - true：状态更新成功。 - false：状态更新失败。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class SwitchStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleSetId
-    *  策略ID
+    *  **参数解释**： 更新的策略ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class SwitchStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ruleSetId
     *
-    * @param string|null $ruleSetId 策略ID
+    * @param string|null $ruleSetId **参数解释**： 更新的策略ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */

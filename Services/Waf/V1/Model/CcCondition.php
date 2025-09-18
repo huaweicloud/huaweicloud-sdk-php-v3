@@ -172,9 +172,19 @@ class CcCondition implements ModelInterface, ArrayAccess
     const CATEGORY_URL = 'url';
     const CATEGORY_IP = 'ip';
     const CATEGORY_IPV6 = 'ipv6';
+    const CATEGORY_ASN = 'asn';
     const CATEGORY_PARAMS = 'params';
     const CATEGORY_COOKIE = 'cookie';
+    const CATEGORY_REFERER = 'referer';
+    const CATEGORY_USER_AGENT = 'user-agent';
     const CATEGORY_HEADER = 'header';
+    const CATEGORY_RESPONSE_CODE = 'response_code';
+    const CATEGORY_RESPONSE_HEADER = 'response_header';
+    const CATEGORY_RESPONSE_BODY = 'response_body';
+    const CATEGORY_REQUEST_BODY = 'request_body';
+    const CATEGORY_METHOD = 'method';
+    const CATEGORY_TLS_FINGERPRINT = 'tls_fingerprint';
+    const CATEGORY_TLS_JA3_FINGERPRINT = 'tls_ja3_fingerprint';
     
 
     /**
@@ -188,9 +198,19 @@ class CcCondition implements ModelInterface, ArrayAccess
             self::CATEGORY_URL,
             self::CATEGORY_IP,
             self::CATEGORY_IPV6,
+            self::CATEGORY_ASN,
             self::CATEGORY_PARAMS,
             self::CATEGORY_COOKIE,
+            self::CATEGORY_REFERER,
+            self::CATEGORY_USER_AGENT,
             self::CATEGORY_HEADER,
+            self::CATEGORY_RESPONSE_CODE,
+            self::CATEGORY_RESPONSE_HEADER,
+            self::CATEGORY_RESPONSE_BODY,
+            self::CATEGORY_REQUEST_BODY,
+            self::CATEGORY_METHOD,
+            self::CATEGORY_TLS_FINGERPRINT,
+            self::CATEGORY_TLS_JA3_FINGERPRINT,
         ];
     }
 

@@ -20,11 +20,11 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * useCondition  用于区分插件为流水线可使用/模板可使用, 可选pipeline/template
-    * inputRepoType  用于区分源的代码仓类型codehub/gitlab/github等
-    * inputSourceType  用于区分单源/多源的情况
-    * businessType  业务类型
-    * regexName  名称
+    * useCondition  **参数解释**： 用于区分插件为流水线可使用/模板可使用。 **约束限制**： 不涉及。 **取值范围**： - pipeline：流水线可使用。 - template：模板可使用。 **默认取值**： 不涉及。
+    * inputRepoType  **参数解释**： 用于区分源的代码仓类型codehub/gitlab/github等。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
+    * inputSourceType  **参数解释**： 用于区分单源/多源的情况。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 业务类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * regexName  **参数解释**： 匹配名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * useCondition  用于区分插件为流水线可使用/模板可使用, 可选pipeline/template
-    * inputRepoType  用于区分源的代码仓类型codehub/gitlab/github等
-    * inputSourceType  用于区分单源/多源的情况
-    * businessType  业务类型
-    * regexName  名称
+    * useCondition  **参数解释**： 用于区分插件为流水线可使用/模板可使用。 **约束限制**： 不涉及。 **取值范围**： - pipeline：流水线可使用。 - template：模板可使用。 **默认取值**： 不涉及。
+    * inputRepoType  **参数解释**： 用于区分源的代码仓类型codehub/gitlab/github等。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
+    * inputSourceType  **参数解释**： 用于区分单源/多源的情况。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 业务类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * regexName  **参数解释**： 匹配名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * useCondition  用于区分插件为流水线可使用/模板可使用, 可选pipeline/template
-    * inputRepoType  用于区分源的代码仓类型codehub/gitlab/github等
-    * inputSourceType  用于区分单源/多源的情况
-    * businessType  业务类型
-    * regexName  名称
+    * useCondition  **参数解释**： 用于区分插件为流水线可使用/模板可使用。 **约束限制**： 不涉及。 **取值范围**： - pipeline：流水线可使用。 - template：模板可使用。 **默认取值**： 不涉及。
+    * inputRepoType  **参数解释**： 用于区分源的代码仓类型codehub/gitlab/github等。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
+    * inputSourceType  **参数解释**： 用于区分单源/多源的情况。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 业务类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * regexName  **参数解释**： 匹配名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * useCondition  用于区分插件为流水线可使用/模板可使用, 可选pipeline/template
-    * inputRepoType  用于区分源的代码仓类型codehub/gitlab/github等
-    * inputSourceType  用于区分单源/多源的情况
-    * businessType  业务类型
-    * regexName  名称
+    * useCondition  **参数解释**： 用于区分插件为流水线可使用/模板可使用。 **约束限制**： 不涉及。 **取值范围**： - pipeline：流水线可使用。 - template：模板可使用。 **默认取值**： 不涉及。
+    * inputRepoType  **参数解释**： 用于区分源的代码仓类型codehub/gitlab/github等。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
+    * inputSourceType  **参数解释**： 用于区分单源/多源的情况。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 业务类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * regexName  **参数解释**： 匹配名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * useCondition  用于区分插件为流水线可使用/模板可使用, 可选pipeline/template
-    * inputRepoType  用于区分源的代码仓类型codehub/gitlab/github等
-    * inputSourceType  用于区分单源/多源的情况
-    * businessType  业务类型
-    * regexName  名称
+    * useCondition  **参数解释**： 用于区分插件为流水线可使用/模板可使用。 **约束限制**： 不涉及。 **取值范围**： - pipeline：流水线可使用。 - template：模板可使用。 **默认取值**： 不涉及。
+    * inputRepoType  **参数解释**： 用于区分源的代码仓类型codehub/gitlab/github等。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
+    * inputSourceType  **参数解释**： 用于区分单源/多源的情况。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * businessType  **参数解释**： 业务类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * regexName  **参数解释**： 匹配名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets useCondition
-    *  用于区分插件为流水线可使用/模板可使用, 可选pipeline/template
+    *  **参数解释**： 用于区分插件为流水线可使用/模板可使用。 **约束限制**： 不涉及。 **取值范围**： - pipeline：流水线可使用。 - template：模板可使用。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets useCondition
     *
-    * @param string|null $useCondition 用于区分插件为流水线可使用/模板可使用, 可选pipeline/template
+    * @param string|null $useCondition **参数解释**： 用于区分插件为流水线可使用/模板可使用。 **约束限制**： 不涉及。 **取值范围**： - pipeline：流水线可使用。 - template：模板可使用。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets inputRepoType
-    *  用于区分源的代码仓类型codehub/gitlab/github等
+    *  **参数解释**： 用于区分源的代码仓类型codehub/gitlab/github等。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets inputRepoType
     *
-    * @param string|null $inputRepoType 用于区分源的代码仓类型codehub/gitlab/github等
+    * @param string|null $inputRepoType **参数解释**： 用于区分源的代码仓类型codehub/gitlab/github等。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets inputSourceType
-    *  用于区分单源/多源的情况
+    *  **参数解释**： 用于区分单源/多源的情况。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets inputSourceType
     *
-    * @param string|null $inputSourceType 用于区分单源/多源的情况
+    * @param string|null $inputSourceType **参数解释**： 用于区分单源/多源的情况。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets businessType
-    *  业务类型
+    *  **参数解释**： 业务类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets businessType
     *
-    * @param string|null $businessType 业务类型
+    * @param string|null $businessType **参数解释**： 业务类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets regexName
-    *  名称
+    *  **参数解释**： 匹配名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets regexName
     *
-    * @param string|null $regexName 名称
+    * @param string|null $regexName **参数解释**： 匹配名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

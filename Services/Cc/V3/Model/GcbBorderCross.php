@@ -20,7 +20,7 @@ class GcbBorderCross implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * bordercross  全域互联带宽跨境属性。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class GcbBorderCross implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * bordercross  全域互联带宽跨境属性。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class GcbBorderCross implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * bordercross  全域互联带宽跨境属性。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class GcbBorderCross implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * bordercross  全域互联带宽跨境属性。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class GcbBorderCross implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * bordercross  全域互联带宽跨境属性。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class GcbBorderCross implements ModelInterface, ArrayAccess
 
     /**
     * Gets bordercross
-    *  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    *  全域互联带宽跨境属性。
     *
     * @return bool
     */
@@ -189,7 +189,7 @@ class GcbBorderCross implements ModelInterface, ArrayAccess
     /**
     * Sets bordercross
     *
-    * @param bool $bordercross 功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * @param bool $bordercross 全域互联带宽跨境属性。
     *
     * @return $this
     */

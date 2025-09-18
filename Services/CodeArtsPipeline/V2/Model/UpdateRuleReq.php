@@ -20,20 +20,18 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  规则类型
-    * name  规则名称
-    * layoutContent  布局内容
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * content  规则属性集
+    * type  **参数解释**： 规则类型。 **约束限制**： 不涉及。 **取值范围**： - Build：构建。 - Gate：代码检查。 - Test：测试。 **默认取值**： 不涉及。
+    * name  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginId  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * pluginVersion  **参数解释**： 扩展插件版本号。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * content  **参数解释**： 规则详细属性。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
             'name' => 'string',
-            'layoutContent' => 'string',
             'pluginId' => 'string',
             'pluginName' => 'string',
             'pluginVersion' => 'string',
@@ -42,20 +40,18 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  规则类型
-    * name  规则名称
-    * layoutContent  布局内容
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * content  规则属性集
+    * type  **参数解释**： 规则类型。 **约束限制**： 不涉及。 **取值范围**： - Build：构建。 - Gate：代码检查。 - Test：测试。 **默认取值**： 不涉及。
+    * name  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginId  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * pluginVersion  **参数解释**： 扩展插件版本号。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * content  **参数解释**： 规则详细属性。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
         'name' => null,
-        'layoutContent' => null,
         'pluginId' => null,
         'pluginName' => null,
         'pluginVersion' => null,
@@ -85,20 +81,18 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  规则类型
-    * name  规则名称
-    * layoutContent  布局内容
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * content  规则属性集
+    * type  **参数解释**： 规则类型。 **约束限制**： 不涉及。 **取值范围**： - Build：构建。 - Gate：代码检查。 - Test：测试。 **默认取值**： 不涉及。
+    * name  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginId  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * pluginVersion  **参数解释**： 扩展插件版本号。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * content  **参数解释**： 规则详细属性。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
             'name' => 'name',
-            'layoutContent' => 'layout_content',
             'pluginId' => 'plugin_id',
             'pluginName' => 'plugin_name',
             'pluginVersion' => 'plugin_version',
@@ -107,20 +101,18 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  规则类型
-    * name  规则名称
-    * layoutContent  布局内容
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * content  规则属性集
+    * type  **参数解释**： 规则类型。 **约束限制**： 不涉及。 **取值范围**： - Build：构建。 - Gate：代码检查。 - Test：测试。 **默认取值**： 不涉及。
+    * name  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginId  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * pluginVersion  **参数解释**： 扩展插件版本号。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * content  **参数解释**： 规则详细属性。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
             'name' => 'setName',
-            'layoutContent' => 'setLayoutContent',
             'pluginId' => 'setPluginId',
             'pluginName' => 'setPluginName',
             'pluginVersion' => 'setPluginVersion',
@@ -129,20 +121,18 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  规则类型
-    * name  规则名称
-    * layoutContent  布局内容
-    * pluginId  插件ID
-    * pluginName  插件名称
-    * pluginVersion  插件版本号
-    * content  规则属性集
+    * type  **参数解释**： 规则类型。 **约束限制**： 不涉及。 **取值范围**： - Build：构建。 - Gate：代码检查。 - Test：测试。 **默认取值**： 不涉及。
+    * name  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pluginId  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
+    * pluginName  **参数解释**： 扩展插件名称。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * pluginVersion  **参数解释**： 扩展插件版本号。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
+    * content  **参数解释**： 规则详细属性。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
             'name' => 'getName',
-            'layoutContent' => 'getLayoutContent',
             'pluginId' => 'getPluginId',
             'pluginName' => 'getPluginName',
             'pluginVersion' => 'getPluginVersion',
@@ -209,7 +199,6 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['layoutContent'] = isset($data['layoutContent']) ? $data['layoutContent'] : null;
         $this->container['pluginId'] = isset($data['pluginId']) ? $data['pluginId'] : null;
         $this->container['pluginName'] = isset($data['pluginName']) ? $data['pluginName'] : null;
         $this->container['pluginVersion'] = isset($data['pluginVersion']) ? $data['pluginVersion'] : null;
@@ -233,9 +222,6 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['name']) > 85)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 85.";
             }
-        if ($this->container['layoutContent'] === null) {
-            $invalidProperties[] = "'layoutContent' can't be null";
-        }
         if ($this->container['content'] === null) {
             $invalidProperties[] = "'content' can't be null";
         }
@@ -255,7 +241,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  规则类型
+    *  **参数解释**： 规则类型。 **约束限制**： 不涉及。 **取值范围**： - Build：构建。 - Gate：代码检查。 - Test：测试。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -267,7 +253,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 规则类型
+    * @param string $type **参数解释**： 规则类型。 **约束限制**： 不涉及。 **取值范围**： - Build：构建。 - Gate：代码检查。 - Test：测试。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -279,7 +265,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  规则名称
+    *  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -291,7 +277,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 规则名称
+    * @param string $name **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -302,32 +288,8 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets layoutContent
-    *  布局内容
-    *
-    * @return string
-    */
-    public function getLayoutContent()
-    {
-        return $this->container['layoutContent'];
-    }
-
-    /**
-    * Sets layoutContent
-    *
-    * @param string $layoutContent 布局内容
-    *
-    * @return $this
-    */
-    public function setLayoutContent($layoutContent)
-    {
-        $this->container['layoutContent'] = $layoutContent;
-        return $this;
-    }
-
-    /**
     * Gets pluginId
-    *  插件ID
+    *  **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -339,7 +301,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets pluginId
     *
-    * @param string|null $pluginId 插件ID
+    * @param string|null $pluginId **参数解释**： 扩展插件唯一ID。可以通过[查询插件版本详情](ShowPluginVersion.xml)接口，获取响应参数中unique_id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -351,7 +313,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginName
-    *  插件名称
+    *  **参数解释**： 扩展插件名称。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -363,7 +325,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 插件名称
+    * @param string|null $pluginName **参数解释**： 扩展插件名称。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -375,7 +337,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginVersion
-    *  插件版本号
+    *  **参数解释**： 扩展插件版本号。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -387,7 +349,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets pluginVersion
     *
-    * @param string|null $pluginVersion 插件版本号
+    * @param string|null $pluginVersion **参数解释**： 扩展插件版本号。 **约束限制**： 仅支持输入大小写英文字母、数字、'-'、'_'。 **取值范围**： 1到50位字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -399,7 +361,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets content
-    *  规则属性集
+    *  **参数解释**： 规则详细属性。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleContent[]
     */
@@ -411,7 +373,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets content
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleContent[] $content 规则属性集
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RuleContent[] $content **参数解释**： 规则详细属性。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

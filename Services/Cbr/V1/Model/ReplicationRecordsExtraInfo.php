@@ -24,7 +24,7 @@ class ReplicationRecordsExtraInfo implements ModelInterface, ArrayAccess
     * failCode  失败错误码，成功时为空
     * failReason  错误原因
     * autoTrigger  是否为自动调度复制
-    * destinatioVaultId  目标端的存储库id
+    * destinationVaultId  目标端的存储库id
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ReplicationRecordsExtraInfo implements ModelInterface, ArrayAccess
             'failCode' => 'string',
             'failReason' => 'string',
             'autoTrigger' => 'bool',
-            'destinatioVaultId' => 'string'
+            'destinationVaultId' => 'string'
     ];
 
     /**
@@ -42,7 +42,7 @@ class ReplicationRecordsExtraInfo implements ModelInterface, ArrayAccess
     * failCode  失败错误码，成功时为空
     * failReason  错误原因
     * autoTrigger  是否为自动调度复制
-    * destinatioVaultId  目标端的存储库id
+    * destinationVaultId  目标端的存储库id
     *
     * @var string[]
     */
@@ -51,7 +51,7 @@ class ReplicationRecordsExtraInfo implements ModelInterface, ArrayAccess
         'failCode' => null,
         'failReason' => null,
         'autoTrigger' => null,
-        'destinatioVaultId' => null
+        'destinationVaultId' => null
     ];
 
     /**
@@ -81,7 +81,7 @@ class ReplicationRecordsExtraInfo implements ModelInterface, ArrayAccess
     * failCode  失败错误码，成功时为空
     * failReason  错误原因
     * autoTrigger  是否为自动调度复制
-    * destinatioVaultId  目标端的存储库id
+    * destinationVaultId  目标端的存储库id
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ReplicationRecordsExtraInfo implements ModelInterface, ArrayAccess
             'failCode' => 'fail_code',
             'failReason' => 'fail_reason',
             'autoTrigger' => 'auto_trigger',
-            'destinatioVaultId' => 'destinatio_vault_id'
+            'destinationVaultId' => 'destination_vault_id'
     ];
 
     /**
@@ -99,7 +99,7 @@ class ReplicationRecordsExtraInfo implements ModelInterface, ArrayAccess
     * failCode  失败错误码，成功时为空
     * failReason  错误原因
     * autoTrigger  是否为自动调度复制
-    * destinatioVaultId  目标端的存储库id
+    * destinationVaultId  目标端的存储库id
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class ReplicationRecordsExtraInfo implements ModelInterface, ArrayAccess
             'failCode' => 'setFailCode',
             'failReason' => 'setFailReason',
             'autoTrigger' => 'setAutoTrigger',
-            'destinatioVaultId' => 'setDestinatioVaultId'
+            'destinationVaultId' => 'setDestinationVaultId'
     ];
 
     /**
@@ -117,7 +117,7 @@ class ReplicationRecordsExtraInfo implements ModelInterface, ArrayAccess
     * failCode  失败错误码，成功时为空
     * failReason  错误原因
     * autoTrigger  是否为自动调度复制
-    * destinatioVaultId  目标端的存储库id
+    * destinationVaultId  目标端的存储库id
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ReplicationRecordsExtraInfo implements ModelInterface, ArrayAccess
             'failCode' => 'getFailCode',
             'failReason' => 'getFailReason',
             'autoTrigger' => 'getAutoTrigger',
-            'destinatioVaultId' => 'getDestinatioVaultId'
+            'destinationVaultId' => 'getDestinationVaultId'
     ];
 
     /**
@@ -191,7 +191,7 @@ class ReplicationRecordsExtraInfo implements ModelInterface, ArrayAccess
         $this->container['failCode'] = isset($data['failCode']) ? $data['failCode'] : null;
         $this->container['failReason'] = isset($data['failReason']) ? $data['failReason'] : null;
         $this->container['autoTrigger'] = isset($data['autoTrigger']) ? $data['autoTrigger'] : null;
-        $this->container['destinatioVaultId'] = isset($data['destinatioVaultId']) ? $data['destinatioVaultId'] : null;
+        $this->container['destinationVaultId'] = isset($data['destinationVaultId']) ? $data['destinationVaultId'] : null;
     }
 
     /**
@@ -313,26 +313,26 @@ class ReplicationRecordsExtraInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets destinatioVaultId
+    * Gets destinationVaultId
     *  目标端的存储库id
     *
     * @return string|null
     */
-    public function getDestinatioVaultId()
+    public function getDestinationVaultId()
     {
-        return $this->container['destinatioVaultId'];
+        return $this->container['destinationVaultId'];
     }
 
     /**
-    * Sets destinatioVaultId
+    * Sets destinationVaultId
     *
-    * @param string|null $destinatioVaultId 目标端的存储库id
+    * @param string|null $destinationVaultId 目标端的存储库id
     *
     * @return $this
     */
-    public function setDestinatioVaultId($destinatioVaultId)
+    public function setDestinationVaultId($destinationVaultId)
     {
-        $this->container['destinatioVaultId'] = $destinatioVaultId;
+        $this->container['destinationVaultId'] = $destinationVaultId;
         return $this;
     }
 

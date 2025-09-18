@@ -20,15 +20,16 @@ class RuleSet implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  规则模版实例ID
-    * name  规则模版实例名称
-    * type  类型
-    * version  版本
-    * operator  最近操作人
-    * operateTime  最近操作时间
-    * isValid  是否生效
-    * level  租户级、项目级
-    * isPublic  是否系统级
+    * id  **参数解释**： 规则模板实例ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 规则模板实例名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则实例类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则实例版本。 **取值范围**： 不涉及。
+    * operator  **参数解释**： 规则实例最近操作人。 **取值范围**： 不涉及。
+    * operateTime  **参数解释**： 规则实例最近操作时间。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 规则实例是否生效。 **取值范围**： - true：规则生效。 - false：规则不生效。
+    * level  **参数解释**： 规则实例生效级别。 **取值范围**： 不涉及。
+    * isPublic  **参数解释**： 规则实例是否系统级。 **取值范围**： - true：规则实例是系统级。 - false：规则实例不是系统级。
+    * isLegacy  **参数解释**： 规则实例是1.0的数据。 **取值范围**： - true：规则实例是1.0的数据。 - false：规则实例是1.0的数据。
     *
     * @var string[]
     */
@@ -41,20 +42,22 @@ class RuleSet implements ModelInterface, ArrayAccess
             'operateTime' => 'int',
             'isValid' => 'bool',
             'level' => 'string',
-            'isPublic' => 'bool'
+            'isPublic' => 'bool',
+            'isLegacy' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  规则模版实例ID
-    * name  规则模版实例名称
-    * type  类型
-    * version  版本
-    * operator  最近操作人
-    * operateTime  最近操作时间
-    * isValid  是否生效
-    * level  租户级、项目级
-    * isPublic  是否系统级
+    * id  **参数解释**： 规则模板实例ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 规则模板实例名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则实例类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则实例版本。 **取值范围**： 不涉及。
+    * operator  **参数解释**： 规则实例最近操作人。 **取值范围**： 不涉及。
+    * operateTime  **参数解释**： 规则实例最近操作时间。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 规则实例是否生效。 **取值范围**： - true：规则生效。 - false：规则不生效。
+    * level  **参数解释**： 规则实例生效级别。 **取值范围**： 不涉及。
+    * isPublic  **参数解释**： 规则实例是否系统级。 **取值范围**： - true：规则实例是系统级。 - false：规则实例不是系统级。
+    * isLegacy  **参数解释**： 规则实例是1.0的数据。 **取值范围**： - true：规则实例是1.0的数据。 - false：规则实例是1.0的数据。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class RuleSet implements ModelInterface, ArrayAccess
         'operateTime' => 'int64',
         'isValid' => null,
         'level' => null,
-        'isPublic' => null
+        'isPublic' => null,
+        'isLegacy' => null
     ];
 
     /**
@@ -93,15 +97,16 @@ class RuleSet implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  规则模版实例ID
-    * name  规则模版实例名称
-    * type  类型
-    * version  版本
-    * operator  最近操作人
-    * operateTime  最近操作时间
-    * isValid  是否生效
-    * level  租户级、项目级
-    * isPublic  是否系统级
+    * id  **参数解释**： 规则模板实例ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 规则模板实例名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则实例类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则实例版本。 **取值范围**： 不涉及。
+    * operator  **参数解释**： 规则实例最近操作人。 **取值范围**： 不涉及。
+    * operateTime  **参数解释**： 规则实例最近操作时间。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 规则实例是否生效。 **取值范围**： - true：规则生效。 - false：规则不生效。
+    * level  **参数解释**： 规则实例生效级别。 **取值范围**： 不涉及。
+    * isPublic  **参数解释**： 规则实例是否系统级。 **取值范围**： - true：规则实例是系统级。 - false：规则实例不是系统级。
+    * isLegacy  **参数解释**： 规则实例是1.0的数据。 **取值范围**： - true：规则实例是1.0的数据。 - false：规则实例是1.0的数据。
     *
     * @var string[]
     */
@@ -114,20 +119,22 @@ class RuleSet implements ModelInterface, ArrayAccess
             'operateTime' => 'operate_time',
             'isValid' => 'is_valid',
             'level' => 'level',
-            'isPublic' => 'is_public'
+            'isPublic' => 'is_public',
+            'isLegacy' => 'is_legacy'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  规则模版实例ID
-    * name  规则模版实例名称
-    * type  类型
-    * version  版本
-    * operator  最近操作人
-    * operateTime  最近操作时间
-    * isValid  是否生效
-    * level  租户级、项目级
-    * isPublic  是否系统级
+    * id  **参数解释**： 规则模板实例ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 规则模板实例名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则实例类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则实例版本。 **取值范围**： 不涉及。
+    * operator  **参数解释**： 规则实例最近操作人。 **取值范围**： 不涉及。
+    * operateTime  **参数解释**： 规则实例最近操作时间。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 规则实例是否生效。 **取值范围**： - true：规则生效。 - false：规则不生效。
+    * level  **参数解释**： 规则实例生效级别。 **取值范围**： 不涉及。
+    * isPublic  **参数解释**： 规则实例是否系统级。 **取值范围**： - true：规则实例是系统级。 - false：规则实例不是系统级。
+    * isLegacy  **参数解释**： 规则实例是1.0的数据。 **取值范围**： - true：规则实例是1.0的数据。 - false：规则实例是1.0的数据。
     *
     * @var string[]
     */
@@ -140,20 +147,22 @@ class RuleSet implements ModelInterface, ArrayAccess
             'operateTime' => 'setOperateTime',
             'isValid' => 'setIsValid',
             'level' => 'setLevel',
-            'isPublic' => 'setIsPublic'
+            'isPublic' => 'setIsPublic',
+            'isLegacy' => 'setIsLegacy'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  规则模版实例ID
-    * name  规则模版实例名称
-    * type  类型
-    * version  版本
-    * operator  最近操作人
-    * operateTime  最近操作时间
-    * isValid  是否生效
-    * level  租户级、项目级
-    * isPublic  是否系统级
+    * id  **参数解释**： 规则模板实例ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 规则模板实例名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 规则实例类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 规则实例版本。 **取值范围**： 不涉及。
+    * operator  **参数解释**： 规则实例最近操作人。 **取值范围**： 不涉及。
+    * operateTime  **参数解释**： 规则实例最近操作时间。 **取值范围**： 不涉及。
+    * isValid  **参数解释**： 规则实例是否生效。 **取值范围**： - true：规则生效。 - false：规则不生效。
+    * level  **参数解释**： 规则实例生效级别。 **取值范围**： 不涉及。
+    * isPublic  **参数解释**： 规则实例是否系统级。 **取值范围**： - true：规则实例是系统级。 - false：规则实例不是系统级。
+    * isLegacy  **参数解释**： 规则实例是1.0的数据。 **取值范围**： - true：规则实例是1.0的数据。 - false：规则实例是1.0的数据。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class RuleSet implements ModelInterface, ArrayAccess
             'operateTime' => 'getOperateTime',
             'isValid' => 'getIsValid',
             'level' => 'getLevel',
-            'isPublic' => 'getIsPublic'
+            'isPublic' => 'getIsPublic',
+            'isLegacy' => 'getIsLegacy'
     ];
 
     /**
@@ -236,6 +246,7 @@ class RuleSet implements ModelInterface, ArrayAccess
         $this->container['isValid'] = isset($data['isValid']) ? $data['isValid'] : null;
         $this->container['level'] = isset($data['level']) ? $data['level'] : null;
         $this->container['isPublic'] = isset($data['isPublic']) ? $data['isPublic'] : null;
+        $this->container['isLegacy'] = isset($data['isLegacy']) ? $data['isLegacy'] : null;
     }
 
     /**
@@ -280,7 +291,7 @@ class RuleSet implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  规则模版实例ID
+    *  **参数解释**： 规则模板实例ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -292,7 +303,7 @@ class RuleSet implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 规则模版实例ID
+    * @param string $id **参数解释**： 规则模板实例ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -304,7 +315,7 @@ class RuleSet implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  规则模版实例名称
+    *  **参数解释**： 规则模板实例名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -316,7 +327,7 @@ class RuleSet implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 规则模版实例名称
+    * @param string $name **参数解释**： 规则模板实例名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -328,7 +339,7 @@ class RuleSet implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型
+    *  **参数解释**： 规则实例类型。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -340,7 +351,7 @@ class RuleSet implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 类型
+    * @param string $type **参数解释**： 规则实例类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -352,7 +363,7 @@ class RuleSet implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  版本
+    *  **参数解释**： 规则实例版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -364,7 +375,7 @@ class RuleSet implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 版本
+    * @param string|null $version **参数解释**： 规则实例版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -376,7 +387,7 @@ class RuleSet implements ModelInterface, ArrayAccess
 
     /**
     * Gets operator
-    *  最近操作人
+    *  **参数解释**： 规则实例最近操作人。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -388,7 +399,7 @@ class RuleSet implements ModelInterface, ArrayAccess
     /**
     * Sets operator
     *
-    * @param string $operator 最近操作人
+    * @param string $operator **参数解释**： 规则实例最近操作人。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -400,7 +411,7 @@ class RuleSet implements ModelInterface, ArrayAccess
 
     /**
     * Gets operateTime
-    *  最近操作时间
+    *  **参数解释**： 规则实例最近操作时间。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -412,7 +423,7 @@ class RuleSet implements ModelInterface, ArrayAccess
     /**
     * Sets operateTime
     *
-    * @param int $operateTime 最近操作时间
+    * @param int $operateTime **参数解释**： 规则实例最近操作时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -424,7 +435,7 @@ class RuleSet implements ModelInterface, ArrayAccess
 
     /**
     * Gets isValid
-    *  是否生效
+    *  **参数解释**： 规则实例是否生效。 **取值范围**： - true：规则生效。 - false：规则不生效。
     *
     * @return bool
     */
@@ -436,7 +447,7 @@ class RuleSet implements ModelInterface, ArrayAccess
     /**
     * Sets isValid
     *
-    * @param bool $isValid 是否生效
+    * @param bool $isValid **参数解释**： 规则实例是否生效。 **取值范围**： - true：规则生效。 - false：规则不生效。
     *
     * @return $this
     */
@@ -448,7 +459,7 @@ class RuleSet implements ModelInterface, ArrayAccess
 
     /**
     * Gets level
-    *  租户级、项目级
+    *  **参数解释**： 规则实例生效级别。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -460,7 +471,7 @@ class RuleSet implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param string|null $level 租户级、项目级
+    * @param string|null $level **参数解释**： 规则实例生效级别。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -472,7 +483,7 @@ class RuleSet implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPublic
-    *  是否系统级
+    *  **参数解释**： 规则实例是否系统级。 **取值范围**： - true：规则实例是系统级。 - false：规则实例不是系统级。
     *
     * @return bool|null
     */
@@ -484,13 +495,37 @@ class RuleSet implements ModelInterface, ArrayAccess
     /**
     * Sets isPublic
     *
-    * @param bool|null $isPublic 是否系统级
+    * @param bool|null $isPublic **参数解释**： 规则实例是否系统级。 **取值范围**： - true：规则实例是系统级。 - false：规则实例不是系统级。
     *
     * @return $this
     */
     public function setIsPublic($isPublic)
     {
         $this->container['isPublic'] = $isPublic;
+        return $this;
+    }
+
+    /**
+    * Gets isLegacy
+    *  **参数解释**： 规则实例是1.0的数据。 **取值范围**： - true：规则实例是1.0的数据。 - false：规则实例是1.0的数据。
+    *
+    * @return bool|null
+    */
+    public function getIsLegacy()
+    {
+        return $this->container['isLegacy'];
+    }
+
+    /**
+    * Sets isLegacy
+    *
+    * @param bool|null $isLegacy **参数解释**： 规则实例是1.0的数据。 **取值范围**： - true：规则实例是1.0的数据。 - false：规则实例是1.0的数据。
+    *
+    * @return $this
+    */
+    public function setIsLegacy($isLegacy)
+    {
+        $this->container['isLegacy'] = $isLegacy;
         return $this;
     }
 

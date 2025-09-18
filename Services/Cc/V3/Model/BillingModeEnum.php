@@ -16,6 +16,8 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     const 4 = 4;
     const 5 = 5;
     const 6 = 6;
+    const 7 = 7;
+    const 8 = 8;
     
     /**
      * Gets allowable values of the enum
@@ -30,6 +32,8 @@ use HuaweiCloud\SDK\Core\SdkResponse;
             self::4,
             self::5,
             self::6,
+            self::7,
+            self::8,
         ];
     }
 }

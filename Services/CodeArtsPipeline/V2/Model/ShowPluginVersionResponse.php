@@ -21,19 +21,19 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pluginName  插件名
-    * displayName  展示名
-    * opUser  操作人
-    * opTime  操作时间
-    * version  版本
-    * uniqueId  唯一ID
-    * versionDescription  版本说明
-    * versionAttribution  版本属性
-    * pluginCompositionType  组合插件类型
-    * pluginAttribution  插件属性
-    * inputInfo  输入信息
-    * pluginExecution  执行信息
-    * runtimeAttribution  运行属性
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
+    * displayName  **参数解释**： 扩展插件展示名称。 **取值范围**： 不涉及。
+    * opUser  **参数解释**： 扩展插件最后更新人。 **取值范围**： 不涉及。
+    * opTime  **参数解释**： 扩展插件最后更新时间。 **取值范围**： 不涉及。
+    * version  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * uniqueId  **参数解释**： 扩展插件唯一ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * versionDescription  **参数解释**： 扩展插件版本说明。 **取值范围**： 32位字符，由数字和字母组成。
+    * versionAttribution  **参数解释**： 扩展插件版本属性。 **取值范围**： - draft：草稿版本。 - formal：正式版本。
+    * pluginCompositionType  **参数解释**： 用于标识扩展插件是否为多个step组成的组合插件。 **取值范围**： - multi：组合插件。 - single：非组合插件。
+    * pluginAttribution  **参数解释**： 扩展插件属性。 **取值范围**： - custom：自定义插件。 - official：官方插件。 - published：已发布的发布商插件。
+    * inputInfo  **参数解释**： 插件输入项详细信息。 **取值范围**： 不涉及。
+    * pluginExecution  pluginExecution
+    * runtimeAttribution  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
     *
     * @var string[]
     */
@@ -48,26 +48,26 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
             'versionAttribution' => 'string',
             'pluginCompositionType' => 'string',
             'pluginAttribution' => 'string',
-            'inputInfo' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginPartQueryVOListAgentPluginInputVOData[]',
-            'pluginExecution' => 'object',
+            'inputInfo' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginInstanceVOInputInfo[]',
+            'pluginExecution' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginExecutionVO',
             'runtimeAttribution' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pluginName  插件名
-    * displayName  展示名
-    * opUser  操作人
-    * opTime  操作时间
-    * version  版本
-    * uniqueId  唯一ID
-    * versionDescription  版本说明
-    * versionAttribution  版本属性
-    * pluginCompositionType  组合插件类型
-    * pluginAttribution  插件属性
-    * inputInfo  输入信息
-    * pluginExecution  执行信息
-    * runtimeAttribution  运行属性
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
+    * displayName  **参数解释**： 扩展插件展示名称。 **取值范围**： 不涉及。
+    * opUser  **参数解释**： 扩展插件最后更新人。 **取值范围**： 不涉及。
+    * opTime  **参数解释**： 扩展插件最后更新时间。 **取值范围**： 不涉及。
+    * version  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * uniqueId  **参数解释**： 扩展插件唯一ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * versionDescription  **参数解释**： 扩展插件版本说明。 **取值范围**： 32位字符，由数字和字母组成。
+    * versionAttribution  **参数解释**： 扩展插件版本属性。 **取值范围**： - draft：草稿版本。 - formal：正式版本。
+    * pluginCompositionType  **参数解释**： 用于标识扩展插件是否为多个step组成的组合插件。 **取值范围**： - multi：组合插件。 - single：非组合插件。
+    * pluginAttribution  **参数解释**： 扩展插件属性。 **取值范围**： - custom：自定义插件。 - official：官方插件。 - published：已发布的发布商插件。
+    * inputInfo  **参数解释**： 插件输入项详细信息。 **取值范围**： 不涉及。
+    * pluginExecution  pluginExecution
+    * runtimeAttribution  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
     *
     * @var string[]
     */
@@ -110,19 +110,19 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pluginName  插件名
-    * displayName  展示名
-    * opUser  操作人
-    * opTime  操作时间
-    * version  版本
-    * uniqueId  唯一ID
-    * versionDescription  版本说明
-    * versionAttribution  版本属性
-    * pluginCompositionType  组合插件类型
-    * pluginAttribution  插件属性
-    * inputInfo  输入信息
-    * pluginExecution  执行信息
-    * runtimeAttribution  运行属性
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
+    * displayName  **参数解释**： 扩展插件展示名称。 **取值范围**： 不涉及。
+    * opUser  **参数解释**： 扩展插件最后更新人。 **取值范围**： 不涉及。
+    * opTime  **参数解释**： 扩展插件最后更新时间。 **取值范围**： 不涉及。
+    * version  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * uniqueId  **参数解释**： 扩展插件唯一ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * versionDescription  **参数解释**： 扩展插件版本说明。 **取值范围**： 32位字符，由数字和字母组成。
+    * versionAttribution  **参数解释**： 扩展插件版本属性。 **取值范围**： - draft：草稿版本。 - formal：正式版本。
+    * pluginCompositionType  **参数解释**： 用于标识扩展插件是否为多个step组成的组合插件。 **取值范围**： - multi：组合插件。 - single：非组合插件。
+    * pluginAttribution  **参数解释**： 扩展插件属性。 **取值范围**： - custom：自定义插件。 - official：官方插件。 - published：已发布的发布商插件。
+    * inputInfo  **参数解释**： 插件输入项详细信息。 **取值范围**： 不涉及。
+    * pluginExecution  pluginExecution
+    * runtimeAttribution  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
     *
     * @var string[]
     */
@@ -144,19 +144,19 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pluginName  插件名
-    * displayName  展示名
-    * opUser  操作人
-    * opTime  操作时间
-    * version  版本
-    * uniqueId  唯一ID
-    * versionDescription  版本说明
-    * versionAttribution  版本属性
-    * pluginCompositionType  组合插件类型
-    * pluginAttribution  插件属性
-    * inputInfo  输入信息
-    * pluginExecution  执行信息
-    * runtimeAttribution  运行属性
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
+    * displayName  **参数解释**： 扩展插件展示名称。 **取值范围**： 不涉及。
+    * opUser  **参数解释**： 扩展插件最后更新人。 **取值范围**： 不涉及。
+    * opTime  **参数解释**： 扩展插件最后更新时间。 **取值范围**： 不涉及。
+    * version  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * uniqueId  **参数解释**： 扩展插件唯一ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * versionDescription  **参数解释**： 扩展插件版本说明。 **取值范围**： 32位字符，由数字和字母组成。
+    * versionAttribution  **参数解释**： 扩展插件版本属性。 **取值范围**： - draft：草稿版本。 - formal：正式版本。
+    * pluginCompositionType  **参数解释**： 用于标识扩展插件是否为多个step组成的组合插件。 **取值范围**： - multi：组合插件。 - single：非组合插件。
+    * pluginAttribution  **参数解释**： 扩展插件属性。 **取值范围**： - custom：自定义插件。 - official：官方插件。 - published：已发布的发布商插件。
+    * inputInfo  **参数解释**： 插件输入项详细信息。 **取值范围**： 不涉及。
+    * pluginExecution  pluginExecution
+    * runtimeAttribution  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
     *
     * @var string[]
     */
@@ -178,19 +178,19 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pluginName  插件名
-    * displayName  展示名
-    * opUser  操作人
-    * opTime  操作时间
-    * version  版本
-    * uniqueId  唯一ID
-    * versionDescription  版本说明
-    * versionAttribution  版本属性
-    * pluginCompositionType  组合插件类型
-    * pluginAttribution  插件属性
-    * inputInfo  输入信息
-    * pluginExecution  执行信息
-    * runtimeAttribution  运行属性
+    * pluginName  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
+    * displayName  **参数解释**： 扩展插件展示名称。 **取值范围**： 不涉及。
+    * opUser  **参数解释**： 扩展插件最后更新人。 **取值范围**： 不涉及。
+    * opTime  **参数解释**： 扩展插件最后更新时间。 **取值范围**： 不涉及。
+    * version  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
+    * uniqueId  **参数解释**： 扩展插件唯一ID。 **取值范围**： 32位字符，由数字和字母组成。
+    * versionDescription  **参数解释**： 扩展插件版本说明。 **取值范围**： 32位字符，由数字和字母组成。
+    * versionAttribution  **参数解释**： 扩展插件版本属性。 **取值范围**： - draft：草稿版本。 - formal：正式版本。
+    * pluginCompositionType  **参数解释**： 用于标识扩展插件是否为多个step组成的组合插件。 **取值范围**： - multi：组合插件。 - single：非组合插件。
+    * pluginAttribution  **参数解释**： 扩展插件属性。 **取值范围**： - custom：自定义插件。 - official：官方插件。 - published：已发布的发布商插件。
+    * inputInfo  **参数解释**： 插件输入项详细信息。 **取值范围**： 不涉及。
+    * pluginExecution  pluginExecution
+    * runtimeAttribution  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
     *
     * @var string[]
     */
@@ -307,7 +307,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginName
-    *  插件名
+    *  **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
     *
     * @return string|null
     */
@@ -319,7 +319,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 插件名
+    * @param string|null $pluginName **参数解释**： 扩展插件名称。 **取值范围**： 1到50位字符。
     *
     * @return $this
     */
@@ -331,7 +331,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayName
-    *  展示名
+    *  **参数解释**： 扩展插件展示名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -343,7 +343,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets displayName
     *
-    * @param string|null $displayName 展示名
+    * @param string|null $displayName **参数解释**： 扩展插件展示名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -355,7 +355,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets opUser
-    *  操作人
+    *  **参数解释**： 扩展插件最后更新人。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -367,7 +367,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets opUser
     *
-    * @param string|null $opUser 操作人
+    * @param string|null $opUser **参数解释**： 扩展插件最后更新人。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -379,7 +379,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets opTime
-    *  操作时间
+    *  **参数解释**： 扩展插件最后更新时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -391,7 +391,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets opTime
     *
-    * @param string|null $opTime 操作时间
+    * @param string|null $opTime **参数解释**： 扩展插件最后更新时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -403,7 +403,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  版本
+    *  **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -415,7 +415,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 版本
+    * @param string|null $version **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -427,7 +427,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets uniqueId
-    *  唯一ID
+    *  **参数解释**： 扩展插件唯一ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -439,7 +439,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets uniqueId
     *
-    * @param string|null $uniqueId 唯一ID
+    * @param string|null $uniqueId **参数解释**： 扩展插件唯一ID。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -451,7 +451,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets versionDescription
-    *  版本说明
+    *  **参数解释**： 扩展插件版本说明。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return string|null
     */
@@ -463,7 +463,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets versionDescription
     *
-    * @param string|null $versionDescription 版本说明
+    * @param string|null $versionDescription **参数解释**： 扩展插件版本说明。 **取值范围**： 32位字符，由数字和字母组成。
     *
     * @return $this
     */
@@ -475,7 +475,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets versionAttribution
-    *  版本属性
+    *  **参数解释**： 扩展插件版本属性。 **取值范围**： - draft：草稿版本。 - formal：正式版本。
     *
     * @return string|null
     */
@@ -487,7 +487,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets versionAttribution
     *
-    * @param string|null $versionAttribution 版本属性
+    * @param string|null $versionAttribution **参数解释**： 扩展插件版本属性。 **取值范围**： - draft：草稿版本。 - formal：正式版本。
     *
     * @return $this
     */
@@ -499,7 +499,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginCompositionType
-    *  组合插件类型
+    *  **参数解释**： 用于标识扩展插件是否为多个step组成的组合插件。 **取值范围**： - multi：组合插件。 - single：非组合插件。
     *
     * @return string|null
     */
@@ -511,7 +511,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pluginCompositionType
     *
-    * @param string|null $pluginCompositionType 组合插件类型
+    * @param string|null $pluginCompositionType **参数解释**： 用于标识扩展插件是否为多个step组成的组合插件。 **取值范围**： - multi：组合插件。 - single：非组合插件。
     *
     * @return $this
     */
@@ -523,7 +523,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginAttribution
-    *  插件属性
+    *  **参数解释**： 扩展插件属性。 **取值范围**： - custom：自定义插件。 - official：官方插件。 - published：已发布的发布商插件。
     *
     * @return string|null
     */
@@ -535,7 +535,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pluginAttribution
     *
-    * @param string|null $pluginAttribution 插件属性
+    * @param string|null $pluginAttribution **参数解释**： 扩展插件属性。 **取值范围**： - custom：自定义插件。 - official：官方插件。 - published：已发布的发布商插件。
     *
     * @return $this
     */
@@ -547,9 +547,9 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets inputInfo
-    *  输入信息
+    *  **参数解释**： 插件输入项详细信息。 **取值范围**： 不涉及。
     *
-    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginPartQueryVOListAgentPluginInputVOData[]|null
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginInstanceVOInputInfo[]|null
     */
     public function getInputInfo()
     {
@@ -559,7 +559,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets inputInfo
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginPartQueryVOListAgentPluginInputVOData[]|null $inputInfo 输入信息
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginInstanceVOInputInfo[]|null $inputInfo **参数解释**： 插件输入项详细信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -571,9 +571,9 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginExecution
-    *  执行信息
+    *  pluginExecution
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginExecutionVO|null
     */
     public function getPluginExecution()
     {
@@ -583,7 +583,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pluginExecution
     *
-    * @param object|null $pluginExecution 执行信息
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginExecutionVO|null $pluginExecution pluginExecution
     *
     * @return $this
     */
@@ -595,7 +595,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets runtimeAttribution
-    *  运行属性
+    *  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
     *
     * @return string|null
     */
@@ -607,7 +607,7 @@ class ShowPluginVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets runtimeAttribution
     *
-    * @param string|null $runtimeAttribution 运行属性
+    * @param string|null $runtimeAttribution **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
     *
     * @return $this
     */

@@ -20,17 +20,19 @@ class ExtensionExtendProp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * apiOptions  API 选项
-    * apiType  API 类型
-    * options  选项
-    * disabledConditions  禁用条件
-    * visibleConditions  可见条件
+    * apiOptions  **参数解释**： API选项。 **取值范围**： 不涉及。
+    * apiType  **参数解释**： API类型。 **取值范围**： 不涉及。
+    * showPlaceholder  **参数解释**： 显示占位符。 **取值范围**： 不涉及。
+    * options  **参数解释**： 选项。 **取值范围**： 不涉及。
+    * disabledConditions  **参数解释**： 禁用条件。 **取值范围**： 不涉及。
+    * visibleConditions  **参数解释**： 可见条件。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'apiOptions' => 'string',
             'apiType' => 'string',
+            'showPlaceholder' => 'string',
             'options' => 'string',
             'disabledConditions' => 'string',
             'visibleConditions' => 'string'
@@ -38,17 +40,19 @@ class ExtensionExtendProp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * apiOptions  API 选项
-    * apiType  API 类型
-    * options  选项
-    * disabledConditions  禁用条件
-    * visibleConditions  可见条件
+    * apiOptions  **参数解释**： API选项。 **取值范围**： 不涉及。
+    * apiType  **参数解释**： API类型。 **取值范围**： 不涉及。
+    * showPlaceholder  **参数解释**： 显示占位符。 **取值范围**： 不涉及。
+    * options  **参数解释**： 选项。 **取值范围**： 不涉及。
+    * disabledConditions  **参数解释**： 禁用条件。 **取值范围**： 不涉及。
+    * visibleConditions  **参数解释**： 可见条件。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'apiOptions' => null,
         'apiType' => null,
+        'showPlaceholder' => null,
         'options' => null,
         'disabledConditions' => null,
         'visibleConditions' => null
@@ -77,17 +81,19 @@ class ExtensionExtendProp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * apiOptions  API 选项
-    * apiType  API 类型
-    * options  选项
-    * disabledConditions  禁用条件
-    * visibleConditions  可见条件
+    * apiOptions  **参数解释**： API选项。 **取值范围**： 不涉及。
+    * apiType  **参数解释**： API类型。 **取值范围**： 不涉及。
+    * showPlaceholder  **参数解释**： 显示占位符。 **取值范围**： 不涉及。
+    * options  **参数解释**： 选项。 **取值范围**： 不涉及。
+    * disabledConditions  **参数解释**： 禁用条件。 **取值范围**： 不涉及。
+    * visibleConditions  **参数解释**： 可见条件。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'apiOptions' => 'api_options',
             'apiType' => 'api_type',
+            'showPlaceholder' => 'show_placeholder',
             'options' => 'options',
             'disabledConditions' => 'disabled_conditions',
             'visibleConditions' => 'visible_conditions'
@@ -95,17 +101,19 @@ class ExtensionExtendProp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * apiOptions  API 选项
-    * apiType  API 类型
-    * options  选项
-    * disabledConditions  禁用条件
-    * visibleConditions  可见条件
+    * apiOptions  **参数解释**： API选项。 **取值范围**： 不涉及。
+    * apiType  **参数解释**： API类型。 **取值范围**： 不涉及。
+    * showPlaceholder  **参数解释**： 显示占位符。 **取值范围**： 不涉及。
+    * options  **参数解释**： 选项。 **取值范围**： 不涉及。
+    * disabledConditions  **参数解释**： 禁用条件。 **取值范围**： 不涉及。
+    * visibleConditions  **参数解释**： 可见条件。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'apiOptions' => 'setApiOptions',
             'apiType' => 'setApiType',
+            'showPlaceholder' => 'setShowPlaceholder',
             'options' => 'setOptions',
             'disabledConditions' => 'setDisabledConditions',
             'visibleConditions' => 'setVisibleConditions'
@@ -113,17 +121,19 @@ class ExtensionExtendProp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * apiOptions  API 选项
-    * apiType  API 类型
-    * options  选项
-    * disabledConditions  禁用条件
-    * visibleConditions  可见条件
+    * apiOptions  **参数解释**： API选项。 **取值范围**： 不涉及。
+    * apiType  **参数解释**： API类型。 **取值范围**： 不涉及。
+    * showPlaceholder  **参数解释**： 显示占位符。 **取值范围**： 不涉及。
+    * options  **参数解释**： 选项。 **取值范围**： 不涉及。
+    * disabledConditions  **参数解释**： 禁用条件。 **取值范围**： 不涉及。
+    * visibleConditions  **参数解释**： 可见条件。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'apiOptions' => 'getApiOptions',
             'apiType' => 'getApiType',
+            'showPlaceholder' => 'getShowPlaceholder',
             'options' => 'getOptions',
             'disabledConditions' => 'getDisabledConditions',
             'visibleConditions' => 'getVisibleConditions'
@@ -189,6 +199,7 @@ class ExtensionExtendProp implements ModelInterface, ArrayAccess
     {
         $this->container['apiOptions'] = isset($data['apiOptions']) ? $data['apiOptions'] : null;
         $this->container['apiType'] = isset($data['apiType']) ? $data['apiType'] : null;
+        $this->container['showPlaceholder'] = isset($data['showPlaceholder']) ? $data['showPlaceholder'] : null;
         $this->container['options'] = isset($data['options']) ? $data['options'] : null;
         $this->container['disabledConditions'] = isset($data['disabledConditions']) ? $data['disabledConditions'] : null;
         $this->container['visibleConditions'] = isset($data['visibleConditions']) ? $data['visibleConditions'] : null;
@@ -218,7 +229,7 @@ class ExtensionExtendProp implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiOptions
-    *  API 选项
+    *  **参数解释**： API选项。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +241,7 @@ class ExtensionExtendProp implements ModelInterface, ArrayAccess
     /**
     * Sets apiOptions
     *
-    * @param string|null $apiOptions API 选项
+    * @param string|null $apiOptions **参数解释**： API选项。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +253,7 @@ class ExtensionExtendProp implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiType
-    *  API 类型
+    *  **参数解释**： API类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -254,7 +265,7 @@ class ExtensionExtendProp implements ModelInterface, ArrayAccess
     /**
     * Sets apiType
     *
-    * @param string|null $apiType API 类型
+    * @param string|null $apiType **参数解释**： API类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -265,8 +276,32 @@ class ExtensionExtendProp implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets showPlaceholder
+    *  **参数解释**： 显示占位符。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getShowPlaceholder()
+    {
+        return $this->container['showPlaceholder'];
+    }
+
+    /**
+    * Sets showPlaceholder
+    *
+    * @param string|null $showPlaceholder **参数解释**： 显示占位符。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setShowPlaceholder($showPlaceholder)
+    {
+        $this->container['showPlaceholder'] = $showPlaceholder;
+        return $this;
+    }
+
+    /**
     * Gets options
-    *  选项
+    *  **参数解释**： 选项。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -278,7 +313,7 @@ class ExtensionExtendProp implements ModelInterface, ArrayAccess
     /**
     * Sets options
     *
-    * @param string|null $options 选项
+    * @param string|null $options **参数解释**： 选项。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +325,7 @@ class ExtensionExtendProp implements ModelInterface, ArrayAccess
 
     /**
     * Gets disabledConditions
-    *  禁用条件
+    *  **参数解释**： 禁用条件。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -302,7 +337,7 @@ class ExtensionExtendProp implements ModelInterface, ArrayAccess
     /**
     * Sets disabledConditions
     *
-    * @param string|null $disabledConditions 禁用条件
+    * @param string|null $disabledConditions **参数解释**： 禁用条件。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +349,7 @@ class ExtensionExtendProp implements ModelInterface, ArrayAccess
 
     /**
     * Gets visibleConditions
-    *  可见条件
+    *  **参数解释**： 可见条件。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -326,7 +361,7 @@ class ExtensionExtendProp implements ModelInterface, ArrayAccess
     /**
     * Sets visibleConditions
     *
-    * @param string|null $visibleConditions 可见条件
+    * @param string|null $visibleConditions **参数解释**： 可见条件。 **取值范围**： 不涉及。
     *
     * @return $this
     */

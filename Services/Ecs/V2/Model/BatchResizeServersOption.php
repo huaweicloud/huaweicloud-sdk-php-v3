@@ -202,6 +202,12 @@ class BatchResizeServersOption implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['flavorRef'] === null) {
+            $invalidProperties[] = "'flavorRef' can't be null";
+        }
+        if ($this->container['servers'] === null) {
+            $invalidProperties[] = "'servers' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -220,7 +226,7 @@ class BatchResizeServersOption implements ModelInterface, ArrayAccess
     * Gets flavorRef
     *  flavor
     *
-    * @return string|null
+    * @return string
     */
     public function getFlavorRef()
     {
@@ -230,7 +236,7 @@ class BatchResizeServersOption implements ModelInterface, ArrayAccess
     /**
     * Sets flavorRef
     *
-    * @param string|null $flavorRef flavor
+    * @param string $flavorRef flavor
     *
     * @return $this
     */
@@ -244,7 +250,7 @@ class BatchResizeServersOption implements ModelInterface, ArrayAccess
     * Gets servers
     *  servers
     *
-    * @return \HuaweiCloud\SDK\Ecs\V2\Model\ServerId[]|null
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\ServerId[]
     */
     public function getServers()
     {
@@ -254,7 +260,7 @@ class BatchResizeServersOption implements ModelInterface, ArrayAccess
     /**
     * Sets servers
     *
-    * @param \HuaweiCloud\SDK\Ecs\V2\Model\ServerId[]|null $servers servers
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\ServerId[] $servers servers
     *
     * @return $this
     */

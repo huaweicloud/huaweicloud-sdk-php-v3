@@ -20,10 +20,10 @@ class PipelineLatestRunArtifactParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  包版本
-    * branchFilter  过滤分支
-    * packageName  包名称
-    * organization  docker组织信息
+    * version  **参数解释**： 包版本。 **取值范围**： 不涉及。
+    * branchFilter  **参数解释**： 过滤分支。 **取值范围**： 不涉及。
+    * packageName  **参数解释**： 包名称。 **取值范围**： 不涉及。
+    * organization  **参数解释**： docker组织。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class PipelineLatestRunArtifactParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  包版本
-    * branchFilter  过滤分支
-    * packageName  包名称
-    * organization  docker组织信息
+    * version  **参数解释**： 包版本。 **取值范围**： 不涉及。
+    * branchFilter  **参数解释**： 过滤分支。 **取值范围**： 不涉及。
+    * packageName  **参数解释**： 包名称。 **取值范围**： 不涉及。
+    * organization  **参数解释**： docker组织。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class PipelineLatestRunArtifactParams implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  包版本
-    * branchFilter  过滤分支
-    * packageName  包名称
-    * organization  docker组织信息
+    * version  **参数解释**： 包版本。 **取值范围**： 不涉及。
+    * branchFilter  **参数解释**： 过滤分支。 **取值范围**： 不涉及。
+    * packageName  **参数解释**： 包名称。 **取值范围**： 不涉及。
+    * organization  **参数解释**： docker组织。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class PipelineLatestRunArtifactParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  包版本
-    * branchFilter  过滤分支
-    * packageName  包名称
-    * organization  docker组织信息
+    * version  **参数解释**： 包版本。 **取值范围**： 不涉及。
+    * branchFilter  **参数解释**： 过滤分支。 **取值范围**： 不涉及。
+    * packageName  **参数解释**： 包名称。 **取值范围**： 不涉及。
+    * organization  **参数解释**： docker组织。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class PipelineLatestRunArtifactParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  包版本
-    * branchFilter  过滤分支
-    * packageName  包名称
-    * organization  docker组织信息
+    * version  **参数解释**： 包版本。 **取值范围**： 不涉及。
+    * branchFilter  **参数解释**： 过滤分支。 **取值范围**： 不涉及。
+    * packageName  **参数解释**： 包名称。 **取值范围**： 不涉及。
+    * organization  **参数解释**： docker组织。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class PipelineLatestRunArtifactParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  包版本
+    *  **参数解释**： 包版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class PipelineLatestRunArtifactParams implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 包版本
+    * @param string|null $version **参数解释**： 包版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class PipelineLatestRunArtifactParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets branchFilter
-    *  过滤分支
+    *  **参数解释**： 过滤分支。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class PipelineLatestRunArtifactParams implements ModelInterface, ArrayAccess
     /**
     * Sets branchFilter
     *
-    * @param string|null $branchFilter 过滤分支
+    * @param string|null $branchFilter **参数解释**： 过滤分支。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class PipelineLatestRunArtifactParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets packageName
-    *  包名称
+    *  **参数解释**： 包名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class PipelineLatestRunArtifactParams implements ModelInterface, ArrayAccess
     /**
     * Sets packageName
     *
-    * @param string|null $packageName 包名称
+    * @param string|null $packageName **参数解释**： 包名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class PipelineLatestRunArtifactParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets organization
-    *  docker组织信息
+    *  **参数解释**： docker组织。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class PipelineLatestRunArtifactParams implements ModelInterface, ArrayAccess
     /**
     * Sets organization
     *
-    * @param string|null $organization docker组织信息
+    * @param string|null $organization **参数解释**： docker组织。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ShowPublisherResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * publisherDetailMap  发布商详情
+    * publisherDetailMap  **参数解释**： 发布商详情。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowPublisherResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * publisherDetailMap  发布商详情
+    * publisherDetailMap  **参数解释**： 发布商详情。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowPublisherResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * publisherDetailMap  发布商详情
+    * publisherDetailMap  **参数解释**： 发布商详情。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowPublisherResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * publisherDetailMap  发布商详情
+    * publisherDetailMap  **参数解释**： 发布商详情。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowPublisherResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * publisherDetailMap  发布商详情
+    * publisherDetailMap  **参数解释**： 发布商详情。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowPublisherResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets publisherDetailMap
-    *  发布商详情
+    *  **参数解释**： 发布商详情。 **取值范围**： 不涉及。
     *
     * @return map[string,\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PublisherVO]|null
     */
@@ -187,7 +187,7 @@ class ShowPublisherResponse implements ModelInterface, ArrayAccess
     /**
     * Sets publisherDetailMap
     *
-    * @param map[string,\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PublisherVO]|null $publisherDetailMap 发布商详情
+    * @param map[string,\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PublisherVO]|null $publisherDetailMap **参数解释**： 发布商详情。 **取值范围**： 不涉及。
     *
     * @return $this
     */

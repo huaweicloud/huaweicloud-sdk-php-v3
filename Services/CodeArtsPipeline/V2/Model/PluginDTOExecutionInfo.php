@@ -20,17 +20,17 @@ class PluginDTOExecutionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * innerExecutionInfo  执行信息
+    * innerExecutionInfo  innerExecutionInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'innerExecutionInfo' => 'object'
+            'innerExecutionInfo' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginDTOExecutionInfoInnerExecutionInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * innerExecutionInfo  执行信息
+    * innerExecutionInfo  innerExecutionInfo
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class PluginDTOExecutionInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * innerExecutionInfo  执行信息
+    * innerExecutionInfo  innerExecutionInfo
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class PluginDTOExecutionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * innerExecutionInfo  执行信息
+    * innerExecutionInfo  innerExecutionInfo
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class PluginDTOExecutionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * innerExecutionInfo  执行信息
+    * innerExecutionInfo  innerExecutionInfo
     *
     * @var string[]
     */
@@ -158,6 +158,9 @@ class PluginDTOExecutionInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['innerExecutionInfo'] === null) {
+            $invalidProperties[] = "'innerExecutionInfo' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -174,9 +177,9 @@ class PluginDTOExecutionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets innerExecutionInfo
-    *  执行信息
+    *  innerExecutionInfo
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginDTOExecutionInfoInnerExecutionInfo
     */
     public function getInnerExecutionInfo()
     {
@@ -186,7 +189,7 @@ class PluginDTOExecutionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets innerExecutionInfo
     *
-    * @param object|null $innerExecutionInfo 执行信息
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginDTOExecutionInfoInnerExecutionInfo $innerExecutionInfo innerExecutionInfo
     *
     * @return $this
     */

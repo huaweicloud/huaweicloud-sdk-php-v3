@@ -28,8 +28,8 @@ class AreaBandwidthPackageSpecification implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'localAreaId' => '\HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef',
-            'remoteAreaId' => '\HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef',
+            'localAreaId' => '\HuaweiCloud\SDK\Cc\V3\Model\LocalAreaIdDef',
+            'remoteAreaId' => '\HuaweiCloud\SDK\Cc\V3\Model\RemoteAreaIdDef',
             'id' => 'string',
             'specCodes' => '\HuaweiCloud\SDK\Cc\V3\Model\SpecificationCodeInfo[]'
     ];
@@ -227,7 +227,7 @@ class AreaBandwidthPackageSpecification implements ModelInterface, ArrayAccess
     * Gets localAreaId
     *  localAreaId
     *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\LocalAreaIdDef
     */
     public function getLocalAreaId()
     {
@@ -237,7 +237,7 @@ class AreaBandwidthPackageSpecification implements ModelInterface, ArrayAccess
     /**
     * Sets localAreaId
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef $localAreaId localAreaId
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\LocalAreaIdDef $localAreaId localAreaId
     *
     * @return $this
     */
@@ -251,7 +251,7 @@ class AreaBandwidthPackageSpecification implements ModelInterface, ArrayAccess
     * Gets remoteAreaId
     *  remoteAreaId
     *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\RemoteAreaIdDef
     */
     public function getRemoteAreaId()
     {
@@ -261,7 +261,7 @@ class AreaBandwidthPackageSpecification implements ModelInterface, ArrayAccess
     /**
     * Sets remoteAreaId
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef $remoteAreaId remoteAreaId
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\RemoteAreaIdDef $remoteAreaId remoteAreaId
     *
     * @return $this
     */

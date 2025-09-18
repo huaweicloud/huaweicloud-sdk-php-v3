@@ -21,10 +21,10 @@ class Area implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  实例名称。
-    * id  Area ID。
-    * enName  英文 Area Name。
-    * esName  西语 Area Name。
-    * ptName  葡语 Area Name。
+    * id  大区ID。
+    * enName  大区英文名称。
+    * esName  大区西语名称。
+    * ptName  大区葡语名称。
     * station  站点。
     *
     * @var string[]
@@ -41,10 +41,10 @@ class Area implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  实例名称。
-    * id  Area ID。
-    * enName  英文 Area Name。
-    * esName  西语 Area Name。
-    * ptName  葡语 Area Name。
+    * id  大区ID。
+    * enName  大区英文名称。
+    * esName  大区西语名称。
+    * ptName  大区葡语名称。
     * station  站点。
     *
     * @var string[]
@@ -82,10 +82,10 @@ class Area implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  实例名称。
-    * id  Area ID。
-    * enName  英文 Area Name。
-    * esName  西语 Area Name。
-    * ptName  葡语 Area Name。
+    * id  大区ID。
+    * enName  大区英文名称。
+    * esName  大区西语名称。
+    * ptName  大区葡语名称。
     * station  站点。
     *
     * @var string[]
@@ -102,10 +102,10 @@ class Area implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  实例名称。
-    * id  Area ID。
-    * enName  英文 Area Name。
-    * esName  西语 Area Name。
-    * ptName  葡语 Area Name。
+    * id  大区ID。
+    * enName  大区英文名称。
+    * esName  大区西语名称。
+    * ptName  大区葡语名称。
     * station  站点。
     *
     * @var string[]
@@ -122,10 +122,10 @@ class Area implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  实例名称。
-    * id  Area ID。
-    * enName  英文 Area Name。
-    * esName  西语 Area Name。
-    * ptName  葡语 Area Name。
+    * id  大区ID。
+    * enName  大区英文名称。
+    * esName  大区西语名称。
+    * ptName  大区葡语名称。
     * station  站点。
     *
     * @var string[]
@@ -295,7 +295,7 @@ class Area implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  Area ID。
+    *  大区ID。
     *
     * @return string|null
     */
@@ -307,7 +307,7 @@ class Area implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id Area ID。
+    * @param string|null $id 大区ID。
     *
     * @return $this
     */
@@ -319,7 +319,7 @@ class Area implements ModelInterface, ArrayAccess
 
     /**
     * Gets enName
-    *  英文 Area Name。
+    *  大区英文名称。
     *
     * @return string|null
     */
@@ -331,7 +331,7 @@ class Area implements ModelInterface, ArrayAccess
     /**
     * Sets enName
     *
-    * @param string|null $enName 英文 Area Name。
+    * @param string|null $enName 大区英文名称。
     *
     * @return $this
     */
@@ -343,7 +343,7 @@ class Area implements ModelInterface, ArrayAccess
 
     /**
     * Gets esName
-    *  西语 Area Name。
+    *  大区西语名称。
     *
     * @return string|null
     */
@@ -355,7 +355,7 @@ class Area implements ModelInterface, ArrayAccess
     /**
     * Sets esName
     *
-    * @param string|null $esName 西语 Area Name。
+    * @param string|null $esName 大区西语名称。
     *
     * @return $this
     */
@@ -367,7 +367,7 @@ class Area implements ModelInterface, ArrayAccess
 
     /**
     * Gets ptName
-    *  葡语 Area Name。
+    *  大区葡语名称。
     *
     * @return string|null
     */
@@ -379,7 +379,7 @@ class Area implements ModelInterface, ArrayAccess
     /**
     * Sets ptName
     *
-    * @param string|null $ptName 葡语 Area Name。
+    * @param string|null $ptName 大区葡语名称。
     *
     * @return $this
     */

@@ -21,10 +21,10 @@ class ListPipelineSimpleInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
-    * limit  每次查询的条目数量
-    * total  总条目数量
-    * result  执行状况数据列表
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **取值范围**： 大于等于0。
+    * limit  **参数解释**： 每次查询的条目数量。 **取值范围**： 大于等于0。
+    * total  **参数解释**： 总条目数量。 **取值范围**： 大于等于0。
+    * result  **参数解释**： 流水线列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -37,10 +37,10 @@ class ListPipelineSimpleInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
-    * limit  每次查询的条目数量
-    * total  总条目数量
-    * result  执行状况数据列表
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **取值范围**： 大于等于0。
+    * limit  **参数解释**： 每次查询的条目数量。 **取值范围**： 大于等于0。
+    * total  **参数解释**： 总条目数量。 **取值范围**： 大于等于0。
+    * result  **参数解释**： 流水线列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -74,10 +74,10 @@ class ListPipelineSimpleInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
-    * limit  每次查询的条目数量
-    * total  总条目数量
-    * result  执行状况数据列表
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **取值范围**： 大于等于0。
+    * limit  **参数解释**： 每次查询的条目数量。 **取值范围**： 大于等于0。
+    * total  **参数解释**： 总条目数量。 **取值范围**： 大于等于0。
+    * result  **参数解释**： 流水线列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,10 +90,10 @@ class ListPipelineSimpleInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
-    * limit  每次查询的条目数量
-    * total  总条目数量
-    * result  执行状况数据列表
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **取值范围**： 大于等于0。
+    * limit  **参数解释**： 每次查询的条目数量。 **取值范围**： 大于等于0。
+    * total  **参数解释**： 总条目数量。 **取值范围**： 大于等于0。
+    * result  **参数解释**： 流水线列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -106,10 +106,10 @@ class ListPipelineSimpleInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
-    * limit  每次查询的条目数量
-    * total  总条目数量
-    * result  执行状况数据列表
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **取值范围**： 大于等于0。
+    * limit  **参数解释**： 每次查询的条目数量。 **取值范围**： 大于等于0。
+    * total  **参数解释**： 总条目数量。 **取值范围**： 大于等于0。
+    * result  **参数解释**： 流水线列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class ListPipelineSimpleInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量,表示从此偏移量开始查询,offset大于等于0
+    *  **参数解释**： 偏移量，表示从此偏移量开始查询。 **取值范围**： 大于等于0。
     *
     * @return int|null
     */
@@ -220,7 +220,7 @@ class ListPipelineSimpleInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量,表示从此偏移量开始查询,offset大于等于0
+    * @param int|null $offset **参数解释**： 偏移量，表示从此偏移量开始查询。 **取值范围**： 大于等于0。
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class ListPipelineSimpleInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每次查询的条目数量
+    *  **参数解释**： 每次查询的条目数量。 **取值范围**： 大于等于0。
     *
     * @return int|null
     */
@@ -244,7 +244,7 @@ class ListPipelineSimpleInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每次查询的条目数量
+    * @param int|null $limit **参数解释**： 每次查询的条目数量。 **取值范围**： 大于等于0。
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class ListPipelineSimpleInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总条目数量
+    *  **参数解释**： 总条目数量。 **取值范围**： 大于等于0。
     *
     * @return int|null
     */
@@ -268,7 +268,7 @@ class ListPipelineSimpleInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总条目数量
+    * @param int|null $total **参数解释**： 总条目数量。 **取值范围**： 大于等于0。
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ListPipelineSimpleInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  执行状况数据列表
+    *  **参数解释**： 流水线列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineBasicInfo[]|null
     */
@@ -292,7 +292,7 @@ class ListPipelineSimpleInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineBasicInfo[]|null $result 执行状况数据列表
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineBasicInfo[]|null $result **参数解释**： 流水线列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

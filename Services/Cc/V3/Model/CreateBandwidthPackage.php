@@ -27,12 +27,13 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     * localAreaId  localAreaId
     * remoteAreaId  remoteAreaId
     * chargeMode  带宽包实例的计费方式。 bandwidth是按带宽计费。
-    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 1：大陆站包周期 - 2：国际站包周期 - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     * bandwidth  带宽包实例中的带宽值。
     * resourceId  带宽包实例绑定的资源ID。
     * resourceType  带宽包实例绑定的资源类型。  cloud_connection: 云连接实例。
     * specCode  带宽包实例的规格编码。 bandwidth.aftoela：大陆站+国际站南非-拉美东 bandwidth.aftonla：大陆站+国际站南非-拉美北 bandwidth.aftowla：大陆站+国际站南非-拉美西 bandwidth.aptoaf：国际站亚太-南非 bandwidth.aptoap：国际站亚太-亚太 bandwidth.aptoela：大陆站+国际站亚太-拉美东 bandwidth.aptonla：大陆站+国际站亚太-拉美北 bandwidth.aptowla：大陆站+国际站亚太-拉美西 bandwidth.cmtoaf：国际站中国大陆-南非 bandwidth.cmtoap：国际站中国大陆-亚太 bandwidth.cmtocm：国际站中国大陆-中国大陆 bandwidth.cmtoela：大陆站+国际站中国大陆-拉美东 bandwidth.cmtonla：大陆站+国际站中国大陆-拉美北 bandwidth.cmtowla：大陆站+国际站中国大陆-拉美西 bandwidth.elatoela：大陆站+国际站拉美东-拉美东 bandwidth.elatonla：大陆站+国际站拉美东-拉美北 bandwidth.wlatoela：大陆站+国际站拉美西-拉美东 bandwidth.wlatonla：大陆站+国际站拉美西-拉美北 bandwidth.wlatowla：大陆站+国际站拉美西-拉美西
     * interflowMode  互通类型: - Area: 大区互通 - Region: 城域互通
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -41,15 +42,16 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
             'description' => 'string',
             'enterpriseProjectId' => 'string',
             'projectId' => 'string',
-            'localAreaId' => '\HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef',
-            'remoteAreaId' => '\HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef',
+            'localAreaId' => '\HuaweiCloud\SDK\Cc\V3\Model\LocalAreaIdDef',
+            'remoteAreaId' => '\HuaweiCloud\SDK\Cc\V3\Model\RemoteAreaIdDef',
             'chargeMode' => 'string',
             'billingMode' => 'int',
             'bandwidth' => 'int',
             'resourceId' => 'string',
             'resourceType' => 'string',
             'specCode' => 'string',
-            'interflowMode' => 'string'
+            'interflowMode' => 'string',
+            'prepaidOptions' => '\HuaweiCloud\SDK\Cc\V3\Model\CreatePrepaidOptions'
     ];
 
     /**
@@ -61,12 +63,13 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     * localAreaId  localAreaId
     * remoteAreaId  remoteAreaId
     * chargeMode  带宽包实例的计费方式。 bandwidth是按带宽计费。
-    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 1：大陆站包周期 - 2：国际站包周期 - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     * bandwidth  带宽包实例中的带宽值。
     * resourceId  带宽包实例绑定的资源ID。
     * resourceType  带宽包实例绑定的资源类型。  cloud_connection: 云连接实例。
     * specCode  带宽包实例的规格编码。 bandwidth.aftoela：大陆站+国际站南非-拉美东 bandwidth.aftonla：大陆站+国际站南非-拉美北 bandwidth.aftowla：大陆站+国际站南非-拉美西 bandwidth.aptoaf：国际站亚太-南非 bandwidth.aptoap：国际站亚太-亚太 bandwidth.aptoela：大陆站+国际站亚太-拉美东 bandwidth.aptonla：大陆站+国际站亚太-拉美北 bandwidth.aptowla：大陆站+国际站亚太-拉美西 bandwidth.cmtoaf：国际站中国大陆-南非 bandwidth.cmtoap：国际站中国大陆-亚太 bandwidth.cmtocm：国际站中国大陆-中国大陆 bandwidth.cmtoela：大陆站+国际站中国大陆-拉美东 bandwidth.cmtonla：大陆站+国际站中国大陆-拉美北 bandwidth.cmtowla：大陆站+国际站中国大陆-拉美西 bandwidth.elatoela：大陆站+国际站拉美东-拉美东 bandwidth.elatonla：大陆站+国际站拉美东-拉美北 bandwidth.wlatoela：大陆站+国际站拉美西-拉美东 bandwidth.wlatonla：大陆站+国际站拉美西-拉美北 bandwidth.wlatowla：大陆站+国际站拉美西-拉美西
     * interflowMode  互通类型: - Area: 大区互通 - Region: 城域互通
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
         'resourceId' => null,
         'resourceType' => null,
         'specCode' => null,
-        'interflowMode' => null
+        'interflowMode' => null,
+        'prepaidOptions' => null
     ];
 
     /**
@@ -116,12 +120,13 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     * localAreaId  localAreaId
     * remoteAreaId  remoteAreaId
     * chargeMode  带宽包实例的计费方式。 bandwidth是按带宽计费。
-    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 1：大陆站包周期 - 2：国际站包周期 - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     * bandwidth  带宽包实例中的带宽值。
     * resourceId  带宽包实例绑定的资源ID。
     * resourceType  带宽包实例绑定的资源类型。  cloud_connection: 云连接实例。
     * specCode  带宽包实例的规格编码。 bandwidth.aftoela：大陆站+国际站南非-拉美东 bandwidth.aftonla：大陆站+国际站南非-拉美北 bandwidth.aftowla：大陆站+国际站南非-拉美西 bandwidth.aptoaf：国际站亚太-南非 bandwidth.aptoap：国际站亚太-亚太 bandwidth.aptoela：大陆站+国际站亚太-拉美东 bandwidth.aptonla：大陆站+国际站亚太-拉美北 bandwidth.aptowla：大陆站+国际站亚太-拉美西 bandwidth.cmtoaf：国际站中国大陆-南非 bandwidth.cmtoap：国际站中国大陆-亚太 bandwidth.cmtocm：国际站中国大陆-中国大陆 bandwidth.cmtoela：大陆站+国际站中国大陆-拉美东 bandwidth.cmtonla：大陆站+国际站中国大陆-拉美北 bandwidth.cmtowla：大陆站+国际站中国大陆-拉美西 bandwidth.elatoela：大陆站+国际站拉美东-拉美东 bandwidth.elatonla：大陆站+国际站拉美东-拉美北 bandwidth.wlatoela：大陆站+国际站拉美西-拉美东 bandwidth.wlatonla：大陆站+国际站拉美西-拉美北 bandwidth.wlatowla：大陆站+国际站拉美西-拉美西
     * interflowMode  互通类型: - Area: 大区互通 - Region: 城域互通
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
             'resourceId' => 'resource_id',
             'resourceType' => 'resource_type',
             'specCode' => 'spec_code',
-            'interflowMode' => 'interflow_mode'
+            'interflowMode' => 'interflow_mode',
+            'prepaidOptions' => 'prepaid_options'
     ];
 
     /**
@@ -150,12 +156,13 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     * localAreaId  localAreaId
     * remoteAreaId  remoteAreaId
     * chargeMode  带宽包实例的计费方式。 bandwidth是按带宽计费。
-    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 1：大陆站包周期 - 2：国际站包周期 - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     * bandwidth  带宽包实例中的带宽值。
     * resourceId  带宽包实例绑定的资源ID。
     * resourceType  带宽包实例绑定的资源类型。  cloud_connection: 云连接实例。
     * specCode  带宽包实例的规格编码。 bandwidth.aftoela：大陆站+国际站南非-拉美东 bandwidth.aftonla：大陆站+国际站南非-拉美北 bandwidth.aftowla：大陆站+国际站南非-拉美西 bandwidth.aptoaf：国际站亚太-南非 bandwidth.aptoap：国际站亚太-亚太 bandwidth.aptoela：大陆站+国际站亚太-拉美东 bandwidth.aptonla：大陆站+国际站亚太-拉美北 bandwidth.aptowla：大陆站+国际站亚太-拉美西 bandwidth.cmtoaf：国际站中国大陆-南非 bandwidth.cmtoap：国际站中国大陆-亚太 bandwidth.cmtocm：国际站中国大陆-中国大陆 bandwidth.cmtoela：大陆站+国际站中国大陆-拉美东 bandwidth.cmtonla：大陆站+国际站中国大陆-拉美北 bandwidth.cmtowla：大陆站+国际站中国大陆-拉美西 bandwidth.elatoela：大陆站+国际站拉美东-拉美东 bandwidth.elatonla：大陆站+国际站拉美东-拉美北 bandwidth.wlatoela：大陆站+国际站拉美西-拉美东 bandwidth.wlatonla：大陆站+国际站拉美西-拉美北 bandwidth.wlatowla：大陆站+国际站拉美西-拉美西
     * interflowMode  互通类型: - Area: 大区互通 - Region: 城域互通
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
             'resourceId' => 'setResourceId',
             'resourceType' => 'setResourceType',
             'specCode' => 'setSpecCode',
-            'interflowMode' => 'setInterflowMode'
+            'interflowMode' => 'setInterflowMode',
+            'prepaidOptions' => 'setPrepaidOptions'
     ];
 
     /**
@@ -184,12 +192,13 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     * localAreaId  localAreaId
     * remoteAreaId  remoteAreaId
     * chargeMode  带宽包实例的计费方式。 bandwidth是按带宽计费。
-    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    * billingMode  带宽包实例在大陆站或国际站的计费方式： - 1：大陆站包周期 - 2：国际站包周期 - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     * bandwidth  带宽包实例中的带宽值。
     * resourceId  带宽包实例绑定的资源ID。
     * resourceType  带宽包实例绑定的资源类型。  cloud_connection: 云连接实例。
     * specCode  带宽包实例的规格编码。 bandwidth.aftoela：大陆站+国际站南非-拉美东 bandwidth.aftonla：大陆站+国际站南非-拉美北 bandwidth.aftowla：大陆站+国际站南非-拉美西 bandwidth.aptoaf：国际站亚太-南非 bandwidth.aptoap：国际站亚太-亚太 bandwidth.aptoela：大陆站+国际站亚太-拉美东 bandwidth.aptonla：大陆站+国际站亚太-拉美北 bandwidth.aptowla：大陆站+国际站亚太-拉美西 bandwidth.cmtoaf：国际站中国大陆-南非 bandwidth.cmtoap：国际站中国大陆-亚太 bandwidth.cmtocm：国际站中国大陆-中国大陆 bandwidth.cmtoela：大陆站+国际站中国大陆-拉美东 bandwidth.cmtonla：大陆站+国际站中国大陆-拉美北 bandwidth.cmtowla：大陆站+国际站中国大陆-拉美西 bandwidth.elatoela：大陆站+国际站拉美东-拉美东 bandwidth.elatonla：大陆站+国际站拉美东-拉美北 bandwidth.wlatoela：大陆站+国际站拉美西-拉美东 bandwidth.wlatonla：大陆站+国际站拉美西-拉美北 bandwidth.wlatowla：大陆站+国际站拉美西-拉美西
     * interflowMode  互通类型: - Area: 大区互通 - Region: 城域互通
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
             'resourceId' => 'getResourceId',
             'resourceType' => 'getResourceType',
             'specCode' => 'getSpecCode',
-            'interflowMode' => 'getInterflowMode'
+            'interflowMode' => 'getInterflowMode',
+            'prepaidOptions' => 'getPrepaidOptions'
     ];
 
     /**
@@ -250,6 +260,8 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const CHARGE_MODE_BANDWIDTH = 'bandwidth';
+    const BILLING_MODE_1 = 1;
+    const BILLING_MODE_2 = 2;
     const BILLING_MODE_3 = 3;
     const BILLING_MODE_4 = 4;
     const BILLING_MODE_5 = 5;
@@ -279,6 +291,8 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     public function getBillingModeAllowableValues()
     {
         return [
+            self::BILLING_MODE_1,
+            self::BILLING_MODE_2,
             self::BILLING_MODE_3,
             self::BILLING_MODE_4,
             self::BILLING_MODE_5,
@@ -340,6 +354,7 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
         $this->container['specCode'] = isset($data['specCode']) ? $data['specCode'] : null;
         $this->container['interflowMode'] = isset($data['interflowMode']) ? $data['interflowMode'] : null;
+        $this->container['prepaidOptions'] = isset($data['prepaidOptions']) ? $data['prepaidOptions'] : null;
     }
 
     /**
@@ -383,14 +398,14 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
         }
-            if ((mb_strlen($this->container['projectId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
+            if ((mb_strlen($this->container['projectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
             }
             if ((mb_strlen($this->container['projectId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
             }
-            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['projectId'])) {
-                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-([a-fA-F0-9]{4}-){3}[a-fA-F0-9]{12}|[a-fA-F0-9]{32,32}/", $this->container['projectId'])) {
+                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /[a-fA-F0-9]{8}-([a-fA-F0-9]{4}-){3}[a-fA-F0-9]{12}|[a-fA-F0-9]{32,32}/.";
             }
         if ($this->container['localAreaId'] === null) {
             $invalidProperties[] = "'localAreaId' can't be null";
@@ -589,7 +604,7 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     * Gets localAreaId
     *  localAreaId
     *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\LocalAreaIdDef
     */
     public function getLocalAreaId()
     {
@@ -599,7 +614,7 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Sets localAreaId
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef $localAreaId localAreaId
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\LocalAreaIdDef $localAreaId localAreaId
     *
     * @return $this
     */
@@ -613,7 +628,7 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     * Gets remoteAreaId
     *  remoteAreaId
     *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\RemoteAreaIdDef
     */
     public function getRemoteAreaId()
     {
@@ -623,7 +638,7 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Sets remoteAreaId
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef $remoteAreaId remoteAreaId
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\RemoteAreaIdDef $remoteAreaId remoteAreaId
     *
     * @return $this
     */
@@ -659,7 +674,7 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Gets billingMode
-    *  带宽包实例在大陆站或国际站的计费方式： - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    *  带宽包实例在大陆站或国际站的计费方式： - 1：大陆站包周期 - 2：国际站包周期 - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     *
     * @return int
     */
@@ -671,7 +686,7 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Sets billingMode
     *
-    * @param int $billingMode 带宽包实例在大陆站或国际站的计费方式： - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+    * @param int $billingMode 带宽包实例在大陆站或国际站的计费方式： - 1：大陆站包周期 - 2：国际站包周期 - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     *
     * @return $this
     */
@@ -798,6 +813,30 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     public function setInterflowMode($interflowMode)
     {
         $this->container['interflowMode'] = $interflowMode;
+        return $this;
+    }
+
+    /**
+    * Gets prepaidOptions
+    *  prepaidOptions
+    *
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\CreatePrepaidOptions|null
+    */
+    public function getPrepaidOptions()
+    {
+        return $this->container['prepaidOptions'];
+    }
+
+    /**
+    * Sets prepaidOptions
+    *
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\CreatePrepaidOptions|null $prepaidOptions prepaidOptions
+    *
+    * @return $this
+    */
+    public function setPrepaidOptions($prepaidOptions)
+    {
+        $this->container['prepaidOptions'] = $prepaidOptions;
         return $this;
     }
 

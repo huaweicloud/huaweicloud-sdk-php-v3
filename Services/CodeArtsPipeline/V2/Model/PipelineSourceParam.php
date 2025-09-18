@@ -20,25 +20,25 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alias  代码/制品源参数 - 代码仓/制品源别名。别名仅支持输入大小写英文字母、数字、“_”，至多128个字符
-    * gitType  代码源参数 - git类型
-    * codehubId  代码源参数 - Repo代码仓ID
-    * endpointId  代码源参数 - 扩展点id
-    * defaultBranch  代码源参数 - 默认分支
-    * gitUrl  代码源参数 - git链接
-    * sshGitUrl  代码源参数 - ssh_git链接
-    * webUrl  代码源参数 - 网页url
-    * repoName  代码源参数 - 流水线源名称
-    * artifactType  制品源参数 - 制品源类型，generic/docker
-    * artifactTypeName  制品源参数 - 制品源类型名
-    * branchFilter  制品源参数 - 过滤分支
-    * directory  制品源参数 - 目录
-    * directoryId  制品源参数 - 目录ID
-    * organization  制品源参数 - Docker组织
-    * packageName  制品源参数 - 包名称
-    * version  制品源参数 - 版本
-    * versionStrategy  制品源参数 - 获取制品源版本的策略，latest/specificVersion
-    * sourceSystem  制品源参数 - 制品源名称,如CloudArtifact
+    * alias  **参数解释**： 代码/制品源参数 - 代码仓/制品源别名。 **取值范围**： 别名仅支持输入大小写英文字母、数字、“_”，至多128个字符。
+    * gitType  **参数解释**： git代码仓类型。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。
+    * codehubId  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
+    * endpointId  **参数解释**： 扩展点id。 **取值范围**： 不涉及。
+    * defaultBranch  **参数解释**： 默认分支。 **取值范围**： 不涉及。
+    * gitUrl  **参数解释**： git链接。 **取值范围**： 不涉及。
+    * sshGitUrl  **参数解释**： ssh_git链接。 **取值范围**： 不涉及。
+    * webUrl  **参数解释**： 网页url。 **取值范围**： 不涉及。
+    * repoName  **参数解释**： 流水线源名称。 **取值范围**： 不涉及。
+    * artifactType  **参数解释**： 制品源类型。 **取值范围**： 仅包含[generic，docker]。
+    * artifactTypeName  **参数解释**： 制品源类型名。 **取值范围**： 不涉及。
+    * branchFilter  **参数解释**： 过滤分支。 **取值范围**： 不涉及。
+    * directory  **参数解释**： 制品源所在目录。 **取值范围**： 不涉及。
+    * directoryId  **参数解释**： 目录ID。 **取值范围**： 不涉及。
+    * organization  **参数解释**： Docker组织。 **取值范围**： 不涉及。
+    * packageName  **参数解释**： 软件包名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 制品源版本。 **取值范围**： 不涉及。
+    * versionStrategy  **参数解释**： 获取制品源版本的策略。 **取值范围**： 仅包含[latest，specificVersion]。
+    * sourceSystem  **参数解释**： 制品源名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,25 +66,25 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alias  代码/制品源参数 - 代码仓/制品源别名。别名仅支持输入大小写英文字母、数字、“_”，至多128个字符
-    * gitType  代码源参数 - git类型
-    * codehubId  代码源参数 - Repo代码仓ID
-    * endpointId  代码源参数 - 扩展点id
-    * defaultBranch  代码源参数 - 默认分支
-    * gitUrl  代码源参数 - git链接
-    * sshGitUrl  代码源参数 - ssh_git链接
-    * webUrl  代码源参数 - 网页url
-    * repoName  代码源参数 - 流水线源名称
-    * artifactType  制品源参数 - 制品源类型，generic/docker
-    * artifactTypeName  制品源参数 - 制品源类型名
-    * branchFilter  制品源参数 - 过滤分支
-    * directory  制品源参数 - 目录
-    * directoryId  制品源参数 - 目录ID
-    * organization  制品源参数 - Docker组织
-    * packageName  制品源参数 - 包名称
-    * version  制品源参数 - 版本
-    * versionStrategy  制品源参数 - 获取制品源版本的策略，latest/specificVersion
-    * sourceSystem  制品源参数 - 制品源名称,如CloudArtifact
+    * alias  **参数解释**： 代码/制品源参数 - 代码仓/制品源别名。 **取值范围**： 别名仅支持输入大小写英文字母、数字、“_”，至多128个字符。
+    * gitType  **参数解释**： git代码仓类型。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。
+    * codehubId  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
+    * endpointId  **参数解释**： 扩展点id。 **取值范围**： 不涉及。
+    * defaultBranch  **参数解释**： 默认分支。 **取值范围**： 不涉及。
+    * gitUrl  **参数解释**： git链接。 **取值范围**： 不涉及。
+    * sshGitUrl  **参数解释**： ssh_git链接。 **取值范围**： 不涉及。
+    * webUrl  **参数解释**： 网页url。 **取值范围**： 不涉及。
+    * repoName  **参数解释**： 流水线源名称。 **取值范围**： 不涉及。
+    * artifactType  **参数解释**： 制品源类型。 **取值范围**： 仅包含[generic，docker]。
+    * artifactTypeName  **参数解释**： 制品源类型名。 **取值范围**： 不涉及。
+    * branchFilter  **参数解释**： 过滤分支。 **取值范围**： 不涉及。
+    * directory  **参数解释**： 制品源所在目录。 **取值范围**： 不涉及。
+    * directoryId  **参数解释**： 目录ID。 **取值范围**： 不涉及。
+    * organization  **参数解释**： Docker组织。 **取值范围**： 不涉及。
+    * packageName  **参数解释**： 软件包名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 制品源版本。 **取值范围**： 不涉及。
+    * versionStrategy  **参数解释**： 获取制品源版本的策略。 **取值范围**： 仅包含[latest，specificVersion]。
+    * sourceSystem  **参数解释**： 制品源名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -133,25 +133,25 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alias  代码/制品源参数 - 代码仓/制品源别名。别名仅支持输入大小写英文字母、数字、“_”，至多128个字符
-    * gitType  代码源参数 - git类型
-    * codehubId  代码源参数 - Repo代码仓ID
-    * endpointId  代码源参数 - 扩展点id
-    * defaultBranch  代码源参数 - 默认分支
-    * gitUrl  代码源参数 - git链接
-    * sshGitUrl  代码源参数 - ssh_git链接
-    * webUrl  代码源参数 - 网页url
-    * repoName  代码源参数 - 流水线源名称
-    * artifactType  制品源参数 - 制品源类型，generic/docker
-    * artifactTypeName  制品源参数 - 制品源类型名
-    * branchFilter  制品源参数 - 过滤分支
-    * directory  制品源参数 - 目录
-    * directoryId  制品源参数 - 目录ID
-    * organization  制品源参数 - Docker组织
-    * packageName  制品源参数 - 包名称
-    * version  制品源参数 - 版本
-    * versionStrategy  制品源参数 - 获取制品源版本的策略，latest/specificVersion
-    * sourceSystem  制品源参数 - 制品源名称,如CloudArtifact
+    * alias  **参数解释**： 代码/制品源参数 - 代码仓/制品源别名。 **取值范围**： 别名仅支持输入大小写英文字母、数字、“_”，至多128个字符。
+    * gitType  **参数解释**： git代码仓类型。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。
+    * codehubId  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
+    * endpointId  **参数解释**： 扩展点id。 **取值范围**： 不涉及。
+    * defaultBranch  **参数解释**： 默认分支。 **取值范围**： 不涉及。
+    * gitUrl  **参数解释**： git链接。 **取值范围**： 不涉及。
+    * sshGitUrl  **参数解释**： ssh_git链接。 **取值范围**： 不涉及。
+    * webUrl  **参数解释**： 网页url。 **取值范围**： 不涉及。
+    * repoName  **参数解释**： 流水线源名称。 **取值范围**： 不涉及。
+    * artifactType  **参数解释**： 制品源类型。 **取值范围**： 仅包含[generic，docker]。
+    * artifactTypeName  **参数解释**： 制品源类型名。 **取值范围**： 不涉及。
+    * branchFilter  **参数解释**： 过滤分支。 **取值范围**： 不涉及。
+    * directory  **参数解释**： 制品源所在目录。 **取值范围**： 不涉及。
+    * directoryId  **参数解释**： 目录ID。 **取值范围**： 不涉及。
+    * organization  **参数解释**： Docker组织。 **取值范围**： 不涉及。
+    * packageName  **参数解释**： 软件包名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 制品源版本。 **取值范围**： 不涉及。
+    * versionStrategy  **参数解释**： 获取制品源版本的策略。 **取值范围**： 仅包含[latest，specificVersion]。
+    * sourceSystem  **参数解释**： 制品源名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -179,25 +179,25 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alias  代码/制品源参数 - 代码仓/制品源别名。别名仅支持输入大小写英文字母、数字、“_”，至多128个字符
-    * gitType  代码源参数 - git类型
-    * codehubId  代码源参数 - Repo代码仓ID
-    * endpointId  代码源参数 - 扩展点id
-    * defaultBranch  代码源参数 - 默认分支
-    * gitUrl  代码源参数 - git链接
-    * sshGitUrl  代码源参数 - ssh_git链接
-    * webUrl  代码源参数 - 网页url
-    * repoName  代码源参数 - 流水线源名称
-    * artifactType  制品源参数 - 制品源类型，generic/docker
-    * artifactTypeName  制品源参数 - 制品源类型名
-    * branchFilter  制品源参数 - 过滤分支
-    * directory  制品源参数 - 目录
-    * directoryId  制品源参数 - 目录ID
-    * organization  制品源参数 - Docker组织
-    * packageName  制品源参数 - 包名称
-    * version  制品源参数 - 版本
-    * versionStrategy  制品源参数 - 获取制品源版本的策略，latest/specificVersion
-    * sourceSystem  制品源参数 - 制品源名称,如CloudArtifact
+    * alias  **参数解释**： 代码/制品源参数 - 代码仓/制品源别名。 **取值范围**： 别名仅支持输入大小写英文字母、数字、“_”，至多128个字符。
+    * gitType  **参数解释**： git代码仓类型。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。
+    * codehubId  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
+    * endpointId  **参数解释**： 扩展点id。 **取值范围**： 不涉及。
+    * defaultBranch  **参数解释**： 默认分支。 **取值范围**： 不涉及。
+    * gitUrl  **参数解释**： git链接。 **取值范围**： 不涉及。
+    * sshGitUrl  **参数解释**： ssh_git链接。 **取值范围**： 不涉及。
+    * webUrl  **参数解释**： 网页url。 **取值范围**： 不涉及。
+    * repoName  **参数解释**： 流水线源名称。 **取值范围**： 不涉及。
+    * artifactType  **参数解释**： 制品源类型。 **取值范围**： 仅包含[generic，docker]。
+    * artifactTypeName  **参数解释**： 制品源类型名。 **取值范围**： 不涉及。
+    * branchFilter  **参数解释**： 过滤分支。 **取值范围**： 不涉及。
+    * directory  **参数解释**： 制品源所在目录。 **取值范围**： 不涉及。
+    * directoryId  **参数解释**： 目录ID。 **取值范围**： 不涉及。
+    * organization  **参数解释**： Docker组织。 **取值范围**： 不涉及。
+    * packageName  **参数解释**： 软件包名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 制品源版本。 **取值范围**： 不涉及。
+    * versionStrategy  **参数解释**： 获取制品源版本的策略。 **取值范围**： 仅包含[latest，specificVersion]。
+    * sourceSystem  **参数解释**： 制品源名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -225,25 +225,25 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alias  代码/制品源参数 - 代码仓/制品源别名。别名仅支持输入大小写英文字母、数字、“_”，至多128个字符
-    * gitType  代码源参数 - git类型
-    * codehubId  代码源参数 - Repo代码仓ID
-    * endpointId  代码源参数 - 扩展点id
-    * defaultBranch  代码源参数 - 默认分支
-    * gitUrl  代码源参数 - git链接
-    * sshGitUrl  代码源参数 - ssh_git链接
-    * webUrl  代码源参数 - 网页url
-    * repoName  代码源参数 - 流水线源名称
-    * artifactType  制品源参数 - 制品源类型，generic/docker
-    * artifactTypeName  制品源参数 - 制品源类型名
-    * branchFilter  制品源参数 - 过滤分支
-    * directory  制品源参数 - 目录
-    * directoryId  制品源参数 - 目录ID
-    * organization  制品源参数 - Docker组织
-    * packageName  制品源参数 - 包名称
-    * version  制品源参数 - 版本
-    * versionStrategy  制品源参数 - 获取制品源版本的策略，latest/specificVersion
-    * sourceSystem  制品源参数 - 制品源名称,如CloudArtifact
+    * alias  **参数解释**： 代码/制品源参数 - 代码仓/制品源别名。 **取值范围**： 别名仅支持输入大小写英文字母、数字、“_”，至多128个字符。
+    * gitType  **参数解释**： git代码仓类型。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。
+    * codehubId  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
+    * endpointId  **参数解释**： 扩展点id。 **取值范围**： 不涉及。
+    * defaultBranch  **参数解释**： 默认分支。 **取值范围**： 不涉及。
+    * gitUrl  **参数解释**： git链接。 **取值范围**： 不涉及。
+    * sshGitUrl  **参数解释**： ssh_git链接。 **取值范围**： 不涉及。
+    * webUrl  **参数解释**： 网页url。 **取值范围**： 不涉及。
+    * repoName  **参数解释**： 流水线源名称。 **取值范围**： 不涉及。
+    * artifactType  **参数解释**： 制品源类型。 **取值范围**： 仅包含[generic，docker]。
+    * artifactTypeName  **参数解释**： 制品源类型名。 **取值范围**： 不涉及。
+    * branchFilter  **参数解释**： 过滤分支。 **取值范围**： 不涉及。
+    * directory  **参数解释**： 制品源所在目录。 **取值范围**： 不涉及。
+    * directoryId  **参数解释**： 目录ID。 **取值范围**： 不涉及。
+    * organization  **参数解释**： Docker组织。 **取值范围**： 不涉及。
+    * packageName  **参数解释**： 软件包名称。 **取值范围**： 不涉及。
+    * version  **参数解释**： 制品源版本。 **取值范围**： 不涉及。
+    * versionStrategy  **参数解释**： 获取制品源版本的策略。 **取值范围**： 仅包含[latest，specificVersion]。
+    * sourceSystem  **参数解释**： 制品源名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -372,7 +372,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets alias
-    *  代码/制品源参数 - 代码仓/制品源别名。别名仅支持输入大小写英文字母、数字、“_”，至多128个字符
+    *  **参数解释**： 代码/制品源参数 - 代码仓/制品源别名。 **取值范围**： 别名仅支持输入大小写英文字母、数字、“_”，至多128个字符。
     *
     * @return string|null
     */
@@ -384,7 +384,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets alias
     *
-    * @param string|null $alias 代码/制品源参数 - 代码仓/制品源别名。别名仅支持输入大小写英文字母、数字、“_”，至多128个字符
+    * @param string|null $alias **参数解释**： 代码/制品源参数 - 代码仓/制品源别名。 **取值范围**： 别名仅支持输入大小写英文字母、数字、“_”，至多128个字符。
     *
     * @return $this
     */
@@ -396,7 +396,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitType
-    *  代码源参数 - git类型
+    *  **参数解释**： git代码仓类型。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。
     *
     * @return string|null
     */
@@ -408,7 +408,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets gitType
     *
-    * @param string|null $gitType 代码源参数 - git类型
+    * @param string|null $gitType **参数解释**： git代码仓类型。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。
     *
     * @return $this
     */
@@ -420,7 +420,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets codehubId
-    *  代码源参数 - Repo代码仓ID
+    *  **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -432,7 +432,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets codehubId
     *
-    * @param string|null $codehubId 代码源参数 - Repo代码仓ID
+    * @param string|null $codehubId **参数解释**： Repo代码仓ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -444,7 +444,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpointId
-    *  代码源参数 - 扩展点id
+    *  **参数解释**： 扩展点id。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -456,7 +456,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets endpointId
     *
-    * @param string|null $endpointId 代码源参数 - 扩展点id
+    * @param string|null $endpointId **参数解释**： 扩展点id。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -468,7 +468,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultBranch
-    *  代码源参数 - 默认分支
+    *  **参数解释**： 默认分支。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -480,7 +480,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets defaultBranch
     *
-    * @param string|null $defaultBranch 代码源参数 - 默认分支
+    * @param string|null $defaultBranch **参数解释**： 默认分支。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -492,7 +492,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitUrl
-    *  代码源参数 - git链接
+    *  **参数解释**： git链接。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -504,7 +504,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets gitUrl
     *
-    * @param string|null $gitUrl 代码源参数 - git链接
+    * @param string|null $gitUrl **参数解释**： git链接。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -516,7 +516,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets sshGitUrl
-    *  代码源参数 - ssh_git链接
+    *  **参数解释**： ssh_git链接。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -528,7 +528,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets sshGitUrl
     *
-    * @param string|null $sshGitUrl 代码源参数 - ssh_git链接
+    * @param string|null $sshGitUrl **参数解释**： ssh_git链接。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -540,7 +540,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets webUrl
-    *  代码源参数 - 网页url
+    *  **参数解释**： 网页url。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -552,7 +552,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets webUrl
     *
-    * @param string|null $webUrl 代码源参数 - 网页url
+    * @param string|null $webUrl **参数解释**： 网页url。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -564,7 +564,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets repoName
-    *  代码源参数 - 流水线源名称
+    *  **参数解释**： 流水线源名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -576,7 +576,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets repoName
     *
-    * @param string|null $repoName 代码源参数 - 流水线源名称
+    * @param string|null $repoName **参数解释**： 流水线源名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -588,7 +588,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets artifactType
-    *  制品源参数 - 制品源类型，generic/docker
+    *  **参数解释**： 制品源类型。 **取值范围**： 仅包含[generic，docker]。
     *
     * @return string|null
     */
@@ -600,7 +600,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets artifactType
     *
-    * @param string|null $artifactType 制品源参数 - 制品源类型，generic/docker
+    * @param string|null $artifactType **参数解释**： 制品源类型。 **取值范围**： 仅包含[generic，docker]。
     *
     * @return $this
     */
@@ -612,7 +612,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets artifactTypeName
-    *  制品源参数 - 制品源类型名
+    *  **参数解释**： 制品源类型名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -624,7 +624,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets artifactTypeName
     *
-    * @param string|null $artifactTypeName 制品源参数 - 制品源类型名
+    * @param string|null $artifactTypeName **参数解释**： 制品源类型名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -636,7 +636,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets branchFilter
-    *  制品源参数 - 过滤分支
+    *  **参数解释**： 过滤分支。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -648,7 +648,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets branchFilter
     *
-    * @param string|null $branchFilter 制品源参数 - 过滤分支
+    * @param string|null $branchFilter **参数解释**： 过滤分支。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -660,7 +660,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets directory
-    *  制品源参数 - 目录
+    *  **参数解释**： 制品源所在目录。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -672,7 +672,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets directory
     *
-    * @param string|null $directory 制品源参数 - 目录
+    * @param string|null $directory **参数解释**： 制品源所在目录。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -684,7 +684,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets directoryId
-    *  制品源参数 - 目录ID
+    *  **参数解释**： 目录ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -696,7 +696,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets directoryId
     *
-    * @param string|null $directoryId 制品源参数 - 目录ID
+    * @param string|null $directoryId **参数解释**： 目录ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -708,7 +708,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets organization
-    *  制品源参数 - Docker组织
+    *  **参数解释**： Docker组织。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -720,7 +720,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets organization
     *
-    * @param string|null $organization 制品源参数 - Docker组织
+    * @param string|null $organization **参数解释**： Docker组织。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -732,7 +732,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets packageName
-    *  制品源参数 - 包名称
+    *  **参数解释**： 软件包名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -744,7 +744,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets packageName
     *
-    * @param string|null $packageName 制品源参数 - 包名称
+    * @param string|null $packageName **参数解释**： 软件包名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -756,7 +756,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  制品源参数 - 版本
+    *  **参数解释**： 制品源版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -768,7 +768,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 制品源参数 - 版本
+    * @param string|null $version **参数解释**： 制品源版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -780,7 +780,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets versionStrategy
-    *  制品源参数 - 获取制品源版本的策略，latest/specificVersion
+    *  **参数解释**： 获取制品源版本的策略。 **取值范围**： 仅包含[latest，specificVersion]。
     *
     * @return string|null
     */
@@ -792,7 +792,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets versionStrategy
     *
-    * @param string|null $versionStrategy 制品源参数 - 获取制品源版本的策略，latest/specificVersion
+    * @param string|null $versionStrategy **参数解释**： 获取制品源版本的策略。 **取值范围**： 仅包含[latest，specificVersion]。
     *
     * @return $this
     */
@@ -804,7 +804,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceSystem
-    *  制品源参数 - 制品源名称,如CloudArtifact
+    *  **参数解释**： 制品源名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -816,7 +816,7 @@ class PipelineSourceParam implements ModelInterface, ArrayAccess
     /**
     * Sets sourceSystem
     *
-    * @param string|null $sourceSystem 制品源参数 - 制品源名称,如CloudArtifact
+    * @param string|null $sourceSystem **参数解释**： 制品源名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */

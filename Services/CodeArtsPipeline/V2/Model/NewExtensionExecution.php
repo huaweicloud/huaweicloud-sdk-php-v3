@@ -20,9 +20,9 @@ class NewExtensionExecution implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * target  入口
-    * type  类型
-    * sha256  sha256
+    * target  **参数解释**： 插件类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 插件类型。 **取值范围**： 不涉及。
+    * sha256  **参数解释**： sha256。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class NewExtensionExecution implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * target  入口
-    * type  类型
-    * sha256  sha256
+    * target  **参数解释**： 插件类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 插件类型。 **取值范围**： 不涉及。
+    * sha256  **参数解释**： sha256。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class NewExtensionExecution implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * target  入口
-    * type  类型
-    * sha256  sha256
+    * target  **参数解释**： 插件类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 插件类型。 **取值范围**： 不涉及。
+    * sha256  **参数解释**： sha256。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class NewExtensionExecution implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * target  入口
-    * type  类型
-    * sha256  sha256
+    * target  **参数解释**： 插件类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 插件类型。 **取值范围**： 不涉及。
+    * sha256  **参数解释**： sha256。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class NewExtensionExecution implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * target  入口
-    * type  类型
-    * sha256  sha256
+    * target  **参数解释**： 插件类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 插件类型。 **取值范围**： 不涉及。
+    * sha256  **参数解释**： sha256。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class NewExtensionExecution implements ModelInterface, ArrayAccess
 
     /**
     * Gets target
-    *  入口
+    *  **参数解释**： 插件类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class NewExtensionExecution implements ModelInterface, ArrayAccess
     /**
     * Sets target
     *
-    * @param string|null $target 入口
+    * @param string|null $target **参数解释**： 插件类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class NewExtensionExecution implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型
+    *  **参数解释**： 插件类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class NewExtensionExecution implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 类型
+    * @param string|null $type **参数解释**： 插件类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class NewExtensionExecution implements ModelInterface, ArrayAccess
 
     /**
     * Gets sha256
-    *  sha256
+    *  **参数解释**： sha256。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class NewExtensionExecution implements ModelInterface, ArrayAccess
     /**
     * Sets sha256
     *
-    * @param string|null $sha256 sha256
+    * @param string|null $sha256 **参数解释**： sha256。 **取值范围**： 不涉及。
     *
     * @return $this
     */

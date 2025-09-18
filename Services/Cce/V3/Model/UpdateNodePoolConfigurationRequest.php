@@ -21,7 +21,7 @@ class UpdateNodePoolConfigurationRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolId  节点池ID
+    * nodepoolId  **参数解释：** 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制：** 不涉及 **取值范围：** - 节点池ID：修改指定节点池配置管理参数 - master：修改集群配置中心的配置管理参数  **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -35,7 +35,7 @@ class UpdateNodePoolConfigurationRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolId  节点池ID
+    * nodepoolId  **参数解释：** 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制：** 不涉及 **取值范围：** - 节点池ID：修改指定节点池配置管理参数 - master：修改集群配置中心的配置管理参数  **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -70,7 +70,7 @@ class UpdateNodePoolConfigurationRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolId  节点池ID
+    * nodepoolId  **参数解释：** 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制：** 不涉及 **取值范围：** - 节点池ID：修改指定节点池配置管理参数 - master：修改集群配置中心的配置管理参数  **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -84,7 +84,7 @@ class UpdateNodePoolConfigurationRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolId  节点池ID
+    * nodepoolId  **参数解释：** 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制：** 不涉及 **取值范围：** - 节点池ID：修改指定节点池配置管理参数 - master：修改集群配置中心的配置管理参数  **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -98,7 +98,7 @@ class UpdateNodePoolConfigurationRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolId  节点池ID
+    * nodepoolId  **参数解释：** 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制：** 不涉及 **取值范围：** - 节点池ID：修改指定节点池配置管理参数 - master：修改集群配置中心的配置管理参数  **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -189,8 +189,8 @@ class UpdateNodePoolConfigurationRequest implements ModelInterface, ArrayAccess
         if ($this->container['nodepoolId'] === null) {
             $invalidProperties[] = "'nodepoolId' can't be null";
         }
-            if (!preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['nodepoolId'])) {
-                $invalidProperties[] = "invalid value for 'nodepoolId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
+            if (!preg_match("/^([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}|master)$/", $this->container['nodepoolId'])) {
+                $invalidProperties[] = "invalid value for 'nodepoolId', must be conform to the pattern /^([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}|master)$/.";
             }
         return $invalidProperties;
     }
@@ -232,7 +232,7 @@ class UpdateNodePoolConfigurationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodepoolId
-    *  节点池ID
+    *  **参数解释：** 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制：** 不涉及 **取值范围：** - 节点池ID：修改指定节点池配置管理参数 - master：修改集群配置中心的配置管理参数  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -244,7 +244,7 @@ class UpdateNodePoolConfigurationRequest implements ModelInterface, ArrayAccess
     /**
     * Sets nodepoolId
     *
-    * @param string $nodepoolId 节点池ID
+    * @param string $nodepoolId **参数解释：** 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制：** 不涉及 **取值范围：** - 节点池ID：修改指定节点池配置管理参数 - master：修改集群配置中心的配置管理参数  **默认取值：** 不涉及
     *
     * @return $this
     */

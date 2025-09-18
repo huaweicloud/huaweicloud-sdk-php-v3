@@ -21,10 +21,10 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  总数
+    * total  **参数解释**： 总条目数量。 **取值范围**： 大于等于0。
     * pageNumber  页码数
     * pageSize  每页显示数
-    * content  模板数据,list类型数据
+    * content  模板数据，list类型数据。
     *
     * @var string[]
     */
@@ -37,10 +37,10 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  总数
+    * total  **参数解释**： 总条目数量。 **取值范围**： 大于等于0。
     * pageNumber  页码数
     * pageSize  每页显示数
-    * content  模板数据,list类型数据
+    * content  模板数据，list类型数据。
     *
     * @var string[]
     */
@@ -74,10 +74,10 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  总数
+    * total  **参数解释**： 总条目数量。 **取值范围**： 大于等于0。
     * pageNumber  页码数
     * pageSize  每页显示数
-    * content  模板数据,list类型数据
+    * content  模板数据，list类型数据。
     *
     * @var string[]
     */
@@ -90,10 +90,10 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  总数
+    * total  **参数解释**： 总条目数量。 **取值范围**： 大于等于0。
     * pageNumber  页码数
     * pageSize  每页显示数
-    * content  模板数据,list类型数据
+    * content  模板数据，list类型数据。
     *
     * @var string[]
     */
@@ -106,10 +106,10 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  总数
+    * total  **参数解释**： 总条目数量。 **取值范围**： 大于等于0。
     * pageNumber  页码数
     * pageSize  每页显示数
-    * content  模板数据,list类型数据
+    * content  模板数据，list类型数据。
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总数
+    *  **参数解释**： 总条目数量。 **取值范围**： 大于等于0。
     *
     * @return int|null
     */
@@ -220,7 +220,7 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总数
+    * @param int|null $total **参数解释**： 总条目数量。 **取值范围**： 大于等于0。
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets content
-    *  模板数据,list类型数据
+    *  模板数据，list类型数据。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\TemplateView[]|null
     */
@@ -292,7 +292,7 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets content
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\TemplateView[]|null $content 模板数据,list类型数据
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\TemplateView[]|null $content 模板数据，list类型数据。
     *
     * @return $this
     */

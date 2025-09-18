@@ -27,6 +27,7 @@ class Policy implements ModelInterface, ArrayAccess
     * operationType  策略类型,例如 ‘backup’：自动备份
     * trigger  trigger
     * associatedVaults  关联的存储库
+    * policyType  策略类型，取值范围如下： - custom_policy：普通用户策略 - organization_policy_v1：老版本组织策略 - organization_policy_v2：新版本组织策略 - organization_policy_removed：退出组织的用户已绑定在存储库上的新版本组织策略（不自动解绑策略与存储库绑定关系，但是不能新绑定存储库）
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class Policy implements ModelInterface, ArrayAccess
             'operationDefinition' => '\HuaweiCloud\SDK\Cbr\V1\Model\PolicyoODCreate',
             'operationType' => 'string',
             'trigger' => '\HuaweiCloud\SDK\Cbr\V1\Model\PolicyTriggerResp',
-            'associatedVaults' => '\HuaweiCloud\SDK\Cbr\V1\Model\PolicyAssociateVault[]'
+            'associatedVaults' => '\HuaweiCloud\SDK\Cbr\V1\Model\PolicyAssociateVault[]',
+            'policyType' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class Policy implements ModelInterface, ArrayAccess
     * operationType  策略类型,例如 ‘backup’：自动备份
     * trigger  trigger
     * associatedVaults  关联的存储库
+    * policyType  策略类型，取值范围如下： - custom_policy：普通用户策略 - organization_policy_v1：老版本组织策略 - organization_policy_v2：新版本组织策略 - organization_policy_removed：退出组织的用户已绑定在存储库上的新版本组织策略（不自动解绑策略与存储库绑定关系，但是不能新绑定存储库）
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class Policy implements ModelInterface, ArrayAccess
         'operationDefinition' => null,
         'operationType' => null,
         'trigger' => null,
-        'associatedVaults' => null
+        'associatedVaults' => null,
+        'policyType' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class Policy implements ModelInterface, ArrayAccess
     * operationType  策略类型,例如 ‘backup’：自动备份
     * trigger  trigger
     * associatedVaults  关联的存储库
+    * policyType  策略类型，取值范围如下： - custom_policy：普通用户策略 - organization_policy_v1：老版本组织策略 - organization_policy_v2：新版本组织策略 - organization_policy_removed：退出组织的用户已绑定在存储库上的新版本组织策略（不自动解绑策略与存储库绑定关系，但是不能新绑定存储库）
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class Policy implements ModelInterface, ArrayAccess
             'operationDefinition' => 'operation_definition',
             'operationType' => 'operation_type',
             'trigger' => 'trigger',
-            'associatedVaults' => 'associated_vaults'
+            'associatedVaults' => 'associated_vaults',
+            'policyType' => 'policy_type'
     ];
 
     /**
@@ -114,6 +120,7 @@ class Policy implements ModelInterface, ArrayAccess
     * operationType  策略类型,例如 ‘backup’：自动备份
     * trigger  trigger
     * associatedVaults  关联的存储库
+    * policyType  策略类型，取值范围如下： - custom_policy：普通用户策略 - organization_policy_v1：老版本组织策略 - organization_policy_v2：新版本组织策略 - organization_policy_removed：退出组织的用户已绑定在存储库上的新版本组织策略（不自动解绑策略与存储库绑定关系，但是不能新绑定存储库）
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class Policy implements ModelInterface, ArrayAccess
             'operationDefinition' => 'setOperationDefinition',
             'operationType' => 'setOperationType',
             'trigger' => 'setTrigger',
-            'associatedVaults' => 'setAssociatedVaults'
+            'associatedVaults' => 'setAssociatedVaults',
+            'policyType' => 'setPolicyType'
     ];
 
     /**
@@ -136,6 +144,7 @@ class Policy implements ModelInterface, ArrayAccess
     * operationType  策略类型,例如 ‘backup’：自动备份
     * trigger  trigger
     * associatedVaults  关联的存储库
+    * policyType  策略类型，取值范围如下： - custom_policy：普通用户策略 - organization_policy_v1：老版本组织策略 - organization_policy_v2：新版本组织策略 - organization_policy_removed：退出组织的用户已绑定在存储库上的新版本组织策略（不自动解绑策略与存储库绑定关系，但是不能新绑定存储库）
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class Policy implements ModelInterface, ArrayAccess
             'operationDefinition' => 'getOperationDefinition',
             'operationType' => 'getOperationType',
             'trigger' => 'getTrigger',
-            'associatedVaults' => 'getAssociatedVaults'
+            'associatedVaults' => 'getAssociatedVaults',
+            'policyType' => 'getPolicyType'
     ];
 
     /**
@@ -229,6 +239,7 @@ class Policy implements ModelInterface, ArrayAccess
         $this->container['operationType'] = isset($data['operationType']) ? $data['operationType'] : null;
         $this->container['trigger'] = isset($data['trigger']) ? $data['trigger'] : null;
         $this->container['associatedVaults'] = isset($data['associatedVaults']) ? $data['associatedVaults'] : null;
+        $this->container['policyType'] = isset($data['policyType']) ? $data['policyType'] : null;
     }
 
     /**
@@ -444,6 +455,30 @@ class Policy implements ModelInterface, ArrayAccess
     public function setAssociatedVaults($associatedVaults)
     {
         $this->container['associatedVaults'] = $associatedVaults;
+        return $this;
+    }
+
+    /**
+    * Gets policyType
+    *  策略类型，取值范围如下： - custom_policy：普通用户策略 - organization_policy_v1：老版本组织策略 - organization_policy_v2：新版本组织策略 - organization_policy_removed：退出组织的用户已绑定在存储库上的新版本组织策略（不自动解绑策略与存储库绑定关系，但是不能新绑定存储库）
+    *
+    * @return string|null
+    */
+    public function getPolicyType()
+    {
+        return $this->container['policyType'];
+    }
+
+    /**
+    * Sets policyType
+    *
+    * @param string|null $policyType 策略类型，取值范围如下： - custom_policy：普通用户策略 - organization_policy_v1：老版本组织策略 - organization_policy_v2：新版本组织策略 - organization_policy_removed：退出组织的用户已绑定在存储库上的新版本组织策略（不自动解绑策略与存储库绑定关系，但是不能新绑定存储库）
+    *
+    * @return $this
+    */
+    public function setPolicyType($policyType)
+    {
+        $this->container['policyType'] = $policyType;
         return $this;
     }
 

@@ -20,20 +20,20 @@ class SetAutoEnlargePoliciesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * switchOption  自动扩容开关。 - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 默认值为on。
-    * policies  磁盘自动扩容策略。 最大支持设置10个实例的策略。
+    * switchOption  **参数解释：** 自动扩容开关。 **约束限制：** 不涉及。 **取值范围：** - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 **默认取值：** on。
+    * policies  **参数解释：** 磁盘自动扩容策略。 **约束限制：** 最大支持设置10个实例的策略。 **取值范围：** 不涉及。 **默认取值：** 不涉及。 **参数解释：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'switchOption' => 'string',
-            'policies' => '\HuaweiCloud\SDK\Dds\V3\Model\DiskAutoExpansionPolicy[]'
+            'policies' => '\HuaweiCloud\SDK\Dds\V3\Model\DiskSetAutoExpansionPolicy[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * switchOption  自动扩容开关。 - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 默认值为on。
-    * policies  磁盘自动扩容策略。 最大支持设置10个实例的策略。
+    * switchOption  **参数解释：** 自动扩容开关。 **约束限制：** 不涉及。 **取值范围：** - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 **默认取值：** on。
+    * policies  **参数解释：** 磁盘自动扩容策略。 **约束限制：** 最大支持设置10个实例的策略。 **取值范围：** 不涉及。 **默认取值：** 不涉及。 **参数解释：** 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class SetAutoEnlargePoliciesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * switchOption  自动扩容开关。 - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 默认值为on。
-    * policies  磁盘自动扩容策略。 最大支持设置10个实例的策略。
+    * switchOption  **参数解释：** 自动扩容开关。 **约束限制：** 不涉及。 **取值范围：** - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 **默认取值：** on。
+    * policies  **参数解释：** 磁盘自动扩容策略。 **约束限制：** 最大支持设置10个实例的策略。 **取值范围：** 不涉及。 **默认取值：** 不涉及。 **参数解释：** 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class SetAutoEnlargePoliciesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * switchOption  自动扩容开关。 - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 默认值为on。
-    * policies  磁盘自动扩容策略。 最大支持设置10个实例的策略。
+    * switchOption  **参数解释：** 自动扩容开关。 **约束限制：** 不涉及。 **取值范围：** - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 **默认取值：** on。
+    * policies  **参数解释：** 磁盘自动扩容策略。 **约束限制：** 最大支持设置10个实例的策略。 **取值范围：** 不涉及。 **默认取值：** 不涉及。 **参数解释：** 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class SetAutoEnlargePoliciesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * switchOption  自动扩容开关。 - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 默认值为on。
-    * policies  磁盘自动扩容策略。 最大支持设置10个实例的策略。
+    * switchOption  **参数解释：** 自动扩容开关。 **约束限制：** 不涉及。 **取值范围：** - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 **默认取值：** on。
+    * policies  **参数解释：** 磁盘自动扩容策略。 **约束限制：** 最大支持设置10个实例的策略。 **取值范围：** 不涉及。 **默认取值：** 不涉及。 **参数解释：** 不涉及。
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class SetAutoEnlargePoliciesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets switchOption
-    *  自动扩容开关。 - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 默认值为on。
+    *  **参数解释：** 自动扩容开关。 **约束限制：** 不涉及。 **取值范围：** - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 **默认取值：** on。
     *
     * @return string|null
     */
@@ -200,7 +200,7 @@ class SetAutoEnlargePoliciesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets switchOption
     *
-    * @param string|null $switchOption 自动扩容开关。 - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 默认值为on。
+    * @param string|null $switchOption **参数解释：** 自动扩容开关。 **约束限制：** 不涉及。 **取值范围：** - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 **默认取值：** on。
     *
     * @return $this
     */
@@ -212,9 +212,9 @@ class SetAutoEnlargePoliciesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets policies
-    *  磁盘自动扩容策略。 最大支持设置10个实例的策略。
+    *  **参数解释：** 磁盘自动扩容策略。 **约束限制：** 最大支持设置10个实例的策略。 **取值范围：** 不涉及。 **默认取值：** 不涉及。 **参数解释：** 不涉及。
     *
-    * @return \HuaweiCloud\SDK\Dds\V3\Model\DiskAutoExpansionPolicy[]
+    * @return \HuaweiCloud\SDK\Dds\V3\Model\DiskSetAutoExpansionPolicy[]
     */
     public function getPolicies()
     {
@@ -224,7 +224,7 @@ class SetAutoEnlargePoliciesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets policies
     *
-    * @param \HuaweiCloud\SDK\Dds\V3\Model\DiskAutoExpansionPolicy[] $policies 磁盘自动扩容策略。 最大支持设置10个实例的策略。
+    * @param \HuaweiCloud\SDK\Dds\V3\Model\DiskSetAutoExpansionPolicy[] $policies **参数解释：** 磁盘自动扩容策略。 **约束限制：** 最大支持设置10个实例的策略。 **取值范围：** 不涉及。 **默认取值：** 不涉及。 **参数解释：** 不涉及。
     *
     * @return $this
     */

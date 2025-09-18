@@ -20,7 +20,7 @@ class RunPipelineSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  源类型
+    * type  **参数解释**： 源类型。 **取值范围**： 目前支持code - 代码源类型。
     * params  params
     *
     * @var string[]
@@ -32,7 +32,7 @@ class RunPipelineSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  源类型
+    * type  **参数解释**： 源类型。 **取值范围**： 目前支持code - 代码源类型。
     * params  params
     *
     * @var string[]
@@ -65,7 +65,7 @@ class RunPipelineSource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  源类型
+    * type  **参数解释**： 源类型。 **取值范围**： 目前支持code - 代码源类型。
     * params  params
     *
     * @var string[]
@@ -77,7 +77,7 @@ class RunPipelineSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  源类型
+    * type  **参数解释**： 源类型。 **取值范围**： 目前支持code - 代码源类型。
     * params  params
     *
     * @var string[]
@@ -89,7 +89,7 @@ class RunPipelineSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  源类型
+    * type  **参数解释**： 源类型。 **取值范围**： 目前支持code - 代码源类型。
     * params  params
     *
     * @var string[]
@@ -185,7 +185,7 @@ class RunPipelineSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  源类型
+    *  **参数解释**： 源类型。 **取值范围**： 目前支持code - 代码源类型。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class RunPipelineSource implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 源类型
+    * @param string|null $type **参数解释**： 源类型。 **取值范围**： 目前支持code - 代码源类型。
     *
     * @return $this
     */

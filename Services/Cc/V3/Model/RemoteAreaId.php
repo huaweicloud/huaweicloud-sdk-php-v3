@@ -25,7 +25,7 @@ class RemoteAreaId implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'remoteAreaId' => '\HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef'
+            'remoteAreaId' => '\HuaweiCloud\SDK\Cc\V3\Model\RemoteAreaIdDef'
     ];
 
     /**
@@ -179,7 +179,7 @@ class RemoteAreaId implements ModelInterface, ArrayAccess
     * Gets remoteAreaId
     *  remoteAreaId
     *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\RemoteAreaIdDef
     */
     public function getRemoteAreaId()
     {
@@ -189,7 +189,7 @@ class RemoteAreaId implements ModelInterface, ArrayAccess
     /**
     * Sets remoteAreaId
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef $remoteAreaId remoteAreaId
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\RemoteAreaIdDef $remoteAreaId remoteAreaId
     *
     * @return $this
     */

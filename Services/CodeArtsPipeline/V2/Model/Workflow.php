@@ -20,11 +20,11 @@ class Workflow implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * parameter  任务类型,list类型数据
-    * source  源码仓,list类型数据
-    * name  流水线名字
-    * projectId  项目ID
-    * projectName  项目名字
+    * parameter  **参数解释**： 任务类型，list类型数据。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * source  **参数解释**： 源码仓，list类型数据。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 流水线名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectId  **参数解释**： 项目ID **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectName  **参数解释**： 项目名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class Workflow implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * parameter  任务类型,list类型数据
-    * source  源码仓,list类型数据
-    * name  流水线名字
-    * projectId  项目ID
-    * projectName  项目名字
+    * parameter  **参数解释**： 任务类型，list类型数据。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * source  **参数解释**： 源码仓，list类型数据。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 流水线名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectId  **参数解释**： 项目ID **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectName  **参数解释**： 项目名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class Workflow implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * parameter  任务类型,list类型数据
-    * source  源码仓,list类型数据
-    * name  流水线名字
-    * projectId  项目ID
-    * projectName  项目名字
+    * parameter  **参数解释**： 任务类型，list类型数据。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * source  **参数解释**： 源码仓，list类型数据。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 流水线名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectId  **参数解释**： 项目ID **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectName  **参数解释**： 项目名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class Workflow implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * parameter  任务类型,list类型数据
-    * source  源码仓,list类型数据
-    * name  流水线名字
-    * projectId  项目ID
-    * projectName  项目名字
+    * parameter  **参数解释**： 任务类型，list类型数据。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * source  **参数解释**： 源码仓，list类型数据。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 流水线名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectId  **参数解释**： 项目ID **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectName  **参数解释**： 项目名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class Workflow implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * parameter  任务类型,list类型数据
-    * source  源码仓,list类型数据
-    * name  流水线名字
-    * projectId  项目ID
-    * projectName  项目名字
+    * parameter  **参数解释**： 任务类型，list类型数据。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * source  **参数解释**： 源码仓，list类型数据。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 流水线名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectId  **参数解释**： 项目ID **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectName  **参数解释**： 项目名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -233,7 +233,7 @@ class Workflow implements ModelInterface, ArrayAccess
 
     /**
     * Gets parameter
-    *  任务类型,list类型数据
+    *  **参数解释**： 任务类型，list类型数据。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineParam[]
     */
@@ -245,7 +245,7 @@ class Workflow implements ModelInterface, ArrayAccess
     /**
     * Sets parameter
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineParam[] $parameter 任务类型,list类型数据
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineParam[] $parameter **参数解释**： 任务类型，list类型数据。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -257,7 +257,7 @@ class Workflow implements ModelInterface, ArrayAccess
 
     /**
     * Gets source
-    *  源码仓,list类型数据
+    *  **参数解释**： 源码仓，list类型数据。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\Source[]
     */
@@ -269,7 +269,7 @@ class Workflow implements ModelInterface, ArrayAccess
     /**
     * Sets source
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\Source[] $source 源码仓,list类型数据
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\Source[] $source **参数解释**： 源码仓，list类型数据。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -281,7 +281,7 @@ class Workflow implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  流水线名字
+    *  **参数解释**： 流水线名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -293,7 +293,7 @@ class Workflow implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 流水线名字
+    * @param string $name **参数解释**： 流水线名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -305,7 +305,7 @@ class Workflow implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  **参数解释**： 项目ID **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -317,7 +317,7 @@ class Workflow implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID
+    * @param string $projectId **参数解释**： 项目ID **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -329,7 +329,7 @@ class Workflow implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectName
-    *  项目名字
+    *  **参数解释**： 项目名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -341,7 +341,7 @@ class Workflow implements ModelInterface, ArrayAccess
     /**
     * Sets projectName
     *
-    * @param string $projectName 项目名字
+    * @param string $projectName **参数解释**： 项目名字 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

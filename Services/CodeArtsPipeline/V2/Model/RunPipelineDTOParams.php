@@ -20,13 +20,14 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * gitType  代码仓类型
-    * alias  代码仓别名
-    * codehubId  codehub代码库ID
-    * defaultBranch  默认分支
-    * gitUrl  git仓库https地址
-    * endpointId  扩展点ID
+    * gitType  **参数解释**： 代码仓类型。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
+    * alias  **参数解释**： 代码仓别名，用户自定义，用于多仓时帮助区分系统参数。例如：A_REPO_COMMIT_ID，B_REPO_COMMIT_ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * codehubId  **参数解释**： CodeArts Repo代码仓ID。可以通过代码仓查询接口获取，代码仓的唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * defaultBranch  **参数解释**： 流水线执行时代码仓默认分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * gitUrl  **参数解释**： Git仓库https地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endpointId  **参数解释**： 代码源扩展点ID。可以通过[查询扩展点列表接口](ListEndpointsDetails.xml)获取，其中endpoints.uuid即为扩展点的唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * buildParams  buildParams
+    * changeRequestIds  **参数解释**： 执行变更流水线变更ID列表。可以通过[查询变更列表](ListChangeRequests.xml)接口，其中data.id即为变更ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -37,18 +38,20 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
             'defaultBranch' => 'string',
             'gitUrl' => 'string',
             'endpointId' => 'string',
-            'buildParams' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RunPipelineDTOParamsBuildParams'
+            'buildParams' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RunPipelineDTOParamsBuildParams',
+            'changeRequestIds' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * gitType  代码仓类型
-    * alias  代码仓别名
-    * codehubId  codehub代码库ID
-    * defaultBranch  默认分支
-    * gitUrl  git仓库https地址
-    * endpointId  扩展点ID
+    * gitType  **参数解释**： 代码仓类型。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
+    * alias  **参数解释**： 代码仓别名，用户自定义，用于多仓时帮助区分系统参数。例如：A_REPO_COMMIT_ID，B_REPO_COMMIT_ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * codehubId  **参数解释**： CodeArts Repo代码仓ID。可以通过代码仓查询接口获取，代码仓的唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * defaultBranch  **参数解释**： 流水线执行时代码仓默认分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * gitUrl  **参数解释**： Git仓库https地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endpointId  **参数解释**： 代码源扩展点ID。可以通过[查询扩展点列表接口](ListEndpointsDetails.xml)获取，其中endpoints.uuid即为扩展点的唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * buildParams  buildParams
+    * changeRequestIds  **参数解释**： 执行变更流水线变更ID列表。可以通过[查询变更列表](ListChangeRequests.xml)接口，其中data.id即为变更ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
         'defaultBranch' => null,
         'gitUrl' => null,
         'endpointId' => null,
-        'buildParams' => null
+        'buildParams' => null,
+        'changeRequestIds' => null
     ];
 
     /**
@@ -85,13 +89,14 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * gitType  代码仓类型
-    * alias  代码仓别名
-    * codehubId  codehub代码库ID
-    * defaultBranch  默认分支
-    * gitUrl  git仓库https地址
-    * endpointId  扩展点ID
+    * gitType  **参数解释**： 代码仓类型。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
+    * alias  **参数解释**： 代码仓别名，用户自定义，用于多仓时帮助区分系统参数。例如：A_REPO_COMMIT_ID，B_REPO_COMMIT_ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * codehubId  **参数解释**： CodeArts Repo代码仓ID。可以通过代码仓查询接口获取，代码仓的唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * defaultBranch  **参数解释**： 流水线执行时代码仓默认分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * gitUrl  **参数解释**： Git仓库https地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endpointId  **参数解释**： 代码源扩展点ID。可以通过[查询扩展点列表接口](ListEndpointsDetails.xml)获取，其中endpoints.uuid即为扩展点的唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * buildParams  buildParams
+    * changeRequestIds  **参数解释**： 执行变更流水线变更ID列表。可以通过[查询变更列表](ListChangeRequests.xml)接口，其中data.id即为变更ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -102,18 +107,20 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
             'defaultBranch' => 'default_branch',
             'gitUrl' => 'git_url',
             'endpointId' => 'endpoint_id',
-            'buildParams' => 'build_params'
+            'buildParams' => 'build_params',
+            'changeRequestIds' => 'change_request_ids'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * gitType  代码仓类型
-    * alias  代码仓别名
-    * codehubId  codehub代码库ID
-    * defaultBranch  默认分支
-    * gitUrl  git仓库https地址
-    * endpointId  扩展点ID
+    * gitType  **参数解释**： 代码仓类型。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
+    * alias  **参数解释**： 代码仓别名，用户自定义，用于多仓时帮助区分系统参数。例如：A_REPO_COMMIT_ID，B_REPO_COMMIT_ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * codehubId  **参数解释**： CodeArts Repo代码仓ID。可以通过代码仓查询接口获取，代码仓的唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * defaultBranch  **参数解释**： 流水线执行时代码仓默认分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * gitUrl  **参数解释**： Git仓库https地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endpointId  **参数解释**： 代码源扩展点ID。可以通过[查询扩展点列表接口](ListEndpointsDetails.xml)获取，其中endpoints.uuid即为扩展点的唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * buildParams  buildParams
+    * changeRequestIds  **参数解释**： 执行变更流水线变更ID列表。可以通过[查询变更列表](ListChangeRequests.xml)接口，其中data.id即为变更ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -124,18 +131,20 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
             'defaultBranch' => 'setDefaultBranch',
             'gitUrl' => 'setGitUrl',
             'endpointId' => 'setEndpointId',
-            'buildParams' => 'setBuildParams'
+            'buildParams' => 'setBuildParams',
+            'changeRequestIds' => 'setChangeRequestIds'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * gitType  代码仓类型
-    * alias  代码仓别名
-    * codehubId  codehub代码库ID
-    * defaultBranch  默认分支
-    * gitUrl  git仓库https地址
-    * endpointId  扩展点ID
+    * gitType  **参数解释**： 代码仓类型。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
+    * alias  **参数解释**： 代码仓别名，用户自定义，用于多仓时帮助区分系统参数。例如：A_REPO_COMMIT_ID，B_REPO_COMMIT_ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * codehubId  **参数解释**： CodeArts Repo代码仓ID。可以通过代码仓查询接口获取，代码仓的唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * defaultBranch  **参数解释**： 流水线执行时代码仓默认分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * gitUrl  **参数解释**： Git仓库https地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endpointId  **参数解释**： 代码源扩展点ID。可以通过[查询扩展点列表接口](ListEndpointsDetails.xml)获取，其中endpoints.uuid即为扩展点的唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * buildParams  buildParams
+    * changeRequestIds  **参数解释**： 执行变更流水线变更ID列表。可以通过[查询变更列表](ListChangeRequests.xml)接口，其中data.id即为变更ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
             'defaultBranch' => 'getDefaultBranch',
             'gitUrl' => 'getGitUrl',
             'endpointId' => 'getEndpointId',
-            'buildParams' => 'getBuildParams'
+            'buildParams' => 'getBuildParams',
+            'changeRequestIds' => 'getChangeRequestIds'
     ];
 
     /**
@@ -214,6 +224,7 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
         $this->container['gitUrl'] = isset($data['gitUrl']) ? $data['gitUrl'] : null;
         $this->container['endpointId'] = isset($data['endpointId']) ? $data['endpointId'] : null;
         $this->container['buildParams'] = isset($data['buildParams']) ? $data['buildParams'] : null;
+        $this->container['changeRequestIds'] = isset($data['changeRequestIds']) ? $data['changeRequestIds'] : null;
     }
 
     /**
@@ -246,7 +257,7 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitType
-    *  代码仓类型
+    *  **参数解释**： 代码仓类型。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -258,7 +269,7 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
     /**
     * Sets gitType
     *
-    * @param string $gitType 代码仓类型
+    * @param string $gitType **参数解释**： 代码仓类型。 **约束限制**： 不涉及。 **取值范围**： - codehub。 - gitee。 - github。 - gitcode。 - gitlab。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -270,7 +281,7 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets alias
-    *  代码仓别名
+    *  **参数解释**： 代码仓别名，用户自定义，用于多仓时帮助区分系统参数。例如：A_REPO_COMMIT_ID，B_REPO_COMMIT_ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -282,7 +293,7 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
     /**
     * Sets alias
     *
-    * @param string|null $alias 代码仓别名
+    * @param string|null $alias **参数解释**： 代码仓别名，用户自定义，用于多仓时帮助区分系统参数。例如：A_REPO_COMMIT_ID，B_REPO_COMMIT_ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -294,7 +305,7 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets codehubId
-    *  codehub代码库ID
+    *  **参数解释**： CodeArts Repo代码仓ID。可以通过代码仓查询接口获取，代码仓的唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -306,7 +317,7 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
     /**
     * Sets codehubId
     *
-    * @param string|null $codehubId codehub代码库ID
+    * @param string|null $codehubId **参数解释**： CodeArts Repo代码仓ID。可以通过代码仓查询接口获取，代码仓的唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -318,7 +329,7 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultBranch
-    *  默认分支
+    *  **参数解释**： 流水线执行时代码仓默认分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -330,7 +341,7 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
     /**
     * Sets defaultBranch
     *
-    * @param string|null $defaultBranch 默认分支
+    * @param string|null $defaultBranch **参数解释**： 流水线执行时代码仓默认分支。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -342,7 +353,7 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitUrl
-    *  git仓库https地址
+    *  **参数解释**： Git仓库https地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -354,7 +365,7 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
     /**
     * Sets gitUrl
     *
-    * @param string $gitUrl git仓库https地址
+    * @param string $gitUrl **参数解释**： Git仓库https地址，例如https://example.com/CloudPipelinezycs00001/2000.git。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -366,7 +377,7 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpointId
-    *  扩展点ID
+    *  **参数解释**： 代码源扩展点ID。可以通过[查询扩展点列表接口](ListEndpointsDetails.xml)获取，其中endpoints.uuid即为扩展点的唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -378,7 +389,7 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
     /**
     * Sets endpointId
     *
-    * @param string|null $endpointId 扩展点ID
+    * @param string|null $endpointId **参数解释**： 代码源扩展点ID。可以通过[查询扩展点列表接口](ListEndpointsDetails.xml)获取，其中endpoints.uuid即为扩展点的唯一标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -409,6 +420,30 @@ class RunPipelineDTOParams implements ModelInterface, ArrayAccess
     public function setBuildParams($buildParams)
     {
         $this->container['buildParams'] = $buildParams;
+        return $this;
+    }
+
+    /**
+    * Gets changeRequestIds
+    *  **参数解释**： 执行变更流水线变更ID列表。可以通过[查询变更列表](ListChangeRequests.xml)接口，其中data.id即为变更ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string[]|null
+    */
+    public function getChangeRequestIds()
+    {
+        return $this->container['changeRequestIds'];
+    }
+
+    /**
+    * Sets changeRequestIds
+    *
+    * @param string[]|null $changeRequestIds **参数解释**： 执行变更流水线变更ID列表。可以通过[查询变更列表](ListChangeRequests.xml)接口，其中data.id即为变更ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setChangeRequestIds($changeRequestIds)
+    {
+        $this->container['changeRequestIds'] = $changeRequestIds;
         return $this;
     }
 

@@ -22,7 +22,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  实例名称。
     * description  实例描述。不支持 <>。
-    * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * bordercross  全域互联带宽跨境属性。
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * enterpriseProjectId  实例所属企业项目ID。
     * tags  实例标签。
@@ -54,7 +54,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  实例名称。
     * description  实例描述。不支持 <>。
-    * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * bordercross  全域互联带宽跨境属性。
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * enterpriseProjectId  实例所属企业项目ID。
     * tags  实例标签。
@@ -107,7 +107,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  实例名称。
     * description  实例描述。不支持 <>。
-    * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * bordercross  全域互联带宽跨境属性。
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * enterpriseProjectId  实例所属企业项目ID。
     * tags  实例标签。
@@ -139,7 +139,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  实例名称。
     * description  实例描述。不支持 <>。
-    * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * bordercross  全域互联带宽跨境属性。
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * enterpriseProjectId  实例所属企业项目ID。
     * tags  实例标签。
@@ -171,7 +171,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  实例名称。
     * description  实例描述。不支持 <>。
-    * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * bordercross  全域互联带宽跨境属性。
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * enterpriseProjectId  实例所属企业项目ID。
     * tags  实例标签。
@@ -492,7 +492,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets bordercross
-    *  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    *  全域互联带宽跨境属性。
     *
     * @return bool
     */
@@ -504,7 +504,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets bordercross
     *
-    * @param bool $bordercross 功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * @param bool $bordercross 全域互联带宽跨境属性。
     *
     * @return $this
     */

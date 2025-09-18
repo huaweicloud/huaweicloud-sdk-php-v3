@@ -20,21 +20,25 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * uniqueId  唯一ID
-    * displayName  展示名
-    * pluginName  插件名
-    * disabled  禁用
-    * groupName  组名
-    * groupType  组类型
-    * pluginAttribution  插件属性
-    * pluginCompositionType  组合插件
-    * runtimeAttribution  运行属性
-    * allSteps  基础插件列表
-    * description  描述
-    * versionAttribution  版本属性
-    * iconUrl  图标URL
-    * multiStepEditable  是否可编辑
-    * standard  标准
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名。 **取值范围**： 不涉及。
+    * disabled  **参数解释**： 当前插件对后续选择使用的流水线是否为禁用状态，默认为false。 **取值范围**： - true：被禁用。 - false：未被禁用。
+    * dbRecordName  **参数解释**： 插件记录展示名称。 **取值范围**： 不涉及。
+    * groupName  **参数解释**： 流水线stage下的分组名称。 **取值范围**： 不涉及。
+    * groupType  **参数解释**： 流水线stage下的分组类型。 **取值范围**： 不涉及。
+    * pluginAttribution  **参数解释**： 标识是否为官方插件。 **取值范围**： 不涉及。
+    * pluginCompositionType  **参数解释**： 标识是否为多个step组成的组。 **取值范围**： - single：单step插件。 - multi：组合插件。
+    * runtimeAttribution  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
+    * allSteps  **参数解释**： 基础插件列表。 **取值范围**： 不涉及。
+    * description  **参数解释**： 扩展插件描述。 **取值范围**： 不涉及。
+    * versionAttribution  **参数解释**： 标识是否为一个草稿。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 扩展插件图标URL。 **取值范围**： 不涉及。
+    * multiStepEditable  **参数解释**： 标识是否可继续进行添加步骤，默认是1，可进行添加。 **取值范围**： - 0：不可继续进行添加步骤。 - 1：可继续进行添加步骤。
+    * location  **参数解释**： 使用位置。 **取值范围**： 不涉及。
+    * publisherUniqueId  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 插件版本标识符。 **取值范围**： 不涉及。
+    * standard  **参数解释**： 标识是否为标准化的插件。 **取值范围**： - true：是标准化的插件。 - false：不是标准化的插件。
     *
     * @var string[]
     */
@@ -43,6 +47,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
             'displayName' => 'string',
             'pluginName' => 'string',
             'disabled' => 'bool',
+            'dbRecordName' => 'string',
             'groupName' => 'string',
             'groupType' => 'string',
             'pluginAttribution' => 'string',
@@ -53,26 +58,33 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
             'versionAttribution' => 'string',
             'iconUrl' => 'string',
             'multiStepEditable' => 'int',
+            'location' => 'string',
+            'publisherUniqueId' => 'string',
+            'manifestVersion' => 'string',
             'standard' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * uniqueId  唯一ID
-    * displayName  展示名
-    * pluginName  插件名
-    * disabled  禁用
-    * groupName  组名
-    * groupType  组类型
-    * pluginAttribution  插件属性
-    * pluginCompositionType  组合插件
-    * runtimeAttribution  运行属性
-    * allSteps  基础插件列表
-    * description  描述
-    * versionAttribution  版本属性
-    * iconUrl  图标URL
-    * multiStepEditable  是否可编辑
-    * standard  标准
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名。 **取值范围**： 不涉及。
+    * disabled  **参数解释**： 当前插件对后续选择使用的流水线是否为禁用状态，默认为false。 **取值范围**： - true：被禁用。 - false：未被禁用。
+    * dbRecordName  **参数解释**： 插件记录展示名称。 **取值范围**： 不涉及。
+    * groupName  **参数解释**： 流水线stage下的分组名称。 **取值范围**： 不涉及。
+    * groupType  **参数解释**： 流水线stage下的分组类型。 **取值范围**： 不涉及。
+    * pluginAttribution  **参数解释**： 标识是否为官方插件。 **取值范围**： 不涉及。
+    * pluginCompositionType  **参数解释**： 标识是否为多个step组成的组。 **取值范围**： - single：单step插件。 - multi：组合插件。
+    * runtimeAttribution  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
+    * allSteps  **参数解释**： 基础插件列表。 **取值范围**： 不涉及。
+    * description  **参数解释**： 扩展插件描述。 **取值范围**： 不涉及。
+    * versionAttribution  **参数解释**： 标识是否为一个草稿。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 扩展插件图标URL。 **取值范围**： 不涉及。
+    * multiStepEditable  **参数解释**： 标识是否可继续进行添加步骤，默认是1，可进行添加。 **取值范围**： - 0：不可继续进行添加步骤。 - 1：可继续进行添加步骤。
+    * location  **参数解释**： 使用位置。 **取值范围**： 不涉及。
+    * publisherUniqueId  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 插件版本标识符。 **取值范围**： 不涉及。
+    * standard  **参数解释**： 标识是否为标准化的插件。 **取值范围**： - true：是标准化的插件。 - false：不是标准化的插件。
     *
     * @var string[]
     */
@@ -81,6 +93,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
         'displayName' => null,
         'pluginName' => null,
         'disabled' => null,
+        'dbRecordName' => null,
         'groupName' => null,
         'groupType' => null,
         'pluginAttribution' => null,
@@ -91,6 +104,9 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
         'versionAttribution' => null,
         'iconUrl' => null,
         'multiStepEditable' => 'int32',
+        'location' => null,
+        'publisherUniqueId' => null,
+        'manifestVersion' => null,
         'standard' => null
     ];
 
@@ -117,21 +133,25 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * uniqueId  唯一ID
-    * displayName  展示名
-    * pluginName  插件名
-    * disabled  禁用
-    * groupName  组名
-    * groupType  组类型
-    * pluginAttribution  插件属性
-    * pluginCompositionType  组合插件
-    * runtimeAttribution  运行属性
-    * allSteps  基础插件列表
-    * description  描述
-    * versionAttribution  版本属性
-    * iconUrl  图标URL
-    * multiStepEditable  是否可编辑
-    * standard  标准
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名。 **取值范围**： 不涉及。
+    * disabled  **参数解释**： 当前插件对后续选择使用的流水线是否为禁用状态，默认为false。 **取值范围**： - true：被禁用。 - false：未被禁用。
+    * dbRecordName  **参数解释**： 插件记录展示名称。 **取值范围**： 不涉及。
+    * groupName  **参数解释**： 流水线stage下的分组名称。 **取值范围**： 不涉及。
+    * groupType  **参数解释**： 流水线stage下的分组类型。 **取值范围**： 不涉及。
+    * pluginAttribution  **参数解释**： 标识是否为官方插件。 **取值范围**： 不涉及。
+    * pluginCompositionType  **参数解释**： 标识是否为多个step组成的组。 **取值范围**： - single：单step插件。 - multi：组合插件。
+    * runtimeAttribution  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
+    * allSteps  **参数解释**： 基础插件列表。 **取值范围**： 不涉及。
+    * description  **参数解释**： 扩展插件描述。 **取值范围**： 不涉及。
+    * versionAttribution  **参数解释**： 标识是否为一个草稿。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 扩展插件图标URL。 **取值范围**： 不涉及。
+    * multiStepEditable  **参数解释**： 标识是否可继续进行添加步骤，默认是1，可进行添加。 **取值范围**： - 0：不可继续进行添加步骤。 - 1：可继续进行添加步骤。
+    * location  **参数解释**： 使用位置。 **取值范围**： 不涉及。
+    * publisherUniqueId  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 插件版本标识符。 **取值范围**： 不涉及。
+    * standard  **参数解释**： 标识是否为标准化的插件。 **取值范围**： - true：是标准化的插件。 - false：不是标准化的插件。
     *
     * @var string[]
     */
@@ -140,6 +160,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
             'displayName' => 'display_name',
             'pluginName' => 'plugin_name',
             'disabled' => 'disabled',
+            'dbRecordName' => 'db_record_name',
             'groupName' => 'group_name',
             'groupType' => 'group_type',
             'pluginAttribution' => 'plugin_attribution',
@@ -150,26 +171,33 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
             'versionAttribution' => 'version_attribution',
             'iconUrl' => 'icon_url',
             'multiStepEditable' => 'multi_step_editable',
+            'location' => 'location',
+            'publisherUniqueId' => 'publisher_unique_id',
+            'manifestVersion' => 'manifest_version',
             'standard' => 'standard'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * uniqueId  唯一ID
-    * displayName  展示名
-    * pluginName  插件名
-    * disabled  禁用
-    * groupName  组名
-    * groupType  组类型
-    * pluginAttribution  插件属性
-    * pluginCompositionType  组合插件
-    * runtimeAttribution  运行属性
-    * allSteps  基础插件列表
-    * description  描述
-    * versionAttribution  版本属性
-    * iconUrl  图标URL
-    * multiStepEditable  是否可编辑
-    * standard  标准
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名。 **取值范围**： 不涉及。
+    * disabled  **参数解释**： 当前插件对后续选择使用的流水线是否为禁用状态，默认为false。 **取值范围**： - true：被禁用。 - false：未被禁用。
+    * dbRecordName  **参数解释**： 插件记录展示名称。 **取值范围**： 不涉及。
+    * groupName  **参数解释**： 流水线stage下的分组名称。 **取值范围**： 不涉及。
+    * groupType  **参数解释**： 流水线stage下的分组类型。 **取值范围**： 不涉及。
+    * pluginAttribution  **参数解释**： 标识是否为官方插件。 **取值范围**： 不涉及。
+    * pluginCompositionType  **参数解释**： 标识是否为多个step组成的组。 **取值范围**： - single：单step插件。 - multi：组合插件。
+    * runtimeAttribution  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
+    * allSteps  **参数解释**： 基础插件列表。 **取值范围**： 不涉及。
+    * description  **参数解释**： 扩展插件描述。 **取值范围**： 不涉及。
+    * versionAttribution  **参数解释**： 标识是否为一个草稿。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 扩展插件图标URL。 **取值范围**： 不涉及。
+    * multiStepEditable  **参数解释**： 标识是否可继续进行添加步骤，默认是1，可进行添加。 **取值范围**： - 0：不可继续进行添加步骤。 - 1：可继续进行添加步骤。
+    * location  **参数解释**： 使用位置。 **取值范围**： 不涉及。
+    * publisherUniqueId  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 插件版本标识符。 **取值范围**： 不涉及。
+    * standard  **参数解释**： 标识是否为标准化的插件。 **取值范围**： - true：是标准化的插件。 - false：不是标准化的插件。
     *
     * @var string[]
     */
@@ -178,6 +206,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
             'displayName' => 'setDisplayName',
             'pluginName' => 'setPluginName',
             'disabled' => 'setDisabled',
+            'dbRecordName' => 'setDbRecordName',
             'groupName' => 'setGroupName',
             'groupType' => 'setGroupType',
             'pluginAttribution' => 'setPluginAttribution',
@@ -188,26 +217,33 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
             'versionAttribution' => 'setVersionAttribution',
             'iconUrl' => 'setIconUrl',
             'multiStepEditable' => 'setMultiStepEditable',
+            'location' => 'setLocation',
+            'publisherUniqueId' => 'setPublisherUniqueId',
+            'manifestVersion' => 'setManifestVersion',
             'standard' => 'setStandard'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * uniqueId  唯一ID
-    * displayName  展示名
-    * pluginName  插件名
-    * disabled  禁用
-    * groupName  组名
-    * groupType  组类型
-    * pluginAttribution  插件属性
-    * pluginCompositionType  组合插件
-    * runtimeAttribution  运行属性
-    * allSteps  基础插件列表
-    * description  描述
-    * versionAttribution  版本属性
-    * iconUrl  图标URL
-    * multiStepEditable  是否可编辑
-    * standard  标准
+    * uniqueId  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 展示名。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 插件名。 **取值范围**： 不涉及。
+    * disabled  **参数解释**： 当前插件对后续选择使用的流水线是否为禁用状态，默认为false。 **取值范围**： - true：被禁用。 - false：未被禁用。
+    * dbRecordName  **参数解释**： 插件记录展示名称。 **取值范围**： 不涉及。
+    * groupName  **参数解释**： 流水线stage下的分组名称。 **取值范围**： 不涉及。
+    * groupType  **参数解释**： 流水线stage下的分组类型。 **取值范围**： 不涉及。
+    * pluginAttribution  **参数解释**： 标识是否为官方插件。 **取值范围**： 不涉及。
+    * pluginCompositionType  **参数解释**： 标识是否为多个step组成的组。 **取值范围**： - single：单step插件。 - multi：组合插件。
+    * runtimeAttribution  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
+    * allSteps  **参数解释**： 基础插件列表。 **取值范围**： 不涉及。
+    * description  **参数解释**： 扩展插件描述。 **取值范围**： 不涉及。
+    * versionAttribution  **参数解释**： 标识是否为一个草稿。 **取值范围**： 不涉及。
+    * iconUrl  **参数解释**： 扩展插件图标URL。 **取值范围**： 不涉及。
+    * multiStepEditable  **参数解释**： 标识是否可继续进行添加步骤，默认是1，可进行添加。 **取值范围**： - 0：不可继续进行添加步骤。 - 1：可继续进行添加步骤。
+    * location  **参数解释**： 使用位置。 **取值范围**： 不涉及。
+    * publisherUniqueId  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    * manifestVersion  **参数解释**： 插件版本标识符。 **取值范围**： 不涉及。
+    * standard  **参数解释**： 标识是否为标准化的插件。 **取值范围**： - true：是标准化的插件。 - false：不是标准化的插件。
     *
     * @var string[]
     */
@@ -216,6 +252,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
             'displayName' => 'getDisplayName',
             'pluginName' => 'getPluginName',
             'disabled' => 'getDisabled',
+            'dbRecordName' => 'getDbRecordName',
             'groupName' => 'getGroupName',
             'groupType' => 'getGroupType',
             'pluginAttribution' => 'getPluginAttribution',
@@ -226,6 +263,9 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
             'versionAttribution' => 'getVersionAttribution',
             'iconUrl' => 'getIconUrl',
             'multiStepEditable' => 'getMultiStepEditable',
+            'location' => 'getLocation',
+            'publisherUniqueId' => 'getPublisherUniqueId',
+            'manifestVersion' => 'getManifestVersion',
             'standard' => 'getStandard'
     ];
 
@@ -291,6 +331,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
         $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
         $this->container['pluginName'] = isset($data['pluginName']) ? $data['pluginName'] : null;
         $this->container['disabled'] = isset($data['disabled']) ? $data['disabled'] : null;
+        $this->container['dbRecordName'] = isset($data['dbRecordName']) ? $data['dbRecordName'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['groupType'] = isset($data['groupType']) ? $data['groupType'] : null;
         $this->container['pluginAttribution'] = isset($data['pluginAttribution']) ? $data['pluginAttribution'] : null;
@@ -301,6 +342,9 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
         $this->container['versionAttribution'] = isset($data['versionAttribution']) ? $data['versionAttribution'] : null;
         $this->container['iconUrl'] = isset($data['iconUrl']) ? $data['iconUrl'] : null;
         $this->container['multiStepEditable'] = isset($data['multiStepEditable']) ? $data['multiStepEditable'] : null;
+        $this->container['location'] = isset($data['location']) ? $data['location'] : null;
+        $this->container['publisherUniqueId'] = isset($data['publisherUniqueId']) ? $data['publisherUniqueId'] : null;
+        $this->container['manifestVersion'] = isset($data['manifestVersion']) ? $data['manifestVersion'] : null;
         $this->container['standard'] = isset($data['standard']) ? $data['standard'] : null;
     }
 
@@ -328,7 +372,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
 
     /**
     * Gets uniqueId
-    *  唯一ID
+    *  **参数解释**： 唯一ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -340,7 +384,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     /**
     * Sets uniqueId
     *
-    * @param string|null $uniqueId 唯一ID
+    * @param string|null $uniqueId **参数解释**： 唯一ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -352,7 +396,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
 
     /**
     * Gets displayName
-    *  展示名
+    *  **参数解释**： 展示名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -364,7 +408,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     /**
     * Sets displayName
     *
-    * @param string|null $displayName 展示名
+    * @param string|null $displayName **参数解释**： 展示名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -376,7 +420,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
 
     /**
     * Gets pluginName
-    *  插件名
+    *  **参数解释**： 插件名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -388,7 +432,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 插件名
+    * @param string|null $pluginName **参数解释**： 插件名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -400,7 +444,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
 
     /**
     * Gets disabled
-    *  禁用
+    *  **参数解释**： 当前插件对后续选择使用的流水线是否为禁用状态，默认为false。 **取值范围**： - true：被禁用。 - false：未被禁用。
     *
     * @return bool|null
     */
@@ -412,7 +456,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     /**
     * Sets disabled
     *
-    * @param bool|null $disabled 禁用
+    * @param bool|null $disabled **参数解释**： 当前插件对后续选择使用的流水线是否为禁用状态，默认为false。 **取值范围**： - true：被禁用。 - false：未被禁用。
     *
     * @return $this
     */
@@ -423,8 +467,32 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     }
 
     /**
+    * Gets dbRecordName
+    *  **参数解释**： 插件记录展示名称。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDbRecordName()
+    {
+        return $this->container['dbRecordName'];
+    }
+
+    /**
+    * Sets dbRecordName
+    *
+    * @param string|null $dbRecordName **参数解释**： 插件记录展示名称。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDbRecordName($dbRecordName)
+    {
+        $this->container['dbRecordName'] = $dbRecordName;
+        return $this;
+    }
+
+    /**
     * Gets groupName
-    *  组名
+    *  **参数解释**： 流水线stage下的分组名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -436,7 +504,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 组名
+    * @param string|null $groupName **参数解释**： 流水线stage下的分组名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -448,7 +516,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
 
     /**
     * Gets groupType
-    *  组类型
+    *  **参数解释**： 流水线stage下的分组类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -460,7 +528,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     /**
     * Sets groupType
     *
-    * @param string|null $groupType 组类型
+    * @param string|null $groupType **参数解释**： 流水线stage下的分组类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -472,7 +540,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
 
     /**
     * Gets pluginAttribution
-    *  插件属性
+    *  **参数解释**： 标识是否为官方插件。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -484,7 +552,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     /**
     * Sets pluginAttribution
     *
-    * @param string|null $pluginAttribution 插件属性
+    * @param string|null $pluginAttribution **参数解释**： 标识是否为官方插件。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -496,7 +564,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
 
     /**
     * Gets pluginCompositionType
-    *  组合插件
+    *  **参数解释**： 标识是否为多个step组成的组。 **取值范围**： - single：单step插件。 - multi：组合插件。
     *
     * @return string|null
     */
@@ -508,7 +576,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     /**
     * Sets pluginCompositionType
     *
-    * @param string|null $pluginCompositionType 组合插件
+    * @param string|null $pluginCompositionType **参数解释**： 标识是否为多个step组成的组。 **取值范围**： - single：单step插件。 - multi：组合插件。
     *
     * @return $this
     */
@@ -520,7 +588,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
 
     /**
     * Gets runtimeAttribution
-    *  运行属性
+    *  **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
     *
     * @return string|null
     */
@@ -532,7 +600,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     /**
     * Sets runtimeAttribution
     *
-    * @param string|null $runtimeAttribution 运行属性
+    * @param string|null $runtimeAttribution **参数解释**： 运行属性。 **取值范围**： - agent：运行基于流水线agent。 - agentLess：运行无需流水线agent。
     *
     * @return $this
     */
@@ -544,7 +612,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
 
     /**
     * Gets allSteps
-    *  基础插件列表
+    *  **参数解释**： 基础插件列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\FullStagePluginsRelationVOAllSteps[]|null
     */
@@ -556,7 +624,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     /**
     * Sets allSteps
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\FullStagePluginsRelationVOAllSteps[]|null $allSteps 基础插件列表
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\FullStagePluginsRelationVOAllSteps[]|null $allSteps **参数解释**： 基础插件列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -568,7 +636,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释**： 扩展插件描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -580,7 +648,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释**： 扩展插件描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -592,7 +660,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
 
     /**
     * Gets versionAttribution
-    *  版本属性
+    *  **参数解释**： 标识是否为一个草稿。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -604,7 +672,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     /**
     * Sets versionAttribution
     *
-    * @param string|null $versionAttribution 版本属性
+    * @param string|null $versionAttribution **参数解释**： 标识是否为一个草稿。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -616,7 +684,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
 
     /**
     * Gets iconUrl
-    *  图标URL
+    *  **参数解释**： 扩展插件图标URL。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -628,7 +696,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     /**
     * Sets iconUrl
     *
-    * @param string|null $iconUrl 图标URL
+    * @param string|null $iconUrl **参数解释**： 扩展插件图标URL。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -640,7 +708,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
 
     /**
     * Gets multiStepEditable
-    *  是否可编辑
+    *  **参数解释**： 标识是否可继续进行添加步骤，默认是1，可进行添加。 **取值范围**： - 0：不可继续进行添加步骤。 - 1：可继续进行添加步骤。
     *
     * @return int|null
     */
@@ -652,7 +720,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     /**
     * Sets multiStepEditable
     *
-    * @param int|null $multiStepEditable 是否可编辑
+    * @param int|null $multiStepEditable **参数解释**： 标识是否可继续进行添加步骤，默认是1，可进行添加。 **取值范围**： - 0：不可继续进行添加步骤。 - 1：可继续进行添加步骤。
     *
     * @return $this
     */
@@ -663,8 +731,80 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     }
 
     /**
+    * Gets location
+    *  **参数解释**： 使用位置。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLocation()
+    {
+        return $this->container['location'];
+    }
+
+    /**
+    * Sets location
+    *
+    * @param string|null $location **参数解释**： 使用位置。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setLocation($location)
+    {
+        $this->container['location'] = $location;
+        return $this;
+    }
+
+    /**
+    * Gets publisherUniqueId
+    *  **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getPublisherUniqueId()
+    {
+        return $this->container['publisherUniqueId'];
+    }
+
+    /**
+    * Sets publisherUniqueId
+    *
+    * @param string|null $publisherUniqueId **参数解释**： 发布商ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setPublisherUniqueId($publisherUniqueId)
+    {
+        $this->container['publisherUniqueId'] = $publisherUniqueId;
+        return $this;
+    }
+
+    /**
+    * Gets manifestVersion
+    *  **参数解释**： 插件版本标识符。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getManifestVersion()
+    {
+        return $this->container['manifestVersion'];
+    }
+
+    /**
+    * Sets manifestVersion
+    *
+    * @param string|null $manifestVersion **参数解释**： 插件版本标识符。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setManifestVersion($manifestVersion)
+    {
+        $this->container['manifestVersion'] = $manifestVersion;
+        return $this;
+    }
+
+    /**
     * Gets standard
-    *  标准
+    *  **参数解释**： 标识是否为标准化的插件。 **取值范围**： - true：是标准化的插件。 - false：不是标准化的插件。
     *
     * @return bool|null
     */
@@ -676,7 +816,7 @@ class FullStagePluginsRelationVOPluginsList implements ModelInterface, ArrayAcce
     /**
     * Sets standard
     *
-    * @param bool|null $standard 标准
+    * @param bool|null $standard **参数解释**： 标识是否为标准化的插件。 **取值范围**： - true：是标准化的插件。 - false：不是标准化的插件。
     *
     * @return $this
     */

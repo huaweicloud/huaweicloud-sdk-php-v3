@@ -21,7 +21,7 @@ class PipelineExecuteStates implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * result  流水线执行结果。取值及含义：success：成功；error：失败；aborted：终止
-    * status  流水线执行状态.取值和含义:waiting:等待;running:执行中;verifying:待审核;suspending:挂起;completed:完成
+    * status  流水线执行状态。
     * stages  阶段执行情况
     * executor  执行人
     * pipelineName  流水线名字
@@ -51,7 +51,7 @@ class PipelineExecuteStates implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * result  流水线执行结果。取值及含义：success：成功；error：失败；aborted：终止
-    * status  流水线执行状态.取值和含义:waiting:等待;running:执行中;verifying:待审核;suspending:挂起;completed:完成
+    * status  流水线执行状态。
     * stages  阶段执行情况
     * executor  执行人
     * pipelineName  流水线名字
@@ -102,7 +102,7 @@ class PipelineExecuteStates implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * result  流水线执行结果。取值及含义：success：成功；error：失败；aborted：终止
-    * status  流水线执行状态.取值和含义:waiting:等待;running:执行中;verifying:待审核;suspending:挂起;completed:完成
+    * status  流水线执行状态。
     * stages  阶段执行情况
     * executor  执行人
     * pipelineName  流水线名字
@@ -132,7 +132,7 @@ class PipelineExecuteStates implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * result  流水线执行结果。取值及含义：success：成功；error：失败；aborted：终止
-    * status  流水线执行状态.取值和含义:waiting:等待;running:执行中;verifying:待审核;suspending:挂起;completed:完成
+    * status  流水线执行状态。
     * stages  阶段执行情况
     * executor  执行人
     * pipelineName  流水线名字
@@ -162,7 +162,7 @@ class PipelineExecuteStates implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * result  流水线执行结果。取值及含义：success：成功；error：失败；aborted：终止
-    * status  流水线执行状态.取值和含义:waiting:等待;running:执行中;verifying:待审核;suspending:挂起;completed:完成
+    * status  流水线执行状态。
     * stages  阶段执行情况
     * executor  执行人
     * pipelineName  流水线名字
@@ -341,7 +341,7 @@ class PipelineExecuteStates implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  流水线执行状态.取值和含义:waiting:等待;running:执行中;verifying:待审核;suspending:挂起;completed:完成
+    *  流水线执行状态。
     *
     * @return string
     */
@@ -353,7 +353,7 @@ class PipelineExecuteStates implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 流水线执行状态.取值和含义:waiting:等待;running:执行中;verifying:待审核;suspending:挂起;completed:完成
+    * @param string $status 流水线执行状态。
     *
     * @return $this
     */

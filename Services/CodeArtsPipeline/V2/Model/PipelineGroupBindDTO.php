@@ -20,8 +20,8 @@ class PipelineGroupBindDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  分组ID
-    * pipelines  流水线集合
+    * groupId  **参数解释**： 分组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pipelines  **参数解释**： 流水线集合。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class PipelineGroupBindDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  分组ID
-    * pipelines  流水线集合
+    * groupId  **参数解释**： 分组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pipelines  **参数解释**： 流水线集合。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class PipelineGroupBindDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  分组ID
-    * pipelines  流水线集合
+    * groupId  **参数解释**： 分组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pipelines  **参数解释**： 流水线集合。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class PipelineGroupBindDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  分组ID
-    * pipelines  流水线集合
+    * groupId  **参数解释**： 分组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pipelines  **参数解释**： 流水线集合。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class PipelineGroupBindDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  分组ID
-    * pipelines  流水线集合
+    * groupId  **参数解释**： 分组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pipelines  **参数解释**： 流水线集合。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class PipelineGroupBindDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  分组ID
+    *  **参数解释**： 分组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class PipelineGroupBindDTO implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string $groupId 分组ID
+    * @param string $groupId **参数解释**： 分组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class PipelineGroupBindDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets pipelines
-    *  流水线集合
+    *  **参数解释**： 流水线集合。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineGroupBindDTOPipelines[]
     */
@@ -227,7 +227,7 @@ class PipelineGroupBindDTO implements ModelInterface, ArrayAccess
     /**
     * Sets pipelines
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineGroupBindDTOPipelines[] $pipelines 流水线集合
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineGroupBindDTOPipelines[] $pipelines **参数解释**： 流水线集合。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
