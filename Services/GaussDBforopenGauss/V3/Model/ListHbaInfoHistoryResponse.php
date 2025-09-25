@@ -21,25 +21,25 @@ class ListHbaInfoHistoryResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hbaConfs  **参数解释**: hba修改历史信息。
+    * hbaHistories  **参数解释**: hba修改历史信息。
     * totalCount  **参数解释**: hba配置总数。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'hbaConfs' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HbaHistoryResult[]',
+            'hbaHistories' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HbaHistoryResult[]',
             'totalCount' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hbaConfs  **参数解释**: hba修改历史信息。
+    * hbaHistories  **参数解释**: hba修改历史信息。
     * totalCount  **参数解释**: hba配置总数。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'hbaConfs' => null,
+        'hbaHistories' => null,
         'totalCount' => 'int64'
     ];
 
@@ -66,37 +66,37 @@ class ListHbaInfoHistoryResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hbaConfs  **参数解释**: hba修改历史信息。
+    * hbaHistories  **参数解释**: hba修改历史信息。
     * totalCount  **参数解释**: hba配置总数。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'hbaConfs' => 'hba_confs',
+            'hbaHistories' => 'hba_histories',
             'totalCount' => 'total_count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hbaConfs  **参数解释**: hba修改历史信息。
+    * hbaHistories  **参数解释**: hba修改历史信息。
     * totalCount  **参数解释**: hba配置总数。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'hbaConfs' => 'setHbaConfs',
+            'hbaHistories' => 'setHbaHistories',
             'totalCount' => 'setTotalCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hbaConfs  **参数解释**: hba修改历史信息。
+    * hbaHistories  **参数解释**: hba修改历史信息。
     * totalCount  **参数解释**: hba配置总数。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'hbaConfs' => 'getHbaConfs',
+            'hbaHistories' => 'getHbaHistories',
             'totalCount' => 'getTotalCount'
     ];
 
@@ -158,7 +158,7 @@ class ListHbaInfoHistoryResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['hbaConfs'] = isset($data['hbaConfs']) ? $data['hbaConfs'] : null;
+        $this->container['hbaHistories'] = isset($data['hbaHistories']) ? $data['hbaHistories'] : null;
         $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
     }
 
@@ -185,26 +185,26 @@ class ListHbaInfoHistoryResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets hbaConfs
+    * Gets hbaHistories
     *  **参数解释**: hba修改历史信息。
     *
     * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HbaHistoryResult[]|null
     */
-    public function getHbaConfs()
+    public function getHbaHistories()
     {
-        return $this->container['hbaConfs'];
+        return $this->container['hbaHistories'];
     }
 
     /**
-    * Sets hbaConfs
+    * Sets hbaHistories
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HbaHistoryResult[]|null $hbaConfs **参数解释**: hba修改历史信息。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HbaHistoryResult[]|null $hbaHistories **参数解释**: hba修改历史信息。
     *
     * @return $this
     */
-    public function setHbaConfs($hbaConfs)
+    public function setHbaHistories($hbaHistories)
     {
-        $this->container['hbaConfs'] = $hbaConfs;
+        $this->container['hbaHistories'] = $hbaHistories;
         return $this;
     }
 

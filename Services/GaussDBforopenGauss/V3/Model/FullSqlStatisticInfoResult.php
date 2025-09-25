@@ -23,6 +23,15 @@ class FullSqlStatisticInfoResult implements ModelInterface, ArrayAccess
     * template  **参数解释**: SQL模板。未开启实例内核GUC参数（track_stmt_parameter）时，展示的是归一化SQL模板内容；开启该参数后，展示的是随机一条SQL记录中截断参数列表后的内容。 **取值范围**: 不涉及。
     * sqlId  **参数解释**: 归一化SQL ID。 **取值范围**: 不涉及。
     * sqlCount  **参数解释**: 汇总SQL条目数。 **取值范围**: 不涉及。
+    * totalSqlTime  **参数解释**: 总SQL耗时（微秒）。 **取值范围**: 不涉及。
+    * avgSqlTime  **参数解释**: 平均SQL耗时（微秒）。 **取值范围**: 不涉及。
+    * totalDbTime  **参数解释**: 总有效DB耗时（微秒）。 **取值范围**: 不涉及。
+    * totalCpuTime  **参数解释**: 总CPU耗时（微秒）。 **取值范围**: 不涉及。
+    * avgParseTime  **参数解释**: 平均解释器时间（微秒）。 **取值范围**: 不涉及。
+    * avgPlanTime  **参数解释**: 平均执行计划时间（微秒）。 **取值范围**: 不涉及。
+    * totalDataIoTime  **参数解释**: 总IO耗时（微秒）。 **取值范围**: 不涉及。
+    * avgNReturnedRows  **参数解释**: 平均返回行数。 **取值范围**: 不涉及。
+    * avgNTuplesFetched  **参数解释**: 平均扫描行数。 **取值范围**: 不涉及。
     * avgDbTime  **参数解释**: 平均有效DB耗时（微秒）。 **取值范围**: 不涉及。
     * avgCpuTime  **参数解释**: 平均CPU执行耗时（微秒）。 **取值范围**: 不涉及。
     * avgDataIoTime  **参数解释**: 平均IO耗时（微秒）。 **取值范围**: 不涉及。
@@ -37,13 +46,22 @@ class FullSqlStatisticInfoResult implements ModelInterface, ArrayAccess
             'template' => 'string',
             'sqlId' => 'string',
             'sqlCount' => 'int',
+            'totalSqlTime' => 'int',
+            'avgSqlTime' => 'int',
+            'totalDbTime' => 'int',
+            'totalCpuTime' => 'int',
+            'avgParseTime' => 'int',
+            'avgPlanTime' => 'int',
+            'totalDataIoTime' => 'int',
+            'avgNReturnedRows' => 'int',
+            'avgNTuplesFetched' => 'int',
             'avgDbTime' => 'int',
             'avgCpuTime' => 'int',
             'avgDataIoTime' => 'int',
             'avgExecutionTime' => 'int',
             'avgNBlocksHit' => 'int',
-            'startTimeStamp' => 'string',
-            'endTimeStamp' => 'string'
+            'startTimeStamp' => 'int',
+            'endTimeStamp' => 'int'
     ];
 
     /**
@@ -51,6 +69,15 @@ class FullSqlStatisticInfoResult implements ModelInterface, ArrayAccess
     * template  **参数解释**: SQL模板。未开启实例内核GUC参数（track_stmt_parameter）时，展示的是归一化SQL模板内容；开启该参数后，展示的是随机一条SQL记录中截断参数列表后的内容。 **取值范围**: 不涉及。
     * sqlId  **参数解释**: 归一化SQL ID。 **取值范围**: 不涉及。
     * sqlCount  **参数解释**: 汇总SQL条目数。 **取值范围**: 不涉及。
+    * totalSqlTime  **参数解释**: 总SQL耗时（微秒）。 **取值范围**: 不涉及。
+    * avgSqlTime  **参数解释**: 平均SQL耗时（微秒）。 **取值范围**: 不涉及。
+    * totalDbTime  **参数解释**: 总有效DB耗时（微秒）。 **取值范围**: 不涉及。
+    * totalCpuTime  **参数解释**: 总CPU耗时（微秒）。 **取值范围**: 不涉及。
+    * avgParseTime  **参数解释**: 平均解释器时间（微秒）。 **取值范围**: 不涉及。
+    * avgPlanTime  **参数解释**: 平均执行计划时间（微秒）。 **取值范围**: 不涉及。
+    * totalDataIoTime  **参数解释**: 总IO耗时（微秒）。 **取值范围**: 不涉及。
+    * avgNReturnedRows  **参数解释**: 平均返回行数。 **取值范围**: 不涉及。
+    * avgNTuplesFetched  **参数解释**: 平均扫描行数。 **取值范围**: 不涉及。
     * avgDbTime  **参数解释**: 平均有效DB耗时（微秒）。 **取值范围**: 不涉及。
     * avgCpuTime  **参数解释**: 平均CPU执行耗时（微秒）。 **取值范围**: 不涉及。
     * avgDataIoTime  **参数解释**: 平均IO耗时（微秒）。 **取值范围**: 不涉及。
@@ -65,13 +92,22 @@ class FullSqlStatisticInfoResult implements ModelInterface, ArrayAccess
         'template' => null,
         'sqlId' => null,
         'sqlCount' => 'int64',
+        'totalSqlTime' => 'int64',
+        'avgSqlTime' => 'int64',
+        'totalDbTime' => 'int64',
+        'totalCpuTime' => 'int64',
+        'avgParseTime' => 'int64',
+        'avgPlanTime' => 'int64',
+        'totalDataIoTime' => 'int64',
+        'avgNReturnedRows' => 'int64',
+        'avgNTuplesFetched' => 'int64',
         'avgDbTime' => 'int64',
         'avgCpuTime' => 'int64',
         'avgDataIoTime' => 'int64',
         'avgExecutionTime' => 'int64',
         'avgNBlocksHit' => 'int64',
-        'startTimeStamp' => null,
-        'endTimeStamp' => null
+        'startTimeStamp' => 'int64',
+        'endTimeStamp' => 'int64'
     ];
 
     /**
@@ -100,6 +136,15 @@ class FullSqlStatisticInfoResult implements ModelInterface, ArrayAccess
     * template  **参数解释**: SQL模板。未开启实例内核GUC参数（track_stmt_parameter）时，展示的是归一化SQL模板内容；开启该参数后，展示的是随机一条SQL记录中截断参数列表后的内容。 **取值范围**: 不涉及。
     * sqlId  **参数解释**: 归一化SQL ID。 **取值范围**: 不涉及。
     * sqlCount  **参数解释**: 汇总SQL条目数。 **取值范围**: 不涉及。
+    * totalSqlTime  **参数解释**: 总SQL耗时（微秒）。 **取值范围**: 不涉及。
+    * avgSqlTime  **参数解释**: 平均SQL耗时（微秒）。 **取值范围**: 不涉及。
+    * totalDbTime  **参数解释**: 总有效DB耗时（微秒）。 **取值范围**: 不涉及。
+    * totalCpuTime  **参数解释**: 总CPU耗时（微秒）。 **取值范围**: 不涉及。
+    * avgParseTime  **参数解释**: 平均解释器时间（微秒）。 **取值范围**: 不涉及。
+    * avgPlanTime  **参数解释**: 平均执行计划时间（微秒）。 **取值范围**: 不涉及。
+    * totalDataIoTime  **参数解释**: 总IO耗时（微秒）。 **取值范围**: 不涉及。
+    * avgNReturnedRows  **参数解释**: 平均返回行数。 **取值范围**: 不涉及。
+    * avgNTuplesFetched  **参数解释**: 平均扫描行数。 **取值范围**: 不涉及。
     * avgDbTime  **参数解释**: 平均有效DB耗时（微秒）。 **取值范围**: 不涉及。
     * avgCpuTime  **参数解释**: 平均CPU执行耗时（微秒）。 **取值范围**: 不涉及。
     * avgDataIoTime  **参数解释**: 平均IO耗时（微秒）。 **取值范围**: 不涉及。
@@ -114,6 +159,15 @@ class FullSqlStatisticInfoResult implements ModelInterface, ArrayAccess
             'template' => 'template',
             'sqlId' => 'sql_id',
             'sqlCount' => 'sql_count',
+            'totalSqlTime' => 'total_sql_time',
+            'avgSqlTime' => 'avg_sql_time',
+            'totalDbTime' => 'total_db_time',
+            'totalCpuTime' => 'total_cpu_time',
+            'avgParseTime' => 'avg_parse_time',
+            'avgPlanTime' => 'avg_plan_time',
+            'totalDataIoTime' => 'total_data_io_time',
+            'avgNReturnedRows' => 'avg_n_returned_rows',
+            'avgNTuplesFetched' => 'avg_n_tuples_fetched',
             'avgDbTime' => 'avg_db_time',
             'avgCpuTime' => 'avg_cpu_time',
             'avgDataIoTime' => 'avg_data_io_time',
@@ -128,6 +182,15 @@ class FullSqlStatisticInfoResult implements ModelInterface, ArrayAccess
     * template  **参数解释**: SQL模板。未开启实例内核GUC参数（track_stmt_parameter）时，展示的是归一化SQL模板内容；开启该参数后，展示的是随机一条SQL记录中截断参数列表后的内容。 **取值范围**: 不涉及。
     * sqlId  **参数解释**: 归一化SQL ID。 **取值范围**: 不涉及。
     * sqlCount  **参数解释**: 汇总SQL条目数。 **取值范围**: 不涉及。
+    * totalSqlTime  **参数解释**: 总SQL耗时（微秒）。 **取值范围**: 不涉及。
+    * avgSqlTime  **参数解释**: 平均SQL耗时（微秒）。 **取值范围**: 不涉及。
+    * totalDbTime  **参数解释**: 总有效DB耗时（微秒）。 **取值范围**: 不涉及。
+    * totalCpuTime  **参数解释**: 总CPU耗时（微秒）。 **取值范围**: 不涉及。
+    * avgParseTime  **参数解释**: 平均解释器时间（微秒）。 **取值范围**: 不涉及。
+    * avgPlanTime  **参数解释**: 平均执行计划时间（微秒）。 **取值范围**: 不涉及。
+    * totalDataIoTime  **参数解释**: 总IO耗时（微秒）。 **取值范围**: 不涉及。
+    * avgNReturnedRows  **参数解释**: 平均返回行数。 **取值范围**: 不涉及。
+    * avgNTuplesFetched  **参数解释**: 平均扫描行数。 **取值范围**: 不涉及。
     * avgDbTime  **参数解释**: 平均有效DB耗时（微秒）。 **取值范围**: 不涉及。
     * avgCpuTime  **参数解释**: 平均CPU执行耗时（微秒）。 **取值范围**: 不涉及。
     * avgDataIoTime  **参数解释**: 平均IO耗时（微秒）。 **取值范围**: 不涉及。
@@ -142,6 +205,15 @@ class FullSqlStatisticInfoResult implements ModelInterface, ArrayAccess
             'template' => 'setTemplate',
             'sqlId' => 'setSqlId',
             'sqlCount' => 'setSqlCount',
+            'totalSqlTime' => 'setTotalSqlTime',
+            'avgSqlTime' => 'setAvgSqlTime',
+            'totalDbTime' => 'setTotalDbTime',
+            'totalCpuTime' => 'setTotalCpuTime',
+            'avgParseTime' => 'setAvgParseTime',
+            'avgPlanTime' => 'setAvgPlanTime',
+            'totalDataIoTime' => 'setTotalDataIoTime',
+            'avgNReturnedRows' => 'setAvgNReturnedRows',
+            'avgNTuplesFetched' => 'setAvgNTuplesFetched',
             'avgDbTime' => 'setAvgDbTime',
             'avgCpuTime' => 'setAvgCpuTime',
             'avgDataIoTime' => 'setAvgDataIoTime',
@@ -156,6 +228,15 @@ class FullSqlStatisticInfoResult implements ModelInterface, ArrayAccess
     * template  **参数解释**: SQL模板。未开启实例内核GUC参数（track_stmt_parameter）时，展示的是归一化SQL模板内容；开启该参数后，展示的是随机一条SQL记录中截断参数列表后的内容。 **取值范围**: 不涉及。
     * sqlId  **参数解释**: 归一化SQL ID。 **取值范围**: 不涉及。
     * sqlCount  **参数解释**: 汇总SQL条目数。 **取值范围**: 不涉及。
+    * totalSqlTime  **参数解释**: 总SQL耗时（微秒）。 **取值范围**: 不涉及。
+    * avgSqlTime  **参数解释**: 平均SQL耗时（微秒）。 **取值范围**: 不涉及。
+    * totalDbTime  **参数解释**: 总有效DB耗时（微秒）。 **取值范围**: 不涉及。
+    * totalCpuTime  **参数解释**: 总CPU耗时（微秒）。 **取值范围**: 不涉及。
+    * avgParseTime  **参数解释**: 平均解释器时间（微秒）。 **取值范围**: 不涉及。
+    * avgPlanTime  **参数解释**: 平均执行计划时间（微秒）。 **取值范围**: 不涉及。
+    * totalDataIoTime  **参数解释**: 总IO耗时（微秒）。 **取值范围**: 不涉及。
+    * avgNReturnedRows  **参数解释**: 平均返回行数。 **取值范围**: 不涉及。
+    * avgNTuplesFetched  **参数解释**: 平均扫描行数。 **取值范围**: 不涉及。
     * avgDbTime  **参数解释**: 平均有效DB耗时（微秒）。 **取值范围**: 不涉及。
     * avgCpuTime  **参数解释**: 平均CPU执行耗时（微秒）。 **取值范围**: 不涉及。
     * avgDataIoTime  **参数解释**: 平均IO耗时（微秒）。 **取值范围**: 不涉及。
@@ -170,6 +251,15 @@ class FullSqlStatisticInfoResult implements ModelInterface, ArrayAccess
             'template' => 'getTemplate',
             'sqlId' => 'getSqlId',
             'sqlCount' => 'getSqlCount',
+            'totalSqlTime' => 'getTotalSqlTime',
+            'avgSqlTime' => 'getAvgSqlTime',
+            'totalDbTime' => 'getTotalDbTime',
+            'totalCpuTime' => 'getTotalCpuTime',
+            'avgParseTime' => 'getAvgParseTime',
+            'avgPlanTime' => 'getAvgPlanTime',
+            'totalDataIoTime' => 'getTotalDataIoTime',
+            'avgNReturnedRows' => 'getAvgNReturnedRows',
+            'avgNTuplesFetched' => 'getAvgNTuplesFetched',
             'avgDbTime' => 'getAvgDbTime',
             'avgCpuTime' => 'getAvgCpuTime',
             'avgDataIoTime' => 'getAvgDataIoTime',
@@ -240,6 +330,15 @@ class FullSqlStatisticInfoResult implements ModelInterface, ArrayAccess
         $this->container['template'] = isset($data['template']) ? $data['template'] : null;
         $this->container['sqlId'] = isset($data['sqlId']) ? $data['sqlId'] : null;
         $this->container['sqlCount'] = isset($data['sqlCount']) ? $data['sqlCount'] : null;
+        $this->container['totalSqlTime'] = isset($data['totalSqlTime']) ? $data['totalSqlTime'] : null;
+        $this->container['avgSqlTime'] = isset($data['avgSqlTime']) ? $data['avgSqlTime'] : null;
+        $this->container['totalDbTime'] = isset($data['totalDbTime']) ? $data['totalDbTime'] : null;
+        $this->container['totalCpuTime'] = isset($data['totalCpuTime']) ? $data['totalCpuTime'] : null;
+        $this->container['avgParseTime'] = isset($data['avgParseTime']) ? $data['avgParseTime'] : null;
+        $this->container['avgPlanTime'] = isset($data['avgPlanTime']) ? $data['avgPlanTime'] : null;
+        $this->container['totalDataIoTime'] = isset($data['totalDataIoTime']) ? $data['totalDataIoTime'] : null;
+        $this->container['avgNReturnedRows'] = isset($data['avgNReturnedRows']) ? $data['avgNReturnedRows'] : null;
+        $this->container['avgNTuplesFetched'] = isset($data['avgNTuplesFetched']) ? $data['avgNTuplesFetched'] : null;
         $this->container['avgDbTime'] = isset($data['avgDbTime']) ? $data['avgDbTime'] : null;
         $this->container['avgCpuTime'] = isset($data['avgCpuTime']) ? $data['avgCpuTime'] : null;
         $this->container['avgDataIoTime'] = isset($data['avgDataIoTime']) ? $data['avgDataIoTime'] : null;
@@ -340,6 +439,222 @@ class FullSqlStatisticInfoResult implements ModelInterface, ArrayAccess
     public function setSqlCount($sqlCount)
     {
         $this->container['sqlCount'] = $sqlCount;
+        return $this;
+    }
+
+    /**
+    * Gets totalSqlTime
+    *  **参数解释**: 总SQL耗时（微秒）。 **取值范围**: 不涉及。
+    *
+    * @return int|null
+    */
+    public function getTotalSqlTime()
+    {
+        return $this->container['totalSqlTime'];
+    }
+
+    /**
+    * Sets totalSqlTime
+    *
+    * @param int|null $totalSqlTime **参数解释**: 总SQL耗时（微秒）。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setTotalSqlTime($totalSqlTime)
+    {
+        $this->container['totalSqlTime'] = $totalSqlTime;
+        return $this;
+    }
+
+    /**
+    * Gets avgSqlTime
+    *  **参数解释**: 平均SQL耗时（微秒）。 **取值范围**: 不涉及。
+    *
+    * @return int|null
+    */
+    public function getAvgSqlTime()
+    {
+        return $this->container['avgSqlTime'];
+    }
+
+    /**
+    * Sets avgSqlTime
+    *
+    * @param int|null $avgSqlTime **参数解释**: 平均SQL耗时（微秒）。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setAvgSqlTime($avgSqlTime)
+    {
+        $this->container['avgSqlTime'] = $avgSqlTime;
+        return $this;
+    }
+
+    /**
+    * Gets totalDbTime
+    *  **参数解释**: 总有效DB耗时（微秒）。 **取值范围**: 不涉及。
+    *
+    * @return int|null
+    */
+    public function getTotalDbTime()
+    {
+        return $this->container['totalDbTime'];
+    }
+
+    /**
+    * Sets totalDbTime
+    *
+    * @param int|null $totalDbTime **参数解释**: 总有效DB耗时（微秒）。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setTotalDbTime($totalDbTime)
+    {
+        $this->container['totalDbTime'] = $totalDbTime;
+        return $this;
+    }
+
+    /**
+    * Gets totalCpuTime
+    *  **参数解释**: 总CPU耗时（微秒）。 **取值范围**: 不涉及。
+    *
+    * @return int|null
+    */
+    public function getTotalCpuTime()
+    {
+        return $this->container['totalCpuTime'];
+    }
+
+    /**
+    * Sets totalCpuTime
+    *
+    * @param int|null $totalCpuTime **参数解释**: 总CPU耗时（微秒）。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setTotalCpuTime($totalCpuTime)
+    {
+        $this->container['totalCpuTime'] = $totalCpuTime;
+        return $this;
+    }
+
+    /**
+    * Gets avgParseTime
+    *  **参数解释**: 平均解释器时间（微秒）。 **取值范围**: 不涉及。
+    *
+    * @return int|null
+    */
+    public function getAvgParseTime()
+    {
+        return $this->container['avgParseTime'];
+    }
+
+    /**
+    * Sets avgParseTime
+    *
+    * @param int|null $avgParseTime **参数解释**: 平均解释器时间（微秒）。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setAvgParseTime($avgParseTime)
+    {
+        $this->container['avgParseTime'] = $avgParseTime;
+        return $this;
+    }
+
+    /**
+    * Gets avgPlanTime
+    *  **参数解释**: 平均执行计划时间（微秒）。 **取值范围**: 不涉及。
+    *
+    * @return int|null
+    */
+    public function getAvgPlanTime()
+    {
+        return $this->container['avgPlanTime'];
+    }
+
+    /**
+    * Sets avgPlanTime
+    *
+    * @param int|null $avgPlanTime **参数解释**: 平均执行计划时间（微秒）。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setAvgPlanTime($avgPlanTime)
+    {
+        $this->container['avgPlanTime'] = $avgPlanTime;
+        return $this;
+    }
+
+    /**
+    * Gets totalDataIoTime
+    *  **参数解释**: 总IO耗时（微秒）。 **取值范围**: 不涉及。
+    *
+    * @return int|null
+    */
+    public function getTotalDataIoTime()
+    {
+        return $this->container['totalDataIoTime'];
+    }
+
+    /**
+    * Sets totalDataIoTime
+    *
+    * @param int|null $totalDataIoTime **参数解释**: 总IO耗时（微秒）。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setTotalDataIoTime($totalDataIoTime)
+    {
+        $this->container['totalDataIoTime'] = $totalDataIoTime;
+        return $this;
+    }
+
+    /**
+    * Gets avgNReturnedRows
+    *  **参数解释**: 平均返回行数。 **取值范围**: 不涉及。
+    *
+    * @return int|null
+    */
+    public function getAvgNReturnedRows()
+    {
+        return $this->container['avgNReturnedRows'];
+    }
+
+    /**
+    * Sets avgNReturnedRows
+    *
+    * @param int|null $avgNReturnedRows **参数解释**: 平均返回行数。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setAvgNReturnedRows($avgNReturnedRows)
+    {
+        $this->container['avgNReturnedRows'] = $avgNReturnedRows;
+        return $this;
+    }
+
+    /**
+    * Gets avgNTuplesFetched
+    *  **参数解释**: 平均扫描行数。 **取值范围**: 不涉及。
+    *
+    * @return int|null
+    */
+    public function getAvgNTuplesFetched()
+    {
+        return $this->container['avgNTuplesFetched'];
+    }
+
+    /**
+    * Sets avgNTuplesFetched
+    *
+    * @param int|null $avgNTuplesFetched **参数解释**: 平均扫描行数。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setAvgNTuplesFetched($avgNTuplesFetched)
+    {
+        $this->container['avgNTuplesFetched'] = $avgNTuplesFetched;
         return $this;
     }
 
@@ -467,7 +782,7 @@ class FullSqlStatisticInfoResult implements ModelInterface, ArrayAccess
     * Gets startTimeStamp
     *  **参数解释**: 开始时间戳。 **取值范围**: 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getStartTimeStamp()
     {
@@ -477,7 +792,7 @@ class FullSqlStatisticInfoResult implements ModelInterface, ArrayAccess
     /**
     * Sets startTimeStamp
     *
-    * @param string|null $startTimeStamp **参数解释**: 开始时间戳。 **取值范围**: 不涉及。
+    * @param int|null $startTimeStamp **参数解释**: 开始时间戳。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -491,7 +806,7 @@ class FullSqlStatisticInfoResult implements ModelInterface, ArrayAccess
     * Gets endTimeStamp
     *  **参数解释**: 结束时间戳。 **取值范围**: 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getEndTimeStamp()
     {
@@ -501,7 +816,7 @@ class FullSqlStatisticInfoResult implements ModelInterface, ArrayAccess
     /**
     * Sets endTimeStamp
     *
-    * @param string|null $endTimeStamp **参数解释**: 结束时间戳。 **取值范围**: 不涉及。
+    * @param int|null $endTimeStamp **参数解释**: 结束时间戳。 **取值范围**: 不涉及。
     *
     * @return $this
     */

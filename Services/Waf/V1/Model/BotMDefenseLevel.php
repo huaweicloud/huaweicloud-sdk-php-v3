@@ -20,8 +20,8 @@ class BotMDefenseLevel implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * threshold  **参数解释：** 该防护等级对应的分数门限，达到该分数则触发对应防护动作。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * defenseAction  **参数解释：** 该防护等级对应的防护动作ID，标识触发后执行的动作（如101表示验证码）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * threshold  **参数解释：** 该防护等级对应的分数门限，触发当前防护等级的风险分数阈值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * defenseAction  **参数解释：** 该防护等级对应的防护动作ID，如101表示拦截、102表示放行等 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class BotMDefenseLevel implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * threshold  **参数解释：** 该防护等级对应的分数门限，达到该分数则触发对应防护动作。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * defenseAction  **参数解释：** 该防护等级对应的防护动作ID，标识触发后执行的动作（如101表示验证码）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * threshold  **参数解释：** 该防护等级对应的分数门限，触发当前防护等级的风险分数阈值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * defenseAction  **参数解释：** 该防护等级对应的防护动作ID，如101表示拦截、102表示放行等 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BotMDefenseLevel implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * threshold  **参数解释：** 该防护等级对应的分数门限，达到该分数则触发对应防护动作。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * defenseAction  **参数解释：** 该防护等级对应的防护动作ID，标识触发后执行的动作（如101表示验证码）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * threshold  **参数解释：** 该防护等级对应的分数门限，触发当前防护等级的风险分数阈值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * defenseAction  **参数解释：** 该防护等级对应的防护动作ID，如101表示拦截、102表示放行等 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BotMDefenseLevel implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * threshold  **参数解释：** 该防护等级对应的分数门限，达到该分数则触发对应防护动作。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * defenseAction  **参数解释：** 该防护等级对应的防护动作ID，标识触发后执行的动作（如101表示验证码）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * threshold  **参数解释：** 该防护等级对应的分数门限，触发当前防护等级的风险分数阈值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * defenseAction  **参数解释：** 该防护等级对应的防护动作ID，如101表示拦截、102表示放行等 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BotMDefenseLevel implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * threshold  **参数解释：** 该防护等级对应的分数门限，达到该分数则触发对应防护动作。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * defenseAction  **参数解释：** 该防护等级对应的防护动作ID，标识触发后执行的动作（如101表示验证码）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * threshold  **参数解释：** 该防护等级对应的分数门限，触发当前防护等级的风险分数阈值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * defenseAction  **参数解释：** 该防护等级对应的防护动作ID，如101表示拦截、102表示放行等 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class BotMDefenseLevel implements ModelInterface, ArrayAccess
 
     /**
     * Gets threshold
-    *  **参数解释：** 该防护等级对应的分数门限，达到该分数则触发对应防护动作。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 该防护等级对应的分数门限，触发当前防护等级的风险分数阈值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -197,7 +197,7 @@ class BotMDefenseLevel implements ModelInterface, ArrayAccess
     /**
     * Sets threshold
     *
-    * @param int|null $threshold **参数解释：** 该防护等级对应的分数门限，达到该分数则触发对应防护动作。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param int|null $threshold **参数解释：** 该防护等级对应的分数门限，触发当前防护等级的风险分数阈值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class BotMDefenseLevel implements ModelInterface, ArrayAccess
 
     /**
     * Gets defenseAction
-    *  **参数解释：** 该防护等级对应的防护动作ID，标识触发后执行的动作（如101表示验证码）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 该防护等级对应的防护动作ID，如101表示拦截、102表示放行等 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class BotMDefenseLevel implements ModelInterface, ArrayAccess
     /**
     * Sets defenseAction
     *
-    * @param int|null $defenseAction **参数解释：** 该防护等级对应的防护动作ID，标识触发后执行的动作（如101表示验证码）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param int|null $defenseAction **参数解释：** 该防护等级对应的防护动作ID，如101表示拦截、102表示放行等 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

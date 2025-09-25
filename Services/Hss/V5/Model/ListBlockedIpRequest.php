@@ -25,7 +25,7 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
     * hostName  服务器名称
     * srcIp  攻击源IP
-    * interceptStatus  拦截状态，包含如下:   - intercepted : 已拦截   - canceled : 已解除拦截   - cancelling : 待解除拦截
+    * interceptStatus  **参数解释**： 拦截状态 **约束限制**: 不涉及 **取值范围**: - intercepted：已拦截。 - canceled：已解除拦截。 - cancelling：待解除拦截。  **默认取值**: 不涉及
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     *
@@ -49,7 +49,7 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
     * hostName  服务器名称
     * srcIp  攻击源IP
-    * interceptStatus  拦截状态，包含如下:   - intercepted : 已拦截   - canceled : 已解除拦截   - cancelling : 待解除拦截
+    * interceptStatus  **参数解释**： 拦截状态 **约束限制**: 不涉及 **取值范围**: - intercepted：已拦截。 - canceled：已解除拦截。 - cancelling：待解除拦截。  **默认取值**: 不涉及
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     *
@@ -94,7 +94,7 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
     * hostName  服务器名称
     * srcIp  攻击源IP
-    * interceptStatus  拦截状态，包含如下:   - intercepted : 已拦截   - canceled : 已解除拦截   - cancelling : 待解除拦截
+    * interceptStatus  **参数解释**： 拦截状态 **约束限制**: 不涉及 **取值范围**: - intercepted：已拦截。 - canceled：已解除拦截。 - cancelling：待解除拦截。  **默认取值**: 不涉及
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     *
@@ -118,7 +118,7 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
     * hostName  服务器名称
     * srcIp  攻击源IP
-    * interceptStatus  拦截状态，包含如下:   - intercepted : 已拦截   - canceled : 已解除拦截   - cancelling : 待解除拦截
+    * interceptStatus  **参数解释**： 拦截状态 **约束限制**: 不涉及 **取值范围**: - intercepted：已拦截。 - canceled：已解除拦截。 - cancelling：待解除拦截。  **默认取值**: 不涉及
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     *
@@ -142,7 +142,7 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
     * hostName  服务器名称
     * srcIp  攻击源IP
-    * interceptStatus  拦截状态，包含如下:   - intercepted : 已拦截   - canceled : 已解除拦截   - cancelling : 待解除拦截
+    * interceptStatus  **参数解释**： 拦截状态 **约束限制**: 不涉及 **取值范围**: - intercepted：已拦截。 - canceled：已解除拦截。 - cancelling：待解除拦截。  **默认取值**: 不涉及
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     *
@@ -431,7 +431,7 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets interceptStatus
-    *  拦截状态，包含如下:   - intercepted : 已拦截   - canceled : 已解除拦截   - cancelling : 待解除拦截
+    *  **参数解释**： 拦截状态 **约束限制**: 不涉及 **取值范围**: - intercepted：已拦截。 - canceled：已解除拦截。 - cancelling：待解除拦截。  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -443,7 +443,7 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
     /**
     * Sets interceptStatus
     *
-    * @param string|null $interceptStatus 拦截状态，包含如下:   - intercepted : 已拦截   - canceled : 已解除拦截   - cancelling : 待解除拦截
+    * @param string|null $interceptStatus **参数解释**： 拦截状态 **约束限制**: 不涉及 **取值范围**: - intercepted：已拦截。 - canceled：已解除拦截。 - cancelling：待解除拦截。  **默认取值**: 不涉及
     *
     * @return $this
     */

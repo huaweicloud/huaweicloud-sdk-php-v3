@@ -1011,68 +1011,6 @@ class RocketMQClient extends Client
     }
 
     /**
-     * 开启RocketMQ实例域名访问能力
-     *
-     * 开启RocketMQ实例域名访问能力。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function enableDns($request)
-    {
-        return $this->enableDnsWithHttpInfo($request);
-    }
-
-    public function enableDnsWithHttpInfo($request)
-    {
-        $resourcePath = '/v2/{project_id}/rocketmq/instances/{instance_id}/dns';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['instanceId'] !== null) {
-            $pathParams['instance_id'] = $localVarParams['instanceId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\RocketMQ\V2\Model\EnableDnsResponse',
-            $requestType='\HuaweiCloud\SDK\RocketMQ\V2\Model\EnableDnsRequest');
-    }
-
-    /**
      * 导出死信消息
      *
      * 导出死信消息。

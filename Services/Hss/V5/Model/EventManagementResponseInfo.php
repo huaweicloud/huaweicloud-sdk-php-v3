@@ -62,6 +62,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * eventDetails  **参数解释**： 事件信息的简述 **取值范围**： 字符长度0-204800位
     * tagList  标签列表
     * eventCount  **参数解释**： 事件发生次数 **取值范围**： 最小值0，最大值2147483647
+    * operateType  **参数解释**： 操作类型 **取值范围**： - add ：创建。 - delete ：删除。 - change_attribute ： 修改文件属性。 - modify ：修改文件内容。 - move ：移动。
     *
     * @var string[]
     */
@@ -107,7 +108,8 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
             'fileInfoList' => '\HuaweiCloud\SDK\Hss\V5\Model\EventFileResponseInfo[]',
             'eventDetails' => 'string',
             'tagList' => 'string[]',
-            'eventCount' => 'int'
+            'eventCount' => 'int',
+            'operateType' => 'string'
     ];
 
     /**
@@ -154,6 +156,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * eventDetails  **参数解释**： 事件信息的简述 **取值范围**： 字符长度0-204800位
     * tagList  标签列表
     * eventCount  **参数解释**： 事件发生次数 **取值范围**： 最小值0，最大值2147483647
+    * operateType  **参数解释**： 操作类型 **取值范围**： - add ：创建。 - delete ：删除。 - change_attribute ： 修改文件属性。 - modify ：修改文件内容。 - move ：移动。
     *
     * @var string[]
     */
@@ -199,7 +202,8 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
         'fileInfoList' => null,
         'eventDetails' => null,
         'tagList' => null,
-        'eventCount' => null
+        'eventCount' => null,
+        'operateType' => null
     ];
 
     /**
@@ -267,6 +271,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * eventDetails  **参数解释**： 事件信息的简述 **取值范围**： 字符长度0-204800位
     * tagList  标签列表
     * eventCount  **参数解释**： 事件发生次数 **取值范围**： 最小值0，最大值2147483647
+    * operateType  **参数解释**： 操作类型 **取值范围**： - add ：创建。 - delete ：删除。 - change_attribute ： 修改文件属性。 - modify ：修改文件内容。 - move ：移动。
     *
     * @var string[]
     */
@@ -312,7 +317,8 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
             'fileInfoList' => 'file_info_list',
             'eventDetails' => 'event_details',
             'tagList' => 'tag_list',
-            'eventCount' => 'event_count'
+            'eventCount' => 'event_count',
+            'operateType' => 'operate_type'
     ];
 
     /**
@@ -359,6 +365,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * eventDetails  **参数解释**： 事件信息的简述 **取值范围**： 字符长度0-204800位
     * tagList  标签列表
     * eventCount  **参数解释**： 事件发生次数 **取值范围**： 最小值0，最大值2147483647
+    * operateType  **参数解释**： 操作类型 **取值范围**： - add ：创建。 - delete ：删除。 - change_attribute ： 修改文件属性。 - modify ：修改文件内容。 - move ：移动。
     *
     * @var string[]
     */
@@ -404,7 +411,8 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
             'fileInfoList' => 'setFileInfoList',
             'eventDetails' => 'setEventDetails',
             'tagList' => 'setTagList',
-            'eventCount' => 'setEventCount'
+            'eventCount' => 'setEventCount',
+            'operateType' => 'setOperateType'
     ];
 
     /**
@@ -451,6 +459,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * eventDetails  **参数解释**： 事件信息的简述 **取值范围**： 字符长度0-204800位
     * tagList  标签列表
     * eventCount  **参数解释**： 事件发生次数 **取值范围**： 最小值0，最大值2147483647
+    * operateType  **参数解释**： 操作类型 **取值范围**： - add ：创建。 - delete ：删除。 - change_attribute ： 修改文件属性。 - modify ：修改文件内容。 - move ：移动。
     *
     * @var string[]
     */
@@ -496,7 +505,8 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
             'fileInfoList' => 'getFileInfoList',
             'eventDetails' => 'getEventDetails',
             'tagList' => 'getTagList',
-            'eventCount' => 'getEventCount'
+            'eventCount' => 'getEventCount',
+            'operateType' => 'getOperateType'
     ];
 
     /**
@@ -599,6 +609,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
         $this->container['eventDetails'] = isset($data['eventDetails']) ? $data['eventDetails'] : null;
         $this->container['tagList'] = isset($data['tagList']) ? $data['tagList'] : null;
         $this->container['eventCount'] = isset($data['eventCount']) ? $data['eventCount'] : null;
+        $this->container['operateType'] = isset($data['operateType']) ? $data['operateType'] : null;
     }
 
     /**
@@ -749,6 +760,12 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['eventCount']) && ($this->container['eventCount'] < 0)) {
                 $invalidProperties[] = "invalid value for 'eventCount', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['operateType']) && (mb_strlen($this->container['operateType']) > 128)) {
+                $invalidProperties[] = "invalid value for 'operateType', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['operateType']) && (mb_strlen($this->container['operateType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'operateType', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -1769,6 +1786,30 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     public function setEventCount($eventCount)
     {
         $this->container['eventCount'] = $eventCount;
+        return $this;
+    }
+
+    /**
+    * Gets operateType
+    *  **参数解释**： 操作类型 **取值范围**： - add ：创建。 - delete ：删除。 - change_attribute ： 修改文件属性。 - modify ：修改文件内容。 - move ：移动。
+    *
+    * @return string|null
+    */
+    public function getOperateType()
+    {
+        return $this->container['operateType'];
+    }
+
+    /**
+    * Sets operateType
+    *
+    * @param string|null $operateType **参数解释**： 操作类型 **取值范围**： - add ：创建。 - delete ：删除。 - change_attribute ： 修改文件属性。 - modify ：修改文件内容。 - move ：移动。
+    *
+    * @return $this
+    */
+    public function setOperateType($operateType)
+    {
+        $this->container['operateType'] = $operateType;
         return $this;
     }
 

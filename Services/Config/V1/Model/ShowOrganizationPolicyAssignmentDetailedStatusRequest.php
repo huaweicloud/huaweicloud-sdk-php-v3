@@ -251,11 +251,11 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
             if (!preg_match("/^o-[0-9a-z]{10,32}$/", $this->container['organizationId'])) {
                 $invalidProperties[] = "invalid value for 'organizationId', must be conform to the pattern /^o-[0-9a-z]{10,32}$/.";
             }
-            if (!is_null($this->container['organizationPolicyAssignmentName']) && (mb_strlen($this->container['organizationPolicyAssignmentName']) > 60)) {
-                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', the character length must be smaller than or equal to 60.";
+            if (!is_null($this->container['organizationPolicyAssignmentName']) && (mb_strlen($this->container['organizationPolicyAssignmentName']) > 252)) {
+                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', the character length must be smaller than or equal to 252.";
             }
-            if (!is_null($this->container['organizationPolicyAssignmentName']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/", $this->container['organizationPolicyAssignmentName'])) {
-                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/.";
+            if (!is_null($this->container['organizationPolicyAssignmentName']) && !preg_match("/^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/", $this->container['organizationPolicyAssignmentName'])) {
+                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', must be conform to the pattern /^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/.";
             }
             if (!is_null($this->container['organizationPolicyAssignmentId']) && (mb_strlen($this->container['organizationPolicyAssignmentId']) > 512)) {
                 $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentId', the character length must be smaller than or equal to 512.";

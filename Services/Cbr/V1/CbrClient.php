@@ -2023,6 +2023,72 @@ class CbrClient extends Client
     }
 
     /**
+     * 查询服务支持的特性列表
+     *
+     * 查询服务支持的特性列表
+     * &gt; 该接口目前属于公测阶段，部分region暂时无法使用。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listFeatures($request)
+    {
+        return $this->listFeaturesWithHttpInfo($request);
+    }
+
+    public function listFeaturesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/cbr-features';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ListFeaturesResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ListFeaturesRequest');
+    }
+
+    /**
      * 查询任务列表
      *
      * 查询任务列表
@@ -3241,6 +3307,75 @@ class CbrClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowDomainResponse',
             $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowDomainRequest');
+    }
+
+    /**
+     * 查询指定特性
+     *
+     * 查询服务指定特性
+     * &gt; 该接口目前属于公测阶段，部分region暂时无法使用。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFeature($request)
+    {
+        return $this->showFeatureWithHttpInfo($request);
+    }
+
+    public function showFeatureWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/cbr-features/{feature_key}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['featureKey'] !== null) {
+            $pathParams['feature_key'] = $localVarParams['featureKey'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowFeatureResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowFeatureRequest');
     }
 
     /**

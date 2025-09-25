@@ -151,6 +151,9 @@ class ListRegionsRequest implements ModelInterface, ArrayAccess
     }
     const X_LANGUAGE_ZH_CN = 'zh-cn';
     const X_LANGUAGE_EN_US = 'en-us';
+    const X_LANGUAGE_FR_FR = 'fr-fr';
+    const X_LANGUAGE_ES_US = 'es-us';
+    const X_LANGUAGE_PT_BR = 'pt-br';
     
 
     /**
@@ -163,6 +166,9 @@ class ListRegionsRequest implements ModelInterface, ArrayAccess
         return [
             self::X_LANGUAGE_ZH_CN,
             self::X_LANGUAGE_EN_US,
+            self::X_LANGUAGE_FR_FR,
+            self::X_LANGUAGE_ES_US,
+            self::X_LANGUAGE_PT_BR,
         ];
     }
 

@@ -21,21 +21,29 @@ class StartVpecpReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * endpointWithDnsName  是否开启内网域名。 - true：开启。 - false：不开启。
+    * professionVpcep  创建专业型终端节点。 - true：开启。 - false：不开启。
+    * dualstackEnable  是否开启IPv4/IPv6双栈网络，仅支持在创建专业型终端节点时开启双栈网络，且集群的VPC子网支持IPv6。 - true：开启。 - false：不开启。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'endpointWithDnsName' => 'bool'
+            'endpointWithDnsName' => 'bool',
+            'professionVpcep' => 'bool',
+            'dualstackEnable' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * endpointWithDnsName  是否开启内网域名。 - true：开启。 - false：不开启。
+    * professionVpcep  创建专业型终端节点。 - true：开启。 - false：不开启。
+    * dualstackEnable  是否开启IPv4/IPv6双栈网络，仅支持在创建专业型终端节点时开启双栈网络，且集群的VPC子网支持IPv6。 - true：开启。 - false：不开启。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'endpointWithDnsName' => null
+        'endpointWithDnsName' => null,
+        'professionVpcep' => null,
+        'dualstackEnable' => null
     ];
 
     /**
@@ -62,31 +70,43 @@ class StartVpecpReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * endpointWithDnsName  是否开启内网域名。 - true：开启。 - false：不开启。
+    * professionVpcep  创建专业型终端节点。 - true：开启。 - false：不开启。
+    * dualstackEnable  是否开启IPv4/IPv6双栈网络，仅支持在创建专业型终端节点时开启双栈网络，且集群的VPC子网支持IPv6。 - true：开启。 - false：不开启。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'endpointWithDnsName' => 'endpoint_with_dns_name'
+            'endpointWithDnsName' => 'endpoint_with_dns_name',
+            'professionVpcep' => 'profession_vpcep',
+            'dualstackEnable' => 'dualstack_enable'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * endpointWithDnsName  是否开启内网域名。 - true：开启。 - false：不开启。
+    * professionVpcep  创建专业型终端节点。 - true：开启。 - false：不开启。
+    * dualstackEnable  是否开启IPv4/IPv6双栈网络，仅支持在创建专业型终端节点时开启双栈网络，且集群的VPC子网支持IPv6。 - true：开启。 - false：不开启。
     *
     * @var string[]
     */
     protected static $setters = [
-            'endpointWithDnsName' => 'setEndpointWithDnsName'
+            'endpointWithDnsName' => 'setEndpointWithDnsName',
+            'professionVpcep' => 'setProfessionVpcep',
+            'dualstackEnable' => 'setDualstackEnable'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * endpointWithDnsName  是否开启内网域名。 - true：开启。 - false：不开启。
+    * professionVpcep  创建专业型终端节点。 - true：开启。 - false：不开启。
+    * dualstackEnable  是否开启IPv4/IPv6双栈网络，仅支持在创建专业型终端节点时开启双栈网络，且集群的VPC子网支持IPv6。 - true：开启。 - false：不开启。
     *
     * @var string[]
     */
     protected static $getters = [
-            'endpointWithDnsName' => 'getEndpointWithDnsName'
+            'endpointWithDnsName' => 'getEndpointWithDnsName',
+            'professionVpcep' => 'getProfessionVpcep',
+            'dualstackEnable' => 'getDualstackEnable'
     ];
 
     /**
@@ -148,6 +168,8 @@ class StartVpecpReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['endpointWithDnsName'] = isset($data['endpointWithDnsName']) ? $data['endpointWithDnsName'] : null;
+        $this->container['professionVpcep'] = isset($data['professionVpcep']) ? $data['professionVpcep'] : null;
+        $this->container['dualstackEnable'] = isset($data['dualstackEnable']) ? $data['dualstackEnable'] : null;
     }
 
     /**
@@ -193,6 +215,54 @@ class StartVpecpReq implements ModelInterface, ArrayAccess
     public function setEndpointWithDnsName($endpointWithDnsName)
     {
         $this->container['endpointWithDnsName'] = $endpointWithDnsName;
+        return $this;
+    }
+
+    /**
+    * Gets professionVpcep
+    *  创建专业型终端节点。 - true：开启。 - false：不开启。
+    *
+    * @return bool|null
+    */
+    public function getProfessionVpcep()
+    {
+        return $this->container['professionVpcep'];
+    }
+
+    /**
+    * Sets professionVpcep
+    *
+    * @param bool|null $professionVpcep 创建专业型终端节点。 - true：开启。 - false：不开启。
+    *
+    * @return $this
+    */
+    public function setProfessionVpcep($professionVpcep)
+    {
+        $this->container['professionVpcep'] = $professionVpcep;
+        return $this;
+    }
+
+    /**
+    * Gets dualstackEnable
+    *  是否开启IPv4/IPv6双栈网络，仅支持在创建专业型终端节点时开启双栈网络，且集群的VPC子网支持IPv6。 - true：开启。 - false：不开启。
+    *
+    * @return bool|null
+    */
+    public function getDualstackEnable()
+    {
+        return $this->container['dualstackEnable'];
+    }
+
+    /**
+    * Sets dualstackEnable
+    *
+    * @param bool|null $dualstackEnable 是否开启IPv4/IPv6双栈网络，仅支持在创建专业型终端节点时开启双栈网络，且集群的VPC子网支持IPv6。 - true：开启。 - false：不开启。
+    *
+    * @return $this
+    */
+    public function setDualstackEnable($dualstackEnable)
+    {
+        $this->container['dualstackEnable'] = $dualstackEnable;
         return $this;
     }
 

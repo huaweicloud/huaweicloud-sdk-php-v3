@@ -22,24 +22,28 @@ class ShrinkNodesReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * migrateData  是否迁移数据。 - \"true\"：迁移数据。 - \"false\"：不迁移数据。
     * shrinkNodes  需要缩容的节点ID。  通过[查询集群详情](ShowClusterDetail.xml)获取instances中的id属性。
+    * agencyName  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'migrateData' => 'string',
-            'shrinkNodes' => 'string[]'
+            'shrinkNodes' => 'string[]',
+            'agencyName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * migrateData  是否迁移数据。 - \"true\"：迁移数据。 - \"false\"：不迁移数据。
     * shrinkNodes  需要缩容的节点ID。  通过[查询集群详情](ShowClusterDetail.xml)获取instances中的id属性。
+    * agencyName  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'migrateData' => null,
-        'shrinkNodes' => null
+        'shrinkNodes' => null,
+        'agencyName' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ShrinkNodesReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * migrateData  是否迁移数据。 - \"true\"：迁移数据。 - \"false\"：不迁移数据。
     * shrinkNodes  需要缩容的节点ID。  通过[查询集群详情](ShowClusterDetail.xml)获取instances中的id属性。
+    * agencyName  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'migrateData' => 'migrate_data',
-            'shrinkNodes' => 'shrink_nodes'
+            'shrinkNodes' => 'shrink_nodes',
+            'agencyName' => 'agency_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * migrateData  是否迁移数据。 - \"true\"：迁移数据。 - \"false\"：不迁移数据。
     * shrinkNodes  需要缩容的节点ID。  通过[查询集群详情](ShowClusterDetail.xml)获取instances中的id属性。
+    * agencyName  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
     *
     * @var string[]
     */
     protected static $setters = [
             'migrateData' => 'setMigrateData',
-            'shrinkNodes' => 'setShrinkNodes'
+            'shrinkNodes' => 'setShrinkNodes',
+            'agencyName' => 'setAgencyName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * migrateData  是否迁移数据。 - \"true\"：迁移数据。 - \"false\"：不迁移数据。
     * shrinkNodes  需要缩容的节点ID。  通过[查询集群详情](ShowClusterDetail.xml)获取instances中的id属性。
+    * agencyName  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
     *
     * @var string[]
     */
     protected static $getters = [
             'migrateData' => 'getMigrateData',
-            'shrinkNodes' => 'getShrinkNodes'
+            'shrinkNodes' => 'getShrinkNodes',
+            'agencyName' => 'getAgencyName'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ShrinkNodesReq implements ModelInterface, ArrayAccess
     {
         $this->container['migrateData'] = isset($data['migrateData']) ? $data['migrateData'] : null;
         $this->container['shrinkNodes'] = isset($data['shrinkNodes']) ? $data['shrinkNodes'] : null;
+        $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
     }
 
     /**
@@ -231,6 +242,30 @@ class ShrinkNodesReq implements ModelInterface, ArrayAccess
     public function setShrinkNodes($shrinkNodes)
     {
         $this->container['shrinkNodes'] = $shrinkNodes;
+        return $this;
+    }
+
+    /**
+    * Gets agencyName
+    *  委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
+    *
+    * @return string|null
+    */
+    public function getAgencyName()
+    {
+        return $this->container['agencyName'];
+    }
+
+    /**
+    * Sets agencyName
+    *
+    * @param string|null $agencyName 委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
+    *
+    * @return $this
+    */
+    public function setAgencyName($agencyName)
+    {
+        $this->container['agencyName'] = $agencyName;
         return $this;
     }
 

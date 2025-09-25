@@ -21,10 +21,10 @@ class MetricDataResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * metric  **参数解释**: 指标ID。 **取值范围**: 不涉及。
-    * type  **参数解释** 指标类型 *取值范围* - INSTANCE：实例类型。 - NODE：节点类型。 - COMPONENT：组件类型。
+    * type  **参数解释** 指标类型 **取值范围** - INSTANCE：实例类型。 - NODE：节点类型。 - COMPONENT：组件类型。
     * unit  **参数解释**: 指标单位。 **取值范围**: 不涉及。
-    * datapoints  **参数解释**: 指标维度及指标值。 **取值范围**: 不涉及。
-    * timestamps  **参数解释**: 时间戳，例如1699495140000。 **取值范围**: 不涉及。
+    * datapoints  **参数解释**: 指标维度及指标值。
+    * timestamps  **参数解释**: 时间戳，例如1699495140000。
     *
     * @var string[]
     */
@@ -39,10 +39,10 @@ class MetricDataResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * metric  **参数解释**: 指标ID。 **取值范围**: 不涉及。
-    * type  **参数解释** 指标类型 *取值范围* - INSTANCE：实例类型。 - NODE：节点类型。 - COMPONENT：组件类型。
+    * type  **参数解释** 指标类型 **取值范围** - INSTANCE：实例类型。 - NODE：节点类型。 - COMPONENT：组件类型。
     * unit  **参数解释**: 指标单位。 **取值范围**: 不涉及。
-    * datapoints  **参数解释**: 指标维度及指标值。 **取值范围**: 不涉及。
-    * timestamps  **参数解释**: 时间戳，例如1699495140000。 **取值范围**: 不涉及。
+    * datapoints  **参数解释**: 指标维度及指标值。
+    * timestamps  **参数解释**: 时间戳，例如1699495140000。
     *
     * @var string[]
     */
@@ -78,10 +78,10 @@ class MetricDataResult implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * metric  **参数解释**: 指标ID。 **取值范围**: 不涉及。
-    * type  **参数解释** 指标类型 *取值范围* - INSTANCE：实例类型。 - NODE：节点类型。 - COMPONENT：组件类型。
+    * type  **参数解释** 指标类型 **取值范围** - INSTANCE：实例类型。 - NODE：节点类型。 - COMPONENT：组件类型。
     * unit  **参数解释**: 指标单位。 **取值范围**: 不涉及。
-    * datapoints  **参数解释**: 指标维度及指标值。 **取值范围**: 不涉及。
-    * timestamps  **参数解释**: 时间戳，例如1699495140000。 **取值范围**: 不涉及。
+    * datapoints  **参数解释**: 指标维度及指标值。
+    * timestamps  **参数解释**: 时间戳，例如1699495140000。
     *
     * @var string[]
     */
@@ -96,10 +96,10 @@ class MetricDataResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * metric  **参数解释**: 指标ID。 **取值范围**: 不涉及。
-    * type  **参数解释** 指标类型 *取值范围* - INSTANCE：实例类型。 - NODE：节点类型。 - COMPONENT：组件类型。
+    * type  **参数解释** 指标类型 **取值范围** - INSTANCE：实例类型。 - NODE：节点类型。 - COMPONENT：组件类型。
     * unit  **参数解释**: 指标单位。 **取值范围**: 不涉及。
-    * datapoints  **参数解释**: 指标维度及指标值。 **取值范围**: 不涉及。
-    * timestamps  **参数解释**: 时间戳，例如1699495140000。 **取值范围**: 不涉及。
+    * datapoints  **参数解释**: 指标维度及指标值。
+    * timestamps  **参数解释**: 时间戳，例如1699495140000。
     *
     * @var string[]
     */
@@ -114,10 +114,10 @@ class MetricDataResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * metric  **参数解释**: 指标ID。 **取值范围**: 不涉及。
-    * type  **参数解释** 指标类型 *取值范围* - INSTANCE：实例类型。 - NODE：节点类型。 - COMPONENT：组件类型。
+    * type  **参数解释** 指标类型 **取值范围** - INSTANCE：实例类型。 - NODE：节点类型。 - COMPONENT：组件类型。
     * unit  **参数解释**: 指标单位。 **取值范围**: 不涉及。
-    * datapoints  **参数解释**: 指标维度及指标值。 **取值范围**: 不涉及。
-    * timestamps  **参数解释**: 时间戳，例如1699495140000。 **取值范围**: 不涉及。
+    * datapoints  **参数解释**: 指标维度及指标值。
+    * timestamps  **参数解释**: 时间戳，例如1699495140000。
     *
     * @var string[]
     */
@@ -282,7 +282,7 @@ class MetricDataResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释** 指标类型 *取值范围* - INSTANCE：实例类型。 - NODE：节点类型。 - COMPONENT：组件类型。
+    *  **参数解释** 指标类型 **取值范围** - INSTANCE：实例类型。 - NODE：节点类型。 - COMPONENT：组件类型。
     *
     * @return string
     */
@@ -294,7 +294,7 @@ class MetricDataResult implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数解释** 指标类型 *取值范围* - INSTANCE：实例类型。 - NODE：节点类型。 - COMPONENT：组件类型。
+    * @param string $type **参数解释** 指标类型 **取值范围** - INSTANCE：实例类型。 - NODE：节点类型。 - COMPONENT：组件类型。
     *
     * @return $this
     */
@@ -330,7 +330,7 @@ class MetricDataResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets datapoints
-    *  **参数解释**: 指标维度及指标值。 **取值范围**: 不涉及。
+    *  **参数解释**: 指标维度及指标值。
     *
     * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DatapointResult[]
     */
@@ -342,7 +342,7 @@ class MetricDataResult implements ModelInterface, ArrayAccess
     /**
     * Sets datapoints
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DatapointResult[] $datapoints **参数解释**: 指标维度及指标值。 **取值范围**: 不涉及。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DatapointResult[] $datapoints **参数解释**: 指标维度及指标值。
     *
     * @return $this
     */
@@ -354,7 +354,7 @@ class MetricDataResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets timestamps
-    *  **参数解释**: 时间戳，例如1699495140000。 **取值范围**: 不涉及。
+    *  **参数解释**: 时间戳，例如1699495140000。
     *
     * @return string[]
     */
@@ -366,7 +366,7 @@ class MetricDataResult implements ModelInterface, ArrayAccess
     /**
     * Sets timestamps
     *
-    * @param string[] $timestamps **参数解释**: 时间戳，例如1699495140000。 **取值范围**: 不涉及。
+    * @param string[] $timestamps **参数解释**: 时间戳，例如1699495140000。
     *
     * @return $this
     */

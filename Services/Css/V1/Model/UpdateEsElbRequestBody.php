@@ -23,13 +23,15 @@ class UpdateEsElbRequestBody implements ModelInterface, ArrayAccess
     * enable  打开或关闭es负载均衡器。 - true：开启。 - false：关闭。
     * agency  委托名称。
     * elbId  负载均衡器id。
+    * type  负载均衡器类型。当用于可观测集群时：不需要配置此参数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'enable' => 'bool',
             'agency' => 'string',
-            'elbId' => 'string'
+            'elbId' => 'string',
+            'type' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class UpdateEsElbRequestBody implements ModelInterface, ArrayAccess
     * enable  打开或关闭es负载均衡器。 - true：开启。 - false：关闭。
     * agency  委托名称。
     * elbId  负载均衡器id。
+    * type  负载均衡器类型。当用于可观测集群时：不需要配置此参数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'enable' => null,
         'agency' => null,
-        'elbId' => null
+        'elbId' => null,
+        'type' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class UpdateEsElbRequestBody implements ModelInterface, ArrayAccess
     * enable  打开或关闭es负载均衡器。 - true：开启。 - false：关闭。
     * agency  委托名称。
     * elbId  负载均衡器id。
+    * type  负载均衡器类型。当用于可观测集群时：不需要配置此参数。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'enable' => 'enable',
             'agency' => 'agency',
-            'elbId' => 'elb_id'
+            'elbId' => 'elb_id',
+            'type' => 'type'
     ];
 
     /**
@@ -86,13 +92,15 @@ class UpdateEsElbRequestBody implements ModelInterface, ArrayAccess
     * enable  打开或关闭es负载均衡器。 - true：开启。 - false：关闭。
     * agency  委托名称。
     * elbId  负载均衡器id。
+    * type  负载均衡器类型。当用于可观测集群时：不需要配置此参数。
     *
     * @var string[]
     */
     protected static $setters = [
             'enable' => 'setEnable',
             'agency' => 'setAgency',
-            'elbId' => 'setElbId'
+            'elbId' => 'setElbId',
+            'type' => 'setType'
     ];
 
     /**
@@ -100,13 +108,15 @@ class UpdateEsElbRequestBody implements ModelInterface, ArrayAccess
     * enable  打开或关闭es负载均衡器。 - true：开启。 - false：关闭。
     * agency  委托名称。
     * elbId  负载均衡器id。
+    * type  负载均衡器类型。当用于可观测集群时：不需要配置此参数。
     *
     * @var string[]
     */
     protected static $getters = [
             'enable' => 'getEnable',
             'agency' => 'getAgency',
-            'elbId' => 'getElbId'
+            'elbId' => 'getElbId',
+            'type' => 'getType'
     ];
 
     /**
@@ -170,6 +180,7 @@ class UpdateEsElbRequestBody implements ModelInterface, ArrayAccess
         $this->container['enable'] = isset($data['enable']) ? $data['enable'] : null;
         $this->container['agency'] = isset($data['agency']) ? $data['agency'] : null;
         $this->container['elbId'] = isset($data['elbId']) ? $data['elbId'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -266,6 +277,30 @@ class UpdateEsElbRequestBody implements ModelInterface, ArrayAccess
     public function setElbId($elbId)
     {
         $this->container['elbId'] = $elbId;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  负载均衡器类型。当用于可观测集群时：不需要配置此参数。
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 负载均衡器类型。当用于可观测集群时：不需要配置此参数。
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

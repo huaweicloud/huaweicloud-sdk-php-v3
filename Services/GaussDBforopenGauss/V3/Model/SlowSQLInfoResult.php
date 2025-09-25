@@ -44,7 +44,7 @@ class SlowSQLInfoResult implements ModelInterface, ArrayAccess
             'userName' => 'string',
             'sqlText' => 'string',
             'queryPlan' => 'string',
-            'calls' => 'string',
+            'calls' => 'int',
             'avgExecTime' => 'string',
             'avgCpuTime' => 'string',
             'avgIoTime' => 'string',
@@ -450,7 +450,7 @@ class SlowSQLInfoResult implements ModelInterface, ArrayAccess
     * Gets calls
     *  **参数解释**: 执行次数（次）。 **取值范围**: 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getCalls()
     {
@@ -460,7 +460,7 @@ class SlowSQLInfoResult implements ModelInterface, ArrayAccess
     /**
     * Sets calls
     *
-    * @param string|null $calls **参数解释**: 执行次数（次）。 **取值范围**: 不涉及。
+    * @param int|null $calls **参数解释**: 执行次数（次）。 **取值范围**: 不涉及。
     *
     * @return $this
     */

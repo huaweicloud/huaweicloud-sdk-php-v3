@@ -272,8 +272,8 @@ class ListVulHostProcessRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['handleStatus']) && (mb_strlen($this->container['handleStatus']) < 1)) {
                 $invalidProperties[] = "invalid value for 'handleStatus', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['handleStatus']) && !preg_match("/^.*$/", $this->container['handleStatus'])) {
-                $invalidProperties[] = "invalid value for 'handleStatus', must be conform to the pattern /^.*$/.";
+            if (!is_null($this->container['handleStatus']) && !preg_match("/^unhandled|handled$/", $this->container['handleStatus'])) {
+                $invalidProperties[] = "invalid value for 'handleStatus', must be conform to the pattern /^unhandled|handled$/.";
             }
             if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'containerId', the character length must be smaller than or equal to 128.";

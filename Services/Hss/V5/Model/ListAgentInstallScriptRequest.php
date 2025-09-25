@@ -298,6 +298,9 @@ class ListAgentInstallScriptRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
             }
+        if ($this->container['osType'] === null) {
+            $invalidProperties[] = "'osType' can't be null";
+        }
             $allowedValues = $this->getOsTypeAllowableValues();
                 if (!is_null($this->container['osType']) && !in_array($this->container['osType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -397,7 +400,7 @@ class ListAgentInstallScriptRequest implements ModelInterface, ArrayAccess
     * Gets osType
     *  os类型：Windows和Linux
     *
-    * @return string|null
+    * @return string
     */
     public function getOsType()
     {
@@ -407,7 +410,7 @@ class ListAgentInstallScriptRequest implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType os类型：Windows和Linux
+    * @param string $osType os类型：Windows和Linux
     *
     * @return $this
     */

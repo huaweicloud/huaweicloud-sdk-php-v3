@@ -47,7 +47,7 @@ class Artifact implements ModelInterface, ArrayAccess
             'artifactType' => 'string',
             'hashCode' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ArtifactHashCode[]',
             'jobId' => 'string',
-            'buildNo' => 'int',
+            'buildNo' => 'string',
             'dailyBuildNumber' => 'string',
             'fileSize' => 'string'
     ];
@@ -548,7 +548,7 @@ class Artifact implements ModelInterface, ArrayAccess
     * Gets buildNo
     *  **参数解释**： 构建任务编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getBuildNo()
     {
@@ -558,7 +558,7 @@ class Artifact implements ModelInterface, ArrayAccess
     /**
     * Sets buildNo
     *
-    * @param int|null $buildNo **参数解释**： 构建任务编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string|null $buildNo **参数解释**： 构建任务编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

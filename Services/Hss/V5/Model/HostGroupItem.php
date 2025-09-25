@@ -25,7 +25,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * riskHostNum  **参数解释**: 有风险服务器数 **取值范围**: 0到2147483647
     * unprotectHostNum  **参数解释**: 未防护服务器数 **取值范围**: 0到2147483647
-    * hostIdList  **参数解释**: 主机id列表 **取值范围**: 不涉及
+    * hostIdList  **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     * isOutside  **参数解释**: 是否是线下数据中心服务器组 **取值范围**: true或者false
     *
     * @var string[]
@@ -47,7 +47,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * riskHostNum  **参数解释**: 有风险服务器数 **取值范围**: 0到2147483647
     * unprotectHostNum  **参数解释**: 未防护服务器数 **取值范围**: 0到2147483647
-    * hostIdList  **参数解释**: 主机id列表 **取值范围**: 不涉及
+    * hostIdList  **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     * isOutside  **参数解释**: 是否是线下数据中心服务器组 **取值范围**: true或者false
     *
     * @var string[]
@@ -90,7 +90,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * riskHostNum  **参数解释**: 有风险服务器数 **取值范围**: 0到2147483647
     * unprotectHostNum  **参数解释**: 未防护服务器数 **取值范围**: 0到2147483647
-    * hostIdList  **参数解释**: 主机id列表 **取值范围**: 不涉及
+    * hostIdList  **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     * isOutside  **参数解释**: 是否是线下数据中心服务器组 **取值范围**: true或者false
     *
     * @var string[]
@@ -112,7 +112,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * riskHostNum  **参数解释**: 有风险服务器数 **取值范围**: 0到2147483647
     * unprotectHostNum  **参数解释**: 未防护服务器数 **取值范围**: 0到2147483647
-    * hostIdList  **参数解释**: 主机id列表 **取值范围**: 不涉及
+    * hostIdList  **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     * isOutside  **参数解释**: 是否是线下数据中心服务器组 **取值范围**: true或者false
     *
     * @var string[]
@@ -134,7 +134,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * riskHostNum  **参数解释**: 有风险服务器数 **取值范围**: 0到2147483647
     * unprotectHostNum  **参数解释**: 未防护服务器数 **取值范围**: 0到2147483647
-    * hostIdList  **参数解释**: 主机id列表 **取值范围**: 不涉及
+    * hostIdList  **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     * isOutside  **参数解释**: 是否是线下数据中心服务器组 **取值范围**: true或者false
     *
     * @var string[]
@@ -393,7 +393,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIdList
-    *  **参数解释**: 主机id列表 **取值范围**: 不涉及
+    *  **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     *
     * @return string[]|null
     */
@@ -405,7 +405,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[]|null $hostIdList **参数解释**: 主机id列表 **取值范围**: 不涉及
+    * @param string[]|null $hostIdList **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     *
     * @return $this
     */

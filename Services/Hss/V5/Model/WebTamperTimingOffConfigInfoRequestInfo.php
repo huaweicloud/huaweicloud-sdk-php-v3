@@ -20,8 +20,8 @@ class WebTamperTimingOffConfigInfoRequestInfo implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * weekOffList  关闭防护周期
-    * timingRangeList  时间段
+    * weekOffList  **参数解释**: 自动关闭防护周期列表 **约束限制**: 不涉及 **取值范围**: 最少1条，最多7条 **默认取值**: 不涉及
+    * timingRangeList  **参数解释**: 自动关闭防护时间段 **约束限制**: 不涉及 **取值范围**: 最少1条，最多5条 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class WebTamperTimingOffConfigInfoRequestInfo implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * weekOffList  关闭防护周期
-    * timingRangeList  时间段
+    * weekOffList  **参数解释**: 自动关闭防护周期列表 **约束限制**: 不涉及 **取值范围**: 最少1条，最多7条 **默认取值**: 不涉及
+    * timingRangeList  **参数解释**: 自动关闭防护时间段 **约束限制**: 不涉及 **取值范围**: 最少1条，最多5条 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class WebTamperTimingOffConfigInfoRequestInfo implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * weekOffList  关闭防护周期
-    * timingRangeList  时间段
+    * weekOffList  **参数解释**: 自动关闭防护周期列表 **约束限制**: 不涉及 **取值范围**: 最少1条，最多7条 **默认取值**: 不涉及
+    * timingRangeList  **参数解释**: 自动关闭防护时间段 **约束限制**: 不涉及 **取值范围**: 最少1条，最多5条 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class WebTamperTimingOffConfigInfoRequestInfo implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * weekOffList  关闭防护周期
-    * timingRangeList  时间段
+    * weekOffList  **参数解释**: 自动关闭防护周期列表 **约束限制**: 不涉及 **取值范围**: 最少1条，最多7条 **默认取值**: 不涉及
+    * timingRangeList  **参数解释**: 自动关闭防护时间段 **约束限制**: 不涉及 **取值范围**: 最少1条，最多5条 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class WebTamperTimingOffConfigInfoRequestInfo implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * weekOffList  关闭防护周期
-    * timingRangeList  时间段
+    * weekOffList  **参数解释**: 自动关闭防护周期列表 **约束限制**: 不涉及 **取值范围**: 最少1条，最多7条 **默认取值**: 不涉及
+    * timingRangeList  **参数解释**: 自动关闭防护时间段 **约束限制**: 不涉及 **取值范围**: 最少1条，最多5条 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class WebTamperTimingOffConfigInfoRequestInfo implements ModelInterface, ArrayAc
 
     /**
     * Gets weekOffList
-    *  关闭防护周期
+    *  **参数解释**: 自动关闭防护周期列表 **约束限制**: 不涉及 **取值范围**: 最少1条，最多7条 **默认取值**: 不涉及
     *
     * @return int[]|null
     */
@@ -197,7 +197,7 @@ class WebTamperTimingOffConfigInfoRequestInfo implements ModelInterface, ArrayAc
     /**
     * Sets weekOffList
     *
-    * @param int[]|null $weekOffList 关闭防护周期
+    * @param int[]|null $weekOffList **参数解释**: 自动关闭防护周期列表 **约束限制**: 不涉及 **取值范围**: 最少1条，最多7条 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class WebTamperTimingOffConfigInfoRequestInfo implements ModelInterface, ArrayAc
 
     /**
     * Gets timingRangeList
-    *  时间段
+    *  **参数解释**: 自动关闭防护时间段 **约束限制**: 不涉及 **取值范围**: 最少1条，最多5条 **默认取值**: 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\TimingRangeConfigRequestInfo[]|null
     */
@@ -221,7 +221,7 @@ class WebTamperTimingOffConfigInfoRequestInfo implements ModelInterface, ArrayAc
     /**
     * Sets timingRangeList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\TimingRangeConfigRequestInfo[]|null $timingRangeList 时间段
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\TimingRangeConfigRequestInfo[]|null $timingRangeList **参数解释**: 自动关闭防护时间段 **约束限制**: 不涉及 **取值范围**: 最少1条，最多5条 **默认取值**: 不涉及
     *
     * @return $this
     */

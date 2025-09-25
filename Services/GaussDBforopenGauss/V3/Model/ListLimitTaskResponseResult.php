@@ -20,27 +20,27 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  限流任务ID。
-    * taskScope  任务限流范围。
-    * limitType  任务限流类型。
-    * limitTypeValue  任务限流类型值。
-    * taskName  限流任务名。
-    * databases  CN节点数据库组,每个数据库字符串以逗号形式隔开。
-    * sqlModel  SQL模板,仅当任务类型为SQL_ID时，返回该值。
-    * keyWords  关键词，仅当任务类型为SQL_TYPE时，返回该值。
-    * status  限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
-    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
-    * ruleName  规则名。
-    * parallelSize  并发数。
-    * startTime  限流任务开始时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * endTime  限流任务结束时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * cpuUtilization  cpu利用率，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值。
-    * memoryUtilization  内存利用率，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值。
-    * created  创建时间为本地时间，格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * updated  更新时间为本地时间，格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * creator  创建者。
-    * modifier  更新者。
-    * nodeInfos  CN节点信息列表。
+    * taskId  **参数解释**: 限流任务ID。 **取值范围**: 不涉及。
+    * taskScope  **参数解释**: 任务限流范围。 **取值范围**: 目前支持SQL，SESSION两种级别范围。
+    * limitType  **参数解释**: 任务限流类型。 **取值范围**: - 当“task_scope”为SQL时，可选SQL_ID、SQL_TYPE类型。 - 当“task_scope”为SESSION时，可选SESSION_ACTIVE_MAX_COUNT类型。
+    * limitTypeValue  **参数解释**: 任务限流类型值。 **取值范围**: - 当“limit_type”为SQL_ID类型时，该值为选中模板的sql_id。 - 当“limit_type”为SQL_TYPE类型时，值为SQL类型，为select，update，insert，delete，merge的一种。 - 当“limit_type”为SESSION_ACTIVE_MAX_COUNT类型时，该值为CPU_OR_MEMORY。
+    * taskName  **参数解释**: 限流任务名。 **取值范围**: 不涉及。
+    * databases  **参数解释**: 实例的数据库列表，每个数据库以英文逗号形式隔开。 **取值范围**: 不涉及。
+    * sqlModel  **参数解释**: SQL模板，仅当任务类型为SQL_ID时，返回该值。 **取值范围**: 不涉及。
+    * keyWords  **参数解释**: 关键词，仅当任务类型为SQL_TYPE时，返回该值。 **取值范围**: 不涉及。
+    * status  **参数解释**: 限流任务状态。 **取值范围**: 当前支持：CREATING，UPDATING，DELETING，WAIT_EXECUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
+    * instanceId  **参数解释**: 实例ID。 **取值范围**: 不涉及。
+    * ruleName  **参数解释**: 规则名。 **取值范围**: 不涉及。
+    * parallelSize  **参数解释**: 并发数。 **取值范围**: [0, 2147483647]
+    * startTime  **参数解释**: 限流任务开始时间。 **取值范围**: 不涉及。
+    * endTime  **参数解释**: 限流任务结束时间。 **取值范围**: 不涉及。
+    * cpuUtilization  **参数解释**: CPU利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留整数部分。 **取值范围**: [0, 100)
+    * memoryUtilization  **参数解释**: 内存利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留整数部分。 **取值范围**: [0, 100)
+    * created  **参数解释**: 限流任务创建时间。 **取值范围**: 不涉及。
+    * updated  **参数解释**: 限流任务更新时间。 **取值范围**: 不涉及。
+    * creator  **参数解释**: 创建者。 **取值范围**: 不涉及。
+    * modifier  **参数解释**: 更新者。 **取值范围**: 不涉及。
+    * nodeInfos  **参数解释**: CN节点信息列表。
     *
     * @var string[]
     */
@@ -70,27 +70,27 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  限流任务ID。
-    * taskScope  任务限流范围。
-    * limitType  任务限流类型。
-    * limitTypeValue  任务限流类型值。
-    * taskName  限流任务名。
-    * databases  CN节点数据库组,每个数据库字符串以逗号形式隔开。
-    * sqlModel  SQL模板,仅当任务类型为SQL_ID时，返回该值。
-    * keyWords  关键词，仅当任务类型为SQL_TYPE时，返回该值。
-    * status  限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
-    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
-    * ruleName  规则名。
-    * parallelSize  并发数。
-    * startTime  限流任务开始时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * endTime  限流任务结束时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * cpuUtilization  cpu利用率，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值。
-    * memoryUtilization  内存利用率，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值。
-    * created  创建时间为本地时间，格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * updated  更新时间为本地时间，格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * creator  创建者。
-    * modifier  更新者。
-    * nodeInfos  CN节点信息列表。
+    * taskId  **参数解释**: 限流任务ID。 **取值范围**: 不涉及。
+    * taskScope  **参数解释**: 任务限流范围。 **取值范围**: 目前支持SQL，SESSION两种级别范围。
+    * limitType  **参数解释**: 任务限流类型。 **取值范围**: - 当“task_scope”为SQL时，可选SQL_ID、SQL_TYPE类型。 - 当“task_scope”为SESSION时，可选SESSION_ACTIVE_MAX_COUNT类型。
+    * limitTypeValue  **参数解释**: 任务限流类型值。 **取值范围**: - 当“limit_type”为SQL_ID类型时，该值为选中模板的sql_id。 - 当“limit_type”为SQL_TYPE类型时，值为SQL类型，为select，update，insert，delete，merge的一种。 - 当“limit_type”为SESSION_ACTIVE_MAX_COUNT类型时，该值为CPU_OR_MEMORY。
+    * taskName  **参数解释**: 限流任务名。 **取值范围**: 不涉及。
+    * databases  **参数解释**: 实例的数据库列表，每个数据库以英文逗号形式隔开。 **取值范围**: 不涉及。
+    * sqlModel  **参数解释**: SQL模板，仅当任务类型为SQL_ID时，返回该值。 **取值范围**: 不涉及。
+    * keyWords  **参数解释**: 关键词，仅当任务类型为SQL_TYPE时，返回该值。 **取值范围**: 不涉及。
+    * status  **参数解释**: 限流任务状态。 **取值范围**: 当前支持：CREATING，UPDATING，DELETING，WAIT_EXECUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
+    * instanceId  **参数解释**: 实例ID。 **取值范围**: 不涉及。
+    * ruleName  **参数解释**: 规则名。 **取值范围**: 不涉及。
+    * parallelSize  **参数解释**: 并发数。 **取值范围**: [0, 2147483647]
+    * startTime  **参数解释**: 限流任务开始时间。 **取值范围**: 不涉及。
+    * endTime  **参数解释**: 限流任务结束时间。 **取值范围**: 不涉及。
+    * cpuUtilization  **参数解释**: CPU利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留整数部分。 **取值范围**: [0, 100)
+    * memoryUtilization  **参数解释**: 内存利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留整数部分。 **取值范围**: [0, 100)
+    * created  **参数解释**: 限流任务创建时间。 **取值范围**: 不涉及。
+    * updated  **参数解释**: 限流任务更新时间。 **取值范围**: 不涉及。
+    * creator  **参数解释**: 创建者。 **取值范围**: 不涉及。
+    * modifier  **参数解释**: 更新者。 **取值范围**: 不涉及。
+    * nodeInfos  **参数解释**: CN节点信息列表。
     *
     * @var string[]
     */
@@ -141,27 +141,27 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  限流任务ID。
-    * taskScope  任务限流范围。
-    * limitType  任务限流类型。
-    * limitTypeValue  任务限流类型值。
-    * taskName  限流任务名。
-    * databases  CN节点数据库组,每个数据库字符串以逗号形式隔开。
-    * sqlModel  SQL模板,仅当任务类型为SQL_ID时，返回该值。
-    * keyWords  关键词，仅当任务类型为SQL_TYPE时，返回该值。
-    * status  限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
-    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
-    * ruleName  规则名。
-    * parallelSize  并发数。
-    * startTime  限流任务开始时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * endTime  限流任务结束时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * cpuUtilization  cpu利用率，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值。
-    * memoryUtilization  内存利用率，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值。
-    * created  创建时间为本地时间，格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * updated  更新时间为本地时间，格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * creator  创建者。
-    * modifier  更新者。
-    * nodeInfos  CN节点信息列表。
+    * taskId  **参数解释**: 限流任务ID。 **取值范围**: 不涉及。
+    * taskScope  **参数解释**: 任务限流范围。 **取值范围**: 目前支持SQL，SESSION两种级别范围。
+    * limitType  **参数解释**: 任务限流类型。 **取值范围**: - 当“task_scope”为SQL时，可选SQL_ID、SQL_TYPE类型。 - 当“task_scope”为SESSION时，可选SESSION_ACTIVE_MAX_COUNT类型。
+    * limitTypeValue  **参数解释**: 任务限流类型值。 **取值范围**: - 当“limit_type”为SQL_ID类型时，该值为选中模板的sql_id。 - 当“limit_type”为SQL_TYPE类型时，值为SQL类型，为select，update，insert，delete，merge的一种。 - 当“limit_type”为SESSION_ACTIVE_MAX_COUNT类型时，该值为CPU_OR_MEMORY。
+    * taskName  **参数解释**: 限流任务名。 **取值范围**: 不涉及。
+    * databases  **参数解释**: 实例的数据库列表，每个数据库以英文逗号形式隔开。 **取值范围**: 不涉及。
+    * sqlModel  **参数解释**: SQL模板，仅当任务类型为SQL_ID时，返回该值。 **取值范围**: 不涉及。
+    * keyWords  **参数解释**: 关键词，仅当任务类型为SQL_TYPE时，返回该值。 **取值范围**: 不涉及。
+    * status  **参数解释**: 限流任务状态。 **取值范围**: 当前支持：CREATING，UPDATING，DELETING，WAIT_EXECUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
+    * instanceId  **参数解释**: 实例ID。 **取值范围**: 不涉及。
+    * ruleName  **参数解释**: 规则名。 **取值范围**: 不涉及。
+    * parallelSize  **参数解释**: 并发数。 **取值范围**: [0, 2147483647]
+    * startTime  **参数解释**: 限流任务开始时间。 **取值范围**: 不涉及。
+    * endTime  **参数解释**: 限流任务结束时间。 **取值范围**: 不涉及。
+    * cpuUtilization  **参数解释**: CPU利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留整数部分。 **取值范围**: [0, 100)
+    * memoryUtilization  **参数解释**: 内存利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留整数部分。 **取值范围**: [0, 100)
+    * created  **参数解释**: 限流任务创建时间。 **取值范围**: 不涉及。
+    * updated  **参数解释**: 限流任务更新时间。 **取值范围**: 不涉及。
+    * creator  **参数解释**: 创建者。 **取值范围**: 不涉及。
+    * modifier  **参数解释**: 更新者。 **取值范围**: 不涉及。
+    * nodeInfos  **参数解释**: CN节点信息列表。
     *
     * @var string[]
     */
@@ -191,27 +191,27 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  限流任务ID。
-    * taskScope  任务限流范围。
-    * limitType  任务限流类型。
-    * limitTypeValue  任务限流类型值。
-    * taskName  限流任务名。
-    * databases  CN节点数据库组,每个数据库字符串以逗号形式隔开。
-    * sqlModel  SQL模板,仅当任务类型为SQL_ID时，返回该值。
-    * keyWords  关键词，仅当任务类型为SQL_TYPE时，返回该值。
-    * status  限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
-    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
-    * ruleName  规则名。
-    * parallelSize  并发数。
-    * startTime  限流任务开始时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * endTime  限流任务结束时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * cpuUtilization  cpu利用率，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值。
-    * memoryUtilization  内存利用率，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值。
-    * created  创建时间为本地时间，格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * updated  更新时间为本地时间，格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * creator  创建者。
-    * modifier  更新者。
-    * nodeInfos  CN节点信息列表。
+    * taskId  **参数解释**: 限流任务ID。 **取值范围**: 不涉及。
+    * taskScope  **参数解释**: 任务限流范围。 **取值范围**: 目前支持SQL，SESSION两种级别范围。
+    * limitType  **参数解释**: 任务限流类型。 **取值范围**: - 当“task_scope”为SQL时，可选SQL_ID、SQL_TYPE类型。 - 当“task_scope”为SESSION时，可选SESSION_ACTIVE_MAX_COUNT类型。
+    * limitTypeValue  **参数解释**: 任务限流类型值。 **取值范围**: - 当“limit_type”为SQL_ID类型时，该值为选中模板的sql_id。 - 当“limit_type”为SQL_TYPE类型时，值为SQL类型，为select，update，insert，delete，merge的一种。 - 当“limit_type”为SESSION_ACTIVE_MAX_COUNT类型时，该值为CPU_OR_MEMORY。
+    * taskName  **参数解释**: 限流任务名。 **取值范围**: 不涉及。
+    * databases  **参数解释**: 实例的数据库列表，每个数据库以英文逗号形式隔开。 **取值范围**: 不涉及。
+    * sqlModel  **参数解释**: SQL模板，仅当任务类型为SQL_ID时，返回该值。 **取值范围**: 不涉及。
+    * keyWords  **参数解释**: 关键词，仅当任务类型为SQL_TYPE时，返回该值。 **取值范围**: 不涉及。
+    * status  **参数解释**: 限流任务状态。 **取值范围**: 当前支持：CREATING，UPDATING，DELETING，WAIT_EXECUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
+    * instanceId  **参数解释**: 实例ID。 **取值范围**: 不涉及。
+    * ruleName  **参数解释**: 规则名。 **取值范围**: 不涉及。
+    * parallelSize  **参数解释**: 并发数。 **取值范围**: [0, 2147483647]
+    * startTime  **参数解释**: 限流任务开始时间。 **取值范围**: 不涉及。
+    * endTime  **参数解释**: 限流任务结束时间。 **取值范围**: 不涉及。
+    * cpuUtilization  **参数解释**: CPU利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留整数部分。 **取值范围**: [0, 100)
+    * memoryUtilization  **参数解释**: 内存利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留整数部分。 **取值范围**: [0, 100)
+    * created  **参数解释**: 限流任务创建时间。 **取值范围**: 不涉及。
+    * updated  **参数解释**: 限流任务更新时间。 **取值范围**: 不涉及。
+    * creator  **参数解释**: 创建者。 **取值范围**: 不涉及。
+    * modifier  **参数解释**: 更新者。 **取值范围**: 不涉及。
+    * nodeInfos  **参数解释**: CN节点信息列表。
     *
     * @var string[]
     */
@@ -241,27 +241,27 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  限流任务ID。
-    * taskScope  任务限流范围。
-    * limitType  任务限流类型。
-    * limitTypeValue  任务限流类型值。
-    * taskName  限流任务名。
-    * databases  CN节点数据库组,每个数据库字符串以逗号形式隔开。
-    * sqlModel  SQL模板,仅当任务类型为SQL_ID时，返回该值。
-    * keyWords  关键词，仅当任务类型为SQL_TYPE时，返回该值。
-    * status  限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
-    * instanceId  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
-    * ruleName  规则名。
-    * parallelSize  并发数。
-    * startTime  限流任务开始时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * endTime  限流任务结束时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * cpuUtilization  cpu利用率，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值。
-    * memoryUtilization  内存利用率，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值。
-    * created  创建时间为本地时间，格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * updated  更新时间为本地时间，格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
-    * creator  创建者。
-    * modifier  更新者。
-    * nodeInfos  CN节点信息列表。
+    * taskId  **参数解释**: 限流任务ID。 **取值范围**: 不涉及。
+    * taskScope  **参数解释**: 任务限流范围。 **取值范围**: 目前支持SQL，SESSION两种级别范围。
+    * limitType  **参数解释**: 任务限流类型。 **取值范围**: - 当“task_scope”为SQL时，可选SQL_ID、SQL_TYPE类型。 - 当“task_scope”为SESSION时，可选SESSION_ACTIVE_MAX_COUNT类型。
+    * limitTypeValue  **参数解释**: 任务限流类型值。 **取值范围**: - 当“limit_type”为SQL_ID类型时，该值为选中模板的sql_id。 - 当“limit_type”为SQL_TYPE类型时，值为SQL类型，为select，update，insert，delete，merge的一种。 - 当“limit_type”为SESSION_ACTIVE_MAX_COUNT类型时，该值为CPU_OR_MEMORY。
+    * taskName  **参数解释**: 限流任务名。 **取值范围**: 不涉及。
+    * databases  **参数解释**: 实例的数据库列表，每个数据库以英文逗号形式隔开。 **取值范围**: 不涉及。
+    * sqlModel  **参数解释**: SQL模板，仅当任务类型为SQL_ID时，返回该值。 **取值范围**: 不涉及。
+    * keyWords  **参数解释**: 关键词，仅当任务类型为SQL_TYPE时，返回该值。 **取值范围**: 不涉及。
+    * status  **参数解释**: 限流任务状态。 **取值范围**: 当前支持：CREATING，UPDATING，DELETING，WAIT_EXECUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
+    * instanceId  **参数解释**: 实例ID。 **取值范围**: 不涉及。
+    * ruleName  **参数解释**: 规则名。 **取值范围**: 不涉及。
+    * parallelSize  **参数解释**: 并发数。 **取值范围**: [0, 2147483647]
+    * startTime  **参数解释**: 限流任务开始时间。 **取值范围**: 不涉及。
+    * endTime  **参数解释**: 限流任务结束时间。 **取值范围**: 不涉及。
+    * cpuUtilization  **参数解释**: CPU利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留整数部分。 **取值范围**: [0, 100)
+    * memoryUtilization  **参数解释**: 内存利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留整数部分。 **取值范围**: [0, 100)
+    * created  **参数解释**: 限流任务创建时间。 **取值范围**: 不涉及。
+    * updated  **参数解释**: 限流任务更新时间。 **取值范围**: 不涉及。
+    * creator  **参数解释**: 创建者。 **取值范围**: 不涉及。
+    * modifier  **参数解释**: 更新者。 **取值范围**: 不涉及。
+    * nodeInfos  **参数解释**: CN节点信息列表。
     *
     * @var string[]
     */
@@ -394,7 +394,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  限流任务ID。
+    *  **参数解释**: 限流任务ID。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -406,7 +406,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string|null $taskId 限流任务ID。
+    * @param string|null $taskId **参数解释**: 限流任务ID。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -418,7 +418,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskScope
-    *  任务限流范围。
+    *  **参数解释**: 任务限流范围。 **取值范围**: 目前支持SQL，SESSION两种级别范围。
     *
     * @return string|null
     */
@@ -430,7 +430,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets taskScope
     *
-    * @param string|null $taskScope 任务限流范围。
+    * @param string|null $taskScope **参数解释**: 任务限流范围。 **取值范围**: 目前支持SQL，SESSION两种级别范围。
     *
     * @return $this
     */
@@ -442,7 +442,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets limitType
-    *  任务限流类型。
+    *  **参数解释**: 任务限流类型。 **取值范围**: - 当“task_scope”为SQL时，可选SQL_ID、SQL_TYPE类型。 - 当“task_scope”为SESSION时，可选SESSION_ACTIVE_MAX_COUNT类型。
     *
     * @return string|null
     */
@@ -454,7 +454,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets limitType
     *
-    * @param string|null $limitType 任务限流类型。
+    * @param string|null $limitType **参数解释**: 任务限流类型。 **取值范围**: - 当“task_scope”为SQL时，可选SQL_ID、SQL_TYPE类型。 - 当“task_scope”为SESSION时，可选SESSION_ACTIVE_MAX_COUNT类型。
     *
     * @return $this
     */
@@ -466,7 +466,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets limitTypeValue
-    *  任务限流类型值。
+    *  **参数解释**: 任务限流类型值。 **取值范围**: - 当“limit_type”为SQL_ID类型时，该值为选中模板的sql_id。 - 当“limit_type”为SQL_TYPE类型时，值为SQL类型，为select，update，insert，delete，merge的一种。 - 当“limit_type”为SESSION_ACTIVE_MAX_COUNT类型时，该值为CPU_OR_MEMORY。
     *
     * @return string|null
     */
@@ -478,7 +478,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets limitTypeValue
     *
-    * @param string|null $limitTypeValue 任务限流类型值。
+    * @param string|null $limitTypeValue **参数解释**: 任务限流类型值。 **取值范围**: - 当“limit_type”为SQL_ID类型时，该值为选中模板的sql_id。 - 当“limit_type”为SQL_TYPE类型时，值为SQL类型，为select，update，insert，delete，merge的一种。 - 当“limit_type”为SESSION_ACTIVE_MAX_COUNT类型时，该值为CPU_OR_MEMORY。
     *
     * @return $this
     */
@@ -490,7 +490,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskName
-    *  限流任务名。
+    *  **参数解释**: 限流任务名。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -502,7 +502,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets taskName
     *
-    * @param string|null $taskName 限流任务名。
+    * @param string|null $taskName **参数解释**: 限流任务名。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -514,7 +514,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets databases
-    *  CN节点数据库组,每个数据库字符串以逗号形式隔开。
+    *  **参数解释**: 实例的数据库列表，每个数据库以英文逗号形式隔开。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -526,7 +526,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets databases
     *
-    * @param string|null $databases CN节点数据库组,每个数据库字符串以逗号形式隔开。
+    * @param string|null $databases **参数解释**: 实例的数据库列表，每个数据库以英文逗号形式隔开。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -538,7 +538,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets sqlModel
-    *  SQL模板,仅当任务类型为SQL_ID时，返回该值。
+    *  **参数解释**: SQL模板，仅当任务类型为SQL_ID时，返回该值。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -550,7 +550,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets sqlModel
     *
-    * @param string|null $sqlModel SQL模板,仅当任务类型为SQL_ID时，返回该值。
+    * @param string|null $sqlModel **参数解释**: SQL模板，仅当任务类型为SQL_ID时，返回该值。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -562,7 +562,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets keyWords
-    *  关键词，仅当任务类型为SQL_TYPE时，返回该值。
+    *  **参数解释**: 关键词，仅当任务类型为SQL_TYPE时，返回该值。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -574,7 +574,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets keyWords
     *
-    * @param string|null $keyWords 关键词，仅当任务类型为SQL_TYPE时，返回该值。
+    * @param string|null $keyWords **参数解释**: 关键词，仅当任务类型为SQL_TYPE时，返回该值。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -586,7 +586,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
+    *  **参数解释**: 限流任务状态。 **取值范围**: 当前支持：CREATING，UPDATING，DELETING，WAIT_EXECUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
     *
     * @return string|null
     */
@@ -598,7 +598,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
+    * @param string|null $status **参数解释**: 限流任务状态。 **取值范围**: 当前支持：CREATING，UPDATING，DELETING，WAIT_EXECUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
     *
     * @return $this
     */
@@ -610,7 +610,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    *  **参数解释**: 实例ID。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -622,7 +622,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * @param string|null $instanceId **参数解释**: 实例ID。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -634,7 +634,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleName
-    *  规则名。
+    *  **参数解释**: 规则名。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -646,7 +646,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets ruleName
     *
-    * @param string|null $ruleName 规则名。
+    * @param string|null $ruleName **参数解释**: 规则名。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -658,7 +658,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets parallelSize
-    *  并发数。
+    *  **参数解释**: 并发数。 **取值范围**: [0, 2147483647]
     *
     * @return int|null
     */
@@ -670,7 +670,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets parallelSize
     *
-    * @param int|null $parallelSize 并发数。
+    * @param int|null $parallelSize **参数解释**: 并发数。 **取值范围**: [0, 2147483647]
     *
     * @return $this
     */
@@ -682,7 +682,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  限流任务开始时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
+    *  **参数解释**: 限流任务开始时间。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -694,7 +694,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 限流任务开始时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
+    * @param string|null $startTime **参数解释**: 限流任务开始时间。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -706,7 +706,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  限流任务结束时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
+    *  **参数解释**: 限流任务结束时间。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -718,7 +718,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 限流任务结束时间,格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
+    * @param string|null $endTime **参数解释**: 限流任务结束时间。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -730,7 +730,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets cpuUtilization
-    *  cpu利用率，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值。
+    *  **参数解释**: CPU利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留整数部分。 **取值范围**: [0, 100)
     *
     * @return int|null
     */
@@ -742,7 +742,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets cpuUtilization
     *
-    * @param int|null $cpuUtilization cpu利用率，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值。
+    * @param int|null $cpuUtilization **参数解释**: CPU利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留整数部分。 **取值范围**: [0, 100)
     *
     * @return $this
     */
@@ -754,7 +754,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets memoryUtilization
-    *  内存利用率，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值。
+    *  **参数解释**: 内存利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留整数部分。 **取值范围**: [0, 100)
     *
     * @return int|null
     */
@@ -766,7 +766,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets memoryUtilization
     *
-    * @param int|null $memoryUtilization 内存利用率，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值。
+    * @param int|null $memoryUtilization **参数解释**: 内存利用率阈值，仅当任务类型为SESSION_ACTIVE_MAX_COUNT时，返回该值且只保留整数部分。 **取值范围**: [0, 100)
     *
     * @return $this
     */
@@ -778,7 +778,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets created
-    *  创建时间为本地时间，格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
+    *  **参数解释**: 限流任务创建时间。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -790,7 +790,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets created
     *
-    * @param string|null $created 创建时间为本地时间，格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
+    * @param string|null $created **参数解释**: 限流任务创建时间。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -802,7 +802,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets updated
-    *  更新时间为本地时间，格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
+    *  **参数解释**: 限流任务更新时间。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -814,7 +814,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets updated
     *
-    * @param string|null $updated 更新时间为本地时间，格式为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。
+    * @param string|null $updated **参数解释**: 限流任务更新时间。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -826,7 +826,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets creator
-    *  创建者。
+    *  **参数解释**: 创建者。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -838,7 +838,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets creator
     *
-    * @param string|null $creator 创建者。
+    * @param string|null $creator **参数解释**: 创建者。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -850,7 +850,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets modifier
-    *  更新者。
+    *  **参数解释**: 更新者。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -862,7 +862,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets modifier
     *
-    * @param string|null $modifier 更新者。
+    * @param string|null $modifier **参数解释**: 更新者。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -874,7 +874,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeInfos
-    *  CN节点信息列表。
+    *  **参数解释**: CN节点信息列表。
     *
     * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowLimitTaskNodeOption[]|null
     */
@@ -886,7 +886,7 @@ class ListLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets nodeInfos
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowLimitTaskNodeOption[]|null $nodeInfos CN节点信息列表。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ShowLimitTaskNodeOption[]|null $nodeInfos **参数解释**: CN节点信息列表。
     *
     * @return $this
     */

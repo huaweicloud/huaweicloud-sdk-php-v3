@@ -23,7 +23,7 @@ class ShowAppWhitelistPolicyResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * policyId  策略ID
     * policyName  策略名称
-    * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
+    * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - block：日常运营模式
     * intercept  **参数解释**： 是否开启阻断 **取值范围**: - true：是 - false：否
     * updateTime  更新时间，毫秒
     * totalNum  **参数解释**: 进程总数 **取值范围**: 最小值0，最大值2147483647
@@ -55,7 +55,7 @@ class ShowAppWhitelistPolicyResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * policyId  策略ID
     * policyName  策略名称
-    * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
+    * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - block：日常运营模式
     * intercept  **参数解释**： 是否开启阻断 **取值范围**: - true：是 - false：否
     * updateTime  更新时间，毫秒
     * totalNum  **参数解释**: 进程总数 **取值范围**: 最小值0，最大值2147483647
@@ -108,7 +108,7 @@ class ShowAppWhitelistPolicyResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * policyId  策略ID
     * policyName  策略名称
-    * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
+    * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - block：日常运营模式
     * intercept  **参数解释**： 是否开启阻断 **取值范围**: - true：是 - false：否
     * updateTime  更新时间，毫秒
     * totalNum  **参数解释**: 进程总数 **取值范围**: 最小值0，最大值2147483647
@@ -140,7 +140,7 @@ class ShowAppWhitelistPolicyResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * policyId  策略ID
     * policyName  策略名称
-    * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
+    * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - block：日常运营模式
     * intercept  **参数解释**： 是否开启阻断 **取值范围**: - true：是 - false：否
     * updateTime  更新时间，毫秒
     * totalNum  **参数解释**: 进程总数 **取值范围**: 最小值0，最大值2147483647
@@ -172,7 +172,7 @@ class ShowAppWhitelistPolicyResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * policyId  策略ID
     * policyName  策略名称
-    * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
+    * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - block：日常运营模式
     * intercept  **参数解释**： 是否开启阻断 **取值范围**: - true：是 - false：否
     * updateTime  更新时间，毫秒
     * totalNum  **参数解释**: 进程总数 **取值范围**: 最小值0，最大值2147483647
@@ -410,7 +410,7 @@ class ShowAppWhitelistPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyType
-    *  **参数解释**： 进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
+    *  **参数解释**： 进程白名单策略类型 **取值范围**: - block：日常运营模式
     *
     * @return string|null
     */
@@ -422,7 +422,7 @@ class ShowAppWhitelistPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets policyType
     *
-    * @param string|null $policyType **参数解释**： 进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
+    * @param string|null $policyType **参数解释**： 进程白名单策略类型 **取值范围**: - block：日常运营模式
     *
     * @return $this
     */

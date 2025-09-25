@@ -24,7 +24,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     * id  节点Id
     * urn  组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
     * name  名称
-    * orgType  节点类型，unit:组织单元、account:账号
+    * orgType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - unit：组织单元 - account：账号  **默认取值**: 不涉及
     * delegated  组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。
     *
     * @var string[]
@@ -44,7 +44,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     * id  节点Id
     * urn  组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
     * name  名称
-    * orgType  节点类型，unit:组织单元、account:账号
+    * orgType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - unit：组织单元 - account：账号  **默认取值**: 不涉及
     * delegated  组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。
     *
     * @var string[]
@@ -85,7 +85,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     * id  节点Id
     * urn  组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
     * name  名称
-    * orgType  节点类型，unit:组织单元、account:账号
+    * orgType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - unit：组织单元 - account：账号  **默认取值**: 不涉及
     * delegated  组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。
     *
     * @var string[]
@@ -105,7 +105,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     * id  节点Id
     * urn  组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
     * name  名称
-    * orgType  节点类型，unit:组织单元、account:账号
+    * orgType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - unit：组织单元 - account：账号  **默认取值**: 不涉及
     * delegated  组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。
     *
     * @var string[]
@@ -125,7 +125,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     * id  节点Id
     * urn  组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
     * name  名称
-    * orgType  节点类型，unit:组织单元、account:账号
+    * orgType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - unit：组织单元 - account：账号  **默认取值**: 不涉及
     * delegated  组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。
     *
     * @var string[]
@@ -370,7 +370,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets orgType
-    *  节点类型，unit:组织单元、account:账号
+    *  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - unit：组织单元 - account：账号  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -382,7 +382,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets orgType
     *
-    * @param string|null $orgType 节点类型，unit:组织单元、account:账号
+    * @param string|null $orgType **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - unit：组织单元 - account：账号  **默认取值**: 不涉及
     *
     * @return $this
     */

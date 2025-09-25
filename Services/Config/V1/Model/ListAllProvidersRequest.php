@@ -151,6 +151,9 @@ class ListAllProvidersRequest implements ModelInterface, ArrayAccess
     }
     const X_LANGUAGE_ZH_CN = 'zh-cn';
     const X_LANGUAGE_EN_US = 'en-us';
+    const X_LANGUAGE_FR_FR = 'fr-fr';
+    const X_LANGUAGE_ES_US = 'es-us';
+    const X_LANGUAGE_PT_BR = 'pt-br';
     
 
     /**
@@ -163,6 +166,9 @@ class ListAllProvidersRequest implements ModelInterface, ArrayAccess
         return [
             self::X_LANGUAGE_ZH_CN,
             self::X_LANGUAGE_EN_US,
+            self::X_LANGUAGE_FR_FR,
+            self::X_LANGUAGE_ES_US,
+            self::X_LANGUAGE_PT_BR,
         ];
     }
 
@@ -198,8 +204,8 @@ class ListAllProvidersRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 1000)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 1000.";
             }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] < 1)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 1.";
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";

@@ -872,6 +872,74 @@ class DasAsyncClient extends Client
     }
 
     /**
+     * 测试AK/SK
+     *
+     * 测试AK/SK，测试用户AK/SK能否正常访问OBS桶。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkCredentialAsync($request)
+    {
+        return $this->checkCredentialAsyncWithHttpInfo($request);
+    }
+    
+    public function checkCredentialAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/health-report/check-credential';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Das\V3\Model\CheckCredentialResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Das\V3\Model\CheckCredentialRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建实例健康诊断任务
      *
      * 创建实例健康诊断任务。
@@ -3171,6 +3239,12 @@ class DasAsyncClient extends Client
         if ($localVarParams['datastoreType'] !== null) {
             $queryParams['datastore_type'] = $localVarParams['datastoreType'];
         }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];
         }
@@ -3845,6 +3919,74 @@ class DasAsyncClient extends Client
     }
 
     /**
+     * 保存AK/SK
+     *
+     * 保存AK/SK，用于后台任务访问OBS上传实例诊断报告
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function saveCredentialAsync($request)
+    {
+        return $this->saveCredentialAsyncWithHttpInfo($request);
+    }
+    
+    public function saveCredentialAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/health-report/save-credential';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Das\V3\Model\SaveCredentialResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Das\V3\Model\SaveCredentialRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 设置指标阈值
      *
      * 设置指标阈值
@@ -4129,6 +4271,71 @@ class DasAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Das\V3\Model\ShowFullDeadLockSwitchResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Das\V3\Model\ShowFullDeadLockSwitchRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查看实例诊断报告设置
+     *
+     * 查看实例诊断报告设置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showHealthReportSettingsAsync($request)
+    {
+        return $this->showHealthReportSettingsAsyncWithHttpInfo($request);
+    }
+    
+    public function showHealthReportSettingsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/health-report/settings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Das\V3\Model\ShowHealthReportSettingsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Das\V3\Model\ShowHealthReportSettingsRequest',
             $asyncRequest = true);
     }
 
@@ -5054,6 +5261,74 @@ class DasAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Das\V3\Model\UpdateDbUserResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Das\V3\Model\UpdateDbUserRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新实例诊断报告设置
+     *
+     * 更新实例诊断报告设置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateHealthReportSettingsAsync($request)
+    {
+        return $this->updateHealthReportSettingsAsyncWithHttpInfo($request);
+    }
+    
+    public function updateHealthReportSettingsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/health-report/settings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Das\V3\Model\UpdateHealthReportSettingsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Das\V3\Model\UpdateHealthReportSettingsRequest',
             $asyncRequest = true);
     }
 

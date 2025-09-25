@@ -30,7 +30,7 @@ class ShowAlarmStatisticsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'totalAlarmCount' => 'int',
-            'ringPercentage' => 'float',
+            'ringPercentage' => 'double',
             'instanceAlarmLevelStatistics' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\InstanceAlarmLevelStatisticResult[]',
             'totalAlarmLevelStatistics' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\AlarmLevelStatisticsResult[]'
     ];
@@ -46,7 +46,7 @@ class ShowAlarmStatisticsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'totalAlarmCount' => null,
-        'ringPercentage' => null,
+        'ringPercentage' => 'double',
         'instanceAlarmLevelStatistics' => null,
         'totalAlarmLevelStatistics' => null
     ];
@@ -234,7 +234,7 @@ class ShowAlarmStatisticsResponse implements ModelInterface, ArrayAccess
     * Gets ringPercentage
     *  **参数解释**: 环比比率。 **取值范围**: 值为0表示环比没有变化，值为空表示上一周期没有告警。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getRingPercentage()
     {
@@ -244,7 +244,7 @@ class ShowAlarmStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ringPercentage
     *
-    * @param float|null $ringPercentage **参数解释**: 环比比率。 **取值范围**: 值为0表示环比没有变化，值为空表示上一周期没有告警。
+    * @param double|null $ringPercentage **参数解释**: 环比比率。 **取值范围**: 值为0表示环比没有变化，值为空表示上一周期没有告警。
     *
     * @return $this
     */

@@ -29,7 +29,7 @@ class DownloadObject implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'size' => 'float',
+            'size' => 'int',
             'downloadLink' => 'string',
             'linkExpiredTime' => 'string'
     ];
@@ -233,7 +233,7 @@ class DownloadObject implements ModelInterface, ArrayAccess
     * Gets size
     *  文件大小。
     *
-    * @return float|null
+    * @return int|null
     */
     public function getSize()
     {
@@ -243,7 +243,7 @@ class DownloadObject implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param float|null $size 文件大小。
+    * @param int|null $size 文件大小。
     *
     * @return $this
     */

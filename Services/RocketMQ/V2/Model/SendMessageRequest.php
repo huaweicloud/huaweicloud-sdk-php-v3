@@ -29,7 +29,7 @@ class SendMessageRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'engine' => 'string',
             'instanceId' => 'string',
-            'body' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\SendMessageResp'
+            'body' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\SendMessageRep'
     ];
 
     /**
@@ -252,7 +252,7 @@ class SendMessageRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\SendMessageResp|null
+    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\SendMessageRep|null
     */
     public function getBody()
     {
@@ -262,7 +262,7 @@ class SendMessageRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\SendMessageResp|null $body body
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\SendMessageRep|null $body body
     *
     * @return $this
     */

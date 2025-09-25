@@ -21,25 +21,25 @@ class BotMBehaviorDetectionRule implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * rule  rule
-    * strategy  strategy
+    * defenseStrategy  defenseStrategy
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'rule' => '\HuaweiCloud\SDK\Waf\V1\Model\BotMRule',
-            'strategy' => '\HuaweiCloud\SDK\Waf\V1\Model\BotMDefenseStrategy'
+            'defenseStrategy' => '\HuaweiCloud\SDK\Waf\V1\Model\BotMDefenseStrategy'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * rule  rule
-    * strategy  strategy
+    * defenseStrategy  defenseStrategy
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'rule' => null,
-        'strategy' => null
+        'defenseStrategy' => null
     ];
 
     /**
@@ -66,37 +66,37 @@ class BotMBehaviorDetectionRule implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * rule  rule
-    * strategy  strategy
+    * defenseStrategy  defenseStrategy
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'rule' => 'rule',
-            'strategy' => 'strategy'
+            'defenseStrategy' => 'defense_strategy'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * rule  rule
-    * strategy  strategy
+    * defenseStrategy  defenseStrategy
     *
     * @var string[]
     */
     protected static $setters = [
             'rule' => 'setRule',
-            'strategy' => 'setStrategy'
+            'defenseStrategy' => 'setDefenseStrategy'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * rule  rule
-    * strategy  strategy
+    * defenseStrategy  defenseStrategy
     *
     * @var string[]
     */
     protected static $getters = [
             'rule' => 'getRule',
-            'strategy' => 'getStrategy'
+            'defenseStrategy' => 'getDefenseStrategy'
     ];
 
     /**
@@ -158,7 +158,7 @@ class BotMBehaviorDetectionRule implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['rule'] = isset($data['rule']) ? $data['rule'] : null;
-        $this->container['strategy'] = isset($data['strategy']) ? $data['strategy'] : null;
+        $this->container['defenseStrategy'] = isset($data['defenseStrategy']) ? $data['defenseStrategy'] : null;
     }
 
     /**
@@ -208,26 +208,26 @@ class BotMBehaviorDetectionRule implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets strategy
-    *  strategy
+    * Gets defenseStrategy
+    *  defenseStrategy
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\BotMDefenseStrategy|null
     */
-    public function getStrategy()
+    public function getDefenseStrategy()
     {
-        return $this->container['strategy'];
+        return $this->container['defenseStrategy'];
     }
 
     /**
-    * Sets strategy
+    * Sets defenseStrategy
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\BotMDefenseStrategy|null $strategy strategy
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\BotMDefenseStrategy|null $defenseStrategy defenseStrategy
     *
     * @return $this
     */
-    public function setStrategy($strategy)
+    public function setDefenseStrategy($defenseStrategy)
     {
-        $this->container['strategy'] = $strategy;
+        $this->container['defenseStrategy'] = $defenseStrategy;
         return $this;
     }
 

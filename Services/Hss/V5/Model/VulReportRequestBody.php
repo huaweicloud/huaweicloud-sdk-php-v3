@@ -241,8 +241,8 @@ class VulReportRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) < 1)) {
                 $invalidProperties[] = "invalid value for 'assetValue', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['assetValue']) && !preg_match("/^.*$/", $this->container['assetValue'])) {
-                $invalidProperties[] = "invalid value for 'assetValue', must be conform to the pattern /^.*$/.";
+            if (!is_null($this->container['assetValue']) && !preg_match("/^important|common|test$/", $this->container['assetValue'])) {
+                $invalidProperties[] = "invalid value for 'assetValue', must be conform to the pattern /^important|common|test$/.";
             }
             if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 64)) {
                 $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 64.";
@@ -277,8 +277,8 @@ class VulReportRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['severityLevel']) && (mb_strlen($this->container['severityLevel']) < 1)) {
                 $invalidProperties[] = "invalid value for 'severityLevel', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['severityLevel']) && !preg_match("/^.*$/", $this->container['severityLevel'])) {
-                $invalidProperties[] = "invalid value for 'severityLevel', must be conform to the pattern /^.*$/.";
+            if (!is_null($this->container['severityLevel']) && !preg_match("/^High|Medium|Low|Security$/", $this->container['severityLevel'])) {
+                $invalidProperties[] = "invalid value for 'severityLevel', must be conform to the pattern /^High|Medium|Low|Security$/.";
             }
         if ($this->container['handleStatus'] === null) {
             $invalidProperties[] = "'handleStatus' can't be null";
@@ -298,8 +298,8 @@ class VulReportRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 1)) {
                 $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['status']) && !preg_match("/^.*$/", $this->container['status'])) {
-                $invalidProperties[] = "invalid value for 'status', must be conform to the pattern /^.*$/.";
+            if (!is_null($this->container['status']) && !preg_match("/^vul_status_unfix|vul_status_ignored|vul_status_verified|vul_status_fixing|vul_status_fixed|vul_status_reboot|vul_status_failed|vul_status_fix_after_reboot$/", $this->container['status'])) {
+                $invalidProperties[] = "invalid value for 'status', must be conform to the pattern /^vul_status_unfix|vul_status_ignored|vul_status_verified|vul_status_fixing|vul_status_fixed|vul_status_reboot|vul_status_failed|vul_status_fix_after_reboot$/.";
             }
         return $invalidProperties;
     }

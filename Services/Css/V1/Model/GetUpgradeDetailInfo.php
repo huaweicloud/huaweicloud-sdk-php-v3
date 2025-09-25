@@ -33,6 +33,8 @@ class GetUpgradeDetailInfo implements ModelInterface, ArrayAccess
     * migrateParam  集群当前升级的行为。当有query参数时显示该返回值。
     * finalAzInfoMap  集群升级预期结果。当有query参数时显示该返回值。
     * currentNodeDetail  currentNodeDetail
+    * batchSize  同时有多少个节点在迁移数据。
+    * currentBatchNodes  当前正在迁移数据的节点。
     *
     * @var string[]
     */
@@ -49,7 +51,9 @@ class GetUpgradeDetailInfo implements ModelInterface, ArrayAccess
             'executeTimes' => 'string',
             'migrateParam' => 'string',
             'finalAzInfoMap' => 'string',
-            'currentNodeDetail' => '\HuaweiCloud\SDK\Css\V1\Model\CurrentNodeDetail[]'
+            'currentNodeDetail' => '\HuaweiCloud\SDK\Css\V1\Model\CurrentNodeDetail[]',
+            'batchSize' => 'int',
+            'currentBatchNodes' => 'string'
     ];
 
     /**
@@ -67,6 +71,8 @@ class GetUpgradeDetailInfo implements ModelInterface, ArrayAccess
     * migrateParam  集群当前升级的行为。当有query参数时显示该返回值。
     * finalAzInfoMap  集群升级预期结果。当有query参数时显示该返回值。
     * currentNodeDetail  currentNodeDetail
+    * batchSize  同时有多少个节点在迁移数据。
+    * currentBatchNodes  当前正在迁移数据的节点。
     *
     * @var string[]
     */
@@ -83,7 +89,9 @@ class GetUpgradeDetailInfo implements ModelInterface, ArrayAccess
         'executeTimes' => null,
         'migrateParam' => null,
         'finalAzInfoMap' => null,
-        'currentNodeDetail' => null
+        'currentNodeDetail' => null,
+        'batchSize' => 'int32',
+        'currentBatchNodes' => null
     ];
 
     /**
@@ -122,6 +130,8 @@ class GetUpgradeDetailInfo implements ModelInterface, ArrayAccess
     * migrateParam  集群当前升级的行为。当有query参数时显示该返回值。
     * finalAzInfoMap  集群升级预期结果。当有query参数时显示该返回值。
     * currentNodeDetail  currentNodeDetail
+    * batchSize  同时有多少个节点在迁移数据。
+    * currentBatchNodes  当前正在迁移数据的节点。
     *
     * @var string[]
     */
@@ -138,7 +148,9 @@ class GetUpgradeDetailInfo implements ModelInterface, ArrayAccess
             'executeTimes' => 'executeTimes',
             'migrateParam' => 'migrateParam',
             'finalAzInfoMap' => 'finalAzInfoMap',
-            'currentNodeDetail' => 'currentNodeDetail'
+            'currentNodeDetail' => 'currentNodeDetail',
+            'batchSize' => 'batchSize',
+            'currentBatchNodes' => 'currentBatchNodes'
     ];
 
     /**
@@ -156,6 +168,8 @@ class GetUpgradeDetailInfo implements ModelInterface, ArrayAccess
     * migrateParam  集群当前升级的行为。当有query参数时显示该返回值。
     * finalAzInfoMap  集群升级预期结果。当有query参数时显示该返回值。
     * currentNodeDetail  currentNodeDetail
+    * batchSize  同时有多少个节点在迁移数据。
+    * currentBatchNodes  当前正在迁移数据的节点。
     *
     * @var string[]
     */
@@ -172,7 +186,9 @@ class GetUpgradeDetailInfo implements ModelInterface, ArrayAccess
             'executeTimes' => 'setExecuteTimes',
             'migrateParam' => 'setMigrateParam',
             'finalAzInfoMap' => 'setFinalAzInfoMap',
-            'currentNodeDetail' => 'setCurrentNodeDetail'
+            'currentNodeDetail' => 'setCurrentNodeDetail',
+            'batchSize' => 'setBatchSize',
+            'currentBatchNodes' => 'setCurrentBatchNodes'
     ];
 
     /**
@@ -190,6 +206,8 @@ class GetUpgradeDetailInfo implements ModelInterface, ArrayAccess
     * migrateParam  集群当前升级的行为。当有query参数时显示该返回值。
     * finalAzInfoMap  集群升级预期结果。当有query参数时显示该返回值。
     * currentNodeDetail  currentNodeDetail
+    * batchSize  同时有多少个节点在迁移数据。
+    * currentBatchNodes  当前正在迁移数据的节点。
     *
     * @var string[]
     */
@@ -206,7 +224,9 @@ class GetUpgradeDetailInfo implements ModelInterface, ArrayAccess
             'executeTimes' => 'getExecuteTimes',
             'migrateParam' => 'getMigrateParam',
             'finalAzInfoMap' => 'getFinalAzInfoMap',
-            'currentNodeDetail' => 'getCurrentNodeDetail'
+            'currentNodeDetail' => 'getCurrentNodeDetail',
+            'batchSize' => 'getBatchSize',
+            'currentBatchNodes' => 'getCurrentBatchNodes'
     ];
 
     /**
@@ -280,6 +300,8 @@ class GetUpgradeDetailInfo implements ModelInterface, ArrayAccess
         $this->container['migrateParam'] = isset($data['migrateParam']) ? $data['migrateParam'] : null;
         $this->container['finalAzInfoMap'] = isset($data['finalAzInfoMap']) ? $data['finalAzInfoMap'] : null;
         $this->container['currentNodeDetail'] = isset($data['currentNodeDetail']) ? $data['currentNodeDetail'] : null;
+        $this->container['batchSize'] = isset($data['batchSize']) ? $data['batchSize'] : null;
+        $this->container['currentBatchNodes'] = isset($data['currentBatchNodes']) ? $data['currentBatchNodes'] : null;
     }
 
     /**
@@ -613,6 +635,54 @@ class GetUpgradeDetailInfo implements ModelInterface, ArrayAccess
     public function setCurrentNodeDetail($currentNodeDetail)
     {
         $this->container['currentNodeDetail'] = $currentNodeDetail;
+        return $this;
+    }
+
+    /**
+    * Gets batchSize
+    *  同时有多少个节点在迁移数据。
+    *
+    * @return int|null
+    */
+    public function getBatchSize()
+    {
+        return $this->container['batchSize'];
+    }
+
+    /**
+    * Sets batchSize
+    *
+    * @param int|null $batchSize 同时有多少个节点在迁移数据。
+    *
+    * @return $this
+    */
+    public function setBatchSize($batchSize)
+    {
+        $this->container['batchSize'] = $batchSize;
+        return $this;
+    }
+
+    /**
+    * Gets currentBatchNodes
+    *  当前正在迁移数据的节点。
+    *
+    * @return string|null
+    */
+    public function getCurrentBatchNodes()
+    {
+        return $this->container['currentBatchNodes'];
+    }
+
+    /**
+    * Sets currentBatchNodes
+    *
+    * @param string|null $currentBatchNodes 当前正在迁移数据的节点。
+    *
+    * @return $this
+    */
+    public function setCurrentBatchNodes($currentBatchNodes)
+    {
+        $this->container['currentBatchNodes'] = $currentBatchNodes;
         return $this;
     }
 

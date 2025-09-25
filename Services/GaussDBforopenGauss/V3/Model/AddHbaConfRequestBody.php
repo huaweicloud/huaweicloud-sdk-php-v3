@@ -158,6 +158,9 @@ class AddHbaConfRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['hbaConfs'] === null) {
+            $invalidProperties[] = "'hbaConfs' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class AddHbaConfRequestBody implements ModelInterface, ArrayAccess
     * Gets hbaConfs
     *  **参数解释**: 需要新增的hba配置信息。 **约束限制**: 不涉及。
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HbaConfOption[]|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HbaConfOption[]
     */
     public function getHbaConfs()
     {
@@ -186,7 +189,7 @@ class AddHbaConfRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets hbaConfs
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HbaConfOption[]|null $hbaConfs **参数解释**: 需要新增的hba配置信息。 **约束限制**: 不涉及。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HbaConfOption[] $hbaConfs **参数解释**: 需要新增的hba配置信息。 **约束限制**: 不涉及。
     *
     * @return $this
     */

@@ -193,6 +193,15 @@ class SwitchKmsTdeRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['kmsTdeKeyId'] === null) {
+            $invalidProperties[] = "'kmsTdeKeyId' can't be null";
+        }
+        if ($this->container['kmsProjectName'] === null) {
+            $invalidProperties[] = "'kmsProjectName' can't be null";
+        }
+        if ($this->container['kmsTdeStatus'] === null) {
+            $invalidProperties[] = "'kmsTdeStatus' can't be null";
+        }
             $allowedValues = $this->getKmsTdeStatusAllowableValues();
                 if (!is_null($this->container['kmsTdeStatus']) && !in_array($this->container['kmsTdeStatus'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -219,7 +228,7 @@ class SwitchKmsTdeRequestBody implements ModelInterface, ArrayAccess
     * Gets kmsTdeKeyId
     *  **参数解释**: kms主密钥ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
-    * @return string|null
+    * @return string
     */
     public function getKmsTdeKeyId()
     {
@@ -229,7 +238,7 @@ class SwitchKmsTdeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets kmsTdeKeyId
     *
-    * @param string|null $kmsTdeKeyId **参数解释**: kms主密钥ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * @param string $kmsTdeKeyId **参数解释**: kms主密钥ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */
@@ -243,7 +252,7 @@ class SwitchKmsTdeRequestBody implements ModelInterface, ArrayAccess
     * Gets kmsProjectName
     *  **参数解释**: GaussDB使用透明加密的KMS主密钥ID所在资源空间名称。 获取方法请参见[获取项目名称](https://support.huaweicloud.com/api-gaussdb/gaussdb_api_196.html)。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
-    * @return string|null
+    * @return string
     */
     public function getKmsProjectName()
     {
@@ -253,7 +262,7 @@ class SwitchKmsTdeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets kmsProjectName
     *
-    * @param string|null $kmsProjectName **参数解释**: GaussDB使用透明加密的KMS主密钥ID所在资源空间名称。 获取方法请参见[获取项目名称](https://support.huaweicloud.com/api-gaussdb/gaussdb_api_196.html)。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * @param string $kmsProjectName **参数解释**: GaussDB使用透明加密的KMS主密钥ID所在资源空间名称。 获取方法请参见[获取项目名称](https://support.huaweicloud.com/api-gaussdb/gaussdb_api_196.html)。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */
@@ -267,7 +276,7 @@ class SwitchKmsTdeRequestBody implements ModelInterface, ArrayAccess
     * Gets kmsTdeStatus
     *  **参数解释**: 需要切换的状态：on表示开启。 **约束限制**: 不涉及。 **取值范围**: on: 开启。 **默认取值**: on
     *
-    * @return string|null
+    * @return string
     */
     public function getKmsTdeStatus()
     {
@@ -277,7 +286,7 @@ class SwitchKmsTdeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets kmsTdeStatus
     *
-    * @param string|null $kmsTdeStatus **参数解释**: 需要切换的状态：on表示开启。 **约束限制**: 不涉及。 **取值范围**: on: 开启。 **默认取值**: on
+    * @param string $kmsTdeStatus **参数解释**: 需要切换的状态：on表示开启。 **约束限制**: 不涉及。 **取值范围**: on: 开启。 **默认取值**: on
     *
     * @return $this
     */

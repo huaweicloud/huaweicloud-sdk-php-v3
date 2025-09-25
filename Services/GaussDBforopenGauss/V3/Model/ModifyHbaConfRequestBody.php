@@ -20,26 +20,26 @@ class ModifyHbaConfRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * beforeConfs  **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
-    * afterConfs  **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
+    * beforeConf  **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
+    * afterConf  **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'beforeConfs' => 'object',
-            'afterConfs' => 'object'
+            'beforeConf' => 'object',
+            'afterConf' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * beforeConfs  **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
-    * afterConfs  **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
+    * beforeConf  **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
+    * afterConf  **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'beforeConfs' => null,
-        'afterConfs' => null
+        'beforeConf' => null,
+        'afterConf' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class ModifyHbaConfRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * beforeConfs  **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
-    * afterConfs  **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
+    * beforeConf  **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
+    * afterConf  **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'beforeConfs' => 'before_confs',
-            'afterConfs' => 'after_confs'
+            'beforeConf' => 'before_conf',
+            'afterConf' => 'after_conf'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * beforeConfs  **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
-    * afterConfs  **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
+    * beforeConf  **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
+    * afterConf  **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'beforeConfs' => 'setBeforeConfs',
-            'afterConfs' => 'setAfterConfs'
+            'beforeConf' => 'setBeforeConf',
+            'afterConf' => 'setAfterConf'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * beforeConfs  **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
-    * afterConfs  **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
+    * beforeConf  **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
+    * afterConf  **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'beforeConfs' => 'getBeforeConfs',
-            'afterConfs' => 'getAfterConfs'
+            'beforeConf' => 'getBeforeConf',
+            'afterConf' => 'getAfterConf'
     ];
 
     /**
@@ -157,8 +157,8 @@ class ModifyHbaConfRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['beforeConfs'] = isset($data['beforeConfs']) ? $data['beforeConfs'] : null;
-        $this->container['afterConfs'] = isset($data['afterConfs']) ? $data['afterConfs'] : null;
+        $this->container['beforeConf'] = isset($data['beforeConf']) ? $data['beforeConf'] : null;
+        $this->container['afterConf'] = isset($data['afterConf']) ? $data['afterConf'] : null;
     }
 
     /**
@@ -169,11 +169,11 @@ class ModifyHbaConfRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['beforeConfs'] === null) {
-            $invalidProperties[] = "'beforeConfs' can't be null";
+        if ($this->container['beforeConf'] === null) {
+            $invalidProperties[] = "'beforeConf' can't be null";
         }
-        if ($this->container['afterConfs'] === null) {
-            $invalidProperties[] = "'afterConfs' can't be null";
+        if ($this->container['afterConf'] === null) {
+            $invalidProperties[] = "'afterConf' can't be null";
         }
         return $invalidProperties;
     }
@@ -190,50 +190,50 @@ class ModifyHbaConfRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets beforeConfs
+    * Gets beforeConf
     *  **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
     *
     * @return object
     */
-    public function getBeforeConfs()
+    public function getBeforeConf()
     {
-        return $this->container['beforeConfs'];
+        return $this->container['beforeConf'];
     }
 
     /**
-    * Sets beforeConfs
+    * Sets beforeConf
     *
-    * @param object $beforeConfs **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
+    * @param object $beforeConf **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
     *
     * @return $this
     */
-    public function setBeforeConfs($beforeConfs)
+    public function setBeforeConf($beforeConf)
     {
-        $this->container['beforeConfs'] = $beforeConfs;
+        $this->container['beforeConf'] = $beforeConf;
         return $this;
     }
 
     /**
-    * Gets afterConfs
+    * Gets afterConf
     *  **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
     *
     * @return object
     */
-    public function getAfterConfs()
+    public function getAfterConf()
     {
-        return $this->container['afterConfs'];
+        return $this->container['afterConf'];
     }
 
     /**
-    * Sets afterConfs
+    * Sets afterConf
     *
-    * @param object $afterConfs **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
+    * @param object $afterConf **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
     *
     * @return $this
     */
-    public function setAfterConfs($afterConfs)
+    public function setAfterConf($afterConf)
     {
-        $this->container['afterConfs'] = $afterConfs;
+        $this->container['afterConf'] = $afterConf;
         return $this;
     }
 

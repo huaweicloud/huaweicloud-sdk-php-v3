@@ -22,11 +22,11 @@ class ShowInstanceMetricDataRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**: - zh-cn  - en-us  **默认取值**: en-us
     * instanceId  **参数解释**: 实例ID，此参数是用户创建实例的唯一标识。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
-    * startTime  开始时间，时间戳格式，例如：1756971683303。
-    * endTime  结束时间，时间戳格式，例如：1756975283303。
-    * metric  指标ID，可通过“查询指标分组的指标名称”接口获取，例如查询CPU使用率，传值 rds001_cpu_util。
-    * nodeId  节点ID。
-    * componentId  组件ID，例如dn_6001。
+    * startTime  **参数解释**: 开始时间，时间戳格式，例如：1756971683303。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * endTime  **参数解释**: 结束时间，时间戳格式，例如：1756975283303。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * metric  **参数解释**: 指标ID，可通过“查询指标分组的指标名称”接口获取，例如查询CPU使用率，传值 rds001_cpu_util。 **约束限制**: 不涉及。
+    * nodeId  **参数解释**: 节点ID。 **约束限制**: 不涉及。
+    * componentId  **参数解释**: 组件ID，例如dn_6001。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -44,11 +44,11 @@ class ShowInstanceMetricDataRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**: - zh-cn  - en-us  **默认取值**: en-us
     * instanceId  **参数解释**: 实例ID，此参数是用户创建实例的唯一标识。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
-    * startTime  开始时间，时间戳格式，例如：1756971683303。
-    * endTime  结束时间，时间戳格式，例如：1756975283303。
-    * metric  指标ID，可通过“查询指标分组的指标名称”接口获取，例如查询CPU使用率，传值 rds001_cpu_util。
-    * nodeId  节点ID。
-    * componentId  组件ID，例如dn_6001。
+    * startTime  **参数解释**: 开始时间，时间戳格式，例如：1756971683303。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * endTime  **参数解释**: 结束时间，时间戳格式，例如：1756975283303。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * metric  **参数解释**: 指标ID，可通过“查询指标分组的指标名称”接口获取，例如查询CPU使用率，传值 rds001_cpu_util。 **约束限制**: 不涉及。
+    * nodeId  **参数解释**: 节点ID。 **约束限制**: 不涉及。
+    * componentId  **参数解释**: 组件ID，例如dn_6001。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -87,11 +87,11 @@ class ShowInstanceMetricDataRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**: - zh-cn  - en-us  **默认取值**: en-us
     * instanceId  **参数解释**: 实例ID，此参数是用户创建实例的唯一标识。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
-    * startTime  开始时间，时间戳格式，例如：1756971683303。
-    * endTime  结束时间，时间戳格式，例如：1756975283303。
-    * metric  指标ID，可通过“查询指标分组的指标名称”接口获取，例如查询CPU使用率，传值 rds001_cpu_util。
-    * nodeId  节点ID。
-    * componentId  组件ID，例如dn_6001。
+    * startTime  **参数解释**: 开始时间，时间戳格式，例如：1756971683303。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * endTime  **参数解释**: 结束时间，时间戳格式，例如：1756975283303。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * metric  **参数解释**: 指标ID，可通过“查询指标分组的指标名称”接口获取，例如查询CPU使用率，传值 rds001_cpu_util。 **约束限制**: 不涉及。
+    * nodeId  **参数解释**: 节点ID。 **约束限制**: 不涉及。
+    * componentId  **参数解释**: 组件ID，例如dn_6001。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -109,11 +109,11 @@ class ShowInstanceMetricDataRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**: - zh-cn  - en-us  **默认取值**: en-us
     * instanceId  **参数解释**: 实例ID，此参数是用户创建实例的唯一标识。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
-    * startTime  开始时间，时间戳格式，例如：1756971683303。
-    * endTime  结束时间，时间戳格式，例如：1756975283303。
-    * metric  指标ID，可通过“查询指标分组的指标名称”接口获取，例如查询CPU使用率，传值 rds001_cpu_util。
-    * nodeId  节点ID。
-    * componentId  组件ID，例如dn_6001。
+    * startTime  **参数解释**: 开始时间，时间戳格式，例如：1756971683303。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * endTime  **参数解释**: 结束时间，时间戳格式，例如：1756975283303。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * metric  **参数解释**: 指标ID，可通过“查询指标分组的指标名称”接口获取，例如查询CPU使用率，传值 rds001_cpu_util。 **约束限制**: 不涉及。
+    * nodeId  **参数解释**: 节点ID。 **约束限制**: 不涉及。
+    * componentId  **参数解释**: 组件ID，例如dn_6001。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -131,11 +131,11 @@ class ShowInstanceMetricDataRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**: - zh-cn  - en-us  **默认取值**: en-us
     * instanceId  **参数解释**: 实例ID，此参数是用户创建实例的唯一标识。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
-    * startTime  开始时间，时间戳格式，例如：1756971683303。
-    * endTime  结束时间，时间戳格式，例如：1756975283303。
-    * metric  指标ID，可通过“查询指标分组的指标名称”接口获取，例如查询CPU使用率，传值 rds001_cpu_util。
-    * nodeId  节点ID。
-    * componentId  组件ID，例如dn_6001。
+    * startTime  **参数解释**: 开始时间，时间戳格式，例如：1756971683303。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * endTime  **参数解释**: 结束时间，时间戳格式，例如：1756975283303。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * metric  **参数解释**: 指标ID，可通过“查询指标分组的指标名称”接口获取，例如查询CPU使用率，传值 rds001_cpu_util。 **约束限制**: 不涉及。
+    * nodeId  **参数解释**: 节点ID。 **约束限制**: 不涉及。
+    * componentId  **参数解释**: 组件ID，例如dn_6001。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -326,7 +326,7 @@ class ShowInstanceMetricDataRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  开始时间，时间戳格式，例如：1756971683303。
+    *  **参数解释**: 开始时间，时间戳格式，例如：1756971683303。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return string
     */
@@ -338,7 +338,7 @@ class ShowInstanceMetricDataRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string $startTime 开始时间，时间戳格式，例如：1756971683303。
+    * @param string $startTime **参数解释**: 开始时间，时间戳格式，例如：1756971683303。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */
@@ -350,7 +350,7 @@ class ShowInstanceMetricDataRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间，时间戳格式，例如：1756975283303。
+    *  **参数解释**: 结束时间，时间戳格式，例如：1756975283303。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return string
     */
@@ -362,7 +362,7 @@ class ShowInstanceMetricDataRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string $endTime 结束时间，时间戳格式，例如：1756975283303。
+    * @param string $endTime **参数解释**: 结束时间，时间戳格式，例如：1756975283303。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */
@@ -374,7 +374,7 @@ class ShowInstanceMetricDataRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets metric
-    *  指标ID，可通过“查询指标分组的指标名称”接口获取，例如查询CPU使用率，传值 rds001_cpu_util。
+    *  **参数解释**: 指标ID，可通过“查询指标分组的指标名称”接口获取，例如查询CPU使用率，传值 rds001_cpu_util。 **约束限制**: 不涉及。
     *
     * @return string
     */
@@ -386,7 +386,7 @@ class ShowInstanceMetricDataRequest implements ModelInterface, ArrayAccess
     /**
     * Sets metric
     *
-    * @param string $metric 指标ID，可通过“查询指标分组的指标名称”接口获取，例如查询CPU使用率，传值 rds001_cpu_util。
+    * @param string $metric **参数解释**: 指标ID，可通过“查询指标分组的指标名称”接口获取，例如查询CPU使用率，传值 rds001_cpu_util。 **约束限制**: 不涉及。
     *
     * @return $this
     */
@@ -398,7 +398,7 @@ class ShowInstanceMetricDataRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeId
-    *  节点ID。
+    *  **参数解释**: 节点ID。 **约束限制**: 不涉及。
     *
     * @return string
     */
@@ -410,7 +410,7 @@ class ShowInstanceMetricDataRequest implements ModelInterface, ArrayAccess
     /**
     * Sets nodeId
     *
-    * @param string $nodeId 节点ID。
+    * @param string $nodeId **参数解释**: 节点ID。 **约束限制**: 不涉及。
     *
     * @return $this
     */
@@ -422,7 +422,7 @@ class ShowInstanceMetricDataRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets componentId
-    *  组件ID，例如dn_6001。
+    *  **参数解释**: 组件ID，例如dn_6001。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return string|null
     */
@@ -434,7 +434,7 @@ class ShowInstanceMetricDataRequest implements ModelInterface, ArrayAccess
     /**
     * Sets componentId
     *
-    * @param string|null $componentId 组件ID，例如dn_6001。
+    * @param string|null $componentId **参数解释**: 组件ID，例如dn_6001。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */

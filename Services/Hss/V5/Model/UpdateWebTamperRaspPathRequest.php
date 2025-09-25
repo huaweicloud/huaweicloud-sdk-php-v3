@@ -22,7 +22,7 @@ class UpdateWebTamperRaspPathRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * hostId  服务器id
+    * hostId  **参数解释**: 服务器ID，仅支持Linux服务器，要求服务器已开启网页防篡改防护，或已关闭防护但未删除网页防篡改策略。 **约束限制**: 需要使用 ListWtpProtectHost 接口查询网页防篡改主机防护状态列表信息，在 ListWtpProtectHost 接口的响应体中，os_type 等于 Linux 的 host_id 是符合查询条件的服务器ID **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * body  body
     *
     * @var string[]
@@ -38,7 +38,7 @@ class UpdateWebTamperRaspPathRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * hostId  服务器id
+    * hostId  **参数解释**: 服务器ID，仅支持Linux服务器，要求服务器已开启网页防篡改防护，或已关闭防护但未删除网页防篡改策略。 **约束限制**: 需要使用 ListWtpProtectHost 接口查询网页防篡改主机防护状态列表信息，在 ListWtpProtectHost 接口的响应体中，os_type 等于 Linux 的 host_id 是符合查询条件的服务器ID **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * body  body
     *
     * @var string[]
@@ -75,7 +75,7 @@ class UpdateWebTamperRaspPathRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * hostId  服务器id
+    * hostId  **参数解释**: 服务器ID，仅支持Linux服务器，要求服务器已开启网页防篡改防护，或已关闭防护但未删除网页防篡改策略。 **约束限制**: 需要使用 ListWtpProtectHost 接口查询网页防篡改主机防护状态列表信息，在 ListWtpProtectHost 接口的响应体中，os_type 等于 Linux 的 host_id 是符合查询条件的服务器ID **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * body  body
     *
     * @var string[]
@@ -91,7 +91,7 @@ class UpdateWebTamperRaspPathRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * hostId  服务器id
+    * hostId  **参数解释**: 服务器ID，仅支持Linux服务器，要求服务器已开启网页防篡改防护，或已关闭防护但未删除网页防篡改策略。 **约束限制**: 需要使用 ListWtpProtectHost 接口查询网页防篡改主机防护状态列表信息，在 ListWtpProtectHost 接口的响应体中，os_type 等于 Linux 的 host_id 是符合查询条件的服务器ID **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * body  body
     *
     * @var string[]
@@ -107,7 +107,7 @@ class UpdateWebTamperRaspPathRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * hostId  服务器id
+    * hostId  **参数解释**: 服务器ID，仅支持Linux服务器，要求服务器已开启网页防篡改防护，或已关闭防护但未删除网页防篡改策略。 **约束限制**: 需要使用 ListWtpProtectHost 接口查询网页防篡改主机防护状态列表信息，在 ListWtpProtectHost 接口的响应体中，os_type 等于 Linux 的 host_id 是符合查询条件的服务器ID **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * body  body
     *
     * @var string[]
@@ -218,9 +218,6 @@ class UpdateWebTamperRaspPathRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['hostId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['hostId'])) {
-                $invalidProperties[] = "invalid value for 'hostId', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
-            }
         return $invalidProperties;
     }
 
@@ -285,7 +282,7 @@ class UpdateWebTamperRaspPathRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器id
+    *  **参数解释**: 服务器ID，仅支持Linux服务器，要求服务器已开启网页防篡改防护，或已关闭防护但未删除网页防篡改策略。 **约束限制**: 需要使用 ListWtpProtectHost 接口查询网页防篡改主机防护状态列表信息，在 ListWtpProtectHost 接口的响应体中，os_type 等于 Linux 的 host_id 是符合查询条件的服务器ID **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return string
     */
@@ -297,7 +294,7 @@ class UpdateWebTamperRaspPathRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string $hostId 服务器id
+    * @param string $hostId **参数解释**: 服务器ID，仅支持Linux服务器，要求服务器已开启网页防篡改防护，或已关闭防护但未删除网页防篡改策略。 **约束限制**: 需要使用 ListWtpProtectHost 接口查询网页防篡改主机防护状态列表信息，在 ListWtpProtectHost 接口的响应体中，os_type 等于 Linux 的 host_id 是符合查询条件的服务器ID **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return $this
     */

@@ -33,7 +33,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * cveId  漏洞编号
     * labelList  漏洞标签
-    * status  漏洞状态
+    * status  漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     * assetValue  资产重要性 important common test
     * groupName  服务器组名称
     * body  body
@@ -75,7 +75,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * cveId  漏洞编号
     * labelList  漏洞标签
-    * status  漏洞状态
+    * status  漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     * assetValue  资产重要性 important common test
     * groupName  服务器组名称
     * body  body
@@ -138,7 +138,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * cveId  漏洞编号
     * labelList  漏洞标签
-    * status  漏洞状态
+    * status  漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     * assetValue  资产重要性 important common test
     * groupName  服务器组名称
     * body  body
@@ -180,7 +180,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * cveId  漏洞编号
     * labelList  漏洞标签
-    * status  漏洞状态
+    * status  漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     * assetValue  资产重要性 important common test
     * groupName  服务器组名称
     * body  body
@@ -222,7 +222,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * cveId  漏洞编号
     * labelList  漏洞标签
-    * status  漏洞状态
+    * status  漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     * assetValue  资产重要性 important common test
     * groupName  服务器组名称
     * body  body
@@ -423,6 +423,9 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
                 $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['status']) && !preg_match("/^(vul_status_unfix|vul_status_unfix|vul_status_verified|vul_status_fixing|vul_status_fixed|vul_status_reboot|vul_status_failed|vul_status_fix_after_reboot)$/", $this->container['status'])) {
+                $invalidProperties[] = "invalid value for 'status', must be conform to the pattern /^(vul_status_unfix|vul_status_unfix|vul_status_verified|vul_status_fixing|vul_status_fixed|vul_status_reboot|vul_status_failed|vul_status_fix_after_reboot)$/.";
             }
             if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) > 32)) {
                 $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 32.";
@@ -764,7 +767,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  漏洞状态
+    *  漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     *
     * @return string|null
     */
@@ -776,7 +779,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 漏洞状态
+    * @param string|null $status 漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     *
     * @return $this
     */

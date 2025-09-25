@@ -25,7 +25,7 @@ class ProxyFlavor implements ModelInterface, ArrayAccess
     * ram  **参数解释**：  内存。  **取值范围**：  不涉及。
     * dbType  **参数解释**：  数据库类型。  **取值范围**：  不涉及。
     * azStatus  **参数解释**：  az状态。
-    * supportedIpv6  **参数解释**：  是否支持ipv6。  **取值范围**： - true: 支持ipv6。 - false: 不支持ipv6。
+    * supportedIpv6  **参数解释**：  是否支持ipv6。  **取值范围**：  - true: 支持ipv6。 - false: 不支持ipv6。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class ProxyFlavor implements ModelInterface, ArrayAccess
     * ram  **参数解释**：  内存。  **取值范围**：  不涉及。
     * dbType  **参数解释**：  数据库类型。  **取值范围**：  不涉及。
     * azStatus  **参数解释**：  az状态。
-    * supportedIpv6  **参数解释**：  是否支持ipv6。  **取值范围**： - true: 支持ipv6。 - false: 不支持ipv6。
+    * supportedIpv6  **参数解释**：  是否支持ipv6。  **取值范围**：  - true: 支持ipv6。 - false: 不支持ipv6。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ProxyFlavor implements ModelInterface, ArrayAccess
     * ram  **参数解释**：  内存。  **取值范围**：  不涉及。
     * dbType  **参数解释**：  数据库类型。  **取值范围**：  不涉及。
     * azStatus  **参数解释**：  az状态。
-    * supportedIpv6  **参数解释**：  是否支持ipv6。  **取值范围**： - true: 支持ipv6。 - false: 不支持ipv6。
+    * supportedIpv6  **参数解释**：  是否支持ipv6。  **取值范围**：  - true: 支持ipv6。 - false: 不支持ipv6。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ProxyFlavor implements ModelInterface, ArrayAccess
     * ram  **参数解释**：  内存。  **取值范围**：  不涉及。
     * dbType  **参数解释**：  数据库类型。  **取值范围**：  不涉及。
     * azStatus  **参数解释**：  az状态。
-    * supportedIpv6  **参数解释**：  是否支持ipv6。  **取值范围**： - true: 支持ipv6。 - false: 不支持ipv6。
+    * supportedIpv6  **参数解释**：  是否支持ipv6。  **取值范围**：  - true: 支持ipv6。 - false: 不支持ipv6。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ProxyFlavor implements ModelInterface, ArrayAccess
     * ram  **参数解释**：  内存。  **取值范围**：  不涉及。
     * dbType  **参数解释**：  数据库类型。  **取值范围**：  不涉及。
     * azStatus  **参数解释**：  az状态。
-    * supportedIpv6  **参数解释**：  是否支持ipv6。  **取值范围**： - true: 支持ipv6。 - false: 不支持ipv6。
+    * supportedIpv6  **参数解释**：  是否支持ipv6。  **取值范围**：  - true: 支持ipv6。 - false: 不支持ipv6。
     *
     * @var string[]
     */
@@ -349,7 +349,7 @@ class ProxyFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportedIpv6
-    *  **参数解释**：  是否支持ipv6。  **取值范围**： - true: 支持ipv6。 - false: 不支持ipv6。
+    *  **参数解释**：  是否支持ipv6。  **取值范围**：  - true: 支持ipv6。 - false: 不支持ipv6。
     *
     * @return bool|null
     */
@@ -361,7 +361,7 @@ class ProxyFlavor implements ModelInterface, ArrayAccess
     /**
     * Sets supportedIpv6
     *
-    * @param bool|null $supportedIpv6 **参数解释**：  是否支持ipv6。  **取值范围**： - true: 支持ipv6。 - false: 不支持ipv6。
+    * @param bool|null $supportedIpv6 **参数解释**：  是否支持ipv6。  **取值范围**：  - true: 支持ipv6。 - false: 不支持ipv6。
     *
     * @return $this
     */

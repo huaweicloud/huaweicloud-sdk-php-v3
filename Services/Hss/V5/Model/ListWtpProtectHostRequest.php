@@ -20,70 +20,78 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * hostName  服务器名称
-    * hostId  主机ID
-    * publicIp  弹性公网IP
-    * privateIp  私有IP
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * publicIp  服务器公网IP
+    * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * groupName  服务器组名称
-    * osType  操作系统类别（linux，windows）   - linux : linux操作系统   - windows : windows操作系统
-    * protectStatus  配额状态   - opened : 已绑定网页防篡改配额
-    * wtpStatus  网页防篡改防护状态   - opened : 防护汇总   - opening : 正在开启   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
-    * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
-    * limit  默认10
-    * offset  偏移量：指定返回记录的开始位置
+    * osType  操作系统类型，包含如下2种。   - Linux：Linux。   - Windows：Windows。
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * protectStatus  **参数解释**: 网页防篡改防护开启状态 **约束限制**: 不涉及 **取值范围**: - opened ：已开启网页防篡改防护。  **默认取值**: 不涉及
+    * wtpStatus  **参数解释**: 网页防篡改详细防护状态 **约束限制**: 不涉及 **取值范围**: - opened : 防护中。 - opening : 开启中。 - open_failed : 防护失败。 - partial_protection : 部分防护。 - protection_interruption : 防护中断。  **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: - not_installed : agent未安装。 - online : agent在线。 - offline : agent不在线。  **默认取值**: 不涉及
+    * raspStatus  **参数解释**: 动态网页防篡改防护开启状态 **约束限制**: 不涉及 **取值范围**: - opened ：已开启动态网页防篡改防护。 - closed ：未开启动态网页防篡改防护。  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'region' => 'string',
             'enterpriseProjectId' => 'string',
+            'region' => 'string',
             'hostName' => 'string',
             'hostId' => 'string',
             'publicIp' => 'string',
             'privateIp' => 'string',
             'groupName' => 'string',
             'osType' => 'string',
+            'assetValue' => 'string',
+            'offset' => 'int',
+            'limit' => 'int',
             'protectStatus' => 'string',
             'wtpStatus' => 'string',
             'agentStatus' => 'string',
-            'limit' => 'int',
-            'offset' => 'int'
+            'raspStatus' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * hostName  服务器名称
-    * hostId  主机ID
-    * publicIp  弹性公网IP
-    * privateIp  私有IP
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * publicIp  服务器公网IP
+    * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * groupName  服务器组名称
-    * osType  操作系统类别（linux，windows）   - linux : linux操作系统   - windows : windows操作系统
-    * protectStatus  配额状态   - opened : 已绑定网页防篡改配额
-    * wtpStatus  网页防篡改防护状态   - opened : 防护汇总   - opening : 正在开启   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
-    * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
-    * limit  默认10
-    * offset  偏移量：指定返回记录的开始位置
+    * osType  操作系统类型，包含如下2种。   - Linux：Linux。   - Windows：Windows。
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * protectStatus  **参数解释**: 网页防篡改防护开启状态 **约束限制**: 不涉及 **取值范围**: - opened ：已开启网页防篡改防护。  **默认取值**: 不涉及
+    * wtpStatus  **参数解释**: 网页防篡改详细防护状态 **约束限制**: 不涉及 **取值范围**: - opened : 防护中。 - opening : 开启中。 - open_failed : 防护失败。 - partial_protection : 部分防护。 - protection_interruption : 防护中断。  **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: - not_installed : agent未安装。 - online : agent在线。 - offline : agent不在线。  **默认取值**: 不涉及
+    * raspStatus  **参数解释**: 动态网页防篡改防护开启状态 **约束限制**: 不涉及 **取值范围**: - opened ：已开启动态网页防篡改防护。 - closed ：未开启动态网页防篡改防护。  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'region' => null,
         'enterpriseProjectId' => null,
+        'region' => null,
         'hostName' => null,
         'hostId' => null,
         'publicIp' => null,
         'privateIp' => null,
         'groupName' => null,
         'osType' => null,
+        'assetValue' => null,
+        'offset' => 'int32',
+        'limit' => 'int32',
         'protectStatus' => null,
         'wtpStatus' => null,
         'agentStatus' => null,
-        'limit' => 'int32',
-        'offset' => 'int32'
+        'raspStatus' => null
     ];
 
     /**
@@ -109,104 +117,116 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * hostName  服务器名称
-    * hostId  主机ID
-    * publicIp  弹性公网IP
-    * privateIp  私有IP
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * publicIp  服务器公网IP
+    * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * groupName  服务器组名称
-    * osType  操作系统类别（linux，windows）   - linux : linux操作系统   - windows : windows操作系统
-    * protectStatus  配额状态   - opened : 已绑定网页防篡改配额
-    * wtpStatus  网页防篡改防护状态   - opened : 防护汇总   - opening : 正在开启   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
-    * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
-    * limit  默认10
-    * offset  偏移量：指定返回记录的开始位置
+    * osType  操作系统类型，包含如下2种。   - Linux：Linux。   - Windows：Windows。
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * protectStatus  **参数解释**: 网页防篡改防护开启状态 **约束限制**: 不涉及 **取值范围**: - opened ：已开启网页防篡改防护。  **默认取值**: 不涉及
+    * wtpStatus  **参数解释**: 网页防篡改详细防护状态 **约束限制**: 不涉及 **取值范围**: - opened : 防护中。 - opening : 开启中。 - open_failed : 防护失败。 - partial_protection : 部分防护。 - protection_interruption : 防护中断。  **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: - not_installed : agent未安装。 - online : agent在线。 - offline : agent不在线。  **默认取值**: 不涉及
+    * raspStatus  **参数解释**: 动态网页防篡改防护开启状态 **约束限制**: 不涉及 **取值范围**: - opened ：已开启动态网页防篡改防护。 - closed ：未开启动态网页防篡改防护。  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'region' => 'region',
             'enterpriseProjectId' => 'enterprise_project_id',
+            'region' => 'region',
             'hostName' => 'host_name',
             'hostId' => 'host_id',
             'publicIp' => 'public_ip',
             'privateIp' => 'private_ip',
             'groupName' => 'group_name',
             'osType' => 'os_type',
+            'assetValue' => 'asset_value',
+            'offset' => 'offset',
+            'limit' => 'limit',
             'protectStatus' => 'protect_status',
             'wtpStatus' => 'wtp_status',
             'agentStatus' => 'agent_status',
-            'limit' => 'limit',
-            'offset' => 'offset'
+            'raspStatus' => 'rasp_status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * hostName  服务器名称
-    * hostId  主机ID
-    * publicIp  弹性公网IP
-    * privateIp  私有IP
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * publicIp  服务器公网IP
+    * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * groupName  服务器组名称
-    * osType  操作系统类别（linux，windows）   - linux : linux操作系统   - windows : windows操作系统
-    * protectStatus  配额状态   - opened : 已绑定网页防篡改配额
-    * wtpStatus  网页防篡改防护状态   - opened : 防护汇总   - opening : 正在开启   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
-    * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
-    * limit  默认10
-    * offset  偏移量：指定返回记录的开始位置
+    * osType  操作系统类型，包含如下2种。   - Linux：Linux。   - Windows：Windows。
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * protectStatus  **参数解释**: 网页防篡改防护开启状态 **约束限制**: 不涉及 **取值范围**: - opened ：已开启网页防篡改防护。  **默认取值**: 不涉及
+    * wtpStatus  **参数解释**: 网页防篡改详细防护状态 **约束限制**: 不涉及 **取值范围**: - opened : 防护中。 - opening : 开启中。 - open_failed : 防护失败。 - partial_protection : 部分防护。 - protection_interruption : 防护中断。  **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: - not_installed : agent未安装。 - online : agent在线。 - offline : agent不在线。  **默认取值**: 不涉及
+    * raspStatus  **参数解释**: 动态网页防篡改防护开启状态 **约束限制**: 不涉及 **取值范围**: - opened ：已开启动态网页防篡改防护。 - closed ：未开启动态网页防篡改防护。  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
-            'region' => 'setRegion',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'region' => 'setRegion',
             'hostName' => 'setHostName',
             'hostId' => 'setHostId',
             'publicIp' => 'setPublicIp',
             'privateIp' => 'setPrivateIp',
             'groupName' => 'setGroupName',
             'osType' => 'setOsType',
+            'assetValue' => 'setAssetValue',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit',
             'protectStatus' => 'setProtectStatus',
             'wtpStatus' => 'setWtpStatus',
             'agentStatus' => 'setAgentStatus',
-            'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'raspStatus' => 'setRaspStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * hostName  服务器名称
-    * hostId  主机ID
-    * publicIp  弹性公网IP
-    * privateIp  私有IP
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * publicIp  服务器公网IP
+    * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * groupName  服务器组名称
-    * osType  操作系统类别（linux，windows）   - linux : linux操作系统   - windows : windows操作系统
-    * protectStatus  配额状态   - opened : 已绑定网页防篡改配额
-    * wtpStatus  网页防篡改防护状态   - opened : 防护汇总   - opening : 正在开启   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
-    * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
-    * limit  默认10
-    * offset  偏移量：指定返回记录的开始位置
+    * osType  操作系统类型，包含如下2种。   - Linux：Linux。   - Windows：Windows。
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * protectStatus  **参数解释**: 网页防篡改防护开启状态 **约束限制**: 不涉及 **取值范围**: - opened ：已开启网页防篡改防护。  **默认取值**: 不涉及
+    * wtpStatus  **参数解释**: 网页防篡改详细防护状态 **约束限制**: 不涉及 **取值范围**: - opened : 防护中。 - opening : 开启中。 - open_failed : 防护失败。 - partial_protection : 部分防护。 - protection_interruption : 防护中断。  **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: - not_installed : agent未安装。 - online : agent在线。 - offline : agent不在线。  **默认取值**: 不涉及
+    * raspStatus  **参数解释**: 动态网页防篡改防护开启状态 **约束限制**: 不涉及 **取值范围**: - opened ：已开启动态网页防篡改防护。 - closed ：未开启动态网页防篡改防护。  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
-            'region' => 'getRegion',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'region' => 'getRegion',
             'hostName' => 'getHostName',
             'hostId' => 'getHostId',
             'publicIp' => 'getPublicIp',
             'privateIp' => 'getPrivateIp',
             'groupName' => 'getGroupName',
             'osType' => 'getOsType',
+            'assetValue' => 'getAssetValue',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit',
             'protectStatus' => 'getProtectStatus',
             'wtpStatus' => 'getWtpStatus',
             'agentStatus' => 'getAgentStatus',
-            'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'raspStatus' => 'getRaspStatus'
     ];
 
     /**
@@ -267,19 +287,21 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
         $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
         $this->container['privateIp'] = isset($data['privateIp']) ? $data['privateIp'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['osType'] = isset($data['osType']) ? $data['osType'] : null;
+        $this->container['assetValue'] = isset($data['assetValue']) ? $data['assetValue'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['protectStatus'] = isset($data['protectStatus']) ? $data['protectStatus'] : null;
         $this->container['wtpStatus'] = isset($data['wtpStatus']) ? $data['wtpStatus'] : null;
         $this->container['agentStatus'] = isset($data['agentStatus']) ? $data['agentStatus'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['raspStatus'] = isset($data['raspStatus']) ? $data['raspStatus'] : null;
     }
 
     /**
@@ -290,53 +312,95 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 32)) {
-                $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 32.";
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 128)) {
+                $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) < 0)) {
                 $invalidProperties[] = "invalid value for 'region', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['region']) && !preg_match("/^.*$/", $this->container['region'])) {
+                $invalidProperties[] = "invalid value for 'region', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 128)) {
-                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['hostName']) && !preg_match("/^.*$/", $this->container['hostName'])) {
+                $invalidProperties[] = "invalid value for 'hostName', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostId']) && !preg_match("/^.*$/", $this->container['hostId'])) {
+                $invalidProperties[] = "invalid value for 'hostId', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) > 128)) {
                 $invalidProperties[] = "invalid value for 'publicIp', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) < 0)) {
-                $invalidProperties[] = "invalid value for 'publicIp', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) < 1)) {
+                $invalidProperties[] = "invalid value for 'publicIp', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['publicIp']) && !preg_match("/^.*$/", $this->container['publicIp'])) {
+                $invalidProperties[] = "invalid value for 'publicIp', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) > 128)) {
                 $invalidProperties[] = "invalid value for 'privateIp', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) < 0)) {
-                $invalidProperties[] = "invalid value for 'privateIp', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) < 1)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['privateIp']) && !preg_match("/^.*$/", $this->container['privateIp'])) {
+                $invalidProperties[] = "invalid value for 'privateIp', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) > 32)) {
-                $invalidProperties[] = "invalid value for 'osType', the character length must be smaller than or equal to 32.";
+            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['groupName']) && !preg_match("/^.*$/", $this->container['groupName'])) {
+                $invalidProperties[] = "invalid value for 'groupName', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) > 10)) {
+                $invalidProperties[] = "invalid value for 'osType', the character length must be smaller than or equal to 10.";
             }
             if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'osType', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) > 128)) {
+                $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) < 0)) {
+                $invalidProperties[] = "invalid value for 'assetValue', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['assetValue']) && !preg_match("/^important|common|test$/", $this->container['assetValue'])) {
+                $invalidProperties[] = "invalid value for 'assetValue', must be conform to the pattern /^important|common|test$/.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2000000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
             }
             if (!is_null($this->container['protectStatus']) && (mb_strlen($this->container['protectStatus']) > 32)) {
                 $invalidProperties[] = "invalid value for 'protectStatus', the character length must be smaller than or equal to 32.";
@@ -356,17 +420,11 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['agentStatus']) && (mb_strlen($this->container['agentStatus']) < 0)) {
                 $invalidProperties[] = "invalid value for 'agentStatus', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
+            if (!is_null($this->container['raspStatus']) && (mb_strlen($this->container['raspStatus']) > 32)) {
+                $invalidProperties[] = "invalid value for 'raspStatus', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 100)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 100.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            if (!is_null($this->container['raspStatus']) && (mb_strlen($this->container['raspStatus']) < 0)) {
+                $invalidProperties[] = "invalid value for 'raspStatus', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -383,32 +441,8 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets region
-    *  Region ID
-    *
-    * @return string|null
-    */
-    public function getRegion()
-    {
-        return $this->container['region'];
-    }
-
-    /**
-    * Sets region
-    *
-    * @param string|null $region Region ID
-    *
-    * @return $this
-    */
-    public function setRegion($region)
-    {
-        $this->container['region'] = $region;
-        return $this;
-    }
-
-    /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return string|null
     */
@@ -420,7 +454,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return $this
     */
@@ -431,8 +465,32 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets region
+    *  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getRegion()
+    {
+        return $this->container['region'];
+    }
+
+    /**
+    * Sets region
+    *
+    * @param string|null $region **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setRegion($region)
+    {
+        $this->container['region'] = $region;
+        return $this;
+    }
+
+    /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -444,7 +502,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -456,7 +514,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机ID
+    *  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -468,7 +526,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机ID
+    * @param string|null $hostId **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -480,7 +538,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  弹性公网IP
+    *  服务器公网IP
     *
     * @return string|null
     */
@@ -492,7 +550,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp 弹性公网IP
+    * @param string|null $publicIp 服务器公网IP
     *
     * @return $this
     */
@@ -504,7 +562,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  私有IP
+    *  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -516,7 +574,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp 私有IP
+    * @param string|null $privateIp **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -552,7 +610,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  操作系统类别（linux，windows）   - linux : linux操作系统   - windows : windows操作系统
+    *  操作系统类型，包含如下2种。   - Linux：Linux。   - Windows：Windows。
     *
     * @return string|null
     */
@@ -564,7 +622,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType 操作系统类别（linux，windows）   - linux : linux操作系统   - windows : windows操作系统
+    * @param string|null $osType 操作系统类型，包含如下2种。   - Linux：Linux。   - Windows：Windows。
     *
     * @return $this
     */
@@ -575,104 +633,32 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets protectStatus
-    *  配额状态   - opened : 已绑定网页防篡改配额
+    * Gets assetValue
+    *  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     *
     * @return string|null
     */
-    public function getProtectStatus()
+    public function getAssetValue()
     {
-        return $this->container['protectStatus'];
+        return $this->container['assetValue'];
     }
 
     /**
-    * Sets protectStatus
+    * Sets assetValue
     *
-    * @param string|null $protectStatus 配额状态   - opened : 已绑定网页防篡改配额
+    * @param string|null $assetValue 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     *
     * @return $this
     */
-    public function setProtectStatus($protectStatus)
+    public function setAssetValue($assetValue)
     {
-        $this->container['protectStatus'] = $protectStatus;
-        return $this;
-    }
-
-    /**
-    * Gets wtpStatus
-    *  网页防篡改防护状态   - opened : 防护汇总   - opening : 正在开启   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
-    *
-    * @return string|null
-    */
-    public function getWtpStatus()
-    {
-        return $this->container['wtpStatus'];
-    }
-
-    /**
-    * Sets wtpStatus
-    *
-    * @param string|null $wtpStatus 网页防篡改防护状态   - opened : 防护汇总   - opening : 正在开启   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
-    *
-    * @return $this
-    */
-    public function setWtpStatus($wtpStatus)
-    {
-        $this->container['wtpStatus'] = $wtpStatus;
-        return $this;
-    }
-
-    /**
-    * Gets agentStatus
-    *  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
-    *
-    * @return string|null
-    */
-    public function getAgentStatus()
-    {
-        return $this->container['agentStatus'];
-    }
-
-    /**
-    * Sets agentStatus
-    *
-    * @param string|null $agentStatus 客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
-    *
-    * @return $this
-    */
-    public function setAgentStatus($agentStatus)
-    {
-        $this->container['agentStatus'] = $agentStatus;
-        return $this;
-    }
-
-    /**
-    * Gets limit
-    *  默认10
-    *
-    * @return int|null
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param int|null $limit 默认10
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
+        $this->container['assetValue'] = $assetValue;
         return $this;
     }
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置
+    *  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return int|null
     */
@@ -684,13 +670,133 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置
+    * @param int|null $offset **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return $this
     */
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets protectStatus
+    *  **参数解释**: 网页防篡改防护开启状态 **约束限制**: 不涉及 **取值范围**: - opened ：已开启网页防篡改防护。  **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getProtectStatus()
+    {
+        return $this->container['protectStatus'];
+    }
+
+    /**
+    * Sets protectStatus
+    *
+    * @param string|null $protectStatus **参数解释**: 网页防篡改防护开启状态 **约束限制**: 不涉及 **取值范围**: - opened ：已开启网页防篡改防护。  **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setProtectStatus($protectStatus)
+    {
+        $this->container['protectStatus'] = $protectStatus;
+        return $this;
+    }
+
+    /**
+    * Gets wtpStatus
+    *  **参数解释**: 网页防篡改详细防护状态 **约束限制**: 不涉及 **取值范围**: - opened : 防护中。 - opening : 开启中。 - open_failed : 防护失败。 - partial_protection : 部分防护。 - protection_interruption : 防护中断。  **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getWtpStatus()
+    {
+        return $this->container['wtpStatus'];
+    }
+
+    /**
+    * Sets wtpStatus
+    *
+    * @param string|null $wtpStatus **参数解释**: 网页防篡改详细防护状态 **约束限制**: 不涉及 **取值范围**: - opened : 防护中。 - opening : 开启中。 - open_failed : 防护失败。 - partial_protection : 部分防护。 - protection_interruption : 防护中断。  **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setWtpStatus($wtpStatus)
+    {
+        $this->container['wtpStatus'] = $wtpStatus;
+        return $this;
+    }
+
+    /**
+    * Gets agentStatus
+    *  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: - not_installed : agent未安装。 - online : agent在线。 - offline : agent不在线。  **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getAgentStatus()
+    {
+        return $this->container['agentStatus'];
+    }
+
+    /**
+    * Sets agentStatus
+    *
+    * @param string|null $agentStatus **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: - not_installed : agent未安装。 - online : agent在线。 - offline : agent不在线。  **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setAgentStatus($agentStatus)
+    {
+        $this->container['agentStatus'] = $agentStatus;
+        return $this;
+    }
+
+    /**
+    * Gets raspStatus
+    *  **参数解释**: 动态网页防篡改防护开启状态 **约束限制**: 不涉及 **取值范围**: - opened ：已开启动态网页防篡改防护。 - closed ：未开启动态网页防篡改防护。  **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getRaspStatus()
+    {
+        return $this->container['raspStatus'];
+    }
+
+    /**
+    * Sets raspStatus
+    *
+    * @param string|null $raspStatus **参数解释**: 动态网页防篡改防护开启状态 **约束限制**: 不涉及 **取值范围**: - opened ：已开启动态网页防篡改防护。 - closed ：未开启动态网页防篡改防护。  **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setRaspStatus($raspStatus)
+    {
+        $this->container['raspStatus'] = $raspStatus;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class ShowLimitTaskNodeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nodeId  节点id。
-    * sqlId  该节点执行的sql语句id。
+    * nodeId  **参数解释**: 节点ID。 **取值范围**: 不涉及。
+    * sqlId  **参数解释**: 该节点执行的sql语句ID。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ShowLimitTaskNodeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nodeId  节点id。
-    * sqlId  该节点执行的sql语句id。
+    * nodeId  **参数解释**: 节点ID。 **取值范围**: 不涉及。
+    * sqlId  **参数解释**: 该节点执行的sql语句ID。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ShowLimitTaskNodeOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nodeId  节点id。
-    * sqlId  该节点执行的sql语句id。
+    * nodeId  **参数解释**: 节点ID。 **取值范围**: 不涉及。
+    * sqlId  **参数解释**: 该节点执行的sql语句ID。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ShowLimitTaskNodeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nodeId  节点id。
-    * sqlId  该节点执行的sql语句id。
+    * nodeId  **参数解释**: 节点ID。 **取值范围**: 不涉及。
+    * sqlId  **参数解释**: 该节点执行的sql语句ID。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ShowLimitTaskNodeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nodeId  节点id。
-    * sqlId  该节点执行的sql语句id。
+    * nodeId  **参数解释**: 节点ID。 **取值范围**: 不涉及。
+    * sqlId  **参数解释**: 该节点执行的sql语句ID。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class ShowLimitTaskNodeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeId
-    *  节点id。
+    *  **参数解释**: 节点ID。 **取值范围**: 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class ShowLimitTaskNodeOption implements ModelInterface, ArrayAccess
     /**
     * Sets nodeId
     *
-    * @param string $nodeId 节点id。
+    * @param string $nodeId **参数解释**: 节点ID。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class ShowLimitTaskNodeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets sqlId
-    *  该节点执行的sql语句id。
+    *  **参数解释**: 该节点执行的sql语句ID。 **取值范围**: 不涉及。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class ShowLimitTaskNodeOption implements ModelInterface, ArrayAccess
     /**
     * Sets sqlId
     *
-    * @param string $sqlId 该节点执行的sql语句id。
+    * @param string $sqlId **参数解释**: 该节点执行的sql语句ID。 **取值范围**: 不涉及。
     *
     * @return $this
     */

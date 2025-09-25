@@ -21,9 +21,9 @@ class ListHandleAffectBaselineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalRuleNum  **参数解释** 该操作影响的范围的总数 **取值范围**   取值0-5000
-    * ruleNum  **参数解释** 该操作影响的检查项数 **取值范围**   取值0-5000
-    * hostNum  **参数解释** 该操作影响的主机数 **取值范围**   取值0-5000
+    * totalRuleNum  **参数解释** 该操作影响的范围的总数 **取值范围** 取值0-5000
+    * ruleNum  **参数解释** 该操作影响的检查项数 **取值范围** 取值0-5000
+    * hostNum  **参数解释** 该操作影响的主机数 **取值范围** 取值0-5000
     * dataList  **参数解释** 该操作影响范围的详细信息的列表
     *
     * @var string[]
@@ -37,9 +37,9 @@ class ListHandleAffectBaselineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalRuleNum  **参数解释** 该操作影响的范围的总数 **取值范围**   取值0-5000
-    * ruleNum  **参数解释** 该操作影响的检查项数 **取值范围**   取值0-5000
-    * hostNum  **参数解释** 该操作影响的主机数 **取值范围**   取值0-5000
+    * totalRuleNum  **参数解释** 该操作影响的范围的总数 **取值范围** 取值0-5000
+    * ruleNum  **参数解释** 该操作影响的检查项数 **取值范围** 取值0-5000
+    * hostNum  **参数解释** 该操作影响的主机数 **取值范围** 取值0-5000
     * dataList  **参数解释** 该操作影响范围的详细信息的列表
     *
     * @var string[]
@@ -74,9 +74,9 @@ class ListHandleAffectBaselineResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalRuleNum  **参数解释** 该操作影响的范围的总数 **取值范围**   取值0-5000
-    * ruleNum  **参数解释** 该操作影响的检查项数 **取值范围**   取值0-5000
-    * hostNum  **参数解释** 该操作影响的主机数 **取值范围**   取值0-5000
+    * totalRuleNum  **参数解释** 该操作影响的范围的总数 **取值范围** 取值0-5000
+    * ruleNum  **参数解释** 该操作影响的检查项数 **取值范围** 取值0-5000
+    * hostNum  **参数解释** 该操作影响的主机数 **取值范围** 取值0-5000
     * dataList  **参数解释** 该操作影响范围的详细信息的列表
     *
     * @var string[]
@@ -90,9 +90,9 @@ class ListHandleAffectBaselineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalRuleNum  **参数解释** 该操作影响的范围的总数 **取值范围**   取值0-5000
-    * ruleNum  **参数解释** 该操作影响的检查项数 **取值范围**   取值0-5000
-    * hostNum  **参数解释** 该操作影响的主机数 **取值范围**   取值0-5000
+    * totalRuleNum  **参数解释** 该操作影响的范围的总数 **取值范围** 取值0-5000
+    * ruleNum  **参数解释** 该操作影响的检查项数 **取值范围** 取值0-5000
+    * hostNum  **参数解释** 该操作影响的主机数 **取值范围** 取值0-5000
     * dataList  **参数解释** 该操作影响范围的详细信息的列表
     *
     * @var string[]
@@ -106,9 +106,9 @@ class ListHandleAffectBaselineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalRuleNum  **参数解释** 该操作影响的范围的总数 **取值范围**   取值0-5000
-    * ruleNum  **参数解释** 该操作影响的检查项数 **取值范围**   取值0-5000
-    * hostNum  **参数解释** 该操作影响的主机数 **取值范围**   取值0-5000
+    * totalRuleNum  **参数解释** 该操作影响的范围的总数 **取值范围** 取值0-5000
+    * ruleNum  **参数解释** 该操作影响的检查项数 **取值范围** 取值0-5000
+    * hostNum  **参数解释** 该操作影响的主机数 **取值范围** 取值0-5000
     * dataList  **参数解释** 该操作影响范围的详细信息的列表
     *
     * @var string[]
@@ -226,7 +226,7 @@ class ListHandleAffectBaselineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalRuleNum
-    *  **参数解释** 该操作影响的范围的总数 **取值范围**   取值0-5000
+    *  **参数解释** 该操作影响的范围的总数 **取值范围** 取值0-5000
     *
     * @return int|null
     */
@@ -238,7 +238,7 @@ class ListHandleAffectBaselineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalRuleNum
     *
-    * @param int|null $totalRuleNum **参数解释** 该操作影响的范围的总数 **取值范围**   取值0-5000
+    * @param int|null $totalRuleNum **参数解释** 该操作影响的范围的总数 **取值范围** 取值0-5000
     *
     * @return $this
     */
@@ -250,7 +250,7 @@ class ListHandleAffectBaselineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleNum
-    *  **参数解释** 该操作影响的检查项数 **取值范围**   取值0-5000
+    *  **参数解释** 该操作影响的检查项数 **取值范围** 取值0-5000
     *
     * @return int|null
     */
@@ -262,7 +262,7 @@ class ListHandleAffectBaselineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ruleNum
     *
-    * @param int|null $ruleNum **参数解释** 该操作影响的检查项数 **取值范围**   取值0-5000
+    * @param int|null $ruleNum **参数解释** 该操作影响的检查项数 **取值范围** 取值0-5000
     *
     * @return $this
     */
@@ -274,7 +274,7 @@ class ListHandleAffectBaselineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostNum
-    *  **参数解释** 该操作影响的主机数 **取值范围**   取值0-5000
+    *  **参数解释** 该操作影响的主机数 **取值范围** 取值0-5000
     *
     * @return int|null
     */
@@ -286,7 +286,7 @@ class ListHandleAffectBaselineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets hostNum
     *
-    * @param int|null $hostNum **参数解释** 该操作影响的主机数 **取值范围**   取值0-5000
+    * @param int|null $hostNum **参数解释** 该操作影响的主机数 **取值范围** 取值0-5000
     *
     * @return $this
     */

@@ -23,7 +23,7 @@ class ResultFileResponseInfo implements ModelInterface, ArrayAccess
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
-    * fileOwner  文件属主
+    * fileOwner  文件属性
     * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
@@ -45,7 +45,7 @@ class ResultFileResponseInfo implements ModelInterface, ArrayAccess
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
-    * fileOwner  文件属主
+    * fileOwner  文件属性
     * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
@@ -88,7 +88,7 @@ class ResultFileResponseInfo implements ModelInterface, ArrayAccess
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
-    * fileOwner  文件属主
+    * fileOwner  文件属性
     * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
@@ -110,7 +110,7 @@ class ResultFileResponseInfo implements ModelInterface, ArrayAccess
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
-    * fileOwner  文件属主
+    * fileOwner  文件属性
     * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
@@ -132,7 +132,7 @@ class ResultFileResponseInfo implements ModelInterface, ArrayAccess
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
-    * fileOwner  文件属主
+    * fileOwner  文件属性
     * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
@@ -342,7 +342,7 @@ class ResultFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileOwner
-    *  文件属主
+    *  文件属性
     *
     * @return string|null
     */
@@ -354,7 +354,7 @@ class ResultFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileOwner
     *
-    * @param string|null $fileOwner 文件属主
+    * @param string|null $fileOwner 文件属性
     *
     * @return $this
     */

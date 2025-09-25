@@ -21,7 +21,7 @@ class LoginCommonLocationResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * areaCode  国家城市的编码
-    * totalNum  这个常用登陆地的主机个数
+    * totalNum  这个常用登录地的主机个数
     * hostIdList  服务器列表
     *
     * @var string[]
@@ -35,7 +35,7 @@ class LoginCommonLocationResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * areaCode  国家城市的编码
-    * totalNum  这个常用登陆地的主机个数
+    * totalNum  这个常用登录地的主机个数
     * hostIdList  服务器列表
     *
     * @var string[]
@@ -70,7 +70,7 @@ class LoginCommonLocationResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * areaCode  国家城市的编码
-    * totalNum  这个常用登陆地的主机个数
+    * totalNum  这个常用登录地的主机个数
     * hostIdList  服务器列表
     *
     * @var string[]
@@ -84,7 +84,7 @@ class LoginCommonLocationResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * areaCode  国家城市的编码
-    * totalNum  这个常用登陆地的主机个数
+    * totalNum  这个常用登录地的主机个数
     * hostIdList  服务器列表
     *
     * @var string[]
@@ -98,7 +98,7 @@ class LoginCommonLocationResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * areaCode  国家城市的编码
-    * totalNum  这个常用登陆地的主机个数
+    * totalNum  这个常用登录地的主机个数
     * hostIdList  服务器列表
     *
     * @var string[]
@@ -220,7 +220,7 @@ class LoginCommonLocationResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  这个常用登陆地的主机个数
+    *  这个常用登录地的主机个数
     *
     * @return int|null
     */
@@ -232,7 +232,7 @@ class LoginCommonLocationResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 这个常用登陆地的主机个数
+    * @param int|null $totalNum 这个常用登录地的主机个数
     *
     * @return $this
     */

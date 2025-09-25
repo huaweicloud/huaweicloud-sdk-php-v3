@@ -22,24 +22,32 @@ class CreateClusterLoadBalance implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * endpointWithDnsName  是否开启内网域名。 - true： 开启内网域名。 - false： 关闭内网域名。
     * vpcPermissions  访问控制。
+    * professionVpcep  创建专业型终端节点。
+    * dualstackEnable  是否开启IPv4/IPv6双栈网络。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'endpointWithDnsName' => 'bool',
-            'vpcPermissions' => 'string[]'
+            'vpcPermissions' => 'string[]',
+            'professionVpcep' => 'bool',
+            'dualstackEnable' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * endpointWithDnsName  是否开启内网域名。 - true： 开启内网域名。 - false： 关闭内网域名。
     * vpcPermissions  访问控制。
+    * professionVpcep  创建专业型终端节点。
+    * dualstackEnable  是否开启IPv4/IPv6双栈网络。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'endpointWithDnsName' => null,
-        'vpcPermissions' => null
+        'vpcPermissions' => null,
+        'professionVpcep' => null,
+        'dualstackEnable' => null
     ];
 
     /**
@@ -67,36 +75,48 @@ class CreateClusterLoadBalance implements ModelInterface, ArrayAccess
     * and the value is the original name
     * endpointWithDnsName  是否开启内网域名。 - true： 开启内网域名。 - false： 关闭内网域名。
     * vpcPermissions  访问控制。
+    * professionVpcep  创建专业型终端节点。
+    * dualstackEnable  是否开启IPv4/IPv6双栈网络。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'endpointWithDnsName' => 'endpointWithDnsName',
-            'vpcPermissions' => 'vpcPermissions'
+            'vpcPermissions' => 'vpcPermissions',
+            'professionVpcep' => 'professionVpcep',
+            'dualstackEnable' => 'dualstackEnable'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * endpointWithDnsName  是否开启内网域名。 - true： 开启内网域名。 - false： 关闭内网域名。
     * vpcPermissions  访问控制。
+    * professionVpcep  创建专业型终端节点。
+    * dualstackEnable  是否开启IPv4/IPv6双栈网络。
     *
     * @var string[]
     */
     protected static $setters = [
             'endpointWithDnsName' => 'setEndpointWithDnsName',
-            'vpcPermissions' => 'setVpcPermissions'
+            'vpcPermissions' => 'setVpcPermissions',
+            'professionVpcep' => 'setProfessionVpcep',
+            'dualstackEnable' => 'setDualstackEnable'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * endpointWithDnsName  是否开启内网域名。 - true： 开启内网域名。 - false： 关闭内网域名。
     * vpcPermissions  访问控制。
+    * professionVpcep  创建专业型终端节点。
+    * dualstackEnable  是否开启IPv4/IPv6双栈网络。
     *
     * @var string[]
     */
     protected static $getters = [
             'endpointWithDnsName' => 'getEndpointWithDnsName',
-            'vpcPermissions' => 'getVpcPermissions'
+            'vpcPermissions' => 'getVpcPermissions',
+            'professionVpcep' => 'getProfessionVpcep',
+            'dualstackEnable' => 'getDualstackEnable'
     ];
 
     /**
@@ -159,6 +179,8 @@ class CreateClusterLoadBalance implements ModelInterface, ArrayAccess
     {
         $this->container['endpointWithDnsName'] = isset($data['endpointWithDnsName']) ? $data['endpointWithDnsName'] : null;
         $this->container['vpcPermissions'] = isset($data['vpcPermissions']) ? $data['vpcPermissions'] : null;
+        $this->container['professionVpcep'] = isset($data['professionVpcep']) ? $data['professionVpcep'] : null;
+        $this->container['dualstackEnable'] = isset($data['dualstackEnable']) ? $data['dualstackEnable'] : null;
     }
 
     /**
@@ -231,6 +253,54 @@ class CreateClusterLoadBalance implements ModelInterface, ArrayAccess
     public function setVpcPermissions($vpcPermissions)
     {
         $this->container['vpcPermissions'] = $vpcPermissions;
+        return $this;
+    }
+
+    /**
+    * Gets professionVpcep
+    *  创建专业型终端节点。
+    *
+    * @return bool|null
+    */
+    public function getProfessionVpcep()
+    {
+        return $this->container['professionVpcep'];
+    }
+
+    /**
+    * Sets professionVpcep
+    *
+    * @param bool|null $professionVpcep 创建专业型终端节点。
+    *
+    * @return $this
+    */
+    public function setProfessionVpcep($professionVpcep)
+    {
+        $this->container['professionVpcep'] = $professionVpcep;
+        return $this;
+    }
+
+    /**
+    * Gets dualstackEnable
+    *  是否开启IPv4/IPv6双栈网络。
+    *
+    * @return bool|null
+    */
+    public function getDualstackEnable()
+    {
+        return $this->container['dualstackEnable'];
+    }
+
+    /**
+    * Sets dualstackEnable
+    *
+    * @param bool|null $dualstackEnable 是否开启IPv4/IPv6双栈网络。
+    *
+    * @return $this
+    */
+    public function setDualstackEnable($dualstackEnable)
+    {
+        $this->container['dualstackEnable'] = $dualstackEnable;
         return $this;
     }
 

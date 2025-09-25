@@ -8246,6 +8246,74 @@ class GaussDBClient extends Client
     }
 
     /**
+     * 获取StarRocks实例内核慢日志信息
+     *
+     * 获取StarRocks实例内核慢日志信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSlowLogDetail($request)
+    {
+        return $this->showSlowLogDetailWithHttpInfo($request);
+    }
+
+    public function showSlowLogDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/starrocks/slow-logs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\ShowSlowLogDetailResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\ShowSlowLogDetailRequest');
+    }
+
+    /**
      * 查询慢日志统计信息
      *
      * 查询慢日志统计信息
@@ -8512,6 +8580,71 @@ class GaussDBClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\ShowSqlFilterRuleResponse',
             $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\ShowSqlFilterRuleRequest');
+    }
+
+    /**
+     * 查询StarRocks实例慢日志脱敏状态
+     *
+     * 查询StarRocks实例慢日志脱敏状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showStarRocksSlowlogSensitiveStatus($request)
+    {
+        return $this->showStarRocksSlowlogSensitiveStatusWithHttpInfo($request);
+    }
+
+    public function showStarRocksSlowlogSensitiveStatusWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/starrocks/slowlog-sensitive';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\ShowStarRocksSlowlogSensitiveStatusResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\ShowStarRocksSlowlogSensitiveStatusRequest');
     }
 
     /**
@@ -10790,6 +10923,74 @@ class GaussDBClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\UpdateServerlessPolicyResponse',
             $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\UpdateServerlessPolicyRequest');
+    }
+
+    /**
+     * 开启或关闭StarRocks实例慢日志脱敏状态
+     *
+     * 开启或关闭StarRocks实例慢日志脱敏状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSlowlogSensitiveStatus($request)
+    {
+        return $this->updateSlowlogSensitiveStatusWithHttpInfo($request);
+    }
+
+    public function updateSlowlogSensitiveStatusWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/starrocks/slowlog-sensitive';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\UpdateSlowlogSensitiveStatusResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\UpdateSlowlogSensitiveStatusRequest');
     }
 
     /**

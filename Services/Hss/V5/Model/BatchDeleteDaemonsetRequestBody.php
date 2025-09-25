@@ -21,7 +21,7 @@ class BatchDeleteDaemonsetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterIds  批量卸载列表
-    * invokedService  调用服务，标识cce免费体检报告，cce调用传参为cce:    - hss hss服务    - cce cce服务
+    * invokedService  调用服务，标识cce免费体检报告，cce调用传参为cce:   - hss hss服务   - cce cce服务
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class BatchDeleteDaemonsetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterIds  批量卸载列表
-    * invokedService  调用服务，标识cce免费体检报告，cce调用传参为cce:    - hss hss服务    - cce cce服务
+    * invokedService  调用服务，标识cce免费体检报告，cce调用传参为cce:   - hss hss服务   - cce cce服务
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class BatchDeleteDaemonsetRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterIds  批量卸载列表
-    * invokedService  调用服务，标识cce免费体检报告，cce调用传参为cce:    - hss hss服务    - cce cce服务
+    * invokedService  调用服务，标识cce免费体检报告，cce调用传参为cce:   - hss hss服务   - cce cce服务
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class BatchDeleteDaemonsetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterIds  批量卸载列表
-    * invokedService  调用服务，标识cce免费体检报告，cce调用传参为cce:    - hss hss服务    - cce cce服务
+    * invokedService  调用服务，标识cce免费体检报告，cce调用传参为cce:   - hss hss服务   - cce cce服务
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class BatchDeleteDaemonsetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterIds  批量卸载列表
-    * invokedService  调用服务，标识cce免费体检报告，cce调用传参为cce:    - hss hss服务    - cce cce服务
+    * invokedService  调用服务，标识cce免费体检报告，cce调用传参为cce:   - hss hss服务   - cce cce服务
     *
     * @var string[]
     */
@@ -221,7 +221,7 @@ class BatchDeleteDaemonsetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets invokedService
-    *  调用服务，标识cce免费体检报告，cce调用传参为cce:    - hss hss服务    - cce cce服务
+    *  调用服务，标识cce免费体检报告，cce调用传参为cce:   - hss hss服务   - cce cce服务
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class BatchDeleteDaemonsetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets invokedService
     *
-    * @param string|null $invokedService 调用服务，标识cce免费体检报告，cce调用传参为cce:    - hss hss服务    - cce cce服务
+    * @param string|null $invokedService 调用服务，标识cce免费体检报告，cce调用传参为cce:   - hss hss服务   - cce cce服务
     *
     * @return $this
     */

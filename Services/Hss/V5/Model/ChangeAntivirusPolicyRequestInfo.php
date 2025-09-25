@@ -23,6 +23,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     * policyId  策略ID
     * policyName  策略名称
     * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     * scanPeriod  启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
     * scanPeriodDate  扫描周期日期（1-28；扫描周期为week时，1-7代表周日至周六；扫描周期为month时，1-28代表每月1日到28日）
     * scanTime  扫描时间戳，毫秒（仅启动类型为later时有值）
@@ -42,6 +43,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
             'policyId' => 'string',
             'policyName' => 'string',
             'startType' => 'string',
+            'scanType' => 'string',
             'scanPeriod' => 'string',
             'scanPeriodDate' => 'int',
             'scanTime' => 'int',
@@ -61,6 +63,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     * policyId  策略ID
     * policyName  策略名称
     * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     * scanPeriod  启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
     * scanPeriodDate  扫描周期日期（1-28；扫描周期为week时，1-7代表周日至周六；扫描周期为month时，1-28代表每月1日到28日）
     * scanTime  扫描时间戳，毫秒（仅启动类型为later时有值）
@@ -80,6 +83,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
         'policyId' => null,
         'policyName' => null,
         'startType' => null,
+        'scanType' => null,
         'scanPeriod' => null,
         'scanPeriodDate' => 'int32',
         'scanTime' => 'int64',
@@ -120,6 +124,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     * policyId  策略ID
     * policyName  策略名称
     * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     * scanPeriod  启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
     * scanPeriodDate  扫描周期日期（1-28；扫描周期为week时，1-7代表周日至周六；扫描周期为month时，1-28代表每月1日到28日）
     * scanTime  扫描时间戳，毫秒（仅启动类型为later时有值）
@@ -139,6 +144,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
             'policyId' => 'policy_id',
             'policyName' => 'policy_name',
             'startType' => 'start_type',
+            'scanType' => 'scan_type',
             'scanPeriod' => 'scan_period',
             'scanPeriodDate' => 'scan_period_date',
             'scanTime' => 'scan_time',
@@ -158,6 +164,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     * policyId  策略ID
     * policyName  策略名称
     * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     * scanPeriod  启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
     * scanPeriodDate  扫描周期日期（1-28；扫描周期为week时，1-7代表周日至周六；扫描周期为month时，1-28代表每月1日到28日）
     * scanTime  扫描时间戳，毫秒（仅启动类型为later时有值）
@@ -177,6 +184,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
             'policyId' => 'setPolicyId',
             'policyName' => 'setPolicyName',
             'startType' => 'setStartType',
+            'scanType' => 'setScanType',
             'scanPeriod' => 'setScanPeriod',
             'scanPeriodDate' => 'setScanPeriodDate',
             'scanTime' => 'setScanTime',
@@ -196,6 +204,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     * policyId  策略ID
     * policyName  策略名称
     * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     * scanPeriod  启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
     * scanPeriodDate  扫描周期日期（1-28；扫描周期为week时，1-7代表周日至周六；扫描周期为month时，1-28代表每月1日到28日）
     * scanTime  扫描时间戳，毫秒（仅启动类型为later时有值）
@@ -215,6 +224,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
             'policyId' => 'getPolicyId',
             'policyName' => 'getPolicyName',
             'startType' => 'getStartType',
+            'scanType' => 'getScanType',
             'scanPeriod' => 'getScanPeriod',
             'scanPeriodDate' => 'getScanPeriodDate',
             'scanTime' => 'getScanTime',
@@ -290,6 +300,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
         $this->container['policyId'] = isset($data['policyId']) ? $data['policyId'] : null;
         $this->container['policyName'] = isset($data['policyName']) ? $data['policyName'] : null;
         $this->container['startType'] = isset($data['startType']) ? $data['startType'] : null;
+        $this->container['scanType'] = isset($data['scanType']) ? $data['scanType'] : null;
         $this->container['scanPeriod'] = isset($data['scanPeriod']) ? $data['scanPeriod'] : null;
         $this->container['scanPeriodDate'] = isset($data['scanPeriodDate']) ? $data['scanPeriodDate'] : null;
         $this->container['scanTime'] = isset($data['scanTime']) ? $data['scanTime'] : null;
@@ -341,6 +352,12 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
         }
             if (!preg_match("/^now|later|period$/", $this->container['startType'])) {
                 $invalidProperties[] = "invalid value for 'startType', must be conform to the pattern /^now|later|period$/.";
+            }
+            if (!is_null($this->container['scanType']) && (mb_strlen($this->container['scanType']) > 10)) {
+                $invalidProperties[] = "invalid value for 'scanType', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['scanType']) && (mb_strlen($this->container['scanType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'scanType', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['scanPeriodDate']) && ($this->container['scanPeriodDate'] > 31)) {
                 $invalidProperties[] = "invalid value for 'scanPeriodDate', must be smaller than or equal to 31.";
@@ -479,6 +496,30 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     public function setStartType($startType)
     {
         $this->container['startType'] = $startType;
+        return $this;
+    }
+
+    /**
+    * Gets scanType
+    *  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    *
+    * @return string|null
+    */
+    public function getScanType()
+    {
+        return $this->container['scanType'];
+    }
+
+    /**
+    * Sets scanType
+    *
+    * @param string|null $scanType 任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    *
+    * @return $this
+    */
+    public function setScanType($scanType)
+    {
+        $this->container['scanType'] = $scanType;
         return $this;
     }
 

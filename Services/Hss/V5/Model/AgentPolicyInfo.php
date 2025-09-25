@@ -25,7 +25,7 @@ class AgentPolicyInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * featureName  feature名称
     * policyCategory  策略类别
-    * policyStatus  策略应用状态:not_applied-未应用、protection_degradation_not_applied-防护降级未应用、processing-应用中、applied-已应用
+    * policyStatus  **参数解释**: 策略应用状态 **约束限制**: 不涉及 **取值范围**: Agent的状态分为两类： - not_applied：未应用 - protection_degradation_not_applied：防护降级未应用 - processing：应用中 - applied：已应用 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class AgentPolicyInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * featureName  feature名称
     * policyCategory  策略类别
-    * policyStatus  策略应用状态:not_applied-未应用、protection_degradation_not_applied-防护降级未应用、processing-应用中、applied-已应用
+    * policyStatus  **参数解释**: 策略应用状态 **约束限制**: 不涉及 **取值范围**: Agent的状态分为两类： - not_applied：未应用 - protection_degradation_not_applied：防护降级未应用 - processing：应用中 - applied：已应用 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class AgentPolicyInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * featureName  feature名称
     * policyCategory  策略类别
-    * policyStatus  策略应用状态:not_applied-未应用、protection_degradation_not_applied-防护降级未应用、processing-应用中、applied-已应用
+    * policyStatus  **参数解释**: 策略应用状态 **约束限制**: 不涉及 **取值范围**: Agent的状态分为两类： - not_applied：未应用 - protection_degradation_not_applied：防护降级未应用 - processing：应用中 - applied：已应用 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class AgentPolicyInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * featureName  feature名称
     * policyCategory  策略类别
-    * policyStatus  策略应用状态:not_applied-未应用、protection_degradation_not_applied-防护降级未应用、processing-应用中、applied-已应用
+    * policyStatus  **参数解释**: 策略应用状态 **约束限制**: 不涉及 **取值范围**: Agent的状态分为两类： - not_applied：未应用 - protection_degradation_not_applied：防护降级未应用 - processing：应用中 - applied：已应用 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class AgentPolicyInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * featureName  feature名称
     * policyCategory  策略类别
-    * policyStatus  策略应用状态:not_applied-未应用、protection_degradation_not_applied-防护降级未应用、processing-应用中、applied-已应用
+    * policyStatus  **参数解释**: 策略应用状态 **约束限制**: 不涉及 **取值范围**: Agent的状态分为两类： - not_applied：未应用 - protection_degradation_not_applied：防护降级未应用 - processing：应用中 - applied：已应用 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -385,7 +385,7 @@ class AgentPolicyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyStatus
-    *  策略应用状态:not_applied-未应用、protection_degradation_not_applied-防护降级未应用、processing-应用中、applied-已应用
+    *  **参数解释**: 策略应用状态 **约束限制**: 不涉及 **取值范围**: Agent的状态分为两类： - not_applied：未应用 - protection_degradation_not_applied：防护降级未应用 - processing：应用中 - applied：已应用 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -397,7 +397,7 @@ class AgentPolicyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets policyStatus
     *
-    * @param string|null $policyStatus 策略应用状态:not_applied-未应用、protection_degradation_not_applied-防护降级未应用、processing-应用中、applied-已应用
+    * @param string|null $policyStatus **参数解释**: 策略应用状态 **约束限制**: 不涉及 **取值范围**: Agent的状态分为两类： - not_applied：未应用 - protection_degradation_not_applied：防护降级未应用 - processing：应用中 - applied：已应用 **默认取值**: 不涉及
     *
     * @return $this
     */

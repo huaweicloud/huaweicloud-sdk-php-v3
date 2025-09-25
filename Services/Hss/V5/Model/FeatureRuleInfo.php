@@ -25,9 +25,9 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
     * chkFeatureDesc  检测特性规则描述
     * osType  操作系统类型
     * featureConfigure  检测特性规则配置信息
-    * optionalProtectiveAction  可选防护动作，包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
-    * protectiveAction  默认防护动作，包含如下 -1 检测   -2 检测并阻断/拦截
-    * editable  是否可编辑配置信息，包含如下 -0 否   -1 是
+    * optionalProtectiveAction  可选防护动作，包含如下 -1 检测 -2 检测并阻断/拦截 -3 都可以
+    * protectiveAction  默认防护动作，包含如下 -1 检测 -2 检测并阻断/拦截
+    * editable  是否可编辑配置信息，包含如下 -0 否 -1 是
     *
     * @var string[]
     */
@@ -49,9 +49,9 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
     * chkFeatureDesc  检测特性规则描述
     * osType  操作系统类型
     * featureConfigure  检测特性规则配置信息
-    * optionalProtectiveAction  可选防护动作，包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
-    * protectiveAction  默认防护动作，包含如下 -1 检测   -2 检测并阻断/拦截
-    * editable  是否可编辑配置信息，包含如下 -0 否   -1 是
+    * optionalProtectiveAction  可选防护动作，包含如下 -1 检测 -2 检测并阻断/拦截 -3 都可以
+    * protectiveAction  默认防护动作，包含如下 -1 检测 -2 检测并阻断/拦截
+    * editable  是否可编辑配置信息，包含如下 -0 否 -1 是
     *
     * @var string[]
     */
@@ -94,9 +94,9 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
     * chkFeatureDesc  检测特性规则描述
     * osType  操作系统类型
     * featureConfigure  检测特性规则配置信息
-    * optionalProtectiveAction  可选防护动作，包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
-    * protectiveAction  默认防护动作，包含如下 -1 检测   -2 检测并阻断/拦截
-    * editable  是否可编辑配置信息，包含如下 -0 否   -1 是
+    * optionalProtectiveAction  可选防护动作，包含如下 -1 检测 -2 检测并阻断/拦截 -3 都可以
+    * protectiveAction  默认防护动作，包含如下 -1 检测 -2 检测并阻断/拦截
+    * editable  是否可编辑配置信息，包含如下 -0 否 -1 是
     *
     * @var string[]
     */
@@ -118,9 +118,9 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
     * chkFeatureDesc  检测特性规则描述
     * osType  操作系统类型
     * featureConfigure  检测特性规则配置信息
-    * optionalProtectiveAction  可选防护动作，包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
-    * protectiveAction  默认防护动作，包含如下 -1 检测   -2 检测并阻断/拦截
-    * editable  是否可编辑配置信息，包含如下 -0 否   -1 是
+    * optionalProtectiveAction  可选防护动作，包含如下 -1 检测 -2 检测并阻断/拦截 -3 都可以
+    * protectiveAction  默认防护动作，包含如下 -1 检测 -2 检测并阻断/拦截
+    * editable  是否可编辑配置信息，包含如下 -0 否 -1 是
     *
     * @var string[]
     */
@@ -142,9 +142,9 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
     * chkFeatureDesc  检测特性规则描述
     * osType  操作系统类型
     * featureConfigure  检测特性规则配置信息
-    * optionalProtectiveAction  可选防护动作，包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
-    * protectiveAction  默认防护动作，包含如下 -1 检测   -2 检测并阻断/拦截
-    * editable  是否可编辑配置信息，包含如下 -0 否   -1 是
+    * optionalProtectiveAction  可选防护动作，包含如下 -1 检测 -2 检测并阻断/拦截 -3 都可以
+    * protectiveAction  默认防护动作，包含如下 -1 检测 -2 检测并阻断/拦截
+    * editable  是否可编辑配置信息，包含如下 -0 否 -1 是
     *
     * @var string[]
     */
@@ -419,7 +419,7 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets optionalProtectiveAction
-    *  可选防护动作，包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
+    *  可选防护动作，包含如下 -1 检测 -2 检测并阻断/拦截 -3 都可以
     *
     * @return int|null
     */
@@ -431,7 +431,7 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets optionalProtectiveAction
     *
-    * @param int|null $optionalProtectiveAction 可选防护动作，包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
+    * @param int|null $optionalProtectiveAction 可选防护动作，包含如下 -1 检测 -2 检测并阻断/拦截 -3 都可以
     *
     * @return $this
     */
@@ -443,7 +443,7 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectiveAction
-    *  默认防护动作，包含如下 -1 检测   -2 检测并阻断/拦截
+    *  默认防护动作，包含如下 -1 检测 -2 检测并阻断/拦截
     *
     * @return int|null
     */
@@ -455,7 +455,7 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectiveAction
     *
-    * @param int|null $protectiveAction 默认防护动作，包含如下 -1 检测   -2 检测并阻断/拦截
+    * @param int|null $protectiveAction 默认防护动作，包含如下 -1 检测 -2 检测并阻断/拦截
     *
     * @return $this
     */
@@ -467,7 +467,7 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets editable
-    *  是否可编辑配置信息，包含如下 -0 否   -1 是
+    *  是否可编辑配置信息，包含如下 -0 否 -1 是
     *
     * @return int|null
     */
@@ -479,7 +479,7 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets editable
     *
-    * @param int|null $editable 是否可编辑配置信息，包含如下 -0 否   -1 是
+    * @param int|null $editable 是否可编辑配置信息，包含如下 -0 否 -1 是
     *
     * @return $this
     */

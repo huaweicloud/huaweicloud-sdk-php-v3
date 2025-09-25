@@ -20,7 +20,7 @@ class UpdateWebTamperRaspPathRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * raspPath  rasp path
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录。 **约束限制**: 仅Linux服务器支持配置动态网页防篡改的Tomcat bin目录。 **取值范围**: 字符长度1-256位，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpdateWebTamperRaspPathRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * raspPath  rasp path
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录。 **约束限制**: 仅Linux服务器支持配置动态网页防篡改的Tomcat bin目录。 **取值范围**: 字符长度1-256位，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpdateWebTamperRaspPathRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * raspPath  rasp path
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录。 **约束限制**: 仅Linux服务器支持配置动态网页防篡改的Tomcat bin目录。 **取值范围**: 字符长度1-256位，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateWebTamperRaspPathRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * raspPath  rasp path
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录。 **约束限制**: 仅Linux服务器支持配置动态网页防篡改的Tomcat bin目录。 **取值范围**: 字符长度1-256位，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpdateWebTamperRaspPathRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * raspPath  rasp path
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录。 **约束限制**: 仅Linux服务器支持配置动态网页防篡改的Tomcat bin目录。 **取值范围**: 字符长度1-256位，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -158,11 +158,14 @@ class UpdateWebTamperRaspPathRequestInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['raspPath']) && (mb_strlen($this->container['raspPath']) > 512)) {
-                $invalidProperties[] = "invalid value for 'raspPath', the character length must be smaller than or equal to 512.";
+        if ($this->container['raspPath'] === null) {
+            $invalidProperties[] = "'raspPath' can't be null";
+        }
+            if ((mb_strlen($this->container['raspPath']) > 256)) {
+                $invalidProperties[] = "invalid value for 'raspPath', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['raspPath']) && (mb_strlen($this->container['raspPath']) < 0)) {
-                $invalidProperties[] = "invalid value for 'raspPath', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['raspPath']) < 1)) {
+                $invalidProperties[] = "invalid value for 'raspPath', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -180,9 +183,9 @@ class UpdateWebTamperRaspPathRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets raspPath
-    *  rasp path
+    *  **参数解释**: 动态网页防篡改的Tomcat bin目录。 **约束限制**: 仅Linux服务器支持配置动态网页防篡改的Tomcat bin目录。 **取值范围**: 字符长度1-256位，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。 **默认取值**: 不涉及
     *
-    * @return string|null
+    * @return string
     */
     public function getRaspPath()
     {
@@ -192,7 +195,7 @@ class UpdateWebTamperRaspPathRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets raspPath
     *
-    * @param string|null $raspPath rasp path
+    * @param string $raspPath **参数解释**: 动态网页防篡改的Tomcat bin目录。 **约束限制**: 仅Linux服务器支持配置动态网页防篡改的Tomcat bin目录。 **取值范围**: 字符长度1-256位，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。 **默认取值**: 不涉及
     *
     * @return $this
     */

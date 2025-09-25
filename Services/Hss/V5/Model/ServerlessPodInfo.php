@@ -28,7 +28,7 @@ class ServerlessPodInfo implements ModelInterface, ArrayAccess
     * cpuLimit  cpu限制
     * memoryLimit  内存限制
     * podIp  实例 IP
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
+    * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - closed：未防护。 - opened：防护中。 - protection_exception：防护异常。  **默认取值**: 不涉及
     * detectResult  Serverless安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
     * status  Pod状态，包含以下几种 -Pending：pod已被Kubernetes系统接受，但尚未创建一个或多个容器镜像 -Running：pod已经绑定到一个节点，并且所有的容器都已经创建完毕 -Succeeded：pod中的所有容器都已成功终止，不会重新启动 -Failed：pod中的所有容器都已终止，并且至少有一个容器因故障而终止 -Unknown：由于某种原因无法获取pod的状态，通常是由于与pod的主机通信时出错
     * createTime  创建时间
@@ -46,7 +46,7 @@ class ServerlessPodInfo implements ModelInterface, ArrayAccess
             'podIp' => 'string',
             'protectStatus' => 'string',
             'detectResult' => 'string',
-            'status' => 'object',
+            'status' => 'string',
             'createTime' => 'int'
     ];
 
@@ -60,7 +60,7 @@ class ServerlessPodInfo implements ModelInterface, ArrayAccess
     * cpuLimit  cpu限制
     * memoryLimit  内存限制
     * podIp  实例 IP
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
+    * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - closed：未防护。 - opened：防护中。 - protection_exception：防护异常。  **默认取值**: 不涉及
     * detectResult  Serverless安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
     * status  Pod状态，包含以下几种 -Pending：pod已被Kubernetes系统接受，但尚未创建一个或多个容器镜像 -Running：pod已经绑定到一个节点，并且所有的容器都已经创建完毕 -Succeeded：pod中的所有容器都已成功终止，不会重新启动 -Failed：pod中的所有容器都已终止，并且至少有一个容器因故障而终止 -Unknown：由于某种原因无法获取pod的状态，通常是由于与pod的主机通信时出错
     * createTime  创建时间
@@ -113,7 +113,7 @@ class ServerlessPodInfo implements ModelInterface, ArrayAccess
     * cpuLimit  cpu限制
     * memoryLimit  内存限制
     * podIp  实例 IP
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
+    * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - closed：未防护。 - opened：防护中。 - protection_exception：防护异常。  **默认取值**: 不涉及
     * detectResult  Serverless安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
     * status  Pod状态，包含以下几种 -Pending：pod已被Kubernetes系统接受，但尚未创建一个或多个容器镜像 -Running：pod已经绑定到一个节点，并且所有的容器都已经创建完毕 -Succeeded：pod中的所有容器都已成功终止，不会重新启动 -Failed：pod中的所有容器都已终止，并且至少有一个容器因故障而终止 -Unknown：由于某种原因无法获取pod的状态，通常是由于与pod的主机通信时出错
     * createTime  创建时间
@@ -145,7 +145,7 @@ class ServerlessPodInfo implements ModelInterface, ArrayAccess
     * cpuLimit  cpu限制
     * memoryLimit  内存限制
     * podIp  实例 IP
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
+    * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - closed：未防护。 - opened：防护中。 - protection_exception：防护异常。  **默认取值**: 不涉及
     * detectResult  Serverless安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
     * status  Pod状态，包含以下几种 -Pending：pod已被Kubernetes系统接受，但尚未创建一个或多个容器镜像 -Running：pod已经绑定到一个节点，并且所有的容器都已经创建完毕 -Succeeded：pod中的所有容器都已成功终止，不会重新启动 -Failed：pod中的所有容器都已终止，并且至少有一个容器因故障而终止 -Unknown：由于某种原因无法获取pod的状态，通常是由于与pod的主机通信时出错
     * createTime  创建时间
@@ -177,7 +177,7 @@ class ServerlessPodInfo implements ModelInterface, ArrayAccess
     * cpuLimit  cpu限制
     * memoryLimit  内存限制
     * podIp  实例 IP
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
+    * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - closed：未防护。 - opened：防护中。 - protection_exception：防护异常。  **默认取值**: 不涉及
     * detectResult  Serverless安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
     * status  Pod状态，包含以下几种 -Pending：pod已被Kubernetes系统接受，但尚未创建一个或多个容器镜像 -Running：pod已经绑定到一个节点，并且所有的容器都已经创建完毕 -Succeeded：pod中的所有容器都已成功终止，不会重新启动 -Failed：pod中的所有容器都已终止，并且至少有一个容器因故障而终止 -Unknown：由于某种原因无法获取pod的状态，通常是由于与pod的主机通信时出错
     * createTime  创建时间
@@ -338,6 +338,12 @@ class ServerlessPodInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['detectResult']) && (mb_strlen($this->container['detectResult']) < 1)) {
                 $invalidProperties[] = "invalid value for 'detectResult', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 32)) {
+                $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 1)) {
+                $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 4071095999000)) {
                 $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 4071095999000.";
@@ -553,7 +559,7 @@ class ServerlessPodInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
+    *  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - closed：未防护。 - opened：防护中。 - protection_exception：防护异常。  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -565,7 +571,7 @@ class ServerlessPodInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus 防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
+    * @param string|null $protectStatus **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - closed：未防护。 - opened：防护中。 - protection_exception：防护异常。  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -603,7 +609,7 @@ class ServerlessPodInfo implements ModelInterface, ArrayAccess
     * Gets status
     *  Pod状态，包含以下几种 -Pending：pod已被Kubernetes系统接受，但尚未创建一个或多个容器镜像 -Running：pod已经绑定到一个节点，并且所有的容器都已经创建完毕 -Succeeded：pod中的所有容器都已成功终止，不会重新启动 -Failed：pod中的所有容器都已终止，并且至少有一个容器因故障而终止 -Unknown：由于某种原因无法获取pod的状态，通常是由于与pod的主机通信时出错
     *
-    * @return object|null
+    * @return string|null
     */
     public function getStatus()
     {
@@ -613,7 +619,7 @@ class ServerlessPodInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param object|null $status Pod状态，包含以下几种 -Pending：pod已被Kubernetes系统接受，但尚未创建一个或多个容器镜像 -Running：pod已经绑定到一个节点，并且所有的容器都已经创建完毕 -Succeeded：pod中的所有容器都已成功终止，不会重新启动 -Failed：pod中的所有容器都已终止，并且至少有一个容器因故障而终止 -Unknown：由于某种原因无法获取pod的状态，通常是由于与pod的主机通信时出错
+    * @param string|null $status Pod状态，包含以下几种 -Pending：pod已被Kubernetes系统接受，但尚未创建一个或多个容器镜像 -Running：pod已经绑定到一个节点，并且所有的容器都已经创建完毕 -Succeeded：pod中的所有容器都已成功终止，不会重新启动 -Failed：pod中的所有容器都已终止，并且至少有一个容器因故障而终止 -Unknown：由于某种原因无法获取pod的状态，通常是由于与pod的主机通信时出错
     *
     * @return $this
     */

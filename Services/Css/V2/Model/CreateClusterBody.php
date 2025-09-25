@@ -21,6 +21,7 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  集群名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
+    * desc  集群描述。
     * backupStrategy  backupStrategy
     * roles  roles
     * nics  nics
@@ -35,11 +36,14 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
     * loadBalance  loadBalance
     * publicKibanaReq  publicKibanaReq
     * payInfo  payInfo
+    * ipv6Enable  集群是否开启自动分配IPv6地址。
+    * diskEncryption  diskEncryption
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
+            'desc' => 'string',
             'backupStrategy' => '\HuaweiCloud\SDK\Css\V2\Model\CreateClusterBackupStrategyBody',
             'roles' => '\HuaweiCloud\SDK\Css\V2\Model\CreateClusterRolesBody[]',
             'nics' => '\HuaweiCloud\SDK\Css\V2\Model\CreateClusterInstanceNicsBody',
@@ -53,12 +57,15 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
             'publicIpReq' => '\HuaweiCloud\SDK\Css\V2\Model\CreateClusterPublicIpReq',
             'loadBalance' => '\HuaweiCloud\SDK\Css\V2\Model\CreateClusterLoadBalance',
             'publicKibanaReq' => '\HuaweiCloud\SDK\Css\V2\Model\CreateClusterPublicKibanaReq',
-            'payInfo' => '\HuaweiCloud\SDK\Css\V2\Model\PayInfoBody'
+            'payInfo' => '\HuaweiCloud\SDK\Css\V2\Model\PayInfoBody',
+            'ipv6Enable' => 'bool',
+            'diskEncryption' => '\HuaweiCloud\SDK\Css\V2\Model\DiskEncryptionInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  集群名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
+    * desc  集群描述。
     * backupStrategy  backupStrategy
     * roles  roles
     * nics  nics
@@ -73,11 +80,14 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
     * loadBalance  loadBalance
     * publicKibanaReq  publicKibanaReq
     * payInfo  payInfo
+    * ipv6Enable  集群是否开启自动分配IPv6地址。
+    * diskEncryption  diskEncryption
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
+        'desc' => null,
         'backupStrategy' => null,
         'roles' => null,
         'nics' => null,
@@ -91,7 +101,9 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
         'publicIpReq' => null,
         'loadBalance' => null,
         'publicKibanaReq' => null,
-        'payInfo' => null
+        'payInfo' => null,
+        'ipv6Enable' => null,
+        'diskEncryption' => null
     ];
 
     /**
@@ -118,6 +130,7 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  集群名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
+    * desc  集群描述。
     * backupStrategy  backupStrategy
     * roles  roles
     * nics  nics
@@ -132,11 +145,14 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
     * loadBalance  loadBalance
     * publicKibanaReq  publicKibanaReq
     * payInfo  payInfo
+    * ipv6Enable  集群是否开启自动分配IPv6地址。
+    * diskEncryption  diskEncryption
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
+            'desc' => 'desc',
             'backupStrategy' => 'backupStrategy',
             'roles' => 'roles',
             'nics' => 'nics',
@@ -150,12 +166,15 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
             'publicIpReq' => 'publicIPReq',
             'loadBalance' => 'loadBalance',
             'publicKibanaReq' => 'publicKibanaReq',
-            'payInfo' => 'payInfo'
+            'payInfo' => 'payInfo',
+            'ipv6Enable' => 'ipv6_enable',
+            'diskEncryption' => 'diskEncryption'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  集群名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
+    * desc  集群描述。
     * backupStrategy  backupStrategy
     * roles  roles
     * nics  nics
@@ -170,11 +189,14 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
     * loadBalance  loadBalance
     * publicKibanaReq  publicKibanaReq
     * payInfo  payInfo
+    * ipv6Enable  集群是否开启自动分配IPv6地址。
+    * diskEncryption  diskEncryption
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
+            'desc' => 'setDesc',
             'backupStrategy' => 'setBackupStrategy',
             'roles' => 'setRoles',
             'nics' => 'setNics',
@@ -188,12 +210,15 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
             'publicIpReq' => 'setPublicIpReq',
             'loadBalance' => 'setLoadBalance',
             'publicKibanaReq' => 'setPublicKibanaReq',
-            'payInfo' => 'setPayInfo'
+            'payInfo' => 'setPayInfo',
+            'ipv6Enable' => 'setIpv6Enable',
+            'diskEncryption' => 'setDiskEncryption'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  集群名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
+    * desc  集群描述。
     * backupStrategy  backupStrategy
     * roles  roles
     * nics  nics
@@ -208,11 +233,14 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
     * loadBalance  loadBalance
     * publicKibanaReq  publicKibanaReq
     * payInfo  payInfo
+    * ipv6Enable  集群是否开启自动分配IPv6地址。
+    * diskEncryption  diskEncryption
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
+            'desc' => 'getDesc',
             'backupStrategy' => 'getBackupStrategy',
             'roles' => 'getRoles',
             'nics' => 'getNics',
@@ -226,7 +254,9 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
             'publicIpReq' => 'getPublicIpReq',
             'loadBalance' => 'getLoadBalance',
             'publicKibanaReq' => 'getPublicKibanaReq',
-            'payInfo' => 'getPayInfo'
+            'payInfo' => 'getPayInfo',
+            'ipv6Enable' => 'getIpv6Enable',
+            'diskEncryption' => 'getDiskEncryption'
     ];
 
     /**
@@ -288,6 +318,7 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['desc'] = isset($data['desc']) ? $data['desc'] : null;
         $this->container['backupStrategy'] = isset($data['backupStrategy']) ? $data['backupStrategy'] : null;
         $this->container['roles'] = isset($data['roles']) ? $data['roles'] : null;
         $this->container['nics'] = isset($data['nics']) ? $data['nics'] : null;
@@ -302,6 +333,8 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
         $this->container['loadBalance'] = isset($data['loadBalance']) ? $data['loadBalance'] : null;
         $this->container['publicKibanaReq'] = isset($data['publicKibanaReq']) ? $data['publicKibanaReq'] : null;
         $this->container['payInfo'] = isset($data['payInfo']) ? $data['payInfo'] : null;
+        $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
+        $this->container['diskEncryption'] = isset($data['diskEncryption']) ? $data['diskEncryption'] : null;
     }
 
     /**
@@ -323,6 +356,9 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
         }
         if ($this->container['nics'] === null) {
             $invalidProperties[] = "'nics' can't be null";
+        }
+        if ($this->container['availabilityZone'] === null) {
+            $invalidProperties[] = "'availabilityZone' can't be null";
         }
         if ($this->container['datastore'] === null) {
             $invalidProperties[] = "'datastore' can't be null";
@@ -362,6 +398,30 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets desc
+    *  集群描述。
+    *
+    * @return string|null
+    */
+    public function getDesc()
+    {
+        return $this->container['desc'];
+    }
+
+    /**
+    * Sets desc
+    *
+    * @param string|null $desc 集群描述。
+    *
+    * @return $this
+    */
+    public function setDesc($desc)
+    {
+        $this->container['desc'] = $desc;
         return $this;
     }
 
@@ -489,7 +549,7 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
     * Gets availabilityZone
     *  可用区。
     *
-    * @return string|null
+    * @return string
     */
     public function getAvailabilityZone()
     {
@@ -499,7 +559,7 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZone
     *
-    * @param string|null $availabilityZone 可用区。
+    * @param string $availabilityZone 可用区。
     *
     * @return $this
     */
@@ -698,6 +758,54 @@ class CreateClusterBody implements ModelInterface, ArrayAccess
     public function setPayInfo($payInfo)
     {
         $this->container['payInfo'] = $payInfo;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6Enable
+    *  集群是否开启自动分配IPv6地址。
+    *
+    * @return bool|null
+    */
+    public function getIpv6Enable()
+    {
+        return $this->container['ipv6Enable'];
+    }
+
+    /**
+    * Sets ipv6Enable
+    *
+    * @param bool|null $ipv6Enable 集群是否开启自动分配IPv6地址。
+    *
+    * @return $this
+    */
+    public function setIpv6Enable($ipv6Enable)
+    {
+        $this->container['ipv6Enable'] = $ipv6Enable;
+        return $this;
+    }
+
+    /**
+    * Gets diskEncryption
+    *  diskEncryption
+    *
+    * @return \HuaweiCloud\SDK\Css\V2\Model\DiskEncryptionInfo|null
+    */
+    public function getDiskEncryption()
+    {
+        return $this->container['diskEncryption'];
+    }
+
+    /**
+    * Sets diskEncryption
+    *
+    * @param \HuaweiCloud\SDK\Css\V2\Model\DiskEncryptionInfo|null $diskEncryption diskEncryption
+    *
+    * @return $this
+    */
+    public function setDiskEncryption($diskEncryption)
+    {
+        $this->container['diskEncryption'] = $diskEncryption;
         return $this;
     }
 

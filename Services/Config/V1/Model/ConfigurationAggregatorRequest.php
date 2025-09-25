@@ -20,7 +20,7 @@ class ConfigurationAggregatorRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * aggregatorName  资源聚合器名称。
+    * aggregatorName  资源聚合器名称
     * aggregatorType  聚合器类型（ACCOUNT | ORGANIZATION）。
     * accountAggregationSources  accountAggregationSources
     * tags  标签列表
@@ -36,7 +36,7 @@ class ConfigurationAggregatorRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * aggregatorName  资源聚合器名称。
+    * aggregatorName  资源聚合器名称
     * aggregatorType  聚合器类型（ACCOUNT | ORGANIZATION）。
     * accountAggregationSources  accountAggregationSources
     * tags  标签列表
@@ -73,7 +73,7 @@ class ConfigurationAggregatorRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * aggregatorName  资源聚合器名称。
+    * aggregatorName  资源聚合器名称
     * aggregatorType  聚合器类型（ACCOUNT | ORGANIZATION）。
     * accountAggregationSources  accountAggregationSources
     * tags  标签列表
@@ -89,7 +89,7 @@ class ConfigurationAggregatorRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * aggregatorName  资源聚合器名称。
+    * aggregatorName  资源聚合器名称
     * aggregatorType  聚合器类型（ACCOUNT | ORGANIZATION）。
     * accountAggregationSources  accountAggregationSources
     * tags  标签列表
@@ -105,7 +105,7 @@ class ConfigurationAggregatorRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * aggregatorName  资源聚合器名称。
+    * aggregatorName  资源聚合器名称
     * aggregatorType  聚合器类型（ACCOUNT | ORGANIZATION）。
     * accountAggregationSources  accountAggregationSources
     * tags  标签列表
@@ -200,8 +200,8 @@ class ConfigurationAggregatorRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['aggregatorName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'aggregatorName', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/", $this->container['aggregatorName'])) {
-                $invalidProperties[] = "invalid value for 'aggregatorName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/.";
+            if (!preg_match("/^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/", $this->container['aggregatorName'])) {
+                $invalidProperties[] = "invalid value for 'aggregatorName', must be conform to the pattern /^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/.";
             }
         if ($this->container['aggregatorType'] === null) {
             $invalidProperties[] = "'aggregatorType' can't be null";
@@ -222,7 +222,7 @@ class ConfigurationAggregatorRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets aggregatorName
-    *  资源聚合器名称。
+    *  资源聚合器名称
     *
     * @return string
     */
@@ -234,7 +234,7 @@ class ConfigurationAggregatorRequest implements ModelInterface, ArrayAccess
     /**
     * Sets aggregatorName
     *
-    * @param string $aggregatorName 资源聚合器名称。
+    * @param string $aggregatorName 资源聚合器名称
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class DatapointResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * datapointName  指标项名，实例指标用实例ID、节点指标用节点名称、组件指标用组件名称。
-    * datapointValues  指标值集合。
+    * datapointName  **参数解释**: 指标项名，实例指标用实例ID、节点指标用节点名称、组件指标用组件名称。 **取值范围**: 不涉及。
+    * datapointValues  **参数解释**: 指标值集合。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DatapointResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * datapointName  指标项名，实例指标用实例ID、节点指标用节点名称、组件指标用组件名称。
-    * datapointValues  指标值集合。
+    * datapointName  **参数解释**: 指标项名，实例指标用实例ID、节点指标用节点名称、组件指标用组件名称。 **取值范围**: 不涉及。
+    * datapointValues  **参数解释**: 指标值集合。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DatapointResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * datapointName  指标项名，实例指标用实例ID、节点指标用节点名称、组件指标用组件名称。
-    * datapointValues  指标值集合。
+    * datapointName  **参数解释**: 指标项名，实例指标用实例ID、节点指标用节点名称、组件指标用组件名称。 **取值范围**: 不涉及。
+    * datapointValues  **参数解释**: 指标值集合。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DatapointResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * datapointName  指标项名，实例指标用实例ID、节点指标用节点名称、组件指标用组件名称。
-    * datapointValues  指标值集合。
+    * datapointName  **参数解释**: 指标项名，实例指标用实例ID、节点指标用节点名称、组件指标用组件名称。 **取值范围**: 不涉及。
+    * datapointValues  **参数解释**: 指标值集合。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DatapointResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * datapointName  指标项名，实例指标用实例ID、节点指标用节点名称、组件指标用组件名称。
-    * datapointValues  指标值集合。
+    * datapointName  **参数解释**: 指标项名，实例指标用实例ID、节点指标用节点名称、组件指标用组件名称。 **取值范围**: 不涉及。
+    * datapointValues  **参数解释**: 指标值集合。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class DatapointResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets datapointName
-    *  指标项名，实例指标用实例ID、节点指标用节点名称、组件指标用组件名称。
+    *  **参数解释**: 指标项名，实例指标用实例ID、节点指标用节点名称、组件指标用组件名称。 **取值范围**: 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class DatapointResult implements ModelInterface, ArrayAccess
     /**
     * Sets datapointName
     *
-    * @param string $datapointName 指标项名，实例指标用实例ID、节点指标用节点名称、组件指标用组件名称。
+    * @param string $datapointName **参数解释**: 指标项名，实例指标用实例ID、节点指标用节点名称、组件指标用组件名称。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class DatapointResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets datapointValues
-    *  指标值集合。
+    *  **参数解释**: 指标值集合。
     *
     * @return string[]
     */
@@ -227,7 +227,7 @@ class DatapointResult implements ModelInterface, ArrayAccess
     /**
     * Sets datapointValues
     *
-    * @param string[] $datapointValues 指标值集合。
+    * @param string[] $datapointValues **参数解释**: 指标值集合。
     *
     * @return $this
     */

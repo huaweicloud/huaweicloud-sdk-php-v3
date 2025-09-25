@@ -21,7 +21,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * userName  **参数解释**: 弱口令账号名称 **取值范围**: 不涉及
-    * serviceType  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql  : mysql账号 - redis  : redis账号
+    * serviceType  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql : mysql账号 - redis : redis账号 - tomcat : tomcat账号 - ftp : ftp账号
     * duration  **参数解释**: 弱口令使用时长，单位天 **取值范围**: 不涉及
     * desensitizedWeakPasswords  **参数解释**: 脱敏弱口令 **取值范围**: 不涉及
     * suggestion  **参数解释**: 修改建议 **取值范围**: 不涉及
@@ -39,7 +39,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * userName  **参数解释**: 弱口令账号名称 **取值范围**: 不涉及
-    * serviceType  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql  : mysql账号 - redis  : redis账号
+    * serviceType  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql : mysql账号 - redis : redis账号 - tomcat : tomcat账号 - ftp : ftp账号
     * duration  **参数解释**: 弱口令使用时长，单位天 **取值范围**: 不涉及
     * desensitizedWeakPasswords  **参数解释**: 脱敏弱口令 **取值范围**: 不涉及
     * suggestion  **参数解释**: 修改建议 **取值范围**: 不涉及
@@ -78,7 +78,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * userName  **参数解释**: 弱口令账号名称 **取值范围**: 不涉及
-    * serviceType  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql  : mysql账号 - redis  : redis账号
+    * serviceType  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql : mysql账号 - redis : redis账号 - tomcat : tomcat账号 - ftp : ftp账号
     * duration  **参数解释**: 弱口令使用时长，单位天 **取值范围**: 不涉及
     * desensitizedWeakPasswords  **参数解释**: 脱敏弱口令 **取值范围**: 不涉及
     * suggestion  **参数解释**: 修改建议 **取值范围**: 不涉及
@@ -96,7 +96,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * userName  **参数解释**: 弱口令账号名称 **取值范围**: 不涉及
-    * serviceType  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql  : mysql账号 - redis  : redis账号
+    * serviceType  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql : mysql账号 - redis : redis账号 - tomcat : tomcat账号 - ftp : ftp账号
     * duration  **参数解释**: 弱口令使用时长，单位天 **取值范围**: 不涉及
     * desensitizedWeakPasswords  **参数解释**: 脱敏弱口令 **取值范围**: 不涉及
     * suggestion  **参数解释**: 修改建议 **取值范围**: 不涉及
@@ -114,7 +114,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * userName  **参数解释**: 弱口令账号名称 **取值范围**: 不涉及
-    * serviceType  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql  : mysql账号 - redis  : redis账号
+    * serviceType  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql : mysql账号 - redis : redis账号 - tomcat : tomcat账号 - ftp : ftp账号
     * duration  **参数解释**: 弱口令使用时长，单位天 **取值范围**: 不涉及
     * desensitizedWeakPasswords  **参数解释**: 脱敏弱口令 **取值范围**: 不涉及
     * suggestion  **参数解释**: 修改建议 **取值范围**: 不涉及
@@ -272,7 +272,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
-    *  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql  : mysql账号 - redis  : redis账号
+    *  **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql : mysql账号 - redis : redis账号 - tomcat : tomcat账号 - ftp : ftp账号
     *
     * @return string|null
     */
@@ -284,7 +284,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param string|null $serviceType **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql  : mysql账号 - redis  : redis账号
+    * @param string|null $serviceType **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql : mysql账号 - redis : redis账号 - tomcat : tomcat账号 - ftp : ftp账号
     *
     * @return $this
     */

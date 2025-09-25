@@ -250,6 +250,9 @@ class AddKeystorePermissionRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['userName'] === null) {
             $invalidProperties[] = "'userName' can't be null";
         }
+        if ($this->container['userId'] === null) {
+            $invalidProperties[] = "'userId' can't be null";
+        }
         if ($this->container['setting'] === null) {
             $invalidProperties[] = "'setting' can't be null";
         }
@@ -394,7 +397,7 @@ class AddKeystorePermissionRequestBody implements ModelInterface, ArrayAccess
     * Gets userId
     *  用户ID
     *
-    * @return string|null
+    * @return string
     */
     public function getUserId()
     {
@@ -404,7 +407,7 @@ class AddKeystorePermissionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string|null $userId 用户ID
+    * @param string $userId 用户ID
     *
     * @return $this
     */

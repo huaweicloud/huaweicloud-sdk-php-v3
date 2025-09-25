@@ -180,6 +180,12 @@ class RouteBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['servers'] === null) {
+            $invalidProperties[] = "'servers' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -222,7 +228,7 @@ class RouteBody implements ModelInterface, ArrayAccess
     * Gets name
     *  WAF集群名称
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -232,7 +238,7 @@ class RouteBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name WAF集群名称
+    * @param string $name WAF集群名称
     *
     * @return $this
     */
@@ -246,7 +252,7 @@ class RouteBody implements ModelInterface, ArrayAccess
     * Gets servers
     *  防护域名源站服务器信息列表
     *
-    * @return \HuaweiCloud\SDK\Waf\V1\Model\RouteServerBody[]|null
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\RouteServerBody[]
     */
     public function getServers()
     {
@@ -256,7 +262,7 @@ class RouteBody implements ModelInterface, ArrayAccess
     /**
     * Sets servers
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\RouteServerBody[]|null $servers 防护域名源站服务器信息列表
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\RouteServerBody[] $servers 防护域名源站服务器信息列表
     *
     * @return $this
     */

@@ -205,12 +205,6 @@ class ListSecurityReportSendingRecordsRequest implements ModelInterface, ArrayAc
         if ($this->container['contentType'] === null) {
             $invalidProperties[] = "'contentType' can't be null";
         }
-            if ((mb_strlen($this->container['contentType']) > 64)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 64.";
-            }
-            if ((mb_strlen($this->container['contentType']) < 32)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 32.";
-            }
         return $invalidProperties;
     }
 

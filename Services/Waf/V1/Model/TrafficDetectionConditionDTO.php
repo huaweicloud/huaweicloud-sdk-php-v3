@@ -25,7 +25,7 @@ class TrafficDetectionConditionDTO implements ModelInterface, ArrayAccess
     * matchFieldIndex  **参数解释：** 子字段，匹配字段的细分维度（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * logicalOperator  **参数解释：** 逻辑运算符，标识匹配条件的逻辑关系（如contain表示包含）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * matchContents  **参数解释：** 匹配内容，符合筛选条件的具体值列表（如特定URL路径）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * valueListRef  **参数解释：** 引用表Id，关联预设的匹配内容列表ID（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * valueListRes  **参数解释：** 引用表Id，关联预设的匹配内容列表ID（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -35,7 +35,7 @@ class TrafficDetectionConditionDTO implements ModelInterface, ArrayAccess
             'matchFieldIndex' => 'string',
             'logicalOperator' => 'string',
             'matchContents' => 'string[]',
-            'valueListRef' => 'string'
+            'valueListRes' => 'string'
     ];
 
     /**
@@ -45,7 +45,7 @@ class TrafficDetectionConditionDTO implements ModelInterface, ArrayAccess
     * matchFieldIndex  **参数解释：** 子字段，匹配字段的细分维度（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * logicalOperator  **参数解释：** 逻辑运算符，标识匹配条件的逻辑关系（如contain表示包含）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * matchContents  **参数解释：** 匹配内容，符合筛选条件的具体值列表（如特定URL路径）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * valueListRef  **参数解释：** 引用表Id，关联预设的匹配内容列表ID（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * valueListRes  **参数解释：** 引用表Id，关联预设的匹配内容列表ID（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -55,7 +55,7 @@ class TrafficDetectionConditionDTO implements ModelInterface, ArrayAccess
         'matchFieldIndex' => null,
         'logicalOperator' => null,
         'matchContents' => null,
-        'valueListRef' => null
+        'valueListRes' => null
     ];
 
     /**
@@ -86,7 +86,7 @@ class TrafficDetectionConditionDTO implements ModelInterface, ArrayAccess
     * matchFieldIndex  **参数解释：** 子字段，匹配字段的细分维度（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * logicalOperator  **参数解释：** 逻辑运算符，标识匹配条件的逻辑关系（如contain表示包含）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * matchContents  **参数解释：** 匹配内容，符合筛选条件的具体值列表（如特定URL路径）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * valueListRef  **参数解释：** 引用表Id，关联预设的匹配内容列表ID（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * valueListRes  **参数解释：** 引用表Id，关联预设的匹配内容列表ID（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -96,7 +96,7 @@ class TrafficDetectionConditionDTO implements ModelInterface, ArrayAccess
             'matchFieldIndex' => 'match_field_index',
             'logicalOperator' => 'logical_operator',
             'matchContents' => 'match_contents',
-            'valueListRef' => 'value_list_ref'
+            'valueListRes' => 'value_list_res'
     ];
 
     /**
@@ -106,7 +106,7 @@ class TrafficDetectionConditionDTO implements ModelInterface, ArrayAccess
     * matchFieldIndex  **参数解释：** 子字段，匹配字段的细分维度（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * logicalOperator  **参数解释：** 逻辑运算符，标识匹配条件的逻辑关系（如contain表示包含）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * matchContents  **参数解释：** 匹配内容，符合筛选条件的具体值列表（如特定URL路径）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * valueListRef  **参数解释：** 引用表Id，关联预设的匹配内容列表ID（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * valueListRes  **参数解释：** 引用表Id，关联预设的匹配内容列表ID（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -116,7 +116,7 @@ class TrafficDetectionConditionDTO implements ModelInterface, ArrayAccess
             'matchFieldIndex' => 'setMatchFieldIndex',
             'logicalOperator' => 'setLogicalOperator',
             'matchContents' => 'setMatchContents',
-            'valueListRef' => 'setValueListRef'
+            'valueListRes' => 'setValueListRes'
     ];
 
     /**
@@ -126,7 +126,7 @@ class TrafficDetectionConditionDTO implements ModelInterface, ArrayAccess
     * matchFieldIndex  **参数解释：** 子字段，匹配字段的细分维度（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * logicalOperator  **参数解释：** 逻辑运算符，标识匹配条件的逻辑关系（如contain表示包含）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * matchContents  **参数解释：** 匹配内容，符合筛选条件的具体值列表（如特定URL路径）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * valueListRef  **参数解释：** 引用表Id，关联预设的匹配内容列表ID（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * valueListRes  **参数解释：** 引用表Id，关联预设的匹配内容列表ID（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -136,7 +136,7 @@ class TrafficDetectionConditionDTO implements ModelInterface, ArrayAccess
             'matchFieldIndex' => 'getMatchFieldIndex',
             'logicalOperator' => 'getLogicalOperator',
             'matchContents' => 'getMatchContents',
-            'valueListRef' => 'getValueListRef'
+            'valueListRes' => 'getValueListRes'
     ];
 
     /**
@@ -202,7 +202,7 @@ class TrafficDetectionConditionDTO implements ModelInterface, ArrayAccess
         $this->container['matchFieldIndex'] = isset($data['matchFieldIndex']) ? $data['matchFieldIndex'] : null;
         $this->container['logicalOperator'] = isset($data['logicalOperator']) ? $data['logicalOperator'] : null;
         $this->container['matchContents'] = isset($data['matchContents']) ? $data['matchContents'] : null;
-        $this->container['valueListRef'] = isset($data['valueListRef']) ? $data['valueListRef'] : null;
+        $this->container['valueListRes'] = isset($data['valueListRes']) ? $data['valueListRes'] : null;
     }
 
     /**
@@ -348,26 +348,26 @@ class TrafficDetectionConditionDTO implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets valueListRef
+    * Gets valueListRes
     *  **参数解释：** 引用表Id，关联预设的匹配内容列表ID（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
-    public function getValueListRef()
+    public function getValueListRes()
     {
-        return $this->container['valueListRef'];
+        return $this->container['valueListRes'];
     }
 
     /**
-    * Sets valueListRef
+    * Sets valueListRes
     *
-    * @param string|null $valueListRef **参数解释：** 引用表Id，关联预设的匹配内容列表ID（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param string|null $valueListRes **参数解释：** 引用表Id，关联预设的匹配内容列表ID（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
-    public function setValueListRef($valueListRef)
+    public function setValueListRes($valueListRes)
     {
-        $this->container['valueListRef'] = $valueListRef;
+        $this->container['valueListRes'] = $valueListRes;
         return $this;
     }
 

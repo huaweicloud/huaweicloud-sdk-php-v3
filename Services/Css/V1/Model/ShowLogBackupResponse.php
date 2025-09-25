@@ -22,21 +22,25 @@ class ShowLogBackupResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * logList  logList
+    * type  查询日志的类型。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'logList' => '\HuaweiCloud\SDK\Css\V1\Model\LogList[]'
+            'logList' => '\HuaweiCloud\SDK\Css\V1\Model\LogList[]',
+            'type' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * logList  logList
+    * type  查询日志的类型。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'logList' => null
+        'logList' => null,
+        'type' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ShowLogBackupResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * logList  logList
+    * type  查询日志的类型。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'logList' => 'logList'
+            'logList' => 'logList',
+            'type' => 'type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * logList  logList
+    * type  查询日志的类型。
     *
     * @var string[]
     */
     protected static $setters = [
-            'logList' => 'setLogList'
+            'logList' => 'setLogList',
+            'type' => 'setType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * logList  logList
+    * type  查询日志的类型。
     *
     * @var string[]
     */
     protected static $getters = [
-            'logList' => 'getLogList'
+            'logList' => 'getLogList',
+            'type' => 'getType'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ShowLogBackupResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['logList'] = isset($data['logList']) ? $data['logList'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ShowLogBackupResponse implements ModelInterface, ArrayAccess
     public function setLogList($logList)
     {
         $this->container['logList'] = $logList;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  查询日志的类型。
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 查询日志的类型。
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

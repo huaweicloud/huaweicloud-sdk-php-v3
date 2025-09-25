@@ -34,7 +34,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * operatingSystem  **参数解释**: 操作系统类型。 - Linux - Windows **取值范围**: 字符长度1-128
     * processWhitelist  进程白名单
     * defaultPolicy  **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度1-128
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度1-128
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * operatingSystem  **参数解释**: 操作系统类型。 - Linux - Windows **取值范围**: 字符长度1-128
     * processWhitelist  进程白名单
     * defaultPolicy  **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度1-128
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度1-128
     *
     * @var string[]
     */
@@ -131,7 +131,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * operatingSystem  **参数解释**: 操作系统类型。 - Linux - Windows **取值范围**: 字符长度1-128
     * processWhitelist  进程白名单
     * defaultPolicy  **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度1-128
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度1-128
     *
     * @var string[]
     */
@@ -169,7 +169,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * operatingSystem  **参数解释**: 操作系统类型。 - Linux - Windows **取值范围**: 字符长度1-128
     * processWhitelist  进程白名单
     * defaultPolicy  **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度1-128
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度1-128
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * operatingSystem  **参数解释**: 操作系统类型。 - Linux - Windows **取值范围**: 字符长度1-128
     * processWhitelist  进程白名单
     * defaultPolicy  **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度1-128
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度1-128
     *
     * @var string[]
     */
@@ -748,7 +748,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets aiProtectionStatus
-    *  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度1-128
+    *  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度1-128
     *
     * @return string|null
     */
@@ -760,7 +760,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets aiProtectionStatus
     *
-    * @param string|null $aiProtectionStatus **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度1-128
+    * @param string|null $aiProtectionStatus **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度1-128
     *
     * @return $this
     */

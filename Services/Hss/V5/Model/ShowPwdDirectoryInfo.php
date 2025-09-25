@@ -22,7 +22,7 @@ class ShowPwdDirectoryInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * tag  弱口令及口令复杂度一级标签，包含如下:   - weakpwd_pwdcomplexity : 弱口令及口令复杂度检测   - weakpwd               : 弱口令检测
     * subTag  口令检查包含子标签，包含如下:   - weak_pwd : 经典弱口令检测   - pwd_complexity : 口令复杂度策略检
-    * checked  **参数解释** 该项是否被选中 **取值范围**  - true : 被选中 - false: 未被选中
+    * checked  **参数解释** 该项是否被选中 **取值范围** - true : 被选中 - false: 未被选中
     * key  表示目录中的唯一值:   - weak_pwd : 经典弱口令检测   - pwd_complexity : 口令复杂度策略检测
     *
     * @var string[]
@@ -38,7 +38,7 @@ class ShowPwdDirectoryInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * tag  弱口令及口令复杂度一级标签，包含如下:   - weakpwd_pwdcomplexity : 弱口令及口令复杂度检测   - weakpwd               : 弱口令检测
     * subTag  口令检查包含子标签，包含如下:   - weak_pwd : 经典弱口令检测   - pwd_complexity : 口令复杂度策略检
-    * checked  **参数解释** 该项是否被选中 **取值范围**  - true : 被选中 - false: 未被选中
+    * checked  **参数解释** 该项是否被选中 **取值范围** - true : 被选中 - false: 未被选中
     * key  表示目录中的唯一值:   - weak_pwd : 经典弱口令检测   - pwd_complexity : 口令复杂度策略检测
     *
     * @var string[]
@@ -75,7 +75,7 @@ class ShowPwdDirectoryInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * tag  弱口令及口令复杂度一级标签，包含如下:   - weakpwd_pwdcomplexity : 弱口令及口令复杂度检测   - weakpwd               : 弱口令检测
     * subTag  口令检查包含子标签，包含如下:   - weak_pwd : 经典弱口令检测   - pwd_complexity : 口令复杂度策略检
-    * checked  **参数解释** 该项是否被选中 **取值范围**  - true : 被选中 - false: 未被选中
+    * checked  **参数解释** 该项是否被选中 **取值范围** - true : 被选中 - false: 未被选中
     * key  表示目录中的唯一值:   - weak_pwd : 经典弱口令检测   - pwd_complexity : 口令复杂度策略检测
     *
     * @var string[]
@@ -91,7 +91,7 @@ class ShowPwdDirectoryInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * tag  弱口令及口令复杂度一级标签，包含如下:   - weakpwd_pwdcomplexity : 弱口令及口令复杂度检测   - weakpwd               : 弱口令检测
     * subTag  口令检查包含子标签，包含如下:   - weak_pwd : 经典弱口令检测   - pwd_complexity : 口令复杂度策略检
-    * checked  **参数解释** 该项是否被选中 **取值范围**  - true : 被选中 - false: 未被选中
+    * checked  **参数解释** 该项是否被选中 **取值范围** - true : 被选中 - false: 未被选中
     * key  表示目录中的唯一值:   - weak_pwd : 经典弱口令检测   - pwd_complexity : 口令复杂度策略检测
     *
     * @var string[]
@@ -107,7 +107,7 @@ class ShowPwdDirectoryInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * tag  弱口令及口令复杂度一级标签，包含如下:   - weakpwd_pwdcomplexity : 弱口令及口令复杂度检测   - weakpwd               : 弱口令检测
     * subTag  口令检查包含子标签，包含如下:   - weak_pwd : 经典弱口令检测   - pwd_complexity : 口令复杂度策略检
-    * checked  **参数解释** 该项是否被选中 **取值范围**  - true : 被选中 - false: 未被选中
+    * checked  **参数解释** 该项是否被选中 **取值范围** - true : 被选中 - false: 未被选中
     * key  表示目录中的唯一值:   - weak_pwd : 经典弱口令检测   - pwd_complexity : 口令复杂度策略检测
     *
     * @var string[]
@@ -282,7 +282,7 @@ class ShowPwdDirectoryInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checked
-    *  **参数解释** 该项是否被选中 **取值范围**  - true : 被选中 - false: 未被选中
+    *  **参数解释** 该项是否被选中 **取值范围** - true : 被选中 - false: 未被选中
     *
     * @return bool|null
     */
@@ -294,7 +294,7 @@ class ShowPwdDirectoryInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checked
     *
-    * @param bool|null $checked **参数解释** 该项是否被选中 **取值范围**  - true : 被选中 - false: 未被选中
+    * @param bool|null $checked **参数解释** 该项是否被选中 **取值范围** - true : 被选中 - false: 未被选中
     *
     * @return $this
     */

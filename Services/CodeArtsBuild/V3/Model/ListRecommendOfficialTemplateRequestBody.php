@@ -180,6 +180,12 @@ class ListRecommendOfficialTemplateRequestBody implements ModelInterface, ArrayA
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['gitUrl'] === null) {
+            $invalidProperties[] = "'gitUrl' can't be null";
+        }
+        if ($this->container['branch'] === null) {
+            $invalidProperties[] = "'branch' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -198,7 +204,7 @@ class ListRecommendOfficialTemplateRequestBody implements ModelInterface, ArrayA
     * Gets gitUrl
     *  代码仓地址
     *
-    * @return string|null
+    * @return string
     */
     public function getGitUrl()
     {
@@ -208,7 +214,7 @@ class ListRecommendOfficialTemplateRequestBody implements ModelInterface, ArrayA
     /**
     * Sets gitUrl
     *
-    * @param string|null $gitUrl 代码仓地址
+    * @param string $gitUrl 代码仓地址
     *
     * @return $this
     */
@@ -222,7 +228,7 @@ class ListRecommendOfficialTemplateRequestBody implements ModelInterface, ArrayA
     * Gets branch
     *  代码仓分支名称你
     *
-    * @return string|null
+    * @return string
     */
     public function getBranch()
     {
@@ -232,7 +238,7 @@ class ListRecommendOfficialTemplateRequestBody implements ModelInterface, ArrayA
     /**
     * Sets branch
     *
-    * @param string|null $branch 代码仓分支名称你
+    * @param string $branch 代码仓分支名称你
     *
     * @return $this
     */

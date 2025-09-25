@@ -347,6 +347,133 @@ class CssClient extends Client
             $requestType='\HuaweiCloud\SDK\Css\V2\Model\StopAutoCreateSnapshotsRequest');
     }
 
+    /**
+     * 删除配置文件
+     *
+     * 删除配置文件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteLogstashConf($request)
+    {
+        return $this->deleteLogstashConfWithHttpInfo($request);
+    }
+
+    public function deleteLogstashConfWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/{project_id}/clusters/{cluster_id}/lgsconf/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Css\V2\Model\DeleteLogstashConfResponse',
+            $requestType='\HuaweiCloud\SDK\Css\V2\Model\DeleteLogstashConfRequest');
+    }
+
+    /**
+     * Delete Custom Template
+     *
+     * This interface is used to delete custom templates.
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteLogstashTemplate($request)
+    {
+        return $this->deleteLogstashTemplateWithHttpInfo($request);
+    }
+
+    public function deleteLogstashTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/{project_id}/lgsconf/deletetemplate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Css\V2\Model\DeleteLogstashTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\Css\V2\Model\DeleteLogstashTemplateRequest');
+    }
+
     protected function callApi(
         $method,
         $resourcePath,

@@ -26,6 +26,7 @@ class OrganizationPolicyUpdate implements ModelInterface, ArrayAccess
     * policyEnabled  策略是否开启
     * policyOperationDefinition  policyOperationDefinition
     * policyTrigger  policyTrigger
+    * effectiveScope  组织策略生效范围
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class OrganizationPolicyUpdate implements ModelInterface, ArrayAccess
             'policyName' => 'string',
             'policyEnabled' => 'bool',
             'policyOperationDefinition' => '\HuaweiCloud\SDK\Cbr\V1\Model\PolicyoODCreate',
-            'policyTrigger' => '\HuaweiCloud\SDK\Cbr\V1\Model\PolicyTriggerReq'
+            'policyTrigger' => '\HuaweiCloud\SDK\Cbr\V1\Model\PolicyTriggerReq',
+            'effectiveScope' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class OrganizationPolicyUpdate implements ModelInterface, ArrayAccess
     * policyEnabled  策略是否开启
     * policyOperationDefinition  policyOperationDefinition
     * policyTrigger  policyTrigger
+    * effectiveScope  组织策略生效范围
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class OrganizationPolicyUpdate implements ModelInterface, ArrayAccess
         'policyName' => null,
         'policyEnabled' => null,
         'policyOperationDefinition' => null,
-        'policyTrigger' => null
+        'policyTrigger' => null,
+        'effectiveScope' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class OrganizationPolicyUpdate implements ModelInterface, ArrayAccess
     * policyEnabled  策略是否开启
     * policyOperationDefinition  policyOperationDefinition
     * policyTrigger  policyTrigger
+    * effectiveScope  组织策略生效范围
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class OrganizationPolicyUpdate implements ModelInterface, ArrayAccess
             'policyName' => 'policy_name',
             'policyEnabled' => 'policy_enabled',
             'policyOperationDefinition' => 'policy_operation_definition',
-            'policyTrigger' => 'policy_trigger'
+            'policyTrigger' => 'policy_trigger',
+            'effectiveScope' => 'effective_scope'
     ];
 
     /**
@@ -107,6 +113,7 @@ class OrganizationPolicyUpdate implements ModelInterface, ArrayAccess
     * policyEnabled  策略是否开启
     * policyOperationDefinition  policyOperationDefinition
     * policyTrigger  policyTrigger
+    * effectiveScope  组织策略生效范围
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class OrganizationPolicyUpdate implements ModelInterface, ArrayAccess
             'policyName' => 'setPolicyName',
             'policyEnabled' => 'setPolicyEnabled',
             'policyOperationDefinition' => 'setPolicyOperationDefinition',
-            'policyTrigger' => 'setPolicyTrigger'
+            'policyTrigger' => 'setPolicyTrigger',
+            'effectiveScope' => 'setEffectiveScope'
     ];
 
     /**
@@ -127,6 +135,7 @@ class OrganizationPolicyUpdate implements ModelInterface, ArrayAccess
     * policyEnabled  策略是否开启
     * policyOperationDefinition  policyOperationDefinition
     * policyTrigger  policyTrigger
+    * effectiveScope  组织策略生效范围
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class OrganizationPolicyUpdate implements ModelInterface, ArrayAccess
             'policyName' => 'getPolicyName',
             'policyEnabled' => 'getPolicyEnabled',
             'policyOperationDefinition' => 'getPolicyOperationDefinition',
-            'policyTrigger' => 'getPolicyTrigger'
+            'policyTrigger' => 'getPolicyTrigger',
+            'effectiveScope' => 'getEffectiveScope'
     ];
 
     /**
@@ -203,6 +213,7 @@ class OrganizationPolicyUpdate implements ModelInterface, ArrayAccess
         $this->container['policyEnabled'] = isset($data['policyEnabled']) ? $data['policyEnabled'] : null;
         $this->container['policyOperationDefinition'] = isset($data['policyOperationDefinition']) ? $data['policyOperationDefinition'] : null;
         $this->container['policyTrigger'] = isset($data['policyTrigger']) ? $data['policyTrigger'] : null;
+        $this->container['effectiveScope'] = isset($data['effectiveScope']) ? $data['effectiveScope'] : null;
     }
 
     /**
@@ -230,6 +241,12 @@ class OrganizationPolicyUpdate implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['policyName']) && (mb_strlen($this->container['policyName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'policyName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['effectiveScope']) && (mb_strlen($this->container['effectiveScope']) > 255)) {
+                $invalidProperties[] = "invalid value for 'effectiveScope', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['effectiveScope']) && (mb_strlen($this->container['effectiveScope']) < 0)) {
+                $invalidProperties[] = "invalid value for 'effectiveScope', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -386,6 +403,30 @@ class OrganizationPolicyUpdate implements ModelInterface, ArrayAccess
     public function setPolicyTrigger($policyTrigger)
     {
         $this->container['policyTrigger'] = $policyTrigger;
+        return $this;
+    }
+
+    /**
+    * Gets effectiveScope
+    *  组织策略生效范围
+    *
+    * @return string|null
+    */
+    public function getEffectiveScope()
+    {
+        return $this->container['effectiveScope'];
+    }
+
+    /**
+    * Sets effectiveScope
+    *
+    * @param string|null $effectiveScope 组织策略生效范围
+    *
+    * @return $this
+    */
+    public function setEffectiveScope($effectiveScope)
+    {
+        $this->container['effectiveScope'] = $effectiveScope;
         return $this;
     }
 

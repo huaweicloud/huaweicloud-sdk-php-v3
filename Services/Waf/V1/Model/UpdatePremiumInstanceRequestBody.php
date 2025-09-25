@@ -20,8 +20,8 @@ class UpdatePremiumInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  独享引擎操作名称
-    * params  具体的请求体
+    * action  **参数解释：** 独享引擎操作名称，目前支持 upgrade（升级） ，rollback（升级后回滚），security_groups（切换安全组） **取值范围：** 不涉及
+    * params  **参数解释：**  具体的请求参数，操作为upgrade（升级） ，rollback（升级后回滚）时无需填写，操作位 security_groups（切换安全组）时，参数为安全组的ip数组 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UpdatePremiumInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  独享引擎操作名称
-    * params  具体的请求体
+    * action  **参数解释：** 独享引擎操作名称，目前支持 upgrade（升级） ，rollback（升级后回滚），security_groups（切换安全组） **取值范围：** 不涉及
+    * params  **参数解释：**  具体的请求参数，操作为upgrade（升级） ，rollback（升级后回滚）时无需填写，操作位 security_groups（切换安全组）时，参数为安全组的ip数组 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UpdatePremiumInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  独享引擎操作名称
-    * params  具体的请求体
+    * action  **参数解释：** 独享引擎操作名称，目前支持 upgrade（升级） ，rollback（升级后回滚），security_groups（切换安全组） **取值范围：** 不涉及
+    * params  **参数解释：**  具体的请求参数，操作为upgrade（升级） ，rollback（升级后回滚）时无需填写，操作位 security_groups（切换安全组）时，参数为安全组的ip数组 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UpdatePremiumInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  独享引擎操作名称
-    * params  具体的请求体
+    * action  **参数解释：** 独享引擎操作名称，目前支持 upgrade（升级） ，rollback（升级后回滚），security_groups（切换安全组） **取值范围：** 不涉及
+    * params  **参数解释：**  具体的请求参数，操作为upgrade（升级） ，rollback（升级后回滚）时无需填写，操作位 security_groups（切换安全组）时，参数为安全组的ip数组 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UpdatePremiumInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  独享引擎操作名称
-    * params  具体的请求体
+    * action  **参数解释：** 独享引擎操作名称，目前支持 upgrade（升级） ，rollback（升级后回滚），security_groups（切换安全组） **取值范围：** 不涉及
+    * params  **参数解释：**  具体的请求参数，操作为upgrade（升级） ，rollback（升级后回滚）时无需填写，操作位 security_groups（切换安全组）时，参数为安全组的ip数组 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class UpdatePremiumInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  独享引擎操作名称
+    *  **参数解释：** 独享引擎操作名称，目前支持 upgrade（升级） ，rollback（升级后回滚），security_groups（切换安全组） **取值范围：** 不涉及
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class UpdatePremiumInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action 独享引擎操作名称
+    * @param string $action **参数解释：** 独享引擎操作名称，目前支持 upgrade（升级） ，rollback（升级后回滚），security_groups（切换安全组） **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class UpdatePremiumInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets params
-    *  具体的请求体
+    *  **参数解释：**  具体的请求参数，操作为upgrade（升级） ，rollback（升级后回滚）时无需填写，操作位 security_groups（切换安全组）时，参数为安全组的ip数组 **取值范围：** 不涉及
     *
     * @return string[]|null
     */
@@ -224,7 +224,7 @@ class UpdatePremiumInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets params
     *
-    * @param string[]|null $params 具体的请求体
+    * @param string[]|null $params **参数解释：**  具体的请求参数，操作为upgrade（升级） ，rollback（升级后回滚）时无需填写，操作位 security_groups（切换安全组）时，参数为安全组的ip数组 **取值范围：** 不涉及
     *
     * @return $this
     */

@@ -318,8 +318,8 @@ class ListImageScanTaskRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['type']) < 1)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^.*$/", $this->container['type'])) {
-                $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /^.*$/.";
+            if (!preg_match("/^image_sync|image_scan$/", $this->container['type'])) {
+                $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /^image_sync|image_scan$/.";
             }
             if (!is_null($this->container['taskType']) && (mb_strlen($this->container['taskType']) > 256)) {
                 $invalidProperties[] = "invalid value for 'taskType', the character length must be smaller than or equal to 256.";
@@ -327,8 +327,8 @@ class ListImageScanTaskRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['taskType']) && (mb_strlen($this->container['taskType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'taskType', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['taskType']) && !preg_match("/^.*$/", $this->container['taskType'])) {
-                $invalidProperties[] = "invalid value for 'taskType', must be conform to the pattern /^.*$/.";
+            if (!is_null($this->container['taskType']) && !preg_match("/^cycle|manual|autoSync|manualSync$/", $this->container['taskType'])) {
+                $invalidProperties[] = "invalid value for 'taskType', must be conform to the pattern /^cycle|manual|autoSync|manualSync$/.";
             }
             if (!is_null($this->container['taskName']) && (mb_strlen($this->container['taskName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'taskName', the character length must be smaller than or equal to 256.";
@@ -366,8 +366,8 @@ class ListImageScanTaskRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['taskStatus']) && (mb_strlen($this->container['taskStatus']) < 0)) {
                 $invalidProperties[] = "invalid value for 'taskStatus', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['taskStatus']) && !preg_match("/^.*$/", $this->container['taskStatus'])) {
-                $invalidProperties[] = "invalid value for 'taskStatus', must be conform to the pattern /^.*$/.";
+            if (!is_null($this->container['taskStatus']) && !preg_match("/^scanning|finished$/", $this->container['taskStatus'])) {
+                $invalidProperties[] = "invalid value for 'taskStatus', must be conform to the pattern /^scanning|finished$/.";
             }
             if (!is_null($this->container['scanScope']) && ($this->container['scanScope'] > 2147483547)) {
                 $invalidProperties[] = "invalid value for 'scanScope', must be smaller than or equal to 2147483547.";

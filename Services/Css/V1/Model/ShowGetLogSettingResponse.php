@@ -22,21 +22,25 @@ class ShowGetLogSettingResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * logConfiguration  logConfiguration
+    * realTimeLogCollectRecord  realTimeLogCollectRecord
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'logConfiguration' => '\HuaweiCloud\SDK\Css\V1\Model\LogConfiguration'
+            'logConfiguration' => '\HuaweiCloud\SDK\Css\V1\Model\LogConfiguration',
+            'realTimeLogCollectRecord' => '\HuaweiCloud\SDK\Css\V1\Model\RealTimeLogCollect'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * logConfiguration  logConfiguration
+    * realTimeLogCollectRecord  realTimeLogCollectRecord
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'logConfiguration' => null
+        'logConfiguration' => null,
+        'realTimeLogCollectRecord' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ShowGetLogSettingResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * logConfiguration  logConfiguration
+    * realTimeLogCollectRecord  realTimeLogCollectRecord
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'logConfiguration' => 'logConfiguration'
+            'logConfiguration' => 'logConfiguration',
+            'realTimeLogCollectRecord' => 'realTimeLogCollectRecord'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * logConfiguration  logConfiguration
+    * realTimeLogCollectRecord  realTimeLogCollectRecord
     *
     * @var string[]
     */
     protected static $setters = [
-            'logConfiguration' => 'setLogConfiguration'
+            'logConfiguration' => 'setLogConfiguration',
+            'realTimeLogCollectRecord' => 'setRealTimeLogCollectRecord'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * logConfiguration  logConfiguration
+    * realTimeLogCollectRecord  realTimeLogCollectRecord
     *
     * @var string[]
     */
     protected static $getters = [
-            'logConfiguration' => 'getLogConfiguration'
+            'logConfiguration' => 'getLogConfiguration',
+            'realTimeLogCollectRecord' => 'getRealTimeLogCollectRecord'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ShowGetLogSettingResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['logConfiguration'] = isset($data['logConfiguration']) ? $data['logConfiguration'] : null;
+        $this->container['realTimeLogCollectRecord'] = isset($data['realTimeLogCollectRecord']) ? $data['realTimeLogCollectRecord'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ShowGetLogSettingResponse implements ModelInterface, ArrayAccess
     public function setLogConfiguration($logConfiguration)
     {
         $this->container['logConfiguration'] = $logConfiguration;
+        return $this;
+    }
+
+    /**
+    * Gets realTimeLogCollectRecord
+    *  realTimeLogCollectRecord
+    *
+    * @return \HuaweiCloud\SDK\Css\V1\Model\RealTimeLogCollect|null
+    */
+    public function getRealTimeLogCollectRecord()
+    {
+        return $this->container['realTimeLogCollectRecord'];
+    }
+
+    /**
+    * Sets realTimeLogCollectRecord
+    *
+    * @param \HuaweiCloud\SDK\Css\V1\Model\RealTimeLogCollect|null $realTimeLogCollectRecord realTimeLogCollectRecord
+    *
+    * @return $this
+    */
+    public function setRealTimeLogCollectRecord($realTimeLogCollectRecord)
+    {
+        $this->container['realTimeLogCollectRecord'] = $realTimeLogCollectRecord;
         return $this;
     }
 

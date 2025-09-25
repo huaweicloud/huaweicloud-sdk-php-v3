@@ -23,24 +23,28 @@ class ListImagesResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * needUploadUpgradePlugin  是否需要上传升级后版本的插件。
     * imageInfoList  imageInfoList
+    * totalSize  目标镜像数量。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'needUploadUpgradePlugin' => 'bool',
-            'imageInfoList' => '\HuaweiCloud\SDK\Css\V1\Model\GetTargetImageIdDetail[]'
+            'imageInfoList' => '\HuaweiCloud\SDK\Css\V1\Model\GetTargetImageIdDetail[]',
+            'totalSize' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * needUploadUpgradePlugin  是否需要上传升级后版本的插件。
     * imageInfoList  imageInfoList
+    * totalSize  目标镜像数量。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'needUploadUpgradePlugin' => null,
-        'imageInfoList' => null
+        'imageInfoList' => null,
+        'totalSize' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListImagesResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * needUploadUpgradePlugin  是否需要上传升级后版本的插件。
     * imageInfoList  imageInfoList
+    * totalSize  目标镜像数量。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'needUploadUpgradePlugin' => 'needUploadUpgradePlugin',
-            'imageInfoList' => 'imageInfoList'
+            'imageInfoList' => 'imageInfoList',
+            'totalSize' => 'totalSize'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * needUploadUpgradePlugin  是否需要上传升级后版本的插件。
     * imageInfoList  imageInfoList
+    * totalSize  目标镜像数量。
     *
     * @var string[]
     */
     protected static $setters = [
             'needUploadUpgradePlugin' => 'setNeedUploadUpgradePlugin',
-            'imageInfoList' => 'setImageInfoList'
+            'imageInfoList' => 'setImageInfoList',
+            'totalSize' => 'setTotalSize'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * needUploadUpgradePlugin  是否需要上传升级后版本的插件。
     * imageInfoList  imageInfoList
+    * totalSize  目标镜像数量。
     *
     * @var string[]
     */
     protected static $getters = [
             'needUploadUpgradePlugin' => 'getNeedUploadUpgradePlugin',
-            'imageInfoList' => 'getImageInfoList'
+            'imageInfoList' => 'getImageInfoList',
+            'totalSize' => 'getTotalSize'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListImagesResponse implements ModelInterface, ArrayAccess
     {
         $this->container['needUploadUpgradePlugin'] = isset($data['needUploadUpgradePlugin']) ? $data['needUploadUpgradePlugin'] : null;
         $this->container['imageInfoList'] = isset($data['imageInfoList']) ? $data['imageInfoList'] : null;
+        $this->container['totalSize'] = isset($data['totalSize']) ? $data['totalSize'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class ListImagesResponse implements ModelInterface, ArrayAccess
     public function setImageInfoList($imageInfoList)
     {
         $this->container['imageInfoList'] = $imageInfoList;
+        return $this;
+    }
+
+    /**
+    * Gets totalSize
+    *  目标镜像数量。
+    *
+    * @return int|null
+    */
+    public function getTotalSize()
+    {
+        return $this->container['totalSize'];
+    }
+
+    /**
+    * Sets totalSize
+    *
+    * @param int|null $totalSize 目标镜像数量。
+    *
+    * @return $this
+    */
+    public function setTotalSize($totalSize)
+    {
+        $this->container['totalSize'] = $totalSize;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class ListTasksRequestBodyClusterScanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * scanTypeList  任务扫描项类型列表，若列表不为空则只有扫描了列表中所有扫描项的任务才会被筛选出来；列表为空则不对扫描项类型进行筛选
+    * scanTypeList  **参数解释**: 任务扫描项类型列表，若列表不为空则只有扫描了列表中所有扫描项的任务才会被筛选出来；列表为空则不对扫描项类型进行筛选 **约束限制**: 不涉及 **取值范围**: - cluster_vul：集群漏洞 - risk_assessment：风险评估 - benchmark：安全合规  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListTasksRequestBodyClusterScanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * scanTypeList  任务扫描项类型列表，若列表不为空则只有扫描了列表中所有扫描项的任务才会被筛选出来；列表为空则不对扫描项类型进行筛选
+    * scanTypeList  **参数解释**: 任务扫描项类型列表，若列表不为空则只有扫描了列表中所有扫描项的任务才会被筛选出来；列表为空则不对扫描项类型进行筛选 **约束限制**: 不涉及 **取值范围**: - cluster_vul：集群漏洞 - risk_assessment：风险评估 - benchmark：安全合规  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListTasksRequestBodyClusterScanInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * scanTypeList  任务扫描项类型列表，若列表不为空则只有扫描了列表中所有扫描项的任务才会被筛选出来；列表为空则不对扫描项类型进行筛选
+    * scanTypeList  **参数解释**: 任务扫描项类型列表，若列表不为空则只有扫描了列表中所有扫描项的任务才会被筛选出来；列表为空则不对扫描项类型进行筛选 **约束限制**: 不涉及 **取值范围**: - cluster_vul：集群漏洞 - risk_assessment：风险评估 - benchmark：安全合规  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListTasksRequestBodyClusterScanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * scanTypeList  任务扫描项类型列表，若列表不为空则只有扫描了列表中所有扫描项的任务才会被筛选出来；列表为空则不对扫描项类型进行筛选
+    * scanTypeList  **参数解释**: 任务扫描项类型列表，若列表不为空则只有扫描了列表中所有扫描项的任务才会被筛选出来；列表为空则不对扫描项类型进行筛选 **约束限制**: 不涉及 **取值范围**: - cluster_vul：集群漏洞 - risk_assessment：风险评估 - benchmark：安全合规  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListTasksRequestBodyClusterScanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * scanTypeList  任务扫描项类型列表，若列表不为空则只有扫描了列表中所有扫描项的任务才会被筛选出来；列表为空则不对扫描项类型进行筛选
+    * scanTypeList  **参数解释**: 任务扫描项类型列表，若列表不为空则只有扫描了列表中所有扫描项的任务才会被筛选出来；列表为空则不对扫描项类型进行筛选 **约束限制**: 不涉及 **取值范围**: - cluster_vul：集群漏洞 - risk_assessment：风险评估 - benchmark：安全合规  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class ListTasksRequestBodyClusterScanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanTypeList
-    *  任务扫描项类型列表，若列表不为空则只有扫描了列表中所有扫描项的任务才会被筛选出来；列表为空则不对扫描项类型进行筛选
+    *  **参数解释**: 任务扫描项类型列表，若列表不为空则只有扫描了列表中所有扫描项的任务才会被筛选出来；列表为空则不对扫描项类型进行筛选 **约束限制**: 不涉及 **取值范围**: - cluster_vul：集群漏洞 - risk_assessment：风险评估 - benchmark：安全合规  **默认取值**: 不涉及
     *
     * @return string[]|null
     */
@@ -186,7 +186,7 @@ class ListTasksRequestBodyClusterScanInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanTypeList
     *
-    * @param string[]|null $scanTypeList 任务扫描项类型列表，若列表不为空则只有扫描了列表中所有扫描项的任务才会被筛选出来；列表为空则不对扫描项类型进行筛选
+    * @param string[]|null $scanTypeList **参数解释**: 任务扫描项类型列表，若列表不为空则只有扫描了列表中所有扫描项的任务才会被筛选出来；列表为空则不对扫描项类型进行筛选 **约束限制**: 不涉及 **取值范围**: - cluster_vul：集群漏洞 - risk_assessment：风险评估 - benchmark：安全合规  **默认取值**: 不涉及
     *
     * @return $this
     */

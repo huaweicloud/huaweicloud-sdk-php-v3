@@ -25,8 +25,8 @@ class ListAntiVirusTaskRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
-    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
-    * endTime  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * beginTime  自定义查询时间，开始时间
+    * endTime  自定义查询时间，结束时间
     * taskStatus  任务状态，包含如下4种   - scanning ：扫描中   - cancel ：已取消   - fail ：扫描失败   - finish ：已完成
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
@@ -59,8 +59,8 @@ class ListAntiVirusTaskRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
-    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
-    * endTime  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * beginTime  自定义查询时间，开始时间
+    * endTime  自定义查询时间，结束时间
     * taskStatus  任务状态，包含如下4种   - scanning ：扫描中   - cancel ：已取消   - fail ：扫描失败   - finish ：已完成
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
@@ -114,8 +114,8 @@ class ListAntiVirusTaskRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
-    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
-    * endTime  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * beginTime  自定义查询时间，开始时间
+    * endTime  自定义查询时间，结束时间
     * taskStatus  任务状态，包含如下4种   - scanning ：扫描中   - cancel ：已取消   - fail ：扫描失败   - finish ：已完成
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
@@ -148,8 +148,8 @@ class ListAntiVirusTaskRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
-    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
-    * endTime  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * beginTime  自定义查询时间，开始时间
+    * endTime  自定义查询时间，结束时间
     * taskStatus  任务状态，包含如下4种   - scanning ：扫描中   - cancel ：已取消   - fail ：扫描失败   - finish ：已完成
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
@@ -182,8 +182,8 @@ class ListAntiVirusTaskRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
-    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
-    * endTime  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * beginTime  自定义查询时间，开始时间
+    * endTime  自定义查询时间，结束时间
     * taskStatus  任务状态，包含如下4种   - scanning ：扫描中   - cancel ：已取消   - fail ：扫描失败   - finish ：已完成
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
@@ -513,7 +513,7 @@ class ListAntiVirusTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
-    *  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    *  自定义查询时间，开始时间
     *
     * @return string|null
     */
@@ -525,7 +525,7 @@ class ListAntiVirusTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets beginTime
     *
-    * @param string|null $beginTime 自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * @param string|null $beginTime 自定义查询时间，开始时间
     *
     * @return $this
     */
@@ -537,7 +537,7 @@ class ListAntiVirusTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    *  自定义查询时间，结束时间
     *
     * @return string|null
     */
@@ -549,7 +549,7 @@ class ListAntiVirusTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * @param string|null $endTime 自定义查询时间，结束时间
     *
     * @return $this
     */

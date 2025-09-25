@@ -28,6 +28,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     * elbEnable  是否开启elb。 - true: 打开elb - false： 关闭elb
     * authenticationType  认证方式。
     * loadBalancer  loadBalancer
+    * listener  listener
     * healthmonitors  healthmonitors
     *
     * @var string[]
@@ -40,7 +41,8 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
             'elbEnable' => 'bool',
             'authenticationType' => 'string',
             'loadBalancer' => '\HuaweiCloud\SDK\Css\V1\Model\EsLoadBalancerResource',
-            'healthmonitors' => '\HuaweiCloud\SDK\Css\V1\Model\EsHealthmonitorsResource'
+            'listener' => '\HuaweiCloud\SDK\Css\V1\Model\Elbv3Listener',
+            'healthmonitors' => '\HuaweiCloud\SDK\Css\V1\Model\Member'
     ];
 
     /**
@@ -52,6 +54,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     * elbEnable  是否开启elb。 - true: 打开elb - false： 关闭elb
     * authenticationType  认证方式。
     * loadBalancer  loadBalancer
+    * listener  listener
     * healthmonitors  healthmonitors
     *
     * @var string[]
@@ -64,6 +67,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
         'elbEnable' => null,
         'authenticationType' => null,
         'loadBalancer' => null,
+        'listener' => null,
         'healthmonitors' => null
     ];
 
@@ -97,6 +101,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     * elbEnable  是否开启elb。 - true: 打开elb - false： 关闭elb
     * authenticationType  认证方式。
     * loadBalancer  loadBalancer
+    * listener  listener
     * healthmonitors  healthmonitors
     *
     * @var string[]
@@ -109,6 +114,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
             'elbEnable' => 'elb_enable',
             'authenticationType' => 'authentication_type',
             'loadBalancer' => 'loadBalancer',
+            'listener' => 'listener',
             'healthmonitors' => 'healthmonitors'
     ];
 
@@ -121,6 +127,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     * elbEnable  是否开启elb。 - true: 打开elb - false： 关闭elb
     * authenticationType  认证方式。
     * loadBalancer  loadBalancer
+    * listener  listener
     * healthmonitors  healthmonitors
     *
     * @var string[]
@@ -133,6 +140,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
             'elbEnable' => 'setElbEnable',
             'authenticationType' => 'setAuthenticationType',
             'loadBalancer' => 'setLoadBalancer',
+            'listener' => 'setListener',
             'healthmonitors' => 'setHealthmonitors'
     ];
 
@@ -145,6 +153,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     * elbEnable  是否开启elb。 - true: 打开elb - false： 关闭elb
     * authenticationType  认证方式。
     * loadBalancer  loadBalancer
+    * listener  listener
     * healthmonitors  healthmonitors
     *
     * @var string[]
@@ -157,6 +166,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
             'elbEnable' => 'getElbEnable',
             'authenticationType' => 'getAuthenticationType',
             'loadBalancer' => 'getLoadBalancer',
+            'listener' => 'getListener',
             'healthmonitors' => 'getHealthmonitors'
     ];
 
@@ -225,6 +235,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
         $this->container['elbEnable'] = isset($data['elbEnable']) ? $data['elbEnable'] : null;
         $this->container['authenticationType'] = isset($data['authenticationType']) ? $data['authenticationType'] : null;
         $this->container['loadBalancer'] = isset($data['loadBalancer']) ? $data['loadBalancer'] : null;
+        $this->container['listener'] = isset($data['listener']) ? $data['listener'] : null;
         $this->container['healthmonitors'] = isset($data['healthmonitors']) ? $data['healthmonitors'] : null;
     }
 
@@ -419,10 +430,34 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets listener
+    *  listener
+    *
+    * @return \HuaweiCloud\SDK\Css\V1\Model\Elbv3Listener|null
+    */
+    public function getListener()
+    {
+        return $this->container['listener'];
+    }
+
+    /**
+    * Sets listener
+    *
+    * @param \HuaweiCloud\SDK\Css\V1\Model\Elbv3Listener|null $listener listener
+    *
+    * @return $this
+    */
+    public function setListener($listener)
+    {
+        $this->container['listener'] = $listener;
+        return $this;
+    }
+
+    /**
     * Gets healthmonitors
     *  healthmonitors
     *
-    * @return \HuaweiCloud\SDK\Css\V1\Model\EsHealthmonitorsResource|null
+    * @return \HuaweiCloud\SDK\Css\V1\Model\Member|null
     */
     public function getHealthmonitors()
     {
@@ -432,7 +467,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets healthmonitors
     *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\EsHealthmonitorsResource|null $healthmonitors healthmonitors
+    * @param \HuaweiCloud\SDK\Css\V1\Model\Member|null $healthmonitors healthmonitors
     *
     * @return $this
     */

@@ -20,14 +20,14 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  任务ID。
-    * name  任务名称。
-    * userName  用户名。
-    * userId  用户ID。
-    * params  任务参数。
-    * status  任务状态。
-    * createdAt  启动时间。
-    * updatedAt  结束时间。
+    * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 任务名称。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * params  **参数解释**： 任务参数。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务状态。 **取值范围**： - CREATED：后台任务状态为创建成功。 - SUCCESS：后台任务状态为成功。 - FAILED：后台任务状态为失败。 - DELETED：后台任务状态为已删除。 - EXECUTING：后台任务状态为执行中。 - CANCELLED：定时任务状态为取消。
+    * createdAt  **参数解释**： 启动时间。 **取值范围**： 不涉及。
+    * updatedAt  **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  任务ID。
-    * name  任务名称。
-    * userName  用户名。
-    * userId  用户ID。
-    * params  任务参数。
-    * status  任务状态。
-    * createdAt  启动时间。
-    * updatedAt  结束时间。
+    * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 任务名称。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * params  **参数解释**： 任务参数。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务状态。 **取值范围**： - CREATED：后台任务状态为创建成功。 - SUCCESS：后台任务状态为成功。 - FAILED：后台任务状态为失败。 - DELETED：后台任务状态为已删除。 - EXECUTING：后台任务状态为执行中。 - CANCELLED：定时任务状态为取消。
+    * createdAt  **参数解释**： 启动时间。 **取值范围**： 不涉及。
+    * updatedAt  **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  任务ID。
-    * name  任务名称。
-    * userName  用户名。
-    * userId  用户ID。
-    * params  任务参数。
-    * status  任务状态。
-    * createdAt  启动时间。
-    * updatedAt  结束时间。
+    * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 任务名称。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * params  **参数解释**： 任务参数。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务状态。 **取值范围**： - CREATED：后台任务状态为创建成功。 - SUCCESS：后台任务状态为成功。 - FAILED：后台任务状态为失败。 - DELETED：后台任务状态为已删除。 - EXECUTING：后台任务状态为执行中。 - CANCELLED：定时任务状态为取消。
+    * createdAt  **参数解释**： 启动时间。 **取值范围**： 不涉及。
+    * updatedAt  **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  任务ID。
-    * name  任务名称。
-    * userName  用户名。
-    * userId  用户ID。
-    * params  任务参数。
-    * status  任务状态。
-    * createdAt  启动时间。
-    * updatedAt  结束时间。
+    * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 任务名称。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * params  **参数解释**： 任务参数。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务状态。 **取值范围**： - CREATED：后台任务状态为创建成功。 - SUCCESS：后台任务状态为成功。 - FAILED：后台任务状态为失败。 - DELETED：后台任务状态为已删除。 - EXECUTING：后台任务状态为执行中。 - CANCELLED：定时任务状态为取消。
+    * createdAt  **参数解释**： 启动时间。 **取值范围**： 不涉及。
+    * updatedAt  **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  任务ID。
-    * name  任务名称。
-    * userName  用户名。
-    * userId  用户ID。
-    * params  任务参数。
-    * status  任务状态。
-    * createdAt  启动时间。
-    * updatedAt  结束时间。
+    * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 任务名称。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * params  **参数解释**： 任务参数。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务状态。 **取值范围**： - CREATED：后台任务状态为创建成功。 - SUCCESS：后台任务状态为成功。 - FAILED：后台任务状态为失败。 - DELETED：后台任务状态为已删除。 - EXECUTING：后台任务状态为执行中。 - CANCELLED：定时任务状态为取消。
+    * createdAt  **参数解释**： 启动时间。 **取值范围**： 不涉及。
+    * updatedAt  **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -251,7 +251,7 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  任务ID。
+    *  **参数解释**： 任务ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 任务ID。
+    * @param string|null $id **参数解释**： 任务ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  任务名称。
+    *  **参数解释**： 任务名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -287,7 +287,7 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 任务名称。
+    * @param string|null $name **参数解释**： 任务名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  用户名。
+    *  **参数解释**： 用户名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 用户名。
+    * @param string|null $userName **参数解释**： 用户名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  用户ID。
+    *  **参数解释**： 用户ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string|null $userId 用户ID。
+    * @param string|null $userId **参数解释**： 用户ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
 
     /**
     * Gets params
-    *  任务参数。
+    *  **参数解释**： 任务参数。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
     /**
     * Sets params
     *
-    * @param string|null $params 任务参数。
+    * @param string|null $params **参数解释**： 任务参数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  任务状态。
+    *  **参数解释**： 任务状态。 **取值范围**： - CREATED：后台任务状态为创建成功。 - SUCCESS：后台任务状态为成功。 - FAILED：后台任务状态为失败。 - DELETED：后台任务状态为已删除。 - EXECUTING：后台任务状态为执行中。 - CANCELLED：定时任务状态为取消。
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 任务状态。
+    * @param string|null $status **参数解释**： 任务状态。 **取值范围**： - CREATED：后台任务状态为创建成功。 - SUCCESS：后台任务状态为成功。 - FAILED：后台任务状态为失败。 - DELETED：后台任务状态为已删除。 - EXECUTING：后台任务状态为执行中。 - CANCELLED：定时任务状态为取消。
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  启动时间。
+    *  **参数解释**： 启动时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -407,7 +407,7 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 启动时间。
+    * @param string|null $createdAt **参数解释**： 启动时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  结束时间。
+    *  **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -431,7 +431,7 @@ class ListBackgroundTasksRespTasks implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string|null $updatedAt 结束时间。
+    * @param string|null $updatedAt **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */

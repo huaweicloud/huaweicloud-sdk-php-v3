@@ -23,7 +23,7 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
     * conditions  匹配条件列表
     * name  规则名称
     * type  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
     * conditions  匹配条件列表
     * name  规则名称
     * type  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
     * conditions  匹配条件列表
     * name  规则名称
     * type  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
     * conditions  匹配条件列表
     * name  规则名称
     * type  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
     * conditions  匹配条件列表
     * name  规则名称
     * type  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @var string[]
     */
@@ -291,7 +291,7 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @return int
     */
@@ -303,7 +303,7 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param int $priority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * @param int $priority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @return $this
     */

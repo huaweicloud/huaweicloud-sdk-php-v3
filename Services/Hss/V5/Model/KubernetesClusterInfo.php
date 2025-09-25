@@ -23,8 +23,8 @@ class KubernetesClusterInfo implements ModelInterface, ArrayAccess
     * id  id
     * clusterName  集群名称
     * clusterId  集群ID
-    * clusterType  集群类型
-    * status  集群状态，包含如下11种。   - Available：可用，表示集群处于正常状态。   - Unavailable：不可用，表示集群异常，需手动删除或联系管理员删除。   - ScalingUp：扩容中，表示集群正处于扩容过程中。   - ScalingDown：缩容中，表示集群正处于缩容过程中。   - Creating：创建中，表示集群正处于创建过程中。   - Deleting：删除中，表示集群正处于删除过程中。   - Upgrading：升级中，表示集群正处于升级过程中。   - Resizing：规格变更中，表示集群正处于变更规格中。   - RollingBack：回滚中，表示集群正处于回滚过程中。   - RollbackFailed：回滚异常，表示集群回滚异常，需联系管理员进行回滚重试。   - Empty：集群无任何资源
+    * clusterType  **参数解释**: 集群类型 **约束限制**: 不涉及 **取值范围**: - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群  **默认取值**: 不涉及
+    * status  **参数解释**: 集群状态(11种) **约束限制**: 不涉及 **取值范围**:   - Available：可用，表示集群处于正常状态。   - Unavailable：不可用，表示集群异常，需手动删除或联系管理员删除。   - ScalingUp：扩容中，表示集群正处于扩容过程中。   - ScalingDown：缩容中，表示集群正处于缩容过程中。   - Creating：创建中，表示集群正处于创建过程中。   - Deleting：删除中，表示集群正处于删除过程中。   - Upgrading：升级中，表示集群正处于升级过程中。   - Resizing：规格变更中，表示集群正处于变更规格中。   - RollingBack：回滚中，表示集群正处于回滚过程中。   - RollbackFailed：回滚异常，表示集群回滚异常，需联系管理员进行回滚重试。   - Empty：集群无任何资源  **默认取值**: 不涉及
     * version  集群版本
     * totalNodesNumber  节点总数
     * activeNodesNumber  正常节点数
@@ -73,8 +73,8 @@ class KubernetesClusterInfo implements ModelInterface, ArrayAccess
     * id  id
     * clusterName  集群名称
     * clusterId  集群ID
-    * clusterType  集群类型
-    * status  集群状态，包含如下11种。   - Available：可用，表示集群处于正常状态。   - Unavailable：不可用，表示集群异常，需手动删除或联系管理员删除。   - ScalingUp：扩容中，表示集群正处于扩容过程中。   - ScalingDown：缩容中，表示集群正处于缩容过程中。   - Creating：创建中，表示集群正处于创建过程中。   - Deleting：删除中，表示集群正处于删除过程中。   - Upgrading：升级中，表示集群正处于升级过程中。   - Resizing：规格变更中，表示集群正处于变更规格中。   - RollingBack：回滚中，表示集群正处于回滚过程中。   - RollbackFailed：回滚异常，表示集群回滚异常，需联系管理员进行回滚重试。   - Empty：集群无任何资源
+    * clusterType  **参数解释**: 集群类型 **约束限制**: 不涉及 **取值范围**: - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群  **默认取值**: 不涉及
+    * status  **参数解释**: 集群状态(11种) **约束限制**: 不涉及 **取值范围**:   - Available：可用，表示集群处于正常状态。   - Unavailable：不可用，表示集群异常，需手动删除或联系管理员删除。   - ScalingUp：扩容中，表示集群正处于扩容过程中。   - ScalingDown：缩容中，表示集群正处于缩容过程中。   - Creating：创建中，表示集群正处于创建过程中。   - Deleting：删除中，表示集群正处于删除过程中。   - Upgrading：升级中，表示集群正处于升级过程中。   - Resizing：规格变更中，表示集群正处于变更规格中。   - RollingBack：回滚中，表示集群正处于回滚过程中。   - RollbackFailed：回滚异常，表示集群回滚异常，需联系管理员进行回滚重试。   - Empty：集群无任何资源  **默认取值**: 不涉及
     * version  集群版本
     * totalNodesNumber  节点总数
     * activeNodesNumber  正常节点数
@@ -144,8 +144,8 @@ class KubernetesClusterInfo implements ModelInterface, ArrayAccess
     * id  id
     * clusterName  集群名称
     * clusterId  集群ID
-    * clusterType  集群类型
-    * status  集群状态，包含如下11种。   - Available：可用，表示集群处于正常状态。   - Unavailable：不可用，表示集群异常，需手动删除或联系管理员删除。   - ScalingUp：扩容中，表示集群正处于扩容过程中。   - ScalingDown：缩容中，表示集群正处于缩容过程中。   - Creating：创建中，表示集群正处于创建过程中。   - Deleting：删除中，表示集群正处于删除过程中。   - Upgrading：升级中，表示集群正处于升级过程中。   - Resizing：规格变更中，表示集群正处于变更规格中。   - RollingBack：回滚中，表示集群正处于回滚过程中。   - RollbackFailed：回滚异常，表示集群回滚异常，需联系管理员进行回滚重试。   - Empty：集群无任何资源
+    * clusterType  **参数解释**: 集群类型 **约束限制**: 不涉及 **取值范围**: - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群  **默认取值**: 不涉及
+    * status  **参数解释**: 集群状态(11种) **约束限制**: 不涉及 **取值范围**:   - Available：可用，表示集群处于正常状态。   - Unavailable：不可用，表示集群异常，需手动删除或联系管理员删除。   - ScalingUp：扩容中，表示集群正处于扩容过程中。   - ScalingDown：缩容中，表示集群正处于缩容过程中。   - Creating：创建中，表示集群正处于创建过程中。   - Deleting：删除中，表示集群正处于删除过程中。   - Upgrading：升级中，表示集群正处于升级过程中。   - Resizing：规格变更中，表示集群正处于变更规格中。   - RollingBack：回滚中，表示集群正处于回滚过程中。   - RollbackFailed：回滚异常，表示集群回滚异常，需联系管理员进行回滚重试。   - Empty：集群无任何资源  **默认取值**: 不涉及
     * version  集群版本
     * totalNodesNumber  节点总数
     * activeNodesNumber  正常节点数
@@ -194,8 +194,8 @@ class KubernetesClusterInfo implements ModelInterface, ArrayAccess
     * id  id
     * clusterName  集群名称
     * clusterId  集群ID
-    * clusterType  集群类型
-    * status  集群状态，包含如下11种。   - Available：可用，表示集群处于正常状态。   - Unavailable：不可用，表示集群异常，需手动删除或联系管理员删除。   - ScalingUp：扩容中，表示集群正处于扩容过程中。   - ScalingDown：缩容中，表示集群正处于缩容过程中。   - Creating：创建中，表示集群正处于创建过程中。   - Deleting：删除中，表示集群正处于删除过程中。   - Upgrading：升级中，表示集群正处于升级过程中。   - Resizing：规格变更中，表示集群正处于变更规格中。   - RollingBack：回滚中，表示集群正处于回滚过程中。   - RollbackFailed：回滚异常，表示集群回滚异常，需联系管理员进行回滚重试。   - Empty：集群无任何资源
+    * clusterType  **参数解释**: 集群类型 **约束限制**: 不涉及 **取值范围**: - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群  **默认取值**: 不涉及
+    * status  **参数解释**: 集群状态(11种) **约束限制**: 不涉及 **取值范围**:   - Available：可用，表示集群处于正常状态。   - Unavailable：不可用，表示集群异常，需手动删除或联系管理员删除。   - ScalingUp：扩容中，表示集群正处于扩容过程中。   - ScalingDown：缩容中，表示集群正处于缩容过程中。   - Creating：创建中，表示集群正处于创建过程中。   - Deleting：删除中，表示集群正处于删除过程中。   - Upgrading：升级中，表示集群正处于升级过程中。   - Resizing：规格变更中，表示集群正处于变更规格中。   - RollingBack：回滚中，表示集群正处于回滚过程中。   - RollbackFailed：回滚异常，表示集群回滚异常，需联系管理员进行回滚重试。   - Empty：集群无任何资源  **默认取值**: 不涉及
     * version  集群版本
     * totalNodesNumber  节点总数
     * activeNodesNumber  正常节点数
@@ -244,8 +244,8 @@ class KubernetesClusterInfo implements ModelInterface, ArrayAccess
     * id  id
     * clusterName  集群名称
     * clusterId  集群ID
-    * clusterType  集群类型
-    * status  集群状态，包含如下11种。   - Available：可用，表示集群处于正常状态。   - Unavailable：不可用，表示集群异常，需手动删除或联系管理员删除。   - ScalingUp：扩容中，表示集群正处于扩容过程中。   - ScalingDown：缩容中，表示集群正处于缩容过程中。   - Creating：创建中，表示集群正处于创建过程中。   - Deleting：删除中，表示集群正处于删除过程中。   - Upgrading：升级中，表示集群正处于升级过程中。   - Resizing：规格变更中，表示集群正处于变更规格中。   - RollingBack：回滚中，表示集群正处于回滚过程中。   - RollbackFailed：回滚异常，表示集群回滚异常，需联系管理员进行回滚重试。   - Empty：集群无任何资源
+    * clusterType  **参数解释**: 集群类型 **约束限制**: 不涉及 **取值范围**: - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群  **默认取值**: 不涉及
+    * status  **参数解释**: 集群状态(11种) **约束限制**: 不涉及 **取值范围**:   - Available：可用，表示集群处于正常状态。   - Unavailable：不可用，表示集群异常，需手动删除或联系管理员删除。   - ScalingUp：扩容中，表示集群正处于扩容过程中。   - ScalingDown：缩容中，表示集群正处于缩容过程中。   - Creating：创建中，表示集群正处于创建过程中。   - Deleting：删除中，表示集群正处于删除过程中。   - Upgrading：升级中，表示集群正处于升级过程中。   - Resizing：规格变更中，表示集群正处于变更规格中。   - RollingBack：回滚中，表示集群正处于回滚过程中。   - RollbackFailed：回滚异常，表示集群回滚异常，需联系管理员进行回滚重试。   - Empty：集群无任何资源  **默认取值**: 不涉及
     * version  集群版本
     * totalNodesNumber  节点总数
     * activeNodesNumber  正常节点数
@@ -396,8 +396,8 @@ class KubernetesClusterInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['clusterId']) && (mb_strlen($this->container['clusterId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'clusterId', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['clusterType']) && (mb_strlen($this->container['clusterType']) > 256)) {
-                $invalidProperties[] = "invalid value for 'clusterType', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['clusterType']) && (mb_strlen($this->container['clusterType']) > 255)) {
+                $invalidProperties[] = "invalid value for 'clusterType', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['clusterType']) && (mb_strlen($this->container['clusterType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'clusterType', the character length must be bigger than or equal to 0.";
@@ -592,7 +592,7 @@ class KubernetesClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterType
-    *  集群类型
+    *  **参数解释**: 集群类型 **约束限制**: 不涉及 **取值范围**: - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -604,7 +604,7 @@ class KubernetesClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterType
     *
-    * @param string|null $clusterType 集群类型
+    * @param string|null $clusterType **参数解释**: 集群类型 **约束限制**: 不涉及 **取值范围**: - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -616,7 +616,7 @@ class KubernetesClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  集群状态，包含如下11种。   - Available：可用，表示集群处于正常状态。   - Unavailable：不可用，表示集群异常，需手动删除或联系管理员删除。   - ScalingUp：扩容中，表示集群正处于扩容过程中。   - ScalingDown：缩容中，表示集群正处于缩容过程中。   - Creating：创建中，表示集群正处于创建过程中。   - Deleting：删除中，表示集群正处于删除过程中。   - Upgrading：升级中，表示集群正处于升级过程中。   - Resizing：规格变更中，表示集群正处于变更规格中。   - RollingBack：回滚中，表示集群正处于回滚过程中。   - RollbackFailed：回滚异常，表示集群回滚异常，需联系管理员进行回滚重试。   - Empty：集群无任何资源
+    *  **参数解释**: 集群状态(11种) **约束限制**: 不涉及 **取值范围**:   - Available：可用，表示集群处于正常状态。   - Unavailable：不可用，表示集群异常，需手动删除或联系管理员删除。   - ScalingUp：扩容中，表示集群正处于扩容过程中。   - ScalingDown：缩容中，表示集群正处于缩容过程中。   - Creating：创建中，表示集群正处于创建过程中。   - Deleting：删除中，表示集群正处于删除过程中。   - Upgrading：升级中，表示集群正处于升级过程中。   - Resizing：规格变更中，表示集群正处于变更规格中。   - RollingBack：回滚中，表示集群正处于回滚过程中。   - RollbackFailed：回滚异常，表示集群回滚异常，需联系管理员进行回滚重试。   - Empty：集群无任何资源  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -628,7 +628,7 @@ class KubernetesClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 集群状态，包含如下11种。   - Available：可用，表示集群处于正常状态。   - Unavailable：不可用，表示集群异常，需手动删除或联系管理员删除。   - ScalingUp：扩容中，表示集群正处于扩容过程中。   - ScalingDown：缩容中，表示集群正处于缩容过程中。   - Creating：创建中，表示集群正处于创建过程中。   - Deleting：删除中，表示集群正处于删除过程中。   - Upgrading：升级中，表示集群正处于升级过程中。   - Resizing：规格变更中，表示集群正处于变更规格中。   - RollingBack：回滚中，表示集群正处于回滚过程中。   - RollbackFailed：回滚异常，表示集群回滚异常，需联系管理员进行回滚重试。   - Empty：集群无任何资源
+    * @param string|null $status **参数解释**: 集群状态(11种) **约束限制**: 不涉及 **取值范围**:   - Available：可用，表示集群处于正常状态。   - Unavailable：不可用，表示集群异常，需手动删除或联系管理员删除。   - ScalingUp：扩容中，表示集群正处于扩容过程中。   - ScalingDown：缩容中，表示集群正处于缩容过程中。   - Creating：创建中，表示集群正处于创建过程中。   - Deleting：删除中，表示集群正处于删除过程中。   - Upgrading：升级中，表示集群正处于升级过程中。   - Resizing：规格变更中，表示集群正处于变更规格中。   - RollingBack：回滚中，表示集群正处于回滚过程中。   - RollbackFailed：回滚异常，表示集群回滚异常，需联系管理员进行回滚重试。   - Empty：集群无任何资源  **默认取值**: 不涉及
     *
     * @return $this
     */

@@ -21,26 +21,20 @@ class RestoreHbaInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * code  **参数解释**: 结果码。 **取值范围**: 不涉及。
-    * message  **参数解释**: 结果描述。 **取值范围**: 不涉及。
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'code' => 'string',
-            'message' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * code  **参数解释**: 结果码。 **取值范围**: 不涉及。
-    * message  **参数解释**: 结果描述。 **取值范围**: 不涉及。
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'code' => null,
-        'message' => null
     ];
 
     /**
@@ -66,38 +60,29 @@ class RestoreHbaInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * code  **参数解释**: 结果码。 **取值范围**: 不涉及。
-    * message  **参数解释**: 结果描述。 **取值范围**: 不涉及。
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'code' => 'code',
-            'message' => 'message'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * code  **参数解释**: 结果码。 **取值范围**: 不涉及。
-    * message  **参数解释**: 结果描述。 **取值范围**: 不涉及。
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'code' => 'setCode',
-            'message' => 'setMessage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * code  **参数解释**: 结果码。 **取值范围**: 不涉及。
-    * message  **参数解释**: 结果描述。 **取值范围**: 不涉及。
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'code' => 'getCode',
-            'message' => 'getMessage'
     ];
 
     /**
@@ -158,8 +143,6 @@ class RestoreHbaInfoResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
     }
 
     /**
@@ -182,54 +165,6 @@ class RestoreHbaInfoResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets code
-    *  **参数解释**: 结果码。 **取值范围**: 不涉及。
-    *
-    * @return string|null
-    */
-    public function getCode()
-    {
-        return $this->container['code'];
-    }
-
-    /**
-    * Sets code
-    *
-    * @param string|null $code **参数解释**: 结果码。 **取值范围**: 不涉及。
-    *
-    * @return $this
-    */
-    public function setCode($code)
-    {
-        $this->container['code'] = $code;
-        return $this;
-    }
-
-    /**
-    * Gets message
-    *  **参数解释**: 结果描述。 **取值范围**: 不涉及。
-    *
-    * @return string|null
-    */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-    * Sets message
-    *
-    * @param string|null $message **参数解释**: 结果描述。 **取值范围**: 不涉及。
-    *
-    * @return $this
-    */
-    public function setMessage($message)
-    {
-        $this->container['message'] = $message;
-        return $this;
     }
 
     /**

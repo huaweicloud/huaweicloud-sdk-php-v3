@@ -280,8 +280,8 @@ class ListRegistryRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['registryType']) && (mb_strlen($this->container['registryType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'registryType', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['registryType']) && !preg_match("/^Harbor|Jfrog|SwrPrivate|SwrShared|SwrEnterprise|Other$/", $this->container['registryType'])) {
-                $invalidProperties[] = "invalid value for 'registryType', must be conform to the pattern /^Harbor|Jfrog|SwrPrivate|SwrShared|SwrEnterprise|Other$/.";
+            if (!is_null($this->container['registryType']) && !preg_match("/^(Harbor|Jfrog|SwrPrivate|SwrShared|SwrEnterprise|Other)(,(Harbor|Jfrog|SwrPrivate|SwrShared|SwrEnterprise|Other))*$/", $this->container['registryType'])) {
+                $invalidProperties[] = "invalid value for 'registryType', must be conform to the pattern /^(Harbor|Jfrog|SwrPrivate|SwrShared|SwrEnterprise|Other)(,(Harbor|Jfrog|SwrPrivate|SwrShared|SwrEnterprise|Other))*$/.";
             }
             if (!is_null($this->container['registryAddr']) && (mb_strlen($this->container['registryAddr']) > 256)) {
                 $invalidProperties[] = "invalid value for 'registryAddr', the character length must be smaller than or equal to 256.";

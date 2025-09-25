@@ -20,15 +20,15 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  **参数解释** 主机id **取值范围**   字符长度1-256位
-    * hostName  **参数解释** 服务器名称 **取值范围**   字符长度1-64位
-    * publicIp  **参数解释** 服务器公网ip **取值范围**   字符长度0-128位
-    * privateIp  **参数解释** 服务器私网ip **取值范围**   字符长度0-2048位
-    * assetValue  **参数解释** 资产重要性，包含如下3种 **取值范围**   - important ：重要资产 - common    ：一般资产 - test      ：测试资产
-    * checkType  **参数解释** 基线检查的基线名称 **取值范围**   字符长度0-255位
-    * standard  **参数解释** 标准类型，包含如下3种 **取值范围**   - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准
-    * tag  **参数解释** 基线检查中检查项的检查类型 **取值范围**  字符长度0-128位
-    * checkRuleName  **参数解释** 基线检查中检查项的名称 **取值范围**  字符长度0-2048位
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-256位
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64位
+    * publicIp  **参数解释** 服务器公网ip **取值范围** 字符长度0-128位
+    * privateIp  **参数解释** 服务器私网ip **取值范围** 字符长度0-2048位
+    * assetValue  **参数解释** 资产重要性，包含如下3种 **取值范围** - important ：重要资产 - common    ：一般资产 - test      ：测试资产
+    * checkType  **参数解释** 基线检查的基线名称 **取值范围** 字符长度0-255位
+    * standard  **参数解释** 标准类型，包含如下3种 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准
+    * tag  **参数解释** 基线检查中检查项的检查类型 **取值范围** 字符长度0-128位
+    * checkRuleName  **参数解释** 基线检查中检查项的名称 **取值范围** 字符长度0-2048位
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  **参数解释** 主机id **取值范围**   字符长度1-256位
-    * hostName  **参数解释** 服务器名称 **取值范围**   字符长度1-64位
-    * publicIp  **参数解释** 服务器公网ip **取值范围**   字符长度0-128位
-    * privateIp  **参数解释** 服务器私网ip **取值范围**   字符长度0-2048位
-    * assetValue  **参数解释** 资产重要性，包含如下3种 **取值范围**   - important ：重要资产 - common    ：一般资产 - test      ：测试资产
-    * checkType  **参数解释** 基线检查的基线名称 **取值范围**   字符长度0-255位
-    * standard  **参数解释** 标准类型，包含如下3种 **取值范围**   - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准
-    * tag  **参数解释** 基线检查中检查项的检查类型 **取值范围**  字符长度0-128位
-    * checkRuleName  **参数解释** 基线检查中检查项的名称 **取值范围**  字符长度0-2048位
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-256位
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64位
+    * publicIp  **参数解释** 服务器公网ip **取值范围** 字符长度0-128位
+    * privateIp  **参数解释** 服务器私网ip **取值范围** 字符长度0-2048位
+    * assetValue  **参数解释** 资产重要性，包含如下3种 **取值范围** - important ：重要资产 - common    ：一般资产 - test      ：测试资产
+    * checkType  **参数解释** 基线检查的基线名称 **取值范围** 字符长度0-255位
+    * standard  **参数解释** 标准类型，包含如下3种 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准
+    * tag  **参数解释** 基线检查中检查项的检查类型 **取值范围** 字符长度0-128位
+    * checkRuleName  **参数解释** 基线检查中检查项的名称 **取值范围** 字符长度0-2048位
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  **参数解释** 主机id **取值范围**   字符长度1-256位
-    * hostName  **参数解释** 服务器名称 **取值范围**   字符长度1-64位
-    * publicIp  **参数解释** 服务器公网ip **取值范围**   字符长度0-128位
-    * privateIp  **参数解释** 服务器私网ip **取值范围**   字符长度0-2048位
-    * assetValue  **参数解释** 资产重要性，包含如下3种 **取值范围**   - important ：重要资产 - common    ：一般资产 - test      ：测试资产
-    * checkType  **参数解释** 基线检查的基线名称 **取值范围**   字符长度0-255位
-    * standard  **参数解释** 标准类型，包含如下3种 **取值范围**   - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准
-    * tag  **参数解释** 基线检查中检查项的检查类型 **取值范围**  字符长度0-128位
-    * checkRuleName  **参数解释** 基线检查中检查项的名称 **取值范围**  字符长度0-2048位
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-256位
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64位
+    * publicIp  **参数解释** 服务器公网ip **取值范围** 字符长度0-128位
+    * privateIp  **参数解释** 服务器私网ip **取值范围** 字符长度0-2048位
+    * assetValue  **参数解释** 资产重要性，包含如下3种 **取值范围** - important ：重要资产 - common    ：一般资产 - test      ：测试资产
+    * checkType  **参数解释** 基线检查的基线名称 **取值范围** 字符长度0-255位
+    * standard  **参数解释** 标准类型，包含如下3种 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准
+    * tag  **参数解释** 基线检查中检查项的检查类型 **取值范围** 字符长度0-128位
+    * checkRuleName  **参数解释** 基线检查中检查项的名称 **取值范围** 字符长度0-2048位
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  **参数解释** 主机id **取值范围**   字符长度1-256位
-    * hostName  **参数解释** 服务器名称 **取值范围**   字符长度1-64位
-    * publicIp  **参数解释** 服务器公网ip **取值范围**   字符长度0-128位
-    * privateIp  **参数解释** 服务器私网ip **取值范围**   字符长度0-2048位
-    * assetValue  **参数解释** 资产重要性，包含如下3种 **取值范围**   - important ：重要资产 - common    ：一般资产 - test      ：测试资产
-    * checkType  **参数解释** 基线检查的基线名称 **取值范围**   字符长度0-255位
-    * standard  **参数解释** 标准类型，包含如下3种 **取值范围**   - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准
-    * tag  **参数解释** 基线检查中检查项的检查类型 **取值范围**  字符长度0-128位
-    * checkRuleName  **参数解释** 基线检查中检查项的名称 **取值范围**  字符长度0-2048位
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-256位
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64位
+    * publicIp  **参数解释** 服务器公网ip **取值范围** 字符长度0-128位
+    * privateIp  **参数解释** 服务器私网ip **取值范围** 字符长度0-2048位
+    * assetValue  **参数解释** 资产重要性，包含如下3种 **取值范围** - important ：重要资产 - common    ：一般资产 - test      ：测试资产
+    * checkType  **参数解释** 基线检查的基线名称 **取值范围** 字符长度0-255位
+    * standard  **参数解释** 标准类型，包含如下3种 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准
+    * tag  **参数解释** 基线检查中检查项的检查类型 **取值范围** 字符长度0-128位
+    * checkRuleName  **参数解释** 基线检查中检查项的名称 **取值范围** 字符长度0-2048位
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  **参数解释** 主机id **取值范围**   字符长度1-256位
-    * hostName  **参数解释** 服务器名称 **取值范围**   字符长度1-64位
-    * publicIp  **参数解释** 服务器公网ip **取值范围**   字符长度0-128位
-    * privateIp  **参数解释** 服务器私网ip **取值范围**   字符长度0-2048位
-    * assetValue  **参数解释** 资产重要性，包含如下3种 **取值范围**   - important ：重要资产 - common    ：一般资产 - test      ：测试资产
-    * checkType  **参数解释** 基线检查的基线名称 **取值范围**   字符长度0-255位
-    * standard  **参数解释** 标准类型，包含如下3种 **取值范围**   - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准
-    * tag  **参数解释** 基线检查中检查项的检查类型 **取值范围**  字符长度0-128位
-    * checkRuleName  **参数解释** 基线检查中检查项的名称 **取值范围**  字符长度0-2048位
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-256位
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64位
+    * publicIp  **参数解释** 服务器公网ip **取值范围** 字符长度0-128位
+    * privateIp  **参数解释** 服务器私网ip **取值范围** 字符长度0-2048位
+    * assetValue  **参数解释** 资产重要性，包含如下3种 **取值范围** - important ：重要资产 - common    ：一般资产 - test      ：测试资产
+    * checkType  **参数解释** 基线检查的基线名称 **取值范围** 字符长度0-255位
+    * standard  **参数解释** 标准类型，包含如下3种 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准
+    * tag  **参数解释** 基线检查中检查项的检查类型 **取值范围** 字符长度0-128位
+    * checkRuleName  **参数解释** 基线检查中检查项的名称 **取值范围** 字符长度0-2048位
     *
     * @var string[]
     */
@@ -337,7 +337,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  **参数解释** 主机id **取值范围**   字符长度1-256位
+    *  **参数解释** 主机id **取值范围** 字符长度1-256位
     *
     * @return string|null
     */
@@ -349,7 +349,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId **参数解释** 主机id **取值范围**   字符长度1-256位
+    * @param string|null $hostId **参数解释** 主机id **取值范围** 字符长度1-256位
     *
     * @return $this
     */
@@ -361,7 +361,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  **参数解释** 服务器名称 **取值范围**   字符长度1-64位
+    *  **参数解释** 服务器名称 **取值范围** 字符长度1-64位
     *
     * @return string|null
     */
@@ -373,7 +373,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName **参数解释** 服务器名称 **取值范围**   字符长度1-64位
+    * @param string|null $hostName **参数解释** 服务器名称 **取值范围** 字符长度1-64位
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  **参数解释** 服务器公网ip **取值范围**   字符长度0-128位
+    *  **参数解释** 服务器公网ip **取值范围** 字符长度0-128位
     *
     * @return string|null
     */
@@ -397,7 +397,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp **参数解释** 服务器公网ip **取值范围**   字符长度0-128位
+    * @param string|null $publicIp **参数解释** 服务器公网ip **取值范围** 字符长度0-128位
     *
     * @return $this
     */
@@ -409,7 +409,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  **参数解释** 服务器私网ip **取值范围**   字符长度0-2048位
+    *  **参数解释** 服务器私网ip **取值范围** 字符长度0-2048位
     *
     * @return string|null
     */
@@ -421,7 +421,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp **参数解释** 服务器私网ip **取值范围**   字符长度0-2048位
+    * @param string|null $privateIp **参数解释** 服务器私网ip **取值范围** 字符长度0-2048位
     *
     * @return $this
     */
@@ -433,7 +433,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetValue
-    *  **参数解释** 资产重要性，包含如下3种 **取值范围**   - important ：重要资产 - common    ：一般资产 - test      ：测试资产
+    *  **参数解释** 资产重要性，包含如下3种 **取值范围** - important ：重要资产 - common    ：一般资产 - test      ：测试资产
     *
     * @return string|null
     */
@@ -445,7 +445,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string|null $assetValue **参数解释** 资产重要性，包含如下3种 **取值范围**   - important ：重要资产 - common    ：一般资产 - test      ：测试资产
+    * @param string|null $assetValue **参数解释** 资产重要性，包含如下3种 **取值范围** - important ：重要资产 - common    ：一般资产 - test      ：测试资产
     *
     * @return $this
     */
@@ -457,7 +457,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkType
-    *  **参数解释** 基线检查的基线名称 **取值范围**   字符长度0-255位
+    *  **参数解释** 基线检查的基线名称 **取值范围** 字符长度0-255位
     *
     * @return string|null
     */
@@ -469,7 +469,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkType
     *
-    * @param string|null $checkType **参数解释** 基线检查的基线名称 **取值范围**   字符长度0-255位
+    * @param string|null $checkType **参数解释** 基线检查的基线名称 **取值范围** 字符长度0-255位
     *
     * @return $this
     */
@@ -481,7 +481,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets standard
-    *  **参数解释** 标准类型，包含如下3种 **取值范围**   - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准
+    *  **参数解释** 标准类型，包含如下3种 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准
     *
     * @return string|null
     */
@@ -493,7 +493,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
     /**
     * Sets standard
     *
-    * @param string|null $standard **参数解释** 标准类型，包含如下3种 **取值范围**   - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准
+    * @param string|null $standard **参数解释** 标准类型，包含如下3种 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准
     *
     * @return $this
     */
@@ -505,7 +505,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets tag
-    *  **参数解释** 基线检查中检查项的检查类型 **取值范围**  字符长度0-128位
+    *  **参数解释** 基线检查中检查项的检查类型 **取值范围** 字符长度0-128位
     *
     * @return string|null
     */
@@ -517,7 +517,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
     /**
     * Sets tag
     *
-    * @param string|null $tag **参数解释** 基线检查中检查项的检查类型 **取值范围**  字符长度0-128位
+    * @param string|null $tag **参数解释** 基线检查中检查项的检查类型 **取值范围** 字符长度0-128位
     *
     * @return $this
     */
@@ -529,7 +529,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkRuleName
-    *  **参数解释** 基线检查中检查项的名称 **取值范围**  字符长度0-2048位
+    *  **参数解释** 基线检查中检查项的名称 **取值范围** 字符长度0-2048位
     *
     * @return string|null
     */
@@ -541,7 +541,7 @@ class HandleAffectBaselineInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkRuleName
     *
-    * @param string|null $checkRuleName **参数解释** 基线检查中检查项的名称 **取值范围**  字符长度0-2048位
+    * @param string|null $checkRuleName **参数解释** 基线检查中检查项的名称 **取值范围** 字符长度0-2048位
     *
     * @return $this
     */

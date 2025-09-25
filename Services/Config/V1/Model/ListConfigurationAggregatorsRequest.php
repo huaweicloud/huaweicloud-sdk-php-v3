@@ -180,14 +180,14 @@ class ListConfigurationAggregatorsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['aggregatorName']) && (mb_strlen($this->container['aggregatorName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'aggregatorName', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['aggregatorName']) && (mb_strlen($this->container['aggregatorName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'aggregatorName', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['aggregatorName']) && (mb_strlen($this->container['aggregatorName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'aggregatorName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['aggregatorName']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/", $this->container['aggregatorName'])) {
-                $invalidProperties[] = "invalid value for 'aggregatorName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/.";
+            if (!is_null($this->container['aggregatorName']) && !preg_match("/^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/", $this->container['aggregatorName'])) {
+                $invalidProperties[] = "invalid value for 'aggregatorName', must be conform to the pattern /^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";

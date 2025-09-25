@@ -216,9 +216,6 @@ class GetLogBackupReq implements ModelInterface, ArrayAccess
         if ($this->container['instanceName'] === null) {
             $invalidProperties[] = "'instanceName' can't be null";
         }
-        if ($this->container['level'] === null) {
-            $invalidProperties[] = "'level' can't be null";
-        }
         if ($this->container['logType'] === null) {
             $invalidProperties[] = "'logType' can't be null";
         }
@@ -264,7 +261,7 @@ class GetLogBackupReq implements ModelInterface, ArrayAccess
     * Gets level
     *  日志级别。可查询的日志级别为：INFO，ERROR，DEBUG，WARN。
     *
-    * @return string
+    * @return string|null
     */
     public function getLevel()
     {
@@ -274,7 +271,7 @@ class GetLogBackupReq implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param string $level 日志级别。可查询的日志级别为：INFO，ERROR，DEBUG，WARN。
+    * @param string|null $level 日志级别。可查询的日志级别为：INFO，ERROR，DEBUG，WARN。
     *
     * @return $this
     */

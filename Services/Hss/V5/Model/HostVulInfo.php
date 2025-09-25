@@ -43,7 +43,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * version  **参数解释**: 主机配额 **取值范围**: 字符长度0-128位
     * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
     * disabledOperateTypes  **参数解释**: 该漏洞不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
-    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * version  **参数解释**: 主机配额 **取值范围**: 字符长度0-128位
     * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
     * disabledOperateTypes  **参数解释**: 该漏洞不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
-    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
     *
     * @var string[]
     */
@@ -176,7 +176,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * version  **参数解释**: 主机配额 **取值范围**: 字符长度0-128位
     * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
     * disabledOperateTypes  **参数解释**: 该漏洞不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
-    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
     *
     * @var string[]
     */
@@ -232,7 +232,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * version  **参数解释**: 主机配额 **取值范围**: 字符长度0-128位
     * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
     * disabledOperateTypes  **参数解释**: 该漏洞不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
-    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
     *
     * @var string[]
     */
@@ -288,7 +288,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * version  **参数解释**: 主机配额 **取值范围**: 字符长度0-128位
     * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
     * disabledOperateTypes  **参数解释**: 该漏洞不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
-    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
     *
     * @var string[]
     */
@@ -1087,7 +1087,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets repairPriority
-    *  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
+    *  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
     *
     * @return string|null
     */
@@ -1099,7 +1099,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets repairPriority
     *
-    * @param string|null $repairPriority **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
+    * @param string|null $repairPriority **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ShowWebTamperRaspPathResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * raspPath  rasp path
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowWebTamperRaspPathResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * raspPath  rasp path
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowWebTamperRaspPathResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * raspPath  rasp path
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowWebTamperRaspPathResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * raspPath  rasp path
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowWebTamperRaspPathResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * raspPath  rasp path
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -181,7 +181,7 @@ class ShowWebTamperRaspPathResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets raspPath
-    *  rasp path
+    *  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -193,7 +193,7 @@ class ShowWebTamperRaspPathResponse implements ModelInterface, ArrayAccess
     /**
     * Sets raspPath
     *
-    * @param string|null $raspPath rasp path
+    * @param string|null $raspPath **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */

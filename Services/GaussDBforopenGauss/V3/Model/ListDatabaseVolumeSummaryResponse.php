@@ -35,8 +35,8 @@ class ListDatabaseVolumeSummaryResponse implements ModelInterface, ArrayAccess
             'dataDiskUsage' => 'string',
             'spaceUsageGrowthPerDay' => 'string',
             'estimatedRemainingDays' => 'string',
-            'cnComponents' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ComponentInfoResult[]',
-            'dnComponents' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ComponentInfoResult[]'
+            'cnComponents' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CnComponentInfoResult[]',
+            'dnComponents' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DnComponentInfoResult[]'
     ];
 
     /**
@@ -328,7 +328,7 @@ class ListDatabaseVolumeSummaryResponse implements ModelInterface, ArrayAccess
     * Gets cnComponents
     *  **参数解释**: CN节点信息。
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ComponentInfoResult[]|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CnComponentInfoResult[]|null
     */
     public function getCnComponents()
     {
@@ -338,7 +338,7 @@ class ListDatabaseVolumeSummaryResponse implements ModelInterface, ArrayAccess
     /**
     * Sets cnComponents
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ComponentInfoResult[]|null $cnComponents **参数解释**: CN节点信息。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CnComponentInfoResult[]|null $cnComponents **参数解释**: CN节点信息。
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class ListDatabaseVolumeSummaryResponse implements ModelInterface, ArrayAccess
     * Gets dnComponents
     *  **参数解释**: DN节点信息。
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ComponentInfoResult[]|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DnComponentInfoResult[]|null
     */
     public function getDnComponents()
     {
@@ -362,7 +362,7 @@ class ListDatabaseVolumeSummaryResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dnComponents
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ComponentInfoResult[]|null $dnComponents **参数解释**: DN节点信息。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DnComponentInfoResult[]|null $dnComponents **参数解释**: DN节点信息。
     *
     * @return $this
     */

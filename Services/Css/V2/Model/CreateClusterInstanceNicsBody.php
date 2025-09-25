@@ -23,13 +23,15 @@ class CreateClusterInstanceNicsBody implements ModelInterface, ArrayAccess
     * vpcId  指定虚拟私有云ID，用于集群网络配置。
     * netId  子网ID(网络ID)。
     * securityGroupId  安全组ID。
+    * ips  节点IP信息，在指定IP创建集群时配置。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'vpcId' => 'string',
             'netId' => 'string',
-            'securityGroupId' => 'string'
+            'securityGroupId' => 'string',
+            'ips' => 'string[]'
     ];
 
     /**
@@ -37,13 +39,15 @@ class CreateClusterInstanceNicsBody implements ModelInterface, ArrayAccess
     * vpcId  指定虚拟私有云ID，用于集群网络配置。
     * netId  子网ID(网络ID)。
     * securityGroupId  安全组ID。
+    * ips  节点IP信息，在指定IP创建集群时配置。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'vpcId' => null,
         'netId' => null,
-        'securityGroupId' => null
+        'securityGroupId' => null,
+        'ips' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class CreateClusterInstanceNicsBody implements ModelInterface, ArrayAccess
     * vpcId  指定虚拟私有云ID，用于集群网络配置。
     * netId  子网ID(网络ID)。
     * securityGroupId  安全组ID。
+    * ips  节点IP信息，在指定IP创建集群时配置。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'vpcId' => 'vpcId',
             'netId' => 'netId',
-            'securityGroupId' => 'securityGroupId'
+            'securityGroupId' => 'securityGroupId',
+            'ips' => 'ips'
     ];
 
     /**
@@ -86,13 +92,15 @@ class CreateClusterInstanceNicsBody implements ModelInterface, ArrayAccess
     * vpcId  指定虚拟私有云ID，用于集群网络配置。
     * netId  子网ID(网络ID)。
     * securityGroupId  安全组ID。
+    * ips  节点IP信息，在指定IP创建集群时配置。
     *
     * @var string[]
     */
     protected static $setters = [
             'vpcId' => 'setVpcId',
             'netId' => 'setNetId',
-            'securityGroupId' => 'setSecurityGroupId'
+            'securityGroupId' => 'setSecurityGroupId',
+            'ips' => 'setIps'
     ];
 
     /**
@@ -100,13 +108,15 @@ class CreateClusterInstanceNicsBody implements ModelInterface, ArrayAccess
     * vpcId  指定虚拟私有云ID，用于集群网络配置。
     * netId  子网ID(网络ID)。
     * securityGroupId  安全组ID。
+    * ips  节点IP信息，在指定IP创建集群时配置。
     *
     * @var string[]
     */
     protected static $getters = [
             'vpcId' => 'getVpcId',
             'netId' => 'getNetId',
-            'securityGroupId' => 'getSecurityGroupId'
+            'securityGroupId' => 'getSecurityGroupId',
+            'ips' => 'getIps'
     ];
 
     /**
@@ -170,6 +180,7 @@ class CreateClusterInstanceNicsBody implements ModelInterface, ArrayAccess
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['netId'] = isset($data['netId']) ? $data['netId'] : null;
         $this->container['securityGroupId'] = isset($data['securityGroupId']) ? $data['securityGroupId'] : null;
+        $this->container['ips'] = isset($data['ips']) ? $data['ips'] : null;
     }
 
     /**
@@ -272,6 +283,30 @@ class CreateClusterInstanceNicsBody implements ModelInterface, ArrayAccess
     public function setSecurityGroupId($securityGroupId)
     {
         $this->container['securityGroupId'] = $securityGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets ips
+    *  节点IP信息，在指定IP创建集群时配置。
+    *
+    * @return string[]|null
+    */
+    public function getIps()
+    {
+        return $this->container['ips'];
+    }
+
+    /**
+    * Sets ips
+    *
+    * @param string[]|null $ips 节点IP信息，在指定IP创建集群时配置。
+    *
+    * @return $this
+    */
+    public function setIps($ips)
+    {
+        $this->container['ips'] = $ips;
         return $this;
     }
 

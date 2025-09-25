@@ -32,6 +32,7 @@ class VideoParameters implements ModelInterface, ArrayAccess
     * maxIframesInterval  I帧最大间隔  取值范围：[2，10]。  默认值：5。  单位：秒。
     * bframesCount  最大B帧间隔。  取值范围： - H264：[0，7]，默认值为4。 - H265：[0，7]，默认值为7。  单位：帧。
     * frameRate  帧率。  取值范围：0或[5,60]，0表示自适应。  单位：帧每秒。  > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
+    * frameRateFloat  帧率。  取值范围：0或[5,60]，0表示自适应。  单位：帧每秒。  > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
     * width  视频宽度（单位：像素）  - H264：范围[32,4096]，必须为2的倍数 - H265：范围[320,4096]，必须是4的倍数
     * height  视频高度（单位：像素）  - H264：范围[32,2880]，必须为2的倍数 - H265：范围[240,2880] ，必须是4的倍数
     * blackCut  黑边剪裁类型  - 0：不开启黑边剪裁 - 1：开启黑边剪裁，低复杂度算法，针对长视频（>5分钟） - 2：开启黑边剪裁，高复杂度算法，针对短视频（<=5分钟）
@@ -52,6 +53,7 @@ class VideoParameters implements ModelInterface, ArrayAccess
             'maxIframesInterval' => 'int',
             'bframesCount' => 'int',
             'frameRate' => 'int',
+            'frameRateFloat' => 'float',
             'width' => 'int',
             'height' => 'int',
             'blackCut' => 'int',
@@ -72,6 +74,7 @@ class VideoParameters implements ModelInterface, ArrayAccess
     * maxIframesInterval  I帧最大间隔  取值范围：[2，10]。  默认值：5。  单位：秒。
     * bframesCount  最大B帧间隔。  取值范围： - H264：[0，7]，默认值为4。 - H265：[0，7]，默认值为7。  单位：帧。
     * frameRate  帧率。  取值范围：0或[5,60]，0表示自适应。  单位：帧每秒。  > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
+    * frameRateFloat  帧率。  取值范围：0或[5,60]，0表示自适应。  单位：帧每秒。  > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
     * width  视频宽度（单位：像素）  - H264：范围[32,4096]，必须为2的倍数 - H265：范围[320,4096]，必须是4的倍数
     * height  视频高度（单位：像素）  - H264：范围[32,2880]，必须为2的倍数 - H265：范围[240,2880] ，必须是4的倍数
     * blackCut  黑边剪裁类型  - 0：不开启黑边剪裁 - 1：开启黑边剪裁，低复杂度算法，针对长视频（>5分钟） - 2：开启黑边剪裁，高复杂度算法，针对短视频（<=5分钟）
@@ -92,6 +95,7 @@ class VideoParameters implements ModelInterface, ArrayAccess
         'maxIframesInterval' => 'int32',
         'bframesCount' => 'int32',
         'frameRate' => 'int32',
+        'frameRateFloat' => 'float',
         'width' => 'int32',
         'height' => 'int32',
         'blackCut' => 'int32',
@@ -133,6 +137,7 @@ class VideoParameters implements ModelInterface, ArrayAccess
     * maxIframesInterval  I帧最大间隔  取值范围：[2，10]。  默认值：5。  单位：秒。
     * bframesCount  最大B帧间隔。  取值范围： - H264：[0，7]，默认值为4。 - H265：[0，7]，默认值为7。  单位：帧。
     * frameRate  帧率。  取值范围：0或[5,60]，0表示自适应。  单位：帧每秒。  > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
+    * frameRateFloat  帧率。  取值范围：0或[5,60]，0表示自适应。  单位：帧每秒。  > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
     * width  视频宽度（单位：像素）  - H264：范围[32,4096]，必须为2的倍数 - H265：范围[320,4096]，必须是4的倍数
     * height  视频高度（单位：像素）  - H264：范围[32,2880]，必须为2的倍数 - H265：范围[240,2880] ，必须是4的倍数
     * blackCut  黑边剪裁类型  - 0：不开启黑边剪裁 - 1：开启黑边剪裁，低复杂度算法，针对长视频（>5分钟） - 2：开启黑边剪裁，高复杂度算法，针对短视频（<=5分钟）
@@ -153,6 +158,7 @@ class VideoParameters implements ModelInterface, ArrayAccess
             'maxIframesInterval' => 'max_iframes_interval',
             'bframesCount' => 'bframes_count',
             'frameRate' => 'frame_rate',
+            'frameRateFloat' => 'frame_rate_float',
             'width' => 'width',
             'height' => 'height',
             'blackCut' => 'black_cut',
@@ -173,6 +179,7 @@ class VideoParameters implements ModelInterface, ArrayAccess
     * maxIframesInterval  I帧最大间隔  取值范围：[2，10]。  默认值：5。  单位：秒。
     * bframesCount  最大B帧间隔。  取值范围： - H264：[0，7]，默认值为4。 - H265：[0，7]，默认值为7。  单位：帧。
     * frameRate  帧率。  取值范围：0或[5,60]，0表示自适应。  单位：帧每秒。  > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
+    * frameRateFloat  帧率。  取值范围：0或[5,60]，0表示自适应。  单位：帧每秒。  > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
     * width  视频宽度（单位：像素）  - H264：范围[32,4096]，必须为2的倍数 - H265：范围[320,4096]，必须是4的倍数
     * height  视频高度（单位：像素）  - H264：范围[32,2880]，必须为2的倍数 - H265：范围[240,2880] ，必须是4的倍数
     * blackCut  黑边剪裁类型  - 0：不开启黑边剪裁 - 1：开启黑边剪裁，低复杂度算法，针对长视频（>5分钟） - 2：开启黑边剪裁，高复杂度算法，针对短视频（<=5分钟）
@@ -193,6 +200,7 @@ class VideoParameters implements ModelInterface, ArrayAccess
             'maxIframesInterval' => 'setMaxIframesInterval',
             'bframesCount' => 'setBframesCount',
             'frameRate' => 'setFrameRate',
+            'frameRateFloat' => 'setFrameRateFloat',
             'width' => 'setWidth',
             'height' => 'setHeight',
             'blackCut' => 'setBlackCut',
@@ -213,6 +221,7 @@ class VideoParameters implements ModelInterface, ArrayAccess
     * maxIframesInterval  I帧最大间隔  取值范围：[2，10]。  默认值：5。  单位：秒。
     * bframesCount  最大B帧间隔。  取值范围： - H264：[0，7]，默认值为4。 - H265：[0，7]，默认值为7。  单位：帧。
     * frameRate  帧率。  取值范围：0或[5,60]，0表示自适应。  单位：帧每秒。  > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
+    * frameRateFloat  帧率。  取值范围：0或[5,60]，0表示自适应。  单位：帧每秒。  > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
     * width  视频宽度（单位：像素）  - H264：范围[32,4096]，必须为2的倍数 - H265：范围[320,4096]，必须是4的倍数
     * height  视频高度（单位：像素）  - H264：范围[32,2880]，必须为2的倍数 - H265：范围[240,2880] ，必须是4的倍数
     * blackCut  黑边剪裁类型  - 0：不开启黑边剪裁 - 1：开启黑边剪裁，低复杂度算法，针对长视频（>5分钟） - 2：开启黑边剪裁，高复杂度算法，针对短视频（<=5分钟）
@@ -233,6 +242,7 @@ class VideoParameters implements ModelInterface, ArrayAccess
             'maxIframesInterval' => 'getMaxIframesInterval',
             'bframesCount' => 'getBframesCount',
             'frameRate' => 'getFrameRate',
+            'frameRateFloat' => 'getFrameRateFloat',
             'width' => 'getWidth',
             'height' => 'getHeight',
             'blackCut' => 'getBlackCut',
@@ -326,6 +336,7 @@ class VideoParameters implements ModelInterface, ArrayAccess
         $this->container['maxIframesInterval'] = isset($data['maxIframesInterval']) ? $data['maxIframesInterval'] : null;
         $this->container['bframesCount'] = isset($data['bframesCount']) ? $data['bframesCount'] : null;
         $this->container['frameRate'] = isset($data['frameRate']) ? $data['frameRate'] : null;
+        $this->container['frameRateFloat'] = isset($data['frameRateFloat']) ? $data['frameRateFloat'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
         $this->container['blackCut'] = isset($data['blackCut']) ? $data['blackCut'] : null;
@@ -413,6 +424,12 @@ class VideoParameters implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['frameRate']) && ($this->container['frameRate'] < 0)) {
                 $invalidProperties[] = "invalid value for 'frameRate', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['frameRateFloat']) && ($this->container['frameRateFloat'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'frameRateFloat', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['frameRateFloat']) && ($this->container['frameRateFloat'] < 0)) {
+                $invalidProperties[] = "invalid value for 'frameRateFloat', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['width']) && ($this->container['width'] > 4096)) {
                 $invalidProperties[] = "invalid value for 'width', must be smaller than or equal to 4096.";
@@ -740,6 +757,30 @@ class VideoParameters implements ModelInterface, ArrayAccess
     public function setFrameRate($frameRate)
     {
         $this->container['frameRate'] = $frameRate;
+        return $this;
+    }
+
+    /**
+    * Gets frameRateFloat
+    *  帧率。  取值范围：0或[5,60]，0表示自适应。  单位：帧每秒。  > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
+    *
+    * @return float|null
+    */
+    public function getFrameRateFloat()
+    {
+        return $this->container['frameRateFloat'];
+    }
+
+    /**
+    * Sets frameRateFloat
+    *
+    * @param float|null $frameRateFloat 帧率。  取值范围：0或[5,60]，0表示自适应。  单位：帧每秒。  > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
+    *
+    * @return $this
+    */
+    public function setFrameRateFloat($frameRateFloat)
+    {
+        $this->container['frameRateFloat'] = $frameRateFloat;
         return $this;
     }
 

@@ -21,20 +21,22 @@ class DownloadAssetFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * taskId  导出任务ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'taskId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * taskId  导出任务ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'taskId' => null
     ];
 
     /**
@@ -60,29 +62,32 @@ class DownloadAssetFileResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * taskId  导出任务ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'taskId' => 'task_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * taskId  导出任务ID
     *
     * @var string[]
     */
     protected static $setters = [
+            'taskId' => 'setTaskId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * taskId  导出任务ID
     *
     * @var string[]
     */
     protected static $getters = [
+            'taskId' => 'getTaskId'
     ];
 
     /**
@@ -143,6 +148,7 @@ class DownloadAssetFileResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
     }
 
     /**
@@ -153,6 +159,12 @@ class DownloadAssetFileResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['taskId']) && (mb_strlen($this->container['taskId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'taskId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['taskId']) && (mb_strlen($this->container['taskId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'taskId', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -165,6 +177,30 @@ class DownloadAssetFileResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets taskId
+    *  导出任务ID
+    *
+    * @return string|null
+    */
+    public function getTaskId()
+    {
+        return $this->container['taskId'];
+    }
+
+    /**
+    * Sets taskId
+    *
+    * @param string|null $taskId 导出任务ID
+    *
+    * @return $this
+    */
+    public function setTaskId($taskId)
+    {
+        $this->container['taskId'] = $taskId;
+        return $this;
     }
 
     /**

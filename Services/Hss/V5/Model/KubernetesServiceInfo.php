@@ -25,7 +25,7 @@ class KubernetesServiceInfo implements ModelInterface, ArrayAccess
     * endpointName  端点名称
     * namespace  命名空间
     * creationTimestamp  创建时间戳
-    * type  服务类型（访问方式）
+    * type  **参数解释**: 服务类型（访问方式） **约束限制**: 不涉及 **取值范围**:   - ClusterIP：仅内部可访问服务   - NodePort：通过NodePort对外暴露服务   - LoadBalancer：通过LoadBalancer对外暴露服务  **默认取值**: 不涉及
     * clusterIp  集群IP
     * clusterName  集群名称
     * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
@@ -51,7 +51,7 @@ class KubernetesServiceInfo implements ModelInterface, ArrayAccess
     * endpointName  端点名称
     * namespace  命名空间
     * creationTimestamp  创建时间戳
-    * type  服务类型（访问方式）
+    * type  **参数解释**: 服务类型（访问方式） **约束限制**: 不涉及 **取值范围**:   - ClusterIP：仅内部可访问服务   - NodePort：通过NodePort对外暴露服务   - LoadBalancer：通过LoadBalancer对外暴露服务  **默认取值**: 不涉及
     * clusterIp  集群IP
     * clusterName  集群名称
     * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
@@ -98,7 +98,7 @@ class KubernetesServiceInfo implements ModelInterface, ArrayAccess
     * endpointName  端点名称
     * namespace  命名空间
     * creationTimestamp  创建时间戳
-    * type  服务类型（访问方式）
+    * type  **参数解释**: 服务类型（访问方式） **约束限制**: 不涉及 **取值范围**:   - ClusterIP：仅内部可访问服务   - NodePort：通过NodePort对外暴露服务   - LoadBalancer：通过LoadBalancer对外暴露服务  **默认取值**: 不涉及
     * clusterIp  集群IP
     * clusterName  集群名称
     * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
@@ -124,7 +124,7 @@ class KubernetesServiceInfo implements ModelInterface, ArrayAccess
     * endpointName  端点名称
     * namespace  命名空间
     * creationTimestamp  创建时间戳
-    * type  服务类型（访问方式）
+    * type  **参数解释**: 服务类型（访问方式） **约束限制**: 不涉及 **取值范围**:   - ClusterIP：仅内部可访问服务   - NodePort：通过NodePort对外暴露服务   - LoadBalancer：通过LoadBalancer对外暴露服务  **默认取值**: 不涉及
     * clusterIp  集群IP
     * clusterName  集群名称
     * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
@@ -150,7 +150,7 @@ class KubernetesServiceInfo implements ModelInterface, ArrayAccess
     * endpointName  端点名称
     * namespace  命名空间
     * creationTimestamp  创建时间戳
-    * type  服务类型（访问方式）
+    * type  **参数解释**: 服务类型（访问方式） **约束限制**: 不涉及 **取值范围**:   - ClusterIP：仅内部可访问服务   - NodePort：通过NodePort对外暴露服务   - LoadBalancer：通过LoadBalancer对外暴露服务  **默认取值**: 不涉及
     * clusterIp  集群IP
     * clusterName  集群名称
     * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
@@ -436,7 +436,7 @@ class KubernetesServiceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  服务类型（访问方式）
+    *  **参数解释**: 服务类型（访问方式） **约束限制**: 不涉及 **取值范围**:   - ClusterIP：仅内部可访问服务   - NodePort：通过NodePort对外暴露服务   - LoadBalancer：通过LoadBalancer对外暴露服务  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -448,7 +448,7 @@ class KubernetesServiceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 服务类型（访问方式）
+    * @param string|null $type **参数解释**: 服务类型（访问方式） **约束限制**: 不涉及 **取值范围**:   - ClusterIP：仅内部可访问服务   - NodePort：通过NodePort对外暴露服务   - LoadBalancer：通过LoadBalancer对外暴露服务  **默认取值**: 不涉及
     *
     * @return $this
     */

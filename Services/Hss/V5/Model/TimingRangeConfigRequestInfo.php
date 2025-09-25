@@ -20,8 +20,8 @@ class TimingRangeConfigRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * timeRange  **参数解释**: 自动关闭防护的时间段范围 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
-    * description  **参数解释**: 自动关闭防护的时间段描述 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+    * timeRange  **参数解释**: 自动关闭防护的时间段范围，开始时间与结束之间用中划线相连，如15:00-15:30。 **约束限制**: 每个时间段最短不能少于5分钟。多个时间段之间不允许重叠，且两段时间间隔必须大于5分钟（时间00:00和23:59特例除外）。 **取值范围**: 字符长度0-20位 **默认取值**: 不涉及
+    * description  **参数解释**: 自动关闭防护的时间段描述 **约束限制**: 不涉及 **取值范围**: 字符长度0-20位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class TimingRangeConfigRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * timeRange  **参数解释**: 自动关闭防护的时间段范围 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
-    * description  **参数解释**: 自动关闭防护的时间段描述 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+    * timeRange  **参数解释**: 自动关闭防护的时间段范围，开始时间与结束之间用中划线相连，如15:00-15:30。 **约束限制**: 每个时间段最短不能少于5分钟。多个时间段之间不允许重叠，且两段时间间隔必须大于5分钟（时间00:00和23:59特例除外）。 **取值范围**: 字符长度0-20位 **默认取值**: 不涉及
+    * description  **参数解释**: 自动关闭防护的时间段描述 **约束限制**: 不涉及 **取值范围**: 字符长度0-20位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class TimingRangeConfigRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * timeRange  **参数解释**: 自动关闭防护的时间段范围 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
-    * description  **参数解释**: 自动关闭防护的时间段描述 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+    * timeRange  **参数解释**: 自动关闭防护的时间段范围，开始时间与结束之间用中划线相连，如15:00-15:30。 **约束限制**: 每个时间段最短不能少于5分钟。多个时间段之间不允许重叠，且两段时间间隔必须大于5分钟（时间00:00和23:59特例除外）。 **取值范围**: 字符长度0-20位 **默认取值**: 不涉及
+    * description  **参数解释**: 自动关闭防护的时间段描述 **约束限制**: 不涉及 **取值范围**: 字符长度0-20位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class TimingRangeConfigRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * timeRange  **参数解释**: 自动关闭防护的时间段范围 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
-    * description  **参数解释**: 自动关闭防护的时间段描述 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+    * timeRange  **参数解释**: 自动关闭防护的时间段范围，开始时间与结束之间用中划线相连，如15:00-15:30。 **约束限制**: 每个时间段最短不能少于5分钟。多个时间段之间不允许重叠，且两段时间间隔必须大于5分钟（时间00:00和23:59特例除外）。 **取值范围**: 字符长度0-20位 **默认取值**: 不涉及
+    * description  **参数解释**: 自动关闭防护的时间段描述 **约束限制**: 不涉及 **取值范围**: 字符长度0-20位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class TimingRangeConfigRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * timeRange  **参数解释**: 自动关闭防护的时间段范围 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
-    * description  **参数解释**: 自动关闭防护的时间段描述 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+    * timeRange  **参数解释**: 自动关闭防护的时间段范围，开始时间与结束之间用中划线相连，如15:00-15:30。 **约束限制**: 每个时间段最短不能少于5分钟。多个时间段之间不允许重叠，且两段时间间隔必须大于5分钟（时间00:00和23:59特例除外）。 **取值范围**: 字符长度0-20位 **默认取值**: 不涉及
+    * description  **参数解释**: 自动关闭防护的时间段描述 **约束限制**: 不涉及 **取值范围**: 字符长度0-20位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -169,14 +169,14 @@ class TimingRangeConfigRequestInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['timeRange']) && (mb_strlen($this->container['timeRange']) > 512)) {
-                $invalidProperties[] = "invalid value for 'timeRange', the character length must be smaller than or equal to 512.";
+            if (!is_null($this->container['timeRange']) && (mb_strlen($this->container['timeRange']) > 20)) {
+                $invalidProperties[] = "invalid value for 'timeRange', the character length must be smaller than or equal to 20.";
             }
             if (!is_null($this->container['timeRange']) && (mb_strlen($this->container['timeRange']) < 0)) {
                 $invalidProperties[] = "invalid value for 'timeRange', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 512)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 512.";
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 20)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 20.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
@@ -197,7 +197,7 @@ class TimingRangeConfigRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeRange
-    *  **参数解释**: 自动关闭防护的时间段范围 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+    *  **参数解释**: 自动关闭防护的时间段范围，开始时间与结束之间用中划线相连，如15:00-15:30。 **约束限制**: 每个时间段最短不能少于5分钟。多个时间段之间不允许重叠，且两段时间间隔必须大于5分钟（时间00:00和23:59特例除外）。 **取值范围**: 字符长度0-20位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class TimingRangeConfigRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets timeRange
     *
-    * @param string|null $timeRange **参数解释**: 自动关闭防护的时间段范围 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+    * @param string|null $timeRange **参数解释**: 自动关闭防护的时间段范围，开始时间与结束之间用中划线相连，如15:00-15:30。 **约束限制**: 每个时间段最短不能少于5分钟。多个时间段之间不允许重叠，且两段时间间隔必须大于5分钟（时间00:00和23:59特例除外）。 **取值范围**: 字符长度0-20位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class TimingRangeConfigRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  **参数解释**: 自动关闭防护的时间段描述 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+    *  **参数解释**: 自动关闭防护的时间段描述 **约束限制**: 不涉及 **取值范围**: 字符长度0-20位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class TimingRangeConfigRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description **参数解释**: 自动关闭防护的时间段描述 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+    * @param string|null $description **参数解释**: 自动关闭防护的时间段描述 **约束限制**: 不涉及 **取值范围**: 字符长度0-20位 **默认取值**: 不涉及
     *
     * @return $this
     */

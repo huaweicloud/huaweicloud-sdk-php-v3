@@ -20,8 +20,8 @@ class WebTamperPrivilegedProcessRequestInfo implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * privilegedProcessPathList  特权进程路径集合
-    * privilegedChildStatus  特权进程子进程可信状态
+    * privilegedProcessPathList  **参数解释**: 特权进程文件路径列表 **约束限制** : 不涉及 **取值范围**: 最少0条，最多10条 **默认取值** : 不涉及
+    * privilegedChildStatus  **参数解释**: 特权进程子进程可信状态 **约束限制** : 不涉及 **取值范围**: - True ：开启特权进程子进程可信。 - False ：关闭特权进程子进程可信。  **默认取值** : False
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class WebTamperPrivilegedProcessRequestInfo implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * privilegedProcessPathList  特权进程路径集合
-    * privilegedChildStatus  特权进程子进程可信状态
+    * privilegedProcessPathList  **参数解释**: 特权进程文件路径列表 **约束限制** : 不涉及 **取值范围**: 最少0条，最多10条 **默认取值** : 不涉及
+    * privilegedChildStatus  **参数解释**: 特权进程子进程可信状态 **约束限制** : 不涉及 **取值范围**: - True ：开启特权进程子进程可信。 - False ：关闭特权进程子进程可信。  **默认取值** : False
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class WebTamperPrivilegedProcessRequestInfo implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * privilegedProcessPathList  特权进程路径集合
-    * privilegedChildStatus  特权进程子进程可信状态
+    * privilegedProcessPathList  **参数解释**: 特权进程文件路径列表 **约束限制** : 不涉及 **取值范围**: 最少0条，最多10条 **默认取值** : 不涉及
+    * privilegedChildStatus  **参数解释**: 特权进程子进程可信状态 **约束限制** : 不涉及 **取值范围**: - True ：开启特权进程子进程可信。 - False ：关闭特权进程子进程可信。  **默认取值** : False
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class WebTamperPrivilegedProcessRequestInfo implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * privilegedProcessPathList  特权进程路径集合
-    * privilegedChildStatus  特权进程子进程可信状态
+    * privilegedProcessPathList  **参数解释**: 特权进程文件路径列表 **约束限制** : 不涉及 **取值范围**: 最少0条，最多10条 **默认取值** : 不涉及
+    * privilegedChildStatus  **参数解释**: 特权进程子进程可信状态 **约束限制** : 不涉及 **取值范围**: - True ：开启特权进程子进程可信。 - False ：关闭特权进程子进程可信。  **默认取值** : False
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class WebTamperPrivilegedProcessRequestInfo implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * privilegedProcessPathList  特权进程路径集合
-    * privilegedChildStatus  特权进程子进程可信状态
+    * privilegedProcessPathList  **参数解释**: 特权进程文件路径列表 **约束限制** : 不涉及 **取值范围**: 最少0条，最多10条 **默认取值** : 不涉及
+    * privilegedChildStatus  **参数解释**: 特权进程子进程可信状态 **约束限制** : 不涉及 **取值范围**: - True ：开启特权进程子进程可信。 - False ：关闭特权进程子进程可信。  **默认取值** : False
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class WebTamperPrivilegedProcessRequestInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets privilegedProcessPathList
-    *  特权进程路径集合
+    *  **参数解释**: 特权进程文件路径列表 **约束限制** : 不涉及 **取值范围**: 最少0条，最多10条 **默认取值** : 不涉及
     *
     * @return string[]|null
     */
@@ -197,7 +197,7 @@ class WebTamperPrivilegedProcessRequestInfo implements ModelInterface, ArrayAcce
     /**
     * Sets privilegedProcessPathList
     *
-    * @param string[]|null $privilegedProcessPathList 特权进程路径集合
+    * @param string[]|null $privilegedProcessPathList **参数解释**: 特权进程文件路径列表 **约束限制** : 不涉及 **取值范围**: 最少0条，最多10条 **默认取值** : 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class WebTamperPrivilegedProcessRequestInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets privilegedChildStatus
-    *  特权进程子进程可信状态
+    *  **参数解释**: 特权进程子进程可信状态 **约束限制** : 不涉及 **取值范围**: - True ：开启特权进程子进程可信。 - False ：关闭特权进程子进程可信。  **默认取值** : False
     *
     * @return bool|null
     */
@@ -221,7 +221,7 @@ class WebTamperPrivilegedProcessRequestInfo implements ModelInterface, ArrayAcce
     /**
     * Sets privilegedChildStatus
     *
-    * @param bool|null $privilegedChildStatus 特权进程子进程可信状态
+    * @param bool|null $privilegedChildStatus **参数解释**: 特权进程子进程可信状态 **约束限制** : 不涉及 **取值范围**: - True ：开启特权进程子进程可信。 - False ：关闭特权进程子进程可信。  **默认取值** : False
     *
     * @return $this
     */

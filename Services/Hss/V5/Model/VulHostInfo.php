@@ -36,14 +36,14 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**: 服务器私网ip **取值范围**: 字符范围0-128位
     * groupId  **参数解释**: 服务器组id **取值范围**: 字符范围0-128位
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符范围0-256位
-    * osType  **参数解释**: 操作系统 **取值范围**: 字符范围0-32位
+    * osType  **参数解释**: 操作系统 **取值范围**: - Linux ：linux系统 - Windows：windows系统
     * assetValue  **参数解释**: 资产重要性 **取值范围**: - important : 重要资产 - common    : 一般资产 - test      : 测试资产
     * isAffectBusiness  **参数解释**: 是否影响业务 **取值范围**: - true  : 影响业务 - false : 不影响业务
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * scanTime  **参数解释**: 扫描时间，时间戳单位：毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
     * disabledOperateTypes  **参数解释**: 漏洞在当前主机上不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
-    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
     *
     * @var string[]
     */
@@ -92,14 +92,14 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**: 服务器私网ip **取值范围**: 字符范围0-128位
     * groupId  **参数解释**: 服务器组id **取值范围**: 字符范围0-128位
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符范围0-256位
-    * osType  **参数解释**: 操作系统 **取值范围**: 字符范围0-32位
+    * osType  **参数解释**: 操作系统 **取值范围**: - Linux ：linux系统 - Windows：windows系统
     * assetValue  **参数解释**: 资产重要性 **取值范围**: - important : 重要资产 - common    : 一般资产 - test      : 测试资产
     * isAffectBusiness  **参数解释**: 是否影响业务 **取值范围**: - true  : 影响业务 - false : 不影响业务
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * scanTime  **参数解释**: 扫描时间，时间戳单位：毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
     * disabledOperateTypes  **参数解释**: 漏洞在当前主机上不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
-    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
     *
     * @var string[]
     */
@@ -169,14 +169,14 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**: 服务器私网ip **取值范围**: 字符范围0-128位
     * groupId  **参数解释**: 服务器组id **取值范围**: 字符范围0-128位
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符范围0-256位
-    * osType  **参数解释**: 操作系统 **取值范围**: 字符范围0-32位
+    * osType  **参数解释**: 操作系统 **取值范围**: - Linux ：linux系统 - Windows：windows系统
     * assetValue  **参数解释**: 资产重要性 **取值范围**: - important : 重要资产 - common    : 一般资产 - test      : 测试资产
     * isAffectBusiness  **参数解释**: 是否影响业务 **取值范围**: - true  : 影响业务 - false : 不影响业务
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * scanTime  **参数解释**: 扫描时间，时间戳单位：毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
     * disabledOperateTypes  **参数解释**: 漏洞在当前主机上不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
-    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
     *
     * @var string[]
     */
@@ -225,14 +225,14 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**: 服务器私网ip **取值范围**: 字符范围0-128位
     * groupId  **参数解释**: 服务器组id **取值范围**: 字符范围0-128位
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符范围0-256位
-    * osType  **参数解释**: 操作系统 **取值范围**: 字符范围0-32位
+    * osType  **参数解释**: 操作系统 **取值范围**: - Linux ：linux系统 - Windows：windows系统
     * assetValue  **参数解释**: 资产重要性 **取值范围**: - important : 重要资产 - common    : 一般资产 - test      : 测试资产
     * isAffectBusiness  **参数解释**: 是否影响业务 **取值范围**: - true  : 影响业务 - false : 不影响业务
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * scanTime  **参数解释**: 扫描时间，时间戳单位：毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
     * disabledOperateTypes  **参数解释**: 漏洞在当前主机上不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
-    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
     *
     * @var string[]
     */
@@ -281,14 +281,14 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**: 服务器私网ip **取值范围**: 字符范围0-128位
     * groupId  **参数解释**: 服务器组id **取值范围**: 字符范围0-128位
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符范围0-256位
-    * osType  **参数解释**: 操作系统 **取值范围**: 字符范围0-32位
+    * osType  **参数解释**: 操作系统 **取值范围**: - Linux ：linux系统 - Windows：windows系统
     * assetValue  **参数解释**: 资产重要性 **取值范围**: - important : 重要资产 - common    : 一般资产 - test      : 测试资产
     * isAffectBusiness  **参数解释**: 是否影响业务 **取值范围**: - true  : 影响业务 - false : 不影响业务
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * scanTime  **参数解释**: 扫描时间，时间戳单位：毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
     * disabledOperateTypes  **参数解释**: 漏洞在当前主机上不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
-    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
+    * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
     *
     * @var string[]
     */
@@ -931,7 +931,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  **参数解释**: 操作系统 **取值范围**: 字符范围0-32位
+    *  **参数解释**: 操作系统 **取值范围**: - Linux ：linux系统 - Windows：windows系统
     *
     * @return string|null
     */
@@ -943,7 +943,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType **参数解释**: 操作系统 **取值范围**: 字符范围0-32位
+    * @param string|null $osType **参数解释**: 操作系统 **取值范围**: - Linux ：linux系统 - Windows：windows系统
     *
     * @return $this
     */
@@ -1099,7 +1099,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets repairPriority
-    *  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
+    *  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
     *
     * @return string|null
     */
@@ -1111,7 +1111,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets repairPriority
     *
-    * @param string|null $repairPriority **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
+    * @param string|null $repairPriority **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
     *
     * @return $this
     */

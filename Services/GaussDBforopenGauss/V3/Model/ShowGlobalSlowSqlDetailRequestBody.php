@@ -231,6 +231,9 @@ class ShowGlobalSlowSqlDetailRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
+        if ($this->container['nodeIds'] === null) {
+            $invalidProperties[] = "'nodeIds' can't be null";
+        }
         if ($this->container['startTime'] === null) {
             $invalidProperties[] = "'startTime' can't be null";
         }
@@ -293,7 +296,7 @@ class ShowGlobalSlowSqlDetailRequestBody implements ModelInterface, ArrayAccess
     * Gets nodeIds
     *  **参数解释**: 节点ID列表。 **约束限制**: 节点ID数组不能为空。
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getNodeIds()
     {
@@ -303,7 +306,7 @@ class ShowGlobalSlowSqlDetailRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets nodeIds
     *
-    * @param string[]|null $nodeIds **参数解释**: 节点ID列表。 **约束限制**: 节点ID数组不能为空。
+    * @param string[] $nodeIds **参数解释**: 节点ID列表。 **约束限制**: 节点ID数组不能为空。
     *
     * @return $this
     */

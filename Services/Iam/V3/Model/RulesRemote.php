@@ -23,13 +23,15 @@ class RulesRemote implements ModelInterface, ArrayAccess
     * type  表示IdP断言中的属性。
     * anyOneOf  输入属性值中包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
     * notAnyOf  输入属性值中不包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
+    * regex  同级的any_one_of或not_any_of的值是否支持正则表达式，true：支持正则表达式，false：不支持正则表达式，默认为false。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
             'anyOneOf' => 'string[]',
-            'notAnyOf' => 'string[]'
+            'notAnyOf' => 'string[]',
+            'regex' => 'bool'
     ];
 
     /**
@@ -37,13 +39,15 @@ class RulesRemote implements ModelInterface, ArrayAccess
     * type  表示IdP断言中的属性。
     * anyOneOf  输入属性值中包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
     * notAnyOf  输入属性值中不包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
+    * regex  同级的any_one_of或not_any_of的值是否支持正则表达式，true：支持正则表达式，false：不支持正则表达式，默认为false。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
         'anyOneOf' => null,
-        'notAnyOf' => null
+        'notAnyOf' => null,
+        'regex' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class RulesRemote implements ModelInterface, ArrayAccess
     * type  表示IdP断言中的属性。
     * anyOneOf  输入属性值中包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
     * notAnyOf  输入属性值中不包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
+    * regex  同级的any_one_of或not_any_of的值是否支持正则表达式，true：支持正则表达式，false：不支持正则表达式，默认为false。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
             'anyOneOf' => 'any_one_of',
-            'notAnyOf' => 'not_any_of'
+            'notAnyOf' => 'not_any_of',
+            'regex' => 'regex'
     ];
 
     /**
@@ -86,13 +92,15 @@ class RulesRemote implements ModelInterface, ArrayAccess
     * type  表示IdP断言中的属性。
     * anyOneOf  输入属性值中包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
     * notAnyOf  输入属性值中不包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
+    * regex  同级的any_one_of或not_any_of的值是否支持正则表达式，true：支持正则表达式，false：不支持正则表达式，默认为false。
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
             'anyOneOf' => 'setAnyOneOf',
-            'notAnyOf' => 'setNotAnyOf'
+            'notAnyOf' => 'setNotAnyOf',
+            'regex' => 'setRegex'
     ];
 
     /**
@@ -100,13 +108,15 @@ class RulesRemote implements ModelInterface, ArrayAccess
     * type  表示IdP断言中的属性。
     * anyOneOf  输入属性值中包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
     * notAnyOf  输入属性值中不包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
+    * regex  同级的any_one_of或not_any_of的值是否支持正则表达式，true：支持正则表达式，false：不支持正则表达式，默认为false。
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
             'anyOneOf' => 'getAnyOneOf',
-            'notAnyOf' => 'getNotAnyOf'
+            'notAnyOf' => 'getNotAnyOf',
+            'regex' => 'getRegex'
     ];
 
     /**
@@ -170,6 +180,7 @@ class RulesRemote implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['anyOneOf'] = isset($data['anyOneOf']) ? $data['anyOneOf'] : null;
         $this->container['notAnyOf'] = isset($data['notAnyOf']) ? $data['notAnyOf'] : null;
+        $this->container['regex'] = isset($data['regex']) ? $data['regex'] : null;
     }
 
     /**
@@ -266,6 +277,30 @@ class RulesRemote implements ModelInterface, ArrayAccess
     public function setNotAnyOf($notAnyOf)
     {
         $this->container['notAnyOf'] = $notAnyOf;
+        return $this;
+    }
+
+    /**
+    * Gets regex
+    *  同级的any_one_of或not_any_of的值是否支持正则表达式，true：支持正则表达式，false：不支持正则表达式，默认为false。
+    *
+    * @return bool|null
+    */
+    public function getRegex()
+    {
+        return $this->container['regex'];
+    }
+
+    /**
+    * Sets regex
+    *
+    * @param bool|null $regex 同级的any_one_of或not_any_of的值是否支持正则表达式，true：支持正则表达式，false：不支持正则表达式，默认为false。
+    *
+    * @return $this
+    */
+    public function setRegex($regex)
+    {
+        $this->container['regex'] = $regex;
         return $this;
     }
 

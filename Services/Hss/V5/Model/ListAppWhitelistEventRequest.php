@@ -22,12 +22,11 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * lastDays  **参数解释**: 查询时间范围天数，与自定义查询时间begin_time，end_time互斥 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值30 **默认取值**: 不涉及
-    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
-    * endTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * beginTime  自定义查询时间，开始时间
+    * endTime  自定义查询时间，结束时间
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * hostIp  **参数解释**: 主机IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * handleStatus  **参数解释**： 是否已处理 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * handleStatus  **参数解释**： 是否已处理 **约束限制**: 不涉及 **取值范围**: - handled：已处理 - unhandled：未处理  **默认取值**: 不涉及
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
@@ -40,7 +39,6 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
             'endTime' => 'int',
             'hostName' => 'string',
             'hostIp' => 'string',
-            'privateIp' => 'string',
             'handleStatus' => 'string',
             'offset' => 'int',
             'limit' => 'int'
@@ -50,12 +48,11 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * lastDays  **参数解释**: 查询时间范围天数，与自定义查询时间begin_time，end_time互斥 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值30 **默认取值**: 不涉及
-    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
-    * endTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * beginTime  自定义查询时间，开始时间
+    * endTime  自定义查询时间，结束时间
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * hostIp  **参数解释**: 主机IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * handleStatus  **参数解释**： 是否已处理 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * handleStatus  **参数解释**： 是否已处理 **约束限制**: 不涉及 **取值范围**: - handled：已处理 - unhandled：未处理  **默认取值**: 不涉及
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
@@ -68,7 +65,6 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
         'endTime' => 'int64',
         'hostName' => null,
         'hostIp' => null,
-        'privateIp' => null,
         'handleStatus' => null,
         'offset' => 'int32',
         'limit' => 'int32'
@@ -99,12 +95,11 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * lastDays  **参数解释**: 查询时间范围天数，与自定义查询时间begin_time，end_time互斥 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值30 **默认取值**: 不涉及
-    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
-    * endTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * beginTime  自定义查询时间，开始时间
+    * endTime  自定义查询时间，结束时间
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * hostIp  **参数解释**: 主机IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * handleStatus  **参数解释**： 是否已处理 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * handleStatus  **参数解释**： 是否已处理 **约束限制**: 不涉及 **取值范围**: - handled：已处理 - unhandled：未处理  **默认取值**: 不涉及
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
@@ -117,7 +112,6 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
             'endTime' => 'end_time',
             'hostName' => 'host_name',
             'hostIp' => 'host_ip',
-            'privateIp' => 'private_ip',
             'handleStatus' => 'handle_status',
             'offset' => 'offset',
             'limit' => 'limit'
@@ -127,12 +121,11 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * lastDays  **参数解释**: 查询时间范围天数，与自定义查询时间begin_time，end_time互斥 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值30 **默认取值**: 不涉及
-    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
-    * endTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * beginTime  自定义查询时间，开始时间
+    * endTime  自定义查询时间，结束时间
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * hostIp  **参数解释**: 主机IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * handleStatus  **参数解释**： 是否已处理 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * handleStatus  **参数解释**： 是否已处理 **约束限制**: 不涉及 **取值范围**: - handled：已处理 - unhandled：未处理  **默认取值**: 不涉及
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
@@ -145,7 +138,6 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
             'endTime' => 'setEndTime',
             'hostName' => 'setHostName',
             'hostIp' => 'setHostIp',
-            'privateIp' => 'setPrivateIp',
             'handleStatus' => 'setHandleStatus',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
@@ -155,12 +147,11 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * lastDays  **参数解释**: 查询时间范围天数，与自定义查询时间begin_time，end_time互斥 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值30 **默认取值**: 不涉及
-    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
-    * endTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * beginTime  自定义查询时间，开始时间
+    * endTime  自定义查询时间，结束时间
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * hostIp  **参数解释**: 主机IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * handleStatus  **参数解释**： 是否已处理 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * handleStatus  **参数解释**： 是否已处理 **约束限制**: 不涉及 **取值范围**: - handled：已处理 - unhandled：未处理  **默认取值**: 不涉及
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
@@ -173,7 +164,6 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
             'endTime' => 'getEndTime',
             'hostName' => 'getHostName',
             'hostIp' => 'getHostIp',
-            'privateIp' => 'getPrivateIp',
             'handleStatus' => 'getHandleStatus',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
@@ -243,7 +233,6 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['hostIp'] = isset($data['hostIp']) ? $data['hostIp'] : null;
-        $this->container['privateIp'] = isset($data['privateIp']) ? $data['privateIp'] : null;
         $this->container['handleStatus'] = isset($data['handleStatus']) ? $data['handleStatus'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
@@ -295,15 +284,6 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['hostIp']) && !preg_match("/^.*$/", $this->container['hostIp'])) {
                 $invalidProperties[] = "invalid value for 'hostIp', must be conform to the pattern /^.*$/.";
-            }
-            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) > 128)) {
-                $invalidProperties[] = "invalid value for 'privateIp', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) < 1)) {
-                $invalidProperties[] = "invalid value for 'privateIp', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['privateIp']) && !preg_match("/^.*$/", $this->container['privateIp'])) {
-                $invalidProperties[] = "invalid value for 'privateIp', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['handleStatus']) && (mb_strlen($this->container['handleStatus']) > 5)) {
                 $invalidProperties[] = "invalid value for 'handleStatus', the character length must be smaller than or equal to 5.";
@@ -393,7 +373,7 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
-    *  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    *  自定义查询时间，开始时间
     *
     * @return int
     */
@@ -405,7 +385,7 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
     /**
     * Sets beginTime
     *
-    * @param int $beginTime 自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * @param int $beginTime 自定义查询时间，开始时间
     *
     * @return $this
     */
@@ -417,7 +397,7 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    *  自定义查询时间，结束时间
     *
     * @return int
     */
@@ -429,7 +409,7 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int $endTime 自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * @param int $endTime 自定义查询时间，结束时间
     *
     * @return $this
     */
@@ -465,7 +445,7 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  **参数解释**: 主机IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    *  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -477,7 +457,7 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp **参数解释**: 主机IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * @param string|null $hostIp **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -488,32 +468,8 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets privateIp
-    *  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    *
-    * @return string|null
-    */
-    public function getPrivateIp()
-    {
-        return $this->container['privateIp'];
-    }
-
-    /**
-    * Sets privateIp
-    *
-    * @param string|null $privateIp **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    *
-    * @return $this
-    */
-    public function setPrivateIp($privateIp)
-    {
-        $this->container['privateIp'] = $privateIp;
-        return $this;
-    }
-
-    /**
     * Gets handleStatus
-    *  **参数解释**： 是否已处理 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
+    *  **参数解释**： 是否已处理 **约束限制**: 不涉及 **取值范围**: - handled：已处理 - unhandled：未处理  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -525,7 +481,7 @@ class ListAppWhitelistEventRequest implements ModelInterface, ArrayAccess
     /**
     * Sets handleStatus
     *
-    * @param string|null $handleStatus **参数解释**： 是否已处理 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
+    * @param string|null $handleStatus **参数解释**： 是否已处理 **约束限制**: 不涉及 **取值范围**: - handled：已处理 - unhandled：未处理  **默认取值**: 不涉及
     *
     * @return $this
     */

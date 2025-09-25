@@ -22,21 +22,37 @@ class CreateVaultResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * vault  vault
+    * orders  包周期创建订单信息（仅包周期创建时显示）
+    * retCode  包周期订购结果（仅包周期创建时显示）
+    * errText  包周期创建错误信息（仅包周期创建时显示）
+    * errorCode  包周期创建错误码（仅包周期创建时显示）
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'vault' => '\HuaweiCloud\SDK\Cbr\V1\Model\VaultCreateResource'
+            'vault' => '\HuaweiCloud\SDK\Cbr\V1\Model\VaultCreateResource',
+            'orders' => '\HuaweiCloud\SDK\Cbr\V1\Model\CbcOrderResult[]',
+            'retCode' => 'int',
+            'errText' => 'string',
+            'errorCode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * vault  vault
+    * orders  包周期创建订单信息（仅包周期创建时显示）
+    * retCode  包周期订购结果（仅包周期创建时显示）
+    * errText  包周期创建错误信息（仅包周期创建时显示）
+    * errorCode  包周期创建错误码（仅包周期创建时显示）
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'vault' => null
+        'vault' => null,
+        'orders' => null,
+        'retCode' => 'int32',
+        'errText' => null,
+        'errorCode' => null
     ];
 
     /**
@@ -63,31 +79,55 @@ class CreateVaultResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * vault  vault
+    * orders  包周期创建订单信息（仅包周期创建时显示）
+    * retCode  包周期订购结果（仅包周期创建时显示）
+    * errText  包周期创建错误信息（仅包周期创建时显示）
+    * errorCode  包周期创建错误码（仅包周期创建时显示）
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'vault' => 'vault'
+            'vault' => 'vault',
+            'orders' => 'orders',
+            'retCode' => 'retCode',
+            'errText' => 'errText',
+            'errorCode' => 'error_code'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * vault  vault
+    * orders  包周期创建订单信息（仅包周期创建时显示）
+    * retCode  包周期订购结果（仅包周期创建时显示）
+    * errText  包周期创建错误信息（仅包周期创建时显示）
+    * errorCode  包周期创建错误码（仅包周期创建时显示）
     *
     * @var string[]
     */
     protected static $setters = [
-            'vault' => 'setVault'
+            'vault' => 'setVault',
+            'orders' => 'setOrders',
+            'retCode' => 'setRetCode',
+            'errText' => 'setErrText',
+            'errorCode' => 'setErrorCode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * vault  vault
+    * orders  包周期创建订单信息（仅包周期创建时显示）
+    * retCode  包周期订购结果（仅包周期创建时显示）
+    * errText  包周期创建错误信息（仅包周期创建时显示）
+    * errorCode  包周期创建错误码（仅包周期创建时显示）
     *
     * @var string[]
     */
     protected static $getters = [
-            'vault' => 'getVault'
+            'vault' => 'getVault',
+            'orders' => 'getOrders',
+            'retCode' => 'getRetCode',
+            'errText' => 'getErrText',
+            'errorCode' => 'getErrorCode'
     ];
 
     /**
@@ -149,6 +189,10 @@ class CreateVaultResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['vault'] = isset($data['vault']) ? $data['vault'] : null;
+        $this->container['orders'] = isset($data['orders']) ? $data['orders'] : null;
+        $this->container['retCode'] = isset($data['retCode']) ? $data['retCode'] : null;
+        $this->container['errText'] = isset($data['errText']) ? $data['errText'] : null;
+        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
     }
 
     /**
@@ -194,6 +238,102 @@ class CreateVaultResponse implements ModelInterface, ArrayAccess
     public function setVault($vault)
     {
         $this->container['vault'] = $vault;
+        return $this;
+    }
+
+    /**
+    * Gets orders
+    *  包周期创建订单信息（仅包周期创建时显示）
+    *
+    * @return \HuaweiCloud\SDK\Cbr\V1\Model\CbcOrderResult[]|null
+    */
+    public function getOrders()
+    {
+        return $this->container['orders'];
+    }
+
+    /**
+    * Sets orders
+    *
+    * @param \HuaweiCloud\SDK\Cbr\V1\Model\CbcOrderResult[]|null $orders 包周期创建订单信息（仅包周期创建时显示）
+    *
+    * @return $this
+    */
+    public function setOrders($orders)
+    {
+        $this->container['orders'] = $orders;
+        return $this;
+    }
+
+    /**
+    * Gets retCode
+    *  包周期订购结果（仅包周期创建时显示）
+    *
+    * @return int|null
+    */
+    public function getRetCode()
+    {
+        return $this->container['retCode'];
+    }
+
+    /**
+    * Sets retCode
+    *
+    * @param int|null $retCode 包周期订购结果（仅包周期创建时显示）
+    *
+    * @return $this
+    */
+    public function setRetCode($retCode)
+    {
+        $this->container['retCode'] = $retCode;
+        return $this;
+    }
+
+    /**
+    * Gets errText
+    *  包周期创建错误信息（仅包周期创建时显示）
+    *
+    * @return string|null
+    */
+    public function getErrText()
+    {
+        return $this->container['errText'];
+    }
+
+    /**
+    * Sets errText
+    *
+    * @param string|null $errText 包周期创建错误信息（仅包周期创建时显示）
+    *
+    * @return $this
+    */
+    public function setErrText($errText)
+    {
+        $this->container['errText'] = $errText;
+        return $this;
+    }
+
+    /**
+    * Gets errorCode
+    *  包周期创建错误码（仅包周期创建时显示）
+    *
+    * @return string|null
+    */
+    public function getErrorCode()
+    {
+        return $this->container['errorCode'];
+    }
+
+    /**
+    * Sets errorCode
+    *
+    * @param string|null $errorCode 包周期创建错误码（仅包周期创建时显示）
+    *
+    * @return $this
+    */
+    public function setErrorCode($errorCode)
+    {
+        $this->container['errorCode'] = $errorCode;
         return $this;
     }
 

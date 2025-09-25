@@ -44,8 +44,8 @@ class AppWhitelistEventResponseInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * hostStatus  服务器状态
-    * agentStatus  Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
+    * hostStatus  **参数解释**： 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。
+    * agentStatus  **参数解释**： Agent状态 **取值范围**: - installed：已安装。 - not_installed：未安装。 - online：在线。 - offline：离线。 - install_failed：安装失败。 - installing：安装中。 - not_online：不在线的（除了在线以外的所有状态，仅作为查询条件）。
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     *
     * @var string[]
@@ -106,8 +106,8 @@ class AppWhitelistEventResponseInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * hostStatus  服务器状态
-    * agentStatus  Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
+    * hostStatus  **参数解释**： 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。
+    * agentStatus  **参数解释**： Agent状态 **取值范围**: - installed：已安装。 - not_installed：未安装。 - online：在线。 - offline：离线。 - install_failed：安装失败。 - installing：安装中。 - not_online：不在线的（除了在线以外的所有状态，仅作为查询条件）。
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     *
     * @var string[]
@@ -189,8 +189,8 @@ class AppWhitelistEventResponseInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * hostStatus  服务器状态
-    * agentStatus  Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
+    * hostStatus  **参数解释**： 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。
+    * agentStatus  **参数解释**： Agent状态 **取值范围**: - installed：已安装。 - not_installed：未安装。 - online：在线。 - offline：离线。 - install_failed：安装失败。 - installing：安装中。 - not_online：不在线的（除了在线以外的所有状态，仅作为查询条件）。
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     *
     * @var string[]
@@ -251,8 +251,8 @@ class AppWhitelistEventResponseInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * hostStatus  服务器状态
-    * agentStatus  Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
+    * hostStatus  **参数解释**： 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。
+    * agentStatus  **参数解释**： Agent状态 **取值范围**: - installed：已安装。 - not_installed：未安装。 - online：在线。 - offline：离线。 - install_failed：安装失败。 - installing：安装中。 - not_online：不在线的（除了在线以外的所有状态，仅作为查询条件）。
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     *
     * @var string[]
@@ -313,8 +313,8 @@ class AppWhitelistEventResponseInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * hostStatus  服务器状态
-    * agentStatus  Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
+    * hostStatus  **参数解释**： 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。
+    * agentStatus  **参数解释**： Agent状态 **取值范围**: - installed：已安装。 - not_installed：未安装。 - online：在线。 - offline：离线。 - install_failed：安装失败。 - installing：安装中。 - not_online：不在线的（除了在线以外的所有状态，仅作为查询条件）。
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     *
     * @var string[]
@@ -1159,7 +1159,7 @@ class AppWhitelistEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostStatus
-    *  服务器状态
+    *  **参数解释**： 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。
     *
     * @return string|null
     */
@@ -1171,7 +1171,7 @@ class AppWhitelistEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostStatus
     *
-    * @param string|null $hostStatus 服务器状态
+    * @param string|null $hostStatus **参数解释**： 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。
     *
     * @return $this
     */
@@ -1183,7 +1183,7 @@ class AppWhitelistEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentStatus
-    *  Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
+    *  **参数解释**： Agent状态 **取值范围**: - installed：已安装。 - not_installed：未安装。 - online：在线。 - offline：离线。 - install_failed：安装失败。 - installing：安装中。 - not_online：不在线的（除了在线以外的所有状态，仅作为查询条件）。
     *
     * @return string|null
     */
@@ -1195,7 +1195,7 @@ class AppWhitelistEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentStatus
     *
-    * @param string|null $agentStatus Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
+    * @param string|null $agentStatus **参数解释**： Agent状态 **取值范围**: - installed：已安装。 - not_installed：未安装。 - online：在线。 - offline：离线。 - install_failed：安装失败。 - installing：安装中。 - not_online：不在线的（除了在线以外的所有状态，仅作为查询条件）。
     *
     * @return $this
     */

@@ -25,7 +25,7 @@ class MultiCloudClusterInfo implements ModelInterface, ArrayAccess
     * provider  集群服务商
     * server  集群apiserver地址
     * imageRepo  镜像仓地址
-    * status  anp-agent的连接状态
+    * status  **参数解释** anp-agent的连接状态 **取值范围**   - not_connect：未连接。   - connect_success：连接成功。   - connect_fail：连接失败。   - connect_disruption：连接中断。
     * version  anp-agent的版本
     * currentExpirationDate  当前有效期结束时间
     * certificateExpirationDate  证书有效期结束时间
@@ -51,7 +51,7 @@ class MultiCloudClusterInfo implements ModelInterface, ArrayAccess
     * provider  集群服务商
     * server  集群apiserver地址
     * imageRepo  镜像仓地址
-    * status  anp-agent的连接状态
+    * status  **参数解释** anp-agent的连接状态 **取值范围**   - not_connect：未连接。   - connect_success：连接成功。   - connect_fail：连接失败。   - connect_disruption：连接中断。
     * version  anp-agent的版本
     * currentExpirationDate  当前有效期结束时间
     * certificateExpirationDate  证书有效期结束时间
@@ -98,7 +98,7 @@ class MultiCloudClusterInfo implements ModelInterface, ArrayAccess
     * provider  集群服务商
     * server  集群apiserver地址
     * imageRepo  镜像仓地址
-    * status  anp-agent的连接状态
+    * status  **参数解释** anp-agent的连接状态 **取值范围**   - not_connect：未连接。   - connect_success：连接成功。   - connect_fail：连接失败。   - connect_disruption：连接中断。
     * version  anp-agent的版本
     * currentExpirationDate  当前有效期结束时间
     * certificateExpirationDate  证书有效期结束时间
@@ -124,7 +124,7 @@ class MultiCloudClusterInfo implements ModelInterface, ArrayAccess
     * provider  集群服务商
     * server  集群apiserver地址
     * imageRepo  镜像仓地址
-    * status  anp-agent的连接状态
+    * status  **参数解释** anp-agent的连接状态 **取值范围**   - not_connect：未连接。   - connect_success：连接成功。   - connect_fail：连接失败。   - connect_disruption：连接中断。
     * version  anp-agent的版本
     * currentExpirationDate  当前有效期结束时间
     * certificateExpirationDate  证书有效期结束时间
@@ -150,7 +150,7 @@ class MultiCloudClusterInfo implements ModelInterface, ArrayAccess
     * provider  集群服务商
     * server  集群apiserver地址
     * imageRepo  镜像仓地址
-    * status  anp-agent的连接状态
+    * status  **参数解释** anp-agent的连接状态 **取值范围**   - not_connect：未连接。   - connect_success：连接成功。   - connect_fail：连接失败。   - connect_disruption：连接中断。
     * version  anp-agent的版本
     * currentExpirationDate  当前有效期结束时间
     * certificateExpirationDate  证书有效期结束时间
@@ -436,7 +436,7 @@ class MultiCloudClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  anp-agent的连接状态
+    *  **参数解释** anp-agent的连接状态 **取值范围**   - not_connect：未连接。   - connect_success：连接成功。   - connect_fail：连接失败。   - connect_disruption：连接中断。
     *
     * @return string|null
     */
@@ -448,7 +448,7 @@ class MultiCloudClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status anp-agent的连接状态
+    * @param string|null $status **参数解释** anp-agent的连接状态 **取值范围**   - not_connect：未连接。   - connect_success：连接成功。   - connect_fail：连接失败。   - connect_disruption：连接中断。
     *
     * @return $this
     */

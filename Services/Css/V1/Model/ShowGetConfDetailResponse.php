@@ -33,7 +33,7 @@ class ShowGetConfDetailResponse implements ModelInterface, ArrayAccess
             'name' => 'string',
             'status' => 'string',
             'confContent' => 'string',
-            'setting' => '\HuaweiCloud\SDK\Css\V1\Model\Confsetting',
+            'setting' => '\HuaweiCloud\SDK\Css\V1\Model\Setting',
             'updateAt' => 'string'
     ];
 
@@ -293,7 +293,7 @@ class ShowGetConfDetailResponse implements ModelInterface, ArrayAccess
     * Gets setting
     *  setting
     *
-    * @return \HuaweiCloud\SDK\Css\V1\Model\Confsetting|null
+    * @return \HuaweiCloud\SDK\Css\V1\Model\Setting|null
     */
     public function getSetting()
     {
@@ -303,7 +303,7 @@ class ShowGetConfDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets setting
     *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\Confsetting|null $setting setting
+    * @param \HuaweiCloud\SDK\Css\V1\Model\Setting|null $setting setting
     *
     * @return $this
     */

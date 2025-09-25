@@ -22,25 +22,25 @@ class ListSessionStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * total  **参数解释**: 总数。 **取值范围**: 不涉及。
-    * statistics  **参数解释**: 会话统计列表。
+    * statisticsList  **参数解释**: 会话统计列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'total' => 'int',
-            'statistics' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DimensionListResult[]'
+            'statisticsList' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DimensionListResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * total  **参数解释**: 总数。 **取值范围**: 不涉及。
-    * statistics  **参数解释**: 会话统计列表。
+    * statisticsList  **参数解释**: 会话统计列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'total' => null,
-        'statistics' => null
+        'statisticsList' => null
     ];
 
     /**
@@ -67,37 +67,37 @@ class ListSessionStatisticsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * total  **参数解释**: 总数。 **取值范围**: 不涉及。
-    * statistics  **参数解释**: 会话统计列表。
+    * statisticsList  **参数解释**: 会话统计列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'total' => 'total',
-            'statistics' => 'statistics'
+            'statisticsList' => 'statistics_list'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * total  **参数解释**: 总数。 **取值范围**: 不涉及。
-    * statistics  **参数解释**: 会话统计列表。
+    * statisticsList  **参数解释**: 会话统计列表。
     *
     * @var string[]
     */
     protected static $setters = [
             'total' => 'setTotal',
-            'statistics' => 'setStatistics'
+            'statisticsList' => 'setStatisticsList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * total  **参数解释**: 总数。 **取值范围**: 不涉及。
-    * statistics  **参数解释**: 会话统计列表。
+    * statisticsList  **参数解释**: 会话统计列表。
     *
     * @var string[]
     */
     protected static $getters = [
             'total' => 'getTotal',
-            'statistics' => 'getStatistics'
+            'statisticsList' => 'getStatisticsList'
     ];
 
     /**
@@ -159,7 +159,7 @@ class ListSessionStatisticsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
-        $this->container['statistics'] = isset($data['statistics']) ? $data['statistics'] : null;
+        $this->container['statisticsList'] = isset($data['statisticsList']) ? $data['statisticsList'] : null;
     }
 
     /**
@@ -209,26 +209,26 @@ class ListSessionStatisticsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets statistics
+    * Gets statisticsList
     *  **参数解释**: 会话统计列表。
     *
     * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DimensionListResult[]|null
     */
-    public function getStatistics()
+    public function getStatisticsList()
     {
-        return $this->container['statistics'];
+        return $this->container['statisticsList'];
     }
 
     /**
-    * Sets statistics
+    * Sets statisticsList
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DimensionListResult[]|null $statistics **参数解释**: 会话统计列表。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DimensionListResult[]|null $statisticsList **参数解释**: 会话统计列表。
     *
     * @return $this
     */
-    public function setStatistics($statistics)
+    public function setStatisticsList($statisticsList)
     {
-        $this->container['statistics'] = $statistics;
+        $this->container['statisticsList'] = $statisticsList;
         return $this;
     }
 

@@ -540,68 +540,6 @@ class RabbitMQClient extends Client
     }
 
     /**
-     * 开启RabbitMQ实例域名访问能力
-     *
-     * 开启RabbitMQ实例域名访问功能后，客户端可以通过域名连接RabbitMQ实例。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function enableDns($request)
-    {
-        return $this->enableDnsWithHttpInfo($request);
-    }
-
-    public function enableDnsWithHttpInfo($request)
-    {
-        $resourcePath = '/v2/{project_id}/rabbitmq/instances/{instance_id}/dns';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['instanceId'] !== null) {
-            $pathParams['instance_id'] = $localVarParams['instanceId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\EnableDnsResponse',
-            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\EnableDnsRequest');
-    }
-
-    /**
      * 查询可用区信息
      *
      * 在创建实例时，需要配置实例所在的可用区ID，可通过该接口查询可用区的ID。

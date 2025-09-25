@@ -25,7 +25,7 @@ class AntiVirusHostResponseInfo implements ModelInterface, ArrayAccess
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux   - Windows ：Winodws
+    * osType  操作系统类型，包含如下2种。   - Linux ：Linux   - Windows ：Windows
     * groupId  服务器组ID
     *
     * @var string[]
@@ -47,7 +47,7 @@ class AntiVirusHostResponseInfo implements ModelInterface, ArrayAccess
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux   - Windows ：Winodws
+    * osType  操作系统类型，包含如下2种。   - Linux ：Linux   - Windows ：Windows
     * groupId  服务器组ID
     *
     * @var string[]
@@ -90,7 +90,7 @@ class AntiVirusHostResponseInfo implements ModelInterface, ArrayAccess
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux   - Windows ：Winodws
+    * osType  操作系统类型，包含如下2种。   - Linux ：Linux   - Windows ：Windows
     * groupId  服务器组ID
     *
     * @var string[]
@@ -112,7 +112,7 @@ class AntiVirusHostResponseInfo implements ModelInterface, ArrayAccess
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux   - Windows ：Winodws
+    * osType  操作系统类型，包含如下2种。   - Linux ：Linux   - Windows ：Windows
     * groupId  服务器组ID
     *
     * @var string[]
@@ -134,7 +134,7 @@ class AntiVirusHostResponseInfo implements ModelInterface, ArrayAccess
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux   - Windows ：Winodws
+    * osType  操作系统类型，包含如下2种。   - Linux ：Linux   - Windows ：Windows
     * groupId  服务器组ID
     *
     * @var string[]
@@ -411,7 +411,7 @@ class AntiVirusHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  操作系统类型，包含如下2种。   - Linux ：Linux   - Windows ：Winodws
+    *  操作系统类型，包含如下2种。   - Linux ：Linux   - Windows ：Windows
     *
     * @return string|null
     */
@@ -423,7 +423,7 @@ class AntiVirusHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType 操作系统类型，包含如下2种。   - Linux ：Linux   - Windows ：Winodws
+    * @param string|null $osType 操作系统类型，包含如下2种。   - Linux ：Linux   - Windows ：Windows
     *
     * @return $this
     */

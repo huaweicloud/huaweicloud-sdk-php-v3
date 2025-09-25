@@ -20,9 +20,9 @@ class ListHandleAffectBaselineRequestBodyCheckRuleList implements ModelInterface
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * checkName  **参数解释** 基线检查的名称 **约束限制** 不涉及 **取值范围**   字符长度0-256位 **默认取值** 不涉及
-    * checkRuleId  **参数解释** 检查项id **约束限制** 不涉及 **取值范围**   字符长度0-256位 **默认取值** 不涉及
-    * standard  **参数解释** 基线检查标准类型 **约束限制** 不涉及 **取值范围**   - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准 **默认取值** 不涉及
+    * checkName  **参数解释** 基线检查的名称 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * checkRuleId  **参数解释** 检查项id **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * standard  **参数解释** 基线检查标准类型 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ListHandleAffectBaselineRequestBodyCheckRuleList implements ModelInterface
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * checkName  **参数解释** 基线检查的名称 **约束限制** 不涉及 **取值范围**   字符长度0-256位 **默认取值** 不涉及
-    * checkRuleId  **参数解释** 检查项id **约束限制** 不涉及 **取值范围**   字符长度0-256位 **默认取值** 不涉及
-    * standard  **参数解释** 基线检查标准类型 **约束限制** 不涉及 **取值范围**   - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准 **默认取值** 不涉及
+    * checkName  **参数解释** 基线检查的名称 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * checkRuleId  **参数解释** 检查项id **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * standard  **参数解释** 基线检查标准类型 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ListHandleAffectBaselineRequestBodyCheckRuleList implements ModelInterface
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * checkName  **参数解释** 基线检查的名称 **约束限制** 不涉及 **取值范围**   字符长度0-256位 **默认取值** 不涉及
-    * checkRuleId  **参数解释** 检查项id **约束限制** 不涉及 **取值范围**   字符长度0-256位 **默认取值** 不涉及
-    * standard  **参数解释** 基线检查标准类型 **约束限制** 不涉及 **取值范围**   - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准 **默认取值** 不涉及
+    * checkName  **参数解释** 基线检查的名称 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * checkRuleId  **参数解释** 检查项id **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * standard  **参数解释** 基线检查标准类型 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ListHandleAffectBaselineRequestBodyCheckRuleList implements ModelInterface
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * checkName  **参数解释** 基线检查的名称 **约束限制** 不涉及 **取值范围**   字符长度0-256位 **默认取值** 不涉及
-    * checkRuleId  **参数解释** 检查项id **约束限制** 不涉及 **取值范围**   字符长度0-256位 **默认取值** 不涉及
-    * standard  **参数解释** 基线检查标准类型 **约束限制** 不涉及 **取值范围**   - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准 **默认取值** 不涉及
+    * checkName  **参数解释** 基线检查的名称 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * checkRuleId  **参数解释** 检查项id **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * standard  **参数解释** 基线检查标准类型 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ListHandleAffectBaselineRequestBodyCheckRuleList implements ModelInterface
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * checkName  **参数解释** 基线检查的名称 **约束限制** 不涉及 **取值范围**   字符长度0-256位 **默认取值** 不涉及
-    * checkRuleId  **参数解释** 检查项id **约束限制** 不涉及 **取值范围**   字符长度0-256位 **默认取值** 不涉及
-    * standard  **参数解释** 基线检查标准类型 **约束限制** 不涉及 **取值范围**   - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准 **默认取值** 不涉及
+    * checkName  **参数解释** 基线检查的名称 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * checkRuleId  **参数解释** 检查项id **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * standard  **参数解释** 基线检查标准类型 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -223,7 +223,7 @@ class ListHandleAffectBaselineRequestBodyCheckRuleList implements ModelInterface
 
     /**
     * Gets checkName
-    *  **参数解释** 基线检查的名称 **约束限制** 不涉及 **取值范围**   字符长度0-256位 **默认取值** 不涉及
+    *  **参数解释** 基线检查的名称 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -235,7 +235,7 @@ class ListHandleAffectBaselineRequestBodyCheckRuleList implements ModelInterface
     /**
     * Sets checkName
     *
-    * @param string|null $checkName **参数解释** 基线检查的名称 **约束限制** 不涉及 **取值范围**   字符长度0-256位 **默认取值** 不涉及
+    * @param string|null $checkName **参数解释** 基线检查的名称 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class ListHandleAffectBaselineRequestBodyCheckRuleList implements ModelInterface
 
     /**
     * Gets checkRuleId
-    *  **参数解释** 检查项id **约束限制** 不涉及 **取值范围**   字符长度0-256位 **默认取值** 不涉及
+    *  **参数解释** 检查项id **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -259,7 +259,7 @@ class ListHandleAffectBaselineRequestBodyCheckRuleList implements ModelInterface
     /**
     * Sets checkRuleId
     *
-    * @param string|null $checkRuleId **参数解释** 检查项id **约束限制** 不涉及 **取值范围**   字符长度0-256位 **默认取值** 不涉及
+    * @param string|null $checkRuleId **参数解释** 检查项id **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -271,7 +271,7 @@ class ListHandleAffectBaselineRequestBodyCheckRuleList implements ModelInterface
 
     /**
     * Gets standard
-    *  **参数解释** 基线检查标准类型 **约束限制** 不涉及 **取值范围**   - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准 **默认取值** 不涉及
+    *  **参数解释** 基线检查标准类型 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -283,7 +283,7 @@ class ListHandleAffectBaselineRequestBodyCheckRuleList implements ModelInterface
     /**
     * Sets standard
     *
-    * @param string|null $standard **参数解释** 基线检查标准类型 **约束限制** 不涉及 **取值范围**   - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准 **默认取值** 不涉及
+    * @param string|null $standard **参数解释** 基线检查标准类型 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准 **默认取值** 不涉及
     *
     * @return $this
     */

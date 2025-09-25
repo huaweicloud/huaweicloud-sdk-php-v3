@@ -28,7 +28,7 @@ class DeleteAnticrawlerRuleResponse implements ModelInterface, ArrayAccess
     * type  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
     * timestamp  创建规则时间戳
     * status  规则状态，0：关闭，1：开启
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @var string[]
     */
@@ -52,7 +52,7 @@ class DeleteAnticrawlerRuleResponse implements ModelInterface, ArrayAccess
     * type  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
     * timestamp  创建规则时间戳
     * status  规则状态，0：关闭，1：开启
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @var string[]
     */
@@ -97,7 +97,7 @@ class DeleteAnticrawlerRuleResponse implements ModelInterface, ArrayAccess
     * type  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
     * timestamp  创建规则时间戳
     * status  规则状态，0：关闭，1：开启
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @var string[]
     */
@@ -121,7 +121,7 @@ class DeleteAnticrawlerRuleResponse implements ModelInterface, ArrayAccess
     * type  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
     * timestamp  创建规则时间戳
     * status  规则状态，0：关闭，1：开启
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @var string[]
     */
@@ -145,7 +145,7 @@ class DeleteAnticrawlerRuleResponse implements ModelInterface, ArrayAccess
     * type  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
     * timestamp  创建规则时间戳
     * status  规则状态，0：关闭，1：开启
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @var string[]
     */
@@ -420,7 +420,7 @@ class DeleteAnticrawlerRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @return int|null
     */
@@ -432,7 +432,7 @@ class DeleteAnticrawlerRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param int|null $priority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * @param int|null $priority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @return $this
     */

@@ -183,14 +183,14 @@ class UpdateOrgConformancePackRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-            if ((mb_strlen($this->container['name']) > 60)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 60.";
+            if ((mb_strlen($this->container['name']) > 252)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 252.";
             }
             if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/", $this->container['name'])) {
-                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/.";
+            if (!preg_match("/^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/.";
             }
         return $invalidProperties;
     }

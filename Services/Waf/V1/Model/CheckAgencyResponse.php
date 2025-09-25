@@ -23,6 +23,7 @@ class CheckAgencyResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释：** 代理id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * name  **参数解释：** 代理名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * duration  **参数解释：** 代理存在时间段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * domainId  **参数解释：** 使用代理的domainid **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * isValid  **参数解释：** 代理是否合法 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -32,6 +33,7 @@ class CheckAgencyResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'name' => 'string',
+            'version' => 'string',
             'duration' => 'string',
             'domainId' => 'string',
             'isValid' => 'bool'
@@ -41,6 +43,7 @@ class CheckAgencyResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释：** 代理id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * name  **参数解释：** 代理名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * duration  **参数解释：** 代理存在时间段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * domainId  **参数解释：** 使用代理的domainid **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * isValid  **参数解释：** 代理是否合法 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -50,6 +53,7 @@ class CheckAgencyResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
+        'version' => null,
         'duration' => null,
         'domainId' => null,
         'isValid' => null
@@ -80,6 +84,7 @@ class CheckAgencyResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  **参数解释：** 代理id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * name  **参数解释：** 代理名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * duration  **参数解释：** 代理存在时间段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * domainId  **参数解释：** 使用代理的domainid **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * isValid  **参数解释：** 代理是否合法 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -89,6 +94,7 @@ class CheckAgencyResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'id' => 'id',
             'name' => 'name',
+            'version' => 'version',
             'duration' => 'duration',
             'domainId' => 'domain_id',
             'isValid' => 'is_valid'
@@ -98,6 +104,7 @@ class CheckAgencyResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释：** 代理id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * name  **参数解释：** 代理名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * duration  **参数解释：** 代理存在时间段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * domainId  **参数解释：** 使用代理的domainid **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * isValid  **参数解释：** 代理是否合法 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -107,6 +114,7 @@ class CheckAgencyResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'id' => 'setId',
             'name' => 'setName',
+            'version' => 'setVersion',
             'duration' => 'setDuration',
             'domainId' => 'setDomainId',
             'isValid' => 'setIsValid'
@@ -116,6 +124,7 @@ class CheckAgencyResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释：** 代理id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * name  **参数解释：** 代理名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * duration  **参数解释：** 代理存在时间段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * domainId  **参数解释：** 使用代理的domainid **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * isValid  **参数解释：** 代理是否合法 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -125,6 +134,7 @@ class CheckAgencyResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'id' => 'getId',
             'name' => 'getName',
+            'version' => 'getVersion',
             'duration' => 'getDuration',
             'domainId' => 'getDomainId',
             'isValid' => 'getIsValid'
@@ -190,6 +200,7 @@ class CheckAgencyResponse implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['isValid'] = isset($data['isValid']) ? $data['isValid'] : null;
@@ -262,6 +273,30 @@ class CheckAgencyResponse implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets version
+    *  **参数解释：** 版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getVersion()
+    {
+        return $this->container['version'];
+    }
+
+    /**
+    * Sets version
+    *
+    * @param string|null $version **参数解释：** 版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setVersion($version)
+    {
+        $this->container['version'] = $version;
         return $this;
     }
 

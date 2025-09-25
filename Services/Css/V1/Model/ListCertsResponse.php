@@ -21,26 +21,26 @@ class ListCertsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * defaultCerts  默认证书列表。
-    * customCerts  自定义证书列表。
+    * certsRecords  certsRecords
+    * totalSize  证书记录数量。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'defaultCerts' => '\HuaweiCloud\SDK\Css\V1\Model\DefaultCertsResource[]',
-            'customCerts' => '\HuaweiCloud\SDK\Css\V1\Model\CustomCertsResource[]'
+            'certsRecords' => '\HuaweiCloud\SDK\Css\V1\Model\CertsRecordsDatastore',
+            'totalSize' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * defaultCerts  默认证书列表。
-    * customCerts  自定义证书列表。
+    * certsRecords  certsRecords
+    * totalSize  证书记录数量。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'defaultCerts' => null,
-        'customCerts' => null
+        'certsRecords' => null,
+        'totalSize' => null
     ];
 
     /**
@@ -66,38 +66,38 @@ class ListCertsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * defaultCerts  默认证书列表。
-    * customCerts  自定义证书列表。
+    * certsRecords  certsRecords
+    * totalSize  证书记录数量。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'defaultCerts' => 'defaultCerts',
-            'customCerts' => 'customCerts'
+            'certsRecords' => 'certsRecords',
+            'totalSize' => 'totalSize'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * defaultCerts  默认证书列表。
-    * customCerts  自定义证书列表。
+    * certsRecords  certsRecords
+    * totalSize  证书记录数量。
     *
     * @var string[]
     */
     protected static $setters = [
-            'defaultCerts' => 'setDefaultCerts',
-            'customCerts' => 'setCustomCerts'
+            'certsRecords' => 'setCertsRecords',
+            'totalSize' => 'setTotalSize'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * defaultCerts  默认证书列表。
-    * customCerts  自定义证书列表。
+    * certsRecords  certsRecords
+    * totalSize  证书记录数量。
     *
     * @var string[]
     */
     protected static $getters = [
-            'defaultCerts' => 'getDefaultCerts',
-            'customCerts' => 'getCustomCerts'
+            'certsRecords' => 'getCertsRecords',
+            'totalSize' => 'getTotalSize'
     ];
 
     /**
@@ -158,8 +158,8 @@ class ListCertsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['defaultCerts'] = isset($data['defaultCerts']) ? $data['defaultCerts'] : null;
-        $this->container['customCerts'] = isset($data['customCerts']) ? $data['customCerts'] : null;
+        $this->container['certsRecords'] = isset($data['certsRecords']) ? $data['certsRecords'] : null;
+        $this->container['totalSize'] = isset($data['totalSize']) ? $data['totalSize'] : null;
     }
 
     /**
@@ -185,50 +185,50 @@ class ListCertsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets defaultCerts
-    *  默认证书列表。
+    * Gets certsRecords
+    *  certsRecords
     *
-    * @return \HuaweiCloud\SDK\Css\V1\Model\DefaultCertsResource[]|null
+    * @return \HuaweiCloud\SDK\Css\V1\Model\CertsRecordsDatastore|null
     */
-    public function getDefaultCerts()
+    public function getCertsRecords()
     {
-        return $this->container['defaultCerts'];
+        return $this->container['certsRecords'];
     }
 
     /**
-    * Sets defaultCerts
+    * Sets certsRecords
     *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\DefaultCertsResource[]|null $defaultCerts 默认证书列表。
+    * @param \HuaweiCloud\SDK\Css\V1\Model\CertsRecordsDatastore|null $certsRecords certsRecords
     *
     * @return $this
     */
-    public function setDefaultCerts($defaultCerts)
+    public function setCertsRecords($certsRecords)
     {
-        $this->container['defaultCerts'] = $defaultCerts;
+        $this->container['certsRecords'] = $certsRecords;
         return $this;
     }
 
     /**
-    * Gets customCerts
-    *  自定义证书列表。
+    * Gets totalSize
+    *  证书记录数量。
     *
-    * @return \HuaweiCloud\SDK\Css\V1\Model\CustomCertsResource[]|null
+    * @return int|null
     */
-    public function getCustomCerts()
+    public function getTotalSize()
     {
-        return $this->container['customCerts'];
+        return $this->container['totalSize'];
     }
 
     /**
-    * Sets customCerts
+    * Sets totalSize
     *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\CustomCertsResource[]|null $customCerts 自定义证书列表。
+    * @param int|null $totalSize 证书记录数量。
     *
     * @return $this
     */
-    public function setCustomCerts($customCerts)
+    public function setTotalSize($totalSize)
     {
-        $this->container['customCerts'] = $customCerts;
+        $this->container['totalSize'] = $totalSize;
         return $this;
     }
 

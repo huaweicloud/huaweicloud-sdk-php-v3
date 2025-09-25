@@ -29,6 +29,7 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     * azCode  节点所属AZ信息。
     * ip  实例ip信息。
     * volume  volume
+    * subnetId  当前节点所属子网ID。
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
             'specCode' => 'string',
             'azCode' => 'string',
             'ip' => 'string',
-            'volume' => '\HuaweiCloud\SDK\Css\V1\Model\ShowClusterVolumeRsp'
+            'volume' => '\HuaweiCloud\SDK\Css\V1\Model\ShowClusterVolumeRsp',
+            'subnetId' => 'string'
     ];
 
     /**
@@ -55,6 +57,7 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     * azCode  节点所属AZ信息。
     * ip  实例ip信息。
     * volume  volume
+    * subnetId  当前节点所属子网ID。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
         'specCode' => null,
         'azCode' => null,
         'ip' => null,
-        'volume' => null
+        'volume' => null,
+        'subnetId' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     * azCode  节点所属AZ信息。
     * ip  实例ip信息。
     * volume  volume
+    * subnetId  当前节点所属子网ID。
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
             'specCode' => 'specCode',
             'azCode' => 'azCode',
             'ip' => 'ip',
-            'volume' => 'volume'
+            'volume' => 'volume',
+            'subnetId' => 'subnetId'
     ];
 
     /**
@@ -128,6 +134,7 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     * azCode  节点所属AZ信息。
     * ip  实例ip信息。
     * volume  volume
+    * subnetId  当前节点所属子网ID。
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
             'specCode' => 'setSpecCode',
             'azCode' => 'setAzCode',
             'ip' => 'setIp',
-            'volume' => 'setVolume'
+            'volume' => 'setVolume',
+            'subnetId' => 'setSubnetId'
     ];
 
     /**
@@ -154,6 +162,7 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     * azCode  节点所属AZ信息。
     * ip  实例ip信息。
     * volume  volume
+    * subnetId  当前节点所属子网ID。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
             'specCode' => 'getSpecCode',
             'azCode' => 'getAzCode',
             'ip' => 'getIp',
-            'volume' => 'getVolume'
+            'volume' => 'getVolume',
+            'subnetId' => 'getSubnetId'
     ];
 
     /**
@@ -236,6 +246,7 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
         $this->container['azCode'] = isset($data['azCode']) ? $data['azCode'] : null;
         $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
         $this->container['volume'] = isset($data['volume']) ? $data['volume'] : null;
+        $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
     }
 
     /**
@@ -476,6 +487,30 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     public function setVolume($volume)
     {
         $this->container['volume'] = $volume;
+        return $this;
+    }
+
+    /**
+    * Gets subnetId
+    *  当前节点所属子网ID。
+    *
+    * @return string|null
+    */
+    public function getSubnetId()
+    {
+        return $this->container['subnetId'];
+    }
+
+    /**
+    * Sets subnetId
+    *
+    * @param string|null $subnetId 当前节点所属子网ID。
+    *
+    * @return $this
+    */
+    public function setSubnetId($subnetId)
+    {
+        $this->container['subnetId'] = $subnetId;
         return $this;
     }
 

@@ -21,8 +21,8 @@ class ShowBackgroundTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskCount  任务数量。
-    * tasks  任务列表。
+    * taskCount  **参数解释**： 任务数量。 **取值范围**： 不涉及。
+    * tasks  **参数解释**： 任务列表。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ShowBackgroundTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskCount  任务数量。
-    * tasks  任务列表。
+    * taskCount  **参数解释**： 任务数量。 **取值范围**： 不涉及。
+    * tasks  **参数解释**： 任务列表。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ShowBackgroundTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskCount  任务数量。
-    * tasks  任务列表。
+    * taskCount  **参数解释**： 任务数量。 **取值范围**： 不涉及。
+    * tasks  **参数解释**： 任务列表。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ShowBackgroundTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskCount  任务数量。
-    * tasks  任务列表。
+    * taskCount  **参数解释**： 任务数量。 **取值范围**： 不涉及。
+    * tasks  **参数解释**： 任务列表。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ShowBackgroundTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskCount  任务数量。
-    * tasks  任务列表。
+    * taskCount  **参数解释**： 任务数量。 **取值范围**： 不涉及。
+    * tasks  **参数解释**： 任务列表。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ShowBackgroundTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskCount
-    *  任务数量。
+    *  **参数解释**： 任务数量。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class ShowBackgroundTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskCount
     *
-    * @param string|null $taskCount 任务数量。
+    * @param string|null $taskCount **参数解释**： 任务数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ShowBackgroundTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tasks
-    *  任务列表。
+    *  **参数解释**： 任务列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ListBackgroundTasksRespTasks[]|null
     */
@@ -222,7 +222,7 @@ class ShowBackgroundTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tasks
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListBackgroundTasksRespTasks[]|null $tasks 任务列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListBackgroundTasksRespTasks[]|null $tasks **参数解释**： 任务列表。
     *
     * @return $this
     */

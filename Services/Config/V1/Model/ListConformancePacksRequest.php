@@ -195,14 +195,14 @@ class ListConformancePacksRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['marker']) && !preg_match("/[A-Za-z0-9+\/=%\\-_]+/", $this->container['marker'])) {
                 $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /[A-Za-z0-9+\/=%\\-_]+/.";
             }
-            if (!is_null($this->container['conformancePackName']) && (mb_strlen($this->container['conformancePackName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'conformancePackName', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['conformancePackName']) && (mb_strlen($this->container['conformancePackName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'conformancePackName', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['conformancePackName']) && (mb_strlen($this->container['conformancePackName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'conformancePackName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['conformancePackName']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/", $this->container['conformancePackName'])) {
-                $invalidProperties[] = "invalid value for 'conformancePackName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/.";
+            if (!is_null($this->container['conformancePackName']) && !preg_match("/^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/", $this->container['conformancePackName'])) {
+                $invalidProperties[] = "invalid value for 'conformancePackName', must be conform to the pattern /^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/.";
             }
         return $invalidProperties;
     }

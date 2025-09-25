@@ -22,7 +22,7 @@ class ChangeHostsGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
     * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
-    * hostIdList  **参数解释**: 主机id列表 **取值范围**: 不涉及
+    * hostIdList  **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ChangeHostsGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
     * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
-    * hostIdList  **参数解释**: 主机id列表 **取值范围**: 不涉及
+    * hostIdList  **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ChangeHostsGroupRequestInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
     * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
-    * hostIdList  **参数解释**: 主机id列表 **取值范围**: 不涉及
+    * hostIdList  **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ChangeHostsGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
     * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
-    * hostIdList  **参数解释**: 主机id列表 **取值范围**: 不涉及
+    * hostIdList  **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ChangeHostsGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
     * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
-    * hostIdList  **参数解释**: 主机id列表 **取值范围**: 不涉及
+    * hostIdList  **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -262,7 +262,7 @@ class ChangeHostsGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIdList
-    *  **参数解释**: 主机id列表 **取值范围**: 不涉及
+    *  **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     *
     * @return string[]|null
     */
@@ -274,7 +274,7 @@ class ChangeHostsGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[]|null $hostIdList **参数解释**: 主机id列表 **取值范围**: 不涉及
+    * @param string[]|null $hostIdList **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     *
     * @return $this
     */

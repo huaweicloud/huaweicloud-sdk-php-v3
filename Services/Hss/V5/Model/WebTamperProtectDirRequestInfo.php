@@ -20,33 +20,29 @@ class WebTamperProtectDirRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * protectDirList  防护目录列表
-    * excludeFileType  排除文件类型
-    * exclueFileType  排除文件类型
-    * protectMode  **参数解释**: 防护模式 **约束限制**: 不涉及 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式。  **默认取值**: recovery
+    * protectDirList  **参数解释**: 防护目录列表 **约束限制**: 不涉及 **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
+    * excludeFileType  **参数解释**: 排除文件类型 **约束限制**: 不涉及 **取值范围**: 文件类型只能输入字母、数字，最多支持10个文件类型，每个文件类型长度不超过10个字符，多个文件类型以分号隔开。 **默认取值**: 不涉及
+    * protectMode  **参数解释**: 防护模式，仅Linux服务器支持设置防护模式为告警模式，Windows服务器仅支持拦截模式。 **约束限制**: 不涉及 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式，仅Linux服务器支持。  **默认取值**: recovery
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'protectDirList' => '\HuaweiCloud\SDK\Hss\V5\Model\WebTamperProtectHostDirRequestInfo[]',
             'excludeFileType' => 'string',
-            'exclueFileType' => 'string',
             'protectMode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * protectDirList  防护目录列表
-    * excludeFileType  排除文件类型
-    * exclueFileType  排除文件类型
-    * protectMode  **参数解释**: 防护模式 **约束限制**: 不涉及 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式。  **默认取值**: recovery
+    * protectDirList  **参数解释**: 防护目录列表 **约束限制**: 不涉及 **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
+    * excludeFileType  **参数解释**: 排除文件类型 **约束限制**: 不涉及 **取值范围**: 文件类型只能输入字母、数字，最多支持10个文件类型，每个文件类型长度不超过10个字符，多个文件类型以分号隔开。 **默认取值**: 不涉及
+    * protectMode  **参数解释**: 防护模式，仅Linux服务器支持设置防护模式为告警模式，Windows服务器仅支持拦截模式。 **约束限制**: 不涉及 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式，仅Linux服务器支持。  **默认取值**: recovery
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'protectDirList' => null,
         'excludeFileType' => null,
-        'exclueFileType' => null,
         'protectMode' => null
     ];
 
@@ -73,49 +69,43 @@ class WebTamperProtectDirRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * protectDirList  防护目录列表
-    * excludeFileType  排除文件类型
-    * exclueFileType  排除文件类型
-    * protectMode  **参数解释**: 防护模式 **约束限制**: 不涉及 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式。  **默认取值**: recovery
+    * protectDirList  **参数解释**: 防护目录列表 **约束限制**: 不涉及 **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
+    * excludeFileType  **参数解释**: 排除文件类型 **约束限制**: 不涉及 **取值范围**: 文件类型只能输入字母、数字，最多支持10个文件类型，每个文件类型长度不超过10个字符，多个文件类型以分号隔开。 **默认取值**: 不涉及
+    * protectMode  **参数解释**: 防护模式，仅Linux服务器支持设置防护模式为告警模式，Windows服务器仅支持拦截模式。 **约束限制**: 不涉及 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式，仅Linux服务器支持。  **默认取值**: recovery
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'protectDirList' => 'protect_dir_list',
             'excludeFileType' => 'exclude_file_type',
-            'exclueFileType' => 'exclue_file_type',
             'protectMode' => 'protect_mode'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * protectDirList  防护目录列表
-    * excludeFileType  排除文件类型
-    * exclueFileType  排除文件类型
-    * protectMode  **参数解释**: 防护模式 **约束限制**: 不涉及 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式。  **默认取值**: recovery
+    * protectDirList  **参数解释**: 防护目录列表 **约束限制**: 不涉及 **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
+    * excludeFileType  **参数解释**: 排除文件类型 **约束限制**: 不涉及 **取值范围**: 文件类型只能输入字母、数字，最多支持10个文件类型，每个文件类型长度不超过10个字符，多个文件类型以分号隔开。 **默认取值**: 不涉及
+    * protectMode  **参数解释**: 防护模式，仅Linux服务器支持设置防护模式为告警模式，Windows服务器仅支持拦截模式。 **约束限制**: 不涉及 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式，仅Linux服务器支持。  **默认取值**: recovery
     *
     * @var string[]
     */
     protected static $setters = [
             'protectDirList' => 'setProtectDirList',
             'excludeFileType' => 'setExcludeFileType',
-            'exclueFileType' => 'setExclueFileType',
             'protectMode' => 'setProtectMode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * protectDirList  防护目录列表
-    * excludeFileType  排除文件类型
-    * exclueFileType  排除文件类型
-    * protectMode  **参数解释**: 防护模式 **约束限制**: 不涉及 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式。  **默认取值**: recovery
+    * protectDirList  **参数解释**: 防护目录列表 **约束限制**: 不涉及 **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
+    * excludeFileType  **参数解释**: 排除文件类型 **约束限制**: 不涉及 **取值范围**: 文件类型只能输入字母、数字，最多支持10个文件类型，每个文件类型长度不超过10个字符，多个文件类型以分号隔开。 **默认取值**: 不涉及
+    * protectMode  **参数解释**: 防护模式，仅Linux服务器支持设置防护模式为告警模式，Windows服务器仅支持拦截模式。 **约束限制**: 不涉及 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式，仅Linux服务器支持。  **默认取值**: recovery
     *
     * @var string[]
     */
     protected static $getters = [
             'protectDirList' => 'getProtectDirList',
             'excludeFileType' => 'getExcludeFileType',
-            'exclueFileType' => 'getExclueFileType',
             'protectMode' => 'getProtectMode'
     ];
 
@@ -179,7 +169,6 @@ class WebTamperProtectDirRequestInfo implements ModelInterface, ArrayAccess
     {
         $this->container['protectDirList'] = isset($data['protectDirList']) ? $data['protectDirList'] : null;
         $this->container['excludeFileType'] = isset($data['excludeFileType']) ? $data['excludeFileType'] : null;
-        $this->container['exclueFileType'] = isset($data['exclueFileType']) ? $data['exclueFileType'] : null;
         $this->container['protectMode'] = isset($data['protectMode']) ? $data['protectMode'] : null;
     }
 
@@ -191,17 +180,14 @@ class WebTamperProtectDirRequestInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['protectDirList'] === null) {
+            $invalidProperties[] = "'protectDirList' can't be null";
+        }
             if (!is_null($this->container['excludeFileType']) && (mb_strlen($this->container['excludeFileType']) > 512)) {
                 $invalidProperties[] = "invalid value for 'excludeFileType', the character length must be smaller than or equal to 512.";
             }
             if (!is_null($this->container['excludeFileType']) && (mb_strlen($this->container['excludeFileType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'excludeFileType', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['exclueFileType']) && (mb_strlen($this->container['exclueFileType']) > 512)) {
-                $invalidProperties[] = "invalid value for 'exclueFileType', the character length must be smaller than or equal to 512.";
-            }
-            if (!is_null($this->container['exclueFileType']) && (mb_strlen($this->container['exclueFileType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'exclueFileType', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['protectMode']) && (mb_strlen($this->container['protectMode']) > 128)) {
                 $invalidProperties[] = "invalid value for 'protectMode', the character length must be smaller than or equal to 128.";
@@ -228,9 +214,9 @@ class WebTamperProtectDirRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectDirList
-    *  防护目录列表
+    *  **参数解释**: 防护目录列表 **约束限制**: 不涉及 **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
     *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\WebTamperProtectHostDirRequestInfo[]|null
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\WebTamperProtectHostDirRequestInfo[]
     */
     public function getProtectDirList()
     {
@@ -240,7 +226,7 @@ class WebTamperProtectDirRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectDirList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\WebTamperProtectHostDirRequestInfo[]|null $protectDirList 防护目录列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\WebTamperProtectHostDirRequestInfo[] $protectDirList **参数解释**: 防护目录列表 **约束限制**: 不涉及 **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -252,7 +238,7 @@ class WebTamperProtectDirRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets excludeFileType
-    *  排除文件类型
+    *  **参数解释**: 排除文件类型 **约束限制**: 不涉及 **取值范围**: 文件类型只能输入字母、数字，最多支持10个文件类型，每个文件类型长度不超过10个字符，多个文件类型以分号隔开。 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -264,7 +250,7 @@ class WebTamperProtectDirRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets excludeFileType
     *
-    * @param string|null $excludeFileType 排除文件类型
+    * @param string|null $excludeFileType **参数解释**: 排除文件类型 **约束限制**: 不涉及 **取值范围**: 文件类型只能输入字母、数字，最多支持10个文件类型，每个文件类型长度不超过10个字符，多个文件类型以分号隔开。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -275,32 +261,8 @@ class WebTamperProtectDirRequestInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets exclueFileType
-    *  排除文件类型
-    *
-    * @return string|null
-    */
-    public function getExclueFileType()
-    {
-        return $this->container['exclueFileType'];
-    }
-
-    /**
-    * Sets exclueFileType
-    *
-    * @param string|null $exclueFileType 排除文件类型
-    *
-    * @return $this
-    */
-    public function setExclueFileType($exclueFileType)
-    {
-        $this->container['exclueFileType'] = $exclueFileType;
-        return $this;
-    }
-
-    /**
     * Gets protectMode
-    *  **参数解释**: 防护模式 **约束限制**: 不涉及 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式。  **默认取值**: recovery
+    *  **参数解释**: 防护模式，仅Linux服务器支持设置防护模式为告警模式，Windows服务器仅支持拦截模式。 **约束限制**: 不涉及 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式，仅Linux服务器支持。  **默认取值**: recovery
     *
     * @return string|null
     */
@@ -312,7 +274,7 @@ class WebTamperProtectDirRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectMode
     *
-    * @param string|null $protectMode **参数解释**: 防护模式 **约束限制**: 不涉及 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式。  **默认取值**: recovery
+    * @param string|null $protectMode **参数解释**: 防护模式，仅Linux服务器支持设置防护模式为告警模式，Windows服务器仅支持拦截模式。 **约束限制**: 不涉及 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式，仅Linux服务器支持。  **默认取值**: recovery
     *
     * @return $this
     */

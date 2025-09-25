@@ -21,7 +21,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * agentId  **参数解释** agent标识 **取值范围** 长度1-128
-    * changeType  **参数解释** 变更类型 **取值范围**     - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
+    * changeType  **参数解释** 变更类型 **取值范围** - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
     * hostId  **参数解释** 主机ID **取值范围** 长度1-128
     * hostName  **参数解释** 服务器名称 **取值范围** 长度1-128
     * privateIp  **参数解释** 服务器私有IP **取值范围** 长度1-128
@@ -55,7 +55,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * agentId  **参数解释** agent标识 **取值范围** 长度1-128
-    * changeType  **参数解释** 变更类型 **取值范围**     - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
+    * changeType  **参数解释** 变更类型 **取值范围** - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
     * hostId  **参数解释** 主机ID **取值范围** 长度1-128
     * hostName  **参数解释** 服务器名称 **取值范围** 长度1-128
     * privateIp  **参数解释** 服务器私有IP **取值范围** 长度1-128
@@ -110,7 +110,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * agentId  **参数解释** agent标识 **取值范围** 长度1-128
-    * changeType  **参数解释** 变更类型 **取值范围**     - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
+    * changeType  **参数解释** 变更类型 **取值范围** - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
     * hostId  **参数解释** 主机ID **取值范围** 长度1-128
     * hostName  **参数解释** 服务器名称 **取值范围** 长度1-128
     * privateIp  **参数解释** 服务器私有IP **取值范围** 长度1-128
@@ -144,7 +144,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * agentId  **参数解释** agent标识 **取值范围** 长度1-128
-    * changeType  **参数解释** 变更类型 **取值范围**     - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
+    * changeType  **参数解释** 变更类型 **取值范围** - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
     * hostId  **参数解释** 主机ID **取值范围** 长度1-128
     * hostName  **参数解释** 服务器名称 **取值范围** 长度1-128
     * privateIp  **参数解释** 服务器私有IP **取值范围** 长度1-128
@@ -178,7 +178,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * agentId  **参数解释** agent标识 **取值范围** 长度1-128
-    * changeType  **参数解释** 变更类型 **取值范围**     - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
+    * changeType  **参数解释** 变更类型 **取值范围** - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
     * hostId  **参数解释** 主机ID **取值范围** 长度1-128
     * hostName  **参数解释** 服务器名称 **取值范围** 长度1-128
     * privateIp  **参数解释** 服务器私有IP **取值范围** 长度1-128
@@ -396,7 +396,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets changeType
-    *  **参数解释** 变更类型 **取值范围**     - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
+    *  **参数解释** 变更类型 **取值范围** - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
     *
     * @return string|null
     */
@@ -408,7 +408,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets changeType
     *
-    * @param string|null $changeType **参数解释** 变更类型 **取值范围**     - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
+    * @param string|null $changeType **参数解释** 变更类型 **取值范围** - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
     *
     * @return $this
     */

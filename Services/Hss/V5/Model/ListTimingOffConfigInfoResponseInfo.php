@@ -20,30 +20,26 @@ class ListTimingOffConfigInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * weekOffList  **参数解释**: 自动关闭防护周期列表 **取值范围**: 最少0条，最多7条
+    * weekOffList  **参数解释**: 自动关闭防护周期列表。1代表周一；2代表周二；3代表周三；4代表周四；5代表周五；6代表周六；7代表周日。 **取值范围**: 最少0条，最多7条
     * timingRangeList  **参数解释**: 自动关闭防护时间段 **取值范围**: 最少0条，最多5条
-    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'weekOffList' => 'int[]',
-            'timingRangeList' => '\HuaweiCloud\SDK\Hss\V5\Model\TimingRangeConfigInfo[]',
-            'totalNum' => 'int'
+            'timingRangeList' => '\HuaweiCloud\SDK\Hss\V5\Model\TimingRangeConfigInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * weekOffList  **参数解释**: 自动关闭防护周期列表 **取值范围**: 最少0条，最多7条
+    * weekOffList  **参数解释**: 自动关闭防护周期列表。1代表周一；2代表周二；3代表周三；4代表周四；5代表周五；6代表周六；7代表周日。 **取值范围**: 最少0条，最多7条
     * timingRangeList  **参数解释**: 自动关闭防护时间段 **取值范围**: 最少0条，最多5条
-    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'weekOffList' => 'int32',
-        'timingRangeList' => null,
-        'totalNum' => 'int32'
+        'timingRangeList' => null
     ];
 
     /**
@@ -69,44 +65,38 @@ class ListTimingOffConfigInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * weekOffList  **参数解释**: 自动关闭防护周期列表 **取值范围**: 最少0条，最多7条
+    * weekOffList  **参数解释**: 自动关闭防护周期列表。1代表周一；2代表周二；3代表周三；4代表周四；5代表周五；6代表周六；7代表周日。 **取值范围**: 最少0条，最多7条
     * timingRangeList  **参数解释**: 自动关闭防护时间段 **取值范围**: 最少0条，最多5条
-    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'weekOffList' => 'week_off_list',
-            'timingRangeList' => 'timing_range_list',
-            'totalNum' => 'total_num'
+            'timingRangeList' => 'timing_range_list'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * weekOffList  **参数解释**: 自动关闭防护周期列表 **取值范围**: 最少0条，最多7条
+    * weekOffList  **参数解释**: 自动关闭防护周期列表。1代表周一；2代表周二；3代表周三；4代表周四；5代表周五；6代表周六；7代表周日。 **取值范围**: 最少0条，最多7条
     * timingRangeList  **参数解释**: 自动关闭防护时间段 **取值范围**: 最少0条，最多5条
-    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
     protected static $setters = [
             'weekOffList' => 'setWeekOffList',
-            'timingRangeList' => 'setTimingRangeList',
-            'totalNum' => 'setTotalNum'
+            'timingRangeList' => 'setTimingRangeList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * weekOffList  **参数解释**: 自动关闭防护周期列表 **取值范围**: 最少0条，最多7条
+    * weekOffList  **参数解释**: 自动关闭防护周期列表。1代表周一；2代表周二；3代表周三；4代表周四；5代表周五；6代表周六；7代表周日。 **取值范围**: 最少0条，最多7条
     * timingRangeList  **参数解释**: 自动关闭防护时间段 **取值范围**: 最少0条，最多5条
-    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
     protected static $getters = [
             'weekOffList' => 'getWeekOffList',
-            'timingRangeList' => 'getTimingRangeList',
-            'totalNum' => 'getTotalNum'
+            'timingRangeList' => 'getTimingRangeList'
     ];
 
     /**
@@ -169,7 +159,6 @@ class ListTimingOffConfigInfoResponseInfo implements ModelInterface, ArrayAccess
     {
         $this->container['weekOffList'] = isset($data['weekOffList']) ? $data['weekOffList'] : null;
         $this->container['timingRangeList'] = isset($data['timingRangeList']) ? $data['timingRangeList'] : null;
-        $this->container['totalNum'] = isset($data['totalNum']) ? $data['totalNum'] : null;
     }
 
     /**
@@ -180,12 +169,6 @@ class ListTimingOffConfigInfoResponseInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 2147483647.";
-            }
-            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] < 0)) {
-                $invalidProperties[] = "invalid value for 'totalNum', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -202,7 +185,7 @@ class ListTimingOffConfigInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets weekOffList
-    *  **参数解释**: 自动关闭防护周期列表 **取值范围**: 最少0条，最多7条
+    *  **参数解释**: 自动关闭防护周期列表。1代表周一；2代表周二；3代表周三；4代表周四；5代表周五；6代表周六；7代表周日。 **取值范围**: 最少0条，最多7条
     *
     * @return int[]|null
     */
@@ -214,7 +197,7 @@ class ListTimingOffConfigInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets weekOffList
     *
-    * @param int[]|null $weekOffList **参数解释**: 自动关闭防护周期列表 **取值范围**: 最少0条，最多7条
+    * @param int[]|null $weekOffList **参数解释**: 自动关闭防护周期列表。1代表周一；2代表周二；3代表周三；4代表周四；5代表周五；6代表周六；7代表周日。 **取值范围**: 最少0条，最多7条
     *
     * @return $this
     */
@@ -245,30 +228,6 @@ class ListTimingOffConfigInfoResponseInfo implements ModelInterface, ArrayAccess
     public function setTimingRangeList($timingRangeList)
     {
         $this->container['timingRangeList'] = $timingRangeList;
-        return $this;
-    }
-
-    /**
-    * Gets totalNum
-    *  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
-    *
-    * @return int|null
-    */
-    public function getTotalNum()
-    {
-        return $this->container['totalNum'];
-    }
-
-    /**
-    * Sets totalNum
-    *
-    * @param int|null $totalNum **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
-    *
-    * @return $this
-    */
-    public function setTotalNum($totalNum)
-    {
-        $this->container['totalNum'] = $totalNum;
         return $this;
     }
 

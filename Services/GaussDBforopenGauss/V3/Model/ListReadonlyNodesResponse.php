@@ -21,25 +21,25 @@ class ListReadonlyNodesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instances  **参数解释**: 只读节点列表。 **约束限制**: 不涉及。
+    * nodes  **参数解释**: 只读节点列表。 **约束限制**: 不涉及。
     * maxReadonlyNodeNum  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instances' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListReadonlyNodesResult[]',
+            'nodes' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListReadonlyNodesResult[]',
             'maxReadonlyNodeNum' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instances  **参数解释**: 只读节点列表。 **约束限制**: 不涉及。
+    * nodes  **参数解释**: 只读节点列表。 **约束限制**: 不涉及。
     * maxReadonlyNodeNum  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instances' => null,
+        'nodes' => null,
         'maxReadonlyNodeNum' => null
     ];
 
@@ -66,37 +66,37 @@ class ListReadonlyNodesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instances  **参数解释**: 只读节点列表。 **约束限制**: 不涉及。
+    * nodes  **参数解释**: 只读节点列表。 **约束限制**: 不涉及。
     * maxReadonlyNodeNum  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instances' => 'instances',
+            'nodes' => 'nodes',
             'maxReadonlyNodeNum' => 'max_readonly_node_num'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instances  **参数解释**: 只读节点列表。 **约束限制**: 不涉及。
+    * nodes  **参数解释**: 只读节点列表。 **约束限制**: 不涉及。
     * maxReadonlyNodeNum  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'instances' => 'setInstances',
+            'nodes' => 'setNodes',
             'maxReadonlyNodeNum' => 'setMaxReadonlyNodeNum'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instances  **参数解释**: 只读节点列表。 **约束限制**: 不涉及。
+    * nodes  **参数解释**: 只读节点列表。 **约束限制**: 不涉及。
     * maxReadonlyNodeNum  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'instances' => 'getInstances',
+            'nodes' => 'getNodes',
             'maxReadonlyNodeNum' => 'getMaxReadonlyNodeNum'
     ];
 
@@ -158,7 +158,7 @@ class ListReadonlyNodesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['instances'] = isset($data['instances']) ? $data['instances'] : null;
+        $this->container['nodes'] = isset($data['nodes']) ? $data['nodes'] : null;
         $this->container['maxReadonlyNodeNum'] = isset($data['maxReadonlyNodeNum']) ? $data['maxReadonlyNodeNum'] : null;
     }
 
@@ -185,26 +185,26 @@ class ListReadonlyNodesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets instances
+    * Gets nodes
     *  **参数解释**: 只读节点列表。 **约束限制**: 不涉及。
     *
     * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListReadonlyNodesResult[]|null
     */
-    public function getInstances()
+    public function getNodes()
     {
-        return $this->container['instances'];
+        return $this->container['nodes'];
     }
 
     /**
-    * Sets instances
+    * Sets nodes
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListReadonlyNodesResult[]|null $instances **参数解释**: 只读节点列表。 **约束限制**: 不涉及。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListReadonlyNodesResult[]|null $nodes **参数解释**: 只读节点列表。 **约束限制**: 不涉及。
     *
     * @return $this
     */
-    public function setInstances($instances)
+    public function setNodes($nodes)
     {
-        $this->container['instances'] = $instances;
+        $this->container['nodes'] = $nodes;
         return $this;
     }
 

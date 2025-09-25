@@ -26,7 +26,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     * namespace  组织名称
     * imageName  镜像名称
     * imageVersion  镜像版本
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image：SWR私有镜像仓库。   - shared_image：SWR共享镜像仓库。   - instance_image：SWR企业仓库。
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * latestVersion  仅关注最新版本镜像
     * imageSize  镜像大小
@@ -62,7 +62,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     * namespace  组织名称
     * imageName  镜像名称
     * imageVersion  镜像版本
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image：SWR私有镜像仓库。   - shared_image：SWR共享镜像仓库。   - instance_image：SWR企业仓库。
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * latestVersion  仅关注最新版本镜像
     * imageSize  镜像大小
@@ -119,7 +119,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     * namespace  组织名称
     * imageName  镜像名称
     * imageVersion  镜像版本
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image：SWR私有镜像仓库。   - shared_image：SWR共享镜像仓库。   - instance_image：SWR企业仓库。
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * latestVersion  仅关注最新版本镜像
     * imageSize  镜像大小
@@ -155,7 +155,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     * namespace  组织名称
     * imageName  镜像名称
     * imageVersion  镜像版本
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image：SWR私有镜像仓库。   - shared_image：SWR共享镜像仓库。   - instance_image：SWR企业仓库。
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * latestVersion  仅关注最新版本镜像
     * imageSize  镜像大小
@@ -191,7 +191,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     * namespace  组织名称
     * imageName  镜像名称
     * imageVersion  镜像版本
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image：SWR私有镜像仓库。   - shared_image：SWR共享镜像仓库。   - instance_image：SWR企业仓库。
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * latestVersion  仅关注最新版本镜像
     * imageSize  镜像大小
@@ -343,11 +343,17 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['imageType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'imageType', the character length must be bigger than or equal to 1.";
             }
+            if (!preg_match("/^private_image|shared_image|instance_image$/", $this->container['imageType'])) {
+                $invalidProperties[] = "invalid value for 'imageType', must be conform to the pattern /^private_image|shared_image|instance_image$/.";
+            }
             if (!is_null($this->container['scanStatus']) && (mb_strlen($this->container['scanStatus']) > 32)) {
                 $invalidProperties[] = "invalid value for 'scanStatus', the character length must be smaller than or equal to 32.";
             }
             if (!is_null($this->container['scanStatus']) && (mb_strlen($this->container['scanStatus']) < 1)) {
                 $invalidProperties[] = "invalid value for 'scanStatus', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['scanStatus']) && !preg_match("/^unscan|success|scanning|failed|download_failed|image_oversized/", $this->container['scanStatus'])) {
+                $invalidProperties[] = "invalid value for 'scanStatus', must be conform to the pattern /^unscan|success|scanning|failed|download_failed|image_oversized/.";
             }
             if (!is_null($this->container['imageSize']) && ($this->container['imageSize'] > 2147483547)) {
                 $invalidProperties[] = "invalid value for 'imageSize', must be smaller than or equal to 2147483547.";
@@ -539,7 +545,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageType
-    *  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    *  镜像类型，包含如下:   - private_image：SWR私有镜像仓库。   - shared_image：SWR共享镜像仓库。   - instance_image：SWR企业仓库。
     *
     * @return string
     */
@@ -551,7 +557,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageType
     *
-    * @param string $imageType 镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * @param string $imageType 镜像类型，包含如下:   - private_image：SWR私有镜像仓库。   - shared_image：SWR共享镜像仓库。   - instance_image：SWR企业仓库。
     *
     * @return $this
     */

@@ -27,7 +27,7 @@ class ListWebTamperHostRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  服务器公网IP
-    * groupId  服务器组ID
+    * groupId  **参数解释**: 服务器组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * osType  操作系统类型，包含如下2种。   - Linux：Linux。   - Windows：Windows。
     * webAppName  Web应用名称
     *
@@ -55,7 +55,7 @@ class ListWebTamperHostRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  服务器公网IP
-    * groupId  服务器组ID
+    * groupId  **参数解释**: 服务器组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * osType  操作系统类型，包含如下2种。   - Linux：Linux。   - Windows：Windows。
     * webAppName  Web应用名称
     *
@@ -104,7 +104,7 @@ class ListWebTamperHostRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  服务器公网IP
-    * groupId  服务器组ID
+    * groupId  **参数解释**: 服务器组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * osType  操作系统类型，包含如下2种。   - Linux：Linux。   - Windows：Windows。
     * webAppName  Web应用名称
     *
@@ -132,7 +132,7 @@ class ListWebTamperHostRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  服务器公网IP
-    * groupId  服务器组ID
+    * groupId  **参数解释**: 服务器组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * osType  操作系统类型，包含如下2种。   - Linux：Linux。   - Windows：Windows。
     * webAppName  Web应用名称
     *
@@ -160,7 +160,7 @@ class ListWebTamperHostRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  服务器公网IP
-    * groupId  服务器组ID
+    * groupId  **参数解释**: 服务器组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * osType  操作系统类型，包含如下2种。   - Linux：Linux。   - Windows：Windows。
     * webAppName  Web应用名称
     *
@@ -516,7 +516,7 @@ class ListWebTamperHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  服务器组ID
+    *  **参数解释**: 服务器组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -528,7 +528,7 @@ class ListWebTamperHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 服务器组ID
+    * @param string|null $groupId **参数解释**: 服务器组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return $this
     */

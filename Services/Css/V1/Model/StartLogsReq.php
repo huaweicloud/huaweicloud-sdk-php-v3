@@ -235,15 +235,6 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['agency'] === null) {
-            $invalidProperties[] = "'agency' can't be null";
-        }
-        if ($this->container['logBasePath'] === null) {
-            $invalidProperties[] = "'logBasePath' can't be null";
-        }
-        if ($this->container['logBucket'] === null) {
-            $invalidProperties[] = "'logBucket' can't be null";
-        }
             if (!is_null($this->container['keepDays']) && ($this->container['keepDays'] > 3650)) {
                 $invalidProperties[] = "invalid value for 'keepDays', must be smaller than or equal to 3650.";
             }
@@ -268,7 +259,7 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     * Gets agency
     *  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     *
-    * @return string
+    * @return string|null
     */
     public function getAgency()
     {
@@ -278,7 +269,7 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     /**
     * Sets agency
     *
-    * @param string $agency 委托名称，委托给CSS，允许CSS调用您的其他云服务。
+    * @param string|null $agency 委托名称，委托给CSS，允许CSS调用您的其他云服务。
     *
     * @return $this
     */
@@ -292,7 +283,7 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     * Gets logBasePath
     *  日志在OBS桶中的备份路径。
     *
-    * @return string
+    * @return string|null
     */
     public function getLogBasePath()
     {
@@ -302,7 +293,7 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     /**
     * Sets logBasePath
     *
-    * @param string $logBasePath 日志在OBS桶中的备份路径。
+    * @param string|null $logBasePath 日志在OBS桶中的备份路径。
     *
     * @return $this
     */
@@ -316,7 +307,7 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     * Gets logBucket
     *  用于存储日志的OBS桶的桶名。
     *
-    * @return string
+    * @return string|null
     */
     public function getLogBucket()
     {
@@ -326,7 +317,7 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     /**
     * Sets logBucket
     *
-    * @param string $logBucket 用于存储日志的OBS桶的桶名。
+    * @param string|null $logBucket 用于存储日志的OBS桶的桶名。
     *
     * @return $this
     */

@@ -23,7 +23,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
     * description  **参数解释**： 消息描述。 **取值范围**： 不涉及。
     * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * specification  **参数解释**： 实例规格。 **取值范围**： 不涉及。
@@ -161,7 +161,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
     * description  **参数解释**： 消息描述。 **取值范围**： 不涉及。
     * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * specification  **参数解释**： 实例规格。 **取值范围**： 不涉及。
@@ -320,7 +320,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
     * description  **参数解释**： 消息描述。 **取值范围**： 不涉及。
     * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * specification  **参数解释**： 实例规格。 **取值范围**： 不涉及。
@@ -458,7 +458,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
     * description  **参数解释**： 消息描述。 **取值范围**： 不涉及。
     * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * specification  **参数解释**： 实例规格。 **取值范围**： 不涉及。
@@ -596,7 +596,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
     * description  **参数解释**： 消息描述。 **取值范围**： 不涉及。
     * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * specification  **参数解释**： 实例规格。 **取值范围**： 不涉及。
@@ -950,7 +950,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 状态。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
     *
     * @return string|null
     */
@@ -962,7 +962,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
     *
     * @return $this
     */

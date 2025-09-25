@@ -24,6 +24,7 @@ class CreateEsListenerRequestBody implements ModelInterface, ArrayAccess
     * protocolPort  端口。
     * serverCertId  server证书Id。如protocol为HTTPS则该字段必选。
     * caCertId  CA证书Id。如protocol为HTTPS且为双向认证时则该字段必选。
+    * type  类型：searchTool 表示对Elasticsearch/Opensearch进行监听器配，viewTool 表示对Kibana/Opensearch Dashboard进行监听器配置，默认为searchTool 。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class CreateEsListenerRequestBody implements ModelInterface, ArrayAccess
             'protocol' => 'string',
             'protocolPort' => 'int',
             'serverCertId' => 'string',
-            'caCertId' => 'string'
+            'caCertId' => 'string',
+            'type' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class CreateEsListenerRequestBody implements ModelInterface, ArrayAccess
     * protocolPort  端口。
     * serverCertId  server证书Id。如protocol为HTTPS则该字段必选。
     * caCertId  CA证书Id。如protocol为HTTPS且为双向认证时则该字段必选。
+    * type  类型：searchTool 表示对Elasticsearch/Opensearch进行监听器配，viewTool 表示对Kibana/Opensearch Dashboard进行监听器配置，默认为searchTool 。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class CreateEsListenerRequestBody implements ModelInterface, ArrayAccess
         'protocol' => null,
         'protocolPort' => null,
         'serverCertId' => null,
-        'caCertId' => null
+        'caCertId' => null,
+        'type' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class CreateEsListenerRequestBody implements ModelInterface, ArrayAccess
     * protocolPort  端口。
     * serverCertId  server证书Id。如protocol为HTTPS则该字段必选。
     * caCertId  CA证书Id。如protocol为HTTPS且为双向认证时则该字段必选。
+    * type  类型：searchTool 表示对Elasticsearch/Opensearch进行监听器配，viewTool 表示对Kibana/Opensearch Dashboard进行监听器配置，默认为searchTool 。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class CreateEsListenerRequestBody implements ModelInterface, ArrayAccess
             'protocol' => 'protocol',
             'protocolPort' => 'protocol_port',
             'serverCertId' => 'server_cert_id',
-            'caCertId' => 'ca_cert_id'
+            'caCertId' => 'ca_cert_id',
+            'type' => 'type'
     ];
 
     /**
@@ -93,6 +99,7 @@ class CreateEsListenerRequestBody implements ModelInterface, ArrayAccess
     * protocolPort  端口。
     * serverCertId  server证书Id。如protocol为HTTPS则该字段必选。
     * caCertId  CA证书Id。如protocol为HTTPS且为双向认证时则该字段必选。
+    * type  类型：searchTool 表示对Elasticsearch/Opensearch进行监听器配，viewTool 表示对Kibana/Opensearch Dashboard进行监听器配置，默认为searchTool 。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class CreateEsListenerRequestBody implements ModelInterface, ArrayAccess
             'protocol' => 'setProtocol',
             'protocolPort' => 'setProtocolPort',
             'serverCertId' => 'setServerCertId',
-            'caCertId' => 'setCaCertId'
+            'caCertId' => 'setCaCertId',
+            'type' => 'setType'
     ];
 
     /**
@@ -109,6 +117,7 @@ class CreateEsListenerRequestBody implements ModelInterface, ArrayAccess
     * protocolPort  端口。
     * serverCertId  server证书Id。如protocol为HTTPS则该字段必选。
     * caCertId  CA证书Id。如protocol为HTTPS且为双向认证时则该字段必选。
+    * type  类型：searchTool 表示对Elasticsearch/Opensearch进行监听器配，viewTool 表示对Kibana/Opensearch Dashboard进行监听器配置，默认为searchTool 。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class CreateEsListenerRequestBody implements ModelInterface, ArrayAccess
             'protocol' => 'getProtocol',
             'protocolPort' => 'getProtocolPort',
             'serverCertId' => 'getServerCertId',
-            'caCertId' => 'getCaCertId'
+            'caCertId' => 'getCaCertId',
+            'type' => 'getType'
     ];
 
     /**
@@ -181,6 +191,7 @@ class CreateEsListenerRequestBody implements ModelInterface, ArrayAccess
         $this->container['protocolPort'] = isset($data['protocolPort']) ? $data['protocolPort'] : null;
         $this->container['serverCertId'] = isset($data['serverCertId']) ? $data['serverCertId'] : null;
         $this->container['caCertId'] = isset($data['caCertId']) ? $data['caCertId'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -304,6 +315,30 @@ class CreateEsListenerRequestBody implements ModelInterface, ArrayAccess
     public function setCaCertId($caCertId)
     {
         $this->container['caCertId'] = $caCertId;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  类型：searchTool 表示对Elasticsearch/Opensearch进行监听器配，viewTool 表示对Kibana/Opensearch Dashboard进行监听器配置，默认为searchTool 。
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 类型：searchTool 表示对Elasticsearch/Opensearch进行监听器配，viewTool 表示对Kibana/Opensearch Dashboard进行监听器配置，默认为searchTool 。
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

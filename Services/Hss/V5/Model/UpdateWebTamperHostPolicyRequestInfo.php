@@ -21,11 +21,11 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * protectDirInfo  protectDirInfo
-    * enableTimingOff  定时开关状态
+    * enableTimingOff  **参数解释**: 定时开关设置状态 **约束限制**: 不涉及 **取值范围**: - True ：开启定时关闭防护功能，必须填写timing_off_config_info。 - False ：关闭定时关闭防护功能，无需填写timing_off_config_info。  **默认取值**: False
     * timingOffConfigInfo  timingOffConfigInfo
-    * enableRaspProtect  动态网页防篡改开启状态
-    * raspPath  动态网页防篡改的Tomcat bin目录
-    * enablePrivilegedProcess  特权进程状态
+    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态，仅Linux服务器支持。 **约束限制**: 仅Linux服务器支持开启动态网页防篡改，Windows服务器不可填写该字段。 **取值范围**: - True ：开启动态网页防篡改，必须填写rasp_path。 - False ：关闭动态网页防篡改，无需填写rasp_path。  **默认取值**: False
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录，仅Linux服务器支持。 **约束限制**: 仅Linux服务器支持配置动态网页防篡改的Tomcat bin目录，Windows服务器不可填写该字段。 **取值范围**: 字符长度1-256位，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。 **默认取值**: 不涉及
+    * enablePrivilegedProcess  **参数解释**: 特权进程开启状态 **约束限制**: 不涉及 **取值范围**: - True ：开启特权进程，必须填写privileged_process_info。 - False ：关闭特权进程，无需填写privileged_process_info。  **默认取值**: False
     * privilegedProcessInfo  privilegedProcessInfo
     *
     * @var string[]
@@ -43,11 +43,11 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     /**
     * Array of property to format mappings. Used for (de)serialization
     * protectDirInfo  protectDirInfo
-    * enableTimingOff  定时开关状态
+    * enableTimingOff  **参数解释**: 定时开关设置状态 **约束限制**: 不涉及 **取值范围**: - True ：开启定时关闭防护功能，必须填写timing_off_config_info。 - False ：关闭定时关闭防护功能，无需填写timing_off_config_info。  **默认取值**: False
     * timingOffConfigInfo  timingOffConfigInfo
-    * enableRaspProtect  动态网页防篡改开启状态
-    * raspPath  动态网页防篡改的Tomcat bin目录
-    * enablePrivilegedProcess  特权进程状态
+    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态，仅Linux服务器支持。 **约束限制**: 仅Linux服务器支持开启动态网页防篡改，Windows服务器不可填写该字段。 **取值范围**: - True ：开启动态网页防篡改，必须填写rasp_path。 - False ：关闭动态网页防篡改，无需填写rasp_path。  **默认取值**: False
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录，仅Linux服务器支持。 **约束限制**: 仅Linux服务器支持配置动态网页防篡改的Tomcat bin目录，Windows服务器不可填写该字段。 **取值范围**: 字符长度1-256位，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。 **默认取值**: 不涉及
+    * enablePrivilegedProcess  **参数解释**: 特权进程开启状态 **约束限制**: 不涉及 **取值范围**: - True ：开启特权进程，必须填写privileged_process_info。 - False ：关闭特权进程，无需填写privileged_process_info。  **默认取值**: False
     * privilegedProcessInfo  privilegedProcessInfo
     *
     * @var string[]
@@ -86,11 +86,11 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * protectDirInfo  protectDirInfo
-    * enableTimingOff  定时开关状态
+    * enableTimingOff  **参数解释**: 定时开关设置状态 **约束限制**: 不涉及 **取值范围**: - True ：开启定时关闭防护功能，必须填写timing_off_config_info。 - False ：关闭定时关闭防护功能，无需填写timing_off_config_info。  **默认取值**: False
     * timingOffConfigInfo  timingOffConfigInfo
-    * enableRaspProtect  动态网页防篡改开启状态
-    * raspPath  动态网页防篡改的Tomcat bin目录
-    * enablePrivilegedProcess  特权进程状态
+    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态，仅Linux服务器支持。 **约束限制**: 仅Linux服务器支持开启动态网页防篡改，Windows服务器不可填写该字段。 **取值范围**: - True ：开启动态网页防篡改，必须填写rasp_path。 - False ：关闭动态网页防篡改，无需填写rasp_path。  **默认取值**: False
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录，仅Linux服务器支持。 **约束限制**: 仅Linux服务器支持配置动态网页防篡改的Tomcat bin目录，Windows服务器不可填写该字段。 **取值范围**: 字符长度1-256位，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。 **默认取值**: 不涉及
+    * enablePrivilegedProcess  **参数解释**: 特权进程开启状态 **约束限制**: 不涉及 **取值范围**: - True ：开启特权进程，必须填写privileged_process_info。 - False ：关闭特权进程，无需填写privileged_process_info。  **默认取值**: False
     * privilegedProcessInfo  privilegedProcessInfo
     *
     * @var string[]
@@ -108,11 +108,11 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * protectDirInfo  protectDirInfo
-    * enableTimingOff  定时开关状态
+    * enableTimingOff  **参数解释**: 定时开关设置状态 **约束限制**: 不涉及 **取值范围**: - True ：开启定时关闭防护功能，必须填写timing_off_config_info。 - False ：关闭定时关闭防护功能，无需填写timing_off_config_info。  **默认取值**: False
     * timingOffConfigInfo  timingOffConfigInfo
-    * enableRaspProtect  动态网页防篡改开启状态
-    * raspPath  动态网页防篡改的Tomcat bin目录
-    * enablePrivilegedProcess  特权进程状态
+    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态，仅Linux服务器支持。 **约束限制**: 仅Linux服务器支持开启动态网页防篡改，Windows服务器不可填写该字段。 **取值范围**: - True ：开启动态网页防篡改，必须填写rasp_path。 - False ：关闭动态网页防篡改，无需填写rasp_path。  **默认取值**: False
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录，仅Linux服务器支持。 **约束限制**: 仅Linux服务器支持配置动态网页防篡改的Tomcat bin目录，Windows服务器不可填写该字段。 **取值范围**: 字符长度1-256位，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。 **默认取值**: 不涉及
+    * enablePrivilegedProcess  **参数解释**: 特权进程开启状态 **约束限制**: 不涉及 **取值范围**: - True ：开启特权进程，必须填写privileged_process_info。 - False ：关闭特权进程，无需填写privileged_process_info。  **默认取值**: False
     * privilegedProcessInfo  privilegedProcessInfo
     *
     * @var string[]
@@ -130,11 +130,11 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * protectDirInfo  protectDirInfo
-    * enableTimingOff  定时开关状态
+    * enableTimingOff  **参数解释**: 定时开关设置状态 **约束限制**: 不涉及 **取值范围**: - True ：开启定时关闭防护功能，必须填写timing_off_config_info。 - False ：关闭定时关闭防护功能，无需填写timing_off_config_info。  **默认取值**: False
     * timingOffConfigInfo  timingOffConfigInfo
-    * enableRaspProtect  动态网页防篡改开启状态
-    * raspPath  动态网页防篡改的Tomcat bin目录
-    * enablePrivilegedProcess  特权进程状态
+    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态，仅Linux服务器支持。 **约束限制**: 仅Linux服务器支持开启动态网页防篡改，Windows服务器不可填写该字段。 **取值范围**: - True ：开启动态网页防篡改，必须填写rasp_path。 - False ：关闭动态网页防篡改，无需填写rasp_path。  **默认取值**: False
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录，仅Linux服务器支持。 **约束限制**: 仅Linux服务器支持配置动态网页防篡改的Tomcat bin目录，Windows服务器不可填写该字段。 **取值范围**: 字符长度1-256位，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。 **默认取值**: 不涉及
+    * enablePrivilegedProcess  **参数解释**: 特权进程开启状态 **约束限制**: 不涉及 **取值范围**: - True ：开启特权进程，必须填写privileged_process_info。 - False ：关闭特权进程，无需填写privileged_process_info。  **默认取值**: False
     * privilegedProcessInfo  privilegedProcessInfo
     *
     * @var string[]
@@ -224,11 +224,14 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['raspPath']) && (mb_strlen($this->container['raspPath']) > 512)) {
-                $invalidProperties[] = "invalid value for 'raspPath', the character length must be smaller than or equal to 512.";
+        if ($this->container['protectDirInfo'] === null) {
+            $invalidProperties[] = "'protectDirInfo' can't be null";
+        }
+            if (!is_null($this->container['raspPath']) && (mb_strlen($this->container['raspPath']) > 256)) {
+                $invalidProperties[] = "invalid value for 'raspPath', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['raspPath']) && (mb_strlen($this->container['raspPath']) < 0)) {
-                $invalidProperties[] = "invalid value for 'raspPath', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['raspPath']) && (mb_strlen($this->container['raspPath']) < 1)) {
+                $invalidProperties[] = "invalid value for 'raspPath', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -248,7 +251,7 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     * Gets protectDirInfo
     *  protectDirInfo
     *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\WebTamperProtectDirRequestInfo|null
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\WebTamperProtectDirRequestInfo
     */
     public function getProtectDirInfo()
     {
@@ -258,7 +261,7 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     /**
     * Sets protectDirInfo
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\WebTamperProtectDirRequestInfo|null $protectDirInfo protectDirInfo
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\WebTamperProtectDirRequestInfo $protectDirInfo protectDirInfo
     *
     * @return $this
     */
@@ -270,7 +273,7 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
 
     /**
     * Gets enableTimingOff
-    *  定时开关状态
+    *  **参数解释**: 定时开关设置状态 **约束限制**: 不涉及 **取值范围**: - True ：开启定时关闭防护功能，必须填写timing_off_config_info。 - False ：关闭定时关闭防护功能，无需填写timing_off_config_info。  **默认取值**: False
     *
     * @return bool|null
     */
@@ -282,7 +285,7 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     /**
     * Sets enableTimingOff
     *
-    * @param bool|null $enableTimingOff 定时开关状态
+    * @param bool|null $enableTimingOff **参数解释**: 定时开关设置状态 **约束限制**: 不涉及 **取值范围**: - True ：开启定时关闭防护功能，必须填写timing_off_config_info。 - False ：关闭定时关闭防护功能，无需填写timing_off_config_info。  **默认取值**: False
     *
     * @return $this
     */
@@ -318,7 +321,7 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
 
     /**
     * Gets enableRaspProtect
-    *  动态网页防篡改开启状态
+    *  **参数解释**: 动态网页防篡改开启状态，仅Linux服务器支持。 **约束限制**: 仅Linux服务器支持开启动态网页防篡改，Windows服务器不可填写该字段。 **取值范围**: - True ：开启动态网页防篡改，必须填写rasp_path。 - False ：关闭动态网页防篡改，无需填写rasp_path。  **默认取值**: False
     *
     * @return bool|null
     */
@@ -330,7 +333,7 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     /**
     * Sets enableRaspProtect
     *
-    * @param bool|null $enableRaspProtect 动态网页防篡改开启状态
+    * @param bool|null $enableRaspProtect **参数解释**: 动态网页防篡改开启状态，仅Linux服务器支持。 **约束限制**: 仅Linux服务器支持开启动态网页防篡改，Windows服务器不可填写该字段。 **取值范围**: - True ：开启动态网页防篡改，必须填写rasp_path。 - False ：关闭动态网页防篡改，无需填写rasp_path。  **默认取值**: False
     *
     * @return $this
     */
@@ -342,7 +345,7 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
 
     /**
     * Gets raspPath
-    *  动态网页防篡改的Tomcat bin目录
+    *  **参数解释**: 动态网页防篡改的Tomcat bin目录，仅Linux服务器支持。 **约束限制**: 仅Linux服务器支持配置动态网页防篡改的Tomcat bin目录，Windows服务器不可填写该字段。 **取值范围**: 字符长度1-256位，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -354,7 +357,7 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     /**
     * Sets raspPath
     *
-    * @param string|null $raspPath 动态网页防篡改的Tomcat bin目录
+    * @param string|null $raspPath **参数解释**: 动态网页防篡改的Tomcat bin目录，仅Linux服务器支持。 **约束限制**: 仅Linux服务器支持配置动态网页防篡改的Tomcat bin目录，Windows服务器不可填写该字段。 **取值范围**: 字符长度1-256位，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -366,7 +369,7 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
 
     /**
     * Gets enablePrivilegedProcess
-    *  特权进程状态
+    *  **参数解释**: 特权进程开启状态 **约束限制**: 不涉及 **取值范围**: - True ：开启特权进程，必须填写privileged_process_info。 - False ：关闭特权进程，无需填写privileged_process_info。  **默认取值**: False
     *
     * @return bool|null
     */
@@ -378,7 +381,7 @@ class UpdateWebTamperHostPolicyRequestInfo implements ModelInterface, ArrayAcces
     /**
     * Sets enablePrivilegedProcess
     *
-    * @param bool|null $enablePrivilegedProcess 特权进程状态
+    * @param bool|null $enablePrivilegedProcess **参数解释**: 特权进程开启状态 **约束限制**: 不涉及 **取值范围**: - True ：开启特权进程，必须填写privileged_process_info。 - False ：关闭特权进程，无需填写privileged_process_info。  **默认取值**: False
     *
     * @return $this
     */

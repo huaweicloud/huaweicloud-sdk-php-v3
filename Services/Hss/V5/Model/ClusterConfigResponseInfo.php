@@ -27,11 +27,11 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
-    * chargingMode  **参数解释**: 付费模式           **约束限制**: 不涉及 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。  **默认取值**: 不涉及
+    * chargingMode  **参数解释**: 付费模式 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。
     * preferPacketCycle  优先使用包周期配额；默认0
-    * protectType  cce集群防护类型
-    * protectStatus  **参数解释**: 防护状态           **约束限制**: 不涉及 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。  **默认取值**: 不涉及
-    * clusterType  集群类型
+    * protectType  **参数解释**: cce集群防护类型 **取值范围**: - cluster_level：集群级别。 - node_level：节点级别。
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。
+    * clusterType  **参数解释**: 集群类型 **取值范围**: - existing：存量集群。 - adding：新增集群。
     * failReason  fail reason
     *
     * @var string[]
@@ -61,11 +61,11 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
-    * chargingMode  **参数解释**: 付费模式           **约束限制**: 不涉及 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。  **默认取值**: 不涉及
+    * chargingMode  **参数解释**: 付费模式 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。
     * preferPacketCycle  优先使用包周期配额；默认0
-    * protectType  cce集群防护类型
-    * protectStatus  **参数解释**: 防护状态           **约束限制**: 不涉及 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。  **默认取值**: 不涉及
-    * clusterType  集群类型
+    * protectType  **参数解释**: cce集群防护类型 **取值范围**: - cluster_level：集群级别。 - node_level：节点级别。
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。
+    * clusterType  **参数解释**: 集群类型 **取值范围**: - existing：存量集群。 - adding：新增集群。
     * failReason  fail reason
     *
     * @var string[]
@@ -116,11 +116,11 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
-    * chargingMode  **参数解释**: 付费模式           **约束限制**: 不涉及 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。  **默认取值**: 不涉及
+    * chargingMode  **参数解释**: 付费模式 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。
     * preferPacketCycle  优先使用包周期配额；默认0
-    * protectType  cce集群防护类型
-    * protectStatus  **参数解释**: 防护状态           **约束限制**: 不涉及 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。  **默认取值**: 不涉及
-    * clusterType  集群类型
+    * protectType  **参数解释**: cce集群防护类型 **取值范围**: - cluster_level：集群级别。 - node_level：节点级别。
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。
+    * clusterType  **参数解释**: 集群类型 **取值范围**: - existing：存量集群。 - adding：新增集群。
     * failReason  fail reason
     *
     * @var string[]
@@ -150,11 +150,11 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
-    * chargingMode  **参数解释**: 付费模式           **约束限制**: 不涉及 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。  **默认取值**: 不涉及
+    * chargingMode  **参数解释**: 付费模式 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。
     * preferPacketCycle  优先使用包周期配额；默认0
-    * protectType  cce集群防护类型
-    * protectStatus  **参数解释**: 防护状态           **约束限制**: 不涉及 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。  **默认取值**: 不涉及
-    * clusterType  集群类型
+    * protectType  **参数解释**: cce集群防护类型 **取值范围**: - cluster_level：集群级别。 - node_level：节点级别。
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。
+    * clusterType  **参数解释**: 集群类型 **取值范围**: - existing：存量集群。 - adding：新增集群。
     * failReason  fail reason
     *
     * @var string[]
@@ -184,11 +184,11 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
-    * chargingMode  **参数解释**: 付费模式           **约束限制**: 不涉及 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。  **默认取值**: 不涉及
+    * chargingMode  **参数解释**: 付费模式 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。
     * preferPacketCycle  优先使用包周期配额；默认0
-    * protectType  cce集群防护类型
-    * protectStatus  **参数解释**: 防护状态           **约束限制**: 不涉及 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。  **默认取值**: 不涉及
-    * clusterType  集群类型
+    * protectType  **参数解释**: cce集群防护类型 **取值范围**: - cluster_level：集群级别。 - node_level：节点级别。
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。
+    * clusterType  **参数解释**: 集群类型 **取值范围**: - existing：存量集群。 - adding：新增集群。
     * failReason  fail reason
     *
     * @var string[]
@@ -531,7 +531,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  **参数解释**: 付费模式           **约束限制**: 不涉及 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。  **默认取值**: 不涉及
+    *  **参数解释**: 付费模式 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。
     *
     * @return string|null
     */
@@ -543,7 +543,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string|null $chargingMode **参数解释**: 付费模式           **约束限制**: 不涉及 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。  **默认取值**: 不涉及
+    * @param string|null $chargingMode **参数解释**: 付费模式 **取值范围**: 包含以下两种： - on_demand：按需。 - free：免费。
     *
     * @return $this
     */
@@ -579,7 +579,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectType
-    *  cce集群防护类型
+    *  **参数解释**: cce集群防护类型 **取值范围**: - cluster_level：集群级别。 - node_level：节点级别。
     *
     * @return string|null
     */
@@ -591,7 +591,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectType
     *
-    * @param string|null $protectType cce集群防护类型
+    * @param string|null $protectType **参数解释**: cce集群防护类型 **取值范围**: - cluster_level：集群级别。 - node_level：节点级别。
     *
     * @return $this
     */
@@ -603,7 +603,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  **参数解释**: 防护状态           **约束限制**: 不涉及 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。  **默认取值**: 不涉及
+    *  **参数解释**: 防护状态 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。
     *
     * @return string|null
     */
@@ -615,7 +615,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus **参数解释**: 防护状态           **约束限制**: 不涉及 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。  **默认取值**: 不涉及
+    * @param string|null $protectStatus **参数解释**: 防护状态 **取值范围**: - protecting：防护中。 - part_protect：部分防护。 - creating：开启中。 - error_protect：防护异常。 - unprotect：未防护。 - wait_protect：待防护。
     *
     * @return $this
     */
@@ -627,7 +627,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterType
-    *  集群类型
+    *  **参数解释**: 集群类型 **取值范围**: - existing：存量集群。 - adding：新增集群。
     *
     * @return string|null
     */
@@ -639,7 +639,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterType
     *
-    * @param string|null $clusterType 集群类型
+    * @param string|null $clusterType **参数解释**: 集群类型 **取值范围**: - existing：存量集群。 - adding：新增集群。
     *
     * @return $this
     */

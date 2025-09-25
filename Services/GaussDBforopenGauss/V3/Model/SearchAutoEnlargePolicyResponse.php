@@ -21,14 +21,14 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * switchOption  磁盘自动扩容开关。
-    * limitVolumeSize  存储自动扩容上限。
-    * minVolumeSize  最小扩容磁盘容量。
-    * maxVolumeSize  最大扩容磁盘容量。
-    * triggerAvailablePercent  可用存储空间率。
-    * percents  空间率集合。
-    * stepSize  扩容步长，固定大小扩容方式。
-    * stepPercent  扩容步长，百分比扩容方式。
+    * switchOption  **参数解释**: 磁盘自动扩容开关。 **取值范围**: 不涉及。
+    * limitVolumeSize  **参数解释**: 存储自动扩容上限。 **取值范围**: 不涉及。
+    * minVolumeSize  **参数解释**: 最小扩容磁盘容量。 **取值范围**: 不涉及。
+    * maxVolumeSize  **参数解释**: 最大扩容磁盘容量。 **取值范围**: 不涉及。
+    * triggerAvailablePercent  **参数解释**: 可用存储空间率。 **取值范围**: 不涉及。
+    * percents  **参数解释**: 空间率集合。 **取值范围**: 不涉及。
+    * stepSize  **参数解释**: 扩容步长，固定大小扩容方式。 **取值范围**: 不涉及。
+    * stepPercent  **参数解释**: 扩容步长，百分比扩容方式。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -45,14 +45,14 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * switchOption  磁盘自动扩容开关。
-    * limitVolumeSize  存储自动扩容上限。
-    * minVolumeSize  最小扩容磁盘容量。
-    * maxVolumeSize  最大扩容磁盘容量。
-    * triggerAvailablePercent  可用存储空间率。
-    * percents  空间率集合。
-    * stepSize  扩容步长，固定大小扩容方式。
-    * stepPercent  扩容步长，百分比扩容方式。
+    * switchOption  **参数解释**: 磁盘自动扩容开关。 **取值范围**: 不涉及。
+    * limitVolumeSize  **参数解释**: 存储自动扩容上限。 **取值范围**: 不涉及。
+    * minVolumeSize  **参数解释**: 最小扩容磁盘容量。 **取值范围**: 不涉及。
+    * maxVolumeSize  **参数解释**: 最大扩容磁盘容量。 **取值范围**: 不涉及。
+    * triggerAvailablePercent  **参数解释**: 可用存储空间率。 **取值范围**: 不涉及。
+    * percents  **参数解释**: 空间率集合。 **取值范围**: 不涉及。
+    * stepSize  **参数解释**: 扩容步长，固定大小扩容方式。 **取值范围**: 不涉及。
+    * stepPercent  **参数解释**: 扩容步长，百分比扩容方式。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -90,14 +90,14 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * switchOption  磁盘自动扩容开关。
-    * limitVolumeSize  存储自动扩容上限。
-    * minVolumeSize  最小扩容磁盘容量。
-    * maxVolumeSize  最大扩容磁盘容量。
-    * triggerAvailablePercent  可用存储空间率。
-    * percents  空间率集合。
-    * stepSize  扩容步长，固定大小扩容方式。
-    * stepPercent  扩容步长，百分比扩容方式。
+    * switchOption  **参数解释**: 磁盘自动扩容开关。 **取值范围**: 不涉及。
+    * limitVolumeSize  **参数解释**: 存储自动扩容上限。 **取值范围**: 不涉及。
+    * minVolumeSize  **参数解释**: 最小扩容磁盘容量。 **取值范围**: 不涉及。
+    * maxVolumeSize  **参数解释**: 最大扩容磁盘容量。 **取值范围**: 不涉及。
+    * triggerAvailablePercent  **参数解释**: 可用存储空间率。 **取值范围**: 不涉及。
+    * percents  **参数解释**: 空间率集合。 **取值范围**: 不涉及。
+    * stepSize  **参数解释**: 扩容步长，固定大小扩容方式。 **取值范围**: 不涉及。
+    * stepPercent  **参数解释**: 扩容步长，百分比扩容方式。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -114,14 +114,14 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * switchOption  磁盘自动扩容开关。
-    * limitVolumeSize  存储自动扩容上限。
-    * minVolumeSize  最小扩容磁盘容量。
-    * maxVolumeSize  最大扩容磁盘容量。
-    * triggerAvailablePercent  可用存储空间率。
-    * percents  空间率集合。
-    * stepSize  扩容步长，固定大小扩容方式。
-    * stepPercent  扩容步长，百分比扩容方式。
+    * switchOption  **参数解释**: 磁盘自动扩容开关。 **取值范围**: 不涉及。
+    * limitVolumeSize  **参数解释**: 存储自动扩容上限。 **取值范围**: 不涉及。
+    * minVolumeSize  **参数解释**: 最小扩容磁盘容量。 **取值范围**: 不涉及。
+    * maxVolumeSize  **参数解释**: 最大扩容磁盘容量。 **取值范围**: 不涉及。
+    * triggerAvailablePercent  **参数解释**: 可用存储空间率。 **取值范围**: 不涉及。
+    * percents  **参数解释**: 空间率集合。 **取值范围**: 不涉及。
+    * stepSize  **参数解释**: 扩容步长，固定大小扩容方式。 **取值范围**: 不涉及。
+    * stepPercent  **参数解释**: 扩容步长，百分比扩容方式。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -138,14 +138,14 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * switchOption  磁盘自动扩容开关。
-    * limitVolumeSize  存储自动扩容上限。
-    * minVolumeSize  最小扩容磁盘容量。
-    * maxVolumeSize  最大扩容磁盘容量。
-    * triggerAvailablePercent  可用存储空间率。
-    * percents  空间率集合。
-    * stepSize  扩容步长，固定大小扩容方式。
-    * stepPercent  扩容步长，百分比扩容方式。
+    * switchOption  **参数解释**: 磁盘自动扩容开关。 **取值范围**: 不涉及。
+    * limitVolumeSize  **参数解释**: 存储自动扩容上限。 **取值范围**: 不涉及。
+    * minVolumeSize  **参数解释**: 最小扩容磁盘容量。 **取值范围**: 不涉及。
+    * maxVolumeSize  **参数解释**: 最大扩容磁盘容量。 **取值范围**: 不涉及。
+    * triggerAvailablePercent  **参数解释**: 可用存储空间率。 **取值范围**: 不涉及。
+    * percents  **参数解释**: 空间率集合。 **取值范围**: 不涉及。
+    * stepSize  **参数解释**: 扩容步长，固定大小扩容方式。 **取值范围**: 不涉及。
+    * stepPercent  **参数解释**: 扩容步长，百分比扩容方式。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -252,7 +252,7 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets switchOption
-    *  磁盘自动扩容开关。
+    *  **参数解释**: 磁盘自动扩容开关。 **取值范围**: 不涉及。
     *
     * @return bool|null
     */
@@ -264,7 +264,7 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets switchOption
     *
-    * @param bool|null $switchOption 磁盘自动扩容开关。
+    * @param bool|null $switchOption **参数解释**: 磁盘自动扩容开关。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -276,7 +276,7 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets limitVolumeSize
-    *  存储自动扩容上限。
+    *  **参数解释**: 存储自动扩容上限。 **取值范围**: 不涉及。
     *
     * @return int|null
     */
@@ -288,7 +288,7 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets limitVolumeSize
     *
-    * @param int|null $limitVolumeSize 存储自动扩容上限。
+    * @param int|null $limitVolumeSize **参数解释**: 存储自动扩容上限。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -300,7 +300,7 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets minVolumeSize
-    *  最小扩容磁盘容量。
+    *  **参数解释**: 最小扩容磁盘容量。 **取值范围**: 不涉及。
     *
     * @return int|null
     */
@@ -312,7 +312,7 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets minVolumeSize
     *
-    * @param int|null $minVolumeSize 最小扩容磁盘容量。
+    * @param int|null $minVolumeSize **参数解释**: 最小扩容磁盘容量。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxVolumeSize
-    *  最大扩容磁盘容量。
+    *  **参数解释**: 最大扩容磁盘容量。 **取值范围**: 不涉及。
     *
     * @return int|null
     */
@@ -336,7 +336,7 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets maxVolumeSize
     *
-    * @param int|null $maxVolumeSize 最大扩容磁盘容量。
+    * @param int|null $maxVolumeSize **参数解释**: 最大扩容磁盘容量。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -348,7 +348,7 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets triggerAvailablePercent
-    *  可用存储空间率。
+    *  **参数解释**: 可用存储空间率。 **取值范围**: 不涉及。
     *
     * @return int|null
     */
@@ -360,7 +360,7 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets triggerAvailablePercent
     *
-    * @param int|null $triggerAvailablePercent 可用存储空间率。
+    * @param int|null $triggerAvailablePercent **参数解释**: 可用存储空间率。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -372,7 +372,7 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets percents
-    *  空间率集合。
+    *  **参数解释**: 空间率集合。 **取值范围**: 不涉及。
     *
     * @return int[]|null
     */
@@ -384,7 +384,7 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets percents
     *
-    * @param int[]|null $percents 空间率集合。
+    * @param int[]|null $percents **参数解释**: 空间率集合。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -396,7 +396,7 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets stepSize
-    *  扩容步长，固定大小扩容方式。
+    *  **参数解释**: 扩容步长，固定大小扩容方式。 **取值范围**: 不涉及。
     *
     * @return int|null
     */
@@ -408,7 +408,7 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets stepSize
     *
-    * @param int|null $stepSize 扩容步长，固定大小扩容方式。
+    * @param int|null $stepSize **参数解释**: 扩容步长，固定大小扩容方式。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -420,7 +420,7 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets stepPercent
-    *  扩容步长，百分比扩容方式。
+    *  **参数解释**: 扩容步长，百分比扩容方式。 **取值范围**: 不涉及。
     *
     * @return int|null
     */
@@ -432,7 +432,7 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets stepPercent
     *
-    * @param int|null $stepPercent 扩容步长，百分比扩容方式。
+    * @param int|null $stepPercent **参数解释**: 扩容步长，百分比扩容方式。 **取值范围**: 不涉及。
     *
     * @return $this
     */

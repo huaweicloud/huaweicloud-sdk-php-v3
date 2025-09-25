@@ -27,7 +27,7 @@ class CustomRule implements ModelInterface, ArrayAccess
     * conditions  匹配条件列表，匹配条件必须同时满足。
     * action  action
     * actionMode  预留参数，可忽略。
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     * timestamp  创建精准防护规则的时间戳
     * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
     * start  精准防护规则生效的起始时间戳（秒）。当time=true，才会返回该参数。
@@ -63,7 +63,7 @@ class CustomRule implements ModelInterface, ArrayAccess
     * conditions  匹配条件列表，匹配条件必须同时满足。
     * action  action
     * actionMode  预留参数，可忽略。
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     * timestamp  创建精准防护规则的时间戳
     * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
     * start  精准防护规则生效的起始时间戳（秒）。当time=true，才会返回该参数。
@@ -120,7 +120,7 @@ class CustomRule implements ModelInterface, ArrayAccess
     * conditions  匹配条件列表，匹配条件必须同时满足。
     * action  action
     * actionMode  预留参数，可忽略。
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     * timestamp  创建精准防护规则的时间戳
     * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
     * start  精准防护规则生效的起始时间戳（秒）。当time=true，才会返回该参数。
@@ -156,7 +156,7 @@ class CustomRule implements ModelInterface, ArrayAccess
     * conditions  匹配条件列表，匹配条件必须同时满足。
     * action  action
     * actionMode  预留参数，可忽略。
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     * timestamp  创建精准防护规则的时间戳
     * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
     * start  精准防护规则生效的起始时间戳（秒）。当time=true，才会返回该参数。
@@ -192,7 +192,7 @@ class CustomRule implements ModelInterface, ArrayAccess
     * conditions  匹配条件列表，匹配条件必须同时满足。
     * action  action
     * actionMode  预留参数，可忽略。
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     * timestamp  创建精准防护规则的时间戳
     * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
     * start  精准防护规则生效的起始时间戳（秒）。当time=true，才会返回该参数。
@@ -485,7 +485,7 @@ class CustomRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @return int|null
     */
@@ -497,7 +497,7 @@ class CustomRule implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param int|null $priority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+    * @param int|null $priority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @return $this
     */

@@ -23,9 +23,9 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * srcIp  攻击源IP
-    * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
+    * loginType  **参数解释**： 登录类型 **约束限制**: 不涉及 **取值范围**: - mysql：mysql服务。 - rdp：rdp服务。 - ssh：ssh服务。 - vsftp：vsftp服务。  **默认取值**: 不涉及
     * interceptNum  拦截次数
-    * interceptStatus  拦截状态，包含如下:   - \"intercepted\" # 已拦截   - \"canceled\" # 已解除拦截   - \"cancelling\" # 待解除拦截
+    * interceptStatus  **参数解释**： 拦截状态 **约束限制**: 不涉及 **取值范围**: - intercepted：已拦截。 - canceled：已解除拦截。 - cancelling：待解除拦截。  **默认取值**: 不涉及
     * blockTime  开始拦截时间，毫秒
     * latestTime  最近拦截时间，毫秒
     *
@@ -47,9 +47,9 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * srcIp  攻击源IP
-    * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
+    * loginType  **参数解释**： 登录类型 **约束限制**: 不涉及 **取值范围**: - mysql：mysql服务。 - rdp：rdp服务。 - ssh：ssh服务。 - vsftp：vsftp服务。  **默认取值**: 不涉及
     * interceptNum  拦截次数
-    * interceptStatus  拦截状态，包含如下:   - \"intercepted\" # 已拦截   - \"canceled\" # 已解除拦截   - \"cancelling\" # 待解除拦截
+    * interceptStatus  **参数解释**： 拦截状态 **约束限制**: 不涉及 **取值范围**: - intercepted：已拦截。 - canceled：已解除拦截。 - cancelling：待解除拦截。  **默认取值**: 不涉及
     * blockTime  开始拦截时间，毫秒
     * latestTime  最近拦截时间，毫秒
     *
@@ -92,9 +92,9 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * srcIp  攻击源IP
-    * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
+    * loginType  **参数解释**： 登录类型 **约束限制**: 不涉及 **取值范围**: - mysql：mysql服务。 - rdp：rdp服务。 - ssh：ssh服务。 - vsftp：vsftp服务。  **默认取值**: 不涉及
     * interceptNum  拦截次数
-    * interceptStatus  拦截状态，包含如下:   - \"intercepted\" # 已拦截   - \"canceled\" # 已解除拦截   - \"cancelling\" # 待解除拦截
+    * interceptStatus  **参数解释**： 拦截状态 **约束限制**: 不涉及 **取值范围**: - intercepted：已拦截。 - canceled：已解除拦截。 - cancelling：待解除拦截。  **默认取值**: 不涉及
     * blockTime  开始拦截时间，毫秒
     * latestTime  最近拦截时间，毫秒
     *
@@ -116,9 +116,9 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * srcIp  攻击源IP
-    * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
+    * loginType  **参数解释**： 登录类型 **约束限制**: 不涉及 **取值范围**: - mysql：mysql服务。 - rdp：rdp服务。 - ssh：ssh服务。 - vsftp：vsftp服务。  **默认取值**: 不涉及
     * interceptNum  拦截次数
-    * interceptStatus  拦截状态，包含如下:   - \"intercepted\" # 已拦截   - \"canceled\" # 已解除拦截   - \"cancelling\" # 待解除拦截
+    * interceptStatus  **参数解释**： 拦截状态 **约束限制**: 不涉及 **取值范围**: - intercepted：已拦截。 - canceled：已解除拦截。 - cancelling：待解除拦截。  **默认取值**: 不涉及
     * blockTime  开始拦截时间，毫秒
     * latestTime  最近拦截时间，毫秒
     *
@@ -140,9 +140,9 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * srcIp  攻击源IP
-    * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
+    * loginType  **参数解释**： 登录类型 **约束限制**: 不涉及 **取值范围**: - mysql：mysql服务。 - rdp：rdp服务。 - ssh：ssh服务。 - vsftp：vsftp服务。  **默认取值**: 不涉及
     * interceptNum  拦截次数
-    * interceptStatus  拦截状态，包含如下:   - \"intercepted\" # 已拦截   - \"canceled\" # 已解除拦截   - \"cancelling\" # 待解除拦截
+    * interceptStatus  **参数解释**： 拦截状态 **约束限制**: 不涉及 **取值范围**: - intercepted：已拦截。 - canceled：已解除拦截。 - cancelling：待解除拦截。  **默认取值**: 不涉及
     * blockTime  开始拦截时间，毫秒
     * latestTime  最近拦截时间，毫秒
     *
@@ -411,7 +411,7 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginType
-    *  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
+    *  **参数解释**： 登录类型 **约束限制**: 不涉及 **取值范围**: - mysql：mysql服务。 - rdp：rdp服务。 - ssh：ssh服务。 - vsftp：vsftp服务。  **默认取值**: 不涉及
     *
     * @return string
     */
@@ -423,7 +423,7 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets loginType
     *
-    * @param string $loginType 登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
+    * @param string $loginType **参数解释**： 登录类型 **约束限制**: 不涉及 **取值范围**: - mysql：mysql服务。 - rdp：rdp服务。 - ssh：ssh服务。 - vsftp：vsftp服务。  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -459,7 +459,7 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets interceptStatus
-    *  拦截状态，包含如下:   - \"intercepted\" # 已拦截   - \"canceled\" # 已解除拦截   - \"cancelling\" # 待解除拦截
+    *  **参数解释**： 拦截状态 **约束限制**: 不涉及 **取值范围**: - intercepted：已拦截。 - canceled：已解除拦截。 - cancelling：待解除拦截。  **默认取值**: 不涉及
     *
     * @return string
     */
@@ -471,7 +471,7 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets interceptStatus
     *
-    * @param string $interceptStatus 拦截状态，包含如下:   - \"intercepted\" # 已拦截   - \"canceled\" # 已解除拦截   - \"cancelling\" # 待解除拦截
+    * @param string $interceptStatus **参数解释**： 拦截状态 **约束限制**: 不涉及 **取值范围**: - intercepted：已拦截。 - canceled：已解除拦截。 - cancelling：待解除拦截。  **默认取值**: 不涉及
     *
     * @return $this
     */

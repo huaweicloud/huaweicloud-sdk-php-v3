@@ -25,7 +25,7 @@ class PolicyListDataList implements ModelInterface, ArrayAccess
     * hostNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * isDefault  是否默认
     * portList  端口列表
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Winodws.
+    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows.
     * status  防护状态，包含如下3种 - applying ：生效中 - success ：已生效 - disable ：未生效
     *
     * @var string[]
@@ -47,7 +47,7 @@ class PolicyListDataList implements ModelInterface, ArrayAccess
     * hostNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * isDefault  是否默认
     * portList  端口列表
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Winodws.
+    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows.
     * status  防护状态，包含如下3种 - applying ：生效中 - success ：已生效 - disable ：未生效
     *
     * @var string[]
@@ -90,7 +90,7 @@ class PolicyListDataList implements ModelInterface, ArrayAccess
     * hostNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * isDefault  是否默认
     * portList  端口列表
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Winodws.
+    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows.
     * status  防护状态，包含如下3种 - applying ：生效中 - success ：已生效 - disable ：未生效
     *
     * @var string[]
@@ -112,7 +112,7 @@ class PolicyListDataList implements ModelInterface, ArrayAccess
     * hostNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * isDefault  是否默认
     * portList  端口列表
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Winodws.
+    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows.
     * status  防护状态，包含如下3种 - applying ：生效中 - success ：已生效 - disable ：未生效
     *
     * @var string[]
@@ -134,7 +134,7 @@ class PolicyListDataList implements ModelInterface, ArrayAccess
     * hostNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     * isDefault  是否默认
     * portList  端口列表
-    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Winodws.
+    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows.
     * status  防护状态，包含如下3种 - applying ：生效中 - success ：已生效 - disable ：未生效
     *
     * @var string[]
@@ -390,7 +390,7 @@ class PolicyListDataList implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Winodws.
+    *  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows.
     *
     * @return string|null
     */
@@ -402,7 +402,7 @@ class PolicyListDataList implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Winodws.
+    * @param string|null $osType 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows.
     *
     * @return $this
     */

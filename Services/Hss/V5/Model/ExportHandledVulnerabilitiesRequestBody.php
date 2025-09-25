@@ -21,7 +21,7 @@ class ExportHandledVulnerabilitiesRequestBody implements ModelInterface, ArrayAc
     /**
     * Array of property to type mappings. Used for (de)serialization
     * vulName  漏洞名称
-    * repairPriority  漏洞修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
+    * repairPriority  漏洞修复优先级,包含如下 - Critical 紧急 - High 高 - Medium 中 - Low 低
     * hostName  主机名称
     * hostIp  主机ip
     * isAffectBusiness  是否影响业务
@@ -57,7 +57,7 @@ class ExportHandledVulnerabilitiesRequestBody implements ModelInterface, ArrayAc
     /**
     * Array of property to format mappings. Used for (de)serialization
     * vulName  漏洞名称
-    * repairPriority  漏洞修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
+    * repairPriority  漏洞修复优先级,包含如下 - Critical 紧急 - High 高 - Medium 中 - Low 低
     * hostName  主机名称
     * hostIp  主机ip
     * isAffectBusiness  是否影响业务
@@ -114,7 +114,7 @@ class ExportHandledVulnerabilitiesRequestBody implements ModelInterface, ArrayAc
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * vulName  漏洞名称
-    * repairPriority  漏洞修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
+    * repairPriority  漏洞修复优先级,包含如下 - Critical 紧急 - High 高 - Medium 中 - Low 低
     * hostName  主机名称
     * hostIp  主机ip
     * isAffectBusiness  是否影响业务
@@ -150,7 +150,7 @@ class ExportHandledVulnerabilitiesRequestBody implements ModelInterface, ArrayAc
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * vulName  漏洞名称
-    * repairPriority  漏洞修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
+    * repairPriority  漏洞修复优先级,包含如下 - Critical 紧急 - High 高 - Medium 中 - Low 低
     * hostName  主机名称
     * hostIp  主机ip
     * isAffectBusiness  是否影响业务
@@ -186,7 +186,7 @@ class ExportHandledVulnerabilitiesRequestBody implements ModelInterface, ArrayAc
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * vulName  漏洞名称
-    * repairPriority  漏洞修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
+    * repairPriority  漏洞修复优先级,包含如下 - Critical 紧急 - High 高 - Medium 中 - Low 低
     * hostName  主机名称
     * hostIp  主机ip
     * isAffectBusiness  是否影响业务
@@ -519,7 +519,7 @@ class ExportHandledVulnerabilitiesRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets repairPriority
-    *  漏洞修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
+    *  漏洞修复优先级,包含如下 - Critical 紧急 - High 高 - Medium 中 - Low 低
     *
     * @return string|null
     */
@@ -531,7 +531,7 @@ class ExportHandledVulnerabilitiesRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets repairPriority
     *
-    * @param string|null $repairPriority 漏洞修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
+    * @param string|null $repairPriority 漏洞修复优先级,包含如下 - Critical 紧急 - High 高 - Medium 中 - Low 低
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class CreateLimitTaskNodeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nodeId  节点id。
-    * sqlId  该节点执行的sql语句id。如果类型为SQL_ID，必须与limit_type_value值一致。
+    * nodeId  **参数解释**: 节点ID。 **约束限制**: 必须是当前实例的某一个节点ID。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * sqlId  **参数解释**: 该节点执行的SQL语句ID。 **约束限制**: 如果“limit_type”为SQL_ID，必须与“limit_type_value”值一致。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CreateLimitTaskNodeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nodeId  节点id。
-    * sqlId  该节点执行的sql语句id。如果类型为SQL_ID，必须与limit_type_value值一致。
+    * nodeId  **参数解释**: 节点ID。 **约束限制**: 必须是当前实例的某一个节点ID。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * sqlId  **参数解释**: 该节点执行的SQL语句ID。 **约束限制**: 如果“limit_type”为SQL_ID，必须与“limit_type_value”值一致。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CreateLimitTaskNodeOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nodeId  节点id。
-    * sqlId  该节点执行的sql语句id。如果类型为SQL_ID，必须与limit_type_value值一致。
+    * nodeId  **参数解释**: 节点ID。 **约束限制**: 必须是当前实例的某一个节点ID。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * sqlId  **参数解释**: 该节点执行的SQL语句ID。 **约束限制**: 如果“limit_type”为SQL_ID，必须与“limit_type_value”值一致。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CreateLimitTaskNodeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nodeId  节点id。
-    * sqlId  该节点执行的sql语句id。如果类型为SQL_ID，必须与limit_type_value值一致。
+    * nodeId  **参数解释**: 节点ID。 **约束限制**: 必须是当前实例的某一个节点ID。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * sqlId  **参数解释**: 该节点执行的SQL语句ID。 **约束限制**: 如果“limit_type”为SQL_ID，必须与“limit_type_value”值一致。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CreateLimitTaskNodeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nodeId  节点id。
-    * sqlId  该节点执行的sql语句id。如果类型为SQL_ID，必须与limit_type_value值一致。
+    * nodeId  **参数解释**: 节点ID。 **约束限制**: 必须是当前实例的某一个节点ID。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * sqlId  **参数解释**: 该节点执行的SQL语句ID。 **约束限制**: 如果“limit_type”为SQL_ID，必须与“limit_type_value”值一致。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class CreateLimitTaskNodeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeId
-    *  节点id。
+    *  **参数解释**: 节点ID。 **约束限制**: 必须是当前实例的某一个节点ID。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class CreateLimitTaskNodeOption implements ModelInterface, ArrayAccess
     /**
     * Sets nodeId
     *
-    * @param string $nodeId 节点id。
+    * @param string $nodeId **参数解释**: 节点ID。 **约束限制**: 必须是当前实例的某一个节点ID。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class CreateLimitTaskNodeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets sqlId
-    *  该节点执行的sql语句id。如果类型为SQL_ID，必须与limit_type_value值一致。
+    *  **参数解释**: 该节点执行的SQL语句ID。 **约束限制**: 如果“limit_type”为SQL_ID，必须与“limit_type_value”值一致。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class CreateLimitTaskNodeOption implements ModelInterface, ArrayAccess
     /**
     * Sets sqlId
     *
-    * @param string $sqlId 该节点执行的sql语句id。如果类型为SQL_ID，必须与limit_type_value值一致。
+    * @param string $sqlId **参数解释**: 该节点执行的SQL语句ID。 **约束限制**: 如果“limit_type”为SQL_ID，必须与“limit_type_value”值一致。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */

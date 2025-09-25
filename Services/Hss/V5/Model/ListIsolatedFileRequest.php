@@ -32,8 +32,8 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     * limit  每页显示个数
     * isolationStatus  隔离状态，包含如下:   - isolated：已隔离   - restored：已恢复   - isolating：已下发隔离任务   - restoring：已下发恢复任务
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
-    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
-    * endTime  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * beginTime  自定义查询时间，开始时间
+    * endTime  自定义查询时间，结束时间
     *
     * @var string[]
     */
@@ -68,8 +68,8 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     * limit  每页显示个数
     * isolationStatus  隔离状态，包含如下:   - isolated：已隔离   - restored：已恢复   - isolating：已下发隔离任务   - restoring：已下发恢复任务
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
-    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
-    * endTime  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * beginTime  自定义查询时间，开始时间
+    * endTime  自定义查询时间，结束时间
     *
     * @var string[]
     */
@@ -125,8 +125,8 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     * limit  每页显示个数
     * isolationStatus  隔离状态，包含如下:   - isolated：已隔离   - restored：已恢复   - isolating：已下发隔离任务   - restoring：已下发恢复任务
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
-    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
-    * endTime  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * beginTime  自定义查询时间，开始时间
+    * endTime  自定义查询时间，结束时间
     *
     * @var string[]
     */
@@ -161,8 +161,8 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     * limit  每页显示个数
     * isolationStatus  隔离状态，包含如下:   - isolated：已隔离   - restored：已恢复   - isolating：已下发隔离任务   - restoring：已下发恢复任务
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
-    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
-    * endTime  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * beginTime  自定义查询时间，开始时间
+    * endTime  自定义查询时间，结束时间
     *
     * @var string[]
     */
@@ -197,8 +197,8 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     * limit  每页显示个数
     * isolationStatus  隔离状态，包含如下:   - isolated：已隔离   - restored：已恢复   - isolating：已下发隔离任务   - restoring：已下发恢复任务
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
-    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
-    * endTime  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * beginTime  自定义查询时间，开始时间
+    * endTime  自定义查询时间，结束时间
     *
     * @var string[]
     */
@@ -692,7 +692,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
-    *  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    *  自定义查询时间，开始时间
     *
     * @return int|null
     */
@@ -704,7 +704,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     /**
     * Sets beginTime
     *
-    * @param int|null $beginTime 自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * @param int|null $beginTime 自定义查询时间，开始时间
     *
     * @return $this
     */
@@ -716,7 +716,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    *  自定义查询时间，结束时间
     *
     * @return int|null
     */
@@ -728,7 +728,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int|null $endTime 自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * @param int|null $endTime 自定义查询时间，结束时间
     *
     * @return $this
     */

@@ -38,6 +38,7 @@ class VaultGet implements ModelInterface, ArrayAccess
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     * updatedAt  更新时间,例如:\"2020-02-05T10:38:34.209782\"
     * version  版本
     *
@@ -62,6 +63,7 @@ class VaultGet implements ModelInterface, ArrayAccess
             'threshold' => 'int',
             'sysLockSourceService' => 'string',
             'locked' => 'bool',
+            'availabilityZone' => 'string',
             'updatedAt' => 'string',
             'version' => 'string'
     ];
@@ -86,6 +88,7 @@ class VaultGet implements ModelInterface, ArrayAccess
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     * updatedAt  更新时间,例如:\"2020-02-05T10:38:34.209782\"
     * version  版本
     *
@@ -110,6 +113,7 @@ class VaultGet implements ModelInterface, ArrayAccess
         'threshold' => 'int32',
         'sysLockSourceService' => null,
         'locked' => null,
+        'availabilityZone' => null,
         'updatedAt' => null,
         'version' => null
     ];
@@ -155,6 +159,7 @@ class VaultGet implements ModelInterface, ArrayAccess
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     * updatedAt  更新时间,例如:\"2020-02-05T10:38:34.209782\"
     * version  版本
     *
@@ -179,6 +184,7 @@ class VaultGet implements ModelInterface, ArrayAccess
             'threshold' => 'threshold',
             'sysLockSourceService' => 'sys_lock_source_service',
             'locked' => 'locked',
+            'availabilityZone' => 'availability_zone',
             'updatedAt' => 'updated_at',
             'version' => 'version'
     ];
@@ -203,6 +209,7 @@ class VaultGet implements ModelInterface, ArrayAccess
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     * updatedAt  更新时间,例如:\"2020-02-05T10:38:34.209782\"
     * version  版本
     *
@@ -227,6 +234,7 @@ class VaultGet implements ModelInterface, ArrayAccess
             'threshold' => 'setThreshold',
             'sysLockSourceService' => 'setSysLockSourceService',
             'locked' => 'setLocked',
+            'availabilityZone' => 'setAvailabilityZone',
             'updatedAt' => 'setUpdatedAt',
             'version' => 'setVersion'
     ];
@@ -251,6 +259,7 @@ class VaultGet implements ModelInterface, ArrayAccess
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     * updatedAt  更新时间,例如:\"2020-02-05T10:38:34.209782\"
     * version  版本
     *
@@ -275,6 +284,7 @@ class VaultGet implements ModelInterface, ArrayAccess
             'threshold' => 'getThreshold',
             'sysLockSourceService' => 'getSysLockSourceService',
             'locked' => 'getLocked',
+            'availabilityZone' => 'getAvailabilityZone',
             'updatedAt' => 'getUpdatedAt',
             'version' => 'getVersion'
     ];
@@ -355,6 +365,7 @@ class VaultGet implements ModelInterface, ArrayAccess
         $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
         $this->container['sysLockSourceService'] = isset($data['sysLockSourceService']) ? $data['sysLockSourceService'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
+        $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
     }
@@ -408,6 +419,12 @@ class VaultGet implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['threshold']) && ($this->container['threshold'] < 1)) {
                 $invalidProperties[] = "invalid value for 'threshold', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['availabilityZone']) && (mb_strlen($this->container['availabilityZone']) > 32)) {
+                $invalidProperties[] = "invalid value for 'availabilityZone', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['availabilityZone']) && (mb_strlen($this->container['availabilityZone']) < 1)) {
+                $invalidProperties[] = "invalid value for 'availabilityZone', the character length must be bigger than or equal to 1.";
             }
         if ($this->container['updatedAt'] === null) {
             $invalidProperties[] = "'updatedAt' can't be null";
@@ -855,6 +872,30 @@ class VaultGet implements ModelInterface, ArrayAccess
     public function setLocked($locked)
     {
         $this->container['locked'] = $locked;
+        return $this;
+    }
+
+    /**
+    * Gets availabilityZone
+    *  存储库可用区信息，最大支持32字符。
+    *
+    * @return string|null
+    */
+    public function getAvailabilityZone()
+    {
+        return $this->container['availabilityZone'];
+    }
+
+    /**
+    * Sets availabilityZone
+    *
+    * @param string|null $availabilityZone 存储库可用区信息，最大支持32字符。
+    *
+    * @return $this
+    */
+    public function setAvailabilityZone($availabilityZone)
+    {
+        $this->container['availabilityZone'] = $availabilityZone;
         return $this;
     }
 

@@ -20,6 +20,7 @@ class ListAreaBandwidthPackageSpecificationsRequest implements ModelInterface, A
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * limit  每页返回的个数。 取值范围：1~2000。
     * offset  （索引位置，偏移量）， 从offset指定的下一条数据开始查询。 查询第一页数据时，不需要传入此参数，查询后续页码数据时，将查询前一页数据时响应体中的值带入此参数（action为count时无此参数） 从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数。
     * localAreaId  根据本端大区ID过滤带宽包资源规格列表。
     * remoteAreaId  根据对端大区ID过滤带宽包资源规格列表。
@@ -27,6 +28,7 @@ class ListAreaBandwidthPackageSpecificationsRequest implements ModelInterface, A
     * @var string[]
     */
     protected static $openAPITypes = [
+            'limit' => 'int',
             'offset' => 'int',
             'localAreaId' => 'string[]',
             'remoteAreaId' => 'string[]'
@@ -34,6 +36,7 @@ class ListAreaBandwidthPackageSpecificationsRequest implements ModelInterface, A
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * limit  每页返回的个数。 取值范围：1~2000。
     * offset  （索引位置，偏移量）， 从offset指定的下一条数据开始查询。 查询第一页数据时，不需要传入此参数，查询后续页码数据时，将查询前一页数据时响应体中的值带入此参数（action为count时无此参数） 从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数。
     * localAreaId  根据本端大区ID过滤带宽包资源规格列表。
     * remoteAreaId  根据对端大区ID过滤带宽包资源规格列表。
@@ -41,6 +44,7 @@ class ListAreaBandwidthPackageSpecificationsRequest implements ModelInterface, A
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'limit' => 'int32',
         'offset' => 'int32',
         'localAreaId' => null,
         'remoteAreaId' => null
@@ -69,6 +73,7 @@ class ListAreaBandwidthPackageSpecificationsRequest implements ModelInterface, A
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * limit  每页返回的个数。 取值范围：1~2000。
     * offset  （索引位置，偏移量）， 从offset指定的下一条数据开始查询。 查询第一页数据时，不需要传入此参数，查询后续页码数据时，将查询前一页数据时响应体中的值带入此参数（action为count时无此参数） 从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数。
     * localAreaId  根据本端大区ID过滤带宽包资源规格列表。
     * remoteAreaId  根据对端大区ID过滤带宽包资源规格列表。
@@ -76,6 +81,7 @@ class ListAreaBandwidthPackageSpecificationsRequest implements ModelInterface, A
     * @var string[]
     */
     protected static $attributeMap = [
+            'limit' => 'limit',
             'offset' => 'offset',
             'localAreaId' => 'local_area_id',
             'remoteAreaId' => 'remote_area_id'
@@ -83,6 +89,7 @@ class ListAreaBandwidthPackageSpecificationsRequest implements ModelInterface, A
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * limit  每页返回的个数。 取值范围：1~2000。
     * offset  （索引位置，偏移量）， 从offset指定的下一条数据开始查询。 查询第一页数据时，不需要传入此参数，查询后续页码数据时，将查询前一页数据时响应体中的值带入此参数（action为count时无此参数） 从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数。
     * localAreaId  根据本端大区ID过滤带宽包资源规格列表。
     * remoteAreaId  根据对端大区ID过滤带宽包资源规格列表。
@@ -90,6 +97,7 @@ class ListAreaBandwidthPackageSpecificationsRequest implements ModelInterface, A
     * @var string[]
     */
     protected static $setters = [
+            'limit' => 'setLimit',
             'offset' => 'setOffset',
             'localAreaId' => 'setLocalAreaId',
             'remoteAreaId' => 'setRemoteAreaId'
@@ -97,6 +105,7 @@ class ListAreaBandwidthPackageSpecificationsRequest implements ModelInterface, A
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * limit  每页返回的个数。 取值范围：1~2000。
     * offset  （索引位置，偏移量）， 从offset指定的下一条数据开始查询。 查询第一页数据时，不需要传入此参数，查询后续页码数据时，将查询前一页数据时响应体中的值带入此参数（action为count时无此参数） 从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数。
     * localAreaId  根据本端大区ID过滤带宽包资源规格列表。
     * remoteAreaId  根据对端大区ID过滤带宽包资源规格列表。
@@ -104,6 +113,7 @@ class ListAreaBandwidthPackageSpecificationsRequest implements ModelInterface, A
     * @var string[]
     */
     protected static $getters = [
+            'limit' => 'getLimit',
             'offset' => 'getOffset',
             'localAreaId' => 'getLocalAreaId',
             'remoteAreaId' => 'getRemoteAreaId'
@@ -167,6 +177,7 @@ class ListAreaBandwidthPackageSpecificationsRequest implements ModelInterface, A
     */
     public function __construct(array $data = null)
     {
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['localAreaId'] = isset($data['localAreaId']) ? $data['localAreaId'] : null;
         $this->container['remoteAreaId'] = isset($data['remoteAreaId']) ? $data['remoteAreaId'] : null;
@@ -180,6 +191,12 @@ class ListAreaBandwidthPackageSpecificationsRequest implements ModelInterface, A
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 100000000)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 100000000.";
             }
@@ -198,6 +215,30 @@ class ListAreaBandwidthPackageSpecificationsRequest implements ModelInterface, A
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets limit
+    *  每页返回的个数。 取值范围：1~2000。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页返回的个数。 取值范围：1~2000。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
     }
 
     /**

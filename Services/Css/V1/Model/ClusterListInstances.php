@@ -29,6 +29,7 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
     * ip  实例ip信息。
     * volume  volume
     * resourceId  该实例对应的资源Id。
+    * subnetId  集群当前节点所属子网ID。
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
             'azCode' => 'string',
             'ip' => 'string',
             'volume' => '\HuaweiCloud\SDK\Css\V1\Model\ClusterVolumeRsp',
-            'resourceId' => 'string'
+            'resourceId' => 'string',
+            'subnetId' => 'string'
     ];
 
     /**
@@ -55,6 +57,7 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
     * ip  实例ip信息。
     * volume  volume
     * resourceId  该实例对应的资源Id。
+    * subnetId  集群当前节点所属子网ID。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
         'azCode' => null,
         'ip' => null,
         'volume' => null,
-        'resourceId' => null
+        'resourceId' => null,
+        'subnetId' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
     * ip  实例ip信息。
     * volume  volume
     * resourceId  该实例对应的资源Id。
+    * subnetId  集群当前节点所属子网ID。
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
             'azCode' => 'azCode',
             'ip' => 'ip',
             'volume' => 'volume',
-            'resourceId' => 'resourceId'
+            'resourceId' => 'resourceId',
+            'subnetId' => 'subnetId'
     ];
 
     /**
@@ -128,6 +134,7 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
     * ip  实例ip信息。
     * volume  volume
     * resourceId  该实例对应的资源Id。
+    * subnetId  集群当前节点所属子网ID。
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
             'azCode' => 'setAzCode',
             'ip' => 'setIp',
             'volume' => 'setVolume',
-            'resourceId' => 'setResourceId'
+            'resourceId' => 'setResourceId',
+            'subnetId' => 'setSubnetId'
     ];
 
     /**
@@ -154,6 +162,7 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
     * ip  实例ip信息。
     * volume  volume
     * resourceId  该实例对应的资源Id。
+    * subnetId  集群当前节点所属子网ID。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
             'azCode' => 'getAzCode',
             'ip' => 'getIp',
             'volume' => 'getVolume',
-            'resourceId' => 'getResourceId'
+            'resourceId' => 'getResourceId',
+            'subnetId' => 'getSubnetId'
     ];
 
     /**
@@ -236,6 +246,7 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
         $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
         $this->container['volume'] = isset($data['volume']) ? $data['volume'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
+        $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
     }
 
     /**
@@ -476,6 +487,30 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
     public function setResourceId($resourceId)
     {
         $this->container['resourceId'] = $resourceId;
+        return $this;
+    }
+
+    /**
+    * Gets subnetId
+    *  集群当前节点所属子网ID。
+    *
+    * @return string|null
+    */
+    public function getSubnetId()
+    {
+        return $this->container['subnetId'];
+    }
+
+    /**
+    * Sets subnetId
+    *
+    * @param string|null $subnetId 集群当前节点所属子网ID。
+    *
+    * @return $this
+    */
+    public function setSubnetId($subnetId)
+    {
+        $this->container['subnetId'] = $subnetId;
         return $this;
     }
 

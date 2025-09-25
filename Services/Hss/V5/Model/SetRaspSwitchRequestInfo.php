@@ -20,8 +20,8 @@ class SetRaspSwitchRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostIdList  HostId list
-    * status  动态网页防篡改状态
+    * hostIdList  **参数解释**: 服务器ID列表，仅支持Linux服务器，要求服务器已开启网页防篡改防护。 **约束限制**: 需要使用 ListWtpProtectHost 接口查询网页防篡改主机防护状态列表信息，在 ListWtpProtectHost 接口的响应体中，os_type 等于 Linux 的 host_id 是符合修改条件的服务器ID。 **取值范围**: 最少1条，最多200条 **默认取值**: 不涉及
+    * status  **参数解释**: 动态网页防篡改开启状态，仅支持Linux服务器。 **约束限制**: 不涉及 **取值范围**: - True ：开启动态网页防篡改。 - False ：关闭动态网页防篡改。  **默认取值**: False
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class SetRaspSwitchRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostIdList  HostId list
-    * status  动态网页防篡改状态
+    * hostIdList  **参数解释**: 服务器ID列表，仅支持Linux服务器，要求服务器已开启网页防篡改防护。 **约束限制**: 需要使用 ListWtpProtectHost 接口查询网页防篡改主机防护状态列表信息，在 ListWtpProtectHost 接口的响应体中，os_type 等于 Linux 的 host_id 是符合修改条件的服务器ID。 **取值范围**: 最少1条，最多200条 **默认取值**: 不涉及
+    * status  **参数解释**: 动态网页防篡改开启状态，仅支持Linux服务器。 **约束限制**: 不涉及 **取值范围**: - True ：开启动态网页防篡改。 - False ：关闭动态网页防篡改。  **默认取值**: False
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class SetRaspSwitchRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostIdList  HostId list
-    * status  动态网页防篡改状态
+    * hostIdList  **参数解释**: 服务器ID列表，仅支持Linux服务器，要求服务器已开启网页防篡改防护。 **约束限制**: 需要使用 ListWtpProtectHost 接口查询网页防篡改主机防护状态列表信息，在 ListWtpProtectHost 接口的响应体中，os_type 等于 Linux 的 host_id 是符合修改条件的服务器ID。 **取值范围**: 最少1条，最多200条 **默认取值**: 不涉及
+    * status  **参数解释**: 动态网页防篡改开启状态，仅支持Linux服务器。 **约束限制**: 不涉及 **取值范围**: - True ：开启动态网页防篡改。 - False ：关闭动态网页防篡改。  **默认取值**: False
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class SetRaspSwitchRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostIdList  HostId list
-    * status  动态网页防篡改状态
+    * hostIdList  **参数解释**: 服务器ID列表，仅支持Linux服务器，要求服务器已开启网页防篡改防护。 **约束限制**: 需要使用 ListWtpProtectHost 接口查询网页防篡改主机防护状态列表信息，在 ListWtpProtectHost 接口的响应体中，os_type 等于 Linux 的 host_id 是符合修改条件的服务器ID。 **取值范围**: 最少1条，最多200条 **默认取值**: 不涉及
+    * status  **参数解释**: 动态网页防篡改开启状态，仅支持Linux服务器。 **约束限制**: 不涉及 **取值范围**: - True ：开启动态网页防篡改。 - False ：关闭动态网页防篡改。  **默认取值**: False
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class SetRaspSwitchRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostIdList  HostId list
-    * status  动态网页防篡改状态
+    * hostIdList  **参数解释**: 服务器ID列表，仅支持Linux服务器，要求服务器已开启网页防篡改防护。 **约束限制**: 需要使用 ListWtpProtectHost 接口查询网页防篡改主机防护状态列表信息，在 ListWtpProtectHost 接口的响应体中，os_type 等于 Linux 的 host_id 是符合修改条件的服务器ID。 **取值范围**: 最少1条，最多200条 **默认取值**: 不涉及
+    * status  **参数解释**: 动态网页防篡改开启状态，仅支持Linux服务器。 **约束限制**: 不涉及 **取值范围**: - True ：开启动态网页防篡改。 - False ：关闭动态网页防篡改。  **默认取值**: False
     *
     * @var string[]
     */
@@ -169,6 +169,12 @@ class SetRaspSwitchRequestInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['hostIdList'] === null) {
+            $invalidProperties[] = "'hostIdList' can't be null";
+        }
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -185,9 +191,9 @@ class SetRaspSwitchRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIdList
-    *  HostId list
+    *  **参数解释**: 服务器ID列表，仅支持Linux服务器，要求服务器已开启网页防篡改防护。 **约束限制**: 需要使用 ListWtpProtectHost 接口查询网页防篡改主机防护状态列表信息，在 ListWtpProtectHost 接口的响应体中，os_type 等于 Linux 的 host_id 是符合修改条件的服务器ID。 **取值范围**: 最少1条，最多200条 **默认取值**: 不涉及
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getHostIdList()
     {
@@ -197,7 +203,7 @@ class SetRaspSwitchRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[]|null $hostIdList HostId list
+    * @param string[] $hostIdList **参数解释**: 服务器ID列表，仅支持Linux服务器，要求服务器已开启网页防篡改防护。 **约束限制**: 需要使用 ListWtpProtectHost 接口查询网页防篡改主机防护状态列表信息，在 ListWtpProtectHost 接口的响应体中，os_type 等于 Linux 的 host_id 是符合修改条件的服务器ID。 **取值范围**: 最少1条，最多200条 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -209,9 +215,9 @@ class SetRaspSwitchRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  动态网页防篡改状态
+    *  **参数解释**: 动态网页防篡改开启状态，仅支持Linux服务器。 **约束限制**: 不涉及 **取值范围**: - True ：开启动态网页防篡改。 - False ：关闭动态网页防篡改。  **默认取值**: False
     *
-    * @return bool|null
+    * @return bool
     */
     public function getStatus()
     {
@@ -221,7 +227,7 @@ class SetRaspSwitchRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param bool|null $status 动态网页防篡改状态
+    * @param bool $status **参数解释**: 动态网页防篡改开启状态，仅支持Linux服务器。 **约束限制**: 不涉及 **取值范围**: - True ：开启动态网页防篡改。 - False ：关闭动态网页防篡改。  **默认取值**: False
     *
     * @return $this
     */

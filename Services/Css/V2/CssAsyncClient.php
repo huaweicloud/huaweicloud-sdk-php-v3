@@ -361,6 +361,139 @@ class CssAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除配置文件
+     *
+     * 删除配置文件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteLogstashConfAsync($request)
+    {
+        return $this->deleteLogstashConfAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteLogstashConfAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.0/{project_id}/clusters/{cluster_id}/lgsconf/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Css\V2\Model\DeleteLogstashConfResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Css\V2\Model\DeleteLogstashConfRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * Delete Custom Template
+     *
+     * This interface is used to delete custom templates.
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteLogstashTemplateAsync($request)
+    {
+        return $this->deleteLogstashTemplateAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteLogstashTemplateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.0/{project_id}/lgsconf/deletetemplate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Css\V2\Model\DeleteLogstashTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Css\V2\Model\DeleteLogstashTemplateRequest',
+            $asyncRequest = true);
+    }
+
     protected function callApi(
         $method,
         $resourcePath,

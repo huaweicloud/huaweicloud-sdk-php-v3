@@ -28,7 +28,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     * vulName  **参数解释**: 漏洞名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled ：未处理 - handled : 已处理  **默认取值**: 不涉及
     * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
-    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低  **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -54,7 +54,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     * vulName  **参数解释**: 漏洞名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled ：未处理 - handled : 已处理  **默认取值**: 不涉及
     * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
-    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低  **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -101,7 +101,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     * vulName  **参数解释**: 漏洞名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled ：未处理 - handled : 已处理  **默认取值**: 不涉及
     * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
-    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低  **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     * vulName  **参数解释**: 漏洞名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled ：未处理 - handled : 已处理  **默认取值**: 不涉及
     * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
-    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低  **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -153,7 +153,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     * vulName  **参数解释**: 漏洞名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled ：未处理 - handled : 已处理  **默认取值**: 不涉及
     * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
-    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低  **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -532,7 +532,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets repairPriority
-    *  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低  **默认取值**: 不涉及
+    *  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -544,7 +544,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets repairPriority
     *
-    * @param string|null $repairPriority **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低  **默认取值**: 不涉及
+    * @param string|null $repairPriority **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低  **默认取值**: 不涉及
     *
     * @return $this
     */

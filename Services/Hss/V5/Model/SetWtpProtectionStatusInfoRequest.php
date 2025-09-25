@@ -20,33 +20,29 @@ class SetWtpProtectionStatusInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * contentType  缺省值:application/json; charset=utf-8
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'contentType' => 'string',
-            'region' => 'string',
             'enterpriseProjectId' => 'string',
+            'region' => 'string',
             'body' => '\HuaweiCloud\SDK\Hss\V5\Model\SetWtpProtectionStatusRequestInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * contentType  缺省值:application/json; charset=utf-8
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'contentType' => null,
-        'region' => null,
         'enterpriseProjectId' => null,
+        'region' => null,
         'body' => null
     ];
 
@@ -73,49 +69,43 @@ class SetWtpProtectionStatusInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * contentType  缺省值:application/json; charset=utf-8
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'contentType' => 'Content-Type',
-            'region' => 'region',
             'enterpriseProjectId' => 'enterprise_project_id',
+            'region' => 'region',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * contentType  缺省值:application/json; charset=utf-8
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'contentType' => 'setContentType',
-            'region' => 'setRegion',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'region' => 'setRegion',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * contentType  缺省值:application/json; charset=utf-8
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'contentType' => 'getContentType',
-            'region' => 'getRegion',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'region' => 'getRegion',
             'body' => 'getBody'
     ];
 
@@ -177,9 +167,8 @@ class SetWtpProtectionStatusInfoRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
-        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -191,23 +180,23 @@ class SetWtpProtectionStatusInfoRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) > 128)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 32)) {
-                $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 32.";
+            if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 128)) {
+                $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) < 0)) {
                 $invalidProperties[] = "invalid value for 'region', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['region']) && !preg_match("/^.*$/", $this->container['region'])) {
+                $invalidProperties[] = "invalid value for 'region', must be conform to the pattern /^.*$/.";
             }
         return $invalidProperties;
     }
@@ -224,56 +213,8 @@ class SetWtpProtectionStatusInfoRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets contentType
-    *  缺省值:application/json; charset=utf-8
-    *
-    * @return string|null
-    */
-    public function getContentType()
-    {
-        return $this->container['contentType'];
-    }
-
-    /**
-    * Sets contentType
-    *
-    * @param string|null $contentType 缺省值:application/json; charset=utf-8
-    *
-    * @return $this
-    */
-    public function setContentType($contentType)
-    {
-        $this->container['contentType'] = $contentType;
-        return $this;
-    }
-
-    /**
-    * Gets region
-    *  Region ID
-    *
-    * @return string|null
-    */
-    public function getRegion()
-    {
-        return $this->container['region'];
-    }
-
-    /**
-    * Sets region
-    *
-    * @param string|null $region Region ID
-    *
-    * @return $this
-    */
-    public function setRegion($region)
-    {
-        $this->container['region'] = $region;
-        return $this;
-    }
-
-    /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return string|null
     */
@@ -285,13 +226,37 @@ class SetWtpProtectionStatusInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return $this
     */
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets region
+    *  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getRegion()
+    {
+        return $this->container['region'];
+    }
+
+    /**
+    * Sets region
+    *
+    * @param string|null $region **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setRegion($region)
+    {
+        $this->container['region'] = $region;
         return $this;
     }
 

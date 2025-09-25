@@ -24,7 +24,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * policyName  **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * protectionMode  **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **默认取值**: 不涉及
     * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。 **默认取值**: 不涉及
-    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。   **默认取值**: closed
+    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
     * protectionDirectory  **参数解释**: 防护目录 **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个防护目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
     * protectionType  **参数解释**: 防护文件类型，例如：docx，txt，avi **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * excludeDirectory  **参数解释**: 排除目录(选填) **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个排除目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
@@ -58,7 +58,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * policyName  **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * protectionMode  **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **默认取值**: 不涉及
     * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。 **默认取值**: 不涉及
-    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。   **默认取值**: closed
+    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
     * protectionDirectory  **参数解释**: 防护目录 **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个防护目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
     * protectionType  **参数解释**: 防护文件类型，例如：docx，txt，avi **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * excludeDirectory  **参数解释**: 排除目录(选填) **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个排除目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
@@ -113,7 +113,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * policyName  **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * protectionMode  **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **默认取值**: 不涉及
     * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。 **默认取值**: 不涉及
-    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。   **默认取值**: closed
+    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
     * protectionDirectory  **参数解释**: 防护目录 **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个防护目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
     * protectionType  **参数解释**: 防护文件类型，例如：docx，txt，avi **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * excludeDirectory  **参数解释**: 排除目录(选填) **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个排除目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
@@ -147,7 +147,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * policyName  **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * protectionMode  **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **默认取值**: 不涉及
     * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。 **默认取值**: 不涉及
-    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。   **默认取值**: closed
+    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
     * protectionDirectory  **参数解释**: 防护目录 **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个防护目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
     * protectionType  **参数解释**: 防护文件类型，例如：docx，txt，avi **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * excludeDirectory  **参数解释**: 排除目录(选填) **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个排除目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
@@ -181,7 +181,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * policyName  **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * protectionMode  **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **默认取值**: 不涉及
     * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。 **默认取值**: 不涉及
-    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。   **默认取值**: closed
+    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
     * protectionDirectory  **参数解释**: 防护目录 **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个防护目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
     * protectionType  **参数解释**: 防护文件类型，例如：docx，txt，avi **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * excludeDirectory  **参数解释**: 排除目录(选填) **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个排除目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
@@ -483,7 +483,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets deployMode
-    *  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。   **默认取值**: closed
+    *  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
     *
     * @return string|null
     */
@@ -495,7 +495,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     /**
     * Sets deployMode
     *
-    * @param string|null $deployMode **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。   **默认取值**: closed
+    * @param string|null $deployMode **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
     *
     * @return $this
     */

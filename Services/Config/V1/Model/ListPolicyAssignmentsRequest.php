@@ -180,11 +180,11 @@ class ListPolicyAssignmentsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['policyAssignmentName']) && (mb_strlen($this->container['policyAssignmentName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'policyAssignmentName', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['policyAssignmentName']) && (mb_strlen($this->container['policyAssignmentName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'policyAssignmentName', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['policyAssignmentName']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/", $this->container['policyAssignmentName'])) {
-                $invalidProperties[] = "invalid value for 'policyAssignmentName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/.";
+            if (!is_null($this->container['policyAssignmentName']) && !preg_match("/^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/", $this->container['policyAssignmentName'])) {
+                $invalidProperties[] = "invalid value for 'policyAssignmentName', must be conform to the pattern /^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 500)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 500.";

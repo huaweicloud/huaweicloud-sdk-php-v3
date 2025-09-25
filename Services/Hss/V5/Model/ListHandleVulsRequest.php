@@ -335,8 +335,8 @@ class ListHandleVulsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
                 $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['status']) && !preg_match("/^.*$/", $this->container['status'])) {
-                $invalidProperties[] = "invalid value for 'status', must be conform to the pattern /^.*$/.";
+            if (!is_null($this->container['status']) && !preg_match("/^vul_status_ignored|vul_status_fixed$/", $this->container['status'])) {
+                $invalidProperties[] = "invalid value for 'status', must be conform to the pattern /^vul_status_ignored|vul_status_fixed$/.";
             }
             if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) > 128)) {
                 $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 128.";
@@ -344,8 +344,8 @@ class ListHandleVulsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) < 0)) {
                 $invalidProperties[] = "invalid value for 'assetValue', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['assetValue']) && !preg_match("/^.*$/", $this->container['assetValue'])) {
-                $invalidProperties[] = "invalid value for 'assetValue', must be conform to the pattern /^.*$/.";
+            if (!is_null($this->container['assetValue']) && !preg_match("/^important|common|test$/", $this->container['assetValue'])) {
+                $invalidProperties[] = "invalid value for 'assetValue', must be conform to the pattern /^important|common|test$/.";
             }
             if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 128.";
@@ -383,8 +383,8 @@ class ListHandleVulsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['type']) && !preg_match("/^.*$/", $this->container['type'])) {
                 $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['handleCircle']) && !preg_match("/^.*$/", $this->container['handleCircle'])) {
-                $invalidProperties[] = "invalid value for 'handleCircle', must be conform to the pattern /^.*$/.";
+            if (!is_null($this->container['handleCircle']) && !preg_match("/^today|all$/", $this->container['handleCircle'])) {
+                $invalidProperties[] = "invalid value for 'handleCircle', must be conform to the pattern /^today|all$/.";
             }
             if (!is_null($this->container['repairPriority']) && (mb_strlen($this->container['repairPriority']) > 10)) {
                 $invalidProperties[] = "invalid value for 'repairPriority', the character length must be smaller than or equal to 10.";
@@ -392,8 +392,8 @@ class ListHandleVulsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['repairPriority']) && (mb_strlen($this->container['repairPriority']) < 1)) {
                 $invalidProperties[] = "invalid value for 'repairPriority', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['repairPriority']) && !preg_match("/^.*$/", $this->container['repairPriority'])) {
-                $invalidProperties[] = "invalid value for 'repairPriority', must be conform to the pattern /^.*$/.";
+            if (!is_null($this->container['repairPriority']) && !preg_match("/^Critical|High|Medium|Low$/", $this->container['repairPriority'])) {
+                $invalidProperties[] = "invalid value for 'repairPriority', must be conform to the pattern /^Critical|High|Medium|Low$/.";
             }
         return $invalidProperties;
     }

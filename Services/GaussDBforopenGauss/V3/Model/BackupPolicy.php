@@ -20,15 +20,15 @@ class BackupPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * keepDays  备份文件可以保存的天数。  取值范围：1-732天。
-    * startTime  备份时间段。自动备份将在该时间段内触发。  取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。  HH取值必须比hh大1，mm和MM取值必须相同，且取值必须为00。  取值示例：  21:00-22:00
-    * period  全量备份周期配置。自动全量备份将在每星期指定的天进行。取值范围：格式为逗号隔开的数字，数字代表星期。取值示例：1,2,3,4则表示备份周期配置为星期一、星期二、星期三和星期四。
-    * differentialPeriod  差异备份间隔时间配置。每次自动差异备份的间隔时间。  取值范围：15、30、60、180、360、720、1440。单位：分钟。  取值示例：30
-    * rateLimit  备份限速  取值范围：0 ~ 1024
-    * prefetchBlock  控制差量备份时读取磁盘上表文件差量修改页面的预取页面个数。当差量修改页面非常集中时（如数据导入场景），可以适当调大该值；当差量修改页面非常分散时（如随机更新），可以适当调小该值。  取值范围：1 ~ 8192
-    * filesplitSize  废弃。
-    * fileSplitSize  全量、差量备份时产生的备份文件会根据分片大小进行拆分，可设置范围为0~1024GB，设置需为4的倍数，默认4GB，0GB表示不限制大小。  取值范围：0 ~ 1024
-    * enableStandbyBackup  是否启用备机备份。  取值范围：true|false
+    * keepDays  **参数解释**: 备份文件可以保存的天数。 **约束限制**: 不涉及。 **取值范围**: 1-36500天。 **默认取值**: 不涉及。
+    * startTime  **参数解释**: 备份时间段。自动备份将在该时间段内触发。 **约束限制**: 不涉及。 **取值范围**: 备份时间段。自动备份将在该时间段内触发。  取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。  HH取值必须比hh大1，mm和MM取值必须相同，且取值必须为00。  取值示例：  21:00-22:00 **默认取值**: 不涉及。
+    * period  **参数解释**: 全量备份周期配置。自动全量备份将在每周对应的UTC日期进行。 **约束限制**: 不涉及。 **取值范围**: 格式为逗号隔开的数字，数字代表星期，取1~7。  取值示例： - 1,2,3,4 表示备份周期配置为星期一、星期二、星期三和星期四。 - 1,2,3,4,5,6,7 则表示星期一至星期日每天执行一次自动备份。 - 1,3,5表示周一、周三、周五执行一次自动备份。 **默认取值**: 不涉及。
+    * differentialPeriod  **参数解释**: 差异备份间隔时间配置。每次自动差异备份的间隔时间。 **约束限制**: 不涉及。 **取值范围**: 15、30、60、180、360、720、1440。单位：分钟。 取值示例：30 **默认取值**: 不涉及。
+    * rateLimit  **参数解释**: 备份限速。控制备份时备份数据上传OBS的速度，限速用于限制上传备份对上传带宽的影响。单位为MB/s。 **约束限制**: 不涉及。 **取值范围**: 0~1024MB/s，0表示不限速。 **默认取值**: 75MB/s
+    * prefetchBlock  **参数解释**: 差量预取页面个数。控制差量备份时读取磁盘上表文件差量修改页面的预取页面个数。当差量修改页面非常集中时（如数据导入场景），可以适当调大该值；当差量修改页面非常分散时（如随机更新），可以适当调小该值。 **约束限制**: 不涉及。 **取值范围**: 1~8192 **默认取值**: 64
+    * fileSplitSize  **参数解释**: 文件拆分大小。全量、差量备份时产生的备份文件会根据该参数的值进行拆分。 **约束限制**: 需为4的倍数。 **取值范围**: 可设置范围为0~1024GB。0GB表示不限制大小。 **默认取值**: 4GB
+    * filesplitSize  **参数解释**: 文件拆分大小。全量、差量备份时产生的备份文件会根据该参数的值进行拆分。废弃，无需填写。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * enableStandbyBackup  **参数解释**: 是否启用备机备份。 **约束限制**: 不支持单节点实例及V2.0-3.100.0以下的实例。 **取值范围**: - true：启用备机备份。 - false：不启用备机备份。  **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -39,22 +39,22 @@ class BackupPolicy implements ModelInterface, ArrayAccess
             'differentialPeriod' => 'string',
             'rateLimit' => 'int',
             'prefetchBlock' => 'int',
-            'filesplitSize' => 'int',
             'fileSplitSize' => 'int',
+            'filesplitSize' => 'int',
             'enableStandbyBackup' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * keepDays  备份文件可以保存的天数。  取值范围：1-732天。
-    * startTime  备份时间段。自动备份将在该时间段内触发。  取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。  HH取值必须比hh大1，mm和MM取值必须相同，且取值必须为00。  取值示例：  21:00-22:00
-    * period  全量备份周期配置。自动全量备份将在每星期指定的天进行。取值范围：格式为逗号隔开的数字，数字代表星期。取值示例：1,2,3,4则表示备份周期配置为星期一、星期二、星期三和星期四。
-    * differentialPeriod  差异备份间隔时间配置。每次自动差异备份的间隔时间。  取值范围：15、30、60、180、360、720、1440。单位：分钟。  取值示例：30
-    * rateLimit  备份限速  取值范围：0 ~ 1024
-    * prefetchBlock  控制差量备份时读取磁盘上表文件差量修改页面的预取页面个数。当差量修改页面非常集中时（如数据导入场景），可以适当调大该值；当差量修改页面非常分散时（如随机更新），可以适当调小该值。  取值范围：1 ~ 8192
-    * filesplitSize  废弃。
-    * fileSplitSize  全量、差量备份时产生的备份文件会根据分片大小进行拆分，可设置范围为0~1024GB，设置需为4的倍数，默认4GB，0GB表示不限制大小。  取值范围：0 ~ 1024
-    * enableStandbyBackup  是否启用备机备份。  取值范围：true|false
+    * keepDays  **参数解释**: 备份文件可以保存的天数。 **约束限制**: 不涉及。 **取值范围**: 1-36500天。 **默认取值**: 不涉及。
+    * startTime  **参数解释**: 备份时间段。自动备份将在该时间段内触发。 **约束限制**: 不涉及。 **取值范围**: 备份时间段。自动备份将在该时间段内触发。  取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。  HH取值必须比hh大1，mm和MM取值必须相同，且取值必须为00。  取值示例：  21:00-22:00 **默认取值**: 不涉及。
+    * period  **参数解释**: 全量备份周期配置。自动全量备份将在每周对应的UTC日期进行。 **约束限制**: 不涉及。 **取值范围**: 格式为逗号隔开的数字，数字代表星期，取1~7。  取值示例： - 1,2,3,4 表示备份周期配置为星期一、星期二、星期三和星期四。 - 1,2,3,4,5,6,7 则表示星期一至星期日每天执行一次自动备份。 - 1,3,5表示周一、周三、周五执行一次自动备份。 **默认取值**: 不涉及。
+    * differentialPeriod  **参数解释**: 差异备份间隔时间配置。每次自动差异备份的间隔时间。 **约束限制**: 不涉及。 **取值范围**: 15、30、60、180、360、720、1440。单位：分钟。 取值示例：30 **默认取值**: 不涉及。
+    * rateLimit  **参数解释**: 备份限速。控制备份时备份数据上传OBS的速度，限速用于限制上传备份对上传带宽的影响。单位为MB/s。 **约束限制**: 不涉及。 **取值范围**: 0~1024MB/s，0表示不限速。 **默认取值**: 75MB/s
+    * prefetchBlock  **参数解释**: 差量预取页面个数。控制差量备份时读取磁盘上表文件差量修改页面的预取页面个数。当差量修改页面非常集中时（如数据导入场景），可以适当调大该值；当差量修改页面非常分散时（如随机更新），可以适当调小该值。 **约束限制**: 不涉及。 **取值范围**: 1~8192 **默认取值**: 64
+    * fileSplitSize  **参数解释**: 文件拆分大小。全量、差量备份时产生的备份文件会根据该参数的值进行拆分。 **约束限制**: 需为4的倍数。 **取值范围**: 可设置范围为0~1024GB。0GB表示不限制大小。 **默认取值**: 4GB
+    * filesplitSize  **参数解释**: 文件拆分大小。全量、差量备份时产生的备份文件会根据该参数的值进行拆分。废弃，无需填写。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * enableStandbyBackup  **参数解释**: 是否启用备机备份。 **约束限制**: 不支持单节点实例及V2.0-3.100.0以下的实例。 **取值范围**: - true：启用备机备份。 - false：不启用备机备份。  **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BackupPolicy implements ModelInterface, ArrayAccess
         'differentialPeriod' => null,
         'rateLimit' => null,
         'prefetchBlock' => null,
-        'filesplitSize' => null,
         'fileSplitSize' => null,
+        'filesplitSize' => null,
         'enableStandbyBackup' => null
     ];
 
@@ -93,15 +93,15 @@ class BackupPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * keepDays  备份文件可以保存的天数。  取值范围：1-732天。
-    * startTime  备份时间段。自动备份将在该时间段内触发。  取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。  HH取值必须比hh大1，mm和MM取值必须相同，且取值必须为00。  取值示例：  21:00-22:00
-    * period  全量备份周期配置。自动全量备份将在每星期指定的天进行。取值范围：格式为逗号隔开的数字，数字代表星期。取值示例：1,2,3,4则表示备份周期配置为星期一、星期二、星期三和星期四。
-    * differentialPeriod  差异备份间隔时间配置。每次自动差异备份的间隔时间。  取值范围：15、30、60、180、360、720、1440。单位：分钟。  取值示例：30
-    * rateLimit  备份限速  取值范围：0 ~ 1024
-    * prefetchBlock  控制差量备份时读取磁盘上表文件差量修改页面的预取页面个数。当差量修改页面非常集中时（如数据导入场景），可以适当调大该值；当差量修改页面非常分散时（如随机更新），可以适当调小该值。  取值范围：1 ~ 8192
-    * filesplitSize  废弃。
-    * fileSplitSize  全量、差量备份时产生的备份文件会根据分片大小进行拆分，可设置范围为0~1024GB，设置需为4的倍数，默认4GB，0GB表示不限制大小。  取值范围：0 ~ 1024
-    * enableStandbyBackup  是否启用备机备份。  取值范围：true|false
+    * keepDays  **参数解释**: 备份文件可以保存的天数。 **约束限制**: 不涉及。 **取值范围**: 1-36500天。 **默认取值**: 不涉及。
+    * startTime  **参数解释**: 备份时间段。自动备份将在该时间段内触发。 **约束限制**: 不涉及。 **取值范围**: 备份时间段。自动备份将在该时间段内触发。  取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。  HH取值必须比hh大1，mm和MM取值必须相同，且取值必须为00。  取值示例：  21:00-22:00 **默认取值**: 不涉及。
+    * period  **参数解释**: 全量备份周期配置。自动全量备份将在每周对应的UTC日期进行。 **约束限制**: 不涉及。 **取值范围**: 格式为逗号隔开的数字，数字代表星期，取1~7。  取值示例： - 1,2,3,4 表示备份周期配置为星期一、星期二、星期三和星期四。 - 1,2,3,4,5,6,7 则表示星期一至星期日每天执行一次自动备份。 - 1,3,5表示周一、周三、周五执行一次自动备份。 **默认取值**: 不涉及。
+    * differentialPeriod  **参数解释**: 差异备份间隔时间配置。每次自动差异备份的间隔时间。 **约束限制**: 不涉及。 **取值范围**: 15、30、60、180、360、720、1440。单位：分钟。 取值示例：30 **默认取值**: 不涉及。
+    * rateLimit  **参数解释**: 备份限速。控制备份时备份数据上传OBS的速度，限速用于限制上传备份对上传带宽的影响。单位为MB/s。 **约束限制**: 不涉及。 **取值范围**: 0~1024MB/s，0表示不限速。 **默认取值**: 75MB/s
+    * prefetchBlock  **参数解释**: 差量预取页面个数。控制差量备份时读取磁盘上表文件差量修改页面的预取页面个数。当差量修改页面非常集中时（如数据导入场景），可以适当调大该值；当差量修改页面非常分散时（如随机更新），可以适当调小该值。 **约束限制**: 不涉及。 **取值范围**: 1~8192 **默认取值**: 64
+    * fileSplitSize  **参数解释**: 文件拆分大小。全量、差量备份时产生的备份文件会根据该参数的值进行拆分。 **约束限制**: 需为4的倍数。 **取值范围**: 可设置范围为0~1024GB。0GB表示不限制大小。 **默认取值**: 4GB
+    * filesplitSize  **参数解释**: 文件拆分大小。全量、差量备份时产生的备份文件会根据该参数的值进行拆分。废弃，无需填写。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * enableStandbyBackup  **参数解释**: 是否启用备机备份。 **约束限制**: 不支持单节点实例及V2.0-3.100.0以下的实例。 **取值范围**: - true：启用备机备份。 - false：不启用备机备份。  **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -112,22 +112,22 @@ class BackupPolicy implements ModelInterface, ArrayAccess
             'differentialPeriod' => 'differential_period',
             'rateLimit' => 'rate_limit',
             'prefetchBlock' => 'prefetch_block',
-            'filesplitSize' => 'filesplit_size',
             'fileSplitSize' => 'file_split_size',
+            'filesplitSize' => 'filesplit_size',
             'enableStandbyBackup' => 'enable_standby_backup'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * keepDays  备份文件可以保存的天数。  取值范围：1-732天。
-    * startTime  备份时间段。自动备份将在该时间段内触发。  取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。  HH取值必须比hh大1，mm和MM取值必须相同，且取值必须为00。  取值示例：  21:00-22:00
-    * period  全量备份周期配置。自动全量备份将在每星期指定的天进行。取值范围：格式为逗号隔开的数字，数字代表星期。取值示例：1,2,3,4则表示备份周期配置为星期一、星期二、星期三和星期四。
-    * differentialPeriod  差异备份间隔时间配置。每次自动差异备份的间隔时间。  取值范围：15、30、60、180、360、720、1440。单位：分钟。  取值示例：30
-    * rateLimit  备份限速  取值范围：0 ~ 1024
-    * prefetchBlock  控制差量备份时读取磁盘上表文件差量修改页面的预取页面个数。当差量修改页面非常集中时（如数据导入场景），可以适当调大该值；当差量修改页面非常分散时（如随机更新），可以适当调小该值。  取值范围：1 ~ 8192
-    * filesplitSize  废弃。
-    * fileSplitSize  全量、差量备份时产生的备份文件会根据分片大小进行拆分，可设置范围为0~1024GB，设置需为4的倍数，默认4GB，0GB表示不限制大小。  取值范围：0 ~ 1024
-    * enableStandbyBackup  是否启用备机备份。  取值范围：true|false
+    * keepDays  **参数解释**: 备份文件可以保存的天数。 **约束限制**: 不涉及。 **取值范围**: 1-36500天。 **默认取值**: 不涉及。
+    * startTime  **参数解释**: 备份时间段。自动备份将在该时间段内触发。 **约束限制**: 不涉及。 **取值范围**: 备份时间段。自动备份将在该时间段内触发。  取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。  HH取值必须比hh大1，mm和MM取值必须相同，且取值必须为00。  取值示例：  21:00-22:00 **默认取值**: 不涉及。
+    * period  **参数解释**: 全量备份周期配置。自动全量备份将在每周对应的UTC日期进行。 **约束限制**: 不涉及。 **取值范围**: 格式为逗号隔开的数字，数字代表星期，取1~7。  取值示例： - 1,2,3,4 表示备份周期配置为星期一、星期二、星期三和星期四。 - 1,2,3,4,5,6,7 则表示星期一至星期日每天执行一次自动备份。 - 1,3,5表示周一、周三、周五执行一次自动备份。 **默认取值**: 不涉及。
+    * differentialPeriod  **参数解释**: 差异备份间隔时间配置。每次自动差异备份的间隔时间。 **约束限制**: 不涉及。 **取值范围**: 15、30、60、180、360、720、1440。单位：分钟。 取值示例：30 **默认取值**: 不涉及。
+    * rateLimit  **参数解释**: 备份限速。控制备份时备份数据上传OBS的速度，限速用于限制上传备份对上传带宽的影响。单位为MB/s。 **约束限制**: 不涉及。 **取值范围**: 0~1024MB/s，0表示不限速。 **默认取值**: 75MB/s
+    * prefetchBlock  **参数解释**: 差量预取页面个数。控制差量备份时读取磁盘上表文件差量修改页面的预取页面个数。当差量修改页面非常集中时（如数据导入场景），可以适当调大该值；当差量修改页面非常分散时（如随机更新），可以适当调小该值。 **约束限制**: 不涉及。 **取值范围**: 1~8192 **默认取值**: 64
+    * fileSplitSize  **参数解释**: 文件拆分大小。全量、差量备份时产生的备份文件会根据该参数的值进行拆分。 **约束限制**: 需为4的倍数。 **取值范围**: 可设置范围为0~1024GB。0GB表示不限制大小。 **默认取值**: 4GB
+    * filesplitSize  **参数解释**: 文件拆分大小。全量、差量备份时产生的备份文件会根据该参数的值进行拆分。废弃，无需填写。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * enableStandbyBackup  **参数解释**: 是否启用备机备份。 **约束限制**: 不支持单节点实例及V2.0-3.100.0以下的实例。 **取值范围**: - true：启用备机备份。 - false：不启用备机备份。  **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -138,22 +138,22 @@ class BackupPolicy implements ModelInterface, ArrayAccess
             'differentialPeriod' => 'setDifferentialPeriod',
             'rateLimit' => 'setRateLimit',
             'prefetchBlock' => 'setPrefetchBlock',
-            'filesplitSize' => 'setFilesplitSize',
             'fileSplitSize' => 'setFileSplitSize',
+            'filesplitSize' => 'setFilesplitSize',
             'enableStandbyBackup' => 'setEnableStandbyBackup'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * keepDays  备份文件可以保存的天数。  取值范围：1-732天。
-    * startTime  备份时间段。自动备份将在该时间段内触发。  取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。  HH取值必须比hh大1，mm和MM取值必须相同，且取值必须为00。  取值示例：  21:00-22:00
-    * period  全量备份周期配置。自动全量备份将在每星期指定的天进行。取值范围：格式为逗号隔开的数字，数字代表星期。取值示例：1,2,3,4则表示备份周期配置为星期一、星期二、星期三和星期四。
-    * differentialPeriod  差异备份间隔时间配置。每次自动差异备份的间隔时间。  取值范围：15、30、60、180、360、720、1440。单位：分钟。  取值示例：30
-    * rateLimit  备份限速  取值范围：0 ~ 1024
-    * prefetchBlock  控制差量备份时读取磁盘上表文件差量修改页面的预取页面个数。当差量修改页面非常集中时（如数据导入场景），可以适当调大该值；当差量修改页面非常分散时（如随机更新），可以适当调小该值。  取值范围：1 ~ 8192
-    * filesplitSize  废弃。
-    * fileSplitSize  全量、差量备份时产生的备份文件会根据分片大小进行拆分，可设置范围为0~1024GB，设置需为4的倍数，默认4GB，0GB表示不限制大小。  取值范围：0 ~ 1024
-    * enableStandbyBackup  是否启用备机备份。  取值范围：true|false
+    * keepDays  **参数解释**: 备份文件可以保存的天数。 **约束限制**: 不涉及。 **取值范围**: 1-36500天。 **默认取值**: 不涉及。
+    * startTime  **参数解释**: 备份时间段。自动备份将在该时间段内触发。 **约束限制**: 不涉及。 **取值范围**: 备份时间段。自动备份将在该时间段内触发。  取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。  HH取值必须比hh大1，mm和MM取值必须相同，且取值必须为00。  取值示例：  21:00-22:00 **默认取值**: 不涉及。
+    * period  **参数解释**: 全量备份周期配置。自动全量备份将在每周对应的UTC日期进行。 **约束限制**: 不涉及。 **取值范围**: 格式为逗号隔开的数字，数字代表星期，取1~7。  取值示例： - 1,2,3,4 表示备份周期配置为星期一、星期二、星期三和星期四。 - 1,2,3,4,5,6,7 则表示星期一至星期日每天执行一次自动备份。 - 1,3,5表示周一、周三、周五执行一次自动备份。 **默认取值**: 不涉及。
+    * differentialPeriod  **参数解释**: 差异备份间隔时间配置。每次自动差异备份的间隔时间。 **约束限制**: 不涉及。 **取值范围**: 15、30、60、180、360、720、1440。单位：分钟。 取值示例：30 **默认取值**: 不涉及。
+    * rateLimit  **参数解释**: 备份限速。控制备份时备份数据上传OBS的速度，限速用于限制上传备份对上传带宽的影响。单位为MB/s。 **约束限制**: 不涉及。 **取值范围**: 0~1024MB/s，0表示不限速。 **默认取值**: 75MB/s
+    * prefetchBlock  **参数解释**: 差量预取页面个数。控制差量备份时读取磁盘上表文件差量修改页面的预取页面个数。当差量修改页面非常集中时（如数据导入场景），可以适当调大该值；当差量修改页面非常分散时（如随机更新），可以适当调小该值。 **约束限制**: 不涉及。 **取值范围**: 1~8192 **默认取值**: 64
+    * fileSplitSize  **参数解释**: 文件拆分大小。全量、差量备份时产生的备份文件会根据该参数的值进行拆分。 **约束限制**: 需为4的倍数。 **取值范围**: 可设置范围为0~1024GB。0GB表示不限制大小。 **默认取值**: 4GB
+    * filesplitSize  **参数解释**: 文件拆分大小。全量、差量备份时产生的备份文件会根据该参数的值进行拆分。废弃，无需填写。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * enableStandbyBackup  **参数解释**: 是否启用备机备份。 **约束限制**: 不支持单节点实例及V2.0-3.100.0以下的实例。 **取值范围**: - true：启用备机备份。 - false：不启用备机备份。  **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -164,8 +164,8 @@ class BackupPolicy implements ModelInterface, ArrayAccess
             'differentialPeriod' => 'getDifferentialPeriod',
             'rateLimit' => 'getRateLimit',
             'prefetchBlock' => 'getPrefetchBlock',
-            'filesplitSize' => 'getFilesplitSize',
             'fileSplitSize' => 'getFileSplitSize',
+            'filesplitSize' => 'getFilesplitSize',
             'enableStandbyBackup' => 'getEnableStandbyBackup'
     ];
 
@@ -233,8 +233,8 @@ class BackupPolicy implements ModelInterface, ArrayAccess
         $this->container['differentialPeriod'] = isset($data['differentialPeriod']) ? $data['differentialPeriod'] : null;
         $this->container['rateLimit'] = isset($data['rateLimit']) ? $data['rateLimit'] : null;
         $this->container['prefetchBlock'] = isset($data['prefetchBlock']) ? $data['prefetchBlock'] : null;
-        $this->container['filesplitSize'] = isset($data['filesplitSize']) ? $data['filesplitSize'] : null;
         $this->container['fileSplitSize'] = isset($data['fileSplitSize']) ? $data['fileSplitSize'] : null;
+        $this->container['filesplitSize'] = isset($data['filesplitSize']) ? $data['filesplitSize'] : null;
         $this->container['enableStandbyBackup'] = isset($data['enableStandbyBackup']) ? $data['enableStandbyBackup'] : null;
     }
 
@@ -270,17 +270,17 @@ class BackupPolicy implements ModelInterface, ArrayAccess
             if (!is_null($this->container['prefetchBlock']) && ($this->container['prefetchBlock'] < 1)) {
                 $invalidProperties[] = "invalid value for 'prefetchBlock', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['filesplitSize']) && ($this->container['filesplitSize'] > 1024)) {
-                $invalidProperties[] = "invalid value for 'filesplitSize', must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['filesplitSize']) && ($this->container['filesplitSize'] < 0)) {
-                $invalidProperties[] = "invalid value for 'filesplitSize', must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['fileSplitSize']) && ($this->container['fileSplitSize'] > 1024)) {
                 $invalidProperties[] = "invalid value for 'fileSplitSize', must be smaller than or equal to 1024.";
             }
             if (!is_null($this->container['fileSplitSize']) && ($this->container['fileSplitSize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'fileSplitSize', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['filesplitSize']) && ($this->container['filesplitSize'] > 1024)) {
+                $invalidProperties[] = "invalid value for 'filesplitSize', must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['filesplitSize']) && ($this->container['filesplitSize'] < 0)) {
+                $invalidProperties[] = "invalid value for 'filesplitSize', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -298,7 +298,7 @@ class BackupPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets keepDays
-    *  备份文件可以保存的天数。  取值范围：1-732天。
+    *  **参数解释**: 备份文件可以保存的天数。 **约束限制**: 不涉及。 **取值范围**: 1-36500天。 **默认取值**: 不涉及。
     *
     * @return int
     */
@@ -310,7 +310,7 @@ class BackupPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets keepDays
     *
-    * @param int $keepDays 备份文件可以保存的天数。  取值范围：1-732天。
+    * @param int $keepDays **参数解释**: 备份文件可以保存的天数。 **约束限制**: 不涉及。 **取值范围**: 1-36500天。 **默认取值**: 不涉及。
     *
     * @return $this
     */
@@ -322,7 +322,7 @@ class BackupPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  备份时间段。自动备份将在该时间段内触发。  取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。  HH取值必须比hh大1，mm和MM取值必须相同，且取值必须为00。  取值示例：  21:00-22:00
+    *  **参数解释**: 备份时间段。自动备份将在该时间段内触发。 **约束限制**: 不涉及。 **取值范围**: 备份时间段。自动备份将在该时间段内触发。  取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。  HH取值必须比hh大1，mm和MM取值必须相同，且取值必须为00。  取值示例：  21:00-22:00 **默认取值**: 不涉及。
     *
     * @return string
     */
@@ -334,7 +334,7 @@ class BackupPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string $startTime 备份时间段。自动备份将在该时间段内触发。  取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。  HH取值必须比hh大1，mm和MM取值必须相同，且取值必须为00。  取值示例：  21:00-22:00
+    * @param string $startTime **参数解释**: 备份时间段。自动备份将在该时间段内触发。 **约束限制**: 不涉及。 **取值范围**: 备份时间段。自动备份将在该时间段内触发。  取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。  HH取值必须比hh大1，mm和MM取值必须相同，且取值必须为00。  取值示例：  21:00-22:00 **默认取值**: 不涉及。
     *
     * @return $this
     */
@@ -346,7 +346,7 @@ class BackupPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets period
-    *  全量备份周期配置。自动全量备份将在每星期指定的天进行。取值范围：格式为逗号隔开的数字，数字代表星期。取值示例：1,2,3,4则表示备份周期配置为星期一、星期二、星期三和星期四。
+    *  **参数解释**: 全量备份周期配置。自动全量备份将在每周对应的UTC日期进行。 **约束限制**: 不涉及。 **取值范围**: 格式为逗号隔开的数字，数字代表星期，取1~7。  取值示例： - 1,2,3,4 表示备份周期配置为星期一、星期二、星期三和星期四。 - 1,2,3,4,5,6,7 则表示星期一至星期日每天执行一次自动备份。 - 1,3,5表示周一、周三、周五执行一次自动备份。 **默认取值**: 不涉及。
     *
     * @return string
     */
@@ -358,7 +358,7 @@ class BackupPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets period
     *
-    * @param string $period 全量备份周期配置。自动全量备份将在每星期指定的天进行。取值范围：格式为逗号隔开的数字，数字代表星期。取值示例：1,2,3,4则表示备份周期配置为星期一、星期二、星期三和星期四。
+    * @param string $period **参数解释**: 全量备份周期配置。自动全量备份将在每周对应的UTC日期进行。 **约束限制**: 不涉及。 **取值范围**: 格式为逗号隔开的数字，数字代表星期，取1~7。  取值示例： - 1,2,3,4 表示备份周期配置为星期一、星期二、星期三和星期四。 - 1,2,3,4,5,6,7 则表示星期一至星期日每天执行一次自动备份。 - 1,3,5表示周一、周三、周五执行一次自动备份。 **默认取值**: 不涉及。
     *
     * @return $this
     */
@@ -370,7 +370,7 @@ class BackupPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets differentialPeriod
-    *  差异备份间隔时间配置。每次自动差异备份的间隔时间。  取值范围：15、30、60、180、360、720、1440。单位：分钟。  取值示例：30
+    *  **参数解释**: 差异备份间隔时间配置。每次自动差异备份的间隔时间。 **约束限制**: 不涉及。 **取值范围**: 15、30、60、180、360、720、1440。单位：分钟。 取值示例：30 **默认取值**: 不涉及。
     *
     * @return string
     */
@@ -382,7 +382,7 @@ class BackupPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets differentialPeriod
     *
-    * @param string $differentialPeriod 差异备份间隔时间配置。每次自动差异备份的间隔时间。  取值范围：15、30、60、180、360、720、1440。单位：分钟。  取值示例：30
+    * @param string $differentialPeriod **参数解释**: 差异备份间隔时间配置。每次自动差异备份的间隔时间。 **约束限制**: 不涉及。 **取值范围**: 15、30、60、180、360、720、1440。单位：分钟。 取值示例：30 **默认取值**: 不涉及。
     *
     * @return $this
     */
@@ -394,7 +394,7 @@ class BackupPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets rateLimit
-    *  备份限速  取值范围：0 ~ 1024
+    *  **参数解释**: 备份限速。控制备份时备份数据上传OBS的速度，限速用于限制上传备份对上传带宽的影响。单位为MB/s。 **约束限制**: 不涉及。 **取值范围**: 0~1024MB/s，0表示不限速。 **默认取值**: 75MB/s
     *
     * @return int|null
     */
@@ -406,7 +406,7 @@ class BackupPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets rateLimit
     *
-    * @param int|null $rateLimit 备份限速  取值范围：0 ~ 1024
+    * @param int|null $rateLimit **参数解释**: 备份限速。控制备份时备份数据上传OBS的速度，限速用于限制上传备份对上传带宽的影响。单位为MB/s。 **约束限制**: 不涉及。 **取值范围**: 0~1024MB/s，0表示不限速。 **默认取值**: 75MB/s
     *
     * @return $this
     */
@@ -418,7 +418,7 @@ class BackupPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets prefetchBlock
-    *  控制差量备份时读取磁盘上表文件差量修改页面的预取页面个数。当差量修改页面非常集中时（如数据导入场景），可以适当调大该值；当差量修改页面非常分散时（如随机更新），可以适当调小该值。  取值范围：1 ~ 8192
+    *  **参数解释**: 差量预取页面个数。控制差量备份时读取磁盘上表文件差量修改页面的预取页面个数。当差量修改页面非常集中时（如数据导入场景），可以适当调大该值；当差量修改页面非常分散时（如随机更新），可以适当调小该值。 **约束限制**: 不涉及。 **取值范围**: 1~8192 **默认取值**: 64
     *
     * @return int|null
     */
@@ -430,7 +430,7 @@ class BackupPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets prefetchBlock
     *
-    * @param int|null $prefetchBlock 控制差量备份时读取磁盘上表文件差量修改页面的预取页面个数。当差量修改页面非常集中时（如数据导入场景），可以适当调大该值；当差量修改页面非常分散时（如随机更新），可以适当调小该值。  取值范围：1 ~ 8192
+    * @param int|null $prefetchBlock **参数解释**: 差量预取页面个数。控制差量备份时读取磁盘上表文件差量修改页面的预取页面个数。当差量修改页面非常集中时（如数据导入场景），可以适当调大该值；当差量修改页面非常分散时（如随机更新），可以适当调小该值。 **约束限制**: 不涉及。 **取值范围**: 1~8192 **默认取值**: 64
     *
     * @return $this
     */
@@ -441,32 +441,8 @@ class BackupPolicy implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets filesplitSize
-    *  废弃。
-    *
-    * @return int|null
-    */
-    public function getFilesplitSize()
-    {
-        return $this->container['filesplitSize'];
-    }
-
-    /**
-    * Sets filesplitSize
-    *
-    * @param int|null $filesplitSize 废弃。
-    *
-    * @return $this
-    */
-    public function setFilesplitSize($filesplitSize)
-    {
-        $this->container['filesplitSize'] = $filesplitSize;
-        return $this;
-    }
-
-    /**
     * Gets fileSplitSize
-    *  全量、差量备份时产生的备份文件会根据分片大小进行拆分，可设置范围为0~1024GB，设置需为4的倍数，默认4GB，0GB表示不限制大小。  取值范围：0 ~ 1024
+    *  **参数解释**: 文件拆分大小。全量、差量备份时产生的备份文件会根据该参数的值进行拆分。 **约束限制**: 需为4的倍数。 **取值范围**: 可设置范围为0~1024GB。0GB表示不限制大小。 **默认取值**: 4GB
     *
     * @return int|null
     */
@@ -478,7 +454,7 @@ class BackupPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets fileSplitSize
     *
-    * @param int|null $fileSplitSize 全量、差量备份时产生的备份文件会根据分片大小进行拆分，可设置范围为0~1024GB，设置需为4的倍数，默认4GB，0GB表示不限制大小。  取值范围：0 ~ 1024
+    * @param int|null $fileSplitSize **参数解释**: 文件拆分大小。全量、差量备份时产生的备份文件会根据该参数的值进行拆分。 **约束限制**: 需为4的倍数。 **取值范围**: 可设置范围为0~1024GB。0GB表示不限制大小。 **默认取值**: 4GB
     *
     * @return $this
     */
@@ -489,8 +465,32 @@ class BackupPolicy implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets filesplitSize
+    *  **参数解释**: 文件拆分大小。全量、差量备份时产生的备份文件会根据该参数的值进行拆分。废弃，无需填写。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    *
+    * @return int|null
+    */
+    public function getFilesplitSize()
+    {
+        return $this->container['filesplitSize'];
+    }
+
+    /**
+    * Sets filesplitSize
+    *
+    * @param int|null $filesplitSize **参数解释**: 文件拆分大小。全量、差量备份时产生的备份文件会根据该参数的值进行拆分。废弃，无需填写。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setFilesplitSize($filesplitSize)
+    {
+        $this->container['filesplitSize'] = $filesplitSize;
+        return $this;
+    }
+
+    /**
     * Gets enableStandbyBackup
-    *  是否启用备机备份。  取值范围：true|false
+    *  **参数解释**: 是否启用备机备份。 **约束限制**: 不支持单节点实例及V2.0-3.100.0以下的实例。 **取值范围**: - true：启用备机备份。 - false：不启用备机备份。  **默认取值**: 不涉及。
     *
     * @return bool|null
     */
@@ -502,7 +502,7 @@ class BackupPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets enableStandbyBackup
     *
-    * @param bool|null $enableStandbyBackup 是否启用备机备份。  取值范围：true|false
+    * @param bool|null $enableStandbyBackup **参数解释**: 是否启用备机备份。 **约束限制**: 不支持单节点实例及V2.0-3.100.0以下的实例。 **取值范围**: - true：启用备机备份。 - false：不启用备机备份。  **默认取值**: 不涉及。
     *
     * @return $this
     */

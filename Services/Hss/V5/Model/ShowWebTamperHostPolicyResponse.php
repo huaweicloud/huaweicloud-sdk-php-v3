@@ -21,16 +21,15 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * protectDirNum  **参数解释**: 防护目录数 **取值范围**: 取值0-50
+    * protectDirNum  **参数解释**: 防护目录数 **取值范围**: 最小值0，最大值50
     * protectDirInfo  protectDirInfo
     * enableTimingOff  **参数解释**: 定时开关状态 **取值范围**: - True ：开启定时关闭防护功能。 - False ：未开启定时关闭防护功能。
     * timingOffConfigInfo  timingOffConfigInfo
-    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
-    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
+    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态，仅Linux服务器支持设置动态网页防篡改。 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录。 **取值范围**: 字符长度0-512位
     * enablePrivilegedProcess  **参数解释**: 特权进程开启状态 **取值范围**: - True ：开启特权进程。 - False ：未开启特权进程。
     * privilegedChildStatus  **参数解释**: 特权进程子进程可信状态，需先开启特权进程 **取值范围**: - True ：开启特权进程子进程可信。 - False ：未开启特权进程子进程可信。
     * privilegedProcessPathList  **参数解释**: 特权进程文件路径列表 **取值范围**: 最少0条，最多10条
-    * privilegedProcessInfo  privilegedProcessInfo
     *
     * @var string[]
     */
@@ -43,22 +42,20 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
             'raspPath' => 'string',
             'enablePrivilegedProcess' => 'bool',
             'privilegedChildStatus' => 'bool',
-            'privilegedProcessPathList' => 'string[]',
-            'privilegedProcessInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\ListPrivilegedProcessResponseInfo'
+            'privilegedProcessPathList' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * protectDirNum  **参数解释**: 防护目录数 **取值范围**: 取值0-50
+    * protectDirNum  **参数解释**: 防护目录数 **取值范围**: 最小值0，最大值50
     * protectDirInfo  protectDirInfo
     * enableTimingOff  **参数解释**: 定时开关状态 **取值范围**: - True ：开启定时关闭防护功能。 - False ：未开启定时关闭防护功能。
     * timingOffConfigInfo  timingOffConfigInfo
-    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
-    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
+    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态，仅Linux服务器支持设置动态网页防篡改。 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录。 **取值范围**: 字符长度0-512位
     * enablePrivilegedProcess  **参数解释**: 特权进程开启状态 **取值范围**: - True ：开启特权进程。 - False ：未开启特权进程。
     * privilegedChildStatus  **参数解释**: 特权进程子进程可信状态，需先开启特权进程 **取值范围**: - True ：开启特权进程子进程可信。 - False ：未开启特权进程子进程可信。
     * privilegedProcessPathList  **参数解释**: 特权进程文件路径列表 **取值范围**: 最少0条，最多10条
-    * privilegedProcessInfo  privilegedProcessInfo
     *
     * @var string[]
     */
@@ -71,8 +68,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
         'raspPath' => null,
         'enablePrivilegedProcess' => null,
         'privilegedChildStatus' => null,
-        'privilegedProcessPathList' => null,
-        'privilegedProcessInfo' => null
+        'privilegedProcessPathList' => null
     ];
 
     /**
@@ -98,16 +94,15 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * protectDirNum  **参数解释**: 防护目录数 **取值范围**: 取值0-50
+    * protectDirNum  **参数解释**: 防护目录数 **取值范围**: 最小值0，最大值50
     * protectDirInfo  protectDirInfo
     * enableTimingOff  **参数解释**: 定时开关状态 **取值范围**: - True ：开启定时关闭防护功能。 - False ：未开启定时关闭防护功能。
     * timingOffConfigInfo  timingOffConfigInfo
-    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
-    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
+    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态，仅Linux服务器支持设置动态网页防篡改。 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录。 **取值范围**: 字符长度0-512位
     * enablePrivilegedProcess  **参数解释**: 特权进程开启状态 **取值范围**: - True ：开启特权进程。 - False ：未开启特权进程。
     * privilegedChildStatus  **参数解释**: 特权进程子进程可信状态，需先开启特权进程 **取值范围**: - True ：开启特权进程子进程可信。 - False ：未开启特权进程子进程可信。
     * privilegedProcessPathList  **参数解释**: 特权进程文件路径列表 **取值范围**: 最少0条，最多10条
-    * privilegedProcessInfo  privilegedProcessInfo
     *
     * @var string[]
     */
@@ -120,22 +115,20 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
             'raspPath' => 'rasp_path',
             'enablePrivilegedProcess' => 'enable_privileged_process',
             'privilegedChildStatus' => 'privileged_child_status',
-            'privilegedProcessPathList' => 'privileged_process_path_list',
-            'privilegedProcessInfo' => 'privileged_process_info'
+            'privilegedProcessPathList' => 'privileged_process_path_list'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * protectDirNum  **参数解释**: 防护目录数 **取值范围**: 取值0-50
+    * protectDirNum  **参数解释**: 防护目录数 **取值范围**: 最小值0，最大值50
     * protectDirInfo  protectDirInfo
     * enableTimingOff  **参数解释**: 定时开关状态 **取值范围**: - True ：开启定时关闭防护功能。 - False ：未开启定时关闭防护功能。
     * timingOffConfigInfo  timingOffConfigInfo
-    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
-    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
+    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态，仅Linux服务器支持设置动态网页防篡改。 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录。 **取值范围**: 字符长度0-512位
     * enablePrivilegedProcess  **参数解释**: 特权进程开启状态 **取值范围**: - True ：开启特权进程。 - False ：未开启特权进程。
     * privilegedChildStatus  **参数解释**: 特权进程子进程可信状态，需先开启特权进程 **取值范围**: - True ：开启特权进程子进程可信。 - False ：未开启特权进程子进程可信。
     * privilegedProcessPathList  **参数解释**: 特权进程文件路径列表 **取值范围**: 最少0条，最多10条
-    * privilegedProcessInfo  privilegedProcessInfo
     *
     * @var string[]
     */
@@ -148,22 +141,20 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
             'raspPath' => 'setRaspPath',
             'enablePrivilegedProcess' => 'setEnablePrivilegedProcess',
             'privilegedChildStatus' => 'setPrivilegedChildStatus',
-            'privilegedProcessPathList' => 'setPrivilegedProcessPathList',
-            'privilegedProcessInfo' => 'setPrivilegedProcessInfo'
+            'privilegedProcessPathList' => 'setPrivilegedProcessPathList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * protectDirNum  **参数解释**: 防护目录数 **取值范围**: 取值0-50
+    * protectDirNum  **参数解释**: 防护目录数 **取值范围**: 最小值0，最大值50
     * protectDirInfo  protectDirInfo
     * enableTimingOff  **参数解释**: 定时开关状态 **取值范围**: - True ：开启定时关闭防护功能。 - False ：未开启定时关闭防护功能。
     * timingOffConfigInfo  timingOffConfigInfo
-    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
-    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
+    * enableRaspProtect  **参数解释**: 动态网页防篡改开启状态，仅Linux服务器支持设置动态网页防篡改。 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
+    * raspPath  **参数解释**: 动态网页防篡改的Tomcat bin目录。 **取值范围**: 字符长度0-512位
     * enablePrivilegedProcess  **参数解释**: 特权进程开启状态 **取值范围**: - True ：开启特权进程。 - False ：未开启特权进程。
     * privilegedChildStatus  **参数解释**: 特权进程子进程可信状态，需先开启特权进程 **取值范围**: - True ：开启特权进程子进程可信。 - False ：未开启特权进程子进程可信。
     * privilegedProcessPathList  **参数解释**: 特权进程文件路径列表 **取值范围**: 最少0条，最多10条
-    * privilegedProcessInfo  privilegedProcessInfo
     *
     * @var string[]
     */
@@ -176,8 +167,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
             'raspPath' => 'getRaspPath',
             'enablePrivilegedProcess' => 'getEnablePrivilegedProcess',
             'privilegedChildStatus' => 'getPrivilegedChildStatus',
-            'privilegedProcessPathList' => 'getPrivilegedProcessPathList',
-            'privilegedProcessInfo' => 'getPrivilegedProcessInfo'
+            'privilegedProcessPathList' => 'getPrivilegedProcessPathList'
     ];
 
     /**
@@ -247,7 +237,6 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
         $this->container['enablePrivilegedProcess'] = isset($data['enablePrivilegedProcess']) ? $data['enablePrivilegedProcess'] : null;
         $this->container['privilegedChildStatus'] = isset($data['privilegedChildStatus']) ? $data['privilegedChildStatus'] : null;
         $this->container['privilegedProcessPathList'] = isset($data['privilegedProcessPathList']) ? $data['privilegedProcessPathList'] : null;
-        $this->container['privilegedProcessInfo'] = isset($data['privilegedProcessInfo']) ? $data['privilegedProcessInfo'] : null;
     }
 
     /**
@@ -286,7 +275,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectDirNum
-    *  **参数解释**: 防护目录数 **取值范围**: 取值0-50
+    *  **参数解释**: 防护目录数 **取值范围**: 最小值0，最大值50
     *
     * @return int|null
     */
@@ -298,7 +287,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protectDirNum
     *
-    * @param int|null $protectDirNum **参数解释**: 防护目录数 **取值范围**: 取值0-50
+    * @param int|null $protectDirNum **参数解释**: 防护目录数 **取值范围**: 最小值0，最大值50
     *
     * @return $this
     */
@@ -382,7 +371,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableRaspProtect
-    *  **参数解释**: 动态网页防篡改开启状态 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
+    *  **参数解释**: 动态网页防篡改开启状态，仅Linux服务器支持设置动态网页防篡改。 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
     *
     * @return bool|null
     */
@@ -394,7 +383,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enableRaspProtect
     *
-    * @param bool|null $enableRaspProtect **参数解释**: 动态网页防篡改开启状态 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
+    * @param bool|null $enableRaspProtect **参数解释**: 动态网页防篡改开启状态，仅Linux服务器支持设置动态网页防篡改。 **取值范围**: - True ：开启动态网页防篡改防护。 - False ：未开启动态网页防篡改防护。
     *
     * @return $this
     */
@@ -406,7 +395,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets raspPath
-    *  **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
+    *  **参数解释**: 动态网页防篡改的Tomcat bin目录。 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -418,7 +407,7 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets raspPath
     *
-    * @param string|null $raspPath **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
+    * @param string|null $raspPath **参数解释**: 动态网页防篡改的Tomcat bin目录。 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */
@@ -497,30 +486,6 @@ class ShowWebTamperHostPolicyResponse implements ModelInterface, ArrayAccess
     public function setPrivilegedProcessPathList($privilegedProcessPathList)
     {
         $this->container['privilegedProcessPathList'] = $privilegedProcessPathList;
-        return $this;
-    }
-
-    /**
-    * Gets privilegedProcessInfo
-    *  privilegedProcessInfo
-    *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\ListPrivilegedProcessResponseInfo|null
-    */
-    public function getPrivilegedProcessInfo()
-    {
-        return $this->container['privilegedProcessInfo'];
-    }
-
-    /**
-    * Sets privilegedProcessInfo
-    *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\ListPrivilegedProcessResponseInfo|null $privilegedProcessInfo privilegedProcessInfo
-    *
-    * @return $this
-    */
-    public function setPrivilegedProcessInfo($privilegedProcessInfo)
-    {
-        $this->container['privilegedProcessInfo'] = $privilegedProcessInfo;
         return $this;
     }
 

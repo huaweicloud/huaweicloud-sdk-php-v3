@@ -22,24 +22,36 @@ class ClusterDetailDatastore implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * type  引擎类型，目前只支持elasticsearch。
     * version  CSS集群引擎版本号。详细请参考CSS[支持的集群版本](css_03_0056.xml)。
+    * subVersion  集群发布版本号。
+    * isEosCluster  表示集群发布版本是否EOS。
+    * supportSecuritymode  集群认证是否支持安全模式。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
-            'version' => 'string'
+            'version' => 'string',
+            'subVersion' => 'string',
+            'isEosCluster' => 'bool',
+            'supportSecuritymode' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  引擎类型，目前只支持elasticsearch。
     * version  CSS集群引擎版本号。详细请参考CSS[支持的集群版本](css_03_0056.xml)。
+    * subVersion  集群发布版本号。
+    * isEosCluster  表示集群发布版本是否EOS。
+    * supportSecuritymode  集群认证是否支持安全模式。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
-        'version' => null
+        'version' => null,
+        'subVersion' => null,
+        'isEosCluster' => null,
+        'supportSecuritymode' => null
     ];
 
     /**
@@ -67,36 +79,54 @@ class ClusterDetailDatastore implements ModelInterface, ArrayAccess
     * and the value is the original name
     * type  引擎类型，目前只支持elasticsearch。
     * version  CSS集群引擎版本号。详细请参考CSS[支持的集群版本](css_03_0056.xml)。
+    * subVersion  集群发布版本号。
+    * isEosCluster  表示集群发布版本是否EOS。
+    * supportSecuritymode  集群认证是否支持安全模式。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
-            'version' => 'version'
+            'version' => 'version',
+            'subVersion' => 'subVersion',
+            'isEosCluster' => 'isEosCluster',
+            'supportSecuritymode' => 'supportSecuritymode'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  引擎类型，目前只支持elasticsearch。
     * version  CSS集群引擎版本号。详细请参考CSS[支持的集群版本](css_03_0056.xml)。
+    * subVersion  集群发布版本号。
+    * isEosCluster  表示集群发布版本是否EOS。
+    * supportSecuritymode  集群认证是否支持安全模式。
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
-            'version' => 'setVersion'
+            'version' => 'setVersion',
+            'subVersion' => 'setSubVersion',
+            'isEosCluster' => 'setIsEosCluster',
+            'supportSecuritymode' => 'setSupportSecuritymode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  引擎类型，目前只支持elasticsearch。
     * version  CSS集群引擎版本号。详细请参考CSS[支持的集群版本](css_03_0056.xml)。
+    * subVersion  集群发布版本号。
+    * isEosCluster  表示集群发布版本是否EOS。
+    * supportSecuritymode  集群认证是否支持安全模式。
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
-            'version' => 'getVersion'
+            'version' => 'getVersion',
+            'subVersion' => 'getSubVersion',
+            'isEosCluster' => 'getIsEosCluster',
+            'supportSecuritymode' => 'getSupportSecuritymode'
     ];
 
     /**
@@ -159,6 +189,9 @@ class ClusterDetailDatastore implements ModelInterface, ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['subVersion'] = isset($data['subVersion']) ? $data['subVersion'] : null;
+        $this->container['isEosCluster'] = isset($data['isEosCluster']) ? $data['isEosCluster'] : null;
+        $this->container['supportSecuritymode'] = isset($data['supportSecuritymode']) ? $data['supportSecuritymode'] : null;
     }
 
     /**
@@ -228,6 +261,78 @@ class ClusterDetailDatastore implements ModelInterface, ArrayAccess
     public function setVersion($version)
     {
         $this->container['version'] = $version;
+        return $this;
+    }
+
+    /**
+    * Gets subVersion
+    *  集群发布版本号。
+    *
+    * @return string|null
+    */
+    public function getSubVersion()
+    {
+        return $this->container['subVersion'];
+    }
+
+    /**
+    * Sets subVersion
+    *
+    * @param string|null $subVersion 集群发布版本号。
+    *
+    * @return $this
+    */
+    public function setSubVersion($subVersion)
+    {
+        $this->container['subVersion'] = $subVersion;
+        return $this;
+    }
+
+    /**
+    * Gets isEosCluster
+    *  表示集群发布版本是否EOS。
+    *
+    * @return bool|null
+    */
+    public function getIsEosCluster()
+    {
+        return $this->container['isEosCluster'];
+    }
+
+    /**
+    * Sets isEosCluster
+    *
+    * @param bool|null $isEosCluster 表示集群发布版本是否EOS。
+    *
+    * @return $this
+    */
+    public function setIsEosCluster($isEosCluster)
+    {
+        $this->container['isEosCluster'] = $isEosCluster;
+        return $this;
+    }
+
+    /**
+    * Gets supportSecuritymode
+    *  集群认证是否支持安全模式。
+    *
+    * @return bool|null
+    */
+    public function getSupportSecuritymode()
+    {
+        return $this->container['supportSecuritymode'];
+    }
+
+    /**
+    * Sets supportSecuritymode
+    *
+    * @param bool|null $supportSecuritymode 集群认证是否支持安全模式。
+    *
+    * @return $this
+    */
+    public function setSupportSecuritymode($supportSecuritymode)
+    {
+        $this->container['supportSecuritymode'] = $supportSecuritymode;
         return $this;
     }
 

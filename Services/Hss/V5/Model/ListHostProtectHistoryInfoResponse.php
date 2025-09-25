@@ -21,33 +21,25 @@ class ListHostProtectHistoryInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostName  服务器名称
-    * protectStatus  防护状态   - close : 未开启   - opened : 防护中
-    * totalNum  total number of static WTPs
-    * dataList  data list
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**: 静态网页防篡改防护事件列表 **取值范围**: 最小值0，最大值200
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'hostName' => 'string',
-            'protectStatus' => 'string',
             'totalNum' => 'int',
             'dataList' => '\HuaweiCloud\SDK\Hss\V5\Model\HostProtectHistoryResponseInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostName  服务器名称
-    * protectStatus  防护状态   - close : 未开启   - opened : 防护中
-    * totalNum  total number of static WTPs
-    * dataList  data list
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**: 静态网页防篡改防护事件列表 **取值范围**: 最小值0，最大值200
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'hostName' => null,
-        'protectStatus' => null,
-        'totalNum' => 'int64',
+        'totalNum' => 'int32',
         'dataList' => null
     ];
 
@@ -74,48 +66,36 @@ class ListHostProtectHistoryInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostName  服务器名称
-    * protectStatus  防护状态   - close : 未开启   - opened : 防护中
-    * totalNum  total number of static WTPs
-    * dataList  data list
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**: 静态网页防篡改防护事件列表 **取值范围**: 最小值0，最大值200
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'hostName' => 'host_name',
-            'protectStatus' => 'protect_status',
             'totalNum' => 'total_num',
             'dataList' => 'data_list'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostName  服务器名称
-    * protectStatus  防护状态   - close : 未开启   - opened : 防护中
-    * totalNum  total number of static WTPs
-    * dataList  data list
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**: 静态网页防篡改防护事件列表 **取值范围**: 最小值0，最大值200
     *
     * @var string[]
     */
     protected static $setters = [
-            'hostName' => 'setHostName',
-            'protectStatus' => 'setProtectStatus',
             'totalNum' => 'setTotalNum',
             'dataList' => 'setDataList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostName  服务器名称
-    * protectStatus  防护状态   - close : 未开启   - opened : 防护中
-    * totalNum  total number of static WTPs
-    * dataList  data list
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**: 静态网页防篡改防护事件列表 **取值范围**: 最小值0，最大值200
     *
     * @var string[]
     */
     protected static $getters = [
-            'hostName' => 'getHostName',
-            'protectStatus' => 'getProtectStatus',
             'totalNum' => 'getTotalNum',
             'dataList' => 'getDataList'
     ];
@@ -178,8 +158,6 @@ class ListHostProtectHistoryInfoResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
-        $this->container['protectStatus'] = isset($data['protectStatus']) ? $data['protectStatus'] : null;
         $this->container['totalNum'] = isset($data['totalNum']) ? $data['totalNum'] : null;
         $this->container['dataList'] = isset($data['dataList']) ? $data['dataList'] : null;
     }
@@ -192,20 +170,8 @@ class ListHostProtectHistoryInfoResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['protectStatus']) && (mb_strlen($this->container['protectStatus']) > 32)) {
-                $invalidProperties[] = "invalid value for 'protectStatus', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['protectStatus']) && (mb_strlen($this->container['protectStatus']) < 0)) {
-                $invalidProperties[] = "invalid value for 'protectStatus', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 20000000)) {
-                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 20000000.";
+            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 2147483647.";
             }
             if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] < 0)) {
                 $invalidProperties[] = "invalid value for 'totalNum', must be bigger than or equal to 0.";
@@ -225,56 +191,8 @@ class ListHostProtectHistoryInfoResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets hostName
-    *  服务器名称
-    *
-    * @return string|null
-    */
-    public function getHostName()
-    {
-        return $this->container['hostName'];
-    }
-
-    /**
-    * Sets hostName
-    *
-    * @param string|null $hostName 服务器名称
-    *
-    * @return $this
-    */
-    public function setHostName($hostName)
-    {
-        $this->container['hostName'] = $hostName;
-        return $this;
-    }
-
-    /**
-    * Gets protectStatus
-    *  防护状态   - close : 未开启   - opened : 防护中
-    *
-    * @return string|null
-    */
-    public function getProtectStatus()
-    {
-        return $this->container['protectStatus'];
-    }
-
-    /**
-    * Sets protectStatus
-    *
-    * @param string|null $protectStatus 防护状态   - close : 未开启   - opened : 防护中
-    *
-    * @return $this
-    */
-    public function setProtectStatus($protectStatus)
-    {
-        $this->container['protectStatus'] = $protectStatus;
-        return $this;
-    }
-
-    /**
     * Gets totalNum
-    *  total number of static WTPs
+    *  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -286,7 +204,7 @@ class ListHostProtectHistoryInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum total number of static WTPs
+    * @param int|null $totalNum **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -298,7 +216,7 @@ class ListHostProtectHistoryInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  data list
+    *  **参数解释**: 静态网页防篡改防护事件列表 **取值范围**: 最小值0，最大值200
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\HostProtectHistoryResponseInfo[]|null
     */
@@ -310,7 +228,7 @@ class ListHostProtectHistoryInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\HostProtectHistoryResponseInfo[]|null $dataList data list
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\HostProtectHistoryResponseInfo[]|null $dataList **参数解释**: 静态网页防篡改防护事件列表 **取值范围**: 最小值0，最大值200
     *
     * @return $this
     */

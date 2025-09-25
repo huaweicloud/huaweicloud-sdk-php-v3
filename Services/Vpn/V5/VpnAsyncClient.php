@@ -966,6 +966,139 @@ class VpnAsyncClient extends Client
     }
 
     /**
+     * 创建P2C VPN网关
+     *
+     * 创建终端入云VPN网关
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createP2cVgwAsync($request)
+    {
+        return $this->createP2cVgwAsyncWithHttpInfo($request);
+    }
+    
+    public function createP2cVgwAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xClientToken'] !== null) {
+            $headerParams['x_client_token'] = $localVarParams['xClientToken'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\CreateP2cVgwResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\CreateP2cVgwRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除P2C VPN网关
+     *
+     * 根据P2C VPN网关ID，删除指定的VPN网关
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteP2cVgwAsync($request)
+    {
+        return $this->deleteP2cVgwAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteP2cVgwAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/{p2c_vgw_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['p2cVgwId'] !== null) {
+            $pathParams['p2c_vgw_id'] = $localVarParams['p2cVgwId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\DeleteP2cVgwResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\DeleteP2cVgwRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 断开P2C VPN网关连接
      *
      * 断开P2C VPN网关连接

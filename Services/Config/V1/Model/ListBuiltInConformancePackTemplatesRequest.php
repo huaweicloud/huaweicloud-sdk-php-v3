@@ -161,6 +161,9 @@ class ListBuiltInConformancePackTemplatesRequest implements ModelInterface, Arra
     }
     const X_LANGUAGE_ZH_CN = 'zh-cn';
     const X_LANGUAGE_EN_US = 'en-us';
+    const X_LANGUAGE_FR_FR = 'fr-fr';
+    const X_LANGUAGE_ES_US = 'es-us';
+    const X_LANGUAGE_PT_BR = 'pt-br';
     
 
     /**
@@ -173,6 +176,9 @@ class ListBuiltInConformancePackTemplatesRequest implements ModelInterface, Arra
         return [
             self::X_LANGUAGE_ZH_CN,
             self::X_LANGUAGE_EN_US,
+            self::X_LANGUAGE_FR_FR,
+            self::X_LANGUAGE_ES_US,
+            self::X_LANGUAGE_PT_BR,
         ];
     }
 
@@ -221,14 +227,14 @@ class ListBuiltInConformancePackTemplatesRequest implements ModelInterface, Arra
             if (!is_null($this->container['marker']) && !preg_match("/[A-Za-z0-9+\/=%\\-_]+/", $this->container['marker'])) {
                 $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /[A-Za-z0-9+\/=%\\-_]+/.";
             }
-            if (!is_null($this->container['templateKey']) && (mb_strlen($this->container['templateKey']) > 128)) {
-                $invalidProperties[] = "invalid value for 'templateKey', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['templateKey']) && (mb_strlen($this->container['templateKey']) > 256)) {
+                $invalidProperties[] = "invalid value for 'templateKey', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['templateKey']) && (mb_strlen($this->container['templateKey']) < 1)) {
                 $invalidProperties[] = "invalid value for 'templateKey', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['templateKey']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_.\\-]+/", $this->container['templateKey'])) {
-                $invalidProperties[] = "invalid value for 'templateKey', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_.\\-]+/.";
+            if (!is_null($this->container['templateKey']) && !preg_match("/^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/", $this->container['templateKey'])) {
+                $invalidProperties[] = "invalid value for 'templateKey', must be conform to the pattern /^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/.";
             }
             $allowedValues = $this->getXLanguageAllowableValues();
                 if (!is_null($this->container['xLanguage']) && !in_array($this->container['xLanguage'], $allowedValues, true)) {

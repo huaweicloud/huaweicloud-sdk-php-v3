@@ -21,21 +21,29 @@ class UpdateYmlsReqEdit implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * modify  modify
+    * delete  delete
+    * reset  reset
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'modify' => '\HuaweiCloud\SDK\Css\V1\Model\UpdateYmlsReqEditModify'
+            'modify' => '\HuaweiCloud\SDK\Css\V1\Model\UpdateYmlsReqEditModify',
+            'delete' => '\HuaweiCloud\SDK\Css\V1\Model\UpdateYmlsReqEditModify',
+            'reset' => '\HuaweiCloud\SDK\Css\V1\Model\UpdateYmlsReqEditModify'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * modify  modify
+    * delete  delete
+    * reset  reset
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'modify' => null
+        'modify' => null,
+        'delete' => null,
+        'reset' => null
     ];
 
     /**
@@ -62,31 +70,43 @@ class UpdateYmlsReqEdit implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * modify  modify
+    * delete  delete
+    * reset  reset
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'modify' => 'modify'
+            'modify' => 'modify',
+            'delete' => 'delete',
+            'reset' => 'reset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * modify  modify
+    * delete  delete
+    * reset  reset
     *
     * @var string[]
     */
     protected static $setters = [
-            'modify' => 'setModify'
+            'modify' => 'setModify',
+            'delete' => 'setDelete',
+            'reset' => 'setReset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * modify  modify
+    * delete  delete
+    * reset  reset
     *
     * @var string[]
     */
     protected static $getters = [
-            'modify' => 'getModify'
+            'modify' => 'getModify',
+            'delete' => 'getDelete',
+            'reset' => 'getReset'
     ];
 
     /**
@@ -148,6 +168,8 @@ class UpdateYmlsReqEdit implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['modify'] = isset($data['modify']) ? $data['modify'] : null;
+        $this->container['delete'] = isset($data['delete']) ? $data['delete'] : null;
+        $this->container['reset'] = isset($data['reset']) ? $data['reset'] : null;
     }
 
     /**
@@ -158,9 +180,6 @@ class UpdateYmlsReqEdit implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['modify'] === null) {
-            $invalidProperties[] = "'modify' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -179,7 +198,7 @@ class UpdateYmlsReqEdit implements ModelInterface, ArrayAccess
     * Gets modify
     *  modify
     *
-    * @return \HuaweiCloud\SDK\Css\V1\Model\UpdateYmlsReqEditModify
+    * @return \HuaweiCloud\SDK\Css\V1\Model\UpdateYmlsReqEditModify|null
     */
     public function getModify()
     {
@@ -189,13 +208,61 @@ class UpdateYmlsReqEdit implements ModelInterface, ArrayAccess
     /**
     * Sets modify
     *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\UpdateYmlsReqEditModify $modify modify
+    * @param \HuaweiCloud\SDK\Css\V1\Model\UpdateYmlsReqEditModify|null $modify modify
     *
     * @return $this
     */
     public function setModify($modify)
     {
         $this->container['modify'] = $modify;
+        return $this;
+    }
+
+    /**
+    * Gets delete
+    *  delete
+    *
+    * @return \HuaweiCloud\SDK\Css\V1\Model\UpdateYmlsReqEditModify|null
+    */
+    public function getDelete()
+    {
+        return $this->container['delete'];
+    }
+
+    /**
+    * Sets delete
+    *
+    * @param \HuaweiCloud\SDK\Css\V1\Model\UpdateYmlsReqEditModify|null $delete delete
+    *
+    * @return $this
+    */
+    public function setDelete($delete)
+    {
+        $this->container['delete'] = $delete;
+        return $this;
+    }
+
+    /**
+    * Gets reset
+    *  reset
+    *
+    * @return \HuaweiCloud\SDK\Css\V1\Model\UpdateYmlsReqEditModify|null
+    */
+    public function getReset()
+    {
+        return $this->container['reset'];
+    }
+
+    /**
+    * Sets reset
+    *
+    * @param \HuaweiCloud\SDK\Css\V1\Model\UpdateYmlsReqEditModify|null $reset reset
+    *
+    * @return $this
+    */
+    public function setReset($reset)
+    {
+        $this->container['reset'] = $reset;
         return $this;
     }
 

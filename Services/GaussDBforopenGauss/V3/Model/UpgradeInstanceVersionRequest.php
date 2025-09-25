@@ -29,7 +29,7 @@ class UpgradeInstanceVersionRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'xLanguage' => 'string',
             'instanceId' => 'string',
-            'body' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\OpenGaussUpgradeRequest'
+            'body' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UpgradeRequestBody'
     ];
 
     /**
@@ -249,7 +249,7 @@ class UpgradeInstanceVersionRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\OpenGaussUpgradeRequest|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UpgradeRequestBody|null
     */
     public function getBody()
     {
@@ -259,7 +259,7 @@ class UpgradeInstanceVersionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\OpenGaussUpgradeRequest|null $body body
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UpgradeRequestBody|null $body body
     *
     * @return $this
     */

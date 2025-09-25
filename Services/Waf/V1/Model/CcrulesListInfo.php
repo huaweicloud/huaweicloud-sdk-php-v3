@@ -20,6 +20,8 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * policyname  **参数解释：** 策略名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
@@ -48,6 +50,8 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'policyname' => 'string',
+            'priority' => 'int',
             'name' => 'string',
             'id' => 'string',
             'policyid' => 'string',
@@ -76,6 +80,8 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * policyname  **参数解释：** 策略名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
@@ -104,6 +110,8 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'policyname' => null,
+        'priority' => null,
         'name' => null,
         'id' => null,
         'policyid' => null,
@@ -153,6 +161,8 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * policyname  **参数解释：** 策略名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
@@ -181,6 +191,8 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'policyname' => 'policyname',
+            'priority' => 'priority',
             'name' => 'name',
             'id' => 'id',
             'policyid' => 'policyid',
@@ -209,6 +221,8 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * policyname  **参数解释：** 策略名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
@@ -237,6 +251,8 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'policyname' => 'setPolicyname',
+            'priority' => 'setPriority',
             'name' => 'setName',
             'id' => 'setId',
             'policyid' => 'setPolicyid',
@@ -265,6 +281,8 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * policyname  **参数解释：** 策略名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
@@ -293,6 +311,8 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'policyname' => 'getPolicyname',
+            'priority' => 'getPriority',
             'name' => 'getName',
             'id' => 'getId',
             'policyid' => 'getPolicyid',
@@ -402,6 +422,8 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['policyname'] = isset($data['policyname']) ? $data['policyname'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['policyid'] = isset($data['policyid']) ? $data['policyid'] : null;
@@ -456,6 +478,54 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets policyname
+    *  **参数解释：** 策略名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getPolicyname()
+    {
+        return $this->container['policyname'];
+    }
+
+    /**
+    * Sets policyname
+    *
+    * @param string|null $policyname **参数解释：** 策略名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setPolicyname($policyname)
+    {
+        $this->container['policyname'] = $policyname;
+        return $this;
+    }
+
+    /**
+    * Gets priority
+    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
+    *
+    * @return int|null
+    */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+    * Sets priority
+    *
+    * @param int|null $priority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
+    *
+    * @return $this
+    */
+    public function setPriority($priority)
+    {
+        $this->container['priority'] = $priority;
+        return $this;
     }
 
     /**

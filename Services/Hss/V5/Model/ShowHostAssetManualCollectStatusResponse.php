@@ -21,8 +21,8 @@ class ShowHostAssetManualCollectStatusResponse implements ModelInterface, ArrayA
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * scanStatus  手动检测状态
-    * scannedTime  检测完成时间
+    * scanStatus  **参数解释**： 手动检测状态 **取值范围**： - neverscan：从未扫描过 - scanning：扫描中 - scanned：扫描完成 - failed：扫描失败 - longscanning：扫描超时
+    * scannedTime  **参数解释**： 检测完成时间 **取值范围**： 最小值0，最大值2^63-1
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ShowHostAssetManualCollectStatusResponse implements ModelInterface, ArrayA
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * scanStatus  手动检测状态
-    * scannedTime  检测完成时间
+    * scanStatus  **参数解释**： 手动检测状态 **取值范围**： - neverscan：从未扫描过 - scanning：扫描中 - scanned：扫描完成 - failed：扫描失败 - longscanning：扫描超时
+    * scannedTime  **参数解释**： 检测完成时间 **取值范围**： 最小值0，最大值2^63-1
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ShowHostAssetManualCollectStatusResponse implements ModelInterface, ArrayA
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * scanStatus  手动检测状态
-    * scannedTime  检测完成时间
+    * scanStatus  **参数解释**： 手动检测状态 **取值范围**： - neverscan：从未扫描过 - scanning：扫描中 - scanned：扫描完成 - failed：扫描失败 - longscanning：扫描超时
+    * scannedTime  **参数解释**： 检测完成时间 **取值范围**： 最小值0，最大值2^63-1
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ShowHostAssetManualCollectStatusResponse implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * scanStatus  手动检测状态
-    * scannedTime  检测完成时间
+    * scanStatus  **参数解释**： 手动检测状态 **取值范围**： - neverscan：从未扫描过 - scanning：扫描中 - scanned：扫描完成 - failed：扫描失败 - longscanning：扫描超时
+    * scannedTime  **参数解释**： 检测完成时间 **取值范围**： 最小值0，最大值2^63-1
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ShowHostAssetManualCollectStatusResponse implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * scanStatus  手动检测状态
-    * scannedTime  检测完成时间
+    * scanStatus  **参数解释**： 手动检测状态 **取值范围**： - neverscan：从未扫描过 - scanning：扫描中 - scanned：扫描完成 - failed：扫描失败 - longscanning：扫描超时
+    * scannedTime  **参数解释**： 检测完成时间 **取值范围**： 最小值0，最大值2^63-1
     *
     * @var string[]
     */
@@ -189,7 +189,7 @@ class ShowHostAssetManualCollectStatusResponse implements ModelInterface, ArrayA
 
     /**
     * Gets scanStatus
-    *  手动检测状态
+    *  **参数解释**： 手动检测状态 **取值范围**： - neverscan：从未扫描过 - scanning：扫描中 - scanned：扫描完成 - failed：扫描失败 - longscanning：扫描超时
     *
     * @return string|null
     */
@@ -201,7 +201,7 @@ class ShowHostAssetManualCollectStatusResponse implements ModelInterface, ArrayA
     /**
     * Sets scanStatus
     *
-    * @param string|null $scanStatus 手动检测状态
+    * @param string|null $scanStatus **参数解释**： 手动检测状态 **取值范围**： - neverscan：从未扫描过 - scanning：扫描中 - scanned：扫描完成 - failed：扫描失败 - longscanning：扫描超时
     *
     * @return $this
     */
@@ -213,7 +213,7 @@ class ShowHostAssetManualCollectStatusResponse implements ModelInterface, ArrayA
 
     /**
     * Gets scannedTime
-    *  检测完成时间
+    *  **参数解释**： 检测完成时间 **取值范围**： 最小值0，最大值2^63-1
     *
     * @return int|null
     */
@@ -225,7 +225,7 @@ class ShowHostAssetManualCollectStatusResponse implements ModelInterface, ArrayA
     /**
     * Sets scannedTime
     *
-    * @param int|null $scannedTime 检测完成时间
+    * @param int|null $scannedTime **参数解释**： 检测完成时间 **取值范围**： 最小值0，最大值2^63-1
     *
     * @return $this
     */

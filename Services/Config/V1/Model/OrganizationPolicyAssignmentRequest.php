@@ -21,7 +21,7 @@ class OrganizationPolicyAssignmentRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * excludedAccounts  需要排除配置规则的帐号。
-    * organizationPolicyAssignmentName  组织合规规则名称。
+    * organizationPolicyAssignmentName  组织合规规则名称
     * managedPolicyAssignmentMetadata  managedPolicyAssignmentMetadata
     *
     * @var string[]
@@ -35,7 +35,7 @@ class OrganizationPolicyAssignmentRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * excludedAccounts  需要排除配置规则的帐号。
-    * organizationPolicyAssignmentName  组织合规规则名称。
+    * organizationPolicyAssignmentName  组织合规规则名称
     * managedPolicyAssignmentMetadata  managedPolicyAssignmentMetadata
     *
     * @var string[]
@@ -70,7 +70,7 @@ class OrganizationPolicyAssignmentRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * excludedAccounts  需要排除配置规则的帐号。
-    * organizationPolicyAssignmentName  组织合规规则名称。
+    * organizationPolicyAssignmentName  组织合规规则名称
     * managedPolicyAssignmentMetadata  managedPolicyAssignmentMetadata
     *
     * @var string[]
@@ -84,7 +84,7 @@ class OrganizationPolicyAssignmentRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * excludedAccounts  需要排除配置规则的帐号。
-    * organizationPolicyAssignmentName  组织合规规则名称。
+    * organizationPolicyAssignmentName  组织合规规则名称
     * managedPolicyAssignmentMetadata  managedPolicyAssignmentMetadata
     *
     * @var string[]
@@ -98,7 +98,7 @@ class OrganizationPolicyAssignmentRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * excludedAccounts  需要排除配置规则的帐号。
-    * organizationPolicyAssignmentName  组织合规规则名称。
+    * organizationPolicyAssignmentName  组织合规规则名称
     * managedPolicyAssignmentMetadata  managedPolicyAssignmentMetadata
     *
     * @var string[]
@@ -183,11 +183,11 @@ class OrganizationPolicyAssignmentRequest implements ModelInterface, ArrayAccess
         if ($this->container['organizationPolicyAssignmentName'] === null) {
             $invalidProperties[] = "'organizationPolicyAssignmentName' can't be null";
         }
-            if ((mb_strlen($this->container['organizationPolicyAssignmentName']) > 60)) {
-                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', the character length must be smaller than or equal to 60.";
+            if ((mb_strlen($this->container['organizationPolicyAssignmentName']) > 252)) {
+                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', the character length must be smaller than or equal to 252.";
             }
-            if (!preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/", $this->container['organizationPolicyAssignmentName'])) {
-                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/.";
+            if (!preg_match("/^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/", $this->container['organizationPolicyAssignmentName'])) {
+                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', must be conform to the pattern /^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/.";
             }
         return $invalidProperties;
     }
@@ -229,7 +229,7 @@ class OrganizationPolicyAssignmentRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets organizationPolicyAssignmentName
-    *  组织合规规则名称。
+    *  组织合规规则名称
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class OrganizationPolicyAssignmentRequest implements ModelInterface, ArrayAccess
     /**
     * Sets organizationPolicyAssignmentName
     *
-    * @param string $organizationPolicyAssignmentName 组织合规规则名称。
+    * @param string $organizationPolicyAssignmentName 组织合规规则名称
     *
     * @return $this
     */

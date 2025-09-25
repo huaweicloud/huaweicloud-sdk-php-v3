@@ -20,13 +20,13 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostIp  服务器ip
-    * hostName  服务器名称
-    * alarmTime  动态网页防篡改的告警时间(ms)
-    * threatType  威胁类型
-    * alarmLevel  告警级别
-    * sourceIp  攻击主机的源IP
-    * attackedUrl  攻击请求的URL
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度0-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * alarmTime  **参数解释**: 告警时间，单位毫秒。 **取值范围**: 最小值0，最大值4070880000000
+    * threatType  **参数解释**： 威胁类型 **取值范围**： 字符长度0-128位
+    * alarmLevel  **参数解释**: 告警等级 **取值范围**: - 1 : 紧急。 - 2 : 重要。 - 3 : 次要。 - 4 : 提示。
+    * sourceIp  **参数解释**： 攻击源IP **取值范围**： 字符长度0-128位
+    * attackedUrl  **参数解释**： 攻击源URL **取值范围**： 字符长度0-2000位
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostIp  服务器ip
-    * hostName  服务器名称
-    * alarmTime  动态网页防篡改的告警时间(ms)
-    * threatType  威胁类型
-    * alarmLevel  告警级别
-    * sourceIp  攻击主机的源IP
-    * attackedUrl  攻击请求的URL
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度0-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * alarmTime  **参数解释**: 告警时间，单位毫秒。 **取值范围**: 最小值0，最大值4070880000000
+    * threatType  **参数解释**： 威胁类型 **取值范围**： 字符长度0-128位
+    * alarmLevel  **参数解释**: 告警等级 **取值范围**: - 1 : 紧急。 - 2 : 重要。 - 3 : 次要。 - 4 : 提示。
+    * sourceIp  **参数解释**： 攻击源IP **取值范围**： 字符长度0-128位
+    * attackedUrl  **参数解释**： 攻击源URL **取值范围**： 字符长度0-2000位
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
         'hostName' => null,
         'alarmTime' => 'int64',
         'threatType' => null,
-        'alarmLevel' => null,
+        'alarmLevel' => 'int32',
         'sourceIp' => null,
         'attackedUrl' => null
     ];
@@ -85,13 +85,13 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostIp  服务器ip
-    * hostName  服务器名称
-    * alarmTime  动态网页防篡改的告警时间(ms)
-    * threatType  威胁类型
-    * alarmLevel  告警级别
-    * sourceIp  攻击主机的源IP
-    * attackedUrl  攻击请求的URL
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度0-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * alarmTime  **参数解释**: 告警时间，单位毫秒。 **取值范围**: 最小值0，最大值4070880000000
+    * threatType  **参数解释**： 威胁类型 **取值范围**： 字符长度0-128位
+    * alarmLevel  **参数解释**: 告警等级 **取值范围**: - 1 : 紧急。 - 2 : 重要。 - 3 : 次要。 - 4 : 提示。
+    * sourceIp  **参数解释**： 攻击源IP **取值范围**： 字符长度0-128位
+    * attackedUrl  **参数解释**： 攻击源URL **取值范围**： 字符长度0-2000位
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostIp  服务器ip
-    * hostName  服务器名称
-    * alarmTime  动态网页防篡改的告警时间(ms)
-    * threatType  威胁类型
-    * alarmLevel  告警级别
-    * sourceIp  攻击主机的源IP
-    * attackedUrl  攻击请求的URL
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度0-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * alarmTime  **参数解释**: 告警时间，单位毫秒。 **取值范围**: 最小值0，最大值4070880000000
+    * threatType  **参数解释**： 威胁类型 **取值范围**： 字符长度0-128位
+    * alarmLevel  **参数解释**: 告警等级 **取值范围**: - 1 : 紧急。 - 2 : 重要。 - 3 : 次要。 - 4 : 提示。
+    * sourceIp  **参数解释**： 攻击源IP **取值范围**： 字符长度0-128位
+    * attackedUrl  **参数解释**： 攻击源URL **取值范围**： 字符长度0-2000位
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostIp  服务器ip
-    * hostName  服务器名称
-    * alarmTime  动态网页防篡改的告警时间(ms)
-    * threatType  威胁类型
-    * alarmLevel  告警级别
-    * sourceIp  攻击主机的源IP
-    * attackedUrl  攻击请求的URL
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度0-64位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * alarmTime  **参数解释**: 告警时间，单位毫秒。 **取值范围**: 最小值0，最大值4070880000000
+    * threatType  **参数解释**： 威胁类型 **取值范围**： 字符长度0-128位
+    * alarmLevel  **参数解释**: 告警等级 **取值范围**: - 1 : 紧急。 - 2 : 重要。 - 3 : 次要。 - 4 : 提示。
+    * sourceIp  **参数解释**： 攻击源IP **取值范围**： 字符长度0-128位
+    * attackedUrl  **参数解释**： 攻击源URL **取值范围**： 字符长度0-2000位
     *
     * @var string[]
     */
@@ -230,11 +230,14 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) < 0)) {
                 $invalidProperties[] = "invalid value for 'hostIp', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostName']) && !preg_match("/^.*$/", $this->container['hostName'])) {
+                $invalidProperties[] = "invalid value for 'hostName', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['alarmTime']) && ($this->container['alarmTime'] > 4070880000000)) {
                 $invalidProperties[] = "invalid value for 'alarmTime', must be smaller than or equal to 4070880000000.";
@@ -242,14 +245,14 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['alarmTime']) && ($this->container['alarmTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'alarmTime', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['threatType']) && (mb_strlen($this->container['threatType']) > 64)) {
-                $invalidProperties[] = "invalid value for 'threatType', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['threatType']) && (mb_strlen($this->container['threatType']) > 128)) {
+                $invalidProperties[] = "invalid value for 'threatType', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['threatType']) && (mb_strlen($this->container['threatType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'threatType', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['alarmLevel']) && ($this->container['alarmLevel'] > 100)) {
-                $invalidProperties[] = "invalid value for 'alarmLevel', must be smaller than or equal to 100.";
+            if (!is_null($this->container['alarmLevel']) && ($this->container['alarmLevel'] > 10)) {
+                $invalidProperties[] = "invalid value for 'alarmLevel', must be smaller than or equal to 10.";
             }
             if (!is_null($this->container['alarmLevel']) && ($this->container['alarmLevel'] < 0)) {
                 $invalidProperties[] = "invalid value for 'alarmLevel', must be bigger than or equal to 0.";
@@ -282,7 +285,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  服务器ip
+    *  **参数解释**: 服务器IP **取值范围**: 字符长度0-64位
     *
     * @return string|null
     */
@@ -294,7 +297,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 服务器ip
+    * @param string|null $hostIp **参数解释**: 服务器IP **取值范围**: 字符长度0-64位
     *
     * @return $this
     */
@@ -306,7 +309,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -318,7 +321,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -330,7 +333,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmTime
-    *  动态网页防篡改的告警时间(ms)
+    *  **参数解释**: 告警时间，单位毫秒。 **取值范围**: 最小值0，最大值4070880000000
     *
     * @return int|null
     */
@@ -342,7 +345,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets alarmTime
     *
-    * @param int|null $alarmTime 动态网页防篡改的告警时间(ms)
+    * @param int|null $alarmTime **参数解释**: 告警时间，单位毫秒。 **取值范围**: 最小值0，最大值4070880000000
     *
     * @return $this
     */
@@ -354,7 +357,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets threatType
-    *  威胁类型
+    *  **参数解释**： 威胁类型 **取值范围**： 字符长度0-128位
     *
     * @return string|null
     */
@@ -366,7 +369,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets threatType
     *
-    * @param string|null $threatType 威胁类型
+    * @param string|null $threatType **参数解释**： 威胁类型 **取值范围**： 字符长度0-128位
     *
     * @return $this
     */
@@ -378,7 +381,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmLevel
-    *  告警级别
+    *  **参数解释**: 告警等级 **取值范围**: - 1 : 紧急。 - 2 : 重要。 - 3 : 次要。 - 4 : 提示。
     *
     * @return int|null
     */
@@ -390,7 +393,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets alarmLevel
     *
-    * @param int|null $alarmLevel 告警级别
+    * @param int|null $alarmLevel **参数解释**: 告警等级 **取值范围**: - 1 : 紧急。 - 2 : 重要。 - 3 : 次要。 - 4 : 提示。
     *
     * @return $this
     */
@@ -402,7 +405,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceIp
-    *  攻击主机的源IP
+    *  **参数解释**： 攻击源IP **取值范围**： 字符长度0-128位
     *
     * @return string|null
     */
@@ -414,7 +417,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets sourceIp
     *
-    * @param string|null $sourceIp 攻击主机的源IP
+    * @param string|null $sourceIp **参数解释**： 攻击源IP **取值范围**： 字符长度0-128位
     *
     * @return $this
     */
@@ -426,7 +429,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets attackedUrl
-    *  攻击请求的URL
+    *  **参数解释**： 攻击源URL **取值范围**： 字符长度0-2000位
     *
     * @return string|null
     */
@@ -438,7 +441,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets attackedUrl
     *
-    * @param string|null $attackedUrl 攻击请求的URL
+    * @param string|null $attackedUrl **参数解释**： 攻击源URL **取值范围**： 字符长度0-2000位
     *
     * @return $this
     */

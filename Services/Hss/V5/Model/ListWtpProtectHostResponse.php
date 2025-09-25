@@ -21,8 +21,8 @@ class ListWtpProtectHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dataList  data list
-    * totalNum  total number of WTP protected servers
+    * dataList  **参数解释**: 网页防篡改防护列表信息 **取值范围**: 最小值0，最大值200
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListWtpProtectHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dataList  data list
-    * totalNum  total number of WTP protected servers
+    * dataList  **参数解释**: 网页防篡改防护列表信息 **取值范围**: 最小值0，最大值200
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListWtpProtectHostResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dataList  data list
-    * totalNum  total number of WTP protected servers
+    * dataList  **参数解释**: 网页防篡改防护列表信息 **取值范围**: 最小值0，最大值200
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListWtpProtectHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dataList  data list
-    * totalNum  total number of WTP protected servers
+    * dataList  **参数解释**: 网页防篡改防护列表信息 **取值范围**: 最小值0，最大值200
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListWtpProtectHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dataList  data list
-    * totalNum  total number of WTP protected servers
+    * dataList  **参数解释**: 网页防篡改防护列表信息 **取值范围**: 最小值0，最大值200
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -170,8 +170,8 @@ class ListWtpProtectHostResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 65535)) {
-                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 65535.";
+            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 2147483647.";
             }
             if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] < 0)) {
                 $invalidProperties[] = "invalid value for 'totalNum', must be bigger than or equal to 0.";
@@ -192,7 +192,7 @@ class ListWtpProtectHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  data list
+    *  **参数解释**: 网页防篡改防护列表信息 **取值范围**: 最小值0，最大值200
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\WtpProtectHostResponseInfo[]|null
     */
@@ -204,7 +204,7 @@ class ListWtpProtectHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\WtpProtectHostResponseInfo[]|null $dataList data list
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\WtpProtectHostResponseInfo[]|null $dataList **参数解释**: 网页防篡改防护列表信息 **取值范围**: 最小值0，最大值200
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListWtpProtectHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  total number of WTP protected servers
+    *  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -228,7 +228,7 @@ class ListWtpProtectHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum total number of WTP protected servers
+    * @param int|null $totalNum **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */

@@ -21,21 +21,25 @@ class CCEClusterIdListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterIdList  集群id列表
+    * detectType  查询类型，包含如下:     - image : 镜像风险     - baseline : 基线风险     - vul : 漏洞风险     - event : 入侵风险
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'clusterIdList' => 'string[]'
+            'clusterIdList' => 'string[]',
+            'detectType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterIdList  集群id列表
+    * detectType  查询类型，包含如下:     - image : 镜像风险     - baseline : 基线风险     - vul : 漏洞风险     - event : 入侵风险
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'clusterIdList' => null
+        'clusterIdList' => null,
+        'detectType' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class CCEClusterIdListRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterIdList  集群id列表
+    * detectType  查询类型，包含如下:     - image : 镜像风险     - baseline : 基线风险     - vul : 漏洞风险     - event : 入侵风险
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'clusterIdList' => 'cluster_id_list'
+            'clusterIdList' => 'cluster_id_list',
+            'detectType' => 'detect_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterIdList  集群id列表
+    * detectType  查询类型，包含如下:     - image : 镜像风险     - baseline : 基线风险     - vul : 漏洞风险     - event : 入侵风险
     *
     * @var string[]
     */
     protected static $setters = [
-            'clusterIdList' => 'setClusterIdList'
+            'clusterIdList' => 'setClusterIdList',
+            'detectType' => 'setDetectType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterIdList  集群id列表
+    * detectType  查询类型，包含如下:     - image : 镜像风险     - baseline : 基线风险     - vul : 漏洞风险     - event : 入侵风险
     *
     * @var string[]
     */
     protected static $getters = [
-            'clusterIdList' => 'getClusterIdList'
+            'clusterIdList' => 'getClusterIdList',
+            'detectType' => 'getDetectType'
     ];
 
     /**
@@ -148,6 +158,7 @@ class CCEClusterIdListRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['clusterIdList'] = isset($data['clusterIdList']) ? $data['clusterIdList'] : null;
+        $this->container['detectType'] = isset($data['detectType']) ? $data['detectType'] : null;
     }
 
     /**
@@ -158,6 +169,12 @@ class CCEClusterIdListRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['clusterIdList'] === null) {
+            $invalidProperties[] = "'clusterIdList' can't be null";
+        }
+            if (!is_null($this->container['detectType']) && !preg_match("/(^image|baseline|vul|event$)/", $this->container['detectType'])) {
+                $invalidProperties[] = "invalid value for 'detectType', must be conform to the pattern /(^image|baseline|vul|event$)/.";
+            }
         return $invalidProperties;
     }
 
@@ -176,7 +193,7 @@ class CCEClusterIdListRequestBody implements ModelInterface, ArrayAccess
     * Gets clusterIdList
     *  集群id列表
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getClusterIdList()
     {
@@ -186,13 +203,37 @@ class CCEClusterIdListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets clusterIdList
     *
-    * @param string[]|null $clusterIdList 集群id列表
+    * @param string[] $clusterIdList 集群id列表
     *
     * @return $this
     */
     public function setClusterIdList($clusterIdList)
     {
         $this->container['clusterIdList'] = $clusterIdList;
+        return $this;
+    }
+
+    /**
+    * Gets detectType
+    *  查询类型，包含如下:     - image : 镜像风险     - baseline : 基线风险     - vul : 漏洞风险     - event : 入侵风险
+    *
+    * @return string|null
+    */
+    public function getDetectType()
+    {
+        return $this->container['detectType'];
+    }
+
+    /**
+    * Sets detectType
+    *
+    * @param string|null $detectType 查询类型，包含如下:     - image : 镜像风险     - baseline : 基线风险     - vul : 漏洞风险     - event : 入侵风险
+    *
+    * @return $this
+    */
+    public function setDetectType($detectType)
+    {
+        $this->container['detectType'] = $detectType;
         return $this;
     }
 

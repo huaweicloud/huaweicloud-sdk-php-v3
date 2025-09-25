@@ -5543,6 +5543,68 @@ class EcsClient extends Client
     }
 
     /**
+     * 获取串口登录地址
+     *
+     * 获取云服务器云主机串口登录地址。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSerialConsoleActions($request)
+    {
+        return $this->showSerialConsoleActionsWithHttpInfo($request);
+    }
+
+    public function showSerialConsoleActionsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/actions/serial-console';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowSerialConsoleActionsResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowSerialConsoleActionsRequest');
+    }
+
+    /**
      * 查询云服务器详情
      *
      * 查询弹性云服务器的详细信息。
@@ -6298,6 +6360,71 @@ class EcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateScheduledEventResponse',
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateScheduledEventRequest');
+    }
+
+    /**
+     * 设置云服务器云主机串口登录
+     *
+     * 设置云服务器云主机串口登录。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSerialConsoleOptions($request)
+    {
+        return $this->updateSerialConsoleOptionsWithHttpInfo($request);
+    }
+
+    public function updateSerialConsoleOptionsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/serial-console-options';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateSerialConsoleOptionsResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateSerialConsoleOptionsRequest');
     }
 
     /**

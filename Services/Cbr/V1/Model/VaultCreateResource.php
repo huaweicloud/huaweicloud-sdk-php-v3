@@ -36,15 +36,13 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * autoExpand  [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,tm,hcso_dt)
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
-    * errText  包周期创建错误信息
-    * retCode  包周期订购结果
-    * orders  包周期创建订单信息
     * backupNamePrefix  备份名称前缀
     * demandBilling  是否允许使用超出存储库容量
     * cbcDeleteCount  存储库删除次数
     * frozen  存储库是否冻结
     * sysLockSourceService  用于标识SMB服务
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     *
     * @var string[]
     */
@@ -65,15 +63,13 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             'autoExpand' => 'bool',
             'smnNotify' => 'bool',
             'threshold' => 'int',
-            'errText' => 'string',
-            'retCode' => 'string',
-            'orders' => '\HuaweiCloud\SDK\Cbr\V1\Model\CbcOrderResult[]',
             'backupNamePrefix' => 'string',
             'demandBilling' => 'bool',
             'cbcDeleteCount' => 'int',
             'frozen' => 'bool',
             'sysLockSourceService' => 'string',
-            'locked' => 'bool'
+            'locked' => 'bool',
+            'availabilityZone' => 'string'
     ];
 
     /**
@@ -94,15 +90,13 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * autoExpand  [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,tm,hcso_dt)
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
-    * errText  包周期创建错误信息
-    * retCode  包周期订购结果
-    * orders  包周期创建订单信息
     * backupNamePrefix  备份名称前缀
     * demandBilling  是否允许使用超出存储库容量
     * cbcDeleteCount  存储库删除次数
     * frozen  存储库是否冻结
     * sysLockSourceService  用于标识SMB服务
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     *
     * @var string[]
     */
@@ -123,15 +117,13 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
         'autoExpand' => null,
         'smnNotify' => null,
         'threshold' => 'int32',
-        'errText' => null,
-        'retCode' => null,
-        'orders' => null,
         'backupNamePrefix' => null,
         'demandBilling' => null,
         'cbcDeleteCount' => 'int32',
         'frozen' => null,
         'sysLockSourceService' => null,
-        'locked' => null
+        'locked' => null,
+        'availabilityZone' => null
     ];
 
     /**
@@ -173,15 +165,13 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * autoExpand  [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,tm,hcso_dt)
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
-    * errText  包周期创建错误信息
-    * retCode  包周期订购结果
-    * orders  包周期创建订单信息
     * backupNamePrefix  备份名称前缀
     * demandBilling  是否允许使用超出存储库容量
     * cbcDeleteCount  存储库删除次数
     * frozen  存储库是否冻结
     * sysLockSourceService  用于标识SMB服务
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     *
     * @var string[]
     */
@@ -202,15 +192,13 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             'autoExpand' => 'auto_expand',
             'smnNotify' => 'smn_notify',
             'threshold' => 'threshold',
-            'errText' => 'errText',
-            'retCode' => 'retCode',
-            'orders' => 'orders',
             'backupNamePrefix' => 'backup_name_prefix',
             'demandBilling' => 'demand_billing',
             'cbcDeleteCount' => 'cbc_delete_count',
             'frozen' => 'frozen',
             'sysLockSourceService' => 'sys_lock_source_service',
-            'locked' => 'locked'
+            'locked' => 'locked',
+            'availabilityZone' => 'availability_zone'
     ];
 
     /**
@@ -231,15 +219,13 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * autoExpand  [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,tm,hcso_dt)
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
-    * errText  包周期创建错误信息
-    * retCode  包周期订购结果
-    * orders  包周期创建订单信息
     * backupNamePrefix  备份名称前缀
     * demandBilling  是否允许使用超出存储库容量
     * cbcDeleteCount  存储库删除次数
     * frozen  存储库是否冻结
     * sysLockSourceService  用于标识SMB服务
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     *
     * @var string[]
     */
@@ -260,15 +246,13 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             'autoExpand' => 'setAutoExpand',
             'smnNotify' => 'setSmnNotify',
             'threshold' => 'setThreshold',
-            'errText' => 'setErrText',
-            'retCode' => 'setRetCode',
-            'orders' => 'setOrders',
             'backupNamePrefix' => 'setBackupNamePrefix',
             'demandBilling' => 'setDemandBilling',
             'cbcDeleteCount' => 'setCbcDeleteCount',
             'frozen' => 'setFrozen',
             'sysLockSourceService' => 'setSysLockSourceService',
-            'locked' => 'setLocked'
+            'locked' => 'setLocked',
+            'availabilityZone' => 'setAvailabilityZone'
     ];
 
     /**
@@ -289,15 +273,13 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * autoExpand  [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,tm,hcso_dt)
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
-    * errText  包周期创建错误信息
-    * retCode  包周期订购结果
-    * orders  包周期创建订单信息
     * backupNamePrefix  备份名称前缀
     * demandBilling  是否允许使用超出存储库容量
     * cbcDeleteCount  存储库删除次数
     * frozen  存储库是否冻结
     * sysLockSourceService  用于标识SMB服务
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     *
     * @var string[]
     */
@@ -318,15 +300,13 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             'autoExpand' => 'getAutoExpand',
             'smnNotify' => 'getSmnNotify',
             'threshold' => 'getThreshold',
-            'errText' => 'getErrText',
-            'retCode' => 'getRetCode',
-            'orders' => 'getOrders',
             'backupNamePrefix' => 'getBackupNamePrefix',
             'demandBilling' => 'getDemandBilling',
             'cbcDeleteCount' => 'getCbcDeleteCount',
             'frozen' => 'getFrozen',
             'sysLockSourceService' => 'getSysLockSourceService',
-            'locked' => 'getLocked'
+            'locked' => 'getLocked',
+            'availabilityZone' => 'getAvailabilityZone'
     ];
 
     /**
@@ -403,15 +383,13 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
         $this->container['autoExpand'] = isset($data['autoExpand']) ? $data['autoExpand'] : null;
         $this->container['smnNotify'] = isset($data['smnNotify']) ? $data['smnNotify'] : null;
         $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
-        $this->container['errText'] = isset($data['errText']) ? $data['errText'] : null;
-        $this->container['retCode'] = isset($data['retCode']) ? $data['retCode'] : null;
-        $this->container['orders'] = isset($data['orders']) ? $data['orders'] : null;
         $this->container['backupNamePrefix'] = isset($data['backupNamePrefix']) ? $data['backupNamePrefix'] : null;
         $this->container['demandBilling'] = isset($data['demandBilling']) ? $data['demandBilling'] : null;
         $this->container['cbcDeleteCount'] = isset($data['cbcDeleteCount']) ? $data['cbcDeleteCount'] : null;
         $this->container['frozen'] = isset($data['frozen']) ? $data['frozen'] : null;
         $this->container['sysLockSourceService'] = isset($data['sysLockSourceService']) ? $data['sysLockSourceService'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
+        $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
     }
 
     /**
@@ -469,6 +447,12 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['backupNamePrefix']) && (mb_strlen($this->container['backupNamePrefix']) < 0)) {
                 $invalidProperties[] = "invalid value for 'backupNamePrefix', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['availabilityZone']) && (mb_strlen($this->container['availabilityZone']) > 32)) {
+                $invalidProperties[] = "invalid value for 'availabilityZone', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['availabilityZone']) && (mb_strlen($this->container['availabilityZone']) < 1)) {
+                $invalidProperties[] = "invalid value for 'availabilityZone', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -869,78 +853,6 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets errText
-    *  包周期创建错误信息
-    *
-    * @return string|null
-    */
-    public function getErrText()
-    {
-        return $this->container['errText'];
-    }
-
-    /**
-    * Sets errText
-    *
-    * @param string|null $errText 包周期创建错误信息
-    *
-    * @return $this
-    */
-    public function setErrText($errText)
-    {
-        $this->container['errText'] = $errText;
-        return $this;
-    }
-
-    /**
-    * Gets retCode
-    *  包周期订购结果
-    *
-    * @return string|null
-    */
-    public function getRetCode()
-    {
-        return $this->container['retCode'];
-    }
-
-    /**
-    * Sets retCode
-    *
-    * @param string|null $retCode 包周期订购结果
-    *
-    * @return $this
-    */
-    public function setRetCode($retCode)
-    {
-        $this->container['retCode'] = $retCode;
-        return $this;
-    }
-
-    /**
-    * Gets orders
-    *  包周期创建订单信息
-    *
-    * @return \HuaweiCloud\SDK\Cbr\V1\Model\CbcOrderResult[]|null
-    */
-    public function getOrders()
-    {
-        return $this->container['orders'];
-    }
-
-    /**
-    * Sets orders
-    *
-    * @param \HuaweiCloud\SDK\Cbr\V1\Model\CbcOrderResult[]|null $orders 包周期创建订单信息
-    *
-    * @return $this
-    */
-    public function setOrders($orders)
-    {
-        $this->container['orders'] = $orders;
-        return $this;
-    }
-
-    /**
     * Gets backupNamePrefix
     *  备份名称前缀
     *
@@ -1081,6 +993,30 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     public function setLocked($locked)
     {
         $this->container['locked'] = $locked;
+        return $this;
+    }
+
+    /**
+    * Gets availabilityZone
+    *  存储库可用区信息，最大支持32字符。
+    *
+    * @return string|null
+    */
+    public function getAvailabilityZone()
+    {
+        return $this->container['availabilityZone'];
+    }
+
+    /**
+    * Sets availabilityZone
+    *
+    * @param string|null $availabilityZone 存储库可用区信息，最大支持32字符。
+    *
+    * @return $this
+    */
+    public function setAvailabilityZone($availabilityZone)
+    {
+        $this->container['availabilityZone'] = $availabilityZone;
         return $this;
     }
 

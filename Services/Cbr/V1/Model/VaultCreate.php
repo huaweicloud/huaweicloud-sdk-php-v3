@@ -36,6 +36,7 @@ class VaultCreate implements ModelInterface, ArrayAccess
     * demandBilling  存储库使用是否允许超出容量，只有创建包周期存储库时才允许该值为 true
     * sysLockSourceService  用于标识SMB服务，您可以设置为SMB或者空
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class VaultCreate implements ModelInterface, ArrayAccess
             'backupNamePrefix' => 'string',
             'demandBilling' => 'bool',
             'sysLockSourceService' => 'string',
-            'locked' => 'bool'
+            'locked' => 'bool',
+            'availabilityZone' => 'string'
     ];
 
     /**
@@ -76,6 +78,7 @@ class VaultCreate implements ModelInterface, ArrayAccess
     * demandBilling  存储库使用是否允许超出容量，只有创建包周期存储库时才允许该值为 true
     * sysLockSourceService  用于标识SMB服务，您可以设置为SMB或者空
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class VaultCreate implements ModelInterface, ArrayAccess
         'backupNamePrefix' => null,
         'demandBilling' => null,
         'sysLockSourceService' => null,
-        'locked' => null
+        'locked' => null,
+        'availabilityZone' => null
     ];
 
     /**
@@ -137,6 +141,7 @@ class VaultCreate implements ModelInterface, ArrayAccess
     * demandBilling  存储库使用是否允许超出容量，只有创建包周期存储库时才允许该值为 true
     * sysLockSourceService  用于标识SMB服务，您可以设置为SMB或者空
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class VaultCreate implements ModelInterface, ArrayAccess
             'backupNamePrefix' => 'backup_name_prefix',
             'demandBilling' => 'demand_billing',
             'sysLockSourceService' => 'sys_lock_source_service',
-            'locked' => 'locked'
+            'locked' => 'locked',
+            'availabilityZone' => 'availability_zone'
     ];
 
     /**
@@ -177,6 +183,7 @@ class VaultCreate implements ModelInterface, ArrayAccess
     * demandBilling  存储库使用是否允许超出容量，只有创建包周期存储库时才允许该值为 true
     * sysLockSourceService  用于标识SMB服务，您可以设置为SMB或者空
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class VaultCreate implements ModelInterface, ArrayAccess
             'backupNamePrefix' => 'setBackupNamePrefix',
             'demandBilling' => 'setDemandBilling',
             'sysLockSourceService' => 'setSysLockSourceService',
-            'locked' => 'setLocked'
+            'locked' => 'setLocked',
+            'availabilityZone' => 'setAvailabilityZone'
     ];
 
     /**
@@ -217,6 +225,7 @@ class VaultCreate implements ModelInterface, ArrayAccess
     * demandBilling  存储库使用是否允许超出容量，只有创建包周期存储库时才允许该值为 true
     * sysLockSourceService  用于标识SMB服务，您可以设置为SMB或者空
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class VaultCreate implements ModelInterface, ArrayAccess
             'backupNamePrefix' => 'getBackupNamePrefix',
             'demandBilling' => 'getDemandBilling',
             'sysLockSourceService' => 'getSysLockSourceService',
-            'locked' => 'getLocked'
+            'locked' => 'getLocked',
+            'availabilityZone' => 'getAvailabilityZone'
     ];
 
     /**
@@ -313,6 +323,7 @@ class VaultCreate implements ModelInterface, ArrayAccess
         $this->container['demandBilling'] = isset($data['demandBilling']) ? $data['demandBilling'] : null;
         $this->container['sysLockSourceService'] = isset($data['sysLockSourceService']) ? $data['sysLockSourceService'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
+        $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
     }
 
     /**
@@ -361,6 +372,12 @@ class VaultCreate implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['backupNamePrefix']) && (mb_strlen($this->container['backupNamePrefix']) < 0)) {
                 $invalidProperties[] = "invalid value for 'backupNamePrefix', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['availabilityZone']) && (mb_strlen($this->container['availabilityZone']) > 32)) {
+                $invalidProperties[] = "invalid value for 'availabilityZone', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['availabilityZone']) && (mb_strlen($this->container['availabilityZone']) < 1)) {
+                $invalidProperties[] = "invalid value for 'availabilityZone', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -757,6 +774,30 @@ class VaultCreate implements ModelInterface, ArrayAccess
     public function setLocked($locked)
     {
         $this->container['locked'] = $locked;
+        return $this;
+    }
+
+    /**
+    * Gets availabilityZone
+    *  存储库可用区信息，最大支持32字符。
+    *
+    * @return string|null
+    */
+    public function getAvailabilityZone()
+    {
+        return $this->container['availabilityZone'];
+    }
+
+    /**
+    * Sets availabilityZone
+    *
+    * @param string|null $availabilityZone 存储库可用区信息，最大支持32字符。
+    *
+    * @return $this
+    */
+    public function setAvailabilityZone($availabilityZone)
+    {
+        $this->container['availabilityZone'] = $availabilityZone;
         return $this;
     }
 

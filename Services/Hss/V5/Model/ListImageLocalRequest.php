@@ -41,6 +41,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     * podId  本地镜像所关联Pod的ID
     * podName  本地镜像所关联Pod的名称
     * appName  本地镜像所关联软件的名称
+    * hasContainer  **参数解释**: 是否存在容器 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -65,7 +66,8 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
             'containerName' => 'string',
             'podId' => 'string',
             'podName' => 'string',
-            'appName' => 'string'
+            'appName' => 'string',
+            'hasContainer' => 'bool'
     ];
 
     /**
@@ -91,6 +93,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     * podId  本地镜像所关联Pod的ID
     * podName  本地镜像所关联Pod的名称
     * appName  本地镜像所关联软件的名称
+    * hasContainer  **参数解释**: 是否存在容器 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -115,7 +118,8 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
         'containerName' => null,
         'podId' => null,
         'podName' => null,
-        'appName' => null
+        'appName' => null,
+        'hasContainer' => null
     ];
 
     /**
@@ -162,6 +166,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     * podId  本地镜像所关联Pod的ID
     * podName  本地镜像所关联Pod的名称
     * appName  本地镜像所关联软件的名称
+    * hasContainer  **参数解释**: 是否存在容器 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -186,7 +191,8 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
             'containerName' => 'container_name',
             'podId' => 'pod_id',
             'podName' => 'pod_name',
-            'appName' => 'app_name'
+            'appName' => 'app_name',
+            'hasContainer' => 'has_container'
     ];
 
     /**
@@ -212,6 +218,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     * podId  本地镜像所关联Pod的ID
     * podName  本地镜像所关联Pod的名称
     * appName  本地镜像所关联软件的名称
+    * hasContainer  **参数解释**: 是否存在容器 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -236,7 +243,8 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
             'containerName' => 'setContainerName',
             'podId' => 'setPodId',
             'podName' => 'setPodName',
-            'appName' => 'setAppName'
+            'appName' => 'setAppName',
+            'hasContainer' => 'setHasContainer'
     ];
 
     /**
@@ -262,6 +270,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     * podId  本地镜像所关联Pod的ID
     * podName  本地镜像所关联Pod的名称
     * appName  本地镜像所关联软件的名称
+    * hasContainer  **参数解释**: 是否存在容器 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -286,7 +295,8 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
             'containerName' => 'getContainerName',
             'podId' => 'getPodId',
             'podName' => 'getPodName',
-            'appName' => 'getAppName'
+            'appName' => 'getAppName',
+            'hasContainer' => 'getHasContainer'
     ];
 
     /**
@@ -368,6 +378,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
         $this->container['podId'] = isset($data['podId']) ? $data['podId'] : null;
         $this->container['podName'] = isset($data['podName']) ? $data['podName'] : null;
         $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
+        $this->container['hasContainer'] = isset($data['hasContainer']) ? $data['hasContainer'] : null;
     }
 
     /**
@@ -1022,6 +1033,30 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     public function setAppName($appName)
     {
         $this->container['appName'] = $appName;
+        return $this;
+    }
+
+    /**
+    * Gets hasContainer
+    *  **参数解释**: 是否存在容器 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    *
+    * @return bool|null
+    */
+    public function getHasContainer()
+    {
+        return $this->container['hasContainer'];
+    }
+
+    /**
+    * Sets hasContainer
+    *
+    * @param bool|null $hasContainer **参数解释**: 是否存在容器 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setHasContainer($hasContainer)
+    {
+        $this->container['hasContainer'] = $hasContainer;
         return $this;
     }
 

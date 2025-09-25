@@ -20,10 +20,10 @@ class WebTamperProtectHostDirRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * protectDir  防护目录
-    * excludeChildDir  排除子目录
-    * excludeFilePath  排除文件路径
-    * localBackupDir  本地备份路径
+    * protectDir  **参数解释**: 防护目录 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位。Linux服务器，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。Windows服务器，目录名不能包含;/_*?\"<>|，不能以空格开头，不能以\\结尾。 **默认取值**: 不涉及
+    * excludeChildDir  **参数解释**: 排除子目录 **约束限制**: 不涉及 **取值范围**: 子目录名必须是防护目录的有效相对路径，目录名最大长度不能超过256个字符，最多可添加10个子目录，多个子目录用;隔开。Linux服务器的子目录名不能以/开头或结尾，Windows服务器的子目录名不能以\\开头或结尾。 **默认取值**: 不涉及
+    * excludeFilePath  **参数解释**: 排除文件路径 **约束限制**: 仅Linux服务器支持填写排除文件路径，Windows服务器不可填写该字段。 **取值范围**: 排除文件路径必须是防护目录的有效相对路径，不能以/开头或结尾，文件路径最大长度不能超过256个字符；最多可添加50个文件路径，多个文件路径用;隔开。 **默认取值**: 不涉及
+    * localBackupDir  **参数解释**: 本地备份路径，Linux服务器必须填写该字段。 **约束限制**: 仅Linux服务器需要填写本地备份路径，Windows服务器不可填写该字段。 **取值范围**: 本地备份路径不能包含;字符，不能以空格开头，不能以/结尾，本地备份路径长度不得超过256个字符。 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class WebTamperProtectHostDirRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * protectDir  防护目录
-    * excludeChildDir  排除子目录
-    * excludeFilePath  排除文件路径
-    * localBackupDir  本地备份路径
+    * protectDir  **参数解释**: 防护目录 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位。Linux服务器，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。Windows服务器，目录名不能包含;/_*?\"<>|，不能以空格开头，不能以\\结尾。 **默认取值**: 不涉及
+    * excludeChildDir  **参数解释**: 排除子目录 **约束限制**: 不涉及 **取值范围**: 子目录名必须是防护目录的有效相对路径，目录名最大长度不能超过256个字符，最多可添加10个子目录，多个子目录用;隔开。Linux服务器的子目录名不能以/开头或结尾，Windows服务器的子目录名不能以\\开头或结尾。 **默认取值**: 不涉及
+    * excludeFilePath  **参数解释**: 排除文件路径 **约束限制**: 仅Linux服务器支持填写排除文件路径，Windows服务器不可填写该字段。 **取值范围**: 排除文件路径必须是防护目录的有效相对路径，不能以/开头或结尾，文件路径最大长度不能超过256个字符；最多可添加50个文件路径，多个文件路径用;隔开。 **默认取值**: 不涉及
+    * localBackupDir  **参数解释**: 本地备份路径，Linux服务器必须填写该字段。 **约束限制**: 仅Linux服务器需要填写本地备份路径，Windows服务器不可填写该字段。 **取值范围**: 本地备份路径不能包含;字符，不能以空格开头，不能以/结尾，本地备份路径长度不得超过256个字符。 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class WebTamperProtectHostDirRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * protectDir  防护目录
-    * excludeChildDir  排除子目录
-    * excludeFilePath  排除文件路径
-    * localBackupDir  本地备份路径
+    * protectDir  **参数解释**: 防护目录 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位。Linux服务器，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。Windows服务器，目录名不能包含;/_*?\"<>|，不能以空格开头，不能以\\结尾。 **默认取值**: 不涉及
+    * excludeChildDir  **参数解释**: 排除子目录 **约束限制**: 不涉及 **取值范围**: 子目录名必须是防护目录的有效相对路径，目录名最大长度不能超过256个字符，最多可添加10个子目录，多个子目录用;隔开。Linux服务器的子目录名不能以/开头或结尾，Windows服务器的子目录名不能以\\开头或结尾。 **默认取值**: 不涉及
+    * excludeFilePath  **参数解释**: 排除文件路径 **约束限制**: 仅Linux服务器支持填写排除文件路径，Windows服务器不可填写该字段。 **取值范围**: 排除文件路径必须是防护目录的有效相对路径，不能以/开头或结尾，文件路径最大长度不能超过256个字符；最多可添加50个文件路径，多个文件路径用;隔开。 **默认取值**: 不涉及
+    * localBackupDir  **参数解释**: 本地备份路径，Linux服务器必须填写该字段。 **约束限制**: 仅Linux服务器需要填写本地备份路径，Windows服务器不可填写该字段。 **取值范围**: 本地备份路径不能包含;字符，不能以空格开头，不能以/结尾，本地备份路径长度不得超过256个字符。 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class WebTamperProtectHostDirRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * protectDir  防护目录
-    * excludeChildDir  排除子目录
-    * excludeFilePath  排除文件路径
-    * localBackupDir  本地备份路径
+    * protectDir  **参数解释**: 防护目录 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位。Linux服务器，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。Windows服务器，目录名不能包含;/_*?\"<>|，不能以空格开头，不能以\\结尾。 **默认取值**: 不涉及
+    * excludeChildDir  **参数解释**: 排除子目录 **约束限制**: 不涉及 **取值范围**: 子目录名必须是防护目录的有效相对路径，目录名最大长度不能超过256个字符，最多可添加10个子目录，多个子目录用;隔开。Linux服务器的子目录名不能以/开头或结尾，Windows服务器的子目录名不能以\\开头或结尾。 **默认取值**: 不涉及
+    * excludeFilePath  **参数解释**: 排除文件路径 **约束限制**: 仅Linux服务器支持填写排除文件路径，Windows服务器不可填写该字段。 **取值范围**: 排除文件路径必须是防护目录的有效相对路径，不能以/开头或结尾，文件路径最大长度不能超过256个字符；最多可添加50个文件路径，多个文件路径用;隔开。 **默认取值**: 不涉及
+    * localBackupDir  **参数解释**: 本地备份路径，Linux服务器必须填写该字段。 **约束限制**: 仅Linux服务器需要填写本地备份路径，Windows服务器不可填写该字段。 **取值范围**: 本地备份路径不能包含;字符，不能以空格开头，不能以/结尾，本地备份路径长度不得超过256个字符。 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class WebTamperProtectHostDirRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * protectDir  防护目录
-    * excludeChildDir  排除子目录
-    * excludeFilePath  排除文件路径
-    * localBackupDir  本地备份路径
+    * protectDir  **参数解释**: 防护目录 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位。Linux服务器，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。Windows服务器，目录名不能包含;/_*?\"<>|，不能以空格开头，不能以\\结尾。 **默认取值**: 不涉及
+    * excludeChildDir  **参数解释**: 排除子目录 **约束限制**: 不涉及 **取值范围**: 子目录名必须是防护目录的有效相对路径，目录名最大长度不能超过256个字符，最多可添加10个子目录，多个子目录用;隔开。Linux服务器的子目录名不能以/开头或结尾，Windows服务器的子目录名不能以\\开头或结尾。 **默认取值**: 不涉及
+    * excludeFilePath  **参数解释**: 排除文件路径 **约束限制**: 仅Linux服务器支持填写排除文件路径，Windows服务器不可填写该字段。 **取值范围**: 排除文件路径必须是防护目录的有效相对路径，不能以/开头或结尾，文件路径最大长度不能超过256个字符；最多可添加50个文件路径，多个文件路径用;隔开。 **默认取值**: 不涉及
+    * localBackupDir  **参数解释**: 本地备份路径，Linux服务器必须填写该字段。 **约束限制**: 仅Linux服务器需要填写本地备份路径，Windows服务器不可填写该字段。 **取值范围**: 本地备份路径不能包含;字符，不能以空格开头，不能以/结尾，本地备份路径长度不得超过256个字符。 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -191,17 +191,20 @@ class WebTamperProtectHostDirRequestInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['protectDir']) && (mb_strlen($this->container['protectDir']) > 512)) {
-                $invalidProperties[] = "invalid value for 'protectDir', the character length must be smaller than or equal to 512.";
+        if ($this->container['protectDir'] === null) {
+            $invalidProperties[] = "'protectDir' can't be null";
+        }
+            if ((mb_strlen($this->container['protectDir']) > 256)) {
+                $invalidProperties[] = "invalid value for 'protectDir', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['protectDir']) && (mb_strlen($this->container['protectDir']) < 1)) {
-                $invalidProperties[] = "invalid value for 'protectDir', the character length must be bigger than or equal to 1.";
+            if ((mb_strlen($this->container['protectDir']) < 0)) {
+                $invalidProperties[] = "invalid value for 'protectDir', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['protectDir']) && !preg_match("/^.*$/", $this->container['protectDir'])) {
+            if (!preg_match("/^.*$/", $this->container['protectDir'])) {
                 $invalidProperties[] = "invalid value for 'protectDir', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['excludeChildDir']) && (mb_strlen($this->container['excludeChildDir']) > 512)) {
-                $invalidProperties[] = "invalid value for 'excludeChildDir', the character length must be smaller than or equal to 512.";
+            if (!is_null($this->container['excludeChildDir']) && (mb_strlen($this->container['excludeChildDir']) > 2600)) {
+                $invalidProperties[] = "invalid value for 'excludeChildDir', the character length must be smaller than or equal to 2600.";
             }
             if (!is_null($this->container['excludeChildDir']) && (mb_strlen($this->container['excludeChildDir']) < 0)) {
                 $invalidProperties[] = "invalid value for 'excludeChildDir', the character length must be bigger than or equal to 0.";
@@ -209,8 +212,8 @@ class WebTamperProtectHostDirRequestInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['excludeChildDir']) && !preg_match("/^.*$/", $this->container['excludeChildDir'])) {
                 $invalidProperties[] = "invalid value for 'excludeChildDir', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['excludeFilePath']) && (mb_strlen($this->container['excludeFilePath']) > 512)) {
-                $invalidProperties[] = "invalid value for 'excludeFilePath', the character length must be smaller than or equal to 512.";
+            if (!is_null($this->container['excludeFilePath']) && (mb_strlen($this->container['excludeFilePath']) > 3289600)) {
+                $invalidProperties[] = "invalid value for 'excludeFilePath', the character length must be smaller than or equal to 3289600.";
             }
             if (!is_null($this->container['excludeFilePath']) && (mb_strlen($this->container['excludeFilePath']) < 0)) {
                 $invalidProperties[] = "invalid value for 'excludeFilePath', the character length must be bigger than or equal to 0.";
@@ -218,11 +221,11 @@ class WebTamperProtectHostDirRequestInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['excludeFilePath']) && !preg_match("/^.*$/", $this->container['excludeFilePath'])) {
                 $invalidProperties[] = "invalid value for 'excludeFilePath', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['localBackupDir']) && (mb_strlen($this->container['localBackupDir']) > 512)) {
-                $invalidProperties[] = "invalid value for 'localBackupDir', the character length must be smaller than or equal to 512.";
+            if (!is_null($this->container['localBackupDir']) && (mb_strlen($this->container['localBackupDir']) > 256)) {
+                $invalidProperties[] = "invalid value for 'localBackupDir', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['localBackupDir']) && (mb_strlen($this->container['localBackupDir']) < 1)) {
-                $invalidProperties[] = "invalid value for 'localBackupDir', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['localBackupDir']) && (mb_strlen($this->container['localBackupDir']) < 0)) {
+                $invalidProperties[] = "invalid value for 'localBackupDir', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['localBackupDir']) && !preg_match("/^.*$/", $this->container['localBackupDir'])) {
                 $invalidProperties[] = "invalid value for 'localBackupDir', must be conform to the pattern /^.*$/.";
@@ -243,9 +246,9 @@ class WebTamperProtectHostDirRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectDir
-    *  防护目录
+    *  **参数解释**: 防护目录 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位。Linux服务器，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。Windows服务器，目录名不能包含;/_*?\"<>|，不能以空格开头，不能以\\结尾。 **默认取值**: 不涉及
     *
-    * @return string|null
+    * @return string
     */
     public function getProtectDir()
     {
@@ -255,7 +258,7 @@ class WebTamperProtectHostDirRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectDir
     *
-    * @param string|null $protectDir 防护目录
+    * @param string $protectDir **参数解释**: 防护目录 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位。Linux服务器，必须以/开头，不能以/结尾，只能包含英文大小写字母，数字，下划线，中划线和点。Windows服务器，目录名不能包含;/_*?\"<>|，不能以空格开头，不能以\\结尾。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -267,7 +270,7 @@ class WebTamperProtectHostDirRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets excludeChildDir
-    *  排除子目录
+    *  **参数解释**: 排除子目录 **约束限制**: 不涉及 **取值范围**: 子目录名必须是防护目录的有效相对路径，目录名最大长度不能超过256个字符，最多可添加10个子目录，多个子目录用;隔开。Linux服务器的子目录名不能以/开头或结尾，Windows服务器的子目录名不能以\\开头或结尾。 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -279,7 +282,7 @@ class WebTamperProtectHostDirRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets excludeChildDir
     *
-    * @param string|null $excludeChildDir 排除子目录
+    * @param string|null $excludeChildDir **参数解释**: 排除子目录 **约束限制**: 不涉及 **取值范围**: 子目录名必须是防护目录的有效相对路径，目录名最大长度不能超过256个字符，最多可添加10个子目录，多个子目录用;隔开。Linux服务器的子目录名不能以/开头或结尾，Windows服务器的子目录名不能以\\开头或结尾。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -291,7 +294,7 @@ class WebTamperProtectHostDirRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets excludeFilePath
-    *  排除文件路径
+    *  **参数解释**: 排除文件路径 **约束限制**: 仅Linux服务器支持填写排除文件路径，Windows服务器不可填写该字段。 **取值范围**: 排除文件路径必须是防护目录的有效相对路径，不能以/开头或结尾，文件路径最大长度不能超过256个字符；最多可添加50个文件路径，多个文件路径用;隔开。 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -303,7 +306,7 @@ class WebTamperProtectHostDirRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets excludeFilePath
     *
-    * @param string|null $excludeFilePath 排除文件路径
+    * @param string|null $excludeFilePath **参数解释**: 排除文件路径 **约束限制**: 仅Linux服务器支持填写排除文件路径，Windows服务器不可填写该字段。 **取值范围**: 排除文件路径必须是防护目录的有效相对路径，不能以/开头或结尾，文件路径最大长度不能超过256个字符；最多可添加50个文件路径，多个文件路径用;隔开。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -315,7 +318,7 @@ class WebTamperProtectHostDirRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets localBackupDir
-    *  本地备份路径
+    *  **参数解释**: 本地备份路径，Linux服务器必须填写该字段。 **约束限制**: 仅Linux服务器需要填写本地备份路径，Windows服务器不可填写该字段。 **取值范围**: 本地备份路径不能包含;字符，不能以空格开头，不能以/结尾，本地备份路径长度不得超过256个字符。 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -327,7 +330,7 @@ class WebTamperProtectHostDirRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets localBackupDir
     *
-    * @param string|null $localBackupDir 本地备份路径
+    * @param string|null $localBackupDir **参数解释**: 本地备份路径，Linux服务器必须填写该字段。 **约束限制**: 仅Linux服务器需要填写本地备份路径，Windows服务器不可填写该字段。 **取值范围**: 本地备份路径不能包含;字符，不能以空格开头，不能以/结尾，本地备份路径长度不得超过256个字符。 **默认取值**: 不涉及
     *
     * @return $this
     */

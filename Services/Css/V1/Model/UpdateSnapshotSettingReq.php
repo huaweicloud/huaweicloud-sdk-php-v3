@@ -285,9 +285,6 @@ class UpdateSnapshotSettingReq implements ModelInterface, ArrayAccess
         if ($this->container['agency'] === null) {
             $invalidProperties[] = "'agency' can't be null";
         }
-        if ($this->container['basePath'] === null) {
-            $invalidProperties[] = "'basePath' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -354,7 +351,7 @@ class UpdateSnapshotSettingReq implements ModelInterface, ArrayAccess
     * Gets basePath
     *  快照在OBS桶中的存放路径。
     *
-    * @return string
+    * @return string|null
     */
     public function getBasePath()
     {
@@ -364,7 +361,7 @@ class UpdateSnapshotSettingReq implements ModelInterface, ArrayAccess
     /**
     * Sets basePath
     *
-    * @param string $basePath 快照在OBS桶中的存放路径。
+    * @param string|null $basePath 快照在OBS桶中的存放路径。
     *
     * @return $this
     */

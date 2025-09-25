@@ -37,6 +37,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     * multiAudio  multiAudio
     * videoProcess  videoProcess
     * audioProcess  audioProcess
+    * metadata  metadata设置，默认只支持AIGC
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
             'audioTrack' => '\HuaweiCloud\SDK\Mpc\V1\Model\AudioTrack',
             'multiAudio' => '\HuaweiCloud\SDK\Mpc\V1\Model\MultiAudio',
             'videoProcess' => '\HuaweiCloud\SDK\Mpc\V1\Model\VideoProcess',
-            'audioProcess' => '\HuaweiCloud\SDK\Mpc\V1\Model\AudioProcess'
+            'audioProcess' => '\HuaweiCloud\SDK\Mpc\V1\Model\AudioProcess',
+            'metadata' => '\HuaweiCloud\SDK\Mpc\V1\Model\FileMetaData[]'
     ];
 
     /**
@@ -79,6 +81,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     * multiAudio  multiAudio
     * videoProcess  videoProcess
     * audioProcess  audioProcess
+    * metadata  metadata设置，默认只支持AIGC
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
         'audioTrack' => null,
         'multiAudio' => null,
         'videoProcess' => null,
-        'audioProcess' => null
+        'audioProcess' => null,
+        'metadata' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     * multiAudio  multiAudio
     * videoProcess  videoProcess
     * audioProcess  audioProcess
+    * metadata  metadata设置，默认只支持AIGC
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
             'audioTrack' => 'audio_track',
             'multiAudio' => 'multi_audio',
             'videoProcess' => 'video_process',
-            'audioProcess' => 'audio_process'
+            'audioProcess' => 'audio_process',
+            'metadata' => 'metadata'
     ];
 
     /**
@@ -184,6 +190,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     * multiAudio  multiAudio
     * videoProcess  videoProcess
     * audioProcess  audioProcess
+    * metadata  metadata设置，默认只支持AIGC
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
             'audioTrack' => 'setAudioTrack',
             'multiAudio' => 'setMultiAudio',
             'videoProcess' => 'setVideoProcess',
-            'audioProcess' => 'setAudioProcess'
+            'audioProcess' => 'setAudioProcess',
+            'metadata' => 'setMetadata'
     ];
 
     /**
@@ -226,6 +234,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     * multiAudio  multiAudio
     * videoProcess  videoProcess
     * audioProcess  audioProcess
+    * metadata  metadata设置，默认只支持AIGC
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
             'audioTrack' => 'getAudioTrack',
             'multiAudio' => 'getMultiAudio',
             'videoProcess' => 'getVideoProcess',
-            'audioProcess' => 'getAudioProcess'
+            'audioProcess' => 'getAudioProcess',
+            'metadata' => 'getMetadata'
     ];
 
     /**
@@ -324,6 +334,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
         $this->container['multiAudio'] = isset($data['multiAudio']) ? $data['multiAudio'] : null;
         $this->container['videoProcess'] = isset($data['videoProcess']) ? $data['videoProcess'] : null;
         $this->container['audioProcess'] = isset($data['audioProcess']) ? $data['audioProcess'] : null;
+        $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
     }
 
     /**
@@ -768,6 +779,30 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     public function setAudioProcess($audioProcess)
     {
         $this->container['audioProcess'] = $audioProcess;
+        return $this;
+    }
+
+    /**
+    * Gets metadata
+    *  metadata设置，默认只支持AIGC
+    *
+    * @return \HuaweiCloud\SDK\Mpc\V1\Model\FileMetaData[]|null
+    */
+    public function getMetadata()
+    {
+        return $this->container['metadata'];
+    }
+
+    /**
+    * Sets metadata
+    *
+    * @param \HuaweiCloud\SDK\Mpc\V1\Model\FileMetaData[]|null $metadata metadata设置，默认只支持AIGC
+    *
+    * @return $this
+    */
+    public function setMetadata($metadata)
+    {
+        $this->container['metadata'] = $metadata;
         return $this;
     }
 

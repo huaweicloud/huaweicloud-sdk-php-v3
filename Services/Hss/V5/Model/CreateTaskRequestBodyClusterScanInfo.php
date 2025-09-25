@@ -20,7 +20,7 @@ class CreateTaskRequestBodyClusterScanInfo implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * scanTypeList  扫描项类型
+    * scanTypeList  **参数解释**: 扫描项类型列表 **约束限制**: 不涉及 **取值范围**: - cluster_vul：集群漏洞 - risk_assessment：风险评估 - benchmark：安全合规  **默认取值**: 不涉及
     * rangeType  扫描范围类型，包含如下   - all_cluster：扫描所有符合扫描条件的集群   - specific_cluster: 扫描指定集群
     * clusterIdList  需要扫描的集群id列表，扫描范围类型为“specific_cluster”时必传
     *
@@ -34,7 +34,7 @@ class CreateTaskRequestBodyClusterScanInfo implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * scanTypeList  扫描项类型
+    * scanTypeList  **参数解释**: 扫描项类型列表 **约束限制**: 不涉及 **取值范围**: - cluster_vul：集群漏洞 - risk_assessment：风险评估 - benchmark：安全合规  **默认取值**: 不涉及
     * rangeType  扫描范围类型，包含如下   - all_cluster：扫描所有符合扫描条件的集群   - specific_cluster: 扫描指定集群
     * clusterIdList  需要扫描的集群id列表，扫描范围类型为“specific_cluster”时必传
     *
@@ -69,7 +69,7 @@ class CreateTaskRequestBodyClusterScanInfo implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * scanTypeList  扫描项类型
+    * scanTypeList  **参数解释**: 扫描项类型列表 **约束限制**: 不涉及 **取值范围**: - cluster_vul：集群漏洞 - risk_assessment：风险评估 - benchmark：安全合规  **默认取值**: 不涉及
     * rangeType  扫描范围类型，包含如下   - all_cluster：扫描所有符合扫描条件的集群   - specific_cluster: 扫描指定集群
     * clusterIdList  需要扫描的集群id列表，扫描范围类型为“specific_cluster”时必传
     *
@@ -83,7 +83,7 @@ class CreateTaskRequestBodyClusterScanInfo implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * scanTypeList  扫描项类型
+    * scanTypeList  **参数解释**: 扫描项类型列表 **约束限制**: 不涉及 **取值范围**: - cluster_vul：集群漏洞 - risk_assessment：风险评估 - benchmark：安全合规  **默认取值**: 不涉及
     * rangeType  扫描范围类型，包含如下   - all_cluster：扫描所有符合扫描条件的集群   - specific_cluster: 扫描指定集群
     * clusterIdList  需要扫描的集群id列表，扫描范围类型为“specific_cluster”时必传
     *
@@ -97,7 +97,7 @@ class CreateTaskRequestBodyClusterScanInfo implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * scanTypeList  扫描项类型
+    * scanTypeList  **参数解释**: 扫描项类型列表 **约束限制**: 不涉及 **取值范围**: - cluster_vul：集群漏洞 - risk_assessment：风险评估 - benchmark：安全合规  **默认取值**: 不涉及
     * rangeType  扫描范围类型，包含如下   - all_cluster：扫描所有符合扫描条件的集群   - specific_cluster: 扫描指定集群
     * clusterIdList  需要扫描的集群id列表，扫描范围类型为“specific_cluster”时必传
     *
@@ -211,7 +211,7 @@ class CreateTaskRequestBodyClusterScanInfo implements ModelInterface, ArrayAcces
 
     /**
     * Gets scanTypeList
-    *  扫描项类型
+    *  **参数解释**: 扫描项类型列表 **约束限制**: 不涉及 **取值范围**: - cluster_vul：集群漏洞 - risk_assessment：风险评估 - benchmark：安全合规  **默认取值**: 不涉及
     *
     * @return string[]
     */
@@ -223,7 +223,7 @@ class CreateTaskRequestBodyClusterScanInfo implements ModelInterface, ArrayAcces
     /**
     * Sets scanTypeList
     *
-    * @param string[] $scanTypeList 扫描项类型
+    * @param string[] $scanTypeList **参数解释**: 扫描项类型列表 **约束限制**: 不涉及 **取值范围**: - cluster_vul：集群漏洞 - risk_assessment：风险评估 - benchmark：安全合规  **默认取值**: 不涉及
     *
     * @return $this
     */

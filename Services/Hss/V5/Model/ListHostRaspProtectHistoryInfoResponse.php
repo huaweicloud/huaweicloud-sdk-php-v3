@@ -21,8 +21,8 @@ class ListHostRaspProtectHistoryInfoResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  total number of dynamic WTPs
-    * dataList  data list
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**: 动态网页防篡改防护事件列表 **取值范围**: 最小值0，最大值200
     *
     * @var string[]
     */
@@ -33,13 +33,13 @@ class ListHostRaspProtectHistoryInfoResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  total number of dynamic WTPs
-    * dataList  data list
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**: 动态网页防篡改防护事件列表 **取值范围**: 最小值0，最大值200
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'totalNum' => 'int64',
+        'totalNum' => 'int32',
         'dataList' => null
     ];
 
@@ -66,8 +66,8 @@ class ListHostRaspProtectHistoryInfoResponse implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  total number of dynamic WTPs
-    * dataList  data list
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**: 动态网页防篡改防护事件列表 **取值范围**: 最小值0，最大值200
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListHostRaspProtectHistoryInfoResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  total number of dynamic WTPs
-    * dataList  data list
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**: 动态网页防篡改防护事件列表 **取值范围**: 最小值0，最大值200
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListHostRaspProtectHistoryInfoResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  total number of dynamic WTPs
-    * dataList  data list
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**: 动态网页防篡改防护事件列表 **取值范围**: 最小值0，最大值200
     *
     * @var string[]
     */
@@ -170,8 +170,8 @@ class ListHostRaspProtectHistoryInfoResponse implements ModelInterface, ArrayAcc
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 200000)) {
-                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 200000.";
+            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 2147483647.";
             }
             if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] < 0)) {
                 $invalidProperties[] = "invalid value for 'totalNum', must be bigger than or equal to 0.";
@@ -192,7 +192,7 @@ class ListHostRaspProtectHistoryInfoResponse implements ModelInterface, ArrayAcc
 
     /**
     * Gets totalNum
-    *  total number of dynamic WTPs
+    *  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListHostRaspProtectHistoryInfoResponse implements ModelInterface, ArrayAcc
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum total number of dynamic WTPs
+    * @param int|null $totalNum **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListHostRaspProtectHistoryInfoResponse implements ModelInterface, ArrayAcc
 
     /**
     * Gets dataList
-    *  data list
+    *  **参数解释**: 动态网页防篡改防护事件列表 **取值范围**: 最小值0，最大值200
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\HostRaspProtectHistoryResponseInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListHostRaspProtectHistoryInfoResponse implements ModelInterface, ArrayAcc
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\HostRaspProtectHistoryResponseInfo[]|null $dataList data list
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\HostRaspProtectHistoryResponseInfo[]|null $dataList **参数解释**: 动态网页防篡改防护事件列表 **取值范围**: 最小值0，最大值200
     *
     * @return $this
     */

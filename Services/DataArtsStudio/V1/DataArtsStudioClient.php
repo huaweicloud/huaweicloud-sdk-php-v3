@@ -1048,6 +1048,71 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 删除数据分类
+     *
+     * 删除数据分类。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteSecurityDataCategories($request)
+    {
+        return $this->batchDeleteSecurityDataCategoriesWithHttpInfo($request);
+    }
+
+    public function batchDeleteSecurityDataCategoriesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/security/data-category/batch-delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchDeleteSecurityDataCategoriesResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchDeleteSecurityDataCategoriesRequest');
+    }
+
+    /**
      * 批量删除识别规则接口
      *
      * 批量删除识别规则接口
@@ -4319,6 +4384,71 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateSecurityAssignedQueueResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateSecurityAssignedQueueRequest');
+    }
+
+    /**
+     * 创建数据分类
+     *
+     * 创建数据分类。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createSecurityDataCategory($request)
+    {
+        return $this->createSecurityDataCategoryWithHttpInfo($request);
+    }
+
+    public function createSecurityDataCategoryWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/security/data-category';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateSecurityDataCategoryResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateSecurityDataCategoryRequest');
     }
 
     /**
@@ -25574,6 +25704,74 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateSecurityAssignedQueueResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateSecurityAssignedQueueRequest');
+    }
+
+    /**
+     * 修改数据分类
+     *
+     * 修改数据分类。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSecurityDataCategories($request)
+    {
+        return $this->updateSecurityDataCategoriesWithHttpInfo($request);
+    }
+
+    public function updateSecurityDataCategoriesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/security/data-category/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateSecurityDataCategoriesResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateSecurityDataCategoriesRequest');
     }
 
     /**

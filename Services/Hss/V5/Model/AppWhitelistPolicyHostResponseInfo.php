@@ -28,7 +28,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * eventNum  **参数解释**: 主机发生事件数 **取值范围**: 最小值0，最大值2147483647
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
-    * learningStatus  **参数解释**： 服务器名称 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
+    * learningStatus  **参数解释**： 学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     * applyStatus  **参数解释**： 是否应用 **取值范围**: - true：是 - false：否
     * intercept  是否开启阻断
     * policyId  策略ID
@@ -62,7 +62,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * eventNum  **参数解释**: 主机发生事件数 **取值范围**: 最小值0，最大值2147483647
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
-    * learningStatus  **参数解释**： 服务器名称 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
+    * learningStatus  **参数解释**： 学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     * applyStatus  **参数解释**： 是否应用 **取值范围**: - true：是 - false：否
     * intercept  是否开启阻断
     * policyId  策略ID
@@ -117,7 +117,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * eventNum  **参数解释**: 主机发生事件数 **取值范围**: 最小值0，最大值2147483647
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
-    * learningStatus  **参数解释**： 服务器名称 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
+    * learningStatus  **参数解释**： 学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     * applyStatus  **参数解释**： 是否应用 **取值范围**: - true：是 - false：否
     * intercept  是否开启阻断
     * policyId  策略ID
@@ -151,7 +151,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * eventNum  **参数解释**: 主机发生事件数 **取值范围**: 最小值0，最大值2147483647
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
-    * learningStatus  **参数解释**： 服务器名称 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
+    * learningStatus  **参数解释**： 学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     * applyStatus  **参数解释**： 是否应用 **取值范围**: - true：是 - false：否
     * intercept  是否开启阻断
     * policyId  策略ID
@@ -185,7 +185,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * eventNum  **参数解释**: 主机发生事件数 **取值范围**: 最小值0，最大值2147483647
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
-    * learningStatus  **参数解释**： 服务器名称 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
+    * learningStatus  **参数解释**： 学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     * applyStatus  **参数解释**： 是否应用 **取值范围**: - true：是 - false：否
     * intercept  是否开启阻断
     * policyId  策略ID
@@ -585,7 +585,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets learningStatus
-    *  **参数解释**： 服务器名称 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
+    *  **参数解释**： 学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -597,7 +597,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets learningStatus
     *
-    * @param string|null $learningStatus **参数解释**： 服务器名称 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
+    * @param string|null $learningStatus **参数解释**： 学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
     *
     * @return $this
     */

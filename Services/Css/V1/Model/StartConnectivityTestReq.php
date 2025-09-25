@@ -66,7 +66,7 @@ class StartConnectivityTestReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'addressAndPorts' => 'addressAndPorts'
+            'addressAndPorts' => 'address_and_ports'
     ];
 
     /**

@@ -217,11 +217,11 @@ class ListOrganizationPolicyAssignmentsRequest implements ModelInterface, ArrayA
             if (!is_null($this->container['organizationPolicyAssignmentId']) && !preg_match("/^[a-zA-Z\\d]+/", $this->container['organizationPolicyAssignmentId'])) {
                 $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentId', must be conform to the pattern /^[a-zA-Z\\d]+/.";
             }
-            if (!is_null($this->container['organizationPolicyAssignmentName']) && (mb_strlen($this->container['organizationPolicyAssignmentName']) > 60)) {
-                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', the character length must be smaller than or equal to 60.";
+            if (!is_null($this->container['organizationPolicyAssignmentName']) && (mb_strlen($this->container['organizationPolicyAssignmentName']) > 252)) {
+                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', the character length must be smaller than or equal to 252.";
             }
-            if (!is_null($this->container['organizationPolicyAssignmentName']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/", $this->container['organizationPolicyAssignmentName'])) {
-                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/.";
+            if (!is_null($this->container['organizationPolicyAssignmentName']) && !preg_match("/^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/", $this->container['organizationPolicyAssignmentName'])) {
+                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', must be conform to the pattern /^(?!\\s)[\\u4e00-\\u9fa5\\u00C0-\\u00FFa-zA-Z0-9_\\- ]+(?<!\\s)$/.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";

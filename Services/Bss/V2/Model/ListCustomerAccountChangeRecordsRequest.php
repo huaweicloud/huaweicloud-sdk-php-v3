@@ -22,7 +22,7 @@ class ListCustomerAccountChangeRecordsRequest implements ModelInterface, ArrayAc
     * Array of property to type mappings. Used for (de)serialization
     * balanceType  |参数名称：账户类型。BALANCE_TYPE_DEBIT：现金账户BALANCE_TYPE_CREDIT：信用账户| |参数的约束及描述：必填|
     * revenueExpenseType  |参数名称：收支类型。REVENUE：收入EXPENSE：支出| |参数的约束及描述：非必填|
-    * tradeType  |参数名称：交易类型。RECHARGE：充值DEDEUCT：消费REFUND：退款RFROZEN：冻结TRANS：转账，余额和保证金互换（老商务模式，当前已无保证金账户）ADJUST：调账（华为核销等）BEADJUST：经销商拨款BERETRIEVE：经销商回收BEUNBIND：解绑/关联模式切换导致的回收EXPIRED：过期清零BONUSCONVERT：奖励金转换（老商务模式，当前已无奖励金账户）TRADE_MODE_TRANSFER：交易模式变更DEPOSIT：保证金| |参数的约束及描述：非必填|
+    * tradeType  |参数名称：交易类型| |参数的约束及描述：该参数非必填，RECHARGE：充值 DEDEUCT：消费 REFUND：退款 RFROZEN：冻结 TRANS：转账，余额和保证金互换（老商务模式，当前已无保证金账户） ADJUST：调账（华为核销等） BEUNBIND：解绑/关联模式切换导致的回收 EXPIRED：过期清零 BONUSCONVERT：奖励金转换（老商务模式，当前已无奖励金账户） TRADE_MODE_TRANSFER：交易模式变更 DEPOSIT：保证金 BEADJUST：经销商拨款 BERETRIEVE：经销商回收。此参数不携带、携带值为空时，不作为筛选条件。|
     * tradeTimeBegin  |参数名称：查询收支明细的开始日期| |参数的约束及描述：非必填|
     * tradeTimeEnd  |参数名称：查询收支明细的结束日期| |参数的约束及描述：非必填|
     * tradeId  |参数名称：交易ID/订单ID| |参数的约束及描述：非必填|
@@ -50,7 +50,7 @@ class ListCustomerAccountChangeRecordsRequest implements ModelInterface, ArrayAc
     * Array of property to format mappings. Used for (de)serialization
     * balanceType  |参数名称：账户类型。BALANCE_TYPE_DEBIT：现金账户BALANCE_TYPE_CREDIT：信用账户| |参数的约束及描述：必填|
     * revenueExpenseType  |参数名称：收支类型。REVENUE：收入EXPENSE：支出| |参数的约束及描述：非必填|
-    * tradeType  |参数名称：交易类型。RECHARGE：充值DEDEUCT：消费REFUND：退款RFROZEN：冻结TRANS：转账，余额和保证金互换（老商务模式，当前已无保证金账户）ADJUST：调账（华为核销等）BEADJUST：经销商拨款BERETRIEVE：经销商回收BEUNBIND：解绑/关联模式切换导致的回收EXPIRED：过期清零BONUSCONVERT：奖励金转换（老商务模式，当前已无奖励金账户）TRADE_MODE_TRANSFER：交易模式变更DEPOSIT：保证金| |参数的约束及描述：非必填|
+    * tradeType  |参数名称：交易类型| |参数的约束及描述：该参数非必填，RECHARGE：充值 DEDEUCT：消费 REFUND：退款 RFROZEN：冻结 TRANS：转账，余额和保证金互换（老商务模式，当前已无保证金账户） ADJUST：调账（华为核销等） BEUNBIND：解绑/关联模式切换导致的回收 EXPIRED：过期清零 BONUSCONVERT：奖励金转换（老商务模式，当前已无奖励金账户） TRADE_MODE_TRANSFER：交易模式变更 DEPOSIT：保证金 BEADJUST：经销商拨款 BERETRIEVE：经销商回收。此参数不携带、携带值为空时，不作为筛选条件。|
     * tradeTimeBegin  |参数名称：查询收支明细的开始日期| |参数的约束及描述：非必填|
     * tradeTimeEnd  |参数名称：查询收支明细的结束日期| |参数的约束及描述：非必填|
     * tradeId  |参数名称：交易ID/订单ID| |参数的约束及描述：非必填|
@@ -99,7 +99,7 @@ class ListCustomerAccountChangeRecordsRequest implements ModelInterface, ArrayAc
     * and the value is the original name
     * balanceType  |参数名称：账户类型。BALANCE_TYPE_DEBIT：现金账户BALANCE_TYPE_CREDIT：信用账户| |参数的约束及描述：必填|
     * revenueExpenseType  |参数名称：收支类型。REVENUE：收入EXPENSE：支出| |参数的约束及描述：非必填|
-    * tradeType  |参数名称：交易类型。RECHARGE：充值DEDEUCT：消费REFUND：退款RFROZEN：冻结TRANS：转账，余额和保证金互换（老商务模式，当前已无保证金账户）ADJUST：调账（华为核销等）BEADJUST：经销商拨款BERETRIEVE：经销商回收BEUNBIND：解绑/关联模式切换导致的回收EXPIRED：过期清零BONUSCONVERT：奖励金转换（老商务模式，当前已无奖励金账户）TRADE_MODE_TRANSFER：交易模式变更DEPOSIT：保证金| |参数的约束及描述：非必填|
+    * tradeType  |参数名称：交易类型| |参数的约束及描述：该参数非必填，RECHARGE：充值 DEDEUCT：消费 REFUND：退款 RFROZEN：冻结 TRANS：转账，余额和保证金互换（老商务模式，当前已无保证金账户） ADJUST：调账（华为核销等） BEUNBIND：解绑/关联模式切换导致的回收 EXPIRED：过期清零 BONUSCONVERT：奖励金转换（老商务模式，当前已无奖励金账户） TRADE_MODE_TRANSFER：交易模式变更 DEPOSIT：保证金 BEADJUST：经销商拨款 BERETRIEVE：经销商回收。此参数不携带、携带值为空时，不作为筛选条件。|
     * tradeTimeBegin  |参数名称：查询收支明细的开始日期| |参数的约束及描述：非必填|
     * tradeTimeEnd  |参数名称：查询收支明细的结束日期| |参数的约束及描述：非必填|
     * tradeId  |参数名称：交易ID/订单ID| |参数的约束及描述：非必填|
@@ -127,7 +127,7 @@ class ListCustomerAccountChangeRecordsRequest implements ModelInterface, ArrayAc
     * Array of attributes to setter functions (for deserialization of responses)
     * balanceType  |参数名称：账户类型。BALANCE_TYPE_DEBIT：现金账户BALANCE_TYPE_CREDIT：信用账户| |参数的约束及描述：必填|
     * revenueExpenseType  |参数名称：收支类型。REVENUE：收入EXPENSE：支出| |参数的约束及描述：非必填|
-    * tradeType  |参数名称：交易类型。RECHARGE：充值DEDEUCT：消费REFUND：退款RFROZEN：冻结TRANS：转账，余额和保证金互换（老商务模式，当前已无保证金账户）ADJUST：调账（华为核销等）BEADJUST：经销商拨款BERETRIEVE：经销商回收BEUNBIND：解绑/关联模式切换导致的回收EXPIRED：过期清零BONUSCONVERT：奖励金转换（老商务模式，当前已无奖励金账户）TRADE_MODE_TRANSFER：交易模式变更DEPOSIT：保证金| |参数的约束及描述：非必填|
+    * tradeType  |参数名称：交易类型| |参数的约束及描述：该参数非必填，RECHARGE：充值 DEDEUCT：消费 REFUND：退款 RFROZEN：冻结 TRANS：转账，余额和保证金互换（老商务模式，当前已无保证金账户） ADJUST：调账（华为核销等） BEUNBIND：解绑/关联模式切换导致的回收 EXPIRED：过期清零 BONUSCONVERT：奖励金转换（老商务模式，当前已无奖励金账户） TRADE_MODE_TRANSFER：交易模式变更 DEPOSIT：保证金 BEADJUST：经销商拨款 BERETRIEVE：经销商回收。此参数不携带、携带值为空时，不作为筛选条件。|
     * tradeTimeBegin  |参数名称：查询收支明细的开始日期| |参数的约束及描述：非必填|
     * tradeTimeEnd  |参数名称：查询收支明细的结束日期| |参数的约束及描述：非必填|
     * tradeId  |参数名称：交易ID/订单ID| |参数的约束及描述：非必填|
@@ -155,7 +155,7 @@ class ListCustomerAccountChangeRecordsRequest implements ModelInterface, ArrayAc
     * Array of attributes to getter functions (for serialization of requests)
     * balanceType  |参数名称：账户类型。BALANCE_TYPE_DEBIT：现金账户BALANCE_TYPE_CREDIT：信用账户| |参数的约束及描述：必填|
     * revenueExpenseType  |参数名称：收支类型。REVENUE：收入EXPENSE：支出| |参数的约束及描述：非必填|
-    * tradeType  |参数名称：交易类型。RECHARGE：充值DEDEUCT：消费REFUND：退款RFROZEN：冻结TRANS：转账，余额和保证金互换（老商务模式，当前已无保证金账户）ADJUST：调账（华为核销等）BEADJUST：经销商拨款BERETRIEVE：经销商回收BEUNBIND：解绑/关联模式切换导致的回收EXPIRED：过期清零BONUSCONVERT：奖励金转换（老商务模式，当前已无奖励金账户）TRADE_MODE_TRANSFER：交易模式变更DEPOSIT：保证金| |参数的约束及描述：非必填|
+    * tradeType  |参数名称：交易类型| |参数的约束及描述：该参数非必填，RECHARGE：充值 DEDEUCT：消费 REFUND：退款 RFROZEN：冻结 TRANS：转账，余额和保证金互换（老商务模式，当前已无保证金账户） ADJUST：调账（华为核销等） BEUNBIND：解绑/关联模式切换导致的回收 EXPIRED：过期清零 BONUSCONVERT：奖励金转换（老商务模式，当前已无奖励金账户） TRADE_MODE_TRANSFER：交易模式变更 DEPOSIT：保证金 BEADJUST：经销商拨款 BERETRIEVE：经销商回收。此参数不携带、携带值为空时，不作为筛选条件。|
     * tradeTimeBegin  |参数名称：查询收支明细的开始日期| |参数的约束及描述：非必填|
     * tradeTimeEnd  |参数名称：查询收支明细的结束日期| |参数的约束及描述：非必填|
     * tradeId  |参数名称：交易ID/订单ID| |参数的约束及描述：非必填|
@@ -342,7 +342,7 @@ class ListCustomerAccountChangeRecordsRequest implements ModelInterface, ArrayAc
 
     /**
     * Gets tradeType
-    *  |参数名称：交易类型。RECHARGE：充值DEDEUCT：消费REFUND：退款RFROZEN：冻结TRANS：转账，余额和保证金互换（老商务模式，当前已无保证金账户）ADJUST：调账（华为核销等）BEADJUST：经销商拨款BERETRIEVE：经销商回收BEUNBIND：解绑/关联模式切换导致的回收EXPIRED：过期清零BONUSCONVERT：奖励金转换（老商务模式，当前已无奖励金账户）TRADE_MODE_TRANSFER：交易模式变更DEPOSIT：保证金| |参数的约束及描述：非必填|
+    *  |参数名称：交易类型| |参数的约束及描述：该参数非必填，RECHARGE：充值 DEDEUCT：消费 REFUND：退款 RFROZEN：冻结 TRANS：转账，余额和保证金互换（老商务模式，当前已无保证金账户） ADJUST：调账（华为核销等） BEUNBIND：解绑/关联模式切换导致的回收 EXPIRED：过期清零 BONUSCONVERT：奖励金转换（老商务模式，当前已无奖励金账户） TRADE_MODE_TRANSFER：交易模式变更 DEPOSIT：保证金 BEADJUST：经销商拨款 BERETRIEVE：经销商回收。此参数不携带、携带值为空时，不作为筛选条件。|
     *
     * @return string|null
     */
@@ -354,7 +354,7 @@ class ListCustomerAccountChangeRecordsRequest implements ModelInterface, ArrayAc
     /**
     * Sets tradeType
     *
-    * @param string|null $tradeType |参数名称：交易类型。RECHARGE：充值DEDEUCT：消费REFUND：退款RFROZEN：冻结TRANS：转账，余额和保证金互换（老商务模式，当前已无保证金账户）ADJUST：调账（华为核销等）BEADJUST：经销商拨款BERETRIEVE：经销商回收BEUNBIND：解绑/关联模式切换导致的回收EXPIRED：过期清零BONUSCONVERT：奖励金转换（老商务模式，当前已无奖励金账户）TRADE_MODE_TRANSFER：交易模式变更DEPOSIT：保证金| |参数的约束及描述：非必填|
+    * @param string|null $tradeType |参数名称：交易类型| |参数的约束及描述：该参数非必填，RECHARGE：充值 DEDEUCT：消费 REFUND：退款 RFROZEN：冻结 TRANS：转账，余额和保证金互换（老商务模式，当前已无保证金账户） ADJUST：调账（华为核销等） BEUNBIND：解绑/关联模式切换导致的回收 EXPIRED：过期清零 BONUSCONVERT：奖励金转换（老商务模式，当前已无奖励金账户） TRADE_MODE_TRANSFER：交易模式变更 DEPOSIT：保证金 BEADJUST：经销商拨款 BERETRIEVE：经销商回收。此参数不携带、携带值为空时，不作为筛选条件。|
     *
     * @return $this
     */

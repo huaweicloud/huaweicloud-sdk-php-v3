@@ -26,9 +26,13 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
     * mainObj  主词库文件对象。
     * stopObj  停词词库文件对象。
     * synonymObj  同义词词库文件对象。
+    * staticMainObj  静态主词词库文件对象。
+    * staticStopObj  静态主词词库文件对象。
+    * extraMainObj  Extra主词词库库文件对象。
+    * extraStopObj  Extra停词词库对象。
+    * updateTime  词库最近更新时间。
     * updateDetails  更新详情。
     * clusterId  指定配置自定义词库的集群ID。
-    * operateStatus  操作状态。
     * id  词库的ID。
     *
     * @var string[]
@@ -39,9 +43,13 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
             'mainObj' => 'string',
             'stopObj' => 'string',
             'synonymObj' => 'string',
+            'staticMainObj' => 'string',
+            'staticStopObj' => 'string',
+            'extraMainObj' => 'string',
+            'extraStopObj' => 'string',
+            'updateTime' => 'string',
             'updateDetails' => 'string',
             'clusterId' => 'string',
-            'operateStatus' => 'string',
             'id' => 'string'
     ];
 
@@ -52,9 +60,13 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
     * mainObj  主词库文件对象。
     * stopObj  停词词库文件对象。
     * synonymObj  同义词词库文件对象。
+    * staticMainObj  静态主词词库文件对象。
+    * staticStopObj  静态主词词库文件对象。
+    * extraMainObj  Extra主词词库库文件对象。
+    * extraStopObj  Extra停词词库对象。
+    * updateTime  词库最近更新时间。
     * updateDetails  更新详情。
     * clusterId  指定配置自定义词库的集群ID。
-    * operateStatus  操作状态。
     * id  词库的ID。
     *
     * @var string[]
@@ -65,9 +77,13 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
         'mainObj' => null,
         'stopObj' => null,
         'synonymObj' => null,
+        'staticMainObj' => null,
+        'staticStopObj' => null,
+        'extraMainObj' => null,
+        'extraStopObj' => null,
+        'updateTime' => null,
         'updateDetails' => null,
         'clusterId' => null,
-        'operateStatus' => null,
         'id' => null
     ];
 
@@ -99,9 +115,13 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
     * mainObj  主词库文件对象。
     * stopObj  停词词库文件对象。
     * synonymObj  同义词词库文件对象。
+    * staticMainObj  静态主词词库文件对象。
+    * staticStopObj  静态主词词库文件对象。
+    * extraMainObj  Extra主词词库库文件对象。
+    * extraStopObj  Extra停词词库对象。
+    * updateTime  词库最近更新时间。
     * updateDetails  更新详情。
     * clusterId  指定配置自定义词库的集群ID。
-    * operateStatus  操作状态。
     * id  词库的ID。
     *
     * @var string[]
@@ -112,9 +132,13 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
             'mainObj' => 'mainObj',
             'stopObj' => 'stopObj',
             'synonymObj' => 'synonymObj',
+            'staticMainObj' => 'staticMainObj',
+            'staticStopObj' => 'staticStopObj',
+            'extraMainObj' => 'extraMainObj',
+            'extraStopObj' => 'extraStopObj',
+            'updateTime' => 'updateTime',
             'updateDetails' => 'updateDetails',
             'clusterId' => 'clusterId',
-            'operateStatus' => 'operateStatus',
             'id' => 'id'
     ];
 
@@ -125,9 +149,13 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
     * mainObj  主词库文件对象。
     * stopObj  停词词库文件对象。
     * synonymObj  同义词词库文件对象。
+    * staticMainObj  静态主词词库文件对象。
+    * staticStopObj  静态主词词库文件对象。
+    * extraMainObj  Extra主词词库库文件对象。
+    * extraStopObj  Extra停词词库对象。
+    * updateTime  词库最近更新时间。
     * updateDetails  更新详情。
     * clusterId  指定配置自定义词库的集群ID。
-    * operateStatus  操作状态。
     * id  词库的ID。
     *
     * @var string[]
@@ -138,9 +166,13 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
             'mainObj' => 'setMainObj',
             'stopObj' => 'setStopObj',
             'synonymObj' => 'setSynonymObj',
+            'staticMainObj' => 'setStaticMainObj',
+            'staticStopObj' => 'setStaticStopObj',
+            'extraMainObj' => 'setExtraMainObj',
+            'extraStopObj' => 'setExtraStopObj',
+            'updateTime' => 'setUpdateTime',
             'updateDetails' => 'setUpdateDetails',
             'clusterId' => 'setClusterId',
-            'operateStatus' => 'setOperateStatus',
             'id' => 'setId'
     ];
 
@@ -151,9 +183,13 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
     * mainObj  主词库文件对象。
     * stopObj  停词词库文件对象。
     * synonymObj  同义词词库文件对象。
+    * staticMainObj  静态主词词库文件对象。
+    * staticStopObj  静态主词词库文件对象。
+    * extraMainObj  Extra主词词库库文件对象。
+    * extraStopObj  Extra停词词库对象。
+    * updateTime  词库最近更新时间。
     * updateDetails  更新详情。
     * clusterId  指定配置自定义词库的集群ID。
-    * operateStatus  操作状态。
     * id  词库的ID。
     *
     * @var string[]
@@ -164,9 +200,13 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
             'mainObj' => 'getMainObj',
             'stopObj' => 'getStopObj',
             'synonymObj' => 'getSynonymObj',
+            'staticMainObj' => 'getStaticMainObj',
+            'staticStopObj' => 'getStaticStopObj',
+            'extraMainObj' => 'getExtraMainObj',
+            'extraStopObj' => 'getExtraStopObj',
+            'updateTime' => 'getUpdateTime',
             'updateDetails' => 'getUpdateDetails',
             'clusterId' => 'getClusterId',
-            'operateStatus' => 'getOperateStatus',
             'id' => 'getId'
     ];
 
@@ -233,9 +273,13 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
         $this->container['mainObj'] = isset($data['mainObj']) ? $data['mainObj'] : null;
         $this->container['stopObj'] = isset($data['stopObj']) ? $data['stopObj'] : null;
         $this->container['synonymObj'] = isset($data['synonymObj']) ? $data['synonymObj'] : null;
+        $this->container['staticMainObj'] = isset($data['staticMainObj']) ? $data['staticMainObj'] : null;
+        $this->container['staticStopObj'] = isset($data['staticStopObj']) ? $data['staticStopObj'] : null;
+        $this->container['extraMainObj'] = isset($data['extraMainObj']) ? $data['extraMainObj'] : null;
+        $this->container['extraStopObj'] = isset($data['extraStopObj']) ? $data['extraStopObj'] : null;
+        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['updateDetails'] = isset($data['updateDetails']) ? $data['updateDetails'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
-        $this->container['operateStatus'] = isset($data['operateStatus']) ? $data['operateStatus'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
@@ -382,6 +426,126 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets staticMainObj
+    *  静态主词词库文件对象。
+    *
+    * @return string|null
+    */
+    public function getStaticMainObj()
+    {
+        return $this->container['staticMainObj'];
+    }
+
+    /**
+    * Sets staticMainObj
+    *
+    * @param string|null $staticMainObj 静态主词词库文件对象。
+    *
+    * @return $this
+    */
+    public function setStaticMainObj($staticMainObj)
+    {
+        $this->container['staticMainObj'] = $staticMainObj;
+        return $this;
+    }
+
+    /**
+    * Gets staticStopObj
+    *  静态主词词库文件对象。
+    *
+    * @return string|null
+    */
+    public function getStaticStopObj()
+    {
+        return $this->container['staticStopObj'];
+    }
+
+    /**
+    * Sets staticStopObj
+    *
+    * @param string|null $staticStopObj 静态主词词库文件对象。
+    *
+    * @return $this
+    */
+    public function setStaticStopObj($staticStopObj)
+    {
+        $this->container['staticStopObj'] = $staticStopObj;
+        return $this;
+    }
+
+    /**
+    * Gets extraMainObj
+    *  Extra主词词库库文件对象。
+    *
+    * @return string|null
+    */
+    public function getExtraMainObj()
+    {
+        return $this->container['extraMainObj'];
+    }
+
+    /**
+    * Sets extraMainObj
+    *
+    * @param string|null $extraMainObj Extra主词词库库文件对象。
+    *
+    * @return $this
+    */
+    public function setExtraMainObj($extraMainObj)
+    {
+        $this->container['extraMainObj'] = $extraMainObj;
+        return $this;
+    }
+
+    /**
+    * Gets extraStopObj
+    *  Extra停词词库对象。
+    *
+    * @return string|null
+    */
+    public function getExtraStopObj()
+    {
+        return $this->container['extraStopObj'];
+    }
+
+    /**
+    * Sets extraStopObj
+    *
+    * @param string|null $extraStopObj Extra停词词库对象。
+    *
+    * @return $this
+    */
+    public function setExtraStopObj($extraStopObj)
+    {
+        $this->container['extraStopObj'] = $extraStopObj;
+        return $this;
+    }
+
+    /**
+    * Gets updateTime
+    *  词库最近更新时间。
+    *
+    * @return string|null
+    */
+    public function getUpdateTime()
+    {
+        return $this->container['updateTime'];
+    }
+
+    /**
+    * Sets updateTime
+    *
+    * @param string|null $updateTime 词库最近更新时间。
+    *
+    * @return $this
+    */
+    public function setUpdateTime($updateTime)
+    {
+        $this->container['updateTime'] = $updateTime;
+        return $this;
+    }
+
+    /**
     * Gets updateDetails
     *  更新详情。
     *
@@ -426,30 +590,6 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
     public function setClusterId($clusterId)
     {
         $this->container['clusterId'] = $clusterId;
-        return $this;
-    }
-
-    /**
-    * Gets operateStatus
-    *  操作状态。
-    *
-    * @return string|null
-    */
-    public function getOperateStatus()
-    {
-        return $this->container['operateStatus'];
-    }
-
-    /**
-    * Sets operateStatus
-    *
-    * @param string|null $operateStatus 操作状态。
-    *
-    * @return $this
-    */
-    public function setOperateStatus($operateStatus)
-    {
-        $this->container['operateStatus'] = $operateStatus;
         return $this;
     }
 

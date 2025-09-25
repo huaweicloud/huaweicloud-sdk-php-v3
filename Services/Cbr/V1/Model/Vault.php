@@ -38,6 +38,7 @@ class Vault implements ModelInterface, ArrayAccess
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class Vault implements ModelInterface, ArrayAccess
             'smnNotify' => 'bool',
             'threshold' => 'int',
             'sysLockSourceService' => 'string',
-            'locked' => 'bool'
+            'locked' => 'bool',
+            'availabilityZone' => 'string'
     ];
 
     /**
@@ -82,6 +84,7 @@ class Vault implements ModelInterface, ArrayAccess
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class Vault implements ModelInterface, ArrayAccess
         'smnNotify' => null,
         'threshold' => 'int32',
         'sysLockSourceService' => null,
-        'locked' => null
+        'locked' => null,
+        'availabilityZone' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class Vault implements ModelInterface, ArrayAccess
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class Vault implements ModelInterface, ArrayAccess
             'smnNotify' => 'smn_notify',
             'threshold' => 'threshold',
             'sysLockSourceService' => 'sys_lock_source_service',
-            'locked' => 'locked'
+            'locked' => 'locked',
+            'availabilityZone' => 'availability_zone'
     ];
 
     /**
@@ -191,6 +197,7 @@ class Vault implements ModelInterface, ArrayAccess
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class Vault implements ModelInterface, ArrayAccess
             'smnNotify' => 'setSmnNotify',
             'threshold' => 'setThreshold',
             'sysLockSourceService' => 'setSysLockSourceService',
-            'locked' => 'setLocked'
+            'locked' => 'setLocked',
+            'availabilityZone' => 'setAvailabilityZone'
     ];
 
     /**
@@ -235,6 +243,7 @@ class Vault implements ModelInterface, ArrayAccess
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
     * locked  用于标识该存储库是否已锁定
+    * availabilityZone  存储库可用区信息，最大支持32字符。
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class Vault implements ModelInterface, ArrayAccess
             'smnNotify' => 'getSmnNotify',
             'threshold' => 'getThreshold',
             'sysLockSourceService' => 'getSysLockSourceService',
-            'locked' => 'getLocked'
+            'locked' => 'getLocked',
+            'availabilityZone' => 'getAvailabilityZone'
     ];
 
     /**
@@ -335,6 +345,7 @@ class Vault implements ModelInterface, ArrayAccess
         $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
         $this->container['sysLockSourceService'] = isset($data['sysLockSourceService']) ? $data['sysLockSourceService'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
+        $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
     }
 
     /**
@@ -386,6 +397,12 @@ class Vault implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['threshold']) && ($this->container['threshold'] < 1)) {
                 $invalidProperties[] = "invalid value for 'threshold', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['availabilityZone']) && (mb_strlen($this->container['availabilityZone']) > 32)) {
+                $invalidProperties[] = "invalid value for 'availabilityZone', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['availabilityZone']) && (mb_strlen($this->container['availabilityZone']) < 1)) {
+                $invalidProperties[] = "invalid value for 'availabilityZone', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -830,6 +847,30 @@ class Vault implements ModelInterface, ArrayAccess
     public function setLocked($locked)
     {
         $this->container['locked'] = $locked;
+        return $this;
+    }
+
+    /**
+    * Gets availabilityZone
+    *  存储库可用区信息，最大支持32字符。
+    *
+    * @return string|null
+    */
+    public function getAvailabilityZone()
+    {
+        return $this->container['availabilityZone'];
+    }
+
+    /**
+    * Sets availabilityZone
+    *
+    * @param string|null $availabilityZone 存储库可用区信息，最大支持32字符。
+    *
+    * @return $this
+    */
+    public function setAvailabilityZone($availabilityZone)
+    {
+        $this->container['availabilityZone'] = $availabilityZone;
         return $this;
     }
 

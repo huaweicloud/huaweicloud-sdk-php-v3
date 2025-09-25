@@ -21,8 +21,8 @@ class RunInstanceActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  任务id。按需实例时仅返回任务id。
-    * orderId  订单id。包周期实例时仅返回订单id。
+    * jobId  **参数解释**: 任务ID。按需实例时仅返回任务ID。 **取值范围**: 不涉及。
+    * orderId  **参数解释**: 订单ID。包周期实例时仅返回订单ID。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class RunInstanceActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  任务id。按需实例时仅返回任务id。
-    * orderId  订单id。包周期实例时仅返回订单id。
+    * jobId  **参数解释**: 任务ID。按需实例时仅返回任务ID。 **取值范围**: 不涉及。
+    * orderId  **参数解释**: 订单ID。包周期实例时仅返回订单ID。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class RunInstanceActionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  任务id。按需实例时仅返回任务id。
-    * orderId  订单id。包周期实例时仅返回订单id。
+    * jobId  **参数解释**: 任务ID。按需实例时仅返回任务ID。 **取值范围**: 不涉及。
+    * orderId  **参数解释**: 订单ID。包周期实例时仅返回订单ID。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class RunInstanceActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  任务id。按需实例时仅返回任务id。
-    * orderId  订单id。包周期实例时仅返回订单id。
+    * jobId  **参数解释**: 任务ID。按需实例时仅返回任务ID。 **取值范围**: 不涉及。
+    * orderId  **参数解释**: 订单ID。包周期实例时仅返回订单ID。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class RunInstanceActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  任务id。按需实例时仅返回任务id。
-    * orderId  订单id。包周期实例时仅返回订单id。
+    * jobId  **参数解释**: 任务ID。按需实例时仅返回任务ID。 **取值范围**: 不涉及。
+    * orderId  **参数解释**: 订单ID。包周期实例时仅返回订单ID。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class RunInstanceActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  任务id。按需实例时仅返回任务id。
+    *  **参数解释**: 任务ID。按需实例时仅返回任务ID。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class RunInstanceActionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 任务id。按需实例时仅返回任务id。
+    * @param string|null $jobId **参数解释**: 任务ID。按需实例时仅返回任务ID。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class RunInstanceActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  订单id。包周期实例时仅返回订单id。
+    *  **参数解释**: 订单ID。包周期实例时仅返回订单ID。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class RunInstanceActionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId 订单id。包周期实例时仅返回订单id。
+    * @param string|null $orderId **参数解释**: 订单ID。包周期实例时仅返回订单ID。 **取值范围**: 不涉及。
     *
     * @return $this
     */

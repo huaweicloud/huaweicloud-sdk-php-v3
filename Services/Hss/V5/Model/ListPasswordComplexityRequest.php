@@ -24,7 +24,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 0
     * hostIp  **参数解释**: 服务器IP地址 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 0
     * hostId  **参数解释**: 主机id，不赋值时，查租户所有主机 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 0
-    * resultType  **参数解释**: 结果类型 **约束限制**: 不涉及 **取值范围**: - unhandled : 未忽略的 - ignored   : 已忽略的 **默认取值**: unhandled
+    * resultType  **参数解释**: 结果类型 **约束限制**: 不涉及 **取值范围**: - unhandled : 未处理 - ignored   : 已忽略  **默认取值**: unhandled
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
@@ -46,7 +46,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 0
     * hostIp  **参数解释**: 服务器IP地址 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 0
     * hostId  **参数解释**: 主机id，不赋值时，查租户所有主机 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 0
-    * resultType  **参数解释**: 结果类型 **约束限制**: 不涉及 **取值范围**: - unhandled : 未忽略的 - ignored   : 已忽略的 **默认取值**: unhandled
+    * resultType  **参数解释**: 结果类型 **约束限制**: 不涉及 **取值范围**: - unhandled : 未处理 - ignored   : 已忽略  **默认取值**: unhandled
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
@@ -89,7 +89,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 0
     * hostIp  **参数解释**: 服务器IP地址 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 0
     * hostId  **参数解释**: 主机id，不赋值时，查租户所有主机 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 0
-    * resultType  **参数解释**: 结果类型 **约束限制**: 不涉及 **取值范围**: - unhandled : 未忽略的 - ignored   : 已忽略的 **默认取值**: unhandled
+    * resultType  **参数解释**: 结果类型 **约束限制**: 不涉及 **取值范围**: - unhandled : 未处理 - ignored   : 已忽略  **默认取值**: unhandled
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
@@ -111,7 +111,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 0
     * hostIp  **参数解释**: 服务器IP地址 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 0
     * hostId  **参数解释**: 主机id，不赋值时，查租户所有主机 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 0
-    * resultType  **参数解释**: 结果类型 **约束限制**: 不涉及 **取值范围**: - unhandled : 未忽略的 - ignored   : 已忽略的 **默认取值**: unhandled
+    * resultType  **参数解释**: 结果类型 **约束限制**: 不涉及 **取值范围**: - unhandled : 未处理 - ignored   : 已忽略  **默认取值**: unhandled
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
@@ -133,7 +133,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 0
     * hostIp  **参数解释**: 服务器IP地址 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 0
     * hostId  **参数解释**: 主机id，不赋值时，查租户所有主机 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 0
-    * resultType  **参数解释**: 结果类型 **约束限制**: 不涉及 **取值范围**: - unhandled : 未忽略的 - ignored   : 已忽略的 **默认取值**: unhandled
+    * resultType  **参数解释**: 结果类型 **约束限制**: 不涉及 **取值范围**: - unhandled : 未处理 - ignored   : 已忽略  **默认取值**: unhandled
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
@@ -256,6 +256,9 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['resultType']) && (mb_strlen($this->container['resultType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'resultType', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['resultType']) && !preg_match("/^(unhandled|ignored)$/", $this->container['resultType'])) {
+                $invalidProperties[] = "invalid value for 'resultType', must be conform to the pattern /^(unhandled|ignored)$/.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
@@ -381,7 +384,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resultType
-    *  **参数解释**: 结果类型 **约束限制**: 不涉及 **取值范围**: - unhandled : 未忽略的 - ignored   : 已忽略的 **默认取值**: unhandled
+    *  **参数解释**: 结果类型 **约束限制**: 不涉及 **取值范围**: - unhandled : 未处理 - ignored   : 已忽略  **默认取值**: unhandled
     *
     * @return string|null
     */
@@ -393,7 +396,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resultType
     *
-    * @param string|null $resultType **参数解释**: 结果类型 **约束限制**: 不涉及 **取值范围**: - unhandled : 未忽略的 - ignored   : 已忽略的 **默认取值**: unhandled
+    * @param string|null $resultType **参数解释**: 结果类型 **约束限制**: 不涉及 **取值范围**: - unhandled : 未处理 - ignored   : 已忽略  **默认取值**: unhandled
     *
     * @return $this
     */

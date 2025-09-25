@@ -28,7 +28,8 @@ class ShowSecurityReportContentResponse implements ModelInterface, ArrayAccess
     * reportCategory  **参数解释：** 报告类别，标识报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * topicUrn  **参数解释：** 主题urn，关联报告发送的SMN主题唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * subscriptionType  **参数解释：** 订阅类型，标识安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * reportContentSubscriptionInfo  reportContentSubscriptionInfo
+    * reportContentInfo  reportContentInfo
+    * createTime  **参数解释：** 创建时间，报告的创建时间。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * statPeriod  statPeriod
     *
     * @var string[]
@@ -41,7 +42,8 @@ class ShowSecurityReportContentResponse implements ModelInterface, ArrayAccess
             'reportCategory' => 'string',
             'topicUrn' => 'string',
             'subscriptionType' => 'string',
-            'reportContentSubscriptionInfo' => '\HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentSubscriptionInfo',
+            'reportContentInfo' => '\HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfo',
+            'createTime' => 'int',
             'statPeriod' => '\HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseStatPeriod'
     ];
 
@@ -54,7 +56,8 @@ class ShowSecurityReportContentResponse implements ModelInterface, ArrayAccess
     * reportCategory  **参数解释：** 报告类别，标识报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * topicUrn  **参数解释：** 主题urn，关联报告发送的SMN主题唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * subscriptionType  **参数解释：** 订阅类型，标识安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * reportContentSubscriptionInfo  reportContentSubscriptionInfo
+    * reportContentInfo  reportContentInfo
+    * createTime  **参数解释：** 创建时间，报告的创建时间。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * statPeriod  statPeriod
     *
     * @var string[]
@@ -67,7 +70,8 @@ class ShowSecurityReportContentResponse implements ModelInterface, ArrayAccess
         'reportCategory' => null,
         'topicUrn' => null,
         'subscriptionType' => null,
-        'reportContentSubscriptionInfo' => null,
+        'reportContentInfo' => null,
+        'createTime' => 'int64',
         'statPeriod' => null
     ];
 
@@ -101,7 +105,8 @@ class ShowSecurityReportContentResponse implements ModelInterface, ArrayAccess
     * reportCategory  **参数解释：** 报告类别，标识报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * topicUrn  **参数解释：** 主题urn，关联报告发送的SMN主题唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * subscriptionType  **参数解释：** 订阅类型，标识安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * reportContentSubscriptionInfo  reportContentSubscriptionInfo
+    * reportContentInfo  reportContentInfo
+    * createTime  **参数解释：** 创建时间，报告的创建时间。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * statPeriod  statPeriod
     *
     * @var string[]
@@ -114,7 +119,8 @@ class ShowSecurityReportContentResponse implements ModelInterface, ArrayAccess
             'reportCategory' => 'report_category',
             'topicUrn' => 'topic_urn',
             'subscriptionType' => 'subscription_type',
-            'reportContentSubscriptionInfo' => 'report_content_subscription_info',
+            'reportContentInfo' => 'report_content_info',
+            'createTime' => 'create_time',
             'statPeriod' => 'stat_period'
     ];
 
@@ -127,7 +133,8 @@ class ShowSecurityReportContentResponse implements ModelInterface, ArrayAccess
     * reportCategory  **参数解释：** 报告类别，标识报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * topicUrn  **参数解释：** 主题urn，关联报告发送的SMN主题唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * subscriptionType  **参数解释：** 订阅类型，标识安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * reportContentSubscriptionInfo  reportContentSubscriptionInfo
+    * reportContentInfo  reportContentInfo
+    * createTime  **参数解释：** 创建时间，报告的创建时间。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * statPeriod  statPeriod
     *
     * @var string[]
@@ -140,7 +147,8 @@ class ShowSecurityReportContentResponse implements ModelInterface, ArrayAccess
             'reportCategory' => 'setReportCategory',
             'topicUrn' => 'setTopicUrn',
             'subscriptionType' => 'setSubscriptionType',
-            'reportContentSubscriptionInfo' => 'setReportContentSubscriptionInfo',
+            'reportContentInfo' => 'setReportContentInfo',
+            'createTime' => 'setCreateTime',
             'statPeriod' => 'setStatPeriod'
     ];
 
@@ -153,7 +161,8 @@ class ShowSecurityReportContentResponse implements ModelInterface, ArrayAccess
     * reportCategory  **参数解释：** 报告类别，标识报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * topicUrn  **参数解释：** 主题urn，关联报告发送的SMN主题唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * subscriptionType  **参数解释：** 订阅类型，标识安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * reportContentSubscriptionInfo  reportContentSubscriptionInfo
+    * reportContentInfo  reportContentInfo
+    * createTime  **参数解释：** 创建时间，报告的创建时间。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * statPeriod  statPeriod
     *
     * @var string[]
@@ -166,7 +175,8 @@ class ShowSecurityReportContentResponse implements ModelInterface, ArrayAccess
             'reportCategory' => 'getReportCategory',
             'topicUrn' => 'getTopicUrn',
             'subscriptionType' => 'getSubscriptionType',
-            'reportContentSubscriptionInfo' => 'getReportContentSubscriptionInfo',
+            'reportContentInfo' => 'getReportContentInfo',
+            'createTime' => 'getCreateTime',
             'statPeriod' => 'getStatPeriod'
     ];
 
@@ -235,7 +245,8 @@ class ShowSecurityReportContentResponse implements ModelInterface, ArrayAccess
         $this->container['reportCategory'] = isset($data['reportCategory']) ? $data['reportCategory'] : null;
         $this->container['topicUrn'] = isset($data['topicUrn']) ? $data['topicUrn'] : null;
         $this->container['subscriptionType'] = isset($data['subscriptionType']) ? $data['subscriptionType'] : null;
-        $this->container['reportContentSubscriptionInfo'] = isset($data['reportContentSubscriptionInfo']) ? $data['reportContentSubscriptionInfo'] : null;
+        $this->container['reportContentInfo'] = isset($data['reportContentInfo']) ? $data['reportContentInfo'] : null;
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['statPeriod'] = isset($data['statPeriod']) ? $data['statPeriod'] : null;
     }
 
@@ -430,26 +441,50 @@ class ShowSecurityReportContentResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets reportContentSubscriptionInfo
-    *  reportContentSubscriptionInfo
+    * Gets reportContentInfo
+    *  reportContentInfo
     *
-    * @return \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentSubscriptionInfo|null
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfo|null
     */
-    public function getReportContentSubscriptionInfo()
+    public function getReportContentInfo()
     {
-        return $this->container['reportContentSubscriptionInfo'];
+        return $this->container['reportContentInfo'];
     }
 
     /**
-    * Sets reportContentSubscriptionInfo
+    * Sets reportContentInfo
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentSubscriptionInfo|null $reportContentSubscriptionInfo reportContentSubscriptionInfo
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfo|null $reportContentInfo reportContentInfo
     *
     * @return $this
     */
-    public function setReportContentSubscriptionInfo($reportContentSubscriptionInfo)
+    public function setReportContentInfo($reportContentInfo)
     {
-        $this->container['reportContentSubscriptionInfo'] = $reportContentSubscriptionInfo;
+        $this->container['reportContentInfo'] = $reportContentInfo;
+        return $this;
+    }
+
+    /**
+    * Gets createTime
+    *  **参数解释：** 创建时间，报告的创建时间。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return int|null
+    */
+    public function getCreateTime()
+    {
+        return $this->container['createTime'];
+    }
+
+    /**
+    * Sets createTime
+    *
+    * @param int|null $createTime **参数解释：** 创建时间，报告的创建时间。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setCreateTime($createTime)
+    {
+        $this->container['createTime'] = $createTime;
         return $this;
     }
 

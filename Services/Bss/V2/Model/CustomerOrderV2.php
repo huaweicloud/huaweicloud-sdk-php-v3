@@ -37,6 +37,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     * amountInfo  amountInfo
     * enterpriseProjects  客户订单企业项目信息。具体请参见表 EnterpriseProject。
     * subOrderInfos  客户订单下属的订单详情信息。具体请参见表 SubCustomerOrderV2 说明：当查询订单为组合交易订单时，订单信息会返回下属的订单信息，当查询为普通订单时，此字段返回为空
+    * agentPayInfo  agentPayInfo
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
             'contractId' => 'string',
             'amountInfo' => '\HuaweiCloud\SDK\Bss\V2\Model\AmountInfomationV2',
             'enterpriseProjects' => '\HuaweiCloud\SDK\Bss\V2\Model\EnterpriseProject[]',
-            'subOrderInfos' => '\HuaweiCloud\SDK\Bss\V2\Model\SubCustomerOrderV2[]'
+            'subOrderInfos' => '\HuaweiCloud\SDK\Bss\V2\Model\SubCustomerOrderV2[]',
+            'agentPayInfo' => '\HuaweiCloud\SDK\Bss\V2\Model\AgentPayInfoV2'
     ];
 
     /**
@@ -79,6 +81,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     * amountInfo  amountInfo
     * enterpriseProjects  客户订单企业项目信息。具体请参见表 EnterpriseProject。
     * subOrderInfos  客户订单下属的订单详情信息。具体请参见表 SubCustomerOrderV2 说明：当查询订单为组合交易订单时，订单信息会返回下属的订单信息，当查询为普通订单时，此字段返回为空
+    * agentPayInfo  agentPayInfo
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
         'contractId' => null,
         'amountInfo' => null,
         'enterpriseProjects' => null,
-        'subOrderInfos' => null
+        'subOrderInfos' => null,
+        'agentPayInfo' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     * amountInfo  amountInfo
     * enterpriseProjects  客户订单企业项目信息。具体请参见表 EnterpriseProject。
     * subOrderInfos  客户订单下属的订单详情信息。具体请参见表 SubCustomerOrderV2 说明：当查询订单为组合交易订单时，订单信息会返回下属的订单信息，当查询为普通订单时，此字段返回为空
+    * agentPayInfo  agentPayInfo
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
             'contractId' => 'contract_id',
             'amountInfo' => 'amount_info',
             'enterpriseProjects' => 'enterprise_projects',
-            'subOrderInfos' => 'sub_order_infos'
+            'subOrderInfos' => 'sub_order_infos',
+            'agentPayInfo' => 'agent_pay_info'
     ];
 
     /**
@@ -184,6 +190,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     * amountInfo  amountInfo
     * enterpriseProjects  客户订单企业项目信息。具体请参见表 EnterpriseProject。
     * subOrderInfos  客户订单下属的订单详情信息。具体请参见表 SubCustomerOrderV2 说明：当查询订单为组合交易订单时，订单信息会返回下属的订单信息，当查询为普通订单时，此字段返回为空
+    * agentPayInfo  agentPayInfo
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
             'contractId' => 'setContractId',
             'amountInfo' => 'setAmountInfo',
             'enterpriseProjects' => 'setEnterpriseProjects',
-            'subOrderInfos' => 'setSubOrderInfos'
+            'subOrderInfos' => 'setSubOrderInfos',
+            'agentPayInfo' => 'setAgentPayInfo'
     ];
 
     /**
@@ -226,6 +234,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     * amountInfo  amountInfo
     * enterpriseProjects  客户订单企业项目信息。具体请参见表 EnterpriseProject。
     * subOrderInfos  客户订单下属的订单详情信息。具体请参见表 SubCustomerOrderV2 说明：当查询订单为组合交易订单时，订单信息会返回下属的订单信息，当查询为普通订单时，此字段返回为空
+    * agentPayInfo  agentPayInfo
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
             'contractId' => 'getContractId',
             'amountInfo' => 'getAmountInfo',
             'enterpriseProjects' => 'getEnterpriseProjects',
-            'subOrderInfos' => 'getSubOrderInfos'
+            'subOrderInfos' => 'getSubOrderInfos',
+            'agentPayInfo' => 'getAgentPayInfo'
     ];
 
     /**
@@ -324,6 +334,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
         $this->container['amountInfo'] = isset($data['amountInfo']) ? $data['amountInfo'] : null;
         $this->container['enterpriseProjects'] = isset($data['enterpriseProjects']) ? $data['enterpriseProjects'] : null;
         $this->container['subOrderInfos'] = isset($data['subOrderInfos']) ? $data['subOrderInfos'] : null;
+        $this->container['agentPayInfo'] = isset($data['agentPayInfo']) ? $data['agentPayInfo'] : null;
     }
 
     /**
@@ -753,6 +764,30 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     public function setSubOrderInfos($subOrderInfos)
     {
         $this->container['subOrderInfos'] = $subOrderInfos;
+        return $this;
+    }
+
+    /**
+    * Gets agentPayInfo
+    *  agentPayInfo
+    *
+    * @return \HuaweiCloud\SDK\Bss\V2\Model\AgentPayInfoV2|null
+    */
+    public function getAgentPayInfo()
+    {
+        return $this->container['agentPayInfo'];
+    }
+
+    /**
+    * Sets agentPayInfo
+    *
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\AgentPayInfoV2|null $agentPayInfo agentPayInfo
+    *
+    * @return $this
+    */
+    public function setAgentPayInfo($agentPayInfo)
+    {
+        $this->container['agentPayInfo'] = $agentPayInfo;
         return $this;
     }
 

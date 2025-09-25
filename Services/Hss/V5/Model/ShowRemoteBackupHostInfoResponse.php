@@ -24,7 +24,7 @@ class ShowRemoteBackupHostInfoResponse implements ModelInterface, ArrayAccess
     * backupAddr  远端备份服务器的地址，包含IP和端口
     * backupHostId  远端备份服务器的服务器ID
     * backupHostName  远端备份服务器的服务器名称
-    * remoteBackup  **参数解释** 服务器是否开启远端备份 **取值范围**  - true : 已开启远端备份。 - false: 未开启远端备份。
+    * remoteBackup  **参数解释** 服务器是否开启远端备份 **取值范围** - true : 已开启远端备份。 - false: 未开启远端备份。
     *
     * @var string[]
     */
@@ -40,7 +40,7 @@ class ShowRemoteBackupHostInfoResponse implements ModelInterface, ArrayAccess
     * backupAddr  远端备份服务器的地址，包含IP和端口
     * backupHostId  远端备份服务器的服务器ID
     * backupHostName  远端备份服务器的服务器名称
-    * remoteBackup  **参数解释** 服务器是否开启远端备份 **取值范围**  - true : 已开启远端备份。 - false: 未开启远端备份。
+    * remoteBackup  **参数解释** 服务器是否开启远端备份 **取值范围** - true : 已开启远端备份。 - false: 未开启远端备份。
     *
     * @var string[]
     */
@@ -77,7 +77,7 @@ class ShowRemoteBackupHostInfoResponse implements ModelInterface, ArrayAccess
     * backupAddr  远端备份服务器的地址，包含IP和端口
     * backupHostId  远端备份服务器的服务器ID
     * backupHostName  远端备份服务器的服务器名称
-    * remoteBackup  **参数解释** 服务器是否开启远端备份 **取值范围**  - true : 已开启远端备份。 - false: 未开启远端备份。
+    * remoteBackup  **参数解释** 服务器是否开启远端备份 **取值范围** - true : 已开启远端备份。 - false: 未开启远端备份。
     *
     * @var string[]
     */
@@ -93,7 +93,7 @@ class ShowRemoteBackupHostInfoResponse implements ModelInterface, ArrayAccess
     * backupAddr  远端备份服务器的地址，包含IP和端口
     * backupHostId  远端备份服务器的服务器ID
     * backupHostName  远端备份服务器的服务器名称
-    * remoteBackup  **参数解释** 服务器是否开启远端备份 **取值范围**  - true : 已开启远端备份。 - false: 未开启远端备份。
+    * remoteBackup  **参数解释** 服务器是否开启远端备份 **取值范围** - true : 已开启远端备份。 - false: 未开启远端备份。
     *
     * @var string[]
     */
@@ -109,7 +109,7 @@ class ShowRemoteBackupHostInfoResponse implements ModelInterface, ArrayAccess
     * backupAddr  远端备份服务器的地址，包含IP和端口
     * backupHostId  远端备份服务器的服务器ID
     * backupHostName  远端备份服务器的服务器名称
-    * remoteBackup  **参数解释** 服务器是否开启远端备份 **取值范围**  - true : 已开启远端备份。 - false: 未开启远端备份。
+    * remoteBackup  **参数解释** 服务器是否开启远端备份 **取值范围** - true : 已开启远端备份。 - false: 未开启远端备份。
     *
     * @var string[]
     */
@@ -298,7 +298,7 @@ class ShowRemoteBackupHostInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets remoteBackup
-    *  **参数解释** 服务器是否开启远端备份 **取值范围**  - true : 已开启远端备份。 - false: 未开启远端备份。
+    *  **参数解释** 服务器是否开启远端备份 **取值范围** - true : 已开启远端备份。 - false: 未开启远端备份。
     *
     * @return bool|null
     */
@@ -310,7 +310,7 @@ class ShowRemoteBackupHostInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets remoteBackup
     *
-    * @param bool|null $remoteBackup **参数解释** 服务器是否开启远端备份 **取值范围**  - true : 已开启远端备份。 - false: 未开启远端备份。
+    * @param bool|null $remoteBackup **参数解释** 服务器是否开启远端备份 **取值范围** - true : 已开启远端备份。 - false: 未开启远端备份。
     *
     * @return $this
     */
