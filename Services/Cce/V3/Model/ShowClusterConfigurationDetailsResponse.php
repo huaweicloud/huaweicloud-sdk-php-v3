@@ -21,7 +21,7 @@ class ShowClusterConfigurationDetailsResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  获取指定集群配置项列表返回体
+    * body  **参数解释**： 集群支持的配置项详情
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowClusterConfigurationDetailsResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  获取指定集群配置项列表返回体
+    * body  **参数解释**： 集群支持的配置项详情
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowClusterConfigurationDetailsResponse implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  获取指定集群配置项列表返回体
+    * body  **参数解释**： 集群支持的配置项详情
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowClusterConfigurationDetailsResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  获取指定集群配置项列表返回体
+    * body  **参数解释**： 集群支持的配置项详情
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowClusterConfigurationDetailsResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  获取指定集群配置项列表返回体
+    * body  **参数解释**： 集群支持的配置项详情
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowClusterConfigurationDetailsResponse implements ModelInterface, ArrayAc
 
     /**
     * Gets body
-    *  获取指定集群配置项列表返回体
+    *  **参数解释**： 集群支持的配置项详情
     *
     * @return map[string,\HuaweiCloud\SDK\Cce\V3\Model\PackageOptions[]]|null
     */
@@ -187,7 +187,7 @@ class ShowClusterConfigurationDetailsResponse implements ModelInterface, ArrayAc
     /**
     * Sets body
     *
-    * @param map[string,\HuaweiCloud\SDK\Cce\V3\Model\PackageOptions[]]|null $body 获取指定集群配置项列表返回体
+    * @param map[string,\HuaweiCloud\SDK\Cce\V3\Model\PackageOptions[]]|null $body **参数解释**： 集群支持的配置项详情
     *
     * @return $this
     */

@@ -20,11 +20,11 @@ class DeleteStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * previousTotal  集群删除时已经存在的集群资源记录总数
-    * currentTotal  基于当前集群资源记录信息，生成实际最新资源记录总数
-    * updated  集群删除时更新的资源记录总数
-    * added  集群删除时更新的资源记录总数
-    * deleted  集群删除时删除的资源记录总数
+    * previousTotal  **参数解释：** 节点删除时已经存在的集群资源记录总数。 **取值范围：** 不涉及
+    * currentTotal  **参数解释：** 基于当前集群资源记录信息，生成实际最新资源记录总数。 **取值范围：** 不涉及
+    * updated  **参数解释：** 节点删除时更新的待删除资源记录总数。 **取值范围：** 不涉及
+    * added  **参数解释：** 节点删除时新增的待删除资源记录总数。 **取值范围：** 不涉及
+    * deleted  **参数解释：** 节点删除时删除的资源记录总数。 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class DeleteStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * previousTotal  集群删除时已经存在的集群资源记录总数
-    * currentTotal  基于当前集群资源记录信息，生成实际最新资源记录总数
-    * updated  集群删除时更新的资源记录总数
-    * added  集群删除时更新的资源记录总数
-    * deleted  集群删除时删除的资源记录总数
+    * previousTotal  **参数解释：** 节点删除时已经存在的集群资源记录总数。 **取值范围：** 不涉及
+    * currentTotal  **参数解释：** 基于当前集群资源记录信息，生成实际最新资源记录总数。 **取值范围：** 不涉及
+    * updated  **参数解释：** 节点删除时更新的待删除资源记录总数。 **取值范围：** 不涉及
+    * added  **参数解释：** 节点删除时新增的待删除资源记录总数。 **取值范围：** 不涉及
+    * deleted  **参数解释：** 节点删除时删除的资源记录总数。 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class DeleteStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * previousTotal  集群删除时已经存在的集群资源记录总数
-    * currentTotal  基于当前集群资源记录信息，生成实际最新资源记录总数
-    * updated  集群删除时更新的资源记录总数
-    * added  集群删除时更新的资源记录总数
-    * deleted  集群删除时删除的资源记录总数
+    * previousTotal  **参数解释：** 节点删除时已经存在的集群资源记录总数。 **取值范围：** 不涉及
+    * currentTotal  **参数解释：** 基于当前集群资源记录信息，生成实际最新资源记录总数。 **取值范围：** 不涉及
+    * updated  **参数解释：** 节点删除时更新的待删除资源记录总数。 **取值范围：** 不涉及
+    * added  **参数解释：** 节点删除时新增的待删除资源记录总数。 **取值范围：** 不涉及
+    * deleted  **参数解释：** 节点删除时删除的资源记录总数。 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class DeleteStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * previousTotal  集群删除时已经存在的集群资源记录总数
-    * currentTotal  基于当前集群资源记录信息，生成实际最新资源记录总数
-    * updated  集群删除时更新的资源记录总数
-    * added  集群删除时更新的资源记录总数
-    * deleted  集群删除时删除的资源记录总数
+    * previousTotal  **参数解释：** 节点删除时已经存在的集群资源记录总数。 **取值范围：** 不涉及
+    * currentTotal  **参数解释：** 基于当前集群资源记录信息，生成实际最新资源记录总数。 **取值范围：** 不涉及
+    * updated  **参数解释：** 节点删除时更新的待删除资源记录总数。 **取值范围：** 不涉及
+    * added  **参数解释：** 节点删除时新增的待删除资源记录总数。 **取值范围：** 不涉及
+    * deleted  **参数解释：** 节点删除时删除的资源记录总数。 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class DeleteStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * previousTotal  集群删除时已经存在的集群资源记录总数
-    * currentTotal  基于当前集群资源记录信息，生成实际最新资源记录总数
-    * updated  集群删除时更新的资源记录总数
-    * added  集群删除时更新的资源记录总数
-    * deleted  集群删除时删除的资源记录总数
+    * previousTotal  **参数解释：** 节点删除时已经存在的集群资源记录总数。 **取值范围：** 不涉及
+    * currentTotal  **参数解释：** 基于当前集群资源记录信息，生成实际最新资源记录总数。 **取值范围：** 不涉及
+    * updated  **参数解释：** 节点删除时更新的待删除资源记录总数。 **取值范围：** 不涉及
+    * added  **参数解释：** 节点删除时新增的待删除资源记录总数。 **取值范围：** 不涉及
+    * deleted  **参数解释：** 节点删除时删除的资源记录总数。 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class DeleteStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets previousTotal
-    *  集群删除时已经存在的集群资源记录总数
+    *  **参数解释：** 节点删除时已经存在的集群资源记录总数。 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -230,7 +230,7 @@ class DeleteStatus implements ModelInterface, ArrayAccess
     /**
     * Sets previousTotal
     *
-    * @param int|null $previousTotal 集群删除时已经存在的集群资源记录总数
+    * @param int|null $previousTotal **参数解释：** 节点删除时已经存在的集群资源记录总数。 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class DeleteStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets currentTotal
-    *  基于当前集群资源记录信息，生成实际最新资源记录总数
+    *  **参数解释：** 基于当前集群资源记录信息，生成实际最新资源记录总数。 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -254,7 +254,7 @@ class DeleteStatus implements ModelInterface, ArrayAccess
     /**
     * Sets currentTotal
     *
-    * @param int|null $currentTotal 基于当前集群资源记录信息，生成实际最新资源记录总数
+    * @param int|null $currentTotal **参数解释：** 基于当前集群资源记录信息，生成实际最新资源记录总数。 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class DeleteStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets updated
-    *  集群删除时更新的资源记录总数
+    *  **参数解释：** 节点删除时更新的待删除资源记录总数。 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -278,7 +278,7 @@ class DeleteStatus implements ModelInterface, ArrayAccess
     /**
     * Sets updated
     *
-    * @param int|null $updated 集群删除时更新的资源记录总数
+    * @param int|null $updated **参数解释：** 节点删除时更新的待删除资源记录总数。 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class DeleteStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets added
-    *  集群删除时更新的资源记录总数
+    *  **参数解释：** 节点删除时新增的待删除资源记录总数。 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -302,7 +302,7 @@ class DeleteStatus implements ModelInterface, ArrayAccess
     /**
     * Sets added
     *
-    * @param int|null $added 集群删除时更新的资源记录总数
+    * @param int|null $added **参数解释：** 节点删除时新增的待删除资源记录总数。 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class DeleteStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets deleted
-    *  集群删除时删除的资源记录总数
+    *  **参数解释：** 节点删除时删除的资源记录总数。 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -326,7 +326,7 @@ class DeleteStatus implements ModelInterface, ArrayAccess
     /**
     * Sets deleted
     *
-    * @param int|null $deleted 集群删除时删除的资源记录总数
+    * @param int|null $deleted **参数解释：** 节点删除时删除的资源记录总数。 **取值范围：** 不涉及
     *
     * @return $this
     */

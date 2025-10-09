@@ -55,6 +55,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * supportedFlavors  网关可升配到的目标规格
     * supportedFeatures  网关可支持的特性功能
     * tags  标签
+    * upgradeInfo  升级信息
     *
     * @var string[]
     */
@@ -93,7 +94,8 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'policyTemplate' => '\HuaweiCloud\SDK\Vpn\V5\Model\PolicyTemplate',
             'supportedFlavors' => 'string[]',
             'supportedFeatures' => 'string[]',
-            'tags' => '\HuaweiCloud\SDK\Vpn\V5\Model\VpnResourceTag[]'
+            'tags' => '\HuaweiCloud\SDK\Vpn\V5\Model\VpnResourceTag[]',
+            'upgradeInfo' => 'string'
     ];
 
     /**
@@ -133,6 +135,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * supportedFlavors  网关可升配到的目标规格
     * supportedFeatures  网关可支持的特性功能
     * tags  标签
+    * upgradeInfo  升级信息
     *
     * @var string[]
     */
@@ -171,7 +174,8 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
         'policyTemplate' => null,
         'supportedFlavors' => null,
         'supportedFeatures' => null,
-        'tags' => null
+        'tags' => null,
+        'upgradeInfo' => null
     ];
 
     /**
@@ -232,6 +236,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * supportedFlavors  网关可升配到的目标规格
     * supportedFeatures  网关可支持的特性功能
     * tags  标签
+    * upgradeInfo  升级信息
     *
     * @var string[]
     */
@@ -270,7 +275,8 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'policyTemplate' => 'policy_template',
             'supportedFlavors' => 'supported_flavors',
             'supportedFeatures' => 'supported_features',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'upgradeInfo' => 'upgrade_info'
     ];
 
     /**
@@ -310,6 +316,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * supportedFlavors  网关可升配到的目标规格
     * supportedFeatures  网关可支持的特性功能
     * tags  标签
+    * upgradeInfo  升级信息
     *
     * @var string[]
     */
@@ -348,7 +355,8 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'policyTemplate' => 'setPolicyTemplate',
             'supportedFlavors' => 'setSupportedFlavors',
             'supportedFeatures' => 'setSupportedFeatures',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'upgradeInfo' => 'setUpgradeInfo'
     ];
 
     /**
@@ -388,6 +396,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * supportedFlavors  网关可升配到的目标规格
     * supportedFeatures  网关可支持的特性功能
     * tags  标签
+    * upgradeInfo  升级信息
     *
     * @var string[]
     */
@@ -426,7 +435,8 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'policyTemplate' => 'getPolicyTemplate',
             'supportedFlavors' => 'getSupportedFlavors',
             'supportedFeatures' => 'getSupportedFeatures',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'upgradeInfo' => 'getUpgradeInfo'
     ];
 
     /**
@@ -475,6 +485,9 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     const IP_VERSION_IPV6 = 'ipv6';
     const NETWORK_TYPE__PUBLIC = 'public';
     const NETWORK_TYPE__PRIVATE = 'private';
+    const UPGRADE_INFO_READY = 'ready';
+    const UPGRADE_INFO_EXPIRING_SOON = 'expiring soon';
+    const UPGRADE_INFO_UNREADY = 'unready';
     
 
     /**
@@ -513,6 +526,20 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
         return [
             self::NETWORK_TYPE__PUBLIC,
             self::NETWORK_TYPE__PRIVATE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getUpgradeInfoAllowableValues()
+    {
+        return [
+            self::UPGRADE_INFO_READY,
+            self::UPGRADE_INFO_EXPIRING_SOON,
+            self::UPGRADE_INFO_UNREADY,
         ];
     }
 
@@ -567,6 +594,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
         $this->container['supportedFlavors'] = isset($data['supportedFlavors']) ? $data['supportedFlavors'] : null;
         $this->container['supportedFeatures'] = isset($data['supportedFeatures']) ? $data['supportedFeatures'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['upgradeInfo'] = isset($data['upgradeInfo']) ? $data['upgradeInfo'] : null;
     }
 
     /**
@@ -643,6 +671,14 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getUpgradeInfoAllowableValues();
+                if (!is_null($this->container['upgradeInfo']) && !in_array($this->container['upgradeInfo'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'upgradeInfo', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -1494,6 +1530,30 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets upgradeInfo
+    *  升级信息
+    *
+    * @return string|null
+    */
+    public function getUpgradeInfo()
+    {
+        return $this->container['upgradeInfo'];
+    }
+
+    /**
+    * Sets upgradeInfo
+    *
+    * @param string|null $upgradeInfo 升级信息
+    *
+    * @return $this
+    */
+    public function setUpgradeInfo($upgradeInfo)
+    {
+        $this->container['upgradeInfo'] = $upgradeInfo;
         return $this;
     }
 

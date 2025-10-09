@@ -23,7 +23,7 @@ class ListNodePoolsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * kind  API type. The value is fixed to List.
     * apiVersion  API version. The value is fixed to v3.
-    * items  /
+    * items  **参数解释**： 节点池的信息。
     *
     * @var string[]
     */
@@ -37,7 +37,7 @@ class ListNodePoolsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * kind  API type. The value is fixed to List.
     * apiVersion  API version. The value is fixed to v3.
-    * items  /
+    * items  **参数解释**： 节点池的信息。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListNodePoolsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * kind  API type. The value is fixed to List.
     * apiVersion  API version. The value is fixed to v3.
-    * items  /
+    * items  **参数解释**： 节点池的信息。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ListNodePoolsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * kind  API type. The value is fixed to List.
     * apiVersion  API version. The value is fixed to v3.
-    * items  /
+    * items  **参数解释**： 节点池的信息。
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class ListNodePoolsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * kind  API type. The value is fixed to List.
     * apiVersion  API version. The value is fixed to v3.
-    * items  /
+    * items  **参数解释**： 节点池的信息。
     *
     * @var string[]
     */
@@ -245,7 +245,7 @@ class ListNodePoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets items
-    *  /
+    *  **参数解释**： 节点池的信息。
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\NodePoolResp[]|null
     */
@@ -257,7 +257,7 @@ class ListNodePoolsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodePoolResp[]|null $items /
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodePoolResp[]|null $items **参数解释**： 节点池的信息。
     *
     * @return $this
     */

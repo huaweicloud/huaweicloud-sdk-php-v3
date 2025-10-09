@@ -22,6 +22,7 @@ class UpdateReleaseRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  模板实例名称
     * namespace  模板实例所在的命名空间
+    * showResources  **参数解释：** 是否展示模板实例的资源信息。 **约束限制：** 不涉及 **取值范围：** 指定为“true”时展示模板实例的资源信息，不指定该参数时默认不展示。 **默认取值：** 无
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     * body  body
     *
@@ -30,6 +31,7 @@ class UpdateReleaseRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'name' => 'string',
             'namespace' => 'string',
+            'showResources' => 'string',
             'clusterId' => 'string',
             'body' => '\HuaweiCloud\SDK\Cce\V3\Model\UpdateReleaseReqBody'
     ];
@@ -38,6 +40,7 @@ class UpdateReleaseRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  模板实例名称
     * namespace  模板实例所在的命名空间
+    * showResources  **参数解释：** 是否展示模板实例的资源信息。 **约束限制：** 不涉及 **取值范围：** 指定为“true”时展示模板实例的资源信息，不指定该参数时默认不展示。 **默认取值：** 无
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     * body  body
     *
@@ -46,6 +49,7 @@ class UpdateReleaseRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'name' => null,
         'namespace' => null,
+        'showResources' => null,
         'clusterId' => null,
         'body' => null
     ];
@@ -75,6 +79,7 @@ class UpdateReleaseRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  模板实例名称
     * namespace  模板实例所在的命名空间
+    * showResources  **参数解释：** 是否展示模板实例的资源信息。 **约束限制：** 不涉及 **取值范围：** 指定为“true”时展示模板实例的资源信息，不指定该参数时默认不展示。 **默认取值：** 无
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     * body  body
     *
@@ -83,6 +88,7 @@ class UpdateReleaseRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'name' => 'name',
             'namespace' => 'namespace',
+            'showResources' => 'show_resources',
             'clusterId' => 'cluster_id',
             'body' => 'body'
     ];
@@ -91,6 +97,7 @@ class UpdateReleaseRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  模板实例名称
     * namespace  模板实例所在的命名空间
+    * showResources  **参数解释：** 是否展示模板实例的资源信息。 **约束限制：** 不涉及 **取值范围：** 指定为“true”时展示模板实例的资源信息，不指定该参数时默认不展示。 **默认取值：** 无
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     * body  body
     *
@@ -99,6 +106,7 @@ class UpdateReleaseRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'name' => 'setName',
             'namespace' => 'setNamespace',
+            'showResources' => 'setShowResources',
             'clusterId' => 'setClusterId',
             'body' => 'setBody'
     ];
@@ -107,6 +115,7 @@ class UpdateReleaseRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  模板实例名称
     * namespace  模板实例所在的命名空间
+    * showResources  **参数解释：** 是否展示模板实例的资源信息。 **约束限制：** 不涉及 **取值范围：** 指定为“true”时展示模板实例的资源信息，不指定该参数时默认不展示。 **默认取值：** 无
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     * body  body
     *
@@ -115,6 +124,7 @@ class UpdateReleaseRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'name' => 'getName',
             'namespace' => 'getNamespace',
+            'showResources' => 'getShowResources',
             'clusterId' => 'getClusterId',
             'body' => 'getBody'
     ];
@@ -179,6 +189,7 @@ class UpdateReleaseRequest implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
+        $this->container['showResources'] = isset($data['showResources']) ? $data['showResources'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
@@ -262,6 +273,30 @@ class UpdateReleaseRequest implements ModelInterface, ArrayAccess
     public function setNamespace($namespace)
     {
         $this->container['namespace'] = $namespace;
+        return $this;
+    }
+
+    /**
+    * Gets showResources
+    *  **参数解释：** 是否展示模板实例的资源信息。 **约束限制：** 不涉及 **取值范围：** 指定为“true”时展示模板实例的资源信息，不指定该参数时默认不展示。 **默认取值：** 无
+    *
+    * @return string|null
+    */
+    public function getShowResources()
+    {
+        return $this->container['showResources'];
+    }
+
+    /**
+    * Sets showResources
+    *
+    * @param string|null $showResources **参数解释：** 是否展示模板实例的资源信息。 **约束限制：** 不涉及 **取值范围：** 指定为“true”时展示模板实例的资源信息，不指定该参数时默认不展示。 **默认取值：** 无
+    *
+    * @return $this
+    */
+    public function setShowResources($showResources)
+    {
+        $this->container['showResources'] = $showResources;
         return $this;
     }
 

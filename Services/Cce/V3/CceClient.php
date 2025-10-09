@@ -483,6 +483,68 @@ class CceClient extends Client
     }
 
     /**
+     * 创建访问策略
+     *
+     * 该API用于创建访问策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAccessPolicy($request)
+    {
+        return $this->createAccessPolicyWithHttpInfo($request);
+    }
+
+    public function createAccessPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/api/v3/access-policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAccessPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAccessPolicyRequest');
+    }
+
+    /**
      * 创建AddonInstance
      *
      * 根据提供的插件模板，安装插件实例。
@@ -1277,6 +1339,68 @@ class CceClient extends Client
     }
 
     /**
+     * 删除访问策略
+     *
+     * 该API用于删除单个访问策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteAccessPolicy($request)
+    {
+        return $this->deleteAccessPolicyWithHttpInfo($request);
+    }
+
+    public function deleteAccessPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/api/v3/access-policies/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\DeleteAccessPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\DeleteAccessPolicyRequest');
+    }
+
+    /**
      * 删除AddonInstance
      *
      * 删除插件实例的功能。
@@ -1740,6 +1864,9 @@ class CceClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['showResources'] !== null) {
+            $queryParams['show_resources'] = $localVarParams['showResources'];
+        }
         if ($localVarParams['name'] !== null) {
             $pathParams['name'] = $localVarParams['name'];
         }
@@ -1840,6 +1967,512 @@ class CceClient extends Client
     }
 
     /**
+     * 获取访问策略详情
+     *
+     * 该API用于获取单个访问策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function getAccessPolicy($request)
+    {
+        return $this->getAccessPolicyWithHttpInfo($request);
+    }
+
+    public function getAccessPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/api/v3/access-policies/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\GetAccessPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\GetAccessPolicyRequest');
+    }
+
+    /**
+     * 查询可用区列表
+     *
+     * 该API用于查询可用区列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function getAvaliableZone($request)
+    {
+        return $this->getAvaliableZoneWithHttpInfo($request);
+    }
+
+    public function getAvaliableZoneWithHttpInfo($request)
+    {
+        $resourcePath = '/api/v2/availabilityZones';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['locale'] !== null) {
+            $queryParams['locale'] = $localVarParams['locale'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\GetAvaliableZoneResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\GetAvaliableZoneRequest');
+    }
+
+    /**
+     * 查询集群可售卖规格
+     *
+     * 该API用于查询集群可售卖规格
+     * &gt; 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function getClusterFlavorSpecs($request)
+    {
+        return $this->getClusterFlavorSpecsWithHttpInfo($request);
+    }
+
+    public function getClusterFlavorSpecsWithHttpInfo($request)
+    {
+        $resourcePath = '/api/v2/flavor/specifications';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterType'] !== null) {
+            $queryParams['clusterType'] = $localVarParams['clusterType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\GetClusterFlavorSpecsResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\GetClusterFlavorSpecsRequest');
+    }
+
+    /**
+     * 获取集群配额
+     *
+     * 该API用于获取集群配额
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function getClusterQuota($request)
+    {
+        return $this->getClusterQuotaWithHttpInfo($request);
+    }
+
+    public function getClusterQuotaWithHttpInfo($request)
+    {
+        $resourcePath = '/cce/v1/projects/{project_id}/quota';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\GetClusterQuotaResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\GetClusterQuotaRequest');
+    }
+
+    /**
+     * 获取集群支持的可配置参数列表
+     *
+     * 该API用于根据集群版本类型等查询集群支持的详细配置项，用于集群创建时指定。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function getClusterSupportConfiguration($request)
+    {
+        return $this->getClusterSupportConfigurationWithHttpInfo($request);
+    }
+
+    public function getClusterSupportConfigurationWithHttpInfo($request)
+    {
+        $resourcePath = '/api/v3/clusters/configuration/detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterType'] !== null) {
+            $queryParams['clusterType'] = $localVarParams['clusterType'];
+        }
+        if ($localVarParams['clusterVersion'] !== null) {
+            $queryParams['clusterVersion'] = $localVarParams['clusterVersion'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $queryParams['clusterID'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['networkMode'] !== null) {
+            $queryParams['networkMode'] = $localVarParams['networkMode'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\GetClusterSupportConfigurationResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\GetClusterSupportConfigurationRequest');
+    }
+
+    /**
+     * 查询自定义标签
+     *
+     * 该API用于查询自定义标签
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function getCustomizeTags($request)
+    {
+        return $this->getCustomizeTagsWithHttpInfo($request);
+    }
+
+    public function getCustomizeTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/cce/v1/{project_id}/{resource_type}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\GetCustomizeTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\GetCustomizeTagsRequest');
+    }
+
+    /**
+     * 获取节点标签
+     *
+     * 该API用于获取集群所有节点的标签
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function getLabels($request)
+    {
+        return $this->getLabelsWithHttpInfo($request);
+    }
+
+    public function getLabelsWithHttpInfo($request)
+    {
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/labels';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\GetLabelsResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\GetLabelsRequest');
+    }
+
+    /**
+     * 查询资源标签
+     *
+     * 该API用于查询资源标签
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function getResourceTags($request)
+    {
+        return $this->getResourceTagsWithHttpInfo($request);
+    }
+
+    public function getResourceTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/cce/v1/{project_id}/{resource_type}/{resource_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\GetResourceTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\GetResourceTagsRequest');
+    }
+
+    /**
      * 集群休眠
      *
      * 集群休眠用于将运行中的集群置于休眠状态，休眠后，将不再收取控制节点资源费用。
@@ -1899,6 +2532,68 @@ class CceClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cce\V3\Model\HibernateClusterResponse',
             $requestType='\HuaweiCloud\SDK\Cce\V3\Model\HibernateClusterRequest');
+    }
+
+    /**
+     * 获取访问策略列表
+     *
+     * 该API用于获取访问策略列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAccessPolicy($request)
+    {
+        return $this->listAccessPolicyWithHttpInfo($request);
+    }
+
+    public function listAccessPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/api/v3/access-policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $queryParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListAccessPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListAccessPolicyRequest');
     }
 
     /**
@@ -3420,11 +4115,11 @@ class CceClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -3892,77 +4587,6 @@ class CceClient extends Client
     }
 
     /**
-     * 根据集群版本类型等查询集群支持的详细配置项，用于集群创建时指定
-     *
-     * 该API用于根据集群版本类型等查询集群支持的详细配置项，用于集群创建时指定。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showClusterSupportConfiguration($request)
-    {
-        return $this->showClusterSupportConfigurationWithHttpInfo($request);
-    }
-
-    public function showClusterSupportConfigurationWithHttpInfo($request)
-    {
-        $resourcePath = '/api/v3/clusters/configuration/detail';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['clusterId'] !== null) {
-            $queryParams['cluster_id'] = $localVarParams['clusterId'];
-        }
-        if ($localVarParams['clusterType'] !== null) {
-            $queryParams['cluster_type'] = $localVarParams['clusterType'];
-        }
-        if ($localVarParams['clusterVersion'] !== null) {
-            $queryParams['cluster_version'] = $localVarParams['clusterVersion'];
-        }
-        if ($localVarParams['networkMode'] !== null) {
-            $queryParams['network_mode'] = $localVarParams['networkMode'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowClusterSupportConfigurationResponse',
-            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowClusterSupportConfigurationRequest');
-    }
-
-    /**
      * 获取集群升级相关信息
      *
      * 获取集群升级相关信息
@@ -4022,6 +4646,66 @@ class CceClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowClusterUpgradeInfoResponse',
             $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowClusterUpgradeInfoRequest');
+    }
+
+    /**
+     * 查询特性开关状态
+     *
+     * 该API用于查询特性开关状态
+     * &gt; 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFeatureGates($request)
+    {
+        return $this->showFeatureGatesWithHttpInfo($request);
+    }
+
+    public function showFeatureGatesWithHttpInfo($request)
+    {
+        $resourcePath = '/api/v3.1/feature-gates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowFeatureGatesResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowFeatureGatesRequest');
     }
 
     /**
@@ -4572,6 +5256,9 @@ class CceClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['showResources'] !== null) {
+            $queryParams['show_resources'] = $localVarParams['showResources'];
+        }
         if ($localVarParams['name'] !== null) {
             $pathParams['name'] = $localVarParams['name'];
         }
@@ -4996,6 +5683,71 @@ class CceClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cce\V3\Model\UnlockNodepoolNodeScaleDownResponse',
             $requestType='\HuaweiCloud\SDK\Cce\V3\Model\UnlockNodepoolNodeScaleDownRequest');
+    }
+
+    /**
+     * 更新访问策略
+     *
+     * 该API用于更新单个访问策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateAccessPolicy($request)
+    {
+        return $this->updateAccessPolicyWithHttpInfo($request);
+    }
+
+    public function updateAccessPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/api/v3/access-policies/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\UpdateAccessPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\UpdateAccessPolicyRequest');
     }
 
     /**
@@ -5639,6 +6391,9 @@ class CceClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['showResources'] !== null) {
+            $queryParams['show_resources'] = $localVarParams['showResources'];
         }
         if ($localVarParams['name'] !== null) {
             $pathParams['name'] = $localVarParams['name'];

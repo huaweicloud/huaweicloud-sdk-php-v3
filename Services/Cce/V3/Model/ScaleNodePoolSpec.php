@@ -21,7 +21,7 @@ class ScaleNodePoolSpec implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * desiredNodeCount  节点池期望节点数
-    * scaleGroups  扩缩容的节点池，只能填一个伸缩组，如果要伸缩默认伸缩组填default
+    * scaleGroups  **参数解释**： 要扩缩容的节点池中的伸缩组名称[，通过[获取指定的节点池](cce_02_0355.xml)接口获取伸缩组名称](tag:hws) **约束限制**： 如果要伸缩默认伸缩组填\"default\" **取值范围**： 不涉及 **默认取值**： 不涉及
     * options  options
     *
     * @var string[]
@@ -35,7 +35,7 @@ class ScaleNodePoolSpec implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * desiredNodeCount  节点池期望节点数
-    * scaleGroups  扩缩容的节点池，只能填一个伸缩组，如果要伸缩默认伸缩组填default
+    * scaleGroups  **参数解释**： 要扩缩容的节点池中的伸缩组名称[，通过[获取指定的节点池](cce_02_0355.xml)接口获取伸缩组名称](tag:hws) **约束限制**： 如果要伸缩默认伸缩组填\"default\" **取值范围**： 不涉及 **默认取值**： 不涉及
     * options  options
     *
     * @var string[]
@@ -70,7 +70,7 @@ class ScaleNodePoolSpec implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * desiredNodeCount  节点池期望节点数
-    * scaleGroups  扩缩容的节点池，只能填一个伸缩组，如果要伸缩默认伸缩组填default
+    * scaleGroups  **参数解释**： 要扩缩容的节点池中的伸缩组名称[，通过[获取指定的节点池](cce_02_0355.xml)接口获取伸缩组名称](tag:hws) **约束限制**： 如果要伸缩默认伸缩组填\"default\" **取值范围**： 不涉及 **默认取值**： 不涉及
     * options  options
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ScaleNodePoolSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * desiredNodeCount  节点池期望节点数
-    * scaleGroups  扩缩容的节点池，只能填一个伸缩组，如果要伸缩默认伸缩组填default
+    * scaleGroups  **参数解释**： 要扩缩容的节点池中的伸缩组名称[，通过[获取指定的节点池](cce_02_0355.xml)接口获取伸缩组名称](tag:hws) **约束限制**： 如果要伸缩默认伸缩组填\"default\" **取值范围**： 不涉及 **默认取值**： 不涉及
     * options  options
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ScaleNodePoolSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * desiredNodeCount  节点池期望节点数
-    * scaleGroups  扩缩容的节点池，只能填一个伸缩组，如果要伸缩默认伸缩组填default
+    * scaleGroups  **参数解释**： 要扩缩容的节点池中的伸缩组名称[，通过[获取指定的节点池](cce_02_0355.xml)接口获取伸缩组名称](tag:hws) **约束限制**： 如果要伸缩默认伸缩组填\"default\" **取值范围**： 不涉及 **默认取值**： 不涉及
     * options  options
     *
     * @var string[]
@@ -226,7 +226,7 @@ class ScaleNodePoolSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets scaleGroups
-    *  扩缩容的节点池，只能填一个伸缩组，如果要伸缩默认伸缩组填default
+    *  **参数解释**： 要扩缩容的节点池中的伸缩组名称[，通过[获取指定的节点池](cce_02_0355.xml)接口获取伸缩组名称](tag:hws) **约束限制**： 如果要伸缩默认伸缩组填\"default\" **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string[]
     */
@@ -238,7 +238,7 @@ class ScaleNodePoolSpec implements ModelInterface, ArrayAccess
     /**
     * Sets scaleGroups
     *
-    * @param string[] $scaleGroups 扩缩容的节点池，只能填一个伸缩组，如果要伸缩默认伸缩组填default
+    * @param string[] $scaleGroups **参数解释**： 要扩缩容的节点池中的伸缩组名称[，通过[获取指定的节点池](cce_02_0355.xml)接口获取伸缩组名称](tag:hws) **约束限制**： 如果要伸缩默认伸缩组填\"default\" **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

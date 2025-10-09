@@ -23,13 +23,15 @@ class DatastoreItem implements ModelInterface, ArrayAccess
     * type  数据库引擎。
     * version  数据库版本号。
     * patchAvailable  是否有补丁版本的数据库支持升级，返回true时可以通过升级补丁接口进行数据库升级，否则不允许升级补丁。
+    * wholeVersion  数据库的完整版本号。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
             'version' => 'string',
-            'patchAvailable' => 'bool'
+            'patchAvailable' => 'bool',
+            'wholeVersion' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class DatastoreItem implements ModelInterface, ArrayAccess
     * type  数据库引擎。
     * version  数据库版本号。
     * patchAvailable  是否有补丁版本的数据库支持升级，返回true时可以通过升级补丁接口进行数据库升级，否则不允许升级补丁。
+    * wholeVersion  数据库的完整版本号。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
         'version' => null,
-        'patchAvailable' => null
+        'patchAvailable' => null,
+        'wholeVersion' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class DatastoreItem implements ModelInterface, ArrayAccess
     * type  数据库引擎。
     * version  数据库版本号。
     * patchAvailable  是否有补丁版本的数据库支持升级，返回true时可以通过升级补丁接口进行数据库升级，否则不允许升级补丁。
+    * wholeVersion  数据库的完整版本号。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
             'version' => 'version',
-            'patchAvailable' => 'patch_available'
+            'patchAvailable' => 'patch_available',
+            'wholeVersion' => 'whole_version'
     ];
 
     /**
@@ -86,13 +92,15 @@ class DatastoreItem implements ModelInterface, ArrayAccess
     * type  数据库引擎。
     * version  数据库版本号。
     * patchAvailable  是否有补丁版本的数据库支持升级，返回true时可以通过升级补丁接口进行数据库升级，否则不允许升级补丁。
+    * wholeVersion  数据库的完整版本号。
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
             'version' => 'setVersion',
-            'patchAvailable' => 'setPatchAvailable'
+            'patchAvailable' => 'setPatchAvailable',
+            'wholeVersion' => 'setWholeVersion'
     ];
 
     /**
@@ -100,13 +108,15 @@ class DatastoreItem implements ModelInterface, ArrayAccess
     * type  数据库引擎。
     * version  数据库版本号。
     * patchAvailable  是否有补丁版本的数据库支持升级，返回true时可以通过升级补丁接口进行数据库升级，否则不允许升级补丁。
+    * wholeVersion  数据库的完整版本号。
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
             'version' => 'getVersion',
-            'patchAvailable' => 'getPatchAvailable'
+            'patchAvailable' => 'getPatchAvailable',
+            'wholeVersion' => 'getWholeVersion'
     ];
 
     /**
@@ -170,6 +180,7 @@ class DatastoreItem implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['patchAvailable'] = isset($data['patchAvailable']) ? $data['patchAvailable'] : null;
+        $this->container['wholeVersion'] = isset($data['wholeVersion']) ? $data['wholeVersion'] : null;
     }
 
     /**
@@ -188,6 +199,9 @@ class DatastoreItem implements ModelInterface, ArrayAccess
         }
         if ($this->container['patchAvailable'] === null) {
             $invalidProperties[] = "'patchAvailable' can't be null";
+        }
+        if ($this->container['wholeVersion'] === null) {
+            $invalidProperties[] = "'wholeVersion' can't be null";
         }
         return $invalidProperties;
     }
@@ -272,6 +286,30 @@ class DatastoreItem implements ModelInterface, ArrayAccess
     public function setPatchAvailable($patchAvailable)
     {
         $this->container['patchAvailable'] = $patchAvailable;
+        return $this;
+    }
+
+    /**
+    * Gets wholeVersion
+    *  数据库的完整版本号。
+    *
+    * @return string
+    */
+    public function getWholeVersion()
+    {
+        return $this->container['wholeVersion'];
+    }
+
+    /**
+    * Sets wholeVersion
+    *
+    * @param string $wholeVersion 数据库的完整版本号。
+    *
+    * @return $this
+    */
+    public function setWholeVersion($wholeVersion)
+    {
+        $this->container['wholeVersion'] = $wholeVersion;
         return $this;
     }
 

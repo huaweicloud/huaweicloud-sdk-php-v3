@@ -20,7 +20,7 @@ class AddNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serverId  服务器ID，获取方式请参见ECS/BMS相关资料。
+    * serverId  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * spec  spec
     *
     * @var string[]
@@ -32,7 +32,7 @@ class AddNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serverId  服务器ID，获取方式请参见ECS/BMS相关资料。
+    * serverId  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * spec  spec
     *
     * @var string[]
@@ -65,7 +65,7 @@ class AddNode implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serverId  服务器ID，获取方式请参见ECS/BMS相关资料。
+    * serverId  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * spec  spec
     *
     * @var string[]
@@ -77,7 +77,7 @@ class AddNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serverId  服务器ID，获取方式请参见ECS/BMS相关资料。
+    * serverId  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * spec  spec
     *
     * @var string[]
@@ -89,7 +89,7 @@ class AddNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serverId  服务器ID，获取方式请参见ECS/BMS相关资料。
+    * serverId  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * spec  spec
     *
     * @var string[]
@@ -191,7 +191,7 @@ class AddNode implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverId
-    *  服务器ID，获取方式请参见ECS/BMS相关资料。
+    *  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class AddNode implements ModelInterface, ArrayAccess
     /**
     * Sets serverId
     *
-    * @param string $serverId 服务器ID，获取方式请参见ECS/BMS相关资料。
+    * @param string $serverId **参数解释**： 服务器ID，从ECS/BMS控制台获取。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

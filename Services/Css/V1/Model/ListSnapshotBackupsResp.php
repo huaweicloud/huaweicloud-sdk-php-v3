@@ -28,16 +28,12 @@ class ListSnapshotBackupsResp implements ModelInterface, ArrayAccess
     * clusterName  集群名字。
     * name  快照名称。
     * status  快照状态。
-    * updated  快照更新时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
     * backupType  快照创建类型： - 0：表示自动创建。 - 1：表示手动创建。
     * backupMethod  创建快照方式。
-    * backupExpectedStartTime  快照开始执行时间。
-    * backupKeepDay  快照保留时间。
-    * backupPeriod  快照每天执行的时间点。
+    * backupFrequency  集群快照频率。
     * indices  要备份的索引。
     * totalShards  要备份的索引的总shard数。
     * failedShards  备份失败的shard数。
-    * version  快照的版本。
     * restoreStatus  快照恢复的状态。
     * startTime  快照开始执行的时间戳。
     * endTime  快照执行结束的时间戳。
@@ -54,16 +50,12 @@ class ListSnapshotBackupsResp implements ModelInterface, ArrayAccess
             'clusterName' => 'string',
             'name' => 'string',
             'status' => 'string',
-            'updated' => 'string',
             'backupType' => 'string',
             'backupMethod' => 'string',
-            'backupExpectedStartTime' => 'string',
-            'backupKeepDay' => 'int',
-            'backupPeriod' => 'string',
+            'backupFrequency' => 'string',
             'indices' => 'string',
             'totalShards' => 'int',
             'failedShards' => 'int',
-            'version' => 'string',
             'restoreStatus' => 'string',
             'startTime' => 'int',
             'endTime' => 'int',
@@ -80,16 +72,12 @@ class ListSnapshotBackupsResp implements ModelInterface, ArrayAccess
     * clusterName  集群名字。
     * name  快照名称。
     * status  快照状态。
-    * updated  快照更新时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
     * backupType  快照创建类型： - 0：表示自动创建。 - 1：表示手动创建。
     * backupMethod  创建快照方式。
-    * backupExpectedStartTime  快照开始执行时间。
-    * backupKeepDay  快照保留时间。
-    * backupPeriod  快照每天执行的时间点。
+    * backupFrequency  集群快照频率。
     * indices  要备份的索引。
     * totalShards  要备份的索引的总shard数。
     * failedShards  备份失败的shard数。
-    * version  快照的版本。
     * restoreStatus  快照恢复的状态。
     * startTime  快照开始执行的时间戳。
     * endTime  快照执行结束的时间戳。
@@ -106,16 +94,12 @@ class ListSnapshotBackupsResp implements ModelInterface, ArrayAccess
         'clusterName' => null,
         'name' => null,
         'status' => null,
-        'updated' => null,
         'backupType' => null,
         'backupMethod' => null,
-        'backupExpectedStartTime' => null,
-        'backupKeepDay' => null,
-        'backupPeriod' => null,
+        'backupFrequency' => null,
         'indices' => null,
         'totalShards' => null,
         'failedShards' => null,
-        'version' => null,
         'restoreStatus' => null,
         'startTime' => 'int64',
         'endTime' => 'int64',
@@ -153,16 +137,12 @@ class ListSnapshotBackupsResp implements ModelInterface, ArrayAccess
     * clusterName  集群名字。
     * name  快照名称。
     * status  快照状态。
-    * updated  快照更新时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
     * backupType  快照创建类型： - 0：表示自动创建。 - 1：表示手动创建。
     * backupMethod  创建快照方式。
-    * backupExpectedStartTime  快照开始执行时间。
-    * backupKeepDay  快照保留时间。
-    * backupPeriod  快照每天执行的时间点。
+    * backupFrequency  集群快照频率。
     * indices  要备份的索引。
     * totalShards  要备份的索引的总shard数。
     * failedShards  备份失败的shard数。
-    * version  快照的版本。
     * restoreStatus  快照恢复的状态。
     * startTime  快照开始执行的时间戳。
     * endTime  快照执行结束的时间戳。
@@ -179,16 +159,12 @@ class ListSnapshotBackupsResp implements ModelInterface, ArrayAccess
             'clusterName' => 'clusterName',
             'name' => 'name',
             'status' => 'status',
-            'updated' => 'updated',
             'backupType' => 'backupType',
             'backupMethod' => 'backupMethod',
-            'backupExpectedStartTime' => 'backupExpectedStartTime',
-            'backupKeepDay' => 'backupKeepDay',
-            'backupPeriod' => 'backupPeriod',
+            'backupFrequency' => 'backupFrequency',
             'indices' => 'indices',
             'totalShards' => 'totalShards',
             'failedShards' => 'failedShards',
-            'version' => 'version',
             'restoreStatus' => 'restoreStatus',
             'startTime' => 'startTime',
             'endTime' => 'endTime',
@@ -205,16 +181,12 @@ class ListSnapshotBackupsResp implements ModelInterface, ArrayAccess
     * clusterName  集群名字。
     * name  快照名称。
     * status  快照状态。
-    * updated  快照更新时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
     * backupType  快照创建类型： - 0：表示自动创建。 - 1：表示手动创建。
     * backupMethod  创建快照方式。
-    * backupExpectedStartTime  快照开始执行时间。
-    * backupKeepDay  快照保留时间。
-    * backupPeriod  快照每天执行的时间点。
+    * backupFrequency  集群快照频率。
     * indices  要备份的索引。
     * totalShards  要备份的索引的总shard数。
     * failedShards  备份失败的shard数。
-    * version  快照的版本。
     * restoreStatus  快照恢复的状态。
     * startTime  快照开始执行的时间戳。
     * endTime  快照执行结束的时间戳。
@@ -231,16 +203,12 @@ class ListSnapshotBackupsResp implements ModelInterface, ArrayAccess
             'clusterName' => 'setClusterName',
             'name' => 'setName',
             'status' => 'setStatus',
-            'updated' => 'setUpdated',
             'backupType' => 'setBackupType',
             'backupMethod' => 'setBackupMethod',
-            'backupExpectedStartTime' => 'setBackupExpectedStartTime',
-            'backupKeepDay' => 'setBackupKeepDay',
-            'backupPeriod' => 'setBackupPeriod',
+            'backupFrequency' => 'setBackupFrequency',
             'indices' => 'setIndices',
             'totalShards' => 'setTotalShards',
             'failedShards' => 'setFailedShards',
-            'version' => 'setVersion',
             'restoreStatus' => 'setRestoreStatus',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
@@ -257,16 +225,12 @@ class ListSnapshotBackupsResp implements ModelInterface, ArrayAccess
     * clusterName  集群名字。
     * name  快照名称。
     * status  快照状态。
-    * updated  快照更新时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
     * backupType  快照创建类型： - 0：表示自动创建。 - 1：表示手动创建。
     * backupMethod  创建快照方式。
-    * backupExpectedStartTime  快照开始执行时间。
-    * backupKeepDay  快照保留时间。
-    * backupPeriod  快照每天执行的时间点。
+    * backupFrequency  集群快照频率。
     * indices  要备份的索引。
     * totalShards  要备份的索引的总shard数。
     * failedShards  备份失败的shard数。
-    * version  快照的版本。
     * restoreStatus  快照恢复的状态。
     * startTime  快照开始执行的时间戳。
     * endTime  快照执行结束的时间戳。
@@ -283,16 +247,12 @@ class ListSnapshotBackupsResp implements ModelInterface, ArrayAccess
             'clusterName' => 'getClusterName',
             'name' => 'getName',
             'status' => 'getStatus',
-            'updated' => 'getUpdated',
             'backupType' => 'getBackupType',
             'backupMethod' => 'getBackupMethod',
-            'backupExpectedStartTime' => 'getBackupExpectedStartTime',
-            'backupKeepDay' => 'getBackupKeepDay',
-            'backupPeriod' => 'getBackupPeriod',
+            'backupFrequency' => 'getBackupFrequency',
             'indices' => 'getIndices',
             'totalShards' => 'getTotalShards',
             'failedShards' => 'getFailedShards',
-            'version' => 'getVersion',
             'restoreStatus' => 'getRestoreStatus',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
@@ -365,16 +325,12 @@ class ListSnapshotBackupsResp implements ModelInterface, ArrayAccess
         $this->container['clusterName'] = isset($data['clusterName']) ? $data['clusterName'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
         $this->container['backupType'] = isset($data['backupType']) ? $data['backupType'] : null;
         $this->container['backupMethod'] = isset($data['backupMethod']) ? $data['backupMethod'] : null;
-        $this->container['backupExpectedStartTime'] = isset($data['backupExpectedStartTime']) ? $data['backupExpectedStartTime'] : null;
-        $this->container['backupKeepDay'] = isset($data['backupKeepDay']) ? $data['backupKeepDay'] : null;
-        $this->container['backupPeriod'] = isset($data['backupPeriod']) ? $data['backupPeriod'] : null;
+        $this->container['backupFrequency'] = isset($data['backupFrequency']) ? $data['backupFrequency'] : null;
         $this->container['indices'] = isset($data['indices']) ? $data['indices'] : null;
         $this->container['totalShards'] = isset($data['totalShards']) ? $data['totalShards'] : null;
         $this->container['failedShards'] = isset($data['failedShards']) ? $data['failedShards'] : null;
-        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['restoreStatus'] = isset($data['restoreStatus']) ? $data['restoreStatus'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
@@ -596,30 +552,6 @@ class ListSnapshotBackupsResp implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets updated
-    *  快照更新时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
-    *
-    * @return string|null
-    */
-    public function getUpdated()
-    {
-        return $this->container['updated'];
-    }
-
-    /**
-    * Sets updated
-    *
-    * @param string|null $updated 快照更新时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
-    *
-    * @return $this
-    */
-    public function setUpdated($updated)
-    {
-        $this->container['updated'] = $updated;
-        return $this;
-    }
-
-    /**
     * Gets backupType
     *  快照创建类型： - 0：表示自动创建。 - 1：表示手动创建。
     *
@@ -668,74 +600,26 @@ class ListSnapshotBackupsResp implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets backupExpectedStartTime
-    *  快照开始执行时间。
+    * Gets backupFrequency
+    *  集群快照频率。
     *
     * @return string|null
     */
-    public function getBackupExpectedStartTime()
+    public function getBackupFrequency()
     {
-        return $this->container['backupExpectedStartTime'];
+        return $this->container['backupFrequency'];
     }
 
     /**
-    * Sets backupExpectedStartTime
+    * Sets backupFrequency
     *
-    * @param string|null $backupExpectedStartTime 快照开始执行时间。
+    * @param string|null $backupFrequency 集群快照频率。
     *
     * @return $this
     */
-    public function setBackupExpectedStartTime($backupExpectedStartTime)
+    public function setBackupFrequency($backupFrequency)
     {
-        $this->container['backupExpectedStartTime'] = $backupExpectedStartTime;
-        return $this;
-    }
-
-    /**
-    * Gets backupKeepDay
-    *  快照保留时间。
-    *
-    * @return int|null
-    */
-    public function getBackupKeepDay()
-    {
-        return $this->container['backupKeepDay'];
-    }
-
-    /**
-    * Sets backupKeepDay
-    *
-    * @param int|null $backupKeepDay 快照保留时间。
-    *
-    * @return $this
-    */
-    public function setBackupKeepDay($backupKeepDay)
-    {
-        $this->container['backupKeepDay'] = $backupKeepDay;
-        return $this;
-    }
-
-    /**
-    * Gets backupPeriod
-    *  快照每天执行的时间点。
-    *
-    * @return string|null
-    */
-    public function getBackupPeriod()
-    {
-        return $this->container['backupPeriod'];
-    }
-
-    /**
-    * Sets backupPeriod
-    *
-    * @param string|null $backupPeriod 快照每天执行的时间点。
-    *
-    * @return $this
-    */
-    public function setBackupPeriod($backupPeriod)
-    {
-        $this->container['backupPeriod'] = $backupPeriod;
+        $this->container['backupFrequency'] = $backupFrequency;
         return $this;
     }
 
@@ -808,30 +692,6 @@ class ListSnapshotBackupsResp implements ModelInterface, ArrayAccess
     public function setFailedShards($failedShards)
     {
         $this->container['failedShards'] = $failedShards;
-        return $this;
-    }
-
-    /**
-    * Gets version
-    *  快照的版本。
-    *
-    * @return string|null
-    */
-    public function getVersion()
-    {
-        return $this->container['version'];
-    }
-
-    /**
-    * Sets version
-    *
-    * @param string|null $version 快照的版本。
-    *
-    * @return $this
-    */
-    public function setVersion($version)
-    {
-        $this->container['version'] = $version;
         return $this;
     }
 

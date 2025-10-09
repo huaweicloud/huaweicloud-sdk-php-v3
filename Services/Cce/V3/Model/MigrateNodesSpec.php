@@ -24,6 +24,7 @@ class MigrateNodesSpec implements ModelInterface, ArrayAccess
     * extendParam  extendParam
     * login  login
     * runtime  runtime
+    * serverConfig  serverConfig
     * nodes  待操作节点列表
     *
     * @var string[]
@@ -33,6 +34,7 @@ class MigrateNodesSpec implements ModelInterface, ArrayAccess
             'extendParam' => '\HuaweiCloud\SDK\Cce\V3\Model\MigrateNodeExtendParam',
             'login' => '\HuaweiCloud\SDK\Cce\V3\Model\Login',
             'runtime' => '\HuaweiCloud\SDK\Cce\V3\Model\Runtime',
+            'serverConfig' => '\HuaweiCloud\SDK\Cce\V3\Model\MigrateServerConfig',
             'nodes' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeItem[]'
     ];
 
@@ -42,6 +44,7 @@ class MigrateNodesSpec implements ModelInterface, ArrayAccess
     * extendParam  extendParam
     * login  login
     * runtime  runtime
+    * serverConfig  serverConfig
     * nodes  待操作节点列表
     *
     * @var string[]
@@ -51,6 +54,7 @@ class MigrateNodesSpec implements ModelInterface, ArrayAccess
         'extendParam' => null,
         'login' => null,
         'runtime' => null,
+        'serverConfig' => null,
         'nodes' => null
     ];
 
@@ -81,6 +85,7 @@ class MigrateNodesSpec implements ModelInterface, ArrayAccess
     * extendParam  extendParam
     * login  login
     * runtime  runtime
+    * serverConfig  serverConfig
     * nodes  待操作节点列表
     *
     * @var string[]
@@ -90,6 +95,7 @@ class MigrateNodesSpec implements ModelInterface, ArrayAccess
             'extendParam' => 'extendParam',
             'login' => 'login',
             'runtime' => 'runtime',
+            'serverConfig' => 'serverConfig',
             'nodes' => 'nodes'
     ];
 
@@ -99,6 +105,7 @@ class MigrateNodesSpec implements ModelInterface, ArrayAccess
     * extendParam  extendParam
     * login  login
     * runtime  runtime
+    * serverConfig  serverConfig
     * nodes  待操作节点列表
     *
     * @var string[]
@@ -108,6 +115,7 @@ class MigrateNodesSpec implements ModelInterface, ArrayAccess
             'extendParam' => 'setExtendParam',
             'login' => 'setLogin',
             'runtime' => 'setRuntime',
+            'serverConfig' => 'setServerConfig',
             'nodes' => 'setNodes'
     ];
 
@@ -117,6 +125,7 @@ class MigrateNodesSpec implements ModelInterface, ArrayAccess
     * extendParam  extendParam
     * login  login
     * runtime  runtime
+    * serverConfig  serverConfig
     * nodes  待操作节点列表
     *
     * @var string[]
@@ -126,6 +135,7 @@ class MigrateNodesSpec implements ModelInterface, ArrayAccess
             'extendParam' => 'getExtendParam',
             'login' => 'getLogin',
             'runtime' => 'getRuntime',
+            'serverConfig' => 'getServerConfig',
             'nodes' => 'getNodes'
     ];
 
@@ -191,6 +201,7 @@ class MigrateNodesSpec implements ModelInterface, ArrayAccess
         $this->container['extendParam'] = isset($data['extendParam']) ? $data['extendParam'] : null;
         $this->container['login'] = isset($data['login']) ? $data['login'] : null;
         $this->container['runtime'] = isset($data['runtime']) ? $data['runtime'] : null;
+        $this->container['serverConfig'] = isset($data['serverConfig']) ? $data['serverConfig'] : null;
         $this->container['nodes'] = isset($data['nodes']) ? $data['nodes'] : null;
     }
 
@@ -204,9 +215,6 @@ class MigrateNodesSpec implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['os'] === null) {
             $invalidProperties[] = "'os' can't be null";
-        }
-        if ($this->container['login'] === null) {
-            $invalidProperties[] = "'login' can't be null";
         }
         if ($this->container['nodes'] === null) {
             $invalidProperties[] = "'nodes' can't be null";
@@ -277,7 +285,7 @@ class MigrateNodesSpec implements ModelInterface, ArrayAccess
     * Gets login
     *  login
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\Login
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\Login|null
     */
     public function getLogin()
     {
@@ -287,7 +295,7 @@ class MigrateNodesSpec implements ModelInterface, ArrayAccess
     /**
     * Sets login
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\Login $login login
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\Login|null $login login
     *
     * @return $this
     */
@@ -318,6 +326,30 @@ class MigrateNodesSpec implements ModelInterface, ArrayAccess
     public function setRuntime($runtime)
     {
         $this->container['runtime'] = $runtime;
+        return $this;
+    }
+
+    /**
+    * Gets serverConfig
+    *  serverConfig
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\MigrateServerConfig|null
+    */
+    public function getServerConfig()
+    {
+        return $this->container['serverConfig'];
+    }
+
+    /**
+    * Sets serverConfig
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\MigrateServerConfig|null $serverConfig serverConfig
+    *
+    * @return $this
+    */
+    public function setServerConfig($serverConfig)
+    {
+        $this->container['serverConfig'] = $serverConfig;
         return $this;
     }
 

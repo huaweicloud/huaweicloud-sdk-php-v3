@@ -169,9 +169,6 @@ class RemoveNodesSpec implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['login'] === null) {
-            $invalidProperties[] = "'login' can't be null";
-        }
         if ($this->container['nodes'] === null) {
             $invalidProperties[] = "'nodes' can't be null";
         }
@@ -193,7 +190,7 @@ class RemoveNodesSpec implements ModelInterface, ArrayAccess
     * Gets login
     *  login
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\Login
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\Login|null
     */
     public function getLogin()
     {
@@ -203,7 +200,7 @@ class RemoveNodesSpec implements ModelInterface, ArrayAccess
     /**
     * Sets login
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\Login $login login
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\Login|null $login login
     *
     * @return $this
     */

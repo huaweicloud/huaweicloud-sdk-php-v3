@@ -44,6 +44,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * vpcCidr  VPC的可用子网的范围
     * subnetName  VPC的子网名称
     * subnetCidr  子网的网段
+    * vpcepServiceId  实例对应的VPC终端节点服务ID
     *
     * @var string[]
     */
@@ -70,7 +71,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'vpcName' => 'string',
             'vpcCidr' => 'string',
             'subnetName' => 'string',
-            'subnetCidr' => 'string'
+            'subnetCidr' => 'string',
+            'vpcepServiceId' => 'string'
     ];
 
     /**
@@ -98,6 +100,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * vpcCidr  VPC的可用子网的范围
     * subnetName  VPC的子网名称
     * subnetCidr  子网的网段
+    * vpcepServiceId  实例对应的VPC终端节点服务ID
     *
     * @var string[]
     */
@@ -124,7 +127,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'vpcName' => null,
         'vpcCidr' => null,
         'subnetName' => null,
-        'subnetCidr' => null
+        'subnetCidr' => null,
+        'vpcepServiceId' => null
     ];
 
     /**
@@ -173,6 +177,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * vpcCidr  VPC的可用子网的范围
     * subnetName  VPC的子网名称
     * subnetCidr  子网的网段
+    * vpcepServiceId  实例对应的VPC终端节点服务ID
     *
     * @var string[]
     */
@@ -199,7 +204,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'vpcName' => 'vpc_name',
             'vpcCidr' => 'vpc_cidr',
             'subnetName' => 'subnet_name',
-            'subnetCidr' => 'subnet_cidr'
+            'subnetCidr' => 'subnet_cidr',
+            'vpcepServiceId' => 'vpcep_service_id'
     ];
 
     /**
@@ -227,6 +233,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * vpcCidr  VPC的可用子网的范围
     * subnetName  VPC的子网名称
     * subnetCidr  子网的网段
+    * vpcepServiceId  实例对应的VPC终端节点服务ID
     *
     * @var string[]
     */
@@ -253,7 +260,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'vpcName' => 'setVpcName',
             'vpcCidr' => 'setVpcCidr',
             'subnetName' => 'setSubnetName',
-            'subnetCidr' => 'setSubnetCidr'
+            'subnetCidr' => 'setSubnetCidr',
+            'vpcepServiceId' => 'setVpcepServiceId'
     ];
 
     /**
@@ -281,6 +289,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * vpcCidr  VPC的可用子网的范围
     * subnetName  VPC的子网名称
     * subnetCidr  子网的网段
+    * vpcepServiceId  实例对应的VPC终端节点服务ID
     *
     * @var string[]
     */
@@ -307,7 +316,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'vpcName' => 'getVpcName',
             'vpcCidr' => 'getVpcCidr',
             'subnetName' => 'getSubnetName',
-            'subnetCidr' => 'getSubnetCidr'
+            'subnetCidr' => 'getSubnetCidr',
+            'vpcepServiceId' => 'getVpcepServiceId'
     ];
 
     /**
@@ -423,6 +433,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['vpcCidr'] = isset($data['vpcCidr']) ? $data['vpcCidr'] : null;
         $this->container['subnetName'] = isset($data['subnetName']) ? $data['subnetName'] : null;
         $this->container['subnetCidr'] = isset($data['subnetCidr']) ? $data['subnetCidr'] : null;
+        $this->container['vpcepServiceId'] = isset($data['vpcepServiceId']) ? $data['vpcepServiceId'] : null;
     }
 
     /**
@@ -1012,6 +1023,30 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     public function setSubnetCidr($subnetCidr)
     {
         $this->container['subnetCidr'] = $subnetCidr;
+        return $this;
+    }
+
+    /**
+    * Gets vpcepServiceId
+    *  实例对应的VPC终端节点服务ID
+    *
+    * @return string|null
+    */
+    public function getVpcepServiceId()
+    {
+        return $this->container['vpcepServiceId'];
+    }
+
+    /**
+    * Sets vpcepServiceId
+    *
+    * @param string|null $vpcepServiceId 实例对应的VPC终端节点服务ID
+    *
+    * @return $this
+    */
+    public function setVpcepServiceId($vpcepServiceId)
+    {
+        $this->container['vpcepServiceId'] = $vpcepServiceId;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  Key值。 - 不能为空，最多支持128个字符 - 可用UTF-8格式表示的汉字、字母、数字和空格 - 支持部分特殊字符：_.:/=+-@ - 不能以\"\\_sys\\_\"开头
+    * key  **参数解释：** Key值。 **约束限制：** 不涉及 **取值范围：** - 不能为空且首尾不能包含空格，最多支持128个字符 - 可用UTF-8格式表示的任意语种字母、数字和空格 - 支持部分特殊字符：_.:=+-@ - 不能以\"\\_sys\\_\"开头  **默认取值：** 不涉及
     * value  Value值。 - 可以为空但不能缺省，最多支持255个字符 - 可用UTF-8格式表示的汉字、字母、数字和空格 - 支持部分特殊字符：_.:/=+-@
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  Key值。 - 不能为空，最多支持128个字符 - 可用UTF-8格式表示的汉字、字母、数字和空格 - 支持部分特殊字符：_.:/=+-@ - 不能以\"\\_sys\\_\"开头
+    * key  **参数解释：** Key值。 **约束限制：** 不涉及 **取值范围：** - 不能为空且首尾不能包含空格，最多支持128个字符 - 可用UTF-8格式表示的任意语种字母、数字和空格 - 支持部分特殊字符：_.:=+-@ - 不能以\"\\_sys\\_\"开头  **默认取值：** 不涉及
     * value  Value值。 - 可以为空但不能缺省，最多支持255个字符 - 可用UTF-8格式表示的汉字、字母、数字和空格 - 支持部分特殊字符：_.:/=+-@
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  Key值。 - 不能为空，最多支持128个字符 - 可用UTF-8格式表示的汉字、字母、数字和空格 - 支持部分特殊字符：_.:/=+-@ - 不能以\"\\_sys\\_\"开头
+    * key  **参数解释：** Key值。 **约束限制：** 不涉及 **取值范围：** - 不能为空且首尾不能包含空格，最多支持128个字符 - 可用UTF-8格式表示的任意语种字母、数字和空格 - 支持部分特殊字符：_.:=+-@ - 不能以\"\\_sys\\_\"开头  **默认取值：** 不涉及
     * value  Value值。 - 可以为空但不能缺省，最多支持255个字符 - 可用UTF-8格式表示的汉字、字母、数字和空格 - 支持部分特殊字符：_.:/=+-@
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  Key值。 - 不能为空，最多支持128个字符 - 可用UTF-8格式表示的汉字、字母、数字和空格 - 支持部分特殊字符：_.:/=+-@ - 不能以\"\\_sys\\_\"开头
+    * key  **参数解释：** Key值。 **约束限制：** 不涉及 **取值范围：** - 不能为空且首尾不能包含空格，最多支持128个字符 - 可用UTF-8格式表示的任意语种字母、数字和空格 - 支持部分特殊字符：_.:=+-@ - 不能以\"\\_sys\\_\"开头  **默认取值：** 不涉及
     * value  Value值。 - 可以为空但不能缺省，最多支持255个字符 - 可用UTF-8格式表示的汉字、字母、数字和空格 - 支持部分特殊字符：_.:/=+-@
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  Key值。 - 不能为空，最多支持128个字符 - 可用UTF-8格式表示的汉字、字母、数字和空格 - 支持部分特殊字符：_.:/=+-@ - 不能以\"\\_sys\\_\"开头
+    * key  **参数解释：** Key值。 **约束限制：** 不涉及 **取值范围：** - 不能为空且首尾不能包含空格，最多支持128个字符 - 可用UTF-8格式表示的任意语种字母、数字和空格 - 支持部分特殊字符：_.:=+-@ - 不能以\"\\_sys\\_\"开头  **默认取值：** 不涉及
     * value  Value值。 - 可以为空但不能缺省，最多支持255个字符 - 可用UTF-8格式表示的汉字、字母、数字和空格 - 支持部分特殊字符：_.:/=+-@
     *
     * @var string[]
@@ -194,7 +194,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  Key值。 - 不能为空，最多支持128个字符 - 可用UTF-8格式表示的汉字、字母、数字和空格 - 支持部分特殊字符：_.:/=+-@ - 不能以\"\\_sys\\_\"开头
+    *  **参数解释：** Key值。 **约束限制：** 不涉及 **取值范围：** - 不能为空且首尾不能包含空格，最多支持128个字符 - 可用UTF-8格式表示的任意语种字母、数字和空格 - 支持部分特殊字符：_.:=+-@ - 不能以\"\\_sys\\_\"开头  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -206,7 +206,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key Key值。 - 不能为空，最多支持128个字符 - 可用UTF-8格式表示的汉字、字母、数字和空格 - 支持部分特殊字符：_.:/=+-@ - 不能以\"\\_sys\\_\"开头
+    * @param string|null $key **参数解释：** Key值。 **约束限制：** 不涉及 **取值范围：** - 不能为空且首尾不能包含空格，最多支持128个字符 - 可用UTF-8格式表示的任意语种字母、数字和空格 - 支持部分特殊字符：_.:=+-@ - 不能以\"\\_sys\\_\"开头  **默认取值：** 不涉及
     *
     * @return $this
     */

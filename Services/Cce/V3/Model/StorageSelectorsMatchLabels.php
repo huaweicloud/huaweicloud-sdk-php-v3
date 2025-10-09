@@ -21,7 +21,7 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * size  匹配的磁盘大小，不填则无磁盘大小限制。例如：100.
-    * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
+    * volumeType  **参数解释**： 云硬盘类型，目前支持SSD、GPSSD、SAS、ESSD、SATA等，不填则无云硬盘类型限制。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * iops  匹配的磁盘iops大小，不填则无磁盘iops大小限制。当需要选择GPSSD2或ESSD2类型磁盘时，配置iops来准确选择磁盘。例如：3000.
     * throughput  匹配的磁盘吞吐量大小，不填则无磁盘吞吐量大小限制。当需要选择GPSSD2类型磁盘时，配置throughput来准确选择磁盘。例如：125.
     * metadataEncrypted  磁盘加密标识符，0代表不加密，1代表加密。
@@ -43,7 +43,7 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * size  匹配的磁盘大小，不填则无磁盘大小限制。例如：100.
-    * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
+    * volumeType  **参数解释**： 云硬盘类型，目前支持SSD、GPSSD、SAS、ESSD、SATA等，不填则无云硬盘类型限制。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * iops  匹配的磁盘iops大小，不填则无磁盘iops大小限制。当需要选择GPSSD2或ESSD2类型磁盘时，配置iops来准确选择磁盘。例如：3000.
     * throughput  匹配的磁盘吞吐量大小，不填则无磁盘吞吐量大小限制。当需要选择GPSSD2类型磁盘时，配置throughput来准确选择磁盘。例如：125.
     * metadataEncrypted  磁盘加密标识符，0代表不加密，1代表加密。
@@ -86,7 +86,7 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * size  匹配的磁盘大小，不填则无磁盘大小限制。例如：100.
-    * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
+    * volumeType  **参数解释**： 云硬盘类型，目前支持SSD、GPSSD、SAS、ESSD、SATA等，不填则无云硬盘类型限制。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * iops  匹配的磁盘iops大小，不填则无磁盘iops大小限制。当需要选择GPSSD2或ESSD2类型磁盘时，配置iops来准确选择磁盘。例如：3000.
     * throughput  匹配的磁盘吞吐量大小，不填则无磁盘吞吐量大小限制。当需要选择GPSSD2类型磁盘时，配置throughput来准确选择磁盘。例如：125.
     * metadataEncrypted  磁盘加密标识符，0代表不加密，1代表加密。
@@ -108,7 +108,7 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * size  匹配的磁盘大小，不填则无磁盘大小限制。例如：100.
-    * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
+    * volumeType  **参数解释**： 云硬盘类型，目前支持SSD、GPSSD、SAS、ESSD、SATA等，不填则无云硬盘类型限制。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * iops  匹配的磁盘iops大小，不填则无磁盘iops大小限制。当需要选择GPSSD2或ESSD2类型磁盘时，配置iops来准确选择磁盘。例如：3000.
     * throughput  匹配的磁盘吞吐量大小，不填则无磁盘吞吐量大小限制。当需要选择GPSSD2类型磁盘时，配置throughput来准确选择磁盘。例如：125.
     * metadataEncrypted  磁盘加密标识符，0代表不加密，1代表加密。
@@ -130,7 +130,7 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * size  匹配的磁盘大小，不填则无磁盘大小限制。例如：100.
-    * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
+    * volumeType  **参数解释**： 云硬盘类型，目前支持SSD、GPSSD、SAS、ESSD、SATA等，不填则无云硬盘类型限制。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * iops  匹配的磁盘iops大小，不填则无磁盘iops大小限制。当需要选择GPSSD2或ESSD2类型磁盘时，配置iops来准确选择磁盘。例如：3000.
     * throughput  匹配的磁盘吞吐量大小，不填则无磁盘吞吐量大小限制。当需要选择GPSSD2类型磁盘时，配置throughput来准确选择磁盘。例如：125.
     * metadataEncrypted  磁盘加密标识符，0代表不加密，1代表加密。
@@ -264,7 +264,7 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeType
-    *  云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
+    *  **参数解释**： 云硬盘类型，目前支持SSD、GPSSD、SAS、ESSD、SATA等，不填则无云硬盘类型限制。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     /**
     * Sets volumeType
     *
-    * @param string|null $volumeType 云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
+    * @param string|null $volumeType **参数解释**： 云硬盘类型，目前支持SSD、GPSSD、SAS、ESSD、SATA等，不填则无云硬盘类型限制。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

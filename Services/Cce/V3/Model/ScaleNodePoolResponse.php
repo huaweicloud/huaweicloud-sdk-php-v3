@@ -21,20 +21,22 @@ class ScaleNodePoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * orderId  **参数解释**： 订单ID，仅扩容包周期节点时返回 **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'orderId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * orderId  **参数解释**： 订单ID，仅扩容包周期节点时返回 **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'orderId' => null
     ];
 
     /**
@@ -60,29 +62,32 @@ class ScaleNodePoolResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * orderId  **参数解释**： 订单ID，仅扩容包周期节点时返回 **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'orderId' => 'orderID'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * orderId  **参数解释**： 订单ID，仅扩容包周期节点时返回 **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
+            'orderId' => 'setOrderId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * orderId  **参数解释**： 订单ID，仅扩容包周期节点时返回 **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
+            'orderId' => 'getOrderId'
     ];
 
     /**
@@ -143,6 +148,7 @@ class ScaleNodePoolResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
     }
 
     /**
@@ -165,6 +171,30 @@ class ScaleNodePoolResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets orderId
+    *  **参数解释**： 订单ID，仅扩容包周期节点时返回 **取值范围**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getOrderId()
+    {
+        return $this->container['orderId'];
+    }
+
+    /**
+    * Sets orderId
+    *
+    * @param string|null $orderId **参数解释**： 订单ID，仅扩容包周期节点时返回 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setOrderId($orderId)
+    {
+        $this->container['orderId'] = $orderId;
+        return $this;
     }
 
     /**

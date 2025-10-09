@@ -20,7 +20,7 @@ class ReinstallServerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * userTags  云服务器标签，键必须唯一，CCE支持的最大用户自定义标签数量依region而定，自定义标签数上限为5个。
+    * userTags  **参数解释**： 云服务器标签（资源标签）。 **约束限制**： 键必须唯一，CCE支持的最大用户自定义标签数量依region而定，自定义标签数上限为8个。
     * rootVolume  rootVolume
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ReinstallServerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * userTags  云服务器标签，键必须唯一，CCE支持的最大用户自定义标签数量依region而定，自定义标签数上限为5个。
+    * userTags  **参数解释**： 云服务器标签（资源标签）。 **约束限制**： 键必须唯一，CCE支持的最大用户自定义标签数量依region而定，自定义标签数上限为8个。
     * rootVolume  rootVolume
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ReinstallServerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * userTags  云服务器标签，键必须唯一，CCE支持的最大用户自定义标签数量依region而定，自定义标签数上限为5个。
+    * userTags  **参数解释**： 云服务器标签（资源标签）。 **约束限制**： 键必须唯一，CCE支持的最大用户自定义标签数量依region而定，自定义标签数上限为8个。
     * rootVolume  rootVolume
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ReinstallServerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * userTags  云服务器标签，键必须唯一，CCE支持的最大用户自定义标签数量依region而定，自定义标签数上限为5个。
+    * userTags  **参数解释**： 云服务器标签（资源标签）。 **约束限制**： 键必须唯一，CCE支持的最大用户自定义标签数量依region而定，自定义标签数上限为8个。
     * rootVolume  rootVolume
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ReinstallServerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * userTags  云服务器标签，键必须唯一，CCE支持的最大用户自定义标签数量依region而定，自定义标签数上限为5个。
+    * userTags  **参数解释**： 云服务器标签（资源标签）。 **约束限制**： 键必须唯一，CCE支持的最大用户自定义标签数量依region而定，自定义标签数上限为8个。
     * rootVolume  rootVolume
     *
     * @var string[]
@@ -185,7 +185,7 @@ class ReinstallServerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets userTags
-    *  云服务器标签，键必须唯一，CCE支持的最大用户自定义标签数量依region而定，自定义标签数上限为5个。
+    *  **参数解释**： 云服务器标签（资源标签）。 **约束限制**： 键必须唯一，CCE支持的最大用户自定义标签数量依region而定，自定义标签数上限为8个。
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\UserTag[]|null
     */
@@ -197,7 +197,7 @@ class ReinstallServerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets userTags
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\UserTag[]|null $userTags 云服务器标签，键必须唯一，CCE支持的最大用户自定义标签数量依region而定，自定义标签数上限为5个。
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\UserTag[]|null $userTags **参数解释**： 云服务器标签（资源标签）。 **约束限制**： 键必须唯一，CCE支持的最大用户自定义标签数量依region而定，自定义标签数上限为8个。
     *
     * @return $this
     */

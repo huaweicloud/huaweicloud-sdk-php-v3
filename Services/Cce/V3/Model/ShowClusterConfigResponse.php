@@ -21,8 +21,8 @@ class ShowClusterConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ttlInDays  存储时长
-    * logConfigs  日志配置项
+    * ttlInDays  **参数解释**： 日志存储时长，单位（天） **取值范围**： 0-30
+    * logConfigs  **参数解释**： 日志配置项详细信息 **约束限制**: 不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ShowClusterConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ttlInDays  存储时长
-    * logConfigs  日志配置项
+    * ttlInDays  **参数解释**： 日志存储时长，单位（天） **取值范围**： 0-30
+    * logConfigs  **参数解释**： 日志配置项详细信息 **约束限制**: 不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ShowClusterConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ttlInDays  存储时长
-    * logConfigs  日志配置项
+    * ttlInDays  **参数解释**： 日志存储时长，单位（天） **取值范围**： 0-30
+    * logConfigs  **参数解释**： 日志配置项详细信息 **约束限制**: 不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ShowClusterConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ttlInDays  存储时长
-    * logConfigs  日志配置项
+    * ttlInDays  **参数解释**： 日志存储时长，单位（天） **取值范围**： 0-30
+    * logConfigs  **参数解释**： 日志配置项详细信息 **约束限制**: 不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ShowClusterConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ttlInDays  存储时长
-    * logConfigs  日志配置项
+    * ttlInDays  **参数解释**： 日志存储时长，单位（天） **取值范围**： 0-30
+    * logConfigs  **参数解释**： 日志配置项详细信息 **约束限制**: 不涉及
     *
     * @var string[]
     */
@@ -170,6 +170,12 @@ class ShowClusterConfigResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['ttlInDays']) && ($this->container['ttlInDays'] > 30)) {
+                $invalidProperties[] = "invalid value for 'ttlInDays', must be smaller than or equal to 30.";
+            }
+            if (!is_null($this->container['ttlInDays']) && ($this->container['ttlInDays'] < 0)) {
+                $invalidProperties[] = "invalid value for 'ttlInDays', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -186,7 +192,7 @@ class ShowClusterConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ttlInDays
-    *  存储时长
+    *  **参数解释**： 日志存储时长，单位（天） **取值范围**： 0-30
     *
     * @return int|null
     */
@@ -198,7 +204,7 @@ class ShowClusterConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ttlInDays
     *
-    * @param int|null $ttlInDays 存储时长
+    * @param int|null $ttlInDays **参数解释**： 日志存储时长，单位（天） **取值范围**： 0-30
     *
     * @return $this
     */
@@ -210,7 +216,7 @@ class ShowClusterConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets logConfigs
-    *  日志配置项
+    *  **参数解释**： 日志配置项详细信息 **约束限制**: 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\ClusterLogConfigLogConfigs[]|null
     */
@@ -222,7 +228,7 @@ class ShowClusterConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets logConfigs
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\ClusterLogConfigLogConfigs[]|null $logConfigs 日志配置项
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\ClusterLogConfigLogConfigs[]|null $logConfigs **参数解释**： 日志配置项详细信息 **约束限制**: 不涉及
     *
     * @return $this
     */

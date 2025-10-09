@@ -28,18 +28,24 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     * podSecurityGroups  1.21版本集群节点池支持绑定安全组，最多五个。
     * extensionScaleGroups  节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义
     * customSecurityGroups  节点池自定义安全组相关配置。支持节点池新扩容节点绑定指定的安全组。  - 未指定安全组ID，新建节点将添加Node节点默认安全组。  - 指定有效安全组ID，新建节点将使用指定安全组。  - 指定安全组，应避免对CCE运行依赖的端口规则进行修改。[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/cce_faq/cce_faq_00265.html)。](tag:hws)[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。](tag:hws_hk)
+    * taintPolicyOnExistingNodes  **参数解释**： 存量节点污点同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的污点。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的污点。  **默认取值**： refresh
+    * labelPolicyOnExistingNodes  **参数解释**： 存量节点标签同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的标签。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的标签。  **默认取值**： refresh
+    * userTagsPolicyOnExistingNodes  **参数解释**： 存量节点资源标签同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的资源标签。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的资源标签。  **默认取值**： ignore
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
-            'nodeTemplate' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeSpec',
+            'nodeTemplate' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeTemplate',
             'initialNodeCount' => 'int',
             'autoscaling' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolNodeAutoscaling',
             'nodeManagement' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeManagement',
             'podSecurityGroups' => '\HuaweiCloud\SDK\Cce\V3\Model\SecurityID[]',
             'extensionScaleGroups' => '\HuaweiCloud\SDK\Cce\V3\Model\ExtensionScaleGroup[]',
-            'customSecurityGroups' => 'string[]'
+            'customSecurityGroups' => 'string[]',
+            'taintPolicyOnExistingNodes' => 'string',
+            'labelPolicyOnExistingNodes' => 'string',
+            'userTagsPolicyOnExistingNodes' => 'string'
     ];
 
     /**
@@ -52,6 +58,9 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     * podSecurityGroups  1.21版本集群节点池支持绑定安全组，最多五个。
     * extensionScaleGroups  节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义
     * customSecurityGroups  节点池自定义安全组相关配置。支持节点池新扩容节点绑定指定的安全组。  - 未指定安全组ID，新建节点将添加Node节点默认安全组。  - 指定有效安全组ID，新建节点将使用指定安全组。  - 指定安全组，应避免对CCE运行依赖的端口规则进行修改。[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/cce_faq/cce_faq_00265.html)。](tag:hws)[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。](tag:hws_hk)
+    * taintPolicyOnExistingNodes  **参数解释**： 存量节点污点同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的污点。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的污点。  **默认取值**： refresh
+    * labelPolicyOnExistingNodes  **参数解释**： 存量节点标签同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的标签。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的标签。  **默认取值**： refresh
+    * userTagsPolicyOnExistingNodes  **参数解释**： 存量节点资源标签同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的资源标签。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的资源标签。  **默认取值**： ignore
     *
     * @var string[]
     */
@@ -63,7 +72,10 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
         'nodeManagement' => null,
         'podSecurityGroups' => null,
         'extensionScaleGroups' => null,
-        'customSecurityGroups' => null
+        'customSecurityGroups' => null,
+        'taintPolicyOnExistingNodes' => null,
+        'labelPolicyOnExistingNodes' => null,
+        'userTagsPolicyOnExistingNodes' => null
     ];
 
     /**
@@ -97,6 +109,9 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     * podSecurityGroups  1.21版本集群节点池支持绑定安全组，最多五个。
     * extensionScaleGroups  节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义
     * customSecurityGroups  节点池自定义安全组相关配置。支持节点池新扩容节点绑定指定的安全组。  - 未指定安全组ID，新建节点将添加Node节点默认安全组。  - 指定有效安全组ID，新建节点将使用指定安全组。  - 指定安全组，应避免对CCE运行依赖的端口规则进行修改。[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/cce_faq/cce_faq_00265.html)。](tag:hws)[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。](tag:hws_hk)
+    * taintPolicyOnExistingNodes  **参数解释**： 存量节点污点同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的污点。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的污点。  **默认取值**： refresh
+    * labelPolicyOnExistingNodes  **参数解释**： 存量节点标签同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的标签。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的标签。  **默认取值**： refresh
+    * userTagsPolicyOnExistingNodes  **参数解释**： 存量节点资源标签同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的资源标签。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的资源标签。  **默认取值**： ignore
     *
     * @var string[]
     */
@@ -108,7 +123,10 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
             'nodeManagement' => 'nodeManagement',
             'podSecurityGroups' => 'podSecurityGroups',
             'extensionScaleGroups' => 'extensionScaleGroups',
-            'customSecurityGroups' => 'customSecurityGroups'
+            'customSecurityGroups' => 'customSecurityGroups',
+            'taintPolicyOnExistingNodes' => 'taintPolicyOnExistingNodes',
+            'labelPolicyOnExistingNodes' => 'labelPolicyOnExistingNodes',
+            'userTagsPolicyOnExistingNodes' => 'userTagsPolicyOnExistingNodes'
     ];
 
     /**
@@ -121,6 +139,9 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     * podSecurityGroups  1.21版本集群节点池支持绑定安全组，最多五个。
     * extensionScaleGroups  节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义
     * customSecurityGroups  节点池自定义安全组相关配置。支持节点池新扩容节点绑定指定的安全组。  - 未指定安全组ID，新建节点将添加Node节点默认安全组。  - 指定有效安全组ID，新建节点将使用指定安全组。  - 指定安全组，应避免对CCE运行依赖的端口规则进行修改。[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/cce_faq/cce_faq_00265.html)。](tag:hws)[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。](tag:hws_hk)
+    * taintPolicyOnExistingNodes  **参数解释**： 存量节点污点同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的污点。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的污点。  **默认取值**： refresh
+    * labelPolicyOnExistingNodes  **参数解释**： 存量节点标签同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的标签。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的标签。  **默认取值**： refresh
+    * userTagsPolicyOnExistingNodes  **参数解释**： 存量节点资源标签同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的资源标签。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的资源标签。  **默认取值**： ignore
     *
     * @var string[]
     */
@@ -132,7 +153,10 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
             'nodeManagement' => 'setNodeManagement',
             'podSecurityGroups' => 'setPodSecurityGroups',
             'extensionScaleGroups' => 'setExtensionScaleGroups',
-            'customSecurityGroups' => 'setCustomSecurityGroups'
+            'customSecurityGroups' => 'setCustomSecurityGroups',
+            'taintPolicyOnExistingNodes' => 'setTaintPolicyOnExistingNodes',
+            'labelPolicyOnExistingNodes' => 'setLabelPolicyOnExistingNodes',
+            'userTagsPolicyOnExistingNodes' => 'setUserTagsPolicyOnExistingNodes'
     ];
 
     /**
@@ -145,6 +169,9 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     * podSecurityGroups  1.21版本集群节点池支持绑定安全组，最多五个。
     * extensionScaleGroups  节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义
     * customSecurityGroups  节点池自定义安全组相关配置。支持节点池新扩容节点绑定指定的安全组。  - 未指定安全组ID，新建节点将添加Node节点默认安全组。  - 指定有效安全组ID，新建节点将使用指定安全组。  - 指定安全组，应避免对CCE运行依赖的端口规则进行修改。[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/cce_faq/cce_faq_00265.html)。](tag:hws)[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。](tag:hws_hk)
+    * taintPolicyOnExistingNodes  **参数解释**： 存量节点污点同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的污点。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的污点。  **默认取值**： refresh
+    * labelPolicyOnExistingNodes  **参数解释**： 存量节点标签同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的标签。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的标签。  **默认取值**： refresh
+    * userTagsPolicyOnExistingNodes  **参数解释**： 存量节点资源标签同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的资源标签。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的资源标签。  **默认取值**： ignore
     *
     * @var string[]
     */
@@ -156,7 +183,10 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
             'nodeManagement' => 'getNodeManagement',
             'podSecurityGroups' => 'getPodSecurityGroups',
             'extensionScaleGroups' => 'getExtensionScaleGroups',
-            'customSecurityGroups' => 'getCustomSecurityGroups'
+            'customSecurityGroups' => 'getCustomSecurityGroups',
+            'taintPolicyOnExistingNodes' => 'getTaintPolicyOnExistingNodes',
+            'labelPolicyOnExistingNodes' => 'getLabelPolicyOnExistingNodes',
+            'userTagsPolicyOnExistingNodes' => 'getUserTagsPolicyOnExistingNodes'
     ];
 
     /**
@@ -242,6 +272,9 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
         $this->container['podSecurityGroups'] = isset($data['podSecurityGroups']) ? $data['podSecurityGroups'] : null;
         $this->container['extensionScaleGroups'] = isset($data['extensionScaleGroups']) ? $data['extensionScaleGroups'] : null;
         $this->container['customSecurityGroups'] = isset($data['customSecurityGroups']) ? $data['customSecurityGroups'] : null;
+        $this->container['taintPolicyOnExistingNodes'] = isset($data['taintPolicyOnExistingNodes']) ? $data['taintPolicyOnExistingNodes'] : null;
+        $this->container['labelPolicyOnExistingNodes'] = isset($data['labelPolicyOnExistingNodes']) ? $data['labelPolicyOnExistingNodes'] : null;
+        $this->container['userTagsPolicyOnExistingNodes'] = isset($data['userTagsPolicyOnExistingNodes']) ? $data['userTagsPolicyOnExistingNodes'] : null;
     }
 
     /**
@@ -305,7 +338,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     * Gets nodeTemplate
     *  nodeTemplate
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodeSpec
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodeTemplate
     */
     public function getNodeTemplate()
     {
@@ -315,7 +348,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     /**
     * Sets nodeTemplate
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodeSpec $nodeTemplate nodeTemplate
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodeTemplate $nodeTemplate nodeTemplate
     *
     * @return $this
     */
@@ -466,6 +499,78 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     public function setCustomSecurityGroups($customSecurityGroups)
     {
         $this->container['customSecurityGroups'] = $customSecurityGroups;
+        return $this;
+    }
+
+    /**
+    * Gets taintPolicyOnExistingNodes
+    *  **参数解释**： 存量节点污点同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的污点。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的污点。  **默认取值**： refresh
+    *
+    * @return string|null
+    */
+    public function getTaintPolicyOnExistingNodes()
+    {
+        return $this->container['taintPolicyOnExistingNodes'];
+    }
+
+    /**
+    * Sets taintPolicyOnExistingNodes
+    *
+    * @param string|null $taintPolicyOnExistingNodes **参数解释**： 存量节点污点同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的污点。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的污点。  **默认取值**： refresh
+    *
+    * @return $this
+    */
+    public function setTaintPolicyOnExistingNodes($taintPolicyOnExistingNodes)
+    {
+        $this->container['taintPolicyOnExistingNodes'] = $taintPolicyOnExistingNodes;
+        return $this;
+    }
+
+    /**
+    * Gets labelPolicyOnExistingNodes
+    *  **参数解释**： 存量节点标签同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的标签。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的标签。  **默认取值**： refresh
+    *
+    * @return string|null
+    */
+    public function getLabelPolicyOnExistingNodes()
+    {
+        return $this->container['labelPolicyOnExistingNodes'];
+    }
+
+    /**
+    * Sets labelPolicyOnExistingNodes
+    *
+    * @param string|null $labelPolicyOnExistingNodes **参数解释**： 存量节点标签同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的标签。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的标签。  **默认取值**： refresh
+    *
+    * @return $this
+    */
+    public function setLabelPolicyOnExistingNodes($labelPolicyOnExistingNodes)
+    {
+        $this->container['labelPolicyOnExistingNodes'] = $labelPolicyOnExistingNodes;
+        return $this;
+    }
+
+    /**
+    * Gets userTagsPolicyOnExistingNodes
+    *  **参数解释**： 存量节点资源标签同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的资源标签。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的资源标签。  **默认取值**： ignore
+    *
+    * @return string|null
+    */
+    public function getUserTagsPolicyOnExistingNodes()
+    {
+        return $this->container['userTagsPolicyOnExistingNodes'];
+    }
+
+    /**
+    * Sets userTagsPolicyOnExistingNodes
+    *
+    * @param string|null $userTagsPolicyOnExistingNodes **参数解释**： 存量节点资源标签同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的资源标签。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的资源标签。  **默认取值**： ignore
+    *
+    * @return $this
+    */
+    public function setUserTagsPolicyOnExistingNodes($userTagsPolicyOnExistingNodes)
+    {
+        $this->container['userTagsPolicyOnExistingNodes'] = $userTagsPolicyOnExistingNodes;
         return $this;
     }
 

@@ -169,12 +169,6 @@ class NodePoolUpdate implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['metadata'] === null) {
-            $invalidProperties[] = "'metadata' can't be null";
-        }
-        if ($this->container['spec'] === null) {
-            $invalidProperties[] = "'spec' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -193,7 +187,7 @@ class NodePoolUpdate implements ModelInterface, ArrayAccess
     * Gets metadata
     *  metadata
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodePoolMetadataUpdate
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodePoolMetadataUpdate|null
     */
     public function getMetadata()
     {
@@ -203,7 +197,7 @@ class NodePoolUpdate implements ModelInterface, ArrayAccess
     /**
     * Sets metadata
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodePoolMetadataUpdate $metadata metadata
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodePoolMetadataUpdate|null $metadata metadata
     *
     * @return $this
     */
@@ -217,7 +211,7 @@ class NodePoolUpdate implements ModelInterface, ArrayAccess
     * Gets spec
     *  spec
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodePoolSpecUpdate
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodePoolSpecUpdate|null
     */
     public function getSpec()
     {
@@ -227,7 +221,7 @@ class NodePoolUpdate implements ModelInterface, ArrayAccess
     /**
     * Sets spec
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodePoolSpecUpdate $spec spec
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodePoolSpecUpdate|null $spec spec
     *
     * @return $this
     */

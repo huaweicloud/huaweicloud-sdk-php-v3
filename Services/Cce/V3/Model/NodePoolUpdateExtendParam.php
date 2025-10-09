@@ -25,6 +25,7 @@ class NodePoolUpdateExtendParam implements ModelInterface, ArrayAccess
     * alphaCcePostInstall  **参数解释**： 安装后执行脚本。 输入的值需要经过Base64编码，方法如下：   ```   echo -n \"待编码内容\" | base64   ```  **约束限制**： 安装前/后执行脚本统一计算字符，转码后的字符总数不能超过10240。 **取值范围：** 不涉及 **默认取值：** 不涉及
     * spotPrice  **参数解释**： 用户愿意为竞价实例每小时支付的最高价格。 **约束限制**： - 仅billingMode=0且marketType=spot时，该参数设置后生效。 - 当billingMode=0且marketType=spot时，如果不传递spotPrice，默认使用按需购买的价格作为竞价。 - spotPrice需要小于等于按需价格并大于等于云服务器市场价格。  **取值范围：** 不涉及 **默认取值：** 不涉及
     * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。[详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。](tag:hws) 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： - 空值：表示不开启等保加固 - cybersecurity：表示开启等保加固  **默认取值**： 不涉及
+    * alphaCceNodeImageId  **参数解释**： 节点自定义镜像ID，从IMS控制台获取，需要使用自定义镜像时用此参数。 **约束限制**： 不涉及 [> - 若指定了extendParam中的securityReinforcementType参数为cybersecurity，节点将开启安全等保加固功能，则节点的操作系统类型必须使用HCE2.0。](tag:hws)  **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class NodePoolUpdateExtendParam implements ModelInterface, ArrayAccess
             'alphaCcePreInstall' => 'string',
             'alphaCcePostInstall' => 'string',
             'spotPrice' => 'string',
-            'securityReinforcementType' => 'string'
+            'securityReinforcementType' => 'string',
+            'alphaCceNodeImageId' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class NodePoolUpdateExtendParam implements ModelInterface, ArrayAccess
     * alphaCcePostInstall  **参数解释**： 安装后执行脚本。 输入的值需要经过Base64编码，方法如下：   ```   echo -n \"待编码内容\" | base64   ```  **约束限制**： 安装前/后执行脚本统一计算字符，转码后的字符总数不能超过10240。 **取值范围：** 不涉及 **默认取值：** 不涉及
     * spotPrice  **参数解释**： 用户愿意为竞价实例每小时支付的最高价格。 **约束限制**： - 仅billingMode=0且marketType=spot时，该参数设置后生效。 - 当billingMode=0且marketType=spot时，如果不传递spotPrice，默认使用按需购买的价格作为竞价。 - spotPrice需要小于等于按需价格并大于等于云服务器市场价格。  **取值范围：** 不涉及 **默认取值：** 不涉及
     * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。[详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。](tag:hws) 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： - 空值：表示不开启等保加固 - cybersecurity：表示开启等保加固  **默认取值**： 不涉及
+    * alphaCceNodeImageId  **参数解释**： 节点自定义镜像ID，从IMS控制台获取，需要使用自定义镜像时用此参数。 **约束限制**： 不涉及 [> - 若指定了extendParam中的securityReinforcementType参数为cybersecurity，节点将开启安全等保加固功能，则节点的操作系统类型必须使用HCE2.0。](tag:hws)  **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class NodePoolUpdateExtendParam implements ModelInterface, ArrayAccess
         'alphaCcePreInstall' => null,
         'alphaCcePostInstall' => null,
         'spotPrice' => null,
-        'securityReinforcementType' => null
+        'securityReinforcementType' => null,
+        'alphaCceNodeImageId' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class NodePoolUpdateExtendParam implements ModelInterface, ArrayAccess
     * alphaCcePostInstall  **参数解释**： 安装后执行脚本。 输入的值需要经过Base64编码，方法如下：   ```   echo -n \"待编码内容\" | base64   ```  **约束限制**： 安装前/后执行脚本统一计算字符，转码后的字符总数不能超过10240。 **取值范围：** 不涉及 **默认取值：** 不涉及
     * spotPrice  **参数解释**： 用户愿意为竞价实例每小时支付的最高价格。 **约束限制**： - 仅billingMode=0且marketType=spot时，该参数设置后生效。 - 当billingMode=0且marketType=spot时，如果不传递spotPrice，默认使用按需购买的价格作为竞价。 - spotPrice需要小于等于按需价格并大于等于云服务器市场价格。  **取值范围：** 不涉及 **默认取值：** 不涉及
     * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。[详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。](tag:hws) 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： - 空值：表示不开启等保加固 - cybersecurity：表示开启等保加固  **默认取值**： 不涉及
+    * alphaCceNodeImageId  **参数解释**： 节点自定义镜像ID，从IMS控制台获取，需要使用自定义镜像时用此参数。 **约束限制**： 不涉及 [> - 若指定了extendParam中的securityReinforcementType参数为cybersecurity，节点将开启安全等保加固功能，则节点的操作系统类型必须使用HCE2.0。](tag:hws)  **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class NodePoolUpdateExtendParam implements ModelInterface, ArrayAccess
             'alphaCcePreInstall' => 'alpha.cce/preInstall',
             'alphaCcePostInstall' => 'alpha.cce/postInstall',
             'spotPrice' => 'spotPrice',
-            'securityReinforcementType' => 'securityReinforcementType'
+            'securityReinforcementType' => 'securityReinforcementType',
+            'alphaCceNodeImageId' => 'alpha.cce/NodeImageID'
     ];
 
     /**
@@ -100,6 +106,7 @@ class NodePoolUpdateExtendParam implements ModelInterface, ArrayAccess
     * alphaCcePostInstall  **参数解释**： 安装后执行脚本。 输入的值需要经过Base64编码，方法如下：   ```   echo -n \"待编码内容\" | base64   ```  **约束限制**： 安装前/后执行脚本统一计算字符，转码后的字符总数不能超过10240。 **取值范围：** 不涉及 **默认取值：** 不涉及
     * spotPrice  **参数解释**： 用户愿意为竞价实例每小时支付的最高价格。 **约束限制**： - 仅billingMode=0且marketType=spot时，该参数设置后生效。 - 当billingMode=0且marketType=spot时，如果不传递spotPrice，默认使用按需购买的价格作为竞价。 - spotPrice需要小于等于按需价格并大于等于云服务器市场价格。  **取值范围：** 不涉及 **默认取值：** 不涉及
     * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。[详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。](tag:hws) 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： - 空值：表示不开启等保加固 - cybersecurity：表示开启等保加固  **默认取值**： 不涉及
+    * alphaCceNodeImageId  **参数解释**： 节点自定义镜像ID，从IMS控制台获取，需要使用自定义镜像时用此参数。 **约束限制**： 不涉及 [> - 若指定了extendParam中的securityReinforcementType参数为cybersecurity，节点将开启安全等保加固功能，则节点的操作系统类型必须使用HCE2.0。](tag:hws)  **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class NodePoolUpdateExtendParam implements ModelInterface, ArrayAccess
             'alphaCcePreInstall' => 'setAlphaCcePreInstall',
             'alphaCcePostInstall' => 'setAlphaCcePostInstall',
             'spotPrice' => 'setSpotPrice',
-            'securityReinforcementType' => 'setSecurityReinforcementType'
+            'securityReinforcementType' => 'setSecurityReinforcementType',
+            'alphaCceNodeImageId' => 'setAlphaCceNodeImageId'
     ];
 
     /**
@@ -118,6 +126,7 @@ class NodePoolUpdateExtendParam implements ModelInterface, ArrayAccess
     * alphaCcePostInstall  **参数解释**： 安装后执行脚本。 输入的值需要经过Base64编码，方法如下：   ```   echo -n \"待编码内容\" | base64   ```  **约束限制**： 安装前/后执行脚本统一计算字符，转码后的字符总数不能超过10240。 **取值范围：** 不涉及 **默认取值：** 不涉及
     * spotPrice  **参数解释**： 用户愿意为竞价实例每小时支付的最高价格。 **约束限制**： - 仅billingMode=0且marketType=spot时，该参数设置后生效。 - 当billingMode=0且marketType=spot时，如果不传递spotPrice，默认使用按需购买的价格作为竞价。 - spotPrice需要小于等于按需价格并大于等于云服务器市场价格。  **取值范围：** 不涉及 **默认取值：** 不涉及
     * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。[详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。](tag:hws) 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： - 空值：表示不开启等保加固 - cybersecurity：表示开启等保加固  **默认取值**： 不涉及
+    * alphaCceNodeImageId  **参数解释**： 节点自定义镜像ID，从IMS控制台获取，需要使用自定义镜像时用此参数。 **约束限制**： 不涉及 [> - 若指定了extendParam中的securityReinforcementType参数为cybersecurity，节点将开启安全等保加固功能，则节点的操作系统类型必须使用HCE2.0。](tag:hws)  **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class NodePoolUpdateExtendParam implements ModelInterface, ArrayAccess
             'alphaCcePreInstall' => 'getAlphaCcePreInstall',
             'alphaCcePostInstall' => 'getAlphaCcePostInstall',
             'spotPrice' => 'getSpotPrice',
-            'securityReinforcementType' => 'getSecurityReinforcementType'
+            'securityReinforcementType' => 'getSecurityReinforcementType',
+            'alphaCceNodeImageId' => 'getAlphaCceNodeImageId'
     ];
 
     /**
@@ -207,6 +217,7 @@ class NodePoolUpdateExtendParam implements ModelInterface, ArrayAccess
         $this->container['alphaCcePostInstall'] = isset($data['alphaCcePostInstall']) ? $data['alphaCcePostInstall'] : null;
         $this->container['spotPrice'] = isset($data['spotPrice']) ? $data['spotPrice'] : null;
         $this->container['securityReinforcementType'] = isset($data['securityReinforcementType']) ? $data['securityReinforcementType'] : null;
+        $this->container['alphaCceNodeImageId'] = isset($data['alphaCceNodeImageId']) ? $data['alphaCceNodeImageId'] : null;
     }
 
     /**
@@ -356,6 +367,30 @@ class NodePoolUpdateExtendParam implements ModelInterface, ArrayAccess
     public function setSecurityReinforcementType($securityReinforcementType)
     {
         $this->container['securityReinforcementType'] = $securityReinforcementType;
+        return $this;
+    }
+
+    /**
+    * Gets alphaCceNodeImageId
+    *  **参数解释**： 节点自定义镜像ID，从IMS控制台获取，需要使用自定义镜像时用此参数。 **约束限制**： 不涉及 [> - 若指定了extendParam中的securityReinforcementType参数为cybersecurity，节点将开启安全等保加固功能，则节点的操作系统类型必须使用HCE2.0。](tag:hws)  **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getAlphaCceNodeImageId()
+    {
+        return $this->container['alphaCceNodeImageId'];
+    }
+
+    /**
+    * Sets alphaCceNodeImageId
+    *
+    * @param string|null $alphaCceNodeImageId **参数解释**： 节点自定义镜像ID，从IMS控制台获取，需要使用自定义镜像时用此参数。 **约束限制**： 不涉及 [> - 若指定了extendParam中的securityReinforcementType参数为cybersecurity，节点将开启安全等保加固功能，则节点的操作系统类型必须使用HCE2.0。](tag:hws)  **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setAlphaCceNodeImageId($alphaCceNodeImageId)
+    {
+        $this->container['alphaCceNodeImageId'] = $alphaCceNodeImageId;
         return $this;
     }
 

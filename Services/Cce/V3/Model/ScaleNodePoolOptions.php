@@ -21,24 +21,28 @@ class ScaleNodePoolOptions implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * scalableChecking  扩容状态检查策略: instant(同步检查), async(异步检查)。默认同步检查instant
+    * scalePolicy  **参数解释**： 扩容的策略，允许为空，该参数scaleGroups传多项时有效。 **约束限制**： 不涉及 **取值范围**： - AZBalance：AZ优先策略，扩容节点池时，系统会使各个AZ间的节点数尽可能的均衡，规格会在所选伸缩组中随机指定。该策略适用于对节点成本和可用区无特殊要求的场景，优点是配置简便、降低单点故障风险。注意：如果某个AZ资源不足，该AZ期望的扩容节点会向其他AZ扩容，可能会使AZ间节点不均衡。如需解决该问题，可在该AZ资源充足时尝试再次扩容。 - Random：随机策略，从下发的规格scaleGroups列表中随机选择伸缩组扩容。  **默认取值**： Random
     * billingConfigOverride  billingConfigOverride
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'scalableChecking' => 'string',
+            'scalePolicy' => 'string',
             'billingConfigOverride' => '\HuaweiCloud\SDK\Cce\V3\Model\ScaleUpBillingConfigOverride'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * scalableChecking  扩容状态检查策略: instant(同步检查), async(异步检查)。默认同步检查instant
+    * scalePolicy  **参数解释**： 扩容的策略，允许为空，该参数scaleGroups传多项时有效。 **约束限制**： 不涉及 **取值范围**： - AZBalance：AZ优先策略，扩容节点池时，系统会使各个AZ间的节点数尽可能的均衡，规格会在所选伸缩组中随机指定。该策略适用于对节点成本和可用区无特殊要求的场景，优点是配置简便、降低单点故障风险。注意：如果某个AZ资源不足，该AZ期望的扩容节点会向其他AZ扩容，可能会使AZ间节点不均衡。如需解决该问题，可在该AZ资源充足时尝试再次扩容。 - Random：随机策略，从下发的规格scaleGroups列表中随机选择伸缩组扩容。  **默认取值**： Random
     * billingConfigOverride  billingConfigOverride
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'scalableChecking' => null,
+        'scalePolicy' => null,
         'billingConfigOverride' => null
     ];
 
@@ -66,36 +70,42 @@ class ScaleNodePoolOptions implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * scalableChecking  扩容状态检查策略: instant(同步检查), async(异步检查)。默认同步检查instant
+    * scalePolicy  **参数解释**： 扩容的策略，允许为空，该参数scaleGroups传多项时有效。 **约束限制**： 不涉及 **取值范围**： - AZBalance：AZ优先策略，扩容节点池时，系统会使各个AZ间的节点数尽可能的均衡，规格会在所选伸缩组中随机指定。该策略适用于对节点成本和可用区无特殊要求的场景，优点是配置简便、降低单点故障风险。注意：如果某个AZ资源不足，该AZ期望的扩容节点会向其他AZ扩容，可能会使AZ间节点不均衡。如需解决该问题，可在该AZ资源充足时尝试再次扩容。 - Random：随机策略，从下发的规格scaleGroups列表中随机选择伸缩组扩容。  **默认取值**： Random
     * billingConfigOverride  billingConfigOverride
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'scalableChecking' => 'scalableChecking',
+            'scalePolicy' => 'scalePolicy',
             'billingConfigOverride' => 'billingConfigOverride'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * scalableChecking  扩容状态检查策略: instant(同步检查), async(异步检查)。默认同步检查instant
+    * scalePolicy  **参数解释**： 扩容的策略，允许为空，该参数scaleGroups传多项时有效。 **约束限制**： 不涉及 **取值范围**： - AZBalance：AZ优先策略，扩容节点池时，系统会使各个AZ间的节点数尽可能的均衡，规格会在所选伸缩组中随机指定。该策略适用于对节点成本和可用区无特殊要求的场景，优点是配置简便、降低单点故障风险。注意：如果某个AZ资源不足，该AZ期望的扩容节点会向其他AZ扩容，可能会使AZ间节点不均衡。如需解决该问题，可在该AZ资源充足时尝试再次扩容。 - Random：随机策略，从下发的规格scaleGroups列表中随机选择伸缩组扩容。  **默认取值**： Random
     * billingConfigOverride  billingConfigOverride
     *
     * @var string[]
     */
     protected static $setters = [
             'scalableChecking' => 'setScalableChecking',
+            'scalePolicy' => 'setScalePolicy',
             'billingConfigOverride' => 'setBillingConfigOverride'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * scalableChecking  扩容状态检查策略: instant(同步检查), async(异步检查)。默认同步检查instant
+    * scalePolicy  **参数解释**： 扩容的策略，允许为空，该参数scaleGroups传多项时有效。 **约束限制**： 不涉及 **取值范围**： - AZBalance：AZ优先策略，扩容节点池时，系统会使各个AZ间的节点数尽可能的均衡，规格会在所选伸缩组中随机指定。该策略适用于对节点成本和可用区无特殊要求的场景，优点是配置简便、降低单点故障风险。注意：如果某个AZ资源不足，该AZ期望的扩容节点会向其他AZ扩容，可能会使AZ间节点不均衡。如需解决该问题，可在该AZ资源充足时尝试再次扩容。 - Random：随机策略，从下发的规格scaleGroups列表中随机选择伸缩组扩容。  **默认取值**： Random
     * billingConfigOverride  billingConfigOverride
     *
     * @var string[]
     */
     protected static $getters = [
             'scalableChecking' => 'getScalableChecking',
+            'scalePolicy' => 'getScalePolicy',
             'billingConfigOverride' => 'getBillingConfigOverride'
     ];
 
@@ -139,7 +149,22 @@ class ScaleNodePoolOptions implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const SCALE_POLICY_AZ_BALANCE = 'AZBalance';
+    const SCALE_POLICY_RANDOM = 'Random';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getScalePolicyAllowableValues()
+    {
+        return [
+            self::SCALE_POLICY_AZ_BALANCE,
+            self::SCALE_POLICY_RANDOM,
+        ];
+    }
 
 
     /**
@@ -158,6 +183,7 @@ class ScaleNodePoolOptions implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['scalableChecking'] = isset($data['scalableChecking']) ? $data['scalableChecking'] : null;
+        $this->container['scalePolicy'] = isset($data['scalePolicy']) ? $data['scalePolicy'] : null;
         $this->container['billingConfigOverride'] = isset($data['billingConfigOverride']) ? $data['billingConfigOverride'] : null;
     }
 
@@ -169,6 +195,14 @@ class ScaleNodePoolOptions implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getScalePolicyAllowableValues();
+                if (!is_null($this->container['scalePolicy']) && !in_array($this->container['scalePolicy'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'scalePolicy', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -204,6 +238,30 @@ class ScaleNodePoolOptions implements ModelInterface, ArrayAccess
     public function setScalableChecking($scalableChecking)
     {
         $this->container['scalableChecking'] = $scalableChecking;
+        return $this;
+    }
+
+    /**
+    * Gets scalePolicy
+    *  **参数解释**： 扩容的策略，允许为空，该参数scaleGroups传多项时有效。 **约束限制**： 不涉及 **取值范围**： - AZBalance：AZ优先策略，扩容节点池时，系统会使各个AZ间的节点数尽可能的均衡，规格会在所选伸缩组中随机指定。该策略适用于对节点成本和可用区无特殊要求的场景，优点是配置简便、降低单点故障风险。注意：如果某个AZ资源不足，该AZ期望的扩容节点会向其他AZ扩容，可能会使AZ间节点不均衡。如需解决该问题，可在该AZ资源充足时尝试再次扩容。 - Random：随机策略，从下发的规格scaleGroups列表中随机选择伸缩组扩容。  **默认取值**： Random
+    *
+    * @return string|null
+    */
+    public function getScalePolicy()
+    {
+        return $this->container['scalePolicy'];
+    }
+
+    /**
+    * Sets scalePolicy
+    *
+    * @param string|null $scalePolicy **参数解释**： 扩容的策略，允许为空，该参数scaleGroups传多项时有效。 **约束限制**： 不涉及 **取值范围**： - AZBalance：AZ优先策略，扩容节点池时，系统会使各个AZ间的节点数尽可能的均衡，规格会在所选伸缩组中随机指定。该策略适用于对节点成本和可用区无特殊要求的场景，优点是配置简便、降低单点故障风险。注意：如果某个AZ资源不足，该AZ期望的扩容节点会向其他AZ扩容，可能会使AZ间节点不均衡。如需解决该问题，可在该AZ资源充足时尝试再次扩容。 - Random：随机策略，从下发的规格scaleGroups列表中随机选择伸缩组扩容。  **默认取值**： Random
+    *
+    * @return $this
+    */
+    public function setScalePolicy($scalePolicy)
+    {
+        $this->container['scalePolicy'] = $scalePolicy;
         return $this;
     }
 

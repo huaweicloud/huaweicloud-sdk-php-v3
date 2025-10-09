@@ -21,21 +21,25 @@ class CustomerUpgradeDatabaseVersionReqNew implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * isDelayed  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
+    * secondSwitch  设置仅对RDS for MySQL数据库实例（主备）生效。主备实例升级过程中，备机升级成功后，会触发主备倒换继续升级主机，主机升级完成后，若主备可用区不同则触发第二次倒换，保证可用区不变。若主备可用区相同，该选项无效。 取值范围： - true：默认该方式。表示升级过程中会进行二次倒换保证主备实例可用区不变。 - false：升级过程中不进行第二次主备倒换，适合对主备所在可用区不敏感，对业务连续性敏感的客户。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'isDelayed' => 'bool'
+            'isDelayed' => 'bool',
+            'secondSwitch' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * isDelayed  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
+    * secondSwitch  设置仅对RDS for MySQL数据库实例（主备）生效。主备实例升级过程中，备机升级成功后，会触发主备倒换继续升级主机，主机升级完成后，若主备可用区不同则触发第二次倒换，保证可用区不变。若主备可用区相同，该选项无效。 取值范围： - true：默认该方式。表示升级过程中会进行二次倒换保证主备实例可用区不变。 - false：升级过程中不进行第二次主备倒换，适合对主备所在可用区不敏感，对业务连续性敏感的客户。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'isDelayed' => null
+        'isDelayed' => null,
+        'secondSwitch' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class CustomerUpgradeDatabaseVersionReqNew implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * isDelayed  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
+    * secondSwitch  设置仅对RDS for MySQL数据库实例（主备）生效。主备实例升级过程中，备机升级成功后，会触发主备倒换继续升级主机，主机升级完成后，若主备可用区不同则触发第二次倒换，保证可用区不变。若主备可用区相同，该选项无效。 取值范围： - true：默认该方式。表示升级过程中会进行二次倒换保证主备实例可用区不变。 - false：升级过程中不进行第二次主备倒换，适合对主备所在可用区不敏感，对业务连续性敏感的客户。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'isDelayed' => 'is_delayed'
+            'isDelayed' => 'is_delayed',
+            'secondSwitch' => 'second_switch'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * isDelayed  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
+    * secondSwitch  设置仅对RDS for MySQL数据库实例（主备）生效。主备实例升级过程中，备机升级成功后，会触发主备倒换继续升级主机，主机升级完成后，若主备可用区不同则触发第二次倒换，保证可用区不变。若主备可用区相同，该选项无效。 取值范围： - true：默认该方式。表示升级过程中会进行二次倒换保证主备实例可用区不变。 - false：升级过程中不进行第二次主备倒换，适合对主备所在可用区不敏感，对业务连续性敏感的客户。
     *
     * @var string[]
     */
     protected static $setters = [
-            'isDelayed' => 'setIsDelayed'
+            'isDelayed' => 'setIsDelayed',
+            'secondSwitch' => 'setSecondSwitch'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * isDelayed  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
+    * secondSwitch  设置仅对RDS for MySQL数据库实例（主备）生效。主备实例升级过程中，备机升级成功后，会触发主备倒换继续升级主机，主机升级完成后，若主备可用区不同则触发第二次倒换，保证可用区不变。若主备可用区相同，该选项无效。 取值范围： - true：默认该方式。表示升级过程中会进行二次倒换保证主备实例可用区不变。 - false：升级过程中不进行第二次主备倒换，适合对主备所在可用区不敏感，对业务连续性敏感的客户。
     *
     * @var string[]
     */
     protected static $getters = [
-            'isDelayed' => 'getIsDelayed'
+            'isDelayed' => 'getIsDelayed',
+            'secondSwitch' => 'getSecondSwitch'
     ];
 
     /**
@@ -148,6 +158,7 @@ class CustomerUpgradeDatabaseVersionReqNew implements ModelInterface, ArrayAcces
     public function __construct(array $data = null)
     {
         $this->container['isDelayed'] = isset($data['isDelayed']) ? $data['isDelayed'] : null;
+        $this->container['secondSwitch'] = isset($data['secondSwitch']) ? $data['secondSwitch'] : null;
     }
 
     /**
@@ -193,6 +204,30 @@ class CustomerUpgradeDatabaseVersionReqNew implements ModelInterface, ArrayAcces
     public function setIsDelayed($isDelayed)
     {
         $this->container['isDelayed'] = $isDelayed;
+        return $this;
+    }
+
+    /**
+    * Gets secondSwitch
+    *  设置仅对RDS for MySQL数据库实例（主备）生效。主备实例升级过程中，备机升级成功后，会触发主备倒换继续升级主机，主机升级完成后，若主备可用区不同则触发第二次倒换，保证可用区不变。若主备可用区相同，该选项无效。 取值范围： - true：默认该方式。表示升级过程中会进行二次倒换保证主备实例可用区不变。 - false：升级过程中不进行第二次主备倒换，适合对主备所在可用区不敏感，对业务连续性敏感的客户。
+    *
+    * @return bool|null
+    */
+    public function getSecondSwitch()
+    {
+        return $this->container['secondSwitch'];
+    }
+
+    /**
+    * Sets secondSwitch
+    *
+    * @param bool|null $secondSwitch 设置仅对RDS for MySQL数据库实例（主备）生效。主备实例升级过程中，备机升级成功后，会触发主备倒换继续升级主机，主机升级完成后，若主备可用区不同则触发第二次倒换，保证可用区不变。若主备可用区相同，该选项无效。 取值范围： - true：默认该方式。表示升级过程中会进行二次倒换保证主备实例可用区不变。 - false：升级过程中不进行第二次主备倒换，适合对主备所在可用区不敏感，对业务连续性敏感的客户。
+    *
+    * @return $this
+    */
+    public function setSecondSwitch($secondSwitch)
+    {
+        $this->container['secondSwitch'] = $secondSwitch;
         return $this;
     }
 

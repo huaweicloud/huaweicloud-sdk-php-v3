@@ -158,6 +158,9 @@ class UpdateServerRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['vpnServer'] === null) {
+            $invalidProperties[] = "'vpnServer' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class UpdateServerRequestBody implements ModelInterface, ArrayAccess
     * Gets vpnServer
     *  vpnServer
     *
-    * @return \HuaweiCloud\SDK\Vpn\V5\Model\UpdateServerRequest|null
+    * @return \HuaweiCloud\SDK\Vpn\V5\Model\UpdateServerRequest
     */
     public function getVpnServer()
     {
@@ -186,7 +189,7 @@ class UpdateServerRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets vpnServer
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\UpdateServerRequest|null $vpnServer vpnServer
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\UpdateServerRequest $vpnServer vpnServer
     *
     * @return $this
     */

@@ -20,26 +20,30 @@ class NodeLifecycleConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * preInstall  安装前执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
-    * postInstall  安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
+    * preInstall  **参数解释**： 安装前执行脚本。安装前/后执行脚本统一计算字符，输入的值需要经过Base64编码，方法如下： ``` echo -n \"待编码内容\" | base64 ```  **约束限制**： 长度不能超过10240字节。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * postInstall  **参数解释**： 安装前执行脚本。安装前/后执行脚本统一计算字符，输入的值需要经过Base64编码，方法如下： ``` echo -n \"待编码内容\" | base64 ```  **约束限制**： 长度不能超过10240字节。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * waitPostInstallFinish  **参数解释：** 该参数用于控制重置/纳管/批量重置节点时， **post-install脚本执行完成前允许节点调度** 的行为。当操作的节点属于节点池时，以节点池相关配置为准。当该参数未设置或者为false时，在kubernetes节点就绪时，容器即可被调度到可用节点。当该参数为true时，在kubernetes节点就绪时且post-install脚本执行完成时，容器才可被调度到可用节点。  **约束限制：** 不涉及  **取值范围：** - false：在kubernetes节点就绪时，容器即可被调度到可用节点。           - true：在kubernetes节点就绪时且post-install脚本执行完成时，容器才可被调度到可用节点。  **默认取值：** false
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'preInstall' => 'string',
-            'postInstall' => 'string'
+            'postInstall' => 'string',
+            'waitPostInstallFinish' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * preInstall  安装前执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
-    * postInstall  安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
+    * preInstall  **参数解释**： 安装前执行脚本。安装前/后执行脚本统一计算字符，输入的值需要经过Base64编码，方法如下： ``` echo -n \"待编码内容\" | base64 ```  **约束限制**： 长度不能超过10240字节。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * postInstall  **参数解释**： 安装前执行脚本。安装前/后执行脚本统一计算字符，输入的值需要经过Base64编码，方法如下： ``` echo -n \"待编码内容\" | base64 ```  **约束限制**： 长度不能超过10240字节。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * waitPostInstallFinish  **参数解释：** 该参数用于控制重置/纳管/批量重置节点时， **post-install脚本执行完成前允许节点调度** 的行为。当操作的节点属于节点池时，以节点池相关配置为准。当该参数未设置或者为false时，在kubernetes节点就绪时，容器即可被调度到可用节点。当该参数为true时，在kubernetes节点就绪时且post-install脚本执行完成时，容器才可被调度到可用节点。  **约束限制：** 不涉及  **取值范围：** - false：在kubernetes节点就绪时，容器即可被调度到可用节点。           - true：在kubernetes节点就绪时且post-install脚本执行完成时，容器才可被调度到可用节点。  **默认取值：** false
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'preInstall' => null,
-        'postInstall' => null
+        'postInstall' => null,
+        'waitPostInstallFinish' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class NodeLifecycleConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * preInstall  安装前执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
-    * postInstall  安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
+    * preInstall  **参数解释**： 安装前执行脚本。安装前/后执行脚本统一计算字符，输入的值需要经过Base64编码，方法如下： ``` echo -n \"待编码内容\" | base64 ```  **约束限制**： 长度不能超过10240字节。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * postInstall  **参数解释**： 安装前执行脚本。安装前/后执行脚本统一计算字符，输入的值需要经过Base64编码，方法如下： ``` echo -n \"待编码内容\" | base64 ```  **约束限制**： 长度不能超过10240字节。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * waitPostInstallFinish  **参数解释：** 该参数用于控制重置/纳管/批量重置节点时， **post-install脚本执行完成前允许节点调度** 的行为。当操作的节点属于节点池时，以节点池相关配置为准。当该参数未设置或者为false时，在kubernetes节点就绪时，容器即可被调度到可用节点。当该参数为true时，在kubernetes节点就绪时且post-install脚本执行完成时，容器才可被调度到可用节点。  **约束限制：** 不涉及  **取值范围：** - false：在kubernetes节点就绪时，容器即可被调度到可用节点。           - true：在kubernetes节点就绪时且post-install脚本执行完成时，容器才可被调度到可用节点。  **默认取值：** false
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'preInstall' => 'preInstall',
-            'postInstall' => 'postInstall'
+            'postInstall' => 'postInstall',
+            'waitPostInstallFinish' => 'waitPostInstallFinish'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * preInstall  安装前执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
-    * postInstall  安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
+    * preInstall  **参数解释**： 安装前执行脚本。安装前/后执行脚本统一计算字符，输入的值需要经过Base64编码，方法如下： ``` echo -n \"待编码内容\" | base64 ```  **约束限制**： 长度不能超过10240字节。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * postInstall  **参数解释**： 安装前执行脚本。安装前/后执行脚本统一计算字符，输入的值需要经过Base64编码，方法如下： ``` echo -n \"待编码内容\" | base64 ```  **约束限制**： 长度不能超过10240字节。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * waitPostInstallFinish  **参数解释：** 该参数用于控制重置/纳管/批量重置节点时， **post-install脚本执行完成前允许节点调度** 的行为。当操作的节点属于节点池时，以节点池相关配置为准。当该参数未设置或者为false时，在kubernetes节点就绪时，容器即可被调度到可用节点。当该参数为true时，在kubernetes节点就绪时且post-install脚本执行完成时，容器才可被调度到可用节点。  **约束限制：** 不涉及  **取值范围：** - false：在kubernetes节点就绪时，容器即可被调度到可用节点。           - true：在kubernetes节点就绪时且post-install脚本执行完成时，容器才可被调度到可用节点。  **默认取值：** false
     *
     * @var string[]
     */
     protected static $setters = [
             'preInstall' => 'setPreInstall',
-            'postInstall' => 'setPostInstall'
+            'postInstall' => 'setPostInstall',
+            'waitPostInstallFinish' => 'setWaitPostInstallFinish'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * preInstall  安装前执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
-    * postInstall  安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
+    * preInstall  **参数解释**： 安装前执行脚本。安装前/后执行脚本统一计算字符，输入的值需要经过Base64编码，方法如下： ``` echo -n \"待编码内容\" | base64 ```  **约束限制**： 长度不能超过10240字节。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * postInstall  **参数解释**： 安装前执行脚本。安装前/后执行脚本统一计算字符，输入的值需要经过Base64编码，方法如下： ``` echo -n \"待编码内容\" | base64 ```  **约束限制**： 长度不能超过10240字节。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * waitPostInstallFinish  **参数解释：** 该参数用于控制重置/纳管/批量重置节点时， **post-install脚本执行完成前允许节点调度** 的行为。当操作的节点属于节点池时，以节点池相关配置为准。当该参数未设置或者为false时，在kubernetes节点就绪时，容器即可被调度到可用节点。当该参数为true时，在kubernetes节点就绪时且post-install脚本执行完成时，容器才可被调度到可用节点。  **约束限制：** 不涉及  **取值范围：** - false：在kubernetes节点就绪时，容器即可被调度到可用节点。           - true：在kubernetes节点就绪时且post-install脚本执行完成时，容器才可被调度到可用节点。  **默认取值：** false
     *
     * @var string[]
     */
     protected static $getters = [
             'preInstall' => 'getPreInstall',
-            'postInstall' => 'getPostInstall'
+            'postInstall' => 'getPostInstall',
+            'waitPostInstallFinish' => 'getWaitPostInstallFinish'
     ];
 
     /**
@@ -159,6 +169,7 @@ class NodeLifecycleConfig implements ModelInterface, ArrayAccess
     {
         $this->container['preInstall'] = isset($data['preInstall']) ? $data['preInstall'] : null;
         $this->container['postInstall'] = isset($data['postInstall']) ? $data['postInstall'] : null;
+        $this->container['waitPostInstallFinish'] = isset($data['waitPostInstallFinish']) ? $data['waitPostInstallFinish'] : null;
     }
 
     /**
@@ -169,11 +180,11 @@ class NodeLifecycleConfig implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['preInstall']) && (mb_strlen($this->container['preInstall']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'preInstall', the character length must be smaller than or equal to 2048.";
+            if (!is_null($this->container['preInstall']) && (mb_strlen($this->container['preInstall']) > 10240)) {
+                $invalidProperties[] = "invalid value for 'preInstall', the character length must be smaller than or equal to 10240.";
             }
-            if (!is_null($this->container['postInstall']) && (mb_strlen($this->container['postInstall']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'postInstall', the character length must be smaller than or equal to 2048.";
+            if (!is_null($this->container['postInstall']) && (mb_strlen($this->container['postInstall']) > 10240)) {
+                $invalidProperties[] = "invalid value for 'postInstall', the character length must be smaller than or equal to 10240.";
             }
         return $invalidProperties;
     }
@@ -191,7 +202,7 @@ class NodeLifecycleConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets preInstall
-    *  安装前执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
+    *  **参数解释**： 安装前执行脚本。安装前/后执行脚本统一计算字符，输入的值需要经过Base64编码，方法如下： ``` echo -n \"待编码内容\" | base64 ```  **约束限制**： 长度不能超过10240字节。 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -203,7 +214,7 @@ class NodeLifecycleConfig implements ModelInterface, ArrayAccess
     /**
     * Sets preInstall
     *
-    * @param string|null $preInstall 安装前执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
+    * @param string|null $preInstall **参数解释**： 安装前执行脚本。安装前/后执行脚本统一计算字符，输入的值需要经过Base64编码，方法如下： ``` echo -n \"待编码内容\" | base64 ```  **约束限制**： 长度不能超过10240字节。 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -215,7 +226,7 @@ class NodeLifecycleConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets postInstall
-    *  安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
+    *  **参数解释**： 安装前执行脚本。安装前/后执行脚本统一计算字符，输入的值需要经过Base64编码，方法如下： ``` echo -n \"待编码内容\" | base64 ```  **约束限制**： 长度不能超过10240字节。 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -227,13 +238,37 @@ class NodeLifecycleConfig implements ModelInterface, ArrayAccess
     /**
     * Sets postInstall
     *
-    * @param string|null $postInstall 安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
+    * @param string|null $postInstall **参数解释**： 安装前执行脚本。安装前/后执行脚本统一计算字符，输入的值需要经过Base64编码，方法如下： ``` echo -n \"待编码内容\" | base64 ```  **约束限制**： 长度不能超过10240字节。 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
     public function setPostInstall($postInstall)
     {
         $this->container['postInstall'] = $postInstall;
+        return $this;
+    }
+
+    /**
+    * Gets waitPostInstallFinish
+    *  **参数解释：** 该参数用于控制重置/纳管/批量重置节点时， **post-install脚本执行完成前允许节点调度** 的行为。当操作的节点属于节点池时，以节点池相关配置为准。当该参数未设置或者为false时，在kubernetes节点就绪时，容器即可被调度到可用节点。当该参数为true时，在kubernetes节点就绪时且post-install脚本执行完成时，容器才可被调度到可用节点。  **约束限制：** 不涉及  **取值范围：** - false：在kubernetes节点就绪时，容器即可被调度到可用节点。           - true：在kubernetes节点就绪时且post-install脚本执行完成时，容器才可被调度到可用节点。  **默认取值：** false
+    *
+    * @return bool|null
+    */
+    public function getWaitPostInstallFinish()
+    {
+        return $this->container['waitPostInstallFinish'];
+    }
+
+    /**
+    * Sets waitPostInstallFinish
+    *
+    * @param bool|null $waitPostInstallFinish **参数解释：** 该参数用于控制重置/纳管/批量重置节点时， **post-install脚本执行完成前允许节点调度** 的行为。当操作的节点属于节点池时，以节点池相关配置为准。当该参数未设置或者为false时，在kubernetes节点就绪时，容器即可被调度到可用节点。当该参数为true时，在kubernetes节点就绪时且post-install脚本执行完成时，容器才可被调度到可用节点。  **约束限制：** 不涉及  **取值范围：** - false：在kubernetes节点就绪时，容器即可被调度到可用节点。           - true：在kubernetes节点就绪时且post-install脚本执行完成时，容器才可被调度到可用节点。  **默认取值：** false
+    *
+    * @return $this
+    */
+    public function setWaitPostInstallFinish($waitPostInstallFinish)
+    {
+        $this->container['waitPostInstallFinish'] = $waitPostInstallFinish;
         return $this;
     }
 

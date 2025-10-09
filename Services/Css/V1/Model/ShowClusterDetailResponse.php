@@ -54,6 +54,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * cmkId  当前集群使用的磁盘加密密钥ID。
     * orderId  包周期集群的订单号。
     * currentSubnetIds  集群当前所有节点用到的子网，如果存在多个（最多支持两个），使用英文逗号隔开。
+    * desc  集群描述。
     *
     * @var string[]
     */
@@ -90,7 +91,8 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
             'supportVpcep' => 'bool',
             'cmkId' => 'string',
             'orderId' => 'string',
-            'currentSubnetIds' => 'string'
+            'currentSubnetIds' => 'string',
+            'desc' => 'string'
     ];
 
     /**
@@ -128,6 +130,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * cmkId  当前集群使用的磁盘加密密钥ID。
     * orderId  包周期集群的订单号。
     * currentSubnetIds  集群当前所有节点用到的子网，如果存在多个（最多支持两个），使用英文逗号隔开。
+    * desc  集群描述。
     *
     * @var string[]
     */
@@ -164,7 +167,8 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
         'supportVpcep' => null,
         'cmkId' => null,
         'orderId' => null,
-        'currentSubnetIds' => null
+        'currentSubnetIds' => null,
+        'desc' => null
     ];
 
     /**
@@ -223,6 +227,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * cmkId  当前集群使用的磁盘加密密钥ID。
     * orderId  包周期集群的订单号。
     * currentSubnetIds  集群当前所有节点用到的子网，如果存在多个（最多支持两个），使用英文逗号隔开。
+    * desc  集群描述。
     *
     * @var string[]
     */
@@ -259,7 +264,8 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
             'supportVpcep' => 'supportVpcep',
             'cmkId' => 'cmkId',
             'orderId' => 'orderId',
-            'currentSubnetIds' => 'currentSubnetIds'
+            'currentSubnetIds' => 'currentSubnetIds',
+            'desc' => 'desc'
     ];
 
     /**
@@ -297,6 +303,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * cmkId  当前集群使用的磁盘加密密钥ID。
     * orderId  包周期集群的订单号。
     * currentSubnetIds  集群当前所有节点用到的子网，如果存在多个（最多支持两个），使用英文逗号隔开。
+    * desc  集群描述。
     *
     * @var string[]
     */
@@ -333,7 +340,8 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
             'supportVpcep' => 'setSupportVpcep',
             'cmkId' => 'setCmkId',
             'orderId' => 'setOrderId',
-            'currentSubnetIds' => 'setCurrentSubnetIds'
+            'currentSubnetIds' => 'setCurrentSubnetIds',
+            'desc' => 'setDesc'
     ];
 
     /**
@@ -371,6 +379,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * cmkId  当前集群使用的磁盘加密密钥ID。
     * orderId  包周期集群的订单号。
     * currentSubnetIds  集群当前所有节点用到的子网，如果存在多个（最多支持两个），使用英文逗号隔开。
+    * desc  集群描述。
     *
     * @var string[]
     */
@@ -407,7 +416,8 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
             'supportVpcep' => 'getSupportVpcep',
             'cmkId' => 'getCmkId',
             'orderId' => 'getOrderId',
-            'currentSubnetIds' => 'getCurrentSubnetIds'
+            'currentSubnetIds' => 'getCurrentSubnetIds',
+            'desc' => 'getDesc'
     ];
 
     /**
@@ -501,6 +511,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
         $this->container['cmkId'] = isset($data['cmkId']) ? $data['cmkId'] : null;
         $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
         $this->container['currentSubnetIds'] = isset($data['currentSubnetIds']) ? $data['currentSubnetIds'] : null;
+        $this->container['desc'] = isset($data['desc']) ? $data['desc'] : null;
     }
 
     /**
@@ -1314,6 +1325,30 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     public function setCurrentSubnetIds($currentSubnetIds)
     {
         $this->container['currentSubnetIds'] = $currentSubnetIds;
+        return $this;
+    }
+
+    /**
+    * Gets desc
+    *  集群描述。
+    *
+    * @return string|null
+    */
+    public function getDesc()
+    {
+        return $this->container['desc'];
+    }
+
+    /**
+    * Sets desc
+    *
+    * @param string|null $desc 集群描述。
+    *
+    * @return $this
+    */
+    public function setDesc($desc)
+    {
+        $this->container['desc'] = $desc;
         return $this;
     }
 

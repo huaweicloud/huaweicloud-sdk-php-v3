@@ -21,20 +21,22 @@ class DownloadCertResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * file  文件流
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'file' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * file  文件流
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'file' => null
     ];
 
     /**
@@ -60,29 +62,32 @@ class DownloadCertResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * file  文件流
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'file' => 'file'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * file  文件流
     *
     * @var string[]
     */
     protected static $setters = [
+            'file' => 'setFile'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * file  文件流
     *
     * @var string[]
     */
     protected static $getters = [
+            'file' => 'getFile'
     ];
 
     /**
@@ -143,6 +148,7 @@ class DownloadCertResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['file'] = isset($data['file']) ? $data['file'] : null;
     }
 
     /**
@@ -165,6 +171,30 @@ class DownloadCertResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets file
+    *  文件流
+    *
+    * @return string|null
+    */
+    public function getFile()
+    {
+        return $this->container['file'];
+    }
+
+    /**
+    * Sets file
+    *
+    * @param string|null $file 文件流
+    *
+    * @return $this
+    */
+    public function setFile($file)
+    {
+        $this->container['file'] = $file;
+        return $this;
     }
 
     /**

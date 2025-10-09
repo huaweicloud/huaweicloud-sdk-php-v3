@@ -35,7 +35,7 @@ class ImageCacheDetail implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'name' => 'string',
             'id' => 'string',
-            'createdAt' => 'string',
+            'createdAt' => '\DateTime',
             'images' => 'string[]',
             'imageCacheSize' => 'int',
             'retentionDays' => 'int',
@@ -61,7 +61,7 @@ class ImageCacheDetail implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'name' => null,
         'id' => null,
-        'createdAt' => null,
+        'createdAt' => 'date',
         'images' => null,
         'imageCacheSize' => 'int32',
         'retentionDays' => 'int32',
@@ -395,7 +395,7 @@ class ImageCacheDetail implements ModelInterface, ArrayAccess
     * Gets createdAt
     *  镜像缓存创建时间戳。
     *
-    * @return string
+    * @return \DateTime
     */
     public function getCreatedAt()
     {
@@ -405,7 +405,7 @@ class ImageCacheDetail implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string $createdAt 镜像缓存创建时间戳。
+    * @param \DateTime $createdAt 镜像缓存创建时间戳。
     *
     * @return $this
     */

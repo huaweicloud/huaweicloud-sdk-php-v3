@@ -36,6 +36,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     * adminStateUp  冻结状态
     * frozenEffect  冻结场景：0未冻结；1 冻结可删除；2冻结不可删除
     * version  网关版本
+    * upgradeInfo  升级信息
     * createdAt  创建时间
     * updatedAt  更新时间
     * appliedAt  生效时间
@@ -59,6 +60,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
             'adminStateUp' => 'bool',
             'frozenEffect' => 'int',
             'version' => 'string',
+            'upgradeInfo' => 'string',
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime',
             'appliedAt' => '\DateTime'
@@ -82,6 +84,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     * adminStateUp  冻结状态
     * frozenEffect  冻结场景：0未冻结；1 冻结可删除；2冻结不可删除
     * version  网关版本
+    * upgradeInfo  升级信息
     * createdAt  创建时间
     * updatedAt  更新时间
     * appliedAt  生效时间
@@ -105,6 +108,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
         'adminStateUp' => null,
         'frozenEffect' => null,
         'version' => null,
+        'upgradeInfo' => null,
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time',
         'appliedAt' => 'date-time'
@@ -149,6 +153,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     * adminStateUp  冻结状态
     * frozenEffect  冻结场景：0未冻结；1 冻结可删除；2冻结不可删除
     * version  网关版本
+    * upgradeInfo  升级信息
     * createdAt  创建时间
     * updatedAt  更新时间
     * appliedAt  生效时间
@@ -172,6 +177,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
             'adminStateUp' => 'admin_state_up',
             'frozenEffect' => 'frozen_effect',
             'version' => 'version',
+            'upgradeInfo' => 'upgrade_info',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
             'appliedAt' => 'applied_at'
@@ -195,6 +201,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     * adminStateUp  冻结状态
     * frozenEffect  冻结场景：0未冻结；1 冻结可删除；2冻结不可删除
     * version  网关版本
+    * upgradeInfo  升级信息
     * createdAt  创建时间
     * updatedAt  更新时间
     * appliedAt  生效时间
@@ -218,6 +225,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
             'adminStateUp' => 'setAdminStateUp',
             'frozenEffect' => 'setFrozenEffect',
             'version' => 'setVersion',
+            'upgradeInfo' => 'setUpgradeInfo',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
             'appliedAt' => 'setAppliedAt'
@@ -241,6 +249,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     * adminStateUp  冻结状态
     * frozenEffect  冻结场景：0未冻结；1 冻结可删除；2冻结不可删除
     * version  网关版本
+    * upgradeInfo  升级信息
     * createdAt  创建时间
     * updatedAt  更新时间
     * appliedAt  生效时间
@@ -264,6 +273,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
             'adminStateUp' => 'getAdminStateUp',
             'frozenEffect' => 'getFrozenEffect',
             'version' => 'getVersion',
+            'upgradeInfo' => 'getUpgradeInfo',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
             'appliedAt' => 'getAppliedAt'
@@ -309,7 +319,24 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const UPGRADE_INFO_READY = 'ready';
+    const UPGRADE_INFO_EXPIRING_SOON = 'expiring soon';
+    const UPGRADE_INFO_UNREADY = 'unready';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getUpgradeInfoAllowableValues()
+    {
+        return [
+            self::UPGRADE_INFO_READY,
+            self::UPGRADE_INFO_EXPIRING_SOON,
+            self::UPGRADE_INFO_UNREADY,
+        ];
+    }
 
 
     /**
@@ -343,6 +370,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['frozenEffect'] = isset($data['frozenEffect']) ? $data['frozenEffect'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['upgradeInfo'] = isset($data['upgradeInfo']) ? $data['upgradeInfo'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['appliedAt'] = isset($data['appliedAt']) ? $data['appliedAt'] : null;
@@ -371,6 +399,14 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
             if (!is_null($this->container['orderId']) && (mb_strlen($this->container['orderId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'orderId', the character length must be smaller than or equal to 64.";
             }
+            $allowedValues = $this->getUpgradeInfoAllowableValues();
+                if (!is_null($this->container['upgradeInfo']) && !in_array($this->container['upgradeInfo'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'upgradeInfo', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -766,6 +802,30 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     public function setVersion($version)
     {
         $this->container['version'] = $version;
+        return $this;
+    }
+
+    /**
+    * Gets upgradeInfo
+    *  升级信息
+    *
+    * @return string|null
+    */
+    public function getUpgradeInfo()
+    {
+        return $this->container['upgradeInfo'];
+    }
+
+    /**
+    * Sets upgradeInfo
+    *
+    * @param string|null $upgradeInfo 升级信息
+    *
+    * @return $this
+    */
+    public function setUpgradeInfo($upgradeInfo)
+    {
+        $this->container['upgradeInfo'] = $upgradeInfo;
         return $this;
     }
 

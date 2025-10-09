@@ -25,6 +25,7 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
     * annotations  节点池的注解，以key value对表示。仅用于查询，不支持请求时传入，填写无效。
     * updateTimestamp  更新时间
     * creationTimestamp  创建时间
+    * resourceVersion  **参数解释**： 节点池最后更新时间的时间戳。 **约束限制**： 创建节点池时自动记录，不支持传入。 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
             'uid' => 'string',
             'annotations' => 'map[string,string]',
             'updateTimestamp' => 'string',
-            'creationTimestamp' => 'string'
+            'creationTimestamp' => 'string',
+            'resourceVersion' => 'int'
     ];
 
     /**
@@ -43,6 +45,7 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
     * annotations  节点池的注解，以key value对表示。仅用于查询，不支持请求时传入，填写无效。
     * updateTimestamp  更新时间
     * creationTimestamp  创建时间
+    * resourceVersion  **参数解释**： 节点池最后更新时间的时间戳。 **约束限制**： 创建节点池时自动记录，不支持传入。 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
         'uid' => null,
         'annotations' => null,
         'updateTimestamp' => null,
-        'creationTimestamp' => null
+        'creationTimestamp' => null,
+        'resourceVersion' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
     * annotations  节点池的注解，以key value对表示。仅用于查询，不支持请求时传入，填写无效。
     * updateTimestamp  更新时间
     * creationTimestamp  创建时间
+    * resourceVersion  **参数解释**： 节点池最后更新时间的时间戳。 **约束限制**： 创建节点池时自动记录，不支持传入。 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
             'uid' => 'uid',
             'annotations' => 'annotations',
             'updateTimestamp' => 'updateTimestamp',
-            'creationTimestamp' => 'creationTimestamp'
+            'creationTimestamp' => 'creationTimestamp',
+            'resourceVersion' => 'resourceVersion'
     ];
 
     /**
@@ -100,6 +106,7 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
     * annotations  节点池的注解，以key value对表示。仅用于查询，不支持请求时传入，填写无效。
     * updateTimestamp  更新时间
     * creationTimestamp  创建时间
+    * resourceVersion  **参数解释**： 节点池最后更新时间的时间戳。 **约束限制**： 创建节点池时自动记录，不支持传入。 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
             'uid' => 'setUid',
             'annotations' => 'setAnnotations',
             'updateTimestamp' => 'setUpdateTimestamp',
-            'creationTimestamp' => 'setCreationTimestamp'
+            'creationTimestamp' => 'setCreationTimestamp',
+            'resourceVersion' => 'setResourceVersion'
     ];
 
     /**
@@ -118,6 +126,7 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
     * annotations  节点池的注解，以key value对表示。仅用于查询，不支持请求时传入，填写无效。
     * updateTimestamp  更新时间
     * creationTimestamp  创建时间
+    * resourceVersion  **参数解释**： 节点池最后更新时间的时间戳。 **约束限制**： 创建节点池时自动记录，不支持传入。 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
             'uid' => 'getUid',
             'annotations' => 'getAnnotations',
             'updateTimestamp' => 'getUpdateTimestamp',
-            'creationTimestamp' => 'getCreationTimestamp'
+            'creationTimestamp' => 'getCreationTimestamp',
+            'resourceVersion' => 'getResourceVersion'
     ];
 
     /**
@@ -192,6 +202,7 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
         $this->container['annotations'] = isset($data['annotations']) ? $data['annotations'] : null;
         $this->container['updateTimestamp'] = isset($data['updateTimestamp']) ? $data['updateTimestamp'] : null;
         $this->container['creationTimestamp'] = isset($data['creationTimestamp']) ? $data['creationTimestamp'] : null;
+        $this->container['resourceVersion'] = isset($data['resourceVersion']) ? $data['resourceVersion'] : null;
     }
 
     /**
@@ -345,6 +356,30 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
     public function setCreationTimestamp($creationTimestamp)
     {
         $this->container['creationTimestamp'] = $creationTimestamp;
+        return $this;
+    }
+
+    /**
+    * Gets resourceVersion
+    *  **参数解释**： 节点池最后更新时间的时间戳。 **约束限制**： 创建节点池时自动记录，不支持传入。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return int|null
+    */
+    public function getResourceVersion()
+    {
+        return $this->container['resourceVersion'];
+    }
+
+    /**
+    * Sets resourceVersion
+    *
+    * @param int|null $resourceVersion **参数解释**： 节点池最后更新时间的时间戳。 **约束限制**： 创建节点池时自动记录，不支持传入。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setResourceVersion($resourceVersion)
+    {
+        $this->container['resourceVersion'] = $resourceVersion;
         return $this;
     }
 

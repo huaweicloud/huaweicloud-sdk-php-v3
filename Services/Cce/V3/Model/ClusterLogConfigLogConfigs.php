@@ -20,9 +20,9 @@ class ClusterLogConfigLogConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  日志类型
-    * enable  是否采集
-    * type  组件类型
+    * name  **参数解释**： 日志类型 **约束限制**： 必须为 **kube-apiserver**、**kube-controller-manager**、**kube-scheduler**、**audit** 或者系统插件名称 **取值范围**： - kube-apiserver：采集kube-apiserver组件日志 - kube-controller-manager：采集kube-controller-manager日志 - kube-scheduler：采集kube-scheduler日志 - audit：采集审计日志 - 系统插件名称：采集插件日志  **默认取值**： 不涉及
+    * enable  **参数解释**： 是否采集 **取值范围**： - true：开启日志采集 - false：关闭日志采集
+    * type  **参数解释**： 组件类型 , 合法取值为control，audit，system-addon。 **约束限制**： - 仅查询集群日志配置信息接口响应中返回该参数 - 作为**配置集群日志**接口更新参数时不支持配置  **取值范围**： - control: 控制面组件日志。 - audit: 控制面审计日志。 - system-addon: 系统插件日志。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ClusterLogConfigLogConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  日志类型
-    * enable  是否采集
-    * type  组件类型
+    * name  **参数解释**： 日志类型 **约束限制**： 必须为 **kube-apiserver**、**kube-controller-manager**、**kube-scheduler**、**audit** 或者系统插件名称 **取值范围**： - kube-apiserver：采集kube-apiserver组件日志 - kube-controller-manager：采集kube-controller-manager日志 - kube-scheduler：采集kube-scheduler日志 - audit：采集审计日志 - 系统插件名称：采集插件日志  **默认取值**： 不涉及
+    * enable  **参数解释**： 是否采集 **取值范围**： - true：开启日志采集 - false：关闭日志采集
+    * type  **参数解释**： 组件类型 , 合法取值为control，audit，system-addon。 **约束限制**： - 仅查询集群日志配置信息接口响应中返回该参数 - 作为**配置集群日志**接口更新参数时不支持配置  **取值范围**： - control: 控制面组件日志。 - audit: 控制面审计日志。 - system-addon: 系统插件日志。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ClusterLogConfigLogConfigs implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  日志类型
-    * enable  是否采集
-    * type  组件类型
+    * name  **参数解释**： 日志类型 **约束限制**： 必须为 **kube-apiserver**、**kube-controller-manager**、**kube-scheduler**、**audit** 或者系统插件名称 **取值范围**： - kube-apiserver：采集kube-apiserver组件日志 - kube-controller-manager：采集kube-controller-manager日志 - kube-scheduler：采集kube-scheduler日志 - audit：采集审计日志 - 系统插件名称：采集插件日志  **默认取值**： 不涉及
+    * enable  **参数解释**： 是否采集 **取值范围**： - true：开启日志采集 - false：关闭日志采集
+    * type  **参数解释**： 组件类型 , 合法取值为control，audit，system-addon。 **约束限制**： - 仅查询集群日志配置信息接口响应中返回该参数 - 作为**配置集群日志**接口更新参数时不支持配置  **取值范围**： - control: 控制面组件日志。 - audit: 控制面审计日志。 - system-addon: 系统插件日志。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ClusterLogConfigLogConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  日志类型
-    * enable  是否采集
-    * type  组件类型
+    * name  **参数解释**： 日志类型 **约束限制**： 必须为 **kube-apiserver**、**kube-controller-manager**、**kube-scheduler**、**audit** 或者系统插件名称 **取值范围**： - kube-apiserver：采集kube-apiserver组件日志 - kube-controller-manager：采集kube-controller-manager日志 - kube-scheduler：采集kube-scheduler日志 - audit：采集审计日志 - 系统插件名称：采集插件日志  **默认取值**： 不涉及
+    * enable  **参数解释**： 是否采集 **取值范围**： - true：开启日志采集 - false：关闭日志采集
+    * type  **参数解释**： 组件类型 , 合法取值为control，audit，system-addon。 **约束限制**： - 仅查询集群日志配置信息接口响应中返回该参数 - 作为**配置集群日志**接口更新参数时不支持配置  **取值范围**： - control: 控制面组件日志。 - audit: 控制面审计日志。 - system-addon: 系统插件日志。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ClusterLogConfigLogConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  日志类型
-    * enable  是否采集
-    * type  组件类型
+    * name  **参数解释**： 日志类型 **约束限制**： 必须为 **kube-apiserver**、**kube-controller-manager**、**kube-scheduler**、**audit** 或者系统插件名称 **取值范围**： - kube-apiserver：采集kube-apiserver组件日志 - kube-controller-manager：采集kube-controller-manager日志 - kube-scheduler：采集kube-scheduler日志 - audit：采集审计日志 - 系统插件名称：采集插件日志  **默认取值**： 不涉及
+    * enable  **参数解释**： 是否采集 **取值范围**： - true：开启日志采集 - false：关闭日志采集
+    * type  **参数解释**： 组件类型 , 合法取值为control，audit，system-addon。 **约束限制**： - 仅查询集群日志配置信息接口响应中返回该参数 - 作为**配置集群日志**接口更新参数时不支持配置  **取值范围**： - control: 控制面组件日志。 - audit: 控制面审计日志。 - system-addon: 系统插件日志。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -149,7 +149,24 @@ class ClusterLogConfigLogConfigs implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TYPE_CONTROL = 'control';
+    const TYPE_AUDIT = 'audit';
+    const TYPE_SYSTEM_ADDON = 'system-addon';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_CONTROL,
+            self::TYPE_AUDIT,
+            self::TYPE_SYSTEM_ADDON,
+        ];
+    }
 
 
     /**
@@ -180,6 +197,14 @@ class ClusterLogConfigLogConfigs implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -196,7 +221,7 @@ class ClusterLogConfigLogConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  日志类型
+    *  **参数解释**： 日志类型 **约束限制**： 必须为 **kube-apiserver**、**kube-controller-manager**、**kube-scheduler**、**audit** 或者系统插件名称 **取值范围**： - kube-apiserver：采集kube-apiserver组件日志 - kube-controller-manager：采集kube-controller-manager日志 - kube-scheduler：采集kube-scheduler日志 - audit：采集审计日志 - 系统插件名称：采集插件日志  **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -208,7 +233,7 @@ class ClusterLogConfigLogConfigs implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 日志类型
+    * @param string|null $name **参数解释**： 日志类型 **约束限制**： 必须为 **kube-apiserver**、**kube-controller-manager**、**kube-scheduler**、**audit** 或者系统插件名称 **取值范围**： - kube-apiserver：采集kube-apiserver组件日志 - kube-controller-manager：采集kube-controller-manager日志 - kube-scheduler：采集kube-scheduler日志 - audit：采集审计日志 - 系统插件名称：采集插件日志  **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -220,7 +245,7 @@ class ClusterLogConfigLogConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Gets enable
-    *  是否采集
+    *  **参数解释**： 是否采集 **取值范围**： - true：开启日志采集 - false：关闭日志采集
     *
     * @return bool|null
     */
@@ -232,7 +257,7 @@ class ClusterLogConfigLogConfigs implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param bool|null $enable 是否采集
+    * @param bool|null $enable **参数解释**： 是否采集 **取值范围**： - true：开启日志采集 - false：关闭日志采集
     *
     * @return $this
     */
@@ -244,7 +269,7 @@ class ClusterLogConfigLogConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  组件类型
+    *  **参数解释**： 组件类型 , 合法取值为control，audit，system-addon。 **约束限制**： - 仅查询集群日志配置信息接口响应中返回该参数 - 作为**配置集群日志**接口更新参数时不支持配置  **取值范围**： - control: 控制面组件日志。 - audit: 控制面审计日志。 - system-addon: 系统插件日志。 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -256,7 +281,7 @@ class ClusterLogConfigLogConfigs implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 组件类型
+    * @param string|null $type **参数解释**： 组件类型 , 合法取值为control，audit，system-addon。 **约束限制**： - 仅查询集群日志配置信息接口响应中返回该参数 - 作为**配置集群日志**接口更新参数时不支持配置  **取值范围**： - control: 控制面组件日志。 - audit: 控制面审计日志。 - system-addon: 系统插件日志。 **默认取值**： 不涉及
     *
     * @return $this
     */

@@ -21,17 +21,17 @@ class ListElbCertsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * certificates  certificates
+    * certificates  证书列表信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'certificates' => '\HuaweiCloud\SDK\Css\V1\Model\CertificatesResource'
+            'certificates' => '\HuaweiCloud\SDK\Css\V1\Model\CertificatesResource[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * certificates  certificates
+    * certificates  证书列表信息。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListElbCertsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * certificates  certificates
+    * certificates  证书列表信息。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListElbCertsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * certificates  certificates
+    * certificates  证书列表信息。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListElbCertsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * certificates  certificates
+    * certificates  证书列表信息。
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class ListElbCertsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificates
-    *  certificates
+    *  证书列表信息。
     *
-    * @return \HuaweiCloud\SDK\Css\V1\Model\CertificatesResource|null
+    * @return \HuaweiCloud\SDK\Css\V1\Model\CertificatesResource[]|null
     */
     public function getCertificates()
     {
@@ -187,7 +187,7 @@ class ListElbCertsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets certificates
     *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\CertificatesResource|null $certificates certificates
+    * @param \HuaweiCloud\SDK\Css\V1\Model\CertificatesResource[]|null $certificates 证书列表信息。
     *
     * @return $this
     */

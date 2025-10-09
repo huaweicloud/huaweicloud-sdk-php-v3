@@ -29,7 +29,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     * authenticationType  认证方式。
     * loadBalancer  loadBalancer
     * listener  listener
-    * healthmonitors  healthmonitors
+    * healthmonitors  健康检查结果集合。
     *
     * @var string[]
     */
@@ -40,9 +40,9 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
             'cacertId' => 'string',
             'elbEnable' => 'bool',
             'authenticationType' => 'string',
-            'loadBalancer' => '\HuaweiCloud\SDK\Css\V1\Model\EsLoadBalancerResource',
+            'loadBalancer' => '\HuaweiCloud\SDK\Css\V1\Model\LoadBalancer',
             'listener' => '\HuaweiCloud\SDK\Css\V1\Model\Elbv3Listener',
-            'healthmonitors' => '\HuaweiCloud\SDK\Css\V1\Model\Member'
+            'healthmonitors' => '\HuaweiCloud\SDK\Css\V1\Model\Member[]'
     ];
 
     /**
@@ -55,7 +55,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     * authenticationType  认证方式。
     * loadBalancer  loadBalancer
     * listener  listener
-    * healthmonitors  healthmonitors
+    * healthmonitors  健康检查结果集合。
     *
     * @var string[]
     */
@@ -102,7 +102,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     * authenticationType  认证方式。
     * loadBalancer  loadBalancer
     * listener  listener
-    * healthmonitors  healthmonitors
+    * healthmonitors  健康检查结果集合。
     *
     * @var string[]
     */
@@ -128,7 +128,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     * authenticationType  认证方式。
     * loadBalancer  loadBalancer
     * listener  listener
-    * healthmonitors  healthmonitors
+    * healthmonitors  健康检查结果集合。
     *
     * @var string[]
     */
@@ -154,7 +154,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     * authenticationType  认证方式。
     * loadBalancer  loadBalancer
     * listener  listener
-    * healthmonitors  healthmonitors
+    * healthmonitors  健康检查结果集合。
     *
     * @var string[]
     */
@@ -409,7 +409,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     * Gets loadBalancer
     *  loadBalancer
     *
-    * @return \HuaweiCloud\SDK\Css\V1\Model\EsLoadBalancerResource|null
+    * @return \HuaweiCloud\SDK\Css\V1\Model\LoadBalancer|null
     */
     public function getLoadBalancer()
     {
@@ -419,7 +419,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets loadBalancer
     *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\EsLoadBalancerResource|null $loadBalancer loadBalancer
+    * @param \HuaweiCloud\SDK\Css\V1\Model\LoadBalancer|null $loadBalancer loadBalancer
     *
     * @return $this
     */
@@ -455,9 +455,9 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets healthmonitors
-    *  healthmonitors
+    *  健康检查结果集合。
     *
-    * @return \HuaweiCloud\SDK\Css\V1\Model\Member|null
+    * @return \HuaweiCloud\SDK\Css\V1\Model\Member[]|null
     */
     public function getHealthmonitors()
     {
@@ -467,7 +467,7 @@ class ShowElbDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets healthmonitors
     *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\Member|null $healthmonitors healthmonitors
+    * @param \HuaweiCloud\SDK\Css\V1\Model\Member[]|null $healthmonitors 健康检查结果集合。
     *
     * @return $this
     */

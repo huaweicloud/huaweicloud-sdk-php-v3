@@ -24,7 +24,7 @@ class ClusterExtendParam implements ModelInterface, ArrayAccess
     * dssMasterVolumes  用于指定控制节点的系统盘和数据盘使用专属分布式存储，未指定或者值为空时，默认使用EVS云硬盘。  如果配置专属CCE集群，该字段为必选，请按照如下格式设置：  ``` <rootVol.dssPoolID>.<rootVol.volType>;<dataVol.dssPoolID>.<dataVol.volType> ```  字段说明： - rootVol为系统盘；dataVol为数据盘； - dssPoolID为专属分布式存储池ID； - volType为专属分布式存储池的存储类型，如SAS、SSD。  样例：c950ee97-587c-4f24-8a74-3367e3da570f.sas;6edbc2f4-1507-44f8-ac0d-eed1d2608d38.ssd  > 非专属CCE集群不支持配置该字段。
     * enterpriseProjectId  集群所属的企业项目ID。 >   - 需要开通企业项目功能后才可配置企业项目。 >   - 集群所属的企业项目与集群下所关联的其他云服务资源所属的企业项目必须保持一致。
     * kubeProxyMode  服务转发模式，支持以下两种实现：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题 - ipvs：主导开发并在社区获得广泛支持的kube-proxy模式，采用增量式更新，吞吐更高，速度更快，并可以保证service更新期间连接保持不断开，适用于大规模场景。  > 此参数已废弃，若同时指定此参数和ClusterSpec下的kubeProxyMode，以ClusterSpec下的为准。
-    * clusterExternalIp  master 弹性公网IP
+    * clusterExternalIp  **参数解释：** 集群控制节点弹性公网IP，绑定后可以通过该弹性公网IP访问集群管控面API。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * alphaCceFixPoolMask  容器网络固定IP池掩码位数，仅vpc-router网络支持。  该参数决定节点可分配容器IP数量，与创建节点时设置的maxPods参数共同决定节点最多可以创建多少个Pod， 具体请参见[节点最多可以创建多少Pod](maxPods.xml)。   整数字符传取值范围: 24 ~ 28
     * decMasterFlavor  专属CCE集群指定可控制节点的规格。
     * dockerUmaskMode  集群默认Docker的UmaskMode配置，可取值为secure或normal，不指定时默认为normal。
@@ -34,7 +34,7 @@ class ClusterExtendParam implements ModelInterface, ArrayAccess
     * periodNum  订购周期数，取值范围： - periodType=month（周期类型为月）时，取值为[1-9]。 - periodType=year（周期类型为年）时，取值为1-3。 > 作为请求参数，billingMode为1时生效，且为必选。 > 作为响应参数，仅在创建包周期集群时返回。
     * isAutoRenew  是否自动续订 - “true”：自动续订 - “false”：不自动续订 > billingMode为1时生效，不填写此参数时默认不会自动续费。
     * isAutoPay  是否自动扣款 - “true”：自动扣款 - “false”：不自动扣款 > billingMode为1时生效，不填写此参数时默认不会自动扣款。
-    * upgradefrom  记录集群通过何种升级方式升级到当前版本。
+    * upgradefrom  **参数解释：** 记录集群通过何种升级方式升级到当前版本。 **约束限制：** 仅查询接口返回该字段 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ClusterExtendParam implements ModelInterface, ArrayAccess
     * dssMasterVolumes  用于指定控制节点的系统盘和数据盘使用专属分布式存储，未指定或者值为空时，默认使用EVS云硬盘。  如果配置专属CCE集群，该字段为必选，请按照如下格式设置：  ``` <rootVol.dssPoolID>.<rootVol.volType>;<dataVol.dssPoolID>.<dataVol.volType> ```  字段说明： - rootVol为系统盘；dataVol为数据盘； - dssPoolID为专属分布式存储池ID； - volType为专属分布式存储池的存储类型，如SAS、SSD。  样例：c950ee97-587c-4f24-8a74-3367e3da570f.sas;6edbc2f4-1507-44f8-ac0d-eed1d2608d38.ssd  > 非专属CCE集群不支持配置该字段。
     * enterpriseProjectId  集群所属的企业项目ID。 >   - 需要开通企业项目功能后才可配置企业项目。 >   - 集群所属的企业项目与集群下所关联的其他云服务资源所属的企业项目必须保持一致。
     * kubeProxyMode  服务转发模式，支持以下两种实现：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题 - ipvs：主导开发并在社区获得广泛支持的kube-proxy模式，采用增量式更新，吞吐更高，速度更快，并可以保证service更新期间连接保持不断开，适用于大规模场景。  > 此参数已废弃，若同时指定此参数和ClusterSpec下的kubeProxyMode，以ClusterSpec下的为准。
-    * clusterExternalIp  master 弹性公网IP
+    * clusterExternalIp  **参数解释：** 集群控制节点弹性公网IP，绑定后可以通过该弹性公网IP访问集群管控面API。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * alphaCceFixPoolMask  容器网络固定IP池掩码位数，仅vpc-router网络支持。  该参数决定节点可分配容器IP数量，与创建节点时设置的maxPods参数共同决定节点最多可以创建多少个Pod， 具体请参见[节点最多可以创建多少Pod](maxPods.xml)。   整数字符传取值范围: 24 ~ 28
     * decMasterFlavor  专属CCE集群指定可控制节点的规格。
     * dockerUmaskMode  集群默认Docker的UmaskMode配置，可取值为secure或normal，不指定时默认为normal。
@@ -72,7 +72,7 @@ class ClusterExtendParam implements ModelInterface, ArrayAccess
     * periodNum  订购周期数，取值范围： - periodType=month（周期类型为月）时，取值为[1-9]。 - periodType=year（周期类型为年）时，取值为1-3。 > 作为请求参数，billingMode为1时生效，且为必选。 > 作为响应参数，仅在创建包周期集群时返回。
     * isAutoRenew  是否自动续订 - “true”：自动续订 - “false”：不自动续订 > billingMode为1时生效，不填写此参数时默认不会自动续费。
     * isAutoPay  是否自动扣款 - “true”：自动扣款 - “false”：不自动扣款 > billingMode为1时生效，不填写此参数时默认不会自动扣款。
-    * upgradefrom  记录集群通过何种升级方式升级到当前版本。
+    * upgradefrom  **参数解释：** 记录集群通过何种升级方式升级到当前版本。 **约束限制：** 仅查询接口返回该字段 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -121,7 +121,7 @@ class ClusterExtendParam implements ModelInterface, ArrayAccess
     * dssMasterVolumes  用于指定控制节点的系统盘和数据盘使用专属分布式存储，未指定或者值为空时，默认使用EVS云硬盘。  如果配置专属CCE集群，该字段为必选，请按照如下格式设置：  ``` <rootVol.dssPoolID>.<rootVol.volType>;<dataVol.dssPoolID>.<dataVol.volType> ```  字段说明： - rootVol为系统盘；dataVol为数据盘； - dssPoolID为专属分布式存储池ID； - volType为专属分布式存储池的存储类型，如SAS、SSD。  样例：c950ee97-587c-4f24-8a74-3367e3da570f.sas;6edbc2f4-1507-44f8-ac0d-eed1d2608d38.ssd  > 非专属CCE集群不支持配置该字段。
     * enterpriseProjectId  集群所属的企业项目ID。 >   - 需要开通企业项目功能后才可配置企业项目。 >   - 集群所属的企业项目与集群下所关联的其他云服务资源所属的企业项目必须保持一致。
     * kubeProxyMode  服务转发模式，支持以下两种实现：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题 - ipvs：主导开发并在社区获得广泛支持的kube-proxy模式，采用增量式更新，吞吐更高，速度更快，并可以保证service更新期间连接保持不断开，适用于大规模场景。  > 此参数已废弃，若同时指定此参数和ClusterSpec下的kubeProxyMode，以ClusterSpec下的为准。
-    * clusterExternalIp  master 弹性公网IP
+    * clusterExternalIp  **参数解释：** 集群控制节点弹性公网IP，绑定后可以通过该弹性公网IP访问集群管控面API。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * alphaCceFixPoolMask  容器网络固定IP池掩码位数，仅vpc-router网络支持。  该参数决定节点可分配容器IP数量，与创建节点时设置的maxPods参数共同决定节点最多可以创建多少个Pod， 具体请参见[节点最多可以创建多少Pod](maxPods.xml)。   整数字符传取值范围: 24 ~ 28
     * decMasterFlavor  专属CCE集群指定可控制节点的规格。
     * dockerUmaskMode  集群默认Docker的UmaskMode配置，可取值为secure或normal，不指定时默认为normal。
@@ -131,7 +131,7 @@ class ClusterExtendParam implements ModelInterface, ArrayAccess
     * periodNum  订购周期数，取值范围： - periodType=month（周期类型为月）时，取值为[1-9]。 - periodType=year（周期类型为年）时，取值为1-3。 > 作为请求参数，billingMode为1时生效，且为必选。 > 作为响应参数，仅在创建包周期集群时返回。
     * isAutoRenew  是否自动续订 - “true”：自动续订 - “false”：不自动续订 > billingMode为1时生效，不填写此参数时默认不会自动续费。
     * isAutoPay  是否自动扣款 - “true”：自动扣款 - “false”：不自动扣款 > billingMode为1时生效，不填写此参数时默认不会自动扣款。
-    * upgradefrom  记录集群通过何种升级方式升级到当前版本。
+    * upgradefrom  **参数解释：** 记录集群通过何种升级方式升级到当前版本。 **约束限制：** 仅查询接口返回该字段 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -159,7 +159,7 @@ class ClusterExtendParam implements ModelInterface, ArrayAccess
     * dssMasterVolumes  用于指定控制节点的系统盘和数据盘使用专属分布式存储，未指定或者值为空时，默认使用EVS云硬盘。  如果配置专属CCE集群，该字段为必选，请按照如下格式设置：  ``` <rootVol.dssPoolID>.<rootVol.volType>;<dataVol.dssPoolID>.<dataVol.volType> ```  字段说明： - rootVol为系统盘；dataVol为数据盘； - dssPoolID为专属分布式存储池ID； - volType为专属分布式存储池的存储类型，如SAS、SSD。  样例：c950ee97-587c-4f24-8a74-3367e3da570f.sas;6edbc2f4-1507-44f8-ac0d-eed1d2608d38.ssd  > 非专属CCE集群不支持配置该字段。
     * enterpriseProjectId  集群所属的企业项目ID。 >   - 需要开通企业项目功能后才可配置企业项目。 >   - 集群所属的企业项目与集群下所关联的其他云服务资源所属的企业项目必须保持一致。
     * kubeProxyMode  服务转发模式，支持以下两种实现：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题 - ipvs：主导开发并在社区获得广泛支持的kube-proxy模式，采用增量式更新，吞吐更高，速度更快，并可以保证service更新期间连接保持不断开，适用于大规模场景。  > 此参数已废弃，若同时指定此参数和ClusterSpec下的kubeProxyMode，以ClusterSpec下的为准。
-    * clusterExternalIp  master 弹性公网IP
+    * clusterExternalIp  **参数解释：** 集群控制节点弹性公网IP，绑定后可以通过该弹性公网IP访问集群管控面API。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * alphaCceFixPoolMask  容器网络固定IP池掩码位数，仅vpc-router网络支持。  该参数决定节点可分配容器IP数量，与创建节点时设置的maxPods参数共同决定节点最多可以创建多少个Pod， 具体请参见[节点最多可以创建多少Pod](maxPods.xml)。   整数字符传取值范围: 24 ~ 28
     * decMasterFlavor  专属CCE集群指定可控制节点的规格。
     * dockerUmaskMode  集群默认Docker的UmaskMode配置，可取值为secure或normal，不指定时默认为normal。
@@ -169,7 +169,7 @@ class ClusterExtendParam implements ModelInterface, ArrayAccess
     * periodNum  订购周期数，取值范围： - periodType=month（周期类型为月）时，取值为[1-9]。 - periodType=year（周期类型为年）时，取值为1-3。 > 作为请求参数，billingMode为1时生效，且为必选。 > 作为响应参数，仅在创建包周期集群时返回。
     * isAutoRenew  是否自动续订 - “true”：自动续订 - “false”：不自动续订 > billingMode为1时生效，不填写此参数时默认不会自动续费。
     * isAutoPay  是否自动扣款 - “true”：自动扣款 - “false”：不自动扣款 > billingMode为1时生效，不填写此参数时默认不会自动扣款。
-    * upgradefrom  记录集群通过何种升级方式升级到当前版本。
+    * upgradefrom  **参数解释：** 记录集群通过何种升级方式升级到当前版本。 **约束限制：** 仅查询接口返回该字段 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ClusterExtendParam implements ModelInterface, ArrayAccess
     * dssMasterVolumes  用于指定控制节点的系统盘和数据盘使用专属分布式存储，未指定或者值为空时，默认使用EVS云硬盘。  如果配置专属CCE集群，该字段为必选，请按照如下格式设置：  ``` <rootVol.dssPoolID>.<rootVol.volType>;<dataVol.dssPoolID>.<dataVol.volType> ```  字段说明： - rootVol为系统盘；dataVol为数据盘； - dssPoolID为专属分布式存储池ID； - volType为专属分布式存储池的存储类型，如SAS、SSD。  样例：c950ee97-587c-4f24-8a74-3367e3da570f.sas;6edbc2f4-1507-44f8-ac0d-eed1d2608d38.ssd  > 非专属CCE集群不支持配置该字段。
     * enterpriseProjectId  集群所属的企业项目ID。 >   - 需要开通企业项目功能后才可配置企业项目。 >   - 集群所属的企业项目与集群下所关联的其他云服务资源所属的企业项目必须保持一致。
     * kubeProxyMode  服务转发模式，支持以下两种实现：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题 - ipvs：主导开发并在社区获得广泛支持的kube-proxy模式，采用增量式更新，吞吐更高，速度更快，并可以保证service更新期间连接保持不断开，适用于大规模场景。  > 此参数已废弃，若同时指定此参数和ClusterSpec下的kubeProxyMode，以ClusterSpec下的为准。
-    * clusterExternalIp  master 弹性公网IP
+    * clusterExternalIp  **参数解释：** 集群控制节点弹性公网IP，绑定后可以通过该弹性公网IP访问集群管控面API。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * alphaCceFixPoolMask  容器网络固定IP池掩码位数，仅vpc-router网络支持。  该参数决定节点可分配容器IP数量，与创建节点时设置的maxPods参数共同决定节点最多可以创建多少个Pod， 具体请参见[节点最多可以创建多少Pod](maxPods.xml)。   整数字符传取值范围: 24 ~ 28
     * decMasterFlavor  专属CCE集群指定可控制节点的规格。
     * dockerUmaskMode  集群默认Docker的UmaskMode配置，可取值为secure或normal，不指定时默认为normal。
@@ -207,7 +207,7 @@ class ClusterExtendParam implements ModelInterface, ArrayAccess
     * periodNum  订购周期数，取值范围： - periodType=month（周期类型为月）时，取值为[1-9]。 - periodType=year（周期类型为年）时，取值为1-3。 > 作为请求参数，billingMode为1时生效，且为必选。 > 作为响应参数，仅在创建包周期集群时返回。
     * isAutoRenew  是否自动续订 - “true”：自动续订 - “false”：不自动续订 > billingMode为1时生效，不填写此参数时默认不会自动续费。
     * isAutoPay  是否自动扣款 - “true”：自动扣款 - “false”：不自动扣款 > billingMode为1时生效，不填写此参数时默认不会自动扣款。
-    * upgradefrom  记录集群通过何种升级方式升级到当前版本。
+    * upgradefrom  **参数解释：** 记录集群通过何种升级方式升级到当前版本。 **约束限制：** 仅查询接口返回该字段 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -424,7 +424,7 @@ class ClusterExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterExternalIp
-    *  master 弹性公网IP
+    *  **参数解释：** 集群控制节点弹性公网IP，绑定后可以通过该弹性公网IP访问集群管控面API。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -436,7 +436,7 @@ class ClusterExtendParam implements ModelInterface, ArrayAccess
     /**
     * Sets clusterExternalIp
     *
-    * @param string|null $clusterExternalIp master 弹性公网IP
+    * @param string|null $clusterExternalIp **参数解释：** 集群控制节点弹性公网IP，绑定后可以通过该弹性公网IP访问集群管控面API。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -664,7 +664,7 @@ class ClusterExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets upgradefrom
-    *  记录集群通过何种升级方式升级到当前版本。
+    *  **参数解释：** 记录集群通过何种升级方式升级到当前版本。 **约束限制：** 仅查询接口返回该字段 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -676,7 +676,7 @@ class ClusterExtendParam implements ModelInterface, ArrayAccess
     /**
     * Sets upgradefrom
     *
-    * @param string|null $upgradefrom 记录集群通过何种升级方式升级到当前版本。
+    * @param string|null $upgradefrom **参数解释：** 记录集群通过何种升级方式升级到当前版本。 **约束限制：** 仅查询接口返回该字段 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

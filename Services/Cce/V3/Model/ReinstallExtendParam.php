@@ -20,7 +20,7 @@ class ReinstallExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alphaCceNodeImageId  指定待切换目标操作系统所使用的用户镜像ID，已废弃。 指定此参数等价于指定ReinstallVolumeSpec中imageID，原取值将被覆盖。
+    * alphaCceNodeImageId  **参数解释**: 指定待切换目标操作系统所使用的用户镜像ID，已废弃。 指定此参数等价于指定ReinstallVolumeSpec中imageID，原取值将被覆盖。 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ReinstallExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alphaCceNodeImageId  指定待切换目标操作系统所使用的用户镜像ID，已废弃。 指定此参数等价于指定ReinstallVolumeSpec中imageID，原取值将被覆盖。
+    * alphaCceNodeImageId  **参数解释**: 指定待切换目标操作系统所使用的用户镜像ID，已废弃。 指定此参数等价于指定ReinstallVolumeSpec中imageID，原取值将被覆盖。 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ReinstallExtendParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alphaCceNodeImageId  指定待切换目标操作系统所使用的用户镜像ID，已废弃。 指定此参数等价于指定ReinstallVolumeSpec中imageID，原取值将被覆盖。
+    * alphaCceNodeImageId  **参数解释**: 指定待切换目标操作系统所使用的用户镜像ID，已废弃。 指定此参数等价于指定ReinstallVolumeSpec中imageID，原取值将被覆盖。 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ReinstallExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alphaCceNodeImageId  指定待切换目标操作系统所使用的用户镜像ID，已废弃。 指定此参数等价于指定ReinstallVolumeSpec中imageID，原取值将被覆盖。
+    * alphaCceNodeImageId  **参数解释**: 指定待切换目标操作系统所使用的用户镜像ID，已废弃。 指定此参数等价于指定ReinstallVolumeSpec中imageID，原取值将被覆盖。 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ReinstallExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alphaCceNodeImageId  指定待切换目标操作系统所使用的用户镜像ID，已废弃。 指定此参数等价于指定ReinstallVolumeSpec中imageID，原取值将被覆盖。
+    * alphaCceNodeImageId  **参数解释**: 指定待切换目标操作系统所使用的用户镜像ID，已废弃。 指定此参数等价于指定ReinstallVolumeSpec中imageID，原取值将被覆盖。 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class ReinstallExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets alphaCceNodeImageId
-    *  指定待切换目标操作系统所使用的用户镜像ID，已废弃。 指定此参数等价于指定ReinstallVolumeSpec中imageID，原取值将被覆盖。
+    *  **参数解释**: 指定待切换目标操作系统所使用的用户镜像ID，已废弃。 指定此参数等价于指定ReinstallVolumeSpec中imageID，原取值将被覆盖。 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class ReinstallExtendParam implements ModelInterface, ArrayAccess
     /**
     * Sets alphaCceNodeImageId
     *
-    * @param string|null $alphaCceNodeImageId 指定待切换目标操作系统所使用的用户镜像ID，已废弃。 指定此参数等价于指定ReinstallVolumeSpec中imageID，原取值将被覆盖。
+    * @param string|null $alphaCceNodeImageId **参数解释**: 指定待切换目标操作系统所使用的用户镜像ID，已废弃。 指定此参数等价于指定ReinstallVolumeSpec中imageID，原取值将被覆盖。 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
     *
     * @return $this
     */

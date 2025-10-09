@@ -23,48 +23,64 @@ class ShowAutoCreatePolicyResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * keepday  快照保留的天数。
     * period  每天快照创建时刻。
+    * frequency  自动创建快照的执行频次。
     * prefix  快照命名前缀，需要用户自己手动输入。
     * bucket  快照存放的OBS桶的桶名。
     * basePath  快照在OBS桶中的存放路径。
     * agency  访问OBS桶用到的委托。
     * enable  是否开启自动创建快照策略。 - true：表示开启自动创建快照策略。 - false：表示关闭自动创建快照策略。
-    * frequency  自动创建快照的执行频次。
+    * indices  需要备份的索引名。
+    * snapshotCmkId  快照ID。
+    * maxSnapshotBytesPerSeconds  配置每个节点的最大备份速率（每秒），即当备份的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际备份速率不一定能达到该值，会受OBS、磁盘等影响。
+    * maxRestoreBytesPerSeconds  配置每个节点的最大恢复速率（每秒），即当恢复的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际恢复速率不一定能达到该值，会受OBS、磁盘等影响。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'keepday' => 'int',
             'period' => 'string',
+            'frequency' => 'string',
             'prefix' => 'string',
             'bucket' => 'string',
             'basePath' => 'string',
             'agency' => 'string',
             'enable' => 'string',
-            'frequency' => 'string'
+            'indices' => 'string',
+            'snapshotCmkId' => 'string',
+            'maxSnapshotBytesPerSeconds' => 'string',
+            'maxRestoreBytesPerSeconds' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * keepday  快照保留的天数。
     * period  每天快照创建时刻。
+    * frequency  自动创建快照的执行频次。
     * prefix  快照命名前缀，需要用户自己手动输入。
     * bucket  快照存放的OBS桶的桶名。
     * basePath  快照在OBS桶中的存放路径。
     * agency  访问OBS桶用到的委托。
     * enable  是否开启自动创建快照策略。 - true：表示开启自动创建快照策略。 - false：表示关闭自动创建快照策略。
-    * frequency  自动创建快照的执行频次。
+    * indices  需要备份的索引名。
+    * snapshotCmkId  快照ID。
+    * maxSnapshotBytesPerSeconds  配置每个节点的最大备份速率（每秒），即当备份的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际备份速率不一定能达到该值，会受OBS、磁盘等影响。
+    * maxRestoreBytesPerSeconds  配置每个节点的最大恢复速率（每秒），即当恢复的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际恢复速率不一定能达到该值，会受OBS、磁盘等影响。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'keepday' => null,
         'period' => null,
+        'frequency' => null,
         'prefix' => null,
         'bucket' => null,
         'basePath' => null,
         'agency' => null,
         'enable' => null,
-        'frequency' => null
+        'indices' => null,
+        'snapshotCmkId' => null,
+        'maxSnapshotBytesPerSeconds' => null,
+        'maxRestoreBytesPerSeconds' => null
     ];
 
     /**
@@ -92,72 +108,96 @@ class ShowAutoCreatePolicyResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * keepday  快照保留的天数。
     * period  每天快照创建时刻。
+    * frequency  自动创建快照的执行频次。
     * prefix  快照命名前缀，需要用户自己手动输入。
     * bucket  快照存放的OBS桶的桶名。
     * basePath  快照在OBS桶中的存放路径。
     * agency  访问OBS桶用到的委托。
     * enable  是否开启自动创建快照策略。 - true：表示开启自动创建快照策略。 - false：表示关闭自动创建快照策略。
-    * frequency  自动创建快照的执行频次。
+    * indices  需要备份的索引名。
+    * snapshotCmkId  快照ID。
+    * maxSnapshotBytesPerSeconds  配置每个节点的最大备份速率（每秒），即当备份的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际备份速率不一定能达到该值，会受OBS、磁盘等影响。
+    * maxRestoreBytesPerSeconds  配置每个节点的最大恢复速率（每秒），即当恢复的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际恢复速率不一定能达到该值，会受OBS、磁盘等影响。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'keepday' => 'keepday',
             'period' => 'period',
+            'frequency' => 'frequency',
             'prefix' => 'prefix',
             'bucket' => 'bucket',
             'basePath' => 'basePath',
             'agency' => 'agency',
             'enable' => 'enable',
-            'frequency' => 'frequency'
+            'indices' => 'indices',
+            'snapshotCmkId' => 'snapshotCmkId',
+            'maxSnapshotBytesPerSeconds' => 'maxSnapshotBytesPerSeconds',
+            'maxRestoreBytesPerSeconds' => 'maxRestoreBytesPerSeconds'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * keepday  快照保留的天数。
     * period  每天快照创建时刻。
+    * frequency  自动创建快照的执行频次。
     * prefix  快照命名前缀，需要用户自己手动输入。
     * bucket  快照存放的OBS桶的桶名。
     * basePath  快照在OBS桶中的存放路径。
     * agency  访问OBS桶用到的委托。
     * enable  是否开启自动创建快照策略。 - true：表示开启自动创建快照策略。 - false：表示关闭自动创建快照策略。
-    * frequency  自动创建快照的执行频次。
+    * indices  需要备份的索引名。
+    * snapshotCmkId  快照ID。
+    * maxSnapshotBytesPerSeconds  配置每个节点的最大备份速率（每秒），即当备份的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际备份速率不一定能达到该值，会受OBS、磁盘等影响。
+    * maxRestoreBytesPerSeconds  配置每个节点的最大恢复速率（每秒），即当恢复的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际恢复速率不一定能达到该值，会受OBS、磁盘等影响。
     *
     * @var string[]
     */
     protected static $setters = [
             'keepday' => 'setKeepday',
             'period' => 'setPeriod',
+            'frequency' => 'setFrequency',
             'prefix' => 'setPrefix',
             'bucket' => 'setBucket',
             'basePath' => 'setBasePath',
             'agency' => 'setAgency',
             'enable' => 'setEnable',
-            'frequency' => 'setFrequency'
+            'indices' => 'setIndices',
+            'snapshotCmkId' => 'setSnapshotCmkId',
+            'maxSnapshotBytesPerSeconds' => 'setMaxSnapshotBytesPerSeconds',
+            'maxRestoreBytesPerSeconds' => 'setMaxRestoreBytesPerSeconds'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * keepday  快照保留的天数。
     * period  每天快照创建时刻。
+    * frequency  自动创建快照的执行频次。
     * prefix  快照命名前缀，需要用户自己手动输入。
     * bucket  快照存放的OBS桶的桶名。
     * basePath  快照在OBS桶中的存放路径。
     * agency  访问OBS桶用到的委托。
     * enable  是否开启自动创建快照策略。 - true：表示开启自动创建快照策略。 - false：表示关闭自动创建快照策略。
-    * frequency  自动创建快照的执行频次。
+    * indices  需要备份的索引名。
+    * snapshotCmkId  快照ID。
+    * maxSnapshotBytesPerSeconds  配置每个节点的最大备份速率（每秒），即当备份的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际备份速率不一定能达到该值，会受OBS、磁盘等影响。
+    * maxRestoreBytesPerSeconds  配置每个节点的最大恢复速率（每秒），即当恢复的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际恢复速率不一定能达到该值，会受OBS、磁盘等影响。
     *
     * @var string[]
     */
     protected static $getters = [
             'keepday' => 'getKeepday',
             'period' => 'getPeriod',
+            'frequency' => 'getFrequency',
             'prefix' => 'getPrefix',
             'bucket' => 'getBucket',
             'basePath' => 'getBasePath',
             'agency' => 'getAgency',
             'enable' => 'getEnable',
-            'frequency' => 'getFrequency'
+            'indices' => 'getIndices',
+            'snapshotCmkId' => 'getSnapshotCmkId',
+            'maxSnapshotBytesPerSeconds' => 'getMaxSnapshotBytesPerSeconds',
+            'maxRestoreBytesPerSeconds' => 'getMaxRestoreBytesPerSeconds'
     ];
 
     /**
@@ -220,12 +260,16 @@ class ShowAutoCreatePolicyResponse implements ModelInterface, ArrayAccess
     {
         $this->container['keepday'] = isset($data['keepday']) ? $data['keepday'] : null;
         $this->container['period'] = isset($data['period']) ? $data['period'] : null;
+        $this->container['frequency'] = isset($data['frequency']) ? $data['frequency'] : null;
         $this->container['prefix'] = isset($data['prefix']) ? $data['prefix'] : null;
         $this->container['bucket'] = isset($data['bucket']) ? $data['bucket'] : null;
         $this->container['basePath'] = isset($data['basePath']) ? $data['basePath'] : null;
         $this->container['agency'] = isset($data['agency']) ? $data['agency'] : null;
         $this->container['enable'] = isset($data['enable']) ? $data['enable'] : null;
-        $this->container['frequency'] = isset($data['frequency']) ? $data['frequency'] : null;
+        $this->container['indices'] = isset($data['indices']) ? $data['indices'] : null;
+        $this->container['snapshotCmkId'] = isset($data['snapshotCmkId']) ? $data['snapshotCmkId'] : null;
+        $this->container['maxSnapshotBytesPerSeconds'] = isset($data['maxSnapshotBytesPerSeconds']) ? $data['maxSnapshotBytesPerSeconds'] : null;
+        $this->container['maxRestoreBytesPerSeconds'] = isset($data['maxRestoreBytesPerSeconds']) ? $data['maxRestoreBytesPerSeconds'] : null;
     }
 
     /**
@@ -295,6 +339,30 @@ class ShowAutoCreatePolicyResponse implements ModelInterface, ArrayAccess
     public function setPeriod($period)
     {
         $this->container['period'] = $period;
+        return $this;
+    }
+
+    /**
+    * Gets frequency
+    *  自动创建快照的执行频次。
+    *
+    * @return string|null
+    */
+    public function getFrequency()
+    {
+        return $this->container['frequency'];
+    }
+
+    /**
+    * Sets frequency
+    *
+    * @param string|null $frequency 自动创建快照的执行频次。
+    *
+    * @return $this
+    */
+    public function setFrequency($frequency)
+    {
+        $this->container['frequency'] = $frequency;
         return $this;
     }
 
@@ -419,26 +487,98 @@ class ShowAutoCreatePolicyResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets frequency
-    *  自动创建快照的执行频次。
+    * Gets indices
+    *  需要备份的索引名。
     *
     * @return string|null
     */
-    public function getFrequency()
+    public function getIndices()
     {
-        return $this->container['frequency'];
+        return $this->container['indices'];
     }
 
     /**
-    * Sets frequency
+    * Sets indices
     *
-    * @param string|null $frequency 自动创建快照的执行频次。
+    * @param string|null $indices 需要备份的索引名。
     *
     * @return $this
     */
-    public function setFrequency($frequency)
+    public function setIndices($indices)
     {
-        $this->container['frequency'] = $frequency;
+        $this->container['indices'] = $indices;
+        return $this;
+    }
+
+    /**
+    * Gets snapshotCmkId
+    *  快照ID。
+    *
+    * @return string|null
+    */
+    public function getSnapshotCmkId()
+    {
+        return $this->container['snapshotCmkId'];
+    }
+
+    /**
+    * Sets snapshotCmkId
+    *
+    * @param string|null $snapshotCmkId 快照ID。
+    *
+    * @return $this
+    */
+    public function setSnapshotCmkId($snapshotCmkId)
+    {
+        $this->container['snapshotCmkId'] = $snapshotCmkId;
+        return $this;
+    }
+
+    /**
+    * Gets maxSnapshotBytesPerSeconds
+    *  配置每个节点的最大备份速率（每秒），即当备份的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际备份速率不一定能达到该值，会受OBS、磁盘等影响。
+    *
+    * @return string|null
+    */
+    public function getMaxSnapshotBytesPerSeconds()
+    {
+        return $this->container['maxSnapshotBytesPerSeconds'];
+    }
+
+    /**
+    * Sets maxSnapshotBytesPerSeconds
+    *
+    * @param string|null $maxSnapshotBytesPerSeconds 配置每个节点的最大备份速率（每秒），即当备份的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际备份速率不一定能达到该值，会受OBS、磁盘等影响。
+    *
+    * @return $this
+    */
+    public function setMaxSnapshotBytesPerSeconds($maxSnapshotBytesPerSeconds)
+    {
+        $this->container['maxSnapshotBytesPerSeconds'] = $maxSnapshotBytesPerSeconds;
+        return $this;
+    }
+
+    /**
+    * Gets maxRestoreBytesPerSeconds
+    *  配置每个节点的最大恢复速率（每秒），即当恢复的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际恢复速率不一定能达到该值，会受OBS、磁盘等影响。
+    *
+    * @return string|null
+    */
+    public function getMaxRestoreBytesPerSeconds()
+    {
+        return $this->container['maxRestoreBytesPerSeconds'];
+    }
+
+    /**
+    * Sets maxRestoreBytesPerSeconds
+    *
+    * @param string|null $maxRestoreBytesPerSeconds 配置每个节点的最大恢复速率（每秒），即当恢复的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际恢复速率不一定能达到该值，会受OBS、磁盘等影响。
+    *
+    * @return $this
+    */
+    public function setMaxRestoreBytesPerSeconds($maxRestoreBytesPerSeconds)
+    {
+        $this->container['maxRestoreBytesPerSeconds'] = $maxRestoreBytesPerSeconds;
         return $this;
     }
 

@@ -20,12 +20,12 @@ class PackageOptions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  参数名称
-    * default  参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean
-    * validAt  参数生效方式  - static：节点创建时生效，后续不可修改 - immediately：节点运行中时可以修改，修改后生效
-    * empty  配置项是否可以为空  - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
-    * schema  参数分类
-    * type  参数类型
+    * name  **参数解释**： 参数名称 **取值范围**： 不涉及
+    * default  **参数解释**： 参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean **取值范围**： 不涉及
+    * validAt  **参数解释**： 参数生效方式 **取值范围**： - static：集群、节点池创建时生效，后续不可修改 - immediately：集群、节点池运行中时可以修改，修改后生效
+    * empty  **参数解释**： 配置项是否可以为空 **取值范围**： - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
+    * schema  **参数解释**： 参数分类 **取值范围**： 不涉及
+    * type  **参数解释**： 参数类型 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class PackageOptions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  参数名称
-    * default  参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean
-    * validAt  参数生效方式  - static：节点创建时生效，后续不可修改 - immediately：节点运行中时可以修改，修改后生效
-    * empty  配置项是否可以为空  - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
-    * schema  参数分类
-    * type  参数类型
+    * name  **参数解释**： 参数名称 **取值范围**： 不涉及
+    * default  **参数解释**： 参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean **取值范围**： 不涉及
+    * validAt  **参数解释**： 参数生效方式 **取值范围**： - static：集群、节点池创建时生效，后续不可修改 - immediately：集群、节点池运行中时可以修改，修改后生效
+    * empty  **参数解释**： 配置项是否可以为空 **取值范围**： - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
+    * schema  **参数解释**： 参数分类 **取值范围**： 不涉及
+    * type  **参数解释**： 参数类型 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class PackageOptions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  参数名称
-    * default  参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean
-    * validAt  参数生效方式  - static：节点创建时生效，后续不可修改 - immediately：节点运行中时可以修改，修改后生效
-    * empty  配置项是否可以为空  - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
-    * schema  参数分类
-    * type  参数类型
+    * name  **参数解释**： 参数名称 **取值范围**： 不涉及
+    * default  **参数解释**： 参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean **取值范围**： 不涉及
+    * validAt  **参数解释**： 参数生效方式 **取值范围**： - static：集群、节点池创建时生效，后续不可修改 - immediately：集群、节点池运行中时可以修改，修改后生效
+    * empty  **参数解释**： 配置项是否可以为空 **取值范围**： - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
+    * schema  **参数解释**： 参数分类 **取值范围**： 不涉及
+    * type  **参数解释**： 参数类型 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class PackageOptions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  参数名称
-    * default  参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean
-    * validAt  参数生效方式  - static：节点创建时生效，后续不可修改 - immediately：节点运行中时可以修改，修改后生效
-    * empty  配置项是否可以为空  - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
-    * schema  参数分类
-    * type  参数类型
+    * name  **参数解释**： 参数名称 **取值范围**： 不涉及
+    * default  **参数解释**： 参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean **取值范围**： 不涉及
+    * validAt  **参数解释**： 参数生效方式 **取值范围**： - static：集群、节点池创建时生效，后续不可修改 - immediately：集群、节点池运行中时可以修改，修改后生效
+    * empty  **参数解释**： 配置项是否可以为空 **取值范围**： - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
+    * schema  **参数解释**： 参数分类 **取值范围**： 不涉及
+    * type  **参数解释**： 参数类型 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class PackageOptions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  参数名称
-    * default  参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean
-    * validAt  参数生效方式  - static：节点创建时生效，后续不可修改 - immediately：节点运行中时可以修改，修改后生效
-    * empty  配置项是否可以为空  - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
-    * schema  参数分类
-    * type  参数类型
+    * name  **参数解释**： 参数名称 **取值范围**： 不涉及
+    * default  **参数解释**： 参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean **取值范围**： 不涉及
+    * validAt  **参数解释**： 参数生效方式 **取值范围**： - static：集群、节点池创建时生效，后续不可修改 - immediately：集群、节点池运行中时可以修改，修改后生效
+    * empty  **参数解释**： 配置项是否可以为空 **取值范围**： - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
+    * schema  **参数解释**： 参数分类 **取值范围**： 不涉及
+    * type  **参数解释**： 参数类型 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -270,7 +270,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  参数名称
+    *  **参数解释**： 参数名称 **取值范围**： 不涉及
     *
     * @return string
     */
@@ -282,7 +282,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 参数名称
+    * @param string $name **参数解释**： 参数名称 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -294,7 +294,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
 
     /**
     * Gets default
-    *  参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean
+    *  **参数解释**： 参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean **取值范围**： 不涉及
     *
     * @return object
     */
@@ -306,7 +306,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     /**
     * Sets default
     *
-    * @param object $default 参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean
+    * @param object $default **参数解释**： 参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -318,7 +318,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
 
     /**
     * Gets validAt
-    *  参数生效方式  - static：节点创建时生效，后续不可修改 - immediately：节点运行中时可以修改，修改后生效
+    *  **参数解释**： 参数生效方式 **取值范围**： - static：集群、节点池创建时生效，后续不可修改 - immediately：集群、节点池运行中时可以修改，修改后生效
     *
     * @return string
     */
@@ -330,7 +330,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     /**
     * Sets validAt
     *
-    * @param string $validAt 参数生效方式  - static：节点创建时生效，后续不可修改 - immediately：节点运行中时可以修改，修改后生效
+    * @param string $validAt **参数解释**： 参数生效方式 **取值范围**： - static：集群、节点池创建时生效，后续不可修改 - immediately：集群、节点池运行中时可以修改，修改后生效
     *
     * @return $this
     */
@@ -342,7 +342,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
 
     /**
     * Gets empty
-    *  配置项是否可以为空  - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
+    *  **参数解释**： 配置项是否可以为空 **取值范围**： - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
     *
     * @return bool
     */
@@ -354,7 +354,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     /**
     * Sets empty
     *
-    * @param bool $empty 配置项是否可以为空  - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
+    * @param bool $empty **参数解释**： 配置项是否可以为空 **取值范围**： - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
     *
     * @return $this
     */
@@ -366,7 +366,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
 
     /**
     * Gets schema
-    *  参数分类
+    *  **参数解释**： 参数分类 **取值范围**： 不涉及
     *
     * @return string
     */
@@ -378,7 +378,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     /**
     * Sets schema
     *
-    * @param string $schema 参数分类
+    * @param string $schema **参数解释**： 参数分类 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -390,7 +390,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  参数类型
+    *  **参数解释**： 参数类型 **取值范围**： 不涉及
     *
     * @return string
     */
@@ -402,7 +402,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 参数类型
+    * @param string $type **参数解释**： 参数类型 **取值范围**： 不涉及
     *
     * @return $this
     */

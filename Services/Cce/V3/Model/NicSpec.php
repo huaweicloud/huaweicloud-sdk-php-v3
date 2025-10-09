@@ -21,8 +21,8 @@ class NicSpec implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * subnetId  网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
-    * fixedIps  主网卡的IP将通过fixedIps指定，数量不得大于创建的节点数。fixedIps或ipBlock同时只能指定一个。扩展网卡不支持指定fixedIps。
-    * ipBlock  主网卡的IP段的CIDR格式，创建的节点IP将属于该IP段内。fixedIps或ipBlock同时只能指定一个。
+    * fixedIps  **参数解释**： 主网卡的IP将通过fixedIps指定，数量不得大于创建的节点数。 **约束限制**： - fixedIps或ipBlock同时只能指定一个 - 扩展网卡不支持指定fiexdIps - 创建节点池场景不支持该配置参数
+    * ipBlock  **参数解释**： 主网卡的IP段的CIDR格式，创建的节点IP将属于该IP段内。 **约束限制**： - fixedIps或ipBlock同时只能指定一个。 - 创建节点池场景不支持该配置参数  **取值范围**： 不涉及 **默认取值**： 不涉及
     * subnetList  网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
     *
     * @var string[]
@@ -37,8 +37,8 @@ class NicSpec implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * subnetId  网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
-    * fixedIps  主网卡的IP将通过fixedIps指定，数量不得大于创建的节点数。fixedIps或ipBlock同时只能指定一个。扩展网卡不支持指定fixedIps。
-    * ipBlock  主网卡的IP段的CIDR格式，创建的节点IP将属于该IP段内。fixedIps或ipBlock同时只能指定一个。
+    * fixedIps  **参数解释**： 主网卡的IP将通过fixedIps指定，数量不得大于创建的节点数。 **约束限制**： - fixedIps或ipBlock同时只能指定一个 - 扩展网卡不支持指定fiexdIps - 创建节点池场景不支持该配置参数
+    * ipBlock  **参数解释**： 主网卡的IP段的CIDR格式，创建的节点IP将属于该IP段内。 **约束限制**： - fixedIps或ipBlock同时只能指定一个。 - 创建节点池场景不支持该配置参数  **取值范围**： 不涉及 **默认取值**： 不涉及
     * subnetList  网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
     *
     * @var string[]
@@ -74,8 +74,8 @@ class NicSpec implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * subnetId  网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
-    * fixedIps  主网卡的IP将通过fixedIps指定，数量不得大于创建的节点数。fixedIps或ipBlock同时只能指定一个。扩展网卡不支持指定fixedIps。
-    * ipBlock  主网卡的IP段的CIDR格式，创建的节点IP将属于该IP段内。fixedIps或ipBlock同时只能指定一个。
+    * fixedIps  **参数解释**： 主网卡的IP将通过fixedIps指定，数量不得大于创建的节点数。 **约束限制**： - fixedIps或ipBlock同时只能指定一个 - 扩展网卡不支持指定fiexdIps - 创建节点池场景不支持该配置参数
+    * ipBlock  **参数解释**： 主网卡的IP段的CIDR格式，创建的节点IP将属于该IP段内。 **约束限制**： - fixedIps或ipBlock同时只能指定一个。 - 创建节点池场景不支持该配置参数  **取值范围**： 不涉及 **默认取值**： 不涉及
     * subnetList  网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
     *
     * @var string[]
@@ -90,8 +90,8 @@ class NicSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * subnetId  网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
-    * fixedIps  主网卡的IP将通过fixedIps指定，数量不得大于创建的节点数。fixedIps或ipBlock同时只能指定一个。扩展网卡不支持指定fixedIps。
-    * ipBlock  主网卡的IP段的CIDR格式，创建的节点IP将属于该IP段内。fixedIps或ipBlock同时只能指定一个。
+    * fixedIps  **参数解释**： 主网卡的IP将通过fixedIps指定，数量不得大于创建的节点数。 **约束限制**： - fixedIps或ipBlock同时只能指定一个 - 扩展网卡不支持指定fiexdIps - 创建节点池场景不支持该配置参数
+    * ipBlock  **参数解释**： 主网卡的IP段的CIDR格式，创建的节点IP将属于该IP段内。 **约束限制**： - fixedIps或ipBlock同时只能指定一个。 - 创建节点池场景不支持该配置参数  **取值范围**： 不涉及 **默认取值**： 不涉及
     * subnetList  网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
     *
     * @var string[]
@@ -106,8 +106,8 @@ class NicSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * subnetId  网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
-    * fixedIps  主网卡的IP将通过fixedIps指定，数量不得大于创建的节点数。fixedIps或ipBlock同时只能指定一个。扩展网卡不支持指定fixedIps。
-    * ipBlock  主网卡的IP段的CIDR格式，创建的节点IP将属于该IP段内。fixedIps或ipBlock同时只能指定一个。
+    * fixedIps  **参数解释**： 主网卡的IP将通过fixedIps指定，数量不得大于创建的节点数。 **约束限制**： - fixedIps或ipBlock同时只能指定一个 - 扩展网卡不支持指定fiexdIps - 创建节点池场景不支持该配置参数
+    * ipBlock  **参数解释**： 主网卡的IP段的CIDR格式，创建的节点IP将属于该IP段内。 **约束限制**： - fixedIps或ipBlock同时只能指定一个。 - 创建节点池场景不支持该配置参数  **取值范围**： 不涉及 **默认取值**： 不涉及
     * subnetList  网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
     *
     * @var string[]
@@ -234,7 +234,7 @@ class NicSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets fixedIps
-    *  主网卡的IP将通过fixedIps指定，数量不得大于创建的节点数。fixedIps或ipBlock同时只能指定一个。扩展网卡不支持指定fixedIps。
+    *  **参数解释**： 主网卡的IP将通过fixedIps指定，数量不得大于创建的节点数。 **约束限制**： - fixedIps或ipBlock同时只能指定一个 - 扩展网卡不支持指定fiexdIps - 创建节点池场景不支持该配置参数
     *
     * @return string[]|null
     */
@@ -246,7 +246,7 @@ class NicSpec implements ModelInterface, ArrayAccess
     /**
     * Sets fixedIps
     *
-    * @param string[]|null $fixedIps 主网卡的IP将通过fixedIps指定，数量不得大于创建的节点数。fixedIps或ipBlock同时只能指定一个。扩展网卡不支持指定fixedIps。
+    * @param string[]|null $fixedIps **参数解释**： 主网卡的IP将通过fixedIps指定，数量不得大于创建的节点数。 **约束限制**： - fixedIps或ipBlock同时只能指定一个 - 扩展网卡不支持指定fiexdIps - 创建节点池场景不支持该配置参数
     *
     * @return $this
     */
@@ -258,7 +258,7 @@ class NicSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipBlock
-    *  主网卡的IP段的CIDR格式，创建的节点IP将属于该IP段内。fixedIps或ipBlock同时只能指定一个。
+    *  **参数解释**： 主网卡的IP段的CIDR格式，创建的节点IP将属于该IP段内。 **约束限制**： - fixedIps或ipBlock同时只能指定一个。 - 创建节点池场景不支持该配置参数  **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -270,7 +270,7 @@ class NicSpec implements ModelInterface, ArrayAccess
     /**
     * Sets ipBlock
     *
-    * @param string|null $ipBlock 主网卡的IP段的CIDR格式，创建的节点IP将属于该IP段内。fixedIps或ipBlock同时只能指定一个。
+    * @param string|null $ipBlock **参数解释**： 主网卡的IP段的CIDR格式，创建的节点IP将属于该IP段内。 **约束限制**： - fixedIps或ipBlock同时只能指定一个。 - 创建节点池场景不支持该配置参数  **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class NodePoolCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  Condition类型，当前支持类型如下 - \"Scalable\"：节点池实际的可扩容状态，如果状态为\"False\"时则不会再次触发节点池扩容行为。 - \"QuotaInsufficient\"：节点池扩容依赖的配额不足，影响节点池可扩容状态。 - \"ResourceInsufficient\"：节点池扩容依赖的资源不足，影响节点池可扩容状态。 - \"UnexpectedError\"：节点池非预期扩容失败，影响节点池可扩容状态。 [- \"LockedByOrder\"：包周期节点池被订单锁定，此时Reason为待支付订单ID。](tag:hws,hws_hk) - \"Error\"：节点池错误，通常由于删除失败触发。
+    * type  **参数解释**： 状态类型。 **约束限制**： 不涉及 **取值范围**： - \"TaintSynchronizing\": 节点池正在同步节点K8s污点，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"LabelSynchronizing\": 节点池正在同步节点K8s标签，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"UserTagsSynchronizing\": 节点池正在同步节点资源标签，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"ConfigurationSynchronizing\": 节点池正在同步节点配置，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"Scalable\"：节点池/伸缩组实际的可扩容状态，如果状态为\"False\"时则不会再次触发节点池扩容行为。 - \"QuotaInsufficient\"：节点池/伸缩组扩容依赖的配额不足，影响节点池可扩容状态。 - \"ResourceInsufficient\"：节点池/伸缩组扩容依赖的资源不足，影响节点池可扩容状态。 - \"UnexpectedError\"：节点池/伸缩组非预期扩容失败，影响节点池可扩容状态。 [- \"LockedByOrder\"：节点池/伸缩组被订单锁定，此时Reason为待支付订单ID。](tag:hws,hws_hk) - \"Error\"：节点池/伸缩组错误，通常由于删除失败触发。  **默认取值**： 不涉及
     * status  Condition当前状态，取值如下 - \"True\" - \"False\"
     * lastProbeTime  上次状态检查时间。
     * lastTransitTime  上次状态变更时间。
@@ -40,7 +40,7 @@ class NodePoolCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  Condition类型，当前支持类型如下 - \"Scalable\"：节点池实际的可扩容状态，如果状态为\"False\"时则不会再次触发节点池扩容行为。 - \"QuotaInsufficient\"：节点池扩容依赖的配额不足，影响节点池可扩容状态。 - \"ResourceInsufficient\"：节点池扩容依赖的资源不足，影响节点池可扩容状态。 - \"UnexpectedError\"：节点池非预期扩容失败，影响节点池可扩容状态。 [- \"LockedByOrder\"：包周期节点池被订单锁定，此时Reason为待支付订单ID。](tag:hws,hws_hk) - \"Error\"：节点池错误，通常由于删除失败触发。
+    * type  **参数解释**： 状态类型。 **约束限制**： 不涉及 **取值范围**： - \"TaintSynchronizing\": 节点池正在同步节点K8s污点，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"LabelSynchronizing\": 节点池正在同步节点K8s标签，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"UserTagsSynchronizing\": 节点池正在同步节点资源标签，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"ConfigurationSynchronizing\": 节点池正在同步节点配置，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"Scalable\"：节点池/伸缩组实际的可扩容状态，如果状态为\"False\"时则不会再次触发节点池扩容行为。 - \"QuotaInsufficient\"：节点池/伸缩组扩容依赖的配额不足，影响节点池可扩容状态。 - \"ResourceInsufficient\"：节点池/伸缩组扩容依赖的资源不足，影响节点池可扩容状态。 - \"UnexpectedError\"：节点池/伸缩组非预期扩容失败，影响节点池可扩容状态。 [- \"LockedByOrder\"：节点池/伸缩组被订单锁定，此时Reason为待支付订单ID。](tag:hws,hws_hk) - \"Error\"：节点池/伸缩组错误，通常由于删除失败触发。  **默认取值**： 不涉及
     * status  Condition当前状态，取值如下 - \"True\" - \"False\"
     * lastProbeTime  上次状态检查时间。
     * lastTransitTime  上次状态变更时间。
@@ -81,7 +81,7 @@ class NodePoolCondition implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  Condition类型，当前支持类型如下 - \"Scalable\"：节点池实际的可扩容状态，如果状态为\"False\"时则不会再次触发节点池扩容行为。 - \"QuotaInsufficient\"：节点池扩容依赖的配额不足，影响节点池可扩容状态。 - \"ResourceInsufficient\"：节点池扩容依赖的资源不足，影响节点池可扩容状态。 - \"UnexpectedError\"：节点池非预期扩容失败，影响节点池可扩容状态。 [- \"LockedByOrder\"：包周期节点池被订单锁定，此时Reason为待支付订单ID。](tag:hws,hws_hk) - \"Error\"：节点池错误，通常由于删除失败触发。
+    * type  **参数解释**： 状态类型。 **约束限制**： 不涉及 **取值范围**： - \"TaintSynchronizing\": 节点池正在同步节点K8s污点，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"LabelSynchronizing\": 节点池正在同步节点K8s标签，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"UserTagsSynchronizing\": 节点池正在同步节点资源标签，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"ConfigurationSynchronizing\": 节点池正在同步节点配置，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"Scalable\"：节点池/伸缩组实际的可扩容状态，如果状态为\"False\"时则不会再次触发节点池扩容行为。 - \"QuotaInsufficient\"：节点池/伸缩组扩容依赖的配额不足，影响节点池可扩容状态。 - \"ResourceInsufficient\"：节点池/伸缩组扩容依赖的资源不足，影响节点池可扩容状态。 - \"UnexpectedError\"：节点池/伸缩组非预期扩容失败，影响节点池可扩容状态。 [- \"LockedByOrder\"：节点池/伸缩组被订单锁定，此时Reason为待支付订单ID。](tag:hws,hws_hk) - \"Error\"：节点池/伸缩组错误，通常由于删除失败触发。  **默认取值**： 不涉及
     * status  Condition当前状态，取值如下 - \"True\" - \"False\"
     * lastProbeTime  上次状态检查时间。
     * lastTransitTime  上次状态变更时间。
@@ -101,7 +101,7 @@ class NodePoolCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  Condition类型，当前支持类型如下 - \"Scalable\"：节点池实际的可扩容状态，如果状态为\"False\"时则不会再次触发节点池扩容行为。 - \"QuotaInsufficient\"：节点池扩容依赖的配额不足，影响节点池可扩容状态。 - \"ResourceInsufficient\"：节点池扩容依赖的资源不足，影响节点池可扩容状态。 - \"UnexpectedError\"：节点池非预期扩容失败，影响节点池可扩容状态。 [- \"LockedByOrder\"：包周期节点池被订单锁定，此时Reason为待支付订单ID。](tag:hws,hws_hk) - \"Error\"：节点池错误，通常由于删除失败触发。
+    * type  **参数解释**： 状态类型。 **约束限制**： 不涉及 **取值范围**： - \"TaintSynchronizing\": 节点池正在同步节点K8s污点，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"LabelSynchronizing\": 节点池正在同步节点K8s标签，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"UserTagsSynchronizing\": 节点池正在同步节点资源标签，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"ConfigurationSynchronizing\": 节点池正在同步节点配置，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"Scalable\"：节点池/伸缩组实际的可扩容状态，如果状态为\"False\"时则不会再次触发节点池扩容行为。 - \"QuotaInsufficient\"：节点池/伸缩组扩容依赖的配额不足，影响节点池可扩容状态。 - \"ResourceInsufficient\"：节点池/伸缩组扩容依赖的资源不足，影响节点池可扩容状态。 - \"UnexpectedError\"：节点池/伸缩组非预期扩容失败，影响节点池可扩容状态。 [- \"LockedByOrder\"：节点池/伸缩组被订单锁定，此时Reason为待支付订单ID。](tag:hws,hws_hk) - \"Error\"：节点池/伸缩组错误，通常由于删除失败触发。  **默认取值**： 不涉及
     * status  Condition当前状态，取值如下 - \"True\" - \"False\"
     * lastProbeTime  上次状态检查时间。
     * lastTransitTime  上次状态变更时间。
@@ -121,7 +121,7 @@ class NodePoolCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  Condition类型，当前支持类型如下 - \"Scalable\"：节点池实际的可扩容状态，如果状态为\"False\"时则不会再次触发节点池扩容行为。 - \"QuotaInsufficient\"：节点池扩容依赖的配额不足，影响节点池可扩容状态。 - \"ResourceInsufficient\"：节点池扩容依赖的资源不足，影响节点池可扩容状态。 - \"UnexpectedError\"：节点池非预期扩容失败，影响节点池可扩容状态。 [- \"LockedByOrder\"：包周期节点池被订单锁定，此时Reason为待支付订单ID。](tag:hws,hws_hk) - \"Error\"：节点池错误，通常由于删除失败触发。
+    * type  **参数解释**： 状态类型。 **约束限制**： 不涉及 **取值范围**： - \"TaintSynchronizing\": 节点池正在同步节点K8s污点，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"LabelSynchronizing\": 节点池正在同步节点K8s标签，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"UserTagsSynchronizing\": 节点池正在同步节点资源标签，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"ConfigurationSynchronizing\": 节点池正在同步节点配置，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"Scalable\"：节点池/伸缩组实际的可扩容状态，如果状态为\"False\"时则不会再次触发节点池扩容行为。 - \"QuotaInsufficient\"：节点池/伸缩组扩容依赖的配额不足，影响节点池可扩容状态。 - \"ResourceInsufficient\"：节点池/伸缩组扩容依赖的资源不足，影响节点池可扩容状态。 - \"UnexpectedError\"：节点池/伸缩组非预期扩容失败，影响节点池可扩容状态。 [- \"LockedByOrder\"：节点池/伸缩组被订单锁定，此时Reason为待支付订单ID。](tag:hws,hws_hk) - \"Error\"：节点池/伸缩组错误，通常由于删除失败触发。  **默认取值**： 不涉及
     * status  Condition当前状态，取值如下 - \"True\" - \"False\"
     * lastProbeTime  上次状态检查时间。
     * lastTransitTime  上次状态变更时间。
@@ -179,7 +179,38 @@ class NodePoolCondition implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TYPE_TAINT_SYNCHRONIZING = 'TaintSynchronizing';
+    const TYPE_LABEL_SYNCHRONIZING = 'LabelSynchronizing';
+    const TYPE_USER_TAGS_SYNCHRONIZING = 'UserTagsSynchronizing';
+    const TYPE_CONFIGURATION_SYNCHRONIZING = 'ConfigurationSynchronizing';
+    const TYPE_SCALABLE = 'Scalable';
+    const TYPE_QUOTA_INSUFFICIENT = 'QuotaInsufficient';
+    const TYPE_RESOURCE_INSUFFICIENT = 'ResourceInsufficient';
+    const TYPE_UNEXPECTED_ERROR = 'UnexpectedError';
+    const TYPE_LOCKED_BY_ORDER = 'LockedByOrder';
+    const TYPE_ERROR = 'Error';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_TAINT_SYNCHRONIZING,
+            self::TYPE_LABEL_SYNCHRONIZING,
+            self::TYPE_USER_TAGS_SYNCHRONIZING,
+            self::TYPE_CONFIGURATION_SYNCHRONIZING,
+            self::TYPE_SCALABLE,
+            self::TYPE_QUOTA_INSUFFICIENT,
+            self::TYPE_RESOURCE_INSUFFICIENT,
+            self::TYPE_UNEXPECTED_ERROR,
+            self::TYPE_LOCKED_BY_ORDER,
+            self::TYPE_ERROR,
+        ];
+    }
 
 
     /**
@@ -213,6 +244,14 @@ class NodePoolCondition implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -229,7 +268,7 @@ class NodePoolCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  Condition类型，当前支持类型如下 - \"Scalable\"：节点池实际的可扩容状态，如果状态为\"False\"时则不会再次触发节点池扩容行为。 - \"QuotaInsufficient\"：节点池扩容依赖的配额不足，影响节点池可扩容状态。 - \"ResourceInsufficient\"：节点池扩容依赖的资源不足，影响节点池可扩容状态。 - \"UnexpectedError\"：节点池非预期扩容失败，影响节点池可扩容状态。 [- \"LockedByOrder\"：包周期节点池被订单锁定，此时Reason为待支付订单ID。](tag:hws,hws_hk) - \"Error\"：节点池错误，通常由于删除失败触发。
+    *  **参数解释**： 状态类型。 **约束限制**： 不涉及 **取值范围**： - \"TaintSynchronizing\": 节点池正在同步节点K8s污点，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"LabelSynchronizing\": 节点池正在同步节点K8s标签，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"UserTagsSynchronizing\": 节点池正在同步节点资源标签，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"ConfigurationSynchronizing\": 节点池正在同步节点配置，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"Scalable\"：节点池/伸缩组实际的可扩容状态，如果状态为\"False\"时则不会再次触发节点池扩容行为。 - \"QuotaInsufficient\"：节点池/伸缩组扩容依赖的配额不足，影响节点池可扩容状态。 - \"ResourceInsufficient\"：节点池/伸缩组扩容依赖的资源不足，影响节点池可扩容状态。 - \"UnexpectedError\"：节点池/伸缩组非预期扩容失败，影响节点池可扩容状态。 [- \"LockedByOrder\"：节点池/伸缩组被订单锁定，此时Reason为待支付订单ID。](tag:hws,hws_hk) - \"Error\"：节点池/伸缩组错误，通常由于删除失败触发。  **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -241,7 +280,7 @@ class NodePoolCondition implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type Condition类型，当前支持类型如下 - \"Scalable\"：节点池实际的可扩容状态，如果状态为\"False\"时则不会再次触发节点池扩容行为。 - \"QuotaInsufficient\"：节点池扩容依赖的配额不足，影响节点池可扩容状态。 - \"ResourceInsufficient\"：节点池扩容依赖的资源不足，影响节点池可扩容状态。 - \"UnexpectedError\"：节点池非预期扩容失败，影响节点池可扩容状态。 [- \"LockedByOrder\"：包周期节点池被订单锁定，此时Reason为待支付订单ID。](tag:hws,hws_hk) - \"Error\"：节点池错误，通常由于删除失败触发。
+    * @param string|null $type **参数解释**： 状态类型。 **约束限制**： 不涉及 **取值范围**： - \"TaintSynchronizing\": 节点池正在同步节点K8s污点，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"LabelSynchronizing\": 节点池正在同步节点K8s标签，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"UserTagsSynchronizing\": 节点池正在同步节点资源标签，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"ConfigurationSynchronizing\": 节点池正在同步节点配置，不影响节点池可扩容状态（该状态类型为节点池级别，伸缩组中无该状态类型）。 - \"Scalable\"：节点池/伸缩组实际的可扩容状态，如果状态为\"False\"时则不会再次触发节点池扩容行为。 - \"QuotaInsufficient\"：节点池/伸缩组扩容依赖的配额不足，影响节点池可扩容状态。 - \"ResourceInsufficient\"：节点池/伸缩组扩容依赖的资源不足，影响节点池可扩容状态。 - \"UnexpectedError\"：节点池/伸缩组非预期扩容失败，影响节点池可扩容状态。 [- \"LockedByOrder\"：节点池/伸缩组被订单锁定，此时Reason为待支付订单ID。](tag:hws,hws_hk) - \"Error\"：节点池/伸缩组错误，通常由于删除失败触发。  **默认取值**： 不涉及
     *
     * @return $this
     */

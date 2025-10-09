@@ -158,6 +158,9 @@ class BindPublicReqEip implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['bandWidth'] === null) {
+            $invalidProperties[] = "'bandWidth' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class BindPublicReqEip implements ModelInterface, ArrayAccess
     * Gets bandWidth
     *  bandWidth
     *
-    * @return \HuaweiCloud\SDK\Css\V1\Model\BindPublicReqEipBandWidth|null
+    * @return \HuaweiCloud\SDK\Css\V1\Model\BindPublicReqEipBandWidth
     */
     public function getBandWidth()
     {
@@ -186,7 +189,7 @@ class BindPublicReqEip implements ModelInterface, ArrayAccess
     /**
     * Sets bandWidth
     *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\BindPublicReqEipBandWidth|null $bandWidth bandWidth
+    * @param \HuaweiCloud\SDK\Css\V1\Model\BindPublicReqEipBandWidth $bandWidth bandWidth
     *
     * @return $this
     */

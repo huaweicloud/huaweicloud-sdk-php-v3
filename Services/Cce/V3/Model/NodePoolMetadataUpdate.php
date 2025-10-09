@@ -158,13 +158,10 @@ class NodePoolMetadataUpdate implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-            if ((mb_strlen($this->container['name']) > 50)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 50)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 50.";
             }
-            if ((mb_strlen($this->container['name']) < 1)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -185,7 +182,7 @@ class NodePoolMetadataUpdate implements ModelInterface, ArrayAccess
     * Gets name
     *  节点池名称。  > 命名规则： > >  - 以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-50位，且不能以中划线(-)结尾。 > >  - 不允许创建名为 DefaultPool 的节点池。
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -195,7 +192,7 @@ class NodePoolMetadataUpdate implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 节点池名称。  > 命名规则： > >  - 以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-50位，且不能以中划线(-)结尾。 > >  - 不允许创建名为 DefaultPool 的节点池。
+    * @param string|null $name 节点池名称。  > 命名规则： > >  - 以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-50位，且不能以中划线(-)结尾。 > >  - 不允许创建名为 DefaultPool 的节点池。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ClusterList implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * datastore  datastore
-    * snapshotPolicy  集群自动快照策略相关信息。
+    * snapshotPolicy  snapshotPolicy
     * instances  节点对象列表。
     * publicKibanaResp  publicKibanaResp
     * elbWhiteList  elbWhiteList
@@ -50,12 +50,13 @@ class ClusterList implements ModelInterface, ArrayAccess
     * ipv6Endpoint  集群内网访问IPv6地址和端口号。
     * cmkId  当前集群使用的磁盘加密密钥ID。
     * currentSubnetIds  集群节点的当前子网。
+    * desc  集群描述。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'datastore' => '\HuaweiCloud\SDK\Css\V1\Model\ClusterListDatastore',
-            'snapshotPolicy' => 'object',
+            'snapshotPolicy' => '\HuaweiCloud\SDK\Css\V1\Model\SnapshotPolicyResp',
             'instances' => '\HuaweiCloud\SDK\Css\V1\Model\ClusterListInstances[]',
             'publicKibanaResp' => '\HuaweiCloud\SDK\Css\V1\Model\PublicKibanaRespBody',
             'elbWhiteList' => '\HuaweiCloud\SDK\Css\V1\Model\ElbWhiteListResp',
@@ -83,13 +84,14 @@ class ClusterList implements ModelInterface, ArrayAccess
             'bandwidthResourceId' => 'string',
             'ipv6Endpoint' => 'string',
             'cmkId' => 'string',
-            'currentSubnetIds' => 'string'
+            'currentSubnetIds' => 'string',
+            'desc' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * datastore  datastore
-    * snapshotPolicy  集群自动快照策略相关信息。
+    * snapshotPolicy  snapshotPolicy
     * instances  节点对象列表。
     * publicKibanaResp  publicKibanaResp
     * elbWhiteList  elbWhiteList
@@ -118,6 +120,7 @@ class ClusterList implements ModelInterface, ArrayAccess
     * ipv6Endpoint  集群内网访问IPv6地址和端口号。
     * cmkId  当前集群使用的磁盘加密密钥ID。
     * currentSubnetIds  集群节点的当前子网。
+    * desc  集群描述。
     *
     * @var string[]
     */
@@ -151,7 +154,8 @@ class ClusterList implements ModelInterface, ArrayAccess
         'bandwidthResourceId' => null,
         'ipv6Endpoint' => null,
         'cmkId' => null,
-        'currentSubnetIds' => null
+        'currentSubnetIds' => null,
+        'desc' => null
     ];
 
     /**
@@ -178,7 +182,7 @@ class ClusterList implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * datastore  datastore
-    * snapshotPolicy  集群自动快照策略相关信息。
+    * snapshotPolicy  snapshotPolicy
     * instances  节点对象列表。
     * publicKibanaResp  publicKibanaResp
     * elbWhiteList  elbWhiteList
@@ -207,6 +211,7 @@ class ClusterList implements ModelInterface, ArrayAccess
     * ipv6Endpoint  集群内网访问IPv6地址和端口号。
     * cmkId  当前集群使用的磁盘加密密钥ID。
     * currentSubnetIds  集群节点的当前子网。
+    * desc  集群描述。
     *
     * @var string[]
     */
@@ -240,13 +245,14 @@ class ClusterList implements ModelInterface, ArrayAccess
             'bandwidthResourceId' => 'bandwidthResourceId',
             'ipv6Endpoint' => 'ipv6Endpoint',
             'cmkId' => 'cmkId',
-            'currentSubnetIds' => 'currentSubnetIds'
+            'currentSubnetIds' => 'currentSubnetIds',
+            'desc' => 'desc'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * datastore  datastore
-    * snapshotPolicy  集群自动快照策略相关信息。
+    * snapshotPolicy  snapshotPolicy
     * instances  节点对象列表。
     * publicKibanaResp  publicKibanaResp
     * elbWhiteList  elbWhiteList
@@ -275,6 +281,7 @@ class ClusterList implements ModelInterface, ArrayAccess
     * ipv6Endpoint  集群内网访问IPv6地址和端口号。
     * cmkId  当前集群使用的磁盘加密密钥ID。
     * currentSubnetIds  集群节点的当前子网。
+    * desc  集群描述。
     *
     * @var string[]
     */
@@ -308,13 +315,14 @@ class ClusterList implements ModelInterface, ArrayAccess
             'bandwidthResourceId' => 'setBandwidthResourceId',
             'ipv6Endpoint' => 'setIpv6Endpoint',
             'cmkId' => 'setCmkId',
-            'currentSubnetIds' => 'setCurrentSubnetIds'
+            'currentSubnetIds' => 'setCurrentSubnetIds',
+            'desc' => 'setDesc'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * datastore  datastore
-    * snapshotPolicy  集群自动快照策略相关信息。
+    * snapshotPolicy  snapshotPolicy
     * instances  节点对象列表。
     * publicKibanaResp  publicKibanaResp
     * elbWhiteList  elbWhiteList
@@ -343,6 +351,7 @@ class ClusterList implements ModelInterface, ArrayAccess
     * ipv6Endpoint  集群内网访问IPv6地址和端口号。
     * cmkId  当前集群使用的磁盘加密密钥ID。
     * currentSubnetIds  集群节点的当前子网。
+    * desc  集群描述。
     *
     * @var string[]
     */
@@ -376,7 +385,8 @@ class ClusterList implements ModelInterface, ArrayAccess
             'bandwidthResourceId' => 'getBandwidthResourceId',
             'ipv6Endpoint' => 'getIpv6Endpoint',
             'cmkId' => 'getCmkId',
-            'currentSubnetIds' => 'getCurrentSubnetIds'
+            'currentSubnetIds' => 'getCurrentSubnetIds',
+            'desc' => 'getDesc'
     ];
 
     /**
@@ -467,6 +477,7 @@ class ClusterList implements ModelInterface, ArrayAccess
         $this->container['ipv6Endpoint'] = isset($data['ipv6Endpoint']) ? $data['ipv6Endpoint'] : null;
         $this->container['cmkId'] = isset($data['cmkId']) ? $data['cmkId'] : null;
         $this->container['currentSubnetIds'] = isset($data['currentSubnetIds']) ? $data['currentSubnetIds'] : null;
+        $this->container['desc'] = isset($data['desc']) ? $data['desc'] : null;
     }
 
     /**
@@ -517,9 +528,9 @@ class ClusterList implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshotPolicy
-    *  集群自动快照策略相关信息。
+    *  snapshotPolicy
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Css\V1\Model\SnapshotPolicyResp|null
     */
     public function getSnapshotPolicy()
     {
@@ -529,7 +540,7 @@ class ClusterList implements ModelInterface, ArrayAccess
     /**
     * Sets snapshotPolicy
     *
-    * @param object|null $snapshotPolicy 集群自动快照策略相关信息。
+    * @param \HuaweiCloud\SDK\Css\V1\Model\SnapshotPolicyResp|null $snapshotPolicy snapshotPolicy
     *
     * @return $this
     */
@@ -1208,6 +1219,30 @@ class ClusterList implements ModelInterface, ArrayAccess
     public function setCurrentSubnetIds($currentSubnetIds)
     {
         $this->container['currentSubnetIds'] = $currentSubnetIds;
+        return $this;
+    }
+
+    /**
+    * Gets desc
+    *  集群描述。
+    *
+    * @return string|null
+    */
+    public function getDesc()
+    {
+        return $this->container['desc'];
+    }
+
+    /**
+    * Sets desc
+    *
+    * @param string|null $desc 集群描述。
+    *
+    * @return $this
+    */
+    public function setDesc($desc)
+    {
+        $this->container['desc'] = $desc;
         return $this;
     }
 
