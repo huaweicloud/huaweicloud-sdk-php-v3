@@ -22,24 +22,28 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * alarmPolicyIds  需要批量启停的告警规则策略的ID列表
     * enabled  是否启用告警策略。true:开启，false：关闭。
+    * retainWhenAllDisabled  告警中的策略全部被停用时是否保留策略信息。true:保留；false:删除。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'alarmPolicyIds' => 'string[]',
-            'enabled' => 'bool'
+            'enabled' => 'bool',
+            'retainWhenAllDisabled' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * alarmPolicyIds  需要批量启停的告警规则策略的ID列表
     * enabled  是否启用告警策略。true:开启，false：关闭。
+    * retainWhenAllDisabled  告警中的策略全部被停用时是否保留策略信息。true:保留；false:删除。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'alarmPolicyIds' => null,
-        'enabled' => null
+        'enabled' => null,
+        'retainWhenAllDisabled' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * alarmPolicyIds  需要批量启停的告警规则策略的ID列表
     * enabled  是否启用告警策略。true:开启，false：关闭。
+    * retainWhenAllDisabled  告警中的策略全部被停用时是否保留策略信息。true:保留；false:删除。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'alarmPolicyIds' => 'alarm_policy_ids',
-            'enabled' => 'enabled'
+            'enabled' => 'enabled',
+            'retainWhenAllDisabled' => 'retain_when_all_disabled'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * alarmPolicyIds  需要批量启停的告警规则策略的ID列表
     * enabled  是否启用告警策略。true:开启，false：关闭。
+    * retainWhenAllDisabled  告警中的策略全部被停用时是否保留策略信息。true:保留；false:删除。
     *
     * @var string[]
     */
     protected static $setters = [
             'alarmPolicyIds' => 'setAlarmPolicyIds',
-            'enabled' => 'setEnabled'
+            'enabled' => 'setEnabled',
+            'retainWhenAllDisabled' => 'setRetainWhenAllDisabled'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * alarmPolicyIds  需要批量启停的告警规则策略的ID列表
     * enabled  是否启用告警策略。true:开启，false：关闭。
+    * retainWhenAllDisabled  告警中的策略全部被停用时是否保留策略信息。true:保留；false:删除。
     *
     * @var string[]
     */
     protected static $getters = [
             'alarmPolicyIds' => 'getAlarmPolicyIds',
-            'enabled' => 'getEnabled'
+            'enabled' => 'getEnabled',
+            'retainWhenAllDisabled' => 'getRetainWhenAllDisabled'
     ];
 
     /**
@@ -159,6 +169,7 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['alarmPolicyIds'] = isset($data['alarmPolicyIds']) ? $data['alarmPolicyIds'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
+        $this->container['retainWhenAllDisabled'] = isset($data['retainWhenAllDisabled']) ? $data['retainWhenAllDisabled'] : null;
     }
 
     /**
@@ -234,6 +245,30 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
     public function setEnabled($enabled)
     {
         $this->container['enabled'] = $enabled;
+        return $this;
+    }
+
+    /**
+    * Gets retainWhenAllDisabled
+    *  告警中的策略全部被停用时是否保留策略信息。true:保留；false:删除。
+    *
+    * @return bool|null
+    */
+    public function getRetainWhenAllDisabled()
+    {
+        return $this->container['retainWhenAllDisabled'];
+    }
+
+    /**
+    * Sets retainWhenAllDisabled
+    *
+    * @param bool|null $retainWhenAllDisabled 告警中的策略全部被停用时是否保留策略信息。true:保留；false:删除。
+    *
+    * @return $this
+    */
+    public function setRetainWhenAllDisabled($retainWhenAllDisabled)
+    {
+        $this->container['retainWhenAllDisabled'] = $retainWhenAllDisabled;
         return $this;
     }
 

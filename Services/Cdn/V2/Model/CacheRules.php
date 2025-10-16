@@ -246,6 +246,9 @@ class CacheRules implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['matchType'] === null) {
+            $invalidProperties[] = "'matchType' can't be null";
+        }
         if ($this->container['ttlUnit'] === null) {
             $invalidProperties[] = "'ttlUnit' can't be null";
         }
@@ -270,7 +273,7 @@ class CacheRules implements ModelInterface, ArrayAccess
     * Gets matchType
     *  匹配类型: - all：匹配所有文件， - file_extension：按文件后缀匹配， - catalog：按目录匹配， - full_path：全路径匹配， - home_page：按首页匹配。   > 配置单条缓存规则时，可不传，默认为all。   > 配置多条缓存规则时，此参数必传。
     *
-    * @return string|null
+    * @return string
     */
     public function getMatchType()
     {
@@ -280,7 +283,7 @@ class CacheRules implements ModelInterface, ArrayAccess
     /**
     * Sets matchType
     *
-    * @param string|null $matchType 匹配类型: - all：匹配所有文件， - file_extension：按文件后缀匹配， - catalog：按目录匹配， - full_path：全路径匹配， - home_page：按首页匹配。   > 配置单条缓存规则时，可不传，默认为all。   > 配置多条缓存规则时，此参数必传。
+    * @param string $matchType 匹配类型: - all：匹配所有文件， - file_extension：按文件后缀匹配， - catalog：按目录匹配， - full_path：全路径匹配， - home_page：按首页匹配。   > 配置单条缓存规则时，可不传，默认为all。   > 配置多条缓存规则时，此参数必传。
     *
     * @return $this
     */

@@ -40,6 +40,7 @@ class UpdateDeviceResponse implements ModelInterface, ArrayAccess
     * connectionStatusUpdateTime  设备最近一次连接状态(ONLINE:在线，OFFLINE：离线，ABNORMAL：异常)变化时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z' ，如2015-12-12T12:12:122Z。
     * activeTime  设备激活时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z' ，如2015-12-12T12:12:122Z。
     * tags  设备的标签列表。
+    * modules  设备的OTA模块列表。
     * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，如果在创建设备时为子设备指定该字段，将会通过MQTT接口“平台通知网关子设备新增“将该信息通知给网关。
     *
     * @var string[]
@@ -64,6 +65,7 @@ class UpdateDeviceResponse implements ModelInterface, ArrayAccess
             'connectionStatusUpdateTime' => 'string',
             'activeTime' => 'string',
             'tags' => '\HuaweiCloud\SDK\IoTDA\V5\Model\TagV5DTO[]',
+            'modules' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ModuleDTO[]',
             'extensionInfo' => 'object'
     ];
 
@@ -88,6 +90,7 @@ class UpdateDeviceResponse implements ModelInterface, ArrayAccess
     * connectionStatusUpdateTime  设备最近一次连接状态(ONLINE:在线，OFFLINE：离线，ABNORMAL：异常)变化时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z' ，如2015-12-12T12:12:122Z。
     * activeTime  设备激活时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z' ，如2015-12-12T12:12:122Z。
     * tags  设备的标签列表。
+    * modules  设备的OTA模块列表。
     * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，如果在创建设备时为子设备指定该字段，将会通过MQTT接口“平台通知网关子设备新增“将该信息通知给网关。
     *
     * @var string[]
@@ -112,6 +115,7 @@ class UpdateDeviceResponse implements ModelInterface, ArrayAccess
         'connectionStatusUpdateTime' => null,
         'activeTime' => null,
         'tags' => null,
+        'modules' => null,
         'extensionInfo' => null
     ];
 
@@ -157,6 +161,7 @@ class UpdateDeviceResponse implements ModelInterface, ArrayAccess
     * connectionStatusUpdateTime  设备最近一次连接状态(ONLINE:在线，OFFLINE：离线，ABNORMAL：异常)变化时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z' ，如2015-12-12T12:12:122Z。
     * activeTime  设备激活时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z' ，如2015-12-12T12:12:122Z。
     * tags  设备的标签列表。
+    * modules  设备的OTA模块列表。
     * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，如果在创建设备时为子设备指定该字段，将会通过MQTT接口“平台通知网关子设备新增“将该信息通知给网关。
     *
     * @var string[]
@@ -181,6 +186,7 @@ class UpdateDeviceResponse implements ModelInterface, ArrayAccess
             'connectionStatusUpdateTime' => 'connection_status_update_time',
             'activeTime' => 'active_time',
             'tags' => 'tags',
+            'modules' => 'modules',
             'extensionInfo' => 'extension_info'
     ];
 
@@ -205,6 +211,7 @@ class UpdateDeviceResponse implements ModelInterface, ArrayAccess
     * connectionStatusUpdateTime  设备最近一次连接状态(ONLINE:在线，OFFLINE：离线，ABNORMAL：异常)变化时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z' ，如2015-12-12T12:12:122Z。
     * activeTime  设备激活时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z' ，如2015-12-12T12:12:122Z。
     * tags  设备的标签列表。
+    * modules  设备的OTA模块列表。
     * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，如果在创建设备时为子设备指定该字段，将会通过MQTT接口“平台通知网关子设备新增“将该信息通知给网关。
     *
     * @var string[]
@@ -229,6 +236,7 @@ class UpdateDeviceResponse implements ModelInterface, ArrayAccess
             'connectionStatusUpdateTime' => 'setConnectionStatusUpdateTime',
             'activeTime' => 'setActiveTime',
             'tags' => 'setTags',
+            'modules' => 'setModules',
             'extensionInfo' => 'setExtensionInfo'
     ];
 
@@ -253,6 +261,7 @@ class UpdateDeviceResponse implements ModelInterface, ArrayAccess
     * connectionStatusUpdateTime  设备最近一次连接状态(ONLINE:在线，OFFLINE：离线，ABNORMAL：异常)变化时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z' ，如2015-12-12T12:12:122Z。
     * activeTime  设备激活时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z' ，如2015-12-12T12:12:122Z。
     * tags  设备的标签列表。
+    * modules  设备的OTA模块列表。
     * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，如果在创建设备时为子设备指定该字段，将会通过MQTT接口“平台通知网关子设备新增“将该信息通知给网关。
     *
     * @var string[]
@@ -277,6 +286,7 @@ class UpdateDeviceResponse implements ModelInterface, ArrayAccess
             'connectionStatusUpdateTime' => 'getConnectionStatusUpdateTime',
             'activeTime' => 'getActiveTime',
             'tags' => 'getTags',
+            'modules' => 'getModules',
             'extensionInfo' => 'getExtensionInfo'
     ];
 
@@ -357,6 +367,7 @@ class UpdateDeviceResponse implements ModelInterface, ArrayAccess
         $this->container['connectionStatusUpdateTime'] = isset($data['connectionStatusUpdateTime']) ? $data['connectionStatusUpdateTime'] : null;
         $this->container['activeTime'] = isset($data['activeTime']) ? $data['activeTime'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['modules'] = isset($data['modules']) ? $data['modules'] : null;
         $this->container['extensionInfo'] = isset($data['extensionInfo']) ? $data['extensionInfo'] : null;
     }
 
@@ -874,6 +885,30 @@ class UpdateDeviceResponse implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets modules
+    *  设备的OTA模块列表。
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ModuleDTO[]|null
+    */
+    public function getModules()
+    {
+        return $this->container['modules'];
+    }
+
+    /**
+    * Sets modules
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ModuleDTO[]|null $modules 设备的OTA模块列表。
+    *
+    * @return $this
+    */
+    public function setModules($modules)
+    {
+        $this->container['modules'] = $modules;
         return $this;
     }
 

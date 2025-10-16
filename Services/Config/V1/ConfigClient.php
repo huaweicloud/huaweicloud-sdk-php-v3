@@ -3896,6 +3896,65 @@ class ConfigClient extends Client
     }
 
     /**
+     * 查询当前账号合规统计趋势
+     *
+     * 查询当前账号合规统计趋势
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPolicyStatesStatistics($request)
+    {
+        return $this->listPolicyStatesStatisticsWithHttpInfo($request);
+    }
+
+    public function listPolicyStatesStatisticsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/policy-states/statistics';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\ListPolicyStatesStatisticsResponse',
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\ListPolicyStatesStatisticsRequest');
+    }
+
+    /**
      * 查询修正例外
      *
      * 查询合规规则修正例外。

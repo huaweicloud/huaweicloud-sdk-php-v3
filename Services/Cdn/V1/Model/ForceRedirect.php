@@ -172,6 +172,9 @@ class ForceRedirect implements ModelInterface, ArrayAccess
         if ($this->container['switch'] === null) {
             $invalidProperties[] = "'switch' can't be null";
         }
+        if ($this->container['redirectType'] === null) {
+            $invalidProperties[] = "'redirectType' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -214,7 +217,7 @@ class ForceRedirect implements ModelInterface, ArrayAccess
     * Gets redirectType
     *  强制跳转类型。http：强制跳转HTTP。https：强制跳转HTTPS。
     *
-    * @return string|null
+    * @return string
     */
     public function getRedirectType()
     {
@@ -224,7 +227,7 @@ class ForceRedirect implements ModelInterface, ArrayAccess
     /**
     * Sets redirectType
     *
-    * @param string|null $redirectType 强制跳转类型。http：强制跳转HTTP。https：强制跳转HTTPS。
+    * @param string $redirectType 强制跳转类型。http：强制跳转HTTP。https：强制跳转HTTPS。
     *
     * @return $this
     */

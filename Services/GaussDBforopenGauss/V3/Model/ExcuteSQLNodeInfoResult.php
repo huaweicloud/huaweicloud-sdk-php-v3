@@ -22,9 +22,9 @@ class ExcuteSQLNodeInfoResult implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * nodeId  **参数解释**: 节点ID。 **取值范围**: 不涉及。
     * nodeName  **参数解释**: 节点名称。 **取值范围**: 不涉及。
-    * role  **参数描述**: 节点角色。 **取值范围**: - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
+    * role  **参数解释**: 节点角色。 **取值范围**: - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
     * instanceId  **参数解释**: 实例ID。 **取值范围**: 不涉及。
-    * componentType  **参数描述**: 组件类型。 **取值范围**: - CN：CN组件。 - DN：DN组件。
+    * componentType  **参数解释**: 组件类型。 **取值范围**: - CN：CN组件。 - DN：DN组件。
     *
     * @var string[]
     */
@@ -40,9 +40,9 @@ class ExcuteSQLNodeInfoResult implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * nodeId  **参数解释**: 节点ID。 **取值范围**: 不涉及。
     * nodeName  **参数解释**: 节点名称。 **取值范围**: 不涉及。
-    * role  **参数描述**: 节点角色。 **取值范围**: - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
+    * role  **参数解释**: 节点角色。 **取值范围**: - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
     * instanceId  **参数解释**: 实例ID。 **取值范围**: 不涉及。
-    * componentType  **参数描述**: 组件类型。 **取值范围**: - CN：CN组件。 - DN：DN组件。
+    * componentType  **参数解释**: 组件类型。 **取值范围**: - CN：CN组件。 - DN：DN组件。
     *
     * @var string[]
     */
@@ -79,9 +79,9 @@ class ExcuteSQLNodeInfoResult implements ModelInterface, ArrayAccess
     * and the value is the original name
     * nodeId  **参数解释**: 节点ID。 **取值范围**: 不涉及。
     * nodeName  **参数解释**: 节点名称。 **取值范围**: 不涉及。
-    * role  **参数描述**: 节点角色。 **取值范围**: - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
+    * role  **参数解释**: 节点角色。 **取值范围**: - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
     * instanceId  **参数解释**: 实例ID。 **取值范围**: 不涉及。
-    * componentType  **参数描述**: 组件类型。 **取值范围**: - CN：CN组件。 - DN：DN组件。
+    * componentType  **参数解释**: 组件类型。 **取值范围**: - CN：CN组件。 - DN：DN组件。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ExcuteSQLNodeInfoResult implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * nodeId  **参数解释**: 节点ID。 **取值范围**: 不涉及。
     * nodeName  **参数解释**: 节点名称。 **取值范围**: 不涉及。
-    * role  **参数描述**: 节点角色。 **取值范围**: - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
+    * role  **参数解释**: 节点角色。 **取值范围**: - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
     * instanceId  **参数解释**: 实例ID。 **取值范围**: 不涉及。
-    * componentType  **参数描述**: 组件类型。 **取值范围**: - CN：CN组件。 - DN：DN组件。
+    * componentType  **参数解释**: 组件类型。 **取值范围**: - CN：CN组件。 - DN：DN组件。
     *
     * @var string[]
     */
@@ -115,9 +115,9 @@ class ExcuteSQLNodeInfoResult implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * nodeId  **参数解释**: 节点ID。 **取值范围**: 不涉及。
     * nodeName  **参数解释**: 节点名称。 **取值范围**: 不涉及。
-    * role  **参数描述**: 节点角色。 **取值范围**: - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
+    * role  **参数解释**: 节点角色。 **取值范围**: - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
     * instanceId  **参数解释**: 实例ID。 **取值范围**: 不涉及。
-    * componentType  **参数描述**: 组件类型。 **取值范围**: - CN：CN组件。 - DN：DN组件。
+    * componentType  **参数解释**: 组件类型。 **取值范围**: - CN：CN组件。 - DN：DN组件。
     *
     * @var string[]
     */
@@ -266,7 +266,7 @@ class ExcuteSQLNodeInfoResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets role
-    *  **参数描述**: 节点角色。 **取值范围**: - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
+    *  **参数解释**: 节点角色。 **取值范围**: - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class ExcuteSQLNodeInfoResult implements ModelInterface, ArrayAccess
     /**
     * Sets role
     *
-    * @param string|null $role **参数描述**: 节点角色。 **取值范围**: - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
+    * @param string|null $role **参数解释**: 节点角色。 **取值范围**: - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ExcuteSQLNodeInfoResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets componentType
-    *  **参数描述**: 组件类型。 **取值范围**: - CN：CN组件。 - DN：DN组件。
+    *  **参数解释**: 组件类型。 **取值范围**: - CN：CN组件。 - DN：DN组件。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class ExcuteSQLNodeInfoResult implements ModelInterface, ArrayAccess
     /**
     * Sets componentType
     *
-    * @param string|null $componentType **参数描述**: 组件类型。 **取值范围**: - CN：CN组件。 - DN：DN组件。
+    * @param string|null $componentType **参数解释**: 组件类型。 **取值范围**: - CN：CN组件。 - DN：DN组件。
     *
     * @return $this
     */

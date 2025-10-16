@@ -172,9 +172,6 @@ class WebSocketSeek implements ModelInterface, ArrayAccess
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
-        if ($this->container['timeout'] === null) {
-            $invalidProperties[] = "'timeout' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -217,7 +214,7 @@ class WebSocketSeek implements ModelInterface, ArrayAccess
     * Gets timeout
     *  请求建立连接后，会话的保持时间：范围：1-300，单位：秒。
     *
-    * @return int
+    * @return int|null
     */
     public function getTimeout()
     {
@@ -227,7 +224,7 @@ class WebSocketSeek implements ModelInterface, ArrayAccess
     /**
     * Sets timeout
     *
-    * @param int $timeout 请求建立连接后，会话的保持时间：范围：1-300，单位：秒。
+    * @param int|null $timeout 请求建立连接后，会话的保持时间：范围：1-300，单位：秒。
     *
     * @return $this
     */

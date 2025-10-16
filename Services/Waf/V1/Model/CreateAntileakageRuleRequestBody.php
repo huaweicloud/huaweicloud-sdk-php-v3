@@ -32,7 +32,7 @@ class CreateAntileakageRuleRequestBody implements ModelInterface, ArrayAccess
             'url' => 'string',
             'category' => 'string',
             'contents' => 'string[]',
-            'action' => '\HuaweiCloud\SDK\Waf\V1\Model\CreateAntileakageRuleRequestBodyAction',
+            'action' => '\HuaweiCloud\SDK\Waf\V1\Model\BatchCreateAntileakageRuleRequestBodyAction',
             'description' => 'string'
     ];
 
@@ -324,7 +324,7 @@ class CreateAntileakageRuleRequestBody implements ModelInterface, ArrayAccess
     * Gets action
     *  action
     *
-    * @return \HuaweiCloud\SDK\Waf\V1\Model\CreateAntileakageRuleRequestBodyAction|null
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\BatchCreateAntileakageRuleRequestBodyAction|null
     */
     public function getAction()
     {
@@ -334,7 +334,7 @@ class CreateAntileakageRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\CreateAntileakageRuleRequestBodyAction|null $action action
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\BatchCreateAntileakageRuleRequestBodyAction|null $action action
     *
     * @return $this
     */

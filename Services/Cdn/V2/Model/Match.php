@@ -27,7 +27,7 @@ class Match implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'logic' => 'string',
-            'criteria' => '\HuaweiCloud\SDK\Cdn\V2\Model\Criteria[]'
+            'criteria' => '\HuaweiCloud\SDK\Cdn\V2\Model\CriteriaItem[]'
     ];
 
     /**
@@ -217,7 +217,7 @@ class Match implements ModelInterface, ArrayAccess
     * Gets criteria
     *  **参数解释：** 匹配条件列表 **约束限制：** 不涉及
     *
-    * @return \HuaweiCloud\SDK\Cdn\V2\Model\Criteria[]
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\CriteriaItem[]
     */
     public function getCriteria()
     {
@@ -227,7 +227,7 @@ class Match implements ModelInterface, ArrayAccess
     /**
     * Sets criteria
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\Criteria[] $criteria **参数解释：** 匹配条件列表 **约束限制：** 不涉及
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\CriteriaItem[] $criteria **参数解释：** 匹配条件列表 **约束限制：** 不涉及
     *
     * @return $this
     */

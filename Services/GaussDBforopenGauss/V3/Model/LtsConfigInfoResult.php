@@ -21,7 +21,7 @@ class LtsConfigInfoResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * logGroupName  **参数解释**: LTS日志组名称。 **取值范围**: 不涉及。
-    * logGroupId  **参数解释**: LTS日志组ID。 **取值范围**: 不涉及。LTS日志组ID
+    * logGroupId  **参数解释**: LTS日志组ID。 **取值范围**: 不涉及。
     * groupLogType  **参数解释**: LTS日志组类别。 **取值范围**: 通常为asp_log，标识为智能运维专用日志组。
     * groupTtlInDays  **参数解释**: LTS日志组中数据最大保留天数。 **取值范围**: [1,30]
     * logStreamName  **参数解释**: LTS日志流名称。 **取值范围**: 通常为STREAM_APS_FULL_SQL-实例ID。
@@ -49,7 +49,7 @@ class LtsConfigInfoResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * logGroupName  **参数解释**: LTS日志组名称。 **取值范围**: 不涉及。
-    * logGroupId  **参数解释**: LTS日志组ID。 **取值范围**: 不涉及。LTS日志组ID
+    * logGroupId  **参数解释**: LTS日志组ID。 **取值范围**: 不涉及。
     * groupLogType  **参数解释**: LTS日志组类别。 **取值范围**: 通常为asp_log，标识为智能运维专用日志组。
     * groupTtlInDays  **参数解释**: LTS日志组中数据最大保留天数。 **取值范围**: [1,30]
     * logStreamName  **参数解释**: LTS日志流名称。 **取值范围**: 通常为STREAM_APS_FULL_SQL-实例ID。
@@ -98,7 +98,7 @@ class LtsConfigInfoResult implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * logGroupName  **参数解释**: LTS日志组名称。 **取值范围**: 不涉及。
-    * logGroupId  **参数解释**: LTS日志组ID。 **取值范围**: 不涉及。LTS日志组ID
+    * logGroupId  **参数解释**: LTS日志组ID。 **取值范围**: 不涉及。
     * groupLogType  **参数解释**: LTS日志组类别。 **取值范围**: 通常为asp_log，标识为智能运维专用日志组。
     * groupTtlInDays  **参数解释**: LTS日志组中数据最大保留天数。 **取值范围**: [1,30]
     * logStreamName  **参数解释**: LTS日志流名称。 **取值范围**: 通常为STREAM_APS_FULL_SQL-实例ID。
@@ -126,7 +126,7 @@ class LtsConfigInfoResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * logGroupName  **参数解释**: LTS日志组名称。 **取值范围**: 不涉及。
-    * logGroupId  **参数解释**: LTS日志组ID。 **取值范围**: 不涉及。LTS日志组ID
+    * logGroupId  **参数解释**: LTS日志组ID。 **取值范围**: 不涉及。
     * groupLogType  **参数解释**: LTS日志组类别。 **取值范围**: 通常为asp_log，标识为智能运维专用日志组。
     * groupTtlInDays  **参数解释**: LTS日志组中数据最大保留天数。 **取值范围**: [1,30]
     * logStreamName  **参数解释**: LTS日志流名称。 **取值范围**: 通常为STREAM_APS_FULL_SQL-实例ID。
@@ -154,7 +154,7 @@ class LtsConfigInfoResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * logGroupName  **参数解释**: LTS日志组名称。 **取值范围**: 不涉及。
-    * logGroupId  **参数解释**: LTS日志组ID。 **取值范围**: 不涉及。LTS日志组ID
+    * logGroupId  **参数解释**: LTS日志组ID。 **取值范围**: 不涉及。
     * groupLogType  **参数解释**: LTS日志组类别。 **取值范围**: 通常为asp_log，标识为智能运维专用日志组。
     * groupTtlInDays  **参数解释**: LTS日志组中数据最大保留天数。 **取值范围**: [1,30]
     * logStreamName  **参数解释**: LTS日志流名称。 **取值范围**: 通常为STREAM_APS_FULL_SQL-实例ID。
@@ -297,7 +297,7 @@ class LtsConfigInfoResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets logGroupId
-    *  **参数解释**: LTS日志组ID。 **取值范围**: 不涉及。LTS日志组ID
+    *  **参数解释**: LTS日志组ID。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class LtsConfigInfoResult implements ModelInterface, ArrayAccess
     /**
     * Sets logGroupId
     *
-    * @param string|null $logGroupId **参数解释**: LTS日志组ID。 **取值范围**: 不涉及。LTS日志组ID
+    * @param string|null $logGroupId **参数解释**: LTS日志组ID。 **取值范围**: 不涉及。
     *
     * @return $this
     */

@@ -2311,80 +2311,6 @@ class CceAsyncClient extends Client
     }
 
     /**
-     * 获取集群支持的可配置参数列表
-     *
-     * 该API用于根据集群版本类型等查询集群支持的详细配置项，用于集群创建时指定。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function getClusterSupportConfigurationAsync($request)
-    {
-        return $this->getClusterSupportConfigurationAsyncWithHttpInfo($request);
-    }
-    
-    public function getClusterSupportConfigurationAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/api/v3/clusters/configuration/detail';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['clusterType'] !== null) {
-            $queryParams['cluster_type'] = $localVarParams['clusterType'];
-        }
-        if ($localVarParams['clusterVersion'] !== null) {
-            $queryParams['cluster_version'] = $localVarParams['clusterVersion'];
-        }
-        if ($localVarParams['clusterId'] !== null) {
-            $queryParams['cluster_id'] = $localVarParams['clusterId'];
-        }
-        if ($localVarParams['networkMode'] !== null) {
-            $queryParams['network_mode'] = $localVarParams['networkMode'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\GetClusterSupportConfigurationResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\GetClusterSupportConfigurationRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 查询自定义标签
      *
      * 该API用于查询自定义标签
@@ -4792,6 +4718,80 @@ class CceAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowClusterEndpointsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowClusterEndpointsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取集群支持的可配置参数列表
+     *
+     * 该API用于根据集群版本类型等查询集群支持的详细配置项，用于集群创建时指定。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showClusterSupportConfigurationAsync($request)
+    {
+        return $this->showClusterSupportConfigurationAsyncWithHttpInfo($request);
+    }
+    
+    public function showClusterSupportConfigurationAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3/clusters/configuration/detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterType'] !== null) {
+            $queryParams['cluster_type'] = $localVarParams['clusterType'];
+        }
+        if ($localVarParams['clusterVersion'] !== null) {
+            $queryParams['cluster_version'] = $localVarParams['clusterVersion'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $queryParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['networkMode'] !== null) {
+            $queryParams['network_mode'] = $localVarParams['networkMode'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowClusterSupportConfigurationResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowClusterSupportConfigurationRequest',
             $asyncRequest = true);
     }
 

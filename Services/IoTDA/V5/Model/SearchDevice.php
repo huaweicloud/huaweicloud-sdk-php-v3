@@ -35,6 +35,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
     * groups  设备组列表。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
     * tags  设备的标签列表。
+    * modules  设备的OTA模块列表。
     * marker  搜索结果记录Id。
     *
     * @var string[]
@@ -55,6 +56,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
             'groups' => 'object',
             'status' => 'string',
             'tags' => 'object',
+            'modules' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ModuleSearchDTO[]',
             'marker' => 'string'
     ];
 
@@ -75,6 +77,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
     * groups  设备组列表。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
     * tags  设备的标签列表。
+    * modules  设备的OTA模块列表。
     * marker  搜索结果记录Id。
     *
     * @var string[]
@@ -95,6 +98,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
         'groups' => null,
         'status' => null,
         'tags' => null,
+        'modules' => null,
         'marker' => null
     ];
 
@@ -136,6 +140,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
     * groups  设备组列表。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
     * tags  设备的标签列表。
+    * modules  设备的OTA模块列表。
     * marker  搜索结果记录Id。
     *
     * @var string[]
@@ -156,6 +161,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
             'groups' => 'groups',
             'status' => 'status',
             'tags' => 'tags',
+            'modules' => 'modules',
             'marker' => 'marker'
     ];
 
@@ -176,6 +182,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
     * groups  设备组列表。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
     * tags  设备的标签列表。
+    * modules  设备的OTA模块列表。
     * marker  搜索结果记录Id。
     *
     * @var string[]
@@ -196,6 +203,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
             'groups' => 'setGroups',
             'status' => 'setStatus',
             'tags' => 'setTags',
+            'modules' => 'setModules',
             'marker' => 'setMarker'
     ];
 
@@ -216,6 +224,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
     * groups  设备组列表。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
     * tags  设备的标签列表。
+    * modules  设备的OTA模块列表。
     * marker  搜索结果记录Id。
     *
     * @var string[]
@@ -236,6 +245,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
             'groups' => 'getGroups',
             'status' => 'getStatus',
             'tags' => 'getTags',
+            'modules' => 'getModules',
             'marker' => 'getMarker'
     ];
 
@@ -312,6 +322,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
         $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['modules'] = isset($data['modules']) ? $data['modules'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
@@ -730,6 +741,30 @@ class SearchDevice implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets modules
+    *  设备的OTA模块列表。
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ModuleSearchDTO[]|null
+    */
+    public function getModules()
+    {
+        return $this->container['modules'];
+    }
+
+    /**
+    * Sets modules
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ModuleSearchDTO[]|null $modules 设备的OTA模块列表。
+    *
+    * @return $this
+    */
+    public function setModules($modules)
+    {
+        $this->container['modules'] = $modules;
         return $this;
     }
 

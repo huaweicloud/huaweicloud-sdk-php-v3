@@ -202,6 +202,15 @@ class AccessAreaFilter implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+        if ($this->container['contentType'] === null) {
+            $invalidProperties[] = "'contentType' can't be null";
+        }
+        if ($this->container['area'] === null) {
+            $invalidProperties[] = "'area' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -220,7 +229,7 @@ class AccessAreaFilter implements ModelInterface, ArrayAccess
     * Gets type
     *  规则类型，黑、白名单二选一。   - black: 黑名单，如果匹配到黑名单规则，则黑名单所选区域内的用户将无法访问当前资源，返回403状态码。   - white: 白名单，白名单所选区域以外的用户均无法访问当前资源，返回403状态码。
     *
-    * @return string|null
+    * @return string
     */
     public function getType()
     {
@@ -230,7 +239,7 @@ class AccessAreaFilter implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 规则类型，黑、白名单二选一。   - black: 黑名单，如果匹配到黑名单规则，则黑名单所选区域内的用户将无法访问当前资源，返回403状态码。   - white: 白名单，白名单所选区域以外的用户均无法访问当前资源，返回403状态码。
+    * @param string $type 规则类型，黑、白名单二选一。   - black: 黑名单，如果匹配到黑名单规则，则黑名单所选区域内的用户将无法访问当前资源，返回403状态码。   - white: 白名单，白名单所选区域以外的用户均无法访问当前资源，返回403状态码。
     *
     * @return $this
     */
@@ -244,7 +253,7 @@ class AccessAreaFilter implements ModelInterface, ArrayAccess
     * Gets contentType
     *  生效类型。   - all: 所有文件，所有文件均遵循配置的规则。   - file_directory: 目录路径，指定目录路径的资源遵循配置的规则。   - file_path: 全路径，指定路径的资源遵循配置的规则。
     *
-    * @return string|null
+    * @return string
     */
     public function getContentType()
     {
@@ -254,7 +263,7 @@ class AccessAreaFilter implements ModelInterface, ArrayAccess
     /**
     * Sets contentType
     *
-    * @param string|null $contentType 生效类型。   - all: 所有文件，所有文件均遵循配置的规则。   - file_directory: 目录路径，指定目录路径的资源遵循配置的规则。   - file_path: 全路径，指定路径的资源遵循配置的规则。
+    * @param string $contentType 生效类型。   - all: 所有文件，所有文件均遵循配置的规则。   - file_directory: 目录路径，指定目录路径的资源遵循配置的规则。   - file_path: 全路径，指定路径的资源遵循配置的规则。
     *
     * @return $this
     */
@@ -292,7 +301,7 @@ class AccessAreaFilter implements ModelInterface, ArrayAccess
     * Gets area
     *  配置规则适用的区域，多个区域以“,”进行分隔，支持的区域如：CN_IN：中国大陆，AF：阿富汗，IE：爱尔兰，EG：埃及，AU：澳大利亚等。具体的位置编码参见《附录-地理位置编码》查询。
     *
-    * @return string|null
+    * @return string
     */
     public function getArea()
     {
@@ -302,7 +311,7 @@ class AccessAreaFilter implements ModelInterface, ArrayAccess
     /**
     * Sets area
     *
-    * @param string|null $area 配置规则适用的区域，多个区域以“,”进行分隔，支持的区域如：CN_IN：中国大陆，AF：阿富汗，IE：爱尔兰，EG：埃及，AU：澳大利亚等。具体的位置编码参见《附录-地理位置编码》查询。
+    * @param string $area 配置规则适用的区域，多个区域以“,”进行分隔，支持的区域如：CN_IN：中国大陆，AF：阿富汗，IE：爱尔兰，EG：埃及，AU：澳大利亚等。具体的位置编码参见《附录-地理位置编码》查询。
     *
     * @return $this
     */

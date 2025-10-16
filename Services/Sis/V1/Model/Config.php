@@ -26,6 +26,7 @@ class Config implements ModelInterface, ArrayAccess
     * vocabularyId  热词表id，不使用则不填写。
     * digitNorm  表示是否将语音中的数字识别为阿拉伯数字，取值为“yes” 和 “no”，缺省为“yes”。
     * needWordInfo  表示是否在识别结果中输出分词结果信息，取值为“yes”和“no”，默认为“no”。
+    * autoLanguageDetect  表示是否开启普英方自动识别，取值为“yes”和“no”，默认为“no”。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class Config implements ModelInterface, ArrayAccess
             'addPunc' => 'string',
             'vocabularyId' => 'string',
             'digitNorm' => 'string',
-            'needWordInfo' => 'string'
+            'needWordInfo' => 'string',
+            'autoLanguageDetect' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class Config implements ModelInterface, ArrayAccess
     * vocabularyId  热词表id，不使用则不填写。
     * digitNorm  表示是否将语音中的数字识别为阿拉伯数字，取值为“yes” 和 “no”，缺省为“yes”。
     * needWordInfo  表示是否在识别结果中输出分词结果信息，取值为“yes”和“no”，默认为“no”。
+    * autoLanguageDetect  表示是否开启普英方自动识别，取值为“yes”和“no”，默认为“no”。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class Config implements ModelInterface, ArrayAccess
         'addPunc' => null,
         'vocabularyId' => null,
         'digitNorm' => null,
-        'needWordInfo' => null
+        'needWordInfo' => null,
+        'autoLanguageDetect' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class Config implements ModelInterface, ArrayAccess
     * vocabularyId  热词表id，不使用则不填写。
     * digitNorm  表示是否将语音中的数字识别为阿拉伯数字，取值为“yes” 和 “no”，缺省为“yes”。
     * needWordInfo  表示是否在识别结果中输出分词结果信息，取值为“yes”和“no”，默认为“no”。
+    * autoLanguageDetect  表示是否开启普英方自动识别，取值为“yes”和“no”，默认为“no”。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class Config implements ModelInterface, ArrayAccess
             'addPunc' => 'add_punc',
             'vocabularyId' => 'vocabulary_id',
             'digitNorm' => 'digit_norm',
-            'needWordInfo' => 'need_word_info'
+            'needWordInfo' => 'need_word_info',
+            'autoLanguageDetect' => 'auto_language_detect'
     ];
 
     /**
@@ -107,6 +113,7 @@ class Config implements ModelInterface, ArrayAccess
     * vocabularyId  热词表id，不使用则不填写。
     * digitNorm  表示是否将语音中的数字识别为阿拉伯数字，取值为“yes” 和 “no”，缺省为“yes”。
     * needWordInfo  表示是否在识别结果中输出分词结果信息，取值为“yes”和“no”，默认为“no”。
+    * autoLanguageDetect  表示是否开启普英方自动识别，取值为“yes”和“no”，默认为“no”。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class Config implements ModelInterface, ArrayAccess
             'addPunc' => 'setAddPunc',
             'vocabularyId' => 'setVocabularyId',
             'digitNorm' => 'setDigitNorm',
-            'needWordInfo' => 'setNeedWordInfo'
+            'needWordInfo' => 'setNeedWordInfo',
+            'autoLanguageDetect' => 'setAutoLanguageDetect'
     ];
 
     /**
@@ -127,6 +135,7 @@ class Config implements ModelInterface, ArrayAccess
     * vocabularyId  热词表id，不使用则不填写。
     * digitNorm  表示是否将语音中的数字识别为阿拉伯数字，取值为“yes” 和 “no”，缺省为“yes”。
     * needWordInfo  表示是否在识别结果中输出分词结果信息，取值为“yes”和“no”，默认为“no”。
+    * autoLanguageDetect  表示是否开启普英方自动识别，取值为“yes”和“no”，默认为“no”。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class Config implements ModelInterface, ArrayAccess
             'addPunc' => 'getAddPunc',
             'vocabularyId' => 'getVocabularyId',
             'digitNorm' => 'getDigitNorm',
-            'needWordInfo' => 'getNeedWordInfo'
+            'needWordInfo' => 'getNeedWordInfo',
+            'autoLanguageDetect' => 'getAutoLanguageDetect'
     ];
 
     /**
@@ -206,6 +216,8 @@ class Config implements ModelInterface, ArrayAccess
     const DIGIT_NORM_NO = 'no';
     const NEED_WORD_INFO_YES = 'yes';
     const NEED_WORD_INFO_NO = 'no';
+    const AUTO_LANGUAGE_DETECT_YES = 'yes';
+    const AUTO_LANGUAGE_DETECT_NO = 'no';
     
 
     /**
@@ -290,6 +302,19 @@ class Config implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAutoLanguageDetectAllowableValues()
+    {
+        return [
+            self::AUTO_LANGUAGE_DETECT_YES,
+            self::AUTO_LANGUAGE_DETECT_NO,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -312,6 +337,7 @@ class Config implements ModelInterface, ArrayAccess
         $this->container['vocabularyId'] = isset($data['vocabularyId']) ? $data['vocabularyId'] : null;
         $this->container['digitNorm'] = isset($data['digitNorm']) ? $data['digitNorm'] : null;
         $this->container['needWordInfo'] = isset($data['needWordInfo']) ? $data['needWordInfo'] : null;
+        $this->container['autoLanguageDetect'] = isset($data['autoLanguageDetect']) ? $data['autoLanguageDetect'] : null;
     }
 
     /**
@@ -364,6 +390,14 @@ class Config implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['needWordInfo']) && !in_array($this->container['needWordInfo'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'needWordInfo', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getAutoLanguageDetectAllowableValues();
+                if (!is_null($this->container['autoLanguageDetect']) && !in_array($this->container['autoLanguageDetect'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'autoLanguageDetect', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -523,6 +557,30 @@ class Config implements ModelInterface, ArrayAccess
     public function setNeedWordInfo($needWordInfo)
     {
         $this->container['needWordInfo'] = $needWordInfo;
+        return $this;
+    }
+
+    /**
+    * Gets autoLanguageDetect
+    *  表示是否开启普英方自动识别，取值为“yes”和“no”，默认为“no”。
+    *
+    * @return string|null
+    */
+    public function getAutoLanguageDetect()
+    {
+        return $this->container['autoLanguageDetect'];
+    }
+
+    /**
+    * Sets autoLanguageDetect
+    *
+    * @param string|null $autoLanguageDetect 表示是否开启普英方自动识别，取值为“yes”和“no”，默认为“no”。
+    *
+    * @return $this
+    */
+    public function setAutoLanguageDetect($autoLanguageDetect)
+    {
+        $this->container['autoLanguageDetect'] = $autoLanguageDetect;
         return $this;
     }
 

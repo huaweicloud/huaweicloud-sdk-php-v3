@@ -20,22 +20,26 @@ class UpgradeDatabaseVersionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * upgradeMode  升级模式。  取值为“minimized_interrupt_time”为中断时间最短优先模式：升级过程对业务影响相对较小的升级方式  取值为“minimized_upgrade_time”为升级时长最短优先模式：升级过程时长相对较快的升级方式。  默认取值为“minimized_interrupt_time”。
+    * upgradeMode  **参数解释：** 升级模式。 **约束限制：** 不涉及。 **取值范围：** minimized_interrupt_time：表示中断时间最短优先模式：升级过程对业务影响相对较小的升级方式。 minimized_upgrade_time：表示升级时长最短优先模式：升级过程时长相对较快的升级方式。 **默认取值：** minimized_interrupt_time。
+    * isDelayed  **参数解释：** 实例是否在可维护时间窗内自动升级。 **约束限制：** 不涉及。 **取值范围：** true：表示延迟升级，实例将在可维护时间窗内自动升级。 false：表示立即升级。 **默认取值：** false。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'upgradeMode' => 'string'
+            'upgradeMode' => 'string',
+            'isDelayed' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * upgradeMode  升级模式。  取值为“minimized_interrupt_time”为中断时间最短优先模式：升级过程对业务影响相对较小的升级方式  取值为“minimized_upgrade_time”为升级时长最短优先模式：升级过程时长相对较快的升级方式。  默认取值为“minimized_interrupt_time”。
+    * upgradeMode  **参数解释：** 升级模式。 **约束限制：** 不涉及。 **取值范围：** minimized_interrupt_time：表示中断时间最短优先模式：升级过程对业务影响相对较小的升级方式。 minimized_upgrade_time：表示升级时长最短优先模式：升级过程时长相对较快的升级方式。 **默认取值：** minimized_interrupt_time。
+    * isDelayed  **参数解释：** 实例是否在可维护时间窗内自动升级。 **约束限制：** 不涉及。 **取值范围：** true：表示延迟升级，实例将在可维护时间窗内自动升级。 false：表示立即升级。 **默认取值：** false。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'upgradeMode' => null
+        'upgradeMode' => null,
+        'isDelayed' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class UpgradeDatabaseVersionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * upgradeMode  升级模式。  取值为“minimized_interrupt_time”为中断时间最短优先模式：升级过程对业务影响相对较小的升级方式  取值为“minimized_upgrade_time”为升级时长最短优先模式：升级过程时长相对较快的升级方式。  默认取值为“minimized_interrupt_time”。
+    * upgradeMode  **参数解释：** 升级模式。 **约束限制：** 不涉及。 **取值范围：** minimized_interrupt_time：表示中断时间最短优先模式：升级过程对业务影响相对较小的升级方式。 minimized_upgrade_time：表示升级时长最短优先模式：升级过程时长相对较快的升级方式。 **默认取值：** minimized_interrupt_time。
+    * isDelayed  **参数解释：** 实例是否在可维护时间窗内自动升级。 **约束限制：** 不涉及。 **取值范围：** true：表示延迟升级，实例将在可维护时间窗内自动升级。 false：表示立即升级。 **默认取值：** false。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'upgradeMode' => 'upgrade_mode'
+            'upgradeMode' => 'upgrade_mode',
+            'isDelayed' => 'is_delayed'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * upgradeMode  升级模式。  取值为“minimized_interrupt_time”为中断时间最短优先模式：升级过程对业务影响相对较小的升级方式  取值为“minimized_upgrade_time”为升级时长最短优先模式：升级过程时长相对较快的升级方式。  默认取值为“minimized_interrupt_time”。
+    * upgradeMode  **参数解释：** 升级模式。 **约束限制：** 不涉及。 **取值范围：** minimized_interrupt_time：表示中断时间最短优先模式：升级过程对业务影响相对较小的升级方式。 minimized_upgrade_time：表示升级时长最短优先模式：升级过程时长相对较快的升级方式。 **默认取值：** minimized_interrupt_time。
+    * isDelayed  **参数解释：** 实例是否在可维护时间窗内自动升级。 **约束限制：** 不涉及。 **取值范围：** true：表示延迟升级，实例将在可维护时间窗内自动升级。 false：表示立即升级。 **默认取值：** false。
     *
     * @var string[]
     */
     protected static $setters = [
-            'upgradeMode' => 'setUpgradeMode'
+            'upgradeMode' => 'setUpgradeMode',
+            'isDelayed' => 'setIsDelayed'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * upgradeMode  升级模式。  取值为“minimized_interrupt_time”为中断时间最短优先模式：升级过程对业务影响相对较小的升级方式  取值为“minimized_upgrade_time”为升级时长最短优先模式：升级过程时长相对较快的升级方式。  默认取值为“minimized_interrupt_time”。
+    * upgradeMode  **参数解释：** 升级模式。 **约束限制：** 不涉及。 **取值范围：** minimized_interrupt_time：表示中断时间最短优先模式：升级过程对业务影响相对较小的升级方式。 minimized_upgrade_time：表示升级时长最短优先模式：升级过程时长相对较快的升级方式。 **默认取值：** minimized_interrupt_time。
+    * isDelayed  **参数解释：** 实例是否在可维护时间窗内自动升级。 **约束限制：** 不涉及。 **取值范围：** true：表示延迟升级，实例将在可维护时间窗内自动升级。 false：表示立即升级。 **默认取值：** false。
     *
     * @var string[]
     */
     protected static $getters = [
-            'upgradeMode' => 'getUpgradeMode'
+            'upgradeMode' => 'getUpgradeMode',
+            'isDelayed' => 'getIsDelayed'
     ];
 
     /**
@@ -148,6 +158,7 @@ class UpgradeDatabaseVersionRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['upgradeMode'] = isset($data['upgradeMode']) ? $data['upgradeMode'] : null;
+        $this->container['isDelayed'] = isset($data['isDelayed']) ? $data['isDelayed'] : null;
     }
 
     /**
@@ -174,7 +185,7 @@ class UpgradeDatabaseVersionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets upgradeMode
-    *  升级模式。  取值为“minimized_interrupt_time”为中断时间最短优先模式：升级过程对业务影响相对较小的升级方式  取值为“minimized_upgrade_time”为升级时长最短优先模式：升级过程时长相对较快的升级方式。  默认取值为“minimized_interrupt_time”。
+    *  **参数解释：** 升级模式。 **约束限制：** 不涉及。 **取值范围：** minimized_interrupt_time：表示中断时间最短优先模式：升级过程对业务影响相对较小的升级方式。 minimized_upgrade_time：表示升级时长最短优先模式：升级过程时长相对较快的升级方式。 **默认取值：** minimized_interrupt_time。
     *
     * @return string|null
     */
@@ -186,13 +197,37 @@ class UpgradeDatabaseVersionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets upgradeMode
     *
-    * @param string|null $upgradeMode 升级模式。  取值为“minimized_interrupt_time”为中断时间最短优先模式：升级过程对业务影响相对较小的升级方式  取值为“minimized_upgrade_time”为升级时长最短优先模式：升级过程时长相对较快的升级方式。  默认取值为“minimized_interrupt_time”。
+    * @param string|null $upgradeMode **参数解释：** 升级模式。 **约束限制：** 不涉及。 **取值范围：** minimized_interrupt_time：表示中断时间最短优先模式：升级过程对业务影响相对较小的升级方式。 minimized_upgrade_time：表示升级时长最短优先模式：升级过程时长相对较快的升级方式。 **默认取值：** minimized_interrupt_time。
     *
     * @return $this
     */
     public function setUpgradeMode($upgradeMode)
     {
         $this->container['upgradeMode'] = $upgradeMode;
+        return $this;
+    }
+
+    /**
+    * Gets isDelayed
+    *  **参数解释：** 实例是否在可维护时间窗内自动升级。 **约束限制：** 不涉及。 **取值范围：** true：表示延迟升级，实例将在可维护时间窗内自动升级。 false：表示立即升级。 **默认取值：** false。
+    *
+    * @return bool|null
+    */
+    public function getIsDelayed()
+    {
+        return $this->container['isDelayed'];
+    }
+
+    /**
+    * Sets isDelayed
+    *
+    * @param bool|null $isDelayed **参数解释：** 实例是否在可维护时间窗内自动升级。 **约束限制：** 不涉及。 **取值范围：** true：表示延迟升级，实例将在可维护时间窗内自动升级。 false：表示立即升级。 **默认取值：** false。
+    *
+    * @return $this
+    */
+    public function setIsDelayed($isDelayed)
+    {
+        $this->container['isDelayed'] = $isDelayed;
         return $this;
     }
 

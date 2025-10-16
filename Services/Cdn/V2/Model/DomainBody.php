@@ -258,9 +258,6 @@ class DomainBody implements ModelInterface, ArrayAccess
         if ($this->container['sources'] === null) {
             $invalidProperties[] = "'sources' can't be null";
         }
-        if ($this->container['serviceArea'] === null) {
-            $invalidProperties[] = "'serviceArea' can't be null";
-        }
             $allowedValues = $this->getServiceAreaAllowableValues();
                 if (!is_null($this->container['serviceArea']) && !in_array($this->container['serviceArea'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -359,7 +356,7 @@ class DomainBody implements ModelInterface, ArrayAccess
     * Gets serviceArea
     *  域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。
     *
-    * @return string
+    * @return string|null
     */
     public function getServiceArea()
     {
@@ -369,7 +366,7 @@ class DomainBody implements ModelInterface, ArrayAccess
     /**
     * Sets serviceArea
     *
-    * @param string $serviceArea 域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。
+    * @param string|null $serviceArea 域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。
     *
     * @return $this
     */

@@ -23,6 +23,7 @@ class CreateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     * taskScope  **参数解释**: 限流任务范围，目前支持SQL、SESSION级别范围。 **约束限制**: 不涉及。 **取值范围**: - SQL - SESSION  **默认取值**: 不涉及。
     * startTime  **参数解释**: 任务开始时间，如果该值小于当前时间，会取当前时间的前两分钟。 **约束限制**: 当“task_scope”为SQL时必传。 **取值范围**: 格式必须为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。 **默认取值**: 不涉及。
     * endTime  **参数解释**: 任务结束时间。 **约束限制**: 当“task_scope”为SQL时必传。 **取值范围**: 大于任务开始时间，格式必须为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。 **默认取值**: 不涉及。
+    * sqlModel  **参数解释**: SQL模板。 **约束限制**: 如果“limit_type”为SQLID，必传。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * limitType  **参数解释**: 限流类型。 **约束限制**: 不涉及。 **取值范围**: - 当“task_scope”为SQL时，可选SQL_ID、SQL_TYPE类型。 - 当“task_scope”为SESSION时，可选SESSION_ACTIVE_MAX_COUNT类型。  **默认取值**: 不涉及。
     * limitTypeValue  **参数解释**: 限流类型值。 **约束限制**: 不涉及。 **取值范围**: - 当“limit_type”为SQL_ID类型时，该值为选中模板的sql_id。 - 当“limit_type”为SQL_TYPE类型时，值为SQL类型，目前支持select，update，insert，delete，merge。 - 当“limit_type”为SESSION_ACTIVE_MAX_COUNT类型时，只支持CPU_OR_MEMORY一种值。  **默认取值**: 不涉及。
     * keyWords  **参数解释**: 关键词。 **约束限制**: 当且仅当“limit_type”为SQL_TYPE时，必传。 **取值范围**: 多个关键词以逗号隔开，数量范围为[2，100]个，每个关键词长度范围[2，64]位，关键词不允许包含 \" 或 \\ 或 {} 或 null值以及非首尾的空格符。 **默认取值**: 不涉及。
@@ -39,6 +40,7 @@ class CreateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
             'taskScope' => 'string',
             'startTime' => 'string',
             'endTime' => 'string',
+            'sqlModel' => 'string',
             'limitType' => 'string',
             'limitTypeValue' => 'string',
             'keyWords' => 'string',
@@ -55,6 +57,7 @@ class CreateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     * taskScope  **参数解释**: 限流任务范围，目前支持SQL、SESSION级别范围。 **约束限制**: 不涉及。 **取值范围**: - SQL - SESSION  **默认取值**: 不涉及。
     * startTime  **参数解释**: 任务开始时间，如果该值小于当前时间，会取当前时间的前两分钟。 **约束限制**: 当“task_scope”为SQL时必传。 **取值范围**: 格式必须为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。 **默认取值**: 不涉及。
     * endTime  **参数解释**: 任务结束时间。 **约束限制**: 当“task_scope”为SQL时必传。 **取值范围**: 大于任务开始时间，格式必须为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。 **默认取值**: 不涉及。
+    * sqlModel  **参数解释**: SQL模板。 **约束限制**: 如果“limit_type”为SQLID，必传。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * limitType  **参数解释**: 限流类型。 **约束限制**: 不涉及。 **取值范围**: - 当“task_scope”为SQL时，可选SQL_ID、SQL_TYPE类型。 - 当“task_scope”为SESSION时，可选SESSION_ACTIVE_MAX_COUNT类型。  **默认取值**: 不涉及。
     * limitTypeValue  **参数解释**: 限流类型值。 **约束限制**: 不涉及。 **取值范围**: - 当“limit_type”为SQL_ID类型时，该值为选中模板的sql_id。 - 当“limit_type”为SQL_TYPE类型时，值为SQL类型，目前支持select，update，insert，delete，merge。 - 当“limit_type”为SESSION_ACTIVE_MAX_COUNT类型时，只支持CPU_OR_MEMORY一种值。  **默认取值**: 不涉及。
     * keyWords  **参数解释**: 关键词。 **约束限制**: 当且仅当“limit_type”为SQL_TYPE时，必传。 **取值范围**: 多个关键词以逗号隔开，数量范围为[2，100]个，每个关键词长度范围[2，64]位，关键词不允许包含 \" 或 \\ 或 {} 或 null值以及非首尾的空格符。 **默认取值**: 不涉及。
@@ -71,6 +74,7 @@ class CreateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
         'taskScope' => null,
         'startTime' => null,
         'endTime' => null,
+        'sqlModel' => null,
         'limitType' => null,
         'limitTypeValue' => null,
         'keyWords' => null,
@@ -108,6 +112,7 @@ class CreateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     * taskScope  **参数解释**: 限流任务范围，目前支持SQL、SESSION级别范围。 **约束限制**: 不涉及。 **取值范围**: - SQL - SESSION  **默认取值**: 不涉及。
     * startTime  **参数解释**: 任务开始时间，如果该值小于当前时间，会取当前时间的前两分钟。 **约束限制**: 当“task_scope”为SQL时必传。 **取值范围**: 格式必须为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。 **默认取值**: 不涉及。
     * endTime  **参数解释**: 任务结束时间。 **约束限制**: 当“task_scope”为SQL时必传。 **取值范围**: 大于任务开始时间，格式必须为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。 **默认取值**: 不涉及。
+    * sqlModel  **参数解释**: SQL模板。 **约束限制**: 如果“limit_type”为SQLID，必传。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * limitType  **参数解释**: 限流类型。 **约束限制**: 不涉及。 **取值范围**: - 当“task_scope”为SQL时，可选SQL_ID、SQL_TYPE类型。 - 当“task_scope”为SESSION时，可选SESSION_ACTIVE_MAX_COUNT类型。  **默认取值**: 不涉及。
     * limitTypeValue  **参数解释**: 限流类型值。 **约束限制**: 不涉及。 **取值范围**: - 当“limit_type”为SQL_ID类型时，该值为选中模板的sql_id。 - 当“limit_type”为SQL_TYPE类型时，值为SQL类型，目前支持select，update，insert，delete，merge。 - 当“limit_type”为SESSION_ACTIVE_MAX_COUNT类型时，只支持CPU_OR_MEMORY一种值。  **默认取值**: 不涉及。
     * keyWords  **参数解释**: 关键词。 **约束限制**: 当且仅当“limit_type”为SQL_TYPE时，必传。 **取值范围**: 多个关键词以逗号隔开，数量范围为[2，100]个，每个关键词长度范围[2，64]位，关键词不允许包含 \" 或 \\ 或 {} 或 null值以及非首尾的空格符。 **默认取值**: 不涉及。
@@ -124,6 +129,7 @@ class CreateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
             'taskScope' => 'task_scope',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
+            'sqlModel' => 'sql_model',
             'limitType' => 'limit_type',
             'limitTypeValue' => 'limit_type_value',
             'keyWords' => 'key_words',
@@ -140,6 +146,7 @@ class CreateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     * taskScope  **参数解释**: 限流任务范围，目前支持SQL、SESSION级别范围。 **约束限制**: 不涉及。 **取值范围**: - SQL - SESSION  **默认取值**: 不涉及。
     * startTime  **参数解释**: 任务开始时间，如果该值小于当前时间，会取当前时间的前两分钟。 **约束限制**: 当“task_scope”为SQL时必传。 **取值范围**: 格式必须为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。 **默认取值**: 不涉及。
     * endTime  **参数解释**: 任务结束时间。 **约束限制**: 当“task_scope”为SQL时必传。 **取值范围**: 大于任务开始时间，格式必须为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。 **默认取值**: 不涉及。
+    * sqlModel  **参数解释**: SQL模板。 **约束限制**: 如果“limit_type”为SQLID，必传。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * limitType  **参数解释**: 限流类型。 **约束限制**: 不涉及。 **取值范围**: - 当“task_scope”为SQL时，可选SQL_ID、SQL_TYPE类型。 - 当“task_scope”为SESSION时，可选SESSION_ACTIVE_MAX_COUNT类型。  **默认取值**: 不涉及。
     * limitTypeValue  **参数解释**: 限流类型值。 **约束限制**: 不涉及。 **取值范围**: - 当“limit_type”为SQL_ID类型时，该值为选中模板的sql_id。 - 当“limit_type”为SQL_TYPE类型时，值为SQL类型，目前支持select，update，insert，delete，merge。 - 当“limit_type”为SESSION_ACTIVE_MAX_COUNT类型时，只支持CPU_OR_MEMORY一种值。  **默认取值**: 不涉及。
     * keyWords  **参数解释**: 关键词。 **约束限制**: 当且仅当“limit_type”为SQL_TYPE时，必传。 **取值范围**: 多个关键词以逗号隔开，数量范围为[2，100]个，每个关键词长度范围[2，64]位，关键词不允许包含 \" 或 \\ 或 {} 或 null值以及非首尾的空格符。 **默认取值**: 不涉及。
@@ -156,6 +163,7 @@ class CreateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
             'taskScope' => 'setTaskScope',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
+            'sqlModel' => 'setSqlModel',
             'limitType' => 'setLimitType',
             'limitTypeValue' => 'setLimitTypeValue',
             'keyWords' => 'setKeyWords',
@@ -172,6 +180,7 @@ class CreateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     * taskScope  **参数解释**: 限流任务范围，目前支持SQL、SESSION级别范围。 **约束限制**: 不涉及。 **取值范围**: - SQL - SESSION  **默认取值**: 不涉及。
     * startTime  **参数解释**: 任务开始时间，如果该值小于当前时间，会取当前时间的前两分钟。 **约束限制**: 当“task_scope”为SQL时必传。 **取值范围**: 格式必须为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。 **默认取值**: 不涉及。
     * endTime  **参数解释**: 任务结束时间。 **约束限制**: 当“task_scope”为SQL时必传。 **取值范围**: 大于任务开始时间，格式必须为yyyy-mm-ddThh:mm:ssZ，当前时间指UTC时间。 **默认取值**: 不涉及。
+    * sqlModel  **参数解释**: SQL模板。 **约束限制**: 如果“limit_type”为SQLID，必传。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * limitType  **参数解释**: 限流类型。 **约束限制**: 不涉及。 **取值范围**: - 当“task_scope”为SQL时，可选SQL_ID、SQL_TYPE类型。 - 当“task_scope”为SESSION时，可选SESSION_ACTIVE_MAX_COUNT类型。  **默认取值**: 不涉及。
     * limitTypeValue  **参数解释**: 限流类型值。 **约束限制**: 不涉及。 **取值范围**: - 当“limit_type”为SQL_ID类型时，该值为选中模板的sql_id。 - 当“limit_type”为SQL_TYPE类型时，值为SQL类型，目前支持select，update，insert，delete，merge。 - 当“limit_type”为SESSION_ACTIVE_MAX_COUNT类型时，只支持CPU_OR_MEMORY一种值。  **默认取值**: 不涉及。
     * keyWords  **参数解释**: 关键词。 **约束限制**: 当且仅当“limit_type”为SQL_TYPE时，必传。 **取值范围**: 多个关键词以逗号隔开，数量范围为[2，100]个，每个关键词长度范围[2，64]位，关键词不允许包含 \" 或 \\ 或 {} 或 null值以及非首尾的空格符。 **默认取值**: 不涉及。
@@ -188,6 +197,7 @@ class CreateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
             'taskScope' => 'getTaskScope',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
+            'sqlModel' => 'getSqlModel',
             'limitType' => 'getLimitType',
             'limitTypeValue' => 'getLimitTypeValue',
             'keyWords' => 'getKeyWords',
@@ -260,6 +270,7 @@ class CreateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
         $this->container['taskScope'] = isset($data['taskScope']) ? $data['taskScope'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['sqlModel'] = isset($data['sqlModel']) ? $data['sqlModel'] : null;
         $this->container['limitType'] = isset($data['limitType']) ? $data['limitType'] : null;
         $this->container['limitTypeValue'] = isset($data['limitTypeValue']) ? $data['limitTypeValue'] : null;
         $this->container['keyWords'] = isset($data['keyWords']) ? $data['keyWords'] : null;
@@ -374,6 +385,30 @@ class CreateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets sqlModel
+    *  **参数解释**: SQL模板。 **约束限制**: 如果“limit_type”为SQLID，必传。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    *
+    * @return string|null
+    */
+    public function getSqlModel()
+    {
+        return $this->container['sqlModel'];
+    }
+
+    /**
+    * Sets sqlModel
+    *
+    * @param string|null $sqlModel **参数解释**: SQL模板。 **约束限制**: 如果“limit_type”为SQLID，必传。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setSqlModel($sqlModel)
+    {
+        $this->container['sqlModel'] = $sqlModel;
         return $this;
     }
 

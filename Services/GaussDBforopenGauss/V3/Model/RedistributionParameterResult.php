@@ -25,7 +25,7 @@ class RedistributionParameterResult implements ModelInterface, ArrayAccess
     * restartRequired  **参数解释**: 修改参数是否需要重启。 **取值范围**: - true：需要重启。 - false：不需要重启。
     * valueRange  **参数解释**: 参数取值范围。 **取值范围**: 不涉及。
     * type  **参数解释**: 参数类型。 **取值范围**: - integer：整数。 - boolean：布尔类型。 - string：字符串类型。
-    * description  **参数解释**: 参数描述。 **取值范围**: 不涉及。
+    * description  **参数解释**: 参数解释。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class RedistributionParameterResult implements ModelInterface, ArrayAccess
     * restartRequired  **参数解释**: 修改参数是否需要重启。 **取值范围**: - true：需要重启。 - false：不需要重启。
     * valueRange  **参数解释**: 参数取值范围。 **取值范围**: 不涉及。
     * type  **参数解释**: 参数类型。 **取值范围**: - integer：整数。 - boolean：布尔类型。 - string：字符串类型。
-    * description  **参数解释**: 参数描述。 **取值范围**: 不涉及。
+    * description  **参数解释**: 参数解释。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class RedistributionParameterResult implements ModelInterface, ArrayAccess
     * restartRequired  **参数解释**: 修改参数是否需要重启。 **取值范围**: - true：需要重启。 - false：不需要重启。
     * valueRange  **参数解释**: 参数取值范围。 **取值范围**: 不涉及。
     * type  **参数解释**: 参数类型。 **取值范围**: - integer：整数。 - boolean：布尔类型。 - string：字符串类型。
-    * description  **参数解释**: 参数描述。 **取值范围**: 不涉及。
+    * description  **参数解释**: 参数解释。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class RedistributionParameterResult implements ModelInterface, ArrayAccess
     * restartRequired  **参数解释**: 修改参数是否需要重启。 **取值范围**: - true：需要重启。 - false：不需要重启。
     * valueRange  **参数解释**: 参数取值范围。 **取值范围**: 不涉及。
     * type  **参数解释**: 参数类型。 **取值范围**: - integer：整数。 - boolean：布尔类型。 - string：字符串类型。
-    * description  **参数解释**: 参数描述。 **取值范围**: 不涉及。
+    * description  **参数解释**: 参数解释。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class RedistributionParameterResult implements ModelInterface, ArrayAccess
     * restartRequired  **参数解释**: 修改参数是否需要重启。 **取值范围**: - true：需要重启。 - false：不需要重启。
     * valueRange  **参数解释**: 参数取值范围。 **取值范围**: 不涉及。
     * type  **参数解释**: 参数类型。 **取值范围**: - integer：整数。 - boolean：布尔类型。 - string：字符串类型。
-    * description  **参数解释**: 参数描述。 **取值范围**: 不涉及。
+    * description  **参数解释**: 参数解释。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -349,7 +349,7 @@ class RedistributionParameterResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  **参数解释**: 参数描述。 **取值范围**: 不涉及。
+    *  **参数解释**: 参数解释。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class RedistributionParameterResult implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description **参数解释**: 参数描述。 **取值范围**: 不涉及。
+    * @param string|null $description **参数解释**: 参数解释。 **取值范围**: 不涉及。
     *
     * @return $this
     */

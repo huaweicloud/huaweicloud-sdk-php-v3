@@ -9625,6 +9625,71 @@ class DwsClient extends Client
     }
 
     /**
+     * 集群扩容前检查
+     *
+     * 下发扩容配置文件，完成扩容准备工作。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function resizePreparation($request)
+    {
+        return $this->resizePreparationWithHttpInfo($request);
+    }
+
+    public function resizePreparationWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/resize-with-existed-nodes/preparation';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ResizePreparationResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ResizePreparationRequest');
+    }
+
+    /**
      * 重启集群
      *
      * 重启集群。
@@ -11059,6 +11124,68 @@ class DwsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ShowQueryDetailResponse',
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ShowQueryDetailRequest');
+    }
+
+    /**
+     * 查询节点列表
+     *
+     * 获取扩容准备信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showResizePreparation($request)
+    {
+        return $this->showResizePreparationWithHttpInfo($request);
+    }
+
+    public function showResizePreparationWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/resize-with-existed-nodes/preparation';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ShowResizePreparationResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ShowResizePreparationRequest');
     }
 
     /**

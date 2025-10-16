@@ -21,24 +21,28 @@ class ListInstanceTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * resourceid  **参数解释：** 资源类型，目前支持waf和waf-instance **约束限制：** 不涉及 **取值范围：** 只能由英文字母、数字组成，且长度为32个字符。 **默认取值：** 不涉及
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'contentType' => 'string',
+            'resourceid' => 'string',
             'enterpriseProjectId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * resourceid  **参数解释：** 资源类型，目前支持waf和waf-instance **约束限制：** 不涉及 **取值范围：** 只能由英文字母、数字组成，且长度为32个字符。 **默认取值：** 不涉及
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'contentType' => null,
+        'resourceid' => null,
         'enterpriseProjectId' => null
     ];
 
@@ -66,36 +70,42 @@ class ListInstanceTagsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * resourceid  **参数解释：** 资源类型，目前支持waf和waf-instance **约束限制：** 不涉及 **取值范围：** 只能由英文字母、数字组成，且长度为32个字符。 **默认取值：** 不涉及
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'contentType' => 'Content-Type',
+            'resourceid' => 'resourceid',
             'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * resourceid  **参数解释：** 资源类型，目前支持waf和waf-instance **约束限制：** 不涉及 **取值范围：** 只能由英文字母、数字组成，且长度为32个字符。 **默认取值：** 不涉及
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
     *
     * @var string[]
     */
     protected static $setters = [
             'contentType' => 'setContentType',
+            'resourceid' => 'setResourceid',
             'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * resourceid  **参数解释：** 资源类型，目前支持waf和waf-instance **约束限制：** 不涉及 **取值范围：** 只能由英文字母、数字组成，且长度为32个字符。 **默认取值：** 不涉及
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
     *
     * @var string[]
     */
     protected static $getters = [
             'contentType' => 'getContentType',
+            'resourceid' => 'getResourceid',
             'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
@@ -158,6 +168,7 @@ class ListInstanceTagsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
+        $this->container['resourceid'] = isset($data['resourceid']) ? $data['resourceid'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
@@ -171,6 +182,9 @@ class ListInstanceTagsRequest implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['contentType'] === null) {
             $invalidProperties[] = "'contentType' can't be null";
+        }
+        if ($this->container['resourceid'] === null) {
+            $invalidProperties[] = "'resourceid' can't be null";
         }
         return $invalidProperties;
     }
@@ -207,6 +221,30 @@ class ListInstanceTagsRequest implements ModelInterface, ArrayAccess
     public function setContentType($contentType)
     {
         $this->container['contentType'] = $contentType;
+        return $this;
+    }
+
+    /**
+    * Gets resourceid
+    *  **参数解释：** 资源类型，目前支持waf和waf-instance **约束限制：** 不涉及 **取值范围：** 只能由英文字母、数字组成，且长度为32个字符。 **默认取值：** 不涉及
+    *
+    * @return string
+    */
+    public function getResourceid()
+    {
+        return $this->container['resourceid'];
+    }
+
+    /**
+    * Sets resourceid
+    *
+    * @param string $resourceid **参数解释：** 资源类型，目前支持waf和waf-instance **约束限制：** 不涉及 **取值范围：** 只能由英文字母、数字组成，且长度为32个字符。 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setResourceid($resourceid)
+    {
+        $this->container['resourceid'] = $resourceid;
         return $this;
     }
 

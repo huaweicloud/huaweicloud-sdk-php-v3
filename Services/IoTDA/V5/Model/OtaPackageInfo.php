@@ -24,6 +24,8 @@ class OtaPackageInfo implements ModelInterface, ArrayAccess
     * appId  **参数说明**：资源空间ID。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * packageType  **参数说明**：升级包类型。 **取值范围**：软件包必须设置为：softwarePackage，固件包必须设置为：firmwarePackage。
     * productId  **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，创建产品后获得。方法请参见 [[创建产品](https://support.huaweicloud.com/api-iothub/iot_06_v5_0050.html)](tag:hws)[[创建产品](https://support.huaweicloud.com/intl/zh-cn/api-iothub/iot_06_v5_0050.html)](tag:hws_hk)。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * productName  设备关联的产品名称
+    * moduleName  **参数说明**：OTA模块名称，产品下唯一且不可修改。 **取值范围**：长度不超过64，号只允许字母、数字、下划线（_）、连接符（-）、英文点（.）的组合。
     * version  **参数说明**：升级包版本号。 **取值范围**：长度不超过256，只允许字母、数字、下划线（_）、连接符（-）、英文点（.）的组合。
     * supportSourceVersions  **参数说明**：支持用于升级此版本包的设备源版本号列表。最多支持20个源版本号。 **取值范围**：源版本号列表，源版本号只允许字母、数字、下划线（_）、连接符（-）、英文点（.）的组合。
     * description  **参数说明**：用于描述升级包的功能等信息。 **取值范围**：长度不超过1024。
@@ -37,6 +39,8 @@ class OtaPackageInfo implements ModelInterface, ArrayAccess
             'appId' => 'string',
             'packageType' => 'string',
             'productId' => 'string',
+            'productName' => 'string',
+            'moduleName' => 'string',
             'version' => 'string',
             'supportSourceVersions' => 'string[]',
             'description' => 'string',
@@ -50,6 +54,8 @@ class OtaPackageInfo implements ModelInterface, ArrayAccess
     * appId  **参数说明**：资源空间ID。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * packageType  **参数说明**：升级包类型。 **取值范围**：软件包必须设置为：softwarePackage，固件包必须设置为：firmwarePackage。
     * productId  **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，创建产品后获得。方法请参见 [[创建产品](https://support.huaweicloud.com/api-iothub/iot_06_v5_0050.html)](tag:hws)[[创建产品](https://support.huaweicloud.com/intl/zh-cn/api-iothub/iot_06_v5_0050.html)](tag:hws_hk)。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * productName  设备关联的产品名称
+    * moduleName  **参数说明**：OTA模块名称，产品下唯一且不可修改。 **取值范围**：长度不超过64，号只允许字母、数字、下划线（_）、连接符（-）、英文点（.）的组合。
     * version  **参数说明**：升级包版本号。 **取值范围**：长度不超过256，只允许字母、数字、下划线（_）、连接符（-）、英文点（.）的组合。
     * supportSourceVersions  **参数说明**：支持用于升级此版本包的设备源版本号列表。最多支持20个源版本号。 **取值范围**：源版本号列表，源版本号只允许字母、数字、下划线（_）、连接符（-）、英文点（.）的组合。
     * description  **参数说明**：用于描述升级包的功能等信息。 **取值范围**：长度不超过1024。
@@ -63,6 +69,8 @@ class OtaPackageInfo implements ModelInterface, ArrayAccess
         'appId' => null,
         'packageType' => null,
         'productId' => null,
+        'productName' => null,
+        'moduleName' => null,
         'version' => null,
         'supportSourceVersions' => null,
         'description' => null,
@@ -97,6 +105,8 @@ class OtaPackageInfo implements ModelInterface, ArrayAccess
     * appId  **参数说明**：资源空间ID。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * packageType  **参数说明**：升级包类型。 **取值范围**：软件包必须设置为：softwarePackage，固件包必须设置为：firmwarePackage。
     * productId  **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，创建产品后获得。方法请参见 [[创建产品](https://support.huaweicloud.com/api-iothub/iot_06_v5_0050.html)](tag:hws)[[创建产品](https://support.huaweicloud.com/intl/zh-cn/api-iothub/iot_06_v5_0050.html)](tag:hws_hk)。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * productName  设备关联的产品名称
+    * moduleName  **参数说明**：OTA模块名称，产品下唯一且不可修改。 **取值范围**：长度不超过64，号只允许字母、数字、下划线（_）、连接符（-）、英文点（.）的组合。
     * version  **参数说明**：升级包版本号。 **取值范围**：长度不超过256，只允许字母、数字、下划线（_）、连接符（-）、英文点（.）的组合。
     * supportSourceVersions  **参数说明**：支持用于升级此版本包的设备源版本号列表。最多支持20个源版本号。 **取值范围**：源版本号列表，源版本号只允许字母、数字、下划线（_）、连接符（-）、英文点（.）的组合。
     * description  **参数说明**：用于描述升级包的功能等信息。 **取值范围**：长度不超过1024。
@@ -110,6 +120,8 @@ class OtaPackageInfo implements ModelInterface, ArrayAccess
             'appId' => 'app_id',
             'packageType' => 'package_type',
             'productId' => 'product_id',
+            'productName' => 'product_name',
+            'moduleName' => 'module_name',
             'version' => 'version',
             'supportSourceVersions' => 'support_source_versions',
             'description' => 'description',
@@ -123,6 +135,8 @@ class OtaPackageInfo implements ModelInterface, ArrayAccess
     * appId  **参数说明**：资源空间ID。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * packageType  **参数说明**：升级包类型。 **取值范围**：软件包必须设置为：softwarePackage，固件包必须设置为：firmwarePackage。
     * productId  **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，创建产品后获得。方法请参见 [[创建产品](https://support.huaweicloud.com/api-iothub/iot_06_v5_0050.html)](tag:hws)[[创建产品](https://support.huaweicloud.com/intl/zh-cn/api-iothub/iot_06_v5_0050.html)](tag:hws_hk)。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * productName  设备关联的产品名称
+    * moduleName  **参数说明**：OTA模块名称，产品下唯一且不可修改。 **取值范围**：长度不超过64，号只允许字母、数字、下划线（_）、连接符（-）、英文点（.）的组合。
     * version  **参数说明**：升级包版本号。 **取值范围**：长度不超过256，只允许字母、数字、下划线（_）、连接符（-）、英文点（.）的组合。
     * supportSourceVersions  **参数说明**：支持用于升级此版本包的设备源版本号列表。最多支持20个源版本号。 **取值范围**：源版本号列表，源版本号只允许字母、数字、下划线（_）、连接符（-）、英文点（.）的组合。
     * description  **参数说明**：用于描述升级包的功能等信息。 **取值范围**：长度不超过1024。
@@ -136,6 +150,8 @@ class OtaPackageInfo implements ModelInterface, ArrayAccess
             'appId' => 'setAppId',
             'packageType' => 'setPackageType',
             'productId' => 'setProductId',
+            'productName' => 'setProductName',
+            'moduleName' => 'setModuleName',
             'version' => 'setVersion',
             'supportSourceVersions' => 'setSupportSourceVersions',
             'description' => 'setDescription',
@@ -149,6 +165,8 @@ class OtaPackageInfo implements ModelInterface, ArrayAccess
     * appId  **参数说明**：资源空间ID。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * packageType  **参数说明**：升级包类型。 **取值范围**：软件包必须设置为：softwarePackage，固件包必须设置为：firmwarePackage。
     * productId  **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，创建产品后获得。方法请参见 [[创建产品](https://support.huaweicloud.com/api-iothub/iot_06_v5_0050.html)](tag:hws)[[创建产品](https://support.huaweicloud.com/intl/zh-cn/api-iothub/iot_06_v5_0050.html)](tag:hws_hk)。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * productName  设备关联的产品名称
+    * moduleName  **参数说明**：OTA模块名称，产品下唯一且不可修改。 **取值范围**：长度不超过64，号只允许字母、数字、下划线（_）、连接符（-）、英文点（.）的组合。
     * version  **参数说明**：升级包版本号。 **取值范围**：长度不超过256，只允许字母、数字、下划线（_）、连接符（-）、英文点（.）的组合。
     * supportSourceVersions  **参数说明**：支持用于升级此版本包的设备源版本号列表。最多支持20个源版本号。 **取值范围**：源版本号列表，源版本号只允许字母、数字、下划线（_）、连接符（-）、英文点（.）的组合。
     * description  **参数说明**：用于描述升级包的功能等信息。 **取值范围**：长度不超过1024。
@@ -162,6 +180,8 @@ class OtaPackageInfo implements ModelInterface, ArrayAccess
             'appId' => 'getAppId',
             'packageType' => 'getPackageType',
             'productId' => 'getProductId',
+            'productName' => 'getProductName',
+            'moduleName' => 'getModuleName',
             'version' => 'getVersion',
             'supportSourceVersions' => 'getSupportSourceVersions',
             'description' => 'getDescription',
@@ -231,6 +251,8 @@ class OtaPackageInfo implements ModelInterface, ArrayAccess
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['packageType'] = isset($data['packageType']) ? $data['packageType'] : null;
         $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
+        $this->container['productName'] = isset($data['productName']) ? $data['productName'] : null;
+        $this->container['moduleName'] = isset($data['moduleName']) ? $data['moduleName'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['supportSourceVersions'] = isset($data['supportSourceVersions']) ? $data['supportSourceVersions'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -353,6 +375,54 @@ class OtaPackageInfo implements ModelInterface, ArrayAccess
     public function setProductId($productId)
     {
         $this->container['productId'] = $productId;
+        return $this;
+    }
+
+    /**
+    * Gets productName
+    *  设备关联的产品名称
+    *
+    * @return string|null
+    */
+    public function getProductName()
+    {
+        return $this->container['productName'];
+    }
+
+    /**
+    * Sets productName
+    *
+    * @param string|null $productName 设备关联的产品名称
+    *
+    * @return $this
+    */
+    public function setProductName($productName)
+    {
+        $this->container['productName'] = $productName;
+        return $this;
+    }
+
+    /**
+    * Gets moduleName
+    *  **参数说明**：OTA模块名称，产品下唯一且不可修改。 **取值范围**：长度不超过64，号只允许字母、数字、下划线（_）、连接符（-）、英文点（.）的组合。
+    *
+    * @return string|null
+    */
+    public function getModuleName()
+    {
+        return $this->container['moduleName'];
+    }
+
+    /**
+    * Sets moduleName
+    *
+    * @param string|null $moduleName **参数说明**：OTA模块名称，产品下唯一且不可修改。 **取值范围**：长度不超过64，号只允许字母、数字、下划线（_）、连接符（-）、英文点（.）的组合。
+    *
+    * @return $this
+    */
+    public function setModuleName($moduleName)
+    {
+        $this->container['moduleName'] = $moduleName;
         return $this;
     }
 

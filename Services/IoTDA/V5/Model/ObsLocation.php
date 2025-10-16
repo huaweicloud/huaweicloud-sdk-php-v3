@@ -23,6 +23,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
     * regionName  **参数说明**：OBS所在区域。您可以从[[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)](tag:hws)[[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?OBS)](tag:hws_hk)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
     * bucketName  **参数说明**：OBS桶名称。 **取值范围**：长度最小为3，最大为63，只允许小写字母、数字、连接符（-）、英文点（.）的组合。
     * objectKey  **参数说明**：OBS对象名称(包含文件夹路径)。 **取值范围**：长度不超过1024。
+    * signMethod  **参数说明**： **取值范围**：只支持SHA256,不携带默认为SHA256。
     * sign  **参数说明**：SHA256算法计算出的升级包签名值。添加该升级包完成，并创建升级任务后，物联网平台向设备下发升级通知时，会下发该签名给设备。 **取值范围**：长度为64，只允许大小写字母a到f、数字的组合。
     *
     * @var string[]
@@ -31,6 +32,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
             'regionName' => 'string',
             'bucketName' => 'string',
             'objectKey' => 'string',
+            'signMethod' => 'string',
             'sign' => 'string'
     ];
 
@@ -39,6 +41,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
     * regionName  **参数说明**：OBS所在区域。您可以从[[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)](tag:hws)[[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?OBS)](tag:hws_hk)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
     * bucketName  **参数说明**：OBS桶名称。 **取值范围**：长度最小为3，最大为63，只允许小写字母、数字、连接符（-）、英文点（.）的组合。
     * objectKey  **参数说明**：OBS对象名称(包含文件夹路径)。 **取值范围**：长度不超过1024。
+    * signMethod  **参数说明**： **取值范围**：只支持SHA256,不携带默认为SHA256。
     * sign  **参数说明**：SHA256算法计算出的升级包签名值。添加该升级包完成，并创建升级任务后，物联网平台向设备下发升级通知时，会下发该签名给设备。 **取值范围**：长度为64，只允许大小写字母a到f、数字的组合。
     *
     * @var string[]
@@ -47,6 +50,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
         'regionName' => null,
         'bucketName' => null,
         'objectKey' => null,
+        'signMethod' => null,
         'sign' => null
     ];
 
@@ -76,6 +80,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
     * regionName  **参数说明**：OBS所在区域。您可以从[[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)](tag:hws)[[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?OBS)](tag:hws_hk)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
     * bucketName  **参数说明**：OBS桶名称。 **取值范围**：长度最小为3，最大为63，只允许小写字母、数字、连接符（-）、英文点（.）的组合。
     * objectKey  **参数说明**：OBS对象名称(包含文件夹路径)。 **取值范围**：长度不超过1024。
+    * signMethod  **参数说明**： **取值范围**：只支持SHA256,不携带默认为SHA256。
     * sign  **参数说明**：SHA256算法计算出的升级包签名值。添加该升级包完成，并创建升级任务后，物联网平台向设备下发升级通知时，会下发该签名给设备。 **取值范围**：长度为64，只允许大小写字母a到f、数字的组合。
     *
     * @var string[]
@@ -84,6 +89,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
             'regionName' => 'region_name',
             'bucketName' => 'bucket_name',
             'objectKey' => 'object_key',
+            'signMethod' => 'sign_method',
             'sign' => 'sign'
     ];
 
@@ -92,6 +98,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
     * regionName  **参数说明**：OBS所在区域。您可以从[[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)](tag:hws)[[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?OBS)](tag:hws_hk)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
     * bucketName  **参数说明**：OBS桶名称。 **取值范围**：长度最小为3，最大为63，只允许小写字母、数字、连接符（-）、英文点（.）的组合。
     * objectKey  **参数说明**：OBS对象名称(包含文件夹路径)。 **取值范围**：长度不超过1024。
+    * signMethod  **参数说明**： **取值范围**：只支持SHA256,不携带默认为SHA256。
     * sign  **参数说明**：SHA256算法计算出的升级包签名值。添加该升级包完成，并创建升级任务后，物联网平台向设备下发升级通知时，会下发该签名给设备。 **取值范围**：长度为64，只允许大小写字母a到f、数字的组合。
     *
     * @var string[]
@@ -100,6 +107,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
             'regionName' => 'setRegionName',
             'bucketName' => 'setBucketName',
             'objectKey' => 'setObjectKey',
+            'signMethod' => 'setSignMethod',
             'sign' => 'setSign'
     ];
 
@@ -108,6 +116,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
     * regionName  **参数说明**：OBS所在区域。您可以从[[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)](tag:hws)[[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?OBS)](tag:hws_hk)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
     * bucketName  **参数说明**：OBS桶名称。 **取值范围**：长度最小为3，最大为63，只允许小写字母、数字、连接符（-）、英文点（.）的组合。
     * objectKey  **参数说明**：OBS对象名称(包含文件夹路径)。 **取值范围**：长度不超过1024。
+    * signMethod  **参数说明**： **取值范围**：只支持SHA256,不携带默认为SHA256。
     * sign  **参数说明**：SHA256算法计算出的升级包签名值。添加该升级包完成，并创建升级任务后，物联网平台向设备下发升级通知时，会下发该签名给设备。 **取值范围**：长度为64，只允许大小写字母a到f、数字的组合。
     *
     * @var string[]
@@ -116,6 +125,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
             'regionName' => 'getRegionName',
             'bucketName' => 'getBucketName',
             'objectKey' => 'getObjectKey',
+            'signMethod' => 'getSignMethod',
             'sign' => 'getSign'
     ];
 
@@ -180,6 +190,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
         $this->container['regionName'] = isset($data['regionName']) ? $data['regionName'] : null;
         $this->container['bucketName'] = isset($data['bucketName']) ? $data['bucketName'] : null;
         $this->container['objectKey'] = isset($data['objectKey']) ? $data['objectKey'] : null;
+        $this->container['signMethod'] = isset($data['signMethod']) ? $data['signMethod'] : null;
         $this->container['sign'] = isset($data['sign']) ? $data['sign'] : null;
     }
 
@@ -212,8 +223,11 @@ class ObsLocation implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['objectKey']) < 1)) {
                 $invalidProperties[] = "invalid value for 'objectKey', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['sign']) && !preg_match("/^[a-fA-F0-9]{64}$/", $this->container['sign'])) {
-                $invalidProperties[] = "invalid value for 'sign', must be conform to the pattern /^[a-fA-F0-9]{64}$/.";
+            if (!is_null($this->container['signMethod']) && !preg_match("/(SHA256|MD5)/", $this->container['signMethod'])) {
+                $invalidProperties[] = "invalid value for 'signMethod', must be conform to the pattern /(SHA256|MD5)/.";
+            }
+            if (!is_null($this->container['sign']) && !preg_match("/^(?:[a-fA-F0-9]{32}|[a-fA-F0-9]{64})$/", $this->container['sign'])) {
+                $invalidProperties[] = "invalid value for 'sign', must be conform to the pattern /^(?:[a-fA-F0-9]{32}|[a-fA-F0-9]{64})$/.";
             }
         return $invalidProperties;
     }
@@ -298,6 +312,30 @@ class ObsLocation implements ModelInterface, ArrayAccess
     public function setObjectKey($objectKey)
     {
         $this->container['objectKey'] = $objectKey;
+        return $this;
+    }
+
+    /**
+    * Gets signMethod
+    *  **参数说明**： **取值范围**：只支持SHA256,不携带默认为SHA256。
+    *
+    * @return string|null
+    */
+    public function getSignMethod()
+    {
+        return $this->container['signMethod'];
+    }
+
+    /**
+    * Sets signMethod
+    *
+    * @param string|null $signMethod **参数说明**： **取值范围**：只支持SHA256,不携带默认为SHA256。
+    *
+    * @return $this
+    */
+    public function setSignMethod($signMethod)
+    {
+        $this->container['signMethod'] = $signMethod;
         return $this;
     }
 

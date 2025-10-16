@@ -741,6 +741,138 @@ class DnsClient extends Client
     }
 
     /**
+     * 创建公网子域名授权
+     *
+     * 当创建子域名时提示“域名与其他租户冲突，你需要添加TXT授权校验”，通过调用当前接口生成子域名授权的TXT记录验证信息。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
+     * &gt; TXT记录验证信息生成后，请前往主域名所属的DNS服务商处添加相应的TXT类型解析记录，主机记录和记录值与验证信息保持一致。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAuthorizeTxtRecord($request)
+    {
+        return $this->createAuthorizeTxtRecordWithHttpInfo($request);
+    }
+
+    public function createAuthorizeTxtRecordWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/authorize-txtrecord';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateAuthorizeTxtRecordResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateAuthorizeTxtRecordRequest');
+    }
+
+    /**
+     * 验证公网子域名授权
+     *
+     * 用户在主域名所属DNS服务商处添加TXT类型解析记录后，调用当前接口验证子域名授权状态。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAuthorizeTxtRecordVerification($request)
+    {
+        return $this->createAuthorizeTxtRecordVerificationWithHttpInfo($request);
+    }
+
+    public function createAuthorizeTxtRecordVerificationWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/authorize-txtrecord/{id}/verify';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateAuthorizeTxtRecordVerificationResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateAuthorizeTxtRecordVerificationRequest');
+    }
+
+    /**
      * 创建自定义线路
      *
      * 创建自定义线路。
@@ -2893,6 +3025,71 @@ class DnsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowApiInfoResponse',
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowApiInfoRequest');
+    }
+
+    /**
+     * 查询公网子域名授权
+     *
+     * 查询已生成的子域名授权TXT记录验证信息。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAuthorizeTxtRecord($request)
+    {
+        return $this->showAuthorizeTxtRecordWithHttpInfo($request);
+    }
+
+    public function showAuthorizeTxtRecordWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/authorize-txtrecord';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['zoneName'] !== null) {
+            $queryParams['zone_name'] = $localVarParams['zoneName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowAuthorizeTxtRecordResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowAuthorizeTxtRecordRequest');
     }
 
     /**

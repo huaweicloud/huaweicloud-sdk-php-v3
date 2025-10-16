@@ -6980,6 +6980,346 @@ class IoTDAClient extends Client
     }
 
     /**
+     * 创建OTA模块
+     *
+     * 用户可调用此接口创建产品的OTA模块,同一产品下最多自定义10个OTA模块。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createOtaModule($request)
+    {
+        return $this->createOtaModuleWithHttpInfo($request);
+    }
+
+    public function createOtaModuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/ota-upgrades/modules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateOtaModuleResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateOtaModuleRequest');
+    }
+
+    /**
+     * 删除OTA模块
+     *
+     * 用户可调用此接口删除产品对应的OTA模块
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteOtaModule($request)
+    {
+        return $this->deleteOtaModuleWithHttpInfo($request);
+    }
+
+    public function deleteOtaModuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/ota-upgrades/modules/{module_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['moduleId'] !== null) {
+            $pathParams['module_id'] = $localVarParams['moduleId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteOtaModuleResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteOtaModuleRequest');
+    }
+
+    /**
+     * 查询OTA模块列表
+     *
+     * 用户可调用此接口查询指定产品的OTA模块列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listOtaModules($request)
+    {
+        return $this->listOtaModulesWithHttpInfo($request);
+    }
+
+    public function listOtaModulesWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/ota-upgrades/modules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['appId'] !== null) {
+            $queryParams['app_id'] = $localVarParams['appId'];
+        }
+        if ($localVarParams['productId'] !== null) {
+            $queryParams['product_id'] = $localVarParams['productId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListOtaModulesResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListOtaModulesRequest');
+    }
+
+    /**
+     * 查询OTA模块详情
+     *
+     * 用户可调用此接口查询OTA模块详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showOtaModule($request)
+    {
+        return $this->showOtaModuleWithHttpInfo($request);
+    }
+
+    public function showOtaModuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/ota-upgrades/modules/{module_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['moduleId'] !== null) {
+            $pathParams['module_id'] = $localVarParams['moduleId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowOtaModuleResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowOtaModuleRequest');
+    }
+
+    /**
+     * 修改OTA模块
+     *
+     * 用户可调用此接口修改对应的OTA模块的别名和描述。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateOtaModule($request)
+    {
+        return $this->updateOtaModuleWithHttpInfo($request);
+    }
+
+    public function updateOtaModuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/ota-upgrades/modules/{module_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['moduleId'] !== null) {
+            $pathParams['module_id'] = $localVarParams['moduleId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateOtaModuleResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateOtaModuleRequest');
+    }
+
+    /**
      * 创建OTA升级包
      *
      * 用户可调用此接口创建升级包关联OBS对象

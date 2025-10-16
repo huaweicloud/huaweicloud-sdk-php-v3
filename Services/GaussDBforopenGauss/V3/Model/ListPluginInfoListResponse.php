@@ -21,34 +21,26 @@ class ListPluginInfoListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pluginName  插件名称
-    * port  端口
-    * pluginVersion  插件版本
-    * installed  是否已安装
+    * totalCount  **参数解释**: 插件数量。 **取值范围**: 不涉及。
+    * plugins  **参数解释**: 插件详细信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'pluginName' => 'string',
-            'port' => 'string',
-            'pluginVersion' => 'string',
-            'installed' => 'string'
+            'totalCount' => 'int',
+            'plugins' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CustomerPluginInfoResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pluginName  插件名称
-    * port  端口
-    * pluginVersion  插件版本
-    * installed  是否已安装
+    * totalCount  **参数解释**: 插件数量。 **取值范围**: 不涉及。
+    * plugins  **参数解释**: 插件详细信息。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'pluginName' => null,
-        'port' => null,
-        'pluginVersion' => null,
-        'installed' => null
+        'totalCount' => null,
+        'plugins' => null
     ];
 
     /**
@@ -74,50 +66,38 @@ class ListPluginInfoListResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pluginName  插件名称
-    * port  端口
-    * pluginVersion  插件版本
-    * installed  是否已安装
+    * totalCount  **参数解释**: 插件数量。 **取值范围**: 不涉及。
+    * plugins  **参数解释**: 插件详细信息。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'pluginName' => 'plugin_name',
-            'port' => 'port',
-            'pluginVersion' => 'plugin_version',
-            'installed' => 'installed'
+            'totalCount' => 'total_count',
+            'plugins' => 'plugins'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pluginName  插件名称
-    * port  端口
-    * pluginVersion  插件版本
-    * installed  是否已安装
+    * totalCount  **参数解释**: 插件数量。 **取值范围**: 不涉及。
+    * plugins  **参数解释**: 插件详细信息。
     *
     * @var string[]
     */
     protected static $setters = [
-            'pluginName' => 'setPluginName',
-            'port' => 'setPort',
-            'pluginVersion' => 'setPluginVersion',
-            'installed' => 'setInstalled'
+            'totalCount' => 'setTotalCount',
+            'plugins' => 'setPlugins'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pluginName  插件名称
-    * port  端口
-    * pluginVersion  插件版本
-    * installed  是否已安装
+    * totalCount  **参数解释**: 插件数量。 **取值范围**: 不涉及。
+    * plugins  **参数解释**: 插件详细信息。
     *
     * @var string[]
     */
     protected static $getters = [
-            'pluginName' => 'getPluginName',
-            'port' => 'getPort',
-            'pluginVersion' => 'getPluginVersion',
-            'installed' => 'getInstalled'
+            'totalCount' => 'getTotalCount',
+            'plugins' => 'getPlugins'
     ];
 
     /**
@@ -178,10 +158,8 @@ class ListPluginInfoListResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['pluginName'] = isset($data['pluginName']) ? $data['pluginName'] : null;
-        $this->container['port'] = isset($data['port']) ? $data['port'] : null;
-        $this->container['pluginVersion'] = isset($data['pluginVersion']) ? $data['pluginVersion'] : null;
-        $this->container['installed'] = isset($data['installed']) ? $data['installed'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['plugins'] = isset($data['plugins']) ? $data['plugins'] : null;
     }
 
     /**
@@ -207,98 +185,50 @@ class ListPluginInfoListResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets pluginName
-    *  插件名称
+    * Gets totalCount
+    *  **参数解释**: 插件数量。 **取值范围**: 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getPluginName()
+    public function getTotalCount()
     {
-        return $this->container['pluginName'];
+        return $this->container['totalCount'];
     }
 
     /**
-    * Sets pluginName
+    * Sets totalCount
     *
-    * @param string|null $pluginName 插件名称
+    * @param int|null $totalCount **参数解释**: 插件数量。 **取值范围**: 不涉及。
     *
     * @return $this
     */
-    public function setPluginName($pluginName)
+    public function setTotalCount($totalCount)
     {
-        $this->container['pluginName'] = $pluginName;
+        $this->container['totalCount'] = $totalCount;
         return $this;
     }
 
     /**
-    * Gets port
-    *  端口
+    * Gets plugins
+    *  **参数解释**: 插件详细信息。
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CustomerPluginInfoResult[]|null
     */
-    public function getPort()
+    public function getPlugins()
     {
-        return $this->container['port'];
+        return $this->container['plugins'];
     }
 
     /**
-    * Sets port
+    * Sets plugins
     *
-    * @param string|null $port 端口
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CustomerPluginInfoResult[]|null $plugins **参数解释**: 插件详细信息。
     *
     * @return $this
     */
-    public function setPort($port)
+    public function setPlugins($plugins)
     {
-        $this->container['port'] = $port;
-        return $this;
-    }
-
-    /**
-    * Gets pluginVersion
-    *  插件版本
-    *
-    * @return string|null
-    */
-    public function getPluginVersion()
-    {
-        return $this->container['pluginVersion'];
-    }
-
-    /**
-    * Sets pluginVersion
-    *
-    * @param string|null $pluginVersion 插件版本
-    *
-    * @return $this
-    */
-    public function setPluginVersion($pluginVersion)
-    {
-        $this->container['pluginVersion'] = $pluginVersion;
-        return $this;
-    }
-
-    /**
-    * Gets installed
-    *  是否已安装
-    *
-    * @return string|null
-    */
-    public function getInstalled()
-    {
-        return $this->container['installed'];
-    }
-
-    /**
-    * Sets installed
-    *
-    * @param string|null $installed 是否已安装
-    *
-    * @return $this
-    */
-    public function setInstalled($installed)
-    {
-        $this->container['installed'] = $installed;
+        $this->container['plugins'] = $plugins;
         return $this;
     }
 

@@ -158,6 +158,9 @@ class ModifyInstancePortRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['port'] === null) {
+            $invalidProperties[] = "'port' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class ModifyInstancePortRequestBody implements ModelInterface, ArrayAccess
     * Gets port
     *  **参数解释**: 实例设置的数据库端口号。 **约束限制**: 不涉及。 **取值范围**: 1024~39998（其中2378、2379、2380、4999、5000、5999、6000、60001、8097、8098、12016、12017、20049、20050、21731、21732、32122、32123和32124被系统占用不可设置）。 **默认取值**: 不涉及。
     *
-    * @return int|null
+    * @return int
     */
     public function getPort()
     {
@@ -186,7 +189,7 @@ class ModifyInstancePortRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param int|null $port **参数解释**: 实例设置的数据库端口号。 **约束限制**: 不涉及。 **取值范围**: 1024~39998（其中2378、2379、2380、4999、5000、5999、6000、60001、8097、8098、12016、12017、20049、20050、21731、21732、32122、32123和32124被系统占用不可设置）。 **默认取值**: 不涉及。
+    * @param int $port **参数解释**: 实例设置的数据库端口号。 **约束限制**: 不涉及。 **取值范围**: 1024~39998（其中2378、2379、2380、4999、5000、5999、6000、60001、8097、8098、12016、12017、20049、20050、21731、21732、32122、32123和32124被系统占用不可设置）。 **默认取值**: 不涉及。
     *
     * @return $this
     */
