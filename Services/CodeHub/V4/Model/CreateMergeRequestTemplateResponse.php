@@ -22,7 +22,7 @@ class CreateMergeRequestTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释：** 合并请求模板主键id
-    * repositoryId  **参数解释：** 仓库id
+    * repositoryId  **参数解释：** 仓库id。
     * description  **参数解释：** 描述
     * createdAt  **参数解释：** 创建时间。
     * updatedAt  **参数解释：** 更新时间。
@@ -52,7 +52,7 @@ class CreateMergeRequestTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释：** 合并请求模板主键id
-    * repositoryId  **参数解释：** 仓库id
+    * repositoryId  **参数解释：** 仓库id。
     * description  **参数解释：** 描述
     * createdAt  **参数解释：** 创建时间。
     * updatedAt  **参数解释：** 更新时间。
@@ -103,7 +103,7 @@ class CreateMergeRequestTemplateResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  **参数解释：** 合并请求模板主键id
-    * repositoryId  **参数解释：** 仓库id
+    * repositoryId  **参数解释：** 仓库id。
     * description  **参数解释：** 描述
     * createdAt  **参数解释：** 创建时间。
     * updatedAt  **参数解释：** 更新时间。
@@ -133,7 +133,7 @@ class CreateMergeRequestTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释：** 合并请求模板主键id
-    * repositoryId  **参数解释：** 仓库id
+    * repositoryId  **参数解释：** 仓库id。
     * description  **参数解释：** 描述
     * createdAt  **参数解释：** 创建时间。
     * updatedAt  **参数解释：** 更新时间。
@@ -163,7 +163,7 @@ class CreateMergeRequestTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释：** 合并请求模板主键id
-    * repositoryId  **参数解释：** 仓库id
+    * repositoryId  **参数解释：** 仓库id。
     * description  **参数解释：** 描述
     * createdAt  **参数解释：** 创建时间。
     * updatedAt  **参数解释：** 更新时间。
@@ -275,12 +275,6 @@ class CreateMergeRequestTemplateResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['id']) && ($this->container['id'] < 1)) {
                 $invalidProperties[] = "invalid value for 'id', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['repositoryId']) && ($this->container['repositoryId'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'repositoryId', must be smaller than or equal to 2147483647.";
-            }
-            if (!is_null($this->container['repositoryId']) && ($this->container['repositoryId'] < 1)) {
-                $invalidProperties[] = "invalid value for 'repositoryId', must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 10000)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 10000.";
             }
@@ -345,7 +339,7 @@ class CreateMergeRequestTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets repositoryId
-    *  **参数解释：** 仓库id
+    *  **参数解释：** 仓库id。
     *
     * @return int|null
     */
@@ -357,7 +351,7 @@ class CreateMergeRequestTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets repositoryId
     *
-    * @param int|null $repositoryId **参数解释：** 仓库id
+    * @param int|null $repositoryId **参数解释：** 仓库id。
     *
     * @return $this
     */

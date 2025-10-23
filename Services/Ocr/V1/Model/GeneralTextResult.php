@@ -23,13 +23,15 @@ class GeneralTextResult implements ModelInterface, ArrayAccess
     * direction  图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 359],保留四位小数。 当detect_direction为false时，该字段值为 -1。
     * wordsBlockCount  识别文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，先上后下。
+    * markdownResult  所有文字块拼接的识别结果，同一行的文字块使用“\\t”拼接，不同行的文字块使用“\\n”拼接。 当return_markdown_result为true时，返回该字段值，否则，不返回该字段。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'direction' => 'float',
             'wordsBlockCount' => 'int',
-            'wordsBlockList' => '\HuaweiCloud\SDK\Ocr\V1\Model\GeneralTextWordsBlockList[]'
+            'wordsBlockList' => '\HuaweiCloud\SDK\Ocr\V1\Model\GeneralTextWordsBlockList[]',
+            'markdownResult' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class GeneralTextResult implements ModelInterface, ArrayAccess
     * direction  图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 359],保留四位小数。 当detect_direction为false时，该字段值为 -1。
     * wordsBlockCount  识别文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，先上后下。
+    * markdownResult  所有文字块拼接的识别结果，同一行的文字块使用“\\t”拼接，不同行的文字块使用“\\n”拼接。 当return_markdown_result为true时，返回该字段值，否则，不返回该字段。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'direction' => 'float',
         'wordsBlockCount' => 'int32',
-        'wordsBlockList' => null
+        'wordsBlockList' => null,
+        'markdownResult' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class GeneralTextResult implements ModelInterface, ArrayAccess
     * direction  图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 359],保留四位小数。 当detect_direction为false时，该字段值为 -1。
     * wordsBlockCount  识别文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，先上后下。
+    * markdownResult  所有文字块拼接的识别结果，同一行的文字块使用“\\t”拼接，不同行的文字块使用“\\n”拼接。 当return_markdown_result为true时，返回该字段值，否则，不返回该字段。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'direction' => 'direction',
             'wordsBlockCount' => 'words_block_count',
-            'wordsBlockList' => 'words_block_list'
+            'wordsBlockList' => 'words_block_list',
+            'markdownResult' => 'markdown_result'
     ];
 
     /**
@@ -86,13 +92,15 @@ class GeneralTextResult implements ModelInterface, ArrayAccess
     * direction  图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 359],保留四位小数。 当detect_direction为false时，该字段值为 -1。
     * wordsBlockCount  识别文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，先上后下。
+    * markdownResult  所有文字块拼接的识别结果，同一行的文字块使用“\\t”拼接，不同行的文字块使用“\\n”拼接。 当return_markdown_result为true时，返回该字段值，否则，不返回该字段。
     *
     * @var string[]
     */
     protected static $setters = [
             'direction' => 'setDirection',
             'wordsBlockCount' => 'setWordsBlockCount',
-            'wordsBlockList' => 'setWordsBlockList'
+            'wordsBlockList' => 'setWordsBlockList',
+            'markdownResult' => 'setMarkdownResult'
     ];
 
     /**
@@ -100,13 +108,15 @@ class GeneralTextResult implements ModelInterface, ArrayAccess
     * direction  图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 359],保留四位小数。 当detect_direction为false时，该字段值为 -1。
     * wordsBlockCount  识别文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，先上后下。
+    * markdownResult  所有文字块拼接的识别结果，同一行的文字块使用“\\t”拼接，不同行的文字块使用“\\n”拼接。 当return_markdown_result为true时，返回该字段值，否则，不返回该字段。
     *
     * @var string[]
     */
     protected static $getters = [
             'direction' => 'getDirection',
             'wordsBlockCount' => 'getWordsBlockCount',
-            'wordsBlockList' => 'getWordsBlockList'
+            'wordsBlockList' => 'getWordsBlockList',
+            'markdownResult' => 'getMarkdownResult'
     ];
 
     /**
@@ -170,6 +180,7 @@ class GeneralTextResult implements ModelInterface, ArrayAccess
         $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;
         $this->container['wordsBlockCount'] = isset($data['wordsBlockCount']) ? $data['wordsBlockCount'] : null;
         $this->container['wordsBlockList'] = isset($data['wordsBlockList']) ? $data['wordsBlockList'] : null;
+        $this->container['markdownResult'] = isset($data['markdownResult']) ? $data['markdownResult'] : null;
     }
 
     /**
@@ -272,6 +283,30 @@ class GeneralTextResult implements ModelInterface, ArrayAccess
     public function setWordsBlockList($wordsBlockList)
     {
         $this->container['wordsBlockList'] = $wordsBlockList;
+        return $this;
+    }
+
+    /**
+    * Gets markdownResult
+    *  所有文字块拼接的识别结果，同一行的文字块使用“\\t”拼接，不同行的文字块使用“\\n”拼接。 当return_markdown_result为true时，返回该字段值，否则，不返回该字段。
+    *
+    * @return string|null
+    */
+    public function getMarkdownResult()
+    {
+        return $this->container['markdownResult'];
+    }
+
+    /**
+    * Sets markdownResult
+    *
+    * @param string|null $markdownResult 所有文字块拼接的识别结果，同一行的文字块使用“\\t”拼接，不同行的文字块使用“\\n”拼接。 当return_markdown_result为true时，返回该字段值，否则，不返回该字段。
+    *
+    * @return $this
+    */
+    public function setMarkdownResult($markdownResult)
+    {
+        $this->container['markdownResult'] = $markdownResult;
         return $this;
     }
 

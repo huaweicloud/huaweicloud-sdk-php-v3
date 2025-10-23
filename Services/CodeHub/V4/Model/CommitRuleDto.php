@@ -35,11 +35,11 @@ class CommitRuleDto implements ModelInterface, ArrayAccess
     * allowedBinaryFileNameRegex  **参数解释：** 二进制文件白名单（可直接入库的文件）。
     * authorRegex  **参数解释：** 提交人。
     * updatedAt  **参数解释：** 更新时间。
-    * skipRuleCheck  **参数解释：** 是否跳过规则检测。 **约束限制：** 不涉及。 **取值范围：** - true，跳过规则检测。 - false，不跳过规则检测。
-    * skipRuleEndDate  **参数解释：** 失效时间。
     * name  **参数解释：** 规则名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * branchName  **参数解释：** 分支规则。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * createdAt  **参数解释：** 创建时间。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * skipRuleCheck  **参数解释：** 跳过规则检测。 **约束限制：** 仅CR仓库支持此参数。
+    * skipRuleEndDate  **参数解释：** 跳过规则检测失效时间， 例如: 2025-8-19。 **约束限制：** 仅CR仓库支持此参数。
     *
     * @var string[]
     */
@@ -59,11 +59,11 @@ class CommitRuleDto implements ModelInterface, ArrayAccess
             'allowedBinaryFileNameRegex' => 'string',
             'authorRegex' => 'object',
             'updatedAt' => 'string',
-            'skipRuleCheck' => 'bool',
-            'skipRuleEndDate' => 'string',
             'name' => 'string',
             'branchName' => 'string',
-            'createdAt' => 'string'
+            'createdAt' => 'string',
+            'skipRuleCheck' => 'bool',
+            'skipRuleEndDate' => 'string'
     ];
 
     /**
@@ -83,11 +83,11 @@ class CommitRuleDto implements ModelInterface, ArrayAccess
     * allowedBinaryFileNameRegex  **参数解释：** 二进制文件白名单（可直接入库的文件）。
     * authorRegex  **参数解释：** 提交人。
     * updatedAt  **参数解释：** 更新时间。
-    * skipRuleCheck  **参数解释：** 是否跳过规则检测。 **约束限制：** 不涉及。 **取值范围：** - true，跳过规则检测。 - false，不跳过规则检测。
-    * skipRuleEndDate  **参数解释：** 失效时间。
     * name  **参数解释：** 规则名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * branchName  **参数解释：** 分支规则。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * createdAt  **参数解释：** 创建时间。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * skipRuleCheck  **参数解释：** 跳过规则检测。 **约束限制：** 仅CR仓库支持此参数。
+    * skipRuleEndDate  **参数解释：** 跳过规则检测失效时间， 例如: 2025-8-19。 **约束限制：** 仅CR仓库支持此参数。
     *
     * @var string[]
     */
@@ -107,11 +107,11 @@ class CommitRuleDto implements ModelInterface, ArrayAccess
         'allowedBinaryFileNameRegex' => null,
         'authorRegex' => null,
         'updatedAt' => 'yyyy-MM-dd'T'HH:mm:ss.SSSXXX',
-        'skipRuleCheck' => null,
-        'skipRuleEndDate' => 'yyyy-MM-dd'T'HH:mm:ss.SSSXXX',
         'name' => null,
         'branchName' => null,
-        'createdAt' => 'yyyy-MM-dd'T'HH:mm:ss.SSSXXX'
+        'createdAt' => 'yyyy-MM-dd'T'HH:mm:ss.SSSXXX',
+        'skipRuleCheck' => null,
+        'skipRuleEndDate' => null
     ];
 
     /**
@@ -152,11 +152,11 @@ class CommitRuleDto implements ModelInterface, ArrayAccess
     * allowedBinaryFileNameRegex  **参数解释：** 二进制文件白名单（可直接入库的文件）。
     * authorRegex  **参数解释：** 提交人。
     * updatedAt  **参数解释：** 更新时间。
-    * skipRuleCheck  **参数解释：** 是否跳过规则检测。 **约束限制：** 不涉及。 **取值范围：** - true，跳过规则检测。 - false，不跳过规则检测。
-    * skipRuleEndDate  **参数解释：** 失效时间。
     * name  **参数解释：** 规则名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * branchName  **参数解释：** 分支规则。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * createdAt  **参数解释：** 创建时间。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * skipRuleCheck  **参数解释：** 跳过规则检测。 **约束限制：** 仅CR仓库支持此参数。
+    * skipRuleEndDate  **参数解释：** 跳过规则检测失效时间， 例如: 2025-8-19。 **约束限制：** 仅CR仓库支持此参数。
     *
     * @var string[]
     */
@@ -176,11 +176,11 @@ class CommitRuleDto implements ModelInterface, ArrayAccess
             'allowedBinaryFileNameRegex' => 'allowed_binary_file_name_regex',
             'authorRegex' => 'author_regex',
             'updatedAt' => 'updated_at',
-            'skipRuleCheck' => 'skip_rule_check',
-            'skipRuleEndDate' => 'skip_rule_end_date',
             'name' => 'name',
             'branchName' => 'branch_name',
-            'createdAt' => 'created_at'
+            'createdAt' => 'created_at',
+            'skipRuleCheck' => 'skip_rule_check',
+            'skipRuleEndDate' => 'skip_rule_end_date'
     ];
 
     /**
@@ -200,11 +200,11 @@ class CommitRuleDto implements ModelInterface, ArrayAccess
     * allowedBinaryFileNameRegex  **参数解释：** 二进制文件白名单（可直接入库的文件）。
     * authorRegex  **参数解释：** 提交人。
     * updatedAt  **参数解释：** 更新时间。
-    * skipRuleCheck  **参数解释：** 是否跳过规则检测。 **约束限制：** 不涉及。 **取值范围：** - true，跳过规则检测。 - false，不跳过规则检测。
-    * skipRuleEndDate  **参数解释：** 失效时间。
     * name  **参数解释：** 规则名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * branchName  **参数解释：** 分支规则。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * createdAt  **参数解释：** 创建时间。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * skipRuleCheck  **参数解释：** 跳过规则检测。 **约束限制：** 仅CR仓库支持此参数。
+    * skipRuleEndDate  **参数解释：** 跳过规则检测失效时间， 例如: 2025-8-19。 **约束限制：** 仅CR仓库支持此参数。
     *
     * @var string[]
     */
@@ -224,11 +224,11 @@ class CommitRuleDto implements ModelInterface, ArrayAccess
             'allowedBinaryFileNameRegex' => 'setAllowedBinaryFileNameRegex',
             'authorRegex' => 'setAuthorRegex',
             'updatedAt' => 'setUpdatedAt',
-            'skipRuleCheck' => 'setSkipRuleCheck',
-            'skipRuleEndDate' => 'setSkipRuleEndDate',
             'name' => 'setName',
             'branchName' => 'setBranchName',
-            'createdAt' => 'setCreatedAt'
+            'createdAt' => 'setCreatedAt',
+            'skipRuleCheck' => 'setSkipRuleCheck',
+            'skipRuleEndDate' => 'setSkipRuleEndDate'
     ];
 
     /**
@@ -248,11 +248,11 @@ class CommitRuleDto implements ModelInterface, ArrayAccess
     * allowedBinaryFileNameRegex  **参数解释：** 二进制文件白名单（可直接入库的文件）。
     * authorRegex  **参数解释：** 提交人。
     * updatedAt  **参数解释：** 更新时间。
-    * skipRuleCheck  **参数解释：** 是否跳过规则检测。 **约束限制：** 不涉及。 **取值范围：** - true，跳过规则检测。 - false，不跳过规则检测。
-    * skipRuleEndDate  **参数解释：** 失效时间。
     * name  **参数解释：** 规则名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * branchName  **参数解释：** 分支规则。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * createdAt  **参数解释：** 创建时间。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * skipRuleCheck  **参数解释：** 跳过规则检测。 **约束限制：** 仅CR仓库支持此参数。
+    * skipRuleEndDate  **参数解释：** 跳过规则检测失效时间， 例如: 2025-8-19。 **约束限制：** 仅CR仓库支持此参数。
     *
     * @var string[]
     */
@@ -272,11 +272,11 @@ class CommitRuleDto implements ModelInterface, ArrayAccess
             'allowedBinaryFileNameRegex' => 'getAllowedBinaryFileNameRegex',
             'authorRegex' => 'getAuthorRegex',
             'updatedAt' => 'getUpdatedAt',
-            'skipRuleCheck' => 'getSkipRuleCheck',
-            'skipRuleEndDate' => 'getSkipRuleEndDate',
             'name' => 'getName',
             'branchName' => 'getBranchName',
-            'createdAt' => 'getCreatedAt'
+            'createdAt' => 'getCreatedAt',
+            'skipRuleCheck' => 'getSkipRuleCheck',
+            'skipRuleEndDate' => 'getSkipRuleEndDate'
     ];
 
     /**
@@ -352,11 +352,11 @@ class CommitRuleDto implements ModelInterface, ArrayAccess
         $this->container['allowedBinaryFileNameRegex'] = isset($data['allowedBinaryFileNameRegex']) ? $data['allowedBinaryFileNameRegex'] : null;
         $this->container['authorRegex'] = isset($data['authorRegex']) ? $data['authorRegex'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
-        $this->container['skipRuleCheck'] = isset($data['skipRuleCheck']) ? $data['skipRuleCheck'] : null;
-        $this->container['skipRuleEndDate'] = isset($data['skipRuleEndDate']) ? $data['skipRuleEndDate'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['branchName'] = isset($data['branchName']) ? $data['branchName'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['skipRuleCheck'] = isset($data['skipRuleCheck']) ? $data['skipRuleCheck'] : null;
+        $this->container['skipRuleEndDate'] = isset($data['skipRuleEndDate']) ? $data['skipRuleEndDate'] : null;
     }
 
     /**
@@ -432,6 +432,12 @@ class CommitRuleDto implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['branchName']) && (mb_strlen($this->container['branchName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'branchName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['skipRuleEndDate']) && (mb_strlen($this->container['skipRuleEndDate']) > 255)) {
+                $invalidProperties[] = "invalid value for 'skipRuleEndDate', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['skipRuleEndDate']) && (mb_strlen($this->container['skipRuleEndDate']) < 1)) {
+                $invalidProperties[] = "invalid value for 'skipRuleEndDate', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -808,54 +814,6 @@ class CommitRuleDto implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets skipRuleCheck
-    *  **参数解释：** 是否跳过规则检测。 **约束限制：** 不涉及。 **取值范围：** - true，跳过规则检测。 - false，不跳过规则检测。
-    *
-    * @return bool|null
-    */
-    public function getSkipRuleCheck()
-    {
-        return $this->container['skipRuleCheck'];
-    }
-
-    /**
-    * Sets skipRuleCheck
-    *
-    * @param bool|null $skipRuleCheck **参数解释：** 是否跳过规则检测。 **约束限制：** 不涉及。 **取值范围：** - true，跳过规则检测。 - false，不跳过规则检测。
-    *
-    * @return $this
-    */
-    public function setSkipRuleCheck($skipRuleCheck)
-    {
-        $this->container['skipRuleCheck'] = $skipRuleCheck;
-        return $this;
-    }
-
-    /**
-    * Gets skipRuleEndDate
-    *  **参数解释：** 失效时间。
-    *
-    * @return string|null
-    */
-    public function getSkipRuleEndDate()
-    {
-        return $this->container['skipRuleEndDate'];
-    }
-
-    /**
-    * Sets skipRuleEndDate
-    *
-    * @param string|null $skipRuleEndDate **参数解释：** 失效时间。
-    *
-    * @return $this
-    */
-    public function setSkipRuleEndDate($skipRuleEndDate)
-    {
-        $this->container['skipRuleEndDate'] = $skipRuleEndDate;
-        return $this;
-    }
-
-    /**
     * Gets name
     *  **参数解释：** 规则名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
@@ -924,6 +882,54 @@ class CommitRuleDto implements ModelInterface, ArrayAccess
     public function setCreatedAt($createdAt)
     {
         $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets skipRuleCheck
+    *  **参数解释：** 跳过规则检测。 **约束限制：** 仅CR仓库支持此参数。
+    *
+    * @return bool|null
+    */
+    public function getSkipRuleCheck()
+    {
+        return $this->container['skipRuleCheck'];
+    }
+
+    /**
+    * Sets skipRuleCheck
+    *
+    * @param bool|null $skipRuleCheck **参数解释：** 跳过规则检测。 **约束限制：** 仅CR仓库支持此参数。
+    *
+    * @return $this
+    */
+    public function setSkipRuleCheck($skipRuleCheck)
+    {
+        $this->container['skipRuleCheck'] = $skipRuleCheck;
+        return $this;
+    }
+
+    /**
+    * Gets skipRuleEndDate
+    *  **参数解释：** 跳过规则检测失效时间， 例如: 2025-8-19。 **约束限制：** 仅CR仓库支持此参数。
+    *
+    * @return string|null
+    */
+    public function getSkipRuleEndDate()
+    {
+        return $this->container['skipRuleEndDate'];
+    }
+
+    /**
+    * Sets skipRuleEndDate
+    *
+    * @param string|null $skipRuleEndDate **参数解释：** 跳过规则检测失效时间， 例如: 2025-8-19。 **约束限制：** 仅CR仓库支持此参数。
+    *
+    * @return $this
+    */
+    public function setSkipRuleEndDate($skipRuleEndDate)
+    {
+        $this->container['skipRuleEndDate'] = $skipRuleEndDate;
         return $this;
     }
 

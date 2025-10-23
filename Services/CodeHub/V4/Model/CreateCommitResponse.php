@@ -47,7 +47,7 @@ class CreateCommitResponse implements ModelInterface, ArrayAccess
     * tenantName  tenant_name
     * userName  用户名
     * stats  stats
-    * status  **参数解释：** 状态。 **取值范围：** 不涉及。
+    * status  流水线状态，pending为排队，running为运行中，success为成功，failed为失败，canceled为取消，skipped为跳过，timedout为超时
     * lastPipeline  lastPipeline
     * projectId  **参数解释：** 仓库ID。 **取值范围：** 不涉及。
     * mergeRequest  mergeRequest
@@ -117,7 +117,7 @@ class CreateCommitResponse implements ModelInterface, ArrayAccess
     * tenantName  tenant_name
     * userName  用户名
     * stats  stats
-    * status  **参数解释：** 状态。 **取值范围：** 不涉及。
+    * status  流水线状态，pending为排队，running为运行中，success为成功，failed为失败，canceled为取消，skipped为跳过，timedout为超时
     * lastPipeline  lastPipeline
     * projectId  **参数解释：** 仓库ID。 **取值范围：** 不涉及。
     * mergeRequest  mergeRequest
@@ -208,7 +208,7 @@ class CreateCommitResponse implements ModelInterface, ArrayAccess
     * tenantName  tenant_name
     * userName  用户名
     * stats  stats
-    * status  **参数解释：** 状态。 **取值范围：** 不涉及。
+    * status  流水线状态，pending为排队，running为运行中，success为成功，failed为失败，canceled为取消，skipped为跳过，timedout为超时
     * lastPipeline  lastPipeline
     * projectId  **参数解释：** 仓库ID。 **取值范围：** 不涉及。
     * mergeRequest  mergeRequest
@@ -278,7 +278,7 @@ class CreateCommitResponse implements ModelInterface, ArrayAccess
     * tenantName  tenant_name
     * userName  用户名
     * stats  stats
-    * status  **参数解释：** 状态。 **取值范围：** 不涉及。
+    * status  流水线状态，pending为排队，running为运行中，success为成功，failed为失败，canceled为取消，skipped为跳过，timedout为超时
     * lastPipeline  lastPipeline
     * projectId  **参数解释：** 仓库ID。 **取值范围：** 不涉及。
     * mergeRequest  mergeRequest
@@ -348,7 +348,7 @@ class CreateCommitResponse implements ModelInterface, ArrayAccess
     * tenantName  tenant_name
     * userName  用户名
     * stats  stats
-    * status  **参数解释：** 状态。 **取值范围：** 不涉及。
+    * status  流水线状态，pending为排队，running为运行中，success为成功，failed为失败，canceled为取消，skipped为跳过，timedout为超时
     * lastPipeline  lastPipeline
     * projectId  **参数解释：** 仓库ID。 **取值范围：** 不涉及。
     * mergeRequest  mergeRequest
@@ -430,7 +430,32 @@ class CreateCommitResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_PENDING = 'pending';
+    const STATUS_RUNNING = 'running';
+    const STATUS_SUCCESS = 'success';
+    const STATUS_FAILED = 'failed';
+    const STATUS_CANCELED = 'canceled';
+    const STATUS_SKIPPED = 'skipped';
+    const STATUS_TIMEDOUT = 'timedout';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_PENDING,
+            self::STATUS_RUNNING,
+            self::STATUS_SUCCESS,
+            self::STATUS_FAILED,
+            self::STATUS_CANCELED,
+            self::STATUS_SKIPPED,
+            self::STATUS_TIMEDOUT,
+        ];
+    }
 
 
     /**
@@ -621,6 +646,14 @@ class CreateCommitResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['userName']) && (mb_strlen($this->container['userName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'userName', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -1261,7 +1294,7 @@ class CreateCommitResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释：** 状态。 **取值范围：** 不涉及。
+    *  流水线状态，pending为排队，running为运行中，success为成功，failed为失败，canceled为取消，skipped为跳过，timedout为超时
     *
     * @return string|null
     */
@@ -1273,7 +1306,7 @@ class CreateCommitResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释：** 状态。 **取值范围：** 不涉及。
+    * @param string|null $status 流水线状态，pending为排队，running为运行中，success为成功，failed为失败，canceled为取消，skipped为跳过，timedout为超时
     *
     * @return $this
     */

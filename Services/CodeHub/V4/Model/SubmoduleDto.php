@@ -29,7 +29,7 @@ class SubmoduleDto implements ModelInterface, ArrayAccess
     * submoduleRepoId  **参数解释：** 子模块仓库ID。
     * repoName  **参数解释：** 子模块仓库名称。
     * subCommitId  **参数解释：** 子模块仓库提交。
-    * deployKeyStatus  **参数解释：** 部署秘钥同步状态。 **取值范围：** - 0，不同步。 - 1，同步。
+    * deployKeyStatus  **参数解释：** 部署密钥同步状态。 **取值范围：** - 0，不同步。 - 1，同步。
     * status  **参数解释：** 子模块状态。 **取值范围：** - 0，异常。 - 1，正常。
     *
     * @var string[]
@@ -59,7 +59,7 @@ class SubmoduleDto implements ModelInterface, ArrayAccess
     * submoduleRepoId  **参数解释：** 子模块仓库ID。
     * repoName  **参数解释：** 子模块仓库名称。
     * subCommitId  **参数解释：** 子模块仓库提交。
-    * deployKeyStatus  **参数解释：** 部署秘钥同步状态。 **取值范围：** - 0，不同步。 - 1，同步。
+    * deployKeyStatus  **参数解释：** 部署密钥同步状态。 **取值范围：** - 0，不同步。 - 1，同步。
     * status  **参数解释：** 子模块状态。 **取值范围：** - 0，异常。 - 1，正常。
     *
     * @var string[]
@@ -110,7 +110,7 @@ class SubmoduleDto implements ModelInterface, ArrayAccess
     * submoduleRepoId  **参数解释：** 子模块仓库ID。
     * repoName  **参数解释：** 子模块仓库名称。
     * subCommitId  **参数解释：** 子模块仓库提交。
-    * deployKeyStatus  **参数解释：** 部署秘钥同步状态。 **取值范围：** - 0，不同步。 - 1，同步。
+    * deployKeyStatus  **参数解释：** 部署密钥同步状态。 **取值范围：** - 0，不同步。 - 1，同步。
     * status  **参数解释：** 子模块状态。 **取值范围：** - 0，异常。 - 1，正常。
     *
     * @var string[]
@@ -140,7 +140,7 @@ class SubmoduleDto implements ModelInterface, ArrayAccess
     * submoduleRepoId  **参数解释：** 子模块仓库ID。
     * repoName  **参数解释：** 子模块仓库名称。
     * subCommitId  **参数解释：** 子模块仓库提交。
-    * deployKeyStatus  **参数解释：** 部署秘钥同步状态。 **取值范围：** - 0，不同步。 - 1，同步。
+    * deployKeyStatus  **参数解释：** 部署密钥同步状态。 **取值范围：** - 0，不同步。 - 1，同步。
     * status  **参数解释：** 子模块状态。 **取值范围：** - 0，异常。 - 1，正常。
     *
     * @var string[]
@@ -170,7 +170,7 @@ class SubmoduleDto implements ModelInterface, ArrayAccess
     * submoduleRepoId  **参数解释：** 子模块仓库ID。
     * repoName  **参数解释：** 子模块仓库名称。
     * subCommitId  **参数解释：** 子模块仓库提交。
-    * deployKeyStatus  **参数解释：** 部署秘钥同步状态。 **取值范围：** - 0，不同步。 - 1，同步。
+    * deployKeyStatus  **参数解释：** 部署密钥同步状态。 **取值范围：** - 0，不同步。 - 1，同步。
     * status  **参数解释：** 子模块状态。 **取值范围：** - 0，异常。 - 1，正常。
     *
     * @var string[]
@@ -500,7 +500,7 @@ class SubmoduleDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets deployKeyStatus
-    *  **参数解释：** 部署秘钥同步状态。 **取值范围：** - 0，不同步。 - 1，同步。
+    *  **参数解释：** 部署密钥同步状态。 **取值范围：** - 0，不同步。 - 1，同步。
     *
     * @return int|null
     */
@@ -512,7 +512,7 @@ class SubmoduleDto implements ModelInterface, ArrayAccess
     /**
     * Sets deployKeyStatus
     *
-    * @param int|null $deployKeyStatus **参数解释：** 部署秘钥同步状态。 **取值范围：** - 0，不同步。 - 1，同步。
+    * @param int|null $deployKeyStatus **参数解释：** 部署密钥同步状态。 **取值范围：** - 0，不同步。 - 1，同步。
     *
     * @return $this
     */

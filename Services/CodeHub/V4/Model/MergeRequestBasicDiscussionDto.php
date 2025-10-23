@@ -24,7 +24,7 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
     * individualNote  **参数解释：** 个人检视意见(不需要解决)。
     * notes  **参数解释：** 评论列表(主评+回复)。
     * repositoryId  **参数解释：** 仓库id。
-    * noteableType  **参数解释：** 意见类型。
+    * noteableType  **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
     * commitId  **参数解释：** 提交记录id。
     * repositoryFullPath  **参数解释：** 仓库路径。
     * aMode  **参数解释：** 文件旧权限(默认100644)。
@@ -37,9 +37,9 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
     * reviewCategoriesCn  **参数解释：** 意见分类中文。
     * reviewCategoriesEn  **参数解释：** 意见分类英文。
     * reviewModules  **参数解释：** 意见模块。
-    * severity  **参数解释：** 严重程度key。
-    * severityCn  **参数解释：** 严重程度中文。 **约束限制：** - 建议 - 一般 - 严重 - 致命
-    * severityEn  **参数解释：** 严重程度英文。
+    * severity  **参数解释：** 严重程度key。 **取值范围：** - suggestion: 建议。 - minor: 一般。 - major: 严重。 - fatal: 致命。
+    * severityCn  **参数解释：** 严重程度中文。 **取值范围：** - 建议 - 一般 - 严重 - 致命
+    * severityEn  **参数解释：** 严重程度英文。 **取值范围：** - Suggestion: 建议。 - Minor: 一般。 - major: 严重。 - fatal: 致命。
     * assignee  assignee
     * proposer  proposer
     * mergeRequestVersionParams  mergeRequestVersionParams
@@ -78,7 +78,7 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
     * individualNote  **参数解释：** 个人检视意见(不需要解决)。
     * notes  **参数解释：** 评论列表(主评+回复)。
     * repositoryId  **参数解释：** 仓库id。
-    * noteableType  **参数解释：** 意见类型。
+    * noteableType  **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
     * commitId  **参数解释：** 提交记录id。
     * repositoryFullPath  **参数解释：** 仓库路径。
     * aMode  **参数解释：** 文件旧权限(默认100644)。
@@ -91,9 +91,9 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
     * reviewCategoriesCn  **参数解释：** 意见分类中文。
     * reviewCategoriesEn  **参数解释：** 意见分类英文。
     * reviewModules  **参数解释：** 意见模块。
-    * severity  **参数解释：** 严重程度key。
-    * severityCn  **参数解释：** 严重程度中文。 **约束限制：** - 建议 - 一般 - 严重 - 致命
-    * severityEn  **参数解释：** 严重程度英文。
+    * severity  **参数解释：** 严重程度key。 **取值范围：** - suggestion: 建议。 - minor: 一般。 - major: 严重。 - fatal: 致命。
+    * severityCn  **参数解释：** 严重程度中文。 **取值范围：** - 建议 - 一般 - 严重 - 致命
+    * severityEn  **参数解释：** 严重程度英文。 **取值范围：** - Suggestion: 建议。 - Minor: 一般。 - major: 严重。 - fatal: 致命。
     * assignee  assignee
     * proposer  proposer
     * mergeRequestVersionParams  mergeRequestVersionParams
@@ -153,7 +153,7 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
     * individualNote  **参数解释：** 个人检视意见(不需要解决)。
     * notes  **参数解释：** 评论列表(主评+回复)。
     * repositoryId  **参数解释：** 仓库id。
-    * noteableType  **参数解释：** 意见类型。
+    * noteableType  **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
     * commitId  **参数解释：** 提交记录id。
     * repositoryFullPath  **参数解释：** 仓库路径。
     * aMode  **参数解释：** 文件旧权限(默认100644)。
@@ -166,9 +166,9 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
     * reviewCategoriesCn  **参数解释：** 意见分类中文。
     * reviewCategoriesEn  **参数解释：** 意见分类英文。
     * reviewModules  **参数解释：** 意见模块。
-    * severity  **参数解释：** 严重程度key。
-    * severityCn  **参数解释：** 严重程度中文。 **约束限制：** - 建议 - 一般 - 严重 - 致命
-    * severityEn  **参数解释：** 严重程度英文。
+    * severity  **参数解释：** 严重程度key。 **取值范围：** - suggestion: 建议。 - minor: 一般。 - major: 严重。 - fatal: 致命。
+    * severityCn  **参数解释：** 严重程度中文。 **取值范围：** - 建议 - 一般 - 严重 - 致命
+    * severityEn  **参数解释：** 严重程度英文。 **取值范围：** - Suggestion: 建议。 - Minor: 一般。 - major: 严重。 - fatal: 致命。
     * assignee  assignee
     * proposer  proposer
     * mergeRequestVersionParams  mergeRequestVersionParams
@@ -207,7 +207,7 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
     * individualNote  **参数解释：** 个人检视意见(不需要解决)。
     * notes  **参数解释：** 评论列表(主评+回复)。
     * repositoryId  **参数解释：** 仓库id。
-    * noteableType  **参数解释：** 意见类型。
+    * noteableType  **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
     * commitId  **参数解释：** 提交记录id。
     * repositoryFullPath  **参数解释：** 仓库路径。
     * aMode  **参数解释：** 文件旧权限(默认100644)。
@@ -220,9 +220,9 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
     * reviewCategoriesCn  **参数解释：** 意见分类中文。
     * reviewCategoriesEn  **参数解释：** 意见分类英文。
     * reviewModules  **参数解释：** 意见模块。
-    * severity  **参数解释：** 严重程度key。
-    * severityCn  **参数解释：** 严重程度中文。 **约束限制：** - 建议 - 一般 - 严重 - 致命
-    * severityEn  **参数解释：** 严重程度英文。
+    * severity  **参数解释：** 严重程度key。 **取值范围：** - suggestion: 建议。 - minor: 一般。 - major: 严重。 - fatal: 致命。
+    * severityCn  **参数解释：** 严重程度中文。 **取值范围：** - 建议 - 一般 - 严重 - 致命
+    * severityEn  **参数解释：** 严重程度英文。 **取值范围：** - Suggestion: 建议。 - Minor: 一般。 - major: 严重。 - fatal: 致命。
     * assignee  assignee
     * proposer  proposer
     * mergeRequestVersionParams  mergeRequestVersionParams
@@ -261,7 +261,7 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
     * individualNote  **参数解释：** 个人检视意见(不需要解决)。
     * notes  **参数解释：** 评论列表(主评+回复)。
     * repositoryId  **参数解释：** 仓库id。
-    * noteableType  **参数解释：** 意见类型。
+    * noteableType  **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
     * commitId  **参数解释：** 提交记录id。
     * repositoryFullPath  **参数解释：** 仓库路径。
     * aMode  **参数解释：** 文件旧权限(默认100644)。
@@ -274,9 +274,9 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
     * reviewCategoriesCn  **参数解释：** 意见分类中文。
     * reviewCategoriesEn  **参数解释：** 意见分类英文。
     * reviewModules  **参数解释：** 意见模块。
-    * severity  **参数解释：** 严重程度key。
-    * severityCn  **参数解释：** 严重程度中文。 **约束限制：** - 建议 - 一般 - 严重 - 致命
-    * severityEn  **参数解释：** 严重程度英文。
+    * severity  **参数解释：** 严重程度key。 **取值范围：** - suggestion: 建议。 - minor: 一般。 - major: 严重。 - fatal: 致命。
+    * severityCn  **参数解释：** 严重程度中文。 **取值范围：** - 建议 - 一般 - 严重 - 致命
+    * severityEn  **参数解释：** 严重程度英文。 **取值范围：** - Suggestion: 建议。 - Minor: 一般。 - major: 严重。 - fatal: 致命。
     * assignee  assignee
     * proposer  proposer
     * mergeRequestVersionParams  mergeRequestVersionParams
@@ -649,7 +649,7 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets noteableType
-    *  **参数解释：** 意见类型。
+    *  **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
     *
     * @return string|null
     */
@@ -661,7 +661,7 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
     /**
     * Sets noteableType
     *
-    * @param string|null $noteableType **参数解释：** 意见类型。
+    * @param string|null $noteableType **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
     *
     * @return $this
     */
@@ -961,7 +961,7 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  **参数解释：** 严重程度key。
+    *  **参数解释：** 严重程度key。 **取值范围：** - suggestion: 建议。 - minor: 一般。 - major: 严重。 - fatal: 致命。
     *
     * @return string|null
     */
@@ -973,7 +973,7 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity **参数解释：** 严重程度key。
+    * @param string|null $severity **参数解释：** 严重程度key。 **取值范围：** - suggestion: 建议。 - minor: 一般。 - major: 严重。 - fatal: 致命。
     *
     * @return $this
     */
@@ -985,7 +985,7 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets severityCn
-    *  **参数解释：** 严重程度中文。 **约束限制：** - 建议 - 一般 - 严重 - 致命
+    *  **参数解释：** 严重程度中文。 **取值范围：** - 建议 - 一般 - 严重 - 致命
     *
     * @return string|null
     */
@@ -997,7 +997,7 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
     /**
     * Sets severityCn
     *
-    * @param string|null $severityCn **参数解释：** 严重程度中文。 **约束限制：** - 建议 - 一般 - 严重 - 致命
+    * @param string|null $severityCn **参数解释：** 严重程度中文。 **取值范围：** - 建议 - 一般 - 严重 - 致命
     *
     * @return $this
     */
@@ -1009,7 +1009,7 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets severityEn
-    *  **参数解释：** 严重程度英文。
+    *  **参数解释：** 严重程度英文。 **取值范围：** - Suggestion: 建议。 - Minor: 一般。 - major: 严重。 - fatal: 致命。
     *
     * @return string|null
     */
@@ -1021,7 +1021,7 @@ class MergeRequestBasicDiscussionDto implements ModelInterface, ArrayAccess
     /**
     * Sets severityEn
     *
-    * @param string|null $severityEn **参数解释：** 严重程度英文。
+    * @param string|null $severityEn **参数解释：** 严重程度英文。 **取值范围：** - Suggestion: 建议。 - Minor: 一般。 - major: 严重。 - fatal: 致命。
     *
     * @return $this
     */

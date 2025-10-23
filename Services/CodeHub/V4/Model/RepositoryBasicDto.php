@@ -31,8 +31,6 @@ class RepositoryBasicDto implements ModelInterface, ArrayAccess
     * archived  **参数解释：** 是否归档。
     * sshUrlToRepo  **参数解释：** 仓库ssh地址。
     * httpUrlToRepo  **参数解释：** 仓库http地址。
-    * webUrl  **参数解释：** 仓库页面链接。
-    * readmeUrl  **参数解释：** 仓库readme文件链接。
     * projectId  **参数解释：** 仓库所属项目ID。
     * projectName  **参数解释：** 仓库所属项目名称。
     * developMode  **参数解释：** 仓库开发模式。 **取值范围：** - normal - CR
@@ -70,8 +68,6 @@ class RepositoryBasicDto implements ModelInterface, ArrayAccess
             'archived' => 'bool',
             'sshUrlToRepo' => 'string',
             'httpUrlToRepo' => 'string',
-            'webUrl' => 'string',
-            'readmeUrl' => 'string',
             'projectId' => 'string',
             'projectName' => 'string',
             'developMode' => 'string',
@@ -109,8 +105,6 @@ class RepositoryBasicDto implements ModelInterface, ArrayAccess
     * archived  **参数解释：** 是否归档。
     * sshUrlToRepo  **参数解释：** 仓库ssh地址。
     * httpUrlToRepo  **参数解释：** 仓库http地址。
-    * webUrl  **参数解释：** 仓库页面链接。
-    * readmeUrl  **参数解释：** 仓库readme文件链接。
     * projectId  **参数解释：** 仓库所属项目ID。
     * projectName  **参数解释：** 仓库所属项目名称。
     * developMode  **参数解释：** 仓库开发模式。 **取值范围：** - normal - CR
@@ -148,8 +142,6 @@ class RepositoryBasicDto implements ModelInterface, ArrayAccess
         'archived' => null,
         'sshUrlToRepo' => null,
         'httpUrlToRepo' => null,
-        'webUrl' => null,
-        'readmeUrl' => null,
         'projectId' => null,
         'projectName' => null,
         'developMode' => null,
@@ -208,8 +200,6 @@ class RepositoryBasicDto implements ModelInterface, ArrayAccess
     * archived  **参数解释：** 是否归档。
     * sshUrlToRepo  **参数解释：** 仓库ssh地址。
     * httpUrlToRepo  **参数解释：** 仓库http地址。
-    * webUrl  **参数解释：** 仓库页面链接。
-    * readmeUrl  **参数解释：** 仓库readme文件链接。
     * projectId  **参数解释：** 仓库所属项目ID。
     * projectName  **参数解释：** 仓库所属项目名称。
     * developMode  **参数解释：** 仓库开发模式。 **取值范围：** - normal - CR
@@ -247,8 +237,6 @@ class RepositoryBasicDto implements ModelInterface, ArrayAccess
             'archived' => 'archived',
             'sshUrlToRepo' => 'ssh_url_to_repo',
             'httpUrlToRepo' => 'http_url_to_repo',
-            'webUrl' => 'web_url',
-            'readmeUrl' => 'readme_url',
             'projectId' => 'project_id',
             'projectName' => 'project_name',
             'developMode' => 'develop_mode',
@@ -286,8 +274,6 @@ class RepositoryBasicDto implements ModelInterface, ArrayAccess
     * archived  **参数解释：** 是否归档。
     * sshUrlToRepo  **参数解释：** 仓库ssh地址。
     * httpUrlToRepo  **参数解释：** 仓库http地址。
-    * webUrl  **参数解释：** 仓库页面链接。
-    * readmeUrl  **参数解释：** 仓库readme文件链接。
     * projectId  **参数解释：** 仓库所属项目ID。
     * projectName  **参数解释：** 仓库所属项目名称。
     * developMode  **参数解释：** 仓库开发模式。 **取值范围：** - normal - CR
@@ -325,8 +311,6 @@ class RepositoryBasicDto implements ModelInterface, ArrayAccess
             'archived' => 'setArchived',
             'sshUrlToRepo' => 'setSshUrlToRepo',
             'httpUrlToRepo' => 'setHttpUrlToRepo',
-            'webUrl' => 'setWebUrl',
-            'readmeUrl' => 'setReadmeUrl',
             'projectId' => 'setProjectId',
             'projectName' => 'setProjectName',
             'developMode' => 'setDevelopMode',
@@ -364,8 +348,6 @@ class RepositoryBasicDto implements ModelInterface, ArrayAccess
     * archived  **参数解释：** 是否归档。
     * sshUrlToRepo  **参数解释：** 仓库ssh地址。
     * httpUrlToRepo  **参数解释：** 仓库http地址。
-    * webUrl  **参数解释：** 仓库页面链接。
-    * readmeUrl  **参数解释：** 仓库readme文件链接。
     * projectId  **参数解释：** 仓库所属项目ID。
     * projectName  **参数解释：** 仓库所属项目名称。
     * developMode  **参数解释：** 仓库开发模式。 **取值范围：** - normal - CR
@@ -403,8 +385,6 @@ class RepositoryBasicDto implements ModelInterface, ArrayAccess
             'archived' => 'getArchived',
             'sshUrlToRepo' => 'getSshUrlToRepo',
             'httpUrlToRepo' => 'getHttpUrlToRepo',
-            'webUrl' => 'getWebUrl',
-            'readmeUrl' => 'getReadmeUrl',
             'projectId' => 'getProjectId',
             'projectName' => 'getProjectName',
             'developMode' => 'getDevelopMode',
@@ -513,8 +493,6 @@ class RepositoryBasicDto implements ModelInterface, ArrayAccess
         $this->container['archived'] = isset($data['archived']) ? $data['archived'] : null;
         $this->container['sshUrlToRepo'] = isset($data['sshUrlToRepo']) ? $data['sshUrlToRepo'] : null;
         $this->container['httpUrlToRepo'] = isset($data['httpUrlToRepo']) ? $data['httpUrlToRepo'] : null;
-        $this->container['webUrl'] = isset($data['webUrl']) ? $data['webUrl'] : null;
-        $this->container['readmeUrl'] = isset($data['readmeUrl']) ? $data['readmeUrl'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['projectName'] = isset($data['projectName']) ? $data['projectName'] : null;
         $this->container['developMode'] = isset($data['developMode']) ? $data['developMode'] : null;
@@ -594,18 +572,6 @@ class RepositoryBasicDto implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['httpUrlToRepo']) && (mb_strlen($this->container['httpUrlToRepo']) < 1)) {
                 $invalidProperties[] = "invalid value for 'httpUrlToRepo', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['webUrl']) && (mb_strlen($this->container['webUrl']) > 512)) {
-                $invalidProperties[] = "invalid value for 'webUrl', the character length must be smaller than or equal to 512.";
-            }
-            if (!is_null($this->container['webUrl']) && (mb_strlen($this->container['webUrl']) < 1)) {
-                $invalidProperties[] = "invalid value for 'webUrl', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['readmeUrl']) && (mb_strlen($this->container['readmeUrl']) > 512)) {
-                $invalidProperties[] = "invalid value for 'readmeUrl', the character length must be smaller than or equal to 512.";
-            }
-            if (!is_null($this->container['readmeUrl']) && (mb_strlen($this->container['readmeUrl']) < 1)) {
-                $invalidProperties[] = "invalid value for 'readmeUrl', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 255)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 255.";
@@ -974,54 +940,6 @@ class RepositoryBasicDto implements ModelInterface, ArrayAccess
     public function setHttpUrlToRepo($httpUrlToRepo)
     {
         $this->container['httpUrlToRepo'] = $httpUrlToRepo;
-        return $this;
-    }
-
-    /**
-    * Gets webUrl
-    *  **参数解释：** 仓库页面链接。
-    *
-    * @return string|null
-    */
-    public function getWebUrl()
-    {
-        return $this->container['webUrl'];
-    }
-
-    /**
-    * Sets webUrl
-    *
-    * @param string|null $webUrl **参数解释：** 仓库页面链接。
-    *
-    * @return $this
-    */
-    public function setWebUrl($webUrl)
-    {
-        $this->container['webUrl'] = $webUrl;
-        return $this;
-    }
-
-    /**
-    * Gets readmeUrl
-    *  **参数解释：** 仓库readme文件链接。
-    *
-    * @return string|null
-    */
-    public function getReadmeUrl()
-    {
-        return $this->container['readmeUrl'];
-    }
-
-    /**
-    * Sets readmeUrl
-    *
-    * @param string|null $readmeUrl **参数解释：** 仓库readme文件链接。
-    *
-    * @return $this
-    */
-    public function setReadmeUrl($readmeUrl)
-    {
-        $this->container['readmeUrl'] = $readmeUrl;
         return $this;
     }
 

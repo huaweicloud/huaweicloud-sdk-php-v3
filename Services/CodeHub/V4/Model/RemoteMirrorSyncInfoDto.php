@@ -20,30 +20,34 @@ class RemoteMirrorSyncInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * username  **参数解释：** 用户名(需要base64加密)。
-    * password  **参数解释：** 密码(需要base64加密)。
-    * endpointUuid  **参数解释：** 拓展点uuid。
+    * username  **参数解释：** 用户名(需要base64加密)。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及
+    * password  **参数解释：** 密码(需要base64加密)。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及
+    * endpointUuid  **参数解释：** 拓展点uuid。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * forceFetch  **参数解释：** 允许强制同步。 **约束限制：** 不涉及。 **取值范围：** - true，强制同步。 - false，不强制同步。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'username' => 'string',
             'password' => 'string',
-            'endpointUuid' => 'string'
+            'endpointUuid' => 'string',
+            'forceFetch' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * username  **参数解释：** 用户名(需要base64加密)。
-    * password  **参数解释：** 密码(需要base64加密)。
-    * endpointUuid  **参数解释：** 拓展点uuid。
+    * username  **参数解释：** 用户名(需要base64加密)。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及
+    * password  **参数解释：** 密码(需要base64加密)。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及
+    * endpointUuid  **参数解释：** 拓展点uuid。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * forceFetch  **参数解释：** 允许强制同步。 **约束限制：** 不涉及。 **取值范围：** - true，强制同步。 - false，不强制同步。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'username' => null,
         'password' => null,
-        'endpointUuid' => null
+        'endpointUuid' => null,
+        'forceFetch' => null
     ];
 
     /**
@@ -69,44 +73,50 @@ class RemoteMirrorSyncInfoDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * username  **参数解释：** 用户名(需要base64加密)。
-    * password  **参数解释：** 密码(需要base64加密)。
-    * endpointUuid  **参数解释：** 拓展点uuid。
+    * username  **参数解释：** 用户名(需要base64加密)。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及
+    * password  **参数解释：** 密码(需要base64加密)。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及
+    * endpointUuid  **参数解释：** 拓展点uuid。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * forceFetch  **参数解释：** 允许强制同步。 **约束限制：** 不涉及。 **取值范围：** - true，强制同步。 - false，不强制同步。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'username' => 'username',
             'password' => 'password',
-            'endpointUuid' => 'endpoint_uuid'
+            'endpointUuid' => 'endpoint_uuid',
+            'forceFetch' => 'force_fetch'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * username  **参数解释：** 用户名(需要base64加密)。
-    * password  **参数解释：** 密码(需要base64加密)。
-    * endpointUuid  **参数解释：** 拓展点uuid。
+    * username  **参数解释：** 用户名(需要base64加密)。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及
+    * password  **参数解释：** 密码(需要base64加密)。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及
+    * endpointUuid  **参数解释：** 拓展点uuid。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * forceFetch  **参数解释：** 允许强制同步。 **约束限制：** 不涉及。 **取值范围：** - true，强制同步。 - false，不强制同步。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'username' => 'setUsername',
             'password' => 'setPassword',
-            'endpointUuid' => 'setEndpointUuid'
+            'endpointUuid' => 'setEndpointUuid',
+            'forceFetch' => 'setForceFetch'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * username  **参数解释：** 用户名(需要base64加密)。
-    * password  **参数解释：** 密码(需要base64加密)。
-    * endpointUuid  **参数解释：** 拓展点uuid。
+    * username  **参数解释：** 用户名(需要base64加密)。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及
+    * password  **参数解释：** 密码(需要base64加密)。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及
+    * endpointUuid  **参数解释：** 拓展点uuid。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * forceFetch  **参数解释：** 允许强制同步。 **约束限制：** 不涉及。 **取值范围：** - true，强制同步。 - false，不强制同步。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'username' => 'getUsername',
             'password' => 'getPassword',
-            'endpointUuid' => 'getEndpointUuid'
+            'endpointUuid' => 'getEndpointUuid',
+            'forceFetch' => 'getForceFetch'
     ];
 
     /**
@@ -170,6 +180,7 @@ class RemoteMirrorSyncInfoDto implements ModelInterface, ArrayAccess
         $this->container['username'] = isset($data['username']) ? $data['username'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['endpointUuid'] = isset($data['endpointUuid']) ? $data['endpointUuid'] : null;
+        $this->container['forceFetch'] = isset($data['forceFetch']) ? $data['forceFetch'] : null;
     }
 
     /**
@@ -214,7 +225,7 @@ class RemoteMirrorSyncInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets username
-    *  **参数解释：** 用户名(需要base64加密)。
+    *  **参数解释：** 用户名(需要base64加密)。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -226,7 +237,7 @@ class RemoteMirrorSyncInfoDto implements ModelInterface, ArrayAccess
     /**
     * Sets username
     *
-    * @param string|null $username **参数解释：** 用户名(需要base64加密)。
+    * @param string|null $username **参数解释：** 用户名(需要base64加密)。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -238,7 +249,7 @@ class RemoteMirrorSyncInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets password
-    *  **参数解释：** 密码(需要base64加密)。
+    *  **参数解释：** 密码(需要base64加密)。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -250,7 +261,7 @@ class RemoteMirrorSyncInfoDto implements ModelInterface, ArrayAccess
     /**
     * Sets password
     *
-    * @param string|null $password **参数解释：** 密码(需要base64加密)。
+    * @param string|null $password **参数解释：** 密码(需要base64加密)。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -262,7 +273,7 @@ class RemoteMirrorSyncInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpointUuid
-    *  **参数解释：** 拓展点uuid。
+    *  **参数解释：** 拓展点uuid。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -274,13 +285,37 @@ class RemoteMirrorSyncInfoDto implements ModelInterface, ArrayAccess
     /**
     * Sets endpointUuid
     *
-    * @param string|null $endpointUuid **参数解释：** 拓展点uuid。
+    * @param string|null $endpointUuid **参数解释：** 拓展点uuid。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
     public function setEndpointUuid($endpointUuid)
     {
         $this->container['endpointUuid'] = $endpointUuid;
+        return $this;
+    }
+
+    /**
+    * Gets forceFetch
+    *  **参数解释：** 允许强制同步。 **约束限制：** 不涉及。 **取值范围：** - true，强制同步。 - false，不强制同步。 **默认取值：** 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getForceFetch()
+    {
+        return $this->container['forceFetch'];
+    }
+
+    /**
+    * Sets forceFetch
+    *
+    * @param bool|null $forceFetch **参数解释：** 允许强制同步。 **约束限制：** 不涉及。 **取值范围：** - true，强制同步。 - false，不强制同步。 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setForceFetch($forceFetch)
+    {
+        $this->container['forceFetch'] = $forceFetch;
         return $this;
     }
 

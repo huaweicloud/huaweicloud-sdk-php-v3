@@ -43,7 +43,7 @@ class CreateExternalIncidentRequest implements ModelInterface, ArrayAccess
             'enterpriseProject' => 'string[]',
             'currentCloudService' => 'string[]',
             'incidentLevel' => 'string',
-            'isServiceInterrupt' => 'bool',
+            'isServiceInterrupt' => 'string',
             'incidentType' => 'string',
             'incidentTitle' => 'string',
             'incidentDescription' => 'string',
@@ -504,7 +504,7 @@ class CreateExternalIncidentRequest implements ModelInterface, ArrayAccess
     * Gets isServiceInterrupt
     *  业务是否中断，取值：true/false
     *
-    * @return bool
+    * @return string
     */
     public function getIsServiceInterrupt()
     {
@@ -514,7 +514,7 @@ class CreateExternalIncidentRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isServiceInterrupt
     *
-    * @param bool $isServiceInterrupt 业务是否中断，取值：true/false
+    * @param string $isServiceInterrupt 业务是否中断，取值：true/false
     *
     * @return $this
     */

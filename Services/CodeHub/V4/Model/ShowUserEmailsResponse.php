@@ -24,7 +24,7 @@ class ShowUserEmailsResponse implements ModelInterface, ArrayAccess
     * id  **参数解释：** 用户id。
     * name  **参数解释：** 用户名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * username  **参数解释：** 用户长id。 **取值范围：** 字符串长度不少于1，不超过1000。
-    * state  **参数解释：** 用户状态。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * state  **参数解释：** 用户状态 active 活跃用户 blocked 锁定禁用用户。
     * createdAt  **参数解释：** 创建时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * updatedAt  **参数解释：** 更新时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * lastActivityOn  **参数解释：** 最后活跃时间。 **取值范围：** 字符串长度不少于1，不超过1000。
@@ -48,7 +48,7 @@ class ShowUserEmailsResponse implements ModelInterface, ArrayAccess
     * id  **参数解释：** 用户id。
     * name  **参数解释：** 用户名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * username  **参数解释：** 用户长id。 **取值范围：** 字符串长度不少于1，不超过1000。
-    * state  **参数解释：** 用户状态。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * state  **参数解释：** 用户状态 active 活跃用户 blocked 锁定禁用用户。
     * createdAt  **参数解释：** 创建时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * updatedAt  **参数解释：** 更新时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * lastActivityOn  **参数解释：** 最后活跃时间。 **取值范围：** 字符串长度不少于1，不超过1000。
@@ -93,7 +93,7 @@ class ShowUserEmailsResponse implements ModelInterface, ArrayAccess
     * id  **参数解释：** 用户id。
     * name  **参数解释：** 用户名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * username  **参数解释：** 用户长id。 **取值范围：** 字符串长度不少于1，不超过1000。
-    * state  **参数解释：** 用户状态。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * state  **参数解释：** 用户状态 active 活跃用户 blocked 锁定禁用用户。
     * createdAt  **参数解释：** 创建时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * updatedAt  **参数解释：** 更新时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * lastActivityOn  **参数解释：** 最后活跃时间。 **取值范围：** 字符串长度不少于1，不超过1000。
@@ -117,7 +117,7 @@ class ShowUserEmailsResponse implements ModelInterface, ArrayAccess
     * id  **参数解释：** 用户id。
     * name  **参数解释：** 用户名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * username  **参数解释：** 用户长id。 **取值范围：** 字符串长度不少于1，不超过1000。
-    * state  **参数解释：** 用户状态。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * state  **参数解释：** 用户状态 active 活跃用户 blocked 锁定禁用用户。
     * createdAt  **参数解释：** 创建时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * updatedAt  **参数解释：** 更新时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * lastActivityOn  **参数解释：** 最后活跃时间。 **取值范围：** 字符串长度不少于1，不超过1000。
@@ -141,7 +141,7 @@ class ShowUserEmailsResponse implements ModelInterface, ArrayAccess
     * id  **参数解释：** 用户id。
     * name  **参数解释：** 用户名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * username  **参数解释：** 用户长id。 **取值范围：** 字符串长度不少于1，不超过1000。
-    * state  **参数解释：** 用户状态。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * state  **参数解释：** 用户状态 active 活跃用户 blocked 锁定禁用用户。
     * createdAt  **参数解释：** 创建时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * updatedAt  **参数解释：** 更新时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * lastActivityOn  **参数解释：** 最后活跃时间。 **取值范围：** 字符串长度不少于1，不超过1000。
@@ -200,7 +200,22 @@ class ShowUserEmailsResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATE_ACTIVE = 'active';
+    const STATE_BLOCKED = 'blocked';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStateAllowableValues()
+    {
+        return [
+            self::STATE_ACTIVE,
+            self::STATE_BLOCKED,
+        ];
+    }
 
 
     /**
@@ -254,6 +269,14 @@ class ShowUserEmailsResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['username']) && (mb_strlen($this->container['username']) < 1)) {
                 $invalidProperties[] = "invalid value for 'username', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getStateAllowableValues();
+                if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'state', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 1000)) {
                 $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 1000.";
             }
@@ -372,7 +395,7 @@ class ShowUserEmailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  **参数解释：** 用户状态。 **取值范围：** 字符串长度不少于1，不超过1000。
+    *  **参数解释：** 用户状态 active 活跃用户 blocked 锁定禁用用户。
     *
     * @return string|null
     */
@@ -384,7 +407,7 @@ class ShowUserEmailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state **参数解释：** 用户状态。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * @param string|null $state **参数解释：** 用户状态 active 活跃用户 blocked 锁定禁用用户。
     *
     * @return $this
     */

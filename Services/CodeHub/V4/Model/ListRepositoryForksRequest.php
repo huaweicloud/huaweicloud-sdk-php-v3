@@ -21,6 +21,8 @@ class ListRepositoryForksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * repositoryId  **参数解释：** 仓库的ID，通过[[查询用户所有仓库](https://support.huaweicloud.com/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws)[[查询用户所有仓库](https://support.huaweicloud.com/intl/en-us/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **约束限制：** 不涉及。
+    * offset  **参数解释：** 偏移量，从0开始。
+    * limit  **参数解释：** 返回数量。
     * orderBy  **参数解释：**  排序字段。 **约束限制：**  必须为枚举值中的选项。 **取值范围：**  - created_at，创建时间。 - updated_at，更新时间。 **默认取值：**  created_at。
     * sort  **参数解释：** 排列顺序。 **约束限制：** 必须为枚举值中的选项。 **取值范围：**  - asc - desc **默认取值：** desc。
     * view  **参数解释：**  视图。 **约束限制：**  必须为枚举值中的选项。 **取值范围：**  - basic，基本信息。  - least，最简信息。 **默认取值：**  least。
@@ -29,6 +31,8 @@ class ListRepositoryForksRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'repositoryId' => 'int',
+            'offset' => 'int',
+            'limit' => 'int',
             'orderBy' => 'string',
             'sort' => 'string',
             'view' => 'string'
@@ -37,6 +41,8 @@ class ListRepositoryForksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * repositoryId  **参数解释：** 仓库的ID，通过[[查询用户所有仓库](https://support.huaweicloud.com/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws)[[查询用户所有仓库](https://support.huaweicloud.com/intl/en-us/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **约束限制：** 不涉及。
+    * offset  **参数解释：** 偏移量，从0开始。
+    * limit  **参数解释：** 返回数量。
     * orderBy  **参数解释：**  排序字段。 **约束限制：**  必须为枚举值中的选项。 **取值范围：**  - created_at，创建时间。 - updated_at，更新时间。 **默认取值：**  created_at。
     * sort  **参数解释：** 排列顺序。 **约束限制：** 必须为枚举值中的选项。 **取值范围：**  - asc - desc **默认取值：** desc。
     * view  **参数解释：**  视图。 **约束限制：**  必须为枚举值中的选项。 **取值范围：**  - basic，基本信息。  - least，最简信息。 **默认取值：**  least。
@@ -45,6 +51,8 @@ class ListRepositoryForksRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'repositoryId' => null,
+        'offset' => 'int32',
+        'limit' => 'int32',
         'orderBy' => null,
         'sort' => null,
         'view' => null
@@ -74,6 +82,8 @@ class ListRepositoryForksRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * repositoryId  **参数解释：** 仓库的ID，通过[[查询用户所有仓库](https://support.huaweicloud.com/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws)[[查询用户所有仓库](https://support.huaweicloud.com/intl/en-us/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **约束限制：** 不涉及。
+    * offset  **参数解释：** 偏移量，从0开始。
+    * limit  **参数解释：** 返回数量。
     * orderBy  **参数解释：**  排序字段。 **约束限制：**  必须为枚举值中的选项。 **取值范围：**  - created_at，创建时间。 - updated_at，更新时间。 **默认取值：**  created_at。
     * sort  **参数解释：** 排列顺序。 **约束限制：** 必须为枚举值中的选项。 **取值范围：**  - asc - desc **默认取值：** desc。
     * view  **参数解释：**  视图。 **约束限制：**  必须为枚举值中的选项。 **取值范围：**  - basic，基本信息。  - least，最简信息。 **默认取值：**  least。
@@ -82,6 +92,8 @@ class ListRepositoryForksRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'repositoryId' => 'repository_id',
+            'offset' => 'offset',
+            'limit' => 'limit',
             'orderBy' => 'order_by',
             'sort' => 'sort',
             'view' => 'view'
@@ -90,6 +102,8 @@ class ListRepositoryForksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * repositoryId  **参数解释：** 仓库的ID，通过[[查询用户所有仓库](https://support.huaweicloud.com/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws)[[查询用户所有仓库](https://support.huaweicloud.com/intl/en-us/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **约束限制：** 不涉及。
+    * offset  **参数解释：** 偏移量，从0开始。
+    * limit  **参数解释：** 返回数量。
     * orderBy  **参数解释：**  排序字段。 **约束限制：**  必须为枚举值中的选项。 **取值范围：**  - created_at，创建时间。 - updated_at，更新时间。 **默认取值：**  created_at。
     * sort  **参数解释：** 排列顺序。 **约束限制：** 必须为枚举值中的选项。 **取值范围：**  - asc - desc **默认取值：** desc。
     * view  **参数解释：**  视图。 **约束限制：**  必须为枚举值中的选项。 **取值范围：**  - basic，基本信息。  - least，最简信息。 **默认取值：**  least。
@@ -98,6 +112,8 @@ class ListRepositoryForksRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'repositoryId' => 'setRepositoryId',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit',
             'orderBy' => 'setOrderBy',
             'sort' => 'setSort',
             'view' => 'setView'
@@ -106,6 +122,8 @@ class ListRepositoryForksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * repositoryId  **参数解释：** 仓库的ID，通过[[查询用户所有仓库](https://support.huaweicloud.com/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws)[[查询用户所有仓库](https://support.huaweicloud.com/intl/en-us/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **约束限制：** 不涉及。
+    * offset  **参数解释：** 偏移量，从0开始。
+    * limit  **参数解释：** 返回数量。
     * orderBy  **参数解释：**  排序字段。 **约束限制：**  必须为枚举值中的选项。 **取值范围：**  - created_at，创建时间。 - updated_at，更新时间。 **默认取值：**  created_at。
     * sort  **参数解释：** 排列顺序。 **约束限制：** 必须为枚举值中的选项。 **取值范围：**  - asc - desc **默认取值：** desc。
     * view  **参数解释：**  视图。 **约束限制：**  必须为枚举值中的选项。 **取值范围：**  - basic，基本信息。  - least，最简信息。 **默认取值：**  least。
@@ -114,6 +132,8 @@ class ListRepositoryForksRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'repositoryId' => 'getRepositoryId',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit',
             'orderBy' => 'getOrderBy',
             'sort' => 'getSort',
             'view' => 'getView'
@@ -223,6 +243,8 @@ class ListRepositoryForksRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['repositoryId'] = isset($data['repositoryId']) ? $data['repositoryId'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['orderBy'] = isset($data['orderBy']) ? $data['orderBy'] : null;
         $this->container['sort'] = isset($data['sort']) ? $data['sort'] : null;
         $this->container['view'] = isset($data['view']) ? $data['view'] : null;
@@ -244,6 +266,18 @@ class ListRepositoryForksRequest implements ModelInterface, ArrayAccess
             }
             if (($this->container['repositoryId'] < 1)) {
                 $invalidProperties[] = "invalid value for 'repositoryId', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
             $allowedValues = $this->getOrderByAllowableValues();
                 if (!is_null($this->container['orderBy']) && !in_array($this->container['orderBy'], $allowedValues, true)) {
@@ -304,6 +338,54 @@ class ListRepositoryForksRequest implements ModelInterface, ArrayAccess
     public function setRepositoryId($repositoryId)
     {
         $this->container['repositoryId'] = $repositoryId;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  **参数解释：** 偏移量，从0开始。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset **参数解释：** 偏移量，从0开始。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  **参数解释：** 返回数量。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit **参数解释：** 返回数量。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

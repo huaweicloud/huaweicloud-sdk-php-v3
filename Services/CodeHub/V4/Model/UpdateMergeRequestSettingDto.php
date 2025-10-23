@@ -44,7 +44,7 @@ class UpdateMergeRequestSettingDto implements ModelInterface, ArrayAccess
     * enableCustomEvaluation  **参数解释：** 启用MR自定义评价维度分类（MR评价设置）
     * evaluationTypes  **参数解释：** 评价维度（MR评价设置）
     * onlyAllowMergeIfVoteBiggerThan  **参数解释：** 打分模式最低合入分数。
-    * onlyAssigneeCanMerge  **参数解释：** 仅合并人和合并合并请求。
+    * onlyAssigneeCanMerge  **参数解释：** 仅合并人可合并合并请求。
     *
     * @var string[]
     */
@@ -102,7 +102,7 @@ class UpdateMergeRequestSettingDto implements ModelInterface, ArrayAccess
     * enableCustomEvaluation  **参数解释：** 启用MR自定义评价维度分类（MR评价设置）
     * evaluationTypes  **参数解释：** 评价维度（MR评价设置）
     * onlyAllowMergeIfVoteBiggerThan  **参数解释：** 打分模式最低合入分数。
-    * onlyAssigneeCanMerge  **参数解释：** 仅合并人和合并合并请求。
+    * onlyAssigneeCanMerge  **参数解释：** 仅合并人可合并合并请求。
     *
     * @var string[]
     */
@@ -181,7 +181,7 @@ class UpdateMergeRequestSettingDto implements ModelInterface, ArrayAccess
     * enableCustomEvaluation  **参数解释：** 启用MR自定义评价维度分类（MR评价设置）
     * evaluationTypes  **参数解释：** 评价维度（MR评价设置）
     * onlyAllowMergeIfVoteBiggerThan  **参数解释：** 打分模式最低合入分数。
-    * onlyAssigneeCanMerge  **参数解释：** 仅合并人和合并合并请求。
+    * onlyAssigneeCanMerge  **参数解释：** 仅合并人可合并合并请求。
     *
     * @var string[]
     */
@@ -239,7 +239,7 @@ class UpdateMergeRequestSettingDto implements ModelInterface, ArrayAccess
     * enableCustomEvaluation  **参数解释：** 启用MR自定义评价维度分类（MR评价设置）
     * evaluationTypes  **参数解释：** 评价维度（MR评价设置）
     * onlyAllowMergeIfVoteBiggerThan  **参数解释：** 打分模式最低合入分数。
-    * onlyAssigneeCanMerge  **参数解释：** 仅合并人和合并合并请求。
+    * onlyAssigneeCanMerge  **参数解释：** 仅合并人可合并合并请求。
     *
     * @var string[]
     */
@@ -297,7 +297,7 @@ class UpdateMergeRequestSettingDto implements ModelInterface, ArrayAccess
     * enableCustomEvaluation  **参数解释：** 启用MR自定义评价维度分类（MR评价设置）
     * evaluationTypes  **参数解释：** 评价维度（MR评价设置）
     * onlyAllowMergeIfVoteBiggerThan  **参数解释：** 打分模式最低合入分数。
-    * onlyAssigneeCanMerge  **参数解释：** 仅合并人和合并合并请求。
+    * onlyAssigneeCanMerge  **参数解释：** 仅合并人可合并合并请求。
     *
     * @var string[]
     */
@@ -1118,7 +1118,7 @@ class UpdateMergeRequestSettingDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets onlyAssigneeCanMerge
-    *  **参数解释：** 仅合并人和合并合并请求。
+    *  **参数解释：** 仅合并人可合并合并请求。
     *
     * @return bool|null
     */
@@ -1130,7 +1130,7 @@ class UpdateMergeRequestSettingDto implements ModelInterface, ArrayAccess
     /**
     * Sets onlyAssigneeCanMerge
     *
-    * @param bool|null $onlyAssigneeCanMerge **参数解释：** 仅合并人和合并合并请求。
+    * @param bool|null $onlyAssigneeCanMerge **参数解释：** 仅合并人可合并合并请求。
     *
     * @return $this
     */

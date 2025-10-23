@@ -21,7 +21,7 @@ class ShowProjectSettingsInheritCfgResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * body  项目继承设置列表
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowProjectSettingsInheritCfgResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * body  项目继承设置列表
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowProjectSettingsInheritCfgResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * body  项目继承设置列表
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowProjectSettingsInheritCfgResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * body  项目继承设置列表
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowProjectSettingsInheritCfgResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * body  项目继承设置列表
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowProjectSettingsInheritCfgResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets body
-    *  body
+    *  项目继承设置列表
     *
     * @return \HuaweiCloud\SDK\CodeHub\V4\Model\ProjectSettingsInheritCfgDto[]|null
     */
@@ -187,7 +187,7 @@ class ShowProjectSettingsInheritCfgResponse implements ModelInterface, ArrayAcce
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\CodeHub\V4\Model\ProjectSettingsInheritCfgDto[]|null $body body
+    * @param \HuaweiCloud\SDK\CodeHub\V4\Model\ProjectSettingsInheritCfgDto[]|null $body 项目继承设置列表
     *
     * @return $this
     */

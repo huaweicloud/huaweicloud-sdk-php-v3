@@ -191,6 +191,9 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['scaleOut'] === null) {
+            $invalidProperties[] = "'scaleOut' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -209,7 +212,7 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     * Gets scaleOut
     *  scaleOut
     *
-    * @return \HuaweiCloud\SDK\Dws\V2\Model\ScaleOut|null
+    * @return \HuaweiCloud\SDK\Dws\V2\Model\ScaleOut
     */
     public function getScaleOut()
     {
@@ -219,7 +222,7 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets scaleOut
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ScaleOut|null $scaleOut scaleOut
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ScaleOut $scaleOut scaleOut
     *
     * @return $this
     */

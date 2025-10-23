@@ -24,7 +24,7 @@ class ShowBlobsResponse implements ModelInterface, ArrayAccess
     * size  **参数解释：** 文件字节大小。 **约束限制：** 不涉及。
     * encoding  **参数解释：** 文件编码方式。 **约束限制：** - base64。
     * content  **参数解释：** 经过base64编码后的文件内容。 **约束限制：** 不涉及。
-    * blobId  **参数解释：** bolb文件ID。 **约束限制：** 不涉及。
+    * blobId  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     * xTotal  xTotal
     *
     * @var string[]
@@ -42,7 +42,7 @@ class ShowBlobsResponse implements ModelInterface, ArrayAccess
     * size  **参数解释：** 文件字节大小。 **约束限制：** 不涉及。
     * encoding  **参数解释：** 文件编码方式。 **约束限制：** - base64。
     * content  **参数解释：** 经过base64编码后的文件内容。 **约束限制：** 不涉及。
-    * blobId  **参数解释：** bolb文件ID。 **约束限制：** 不涉及。
+    * blobId  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     * xTotal  xTotal
     *
     * @var string[]
@@ -81,7 +81,7 @@ class ShowBlobsResponse implements ModelInterface, ArrayAccess
     * size  **参数解释：** 文件字节大小。 **约束限制：** 不涉及。
     * encoding  **参数解释：** 文件编码方式。 **约束限制：** - base64。
     * content  **参数解释：** 经过base64编码后的文件内容。 **约束限制：** 不涉及。
-    * blobId  **参数解释：** bolb文件ID。 **约束限制：** 不涉及。
+    * blobId  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     * xTotal  xTotal
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ShowBlobsResponse implements ModelInterface, ArrayAccess
     * size  **参数解释：** 文件字节大小。 **约束限制：** 不涉及。
     * encoding  **参数解释：** 文件编码方式。 **约束限制：** - base64。
     * content  **参数解释：** 经过base64编码后的文件内容。 **约束限制：** 不涉及。
-    * blobId  **参数解释：** bolb文件ID。 **约束限制：** 不涉及。
+    * blobId  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     * xTotal  xTotal
     *
     * @var string[]
@@ -117,7 +117,7 @@ class ShowBlobsResponse implements ModelInterface, ArrayAccess
     * size  **参数解释：** 文件字节大小。 **约束限制：** 不涉及。
     * encoding  **参数解释：** 文件编码方式。 **约束限制：** - base64。
     * content  **参数解释：** 经过base64编码后的文件内容。 **约束限制：** 不涉及。
-    * blobId  **参数解释：** bolb文件ID。 **约束限制：** 不涉及。
+    * blobId  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     * xTotal  xTotal
     *
     * @var string[]
@@ -291,7 +291,7 @@ class ShowBlobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets blobId
-    *  **参数解释：** bolb文件ID。 **约束限制：** 不涉及。
+    *  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     *
     * @return string|null
     */
@@ -303,7 +303,7 @@ class ShowBlobsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets blobId
     *
-    * @param string|null $blobId **参数解释：** bolb文件ID。 **约束限制：** 不涉及。
+    * @param string|null $blobId **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     *
     * @return $this
     */

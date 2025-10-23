@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model;
+namespace HuaweiCloud\SDK\CodeHub\V4\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListDatabaseVolumeResponse implements ModelInterface, ArrayAccess
+class CreateCherryPickMergeRequestResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,30 +17,34 @@ class ListDatabaseVolumeResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListDatabaseVolumeResponse';
+    protected static $openAPIModelName = 'CreateCherryPickMergeRequestResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * databaseVolumes  **参数解释**: 数据库占用空间列表。
-    * totalCount  **参数解释**: 总数。 **取值范围**: 不涉及
+    * state  CherryPick结果
+    * title  CherryPick标题
+    * cherryPickBranchName  CherryPick临时分支名名称
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'databaseVolumes' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DatabaseVolumeResult[]',
-            'totalCount' => 'int'
+            'state' => 'string',
+            'title' => 'string',
+            'cherryPickBranchName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * databaseVolumes  **参数解释**: 数据库占用空间列表。
-    * totalCount  **参数解释**: 总数。 **取值范围**: 不涉及
+    * state  CherryPick结果
+    * title  CherryPick标题
+    * cherryPickBranchName  CherryPick临时分支名名称
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'databaseVolumes' => null,
-        'totalCount' => null
+        'state' => null,
+        'title' => null,
+        'cherryPickBranchName' => null
     ];
 
     /**
@@ -66,38 +70,44 @@ class ListDatabaseVolumeResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * databaseVolumes  **参数解释**: 数据库占用空间列表。
-    * totalCount  **参数解释**: 总数。 **取值范围**: 不涉及
+    * state  CherryPick结果
+    * title  CherryPick标题
+    * cherryPickBranchName  CherryPick临时分支名名称
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'databaseVolumes' => 'database_volumes',
-            'totalCount' => 'total_count'
+            'state' => 'state',
+            'title' => 'title',
+            'cherryPickBranchName' => 'cherry_pick_branch_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * databaseVolumes  **参数解释**: 数据库占用空间列表。
-    * totalCount  **参数解释**: 总数。 **取值范围**: 不涉及
+    * state  CherryPick结果
+    * title  CherryPick标题
+    * cherryPickBranchName  CherryPick临时分支名名称
     *
     * @var string[]
     */
     protected static $setters = [
-            'databaseVolumes' => 'setDatabaseVolumes',
-            'totalCount' => 'setTotalCount'
+            'state' => 'setState',
+            'title' => 'setTitle',
+            'cherryPickBranchName' => 'setCherryPickBranchName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * databaseVolumes  **参数解释**: 数据库占用空间列表。
-    * totalCount  **参数解释**: 总数。 **取值范围**: 不涉及
+    * state  CherryPick结果
+    * title  CherryPick标题
+    * cherryPickBranchName  CherryPick临时分支名名称
     *
     * @var string[]
     */
     protected static $getters = [
-            'databaseVolumes' => 'getDatabaseVolumes',
-            'totalCount' => 'getTotalCount'
+            'state' => 'getState',
+            'title' => 'getTitle',
+            'cherryPickBranchName' => 'getCherryPickBranchName'
     ];
 
     /**
@@ -158,8 +168,9 @@ class ListDatabaseVolumeResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['databaseVolumes'] = isset($data['databaseVolumes']) ? $data['databaseVolumes'] : null;
-        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
+        $this->container['cherryPickBranchName'] = isset($data['cherryPickBranchName']) ? $data['cherryPickBranchName'] : null;
     }
 
     /**
@@ -185,50 +196,74 @@ class ListDatabaseVolumeResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets databaseVolumes
-    *  **参数解释**: 数据库占用空间列表。
+    * Gets state
+    *  CherryPick结果
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DatabaseVolumeResult[]|null
+    * @return string|null
     */
-    public function getDatabaseVolumes()
+    public function getState()
     {
-        return $this->container['databaseVolumes'];
+        return $this->container['state'];
     }
 
     /**
-    * Sets databaseVolumes
+    * Sets state
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DatabaseVolumeResult[]|null $databaseVolumes **参数解释**: 数据库占用空间列表。
+    * @param string|null $state CherryPick结果
     *
     * @return $this
     */
-    public function setDatabaseVolumes($databaseVolumes)
+    public function setState($state)
     {
-        $this->container['databaseVolumes'] = $databaseVolumes;
+        $this->container['state'] = $state;
         return $this;
     }
 
     /**
-    * Gets totalCount
-    *  **参数解释**: 总数。 **取值范围**: 不涉及
+    * Gets title
+    *  CherryPick标题
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getTotalCount()
+    public function getTitle()
     {
-        return $this->container['totalCount'];
+        return $this->container['title'];
     }
 
     /**
-    * Sets totalCount
+    * Sets title
     *
-    * @param int|null $totalCount **参数解释**: 总数。 **取值范围**: 不涉及
+    * @param string|null $title CherryPick标题
     *
     * @return $this
     */
-    public function setTotalCount($totalCount)
+    public function setTitle($title)
     {
-        $this->container['totalCount'] = $totalCount;
+        $this->container['title'] = $title;
+        return $this;
+    }
+
+    /**
+    * Gets cherryPickBranchName
+    *  CherryPick临时分支名名称
+    *
+    * @return string|null
+    */
+    public function getCherryPickBranchName()
+    {
+        return $this->container['cherryPickBranchName'];
+    }
+
+    /**
+    * Sets cherryPickBranchName
+    *
+    * @param string|null $cherryPickBranchName CherryPick临时分支名名称
+    *
+    * @return $this
+    */
+    public function setCherryPickBranchName($cherryPickBranchName)
+    {
+        $this->container['cherryPickBranchName'] = $cherryPickBranchName;
         return $this;
     }
 

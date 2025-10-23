@@ -23,7 +23,7 @@ class RepositoryUserDto implements ModelInterface, ArrayAccess
     * id  **参数解释：** 用户id。
     * name  **参数解释：** 用户名称。
     * username  **参数解释：** 用户名。
-    * state  **参数解释：** 用户状态。 **取值范围：** 不涉及。
+    * state  **参数解释：** 用户状态。 **取值范围：** - active，激活。 - blocked，禁用。
     * avatarUrl  **参数解释：** 头像地址。 **取值范围：** 不涉及。
     * nickName  **参数解释：** 用户昵称。 **取值范围：** 不涉及。
     * tenantName  **参数解释：** 所属租户名称。 **取值范围：** 不涉及。
@@ -45,7 +45,7 @@ class RepositoryUserDto implements ModelInterface, ArrayAccess
     * id  **参数解释：** 用户id。
     * name  **参数解释：** 用户名称。
     * username  **参数解释：** 用户名。
-    * state  **参数解释：** 用户状态。 **取值范围：** 不涉及。
+    * state  **参数解释：** 用户状态。 **取值范围：** - active，激活。 - blocked，禁用。
     * avatarUrl  **参数解释：** 头像地址。 **取值范围：** 不涉及。
     * nickName  **参数解释：** 用户昵称。 **取值范围：** 不涉及。
     * tenantName  **参数解释：** 所属租户名称。 **取值范围：** 不涉及。
@@ -88,7 +88,7 @@ class RepositoryUserDto implements ModelInterface, ArrayAccess
     * id  **参数解释：** 用户id。
     * name  **参数解释：** 用户名称。
     * username  **参数解释：** 用户名。
-    * state  **参数解释：** 用户状态。 **取值范围：** 不涉及。
+    * state  **参数解释：** 用户状态。 **取值范围：** - active，激活。 - blocked，禁用。
     * avatarUrl  **参数解释：** 头像地址。 **取值范围：** 不涉及。
     * nickName  **参数解释：** 用户昵称。 **取值范围：** 不涉及。
     * tenantName  **参数解释：** 所属租户名称。 **取值范围：** 不涉及。
@@ -110,7 +110,7 @@ class RepositoryUserDto implements ModelInterface, ArrayAccess
     * id  **参数解释：** 用户id。
     * name  **参数解释：** 用户名称。
     * username  **参数解释：** 用户名。
-    * state  **参数解释：** 用户状态。 **取值范围：** 不涉及。
+    * state  **参数解释：** 用户状态。 **取值范围：** - active，激活。 - blocked，禁用。
     * avatarUrl  **参数解释：** 头像地址。 **取值范围：** 不涉及。
     * nickName  **参数解释：** 用户昵称。 **取值范围：** 不涉及。
     * tenantName  **参数解释：** 所属租户名称。 **取值范围：** 不涉及。
@@ -132,7 +132,7 @@ class RepositoryUserDto implements ModelInterface, ArrayAccess
     * id  **参数解释：** 用户id。
     * name  **参数解释：** 用户名称。
     * username  **参数解释：** 用户名。
-    * state  **参数解释：** 用户状态。 **取值范围：** 不涉及。
+    * state  **参数解释：** 用户状态。 **取值范围：** - active，激活。 - blocked，禁用。
     * avatarUrl  **参数解释：** 头像地址。 **取值范围：** 不涉及。
     * nickName  **参数解释：** 用户昵称。 **取值范围：** 不涉及。
     * tenantName  **参数解释：** 所属租户名称。 **取值范围：** 不涉及。
@@ -189,7 +189,22 @@ class RepositoryUserDto implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATE_ACTIVE = 'active';
+    const STATE_BLOCKED = 'blocked';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStateAllowableValues()
+    {
+        return [
+            self::STATE_ACTIVE,
+            self::STATE_BLOCKED,
+        ];
+    }
 
 
     /**
@@ -242,6 +257,14 @@ class RepositoryUserDto implements ModelInterface, ArrayAccess
             if (!is_null($this->container['username']) && (mb_strlen($this->container['username']) < 1)) {
                 $invalidProperties[] = "invalid value for 'username', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getStateAllowableValues();
+                if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'state', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -330,7 +353,7 @@ class RepositoryUserDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  **参数解释：** 用户状态。 **取值范围：** 不涉及。
+    *  **参数解释：** 用户状态。 **取值范围：** - active，激活。 - blocked，禁用。
     *
     * @return string|null
     */
@@ -342,7 +365,7 @@ class RepositoryUserDto implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state **参数解释：** 用户状态。 **取值范围：** 不涉及。
+    * @param string|null $state **参数解释：** 用户状态。 **取值范围：** - active，激活。 - blocked，禁用。
     *
     * @return $this
     */

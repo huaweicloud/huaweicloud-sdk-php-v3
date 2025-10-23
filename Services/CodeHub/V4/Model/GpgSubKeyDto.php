@@ -23,7 +23,7 @@ class GpgSubKeyDto implements ModelInterface, ArrayAccess
     * id  **参数解释：** 子公钥subkey的id。
     * fingerprint  **参数解释：** 子公钥的指纹格式。 **取值范围：** 字符串长度不少于1，不超过1000。
     * gpgKeyId  **参数解释：** gpg_key的id。
-    * keyid  **参数解释：** 子秘钥的id。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * keyid  **参数解释：** 子密钥的id。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class GpgSubKeyDto implements ModelInterface, ArrayAccess
     * id  **参数解释：** 子公钥subkey的id。
     * fingerprint  **参数解释：** 子公钥的指纹格式。 **取值范围：** 字符串长度不少于1，不超过1000。
     * gpgKeyId  **参数解释：** gpg_key的id。
-    * keyid  **参数解释：** 子秘钥的id。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * keyid  **参数解释：** 子密钥的id。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class GpgSubKeyDto implements ModelInterface, ArrayAccess
     * id  **参数解释：** 子公钥subkey的id。
     * fingerprint  **参数解释：** 子公钥的指纹格式。 **取值范围：** 字符串长度不少于1，不超过1000。
     * gpgKeyId  **参数解释：** gpg_key的id。
-    * keyid  **参数解释：** 子秘钥的id。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * keyid  **参数解释：** 子密钥的id。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class GpgSubKeyDto implements ModelInterface, ArrayAccess
     * id  **参数解释：** 子公钥subkey的id。
     * fingerprint  **参数解释：** 子公钥的指纹格式。 **取值范围：** 字符串长度不少于1，不超过1000。
     * gpgKeyId  **参数解释：** gpg_key的id。
-    * keyid  **参数解释：** 子秘钥的id。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * keyid  **参数解释：** 子密钥的id。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class GpgSubKeyDto implements ModelInterface, ArrayAccess
     * id  **参数解释：** 子公钥subkey的id。
     * fingerprint  **参数解释：** 子公钥的指纹格式。 **取值范围：** 字符串长度不少于1，不超过1000。
     * gpgKeyId  **参数解释：** gpg_key的id。
-    * keyid  **参数解释：** 子秘钥的id。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * keyid  **参数解释：** 子密钥的id。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
     * @var string[]
     */
@@ -303,7 +303,7 @@ class GpgSubKeyDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets keyid
-    *  **参数解释：** 子秘钥的id。 **取值范围：** 字符串长度不少于1，不超过1000。
+    *  **参数解释：** 子密钥的id。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
     * @return string|null
     */
@@ -315,7 +315,7 @@ class GpgSubKeyDto implements ModelInterface, ArrayAccess
     /**
     * Sets keyid
     *
-    * @param string|null $keyid **参数解释：** 子秘钥的id。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * @param string|null $keyid **参数解释：** 子密钥的id。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
     * @return $this
     */

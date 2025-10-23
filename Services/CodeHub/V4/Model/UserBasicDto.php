@@ -23,7 +23,7 @@ class UserBasicDto implements ModelInterface, ArrayAccess
     * id  **参数解释：** 用户id。
     * name  **参数解释：** 用户名称。
     * username  **参数解释：** 用户名。
-    * state  用户状态
+    * state  **参数解释：** 用户状态。 **取值范围：** - active: 可用账户。 - blocked: 被锁定用户。 - error: 未查询到该用户。
     * serviceLicenseStatus  服务级权限状态 0：停用 1：启用
     * avatarUrl  用户头像url
     * avatarPath  用户头像路径
@@ -57,7 +57,7 @@ class UserBasicDto implements ModelInterface, ArrayAccess
     * id  **参数解释：** 用户id。
     * name  **参数解释：** 用户名称。
     * username  **参数解释：** 用户名。
-    * state  用户状态
+    * state  **参数解释：** 用户状态。 **取值范围：** - active: 可用账户。 - blocked: 被锁定用户。 - error: 未查询到该用户。
     * serviceLicenseStatus  服务级权限状态 0：停用 1：启用
     * avatarUrl  用户头像url
     * avatarPath  用户头像路径
@@ -112,7 +112,7 @@ class UserBasicDto implements ModelInterface, ArrayAccess
     * id  **参数解释：** 用户id。
     * name  **参数解释：** 用户名称。
     * username  **参数解释：** 用户名。
-    * state  用户状态
+    * state  **参数解释：** 用户状态。 **取值范围：** - active: 可用账户。 - blocked: 被锁定用户。 - error: 未查询到该用户。
     * serviceLicenseStatus  服务级权限状态 0：停用 1：启用
     * avatarUrl  用户头像url
     * avatarPath  用户头像路径
@@ -146,7 +146,7 @@ class UserBasicDto implements ModelInterface, ArrayAccess
     * id  **参数解释：** 用户id。
     * name  **参数解释：** 用户名称。
     * username  **参数解释：** 用户名。
-    * state  用户状态
+    * state  **参数解释：** 用户状态。 **取值范围：** - active: 可用账户。 - blocked: 被锁定用户。 - error: 未查询到该用户。
     * serviceLicenseStatus  服务级权限状态 0：停用 1：启用
     * avatarUrl  用户头像url
     * avatarPath  用户头像路径
@@ -180,7 +180,7 @@ class UserBasicDto implements ModelInterface, ArrayAccess
     * id  **参数解释：** 用户id。
     * name  **参数解释：** 用户名称。
     * username  **参数解释：** 用户名。
-    * state  用户状态
+    * state  **参数解释：** 用户状态。 **取值范围：** - active: 可用账户。 - blocked: 被锁定用户。 - error: 未查询到该用户。
     * serviceLicenseStatus  服务级权限状态 0：停用 1：启用
     * avatarUrl  用户头像url
     * avatarPath  用户头像路径
@@ -249,7 +249,24 @@ class UserBasicDto implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATE_ACTIVE = 'active';
+    const STATE_BLOCKED = 'blocked';
+    const STATE_ERROR = 'error';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStateAllowableValues()
+    {
+        return [
+            self::STATE_ACTIVE,
+            self::STATE_BLOCKED,
+            self::STATE_ERROR,
+        ];
+    }
 
 
     /**
@@ -308,6 +325,14 @@ class UserBasicDto implements ModelInterface, ArrayAccess
             if (!is_null($this->container['username']) && (mb_strlen($this->container['username']) < 1)) {
                 $invalidProperties[] = "invalid value for 'username', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getStateAllowableValues();
+                if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'state', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -396,7 +421,7 @@ class UserBasicDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  用户状态
+    *  **参数解释：** 用户状态。 **取值范围：** - active: 可用账户。 - blocked: 被锁定用户。 - error: 未查询到该用户。
     *
     * @return string|null
     */
@@ -408,7 +433,7 @@ class UserBasicDto implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 用户状态
+    * @param string|null $state **参数解释：** 用户状态。 **取值范围：** - active: 可用账户。 - blocked: 被锁定用户。 - error: 未查询到该用户。
     *
     * @return $this
     */

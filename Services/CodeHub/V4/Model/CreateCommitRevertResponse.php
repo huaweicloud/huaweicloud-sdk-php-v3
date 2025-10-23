@@ -45,6 +45,7 @@ class CreateCommitRevertResponse implements ModelInterface, ArrayAccess
     * state  以创建MR的形式Revert结果
     * cherryPickBranchName  CherryPick临时分支名
     * revertBranchName  Revert临时分支名
+    * iid  变更请求 iid,仅变更请求返回
     *
     * @var string[]
     */
@@ -72,7 +73,8 @@ class CreateCommitRevertResponse implements ModelInterface, ArrayAccess
             'committerAvatarUrl' => 'string',
             'state' => 'string',
             'cherryPickBranchName' => 'string',
-            'revertBranchName' => 'string'
+            'revertBranchName' => 'string',
+            'iid' => 'int'
     ];
 
     /**
@@ -101,6 +103,7 @@ class CreateCommitRevertResponse implements ModelInterface, ArrayAccess
     * state  以创建MR的形式Revert结果
     * cherryPickBranchName  CherryPick临时分支名
     * revertBranchName  Revert临时分支名
+    * iid  变更请求 iid,仅变更请求返回
     *
     * @var string[]
     */
@@ -128,7 +131,8 @@ class CreateCommitRevertResponse implements ModelInterface, ArrayAccess
         'committerAvatarUrl' => null,
         'state' => null,
         'cherryPickBranchName' => null,
-        'revertBranchName' => null
+        'revertBranchName' => null,
+        'iid' => 'int32'
     ];
 
     /**
@@ -178,6 +182,7 @@ class CreateCommitRevertResponse implements ModelInterface, ArrayAccess
     * state  以创建MR的形式Revert结果
     * cherryPickBranchName  CherryPick临时分支名
     * revertBranchName  Revert临时分支名
+    * iid  变更请求 iid,仅变更请求返回
     *
     * @var string[]
     */
@@ -205,7 +210,8 @@ class CreateCommitRevertResponse implements ModelInterface, ArrayAccess
             'committerAvatarUrl' => 'committer_avatar_url',
             'state' => 'state',
             'cherryPickBranchName' => 'cherry_pick_branch_name',
-            'revertBranchName' => 'revert_branch_name'
+            'revertBranchName' => 'revert_branch_name',
+            'iid' => 'iid'
     ];
 
     /**
@@ -234,6 +240,7 @@ class CreateCommitRevertResponse implements ModelInterface, ArrayAccess
     * state  以创建MR的形式Revert结果
     * cherryPickBranchName  CherryPick临时分支名
     * revertBranchName  Revert临时分支名
+    * iid  变更请求 iid,仅变更请求返回
     *
     * @var string[]
     */
@@ -261,7 +268,8 @@ class CreateCommitRevertResponse implements ModelInterface, ArrayAccess
             'committerAvatarUrl' => 'setCommitterAvatarUrl',
             'state' => 'setState',
             'cherryPickBranchName' => 'setCherryPickBranchName',
-            'revertBranchName' => 'setRevertBranchName'
+            'revertBranchName' => 'setRevertBranchName',
+            'iid' => 'setIid'
     ];
 
     /**
@@ -290,6 +298,7 @@ class CreateCommitRevertResponse implements ModelInterface, ArrayAccess
     * state  以创建MR的形式Revert结果
     * cherryPickBranchName  CherryPick临时分支名
     * revertBranchName  Revert临时分支名
+    * iid  变更请求 iid,仅变更请求返回
     *
     * @var string[]
     */
@@ -317,7 +326,8 @@ class CreateCommitRevertResponse implements ModelInterface, ArrayAccess
             'committerAvatarUrl' => 'getCommitterAvatarUrl',
             'state' => 'getState',
             'cherryPickBranchName' => 'getCherryPickBranchName',
-            'revertBranchName' => 'getRevertBranchName'
+            'revertBranchName' => 'getRevertBranchName',
+            'iid' => 'getIid'
     ];
 
     /**
@@ -402,6 +412,7 @@ class CreateCommitRevertResponse implements ModelInterface, ArrayAccess
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['cherryPickBranchName'] = isset($data['cherryPickBranchName']) ? $data['cherryPickBranchName'] : null;
         $this->container['revertBranchName'] = isset($data['revertBranchName']) ? $data['revertBranchName'] : null;
+        $this->container['iid'] = isset($data['iid']) ? $data['iid'] : null;
     }
 
     /**
@@ -537,6 +548,12 @@ class CreateCommitRevertResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['revertBranchName']) && (mb_strlen($this->container['revertBranchName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'revertBranchName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['iid']) && ($this->container['iid'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'iid', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['iid']) && ($this->container['iid'] < 1)) {
+                $invalidProperties[] = "invalid value for 'iid', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -1125,6 +1142,30 @@ class CreateCommitRevertResponse implements ModelInterface, ArrayAccess
     public function setRevertBranchName($revertBranchName)
     {
         $this->container['revertBranchName'] = $revertBranchName;
+        return $this;
+    }
+
+    /**
+    * Gets iid
+    *  变更请求 iid,仅变更请求返回
+    *
+    * @return int|null
+    */
+    public function getIid()
+    {
+        return $this->container['iid'];
+    }
+
+    /**
+    * Sets iid
+    *
+    * @param int|null $iid 变更请求 iid,仅变更请求返回
+    *
+    * @return $this
+    */
+    public function setIid($iid)
+    {
+        $this->container['iid'] = $iid;
         return $this;
     }
 

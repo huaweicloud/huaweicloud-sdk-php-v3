@@ -22,6 +22,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * srcAk  源端节点AK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
     * srcSk  源端节点SK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * srcSecurityToken  源端节点临时Token
     * dstAk  目的端节点AK（最大长度100个字符）。
@@ -35,6 +36,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'srcAk' => 'string',
             'srcSk' => 'string',
+            'connectionString' => 'string',
             'jsonAuthFile' => 'string',
             'srcSecurityToken' => 'string',
             'dstAk' => 'string',
@@ -48,6 +50,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * srcAk  源端节点AK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
     * srcSk  源端节点SK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * srcSecurityToken  源端节点临时Token
     * dstAk  目的端节点AK（最大长度100个字符）。
@@ -61,6 +64,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'srcAk' => null,
         'srcSk' => null,
+        'connectionString' => null,
         'jsonAuthFile' => null,
         'srcSecurityToken' => null,
         'dstAk' => null,
@@ -95,6 +99,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * srcAk  源端节点AK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
     * srcSk  源端节点SK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * srcSecurityToken  源端节点临时Token
     * dstAk  目的端节点AK（最大长度100个字符）。
@@ -108,6 +113,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'srcAk' => 'src_ak',
             'srcSk' => 'src_sk',
+            'connectionString' => 'connection_string',
             'jsonAuthFile' => 'json_auth_file',
             'srcSecurityToken' => 'src_security_token',
             'dstAk' => 'dst_ak',
@@ -121,6 +127,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * srcAk  源端节点AK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
     * srcSk  源端节点SK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * srcSecurityToken  源端节点临时Token
     * dstAk  目的端节点AK（最大长度100个字符）。
@@ -134,6 +141,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     protected static $setters = [
             'srcAk' => 'setSrcAk',
             'srcSk' => 'setSrcSk',
+            'connectionString' => 'setConnectionString',
             'jsonAuthFile' => 'setJsonAuthFile',
             'srcSecurityToken' => 'setSrcSecurityToken',
             'dstAk' => 'setDstAk',
@@ -147,6 +155,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * srcAk  源端节点AK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
     * srcSk  源端节点SK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * srcSecurityToken  源端节点临时Token
     * dstAk  目的端节点AK（最大长度100个字符）。
@@ -160,6 +169,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     protected static $getters = [
             'srcAk' => 'getSrcAk',
             'srcSk' => 'getSrcSk',
+            'connectionString' => 'getConnectionString',
             'jsonAuthFile' => 'getJsonAuthFile',
             'srcSecurityToken' => 'getSrcSecurityToken',
             'dstAk' => 'getDstAk',
@@ -229,6 +239,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     {
         $this->container['srcAk'] = isset($data['srcAk']) ? $data['srcAk'] : null;
         $this->container['srcSk'] = isset($data['srcSk']) ? $data['srcSk'] : null;
+        $this->container['connectionString'] = isset($data['connectionString']) ? $data['connectionString'] : null;
         $this->container['jsonAuthFile'] = isset($data['jsonAuthFile']) ? $data['jsonAuthFile'] : null;
         $this->container['srcSecurityToken'] = isset($data['srcSecurityToken']) ? $data['srcSecurityToken'] : null;
         $this->container['dstAk'] = isset($data['dstAk']) ? $data['dstAk'] : null;
@@ -263,6 +274,12 @@ class StartTaskReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['srcSk']) && !preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['srcSk'])) {
                 $invalidProperties[] = "invalid value for 'srcSk', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
+            }
+            if (!is_null($this->container['connectionString']) && (mb_strlen($this->container['connectionString']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'connectionString', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['connectionString']) && (mb_strlen($this->container['connectionString']) < 0)) {
+                $invalidProperties[] = "invalid value for 'connectionString', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['jsonAuthFile']) && (mb_strlen($this->container['jsonAuthFile']) > 65535)) {
                 $invalidProperties[] = "invalid value for 'jsonAuthFile', the character length must be smaller than or equal to 65535.";
@@ -380,6 +397,30 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     public function setSrcSk($srcSk)
     {
         $this->container['srcSk'] = $srcSk;
+        return $this;
+    }
+
+    /**
+    * Gets connectionString
+    *  连接字符串，用于微软云Blob鉴权
+    *
+    * @return string|null
+    */
+    public function getConnectionString()
+    {
+        return $this->container['connectionString'];
+    }
+
+    /**
+    * Sets connectionString
+    *
+    * @param string|null $connectionString 连接字符串，用于微软云Blob鉴权
+    *
+    * @return $this
+    */
+    public function setConnectionString($connectionString)
+    {
+        $this->container['connectionString'] = $connectionString;
         return $this;
     }
 

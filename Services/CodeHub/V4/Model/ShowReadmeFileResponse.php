@@ -21,7 +21,7 @@ class ShowReadmeFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * blobId  **参数解释：** bolb文件ID。 **约束限制：** 不涉及。
+    * blobId  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     * content  **参数解释：** 经过base64编码后的文件内容。 **约束限制：** 不涉及。
     * encoding  **参数解释：** 文件编码方式。 **约束限制：** - base64。
     * fileName  文件名称
@@ -45,7 +45,7 @@ class ShowReadmeFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * blobId  **参数解释：** bolb文件ID。 **约束限制：** 不涉及。
+    * blobId  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     * content  **参数解释：** 经过base64编码后的文件内容。 **约束限制：** 不涉及。
     * encoding  **参数解释：** 文件编码方式。 **约束限制：** - base64。
     * fileName  文件名称
@@ -90,7 +90,7 @@ class ShowReadmeFileResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * blobId  **参数解释：** bolb文件ID。 **约束限制：** 不涉及。
+    * blobId  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     * content  **参数解释：** 经过base64编码后的文件内容。 **约束限制：** 不涉及。
     * encoding  **参数解释：** 文件编码方式。 **约束限制：** - base64。
     * fileName  文件名称
@@ -114,7 +114,7 @@ class ShowReadmeFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * blobId  **参数解释：** bolb文件ID。 **约束限制：** 不涉及。
+    * blobId  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     * content  **参数解释：** 经过base64编码后的文件内容。 **约束限制：** 不涉及。
     * encoding  **参数解释：** 文件编码方式。 **约束限制：** - base64。
     * fileName  文件名称
@@ -138,7 +138,7 @@ class ShowReadmeFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * blobId  **参数解释：** bolb文件ID。 **约束限制：** 不涉及。
+    * blobId  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     * content  **参数解释：** 经过base64编码后的文件内容。 **约束限制：** 不涉及。
     * encoding  **参数解释：** 文件编码方式。 **约束限制：** - base64。
     * fileName  文件名称
@@ -270,7 +270,7 @@ class ShowReadmeFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets blobId
-    *  **参数解释：** bolb文件ID。 **约束限制：** 不涉及。
+    *  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     *
     * @return string|null
     */
@@ -282,7 +282,7 @@ class ShowReadmeFileResponse implements ModelInterface, ArrayAccess
     /**
     * Sets blobId
     *
-    * @param string|null $blobId **参数解释：** bolb文件ID。 **约束限制：** 不涉及。
+    * @param string|null $blobId **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     *
     * @return $this
     */

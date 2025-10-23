@@ -21,7 +21,7 @@ class UpdateRepoWebHookSubscriptionDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * url  **参数解释：** webhook的url (需要base64编码)。
-    * token  **参数解释：** 秘钥。
+    * token  **参数解释：** 密钥。
     * mentionUsers  **参数解释：** userid列表，提醒群中的指定成员（@某个成员），最长1000，每个最长100，“;”分隔符。
     * mentionPhone  **参数解释：** 手机号列表(需要base64编码)，提醒手机号对应的群成员（@某个成员），最长1000，每个最长30，“;”分隔符。
     *
@@ -37,7 +37,7 @@ class UpdateRepoWebHookSubscriptionDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * url  **参数解释：** webhook的url (需要base64编码)。
-    * token  **参数解释：** 秘钥。
+    * token  **参数解释：** 密钥。
     * mentionUsers  **参数解释：** userid列表，提醒群中的指定成员（@某个成员），最长1000，每个最长100，“;”分隔符。
     * mentionPhone  **参数解释：** 手机号列表(需要base64编码)，提醒手机号对应的群成员（@某个成员），最长1000，每个最长30，“;”分隔符。
     *
@@ -74,7 +74,7 @@ class UpdateRepoWebHookSubscriptionDto implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * url  **参数解释：** webhook的url (需要base64编码)。
-    * token  **参数解释：** 秘钥。
+    * token  **参数解释：** 密钥。
     * mentionUsers  **参数解释：** userid列表，提醒群中的指定成员（@某个成员），最长1000，每个最长100，“;”分隔符。
     * mentionPhone  **参数解释：** 手机号列表(需要base64编码)，提醒手机号对应的群成员（@某个成员），最长1000，每个最长30，“;”分隔符。
     *
@@ -90,7 +90,7 @@ class UpdateRepoWebHookSubscriptionDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * url  **参数解释：** webhook的url (需要base64编码)。
-    * token  **参数解释：** 秘钥。
+    * token  **参数解释：** 密钥。
     * mentionUsers  **参数解释：** userid列表，提醒群中的指定成员（@某个成员），最长1000，每个最长100，“;”分隔符。
     * mentionPhone  **参数解释：** 手机号列表(需要base64编码)，提醒手机号对应的群成员（@某个成员），最长1000，每个最长30，“;”分隔符。
     *
@@ -106,7 +106,7 @@ class UpdateRepoWebHookSubscriptionDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * url  **参数解释：** webhook的url (需要base64编码)。
-    * token  **参数解释：** 秘钥。
+    * token  **参数解释：** 密钥。
     * mentionUsers  **参数解释：** userid列表，提醒群中的指定成员（@某个成员），最长1000，每个最长100，“;”分隔符。
     * mentionPhone  **参数解释：** 手机号列表(需要base64编码)，提醒手机号对应的群成员（@某个成员），最长1000，每个最长30，“;”分隔符。
     *
@@ -255,7 +255,7 @@ class UpdateRepoWebHookSubscriptionDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets token
-    *  **参数解释：** 秘钥。
+    *  **参数解释：** 密钥。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class UpdateRepoWebHookSubscriptionDto implements ModelInterface, ArrayAccess
     /**
     * Sets token
     *
-    * @param string|null $token **参数解释：** 秘钥。
+    * @param string|null $token **参数解释：** 密钥。
     *
     * @return $this
     */

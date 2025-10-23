@@ -235,9 +235,6 @@ class ListTicketParamsWithPage implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['stringFilters'] === null) {
-            $invalidProperties[] = "'stringFilters' can't be null";
-        }
             if (!is_null($this->container['page']) && ($this->container['page'] > 1024000)) {
                 $invalidProperties[] = "invalid value for 'page', must be smaller than or equal to 1024000.";
             }
@@ -268,7 +265,7 @@ class ListTicketParamsWithPage implements ModelInterface, ArrayAccess
     * Gets stringFilters
     *  字符串搜索条件，可根据该条件搜索到具体的工单。
     *
-    * @return \HuaweiCloud\SDK\Coc\V1\Model\ObjectFilter[]
+    * @return \HuaweiCloud\SDK\Coc\V1\Model\ObjectFilter[]|null
     */
     public function getStringFilters()
     {
@@ -278,7 +275,7 @@ class ListTicketParamsWithPage implements ModelInterface, ArrayAccess
     /**
     * Sets stringFilters
     *
-    * @param \HuaweiCloud\SDK\Coc\V1\Model\ObjectFilter[] $stringFilters 字符串搜索条件，可根据该条件搜索到具体的工单。
+    * @param \HuaweiCloud\SDK\Coc\V1\Model\ObjectFilter[]|null $stringFilters 字符串搜索条件，可根据该条件搜索到具体的工单。
     *
     * @return $this
     */

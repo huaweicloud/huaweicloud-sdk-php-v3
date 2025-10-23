@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class VehicleLicenseback implements ModelInterface, ArrayAccess
+class VehicleLicenseBack implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,7 +16,7 @@ class VehicleLicenseback implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'VehicleLicenseback';
+    protected static $openAPIModelName = 'VehicleLicenseBack';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

@@ -21,7 +21,7 @@ class BatchDeleteProtectedTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  **参数解释：** 状态码。
+    * status  **参数解释：** 状态码。 - success，表示接口请求成功。 - fail，表示接口请求失败。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class BatchDeleteProtectedTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  **参数解释：** 状态码。
+    * status  **参数解释：** 状态码。 - success，表示接口请求成功。 - fail，表示接口请求失败。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class BatchDeleteProtectedTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  **参数解释：** 状态码。
+    * status  **参数解释：** 状态码。 - success，表示接口请求成功。 - fail，表示接口请求失败。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class BatchDeleteProtectedTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  **参数解释：** 状态码。
+    * status  **参数解释：** 状态码。 - success，表示接口请求成功。 - fail，表示接口请求失败。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class BatchDeleteProtectedTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  **参数解释：** 状态码。
+    * status  **参数解释：** 状态码。 - success，表示接口请求成功。 - fail，表示接口请求失败。
     *
     * @var string[]
     */
@@ -130,7 +130,22 @@ class BatchDeleteProtectedTagsResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_SUCCESS = 'success';
+    const STATUS_FAIL = 'fail';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_SUCCESS,
+            self::STATUS_FAIL,
+        ];
+    }
 
 
     /**
@@ -159,6 +174,14 @@ class BatchDeleteProtectedTagsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 20)) {
                 $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 20.";
             }
@@ -181,7 +204,7 @@ class BatchDeleteProtectedTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释：** 状态码。
+    *  **参数解释：** 状态码。 - success，表示接口请求成功。 - fail，表示接口请求失败。
     *
     * @return string|null
     */
@@ -193,7 +216,7 @@ class BatchDeleteProtectedTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释：** 状态码。
+    * @param string|null $status **参数解释：** 状态码。 - success，表示接口请求成功。 - fail，表示接口请求失败。
     *
     * @return $this
     */

@@ -22,6 +22,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
     * region  区域
     * appId  当源端为腾讯云时，会返回此参数。
@@ -34,6 +35,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'ak' => 'string',
             'sk' => 'string',
+            'connectionString' => 'string',
             'cloudType' => 'string',
             'region' => 'string',
             'appId' => 'string',
@@ -46,6 +48,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
     * region  区域
     * appId  当源端为腾讯云时，会返回此参数。
@@ -58,6 +61,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'ak' => null,
         'sk' => null,
+        'connectionString' => null,
         'cloudType' => null,
         'region' => null,
         'appId' => null,
@@ -91,6 +95,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
     * region  区域
     * appId  当源端为腾讯云时，会返回此参数。
@@ -103,6 +108,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'ak' => 'ak',
             'sk' => 'sk',
+            'connectionString' => 'connection_string',
             'cloudType' => 'cloud_type',
             'region' => 'region',
             'appId' => 'app_id',
@@ -115,6 +121,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
     * region  区域
     * appId  当源端为腾讯云时，会返回此参数。
@@ -127,6 +134,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     protected static $setters = [
             'ak' => 'setAk',
             'sk' => 'setSk',
+            'connectionString' => 'setConnectionString',
             'cloudType' => 'setCloudType',
             'region' => 'setRegion',
             'appId' => 'setAppId',
@@ -139,6 +147,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
     * region  区域
     * appId  当源端为腾讯云时，会返回此参数。
@@ -151,6 +160,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     protected static $getters = [
             'ak' => 'getAk',
             'sk' => 'getSk',
+            'connectionString' => 'getConnectionString',
             'cloudType' => 'getCloudType',
             'region' => 'getRegion',
             'appId' => 'getAppId',
@@ -219,6 +229,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     {
         $this->container['ak'] = isset($data['ak']) ? $data['ak'] : null;
         $this->container['sk'] = isset($data['sk']) ? $data['sk'] : null;
+        $this->container['connectionString'] = isset($data['connectionString']) ? $data['connectionString'] : null;
         $this->container['cloudType'] = isset($data['cloudType']) ? $data['cloudType'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
@@ -258,6 +269,12 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['sk'])) {
                 $invalidProperties[] = "invalid value for 'sk', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
+            }
+            if (!is_null($this->container['connectionString']) && (mb_strlen($this->container['connectionString']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'connectionString', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['connectionString']) && (mb_strlen($this->container['connectionString']) < 0)) {
+                $invalidProperties[] = "invalid value for 'connectionString', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['cloudType'] === null) {
             $invalidProperties[] = "'cloudType' can't be null";
@@ -363,6 +380,30 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     public function setSk($sk)
     {
         $this->container['sk'] = $sk;
+        return $this;
+    }
+
+    /**
+    * Gets connectionString
+    *  连接字符串，用于微软云Blob鉴权
+    *
+    * @return string|null
+    */
+    public function getConnectionString()
+    {
+        return $this->container['connectionString'];
+    }
+
+    /**
+    * Sets connectionString
+    *
+    * @param string|null $connectionString 连接字符串，用于微软云Blob鉴权
+    *
+    * @return $this
+    */
+    public function setConnectionString($connectionString)
+    {
+        $this->container['connectionString'] = $connectionString;
         return $this;
     }
 

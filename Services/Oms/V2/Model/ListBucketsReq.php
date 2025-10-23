@@ -24,6 +24,7 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * appId  当源端为腾讯云时，会返回此参数。
     *
     * @var string[]
@@ -33,6 +34,7 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
             'ak' => 'string',
             'sk' => 'string',
             'jsonAuthFile' => 'string',
+            'connectionString' => 'string',
             'appId' => 'string'
     ];
 
@@ -42,6 +44,7 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * appId  当源端为腾讯云时，会返回此参数。
     *
     * @var string[]
@@ -51,6 +54,7 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
         'ak' => null,
         'sk' => null,
         'jsonAuthFile' => null,
+        'connectionString' => null,
         'appId' => null
     ];
 
@@ -81,6 +85,7 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * appId  当源端为腾讯云时，会返回此参数。
     *
     * @var string[]
@@ -90,6 +95,7 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
             'ak' => 'ak',
             'sk' => 'sk',
             'jsonAuthFile' => 'json_auth_file',
+            'connectionString' => 'connection_string',
             'appId' => 'app_id'
     ];
 
@@ -99,6 +105,7 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * appId  当源端为腾讯云时，会返回此参数。
     *
     * @var string[]
@@ -108,6 +115,7 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
             'ak' => 'setAk',
             'sk' => 'setSk',
             'jsonAuthFile' => 'setJsonAuthFile',
+            'connectionString' => 'setConnectionString',
             'appId' => 'setAppId'
     ];
 
@@ -117,6 +125,7 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * appId  当源端为腾讯云时，会返回此参数。
     *
     * @var string[]
@@ -126,6 +135,7 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
             'ak' => 'getAk',
             'sk' => 'getSk',
             'jsonAuthFile' => 'getJsonAuthFile',
+            'connectionString' => 'getConnectionString',
             'appId' => 'getAppId'
     ];
 
@@ -191,6 +201,7 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
         $this->container['ak'] = isset($data['ak']) ? $data['ak'] : null;
         $this->container['sk'] = isset($data['sk']) ? $data['sk'] : null;
         $this->container['jsonAuthFile'] = isset($data['jsonAuthFile']) ? $data['jsonAuthFile'] : null;
+        $this->container['connectionString'] = isset($data['connectionString']) ? $data['connectionString'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
     }
 
@@ -237,6 +248,12 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['jsonAuthFile']) && (mb_strlen($this->container['jsonAuthFile']) < 0)) {
                 $invalidProperties[] = "invalid value for 'jsonAuthFile', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['connectionString']) && (mb_strlen($this->container['connectionString']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'connectionString', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['connectionString']) && (mb_strlen($this->container['connectionString']) < 0)) {
+                $invalidProperties[] = "invalid value for 'connectionString', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['appId']) && (mb_strlen($this->container['appId']) > 255)) {
                 $invalidProperties[] = "invalid value for 'appId', the character length must be smaller than or equal to 255.";
@@ -354,6 +371,30 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
     public function setJsonAuthFile($jsonAuthFile)
     {
         $this->container['jsonAuthFile'] = $jsonAuthFile;
+        return $this;
+    }
+
+    /**
+    * Gets connectionString
+    *  连接字符串，用于微软云Blob鉴权
+    *
+    * @return string|null
+    */
+    public function getConnectionString()
+    {
+        return $this->container['connectionString'];
+    }
+
+    /**
+    * Sets connectionString
+    *
+    * @param string|null $connectionString 连接字符串，用于微软云Blob鉴权
+    *
+    * @return $this
+    */
+    public function setConnectionString($connectionString)
+    {
+        $this->container['connectionString'] = $connectionString;
         return $this;
     }
 

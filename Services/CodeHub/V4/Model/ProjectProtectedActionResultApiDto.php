@@ -25,6 +25,7 @@ class ProjectProtectedActionResultApiDto implements ModelInterface, ArrayAccess
     * users  **参数解释：** 用户列表。
     * userTeams  **参数解释：** 成员组列表。
     * roles  **参数解释：** 角色列表。
+    * additionSwitchers  **参数解释：** 操作选择列表。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ProjectProtectedActionResultApiDto implements ModelInterface, ArrayAccess
             'enable' => 'bool',
             'users' => '\HuaweiCloud\SDK\CodeHub\V4\Model\UserBasicDto[]',
             'userTeams' => '\HuaweiCloud\SDK\CodeHub\V4\Model\UserTeamBasicDto[]',
-            'roles' => '\HuaweiCloud\SDK\CodeHub\V4\Model\RoleBasicDto[]'
+            'roles' => '\HuaweiCloud\SDK\CodeHub\V4\Model\RoleBasicDto[]',
+            'additionSwitchers' => '\HuaweiCloud\SDK\CodeHub\V4\Model\ForceActionEnableDto[]'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ProjectProtectedActionResultApiDto implements ModelInterface, ArrayAccess
     * users  **参数解释：** 用户列表。
     * userTeams  **参数解释：** 成员组列表。
     * roles  **参数解释：** 角色列表。
+    * additionSwitchers  **参数解释：** 操作选择列表。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ProjectProtectedActionResultApiDto implements ModelInterface, ArrayAccess
         'enable' => null,
         'users' => null,
         'userTeams' => null,
-        'roles' => null
+        'roles' => null,
+        'additionSwitchers' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class ProjectProtectedActionResultApiDto implements ModelInterface, ArrayAccess
     * users  **参数解释：** 用户列表。
     * userTeams  **参数解释：** 成员组列表。
     * roles  **参数解释：** 角色列表。
+    * additionSwitchers  **参数解释：** 操作选择列表。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ProjectProtectedActionResultApiDto implements ModelInterface, ArrayAccess
             'enable' => 'enable',
             'users' => 'users',
             'userTeams' => 'user_teams',
-            'roles' => 'roles'
+            'roles' => 'roles',
+            'additionSwitchers' => 'addition_switchers'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ProjectProtectedActionResultApiDto implements ModelInterface, ArrayAccess
     * users  **参数解释：** 用户列表。
     * userTeams  **参数解释：** 成员组列表。
     * roles  **参数解释：** 角色列表。
+    * additionSwitchers  **参数解释：** 操作选择列表。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ProjectProtectedActionResultApiDto implements ModelInterface, ArrayAccess
             'enable' => 'setEnable',
             'users' => 'setUsers',
             'userTeams' => 'setUserTeams',
-            'roles' => 'setRoles'
+            'roles' => 'setRoles',
+            'additionSwitchers' => 'setAdditionSwitchers'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ProjectProtectedActionResultApiDto implements ModelInterface, ArrayAccess
     * users  **参数解释：** 用户列表。
     * userTeams  **参数解释：** 成员组列表。
     * roles  **参数解释：** 角色列表。
+    * additionSwitchers  **参数解释：** 操作选择列表。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ProjectProtectedActionResultApiDto implements ModelInterface, ArrayAccess
             'enable' => 'getEnable',
             'users' => 'getUsers',
             'userTeams' => 'getUserTeams',
-            'roles' => 'getRoles'
+            'roles' => 'getRoles',
+            'additionSwitchers' => 'getAdditionSwitchers'
     ];
 
     /**
@@ -192,6 +202,7 @@ class ProjectProtectedActionResultApiDto implements ModelInterface, ArrayAccess
         $this->container['users'] = isset($data['users']) ? $data['users'] : null;
         $this->container['userTeams'] = isset($data['userTeams']) ? $data['userTeams'] : null;
         $this->container['roles'] = isset($data['roles']) ? $data['roles'] : null;
+        $this->container['additionSwitchers'] = isset($data['additionSwitchers']) ? $data['additionSwitchers'] : null;
     }
 
     /**
@@ -339,6 +350,30 @@ class ProjectProtectedActionResultApiDto implements ModelInterface, ArrayAccess
     public function setRoles($roles)
     {
         $this->container['roles'] = $roles;
+        return $this;
+    }
+
+    /**
+    * Gets additionSwitchers
+    *  **参数解释：** 操作选择列表。
+    *
+    * @return \HuaweiCloud\SDK\CodeHub\V4\Model\ForceActionEnableDto[]|null
+    */
+    public function getAdditionSwitchers()
+    {
+        return $this->container['additionSwitchers'];
+    }
+
+    /**
+    * Sets additionSwitchers
+    *
+    * @param \HuaweiCloud\SDK\CodeHub\V4\Model\ForceActionEnableDto[]|null $additionSwitchers **参数解释：** 操作选择列表。
+    *
+    * @return $this
+    */
+    public function setAdditionSwitchers($additionSwitchers)
+    {
+        $this->container['additionSwitchers'] = $additionSwitchers;
         return $this;
     }
 

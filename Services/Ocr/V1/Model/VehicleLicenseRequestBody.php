@@ -26,6 +26,7 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
     * returnIssuingAuthority  是否返回发证机关的开关，可选值包括： - true：返回发证机关 - false：不返回发证机关  > 说明： - 如果无该参数，系统默认不返回发证机关。如果输入参数不是Boolean类型，则会报非法参数错误。
     * returnTextLocation  识别到的文字块的区域位置信息。取值范围：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * recognizeElectronicLicense  是否支持识别电子行驶证，取值范围：  - true：支持识别电子行驶证  - false：不支持识别电子行驶证  默认不支持识别电子行驶证。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * alarm  是否返回纸质行驶证图像的告警信息，可选值包括： - true：返回纸质行驶证图像的告警信息 - false：不返回纸质行驶证图像的告警信息 如果无该参数，系统默认不返回告警信息。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
             'side' => 'string',
             'returnIssuingAuthority' => 'bool',
             'returnTextLocation' => 'bool',
-            'recognizeElectronicLicense' => 'bool'
+            'recognizeElectronicLicense' => 'bool',
+            'alarm' => 'bool'
     ];
 
     /**
@@ -46,6 +48,7 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
     * returnIssuingAuthority  是否返回发证机关的开关，可选值包括： - true：返回发证机关 - false：不返回发证机关  > 说明： - 如果无该参数，系统默认不返回发证机关。如果输入参数不是Boolean类型，则会报非法参数错误。
     * returnTextLocation  识别到的文字块的区域位置信息。取值范围：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * recognizeElectronicLicense  是否支持识别电子行驶证，取值范围：  - true：支持识别电子行驶证  - false：不支持识别电子行驶证  默认不支持识别电子行驶证。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * alarm  是否返回纸质行驶证图像的告警信息，可选值包括： - true：返回纸质行驶证图像的告警信息 - false：不返回纸质行驶证图像的告警信息 如果无该参数，系统默认不返回告警信息。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
         'side' => null,
         'returnIssuingAuthority' => null,
         'returnTextLocation' => null,
-        'recognizeElectronicLicense' => null
+        'recognizeElectronicLicense' => null,
+        'alarm' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
     * returnIssuingAuthority  是否返回发证机关的开关，可选值包括： - true：返回发证机关 - false：不返回发证机关  > 说明： - 如果无该参数，系统默认不返回发证机关。如果输入参数不是Boolean类型，则会报非法参数错误。
     * returnTextLocation  识别到的文字块的区域位置信息。取值范围：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * recognizeElectronicLicense  是否支持识别电子行驶证，取值范围：  - true：支持识别电子行驶证  - false：不支持识别电子行驶证  默认不支持识别电子行驶证。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * alarm  是否返回纸质行驶证图像的告警信息，可选值包括： - true：返回纸质行驶证图像的告警信息 - false：不返回纸质行驶证图像的告警信息 如果无该参数，系统默认不返回告警信息。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
             'side' => 'side',
             'returnIssuingAuthority' => 'return_issuing_authority',
             'returnTextLocation' => 'return_text_location',
-            'recognizeElectronicLicense' => 'recognize_electronic_license'
+            'recognizeElectronicLicense' => 'recognize_electronic_license',
+            'alarm' => 'alarm'
     ];
 
     /**
@@ -107,6 +113,7 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
     * returnIssuingAuthority  是否返回发证机关的开关，可选值包括： - true：返回发证机关 - false：不返回发证机关  > 说明： - 如果无该参数，系统默认不返回发证机关。如果输入参数不是Boolean类型，则会报非法参数错误。
     * returnTextLocation  识别到的文字块的区域位置信息。取值范围：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * recognizeElectronicLicense  是否支持识别电子行驶证，取值范围：  - true：支持识别电子行驶证  - false：不支持识别电子行驶证  默认不支持识别电子行驶证。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * alarm  是否返回纸质行驶证图像的告警信息，可选值包括： - true：返回纸质行驶证图像的告警信息 - false：不返回纸质行驶证图像的告警信息 如果无该参数，系统默认不返回告警信息。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
             'side' => 'setSide',
             'returnIssuingAuthority' => 'setReturnIssuingAuthority',
             'returnTextLocation' => 'setReturnTextLocation',
-            'recognizeElectronicLicense' => 'setRecognizeElectronicLicense'
+            'recognizeElectronicLicense' => 'setRecognizeElectronicLicense',
+            'alarm' => 'setAlarm'
     ];
 
     /**
@@ -127,6 +135,7 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
     * returnIssuingAuthority  是否返回发证机关的开关，可选值包括： - true：返回发证机关 - false：不返回发证机关  > 说明： - 如果无该参数，系统默认不返回发证机关。如果输入参数不是Boolean类型，则会报非法参数错误。
     * returnTextLocation  识别到的文字块的区域位置信息。取值范围：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * recognizeElectronicLicense  是否支持识别电子行驶证，取值范围：  - true：支持识别电子行驶证  - false：不支持识别电子行驶证  默认不支持识别电子行驶证。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * alarm  是否返回纸质行驶证图像的告警信息，可选值包括： - true：返回纸质行驶证图像的告警信息 - false：不返回纸质行驶证图像的告警信息 如果无该参数，系统默认不返回告警信息。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
             'side' => 'getSide',
             'returnIssuingAuthority' => 'getReturnIssuingAuthority',
             'returnTextLocation' => 'getReturnTextLocation',
-            'recognizeElectronicLicense' => 'getRecognizeElectronicLicense'
+            'recognizeElectronicLicense' => 'getRecognizeElectronicLicense',
+            'alarm' => 'getAlarm'
     ];
 
     /**
@@ -203,6 +213,7 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
         $this->container['returnIssuingAuthority'] = isset($data['returnIssuingAuthority']) ? $data['returnIssuingAuthority'] : null;
         $this->container['returnTextLocation'] = isset($data['returnTextLocation']) ? $data['returnTextLocation'] : null;
         $this->container['recognizeElectronicLicense'] = isset($data['recognizeElectronicLicense']) ? $data['recognizeElectronicLicense'] : null;
+        $this->container['alarm'] = isset($data['alarm']) ? $data['alarm'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
     public function setRecognizeElectronicLicense($recognizeElectronicLicense)
     {
         $this->container['recognizeElectronicLicense'] = $recognizeElectronicLicense;
+        return $this;
+    }
+
+    /**
+    * Gets alarm
+    *  是否返回纸质行驶证图像的告警信息，可选值包括： - true：返回纸质行驶证图像的告警信息 - false：不返回纸质行驶证图像的告警信息 如果无该参数，系统默认不返回告警信息。如果输入参数不是Boolean类型，则会报非法参数错误。
+    *
+    * @return bool|null
+    */
+    public function getAlarm()
+    {
+        return $this->container['alarm'];
+    }
+
+    /**
+    * Sets alarm
+    *
+    * @param bool|null $alarm 是否返回纸质行驶证图像的告警信息，可选值包括： - true：返回纸质行驶证图像的告警信息 - false：不返回纸质行驶证图像的告警信息 如果无该参数，系统默认不返回告警信息。如果输入参数不是Boolean类型，则会报非法参数错误。
+    *
+    * @return $this
+    */
+    public function setAlarm($alarm)
+    {
+        $this->container['alarm'] = $alarm;
         return $this;
     }
 

@@ -28,6 +28,7 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
     * language  语种选择，取值范围可参考表1中英文列。未传入该参数时默认为中英文识别模式。 **表1* 语种选择说明 | 英文 |     中文     | | :--: | :----------: | | auto | 自动语种分类 | |  ms  |    马来语    | |  uk  |   乌克兰语   | |  hi  |    印地语    | |  ru  |     俄语     | |  vi  |    越南语    | |  id  |    印尼语    | |  th  |     泰语     | |  zh  |    中英文    | |  ar  |   阿拉伯语   | |  de  |     德语     | |  la  |    拉丁语    | |  fr  |     法语     | |  it  |   意大利语   | |  es  |   西班牙语   | |  pt  |   葡萄牙语   | |  ro  |  罗马尼亚语  | |  pl  |    波兰语    | |  am  |  阿姆哈拉语  | |  ja  |     日语     | |  ko  |     韩语     | |  tr  |   土耳其语   | |  no  |   挪威语     | |  da  |   丹麦语     | |  sv  |   瑞典语     | |  km  |   柬埔寨语   | |  he  |   希伯来语   |
     * singleOrientationMode  单朝向模式开关。可选值包括： - true：打开单朝向模式。 - false：关闭单朝向模式。 图片文字方向一致时，打开该开关可提升识别精度；图片文字方向不一致时，关闭该开关可支持多朝向文字识别。未传入该参数时默认为false，即默认图片中的文字朝向为多朝向。
     * pdfPageNumber  指定PDF页码识别。传入该参数时，则识别指定页码的内容。如果不传该参数，则默认识别第1页。
+    * returnMarkdownResult  返回文字块拼接结果开关。可选值包括： - true：打开返回文字块拼接结果开关。 - false：关闭返回文字块拼接结果开关。 未传入该参数时默认为false，即默认关闭返回文字块拼接结果开关。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
             'characterMode' => 'bool',
             'language' => 'string',
             'singleOrientationMode' => 'bool',
-            'pdfPageNumber' => 'int'
+            'pdfPageNumber' => 'int',
+            'returnMarkdownResult' => 'bool'
     ];
 
     /**
@@ -52,6 +54,7 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
     * language  语种选择，取值范围可参考表1中英文列。未传入该参数时默认为中英文识别模式。 **表1* 语种选择说明 | 英文 |     中文     | | :--: | :----------: | | auto | 自动语种分类 | |  ms  |    马来语    | |  uk  |   乌克兰语   | |  hi  |    印地语    | |  ru  |     俄语     | |  vi  |    越南语    | |  id  |    印尼语    | |  th  |     泰语     | |  zh  |    中英文    | |  ar  |   阿拉伯语   | |  de  |     德语     | |  la  |    拉丁语    | |  fr  |     法语     | |  it  |   意大利语   | |  es  |   西班牙语   | |  pt  |   葡萄牙语   | |  ro  |  罗马尼亚语  | |  pl  |    波兰语    | |  am  |  阿姆哈拉语  | |  ja  |     日语     | |  ko  |     韩语     | |  tr  |   土耳其语   | |  no  |   挪威语     | |  da  |   丹麦语     | |  sv  |   瑞典语     | |  km  |   柬埔寨语   | |  he  |   希伯来语   |
     * singleOrientationMode  单朝向模式开关。可选值包括： - true：打开单朝向模式。 - false：关闭单朝向模式。 图片文字方向一致时，打开该开关可提升识别精度；图片文字方向不一致时，关闭该开关可支持多朝向文字识别。未传入该参数时默认为false，即默认图片中的文字朝向为多朝向。
     * pdfPageNumber  指定PDF页码识别。传入该参数时，则识别指定页码的内容。如果不传该参数，则默认识别第1页。
+    * returnMarkdownResult  返回文字块拼接结果开关。可选值包括： - true：打开返回文字块拼接结果开关。 - false：关闭返回文字块拼接结果开关。 未传入该参数时默认为false，即默认关闭返回文字块拼接结果开关。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
         'characterMode' => null,
         'language' => null,
         'singleOrientationMode' => null,
-        'pdfPageNumber' => 'int32'
+        'pdfPageNumber' => 'int32',
+        'returnMarkdownResult' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
     * language  语种选择，取值范围可参考表1中英文列。未传入该参数时默认为中英文识别模式。 **表1* 语种选择说明 | 英文 |     中文     | | :--: | :----------: | | auto | 自动语种分类 | |  ms  |    马来语    | |  uk  |   乌克兰语   | |  hi  |    印地语    | |  ru  |     俄语     | |  vi  |    越南语    | |  id  |    印尼语    | |  th  |     泰语     | |  zh  |    中英文    | |  ar  |   阿拉伯语   | |  de  |     德语     | |  la  |    拉丁语    | |  fr  |     法语     | |  it  |   意大利语   | |  es  |   西班牙语   | |  pt  |   葡萄牙语   | |  ro  |  罗马尼亚语  | |  pl  |    波兰语    | |  am  |  阿姆哈拉语  | |  ja  |     日语     | |  ko  |     韩语     | |  tr  |   土耳其语   | |  no  |   挪威语     | |  da  |   丹麦语     | |  sv  |   瑞典语     | |  km  |   柬埔寨语   | |  he  |   希伯来语   |
     * singleOrientationMode  单朝向模式开关。可选值包括： - true：打开单朝向模式。 - false：关闭单朝向模式。 图片文字方向一致时，打开该开关可提升识别精度；图片文字方向不一致时，关闭该开关可支持多朝向文字识别。未传入该参数时默认为false，即默认图片中的文字朝向为多朝向。
     * pdfPageNumber  指定PDF页码识别。传入该参数时，则识别指定页码的内容。如果不传该参数，则默认识别第1页。
+    * returnMarkdownResult  返回文字块拼接结果开关。可选值包括： - true：打开返回文字块拼接结果开关。 - false：关闭返回文字块拼接结果开关。 未传入该参数时默认为false，即默认关闭返回文字块拼接结果开关。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
             'characterMode' => 'character_mode',
             'language' => 'language',
             'singleOrientationMode' => 'single_orientation_mode',
-            'pdfPageNumber' => 'pdf_page_number'
+            'pdfPageNumber' => 'pdf_page_number',
+            'returnMarkdownResult' => 'return_markdown_result'
     ];
 
     /**
@@ -121,6 +127,7 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
     * language  语种选择，取值范围可参考表1中英文列。未传入该参数时默认为中英文识别模式。 **表1* 语种选择说明 | 英文 |     中文     | | :--: | :----------: | | auto | 自动语种分类 | |  ms  |    马来语    | |  uk  |   乌克兰语   | |  hi  |    印地语    | |  ru  |     俄语     | |  vi  |    越南语    | |  id  |    印尼语    | |  th  |     泰语     | |  zh  |    中英文    | |  ar  |   阿拉伯语   | |  de  |     德语     | |  la  |    拉丁语    | |  fr  |     法语     | |  it  |   意大利语   | |  es  |   西班牙语   | |  pt  |   葡萄牙语   | |  ro  |  罗马尼亚语  | |  pl  |    波兰语    | |  am  |  阿姆哈拉语  | |  ja  |     日语     | |  ko  |     韩语     | |  tr  |   土耳其语   | |  no  |   挪威语     | |  da  |   丹麦语     | |  sv  |   瑞典语     | |  km  |   柬埔寨语   | |  he  |   希伯来语   |
     * singleOrientationMode  单朝向模式开关。可选值包括： - true：打开单朝向模式。 - false：关闭单朝向模式。 图片文字方向一致时，打开该开关可提升识别精度；图片文字方向不一致时，关闭该开关可支持多朝向文字识别。未传入该参数时默认为false，即默认图片中的文字朝向为多朝向。
     * pdfPageNumber  指定PDF页码识别。传入该参数时，则识别指定页码的内容。如果不传该参数，则默认识别第1页。
+    * returnMarkdownResult  返回文字块拼接结果开关。可选值包括： - true：打开返回文字块拼接结果开关。 - false：关闭返回文字块拼接结果开关。 未传入该参数时默认为false，即默认关闭返回文字块拼接结果开关。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
             'characterMode' => 'setCharacterMode',
             'language' => 'setLanguage',
             'singleOrientationMode' => 'setSingleOrientationMode',
-            'pdfPageNumber' => 'setPdfPageNumber'
+            'pdfPageNumber' => 'setPdfPageNumber',
+            'returnMarkdownResult' => 'setReturnMarkdownResult'
     ];
 
     /**
@@ -145,6 +153,7 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
     * language  语种选择，取值范围可参考表1中英文列。未传入该参数时默认为中英文识别模式。 **表1* 语种选择说明 | 英文 |     中文     | | :--: | :----------: | | auto | 自动语种分类 | |  ms  |    马来语    | |  uk  |   乌克兰语   | |  hi  |    印地语    | |  ru  |     俄语     | |  vi  |    越南语    | |  id  |    印尼语    | |  th  |     泰语     | |  zh  |    中英文    | |  ar  |   阿拉伯语   | |  de  |     德语     | |  la  |    拉丁语    | |  fr  |     法语     | |  it  |   意大利语   | |  es  |   西班牙语   | |  pt  |   葡萄牙语   | |  ro  |  罗马尼亚语  | |  pl  |    波兰语    | |  am  |  阿姆哈拉语  | |  ja  |     日语     | |  ko  |     韩语     | |  tr  |   土耳其语   | |  no  |   挪威语     | |  da  |   丹麦语     | |  sv  |   瑞典语     | |  km  |   柬埔寨语   | |  he  |   希伯来语   |
     * singleOrientationMode  单朝向模式开关。可选值包括： - true：打开单朝向模式。 - false：关闭单朝向模式。 图片文字方向一致时，打开该开关可提升识别精度；图片文字方向不一致时，关闭该开关可支持多朝向文字识别。未传入该参数时默认为false，即默认图片中的文字朝向为多朝向。
     * pdfPageNumber  指定PDF页码识别。传入该参数时，则识别指定页码的内容。如果不传该参数，则默认识别第1页。
+    * returnMarkdownResult  返回文字块拼接结果开关。可选值包括： - true：打开返回文字块拼接结果开关。 - false：关闭返回文字块拼接结果开关。 未传入该参数时默认为false，即默认关闭返回文字块拼接结果开关。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
             'characterMode' => 'getCharacterMode',
             'language' => 'getLanguage',
             'singleOrientationMode' => 'getSingleOrientationMode',
-            'pdfPageNumber' => 'getPdfPageNumber'
+            'pdfPageNumber' => 'getPdfPageNumber',
+            'returnMarkdownResult' => 'getReturnMarkdownResult'
     ];
 
     /**
@@ -225,6 +235,7 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['singleOrientationMode'] = isset($data['singleOrientationMode']) ? $data['singleOrientationMode'] : null;
         $this->container['pdfPageNumber'] = isset($data['pdfPageNumber']) ? $data['pdfPageNumber'] : null;
+        $this->container['returnMarkdownResult'] = isset($data['returnMarkdownResult']) ? $data['returnMarkdownResult'] : null;
     }
 
     /**
@@ -438,6 +449,30 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
     public function setPdfPageNumber($pdfPageNumber)
     {
         $this->container['pdfPageNumber'] = $pdfPageNumber;
+        return $this;
+    }
+
+    /**
+    * Gets returnMarkdownResult
+    *  返回文字块拼接结果开关。可选值包括： - true：打开返回文字块拼接结果开关。 - false：关闭返回文字块拼接结果开关。 未传入该参数时默认为false，即默认关闭返回文字块拼接结果开关。
+    *
+    * @return bool|null
+    */
+    public function getReturnMarkdownResult()
+    {
+        return $this->container['returnMarkdownResult'];
+    }
+
+    /**
+    * Sets returnMarkdownResult
+    *
+    * @param bool|null $returnMarkdownResult 返回文字块拼接结果开关。可选值包括： - true：打开返回文字块拼接结果开关。 - false：关闭返回文字块拼接结果开关。 未传入该参数时默认为false，即默认关闭返回文字块拼接结果开关。
+    *
+    * @return $this
+    */
+    public function setReturnMarkdownResult($returnMarkdownResult)
+    {
+        $this->container['returnMarkdownResult'] = $returnMarkdownResult;
         return $this;
     }
 

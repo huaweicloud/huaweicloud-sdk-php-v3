@@ -23,13 +23,15 @@ class RestartConfiguration implements ModelInterface, ArrayAccess
     * restartServer  是否重启虚拟机。
     * forcible  是否强制重启, 强制重启会导致数据库服务中未提交的事务强制中断。
     * delay  是否在可维护时间段内重启。
+    * restartPolicy  restartPolicy
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'restartServer' => 'bool',
             'forcible' => 'bool',
-            'delay' => 'bool'
+            'delay' => 'bool',
+            'restartPolicy' => '\HuaweiCloud\SDK\Rds\V3\Model\RestartPolicy'
     ];
 
     /**
@@ -37,13 +39,15 @@ class RestartConfiguration implements ModelInterface, ArrayAccess
     * restartServer  是否重启虚拟机。
     * forcible  是否强制重启, 强制重启会导致数据库服务中未提交的事务强制中断。
     * delay  是否在可维护时间段内重启。
+    * restartPolicy  restartPolicy
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'restartServer' => null,
         'forcible' => null,
-        'delay' => null
+        'delay' => null,
+        'restartPolicy' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class RestartConfiguration implements ModelInterface, ArrayAccess
     * restartServer  是否重启虚拟机。
     * forcible  是否强制重启, 强制重启会导致数据库服务中未提交的事务强制中断。
     * delay  是否在可维护时间段内重启。
+    * restartPolicy  restartPolicy
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'restartServer' => 'restart_server',
             'forcible' => 'forcible',
-            'delay' => 'delay'
+            'delay' => 'delay',
+            'restartPolicy' => 'restart_policy'
     ];
 
     /**
@@ -86,13 +92,15 @@ class RestartConfiguration implements ModelInterface, ArrayAccess
     * restartServer  是否重启虚拟机。
     * forcible  是否强制重启, 强制重启会导致数据库服务中未提交的事务强制中断。
     * delay  是否在可维护时间段内重启。
+    * restartPolicy  restartPolicy
     *
     * @var string[]
     */
     protected static $setters = [
             'restartServer' => 'setRestartServer',
             'forcible' => 'setForcible',
-            'delay' => 'setDelay'
+            'delay' => 'setDelay',
+            'restartPolicy' => 'setRestartPolicy'
     ];
 
     /**
@@ -100,13 +108,15 @@ class RestartConfiguration implements ModelInterface, ArrayAccess
     * restartServer  是否重启虚拟机。
     * forcible  是否强制重启, 强制重启会导致数据库服务中未提交的事务强制中断。
     * delay  是否在可维护时间段内重启。
+    * restartPolicy  restartPolicy
     *
     * @var string[]
     */
     protected static $getters = [
             'restartServer' => 'getRestartServer',
             'forcible' => 'getForcible',
-            'delay' => 'getDelay'
+            'delay' => 'getDelay',
+            'restartPolicy' => 'getRestartPolicy'
     ];
 
     /**
@@ -170,6 +180,7 @@ class RestartConfiguration implements ModelInterface, ArrayAccess
         $this->container['restartServer'] = isset($data['restartServer']) ? $data['restartServer'] : null;
         $this->container['forcible'] = isset($data['forcible']) ? $data['forcible'] : null;
         $this->container['delay'] = isset($data['delay']) ? $data['delay'] : null;
+        $this->container['restartPolicy'] = isset($data['restartPolicy']) ? $data['restartPolicy'] : null;
     }
 
     /**
@@ -263,6 +274,30 @@ class RestartConfiguration implements ModelInterface, ArrayAccess
     public function setDelay($delay)
     {
         $this->container['delay'] = $delay;
+        return $this;
+    }
+
+    /**
+    * Gets restartPolicy
+    *  restartPolicy
+    *
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\RestartPolicy|null
+    */
+    public function getRestartPolicy()
+    {
+        return $this->container['restartPolicy'];
+    }
+
+    /**
+    * Sets restartPolicy
+    *
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\RestartPolicy|null $restartPolicy restartPolicy
+    *
+    * @return $this
+    */
+    public function setRestartPolicy($restartPolicy)
+    {
+        $this->container['restartPolicy'] = $restartPolicy;
         return $this;
     }
 

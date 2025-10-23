@@ -20,6 +20,7 @@ class ExecuteActionParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * userId  用户ID
     * ticketId  执行当前操作的工单单号。
     * taskId  任务ID
     * action  动作名称
@@ -28,6 +29,7 @@ class ExecuteActionParams implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'userId' => 'string',
             'ticketId' => 'string',
             'taskId' => 'string',
             'action' => 'string',
@@ -36,6 +38,7 @@ class ExecuteActionParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * userId  用户ID
     * ticketId  执行当前操作的工单单号。
     * taskId  任务ID
     * action  动作名称
@@ -44,6 +47,7 @@ class ExecuteActionParams implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'userId' => null,
         'ticketId' => null,
         'taskId' => null,
         'action' => null,
@@ -73,6 +77,7 @@ class ExecuteActionParams implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * userId  用户ID
     * ticketId  执行当前操作的工单单号。
     * taskId  任务ID
     * action  动作名称
@@ -81,6 +86,7 @@ class ExecuteActionParams implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'userId' => 'user_id',
             'ticketId' => 'ticket_id',
             'taskId' => 'task_id',
             'action' => 'action',
@@ -89,6 +95,7 @@ class ExecuteActionParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * userId  用户ID
     * ticketId  执行当前操作的工单单号。
     * taskId  任务ID
     * action  动作名称
@@ -97,6 +104,7 @@ class ExecuteActionParams implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'userId' => 'setUserId',
             'ticketId' => 'setTicketId',
             'taskId' => 'setTaskId',
             'action' => 'setAction',
@@ -105,6 +113,7 @@ class ExecuteActionParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * userId  用户ID
     * ticketId  执行当前操作的工单单号。
     * taskId  任务ID
     * action  动作名称
@@ -113,6 +122,7 @@ class ExecuteActionParams implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'userId' => 'getUserId',
             'ticketId' => 'getTicketId',
             'taskId' => 'getTaskId',
             'action' => 'getAction',
@@ -177,6 +187,7 @@ class ExecuteActionParams implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
         $this->container['ticketId'] = isset($data['ticketId']) ? $data['ticketId'] : null;
         $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
@@ -191,6 +202,12 @@ class ExecuteActionParams implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['userId']) && (mb_strlen($this->container['userId']) > 100000000)) {
+                $invalidProperties[] = "invalid value for 'userId', the character length must be smaller than or equal to 100000000.";
+            }
+            if (!is_null($this->container['userId']) && (mb_strlen($this->container['userId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'userId', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['ticketId']) && (mb_strlen($this->container['ticketId']) > 100000000)) {
                 $invalidProperties[] = "invalid value for 'ticketId', the character length must be smaller than or equal to 100000000.";
             }
@@ -221,6 +238,30 @@ class ExecuteActionParams implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets userId
+    *  用户ID
+    *
+    * @return string|null
+    */
+    public function getUserId()
+    {
+        return $this->container['userId'];
+    }
+
+    /**
+    * Sets userId
+    *
+    * @param string|null $userId 用户ID
+    *
+    * @return $this
+    */
+    public function setUserId($userId)
+    {
+        $this->container['userId'] = $userId;
+        return $this;
     }
 
     /**

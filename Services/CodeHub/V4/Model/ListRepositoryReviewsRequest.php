@@ -25,7 +25,7 @@ class ListRepositoryReviewsRequest implements ModelInterface, ArrayAccess
     * search  **参数解释：** 查询评论内容。
     * startDate  **参数解释：** 开始日期。
     * endDate  **参数解释：** 结束日期。
-    * onlyCount  **参数解释：** 是否仅返回todo。 **取值范围：** - true，仅返回带有提交计数和diffs计数的结果。 - false，按照compare_view参数返回结果信息。
+    * onlyCount  **参数解释：** 是否仅返回带有提交计数和diffs计数的结果。 **取值范围：** - true，仅返回带有提交计数和diffs计数的结果。 - false，按照compare_view参数返回结果信息。
     * reviewCategories  **参数解释：** 搜索的检视意见分类。 **取值范围：** 字符串长度不少于1，不超过200。
     * reviewModules  **参数解释：** 搜索的检视意见模块。 **取值范围：** 字符串长度不少于1，不超过200。
     * severity  **参数解释：** 检视意见严重程度
@@ -67,7 +67,7 @@ class ListRepositoryReviewsRequest implements ModelInterface, ArrayAccess
     * search  **参数解释：** 查询评论内容。
     * startDate  **参数解释：** 开始日期。
     * endDate  **参数解释：** 结束日期。
-    * onlyCount  **参数解释：** 是否仅返回todo。 **取值范围：** - true，仅返回带有提交计数和diffs计数的结果。 - false，按照compare_view参数返回结果信息。
+    * onlyCount  **参数解释：** 是否仅返回带有提交计数和diffs计数的结果。 **取值范围：** - true，仅返回带有提交计数和diffs计数的结果。 - false，按照compare_view参数返回结果信息。
     * reviewCategories  **参数解释：** 搜索的检视意见分类。 **取值范围：** 字符串长度不少于1，不超过200。
     * reviewModules  **参数解释：** 搜索的检视意见模块。 **取值范围：** 字符串长度不少于1，不超过200。
     * severity  **参数解释：** 检视意见严重程度
@@ -130,7 +130,7 @@ class ListRepositoryReviewsRequest implements ModelInterface, ArrayAccess
     * search  **参数解释：** 查询评论内容。
     * startDate  **参数解释：** 开始日期。
     * endDate  **参数解释：** 结束日期。
-    * onlyCount  **参数解释：** 是否仅返回todo。 **取值范围：** - true，仅返回带有提交计数和diffs计数的结果。 - false，按照compare_view参数返回结果信息。
+    * onlyCount  **参数解释：** 是否仅返回带有提交计数和diffs计数的结果。 **取值范围：** - true，仅返回带有提交计数和diffs计数的结果。 - false，按照compare_view参数返回结果信息。
     * reviewCategories  **参数解释：** 搜索的检视意见分类。 **取值范围：** 字符串长度不少于1，不超过200。
     * reviewModules  **参数解释：** 搜索的检视意见模块。 **取值范围：** 字符串长度不少于1，不超过200。
     * severity  **参数解释：** 检视意见严重程度
@@ -172,7 +172,7 @@ class ListRepositoryReviewsRequest implements ModelInterface, ArrayAccess
     * search  **参数解释：** 查询评论内容。
     * startDate  **参数解释：** 开始日期。
     * endDate  **参数解释：** 结束日期。
-    * onlyCount  **参数解释：** 是否仅返回todo。 **取值范围：** - true，仅返回带有提交计数和diffs计数的结果。 - false，按照compare_view参数返回结果信息。
+    * onlyCount  **参数解释：** 是否仅返回带有提交计数和diffs计数的结果。 **取值范围：** - true，仅返回带有提交计数和diffs计数的结果。 - false，按照compare_view参数返回结果信息。
     * reviewCategories  **参数解释：** 搜索的检视意见分类。 **取值范围：** 字符串长度不少于1，不超过200。
     * reviewModules  **参数解释：** 搜索的检视意见模块。 **取值范围：** 字符串长度不少于1，不超过200。
     * severity  **参数解释：** 检视意见严重程度
@@ -214,7 +214,7 @@ class ListRepositoryReviewsRequest implements ModelInterface, ArrayAccess
     * search  **参数解释：** 查询评论内容。
     * startDate  **参数解释：** 开始日期。
     * endDate  **参数解释：** 结束日期。
-    * onlyCount  **参数解释：** 是否仅返回todo。 **取值范围：** - true，仅返回带有提交计数和diffs计数的结果。 - false，按照compare_view参数返回结果信息。
+    * onlyCount  **参数解释：** 是否仅返回带有提交计数和diffs计数的结果。 **取值范围：** - true，仅返回带有提交计数和diffs计数的结果。 - false，按照compare_view参数返回结果信息。
     * reviewCategories  **参数解释：** 搜索的检视意见分类。 **取值范围：** 字符串长度不少于1，不超过200。
     * reviewModules  **参数解释：** 搜索的检视意见模块。 **取值范围：** 字符串长度不少于1，不超过200。
     * severity  **参数解释：** 检视意见严重程度
@@ -591,7 +591,7 @@ class ListRepositoryReviewsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets onlyCount
-    *  **参数解释：** 是否仅返回todo。 **取值范围：** - true，仅返回带有提交计数和diffs计数的结果。 - false，按照compare_view参数返回结果信息。
+    *  **参数解释：** 是否仅返回带有提交计数和diffs计数的结果。 **取值范围：** - true，仅返回带有提交计数和diffs计数的结果。 - false，按照compare_view参数返回结果信息。
     *
     * @return bool|null
     */
@@ -603,7 +603,7 @@ class ListRepositoryReviewsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets onlyCount
     *
-    * @param bool|null $onlyCount **参数解释：** 是否仅返回todo。 **取值范围：** - true，仅返回带有提交计数和diffs计数的结果。 - false，按照compare_view参数返回结果信息。
+    * @param bool|null $onlyCount **参数解释：** 是否仅返回带有提交计数和diffs计数的结果。 **取值范围：** - true，仅返回带有提交计数和diffs计数的结果。 - false，按照compare_view参数返回结果信息。
     *
     * @return $this
     */

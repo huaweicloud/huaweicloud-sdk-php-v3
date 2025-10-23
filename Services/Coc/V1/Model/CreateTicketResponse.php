@@ -210,18 +210,12 @@ class CreateTicketResponse implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['errorCode']) < 1)) {
                 $invalidProperties[] = "invalid value for 'errorCode', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['errorMsg'] === null) {
-            $invalidProperties[] = "'errorMsg' can't be null";
-        }
-            if ((mb_strlen($this->container['errorMsg']) > 10240)) {
+            if (!is_null($this->container['errorMsg']) && (mb_strlen($this->container['errorMsg']) > 10240)) {
                 $invalidProperties[] = "invalid value for 'errorMsg', the character length must be smaller than or equal to 10240.";
             }
-            if ((mb_strlen($this->container['errorMsg']) < 0)) {
+            if (!is_null($this->container['errorMsg']) && (mb_strlen($this->container['errorMsg']) < 0)) {
                 $invalidProperties[] = "invalid value for 'errorMsg', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -288,7 +282,7 @@ class CreateTicketResponse implements ModelInterface, ArrayAccess
     * Gets errorMsg
     *  请求响应描述
     *
-    * @return string
+    * @return string|null
     */
     public function getErrorMsg()
     {
@@ -298,7 +292,7 @@ class CreateTicketResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string $errorMsg 请求响应描述
+    * @param string|null $errorMsg 请求响应描述
     *
     * @return $this
     */
@@ -312,7 +306,7 @@ class CreateTicketResponse implements ModelInterface, ArrayAccess
     * Gets data
     *  返回体
     *
-    * @return object
+    * @return object|null
     */
     public function getData()
     {
@@ -322,7 +316,7 @@ class CreateTicketResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param object $data 返回体
+    * @param object|null $data 返回体
     *
     * @return $this
     */

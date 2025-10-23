@@ -22,25 +22,21 @@ class ListProjectProtectedBranchesResponse implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * body  项目下保护分支列表
-    * xTotal  xTotal
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\CodeHub\V4\Model\ProjectProtectedBranchApiDto[]',
-            'xTotal' => 'string'
+            'body' => '\HuaweiCloud\SDK\CodeHub\V4\Model\ProjectProtectedBranchApiDto[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * body  项目下保护分支列表
-    * xTotal  xTotal
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null,
-        'xTotal' => null
+        'body' => null
     ];
 
     /**
@@ -67,37 +63,31 @@ class ListProjectProtectedBranchesResponse implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * body  项目下保护分支列表
-    * xTotal  xTotal
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body',
-            'xTotal' => 'X-Total'
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * body  项目下保护分支列表
-    * xTotal  xTotal
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody',
-            'xTotal' => 'setXTotal'
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * body  项目下保护分支列表
-    * xTotal  xTotal
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody',
-            'xTotal' => 'getXTotal'
+            'body' => 'getBody'
     ];
 
     /**
@@ -159,7 +149,6 @@ class ListProjectProtectedBranchesResponse implements ModelInterface, ArrayAcces
     public function __construct(array $data = null)
     {
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
-        $this->container['xTotal'] = isset($data['xTotal']) ? $data['xTotal'] : null;
     }
 
     /**
@@ -205,30 +194,6 @@ class ListProjectProtectedBranchesResponse implements ModelInterface, ArrayAcces
     public function setBody($body)
     {
         $this->container['body'] = $body;
-        return $this;
-    }
-
-    /**
-    * Gets xTotal
-    *  xTotal
-    *
-    * @return string|null
-    */
-    public function getXTotal()
-    {
-        return $this->container['xTotal'];
-    }
-
-    /**
-    * Sets xTotal
-    *
-    * @param string|null $xTotal xTotal
-    *
-    * @return $this
-    */
-    public function setXTotal($xTotal)
-    {
-        $this->container['xTotal'] = $xTotal;
         return $this;
     }
 

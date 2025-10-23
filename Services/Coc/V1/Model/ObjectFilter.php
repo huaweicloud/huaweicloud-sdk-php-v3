@@ -20,6 +20,7 @@ class ObjectFilter implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  条件名称
     * operator  操作符 in/like/startwith/endwith/=/!=/>/<等
     * field  字段名称
     * values  搜索值
@@ -27,6 +28,7 @@ class ObjectFilter implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'name' => 'string',
             'operator' => 'string',
             'field' => 'string',
             'values' => 'string[]'
@@ -34,6 +36,7 @@ class ObjectFilter implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  条件名称
     * operator  操作符 in/like/startwith/endwith/=/!=/>/<等
     * field  字段名称
     * values  搜索值
@@ -41,6 +44,7 @@ class ObjectFilter implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'name' => null,
         'operator' => null,
         'field' => null,
         'values' => null
@@ -69,6 +73,7 @@ class ObjectFilter implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  条件名称
     * operator  操作符 in/like/startwith/endwith/=/!=/>/<等
     * field  字段名称
     * values  搜索值
@@ -76,6 +81,7 @@ class ObjectFilter implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'name' => 'name',
             'operator' => 'operator',
             'field' => 'field',
             'values' => 'values'
@@ -83,6 +89,7 @@ class ObjectFilter implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  条件名称
     * operator  操作符 in/like/startwith/endwith/=/!=/>/<等
     * field  字段名称
     * values  搜索值
@@ -90,6 +97,7 @@ class ObjectFilter implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'name' => 'setName',
             'operator' => 'setOperator',
             'field' => 'setField',
             'values' => 'setValues'
@@ -97,6 +105,7 @@ class ObjectFilter implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  条件名称
     * operator  操作符 in/like/startwith/endwith/=/!=/>/<等
     * field  字段名称
     * values  搜索值
@@ -104,6 +113,7 @@ class ObjectFilter implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'name' => 'getName',
             'operator' => 'getOperator',
             'field' => 'getField',
             'values' => 'getValues'
@@ -167,6 +177,7 @@ class ObjectFilter implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['operator'] = isset($data['operator']) ? $data['operator'] : null;
         $this->container['field'] = isset($data['field']) ? $data['field'] : null;
         $this->container['values'] = isset($data['values']) ? $data['values'] : null;
@@ -180,27 +191,24 @@ class ObjectFilter implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['operator'] === null) {
-            $invalidProperties[] = "'operator' can't be null";
-        }
-            if ((mb_strlen($this->container['operator']) > 20)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 255)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['operator']) && (mb_strlen($this->container['operator']) > 20)) {
                 $invalidProperties[] = "invalid value for 'operator', the character length must be smaller than or equal to 20.";
             }
-            if ((mb_strlen($this->container['operator']) < 0)) {
+            if (!is_null($this->container['operator']) && (mb_strlen($this->container['operator']) < 0)) {
                 $invalidProperties[] = "invalid value for 'operator', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['field'] === null) {
-            $invalidProperties[] = "'field' can't be null";
-        }
-            if ((mb_strlen($this->container['field']) > 255)) {
+            if (!is_null($this->container['field']) && (mb_strlen($this->container['field']) > 255)) {
                 $invalidProperties[] = "invalid value for 'field', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['field']) < 0)) {
+            if (!is_null($this->container['field']) && (mb_strlen($this->container['field']) < 0)) {
                 $invalidProperties[] = "invalid value for 'field', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['values'] === null) {
-            $invalidProperties[] = "'values' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -216,10 +224,34 @@ class ObjectFilter implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets name
+    *  条件名称
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 条件名称
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
     * Gets operator
     *  操作符 in/like/startwith/endwith/=/!=/>/<等
     *
-    * @return string
+    * @return string|null
     */
     public function getOperator()
     {
@@ -229,7 +261,7 @@ class ObjectFilter implements ModelInterface, ArrayAccess
     /**
     * Sets operator
     *
-    * @param string $operator 操作符 in/like/startwith/endwith/=/!=/>/<等
+    * @param string|null $operator 操作符 in/like/startwith/endwith/=/!=/>/<等
     *
     * @return $this
     */
@@ -243,7 +275,7 @@ class ObjectFilter implements ModelInterface, ArrayAccess
     * Gets field
     *  字段名称
     *
-    * @return string
+    * @return string|null
     */
     public function getField()
     {
@@ -253,7 +285,7 @@ class ObjectFilter implements ModelInterface, ArrayAccess
     /**
     * Sets field
     *
-    * @param string $field 字段名称
+    * @param string|null $field 字段名称
     *
     * @return $this
     */
@@ -267,7 +299,7 @@ class ObjectFilter implements ModelInterface, ArrayAccess
     * Gets values
     *  搜索值
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getValues()
     {
@@ -277,7 +309,7 @@ class ObjectFilter implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param string[] $values 搜索值
+    * @param string[]|null $values 搜索值
     *
     * @return $this
     */

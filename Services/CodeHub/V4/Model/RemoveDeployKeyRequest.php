@@ -21,7 +21,7 @@ class RemoveDeployKeyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * repositoryId  **参数解释：** 仓库的ID，通过[[查询用户所有仓库](https://support.huaweicloud.com/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws)[[查询用户所有仓库](https://support.huaweicloud.com/intl/en-us/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **约束限制：** 不涉及。
-    * keyId  **参数解释：**  部署秘钥 ID。
+    * keyId  **参数解释：**  部署密钥 ID。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class RemoveDeployKeyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * repositoryId  **参数解释：** 仓库的ID，通过[[查询用户所有仓库](https://support.huaweicloud.com/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws)[[查询用户所有仓库](https://support.huaweicloud.com/intl/en-us/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **约束限制：** 不涉及。
-    * keyId  **参数解释：**  部署秘钥 ID。
+    * keyId  **参数解释：**  部署密钥 ID。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class RemoveDeployKeyRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * repositoryId  **参数解释：** 仓库的ID，通过[[查询用户所有仓库](https://support.huaweicloud.com/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws)[[查询用户所有仓库](https://support.huaweicloud.com/intl/en-us/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **约束限制：** 不涉及。
-    * keyId  **参数解释：**  部署秘钥 ID。
+    * keyId  **参数解释：**  部署密钥 ID。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class RemoveDeployKeyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * repositoryId  **参数解释：** 仓库的ID，通过[[查询用户所有仓库](https://support.huaweicloud.com/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws)[[查询用户所有仓库](https://support.huaweicloud.com/intl/en-us/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **约束限制：** 不涉及。
-    * keyId  **参数解释：**  部署秘钥 ID。
+    * keyId  **参数解释：**  部署密钥 ID。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class RemoveDeployKeyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * repositoryId  **参数解释：** 仓库的ID，通过[[查询用户所有仓库](https://support.huaweicloud.com/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws)[[查询用户所有仓库](https://support.huaweicloud.com/intl/en-us/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **约束限制：** 不涉及。
-    * keyId  **参数解释：**  部署秘钥 ID。
+    * keyId  **参数解释：**  部署密钥 ID。
     *
     * @var string[]
     */
@@ -227,7 +227,7 @@ class RemoveDeployKeyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets keyId
-    *  **参数解释：**  部署秘钥 ID。
+    *  **参数解释：**  部署密钥 ID。
     *
     * @return int
     */
@@ -239,7 +239,7 @@ class RemoveDeployKeyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets keyId
     *
-    * @param int $keyId **参数解释：**  部署秘钥 ID。
+    * @param int $keyId **参数解释：**  部署密钥 ID。
     *
     * @return $this
     */

@@ -26,6 +26,10 @@ class IncidentTicketInfoResponseData implements ModelInterface, ArrayAccess
     * currentCloudService  归属应用ID，现在只支持1个
     * incidentLevel  事件级别 参考：枚举 事件级别incident_level
     * isServiceInterrupt  业务是否中断，取值：true/false
+    * startTime  故障发生时间戳
+    * faultRecoveryTime  故障恢复时间戳
+    * faultDelineationTime  定界完成时间时间戳
+    * incidentOwnership  事件归属 参考：枚举 事件来源incident_ownership
     * incidentType  事件类别 参考：枚举 事件类别incident_type
     * incidentTitle  事件标题，最大长度：200
     * incidentDescription  事件描述，最大长度：600
@@ -49,6 +53,10 @@ class IncidentTicketInfoResponseData implements ModelInterface, ArrayAccess
             'currentCloudService' => 'string[]',
             'incidentLevel' => 'string',
             'isServiceInterrupt' => 'bool',
+            'startTime' => 'int',
+            'faultRecoveryTime' => 'int',
+            'faultDelineationTime' => 'int',
+            'incidentOwnership' => 'string',
             'incidentType' => 'string',
             'incidentTitle' => 'string',
             'incidentDescription' => 'string',
@@ -72,6 +80,10 @@ class IncidentTicketInfoResponseData implements ModelInterface, ArrayAccess
     * currentCloudService  归属应用ID，现在只支持1个
     * incidentLevel  事件级别 参考：枚举 事件级别incident_level
     * isServiceInterrupt  业务是否中断，取值：true/false
+    * startTime  故障发生时间戳
+    * faultRecoveryTime  故障恢复时间戳
+    * faultDelineationTime  定界完成时间时间戳
+    * incidentOwnership  事件归属 参考：枚举 事件来源incident_ownership
     * incidentType  事件类别 参考：枚举 事件类别incident_type
     * incidentTitle  事件标题，最大长度：200
     * incidentDescription  事件描述，最大长度：600
@@ -95,6 +107,10 @@ class IncidentTicketInfoResponseData implements ModelInterface, ArrayAccess
         'currentCloudService' => null,
         'incidentLevel' => null,
         'isServiceInterrupt' => null,
+        'startTime' => 'int64',
+        'faultRecoveryTime' => 'int64',
+        'faultDelineationTime' => 'int64',
+        'incidentOwnership' => null,
         'incidentType' => null,
         'incidentTitle' => null,
         'incidentDescription' => null,
@@ -139,6 +155,10 @@ class IncidentTicketInfoResponseData implements ModelInterface, ArrayAccess
     * currentCloudService  归属应用ID，现在只支持1个
     * incidentLevel  事件级别 参考：枚举 事件级别incident_level
     * isServiceInterrupt  业务是否中断，取值：true/false
+    * startTime  故障发生时间戳
+    * faultRecoveryTime  故障恢复时间戳
+    * faultDelineationTime  定界完成时间时间戳
+    * incidentOwnership  事件归属 参考：枚举 事件来源incident_ownership
     * incidentType  事件类别 参考：枚举 事件类别incident_type
     * incidentTitle  事件标题，最大长度：200
     * incidentDescription  事件描述，最大长度：600
@@ -162,6 +182,10 @@ class IncidentTicketInfoResponseData implements ModelInterface, ArrayAccess
             'currentCloudService' => 'current_cloud_service',
             'incidentLevel' => 'incident_level',
             'isServiceInterrupt' => 'is_service_interrupt',
+            'startTime' => 'start_time',
+            'faultRecoveryTime' => 'fault_recovery_time',
+            'faultDelineationTime' => 'fault_delineation_time',
+            'incidentOwnership' => 'incident_ownership',
             'incidentType' => 'incident_type',
             'incidentTitle' => 'incident_title',
             'incidentDescription' => 'incident_description',
@@ -185,6 +209,10 @@ class IncidentTicketInfoResponseData implements ModelInterface, ArrayAccess
     * currentCloudService  归属应用ID，现在只支持1个
     * incidentLevel  事件级别 参考：枚举 事件级别incident_level
     * isServiceInterrupt  业务是否中断，取值：true/false
+    * startTime  故障发生时间戳
+    * faultRecoveryTime  故障恢复时间戳
+    * faultDelineationTime  定界完成时间时间戳
+    * incidentOwnership  事件归属 参考：枚举 事件来源incident_ownership
     * incidentType  事件类别 参考：枚举 事件类别incident_type
     * incidentTitle  事件标题，最大长度：200
     * incidentDescription  事件描述，最大长度：600
@@ -208,6 +236,10 @@ class IncidentTicketInfoResponseData implements ModelInterface, ArrayAccess
             'currentCloudService' => 'setCurrentCloudService',
             'incidentLevel' => 'setIncidentLevel',
             'isServiceInterrupt' => 'setIsServiceInterrupt',
+            'startTime' => 'setStartTime',
+            'faultRecoveryTime' => 'setFaultRecoveryTime',
+            'faultDelineationTime' => 'setFaultDelineationTime',
+            'incidentOwnership' => 'setIncidentOwnership',
             'incidentType' => 'setIncidentType',
             'incidentTitle' => 'setIncidentTitle',
             'incidentDescription' => 'setIncidentDescription',
@@ -231,6 +263,10 @@ class IncidentTicketInfoResponseData implements ModelInterface, ArrayAccess
     * currentCloudService  归属应用ID，现在只支持1个
     * incidentLevel  事件级别 参考：枚举 事件级别incident_level
     * isServiceInterrupt  业务是否中断，取值：true/false
+    * startTime  故障发生时间戳
+    * faultRecoveryTime  故障恢复时间戳
+    * faultDelineationTime  定界完成时间时间戳
+    * incidentOwnership  事件归属 参考：枚举 事件来源incident_ownership
     * incidentType  事件类别 参考：枚举 事件类别incident_type
     * incidentTitle  事件标题，最大长度：200
     * incidentDescription  事件描述，最大长度：600
@@ -254,6 +290,10 @@ class IncidentTicketInfoResponseData implements ModelInterface, ArrayAccess
             'currentCloudService' => 'getCurrentCloudService',
             'incidentLevel' => 'getIncidentLevel',
             'isServiceInterrupt' => 'getIsServiceInterrupt',
+            'startTime' => 'getStartTime',
+            'faultRecoveryTime' => 'getFaultRecoveryTime',
+            'faultDelineationTime' => 'getFaultDelineationTime',
+            'incidentOwnership' => 'getIncidentOwnership',
             'incidentType' => 'getIncidentType',
             'incidentTitle' => 'getIncidentTitle',
             'incidentDescription' => 'getIncidentDescription',
@@ -333,6 +373,10 @@ class IncidentTicketInfoResponseData implements ModelInterface, ArrayAccess
         $this->container['currentCloudService'] = isset($data['currentCloudService']) ? $data['currentCloudService'] : null;
         $this->container['incidentLevel'] = isset($data['incidentLevel']) ? $data['incidentLevel'] : null;
         $this->container['isServiceInterrupt'] = isset($data['isServiceInterrupt']) ? $data['isServiceInterrupt'] : null;
+        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
+        $this->container['faultRecoveryTime'] = isset($data['faultRecoveryTime']) ? $data['faultRecoveryTime'] : null;
+        $this->container['faultDelineationTime'] = isset($data['faultDelineationTime']) ? $data['faultDelineationTime'] : null;
+        $this->container['incidentOwnership'] = isset($data['incidentOwnership']) ? $data['incidentOwnership'] : null;
         $this->container['incidentType'] = isset($data['incidentType']) ? $data['incidentType'] : null;
         $this->container['incidentTitle'] = isset($data['incidentTitle']) ? $data['incidentTitle'] : null;
         $this->container['incidentDescription'] = isset($data['incidentDescription']) ? $data['incidentDescription'] : null;
@@ -367,6 +411,30 @@ class IncidentTicketInfoResponseData implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['incidentLevel']) && (mb_strlen($this->container['incidentLevel']) < 0)) {
                 $invalidProperties[] = "invalid value for 'incidentLevel', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['startTime']) && ($this->container['startTime'] > 9999999999999)) {
+                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 9999999999999.";
+            }
+            if (!is_null($this->container['startTime']) && ($this->container['startTime'] < 1)) {
+                $invalidProperties[] = "invalid value for 'startTime', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['faultRecoveryTime']) && ($this->container['faultRecoveryTime'] > 9999999999999)) {
+                $invalidProperties[] = "invalid value for 'faultRecoveryTime', must be smaller than or equal to 9999999999999.";
+            }
+            if (!is_null($this->container['faultRecoveryTime']) && ($this->container['faultRecoveryTime'] < 1)) {
+                $invalidProperties[] = "invalid value for 'faultRecoveryTime', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['faultDelineationTime']) && ($this->container['faultDelineationTime'] > 9999999999999)) {
+                $invalidProperties[] = "invalid value for 'faultDelineationTime', must be smaller than or equal to 9999999999999.";
+            }
+            if (!is_null($this->container['faultDelineationTime']) && ($this->container['faultDelineationTime'] < 1)) {
+                $invalidProperties[] = "invalid value for 'faultDelineationTime', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['incidentOwnership']) && (mb_strlen($this->container['incidentOwnership']) > 255)) {
+                $invalidProperties[] = "invalid value for 'incidentOwnership', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['incidentOwnership']) && (mb_strlen($this->container['incidentOwnership']) < 0)) {
+                $invalidProperties[] = "invalid value for 'incidentOwnership', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['incidentType']) && (mb_strlen($this->container['incidentType']) > 255)) {
                 $invalidProperties[] = "invalid value for 'incidentType', the character length must be smaller than or equal to 255.";
@@ -589,6 +657,102 @@ class IncidentTicketInfoResponseData implements ModelInterface, ArrayAccess
     public function setIsServiceInterrupt($isServiceInterrupt)
     {
         $this->container['isServiceInterrupt'] = $isServiceInterrupt;
+        return $this;
+    }
+
+    /**
+    * Gets startTime
+    *  故障发生时间戳
+    *
+    * @return int|null
+    */
+    public function getStartTime()
+    {
+        return $this->container['startTime'];
+    }
+
+    /**
+    * Sets startTime
+    *
+    * @param int|null $startTime 故障发生时间戳
+    *
+    * @return $this
+    */
+    public function setStartTime($startTime)
+    {
+        $this->container['startTime'] = $startTime;
+        return $this;
+    }
+
+    /**
+    * Gets faultRecoveryTime
+    *  故障恢复时间戳
+    *
+    * @return int|null
+    */
+    public function getFaultRecoveryTime()
+    {
+        return $this->container['faultRecoveryTime'];
+    }
+
+    /**
+    * Sets faultRecoveryTime
+    *
+    * @param int|null $faultRecoveryTime 故障恢复时间戳
+    *
+    * @return $this
+    */
+    public function setFaultRecoveryTime($faultRecoveryTime)
+    {
+        $this->container['faultRecoveryTime'] = $faultRecoveryTime;
+        return $this;
+    }
+
+    /**
+    * Gets faultDelineationTime
+    *  定界完成时间时间戳
+    *
+    * @return int|null
+    */
+    public function getFaultDelineationTime()
+    {
+        return $this->container['faultDelineationTime'];
+    }
+
+    /**
+    * Sets faultDelineationTime
+    *
+    * @param int|null $faultDelineationTime 定界完成时间时间戳
+    *
+    * @return $this
+    */
+    public function setFaultDelineationTime($faultDelineationTime)
+    {
+        $this->container['faultDelineationTime'] = $faultDelineationTime;
+        return $this;
+    }
+
+    /**
+    * Gets incidentOwnership
+    *  事件归属 参考：枚举 事件来源incident_ownership
+    *
+    * @return string|null
+    */
+    public function getIncidentOwnership()
+    {
+        return $this->container['incidentOwnership'];
+    }
+
+    /**
+    * Sets incidentOwnership
+    *
+    * @param string|null $incidentOwnership 事件归属 参考：枚举 事件来源incident_ownership
+    *
+    * @return $this
+    */
+    public function setIncidentOwnership($incidentOwnership)
+    {
+        $this->container['incidentOwnership'] = $incidentOwnership;
         return $this;
     }
 

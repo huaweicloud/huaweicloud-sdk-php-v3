@@ -25,6 +25,7 @@ class ProtectedActionBasicApiDto implements ModelInterface, ArrayAccess
     * userIds  **参数解释：** 用户ID列表。 **约束限制：** 不涉及。 **取值范围：** Integer **默认取值：** 不涉及。
     * userTeamIds  **参数解释：** 成员组ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * relatedRoleIds  **参数解释：** 关联角色ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * additionSwitchers  **参数解释：** 操作选择列表。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ProtectedActionBasicApiDto implements ModelInterface, ArrayAccess
             'enable' => 'bool',
             'userIds' => 'int[]',
             'userTeamIds' => 'int[]',
-            'relatedRoleIds' => 'string[]'
+            'relatedRoleIds' => 'string[]',
+            'additionSwitchers' => '\HuaweiCloud\SDK\CodeHub\V4\Model\ForceActionEnableDto[]'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ProtectedActionBasicApiDto implements ModelInterface, ArrayAccess
     * userIds  **参数解释：** 用户ID列表。 **约束限制：** 不涉及。 **取值范围：** Integer **默认取值：** 不涉及。
     * userTeamIds  **参数解释：** 成员组ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * relatedRoleIds  **参数解释：** 关联角色ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * additionSwitchers  **参数解释：** 操作选择列表。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ProtectedActionBasicApiDto implements ModelInterface, ArrayAccess
         'enable' => null,
         'userIds' => 'int32',
         'userTeamIds' => 'int32',
-        'relatedRoleIds' => null
+        'relatedRoleIds' => null,
+        'additionSwitchers' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class ProtectedActionBasicApiDto implements ModelInterface, ArrayAccess
     * userIds  **参数解释：** 用户ID列表。 **约束限制：** 不涉及。 **取值范围：** Integer **默认取值：** 不涉及。
     * userTeamIds  **参数解释：** 成员组ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * relatedRoleIds  **参数解释：** 关联角色ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * additionSwitchers  **参数解释：** 操作选择列表。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ProtectedActionBasicApiDto implements ModelInterface, ArrayAccess
             'enable' => 'enable',
             'userIds' => 'user_ids',
             'userTeamIds' => 'user_team_ids',
-            'relatedRoleIds' => 'related_role_ids'
+            'relatedRoleIds' => 'related_role_ids',
+            'additionSwitchers' => 'addition_switchers'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ProtectedActionBasicApiDto implements ModelInterface, ArrayAccess
     * userIds  **参数解释：** 用户ID列表。 **约束限制：** 不涉及。 **取值范围：** Integer **默认取值：** 不涉及。
     * userTeamIds  **参数解释：** 成员组ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * relatedRoleIds  **参数解释：** 关联角色ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * additionSwitchers  **参数解释：** 操作选择列表。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ProtectedActionBasicApiDto implements ModelInterface, ArrayAccess
             'enable' => 'setEnable',
             'userIds' => 'setUserIds',
             'userTeamIds' => 'setUserTeamIds',
-            'relatedRoleIds' => 'setRelatedRoleIds'
+            'relatedRoleIds' => 'setRelatedRoleIds',
+            'additionSwitchers' => 'setAdditionSwitchers'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ProtectedActionBasicApiDto implements ModelInterface, ArrayAccess
     * userIds  **参数解释：** 用户ID列表。 **约束限制：** 不涉及。 **取值范围：** Integer **默认取值：** 不涉及。
     * userTeamIds  **参数解释：** 成员组ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * relatedRoleIds  **参数解释：** 关联角色ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * additionSwitchers  **参数解释：** 操作选择列表。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ProtectedActionBasicApiDto implements ModelInterface, ArrayAccess
             'enable' => 'getEnable',
             'userIds' => 'getUserIds',
             'userTeamIds' => 'getUserTeamIds',
-            'relatedRoleIds' => 'getRelatedRoleIds'
+            'relatedRoleIds' => 'getRelatedRoleIds',
+            'additionSwitchers' => 'getAdditionSwitchers'
     ];
 
     /**
@@ -207,6 +217,7 @@ class ProtectedActionBasicApiDto implements ModelInterface, ArrayAccess
         $this->container['userIds'] = isset($data['userIds']) ? $data['userIds'] : null;
         $this->container['userTeamIds'] = isset($data['userTeamIds']) ? $data['userTeamIds'] : null;
         $this->container['relatedRoleIds'] = isset($data['relatedRoleIds']) ? $data['relatedRoleIds'] : null;
+        $this->container['additionSwitchers'] = isset($data['additionSwitchers']) ? $data['additionSwitchers'] : null;
     }
 
     /**
@@ -362,6 +373,30 @@ class ProtectedActionBasicApiDto implements ModelInterface, ArrayAccess
     public function setRelatedRoleIds($relatedRoleIds)
     {
         $this->container['relatedRoleIds'] = $relatedRoleIds;
+        return $this;
+    }
+
+    /**
+    * Gets additionSwitchers
+    *  **参数解释：** 操作选择列表。
+    *
+    * @return \HuaweiCloud\SDK\CodeHub\V4\Model\ForceActionEnableDto[]|null
+    */
+    public function getAdditionSwitchers()
+    {
+        return $this->container['additionSwitchers'];
+    }
+
+    /**
+    * Sets additionSwitchers
+    *
+    * @param \HuaweiCloud\SDK\CodeHub\V4\Model\ForceActionEnableDto[]|null $additionSwitchers **参数解释：** 操作选择列表。
+    *
+    * @return $this
+    */
+    public function setAdditionSwitchers($additionSwitchers)
+    {
+        $this->container['additionSwitchers'] = $additionSwitchers;
         return $this;
     }
 

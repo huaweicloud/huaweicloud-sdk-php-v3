@@ -21,21 +21,29 @@ class ListGroupMergeRequestValidAssignedCandidatesRequest implements ModelInterf
     /**
     * Array of property to type mappings. Used for (de)serialization
     * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * offset  **参数解释：** 偏移量，从0开始。
+    * limit  **参数解释：** 返回数量。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'groupId' => 'int'
+            'groupId' => 'int',
+            'offset' => 'int',
+            'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * offset  **参数解释：** 偏移量，从0开始。
+    * limit  **参数解释：** 返回数量。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'groupId' => 'int32'
+        'groupId' => 'int32',
+        'offset' => 'int32',
+        'limit' => 'int32'
     ];
 
     /**
@@ -62,31 +70,43 @@ class ListGroupMergeRequestValidAssignedCandidatesRequest implements ModelInterf
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * offset  **参数解释：** 偏移量，从0开始。
+    * limit  **参数解释：** 返回数量。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'groupId' => 'group_id'
+            'groupId' => 'group_id',
+            'offset' => 'offset',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * offset  **参数解释：** 偏移量，从0开始。
+    * limit  **参数解释：** 返回数量。
     *
     * @var string[]
     */
     protected static $setters = [
-            'groupId' => 'setGroupId'
+            'groupId' => 'setGroupId',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * offset  **参数解释：** 偏移量，从0开始。
+    * limit  **参数解释：** 返回数量。
     *
     * @var string[]
     */
     protected static $getters = [
-            'groupId' => 'getGroupId'
+            'groupId' => 'getGroupId',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -148,6 +168,8 @@ class ListGroupMergeRequestValidAssignedCandidatesRequest implements ModelInterf
     public function __construct(array $data = null)
     {
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -166,6 +188,18 @@ class ListGroupMergeRequestValidAssignedCandidatesRequest implements ModelInterf
             }
             if (($this->container['groupId'] < 1)) {
                 $invalidProperties[] = "invalid value for 'groupId', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -202,6 +236,54 @@ class ListGroupMergeRequestValidAssignedCandidatesRequest implements ModelInterf
     public function setGroupId($groupId)
     {
         $this->container['groupId'] = $groupId;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  **参数解释：** 偏移量，从0开始。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset **参数解释：** 偏移量，从0开始。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  **参数解释：** 返回数量。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit **参数解释：** 返回数量。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

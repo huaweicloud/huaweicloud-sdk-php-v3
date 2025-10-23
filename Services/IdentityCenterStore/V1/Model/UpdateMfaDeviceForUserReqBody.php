@@ -158,13 +158,16 @@ class UpdateMfaDeviceForUserReqBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['displayName']) && (mb_strlen($this->container['displayName']) > 1024)) {
+        if ($this->container['displayName'] === null) {
+            $invalidProperties[] = "'displayName' can't be null";
+        }
+            if ((mb_strlen($this->container['displayName']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'displayName', the character length must be smaller than or equal to 1024.";
             }
-            if (!is_null($this->container['displayName']) && (mb_strlen($this->container['displayName']) < 1)) {
+            if ((mb_strlen($this->container['displayName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'displayName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['displayName']) && !preg_match("/[\\p{L}\\p{M}\\p{S}\\p{N}\\p{P}\\t\\n\\r  　]+/", $this->container['displayName'])) {
+            if (!preg_match("/[\\p{L}\\p{M}\\p{S}\\p{N}\\p{P}\\t\\n\\r  　]+/", $this->container['displayName'])) {
                 $invalidProperties[] = "invalid value for 'displayName', must be conform to the pattern /[\\p{L}\\p{M}\\p{S}\\p{N}\\p{P}\\t\\n\\r  　]+/.";
             }
         return $invalidProperties;
@@ -185,7 +188,7 @@ class UpdateMfaDeviceForUserReqBody implements ModelInterface, ArrayAccess
     * Gets displayName
     *  MFA设备显示名称
     *
-    * @return string|null
+    * @return string
     */
     public function getDisplayName()
     {
@@ -195,7 +198,7 @@ class UpdateMfaDeviceForUserReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets displayName
     *
-    * @param string|null $displayName MFA设备显示名称
+    * @param string $displayName MFA设备显示名称
     *
     * @return $this
     */

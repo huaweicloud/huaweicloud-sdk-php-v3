@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model;
+namespace HuaweiCloud\SDK\CodeHub\V4\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DatabaseVolumeResult implements ModelInterface, ArrayAccess
+class CustomEvaluationDto implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,38 +16,38 @@ class DatabaseVolumeResult implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DatabaseVolumeResult';
+    protected static $openAPIModelName = 'CustomEvaluationDto';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * databaseName  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
-    * tableSpaceName  **参数解释**: 数据库的缺省表空间名。 **取值范围**: 不涉及。
-    * userName  **参数解释**: 表所属用户名称。 **取值范围**: 不涉及。
-    * databaseSize  **参数解释**: 数据库占用空间大小。 **取值范围**: 不涉及。
+    * id  **参数解释：** 自定义评价id。
+    * evaluationTypeId  评价类型id
+    * level  评价等级
+    * name  评价名称
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'databaseName' => 'string',
-            'tableSpaceName' => 'string',
-            'userName' => 'string',
-            'databaseSize' => 'string'
+            'id' => 'int',
+            'evaluationTypeId' => 'int',
+            'level' => 'int',
+            'name' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * databaseName  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
-    * tableSpaceName  **参数解释**: 数据库的缺省表空间名。 **取值范围**: 不涉及。
-    * userName  **参数解释**: 表所属用户名称。 **取值范围**: 不涉及。
-    * databaseSize  **参数解释**: 数据库占用空间大小。 **取值范围**: 不涉及。
+    * id  **参数解释：** 自定义评价id。
+    * evaluationTypeId  评价类型id
+    * level  评价等级
+    * name  评价名称
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'databaseName' => null,
-        'tableSpaceName' => null,
-        'userName' => null,
-        'databaseSize' => null
+        'id' => null,
+        'evaluationTypeId' => null,
+        'level' => null,
+        'name' => null
     ];
 
     /**
@@ -73,50 +73,50 @@ class DatabaseVolumeResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * databaseName  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
-    * tableSpaceName  **参数解释**: 数据库的缺省表空间名。 **取值范围**: 不涉及。
-    * userName  **参数解释**: 表所属用户名称。 **取值范围**: 不涉及。
-    * databaseSize  **参数解释**: 数据库占用空间大小。 **取值范围**: 不涉及。
+    * id  **参数解释：** 自定义评价id。
+    * evaluationTypeId  评价类型id
+    * level  评价等级
+    * name  评价名称
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'databaseName' => 'database_name',
-            'tableSpaceName' => 'table_space_name',
-            'userName' => 'user_name',
-            'databaseSize' => 'database_size'
+            'id' => 'id',
+            'evaluationTypeId' => 'evaluation_type_id',
+            'level' => 'level',
+            'name' => 'name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * databaseName  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
-    * tableSpaceName  **参数解释**: 数据库的缺省表空间名。 **取值范围**: 不涉及。
-    * userName  **参数解释**: 表所属用户名称。 **取值范围**: 不涉及。
-    * databaseSize  **参数解释**: 数据库占用空间大小。 **取值范围**: 不涉及。
+    * id  **参数解释：** 自定义评价id。
+    * evaluationTypeId  评价类型id
+    * level  评价等级
+    * name  评价名称
     *
     * @var string[]
     */
     protected static $setters = [
-            'databaseName' => 'setDatabaseName',
-            'tableSpaceName' => 'setTableSpaceName',
-            'userName' => 'setUserName',
-            'databaseSize' => 'setDatabaseSize'
+            'id' => 'setId',
+            'evaluationTypeId' => 'setEvaluationTypeId',
+            'level' => 'setLevel',
+            'name' => 'setName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * databaseName  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
-    * tableSpaceName  **参数解释**: 数据库的缺省表空间名。 **取值范围**: 不涉及。
-    * userName  **参数解释**: 表所属用户名称。 **取值范围**: 不涉及。
-    * databaseSize  **参数解释**: 数据库占用空间大小。 **取值范围**: 不涉及。
+    * id  **参数解释：** 自定义评价id。
+    * evaluationTypeId  评价类型id
+    * level  评价等级
+    * name  评价名称
     *
     * @var string[]
     */
     protected static $getters = [
-            'databaseName' => 'getDatabaseName',
-            'tableSpaceName' => 'getTableSpaceName',
-            'userName' => 'getUserName',
-            'databaseSize' => 'getDatabaseSize'
+            'id' => 'getId',
+            'evaluationTypeId' => 'getEvaluationTypeId',
+            'level' => 'getLevel',
+            'name' => 'getName'
     ];
 
     /**
@@ -177,10 +177,10 @@ class DatabaseVolumeResult implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['databaseName'] = isset($data['databaseName']) ? $data['databaseName'] : null;
-        $this->container['tableSpaceName'] = isset($data['tableSpaceName']) ? $data['tableSpaceName'] : null;
-        $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
-        $this->container['databaseSize'] = isset($data['databaseSize']) ? $data['databaseSize'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['evaluationTypeId'] = isset($data['evaluationTypeId']) ? $data['evaluationTypeId'] : null;
+        $this->container['level'] = isset($data['level']) ? $data['level'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -206,98 +206,98 @@ class DatabaseVolumeResult implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets databaseName
-    *  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
+    * Gets id
+    *  **参数解释：** 自定义评价id。
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getDatabaseName()
+    public function getId()
     {
-        return $this->container['databaseName'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets databaseName
+    * Sets id
     *
-    * @param string|null $databaseName **参数解释**: 数据库名称。 **取值范围**: 不涉及。
+    * @param int|null $id **参数解释：** 自定义评价id。
     *
     * @return $this
     */
-    public function setDatabaseName($databaseName)
+    public function setId($id)
     {
-        $this->container['databaseName'] = $databaseName;
+        $this->container['id'] = $id;
         return $this;
     }
 
     /**
-    * Gets tableSpaceName
-    *  **参数解释**: 数据库的缺省表空间名。 **取值范围**: 不涉及。
+    * Gets evaluationTypeId
+    *  评价类型id
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getTableSpaceName()
+    public function getEvaluationTypeId()
     {
-        return $this->container['tableSpaceName'];
+        return $this->container['evaluationTypeId'];
     }
 
     /**
-    * Sets tableSpaceName
+    * Sets evaluationTypeId
     *
-    * @param string|null $tableSpaceName **参数解释**: 数据库的缺省表空间名。 **取值范围**: 不涉及。
+    * @param int|null $evaluationTypeId 评价类型id
     *
     * @return $this
     */
-    public function setTableSpaceName($tableSpaceName)
+    public function setEvaluationTypeId($evaluationTypeId)
     {
-        $this->container['tableSpaceName'] = $tableSpaceName;
+        $this->container['evaluationTypeId'] = $evaluationTypeId;
         return $this;
     }
 
     /**
-    * Gets userName
-    *  **参数解释**: 表所属用户名称。 **取值范围**: 不涉及。
+    * Gets level
+    *  评价等级
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getUserName()
+    public function getLevel()
     {
-        return $this->container['userName'];
+        return $this->container['level'];
     }
 
     /**
-    * Sets userName
+    * Sets level
     *
-    * @param string|null $userName **参数解释**: 表所属用户名称。 **取值范围**: 不涉及。
+    * @param int|null $level 评价等级
     *
     * @return $this
     */
-    public function setUserName($userName)
+    public function setLevel($level)
     {
-        $this->container['userName'] = $userName;
+        $this->container['level'] = $level;
         return $this;
     }
 
     /**
-    * Gets databaseSize
-    *  **参数解释**: 数据库占用空间大小。 **取值范围**: 不涉及。
+    * Gets name
+    *  评价名称
     *
     * @return string|null
     */
-    public function getDatabaseSize()
+    public function getName()
     {
-        return $this->container['databaseSize'];
+        return $this->container['name'];
     }
 
     /**
-    * Sets databaseSize
+    * Sets name
     *
-    * @param string|null $databaseSize **参数解释**: 数据库占用空间大小。 **取值范围**: 不涉及。
+    * @param string|null $name 评价名称
     *
     * @return $this
     */
-    public function setDatabaseSize($databaseSize)
+    public function setName($name)
     {
-        $this->container['databaseSize'] = $databaseSize;
+        $this->container['name'] = $name;
         return $this;
     }
 

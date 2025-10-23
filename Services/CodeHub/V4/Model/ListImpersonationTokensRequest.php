@@ -21,7 +21,7 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
-    * state  **参数解释：** 状态 all 所有 active 活跃 inactive 非活跃。
+    * state  **参数解释：** 状态 all 所有状态 active 活跃，未过期 inactive 非活跃，失效的。
     * search  **参数解释：** 检索内容
     * offset  **参数解释：** 偏移量，从0开始。
     * limit  **参数解释：** 返回数量。
@@ -39,7 +39,7 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
-    * state  **参数解释：** 状态 all 所有 active 活跃 inactive 非活跃。
+    * state  **参数解释：** 状态 all 所有状态 active 活跃，未过期 inactive 非活跃，失效的。
     * search  **参数解释：** 检索内容
     * offset  **参数解释：** 偏移量，从0开始。
     * limit  **参数解释：** 返回数量。
@@ -78,7 +78,7 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
-    * state  **参数解释：** 状态 all 所有 active 活跃 inactive 非活跃。
+    * state  **参数解释：** 状态 all 所有状态 active 活跃，未过期 inactive 非活跃，失效的。
     * search  **参数解释：** 检索内容
     * offset  **参数解释：** 偏移量，从0开始。
     * limit  **参数解释：** 返回数量。
@@ -96,7 +96,7 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
-    * state  **参数解释：** 状态 all 所有 active 活跃 inactive 非活跃。
+    * state  **参数解释：** 状态 all 所有状态 active 活跃，未过期 inactive 非活跃，失效的。
     * search  **参数解释：** 检索内容
     * offset  **参数解释：** 偏移量，从0开始。
     * limit  **参数解释：** 返回数量。
@@ -114,7 +114,7 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
-    * state  **参数解释：** 状态 all 所有 active 活跃 inactive 非活跃。
+    * state  **参数解释：** 状态 all 所有状态 active 活跃，未过期 inactive 非活跃，失效的。
     * search  **参数解释：** 检索内容
     * offset  **参数解释：** 偏移量，从0开始。
     * limit  **参数解释：** 返回数量。
@@ -300,7 +300,7 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  **参数解释：** 状态 all 所有 active 活跃 inactive 非活跃。
+    *  **参数解释：** 状态 all 所有状态 active 活跃，未过期 inactive 非活跃，失效的。
     *
     * @return string|null
     */
@@ -312,7 +312,7 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state **参数解释：** 状态 all 所有 active 活跃 inactive 非活跃。
+    * @param string|null $state **参数解释：** 状态 all 所有状态 active 活跃，未过期 inactive 非活跃，失效的。
     *
     * @return $this
     */

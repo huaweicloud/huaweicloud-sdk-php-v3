@@ -24,6 +24,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     * region  源端桶所处的区域，task_type为非url_list时，本参数为必选。
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * securityToken  源端桶的临时Token（最大长度16384个字符）
     * appId  当源端为腾讯云时，需要填写此参数。
@@ -38,6 +39,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
             'region' => 'string',
             'ak' => 'string',
             'sk' => 'string',
+            'connectionString' => 'string',
             'jsonAuthFile' => 'string',
             'securityToken' => 'string',
             'appId' => 'string',
@@ -52,6 +54,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     * region  源端桶所处的区域，task_type为非url_list时，本参数为必选。
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * securityToken  源端桶的临时Token（最大长度16384个字符）
     * appId  当源端为腾讯云时，需要填写此参数。
@@ -66,6 +69,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
         'region' => null,
         'ak' => null,
         'sk' => null,
+        'connectionString' => null,
         'jsonAuthFile' => null,
         'securityToken' => null,
         'appId' => null,
@@ -101,6 +105,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     * region  源端桶所处的区域，task_type为非url_list时，本参数为必选。
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * securityToken  源端桶的临时Token（最大长度16384个字符）
     * appId  当源端为腾讯云时，需要填写此参数。
@@ -115,6 +120,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
             'region' => 'region',
             'ak' => 'ak',
             'sk' => 'sk',
+            'connectionString' => 'connection_string',
             'jsonAuthFile' => 'json_auth_file',
             'securityToken' => 'security_token',
             'appId' => 'app_id',
@@ -129,6 +135,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     * region  源端桶所处的区域，task_type为非url_list时，本参数为必选。
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * securityToken  源端桶的临时Token（最大长度16384个字符）
     * appId  当源端为腾讯云时，需要填写此参数。
@@ -143,6 +150,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
             'region' => 'setRegion',
             'ak' => 'setAk',
             'sk' => 'setSk',
+            'connectionString' => 'setConnectionString',
             'jsonAuthFile' => 'setJsonAuthFile',
             'securityToken' => 'setSecurityToken',
             'appId' => 'setAppId',
@@ -157,6 +165,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     * region  源端桶所处的区域，task_type为非url_list时，本参数为必选。
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * connectionString  连接字符串，用于微软云Blob鉴权
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * securityToken  源端桶的临时Token（最大长度16384个字符）
     * appId  当源端为腾讯云时，需要填写此参数。
@@ -171,6 +180,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
             'region' => 'getRegion',
             'ak' => 'getAk',
             'sk' => 'getSk',
+            'connectionString' => 'getConnectionString',
             'jsonAuthFile' => 'getJsonAuthFile',
             'securityToken' => 'getSecurityToken',
             'appId' => 'getAppId',
@@ -241,6 +251,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['ak'] = isset($data['ak']) ? $data['ak'] : null;
         $this->container['sk'] = isset($data['sk']) ? $data['sk'] : null;
+        $this->container['connectionString'] = isset($data['connectionString']) ? $data['connectionString'] : null;
         $this->container['jsonAuthFile'] = isset($data['jsonAuthFile']) ? $data['jsonAuthFile'] : null;
         $this->container['securityToken'] = isset($data['securityToken']) ? $data['securityToken'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
@@ -286,6 +297,12 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['sk']) && !preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['sk'])) {
                 $invalidProperties[] = "invalid value for 'sk', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
+            }
+            if (!is_null($this->container['connectionString']) && (mb_strlen($this->container['connectionString']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'connectionString', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['connectionString']) && (mb_strlen($this->container['connectionString']) < 0)) {
+                $invalidProperties[] = "invalid value for 'connectionString', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['jsonAuthFile']) && (mb_strlen($this->container['jsonAuthFile']) > 65535)) {
                 $invalidProperties[] = "invalid value for 'jsonAuthFile', the character length must be smaller than or equal to 65535.";
@@ -427,6 +444,30 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     public function setSk($sk)
     {
         $this->container['sk'] = $sk;
+        return $this;
+    }
+
+    /**
+    * Gets connectionString
+    *  连接字符串，用于微软云Blob鉴权
+    *
+    * @return string|null
+    */
+    public function getConnectionString()
+    {
+        return $this->container['connectionString'];
+    }
+
+    /**
+    * Sets connectionString
+    *
+    * @param string|null $connectionString 连接字符串，用于微软云Blob鉴权
+    *
+    * @return $this
+    */
+    public function setConnectionString($connectionString)
+    {
+        $this->container['connectionString'] = $connectionString;
         return $this;
     }
 

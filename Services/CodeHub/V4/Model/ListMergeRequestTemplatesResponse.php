@@ -26,7 +26,7 @@ class ListMergeRequestTemplatesResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\CodeHub\V4\Model\MergeRequestTemplateDto[]'
+            'body' => '\HuaweiCloud\SDK\CodeHub\V4\Model\RepositoryMergeRequestTemplateDto[]'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ListMergeRequestTemplatesResponse implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\CodeHub\V4\Model\MergeRequestTemplateDto[]|null
+    * @return \HuaweiCloud\SDK\CodeHub\V4\Model\RepositoryMergeRequestTemplateDto[]|null
     */
     public function getBody()
     {
@@ -187,7 +187,7 @@ class ListMergeRequestTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\CodeHub\V4\Model\MergeRequestTemplateDto[]|null $body body
+    * @param \HuaweiCloud\SDK\CodeHub\V4\Model\RepositoryMergeRequestTemplateDto[]|null $body body
     *
     * @return $this
     */

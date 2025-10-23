@@ -20,7 +20,7 @@ class ProjectSettingsInheritCfgDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 **默认取值：** 不涉及。
+    * name  **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 - webhook_settings，webhook设置。 - mr_branch_policies，合并分支策略设置。 - reviews，检视设置。 - deploy_keys，部署参数设置。 **默认取值：** 不涉及。
     * inheritMod  **参数解释：** 继承设置。 **约束限制：** 不涉及。 **取值范围：** - force_inherit，强制继承配置。 - custom，使用当前配置。 **默认取值：** 不涉及。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ProjectSettingsInheritCfgDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 **默认取值：** 不涉及。
+    * name  **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 - webhook_settings，webhook设置。 - mr_branch_policies，合并分支策略设置。 - reviews，检视设置。 - deploy_keys，部署参数设置。 **默认取值：** 不涉及。
     * inheritMod  **参数解释：** 继承设置。 **约束限制：** 不涉及。 **取值范围：** - force_inherit，强制继承配置。 - custom，使用当前配置。 **默认取值：** 不涉及。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ProjectSettingsInheritCfgDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 **默认取值：** 不涉及。
+    * name  **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 - webhook_settings，webhook设置。 - mr_branch_policies，合并分支策略设置。 - reviews，检视设置。 - deploy_keys，部署参数设置。 **默认取值：** 不涉及。
     * inheritMod  **参数解释：** 继承设置。 **约束限制：** 不涉及。 **取值范围：** - force_inherit，强制继承配置。 - custom，使用当前配置。 **默认取值：** 不涉及。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ProjectSettingsInheritCfgDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 **默认取值：** 不涉及。
+    * name  **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 - webhook_settings，webhook设置。 - mr_branch_policies，合并分支策略设置。 - reviews，检视设置。 - deploy_keys，部署参数设置。 **默认取值：** 不涉及。
     * inheritMod  **参数解释：** 继承设置。 **约束限制：** 不涉及。 **取值范围：** - force_inherit，强制继承配置。 - custom，使用当前配置。 **默认取值：** 不涉及。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ProjectSettingsInheritCfgDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 **默认取值：** 不涉及。
+    * name  **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 - webhook_settings，webhook设置。 - mr_branch_policies，合并分支策略设置。 - reviews，检视设置。 - deploy_keys，部署参数设置。 **默认取值：** 不涉及。
     * inheritMod  **参数解释：** 继承设置。 **约束限制：** 不涉及。 **取值范围：** - force_inherit，强制继承配置。 - custom，使用当前配置。 **默认取值：** 不涉及。
     *
     * @var string[]
@@ -146,6 +146,10 @@ class ProjectSettingsInheritCfgDto implements ModelInterface, ArrayAccess
     const NAME_MERGE_REQUESTS = 'merge_requests';
     const NAME_E2E_SETTINGS = 'e2e_settings';
     const NAME_WATERMARK = 'watermark';
+    const NAME_WEBHOOK_SETTINGS = 'webhook_settings';
+    const NAME_MR_BRANCH_POLICIES = 'mr_branch_policies';
+    const NAME_REVIEWS = 'reviews';
+    const NAME_DEPLOY_KEYS = 'deploy_keys';
     const INHERIT_MOD_FORCE_INHERIT = 'force_inherit';
     const INHERIT_MOD_CUSTOM = 'custom';
     
@@ -165,6 +169,10 @@ class ProjectSettingsInheritCfgDto implements ModelInterface, ArrayAccess
             self::NAME_MERGE_REQUESTS,
             self::NAME_E2E_SETTINGS,
             self::NAME_WATERMARK,
+            self::NAME_WEBHOOK_SETTINGS,
+            self::NAME_MR_BRANCH_POLICIES,
+            self::NAME_REVIEWS,
+            self::NAME_DEPLOY_KEYS,
         ];
     }
 
@@ -241,7 +249,7 @@ class ProjectSettingsInheritCfgDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 **默认取值：** 不涉及。
+    *  **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 - webhook_settings，webhook设置。 - mr_branch_policies，合并分支策略设置。 - reviews，检视设置。 - deploy_keys，部署参数设置。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -253,7 +261,7 @@ class ProjectSettingsInheritCfgDto implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 **默认取值：** 不涉及。
+    * @param string|null $name **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 - webhook_settings，webhook设置。 - mr_branch_policies，合并分支策略设置。 - reviews，检视设置。 - deploy_keys，部署参数设置。 **默认取值：** 不涉及。
     *
     * @return $this
     */

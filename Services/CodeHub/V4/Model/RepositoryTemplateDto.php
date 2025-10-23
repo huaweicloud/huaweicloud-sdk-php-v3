@@ -22,7 +22,7 @@ class RepositoryTemplateDto implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * repositoryId  **参数解释：** 仓库Id。
     * name  **参数解释：** 模板仓标题。 **取值范围：** 字符串长度1-50。
-    * system  **参数解释：** 是否是系统模版。 **取值范围：** - true，系统模版。 - false，个人模版。
+    * system  **参数解释：** 是否是系统模板。 **取值范围：** - true，系统模板。 - false，个人模板。
     * tags  **参数解释：** 标签列表。 **取值范围：** 不涉及。
     * description  **参数解释：** 仓库描述信息。 **取值范围：** 字符串长度0-2000。
     * language  **参数解释：** 编程语言。 **取值范围：** 字符串长度0-32。
@@ -56,7 +56,7 @@ class RepositoryTemplateDto implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * repositoryId  **参数解释：** 仓库Id。
     * name  **参数解释：** 模板仓标题。 **取值范围：** 字符串长度1-50。
-    * system  **参数解释：** 是否是系统模版。 **取值范围：** - true，系统模版。 - false，个人模版。
+    * system  **参数解释：** 是否是系统模板。 **取值范围：** - true，系统模板。 - false，个人模板。
     * tags  **参数解释：** 标签列表。 **取值范围：** 不涉及。
     * description  **参数解释：** 仓库描述信息。 **取值范围：** 字符串长度0-2000。
     * language  **参数解释：** 编程语言。 **取值范围：** 字符串长度0-32。
@@ -111,7 +111,7 @@ class RepositoryTemplateDto implements ModelInterface, ArrayAccess
     * and the value is the original name
     * repositoryId  **参数解释：** 仓库Id。
     * name  **参数解释：** 模板仓标题。 **取值范围：** 字符串长度1-50。
-    * system  **参数解释：** 是否是系统模版。 **取值范围：** - true，系统模版。 - false，个人模版。
+    * system  **参数解释：** 是否是系统模板。 **取值范围：** - true，系统模板。 - false，个人模板。
     * tags  **参数解释：** 标签列表。 **取值范围：** 不涉及。
     * description  **参数解释：** 仓库描述信息。 **取值范围：** 字符串长度0-2000。
     * language  **参数解释：** 编程语言。 **取值范围：** 字符串长度0-32。
@@ -145,7 +145,7 @@ class RepositoryTemplateDto implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * repositoryId  **参数解释：** 仓库Id。
     * name  **参数解释：** 模板仓标题。 **取值范围：** 字符串长度1-50。
-    * system  **参数解释：** 是否是系统模版。 **取值范围：** - true，系统模版。 - false，个人模版。
+    * system  **参数解释：** 是否是系统模板。 **取值范围：** - true，系统模板。 - false，个人模板。
     * tags  **参数解释：** 标签列表。 **取值范围：** 不涉及。
     * description  **参数解释：** 仓库描述信息。 **取值范围：** 字符串长度0-2000。
     * language  **参数解释：** 编程语言。 **取值范围：** 字符串长度0-32。
@@ -179,7 +179,7 @@ class RepositoryTemplateDto implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * repositoryId  **参数解释：** 仓库Id。
     * name  **参数解释：** 模板仓标题。 **取值范围：** 字符串长度1-50。
-    * system  **参数解释：** 是否是系统模版。 **取值范围：** - true，系统模版。 - false，个人模版。
+    * system  **参数解释：** 是否是系统模板。 **取值范围：** - true，系统模板。 - false，个人模板。
     * tags  **参数解释：** 标签列表。 **取值范围：** 不涉及。
     * description  **参数解释：** 仓库描述信息。 **取值范围：** 字符串长度0-2000。
     * language  **参数解释：** 编程语言。 **取值范围：** 字符串长度0-32。
@@ -414,7 +414,7 @@ class RepositoryTemplateDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets system
-    *  **参数解释：** 是否是系统模版。 **取值范围：** - true，系统模版。 - false，个人模版。
+    *  **参数解释：** 是否是系统模板。 **取值范围：** - true，系统模板。 - false，个人模板。
     *
     * @return bool|null
     */
@@ -426,7 +426,7 @@ class RepositoryTemplateDto implements ModelInterface, ArrayAccess
     /**
     * Sets system
     *
-    * @param bool|null $system **参数解释：** 是否是系统模版。 **取值范围：** - true，系统模版。 - false，个人模版。
+    * @param bool|null $system **参数解释：** 是否是系统模板。 **取值范围：** - true，系统模板。 - false，个人模板。
     *
     * @return $this
     */

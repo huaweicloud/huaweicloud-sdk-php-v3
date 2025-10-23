@@ -22,7 +22,7 @@ class ListGroupsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * search  **参数解释：** 检索内容
     * allAvailable  **参数解释：** 所有可用的代码组。
-    * orderBy  **参数解释：** 排序字段，name 名称 path 路径 id 唯一标示 created_at 创建时间 updated_at 更新时间
+    * orderBy  **参数解释：** 排序字段，name 名称 path 路径 id 唯一标识 created_at 创建时间 updated_at 更新时间
     * sort  **参数解释：** 排序顺序 asc顺序 desc逆序
     * starred  **参数解释：** 是否关注。
     * offset  **参数解释：** 偏移量，从0开始。
@@ -46,7 +46,7 @@ class ListGroupsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * search  **参数解释：** 检索内容
     * allAvailable  **参数解释：** 所有可用的代码组。
-    * orderBy  **参数解释：** 排序字段，name 名称 path 路径 id 唯一标示 created_at 创建时间 updated_at 更新时间
+    * orderBy  **参数解释：** 排序字段，name 名称 path 路径 id 唯一标识 created_at 创建时间 updated_at 更新时间
     * sort  **参数解释：** 排序顺序 asc顺序 desc逆序
     * starred  **参数解释：** 是否关注。
     * offset  **参数解释：** 偏移量，从0开始。
@@ -91,7 +91,7 @@ class ListGroupsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * search  **参数解释：** 检索内容
     * allAvailable  **参数解释：** 所有可用的代码组。
-    * orderBy  **参数解释：** 排序字段，name 名称 path 路径 id 唯一标示 created_at 创建时间 updated_at 更新时间
+    * orderBy  **参数解释：** 排序字段，name 名称 path 路径 id 唯一标识 created_at 创建时间 updated_at 更新时间
     * sort  **参数解释：** 排序顺序 asc顺序 desc逆序
     * starred  **参数解释：** 是否关注。
     * offset  **参数解释：** 偏移量，从0开始。
@@ -115,7 +115,7 @@ class ListGroupsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * search  **参数解释：** 检索内容
     * allAvailable  **参数解释：** 所有可用的代码组。
-    * orderBy  **参数解释：** 排序字段，name 名称 path 路径 id 唯一标示 created_at 创建时间 updated_at 更新时间
+    * orderBy  **参数解释：** 排序字段，name 名称 path 路径 id 唯一标识 created_at 创建时间 updated_at 更新时间
     * sort  **参数解释：** 排序顺序 asc顺序 desc逆序
     * starred  **参数解释：** 是否关注。
     * offset  **参数解释：** 偏移量，从0开始。
@@ -139,7 +139,7 @@ class ListGroupsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * search  **参数解释：** 检索内容
     * allAvailable  **参数解释：** 所有可用的代码组。
-    * orderBy  **参数解释：** 排序字段，name 名称 path 路径 id 唯一标示 created_at 创建时间 updated_at 更新时间
+    * orderBy  **参数解释：** 排序字段，name 名称 path 路径 id 唯一标识 created_at 创建时间 updated_at 更新时间
     * sort  **参数解释：** 排序顺序 asc顺序 desc逆序
     * starred  **参数解释：** 是否关注。
     * offset  **参数解释：** 偏移量，从0开始。
@@ -369,7 +369,7 @@ class ListGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderBy
-    *  **参数解释：** 排序字段，name 名称 path 路径 id 唯一标示 created_at 创建时间 updated_at 更新时间
+    *  **参数解释：** 排序字段，name 名称 path 路径 id 唯一标识 created_at 创建时间 updated_at 更新时间
     *
     * @return string|null
     */
@@ -381,7 +381,7 @@ class ListGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderBy
     *
-    * @param string|null $orderBy **参数解释：** 排序字段，name 名称 path 路径 id 唯一标示 created_at 创建时间 updated_at 更新时间
+    * @param string|null $orderBy **参数解释：** 排序字段，name 名称 path 路径 id 唯一标识 created_at 创建时间 updated_at 更新时间
     *
     * @return $this
     */

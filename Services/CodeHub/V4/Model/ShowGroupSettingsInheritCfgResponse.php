@@ -42,11 +42,11 @@ class ShowGroupSettingsInheritCfgResponse implements ModelInterface, ArrayAccess
     * streamEventSettings  **参数解释：** 排序id。
     * pipelineSettings  **参数解释：** 排序id。
     * issueTemplates  **参数解释：** issue模板继承模式。
-    * crCommentEmplates  **参数解释：** 排序id。
+    * crCommentTemplates  **参数解释：** 排序id。
     * mergeRequests  **参数解释：** 排序id。
     * mrBranchPolicies  **参数解释：** 合并请求策略。
     * repositorySettings  **参数解释：** 仓库策略。
-    * deployKeys  **参数解释：** 部署秘钥策略。
+    * deployKeys  **参数解释：** 部署密钥策略。
     * watermark  **参数解释：** 水印策略。
     * createdAt  **参数解释：** 创建时间。
     * updateAt  **参数解释：** 更新时间。
@@ -75,7 +75,7 @@ class ShowGroupSettingsInheritCfgResponse implements ModelInterface, ArrayAccess
             'streamEventSettings' => 'int',
             'pipelineSettings' => 'int',
             'issueTemplates' => 'int',
-            'crCommentEmplates' => 'int',
+            'crCommentTemplates' => 'int',
             'mergeRequests' => 'int',
             'mrBranchPolicies' => 'int',
             'repositorySettings' => 'int',
@@ -108,11 +108,11 @@ class ShowGroupSettingsInheritCfgResponse implements ModelInterface, ArrayAccess
     * streamEventSettings  **参数解释：** 排序id。
     * pipelineSettings  **参数解释：** 排序id。
     * issueTemplates  **参数解释：** issue模板继承模式。
-    * crCommentEmplates  **参数解释：** 排序id。
+    * crCommentTemplates  **参数解释：** 排序id。
     * mergeRequests  **参数解释：** 排序id。
     * mrBranchPolicies  **参数解释：** 合并请求策略。
     * repositorySettings  **参数解释：** 仓库策略。
-    * deployKeys  **参数解释：** 部署秘钥策略。
+    * deployKeys  **参数解释：** 部署密钥策略。
     * watermark  **参数解释：** 水印策略。
     * createdAt  **参数解释：** 创建时间。
     * updateAt  **参数解释：** 更新时间。
@@ -141,7 +141,7 @@ class ShowGroupSettingsInheritCfgResponse implements ModelInterface, ArrayAccess
         'streamEventSettings' => 'int32',
         'pipelineSettings' => 'int32',
         'issueTemplates' => 'int32',
-        'crCommentEmplates' => 'int32',
+        'crCommentTemplates' => 'int32',
         'mergeRequests' => 'int32',
         'mrBranchPolicies' => 'int32',
         'repositorySettings' => 'int32',
@@ -195,11 +195,11 @@ class ShowGroupSettingsInheritCfgResponse implements ModelInterface, ArrayAccess
     * streamEventSettings  **参数解释：** 排序id。
     * pipelineSettings  **参数解释：** 排序id。
     * issueTemplates  **参数解释：** issue模板继承模式。
-    * crCommentEmplates  **参数解释：** 排序id。
+    * crCommentTemplates  **参数解释：** 排序id。
     * mergeRequests  **参数解释：** 排序id。
     * mrBranchPolicies  **参数解释：** 合并请求策略。
     * repositorySettings  **参数解释：** 仓库策略。
-    * deployKeys  **参数解释：** 部署秘钥策略。
+    * deployKeys  **参数解释：** 部署密钥策略。
     * watermark  **参数解释：** 水印策略。
     * createdAt  **参数解释：** 创建时间。
     * updateAt  **参数解释：** 更新时间。
@@ -228,7 +228,7 @@ class ShowGroupSettingsInheritCfgResponse implements ModelInterface, ArrayAccess
             'streamEventSettings' => 'stream_event_settings',
             'pipelineSettings' => 'pipeline_settings',
             'issueTemplates' => 'issue_templates',
-            'crCommentEmplates' => 'cr_comment_emplates',
+            'crCommentTemplates' => 'cr_comment_templates',
             'mergeRequests' => 'merge_requests',
             'mrBranchPolicies' => 'mr_branch_policies',
             'repositorySettings' => 'repository_settings',
@@ -261,11 +261,11 @@ class ShowGroupSettingsInheritCfgResponse implements ModelInterface, ArrayAccess
     * streamEventSettings  **参数解释：** 排序id。
     * pipelineSettings  **参数解释：** 排序id。
     * issueTemplates  **参数解释：** issue模板继承模式。
-    * crCommentEmplates  **参数解释：** 排序id。
+    * crCommentTemplates  **参数解释：** 排序id。
     * mergeRequests  **参数解释：** 排序id。
     * mrBranchPolicies  **参数解释：** 合并请求策略。
     * repositorySettings  **参数解释：** 仓库策略。
-    * deployKeys  **参数解释：** 部署秘钥策略。
+    * deployKeys  **参数解释：** 部署密钥策略。
     * watermark  **参数解释：** 水印策略。
     * createdAt  **参数解释：** 创建时间。
     * updateAt  **参数解释：** 更新时间。
@@ -294,7 +294,7 @@ class ShowGroupSettingsInheritCfgResponse implements ModelInterface, ArrayAccess
             'streamEventSettings' => 'setStreamEventSettings',
             'pipelineSettings' => 'setPipelineSettings',
             'issueTemplates' => 'setIssueTemplates',
-            'crCommentEmplates' => 'setCrCommentEmplates',
+            'crCommentTemplates' => 'setCrCommentTemplates',
             'mergeRequests' => 'setMergeRequests',
             'mrBranchPolicies' => 'setMrBranchPolicies',
             'repositorySettings' => 'setRepositorySettings',
@@ -327,11 +327,11 @@ class ShowGroupSettingsInheritCfgResponse implements ModelInterface, ArrayAccess
     * streamEventSettings  **参数解释：** 排序id。
     * pipelineSettings  **参数解释：** 排序id。
     * issueTemplates  **参数解释：** issue模板继承模式。
-    * crCommentEmplates  **参数解释：** 排序id。
+    * crCommentTemplates  **参数解释：** 排序id。
     * mergeRequests  **参数解释：** 排序id。
     * mrBranchPolicies  **参数解释：** 合并请求策略。
     * repositorySettings  **参数解释：** 仓库策略。
-    * deployKeys  **参数解释：** 部署秘钥策略。
+    * deployKeys  **参数解释：** 部署密钥策略。
     * watermark  **参数解释：** 水印策略。
     * createdAt  **参数解释：** 创建时间。
     * updateAt  **参数解释：** 更新时间。
@@ -360,7 +360,7 @@ class ShowGroupSettingsInheritCfgResponse implements ModelInterface, ArrayAccess
             'streamEventSettings' => 'getStreamEventSettings',
             'pipelineSettings' => 'getPipelineSettings',
             'issueTemplates' => 'getIssueTemplates',
-            'crCommentEmplates' => 'getCrCommentEmplates',
+            'crCommentTemplates' => 'getCrCommentTemplates',
             'mergeRequests' => 'getMergeRequests',
             'mrBranchPolicies' => 'getMrBranchPolicies',
             'repositorySettings' => 'getRepositorySettings',
@@ -449,7 +449,7 @@ class ShowGroupSettingsInheritCfgResponse implements ModelInterface, ArrayAccess
         $this->container['streamEventSettings'] = isset($data['streamEventSettings']) ? $data['streamEventSettings'] : null;
         $this->container['pipelineSettings'] = isset($data['pipelineSettings']) ? $data['pipelineSettings'] : null;
         $this->container['issueTemplates'] = isset($data['issueTemplates']) ? $data['issueTemplates'] : null;
-        $this->container['crCommentEmplates'] = isset($data['crCommentEmplates']) ? $data['crCommentEmplates'] : null;
+        $this->container['crCommentTemplates'] = isset($data['crCommentTemplates']) ? $data['crCommentTemplates'] : null;
         $this->container['mergeRequests'] = isset($data['mergeRequests']) ? $data['mergeRequests'] : null;
         $this->container['mrBranchPolicies'] = isset($data['mrBranchPolicies']) ? $data['mrBranchPolicies'] : null;
         $this->container['repositorySettings'] = isset($data['repositorySettings']) ? $data['repositorySettings'] : null;
@@ -587,11 +587,11 @@ class ShowGroupSettingsInheritCfgResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['issueTemplates']) && ($this->container['issueTemplates'] < 1)) {
                 $invalidProperties[] = "invalid value for 'issueTemplates', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['crCommentEmplates']) && ($this->container['crCommentEmplates'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'crCommentEmplates', must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['crCommentTemplates']) && ($this->container['crCommentTemplates'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'crCommentTemplates', must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['crCommentEmplates']) && ($this->container['crCommentEmplates'] < 1)) {
-                $invalidProperties[] = "invalid value for 'crCommentEmplates', must be bigger than or equal to 1.";
+            if (!is_null($this->container['crCommentTemplates']) && ($this->container['crCommentTemplates'] < 1)) {
+                $invalidProperties[] = "invalid value for 'crCommentTemplates', must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['mergeRequests']) && ($this->container['mergeRequests'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'mergeRequests', must be smaller than or equal to 2147483647.";
@@ -1154,26 +1154,26 @@ class ShowGroupSettingsInheritCfgResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets crCommentEmplates
+    * Gets crCommentTemplates
     *  **参数解释：** 排序id。
     *
     * @return int|null
     */
-    public function getCrCommentEmplates()
+    public function getCrCommentTemplates()
     {
-        return $this->container['crCommentEmplates'];
+        return $this->container['crCommentTemplates'];
     }
 
     /**
-    * Sets crCommentEmplates
+    * Sets crCommentTemplates
     *
-    * @param int|null $crCommentEmplates **参数解释：** 排序id。
+    * @param int|null $crCommentTemplates **参数解释：** 排序id。
     *
     * @return $this
     */
-    public function setCrCommentEmplates($crCommentEmplates)
+    public function setCrCommentTemplates($crCommentTemplates)
     {
-        $this->container['crCommentEmplates'] = $crCommentEmplates;
+        $this->container['crCommentTemplates'] = $crCommentTemplates;
         return $this;
     }
 
@@ -1251,7 +1251,7 @@ class ShowGroupSettingsInheritCfgResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets deployKeys
-    *  **参数解释：** 部署秘钥策略。
+    *  **参数解释：** 部署密钥策略。
     *
     * @return int|null
     */
@@ -1263,7 +1263,7 @@ class ShowGroupSettingsInheritCfgResponse implements ModelInterface, ArrayAccess
     /**
     * Sets deployKeys
     *
-    * @param int|null $deployKeys **参数解释：** 部署秘钥策略。
+    * @param int|null $deployKeys **参数解释：** 部署密钥策略。
     *
     * @return $this
     */

@@ -49,6 +49,8 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * status  状态。
     * front  front
     * back  back
+    * alarmResult  alarmResult
+    * alarmConfidence  alarmConfidence
     *
     * @var string[]
     */
@@ -81,7 +83,9 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
             'mandatoryScrappingDate' => 'string',
             'status' => 'string[]',
             'front' => '\HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseFront',
-            'back' => '\HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseback'
+            'back' => '\HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseBack',
+            'alarmResult' => '\HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseAlarmResult',
+            'alarmConfidence' => '\HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseAlarmConfidence'
     ];
 
     /**
@@ -115,6 +119,8 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * status  状态。
     * front  front
     * back  back
+    * alarmResult  alarmResult
+    * alarmConfidence  alarmConfidence
     *
     * @var string[]
     */
@@ -147,7 +153,9 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
         'mandatoryScrappingDate' => null,
         'status' => null,
         'front' => null,
-        'back' => null
+        'back' => null,
+        'alarmResult' => null,
+        'alarmConfidence' => null
     ];
 
     /**
@@ -202,6 +210,8 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * status  状态。
     * front  front
     * back  back
+    * alarmResult  alarmResult
+    * alarmConfidence  alarmConfidence
     *
     * @var string[]
     */
@@ -234,7 +244,9 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
             'mandatoryScrappingDate' => 'mandatory_scrapping_date',
             'status' => 'status',
             'front' => 'front',
-            'back' => 'back'
+            'back' => 'back',
+            'alarmResult' => 'alarm_result',
+            'alarmConfidence' => 'alarm_confidence'
     ];
 
     /**
@@ -268,6 +280,8 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * status  状态。
     * front  front
     * back  back
+    * alarmResult  alarmResult
+    * alarmConfidence  alarmConfidence
     *
     * @var string[]
     */
@@ -300,7 +314,9 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
             'mandatoryScrappingDate' => 'setMandatoryScrappingDate',
             'status' => 'setStatus',
             'front' => 'setFront',
-            'back' => 'setBack'
+            'back' => 'setBack',
+            'alarmResult' => 'setAlarmResult',
+            'alarmConfidence' => 'setAlarmConfidence'
     ];
 
     /**
@@ -334,6 +350,8 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * status  状态。
     * front  front
     * back  back
+    * alarmResult  alarmResult
+    * alarmConfidence  alarmConfidence
     *
     * @var string[]
     */
@@ -366,7 +384,9 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
             'mandatoryScrappingDate' => 'getMandatoryScrappingDate',
             'status' => 'getStatus',
             'front' => 'getFront',
-            'back' => 'getBack'
+            'back' => 'getBack',
+            'alarmResult' => 'getAlarmResult',
+            'alarmConfidence' => 'getAlarmConfidence'
     ];
 
     /**
@@ -456,6 +476,8 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['front'] = isset($data['front']) ? $data['front'] : null;
         $this->container['back'] = isset($data['back']) ? $data['back'] : null;
+        $this->container['alarmResult'] = isset($data['alarmResult']) ? $data['alarmResult'] : null;
+        $this->container['alarmConfidence'] = isset($data['alarmConfidence']) ? $data['alarmConfidence'] : null;
     }
 
     /**
@@ -1156,7 +1178,7 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * Gets back
     *  back
     *
-    * @return \HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseback|null
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseBack|null
     */
     public function getBack()
     {
@@ -1166,13 +1188,61 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Sets back
     *
-    * @param \HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseback|null $back back
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseBack|null $back back
     *
     * @return $this
     */
     public function setBack($back)
     {
         $this->container['back'] = $back;
+        return $this;
+    }
+
+    /**
+    * Gets alarmResult
+    *  alarmResult
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseAlarmResult|null
+    */
+    public function getAlarmResult()
+    {
+        return $this->container['alarmResult'];
+    }
+
+    /**
+    * Sets alarmResult
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseAlarmResult|null $alarmResult alarmResult
+    *
+    * @return $this
+    */
+    public function setAlarmResult($alarmResult)
+    {
+        $this->container['alarmResult'] = $alarmResult;
+        return $this;
+    }
+
+    /**
+    * Gets alarmConfidence
+    *  alarmConfidence
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseAlarmConfidence|null
+    */
+    public function getAlarmConfidence()
+    {
+        return $this->container['alarmConfidence'];
+    }
+
+    /**
+    * Sets alarmConfidence
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseAlarmConfidence|null $alarmConfidence alarmConfidence
+    *
+    * @return $this
+    */
+    public function setAlarmConfidence($alarmConfidence)
+    {
+        $this->container['alarmConfidence'] = $alarmConfidence;
         return $this;
     }
 

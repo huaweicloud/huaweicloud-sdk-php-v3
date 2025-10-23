@@ -24,15 +24,13 @@ class CreateReportPrometheusEventResponse implements ModelInterface, ArrayAccess
     * providerCode  服务标识
     * errorCode  请求响应代码，范围：0000~9999，正常时取值：0
     * errorMsg  请求响应描述
-    * data  响应数据
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'providerCode' => 'string',
             'errorCode' => 'string',
-            'errorMsg' => 'string',
-            'data' => 'object'
+            'errorMsg' => 'string'
     ];
 
     /**
@@ -40,15 +38,13 @@ class CreateReportPrometheusEventResponse implements ModelInterface, ArrayAccess
     * providerCode  服务标识
     * errorCode  请求响应代码，范围：0000~9999，正常时取值：0
     * errorMsg  请求响应描述
-    * data  响应数据
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'providerCode' => null,
         'errorCode' => null,
-        'errorMsg' => null,
-        'data' => null
+        'errorMsg' => null
     ];
 
     /**
@@ -77,15 +73,13 @@ class CreateReportPrometheusEventResponse implements ModelInterface, ArrayAccess
     * providerCode  服务标识
     * errorCode  请求响应代码，范围：0000~9999，正常时取值：0
     * errorMsg  请求响应描述
-    * data  响应数据
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'providerCode' => 'provider_code',
             'errorCode' => 'error_code',
-            'errorMsg' => 'error_msg',
-            'data' => 'data'
+            'errorMsg' => 'error_msg'
     ];
 
     /**
@@ -93,15 +87,13 @@ class CreateReportPrometheusEventResponse implements ModelInterface, ArrayAccess
     * providerCode  服务标识
     * errorCode  请求响应代码，范围：0000~9999，正常时取值：0
     * errorMsg  请求响应描述
-    * data  响应数据
     *
     * @var string[]
     */
     protected static $setters = [
             'providerCode' => 'setProviderCode',
             'errorCode' => 'setErrorCode',
-            'errorMsg' => 'setErrorMsg',
-            'data' => 'setData'
+            'errorMsg' => 'setErrorMsg'
     ];
 
     /**
@@ -109,15 +101,13 @@ class CreateReportPrometheusEventResponse implements ModelInterface, ArrayAccess
     * providerCode  服务标识
     * errorCode  请求响应代码，范围：0000~9999，正常时取值：0
     * errorMsg  请求响应描述
-    * data  响应数据
     *
     * @var string[]
     */
     protected static $getters = [
             'providerCode' => 'getProviderCode',
             'errorCode' => 'getErrorCode',
-            'errorMsg' => 'getErrorMsg',
-            'data' => 'getData'
+            'errorMsg' => 'getErrorMsg'
     ];
 
     /**
@@ -181,7 +171,6 @@ class CreateReportPrometheusEventResponse implements ModelInterface, ArrayAccess
         $this->container['providerCode'] = isset($data['providerCode']) ? $data['providerCode'] : null;
         $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
         $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -293,30 +282,6 @@ class CreateReportPrometheusEventResponse implements ModelInterface, ArrayAccess
     public function setErrorMsg($errorMsg)
     {
         $this->container['errorMsg'] = $errorMsg;
-        return $this;
-    }
-
-    /**
-    * Gets data
-    *  响应数据
-    *
-    * @return object|null
-    */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-    * Sets data
-    *
-    * @param object|null $data 响应数据
-    *
-    * @return $this
-    */
-    public function setData($data)
-    {
-        $this->container['data'] = $data;
         return $this;
     }
 

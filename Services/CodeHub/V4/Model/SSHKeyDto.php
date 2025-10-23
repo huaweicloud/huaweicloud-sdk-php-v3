@@ -20,8 +20,8 @@ class SSHKeyDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  **参数解释：** 秘钥id。
-    * title  **参数解释：** 秘钥名称。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * id  **参数解释：** 密钥id。
+    * title  **参数解释：** 密钥名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * key  **参数解释：** 公钥。 **取值范围：** 字符串长度不少于1，不超过1000。
     * createdAt  **参数解释：** 创建时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
@@ -36,8 +36,8 @@ class SSHKeyDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  **参数解释：** 秘钥id。
-    * title  **参数解释：** 秘钥名称。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * id  **参数解释：** 密钥id。
+    * title  **参数解释：** 密钥名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * key  **参数解释：** 公钥。 **取值范围：** 字符串长度不少于1，不超过1000。
     * createdAt  **参数解释：** 创建时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
@@ -73,8 +73,8 @@ class SSHKeyDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  **参数解释：** 秘钥id。
-    * title  **参数解释：** 秘钥名称。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * id  **参数解释：** 密钥id。
+    * title  **参数解释：** 密钥名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * key  **参数解释：** 公钥。 **取值范围：** 字符串长度不少于1，不超过1000。
     * createdAt  **参数解释：** 创建时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
@@ -89,8 +89,8 @@ class SSHKeyDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  **参数解释：** 秘钥id。
-    * title  **参数解释：** 秘钥名称。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * id  **参数解释：** 密钥id。
+    * title  **参数解释：** 密钥名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * key  **参数解释：** 公钥。 **取值范围：** 字符串长度不少于1，不超过1000。
     * createdAt  **参数解释：** 创建时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
@@ -105,8 +105,8 @@ class SSHKeyDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  **参数解释：** 秘钥id。
-    * title  **参数解释：** 秘钥名称。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * id  **参数解释：** 密钥id。
+    * title  **参数解释：** 密钥名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * key  **参数解释：** 公钥。 **取值范围：** 字符串长度不少于1，不超过1000。
     * createdAt  **参数解释：** 创建时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
@@ -231,7 +231,7 @@ class SSHKeyDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  **参数解释：** 秘钥id。
+    *  **参数解释：** 密钥id。
     *
     * @return int|null
     */
@@ -243,7 +243,7 @@ class SSHKeyDto implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id **参数解释：** 秘钥id。
+    * @param int|null $id **参数解释：** 密钥id。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class SSHKeyDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets title
-    *  **参数解释：** 秘钥名称。 **取值范围：** 字符串长度不少于1，不超过1000。
+    *  **参数解释：** 密钥名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class SSHKeyDto implements ModelInterface, ArrayAccess
     /**
     * Sets title
     *
-    * @param string|null $title **参数解释：** 秘钥名称。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * @param string|null $title **参数解释：** 密钥名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
     * @return $this
     */

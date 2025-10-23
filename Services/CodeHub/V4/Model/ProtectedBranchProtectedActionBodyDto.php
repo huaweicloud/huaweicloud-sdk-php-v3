@@ -25,6 +25,7 @@ class ProtectedBranchProtectedActionBodyDto implements ModelInterface, ArrayAcce
     * userTeamIds  **参数解释：** 成员组ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * relatedRoleIds  **参数解释：** 关联角色ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * action  **参数解释：** 事件名称。 **约束限制：** action中必传此字段。 **取值范围：** - push，推送 。 - merge，合并 。 **默认取值：** 不涉及。
+    * additionSwitchers  **参数解释：** 附加开关。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ProtectedBranchProtectedActionBodyDto implements ModelInterface, ArrayAcce
             'userIds' => 'object[]',
             'userTeamIds' => 'int[]',
             'relatedRoleIds' => 'string[]',
-            'action' => 'string'
+            'action' => 'string',
+            'additionSwitchers' => '\HuaweiCloud\SDK\CodeHub\V4\Model\ProtectedActionSwitcher[]'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ProtectedBranchProtectedActionBodyDto implements ModelInterface, ArrayAcce
     * userTeamIds  **参数解释：** 成员组ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * relatedRoleIds  **参数解释：** 关联角色ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * action  **参数解释：** 事件名称。 **约束限制：** action中必传此字段。 **取值范围：** - push，推送 。 - merge，合并 。 **默认取值：** 不涉及。
+    * additionSwitchers  **参数解释：** 附加开关。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ProtectedBranchProtectedActionBodyDto implements ModelInterface, ArrayAcce
         'userIds' => 'int32',
         'userTeamIds' => 'int32',
         'relatedRoleIds' => null,
-        'action' => null
+        'action' => null,
+        'additionSwitchers' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class ProtectedBranchProtectedActionBodyDto implements ModelInterface, ArrayAcce
     * userTeamIds  **参数解释：** 成员组ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * relatedRoleIds  **参数解释：** 关联角色ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * action  **参数解释：** 事件名称。 **约束限制：** action中必传此字段。 **取值范围：** - push，推送 。 - merge，合并 。 **默认取值：** 不涉及。
+    * additionSwitchers  **参数解释：** 附加开关。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ProtectedBranchProtectedActionBodyDto implements ModelInterface, ArrayAcce
             'userIds' => 'user_ids',
             'userTeamIds' => 'user_team_ids',
             'relatedRoleIds' => 'related_role_ids',
-            'action' => 'action'
+            'action' => 'action',
+            'additionSwitchers' => 'addition_switchers'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ProtectedBranchProtectedActionBodyDto implements ModelInterface, ArrayAcce
     * userTeamIds  **参数解释：** 成员组ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * relatedRoleIds  **参数解释：** 关联角色ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * action  **参数解释：** 事件名称。 **约束限制：** action中必传此字段。 **取值范围：** - push，推送 。 - merge，合并 。 **默认取值：** 不涉及。
+    * additionSwitchers  **参数解释：** 附加开关。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ProtectedBranchProtectedActionBodyDto implements ModelInterface, ArrayAcce
             'userIds' => 'setUserIds',
             'userTeamIds' => 'setUserTeamIds',
             'relatedRoleIds' => 'setRelatedRoleIds',
-            'action' => 'setAction'
+            'action' => 'setAction',
+            'additionSwitchers' => 'setAdditionSwitchers'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ProtectedBranchProtectedActionBodyDto implements ModelInterface, ArrayAcce
     * userTeamIds  **参数解释：** 成员组ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * relatedRoleIds  **参数解释：** 关联角色ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * action  **参数解释：** 事件名称。 **约束限制：** action中必传此字段。 **取值范围：** - push，推送 。 - merge，合并 。 **默认取值：** 不涉及。
+    * additionSwitchers  **参数解释：** 附加开关。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ProtectedBranchProtectedActionBodyDto implements ModelInterface, ArrayAcce
             'userIds' => 'getUserIds',
             'userTeamIds' => 'getUserTeamIds',
             'relatedRoleIds' => 'getRelatedRoleIds',
-            'action' => 'getAction'
+            'action' => 'getAction',
+            'additionSwitchers' => 'getAdditionSwitchers'
     ];
 
     /**
@@ -207,6 +217,7 @@ class ProtectedBranchProtectedActionBodyDto implements ModelInterface, ArrayAcce
         $this->container['userTeamIds'] = isset($data['userTeamIds']) ? $data['userTeamIds'] : null;
         $this->container['relatedRoleIds'] = isset($data['relatedRoleIds']) ? $data['relatedRoleIds'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['additionSwitchers'] = isset($data['additionSwitchers']) ? $data['additionSwitchers'] : null;
     }
 
     /**
@@ -356,6 +367,30 @@ class ProtectedBranchProtectedActionBodyDto implements ModelInterface, ArrayAcce
     public function setAction($action)
     {
         $this->container['action'] = $action;
+        return $this;
+    }
+
+    /**
+    * Gets additionSwitchers
+    *  **参数解释：** 附加开关。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *
+    * @return \HuaweiCloud\SDK\CodeHub\V4\Model\ProtectedActionSwitcher[]|null
+    */
+    public function getAdditionSwitchers()
+    {
+        return $this->container['additionSwitchers'];
+    }
+
+    /**
+    * Sets additionSwitchers
+    *
+    * @param \HuaweiCloud\SDK\CodeHub\V4\Model\ProtectedActionSwitcher[]|null $additionSwitchers **参数解释：** 附加开关。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setAdditionSwitchers($additionSwitchers)
+    {
+        $this->container['additionSwitchers'] = $additionSwitchers;
         return $this;
     }
 

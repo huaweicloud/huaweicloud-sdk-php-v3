@@ -27,7 +27,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     * pin  指定PIN码保护。仅四级密评场景支持该参数。
     * pinType  pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
-    * keySpec  指定生成的密钥算法。有效值： SM2、RSA。
+    * keySpec  指定待加密数据密钥的类型，仅四级密评场景生效。有效值： SM2、RSA。
     *
     * @var string[]
     */
@@ -51,7 +51,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     * pin  指定PIN码保护。仅四级密评场景支持该参数。
     * pinType  pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
-    * keySpec  指定生成的密钥算法。有效值： SM2、RSA。
+    * keySpec  指定待加密数据密钥的类型，仅四级密评场景生效。有效值： SM2、RSA。
     *
     * @var string[]
     */
@@ -96,7 +96,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     * pin  指定PIN码保护。仅四级密评场景支持该参数。
     * pinType  pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
-    * keySpec  指定生成的密钥算法。有效值： SM2、RSA。
+    * keySpec  指定待加密数据密钥的类型，仅四级密评场景生效。有效值： SM2、RSA。
     *
     * @var string[]
     */
@@ -120,7 +120,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     * pin  指定PIN码保护。仅四级密评场景支持该参数。
     * pinType  pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
-    * keySpec  指定生成的密钥算法。有效值： SM2、RSA。
+    * keySpec  指定待加密数据密钥的类型，仅四级密评场景生效。有效值： SM2、RSA。
     *
     * @var string[]
     */
@@ -144,7 +144,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     * pin  指定PIN码保护。仅四级密评场景支持该参数。
     * pinType  pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
-    * keySpec  指定生成的密钥算法。有效值： SM2、RSA。
+    * keySpec  指定待加密数据密钥的类型，仅四级密评场景生效。有效值： SM2、RSA。
     *
     * @var string[]
     */
@@ -481,7 +481,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets keySpec
-    *  指定生成的密钥算法。有效值： SM2、RSA。
+    *  指定待加密数据密钥的类型，仅四级密评场景生效。有效值： SM2、RSA。
     *
     * @return string|null
     */
@@ -493,7 +493,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets keySpec
     *
-    * @param string|null $keySpec 指定生成的密钥算法。有效值： SM2、RSA。
+    * @param string|null $keySpec 指定待加密数据密钥的类型，仅四级密评场景生效。有效值： SM2、RSA。
     *
     * @return $this
     */

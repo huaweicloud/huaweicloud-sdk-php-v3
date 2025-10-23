@@ -23,13 +23,15 @@ class SessionTopSqlStatisticInfo implements ModelInterface, ArrayAccess
     * nodeName  **参数解释**: 节点名称。 **取值范围**: 不涉及。
     * uniqueSqlId  **参数解释**: 归一化SQL ID。 **取值范围**: 不涉及。
     * query  **参数解释**: 查询语句。 **取值范围**: 不涉及。
+    * count  **参数解释**: SQL执行数量。 **取值范围**: 大于等于0。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'nodeName' => 'string',
             'uniqueSqlId' => 'string',
-            'query' => 'string'
+            'query' => 'string',
+            'count' => 'int'
     ];
 
     /**
@@ -37,13 +39,15 @@ class SessionTopSqlStatisticInfo implements ModelInterface, ArrayAccess
     * nodeName  **参数解释**: 节点名称。 **取值范围**: 不涉及。
     * uniqueSqlId  **参数解释**: 归一化SQL ID。 **取值范围**: 不涉及。
     * query  **参数解释**: 查询语句。 **取值范围**: 不涉及。
+    * count  **参数解释**: SQL执行数量。 **取值范围**: 大于等于0。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'nodeName' => null,
         'uniqueSqlId' => null,
-        'query' => null
+        'query' => null,
+        'count' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class SessionTopSqlStatisticInfo implements ModelInterface, ArrayAccess
     * nodeName  **参数解释**: 节点名称。 **取值范围**: 不涉及。
     * uniqueSqlId  **参数解释**: 归一化SQL ID。 **取值范围**: 不涉及。
     * query  **参数解释**: 查询语句。 **取值范围**: 不涉及。
+    * count  **参数解释**: SQL执行数量。 **取值范围**: 大于等于0。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'nodeName' => 'node_name',
             'uniqueSqlId' => 'unique_sql_id',
-            'query' => 'query'
+            'query' => 'query',
+            'count' => 'count'
     ];
 
     /**
@@ -86,13 +92,15 @@ class SessionTopSqlStatisticInfo implements ModelInterface, ArrayAccess
     * nodeName  **参数解释**: 节点名称。 **取值范围**: 不涉及。
     * uniqueSqlId  **参数解释**: 归一化SQL ID。 **取值范围**: 不涉及。
     * query  **参数解释**: 查询语句。 **取值范围**: 不涉及。
+    * count  **参数解释**: SQL执行数量。 **取值范围**: 大于等于0。
     *
     * @var string[]
     */
     protected static $setters = [
             'nodeName' => 'setNodeName',
             'uniqueSqlId' => 'setUniqueSqlId',
-            'query' => 'setQuery'
+            'query' => 'setQuery',
+            'count' => 'setCount'
     ];
 
     /**
@@ -100,13 +108,15 @@ class SessionTopSqlStatisticInfo implements ModelInterface, ArrayAccess
     * nodeName  **参数解释**: 节点名称。 **取值范围**: 不涉及。
     * uniqueSqlId  **参数解释**: 归一化SQL ID。 **取值范围**: 不涉及。
     * query  **参数解释**: 查询语句。 **取值范围**: 不涉及。
+    * count  **参数解释**: SQL执行数量。 **取值范围**: 大于等于0。
     *
     * @var string[]
     */
     protected static $getters = [
             'nodeName' => 'getNodeName',
             'uniqueSqlId' => 'getUniqueSqlId',
-            'query' => 'getQuery'
+            'query' => 'getQuery',
+            'count' => 'getCount'
     ];
 
     /**
@@ -170,6 +180,7 @@ class SessionTopSqlStatisticInfo implements ModelInterface, ArrayAccess
         $this->container['nodeName'] = isset($data['nodeName']) ? $data['nodeName'] : null;
         $this->container['uniqueSqlId'] = isset($data['uniqueSqlId']) ? $data['uniqueSqlId'] : null;
         $this->container['query'] = isset($data['query']) ? $data['query'] : null;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
     }
 
     /**
@@ -263,6 +274,30 @@ class SessionTopSqlStatisticInfo implements ModelInterface, ArrayAccess
     public function setQuery($query)
     {
         $this->container['query'] = $query;
+        return $this;
+    }
+
+    /**
+    * Gets count
+    *  **参数解释**: SQL执行数量。 **取值范围**: 大于等于0。
+    *
+    * @return int|null
+    */
+    public function getCount()
+    {
+        return $this->container['count'];
+    }
+
+    /**
+    * Sets count
+    *
+    * @param int|null $count **参数解释**: SQL执行数量。 **取值范围**: 大于等于0。
+    *
+    * @return $this
+    */
+    public function setCount($count)
+    {
+        $this->container['count'] = $count;
         return $this;
     }
 

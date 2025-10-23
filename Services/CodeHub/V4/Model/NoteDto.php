@@ -21,7 +21,7 @@ class NoteDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释：** 评论id(主评论和回复不共用)。
-    * type  **参数解释：** 类型(普通评论、需要解决的普通评论、需要解决的关联代码行的评论)。
+    * type  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。
     * body  **参数解释：** 评论内容。
     * attachment  **参数解释：** 附件(弃用)。
     * author  author
@@ -29,7 +29,7 @@ class NoteDto implements ModelInterface, ArrayAccess
     * updatedAt  **参数解释：** 更新时间。
     * system  **参数解释：** 是否为系统添加的。
     * noteableId  **参数解释：** 合并请求id或issue id。
-    * noteableType  **参数解释：** 意见类型。
+    * noteableType  **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
     * commitId  **参数解释：** 提交记录id。
     * resolvable  **参数解释：** 是否需要解决。
     * isReply  **参数解释：** 是否为回复。
@@ -103,7 +103,7 @@ class NoteDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释：** 评论id(主评论和回复不共用)。
-    * type  **参数解释：** 类型(普通评论、需要解决的普通评论、需要解决的关联代码行的评论)。
+    * type  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。
     * body  **参数解释：** 评论内容。
     * attachment  **参数解释：** 附件(弃用)。
     * author  author
@@ -111,7 +111,7 @@ class NoteDto implements ModelInterface, ArrayAccess
     * updatedAt  **参数解释：** 更新时间。
     * system  **参数解释：** 是否为系统添加的。
     * noteableId  **参数解释：** 合并请求id或issue id。
-    * noteableType  **参数解释：** 意见类型。
+    * noteableType  **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
     * commitId  **参数解释：** 提交记录id。
     * resolvable  **参数解释：** 是否需要解决。
     * isReply  **参数解释：** 是否为回复。
@@ -206,7 +206,7 @@ class NoteDto implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  **参数解释：** 评论id(主评论和回复不共用)。
-    * type  **参数解释：** 类型(普通评论、需要解决的普通评论、需要解决的关联代码行的评论)。
+    * type  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。
     * body  **参数解释：** 评论内容。
     * attachment  **参数解释：** 附件(弃用)。
     * author  author
@@ -214,7 +214,7 @@ class NoteDto implements ModelInterface, ArrayAccess
     * updatedAt  **参数解释：** 更新时间。
     * system  **参数解释：** 是否为系统添加的。
     * noteableId  **参数解释：** 合并请求id或issue id。
-    * noteableType  **参数解释：** 意见类型。
+    * noteableType  **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
     * commitId  **参数解释：** 提交记录id。
     * resolvable  **参数解释：** 是否需要解决。
     * isReply  **参数解释：** 是否为回复。
@@ -288,7 +288,7 @@ class NoteDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释：** 评论id(主评论和回复不共用)。
-    * type  **参数解释：** 类型(普通评论、需要解决的普通评论、需要解决的关联代码行的评论)。
+    * type  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。
     * body  **参数解释：** 评论内容。
     * attachment  **参数解释：** 附件(弃用)。
     * author  author
@@ -296,7 +296,7 @@ class NoteDto implements ModelInterface, ArrayAccess
     * updatedAt  **参数解释：** 更新时间。
     * system  **参数解释：** 是否为系统添加的。
     * noteableId  **参数解释：** 合并请求id或issue id。
-    * noteableType  **参数解释：** 意见类型。
+    * noteableType  **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
     * commitId  **参数解释：** 提交记录id。
     * resolvable  **参数解释：** 是否需要解决。
     * isReply  **参数解释：** 是否为回复。
@@ -370,7 +370,7 @@ class NoteDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释：** 评论id(主评论和回复不共用)。
-    * type  **参数解释：** 类型(普通评论、需要解决的普通评论、需要解决的关联代码行的评论)。
+    * type  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。
     * body  **参数解释：** 评论内容。
     * attachment  **参数解释：** 附件(弃用)。
     * author  author
@@ -378,7 +378,7 @@ class NoteDto implements ModelInterface, ArrayAccess
     * updatedAt  **参数解释：** 更新时间。
     * system  **参数解释：** 是否为系统添加的。
     * noteableId  **参数解释：** 合并请求id或issue id。
-    * noteableType  **参数解释：** 意见类型。
+    * noteableType  **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
     * commitId  **参数解释：** 提交记录id。
     * resolvable  **参数解释：** 是否需要解决。
     * isReply  **参数解释：** 是否为回复。
@@ -489,8 +489,6 @@ class NoteDto implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const TYPE_DISCUSSION_NOTE = 'DiscussionNote';
-    const TYPE_DIFF_NOTE = 'DiffNote';
     const NOTEABLE_TYPE_MERGE_REQUEST = 'MergeRequest';
     const NOTEABLE_TYPE_COMMIT = 'Commit';
     const SEVERITY_SUGGESTION = 'suggestion';
@@ -502,19 +500,6 @@ class NoteDto implements ModelInterface, ArrayAccess
     const SEVERITY_EN_MAJOR = 'Major';
     const SEVERITY_EN_FATAL = 'Fatal';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_DISCUSSION_NOTE,
-            self::TYPE_DIFF_NOTE,
-        ];
-    }
 
     /**
     * Gets allowable values of the enum
@@ -628,14 +613,6 @@ class NoteDto implements ModelInterface, ArrayAccess
             if (!is_null($this->container['id']) && ($this->container['id'] < 1)) {
                 $invalidProperties[] = "invalid value for 'id', must be bigger than or equal to 1.";
             }
-            $allowedValues = $this->getTypeAllowableValues();
-                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             if (!is_null($this->container['body']) && (mb_strlen($this->container['body']) > 8000)) {
                 $invalidProperties[] = "invalid value for 'body', the character length must be smaller than or equal to 8000.";
             }
@@ -790,7 +767,7 @@ class NoteDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释：** 类型(普通评论、需要解决的普通评论、需要解决的关联代码行的评论)。
+    *  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。
     *
     * @return string|null
     */
@@ -802,7 +779,7 @@ class NoteDto implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释：** 类型(普通评论、需要解决的普通评论、需要解决的关联代码行的评论)。
+    * @param string|null $type **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。
     *
     * @return $this
     */
@@ -982,7 +959,7 @@ class NoteDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets noteableType
-    *  **参数解释：** 意见类型。
+    *  **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
     *
     * @return string|null
     */
@@ -994,7 +971,7 @@ class NoteDto implements ModelInterface, ArrayAccess
     /**
     * Sets noteableType
     *
-    * @param string|null $noteableType **参数解释：** 意见类型。
+    * @param string|null $noteableType **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
     *
     * @return $this
     */

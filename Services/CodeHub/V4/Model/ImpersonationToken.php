@@ -20,7 +20,7 @@ class ImpersonationToken implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  **参数解释：** 唯一标示id。
+    * id  **参数解释：** 唯一标识id。
     * name  **参数解释：** 名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * revoked  **参数解释：** 是否撤销。
     * createdAt  **参数解释：** 创建时间。 **取值范围：** 字符串长度不少于1，不超过1000。
@@ -46,7 +46,7 @@ class ImpersonationToken implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  **参数解释：** 唯一标示id。
+    * id  **参数解释：** 唯一标识id。
     * name  **参数解释：** 名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * revoked  **参数解释：** 是否撤销。
     * createdAt  **参数解释：** 创建时间。 **取值范围：** 字符串长度不少于1，不超过1000。
@@ -93,7 +93,7 @@ class ImpersonationToken implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  **参数解释：** 唯一标示id。
+    * id  **参数解释：** 唯一标识id。
     * name  **参数解释：** 名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * revoked  **参数解释：** 是否撤销。
     * createdAt  **参数解释：** 创建时间。 **取值范围：** 字符串长度不少于1，不超过1000。
@@ -119,7 +119,7 @@ class ImpersonationToken implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  **参数解释：** 唯一标示id。
+    * id  **参数解释：** 唯一标识id。
     * name  **参数解释：** 名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * revoked  **参数解释：** 是否撤销。
     * createdAt  **参数解释：** 创建时间。 **取值范围：** 字符串长度不少于1，不超过1000。
@@ -145,7 +145,7 @@ class ImpersonationToken implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  **参数解释：** 唯一标示id。
+    * id  **参数解释：** 唯一标识id。
     * name  **参数解释：** 名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * revoked  **参数解释：** 是否撤销。
     * createdAt  **参数解释：** 创建时间。 **取值范围：** 字符串长度不少于1，不超过1000。
@@ -292,7 +292,7 @@ class ImpersonationToken implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  **参数解释：** 唯一标示id。
+    *  **参数解释：** 唯一标识id。
     *
     * @return int|null
     */
@@ -304,7 +304,7 @@ class ImpersonationToken implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id **参数解释：** 唯一标示id。
+    * @param int|null $id **参数解释：** 唯一标识id。
     *
     * @return $this
     */

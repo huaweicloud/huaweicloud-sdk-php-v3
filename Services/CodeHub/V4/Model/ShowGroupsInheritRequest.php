@@ -21,7 +21,7 @@ class ShowGroupsInheritRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
-    * settingType  **参数解释：** 设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
+    * settingType  **参数解释：** 必填项，设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ShowGroupsInheritRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
-    * settingType  **参数解释：** 设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
+    * settingType  **参数解释：** 必填项，设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ShowGroupsInheritRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
-    * settingType  **参数解释：** 设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
+    * settingType  **参数解释：** 必填项，设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ShowGroupsInheritRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
-    * settingType  **参数解释：** 设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
+    * settingType  **参数解释：** 必填项，设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ShowGroupsInheritRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
-    * settingType  **参数解释：** 设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
+    * settingType  **参数解释：** 必填项，设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
     *
     * @var string[]
     */
@@ -211,6 +211,9 @@ class ShowGroupsInheritRequest implements ModelInterface, ArrayAccess
             if (($this->container['groupId'] < 1)) {
                 $invalidProperties[] = "invalid value for 'groupId', must be bigger than or equal to 1.";
             }
+        if ($this->container['settingType'] === null) {
+            $invalidProperties[] = "'settingType' can't be null";
+        }
             $allowedValues = $this->getSettingTypeAllowableValues();
                 if (!is_null($this->container['settingType']) && !in_array($this->container['settingType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -219,10 +222,10 @@ class ShowGroupsInheritRequest implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['settingType']) && (mb_strlen($this->container['settingType']) > 2000)) {
+            if ((mb_strlen($this->container['settingType']) > 2000)) {
                 $invalidProperties[] = "invalid value for 'settingType', the character length must be smaller than or equal to 2000.";
             }
-            if (!is_null($this->container['settingType']) && (mb_strlen($this->container['settingType']) < 1)) {
+            if ((mb_strlen($this->container['settingType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'settingType', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -265,9 +268,9 @@ class ShowGroupsInheritRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets settingType
-    *  **参数解释：** 设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
+    *  **参数解释：** 必填项，设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
     *
-    * @return string|null
+    * @return string
     */
     public function getSettingType()
     {
@@ -277,7 +280,7 @@ class ShowGroupsInheritRequest implements ModelInterface, ArrayAccess
     /**
     * Sets settingType
     *
-    * @param string|null $settingType **参数解释：** 设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
+    * @param string $settingType **参数解释：** 必填项，设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
     *
     * @return $this
     */
