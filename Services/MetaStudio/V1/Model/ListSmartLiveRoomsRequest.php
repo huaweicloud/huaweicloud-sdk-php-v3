@@ -220,7 +220,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'roomName' => 'getRoomName',
             'dhId' => 'getDhId',
-            'modelName' => 'getModelName',
+            'modelName' => 'getModelNamenew',
             'liveState' => 'getLiveState',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
@@ -614,7 +614,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     *
     * @return string|null
     */
-    public function getModelName()
+    public function getModelNamenew()
     {
         return $this->container['modelName'];
     }
