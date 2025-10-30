@@ -32,6 +32,14 @@ class DashPackageItem implements ModelInterface, ArrayAccess
     * suggestedPresentationDelay  建议播放延迟。单位：秒。取值范围：[1 - 120]
     * minimumUpdatePeriod  索引最短更新周期。单位：秒。取值范围：[1 - 120]
     * minBufferTime  最小缓冲时间。单位：秒。取值范围：[1 - 120]
+    * enableAccess  当频道mode是ONLY_OS类型时，允许本输出可以直接从源站拉流，默认：false true：允许output访问 false：禁止output访问
+    * allowAllIpAccess  是否放通所有的IP访问，默认：false true：允许所有的IP地址访问，ip_whitelist配置不生效 false：不允许所有的IP地址访问，ip_whitelist生效，仅在ip_whitelist配置的ip地址才能访问
+    * ipWhitelist  当频道类型mode是ONLY_OS类型时，允许直接从源站拉流的IP白名单
+    * cdnIdentifierHeader  cdnIdentifierHeader
+    * originDomainMaster  源站分发域名-主region 跟CreateOttChannelInfoReq.region一致 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
+    * originDomainSlave  源站分发域名-备region 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
+    * manifestName  output的索引文件名字 默认：index 长度：0-128 字符集：大小写字母、数字、\"-\"、\".\"、\"_\"，不能有/路径
+    * slaveUrl  客户自定义的拉流地址，包括方法、域名、路径
     *
     * @var string[]
     */
@@ -47,7 +55,15 @@ class DashPackageItem implements ModelInterface, ArrayAccess
             'adMarker' => 'string',
             'suggestedPresentationDelay' => 'int',
             'minimumUpdatePeriod' => 'int',
-            'minBufferTime' => 'int'
+            'minBufferTime' => 'int',
+            'enableAccess' => 'bool',
+            'allowAllIpAccess' => 'bool',
+            'ipWhitelist' => 'string',
+            'cdnIdentifierHeader' => '\HuaweiCloud\SDK\Live\V1\Model\HttpHeader',
+            'originDomainMaster' => 'string',
+            'originDomainSlave' => 'string',
+            'manifestName' => 'string',
+            'slaveUrl' => 'string'
     ];
 
     /**
@@ -64,6 +80,14 @@ class DashPackageItem implements ModelInterface, ArrayAccess
     * suggestedPresentationDelay  建议播放延迟。单位：秒。取值范围：[1 - 120]
     * minimumUpdatePeriod  索引最短更新周期。单位：秒。取值范围：[1 - 120]
     * minBufferTime  最小缓冲时间。单位：秒。取值范围：[1 - 120]
+    * enableAccess  当频道mode是ONLY_OS类型时，允许本输出可以直接从源站拉流，默认：false true：允许output访问 false：禁止output访问
+    * allowAllIpAccess  是否放通所有的IP访问，默认：false true：允许所有的IP地址访问，ip_whitelist配置不生效 false：不允许所有的IP地址访问，ip_whitelist生效，仅在ip_whitelist配置的ip地址才能访问
+    * ipWhitelist  当频道类型mode是ONLY_OS类型时，允许直接从源站拉流的IP白名单
+    * cdnIdentifierHeader  cdnIdentifierHeader
+    * originDomainMaster  源站分发域名-主region 跟CreateOttChannelInfoReq.region一致 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
+    * originDomainSlave  源站分发域名-备region 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
+    * manifestName  output的索引文件名字 默认：index 长度：0-128 字符集：大小写字母、数字、\"-\"、\".\"、\"_\"，不能有/路径
+    * slaveUrl  客户自定义的拉流地址，包括方法、域名、路径
     *
     * @var string[]
     */
@@ -79,7 +103,15 @@ class DashPackageItem implements ModelInterface, ArrayAccess
         'adMarker' => null,
         'suggestedPresentationDelay' => 'int32',
         'minimumUpdatePeriod' => 'int32',
-        'minBufferTime' => 'int32'
+        'minBufferTime' => 'int32',
+        'enableAccess' => null,
+        'allowAllIpAccess' => null,
+        'ipWhitelist' => null,
+        'cdnIdentifierHeader' => null,
+        'originDomainMaster' => null,
+        'originDomainSlave' => null,
+        'manifestName' => null,
+        'slaveUrl' => null
     ];
 
     /**
@@ -117,6 +149,14 @@ class DashPackageItem implements ModelInterface, ArrayAccess
     * suggestedPresentationDelay  建议播放延迟。单位：秒。取值范围：[1 - 120]
     * minimumUpdatePeriod  索引最短更新周期。单位：秒。取值范围：[1 - 120]
     * minBufferTime  最小缓冲时间。单位：秒。取值范围：[1 - 120]
+    * enableAccess  当频道mode是ONLY_OS类型时，允许本输出可以直接从源站拉流，默认：false true：允许output访问 false：禁止output访问
+    * allowAllIpAccess  是否放通所有的IP访问，默认：false true：允许所有的IP地址访问，ip_whitelist配置不生效 false：不允许所有的IP地址访问，ip_whitelist生效，仅在ip_whitelist配置的ip地址才能访问
+    * ipWhitelist  当频道类型mode是ONLY_OS类型时，允许直接从源站拉流的IP白名单
+    * cdnIdentifierHeader  cdnIdentifierHeader
+    * originDomainMaster  源站分发域名-主region 跟CreateOttChannelInfoReq.region一致 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
+    * originDomainSlave  源站分发域名-备region 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
+    * manifestName  output的索引文件名字 默认：index 长度：0-128 字符集：大小写字母、数字、\"-\"、\".\"、\"_\"，不能有/路径
+    * slaveUrl  客户自定义的拉流地址，包括方法、域名、路径
     *
     * @var string[]
     */
@@ -132,7 +172,15 @@ class DashPackageItem implements ModelInterface, ArrayAccess
             'adMarker' => 'ad_marker',
             'suggestedPresentationDelay' => 'suggested_presentation_delay',
             'minimumUpdatePeriod' => 'minimum_update_period',
-            'minBufferTime' => 'min_buffer_time'
+            'minBufferTime' => 'min_buffer_time',
+            'enableAccess' => 'enable_access',
+            'allowAllIpAccess' => 'allow_all_ip_access',
+            'ipWhitelist' => 'ip_whitelist',
+            'cdnIdentifierHeader' => 'cdn_identifier_header',
+            'originDomainMaster' => 'origin_domain_master',
+            'originDomainSlave' => 'origin_domain_slave',
+            'manifestName' => 'manifest_name',
+            'slaveUrl' => 'slave_url'
     ];
 
     /**
@@ -149,6 +197,14 @@ class DashPackageItem implements ModelInterface, ArrayAccess
     * suggestedPresentationDelay  建议播放延迟。单位：秒。取值范围：[1 - 120]
     * minimumUpdatePeriod  索引最短更新周期。单位：秒。取值范围：[1 - 120]
     * minBufferTime  最小缓冲时间。单位：秒。取值范围：[1 - 120]
+    * enableAccess  当频道mode是ONLY_OS类型时，允许本输出可以直接从源站拉流，默认：false true：允许output访问 false：禁止output访问
+    * allowAllIpAccess  是否放通所有的IP访问，默认：false true：允许所有的IP地址访问，ip_whitelist配置不生效 false：不允许所有的IP地址访问，ip_whitelist生效，仅在ip_whitelist配置的ip地址才能访问
+    * ipWhitelist  当频道类型mode是ONLY_OS类型时，允许直接从源站拉流的IP白名单
+    * cdnIdentifierHeader  cdnIdentifierHeader
+    * originDomainMaster  源站分发域名-主region 跟CreateOttChannelInfoReq.region一致 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
+    * originDomainSlave  源站分发域名-备region 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
+    * manifestName  output的索引文件名字 默认：index 长度：0-128 字符集：大小写字母、数字、\"-\"、\".\"、\"_\"，不能有/路径
+    * slaveUrl  客户自定义的拉流地址，包括方法、域名、路径
     *
     * @var string[]
     */
@@ -164,7 +220,15 @@ class DashPackageItem implements ModelInterface, ArrayAccess
             'adMarker' => 'setAdMarker',
             'suggestedPresentationDelay' => 'setSuggestedPresentationDelay',
             'minimumUpdatePeriod' => 'setMinimumUpdatePeriod',
-            'minBufferTime' => 'setMinBufferTime'
+            'minBufferTime' => 'setMinBufferTime',
+            'enableAccess' => 'setEnableAccess',
+            'allowAllIpAccess' => 'setAllowAllIpAccess',
+            'ipWhitelist' => 'setIpWhitelist',
+            'cdnIdentifierHeader' => 'setCdnIdentifierHeader',
+            'originDomainMaster' => 'setOriginDomainMaster',
+            'originDomainSlave' => 'setOriginDomainSlave',
+            'manifestName' => 'setManifestName',
+            'slaveUrl' => 'setSlaveUrl'
     ];
 
     /**
@@ -181,6 +245,14 @@ class DashPackageItem implements ModelInterface, ArrayAccess
     * suggestedPresentationDelay  建议播放延迟。单位：秒。取值范围：[1 - 120]
     * minimumUpdatePeriod  索引最短更新周期。单位：秒。取值范围：[1 - 120]
     * minBufferTime  最小缓冲时间。单位：秒。取值范围：[1 - 120]
+    * enableAccess  当频道mode是ONLY_OS类型时，允许本输出可以直接从源站拉流，默认：false true：允许output访问 false：禁止output访问
+    * allowAllIpAccess  是否放通所有的IP访问，默认：false true：允许所有的IP地址访问，ip_whitelist配置不生效 false：不允许所有的IP地址访问，ip_whitelist生效，仅在ip_whitelist配置的ip地址才能访问
+    * ipWhitelist  当频道类型mode是ONLY_OS类型时，允许直接从源站拉流的IP白名单
+    * cdnIdentifierHeader  cdnIdentifierHeader
+    * originDomainMaster  源站分发域名-主region 跟CreateOttChannelInfoReq.region一致 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
+    * originDomainSlave  源站分发域名-备region 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
+    * manifestName  output的索引文件名字 默认：index 长度：0-128 字符集：大小写字母、数字、\"-\"、\".\"、\"_\"，不能有/路径
+    * slaveUrl  客户自定义的拉流地址，包括方法、域名、路径
     *
     * @var string[]
     */
@@ -196,7 +268,15 @@ class DashPackageItem implements ModelInterface, ArrayAccess
             'adMarker' => 'getAdMarker',
             'suggestedPresentationDelay' => 'getSuggestedPresentationDelay',
             'minimumUpdatePeriod' => 'getMinimumUpdatePeriod',
-            'minBufferTime' => 'getMinBufferTime'
+            'minBufferTime' => 'getMinBufferTime',
+            'enableAccess' => 'getEnableAccess',
+            'allowAllIpAccess' => 'getAllowAllIpAccess',
+            'ipWhitelist' => 'getIpWhitelist',
+            'cdnIdentifierHeader' => 'getCdnIdentifierHeader',
+            'originDomainMaster' => 'getOriginDomainMaster',
+            'originDomainSlave' => 'getOriginDomainSlave',
+            'manifestName' => 'getManifestName',
+            'slaveUrl' => 'getSlaveUrl'
     ];
 
     /**
@@ -284,6 +364,14 @@ class DashPackageItem implements ModelInterface, ArrayAccess
         $this->container['suggestedPresentationDelay'] = isset($data['suggestedPresentationDelay']) ? $data['suggestedPresentationDelay'] : null;
         $this->container['minimumUpdatePeriod'] = isset($data['minimumUpdatePeriod']) ? $data['minimumUpdatePeriod'] : null;
         $this->container['minBufferTime'] = isset($data['minBufferTime']) ? $data['minBufferTime'] : null;
+        $this->container['enableAccess'] = isset($data['enableAccess']) ? $data['enableAccess'] : null;
+        $this->container['allowAllIpAccess'] = isset($data['allowAllIpAccess']) ? $data['allowAllIpAccess'] : null;
+        $this->container['ipWhitelist'] = isset($data['ipWhitelist']) ? $data['ipWhitelist'] : null;
+        $this->container['cdnIdentifierHeader'] = isset($data['cdnIdentifierHeader']) ? $data['cdnIdentifierHeader'] : null;
+        $this->container['originDomainMaster'] = isset($data['originDomainMaster']) ? $data['originDomainMaster'] : null;
+        $this->container['originDomainSlave'] = isset($data['originDomainSlave']) ? $data['originDomainSlave'] : null;
+        $this->container['manifestName'] = isset($data['manifestName']) ? $data['manifestName'] : null;
+        $this->container['slaveUrl'] = isset($data['slaveUrl']) ? $data['slaveUrl'] : null;
     }
 
     /**
@@ -294,13 +382,10 @@ class DashPackageItem implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['url'] === null) {
-            $invalidProperties[] = "'url' can't be null";
-        }
-            if ((mb_strlen($this->container['url']) > 1024)) {
+            if (!is_null($this->container['url']) && (mb_strlen($this->container['url']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'url', the character length must be smaller than or equal to 1024.";
             }
-            if ((mb_strlen($this->container['url']) < 1)) {
+            if (!is_null($this->container['url']) && (mb_strlen($this->container['url']) < 1)) {
                 $invalidProperties[] = "invalid value for 'url', the character length must be bigger than or equal to 1.";
             }
         if ($this->container['segmentDurationSeconds'] === null) {
@@ -344,6 +429,36 @@ class DashPackageItem implements ModelInterface, ArrayAccess
             if (!is_null($this->container['minBufferTime']) && ($this->container['minBufferTime'] < 1)) {
                 $invalidProperties[] = "invalid value for 'minBufferTime', must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['ipWhitelist']) && (mb_strlen($this->container['ipWhitelist']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'ipWhitelist', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['ipWhitelist']) && (mb_strlen($this->container['ipWhitelist']) < 0)) {
+                $invalidProperties[] = "invalid value for 'ipWhitelist', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['originDomainMaster']) && (mb_strlen($this->container['originDomainMaster']) > 255)) {
+                $invalidProperties[] = "invalid value for 'originDomainMaster', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['originDomainMaster']) && (mb_strlen($this->container['originDomainMaster']) < 0)) {
+                $invalidProperties[] = "invalid value for 'originDomainMaster', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['originDomainSlave']) && (mb_strlen($this->container['originDomainSlave']) > 255)) {
+                $invalidProperties[] = "invalid value for 'originDomainSlave', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['originDomainSlave']) && (mb_strlen($this->container['originDomainSlave']) < 0)) {
+                $invalidProperties[] = "invalid value for 'originDomainSlave', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['manifestName']) && (mb_strlen($this->container['manifestName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'manifestName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['manifestName']) && (mb_strlen($this->container['manifestName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'manifestName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['slaveUrl']) && (mb_strlen($this->container['slaveUrl']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'slaveUrl', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['slaveUrl']) && (mb_strlen($this->container['slaveUrl']) < 0)) {
+                $invalidProperties[] = "invalid value for 'slaveUrl', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -362,7 +477,7 @@ class DashPackageItem implements ModelInterface, ArrayAccess
     * Gets url
     *  客户自定义的拉流地址，包括方法、域名、路径
     *
-    * @return string
+    * @return string|null
     */
     public function getUrl()
     {
@@ -372,7 +487,7 @@ class DashPackageItem implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param string $url 客户自定义的拉流地址，包括方法、域名、路径
+    * @param string|null $url 客户自定义的拉流地址，包括方法、域名、路径
     *
     * @return $this
     */
@@ -643,6 +758,198 @@ class DashPackageItem implements ModelInterface, ArrayAccess
     public function setMinBufferTime($minBufferTime)
     {
         $this->container['minBufferTime'] = $minBufferTime;
+        return $this;
+    }
+
+    /**
+    * Gets enableAccess
+    *  当频道mode是ONLY_OS类型时，允许本输出可以直接从源站拉流，默认：false true：允许output访问 false：禁止output访问
+    *
+    * @return bool|null
+    */
+    public function getEnableAccess()
+    {
+        return $this->container['enableAccess'];
+    }
+
+    /**
+    * Sets enableAccess
+    *
+    * @param bool|null $enableAccess 当频道mode是ONLY_OS类型时，允许本输出可以直接从源站拉流，默认：false true：允许output访问 false：禁止output访问
+    *
+    * @return $this
+    */
+    public function setEnableAccess($enableAccess)
+    {
+        $this->container['enableAccess'] = $enableAccess;
+        return $this;
+    }
+
+    /**
+    * Gets allowAllIpAccess
+    *  是否放通所有的IP访问，默认：false true：允许所有的IP地址访问，ip_whitelist配置不生效 false：不允许所有的IP地址访问，ip_whitelist生效，仅在ip_whitelist配置的ip地址才能访问
+    *
+    * @return bool|null
+    */
+    public function getAllowAllIpAccess()
+    {
+        return $this->container['allowAllIpAccess'];
+    }
+
+    /**
+    * Sets allowAllIpAccess
+    *
+    * @param bool|null $allowAllIpAccess 是否放通所有的IP访问，默认：false true：允许所有的IP地址访问，ip_whitelist配置不生效 false：不允许所有的IP地址访问，ip_whitelist生效，仅在ip_whitelist配置的ip地址才能访问
+    *
+    * @return $this
+    */
+    public function setAllowAllIpAccess($allowAllIpAccess)
+    {
+        $this->container['allowAllIpAccess'] = $allowAllIpAccess;
+        return $this;
+    }
+
+    /**
+    * Gets ipWhitelist
+    *  当频道类型mode是ONLY_OS类型时，允许直接从源站拉流的IP白名单
+    *
+    * @return string|null
+    */
+    public function getIpWhitelist()
+    {
+        return $this->container['ipWhitelist'];
+    }
+
+    /**
+    * Sets ipWhitelist
+    *
+    * @param string|null $ipWhitelist 当频道类型mode是ONLY_OS类型时，允许直接从源站拉流的IP白名单
+    *
+    * @return $this
+    */
+    public function setIpWhitelist($ipWhitelist)
+    {
+        $this->container['ipWhitelist'] = $ipWhitelist;
+        return $this;
+    }
+
+    /**
+    * Gets cdnIdentifierHeader
+    *  cdnIdentifierHeader
+    *
+    * @return \HuaweiCloud\SDK\Live\V1\Model\HttpHeader|null
+    */
+    public function getCdnIdentifierHeader()
+    {
+        return $this->container['cdnIdentifierHeader'];
+    }
+
+    /**
+    * Sets cdnIdentifierHeader
+    *
+    * @param \HuaweiCloud\SDK\Live\V1\Model\HttpHeader|null $cdnIdentifierHeader cdnIdentifierHeader
+    *
+    * @return $this
+    */
+    public function setCdnIdentifierHeader($cdnIdentifierHeader)
+    {
+        $this->container['cdnIdentifierHeader'] = $cdnIdentifierHeader;
+        return $this;
+    }
+
+    /**
+    * Gets originDomainMaster
+    *  源站分发域名-主region 跟CreateOttChannelInfoReq.region一致 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
+    *
+    * @return string|null
+    */
+    public function getOriginDomainMaster()
+    {
+        return $this->container['originDomainMaster'];
+    }
+
+    /**
+    * Sets originDomainMaster
+    *
+    * @param string|null $originDomainMaster 源站分发域名-主region 跟CreateOttChannelInfoReq.region一致 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
+    *
+    * @return $this
+    */
+    public function setOriginDomainMaster($originDomainMaster)
+    {
+        $this->container['originDomainMaster'] = $originDomainMaster;
+        return $this;
+    }
+
+    /**
+    * Gets originDomainSlave
+    *  源站分发域名-备region 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
+    *
+    * @return string|null
+    */
+    public function getOriginDomainSlave()
+    {
+        return $this->container['originDomainSlave'];
+    }
+
+    /**
+    * Sets originDomainSlave
+    *
+    * @param string|null $originDomainSlave 源站分发域名-备region 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
+    *
+    * @return $this
+    */
+    public function setOriginDomainSlave($originDomainSlave)
+    {
+        $this->container['originDomainSlave'] = $originDomainSlave;
+        return $this;
+    }
+
+    /**
+    * Gets manifestName
+    *  output的索引文件名字 默认：index 长度：0-128 字符集：大小写字母、数字、\"-\"、\".\"、\"_\"，不能有/路径
+    *
+    * @return string|null
+    */
+    public function getManifestName()
+    {
+        return $this->container['manifestName'];
+    }
+
+    /**
+    * Sets manifestName
+    *
+    * @param string|null $manifestName output的索引文件名字 默认：index 长度：0-128 字符集：大小写字母、数字、\"-\"、\".\"、\"_\"，不能有/路径
+    *
+    * @return $this
+    */
+    public function setManifestName($manifestName)
+    {
+        $this->container['manifestName'] = $manifestName;
+        return $this;
+    }
+
+    /**
+    * Gets slaveUrl
+    *  客户自定义的拉流地址，包括方法、域名、路径
+    *
+    * @return string|null
+    */
+    public function getSlaveUrl()
+    {
+        return $this->container['slaveUrl'];
+    }
+
+    /**
+    * Sets slaveUrl
+    *
+    * @param string|null $slaveUrl 客户自定义的拉流地址，包括方法、域名、路径
+    *
+    * @return $this
+    */
+    public function setSlaveUrl($slaveUrl)
+    {
+        $this->container['slaveUrl'] = $slaveUrl;
         return $this;
     }
 

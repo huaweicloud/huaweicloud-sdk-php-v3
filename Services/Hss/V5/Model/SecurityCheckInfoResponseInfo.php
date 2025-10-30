@@ -22,6 +22,8 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * severity  **参数解释**: 风险等级 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危
     * checkName  **参数解释**: 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **取值范围**: 不涉及
+    * baselineName  **参数解释** 基线的名称，例如SSH 应用基线检查、CentOS 7 系统基线检查、Windows 系统基线检查 **取值范围**  字符长度0-256位
+    * key  **参数解释** 配置检查（基线）的唯一值，例如SSH、CentOS 7、Windows **取值范围**  字符长度0-256位
     * checkType  **参数解释**: 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **取值范围**: 不涉及
     * standard  **参数解释**: 标准类型 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * executableFilePath  **参数解释**: 配置检查（基线）的路径信息 **取值范围**: 不涉及
@@ -36,6 +38,8 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'severity' => 'string',
             'checkName' => 'string',
+            'baselineName' => 'string',
+            'key' => 'string',
             'checkType' => 'string',
             'standard' => 'string',
             'executableFilePath' => 'string',
@@ -50,6 +54,8 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * severity  **参数解释**: 风险等级 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危
     * checkName  **参数解释**: 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **取值范围**: 不涉及
+    * baselineName  **参数解释** 基线的名称，例如SSH 应用基线检查、CentOS 7 系统基线检查、Windows 系统基线检查 **取值范围**  字符长度0-256位
+    * key  **参数解释** 配置检查（基线）的唯一值，例如SSH、CentOS 7、Windows **取值范围**  字符长度0-256位
     * checkType  **参数解释**: 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **取值范围**: 不涉及
     * standard  **参数解释**: 标准类型 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * executableFilePath  **参数解释**: 配置检查（基线）的路径信息 **取值范围**: 不涉及
@@ -64,6 +70,8 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'severity' => null,
         'checkName' => null,
+        'baselineName' => null,
+        'key' => null,
         'checkType' => null,
         'standard' => null,
         'executableFilePath' => null,
@@ -99,6 +107,8 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * severity  **参数解释**: 风险等级 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危
     * checkName  **参数解释**: 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **取值范围**: 不涉及
+    * baselineName  **参数解释** 基线的名称，例如SSH 应用基线检查、CentOS 7 系统基线检查、Windows 系统基线检查 **取值范围**  字符长度0-256位
+    * key  **参数解释** 配置检查（基线）的唯一值，例如SSH、CentOS 7、Windows **取值范围**  字符长度0-256位
     * checkType  **参数解释**: 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **取值范围**: 不涉及
     * standard  **参数解释**: 标准类型 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * executableFilePath  **参数解释**: 配置检查（基线）的路径信息 **取值范围**: 不涉及
@@ -113,6 +123,8 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'severity' => 'severity',
             'checkName' => 'check_name',
+            'baselineName' => 'baseline_name',
+            'key' => 'key',
             'checkType' => 'check_type',
             'standard' => 'standard',
             'executableFilePath' => 'executable_file_path',
@@ -127,6 +139,8 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * severity  **参数解释**: 风险等级 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危
     * checkName  **参数解释**: 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **取值范围**: 不涉及
+    * baselineName  **参数解释** 基线的名称，例如SSH 应用基线检查、CentOS 7 系统基线检查、Windows 系统基线检查 **取值范围**  字符长度0-256位
+    * key  **参数解释** 配置检查（基线）的唯一值，例如SSH、CentOS 7、Windows **取值范围**  字符长度0-256位
     * checkType  **参数解释**: 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **取值范围**: 不涉及
     * standard  **参数解释**: 标准类型 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * executableFilePath  **参数解释**: 配置检查（基线）的路径信息 **取值范围**: 不涉及
@@ -141,6 +155,8 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'severity' => 'setSeverity',
             'checkName' => 'setCheckName',
+            'baselineName' => 'setBaselineName',
+            'key' => 'setKey',
             'checkType' => 'setCheckType',
             'standard' => 'setStandard',
             'executableFilePath' => 'setExecutableFilePath',
@@ -155,6 +171,8 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * severity  **参数解释**: 风险等级 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危
     * checkName  **参数解释**: 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **取值范围**: 不涉及
+    * baselineName  **参数解释** 基线的名称，例如SSH 应用基线检查、CentOS 7 系统基线检查、Windows 系统基线检查 **取值范围**  字符长度0-256位
+    * key  **参数解释** 配置检查（基线）的唯一值，例如SSH、CentOS 7、Windows **取值范围**  字符长度0-256位
     * checkType  **参数解释**: 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **取值范围**: 不涉及
     * standard  **参数解释**: 标准类型 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * executableFilePath  **参数解释**: 配置检查（基线）的路径信息 **取值范围**: 不涉及
@@ -169,6 +187,8 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'severity' => 'getSeverity',
             'checkName' => 'getCheckName',
+            'baselineName' => 'getBaselineName',
+            'key' => 'getKey',
             'checkType' => 'getCheckType',
             'standard' => 'getStandard',
             'executableFilePath' => 'getExecutableFilePath',
@@ -239,6 +259,8 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     {
         $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
         $this->container['checkName'] = isset($data['checkName']) ? $data['checkName'] : null;
+        $this->container['baselineName'] = isset($data['baselineName']) ? $data['baselineName'] : null;
+        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['checkType'] = isset($data['checkType']) ? $data['checkType'] : null;
         $this->container['standard'] = isset($data['standard']) ? $data['standard'] : null;
         $this->container['executableFilePath'] = isset($data['executableFilePath']) ? $data['executableFilePath'] : null;
@@ -268,6 +290,18 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['checkName']) && (mb_strlen($this->container['checkName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'checkName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['baselineName']) && (mb_strlen($this->container['baselineName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'baselineName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['baselineName']) && (mb_strlen($this->container['baselineName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'baselineName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) > 256)) {
+                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) < 0)) {
+                $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['checkType']) && (mb_strlen($this->container['checkType']) > 256)) {
                 $invalidProperties[] = "invalid value for 'checkType', the character length must be smaller than or equal to 256.";
@@ -376,6 +410,54 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     public function setCheckName($checkName)
     {
         $this->container['checkName'] = $checkName;
+        return $this;
+    }
+
+    /**
+    * Gets baselineName
+    *  **参数解释** 基线的名称，例如SSH 应用基线检查、CentOS 7 系统基线检查、Windows 系统基线检查 **取值范围**  字符长度0-256位
+    *
+    * @return string|null
+    */
+    public function getBaselineName()
+    {
+        return $this->container['baselineName'];
+    }
+
+    /**
+    * Sets baselineName
+    *
+    * @param string|null $baselineName **参数解释** 基线的名称，例如SSH 应用基线检查、CentOS 7 系统基线检查、Windows 系统基线检查 **取值范围**  字符长度0-256位
+    *
+    * @return $this
+    */
+    public function setBaselineName($baselineName)
+    {
+        $this->container['baselineName'] = $baselineName;
+        return $this;
+    }
+
+    /**
+    * Gets key
+    *  **参数解释** 配置检查（基线）的唯一值，例如SSH、CentOS 7、Windows **取值范围**  字符长度0-256位
+    *
+    * @return string|null
+    */
+    public function getKey()
+    {
+        return $this->container['key'];
+    }
+
+    /**
+    * Sets key
+    *
+    * @param string|null $key **参数解释** 配置检查（基线）的唯一值，例如SSH、CentOS 7、Windows **取值范围**  字符长度0-256位
+    *
+    * @return $this
+    */
+    public function setKey($key)
+    {
+        $this->container['key'] = $key;
         return $this;
     }
 

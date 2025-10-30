@@ -20,9 +20,9 @@ class ClusterInfoResponseDsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * desiredNum  目标数量
-    * currentNum  当前数量
-    * readyNum  就绪数量
+    * desiredNum  **参数解释** 目标数量 **取值范围** 取值0-65535
+    * currentNum  **参数解释** 当前数量 **取值范围** 取值0-65535
+    * readyNum  **参数解释** 就绪数量 **取值范围** 取值0-65535
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ClusterInfoResponseDsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * desiredNum  目标数量
-    * currentNum  当前数量
-    * readyNum  就绪数量
+    * desiredNum  **参数解释** 目标数量 **取值范围** 取值0-65535
+    * currentNum  **参数解释** 当前数量 **取值范围** 取值0-65535
+    * readyNum  **参数解释** 就绪数量 **取值范围** 取值0-65535
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ClusterInfoResponseDsInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * desiredNum  目标数量
-    * currentNum  当前数量
-    * readyNum  就绪数量
+    * desiredNum  **参数解释** 目标数量 **取值范围** 取值0-65535
+    * currentNum  **参数解释** 当前数量 **取值范围** 取值0-65535
+    * readyNum  **参数解释** 就绪数量 **取值范围** 取值0-65535
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ClusterInfoResponseDsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * desiredNum  目标数量
-    * currentNum  当前数量
-    * readyNum  就绪数量
+    * desiredNum  **参数解释** 目标数量 **取值范围** 取值0-65535
+    * currentNum  **参数解释** 当前数量 **取值范围** 取值0-65535
+    * readyNum  **参数解释** 就绪数量 **取值范围** 取值0-65535
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ClusterInfoResponseDsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * desiredNum  目标数量
-    * currentNum  当前数量
-    * readyNum  就绪数量
+    * desiredNum  **参数解释** 目标数量 **取值范围** 取值0-65535
+    * currentNum  **参数解释** 当前数量 **取值范围** 取值0-65535
+    * readyNum  **参数解释** 就绪数量 **取值范围** 取值0-65535
     *
     * @var string[]
     */
@@ -214,7 +214,7 @@ class ClusterInfoResponseDsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets desiredNum
-    *  目标数量
+    *  **参数解释** 目标数量 **取值范围** 取值0-65535
     *
     * @return int|null
     */
@@ -226,7 +226,7 @@ class ClusterInfoResponseDsInfo implements ModelInterface, ArrayAccess
     /**
     * Sets desiredNum
     *
-    * @param int|null $desiredNum 目标数量
+    * @param int|null $desiredNum **参数解释** 目标数量 **取值范围** 取值0-65535
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class ClusterInfoResponseDsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets currentNum
-    *  当前数量
+    *  **参数解释** 当前数量 **取值范围** 取值0-65535
     *
     * @return int|null
     */
@@ -250,7 +250,7 @@ class ClusterInfoResponseDsInfo implements ModelInterface, ArrayAccess
     /**
     * Sets currentNum
     *
-    * @param int|null $currentNum 当前数量
+    * @param int|null $currentNum **参数解释** 当前数量 **取值范围** 取值0-65535
     *
     * @return $this
     */
@@ -262,7 +262,7 @@ class ClusterInfoResponseDsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets readyNum
-    *  就绪数量
+    *  **参数解释** 就绪数量 **取值范围** 取值0-65535
     *
     * @return int|null
     */
@@ -274,7 +274,7 @@ class ClusterInfoResponseDsInfo implements ModelInterface, ArrayAccess
     /**
     * Sets readyNum
     *
-    * @param int|null $readyNum 就绪数量
+    * @param int|null $readyNum **参数解释** 就绪数量 **取值范围** 取值0-65535
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class ChangePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  **参数解释**: 需要修改的的策略组的策略组ID **约束限制**: 需要使用 ListPolicyGroup 接口查询策略组ID，在 ListPolicyGroup 接口的响应体中返回的 group_id 是可以被修改的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
+    * groupId  **参数解释**: 需要修改的策略组ID **约束限制**: 需要使用 ListPolicyGroup 接口查询策略组ID，在 ListPolicyGroup 接口的响应体中返回的 group_id 是可以被修改的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
     * protectMode  **参数解释**: 防护模式 **约束限制**: 不涉及 **取值范围**: - high_detection: 高检出模式。 - equalization: 均衡模式。  **默认取值**: 不涉及
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ChangePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  **参数解释**: 需要修改的的策略组的策略组ID **约束限制**: 需要使用 ListPolicyGroup 接口查询策略组ID，在 ListPolicyGroup 接口的响应体中返回的 group_id 是可以被修改的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
+    * groupId  **参数解释**: 需要修改的策略组ID **约束限制**: 需要使用 ListPolicyGroup 接口查询策略组ID，在 ListPolicyGroup 接口的响应体中返回的 group_id 是可以被修改的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
     * protectMode  **参数解释**: 防护模式 **约束限制**: 不涉及 **取值范围**: - high_detection: 高检出模式。 - equalization: 均衡模式。  **默认取值**: 不涉及
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ChangePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  **参数解释**: 需要修改的的策略组的策略组ID **约束限制**: 需要使用 ListPolicyGroup 接口查询策略组ID，在 ListPolicyGroup 接口的响应体中返回的 group_id 是可以被修改的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
+    * groupId  **参数解释**: 需要修改的策略组ID **约束限制**: 需要使用 ListPolicyGroup 接口查询策略组ID，在 ListPolicyGroup 接口的响应体中返回的 group_id 是可以被修改的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
     * protectMode  **参数解释**: 防护模式 **约束限制**: 不涉及 **取值范围**: - high_detection: 高检出模式。 - equalization: 均衡模式。  **默认取值**: 不涉及
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ChangePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  **参数解释**: 需要修改的的策略组的策略组ID **约束限制**: 需要使用 ListPolicyGroup 接口查询策略组ID，在 ListPolicyGroup 接口的响应体中返回的 group_id 是可以被修改的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
+    * groupId  **参数解释**: 需要修改的策略组ID **约束限制**: 需要使用 ListPolicyGroup 接口查询策略组ID，在 ListPolicyGroup 接口的响应体中返回的 group_id 是可以被修改的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
     * protectMode  **参数解释**: 防护模式 **约束限制**: 不涉及 **取值范围**: - high_detection: 高检出模式。 - equalization: 均衡模式。  **默认取值**: 不涉及
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ChangePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  **参数解释**: 需要修改的的策略组的策略组ID **约束限制**: 需要使用 ListPolicyGroup 接口查询策略组ID，在 ListPolicyGroup 接口的响应体中返回的 group_id 是可以被修改的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
+    * groupId  **参数解释**: 需要修改的策略组ID **约束限制**: 需要使用 ListPolicyGroup 接口查询策略组ID，在 ListPolicyGroup 接口的响应体中返回的 group_id 是可以被修改的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
     * protectMode  **参数解释**: 防护模式 **约束限制**: 不涉及 **取值范围**: - high_detection: 高检出模式。 - equalization: 均衡模式。  **默认取值**: 不涉及
     *
     * @var string[]
@@ -206,7 +206,7 @@ class ChangePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  **参数解释**: 需要修改的的策略组的策略组ID **约束限制**: 需要使用 ListPolicyGroup 接口查询策略组ID，在 ListPolicyGroup 接口的响应体中返回的 group_id 是可以被修改的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
+    *  **参数解释**: 需要修改的策略组ID **约束限制**: 需要使用 ListPolicyGroup 接口查询策略组ID，在 ListPolicyGroup 接口的响应体中返回的 group_id 是可以被修改的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
     *
     * @return string
     */
@@ -218,7 +218,7 @@ class ChangePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string $groupId **参数解释**: 需要修改的的策略组的策略组ID **约束限制**: 需要使用 ListPolicyGroup 接口查询策略组ID，在 ListPolicyGroup 接口的响应体中返回的 group_id 是可以被修改的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
+    * @param string $groupId **参数解释**: 需要修改的策略组ID **约束限制**: 需要使用 ListPolicyGroup 接口查询策略组ID，在 ListPolicyGroup 接口的响应体中返回的 group_id 是可以被修改的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
     *
     * @return $this
     */

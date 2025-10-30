@@ -36,7 +36,7 @@ class ShowAgentDaemonsetDetailInfoResponse implements ModelInterface, ArrayAcces
             'nodeNum' => 'int',
             'runtimeInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\RuntimeRequestBody[]',
             'clusterStatus' => 'string',
-            'dsInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\ClusterInfoResponseDsInfo',
+            'dsInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\DaemonsetYamlResponseInfoDsInfo',
             'installedStatus' => 'string',
             'scheduleInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\CreateDaemonsetRequestBodyScheduleInfo'
     ];
@@ -363,7 +363,7 @@ class ShowAgentDaemonsetDetailInfoResponse implements ModelInterface, ArrayAcces
     * Gets dsInfo
     *  dsInfo
     *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\ClusterInfoResponseDsInfo|null
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\DaemonsetYamlResponseInfoDsInfo|null
     */
     public function getDsInfo()
     {
@@ -373,7 +373,7 @@ class ShowAgentDaemonsetDetailInfoResponse implements ModelInterface, ArrayAcces
     /**
     * Sets dsInfo
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\ClusterInfoResponseDsInfo|null $dsInfo dsInfo
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\DaemonsetYamlResponseInfoDsInfo|null $dsInfo dsInfo
     *
     * @return $this
     */

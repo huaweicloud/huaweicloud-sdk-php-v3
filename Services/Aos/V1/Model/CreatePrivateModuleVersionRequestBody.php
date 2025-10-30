@@ -200,10 +200,13 @@ class CreatePrivateModuleVersionRequestBody implements ModelInterface, ArrayAcce
             if (!is_null($this->container['moduleId']) && !preg_match("/^[a-z0-9]+[a-z0-9-]*$/", $this->container['moduleId'])) {
                 $invalidProperties[] = "invalid value for 'moduleId', must be conform to the pattern /^[a-z0-9]+[a-z0-9-]*$/.";
             }
-            if (!is_null($this->container['moduleVersion']) && (mb_strlen($this->container['moduleVersion']) > 128)) {
+        if ($this->container['moduleVersion'] === null) {
+            $invalidProperties[] = "'moduleVersion' can't be null";
+        }
+            if ((mb_strlen($this->container['moduleVersion']) > 128)) {
                 $invalidProperties[] = "invalid value for 'moduleVersion', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['moduleVersion']) && (mb_strlen($this->container['moduleVersion']) < 5)) {
+            if ((mb_strlen($this->container['moduleVersion']) < 5)) {
                 $invalidProperties[] = "invalid value for 'moduleVersion', the character length must be bigger than or equal to 5.";
             }
             if (!is_null($this->container['versionDescription']) && (mb_strlen($this->container['versionDescription']) > 1024)) {
@@ -212,13 +215,16 @@ class CreatePrivateModuleVersionRequestBody implements ModelInterface, ArrayAcce
             if (!is_null($this->container['versionDescription']) && (mb_strlen($this->container['versionDescription']) < 0)) {
                 $invalidProperties[] = "invalid value for 'versionDescription', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['moduleUri']) && (mb_strlen($this->container['moduleUri']) > 2048)) {
+        if ($this->container['moduleUri'] === null) {
+            $invalidProperties[] = "'moduleUri' can't be null";
+        }
+            if ((mb_strlen($this->container['moduleUri']) > 2048)) {
                 $invalidProperties[] = "invalid value for 'moduleUri', the character length must be smaller than or equal to 2048.";
             }
-            if (!is_null($this->container['moduleUri']) && (mb_strlen($this->container['moduleUri']) < 0)) {
+            if ((mb_strlen($this->container['moduleUri']) < 0)) {
                 $invalidProperties[] = "invalid value for 'moduleUri', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['moduleUri']) && !preg_match("/^(http|https):\/\/[\\S]*(\\.zip){1}(\\?[\\S]+)?$/", $this->container['moduleUri'])) {
+            if (!preg_match("/^(http|https):\/\/[\\S]*(\\.zip){1}(\\?[\\S]+)?$/", $this->container['moduleUri'])) {
                 $invalidProperties[] = "invalid value for 'moduleUri', must be conform to the pattern /^(http|https):\/\/[\\S]*(\\.zip){1}(\\?[\\S]+)?$/.";
             }
         return $invalidProperties;
@@ -263,7 +269,7 @@ class CreatePrivateModuleVersionRequestBody implements ModelInterface, ArrayAcce
     * Gets moduleVersion
     *  模块的版本号。版本号必须遵循语义化版本号（Semantic Version），为用户自定义
     *
-    * @return string|null
+    * @return string
     */
     public function getModuleVersion()
     {
@@ -273,7 +279,7 @@ class CreatePrivateModuleVersionRequestBody implements ModelInterface, ArrayAcce
     /**
     * Sets moduleVersion
     *
-    * @param string|null $moduleVersion 模块的版本号。版本号必须遵循语义化版本号（Semantic Version），为用户自定义
+    * @param string $moduleVersion 模块的版本号。版本号必须遵循语义化版本号（Semantic Version），为用户自定义
     *
     * @return $this
     */
@@ -311,7 +317,7 @@ class CreatePrivateModuleVersionRequestBody implements ModelInterface, ArrayAcce
     * Gets moduleUri
     *  模块（module）包的OBS地址。模块允许用户将可复用的代码编辑在一起供模块使用。  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  模块包只支持zip压缩包，文件需要以\".zip\"结尾。关于模块包的校验要求如下：   * 模块包中不得包含以\".tfvars\"结尾的文件   * 模块包解压前后的大小均应控制在1MB以内   * 模块包内的文件数量不能超过100个   * 模块包内的文件路径不允许以正斜线（/）开头   * 模块包内的文件路径分隔符之间不允许为空格、\".\"和\"..\"   * 模块包内的文件路径最长为2048   * 模块包内的文件名最长为255   * 模块包内应至少有一份模板文件（以\".tf\"或\".tf.json\"结尾的文件）  **注意：**   * 模块中的内容不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储module_uri对应的模块包。
     *
-    * @return string|null
+    * @return string
     */
     public function getModuleUri()
     {
@@ -321,7 +327,7 @@ class CreatePrivateModuleVersionRequestBody implements ModelInterface, ArrayAcce
     /**
     * Sets moduleUri
     *
-    * @param string|null $moduleUri 模块（module）包的OBS地址。模块允许用户将可复用的代码编辑在一起供模块使用。  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  模块包只支持zip压缩包，文件需要以\".zip\"结尾。关于模块包的校验要求如下：   * 模块包中不得包含以\".tfvars\"结尾的文件   * 模块包解压前后的大小均应控制在1MB以内   * 模块包内的文件数量不能超过100个   * 模块包内的文件路径不允许以正斜线（/）开头   * 模块包内的文件路径分隔符之间不允许为空格、\".\"和\"..\"   * 模块包内的文件路径最长为2048   * 模块包内的文件名最长为255   * 模块包内应至少有一份模板文件（以\".tf\"或\".tf.json\"结尾的文件）  **注意：**   * 模块中的内容不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储module_uri对应的模块包。
+    * @param string $moduleUri 模块（module）包的OBS地址。模块允许用户将可复用的代码编辑在一起供模块使用。  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  模块包只支持zip压缩包，文件需要以\".zip\"结尾。关于模块包的校验要求如下：   * 模块包中不得包含以\".tfvars\"结尾的文件   * 模块包解压前后的大小均应控制在1MB以内   * 模块包内的文件数量不能超过100个   * 模块包内的文件路径不允许以正斜线（/）开头   * 模块包内的文件路径分隔符之间不允许为空格、\".\"和\"..\"   * 模块包内的文件路径最长为2048   * 模块包内的文件名最长为255   * 模块包内应至少有一份模板文件（以\".tf\"或\".tf.json\"结尾的文件）  **注意：**   * 模块中的内容不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储module_uri对应的模块包。
     *
     * @return $this
     */

@@ -23,16 +23,16 @@ class JobInfo implements ModelInterface, ArrayAccess
     * id  任务id
     * name  任务名称
     * status  任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
-    * description  任务描述
     * createTime  任务创建时间
+    * description  任务描述
     * engineType  引擎类型
     * netType  网络类型
     * billingTag  计费字段
     * jobDirection  迁移方向
     * dbUseType  迁移场景。 - migration:实时迁移 - sync:实时同步 - cloudDataGuard:实时灾备
     * taskType  迁移模式。 - FULL_TRANS 全量 - FULL_INCR_TRANS 全量+增量 - INCR_TRANS 增量
-    * children  子任务信息体
-    * nodeNewFramework  是否新框架
+    * children  子任务信息体。
+    * nodeNewFramework  是否新框架。
     * jobAction  jobAction
     *
     * @var string[]
@@ -41,8 +41,8 @@ class JobInfo implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'status' => 'string',
-            'description' => 'string',
             'createTime' => 'string',
+            'description' => 'string',
             'engineType' => 'string',
             'netType' => 'string',
             'billingTag' => 'bool',
@@ -59,16 +59,16 @@ class JobInfo implements ModelInterface, ArrayAccess
     * id  任务id
     * name  任务名称
     * status  任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
-    * description  任务描述
     * createTime  任务创建时间
+    * description  任务描述
     * engineType  引擎类型
     * netType  网络类型
     * billingTag  计费字段
     * jobDirection  迁移方向
     * dbUseType  迁移场景。 - migration:实时迁移 - sync:实时同步 - cloudDataGuard:实时灾备
     * taskType  迁移模式。 - FULL_TRANS 全量 - FULL_INCR_TRANS 全量+增量 - INCR_TRANS 增量
-    * children  子任务信息体
-    * nodeNewFramework  是否新框架
+    * children  子任务信息体。
+    * nodeNewFramework  是否新框架。
     * jobAction  jobAction
     *
     * @var string[]
@@ -77,8 +77,8 @@ class JobInfo implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'status' => null,
-        'description' => null,
         'createTime' => null,
+        'description' => null,
         'engineType' => null,
         'netType' => null,
         'billingTag' => null,
@@ -116,16 +116,16 @@ class JobInfo implements ModelInterface, ArrayAccess
     * id  任务id
     * name  任务名称
     * status  任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
-    * description  任务描述
     * createTime  任务创建时间
+    * description  任务描述
     * engineType  引擎类型
     * netType  网络类型
     * billingTag  计费字段
     * jobDirection  迁移方向
     * dbUseType  迁移场景。 - migration:实时迁移 - sync:实时同步 - cloudDataGuard:实时灾备
     * taskType  迁移模式。 - FULL_TRANS 全量 - FULL_INCR_TRANS 全量+增量 - INCR_TRANS 增量
-    * children  子任务信息体
-    * nodeNewFramework  是否新框架
+    * children  子任务信息体。
+    * nodeNewFramework  是否新框架。
     * jobAction  jobAction
     *
     * @var string[]
@@ -134,8 +134,8 @@ class JobInfo implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'status' => 'status',
-            'description' => 'description',
             'createTime' => 'create_time',
+            'description' => 'description',
             'engineType' => 'engine_type',
             'netType' => 'net_type',
             'billingTag' => 'billing_tag',
@@ -152,16 +152,16 @@ class JobInfo implements ModelInterface, ArrayAccess
     * id  任务id
     * name  任务名称
     * status  任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
-    * description  任务描述
     * createTime  任务创建时间
+    * description  任务描述
     * engineType  引擎类型
     * netType  网络类型
     * billingTag  计费字段
     * jobDirection  迁移方向
     * dbUseType  迁移场景。 - migration:实时迁移 - sync:实时同步 - cloudDataGuard:实时灾备
     * taskType  迁移模式。 - FULL_TRANS 全量 - FULL_INCR_TRANS 全量+增量 - INCR_TRANS 增量
-    * children  子任务信息体
-    * nodeNewFramework  是否新框架
+    * children  子任务信息体。
+    * nodeNewFramework  是否新框架。
     * jobAction  jobAction
     *
     * @var string[]
@@ -170,8 +170,8 @@ class JobInfo implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'status' => 'setStatus',
-            'description' => 'setDescription',
             'createTime' => 'setCreateTime',
+            'description' => 'setDescription',
             'engineType' => 'setEngineType',
             'netType' => 'setNetType',
             'billingTag' => 'setBillingTag',
@@ -188,16 +188,16 @@ class JobInfo implements ModelInterface, ArrayAccess
     * id  任务id
     * name  任务名称
     * status  任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
-    * description  任务描述
     * createTime  任务创建时间
+    * description  任务描述
     * engineType  引擎类型
     * netType  网络类型
     * billingTag  计费字段
     * jobDirection  迁移方向
     * dbUseType  迁移场景。 - migration:实时迁移 - sync:实时同步 - cloudDataGuard:实时灾备
     * taskType  迁移模式。 - FULL_TRANS 全量 - FULL_INCR_TRANS 全量+增量 - INCR_TRANS 增量
-    * children  子任务信息体
-    * nodeNewFramework  是否新框架
+    * children  子任务信息体。
+    * nodeNewFramework  是否新框架。
     * jobAction  jobAction
     *
     * @var string[]
@@ -206,8 +206,8 @@ class JobInfo implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'status' => 'getStatus',
-            'description' => 'getDescription',
             'createTime' => 'getCreateTime',
+            'description' => 'getDescription',
             'engineType' => 'getEngineType',
             'netType' => 'getNetType',
             'billingTag' => 'getBillingTag',
@@ -436,8 +436,8 @@ class JobInfo implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['engineType'] = isset($data['engineType']) ? $data['engineType'] : null;
         $this->container['netType'] = isset($data['netType']) ? $data['netType'] : null;
         $this->container['billingTag'] = isset($data['billingTag']) ? $data['billingTag'] : null;
@@ -474,11 +474,11 @@ class JobInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['description'] === null) {
-            $invalidProperties[] = "'description' can't be null";
-        }
         if ($this->container['createTime'] === null) {
             $invalidProperties[] = "'createTime' can't be null";
+        }
+        if ($this->container['description'] === null) {
+            $invalidProperties[] = "'description' can't be null";
         }
         if ($this->container['engineType'] === null) {
             $invalidProperties[] = "'engineType' can't be null";
@@ -628,30 +628,6 @@ class JobInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets description
-    *  任务描述
-    *
-    * @return string
-    */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-    * Sets description
-    *
-    * @param string $description 任务描述
-    *
-    * @return $this
-    */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
-        return $this;
-    }
-
-    /**
     * Gets createTime
     *  任务创建时间
     *
@@ -672,6 +648,30 @@ class JobInfo implements ModelInterface, ArrayAccess
     public function setCreateTime($createTime)
     {
         $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  任务描述
+    *
+    * @return string
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string $description 任务描述
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 
@@ -821,7 +821,7 @@ class JobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets children
-    *  子任务信息体
+    *  子任务信息体。
     *
     * @return \HuaweiCloud\SDK\Drs\V3\Model\ChildrenJobInfo[]|null
     */
@@ -833,7 +833,7 @@ class JobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets children
     *
-    * @param \HuaweiCloud\SDK\Drs\V3\Model\ChildrenJobInfo[]|null $children 子任务信息体
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\ChildrenJobInfo[]|null $children 子任务信息体。
     *
     * @return $this
     */
@@ -845,7 +845,7 @@ class JobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeNewFramework
-    *  是否新框架
+    *  是否新框架。
     *
     * @return bool
     */
@@ -857,7 +857,7 @@ class JobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nodeNewFramework
     *
-    * @param bool $nodeNewFramework 是否新框架
+    * @param bool $nodeNewFramework 是否新框架。
     *
     * @return $this
     */

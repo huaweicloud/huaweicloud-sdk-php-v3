@@ -20,8 +20,8 @@ class GeneralImageVulsResponseInfoCveList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cveId  CVE ID
-    * cvss  CVSS分值
+    * cveId  **参数解释**： CVE ID **取值范围**： 字符长度1-32位
+    * cvss  **参数解释**： CVSS分值 **取值范围**： 字符长度1-10
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class GeneralImageVulsResponseInfoCveList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cveId  CVE ID
-    * cvss  CVSS分值
+    * cveId  **参数解释**： CVE ID **取值范围**： 字符长度1-32位
+    * cvss  **参数解释**： CVSS分值 **取值范围**： 字符长度1-10
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class GeneralImageVulsResponseInfoCveList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cveId  CVE ID
-    * cvss  CVSS分值
+    * cveId  **参数解释**： CVE ID **取值范围**： 字符长度1-32位
+    * cvss  **参数解释**： CVSS分值 **取值范围**： 字符长度1-10
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class GeneralImageVulsResponseInfoCveList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cveId  CVE ID
-    * cvss  CVSS分值
+    * cveId  **参数解释**： CVE ID **取值范围**： 字符长度1-32位
+    * cvss  **参数解释**： CVSS分值 **取值范围**： 字符长度1-10
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class GeneralImageVulsResponseInfoCveList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cveId  CVE ID
-    * cvss  CVSS分值
+    * cveId  **参数解释**： CVE ID **取值范围**： 字符长度1-32位
+    * cvss  **参数解释**： CVSS分值 **取值范围**： 字符长度1-10
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class GeneralImageVulsResponseInfoCveList implements ModelInterface, ArrayAccess
 
     /**
     * Gets cveId
-    *  CVE ID
+    *  **参数解释**： CVE ID **取值范围**： 字符长度1-32位
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class GeneralImageVulsResponseInfoCveList implements ModelInterface, ArrayAccess
     /**
     * Sets cveId
     *
-    * @param string|null $cveId CVE ID
+    * @param string|null $cveId **参数解释**： CVE ID **取值范围**： 字符长度1-32位
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class GeneralImageVulsResponseInfoCveList implements ModelInterface, ArrayAccess
 
     /**
     * Gets cvss
-    *  CVSS分值
+    *  **参数解释**： CVSS分值 **取值范围**： 字符长度1-10
     *
     * @return float|null
     */
@@ -233,7 +233,7 @@ class GeneralImageVulsResponseInfoCveList implements ModelInterface, ArrayAccess
     /**
     * Sets cvss
     *
-    * @param float|null $cvss CVSS分值
+    * @param float|null $cvss **参数解释**： CVSS分值 **取值范围**： 字符长度1-10
     *
     * @return $this
     */

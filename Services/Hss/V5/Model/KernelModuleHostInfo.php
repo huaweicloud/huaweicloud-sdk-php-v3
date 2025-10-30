@@ -20,10 +20,10 @@ class KernelModuleHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentId  agent_id
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
+    * agentId  **参数解释** agent id **取值范围** 字符长度1-64
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-64
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64
+    * hostIp  **参数解释** 服务器ip **取值范围** 字符长度1-64
     * kernelModuleInfo  kernelModuleInfo
     *
     * @var string[]
@@ -38,10 +38,10 @@ class KernelModuleHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentId  agent_id
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
+    * agentId  **参数解释** agent id **取值范围** 字符长度1-64
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-64
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64
+    * hostIp  **参数解释** 服务器ip **取值范围** 字符长度1-64
     * kernelModuleInfo  kernelModuleInfo
     *
     * @var string[]
@@ -77,10 +77,10 @@ class KernelModuleHostInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentId  agent_id
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
+    * agentId  **参数解释** agent id **取值范围** 字符长度1-64
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-64
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64
+    * hostIp  **参数解释** 服务器ip **取值范围** 字符长度1-64
     * kernelModuleInfo  kernelModuleInfo
     *
     * @var string[]
@@ -95,10 +95,10 @@ class KernelModuleHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentId  agent_id
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
+    * agentId  **参数解释** agent id **取值范围** 字符长度1-64
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-64
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64
+    * hostIp  **参数解释** 服务器ip **取值范围** 字符长度1-64
     * kernelModuleInfo  kernelModuleInfo
     *
     * @var string[]
@@ -113,10 +113,10 @@ class KernelModuleHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentId  agent_id
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
+    * agentId  **参数解释** agent id **取值范围** 字符长度1-64
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-64
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64
+    * hostIp  **参数解释** 服务器ip **取值范围** 字符长度1-64
     * kernelModuleInfo  kernelModuleInfo
     *
     * @var string[]
@@ -202,6 +202,30 @@ class KernelModuleHostInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'agentId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'agentId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hostIp', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostIp', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -218,7 +242,7 @@ class KernelModuleHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  agent_id
+    *  **参数解释** agent id **取值范围** 字符长度1-64
     *
     * @return string|null
     */
@@ -230,7 +254,7 @@ class KernelModuleHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId agent_id
+    * @param string|null $agentId **参数解释** agent id **取值范围** 字符长度1-64
     *
     * @return $this
     */
@@ -242,7 +266,7 @@ class KernelModuleHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机id
+    *  **参数解释** 主机id **取值范围** 字符长度1-64
     *
     * @return string|null
     */
@@ -254,7 +278,7 @@ class KernelModuleHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机id
+    * @param string|null $hostId **参数解释** 主机id **取值范围** 字符长度1-64
     *
     * @return $this
     */
@@ -266,7 +290,7 @@ class KernelModuleHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释** 服务器名称 **取值范围** 字符长度1-64
     *
     * @return string|null
     */
@@ -278,7 +302,7 @@ class KernelModuleHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释** 服务器名称 **取值范围** 字符长度1-64
     *
     * @return $this
     */
@@ -290,7 +314,7 @@ class KernelModuleHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  服务器ip
+    *  **参数解释** 服务器ip **取值范围** 字符长度1-64
     *
     * @return string|null
     */
@@ -302,7 +326,7 @@ class KernelModuleHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 服务器ip
+    * @param string|null $hostIp **参数解释** 服务器ip **取值范围** 字符长度1-64
     *
     * @return $this
     */

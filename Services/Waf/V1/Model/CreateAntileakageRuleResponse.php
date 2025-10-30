@@ -27,7 +27,9 @@ class CreateAntileakageRuleResponse implements ModelInterface, ArrayAccess
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  内容
     * timestamp  创建规则时间戳
+    * description  描述
     * status  规则状态，0：关闭，1：开启
+    * action  action
     *
     * @var string[]
     */
@@ -38,7 +40,9 @@ class CreateAntileakageRuleResponse implements ModelInterface, ArrayAccess
             'category' => 'string',
             'contents' => 'string[]',
             'timestamp' => 'int',
-            'status' => 'int'
+            'description' => 'string',
+            'status' => 'int',
+            'action' => '\HuaweiCloud\SDK\Waf\V1\Model\LeakageListInfoAction'
     ];
 
     /**
@@ -49,7 +53,9 @@ class CreateAntileakageRuleResponse implements ModelInterface, ArrayAccess
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  内容
     * timestamp  创建规则时间戳
+    * description  描述
     * status  规则状态，0：关闭，1：开启
+    * action  action
     *
     * @var string[]
     */
@@ -60,7 +66,9 @@ class CreateAntileakageRuleResponse implements ModelInterface, ArrayAccess
         'category' => null,
         'contents' => null,
         'timestamp' => 'int64',
-        'status' => null
+        'description' => null,
+        'status' => null,
+        'action' => null
     ];
 
     /**
@@ -92,7 +100,9 @@ class CreateAntileakageRuleResponse implements ModelInterface, ArrayAccess
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  内容
     * timestamp  创建规则时间戳
+    * description  描述
     * status  规则状态，0：关闭，1：开启
+    * action  action
     *
     * @var string[]
     */
@@ -103,7 +113,9 @@ class CreateAntileakageRuleResponse implements ModelInterface, ArrayAccess
             'category' => 'category',
             'contents' => 'contents',
             'timestamp' => 'timestamp',
-            'status' => 'status'
+            'description' => 'description',
+            'status' => 'status',
+            'action' => 'action'
     ];
 
     /**
@@ -114,7 +126,9 @@ class CreateAntileakageRuleResponse implements ModelInterface, ArrayAccess
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  内容
     * timestamp  创建规则时间戳
+    * description  描述
     * status  规则状态，0：关闭，1：开启
+    * action  action
     *
     * @var string[]
     */
@@ -125,7 +139,9 @@ class CreateAntileakageRuleResponse implements ModelInterface, ArrayAccess
             'category' => 'setCategory',
             'contents' => 'setContents',
             'timestamp' => 'setTimestamp',
-            'status' => 'setStatus'
+            'description' => 'setDescription',
+            'status' => 'setStatus',
+            'action' => 'setAction'
     ];
 
     /**
@@ -136,7 +152,9 @@ class CreateAntileakageRuleResponse implements ModelInterface, ArrayAccess
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  内容
     * timestamp  创建规则时间戳
+    * description  描述
     * status  规则状态，0：关闭，1：开启
+    * action  action
     *
     * @var string[]
     */
@@ -147,7 +165,9 @@ class CreateAntileakageRuleResponse implements ModelInterface, ArrayAccess
             'category' => 'getCategory',
             'contents' => 'getContents',
             'timestamp' => 'getTimestamp',
-            'status' => 'getStatus'
+            'description' => 'getDescription',
+            'status' => 'getStatus',
+            'action' => 'getAction'
     ];
 
     /**
@@ -214,7 +234,9 @@ class CreateAntileakageRuleResponse implements ModelInterface, ArrayAccess
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
         $this->container['contents'] = isset($data['contents']) ? $data['contents'] : null;
         $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
     }
 
     /**
@@ -384,6 +406,30 @@ class CreateAntileakageRuleResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets description
+    *  描述
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 描述
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
     * Gets status
     *  规则状态，0：关闭，1：开启
     *
@@ -404,6 +450,30 @@ class CreateAntileakageRuleResponse implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets action
+    *  action
+    *
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\LeakageListInfoAction|null
+    */
+    public function getAction()
+    {
+        return $this->container['action'];
+    }
+
+    /**
+    * Sets action
+    *
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\LeakageListInfoAction|null $action action
+    *
+    * @return $this
+    */
+    public function setAction($action)
+    {
+        $this->container['action'] = $action;
         return $this;
     }
 

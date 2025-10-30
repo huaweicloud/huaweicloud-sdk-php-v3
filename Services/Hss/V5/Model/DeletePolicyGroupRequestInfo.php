@@ -20,7 +20,7 @@ class DeletePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * idList  **参数解释**: 需要被删除的策略组的策略组ID列表，仅支持删除非默认并且未关联服务器的策略组 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，deletable 等于 true 的 group_id 是可以被删除的策略组ID **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
+    * idList  **参数解释**: 需要被删除的策略组ID列表，仅支持删除非默认并且未关联服务器的策略组 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，deletable 等于 true 的 group_id 是可以被删除的策略组ID **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeletePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * idList  **参数解释**: 需要被删除的策略组的策略组ID列表，仅支持删除非默认并且未关联服务器的策略组 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，deletable 等于 true 的 group_id 是可以被删除的策略组ID **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
+    * idList  **参数解释**: 需要被删除的策略组ID列表，仅支持删除非默认并且未关联服务器的策略组 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，deletable 等于 true 的 group_id 是可以被删除的策略组ID **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeletePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * idList  **参数解释**: 需要被删除的策略组的策略组ID列表，仅支持删除非默认并且未关联服务器的策略组 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，deletable 等于 true 的 group_id 是可以被删除的策略组ID **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
+    * idList  **参数解释**: 需要被删除的策略组ID列表，仅支持删除非默认并且未关联服务器的策略组 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，deletable 等于 true 的 group_id 是可以被删除的策略组ID **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeletePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * idList  **参数解释**: 需要被删除的策略组的策略组ID列表，仅支持删除非默认并且未关联服务器的策略组 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，deletable 等于 true 的 group_id 是可以被删除的策略组ID **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
+    * idList  **参数解释**: 需要被删除的策略组ID列表，仅支持删除非默认并且未关联服务器的策略组 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，deletable 等于 true 的 group_id 是可以被删除的策略组ID **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeletePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * idList  **参数解释**: 需要被删除的策略组的策略组ID列表，仅支持删除非默认并且未关联服务器的策略组 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，deletable 等于 true 的 group_id 是可以被删除的策略组ID **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
+    * idList  **参数解释**: 需要被删除的策略组ID列表，仅支持删除非默认并且未关联服务器的策略组 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，deletable 等于 true 的 group_id 是可以被删除的策略组ID **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class DeletePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets idList
-    *  **参数解释**: 需要被删除的策略组的策略组ID列表，仅支持删除非默认并且未关联服务器的策略组 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，deletable 等于 true 的 group_id 是可以被删除的策略组ID **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
+    *  **参数解释**: 需要被删除的策略组ID列表，仅支持删除非默认并且未关联服务器的策略组 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，deletable 等于 true 的 group_id 是可以被删除的策略组ID **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
     *
     * @return string[]
     */
@@ -189,7 +189,7 @@ class DeletePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets idList
     *
-    * @param string[] $idList **参数解释**: 需要被删除的策略组的策略组ID列表，仅支持删除非默认并且未关联服务器的策略组 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，deletable 等于 true 的 group_id 是可以被删除的策略组ID **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
+    * @param string[] $idList **参数解释**: 需要被删除的策略组ID列表，仅支持删除非默认并且未关联服务器的策略组 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，deletable 等于 true 的 group_id 是可以被删除的策略组ID **取值范围**: 最少1条，最多50条 **默认取值**: 不涉及
     *
     * @return $this
     */

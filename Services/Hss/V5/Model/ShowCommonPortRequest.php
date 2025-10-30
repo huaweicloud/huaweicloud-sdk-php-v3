@@ -20,30 +20,30 @@ class ShowCommonPortRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * port  端口号
-    * categoty  返回的资产类别 - 0: 主机 - 1: 容器
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * port  **参数解释**: 端口号 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'enterpriseProjectId' => 'string',
-            'port' => 'int',
-            'categoty' => 'string'
+            'category' => 'string',
+            'port' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * port  端口号
-    * categoty  返回的资产类别 - 0: 主机 - 1: 容器
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * port  **参数解释**: 端口号 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'enterpriseProjectId' => null,
-        'port' => null,
-        'categoty' => null
+        'category' => null,
+        'port' => null
     ];
 
     /**
@@ -69,44 +69,44 @@ class ShowCommonPortRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * port  端口号
-    * categoty  返回的资产类别 - 0: 主机 - 1: 容器
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * port  **参数解释**: 端口号 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'enterpriseProjectId' => 'enterprise_project_id',
-            'port' => 'port',
-            'categoty' => 'categoty'
+            'category' => 'category',
+            'port' => 'port'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * port  端口号
-    * categoty  返回的资产类别 - 0: 主机 - 1: 容器
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * port  **参数解释**: 端口号 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'port' => 'setPort',
-            'categoty' => 'setCategoty'
+            'category' => 'setCategory',
+            'port' => 'setPort'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * port  端口号
-    * categoty  返回的资产类别 - 0: 主机 - 1: 容器
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * port  **参数解释**: 端口号 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'port' => 'getPort',
-            'categoty' => 'getCategoty'
+            'category' => 'getCategory',
+            'port' => 'getPort'
     ];
 
     /**
@@ -168,8 +168,8 @@ class ShowCommonPortRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
-        $this->container['categoty'] = isset($data['categoty']) ? $data['categoty'] : null;
     }
 
     /**
@@ -189,6 +189,18 @@ class ShowCommonPortRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
             }
+        if ($this->container['category'] === null) {
+            $invalidProperties[] = "'category' can't be null";
+        }
+            if ((mb_strlen($this->container['category']) > 32)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['category']) < 0)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
+            }
+            if (!preg_match("/^(host|container)$/", $this->container['category'])) {
+                $invalidProperties[] = "invalid value for 'category', must be conform to the pattern /^(host|container)$/.";
+            }
         if ($this->container['port'] === null) {
             $invalidProperties[] = "'port' can't be null";
         }
@@ -197,12 +209,6 @@ class ShowCommonPortRequest implements ModelInterface, ArrayAccess
             }
             if (($this->container['port'] < 1)) {
                 $invalidProperties[] = "invalid value for 'port', must be bigger than or equal to 1.";
-            }
-        if ($this->container['categoty'] === null) {
-            $invalidProperties[] = "'categoty' can't be null";
-        }
-            if (!preg_match("/^0|1$/", $this->container['categoty'])) {
-                $invalidProperties[] = "invalid value for 'categoty', must be conform to the pattern /^0|1$/.";
             }
         return $invalidProperties;
     }
@@ -220,7 +226,7 @@ class ShowCommonPortRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return string|null
     */
@@ -232,7 +238,7 @@ class ShowCommonPortRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return $this
     */
@@ -243,8 +249,32 @@ class ShowCommonPortRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets category
+    *  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    *
+    * @return string
+    */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+    * Sets category
+    *
+    * @param string $category **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    *
+    * @return $this
+    */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
+        return $this;
+    }
+
+    /**
     * Gets port
-    *  端口号
+    *  **参数解释**: 端口号 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
     *
     * @return int
     */
@@ -256,37 +286,13 @@ class ShowCommonPortRequest implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param int $port 端口号
+    * @param int $port **参数解释**: 端口号 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
     *
     * @return $this
     */
     public function setPort($port)
     {
         $this->container['port'] = $port;
-        return $this;
-    }
-
-    /**
-    * Gets categoty
-    *  返回的资产类别 - 0: 主机 - 1: 容器
-    *
-    * @return string
-    */
-    public function getCategoty()
-    {
-        return $this->container['categoty'];
-    }
-
-    /**
-    * Sets categoty
-    *
-    * @param string $categoty 返回的资产类别 - 0: 主机 - 1: 容器
-    *
-    * @return $this
-    */
-    public function setCategoty($categoty)
-    {
-        $this->container['categoty'] = $categoty;
         return $this;
     }
 

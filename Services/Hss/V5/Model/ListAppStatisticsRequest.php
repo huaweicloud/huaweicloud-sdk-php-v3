@@ -232,10 +232,13 @@ class ListAppStatisticsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) > 64)) {
+        if ($this->container['category'] === null) {
+            $invalidProperties[] = "'category' can't be null";
+        }
+            if ((mb_strlen($this->container['category']) > 64)) {
                 $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) < 0)) {
+            if ((mb_strlen($this->container['category']) < 0)) {
                 $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -352,7 +355,7 @@ class ListAppStatisticsRequest implements ModelInterface, ArrayAccess
     * Gets category
     *  **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host：主机 - container：容器  **默认取值**: 不涉及
     *
-    * @return string|null
+    * @return string
     */
     public function getCategory()
     {
@@ -362,7 +365,7 @@ class ListAppStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host：主机 - container：容器  **默认取值**: 不涉及
+    * @param string $category **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host：主机 - container：容器  **默认取值**: 不涉及
     *
     * @return $this
     */

@@ -7688,9 +7688,9 @@ class DdsAsyncClient extends Client
     }
 
     /**
-     * 切换副本集实例的主备节点
+     * 切换实例的主备节点
      *
-     * 切换副本集实例下的主备节点
+     * 切换实例下的主备节点
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7721,6 +7721,9 @@ class DdsAsyncClient extends Client
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -7729,7 +7732,7 @@ class DdsAsyncClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                []
+                ['application/json']
             );
         }
         $headers = array_merge(

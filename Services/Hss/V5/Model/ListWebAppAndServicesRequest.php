@@ -23,15 +23,15 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * name  WebAppAndService资产的名称
-    * category  返回的资产类别 - 0: 主机 - 1: 容器
-    * catalogue  资产类型 - web-app：web应用 - web-service：web服务 - database：数据库
-    * hostName  服务器名称(可选)，可让用户根据主机名字搜索
-    * hostId  服务器id(可选)，可让用户根据主机id搜索
-    * hostIp  服务器ip(可选)，可让用户根据主机ip搜索
-    * version  WebAppAndService资产版本，可让用户根据版本搜索
-    * installDir  WebAppAndService资产安装目录，可让用户根据安装目录搜索
-    * partMatch  是否模糊匹配，默认false表示精确匹配
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * name  **参数解释**: web应用，web服务或数据库名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * catalogue  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web-app：web应用 - web-service：web服务 - database：数据库  **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称(可选)，可让用户根据主机名字搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器id(可选)，可让用户根据主机id搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器ip(可选)，可让用户根据主机ip搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * version  **参数解释**: web应用，web服务或数据库版本，可让用户根据版本搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * installDir  **参数解释**: web应用，web服务或数据库安装目录，可让用户根据安装目录搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * partMatch  **参数解释**: 是否模糊匹配，默认false表示精确匹配 **约束限制**: 不涉及 **取值范围**: - true：模糊匹配 - false：精确匹配  **默认取值**: false
     *
     * @var string[]
     */
@@ -39,8 +39,8 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'offset' => 'int',
             'limit' => 'int',
-            'name' => 'string',
             'category' => 'string',
+            'name' => 'string',
             'catalogue' => 'string',
             'hostName' => 'string',
             'hostId' => 'string',
@@ -55,15 +55,15 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * name  WebAppAndService资产的名称
-    * category  返回的资产类别 - 0: 主机 - 1: 容器
-    * catalogue  资产类型 - web-app：web应用 - web-service：web服务 - database：数据库
-    * hostName  服务器名称(可选)，可让用户根据主机名字搜索
-    * hostId  服务器id(可选)，可让用户根据主机id搜索
-    * hostIp  服务器ip(可选)，可让用户根据主机ip搜索
-    * version  WebAppAndService资产版本，可让用户根据版本搜索
-    * installDir  WebAppAndService资产安装目录，可让用户根据安装目录搜索
-    * partMatch  是否模糊匹配，默认false表示精确匹配
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * name  **参数解释**: web应用，web服务或数据库名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * catalogue  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web-app：web应用 - web-service：web服务 - database：数据库  **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称(可选)，可让用户根据主机名字搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器id(可选)，可让用户根据主机id搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器ip(可选)，可让用户根据主机ip搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * version  **参数解释**: web应用，web服务或数据库版本，可让用户根据版本搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * installDir  **参数解释**: web应用，web服务或数据库安装目录，可让用户根据安装目录搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * partMatch  **参数解释**: 是否模糊匹配，默认false表示精确匹配 **约束限制**: 不涉及 **取值范围**: - true：模糊匹配 - false：精确匹配  **默认取值**: false
     *
     * @var string[]
     */
@@ -71,8 +71,8 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'offset' => 'int32',
         'limit' => 'int32',
-        'name' => null,
         'category' => null,
+        'name' => null,
         'catalogue' => null,
         'hostName' => null,
         'hostId' => null,
@@ -108,15 +108,15 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * name  WebAppAndService资产的名称
-    * category  返回的资产类别 - 0: 主机 - 1: 容器
-    * catalogue  资产类型 - web-app：web应用 - web-service：web服务 - database：数据库
-    * hostName  服务器名称(可选)，可让用户根据主机名字搜索
-    * hostId  服务器id(可选)，可让用户根据主机id搜索
-    * hostIp  服务器ip(可选)，可让用户根据主机ip搜索
-    * version  WebAppAndService资产版本，可让用户根据版本搜索
-    * installDir  WebAppAndService资产安装目录，可让用户根据安装目录搜索
-    * partMatch  是否模糊匹配，默认false表示精确匹配
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * name  **参数解释**: web应用，web服务或数据库名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * catalogue  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web-app：web应用 - web-service：web服务 - database：数据库  **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称(可选)，可让用户根据主机名字搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器id(可选)，可让用户根据主机id搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器ip(可选)，可让用户根据主机ip搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * version  **参数解释**: web应用，web服务或数据库版本，可让用户根据版本搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * installDir  **参数解释**: web应用，web服务或数据库安装目录，可让用户根据安装目录搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * partMatch  **参数解释**: 是否模糊匹配，默认false表示精确匹配 **约束限制**: 不涉及 **取值范围**: - true：模糊匹配 - false：精确匹配  **默认取值**: false
     *
     * @var string[]
     */
@@ -124,8 +124,8 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'offset' => 'offset',
             'limit' => 'limit',
-            'name' => 'name',
             'category' => 'category',
+            'name' => 'name',
             'catalogue' => 'catalogue',
             'hostName' => 'host_name',
             'hostId' => 'host_id',
@@ -140,15 +140,15 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * name  WebAppAndService资产的名称
-    * category  返回的资产类别 - 0: 主机 - 1: 容器
-    * catalogue  资产类型 - web-app：web应用 - web-service：web服务 - database：数据库
-    * hostName  服务器名称(可选)，可让用户根据主机名字搜索
-    * hostId  服务器id(可选)，可让用户根据主机id搜索
-    * hostIp  服务器ip(可选)，可让用户根据主机ip搜索
-    * version  WebAppAndService资产版本，可让用户根据版本搜索
-    * installDir  WebAppAndService资产安装目录，可让用户根据安装目录搜索
-    * partMatch  是否模糊匹配，默认false表示精确匹配
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * name  **参数解释**: web应用，web服务或数据库名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * catalogue  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web-app：web应用 - web-service：web服务 - database：数据库  **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称(可选)，可让用户根据主机名字搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器id(可选)，可让用户根据主机id搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器ip(可选)，可让用户根据主机ip搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * version  **参数解释**: web应用，web服务或数据库版本，可让用户根据版本搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * installDir  **参数解释**: web应用，web服务或数据库安装目录，可让用户根据安装目录搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * partMatch  **参数解释**: 是否模糊匹配，默认false表示精确匹配 **约束限制**: 不涉及 **取值范围**: - true：模糊匹配 - false：精确匹配  **默认取值**: false
     *
     * @var string[]
     */
@@ -156,8 +156,8 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'name' => 'setName',
             'category' => 'setCategory',
+            'name' => 'setName',
             'catalogue' => 'setCatalogue',
             'hostName' => 'setHostName',
             'hostId' => 'setHostId',
@@ -172,15 +172,15 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * name  WebAppAndService资产的名称
-    * category  返回的资产类别 - 0: 主机 - 1: 容器
-    * catalogue  资产类型 - web-app：web应用 - web-service：web服务 - database：数据库
-    * hostName  服务器名称(可选)，可让用户根据主机名字搜索
-    * hostId  服务器id(可选)，可让用户根据主机id搜索
-    * hostIp  服务器ip(可选)，可让用户根据主机ip搜索
-    * version  WebAppAndService资产版本，可让用户根据版本搜索
-    * installDir  WebAppAndService资产安装目录，可让用户根据安装目录搜索
-    * partMatch  是否模糊匹配，默认false表示精确匹配
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * name  **参数解释**: web应用，web服务或数据库名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * catalogue  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web-app：web应用 - web-service：web服务 - database：数据库  **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称(可选)，可让用户根据主机名字搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * hostId  **参数解释**: 服务器id(可选)，可让用户根据主机id搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器ip(可选)，可让用户根据主机ip搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * version  **参数解释**: web应用，web服务或数据库版本，可让用户根据版本搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * installDir  **参数解释**: web应用，web服务或数据库安装目录，可让用户根据安装目录搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * partMatch  **参数解释**: 是否模糊匹配，默认false表示精确匹配 **约束限制**: 不涉及 **取值范围**: - true：模糊匹配 - false：精确匹配  **默认取值**: false
     *
     * @var string[]
     */
@@ -188,8 +188,8 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'name' => 'getName',
             'category' => 'getCategory',
+            'name' => 'getName',
             'catalogue' => 'getCatalogue',
             'hostName' => 'getHostName',
             'hostId' => 'getHostId',
@@ -260,8 +260,8 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['catalogue'] = isset($data['catalogue']) ? $data['catalogue'] : null;
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
@@ -300,6 +300,18 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
             }
+        if ($this->container['category'] === null) {
+            $invalidProperties[] = "'category' can't be null";
+        }
+            if ((mb_strlen($this->container['category']) > 32)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['category']) < 0)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
+            }
+            if (!preg_match("/^(host|container)$/", $this->container['category'])) {
+                $invalidProperties[] = "invalid value for 'category', must be conform to the pattern /^(host|container)$/.";
+            }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
@@ -308,12 +320,6 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
-            }
-        if ($this->container['category'] === null) {
-            $invalidProperties[] = "'category' can't be null";
-        }
-            if (!preg_match("/^0|1$/", $this->container['category'])) {
-                $invalidProperties[] = "invalid value for 'category', must be conform to the pattern /^0|1$/.";
             }
         if ($this->container['catalogue'] === null) {
             $invalidProperties[] = "'catalogue' can't be null";
@@ -444,32 +450,8 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets name
-    *  WebAppAndService资产的名称
-    *
-    * @return string
-    */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-    * Sets name
-    *
-    * @param string $name WebAppAndService资产的名称
-    *
-    * @return $this
-    */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-        return $this;
-    }
-
-    /**
     * Gets category
-    *  返回的资产类别 - 0: 主机 - 1: 容器
+    *  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     *
     * @return string
     */
@@ -481,7 +463,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string $category 返回的资产类别 - 0: 主机 - 1: 容器
+    * @param string $category **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     *
     * @return $this
     */
@@ -492,8 +474,32 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets name
+    *  **参数解释**: web应用，web服务或数据库名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    *
+    * @return string
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string $name **参数解释**: web应用，web服务或数据库名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
     * Gets catalogue
-    *  资产类型 - web-app：web应用 - web-service：web服务 - database：数据库
+    *  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web-app：web应用 - web-service：web服务 - database：数据库  **默认取值**: 不涉及
     *
     * @return string
     */
@@ -505,7 +511,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets catalogue
     *
-    * @param string $catalogue 资产类型 - web-app：web应用 - web-service：web服务 - database：数据库
+    * @param string $catalogue **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web-app：web应用 - web-service：web服务 - database：数据库  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -517,7 +523,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称(可选)，可让用户根据主机名字搜索
+    *  **参数解释**: 服务器名称(可选)，可让用户根据主机名字搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -529,7 +535,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称(可选)，可让用户根据主机名字搜索
+    * @param string|null $hostName **参数解释**: 服务器名称(可选)，可让用户根据主机名字搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -541,7 +547,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器id(可选)，可让用户根据主机id搜索
+    *  **参数解释**: 服务器id(可选)，可让用户根据主机id搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -553,7 +559,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器id(可选)，可让用户根据主机id搜索
+    * @param string|null $hostId **参数解释**: 服务器id(可选)，可让用户根据主机id搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -565,7 +571,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  服务器ip(可选)，可让用户根据主机ip搜索
+    *  **参数解释**: 服务器ip(可选)，可让用户根据主机ip搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -577,7 +583,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 服务器ip(可选)，可让用户根据主机ip搜索
+    * @param string|null $hostIp **参数解释**: 服务器ip(可选)，可让用户根据主机ip搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -589,7 +595,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  WebAppAndService资产版本，可让用户根据版本搜索
+    *  **参数解释**: web应用，web服务或数据库版本，可让用户根据版本搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -601,7 +607,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version WebAppAndService资产版本，可让用户根据版本搜索
+    * @param string|null $version **参数解释**: web应用，web服务或数据库版本，可让用户根据版本搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -613,7 +619,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets installDir
-    *  WebAppAndService资产安装目录，可让用户根据安装目录搜索
+    *  **参数解释**: web应用，web服务或数据库安装目录，可让用户根据安装目录搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -625,7 +631,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets installDir
     *
-    * @param string|null $installDir WebAppAndService资产安装目录，可让用户根据安装目录搜索
+    * @param string|null $installDir **参数解释**: web应用，web服务或数据库安装目录，可让用户根据安装目录搜索 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -637,7 +643,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets partMatch
-    *  是否模糊匹配，默认false表示精确匹配
+    *  **参数解释**: 是否模糊匹配，默认false表示精确匹配 **约束限制**: 不涉及 **取值范围**: - true：模糊匹配 - false：精确匹配  **默认取值**: false
     *
     * @return bool|null
     */
@@ -649,7 +655,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets partMatch
     *
-    * @param bool|null $partMatch 是否模糊匹配，默认false表示精确匹配
+    * @param bool|null $partMatch **参数解释**: 是否模糊匹配，默认false表示精确匹配 **约束限制**: 不涉及 **取值范围**: - true：模糊匹配 - false：精确匹配  **默认取值**: false
     *
     * @return $this
     */

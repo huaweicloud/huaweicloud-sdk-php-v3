@@ -24,11 +24,11 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
     * deployMode  是否开启动态诱饵，包含如下2种，默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录，多个目录请用英文分号隔开，最多支持填写20个防护目录
-    * protectionType  防护文件类型，例如：docx，txt，avi
+    * protectionType  **参数解释**: 需要防护的文件类型 **约束限制**: 不涉及 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr **默认取值**: 不涉及
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * processWhitelist  进程白名单
-    * aiProtectionStatus  是否开启AI勒索防护，包含如下2种，默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
     *
     * @var string[]
     */
@@ -50,11 +50,11 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
     * deployMode  是否开启动态诱饵，包含如下2种，默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录，多个目录请用英文分号隔开，最多支持填写20个防护目录
-    * protectionType  防护文件类型，例如：docx，txt，avi
+    * protectionType  **参数解释**: 需要防护的文件类型 **约束限制**: 不涉及 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr **默认取值**: 不涉及
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * processWhitelist  进程白名单
-    * aiProtectionStatus  是否开启AI勒索防护，包含如下2种，默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
     *
     * @var string[]
     */
@@ -97,11 +97,11 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
     * deployMode  是否开启动态诱饵，包含如下2种，默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录，多个目录请用英文分号隔开，最多支持填写20个防护目录
-    * protectionType  防护文件类型，例如：docx，txt，avi
+    * protectionType  **参数解释**: 需要防护的文件类型 **约束限制**: 不涉及 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr **默认取值**: 不涉及
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * processWhitelist  进程白名单
-    * aiProtectionStatus  是否开启AI勒索防护，包含如下2种，默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
     *
     * @var string[]
     */
@@ -123,11 +123,11 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
     * deployMode  是否开启动态诱饵，包含如下2种，默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录，多个目录请用英文分号隔开，最多支持填写20个防护目录
-    * protectionType  防护文件类型，例如：docx，txt，avi
+    * protectionType  **参数解释**: 需要防护的文件类型 **约束限制**: 不涉及 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr **默认取值**: 不涉及
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * processWhitelist  进程白名单
-    * aiProtectionStatus  是否开启AI勒索防护，包含如下2种，默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
     *
     * @var string[]
     */
@@ -149,11 +149,11 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
     * deployMode  是否开启动态诱饵，包含如下2种，默认为关闭防护动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录，多个目录请用英文分号隔开，最多支持填写20个防护目录
-    * protectionType  防护文件类型，例如：docx，txt，avi
+    * protectionType  **参数解释**: 需要防护的文件类型 **约束限制**: 不涉及 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr **默认取值**: 不涉及
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * processWhitelist  进程白名单
-    * aiProtectionStatus  是否开启AI勒索防护，包含如下2种，默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
     *
     * @var string[]
     */
@@ -424,7 +424,7 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectionType
-    *  防护文件类型，例如：docx，txt，avi
+    *  **参数解释**: 需要防护的文件类型 **约束限制**: 不涉及 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr **默认取值**: 不涉及
     *
     * @return string
     */
@@ -436,7 +436,7 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectionType
     *
-    * @param string $protectionType 防护文件类型，例如：docx，txt，avi
+    * @param string $protectionType **参数解释**: 需要防护的文件类型 **约束限制**: 不涉及 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -520,7 +520,7 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets aiProtectionStatus
-    *  是否开启AI勒索防护，包含如下2种，默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
+    *  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
     *
     * @return string|null
     */
@@ -532,7 +532,7 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets aiProtectionStatus
     *
-    * @param string|null $aiProtectionStatus 是否开启AI勒索防护，包含如下2种，默认为关闭AI勒索防护，当前只支持Windows防护策略   - opened ：开启。   - closed ：关闭。
+    * @param string|null $aiProtectionStatus **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
     *
     * @return $this
     */

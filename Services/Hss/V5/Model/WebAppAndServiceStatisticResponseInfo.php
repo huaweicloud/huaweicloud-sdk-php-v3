@@ -20,8 +20,8 @@ class WebAppAndServiceStatisticResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  WebAppAndService资产名称
-    * num  WebAppAndService资产--具备该资产的主机数量
+    * name  **参数解释**: web应用、web服务、数据库资产名称 **取值范围**: 字符长度0-256
+    * num  **参数解释** web应用、web服务、数据库资产--具备该资产的主机数量 **取值范围** 最小值0，最大值300000
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class WebAppAndServiceStatisticResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  WebAppAndService资产名称
-    * num  WebAppAndService资产--具备该资产的主机数量
+    * name  **参数解释**: web应用、web服务、数据库资产名称 **取值范围**: 字符长度0-256
+    * num  **参数解释** web应用、web服务、数据库资产--具备该资产的主机数量 **取值范围** 最小值0，最大值300000
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class WebAppAndServiceStatisticResponseInfo implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  WebAppAndService资产名称
-    * num  WebAppAndService资产--具备该资产的主机数量
+    * name  **参数解释**: web应用、web服务、数据库资产名称 **取值范围**: 字符长度0-256
+    * num  **参数解释** web应用、web服务、数据库资产--具备该资产的主机数量 **取值范围** 最小值0，最大值300000
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class WebAppAndServiceStatisticResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  WebAppAndService资产名称
-    * num  WebAppAndService资产--具备该资产的主机数量
+    * name  **参数解释**: web应用、web服务、数据库资产名称 **取值范围**: 字符长度0-256
+    * num  **参数解释** web应用、web服务、数据库资产--具备该资产的主机数量 **取值范围** 最小值0，最大值300000
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class WebAppAndServiceStatisticResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  WebAppAndService资产名称
-    * num  WebAppAndService资产--具备该资产的主机数量
+    * name  **参数解释**: web应用、web服务、数据库资产名称 **取值范围**: 字符长度0-256
+    * num  **参数解释** web应用、web服务、数据库资产--具备该资产的主机数量 **取值范围** 最小值0，最大值300000
     *
     * @var string[]
     */
@@ -175,6 +175,12 @@ class WebAppAndServiceStatisticResponseInfo implements ModelInterface, ArrayAcce
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['num']) && ($this->container['num'] > 300000)) {
+                $invalidProperties[] = "invalid value for 'num', must be smaller than or equal to 300000.";
+            }
+            if (!is_null($this->container['num']) && ($this->container['num'] < 0)) {
+                $invalidProperties[] = "invalid value for 'num', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -191,7 +197,7 @@ class WebAppAndServiceStatisticResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets name
-    *  WebAppAndService资产名称
+    *  **参数解释**: web应用、web服务、数据库资产名称 **取值范围**: 字符长度0-256
     *
     * @return string|null
     */
@@ -203,7 +209,7 @@ class WebAppAndServiceStatisticResponseInfo implements ModelInterface, ArrayAcce
     /**
     * Sets name
     *
-    * @param string|null $name WebAppAndService资产名称
+    * @param string|null $name **参数解释**: web应用、web服务、数据库资产名称 **取值范围**: 字符长度0-256
     *
     * @return $this
     */
@@ -215,7 +221,7 @@ class WebAppAndServiceStatisticResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets num
-    *  WebAppAndService资产--具备该资产的主机数量
+    *  **参数解释** web应用、web服务、数据库资产--具备该资产的主机数量 **取值范围** 最小值0，最大值300000
     *
     * @return int|null
     */
@@ -227,7 +233,7 @@ class WebAppAndServiceStatisticResponseInfo implements ModelInterface, ArrayAcce
     /**
     * Sets num
     *
-    * @param int|null $num WebAppAndService资产--具备该资产的主机数量
+    * @param int|null $num **参数解释** web应用、web服务、数据库资产--具备该资产的主机数量 **取值范围** 最小值0，最大值300000
     *
     * @return $this
     */

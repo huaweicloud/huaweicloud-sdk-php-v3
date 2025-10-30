@@ -20,7 +20,6 @@ class SqlRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isTimeRangeRelative  是时间范围相对
     * logStreamId  日志流id
     * logStreamName  日志流名称
     * logGroupId  日志组id
@@ -33,7 +32,6 @@ class SqlRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'isTimeRangeRelative' => 'bool',
             'logStreamId' => 'string',
             'logStreamName' => 'string',
             'logGroupId' => 'string',
@@ -46,7 +44,6 @@ class SqlRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isTimeRangeRelative  是时间范围相对
     * logStreamId  日志流id
     * logStreamName  日志流名称
     * logGroupId  日志组id
@@ -59,7 +56,6 @@ class SqlRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'isTimeRangeRelative' => null,
         'logStreamId' => null,
         'logStreamName' => null,
         'logGroupId' => null,
@@ -93,7 +89,6 @@ class SqlRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isTimeRangeRelative  是时间范围相对
     * logStreamId  日志流id
     * logStreamName  日志流名称
     * logGroupId  日志组id
@@ -106,7 +101,6 @@ class SqlRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'isTimeRangeRelative' => 'is_time_range_relative',
             'logStreamId' => 'log_stream_id',
             'logStreamName' => 'log_stream_name',
             'logGroupId' => 'log_group_id',
@@ -119,7 +113,6 @@ class SqlRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isTimeRangeRelative  是时间范围相对
     * logStreamId  日志流id
     * logStreamName  日志流名称
     * logGroupId  日志组id
@@ -132,7 +125,6 @@ class SqlRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'isTimeRangeRelative' => 'setIsTimeRangeRelative',
             'logStreamId' => 'setLogStreamId',
             'logStreamName' => 'setLogStreamName',
             'logGroupId' => 'setLogGroupId',
@@ -145,7 +137,6 @@ class SqlRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isTimeRangeRelative  是时间范围相对
     * logStreamId  日志流id
     * logStreamName  日志流名称
     * logGroupId  日志组id
@@ -158,7 +149,6 @@ class SqlRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'isTimeRangeRelative' => 'getIsTimeRangeRelative',
             'logStreamId' => 'getLogStreamId',
             'logStreamName' => 'getLogStreamName',
             'logGroupId' => 'getLogGroupId',
@@ -242,7 +232,6 @@ class SqlRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['isTimeRangeRelative'] = isset($data['isTimeRangeRelative']) ? $data['isTimeRangeRelative'] : null;
         $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : null;
         $this->container['logStreamName'] = isset($data['logStreamName']) ? $data['logStreamName'] : null;
         $this->container['logGroupId'] = isset($data['logGroupId']) ? $data['logGroupId'] : null;
@@ -341,30 +330,6 @@ class SqlRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets isTimeRangeRelative
-    *  是时间范围相对
-    *
-    * @return bool|null
-    */
-    public function getIsTimeRangeRelative()
-    {
-        return $this->container['isTimeRangeRelative'];
-    }
-
-    /**
-    * Sets isTimeRangeRelative
-    *
-    * @param bool|null $isTimeRangeRelative 是时间范围相对
-    *
-    * @return $this
-    */
-    public function setIsTimeRangeRelative($isTimeRangeRelative)
-    {
-        $this->container['isTimeRangeRelative'] = $isTimeRangeRelative;
-        return $this;
     }
 
     /**

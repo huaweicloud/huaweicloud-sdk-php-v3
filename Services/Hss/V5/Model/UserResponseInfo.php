@@ -23,7 +23,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * userName  用户名
     * loginPermission  **参数解释**: 是否允许登录 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
     * rootPermission  **参数解释**： 管理员权限 **取值范围**： - true：是 - false：否
@@ -59,7 +59,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * userName  用户名
     * loginPermission  **参数解释**: 是否允许登录 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
     * rootPermission  **参数解释**： 管理员权限 **取值范围**： - true：是 - false：否
@@ -116,7 +116,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * userName  用户名
     * loginPermission  **参数解释**: 是否允许登录 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
     * rootPermission  **参数解释**： 管理员权限 **取值范围**： - true：是 - false：否
@@ -152,7 +152,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * userName  用户名
     * loginPermission  **参数解释**: 是否允许登录 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
     * rootPermission  **参数解释**： 管理员权限 **取值范围**： - true：是 - false：否
@@ -188,7 +188,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * userName  用户名
     * loginPermission  **参数解释**: 是否允许登录 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
     * rootPermission  **参数解释**： 管理员权限 **取值范围**： - true：是 - false：否
@@ -452,7 +452,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    *  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -464,7 +464,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * @param string|null $hostIp **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class AddPolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * description  **参数解释**: 策略组的描述信息 **约束限制**: 不涉及 **取值范围**: 字符长度1-64，只能由中文字符、英文字母、数字、逗号、句号、空格及\"_\"、\"-\"组成 **默认取值**: 不涉及
     * name  **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-32，只能由中文字符、英文字母、数字、逗号、句号、空格及\"_\"、\"-\"组成，且不能以default_policy_group开头 **默认取值**: 不涉及
-    * groupId  **参数解释**: 需要被复制的策略组的策略组ID，仅旗舰版和容器版策略组支持复制 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，support_version 等于 hss.version.container.enterprise 或 hss.version.premium 的 group_id 是可以被复制的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
+    * groupId  **参数解释**: 需要被复制的策略组ID，仅旗舰版和容器版策略组支持复制 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，support_version 等于 hss.version.container.enterprise 或 hss.version.premium 的 group_id 是可以被复制的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class AddPolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * description  **参数解释**: 策略组的描述信息 **约束限制**: 不涉及 **取值范围**: 字符长度1-64，只能由中文字符、英文字母、数字、逗号、句号、空格及\"_\"、\"-\"组成 **默认取值**: 不涉及
     * name  **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-32，只能由中文字符、英文字母、数字、逗号、句号、空格及\"_\"、\"-\"组成，且不能以default_policy_group开头 **默认取值**: 不涉及
-    * groupId  **参数解释**: 需要被复制的策略组的策略组ID，仅旗舰版和容器版策略组支持复制 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，support_version 等于 hss.version.container.enterprise 或 hss.version.premium 的 group_id 是可以被复制的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
+    * groupId  **参数解释**: 需要被复制的策略组ID，仅旗舰版和容器版策略组支持复制 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，support_version 等于 hss.version.container.enterprise 或 hss.version.premium 的 group_id 是可以被复制的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class AddPolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * description  **参数解释**: 策略组的描述信息 **约束限制**: 不涉及 **取值范围**: 字符长度1-64，只能由中文字符、英文字母、数字、逗号、句号、空格及\"_\"、\"-\"组成 **默认取值**: 不涉及
     * name  **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-32，只能由中文字符、英文字母、数字、逗号、句号、空格及\"_\"、\"-\"组成，且不能以default_policy_group开头 **默认取值**: 不涉及
-    * groupId  **参数解释**: 需要被复制的策略组的策略组ID，仅旗舰版和容器版策略组支持复制 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，support_version 等于 hss.version.container.enterprise 或 hss.version.premium 的 group_id 是可以被复制的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
+    * groupId  **参数解释**: 需要被复制的策略组ID，仅旗舰版和容器版策略组支持复制 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，support_version 等于 hss.version.container.enterprise 或 hss.version.premium 的 group_id 是可以被复制的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class AddPolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * description  **参数解释**: 策略组的描述信息 **约束限制**: 不涉及 **取值范围**: 字符长度1-64，只能由中文字符、英文字母、数字、逗号、句号、空格及\"_\"、\"-\"组成 **默认取值**: 不涉及
     * name  **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-32，只能由中文字符、英文字母、数字、逗号、句号、空格及\"_\"、\"-\"组成，且不能以default_policy_group开头 **默认取值**: 不涉及
-    * groupId  **参数解释**: 需要被复制的策略组的策略组ID，仅旗舰版和容器版策略组支持复制 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，support_version 等于 hss.version.container.enterprise 或 hss.version.premium 的 group_id 是可以被复制的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
+    * groupId  **参数解释**: 需要被复制的策略组ID，仅旗舰版和容器版策略组支持复制 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，support_version 等于 hss.version.container.enterprise 或 hss.version.premium 的 group_id 是可以被复制的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class AddPolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * description  **参数解释**: 策略组的描述信息 **约束限制**: 不涉及 **取值范围**: 字符长度1-64，只能由中文字符、英文字母、数字、逗号、句号、空格及\"_\"、\"-\"组成 **默认取值**: 不涉及
     * name  **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-32，只能由中文字符、英文字母、数字、逗号、句号、空格及\"_\"、\"-\"组成，且不能以default_policy_group开头 **默认取值**: 不涉及
-    * groupId  **参数解释**: 需要被复制的策略组的策略组ID，仅旗舰版和容器版策略组支持复制 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，support_version 等于 hss.version.container.enterprise 或 hss.version.premium 的 group_id 是可以被复制的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
+    * groupId  **参数解释**: 需要被复制的策略组ID，仅旗舰版和容器版策略组支持复制 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，support_version 等于 hss.version.container.enterprise 或 hss.version.premium 的 group_id 是可以被复制的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -277,7 +277,7 @@ class AddPolicyGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  **参数解释**: 需要被复制的策略组的策略组ID，仅旗舰版和容器版策略组支持复制 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，support_version 等于 hss.version.container.enterprise 或 hss.version.premium 的 group_id 是可以被复制的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
+    *  **参数解释**: 需要被复制的策略组ID，仅旗舰版和容器版策略组支持复制 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，support_version 等于 hss.version.container.enterprise 或 hss.version.premium 的 group_id 是可以被复制的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
     *
     * @return string
     */
@@ -289,7 +289,7 @@ class AddPolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string $groupId **参数解释**: 需要被复制的策略组的策略组ID，仅旗舰版和容器版策略组支持复制 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，support_version 等于 hss.version.container.enterprise 或 hss.version.premium 的 group_id 是可以被复制的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
+    * @param string $groupId **参数解释**: 需要被复制的策略组ID，仅旗舰版和容器版策略组支持复制 **约束限制**: 需要使用 ListPolicyGroup 接口查询旗舰版和容器版策略组，在 ListPolicyGroup 接口的响应体中，support_version 等于 hss.version.container.enterprise 或 hss.version.premium 的 group_id 是可以被复制的策略组ID **取值范围**: 字符长度36-64 **默认取值**: 不涉及
     *
     * @return $this
     */

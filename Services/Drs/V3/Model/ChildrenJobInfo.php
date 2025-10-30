@@ -20,7 +20,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * billingTag  计费字段
+    * billingTag  是否计费字段。
     * createTime  任务创建时间
     * dbUseType  复制场景
     * description  任务描述
@@ -56,7 +56,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * billingTag  计费字段
+    * billingTag  是否计费字段。
     * createTime  任务创建时间
     * dbUseType  复制场景
     * description  任务描述
@@ -113,7 +113,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * billingTag  计费字段
+    * billingTag  是否计费字段。
     * createTime  任务创建时间
     * dbUseType  复制场景
     * description  任务描述
@@ -149,7 +149,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * billingTag  计费字段
+    * billingTag  是否计费字段。
     * createTime  任务创建时间
     * dbUseType  复制场景
     * description  任务描述
@@ -185,7 +185,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * billingTag  计费字段
+    * billingTag  是否计费字段。
     * createTime  任务创建时间
     * dbUseType  复制场景
     * description  任务描述
@@ -459,15 +459,6 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['billingTag'] === null) {
-            $invalidProperties[] = "'billingTag' can't be null";
-        }
-        if ($this->container['createTime'] === null) {
-            $invalidProperties[] = "'createTime' can't be null";
-        }
-        if ($this->container['dbUseType'] === null) {
-            $invalidProperties[] = "'dbUseType' can't be null";
-        }
             $allowedValues = $this->getDbUseTypeAllowableValues();
                 if (!is_null($this->container['dbUseType']) && !in_array($this->container['dbUseType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -476,12 +467,6 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['description'] === null) {
-            $invalidProperties[] = "'description' can't be null";
-        }
-        if ($this->container['engineType'] === null) {
-            $invalidProperties[] = "'engineType' can't be null";
-        }
             $allowedValues = $this->getEngineTypeAllowableValues();
                 if (!is_null($this->container['engineType']) && !in_array($this->container['engineType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -490,15 +475,6 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['errorMsg'] === null) {
-            $invalidProperties[] = "'errorMsg' can't be null";
-        }
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-        if ($this->container['jobDirection'] === null) {
-            $invalidProperties[] = "'jobDirection' can't be null";
-        }
             $allowedValues = $this->getJobDirectionAllowableValues();
                 if (!is_null($this->container['jobDirection']) && !in_array($this->container['jobDirection'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -507,12 +483,6 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-        if ($this->container['netType'] === null) {
-            $invalidProperties[] = "'netType' can't be null";
-        }
             $allowedValues = $this->getNetTypeAllowableValues();
                 if (!is_null($this->container['netType']) && !in_array($this->container['netType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -521,12 +491,6 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['nodeNewFramework'] === null) {
-            $invalidProperties[] = "'nodeNewFramework' can't be null";
-        }
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
-        }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -535,9 +499,6 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['taskType'] === null) {
-            $invalidProperties[] = "'taskType' can't be null";
-        }
             $allowedValues = $this->getTaskTypeAllowableValues();
                 if (!is_null($this->container['taskType']) && !in_array($this->container['taskType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -562,9 +523,9 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets billingTag
-    *  计费字段
+    *  是否计费字段。
     *
-    * @return bool
+    * @return bool|null
     */
     public function getBillingTag()
     {
@@ -574,7 +535,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets billingTag
     *
-    * @param bool $billingTag 计费字段
+    * @param bool|null $billingTag 是否计费字段。
     *
     * @return $this
     */
@@ -588,7 +549,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     * Gets createTime
     *  任务创建时间
     *
-    * @return string
+    * @return string|null
     */
     public function getCreateTime()
     {
@@ -598,7 +559,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string $createTime 任务创建时间
+    * @param string|null $createTime 任务创建时间
     *
     * @return $this
     */
@@ -612,7 +573,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     * Gets dbUseType
     *  复制场景
     *
-    * @return string
+    * @return string|null
     */
     public function getDbUseType()
     {
@@ -622,7 +583,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dbUseType
     *
-    * @param string $dbUseType 复制场景
+    * @param string|null $dbUseType 复制场景
     *
     * @return $this
     */
@@ -636,7 +597,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     * Gets description
     *  任务描述
     *
-    * @return string
+    * @return string|null
     */
     public function getDescription()
     {
@@ -646,7 +607,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 任务描述
+    * @param string|null $description 任务描述
     *
     * @return $this
     */
@@ -660,7 +621,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     * Gets engineType
     *  引擎类型
     *
-    * @return string
+    * @return string|null
     */
     public function getEngineType()
     {
@@ -670,7 +631,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets engineType
     *
-    * @param string $engineType 引擎类型
+    * @param string|null $engineType 引擎类型
     *
     * @return $this
     */
@@ -684,7 +645,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     * Gets errorMsg
     *  任务失败原因
     *
-    * @return string
+    * @return string|null
     */
     public function getErrorMsg()
     {
@@ -694,7 +655,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string $errorMsg 任务失败原因
+    * @param string|null $errorMsg 任务失败原因
     *
     * @return $this
     */
@@ -708,7 +669,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     * Gets id
     *  任务id
     *
-    * @return string
+    * @return string|null
     */
     public function getId()
     {
@@ -718,7 +679,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 任务id
+    * @param string|null $id 任务id
     *
     * @return $this
     */
@@ -732,7 +693,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     * Gets jobDirection
     *  迁移方向
     *
-    * @return string
+    * @return string|null
     */
     public function getJobDirection()
     {
@@ -742,7 +703,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets jobDirection
     *
-    * @param string $jobDirection 迁移方向
+    * @param string|null $jobDirection 迁移方向
     *
     * @return $this
     */
@@ -756,7 +717,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     * Gets name
     *  任务名称
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -766,7 +727,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 任务名称
+    * @param string|null $name 任务名称
     *
     * @return $this
     */
@@ -780,7 +741,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     * Gets netType
     *  网络类型
     *
-    * @return string
+    * @return string|null
     */
     public function getNetType()
     {
@@ -790,7 +751,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets netType
     *
-    * @param string $netType 网络类型
+    * @param string|null $netType 网络类型
     *
     * @return $this
     */
@@ -804,7 +765,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     * Gets nodeNewFramework
     *  新框架
     *
-    * @return bool
+    * @return bool|null
     */
     public function getNodeNewFramework()
     {
@@ -814,7 +775,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nodeNewFramework
     *
-    * @param bool $nodeNewFramework 新框架
+    * @param bool|null $nodeNewFramework 新框架
     *
     * @return $this
     */
@@ -828,7 +789,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     * Gets status
     *  任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
     *
-    * @return string
+    * @return string|null
     */
     public function getStatus()
     {
@@ -838,7 +799,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
+    * @param string|null $status 任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
     *
     * @return $this
     */
@@ -852,7 +813,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     * Gets taskType
     *  迁移模式
     *
-    * @return string
+    * @return string|null
     */
     public function getTaskType()
     {
@@ -862,7 +823,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets taskType
     *
-    * @param string $taskType 迁移模式
+    * @param string|null $taskType 迁移模式
     *
     * @return $this
     */

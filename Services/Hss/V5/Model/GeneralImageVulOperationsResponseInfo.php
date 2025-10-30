@@ -20,19 +20,19 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * imageId  镜像id
-    * imageName  镜像名称
-    * userName  处置用户名称
+    * imageId  **参数解释**： 镜像id **取值范围**： 字符长度0-128位
+    * imageName  **参数解释**： 镜像名称 **取值范围**： 字符长度0-128位
+    * userName  **参数解释**： 处置用户名称 **取值范围**： 字符长度0-256位
     * handleTime  处置时间，时间单位：毫秒（ms）
-    * handleType  操作类型，包含如下：   -ignore : 忽略   -not_ignore : 取消忽略   -add_to_whitelist ：加入白名单
-    * status  漏洞当前状态，包含如下：   -vul_status_unfix : 未处理   -vul_status_ignored : 已忽略
-    * appName  软件名称
-    * appVersion  软件版本
-    * appPath  软件路径
-    * remark  备注
-    * imageDigest  镜像标识
-    * imageVersion  镜像版本
-    * agentId  Agent ID
+    * handleType  **参数解释**： 操作类型 **取值范围**： - ignore：忽略 - not_ignore：取消忽略 - add_to_whitelist：加入白名单
+    * status  **参数解释**： 漏洞当前状态 **取值范围**： - vul_status_unfix：未处理 - vul_status_ignored：已忽略
+    * appName  **参数解释**： 软件名称 **取值范围**： 字符长度0-256位
+    * appVersion  **参数解释**： 软件版本 **取值范围**： 字符长度0-256位
+    * appPath  **参数解释**： 软件路径 **取值范围**： 字符长度0-256位
+    * remark  **参数解释**： 备注 **取值范围**： 字符长度0-256位
+    * imageDigest  **参数解释**： 镜像标识 **取值范围**： 字符长度0-256位
+    * imageVersion  **参数解释**： 镜像版本 **取值范围**： 字符长度0-256位
+    * agentId  **参数解释**： Agent ID **取值范围**： 字符长度0-512位
     *
     * @var string[]
     */
@@ -54,19 +54,19 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * imageId  镜像id
-    * imageName  镜像名称
-    * userName  处置用户名称
+    * imageId  **参数解释**： 镜像id **取值范围**： 字符长度0-128位
+    * imageName  **参数解释**： 镜像名称 **取值范围**： 字符长度0-128位
+    * userName  **参数解释**： 处置用户名称 **取值范围**： 字符长度0-256位
     * handleTime  处置时间，时间单位：毫秒（ms）
-    * handleType  操作类型，包含如下：   -ignore : 忽略   -not_ignore : 取消忽略   -add_to_whitelist ：加入白名单
-    * status  漏洞当前状态，包含如下：   -vul_status_unfix : 未处理   -vul_status_ignored : 已忽略
-    * appName  软件名称
-    * appVersion  软件版本
-    * appPath  软件路径
-    * remark  备注
-    * imageDigest  镜像标识
-    * imageVersion  镜像版本
-    * agentId  Agent ID
+    * handleType  **参数解释**： 操作类型 **取值范围**： - ignore：忽略 - not_ignore：取消忽略 - add_to_whitelist：加入白名单
+    * status  **参数解释**： 漏洞当前状态 **取值范围**： - vul_status_unfix：未处理 - vul_status_ignored：已忽略
+    * appName  **参数解释**： 软件名称 **取值范围**： 字符长度0-256位
+    * appVersion  **参数解释**： 软件版本 **取值范围**： 字符长度0-256位
+    * appPath  **参数解释**： 软件路径 **取值范围**： 字符长度0-256位
+    * remark  **参数解释**： 备注 **取值范围**： 字符长度0-256位
+    * imageDigest  **参数解释**： 镜像标识 **取值范围**： 字符长度0-256位
+    * imageVersion  **参数解释**： 镜像版本 **取值范围**： 字符长度0-256位
+    * agentId  **参数解释**： Agent ID **取值范围**： 字符长度0-512位
     *
     * @var string[]
     */
@@ -109,19 +109,19 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * imageId  镜像id
-    * imageName  镜像名称
-    * userName  处置用户名称
+    * imageId  **参数解释**： 镜像id **取值范围**： 字符长度0-128位
+    * imageName  **参数解释**： 镜像名称 **取值范围**： 字符长度0-128位
+    * userName  **参数解释**： 处置用户名称 **取值范围**： 字符长度0-256位
     * handleTime  处置时间，时间单位：毫秒（ms）
-    * handleType  操作类型，包含如下：   -ignore : 忽略   -not_ignore : 取消忽略   -add_to_whitelist ：加入白名单
-    * status  漏洞当前状态，包含如下：   -vul_status_unfix : 未处理   -vul_status_ignored : 已忽略
-    * appName  软件名称
-    * appVersion  软件版本
-    * appPath  软件路径
-    * remark  备注
-    * imageDigest  镜像标识
-    * imageVersion  镜像版本
-    * agentId  Agent ID
+    * handleType  **参数解释**： 操作类型 **取值范围**： - ignore：忽略 - not_ignore：取消忽略 - add_to_whitelist：加入白名单
+    * status  **参数解释**： 漏洞当前状态 **取值范围**： - vul_status_unfix：未处理 - vul_status_ignored：已忽略
+    * appName  **参数解释**： 软件名称 **取值范围**： 字符长度0-256位
+    * appVersion  **参数解释**： 软件版本 **取值范围**： 字符长度0-256位
+    * appPath  **参数解释**： 软件路径 **取值范围**： 字符长度0-256位
+    * remark  **参数解释**： 备注 **取值范围**： 字符长度0-256位
+    * imageDigest  **参数解释**： 镜像标识 **取值范围**： 字符长度0-256位
+    * imageVersion  **参数解释**： 镜像版本 **取值范围**： 字符长度0-256位
+    * agentId  **参数解释**： Agent ID **取值范围**： 字符长度0-512位
     *
     * @var string[]
     */
@@ -143,19 +143,19 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * imageId  镜像id
-    * imageName  镜像名称
-    * userName  处置用户名称
+    * imageId  **参数解释**： 镜像id **取值范围**： 字符长度0-128位
+    * imageName  **参数解释**： 镜像名称 **取值范围**： 字符长度0-128位
+    * userName  **参数解释**： 处置用户名称 **取值范围**： 字符长度0-256位
     * handleTime  处置时间，时间单位：毫秒（ms）
-    * handleType  操作类型，包含如下：   -ignore : 忽略   -not_ignore : 取消忽略   -add_to_whitelist ：加入白名单
-    * status  漏洞当前状态，包含如下：   -vul_status_unfix : 未处理   -vul_status_ignored : 已忽略
-    * appName  软件名称
-    * appVersion  软件版本
-    * appPath  软件路径
-    * remark  备注
-    * imageDigest  镜像标识
-    * imageVersion  镜像版本
-    * agentId  Agent ID
+    * handleType  **参数解释**： 操作类型 **取值范围**： - ignore：忽略 - not_ignore：取消忽略 - add_to_whitelist：加入白名单
+    * status  **参数解释**： 漏洞当前状态 **取值范围**： - vul_status_unfix：未处理 - vul_status_ignored：已忽略
+    * appName  **参数解释**： 软件名称 **取值范围**： 字符长度0-256位
+    * appVersion  **参数解释**： 软件版本 **取值范围**： 字符长度0-256位
+    * appPath  **参数解释**： 软件路径 **取值范围**： 字符长度0-256位
+    * remark  **参数解释**： 备注 **取值范围**： 字符长度0-256位
+    * imageDigest  **参数解释**： 镜像标识 **取值范围**： 字符长度0-256位
+    * imageVersion  **参数解释**： 镜像版本 **取值范围**： 字符长度0-256位
+    * agentId  **参数解释**： Agent ID **取值范围**： 字符长度0-512位
     *
     * @var string[]
     */
@@ -177,19 +177,19 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * imageId  镜像id
-    * imageName  镜像名称
-    * userName  处置用户名称
+    * imageId  **参数解释**： 镜像id **取值范围**： 字符长度0-128位
+    * imageName  **参数解释**： 镜像名称 **取值范围**： 字符长度0-128位
+    * userName  **参数解释**： 处置用户名称 **取值范围**： 字符长度0-256位
     * handleTime  处置时间，时间单位：毫秒（ms）
-    * handleType  操作类型，包含如下：   -ignore : 忽略   -not_ignore : 取消忽略   -add_to_whitelist ：加入白名单
-    * status  漏洞当前状态，包含如下：   -vul_status_unfix : 未处理   -vul_status_ignored : 已忽略
-    * appName  软件名称
-    * appVersion  软件版本
-    * appPath  软件路径
-    * remark  备注
-    * imageDigest  镜像标识
-    * imageVersion  镜像版本
-    * agentId  Agent ID
+    * handleType  **参数解释**： 操作类型 **取值范围**： - ignore：忽略 - not_ignore：取消忽略 - add_to_whitelist：加入白名单
+    * status  **参数解释**： 漏洞当前状态 **取值范围**： - vul_status_unfix：未处理 - vul_status_ignored：已忽略
+    * appName  **参数解释**： 软件名称 **取值范围**： 字符长度0-256位
+    * appVersion  **参数解释**： 软件版本 **取值范围**： 字符长度0-256位
+    * appPath  **参数解释**： 软件路径 **取值范围**： 字符长度0-256位
+    * remark  **参数解释**： 备注 **取值范围**： 字符长度0-256位
+    * imageDigest  **参数解释**： 镜像标识 **取值范围**： 字符长度0-256位
+    * imageVersion  **参数解释**： 镜像版本 **取值范围**： 字符长度0-256位
+    * agentId  **参数解释**： Agent ID **取值范围**： 字符长度0-512位
     *
     * @var string[]
     */
@@ -378,7 +378,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets imageId
-    *  镜像id
+    *  **参数解释**： 镜像id **取值范围**： 字符长度0-128位
     *
     * @return string|null
     */
@@ -390,7 +390,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
     /**
     * Sets imageId
     *
-    * @param string|null $imageId 镜像id
+    * @param string|null $imageId **参数解释**： 镜像id **取值范围**： 字符长度0-128位
     *
     * @return $this
     */
@@ -402,7 +402,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets imageName
-    *  镜像名称
+    *  **参数解释**： 镜像名称 **取值范围**： 字符长度0-128位
     *
     * @return string|null
     */
@@ -414,7 +414,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
     /**
     * Sets imageName
     *
-    * @param string|null $imageName 镜像名称
+    * @param string|null $imageName **参数解释**： 镜像名称 **取值范围**： 字符长度0-128位
     *
     * @return $this
     */
@@ -426,7 +426,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets userName
-    *  处置用户名称
+    *  **参数解释**： 处置用户名称 **取值范围**： 字符长度0-256位
     *
     * @return string|null
     */
@@ -438,7 +438,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
     /**
     * Sets userName
     *
-    * @param string|null $userName 处置用户名称
+    * @param string|null $userName **参数解释**： 处置用户名称 **取值范围**： 字符长度0-256位
     *
     * @return $this
     */
@@ -474,7 +474,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets handleType
-    *  操作类型，包含如下：   -ignore : 忽略   -not_ignore : 取消忽略   -add_to_whitelist ：加入白名单
+    *  **参数解释**： 操作类型 **取值范围**： - ignore：忽略 - not_ignore：取消忽略 - add_to_whitelist：加入白名单
     *
     * @return string|null
     */
@@ -486,7 +486,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
     /**
     * Sets handleType
     *
-    * @param string|null $handleType 操作类型，包含如下：   -ignore : 忽略   -not_ignore : 取消忽略   -add_to_whitelist ：加入白名单
+    * @param string|null $handleType **参数解释**： 操作类型 **取值范围**： - ignore：忽略 - not_ignore：取消忽略 - add_to_whitelist：加入白名单
     *
     * @return $this
     */
@@ -498,7 +498,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets status
-    *  漏洞当前状态，包含如下：   -vul_status_unfix : 未处理   -vul_status_ignored : 已忽略
+    *  **参数解释**： 漏洞当前状态 **取值范围**： - vul_status_unfix：未处理 - vul_status_ignored：已忽略
     *
     * @return string|null
     */
@@ -510,7 +510,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
     /**
     * Sets status
     *
-    * @param string|null $status 漏洞当前状态，包含如下：   -vul_status_unfix : 未处理   -vul_status_ignored : 已忽略
+    * @param string|null $status **参数解释**： 漏洞当前状态 **取值范围**： - vul_status_unfix：未处理 - vul_status_ignored：已忽略
     *
     * @return $this
     */
@@ -522,7 +522,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets appName
-    *  软件名称
+    *  **参数解释**： 软件名称 **取值范围**： 字符长度0-256位
     *
     * @return string|null
     */
@@ -534,7 +534,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
     /**
     * Sets appName
     *
-    * @param string|null $appName 软件名称
+    * @param string|null $appName **参数解释**： 软件名称 **取值范围**： 字符长度0-256位
     *
     * @return $this
     */
@@ -546,7 +546,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets appVersion
-    *  软件版本
+    *  **参数解释**： 软件版本 **取值范围**： 字符长度0-256位
     *
     * @return string|null
     */
@@ -558,7 +558,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
     /**
     * Sets appVersion
     *
-    * @param string|null $appVersion 软件版本
+    * @param string|null $appVersion **参数解释**： 软件版本 **取值范围**： 字符长度0-256位
     *
     * @return $this
     */
@@ -570,7 +570,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets appPath
-    *  软件路径
+    *  **参数解释**： 软件路径 **取值范围**： 字符长度0-256位
     *
     * @return string|null
     */
@@ -582,7 +582,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
     /**
     * Sets appPath
     *
-    * @param string|null $appPath 软件路径
+    * @param string|null $appPath **参数解释**： 软件路径 **取值范围**： 字符长度0-256位
     *
     * @return $this
     */
@@ -594,7 +594,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets remark
-    *  备注
+    *  **参数解释**： 备注 **取值范围**： 字符长度0-256位
     *
     * @return string|null
     */
@@ -606,7 +606,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
     /**
     * Sets remark
     *
-    * @param string|null $remark 备注
+    * @param string|null $remark **参数解释**： 备注 **取值范围**： 字符长度0-256位
     *
     * @return $this
     */
@@ -618,7 +618,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets imageDigest
-    *  镜像标识
+    *  **参数解释**： 镜像标识 **取值范围**： 字符长度0-256位
     *
     * @return string|null
     */
@@ -630,7 +630,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
     /**
     * Sets imageDigest
     *
-    * @param string|null $imageDigest 镜像标识
+    * @param string|null $imageDigest **参数解释**： 镜像标识 **取值范围**： 字符长度0-256位
     *
     * @return $this
     */
@@ -642,7 +642,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets imageVersion
-    *  镜像版本
+    *  **参数解释**： 镜像版本 **取值范围**： 字符长度0-256位
     *
     * @return string|null
     */
@@ -654,7 +654,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
     /**
     * Sets imageVersion
     *
-    * @param string|null $imageVersion 镜像版本
+    * @param string|null $imageVersion **参数解释**： 镜像版本 **取值范围**： 字符长度0-256位
     *
     * @return $this
     */
@@ -666,7 +666,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets agentId
-    *  Agent ID
+    *  **参数解释**： Agent ID **取值范围**： 字符长度0-512位
     *
     * @return string|null
     */
@@ -678,7 +678,7 @@ class GeneralImageVulOperationsResponseInfo implements ModelInterface, ArrayAcce
     /**
     * Sets agentId
     *
-    * @param string|null $agentId Agent ID
+    * @param string|null $agentId **参数解释**： Agent ID **取值范围**： 字符长度0-512位
     *
     * @return $this
     */

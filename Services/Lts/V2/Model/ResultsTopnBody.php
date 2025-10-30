@@ -25,8 +25,10 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     * writeTraffic  写入流量，byte, 查询数据类型中包含write时返回
     * logGroupId  日志组id，资源类型为日志组时返回
     * logGroupName  日志组名称，资源类型为日志组时返回
+    * logGroupNameAlias  **参数解释：** 日志组名称别名。 **取值范围：** 不涉及。
     * logStreamId  日志流id，资源类型为日志流时返回
     * logStreamName  日志流名称，资源类型为日志流时返回
+    * logStreamNameAlias  **参数解释：** 日志流名称别名。 **取值范围：** 不涉及。
     * basicTransfer  基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
     * seniorTransfer  基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
     * isAgencyTransfer  不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
@@ -40,8 +42,10 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
             'writeTraffic' => 'double',
             'logGroupId' => 'string',
             'logGroupName' => 'string',
+            'logGroupNameAlias' => 'string',
             'logStreamId' => 'string',
             'logStreamName' => 'string',
+            'logStreamNameAlias' => 'string',
             'basicTransfer' => 'double',
             'seniorTransfer' => 'double',
             'isAgencyTransfer' => 'bool',
@@ -55,8 +59,10 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     * writeTraffic  写入流量，byte, 查询数据类型中包含write时返回
     * logGroupId  日志组id，资源类型为日志组时返回
     * logGroupName  日志组名称，资源类型为日志组时返回
+    * logGroupNameAlias  **参数解释：** 日志组名称别名。 **取值范围：** 不涉及。
     * logStreamId  日志流id，资源类型为日志流时返回
     * logStreamName  日志流名称，资源类型为日志流时返回
+    * logStreamNameAlias  **参数解释：** 日志流名称别名。 **取值范围：** 不涉及。
     * basicTransfer  基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
     * seniorTransfer  基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
     * isAgencyTransfer  不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
@@ -70,8 +76,10 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
         'writeTraffic' => 'double',
         'logGroupId' => null,
         'logGroupName' => null,
+        'logGroupNameAlias' => null,
         'logStreamId' => null,
         'logStreamName' => null,
+        'logStreamNameAlias' => null,
         'basicTransfer' => 'double',
         'seniorTransfer' => 'double',
         'isAgencyTransfer' => null,
@@ -106,8 +114,10 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     * writeTraffic  写入流量，byte, 查询数据类型中包含write时返回
     * logGroupId  日志组id，资源类型为日志组时返回
     * logGroupName  日志组名称，资源类型为日志组时返回
+    * logGroupNameAlias  **参数解释：** 日志组名称别名。 **取值范围：** 不涉及。
     * logStreamId  日志流id，资源类型为日志流时返回
     * logStreamName  日志流名称，资源类型为日志流时返回
+    * logStreamNameAlias  **参数解释：** 日志流名称别名。 **取值范围：** 不涉及。
     * basicTransfer  基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
     * seniorTransfer  基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
     * isAgencyTransfer  不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
@@ -121,8 +131,10 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
             'writeTraffic' => 'write_traffic',
             'logGroupId' => 'log_group_id',
             'logGroupName' => 'log_group_name',
+            'logGroupNameAlias' => 'log_group_name_alias',
             'logStreamId' => 'log_stream_id',
             'logStreamName' => 'log_stream_name',
+            'logStreamNameAlias' => 'log_stream_name_alias',
             'basicTransfer' => 'basic_transfer',
             'seniorTransfer' => 'senior_transfer',
             'isAgencyTransfer' => 'is_agency_transfer',
@@ -136,8 +148,10 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     * writeTraffic  写入流量，byte, 查询数据类型中包含write时返回
     * logGroupId  日志组id，资源类型为日志组时返回
     * logGroupName  日志组名称，资源类型为日志组时返回
+    * logGroupNameAlias  **参数解释：** 日志组名称别名。 **取值范围：** 不涉及。
     * logStreamId  日志流id，资源类型为日志流时返回
     * logStreamName  日志流名称，资源类型为日志流时返回
+    * logStreamNameAlias  **参数解释：** 日志流名称别名。 **取值范围：** 不涉及。
     * basicTransfer  基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
     * seniorTransfer  基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
     * isAgencyTransfer  不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
@@ -151,8 +165,10 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
             'writeTraffic' => 'setWriteTraffic',
             'logGroupId' => 'setLogGroupId',
             'logGroupName' => 'setLogGroupName',
+            'logGroupNameAlias' => 'setLogGroupNameAlias',
             'logStreamId' => 'setLogStreamId',
             'logStreamName' => 'setLogStreamName',
+            'logStreamNameAlias' => 'setLogStreamNameAlias',
             'basicTransfer' => 'setBasicTransfer',
             'seniorTransfer' => 'setSeniorTransfer',
             'isAgencyTransfer' => 'setIsAgencyTransfer',
@@ -166,8 +182,10 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     * writeTraffic  写入流量，byte, 查询数据类型中包含write时返回
     * logGroupId  日志组id，资源类型为日志组时返回
     * logGroupName  日志组名称，资源类型为日志组时返回
+    * logGroupNameAlias  **参数解释：** 日志组名称别名。 **取值范围：** 不涉及。
     * logStreamId  日志流id，资源类型为日志流时返回
     * logStreamName  日志流名称，资源类型为日志流时返回
+    * logStreamNameAlias  **参数解释：** 日志流名称别名。 **取值范围：** 不涉及。
     * basicTransfer  基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
     * seniorTransfer  基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
     * isAgencyTransfer  不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
@@ -181,8 +199,10 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
             'writeTraffic' => 'getWriteTraffic',
             'logGroupId' => 'getLogGroupId',
             'logGroupName' => 'getLogGroupName',
+            'logGroupNameAlias' => 'getLogGroupNameAlias',
             'logStreamId' => 'getLogStreamId',
             'logStreamName' => 'getLogStreamName',
+            'logStreamNameAlias' => 'getLogStreamNameAlias',
             'basicTransfer' => 'getBasicTransfer',
             'seniorTransfer' => 'getSeniorTransfer',
             'isAgencyTransfer' => 'getIsAgencyTransfer',
@@ -252,8 +272,10 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
         $this->container['writeTraffic'] = isset($data['writeTraffic']) ? $data['writeTraffic'] : null;
         $this->container['logGroupId'] = isset($data['logGroupId']) ? $data['logGroupId'] : null;
         $this->container['logGroupName'] = isset($data['logGroupName']) ? $data['logGroupName'] : null;
+        $this->container['logGroupNameAlias'] = isset($data['logGroupNameAlias']) ? $data['logGroupNameAlias'] : null;
         $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : null;
         $this->container['logStreamName'] = isset($data['logStreamName']) ? $data['logStreamName'] : null;
+        $this->container['logStreamNameAlias'] = isset($data['logStreamNameAlias']) ? $data['logStreamNameAlias'] : null;
         $this->container['basicTransfer'] = isset($data['basicTransfer']) ? $data['basicTransfer'] : null;
         $this->container['seniorTransfer'] = isset($data['seniorTransfer']) ? $data['seniorTransfer'] : null;
         $this->container['isAgencyTransfer'] = isset($data['isAgencyTransfer']) ? $data['isAgencyTransfer'] : null;
@@ -418,6 +440,30 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets logGroupNameAlias
+    *  **参数解释：** 日志组名称别名。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLogGroupNameAlias()
+    {
+        return $this->container['logGroupNameAlias'];
+    }
+
+    /**
+    * Sets logGroupNameAlias
+    *
+    * @param string|null $logGroupNameAlias **参数解释：** 日志组名称别名。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setLogGroupNameAlias($logGroupNameAlias)
+    {
+        $this->container['logGroupNameAlias'] = $logGroupNameAlias;
+        return $this;
+    }
+
+    /**
     * Gets logStreamId
     *  日志流id，资源类型为日志流时返回
     *
@@ -462,6 +508,30 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     public function setLogStreamName($logStreamName)
     {
         $this->container['logStreamName'] = $logStreamName;
+        return $this;
+    }
+
+    /**
+    * Gets logStreamNameAlias
+    *  **参数解释：** 日志流名称别名。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLogStreamNameAlias()
+    {
+        return $this->container['logStreamNameAlias'];
+    }
+
+    /**
+    * Sets logStreamNameAlias
+    *
+    * @param string|null $logStreamNameAlias **参数解释：** 日志流名称别名。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setLogStreamNameAlias($logStreamNameAlias)
+    {
+        $this->container['logStreamNameAlias'] = $logStreamNameAlias;
         return $this;
     }
 

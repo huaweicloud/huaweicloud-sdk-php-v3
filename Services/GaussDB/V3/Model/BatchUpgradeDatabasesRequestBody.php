@@ -22,28 +22,24 @@ class BatchUpgradeDatabasesRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * databasesInstanceInfos  要版本升级的批量实例。
     * delay  是否延迟升级。
-    * isSkipValidate  是否跳过校验。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'databasesInstanceInfos' => '\HuaweiCloud\SDK\GaussDB\V3\Model\UpgradeDatabasesSingleInstance[]',
-            'delay' => 'string',
-            'isSkipValidate' => 'bool'
+            'delay' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * databasesInstanceInfos  要版本升级的批量实例。
     * delay  是否延迟升级。
-    * isSkipValidate  是否跳过校验。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'databasesInstanceInfos' => null,
-        'delay' => null,
-        'isSkipValidate' => null
+        'delay' => null
     ];
 
     /**
@@ -71,42 +67,36 @@ class BatchUpgradeDatabasesRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * databasesInstanceInfos  要版本升级的批量实例。
     * delay  是否延迟升级。
-    * isSkipValidate  是否跳过校验。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'databasesInstanceInfos' => 'databases_instance_infos',
-            'delay' => 'delay',
-            'isSkipValidate' => 'is_skip_validate'
+            'delay' => 'delay'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * databasesInstanceInfos  要版本升级的批量实例。
     * delay  是否延迟升级。
-    * isSkipValidate  是否跳过校验。
     *
     * @var string[]
     */
     protected static $setters = [
             'databasesInstanceInfos' => 'setDatabasesInstanceInfos',
-            'delay' => 'setDelay',
-            'isSkipValidate' => 'setIsSkipValidate'
+            'delay' => 'setDelay'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * databasesInstanceInfos  要版本升级的批量实例。
     * delay  是否延迟升级。
-    * isSkipValidate  是否跳过校验。
     *
     * @var string[]
     */
     protected static $getters = [
             'databasesInstanceInfos' => 'getDatabasesInstanceInfos',
-            'delay' => 'getDelay',
-            'isSkipValidate' => 'getIsSkipValidate'
+            'delay' => 'getDelay'
     ];
 
     /**
@@ -169,7 +159,6 @@ class BatchUpgradeDatabasesRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['databasesInstanceInfos'] = isset($data['databasesInstanceInfos']) ? $data['databasesInstanceInfos'] : null;
         $this->container['delay'] = isset($data['delay']) ? $data['delay'] : null;
-        $this->container['isSkipValidate'] = isset($data['isSkipValidate']) ? $data['isSkipValidate'] : null;
     }
 
     /**
@@ -245,30 +234,6 @@ class BatchUpgradeDatabasesRequestBody implements ModelInterface, ArrayAccess
     public function setDelay($delay)
     {
         $this->container['delay'] = $delay;
-        return $this;
-    }
-
-    /**
-    * Gets isSkipValidate
-    *  是否跳过校验。
-    *
-    * @return bool|null
-    */
-    public function getIsSkipValidate()
-    {
-        return $this->container['isSkipValidate'];
-    }
-
-    /**
-    * Sets isSkipValidate
-    *
-    * @param bool|null $isSkipValidate 是否跳过校验。
-    *
-    * @return $this
-    */
-    public function setIsSkipValidate($isSkipValidate)
-    {
-        $this->container['isSkipValidate'] = $isSkipValidate;
         return $this;
     }
 

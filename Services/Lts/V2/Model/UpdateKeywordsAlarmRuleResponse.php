@@ -32,13 +32,15 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     * domainId  domainId
     * createTime  创建时间(毫秒时间戳)
     * updateTime  更新时间(毫秒时间戳)
-    * language  邮件附加信息语言
     * projectId  项目id
-    * topics  通知主题
     * conditionExpression  情况表述
-    * indexId  索引id
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * recoveryPolicy  **参数解释：** 告警恢复策略周期次数。 配置的最近统计周期次数内，如果不满足触发条件且开启恢复时通知开关，则会发送恢复告警通知。 **取值范围：** - 最小值为1 - 最大值为10
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+    * triggerConditionCount  **参数解释：** 告警触发条件：满足条件次数。满足条件次数是指设置的关键词。 在统计周期次数内且满足条件次数时，可触发关键词告警。 **取值范围：** 不涉及。
+    * triggerConditionFrequency  **参数解释：** 告警触发条件：统计周期次数。统计周期次数指高级设置的统计周期。 当在统计周期次数内且满足条件次数时，可触发关键词告警。 **取值范围：** - 最小值为1 - 最大值为10
+    * whetherRecoveryPolicy  **参数解释：** 是否配置告警恢复策略。满足该策略时，会发送告警恢复通知。 **取值范围：** true：配置告警恢复策略。 false：不配置告警恢复策略。
     *
     * @var string[]
     */
@@ -54,13 +56,15 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
             'domainId' => 'string',
             'createTime' => 'int',
             'updateTime' => 'int',
-            'language' => 'string',
             'projectId' => 'string',
-            'topics' => '\HuaweiCloud\SDK\Lts\V2\Model\Topics[]',
             'conditionExpression' => 'string',
-            'indexId' => 'string',
             'notificationFrequency' => 'int',
-            'alarmActionRuleName' => 'string'
+            'alarmActionRuleName' => 'string',
+            'recoveryPolicy' => 'int',
+            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsResBody[]',
+            'triggerConditionCount' => 'int',
+            'triggerConditionFrequency' => 'int',
+            'whetherRecoveryPolicy' => 'bool'
     ];
 
     /**
@@ -76,13 +80,15 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     * domainId  domainId
     * createTime  创建时间(毫秒时间戳)
     * updateTime  更新时间(毫秒时间戳)
-    * language  邮件附加信息语言
     * projectId  项目id
-    * topics  通知主题
     * conditionExpression  情况表述
-    * indexId  索引id
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * recoveryPolicy  **参数解释：** 告警恢复策略周期次数。 配置的最近统计周期次数内，如果不满足触发条件且开启恢复时通知开关，则会发送恢复告警通知。 **取值范围：** - 最小值为1 - 最大值为10
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+    * triggerConditionCount  **参数解释：** 告警触发条件：满足条件次数。满足条件次数是指设置的关键词。 在统计周期次数内且满足条件次数时，可触发关键词告警。 **取值范围：** 不涉及。
+    * triggerConditionFrequency  **参数解释：** 告警触发条件：统计周期次数。统计周期次数指高级设置的统计周期。 当在统计周期次数内且满足条件次数时，可触发关键词告警。 **取值范围：** - 最小值为1 - 最大值为10
+    * whetherRecoveryPolicy  **参数解释：** 是否配置告警恢复策略。满足该策略时，会发送告警恢复通知。 **取值范围：** true：配置告警恢复策略。 false：不配置告警恢复策略。
     *
     * @var string[]
     */
@@ -98,13 +104,15 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
         'domainId' => null,
         'createTime' => 'int64',
         'updateTime' => 'int64',
-        'language' => null,
         'projectId' => null,
-        'topics' => null,
         'conditionExpression' => null,
-        'indexId' => null,
         'notificationFrequency' => 'int32',
-        'alarmActionRuleName' => null
+        'alarmActionRuleName' => null,
+        'recoveryPolicy' => 'int32',
+        'tags' => null,
+        'triggerConditionCount' => 'int32',
+        'triggerConditionFrequency' => 'int32',
+        'whetherRecoveryPolicy' => null
     ];
 
     /**
@@ -141,13 +149,15 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     * domainId  domainId
     * createTime  创建时间(毫秒时间戳)
     * updateTime  更新时间(毫秒时间戳)
-    * language  邮件附加信息语言
     * projectId  项目id
-    * topics  通知主题
     * conditionExpression  情况表述
-    * indexId  索引id
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * recoveryPolicy  **参数解释：** 告警恢复策略周期次数。 配置的最近统计周期次数内，如果不满足触发条件且开启恢复时通知开关，则会发送恢复告警通知。 **取值范围：** - 最小值为1 - 最大值为10
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+    * triggerConditionCount  **参数解释：** 告警触发条件：满足条件次数。满足条件次数是指设置的关键词。 在统计周期次数内且满足条件次数时，可触发关键词告警。 **取值范围：** 不涉及。
+    * triggerConditionFrequency  **参数解释：** 告警触发条件：统计周期次数。统计周期次数指高级设置的统计周期。 当在统计周期次数内且满足条件次数时，可触发关键词告警。 **取值范围：** - 最小值为1 - 最大值为10
+    * whetherRecoveryPolicy  **参数解释：** 是否配置告警恢复策略。满足该策略时，会发送告警恢复通知。 **取值范围：** true：配置告警恢复策略。 false：不配置告警恢复策略。
     *
     * @var string[]
     */
@@ -163,13 +173,15 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
             'domainId' => 'domain_id',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
-            'language' => 'language',
             'projectId' => 'projectId',
-            'topics' => 'topics',
             'conditionExpression' => 'condition_expression',
-            'indexId' => 'indexId',
             'notificationFrequency' => 'notification_frequency',
-            'alarmActionRuleName' => 'alarm_action_rule_name'
+            'alarmActionRuleName' => 'alarm_action_rule_name',
+            'recoveryPolicy' => 'recovery_policy',
+            'tags' => 'tags',
+            'triggerConditionCount' => 'trigger_condition_count',
+            'triggerConditionFrequency' => 'trigger_condition_frequency',
+            'whetherRecoveryPolicy' => 'whether_recovery_policy'
     ];
 
     /**
@@ -185,13 +197,15 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     * domainId  domainId
     * createTime  创建时间(毫秒时间戳)
     * updateTime  更新时间(毫秒时间戳)
-    * language  邮件附加信息语言
     * projectId  项目id
-    * topics  通知主题
     * conditionExpression  情况表述
-    * indexId  索引id
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * recoveryPolicy  **参数解释：** 告警恢复策略周期次数。 配置的最近统计周期次数内，如果不满足触发条件且开启恢复时通知开关，则会发送恢复告警通知。 **取值范围：** - 最小值为1 - 最大值为10
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+    * triggerConditionCount  **参数解释：** 告警触发条件：满足条件次数。满足条件次数是指设置的关键词。 在统计周期次数内且满足条件次数时，可触发关键词告警。 **取值范围：** 不涉及。
+    * triggerConditionFrequency  **参数解释：** 告警触发条件：统计周期次数。统计周期次数指高级设置的统计周期。 当在统计周期次数内且满足条件次数时，可触发关键词告警。 **取值范围：** - 最小值为1 - 最大值为10
+    * whetherRecoveryPolicy  **参数解释：** 是否配置告警恢复策略。满足该策略时，会发送告警恢复通知。 **取值范围：** true：配置告警恢复策略。 false：不配置告警恢复策略。
     *
     * @var string[]
     */
@@ -207,13 +221,15 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
             'domainId' => 'setDomainId',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
-            'language' => 'setLanguage',
             'projectId' => 'setProjectId',
-            'topics' => 'setTopics',
             'conditionExpression' => 'setConditionExpression',
-            'indexId' => 'setIndexId',
             'notificationFrequency' => 'setNotificationFrequency',
-            'alarmActionRuleName' => 'setAlarmActionRuleName'
+            'alarmActionRuleName' => 'setAlarmActionRuleName',
+            'recoveryPolicy' => 'setRecoveryPolicy',
+            'tags' => 'setTags',
+            'triggerConditionCount' => 'setTriggerConditionCount',
+            'triggerConditionFrequency' => 'setTriggerConditionFrequency',
+            'whetherRecoveryPolicy' => 'setWhetherRecoveryPolicy'
     ];
 
     /**
@@ -229,13 +245,15 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     * domainId  domainId
     * createTime  创建时间(毫秒时间戳)
     * updateTime  更新时间(毫秒时间戳)
-    * language  邮件附加信息语言
     * projectId  项目id
-    * topics  通知主题
     * conditionExpression  情况表述
-    * indexId  索引id
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * recoveryPolicy  **参数解释：** 告警恢复策略周期次数。 配置的最近统计周期次数内，如果不满足触发条件且开启恢复时通知开关，则会发送恢复告警通知。 **取值范围：** - 最小值为1 - 最大值为10
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+    * triggerConditionCount  **参数解释：** 告警触发条件：满足条件次数。满足条件次数是指设置的关键词。 在统计周期次数内且满足条件次数时，可触发关键词告警。 **取值范围：** 不涉及。
+    * triggerConditionFrequency  **参数解释：** 告警触发条件：统计周期次数。统计周期次数指高级设置的统计周期。 当在统计周期次数内且满足条件次数时，可触发关键词告警。 **取值范围：** - 最小值为1 - 最大值为10
+    * whetherRecoveryPolicy  **参数解释：** 是否配置告警恢复策略。满足该策略时，会发送告警恢复通知。 **取值范围：** true：配置告警恢复策略。 false：不配置告警恢复策略。
     *
     * @var string[]
     */
@@ -251,13 +269,15 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
             'domainId' => 'getDomainId',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
-            'language' => 'getLanguage',
             'projectId' => 'getProjectId',
-            'topics' => 'getTopics',
             'conditionExpression' => 'getConditionExpression',
-            'indexId' => 'getIndexId',
             'notificationFrequency' => 'getNotificationFrequency',
-            'alarmActionRuleName' => 'getAlarmActionRuleName'
+            'alarmActionRuleName' => 'getAlarmActionRuleName',
+            'recoveryPolicy' => 'getRecoveryPolicy',
+            'tags' => 'getTags',
+            'triggerConditionCount' => 'getTriggerConditionCount',
+            'triggerConditionFrequency' => 'getTriggerConditionFrequency',
+            'whetherRecoveryPolicy' => 'getWhetherRecoveryPolicy'
     ];
 
     /**
@@ -304,8 +324,6 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     const KEYWORDS_ALARM_LEVEL_MINOR = 'Minor';
     const KEYWORDS_ALARM_LEVEL_MAJOR = 'Major';
     const KEYWORDS_ALARM_LEVEL_CRITICAL = 'Critical';
-    const LANGUAGE_ZH_CN = 'zh-cn';
-    const LANGUAGE_EN_US = 'en-us';
     const NOTIFICATION_FREQUENCY_0 = 0;
     const NOTIFICATION_FREQUENCY_5 = 5;
     const NOTIFICATION_FREQUENCY_10 = 10;
@@ -328,19 +346,6 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
             self::KEYWORDS_ALARM_LEVEL_MINOR,
             self::KEYWORDS_ALARM_LEVEL_MAJOR,
             self::KEYWORDS_ALARM_LEVEL_CRITICAL,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getLanguageAllowableValues()
-    {
-        return [
-            self::LANGUAGE_ZH_CN,
-            self::LANGUAGE_EN_US,
         ];
     }
 
@@ -390,13 +395,15 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
-        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['topics'] = isset($data['topics']) ? $data['topics'] : null;
         $this->container['conditionExpression'] = isset($data['conditionExpression']) ? $data['conditionExpression'] : null;
-        $this->container['indexId'] = isset($data['indexId']) ? $data['indexId'] : null;
         $this->container['notificationFrequency'] = isset($data['notificationFrequency']) ? $data['notificationFrequency'] : null;
         $this->container['alarmActionRuleName'] = isset($data['alarmActionRuleName']) ? $data['alarmActionRuleName'] : null;
+        $this->container['recoveryPolicy'] = isset($data['recoveryPolicy']) ? $data['recoveryPolicy'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['triggerConditionCount'] = isset($data['triggerConditionCount']) ? $data['triggerConditionCount'] : null;
+        $this->container['triggerConditionFrequency'] = isset($data['triggerConditionFrequency']) ? $data['triggerConditionFrequency'] : null;
+        $this->container['whetherRecoveryPolicy'] = isset($data['whetherRecoveryPolicy']) ? $data['whetherRecoveryPolicy'] : null;
     }
 
     /**
@@ -456,20 +463,6 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] < 13)) {
                 $invalidProperties[] = "invalid value for 'updateTime', must be bigger than or equal to 13.";
-            }
-            $allowedValues = $this->getLanguageAllowableValues();
-                if (!is_null($this->container['language']) && !in_array($this->container['language'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'language', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['language']) && (mb_strlen($this->container['language']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'language', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['language']) && (mb_strlen($this->container['language']) < 1)) {
-                $invalidProperties[] = "invalid value for 'language', the character length must be bigger than or equal to 1.";
             }
             $allowedValues = $this->getNotificationFrequencyAllowableValues();
                 if (!is_null($this->container['notificationFrequency']) && !in_array($this->container['notificationFrequency'], $allowedValues, true)) {
@@ -758,30 +751,6 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets language
-    *  邮件附加信息语言
-    *
-    * @return string|null
-    */
-    public function getLanguage()
-    {
-        return $this->container['language'];
-    }
-
-    /**
-    * Sets language
-    *
-    * @param string|null $language 邮件附加信息语言
-    *
-    * @return $this
-    */
-    public function setLanguage($language)
-    {
-        $this->container['language'] = $language;
-        return $this;
-    }
-
-    /**
     * Gets projectId
     *  项目id
     *
@@ -806,30 +775,6 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets topics
-    *  通知主题
-    *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\Topics[]|null
-    */
-    public function getTopics()
-    {
-        return $this->container['topics'];
-    }
-
-    /**
-    * Sets topics
-    *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\Topics[]|null $topics 通知主题
-    *
-    * @return $this
-    */
-    public function setTopics($topics)
-    {
-        $this->container['topics'] = $topics;
-        return $this;
-    }
-
-    /**
     * Gets conditionExpression
     *  情况表述
     *
@@ -850,30 +795,6 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     public function setConditionExpression($conditionExpression)
     {
         $this->container['conditionExpression'] = $conditionExpression;
-        return $this;
-    }
-
-    /**
-    * Gets indexId
-    *  索引id
-    *
-    * @return string|null
-    */
-    public function getIndexId()
-    {
-        return $this->container['indexId'];
-    }
-
-    /**
-    * Sets indexId
-    *
-    * @param string|null $indexId 索引id
-    *
-    * @return $this
-    */
-    public function setIndexId($indexId)
-    {
-        $this->container['indexId'] = $indexId;
         return $this;
     }
 
@@ -922,6 +843,126 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     public function setAlarmActionRuleName($alarmActionRuleName)
     {
         $this->container['alarmActionRuleName'] = $alarmActionRuleName;
+        return $this;
+    }
+
+    /**
+    * Gets recoveryPolicy
+    *  **参数解释：** 告警恢复策略周期次数。 配置的最近统计周期次数内，如果不满足触发条件且开启恢复时通知开关，则会发送恢复告警通知。 **取值范围：** - 最小值为1 - 最大值为10
+    *
+    * @return int|null
+    */
+    public function getRecoveryPolicy()
+    {
+        return $this->container['recoveryPolicy'];
+    }
+
+    /**
+    * Sets recoveryPolicy
+    *
+    * @param int|null $recoveryPolicy **参数解释：** 告警恢复策略周期次数。 配置的最近统计周期次数内，如果不满足触发条件且开启恢复时通知开关，则会发送恢复告警通知。 **取值范围：** - 最小值为1 - 最大值为10
+    *
+    * @return $this
+    */
+    public function setRecoveryPolicy($recoveryPolicy)
+    {
+        $this->container['recoveryPolicy'] = $recoveryPolicy;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\TagsResBody[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\TagsResBody[]|null $tags **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets triggerConditionCount
+    *  **参数解释：** 告警触发条件：满足条件次数。满足条件次数是指设置的关键词。 在统计周期次数内且满足条件次数时，可触发关键词告警。 **取值范围：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getTriggerConditionCount()
+    {
+        return $this->container['triggerConditionCount'];
+    }
+
+    /**
+    * Sets triggerConditionCount
+    *
+    * @param int|null $triggerConditionCount **参数解释：** 告警触发条件：满足条件次数。满足条件次数是指设置的关键词。 在统计周期次数内且满足条件次数时，可触发关键词告警。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setTriggerConditionCount($triggerConditionCount)
+    {
+        $this->container['triggerConditionCount'] = $triggerConditionCount;
+        return $this;
+    }
+
+    /**
+    * Gets triggerConditionFrequency
+    *  **参数解释：** 告警触发条件：统计周期次数。统计周期次数指高级设置的统计周期。 当在统计周期次数内且满足条件次数时，可触发关键词告警。 **取值范围：** - 最小值为1 - 最大值为10
+    *
+    * @return int|null
+    */
+    public function getTriggerConditionFrequency()
+    {
+        return $this->container['triggerConditionFrequency'];
+    }
+
+    /**
+    * Sets triggerConditionFrequency
+    *
+    * @param int|null $triggerConditionFrequency **参数解释：** 告警触发条件：统计周期次数。统计周期次数指高级设置的统计周期。 当在统计周期次数内且满足条件次数时，可触发关键词告警。 **取值范围：** - 最小值为1 - 最大值为10
+    *
+    * @return $this
+    */
+    public function setTriggerConditionFrequency($triggerConditionFrequency)
+    {
+        $this->container['triggerConditionFrequency'] = $triggerConditionFrequency;
+        return $this;
+    }
+
+    /**
+    * Gets whetherRecoveryPolicy
+    *  **参数解释：** 是否配置告警恢复策略。满足该策略时，会发送告警恢复通知。 **取值范围：** true：配置告警恢复策略。 false：不配置告警恢复策略。
+    *
+    * @return bool|null
+    */
+    public function getWhetherRecoveryPolicy()
+    {
+        return $this->container['whetherRecoveryPolicy'];
+    }
+
+    /**
+    * Sets whetherRecoveryPolicy
+    *
+    * @param bool|null $whetherRecoveryPolicy **参数解释：** 是否配置告警恢复策略。满足该策略时，会发送告警恢复通知。 **取值范围：** true：配置告警恢复策略。 false：不配置告警恢复策略。
+    *
+    * @return $this
+    */
+    public function setWhetherRecoveryPolicy($whetherRecoveryPolicy)
+    {
+        $this->container['whetherRecoveryPolicy'] = $whetherRecoveryPolicy;
         return $this;
     }
 

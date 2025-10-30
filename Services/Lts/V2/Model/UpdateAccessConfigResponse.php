@@ -38,6 +38,9 @@ class UpdateAccessConfigResponse implements ModelInterface, ArrayAccess
     * demoLog  示例日志
     * demoFields  示例日志解析字段
     * processors  IC结构化解析器
+    * logSplitSize  **参数解释：** 拆分日志大小。 **取值范围：** 不涉及。
+    * recursiveDepth  **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
+    * accessConfigTypeSource  **参数解释：** 日志接入自建软件来源。 **取值范围：** - ECS - CCE - BMS - K8S - ServiceStageHost - ServiceStage
     * applicationId  ServiceStage应用ID
     * environmentId  ServiceStage环境ID
     * componentId  ServiceStage组件ID
@@ -62,6 +65,9 @@ class UpdateAccessConfigResponse implements ModelInterface, ArrayAccess
             'demoLog' => 'string',
             'demoFields' => '\HuaweiCloud\SDK\Lts\V2\Model\DemoFieldAccess[]',
             'processors' => '\HuaweiCloud\SDK\Lts\V2\Model\Processor[]',
+            'logSplitSize' => 'int',
+            'recursiveDepth' => 'int',
+            'accessConfigTypeSource' => 'string',
             'applicationId' => 'string',
             'environmentId' => 'string',
             'componentId' => 'string[]'
@@ -86,6 +92,9 @@ class UpdateAccessConfigResponse implements ModelInterface, ArrayAccess
     * demoLog  示例日志
     * demoFields  示例日志解析字段
     * processors  IC结构化解析器
+    * logSplitSize  **参数解释：** 拆分日志大小。 **取值范围：** 不涉及。
+    * recursiveDepth  **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
+    * accessConfigTypeSource  **参数解释：** 日志接入自建软件来源。 **取值范围：** - ECS - CCE - BMS - K8S - ServiceStageHost - ServiceStage
     * applicationId  ServiceStage应用ID
     * environmentId  ServiceStage环境ID
     * componentId  ServiceStage组件ID
@@ -110,6 +119,9 @@ class UpdateAccessConfigResponse implements ModelInterface, ArrayAccess
         'demoLog' => null,
         'demoFields' => null,
         'processors' => null,
+        'logSplitSize' => 'int32',
+        'recursiveDepth' => 'int32',
+        'accessConfigTypeSource' => null,
         'applicationId' => null,
         'environmentId' => null,
         'componentId' => null
@@ -155,6 +167,9 @@ class UpdateAccessConfigResponse implements ModelInterface, ArrayAccess
     * demoLog  示例日志
     * demoFields  示例日志解析字段
     * processors  IC结构化解析器
+    * logSplitSize  **参数解释：** 拆分日志大小。 **取值范围：** 不涉及。
+    * recursiveDepth  **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
+    * accessConfigTypeSource  **参数解释：** 日志接入自建软件来源。 **取值范围：** - ECS - CCE - BMS - K8S - ServiceStageHost - ServiceStage
     * applicationId  ServiceStage应用ID
     * environmentId  ServiceStage环境ID
     * componentId  ServiceStage组件ID
@@ -179,6 +194,9 @@ class UpdateAccessConfigResponse implements ModelInterface, ArrayAccess
             'demoLog' => 'demo_log',
             'demoFields' => 'demo_fields',
             'processors' => 'processors',
+            'logSplitSize' => 'log_split_size',
+            'recursiveDepth' => 'recursive_depth',
+            'accessConfigTypeSource' => 'access_config_type_source',
             'applicationId' => 'application_id',
             'environmentId' => 'environment_id',
             'componentId' => 'component_id'
@@ -203,6 +221,9 @@ class UpdateAccessConfigResponse implements ModelInterface, ArrayAccess
     * demoLog  示例日志
     * demoFields  示例日志解析字段
     * processors  IC结构化解析器
+    * logSplitSize  **参数解释：** 拆分日志大小。 **取值范围：** 不涉及。
+    * recursiveDepth  **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
+    * accessConfigTypeSource  **参数解释：** 日志接入自建软件来源。 **取值范围：** - ECS - CCE - BMS - K8S - ServiceStageHost - ServiceStage
     * applicationId  ServiceStage应用ID
     * environmentId  ServiceStage环境ID
     * componentId  ServiceStage组件ID
@@ -227,6 +248,9 @@ class UpdateAccessConfigResponse implements ModelInterface, ArrayAccess
             'demoLog' => 'setDemoLog',
             'demoFields' => 'setDemoFields',
             'processors' => 'setProcessors',
+            'logSplitSize' => 'setLogSplitSize',
+            'recursiveDepth' => 'setRecursiveDepth',
+            'accessConfigTypeSource' => 'setAccessConfigTypeSource',
             'applicationId' => 'setApplicationId',
             'environmentId' => 'setEnvironmentId',
             'componentId' => 'setComponentId'
@@ -251,6 +275,9 @@ class UpdateAccessConfigResponse implements ModelInterface, ArrayAccess
     * demoLog  示例日志
     * demoFields  示例日志解析字段
     * processors  IC结构化解析器
+    * logSplitSize  **参数解释：** 拆分日志大小。 **取值范围：** 不涉及。
+    * recursiveDepth  **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
+    * accessConfigTypeSource  **参数解释：** 日志接入自建软件来源。 **取值范围：** - ECS - CCE - BMS - K8S - ServiceStageHost - ServiceStage
     * applicationId  ServiceStage应用ID
     * environmentId  ServiceStage环境ID
     * componentId  ServiceStage组件ID
@@ -275,6 +302,9 @@ class UpdateAccessConfigResponse implements ModelInterface, ArrayAccess
             'demoLog' => 'getDemoLog',
             'demoFields' => 'getDemoFields',
             'processors' => 'getProcessors',
+            'logSplitSize' => 'getLogSplitSize',
+            'recursiveDepth' => 'getRecursiveDepth',
+            'accessConfigTypeSource' => 'getAccessConfigTypeSource',
             'applicationId' => 'getApplicationId',
             'environmentId' => 'getEnvironmentId',
             'componentId' => 'getComponentId'
@@ -370,6 +400,9 @@ class UpdateAccessConfigResponse implements ModelInterface, ArrayAccess
         $this->container['demoLog'] = isset($data['demoLog']) ? $data['demoLog'] : null;
         $this->container['demoFields'] = isset($data['demoFields']) ? $data['demoFields'] : null;
         $this->container['processors'] = isset($data['processors']) ? $data['processors'] : null;
+        $this->container['logSplitSize'] = isset($data['logSplitSize']) ? $data['logSplitSize'] : null;
+        $this->container['recursiveDepth'] = isset($data['recursiveDepth']) ? $data['recursiveDepth'] : null;
+        $this->container['accessConfigTypeSource'] = isset($data['accessConfigTypeSource']) ? $data['accessConfigTypeSource'] : null;
         $this->container['applicationId'] = isset($data['applicationId']) ? $data['applicationId'] : null;
         $this->container['environmentId'] = isset($data['environmentId']) ? $data['environmentId'] : null;
         $this->container['componentId'] = isset($data['componentId']) ? $data['componentId'] : null;
@@ -831,6 +864,78 @@ class UpdateAccessConfigResponse implements ModelInterface, ArrayAccess
     public function setProcessors($processors)
     {
         $this->container['processors'] = $processors;
+        return $this;
+    }
+
+    /**
+    * Gets logSplitSize
+    *  **参数解释：** 拆分日志大小。 **取值范围：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getLogSplitSize()
+    {
+        return $this->container['logSplitSize'];
+    }
+
+    /**
+    * Sets logSplitSize
+    *
+    * @param int|null $logSplitSize **参数解释：** 拆分日志大小。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setLogSplitSize($logSplitSize)
+    {
+        $this->container['logSplitSize'] = $logSplitSize;
+        return $this;
+    }
+
+    /**
+    * Gets recursiveDepth
+    *  **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getRecursiveDepth()
+    {
+        return $this->container['recursiveDepth'];
+    }
+
+    /**
+    * Sets recursiveDepth
+    *
+    * @param int|null $recursiveDepth **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setRecursiveDepth($recursiveDepth)
+    {
+        $this->container['recursiveDepth'] = $recursiveDepth;
+        return $this;
+    }
+
+    /**
+    * Gets accessConfigTypeSource
+    *  **参数解释：** 日志接入自建软件来源。 **取值范围：** - ECS - CCE - BMS - K8S - ServiceStageHost - ServiceStage
+    *
+    * @return string|null
+    */
+    public function getAccessConfigTypeSource()
+    {
+        return $this->container['accessConfigTypeSource'];
+    }
+
+    /**
+    * Sets accessConfigTypeSource
+    *
+    * @param string|null $accessConfigTypeSource **参数解释：** 日志接入自建软件来源。 **取值范围：** - ECS - CCE - BMS - K8S - ServiceStageHost - ServiceStage
+    *
+    * @return $this
+    */
+    public function setAccessConfigTypeSource($accessConfigTypeSource)
+    {
+        $this->container['accessConfigTypeSource'] = $accessConfigTypeSource;
         return $this;
     }
 

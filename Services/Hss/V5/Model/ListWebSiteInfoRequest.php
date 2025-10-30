@@ -22,32 +22,32 @@ class ListWebSiteInfoRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     * domain  **参数解释**: 域名 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
-    * category  **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host : 主机 - container : 容器  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'enterpriseProjectId' => 'string',
             'hostId' => 'string',
-            'domain' => 'string',
-            'category' => 'string'
+            'category' => 'string',
+            'domain' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     * domain  **参数解释**: 域名 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
-    * category  **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host : 主机 - container : 容器  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'enterpriseProjectId' => null,
         'hostId' => null,
-        'domain' => null,
-        'category' => null
+        'category' => null,
+        'domain' => null
     ];
 
     /**
@@ -75,48 +75,48 @@ class ListWebSiteInfoRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     * domain  **参数解释**: 域名 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
-    * category  **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host : 主机 - container : 容器  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'enterpriseProjectId' => 'enterprise_project_id',
             'hostId' => 'host_id',
-            'domain' => 'domain',
-            'category' => 'category'
+            'category' => 'category',
+            'domain' => 'domain'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     * domain  **参数解释**: 域名 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
-    * category  **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host : 主机 - container : 容器  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'hostId' => 'setHostId',
-            'domain' => 'setDomain',
-            'category' => 'setCategory'
+            'category' => 'setCategory',
+            'domain' => 'setDomain'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     * domain  **参数解释**: 域名 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
-    * category  **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host : 主机 - container : 容器  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'hostId' => 'getHostId',
-            'domain' => 'getDomain',
-            'category' => 'getCategory'
+            'category' => 'getCategory',
+            'domain' => 'getDomain'
     ];
 
     /**
@@ -179,8 +179,8 @@ class ListWebSiteInfoRequest implements ModelInterface, ArrayAccess
     {
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
-        $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
     }
 
     /**
@@ -287,6 +287,30 @@ class ListWebSiteInfoRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets category
+    *  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    *
+    * @return string
+    */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+    * Sets category
+    *
+    * @param string $category **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    *
+    * @return $this
+    */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
+        return $this;
+    }
+
+    /**
     * Gets domain
     *  **参数解释**: 域名 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
     *
@@ -307,30 +331,6 @@ class ListWebSiteInfoRequest implements ModelInterface, ArrayAccess
     public function setDomain($domain)
     {
         $this->container['domain'] = $domain;
-        return $this;
-    }
-
-    /**
-    * Gets category
-    *  **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host : 主机 - container : 容器  **默认取值**: 不涉及
-    *
-    * @return string
-    */
-    public function getCategory()
-    {
-        return $this->container['category'];
-    }
-
-    /**
-    * Sets category
-    *
-    * @param string $category **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host : 主机 - container : 容器  **默认取值**: 不涉及
-    *
-    * @return $this
-    */
-    public function setCategory($category)
-    {
-        $this->container['category'] = $category;
         return $this;
     }
 

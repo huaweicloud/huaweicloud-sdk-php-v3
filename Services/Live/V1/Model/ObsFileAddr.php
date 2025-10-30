@@ -198,13 +198,10 @@ class ObsFileAddr implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['location']) < 1)) {
                 $invalidProperties[] = "invalid value for 'location', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['object'] === null) {
-            $invalidProperties[] = "'object' can't be null";
-        }
-            if ((mb_strlen($this->container['object']) > 1024)) {
+            if (!is_null($this->container['object']) && (mb_strlen($this->container['object']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'object', the character length must be smaller than or equal to 1024.";
             }
-            if ((mb_strlen($this->container['object']) < 1)) {
+            if (!is_null($this->container['object']) && (mb_strlen($this->container['object']) < 1)) {
                 $invalidProperties[] = "invalid value for 'object', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -273,7 +270,7 @@ class ObsFileAddr implements ModelInterface, ArrayAccess
     * Gets object
     *  OBS对象路径，遵守OSS Object定义 - 当用于指示input时，需要指定到具体对象 - 当用于指示output时，只需指定到转码结果期望存放的路径
     *
-    * @return string
+    * @return string|null
     */
     public function getObject()
     {
@@ -283,7 +280,7 @@ class ObsFileAddr implements ModelInterface, ArrayAccess
     /**
     * Sets object
     *
-    * @param string $object OBS对象路径，遵守OSS Object定义 - 当用于指示input时，需要指定到具体对象 - 当用于指示output时，只需指定到转码结果期望存放的路径
+    * @param string|null $object OBS对象路径，遵守OSS Object定义 - 当用于指示input时，需要指定到具体对象 - 当用于指示output时，只需指定到转码结果期望存放的路径
     *
     * @return $this
     */

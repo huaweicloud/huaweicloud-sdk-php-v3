@@ -27,6 +27,8 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
     * geoip  地理位置封禁区域： (CN： 中国,,CA： 加拿大,US： 美国,AU： 澳大利亚,IN： 印度,JP： 日本,UK： 英国,FR： 法国,DE： 德国,BR： 巴西,Ukraine： 乌克兰,North Korea： 朝鲜,The Republic of Korea： 韩国,Iran： 伊朗,Cuba： 古巴,Sultan： 苏丹,Syria： 叙利亚,Pakistan： 巴基斯坦,Palestine： 巴勒斯坦,Israel： 以色列,Iraq： 伊拉克,Afghanistan： 阿富汗,Libya： 利比亚,Turkey： 土耳其,Thailand： 泰国,Singapore： 新加坡,South Africa： 南非,Mexico： 墨西哥,Peru： 秘鲁,Indonesia： 印度尼西亚,GD： 广东,FJ： 福建,JL： 吉林,LN： 辽宁,TW： 台湾,GZ： 贵州,AH： 安徽,HL： 黑龙江,HA： 河南,SC： 四川,HE： 河北,YN： 云南,HB： 湖北,HI： 海南,QH： 青海,HN： 湖南,JX： 江西,SX： 山西,SN： 陕西,ZJ： 浙江,GS： 甘肃,JS： 江苏,SD： 山东,BJ： 北京,SH： 上海,TJ： 天津,CQ： 重庆,MO： 澳门,HK： 香港,NX： 宁夏,GX： 广西,XJ： 新疆,XZ： 西藏,NM： 内蒙古)
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
     * status  规则状态，0：关闭，1：开启
+    * ipType  ip范围。若您的网站使用独享模式，请确认独享引擎是否全部升级到最新版本，避免造成异常。202412之后的版本支持配置IP范围
+    * description  规则描述
     * timestamp  创建规则时间戳
     *
     * @var string[]
@@ -38,6 +40,8 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
             'geoip' => 'string',
             'white' => 'int',
             'status' => 'int',
+            'ipType' => 'string',
+            'description' => 'string',
             'timestamp' => 'int'
     ];
 
@@ -49,6 +53,8 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
     * geoip  地理位置封禁区域： (CN： 中国,,CA： 加拿大,US： 美国,AU： 澳大利亚,IN： 印度,JP： 日本,UK： 英国,FR： 法国,DE： 德国,BR： 巴西,Ukraine： 乌克兰,North Korea： 朝鲜,The Republic of Korea： 韩国,Iran： 伊朗,Cuba： 古巴,Sultan： 苏丹,Syria： 叙利亚,Pakistan： 巴基斯坦,Palestine： 巴勒斯坦,Israel： 以色列,Iraq： 伊拉克,Afghanistan： 阿富汗,Libya： 利比亚,Turkey： 土耳其,Thailand： 泰国,Singapore： 新加坡,South Africa： 南非,Mexico： 墨西哥,Peru： 秘鲁,Indonesia： 印度尼西亚,GD： 广东,FJ： 福建,JL： 吉林,LN： 辽宁,TW： 台湾,GZ： 贵州,AH： 安徽,HL： 黑龙江,HA： 河南,SC： 四川,HE： 河北,YN： 云南,HB： 湖北,HI： 海南,QH： 青海,HN： 湖南,JX： 江西,SX： 山西,SN： 陕西,ZJ： 浙江,GS： 甘肃,JS： 江苏,SD： 山东,BJ： 北京,SH： 上海,TJ： 天津,CQ： 重庆,MO： 澳门,HK： 香港,NX： 宁夏,GX： 广西,XJ： 新疆,XZ： 西藏,NM： 内蒙古)
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
     * status  规则状态，0：关闭，1：开启
+    * ipType  ip范围。若您的网站使用独享模式，请确认独享引擎是否全部升级到最新版本，避免造成异常。202412之后的版本支持配置IP范围
+    * description  规则描述
     * timestamp  创建规则时间戳
     *
     * @var string[]
@@ -60,6 +66,8 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
         'geoip' => null,
         'white' => null,
         'status' => null,
+        'ipType' => null,
+        'description' => null,
         'timestamp' => 'int64'
     ];
 
@@ -92,6 +100,8 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
     * geoip  地理位置封禁区域： (CN： 中国,,CA： 加拿大,US： 美国,AU： 澳大利亚,IN： 印度,JP： 日本,UK： 英国,FR： 法国,DE： 德国,BR： 巴西,Ukraine： 乌克兰,North Korea： 朝鲜,The Republic of Korea： 韩国,Iran： 伊朗,Cuba： 古巴,Sultan： 苏丹,Syria： 叙利亚,Pakistan： 巴基斯坦,Palestine： 巴勒斯坦,Israel： 以色列,Iraq： 伊拉克,Afghanistan： 阿富汗,Libya： 利比亚,Turkey： 土耳其,Thailand： 泰国,Singapore： 新加坡,South Africa： 南非,Mexico： 墨西哥,Peru： 秘鲁,Indonesia： 印度尼西亚,GD： 广东,FJ： 福建,JL： 吉林,LN： 辽宁,TW： 台湾,GZ： 贵州,AH： 安徽,HL： 黑龙江,HA： 河南,SC： 四川,HE： 河北,YN： 云南,HB： 湖北,HI： 海南,QH： 青海,HN： 湖南,JX： 江西,SX： 山西,SN： 陕西,ZJ： 浙江,GS： 甘肃,JS： 江苏,SD： 山东,BJ： 北京,SH： 上海,TJ： 天津,CQ： 重庆,MO： 澳门,HK： 香港,NX： 宁夏,GX： 广西,XJ： 新疆,XZ： 西藏,NM： 内蒙古)
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
     * status  规则状态，0：关闭，1：开启
+    * ipType  ip范围。若您的网站使用独享模式，请确认独享引擎是否全部升级到最新版本，避免造成异常。202412之后的版本支持配置IP范围
+    * description  规则描述
     * timestamp  创建规则时间戳
     *
     * @var string[]
@@ -103,6 +113,8 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
             'geoip' => 'geoip',
             'white' => 'white',
             'status' => 'status',
+            'ipType' => 'ip_type',
+            'description' => 'description',
             'timestamp' => 'timestamp'
     ];
 
@@ -114,6 +126,8 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
     * geoip  地理位置封禁区域： (CN： 中国,,CA： 加拿大,US： 美国,AU： 澳大利亚,IN： 印度,JP： 日本,UK： 英国,FR： 法国,DE： 德国,BR： 巴西,Ukraine： 乌克兰,North Korea： 朝鲜,The Republic of Korea： 韩国,Iran： 伊朗,Cuba： 古巴,Sultan： 苏丹,Syria： 叙利亚,Pakistan： 巴基斯坦,Palestine： 巴勒斯坦,Israel： 以色列,Iraq： 伊拉克,Afghanistan： 阿富汗,Libya： 利比亚,Turkey： 土耳其,Thailand： 泰国,Singapore： 新加坡,South Africa： 南非,Mexico： 墨西哥,Peru： 秘鲁,Indonesia： 印度尼西亚,GD： 广东,FJ： 福建,JL： 吉林,LN： 辽宁,TW： 台湾,GZ： 贵州,AH： 安徽,HL： 黑龙江,HA： 河南,SC： 四川,HE： 河北,YN： 云南,HB： 湖北,HI： 海南,QH： 青海,HN： 湖南,JX： 江西,SX： 山西,SN： 陕西,ZJ： 浙江,GS： 甘肃,JS： 江苏,SD： 山东,BJ： 北京,SH： 上海,TJ： 天津,CQ： 重庆,MO： 澳门,HK： 香港,NX： 宁夏,GX： 广西,XJ： 新疆,XZ： 西藏,NM： 内蒙古)
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
     * status  规则状态，0：关闭，1：开启
+    * ipType  ip范围。若您的网站使用独享模式，请确认独享引擎是否全部升级到最新版本，避免造成异常。202412之后的版本支持配置IP范围
+    * description  规则描述
     * timestamp  创建规则时间戳
     *
     * @var string[]
@@ -125,6 +139,8 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
             'geoip' => 'setGeoip',
             'white' => 'setWhite',
             'status' => 'setStatus',
+            'ipType' => 'setIpType',
+            'description' => 'setDescription',
             'timestamp' => 'setTimestamp'
     ];
 
@@ -136,6 +152,8 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
     * geoip  地理位置封禁区域： (CN： 中国,,CA： 加拿大,US： 美国,AU： 澳大利亚,IN： 印度,JP： 日本,UK： 英国,FR： 法国,DE： 德国,BR： 巴西,Ukraine： 乌克兰,North Korea： 朝鲜,The Republic of Korea： 韩国,Iran： 伊朗,Cuba： 古巴,Sultan： 苏丹,Syria： 叙利亚,Pakistan： 巴基斯坦,Palestine： 巴勒斯坦,Israel： 以色列,Iraq： 伊拉克,Afghanistan： 阿富汗,Libya： 利比亚,Turkey： 土耳其,Thailand： 泰国,Singapore： 新加坡,South Africa： 南非,Mexico： 墨西哥,Peru： 秘鲁,Indonesia： 印度尼西亚,GD： 广东,FJ： 福建,JL： 吉林,LN： 辽宁,TW： 台湾,GZ： 贵州,AH： 安徽,HL： 黑龙江,HA： 河南,SC： 四川,HE： 河北,YN： 云南,HB： 湖北,HI： 海南,QH： 青海,HN： 湖南,JX： 江西,SX： 山西,SN： 陕西,ZJ： 浙江,GS： 甘肃,JS： 江苏,SD： 山东,BJ： 北京,SH： 上海,TJ： 天津,CQ： 重庆,MO： 澳门,HK： 香港,NX： 宁夏,GX： 广西,XJ： 新疆,XZ： 西藏,NM： 内蒙古)
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
     * status  规则状态，0：关闭，1：开启
+    * ipType  ip范围。若您的网站使用独享模式，请确认独享引擎是否全部升级到最新版本，避免造成异常。202412之后的版本支持配置IP范围
+    * description  规则描述
     * timestamp  创建规则时间戳
     *
     * @var string[]
@@ -147,6 +165,8 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
             'geoip' => 'getGeoip',
             'white' => 'getWhite',
             'status' => 'getStatus',
+            'ipType' => 'getIpType',
+            'description' => 'getDescription',
             'timestamp' => 'getTimestamp'
     ];
 
@@ -214,6 +234,8 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
         $this->container['geoip'] = isset($data['geoip']) ? $data['geoip'] : null;
         $this->container['white'] = isset($data['white']) ? $data['white'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['ipType'] = isset($data['ipType']) ? $data['ipType'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
     }
 
@@ -380,6 +402,54 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets ipType
+    *  ip范围。若您的网站使用独享模式，请确认独享引擎是否全部升级到最新版本，避免造成异常。202412之后的版本支持配置IP范围
+    *
+    * @return string|null
+    */
+    public function getIpType()
+    {
+        return $this->container['ipType'];
+    }
+
+    /**
+    * Sets ipType
+    *
+    * @param string|null $ipType ip范围。若您的网站使用独享模式，请确认独享引擎是否全部升级到最新版本，避免造成异常。202412之后的版本支持配置IP范围
+    *
+    * @return $this
+    */
+    public function setIpType($ipType)
+    {
+        $this->container['ipType'] = $ipType;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  规则描述
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 规则描述
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

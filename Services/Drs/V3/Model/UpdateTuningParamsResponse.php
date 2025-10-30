@@ -25,7 +25,7 @@ class UpdateTuningParamsResponse implements ModelInterface, ArrayAccess
     * increCapture  增量抓取调优参数
     * increApply  增量回放调优参数
     * increRelay  增量日志拉取调优参数
-    * modifyResult  参数修改是否成功
+    * modifyResult  参数修改是否成功，查询参数时不返回该字段。
     *
     * @var string[]
     */
@@ -43,7 +43,7 @@ class UpdateTuningParamsResponse implements ModelInterface, ArrayAccess
     * increCapture  增量抓取调优参数
     * increApply  增量回放调优参数
     * increRelay  增量日志拉取调优参数
-    * modifyResult  参数修改是否成功
+    * modifyResult  参数修改是否成功，查询参数时不返回该字段。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class UpdateTuningParamsResponse implements ModelInterface, ArrayAccess
     * increCapture  增量抓取调优参数
     * increApply  增量回放调优参数
     * increRelay  增量日志拉取调优参数
-    * modifyResult  参数修改是否成功
+    * modifyResult  参数修改是否成功，查询参数时不返回该字段。
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class UpdateTuningParamsResponse implements ModelInterface, ArrayAccess
     * increCapture  增量抓取调优参数
     * increApply  增量回放调优参数
     * increRelay  增量日志拉取调优参数
-    * modifyResult  参数修改是否成功
+    * modifyResult  参数修改是否成功，查询参数时不返回该字段。
     *
     * @var string[]
     */
@@ -118,7 +118,7 @@ class UpdateTuningParamsResponse implements ModelInterface, ArrayAccess
     * increCapture  增量抓取调优参数
     * increApply  增量回放调优参数
     * increRelay  增量日志拉取调优参数
-    * modifyResult  参数修改是否成功
+    * modifyResult  参数修改是否成功，查询参数时不返回该字段。
     *
     * @var string[]
     */
@@ -315,7 +315,7 @@ class UpdateTuningParamsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets modifyResult
-    *  参数修改是否成功
+    *  参数修改是否成功，查询参数时不返回该字段。
     *
     * @return string|null
     */
@@ -327,7 +327,7 @@ class UpdateTuningParamsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets modifyResult
     *
-    * @param string|null $modifyResult 参数修改是否成功
+    * @param string|null $modifyResult 参数修改是否成功，查询参数时不返回该字段。
     *
     * @return $this
     */

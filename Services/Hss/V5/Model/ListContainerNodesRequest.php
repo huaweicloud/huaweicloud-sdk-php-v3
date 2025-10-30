@@ -25,7 +25,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 取值0-2000000  **默认取值**: 0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200  **默认取值**: 10
     * hostName  **参数解释**: 节点名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位  **默认取值**: 不涉及
-    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。  **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
     * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下2种。   - closed：关闭   - opened：开启  **默认取值**: 不涉及
     * containerTags  **参数解释**: 用来识别cce节点或者自建节点的标签 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - cce：cce节点   - self：自建节点   - other：其他节点  **默认取值**: 不涉及
     *
@@ -49,7 +49,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 取值0-2000000  **默认取值**: 0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200  **默认取值**: 10
     * hostName  **参数解释**: 节点名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位  **默认取值**: 不涉及
-    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。  **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
     * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下2种。   - closed：关闭   - opened：开启  **默认取值**: 不涉及
     * containerTags  **参数解释**: 用来识别cce节点或者自建节点的标签 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - cce：cce节点   - self：自建节点   - other：其他节点  **默认取值**: 不涉及
     *
@@ -94,7 +94,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 取值0-2000000  **默认取值**: 0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200  **默认取值**: 10
     * hostName  **参数解释**: 节点名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位  **默认取值**: 不涉及
-    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。  **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
     * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下2种。   - closed：关闭   - opened：开启  **默认取值**: 不涉及
     * containerTags  **参数解释**: 用来识别cce节点或者自建节点的标签 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - cce：cce节点   - self：自建节点   - other：其他节点  **默认取值**: 不涉及
     *
@@ -118,7 +118,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 取值0-2000000  **默认取值**: 0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200  **默认取值**: 10
     * hostName  **参数解释**: 节点名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位  **默认取值**: 不涉及
-    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。  **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
     * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下2种。   - closed：关闭   - opened：开启  **默认取值**: 不涉及
     * containerTags  **参数解释**: 用来识别cce节点或者自建节点的标签 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - cce：cce节点   - self：自建节点   - other：其他节点  **默认取值**: 不涉及
     *
@@ -142,7 +142,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 取值0-2000000  **默认取值**: 0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200  **默认取值**: 10
     * hostName  **参数解释**: 节点名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位  **默认取值**: 不涉及
-    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。  **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
     * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下2种。   - closed：关闭   - opened：开启  **默认取值**: 不涉及
     * containerTags  **参数解释**: 用来识别cce节点或者自建节点的标签 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - cce：cce节点   - self：自建节点   - other：其他节点  **默认取值**: 不涉及
     *
@@ -425,7 +425,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentStatus
-    *  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。  **默认取值**: 不涉及
+    *  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -437,7 +437,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets agentStatus
     *
-    * @param string|null $agentStatus **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - not_installed：未安装。   - online：在线。   - offline：离线。  **默认取值**: 不涉及
+    * @param string|null $agentStatus **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
     *
     * @return $this
     */

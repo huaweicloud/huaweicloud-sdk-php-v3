@@ -20,30 +20,34 @@ class TuningParameter implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * paramName  参数名称
-    * paramValue  参数取值
-    * availability  是否可用
+    * paramName  参数名称。
+    * paramValue  参数取值。
+    * availability  是否可用。
+    * range  参数取值范围。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'paramName' => 'string',
             'paramValue' => 'string',
-            'availability' => 'string'
+            'availability' => 'string',
+            'range' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * paramName  参数名称
-    * paramValue  参数取值
-    * availability  是否可用
+    * paramName  参数名称。
+    * paramValue  参数取值。
+    * availability  是否可用。
+    * range  参数取值范围。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'paramName' => null,
         'paramValue' => null,
-        'availability' => null
+        'availability' => null,
+        'range' => null
     ];
 
     /**
@@ -69,44 +73,50 @@ class TuningParameter implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * paramName  参数名称
-    * paramValue  参数取值
-    * availability  是否可用
+    * paramName  参数名称。
+    * paramValue  参数取值。
+    * availability  是否可用。
+    * range  参数取值范围。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'paramName' => 'param_name',
             'paramValue' => 'param_value',
-            'availability' => 'availability'
+            'availability' => 'availability',
+            'range' => 'range'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * paramName  参数名称
-    * paramValue  参数取值
-    * availability  是否可用
+    * paramName  参数名称。
+    * paramValue  参数取值。
+    * availability  是否可用。
+    * range  参数取值范围。
     *
     * @var string[]
     */
     protected static $setters = [
             'paramName' => 'setParamName',
             'paramValue' => 'setParamValue',
-            'availability' => 'setAvailability'
+            'availability' => 'setAvailability',
+            'range' => 'setRange'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * paramName  参数名称
-    * paramValue  参数取值
-    * availability  是否可用
+    * paramName  参数名称。
+    * paramValue  参数取值。
+    * availability  是否可用。
+    * range  参数取值范围。
     *
     * @var string[]
     */
     protected static $getters = [
             'paramName' => 'getParamName',
             'paramValue' => 'getParamValue',
-            'availability' => 'getAvailability'
+            'availability' => 'getAvailability',
+            'range' => 'getRange'
     ];
 
     /**
@@ -170,6 +180,7 @@ class TuningParameter implements ModelInterface, ArrayAccess
         $this->container['paramName'] = isset($data['paramName']) ? $data['paramName'] : null;
         $this->container['paramValue'] = isset($data['paramValue']) ? $data['paramValue'] : null;
         $this->container['availability'] = isset($data['availability']) ? $data['availability'] : null;
+        $this->container['range'] = isset($data['range']) ? $data['range'] : null;
     }
 
     /**
@@ -196,7 +207,7 @@ class TuningParameter implements ModelInterface, ArrayAccess
 
     /**
     * Gets paramName
-    *  参数名称
+    *  参数名称。
     *
     * @return string|null
     */
@@ -208,7 +219,7 @@ class TuningParameter implements ModelInterface, ArrayAccess
     /**
     * Sets paramName
     *
-    * @param string|null $paramName 参数名称
+    * @param string|null $paramName 参数名称。
     *
     * @return $this
     */
@@ -220,7 +231,7 @@ class TuningParameter implements ModelInterface, ArrayAccess
 
     /**
     * Gets paramValue
-    *  参数取值
+    *  参数取值。
     *
     * @return string|null
     */
@@ -232,7 +243,7 @@ class TuningParameter implements ModelInterface, ArrayAccess
     /**
     * Sets paramValue
     *
-    * @param string|null $paramValue 参数取值
+    * @param string|null $paramValue 参数取值。
     *
     * @return $this
     */
@@ -244,7 +255,7 @@ class TuningParameter implements ModelInterface, ArrayAccess
 
     /**
     * Gets availability
-    *  是否可用
+    *  是否可用。
     *
     * @return string|null
     */
@@ -256,13 +267,37 @@ class TuningParameter implements ModelInterface, ArrayAccess
     /**
     * Sets availability
     *
-    * @param string|null $availability 是否可用
+    * @param string|null $availability 是否可用。
     *
     * @return $this
     */
     public function setAvailability($availability)
     {
         $this->container['availability'] = $availability;
+        return $this;
+    }
+
+    /**
+    * Gets range
+    *  参数取值范围。
+    *
+    * @return string|null
+    */
+    public function getRange()
+    {
+        return $this->container['range'];
+    }
+
+    /**
+    * Sets range
+    *
+    * @param string|null $range 参数取值范围。
+    *
+    * @return $this
+    */
+    public function setRange($range)
+    {
+        $this->container['range'] = $range;
         return $this;
     }
 

@@ -23,7 +23,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * name  **参数解释**: 自启动项名称 **取值范围**: 字符长度1-256位
     * type  **参数解释**: 自启动项类型 **取值范围**: - 0：自启动服务 - 1：定时任务 - 2：预加载动态库 - 3：Run注册表键 - 4：开机启动文件夹
     * path  **参数解释**: 自启动项的路径 **取值范围**: 字符长度1-256位
@@ -51,7 +51,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * name  **参数解释**: 自启动项名称 **取值范围**: 字符长度1-256位
     * type  **参数解释**: 自启动项类型 **取值范围**: - 0：自启动服务 - 1：定时任务 - 2：预加载动态库 - 3：Run注册表键 - 4：开机启动文件夹
     * path  **参数解释**: 自启动项的路径 **取值范围**: 字符长度1-256位
@@ -100,7 +100,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * name  **参数解释**: 自启动项名称 **取值范围**: 字符长度1-256位
     * type  **参数解释**: 自启动项类型 **取值范围**: - 0：自启动服务 - 1：定时任务 - 2：预加载动态库 - 3：Run注册表键 - 4：开机启动文件夹
     * path  **参数解释**: 自启动项的路径 **取值范围**: 字符长度1-256位
@@ -128,7 +128,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * name  **参数解释**: 自启动项名称 **取值范围**: 字符长度1-256位
     * type  **参数解释**: 自启动项类型 **取值范围**: - 0：自启动服务 - 1：定时任务 - 2：预加载动态库 - 3：Run注册表键 - 4：开机启动文件夹
     * path  **参数解释**: 自启动项的路径 **取值范围**: 字符长度1-256位
@@ -156,7 +156,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     * agentId  **参数解释**: Agent ID **取值范围**: 字符长度1-64位
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * name  **参数解释**: 自启动项名称 **取值范围**: 字符长度1-256位
     * type  **参数解释**: 自启动项类型 **取值范围**: - 0：自启动服务 - 1：定时任务 - 2：预加载动态库 - 3：Run注册表键 - 4：开机启动文件夹
     * path  **参数解释**: 自启动项的路径 **取值范围**: 字符长度1-256位
@@ -408,7 +408,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    *  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -420,7 +420,7 @@ class AutoLauchResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * @param string|null $hostIp **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     *
     * @return $this
     */

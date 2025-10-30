@@ -20,7 +20,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nextMarker  向后分页标识符。如果存在，则表示实际总输出比当前响应中包含的输出多。在对操作的后续调用中，在标签请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null。
+    * nextMarker  向后分页标识符。如果存在，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null。
     * previousMarker  向前分页标识符。
     * currentCount  本页显示的条目数量。
     *
@@ -34,7 +34,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nextMarker  向后分页标识符。如果存在，则表示实际总输出比当前响应中包含的输出多。在对操作的后续调用中，在标签请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null。
+    * nextMarker  向后分页标识符。如果存在，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null。
     * previousMarker  向前分页标识符。
     * currentCount  本页显示的条目数量。
     *
@@ -69,7 +69,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nextMarker  向后分页标识符。如果存在，则表示实际总输出比当前响应中包含的输出多。在对操作的后续调用中，在标签请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null。
+    * nextMarker  向后分页标识符。如果存在，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null。
     * previousMarker  向前分页标识符。
     * currentCount  本页显示的条目数量。
     *
@@ -83,7 +83,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nextMarker  向后分页标识符。如果存在，则表示实际总输出比当前响应中包含的输出多。在对操作的后续调用中，在标签请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null。
+    * nextMarker  向后分页标识符。如果存在，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null。
     * previousMarker  向前分页标识符。
     * currentCount  本页显示的条目数量。
     *
@@ -97,7 +97,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nextMarker  向后分页标识符。如果存在，则表示实际总输出比当前响应中包含的输出多。在对操作的后续调用中，在标签请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null。
+    * nextMarker  向后分页标识符。如果存在，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null。
     * previousMarker  向前分页标识符。
     * currentCount  本页显示的条目数量。
     *
@@ -196,7 +196,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextMarker
-    *  向后分页标识符。如果存在，则表示实际总输出比当前响应中包含的输出多。在对操作的后续调用中，在标签请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null。
+    *  向后分页标识符。如果存在，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nextMarker
     *
-    * @param string|null $nextMarker 向后分页标识符。如果存在，则表示实际总输出比当前响应中包含的输出多。在对操作的后续调用中，在标签请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null。
+    * @param string|null $nextMarker 向后分页标识符。如果存在，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null。
     *
     * @return $this
     */

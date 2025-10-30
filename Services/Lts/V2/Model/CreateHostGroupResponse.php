@@ -28,6 +28,8 @@ class CreateHostGroupResponse implements ModelInterface, ArrayAccess
     * hostGroupTag  标签信息
     * createTime  创建时间
     * updateTime  更新时间
+    * agentAccessType  **参数解释：** 主机组类型。分别为IP、LABEL类型。 **取值范围：** - IP。 - LABEL。
+    * labels  **参数解释：** 主机组自定义标识。
     *
     * @var string[]
     */
@@ -38,7 +40,9 @@ class CreateHostGroupResponse implements ModelInterface, ArrayAccess
             'hostIdList' => 'string[]',
             'hostGroupTag' => '\HuaweiCloud\SDK\Lts\V2\Model\HostGroupTag[]',
             'createTime' => 'int',
-            'updateTime' => 'int'
+            'updateTime' => 'int',
+            'agentAccessType' => 'string',
+            'labels' => 'string[]'
     ];
 
     /**
@@ -50,6 +54,8 @@ class CreateHostGroupResponse implements ModelInterface, ArrayAccess
     * hostGroupTag  标签信息
     * createTime  创建时间
     * updateTime  更新时间
+    * agentAccessType  **参数解释：** 主机组类型。分别为IP、LABEL类型。 **取值范围：** - IP。 - LABEL。
+    * labels  **参数解释：** 主机组自定义标识。
     *
     * @var string[]
     */
@@ -60,7 +66,9 @@ class CreateHostGroupResponse implements ModelInterface, ArrayAccess
         'hostIdList' => null,
         'hostGroupTag' => null,
         'createTime' => 'int64',
-        'updateTime' => 'int64'
+        'updateTime' => 'int64',
+        'agentAccessType' => null,
+        'labels' => null
     ];
 
     /**
@@ -93,6 +101,8 @@ class CreateHostGroupResponse implements ModelInterface, ArrayAccess
     * hostGroupTag  标签信息
     * createTime  创建时间
     * updateTime  更新时间
+    * agentAccessType  **参数解释：** 主机组类型。分别为IP、LABEL类型。 **取值范围：** - IP。 - LABEL。
+    * labels  **参数解释：** 主机组自定义标识。
     *
     * @var string[]
     */
@@ -103,7 +113,9 @@ class CreateHostGroupResponse implements ModelInterface, ArrayAccess
             'hostIdList' => 'host_id_list',
             'hostGroupTag' => 'host_group_tag',
             'createTime' => 'create_time',
-            'updateTime' => 'update_time'
+            'updateTime' => 'update_time',
+            'agentAccessType' => 'agent_access_type',
+            'labels' => 'labels'
     ];
 
     /**
@@ -115,6 +127,8 @@ class CreateHostGroupResponse implements ModelInterface, ArrayAccess
     * hostGroupTag  标签信息
     * createTime  创建时间
     * updateTime  更新时间
+    * agentAccessType  **参数解释：** 主机组类型。分别为IP、LABEL类型。 **取值范围：** - IP。 - LABEL。
+    * labels  **参数解释：** 主机组自定义标识。
     *
     * @var string[]
     */
@@ -125,7 +139,9 @@ class CreateHostGroupResponse implements ModelInterface, ArrayAccess
             'hostIdList' => 'setHostIdList',
             'hostGroupTag' => 'setHostGroupTag',
             'createTime' => 'setCreateTime',
-            'updateTime' => 'setUpdateTime'
+            'updateTime' => 'setUpdateTime',
+            'agentAccessType' => 'setAgentAccessType',
+            'labels' => 'setLabels'
     ];
 
     /**
@@ -137,6 +153,8 @@ class CreateHostGroupResponse implements ModelInterface, ArrayAccess
     * hostGroupTag  标签信息
     * createTime  创建时间
     * updateTime  更新时间
+    * agentAccessType  **参数解释：** 主机组类型。分别为IP、LABEL类型。 **取值范围：** - IP。 - LABEL。
+    * labels  **参数解释：** 主机组自定义标识。
     *
     * @var string[]
     */
@@ -147,7 +165,9 @@ class CreateHostGroupResponse implements ModelInterface, ArrayAccess
             'hostIdList' => 'getHostIdList',
             'hostGroupTag' => 'getHostGroupTag',
             'createTime' => 'getCreateTime',
-            'updateTime' => 'getUpdateTime'
+            'updateTime' => 'getUpdateTime',
+            'agentAccessType' => 'getAgentAccessType',
+            'labels' => 'getLabels'
     ];
 
     /**
@@ -230,6 +250,8 @@ class CreateHostGroupResponse implements ModelInterface, ArrayAccess
         $this->container['hostGroupTag'] = isset($data['hostGroupTag']) ? $data['hostGroupTag'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
+        $this->container['agentAccessType'] = isset($data['agentAccessType']) ? $data['agentAccessType'] : null;
+        $this->container['labels'] = isset($data['labels']) ? $data['labels'] : null;
     }
 
     /**
@@ -454,6 +476,54 @@ class CreateHostGroupResponse implements ModelInterface, ArrayAccess
     public function setUpdateTime($updateTime)
     {
         $this->container['updateTime'] = $updateTime;
+        return $this;
+    }
+
+    /**
+    * Gets agentAccessType
+    *  **参数解释：** 主机组类型。分别为IP、LABEL类型。 **取值范围：** - IP。 - LABEL。
+    *
+    * @return string|null
+    */
+    public function getAgentAccessType()
+    {
+        return $this->container['agentAccessType'];
+    }
+
+    /**
+    * Sets agentAccessType
+    *
+    * @param string|null $agentAccessType **参数解释：** 主机组类型。分别为IP、LABEL类型。 **取值范围：** - IP。 - LABEL。
+    *
+    * @return $this
+    */
+    public function setAgentAccessType($agentAccessType)
+    {
+        $this->container['agentAccessType'] = $agentAccessType;
+        return $this;
+    }
+
+    /**
+    * Gets labels
+    *  **参数解释：** 主机组自定义标识。
+    *
+    * @return string[]|null
+    */
+    public function getLabels()
+    {
+        return $this->container['labels'];
+    }
+
+    /**
+    * Sets labels
+    *
+    * @param string[]|null $labels **参数解释：** 主机组自定义标识。
+    *
+    * @return $this
+    */
+    public function setLabels($labels)
+    {
+        $this->container['labels'] = $labels;
         return $this;
     }
 

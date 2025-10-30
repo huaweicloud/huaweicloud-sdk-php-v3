@@ -24,7 +24,7 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
-    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
-    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
-    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
-    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
-    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     *
     * @var string[]
     */
@@ -226,11 +226,17 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) > 64)) {
-                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 64.";
+        if ($this->container['category'] === null) {
+            $invalidProperties[] = "'category' can't be null";
+        }
+            if ((mb_strlen($this->container['category']) > 32)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) < 0)) {
+            if ((mb_strlen($this->container['category']) < 0)) {
                 $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
+            }
+            if (!preg_match("/^(host|container)$/", $this->container['category'])) {
+                $invalidProperties[] = "invalid value for 'category', must be conform to the pattern /^(host|container)$/.";
             }
         return $invalidProperties;
     }
@@ -344,9 +350,9 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  类别，默认为host，包含如下： - host：主机 - container：容器
+    *  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     *
-    * @return string|null
+    * @return string
     */
     public function getCategory()
     {
@@ -356,7 +362,7 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category 类别，默认为host，包含如下： - host：主机 - container：容器
+    * @param string $category **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     *
     * @return $this
     */

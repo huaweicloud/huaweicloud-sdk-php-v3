@@ -20,8 +20,8 @@ class ModifyLoginCommonIpRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ipAddr  登录IP或登录网段,登录网段由IP地址和掩码组成,以'/'连接。
-    * hostIdList  服务器ID列表,不可为NULL,删除常用登录IP时,需要将服务器ID列表置为空列表[]。
+    * ipAddr  **参数解释**： 登录IP或登录网段,登录网段由IP地址和掩码组成,以'/'连接。 **取值范围**： 字符长度1-128位
+    * hostIdList  **参数解释**： 服务器ID列表,不可为NULL,删除常用登录IP时,需要将服务器ID列表置为空列表[]。 **取值范围**： 最小值0，最大值200
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ModifyLoginCommonIpRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ipAddr  登录IP或登录网段,登录网段由IP地址和掩码组成,以'/'连接。
-    * hostIdList  服务器ID列表,不可为NULL,删除常用登录IP时,需要将服务器ID列表置为空列表[]。
+    * ipAddr  **参数解释**： 登录IP或登录网段,登录网段由IP地址和掩码组成,以'/'连接。 **取值范围**： 字符长度1-128位
+    * hostIdList  **参数解释**： 服务器ID列表,不可为NULL,删除常用登录IP时,需要将服务器ID列表置为空列表[]。 **取值范围**： 最小值0，最大值200
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ModifyLoginCommonIpRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ipAddr  登录IP或登录网段,登录网段由IP地址和掩码组成,以'/'连接。
-    * hostIdList  服务器ID列表,不可为NULL,删除常用登录IP时,需要将服务器ID列表置为空列表[]。
+    * ipAddr  **参数解释**： 登录IP或登录网段,登录网段由IP地址和掩码组成,以'/'连接。 **取值范围**： 字符长度1-128位
+    * hostIdList  **参数解释**： 服务器ID列表,不可为NULL,删除常用登录IP时,需要将服务器ID列表置为空列表[]。 **取值范围**： 最小值0，最大值200
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ModifyLoginCommonIpRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ipAddr  登录IP或登录网段,登录网段由IP地址和掩码组成,以'/'连接。
-    * hostIdList  服务器ID列表,不可为NULL,删除常用登录IP时,需要将服务器ID列表置为空列表[]。
+    * ipAddr  **参数解释**： 登录IP或登录网段,登录网段由IP地址和掩码组成,以'/'连接。 **取值范围**： 字符长度1-128位
+    * hostIdList  **参数解释**： 服务器ID列表,不可为NULL,删除常用登录IP时,需要将服务器ID列表置为空列表[]。 **取值范围**： 最小值0，最大值200
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ModifyLoginCommonIpRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ipAddr  登录IP或登录网段,登录网段由IP地址和掩码组成,以'/'连接。
-    * hostIdList  服务器ID列表,不可为NULL,删除常用登录IP时,需要将服务器ID列表置为空列表[]。
+    * ipAddr  **参数解释**： 登录IP或登录网段,登录网段由IP地址和掩码组成,以'/'连接。 **取值范围**： 字符长度1-128位
+    * hostIdList  **参数解释**： 服务器ID列表,不可为NULL,删除常用登录IP时,需要将服务器ID列表置为空列表[]。 **取值范围**： 最小值0，最大值200
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ModifyLoginCommonIpRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipAddr
-    *  登录IP或登录网段,登录网段由IP地址和掩码组成,以'/'连接。
+    *  **参数解释**： 登录IP或登录网段,登录网段由IP地址和掩码组成,以'/'连接。 **取值范围**： 字符长度1-128位
     *
     * @return string
     */
@@ -209,7 +209,7 @@ class ModifyLoginCommonIpRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ipAddr
     *
-    * @param string $ipAddr 登录IP或登录网段,登录网段由IP地址和掩码组成,以'/'连接。
+    * @param string $ipAddr **参数解释**： 登录IP或登录网段,登录网段由IP地址和掩码组成,以'/'连接。 **取值范围**： 字符长度1-128位
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ModifyLoginCommonIpRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIdList
-    *  服务器ID列表,不可为NULL,删除常用登录IP时,需要将服务器ID列表置为空列表[]。
+    *  **参数解释**： 服务器ID列表,不可为NULL,删除常用登录IP时,需要将服务器ID列表置为空列表[]。 **取值范围**： 最小值0，最大值200
     *
     * @return string[]
     */
@@ -233,7 +233,7 @@ class ModifyLoginCommonIpRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[] $hostIdList 服务器ID列表,不可为NULL,删除常用登录IP时,需要将服务器ID列表置为空列表[]。
+    * @param string[] $hostIdList **参数解释**： 服务器ID列表,不可为NULL,删除常用登录IP时,需要将服务器ID列表置为空列表[]。 **取值范围**： 最小值0，最大值200
     *
     * @return $this
     */

@@ -22,21 +22,25 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * templates  模板列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'templates' => '\HuaweiCloud\SDK\Aos\V1\Model\Template[]'
+            'templates' => '\HuaweiCloud\SDK\Aos\V1\Model\Template[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Aos\V1\Model\PageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * templates  模板列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'templates' => null
+        'templates' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * templates  模板列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'templates' => 'templates'
+            'templates' => 'templates',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * templates  模板列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
-            'templates' => 'setTemplates'
+            'templates' => 'setTemplates',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * templates  模板列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
-            'templates' => 'getTemplates'
+            'templates' => 'getTemplates',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['templates'] = isset($data['templates']) ? $data['templates'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
     public function setTemplates($templates)
     {
         $this->container['templates'] = $templates;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Aos\V1\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

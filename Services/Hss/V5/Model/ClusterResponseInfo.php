@@ -23,9 +23,9 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * clusterId  集群ID
     * clusterVersion  集群版本
-    * protectStatus  防护状态 - unprotected - plugin error - protected with policy - deploy policy failed - protected without policy - uninstall failed - uninstall
+    * protectStatus  **参数解释**： 防护状态 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
     * policyNum  策略数量
-    * clusterStatus  集群运行状态 - Available - Unavailable
+    * clusterStatus  **参数解释**： 集群运行状态 **取值范围**: - Available：可用。 - Unavailable：不可用。
     * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     *
     * @var string[]
@@ -45,9 +45,9 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * clusterId  集群ID
     * clusterVersion  集群版本
-    * protectStatus  防护状态 - unprotected - plugin error - protected with policy - deploy policy failed - protected without policy - uninstall failed - uninstall
+    * protectStatus  **参数解释**： 防护状态 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
     * policyNum  策略数量
-    * clusterStatus  集群运行状态 - Available - Unavailable
+    * clusterStatus  **参数解释**： 集群运行状态 **取值范围**: - Available：可用。 - Unavailable：不可用。
     * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     *
     * @var string[]
@@ -88,9 +88,9 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * clusterId  集群ID
     * clusterVersion  集群版本
-    * protectStatus  防护状态 - unprotected - plugin error - protected with policy - deploy policy failed - protected without policy - uninstall failed - uninstall
+    * protectStatus  **参数解释**： 防护状态 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
     * policyNum  策略数量
-    * clusterStatus  集群运行状态 - Available - Unavailable
+    * clusterStatus  **参数解释**： 集群运行状态 **取值范围**: - Available：可用。 - Unavailable：不可用。
     * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     *
     * @var string[]
@@ -110,9 +110,9 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * clusterId  集群ID
     * clusterVersion  集群版本
-    * protectStatus  防护状态 - unprotected - plugin error - protected with policy - deploy policy failed - protected without policy - uninstall failed - uninstall
+    * protectStatus  **参数解释**： 防护状态 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
     * policyNum  策略数量
-    * clusterStatus  集群运行状态 - Available - Unavailable
+    * clusterStatus  **参数解释**： 集群运行状态 **取值范围**: - Available：可用。 - Unavailable：不可用。
     * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     *
     * @var string[]
@@ -132,9 +132,9 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * clusterId  集群ID
     * clusterVersion  集群版本
-    * protectStatus  防护状态 - unprotected - plugin error - protected with policy - deploy policy failed - protected without policy - uninstall failed - uninstall
+    * protectStatus  **参数解释**： 防护状态 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
     * policyNum  策略数量
-    * clusterStatus  集群运行状态 - Available - Unavailable
+    * clusterStatus  **参数解释**： 集群运行状态 **取值范围**: - Available：可用。 - Unavailable：不可用。
     * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
     *
     * @var string[]
@@ -354,7 +354,7 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  防护状态 - unprotected - plugin error - protected with policy - deploy policy failed - protected without policy - uninstall failed - uninstall
+    *  **参数解释**： 防护状态 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
     *
     * @return string|null
     */
@@ -366,7 +366,7 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus 防护状态 - unprotected - plugin error - protected with policy - deploy policy failed - protected without policy - uninstall failed - uninstall
+    * @param string|null $protectStatus **参数解释**： 防护状态 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
     *
     * @return $this
     */
@@ -402,7 +402,7 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterStatus
-    *  集群运行状态 - Available - Unavailable
+    *  **参数解释**： 集群运行状态 **取值范围**: - Available：可用。 - Unavailable：不可用。
     *
     * @return string|null
     */
@@ -414,7 +414,7 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterStatus
     *
-    * @param string|null $clusterStatus 集群运行状态 - Available - Unavailable
+    * @param string|null $clusterStatus **参数解释**： 集群运行状态 **取值范围**: - Available：可用。 - Unavailable：不可用。
     *
     * @return $this
     */

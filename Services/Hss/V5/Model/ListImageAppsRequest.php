@@ -276,6 +276,9 @@ class ListImageAppsRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['imageType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'imageType', the character length must be bigger than or equal to 1.";
             }
+            if (!preg_match("/^private_image|shared_image|instance_image|cicd|harbor$/", $this->container['imageType'])) {
+                $invalidProperties[] = "invalid value for 'imageType', must be conform to the pattern /^private_image|shared_image|instance_image|cicd|harbor$/.";
+            }
         if ($this->container['imageId'] === null) {
             $invalidProperties[] = "'imageId' can't be null";
         }
@@ -285,11 +288,17 @@ class ListImageAppsRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['imageId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'imageId', the character length must be bigger than or equal to 0.";
             }
+            if (!preg_match("/^.*$/", $this->container['imageId'])) {
+                $invalidProperties[] = "invalid value for 'imageId', must be conform to the pattern /^.*$/.";
+            }
             if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 65535)) {
                 $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 65535.";
             }
             if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 0)) {
                 $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['namespace']) && !preg_match("/^.*$/", $this->container['namespace'])) {
+                $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['imageName']) && (mb_strlen($this->container['imageName']) > 65535)) {
                 $invalidProperties[] = "invalid value for 'imageName', the character length must be smaller than or equal to 65535.";
@@ -297,17 +306,26 @@ class ListImageAppsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['imageName']) && (mb_strlen($this->container['imageName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'imageName', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['imageName']) && !preg_match("/^.*$/", $this->container['imageName'])) {
+                $invalidProperties[] = "invalid value for 'imageName', must be conform to the pattern /^.*$/.";
+            }
             if (!is_null($this->container['tagName']) && (mb_strlen($this->container['tagName']) > 65535)) {
                 $invalidProperties[] = "invalid value for 'tagName', the character length must be smaller than or equal to 65535.";
             }
             if (!is_null($this->container['tagName']) && (mb_strlen($this->container['tagName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'tagName', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['tagName']) && !preg_match("/^.*$/", $this->container['tagName'])) {
+                $invalidProperties[] = "invalid value for 'tagName', must be conform to the pattern /^.*$/.";
+            }
             if (!is_null($this->container['appName']) && (mb_strlen($this->container['appName']) > 65535)) {
                 $invalidProperties[] = "invalid value for 'appName', the character length must be smaller than or equal to 65535.";
             }
             if (!is_null($this->container['appName']) && (mb_strlen($this->container['appName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'appName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['appName']) && !preg_match("/^.*$/", $this->container['appName'])) {
+                $invalidProperties[] = "invalid value for 'appName', must be conform to the pattern /^.*$/.";
             }
         return $invalidProperties;
     }

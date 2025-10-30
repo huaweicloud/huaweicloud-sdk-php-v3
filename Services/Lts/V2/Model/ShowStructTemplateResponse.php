@@ -33,6 +33,9 @@ class ShowStructTemplateResponse implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * templateName  测试
     * regex  为了兼容前台数据格式
+    * customTimeInfo  customTimeInfo
+    * uploadOriginalLog  **参数解释：** 是否上传原始日志。 **取值范围：** - true - fasle
+    * uploadParseFailedLog  **参数解释：** 是否将解析失败的原始上传到指定系统字段日志。 **取值范围：** - true - fasle
     *
     * @var string[]
     */
@@ -48,7 +51,10 @@ class ShowStructTemplateResponse implements ModelInterface, ArrayAccess
             'logStreamId' => 'string',
             'projectId' => 'string',
             'templateName' => 'string',
-            'regex' => 'string'
+            'regex' => 'string',
+            'customTimeInfo' => '\HuaweiCloud\SDK\Lts\V2\Model\CustomTimeInfo',
+            'uploadOriginalLog' => 'bool',
+            'uploadParseFailedLog' => 'bool'
     ];
 
     /**
@@ -65,6 +71,9 @@ class ShowStructTemplateResponse implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * templateName  测试
     * regex  为了兼容前台数据格式
+    * customTimeInfo  customTimeInfo
+    * uploadOriginalLog  **参数解释：** 是否上传原始日志。 **取值范围：** - true - fasle
+    * uploadParseFailedLog  **参数解释：** 是否将解析失败的原始上传到指定系统字段日志。 **取值范围：** - true - fasle
     *
     * @var string[]
     */
@@ -80,7 +89,10 @@ class ShowStructTemplateResponse implements ModelInterface, ArrayAccess
         'logStreamId' => null,
         'projectId' => null,
         'templateName' => null,
-        'regex' => null
+        'regex' => null,
+        'customTimeInfo' => null,
+        'uploadOriginalLog' => null,
+        'uploadParseFailedLog' => null
     ];
 
     /**
@@ -118,6 +130,9 @@ class ShowStructTemplateResponse implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * templateName  测试
     * regex  为了兼容前台数据格式
+    * customTimeInfo  customTimeInfo
+    * uploadOriginalLog  **参数解释：** 是否上传原始日志。 **取值范围：** - true - fasle
+    * uploadParseFailedLog  **参数解释：** 是否将解析失败的原始上传到指定系统字段日志。 **取值范围：** - true - fasle
     *
     * @var string[]
     */
@@ -133,7 +148,10 @@ class ShowStructTemplateResponse implements ModelInterface, ArrayAccess
             'logStreamId' => 'logStreamId',
             'projectId' => 'projectId',
             'templateName' => 'templateName',
-            'regex' => 'regex'
+            'regex' => 'regex',
+            'customTimeInfo' => 'custom_time_info',
+            'uploadOriginalLog' => 'uploadOriginalLog',
+            'uploadParseFailedLog' => 'uploadParseFailedLog'
     ];
 
     /**
@@ -150,6 +168,9 @@ class ShowStructTemplateResponse implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * templateName  测试
     * regex  为了兼容前台数据格式
+    * customTimeInfo  customTimeInfo
+    * uploadOriginalLog  **参数解释：** 是否上传原始日志。 **取值范围：** - true - fasle
+    * uploadParseFailedLog  **参数解释：** 是否将解析失败的原始上传到指定系统字段日志。 **取值范围：** - true - fasle
     *
     * @var string[]
     */
@@ -165,7 +186,10 @@ class ShowStructTemplateResponse implements ModelInterface, ArrayAccess
             'logStreamId' => 'setLogStreamId',
             'projectId' => 'setProjectId',
             'templateName' => 'setTemplateName',
-            'regex' => 'setRegex'
+            'regex' => 'setRegex',
+            'customTimeInfo' => 'setCustomTimeInfo',
+            'uploadOriginalLog' => 'setUploadOriginalLog',
+            'uploadParseFailedLog' => 'setUploadParseFailedLog'
     ];
 
     /**
@@ -182,6 +206,9 @@ class ShowStructTemplateResponse implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * templateName  测试
     * regex  为了兼容前台数据格式
+    * customTimeInfo  customTimeInfo
+    * uploadOriginalLog  **参数解释：** 是否上传原始日志。 **取值范围：** - true - fasle
+    * uploadParseFailedLog  **参数解释：** 是否将解析失败的原始上传到指定系统字段日志。 **取值范围：** - true - fasle
     *
     * @var string[]
     */
@@ -197,7 +224,10 @@ class ShowStructTemplateResponse implements ModelInterface, ArrayAccess
             'logStreamId' => 'getLogStreamId',
             'projectId' => 'getProjectId',
             'templateName' => 'getTemplateName',
-            'regex' => 'getRegex'
+            'regex' => 'getRegex',
+            'customTimeInfo' => 'getCustomTimeInfo',
+            'uploadOriginalLog' => 'getUploadOriginalLog',
+            'uploadParseFailedLog' => 'getUploadParseFailedLog'
     ];
 
     /**
@@ -270,6 +300,9 @@ class ShowStructTemplateResponse implements ModelInterface, ArrayAccess
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['templateName'] = isset($data['templateName']) ? $data['templateName'] : null;
         $this->container['regex'] = isset($data['regex']) ? $data['regex'] : null;
+        $this->container['customTimeInfo'] = isset($data['customTimeInfo']) ? $data['customTimeInfo'] : null;
+        $this->container['uploadOriginalLog'] = isset($data['uploadOriginalLog']) ? $data['uploadOriginalLog'] : null;
+        $this->container['uploadParseFailedLog'] = isset($data['uploadParseFailedLog']) ? $data['uploadParseFailedLog'] : null;
     }
 
     /**
@@ -609,6 +642,78 @@ class ShowStructTemplateResponse implements ModelInterface, ArrayAccess
     public function setRegex($regex)
     {
         $this->container['regex'] = $regex;
+        return $this;
+    }
+
+    /**
+    * Gets customTimeInfo
+    *  customTimeInfo
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\CustomTimeInfo|null
+    */
+    public function getCustomTimeInfo()
+    {
+        return $this->container['customTimeInfo'];
+    }
+
+    /**
+    * Sets customTimeInfo
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\CustomTimeInfo|null $customTimeInfo customTimeInfo
+    *
+    * @return $this
+    */
+    public function setCustomTimeInfo($customTimeInfo)
+    {
+        $this->container['customTimeInfo'] = $customTimeInfo;
+        return $this;
+    }
+
+    /**
+    * Gets uploadOriginalLog
+    *  **参数解释：** 是否上传原始日志。 **取值范围：** - true - fasle
+    *
+    * @return bool|null
+    */
+    public function getUploadOriginalLog()
+    {
+        return $this->container['uploadOriginalLog'];
+    }
+
+    /**
+    * Sets uploadOriginalLog
+    *
+    * @param bool|null $uploadOriginalLog **参数解释：** 是否上传原始日志。 **取值范围：** - true - fasle
+    *
+    * @return $this
+    */
+    public function setUploadOriginalLog($uploadOriginalLog)
+    {
+        $this->container['uploadOriginalLog'] = $uploadOriginalLog;
+        return $this;
+    }
+
+    /**
+    * Gets uploadParseFailedLog
+    *  **参数解释：** 是否将解析失败的原始上传到指定系统字段日志。 **取值范围：** - true - fasle
+    *
+    * @return bool|null
+    */
+    public function getUploadParseFailedLog()
+    {
+        return $this->container['uploadParseFailedLog'];
+    }
+
+    /**
+    * Sets uploadParseFailedLog
+    *
+    * @param bool|null $uploadParseFailedLog **参数解释：** 是否将解析失败的原始上传到指定系统字段日志。 **取值范围：** - true - fasle
+    *
+    * @return $this
+    */
+    public function setUploadParseFailedLog($uploadParseFailedLog)
+    {
+        $this->container['uploadParseFailedLog'] = $uploadParseFailedLog;
         return $this;
     }
 

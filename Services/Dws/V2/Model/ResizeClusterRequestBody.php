@@ -21,6 +21,7 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * scaleOut  scaleOut
+    * logicalClusterName  **参数解释**： 逻辑集群名字，扩容到逻辑集群时，需要填写。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * createNodeOnly  **参数解释**： 当前是否仅添加空闲节点。 **约束限制**： 不涉及。 **取值范围**： true：仅添加节点，如需扩容则需要单独操作 false：添加节点并扩容集群 **默认取值**： false
     * waitingForKilling  **参数解释**： 自动查杀作业等待时间。 **约束限制**： guestAgent插件版本8.2.1及以上才支持。 **取值范围**： 30~1200 **默认取值**： 0，即不限制。
     * autoRedistribute  **参数解释**： 扩容完成后是否自动启动重分布，默认是。如果设置为false，扩容后不进行重分布，此时集群任务信息处于“待重分布”状态，无法进行其他操作。 **约束限制**： 不涉及。 **取值范围**： true：扩容后立即重分布。 false：扩容后不进行重分布，此时集群任务信息处于“待重分布”状态。 **默认取值**： true
@@ -29,6 +30,7 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'scaleOut' => '\HuaweiCloud\SDK\Dws\V2\Model\ScaleOut',
+            'logicalClusterName' => 'string',
             'createNodeOnly' => 'bool',
             'waitingForKilling' => 'int',
             'autoRedistribute' => 'bool'
@@ -37,6 +39,7 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * scaleOut  scaleOut
+    * logicalClusterName  **参数解释**： 逻辑集群名字，扩容到逻辑集群时，需要填写。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * createNodeOnly  **参数解释**： 当前是否仅添加空闲节点。 **约束限制**： 不涉及。 **取值范围**： true：仅添加节点，如需扩容则需要单独操作 false：添加节点并扩容集群 **默认取值**： false
     * waitingForKilling  **参数解释**： 自动查杀作业等待时间。 **约束限制**： guestAgent插件版本8.2.1及以上才支持。 **取值范围**： 30~1200 **默认取值**： 0，即不限制。
     * autoRedistribute  **参数解释**： 扩容完成后是否自动启动重分布，默认是。如果设置为false，扩容后不进行重分布，此时集群任务信息处于“待重分布”状态，无法进行其他操作。 **约束限制**： 不涉及。 **取值范围**： true：扩容后立即重分布。 false：扩容后不进行重分布，此时集群任务信息处于“待重分布”状态。 **默认取值**： true
@@ -45,6 +48,7 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'scaleOut' => null,
+        'logicalClusterName' => null,
         'createNodeOnly' => null,
         'waitingForKilling' => 'int32',
         'autoRedistribute' => null
@@ -74,6 +78,7 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * scaleOut  scaleOut
+    * logicalClusterName  **参数解释**： 逻辑集群名字，扩容到逻辑集群时，需要填写。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * createNodeOnly  **参数解释**： 当前是否仅添加空闲节点。 **约束限制**： 不涉及。 **取值范围**： true：仅添加节点，如需扩容则需要单独操作 false：添加节点并扩容集群 **默认取值**： false
     * waitingForKilling  **参数解释**： 自动查杀作业等待时间。 **约束限制**： guestAgent插件版本8.2.1及以上才支持。 **取值范围**： 30~1200 **默认取值**： 0，即不限制。
     * autoRedistribute  **参数解释**： 扩容完成后是否自动启动重分布，默认是。如果设置为false，扩容后不进行重分布，此时集群任务信息处于“待重分布”状态，无法进行其他操作。 **约束限制**： 不涉及。 **取值范围**： true：扩容后立即重分布。 false：扩容后不进行重分布，此时集群任务信息处于“待重分布”状态。 **默认取值**： true
@@ -82,6 +87,7 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'scaleOut' => 'scale_out',
+            'logicalClusterName' => 'logical_cluster_name',
             'createNodeOnly' => 'create_node_only',
             'waitingForKilling' => 'waiting_for_killing',
             'autoRedistribute' => 'auto_redistribute'
@@ -90,6 +96,7 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * scaleOut  scaleOut
+    * logicalClusterName  **参数解释**： 逻辑集群名字，扩容到逻辑集群时，需要填写。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * createNodeOnly  **参数解释**： 当前是否仅添加空闲节点。 **约束限制**： 不涉及。 **取值范围**： true：仅添加节点，如需扩容则需要单独操作 false：添加节点并扩容集群 **默认取值**： false
     * waitingForKilling  **参数解释**： 自动查杀作业等待时间。 **约束限制**： guestAgent插件版本8.2.1及以上才支持。 **取值范围**： 30~1200 **默认取值**： 0，即不限制。
     * autoRedistribute  **参数解释**： 扩容完成后是否自动启动重分布，默认是。如果设置为false，扩容后不进行重分布，此时集群任务信息处于“待重分布”状态，无法进行其他操作。 **约束限制**： 不涉及。 **取值范围**： true：扩容后立即重分布。 false：扩容后不进行重分布，此时集群任务信息处于“待重分布”状态。 **默认取值**： true
@@ -98,6 +105,7 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'scaleOut' => 'setScaleOut',
+            'logicalClusterName' => 'setLogicalClusterName',
             'createNodeOnly' => 'setCreateNodeOnly',
             'waitingForKilling' => 'setWaitingForKilling',
             'autoRedistribute' => 'setAutoRedistribute'
@@ -106,6 +114,7 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * scaleOut  scaleOut
+    * logicalClusterName  **参数解释**： 逻辑集群名字，扩容到逻辑集群时，需要填写。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * createNodeOnly  **参数解释**： 当前是否仅添加空闲节点。 **约束限制**： 不涉及。 **取值范围**： true：仅添加节点，如需扩容则需要单独操作 false：添加节点并扩容集群 **默认取值**： false
     * waitingForKilling  **参数解释**： 自动查杀作业等待时间。 **约束限制**： guestAgent插件版本8.2.1及以上才支持。 **取值范围**： 30~1200 **默认取值**： 0，即不限制。
     * autoRedistribute  **参数解释**： 扩容完成后是否自动启动重分布，默认是。如果设置为false，扩容后不进行重分布，此时集群任务信息处于“待重分布”状态，无法进行其他操作。 **约束限制**： 不涉及。 **取值范围**： true：扩容后立即重分布。 false：扩容后不进行重分布，此时集群任务信息处于“待重分布”状态。 **默认取值**： true
@@ -114,6 +123,7 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'scaleOut' => 'getScaleOut',
+            'logicalClusterName' => 'getLogicalClusterName',
             'createNodeOnly' => 'getCreateNodeOnly',
             'waitingForKilling' => 'getWaitingForKilling',
             'autoRedistribute' => 'getAutoRedistribute'
@@ -178,6 +188,7 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['scaleOut'] = isset($data['scaleOut']) ? $data['scaleOut'] : null;
+        $this->container['logicalClusterName'] = isset($data['logicalClusterName']) ? $data['logicalClusterName'] : null;
         $this->container['createNodeOnly'] = isset($data['createNodeOnly']) ? $data['createNodeOnly'] : null;
         $this->container['waitingForKilling'] = isset($data['waitingForKilling']) ? $data['waitingForKilling'] : null;
         $this->container['autoRedistribute'] = isset($data['autoRedistribute']) ? $data['autoRedistribute'] : null;
@@ -229,6 +240,30 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     public function setScaleOut($scaleOut)
     {
         $this->container['scaleOut'] = $scaleOut;
+        return $this;
+    }
+
+    /**
+    * Gets logicalClusterName
+    *  **参数解释**： 逻辑集群名字，扩容到逻辑集群时，需要填写。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLogicalClusterName()
+    {
+        return $this->container['logicalClusterName'];
+    }
+
+    /**
+    * Sets logicalClusterName
+    *
+    * @param string|null $logicalClusterName **参数解释**： 逻辑集群名字，扩容到逻辑集群时，需要填写。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setLogicalClusterName($logicalClusterName)
+    {
+        $this->container['logicalClusterName'] = $logicalClusterName;
         return $this;
     }
 

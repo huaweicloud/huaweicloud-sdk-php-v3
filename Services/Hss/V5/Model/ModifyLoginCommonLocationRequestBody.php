@@ -20,8 +20,8 @@ class ModifyLoginCommonLocationRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * areaCode  国家城市的编码
-    * hostIdList  服务器列表
+    * areaCode  **参数解释**： 国家城市的编码 **取值范围**： 字符长度1-32位
+    * hostIdList  **参数解释**: 服务器列表 **取值范围**: 最小值0，最大值100
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ModifyLoginCommonLocationRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * areaCode  国家城市的编码
-    * hostIdList  服务器列表
+    * areaCode  **参数解释**： 国家城市的编码 **取值范围**： 字符长度1-32位
+    * hostIdList  **参数解释**: 服务器列表 **取值范围**: 最小值0，最大值100
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ModifyLoginCommonLocationRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * areaCode  国家城市的编码
-    * hostIdList  服务器列表
+    * areaCode  **参数解释**： 国家城市的编码 **取值范围**： 字符长度1-32位
+    * hostIdList  **参数解释**: 服务器列表 **取值范围**: 最小值0，最大值100
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ModifyLoginCommonLocationRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * areaCode  国家城市的编码
-    * hostIdList  服务器列表
+    * areaCode  **参数解释**： 国家城市的编码 **取值范围**： 字符长度1-32位
+    * hostIdList  **参数解释**: 服务器列表 **取值范围**: 最小值0，最大值100
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ModifyLoginCommonLocationRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * areaCode  国家城市的编码
-    * hostIdList  服务器列表
+    * areaCode  **参数解释**： 国家城市的编码 **取值范围**： 字符长度1-32位
+    * hostIdList  **参数解释**: 服务器列表 **取值范围**: 最小值0，最大值100
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ModifyLoginCommonLocationRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets areaCode
-    *  国家城市的编码
+    *  **参数解释**： 国家城市的编码 **取值范围**： 字符长度1-32位
     *
     * @return int|null
     */
@@ -197,7 +197,7 @@ class ModifyLoginCommonLocationRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets areaCode
     *
-    * @param int|null $areaCode 国家城市的编码
+    * @param int|null $areaCode **参数解释**： 国家城市的编码 **取值范围**： 字符长度1-32位
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ModifyLoginCommonLocationRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets hostIdList
-    *  服务器列表
+    *  **参数解释**: 服务器列表 **取值范围**: 最小值0，最大值100
     *
     * @return string[]|null
     */
@@ -221,7 +221,7 @@ class ModifyLoginCommonLocationRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets hostIdList
     *
-    * @param string[]|null $hostIdList 服务器列表
+    * @param string[]|null $hostIdList **参数解释**: 服务器列表 **取值范围**: 最小值0，最大值100
     *
     * @return $this
     */

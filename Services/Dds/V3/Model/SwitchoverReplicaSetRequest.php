@@ -21,21 +21,25 @@ class SwitchoverReplicaSetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'string'
+            'instanceId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Dds\V3\Model\SwitchoverReplicaSetRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null
+        'instanceId' => null,
+        'body' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class SwitchoverReplicaSetRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceId' => 'instance_id'
+            'instanceId' => 'instance_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceId' => 'setInstanceId'
+            'instanceId' => 'setInstanceId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceId' => 'getInstanceId'
+            'instanceId' => 'getInstanceId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -148,6 +158,7 @@ class SwitchoverReplicaSetRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class SwitchoverReplicaSetRequest implements ModelInterface, ArrayAccess
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Dds\V3\Model\SwitchoverReplicaSetRequestBody|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Dds\V3\Model\SwitchoverReplicaSetRequestBody|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

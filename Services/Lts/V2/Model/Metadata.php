@@ -30,6 +30,7 @@ class Metadata implements ModelInterface, ArrayAccess
     * ltsAlarmType  告警规则类型(SQL/关键词)
     * logGroupName  日志组原始名称
     * logStreamName  日志流原始名称
+    * eventSubtype  **参数解释：** 告警类型。 **取值范围：** - sql： sql告警 - keywords：关键词告警
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class Metadata implements ModelInterface, ArrayAccess
             'resourceProvider' => 'string',
             'ltsAlarmType' => 'string',
             'logGroupName' => 'string',
-            'logStreamName' => 'string'
+            'logStreamName' => 'string',
+            'eventSubtype' => 'string'
     ];
 
     /**
@@ -58,6 +60,7 @@ class Metadata implements ModelInterface, ArrayAccess
     * ltsAlarmType  告警规则类型(SQL/关键词)
     * logGroupName  日志组原始名称
     * logStreamName  日志流原始名称
+    * eventSubtype  **参数解释：** 告警类型。 **取值范围：** - sql： sql告警 - keywords：关键词告警
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class Metadata implements ModelInterface, ArrayAccess
         'resourceProvider' => null,
         'ltsAlarmType' => null,
         'logGroupName' => null,
-        'logStreamName' => null
+        'logStreamName' => null,
+        'eventSubtype' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class Metadata implements ModelInterface, ArrayAccess
     * ltsAlarmType  告警规则类型(SQL/关键词)
     * logGroupName  日志组原始名称
     * logStreamName  日志流原始名称
+    * eventSubtype  **参数解释：** 告警类型。 **取值范围：** - sql： sql告警 - keywords：关键词告警
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class Metadata implements ModelInterface, ArrayAccess
             'resourceProvider' => 'resource_provider',
             'ltsAlarmType' => 'lts_alarm_type',
             'logGroupName' => 'log_group_name',
-            'logStreamName' => 'log_stream_name'
+            'logStreamName' => 'log_stream_name',
+            'eventSubtype' => 'event_subtype'
     ];
 
     /**
@@ -135,6 +141,7 @@ class Metadata implements ModelInterface, ArrayAccess
     * ltsAlarmType  告警规则类型(SQL/关键词)
     * logGroupName  日志组原始名称
     * logStreamName  日志流原始名称
+    * eventSubtype  **参数解释：** 告警类型。 **取值范围：** - sql： sql告警 - keywords：关键词告警
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class Metadata implements ModelInterface, ArrayAccess
             'resourceProvider' => 'setResourceProvider',
             'ltsAlarmType' => 'setLtsAlarmType',
             'logGroupName' => 'setLogGroupName',
-            'logStreamName' => 'setLogStreamName'
+            'logStreamName' => 'setLogStreamName',
+            'eventSubtype' => 'setEventSubtype'
     ];
 
     /**
@@ -163,6 +171,7 @@ class Metadata implements ModelInterface, ArrayAccess
     * ltsAlarmType  告警规则类型(SQL/关键词)
     * logGroupName  日志组原始名称
     * logStreamName  日志流原始名称
+    * eventSubtype  **参数解释：** 告警类型。 **取值范围：** - sql： sql告警 - keywords：关键词告警
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class Metadata implements ModelInterface, ArrayAccess
             'resourceProvider' => 'getResourceProvider',
             'ltsAlarmType' => 'getLtsAlarmType',
             'logGroupName' => 'getLogGroupName',
-            'logStreamName' => 'getLogStreamName'
+            'logStreamName' => 'getLogStreamName',
+            'eventSubtype' => 'getEventSubtype'
     ];
 
     /**
@@ -247,6 +257,7 @@ class Metadata implements ModelInterface, ArrayAccess
         $this->container['ltsAlarmType'] = isset($data['ltsAlarmType']) ? $data['ltsAlarmType'] : null;
         $this->container['logGroupName'] = isset($data['logGroupName']) ? $data['logGroupName'] : null;
         $this->container['logStreamName'] = isset($data['logStreamName']) ? $data['logStreamName'] : null;
+        $this->container['eventSubtype'] = isset($data['eventSubtype']) ? $data['eventSubtype'] : null;
     }
 
     /**
@@ -580,6 +591,30 @@ class Metadata implements ModelInterface, ArrayAccess
     public function setLogStreamName($logStreamName)
     {
         $this->container['logStreamName'] = $logStreamName;
+        return $this;
+    }
+
+    /**
+    * Gets eventSubtype
+    *  **参数解释：** 告警类型。 **取值范围：** - sql： sql告警 - keywords：关键词告警
+    *
+    * @return string|null
+    */
+    public function getEventSubtype()
+    {
+        return $this->container['eventSubtype'];
+    }
+
+    /**
+    * Sets eventSubtype
+    *
+    * @param string|null $eventSubtype **参数解释：** 告警类型。 **取值范围：** - sql： sql告警 - keywords：关键词告警
+    *
+    * @return $this
+    */
+    public function setEventSubtype($eventSubtype)
+    {
+        $this->container['eventSubtype'] = $eventSubtype;
         return $this;
     }
 

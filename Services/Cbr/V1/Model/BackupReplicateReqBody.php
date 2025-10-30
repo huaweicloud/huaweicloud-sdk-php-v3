@@ -26,6 +26,7 @@ class BackupReplicateReqBody implements ModelInterface, ArrayAccess
     * destinationVaultId  复制的目标区域的存储库ID
     * enableAcceleration  跨区域复制时，是否启用加速从而缩短复制的时间，如果不指定，默认不启用加速。
     * name  复制名称
+    * crossAccountUrn  跨账户复制所需的目标账户的跨账户复制存储库标识
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class BackupReplicateReqBody implements ModelInterface, ArrayAccess
             'destinationRegion' => 'string',
             'destinationVaultId' => 'string',
             'enableAcceleration' => 'bool',
-            'name' => 'string'
+            'name' => 'string',
+            'crossAccountUrn' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class BackupReplicateReqBody implements ModelInterface, ArrayAccess
     * destinationVaultId  复制的目标区域的存储库ID
     * enableAcceleration  跨区域复制时，是否启用加速从而缩短复制的时间，如果不指定，默认不启用加速。
     * name  复制名称
+    * crossAccountUrn  跨账户复制所需的目标账户的跨账户复制存储库标识
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class BackupReplicateReqBody implements ModelInterface, ArrayAccess
         'destinationRegion' => null,
         'destinationVaultId' => null,
         'enableAcceleration' => null,
-        'name' => null
+        'name' => null,
+        'crossAccountUrn' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class BackupReplicateReqBody implements ModelInterface, ArrayAccess
     * destinationVaultId  复制的目标区域的存储库ID
     * enableAcceleration  跨区域复制时，是否启用加速从而缩短复制的时间，如果不指定，默认不启用加速。
     * name  复制名称
+    * crossAccountUrn  跨账户复制所需的目标账户的跨账户复制存储库标识
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class BackupReplicateReqBody implements ModelInterface, ArrayAccess
             'destinationRegion' => 'destination_region',
             'destinationVaultId' => 'destination_vault_id',
             'enableAcceleration' => 'enable_acceleration',
-            'name' => 'name'
+            'name' => 'name',
+            'crossAccountUrn' => 'cross_account_urn'
     ];
 
     /**
@@ -107,6 +113,7 @@ class BackupReplicateReqBody implements ModelInterface, ArrayAccess
     * destinationVaultId  复制的目标区域的存储库ID
     * enableAcceleration  跨区域复制时，是否启用加速从而缩短复制的时间，如果不指定，默认不启用加速。
     * name  复制名称
+    * crossAccountUrn  跨账户复制所需的目标账户的跨账户复制存储库标识
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class BackupReplicateReqBody implements ModelInterface, ArrayAccess
             'destinationRegion' => 'setDestinationRegion',
             'destinationVaultId' => 'setDestinationVaultId',
             'enableAcceleration' => 'setEnableAcceleration',
-            'name' => 'setName'
+            'name' => 'setName',
+            'crossAccountUrn' => 'setCrossAccountUrn'
     ];
 
     /**
@@ -127,6 +135,7 @@ class BackupReplicateReqBody implements ModelInterface, ArrayAccess
     * destinationVaultId  复制的目标区域的存储库ID
     * enableAcceleration  跨区域复制时，是否启用加速从而缩短复制的时间，如果不指定，默认不启用加速。
     * name  复制名称
+    * crossAccountUrn  跨账户复制所需的目标账户的跨账户复制存储库标识
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class BackupReplicateReqBody implements ModelInterface, ArrayAccess
             'destinationRegion' => 'getDestinationRegion',
             'destinationVaultId' => 'getDestinationVaultId',
             'enableAcceleration' => 'getEnableAcceleration',
-            'name' => 'getName'
+            'name' => 'getName',
+            'crossAccountUrn' => 'getCrossAccountUrn'
     ];
 
     /**
@@ -203,6 +213,7 @@ class BackupReplicateReqBody implements ModelInterface, ArrayAccess
         $this->container['destinationVaultId'] = isset($data['destinationVaultId']) ? $data['destinationVaultId'] : null;
         $this->container['enableAcceleration'] = isset($data['enableAcceleration']) ? $data['enableAcceleration'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['crossAccountUrn'] = isset($data['crossAccountUrn']) ? $data['crossAccountUrn'] : null;
     }
 
     /**
@@ -404,6 +415,30 @@ class BackupReplicateReqBody implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets crossAccountUrn
+    *  跨账户复制所需的目标账户的跨账户复制存储库标识
+    *
+    * @return string|null
+    */
+    public function getCrossAccountUrn()
+    {
+        return $this->container['crossAccountUrn'];
+    }
+
+    /**
+    * Sets crossAccountUrn
+    *
+    * @param string|null $crossAccountUrn 跨账户复制所需的目标账户的跨账户复制存储库标识
+    *
+    * @return $this
+    */
+    public function setCrossAccountUrn($crossAccountUrn)
+    {
+        $this->container['crossAccountUrn'] = $crossAccountUrn;
         return $this;
     }
 

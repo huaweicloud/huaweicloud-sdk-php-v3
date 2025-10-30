@@ -21,8 +21,8 @@ class ListWebAppAndServiceStatisticsResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  不同的数据库资产指纹的数量
-    * dataList  数据库资产指纹统计信息列表
+    * totalNum  **参数解释** web应用、web服务、数据库指纹的数量 **取值范围** 最小值0，最大值300000\"
+    * dataList  **参数解释** web应用、web服务、数据库指纹统计信息列表 **取值范围** 最小值0，最大值10000
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListWebAppAndServiceStatisticsResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  不同的数据库资产指纹的数量
-    * dataList  数据库资产指纹统计信息列表
+    * totalNum  **参数解释** web应用、web服务、数据库指纹的数量 **取值范围** 最小值0，最大值300000\"
+    * dataList  **参数解释** web应用、web服务、数据库指纹统计信息列表 **取值范围** 最小值0，最大值10000
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListWebAppAndServiceStatisticsResponse implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  不同的数据库资产指纹的数量
-    * dataList  数据库资产指纹统计信息列表
+    * totalNum  **参数解释** web应用、web服务、数据库指纹的数量 **取值范围** 最小值0，最大值300000\"
+    * dataList  **参数解释** web应用、web服务、数据库指纹统计信息列表 **取值范围** 最小值0，最大值10000
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListWebAppAndServiceStatisticsResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  不同的数据库资产指纹的数量
-    * dataList  数据库资产指纹统计信息列表
+    * totalNum  **参数解释** web应用、web服务、数据库指纹的数量 **取值范围** 最小值0，最大值300000\"
+    * dataList  **参数解释** web应用、web服务、数据库指纹统计信息列表 **取值范围** 最小值0，最大值10000
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListWebAppAndServiceStatisticsResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  不同的数据库资产指纹的数量
-    * dataList  数据库资产指纹统计信息列表
+    * totalNum  **参数解释** web应用、web服务、数据库指纹的数量 **取值范围** 最小值0，最大值300000\"
+    * dataList  **参数解释** web应用、web服务、数据库指纹统计信息列表 **取值范围** 最小值0，最大值10000
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListWebAppAndServiceStatisticsResponse implements ModelInterface, ArrayAcc
 
     /**
     * Gets totalNum
-    *  不同的数据库资产指纹的数量
+    *  **参数解释** web应用、web服务、数据库指纹的数量 **取值范围** 最小值0，最大值300000\"
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListWebAppAndServiceStatisticsResponse implements ModelInterface, ArrayAcc
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 不同的数据库资产指纹的数量
+    * @param int|null $totalNum **参数解释** web应用、web服务、数据库指纹的数量 **取值范围** 最小值0，最大值300000\"
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListWebAppAndServiceStatisticsResponse implements ModelInterface, ArrayAcc
 
     /**
     * Gets dataList
-    *  数据库资产指纹统计信息列表
+    *  **参数解释** web应用、web服务、数据库指纹统计信息列表 **取值范围** 最小值0，最大值10000
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\WebAppAndServiceStatisticResponseInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListWebAppAndServiceStatisticsResponse implements ModelInterface, ArrayAcc
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\WebAppAndServiceStatisticResponseInfo[]|null $dataList 数据库资产指纹统计信息列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\WebAppAndServiceStatisticResponseInfo[]|null $dataList **参数解释** web应用、web服务、数据库指纹统计信息列表 **取值范围** 最小值0，最大值10000
     *
     * @return $this
     */

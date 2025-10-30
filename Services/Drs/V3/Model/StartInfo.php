@@ -21,24 +21,28 @@ class StartInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务id。
+    * isOnlyInitTask  是否支持只初始化任务。
     * startTime  任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'jobId' => 'string',
+            'isOnlyInitTask' => 'bool',
             'startTime' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务id。
+    * isOnlyInitTask  是否支持只初始化任务。
     * startTime  任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'jobId' => null,
+        'isOnlyInitTask' => null,
         'startTime' => null
     ];
 
@@ -66,36 +70,42 @@ class StartInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  任务id。
+    * isOnlyInitTask  是否支持只初始化任务。
     * startTime  任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'jobId' => 'job_id',
+            'isOnlyInitTask' => 'is_only_init_task',
             'startTime' => 'start_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务id。
+    * isOnlyInitTask  是否支持只初始化任务。
     * startTime  任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
     *
     * @var string[]
     */
     protected static $setters = [
             'jobId' => 'setJobId',
+            'isOnlyInitTask' => 'setIsOnlyInitTask',
             'startTime' => 'setStartTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务id。
+    * isOnlyInitTask  是否支持只初始化任务。
     * startTime  任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
     *
     * @var string[]
     */
     protected static $getters = [
             'jobId' => 'getJobId',
+            'isOnlyInitTask' => 'getIsOnlyInitTask',
             'startTime' => 'getStartTime'
     ];
 
@@ -158,6 +168,7 @@ class StartInfo implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['isOnlyInitTask'] = isset($data['isOnlyInitTask']) ? $data['isOnlyInitTask'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
     }
 
@@ -207,6 +218,30 @@ class StartInfo implements ModelInterface, ArrayAccess
     public function setJobId($jobId)
     {
         $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets isOnlyInitTask
+    *  是否支持只初始化任务。
+    *
+    * @return bool|null
+    */
+    public function getIsOnlyInitTask()
+    {
+        return $this->container['isOnlyInitTask'];
+    }
+
+    /**
+    * Sets isOnlyInitTask
+    *
+    * @param bool|null $isOnlyInitTask 是否支持只初始化任务。
+    *
+    * @return $this
+    */
+    public function setIsOnlyInitTask($isOnlyInitTask)
+    {
+        $this->container['isOnlyInitTask'] = $isOnlyInitTask;
         return $this;
     }
 

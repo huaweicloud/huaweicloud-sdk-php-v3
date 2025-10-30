@@ -20,26 +20,26 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * catalogue  资产指纹种类
-    * name  资产指纹名字
-    * version  资产指纹-数据库-版本
-    * agentId  agent_id
-    * installPath  安装路径
-    * configPath  配置文件路径
-    * uid  uid
-    * gid  gid
-    * mode  mode
-    * ctime  ctime
-    * mtime  mtime
-    * atime  atime
-    * pid  pid
-    * procPath  proc_path
-    * containerId  container_id
-    * containerName  container_name
-    * recordTime  record_time
-    * hostName  host_name
-    * hostId  host_id
-    * hostIp  host_ip
+    * catalogue  **参数解释**: web应用、web服务、数据库资产指纹种类 **取值范围**: 字符长度0-64
+    * name  **参数解释**: 资产指纹名字 **取值范围**: 字符长度0-64
+    * version  **参数解释**: 资产指纹版本 **取值范围**: 字符长度0-64
+    * agentId  **参数解释** agent id **取值范围** 字符长度1-64
+    * installPath  **参数解释** 安装路径 **取值范围** 字符长度0-256
+    * configPath  **参数解释** 配置文件路径 **取值范围** 字符长度0-256
+    * uid  **参数解释**: uid **取值范围**: 最小值0，最大值2147483647
+    * gid  **参数解释**: gid **取值范围**: 最小值0，最大值2147483647
+    * mode  **参数解释**: 资产指纹文件权限 **取值范围**: 字符长度1-32
+    * ctime  **参数解释**: 资产指纹文件最近状态改变时间 **取值范围**: 最小值0，最大值2^63-1
+    * mtime  **参数解释**: 资产指纹文件最近修改时间 **取值范围**: 最小值0，最大值2^63-1
+    * atime  **参数解释**: 资产指纹文件最近访问时间 **取值范围**: 最小值0，最大值2^63-1
+    * pid  **参数解释**: pid **取值范围**: 最小值0，最大值2147483647
+    * procPath  **参数解释**: 资产指纹进程路径 **取值范围**: 字符长度0-256
+    * containerId  **参数解释**: 容器id **取值范围**: 字符长度0-256
+    * containerName  **参数解释**: 容器名称 **取值范围**: 字符长度0-256
+    * recordTime  **参数解释**: 资产指纹扫描时间 **取值范围**: 最小值0，最大值2^63-1
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-64
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64
+    * hostIp  **参数解释** 服务器ip **取值范围** 字符长度1-64
     *
     * @var string[]
     */
@@ -61,33 +61,33 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
             'containerId' => 'string',
             'containerName' => 'string',
             'recordTime' => 'int',
-            'hostName' => 'string',
             'hostId' => 'string',
+            'hostName' => 'string',
             'hostIp' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * catalogue  资产指纹种类
-    * name  资产指纹名字
-    * version  资产指纹-数据库-版本
-    * agentId  agent_id
-    * installPath  安装路径
-    * configPath  配置文件路径
-    * uid  uid
-    * gid  gid
-    * mode  mode
-    * ctime  ctime
-    * mtime  mtime
-    * atime  atime
-    * pid  pid
-    * procPath  proc_path
-    * containerId  container_id
-    * containerName  container_name
-    * recordTime  record_time
-    * hostName  host_name
-    * hostId  host_id
-    * hostIp  host_ip
+    * catalogue  **参数解释**: web应用、web服务、数据库资产指纹种类 **取值范围**: 字符长度0-64
+    * name  **参数解释**: 资产指纹名字 **取值范围**: 字符长度0-64
+    * version  **参数解释**: 资产指纹版本 **取值范围**: 字符长度0-64
+    * agentId  **参数解释** agent id **取值范围** 字符长度1-64
+    * installPath  **参数解释** 安装路径 **取值范围** 字符长度0-256
+    * configPath  **参数解释** 配置文件路径 **取值范围** 字符长度0-256
+    * uid  **参数解释**: uid **取值范围**: 最小值0，最大值2147483647
+    * gid  **参数解释**: gid **取值范围**: 最小值0，最大值2147483647
+    * mode  **参数解释**: 资产指纹文件权限 **取值范围**: 字符长度1-32
+    * ctime  **参数解释**: 资产指纹文件最近状态改变时间 **取值范围**: 最小值0，最大值2^63-1
+    * mtime  **参数解释**: 资产指纹文件最近修改时间 **取值范围**: 最小值0，最大值2^63-1
+    * atime  **参数解释**: 资产指纹文件最近访问时间 **取值范围**: 最小值0，最大值2^63-1
+    * pid  **参数解释**: pid **取值范围**: 最小值0，最大值2147483647
+    * procPath  **参数解释**: 资产指纹进程路径 **取值范围**: 字符长度0-256
+    * containerId  **参数解释**: 容器id **取值范围**: 字符长度0-256
+    * containerName  **参数解释**: 容器名称 **取值范围**: 字符长度0-256
+    * recordTime  **参数解释**: 资产指纹扫描时间 **取值范围**: 最小值0，最大值2^63-1
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-64
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64
+    * hostIp  **参数解释** 服务器ip **取值范围** 字符长度1-64
     *
     * @var string[]
     */
@@ -109,8 +109,8 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
         'containerId' => null,
         'containerName' => null,
         'recordTime' => 'int64',
-        'hostName' => null,
         'hostId' => null,
+        'hostName' => null,
         'hostIp' => null
     ];
 
@@ -137,26 +137,26 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * catalogue  资产指纹种类
-    * name  资产指纹名字
-    * version  资产指纹-数据库-版本
-    * agentId  agent_id
-    * installPath  安装路径
-    * configPath  配置文件路径
-    * uid  uid
-    * gid  gid
-    * mode  mode
-    * ctime  ctime
-    * mtime  mtime
-    * atime  atime
-    * pid  pid
-    * procPath  proc_path
-    * containerId  container_id
-    * containerName  container_name
-    * recordTime  record_time
-    * hostName  host_name
-    * hostId  host_id
-    * hostIp  host_ip
+    * catalogue  **参数解释**: web应用、web服务、数据库资产指纹种类 **取值范围**: 字符长度0-64
+    * name  **参数解释**: 资产指纹名字 **取值范围**: 字符长度0-64
+    * version  **参数解释**: 资产指纹版本 **取值范围**: 字符长度0-64
+    * agentId  **参数解释** agent id **取值范围** 字符长度1-64
+    * installPath  **参数解释** 安装路径 **取值范围** 字符长度0-256
+    * configPath  **参数解释** 配置文件路径 **取值范围** 字符长度0-256
+    * uid  **参数解释**: uid **取值范围**: 最小值0，最大值2147483647
+    * gid  **参数解释**: gid **取值范围**: 最小值0，最大值2147483647
+    * mode  **参数解释**: 资产指纹文件权限 **取值范围**: 字符长度1-32
+    * ctime  **参数解释**: 资产指纹文件最近状态改变时间 **取值范围**: 最小值0，最大值2^63-1
+    * mtime  **参数解释**: 资产指纹文件最近修改时间 **取值范围**: 最小值0，最大值2^63-1
+    * atime  **参数解释**: 资产指纹文件最近访问时间 **取值范围**: 最小值0，最大值2^63-1
+    * pid  **参数解释**: pid **取值范围**: 最小值0，最大值2147483647
+    * procPath  **参数解释**: 资产指纹进程路径 **取值范围**: 字符长度0-256
+    * containerId  **参数解释**: 容器id **取值范围**: 字符长度0-256
+    * containerName  **参数解释**: 容器名称 **取值范围**: 字符长度0-256
+    * recordTime  **参数解释**: 资产指纹扫描时间 **取值范围**: 最小值0，最大值2^63-1
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-64
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64
+    * hostIp  **参数解释** 服务器ip **取值范围** 字符长度1-64
     *
     * @var string[]
     */
@@ -178,33 +178,33 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
             'containerId' => 'container_id',
             'containerName' => 'container_name',
             'recordTime' => 'record_time',
-            'hostName' => 'host_name',
             'hostId' => 'host_id',
+            'hostName' => 'host_name',
             'hostIp' => 'host_ip'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * catalogue  资产指纹种类
-    * name  资产指纹名字
-    * version  资产指纹-数据库-版本
-    * agentId  agent_id
-    * installPath  安装路径
-    * configPath  配置文件路径
-    * uid  uid
-    * gid  gid
-    * mode  mode
-    * ctime  ctime
-    * mtime  mtime
-    * atime  atime
-    * pid  pid
-    * procPath  proc_path
-    * containerId  container_id
-    * containerName  container_name
-    * recordTime  record_time
-    * hostName  host_name
-    * hostId  host_id
-    * hostIp  host_ip
+    * catalogue  **参数解释**: web应用、web服务、数据库资产指纹种类 **取值范围**: 字符长度0-64
+    * name  **参数解释**: 资产指纹名字 **取值范围**: 字符长度0-64
+    * version  **参数解释**: 资产指纹版本 **取值范围**: 字符长度0-64
+    * agentId  **参数解释** agent id **取值范围** 字符长度1-64
+    * installPath  **参数解释** 安装路径 **取值范围** 字符长度0-256
+    * configPath  **参数解释** 配置文件路径 **取值范围** 字符长度0-256
+    * uid  **参数解释**: uid **取值范围**: 最小值0，最大值2147483647
+    * gid  **参数解释**: gid **取值范围**: 最小值0，最大值2147483647
+    * mode  **参数解释**: 资产指纹文件权限 **取值范围**: 字符长度1-32
+    * ctime  **参数解释**: 资产指纹文件最近状态改变时间 **取值范围**: 最小值0，最大值2^63-1
+    * mtime  **参数解释**: 资产指纹文件最近修改时间 **取值范围**: 最小值0，最大值2^63-1
+    * atime  **参数解释**: 资产指纹文件最近访问时间 **取值范围**: 最小值0，最大值2^63-1
+    * pid  **参数解释**: pid **取值范围**: 最小值0，最大值2147483647
+    * procPath  **参数解释**: 资产指纹进程路径 **取值范围**: 字符长度0-256
+    * containerId  **参数解释**: 容器id **取值范围**: 字符长度0-256
+    * containerName  **参数解释**: 容器名称 **取值范围**: 字符长度0-256
+    * recordTime  **参数解释**: 资产指纹扫描时间 **取值范围**: 最小值0，最大值2^63-1
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-64
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64
+    * hostIp  **参数解释** 服务器ip **取值范围** 字符长度1-64
     *
     * @var string[]
     */
@@ -226,33 +226,33 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
             'containerId' => 'setContainerId',
             'containerName' => 'setContainerName',
             'recordTime' => 'setRecordTime',
-            'hostName' => 'setHostName',
             'hostId' => 'setHostId',
+            'hostName' => 'setHostName',
             'hostIp' => 'setHostIp'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * catalogue  资产指纹种类
-    * name  资产指纹名字
-    * version  资产指纹-数据库-版本
-    * agentId  agent_id
-    * installPath  安装路径
-    * configPath  配置文件路径
-    * uid  uid
-    * gid  gid
-    * mode  mode
-    * ctime  ctime
-    * mtime  mtime
-    * atime  atime
-    * pid  pid
-    * procPath  proc_path
-    * containerId  container_id
-    * containerName  container_name
-    * recordTime  record_time
-    * hostName  host_name
-    * hostId  host_id
-    * hostIp  host_ip
+    * catalogue  **参数解释**: web应用、web服务、数据库资产指纹种类 **取值范围**: 字符长度0-64
+    * name  **参数解释**: 资产指纹名字 **取值范围**: 字符长度0-64
+    * version  **参数解释**: 资产指纹版本 **取值范围**: 字符长度0-64
+    * agentId  **参数解释** agent id **取值范围** 字符长度1-64
+    * installPath  **参数解释** 安装路径 **取值范围** 字符长度0-256
+    * configPath  **参数解释** 配置文件路径 **取值范围** 字符长度0-256
+    * uid  **参数解释**: uid **取值范围**: 最小值0，最大值2147483647
+    * gid  **参数解释**: gid **取值范围**: 最小值0，最大值2147483647
+    * mode  **参数解释**: 资产指纹文件权限 **取值范围**: 字符长度1-32
+    * ctime  **参数解释**: 资产指纹文件最近状态改变时间 **取值范围**: 最小值0，最大值2^63-1
+    * mtime  **参数解释**: 资产指纹文件最近修改时间 **取值范围**: 最小值0，最大值2^63-1
+    * atime  **参数解释**: 资产指纹文件最近访问时间 **取值范围**: 最小值0，最大值2^63-1
+    * pid  **参数解释**: pid **取值范围**: 最小值0，最大值2147483647
+    * procPath  **参数解释**: 资产指纹进程路径 **取值范围**: 字符长度0-256
+    * containerId  **参数解释**: 容器id **取值范围**: 字符长度0-256
+    * containerName  **参数解释**: 容器名称 **取值范围**: 字符长度0-256
+    * recordTime  **参数解释**: 资产指纹扫描时间 **取值范围**: 最小值0，最大值2^63-1
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-64
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64
+    * hostIp  **参数解释** 服务器ip **取值范围** 字符长度1-64
     *
     * @var string[]
     */
@@ -274,8 +274,8 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
             'containerId' => 'getContainerId',
             'containerName' => 'getContainerName',
             'recordTime' => 'getRecordTime',
-            'hostName' => 'getHostName',
             'hostId' => 'getHostId',
+            'hostName' => 'getHostName',
             'hostIp' => 'getHostIp'
     ];
 
@@ -354,8 +354,8 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
         $this->container['containerId'] = isset($data['containerId']) ? $data['containerId'] : null;
         $this->container['containerName'] = isset($data['containerName']) ? $data['containerName'] : null;
         $this->container['recordTime'] = isset($data['recordTime']) ? $data['recordTime'] : null;
-        $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
+        $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['hostIp'] = isset($data['hostIp']) ? $data['hostIp'] : null;
     }
 
@@ -385,11 +385,11 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) < 0)) {
                 $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) > 256)) {
-                $invalidProperties[] = "invalid value for 'agentId', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'agentId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'agentId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'agentId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['installPath']) && (mb_strlen($this->container['installPath']) > 256)) {
                 $invalidProperties[] = "invalid value for 'installPath', the character length must be smaller than or equal to 256.";
@@ -402,6 +402,12 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['configPath']) && (mb_strlen($this->container['configPath']) < 0)) {
                 $invalidProperties[] = "invalid value for 'configPath', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['mode']) && (mb_strlen($this->container['mode']) > 32)) {
+                $invalidProperties[] = "invalid value for 'mode', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['mode']) && (mb_strlen($this->container['mode']) < 1)) {
+                $invalidProperties[] = "invalid value for 'mode', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['procPath']) && (mb_strlen($this->container['procPath']) > 256)) {
                 $invalidProperties[] = "invalid value for 'procPath', the character length must be smaller than or equal to 256.";
@@ -421,23 +427,23 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'containerName', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 256)) {
-                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) > 256)) {
-                $invalidProperties[] = "invalid value for 'hostIp', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hostIp', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) < 0)) {
-                $invalidProperties[] = "invalid value for 'hostIp', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostIp', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -455,7 +461,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets catalogue
-    *  资产指纹种类
+    *  **参数解释**: web应用、web服务、数据库资产指纹种类 **取值范围**: 字符长度0-64
     *
     * @return string|null
     */
@@ -467,7 +473,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets catalogue
     *
-    * @param string|null $catalogue 资产指纹种类
+    * @param string|null $catalogue **参数解释**: web应用、web服务、数据库资产指纹种类 **取值范围**: 字符长度0-64
     *
     * @return $this
     */
@@ -479,7 +485,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  资产指纹名字
+    *  **参数解释**: 资产指纹名字 **取值范围**: 字符长度0-64
     *
     * @return string|null
     */
@@ -491,7 +497,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 资产指纹名字
+    * @param string|null $name **参数解释**: 资产指纹名字 **取值范围**: 字符长度0-64
     *
     * @return $this
     */
@@ -503,7 +509,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  资产指纹-数据库-版本
+    *  **参数解释**: 资产指纹版本 **取值范围**: 字符长度0-64
     *
     * @return string|null
     */
@@ -515,7 +521,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 资产指纹-数据库-版本
+    * @param string|null $version **参数解释**: 资产指纹版本 **取值范围**: 字符长度0-64
     *
     * @return $this
     */
@@ -527,7 +533,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  agent_id
+    *  **参数解释** agent id **取值范围** 字符长度1-64
     *
     * @return string|null
     */
@@ -539,7 +545,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId agent_id
+    * @param string|null $agentId **参数解释** agent id **取值范围** 字符长度1-64
     *
     * @return $this
     */
@@ -551,7 +557,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets installPath
-    *  安装路径
+    *  **参数解释** 安装路径 **取值范围** 字符长度0-256
     *
     * @return string|null
     */
@@ -563,7 +569,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets installPath
     *
-    * @param string|null $installPath 安装路径
+    * @param string|null $installPath **参数解释** 安装路径 **取值范围** 字符长度0-256
     *
     * @return $this
     */
@@ -575,7 +581,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets configPath
-    *  配置文件路径
+    *  **参数解释** 配置文件路径 **取值范围** 字符长度0-256
     *
     * @return string|null
     */
@@ -587,7 +593,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets configPath
     *
-    * @param string|null $configPath 配置文件路径
+    * @param string|null $configPath **参数解释** 配置文件路径 **取值范围** 字符长度0-256
     *
     * @return $this
     */
@@ -599,7 +605,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets uid
-    *  uid
+    *  **参数解释**: uid **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -611,7 +617,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets uid
     *
-    * @param int|null $uid uid
+    * @param int|null $uid **参数解释**: uid **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -623,7 +629,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets gid
-    *  gid
+    *  **参数解释**: gid **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -635,7 +641,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets gid
     *
-    * @param int|null $gid gid
+    * @param int|null $gid **参数解释**: gid **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -647,7 +653,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  mode
+    *  **参数解释**: 资产指纹文件权限 **取值范围**: 字符长度1-32
     *
     * @return string|null
     */
@@ -659,7 +665,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string|null $mode mode
+    * @param string|null $mode **参数解释**: 资产指纹文件权限 **取值范围**: 字符长度1-32
     *
     * @return $this
     */
@@ -671,7 +677,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ctime
-    *  ctime
+    *  **参数解释**: 资产指纹文件最近状态改变时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @return int|null
     */
@@ -683,7 +689,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ctime
     *
-    * @param int|null $ctime ctime
+    * @param int|null $ctime **参数解释**: 资产指纹文件最近状态改变时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @return $this
     */
@@ -695,7 +701,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets mtime
-    *  mtime
+    *  **参数解释**: 资产指纹文件最近修改时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @return int|null
     */
@@ -707,7 +713,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets mtime
     *
-    * @param int|null $mtime mtime
+    * @param int|null $mtime **参数解释**: 资产指纹文件最近修改时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @return $this
     */
@@ -719,7 +725,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets atime
-    *  atime
+    *  **参数解释**: 资产指纹文件最近访问时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @return int|null
     */
@@ -731,7 +737,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets atime
     *
-    * @param int|null $atime atime
+    * @param int|null $atime **参数解释**: 资产指纹文件最近访问时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @return $this
     */
@@ -743,7 +749,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pid
-    *  pid
+    *  **参数解释**: pid **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -755,7 +761,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pid
     *
-    * @param int|null $pid pid
+    * @param int|null $pid **参数解释**: pid **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -767,7 +773,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets procPath
-    *  proc_path
+    *  **参数解释**: 资产指纹进程路径 **取值范围**: 字符长度0-256
     *
     * @return string|null
     */
@@ -779,7 +785,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets procPath
     *
-    * @param string|null $procPath proc_path
+    * @param string|null $procPath **参数解释**: 资产指纹进程路径 **取值范围**: 字符长度0-256
     *
     * @return $this
     */
@@ -791,7 +797,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerId
-    *  container_id
+    *  **参数解释**: 容器id **取值范围**: 字符长度0-256
     *
     * @return string|null
     */
@@ -803,7 +809,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerId
     *
-    * @param string|null $containerId container_id
+    * @param string|null $containerId **参数解释**: 容器id **取值范围**: 字符长度0-256
     *
     * @return $this
     */
@@ -815,7 +821,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerName
-    *  container_name
+    *  **参数解释**: 容器名称 **取值范围**: 字符长度0-256
     *
     * @return string|null
     */
@@ -827,7 +833,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerName
     *
-    * @param string|null $containerName container_name
+    * @param string|null $containerName **参数解释**: 容器名称 **取值范围**: 字符长度0-256
     *
     * @return $this
     */
@@ -839,7 +845,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordTime
-    *  record_time
+    *  **参数解释**: 资产指纹扫描时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @return int|null
     */
@@ -851,7 +857,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets recordTime
     *
-    * @param int|null $recordTime record_time
+    * @param int|null $recordTime **参数解释**: 资产指纹扫描时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @return $this
     */
@@ -862,32 +868,8 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets hostName
-    *  host_name
-    *
-    * @return string|null
-    */
-    public function getHostName()
-    {
-        return $this->container['hostName'];
-    }
-
-    /**
-    * Sets hostName
-    *
-    * @param string|null $hostName host_name
-    *
-    * @return $this
-    */
-    public function setHostName($hostName)
-    {
-        $this->container['hostName'] = $hostName;
-        return $this;
-    }
-
-    /**
     * Gets hostId
-    *  host_id
+    *  **参数解释** 主机id **取值范围** 字符长度1-64
     *
     * @return string|null
     */
@@ -899,7 +881,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId host_id
+    * @param string|null $hostId **参数解释** 主机id **取值范围** 字符长度1-64
     *
     * @return $this
     */
@@ -910,8 +892,32 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets hostName
+    *  **参数解释** 服务器名称 **取值范围** 字符长度1-64
+    *
+    * @return string|null
+    */
+    public function getHostName()
+    {
+        return $this->container['hostName'];
+    }
+
+    /**
+    * Sets hostName
+    *
+    * @param string|null $hostName **参数解释** 服务器名称 **取值范围** 字符长度1-64
+    *
+    * @return $this
+    */
+    public function setHostName($hostName)
+    {
+        $this->container['hostName'] = $hostName;
+        return $this;
+    }
+
+    /**
     * Gets hostIp
-    *  host_ip
+    *  **参数解释** 服务器ip **取值范围** 字符长度1-64
     *
     * @return string|null
     */
@@ -923,7 +929,7 @@ class WebAppAndServiceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp host_ip
+    * @param string|null $hostIp **参数解释** 服务器ip **取值范围** 字符长度1-64
     *
     * @return $this
     */

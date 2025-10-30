@@ -23,7 +23,8 @@ class ListWebSiteStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * domain  域名
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * domain  **参数解释**: 域名 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -31,6 +32,7 @@ class ListWebSiteStatisticsRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'offset' => 'int',
             'limit' => 'int',
+            'category' => 'string',
             'domain' => 'string'
     ];
 
@@ -39,7 +41,8 @@ class ListWebSiteStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * domain  域名
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * domain  **参数解释**: 域名 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -47,6 +50,7 @@ class ListWebSiteStatisticsRequest implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'offset' => 'int32',
         'limit' => 'int32',
+        'category' => null,
         'domain' => null
     ];
 
@@ -76,7 +80,8 @@ class ListWebSiteStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * domain  域名
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * domain  **参数解释**: 域名 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -84,6 +89,7 @@ class ListWebSiteStatisticsRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'offset' => 'offset',
             'limit' => 'limit',
+            'category' => 'category',
             'domain' => 'domain'
     ];
 
@@ -92,7 +98,8 @@ class ListWebSiteStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * domain  域名
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * domain  **参数解释**: 域名 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -100,6 +107,7 @@ class ListWebSiteStatisticsRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
+            'category' => 'setCategory',
             'domain' => 'setDomain'
     ];
 
@@ -108,7 +116,8 @@ class ListWebSiteStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * domain  域名
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * domain  **参数解释**: 域名 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -116,6 +125,7 @@ class ListWebSiteStatisticsRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
+            'category' => 'getCategory',
             'domain' => 'getDomain'
     ];
 
@@ -180,6 +190,7 @@ class ListWebSiteStatisticsRequest implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
     }
 
@@ -211,6 +222,18 @@ class ListWebSiteStatisticsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
+            }
+        if ($this->container['category'] === null) {
+            $invalidProperties[] = "'category' can't be null";
+        }
+            if ((mb_strlen($this->container['category']) > 32)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['category']) < 0)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
+            }
+            if (!preg_match("/^(host|container)$/", $this->container['category'])) {
+                $invalidProperties[] = "invalid value for 'category', must be conform to the pattern /^(host|container)$/.";
             }
             if (!is_null($this->container['domain']) && (mb_strlen($this->container['domain']) > 256)) {
                 $invalidProperties[] = "invalid value for 'domain', the character length must be smaller than or equal to 256.";
@@ -305,8 +328,32 @@ class ListWebSiteStatisticsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets category
+    *  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    *
+    * @return string
+    */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+    * Sets category
+    *
+    * @param string $category **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    *
+    * @return $this
+    */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
+        return $this;
+    }
+
+    /**
     * Gets domain
-    *  域名
+    *  **参数解释**: 域名 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -318,7 +365,7 @@ class ListWebSiteStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets domain
     *
-    * @param string|null $domain 域名
+    * @param string|null $domain **参数解释**: 域名 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @return $this
     */

@@ -191,6 +191,18 @@ class QueryTableRequestV3 implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['databaseTables'] === null) {
+            $invalidProperties[] = "'databaseTables' can't be null";
+        }
+        if ($this->container['sourceInstanceId'] === null) {
+            $invalidProperties[] = "'sourceInstanceId' can't be null";
+        }
+        if ($this->container['selectedTables'] === null) {
+            $invalidProperties[] = "'selectedTables' can't be null";
+        }
+        if ($this->container['filterType'] === null) {
+            $invalidProperties[] = "'filterType' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -209,7 +221,7 @@ class QueryTableRequestV3 implements ModelInterface, ArrayAccess
     * Gets databaseTables
     *  **参数解释**：  查询的数据库及表名称的列表。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
-    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\DatabaseTablesInfo[]|null
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\DatabaseTablesInfo[]
     */
     public function getDatabaseTables()
     {
@@ -219,7 +231,7 @@ class QueryTableRequestV3 implements ModelInterface, ArrayAccess
     /**
     * Sets databaseTables
     *
-    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\DatabaseTablesInfo[]|null $databaseTables **参数解释**：  查询的数据库及表名称的列表。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\DatabaseTablesInfo[] $databaseTables **参数解释**：  查询的数据库及表名称的列表。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return $this
     */
@@ -233,7 +245,7 @@ class QueryTableRequestV3 implements ModelInterface, ArrayAccess
     * Gets sourceInstanceId
     *  **参数解释**：  需要查询数据库的源实例ID，严格匹配UUID规则。  **约束限制**：  只能由英文字母、数字组成，且长度为36个字符。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
-    * @return string|null
+    * @return string
     */
     public function getSourceInstanceId()
     {
@@ -243,7 +255,7 @@ class QueryTableRequestV3 implements ModelInterface, ArrayAccess
     /**
     * Sets sourceInstanceId
     *
-    * @param string|null $sourceInstanceId **参数解释**：  需要查询数据库的源实例ID，严格匹配UUID规则。  **约束限制**：  只能由英文字母、数字组成，且长度为36个字符。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * @param string $sourceInstanceId **参数解释**：  需要查询数据库的源实例ID，严格匹配UUID规则。  **约束限制**：  只能由英文字母、数字组成，且长度为36个字符。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return $this
     */
@@ -257,7 +269,7 @@ class QueryTableRequestV3 implements ModelInterface, ArrayAccess
     * Gets selectedTables
     *  **参数解释**：  已选择的数据库及表名称的列表。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
-    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\DatabaseTablesInfo[]|null
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\DatabaseTablesInfo[]
     */
     public function getSelectedTables()
     {
@@ -267,7 +279,7 @@ class QueryTableRequestV3 implements ModelInterface, ArrayAccess
     /**
     * Sets selectedTables
     *
-    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\DatabaseTablesInfo[]|null $selectedTables **参数解释**：  已选择的数据库及表名称的列表。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\DatabaseTablesInfo[] $selectedTables **参数解释**：  已选择的数据库及表名称的列表。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return $this
     */
@@ -281,7 +293,7 @@ class QueryTableRequestV3 implements ModelInterface, ArrayAccess
     * Gets filterType
     *  **参数解释**：  表黑白名单设置。include_tables：白名单，exclude_tables：黑名单。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
-    * @return string|null
+    * @return string
     */
     public function getFilterType()
     {
@@ -291,7 +303,7 @@ class QueryTableRequestV3 implements ModelInterface, ArrayAccess
     /**
     * Sets filterType
     *
-    * @param string|null $filterType **参数解释**：  表黑白名单设置。include_tables：白名单，exclude_tables：黑名单。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * @param string $filterType **参数解释**：  表黑白名单设置。include_tables：白名单，exclude_tables：黑名单。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return $this
     */

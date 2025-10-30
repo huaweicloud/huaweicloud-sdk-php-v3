@@ -50,6 +50,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * debtAmount  欠费金额。单位：元。  说明： 对于月结客户，欠费金额即页面上的月度结算金额。
     * writeoffAmount  欠费核销金额。单位：元。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     *
     * @var string[]
     */
@@ -83,7 +84,8 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
             'bonusAmount' => 'float',
             'debtAmount' => 'float',
             'writeoffAmount' => 'float',
-            'regionName' => 'string'
+            'regionName' => 'string',
+            'accountName' => 'string'
     ];
 
     /**
@@ -118,6 +120,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * debtAmount  欠费金额。单位：元。  说明： 对于月结客户，欠费金额即页面上的月度结算金额。
     * writeoffAmount  欠费核销金额。单位：元。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     *
     * @var string[]
     */
@@ -151,7 +154,8 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
         'bonusAmount' => 'bigdecimal',
         'debtAmount' => 'bigdecimal',
         'writeoffAmount' => 'bigdecimal',
-        'regionName' => null
+        'regionName' => null,
+        'accountName' => null
     ];
 
     /**
@@ -207,6 +211,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * debtAmount  欠费金额。单位：元。  说明： 对于月结客户，欠费金额即页面上的月度结算金额。
     * writeoffAmount  欠费核销金额。单位：元。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     *
     * @var string[]
     */
@@ -240,7 +245,8 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
             'bonusAmount' => 'bonus_amount',
             'debtAmount' => 'debt_amount',
             'writeoffAmount' => 'writeoff_amount',
-            'regionName' => 'region_name'
+            'regionName' => 'region_name',
+            'accountName' => 'account_name'
     ];
 
     /**
@@ -275,6 +281,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * debtAmount  欠费金额。单位：元。  说明： 对于月结客户，欠费金额即页面上的月度结算金额。
     * writeoffAmount  欠费核销金额。单位：元。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     *
     * @var string[]
     */
@@ -308,7 +315,8 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
             'bonusAmount' => 'setBonusAmount',
             'debtAmount' => 'setDebtAmount',
             'writeoffAmount' => 'setWriteoffAmount',
-            'regionName' => 'setRegionName'
+            'regionName' => 'setRegionName',
+            'accountName' => 'setAccountName'
     ];
 
     /**
@@ -343,6 +351,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * debtAmount  欠费金额。单位：元。  说明： 对于月结客户，欠费金额即页面上的月度结算金额。
     * writeoffAmount  欠费核销金额。单位：元。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     *
     * @var string[]
     */
@@ -376,7 +385,8 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
             'bonusAmount' => 'getBonusAmount',
             'debtAmount' => 'getDebtAmount',
             'writeoffAmount' => 'getWriteoffAmount',
-            'regionName' => 'getRegionName'
+            'regionName' => 'getRegionName',
+            'accountName' => 'getAccountName'
     ];
 
     /**
@@ -467,6 +477,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
         $this->container['debtAmount'] = isset($data['debtAmount']) ? $data['debtAmount'] : null;
         $this->container['writeoffAmount'] = isset($data['writeoffAmount']) ? $data['writeoffAmount'] : null;
         $this->container['regionName'] = isset($data['regionName']) ? $data['regionName'] : null;
+        $this->container['accountName'] = isset($data['accountName']) ? $data['accountName'] : null;
     }
 
     /**
@@ -1208,6 +1219,30 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     public function setRegionName($regionName)
     {
         $this->container['regionName'] = $regionName;
+        return $this;
+    }
+
+    /**
+    * Gets accountName
+    *  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
+    *
+    * @return string|null
+    */
+    public function getAccountName()
+    {
+        return $this->container['accountName'];
+    }
+
+    /**
+    * Sets accountName
+    *
+    * @param string|null $accountName |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
+    *
+    * @return $this
+    */
+    public function setAccountName($accountName)
+    {
+        $this->container['accountName'] = $accountName;
         return $this;
     }
 

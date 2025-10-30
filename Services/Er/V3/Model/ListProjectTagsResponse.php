@@ -22,21 +22,25 @@ class ListProjectTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * tags  标签列表。
+    * totalCount  总记录数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\Er\V3\Model\Tags[]'
+            'tags' => '\HuaweiCloud\SDK\Er\V3\Model\Tags[]',
+            'totalCount' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * tags  标签列表。
+    * totalCount  总记录数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'tags' => null
+        'tags' => null,
+        'totalCount' => 'int32'
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListProjectTagsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * tags  标签列表。
+    * totalCount  总记录数。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'totalCount' => 'total_count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * tags  标签列表。
+    * totalCount  总记录数。
     *
     * @var string[]
     */
     protected static $setters = [
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'totalCount' => 'setTotalCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * tags  标签列表。
+    * totalCount  总记录数。
     *
     * @var string[]
     */
     protected static $getters = [
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'totalCount' => 'getTotalCount'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListProjectTagsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListProjectTagsResponse implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets totalCount
+    *  总记录数。
+    *
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount 总记录数。
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
         return $this;
     }
 

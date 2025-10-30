@@ -21,7 +21,7 @@ class SecurityConfigUserChangeInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * changeType  **参数解释**： 主机账户历史变动类型 **取值范围**： - add：添加 - delete：删除 - modify：修改
-    * loginPermission  **参数解释**： 是否有登陆权限 **取值范围**： - true：有登录权限 - false：无登录权限
+    * loginPermission  **参数解释**： 是否有登录权限 **取值范围**： - true：有登录权限 - false：无登录权限
     * rootPermission  **参数解释**： 是否有root权限 **取值范围**： - true：有root权限 - false：无root权限
     * userGroupName  **参数解释**： 用户组 **取值范围**： 不涉及
     * userHomeDir  **参数解释**： 用户目录 **取值范围**： 不涉及
@@ -45,7 +45,7 @@ class SecurityConfigUserChangeInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * changeType  **参数解释**： 主机账户历史变动类型 **取值范围**： - add：添加 - delete：删除 - modify：修改
-    * loginPermission  **参数解释**： 是否有登陆权限 **取值范围**： - true：有登录权限 - false：无登录权限
+    * loginPermission  **参数解释**： 是否有登录权限 **取值范围**： - true：有登录权限 - false：无登录权限
     * rootPermission  **参数解释**： 是否有root权限 **取值范围**： - true：有root权限 - false：无root权限
     * userGroupName  **参数解释**： 用户组 **取值范围**： 不涉及
     * userHomeDir  **参数解释**： 用户目录 **取值范围**： 不涉及
@@ -90,7 +90,7 @@ class SecurityConfigUserChangeInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * changeType  **参数解释**： 主机账户历史变动类型 **取值范围**： - add：添加 - delete：删除 - modify：修改
-    * loginPermission  **参数解释**： 是否有登陆权限 **取值范围**： - true：有登录权限 - false：无登录权限
+    * loginPermission  **参数解释**： 是否有登录权限 **取值范围**： - true：有登录权限 - false：无登录权限
     * rootPermission  **参数解释**： 是否有root权限 **取值范围**： - true：有root权限 - false：无root权限
     * userGroupName  **参数解释**： 用户组 **取值范围**： 不涉及
     * userHomeDir  **参数解释**： 用户目录 **取值范围**： 不涉及
@@ -114,7 +114,7 @@ class SecurityConfigUserChangeInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * changeType  **参数解释**： 主机账户历史变动类型 **取值范围**： - add：添加 - delete：删除 - modify：修改
-    * loginPermission  **参数解释**： 是否有登陆权限 **取值范围**： - true：有登录权限 - false：无登录权限
+    * loginPermission  **参数解释**： 是否有登录权限 **取值范围**： - true：有登录权限 - false：无登录权限
     * rootPermission  **参数解释**： 是否有root权限 **取值范围**： - true：有root权限 - false：无root权限
     * userGroupName  **参数解释**： 用户组 **取值范围**： 不涉及
     * userHomeDir  **参数解释**： 用户目录 **取值范围**： 不涉及
@@ -138,7 +138,7 @@ class SecurityConfigUserChangeInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * changeType  **参数解释**： 主机账户历史变动类型 **取值范围**： - add：添加 - delete：删除 - modify：修改
-    * loginPermission  **参数解释**： 是否有登陆权限 **取值范围**： - true：有登录权限 - false：无登录权限
+    * loginPermission  **参数解释**： 是否有登录权限 **取值范围**： - true：有登录权限 - false：无登录权限
     * rootPermission  **参数解释**： 是否有root权限 **取值范围**： - true：有root权限 - false：无root权限
     * userGroupName  **参数解释**： 用户组 **取值范围**： 不涉及
     * userHomeDir  **参数解释**： 用户目录 **取值范围**： 不涉及
@@ -275,7 +275,7 @@ class SecurityConfigUserChangeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginPermission
-    *  **参数解释**： 是否有登陆权限 **取值范围**： - true：有登录权限 - false：无登录权限
+    *  **参数解释**： 是否有登录权限 **取值范围**： - true：有登录权限 - false：无登录权限
     *
     * @return bool|null
     */
@@ -287,7 +287,7 @@ class SecurityConfigUserChangeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets loginPermission
     *
-    * @param bool|null $loginPermission **参数解释**： 是否有登陆权限 **取值范围**： - true：有登录权限 - false：无登录权限
+    * @param bool|null $loginPermission **参数解释**： 是否有登录权限 **取值范围**： - true：有登录权限 - false：无登录权限
     *
     * @return $this
     */

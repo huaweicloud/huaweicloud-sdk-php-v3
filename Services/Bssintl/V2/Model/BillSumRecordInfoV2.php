@@ -40,6 +40,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * measureId  金额单位。 1：元
     * billType  账单类型。 1：消费2：退款3：调账
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
+    * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
             'creditAmount' => 'float',
             'measureId' => 'int',
             'billType' => 'int',
-            'customerId' => 'string'
+            'customerId' => 'string',
+            'accountName' => 'string'
     ];
 
     /**
@@ -88,6 +90,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * measureId  金额单位。 1：元
     * billType  账单类型。 1：消费2：退款3：调账
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
+    * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
         'creditAmount' => 'bigdecimal',
         'measureId' => 'int32',
         'billType' => 'int32',
-        'customerId' => null
+        'customerId' => null,
+        'accountName' => null
     ];
 
     /**
@@ -157,6 +161,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * measureId  金额单位。 1：元
     * billType  账单类型。 1：消费2：退款3：调账
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
+    * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
             'creditAmount' => 'credit_amount',
             'measureId' => 'measure_id',
             'billType' => 'bill_type',
-            'customerId' => 'customer_id'
+            'customerId' => 'customer_id',
+            'accountName' => 'account_name'
     ];
 
     /**
@@ -205,6 +211,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * measureId  金额单位。 1：元
     * billType  账单类型。 1：消费2：退款3：调账
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
+    * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
             'creditAmount' => 'setCreditAmount',
             'measureId' => 'setMeasureId',
             'billType' => 'setBillType',
-            'customerId' => 'setCustomerId'
+            'customerId' => 'setCustomerId',
+            'accountName' => 'setAccountName'
     ];
 
     /**
@@ -253,6 +261,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * measureId  金额单位。 1：元
     * billType  账单类型。 1：消费2：退款3：调账
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
+    * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
             'creditAmount' => 'getCreditAmount',
             'measureId' => 'getMeasureId',
             'billType' => 'getBillType',
-            'customerId' => 'getCustomerId'
+            'customerId' => 'getCustomerId',
+            'accountName' => 'getAccountName'
     ];
 
     /**
@@ -357,6 +367,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
         $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : null;
         $this->container['billType'] = isset($data['billType']) ? $data['billType'] : null;
         $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
+        $this->container['accountName'] = isset($data['accountName']) ? $data['accountName'] : null;
     }
 
     /**
@@ -858,6 +869,30 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     public function setCustomerId($customerId)
     {
         $this->container['customerId'] = $customerId;
+        return $this;
+    }
+
+    /**
+    * Gets accountName
+    *  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
+    *
+    * @return string|null
+    */
+    public function getAccountName()
+    {
+        return $this->container['accountName'];
+    }
+
+    /**
+    * Sets accountName
+    *
+    * @param string|null $accountName |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
+    *
+    * @return $this
+    */
+    public function setAccountName($accountName)
+    {
+        $this->container['accountName'] = $accountName;
         return $this;
     }
 

@@ -21,7 +21,7 @@ class CreateGlobalAssetScanTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * error  失败原因
+    * error  **参数解释** 失败原因 **取值范围** 字符长度1-256
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateGlobalAssetScanTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * error  失败原因
+    * error  **参数解释** 失败原因 **取值范围** 字符长度1-256
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateGlobalAssetScanTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * error  失败原因
+    * error  **参数解释** 失败原因 **取值范围** 字符长度1-256
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateGlobalAssetScanTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * error  失败原因
+    * error  **参数解释** 失败原因 **取值范围** 字符长度1-256
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateGlobalAssetScanTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * error  失败原因
+    * error  **参数解释** 失败原因 **取值范围** 字符长度1-256
     *
     * @var string[]
     */
@@ -159,6 +159,12 @@ class CreateGlobalAssetScanTaskResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['error']) && (mb_strlen($this->container['error']) > 256)) {
+                $invalidProperties[] = "invalid value for 'error', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['error']) && (mb_strlen($this->container['error']) < 1)) {
+                $invalidProperties[] = "invalid value for 'error', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['error']) && !preg_match("/^.*$/", $this->container['error'])) {
                 $invalidProperties[] = "invalid value for 'error', must be conform to the pattern /^.*$/.";
             }
@@ -178,7 +184,7 @@ class CreateGlobalAssetScanTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets error
-    *  失败原因
+    *  **参数解释** 失败原因 **取值范围** 字符长度1-256
     *
     * @return string|null
     */
@@ -190,7 +196,7 @@ class CreateGlobalAssetScanTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets error
     *
-    * @param string|null $error 失败原因
+    * @param string|null $error **参数解释** 失败原因 **取值范围** 字符长度1-256
     *
     * @return $this
     */

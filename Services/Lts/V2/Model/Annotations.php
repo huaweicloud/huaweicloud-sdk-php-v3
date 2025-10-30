@@ -24,6 +24,18 @@ class Annotations implements ModelInterface, ArrayAccess
     * logInfo  日志组/流id,名称
     * currentValue  当前值
     * oldAnnotations  (sql/关键词)告警详情原始数据
+    * alarmActionRuleName  **参数解释：** 告警行动规则名称。 **取值范围：** 不涉及。
+    * alarmRuleAlias  **参数解释：** 告警规则别名。 **取值范围：** 不涉及。
+    * alarmRuleUrl  **参数解释：** 告警规则url。 **取值范围：** 不涉及。
+    * alarmStatus  **参数解释：** 告警触发状态。 **取值范围：** - 触发(firing) - 恢复(resolved)
+    * conditionExpression  **参数解释：** 告警触发条件表达式。 **取值范围：** 不涉及。
+    * conditionExpressionWithValue  **参数解释：** 告警触发表达式带值。例如：条件表达式为pv > 0，则condition_expression_with_value取值为：100 > 0。 **取值范围：** 不涉及。
+    * notificationFrequency  **参数解释：** 通知频率。 **取值范围：** 不涉及。
+    * recordId  **参数解释：** 告警ID。 **取值范围：** 不涉及。
+    * recoveryPolicy  **参数解释：** 是否开启告警恢复开关。 **取值范围：** - true： 开启告警恢复 - false： 关闭告警恢复
+    * results  **参数解释：** 告警通知的详细信息。
+    * frequency  **参数解释：** 告警统计周期。 **取值范围：** 不涉及。
+    * type  **参数解释：** 告警规则类型。 **取值范围：** - sql： sql告警 - keywords： 关键词告警
     *
     * @var string[]
     */
@@ -31,7 +43,19 @@ class Annotations implements ModelInterface, ArrayAccess
             'message' => 'string',
             'logInfo' => 'string',
             'currentValue' => 'string',
-            'oldAnnotations' => 'string'
+            'oldAnnotations' => 'string',
+            'alarmActionRuleName' => 'string',
+            'alarmRuleAlias' => 'string',
+            'alarmRuleUrl' => 'string',
+            'alarmStatus' => 'string',
+            'conditionExpression' => 'string',
+            'conditionExpressionWithValue' => 'string',
+            'notificationFrequency' => 'string',
+            'recordId' => 'string',
+            'recoveryPolicy' => 'bool',
+            'results' => '\HuaweiCloud\SDK\Lts\V2\Model\Results[]',
+            'frequency' => 'string',
+            'type' => 'string'
     ];
 
     /**
@@ -40,6 +64,18 @@ class Annotations implements ModelInterface, ArrayAccess
     * logInfo  日志组/流id,名称
     * currentValue  当前值
     * oldAnnotations  (sql/关键词)告警详情原始数据
+    * alarmActionRuleName  **参数解释：** 告警行动规则名称。 **取值范围：** 不涉及。
+    * alarmRuleAlias  **参数解释：** 告警规则别名。 **取值范围：** 不涉及。
+    * alarmRuleUrl  **参数解释：** 告警规则url。 **取值范围：** 不涉及。
+    * alarmStatus  **参数解释：** 告警触发状态。 **取值范围：** - 触发(firing) - 恢复(resolved)
+    * conditionExpression  **参数解释：** 告警触发条件表达式。 **取值范围：** 不涉及。
+    * conditionExpressionWithValue  **参数解释：** 告警触发表达式带值。例如：条件表达式为pv > 0，则condition_expression_with_value取值为：100 > 0。 **取值范围：** 不涉及。
+    * notificationFrequency  **参数解释：** 通知频率。 **取值范围：** 不涉及。
+    * recordId  **参数解释：** 告警ID。 **取值范围：** 不涉及。
+    * recoveryPolicy  **参数解释：** 是否开启告警恢复开关。 **取值范围：** - true： 开启告警恢复 - false： 关闭告警恢复
+    * results  **参数解释：** 告警通知的详细信息。
+    * frequency  **参数解释：** 告警统计周期。 **取值范围：** 不涉及。
+    * type  **参数解释：** 告警规则类型。 **取值范围：** - sql： sql告警 - keywords： 关键词告警
     *
     * @var string[]
     */
@@ -47,7 +83,19 @@ class Annotations implements ModelInterface, ArrayAccess
         'message' => null,
         'logInfo' => null,
         'currentValue' => null,
-        'oldAnnotations' => null
+        'oldAnnotations' => null,
+        'alarmActionRuleName' => null,
+        'alarmRuleAlias' => null,
+        'alarmRuleUrl' => null,
+        'alarmStatus' => null,
+        'conditionExpression' => null,
+        'conditionExpressionWithValue' => null,
+        'notificationFrequency' => null,
+        'recordId' => null,
+        'recoveryPolicy' => null,
+        'results' => null,
+        'frequency' => null,
+        'type' => null
     ];
 
     /**
@@ -77,6 +125,18 @@ class Annotations implements ModelInterface, ArrayAccess
     * logInfo  日志组/流id,名称
     * currentValue  当前值
     * oldAnnotations  (sql/关键词)告警详情原始数据
+    * alarmActionRuleName  **参数解释：** 告警行动规则名称。 **取值范围：** 不涉及。
+    * alarmRuleAlias  **参数解释：** 告警规则别名。 **取值范围：** 不涉及。
+    * alarmRuleUrl  **参数解释：** 告警规则url。 **取值范围：** 不涉及。
+    * alarmStatus  **参数解释：** 告警触发状态。 **取值范围：** - 触发(firing) - 恢复(resolved)
+    * conditionExpression  **参数解释：** 告警触发条件表达式。 **取值范围：** 不涉及。
+    * conditionExpressionWithValue  **参数解释：** 告警触发表达式带值。例如：条件表达式为pv > 0，则condition_expression_with_value取值为：100 > 0。 **取值范围：** 不涉及。
+    * notificationFrequency  **参数解释：** 通知频率。 **取值范围：** 不涉及。
+    * recordId  **参数解释：** 告警ID。 **取值范围：** 不涉及。
+    * recoveryPolicy  **参数解释：** 是否开启告警恢复开关。 **取值范围：** - true： 开启告警恢复 - false： 关闭告警恢复
+    * results  **参数解释：** 告警通知的详细信息。
+    * frequency  **参数解释：** 告警统计周期。 **取值范围：** 不涉及。
+    * type  **参数解释：** 告警规则类型。 **取值范围：** - sql： sql告警 - keywords： 关键词告警
     *
     * @var string[]
     */
@@ -84,7 +144,19 @@ class Annotations implements ModelInterface, ArrayAccess
             'message' => 'message',
             'logInfo' => 'log_info',
             'currentValue' => 'current_value',
-            'oldAnnotations' => 'old_annotations'
+            'oldAnnotations' => 'old_annotations',
+            'alarmActionRuleName' => 'alarm_action_rule_name',
+            'alarmRuleAlias' => 'alarm_rule_alias',
+            'alarmRuleUrl' => 'alarm_rule_url',
+            'alarmStatus' => 'alarm_status',
+            'conditionExpression' => 'condition_expression',
+            'conditionExpressionWithValue' => 'condition_expression_with_value',
+            'notificationFrequency' => 'notification_frequency',
+            'recordId' => 'record_id',
+            'recoveryPolicy' => 'recovery_policy',
+            'results' => 'results',
+            'frequency' => 'frequency',
+            'type' => 'type'
     ];
 
     /**
@@ -93,6 +165,18 @@ class Annotations implements ModelInterface, ArrayAccess
     * logInfo  日志组/流id,名称
     * currentValue  当前值
     * oldAnnotations  (sql/关键词)告警详情原始数据
+    * alarmActionRuleName  **参数解释：** 告警行动规则名称。 **取值范围：** 不涉及。
+    * alarmRuleAlias  **参数解释：** 告警规则别名。 **取值范围：** 不涉及。
+    * alarmRuleUrl  **参数解释：** 告警规则url。 **取值范围：** 不涉及。
+    * alarmStatus  **参数解释：** 告警触发状态。 **取值范围：** - 触发(firing) - 恢复(resolved)
+    * conditionExpression  **参数解释：** 告警触发条件表达式。 **取值范围：** 不涉及。
+    * conditionExpressionWithValue  **参数解释：** 告警触发表达式带值。例如：条件表达式为pv > 0，则condition_expression_with_value取值为：100 > 0。 **取值范围：** 不涉及。
+    * notificationFrequency  **参数解释：** 通知频率。 **取值范围：** 不涉及。
+    * recordId  **参数解释：** 告警ID。 **取值范围：** 不涉及。
+    * recoveryPolicy  **参数解释：** 是否开启告警恢复开关。 **取值范围：** - true： 开启告警恢复 - false： 关闭告警恢复
+    * results  **参数解释：** 告警通知的详细信息。
+    * frequency  **参数解释：** 告警统计周期。 **取值范围：** 不涉及。
+    * type  **参数解释：** 告警规则类型。 **取值范围：** - sql： sql告警 - keywords： 关键词告警
     *
     * @var string[]
     */
@@ -100,7 +184,19 @@ class Annotations implements ModelInterface, ArrayAccess
             'message' => 'setMessage',
             'logInfo' => 'setLogInfo',
             'currentValue' => 'setCurrentValue',
-            'oldAnnotations' => 'setOldAnnotations'
+            'oldAnnotations' => 'setOldAnnotations',
+            'alarmActionRuleName' => 'setAlarmActionRuleName',
+            'alarmRuleAlias' => 'setAlarmRuleAlias',
+            'alarmRuleUrl' => 'setAlarmRuleUrl',
+            'alarmStatus' => 'setAlarmStatus',
+            'conditionExpression' => 'setConditionExpression',
+            'conditionExpressionWithValue' => 'setConditionExpressionWithValue',
+            'notificationFrequency' => 'setNotificationFrequency',
+            'recordId' => 'setRecordId',
+            'recoveryPolicy' => 'setRecoveryPolicy',
+            'results' => 'setResults',
+            'frequency' => 'setFrequency',
+            'type' => 'setType'
     ];
 
     /**
@@ -109,6 +205,18 @@ class Annotations implements ModelInterface, ArrayAccess
     * logInfo  日志组/流id,名称
     * currentValue  当前值
     * oldAnnotations  (sql/关键词)告警详情原始数据
+    * alarmActionRuleName  **参数解释：** 告警行动规则名称。 **取值范围：** 不涉及。
+    * alarmRuleAlias  **参数解释：** 告警规则别名。 **取值范围：** 不涉及。
+    * alarmRuleUrl  **参数解释：** 告警规则url。 **取值范围：** 不涉及。
+    * alarmStatus  **参数解释：** 告警触发状态。 **取值范围：** - 触发(firing) - 恢复(resolved)
+    * conditionExpression  **参数解释：** 告警触发条件表达式。 **取值范围：** 不涉及。
+    * conditionExpressionWithValue  **参数解释：** 告警触发表达式带值。例如：条件表达式为pv > 0，则condition_expression_with_value取值为：100 > 0。 **取值范围：** 不涉及。
+    * notificationFrequency  **参数解释：** 通知频率。 **取值范围：** 不涉及。
+    * recordId  **参数解释：** 告警ID。 **取值范围：** 不涉及。
+    * recoveryPolicy  **参数解释：** 是否开启告警恢复开关。 **取值范围：** - true： 开启告警恢复 - false： 关闭告警恢复
+    * results  **参数解释：** 告警通知的详细信息。
+    * frequency  **参数解释：** 告警统计周期。 **取值范围：** 不涉及。
+    * type  **参数解释：** 告警规则类型。 **取值范围：** - sql： sql告警 - keywords： 关键词告警
     *
     * @var string[]
     */
@@ -116,7 +224,19 @@ class Annotations implements ModelInterface, ArrayAccess
             'message' => 'getMessage',
             'logInfo' => 'getLogInfo',
             'currentValue' => 'getCurrentValue',
-            'oldAnnotations' => 'getOldAnnotations'
+            'oldAnnotations' => 'getOldAnnotations',
+            'alarmActionRuleName' => 'getAlarmActionRuleName',
+            'alarmRuleAlias' => 'getAlarmRuleAlias',
+            'alarmRuleUrl' => 'getAlarmRuleUrl',
+            'alarmStatus' => 'getAlarmStatus',
+            'conditionExpression' => 'getConditionExpression',
+            'conditionExpressionWithValue' => 'getConditionExpressionWithValue',
+            'notificationFrequency' => 'getNotificationFrequency',
+            'recordId' => 'getRecordId',
+            'recoveryPolicy' => 'getRecoveryPolicy',
+            'results' => 'getResults',
+            'frequency' => 'getFrequency',
+            'type' => 'getType'
     ];
 
     /**
@@ -181,6 +301,18 @@ class Annotations implements ModelInterface, ArrayAccess
         $this->container['logInfo'] = isset($data['logInfo']) ? $data['logInfo'] : null;
         $this->container['currentValue'] = isset($data['currentValue']) ? $data['currentValue'] : null;
         $this->container['oldAnnotations'] = isset($data['oldAnnotations']) ? $data['oldAnnotations'] : null;
+        $this->container['alarmActionRuleName'] = isset($data['alarmActionRuleName']) ? $data['alarmActionRuleName'] : null;
+        $this->container['alarmRuleAlias'] = isset($data['alarmRuleAlias']) ? $data['alarmRuleAlias'] : null;
+        $this->container['alarmRuleUrl'] = isset($data['alarmRuleUrl']) ? $data['alarmRuleUrl'] : null;
+        $this->container['alarmStatus'] = isset($data['alarmStatus']) ? $data['alarmStatus'] : null;
+        $this->container['conditionExpression'] = isset($data['conditionExpression']) ? $data['conditionExpression'] : null;
+        $this->container['conditionExpressionWithValue'] = isset($data['conditionExpressionWithValue']) ? $data['conditionExpressionWithValue'] : null;
+        $this->container['notificationFrequency'] = isset($data['notificationFrequency']) ? $data['notificationFrequency'] : null;
+        $this->container['recordId'] = isset($data['recordId']) ? $data['recordId'] : null;
+        $this->container['recoveryPolicy'] = isset($data['recoveryPolicy']) ? $data['recoveryPolicy'] : null;
+        $this->container['results'] = isset($data['results']) ? $data['results'] : null;
+        $this->container['frequency'] = isset($data['frequency']) ? $data['frequency'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -334,6 +466,294 @@ class Annotations implements ModelInterface, ArrayAccess
     public function setOldAnnotations($oldAnnotations)
     {
         $this->container['oldAnnotations'] = $oldAnnotations;
+        return $this;
+    }
+
+    /**
+    * Gets alarmActionRuleName
+    *  **参数解释：** 告警行动规则名称。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getAlarmActionRuleName()
+    {
+        return $this->container['alarmActionRuleName'];
+    }
+
+    /**
+    * Sets alarmActionRuleName
+    *
+    * @param string|null $alarmActionRuleName **参数解释：** 告警行动规则名称。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setAlarmActionRuleName($alarmActionRuleName)
+    {
+        $this->container['alarmActionRuleName'] = $alarmActionRuleName;
+        return $this;
+    }
+
+    /**
+    * Gets alarmRuleAlias
+    *  **参数解释：** 告警规则别名。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getAlarmRuleAlias()
+    {
+        return $this->container['alarmRuleAlias'];
+    }
+
+    /**
+    * Sets alarmRuleAlias
+    *
+    * @param string|null $alarmRuleAlias **参数解释：** 告警规则别名。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setAlarmRuleAlias($alarmRuleAlias)
+    {
+        $this->container['alarmRuleAlias'] = $alarmRuleAlias;
+        return $this;
+    }
+
+    /**
+    * Gets alarmRuleUrl
+    *  **参数解释：** 告警规则url。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getAlarmRuleUrl()
+    {
+        return $this->container['alarmRuleUrl'];
+    }
+
+    /**
+    * Sets alarmRuleUrl
+    *
+    * @param string|null $alarmRuleUrl **参数解释：** 告警规则url。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setAlarmRuleUrl($alarmRuleUrl)
+    {
+        $this->container['alarmRuleUrl'] = $alarmRuleUrl;
+        return $this;
+    }
+
+    /**
+    * Gets alarmStatus
+    *  **参数解释：** 告警触发状态。 **取值范围：** - 触发(firing) - 恢复(resolved)
+    *
+    * @return string|null
+    */
+    public function getAlarmStatus()
+    {
+        return $this->container['alarmStatus'];
+    }
+
+    /**
+    * Sets alarmStatus
+    *
+    * @param string|null $alarmStatus **参数解释：** 告警触发状态。 **取值范围：** - 触发(firing) - 恢复(resolved)
+    *
+    * @return $this
+    */
+    public function setAlarmStatus($alarmStatus)
+    {
+        $this->container['alarmStatus'] = $alarmStatus;
+        return $this;
+    }
+
+    /**
+    * Gets conditionExpression
+    *  **参数解释：** 告警触发条件表达式。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getConditionExpression()
+    {
+        return $this->container['conditionExpression'];
+    }
+
+    /**
+    * Sets conditionExpression
+    *
+    * @param string|null $conditionExpression **参数解释：** 告警触发条件表达式。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setConditionExpression($conditionExpression)
+    {
+        $this->container['conditionExpression'] = $conditionExpression;
+        return $this;
+    }
+
+    /**
+    * Gets conditionExpressionWithValue
+    *  **参数解释：** 告警触发表达式带值。例如：条件表达式为pv > 0，则condition_expression_with_value取值为：100 > 0。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getConditionExpressionWithValue()
+    {
+        return $this->container['conditionExpressionWithValue'];
+    }
+
+    /**
+    * Sets conditionExpressionWithValue
+    *
+    * @param string|null $conditionExpressionWithValue **参数解释：** 告警触发表达式带值。例如：条件表达式为pv > 0，则condition_expression_with_value取值为：100 > 0。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setConditionExpressionWithValue($conditionExpressionWithValue)
+    {
+        $this->container['conditionExpressionWithValue'] = $conditionExpressionWithValue;
+        return $this;
+    }
+
+    /**
+    * Gets notificationFrequency
+    *  **参数解释：** 通知频率。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getNotificationFrequency()
+    {
+        return $this->container['notificationFrequency'];
+    }
+
+    /**
+    * Sets notificationFrequency
+    *
+    * @param string|null $notificationFrequency **参数解释：** 通知频率。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setNotificationFrequency($notificationFrequency)
+    {
+        $this->container['notificationFrequency'] = $notificationFrequency;
+        return $this;
+    }
+
+    /**
+    * Gets recordId
+    *  **参数解释：** 告警ID。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getRecordId()
+    {
+        return $this->container['recordId'];
+    }
+
+    /**
+    * Sets recordId
+    *
+    * @param string|null $recordId **参数解释：** 告警ID。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setRecordId($recordId)
+    {
+        $this->container['recordId'] = $recordId;
+        return $this;
+    }
+
+    /**
+    * Gets recoveryPolicy
+    *  **参数解释：** 是否开启告警恢复开关。 **取值范围：** - true： 开启告警恢复 - false： 关闭告警恢复
+    *
+    * @return bool|null
+    */
+    public function getRecoveryPolicy()
+    {
+        return $this->container['recoveryPolicy'];
+    }
+
+    /**
+    * Sets recoveryPolicy
+    *
+    * @param bool|null $recoveryPolicy **参数解释：** 是否开启告警恢复开关。 **取值范围：** - true： 开启告警恢复 - false： 关闭告警恢复
+    *
+    * @return $this
+    */
+    public function setRecoveryPolicy($recoveryPolicy)
+    {
+        $this->container['recoveryPolicy'] = $recoveryPolicy;
+        return $this;
+    }
+
+    /**
+    * Gets results
+    *  **参数解释：** 告警通知的详细信息。
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\Results[]|null
+    */
+    public function getResults()
+    {
+        return $this->container['results'];
+    }
+
+    /**
+    * Sets results
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\Results[]|null $results **参数解释：** 告警通知的详细信息。
+    *
+    * @return $this
+    */
+    public function setResults($results)
+    {
+        $this->container['results'] = $results;
+        return $this;
+    }
+
+    /**
+    * Gets frequency
+    *  **参数解释：** 告警统计周期。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getFrequency()
+    {
+        return $this->container['frequency'];
+    }
+
+    /**
+    * Sets frequency
+    *
+    * @param string|null $frequency **参数解释：** 告警统计周期。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setFrequency($frequency)
+    {
+        $this->container['frequency'] = $frequency;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  **参数解释：** 告警规则类型。 **取值范围：** - sql： sql告警 - keywords： 关键词告警
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type **参数解释：** 告警规则类型。 **取值范围：** - sql： sql告警 - keywords： 关键词告警
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

@@ -29,7 +29,7 @@ class UpdateTransferRequestBodyLogTransferInfo implements ModelInterface, ArrayA
     protected static $openAPITypes = [
             'logStorageFormat' => 'string',
             'logTransferStatus' => 'string',
-            'logTransferDetail' => '\HuaweiCloud\SDK\Lts\V2\Model\TransferDetail'
+            'logTransferDetail' => '\HuaweiCloud\SDK\Lts\V2\Model\LogTransferDetail'
     ];
 
     /**
@@ -303,7 +303,7 @@ class UpdateTransferRequestBodyLogTransferInfo implements ModelInterface, ArrayA
     * Gets logTransferDetail
     *  logTransferDetail
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\TransferDetail
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\LogTransferDetail
     */
     public function getLogTransferDetail()
     {
@@ -313,7 +313,7 @@ class UpdateTransferRequestBodyLogTransferInfo implements ModelInterface, ArrayA
     /**
     * Sets logTransferDetail
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\TransferDetail $logTransferDetail logTransferDetail
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\LogTransferDetail $logTransferDetail logTransferDetail
     *
     * @return $this
     */

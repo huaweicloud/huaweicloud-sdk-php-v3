@@ -213,6 +213,9 @@ class ListWaitEventRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['nodeId'] === null) {
+            $invalidProperties[] = "'nodeId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -231,7 +234,7 @@ class ListWaitEventRequestBody implements ModelInterface, ArrayAccess
     * Gets nodeId
     *  **参数解释**: 节点ID，仅支持包含有CN或DN（主、备）组件的节点。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
-    * @return string|null
+    * @return string
     */
     public function getNodeId()
     {
@@ -241,7 +244,7 @@ class ListWaitEventRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets nodeId
     *
-    * @param string|null $nodeId **参数解释**: 节点ID，仅支持包含有CN或DN（主、备）组件的节点。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * @param string $nodeId **参数解释**: 节点ID，仅支持包含有CN或DN（主、备）组件的节点。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */

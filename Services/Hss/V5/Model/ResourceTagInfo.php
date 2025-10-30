@@ -20,7 +20,7 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  **参数解释**: 键 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位，key不能为空 **默认取值**: 不涉及
+    * key  **参数解释**: 键 **约束限制**: key不能为空 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * value  **参数解释**: 值 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  **参数解释**: 键 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位，key不能为空 **默认取值**: 不涉及
+    * key  **参数解释**: 键 **约束限制**: key不能为空 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * value  **参数解释**: 值 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  **参数解释**: 键 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位，key不能为空 **默认取值**: 不涉及
+    * key  **参数解释**: 键 **约束限制**: key不能为空 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * value  **参数解释**: 值 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  **参数解释**: 键 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位，key不能为空 **默认取值**: 不涉及
+    * key  **参数解释**: 键 **约束限制**: key不能为空 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * value  **参数解释**: 值 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  **参数解释**: 键 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位，key不能为空 **默认取值**: 不涉及
+    * key  **参数解释**: 键 **约束限制**: key不能为空 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * value  **参数解释**: 值 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @var string[]
@@ -203,7 +203,7 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  **参数解释**: 键 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位，key不能为空 **默认取值**: 不涉及
+    *  **参数解释**: 键 **约束限制**: key不能为空 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return string
     */
@@ -215,7 +215,7 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key **参数解释**: 键 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位，key不能为空 **默认取值**: 不涉及
+    * @param string $key **参数解释**: 键 **约束限制**: key不能为空 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return $this
     */

@@ -31,7 +31,7 @@ class WebSiteInfo implements ModelInterface, ArrayAccess
     * mode  **参数解释**: web站点文件权限 **取值范围**: 字符长度1-32
     * pid  **参数解释**: web站点进程pid **取值范围**: 最小值0，最大值2147483647
     * procPath  **参数解释**: web站点进程路径 **取值范围**: 字符长度1-1024
-    * isHttps  **参数解释**: web站点是否为https **取值范围**: -true：是。 -false：否。
+    * isHttps  **参数解释**: web站点是否为https **取值范围**: - true：是。 - false：否。
     * certIssuer  **参数解释**: web站点SSL证书颁发者 **取值范围**: 字符长度0-256
     * certUser  **参数解释**: web站点SSL证书使用者 **取值范围**: 字符长度0-256
     * certIssueTime  **参数解释**: web站点SSL证书颁发时间 **取值范围**: 字符长度0-32
@@ -56,7 +56,7 @@ class WebSiteInfo implements ModelInterface, ArrayAccess
             'procPath' => 'string',
             'isHttps' => 'bool',
             'certIssuer' => 'string',
-            'certUser' => 'int',
+            'certUser' => 'string',
             'certIssueTime' => 'string',
             'certExpiredTime' => 'string',
             'recordTime' => 'int',
@@ -77,7 +77,7 @@ class WebSiteInfo implements ModelInterface, ArrayAccess
     * mode  **参数解释**: web站点文件权限 **取值范围**: 字符长度1-32
     * pid  **参数解释**: web站点进程pid **取值范围**: 最小值0，最大值2147483647
     * procPath  **参数解释**: web站点进程路径 **取值范围**: 字符长度1-1024
-    * isHttps  **参数解释**: web站点是否为https **取值范围**: -true：是。 -false：否。
+    * isHttps  **参数解释**: web站点是否为https **取值范围**: - true：是。 - false：否。
     * certIssuer  **参数解释**: web站点SSL证书颁发者 **取值范围**: 字符长度0-256
     * certUser  **参数解释**: web站点SSL证书使用者 **取值范围**: 字符长度0-256
     * certIssueTime  **参数解释**: web站点SSL证书颁发时间 **取值范围**: 字符长度0-32
@@ -144,7 +144,7 @@ class WebSiteInfo implements ModelInterface, ArrayAccess
     * mode  **参数解释**: web站点文件权限 **取值范围**: 字符长度1-32
     * pid  **参数解释**: web站点进程pid **取值范围**: 最小值0，最大值2147483647
     * procPath  **参数解释**: web站点进程路径 **取值范围**: 字符长度1-1024
-    * isHttps  **参数解释**: web站点是否为https **取值范围**: -true：是。 -false：否。
+    * isHttps  **参数解释**: web站点是否为https **取值范围**: - true：是。 - false：否。
     * certIssuer  **参数解释**: web站点SSL证书颁发者 **取值范围**: 字符长度0-256
     * certUser  **参数解释**: web站点SSL证书使用者 **取值范围**: 字符长度0-256
     * certIssueTime  **参数解释**: web站点SSL证书颁发时间 **取值范围**: 字符长度0-32
@@ -190,7 +190,7 @@ class WebSiteInfo implements ModelInterface, ArrayAccess
     * mode  **参数解释**: web站点文件权限 **取值范围**: 字符长度1-32
     * pid  **参数解释**: web站点进程pid **取值范围**: 最小值0，最大值2147483647
     * procPath  **参数解释**: web站点进程路径 **取值范围**: 字符长度1-1024
-    * isHttps  **参数解释**: web站点是否为https **取值范围**: -true：是。 -false：否。
+    * isHttps  **参数解释**: web站点是否为https **取值范围**: - true：是。 - false：否。
     * certIssuer  **参数解释**: web站点SSL证书颁发者 **取值范围**: 字符长度0-256
     * certUser  **参数解释**: web站点SSL证书使用者 **取值范围**: 字符长度0-256
     * certIssueTime  **参数解释**: web站点SSL证书颁发时间 **取值范围**: 字符长度0-32
@@ -236,7 +236,7 @@ class WebSiteInfo implements ModelInterface, ArrayAccess
     * mode  **参数解释**: web站点文件权限 **取值范围**: 字符长度1-32
     * pid  **参数解释**: web站点进程pid **取值范围**: 最小值0，最大值2147483647
     * procPath  **参数解释**: web站点进程路径 **取值范围**: 字符长度1-1024
-    * isHttps  **参数解释**: web站点是否为https **取值范围**: -true：是。 -false：否。
+    * isHttps  **参数解释**: web站点是否为https **取值范围**: - true：是。 - false：否。
     * certIssuer  **参数解释**: web站点SSL证书颁发者 **取值范围**: 字符长度0-256
     * certUser  **参数解释**: web站点SSL证书使用者 **取值范围**: 字符长度0-256
     * certIssueTime  **参数解释**: web站点SSL证书颁发时间 **取值范围**: 字符长度0-32
@@ -636,7 +636,7 @@ class WebSiteInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isHttps
-    *  **参数解释**: web站点是否为https **取值范围**: -true：是。 -false：否。
+    *  **参数解释**: web站点是否为https **取值范围**: - true：是。 - false：否。
     *
     * @return bool|null
     */
@@ -648,7 +648,7 @@ class WebSiteInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isHttps
     *
-    * @param bool|null $isHttps **参数解释**: web站点是否为https **取值范围**: -true：是。 -false：否。
+    * @param bool|null $isHttps **参数解释**: web站点是否为https **取值范围**: - true：是。 - false：否。
     *
     * @return $this
     */
@@ -686,7 +686,7 @@ class WebSiteInfo implements ModelInterface, ArrayAccess
     * Gets certUser
     *  **参数解释**: web站点SSL证书使用者 **取值范围**: 字符长度0-256
     *
-    * @return int|null
+    * @return string|null
     */
     public function getCertUser()
     {
@@ -696,7 +696,7 @@ class WebSiteInfo implements ModelInterface, ArrayAccess
     /**
     * Sets certUser
     *
-    * @param int|null $certUser **参数解释**: web站点SSL证书使用者 **取值范围**: 字符长度0-256
+    * @param string|null $certUser **参数解释**: web站点SSL证书使用者 **取值范围**: 字符长度0-256
     *
     * @return $this
     */

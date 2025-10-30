@@ -28,6 +28,9 @@ class ModifyDataSyncConfigRequestV3 implements ModelInterface, ArrayAccess
     * tablesConfigs  **参数解释**：  表配置信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认值**：  不涉及。
     * tableReplConfig  tableReplConfig
     * targetDatabaseName  **参数解释**：  目标数据库名。  **约束限制**：  不涉及。  **取值范围**：  长度限制3~128位，仅支持英文大小写字母、数字以及下划线。  **默认值**：  不涉及。
+    * isInstanceLevelSync  **参数解释**：  是否支持实例级同步。  **约束限制**：  不涉及。  **取值范围**：  - true：是。 - false：否。  **默认取值**：  false。
+    * databaseReplScope  **参数解释**：  库同步范围。  **约束限制**：  不涉及。  **取值范围**：  - all：同步全部库。 - part：同步部分库。  **默认取值**：  part。
+    * isSupportRegExp  **参数解释**：  是否支持通配符。  **约束限制**：  不涉及。  **取值范围**：  - true：支持通配符。 - false：不支持通配符。  **默认取值**：  false。
     *
     * @var string[]
     */
@@ -39,7 +42,10 @@ class ModifyDataSyncConfigRequestV3 implements ModelInterface, ArrayAccess
             'dbConfigs' => '\HuaweiCloud\SDK\GaussDB\V3\Model\DbConfig[]',
             'tablesConfigs' => '\HuaweiCloud\SDK\GaussDB\V3\Model\TablesConfig[]',
             'tableReplConfig' => '\HuaweiCloud\SDK\GaussDB\V3\Model\TableReplConfig',
-            'targetDatabaseName' => 'string'
+            'targetDatabaseName' => 'string',
+            'isInstanceLevelSync' => 'string',
+            'databaseReplScope' => 'string',
+            'isSupportRegExp' => 'string'
     ];
 
     /**
@@ -52,6 +58,9 @@ class ModifyDataSyncConfigRequestV3 implements ModelInterface, ArrayAccess
     * tablesConfigs  **参数解释**：  表配置信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认值**：  不涉及。
     * tableReplConfig  tableReplConfig
     * targetDatabaseName  **参数解释**：  目标数据库名。  **约束限制**：  不涉及。  **取值范围**：  长度限制3~128位，仅支持英文大小写字母、数字以及下划线。  **默认值**：  不涉及。
+    * isInstanceLevelSync  **参数解释**：  是否支持实例级同步。  **约束限制**：  不涉及。  **取值范围**：  - true：是。 - false：否。  **默认取值**：  false。
+    * databaseReplScope  **参数解释**：  库同步范围。  **约束限制**：  不涉及。  **取值范围**：  - all：同步全部库。 - part：同步部分库。  **默认取值**：  part。
+    * isSupportRegExp  **参数解释**：  是否支持通配符。  **约束限制**：  不涉及。  **取值范围**：  - true：支持通配符。 - false：不支持通配符。  **默认取值**：  false。
     *
     * @var string[]
     */
@@ -63,7 +72,10 @@ class ModifyDataSyncConfigRequestV3 implements ModelInterface, ArrayAccess
         'dbConfigs' => null,
         'tablesConfigs' => null,
         'tableReplConfig' => null,
-        'targetDatabaseName' => null
+        'targetDatabaseName' => null,
+        'isInstanceLevelSync' => null,
+        'databaseReplScope' => null,
+        'isSupportRegExp' => null
     ];
 
     /**
@@ -97,6 +109,9 @@ class ModifyDataSyncConfigRequestV3 implements ModelInterface, ArrayAccess
     * tablesConfigs  **参数解释**：  表配置信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认值**：  不涉及。
     * tableReplConfig  tableReplConfig
     * targetDatabaseName  **参数解释**：  目标数据库名。  **约束限制**：  不涉及。  **取值范围**：  长度限制3~128位，仅支持英文大小写字母、数字以及下划线。  **默认值**：  不涉及。
+    * isInstanceLevelSync  **参数解释**：  是否支持实例级同步。  **约束限制**：  不涉及。  **取值范围**：  - true：是。 - false：否。  **默认取值**：  false。
+    * databaseReplScope  **参数解释**：  库同步范围。  **约束限制**：  不涉及。  **取值范围**：  - all：同步全部库。 - part：同步部分库。  **默认取值**：  part。
+    * isSupportRegExp  **参数解释**：  是否支持通配符。  **约束限制**：  不涉及。  **取值范围**：  - true：支持通配符。 - false：不支持通配符。  **默认取值**：  false。
     *
     * @var string[]
     */
@@ -108,7 +123,10 @@ class ModifyDataSyncConfigRequestV3 implements ModelInterface, ArrayAccess
             'dbConfigs' => 'db_configs',
             'tablesConfigs' => 'tables_configs',
             'tableReplConfig' => 'table_repl_config',
-            'targetDatabaseName' => 'target_database_name'
+            'targetDatabaseName' => 'target_database_name',
+            'isInstanceLevelSync' => 'is_instance_level_sync',
+            'databaseReplScope' => 'database_repl_scope',
+            'isSupportRegExp' => 'is_support_reg_exp'
     ];
 
     /**
@@ -121,6 +139,9 @@ class ModifyDataSyncConfigRequestV3 implements ModelInterface, ArrayAccess
     * tablesConfigs  **参数解释**：  表配置信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认值**：  不涉及。
     * tableReplConfig  tableReplConfig
     * targetDatabaseName  **参数解释**：  目标数据库名。  **约束限制**：  不涉及。  **取值范围**：  长度限制3~128位，仅支持英文大小写字母、数字以及下划线。  **默认值**：  不涉及。
+    * isInstanceLevelSync  **参数解释**：  是否支持实例级同步。  **约束限制**：  不涉及。  **取值范围**：  - true：是。 - false：否。  **默认取值**：  false。
+    * databaseReplScope  **参数解释**：  库同步范围。  **约束限制**：  不涉及。  **取值范围**：  - all：同步全部库。 - part：同步部分库。  **默认取值**：  part。
+    * isSupportRegExp  **参数解释**：  是否支持通配符。  **约束限制**：  不涉及。  **取值范围**：  - true：支持通配符。 - false：不支持通配符。  **默认取值**：  false。
     *
     * @var string[]
     */
@@ -132,7 +153,10 @@ class ModifyDataSyncConfigRequestV3 implements ModelInterface, ArrayAccess
             'dbConfigs' => 'setDbConfigs',
             'tablesConfigs' => 'setTablesConfigs',
             'tableReplConfig' => 'setTableReplConfig',
-            'targetDatabaseName' => 'setTargetDatabaseName'
+            'targetDatabaseName' => 'setTargetDatabaseName',
+            'isInstanceLevelSync' => 'setIsInstanceLevelSync',
+            'databaseReplScope' => 'setDatabaseReplScope',
+            'isSupportRegExp' => 'setIsSupportRegExp'
     ];
 
     /**
@@ -145,6 +169,9 @@ class ModifyDataSyncConfigRequestV3 implements ModelInterface, ArrayAccess
     * tablesConfigs  **参数解释**：  表配置信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认值**：  不涉及。
     * tableReplConfig  tableReplConfig
     * targetDatabaseName  **参数解释**：  目标数据库名。  **约束限制**：  不涉及。  **取值范围**：  长度限制3~128位，仅支持英文大小写字母、数字以及下划线。  **默认值**：  不涉及。
+    * isInstanceLevelSync  **参数解释**：  是否支持实例级同步。  **约束限制**：  不涉及。  **取值范围**：  - true：是。 - false：否。  **默认取值**：  false。
+    * databaseReplScope  **参数解释**：  库同步范围。  **约束限制**：  不涉及。  **取值范围**：  - all：同步全部库。 - part：同步部分库。  **默认取值**：  part。
+    * isSupportRegExp  **参数解释**：  是否支持通配符。  **约束限制**：  不涉及。  **取值范围**：  - true：支持通配符。 - false：不支持通配符。  **默认取值**：  false。
     *
     * @var string[]
     */
@@ -156,7 +183,10 @@ class ModifyDataSyncConfigRequestV3 implements ModelInterface, ArrayAccess
             'dbConfigs' => 'getDbConfigs',
             'tablesConfigs' => 'getTablesConfigs',
             'tableReplConfig' => 'getTableReplConfig',
-            'targetDatabaseName' => 'getTargetDatabaseName'
+            'targetDatabaseName' => 'getTargetDatabaseName',
+            'isInstanceLevelSync' => 'getIsInstanceLevelSync',
+            'databaseReplScope' => 'getDatabaseReplScope',
+            'isSupportRegExp' => 'getIsSupportRegExp'
     ];
 
     /**
@@ -225,6 +255,9 @@ class ModifyDataSyncConfigRequestV3 implements ModelInterface, ArrayAccess
         $this->container['tablesConfigs'] = isset($data['tablesConfigs']) ? $data['tablesConfigs'] : null;
         $this->container['tableReplConfig'] = isset($data['tableReplConfig']) ? $data['tableReplConfig'] : null;
         $this->container['targetDatabaseName'] = isset($data['targetDatabaseName']) ? $data['targetDatabaseName'] : null;
+        $this->container['isInstanceLevelSync'] = isset($data['isInstanceLevelSync']) ? $data['isInstanceLevelSync'] : null;
+        $this->container['databaseReplScope'] = isset($data['databaseReplScope']) ? $data['databaseReplScope'] : null;
+        $this->container['isSupportRegExp'] = isset($data['isSupportRegExp']) ? $data['isSupportRegExp'] : null;
     }
 
     /**
@@ -438,6 +471,78 @@ class ModifyDataSyncConfigRequestV3 implements ModelInterface, ArrayAccess
     public function setTargetDatabaseName($targetDatabaseName)
     {
         $this->container['targetDatabaseName'] = $targetDatabaseName;
+        return $this;
+    }
+
+    /**
+    * Gets isInstanceLevelSync
+    *  **参数解释**：  是否支持实例级同步。  **约束限制**：  不涉及。  **取值范围**：  - true：是。 - false：否。  **默认取值**：  false。
+    *
+    * @return string|null
+    */
+    public function getIsInstanceLevelSync()
+    {
+        return $this->container['isInstanceLevelSync'];
+    }
+
+    /**
+    * Sets isInstanceLevelSync
+    *
+    * @param string|null $isInstanceLevelSync **参数解释**：  是否支持实例级同步。  **约束限制**：  不涉及。  **取值范围**：  - true：是。 - false：否。  **默认取值**：  false。
+    *
+    * @return $this
+    */
+    public function setIsInstanceLevelSync($isInstanceLevelSync)
+    {
+        $this->container['isInstanceLevelSync'] = $isInstanceLevelSync;
+        return $this;
+    }
+
+    /**
+    * Gets databaseReplScope
+    *  **参数解释**：  库同步范围。  **约束限制**：  不涉及。  **取值范围**：  - all：同步全部库。 - part：同步部分库。  **默认取值**：  part。
+    *
+    * @return string|null
+    */
+    public function getDatabaseReplScope()
+    {
+        return $this->container['databaseReplScope'];
+    }
+
+    /**
+    * Sets databaseReplScope
+    *
+    * @param string|null $databaseReplScope **参数解释**：  库同步范围。  **约束限制**：  不涉及。  **取值范围**：  - all：同步全部库。 - part：同步部分库。  **默认取值**：  part。
+    *
+    * @return $this
+    */
+    public function setDatabaseReplScope($databaseReplScope)
+    {
+        $this->container['databaseReplScope'] = $databaseReplScope;
+        return $this;
+    }
+
+    /**
+    * Gets isSupportRegExp
+    *  **参数解释**：  是否支持通配符。  **约束限制**：  不涉及。  **取值范围**：  - true：支持通配符。 - false：不支持通配符。  **默认取值**：  false。
+    *
+    * @return string|null
+    */
+    public function getIsSupportRegExp()
+    {
+        return $this->container['isSupportRegExp'];
+    }
+
+    /**
+    * Sets isSupportRegExp
+    *
+    * @param string|null $isSupportRegExp **参数解释**：  是否支持通配符。  **约束限制**：  不涉及。  **取值范围**：  - true：支持通配符。 - false：不支持通配符。  **默认取值**：  false。
+    *
+    * @return $this
+    */
+    public function setIsSupportRegExp($isSupportRegExp)
+    {
+        $this->container['isSupportRegExp'] = $isSupportRegExp;
         return $this;
     }
 

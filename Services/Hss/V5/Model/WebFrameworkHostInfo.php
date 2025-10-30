@@ -20,30 +20,26 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentId  agent_id
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * name  名称
-    * version  版本
-    * path  路径
-    * fileSize  大小
-    * recordTime  扫描时间
-    * bindIpList  绑定的ip列表
-    * catalogue  软件的类型
-    * connectedIpList  连接的ip列表
-    * connectedNumber  连接数
-    * embedderDir  压缩的目录
-    * fileName  文件名称
-    * fileType  文件类型
-    * gid  用户组id
-    * hash  文件哈希值
-    * isEmbedded  是否是压缩的文件
-    * listenPortList  监听的端口列表
-    * mode  文件权限
-    * pid  进程id
-    * procPath  进程路径
-    * uid  用户id
+    * agentId  **参数解释** agent id **取值范围** 字符长度1-64
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-64
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64
+    * hostIp  **参数解释** 服务器ip **取值范围** 字符长度1-64
+    * name  **参数解释**: web框架名称 **取值范围**: 字符长度1-256
+    * version  **参数解释**: web框架版本 **取值范围**: 字符长度1-512
+    * path  **参数解释**: web框架文件路径 **取值范围**: 字符长度1-512
+    * recordTime  **参数解释**: web框架扫描时间 **取值范围**: 最小值0，最大值2^63-1
+    * catalogue  **参数解释**: 软件的类型 **取值范围**: 字符长度1-32
+    * fileName  **参数解释**: web框架文件名称 **取值范围**: 字符长度1-256
+    * fileType  **参数解释**: web框架文件类型 **取值范围**: 字符长度1-32
+    * gid  **参数解释**: web框架进程gid **取值范围**: 最小值0，最大值2147483647
+    * hash  **参数解释**: web框架文件哈希 **取值范围**: 字符长度1-64
+    * isEmbedded  **参数解释**: 是否是压缩的文件 **取值范围**: - 0：不是压缩文件 - 1：是压缩文件
+    * mode  **参数解释**: web框架文件权限 **取值范围**: 字符长度1-32
+    * pid  **参数解释**: web框架进程pid **取值范围**: 最小值0，最大值2147483647
+    * procPath  **参数解释**: web框架进程路径 **取值范围**: 字符长度1-1024
+    * uid  **参数解释**: web框架进程uid **取值范围**: 最小值0，最大值2147483647
+    * containerId  **参数解释**: 容器id **取值范围**: 字符长度1-128
+    * containerName  **参数解释**: 容器名称 **取值范围**: 字符长度1-256
     *
     * @var string[]
     */
@@ -55,51 +51,43 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
             'name' => 'string',
             'version' => 'string',
             'path' => 'string',
-            'fileSize' => 'int',
             'recordTime' => 'int',
-            'bindIpList' => 'string',
             'catalogue' => 'string',
-            'connectedIpList' => 'string',
-            'connectedNumber' => 'string',
-            'embedderDir' => 'string',
             'fileName' => 'string',
             'fileType' => 'string',
             'gid' => 'int',
             'hash' => 'string',
             'isEmbedded' => 'int',
-            'listenPortList' => 'string',
             'mode' => 'string',
             'pid' => 'int',
             'procPath' => 'string',
-            'uid' => 'string'
+            'uid' => 'int',
+            'containerId' => 'string',
+            'containerName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentId  agent_id
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * name  名称
-    * version  版本
-    * path  路径
-    * fileSize  大小
-    * recordTime  扫描时间
-    * bindIpList  绑定的ip列表
-    * catalogue  软件的类型
-    * connectedIpList  连接的ip列表
-    * connectedNumber  连接数
-    * embedderDir  压缩的目录
-    * fileName  文件名称
-    * fileType  文件类型
-    * gid  用户组id
-    * hash  文件哈希值
-    * isEmbedded  是否是压缩的文件
-    * listenPortList  监听的端口列表
-    * mode  文件权限
-    * pid  进程id
-    * procPath  进程路径
-    * uid  用户id
+    * agentId  **参数解释** agent id **取值范围** 字符长度1-64
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-64
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64
+    * hostIp  **参数解释** 服务器ip **取值范围** 字符长度1-64
+    * name  **参数解释**: web框架名称 **取值范围**: 字符长度1-256
+    * version  **参数解释**: web框架版本 **取值范围**: 字符长度1-512
+    * path  **参数解释**: web框架文件路径 **取值范围**: 字符长度1-512
+    * recordTime  **参数解释**: web框架扫描时间 **取值范围**: 最小值0，最大值2^63-1
+    * catalogue  **参数解释**: 软件的类型 **取值范围**: 字符长度1-32
+    * fileName  **参数解释**: web框架文件名称 **取值范围**: 字符长度1-256
+    * fileType  **参数解释**: web框架文件类型 **取值范围**: 字符长度1-32
+    * gid  **参数解释**: web框架进程gid **取值范围**: 最小值0，最大值2147483647
+    * hash  **参数解释**: web框架文件哈希 **取值范围**: 字符长度1-64
+    * isEmbedded  **参数解释**: 是否是压缩的文件 **取值范围**: - 0：不是压缩文件 - 1：是压缩文件
+    * mode  **参数解释**: web框架文件权限 **取值范围**: 字符长度1-32
+    * pid  **参数解释**: web框架进程pid **取值范围**: 最小值0，最大值2147483647
+    * procPath  **参数解释**: web框架进程路径 **取值范围**: 字符长度1-1024
+    * uid  **参数解释**: web框架进程uid **取值范围**: 最小值0，最大值2147483647
+    * containerId  **参数解释**: 容器id **取值范围**: 字符长度1-128
+    * containerName  **参数解释**: 容器名称 **取值范围**: 字符长度1-256
     *
     * @var string[]
     */
@@ -111,23 +99,19 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
         'name' => null,
         'version' => null,
         'path' => null,
-        'fileSize' => null,
         'recordTime' => 'int64',
-        'bindIpList' => null,
         'catalogue' => null,
-        'connectedIpList' => null,
-        'connectedNumber' => null,
-        'embedderDir' => null,
         'fileName' => null,
         'fileType' => null,
-        'gid' => null,
+        'gid' => 'int32',
         'hash' => null,
-        'isEmbedded' => null,
-        'listenPortList' => null,
+        'isEmbedded' => 'int32',
         'mode' => null,
-        'pid' => null,
+        'pid' => 'int32',
         'procPath' => null,
-        'uid' => null
+        'uid' => 'int32',
+        'containerId' => null,
+        'containerName' => null
     ];
 
     /**
@@ -153,30 +137,26 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentId  agent_id
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * name  名称
-    * version  版本
-    * path  路径
-    * fileSize  大小
-    * recordTime  扫描时间
-    * bindIpList  绑定的ip列表
-    * catalogue  软件的类型
-    * connectedIpList  连接的ip列表
-    * connectedNumber  连接数
-    * embedderDir  压缩的目录
-    * fileName  文件名称
-    * fileType  文件类型
-    * gid  用户组id
-    * hash  文件哈希值
-    * isEmbedded  是否是压缩的文件
-    * listenPortList  监听的端口列表
-    * mode  文件权限
-    * pid  进程id
-    * procPath  进程路径
-    * uid  用户id
+    * agentId  **参数解释** agent id **取值范围** 字符长度1-64
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-64
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64
+    * hostIp  **参数解释** 服务器ip **取值范围** 字符长度1-64
+    * name  **参数解释**: web框架名称 **取值范围**: 字符长度1-256
+    * version  **参数解释**: web框架版本 **取值范围**: 字符长度1-512
+    * path  **参数解释**: web框架文件路径 **取值范围**: 字符长度1-512
+    * recordTime  **参数解释**: web框架扫描时间 **取值范围**: 最小值0，最大值2^63-1
+    * catalogue  **参数解释**: 软件的类型 **取值范围**: 字符长度1-32
+    * fileName  **参数解释**: web框架文件名称 **取值范围**: 字符长度1-256
+    * fileType  **参数解释**: web框架文件类型 **取值范围**: 字符长度1-32
+    * gid  **参数解释**: web框架进程gid **取值范围**: 最小值0，最大值2147483647
+    * hash  **参数解释**: web框架文件哈希 **取值范围**: 字符长度1-64
+    * isEmbedded  **参数解释**: 是否是压缩的文件 **取值范围**: - 0：不是压缩文件 - 1：是压缩文件
+    * mode  **参数解释**: web框架文件权限 **取值范围**: 字符长度1-32
+    * pid  **参数解释**: web框架进程pid **取值范围**: 最小值0，最大值2147483647
+    * procPath  **参数解释**: web框架进程路径 **取值范围**: 字符长度1-1024
+    * uid  **参数解释**: web框架进程uid **取值范围**: 最小值0，最大值2147483647
+    * containerId  **参数解释**: 容器id **取值范围**: 字符长度1-128
+    * containerName  **参数解释**: 容器名称 **取值范围**: 字符长度1-256
     *
     * @var string[]
     */
@@ -188,51 +168,43 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
             'name' => 'name',
             'version' => 'version',
             'path' => 'path',
-            'fileSize' => 'file_size',
             'recordTime' => 'record_time',
-            'bindIpList' => 'bind_ip_list',
             'catalogue' => 'catalogue',
-            'connectedIpList' => 'connected_ip_list',
-            'connectedNumber' => 'connected_number',
-            'embedderDir' => 'embedder_dir',
             'fileName' => 'file_name',
             'fileType' => 'file_type',
             'gid' => 'gid',
             'hash' => 'hash',
             'isEmbedded' => 'is_embedded',
-            'listenPortList' => 'listen_port_list',
             'mode' => 'mode',
             'pid' => 'pid',
             'procPath' => 'proc_path',
-            'uid' => 'uid'
+            'uid' => 'uid',
+            'containerId' => 'container_id',
+            'containerName' => 'container_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentId  agent_id
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * name  名称
-    * version  版本
-    * path  路径
-    * fileSize  大小
-    * recordTime  扫描时间
-    * bindIpList  绑定的ip列表
-    * catalogue  软件的类型
-    * connectedIpList  连接的ip列表
-    * connectedNumber  连接数
-    * embedderDir  压缩的目录
-    * fileName  文件名称
-    * fileType  文件类型
-    * gid  用户组id
-    * hash  文件哈希值
-    * isEmbedded  是否是压缩的文件
-    * listenPortList  监听的端口列表
-    * mode  文件权限
-    * pid  进程id
-    * procPath  进程路径
-    * uid  用户id
+    * agentId  **参数解释** agent id **取值范围** 字符长度1-64
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-64
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64
+    * hostIp  **参数解释** 服务器ip **取值范围** 字符长度1-64
+    * name  **参数解释**: web框架名称 **取值范围**: 字符长度1-256
+    * version  **参数解释**: web框架版本 **取值范围**: 字符长度1-512
+    * path  **参数解释**: web框架文件路径 **取值范围**: 字符长度1-512
+    * recordTime  **参数解释**: web框架扫描时间 **取值范围**: 最小值0，最大值2^63-1
+    * catalogue  **参数解释**: 软件的类型 **取值范围**: 字符长度1-32
+    * fileName  **参数解释**: web框架文件名称 **取值范围**: 字符长度1-256
+    * fileType  **参数解释**: web框架文件类型 **取值范围**: 字符长度1-32
+    * gid  **参数解释**: web框架进程gid **取值范围**: 最小值0，最大值2147483647
+    * hash  **参数解释**: web框架文件哈希 **取值范围**: 字符长度1-64
+    * isEmbedded  **参数解释**: 是否是压缩的文件 **取值范围**: - 0：不是压缩文件 - 1：是压缩文件
+    * mode  **参数解释**: web框架文件权限 **取值范围**: 字符长度1-32
+    * pid  **参数解释**: web框架进程pid **取值范围**: 最小值0，最大值2147483647
+    * procPath  **参数解释**: web框架进程路径 **取值范围**: 字符长度1-1024
+    * uid  **参数解释**: web框架进程uid **取值范围**: 最小值0，最大值2147483647
+    * containerId  **参数解释**: 容器id **取值范围**: 字符长度1-128
+    * containerName  **参数解释**: 容器名称 **取值范围**: 字符长度1-256
     *
     * @var string[]
     */
@@ -244,51 +216,43 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'version' => 'setVersion',
             'path' => 'setPath',
-            'fileSize' => 'setFileSize',
             'recordTime' => 'setRecordTime',
-            'bindIpList' => 'setBindIpList',
             'catalogue' => 'setCatalogue',
-            'connectedIpList' => 'setConnectedIpList',
-            'connectedNumber' => 'setConnectedNumber',
-            'embedderDir' => 'setEmbedderDir',
             'fileName' => 'setFileName',
             'fileType' => 'setFileType',
             'gid' => 'setGid',
             'hash' => 'setHash',
             'isEmbedded' => 'setIsEmbedded',
-            'listenPortList' => 'setListenPortList',
             'mode' => 'setMode',
             'pid' => 'setPid',
             'procPath' => 'setProcPath',
-            'uid' => 'setUid'
+            'uid' => 'setUid',
+            'containerId' => 'setContainerId',
+            'containerName' => 'setContainerName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentId  agent_id
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * name  名称
-    * version  版本
-    * path  路径
-    * fileSize  大小
-    * recordTime  扫描时间
-    * bindIpList  绑定的ip列表
-    * catalogue  软件的类型
-    * connectedIpList  连接的ip列表
-    * connectedNumber  连接数
-    * embedderDir  压缩的目录
-    * fileName  文件名称
-    * fileType  文件类型
-    * gid  用户组id
-    * hash  文件哈希值
-    * isEmbedded  是否是压缩的文件
-    * listenPortList  监听的端口列表
-    * mode  文件权限
-    * pid  进程id
-    * procPath  进程路径
-    * uid  用户id
+    * agentId  **参数解释** agent id **取值范围** 字符长度1-64
+    * hostId  **参数解释** 主机id **取值范围** 字符长度1-64
+    * hostName  **参数解释** 服务器名称 **取值范围** 字符长度1-64
+    * hostIp  **参数解释** 服务器ip **取值范围** 字符长度1-64
+    * name  **参数解释**: web框架名称 **取值范围**: 字符长度1-256
+    * version  **参数解释**: web框架版本 **取值范围**: 字符长度1-512
+    * path  **参数解释**: web框架文件路径 **取值范围**: 字符长度1-512
+    * recordTime  **参数解释**: web框架扫描时间 **取值范围**: 最小值0，最大值2^63-1
+    * catalogue  **参数解释**: 软件的类型 **取值范围**: 字符长度1-32
+    * fileName  **参数解释**: web框架文件名称 **取值范围**: 字符长度1-256
+    * fileType  **参数解释**: web框架文件类型 **取值范围**: 字符长度1-32
+    * gid  **参数解释**: web框架进程gid **取值范围**: 最小值0，最大值2147483647
+    * hash  **参数解释**: web框架文件哈希 **取值范围**: 字符长度1-64
+    * isEmbedded  **参数解释**: 是否是压缩的文件 **取值范围**: - 0：不是压缩文件 - 1：是压缩文件
+    * mode  **参数解释**: web框架文件权限 **取值范围**: 字符长度1-32
+    * pid  **参数解释**: web框架进程pid **取值范围**: 最小值0，最大值2147483647
+    * procPath  **参数解释**: web框架进程路径 **取值范围**: 字符长度1-1024
+    * uid  **参数解释**: web框架进程uid **取值范围**: 最小值0，最大值2147483647
+    * containerId  **参数解释**: 容器id **取值范围**: 字符长度1-128
+    * containerName  **参数解释**: 容器名称 **取值范围**: 字符长度1-256
     *
     * @var string[]
     */
@@ -300,23 +264,19 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'version' => 'getVersion',
             'path' => 'getPath',
-            'fileSize' => 'getFileSize',
             'recordTime' => 'getRecordTime',
-            'bindIpList' => 'getBindIpList',
             'catalogue' => 'getCatalogue',
-            'connectedIpList' => 'getConnectedIpList',
-            'connectedNumber' => 'getConnectedNumber',
-            'embedderDir' => 'getEmbedderDir',
             'fileName' => 'getFileName',
             'fileType' => 'getFileType',
             'gid' => 'getGid',
             'hash' => 'getHash',
             'isEmbedded' => 'getIsEmbedded',
-            'listenPortList' => 'getListenPortList',
             'mode' => 'getMode',
             'pid' => 'getPid',
             'procPath' => 'getProcPath',
-            'uid' => 'getUid'
+            'uid' => 'getUid',
+            'containerId' => 'getContainerId',
+            'containerName' => 'getContainerName'
     ];
 
     /**
@@ -384,23 +344,19 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['path'] = isset($data['path']) ? $data['path'] : null;
-        $this->container['fileSize'] = isset($data['fileSize']) ? $data['fileSize'] : null;
         $this->container['recordTime'] = isset($data['recordTime']) ? $data['recordTime'] : null;
-        $this->container['bindIpList'] = isset($data['bindIpList']) ? $data['bindIpList'] : null;
         $this->container['catalogue'] = isset($data['catalogue']) ? $data['catalogue'] : null;
-        $this->container['connectedIpList'] = isset($data['connectedIpList']) ? $data['connectedIpList'] : null;
-        $this->container['connectedNumber'] = isset($data['connectedNumber']) ? $data['connectedNumber'] : null;
-        $this->container['embedderDir'] = isset($data['embedderDir']) ? $data['embedderDir'] : null;
         $this->container['fileName'] = isset($data['fileName']) ? $data['fileName'] : null;
         $this->container['fileType'] = isset($data['fileType']) ? $data['fileType'] : null;
         $this->container['gid'] = isset($data['gid']) ? $data['gid'] : null;
         $this->container['hash'] = isset($data['hash']) ? $data['hash'] : null;
         $this->container['isEmbedded'] = isset($data['isEmbedded']) ? $data['isEmbedded'] : null;
-        $this->container['listenPortList'] = isset($data['listenPortList']) ? $data['listenPortList'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
         $this->container['pid'] = isset($data['pid']) ? $data['pid'] : null;
         $this->container['procPath'] = isset($data['procPath']) ? $data['procPath'] : null;
         $this->container['uid'] = isset($data['uid']) ? $data['uid'] : null;
+        $this->container['containerId'] = isset($data['containerId']) ? $data['containerId'] : null;
+        $this->container['containerName'] = isset($data['containerName']) ? $data['containerName'] : null;
     }
 
     /**
@@ -411,6 +367,96 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'agentId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'agentId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hostIp', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostIp', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 256)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) > 512)) {
+                $invalidProperties[] = "invalid value for 'version', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) < 1)) {
+                $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['path']) && (mb_strlen($this->container['path']) > 512)) {
+                $invalidProperties[] = "invalid value for 'path', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['path']) && (mb_strlen($this->container['path']) < 1)) {
+                $invalidProperties[] = "invalid value for 'path', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['catalogue']) && (mb_strlen($this->container['catalogue']) > 32)) {
+                $invalidProperties[] = "invalid value for 'catalogue', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['catalogue']) && (mb_strlen($this->container['catalogue']) < 1)) {
+                $invalidProperties[] = "invalid value for 'catalogue', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['fileName']) && (mb_strlen($this->container['fileName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'fileName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['fileName']) && (mb_strlen($this->container['fileName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'fileName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['fileType']) && (mb_strlen($this->container['fileType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'fileType', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['fileType']) && (mb_strlen($this->container['fileType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'fileType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hash']) && (mb_strlen($this->container['hash']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hash', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['hash']) && (mb_strlen($this->container['hash']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hash', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['mode']) && (mb_strlen($this->container['mode']) > 32)) {
+                $invalidProperties[] = "invalid value for 'mode', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['mode']) && (mb_strlen($this->container['mode']) < 1)) {
+                $invalidProperties[] = "invalid value for 'mode', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['procPath']) && (mb_strlen($this->container['procPath']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'procPath', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['procPath']) && (mb_strlen($this->container['procPath']) < 1)) {
+                $invalidProperties[] = "invalid value for 'procPath', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'containerId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'containerId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'containerName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'containerName', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -427,7 +473,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  agent_id
+    *  **参数解释** agent id **取值范围** 字符长度1-64
     *
     * @return string|null
     */
@@ -439,7 +485,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId agent_id
+    * @param string|null $agentId **参数解释** agent id **取值范围** 字符长度1-64
     *
     * @return $this
     */
@@ -451,7 +497,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机id
+    *  **参数解释** 主机id **取值范围** 字符长度1-64
     *
     * @return string|null
     */
@@ -463,7 +509,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机id
+    * @param string|null $hostId **参数解释** 主机id **取值范围** 字符长度1-64
     *
     * @return $this
     */
@@ -475,7 +521,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释** 服务器名称 **取值范围** 字符长度1-64
     *
     * @return string|null
     */
@@ -487,7 +533,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释** 服务器名称 **取值范围** 字符长度1-64
     *
     * @return $this
     */
@@ -499,7 +545,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  服务器ip
+    *  **参数解释** 服务器ip **取值范围** 字符长度1-64
     *
     * @return string|null
     */
@@ -511,7 +557,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 服务器ip
+    * @param string|null $hostIp **参数解释** 服务器ip **取值范围** 字符长度1-64
     *
     * @return $this
     */
@@ -523,7 +569,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  **参数解释**: web框架名称 **取值范围**: 字符长度1-256
     *
     * @return string|null
     */
@@ -535,7 +581,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string|null $name **参数解释**: web框架名称 **取值范围**: 字符长度1-256
     *
     * @return $this
     */
@@ -547,7 +593,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  版本
+    *  **参数解释**: web框架版本 **取值范围**: 字符长度1-512
     *
     * @return string|null
     */
@@ -559,7 +605,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 版本
+    * @param string|null $version **参数解释**: web框架版本 **取值范围**: 字符长度1-512
     *
     * @return $this
     */
@@ -571,7 +617,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  路径
+    *  **参数解释**: web框架文件路径 **取值范围**: 字符长度1-512
     *
     * @return string|null
     */
@@ -583,7 +629,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string|null $path 路径
+    * @param string|null $path **参数解释**: web框架文件路径 **取值范围**: 字符长度1-512
     *
     * @return $this
     */
@@ -594,32 +640,8 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets fileSize
-    *  大小
-    *
-    * @return int|null
-    */
-    public function getFileSize()
-    {
-        return $this->container['fileSize'];
-    }
-
-    /**
-    * Sets fileSize
-    *
-    * @param int|null $fileSize 大小
-    *
-    * @return $this
-    */
-    public function setFileSize($fileSize)
-    {
-        $this->container['fileSize'] = $fileSize;
-        return $this;
-    }
-
-    /**
     * Gets recordTime
-    *  扫描时间
+    *  **参数解释**: web框架扫描时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @return int|null
     */
@@ -631,7 +653,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets recordTime
     *
-    * @param int|null $recordTime 扫描时间
+    * @param int|null $recordTime **参数解释**: web框架扫描时间 **取值范围**: 最小值0，最大值2^63-1
     *
     * @return $this
     */
@@ -642,32 +664,8 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets bindIpList
-    *  绑定的ip列表
-    *
-    * @return string|null
-    */
-    public function getBindIpList()
-    {
-        return $this->container['bindIpList'];
-    }
-
-    /**
-    * Sets bindIpList
-    *
-    * @param string|null $bindIpList 绑定的ip列表
-    *
-    * @return $this
-    */
-    public function setBindIpList($bindIpList)
-    {
-        $this->container['bindIpList'] = $bindIpList;
-        return $this;
-    }
-
-    /**
     * Gets catalogue
-    *  软件的类型
+    *  **参数解释**: 软件的类型 **取值范围**: 字符长度1-32
     *
     * @return string|null
     */
@@ -679,7 +677,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets catalogue
     *
-    * @param string|null $catalogue 软件的类型
+    * @param string|null $catalogue **参数解释**: 软件的类型 **取值范围**: 字符长度1-32
     *
     * @return $this
     */
@@ -690,80 +688,8 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets connectedIpList
-    *  连接的ip列表
-    *
-    * @return string|null
-    */
-    public function getConnectedIpList()
-    {
-        return $this->container['connectedIpList'];
-    }
-
-    /**
-    * Sets connectedIpList
-    *
-    * @param string|null $connectedIpList 连接的ip列表
-    *
-    * @return $this
-    */
-    public function setConnectedIpList($connectedIpList)
-    {
-        $this->container['connectedIpList'] = $connectedIpList;
-        return $this;
-    }
-
-    /**
-    * Gets connectedNumber
-    *  连接数
-    *
-    * @return string|null
-    */
-    public function getConnectedNumber()
-    {
-        return $this->container['connectedNumber'];
-    }
-
-    /**
-    * Sets connectedNumber
-    *
-    * @param string|null $connectedNumber 连接数
-    *
-    * @return $this
-    */
-    public function setConnectedNumber($connectedNumber)
-    {
-        $this->container['connectedNumber'] = $connectedNumber;
-        return $this;
-    }
-
-    /**
-    * Gets embedderDir
-    *  压缩的目录
-    *
-    * @return string|null
-    */
-    public function getEmbedderDir()
-    {
-        return $this->container['embedderDir'];
-    }
-
-    /**
-    * Sets embedderDir
-    *
-    * @param string|null $embedderDir 压缩的目录
-    *
-    * @return $this
-    */
-    public function setEmbedderDir($embedderDir)
-    {
-        $this->container['embedderDir'] = $embedderDir;
-        return $this;
-    }
-
-    /**
     * Gets fileName
-    *  文件名称
+    *  **参数解释**: web框架文件名称 **取值范围**: 字符长度1-256
     *
     * @return string|null
     */
@@ -775,7 +701,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileName
     *
-    * @param string|null $fileName 文件名称
+    * @param string|null $fileName **参数解释**: web框架文件名称 **取值范围**: 字符长度1-256
     *
     * @return $this
     */
@@ -787,7 +713,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileType
-    *  文件类型
+    *  **参数解释**: web框架文件类型 **取值范围**: 字符长度1-32
     *
     * @return string|null
     */
@@ -799,7 +725,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileType
     *
-    * @param string|null $fileType 文件类型
+    * @param string|null $fileType **参数解释**: web框架文件类型 **取值范围**: 字符长度1-32
     *
     * @return $this
     */
@@ -811,7 +737,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets gid
-    *  用户组id
+    *  **参数解释**: web框架进程gid **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -823,7 +749,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets gid
     *
-    * @param int|null $gid 用户组id
+    * @param int|null $gid **参数解释**: web框架进程gid **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -835,7 +761,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hash
-    *  文件哈希值
+    *  **参数解释**: web框架文件哈希 **取值范围**: 字符长度1-64
     *
     * @return string|null
     */
@@ -847,7 +773,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hash
     *
-    * @param string|null $hash 文件哈希值
+    * @param string|null $hash **参数解释**: web框架文件哈希 **取值范围**: 字符长度1-64
     *
     * @return $this
     */
@@ -859,7 +785,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isEmbedded
-    *  是否是压缩的文件
+    *  **参数解释**: 是否是压缩的文件 **取值范围**: - 0：不是压缩文件 - 1：是压缩文件
     *
     * @return int|null
     */
@@ -871,7 +797,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isEmbedded
     *
-    * @param int|null $isEmbedded 是否是压缩的文件
+    * @param int|null $isEmbedded **参数解释**: 是否是压缩的文件 **取值范围**: - 0：不是压缩文件 - 1：是压缩文件
     *
     * @return $this
     */
@@ -882,32 +808,8 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets listenPortList
-    *  监听的端口列表
-    *
-    * @return string|null
-    */
-    public function getListenPortList()
-    {
-        return $this->container['listenPortList'];
-    }
-
-    /**
-    * Sets listenPortList
-    *
-    * @param string|null $listenPortList 监听的端口列表
-    *
-    * @return $this
-    */
-    public function setListenPortList($listenPortList)
-    {
-        $this->container['listenPortList'] = $listenPortList;
-        return $this;
-    }
-
-    /**
     * Gets mode
-    *  文件权限
+    *  **参数解释**: web框架文件权限 **取值范围**: 字符长度1-32
     *
     * @return string|null
     */
@@ -919,7 +821,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string|null $mode 文件权限
+    * @param string|null $mode **参数解释**: web框架文件权限 **取值范围**: 字符长度1-32
     *
     * @return $this
     */
@@ -931,7 +833,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pid
-    *  进程id
+    *  **参数解释**: web框架进程pid **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -943,7 +845,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pid
     *
-    * @param int|null $pid 进程id
+    * @param int|null $pid **参数解释**: web框架进程pid **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -955,7 +857,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets procPath
-    *  进程路径
+    *  **参数解释**: web框架进程路径 **取值范围**: 字符长度1-1024
     *
     * @return string|null
     */
@@ -967,7 +869,7 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets procPath
     *
-    * @param string|null $procPath 进程路径
+    * @param string|null $procPath **参数解释**: web框架进程路径 **取值范围**: 字符长度1-1024
     *
     * @return $this
     */
@@ -979,9 +881,9 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets uid
-    *  用户id
+    *  **参数解释**: web框架进程uid **取值范围**: 最小值0，最大值2147483647
     *
-    * @return string|null
+    * @return int|null
     */
     public function getUid()
     {
@@ -991,13 +893,61 @@ class WebFrameworkHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets uid
     *
-    * @param string|null $uid 用户id
+    * @param int|null $uid **参数解释**: web框架进程uid **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
     public function setUid($uid)
     {
         $this->container['uid'] = $uid;
+        return $this;
+    }
+
+    /**
+    * Gets containerId
+    *  **参数解释**: 容器id **取值范围**: 字符长度1-128
+    *
+    * @return string|null
+    */
+    public function getContainerId()
+    {
+        return $this->container['containerId'];
+    }
+
+    /**
+    * Sets containerId
+    *
+    * @param string|null $containerId **参数解释**: 容器id **取值范围**: 字符长度1-128
+    *
+    * @return $this
+    */
+    public function setContainerId($containerId)
+    {
+        $this->container['containerId'] = $containerId;
+        return $this;
+    }
+
+    /**
+    * Gets containerName
+    *  **参数解释**: 容器名称 **取值范围**: 字符长度1-256
+    *
+    * @return string|null
+    */
+    public function getContainerName()
+    {
+        return $this->container['containerName'];
+    }
+
+    /**
+    * Sets containerName
+    *
+    * @param string|null $containerName **参数解释**: 容器名称 **取值范围**: 字符长度1-256
+    *
+    * @return $this
+    */
+    public function setContainerName($containerName)
+    {
+        $this->container['containerName'] = $containerName;
         return $this;
     }
 

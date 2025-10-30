@@ -21,30 +21,34 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  状态码。具体请参考状态码。只有失败才会返回这个参数。
-    * errorMsg  错误描述信息。只有失败才会返回这个参数。
-    * checkResult  available：该登录名称/手机号/邮箱有效。used_by_user：该登录名称/手机号/邮箱已被占用。
+    * errorCode  状态码。具体请参考状态码。
+    * errorMsg  错误描述信息。
+    * checkResult  是否可以继续注册。该参数非必填，且只允许字符串,available: 该登录名称/手机号/邮箱可以继续注册,used_by_user: 该登录名称/手机号/邮箱不可以继续注册|
+    * mobileRemainAvailableNum  手机号剩余可注册客户数量。该参数非必填，只有search_type=mobile时，该字段才返回值。表示可以继续使用该手机号注册客户的数量。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'errorCode' => 'string',
             'errorMsg' => 'string',
-            'checkResult' => 'string'
+            'checkResult' => 'string',
+            'mobileRemainAvailableNum' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  状态码。具体请参考状态码。只有失败才会返回这个参数。
-    * errorMsg  错误描述信息。只有失败才会返回这个参数。
-    * checkResult  available：该登录名称/手机号/邮箱有效。used_by_user：该登录名称/手机号/邮箱已被占用。
+    * errorCode  状态码。具体请参考状态码。
+    * errorMsg  错误描述信息。
+    * checkResult  是否可以继续注册。该参数非必填，且只允许字符串,available: 该登录名称/手机号/邮箱可以继续注册,used_by_user: 该登录名称/手机号/邮箱不可以继续注册|
+    * mobileRemainAvailableNum  手机号剩余可注册客户数量。该参数非必填，只有search_type=mobile时，该字段才返回值。表示可以继续使用该手机号注册客户的数量。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'errorCode' => null,
         'errorMsg' => null,
-        'checkResult' => null
+        'checkResult' => null,
+        'mobileRemainAvailableNum' => 'int32'
     ];
 
     /**
@@ -70,44 +74,50 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  状态码。具体请参考状态码。只有失败才会返回这个参数。
-    * errorMsg  错误描述信息。只有失败才会返回这个参数。
-    * checkResult  available：该登录名称/手机号/邮箱有效。used_by_user：该登录名称/手机号/邮箱已被占用。
+    * errorCode  状态码。具体请参考状态码。
+    * errorMsg  错误描述信息。
+    * checkResult  是否可以继续注册。该参数非必填，且只允许字符串,available: 该登录名称/手机号/邮箱可以继续注册,used_by_user: 该登录名称/手机号/邮箱不可以继续注册|
+    * mobileRemainAvailableNum  手机号剩余可注册客户数量。该参数非必填，只有search_type=mobile时，该字段才返回值。表示可以继续使用该手机号注册客户的数量。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'errorCode' => 'error_code',
             'errorMsg' => 'error_msg',
-            'checkResult' => 'check_result'
+            'checkResult' => 'check_result',
+            'mobileRemainAvailableNum' => 'mobile_remain_available_num'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  状态码。具体请参考状态码。只有失败才会返回这个参数。
-    * errorMsg  错误描述信息。只有失败才会返回这个参数。
-    * checkResult  available：该登录名称/手机号/邮箱有效。used_by_user：该登录名称/手机号/邮箱已被占用。
+    * errorCode  状态码。具体请参考状态码。
+    * errorMsg  错误描述信息。
+    * checkResult  是否可以继续注册。该参数非必填，且只允许字符串,available: 该登录名称/手机号/邮箱可以继续注册,used_by_user: 该登录名称/手机号/邮箱不可以继续注册|
+    * mobileRemainAvailableNum  手机号剩余可注册客户数量。该参数非必填，只有search_type=mobile时，该字段才返回值。表示可以继续使用该手机号注册客户的数量。
     *
     * @var string[]
     */
     protected static $setters = [
             'errorCode' => 'setErrorCode',
             'errorMsg' => 'setErrorMsg',
-            'checkResult' => 'setCheckResult'
+            'checkResult' => 'setCheckResult',
+            'mobileRemainAvailableNum' => 'setMobileRemainAvailableNum'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  状态码。具体请参考状态码。只有失败才会返回这个参数。
-    * errorMsg  错误描述信息。只有失败才会返回这个参数。
-    * checkResult  available：该登录名称/手机号/邮箱有效。used_by_user：该登录名称/手机号/邮箱已被占用。
+    * errorCode  状态码。具体请参考状态码。
+    * errorMsg  错误描述信息。
+    * checkResult  是否可以继续注册。该参数非必填，且只允许字符串,available: 该登录名称/手机号/邮箱可以继续注册,used_by_user: 该登录名称/手机号/邮箱不可以继续注册|
+    * mobileRemainAvailableNum  手机号剩余可注册客户数量。该参数非必填，只有search_type=mobile时，该字段才返回值。表示可以继续使用该手机号注册客户的数量。
     *
     * @var string[]
     */
     protected static $getters = [
             'errorCode' => 'getErrorCode',
             'errorMsg' => 'getErrorMsg',
-            'checkResult' => 'getCheckResult'
+            'checkResult' => 'getCheckResult',
+            'mobileRemainAvailableNum' => 'getMobileRemainAvailableNum'
     ];
 
     /**
@@ -171,6 +181,7 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
         $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
         $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
         $this->container['checkResult'] = isset($data['checkResult']) ? $data['checkResult'] : null;
+        $this->container['mobileRemainAvailableNum'] = isset($data['mobileRemainAvailableNum']) ? $data['mobileRemainAvailableNum'] : null;
     }
 
     /**
@@ -197,7 +208,7 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  状态码。具体请参考状态码。只有失败才会返回这个参数。
+    *  状态码。具体请参考状态码。
     *
     * @return string|null
     */
@@ -209,7 +220,7 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string|null $errorCode 状态码。具体请参考状态码。只有失败才会返回这个参数。
+    * @param string|null $errorCode 状态码。具体请参考状态码。
     *
     * @return $this
     */
@@ -221,7 +232,7 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorMsg
-    *  错误描述信息。只有失败才会返回这个参数。
+    *  错误描述信息。
     *
     * @return string|null
     */
@@ -233,7 +244,7 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string|null $errorMsg 错误描述信息。只有失败才会返回这个参数。
+    * @param string|null $errorMsg 错误描述信息。
     *
     * @return $this
     */
@@ -245,7 +256,7 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkResult
-    *  available：该登录名称/手机号/邮箱有效。used_by_user：该登录名称/手机号/邮箱已被占用。
+    *  是否可以继续注册。该参数非必填，且只允许字符串,available: 该登录名称/手机号/邮箱可以继续注册,used_by_user: 该登录名称/手机号/邮箱不可以继续注册|
     *
     * @return string|null
     */
@@ -257,13 +268,37 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
     /**
     * Sets checkResult
     *
-    * @param string|null $checkResult available：该登录名称/手机号/邮箱有效。used_by_user：该登录名称/手机号/邮箱已被占用。
+    * @param string|null $checkResult 是否可以继续注册。该参数非必填，且只允许字符串,available: 该登录名称/手机号/邮箱可以继续注册,used_by_user: 该登录名称/手机号/邮箱不可以继续注册|
     *
     * @return $this
     */
     public function setCheckResult($checkResult)
     {
         $this->container['checkResult'] = $checkResult;
+        return $this;
+    }
+
+    /**
+    * Gets mobileRemainAvailableNum
+    *  手机号剩余可注册客户数量。该参数非必填，只有search_type=mobile时，该字段才返回值。表示可以继续使用该手机号注册客户的数量。
+    *
+    * @return int|null
+    */
+    public function getMobileRemainAvailableNum()
+    {
+        return $this->container['mobileRemainAvailableNum'];
+    }
+
+    /**
+    * Sets mobileRemainAvailableNum
+    *
+    * @param int|null $mobileRemainAvailableNum 手机号剩余可注册客户数量。该参数非必填，只有search_type=mobile时，该字段才返回值。表示可以继续使用该手机号注册客户的数量。
+    *
+    * @return $this
+    */
+    public function setMobileRemainAvailableNum($mobileRemainAvailableNum)
+    {
+        $this->container['mobileRemainAvailableNum'] = $mobileRemainAvailableNum;
         return $this;
     }
 

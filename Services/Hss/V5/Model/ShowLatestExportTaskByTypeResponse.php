@@ -21,11 +21,11 @@ class ShowLatestExportTaskByTypeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  任务ID
-    * taskName  任务名称
-    * taskStatus  导出任务状态，success:成功，failure:失败，running:运行中
-    * fileId  文件ID
-    * fileName  文件名
+    * taskId  **参数解释**： 任务ID **取值范围**： 字符长度1-64位
+    * taskName  **参数解释**： 任务名称 **取值范围**： 字符长度1-128位
+    * taskStatus  **参数解释**： 导出任务状态 **取值范围**： - success：成功 - failure：失败 - running：运行中
+    * fileId  **参数解释**： 文件ID **取值范围**： 字符长度1-64位
+    * fileName  **参数解释**： 文件名 **取值范围**： 字符长度1-255位
     *
     * @var string[]
     */
@@ -39,11 +39,11 @@ class ShowLatestExportTaskByTypeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  任务ID
-    * taskName  任务名称
-    * taskStatus  导出任务状态，success:成功，failure:失败，running:运行中
-    * fileId  文件ID
-    * fileName  文件名
+    * taskId  **参数解释**： 任务ID **取值范围**： 字符长度1-64位
+    * taskName  **参数解释**： 任务名称 **取值范围**： 字符长度1-128位
+    * taskStatus  **参数解释**： 导出任务状态 **取值范围**： - success：成功 - failure：失败 - running：运行中
+    * fileId  **参数解释**： 文件ID **取值范围**： 字符长度1-64位
+    * fileName  **参数解释**： 文件名 **取值范围**： 字符长度1-255位
     *
     * @var string[]
     */
@@ -78,11 +78,11 @@ class ShowLatestExportTaskByTypeResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  任务ID
-    * taskName  任务名称
-    * taskStatus  导出任务状态，success:成功，failure:失败，running:运行中
-    * fileId  文件ID
-    * fileName  文件名
+    * taskId  **参数解释**： 任务ID **取值范围**： 字符长度1-64位
+    * taskName  **参数解释**： 任务名称 **取值范围**： 字符长度1-128位
+    * taskStatus  **参数解释**： 导出任务状态 **取值范围**： - success：成功 - failure：失败 - running：运行中
+    * fileId  **参数解释**： 文件ID **取值范围**： 字符长度1-64位
+    * fileName  **参数解释**： 文件名 **取值范围**： 字符长度1-255位
     *
     * @var string[]
     */
@@ -96,11 +96,11 @@ class ShowLatestExportTaskByTypeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  任务ID
-    * taskName  任务名称
-    * taskStatus  导出任务状态，success:成功，failure:失败，running:运行中
-    * fileId  文件ID
-    * fileName  文件名
+    * taskId  **参数解释**： 任务ID **取值范围**： 字符长度1-64位
+    * taskName  **参数解释**： 任务名称 **取值范围**： 字符长度1-128位
+    * taskStatus  **参数解释**： 导出任务状态 **取值范围**： - success：成功 - failure：失败 - running：运行中
+    * fileId  **参数解释**： 文件ID **取值范围**： 字符长度1-64位
+    * fileName  **参数解释**： 文件名 **取值范围**： 字符长度1-255位
     *
     * @var string[]
     */
@@ -114,11 +114,11 @@ class ShowLatestExportTaskByTypeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  任务ID
-    * taskName  任务名称
-    * taskStatus  导出任务状态，success:成功，failure:失败，running:运行中
-    * fileId  文件ID
-    * fileName  文件名
+    * taskId  **参数解释**： 任务ID **取值范围**： 字符长度1-64位
+    * taskName  **参数解释**： 任务名称 **取值范围**： 字符长度1-128位
+    * taskStatus  **参数解释**： 导出任务状态 **取值范围**： - success：成功 - failure：失败 - running：运行中
+    * fileId  **参数解释**： 文件ID **取值范围**： 字符长度1-64位
+    * fileName  **参数解释**： 文件名 **取值范围**： 字符长度1-255位
     *
     * @var string[]
     */
@@ -209,8 +209,8 @@ class ShowLatestExportTaskByTypeResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['taskId']) && (mb_strlen($this->container['taskId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'taskId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['taskName']) && (mb_strlen($this->container['taskName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'taskName', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['taskName']) && (mb_strlen($this->container['taskName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'taskName', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['taskName']) && (mb_strlen($this->container['taskName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'taskName', the character length must be bigger than or equal to 1.";
@@ -227,8 +227,8 @@ class ShowLatestExportTaskByTypeResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['fileId']) && (mb_strlen($this->container['fileId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'fileId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['fileName']) && (mb_strlen($this->container['fileName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'fileName', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['fileName']) && (mb_strlen($this->container['fileName']) > 255)) {
+                $invalidProperties[] = "invalid value for 'fileName', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['fileName']) && (mb_strlen($this->container['fileName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'fileName', the character length must be bigger than or equal to 1.";
@@ -249,7 +249,7 @@ class ShowLatestExportTaskByTypeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  任务ID
+    *  **参数解释**： 任务ID **取值范围**： 字符长度1-64位
     *
     * @return string|null
     */
@@ -261,7 +261,7 @@ class ShowLatestExportTaskByTypeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string|null $taskId 任务ID
+    * @param string|null $taskId **参数解释**： 任务ID **取值范围**： 字符长度1-64位
     *
     * @return $this
     */
@@ -273,7 +273,7 @@ class ShowLatestExportTaskByTypeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskName
-    *  任务名称
+    *  **参数解释**： 任务名称 **取值范围**： 字符长度1-128位
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class ShowLatestExportTaskByTypeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskName
     *
-    * @param string|null $taskName 任务名称
+    * @param string|null $taskName **参数解释**： 任务名称 **取值范围**： 字符长度1-128位
     *
     * @return $this
     */
@@ -297,7 +297,7 @@ class ShowLatestExportTaskByTypeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskStatus
-    *  导出任务状态，success:成功，failure:失败，running:运行中
+    *  **参数解释**： 导出任务状态 **取值范围**： - success：成功 - failure：失败 - running：运行中
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class ShowLatestExportTaskByTypeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskStatus
     *
-    * @param string|null $taskStatus 导出任务状态，success:成功，failure:失败，running:运行中
+    * @param string|null $taskStatus **参数解释**： 导出任务状态 **取值范围**： - success：成功 - failure：失败 - running：运行中
     *
     * @return $this
     */
@@ -321,7 +321,7 @@ class ShowLatestExportTaskByTypeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileId
-    *  文件ID
+    *  **参数解释**： 文件ID **取值范围**： 字符长度1-64位
     *
     * @return string|null
     */
@@ -333,7 +333,7 @@ class ShowLatestExportTaskByTypeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets fileId
     *
-    * @param string|null $fileId 文件ID
+    * @param string|null $fileId **参数解释**： 文件ID **取值范围**： 字符长度1-64位
     *
     * @return $this
     */
@@ -345,7 +345,7 @@ class ShowLatestExportTaskByTypeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileName
-    *  文件名
+    *  **参数解释**： 文件名 **取值范围**： 字符长度1-255位
     *
     * @return string|null
     */
@@ -357,7 +357,7 @@ class ShowLatestExportTaskByTypeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets fileName
     *
-    * @param string|null $fileName 文件名
+    * @param string|null $fileName **参数解释**： 文件名 **取值范围**： 字符长度1-255位
     *
     * @return $this
     */

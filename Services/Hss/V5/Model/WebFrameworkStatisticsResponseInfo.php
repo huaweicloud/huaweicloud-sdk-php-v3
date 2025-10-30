@@ -20,8 +20,8 @@ class WebFrameworkStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fileName  Web框架文件名称
-    * num  Web框架统计信息总数
+    * fileName  **参数解释**: Web框架文件名称 **取值范围**: 字符长度0-256
+    * num  **参数解释** Web框架统计信息总数 **取值范围** 最小值0，最大值300000
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class WebFrameworkStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fileName  Web框架文件名称
-    * num  Web框架统计信息总数
+    * fileName  **参数解释**: Web框架文件名称 **取值范围**: 字符长度0-256
+    * num  **参数解释** Web框架统计信息总数 **取值范围** 最小值0，最大值300000
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class WebFrameworkStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fileName  Web框架文件名称
-    * num  Web框架统计信息总数
+    * fileName  **参数解释**: Web框架文件名称 **取值范围**: 字符长度0-256
+    * num  **参数解释** Web框架统计信息总数 **取值范围** 最小值0，最大值300000
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class WebFrameworkStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fileName  Web框架文件名称
-    * num  Web框架统计信息总数
+    * fileName  **参数解释**: Web框架文件名称 **取值范围**: 字符长度0-256
+    * num  **参数解释** Web框架统计信息总数 **取值范围** 最小值0，最大值300000
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class WebFrameworkStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fileName  Web框架文件名称
-    * num  Web框架统计信息总数
+    * fileName  **参数解释**: Web框架文件名称 **取值范围**: 字符长度0-256
+    * num  **参数解释** Web框架统计信息总数 **取值范围** 最小值0，最大值300000
     *
     * @var string[]
     */
@@ -169,6 +169,12 @@ class WebFrameworkStatisticsResponseInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['fileName']) && (mb_strlen($this->container['fileName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'fileName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['fileName']) && (mb_strlen($this->container['fileName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'fileName', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['num']) && ($this->container['num'] > 300000)) {
                 $invalidProperties[] = "invalid value for 'num', must be smaller than or equal to 300000.";
             }
@@ -191,7 +197,7 @@ class WebFrameworkStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileName
-    *  Web框架文件名称
+    *  **参数解释**: Web框架文件名称 **取值范围**: 字符长度0-256
     *
     * @return string|null
     */
@@ -203,7 +209,7 @@ class WebFrameworkStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileName
     *
-    * @param string|null $fileName Web框架文件名称
+    * @param string|null $fileName **参数解释**: Web框架文件名称 **取值范围**: 字符长度0-256
     *
     * @return $this
     */
@@ -215,7 +221,7 @@ class WebFrameworkStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets num
-    *  Web框架统计信息总数
+    *  **参数解释** Web框架统计信息总数 **取值范围** 最小值0，最大值300000
     *
     * @return int|null
     */
@@ -227,7 +233,7 @@ class WebFrameworkStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets num
     *
-    * @param int|null $num Web框架统计信息总数
+    * @param int|null $num **参数解释** Web框架统计信息总数 **取值范围** 最小值0，最大值300000
     *
     * @return $this
     */

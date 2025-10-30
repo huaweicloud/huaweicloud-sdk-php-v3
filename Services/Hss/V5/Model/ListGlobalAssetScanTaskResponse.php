@@ -21,7 +21,7 @@ class ListGlobalAssetScanTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * exist  是否存在全量扫描任务: - true ：是 - false : 否
+    * exist  **参数解释** 是否存在全量扫描任务 **取值范围** - true：是 - false：否
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListGlobalAssetScanTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * exist  是否存在全量扫描任务: - true ：是 - false : 否
+    * exist  **参数解释** 是否存在全量扫描任务 **取值范围** - true：是 - false：否
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListGlobalAssetScanTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * exist  是否存在全量扫描任务: - true ：是 - false : 否
+    * exist  **参数解释** 是否存在全量扫描任务 **取值范围** - true：是 - false：否
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListGlobalAssetScanTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * exist  是否存在全量扫描任务: - true ：是 - false : 否
+    * exist  **参数解释** 是否存在全量扫描任务 **取值范围** - true：是 - false：否
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListGlobalAssetScanTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * exist  是否存在全量扫描任务: - true ：是 - false : 否
+    * exist  **参数解释** 是否存在全量扫描任务 **取值范围** - true：是 - false：否
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListGlobalAssetScanTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets exist
-    *  是否存在全量扫描任务: - true ：是 - false : 否
+    *  **参数解释** 是否存在全量扫描任务 **取值范围** - true：是 - false：否
     *
     * @return bool|null
     */
@@ -187,7 +187,7 @@ class ListGlobalAssetScanTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets exist
     *
-    * @param bool|null $exist 是否存在全量扫描任务: - true ：是 - false : 否
+    * @param bool|null $exist **参数解释** 是否存在全量扫描任务 **取值范围** - true：是 - false：否
     *
     * @return $this
     */

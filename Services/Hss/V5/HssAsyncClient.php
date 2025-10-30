@@ -165,80 +165,6 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 创建服务器组
-     *
-     * 创建服务器组
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function addHostsGroupAsync($request)
-    {
-        return $this->addHostsGroupAsyncWithHttpInfo($request);
-    }
-    
-    public function addHostsGroupAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/host-management/groups';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams['region'] = $localVarParams['region'];
-        }
-        if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\AddHostsGroupResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\AddHostsGroupRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 添加登录白名单
      *
      * 添加登录白名单
@@ -381,77 +307,6 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 添加防护策略
-     *
-     * 添加防护策略
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function addProtectionPolicyAsync($request)
-    {
-        return $this->addProtectionPolicyAsyncWithHttpInfo($request);
-    }
-    
-    public function addProtectionPolicyAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/ransomware/protection/policy';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams['region'] = $localVarParams['region'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\AddProtectionPolicyResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\AddProtectionPolicyRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 添加系统用户白名单
      *
      * 添加系统用户白名单
@@ -520,23 +375,23 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 切换勒索防护策略
+     * 添加漏洞白名单
      *
-     * 切换勒索防护策略
+     * 添加漏洞白名单
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function associateProtectionPolicyAsync($request)
+    public function addVulWhiteListAsync($request)
     {
-        return $this->associateProtectionPolicyAsyncWithHttpInfo($request);
+        return $this->addVulWhiteListAsyncWithHttpInfo($request);
     }
     
-    public function associateProtectionPolicyAsyncWithHttpInfo($request){
+    public function addVulWhiteListAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/ransomware/protection/policy/deploy';
+        $resourcePath = '/v5/{project_id}/vulnerability/white-list';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -581,9 +436,145 @@ class HssAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\AssociateProtectionPolicyResponse',
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\AddVulWhiteListResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\AssociateProtectionPolicyRequest',
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\AddVulWhiteListRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 关联资产重要性
+     *
+     * 关联资产重要性
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function associateHostAssetValueAsync($request)
+    {
+        return $this->associateHostAssetValueAsyncWithHttpInfo($request);
+    }
+    
+    public function associateHostAssetValueAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/host-management/asset-value/associate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\AssociateHostAssetValueResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\AssociateHostAssetValueRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 分配到组
+     *
+     * 分配到组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function associateHostsGroupAsync($request)
+    {
+        return $this->associateHostsGroupAsyncWithHttpInfo($request);
+    }
+    
+    public function associateHostsGroupAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/host-management/group/associate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\AssociateHostsGroupResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\AssociateHostsGroupRequest',
             $asyncRequest = true);
     }
 
@@ -658,6 +649,77 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\BatchAddAccountsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\BatchAddAccountsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 全量处理告警事件
+     *
+     * 全量处理告警事件
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchChangeEventAsync($request)
+    {
+        return $this->batchChangeEventAsyncWithHttpInfo($request);
+    }
+    
+    public function batchChangeEventAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/event/batch-operate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\BatchChangeEventResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\BatchChangeEventRequest',
             $asyncRequest = true);
     }
 
@@ -803,210 +865,6 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\BatchDeleteTagsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\BatchDeleteTagsRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 批量开启勒索病毒防护2.0
-     *
-     * 批量开启勒索病毒防护，若开启备份防护，请保证该region有cbr云备份服务
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function batchStartProtectionAsync($request)
-    {
-        return $this->batchStartProtectionAsyncWithHttpInfo($request);
-    }
-    
-    public function batchStartProtectionAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/ransomware/protection/batch-open';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\BatchStartProtectionResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\BatchStartProtectionRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 开启或关闭“Agent自动升级”配置开关
-     *
-     * 开启或关闭“Agent自动升级”配置开关
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function changeAgentAutoUpgradeStatusAsync($request)
-    {
-        return $this->changeAgentAutoUpgradeStatusAsyncWithHttpInfo($request);
-    }
-    
-    public function changeAgentAutoUpgradeStatusAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/setting/config/agent-auto-upgrade';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeAgentAutoUpgradeStatusResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeAgentAutoUpgradeStatusRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 开启或关闭“自动绑定配额”配置开关
-     *
-     * 开启或关闭“自动绑定配额”配置开关
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function changeAutoOpenQuotaStatusAsync($request)
-    {
-        return $this->changeAutoOpenQuotaStatusAsyncWithHttpInfo($request);
-    }
-    
-    public function changeAutoOpenQuotaStatusAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/setting/config/auto-open-quota';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeAutoOpenQuotaStatusResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeAutoOpenQuotaStatusRequest',
             $asyncRequest = true);
     }
 
@@ -1363,6 +1221,80 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 管理容器生命周期
+     *
+     * 管理容器生命周期
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeContainerStatusAsync($request)
+    {
+        return $this->changeContainerStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function changeContainerStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/kubernetes/{container_name}/container/isolate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['containerId'] !== null) {
+            $queryParams['container_id'] = $localVarParams['containerId'];
+        }
+        if ($localVarParams['opr'] !== null) {
+            $queryParams['opr'] = $localVarParams['opr'];
+        }
+        if ($localVarParams['containerName'] !== null) {
+            $pathParams['container_name'] = $localVarParams['containerName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeContainerStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeContainerStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 处理告警事件
      *
      * 处理告警事件
@@ -1440,23 +1372,23 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 编辑服务器组
+     * 忽略/取消忽略主机
      *
-     * 编辑服务器组
+     * 忽略/取消忽略主机
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function changeHostsGroupAsync($request)
+    public function changeHostIgnoreStatusAsync($request)
     {
-        return $this->changeHostsGroupAsyncWithHttpInfo($request);
+        return $this->changeHostIgnoreStatusAsyncWithHttpInfo($request);
     }
     
-    public function changeHostsGroupAsyncWithHttpInfo($request){
+    public function changeHostIgnoreStatusAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/host-management/groups';
+        $resourcePath = '/v5/{project_id}/host/operate';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1472,12 +1404,6 @@ class HssAsyncClient extends Client
         }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams['region'] = $localVarParams['region'];
-        }
-        if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1507,9 +1433,9 @@ class HssAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeHostsGroupResponse',
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeHostIgnoreStatusResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeHostsGroupRequest',
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeHostIgnoreStatusRequest',
             $asyncRequest = true);
     }
 
@@ -1720,74 +1646,6 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ChangePasswordComplexityStatusResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ChangePasswordComplexityStatusRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 修改指定策略的总开关，将该策略的所有主机都打开或者关闭此策略
-     *
-     * 修改指定策略的总开关，将该策略的所有主机都打开或者关闭此策略
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function changePolicySwitchStatusAsync($request)
-    {
-        return $this->changePolicySwitchStatusAsyncWithHttpInfo($request);
-    }
-    
-    public function changePolicySwitchStatusAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/policy/switch';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ChangePolicySwitchStatusResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ChangePolicySwitchStatusRequest',
             $asyncRequest = true);
     }
 
@@ -2629,77 +2487,6 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 删除服务器组
-     *
-     * 删除服务器组
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function deleteHostsGroupAsync($request)
-    {
-        return $this->deleteHostsGroupAsyncWithHttpInfo($request);
-    }
-    
-    public function deleteHostsGroupAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/host-management/groups';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['groupId'] !== null) {
-            $queryParams['group_id'] = $localVarParams['groupId'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams['region'] = $localVarParams['region'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='DELETE',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\DeleteHostsGroupResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\DeleteHostsGroupRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 删除已隔离文件
      *
      * 删除已隔离文件
@@ -2832,74 +2619,6 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\DeletePolicyResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\DeletePolicyRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 删除防护策略
-     *
-     * 删除防护策略
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function deleteProtectionPolicyAsync($request)
-    {
-        return $this->deleteProtectionPolicyAsyncWithHttpInfo($request);
-    }
-    
-    public function deleteProtectionPolicyAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/ransomware/protection/policy';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['policyId'] !== null) {
-            $queryParams['policy_id'] = $localVarParams['policyId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='DELETE',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\DeleteProtectionPolicyResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\DeleteProtectionPolicyRequest',
             $asyncRequest = true);
     }
 
@@ -3120,6 +2839,139 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 下载告警源文件
+     *
+     * 下载告警源文件
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function downloadEventSourceFileAsync($request)
+    {
+        return $this->downloadEventSourceFileAsyncWithHttpInfo($request);
+    }
+    
+    public function downloadEventSourceFileAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/event/download-file';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['fileHash'] !== null) {
+            $queryParams['file_hash'] = $localVarParams['fileHash'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\DownloadEventSourceFileResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\DownloadEventSourceFileRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 开启可信服务
+     *
+     * 开启可信服务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function enableTrustServiceAsync($request)
+    {
+        return $this->enableTrustServiceAsyncWithHttpInfo($request);
+    }
+    
+    public function enableTrustServiceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/setting/account/trusted-services';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\EnableTrustServiceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\EnableTrustServiceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建容器导出任务
      *
      * 创建容器导出任务
@@ -3187,6 +3039,155 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ExportContainerListResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ExportContainerListRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 导出漏洞请求
+     *
+     * 导出入侵事件请求
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function exportEventRequestAsync($request)
+    {
+        return $this->exportEventRequestAsyncWithHttpInfo($request);
+    }
+    
+    public function exportEventRequestAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/event/export';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['lastDays'] !== null) {
+            $queryParams['last_days'] = $localVarParams['lastDays'];
+        }
+        if ($localVarParams['hostName'] !== null) {
+            $queryParams['host_name'] = $localVarParams['hostName'];
+        }
+        if ($localVarParams['hostId'] !== null) {
+            $queryParams['host_id'] = $localVarParams['hostId'];
+        }
+        if ($localVarParams['privateIp'] !== null) {
+            $queryParams['private_ip'] = $localVarParams['privateIp'];
+        }
+        if ($localVarParams['containerName'] !== null) {
+            $queryParams['container_name'] = $localVarParams['containerName'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['exportSize'] !== null) {
+            $queryParams['export_size'] = $localVarParams['exportSize'];
+        }
+        if ($localVarParams['eventType'] !== null) {
+            $queryParams['event_type'] = $localVarParams['eventType'];
+        }
+        if ($localVarParams['eventTypes'] !== null) {
+            $queryParams['event_types'] = $localVarParams['eventTypes'];
+        }
+        if ($localVarParams['handleStatus'] !== null) {
+            $queryParams['handle_status'] = $localVarParams['handleStatus'];
+        }
+        if ($localVarParams['severity'] !== null) {
+            $queryParams['severity'] = $localVarParams['severity'];
+        }
+        if ($localVarParams['category'] !== null) {
+            $queryParams['category'] = $localVarParams['category'];
+        }
+        if ($localVarParams['beginTime'] !== null) {
+            $queryParams['begin_time'] = $localVarParams['beginTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['eventClassIds'] !== null) {
+            $queryParams['event_class_ids'] = $localVarParams['eventClassIds'];
+        }
+        if ($localVarParams['severityList'] !== null) {
+            $queryParams['severity_list'] = $localVarParams['severityList'];
+        }
+        if ($localVarParams['attackTag'] !== null) {
+            $queryParams['attack_tag'] = $localVarParams['attackTag'];
+        }
+        if ($localVarParams['assetValue'] !== null) {
+            $queryParams['asset_value'] = $localVarParams['assetValue'];
+        }
+        if ($localVarParams['tagList'] !== null) {
+            $queryParams['tag_list'] = $localVarParams['tagList'];
+        }
+        if ($localVarParams['attCk'] !== null) {
+            $queryParams['att_ck'] = $localVarParams['attCk'];
+        }
+        if ($localVarParams['eventName'] !== null) {
+            $queryParams['event_name'] = $localVarParams['eventName'];
+        }
+        if ($localVarParams['eventIdList'] !== null) {
+            $queryParams['event_id_list'] = $localVarParams['eventIdList'];
+        }
+        if ($localVarParams['autoBlock'] !== null) {
+            $queryParams['auto_block'] = $localVarParams['autoBlock'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $queryParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['eventId'] !== null) {
+            $queryParams['event_id'] = $localVarParams['eventId'];
+        }
+        if ($localVarParams['publicIp'] !== null) {
+            $queryParams['public_ip'] = $localVarParams['publicIp'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ExportEventRequestResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ExportEventRequestRequest',
             $asyncRequest = true);
     }
 
@@ -3347,71 +3348,6 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListAccountsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListAccountsRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询“Agent自动升级”配置开关状态
-     *
-     * 查询“Agent自动升级”配置开关状态
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listAgentAutoUpgradeStatusAsync($request)
-    {
-        return $this->listAgentAutoUpgradeStatusAsyncWithHttpInfo($request);
-    }
-    
-    public function listAgentAutoUpgradeStatusAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/setting/config/agent-auto-upgrade';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListAgentAutoUpgradeStatusResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListAgentAutoUpgradeStatusRequest',
             $asyncRequest = true);
     }
 
@@ -3852,71 +3788,6 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 查询程序自动隔离查杀状态
-     *
-     * 查询程序自动隔离查杀状态
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listAutoKillVirusStatusAsync($request)
-    {
-        return $this->listAutoKillVirusStatusAsyncWithHttpInfo($request);
-    }
-    
-    public function listAutoKillVirusStatusAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/setting/virus-kill';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListAutoKillVirusStatusResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListAutoKillVirusStatusRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 获取自启动项的历史变动记录
      *
      * 获取自启动项的历史变动记录
@@ -4063,6 +3934,9 @@ class HssAsyncClient extends Client
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
         }
+        if ($localVarParams['category'] !== null) {
+            $queryParams['category'] = $localVarParams['category'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4180,145 +4054,6 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListAutoLaunchsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListAutoLaunchsRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询“自动绑定配额”配置开关状态
-     *
-     * 查询“自动绑定配额”配置开关状态
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listAutoOpenQuotaStatusAsync($request)
-    {
-        return $this->listAutoOpenQuotaStatusAsyncWithHttpInfo($request);
-    }
-    
-    public function listAutoOpenQuotaStatusAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/setting/config/auto-open-quota';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListAutoOpenQuotaStatusResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListAutoOpenQuotaStatusRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询备份存储库列表
-     *
-     * 查询备份存储库列表，若进行绑定主机，则需要额外判断，同时满足以下条件：1、存储库状态为“可用”状态；2、备份策略状态为“已启用”；3、存储库有剩余可用备份容量；4、存储库绑定的服务器数量少于256。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listBackupVaultsAsync($request)
-    {
-        return $this->listBackupVaultsAsyncWithHttpInfo($request);
-    }
-    
-    public function listBackupVaultsAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/ransomware/optional/vaults';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['vaultName'] !== null) {
-            $queryParams['vault_name'] = $localVarParams['vaultName'];
-        }
-        if ($localVarParams['vaultId'] !== null) {
-            $queryParams['vault_id'] = $localVarParams['vaultId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListBackupVaultsResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListBackupVaultsRequest',
             $asyncRequest = true);
     }
 
@@ -5836,7 +5571,7 @@ class HssAsyncClient extends Client
     /**
      * 查询容器集群VPC网络的节点列表
      *
-     * 查询容器集群网络的策略列表
+     * 查询容器集群网络的节点列表
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6163,6 +5898,89 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 查看支持配置动态端口蜜罐的主机列表
+     *
+     * 查看支持配置动态端口蜜罐的主机列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDecoyPortAvailableHostAsync($request)
+    {
+        return $this->listDecoyPortAvailableHostAsyncWithHttpInfo($request);
+    }
+    
+    public function listDecoyPortAvailableHostAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/honeypot-port/support-list';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['ports'] !== null) {
+            $queryParams['ports'] = $localVarParams['ports'];
+        }
+        if ($localVarParams['osType'] !== null) {
+            $queryParams['os_type'] = $localVarParams['osType'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $queryParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListDecoyPortAvailableHostResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListDecoyPortAvailableHostRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查看动态端口蜜罐策略
      *
      * 查看动态端口蜜罐策略
@@ -6234,23 +6052,23 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 获取字典列表
+     * 查询插件列表
      *
-     * 获取字典列表
+     * 查询插件列表
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function listDictionariesAsync($request)
+    public function listDockerPluginsAsync($request)
     {
-        return $this->listDictionariesAsyncWithHttpInfo($request);
+        return $this->listDockerPluginsAsyncWithHttpInfo($request);
     }
     
-    public function listDictionariesAsyncWithHttpInfo($request){
+    public function listDockerPluginsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/setting/dictionaries';
+        $resourcePath = '/v5/{project_id}/setting/plugins';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6264,29 +6082,92 @@ class HssAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['hostName'] !== null) {
+            $queryParams['host_name'] = $localVarParams['hostName'];
+        }
+        if ($localVarParams['hostId'] !== null) {
+            $queryParams['host_id'] = $localVarParams['hostId'];
+        }
+        if ($localVarParams['privateIp'] !== null) {
+            $queryParams['private_ip'] = $localVarParams['privateIp'];
+        }
+        if ($localVarParams['publicIp'] !== null) {
+            $queryParams['public_ip'] = $localVarParams['publicIp'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $queryParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['assetValue'] !== null) {
+            $queryParams['asset_value'] = $localVarParams['assetValue'];
         }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['scene'] !== null) {
-            $queryParams['scene'] = $localVarParams['scene'];
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
-        if ($localVarParams['groupCode'] !== null) {
-            $queryParams['group_code'] = $localVarParams['groupCode'];
+        if ($localVarParams['agentStatus'] !== null) {
+            $queryParams['agent_status'] = $localVarParams['agentStatus'];
         }
-        if ($localVarParams['code'] !== null) {
-            $queryParams['code'] = $localVarParams['code'];
+        if ($localVarParams['detectResult'] !== null) {
+            $queryParams['detect_result'] = $localVarParams['detectResult'];
+        }
+        if ($localVarParams['hostStatus'] !== null) {
+            $queryParams['host_status'] = $localVarParams['hostStatus'];
+        }
+        if ($localVarParams['osType'] !== null) {
+            $queryParams['os_type'] = $localVarParams['osType'];
+        }
+        if ($localVarParams['ipAddr'] !== null) {
+            $queryParams['ip_addr'] = $localVarParams['ipAddr'];
+        }
+        if ($localVarParams['protectStatus'] !== null) {
+            $queryParams['protect_status'] = $localVarParams['protectStatus'];
+        }
+        if ($localVarParams['groupName'] !== null) {
+            $queryParams['group_name'] = $localVarParams['groupName'];
+        }
+        if ($localVarParams['policyGroupId'] !== null) {
+            $queryParams['policy_group_id'] = $localVarParams['policyGroupId'];
+        }
+        if ($localVarParams['policyGroupName'] !== null) {
+            $queryParams['policy_group_name'] = $localVarParams['policyGroupName'];
+        }
+        if ($localVarParams['label'] !== null) {
+            $queryParams['label'] = $localVarParams['label'];
+        }
+        if ($localVarParams['chargingMode'] !== null) {
+            $queryParams['charging_mode'] = $localVarParams['chargingMode'];
+        }
+        if ($localVarParams['refresh'] !== null) {
+            $queryParams['refresh'] = $localVarParams['refresh'];
+        }
+        if ($localVarParams['aboveVersion'] !== null) {
+            $queryParams['above_version'] = $localVarParams['aboveVersion'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['version'] !== null) {
+            $queryParams['version'] = $localVarParams['version'];
+        }
+        if ($localVarParams['plugin'] !== null) {
+            $queryParams['plugin'] = $localVarParams['plugin'];
+        }
+        if ($localVarParams['outsideHost'] !== null) {
+            $queryParams['outside_host'] = $localVarParams['outsideHost'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -6304,9 +6185,9 @@ class HssAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListDictionariesResponse',
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListDockerPluginsResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListDictionariesRequest',
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListDockerPluginsRequest',
             $asyncRequest = true);
     }
 
@@ -6495,23 +6376,23 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 查看镜像漏洞的历史处置记录
+     * 查询具体事件的调查取证信息
      *
-     * 查看镜像漏洞的历史处置记录
+     * 查询具体事件的调查取证信息
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function listGeneralImageVulOperationsAsync($request)
+    public function listEventForensicAsync($request)
     {
-        return $this->listGeneralImageVulOperationsAsyncWithHttpInfo($request);
+        return $this->listEventForensicAsyncWithHttpInfo($request);
     }
     
-    public function listGeneralImageVulOperationsAsyncWithHttpInfo($request){
+    public function listEventForensicAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/image/vulnerability/handle-history';
+        $resourcePath = '/v5/{project_id}/event/forensic';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6528,50 +6409,26 @@ class HssAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
+        if ($localVarParams['eventType'] !== null) {
+            $queryParams['event_type'] = $localVarParams['eventType'];
         }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
+        if ($localVarParams['eventId'] !== null) {
+            $queryParams['event_id'] = $localVarParams['eventId'];
         }
-        if ($localVarParams['vulId'] !== null) {
-            $queryParams['vul_id'] = $localVarParams['vulId'];
+        if ($localVarParams['occurTime'] !== null) {
+            $queryParams['occur_time'] = $localVarParams['occurTime'];
         }
-        if ($localVarParams['imageId'] !== null) {
-            $queryParams['image_id'] = $localVarParams['imageId'];
-        }
-        if ($localVarParams['imageType'] !== null) {
-            $queryParams['image_type'] = $localVarParams['imageType'];
-        }
-        if ($localVarParams['imageName'] !== null) {
-            $queryParams['image_name'] = $localVarParams['imageName'];
-        }
-        if ($localVarParams['status'] !== null) {
-            $queryParams['status'] = $localVarParams['status'];
-        }
-        if ($localVarParams['userName'] !== null) {
-            $queryParams['user_name'] = $localVarParams['userName'];
-        }
-        if ($localVarParams['handleType'] !== null) {
-            $queryParams['handle_type'] = $localVarParams['handleType'];
-        }
-        if ($localVarParams['appName'] !== null) {
-            $queryParams['app_name'] = $localVarParams['appName'];
-        }
-        if ($localVarParams['appVersion'] !== null) {
-            $queryParams['app_version'] = $localVarParams['appVersion'];
-        }
-        if ($localVarParams['remark'] !== null) {
-            $queryParams['remark'] = $localVarParams['remark'];
+        if ($localVarParams['category'] !== null) {
+            $queryParams['category'] = $localVarParams['category'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -6589,30 +6446,30 @@ class HssAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListGeneralImageVulOperationsResponse',
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListEventForensicResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListGeneralImageVulOperationsRequest',
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListEventForensicRequest',
             $asyncRequest = true);
     }
 
     /**
-     * 查看所有类型镜像的漏洞
+     * 查询事件支持的处理类型
      *
-     * 查看所有类型镜像的漏洞
+     * 查询事件支持的处理类型
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function listGeneralImageVulsAsync($request)
+    public function listEventOperatesAsync($request)
     {
-        return $this->listGeneralImageVulsAsyncWithHttpInfo($request);
+        return $this->listEventOperatesAsyncWithHttpInfo($request);
     }
     
-    public function listGeneralImageVulsAsyncWithHttpInfo($request){
+    public function listEventOperatesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/images/vulnerabilities';
+        $resourcePath = '/v5/{project_id}/event/batch-operate';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6629,50 +6486,20 @@ class HssAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
+        if ($localVarParams['eventType'] !== null) {
+            $queryParams['event_type'] = $localVarParams['eventType'];
         }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['type'] !== null) {
-            $queryParams['type'] = $localVarParams['type'];
-        }
-        if ($localVarParams['handleStatus'] !== null) {
-            $queryParams['handle_status'] = $localVarParams['handleStatus'];
-        }
-        if ($localVarParams['imageType'] !== null) {
-            $queryParams['image_type'] = $localVarParams['imageType'];
-        }
-        if ($localVarParams['severityLevel'] !== null) {
-            $queryParams['severity_level'] = $localVarParams['severityLevel'];
-        }
-        if ($localVarParams['vulId'] !== null) {
-            $queryParams['vul_id'] = $localVarParams['vulId'];
-        }
-        if ($localVarParams['vulName'] !== null) {
-            $queryParams['vul_name'] = $localVarParams['vulName'];
-        }
-        if ($localVarParams['cveId'] !== null) {
-            $queryParams['cve_id'] = $localVarParams['cveId'];
-        }
-        if ($localVarParams['labelList'] !== null) {
-            $queryParams['label_list'] = $localVarParams['labelList'];
-        }
-        if ($localVarParams['status'] !== null) {
-            $queryParams['status'] = $localVarParams['status'];
-        }
-        if ($localVarParams['clusterId'] !== null) {
-            $queryParams['cluster_id'] = $localVarParams['clusterId'];
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -6690,9 +6517,232 @@ class HssAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListGeneralImageVulsResponse',
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListEventOperatesResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListGeneralImageVulsRequest',
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListEventOperatesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询TOP5事件类型统计列表
+     *
+     * 查询TOP5事件类型统计列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listEventTopRiskAsync($request)
+    {
+        return $this->listEventTopRiskAsyncWithHttpInfo($request);
+    }
+    
+    public function listEventTopRiskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/event/top-risk';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['beginTime'] !== null) {
+            $queryParams['begin_time'] = $localVarParams['beginTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['lastDays'] !== null) {
+            $queryParams['last_days'] = $localVarParams['lastDays'];
+        }
+        if ($localVarParams['category'] !== null) {
+            $queryParams['category'] = $localVarParams['category'];
+        }
+        if ($localVarParams['hostName'] !== null) {
+            $queryParams['host_name'] = $localVarParams['hostName'];
+        }
+        if ($localVarParams['hostId'] !== null) {
+            $queryParams['host_id'] = $localVarParams['hostId'];
+        }
+        if ($localVarParams['privateIp'] !== null) {
+            $queryParams['private_ip'] = $localVarParams['privateIp'];
+        }
+        if ($localVarParams['containerName'] !== null) {
+            $queryParams['container_name'] = $localVarParams['containerName'];
+        }
+        if ($localVarParams['eventType'] !== null) {
+            $queryParams['event_type'] = $localVarParams['eventType'];
+        }
+        if ($localVarParams['handleStatus'] !== null) {
+            $queryParams['handle_status'] = $localVarParams['handleStatus'];
+        }
+        if ($localVarParams['severity'] !== null) {
+            $queryParams['severity'] = $localVarParams['severity'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListEventTopRiskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListEventTopRiskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询事件类型统计列表
+     *
+     * 查询事件类型统计列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listEventTypeAsync($request)
+    {
+        return $this->listEventTypeAsyncWithHttpInfo($request);
+    }
+    
+    public function listEventTypeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/event/event-type';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['beginTime'] !== null) {
+            $queryParams['begin_time'] = $localVarParams['beginTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['lastDays'] !== null) {
+            $queryParams['last_days'] = $localVarParams['lastDays'];
+        }
+        if ($localVarParams['category'] !== null) {
+            $queryParams['category'] = $localVarParams['category'];
+        }
+        if ($localVarParams['hostName'] !== null) {
+            $queryParams['host_name'] = $localVarParams['hostName'];
+        }
+        if ($localVarParams['hostId'] !== null) {
+            $queryParams['host_id'] = $localVarParams['hostId'];
+        }
+        if ($localVarParams['privateIp'] !== null) {
+            $queryParams['private_ip'] = $localVarParams['privateIp'];
+        }
+        if ($localVarParams['publicIp'] !== null) {
+            $queryParams['public_ip'] = $localVarParams['publicIp'];
+        }
+        if ($localVarParams['containerName'] !== null) {
+            $queryParams['container_name'] = $localVarParams['containerName'];
+        }
+        if ($localVarParams['eventType'] !== null) {
+            $queryParams['event_type'] = $localVarParams['eventType'];
+        }
+        if ($localVarParams['handleStatus'] !== null) {
+            $queryParams['handle_status'] = $localVarParams['handleStatus'];
+        }
+        if ($localVarParams['severity'] !== null) {
+            $queryParams['severity'] = $localVarParams['severity'];
+        }
+        if ($localVarParams['severityList'] !== null) {
+            $queryParams['severity_list'] = $localVarParams['severityList'];
+        }
+        if ($localVarParams['attackTag'] !== null) {
+            $queryParams['attack_tag'] = $localVarParams['attackTag'];
+        }
+        if ($localVarParams['assetValue'] !== null) {
+            $queryParams['asset_value'] = $localVarParams['assetValue'];
+        }
+        if ($localVarParams['tagList'] !== null) {
+            $queryParams['tag_list'] = $localVarParams['tagList'];
+        }
+        if ($localVarParams['attCk'] !== null) {
+            $queryParams['att_ck'] = $localVarParams['attCk'];
+        }
+        if ($localVarParams['eventName'] !== null) {
+            $queryParams['event_name'] = $localVarParams['eventName'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListEventTypeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListEventTypeRequest',
             $asyncRequest = true);
     }
 
@@ -6761,517 +6811,6 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListGlobalAssetScanTaskResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListGlobalAssetScanTaskRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询服务器组列表
-     *
-     * 查询服务器组列表
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listHostGroupsAsync($request)
-    {
-        return $this->listHostGroupsAsyncWithHttpInfo($request);
-    }
-    
-    public function listHostGroupsAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/host-management/groups';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['groupName'] !== null) {
-            $queryParams['group_name'] = $localVarParams['groupName'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams['region'] = $localVarParams['region'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListHostGroupsResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListHostGroupsRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询云服务器列表
-     *
-     * 查询云服务器列表
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listHostStatusAsync($request)
-    {
-        return $this->listHostStatusAsyncWithHttpInfo($request);
-    }
-    
-    public function listHostStatusAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/host-management/hosts';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['version'] !== null) {
-            $queryParams['version'] = $localVarParams['version'];
-        }
-        if ($localVarParams['agentStatus'] !== null) {
-            $queryParams['agent_status'] = $localVarParams['agentStatus'];
-        }
-        if ($localVarParams['detectResult'] !== null) {
-            $queryParams['detect_result'] = $localVarParams['detectResult'];
-        }
-        if ($localVarParams['hostName'] !== null) {
-            $queryParams['host_name'] = $localVarParams['hostName'];
-        }
-        if ($localVarParams['hostId'] !== null) {
-            $queryParams['host_id'] = $localVarParams['hostId'];
-        }
-        if ($localVarParams['hostStatus'] !== null) {
-            $queryParams['host_status'] = $localVarParams['hostStatus'];
-        }
-        if ($localVarParams['osType'] !== null) {
-            $queryParams['os_type'] = $localVarParams['osType'];
-        }
-        if ($localVarParams['privateIp'] !== null) {
-            $queryParams['private_ip'] = $localVarParams['privateIp'];
-        }
-        if ($localVarParams['publicIp'] !== null) {
-            $queryParams['public_ip'] = $localVarParams['publicIp'];
-        }
-        if ($localVarParams['ipAddr'] !== null) {
-            $queryParams['ip_addr'] = $localVarParams['ipAddr'];
-        }
-        if ($localVarParams['protectStatus'] !== null) {
-            $queryParams['protect_status'] = $localVarParams['protectStatus'];
-        }
-        if ($localVarParams['groupId'] !== null) {
-            $queryParams['group_id'] = $localVarParams['groupId'];
-        }
-        if ($localVarParams['groupName'] !== null) {
-            $queryParams['group_name'] = $localVarParams['groupName'];
-        }
-        if ($localVarParams['vpcId'] !== null) {
-            $queryParams['vpc_id'] = $localVarParams['vpcId'];
-        }
-        if ($localVarParams['hasIntrusion'] !== null) {
-            $queryParams['has_intrusion'] = $localVarParams['hasIntrusion'];
-        }
-        if ($localVarParams['hasVul'] !== null) {
-            $queryParams['has_vul'] = $localVarParams['hasVul'];
-        }
-        if ($localVarParams['hasBaseline'] !== null) {
-            $queryParams['has_baseline'] = $localVarParams['hasBaseline'];
-        }
-        if ($localVarParams['sortKey'] !== null) {
-            $queryParams['sort_key'] = $localVarParams['sortKey'];
-        }
-        if ($localVarParams['sortDir'] !== null) {
-            $queryParams['sort_dir'] = $localVarParams['sortDir'];
-        }
-        if ($localVarParams['policyGroupId'] !== null) {
-            $queryParams['policy_group_id'] = $localVarParams['policyGroupId'];
-        }
-        if ($localVarParams['policyGroupName'] !== null) {
-            $queryParams['policy_group_name'] = $localVarParams['policyGroupName'];
-        }
-        if ($localVarParams['chargingMode'] !== null) {
-            $queryParams['charging_mode'] = $localVarParams['chargingMode'];
-        }
-        if ($localVarParams['refresh'] !== null) {
-            $queryParams['refresh'] = $localVarParams['refresh'];
-        }
-        if ($localVarParams['getCommonLoginLocations'] !== null) {
-            $queryParams['get_common_login_locations'] = $localVarParams['getCommonLoginLocations'];
-        }
-        if ($localVarParams['aboveVersion'] !== null) {
-            $queryParams['above_version'] = $localVarParams['aboveVersion'];
-        }
-        if ($localVarParams['outsideHost'] !== null) {
-            $queryParams['outside_host'] = $localVarParams['outsideHost'];
-        }
-        if ($localVarParams['assetValue'] !== null) {
-            $queryParams['asset_value'] = $localVarParams['assetValue'];
-        }
-        if ($localVarParams['label'] !== null) {
-            $queryParams['label'] = $localVarParams['label'];
-        }
-        if ($localVarParams['serverGroup'] !== null) {
-            $queryParams['server_group'] = $localVarParams['serverGroup'];
-        }
-        if ($localVarParams['agentUpgradable'] !== null) {
-            $queryParams['agent_upgradable'] = $localVarParams['agentUpgradable'];
-        }
-        if ($localVarParams['installMode'] !== null) {
-            $queryParams['install_mode'] = $localVarParams['installMode'];
-        }
-        if ($localVarParams['bindingKey'] !== null) {
-            $queryParams['binding_key'] = $localVarParams['bindingKey'];
-        }
-        if ($localVarParams['protectInterrupt'] !== null) {
-            $queryParams['protect_interrupt'] = $localVarParams['protectInterrupt'];
-        }
-        if ($localVarParams['incluster'] !== null) {
-            $queryParams['incluster'] = $localVarParams['incluster'];
-        }
-        if ($localVarParams['protectDegradation'] !== null) {
-            $queryParams['protect_degradation'] = $localVarParams['protectDegradation'];
-        }
-        if ($localVarParams['clusterId'] !== null) {
-            $queryParams['cluster_id'] = $localVarParams['clusterId'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams['region'] = $localVarParams['region'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListHostStatusResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListHostStatusRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * ECS风险状况
-     *
-     * ECS风险状况
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listHostsRiskAsync($request)
-    {
-        return $this->listHostsRiskAsyncWithHttpInfo($request);
-    }
-    
-    public function listHostsRiskAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/host-management/hosts-risk';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['hostIdList'] !== null) {
-            $queryParams['host_id_list'] = $localVarParams['hostIdList'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListHostsRiskResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListHostsRiskRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询镜像的基础镜像信息
-     *
-     * 查询镜像的基础镜像信息，若镜像类型为cicd镜像，则需传参镜像类型和镜像id唯一确定一条cicd镜像信息；若镜像类型为其他镜像仓类型，需要传参镜像类型、组织名称、镜像名称、镜像版本名称唯一确定一条其他镜像信息。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listImageBasicImageAsync($request)
-    {
-        return $this->listImageBasicImageAsyncWithHttpInfo($request);
-    }
-    
-    public function listImageBasicImageAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/image/{image_id}/basic-image';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['imageType'] !== null) {
-            $queryParams['image_type'] = $localVarParams['imageType'];
-        }
-        if ($localVarParams['namespace'] !== null) {
-            $queryParams['namespace'] = $localVarParams['namespace'];
-        }
-        if ($localVarParams['imageName'] !== null) {
-            $queryParams['image_name'] = $localVarParams['imageName'];
-        }
-        if ($localVarParams['imageVersion'] !== null) {
-            $queryParams['image_version'] = $localVarParams['imageVersion'];
-        }
-        if ($localVarParams['osName'] !== null) {
-            $queryParams['os_name'] = $localVarParams['osName'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams['region'] = $localVarParams['region'];
-        }
-        if ($localVarParams['imageId'] !== null) {
-            $pathParams['image_id'] = $localVarParams['imageId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageBasicImageResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageBasicImageRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询镜像文件列表
-     *
-     * 查询镜像文件列表，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listImageFilesAsync($request)
-    {
-        return $this->listImageFilesAsyncWithHttpInfo($request);
-    }
-    
-    public function listImageFilesAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/image/{image_id}/files';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['imageType'] !== null) {
-            $queryParams['image_type'] = $localVarParams['imageType'];
-        }
-        if ($localVarParams['namespace'] !== null) {
-            $queryParams['namespace'] = $localVarParams['namespace'];
-        }
-        if ($localVarParams['imageName'] !== null) {
-            $queryParams['image_name'] = $localVarParams['imageName'];
-        }
-        if ($localVarParams['tagName'] !== null) {
-            $queryParams['tag_name'] = $localVarParams['tagName'];
-        }
-        if ($localVarParams['fileName'] !== null) {
-            $queryParams['file_name'] = $localVarParams['fileName'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams['region'] = $localVarParams['region'];
-        }
-        if ($localVarParams['imageId'] !== null) {
-            $pathParams['image_id'] = $localVarParams['imageId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageFilesResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageFilesRequest',
             $asyncRequest = true);
     }
 
@@ -7499,11 +7038,11 @@ class HssAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
-        if ($localVarParams['fileName'] !== null) {
-            $queryParams['file_name'] = $localVarParams['fileName'];
-        }
         if ($localVarParams['category'] !== null) {
             $queryParams['category'] = $localVarParams['category'];
+        }
+        if ($localVarParams['fileName'] !== null) {
+            $queryParams['file_name'] = $localVarParams['fileName'];
         }
         if ($localVarParams['hostId'] !== null) {
             $pathParams['host_id'] = $localVarParams['hostId'];
@@ -8565,210 +8104,6 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 查询常用登录IP信息
-     *
-     * 查询常用登录IP信息
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listLoginCommonIpAsync($request)
-    {
-        return $this->listLoginCommonIpAsyncWithHttpInfo($request);
-    }
-    
-    public function listLoginCommonIpAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/setting/login-common-ip';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['ipAddr'] !== null) {
-            $queryParams['ip_addr'] = $localVarParams['ipAddr'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListLoginCommonIpResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListLoginCommonIpRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询常用登录地信息
-     *
-     * 查询常用登录地信息
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listLoginCommonLocationAsync($request)
-    {
-        return $this->listLoginCommonLocationAsyncWithHttpInfo($request);
-    }
-    
-    public function listLoginCommonLocationAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/setting/login-common-location';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['areaCode'] !== null) {
-            $queryParams['area_code'] = $localVarParams['areaCode'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListLoginCommonLocationResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListLoginCommonLocationRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询SSH登录IP白名单列表
-     *
-     * 查询SSH登录IP白名单列表
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listLoginWhiteIpAsync($request)
-    {
-        return $this->listLoginWhiteIpAsyncWithHttpInfo($request);
-    }
-    
-    public function listLoginWhiteIpAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/setting/login-white-ip';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['whiteIp'] !== null) {
-            $queryParams['white_ip'] = $localVarParams['whiteIp'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListLoginWhiteIpResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListLoginWhiteIpRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 查询登录白名单列表
      *
      * 查询登录白名单列表
@@ -8978,86 +8313,6 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListNamespacesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListNamespacesRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询备份恢复任务列表
-     *
-     * 查询备份恢复任务列表
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listOperationLogsByVaultNameAsync($request)
-    {
-        return $this->listOperationLogsByVaultNameAsyncWithHttpInfo($request);
-    }
-    
-    public function listOperationLogsByVaultNameAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/ransomware/backup/operation-logs';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['status'] !== null) {
-            $queryParams['status'] = $localVarParams['status'];
-        }
-        if ($localVarParams['resourceName'] !== null) {
-            $queryParams['resource_name'] = $localVarParams['resourceName'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['lastDays'] !== null) {
-            $queryParams['last_days'] = $localVarParams['lastDays'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListOperationLogsByVaultNameResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListOperationLogsByVaultNameRequest',
             $asyncRequest = true);
     }
 
@@ -9292,220 +8547,6 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListPluginInstallScriptResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListPluginInstallScriptRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询插件列表
-     *
-     * 查询插件列表
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listPluginsAsync($request)
-    {
-        return $this->listPluginsAsyncWithHttpInfo($request);
-    }
-    
-    public function listPluginsAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/setting/plugins';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['hostName'] !== null) {
-            $queryParams['host_name'] = $localVarParams['hostName'];
-        }
-        if ($localVarParams['hostId'] !== null) {
-            $queryParams['host_id'] = $localVarParams['hostId'];
-        }
-        if ($localVarParams['privateIp'] !== null) {
-            $queryParams['private_ip'] = $localVarParams['privateIp'];
-        }
-        if ($localVarParams['publicIp'] !== null) {
-            $queryParams['public_ip'] = $localVarParams['publicIp'];
-        }
-        if ($localVarParams['groupId'] !== null) {
-            $queryParams['group_id'] = $localVarParams['groupId'];
-        }
-        if ($localVarParams['assetValue'] !== null) {
-            $queryParams['asset_value'] = $localVarParams['assetValue'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['agentStatus'] !== null) {
-            $queryParams['agent_status'] = $localVarParams['agentStatus'];
-        }
-        if ($localVarParams['detectResult'] !== null) {
-            $queryParams['detect_result'] = $localVarParams['detectResult'];
-        }
-        if ($localVarParams['hostStatus'] !== null) {
-            $queryParams['host_status'] = $localVarParams['hostStatus'];
-        }
-        if ($localVarParams['osType'] !== null) {
-            $queryParams['os_type'] = $localVarParams['osType'];
-        }
-        if ($localVarParams['ipAddr'] !== null) {
-            $queryParams['ip_addr'] = $localVarParams['ipAddr'];
-        }
-        if ($localVarParams['protectStatus'] !== null) {
-            $queryParams['protect_status'] = $localVarParams['protectStatus'];
-        }
-        if ($localVarParams['groupName'] !== null) {
-            $queryParams['group_name'] = $localVarParams['groupName'];
-        }
-        if ($localVarParams['policyGroupId'] !== null) {
-            $queryParams['policy_group_id'] = $localVarParams['policyGroupId'];
-        }
-        if ($localVarParams['policyGroupName'] !== null) {
-            $queryParams['policy_group_name'] = $localVarParams['policyGroupName'];
-        }
-        if ($localVarParams['label'] !== null) {
-            $queryParams['label'] = $localVarParams['label'];
-        }
-        if ($localVarParams['chargingMode'] !== null) {
-            $queryParams['charging_mode'] = $localVarParams['chargingMode'];
-        }
-        if ($localVarParams['refresh'] !== null) {
-            $queryParams['refresh'] = $localVarParams['refresh'];
-        }
-        if ($localVarParams['aboveVersion'] !== null) {
-            $queryParams['above_version'] = $localVarParams['aboveVersion'];
-        }
-        if ($localVarParams['name'] !== null) {
-            $queryParams['name'] = $localVarParams['name'];
-        }
-        if ($localVarParams['version'] !== null) {
-            $queryParams['version'] = $localVarParams['version'];
-        }
-        if ($localVarParams['plugin'] !== null) {
-            $queryParams['plugin'] = $localVarParams['plugin'];
-        }
-        if ($localVarParams['outsideHost'] !== null) {
-            $queryParams['outside_host'] = $localVarParams['outsideHost'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListPluginsResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListPluginsRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询主机策略列表
-     *
-     * 查询主机策略列表
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listPoliciesAsync($request)
-    {
-        return $this->listPoliciesAsyncWithHttpInfo($request);
-    }
-    
-    public function listPoliciesAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/host-management/policies';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['agentId'] !== null) {
-            $queryParams['agent_id'] = $localVarParams['agentId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListPoliciesResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListPoliciesRequest',
             $asyncRequest = true);
     }
 
@@ -10005,178 +9046,6 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 查询勒索病毒的防护策略列表
-     *
-     * 查询勒索病毒的防护策略列表
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listProtectionPolicyAsync($request)
-    {
-        return $this->listProtectionPolicyAsyncWithHttpInfo($request);
-    }
-    
-    public function listProtectionPolicyAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/ransomware/protection/policy';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['policyName'] !== null) {
-            $queryParams['policy_name'] = $localVarParams['policyName'];
-        }
-        if ($localVarParams['protectPolicyId'] !== null) {
-            $queryParams['protect_policy_id'] = $localVarParams['protectPolicyId'];
-        }
-        if ($localVarParams['operatingSystem'] !== null) {
-            $queryParams['operating_system'] = $localVarParams['operatingSystem'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams['region'] = $localVarParams['region'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListProtectionPolicyResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListProtectionPolicyRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询勒索防护服务器列表
-     *
-     * 查询勒索防护服务器列表，与云备份服务配合使用。因此使用勒索相关接口之前确保该局点有云备份服务
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listProtectionServerAsync($request)
-    {
-        return $this->listProtectionServerAsyncWithHttpInfo($request);
-    }
-    
-    public function listProtectionServerAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/ransomware/server';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['hostName'] !== null) {
-            $queryParams['host_name'] = $localVarParams['hostName'];
-        }
-        if ($localVarParams['osType'] !== null) {
-            $queryParams['os_type'] = $localVarParams['osType'];
-        }
-        if ($localVarParams['hostIp'] !== null) {
-            $queryParams['host_ip'] = $localVarParams['hostIp'];
-        }
-        if ($localVarParams['hostStatus'] !== null) {
-            $queryParams['host_status'] = $localVarParams['hostStatus'];
-        }
-        if ($localVarParams['lastDays'] !== null) {
-            $queryParams['last_days'] = $localVarParams['lastDays'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams['region'] = $localVarParams['region'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListProtectionServerResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListProtectionServerRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 查询防护服务器列表
      *
      * 查询防护服务器列表：查询防护服务器相关数据，包含服务器名称、ip地址、操作系统、服务器组名称、防护策略、防护状态、微服务防护状态、RASP防护状态、RASP攻击数量信息
@@ -10330,119 +9199,6 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListQueryExportTaskResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListQueryExportTaskRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询勒索防护服务器列表2.0
-     *
-     * 查询勒索防护服务器列表，与云备份服务配合使用。因此使用勒索相关接口之前确保该局点有云备份服务
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listRansomwareProtectionNodesAsync($request)
-    {
-        return $this->listRansomwareProtectionNodesAsyncWithHttpInfo($request);
-    }
-    
-    public function listRansomwareProtectionNodesAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/ransomware/servers';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['hostName'] !== null) {
-            $queryParams['host_name'] = $localVarParams['hostName'];
-        }
-        if ($localVarParams['hostId'] !== null) {
-            $queryParams['host_id'] = $localVarParams['hostId'];
-        }
-        if ($localVarParams['osType'] !== null) {
-            $queryParams['os_type'] = $localVarParams['osType'];
-        }
-        if ($localVarParams['hostIp'] !== null) {
-            $queryParams['host_ip'] = $localVarParams['hostIp'];
-        }
-        if ($localVarParams['privateIp'] !== null) {
-            $queryParams['private_ip'] = $localVarParams['privateIp'];
-        }
-        if ($localVarParams['hostStatus'] !== null) {
-            $queryParams['host_status'] = $localVarParams['hostStatus'];
-        }
-        if ($localVarParams['ransomProtectionStatus'] !== null) {
-            $queryParams['ransom_protection_status'] = $localVarParams['ransomProtectionStatus'];
-        }
-        if ($localVarParams['protectPolicyName'] !== null) {
-            $queryParams['protect_policy_name'] = $localVarParams['protectPolicyName'];
-        }
-        if ($localVarParams['policyName'] !== null) {
-            $queryParams['policy_name'] = $localVarParams['policyName'];
-        }
-        if ($localVarParams['policyId'] !== null) {
-            $queryParams['policy_id'] = $localVarParams['policyId'];
-        }
-        if ($localVarParams['agentStatus'] !== null) {
-            $queryParams['agent_status'] = $localVarParams['agentStatus'];
-        }
-        if ($localVarParams['groupId'] !== null) {
-            $queryParams['group_id'] = $localVarParams['groupId'];
-        }
-        if ($localVarParams['groupName'] !== null) {
-            $queryParams['group_name'] = $localVarParams['groupName'];
-        }
-        if ($localVarParams['lastDays'] !== null) {
-            $queryParams['last_days'] = $localVarParams['lastDays'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListRansomwareProtectionNodesResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListRansomwareProtectionNodesRequest',
             $asyncRequest = true);
     }
 
@@ -10945,6 +9701,160 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 查询某告警事件的相同告警列表
+     *
+     * 查询某告警事件的相同告警列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSameEventsAsync($request)
+    {
+        return $this->listSameEventsAsyncWithHttpInfo($request);
+    }
+    
+    public function listSameEventsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/event/same-events';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['eventId'] !== null) {
+            $queryParams['event_id'] = $localVarParams['eventId'];
+        }
+        if ($localVarParams['eventClassId'] !== null) {
+            $queryParams['event_class_id'] = $localVarParams['eventClassId'];
+        }
+        if ($localVarParams['occurTime'] !== null) {
+            $queryParams['occur_time'] = $localVarParams['occurTime'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListSameEventsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListSameEventsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询配置检测策略组列表
+     *
+     * 查询配置检测策略组列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSecurityCheckPolicyGroupAsync($request)
+    {
+        return $this->listSecurityCheckPolicyGroupAsyncWithHttpInfo($request);
+    }
+    
+    public function listSecurityCheckPolicyGroupAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/baseline/security-checks/policy-groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListSecurityCheckPolicyGroupResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListSecurityCheckPolicyGroupRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查入侵事件列表
      *
      * 查入侵事件列表
@@ -11218,6 +10128,80 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 查询某告警事件关联的已处理的相似告警
+     *
+     * 查询某告警事件关联的已处理的相似告警
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSimilarHandledEventsAsync($request)
+    {
+        return $this->listSimilarHandledEventsAsyncWithHttpInfo($request);
+    }
+    
+    public function listSimilarHandledEventsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/event/similar-handled-events';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['eventId'] !== null) {
+            $queryParams['event_id'] = $localVarParams['eventId'];
+        }
+        if ($localVarParams['occurTime'] !== null) {
+            $queryParams['occur_time'] = $localVarParams['occurTime'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListSimilarHandledEventsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListSimilarHandledEventsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询系统用户白名单列表
      *
      * 查询系统用户白名单列表
@@ -11304,23 +10288,23 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 查询双因子主机列表
+     * 获取可信服务状态
      *
-     * 查询双因子主机列表
+     * 获取可信服务状态
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function listTwoFactorLoginHostAsync($request)
+    public function listTrustServiceStatusAsync($request)
     {
-        return $this->listTwoFactorLoginHostAsyncWithHttpInfo($request);
+        return $this->listTrustServiceStatusAsyncWithHttpInfo($request);
     }
     
-    public function listTwoFactorLoginHostAsyncWithHttpInfo($request){
+    public function listTrustServiceStatusAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/setting/two-factor-login/hosts';
+        $resourcePath = '/v5/setting/account/trusted-services';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -11334,20 +10318,8 @@ class HssAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['hostName'] !== null) {
-            $queryParams['host_name'] = $localVarParams['hostName'];
-        }
-        if ($localVarParams['displayName'] !== null) {
-            $queryParams['display_name'] = $localVarParams['displayName'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
         }
 
         if ($multipart) {
@@ -11374,9 +10346,9 @@ class HssAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListTwoFactorLoginHostResponse',
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListTrustServiceStatusResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListTwoFactorLoginHostRequest',
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListTrustServiceStatusRequest',
             $asyncRequest = true);
     }
 
@@ -11651,6 +10623,264 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 查询主机视图下的主机漏洞信息
+     *
+     * 查询主机视图下的主机漏洞信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVulHostHostsAsync($request)
+    {
+        return $this->listVulHostHostsAsyncWithHttpInfo($request);
+    }
+    
+    public function listVulHostHostsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/vulnerability/host/hosts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['assetValue'] !== null) {
+            $queryParams['asset_value'] = $localVarParams['assetValue'];
+        }
+        if ($localVarParams['groupName'] !== null) {
+            $queryParams['group_name'] = $localVarParams['groupName'];
+        }
+        if ($localVarParams['hostName'] !== null) {
+            $queryParams['host_name'] = $localVarParams['hostName'];
+        }
+        if ($localVarParams['publicIp'] !== null) {
+            $queryParams['public_ip'] = $localVarParams['publicIp'];
+        }
+        if ($localVarParams['privateIp'] !== null) {
+            $queryParams['private_ip'] = $localVarParams['privateIp'];
+        }
+        if ($localVarParams['severityLevel'] !== null) {
+            $queryParams['severity_level'] = $localVarParams['severityLevel'];
+        }
+        if ($localVarParams['handleStatus'] !== null) {
+            $queryParams['handle_status'] = $localVarParams['handleStatus'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $queryParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListVulHostHostsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListVulHostHostsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询漏洞白名单列表
+     *
+     * 查询漏洞白名单列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVulWhiteListAsync($request)
+    {
+        return $this->listVulWhiteListAsyncWithHttpInfo($request);
+    }
+    
+    public function listVulWhiteListAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/vulnerability/white-lists';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['vulName'] !== null) {
+            $queryParams['vul_name'] = $localVarParams['vulName'];
+        }
+        if ($localVarParams['vulType'] !== null) {
+            $queryParams['vul_type'] = $localVarParams['vulType'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListVulWhiteListResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListVulWhiteListRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询添加白名单时的漏洞选项
+     *
+     * 查询添加白名单时的漏洞选项
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVulWhiteListVulOptionsAsync($request)
+    {
+        return $this->listVulWhiteListVulOptionsAsyncWithHttpInfo($request);
+    }
+    
+    public function listVulWhiteListVulOptionsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/vulnerability/white-list/vulnerability-options';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['category'] !== null) {
+            $queryParams['category'] = $localVarParams['category'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['vulType'] !== null) {
+            $queryParams['vul_type'] = $localVarParams['vulType'];
+        }
+        if ($localVarParams['vulName'] !== null) {
+            $queryParams['vul_name'] = $localVarParams['vulName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListVulWhiteListVulOptionsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListVulWhiteListVulOptionsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询弱口令检测结果列表
      *
      * 查询弱口令检测结果列表
@@ -11773,11 +11003,11 @@ class HssAsyncClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['name'] !== null) {
-            $queryParams['name'] = $localVarParams['name'];
-        }
         if ($localVarParams['category'] !== null) {
             $queryParams['category'] = $localVarParams['category'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
         }
         if ($localVarParams['catalogue'] !== null) {
             $queryParams['catalogue'] = $localVarParams['catalogue'];
@@ -11853,11 +11083,11 @@ class HssAsyncClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['name'] !== null) {
-            $queryParams['name'] = $localVarParams['name'];
-        }
         if ($localVarParams['category'] !== null) {
             $queryParams['category'] = $localVarParams['category'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
         }
         if ($localVarParams['catalogue'] !== null) {
             $queryParams['catalogue'] = $localVarParams['catalogue'];
@@ -12031,11 +11261,11 @@ class HssAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
-        if ($localVarParams['fileName'] !== null) {
-            $queryParams['file_name'] = $localVarParams['fileName'];
-        }
         if ($localVarParams['category'] !== null) {
             $queryParams['category'] = $localVarParams['category'];
+        }
+        if ($localVarParams['fileName'] !== null) {
+            $queryParams['file_name'] = $localVarParams['fileName'];
         }
         if ($localVarParams['hostId'] !== null) {
             $pathParams['host_id'] = $localVarParams['hostId'];
@@ -12111,11 +11341,11 @@ class HssAsyncClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['fileName'] !== null) {
-            $queryParams['file_name'] = $localVarParams['fileName'];
-        }
         if ($localVarParams['category'] !== null) {
             $queryParams['category'] = $localVarParams['category'];
+        }
+        if ($localVarParams['fileName'] !== null) {
+            $queryParams['file_name'] = $localVarParams['fileName'];
         }
 
         if ($multipart) {
@@ -12268,11 +11498,11 @@ class HssAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
-        if ($localVarParams['domain'] !== null) {
-            $queryParams['domain'] = $localVarParams['domain'];
-        }
         if ($localVarParams['category'] !== null) {
             $queryParams['category'] = $localVarParams['category'];
+        }
+        if ($localVarParams['domain'] !== null) {
+            $queryParams['domain'] = $localVarParams['domain'];
         }
         if ($localVarParams['hostId'] !== null) {
             $pathParams['host_id'] = $localVarParams['hostId'];
@@ -12347,6 +11577,9 @@ class HssAsyncClient extends Client
         }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['category'] !== null) {
+            $queryParams['category'] = $localVarParams['category'];
         }
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
@@ -12524,142 +11757,6 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ModifyDecoyPortPolicyResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ModifyDecoyPortPolicyRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 添加、编辑或删除常用登录IP地址
-     *
-     * 添加、编辑或删除常用登录IP地址
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function modifyLoginCommonIpAsync($request)
-    {
-        return $this->modifyLoginCommonIpAsyncWithHttpInfo($request);
-    }
-    
-    public function modifyLoginCommonIpAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/setting/login-common-ip';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ModifyLoginCommonIpResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ModifyLoginCommonIpRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 添加、编辑或删除常用登录地
-     *
-     * 添加、编辑或删除常用登录地
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function modifyLoginCommonLocationAsync($request)
-    {
-        return $this->modifyLoginCommonLocationAsyncWithHttpInfo($request);
-    }
-    
-    public function modifyLoginCommonLocationAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/setting/login-common-location';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ModifyLoginCommonLocationResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ModifyLoginCommonLocationRequest',
             $asyncRequest = true);
     }
 
@@ -13007,23 +12104,23 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 设置双因子登录配置
+     * 下发手动检测
      *
-     * 设置双因子登录配置
+     * 下发手动检测
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function setTwoFactorLoginConfigAsync($request)
+    public function setManualDetectAsync($request)
     {
-        return $this->setTwoFactorLoginConfigAsyncWithHttpInfo($request);
+        return $this->setManualDetectAsyncWithHttpInfo($request);
     }
     
-    public function setTwoFactorLoginConfigAsyncWithHttpInfo($request){
+    public function setManualDetectAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/setting/two-factor-login/config';
+        $resourcePath = '/v5/{project_id}/host-management/{host_id}/manual-detect';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -13039,6 +12136,9 @@ class HssAsyncClient extends Client
         }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['hostId'] !== null) {
+            $pathParams['host_id'] = $localVarParams['hostId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -13060,7 +12160,7 @@ class HssAsyncClient extends Client
         );
 
         return $this->callApi(
-            $method='PUT',
+            $method='POST',
             $resourcePath,
             $pathParams,
             $queryParams,
@@ -13068,9 +12168,9 @@ class HssAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\SetTwoFactorLoginConfigResponse',
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\SetManualDetectResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\SetTwoFactorLoginConfigRequest',
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\SetManualDetectRequest',
             $asyncRequest = true);
     }
 
@@ -13412,74 +12512,6 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 查询HSS存储库绑定的备份策略信息
-     *
-     * 查询HSS存储库绑定的备份策略信息，确保已经购买了勒索防护存储库，可以从cbr云备份服务进行验证，确保已经存在HSS_projectid命名的存储库已经购买
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showBackupPolicyInfoAsync($request)
-    {
-        return $this->showBackupPolicyInfoAsyncWithHttpInfo($request);
-    }
-    
-    public function showBackupPolicyInfoAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/backup/policy';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams['region'] = $localVarParams['region'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowBackupPolicyInfoResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowBackupPolicyInfoRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 查询基线扫描手动检测结果
      *
      * 查询基线扫描手动检测结果
@@ -13545,9 +12577,9 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 查询基线白名单
+     * 查询单个基线白名单
      *
-     * 查询基线白名单
+     * 查询单个基线白名单
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13826,6 +12858,86 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 查询webcms漏洞基本信息
+     *
+     * 查询webcms漏洞基本信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showCmsVulDetailAsync($request)
+    {
+        return $this->showCmsVulDetailAsyncWithHttpInfo($request);
+    }
+    
+    public function showCmsVulDetailAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/vulnerability/cms-detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['vulId'] !== null) {
+            $queryParams['vul_id'] = $localVarParams['vulId'];
+        }
+        if ($localVarParams['cveId'] !== null) {
+            $queryParams['cve_id'] = $localVarParams['cveId'];
+        }
+        if ($localVarParams['handleStatus'] !== null) {
+            $queryParams['handle_status'] = $localVarParams['handleStatus'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowCmsVulDetailResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowCmsVulDetailRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询某一端口的描述信息
      *
      * 呈现某一端口详细信息，如本地端口：80，类型：TCP，危险程度：正常，端口描述：常用于SSH(SecureShell)-远程登录协议，用于安全登录文件传输（SCP，SFTP）及端口重新定向。
@@ -13859,11 +12971,11 @@ class HssAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
+        if ($localVarParams['category'] !== null) {
+            $queryParams['category'] = $localVarParams['category'];
+        }
         if ($localVarParams['port'] !== null) {
             $queryParams['port'] = $localVarParams['port'];
-        }
-        if ($localVarParams['categoty'] !== null) {
-            $queryParams['categoty'] = $localVarParams['categoty'];
         }
 
         if ($multipart) {
@@ -14433,6 +13545,196 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 查询威胁等级统计列表
+     *
+     * 查询威胁等级统计列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showEventSeverityAsync($request)
+    {
+        return $this->showEventSeverityAsyncWithHttpInfo($request);
+    }
+    
+    public function showEventSeverityAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/event/severity';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['beginTime'] !== null) {
+            $queryParams['begin_time'] = $localVarParams['beginTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['lastDays'] !== null) {
+            $queryParams['last_days'] = $localVarParams['lastDays'];
+        }
+        if ($localVarParams['category'] !== null) {
+            $queryParams['category'] = $localVarParams['category'];
+        }
+        if ($localVarParams['hostName'] !== null) {
+            $queryParams['host_name'] = $localVarParams['hostName'];
+        }
+        if ($localVarParams['hostId'] !== null) {
+            $queryParams['host_id'] = $localVarParams['hostId'];
+        }
+        if ($localVarParams['privateIp'] !== null) {
+            $queryParams['private_ip'] = $localVarParams['privateIp'];
+        }
+        if ($localVarParams['publicIp'] !== null) {
+            $queryParams['public_ip'] = $localVarParams['publicIp'];
+        }
+        if ($localVarParams['containerName'] !== null) {
+            $queryParams['container_name'] = $localVarParams['containerName'];
+        }
+        if ($localVarParams['eventType'] !== null) {
+            $queryParams['event_type'] = $localVarParams['eventType'];
+        }
+        if ($localVarParams['handleStatus'] !== null) {
+            $queryParams['handle_status'] = $localVarParams['handleStatus'];
+        }
+        if ($localVarParams['severity'] !== null) {
+            $queryParams['severity'] = $localVarParams['severity'];
+        }
+        if ($localVarParams['severityList'] !== null) {
+            $queryParams['severity_list'] = $localVarParams['severityList'];
+        }
+        if ($localVarParams['attackTag'] !== null) {
+            $queryParams['attack_tag'] = $localVarParams['attackTag'];
+        }
+        if ($localVarParams['assetValue'] !== null) {
+            $queryParams['asset_value'] = $localVarParams['assetValue'];
+        }
+        if ($localVarParams['tagList'] !== null) {
+            $queryParams['tag_list'] = $localVarParams['tagList'];
+        }
+        if ($localVarParams['attCk'] !== null) {
+            $queryParams['att_ck'] = $localVarParams['attCk'];
+        }
+        if ($localVarParams['eventName'] !== null) {
+            $queryParams['event_name'] = $localVarParams['eventName'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowEventSeverityResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowEventSeverityRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询导出任务信息
+     *
+     * 查询导出任务信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showExportTaskAsync($request)
+    {
+        return $this->showExportTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function showExportTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/event/export-task/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowExportTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowExportTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询单主机资产指纹采集状态
      *
      * 查询单主机资产指纹采集状态
@@ -14565,89 +13867,6 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowHostProtectionStatusResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowHostProtectionStatusRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询镜像文件统计信息
-     *
-     * 查询镜像文件统计信息，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showImageFilesStatAsync($request)
-    {
-        return $this->showImageFilesStatAsyncWithHttpInfo($request);
-    }
-    
-    public function showImageFilesStatAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/image/{image_id}/files-statistics';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['imageType'] !== null) {
-            $queryParams['image_type'] = $localVarParams['imageType'];
-        }
-        if ($localVarParams['namespace'] !== null) {
-            $queryParams['namespace'] = $localVarParams['namespace'];
-        }
-        if ($localVarParams['imageName'] !== null) {
-            $queryParams['image_name'] = $localVarParams['imageName'];
-        }
-        if ($localVarParams['tagName'] !== null) {
-            $queryParams['tag_name'] = $localVarParams['tagName'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams['region'] = $localVarParams['region'];
-        }
-        if ($localVarParams['imageId'] !== null) {
-            $pathParams['image_id'] = $localVarParams['imageId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowImageFilesStatResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowImageFilesStatRequest',
             $asyncRequest = true);
     }
 
@@ -15054,9 +14273,9 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 查询导出任务信息-按查询条件
+     * 查询导出任务信息
      *
-     * 查询导出任务信息-按查询条件
+     * 查询导出任务信息
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15096,11 +14315,11 @@ class HssAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 []
             );
         }
@@ -15121,6 +14340,86 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowLatestExportTaskByTypeResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowLatestExportTaskByTypeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询linux漏洞基本信息
+     *
+     * 查询linux漏洞基本信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showLinuxVulDetailAsync($request)
+    {
+        return $this->showLinuxVulDetailAsyncWithHttpInfo($request);
+    }
+    
+    public function showLinuxVulDetailAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/vulnerability/linux-detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['vulId'] !== null) {
+            $queryParams['vul_id'] = $localVarParams['vulId'];
+        }
+        if ($localVarParams['cveId'] !== null) {
+            $queryParams['cve_id'] = $localVarParams['cveId'];
+        }
+        if ($localVarParams['handleStatus'] !== null) {
+            $queryParams['handle_status'] = $localVarParams['handleStatus'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowLinuxVulDetailResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowLinuxVulDetailRequest',
             $asyncRequest = true);
     }
 
@@ -15384,74 +14683,6 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowPageNoticesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowPageNoticesRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询指定策略的总开关
-     *
-     * 查询指定策略的总开关
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showPolicySwitchStatusAsync($request)
-    {
-        return $this->showPolicySwitchStatusAsyncWithHttpInfo($request);
-    }
-    
-    public function showPolicySwitchStatusAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/policy/switch';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['policyName'] !== null) {
-            $queryParams['policy_name'] = $localVarParams['policyName'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowPolicySwitchStatusResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowPolicySwitchStatusRequest',
             $asyncRequest = true);
     }
 
@@ -15944,23 +15175,23 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 查询单个备份策略信息
+     * 查询手动检测状态
      *
-     * 查询单个备份策略信息
+     * 查询手动检测状态
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function showSingleBackupPolicyInfoAsync($request)
+    public function showScanStatusAsync($request)
     {
-        return $this->showSingleBackupPolicyInfoAsyncWithHttpInfo($request);
+        return $this->showScanStatusAsyncWithHttpInfo($request);
     }
     
-    public function showSingleBackupPolicyInfoAsyncWithHttpInfo($request){
+    public function showScanStatusAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/backup/{policy_id}';
+        $resourcePath = '/v5/{project_id}/host-management/{host_id}/scan-status';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -15977,17 +15208,20 @@ class HssAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
-        if ($localVarParams['policyId'] !== null) {
-            $pathParams['policy_id'] = $localVarParams['policyId'];
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['hostId'] !== null) {
+            $pathParams['host_id'] = $localVarParams['hostId'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['*/*', 'application/json'],
                 []
             );
         }
@@ -16005,9 +15239,9 @@ class HssAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowSingleBackupPolicyInfoResponse',
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowScanStatusResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowSingleBackupPolicyInfoRequest',
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowScanStatusRequest',
             $asyncRequest = true);
     }
 
@@ -16077,23 +15311,23 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 漏洞管理-主机视图-主机列表-导出报告
+     * 统计受影响服务器和漏洞数量
      *
-     * 在主机视图中导出漏洞报告详细报告pdf格式
+     * 统计受影响服务器和漏洞数量
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function showVulReportDataAsync($request)
+    public function showVulAffectedStaticsAsync($request)
     {
-        return $this->showVulReportDataAsyncWithHttpInfo($request);
+        return $this->showVulAffectedStaticsAsyncWithHttpInfo($request);
     }
     
-    public function showVulReportDataAsyncWithHttpInfo($request){
+    public function showVulAffectedStaticsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/vulnerability/report/data';
+        $resourcePath = '/v5/{project_id}/vulnerability/statistics/affected';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -16110,8 +15344,97 @@ class HssAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
+        if ($localVarParams['selectType'] !== null) {
+            $queryParams['select_type'] = $localVarParams['selectType'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $queryParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['containerIds'] !== null) {
+            $queryParams['container_ids'] = $localVarParams['containerIds'];
+        }
+        if ($localVarParams['isContainer'] !== null) {
+            $queryParams['is_container'] = $localVarParams['isContainer'];
+        }
+        if ($localVarParams['vulIds'] !== null) {
+            $queryParams['vul_ids'] = $localVarParams['vulIds'];
+        }
+        if ($localVarParams['hostIds'] !== null) {
+            $queryParams['host_ids'] = $localVarParams['hostIds'];
+        }
+        if ($localVarParams['category'] !== null) {
+            $queryParams['category'] = $localVarParams['category'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowVulAffectedStaticsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowVulAffectedStaticsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询漏洞白名单详情
+     *
+     * 查询漏洞白名单详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showVulWhiteListDetailAsync($request)
+    {
+        return $this->showVulWhiteListDetailAsyncWithHttpInfo($request);
+    }
+    
+    public function showVulWhiteListDetailAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/vulnerability/white-list/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
@@ -16130,7 +15453,7 @@ class HssAsyncClient extends Client
         );
 
         return $this->callApi(
-            $method='POST',
+            $method='GET',
             $resourcePath,
             $pathParams,
             $queryParams,
@@ -16138,9 +15461,9 @@ class HssAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowVulReportDataResponse',
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowVulWhiteListDetailResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowVulReportDataRequest',
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowVulWhiteListDetailRequest',
             $asyncRequest = true);
     }
 
@@ -16339,216 +15662,6 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowWebSiteTopResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowWebSiteTopRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 开启或关闭程序自动隔离查杀
-     *
-     * 开启或关闭程序自动隔离查杀
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function startAutoKillVirusStatusAsync($request)
-    {
-        return $this->startAutoKillVirusStatusAsyncWithHttpInfo($request);
-    }
-    
-    public function startAutoKillVirusStatusAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/setting/virus-kill';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\StartAutoKillVirusStatusResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\StartAutoKillVirusStatusRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 开启勒索病毒防护
-     *
-     * 开启勒索病毒防护，请保证该region有cbr云备份服务，勒索服务与云备份服务有关联关系
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function startProtectionAsync($request)
-    {
-        return $this->startProtectionAsyncWithHttpInfo($request);
-    }
-    
-    public function startProtectionAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/ransomware/protection/open';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams['region'] = $localVarParams['region'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\StartProtectionResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\StartProtectionRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 关闭勒索病毒防护
-     *
-     * 关闭勒索病毒防护
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function stopProtectionAsync($request)
-    {
-        return $this->stopProtectionAsyncWithHttpInfo($request);
-    }
-    
-    public function stopProtectionAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/ransomware/protection/close';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams['region'] = $localVarParams['region'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\StopProtectionResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\StopProtectionRequest',
             $asyncRequest = true);
     }
 
@@ -16834,23 +15947,23 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 切换防护状态
+     * 启用动态端口蜜罐策略
      *
-     * 切换防护状态
+     * 启用动态端口蜜罐策略
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function switchHostsProtectStatusAsync($request)
+    public function switchDecoyPortPolicyAsync($request)
     {
-        return $this->switchHostsProtectStatusAsyncWithHttpInfo($request);
+        return $this->switchDecoyPortPolicyAsyncWithHttpInfo($request);
     }
     
-    public function switchHostsProtectStatusAsyncWithHttpInfo($request){
+    public function switchDecoyPortPolicyAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/host-management/protection';
+        $resourcePath = '/v5/{project_id}/honeypot-port/policy-enable/{policy_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -16867,8 +15980,79 @@ class HssAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
+        if ($localVarParams['enable'] !== null) {
+            $queryParams['enable'] = $localVarParams['enable'];
+        }
         if ($localVarParams['region'] !== null) {
             $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\SwitchDecoyPortPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\SwitchDecoyPortPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改防火墙授权状态
+     *
+     * 修改防火墙授权状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function switchFirewallStatusAsync($request)
+    {
+        return $this->switchFirewallStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function switchFirewallStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/host-management/firewall';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -16898,9 +16082,9 @@ class HssAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\SwitchHostsProtectStatusResponse',
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\SwitchFirewallStatusResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\SwitchHostsProtectStatusRequest',
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\SwitchFirewallStatusRequest',
             $asyncRequest = true);
     }
 
@@ -17310,23 +16494,23 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 修改存储库绑定的备份策略
+     * 卸载Agent
      *
-     * 修改存储库绑定的备份策略
+     * 卸载Agent
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function updateBackupPolicyInfoAsync($request)
+    public function uninstallAgentsAsync($request)
     {
-        return $this->updateBackupPolicyInfoAsyncWithHttpInfo($request);
+        return $this->uninstallAgentsAsyncWithHttpInfo($request);
     }
     
-    public function updateBackupPolicyInfoAsyncWithHttpInfo($request){
+    public function uninstallAgentsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/backup/policy';
+        $resourcePath = '/v5/{project_id}/host-management/uninstall';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -17342,9 +16526,6 @@ class HssAsyncClient extends Client
         }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams['region'] = $localVarParams['region'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -17366,7 +16547,7 @@ class HssAsyncClient extends Client
         );
 
         return $this->callApi(
-            $method='PUT',
+            $method='POST',
             $resourcePath,
             $pathParams,
             $queryParams,
@@ -17374,9 +16555,9 @@ class HssAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\UpdateBackupPolicyInfoResponse',
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\UninstallAgentsResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\UpdateBackupPolicyInfoRequest',
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\UninstallAgentsRequest',
             $asyncRequest = true);
     }
 
@@ -17526,77 +16707,6 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 修改勒索防护策略
-     *
-     * 修改勒索防护策略
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function updateProtectionPolicyAsync($request)
-    {
-        return $this->updateProtectionPolicyAsyncWithHttpInfo($request);
-    }
-    
-    public function updateProtectionPolicyAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v5/{project_id}/ransomware/protection/policy';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams['region'] = $localVarParams['region'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\UpdateProtectionPolicyResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\UpdateProtectionPolicyRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 更新安全组策略
      *
      * 更新安全组策略(云原生网络模型)
@@ -17735,6 +16845,74 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\UpdateSystemUserWhiteListResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\UpdateSystemUserWhiteListRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 校验当前账号是否是管理员账号（包含组织管理员和委托管理员）
+     *
+     * 校验当前账号是否是管理员账号（包含组织管理员和委托管理员）
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function validateAdminAsync($request)
+    {
+        return $this->validateAdminAsyncWithHttpInfo($request);
+    }
+    
+    public function validateAdminAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/setting/account/admin';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ValidateAdminResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ValidateAdminRequest',
             $asyncRequest = true);
     }
 
@@ -20425,6 +19603,202 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 查询指定策略组的检查项列表
+     *
+     * 查询指定策略组的检查项列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAllRiskConfigCheckRulesAsync($request)
+    {
+        return $this->listAllRiskConfigCheckRulesAsyncWithHttpInfo($request);
+    }
+    
+    public function listAllRiskConfigCheckRulesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/baseline/risk-config/check-rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['checkType'] !== null) {
+            $queryParams['check_type'] = $localVarParams['checkType'];
+        }
+        if ($localVarParams['standard'] !== null) {
+            $queryParams['standard'] = $localVarParams['standard'];
+        }
+        if ($localVarParams['statisticsScanResult'] !== null) {
+            $queryParams['statistics_scan_result'] = $localVarParams['statisticsScanResult'];
+        }
+        if ($localVarParams['checkRuleName'] !== null) {
+            $queryParams['check_rule_name'] = $localVarParams['checkRuleName'];
+        }
+        if ($localVarParams['severity'] !== null) {
+            $queryParams['severity'] = $localVarParams['severity'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $queryParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['tag'] !== null) {
+            $queryParams['tag'] = $localVarParams['tag'];
+        }
+        if ($localVarParams['policyGroupId'] !== null) {
+            $queryParams['policy_group_id'] = $localVarParams['policyGroupId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListAllRiskConfigCheckRulesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListAllRiskConfigCheckRulesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询配置检查项影响到的服务器列表
+     *
+     * 查询配置检查项影响到的服务器列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCheckRuleHostAsync($request)
+    {
+        return $this->listCheckRuleHostAsyncWithHttpInfo($request);
+    }
+    
+    public function listCheckRuleHostAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/baseline/check-rule/hosts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['checkRuleId'] !== null) {
+            $queryParams['check_rule_id'] = $localVarParams['checkRuleId'];
+        }
+        if ($localVarParams['checkName'] !== null) {
+            $queryParams['check_name'] = $localVarParams['checkName'];
+        }
+        if ($localVarParams['checkType'] !== null) {
+            $queryParams['check_type'] = $localVarParams['checkType'];
+        }
+        if ($localVarParams['standard'] !== null) {
+            $queryParams['standard'] = $localVarParams['standard'];
+        }
+        if ($localVarParams['resultType'] !== null) {
+            $queryParams['result_type'] = $localVarParams['resultType'];
+        }
+        if ($localVarParams['hostType'] !== null) {
+            $queryParams['host_type'] = $localVarParams['hostType'];
+        }
+        if ($localVarParams['checkCce'] !== null) {
+            $queryParams['check_cce'] = $localVarParams['checkCce'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $queryParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['policyGroupId'] !== null) {
+            $queryParams['policy_group_id'] = $localVarParams['policyGroupId'];
+        }
+        if ($localVarParams['hostName'] !== null) {
+            $queryParams['host_name'] = $localVarParams['hostName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListCheckRuleHostResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListCheckRuleHostRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询基线检查执行操作时影响的范围
      *
      * 查询基线检查执行操作时影响的范围
@@ -20495,6 +19869,317 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListHandleAffectBaselineResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListHandleAffectBaselineRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查看主机对应的检查项
+     *
+     * 查询配置检查项影响到的服务器列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listHostCheckRulesAsync($request)
+    {
+        return $this->listHostCheckRulesAsyncWithHttpInfo($request);
+    }
+    
+    public function listHostCheckRulesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/baseline/host/check-rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['hostId'] !== null) {
+            $queryParams['host_id'] = $localVarParams['hostId'];
+        }
+        if ($localVarParams['policyGroupId'] !== null) {
+            $queryParams['policy_group_id'] = $localVarParams['policyGroupId'];
+        }
+        if ($localVarParams['resultType'] !== null) {
+            $queryParams['result_type'] = $localVarParams['resultType'];
+        }
+        if ($localVarParams['standard'] !== null) {
+            $queryParams['standard'] = $localVarParams['standard'];
+        }
+        if ($localVarParams['checkName'] !== null) {
+            $queryParams['check_name'] = $localVarParams['checkName'];
+        }
+        if ($localVarParams['checkRuleName'] !== null) {
+            $queryParams['check_rule_name'] = $localVarParams['checkRuleName'];
+        }
+        if ($localVarParams['tag'] !== null) {
+            $queryParams['tag'] = $localVarParams['tag'];
+        }
+        if ($localVarParams['severity'] !== null) {
+            $queryParams['severity'] = $localVarParams['severity'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListHostCheckRulesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListHostCheckRulesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询基线检查的统计数据信息
+     *
+     * 查询基线检查的统计数据信息，用来展示基线检查页面的统计数据和图表数据，包括最近检测时间、检测主机数、检测基线数、主机配置检查项数、主机配置基线通过率、主机配置风险top5、主机弱口令检测统计、主机弱口令风险top5等
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showBaselineOverviewAsync($request)
+    {
+        return $this->showBaselineOverviewAsyncWithHttpInfo($request);
+    }
+    
+    public function showBaselineOverviewAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/baseline/overview';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $queryParams['group_id'] = $localVarParams['groupId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowBaselineOverviewResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowBaselineOverviewRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询基线检查的统计数据信息，包括弱口令，口令复杂度，配置检测
+     *
+     * 查询基线检查的风险数统计信息，包括弱口令，口令复杂度，配置检测
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showBaselineStatisticAsync($request)
+    {
+        return $this->showBaselineStatisticAsyncWithHttpInfo($request);
+    }
+    
+    public function showBaselineStatisticAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/baseline/statistic';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['hostId'] !== null) {
+            $queryParams['host_id'] = $localVarParams['hostId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $queryParams['group_id'] = $localVarParams['groupId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowBaselineStatisticResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowBaselineStatisticRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询检查项修复失败原因
+     *
+     * 查询检查项修复失败原因
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showCheckRuleFixFailDetailAsync($request)
+    {
+        return $this->showCheckRuleFixFailDetailAsyncWithHttpInfo($request);
+    }
+    
+    public function showCheckRuleFixFailDetailAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/baseline/check-rule/fail-detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['hostId'] !== null) {
+            $queryParams['host_id'] = $localVarParams['hostId'];
+        }
+        if ($localVarParams['checkName'] !== null) {
+            $queryParams['check_name'] = $localVarParams['checkName'];
+        }
+        if ($localVarParams['checkRuleId'] !== null) {
+            $queryParams['check_rule_id'] = $localVarParams['checkRuleId'];
+        }
+        if ($localVarParams['standard'] !== null) {
+            $queryParams['standard'] = $localVarParams['standard'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowCheckRuleFixFailDetailResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowCheckRuleFixFailDetailRequest',
             $asyncRequest = true);
     }
 
@@ -20637,6 +20322,172 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowBaselineDirectoryResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowBaselineDirectoryRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询配置检测策略的默认基线信息
+     *
+     * 查询配置检测策略的默认基线信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDefaultSecurityCheckPolicyAsync($request)
+    {
+        return $this->showDefaultSecurityCheckPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function showDefaultSecurityCheckPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/baseline/security-checks/default-policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['supportOs'] !== null) {
+            $queryParams['support_os'] = $localVarParams['supportOs'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowDefaultSecurityCheckPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowDefaultSecurityCheckPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询基线的详细检查项
+     *
+     * 查询基线的详细检查项
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDefaultSecurityCheckPolicyDetailsAsync($request)
+    {
+        return $this->showDefaultSecurityCheckPolicyDetailsAsyncWithHttpInfo($request);
+    }
+    
+    public function showDefaultSecurityCheckPolicyDetailsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/baseline/security-checks/default-policy/details';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['supportOs'] !== null) {
+            $queryParams['support_os'] = $localVarParams['supportOs'];
+        }
+        if ($localVarParams['checkType'] !== null) {
+            $queryParams['check_type'] = $localVarParams['checkType'];
+        }
+        if ($localVarParams['standard'] !== null) {
+            $queryParams['standard'] = $localVarParams['standard'];
+        }
+        if ($localVarParams['tag'] !== null) {
+            $queryParams['tag'] = $localVarParams['tag'];
+        }
+        if ($localVarParams['checkRuleName'] !== null) {
+            $queryParams['check_rule_name'] = $localVarParams['checkRuleName'];
+        }
+        if ($localVarParams['severity'] !== null) {
+            $queryParams['severity'] = $localVarParams['severity'];
+        }
+        if ($localVarParams['level'] !== null) {
+            $queryParams['level'] = $localVarParams['level'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $queryParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['checked'] !== null) {
+            $queryParams['checked'] = $localVarParams['checked'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowDefaultSecurityCheckPolicyDetailsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowDefaultSecurityCheckPolicyDetailsRequest',
             $asyncRequest = true);
     }
 
@@ -21158,6 +21009,74 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\SaveBrowsingHistoryResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\SaveBrowsingHistoryRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 发送安全报告
+     *
+     * 发送安全报告
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function sendSecurityReportAsync($request)
+    {
+        return $this->sendSecurityReportAsyncWithHttpInfo($request);
+    }
+    
+    public function sendSecurityReportAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/report/sending';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\SendSecurityReportResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\SendSecurityReportRequest',
             $asyncRequest = true);
     }
 
@@ -22060,6 +21979,89 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 获取集群daemonset列表
+     *
+     * 获取集群daemonset列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAgentDaemonsetInfoAsync($request)
+    {
+        return $this->listAgentDaemonsetInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function listAgentDaemonsetInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/container/kubernetes/clusters/daemonsets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['showClusterLogStatus'] !== null) {
+            $queryParams['show_cluster_log_status'] = $localVarParams['showClusterLogStatus'];
+        }
+        if ($localVarParams['accessStatus'] !== null) {
+            $queryParams['access_status'] = $localVarParams['accessStatus'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListAgentDaemonsetInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListAgentDaemonsetInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取镜像同步任务关联的镜像仓的信息
      *
      * 获取镜像同步任务关联的镜像仓的信息
@@ -22856,6 +22858,71 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\RemoveMultiCloudClustersResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\RemoveMultiCloudClustersRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 集群公网接入方式网络配置信息
+     *
+     * 集群公网接入方式网络配置信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAgentAddressAsync($request)
+    {
+        return $this->showAgentAddressAsyncWithHttpInfo($request);
+    }
+    
+    public function showAgentAddressAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/container/kubernetes/multi-cloud/agent-network';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowAgentAddressResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowAgentAddressRequest',
             $asyncRequest = true);
     }
 
@@ -23979,6 +24046,889 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 创建服务器组
+     *
+     * 创建服务器组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addHostsGroupAsync($request)
+    {
+        return $this->addHostsGroupAsyncWithHttpInfo($request);
+    }
+    
+    public function addHostsGroupAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/host-management/groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\AddHostsGroupResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\AddHostsGroupRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 开启或关闭“自动绑定配额”配置开关
+     *
+     * 开启或关闭“自动绑定配额”配置开关
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeAutoOpenQuotaStatusAsync($request)
+    {
+        return $this->changeAutoOpenQuotaStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function changeAutoOpenQuotaStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/setting/config/auto-open-quota';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeAutoOpenQuotaStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeAutoOpenQuotaStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 编辑服务器组
+     *
+     * 编辑服务器组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeHostsGroupAsync($request)
+    {
+        return $this->changeHostsGroupAsyncWithHttpInfo($request);
+    }
+    
+    public function changeHostsGroupAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/host-management/groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeHostsGroupResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeHostsGroupRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建VPC终端节点的创建
+     *
+     * 创建VPC终端节点的创建
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createVpcEndpointAsync($request)
+    {
+        return $this->createVpcEndpointAsyncWithHttpInfo($request);
+    }
+    
+    public function createVpcEndpointAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/host-management/vpc-endpointes';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\CreateVpcEndpointResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\CreateVpcEndpointRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除服务器组
+     *
+     * 删除服务器组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteHostsGroupAsync($request)
+    {
+        return $this->deleteHostsGroupAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteHostsGroupAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/host-management/groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $queryParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\DeleteHostsGroupResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\DeleteHostsGroupRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询“自动绑定配额”配置开关状态
+     *
+     * 查询“自动绑定配额”配置开关状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAutoOpenQuotaStatusAsync($request)
+    {
+        return $this->listAutoOpenQuotaStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function listAutoOpenQuotaStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/setting/config/auto-open-quota';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListAutoOpenQuotaStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListAutoOpenQuotaStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询服务器组列表
+     *
+     * 查询服务器组列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listHostGroupsAsync($request)
+    {
+        return $this->listHostGroupsAsyncWithHttpInfo($request);
+    }
+    
+    public function listHostGroupsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/host-management/groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['groupName'] !== null) {
+            $queryParams['group_name'] = $localVarParams['groupName'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListHostGroupsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListHostGroupsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询云服务器列表
+     *
+     * 查询云服务器列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listHostStatusAsync($request)
+    {
+        return $this->listHostStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function listHostStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/host-management/hosts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['version'] !== null) {
+            $queryParams['version'] = $localVarParams['version'];
+        }
+        if ($localVarParams['agentStatus'] !== null) {
+            $queryParams['agent_status'] = $localVarParams['agentStatus'];
+        }
+        if ($localVarParams['detectResult'] !== null) {
+            $queryParams['detect_result'] = $localVarParams['detectResult'];
+        }
+        if ($localVarParams['hostName'] !== null) {
+            $queryParams['host_name'] = $localVarParams['hostName'];
+        }
+        if ($localVarParams['hostId'] !== null) {
+            $queryParams['host_id'] = $localVarParams['hostId'];
+        }
+        if ($localVarParams['hostStatus'] !== null) {
+            $queryParams['host_status'] = $localVarParams['hostStatus'];
+        }
+        if ($localVarParams['osType'] !== null) {
+            $queryParams['os_type'] = $localVarParams['osType'];
+        }
+        if ($localVarParams['privateIp'] !== null) {
+            $queryParams['private_ip'] = $localVarParams['privateIp'];
+        }
+        if ($localVarParams['publicIp'] !== null) {
+            $queryParams['public_ip'] = $localVarParams['publicIp'];
+        }
+        if ($localVarParams['ipAddr'] !== null) {
+            $queryParams['ip_addr'] = $localVarParams['ipAddr'];
+        }
+        if ($localVarParams['protectStatus'] !== null) {
+            $queryParams['protect_status'] = $localVarParams['protectStatus'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $queryParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['groupName'] !== null) {
+            $queryParams['group_name'] = $localVarParams['groupName'];
+        }
+        if ($localVarParams['vpcId'] !== null) {
+            $queryParams['vpc_id'] = $localVarParams['vpcId'];
+        }
+        if ($localVarParams['hasIntrusion'] !== null) {
+            $queryParams['has_intrusion'] = $localVarParams['hasIntrusion'];
+        }
+        if ($localVarParams['hasVul'] !== null) {
+            $queryParams['has_vul'] = $localVarParams['hasVul'];
+        }
+        if ($localVarParams['hasBaseline'] !== null) {
+            $queryParams['has_baseline'] = $localVarParams['hasBaseline'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['policyGroupId'] !== null) {
+            $queryParams['policy_group_id'] = $localVarParams['policyGroupId'];
+        }
+        if ($localVarParams['policyGroupName'] !== null) {
+            $queryParams['policy_group_name'] = $localVarParams['policyGroupName'];
+        }
+        if ($localVarParams['chargingMode'] !== null) {
+            $queryParams['charging_mode'] = $localVarParams['chargingMode'];
+        }
+        if ($localVarParams['refresh'] !== null) {
+            $queryParams['refresh'] = $localVarParams['refresh'];
+        }
+        if ($localVarParams['getCommonLoginLocations'] !== null) {
+            $queryParams['get_common_login_locations'] = $localVarParams['getCommonLoginLocations'];
+        }
+        if ($localVarParams['aboveVersion'] !== null) {
+            $queryParams['above_version'] = $localVarParams['aboveVersion'];
+        }
+        if ($localVarParams['outsideHost'] !== null) {
+            $queryParams['outside_host'] = $localVarParams['outsideHost'];
+        }
+        if ($localVarParams['assetValue'] !== null) {
+            $queryParams['asset_value'] = $localVarParams['assetValue'];
+        }
+        if ($localVarParams['label'] !== null) {
+            $queryParams['label'] = $localVarParams['label'];
+        }
+        if ($localVarParams['serverGroup'] !== null) {
+            $queryParams['server_group'] = $localVarParams['serverGroup'];
+        }
+        if ($localVarParams['agentUpgradable'] !== null) {
+            $queryParams['agent_upgradable'] = $localVarParams['agentUpgradable'];
+        }
+        if ($localVarParams['installMode'] !== null) {
+            $queryParams['install_mode'] = $localVarParams['installMode'];
+        }
+        if ($localVarParams['bindingKey'] !== null) {
+            $queryParams['binding_key'] = $localVarParams['bindingKey'];
+        }
+        if ($localVarParams['protectInterrupt'] !== null) {
+            $queryParams['protect_interrupt'] = $localVarParams['protectInterrupt'];
+        }
+        if ($localVarParams['incluster'] !== null) {
+            $queryParams['incluster'] = $localVarParams['incluster'];
+        }
+        if ($localVarParams['protectDegradation'] !== null) {
+            $queryParams['protect_degradation'] = $localVarParams['protectDegradation'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $queryParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListHostStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListHostStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * ECS风险状况
+     *
+     * ECS风险状况
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listHostsRiskAsync($request)
+    {
+        return $this->listHostsRiskAsyncWithHttpInfo($request);
+    }
+    
+    public function listHostsRiskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/host-management/hosts-risk';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['hostIdList'] !== null) {
+            $queryParams['host_id_list'] = $localVarParams['hostIdList'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListHostsRiskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListHostsRiskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询主机策略列表
+     *
+     * 查询主机策略列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPoliciesAsync($request)
+    {
+        return $this->listPoliciesAsyncWithHttpInfo($request);
+    }
+    
+    public function listPoliciesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/host-management/policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['agentId'] !== null) {
+            $queryParams['agent_id'] = $localVarParams['agentId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListPoliciesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListPoliciesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询每个主机的终端节点的创建状态
+     *
+     * 查询每个主机的终端节点的创建状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showEndpointStatusAsync($request)
+    {
+        return $this->showEndpointStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function showEndpointStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/host-management/vpc-endpointes/batch-query';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowEndpointStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowEndpointStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 统计服务器数据
      *
      * 统计服务器数据
@@ -24043,6 +24993,145 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowHostsStatisticsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowHostsStatisticsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 切换防护状态
+     *
+     * 切换防护状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function switchHostsProtectStatusAsync($request)
+    {
+        return $this->switchHostsProtectStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function switchHostsProtectStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/host-management/protection';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\SwitchHostsProtectStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\SwitchHostsProtectStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 升级Agent
+     *
+     * 升级Agent
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function upgradeAgentsAsync($request)
+    {
+        return $this->upgradeAgentsAsyncWithHttpInfo($request);
+    }
+    
+    public function upgradeAgentsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/host-management/upgrade';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\UpgradeAgentsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\UpgradeAgentsRequest',
             $asyncRequest = true);
     }
 
@@ -24382,6 +25471,225 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 镜像仓库基线检查批量导出（支持全量导出）
+     *
+     * 镜像仓库基线检查批量导出（支持全量导出）,若导出镜像类型为cicd类型的数据，需要传参image_type为cicd
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchExportBaselineTaskAsync($request)
+    {
+        return $this->batchExportBaselineTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function batchExportBaselineTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/baseline/export';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['exportSize'] !== null) {
+            $queryParams['export_size'] = $localVarParams['exportSize'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\BatchExportBaselineTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\BatchExportBaselineTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 本地镜像漏洞批量导出（支持全量导出）
+     *
+     * 本地镜像漏洞批量导出（支持全量导出）
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchExportLocalVulTaskAsync($request)
+    {
+        return $this->batchExportLocalVulTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function batchExportLocalVulTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/local-vulnerability/export';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['exportSize'] !== null) {
+            $queryParams['export_size'] = $localVarParams['exportSize'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\BatchExportLocalVulTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\BatchExportLocalVulTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 本地镜像扫描
+     *
+     * 本地镜像扫描
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchScanLocalImageAsync($request)
+    {
+        return $this->batchScanLocalImageAsyncWithHttpInfo($request);
+    }
+    
+    public function batchScanLocalImageAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/local/batch-scan';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\BatchScanLocalImageResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\BatchScanLocalImageRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 镜像仓库镜像批量扫描
      *
      * 镜像仓库镜像批量扫描
@@ -24449,6 +25757,74 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\BatchScanSwrImageResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\BatchScanSwrImageRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改镜像的自定义弱口令
+     *
+     * 修改镜像的自定义弱口令
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeExtendedWeakPasswordAsync($request)
+    {
+        return $this->changeExtendedWeakPasswordAsyncWithHttpInfo($request);
+    }
+    
+    public function changeExtendedWeakPasswordAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/baseline/extended-weak-password';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeExtendedWeakPasswordResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeExtendedWeakPasswordRequest',
             $asyncRequest = true);
     }
 
@@ -24838,6 +26214,332 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 获取镜像软件信息
+     *
+     * 获取镜像软件信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGlobalImageAppsAsync($request)
+    {
+        return $this->listGlobalImageAppsAsyncWithHttpInfo($request);
+    }
+    
+    public function listGlobalImageAppsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/apps';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['appName'] !== null) {
+            $queryParams['app_name'] = $localVarParams['appName'];
+        }
+        if ($localVarParams['isCompliant'] !== null) {
+            $queryParams['is_compliant'] = $localVarParams['isCompliant'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListGlobalImageAppsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListGlobalImageAppsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取镜像文件信息
+     *
+     * 获取镜像文件信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGlobalImageFilesAsync($request)
+    {
+        return $this->listGlobalImageFilesAsyncWithHttpInfo($request);
+    }
+    
+    public function listGlobalImageFilesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/files';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['fileName'] !== null) {
+            $queryParams['file_name'] = $localVarParams['fileName'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListGlobalImageFilesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListGlobalImageFilesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询租户恶意文件列表
+     *
+     * 查询租户恶意文件列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGlobalMalwareAsync($request)
+    {
+        return $this->listGlobalMalwareAsyncWithHttpInfo($request);
+    }
+    
+    public function listGlobalMalwareAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/malwares';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['fileName'] !== null) {
+            $queryParams['file_name'] = $localVarParams['fileName'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListGlobalMalwareResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListGlobalMalwareRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 租户的漏洞信息
+     *
+     * 租户的漏洞信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGlobalVulnerabilitiesAsync($request)
+    {
+        return $this->listGlobalVulnerabilitiesAsyncWithHttpInfo($request);
+    }
+    
+    public function listGlobalVulnerabilitiesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/vulnerabilities';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['repairNecessity'] !== null) {
+            $queryParams['repair_necessity'] = $localVarParams['repairNecessity'];
+        }
+        if ($localVarParams['vulId'] !== null) {
+            $queryParams['vul_id'] = $localVarParams['vulId'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListGlobalVulnerabilitiesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListGlobalVulnerabilitiesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询镜像软件列表
      *
      * 查询镜像软件列表，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填
@@ -24923,6 +26625,353 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageAppsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageAppsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询镜像的基础镜像信息
+     *
+     * 查询镜像的基础镜像信息，若镜像类型为cicd镜像，则需传参镜像类型和镜像id唯一确定一条cicd镜像信息；若镜像类型为其他镜像仓类型，需要传参镜像类型、组织名称、镜像名称、镜像版本名称唯一确定一条其他镜像信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listImageBasicImageAsync($request)
+    {
+        return $this->listImageBasicImageAsyncWithHttpInfo($request);
+    }
+    
+    public function listImageBasicImageAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/{image_id}/basic-image';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $queryParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['imageName'] !== null) {
+            $queryParams['image_name'] = $localVarParams['imageName'];
+        }
+        if ($localVarParams['imageVersion'] !== null) {
+            $queryParams['image_version'] = $localVarParams['imageVersion'];
+        }
+        if ($localVarParams['osName'] !== null) {
+            $queryParams['os_name'] = $localVarParams['osName'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $pathParams['image_id'] = $localVarParams['imageId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageBasicImageResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageBasicImageRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取镜像构建指令风险信息
+     *
+     * 获取镜像构建指令风险信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listImageBuildCommandRisksAsync($request)
+    {
+        return $this->listImageBuildCommandRisksAsyncWithHttpInfo($request);
+    }
+    
+    public function listImageBuildCommandRisksAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/build-command-risks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $queryParams['image_id'] = $localVarParams['imageId'];
+        }
+        if ($localVarParams['riskName'] !== null) {
+            $queryParams['risk_name'] = $localVarParams['riskName'];
+        }
+        if ($localVarParams['riskLevel'] !== null) {
+            $queryParams['risk_level'] = $localVarParams['riskLevel'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageBuildCommandRisksResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageBuildCommandRisksRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询镜像构建指令影响到的镜像列表
+     *
+     * 查询镜像构建指令影响到的镜像列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listImageBuildCommandRisksImagesAsync($request)
+    {
+        return $this->listImageBuildCommandRisksImagesAsyncWithHttpInfo($request);
+    }
+    
+    public function listImageBuildCommandRisksImagesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/build-command-risks/images';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $queryParams['rule_id'] = $localVarParams['ruleId'];
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $queryParams['image_id'] = $localVarParams['imageId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageBuildCommandRisksImagesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageBuildCommandRisksImagesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询镜像文件列表
+     *
+     * 查询镜像文件列表，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listImageFilesAsync($request)
+    {
+        return $this->listImageFilesAsyncWithHttpInfo($request);
+    }
+    
+    public function listImageFilesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/{image_id}/files';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $queryParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['imageName'] !== null) {
+            $queryParams['image_name'] = $localVarParams['imageName'];
+        }
+        if ($localVarParams['tagName'] !== null) {
+            $queryParams['tag_name'] = $localVarParams['tagName'];
+        }
+        if ($localVarParams['fileName'] !== null) {
+            $queryParams['file_name'] = $localVarParams['fileName'];
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $pathParams['image_id'] = $localVarParams['imageId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageFilesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageFilesRequest',
             $asyncRequest = true);
     }
 
@@ -25135,6 +27184,279 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 查询镜像恶意文件列表
+     *
+     * 查询镜像恶意文件列表，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listImageMalwareAsync($request)
+    {
+        return $this->listImageMalwareAsyncWithHttpInfo($request);
+    }
+    
+    public function listImageMalwareAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/{image_id}/malwares';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['fileName'] !== null) {
+            $queryParams['file_name'] = $localVarParams['fileName'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $queryParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['imageName'] !== null) {
+            $queryParams['image_name'] = $localVarParams['imageName'];
+        }
+        if ($localVarParams['tagName'] !== null) {
+            $queryParams['tag_name'] = $localVarParams['tagName'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $pathParams['image_id'] = $localVarParams['imageId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageMalwareResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageMalwareRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询镜像的不合规软件信息
+     *
+     * 查询镜像的不合规软件信息，若镜像类型为cicd镜像，则需传参镜像类型和镜像id唯一确定一条cicd镜像信息；若镜像类型为其他镜像仓类型，需要传参镜像类型、组织名称、镜像名称、镜像版本名称唯一确定一条其他镜像信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listImageNonCompliantAppAsync($request)
+    {
+        return $this->listImageNonCompliantAppAsyncWithHttpInfo($request);
+    }
+    
+    public function listImageNonCompliantAppAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/{image_id}/non-compliant-app';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $queryParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['imageName'] !== null) {
+            $queryParams['image_name'] = $localVarParams['imageName'];
+        }
+        if ($localVarParams['imageVersion'] !== null) {
+            $queryParams['image_version'] = $localVarParams['imageVersion'];
+        }
+        if ($localVarParams['appName'] !== null) {
+            $queryParams['app_name'] = $localVarParams['appName'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $pathParams['image_id'] = $localVarParams['imageId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageNonCompliantAppResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageNonCompliantAppRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询镜像口令复杂度策略检测报告
+     *
+     * 查询镜像口令复杂度策略检测报告，若镜像类型为cicd镜像，则需传参镜像类型和镜像id唯一确定一条cicd镜像信息；若镜像类型为其他镜像仓类型，需要传参镜像类型、组织名称、镜像名称、镜像版本名称唯一确定一条其他镜像信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listImagePwdComplexityAsync($request)
+    {
+        return $this->listImagePwdComplexityAsyncWithHttpInfo($request);
+    }
+    
+    public function listImagePwdComplexityAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/baseline/password-complexity';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $queryParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['imageName'] !== null) {
+            $queryParams['image_name'] = $localVarParams['imageName'];
+        }
+        if ($localVarParams['imageVersion'] !== null) {
+            $queryParams['image_version'] = $localVarParams['imageVersion'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $queryParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListImagePwdComplexityResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListImagePwdComplexityRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询镜像指定安全配置项的检查项列表
      *
      * 查询镜像指定安全配置项的检查项列表
@@ -25343,6 +27665,181 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 查询镜像的敏感信息
+     *
+     * 查询镜像的敏感信息，若镜像类型为cicd镜像，则需传参镜像类型和镜像id唯一确定一条cicd镜像信息；若镜像类型为其他镜像仓类型，需要传参镜像类型、组织名称、镜像名称、镜像版本名称唯一确定一条其他镜像信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listImageSensitiveAsync($request)
+    {
+        return $this->listImageSensitiveAsyncWithHttpInfo($request);
+    }
+    
+    public function listImageSensitiveAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/{image_id}/sensitive';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $queryParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['imageName'] !== null) {
+            $queryParams['image_name'] = $localVarParams['imageName'];
+        }
+        if ($localVarParams['imageVersion'] !== null) {
+            $queryParams['image_version'] = $localVarParams['imageVersion'];
+        }
+        if ($localVarParams['filePath'] !== null) {
+            $queryParams['file_path'] = $localVarParams['filePath'];
+        }
+        if ($localVarParams['severity'] !== null) {
+            $queryParams['severity'] = $localVarParams['severity'];
+        }
+        if ($localVarParams['handleStatus'] !== null) {
+            $queryParams['handle_status'] = $localVarParams['handleStatus'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $pathParams['image_id'] = $localVarParams['imageId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageSensitiveResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageSensitiveRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询镜像的敏感信息
+     *
+     * 查询镜像的敏感信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listImageSensitiveInfoAsync($request)
+    {
+        return $this->listImageSensitiveInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function listImageSensitiveInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/sensitive-information';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageSensitiveInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageSensitiveInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询镜像的漏洞信息
      *
      * 查询镜像的漏洞信息
@@ -25447,6 +27944,101 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 查镜像询弱口令检测结果列表
+     *
+     * 查询镜像弱口令检测结果列表，若镜像类型为cicd镜像，则需传参镜像类型和镜像id唯一确定一条cicd镜像信息；若镜像类型为其他镜像仓类型，需要传参镜像类型、组织名称、镜像名称、镜像版本名称唯一确定一条其他镜像信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listImageWeakPwdUsersAsync($request)
+    {
+        return $this->listImageWeakPwdUsersAsyncWithHttpInfo($request);
+    }
+    
+    public function listImageWeakPwdUsersAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/baseline/weak-password-users';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $queryParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['imageName'] !== null) {
+            $queryParams['image_name'] = $localVarParams['imageName'];
+        }
+        if ($localVarParams['tagName'] !== null) {
+            $queryParams['tag_name'] = $localVarParams['tagName'];
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $queryParams['image_id'] = $localVarParams['imageId'];
+        }
+        if ($localVarParams['userName'] !== null) {
+            $queryParams['user_name'] = $localVarParams['userName'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $queryParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageWeakPwdUsersResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageWeakPwdUsersRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询镜像白名单列表
      *
      * 查询镜像白名单列表，目前仅支持漏洞白名单
@@ -25526,6 +28118,261 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageWhiteListsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListImageWhiteListsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询本地镜像的软件信息
+     *
+     * 查询本地镜像的软件信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listLocalImageAppInfoAsync($request)
+    {
+        return $this->listLocalImageAppInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function listLocalImageAppInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/local/apps';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $queryParams['image_id'] = $localVarParams['imageId'];
+        }
+        if ($localVarParams['appName'] !== null) {
+            $queryParams['app_name'] = $localVarParams['appName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListLocalImageAppInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListLocalImageAppInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询本地镜像的容器信息
+     *
+     * 查询本地镜像的容器信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listLocalImageContainersAsync($request)
+    {
+        return $this->listLocalImageContainersAsyncWithHttpInfo($request);
+    }
+    
+    public function listLocalImageContainersAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/local/containers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['imageDigest'] !== null) {
+            $queryParams['image_digest'] = $localVarParams['imageDigest'];
+        }
+        if ($localVarParams['imageName'] !== null) {
+            $queryParams['image_name'] = $localVarParams['imageName'];
+        }
+        if ($localVarParams['imageVersion'] !== null) {
+            $queryParams['image_version'] = $localVarParams['imageVersion'];
+        }
+        if ($localVarParams['containerId'] !== null) {
+            $queryParams['container_id'] = $localVarParams['containerId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['agentId'] !== null) {
+            $queryParams['agent_id'] = $localVarParams['agentId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListLocalImageContainersResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListLocalImageContainersRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询本地镜像的主机信息
+     *
+     * 查询本地镜像的主机信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listLocalImageHostsAsync($request)
+    {
+        return $this->listLocalImageHostsAsyncWithHttpInfo($request);
+    }
+    
+    public function listLocalImageHostsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/local/hosts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['imageDigest'] !== null) {
+            $queryParams['image_digest'] = $localVarParams['imageDigest'];
+        }
+        if ($localVarParams['imageName'] !== null) {
+            $queryParams['image_name'] = $localVarParams['imageName'];
+        }
+        if ($localVarParams['imageVersion'] !== null) {
+            $queryParams['image_version'] = $localVarParams['imageVersion'];
+        }
+        if ($localVarParams['hostName'] !== null) {
+            $queryParams['host_name'] = $localVarParams['hostName'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['agentId'] !== null) {
+            $queryParams['agent_id'] = $localVarParams['agentId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListLocalImageHostsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListLocalImageHostsRequest',
             $asyncRequest = true);
     }
 
@@ -25925,6 +28772,95 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 漏洞影响的镜像信息
+     *
+     * 查询单个漏洞影响的镜像仓库中的镜像信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVulRepoImageAsync($request)
+    {
+        return $this->listVulRepoImageAsyncWithHttpInfo($request);
+    }
+    
+    public function listVulRepoImageAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/{vul_id}/images';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $queryParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['imageName'] !== null) {
+            $queryParams['image_name'] = $localVarParams['imageName'];
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $queryParams['image_id'] = $localVarParams['imageId'];
+        }
+        if ($localVarParams['appName'] !== null) {
+            $queryParams['app_name'] = $localVarParams['appName'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['vulId'] !== null) {
+            $pathParams['vul_id'] = $localVarParams['vulId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListVulRepoImageResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListVulRepoImageRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 漏洞对应cve信息
      *
      * 漏洞对应cve信息
@@ -26073,6 +29009,74 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 查询镜像的自定义弱口令
+     *
+     * 查询镜像的自定义弱口令
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showExtendedWeakPasswordAsync($request)
+    {
+        return $this->showExtendedWeakPasswordAsyncWithHttpInfo($request);
+    }
+    
+    public function showExtendedWeakPasswordAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/baseline/extended-weak-password';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowExtendedWeakPasswordResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowExtendedWeakPasswordRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 容器资产-镜像统计
      *
      * 容器资产-镜像统计
@@ -26134,6 +29138,92 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowImageAssetStatisticsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowImageAssetStatisticsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询基线检查的统计数据信息
+     *
+     * 查询基线检查的统计数据信息，包括弱口令，口令复杂度，配置检测，包括弱口令，口令复杂度，配置检测，若查询单个cicd镜像的统计数据，需要传参image_type和image_id；若要查询单个仓库镜像的统计数据，需要传参image_type、组织名称、镜像名称和镜像版本名称
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showImageBaselineStatisticAsync($request)
+    {
+        return $this->showImageBaselineStatisticAsyncWithHttpInfo($request);
+    }
+    
+    public function showImageBaselineStatisticAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/baseline/statistic';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $queryParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['imageName'] !== null) {
+            $queryParams['image_name'] = $localVarParams['imageName'];
+        }
+        if ($localVarParams['imageVersion'] !== null) {
+            $queryParams['image_version'] = $localVarParams['imageVersion'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $queryParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $queryParams['image_id'] = $localVarParams['imageId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowImageBaselineStatisticResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowImageBaselineStatisticRequest',
             $asyncRequest = true);
     }
 
@@ -26232,6 +29322,163 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowImageCheckRuleDetailResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowImageCheckRuleDetailRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询镜像文件统计信息
+     *
+     * 查询镜像文件统计信息，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showImageFilesStatAsync($request)
+    {
+        return $this->showImageFilesStatAsyncWithHttpInfo($request);
+    }
+    
+    public function showImageFilesStatAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/{image_id}/files-statistics';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $queryParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['imageName'] !== null) {
+            $queryParams['image_name'] = $localVarParams['imageName'];
+        }
+        if ($localVarParams['tagName'] !== null) {
+            $queryParams['tag_name'] = $localVarParams['tagName'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $pathParams['image_id'] = $localVarParams['imageId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowImageFilesStatResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowImageFilesStatRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 镜像安全报告导出统计,若导出镜像类型为cicd类型的数据，需要传参image_type为cicd
+     *
+     * 镜像安全报告导出统计
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showImageSecurityReportStatisticAsync($request)
+    {
+        return $this->showImageSecurityReportStatisticAsyncWithHttpInfo($request);
+    }
+    
+    public function showImageSecurityReportStatisticAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/security-report/statistic';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['securityReportType'] !== null) {
+            $queryParams['security_report_type'] = $localVarParams['securityReportType'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowImageSecurityReportStatisticResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowImageSecurityReportStatisticRequest',
             $asyncRequest = true);
     }
 
@@ -26626,6 +29873,142 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ModifyImageScanPolicyResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ModifyImageScanPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询镜像按次扫描统计数据
+     *
+     * 查询镜像按次扫描统计数据
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showImagePayPerScanStatisticsAsync($request)
+    {
+        return $this->showImagePayPerScanStatisticsAsyncWithHttpInfo($request);
+    }
+    
+    public function showImagePayPerScanStatisticsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/pay-per-scan/statistics';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowImagePayPerScanStatisticsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowImagePayPerScanStatisticsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 终止仓库镜像扫描任务
+     *
+     * 终止仓库镜像扫描任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function stopImageScanTaskAsync($request)
+    {
+        return $this->stopImageScanTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function stopImageScanTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/image-scan/tasks/{task_id}/stop';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\StopImageScanTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\StopImageScanTaskRequest',
             $asyncRequest = true);
     }
 
@@ -27674,11 +31057,11 @@ class HssAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                [],
                 []
             );
         }
@@ -28217,6 +31600,1442 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowVersionResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowVersionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 添加防护策略
+     *
+     * 添加防护策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addProtectionPolicyAsync($request)
+    {
+        return $this->addProtectionPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function addProtectionPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/ransomware/protection/policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\AddProtectionPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\AddProtectionPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 切换勒索防护策略
+     *
+     * 切换勒索防护策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function associateProtectionPolicyAsync($request)
+    {
+        return $this->associateProtectionPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function associateProtectionPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/ransomware/protection/policy/deploy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\AssociateProtectionPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\AssociateProtectionPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量开启勒索病毒防护2.0
+     *
+     * 批量开启勒索病毒防护，若开启备份防护，请保证该region有cbr云备份服务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchStartProtectionAsync($request)
+    {
+        return $this->batchStartProtectionAsyncWithHttpInfo($request);
+    }
+    
+    public function batchStartProtectionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/ransomware/protection/batch-open';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\BatchStartProtectionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\BatchStartProtectionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除备份副本
+     *
+     * 删除备份副本
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDuplicationInfoAsync($request)
+    {
+        return $this->deleteDuplicationInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteDuplicationInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/ransomware/duplication/{backup_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['backupId'] !== null) {
+            $pathParams['backup_id'] = $localVarParams['backupId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\DeleteDuplicationInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\DeleteDuplicationInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除防护策略
+     *
+     * 删除防护策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteProtectionPolicyAsync($request)
+    {
+        return $this->deleteProtectionPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteProtectionPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/ransomware/protection/policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $queryParams['policy_id'] = $localVarParams['policyId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\DeleteProtectionPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\DeleteProtectionPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询备份列表
+     *
+     * 查询备份列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBackedupByHostIdAsync($request)
+    {
+        return $this->listBackedupByHostIdAsyncWithHttpInfo($request);
+    }
+    
+    public function listBackedupByHostIdAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/ransomware/backup/{host_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['lastDays'] !== null) {
+            $queryParams['last_days'] = $localVarParams['lastDays'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['hostId'] !== null) {
+            $pathParams['host_id'] = $localVarParams['hostId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListBackedupByHostIdResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListBackedupByHostIdRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询备份策略列表
+     *
+     * 查询备份策略列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBackupPolicyAsync($request)
+    {
+        return $this->listBackupPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function listBackupPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/ransomware/backup/policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $queryParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListBackupPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListBackupPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询备份存储库列表
+     *
+     * 查询备份存储库列表，若进行绑定主机，则需要额外判断，同时满足以下条件：1、存储库状态为“可用”状态；2、备份策略状态为“已启用”；3、存储库有剩余可用备份容量；4、存储库绑定的服务器数量少于256。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBackupVaultsAsync($request)
+    {
+        return $this->listBackupVaultsAsyncWithHttpInfo($request);
+    }
+    
+    public function listBackupVaultsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/ransomware/optional/vaults';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['vaultName'] !== null) {
+            $queryParams['vault_name'] = $localVarParams['vaultName'];
+        }
+        if ($localVarParams['vaultId'] !== null) {
+            $queryParams['vault_id'] = $localVarParams['vaultId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListBackupVaultsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListBackupVaultsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询备份恢复任务列表
+     *
+     * 查询备份恢复任务列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listOperationLogsByVaultNameAsync($request)
+    {
+        return $this->listOperationLogsByVaultNameAsyncWithHttpInfo($request);
+    }
+    
+    public function listOperationLogsByVaultNameAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/ransomware/backup/operation-logs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['resourceName'] !== null) {
+            $queryParams['resource_name'] = $localVarParams['resourceName'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['lastDays'] !== null) {
+            $queryParams['last_days'] = $localVarParams['lastDays'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListOperationLogsByVaultNameResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListOperationLogsByVaultNameRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询勒索病毒的防护策略列表
+     *
+     * 查询勒索病毒的防护策略列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listProtectionPolicyAsync($request)
+    {
+        return $this->listProtectionPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function listProtectionPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/ransomware/protection/policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['policyName'] !== null) {
+            $queryParams['policy_name'] = $localVarParams['policyName'];
+        }
+        if ($localVarParams['protectPolicyId'] !== null) {
+            $queryParams['protect_policy_id'] = $localVarParams['protectPolicyId'];
+        }
+        if ($localVarParams['operatingSystem'] !== null) {
+            $queryParams['operating_system'] = $localVarParams['operatingSystem'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListProtectionPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListProtectionPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询勒索防护服务器列表
+     *
+     * 查询勒索防护服务器列表，与云备份服务配合使用。因此使用勒索相关接口之前确保该局点有云备份服务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listProtectionServerAsync($request)
+    {
+        return $this->listProtectionServerAsyncWithHttpInfo($request);
+    }
+    
+    public function listProtectionServerAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/ransomware/server';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['hostName'] !== null) {
+            $queryParams['host_name'] = $localVarParams['hostName'];
+        }
+        if ($localVarParams['osType'] !== null) {
+            $queryParams['os_type'] = $localVarParams['osType'];
+        }
+        if ($localVarParams['hostIp'] !== null) {
+            $queryParams['host_ip'] = $localVarParams['hostIp'];
+        }
+        if ($localVarParams['hostStatus'] !== null) {
+            $queryParams['host_status'] = $localVarParams['hostStatus'];
+        }
+        if ($localVarParams['lastDays'] !== null) {
+            $queryParams['last_days'] = $localVarParams['lastDays'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListProtectionServerResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListProtectionServerRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询勒索防护服务器列表2.0
+     *
+     * 查询勒索防护服务器列表，与云备份服务配合使用。因此使用勒索相关接口之前确保该局点有云备份服务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRansomwareProtectionNodesAsync($request)
+    {
+        return $this->listRansomwareProtectionNodesAsyncWithHttpInfo($request);
+    }
+    
+    public function listRansomwareProtectionNodesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/ransomware/servers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['hostName'] !== null) {
+            $queryParams['host_name'] = $localVarParams['hostName'];
+        }
+        if ($localVarParams['hostId'] !== null) {
+            $queryParams['host_id'] = $localVarParams['hostId'];
+        }
+        if ($localVarParams['osType'] !== null) {
+            $queryParams['os_type'] = $localVarParams['osType'];
+        }
+        if ($localVarParams['hostIp'] !== null) {
+            $queryParams['host_ip'] = $localVarParams['hostIp'];
+        }
+        if ($localVarParams['privateIp'] !== null) {
+            $queryParams['private_ip'] = $localVarParams['privateIp'];
+        }
+        if ($localVarParams['hostStatus'] !== null) {
+            $queryParams['host_status'] = $localVarParams['hostStatus'];
+        }
+        if ($localVarParams['ransomProtectionStatus'] !== null) {
+            $queryParams['ransom_protection_status'] = $localVarParams['ransomProtectionStatus'];
+        }
+        if ($localVarParams['protectPolicyName'] !== null) {
+            $queryParams['protect_policy_name'] = $localVarParams['protectPolicyName'];
+        }
+        if ($localVarParams['policyName'] !== null) {
+            $queryParams['policy_name'] = $localVarParams['policyName'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $queryParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($localVarParams['agentStatus'] !== null) {
+            $queryParams['agent_status'] = $localVarParams['agentStatus'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $queryParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['groupName'] !== null) {
+            $queryParams['group_name'] = $localVarParams['groupName'];
+        }
+        if ($localVarParams['lastDays'] !== null) {
+            $queryParams['last_days'] = $localVarParams['lastDays'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListRansomwareProtectionNodesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListRansomwareProtectionNodesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询指定备份信息
+     *
+     * 查询指定备份信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showBackupInfoByBackupIdAsync($request)
+    {
+        return $this->showBackupInfoByBackupIdAsyncWithHttpInfo($request);
+    }
+    
+    public function showBackupInfoByBackupIdAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/ransomware/backup/{backup_id}/detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['backupId'] !== null) {
+            $pathParams['backup_id'] = $localVarParams['backupId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowBackupInfoByBackupIdResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowBackupInfoByBackupIdRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询HSS存储库绑定的备份策略信息
+     *
+     * 查询HSS存储库绑定的备份策略信息，确保已经购买了勒索防护存储库，可以从cbr云备份服务进行验证，确保已经存在HSS_projectid命名的存储库已经购买
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showBackupPolicyInfoAsync($request)
+    {
+        return $this->showBackupPolicyInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function showBackupPolicyInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/backup/policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowBackupPolicyInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowBackupPolicyInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询单个备份策略信息
+     *
+     * 查询单个备份策略信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSingleBackupPolicyInfoAsync($request)
+    {
+        return $this->showSingleBackupPolicyInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function showSingleBackupPolicyInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/backup/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowSingleBackupPolicyInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowSingleBackupPolicyInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 开启勒索病毒防护
+     *
+     * 开启勒索病毒防护，请保证该region有cbr云备份服务，勒索服务与云备份服务有关联关系
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function startProtectionAsync($request)
+    {
+        return $this->startProtectionAsyncWithHttpInfo($request);
+    }
+    
+    public function startProtectionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/ransomware/protection/open';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\StartProtectionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\StartProtectionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 关闭勒索病毒防护
+     *
+     * 关闭勒索病毒防护
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function stopProtectionAsync($request)
+    {
+        return $this->stopProtectionAsyncWithHttpInfo($request);
+    }
+    
+    public function stopProtectionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/ransomware/protection/close';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\StopProtectionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\StopProtectionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改存储库绑定的备份策略
+     *
+     * 修改存储库绑定的备份策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateBackupPolicyInfoAsync($request)
+    {
+        return $this->updateBackupPolicyInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function updateBackupPolicyInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/backup/policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\UpdateBackupPolicyInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\UpdateBackupPolicyInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改勒索防护策略
+     *
+     * 修改勒索防护策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateProtectionPolicyAsync($request)
+    {
+        return $this->updateProtectionPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function updateProtectionPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/ransomware/protection/policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\UpdateProtectionPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\UpdateProtectionPolicyRequest',
             $asyncRequest = true);
     }
 
@@ -29318,6 +34137,142 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 开启或关闭“Agent自动升级”配置开关
+     *
+     * 开启或关闭“Agent自动升级”配置开关
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeAgentAutoUpgradeStatusAsync($request)
+    {
+        return $this->changeAgentAutoUpgradeStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function changeAgentAutoUpgradeStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/setting/config/agent-auto-upgrade';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeAgentAutoUpgradeStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeAgentAutoUpgradeStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改指定策略的总开关，将该策略的所有主机都打开或者关闭此策略
+     *
+     * 修改指定策略的总开关，将该策略的所有主机都打开或者关闭此策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changePolicySwitchStatusAsync($request)
+    {
+        return $this->changePolicySwitchStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function changePolicySwitchStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/policy/switch';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ChangePolicySwitchStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ChangePolicySwitchStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 修改配置开关状态
      *
      * 修改配置开关状态
@@ -29385,6 +34340,71 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeSwitchesStatusResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeSwitchesStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询“Agent自动升级”配置开关状态
+     *
+     * 查询“Agent自动升级”配置开关状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAgentAutoUpgradeStatusAsync($request)
+    {
+        return $this->listAgentAutoUpgradeStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function listAgentAutoUpgradeStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/setting/config/agent-auto-upgrade';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListAgentAutoUpgradeStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListAgentAutoUpgradeStatusRequest',
             $asyncRequest = true);
     }
 
@@ -29522,6 +34542,352 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 查询程序自动隔离查杀状态
+     *
+     * 查询程序自动隔离查杀状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAutoKillVirusStatusAsync($request)
+    {
+        return $this->listAutoKillVirusStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function listAutoKillVirusStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/setting/virus-kill';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListAutoKillVirusStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListAutoKillVirusStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取字典列表
+     *
+     * 获取字典列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDictionariesAsync($request)
+    {
+        return $this->listDictionariesAsyncWithHttpInfo($request);
+    }
+    
+    public function listDictionariesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/setting/dictionaries';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['scene'] !== null) {
+            $queryParams['scene'] = $localVarParams['scene'];
+        }
+        if ($localVarParams['groupCode'] !== null) {
+            $queryParams['group_code'] = $localVarParams['groupCode'];
+        }
+        if ($localVarParams['code'] !== null) {
+            $queryParams['code'] = $localVarParams['code'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListDictionariesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListDictionariesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询常用登录IP信息
+     *
+     * 查询常用登录IP信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listLoginCommonIpAsync($request)
+    {
+        return $this->listLoginCommonIpAsyncWithHttpInfo($request);
+    }
+    
+    public function listLoginCommonIpAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/setting/login-common-ip';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['ipAddr'] !== null) {
+            $queryParams['ip_addr'] = $localVarParams['ipAddr'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListLoginCommonIpResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListLoginCommonIpRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询常用登录地信息
+     *
+     * 查询常用登录地信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listLoginCommonLocationAsync($request)
+    {
+        return $this->listLoginCommonLocationAsyncWithHttpInfo($request);
+    }
+    
+    public function listLoginCommonLocationAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/setting/login-common-location';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['areaCode'] !== null) {
+            $queryParams['area_code'] = $localVarParams['areaCode'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListLoginCommonLocationResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListLoginCommonLocationRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询SSH登录IP白名单列表
+     *
+     * 查询SSH登录IP白名单列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listLoginWhiteIpAsync($request)
+    {
+        return $this->listLoginWhiteIpAsyncWithHttpInfo($request);
+    }
+    
+    public function listLoginWhiteIpAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/setting/login-white-ip';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['whiteIp'] !== null) {
+            $queryParams['white_ip'] = $localVarParams['whiteIp'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListLoginWhiteIpResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListLoginWhiteIpRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询系统配置内容列表
      *
      * 查询系统配置内容列表
@@ -29592,6 +34958,423 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListSystemConfigsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListSystemConfigsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询双因子主机列表
+     *
+     * 查询双因子主机列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTwoFactorLoginHostAsync($request)
+    {
+        return $this->listTwoFactorLoginHostAsyncWithHttpInfo($request);
+    }
+    
+    public function listTwoFactorLoginHostAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/setting/two-factor-login/hosts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['hostName'] !== null) {
+            $queryParams['host_name'] = $localVarParams['hostName'];
+        }
+        if ($localVarParams['displayName'] !== null) {
+            $queryParams['display_name'] = $localVarParams['displayName'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListTwoFactorLoginHostResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListTwoFactorLoginHostRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 添加、编辑或删除常用登录IP地址
+     *
+     * 添加、编辑或删除常用登录IP地址
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyLoginCommonIpAsync($request)
+    {
+        return $this->modifyLoginCommonIpAsyncWithHttpInfo($request);
+    }
+    
+    public function modifyLoginCommonIpAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/setting/login-common-ip';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ModifyLoginCommonIpResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ModifyLoginCommonIpRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 添加、编辑或删除常用登录地
+     *
+     * 添加、编辑或删除常用登录地
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyLoginCommonLocationAsync($request)
+    {
+        return $this->modifyLoginCommonLocationAsyncWithHttpInfo($request);
+    }
+    
+    public function modifyLoginCommonLocationAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/setting/login-common-location';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ModifyLoginCommonLocationResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ModifyLoginCommonLocationRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 添加、删除、编辑、启用或禁用登录IP白名单
+     *
+     * 添加、删除、编辑、启用或禁用登录IP白名单
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyLoginWhiteIpAsync($request)
+    {
+        return $this->modifyLoginWhiteIpAsyncWithHttpInfo($request);
+    }
+    
+    public function modifyLoginWhiteIpAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/setting/login-white-ip';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ModifyLoginWhiteIpResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ModifyLoginWhiteIpRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 设置双因子登录配置
+     *
+     * 设置双因子登录配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setTwoFactorLoginConfigAsync($request)
+    {
+        return $this->setTwoFactorLoginConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function setTwoFactorLoginConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/setting/two-factor-login/config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\SetTwoFactorLoginConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\SetTwoFactorLoginConfigRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询指定策略的总开关
+     *
+     * 查询指定策略的总开关
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showPolicySwitchStatusAsync($request)
+    {
+        return $this->showPolicySwitchStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function showPolicySwitchStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/policy/switch';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['policyName'] !== null) {
+            $queryParams['policy_name'] = $localVarParams['policyName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowPolicySwitchStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowPolicySwitchStatusRequest',
             $asyncRequest = true);
     }
 
@@ -29728,6 +35511,74 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowSwitchesStatusResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowSwitchesStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 开启或关闭程序自动隔离查杀
+     *
+     * 开启或关闭程序自动隔离查杀
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function startAutoKillVirusStatusAsync($request)
+    {
+        return $this->startAutoKillVirusStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function startAutoKillVirusStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/setting/virus-kill';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\StartAutoKillVirusStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\StartAutoKillVirusStatusRequest',
             $asyncRequest = true);
     }
 
@@ -30022,6 +35873,77 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 重新运行任务
+     *
+     * 重新运行任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function retryTaskAsync($request)
+    {
+        return $this->retryTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function retryTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/common/tasks/{task_id}/retry';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\RetryTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\RetryTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询任务统计数据
      *
      * 查询任务统计数据
@@ -30225,6 +36147,77 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeVulStatusResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeVulStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改漏洞白名单
+     *
+     * 修改漏洞白名单
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeVulWhiteListAsync($request)
+    {
+        return $this->changeVulWhiteListAsyncWithHttpInfo($request);
+    }
+    
+    public function changeVulWhiteListAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/vulnerability/white-list/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeVulWhiteListResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ChangeVulWhiteListRequest',
             $asyncRequest = true);
     }
 
@@ -30546,6 +36539,208 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 查看镜像漏洞的历史处置记录
+     *
+     * 查看镜像漏洞的历史处置记录
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGeneralImageVulOperationsAsync($request)
+    {
+        return $this->listGeneralImageVulOperationsAsyncWithHttpInfo($request);
+    }
+    
+    public function listGeneralImageVulOperationsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/image/vulnerability/handle-history';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['vulId'] !== null) {
+            $queryParams['vul_id'] = $localVarParams['vulId'];
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $queryParams['image_id'] = $localVarParams['imageId'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['imageName'] !== null) {
+            $queryParams['image_name'] = $localVarParams['imageName'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['userName'] !== null) {
+            $queryParams['user_name'] = $localVarParams['userName'];
+        }
+        if ($localVarParams['handleType'] !== null) {
+            $queryParams['handle_type'] = $localVarParams['handleType'];
+        }
+        if ($localVarParams['appName'] !== null) {
+            $queryParams['app_name'] = $localVarParams['appName'];
+        }
+        if ($localVarParams['appVersion'] !== null) {
+            $queryParams['app_version'] = $localVarParams['appVersion'];
+        }
+        if ($localVarParams['remark'] !== null) {
+            $queryParams['remark'] = $localVarParams['remark'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListGeneralImageVulOperationsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListGeneralImageVulOperationsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查看所有类型镜像的漏洞
+     *
+     * 查看所有类型镜像的漏洞
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGeneralImageVulsAsync($request)
+    {
+        return $this->listGeneralImageVulsAsyncWithHttpInfo($request);
+    }
+    
+    public function listGeneralImageVulsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/images/vulnerabilities';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['handleStatus'] !== null) {
+            $queryParams['handle_status'] = $localVarParams['handleStatus'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
+        }
+        if ($localVarParams['severityLevel'] !== null) {
+            $queryParams['severity_level'] = $localVarParams['severityLevel'];
+        }
+        if ($localVarParams['vulId'] !== null) {
+            $queryParams['vul_id'] = $localVarParams['vulId'];
+        }
+        if ($localVarParams['vulName'] !== null) {
+            $queryParams['vul_name'] = $localVarParams['vulName'];
+        }
+        if ($localVarParams['cveId'] !== null) {
+            $queryParams['cve_id'] = $localVarParams['cveId'];
+        }
+        if ($localVarParams['labelList'] !== null) {
+            $queryParams['label_list'] = $localVarParams['labelList'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $queryParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListGeneralImageVulsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListGeneralImageVulsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 处理的漏洞
      *
      * 查询今日处理漏洞/累计处理漏洞
@@ -30732,6 +36927,98 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListHostVulsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListHostVulsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询应急漏洞列表
+     *
+     * 查询应急漏洞列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listUrgentVulnerabilitiesAsync($request)
+    {
+        return $this->listUrgentVulnerabilitiesAsyncWithHttpInfo($request);
+    }
+    
+    public function listUrgentVulnerabilitiesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/vulnerability/urgent-vulnerabilities';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['severityLevel'] !== null) {
+            $queryParams['severity_level'] = $localVarParams['severityLevel'];
+        }
+        if ($localVarParams['handleStatus'] !== null) {
+            $queryParams['handle_status'] = $localVarParams['handleStatus'];
+        }
+        if ($localVarParams['vulName'] !== null) {
+            $queryParams['vul_name'] = $localVarParams['vulName'];
+        }
+        if ($localVarParams['isContainer'] !== null) {
+            $queryParams['is_container'] = $localVarParams['isContainer'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $queryParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['minScanTime'] !== null) {
+            $queryParams['min_scan_time'] = $localVarParams['minScanTime'];
+        }
+        if ($localVarParams['maxScanTime'] !== null) {
+            $queryParams['max_scan_time'] = $localVarParams['maxScanTime'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListUrgentVulnerabilitiesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListUrgentVulnerabilitiesRequest',
             $asyncRequest = true);
     }
 
@@ -30947,6 +37234,12 @@ class HssAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
         if ($localVarParams['vulId'] !== null) {
             $queryParams['vul_id'] = $localVarParams['vulId'];
         }
@@ -31026,6 +37319,12 @@ class HssAsyncClient extends Client
         }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['vulId'] !== null) {
             $queryParams['vul_id'] = $localVarParams['vulId'];
@@ -31222,6 +37521,113 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 主机-漏洞平铺漏洞列表
+     *
+     * 查询紧急修复/未完成修复漏洞列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVulHostVulsAsync($request)
+    {
+        return $this->listVulHostVulsAsyncWithHttpInfo($request);
+    }
+    
+    public function listVulHostVulsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/vulnerability/host-vulnerability/vulnerabilities';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['vulName'] !== null) {
+            $queryParams['vul_name'] = $localVarParams['vulName'];
+        }
+        if ($localVarParams['cveId'] !== null) {
+            $queryParams['cve_id'] = $localVarParams['cveId'];
+        }
+        if ($localVarParams['labelList'] !== null) {
+            $queryParams['label_list'] = $localVarParams['labelList'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['assetValue'] !== null) {
+            $queryParams['asset_value'] = $localVarParams['assetValue'];
+        }
+        if ($localVarParams['groupName'] !== null) {
+            $queryParams['group_name'] = $localVarParams['groupName'];
+        }
+        if ($localVarParams['hostName'] !== null) {
+            $queryParams['host_name'] = $localVarParams['hostName'];
+        }
+        if ($localVarParams['hostIp'] !== null) {
+            $queryParams['host_ip'] = $localVarParams['hostIp'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['repairType'] !== null) {
+            $queryParams['repair_type'] = $localVarParams['repairType'];
+        }
+        if ($localVarParams['severityLevel'] !== null) {
+            $queryParams['severity_level'] = $localVarParams['severityLevel'];
+        }
+        if ($localVarParams['repairPriority'] !== null) {
+            $queryParams['repair_priority'] = $localVarParams['repairPriority'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListVulHostVulsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListVulHostVulsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询单个漏洞影响的云服务器信息
      *
      * 查询单个漏洞影响的云服务器信息
@@ -31322,6 +37728,160 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListVulHostsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListVulHostsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询漏洞修复命令列表
+     *
+     * 查询漏洞修复命令列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVulRepairCmdsAsync($request)
+    {
+        return $this->listVulRepairCmdsAsyncWithHttpInfo($request);
+    }
+    
+    public function listVulRepairCmdsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/vulnerability/repair-cmds';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['hostName'] !== null) {
+            $queryParams['host_name'] = $localVarParams['hostName'];
+        }
+        if ($localVarParams['vulName'] !== null) {
+            $queryParams['vul_name'] = $localVarParams['vulName'];
+        }
+        if ($localVarParams['category'] !== null) {
+            $queryParams['category'] = $localVarParams['category'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListVulRepairCmdsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListVulRepairCmdsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询漏洞修复失败信息
+     *
+     * 查询漏洞修复失败信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVulRepairFailedDetailAsync($request)
+    {
+        return $this->listVulRepairFailedDetailAsyncWithHttpInfo($request);
+    }
+    
+    public function listVulRepairFailedDetailAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/vulnerability/{host_id}/fail-detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['vulId'] !== null) {
+            $queryParams['vul_id'] = $localVarParams['vulId'];
+        }
+        if ($localVarParams['hostId'] !== null) {
+            $pathParams['host_id'] = $localVarParams['hostId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListVulRepairFailedDetailResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListVulRepairFailedDetailRequest',
             $asyncRequest = true);
     }
 
@@ -31655,6 +38215,77 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 重新扫描之前漏洞扫描任务中的主机
+     *
+     * 重新扫描之前漏洞扫描任务中的主机
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function recreateVulScanTaskAsync($request)
+    {
+        return $this->recreateVulScanTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function recreateVulScanTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/vulnerability/scan/task/{task_id}/rescan';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\RecreateVulScanTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\RecreateVulScanTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 用备份进行回滚
      *
      * 用备份进行回滚
@@ -31791,6 +38422,74 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 漏洞管理-主机视图-主机列表-导出报告
+     *
+     * 在主机视图中导出漏洞报告详细报告pdf格式
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showVulReportDataAsync($request)
+    {
+        return $this->showVulReportDataAsyncWithHttpInfo($request);
+    }
+    
+    public function showVulReportDataAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/vulnerability/report/data';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowVulReportDataResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowVulReportDataRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询漏洞扫描策略
      *
      * 查询漏洞扫描策略
@@ -31852,6 +38551,74 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowVulScanPolicyResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowVulScanPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询漏洞扫描的预估时间
+     *
+     * 查询漏洞扫描的预估时间
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showVulScanTaskEstimatedTimeAsync($request)
+    {
+        return $this->showVulScanTaskEstimatedTimeAsyncWithHttpInfo($request);
+    }
+    
+    public function showVulScanTaskEstimatedTimeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/vulnerability/scan/task/estimated-time';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowVulScanTaskEstimatedTimeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowVulScanTaskEstimatedTimeRequest',
             $asyncRequest = true);
     }
 
@@ -31982,6 +38749,86 @@ class HssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowVulTaskStatisticsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowVulTaskStatisticsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询windows漏洞基本信息
+     *
+     * 查询windows漏洞基本信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showWindosVulDetailAsync($request)
+    {
+        return $this->showWindosVulDetailAsyncWithHttpInfo($request);
+    }
+    
+    public function showWindosVulDetailAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/vulnerability/windows-detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['vulId'] !== null) {
+            $queryParams['vul_id'] = $localVarParams['vulId'];
+        }
+        if ($localVarParams['cveId'] !== null) {
+            $queryParams['cve_id'] = $localVarParams['cveId'];
+        }
+        if ($localVarParams['handleStatus'] !== null) {
+            $queryParams['handle_status'] = $localVarParams['handleStatus'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ShowWindosVulDetailResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ShowWindosVulDetailRequest',
             $asyncRequest = true);
     }
 

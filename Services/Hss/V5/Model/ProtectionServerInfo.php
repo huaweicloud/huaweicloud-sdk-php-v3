@@ -43,7 +43,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * backupProtectionStatus  **参数解释**: 是否开启备份 **取值范围**: 包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
     * countProtectEvent  **参数解释**: 防护事件数 **取值范围**: 取值0-2097152
     * countBackuped  **参数解释**: 已有备份数 **取值范围**: 取值0-2097152
-    * agentStatus  **参数解释**: Agent状态 **取值范围**: 字符长度1-128
+    * agentStatus  **参数解释**: Agent状态 **取值范围**:   - installed：已安装。已安装状态包含以下四种情况：   - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。   - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。   - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。   - installing：安装中。表示当前正在进行Agent安装。   - not_installed ：未安装。表示服务器中尚未安装Agent。
     * version  **参数解释**: 主机开通的版本    **取值范围**: 包含如下7种输入：   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
     * hostSource  **参数解释**: 服务器类型 **取值范围**: 包含如下3种输入：   - ecs ：弹性云服务器。   - outside ：线下主机。   - workspace ：云桌面。
     * vaultId  **参数解释**: 存储库ID **取值范围**: 字符长度0-128
@@ -125,7 +125,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * backupProtectionStatus  **参数解释**: 是否开启备份 **取值范围**: 包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
     * countProtectEvent  **参数解释**: 防护事件数 **取值范围**: 取值0-2097152
     * countBackuped  **参数解释**: 已有备份数 **取值范围**: 取值0-2097152
-    * agentStatus  **参数解释**: Agent状态 **取值范围**: 字符长度1-128
+    * agentStatus  **参数解释**: Agent状态 **取值范围**:   - installed：已安装。已安装状态包含以下四种情况：   - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。   - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。   - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。   - installing：安装中。表示当前正在进行Agent安装。   - not_installed ：未安装。表示服务器中尚未安装Agent。
     * version  **参数解释**: 主机开通的版本    **取值范围**: 包含如下7种输入：   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
     * hostSource  **参数解释**: 服务器类型 **取值范围**: 包含如下3种输入：   - ecs ：弹性云服务器。   - outside ：线下主机。   - workspace ：云桌面。
     * vaultId  **参数解释**: 存储库ID **取值范围**: 字符长度0-128
@@ -228,7 +228,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * backupProtectionStatus  **参数解释**: 是否开启备份 **取值范围**: 包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
     * countProtectEvent  **参数解释**: 防护事件数 **取值范围**: 取值0-2097152
     * countBackuped  **参数解释**: 已有备份数 **取值范围**: 取值0-2097152
-    * agentStatus  **参数解释**: Agent状态 **取值范围**: 字符长度1-128
+    * agentStatus  **参数解释**: Agent状态 **取值范围**:   - installed：已安装。已安装状态包含以下四种情况：   - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。   - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。   - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。   - installing：安装中。表示当前正在进行Agent安装。   - not_installed ：未安装。表示服务器中尚未安装Agent。
     * version  **参数解释**: 主机开通的版本    **取值范围**: 包含如下7种输入：   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
     * hostSource  **参数解释**: 服务器类型 **取值范围**: 包含如下3种输入：   - ecs ：弹性云服务器。   - outside ：线下主机。   - workspace ：云桌面。
     * vaultId  **参数解释**: 存储库ID **取值范围**: 字符长度0-128
@@ -310,7 +310,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * backupProtectionStatus  **参数解释**: 是否开启备份 **取值范围**: 包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
     * countProtectEvent  **参数解释**: 防护事件数 **取值范围**: 取值0-2097152
     * countBackuped  **参数解释**: 已有备份数 **取值范围**: 取值0-2097152
-    * agentStatus  **参数解释**: Agent状态 **取值范围**: 字符长度1-128
+    * agentStatus  **参数解释**: Agent状态 **取值范围**:   - installed：已安装。已安装状态包含以下四种情况：   - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。   - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。   - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。   - installing：安装中。表示当前正在进行Agent安装。   - not_installed ：未安装。表示服务器中尚未安装Agent。
     * version  **参数解释**: 主机开通的版本    **取值范围**: 包含如下7种输入：   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
     * hostSource  **参数解释**: 服务器类型 **取值范围**: 包含如下3种输入：   - ecs ：弹性云服务器。   - outside ：线下主机。   - workspace ：云桌面。
     * vaultId  **参数解释**: 存储库ID **取值范围**: 字符长度0-128
@@ -392,7 +392,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * backupProtectionStatus  **参数解释**: 是否开启备份 **取值范围**: 包含如下3种。   - failed_to_turn_on_backup: 无法开启备份   - closed ：关闭。   - opened ：开启。
     * countProtectEvent  **参数解释**: 防护事件数 **取值范围**: 取值0-2097152
     * countBackuped  **参数解释**: 已有备份数 **取值范围**: 取值0-2097152
-    * agentStatus  **参数解释**: Agent状态 **取值范围**: 字符长度1-128
+    * agentStatus  **参数解释**: Agent状态 **取值范围**:   - installed：已安装。已安装状态包含以下四种情况：   - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。   - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。   - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。   - installing：安装中。表示当前正在进行Agent安装。   - not_installed ：未安装。表示服务器中尚未安装Agent。
     * version  **参数解释**: 主机开通的版本    **取值范围**: 包含如下7种输入：   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
     * hostSource  **参数解释**: 服务器类型 **取值范围**: 包含如下3种输入：   - ecs ：弹性云服务器。   - outside ：线下主机。   - workspace ：云桌面。
     * vaultId  **参数解释**: 存储库ID **取值范围**: 字符长度0-128
@@ -1332,7 +1332,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentStatus
-    *  **参数解释**: Agent状态 **取值范围**: 字符长度1-128
+    *  **参数解释**: Agent状态 **取值范围**:   - installed：已安装。已安装状态包含以下四种情况：   - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。   - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。   - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。   - installing：安装中。表示当前正在进行Agent安装。   - not_installed ：未安装。表示服务器中尚未安装Agent。
     *
     * @return string|null
     */
@@ -1344,7 +1344,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentStatus
     *
-    * @param string|null $agentStatus **参数解释**: Agent状态 **取值范围**: 字符长度1-128
+    * @param string|null $agentStatus **参数解释**: Agent状态 **取值范围**:   - installed：已安装。已安装状态包含以下四种情况：   - online：在线。表示Agent已经成功安装并且与HSS云端防护中心保持连接。   - offline：离线。表示虽然Agent已经安装，但当前与HSS云端防护中心的连接中断。   - install_failed：安装失败。表示在尝试安装过程中遇到错误或问题，导致安装未能完成。   - installing：安装中。表示当前正在进行Agent安装。   - not_installed ：未安装。表示服务器中尚未安装Agent。
     *
     * @return $this
     */

@@ -29,6 +29,8 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
     * projectId  项目id
     * title  仪表盘名称
     * useSystemTemplate  是否使用模板
+    * conciseModeEnable  纯净模式开关
+    * tags  仪表盘标签
     *
     * @var string[]
     */
@@ -40,7 +42,9 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
             'lastUpdateTime' => 'int',
             'projectId' => 'string',
             'title' => 'string',
-            'useSystemTemplate' => 'bool'
+            'useSystemTemplate' => 'bool',
+            'conciseModeEnable' => 'bool',
+            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\ResourceTag[]'
     ];
 
     /**
@@ -53,6 +57,8 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
     * projectId  项目id
     * title  仪表盘名称
     * useSystemTemplate  是否使用模板
+    * conciseModeEnable  纯净模式开关
+    * tags  仪表盘标签
     *
     * @var string[]
     */
@@ -64,7 +70,9 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
         'lastUpdateTime' => 'int64',
         'projectId' => null,
         'title' => null,
-        'useSystemTemplate' => null
+        'useSystemTemplate' => null,
+        'conciseModeEnable' => null,
+        'tags' => null
     ];
 
     /**
@@ -98,6 +106,8 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
     * projectId  项目id
     * title  仪表盘名称
     * useSystemTemplate  是否使用模板
+    * conciseModeEnable  纯净模式开关
+    * tags  仪表盘标签
     *
     * @var string[]
     */
@@ -109,7 +119,9 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
             'lastUpdateTime' => 'last_update_time',
             'projectId' => 'project_id',
             'title' => 'title',
-            'useSystemTemplate' => 'useSystemTemplate'
+            'useSystemTemplate' => 'useSystemTemplate',
+            'conciseModeEnable' => 'concise_mode_enable',
+            'tags' => 'tags'
     ];
 
     /**
@@ -122,6 +134,8 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
     * projectId  项目id
     * title  仪表盘名称
     * useSystemTemplate  是否使用模板
+    * conciseModeEnable  纯净模式开关
+    * tags  仪表盘标签
     *
     * @var string[]
     */
@@ -133,7 +147,9 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
             'lastUpdateTime' => 'setLastUpdateTime',
             'projectId' => 'setProjectId',
             'title' => 'setTitle',
-            'useSystemTemplate' => 'setUseSystemTemplate'
+            'useSystemTemplate' => 'setUseSystemTemplate',
+            'conciseModeEnable' => 'setConciseModeEnable',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -146,6 +162,8 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
     * projectId  项目id
     * title  仪表盘名称
     * useSystemTemplate  是否使用模板
+    * conciseModeEnable  纯净模式开关
+    * tags  仪表盘标签
     *
     * @var string[]
     */
@@ -157,7 +175,9 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
             'lastUpdateTime' => 'getLastUpdateTime',
             'projectId' => 'getProjectId',
             'title' => 'getTitle',
-            'useSystemTemplate' => 'getUseSystemTemplate'
+            'useSystemTemplate' => 'getUseSystemTemplate',
+            'conciseModeEnable' => 'getConciseModeEnable',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -226,6 +246,8 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['useSystemTemplate'] = isset($data['useSystemTemplate']) ? $data['useSystemTemplate'] : null;
+        $this->container['conciseModeEnable'] = isset($data['conciseModeEnable']) ? $data['conciseModeEnable'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -439,6 +461,54 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
     public function setUseSystemTemplate($useSystemTemplate)
     {
         $this->container['useSystemTemplate'] = $useSystemTemplate;
+        return $this;
+    }
+
+    /**
+    * Gets conciseModeEnable
+    *  纯净模式开关
+    *
+    * @return bool|null
+    */
+    public function getConciseModeEnable()
+    {
+        return $this->container['conciseModeEnable'];
+    }
+
+    /**
+    * Sets conciseModeEnable
+    *
+    * @param bool|null $conciseModeEnable 纯净模式开关
+    *
+    * @return $this
+    */
+    public function setConciseModeEnable($conciseModeEnable)
+    {
+        $this->container['conciseModeEnable'] = $conciseModeEnable;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  仪表盘标签
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\ResourceTag[]|null $tags 仪表盘标签
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

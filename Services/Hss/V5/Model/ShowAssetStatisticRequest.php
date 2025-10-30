@@ -192,10 +192,13 @@ class ShowAssetStatisticRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) > 64)) {
+        if ($this->container['category'] === null) {
+            $invalidProperties[] = "'category' can't be null";
+        }
+            if ((mb_strlen($this->container['category']) > 64)) {
                 $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) < 1)) {
+            if ((mb_strlen($this->container['category']) < 1)) {
                 $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -264,7 +267,7 @@ class ShowAssetStatisticRequest implements ModelInterface, ArrayAccess
     * Gets category
     *  **参数解释**: 类别，默认为host **约束限制**: 不涉及 **取值范围**: - host：主机 - container：容器  **默认取值**: host
     *
-    * @return string|null
+    * @return string
     */
     public function getCategory()
     {
@@ -274,7 +277,7 @@ class ShowAssetStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category **参数解释**: 类别，默认为host **约束限制**: 不涉及 **取值范围**: - host：主机 - container：容器  **默认取值**: host
+    * @param string $category **参数解释**: 类别，默认为host **约束限制**: 不涉及 **取值范围**: - host：主机 - container：容器  **默认取值**: host
     *
     * @return $this
     */

@@ -21,8 +21,8 @@ class ListWebAppAndServicesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  总数
-    * dataList  具有该WebAppAndService资产的主机及该资产信息列表
+    * totalNum  **参数解释** 总数 **取值范围** 最小值0，最大值300000
+    * dataList  **参数解释** 具有该web应用、web服务、数据库资产的主机及该资产信息列表 **取值范围** 最小值0，最大值10000
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListWebAppAndServicesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  总数
-    * dataList  具有该WebAppAndService资产的主机及该资产信息列表
+    * totalNum  **参数解释** 总数 **取值范围** 最小值0，最大值300000
+    * dataList  **参数解释** 具有该web应用、web服务、数据库资产的主机及该资产信息列表 **取值范围** 最小值0，最大值10000
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListWebAppAndServicesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  总数
-    * dataList  具有该WebAppAndService资产的主机及该资产信息列表
+    * totalNum  **参数解释** 总数 **取值范围** 最小值0，最大值300000
+    * dataList  **参数解释** 具有该web应用、web服务、数据库资产的主机及该资产信息列表 **取值范围** 最小值0，最大值10000
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListWebAppAndServicesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  总数
-    * dataList  具有该WebAppAndService资产的主机及该资产信息列表
+    * totalNum  **参数解释** 总数 **取值范围** 最小值0，最大值300000
+    * dataList  **参数解释** 具有该web应用、web服务、数据库资产的主机及该资产信息列表 **取值范围** 最小值0，最大值10000
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListWebAppAndServicesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  总数
-    * dataList  具有该WebAppAndService资产的主机及该资产信息列表
+    * totalNum  **参数解释** 总数 **取值范围** 最小值0，最大值300000
+    * dataList  **参数解释** 具有该web应用、web服务、数据库资产的主机及该资产信息列表 **取值范围** 最小值0，最大值10000
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListWebAppAndServicesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  总数
+    *  **参数解释** 总数 **取值范围** 最小值0，最大值300000
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListWebAppAndServicesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 总数
+    * @param int|null $totalNum **参数解释** 总数 **取值范围** 最小值0，最大值300000
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListWebAppAndServicesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  具有该WebAppAndService资产的主机及该资产信息列表
+    *  **参数解释** 具有该web应用、web服务、数据库资产的主机及该资产信息列表 **取值范围** 最小值0，最大值10000
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\WebAppAndServiceResponseInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListWebAppAndServicesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\WebAppAndServiceResponseInfo[]|null $dataList 具有该WebAppAndService资产的主机及该资产信息列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\WebAppAndServiceResponseInfo[]|null $dataList **参数解释** 具有该web应用、web服务、数据库资产的主机及该资产信息列表 **取值范围** 最小值0，最大值10000
     *
     * @return $this
     */

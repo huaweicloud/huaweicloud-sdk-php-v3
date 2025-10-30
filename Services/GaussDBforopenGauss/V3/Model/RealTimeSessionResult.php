@@ -40,6 +40,22 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
     * transNum  **参数解释**： 会话建立事务的数量。 **取值范围**： 不涉及。
     * rollbackNum  **参数解释**： 会话中事务回滚的次数。 **取值范围**： 不涉及。
     * sqlNum  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
+    * clientPort  **参数解释**： 客户端用于与后台通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
+    * queryId  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
+    * transactionTimeCost  **参数解释**： 当前用户上一次执行的事务持续时间。 **取值范围**： 不涉及。
+    * traceId  **参数解释**： 驱动传入的trace id，用于标识应用的一次请求。 **取值范围**： 不涉及。
+    * globalSessionId  **参数解释**： 当前用户上次执行的全局会话ID。 **取值范围**： 不涉及。
+    * topTransactionId  **参数解释**： 当前用户上次执行的顶层事务ID。 **取值范围**： 不涉及。
+    * currentTransactionId  **参数解释**： 当前用户上次执行的事务ID。 **取值范围**： 不涉及。
+    * xlogQuantityPretty  **参数解释**： 当前用户上次执行的事务使用的XLOG量，易读格式。 **取值范围**： 不涉及。
+    * waitStatus  **参数解释**： 实例线程等待状态。 **取值范围**： 不涉及。
+    * lwtId  **参数解释**： 实例线程的轻量级线程号。 **取值范围**： 不涉及。
+    * threadName  **参数解释**： 实例线程名。 **取值范围**： 不涉及。
+    * lockMode  **参数解释**： 实例等锁模式。 **取值范围**： 不涉及。
+    * parentSessionId  **参数解释**： 实例父会话ID。 **取值范围**： 不涉及。
+    * smpId  **参数解释**： 实例并行线程的ID。 **取值范围**： 不涉及。
+    * lockTag  **参数解释**： 实例线程正等待获取的锁的信息。 **取值范围**： 不涉及。
+    * componentName  **参数解释**： 组件名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -63,7 +79,23 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
             'execTime' => 'string',
             'transNum' => 'string',
             'rollbackNum' => 'string',
-            'sqlNum' => 'string'
+            'sqlNum' => 'string',
+            'clientPort' => 'string',
+            'queryId' => 'string',
+            'transactionTimeCost' => 'string',
+            'traceId' => 'string',
+            'globalSessionId' => 'string',
+            'topTransactionId' => 'string',
+            'currentTransactionId' => 'string',
+            'xlogQuantityPretty' => 'string',
+            'waitStatus' => 'string',
+            'lwtId' => 'string',
+            'threadName' => 'string',
+            'lockMode' => 'string',
+            'parentSessionId' => 'string',
+            'smpId' => 'string',
+            'lockTag' => 'string',
+            'componentName' => 'string'
     ];
 
     /**
@@ -88,6 +120,22 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
     * transNum  **参数解释**： 会话建立事务的数量。 **取值范围**： 不涉及。
     * rollbackNum  **参数解释**： 会话中事务回滚的次数。 **取值范围**： 不涉及。
     * sqlNum  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
+    * clientPort  **参数解释**： 客户端用于与后台通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
+    * queryId  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
+    * transactionTimeCost  **参数解释**： 当前用户上一次执行的事务持续时间。 **取值范围**： 不涉及。
+    * traceId  **参数解释**： 驱动传入的trace id，用于标识应用的一次请求。 **取值范围**： 不涉及。
+    * globalSessionId  **参数解释**： 当前用户上次执行的全局会话ID。 **取值范围**： 不涉及。
+    * topTransactionId  **参数解释**： 当前用户上次执行的顶层事务ID。 **取值范围**： 不涉及。
+    * currentTransactionId  **参数解释**： 当前用户上次执行的事务ID。 **取值范围**： 不涉及。
+    * xlogQuantityPretty  **参数解释**： 当前用户上次执行的事务使用的XLOG量，易读格式。 **取值范围**： 不涉及。
+    * waitStatus  **参数解释**： 实例线程等待状态。 **取值范围**： 不涉及。
+    * lwtId  **参数解释**： 实例线程的轻量级线程号。 **取值范围**： 不涉及。
+    * threadName  **参数解释**： 实例线程名。 **取值范围**： 不涉及。
+    * lockMode  **参数解释**： 实例等锁模式。 **取值范围**： 不涉及。
+    * parentSessionId  **参数解释**： 实例父会话ID。 **取值范围**： 不涉及。
+    * smpId  **参数解释**： 实例并行线程的ID。 **取值范围**： 不涉及。
+    * lockTag  **参数解释**： 实例线程正等待获取的锁的信息。 **取值范围**： 不涉及。
+    * componentName  **参数解释**： 组件名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -111,7 +159,23 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
         'execTime' => null,
         'transNum' => null,
         'rollbackNum' => null,
-        'sqlNum' => null
+        'sqlNum' => null,
+        'clientPort' => null,
+        'queryId' => null,
+        'transactionTimeCost' => null,
+        'traceId' => null,
+        'globalSessionId' => null,
+        'topTransactionId' => null,
+        'currentTransactionId' => null,
+        'xlogQuantityPretty' => null,
+        'waitStatus' => null,
+        'lwtId' => null,
+        'threadName' => null,
+        'lockMode' => null,
+        'parentSessionId' => null,
+        'smpId' => null,
+        'lockTag' => null,
+        'componentName' => null
     ];
 
     /**
@@ -157,6 +221,22 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
     * transNum  **参数解释**： 会话建立事务的数量。 **取值范围**： 不涉及。
     * rollbackNum  **参数解释**： 会话中事务回滚的次数。 **取值范围**： 不涉及。
     * sqlNum  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
+    * clientPort  **参数解释**： 客户端用于与后台通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
+    * queryId  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
+    * transactionTimeCost  **参数解释**： 当前用户上一次执行的事务持续时间。 **取值范围**： 不涉及。
+    * traceId  **参数解释**： 驱动传入的trace id，用于标识应用的一次请求。 **取值范围**： 不涉及。
+    * globalSessionId  **参数解释**： 当前用户上次执行的全局会话ID。 **取值范围**： 不涉及。
+    * topTransactionId  **参数解释**： 当前用户上次执行的顶层事务ID。 **取值范围**： 不涉及。
+    * currentTransactionId  **参数解释**： 当前用户上次执行的事务ID。 **取值范围**： 不涉及。
+    * xlogQuantityPretty  **参数解释**： 当前用户上次执行的事务使用的XLOG量，易读格式。 **取值范围**： 不涉及。
+    * waitStatus  **参数解释**： 实例线程等待状态。 **取值范围**： 不涉及。
+    * lwtId  **参数解释**： 实例线程的轻量级线程号。 **取值范围**： 不涉及。
+    * threadName  **参数解释**： 实例线程名。 **取值范围**： 不涉及。
+    * lockMode  **参数解释**： 实例等锁模式。 **取值范围**： 不涉及。
+    * parentSessionId  **参数解释**： 实例父会话ID。 **取值范围**： 不涉及。
+    * smpId  **参数解释**： 实例并行线程的ID。 **取值范围**： 不涉及。
+    * lockTag  **参数解释**： 实例线程正等待获取的锁的信息。 **取值范围**： 不涉及。
+    * componentName  **参数解释**： 组件名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -180,7 +260,23 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
             'execTime' => 'exec_time',
             'transNum' => 'trans_num',
             'rollbackNum' => 'rollback_num',
-            'sqlNum' => 'sql_num'
+            'sqlNum' => 'sql_num',
+            'clientPort' => 'client_port',
+            'queryId' => 'query_id',
+            'transactionTimeCost' => 'transaction_time_cost',
+            'traceId' => 'trace_id',
+            'globalSessionId' => 'global_session_id',
+            'topTransactionId' => 'top_transaction_id',
+            'currentTransactionId' => 'current_transaction_id',
+            'xlogQuantityPretty' => 'xlog_quantity_pretty',
+            'waitStatus' => 'wait_status',
+            'lwtId' => 'lwt_id',
+            'threadName' => 'thread_name',
+            'lockMode' => 'lock_mode',
+            'parentSessionId' => 'parent_session_id',
+            'smpId' => 'smp_id',
+            'lockTag' => 'lock_tag',
+            'componentName' => 'component_name'
     ];
 
     /**
@@ -205,6 +301,22 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
     * transNum  **参数解释**： 会话建立事务的数量。 **取值范围**： 不涉及。
     * rollbackNum  **参数解释**： 会话中事务回滚的次数。 **取值范围**： 不涉及。
     * sqlNum  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
+    * clientPort  **参数解释**： 客户端用于与后台通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
+    * queryId  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
+    * transactionTimeCost  **参数解释**： 当前用户上一次执行的事务持续时间。 **取值范围**： 不涉及。
+    * traceId  **参数解释**： 驱动传入的trace id，用于标识应用的一次请求。 **取值范围**： 不涉及。
+    * globalSessionId  **参数解释**： 当前用户上次执行的全局会话ID。 **取值范围**： 不涉及。
+    * topTransactionId  **参数解释**： 当前用户上次执行的顶层事务ID。 **取值范围**： 不涉及。
+    * currentTransactionId  **参数解释**： 当前用户上次执行的事务ID。 **取值范围**： 不涉及。
+    * xlogQuantityPretty  **参数解释**： 当前用户上次执行的事务使用的XLOG量，易读格式。 **取值范围**： 不涉及。
+    * waitStatus  **参数解释**： 实例线程等待状态。 **取值范围**： 不涉及。
+    * lwtId  **参数解释**： 实例线程的轻量级线程号。 **取值范围**： 不涉及。
+    * threadName  **参数解释**： 实例线程名。 **取值范围**： 不涉及。
+    * lockMode  **参数解释**： 实例等锁模式。 **取值范围**： 不涉及。
+    * parentSessionId  **参数解释**： 实例父会话ID。 **取值范围**： 不涉及。
+    * smpId  **参数解释**： 实例并行线程的ID。 **取值范围**： 不涉及。
+    * lockTag  **参数解释**： 实例线程正等待获取的锁的信息。 **取值范围**： 不涉及。
+    * componentName  **参数解释**： 组件名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -228,7 +340,23 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
             'execTime' => 'setExecTime',
             'transNum' => 'setTransNum',
             'rollbackNum' => 'setRollbackNum',
-            'sqlNum' => 'setSqlNum'
+            'sqlNum' => 'setSqlNum',
+            'clientPort' => 'setClientPort',
+            'queryId' => 'setQueryId',
+            'transactionTimeCost' => 'setTransactionTimeCost',
+            'traceId' => 'setTraceId',
+            'globalSessionId' => 'setGlobalSessionId',
+            'topTransactionId' => 'setTopTransactionId',
+            'currentTransactionId' => 'setCurrentTransactionId',
+            'xlogQuantityPretty' => 'setXlogQuantityPretty',
+            'waitStatus' => 'setWaitStatus',
+            'lwtId' => 'setLwtId',
+            'threadName' => 'setThreadName',
+            'lockMode' => 'setLockMode',
+            'parentSessionId' => 'setParentSessionId',
+            'smpId' => 'setSmpId',
+            'lockTag' => 'setLockTag',
+            'componentName' => 'setComponentName'
     ];
 
     /**
@@ -253,6 +381,22 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
     * transNum  **参数解释**： 会话建立事务的数量。 **取值范围**： 不涉及。
     * rollbackNum  **参数解释**： 会话中事务回滚的次数。 **取值范围**： 不涉及。
     * sqlNum  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
+    * clientPort  **参数解释**： 客户端用于与后台通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
+    * queryId  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
+    * transactionTimeCost  **参数解释**： 当前用户上一次执行的事务持续时间。 **取值范围**： 不涉及。
+    * traceId  **参数解释**： 驱动传入的trace id，用于标识应用的一次请求。 **取值范围**： 不涉及。
+    * globalSessionId  **参数解释**： 当前用户上次执行的全局会话ID。 **取值范围**： 不涉及。
+    * topTransactionId  **参数解释**： 当前用户上次执行的顶层事务ID。 **取值范围**： 不涉及。
+    * currentTransactionId  **参数解释**： 当前用户上次执行的事务ID。 **取值范围**： 不涉及。
+    * xlogQuantityPretty  **参数解释**： 当前用户上次执行的事务使用的XLOG量，易读格式。 **取值范围**： 不涉及。
+    * waitStatus  **参数解释**： 实例线程等待状态。 **取值范围**： 不涉及。
+    * lwtId  **参数解释**： 实例线程的轻量级线程号。 **取值范围**： 不涉及。
+    * threadName  **参数解释**： 实例线程名。 **取值范围**： 不涉及。
+    * lockMode  **参数解释**： 实例等锁模式。 **取值范围**： 不涉及。
+    * parentSessionId  **参数解释**： 实例父会话ID。 **取值范围**： 不涉及。
+    * smpId  **参数解释**： 实例并行线程的ID。 **取值范围**： 不涉及。
+    * lockTag  **参数解释**： 实例线程正等待获取的锁的信息。 **取值范围**： 不涉及。
+    * componentName  **参数解释**： 组件名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -276,7 +420,23 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
             'execTime' => 'getExecTime',
             'transNum' => 'getTransNum',
             'rollbackNum' => 'getRollbackNum',
-            'sqlNum' => 'getSqlNum'
+            'sqlNum' => 'getSqlNum',
+            'clientPort' => 'getClientPort',
+            'queryId' => 'getQueryId',
+            'transactionTimeCost' => 'getTransactionTimeCost',
+            'traceId' => 'getTraceId',
+            'globalSessionId' => 'getGlobalSessionId',
+            'topTransactionId' => 'getTopTransactionId',
+            'currentTransactionId' => 'getCurrentTransactionId',
+            'xlogQuantityPretty' => 'getXlogQuantityPretty',
+            'waitStatus' => 'getWaitStatus',
+            'lwtId' => 'getLwtId',
+            'threadName' => 'getThreadName',
+            'lockMode' => 'getLockMode',
+            'parentSessionId' => 'getParentSessionId',
+            'smpId' => 'getSmpId',
+            'lockTag' => 'getLockTag',
+            'componentName' => 'getComponentName'
     ];
 
     /**
@@ -357,6 +517,22 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
         $this->container['transNum'] = isset($data['transNum']) ? $data['transNum'] : null;
         $this->container['rollbackNum'] = isset($data['rollbackNum']) ? $data['rollbackNum'] : null;
         $this->container['sqlNum'] = isset($data['sqlNum']) ? $data['sqlNum'] : null;
+        $this->container['clientPort'] = isset($data['clientPort']) ? $data['clientPort'] : null;
+        $this->container['queryId'] = isset($data['queryId']) ? $data['queryId'] : null;
+        $this->container['transactionTimeCost'] = isset($data['transactionTimeCost']) ? $data['transactionTimeCost'] : null;
+        $this->container['traceId'] = isset($data['traceId']) ? $data['traceId'] : null;
+        $this->container['globalSessionId'] = isset($data['globalSessionId']) ? $data['globalSessionId'] : null;
+        $this->container['topTransactionId'] = isset($data['topTransactionId']) ? $data['topTransactionId'] : null;
+        $this->container['currentTransactionId'] = isset($data['currentTransactionId']) ? $data['currentTransactionId'] : null;
+        $this->container['xlogQuantityPretty'] = isset($data['xlogQuantityPretty']) ? $data['xlogQuantityPretty'] : null;
+        $this->container['waitStatus'] = isset($data['waitStatus']) ? $data['waitStatus'] : null;
+        $this->container['lwtId'] = isset($data['lwtId']) ? $data['lwtId'] : null;
+        $this->container['threadName'] = isset($data['threadName']) ? $data['threadName'] : null;
+        $this->container['lockMode'] = isset($data['lockMode']) ? $data['lockMode'] : null;
+        $this->container['parentSessionId'] = isset($data['parentSessionId']) ? $data['parentSessionId'] : null;
+        $this->container['smpId'] = isset($data['smpId']) ? $data['smpId'] : null;
+        $this->container['lockTag'] = isset($data['lockTag']) ? $data['lockTag'] : null;
+        $this->container['componentName'] = isset($data['componentName']) ? $data['componentName'] : null;
     }
 
     /**
@@ -858,6 +1034,390 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
     public function setSqlNum($sqlNum)
     {
         $this->container['sqlNum'] = $sqlNum;
+        return $this;
+    }
+
+    /**
+    * Gets clientPort
+    *  **参数解释**： 客户端用于与后台通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getClientPort()
+    {
+        return $this->container['clientPort'];
+    }
+
+    /**
+    * Sets clientPort
+    *
+    * @param string|null $clientPort **参数解释**： 客户端用于与后台通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setClientPort($clientPort)
+    {
+        $this->container['clientPort'] = $clientPort;
+        return $this;
+    }
+
+    /**
+    * Gets queryId
+    *  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getQueryId()
+    {
+        return $this->container['queryId'];
+    }
+
+    /**
+    * Sets queryId
+    *
+    * @param string|null $queryId **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setQueryId($queryId)
+    {
+        $this->container['queryId'] = $queryId;
+        return $this;
+    }
+
+    /**
+    * Gets transactionTimeCost
+    *  **参数解释**： 当前用户上一次执行的事务持续时间。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getTransactionTimeCost()
+    {
+        return $this->container['transactionTimeCost'];
+    }
+
+    /**
+    * Sets transactionTimeCost
+    *
+    * @param string|null $transactionTimeCost **参数解释**： 当前用户上一次执行的事务持续时间。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setTransactionTimeCost($transactionTimeCost)
+    {
+        $this->container['transactionTimeCost'] = $transactionTimeCost;
+        return $this;
+    }
+
+    /**
+    * Gets traceId
+    *  **参数解释**： 驱动传入的trace id，用于标识应用的一次请求。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getTraceId()
+    {
+        return $this->container['traceId'];
+    }
+
+    /**
+    * Sets traceId
+    *
+    * @param string|null $traceId **参数解释**： 驱动传入的trace id，用于标识应用的一次请求。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setTraceId($traceId)
+    {
+        $this->container['traceId'] = $traceId;
+        return $this;
+    }
+
+    /**
+    * Gets globalSessionId
+    *  **参数解释**： 当前用户上次执行的全局会话ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getGlobalSessionId()
+    {
+        return $this->container['globalSessionId'];
+    }
+
+    /**
+    * Sets globalSessionId
+    *
+    * @param string|null $globalSessionId **参数解释**： 当前用户上次执行的全局会话ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setGlobalSessionId($globalSessionId)
+    {
+        $this->container['globalSessionId'] = $globalSessionId;
+        return $this;
+    }
+
+    /**
+    * Gets topTransactionId
+    *  **参数解释**： 当前用户上次执行的顶层事务ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getTopTransactionId()
+    {
+        return $this->container['topTransactionId'];
+    }
+
+    /**
+    * Sets topTransactionId
+    *
+    * @param string|null $topTransactionId **参数解释**： 当前用户上次执行的顶层事务ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setTopTransactionId($topTransactionId)
+    {
+        $this->container['topTransactionId'] = $topTransactionId;
+        return $this;
+    }
+
+    /**
+    * Gets currentTransactionId
+    *  **参数解释**： 当前用户上次执行的事务ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getCurrentTransactionId()
+    {
+        return $this->container['currentTransactionId'];
+    }
+
+    /**
+    * Sets currentTransactionId
+    *
+    * @param string|null $currentTransactionId **参数解释**： 当前用户上次执行的事务ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setCurrentTransactionId($currentTransactionId)
+    {
+        $this->container['currentTransactionId'] = $currentTransactionId;
+        return $this;
+    }
+
+    /**
+    * Gets xlogQuantityPretty
+    *  **参数解释**： 当前用户上次执行的事务使用的XLOG量，易读格式。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getXlogQuantityPretty()
+    {
+        return $this->container['xlogQuantityPretty'];
+    }
+
+    /**
+    * Sets xlogQuantityPretty
+    *
+    * @param string|null $xlogQuantityPretty **参数解释**： 当前用户上次执行的事务使用的XLOG量，易读格式。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setXlogQuantityPretty($xlogQuantityPretty)
+    {
+        $this->container['xlogQuantityPretty'] = $xlogQuantityPretty;
+        return $this;
+    }
+
+    /**
+    * Gets waitStatus
+    *  **参数解释**： 实例线程等待状态。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getWaitStatus()
+    {
+        return $this->container['waitStatus'];
+    }
+
+    /**
+    * Sets waitStatus
+    *
+    * @param string|null $waitStatus **参数解释**： 实例线程等待状态。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setWaitStatus($waitStatus)
+    {
+        $this->container['waitStatus'] = $waitStatus;
+        return $this;
+    }
+
+    /**
+    * Gets lwtId
+    *  **参数解释**： 实例线程的轻量级线程号。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLwtId()
+    {
+        return $this->container['lwtId'];
+    }
+
+    /**
+    * Sets lwtId
+    *
+    * @param string|null $lwtId **参数解释**： 实例线程的轻量级线程号。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setLwtId($lwtId)
+    {
+        $this->container['lwtId'] = $lwtId;
+        return $this;
+    }
+
+    /**
+    * Gets threadName
+    *  **参数解释**： 实例线程名。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getThreadName()
+    {
+        return $this->container['threadName'];
+    }
+
+    /**
+    * Sets threadName
+    *
+    * @param string|null $threadName **参数解释**： 实例线程名。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setThreadName($threadName)
+    {
+        $this->container['threadName'] = $threadName;
+        return $this;
+    }
+
+    /**
+    * Gets lockMode
+    *  **参数解释**： 实例等锁模式。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLockMode()
+    {
+        return $this->container['lockMode'];
+    }
+
+    /**
+    * Sets lockMode
+    *
+    * @param string|null $lockMode **参数解释**： 实例等锁模式。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setLockMode($lockMode)
+    {
+        $this->container['lockMode'] = $lockMode;
+        return $this;
+    }
+
+    /**
+    * Gets parentSessionId
+    *  **参数解释**： 实例父会话ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getParentSessionId()
+    {
+        return $this->container['parentSessionId'];
+    }
+
+    /**
+    * Sets parentSessionId
+    *
+    * @param string|null $parentSessionId **参数解释**： 实例父会话ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setParentSessionId($parentSessionId)
+    {
+        $this->container['parentSessionId'] = $parentSessionId;
+        return $this;
+    }
+
+    /**
+    * Gets smpId
+    *  **参数解释**： 实例并行线程的ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getSmpId()
+    {
+        return $this->container['smpId'];
+    }
+
+    /**
+    * Sets smpId
+    *
+    * @param string|null $smpId **参数解释**： 实例并行线程的ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setSmpId($smpId)
+    {
+        $this->container['smpId'] = $smpId;
+        return $this;
+    }
+
+    /**
+    * Gets lockTag
+    *  **参数解释**： 实例线程正等待获取的锁的信息。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLockTag()
+    {
+        return $this->container['lockTag'];
+    }
+
+    /**
+    * Sets lockTag
+    *
+    * @param string|null $lockTag **参数解释**： 实例线程正等待获取的锁的信息。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setLockTag($lockTag)
+    {
+        $this->container['lockTag'] = $lockTag;
+        return $this;
+    }
+
+    /**
+    * Gets componentName
+    *  **参数解释**： 组件名称。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getComponentName()
+    {
+        return $this->container['componentName'];
+    }
+
+    /**
+    * Sets componentName
+    *
+    * @param string|null $componentName **参数解释**： 组件名称。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setComponentName($componentName)
+    {
+        $this->container['componentName'] = $componentName;
         return $this;
     }
 

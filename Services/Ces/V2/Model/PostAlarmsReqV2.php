@@ -48,7 +48,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'namespace' => 'string',
             'resourceGroupId' => 'string',
             'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\Dimension[][]',
-            'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\Policy[]',
+            'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\AlarmRulePolicy[]',
             'type' => '\HuaweiCloud\SDK\Ces\V2\Model\AlarmType',
             'alarmNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\Notification[]',
             'okNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\Notification[]',
@@ -613,7 +613,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * Gets policies
     *  **参数解释**： 告警策略。 **约束限制**： 当alarm_template_id字段为空时必填，不为空时不填。最多包含50个策略。
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\Policy[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\AlarmRulePolicy[]|null
     */
     public function getPolicies()
     {
@@ -623,7 +623,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets policies
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Policy[]|null $policies **参数解释**： 告警策略。 **约束限制**： 当alarm_template_id字段为空时必填，不为空时不填。最多包含50个策略。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\AlarmRulePolicy[]|null $policies **参数解释**： 告警策略。 **约束限制**： 当alarm_template_id字段为空时必填，不为空时不填。最多包含50个策略。
     *
     * @return $this
     */

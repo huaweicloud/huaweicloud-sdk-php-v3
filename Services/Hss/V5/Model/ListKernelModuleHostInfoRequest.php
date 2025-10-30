@@ -23,10 +23,10 @@ class ListKernelModuleHostInfoRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * name  内核模块名称
-    * hostName  服务器名称
-    * hostIp  服务器IP
-    * partMatch  是否模糊匹配，默认false表示精确匹配
+    * name  **参数解释**: 内核模块名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
+    * partMatch  **参数解释**: 是否模糊匹配，默认false表示精确匹配 **约束限制**: 不涉及 **取值范围**: - true：模糊匹配 - false：精确匹配  **默认取值**: false
     *
     * @var string[]
     */
@@ -45,10 +45,10 @@ class ListKernelModuleHostInfoRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * name  内核模块名称
-    * hostName  服务器名称
-    * hostIp  服务器IP
-    * partMatch  是否模糊匹配，默认false表示精确匹配
+    * name  **参数解释**: 内核模块名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
+    * partMatch  **参数解释**: 是否模糊匹配，默认false表示精确匹配 **约束限制**: 不涉及 **取值范围**: - true：模糊匹配 - false：精确匹配  **默认取值**: false
     *
     * @var string[]
     */
@@ -88,10 +88,10 @@ class ListKernelModuleHostInfoRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * name  内核模块名称
-    * hostName  服务器名称
-    * hostIp  服务器IP
-    * partMatch  是否模糊匹配，默认false表示精确匹配
+    * name  **参数解释**: 内核模块名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
+    * partMatch  **参数解释**: 是否模糊匹配，默认false表示精确匹配 **约束限制**: 不涉及 **取值范围**: - true：模糊匹配 - false：精确匹配  **默认取值**: false
     *
     * @var string[]
     */
@@ -110,10 +110,10 @@ class ListKernelModuleHostInfoRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * name  内核模块名称
-    * hostName  服务器名称
-    * hostIp  服务器IP
-    * partMatch  是否模糊匹配，默认false表示精确匹配
+    * name  **参数解释**: 内核模块名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
+    * partMatch  **参数解释**: 是否模糊匹配，默认false表示精确匹配 **约束限制**: 不涉及 **取值范围**: - true：模糊匹配 - false：精确匹配  **默认取值**: false
     *
     * @var string[]
     */
@@ -132,10 +132,10 @@ class ListKernelModuleHostInfoRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * name  内核模块名称
-    * hostName  服务器名称
-    * hostIp  服务器IP
-    * partMatch  是否模糊匹配，默认false表示精确匹配
+    * name  **参数解释**: 内核模块名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
+    * partMatch  **参数解释**: 是否模糊匹配，默认false表示精确匹配 **约束限制**: 不涉及 **取值范围**: - true：模糊匹配 - false：精确匹配  **默认取值**: false
     *
     * @var string[]
     */
@@ -354,7 +354,7 @@ class ListKernelModuleHostInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  内核模块名称
+    *  **参数解释**: 内核模块名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
     *
     * @return string
     */
@@ -366,7 +366,7 @@ class ListKernelModuleHostInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 内核模块名称
+    * @param string $name **参数解释**: 内核模块名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -378,7 +378,7 @@ class ListKernelModuleHostInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -390,7 +390,7 @@ class ListKernelModuleHostInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -402,7 +402,7 @@ class ListKernelModuleHostInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  服务器IP
+    *  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -414,7 +414,7 @@ class ListKernelModuleHostInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 服务器IP
+    * @param string|null $hostIp **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -426,7 +426,7 @@ class ListKernelModuleHostInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets partMatch
-    *  是否模糊匹配，默认false表示精确匹配
+    *  **参数解释**: 是否模糊匹配，默认false表示精确匹配 **约束限制**: 不涉及 **取值范围**: - true：模糊匹配 - false：精确匹配  **默认取值**: false
     *
     * @return bool|null
     */
@@ -438,7 +438,7 @@ class ListKernelModuleHostInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets partMatch
     *
-    * @param bool|null $partMatch 是否模糊匹配，默认false表示精确匹配
+    * @param bool|null $partMatch **参数解释**: 是否模糊匹配，默认false表示精确匹配 **约束限制**: 不涉及 **取值范围**: - true：模糊匹配 - false：精确匹配  **默认取值**: false
     *
     * @return $this
     */

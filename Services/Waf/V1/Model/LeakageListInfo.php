@@ -28,6 +28,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     * timestamp  创建规则时间戳
     * status  规则状态，0：关闭，1：开启
     * description  规则描述
+    * action  action
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
             'contents' => 'string[]',
             'timestamp' => 'int',
             'status' => 'int',
-            'description' => 'string'
+            'description' => 'string',
+            'action' => '\HuaweiCloud\SDK\Waf\V1\Model\LeakageListInfoAction'
     ];
 
     /**
@@ -52,6 +54,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     * timestamp  创建规则时间戳
     * status  规则状态，0：关闭，1：开启
     * description  规则描述
+    * action  action
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
         'contents' => null,
         'timestamp' => 'int64',
         'status' => null,
-        'description' => null
+        'description' => null,
+        'action' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     * timestamp  创建规则时间戳
     * status  规则状态，0：关闭，1：开启
     * description  规则描述
+    * action  action
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
             'contents' => 'contents',
             'timestamp' => 'timestamp',
             'status' => 'status',
-            'description' => 'description'
+            'description' => 'description',
+            'action' => 'action'
     ];
 
     /**
@@ -121,6 +127,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     * timestamp  创建规则时间戳
     * status  规则状态，0：关闭，1：开启
     * description  规则描述
+    * action  action
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
             'contents' => 'setContents',
             'timestamp' => 'setTimestamp',
             'status' => 'setStatus',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'action' => 'setAction'
     ];
 
     /**
@@ -145,6 +153,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     * timestamp  创建规则时间戳
     * status  规则状态，0：关闭，1：开启
     * description  规则描述
+    * action  action
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
             'contents' => 'getContents',
             'timestamp' => 'getTimestamp',
             'status' => 'getStatus',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'action' => 'getAction'
     ];
 
     /**
@@ -225,6 +235,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
         $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
     }
 
     /**
@@ -438,6 +449,30 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets action
+    *  action
+    *
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\LeakageListInfoAction|null
+    */
+    public function getAction()
+    {
+        return $this->container['action'];
+    }
+
+    /**
+    * Sets action
+    *
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\LeakageListInfoAction|null $action action
+    *
+    * @return $this
+    */
+    public function setAction($action)
+    {
+        $this->container['action'] = $action;
         return $this;
     }
 

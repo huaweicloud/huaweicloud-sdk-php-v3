@@ -23,10 +23,10 @@ class ExportSecurityCheckReportRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * groupId  **参数解释**: 服务器组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * checkName  **参数解释** : \"配置检查（基线）的名称，例如SSH、CentOS 7、Windows\"。 **约束限制** : 不涉及 **取值范围** : - cn_standard: 等保合规标准 - hw_standard: 云安全实践标准 **默认取值** : 不涉及
-    * standard  **参数解释**: 标准类型。 **约束限制**: 不涉及 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 **默认取值**: 不涉及
-    * scanResult  **参数解释**: 检查结果。 **约束限制**: 不涉及 **取值范围**: - pass : 检查通过 - failed : 检查未通过 **默认取值**: 不涉及
-    * severity  **参数解释**: 风险级别。 **约束限制**: 不涉及 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危 **默认取值**: 不涉及
+    * checkName  **参数解释** : \"配置检查（基线）的名称，例如SSH、CentOS 7、Windows\"。 **约束限制** : 不涉及 **取值范围** : 字符长度1-256位 **默认取值** : 不涉及
+    * standard  **参数解释**: 标准类型。 **约束限制**: 不涉及 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准  **默认取值**: 不涉及
+    * scanResult  **参数解释**: 检查结果。 **约束限制**: 不涉及 **取值范围**: - pass : 检查通过 - failed : 检查未通过  **默认取值**: 不涉及
+    * severity  **参数解释**: 风险级别。 **约束限制**: 不涉及 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -45,10 +45,10 @@ class ExportSecurityCheckReportRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * groupId  **参数解释**: 服务器组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * checkName  **参数解释** : \"配置检查（基线）的名称，例如SSH、CentOS 7、Windows\"。 **约束限制** : 不涉及 **取值范围** : - cn_standard: 等保合规标准 - hw_standard: 云安全实践标准 **默认取值** : 不涉及
-    * standard  **参数解释**: 标准类型。 **约束限制**: 不涉及 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 **默认取值**: 不涉及
-    * scanResult  **参数解释**: 检查结果。 **约束限制**: 不涉及 **取值范围**: - pass : 检查通过 - failed : 检查未通过 **默认取值**: 不涉及
-    * severity  **参数解释**: 风险级别。 **约束限制**: 不涉及 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危 **默认取值**: 不涉及
+    * checkName  **参数解释** : \"配置检查（基线）的名称，例如SSH、CentOS 7、Windows\"。 **约束限制** : 不涉及 **取值范围** : 字符长度1-256位 **默认取值** : 不涉及
+    * standard  **参数解释**: 标准类型。 **约束限制**: 不涉及 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准  **默认取值**: 不涉及
+    * scanResult  **参数解释**: 检查结果。 **约束限制**: 不涉及 **取值范围**: - pass : 检查通过 - failed : 检查未通过  **默认取值**: 不涉及
+    * severity  **参数解释**: 风险级别。 **约束限制**: 不涉及 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -88,10 +88,10 @@ class ExportSecurityCheckReportRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * groupId  **参数解释**: 服务器组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * checkName  **参数解释** : \"配置检查（基线）的名称，例如SSH、CentOS 7、Windows\"。 **约束限制** : 不涉及 **取值范围** : - cn_standard: 等保合规标准 - hw_standard: 云安全实践标准 **默认取值** : 不涉及
-    * standard  **参数解释**: 标准类型。 **约束限制**: 不涉及 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 **默认取值**: 不涉及
-    * scanResult  **参数解释**: 检查结果。 **约束限制**: 不涉及 **取值范围**: - pass : 检查通过 - failed : 检查未通过 **默认取值**: 不涉及
-    * severity  **参数解释**: 风险级别。 **约束限制**: 不涉及 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危 **默认取值**: 不涉及
+    * checkName  **参数解释** : \"配置检查（基线）的名称，例如SSH、CentOS 7、Windows\"。 **约束限制** : 不涉及 **取值范围** : 字符长度1-256位 **默认取值** : 不涉及
+    * standard  **参数解释**: 标准类型。 **约束限制**: 不涉及 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准  **默认取值**: 不涉及
+    * scanResult  **参数解释**: 检查结果。 **约束限制**: 不涉及 **取值范围**: - pass : 检查通过 - failed : 检查未通过  **默认取值**: 不涉及
+    * severity  **参数解释**: 风险级别。 **约束限制**: 不涉及 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -110,10 +110,10 @@ class ExportSecurityCheckReportRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * groupId  **参数解释**: 服务器组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * checkName  **参数解释** : \"配置检查（基线）的名称，例如SSH、CentOS 7、Windows\"。 **约束限制** : 不涉及 **取值范围** : - cn_standard: 等保合规标准 - hw_standard: 云安全实践标准 **默认取值** : 不涉及
-    * standard  **参数解释**: 标准类型。 **约束限制**: 不涉及 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 **默认取值**: 不涉及
-    * scanResult  **参数解释**: 检查结果。 **约束限制**: 不涉及 **取值范围**: - pass : 检查通过 - failed : 检查未通过 **默认取值**: 不涉及
-    * severity  **参数解释**: 风险级别。 **约束限制**: 不涉及 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危 **默认取值**: 不涉及
+    * checkName  **参数解释** : \"配置检查（基线）的名称，例如SSH、CentOS 7、Windows\"。 **约束限制** : 不涉及 **取值范围** : 字符长度1-256位 **默认取值** : 不涉及
+    * standard  **参数解释**: 标准类型。 **约束限制**: 不涉及 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准  **默认取值**: 不涉及
+    * scanResult  **参数解释**: 检查结果。 **约束限制**: 不涉及 **取值范围**: - pass : 检查通过 - failed : 检查未通过  **默认取值**: 不涉及
+    * severity  **参数解释**: 风险级别。 **约束限制**: 不涉及 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -132,10 +132,10 @@ class ExportSecurityCheckReportRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * groupId  **参数解释**: 服务器组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * checkName  **参数解释** : \"配置检查（基线）的名称，例如SSH、CentOS 7、Windows\"。 **约束限制** : 不涉及 **取值范围** : - cn_standard: 等保合规标准 - hw_standard: 云安全实践标准 **默认取值** : 不涉及
-    * standard  **参数解释**: 标准类型。 **约束限制**: 不涉及 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 **默认取值**: 不涉及
-    * scanResult  **参数解释**: 检查结果。 **约束限制**: 不涉及 **取值范围**: - pass : 检查通过 - failed : 检查未通过 **默认取值**: 不涉及
-    * severity  **参数解释**: 风险级别。 **约束限制**: 不涉及 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危 **默认取值**: 不涉及
+    * checkName  **参数解释** : \"配置检查（基线）的名称，例如SSH、CentOS 7、Windows\"。 **约束限制** : 不涉及 **取值范围** : 字符长度1-256位 **默认取值** : 不涉及
+    * standard  **参数解释**: 标准类型。 **约束限制**: 不涉及 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准  **默认取值**: 不涉及
+    * scanResult  **参数解释**: 检查结果。 **约束限制**: 不涉及 **取值范围**: - pass : 检查通过 - failed : 检查未通过  **默认取值**: 不涉及
+    * severity  **参数解释**: 风险级别。 **约束限制**: 不涉及 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -263,17 +263,26 @@ class ExportSecurityCheckReportRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['standard']) && (mb_strlen($this->container['standard']) < 0)) {
                 $invalidProperties[] = "invalid value for 'standard', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['standard']) && !preg_match("/^(cn_standard|hw_standard|cis_standard)$/", $this->container['standard'])) {
+                $invalidProperties[] = "invalid value for 'standard', must be conform to the pattern /^(cn_standard|hw_standard|cis_standard)$/.";
+            }
             if (!is_null($this->container['scanResult']) && (mb_strlen($this->container['scanResult']) > 32)) {
                 $invalidProperties[] = "invalid value for 'scanResult', the character length must be smaller than or equal to 32.";
             }
             if (!is_null($this->container['scanResult']) && (mb_strlen($this->container['scanResult']) < 0)) {
                 $invalidProperties[] = "invalid value for 'scanResult', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['scanResult']) && !preg_match("/^(pass|failed)$/", $this->container['scanResult'])) {
+                $invalidProperties[] = "invalid value for 'scanResult', must be conform to the pattern /^(pass|failed)$/.";
+            }
             if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) > 255)) {
                 $invalidProperties[] = "invalid value for 'severity', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) < 0)) {
                 $invalidProperties[] = "invalid value for 'severity', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['severity']) && !preg_match("/^(Low|Medium|High)$/", $this->container['severity'])) {
+                $invalidProperties[] = "invalid value for 'severity', must be conform to the pattern /^(Low|Medium|High)$/.";
             }
         return $invalidProperties;
     }
@@ -363,7 +372,7 @@ class ExportSecurityCheckReportRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkName
-    *  **参数解释** : \"配置检查（基线）的名称，例如SSH、CentOS 7、Windows\"。 **约束限制** : 不涉及 **取值范围** : - cn_standard: 等保合规标准 - hw_standard: 云安全实践标准 **默认取值** : 不涉及
+    *  **参数解释** : \"配置检查（基线）的名称，例如SSH、CentOS 7、Windows\"。 **约束限制** : 不涉及 **取值范围** : 字符长度1-256位 **默认取值** : 不涉及
     *
     * @return string|null
     */
@@ -375,7 +384,7 @@ class ExportSecurityCheckReportRequest implements ModelInterface, ArrayAccess
     /**
     * Sets checkName
     *
-    * @param string|null $checkName **参数解释** : \"配置检查（基线）的名称，例如SSH、CentOS 7、Windows\"。 **约束限制** : 不涉及 **取值范围** : - cn_standard: 等保合规标准 - hw_standard: 云安全实践标准 **默认取值** : 不涉及
+    * @param string|null $checkName **参数解释** : \"配置检查（基线）的名称，例如SSH、CentOS 7、Windows\"。 **约束限制** : 不涉及 **取值范围** : 字符长度1-256位 **默认取值** : 不涉及
     *
     * @return $this
     */
@@ -387,7 +396,7 @@ class ExportSecurityCheckReportRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets standard
-    *  **参数解释**: 标准类型。 **约束限制**: 不涉及 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 **默认取值**: 不涉及
+    *  **参数解释**: 标准类型。 **约束限制**: 不涉及 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -399,7 +408,7 @@ class ExportSecurityCheckReportRequest implements ModelInterface, ArrayAccess
     /**
     * Sets standard
     *
-    * @param string|null $standard **参数解释**: 标准类型。 **约束限制**: 不涉及 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 **默认取值**: 不涉及
+    * @param string|null $standard **参数解释**: 标准类型。 **约束限制**: 不涉及 **取值范围**: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard : 通用安全标准  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -411,7 +420,7 @@ class ExportSecurityCheckReportRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanResult
-    *  **参数解释**: 检查结果。 **约束限制**: 不涉及 **取值范围**: - pass : 检查通过 - failed : 检查未通过 **默认取值**: 不涉及
+    *  **参数解释**: 检查结果。 **约束限制**: 不涉及 **取值范围**: - pass : 检查通过 - failed : 检查未通过  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -423,7 +432,7 @@ class ExportSecurityCheckReportRequest implements ModelInterface, ArrayAccess
     /**
     * Sets scanResult
     *
-    * @param string|null $scanResult **参数解释**: 检查结果。 **约束限制**: 不涉及 **取值范围**: - pass : 检查通过 - failed : 检查未通过 **默认取值**: 不涉及
+    * @param string|null $scanResult **参数解释**: 检查结果。 **约束限制**: 不涉及 **取值范围**: - pass : 检查通过 - failed : 检查未通过  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -435,7 +444,7 @@ class ExportSecurityCheckReportRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  **参数解释**: 风险级别。 **约束限制**: 不涉及 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危 **默认取值**: 不涉及
+    *  **参数解释**: 风险级别。 **约束限制**: 不涉及 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -447,7 +456,7 @@ class ExportSecurityCheckReportRequest implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity **参数解释**: 风险级别。 **约束限制**: 不涉及 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危 **默认取值**: 不涉及
+    * @param string|null $severity **参数解释**: 风险级别。 **约束限制**: 不涉及 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危  **默认取值**: 不涉及
     *
     * @return $this
     */

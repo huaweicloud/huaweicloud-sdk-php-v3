@@ -21,8 +21,8 @@ class UpdateAccessProgressResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * step  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * status  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * step  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** - 1 : 回源IP加白步骤 - 2 : 本地验证步骤 - 3 : 修改DNS解析步骤 **默认取值：** 不涉及
+    * status  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** - 0:未完成 - 1:完成 - 2:跳过 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class UpdateAccessProgressResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * step  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * status  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * step  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** - 1 : 回源IP加白步骤 - 2 : 本地验证步骤 - 3 : 修改DNS解析步骤 **默认取值：** 不涉及
+    * status  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** - 0:未完成 - 1:完成 - 2:跳过 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class UpdateAccessProgressResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * step  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * status  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * step  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** - 1 : 回源IP加白步骤 - 2 : 本地验证步骤 - 3 : 修改DNS解析步骤 **默认取值：** 不涉及
+    * status  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** - 0:未完成 - 1:完成 - 2:跳过 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class UpdateAccessProgressResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * step  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * status  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * step  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** - 1 : 回源IP加白步骤 - 2 : 本地验证步骤 - 3 : 修改DNS解析步骤 **默认取值：** 不涉及
+    * status  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** - 0:未完成 - 1:完成 - 2:跳过 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class UpdateAccessProgressResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * step  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * status  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * step  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** - 1 : 回源IP加白步骤 - 2 : 本地验证步骤 - 3 : 修改DNS解析步骤 **默认取值：** 不涉及
+    * status  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** - 0:未完成 - 1:完成 - 2:跳过 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class UpdateAccessProgressResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets step
-    *  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** - 1 : 回源IP加白步骤 - 2 : 本地验证步骤 - 3 : 修改DNS解析步骤 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class UpdateAccessProgressResponse implements ModelInterface, ArrayAccess
     /**
     * Sets step
     *
-    * @param int|null $step **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param int|null $step **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** - 1 : 回源IP加白步骤 - 2 : 本地验证步骤 - 3 : 修改DNS解析步骤 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class UpdateAccessProgressResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** - 0:未完成 - 1:完成 - 2:跳过 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class UpdateAccessProgressResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param int|null $status **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** - 0:未完成 - 1:完成 - 2:跳过 **默认取值：** 不涉及
     *
     * @return $this
     */

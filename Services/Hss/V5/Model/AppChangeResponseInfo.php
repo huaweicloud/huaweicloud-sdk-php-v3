@@ -25,7 +25,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * version  **参数解释**: 版本号 **取值范围**: 字符长度1-128位
     * updateTime  **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值10000
     * recentScanTime  **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值10000
@@ -51,7 +51,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * version  **参数解释**: 版本号 **取值范围**: 字符长度1-128位
     * updateTime  **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值10000
     * recentScanTime  **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值10000
@@ -98,7 +98,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * version  **参数解释**: 版本号 **取值范围**: 字符长度1-128位
     * updateTime  **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值10000
     * recentScanTime  **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值10000
@@ -124,7 +124,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * version  **参数解释**: 版本号 **取值范围**: 字符长度1-128位
     * updateTime  **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值10000
     * recentScanTime  **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值10000
@@ -150,7 +150,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * appName  **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * version  **参数解释**: 版本号 **取值范围**: 字符长度1-128位
     * updateTime  **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值10000
     * recentScanTime  **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值10000
@@ -442,7 +442,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    *  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -454,7 +454,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * @param string|null $hostIp **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     *
     * @return $this
     */

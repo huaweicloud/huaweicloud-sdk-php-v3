@@ -20,8 +20,8 @@ class KernelModuleStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  内核模块名称
-    * num  内核模块统计信息总数
+    * name  **参数解释**: 内核模块名称 **取值范围**: 字符长度0-256
+    * num  **参数解释** 内核模块统计信息总数 **取值范围** 最小值0，最大值300000
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class KernelModuleStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  内核模块名称
-    * num  内核模块统计信息总数
+    * name  **参数解释**: 内核模块名称 **取值范围**: 字符长度0-256
+    * num  **参数解释** 内核模块统计信息总数 **取值范围** 最小值0，最大值300000
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class KernelModuleStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  内核模块名称
-    * num  内核模块统计信息总数
+    * name  **参数解释**: 内核模块名称 **取值范围**: 字符长度0-256
+    * num  **参数解释** 内核模块统计信息总数 **取值范围** 最小值0，最大值300000
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class KernelModuleStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  内核模块名称
-    * num  内核模块统计信息总数
+    * name  **参数解释**: 内核模块名称 **取值范围**: 字符长度0-256
+    * num  **参数解释** 内核模块统计信息总数 **取值范围** 最小值0，最大值300000
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class KernelModuleStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  内核模块名称
-    * num  内核模块统计信息总数
+    * name  **参数解释**: 内核模块名称 **取值范围**: 字符长度0-256
+    * num  **参数解释** 内核模块统计信息总数 **取值范围** 最小值0，最大值300000
     *
     * @var string[]
     */
@@ -169,6 +169,12 @@ class KernelModuleStatisticsResponseInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 256)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['num']) && ($this->container['num'] > 300000)) {
                 $invalidProperties[] = "invalid value for 'num', must be smaller than or equal to 300000.";
             }
@@ -191,7 +197,7 @@ class KernelModuleStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  内核模块名称
+    *  **参数解释**: 内核模块名称 **取值范围**: 字符长度0-256
     *
     * @return string|null
     */
@@ -203,7 +209,7 @@ class KernelModuleStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 内核模块名称
+    * @param string|null $name **参数解释**: 内核模块名称 **取值范围**: 字符长度0-256
     *
     * @return $this
     */
@@ -215,7 +221,7 @@ class KernelModuleStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets num
-    *  内核模块统计信息总数
+    *  **参数解释** 内核模块统计信息总数 **取值范围** 最小值0，最大值300000
     *
     * @return int|null
     */
@@ -227,7 +233,7 @@ class KernelModuleStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets num
     *
-    * @param int|null $num 内核模块统计信息总数
+    * @param int|null $num **参数解释** 内核模块统计信息总数 **取值范围** 最小值0，最大值300000
     *
     * @return $this
     */

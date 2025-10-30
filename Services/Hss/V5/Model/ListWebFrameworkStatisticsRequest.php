@@ -23,8 +23,8 @@ class ListWebFrameworkStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * fileName  框架文件名称
-    * category  返回的资产类别 - 0: 主机 - 1: 容器
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * fileName  **参数解释**: 框架文件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ListWebFrameworkStatisticsRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'offset' => 'int',
             'limit' => 'int',
-            'fileName' => 'string',
-            'category' => 'string'
+            'category' => 'string',
+            'fileName' => 'string'
     ];
 
     /**
@@ -41,8 +41,8 @@ class ListWebFrameworkStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * fileName  框架文件名称
-    * category  返回的资产类别 - 0: 主机 - 1: 容器
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * fileName  **参数解释**: 框架文件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -50,8 +50,8 @@ class ListWebFrameworkStatisticsRequest implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'offset' => 'int32',
         'limit' => 'int32',
-        'fileName' => null,
-        'category' => null
+        'category' => null,
+        'fileName' => null
     ];
 
     /**
@@ -80,8 +80,8 @@ class ListWebFrameworkStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * fileName  框架文件名称
-    * category  返回的资产类别 - 0: 主机 - 1: 容器
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * fileName  **参数解释**: 框架文件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ListWebFrameworkStatisticsRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'offset' => 'offset',
             'limit' => 'limit',
-            'fileName' => 'file_name',
-            'category' => 'category'
+            'category' => 'category',
+            'fileName' => 'file_name'
     ];
 
     /**
@@ -98,8 +98,8 @@ class ListWebFrameworkStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * fileName  框架文件名称
-    * category  返回的资产类别 - 0: 主机 - 1: 容器
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * fileName  **参数解释**: 框架文件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -107,8 +107,8 @@ class ListWebFrameworkStatisticsRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'fileName' => 'setFileName',
-            'category' => 'setCategory'
+            'category' => 'setCategory',
+            'fileName' => 'setFileName'
     ];
 
     /**
@@ -116,8 +116,8 @@ class ListWebFrameworkStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * fileName  框架文件名称
-    * category  返回的资产类别 - 0: 主机 - 1: 容器
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * fileName  **参数解释**: 框架文件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -125,8 +125,8 @@ class ListWebFrameworkStatisticsRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'fileName' => 'getFileName',
-            'category' => 'getCategory'
+            'category' => 'getCategory',
+            'fileName' => 'getFileName'
     ];
 
     /**
@@ -190,8 +190,8 @@ class ListWebFrameworkStatisticsRequest implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['fileName'] = isset($data['fileName']) ? $data['fileName'] : null;
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['fileName'] = isset($data['fileName']) ? $data['fileName'] : null;
     }
 
     /**
@@ -223,17 +223,23 @@ class ListWebFrameworkStatisticsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
             }
+        if ($this->container['category'] === null) {
+            $invalidProperties[] = "'category' can't be null";
+        }
+            if ((mb_strlen($this->container['category']) > 32)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['category']) < 0)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
+            }
+            if (!preg_match("/^(host|container)$/", $this->container['category'])) {
+                $invalidProperties[] = "invalid value for 'category', must be conform to the pattern /^(host|container)$/.";
+            }
             if (!is_null($this->container['fileName']) && (mb_strlen($this->container['fileName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'fileName', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['fileName']) && (mb_strlen($this->container['fileName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'fileName', the character length must be bigger than or equal to 0.";
-            }
-        if ($this->container['category'] === null) {
-            $invalidProperties[] = "'category' can't be null";
-        }
-            if (!preg_match("/^0|1$/", $this->container['category'])) {
-                $invalidProperties[] = "invalid value for 'category', must be conform to the pattern /^0|1$/.";
             }
         return $invalidProperties;
     }
@@ -322,32 +328,8 @@ class ListWebFrameworkStatisticsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets fileName
-    *  框架文件名称
-    *
-    * @return string|null
-    */
-    public function getFileName()
-    {
-        return $this->container['fileName'];
-    }
-
-    /**
-    * Sets fileName
-    *
-    * @param string|null $fileName 框架文件名称
-    *
-    * @return $this
-    */
-    public function setFileName($fileName)
-    {
-        $this->container['fileName'] = $fileName;
-        return $this;
-    }
-
-    /**
     * Gets category
-    *  返回的资产类别 - 0: 主机 - 1: 容器
+    *  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     *
     * @return string
     */
@@ -359,13 +341,37 @@ class ListWebFrameworkStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string $category 返回的资产类别 - 0: 主机 - 1: 容器
+    * @param string $category **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     *
     * @return $this
     */
     public function setCategory($category)
     {
         $this->container['category'] = $category;
+        return $this;
+    }
+
+    /**
+    * Gets fileName
+    *  **参数解释**: 框架文件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getFileName()
+    {
+        return $this->container['fileName'];
+    }
+
+    /**
+    * Sets fileName
+    *
+    * @param string|null $fileName **参数解释**: 框架文件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setFileName($fileName)
+    {
+        $this->container['fileName'] = $fileName;
         return $this;
     }
 

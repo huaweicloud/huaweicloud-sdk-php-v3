@@ -32,6 +32,7 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     * ttlInDays  存储时间
     * hotStorageDays  标准存储时间
     * logGroupId  日志组ID
+    * isFavorite  **参数解释：** 是否收藏日志流。 **取值范围：** - true：收藏日志流。 - false：不收藏日志流。
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
             'authWebTracking' => 'bool',
             'ttlInDays' => 'int',
             'hotStorageDays' => 'int',
-            'logGroupId' => 'string'
+            'logGroupId' => 'string',
+            'isFavorite' => 'bool'
     ];
 
     /**
@@ -64,6 +66,7 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     * ttlInDays  存储时间
     * hotStorageDays  标准存储时间
     * logGroupId  日志组ID
+    * isFavorite  **参数解释：** 是否收藏日志流。 **取值范围：** - true：收藏日志流。 - false：不收藏日志流。
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
         'authWebTracking' => null,
         'ttlInDays' => 'int32',
         'hotStorageDays' => 'int32',
-        'logGroupId' => null
+        'logGroupId' => null,
+        'isFavorite' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     * ttlInDays  存储时间
     * hotStorageDays  标准存储时间
     * logGroupId  日志组ID
+    * isFavorite  **参数解释：** 是否收藏日志流。 **取值范围：** - true：收藏日志流。 - false：不收藏日志流。
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
             'authWebTracking' => 'auth_web_tracking',
             'ttlInDays' => 'ttl_in_days',
             'hotStorageDays' => 'hot_storage_days',
-            'logGroupId' => 'log_group_id'
+            'logGroupId' => 'log_group_id',
+            'isFavorite' => 'is_favorite'
     ];
 
     /**
@@ -149,6 +155,7 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     * ttlInDays  存储时间
     * hotStorageDays  标准存储时间
     * logGroupId  日志组ID
+    * isFavorite  **参数解释：** 是否收藏日志流。 **取值范围：** - true：收藏日志流。 - false：不收藏日志流。
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
             'authWebTracking' => 'setAuthWebTracking',
             'ttlInDays' => 'setTtlInDays',
             'hotStorageDays' => 'setHotStorageDays',
-            'logGroupId' => 'setLogGroupId'
+            'logGroupId' => 'setLogGroupId',
+            'isFavorite' => 'setIsFavorite'
     ];
 
     /**
@@ -181,6 +189,7 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     * ttlInDays  存储时间
     * hotStorageDays  标准存储时间
     * logGroupId  日志组ID
+    * isFavorite  **参数解释：** 是否收藏日志流。 **取值范围：** - true：收藏日志流。 - false：不收藏日志流。
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
             'authWebTracking' => 'getAuthWebTracking',
             'ttlInDays' => 'getTtlInDays',
             'hotStorageDays' => 'getHotStorageDays',
-            'logGroupId' => 'getLogGroupId'
+            'logGroupId' => 'getLogGroupId',
+            'isFavorite' => 'getIsFavorite'
     ];
 
     /**
@@ -269,6 +279,7 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
         $this->container['ttlInDays'] = isset($data['ttlInDays']) ? $data['ttlInDays'] : null;
         $this->container['hotStorageDays'] = isset($data['hotStorageDays']) ? $data['hotStorageDays'] : null;
         $this->container['logGroupId'] = isset($data['logGroupId']) ? $data['logGroupId'] : null;
+        $this->container['isFavorite'] = isset($data['isFavorite']) ? $data['isFavorite'] : null;
     }
 
     /**
@@ -617,6 +628,30 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     public function setLogGroupId($logGroupId)
     {
         $this->container['logGroupId'] = $logGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets isFavorite
+    *  **参数解释：** 是否收藏日志流。 **取值范围：** - true：收藏日志流。 - false：不收藏日志流。
+    *
+    * @return bool|null
+    */
+    public function getIsFavorite()
+    {
+        return $this->container['isFavorite'];
+    }
+
+    /**
+    * Sets isFavorite
+    *
+    * @param bool|null $isFavorite **参数解释：** 是否收藏日志流。 **取值范围：** - true：收藏日志流。 - false：不收藏日志流。
+    *
+    * @return $this
+    */
+    public function setIsFavorite($isFavorite)
+    {
+        $this->container['isFavorite'] = $isFavorite;
         return $this;
     }
 

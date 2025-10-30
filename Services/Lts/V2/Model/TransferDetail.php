@@ -25,7 +25,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
     * obsPrefixName  OBS转储日志文件前缀
     * obsPeriodUnit  OBS转储单位
     * obsTransferPath  OBS转储路径，指OBS日志桶中的路径
-    * obsEpsId  OBS企业项目ID
     * obsBucketName  OBS日志桶名称
     * obsEncryptedEnable  OBS是否开启加密。
     * obsDirPreFixName  OBS转储自定义转储路径
@@ -36,10 +35,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
     * obsTimeZone  OBS转储时区。如果选择该参数，则必须选择obs_time_zone_id。
     * obsTimeZoneId  OBS转储时区ID。参数选择参考OBS转储时区表。如果选择该参数，则必须选择obs_time_zone。
     * tags  若开启tag投递，该字段必须包含主机信息：hostIP、hostId、hostName、pathFile、collectTime；  公共字段有：logStreamName、regionName、logGroupName、projectId，为可选填；  开启转储标签：streamTag，可选填
-    * ltsTags  dms转储JSON格式选填，可以转储tag字段
-    * streamTags  dms转储JSON格式选填，可以转储日志流标签字段
-    * structFields  dms转储JSON格式选填，可以转储结构化字段
-    * invalidFieldValue  dms转储JSON格式选填，无效字段填充
     *
     * @var string[]
     */
@@ -49,7 +44,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
             'obsPrefixName' => 'string',
             'obsPeriodUnit' => 'string',
             'obsTransferPath' => 'string',
-            'obsEpsId' => 'string',
             'obsBucketName' => 'string',
             'obsEncryptedEnable' => 'bool',
             'obsDirPreFixName' => 'string',
@@ -59,11 +53,7 @@ class TransferDetail implements ModelInterface, ArrayAccess
             'kafkaTopic' => 'string',
             'obsTimeZone' => 'string',
             'obsTimeZoneId' => 'string',
-            'tags' => 'string[]',
-            'ltsTags' => 'string[]',
-            'streamTags' => 'string[]',
-            'structFields' => 'string[]',
-            'invalidFieldValue' => 'string'
+            'tags' => 'string[]'
     ];
 
     /**
@@ -73,7 +63,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
     * obsPrefixName  OBS转储日志文件前缀
     * obsPeriodUnit  OBS转储单位
     * obsTransferPath  OBS转储路径，指OBS日志桶中的路径
-    * obsEpsId  OBS企业项目ID
     * obsBucketName  OBS日志桶名称
     * obsEncryptedEnable  OBS是否开启加密。
     * obsDirPreFixName  OBS转储自定义转储路径
@@ -84,10 +73,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
     * obsTimeZone  OBS转储时区。如果选择该参数，则必须选择obs_time_zone_id。
     * obsTimeZoneId  OBS转储时区ID。参数选择参考OBS转储时区表。如果选择该参数，则必须选择obs_time_zone。
     * tags  若开启tag投递，该字段必须包含主机信息：hostIP、hostId、hostName、pathFile、collectTime；  公共字段有：logStreamName、regionName、logGroupName、projectId，为可选填；  开启转储标签：streamTag，可选填
-    * ltsTags  dms转储JSON格式选填，可以转储tag字段
-    * streamTags  dms转储JSON格式选填，可以转储日志流标签字段
-    * structFields  dms转储JSON格式选填，可以转储结构化字段
-    * invalidFieldValue  dms转储JSON格式选填，无效字段填充
     *
     * @var string[]
     */
@@ -97,7 +82,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
         'obsPrefixName' => null,
         'obsPeriodUnit' => null,
         'obsTransferPath' => null,
-        'obsEpsId' => null,
         'obsBucketName' => null,
         'obsEncryptedEnable' => null,
         'obsDirPreFixName' => null,
@@ -107,11 +91,7 @@ class TransferDetail implements ModelInterface, ArrayAccess
         'kafkaTopic' => null,
         'obsTimeZone' => null,
         'obsTimeZoneId' => null,
-        'tags' => null,
-        'ltsTags' => null,
-        'streamTags' => null,
-        'structFields' => null,
-        'invalidFieldValue' => null
+        'tags' => null
     ];
 
     /**
@@ -142,7 +122,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
     * obsPrefixName  OBS转储日志文件前缀
     * obsPeriodUnit  OBS转储单位
     * obsTransferPath  OBS转储路径，指OBS日志桶中的路径
-    * obsEpsId  OBS企业项目ID
     * obsBucketName  OBS日志桶名称
     * obsEncryptedEnable  OBS是否开启加密。
     * obsDirPreFixName  OBS转储自定义转储路径
@@ -153,10 +132,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
     * obsTimeZone  OBS转储时区。如果选择该参数，则必须选择obs_time_zone_id。
     * obsTimeZoneId  OBS转储时区ID。参数选择参考OBS转储时区表。如果选择该参数，则必须选择obs_time_zone。
     * tags  若开启tag投递，该字段必须包含主机信息：hostIP、hostId、hostName、pathFile、collectTime；  公共字段有：logStreamName、regionName、logGroupName、projectId，为可选填；  开启转储标签：streamTag，可选填
-    * ltsTags  dms转储JSON格式选填，可以转储tag字段
-    * streamTags  dms转储JSON格式选填，可以转储日志流标签字段
-    * structFields  dms转储JSON格式选填，可以转储结构化字段
-    * invalidFieldValue  dms转储JSON格式选填，无效字段填充
     *
     * @var string[]
     */
@@ -166,7 +141,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
             'obsPrefixName' => 'obs_prefix_name',
             'obsPeriodUnit' => 'obs_period_unit',
             'obsTransferPath' => 'obs_transfer_path',
-            'obsEpsId' => 'obs_eps_id',
             'obsBucketName' => 'obs_bucket_name',
             'obsEncryptedEnable' => 'obs_encrypted_enable',
             'obsDirPreFixName' => 'obs_dir_pre_fix_name',
@@ -176,11 +150,7 @@ class TransferDetail implements ModelInterface, ArrayAccess
             'kafkaTopic' => 'kafka_topic',
             'obsTimeZone' => 'obs_time_zone',
             'obsTimeZoneId' => 'obs_time_zone_id',
-            'tags' => 'tags',
-            'ltsTags' => 'lts_tags',
-            'streamTags' => 'stream_tags',
-            'structFields' => 'struct_fields',
-            'invalidFieldValue' => 'invalid_field_value'
+            'tags' => 'tags'
     ];
 
     /**
@@ -190,7 +160,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
     * obsPrefixName  OBS转储日志文件前缀
     * obsPeriodUnit  OBS转储单位
     * obsTransferPath  OBS转储路径，指OBS日志桶中的路径
-    * obsEpsId  OBS企业项目ID
     * obsBucketName  OBS日志桶名称
     * obsEncryptedEnable  OBS是否开启加密。
     * obsDirPreFixName  OBS转储自定义转储路径
@@ -201,10 +170,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
     * obsTimeZone  OBS转储时区。如果选择该参数，则必须选择obs_time_zone_id。
     * obsTimeZoneId  OBS转储时区ID。参数选择参考OBS转储时区表。如果选择该参数，则必须选择obs_time_zone。
     * tags  若开启tag投递，该字段必须包含主机信息：hostIP、hostId、hostName、pathFile、collectTime；  公共字段有：logStreamName、regionName、logGroupName、projectId，为可选填；  开启转储标签：streamTag，可选填
-    * ltsTags  dms转储JSON格式选填，可以转储tag字段
-    * streamTags  dms转储JSON格式选填，可以转储日志流标签字段
-    * structFields  dms转储JSON格式选填，可以转储结构化字段
-    * invalidFieldValue  dms转储JSON格式选填，无效字段填充
     *
     * @var string[]
     */
@@ -214,7 +179,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
             'obsPrefixName' => 'setObsPrefixName',
             'obsPeriodUnit' => 'setObsPeriodUnit',
             'obsTransferPath' => 'setObsTransferPath',
-            'obsEpsId' => 'setObsEpsId',
             'obsBucketName' => 'setObsBucketName',
             'obsEncryptedEnable' => 'setObsEncryptedEnable',
             'obsDirPreFixName' => 'setObsDirPreFixName',
@@ -224,11 +188,7 @@ class TransferDetail implements ModelInterface, ArrayAccess
             'kafkaTopic' => 'setKafkaTopic',
             'obsTimeZone' => 'setObsTimeZone',
             'obsTimeZoneId' => 'setObsTimeZoneId',
-            'tags' => 'setTags',
-            'ltsTags' => 'setLtsTags',
-            'streamTags' => 'setStreamTags',
-            'structFields' => 'setStructFields',
-            'invalidFieldValue' => 'setInvalidFieldValue'
+            'tags' => 'setTags'
     ];
 
     /**
@@ -238,7 +198,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
     * obsPrefixName  OBS转储日志文件前缀
     * obsPeriodUnit  OBS转储单位
     * obsTransferPath  OBS转储路径，指OBS日志桶中的路径
-    * obsEpsId  OBS企业项目ID
     * obsBucketName  OBS日志桶名称
     * obsEncryptedEnable  OBS是否开启加密。
     * obsDirPreFixName  OBS转储自定义转储路径
@@ -249,10 +208,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
     * obsTimeZone  OBS转储时区。如果选择该参数，则必须选择obs_time_zone_id。
     * obsTimeZoneId  OBS转储时区ID。参数选择参考OBS转储时区表。如果选择该参数，则必须选择obs_time_zone。
     * tags  若开启tag投递，该字段必须包含主机信息：hostIP、hostId、hostName、pathFile、collectTime；  公共字段有：logStreamName、regionName、logGroupName、projectId，为可选填；  开启转储标签：streamTag，可选填
-    * ltsTags  dms转储JSON格式选填，可以转储tag字段
-    * streamTags  dms转储JSON格式选填，可以转储日志流标签字段
-    * structFields  dms转储JSON格式选填，可以转储结构化字段
-    * invalidFieldValue  dms转储JSON格式选填，无效字段填充
     *
     * @var string[]
     */
@@ -262,7 +217,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
             'obsPrefixName' => 'getObsPrefixName',
             'obsPeriodUnit' => 'getObsPeriodUnit',
             'obsTransferPath' => 'getObsTransferPath',
-            'obsEpsId' => 'getObsEpsId',
             'obsBucketName' => 'getObsBucketName',
             'obsEncryptedEnable' => 'getObsEncryptedEnable',
             'obsDirPreFixName' => 'getObsDirPreFixName',
@@ -272,11 +226,7 @@ class TransferDetail implements ModelInterface, ArrayAccess
             'kafkaTopic' => 'getKafkaTopic',
             'obsTimeZone' => 'getObsTimeZone',
             'obsTimeZoneId' => 'getObsTimeZoneId',
-            'tags' => 'getTags',
-            'ltsTags' => 'getLtsTags',
-            'streamTags' => 'getStreamTags',
-            'structFields' => 'getStructFields',
-            'invalidFieldValue' => 'getInvalidFieldValue'
+            'tags' => 'getTags'
     ];
 
     /**
@@ -367,7 +317,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
         $this->container['obsPrefixName'] = isset($data['obsPrefixName']) ? $data['obsPrefixName'] : null;
         $this->container['obsPeriodUnit'] = isset($data['obsPeriodUnit']) ? $data['obsPeriodUnit'] : null;
         $this->container['obsTransferPath'] = isset($data['obsTransferPath']) ? $data['obsTransferPath'] : null;
-        $this->container['obsEpsId'] = isset($data['obsEpsId']) ? $data['obsEpsId'] : null;
         $this->container['obsBucketName'] = isset($data['obsBucketName']) ? $data['obsBucketName'] : null;
         $this->container['obsEncryptedEnable'] = isset($data['obsEncryptedEnable']) ? $data['obsEncryptedEnable'] : null;
         $this->container['obsDirPreFixName'] = isset($data['obsDirPreFixName']) ? $data['obsDirPreFixName'] : null;
@@ -378,10 +327,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
         $this->container['obsTimeZone'] = isset($data['obsTimeZone']) ? $data['obsTimeZone'] : null;
         $this->container['obsTimeZoneId'] = isset($data['obsTimeZoneId']) ? $data['obsTimeZoneId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['ltsTags'] = isset($data['ltsTags']) ? $data['ltsTags'] : null;
-        $this->container['streamTags'] = isset($data['streamTags']) ? $data['streamTags'] : null;
-        $this->container['structFields'] = isset($data['structFields']) ? $data['structFields'] : null;
-        $this->container['invalidFieldValue'] = isset($data['invalidFieldValue']) ? $data['invalidFieldValue'] : null;
     }
 
     /**
@@ -426,12 +371,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['obsTransferPath']) && (mb_strlen($this->container['obsTransferPath']) < 0)) {
                 $invalidProperties[] = "invalid value for 'obsTransferPath', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['obsEpsId']) && (mb_strlen($this->container['obsEpsId']) > 128)) {
-                $invalidProperties[] = "invalid value for 'obsEpsId', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['obsEpsId']) && (mb_strlen($this->container['obsEpsId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'obsEpsId', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['obsBucketName'] === null) {
             $invalidProperties[] = "'obsBucketName' can't be null";
@@ -606,30 +545,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
     public function setObsTransferPath($obsTransferPath)
     {
         $this->container['obsTransferPath'] = $obsTransferPath;
-        return $this;
-    }
-
-    /**
-    * Gets obsEpsId
-    *  OBS企业项目ID
-    *
-    * @return string|null
-    */
-    public function getObsEpsId()
-    {
-        return $this->container['obsEpsId'];
-    }
-
-    /**
-    * Sets obsEpsId
-    *
-    * @param string|null $obsEpsId OBS企业项目ID
-    *
-    * @return $this
-    */
-    public function setObsEpsId($obsEpsId)
-    {
-        $this->container['obsEpsId'] = $obsEpsId;
         return $this;
     }
 
@@ -870,102 +785,6 @@ class TransferDetail implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
-        return $this;
-    }
-
-    /**
-    * Gets ltsTags
-    *  dms转储JSON格式选填，可以转储tag字段
-    *
-    * @return string[]|null
-    */
-    public function getLtsTags()
-    {
-        return $this->container['ltsTags'];
-    }
-
-    /**
-    * Sets ltsTags
-    *
-    * @param string[]|null $ltsTags dms转储JSON格式选填，可以转储tag字段
-    *
-    * @return $this
-    */
-    public function setLtsTags($ltsTags)
-    {
-        $this->container['ltsTags'] = $ltsTags;
-        return $this;
-    }
-
-    /**
-    * Gets streamTags
-    *  dms转储JSON格式选填，可以转储日志流标签字段
-    *
-    * @return string[]|null
-    */
-    public function getStreamTags()
-    {
-        return $this->container['streamTags'];
-    }
-
-    /**
-    * Sets streamTags
-    *
-    * @param string[]|null $streamTags dms转储JSON格式选填，可以转储日志流标签字段
-    *
-    * @return $this
-    */
-    public function setStreamTags($streamTags)
-    {
-        $this->container['streamTags'] = $streamTags;
-        return $this;
-    }
-
-    /**
-    * Gets structFields
-    *  dms转储JSON格式选填，可以转储结构化字段
-    *
-    * @return string[]|null
-    */
-    public function getStructFields()
-    {
-        return $this->container['structFields'];
-    }
-
-    /**
-    * Sets structFields
-    *
-    * @param string[]|null $structFields dms转储JSON格式选填，可以转储结构化字段
-    *
-    * @return $this
-    */
-    public function setStructFields($structFields)
-    {
-        $this->container['structFields'] = $structFields;
-        return $this;
-    }
-
-    /**
-    * Gets invalidFieldValue
-    *  dms转储JSON格式选填，无效字段填充
-    *
-    * @return string|null
-    */
-    public function getInvalidFieldValue()
-    {
-        return $this->container['invalidFieldValue'];
-    }
-
-    /**
-    * Sets invalidFieldValue
-    *
-    * @param string|null $invalidFieldValue dms转储JSON格式选填，无效字段填充
-    *
-    * @return $this
-    */
-    public function setInvalidFieldValue($invalidFieldValue)
-    {
-        $this->container['invalidFieldValue'] = $invalidFieldValue;
         return $this;
     }
 

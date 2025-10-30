@@ -23,13 +23,15 @@ class SearchCriteriasBody implements ModelInterface, ArrayAccess
     * criterias  单个日志流的快速查询
     * logStreamId  日志流id
     * logStreamName  日志流名称
+    * searchType  **参数解释：** 快速查询类型。 **取值范围：** - ORIGINALLOG：原始日志 - VISUALIZATION：可视化日志
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'criterias' => '\HuaweiCloud\SDK\Lts\V2\Model\GetQuerySearchCriteriasBody[]',
             'logStreamId' => 'string',
-            'logStreamName' => 'string'
+            'logStreamName' => 'string',
+            'searchType' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class SearchCriteriasBody implements ModelInterface, ArrayAccess
     * criterias  单个日志流的快速查询
     * logStreamId  日志流id
     * logStreamName  日志流名称
+    * searchType  **参数解释：** 快速查询类型。 **取值范围：** - ORIGINALLOG：原始日志 - VISUALIZATION：可视化日志
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'criterias' => null,
         'logStreamId' => null,
-        'logStreamName' => null
+        'logStreamName' => null,
+        'searchType' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class SearchCriteriasBody implements ModelInterface, ArrayAccess
     * criterias  单个日志流的快速查询
     * logStreamId  日志流id
     * logStreamName  日志流名称
+    * searchType  **参数解释：** 快速查询类型。 **取值范围：** - ORIGINALLOG：原始日志 - VISUALIZATION：可视化日志
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'criterias' => 'criterias',
             'logStreamId' => 'log_stream_id',
-            'logStreamName' => 'log_stream_name'
+            'logStreamName' => 'log_stream_name',
+            'searchType' => 'search_type'
     ];
 
     /**
@@ -86,13 +92,15 @@ class SearchCriteriasBody implements ModelInterface, ArrayAccess
     * criterias  单个日志流的快速查询
     * logStreamId  日志流id
     * logStreamName  日志流名称
+    * searchType  **参数解释：** 快速查询类型。 **取值范围：** - ORIGINALLOG：原始日志 - VISUALIZATION：可视化日志
     *
     * @var string[]
     */
     protected static $setters = [
             'criterias' => 'setCriterias',
             'logStreamId' => 'setLogStreamId',
-            'logStreamName' => 'setLogStreamName'
+            'logStreamName' => 'setLogStreamName',
+            'searchType' => 'setSearchType'
     ];
 
     /**
@@ -100,13 +108,15 @@ class SearchCriteriasBody implements ModelInterface, ArrayAccess
     * criterias  单个日志流的快速查询
     * logStreamId  日志流id
     * logStreamName  日志流名称
+    * searchType  **参数解释：** 快速查询类型。 **取值范围：** - ORIGINALLOG：原始日志 - VISUALIZATION：可视化日志
     *
     * @var string[]
     */
     protected static $getters = [
             'criterias' => 'getCriterias',
             'logStreamId' => 'getLogStreamId',
-            'logStreamName' => 'getLogStreamName'
+            'logStreamName' => 'getLogStreamName',
+            'searchType' => 'getSearchType'
     ];
 
     /**
@@ -170,6 +180,7 @@ class SearchCriteriasBody implements ModelInterface, ArrayAccess
         $this->container['criterias'] = isset($data['criterias']) ? $data['criterias'] : null;
         $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : null;
         $this->container['logStreamName'] = isset($data['logStreamName']) ? $data['logStreamName'] : null;
+        $this->container['searchType'] = isset($data['searchType']) ? $data['searchType'] : null;
     }
 
     /**
@@ -266,6 +277,30 @@ class SearchCriteriasBody implements ModelInterface, ArrayAccess
     public function setLogStreamName($logStreamName)
     {
         $this->container['logStreamName'] = $logStreamName;
+        return $this;
+    }
+
+    /**
+    * Gets searchType
+    *  **参数解释：** 快速查询类型。 **取值范围：** - ORIGINALLOG：原始日志 - VISUALIZATION：可视化日志
+    *
+    * @return string|null
+    */
+    public function getSearchType()
+    {
+        return $this->container['searchType'];
+    }
+
+    /**
+    * Sets searchType
+    *
+    * @param string|null $searchType **参数解释：** 快速查询类型。 **取值范围：** - ORIGINALLOG：原始日志 - VISUALIZATION：可视化日志
+    *
+    * @return $this
+    */
+    public function setSearchType($searchType)
+    {
+        $this->container['searchType'] = $searchType;
         return $this;
     }
 

@@ -31,6 +31,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     * weekBackups  保留周备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * yearBackups  保留年备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * fullBackupInterval  每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
+    * crossAccountUrn  跨账户复制策略所关联的跨账户复制存储库标识
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
             'timezone' => 'string',
             'weekBackups' => 'int',
             'yearBackups' => 'int',
-            'fullBackupInterval' => 'int'
+            'fullBackupInterval' => 'int',
+            'crossAccountUrn' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     * weekBackups  保留周备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * yearBackups  保留年备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * fullBackupInterval  每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
+    * crossAccountUrn  跨账户复制策略所关联的跨账户复制存储库标识
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
         'timezone' => null,
         'weekBackups' => 'int32',
         'yearBackups' => 'int32',
-        'fullBackupInterval' => 'int32'
+        'fullBackupInterval' => 'int32',
+        'crossAccountUrn' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     * weekBackups  保留周备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * yearBackups  保留年备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * fullBackupInterval  每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
+    * crossAccountUrn  跨账户复制策略所关联的跨账户复制存储库标识
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
             'timezone' => 'timezone',
             'weekBackups' => 'week_backups',
             'yearBackups' => 'year_backups',
-            'fullBackupInterval' => 'full_backup_interval'
+            'fullBackupInterval' => 'full_backup_interval',
+            'crossAccountUrn' => 'cross_account_urn'
     ];
 
     /**
@@ -142,6 +148,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     * weekBackups  保留周备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * yearBackups  保留年备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * fullBackupInterval  每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
+    * crossAccountUrn  跨账户复制策略所关联的跨账户复制存储库标识
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
             'timezone' => 'setTimezone',
             'weekBackups' => 'setWeekBackups',
             'yearBackups' => 'setYearBackups',
-            'fullBackupInterval' => 'setFullBackupInterval'
+            'fullBackupInterval' => 'setFullBackupInterval',
+            'crossAccountUrn' => 'setCrossAccountUrn'
     ];
 
     /**
@@ -172,6 +180,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     * weekBackups  保留周备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * yearBackups  保留年备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * fullBackupInterval  每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
+    * crossAccountUrn  跨账户复制策略所关联的跨账户复制存储库标识
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
             'timezone' => 'getTimezone',
             'weekBackups' => 'getWeekBackups',
             'yearBackups' => 'getYearBackups',
-            'fullBackupInterval' => 'getFullBackupInterval'
+            'fullBackupInterval' => 'getFullBackupInterval',
+            'crossAccountUrn' => 'getCrossAccountUrn'
     ];
 
     /**
@@ -258,6 +268,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
         $this->container['weekBackups'] = isset($data['weekBackups']) ? $data['weekBackups'] : null;
         $this->container['yearBackups'] = isset($data['yearBackups']) ? $data['yearBackups'] : null;
         $this->container['fullBackupInterval'] = isset($data['fullBackupInterval']) ? $data['fullBackupInterval'] : null;
+        $this->container['crossAccountUrn'] = isset($data['crossAccountUrn']) ? $data['crossAccountUrn'] : null;
     }
 
     /**
@@ -585,6 +596,30 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     public function setFullBackupInterval($fullBackupInterval)
     {
         $this->container['fullBackupInterval'] = $fullBackupInterval;
+        return $this;
+    }
+
+    /**
+    * Gets crossAccountUrn
+    *  跨账户复制策略所关联的跨账户复制存储库标识
+    *
+    * @return string|null
+    */
+    public function getCrossAccountUrn()
+    {
+        return $this->container['crossAccountUrn'];
+    }
+
+    /**
+    * Sets crossAccountUrn
+    *
+    * @param string|null $crossAccountUrn 跨账户复制策略所关联的跨账户复制存储库标识
+    *
+    * @return $this
+    */
+    public function setCrossAccountUrn($crossAccountUrn)
+    {
+        $this->container['crossAccountUrn'] = $crossAccountUrn;
         return $this;
     }
 

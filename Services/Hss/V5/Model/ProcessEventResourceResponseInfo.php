@@ -39,7 +39,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * osName  操作系统名称
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * podUid  **参数解释**： pod uid **取值范围**： 字符长度1-64位
@@ -109,7 +109,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * osName  操作系统名称
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * podUid  **参数解释**： pod uid **取值范围**： 字符长度1-64位
@@ -200,7 +200,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * osName  操作系统名称
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * podUid  **参数解释**： pod uid **取值范围**： 字符长度1-64位
@@ -270,7 +270,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * osName  操作系统名称
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * podUid  **参数解释**： pod uid **取值范围**： 字符长度1-64位
@@ -340,7 +340,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * osName  操作系统名称
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostIp  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
     * podUid  **参数解释**： pod uid **取值范围**： 字符长度1-64位
@@ -1125,7 +1125,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    *  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -1137,7 +1137,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+    * @param string|null $hostIp **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     *
     * @return $this
     */

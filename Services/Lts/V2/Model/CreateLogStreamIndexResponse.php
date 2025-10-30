@@ -24,15 +24,13 @@ class CreateLogStreamIndexResponse implements ModelInterface, ArrayAccess
     * errorCode  错误码
     * errorMessage  错误信息描述
     * result  结果
-    * isQueryComplete  是否查询完成
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'errorCode' => 'string',
             'errorMessage' => 'string',
-            'result' => 'string',
-            'isQueryComplete' => 'bool'
+            'result' => 'string'
     ];
 
     /**
@@ -40,15 +38,13 @@ class CreateLogStreamIndexResponse implements ModelInterface, ArrayAccess
     * errorCode  错误码
     * errorMessage  错误信息描述
     * result  结果
-    * isQueryComplete  是否查询完成
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'errorCode' => null,
         'errorMessage' => null,
-        'result' => null,
-        'isQueryComplete' => null
+        'result' => null
     ];
 
     /**
@@ -77,15 +73,13 @@ class CreateLogStreamIndexResponse implements ModelInterface, ArrayAccess
     * errorCode  错误码
     * errorMessage  错误信息描述
     * result  结果
-    * isQueryComplete  是否查询完成
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'errorCode' => 'errorCode',
             'errorMessage' => 'errorMessage',
-            'result' => 'result',
-            'isQueryComplete' => 'isQueryComplete'
+            'result' => 'result'
     ];
 
     /**
@@ -93,15 +87,13 @@ class CreateLogStreamIndexResponse implements ModelInterface, ArrayAccess
     * errorCode  错误码
     * errorMessage  错误信息描述
     * result  结果
-    * isQueryComplete  是否查询完成
     *
     * @var string[]
     */
     protected static $setters = [
             'errorCode' => 'setErrorCode',
             'errorMessage' => 'setErrorMessage',
-            'result' => 'setResult',
-            'isQueryComplete' => 'setIsQueryComplete'
+            'result' => 'setResult'
     ];
 
     /**
@@ -109,15 +101,13 @@ class CreateLogStreamIndexResponse implements ModelInterface, ArrayAccess
     * errorCode  错误码
     * errorMessage  错误信息描述
     * result  结果
-    * isQueryComplete  是否查询完成
     *
     * @var string[]
     */
     protected static $getters = [
             'errorCode' => 'getErrorCode',
             'errorMessage' => 'getErrorMessage',
-            'result' => 'getResult',
-            'isQueryComplete' => 'getIsQueryComplete'
+            'result' => 'getResult'
     ];
 
     /**
@@ -181,7 +171,6 @@ class CreateLogStreamIndexResponse implements ModelInterface, ArrayAccess
         $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
         $this->container['errorMessage'] = isset($data['errorMessage']) ? $data['errorMessage'] : null;
         $this->container['result'] = isset($data['result']) ? $data['result'] : null;
-        $this->container['isQueryComplete'] = isset($data['isQueryComplete']) ? $data['isQueryComplete'] : null;
     }
 
     /**
@@ -275,30 +264,6 @@ class CreateLogStreamIndexResponse implements ModelInterface, ArrayAccess
     public function setResult($result)
     {
         $this->container['result'] = $result;
-        return $this;
-    }
-
-    /**
-    * Gets isQueryComplete
-    *  是否查询完成
-    *
-    * @return bool|null
-    */
-    public function getIsQueryComplete()
-    {
-        return $this->container['isQueryComplete'];
-    }
-
-    /**
-    * Sets isQueryComplete
-    *
-    * @param bool|null $isQueryComplete 是否查询完成
-    *
-    * @return $this
-    */
-    public function setIsQueryComplete($isQueryComplete)
-    {
-        $this->container['isQueryComplete'] = $isQueryComplete;
         return $this;
     }
 

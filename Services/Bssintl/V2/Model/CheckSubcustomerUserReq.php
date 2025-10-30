@@ -20,8 +20,8 @@ class CheckSubcustomerUserReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * searchType  该字段内容可填为：“email”、“mobile”或“name”。
-    * searchValue  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^\\(\\[a-zA-Z-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\{4,31\\}\\)$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
+    * searchType  校验类型。该参数必填，email：邮箱 mobile：手机号 name：登录名称
+    * searchValue  校验内容。该参数必填，且只允许最大长度64的字符串。手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。邮箱需为含有@的正确格式的完整邮箱地址。登录名称需符合正则表达式^([a-zA-Z-]([a-zA-Z0-9_-]){4,31})$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。|
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CheckSubcustomerUserReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * searchType  该字段内容可填为：“email”、“mobile”或“name”。
-    * searchValue  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^\\(\\[a-zA-Z-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\{4,31\\}\\)$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
+    * searchType  校验类型。该参数必填，email：邮箱 mobile：手机号 name：登录名称
+    * searchValue  校验内容。该参数必填，且只允许最大长度64的字符串。手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。邮箱需为含有@的正确格式的完整邮箱地址。登录名称需符合正则表达式^([a-zA-Z-]([a-zA-Z0-9_-]){4,31})$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。|
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CheckSubcustomerUserReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * searchType  该字段内容可填为：“email”、“mobile”或“name”。
-    * searchValue  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^\\(\\[a-zA-Z-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\{4,31\\}\\)$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
+    * searchType  校验类型。该参数必填，email：邮箱 mobile：手机号 name：登录名称
+    * searchValue  校验内容。该参数必填，且只允许最大长度64的字符串。手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。邮箱需为含有@的正确格式的完整邮箱地址。登录名称需符合正则表达式^([a-zA-Z-]([a-zA-Z0-9_-]){4,31})$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。|
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CheckSubcustomerUserReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * searchType  该字段内容可填为：“email”、“mobile”或“name”。
-    * searchValue  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^\\(\\[a-zA-Z-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\{4,31\\}\\)$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
+    * searchType  校验类型。该参数必填，email：邮箱 mobile：手机号 name：登录名称
+    * searchValue  校验内容。该参数必填，且只允许最大长度64的字符串。手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。邮箱需为含有@的正确格式的完整邮箱地址。登录名称需符合正则表达式^([a-zA-Z-]([a-zA-Z0-9_-]){4,31})$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。|
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CheckSubcustomerUserReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * searchType  该字段内容可填为：“email”、“mobile”或“name”。
-    * searchValue  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^\\(\\[a-zA-Z-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\{4,31\\}\\)$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
+    * searchType  校验类型。该参数必填，email：邮箱 mobile：手机号 name：登录名称
+    * searchValue  校验内容。该参数必填，且只允许最大长度64的字符串。手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。邮箱需为含有@的正确格式的完整邮箱地址。登录名称需符合正则表达式^([a-zA-Z-]([a-zA-Z0-9_-]){4,31})$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。|
     *
     * @var string[]
     */
@@ -203,7 +203,7 @@ class CheckSubcustomerUserReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets searchType
-    *  该字段内容可填为：“email”、“mobile”或“name”。
+    *  校验类型。该参数必填，email：邮箱 mobile：手机号 name：登录名称
     *
     * @return string
     */
@@ -215,7 +215,7 @@ class CheckSubcustomerUserReq implements ModelInterface, ArrayAccess
     /**
     * Sets searchType
     *
-    * @param string $searchType 该字段内容可填为：“email”、“mobile”或“name”。
+    * @param string $searchType 校验类型。该参数必填，email：邮箱 mobile：手机号 name：登录名称
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class CheckSubcustomerUserReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets searchValue
-    *  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^\\(\\[a-zA-Z-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\{4,31\\}\\)$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
+    *  校验内容。该参数必填，且只允许最大长度64的字符串。手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。邮箱需为含有@的正确格式的完整邮箱地址。登录名称需符合正则表达式^([a-zA-Z-]([a-zA-Z0-9_-]){4,31})$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。|
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class CheckSubcustomerUserReq implements ModelInterface, ArrayAccess
     /**
     * Sets searchValue
     *
-    * @param string $searchValue 手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^\\(\\[a-zA-Z-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\{4,31\\}\\)$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
+    * @param string $searchValue 校验内容。该参数必填，且只允许最大长度64的字符串。手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。邮箱需为含有@的正确格式的完整邮箱地址。登录名称需符合正则表达式^([a-zA-Z-]([a-zA-Z0-9_-]){4,31})$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。|
     *
     * @return $this
     */

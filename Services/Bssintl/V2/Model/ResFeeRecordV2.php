@@ -78,6 +78,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceName  该字段为预留字段。
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     * relativeOrderId  |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
+    * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     *
     * @var string[]
     */
@@ -139,7 +140,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'subResourceId' => 'string',
             'subResourceName' => 'string',
             'consumeTime' => 'string',
-            'relativeOrderId' => 'string'
+            'relativeOrderId' => 'string',
+            'accountName' => 'string'
     ];
 
     /**
@@ -202,6 +204,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceName  该字段为预留字段。
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     * relativeOrderId  |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
+    * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     *
     * @var string[]
     */
@@ -263,7 +266,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         'subResourceId' => null,
         'subResourceName' => null,
         'consumeTime' => null,
-        'relativeOrderId' => null
+        'relativeOrderId' => null,
+        'accountName' => null
     ];
 
     /**
@@ -347,6 +351,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceName  该字段为预留字段。
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     * relativeOrderId  |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
+    * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     *
     * @var string[]
     */
@@ -408,7 +413,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'subResourceId' => 'sub_resource_id',
             'subResourceName' => 'sub_resource_name',
             'consumeTime' => 'consume_time',
-            'relativeOrderId' => 'relative_order_id'
+            'relativeOrderId' => 'relative_order_id',
+            'accountName' => 'account_name'
     ];
 
     /**
@@ -471,6 +477,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceName  该字段为预留字段。
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     * relativeOrderId  |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
+    * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     *
     * @var string[]
     */
@@ -532,7 +539,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'subResourceId' => 'setSubResourceId',
             'subResourceName' => 'setSubResourceName',
             'consumeTime' => 'setConsumeTime',
-            'relativeOrderId' => 'setRelativeOrderId'
+            'relativeOrderId' => 'setRelativeOrderId',
+            'accountName' => 'setAccountName'
     ];
 
     /**
@@ -595,6 +603,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceName  该字段为预留字段。
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     * relativeOrderId  |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
+    * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     *
     * @var string[]
     */
@@ -656,7 +665,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'subResourceId' => 'getSubResourceId',
             'subResourceName' => 'getSubResourceName',
             'consumeTime' => 'getConsumeTime',
-            'relativeOrderId' => 'getRelativeOrderId'
+            'relativeOrderId' => 'getRelativeOrderId',
+            'accountName' => 'getAccountName'
     ];
 
     /**
@@ -775,6 +785,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         $this->container['subResourceName'] = isset($data['subResourceName']) ? $data['subResourceName'] : null;
         $this->container['consumeTime'] = isset($data['consumeTime']) ? $data['consumeTime'] : null;
         $this->container['relativeOrderId'] = isset($data['relativeOrderId']) ? $data['relativeOrderId'] : null;
+        $this->container['accountName'] = isset($data['accountName']) ? $data['accountName'] : null;
     }
 
     /**
@@ -2188,6 +2199,30 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     public function setRelativeOrderId($relativeOrderId)
     {
         $this->container['relativeOrderId'] = $relativeOrderId;
+        return $this;
+    }
+
+    /**
+    * Gets accountName
+    *  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
+    *
+    * @return string|null
+    */
+    public function getAccountName()
+    {
+        return $this->container['accountName'];
+    }
+
+    /**
+    * Sets accountName
+    *
+    * @param string|null $accountName |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
+    *
+    * @return $this
+    */
+    public function setAccountName($accountName)
+    {
+        $this->container['accountName'] = $accountName;
         return $this;
     }
 

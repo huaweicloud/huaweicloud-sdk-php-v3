@@ -26,7 +26,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **取值范围**: 包含如下1种，默认为开启防护诱饵防护。   - opened ：开启。
     * deployMode  **参数解释**: 是否开启动态诱饵防护 **取值范围**: 包含如下2种，默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  **参数解释**: 防护目录 **取值范围**: 字符长度1-128
-    * protectionType  **参数解释**: 防护文件类型，例如：docx，txt，avi **取值范围**: 字符长度1-128
+    * protectionType  **参数解释**: 需要防护的文件类型 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr
     * excludeDirectory  **参数解释**: 排除目录，选填 **取值范围**: 字符长度1-128
     * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * runtimeDetectionDirectory  **参数解释**: 运行时检测目录，现在为保留字段 **取值范围**: 字符长度1-128
@@ -34,7 +34,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * operatingSystem  **参数解释**: 操作系统类型。 - Linux - Windows **取值范围**: 字符长度1-128
     * processWhitelist  进程白名单
     * defaultPolicy  **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度1-128
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **取值范围**:   - opened ：开启。   - closed ：关闭。
     *
     * @var string[]
     */
@@ -64,7 +64,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **取值范围**: 包含如下1种，默认为开启防护诱饵防护。   - opened ：开启。
     * deployMode  **参数解释**: 是否开启动态诱饵防护 **取值范围**: 包含如下2种，默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  **参数解释**: 防护目录 **取值范围**: 字符长度1-128
-    * protectionType  **参数解释**: 防护文件类型，例如：docx，txt，avi **取值范围**: 字符长度1-128
+    * protectionType  **参数解释**: 需要防护的文件类型 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr
     * excludeDirectory  **参数解释**: 排除目录，选填 **取值范围**: 字符长度1-128
     * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * runtimeDetectionDirectory  **参数解释**: 运行时检测目录，现在为保留字段 **取值范围**: 字符长度1-128
@@ -72,7 +72,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * operatingSystem  **参数解释**: 操作系统类型。 - Linux - Windows **取值范围**: 字符长度1-128
     * processWhitelist  进程白名单
     * defaultPolicy  **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度1-128
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **取值范围**:   - opened ：开启。   - closed ：关闭。
     *
     * @var string[]
     */
@@ -123,7 +123,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **取值范围**: 包含如下1种，默认为开启防护诱饵防护。   - opened ：开启。
     * deployMode  **参数解释**: 是否开启动态诱饵防护 **取值范围**: 包含如下2种，默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  **参数解释**: 防护目录 **取值范围**: 字符长度1-128
-    * protectionType  **参数解释**: 防护文件类型，例如：docx，txt，avi **取值范围**: 字符长度1-128
+    * protectionType  **参数解释**: 需要防护的文件类型 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr
     * excludeDirectory  **参数解释**: 排除目录，选填 **取值范围**: 字符长度1-128
     * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * runtimeDetectionDirectory  **参数解释**: 运行时检测目录，现在为保留字段 **取值范围**: 字符长度1-128
@@ -131,7 +131,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * operatingSystem  **参数解释**: 操作系统类型。 - Linux - Windows **取值范围**: 字符长度1-128
     * processWhitelist  进程白名单
     * defaultPolicy  **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度1-128
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **取值范围**:   - opened ：开启。   - closed ：关闭。
     *
     * @var string[]
     */
@@ -161,7 +161,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **取值范围**: 包含如下1种，默认为开启防护诱饵防护。   - opened ：开启。
     * deployMode  **参数解释**: 是否开启动态诱饵防护 **取值范围**: 包含如下2种，默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  **参数解释**: 防护目录 **取值范围**: 字符长度1-128
-    * protectionType  **参数解释**: 防护文件类型，例如：docx，txt，avi **取值范围**: 字符长度1-128
+    * protectionType  **参数解释**: 需要防护的文件类型 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr
     * excludeDirectory  **参数解释**: 排除目录，选填 **取值范围**: 字符长度1-128
     * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * runtimeDetectionDirectory  **参数解释**: 运行时检测目录，现在为保留字段 **取值范围**: 字符长度1-128
@@ -169,7 +169,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * operatingSystem  **参数解释**: 操作系统类型。 - Linux - Windows **取值范围**: 字符长度1-128
     * processWhitelist  进程白名单
     * defaultPolicy  **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度1-128
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **取值范围**:   - opened ：开启。   - closed ：关闭。
     *
     * @var string[]
     */
@@ -199,7 +199,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **取值范围**: 包含如下1种，默认为开启防护诱饵防护。   - opened ：开启。
     * deployMode  **参数解释**: 是否开启动态诱饵防护 **取值范围**: 包含如下2种，默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  **参数解释**: 防护目录 **取值范围**: 字符长度1-128
-    * protectionType  **参数解释**: 防护文件类型，例如：docx，txt，avi **取值范围**: 字符长度1-128
+    * protectionType  **参数解释**: 需要防护的文件类型 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr
     * excludeDirectory  **参数解释**: 排除目录，选填 **取值范围**: 字符长度1-128
     * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * runtimeDetectionDirectory  **参数解释**: 运行时检测目录，现在为保留字段 **取值范围**: 字符长度1-128
@@ -207,7 +207,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * operatingSystem  **参数解释**: 操作系统类型。 - Linux - Windows **取值范围**: 字符长度1-128
     * processWhitelist  进程白名单
     * defaultPolicy  **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度1-128
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **取值范围**:   - opened ：开启。   - closed ：关闭。
     *
     * @var string[]
     */
@@ -556,7 +556,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectionType
-    *  **参数解释**: 防护文件类型，例如：docx，txt，avi **取值范围**: 字符长度1-128
+    *  **参数解释**: 需要防护的文件类型 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr
     *
     * @return string|null
     */
@@ -568,7 +568,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectionType
     *
-    * @param string|null $protectionType **参数解释**: 防护文件类型，例如：docx，txt，avi **取值范围**: 字符长度1-128
+    * @param string|null $protectionType **参数解释**: 需要防护的文件类型 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr
     *
     * @return $this
     */
@@ -748,7 +748,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets aiProtectionStatus
-    *  **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度1-128
+    *  **参数解释**: 是否开启AI勒索防护 **取值范围**:   - opened ：开启。   - closed ：关闭。
     *
     * @return string|null
     */
@@ -760,7 +760,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets aiProtectionStatus
     *
-    * @param string|null $aiProtectionStatus **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度1-128
+    * @param string|null $aiProtectionStatus **参数解释**: 是否开启AI勒索防护 **取值范围**:   - opened ：开启。   - closed ：关闭。
     *
     * @return $this
     */

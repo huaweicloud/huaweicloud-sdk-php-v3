@@ -35,7 +35,7 @@ class CreateTransferRequestBodyLogTransferInfo implements ModelInterface, ArrayA
             'logStorageFormat' => 'string',
             'logTransferStatus' => 'string',
             'logAgencyTransfer' => '\HuaweiCloud\SDK\Lts\V2\Model\CreateTransferRequestBodyLogTransferInfoLogAgencyTransfer',
-            'logTransferDetail' => '\HuaweiCloud\SDK\Lts\V2\Model\TransferDetail'
+            'logTransferDetail' => '\HuaweiCloud\SDK\Lts\V2\Model\LogTransferDetail'
     ];
 
     /**
@@ -437,7 +437,7 @@ class CreateTransferRequestBodyLogTransferInfo implements ModelInterface, ArrayA
     * Gets logTransferDetail
     *  logTransferDetail
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\TransferDetail
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\LogTransferDetail
     */
     public function getLogTransferDetail()
     {
@@ -447,7 +447,7 @@ class CreateTransferRequestBodyLogTransferInfo implements ModelInterface, ArrayA
     /**
     * Sets logTransferDetail
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\TransferDetail $logTransferDetail logTransferDetail
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\LogTransferDetail $logTransferDetail logTransferDetail
     *
     * @return $this
     */

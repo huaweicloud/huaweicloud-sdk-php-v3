@@ -21,7 +21,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * receiverType  发送验证码的类型： 2：发送邮件验证码
-    * timeout  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    * timeout  验证码超时时间。此参数不携带或携带值为null时，采用系统默认超时时间10分钟。此参数值超过60时，取值固定为5分钟。单位：分钟
     * email  指定发送验证码的邮箱地址。
     * lang  根据该参数的取值选择发送邮件验证码的语言。 zh-cn：中文en-us：英文
     *
@@ -37,7 +37,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * receiverType  发送验证码的类型： 2：发送邮件验证码
-    * timeout  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    * timeout  验证码超时时间。此参数不携带或携带值为null时，采用系统默认超时时间10分钟。此参数值超过60时，取值固定为5分钟。单位：分钟
     * email  指定发送验证码的邮箱地址。
     * lang  根据该参数的取值选择发送邮件验证码的语言。 zh-cn：中文en-us：英文
     *
@@ -74,7 +74,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * receiverType  发送验证码的类型： 2：发送邮件验证码
-    * timeout  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    * timeout  验证码超时时间。此参数不携带或携带值为null时，采用系统默认超时时间10分钟。此参数值超过60时，取值固定为5分钟。单位：分钟
     * email  指定发送验证码的邮箱地址。
     * lang  根据该参数的取值选择发送邮件验证码的语言。 zh-cn：中文en-us：英文
     *
@@ -90,7 +90,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * receiverType  发送验证码的类型： 2：发送邮件验证码
-    * timeout  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    * timeout  验证码超时时间。此参数不携带或携带值为null时，采用系统默认超时时间10分钟。此参数值超过60时，取值固定为5分钟。单位：分钟
     * email  指定发送验证码的邮箱地址。
     * lang  根据该参数的取值选择发送邮件验证码的语言。 zh-cn：中文en-us：英文
     *
@@ -106,7 +106,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * receiverType  发送验证码的类型： 2：发送邮件验证码
-    * timeout  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    * timeout  验证码超时时间。此参数不携带或携带值为null时，采用系统默认超时时间10分钟。此参数值超过60时，取值固定为5分钟。单位：分钟
     * email  指定发送验证码的邮箱地址。
     * lang  根据该参数的取值选择发送邮件验证码的语言。 zh-cn：中文en-us：英文
     *
@@ -200,8 +200,8 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
             if (($this->container['receiverType'] < 1)) {
                 $invalidProperties[] = "invalid value for 'receiverType', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['timeout']) && ($this->container['timeout'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'timeout', must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['timeout']) && ($this->container['timeout'] > 3000)) {
+                $invalidProperties[] = "invalid value for 'timeout', must be smaller than or equal to 3000.";
             }
             if (!is_null($this->container['timeout']) && ($this->container['timeout'] < 1)) {
                 $invalidProperties[] = "invalid value for 'timeout', must be bigger than or equal to 1.";
@@ -261,7 +261,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeout
-    *  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    *  验证码超时时间。此参数不携带或携带值为null时，采用系统默认超时时间10分钟。此参数值超过60时，取值固定为5分钟。单位：分钟
     *
     * @return int|null
     */
@@ -273,7 +273,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets timeout
     *
-    * @param int|null $timeout 发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    * @param int|null $timeout 验证码超时时间。此参数不携带或携带值为null时，采用系统默认超时时间10分钟。此参数值超过60时，取值固定为5分钟。单位：分钟
     *
     * @return $this
     */

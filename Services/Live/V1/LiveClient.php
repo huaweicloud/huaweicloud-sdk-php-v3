@@ -898,6 +898,130 @@ class LiveClient extends Client
     }
 
     /**
+     * 创建水印规则
+     *
+     * 创建水印规则接口，必须先创建水印模板
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createWatermarkRule($request)
+    {
+        return $this->createWatermarkRuleWithHttpInfo($request);
+    }
+
+    public function createWatermarkRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/watermark/rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\CreateWatermarkRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\CreateWatermarkRuleRequest');
+    }
+
+    /**
+     * 创建水印模板
+     *
+     * 创建水印模板接口，需要绑定水印规则才生效
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createWatermarkTemplate($request)
+    {
+        return $this->createWatermarkTemplateWithHttpInfo($request);
+    }
+
+    public function createWatermarkTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/watermark/templates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\CreateWatermarkTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\CreateWatermarkTemplateRequest');
+    }
+
+    /**
      * 删除直播域名
      *
      * 删除域名。只有在域名停用（off）状态时才能删除。
@@ -1719,6 +1843,130 @@ class LiveClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\DeleteTranscodingsTemplateResponse',
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\DeleteTranscodingsTemplateRequest');
+    }
+
+    /**
+     * 删除水印规则
+     *
+     * 删除水印规则接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteWatermarkRule($request)
+    {
+        return $this->deleteWatermarkRuleWithHttpInfo($request);
+    }
+
+    public function deleteWatermarkRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/watermark/rules/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\DeleteWatermarkRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\DeleteWatermarkRuleRequest');
+    }
+
+    /**
+     * 删除水印模板
+     *
+     * 删除水印模板接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteWatermarkTemplate($request)
+    {
+        return $this->deleteWatermarkTemplateWithHttpInfo($request);
+    }
+
+    public function deleteWatermarkTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/watermark/templates/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\DeleteWatermarkTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\DeleteWatermarkTemplateRequest');
     }
 
     /**
@@ -2701,6 +2949,157 @@ class LiveClient extends Client
     }
 
     /**
+     * 查询水印规则列表
+     *
+     * 查询水印规则列表接口，通过指定条件，查询满足条件的水印规则列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listWatermarkRule($request)
+    {
+        return $this->listWatermarkRuleWithHttpInfo($request);
+    }
+
+    public function listWatermarkRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/watermark/rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['templateId'] !== null) {
+            $queryParams['template_id'] = $localVarParams['templateId'];
+        }
+        if ($localVarParams['domain'] !== null) {
+            $queryParams['domain'] = $localVarParams['domain'];
+        }
+        if ($localVarParams['app'] !== null) {
+            $queryParams['app'] = $localVarParams['app'];
+        }
+        if ($localVarParams['channelId'] !== null) {
+            $queryParams['channel_id'] = $localVarParams['channelId'];
+        }
+        if ($localVarParams['stream'] !== null) {
+            $queryParams['stream'] = $localVarParams['stream'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ListWatermarkRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ListWatermarkRuleRequest');
+    }
+
+    /**
+     * 查询水印模板列表
+     *
+     * 查询水印模板列表接口，通过指定条件，查询满足条件的水印模板列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listWatermarkTemplate($request)
+    {
+        return $this->listWatermarkTemplateWithHttpInfo($request);
+    }
+
+    public function listWatermarkTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/watermark/templates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['scene'] !== null) {
+            $queryParams['scene'] = $localVarParams['scene'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ListWatermarkTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ListWatermarkTemplateRequest');
+    }
+
+    /**
      * 更新转推输出
      *
      * 更新转推输出
@@ -3664,6 +4063,130 @@ class LiveClient extends Client
     }
 
     /**
+     * 查询水印规则配置
+     *
+     * 查询水印模板规则接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showWatermarkRule($request)
+    {
+        return $this->showWatermarkRuleWithHttpInfo($request);
+    }
+
+    public function showWatermarkRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/watermark/rules/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowWatermarkRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowWatermarkRuleRequest');
+    }
+
+    /**
+     * 查询水印模板配置
+     *
+     * 查询水印模板详情接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showWatermarkTemplate($request)
+    {
+        return $this->showWatermarkTemplateWithHttpInfo($request);
+    }
+
+    public function showWatermarkTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/watermark/templates/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowWatermarkTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowWatermarkTemplateRequest');
+    }
+
+    /**
      * 修改播放域名延时配置
      *
      * 修改播放域名延时配置。
@@ -4547,6 +5070,136 @@ class LiveClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\UpdateTranscodingsTemplateResponse',
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\UpdateTranscodingsTemplateRequest');
+    }
+
+    /**
+     * 修改水印规则
+     *
+     * 修改水印规则接口，修改后实时生效，只能修改Location
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateWatermarkRule($request)
+    {
+        return $this->updateWatermarkRuleWithHttpInfo($request);
+    }
+
+    public function updateWatermarkRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/watermark/rules/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\UpdateWatermarkRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\UpdateWatermarkRuleRequest');
+    }
+
+    /**
+     * 修改水印模板
+     *
+     * 修改水印模板接口，修改后实时生效
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateWatermarkTemplate($request)
+    {
+        return $this->updateWatermarkTemplateWithHttpInfo($request);
+    }
+
+    public function updateWatermarkTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/watermark/templates/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\UpdateWatermarkTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\UpdateWatermarkTemplateRequest');
     }
 
     /**

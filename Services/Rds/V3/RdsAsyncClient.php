@@ -6268,6 +6268,80 @@ class RdsAsyncClient extends Client
     }
 
     /**
+     * 查询小版本号
+     *
+     * 查询小版本号
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSmallVersionAsync($request)
+    {
+        return $this->listSmallVersionAsyncWithHttpInfo($request);
+    }
+    
+    public function listSmallVersionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/datastores/{database_name}/small-version';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['version'] !== null) {
+            $queryParams['version'] = $localVarParams['version'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['databaseName'] !== null) {
+            $pathParams['database_name'] = $localVarParams['databaseName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListSmallVersionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListSmallVersionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询SQL限流列表
      *
      * 查询SQL限流列表
@@ -16348,12 +16422,12 @@ class RdsAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function listInstancesNoIndexTablesAsync($request)
+    public function getInstancesNoIndexTablesAsync($request)
     {
-        return $this->listInstancesNoIndexTablesAsyncWithHttpInfo($request);
+        return $this->getInstancesNoIndexTablesAsyncWithHttpInfo($request);
     }
     
-    public function listInstancesNoIndexTablesAsyncWithHttpInfo($request){
+    public function getInstancesNoIndexTablesAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v3/{project_id}/instances/{instance_id}/no-index-tables';
         $formParams = [];
@@ -16403,9 +16477,9 @@ class RdsAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListInstancesNoIndexTablesResponse',
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\GetInstancesNoIndexTablesResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListInstancesNoIndexTablesRequest',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\GetInstancesNoIndexTablesRequest',
             $asyncRequest = true);
     }
 

@@ -26,13 +26,13 @@ class ListGeneralImageVulOperationsRequest implements ModelInterface, ArrayAcces
     * vulId  **参数解释**: 漏洞id **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * imageId  **参数解释**: 镜像id **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * imageType  **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - local：本地镜像 - registry：仓库镜像  **默认取值**: 不涉及
-    * imageName  镜像名称
+    * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * status  **参数解释**: 漏洞当前状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略  **默认取值**: 不涉及
-    * userName  **参数解释**: 处理用户名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * userName  **参数解释**: 处理用户名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * handleType  **参数解释**: 操作类型 **约束限制**: 不涉及 **取值范围**: - ignore：忽略 - not_ignore:：取消忽略 - add_to_whitelist：加入白名单  **默认取值**: 不涉及
-    * appName  **参数解释**: 应用名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * appVersion  **参数解释**: 应用版本 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * remark  **参数解释**: 备注 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * appName  **参数解释**: 应用名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * appVersion  **参数解释**: 应用版本 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * remark  **参数解释**: 备注 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -60,13 +60,13 @@ class ListGeneralImageVulOperationsRequest implements ModelInterface, ArrayAcces
     * vulId  **参数解释**: 漏洞id **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * imageId  **参数解释**: 镜像id **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * imageType  **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - local：本地镜像 - registry：仓库镜像  **默认取值**: 不涉及
-    * imageName  镜像名称
+    * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * status  **参数解释**: 漏洞当前状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略  **默认取值**: 不涉及
-    * userName  **参数解释**: 处理用户名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * userName  **参数解释**: 处理用户名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * handleType  **参数解释**: 操作类型 **约束限制**: 不涉及 **取值范围**: - ignore：忽略 - not_ignore:：取消忽略 - add_to_whitelist：加入白名单  **默认取值**: 不涉及
-    * appName  **参数解释**: 应用名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * appVersion  **参数解释**: 应用版本 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * remark  **参数解释**: 备注 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * appName  **参数解释**: 应用名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * appVersion  **参数解释**: 应用版本 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * remark  **参数解释**: 备注 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -115,13 +115,13 @@ class ListGeneralImageVulOperationsRequest implements ModelInterface, ArrayAcces
     * vulId  **参数解释**: 漏洞id **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * imageId  **参数解释**: 镜像id **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * imageType  **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - local：本地镜像 - registry：仓库镜像  **默认取值**: 不涉及
-    * imageName  镜像名称
+    * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * status  **参数解释**: 漏洞当前状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略  **默认取值**: 不涉及
-    * userName  **参数解释**: 处理用户名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * userName  **参数解释**: 处理用户名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * handleType  **参数解释**: 操作类型 **约束限制**: 不涉及 **取值范围**: - ignore：忽略 - not_ignore:：取消忽略 - add_to_whitelist：加入白名单  **默认取值**: 不涉及
-    * appName  **参数解释**: 应用名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * appVersion  **参数解释**: 应用版本 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * remark  **参数解释**: 备注 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * appName  **参数解释**: 应用名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * appVersion  **参数解释**: 应用版本 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * remark  **参数解释**: 备注 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -149,13 +149,13 @@ class ListGeneralImageVulOperationsRequest implements ModelInterface, ArrayAcces
     * vulId  **参数解释**: 漏洞id **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * imageId  **参数解释**: 镜像id **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * imageType  **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - local：本地镜像 - registry：仓库镜像  **默认取值**: 不涉及
-    * imageName  镜像名称
+    * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * status  **参数解释**: 漏洞当前状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略  **默认取值**: 不涉及
-    * userName  **参数解释**: 处理用户名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * userName  **参数解释**: 处理用户名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * handleType  **参数解释**: 操作类型 **约束限制**: 不涉及 **取值范围**: - ignore：忽略 - not_ignore:：取消忽略 - add_to_whitelist：加入白名单  **默认取值**: 不涉及
-    * appName  **参数解释**: 应用名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * appVersion  **参数解释**: 应用版本 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * remark  **参数解释**: 备注 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * appName  **参数解释**: 应用名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * appVersion  **参数解释**: 应用版本 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * remark  **参数解释**: 备注 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -183,13 +183,13 @@ class ListGeneralImageVulOperationsRequest implements ModelInterface, ArrayAcces
     * vulId  **参数解释**: 漏洞id **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * imageId  **参数解释**: 镜像id **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * imageType  **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - local：本地镜像 - registry：仓库镜像  **默认取值**: 不涉及
-    * imageName  镜像名称
+    * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * status  **参数解释**: 漏洞当前状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略  **默认取值**: 不涉及
-    * userName  **参数解释**: 处理用户名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * userName  **参数解释**: 处理用户名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * handleType  **参数解释**: 操作类型 **约束限制**: 不涉及 **取值范围**: - ignore：忽略 - not_ignore:：取消忽略 - add_to_whitelist：加入白名单  **默认取值**: 不涉及
-    * appName  **参数解释**: 应用名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * appVersion  **参数解释**: 应用版本 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
-    * remark  **参数解释**: 备注 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * appName  **参数解释**: 应用名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * appVersion  **参数解释**: 应用版本 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * remark  **参数解释**: 备注 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -344,8 +344,8 @@ class ListGeneralImageVulOperationsRequest implements ModelInterface, ArrayAcces
             if (!is_null($this->container['userName']) && (mb_strlen($this->container['userName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'userName', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['userName']) && (mb_strlen($this->container['userName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'userName', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['userName']) && (mb_strlen($this->container['userName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'userName', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['handleType']) && !preg_match("/^ignore|not_ignore|add_to_whitelist$/", $this->container['handleType'])) {
                 $invalidProperties[] = "invalid value for 'handleType', must be conform to the pattern /^ignore|not_ignore|add_to_whitelist$/.";
@@ -353,20 +353,20 @@ class ListGeneralImageVulOperationsRequest implements ModelInterface, ArrayAcces
             if (!is_null($this->container['appName']) && (mb_strlen($this->container['appName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'appName', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['appName']) && (mb_strlen($this->container['appName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'appName', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['appName']) && (mb_strlen($this->container['appName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'appName', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['appVersion']) && (mb_strlen($this->container['appVersion']) > 256)) {
                 $invalidProperties[] = "invalid value for 'appVersion', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['appVersion']) && (mb_strlen($this->container['appVersion']) < 1)) {
-                $invalidProperties[] = "invalid value for 'appVersion', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['appVersion']) && (mb_strlen($this->container['appVersion']) < 0)) {
+                $invalidProperties[] = "invalid value for 'appVersion', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['remark']) && (mb_strlen($this->container['remark']) > 256)) {
                 $invalidProperties[] = "invalid value for 'remark', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['remark']) && (mb_strlen($this->container['remark']) < 1)) {
-                $invalidProperties[] = "invalid value for 'remark', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['remark']) && (mb_strlen($this->container['remark']) < 0)) {
+                $invalidProperties[] = "invalid value for 'remark', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -528,7 +528,7 @@ class ListGeneralImageVulOperationsRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets imageName
-    *  镜像名称
+    *  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -540,7 +540,7 @@ class ListGeneralImageVulOperationsRequest implements ModelInterface, ArrayAcces
     /**
     * Sets imageName
     *
-    * @param string|null $imageName 镜像名称
+    * @param string|null $imageName **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -576,7 +576,7 @@ class ListGeneralImageVulOperationsRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets userName
-    *  **参数解释**: 处理用户名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    *  **参数解释**: 处理用户名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -588,7 +588,7 @@ class ListGeneralImageVulOperationsRequest implements ModelInterface, ArrayAcces
     /**
     * Sets userName
     *
-    * @param string|null $userName **参数解释**: 处理用户名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * @param string|null $userName **参数解释**: 处理用户名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -624,7 +624,7 @@ class ListGeneralImageVulOperationsRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets appName
-    *  **参数解释**: 应用名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    *  **参数解释**: 应用名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -636,7 +636,7 @@ class ListGeneralImageVulOperationsRequest implements ModelInterface, ArrayAcces
     /**
     * Sets appName
     *
-    * @param string|null $appName **参数解释**: 应用名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * @param string|null $appName **参数解释**: 应用名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -648,7 +648,7 @@ class ListGeneralImageVulOperationsRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets appVersion
-    *  **参数解释**: 应用版本 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    *  **参数解释**: 应用版本 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -660,7 +660,7 @@ class ListGeneralImageVulOperationsRequest implements ModelInterface, ArrayAcces
     /**
     * Sets appVersion
     *
-    * @param string|null $appVersion **参数解释**: 应用版本 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * @param string|null $appVersion **参数解释**: 应用版本 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -672,7 +672,7 @@ class ListGeneralImageVulOperationsRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets remark
-    *  **参数解释**: 备注 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    *  **参数解释**: 备注 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -684,7 +684,7 @@ class ListGeneralImageVulOperationsRequest implements ModelInterface, ArrayAcces
     /**
     * Sets remark
     *
-    * @param string|null $remark **参数解释**: 备注 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * @param string|null $remark **参数解释**: 备注 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
     * @return $this
     */
