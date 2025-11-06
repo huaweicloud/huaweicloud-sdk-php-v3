@@ -21,10 +21,11 @@ class PromInstanceRequestModel implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
-    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
+    * promType  Prometheus实例类型。 - ECS：Prometheus for ECS - CCE：Prometheus for CCE - REMOTE_WRITE：Prometheus 通用实例 - CLOUD_SERVICE：Prometheus for 云服务 - ACROSS_ACCOUNT：Prometheus for 多账号聚合实例 [（暂不支持ACROSS_ACCOUNT类型）](tag:hws_eu,g42,sbc,OCB,ctc,cmcc,srg,hk_sbc,ctc,DT)
     * promVersion  Prometheus实例版本号。
     * enterpriseProjectId  Prometheus实例所属的企业项目。
     * projectId  Prometheus实例所属projectId。
+    * aggrPrometheusInfo  被聚合的账号和普罗实例列表。
     *
     * @var string[]
     */
@@ -33,16 +34,18 @@ class PromInstanceRequestModel implements ModelInterface, ArrayAccess
             'promType' => 'string',
             'promVersion' => 'string',
             'enterpriseProjectId' => 'string',
-            'projectId' => 'string'
+            'projectId' => 'string',
+            'aggrPrometheusInfo' => '\HuaweiCloud\SDK\Aom\V2\Model\AggrPrometheusInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
-    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
+    * promType  Prometheus实例类型。 - ECS：Prometheus for ECS - CCE：Prometheus for CCE - REMOTE_WRITE：Prometheus 通用实例 - CLOUD_SERVICE：Prometheus for 云服务 - ACROSS_ACCOUNT：Prometheus for 多账号聚合实例 [（暂不支持ACROSS_ACCOUNT类型）](tag:hws_eu,g42,sbc,OCB,ctc,cmcc,srg,hk_sbc,ctc,DT)
     * promVersion  Prometheus实例版本号。
     * enterpriseProjectId  Prometheus实例所属的企业项目。
     * projectId  Prometheus实例所属projectId。
+    * aggrPrometheusInfo  被聚合的账号和普罗实例列表。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class PromInstanceRequestModel implements ModelInterface, ArrayAccess
         'promType' => null,
         'promVersion' => null,
         'enterpriseProjectId' => null,
-        'projectId' => null
+        'projectId' => null,
+        'aggrPrometheusInfo' => null
     ];
 
     /**
@@ -78,10 +82,11 @@ class PromInstanceRequestModel implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
-    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
+    * promType  Prometheus实例类型。 - ECS：Prometheus for ECS - CCE：Prometheus for CCE - REMOTE_WRITE：Prometheus 通用实例 - CLOUD_SERVICE：Prometheus for 云服务 - ACROSS_ACCOUNT：Prometheus for 多账号聚合实例 [（暂不支持ACROSS_ACCOUNT类型）](tag:hws_eu,g42,sbc,OCB,ctc,cmcc,srg,hk_sbc,ctc,DT)
     * promVersion  Prometheus实例版本号。
     * enterpriseProjectId  Prometheus实例所属的企业项目。
     * projectId  Prometheus实例所属projectId。
+    * aggrPrometheusInfo  被聚合的账号和普罗实例列表。
     *
     * @var string[]
     */
@@ -90,16 +95,18 @@ class PromInstanceRequestModel implements ModelInterface, ArrayAccess
             'promType' => 'prom_type',
             'promVersion' => 'prom_version',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'projectId' => 'project_id'
+            'projectId' => 'project_id',
+            'aggrPrometheusInfo' => 'aggr_prometheus_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
-    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
+    * promType  Prometheus实例类型。 - ECS：Prometheus for ECS - CCE：Prometheus for CCE - REMOTE_WRITE：Prometheus 通用实例 - CLOUD_SERVICE：Prometheus for 云服务 - ACROSS_ACCOUNT：Prometheus for 多账号聚合实例 [（暂不支持ACROSS_ACCOUNT类型）](tag:hws_eu,g42,sbc,OCB,ctc,cmcc,srg,hk_sbc,ctc,DT)
     * promVersion  Prometheus实例版本号。
     * enterpriseProjectId  Prometheus实例所属的企业项目。
     * projectId  Prometheus实例所属projectId。
+    * aggrPrometheusInfo  被聚合的账号和普罗实例列表。
     *
     * @var string[]
     */
@@ -108,16 +115,18 @@ class PromInstanceRequestModel implements ModelInterface, ArrayAccess
             'promType' => 'setPromType',
             'promVersion' => 'setPromVersion',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'projectId' => 'setProjectId'
+            'projectId' => 'setProjectId',
+            'aggrPrometheusInfo' => 'setAggrPrometheusInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
-    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
+    * promType  Prometheus实例类型。 - ECS：Prometheus for ECS - CCE：Prometheus for CCE - REMOTE_WRITE：Prometheus 通用实例 - CLOUD_SERVICE：Prometheus for 云服务 - ACROSS_ACCOUNT：Prometheus for 多账号聚合实例 [（暂不支持ACROSS_ACCOUNT类型）](tag:hws_eu,g42,sbc,OCB,ctc,cmcc,srg,hk_sbc,ctc,DT)
     * promVersion  Prometheus实例版本号。
     * enterpriseProjectId  Prometheus实例所属的企业项目。
     * projectId  Prometheus实例所属projectId。
+    * aggrPrometheusInfo  被聚合的账号和普罗实例列表。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class PromInstanceRequestModel implements ModelInterface, ArrayAccess
             'promType' => 'getPromType',
             'promVersion' => 'getPromVersion',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'projectId' => 'getProjectId'
+            'projectId' => 'getProjectId',
+            'aggrPrometheusInfo' => 'getAggrPrometheusInfo'
     ];
 
     /**
@@ -169,32 +179,7 @@ class PromInstanceRequestModel implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const PROM_TYPE_ECS = 'ECS';
-    const PROM_TYPE_VPC = 'VPC';
-    const PROM_TYPE_CCE = 'CCE';
-    const PROM_TYPE_REMOTE_WRITE = 'REMOTE_WRITE';
-    const PROM_TYPE_KUBERNETES = 'KUBERNETES';
-    const PROM_TYPE_CLOUD_SERVICE = 'CLOUD_SERVICE';
-    const PROM_TYPE_ACROSS_ACCOUNT = 'ACROSS_ACCOUNT';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getPromTypeAllowableValues()
-    {
-        return [
-            self::PROM_TYPE_ECS,
-            self::PROM_TYPE_VPC,
-            self::PROM_TYPE_CCE,
-            self::PROM_TYPE_REMOTE_WRITE,
-            self::PROM_TYPE_KUBERNETES,
-            self::PROM_TYPE_CLOUD_SERVICE,
-            self::PROM_TYPE_ACROSS_ACCOUNT,
-        ];
-    }
 
 
     /**
@@ -217,6 +202,7 @@ class PromInstanceRequestModel implements ModelInterface, ArrayAccess
         $this->container['promVersion'] = isset($data['promVersion']) ? $data['promVersion'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['aggrPrometheusInfo'] = isset($data['aggrPrometheusInfo']) ? $data['aggrPrometheusInfo'] : null;
     }
 
     /**
@@ -233,14 +219,6 @@ class PromInstanceRequestModel implements ModelInterface, ArrayAccess
         if ($this->container['promType'] === null) {
             $invalidProperties[] = "'promType' can't be null";
         }
-            $allowedValues = $this->getPromTypeAllowableValues();
-                if (!is_null($this->container['promType']) && !in_array($this->container['promType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'promType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -281,7 +259,7 @@ class PromInstanceRequestModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets promType
-    *  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
+    *  Prometheus实例类型。 - ECS：Prometheus for ECS - CCE：Prometheus for CCE - REMOTE_WRITE：Prometheus 通用实例 - CLOUD_SERVICE：Prometheus for 云服务 - ACROSS_ACCOUNT：Prometheus for 多账号聚合实例 [（暂不支持ACROSS_ACCOUNT类型）](tag:hws_eu,g42,sbc,OCB,ctc,cmcc,srg,hk_sbc,ctc,DT)
     *
     * @return string
     */
@@ -293,7 +271,7 @@ class PromInstanceRequestModel implements ModelInterface, ArrayAccess
     /**
     * Sets promType
     *
-    * @param string $promType Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
+    * @param string $promType Prometheus实例类型。 - ECS：Prometheus for ECS - CCE：Prometheus for CCE - REMOTE_WRITE：Prometheus 通用实例 - CLOUD_SERVICE：Prometheus for 云服务 - ACROSS_ACCOUNT：Prometheus for 多账号聚合实例 [（暂不支持ACROSS_ACCOUNT类型）](tag:hws_eu,g42,sbc,OCB,ctc,cmcc,srg,hk_sbc,ctc,DT)
     *
     * @return $this
     */
@@ -372,6 +350,30 @@ class PromInstanceRequestModel implements ModelInterface, ArrayAccess
     public function setProjectId($projectId)
     {
         $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets aggrPrometheusInfo
+    *  被聚合的账号和普罗实例列表。
+    *
+    * @return \HuaweiCloud\SDK\Aom\V2\Model\AggrPrometheusInfo[]|null
+    */
+    public function getAggrPrometheusInfo()
+    {
+        return $this->container['aggrPrometheusInfo'];
+    }
+
+    /**
+    * Sets aggrPrometheusInfo
+    *
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\AggrPrometheusInfo[]|null $aggrPrometheusInfo 被聚合的账号和普罗实例列表。
+    *
+    * @return $this
+    */
+    public function setAggrPrometheusInfo($aggrPrometheusInfo)
+    {
+        $this->container['aggrPrometheusInfo'] = $aggrPrometheusInfo;
         return $this;
     }
 

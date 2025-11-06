@@ -353,7 +353,7 @@ class AomAsyncClient extends Client
     /**
      * 添加或修改指标类或事件类告警规则
      *
-     * 添加或修改AOM2.0指标类或事件类告警规则。(注：接口目前开放的region为：华东-上海一)
+     * 添加或修改AOM2.0指标类或事件类告警规则。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -626,6 +626,74 @@ class AomAsyncClient extends Client
     }
 
     /**
+     * 新增消息通知模板
+     *
+     * 该接口用于新增消息通知模板。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createNotificationTemplateAsync($request)
+    {
+        return $this->createNotificationTemplateAsyncWithHttpInfo($request);
+    }
+    
+    public function createNotificationTemplateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/events/notification/templates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\CreateNotificationTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\CreateNotificationTemplateRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 删除告警行动规则
      *
      * 删除告警行动规则。
@@ -756,6 +824,74 @@ class AomAsyncClient extends Client
     }
 
     /**
+     * 删除告警模板
+     *
+     * 该接口用于删除告警模板。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteAlarmRuleTemplateAsync($request)
+    {
+        return $this->deleteAlarmRuleTemplateAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteAlarmRuleTemplateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v4/{project_id}/alarm-rules-template';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\DeleteAlarmRuleTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\DeleteAlarmRuleTemplateRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 批量删除阈值规则
      *
      * 该接口用于批量删除阈值规则
@@ -817,6 +953,145 @@ class AomAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Aom\V2\Model\DeleteAlarmRulesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Aom\V2\Model\DeleteAlarmRulesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除仪表盘
+     *
+     * 该接口用于删除仪表盘。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDashboardAsync($request)
+    {
+        return $this->deleteDashboardAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteDashboardAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/aom/dashboards/{dashboard_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['dashboardId'] !== null) {
+            $pathParams['dashboard_id'] = $localVarParams['dashboardId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\DeleteDashboardResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\DeleteDashboardRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除仪表盘分组
+     *
+     * 该接口用于删除仪表盘分组。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDashboardsFolderAsync($request)
+    {
+        return $this->deleteDashboardsFolderAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteDashboardsFolderAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/aom/dashboards-folder/{folder_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['deleteAll'] !== null) {
+            $queryParams['delete_all'] = $localVarParams['deleteAll'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['folderId'] !== null) {
+            $pathParams['folder_id'] = $localVarParams['folderId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\DeleteDashboardsFolderResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\DeleteDashboardsFolderRequest',
             $asyncRequest = true);
     }
 
@@ -888,7 +1163,7 @@ class AomAsyncClient extends Client
     /**
      * 删除指标类或事件类告警规则
      *
-     * 删除AOM2.0指标类或事件类告警规则。(注：接口目前开放的region为：华东-上海一)
+     * 删除AOM2.0指标类或事件类告警规则。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1012,6 +1287,74 @@ class AomAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Aom\V2\Model\DeleteMuteRulesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Aom\V2\Model\DeleteMuteRulesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除消息通知模板
+     *
+     * 该接口用于删除消息通知模板。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteNotificationTemplateAsync($request)
+    {
+        return $this->deleteNotificationTemplateAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteNotificationTemplateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/events/notification/templates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\DeleteNotificationTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\DeleteNotificationTemplateRequest',
             $asyncRequest = true);
     }
 
@@ -1275,6 +1618,210 @@ class AomAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListAlarmRuleResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListAlarmRuleRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询告警模板列表
+     *
+     * 该接口用于查询告警模板列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAlarmRuleTemplateAsync($request)
+    {
+        return $this->listAlarmRuleTemplateAsyncWithHttpInfo($request);
+    }
+    
+    public function listAlarmRuleTemplateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v4/{project_id}/alarm-rules-template';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListAlarmRuleTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListAlarmRuleTemplateRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询仪表盘列表
+     *
+     * 该接口用于查询仪表盘列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDashBoardsAsync($request)
+    {
+        return $this->listDashBoardsAsyncWithHttpInfo($request);
+    }
+    
+    public function listDashBoardsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/aom/dashboards';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['dashboardType'] !== null) {
+            $queryParams['dashboard_type'] = $localVarParams['dashboardType'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListDashBoardsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListDashBoardsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询仪表盘分组列表
+     *
+     * 该接口用于查询仪表盘分组列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDashboardsFolderAsync($request)
+    {
+        return $this->listDashboardsFolderAsyncWithHttpInfo($request);
+    }
+    
+    public function listDashboardsFolderAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/aom/dashboards-folder';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListDashboardsFolderResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListDashboardsFolderRequest',
             $asyncRequest = true);
     }
 
@@ -1562,7 +2109,7 @@ class AomAsyncClient extends Client
     /**
      * 查询指标类或者事件类告警规则列表
      *
-     * 查询AOM2.0指标类或者事件类告警规则列表。(注：接口目前开放的region为：华东-上海一)
+     * 查询AOM2.0指标类或者事件类告警规则列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1716,6 +2263,139 @@ class AomAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListMuteRuleResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListMuteRuleRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 根据消息通知模板名称查询消息通知模板
+     *
+     * 该接口用于根据消息通知模板名称查询消息通知模板。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listNotificationTemplateByNameAsync($request)
+    {
+        return $this->listNotificationTemplateByNameAsyncWithHttpInfo($request);
+    }
+    
+    public function listNotificationTemplateByNameAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/events/notification/template/{name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $pathParams['name'] = $localVarParams['name'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListNotificationTemplateByNameResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListNotificationTemplateByNameRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询消息通知模板列表
+     *
+     * 该接口用于查询消息通知模板列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listNotificationTemplatesAsync($request)
+    {
+        return $this->listNotificationTemplatesAsyncWithHttpInfo($request);
+    }
+    
+    public function listNotificationTemplatesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/events/notification/templates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListNotificationTemplatesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListNotificationTemplatesRequest',
             $asyncRequest = true);
     }
 
@@ -2051,9 +2731,9 @@ class AomAsyncClient extends Client
     }
 
     /**
-     * 上报事件告警信息
+     * 上报事件或告警信息
      *
-     * 该接口用于上报对应用户的事件、告警。
+     * 该接口用于上报事件或告警至AOM，同时支持清除告警信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2248,6 +2928,77 @@ class AomAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ShowAlarmRuleResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ShowAlarmRuleRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询仪表盘详情
+     *
+     * 该接口用于查询仪表盘详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDashBoardAsync($request)
+    {
+        return $this->showDashBoardAsyncWithHttpInfo($request);
+    }
+    
+    public function showDashBoardAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/aom/dashboards/{dashboard_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['version'] !== null) {
+            $queryParams['version'] = $localVarParams['version'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['dashboardId'] !== null) {
+            $pathParams['dashboard_id'] = $localVarParams['dashboardId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ShowDashBoardResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ShowDashBoardRequest',
             $asyncRequest = true);
     }
 
@@ -2576,6 +3327,74 @@ class AomAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Aom\V2\Model\UpdateMuteRuleResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Aom\V2\Model\UpdateMuteRuleRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改消息通知模板
+     *
+     * 该接口用于修改消息通知模板。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateNotificationTemplateAsync($request)
+    {
+        return $this->updateNotificationTemplateAsyncWithHttpInfo($request);
+    }
+    
+    public function updateNotificationTemplateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/events/notification/templates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\UpdateNotificationTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\UpdateNotificationTemplateRequest',
             $asyncRequest = true);
     }
 
@@ -3454,6 +4273,74 @@ class AomAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListRangeQueryAomPromPostResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListRangeQueryAomPromPostRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改Prometheus实例
+     *
+     * 该接口用于修改Prometheus实例。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updatePromInstanceAsync($request)
+    {
+        return $this->updatePromInstanceAsyncWithHttpInfo($request);
+    }
+    
+    public function updatePromInstanceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/aom/prometheus';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\UpdatePromInstanceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\UpdatePromInstanceRequest',
             $asyncRequest = true);
     }
 

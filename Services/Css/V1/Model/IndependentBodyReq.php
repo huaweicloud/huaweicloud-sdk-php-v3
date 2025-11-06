@@ -23,13 +23,15 @@ class IndependentBodyReq implements ModelInterface, ArrayAccess
     * flavorRef  规格id，该参数通过[获取实例规格列表](ListFlavors.xml)接口获取，根据集群版本选择所需要的规格id
     * nodeSize  要独立节点个数。 - 如果路径参数type取值为“ess-master”即新增独立master节点，节点个数必须为大于等于三且小于等于10的奇数。 - 如果路径参数type取值为“ess-client”即新增独立client节点，节点个数要求大于等于1小于等于32。
     * volumeType  节点存储类型：取值为ULTRAHIGH，COMMON，HIGH。
+    * volumeSize  **参数解释**： 节点存储大小。 **约束限制**： - flavor_ref参数是本地盘规格时，不能设置此参数。 - 必须为大于0且为4和10的公倍数，单位：GB。 **取值范围**： 磁盘规格大小可以通过过[获取实例规格列表](ListFlavors.xml)中diskrange属性获得。 **默认取值**： flavor_ref参数不是本地盘规格时： - 新增独立冷数据节点：默认100G与节点规格支持的最小磁盘容量取较大者。 - 新增独立master或client节点：默认大小为40G，且不可更改。  >新增独立冷数据节点，推荐大于100G。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'flavorRef' => 'string',
             'nodeSize' => 'int',
-            'volumeType' => 'string'
+            'volumeType' => 'string',
+            'volumeSize' => 'int'
     ];
 
     /**
@@ -37,13 +39,15 @@ class IndependentBodyReq implements ModelInterface, ArrayAccess
     * flavorRef  规格id，该参数通过[获取实例规格列表](ListFlavors.xml)接口获取，根据集群版本选择所需要的规格id
     * nodeSize  要独立节点个数。 - 如果路径参数type取值为“ess-master”即新增独立master节点，节点个数必须为大于等于三且小于等于10的奇数。 - 如果路径参数type取值为“ess-client”即新增独立client节点，节点个数要求大于等于1小于等于32。
     * volumeType  节点存储类型：取值为ULTRAHIGH，COMMON，HIGH。
+    * volumeSize  **参数解释**： 节点存储大小。 **约束限制**： - flavor_ref参数是本地盘规格时，不能设置此参数。 - 必须为大于0且为4和10的公倍数，单位：GB。 **取值范围**： 磁盘规格大小可以通过过[获取实例规格列表](ListFlavors.xml)中diskrange属性获得。 **默认取值**： flavor_ref参数不是本地盘规格时： - 新增独立冷数据节点：默认100G与节点规格支持的最小磁盘容量取较大者。 - 新增独立master或client节点：默认大小为40G，且不可更改。  >新增独立冷数据节点，推荐大于100G。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'flavorRef' => null,
         'nodeSize' => null,
-        'volumeType' => null
+        'volumeType' => null,
+        'volumeSize' => 'int32'
     ];
 
     /**
@@ -72,13 +76,15 @@ class IndependentBodyReq implements ModelInterface, ArrayAccess
     * flavorRef  规格id，该参数通过[获取实例规格列表](ListFlavors.xml)接口获取，根据集群版本选择所需要的规格id
     * nodeSize  要独立节点个数。 - 如果路径参数type取值为“ess-master”即新增独立master节点，节点个数必须为大于等于三且小于等于10的奇数。 - 如果路径参数type取值为“ess-client”即新增独立client节点，节点个数要求大于等于1小于等于32。
     * volumeType  节点存储类型：取值为ULTRAHIGH，COMMON，HIGH。
+    * volumeSize  **参数解释**： 节点存储大小。 **约束限制**： - flavor_ref参数是本地盘规格时，不能设置此参数。 - 必须为大于0且为4和10的公倍数，单位：GB。 **取值范围**： 磁盘规格大小可以通过过[获取实例规格列表](ListFlavors.xml)中diskrange属性获得。 **默认取值**： flavor_ref参数不是本地盘规格时： - 新增独立冷数据节点：默认100G与节点规格支持的最小磁盘容量取较大者。 - 新增独立master或client节点：默认大小为40G，且不可更改。  >新增独立冷数据节点，推荐大于100G。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'flavorRef' => 'flavor_ref',
             'nodeSize' => 'node_size',
-            'volumeType' => 'volume_type'
+            'volumeType' => 'volume_type',
+            'volumeSize' => 'volume_size'
     ];
 
     /**
@@ -86,13 +92,15 @@ class IndependentBodyReq implements ModelInterface, ArrayAccess
     * flavorRef  规格id，该参数通过[获取实例规格列表](ListFlavors.xml)接口获取，根据集群版本选择所需要的规格id
     * nodeSize  要独立节点个数。 - 如果路径参数type取值为“ess-master”即新增独立master节点，节点个数必须为大于等于三且小于等于10的奇数。 - 如果路径参数type取值为“ess-client”即新增独立client节点，节点个数要求大于等于1小于等于32。
     * volumeType  节点存储类型：取值为ULTRAHIGH，COMMON，HIGH。
+    * volumeSize  **参数解释**： 节点存储大小。 **约束限制**： - flavor_ref参数是本地盘规格时，不能设置此参数。 - 必须为大于0且为4和10的公倍数，单位：GB。 **取值范围**： 磁盘规格大小可以通过过[获取实例规格列表](ListFlavors.xml)中diskrange属性获得。 **默认取值**： flavor_ref参数不是本地盘规格时： - 新增独立冷数据节点：默认100G与节点规格支持的最小磁盘容量取较大者。 - 新增独立master或client节点：默认大小为40G，且不可更改。  >新增独立冷数据节点，推荐大于100G。
     *
     * @var string[]
     */
     protected static $setters = [
             'flavorRef' => 'setFlavorRef',
             'nodeSize' => 'setNodeSize',
-            'volumeType' => 'setVolumeType'
+            'volumeType' => 'setVolumeType',
+            'volumeSize' => 'setVolumeSize'
     ];
 
     /**
@@ -100,13 +108,15 @@ class IndependentBodyReq implements ModelInterface, ArrayAccess
     * flavorRef  规格id，该参数通过[获取实例规格列表](ListFlavors.xml)接口获取，根据集群版本选择所需要的规格id
     * nodeSize  要独立节点个数。 - 如果路径参数type取值为“ess-master”即新增独立master节点，节点个数必须为大于等于三且小于等于10的奇数。 - 如果路径参数type取值为“ess-client”即新增独立client节点，节点个数要求大于等于1小于等于32。
     * volumeType  节点存储类型：取值为ULTRAHIGH，COMMON，HIGH。
+    * volumeSize  **参数解释**： 节点存储大小。 **约束限制**： - flavor_ref参数是本地盘规格时，不能设置此参数。 - 必须为大于0且为4和10的公倍数，单位：GB。 **取值范围**： 磁盘规格大小可以通过过[获取实例规格列表](ListFlavors.xml)中diskrange属性获得。 **默认取值**： flavor_ref参数不是本地盘规格时： - 新增独立冷数据节点：默认100G与节点规格支持的最小磁盘容量取较大者。 - 新增独立master或client节点：默认大小为40G，且不可更改。  >新增独立冷数据节点，推荐大于100G。
     *
     * @var string[]
     */
     protected static $getters = [
             'flavorRef' => 'getFlavorRef',
             'nodeSize' => 'getNodeSize',
-            'volumeType' => 'getVolumeType'
+            'volumeType' => 'getVolumeType',
+            'volumeSize' => 'getVolumeSize'
     ];
 
     /**
@@ -170,6 +180,7 @@ class IndependentBodyReq implements ModelInterface, ArrayAccess
         $this->container['flavorRef'] = isset($data['flavorRef']) ? $data['flavorRef'] : null;
         $this->container['nodeSize'] = isset($data['nodeSize']) ? $data['nodeSize'] : null;
         $this->container['volumeType'] = isset($data['volumeType']) ? $data['volumeType'] : null;
+        $this->container['volumeSize'] = isset($data['volumeSize']) ? $data['volumeSize'] : null;
     }
 
     /**
@@ -185,9 +196,6 @@ class IndependentBodyReq implements ModelInterface, ArrayAccess
         }
         if ($this->container['nodeSize'] === null) {
             $invalidProperties[] = "'nodeSize' can't be null";
-        }
-        if ($this->container['volumeType'] === null) {
-            $invalidProperties[] = "'volumeType' can't be null";
         }
         return $invalidProperties;
     }
@@ -255,7 +263,7 @@ class IndependentBodyReq implements ModelInterface, ArrayAccess
     * Gets volumeType
     *  节点存储类型：取值为ULTRAHIGH，COMMON，HIGH。
     *
-    * @return string
+    * @return string|null
     */
     public function getVolumeType()
     {
@@ -265,13 +273,37 @@ class IndependentBodyReq implements ModelInterface, ArrayAccess
     /**
     * Sets volumeType
     *
-    * @param string $volumeType 节点存储类型：取值为ULTRAHIGH，COMMON，HIGH。
+    * @param string|null $volumeType 节点存储类型：取值为ULTRAHIGH，COMMON，HIGH。
     *
     * @return $this
     */
     public function setVolumeType($volumeType)
     {
         $this->container['volumeType'] = $volumeType;
+        return $this;
+    }
+
+    /**
+    * Gets volumeSize
+    *  **参数解释**： 节点存储大小。 **约束限制**： - flavor_ref参数是本地盘规格时，不能设置此参数。 - 必须为大于0且为4和10的公倍数，单位：GB。 **取值范围**： 磁盘规格大小可以通过过[获取实例规格列表](ListFlavors.xml)中diskrange属性获得。 **默认取值**： flavor_ref参数不是本地盘规格时： - 新增独立冷数据节点：默认100G与节点规格支持的最小磁盘容量取较大者。 - 新增独立master或client节点：默认大小为40G，且不可更改。  >新增独立冷数据节点，推荐大于100G。
+    *
+    * @return int|null
+    */
+    public function getVolumeSize()
+    {
+        return $this->container['volumeSize'];
+    }
+
+    /**
+    * Sets volumeSize
+    *
+    * @param int|null $volumeSize **参数解释**： 节点存储大小。 **约束限制**： - flavor_ref参数是本地盘规格时，不能设置此参数。 - 必须为大于0且为4和10的公倍数，单位：GB。 **取值范围**： 磁盘规格大小可以通过过[获取实例规格列表](ListFlavors.xml)中diskrange属性获得。 **默认取值**： flavor_ref参数不是本地盘规格时： - 新增独立冷数据节点：默认100G与节点规格支持的最小磁盘容量取较大者。 - 新增独立master或client节点：默认大小为40G，且不可更改。  >新增独立冷数据节点，推荐大于100G。
+    *
+    * @return $this
+    */
+    public function setVolumeSize($volumeSize)
+    {
+        $this->container['volumeSize'] = $volumeSize;
         return $this;
     }
 

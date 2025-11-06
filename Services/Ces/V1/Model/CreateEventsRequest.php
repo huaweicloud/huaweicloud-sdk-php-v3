@@ -25,7 +25,7 @@ class CreateEventsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Ces\V1\Model\EventItem[]'
+            'body' => '\HuaweiCloud\SDK\Ces\V1\Model\CreateEventsRequestBody[]'
     ];
 
     /**
@@ -176,7 +176,7 @@ class CreateEventsRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  上报自定义事件。请求参数。
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\EventItem[]|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\CreateEventsRequestBody[]|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class CreateEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\EventItem[]|null $body 上报自定义事件。请求参数。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\CreateEventsRequestBody[]|null $body 上报自定义事件。请求参数。
     *
     * @return $this
     */

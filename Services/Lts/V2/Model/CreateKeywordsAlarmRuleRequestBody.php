@@ -25,15 +25,14 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * keywordsRequests  关键词详细信息
     * frequency  frequency
     * keywordsAlarmLevel  告警级别
-    * keywordsAlarmSend  是否发送
     * domainId  domainId
-    * notificationSaveRule  notificationSaveRule
     * triggerConditionCount  触发条件：触发次数;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -43,15 +42,14 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'keywordsRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\KeywordsRequest[]',
             'frequency' => '\HuaweiCloud\SDK\Lts\V2\Model\Frequency',
             'keywordsAlarmLevel' => 'string',
-            'keywordsAlarmSend' => 'bool',
             'domainId' => 'string',
-            'notificationSaveRule' => '\HuaweiCloud\SDK\Lts\V2\Model\SqlNotificationSaveRule',
             'triggerConditionCount' => 'int',
             'triggerConditionFrequency' => 'int',
             'whetherRecoveryPolicy' => 'bool',
             'recoveryPolicy' => 'int',
             'notificationFrequency' => 'int',
-            'alarmActionRuleName' => 'string'
+            'alarmActionRuleName' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsRequestBody[]'
     ];
 
     /**
@@ -61,15 +59,14 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * keywordsRequests  关键词详细信息
     * frequency  frequency
     * keywordsAlarmLevel  告警级别
-    * keywordsAlarmSend  是否发送
     * domainId  domainId
-    * notificationSaveRule  notificationSaveRule
     * triggerConditionCount  触发条件：触发次数;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -79,15 +76,14 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
         'keywordsRequests' => null,
         'frequency' => null,
         'keywordsAlarmLevel' => null,
-        'keywordsAlarmSend' => null,
         'domainId' => null,
-        'notificationSaveRule' => null,
         'triggerConditionCount' => 'int32',
         'triggerConditionFrequency' => 'int32',
         'whetherRecoveryPolicy' => null,
         'recoveryPolicy' => 'int32',
         'notificationFrequency' => 'int32',
-        'alarmActionRuleName' => null
+        'alarmActionRuleName' => null,
+        'tags' => null
     ];
 
     /**
@@ -118,15 +114,14 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * keywordsRequests  关键词详细信息
     * frequency  frequency
     * keywordsAlarmLevel  告警级别
-    * keywordsAlarmSend  是否发送
     * domainId  domainId
-    * notificationSaveRule  notificationSaveRule
     * triggerConditionCount  触发条件：触发次数;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -136,15 +131,14 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'keywordsRequests' => 'keywords_requests',
             'frequency' => 'frequency',
             'keywordsAlarmLevel' => 'keywords_alarm_level',
-            'keywordsAlarmSend' => 'keywords_alarm_send',
             'domainId' => 'domain_id',
-            'notificationSaveRule' => 'notification_save_rule',
             'triggerConditionCount' => 'trigger_condition_count',
             'triggerConditionFrequency' => 'trigger_condition_frequency',
             'whetherRecoveryPolicy' => 'whether_recovery_policy',
             'recoveryPolicy' => 'recovery_policy',
             'notificationFrequency' => 'notification_frequency',
-            'alarmActionRuleName' => 'alarm_action_rule_name'
+            'alarmActionRuleName' => 'alarm_action_rule_name',
+            'tags' => 'tags'
     ];
 
     /**
@@ -154,15 +148,14 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * keywordsRequests  关键词详细信息
     * frequency  frequency
     * keywordsAlarmLevel  告警级别
-    * keywordsAlarmSend  是否发送
     * domainId  domainId
-    * notificationSaveRule  notificationSaveRule
     * triggerConditionCount  触发条件：触发次数;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -172,15 +165,14 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'keywordsRequests' => 'setKeywordsRequests',
             'frequency' => 'setFrequency',
             'keywordsAlarmLevel' => 'setKeywordsAlarmLevel',
-            'keywordsAlarmSend' => 'setKeywordsAlarmSend',
             'domainId' => 'setDomainId',
-            'notificationSaveRule' => 'setNotificationSaveRule',
             'triggerConditionCount' => 'setTriggerConditionCount',
             'triggerConditionFrequency' => 'setTriggerConditionFrequency',
             'whetherRecoveryPolicy' => 'setWhetherRecoveryPolicy',
             'recoveryPolicy' => 'setRecoveryPolicy',
             'notificationFrequency' => 'setNotificationFrequency',
-            'alarmActionRuleName' => 'setAlarmActionRuleName'
+            'alarmActionRuleName' => 'setAlarmActionRuleName',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -190,15 +182,14 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * keywordsRequests  关键词详细信息
     * frequency  frequency
     * keywordsAlarmLevel  告警级别
-    * keywordsAlarmSend  是否发送
     * domainId  domainId
-    * notificationSaveRule  notificationSaveRule
     * triggerConditionCount  触发条件：触发次数;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -208,15 +199,14 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'keywordsRequests' => 'getKeywordsRequests',
             'frequency' => 'getFrequency',
             'keywordsAlarmLevel' => 'getKeywordsAlarmLevel',
-            'keywordsAlarmSend' => 'getKeywordsAlarmSend',
             'domainId' => 'getDomainId',
-            'notificationSaveRule' => 'getNotificationSaveRule',
             'triggerConditionCount' => 'getTriggerConditionCount',
             'triggerConditionFrequency' => 'getTriggerConditionFrequency',
             'whetherRecoveryPolicy' => 'getWhetherRecoveryPolicy',
             'recoveryPolicy' => 'getRecoveryPolicy',
             'notificationFrequency' => 'getNotificationFrequency',
-            'alarmActionRuleName' => 'getAlarmActionRuleName'
+            'alarmActionRuleName' => 'getAlarmActionRuleName',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -328,15 +318,14 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
         $this->container['keywordsRequests'] = isset($data['keywordsRequests']) ? $data['keywordsRequests'] : null;
         $this->container['frequency'] = isset($data['frequency']) ? $data['frequency'] : null;
         $this->container['keywordsAlarmLevel'] = isset($data['keywordsAlarmLevel']) ? $data['keywordsAlarmLevel'] : null;
-        $this->container['keywordsAlarmSend'] = isset($data['keywordsAlarmSend']) ? $data['keywordsAlarmSend'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
-        $this->container['notificationSaveRule'] = isset($data['notificationSaveRule']) ? $data['notificationSaveRule'] : null;
         $this->container['triggerConditionCount'] = isset($data['triggerConditionCount']) ? $data['triggerConditionCount'] : null;
         $this->container['triggerConditionFrequency'] = isset($data['triggerConditionFrequency']) ? $data['triggerConditionFrequency'] : null;
         $this->container['whetherRecoveryPolicy'] = isset($data['whetherRecoveryPolicy']) ? $data['whetherRecoveryPolicy'] : null;
         $this->container['recoveryPolicy'] = isset($data['recoveryPolicy']) ? $data['recoveryPolicy'] : null;
         $this->container['notificationFrequency'] = isset($data['notificationFrequency']) ? $data['notificationFrequency'] : null;
         $this->container['alarmActionRuleName'] = isset($data['alarmActionRuleName']) ? $data['alarmActionRuleName'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -382,9 +371,6 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['keywordsAlarmSend'] === null) {
-            $invalidProperties[] = "'keywordsAlarmSend' can't be null";
-        }
         if ($this->container['domainId'] === null) {
             $invalidProperties[] = "'domainId' can't be null";
         }
@@ -540,30 +526,6 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets keywordsAlarmSend
-    *  是否发送
-    *
-    * @return bool
-    */
-    public function getKeywordsAlarmSend()
-    {
-        return $this->container['keywordsAlarmSend'];
-    }
-
-    /**
-    * Sets keywordsAlarmSend
-    *
-    * @param bool $keywordsAlarmSend 是否发送
-    *
-    * @return $this
-    */
-    public function setKeywordsAlarmSend($keywordsAlarmSend)
-    {
-        $this->container['keywordsAlarmSend'] = $keywordsAlarmSend;
-        return $this;
-    }
-
-    /**
     * Gets domainId
     *  domainId
     *
@@ -584,30 +546,6 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     public function setDomainId($domainId)
     {
         $this->container['domainId'] = $domainId;
-        return $this;
-    }
-
-    /**
-    * Gets notificationSaveRule
-    *  notificationSaveRule
-    *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\SqlNotificationSaveRule|null
-    */
-    public function getNotificationSaveRule()
-    {
-        return $this->container['notificationSaveRule'];
-    }
-
-    /**
-    * Sets notificationSaveRule
-    *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\SqlNotificationSaveRule|null $notificationSaveRule notificationSaveRule
-    *
-    * @return $this
-    */
-    public function setNotificationSaveRule($notificationSaveRule)
-    {
-        $this->container['notificationSaveRule'] = $notificationSaveRule;
         return $this;
     }
 
@@ -752,6 +690,30 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     public function setAlarmActionRuleName($alarmActionRuleName)
     {
         $this->container['alarmActionRuleName'] = $alarmActionRuleName;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\TagsRequestBody[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\TagsRequestBody[]|null $tags **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

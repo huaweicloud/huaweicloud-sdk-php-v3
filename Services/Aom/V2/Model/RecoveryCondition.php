@@ -20,7 +20,7 @@ class RecoveryCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recoveryTimeframe  告警恢复周期的个数。
+    * recoveryTimeframe  告警恢复周期的个数。取值范围为1~3 (如果recovery_timeframe 参数不为空，该参数必填）
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class RecoveryCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recoveryTimeframe  告警恢复周期的个数。
+    * recoveryTimeframe  告警恢复周期的个数。取值范围为1~3 (如果recovery_timeframe 参数不为空，该参数必填）
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class RecoveryCondition implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recoveryTimeframe  告警恢复周期的个数。
+    * recoveryTimeframe  告警恢复周期的个数。取值范围为1~3 (如果recovery_timeframe 参数不为空，该参数必填）
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class RecoveryCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recoveryTimeframe  告警恢复周期的个数。
+    * recoveryTimeframe  告警恢复周期的个数。取值范围为1~3 (如果recovery_timeframe 参数不为空，该参数必填）
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class RecoveryCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recoveryTimeframe  告警恢复周期的个数。
+    * recoveryTimeframe  告警恢复周期的个数。取值范围为1~3 (如果recovery_timeframe 参数不为空，该参数必填）
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class RecoveryCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets recoveryTimeframe
-    *  告警恢复周期的个数。
+    *  告警恢复周期的个数。取值范围为1~3 (如果recovery_timeframe 参数不为空，该参数必填）
     *
     * @return int|null
     */
@@ -186,7 +186,7 @@ class RecoveryCondition implements ModelInterface, ArrayAccess
     /**
     * Sets recoveryTimeframe
     *
-    * @param int|null $recoveryTimeframe 告警恢复周期的个数。
+    * @param int|null $recoveryTimeframe 告警恢复周期的个数。取值范围为1~3 (如果recovery_timeframe 参数不为空，该参数必填）
     *
     * @return $this
     */

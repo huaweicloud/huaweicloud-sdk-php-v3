@@ -33,6 +33,8 @@ class VehicleLicenseBack implements ModelInterface, ArrayAccess
     * codeNumber  条码号。
     * energyType  能源类型。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
+    * alarmResult  alarmResult
+    * alarmConfidence  alarmConfidence
     *
     * @var string[]
     */
@@ -49,7 +51,9 @@ class VehicleLicenseBack implements ModelInterface, ArrayAccess
             'inspectionRecord' => 'string',
             'codeNumber' => 'string',
             'energyType' => 'string',
-            'textLocation' => 'object'
+            'textLocation' => 'object',
+            'alarmResult' => '\HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseAlarmResult',
+            'alarmConfidence' => '\HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseAlarmConfidence'
     ];
 
     /**
@@ -67,6 +71,8 @@ class VehicleLicenseBack implements ModelInterface, ArrayAccess
     * codeNumber  条码号。
     * energyType  能源类型。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
+    * alarmResult  alarmResult
+    * alarmConfidence  alarmConfidence
     *
     * @var string[]
     */
@@ -83,7 +89,9 @@ class VehicleLicenseBack implements ModelInterface, ArrayAccess
         'inspectionRecord' => null,
         'codeNumber' => null,
         'energyType' => null,
-        'textLocation' => null
+        'textLocation' => null,
+        'alarmResult' => null,
+        'alarmConfidence' => null
     ];
 
     /**
@@ -122,6 +130,8 @@ class VehicleLicenseBack implements ModelInterface, ArrayAccess
     * codeNumber  条码号。
     * energyType  能源类型。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
+    * alarmResult  alarmResult
+    * alarmConfidence  alarmConfidence
     *
     * @var string[]
     */
@@ -138,7 +148,9 @@ class VehicleLicenseBack implements ModelInterface, ArrayAccess
             'inspectionRecord' => 'inspection_record',
             'codeNumber' => 'code_number',
             'energyType' => 'energy_type',
-            'textLocation' => 'text_location'
+            'textLocation' => 'text_location',
+            'alarmResult' => 'alarm_result',
+            'alarmConfidence' => 'alarm_confidence'
     ];
 
     /**
@@ -156,6 +168,8 @@ class VehicleLicenseBack implements ModelInterface, ArrayAccess
     * codeNumber  条码号。
     * energyType  能源类型。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
+    * alarmResult  alarmResult
+    * alarmConfidence  alarmConfidence
     *
     * @var string[]
     */
@@ -172,7 +186,9 @@ class VehicleLicenseBack implements ModelInterface, ArrayAccess
             'inspectionRecord' => 'setInspectionRecord',
             'codeNumber' => 'setCodeNumber',
             'energyType' => 'setEnergyType',
-            'textLocation' => 'setTextLocation'
+            'textLocation' => 'setTextLocation',
+            'alarmResult' => 'setAlarmResult',
+            'alarmConfidence' => 'setAlarmConfidence'
     ];
 
     /**
@@ -190,6 +206,8 @@ class VehicleLicenseBack implements ModelInterface, ArrayAccess
     * codeNumber  条码号。
     * energyType  能源类型。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
+    * alarmResult  alarmResult
+    * alarmConfidence  alarmConfidence
     *
     * @var string[]
     */
@@ -206,7 +224,9 @@ class VehicleLicenseBack implements ModelInterface, ArrayAccess
             'inspectionRecord' => 'getInspectionRecord',
             'codeNumber' => 'getCodeNumber',
             'energyType' => 'getEnergyType',
-            'textLocation' => 'getTextLocation'
+            'textLocation' => 'getTextLocation',
+            'alarmResult' => 'getAlarmResult',
+            'alarmConfidence' => 'getAlarmConfidence'
     ];
 
     /**
@@ -280,6 +300,8 @@ class VehicleLicenseBack implements ModelInterface, ArrayAccess
         $this->container['codeNumber'] = isset($data['codeNumber']) ? $data['codeNumber'] : null;
         $this->container['energyType'] = isset($data['energyType']) ? $data['energyType'] : null;
         $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
+        $this->container['alarmResult'] = isset($data['alarmResult']) ? $data['alarmResult'] : null;
+        $this->container['alarmConfidence'] = isset($data['alarmConfidence']) ? $data['alarmConfidence'] : null;
     }
 
     /**
@@ -613,6 +635,54 @@ class VehicleLicenseBack implements ModelInterface, ArrayAccess
     public function setTextLocation($textLocation)
     {
         $this->container['textLocation'] = $textLocation;
+        return $this;
+    }
+
+    /**
+    * Gets alarmResult
+    *  alarmResult
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseAlarmResult|null
+    */
+    public function getAlarmResult()
+    {
+        return $this->container['alarmResult'];
+    }
+
+    /**
+    * Sets alarmResult
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseAlarmResult|null $alarmResult alarmResult
+    *
+    * @return $this
+    */
+    public function setAlarmResult($alarmResult)
+    {
+        $this->container['alarmResult'] = $alarmResult;
+        return $this;
+    }
+
+    /**
+    * Gets alarmConfidence
+    *  alarmConfidence
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseAlarmConfidence|null
+    */
+    public function getAlarmConfidence()
+    {
+        return $this->container['alarmConfidence'];
+    }
+
+    /**
+    * Sets alarmConfidence
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseAlarmConfidence|null $alarmConfidence alarmConfidence
+    *
+    * @return $this
+    */
+    public function setAlarmConfidence($alarmConfidence)
+    {
+        $this->container['alarmConfidence'] = $alarmConfidence;
         return $this;
     }
 

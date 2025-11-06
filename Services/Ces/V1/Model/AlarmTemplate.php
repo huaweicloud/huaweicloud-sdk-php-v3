@@ -22,8 +22,8 @@ class AlarmTemplate implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * templateName  自定义告警模板名称，如：alarmTemplate-Test01。
     * templateDescription  自定义告警模板描述。
-    * namespace  自定义告警模板选择的资源类型，即服务命名空间，如：选择弹性云服务器，则命名空间为SYS.ECS，各资源的监控指标名称可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dimensionName  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各服务资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * namespace  自定义告警模板选择的资源类型，即服务命名空间，如：选择弹性云服务器，则命名空间为SYS.ECS，可查看各资源的“[服务命名空间](ces_03_0059.xml)”。
+    * dimensionName  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
     * templateItems  自定义告警模板添加的一组或者多个告警策略。
     * templateId  自定义告警模板的ID，如：at1603330892378wkDm77y6B。
     *
@@ -42,8 +42,8 @@ class AlarmTemplate implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * templateName  自定义告警模板名称，如：alarmTemplate-Test01。
     * templateDescription  自定义告警模板描述。
-    * namespace  自定义告警模板选择的资源类型，即服务命名空间，如：选择弹性云服务器，则命名空间为SYS.ECS，各资源的监控指标名称可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dimensionName  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各服务资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * namespace  自定义告警模板选择的资源类型，即服务命名空间，如：选择弹性云服务器，则命名空间为SYS.ECS，可查看各资源的“[服务命名空间](ces_03_0059.xml)”。
+    * dimensionName  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
     * templateItems  自定义告警模板添加的一组或者多个告警策略。
     * templateId  自定义告警模板的ID，如：at1603330892378wkDm77y6B。
     *
@@ -83,8 +83,8 @@ class AlarmTemplate implements ModelInterface, ArrayAccess
     * and the value is the original name
     * templateName  自定义告警模板名称，如：alarmTemplate-Test01。
     * templateDescription  自定义告警模板描述。
-    * namespace  自定义告警模板选择的资源类型，即服务命名空间，如：选择弹性云服务器，则命名空间为SYS.ECS，各资源的监控指标名称可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dimensionName  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各服务资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * namespace  自定义告警模板选择的资源类型，即服务命名空间，如：选择弹性云服务器，则命名空间为SYS.ECS，可查看各资源的“[服务命名空间](ces_03_0059.xml)”。
+    * dimensionName  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
     * templateItems  自定义告警模板添加的一组或者多个告警策略。
     * templateId  自定义告警模板的ID，如：at1603330892378wkDm77y6B。
     *
@@ -103,8 +103,8 @@ class AlarmTemplate implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * templateName  自定义告警模板名称，如：alarmTemplate-Test01。
     * templateDescription  自定义告警模板描述。
-    * namespace  自定义告警模板选择的资源类型，即服务命名空间，如：选择弹性云服务器，则命名空间为SYS.ECS，各资源的监控指标名称可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dimensionName  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各服务资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * namespace  自定义告警模板选择的资源类型，即服务命名空间，如：选择弹性云服务器，则命名空间为SYS.ECS，可查看各资源的“[服务命名空间](ces_03_0059.xml)”。
+    * dimensionName  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
     * templateItems  自定义告警模板添加的一组或者多个告警策略。
     * templateId  自定义告警模板的ID，如：at1603330892378wkDm77y6B。
     *
@@ -123,8 +123,8 @@ class AlarmTemplate implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * templateName  自定义告警模板名称，如：alarmTemplate-Test01。
     * templateDescription  自定义告警模板描述。
-    * namespace  自定义告警模板选择的资源类型，即服务命名空间，如：选择弹性云服务器，则命名空间为SYS.ECS，各资源的监控指标名称可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dimensionName  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各服务资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * namespace  自定义告警模板选择的资源类型，即服务命名空间，如：选择弹性云服务器，则命名空间为SYS.ECS，可查看各资源的“[服务命名空间](ces_03_0059.xml)”。
+    * dimensionName  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
     * templateItems  自定义告警模板添加的一组或者多个告警策略。
     * templateId  自定义告警模板的ID，如：at1603330892378wkDm77y6B。
     *
@@ -213,6 +213,39 @@ class AlarmTemplate implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['templateName']) && (mb_strlen($this->container['templateName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'templateName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['templateName']) && (mb_strlen($this->container['templateName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'templateName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['templateDescription']) && (mb_strlen($this->container['templateDescription']) > 256)) {
+                $invalidProperties[] = "invalid value for 'templateDescription', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['templateDescription']) && (mb_strlen($this->container['templateDescription']) < 0)) {
+                $invalidProperties[] = "invalid value for 'templateDescription', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 32)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 3)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['namespace']) && !preg_match("/^((([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*)|)$/", $this->container['namespace'])) {
+                $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^((([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*)|)$/.";
+            }
+            if (!is_null($this->container['dimensionName']) && (mb_strlen($this->container['dimensionName']) > 131)) {
+                $invalidProperties[] = "invalid value for 'dimensionName', the character length must be smaller than or equal to 131.";
+            }
+            if (!is_null($this->container['dimensionName']) && (mb_strlen($this->container['dimensionName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'dimensionName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['dimensionName']) && !preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}$/", $this->container['dimensionName'])) {
+                $invalidProperties[] = "invalid value for 'dimensionName', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}$/.";
+            }
+            if (!is_null($this->container['templateId']) && !preg_match("/^at([0-9A-Za-z]){0,62}$/", $this->container['templateId'])) {
+                $invalidProperties[] = "invalid value for 'templateId', must be conform to the pattern /^at([0-9A-Za-z]){0,62}$/.";
+            }
         return $invalidProperties;
     }
 
@@ -277,7 +310,7 @@ class AlarmTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  自定义告警模板选择的资源类型，即服务命名空间，如：选择弹性云服务器，则命名空间为SYS.ECS，各资源的监控指标名称可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    *  自定义告警模板选择的资源类型，即服务命名空间，如：选择弹性云服务器，则命名空间为SYS.ECS，可查看各资源的“[服务命名空间](ces_03_0059.xml)”。
     *
     * @return string|null
     */
@@ -289,7 +322,7 @@ class AlarmTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 自定义告警模板选择的资源类型，即服务命名空间，如：选择弹性云服务器，则命名空间为SYS.ECS，各资源的监控指标名称可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * @param string|null $namespace 自定义告警模板选择的资源类型，即服务命名空间，如：选择弹性云服务器，则命名空间为SYS.ECS，可查看各资源的“[服务命名空间](ces_03_0059.xml)”。
     *
     * @return $this
     */
@@ -301,7 +334,7 @@ class AlarmTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensionName
-    *  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各服务资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    *  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
     *
     * @return string|null
     */
@@ -313,7 +346,7 @@ class AlarmTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets dimensionName
     *
-    * @param string|null $dimensionName 自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各服务资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * @param string|null $dimensionName 自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
     *
     * @return $this
     */

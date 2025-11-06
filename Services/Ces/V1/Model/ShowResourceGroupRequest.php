@@ -20,12 +20,12 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  资源分组ID。
-    * status  资源健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，
-    * namespace  资源类型，即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dname  资源维度，如：弹性云服务器，则维度为instance_id，各资源的监控维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
+    * status  **参数解释** 资源分组健康状态 **约束限制** 不涉及 **取值范围** - health: 表示健康 - unhealth: 表示不健康 - no_alarm_rule: 表示未配置告警规则 **默认取值** 不涉及
+    * namespace  **参数解释** 资源类型，即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度在 [3,32]个字符之间 **默认取值** 不涉及
+    * dname  **参数解释** 资源维度，如：弹性云服务器，则维度为instance_id，各资源的监控维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 包含字母、数字、_、-、/、#、\\或括号，长度为[1,131]个字符 **默认取值** 不涉及
+    * start  **参数解释** 分页起始值 **约束限制** 不涉及 **取值范围** [0,9999999] **默认取值** 0
+    * limit  **参数解释** 单次查询的条数限制 **约束限制** 不涉及 **取值范围** [1,100] **默认取值** 100
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  资源分组ID。
-    * status  资源健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，
-    * namespace  资源类型，即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dname  资源维度，如：弹性云服务器，则维度为instance_id，各资源的监控维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
+    * status  **参数解释** 资源分组健康状态 **约束限制** 不涉及 **取值范围** - health: 表示健康 - unhealth: 表示不健康 - no_alarm_rule: 表示未配置告警规则 **默认取值** 不涉及
+    * namespace  **参数解释** 资源类型，即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度在 [3,32]个字符之间 **默认取值** 不涉及
+    * dname  **参数解释** 资源维度，如：弹性云服务器，则维度为instance_id，各资源的监控维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 包含字母、数字、_、-、/、#、\\或括号，长度为[1,131]个字符 **默认取值** 不涉及
+    * start  **参数解释** 分页起始值 **约束限制** 不涉及 **取值范围** [0,9999999] **默认取值** 0
+    * limit  **参数解释** 单次查询的条数限制 **约束限制** 不涉及 **取值范围** [1,100] **默认取值** 100
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  资源分组ID。
-    * status  资源健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，
-    * namespace  资源类型，即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dname  资源维度，如：弹性云服务器，则维度为instance_id，各资源的监控维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
+    * status  **参数解释** 资源分组健康状态 **约束限制** 不涉及 **取值范围** - health: 表示健康 - unhealth: 表示不健康 - no_alarm_rule: 表示未配置告警规则 **默认取值** 不涉及
+    * namespace  **参数解释** 资源类型，即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度在 [3,32]个字符之间 **默认取值** 不涉及
+    * dname  **参数解释** 资源维度，如：弹性云服务器，则维度为instance_id，各资源的监控维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 包含字母、数字、_、-、/、#、\\或括号，长度为[1,131]个字符 **默认取值** 不涉及
+    * start  **参数解释** 分页起始值 **约束限制** 不涉及 **取值范围** [0,9999999] **默认取值** 0
+    * limit  **参数解释** 单次查询的条数限制 **约束限制** 不涉及 **取值范围** [1,100] **默认取值** 100
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  资源分组ID。
-    * status  资源健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，
-    * namespace  资源类型，即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dname  资源维度，如：弹性云服务器，则维度为instance_id，各资源的监控维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
+    * status  **参数解释** 资源分组健康状态 **约束限制** 不涉及 **取值范围** - health: 表示健康 - unhealth: 表示不健康 - no_alarm_rule: 表示未配置告警规则 **默认取值** 不涉及
+    * namespace  **参数解释** 资源类型，即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度在 [3,32]个字符之间 **默认取值** 不涉及
+    * dname  **参数解释** 资源维度，如：弹性云服务器，则维度为instance_id，各资源的监控维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 包含字母、数字、_、-、/、#、\\或括号，长度为[1,131]个字符 **默认取值** 不涉及
+    * start  **参数解释** 分页起始值 **约束限制** 不涉及 **取值范围** [0,9999999] **默认取值** 0
+    * limit  **参数解释** 单次查询的条数限制 **约束限制** 不涉及 **取值范围** [1,100] **默认取值** 100
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  资源分组ID。
-    * status  资源健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，
-    * namespace  资源类型，即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dname  资源维度，如：弹性云服务器，则维度为instance_id，各资源的监控维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
+    * status  **参数解释** 资源分组健康状态 **约束限制** 不涉及 **取值范围** - health: 表示健康 - unhealth: 表示不健康 - no_alarm_rule: 表示未配置告警规则 **默认取值** 不涉及
+    * namespace  **参数解释** 资源类型，即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度在 [3,32]个字符之间 **默认取值** 不涉及
+    * dname  **参数解释** 资源维度，如：弹性云服务器，则维度为instance_id，各资源的监控维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 包含字母、数字、_、-、/、#、\\或括号，长度为[1,131]个字符 **默认取值** 不涉及
+    * start  **参数解释** 分页起始值 **约束限制** 不涉及 **取值范围** [0,9999999] **默认取值** 0
+    * limit  **参数解释** 单次查询的条数限制 **约束限制** 不涉及 **取值范围** [1,100] **默认取值** 100
     *
     * @var string[]
     */
@@ -179,7 +179,24 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_HEALTH = 'health';
+    const STATUS_UNHEALTH = 'unhealth';
+    const STATUS_NO_ALARM_RULE = 'no_alarm_rule';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_HEALTH,
+            self::STATUS_UNHEALTH,
+            self::STATUS_NO_ALARM_RULE,
+        ];
+    }
 
 
     /**
@@ -216,6 +233,35 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
         if ($this->container['groupId'] === null) {
             $invalidProperties[] = "'groupId' can't be null";
         }
+            if (!preg_match("/^rg([a-z]|[A-Z]|[0-9]){22}$/", $this->container['groupId'])) {
+                $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /^rg([a-z]|[A-Z]|[0-9]){22}$/.";
+            }
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 32)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 3)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['namespace']) && !preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/", $this->container['namespace'])) {
+                $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/.";
+            }
+            if (!is_null($this->container['dname']) && (mb_strlen($this->container['dname']) > 131)) {
+                $invalidProperties[] = "invalid value for 'dname', the character length must be smaller than or equal to 131.";
+            }
+            if (!is_null($this->container['dname']) && (mb_strlen($this->container['dname']) < 1)) {
+                $invalidProperties[] = "invalid value for 'dname', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['dname']) && !preg_match("/^([a-z]|[A-Z]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\/|#|\\(|\\)){0,31}(,([a-z]|[A-Z]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\/|#|\\(|\\)){0,31}){0,3}$/", $this->container['dname'])) {
+                $invalidProperties[] = "invalid value for 'dname', must be conform to the pattern /^([a-z]|[A-Z]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\/|#|\\(|\\)){0,31}(,([a-z]|[A-Z]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\/|#|\\(|\\)){0,31}){0,3}$/.";
+            }
         return $invalidProperties;
     }
 
@@ -232,7 +278,7 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  资源分组ID。
+    *  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
     *
     * @return string
     */
@@ -244,7 +290,7 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string $groupId 资源分组ID。
+    * @param string $groupId **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -256,7 +302,7 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，
+    *  **参数解释** 资源分组健康状态 **约束限制** 不涉及 **取值范围** - health: 表示健康 - unhealth: 表示不健康 - no_alarm_rule: 表示未配置告警规则 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -268,7 +314,7 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，
+    * @param string|null $status **参数解释** 资源分组健康状态 **约束限制** 不涉及 **取值范围** - health: 表示健康 - unhealth: 表示不健康 - no_alarm_rule: 表示未配置告警规则 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -280,7 +326,7 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  资源类型，即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    *  **参数解释** 资源类型，即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度在 [3,32]个字符之间 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -292,7 +338,7 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 资源类型，即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * @param string|null $namespace **参数解释** 资源类型，即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度在 [3,32]个字符之间 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -304,7 +350,7 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dname
-    *  资源维度，如：弹性云服务器，则维度为instance_id，各资源的监控维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    *  **参数解释** 资源维度，如：弹性云服务器，则维度为instance_id，各资源的监控维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 包含字母、数字、_、-、/、#、\\或括号，长度为[1,131]个字符 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -316,7 +362,7 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dname
     *
-    * @param string|null $dname 资源维度，如：弹性云服务器，则维度为instance_id，各资源的监控维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * @param string|null $dname **参数解释** 资源维度，如：弹性云服务器，则维度为instance_id，各资源的监控维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 包含字母、数字、_、-、/、#、\\或括号，长度为[1,131]个字符 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -328,7 +374,7 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets start
-    *  分页起始值，类型为integer，默认值为0。
+    *  **参数解释** 分页起始值 **约束限制** 不涉及 **取值范围** [0,9999999] **默认取值** 0
     *
     * @return string|null
     */
@@ -340,7 +386,7 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets start
     *
-    * @param string|null $start 分页起始值，类型为integer，默认值为0。
+    * @param string|null $start **参数解释** 分页起始值 **约束限制** 不涉及 **取值范围** [0,9999999] **默认取值** 0
     *
     * @return $this
     */
@@ -352,7 +398,7 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    *  **参数解释** 单次查询的条数限制 **约束限制** 不涉及 **取值范围** [1,100] **默认取值** 100
     *
     * @return string|null
     */
@@ -364,7 +410,7 @@ class ShowResourceGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * @param string|null $limit **参数解释** 单次查询的条数限制 **约束限制** 不涉及 **取值范围** [1,100] **默认取值** 100
     *
     * @return $this
     */

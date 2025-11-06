@@ -28,6 +28,7 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
     * quickAnalysis  是否快速分析
     * ascii  特殊分词符
     * ltsSubFieldsInfoList  json字段信息
+    * fieldAnalysisAlias  **参数解释：** 别名，设置别名后，只支持使用别名进行SQL搜索分析，不支持使用别名进行关键字搜索。 **约束限制：**  不涉及。 **取值范围：** 长度不能大于256。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
             'tokenizer' => 'string',
             'quickAnalysis' => 'bool',
             'ascii' => 'string[]',
-            'ltsSubFieldsInfoList' => '\HuaweiCloud\SDK\Lts\V2\Model\LTSSubFieldsInfo[]'
+            'ltsSubFieldsInfoList' => '\HuaweiCloud\SDK\Lts\V2\Model\LTSSubFieldsInfo[]',
+            'fieldAnalysisAlias' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
     * quickAnalysis  是否快速分析
     * ascii  特殊分词符
     * ltsSubFieldsInfoList  json字段信息
+    * fieldAnalysisAlias  **参数解释：** 别名，设置别名后，只支持使用别名进行SQL搜索分析，不支持使用别名进行关键字搜索。 **约束限制：**  不涉及。 **取值范围：** 长度不能大于256。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
         'tokenizer' => null,
         'quickAnalysis' => null,
         'ascii' => null,
-        'ltsSubFieldsInfoList' => null
+        'ltsSubFieldsInfoList' => null,
+        'fieldAnalysisAlias' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
     * quickAnalysis  是否快速分析
     * ascii  特殊分词符
     * ltsSubFieldsInfoList  json字段信息
+    * fieldAnalysisAlias  **参数解释：** 别名，设置别名后，只支持使用别名进行SQL搜索分析，不支持使用别名进行关键字搜索。 **约束限制：**  不涉及。 **取值范围：** 长度不能大于256。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
             'tokenizer' => 'tokenizer',
             'quickAnalysis' => 'quickAnalysis',
             'ascii' => 'ascii',
-            'ltsSubFieldsInfoList' => 'ltsSubFieldsInfoList'
+            'ltsSubFieldsInfoList' => 'ltsSubFieldsInfoList',
+            'fieldAnalysisAlias' => 'fieldAnalysisAlias'
     ];
 
     /**
@@ -121,6 +127,7 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
     * quickAnalysis  是否快速分析
     * ascii  特殊分词符
     * ltsSubFieldsInfoList  json字段信息
+    * fieldAnalysisAlias  **参数解释：** 别名，设置别名后，只支持使用别名进行SQL搜索分析，不支持使用别名进行关键字搜索。 **约束限制：**  不涉及。 **取值范围：** 长度不能大于256。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
             'tokenizer' => 'setTokenizer',
             'quickAnalysis' => 'setQuickAnalysis',
             'ascii' => 'setAscii',
-            'ltsSubFieldsInfoList' => 'setLtsSubFieldsInfoList'
+            'ltsSubFieldsInfoList' => 'setLtsSubFieldsInfoList',
+            'fieldAnalysisAlias' => 'setFieldAnalysisAlias'
     ];
 
     /**
@@ -145,6 +153,7 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
     * quickAnalysis  是否快速分析
     * ascii  特殊分词符
     * ltsSubFieldsInfoList  json字段信息
+    * fieldAnalysisAlias  **参数解释：** 别名，设置别名后，只支持使用别名进行SQL搜索分析，不支持使用别名进行关键字搜索。 **约束限制：**  不涉及。 **取值范围：** 长度不能大于256。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
             'tokenizer' => 'getTokenizer',
             'quickAnalysis' => 'getQuickAnalysis',
             'ascii' => 'getAscii',
-            'ltsSubFieldsInfoList' => 'getLtsSubFieldsInfoList'
+            'ltsSubFieldsInfoList' => 'getLtsSubFieldsInfoList',
+            'fieldAnalysisAlias' => 'getFieldAnalysisAlias'
     ];
 
     /**
@@ -244,6 +254,7 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
         $this->container['quickAnalysis'] = isset($data['quickAnalysis']) ? $data['quickAnalysis'] : null;
         $this->container['ascii'] = isset($data['ascii']) ? $data['ascii'] : null;
         $this->container['ltsSubFieldsInfoList'] = isset($data['ltsSubFieldsInfoList']) ? $data['ltsSubFieldsInfoList'] : null;
+        $this->container['fieldAnalysisAlias'] = isset($data['fieldAnalysisAlias']) ? $data['fieldAnalysisAlias'] : null;
     }
 
     /**
@@ -486,6 +497,30 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
     public function setLtsSubFieldsInfoList($ltsSubFieldsInfoList)
     {
         $this->container['ltsSubFieldsInfoList'] = $ltsSubFieldsInfoList;
+        return $this;
+    }
+
+    /**
+    * Gets fieldAnalysisAlias
+    *  **参数解释：** 别名，设置别名后，只支持使用别名进行SQL搜索分析，不支持使用别名进行关键字搜索。 **约束限制：**  不涉及。 **取值范围：** 长度不能大于256。 **默认取值：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getFieldAnalysisAlias()
+    {
+        return $this->container['fieldAnalysisAlias'];
+    }
+
+    /**
+    * Sets fieldAnalysisAlias
+    *
+    * @param string|null $fieldAnalysisAlias **参数解释：** 别名，设置别名后，只支持使用别名进行SQL搜索分析，不支持使用别名进行关键字搜索。 **约束限制：**  不涉及。 **取值范围：** 长度不能大于256。 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setFieldAnalysisAlias($fieldAnalysisAlias)
+    {
+        $this->container['fieldAnalysisAlias'] = $fieldAnalysisAlias;
         return $this;
     }
 

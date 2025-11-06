@@ -20,50 +20,56 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmName  告警名称，只能包含0-9/a-z/A-Z/_/-或汉字。
-    * alarmDescription  告警描述，长度0-256。
+    * alarmName  **参数解释**： 告警名称。 **约束限制**： 不涉及。 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128。 **默认取值**： 不涉及。
+    * alarmDescription  **参数解释**： 告警描述。 **约束限制**： 不涉及。 **取值范围**： 长度[0,256]个字符。 **默认取值**： 不涉及。
     * metric  metric
     * condition  condition
-    * alarmEnabled  是否启用该条告警，默认为true。
-    * alarmActionEnabled  是否启用该条告警触发的动作，默认为true。注：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。
-    * alarmLevel  告警级别，默认为2，级别为1、2、3、4。分别对应紧急、重要、次要、提示。
-    * alarmType  告警类型，支持的枚举类型：EVENT.SYS：针对系统事件的告警规则；EVENT.CUSTOM：针对自定义事件的告警规则；RESOURCE_GROUP：针对资源分组的告警规则。
-    * alarmActions  告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
-    * insufficientdataActions  数据不足触发的动作（该参数已废弃，建议无需配置）。
-    * okActions  告警恢复触发的动作
-    * enterpriseProjectId  企业项目ID。默认值为0，表示默认的企业项目default。说明：此参数在“华东-上海一”区域上线。
+    * alarmEnabled  **参数解释**： 是否启用该条告警。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true：开启告警。 - false：不开启告警。 **默认取值**： true
+    * alarmActionEnabled  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
+    * alarmLevel  **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。分别对应紧急、重要、次要、提示。 **默认取值**： 2
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对多实例的告警规则。 **默认取值**： 不涉及。
+    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * insufficientdataActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * okActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[9.5-获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
+    * alarmActionBeginTime  **参数解释**： 告警通知开启时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * alarmActionEndTime  **参数解释**： 告警通知关闭时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'alarmName' => 'string',
             'alarmDescription' => 'string',
-            'metric' => '\HuaweiCloud\SDK\Ces\V1\Model\MetricForAlarm',
+            'metric' => '\HuaweiCloud\SDK\Ces\V1\Model\CreateAlarmMetric',
             'condition' => '\HuaweiCloud\SDK\Ces\V1\Model\Condition',
             'alarmEnabled' => 'bool',
             'alarmActionEnabled' => 'bool',
             'alarmLevel' => 'int',
             'alarmType' => 'string',
-            'alarmActions' => '\HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]',
-            'insufficientdataActions' => '\HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]',
-            'okActions' => '\HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]',
-            'enterpriseProjectId' => 'string'
+            'alarmActions' => '\HuaweiCloud\SDK\Ces\V1\Model\Notification[]',
+            'insufficientdataActions' => '\HuaweiCloud\SDK\Ces\V1\Model\Notification[]',
+            'okActions' => '\HuaweiCloud\SDK\Ces\V1\Model\Notification[]',
+            'enterpriseProjectId' => 'string',
+            'alarmActionBeginTime' => 'string',
+            'alarmActionEndTime' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmName  告警名称，只能包含0-9/a-z/A-Z/_/-或汉字。
-    * alarmDescription  告警描述，长度0-256。
+    * alarmName  **参数解释**： 告警名称。 **约束限制**： 不涉及。 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128。 **默认取值**： 不涉及。
+    * alarmDescription  **参数解释**： 告警描述。 **约束限制**： 不涉及。 **取值范围**： 长度[0,256]个字符。 **默认取值**： 不涉及。
     * metric  metric
     * condition  condition
-    * alarmEnabled  是否启用该条告警，默认为true。
-    * alarmActionEnabled  是否启用该条告警触发的动作，默认为true。注：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。
-    * alarmLevel  告警级别，默认为2，级别为1、2、3、4。分别对应紧急、重要、次要、提示。
-    * alarmType  告警类型，支持的枚举类型：EVENT.SYS：针对系统事件的告警规则；EVENT.CUSTOM：针对自定义事件的告警规则；RESOURCE_GROUP：针对资源分组的告警规则。
-    * alarmActions  告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
-    * insufficientdataActions  数据不足触发的动作（该参数已废弃，建议无需配置）。
-    * okActions  告警恢复触发的动作
-    * enterpriseProjectId  企业项目ID。默认值为0，表示默认的企业项目default。说明：此参数在“华东-上海一”区域上线。
+    * alarmEnabled  **参数解释**： 是否启用该条告警。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true：开启告警。 - false：不开启告警。 **默认取值**： true
+    * alarmActionEnabled  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
+    * alarmLevel  **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。分别对应紧急、重要、次要、提示。 **默认取值**： 2
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对多实例的告警规则。 **默认取值**： 不涉及。
+    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * insufficientdataActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * okActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[9.5-获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
+    * alarmActionBeginTime  **参数解释**： 告警通知开启时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * alarmActionEndTime  **参数解释**： 告警通知关闭时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -79,7 +85,9 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
         'alarmActions' => null,
         'insufficientdataActions' => null,
         'okActions' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'alarmActionBeginTime' => null,
+        'alarmActionEndTime' => null
     ];
 
     /**
@@ -105,18 +113,20 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmName  告警名称，只能包含0-9/a-z/A-Z/_/-或汉字。
-    * alarmDescription  告警描述，长度0-256。
+    * alarmName  **参数解释**： 告警名称。 **约束限制**： 不涉及。 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128。 **默认取值**： 不涉及。
+    * alarmDescription  **参数解释**： 告警描述。 **约束限制**： 不涉及。 **取值范围**： 长度[0,256]个字符。 **默认取值**： 不涉及。
     * metric  metric
     * condition  condition
-    * alarmEnabled  是否启用该条告警，默认为true。
-    * alarmActionEnabled  是否启用该条告警触发的动作，默认为true。注：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。
-    * alarmLevel  告警级别，默认为2，级别为1、2、3、4。分别对应紧急、重要、次要、提示。
-    * alarmType  告警类型，支持的枚举类型：EVENT.SYS：针对系统事件的告警规则；EVENT.CUSTOM：针对自定义事件的告警规则；RESOURCE_GROUP：针对资源分组的告警规则。
-    * alarmActions  告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
-    * insufficientdataActions  数据不足触发的动作（该参数已废弃，建议无需配置）。
-    * okActions  告警恢复触发的动作
-    * enterpriseProjectId  企业项目ID。默认值为0，表示默认的企业项目default。说明：此参数在“华东-上海一”区域上线。
+    * alarmEnabled  **参数解释**： 是否启用该条告警。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true：开启告警。 - false：不开启告警。 **默认取值**： true
+    * alarmActionEnabled  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
+    * alarmLevel  **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。分别对应紧急、重要、次要、提示。 **默认取值**： 2
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对多实例的告警规则。 **默认取值**： 不涉及。
+    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * insufficientdataActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * okActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[9.5-获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
+    * alarmActionBeginTime  **参数解释**： 告警通知开启时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * alarmActionEndTime  **参数解释**： 告警通知关闭时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -132,23 +142,27 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
             'alarmActions' => 'alarm_actions',
             'insufficientdataActions' => 'insufficientdata_actions',
             'okActions' => 'ok_actions',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'alarmActionBeginTime' => 'alarm_action_begin_time',
+            'alarmActionEndTime' => 'alarm_action_end_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmName  告警名称，只能包含0-9/a-z/A-Z/_/-或汉字。
-    * alarmDescription  告警描述，长度0-256。
+    * alarmName  **参数解释**： 告警名称。 **约束限制**： 不涉及。 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128。 **默认取值**： 不涉及。
+    * alarmDescription  **参数解释**： 告警描述。 **约束限制**： 不涉及。 **取值范围**： 长度[0,256]个字符。 **默认取值**： 不涉及。
     * metric  metric
     * condition  condition
-    * alarmEnabled  是否启用该条告警，默认为true。
-    * alarmActionEnabled  是否启用该条告警触发的动作，默认为true。注：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。
-    * alarmLevel  告警级别，默认为2，级别为1、2、3、4。分别对应紧急、重要、次要、提示。
-    * alarmType  告警类型，支持的枚举类型：EVENT.SYS：针对系统事件的告警规则；EVENT.CUSTOM：针对自定义事件的告警规则；RESOURCE_GROUP：针对资源分组的告警规则。
-    * alarmActions  告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
-    * insufficientdataActions  数据不足触发的动作（该参数已废弃，建议无需配置）。
-    * okActions  告警恢复触发的动作
-    * enterpriseProjectId  企业项目ID。默认值为0，表示默认的企业项目default。说明：此参数在“华东-上海一”区域上线。
+    * alarmEnabled  **参数解释**： 是否启用该条告警。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true：开启告警。 - false：不开启告警。 **默认取值**： true
+    * alarmActionEnabled  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
+    * alarmLevel  **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。分别对应紧急、重要、次要、提示。 **默认取值**： 2
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对多实例的告警规则。 **默认取值**： 不涉及。
+    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * insufficientdataActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * okActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[9.5-获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
+    * alarmActionBeginTime  **参数解释**： 告警通知开启时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * alarmActionEndTime  **参数解释**： 告警通知关闭时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -164,23 +178,27 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
             'alarmActions' => 'setAlarmActions',
             'insufficientdataActions' => 'setInsufficientdataActions',
             'okActions' => 'setOkActions',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'alarmActionBeginTime' => 'setAlarmActionBeginTime',
+            'alarmActionEndTime' => 'setAlarmActionEndTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmName  告警名称，只能包含0-9/a-z/A-Z/_/-或汉字。
-    * alarmDescription  告警描述，长度0-256。
+    * alarmName  **参数解释**： 告警名称。 **约束限制**： 不涉及。 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128。 **默认取值**： 不涉及。
+    * alarmDescription  **参数解释**： 告警描述。 **约束限制**： 不涉及。 **取值范围**： 长度[0,256]个字符。 **默认取值**： 不涉及。
     * metric  metric
     * condition  condition
-    * alarmEnabled  是否启用该条告警，默认为true。
-    * alarmActionEnabled  是否启用该条告警触发的动作，默认为true。注：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。
-    * alarmLevel  告警级别，默认为2，级别为1、2、3、4。分别对应紧急、重要、次要、提示。
-    * alarmType  告警类型，支持的枚举类型：EVENT.SYS：针对系统事件的告警规则；EVENT.CUSTOM：针对自定义事件的告警规则；RESOURCE_GROUP：针对资源分组的告警规则。
-    * alarmActions  告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
-    * insufficientdataActions  数据不足触发的动作（该参数已废弃，建议无需配置）。
-    * okActions  告警恢复触发的动作
-    * enterpriseProjectId  企业项目ID。默认值为0，表示默认的企业项目default。说明：此参数在“华东-上海一”区域上线。
+    * alarmEnabled  **参数解释**： 是否启用该条告警。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true：开启告警。 - false：不开启告警。 **默认取值**： true
+    * alarmActionEnabled  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
+    * alarmLevel  **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。分别对应紧急、重要、次要、提示。 **默认取值**： 2
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对多实例的告警规则。 **默认取值**： 不涉及。
+    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * insufficientdataActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * okActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[9.5-获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
+    * alarmActionBeginTime  **参数解释**： 告警通知开启时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * alarmActionEndTime  **参数解释**： 告警通知关闭时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +214,9 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
             'alarmActions' => 'getAlarmActions',
             'insufficientdataActions' => 'getInsufficientdataActions',
             'okActions' => 'getOkActions',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'alarmActionBeginTime' => 'getAlarmActionBeginTime',
+            'alarmActionEndTime' => 'getAlarmActionEndTime'
     ];
 
     /**
@@ -239,24 +259,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ALARM_TYPE_EVENT_SYS = 'EVENT.SYS';
-    const ALARM_TYPE_EVENT_CUSTOM = 'EVENT.CUSTOM';
-    const ALARM_TYPE_RESOURCE_GROUP = 'RESOURCE_GROUP';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getAlarmTypeAllowableValues()
-    {
-        return [
-            self::ALARM_TYPE_EVENT_SYS,
-            self::ALARM_TYPE_EVENT_CUSTOM,
-            self::ALARM_TYPE_RESOURCE_GROUP,
-        ];
-    }
 
 
     /**
@@ -286,6 +289,8 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
         $this->container['insufficientdataActions'] = isset($data['insufficientdataActions']) ? $data['insufficientdataActions'] : null;
         $this->container['okActions'] = isset($data['okActions']) ? $data['okActions'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['alarmActionBeginTime'] = isset($data['alarmActionBeginTime']) ? $data['alarmActionBeginTime'] : null;
+        $this->container['alarmActionEndTime'] = isset($data['alarmActionEndTime']) ? $data['alarmActionEndTime'] : null;
     }
 
     /**
@@ -299,20 +304,54 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['alarmName'] === null) {
             $invalidProperties[] = "'alarmName' can't be null";
         }
+            if ((mb_strlen($this->container['alarmName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'alarmName', the character length must be smaller than or equal to 128.";
+            }
+            if ((mb_strlen($this->container['alarmName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'alarmName', the character length must be bigger than or equal to 1.";
+            }
+            if (!preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['alarmName'])) {
+                $invalidProperties[] = "invalid value for 'alarmName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
+            }
+            if (!is_null($this->container['alarmDescription']) && (mb_strlen($this->container['alarmDescription']) > 256)) {
+                $invalidProperties[] = "invalid value for 'alarmDescription', the character length must be smaller than or equal to 256.";
+            }
         if ($this->container['metric'] === null) {
             $invalidProperties[] = "'metric' can't be null";
         }
         if ($this->container['condition'] === null) {
             $invalidProperties[] = "'condition' can't be null";
         }
-            $allowedValues = $this->getAlarmTypeAllowableValues();
-                if (!is_null($this->container['alarmType']) && !in_array($this->container['alarmType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'alarmType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['alarmLevel']) && ($this->container['alarmLevel'] > 4)) {
+                $invalidProperties[] = "invalid value for 'alarmLevel', must be smaller than or equal to 4.";
             }
-
+            if (!is_null($this->container['alarmLevel']) && ($this->container['alarmLevel'] < 1)) {
+                $invalidProperties[] = "invalid value for 'alarmLevel', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['alarmType']) && !preg_match("/^(EVENT.SYS|EVENT.CUSTOM|DNSHealthCheck|RESOURCE_GROUP|MULTI_INSTANCE)$/", $this->container['alarmType'])) {
+                $invalidProperties[] = "invalid value for 'alarmType', must be conform to the pattern /^(EVENT.SYS|EVENT.CUSTOM|DNSHealthCheck|RESOURCE_GROUP|MULTI_INSTANCE)$/.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^((([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12})|0)$/", $this->container['enterpriseProjectId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^((([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12})|0)$/.";
+            }
+            if (!is_null($this->container['alarmActionBeginTime']) && (mb_strlen($this->container['alarmActionBeginTime']) > 64)) {
+                $invalidProperties[] = "invalid value for 'alarmActionBeginTime', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['alarmActionBeginTime']) && (mb_strlen($this->container['alarmActionBeginTime']) < 1)) {
+                $invalidProperties[] = "invalid value for 'alarmActionBeginTime', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['alarmActionBeginTime']) && !preg_match("/^([01][0-9]|2[0-3]):([0-5][0-9])$/", $this->container['alarmActionBeginTime'])) {
+                $invalidProperties[] = "invalid value for 'alarmActionBeginTime', must be conform to the pattern /^([01][0-9]|2[0-3]):([0-5][0-9])$/.";
+            }
+            if (!is_null($this->container['alarmActionEndTime']) && (mb_strlen($this->container['alarmActionEndTime']) > 64)) {
+                $invalidProperties[] = "invalid value for 'alarmActionEndTime', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['alarmActionEndTime']) && (mb_strlen($this->container['alarmActionEndTime']) < 1)) {
+                $invalidProperties[] = "invalid value for 'alarmActionEndTime', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['alarmActionEndTime']) && !preg_match("/^([01][0-9]|2[0-3]):([0-5][0-9])$/", $this->container['alarmActionEndTime'])) {
+                $invalidProperties[] = "invalid value for 'alarmActionEndTime', must be conform to the pattern /^([01][0-9]|2[0-3]):([0-5][0-9])$/.";
+            }
         return $invalidProperties;
     }
 
@@ -329,7 +368,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmName
-    *  告警名称，只能包含0-9/a-z/A-Z/_/-或汉字。
+    *  **参数解释**： 告警名称。 **约束限制**： 不涉及。 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -341,7 +380,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmName
     *
-    * @param string $alarmName 告警名称，只能包含0-9/a-z/A-Z/_/-或汉字。
+    * @param string $alarmName **参数解释**： 告警名称。 **约束限制**： 不涉及。 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -353,7 +392,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmDescription
-    *  告警描述，长度0-256。
+    *  **参数解释**： 告警描述。 **约束限制**： 不涉及。 **取值范围**： 长度[0,256]个字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -365,7 +404,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmDescription
     *
-    * @param string|null $alarmDescription 告警描述，长度0-256。
+    * @param string|null $alarmDescription **参数解释**： 告警描述。 **约束限制**： 不涉及。 **取值范围**： 长度[0,256]个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -379,7 +418,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     * Gets metric
     *  metric
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\MetricForAlarm
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\CreateAlarmMetric
     */
     public function getMetric()
     {
@@ -389,7 +428,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets metric
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\MetricForAlarm $metric metric
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\CreateAlarmMetric $metric metric
     *
     * @return $this
     */
@@ -425,7 +464,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmEnabled
-    *  是否启用该条告警，默认为true。
+    *  **参数解释**： 是否启用该条告警。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true：开启告警。 - false：不开启告警。 **默认取值**： true
     *
     * @return bool|null
     */
@@ -437,7 +476,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmEnabled
     *
-    * @param bool|null $alarmEnabled 是否启用该条告警，默认为true。
+    * @param bool|null $alarmEnabled **参数解释**： 是否启用该条告警。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true：开启告警。 - false：不开启告警。 **默认取值**： true
     *
     * @return $this
     */
@@ -449,7 +488,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmActionEnabled
-    *  是否启用该条告警触发的动作，默认为true。注：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。
+    *  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
     *
     * @return bool|null
     */
@@ -461,7 +500,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmActionEnabled
     *
-    * @param bool|null $alarmActionEnabled 是否启用该条告警触发的动作，默认为true。注：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。
+    * @param bool|null $alarmActionEnabled **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
     *
     * @return $this
     */
@@ -473,7 +512,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmLevel
-    *  告警级别，默认为2，级别为1、2、3、4。分别对应紧急、重要、次要、提示。
+    *  **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。分别对应紧急、重要、次要、提示。 **默认取值**： 2
     *
     * @return int|null
     */
@@ -485,7 +524,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmLevel
     *
-    * @param int|null $alarmLevel 告警级别，默认为2，级别为1、2、3、4。分别对应紧急、重要、次要、提示。
+    * @param int|null $alarmLevel **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。分别对应紧急、重要、次要、提示。 **默认取值**： 2
     *
     * @return $this
     */
@@ -497,7 +536,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmType
-    *  告警类型，支持的枚举类型：EVENT.SYS：针对系统事件的告警规则；EVENT.CUSTOM：针对自定义事件的告警规则；RESOURCE_GROUP：针对资源分组的告警规则。
+    *  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对多实例的告警规则。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -509,7 +548,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmType
     *
-    * @param string|null $alarmType 告警类型，支持的枚举类型：EVENT.SYS：针对系统事件的告警规则；EVENT.CUSTOM：针对自定义事件的告警规则；RESOURCE_GROUP：针对资源分组的告警规则。
+    * @param string|null $alarmType **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对多实例的告警规则。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -521,9 +560,9 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmActions
-    *  告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
+    *  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\Notification[]|null
     */
     public function getAlarmActions()
     {
@@ -533,7 +572,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmActions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]|null $alarmActions 告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[]|null $alarmActions **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
     *
     * @return $this
     */
@@ -545,9 +584,9 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets insufficientdataActions
-    *  数据不足触发的动作（该参数已废弃，建议无需配置）。
+    *  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\Notification[]|null
     */
     public function getInsufficientdataActions()
     {
@@ -557,7 +596,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets insufficientdataActions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]|null $insufficientdataActions 数据不足触发的动作（该参数已废弃，建议无需配置）。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[]|null $insufficientdataActions **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
     *
     * @return $this
     */
@@ -569,9 +608,9 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets okActions
-    *  告警恢复触发的动作
+    *  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\Notification[]|null
     */
     public function getOkActions()
     {
@@ -581,7 +620,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets okActions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]|null $okActions 告警恢复触发的动作
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[]|null $okActions **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
     *
     * @return $this
     */
@@ -593,7 +632,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID。默认值为0，表示默认的企业项目default。说明：此参数在“华东-上海一”区域上线。
+    *  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[9.5-获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
     *
     * @return string|null
     */
@@ -605,13 +644,61 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID。默认值为0，表示默认的企业项目default。说明：此参数在“华东-上海一”区域上线。
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[9.5-获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
     *
     * @return $this
     */
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets alarmActionBeginTime
+    *  **参数解释**： 告警通知开启时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getAlarmActionBeginTime()
+    {
+        return $this->container['alarmActionBeginTime'];
+    }
+
+    /**
+    * Sets alarmActionBeginTime
+    *
+    * @param string|null $alarmActionBeginTime **参数解释**： 告警通知开启时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setAlarmActionBeginTime($alarmActionBeginTime)
+    {
+        $this->container['alarmActionBeginTime'] = $alarmActionBeginTime;
+        return $this;
+    }
+
+    /**
+    * Gets alarmActionEndTime
+    *  **参数解释**： 告警通知关闭时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getAlarmActionEndTime()
+    {
+        return $this->container['alarmActionEndTime'];
+    }
+
+    /**
+    * Sets alarmActionEndTime
+    *
+    * @param string|null $alarmActionEndTime **参数解释**： 告警通知关闭时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setAlarmActionEndTime($alarmActionEndTime)
+    {
+        $this->container['alarmActionEndTime'] = $alarmActionEndTime;
         return $this;
     }
 

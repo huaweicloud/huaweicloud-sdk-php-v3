@@ -22,10 +22,10 @@ class EventTriggerCondition implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * eventName  事件名称。
     * triggerType  触发方式： - “immediately”：立即触发 - “accumulative”：累计触发
-    * aggregationWindow  统计周期。单位为秒，例如 1小时 填“3600”，当trigger_type为“immediately”时 不填。
-    * operator  判断条件：“>”,“<”,“=”,“>=”,“<=”，当trigger_type为“immediately”时 不填。
-    * thresholds  键值对形式，键为告警级别，值为累计次数，当trigger_type为“immediately”时 值为空。
-    * frequency  事件类告警频率。当trigger_type为“immediately”时 不填。 - “0”：只告警一次 - “300”：每5分钟 - “600”：每10分钟： - “900”：每15分钟： - “1800”：每30分钟： - “3600”：每1小时： - “10800”：每3小时： - “21600”：每6小时： - “43200”：每12小时： - “86400”：每天：
+    * aggregationWindow  监控周期。单位为秒，例如 1小时 填“3600”，当trigger_type为“immediately”时 该参数为空，当trigger_type为“accumulative”时 该参数必填。 监控周期范围： 5分钟，20分钟，1小时，4小时，24小时。
+    * operator  判断条件：“>”,“<”,“=”,“>=”,“<=”，当trigger_type为“immediately”时 该参数为空。当trigger_type为“accumulative”时 该参数必填。
+    * thresholds  键值对形式，键为告警级别，值为累计次数，当trigger_type为“immediately”时 累计次数为1。当当trigger_type为“accumulative”时 累计次数范围为1~100 （如果trigger_conditions参数不为空，该参数必填）
+    * frequency  事件类告警频率。当trigger_type为“immediately”时 值为-1。 - “-1”：N/A - “0”：只告警一次 - “300”：每5分钟 - “600”：每10分钟： - “900”：每15分钟： - “1800”：每30分钟： - “3600”：每1小时： - “10800”：每3小时： - “21600”：每6小时： - “43200”：每12小时： - “86400”：每天：
     *
     * @var string[]
     */
@@ -42,10 +42,10 @@ class EventTriggerCondition implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * eventName  事件名称。
     * triggerType  触发方式： - “immediately”：立即触发 - “accumulative”：累计触发
-    * aggregationWindow  统计周期。单位为秒，例如 1小时 填“3600”，当trigger_type为“immediately”时 不填。
-    * operator  判断条件：“>”,“<”,“=”,“>=”,“<=”，当trigger_type为“immediately”时 不填。
-    * thresholds  键值对形式，键为告警级别，值为累计次数，当trigger_type为“immediately”时 值为空。
-    * frequency  事件类告警频率。当trigger_type为“immediately”时 不填。 - “0”：只告警一次 - “300”：每5分钟 - “600”：每10分钟： - “900”：每15分钟： - “1800”：每30分钟： - “3600”：每1小时： - “10800”：每3小时： - “21600”：每6小时： - “43200”：每12小时： - “86400”：每天：
+    * aggregationWindow  监控周期。单位为秒，例如 1小时 填“3600”，当trigger_type为“immediately”时 该参数为空，当trigger_type为“accumulative”时 该参数必填。 监控周期范围： 5分钟，20分钟，1小时，4小时，24小时。
+    * operator  判断条件：“>”,“<”,“=”,“>=”,“<=”，当trigger_type为“immediately”时 该参数为空。当trigger_type为“accumulative”时 该参数必填。
+    * thresholds  键值对形式，键为告警级别，值为累计次数，当trigger_type为“immediately”时 累计次数为1。当当trigger_type为“accumulative”时 累计次数范围为1~100 （如果trigger_conditions参数不为空，该参数必填）
+    * frequency  事件类告警频率。当trigger_type为“immediately”时 值为-1。 - “-1”：N/A - “0”：只告警一次 - “300”：每5分钟 - “600”：每10分钟： - “900”：每15分钟： - “1800”：每30分钟： - “3600”：每1小时： - “10800”：每3小时： - “21600”：每6小时： - “43200”：每12小时： - “86400”：每天：
     *
     * @var string[]
     */
@@ -83,10 +83,10 @@ class EventTriggerCondition implements ModelInterface, ArrayAccess
     * and the value is the original name
     * eventName  事件名称。
     * triggerType  触发方式： - “immediately”：立即触发 - “accumulative”：累计触发
-    * aggregationWindow  统计周期。单位为秒，例如 1小时 填“3600”，当trigger_type为“immediately”时 不填。
-    * operator  判断条件：“>”,“<”,“=”,“>=”,“<=”，当trigger_type为“immediately”时 不填。
-    * thresholds  键值对形式，键为告警级别，值为累计次数，当trigger_type为“immediately”时 值为空。
-    * frequency  事件类告警频率。当trigger_type为“immediately”时 不填。 - “0”：只告警一次 - “300”：每5分钟 - “600”：每10分钟： - “900”：每15分钟： - “1800”：每30分钟： - “3600”：每1小时： - “10800”：每3小时： - “21600”：每6小时： - “43200”：每12小时： - “86400”：每天：
+    * aggregationWindow  监控周期。单位为秒，例如 1小时 填“3600”，当trigger_type为“immediately”时 该参数为空，当trigger_type为“accumulative”时 该参数必填。 监控周期范围： 5分钟，20分钟，1小时，4小时，24小时。
+    * operator  判断条件：“>”,“<”,“=”,“>=”,“<=”，当trigger_type为“immediately”时 该参数为空。当trigger_type为“accumulative”时 该参数必填。
+    * thresholds  键值对形式，键为告警级别，值为累计次数，当trigger_type为“immediately”时 累计次数为1。当当trigger_type为“accumulative”时 累计次数范围为1~100 （如果trigger_conditions参数不为空，该参数必填）
+    * frequency  事件类告警频率。当trigger_type为“immediately”时 值为-1。 - “-1”：N/A - “0”：只告警一次 - “300”：每5分钟 - “600”：每10分钟： - “900”：每15分钟： - “1800”：每30分钟： - “3600”：每1小时： - “10800”：每3小时： - “21600”：每6小时： - “43200”：每12小时： - “86400”：每天：
     *
     * @var string[]
     */
@@ -103,10 +103,10 @@ class EventTriggerCondition implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * eventName  事件名称。
     * triggerType  触发方式： - “immediately”：立即触发 - “accumulative”：累计触发
-    * aggregationWindow  统计周期。单位为秒，例如 1小时 填“3600”，当trigger_type为“immediately”时 不填。
-    * operator  判断条件：“>”,“<”,“=”,“>=”,“<=”，当trigger_type为“immediately”时 不填。
-    * thresholds  键值对形式，键为告警级别，值为累计次数，当trigger_type为“immediately”时 值为空。
-    * frequency  事件类告警频率。当trigger_type为“immediately”时 不填。 - “0”：只告警一次 - “300”：每5分钟 - “600”：每10分钟： - “900”：每15分钟： - “1800”：每30分钟： - “3600”：每1小时： - “10800”：每3小时： - “21600”：每6小时： - “43200”：每12小时： - “86400”：每天：
+    * aggregationWindow  监控周期。单位为秒，例如 1小时 填“3600”，当trigger_type为“immediately”时 该参数为空，当trigger_type为“accumulative”时 该参数必填。 监控周期范围： 5分钟，20分钟，1小时，4小时，24小时。
+    * operator  判断条件：“>”,“<”,“=”,“>=”,“<=”，当trigger_type为“immediately”时 该参数为空。当trigger_type为“accumulative”时 该参数必填。
+    * thresholds  键值对形式，键为告警级别，值为累计次数，当trigger_type为“immediately”时 累计次数为1。当当trigger_type为“accumulative”时 累计次数范围为1~100 （如果trigger_conditions参数不为空，该参数必填）
+    * frequency  事件类告警频率。当trigger_type为“immediately”时 值为-1。 - “-1”：N/A - “0”：只告警一次 - “300”：每5分钟 - “600”：每10分钟： - “900”：每15分钟： - “1800”：每30分钟： - “3600”：每1小时： - “10800”：每3小时： - “21600”：每6小时： - “43200”：每12小时： - “86400”：每天：
     *
     * @var string[]
     */
@@ -123,10 +123,10 @@ class EventTriggerCondition implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * eventName  事件名称。
     * triggerType  触发方式： - “immediately”：立即触发 - “accumulative”：累计触发
-    * aggregationWindow  统计周期。单位为秒，例如 1小时 填“3600”，当trigger_type为“immediately”时 不填。
-    * operator  判断条件：“>”,“<”,“=”,“>=”,“<=”，当trigger_type为“immediately”时 不填。
-    * thresholds  键值对形式，键为告警级别，值为累计次数，当trigger_type为“immediately”时 值为空。
-    * frequency  事件类告警频率。当trigger_type为“immediately”时 不填。 - “0”：只告警一次 - “300”：每5分钟 - “600”：每10分钟： - “900”：每15分钟： - “1800”：每30分钟： - “3600”：每1小时： - “10800”：每3小时： - “21600”：每6小时： - “43200”：每12小时： - “86400”：每天：
+    * aggregationWindow  监控周期。单位为秒，例如 1小时 填“3600”，当trigger_type为“immediately”时 该参数为空，当trigger_type为“accumulative”时 该参数必填。 监控周期范围： 5分钟，20分钟，1小时，4小时，24小时。
+    * operator  判断条件：“>”,“<”,“=”,“>=”,“<=”，当trigger_type为“immediately”时 该参数为空。当trigger_type为“accumulative”时 该参数必填。
+    * thresholds  键值对形式，键为告警级别，值为累计次数，当trigger_type为“immediately”时 累计次数为1。当当trigger_type为“accumulative”时 累计次数范围为1~100 （如果trigger_conditions参数不为空，该参数必填）
+    * frequency  事件类告警频率。当trigger_type为“immediately”时 值为-1。 - “-1”：N/A - “0”：只告警一次 - “300”：每5分钟 - “600”：每10分钟： - “900”：每15分钟： - “1800”：每30分钟： - “3600”：每1小时： - “10800”：每3小时： - “21600”：每6小时： - “43200”：每12小时： - “86400”：每天：
     *
     * @var string[]
     */
@@ -300,7 +300,7 @@ class EventTriggerCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets aggregationWindow
-    *  统计周期。单位为秒，例如 1小时 填“3600”，当trigger_type为“immediately”时 不填。
+    *  监控周期。单位为秒，例如 1小时 填“3600”，当trigger_type为“immediately”时 该参数为空，当trigger_type为“accumulative”时 该参数必填。 监控周期范围： 5分钟，20分钟，1小时，4小时，24小时。
     *
     * @return int|null
     */
@@ -312,7 +312,7 @@ class EventTriggerCondition implements ModelInterface, ArrayAccess
     /**
     * Sets aggregationWindow
     *
-    * @param int|null $aggregationWindow 统计周期。单位为秒，例如 1小时 填“3600”，当trigger_type为“immediately”时 不填。
+    * @param int|null $aggregationWindow 监控周期。单位为秒，例如 1小时 填“3600”，当trigger_type为“immediately”时 该参数为空，当trigger_type为“accumulative”时 该参数必填。 监控周期范围： 5分钟，20分钟，1小时，4小时，24小时。
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class EventTriggerCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets operator
-    *  判断条件：“>”,“<”,“=”,“>=”,“<=”，当trigger_type为“immediately”时 不填。
+    *  判断条件：“>”,“<”,“=”,“>=”,“<=”，当trigger_type为“immediately”时 该参数为空。当trigger_type为“accumulative”时 该参数必填。
     *
     * @return string|null
     */
@@ -336,7 +336,7 @@ class EventTriggerCondition implements ModelInterface, ArrayAccess
     /**
     * Sets operator
     *
-    * @param string|null $operator 判断条件：“>”,“<”,“=”,“>=”,“<=”，当trigger_type为“immediately”时 不填。
+    * @param string|null $operator 判断条件：“>”,“<”,“=”,“>=”,“<=”，当trigger_type为“immediately”时 该参数为空。当trigger_type为“accumulative”时 该参数必填。
     *
     * @return $this
     */
@@ -348,7 +348,7 @@ class EventTriggerCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets thresholds
-    *  键值对形式，键为告警级别，值为累计次数，当trigger_type为“immediately”时 值为空。
+    *  键值对形式，键为告警级别，值为累计次数，当trigger_type为“immediately”时 累计次数为1。当当trigger_type为“accumulative”时 累计次数范围为1~100 （如果trigger_conditions参数不为空，该参数必填）
     *
     * @return map[string,int]|null
     */
@@ -360,7 +360,7 @@ class EventTriggerCondition implements ModelInterface, ArrayAccess
     /**
     * Sets thresholds
     *
-    * @param map[string,int]|null $thresholds 键值对形式，键为告警级别，值为累计次数，当trigger_type为“immediately”时 值为空。
+    * @param map[string,int]|null $thresholds 键值对形式，键为告警级别，值为累计次数，当trigger_type为“immediately”时 累计次数为1。当当trigger_type为“accumulative”时 累计次数范围为1~100 （如果trigger_conditions参数不为空，该参数必填）
     *
     * @return $this
     */
@@ -372,7 +372,7 @@ class EventTriggerCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets frequency
-    *  事件类告警频率。当trigger_type为“immediately”时 不填。 - “0”：只告警一次 - “300”：每5分钟 - “600”：每10分钟： - “900”：每15分钟： - “1800”：每30分钟： - “3600”：每1小时： - “10800”：每3小时： - “21600”：每6小时： - “43200”：每12小时： - “86400”：每天：
+    *  事件类告警频率。当trigger_type为“immediately”时 值为-1。 - “-1”：N/A - “0”：只告警一次 - “300”：每5分钟 - “600”：每10分钟： - “900”：每15分钟： - “1800”：每30分钟： - “3600”：每1小时： - “10800”：每3小时： - “21600”：每6小时： - “43200”：每12小时： - “86400”：每天：
     *
     * @return string|null
     */
@@ -384,7 +384,7 @@ class EventTriggerCondition implements ModelInterface, ArrayAccess
     /**
     * Sets frequency
     *
-    * @param string|null $frequency 事件类告警频率。当trigger_type为“immediately”时 不填。 - “0”：只告警一次 - “300”：每5分钟 - “600”：每10分钟： - “900”：每15分钟： - “1800”：每30分钟： - “3600”：每1小时： - “10800”：每3小时： - “21600”：每6小时： - “43200”：每12小时： - “86400”：每天：
+    * @param string|null $frequency 事件类告警频率。当trigger_type为“immediately”时 值为-1。 - “-1”：N/A - “0”：只告警一次 - “300”：每5分钟 - “600”：每10分钟： - “900”：每15分钟： - “1800”：每30分钟： - “3600”：每1小时： - “10800”：每3小时： - “21600”：每6小时： - “43200”：每12小时： - “86400”：每天：
     *
     * @return $this
     */

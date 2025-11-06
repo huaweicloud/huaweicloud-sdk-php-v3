@@ -24,6 +24,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     * name  **参数解释**： 快照名称。 **取值范围**： 不涉及。
     * description  **参数解释**： 快照描述。 **取值范围**： 不涉及。
     * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * finished  **参数解释**： 快照创建的结束时间，格式为：ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
     * status  **参数解释**： 快照状态。 **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 RESTORING：恢复中。 FROZEN： 普通冻结。 POLICE_FROZEN： 公安冻结。
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
@@ -48,6 +49,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
     * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
+    * clusterTaskStatus  **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -56,6 +58,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'started' => 'string',
+            'finished' => 'string',
             'size' => 'double',
             'status' => 'string',
             'clusterId' => 'string',
@@ -79,7 +82,8 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
             'backupLevel' => 'string',
             'fineGrainedBackupDetail' => '\HuaweiCloud\SDK\Dws\V2\Model\FineGrainedSnapshotDetail',
             'guestAgentVersion' => 'string',
-            'clusterStatus' => 'string'
+            'clusterStatus' => 'string',
+            'clusterTaskStatus' => 'string'
     ];
 
     /**
@@ -88,6 +92,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     * name  **参数解释**： 快照名称。 **取值范围**： 不涉及。
     * description  **参数解释**： 快照描述。 **取值范围**： 不涉及。
     * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * finished  **参数解释**： 快照创建的结束时间，格式为：ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
     * status  **参数解释**： 快照状态。 **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 RESTORING：恢复中。 FROZEN： 普通冻结。 POLICE_FROZEN： 公安冻结。
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
@@ -112,6 +117,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
     * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
+    * clusterTaskStatus  **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -120,6 +126,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'started' => null,
+        'finished' => null,
         'size' => 'double',
         'status' => null,
         'clusterId' => null,
@@ -143,7 +150,8 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
         'backupLevel' => null,
         'fineGrainedBackupDetail' => null,
         'guestAgentVersion' => null,
-        'clusterStatus' => null
+        'clusterStatus' => null,
+        'clusterTaskStatus' => null
     ];
 
     /**
@@ -173,6 +181,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     * name  **参数解释**： 快照名称。 **取值范围**： 不涉及。
     * description  **参数解释**： 快照描述。 **取值范围**： 不涉及。
     * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * finished  **参数解释**： 快照创建的结束时间，格式为：ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
     * status  **参数解释**： 快照状态。 **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 RESTORING：恢复中。 FROZEN： 普通冻结。 POLICE_FROZEN： 公安冻结。
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
@@ -197,6 +206,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
     * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
+    * clusterTaskStatus  **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -205,6 +215,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'started' => 'started',
+            'finished' => 'finished',
             'size' => 'size',
             'status' => 'status',
             'clusterId' => 'cluster_id',
@@ -228,7 +239,8 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
             'backupLevel' => 'backup_level',
             'fineGrainedBackupDetail' => 'fine_grained_backup_detail',
             'guestAgentVersion' => 'guest_agent_version',
-            'clusterStatus' => 'cluster_status'
+            'clusterStatus' => 'cluster_status',
+            'clusterTaskStatus' => 'cluster_task_status'
     ];
 
     /**
@@ -237,6 +249,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     * name  **参数解释**： 快照名称。 **取值范围**： 不涉及。
     * description  **参数解释**： 快照描述。 **取值范围**： 不涉及。
     * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * finished  **参数解释**： 快照创建的结束时间，格式为：ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
     * status  **参数解释**： 快照状态。 **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 RESTORING：恢复中。 FROZEN： 普通冻结。 POLICE_FROZEN： 公安冻结。
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
@@ -261,6 +274,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
     * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
+    * clusterTaskStatus  **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -269,6 +283,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'started' => 'setStarted',
+            'finished' => 'setFinished',
             'size' => 'setSize',
             'status' => 'setStatus',
             'clusterId' => 'setClusterId',
@@ -292,7 +307,8 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
             'backupLevel' => 'setBackupLevel',
             'fineGrainedBackupDetail' => 'setFineGrainedBackupDetail',
             'guestAgentVersion' => 'setGuestAgentVersion',
-            'clusterStatus' => 'setClusterStatus'
+            'clusterStatus' => 'setClusterStatus',
+            'clusterTaskStatus' => 'setClusterTaskStatus'
     ];
 
     /**
@@ -301,6 +317,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     * name  **参数解释**： 快照名称。 **取值范围**： 不涉及。
     * description  **参数解释**： 快照描述。 **取值范围**： 不涉及。
     * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * finished  **参数解释**： 快照创建的结束时间，格式为：ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
     * status  **参数解释**： 快照状态。 **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 RESTORING：恢复中。 FROZEN： 普通冻结。 POLICE_FROZEN： 公安冻结。
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
@@ -325,6 +342,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
     * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
+    * clusterTaskStatus  **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -333,6 +351,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'started' => 'getStarted',
+            'finished' => 'getFinished',
             'size' => 'getSize',
             'status' => 'getStatus',
             'clusterId' => 'getClusterId',
@@ -356,7 +375,8 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
             'backupLevel' => 'getBackupLevel',
             'fineGrainedBackupDetail' => 'getFineGrainedBackupDetail',
             'guestAgentVersion' => 'getGuestAgentVersion',
-            'clusterStatus' => 'getClusterStatus'
+            'clusterStatus' => 'getClusterStatus',
+            'clusterTaskStatus' => 'getClusterTaskStatus'
     ];
 
     /**
@@ -421,6 +441,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['started'] = isset($data['started']) ? $data['started'] : null;
+        $this->container['finished'] = isset($data['finished']) ? $data['finished'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
@@ -445,6 +466,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
         $this->container['fineGrainedBackupDetail'] = isset($data['fineGrainedBackupDetail']) ? $data['fineGrainedBackupDetail'] : null;
         $this->container['guestAgentVersion'] = isset($data['guestAgentVersion']) ? $data['guestAgentVersion'] : null;
         $this->container['clusterStatus'] = isset($data['clusterStatus']) ? $data['clusterStatus'] : null;
+        $this->container['clusterTaskStatus'] = isset($data['clusterTaskStatus']) ? $data['clusterTaskStatus'] : null;
     }
 
     /**
@@ -562,6 +584,30 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     public function setStarted($started)
     {
         $this->container['started'] = $started;
+        return $this;
+    }
+
+    /**
+    * Gets finished
+    *  **参数解释**： 快照创建的结束时间，格式为：ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getFinished()
+    {
+        return $this->container['finished'];
+    }
+
+    /**
+    * Sets finished
+    *
+    * @param string|null $finished **参数解释**： 快照创建的结束时间，格式为：ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setFinished($finished)
+    {
+        $this->container['finished'] = $finished;
         return $this;
     }
 
@@ -1138,6 +1184,30 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     public function setClusterStatus($clusterStatus)
     {
         $this->container['clusterStatus'] = $clusterStatus;
+        return $this;
+    }
+
+    /**
+    * Gets clusterTaskStatus
+    *  **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getClusterTaskStatus()
+    {
+        return $this->container['clusterTaskStatus'];
+    }
+
+    /**
+    * Sets clusterTaskStatus
+    *
+    * @param string|null $clusterTaskStatus **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setClusterTaskStatus($clusterTaskStatus)
+    {
+        $this->container['clusterTaskStatus'] = $clusterTaskStatus;
         return $this;
     }
 

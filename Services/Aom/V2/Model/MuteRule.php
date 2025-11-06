@@ -20,14 +20,14 @@ class MuteRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * createTime  创建时间
-    * desc  规则描述
+    * createTime  创建时间。
+    * desc  规则描述。
     * match  规则的匹配条件。串行条件和并行条件的最大数量限制为10。
     * muteConfig  muteConfig
     * name  规则名称。名称包含大小写字母、数字、特殊字符（_）、不能以下划线开头或结尾，最大长度为100。
-    * timezone  时区
-    * updateTime  修改时间
-    * userId  用户ID
+    * timezone  时区。
+    * updateTime  修改时间。
+    * userId  用户ID。
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class MuteRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * createTime  创建时间
-    * desc  规则描述
+    * createTime  创建时间。
+    * desc  规则描述。
     * match  规则的匹配条件。串行条件和并行条件的最大数量限制为10。
     * muteConfig  muteConfig
     * name  规则名称。名称包含大小写字母、数字、特殊字符（_）、不能以下划线开头或结尾，最大长度为100。
-    * timezone  时区
-    * updateTime  修改时间
-    * userId  用户ID
+    * timezone  时区。
+    * updateTime  修改时间。
+    * userId  用户ID。
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class MuteRule implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * createTime  创建时间
-    * desc  规则描述
+    * createTime  创建时间。
+    * desc  规则描述。
     * match  规则的匹配条件。串行条件和并行条件的最大数量限制为10。
     * muteConfig  muteConfig
     * name  规则名称。名称包含大小写字母、数字、特殊字符（_）、不能以下划线开头或结尾，最大长度为100。
-    * timezone  时区
-    * updateTime  修改时间
-    * userId  用户ID
+    * timezone  时区。
+    * updateTime  修改时间。
+    * userId  用户ID。
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class MuteRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * createTime  创建时间
-    * desc  规则描述
+    * createTime  创建时间。
+    * desc  规则描述。
     * match  规则的匹配条件。串行条件和并行条件的最大数量限制为10。
     * muteConfig  muteConfig
     * name  规则名称。名称包含大小写字母、数字、特殊字符（_）、不能以下划线开头或结尾，最大长度为100。
-    * timezone  时区
-    * updateTime  修改时间
-    * userId  用户ID
+    * timezone  时区。
+    * updateTime  修改时间。
+    * userId  用户ID。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class MuteRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * createTime  创建时间
-    * desc  规则描述
+    * createTime  创建时间。
+    * desc  规则描述。
     * match  规则的匹配条件。串行条件和并行条件的最大数量限制为10。
     * muteConfig  muteConfig
     * name  规则名称。名称包含大小写字母、数字、特殊字符（_）、不能以下划线开头或结尾，最大长度为100。
-    * timezone  时区
-    * updateTime  修改时间
-    * userId  用户ID
+    * timezone  时区。
+    * updateTime  修改时间。
+    * userId  用户ID。
     *
     * @var string[]
     */
@@ -262,13 +262,10 @@ class MuteRule implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['timezone'] === null) {
-            $invalidProperties[] = "'timezone' can't be null";
-        }
-            if ((mb_strlen($this->container['timezone']) > 32)) {
+            if (!is_null($this->container['timezone']) && (mb_strlen($this->container['timezone']) > 32)) {
                 $invalidProperties[] = "invalid value for 'timezone', the character length must be smaller than or equal to 32.";
             }
-            if ((mb_strlen($this->container['timezone']) < 1)) {
+            if (!is_null($this->container['timezone']) && (mb_strlen($this->container['timezone']) < 1)) {
                 $invalidProperties[] = "invalid value for 'timezone', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] > 9999999999999)) {
@@ -299,7 +296,7 @@ class MuteRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间。
     *
     * @return int|null
     */
@@ -311,7 +308,7 @@ class MuteRule implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 创建时间
+    * @param int|null $createTime 创建时间。
     *
     * @return $this
     */
@@ -323,7 +320,7 @@ class MuteRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets desc
-    *  规则描述
+    *  规则描述。
     *
     * @return string|null
     */
@@ -335,7 +332,7 @@ class MuteRule implements ModelInterface, ArrayAccess
     /**
     * Sets desc
     *
-    * @param string|null $desc 规则描述
+    * @param string|null $desc 规则描述。
     *
     * @return $this
     */
@@ -419,9 +416,9 @@ class MuteRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets timezone
-    *  时区
+    *  时区。
     *
-    * @return string
+    * @return string|null
     */
     public function getTimezone()
     {
@@ -431,7 +428,7 @@ class MuteRule implements ModelInterface, ArrayAccess
     /**
     * Sets timezone
     *
-    * @param string $timezone 时区
+    * @param string|null $timezone 时区。
     *
     * @return $this
     */
@@ -443,7 +440,7 @@ class MuteRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  修改时间
+    *  修改时间。
     *
     * @return int|null
     */
@@ -455,7 +452,7 @@ class MuteRule implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 修改时间
+    * @param int|null $updateTime 修改时间。
     *
     * @return $this
     */
@@ -467,7 +464,7 @@ class MuteRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  用户ID
+    *  用户ID。
     *
     * @return string|null
     */
@@ -479,7 +476,7 @@ class MuteRule implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string|null $userId 用户ID
+    * @param string|null $userId 用户ID。
     *
     * @return $this
     */

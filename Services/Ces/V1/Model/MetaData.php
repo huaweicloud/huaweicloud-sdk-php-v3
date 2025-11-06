@@ -20,9 +20,9 @@ class MetaData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  当前返回结果条数。
-    * total  总条数。
-    * marker  下一个开始的标记，用于分页。
+    * count  **参数解释**： 当前返回结果条数。    **约束限制**： 不涉及。  **取值范围**： 在[0,2147483647]区间内 **默认取值**： 不涉及。
+    * total  **参数解释**： 总条数。    **约束限制**： 不涉及。  **取值范围**： 在[0,2147483647]区间内 **默认取值**： 不涉及。
+    * marker  **参数解释**： 下一个开始的标记，用于分页。    **约束限制**： 不涉及。  **取值范围**： 长度为[1,9999]个数字 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class MetaData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  当前返回结果条数。
-    * total  总条数。
-    * marker  下一个开始的标记，用于分页。
+    * count  **参数解释**： 当前返回结果条数。    **约束限制**： 不涉及。  **取值范围**： 在[0,2147483647]区间内 **默认取值**： 不涉及。
+    * total  **参数解释**： 总条数。    **约束限制**： 不涉及。  **取值范围**： 在[0,2147483647]区间内 **默认取值**： 不涉及。
+    * marker  **参数解释**： 下一个开始的标记，用于分页。    **约束限制**： 不涉及。  **取值范围**： 长度为[1,9999]个数字 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class MetaData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  当前返回结果条数。
-    * total  总条数。
-    * marker  下一个开始的标记，用于分页。
+    * count  **参数解释**： 当前返回结果条数。    **约束限制**： 不涉及。  **取值范围**： 在[0,2147483647]区间内 **默认取值**： 不涉及。
+    * total  **参数解释**： 总条数。    **约束限制**： 不涉及。  **取值范围**： 在[0,2147483647]区间内 **默认取值**： 不涉及。
+    * marker  **参数解释**： 下一个开始的标记，用于分页。    **约束限制**： 不涉及。  **取值范围**： 长度为[1,9999]个数字 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class MetaData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  当前返回结果条数。
-    * total  总条数。
-    * marker  下一个开始的标记，用于分页。
+    * count  **参数解释**： 当前返回结果条数。    **约束限制**： 不涉及。  **取值范围**： 在[0,2147483647]区间内 **默认取值**： 不涉及。
+    * total  **参数解释**： 总条数。    **约束限制**： 不涉及。  **取值范围**： 在[0,2147483647]区间内 **默认取值**： 不涉及。
+    * marker  **参数解释**： 下一个开始的标记，用于分页。    **约束限制**： 不涉及。  **取值范围**： 长度为[1,9999]个数字 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class MetaData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  当前返回结果条数。
-    * total  总条数。
-    * marker  下一个开始的标记，用于分页。
+    * count  **参数解释**： 当前返回结果条数。    **约束限制**： 不涉及。  **取值范围**： 在[0,2147483647]区间内 **默认取值**： 不涉及。
+    * total  **参数解释**： 总条数。    **约束限制**： 不涉及。  **取值范围**： 在[0,2147483647]区间内 **默认取值**： 不涉及。
+    * marker  **参数解释**： 下一个开始的标记，用于分页。    **约束限制**： 不涉及。  **取值范围**： 长度为[1,9999]个数字 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -183,12 +183,30 @@ class MetaData implements ModelInterface, ArrayAccess
         if ($this->container['count'] === null) {
             $invalidProperties[] = "'count' can't be null";
         }
+            if (($this->container['count'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['count'] < 0)) {
+                $invalidProperties[] = "invalid value for 'count', must be bigger than or equal to 0.";
+            }
         if ($this->container['total'] === null) {
             $invalidProperties[] = "'total' can't be null";
         }
+            if (($this->container['total'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'total', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['total'] < 0)) {
+                $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 0.";
+            }
         if ($this->container['marker'] === null) {
             $invalidProperties[] = "'marker' can't be null";
         }
+            if ((mb_strlen($this->container['marker']) > 9999)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 9999.";
+            }
+            if ((mb_strlen($this->container['marker']) < 1)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -205,7 +223,7 @@ class MetaData implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  当前返回结果条数。
+    *  **参数解释**： 当前返回结果条数。    **约束限制**： 不涉及。  **取值范围**： 在[0,2147483647]区间内 **默认取值**： 不涉及。
     *
     * @return int
     */
@@ -217,7 +235,7 @@ class MetaData implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int $count 当前返回结果条数。
+    * @param int $count **参数解释**： 当前返回结果条数。    **约束限制**： 不涉及。  **取值范围**： 在[0,2147483647]区间内 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -229,7 +247,7 @@ class MetaData implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总条数。
+    *  **参数解释**： 总条数。    **约束限制**： 不涉及。  **取值范围**： 在[0,2147483647]区间内 **默认取值**： 不涉及。
     *
     * @return int
     */
@@ -241,7 +259,7 @@ class MetaData implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int $total 总条数。
+    * @param int $total **参数解释**： 总条数。    **约束限制**： 不涉及。  **取值范围**： 在[0,2147483647]区间内 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +271,7 @@ class MetaData implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
-    *  下一个开始的标记，用于分页。
+    *  **参数解释**： 下一个开始的标记，用于分页。    **约束限制**： 不涉及。  **取值范围**： 长度为[1,9999]个数字 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -265,7 +283,7 @@ class MetaData implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string $marker 下一个开始的标记，用于分页。
+    * @param string $marker **参数解释**： 下一个开始的标记，用于分页。    **约束限制**： 不涉及。  **取值范围**： 长度为[1,9999]个数字 **默认取值**： 不涉及。
     *
     * @return $this
     */

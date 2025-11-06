@@ -22,7 +22,7 @@ class AgentStatusInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  **参数解释**: 机器id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
     * uniagentStatus  **参数解释**: uniagent运行状态 **取值范围**: - none: 未安装 - running: 运行中 - silent: 静默状态，用于大规模插件异常时，紧急规避的一种措施，现象是kill掉telescope，只保留uniagent的心跳功能 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障
-    * extensions  **参数解释**: 插件信息列表 **取值范围**: 数组长度为[1,10]
+    * extensions  **参数解释**: 插件信息列表
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class AgentStatusInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  **参数解释**: 机器id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
     * uniagentStatus  **参数解释**: uniagent运行状态 **取值范围**: - none: 未安装 - running: 运行中 - silent: 静默状态，用于大规模插件异常时，紧急规避的一种措施，现象是kill掉telescope，只保留uniagent的心跳功能 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障
-    * extensions  **参数解释**: 插件信息列表 **取值范围**: 数组长度为[1,10]
+    * extensions  **参数解释**: 插件信息列表
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class AgentStatusInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * instanceId  **参数解释**: 机器id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
     * uniagentStatus  **参数解释**: uniagent运行状态 **取值范围**: - none: 未安装 - running: 运行中 - silent: 静默状态，用于大规模插件异常时，紧急规避的一种措施，现象是kill掉telescope，只保留uniagent的心跳功能 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障
-    * extensions  **参数解释**: 插件信息列表 **取值范围**: 数组长度为[1,10]
+    * extensions  **参数解释**: 插件信息列表
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class AgentStatusInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  **参数解释**: 机器id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
     * uniagentStatus  **参数解释**: uniagent运行状态 **取值范围**: - none: 未安装 - running: 运行中 - silent: 静默状态，用于大规模插件异常时，紧急规避的一种措施，现象是kill掉telescope，只保留uniagent的心跳功能 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障
-    * extensions  **参数解释**: 插件信息列表 **取值范围**: 数组长度为[1,10]
+    * extensions  **参数解释**: 插件信息列表
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class AgentStatusInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  **参数解释**: 机器id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
     * uniagentStatus  **参数解释**: uniagent运行状态 **取值范围**: - none: 未安装 - running: 运行中 - silent: 静默状态，用于大规模插件异常时，紧急规避的一种措施，现象是kill掉telescope，只保留uniagent的心跳功能 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障
-    * extensions  **参数解释**: 插件信息列表 **取值范围**: 数组长度为[1,10]
+    * extensions  **参数解释**: 插件信息列表
     *
     * @var string[]
     */
@@ -274,7 +274,7 @@ class AgentStatusInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets extensions
-    *  **参数解释**: 插件信息列表 **取值范围**: 数组长度为[1,10]
+    *  **参数解释**: 插件信息列表
     *
     * @return \HuaweiCloud\SDK\Ces\V3\Model\ExtensionInfo[]|null
     */
@@ -286,7 +286,7 @@ class AgentStatusInfo implements ModelInterface, ArrayAccess
     /**
     * Sets extensions
     *
-    * @param \HuaweiCloud\SDK\Ces\V3\Model\ExtensionInfo[]|null $extensions **参数解释**: 插件信息列表 **取值范围**: 数组长度为[1,10]
+    * @param \HuaweiCloud\SDK\Ces\V3\Model\ExtensionInfo[]|null $extensions **参数解释**: 插件信息列表
     *
     * @return $this
     */

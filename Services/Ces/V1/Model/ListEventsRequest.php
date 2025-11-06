@@ -25,8 +25,8 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     * eventName  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
     * from  查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
     * to  查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100，用于限制结果数据条数。
+    * start  分页起始值，默认值为0。
+    * limit  单次查询的条数限制，取值范围[0,100]，默认值为100，用于限制结果数据条数。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
             'eventName' => 'string',
             'from' => 'int',
             'to' => 'int',
-            'start' => 'int',
+            'start' => 'string',
             'limit' => 'int'
     ];
 
@@ -47,8 +47,8 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     * eventName  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
     * from  查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
     * to  查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100，用于限制结果数据条数。
+    * start  分页起始值，默认值为0。
+    * limit  单次查询的条数限制，取值范围[0,100]，默认值为100，用于限制结果数据条数。
     *
     * @var string[]
     */
@@ -58,8 +58,8 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
         'eventName' => null,
         'from' => 'int64',
         'to' => 'int64',
-        'start' => 'int32',
-        'limit' => 'int32'
+        'start' => null,
+        'limit' => null
     ];
 
     /**
@@ -90,8 +90,8 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     * eventName  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
     * from  查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
     * to  查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100，用于限制结果数据条数。
+    * start  分页起始值，默认值为0。
+    * limit  单次查询的条数限制，取值范围[0,100]，默认值为100，用于限制结果数据条数。
     *
     * @var string[]
     */
@@ -112,8 +112,8 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     * eventName  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
     * from  查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
     * to  查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100，用于限制结果数据条数。
+    * start  分页起始值，默认值为0。
+    * limit  单次查询的条数限制，取值范围[0,100]，默认值为100，用于限制结果数据条数。
     *
     * @var string[]
     */
@@ -134,8 +134,8 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     * eventName  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
     * from  查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
     * to  查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100，用于限制结果数据条数。
+    * start  分页起始值，默认值为0。
+    * limit  单次查询的条数限制，取值范围[0,100]，默认值为100，用于限制结果数据条数。
     *
     * @var string[]
     */
@@ -272,6 +272,36 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['eventName']) && (mb_strlen($this->container['eventName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'eventName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['eventName']) && (mb_strlen($this->container['eventName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'eventName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['eventName']) && !preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/", $this->container['eventName'])) {
+                $invalidProperties[] = "invalid value for 'eventName', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/.";
+            }
+            if (!is_null($this->container['from']) && ($this->container['from'] > 9999999999999)) {
+                $invalidProperties[] = "invalid value for 'from', must be smaller than or equal to 9999999999999.";
+            }
+            if (!is_null($this->container['from']) && ($this->container['from'] < 1111111111111)) {
+                $invalidProperties[] = "invalid value for 'from', must be bigger than or equal to 1111111111111.";
+            }
+            if (!is_null($this->container['to']) && ($this->container['to'] > 9999999999999)) {
+                $invalidProperties[] = "invalid value for 'to', must be smaller than or equal to 9999999999999.";
+            }
+            if (!is_null($this->container['to']) && ($this->container['to'] < 1111111111111)) {
+                $invalidProperties[] = "invalid value for 'to', must be bigger than or equal to 1111111111111.";
+            }
+            if (!is_null($this->container['start']) && !preg_match("/^(0|[1-9][0-9]*)$/", $this->container['start'])) {
+                $invalidProperties[] = "invalid value for 'start', must be conform to the pattern /^(0|[1-9][0-9]*)$/.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -408,9 +438,9 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets start
-    *  分页起始值，类型为integer，默认值为0。
+    *  分页起始值，默认值为0。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getStart()
     {
@@ -420,7 +450,7 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets start
     *
-    * @param int|null $start 分页起始值，类型为integer，默认值为0。
+    * @param string|null $start 分页起始值，默认值为0。
     *
     * @return $this
     */
@@ -432,7 +462,7 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  单次查询的条数限制，取值范围(0,100]，默认值为100，用于限制结果数据条数。
+    *  单次查询的条数限制，取值范围[0,100]，默认值为100，用于限制结果数据条数。
     *
     * @return int|null
     */
@@ -444,7 +474,7 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 单次查询的条数限制，取值范围(0,100]，默认值为100，用于限制结果数据条数。
+    * @param int|null $limit 单次查询的条数限制，取值范围[0,100]，默认值为100，用于限制结果数据条数。
     *
     * @return $this
     */

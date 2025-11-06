@@ -20,7 +20,7 @@ class UpdateAlarmRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmId  告警规则的ID。
+    * alarmId  **参数解释**： 告警规则ID， **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位由字母或数字组成的字符串。长度为24个字符。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdateAlarmRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmId  告警规则的ID。
+    * alarmId  **参数解释**： 告警规则ID， **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位由字母或数字组成的字符串。长度为24个字符。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateAlarmRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmId  告警规则的ID。
+    * alarmId  **参数解释**： 告警规则ID， **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位由字母或数字组成的字符串。长度为24个字符。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateAlarmRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmId  告警规则的ID。
+    * alarmId  **参数解释**： 告警规则ID， **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位由字母或数字组成的字符串。长度为24个字符。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateAlarmRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmId  告警规则的ID。
+    * alarmId  **参数解释**： 告警规则ID， **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位由字母或数字组成的字符串。长度为24个字符。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -172,14 +172,8 @@ class UpdateAlarmRequest implements ModelInterface, ArrayAccess
         if ($this->container['alarmId'] === null) {
             $invalidProperties[] = "'alarmId' can't be null";
         }
-            if ((mb_strlen($this->container['alarmId']) > 24)) {
-                $invalidProperties[] = "invalid value for 'alarmId', the character length must be smaller than or equal to 24.";
-            }
-            if ((mb_strlen($this->container['alarmId']) < 24)) {
-                $invalidProperties[] = "invalid value for 'alarmId', the character length must be bigger than or equal to 24.";
-            }
-            if (!preg_match("/^([0-9A-Za-z]){24}$/", $this->container['alarmId'])) {
-                $invalidProperties[] = "invalid value for 'alarmId', must be conform to the pattern /^([0-9A-Za-z]){24}$/.";
+            if (!preg_match("/^al([0-9A-Za-z]){22}$/", $this->container['alarmId'])) {
+                $invalidProperties[] = "invalid value for 'alarmId', must be conform to the pattern /^al([0-9A-Za-z]){22}$/.";
             }
         return $invalidProperties;
     }
@@ -197,7 +191,7 @@ class UpdateAlarmRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmId
-    *  告警规则的ID。
+    *  **参数解释**： 告警规则ID， **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位由字母或数字组成的字符串。长度为24个字符。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -209,7 +203,7 @@ class UpdateAlarmRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmId
     *
-    * @param string $alarmId 告警规则的ID。
+    * @param string $alarmId **参数解释**： 告警规则ID， **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位由字母或数字组成的字符串。长度为24个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */

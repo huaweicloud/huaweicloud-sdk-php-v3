@@ -30,7 +30,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     * enableScreenAutoPlay  监控大屏是否自动切换
     * timeInterval  监控大屏自动切换时间间隔，10000代表10s，30000代表30s，60000代表1min
     * enableLegend  是否开启图例
-    * fullScreenWidgetNum  大屏展示视图数量, 可以取得值必须与console页面可选值保持一致
+    * fullScreenWidgetNum  大屏展示视图数量, 可以取的值必须与console页面可选值保持一致
     *
     * @var string[]
     */
@@ -60,7 +60,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     * enableScreenAutoPlay  监控大屏是否自动切换
     * timeInterval  监控大屏自动切换时间间隔，10000代表10s，30000代表30s，60000代表1min
     * enableLegend  是否开启图例
-    * fullScreenWidgetNum  大屏展示视图数量, 可以取得值必须与console页面可选值保持一致
+    * fullScreenWidgetNum  大屏展示视图数量, 可以取的值必须与console页面可选值保持一致
     *
     * @var string[]
     */
@@ -111,7 +111,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     * enableScreenAutoPlay  监控大屏是否自动切换
     * timeInterval  监控大屏自动切换时间间隔，10000代表10s，30000代表30s，60000代表1min
     * enableLegend  是否开启图例
-    * fullScreenWidgetNum  大屏展示视图数量, 可以取得值必须与console页面可选值保持一致
+    * fullScreenWidgetNum  大屏展示视图数量, 可以取的值必须与console页面可选值保持一致
     *
     * @var string[]
     */
@@ -141,7 +141,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     * enableScreenAutoPlay  监控大屏是否自动切换
     * timeInterval  监控大屏自动切换时间间隔，10000代表10s，30000代表30s，60000代表1min
     * enableLegend  是否开启图例
-    * fullScreenWidgetNum  大屏展示视图数量, 可以取得值必须与console页面可选值保持一致
+    * fullScreenWidgetNum  大屏展示视图数量, 可以取的值必须与console页面可选值保持一致
     *
     * @var string[]
     */
@@ -171,7 +171,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     * enableScreenAutoPlay  监控大屏是否自动切换
     * timeInterval  监控大屏自动切换时间间隔，10000代表10s，30000代表30s，60000代表1min
     * enableLegend  是否开启图例
-    * fullScreenWidgetNum  大屏展示视图数量, 可以取得值必须与console页面可选值保持一致
+    * fullScreenWidgetNum  大屏展示视图数量, 可以取的值必须与console页面可选值保持一致
     *
     * @var string[]
     */
@@ -679,7 +679,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fullScreenWidgetNum
-    *  大屏展示视图数量, 可以取得值必须与console页面可选值保持一致
+    *  大屏展示视图数量, 可以取的值必须与console页面可选值保持一致
     *
     * @return int|null
     */
@@ -691,7 +691,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fullScreenWidgetNum
     *
-    * @param int|null $fullScreenWidgetNum 大屏展示视图数量, 可以取得值必须与console页面可选值保持一致
+    * @param int|null $fullScreenWidgetNum 大屏展示视图数量, 可以取的值必须与console页面可选值保持一致
     *
     * @return $this
     */

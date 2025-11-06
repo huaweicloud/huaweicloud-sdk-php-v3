@@ -21,19 +21,19 @@ class ListAlarmsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * metricAlarms  告警对象列表。
+    * metricAlarms  **参数解释**： 查询的告警对象列表。
     * metaData  metaData
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'metricAlarms' => '\HuaweiCloud\SDK\Ces\V1\Model\MetricAlarms[]',
-            'metaData' => '\HuaweiCloud\SDK\Ces\V1\Model\MetaData'
+            'metricAlarms' => '\HuaweiCloud\SDK\Ces\V1\Model\MetricAlarmsResp[]',
+            'metaData' => '\HuaweiCloud\SDK\Ces\V1\Model\MetaDataResp'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * metricAlarms  告警对象列表。
+    * metricAlarms  **参数解释**： 查询的告警对象列表。
     * metaData  metaData
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListAlarmsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * metricAlarms  告警对象列表。
+    * metricAlarms  **参数解释**： 查询的告警对象列表。
     * metaData  metaData
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListAlarmsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * metricAlarms  告警对象列表。
+    * metricAlarms  **参数解释**： 查询的告警对象列表。
     * metaData  metaData
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListAlarmsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * metricAlarms  告警对象列表。
+    * metricAlarms  **参数解释**： 查询的告警对象列表。
     * metaData  metaData
     *
     * @var string[]
@@ -186,9 +186,9 @@ class ListAlarmsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricAlarms
-    *  告警对象列表。
+    *  **参数解释**： 查询的告警对象列表。
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\MetricAlarms[]|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\MetricAlarmsResp[]|null
     */
     public function getMetricAlarms()
     {
@@ -198,7 +198,7 @@ class ListAlarmsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets metricAlarms
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\MetricAlarms[]|null $metricAlarms 告警对象列表。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\MetricAlarmsResp[]|null $metricAlarms **参数解释**： 查询的告警对象列表。
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class ListAlarmsResponse implements ModelInterface, ArrayAccess
     * Gets metaData
     *  metaData
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\MetaData|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\MetaDataResp|null
     */
     public function getMetaData()
     {
@@ -222,7 +222,7 @@ class ListAlarmsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets metaData
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\MetaData|null $metaData metaData
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\MetaDataResp|null $metaData metaData
     *
     * @return $this
     */

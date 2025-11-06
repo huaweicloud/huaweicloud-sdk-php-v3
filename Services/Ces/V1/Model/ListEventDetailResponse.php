@@ -21,12 +21,12 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * eventName  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
-    * eventType  事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
-    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
-    * eventUsers  上报事件时用户的名称，也可能为projectID。
-    * eventSources  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
-    * eventInfo  一条或者多条事件详细信息。
+    * eventName  **参数解释**： 事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。 **取值范围**： 不涉及。
+    * eventType  **参数解释**： 事件类型。 **取值范围**： 值为EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS: 系统事件。 - EVENT.CUSTOM: 自定义事件。
+    * subEventType  **参数解释**： 事件子类。 **取值范围**： 枚举类型。 当事件类型为系统事件时，参数值为SUB_EVENT.OPS或SUB_EVENT.PLAN。 当事件类型为自定义事件时，参数值为SUB_EVENT.CUSTOM。 - SUB_EVENT.OPS：运维事件。 - SUB_EVENT.PLAN：计划事件。 - SUB_EVENT.CUSTOM：自定义事件。
+    * eventUsers  **参数解释**： 上报事件时用户的名称，也可能为projectID。 **取值范围**： 不涉及。
+    * eventSources  **参数解释**： 事件来源。 如果是系统事件则值为各服务的命名空间，可查看支持监控的服务列表。如果是自定义事件，则为用户自定义上报定义。 **取值范围**： 不涉及。
+    * eventInfo  **参数解释**： 一条或者多条事件详细信息。
     * metaData  metaData
     *
     * @var string[]
@@ -37,18 +37,18 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
             'subEventType' => 'string',
             'eventUsers' => 'string[]',
             'eventSources' => 'string[]',
-            'eventInfo' => '\HuaweiCloud\SDK\Ces\V1\Model\EventInfoDetail[]',
+            'eventInfo' => '\HuaweiCloud\SDK\Ces\V1\Model\EventInfoDetailResp[]',
             'metaData' => '\HuaweiCloud\SDK\Ces\V1\Model\TotalMetaData'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * eventName  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
-    * eventType  事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
-    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
-    * eventUsers  上报事件时用户的名称，也可能为projectID。
-    * eventSources  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
-    * eventInfo  一条或者多条事件详细信息。
+    * eventName  **参数解释**： 事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。 **取值范围**： 不涉及。
+    * eventType  **参数解释**： 事件类型。 **取值范围**： 值为EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS: 系统事件。 - EVENT.CUSTOM: 自定义事件。
+    * subEventType  **参数解释**： 事件子类。 **取值范围**： 枚举类型。 当事件类型为系统事件时，参数值为SUB_EVENT.OPS或SUB_EVENT.PLAN。 当事件类型为自定义事件时，参数值为SUB_EVENT.CUSTOM。 - SUB_EVENT.OPS：运维事件。 - SUB_EVENT.PLAN：计划事件。 - SUB_EVENT.CUSTOM：自定义事件。
+    * eventUsers  **参数解释**： 上报事件时用户的名称，也可能为projectID。 **取值范围**： 不涉及。
+    * eventSources  **参数解释**： 事件来源。 如果是系统事件则值为各服务的命名空间，可查看支持监控的服务列表。如果是自定义事件，则为用户自定义上报定义。 **取值范围**： 不涉及。
+    * eventInfo  **参数解释**： 一条或者多条事件详细信息。
     * metaData  metaData
     *
     * @var string[]
@@ -86,12 +86,12 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * eventName  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
-    * eventType  事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
-    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
-    * eventUsers  上报事件时用户的名称，也可能为projectID。
-    * eventSources  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
-    * eventInfo  一条或者多条事件详细信息。
+    * eventName  **参数解释**： 事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。 **取值范围**： 不涉及。
+    * eventType  **参数解释**： 事件类型。 **取值范围**： 值为EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS: 系统事件。 - EVENT.CUSTOM: 自定义事件。
+    * subEventType  **参数解释**： 事件子类。 **取值范围**： 枚举类型。 当事件类型为系统事件时，参数值为SUB_EVENT.OPS或SUB_EVENT.PLAN。 当事件类型为自定义事件时，参数值为SUB_EVENT.CUSTOM。 - SUB_EVENT.OPS：运维事件。 - SUB_EVENT.PLAN：计划事件。 - SUB_EVENT.CUSTOM：自定义事件。
+    * eventUsers  **参数解释**： 上报事件时用户的名称，也可能为projectID。 **取值范围**： 不涉及。
+    * eventSources  **参数解释**： 事件来源。 如果是系统事件则值为各服务的命名空间，可查看支持监控的服务列表。如果是自定义事件，则为用户自定义上报定义。 **取值范围**： 不涉及。
+    * eventInfo  **参数解释**： 一条或者多条事件详细信息。
     * metaData  metaData
     *
     * @var string[]
@@ -108,12 +108,12 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * eventName  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
-    * eventType  事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
-    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
-    * eventUsers  上报事件时用户的名称，也可能为projectID。
-    * eventSources  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
-    * eventInfo  一条或者多条事件详细信息。
+    * eventName  **参数解释**： 事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。 **取值范围**： 不涉及。
+    * eventType  **参数解释**： 事件类型。 **取值范围**： 值为EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS: 系统事件。 - EVENT.CUSTOM: 自定义事件。
+    * subEventType  **参数解释**： 事件子类。 **取值范围**： 枚举类型。 当事件类型为系统事件时，参数值为SUB_EVENT.OPS或SUB_EVENT.PLAN。 当事件类型为自定义事件时，参数值为SUB_EVENT.CUSTOM。 - SUB_EVENT.OPS：运维事件。 - SUB_EVENT.PLAN：计划事件。 - SUB_EVENT.CUSTOM：自定义事件。
+    * eventUsers  **参数解释**： 上报事件时用户的名称，也可能为projectID。 **取值范围**： 不涉及。
+    * eventSources  **参数解释**： 事件来源。 如果是系统事件则值为各服务的命名空间，可查看支持监控的服务列表。如果是自定义事件，则为用户自定义上报定义。 **取值范围**： 不涉及。
+    * eventInfo  **参数解释**： 一条或者多条事件详细信息。
     * metaData  metaData
     *
     * @var string[]
@@ -130,12 +130,12 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * eventName  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
-    * eventType  事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
-    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
-    * eventUsers  上报事件时用户的名称，也可能为projectID。
-    * eventSources  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
-    * eventInfo  一条或者多条事件详细信息。
+    * eventName  **参数解释**： 事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。 **取值范围**： 不涉及。
+    * eventType  **参数解释**： 事件类型。 **取值范围**： 值为EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS: 系统事件。 - EVENT.CUSTOM: 自定义事件。
+    * subEventType  **参数解释**： 事件子类。 **取值范围**： 枚举类型。 当事件类型为系统事件时，参数值为SUB_EVENT.OPS或SUB_EVENT.PLAN。 当事件类型为自定义事件时，参数值为SUB_EVENT.CUSTOM。 - SUB_EVENT.OPS：运维事件。 - SUB_EVENT.PLAN：计划事件。 - SUB_EVENT.CUSTOM：自定义事件。
+    * eventUsers  **参数解释**： 上报事件时用户的名称，也可能为projectID。 **取值范围**： 不涉及。
+    * eventSources  **参数解释**： 事件来源。 如果是系统事件则值为各服务的命名空间，可查看支持监控的服务列表。如果是自定义事件，则为用户自定义上报定义。 **取值范围**： 不涉及。
+    * eventInfo  **参数解释**： 一条或者多条事件详细信息。
     * metaData  metaData
     *
     * @var string[]
@@ -257,6 +257,12 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['eventName']) && (mb_strlen($this->container['eventName']) > 9999)) {
+                $invalidProperties[] = "invalid value for 'eventName', the character length must be smaller than or equal to 9999.";
+            }
+            if (!is_null($this->container['eventName']) && (mb_strlen($this->container['eventName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'eventName', the character length must be bigger than or equal to 1.";
+            }
             $allowedValues = $this->getEventTypeAllowableValues();
                 if (!is_null($this->container['eventType']) && !in_array($this->container['eventType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -289,7 +295,7 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventName
-    *  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
+    *  **参数解释**： 事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -301,7 +307,7 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets eventName
     *
-    * @param string|null $eventName 事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
+    * @param string|null $eventName **参数解释**： 事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -313,7 +319,7 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventType
-    *  事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
+    *  **参数解释**： 事件类型。 **取值范围**： 值为EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS: 系统事件。 - EVENT.CUSTOM: 自定义事件。
     *
     * @return string|null
     */
@@ -325,7 +331,7 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param string|null $eventType 事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
+    * @param string|null $eventType **参数解释**： 事件类型。 **取值范围**： 值为EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS: 系统事件。 - EVENT.CUSTOM: 自定义事件。
     *
     * @return $this
     */
@@ -337,7 +343,7 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets subEventType
-    *  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
+    *  **参数解释**： 事件子类。 **取值范围**： 枚举类型。 当事件类型为系统事件时，参数值为SUB_EVENT.OPS或SUB_EVENT.PLAN。 当事件类型为自定义事件时，参数值为SUB_EVENT.CUSTOM。 - SUB_EVENT.OPS：运维事件。 - SUB_EVENT.PLAN：计划事件。 - SUB_EVENT.CUSTOM：自定义事件。
     *
     * @return string|null
     */
@@ -349,7 +355,7 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets subEventType
     *
-    * @param string|null $subEventType 事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
+    * @param string|null $subEventType **参数解释**： 事件子类。 **取值范围**： 枚举类型。 当事件类型为系统事件时，参数值为SUB_EVENT.OPS或SUB_EVENT.PLAN。 当事件类型为自定义事件时，参数值为SUB_EVENT.CUSTOM。 - SUB_EVENT.OPS：运维事件。 - SUB_EVENT.PLAN：计划事件。 - SUB_EVENT.CUSTOM：自定义事件。
     *
     * @return $this
     */
@@ -361,7 +367,7 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventUsers
-    *  上报事件时用户的名称，也可能为projectID。
+    *  **参数解释**： 上报事件时用户的名称，也可能为projectID。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -373,7 +379,7 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets eventUsers
     *
-    * @param string[]|null $eventUsers 上报事件时用户的名称，也可能为projectID。
+    * @param string[]|null $eventUsers **参数解释**： 上报事件时用户的名称，也可能为projectID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -385,7 +391,7 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventSources
-    *  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
+    *  **参数解释**： 事件来源。 如果是系统事件则值为各服务的命名空间，可查看支持监控的服务列表。如果是自定义事件，则为用户自定义上报定义。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -397,7 +403,7 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets eventSources
     *
-    * @param string[]|null $eventSources 事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
+    * @param string[]|null $eventSources **参数解释**： 事件来源。 如果是系统事件则值为各服务的命名空间，可查看支持监控的服务列表。如果是自定义事件，则为用户自定义上报定义。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -409,9 +415,9 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventInfo
-    *  一条或者多条事件详细信息。
+    *  **参数解释**： 一条或者多条事件详细信息。
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\EventInfoDetail[]|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\EventInfoDetailResp[]|null
     */
     public function getEventInfo()
     {
@@ -421,7 +427,7 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets eventInfo
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\EventInfoDetail[]|null $eventInfo 一条或者多条事件详细信息。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\EventInfoDetailResp[]|null $eventInfo **参数解释**： 一条或者多条事件详细信息。
     *
     * @return $this
     */

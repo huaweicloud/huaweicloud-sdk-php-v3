@@ -22,7 +22,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
     * promId  Prometheus实例id。
-    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
+    * promType  Prometheus实例类型。  - default：默认普罗实例 - ECS：Prometheus for ECS - CCE：Prometheus for CCE - REMOTE_WRITE：Prometheus 通用实例 - CLOUD_SERVICE：Prometheus for 云服务 - ACROSS_ACCOUNT：Prometheus for 多账号聚合实例 （暂不支持ACROSS_ACCOUNT类型）
     * promVersion  Prometheus实例版本号。
     * promCreateTimestamp  Prometheus实例创建时间戳。
     * promUpdateTimestamp  Prometheus实例更新时间戳。
@@ -33,6 +33,9 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     * deletedTime  删除时间。
     * promSpecConfig  promSpecConfig
     * cceSpecConfig  Prometheus实例所属CCE特殊配置。
+    * promLimits  promLimits
+    * limitsUpdateTime  指标存储周期修改时间。
+    * application  application
     *
     * @var string[]
     */
@@ -49,14 +52,17 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
             'isDeletedTag' => 'int',
             'deletedTime' => 'int',
             'promSpecConfig' => '\HuaweiCloud\SDK\Aom\V2\Model\PromConfigModel',
-            'cceSpecConfig' => 'string'
+            'cceSpecConfig' => 'string',
+            'promLimits' => '\HuaweiCloud\SDK\Aom\V2\Model\PromLimits',
+            'limitsUpdateTime' => 'int',
+            'application' => '\HuaweiCloud\SDK\Aom\V2\Model\ApplicationModel'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
     * promId  Prometheus实例id。
-    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
+    * promType  Prometheus实例类型。  - default：默认普罗实例 - ECS：Prometheus for ECS - CCE：Prometheus for CCE - REMOTE_WRITE：Prometheus 通用实例 - CLOUD_SERVICE：Prometheus for 云服务 - ACROSS_ACCOUNT：Prometheus for 多账号聚合实例 （暂不支持ACROSS_ACCOUNT类型）
     * promVersion  Prometheus实例版本号。
     * promCreateTimestamp  Prometheus实例创建时间戳。
     * promUpdateTimestamp  Prometheus实例更新时间戳。
@@ -67,6 +73,9 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     * deletedTime  删除时间。
     * promSpecConfig  promSpecConfig
     * cceSpecConfig  Prometheus实例所属CCE特殊配置。
+    * promLimits  promLimits
+    * limitsUpdateTime  指标存储周期修改时间。
+    * application  application
     *
     * @var string[]
     */
@@ -83,7 +92,10 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
         'isDeletedTag' => 'int64',
         'deletedTime' => 'int64',
         'promSpecConfig' => null,
-        'cceSpecConfig' => null
+        'cceSpecConfig' => null,
+        'promLimits' => null,
+        'limitsUpdateTime' => 'int64',
+        'application' => null
     ];
 
     /**
@@ -111,7 +123,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     * and the value is the original name
     * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
     * promId  Prometheus实例id。
-    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
+    * promType  Prometheus实例类型。  - default：默认普罗实例 - ECS：Prometheus for ECS - CCE：Prometheus for CCE - REMOTE_WRITE：Prometheus 通用实例 - CLOUD_SERVICE：Prometheus for 云服务 - ACROSS_ACCOUNT：Prometheus for 多账号聚合实例 （暂不支持ACROSS_ACCOUNT类型）
     * promVersion  Prometheus实例版本号。
     * promCreateTimestamp  Prometheus实例创建时间戳。
     * promUpdateTimestamp  Prometheus实例更新时间戳。
@@ -122,6 +134,9 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     * deletedTime  删除时间。
     * promSpecConfig  promSpecConfig
     * cceSpecConfig  Prometheus实例所属CCE特殊配置。
+    * promLimits  promLimits
+    * limitsUpdateTime  指标存储周期修改时间。
+    * application  application
     *
     * @var string[]
     */
@@ -138,14 +153,17 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
             'isDeletedTag' => 'is_deleted_tag',
             'deletedTime' => 'deleted_time',
             'promSpecConfig' => 'prom_spec_config',
-            'cceSpecConfig' => 'cce_spec_config'
+            'cceSpecConfig' => 'cce_spec_config',
+            'promLimits' => 'prom_limits',
+            'limitsUpdateTime' => 'limits_update_time',
+            'application' => 'application'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
     * promId  Prometheus实例id。
-    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
+    * promType  Prometheus实例类型。  - default：默认普罗实例 - ECS：Prometheus for ECS - CCE：Prometheus for CCE - REMOTE_WRITE：Prometheus 通用实例 - CLOUD_SERVICE：Prometheus for 云服务 - ACROSS_ACCOUNT：Prometheus for 多账号聚合实例 （暂不支持ACROSS_ACCOUNT类型）
     * promVersion  Prometheus实例版本号。
     * promCreateTimestamp  Prometheus实例创建时间戳。
     * promUpdateTimestamp  Prometheus实例更新时间戳。
@@ -156,6 +174,9 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     * deletedTime  删除时间。
     * promSpecConfig  promSpecConfig
     * cceSpecConfig  Prometheus实例所属CCE特殊配置。
+    * promLimits  promLimits
+    * limitsUpdateTime  指标存储周期修改时间。
+    * application  application
     *
     * @var string[]
     */
@@ -172,14 +193,17 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
             'isDeletedTag' => 'setIsDeletedTag',
             'deletedTime' => 'setDeletedTime',
             'promSpecConfig' => 'setPromSpecConfig',
-            'cceSpecConfig' => 'setCceSpecConfig'
+            'cceSpecConfig' => 'setCceSpecConfig',
+            'promLimits' => 'setPromLimits',
+            'limitsUpdateTime' => 'setLimitsUpdateTime',
+            'application' => 'setApplication'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
     * promId  Prometheus实例id。
-    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
+    * promType  Prometheus实例类型。  - default：默认普罗实例 - ECS：Prometheus for ECS - CCE：Prometheus for CCE - REMOTE_WRITE：Prometheus 通用实例 - CLOUD_SERVICE：Prometheus for 云服务 - ACROSS_ACCOUNT：Prometheus for 多账号聚合实例 （暂不支持ACROSS_ACCOUNT类型）
     * promVersion  Prometheus实例版本号。
     * promCreateTimestamp  Prometheus实例创建时间戳。
     * promUpdateTimestamp  Prometheus实例更新时间戳。
@@ -190,6 +214,9 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     * deletedTime  删除时间。
     * promSpecConfig  promSpecConfig
     * cceSpecConfig  Prometheus实例所属CCE特殊配置。
+    * promLimits  promLimits
+    * limitsUpdateTime  指标存储周期修改时间。
+    * application  application
     *
     * @var string[]
     */
@@ -206,7 +233,10 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
             'isDeletedTag' => 'getIsDeletedTag',
             'deletedTime' => 'getDeletedTime',
             'promSpecConfig' => 'getPromSpecConfig',
-            'cceSpecConfig' => 'getCceSpecConfig'
+            'cceSpecConfig' => 'getCceSpecConfig',
+            'promLimits' => 'getPromLimits',
+            'limitsUpdateTime' => 'getLimitsUpdateTime',
+            'application' => 'getApplication'
     ];
 
     /**
@@ -249,37 +279,10 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const PROM_TYPE__DEFAULT = 'default';
-    const PROM_TYPE_ECS = 'ECS';
-    const PROM_TYPE_VPC = 'VPC';
-    const PROM_TYPE_CCE = 'CCE';
-    const PROM_TYPE_REMOTE_WRITE = 'REMOTE_WRITE';
-    const PROM_TYPE_KUBERNETES = 'KUBERNETES';
-    const PROM_TYPE_CLOUD_SERVICE = 'CLOUD_SERVICE';
-    const PROM_TYPE_ACROSS_ACCOUNT = 'ACROSS_ACCOUNT';
     const PROM_STATUS_DELETED = 'DELETED';
     const PROM_STATUS_NORMAL = 'NORMAL';
     const PROM_STATUS_ALL = 'ALL';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getPromTypeAllowableValues()
-    {
-        return [
-            self::PROM_TYPE__DEFAULT,
-            self::PROM_TYPE_ECS,
-            self::PROM_TYPE_VPC,
-            self::PROM_TYPE_CCE,
-            self::PROM_TYPE_REMOTE_WRITE,
-            self::PROM_TYPE_KUBERNETES,
-            self::PROM_TYPE_CLOUD_SERVICE,
-            self::PROM_TYPE_ACROSS_ACCOUNT,
-        ];
-    }
 
     /**
     * Gets allowable values of the enum
@@ -324,6 +327,9 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
         $this->container['deletedTime'] = isset($data['deletedTime']) ? $data['deletedTime'] : null;
         $this->container['promSpecConfig'] = isset($data['promSpecConfig']) ? $data['promSpecConfig'] : null;
         $this->container['cceSpecConfig'] = isset($data['cceSpecConfig']) ? $data['cceSpecConfig'] : null;
+        $this->container['promLimits'] = isset($data['promLimits']) ? $data['promLimits'] : null;
+        $this->container['limitsUpdateTime'] = isset($data['limitsUpdateTime']) ? $data['limitsUpdateTime'] : null;
+        $this->container['application'] = isset($data['application']) ? $data['application'] : null;
     }
 
     /**
@@ -340,14 +346,6 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
         if ($this->container['promType'] === null) {
             $invalidProperties[] = "'promType' can't be null";
         }
-            $allowedValues = $this->getPromTypeAllowableValues();
-                if (!is_null($this->container['promType']) && !in_array($this->container['promType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'promType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             $allowedValues = $this->getPromStatusAllowableValues();
                 if (!is_null($this->container['promStatus']) && !in_array($this->container['promStatus'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -420,7 +418,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets promType
-    *  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
+    *  Prometheus实例类型。  - default：默认普罗实例 - ECS：Prometheus for ECS - CCE：Prometheus for CCE - REMOTE_WRITE：Prometheus 通用实例 - CLOUD_SERVICE：Prometheus for 云服务 - ACROSS_ACCOUNT：Prometheus for 多账号聚合实例 （暂不支持ACROSS_ACCOUNT类型）
     *
     * @return string
     */
@@ -432,7 +430,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     /**
     * Sets promType
     *
-    * @param string $promType Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
+    * @param string $promType Prometheus实例类型。  - default：默认普罗实例 - ECS：Prometheus for ECS - CCE：Prometheus for CCE - REMOTE_WRITE：Prometheus 通用实例 - CLOUD_SERVICE：Prometheus for 云服务 - ACROSS_ACCOUNT：Prometheus for 多账号聚合实例 （暂不支持ACROSS_ACCOUNT类型）
     *
     * @return $this
     */
@@ -679,6 +677,78 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     public function setCceSpecConfig($cceSpecConfig)
     {
         $this->container['cceSpecConfig'] = $cceSpecConfig;
+        return $this;
+    }
+
+    /**
+    * Gets promLimits
+    *  promLimits
+    *
+    * @return \HuaweiCloud\SDK\Aom\V2\Model\PromLimits|null
+    */
+    public function getPromLimits()
+    {
+        return $this->container['promLimits'];
+    }
+
+    /**
+    * Sets promLimits
+    *
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\PromLimits|null $promLimits promLimits
+    *
+    * @return $this
+    */
+    public function setPromLimits($promLimits)
+    {
+        $this->container['promLimits'] = $promLimits;
+        return $this;
+    }
+
+    /**
+    * Gets limitsUpdateTime
+    *  指标存储周期修改时间。
+    *
+    * @return int|null
+    */
+    public function getLimitsUpdateTime()
+    {
+        return $this->container['limitsUpdateTime'];
+    }
+
+    /**
+    * Sets limitsUpdateTime
+    *
+    * @param int|null $limitsUpdateTime 指标存储周期修改时间。
+    *
+    * @return $this
+    */
+    public function setLimitsUpdateTime($limitsUpdateTime)
+    {
+        $this->container['limitsUpdateTime'] = $limitsUpdateTime;
+        return $this;
+    }
+
+    /**
+    * Gets application
+    *  application
+    *
+    * @return \HuaweiCloud\SDK\Aom\V2\Model\ApplicationModel|null
+    */
+    public function getApplication()
+    {
+        return $this->container['application'];
+    }
+
+    /**
+    * Sets application
+    *
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\ApplicationModel|null $application application
+    *
+    * @return $this
+    */
+    public function setApplication($application)
+    {
+        $this->container['application'] = $application;
         return $this;
     }
 

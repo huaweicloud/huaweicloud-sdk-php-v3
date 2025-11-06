@@ -205,9 +205,6 @@ class StartAutoCreateSnapshotsReq implements ModelInterface, ArrayAccess
         if ($this->container['keepday'] === null) {
             $invalidProperties[] = "'keepday' can't be null";
         }
-        if ($this->container['period'] === null) {
-            $invalidProperties[] = "'period' can't be null";
-        }
         if ($this->container['prefix'] === null) {
             $invalidProperties[] = "'prefix' can't be null";
         }
@@ -301,7 +298,7 @@ class StartAutoCreateSnapshotsReq implements ModelInterface, ArrayAccess
     * Gets period
     *  每天创建快照的时刻，只支持整点，后面需加上时区，格式为“HH:mm z”，“HH:mm”表示整点时间，“z”表示时区。比如“00:00 GMT+08:00”、“01:00 GMT+08:00”等。
     *
-    * @return string
+    * @return string|null
     */
     public function getPeriod()
     {
@@ -311,7 +308,7 @@ class StartAutoCreateSnapshotsReq implements ModelInterface, ArrayAccess
     /**
     * Sets period
     *
-    * @param string $period 每天创建快照的时刻，只支持整点，后面需加上时区，格式为“HH:mm z”，“HH:mm”表示整点时间，“z”表示时区。比如“00:00 GMT+08:00”、“01:00 GMT+08:00”等。
+    * @param string|null $period 每天创建快照的时刻，只支持整点，后面需加上时区，格式为“HH:mm z”，“HH:mm”表示整点时间，“z”表示时区。比如“00:00 GMT+08:00”、“01:00 GMT+08:00”等。
     *
     * @return $this
     */

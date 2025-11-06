@@ -21,7 +21,7 @@ class ListAgentStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentStatus  **参数解释**: agent插件状态列表 **取值范围**: 数组长度为[1,2000]
+    * agentStatus  **参数解释**: agent插件状态列表
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListAgentStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentStatus  **参数解释**: agent插件状态列表 **取值范围**: 数组长度为[1,2000]
+    * agentStatus  **参数解释**: agent插件状态列表
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListAgentStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentStatus  **参数解释**: agent插件状态列表 **取值范围**: 数组长度为[1,2000]
+    * agentStatus  **参数解释**: agent插件状态列表
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListAgentStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentStatus  **参数解释**: agent插件状态列表 **取值范围**: 数组长度为[1,2000]
+    * agentStatus  **参数解释**: agent插件状态列表
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListAgentStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentStatus  **参数解释**: agent插件状态列表 **取值范围**: 数组长度为[1,2000]
+    * agentStatus  **参数解释**: agent插件状态列表
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListAgentStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentStatus
-    *  **参数解释**: agent插件状态列表 **取值范围**: 数组长度为[1,2000]
+    *  **参数解释**: agent插件状态列表
     *
     * @return \HuaweiCloud\SDK\Ces\V3\Model\AgentStatusInfo[]|null
     */
@@ -187,7 +187,7 @@ class ListAgentStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets agentStatus
     *
-    * @param \HuaweiCloud\SDK\Ces\V3\Model\AgentStatusInfo[]|null $agentStatus **参数解释**: agent插件状态列表 **取值范围**: 数组长度为[1,2000]
+    * @param \HuaweiCloud\SDK\Ces\V3\Model\AgentStatusInfo[]|null $agentStatus **参数解释**: agent插件状态列表
     *
     * @return $this
     */

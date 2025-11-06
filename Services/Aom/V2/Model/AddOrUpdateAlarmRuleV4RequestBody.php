@@ -275,6 +275,12 @@ class AddOrUpdateAlarmRuleV4RequestBody implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['alias']) && (mb_strlen($this->container['alias']) > 512)) {
+                $invalidProperties[] = "invalid value for 'alias', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['alias']) && (mb_strlen($this->container['alias']) < 1)) {
+                $invalidProperties[] = "invalid value for 'alias', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 

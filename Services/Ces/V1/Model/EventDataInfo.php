@@ -183,12 +183,30 @@ class EventDataInfo implements ModelInterface, ArrayAccess
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
+            if ((mb_strlen($this->container['type']) > 64)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['type']) < 1)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 1.";
+            }
         if ($this->container['timestamp'] === null) {
             $invalidProperties[] = "'timestamp' can't be null";
         }
+            if (($this->container['timestamp'] > 9999999999999)) {
+                $invalidProperties[] = "invalid value for 'timestamp', must be smaller than or equal to 9999999999999.";
+            }
+            if (($this->container['timestamp'] < 1111111111111)) {
+                $invalidProperties[] = "invalid value for 'timestamp', must be bigger than or equal to 1111111111111.";
+            }
         if ($this->container['value'] === null) {
             $invalidProperties[] = "'value' can't be null";
         }
+            if ((mb_strlen($this->container['value']) > 64)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['value']) < 1)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 

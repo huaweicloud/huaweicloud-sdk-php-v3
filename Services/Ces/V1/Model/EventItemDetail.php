@@ -20,16 +20,16 @@ class EventItemDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * content  事件内容，最大长度4096。
-    * groupId  所属分组。  资源分组对应的ID，必须传存在的分组ID。
-    * resourceId  资源ID，支持字母、数字_ -：，最大长度128。
-    * resourceName  资源名称，支持字母 中文 数字_ -. ，最大长度128。
-    * eventState  事件状态。  枚举类型：normal\\warning\\incident
-    * eventLevel  事件级别。  枚举类型：Critical, Major, Minor, Info
-    * eventUser  事件用户。  支持字母 数字_ -/空格 ，最大长度64。
-    * eventType  事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
-    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
-    * dimensions  一个或者多个资源维度。
+    * content  **参数解释**： 事件内容 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。 **默认取值**： 不涉及。
+    * groupId  **参数解释**： 所属分组。 资源分组对应的ID，必须是已存在的分组ID。 分组ID查询方法： 1.登录管理控制台。 2.单击“云监控服务”。 3.单击页面左侧的“资源分组”。 在名称/ID列获取具体资源分组ID。 **约束限制**： 不涉及。 **取值范围**： 长度只能为24个字符。 **默认取值**： 不涉及。
+    * resourceId  **参数解释**： 资源ID。 资源ID的查询方法： 1.登录管理控制台。 2.单击“计算 > 弹性云服务器”。 在资源概览页可获取具体资源ID。 **约束限制**： 不涉及。 **取值范围**： 支持字母、数字支持字母、数字、下划线（_）、中划线（-）和冒号（:），最大长度128个字符。例如，6a69bf28-ee62-49f3-9785-845dacd799ec。 **默认取值**： 不涉及。
+    * resourceName  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： 支持字母 中文 数字_ -. ，最大长度128个字符。 **默认取值**： 不涉及。
+    * eventState  **参数解释**： 事件状态。 **约束限制**： 不涉及。 **取值范围**： 枚举类型。 - normal：正常发生 - warning：异常 - incident：严重 **默认取值**： 不涉及。
+    * eventLevel  **参数解释**： 事件级别。 **约束限制**： 不涉及。 **取值范围**： 枚举类型：Critical, Major, Minor, Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示 **默认取值**： 不涉及。
+    * eventUser  **参数解释**： 事件用户。 **约束限制**： 不涉及。 **取值范围**： 支持字母 数字_ -/空格 ，长度为[0,64]个字符。 **默认取值**： 不涉及。
+    * eventType  **参数解释**： 事件类型。 **约束限制**： EVENT.SYS为系统事件，用户自己不能上报系统事件，只能传EVENT.CUSTOM。 **取值范围**： 枚举类型，EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS：系统事件 - EVENT.CUSTOM：自定义事件 **默认取值**： 不涉及。
+    * subEventType  **参数解释**： 事件子类。 **约束限制**： 不涉及。 **取值范围**： 枚举类型 - SUB_EVENT.OPS: 运维事件 - SUB_EVENT.PLAN: 计划事件 - SUB_EVENT.CUSTOM: 自定义事件 **默认取值**： 不涉及。
+    * dimensions  **参数解释**： 事件的维度，根据维度描述资源信息。 用于指定资源、资源分组的事件告警场景中，支持按维度配置告警规则。 **约束限制**： 目前最大支持4个维度。
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class EventItemDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * content  事件内容，最大长度4096。
-    * groupId  所属分组。  资源分组对应的ID，必须传存在的分组ID。
-    * resourceId  资源ID，支持字母、数字_ -：，最大长度128。
-    * resourceName  资源名称，支持字母 中文 数字_ -. ，最大长度128。
-    * eventState  事件状态。  枚举类型：normal\\warning\\incident
-    * eventLevel  事件级别。  枚举类型：Critical, Major, Minor, Info
-    * eventUser  事件用户。  支持字母 数字_ -/空格 ，最大长度64。
-    * eventType  事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
-    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
-    * dimensions  一个或者多个资源维度。
+    * content  **参数解释**： 事件内容 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。 **默认取值**： 不涉及。
+    * groupId  **参数解释**： 所属分组。 资源分组对应的ID，必须是已存在的分组ID。 分组ID查询方法： 1.登录管理控制台。 2.单击“云监控服务”。 3.单击页面左侧的“资源分组”。 在名称/ID列获取具体资源分组ID。 **约束限制**： 不涉及。 **取值范围**： 长度只能为24个字符。 **默认取值**： 不涉及。
+    * resourceId  **参数解释**： 资源ID。 资源ID的查询方法： 1.登录管理控制台。 2.单击“计算 > 弹性云服务器”。 在资源概览页可获取具体资源ID。 **约束限制**： 不涉及。 **取值范围**： 支持字母、数字支持字母、数字、下划线（_）、中划线（-）和冒号（:），最大长度128个字符。例如，6a69bf28-ee62-49f3-9785-845dacd799ec。 **默认取值**： 不涉及。
+    * resourceName  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： 支持字母 中文 数字_ -. ，最大长度128个字符。 **默认取值**： 不涉及。
+    * eventState  **参数解释**： 事件状态。 **约束限制**： 不涉及。 **取值范围**： 枚举类型。 - normal：正常发生 - warning：异常 - incident：严重 **默认取值**： 不涉及。
+    * eventLevel  **参数解释**： 事件级别。 **约束限制**： 不涉及。 **取值范围**： 枚举类型：Critical, Major, Minor, Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示 **默认取值**： 不涉及。
+    * eventUser  **参数解释**： 事件用户。 **约束限制**： 不涉及。 **取值范围**： 支持字母 数字_ -/空格 ，长度为[0,64]个字符。 **默认取值**： 不涉及。
+    * eventType  **参数解释**： 事件类型。 **约束限制**： EVENT.SYS为系统事件，用户自己不能上报系统事件，只能传EVENT.CUSTOM。 **取值范围**： 枚举类型，EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS：系统事件 - EVENT.CUSTOM：自定义事件 **默认取值**： 不涉及。
+    * subEventType  **参数解释**： 事件子类。 **约束限制**： 不涉及。 **取值范围**： 枚举类型 - SUB_EVENT.OPS: 运维事件 - SUB_EVENT.PLAN: 计划事件 - SUB_EVENT.CUSTOM: 自定义事件 **默认取值**： 不涉及。
+    * dimensions  **参数解释**： 事件的维度，根据维度描述资源信息。 用于指定资源、资源分组的事件告警场景中，支持按维度配置告警规则。 **约束限制**： 目前最大支持4个维度。
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * content  事件内容，最大长度4096。
-    * groupId  所属分组。  资源分组对应的ID，必须传存在的分组ID。
-    * resourceId  资源ID，支持字母、数字_ -：，最大长度128。
-    * resourceName  资源名称，支持字母 中文 数字_ -. ，最大长度128。
-    * eventState  事件状态。  枚举类型：normal\\warning\\incident
-    * eventLevel  事件级别。  枚举类型：Critical, Major, Minor, Info
-    * eventUser  事件用户。  支持字母 数字_ -/空格 ，最大长度64。
-    * eventType  事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
-    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
-    * dimensions  一个或者多个资源维度。
+    * content  **参数解释**： 事件内容 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。 **默认取值**： 不涉及。
+    * groupId  **参数解释**： 所属分组。 资源分组对应的ID，必须是已存在的分组ID。 分组ID查询方法： 1.登录管理控制台。 2.单击“云监控服务”。 3.单击页面左侧的“资源分组”。 在名称/ID列获取具体资源分组ID。 **约束限制**： 不涉及。 **取值范围**： 长度只能为24个字符。 **默认取值**： 不涉及。
+    * resourceId  **参数解释**： 资源ID。 资源ID的查询方法： 1.登录管理控制台。 2.单击“计算 > 弹性云服务器”。 在资源概览页可获取具体资源ID。 **约束限制**： 不涉及。 **取值范围**： 支持字母、数字支持字母、数字、下划线（_）、中划线（-）和冒号（:），最大长度128个字符。例如，6a69bf28-ee62-49f3-9785-845dacd799ec。 **默认取值**： 不涉及。
+    * resourceName  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： 支持字母 中文 数字_ -. ，最大长度128个字符。 **默认取值**： 不涉及。
+    * eventState  **参数解释**： 事件状态。 **约束限制**： 不涉及。 **取值范围**： 枚举类型。 - normal：正常发生 - warning：异常 - incident：严重 **默认取值**： 不涉及。
+    * eventLevel  **参数解释**： 事件级别。 **约束限制**： 不涉及。 **取值范围**： 枚举类型：Critical, Major, Minor, Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示 **默认取值**： 不涉及。
+    * eventUser  **参数解释**： 事件用户。 **约束限制**： 不涉及。 **取值范围**： 支持字母 数字_ -/空格 ，长度为[0,64]个字符。 **默认取值**： 不涉及。
+    * eventType  **参数解释**： 事件类型。 **约束限制**： EVENT.SYS为系统事件，用户自己不能上报系统事件，只能传EVENT.CUSTOM。 **取值范围**： 枚举类型，EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS：系统事件 - EVENT.CUSTOM：自定义事件 **默认取值**： 不涉及。
+    * subEventType  **参数解释**： 事件子类。 **约束限制**： 不涉及。 **取值范围**： 枚举类型 - SUB_EVENT.OPS: 运维事件 - SUB_EVENT.PLAN: 计划事件 - SUB_EVENT.CUSTOM: 自定义事件 **默认取值**： 不涉及。
+    * dimensions  **参数解释**： 事件的维度，根据维度描述资源信息。 用于指定资源、资源分组的事件告警场景中，支持按维度配置告警规则。 **约束限制**： 目前最大支持4个维度。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class EventItemDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * content  事件内容，最大长度4096。
-    * groupId  所属分组。  资源分组对应的ID，必须传存在的分组ID。
-    * resourceId  资源ID，支持字母、数字_ -：，最大长度128。
-    * resourceName  资源名称，支持字母 中文 数字_ -. ，最大长度128。
-    * eventState  事件状态。  枚举类型：normal\\warning\\incident
-    * eventLevel  事件级别。  枚举类型：Critical, Major, Minor, Info
-    * eventUser  事件用户。  支持字母 数字_ -/空格 ，最大长度64。
-    * eventType  事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
-    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
-    * dimensions  一个或者多个资源维度。
+    * content  **参数解释**： 事件内容 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。 **默认取值**： 不涉及。
+    * groupId  **参数解释**： 所属分组。 资源分组对应的ID，必须是已存在的分组ID。 分组ID查询方法： 1.登录管理控制台。 2.单击“云监控服务”。 3.单击页面左侧的“资源分组”。 在名称/ID列获取具体资源分组ID。 **约束限制**： 不涉及。 **取值范围**： 长度只能为24个字符。 **默认取值**： 不涉及。
+    * resourceId  **参数解释**： 资源ID。 资源ID的查询方法： 1.登录管理控制台。 2.单击“计算 > 弹性云服务器”。 在资源概览页可获取具体资源ID。 **约束限制**： 不涉及。 **取值范围**： 支持字母、数字支持字母、数字、下划线（_）、中划线（-）和冒号（:），最大长度128个字符。例如，6a69bf28-ee62-49f3-9785-845dacd799ec。 **默认取值**： 不涉及。
+    * resourceName  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： 支持字母 中文 数字_ -. ，最大长度128个字符。 **默认取值**： 不涉及。
+    * eventState  **参数解释**： 事件状态。 **约束限制**： 不涉及。 **取值范围**： 枚举类型。 - normal：正常发生 - warning：异常 - incident：严重 **默认取值**： 不涉及。
+    * eventLevel  **参数解释**： 事件级别。 **约束限制**： 不涉及。 **取值范围**： 枚举类型：Critical, Major, Minor, Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示 **默认取值**： 不涉及。
+    * eventUser  **参数解释**： 事件用户。 **约束限制**： 不涉及。 **取值范围**： 支持字母 数字_ -/空格 ，长度为[0,64]个字符。 **默认取值**： 不涉及。
+    * eventType  **参数解释**： 事件类型。 **约束限制**： EVENT.SYS为系统事件，用户自己不能上报系统事件，只能传EVENT.CUSTOM。 **取值范围**： 枚举类型，EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS：系统事件 - EVENT.CUSTOM：自定义事件 **默认取值**： 不涉及。
+    * subEventType  **参数解释**： 事件子类。 **约束限制**： 不涉及。 **取值范围**： 枚举类型 - SUB_EVENT.OPS: 运维事件 - SUB_EVENT.PLAN: 计划事件 - SUB_EVENT.CUSTOM: 自定义事件 **默认取值**： 不涉及。
+    * dimensions  **参数解释**： 事件的维度，根据维度描述资源信息。 用于指定资源、资源分组的事件告警场景中，支持按维度配置告警规则。 **约束限制**： 目前最大支持4个维度。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class EventItemDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * content  事件内容，最大长度4096。
-    * groupId  所属分组。  资源分组对应的ID，必须传存在的分组ID。
-    * resourceId  资源ID，支持字母、数字_ -：，最大长度128。
-    * resourceName  资源名称，支持字母 中文 数字_ -. ，最大长度128。
-    * eventState  事件状态。  枚举类型：normal\\warning\\incident
-    * eventLevel  事件级别。  枚举类型：Critical, Major, Minor, Info
-    * eventUser  事件用户。  支持字母 数字_ -/空格 ，最大长度64。
-    * eventType  事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
-    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
-    * dimensions  一个或者多个资源维度。
+    * content  **参数解释**： 事件内容 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。 **默认取值**： 不涉及。
+    * groupId  **参数解释**： 所属分组。 资源分组对应的ID，必须是已存在的分组ID。 分组ID查询方法： 1.登录管理控制台。 2.单击“云监控服务”。 3.单击页面左侧的“资源分组”。 在名称/ID列获取具体资源分组ID。 **约束限制**： 不涉及。 **取值范围**： 长度只能为24个字符。 **默认取值**： 不涉及。
+    * resourceId  **参数解释**： 资源ID。 资源ID的查询方法： 1.登录管理控制台。 2.单击“计算 > 弹性云服务器”。 在资源概览页可获取具体资源ID。 **约束限制**： 不涉及。 **取值范围**： 支持字母、数字支持字母、数字、下划线（_）、中划线（-）和冒号（:），最大长度128个字符。例如，6a69bf28-ee62-49f3-9785-845dacd799ec。 **默认取值**： 不涉及。
+    * resourceName  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： 支持字母 中文 数字_ -. ，最大长度128个字符。 **默认取值**： 不涉及。
+    * eventState  **参数解释**： 事件状态。 **约束限制**： 不涉及。 **取值范围**： 枚举类型。 - normal：正常发生 - warning：异常 - incident：严重 **默认取值**： 不涉及。
+    * eventLevel  **参数解释**： 事件级别。 **约束限制**： 不涉及。 **取值范围**： 枚举类型：Critical, Major, Minor, Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示 **默认取值**： 不涉及。
+    * eventUser  **参数解释**： 事件用户。 **约束限制**： 不涉及。 **取值范围**： 支持字母 数字_ -/空格 ，长度为[0,64]个字符。 **默认取值**： 不涉及。
+    * eventType  **参数解释**： 事件类型。 **约束限制**： EVENT.SYS为系统事件，用户自己不能上报系统事件，只能传EVENT.CUSTOM。 **取值范围**： 枚举类型，EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS：系统事件 - EVENT.CUSTOM：自定义事件 **默认取值**： 不涉及。
+    * subEventType  **参数解释**： 事件子类。 **约束限制**： 不涉及。 **取值范围**： 枚举类型 - SUB_EVENT.OPS: 运维事件 - SUB_EVENT.PLAN: 计划事件 - SUB_EVENT.CUSTOM: 自定义事件 **默认取值**： 不涉及。
+    * dimensions  **参数解释**： 事件的维度，根据维度描述资源信息。 用于指定资源、资源分组的事件告警场景中，支持按维度配置告警规则。 **约束限制**： 目前最大支持4个维度。
     *
     * @var string[]
     */
@@ -226,6 +226,8 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     const EVENT_LEVEL_MAJOR = 'Major';
     const EVENT_LEVEL_MINOR = 'Minor';
     const EVENT_LEVEL_INFO = 'Info';
+    const EVENT_TYPE_EVENT_SYS = 'EVENT.SYS';
+    const EVENT_TYPE_EVENT_CUSTOM = 'EVENT.CUSTOM';
     const SUB_EVENT_TYPE_SUB_EVENT_OPS = 'SUB_EVENT.OPS';
     const SUB_EVENT_TYPE_SUB_EVENT_PLAN = 'SUB_EVENT.PLAN';
     const SUB_EVENT_TYPE_SUB_EVENT_CUSTOM = 'SUB_EVENT.CUSTOM';
@@ -257,6 +259,19 @@ class EventItemDetail implements ModelInterface, ArrayAccess
             self::EVENT_LEVEL_MAJOR,
             self::EVENT_LEVEL_MINOR,
             self::EVENT_LEVEL_INFO,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEventTypeAllowableValues()
+    {
+        return [
+            self::EVENT_TYPE_EVENT_SYS,
+            self::EVENT_TYPE_EVENT_CUSTOM,
         ];
     }
 
@@ -313,20 +328,32 @@ class EventItemDetail implements ModelInterface, ArrayAccess
             if (!is_null($this->container['content']) && (mb_strlen($this->container['content']) > 4096)) {
                 $invalidProperties[] = "invalid value for 'content', the character length must be smaller than or equal to 4096.";
             }
-            if (!is_null($this->container['content']) && (mb_strlen($this->container['content']) < 1)) {
-                $invalidProperties[] = "invalid value for 'content', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['content']) && (mb_strlen($this->container['content']) < 0)) {
+                $invalidProperties[] = "invalid value for 'content', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 24)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 24.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 24)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 24.";
+            }
+            if (!is_null($this->container['groupId']) && !preg_match("/^rg([a-z]|[A-Z]|[0-9]){22}$/", $this->container['groupId'])) {
+                $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /^rg([a-z]|[A-Z]|[0-9]){22}$/.";
             }
             if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['resourceId']) && !preg_match("/^([a-z]|[A-Z]|[0-9]|_|-|:|\/|#|\\(|\\)|)+$/", $this->container['resourceId'])) {
+                $invalidProperties[] = "invalid value for 'resourceId', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|_|-|:|\/|#|\\(|\\)|)+$/.";
             }
             if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'resourceName', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'resourceName', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'resourceName', the character length must be bigger than or equal to 0.";
             }
             $allowedValues = $this->getEventStateAllowableValues();
                 if (!is_null($this->container['eventState']) && !in_array($this->container['eventState'], $allowedValues, true)) {
@@ -350,9 +377,17 @@ class EventItemDetail implements ModelInterface, ArrayAccess
             if (!is_null($this->container['eventUser']) && (mb_strlen($this->container['eventUser']) < 0)) {
                 $invalidProperties[] = "invalid value for 'eventUser', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['eventUser']) && !preg_match("/([a-z]|[A-Z]|_|-|\/){0,64}/", $this->container['eventUser'])) {
-                $invalidProperties[] = "invalid value for 'eventUser', must be conform to the pattern /([a-z]|[A-Z]|_|-|\/){0,64}/.";
+            if (!is_null($this->container['eventUser']) && !preg_match("/^([a-z]|[A-Z]|[0-9]|_|-|\/| |@|\\.|)+$/", $this->container['eventUser'])) {
+                $invalidProperties[] = "invalid value for 'eventUser', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|_|-|\/| |@|\\.|)+$/.";
             }
+            $allowedValues = $this->getEventTypeAllowableValues();
+                if (!is_null($this->container['eventType']) && !in_array($this->container['eventType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'eventType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             $allowedValues = $this->getSubEventTypeAllowableValues();
                 if (!is_null($this->container['subEventType']) && !in_array($this->container['subEventType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -377,7 +412,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets content
-    *  事件内容，最大长度4096。
+    *  **参数解释**： 事件内容 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -389,7 +424,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     /**
     * Sets content
     *
-    * @param string|null $content 事件内容，最大长度4096。
+    * @param string|null $content **参数解释**： 事件内容 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -401,7 +436,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  所属分组。  资源分组对应的ID，必须传存在的分组ID。
+    *  **参数解释**： 所属分组。 资源分组对应的ID，必须是已存在的分组ID。 分组ID查询方法： 1.登录管理控制台。 2.单击“云监控服务”。 3.单击页面左侧的“资源分组”。 在名称/ID列获取具体资源分组ID。 **约束限制**： 不涉及。 **取值范围**： 长度只能为24个字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -413,7 +448,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 所属分组。  资源分组对应的ID，必须传存在的分组ID。
+    * @param string|null $groupId **参数解释**： 所属分组。 资源分组对应的ID，必须是已存在的分组ID。 分组ID查询方法： 1.登录管理控制台。 2.单击“云监控服务”。 3.单击页面左侧的“资源分组”。 在名称/ID列获取具体资源分组ID。 **约束限制**： 不涉及。 **取值范围**： 长度只能为24个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -425,7 +460,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  资源ID，支持字母、数字_ -：，最大长度128。
+    *  **参数解释**： 资源ID。 资源ID的查询方法： 1.登录管理控制台。 2.单击“计算 > 弹性云服务器”。 在资源概览页可获取具体资源ID。 **约束限制**： 不涉及。 **取值范围**： 支持字母、数字支持字母、数字、下划线（_）、中划线（-）和冒号（:），最大长度128个字符。例如，6a69bf28-ee62-49f3-9785-845dacd799ec。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -437,7 +472,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 资源ID，支持字母、数字_ -：，最大长度128。
+    * @param string|null $resourceId **参数解释**： 资源ID。 资源ID的查询方法： 1.登录管理控制台。 2.单击“计算 > 弹性云服务器”。 在资源概览页可获取具体资源ID。 **约束限制**： 不涉及。 **取值范围**： 支持字母、数字支持字母、数字、下划线（_）、中划线（-）和冒号（:），最大长度128个字符。例如，6a69bf28-ee62-49f3-9785-845dacd799ec。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -449,7 +484,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
-    *  资源名称，支持字母 中文 数字_ -. ，最大长度128。
+    *  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： 支持字母 中文 数字_ -. ，最大长度128个字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -461,7 +496,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     /**
     * Sets resourceName
     *
-    * @param string|null $resourceName 资源名称，支持字母 中文 数字_ -. ，最大长度128。
+    * @param string|null $resourceName **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： 支持字母 中文 数字_ -. ，最大长度128个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -473,7 +508,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventState
-    *  事件状态。  枚举类型：normal\\warning\\incident
+    *  **参数解释**： 事件状态。 **约束限制**： 不涉及。 **取值范围**： 枚举类型。 - normal：正常发生 - warning：异常 - incident：严重 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -485,7 +520,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     /**
     * Sets eventState
     *
-    * @param string|null $eventState 事件状态。  枚举类型：normal\\warning\\incident
+    * @param string|null $eventState **参数解释**： 事件状态。 **约束限制**： 不涉及。 **取值范围**： 枚举类型。 - normal：正常发生 - warning：异常 - incident：严重 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -497,7 +532,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventLevel
-    *  事件级别。  枚举类型：Critical, Major, Minor, Info
+    *  **参数解释**： 事件级别。 **约束限制**： 不涉及。 **取值范围**： 枚举类型：Critical, Major, Minor, Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -509,7 +544,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     /**
     * Sets eventLevel
     *
-    * @param string|null $eventLevel 事件级别。  枚举类型：Critical, Major, Minor, Info
+    * @param string|null $eventLevel **参数解释**： 事件级别。 **约束限制**： 不涉及。 **取值范围**： 枚举类型：Critical, Major, Minor, Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -521,7 +556,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventUser
-    *  事件用户。  支持字母 数字_ -/空格 ，最大长度64。
+    *  **参数解释**： 事件用户。 **约束限制**： 不涉及。 **取值范围**： 支持字母 数字_ -/空格 ，长度为[0,64]个字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -533,7 +568,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     /**
     * Sets eventUser
     *
-    * @param string|null $eventUser 事件用户。  支持字母 数字_ -/空格 ，最大长度64。
+    * @param string|null $eventUser **参数解释**： 事件用户。 **约束限制**： 不涉及。 **取值范围**： 支持字母 数字_ -/空格 ，长度为[0,64]个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -545,7 +580,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventType
-    *  事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
+    *  **参数解释**： 事件类型。 **约束限制**： EVENT.SYS为系统事件，用户自己不能上报系统事件，只能传EVENT.CUSTOM。 **取值范围**： 枚举类型，EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS：系统事件 - EVENT.CUSTOM：自定义事件 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -557,7 +592,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param string|null $eventType 事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
+    * @param string|null $eventType **参数解释**： 事件类型。 **约束限制**： EVENT.SYS为系统事件，用户自己不能上报系统事件，只能传EVENT.CUSTOM。 **取值范围**： 枚举类型，EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS：系统事件 - EVENT.CUSTOM：自定义事件 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -569,7 +604,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets subEventType
-    *  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
+    *  **参数解释**： 事件子类。 **约束限制**： 不涉及。 **取值范围**： 枚举类型 - SUB_EVENT.OPS: 运维事件 - SUB_EVENT.PLAN: 计划事件 - SUB_EVENT.CUSTOM: 自定义事件 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -581,7 +616,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     /**
     * Sets subEventType
     *
-    * @param string|null $subEventType 事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
+    * @param string|null $subEventType **参数解释**： 事件子类。 **约束限制**： 不涉及。 **取值范围**： 枚举类型 - SUB_EVENT.OPS: 运维事件 - SUB_EVENT.PLAN: 计划事件 - SUB_EVENT.CUSTOM: 自定义事件 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -593,7 +628,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensions
-    *  一个或者多个资源维度。
+    *  **参数解释**： 事件的维度，根据维度描述资源信息。 用于指定资源、资源分组的事件告警场景中，支持按维度配置告警规则。 **约束限制**： 目前最大支持4个维度。
     *
     * @return \HuaweiCloud\SDK\Ces\V1\Model\MetricsDimension[]|null
     */
@@ -605,7 +640,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     /**
     * Sets dimensions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\MetricsDimension[]|null $dimensions 一个或者多个资源维度。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\MetricsDimension[]|null $dimensions **参数解释**： 事件的维度，根据维度描述资源信息。 用于指定资源、资源分组的事件告警场景中，支持按维度配置告警规则。 **约束限制**： 目前最大支持4个维度。
     *
     * @return $this
     */

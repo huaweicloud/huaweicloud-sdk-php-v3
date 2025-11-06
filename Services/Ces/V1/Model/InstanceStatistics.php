@@ -180,6 +180,24 @@ class InstanceStatistics implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['unhealth']) && ($this->container['unhealth'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'unhealth', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['unhealth']) && ($this->container['unhealth'] < 0)) {
+                $invalidProperties[] = "invalid value for 'unhealth', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['total']) && ($this->container['total'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'total', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['total']) && ($this->container['total'] < 0)) {
+                $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['typeStatistics']) && ($this->container['typeStatistics'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'typeStatistics', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['typeStatistics']) && ($this->container['typeStatistics'] < 0)) {
+                $invalidProperties[] = "invalid value for 'typeStatistics', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

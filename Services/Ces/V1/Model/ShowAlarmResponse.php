@@ -21,17 +21,17 @@ class ShowAlarmResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * metricAlarms  告警对象列表。
+    * metricAlarms  **参数解释**： 告警对象列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'metricAlarms' => '\HuaweiCloud\SDK\Ces\V1\Model\MetricAlarms[]'
+            'metricAlarms' => '\HuaweiCloud\SDK\Ces\V1\Model\MetricAlarmsResp[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * metricAlarms  告警对象列表。
+    * metricAlarms  **参数解释**： 告警对象列表。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowAlarmResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * metricAlarms  告警对象列表。
+    * metricAlarms  **参数解释**： 告警对象列表。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowAlarmResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * metricAlarms  告警对象列表。
+    * metricAlarms  **参数解释**： 告警对象列表。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowAlarmResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * metricAlarms  告警对象列表。
+    * metricAlarms  **参数解释**： 告警对象列表。
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class ShowAlarmResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricAlarms
-    *  告警对象列表。
+    *  **参数解释**： 告警对象列表。
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\MetricAlarms[]|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\MetricAlarmsResp[]|null
     */
     public function getMetricAlarms()
     {
@@ -187,7 +187,7 @@ class ShowAlarmResponse implements ModelInterface, ArrayAccess
     /**
     * Sets metricAlarms
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\MetricAlarms[]|null $metricAlarms 告警对象列表。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\MetricAlarmsResp[]|null $metricAlarms **参数解释**： 告警对象列表。
     *
     * @return $this
     */

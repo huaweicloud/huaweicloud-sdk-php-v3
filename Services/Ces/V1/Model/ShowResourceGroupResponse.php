@@ -21,13 +21,13 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupName  资源分组的名称，如：Resource-Group-ECS-01。
-    * groupId  资源分组的ID，如：rg1603786526428bWbVmk4rP。
-    * resources  一组或者多个资源信息。
-    * status  资源分组的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
-    * createTime  资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * groupName  **参数解释** 资源分组的名称 **约束限制** 不涉及 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符 **默认取值** 不涉及
+    * groupId  **参数解释**： 资源分组ID     **约束限制**： 不涉及。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。       **默认取值**： 不涉及。
+    * resources  **参数解释** 创建的资源分组选择一个或者多个资源。 **约束限制** 不超过1000个资源。
+    * status  status
+    * createTime  **参数解释**： 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。     **约束限制**： 不涉及。  **取值范围**： 在[1,9223372036854775807]区间内 **默认取值**： 不涉及。
     * metaData  metaData
-    * enterpriseProjectId  创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
+    * enterpriseProjectId  **参数解释**： 创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。     **约束限制**： 不涉及。  **取值范围**： 由数字、字母和-组成，或者为0（默认企业项目ID）。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -35,7 +35,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
             'groupName' => 'string',
             'groupId' => 'string',
             'resources' => '\HuaweiCloud\SDK\Ces\V1\Model\ResourceGroup[]',
-            'status' => 'string',
+            'status' => '\HuaweiCloud\SDK\Ces\V1\Model\StatusSchema',
             'createTime' => 'int',
             'metaData' => '\HuaweiCloud\SDK\Ces\V1\Model\MetaData',
             'enterpriseProjectId' => 'string'
@@ -43,13 +43,13 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupName  资源分组的名称，如：Resource-Group-ECS-01。
-    * groupId  资源分组的ID，如：rg1603786526428bWbVmk4rP。
-    * resources  一组或者多个资源信息。
-    * status  资源分组的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
-    * createTime  资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * groupName  **参数解释** 资源分组的名称 **约束限制** 不涉及 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符 **默认取值** 不涉及
+    * groupId  **参数解释**： 资源分组ID     **约束限制**： 不涉及。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。       **默认取值**： 不涉及。
+    * resources  **参数解释** 创建的资源分组选择一个或者多个资源。 **约束限制** 不超过1000个资源。
+    * status  status
+    * createTime  **参数解释**： 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。     **约束限制**： 不涉及。  **取值范围**： 在[1,9223372036854775807]区间内 **默认取值**： 不涉及。
     * metaData  metaData
-    * enterpriseProjectId  创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
+    * enterpriseProjectId  **参数解释**： 创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。     **约束限制**： 不涉及。  **取值范围**： 由数字、字母和-组成，或者为0（默认企业项目ID）。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -86,13 +86,13 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupName  资源分组的名称，如：Resource-Group-ECS-01。
-    * groupId  资源分组的ID，如：rg1603786526428bWbVmk4rP。
-    * resources  一组或者多个资源信息。
-    * status  资源分组的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
-    * createTime  资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * groupName  **参数解释** 资源分组的名称 **约束限制** 不涉及 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符 **默认取值** 不涉及
+    * groupId  **参数解释**： 资源分组ID     **约束限制**： 不涉及。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。       **默认取值**： 不涉及。
+    * resources  **参数解释** 创建的资源分组选择一个或者多个资源。 **约束限制** 不超过1000个资源。
+    * status  status
+    * createTime  **参数解释**： 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。     **约束限制**： 不涉及。  **取值范围**： 在[1,9223372036854775807]区间内 **默认取值**： 不涉及。
     * metaData  metaData
-    * enterpriseProjectId  创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
+    * enterpriseProjectId  **参数解释**： 创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。     **约束限制**： 不涉及。  **取值范围**： 由数字、字母和-组成，或者为0（默认企业项目ID）。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -108,13 +108,13 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupName  资源分组的名称，如：Resource-Group-ECS-01。
-    * groupId  资源分组的ID，如：rg1603786526428bWbVmk4rP。
-    * resources  一组或者多个资源信息。
-    * status  资源分组的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
-    * createTime  资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * groupName  **参数解释** 资源分组的名称 **约束限制** 不涉及 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符 **默认取值** 不涉及
+    * groupId  **参数解释**： 资源分组ID     **约束限制**： 不涉及。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。       **默认取值**： 不涉及。
+    * resources  **参数解释** 创建的资源分组选择一个或者多个资源。 **约束限制** 不超过1000个资源。
+    * status  status
+    * createTime  **参数解释**： 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。     **约束限制**： 不涉及。  **取值范围**： 在[1,9223372036854775807]区间内 **默认取值**： 不涉及。
     * metaData  metaData
-    * enterpriseProjectId  创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
+    * enterpriseProjectId  **参数解释**： 创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。     **约束限制**： 不涉及。  **取值范围**： 由数字、字母和-组成，或者为0（默认企业项目ID）。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -130,13 +130,13 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupName  资源分组的名称，如：Resource-Group-ECS-01。
-    * groupId  资源分组的ID，如：rg1603786526428bWbVmk4rP。
-    * resources  一组或者多个资源信息。
-    * status  资源分组的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
-    * createTime  资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * groupName  **参数解释** 资源分组的名称 **约束限制** 不涉及 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符 **默认取值** 不涉及
+    * groupId  **参数解释**： 资源分组ID     **约束限制**： 不涉及。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。       **默认取值**： 不涉及。
+    * resources  **参数解释** 创建的资源分组选择一个或者多个资源。 **约束限制** 不超过1000个资源。
+    * status  status
+    * createTime  **参数解释**： 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。     **约束限制**： 不涉及。  **取值范围**： 在[1,9223372036854775807]区间内 **默认取值**： 不涉及。
     * metaData  metaData
-    * enterpriseProjectId  创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
+    * enterpriseProjectId  **参数解释**： 创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。     **约束限制**： 不涉及。  **取值范围**： 由数字、字母和-组成，或者为0（默认企业项目ID）。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -225,6 +225,27 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 9999)) {
+                $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 9999.";
+            }
+            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 9999)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 9999.";
+            }
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 9223372036854775807.";
+            }
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] < 1)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 9999)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 9999.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -241,7 +262,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  资源分组的名称，如：Resource-Group-ECS-01。
+    *  **参数解释** 资源分组的名称 **约束限制** 不涉及 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -253,7 +274,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 资源分组的名称，如：Resource-Group-ECS-01。
+    * @param string|null $groupName **参数解释** 资源分组的名称 **约束限制** 不涉及 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -265,7 +286,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  资源分组的ID，如：rg1603786526428bWbVmk4rP。
+    *  **参数解释**： 资源分组ID     **约束限制**： 不涉及。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。       **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -277,7 +298,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 资源分组的ID，如：rg1603786526428bWbVmk4rP。
+    * @param string|null $groupId **参数解释**： 资源分组ID     **约束限制**： 不涉及。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。       **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -289,7 +310,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
-    *  一组或者多个资源信息。
+    *  **参数解释** 创建的资源分组选择一个或者多个资源。 **约束限制** 不超过1000个资源。
     *
     * @return \HuaweiCloud\SDK\Ces\V1\Model\ResourceGroup[]|null
     */
@@ -301,7 +322,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\ResourceGroup[]|null $resources 一组或者多个资源信息。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\ResourceGroup[]|null $resources **参数解释** 创建的资源分组选择一个或者多个资源。 **约束限制** 不超过1000个资源。
     *
     * @return $this
     */
@@ -313,9 +334,9 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源分组的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    *  status
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\StatusSchema|null
     */
     public function getStatus()
     {
@@ -325,7 +346,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源分组的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\StatusSchema|null $status status
     *
     * @return $this
     */
@@ -337,7 +358,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    *  **参数解释**： 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。     **约束限制**： 不涉及。  **取值范围**： 在[1,9223372036854775807]区间内 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -349,7 +370,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * @param int|null $createTime **参数解释**： 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。     **约束限制**： 不涉及。  **取值范围**： 在[1,9223372036854775807]区间内 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -385,7 +406,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
+    *  **参数解释**： 创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。     **约束限制**： 不涉及。  **取值范围**： 由数字、字母和-组成，或者为0（默认企业项目ID）。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -397,7 +418,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
+    * @param string|null $enterpriseProjectId **参数解释**： 创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。     **约束限制**： 不涉及。  **取值范围**： 由数字、字母和-组成，或者为0（默认企业项目ID）。 **默认取值**： 不涉及。
     *
     * @return $this
     */

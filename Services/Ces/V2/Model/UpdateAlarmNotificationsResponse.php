@@ -22,8 +22,8 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
-    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
-    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。
     * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
@@ -40,8 +40,8 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
-    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
-    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。
     * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
@@ -79,8 +79,8 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
-    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
-    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。
     * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
@@ -97,8 +97,8 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
-    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
-    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。
     * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
@@ -115,8 +115,8 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
-    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
-    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。
+    * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。
     * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
@@ -261,7 +261,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmNotifications
-    *  **参数解释**： 触发告警时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    *  **参数解释**： 触发告警时，通知组/主题订阅的信息。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\NotificationResp[]|null
     */
@@ -273,7 +273,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmNotifications
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\NotificationResp[]|null $alarmNotifications **参数解释**： 触发告警时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\NotificationResp[]|null $alarmNotifications **参数解释**： 触发告警时，通知组/主题订阅的信息。
     *
     * @return $this
     */
@@ -285,7 +285,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets okNotifications
-    *  **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    *  **参数解释**： 告警恢复时，通知组/主题订阅的信息。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\NotificationResp[]|null
     */
@@ -297,7 +297,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets okNotifications
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\NotificationResp[]|null $okNotifications **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\NotificationResp[]|null $okNotifications **参数解释**： 告警恢复时，通知组/主题订阅的信息。
     *
     * @return $this
     */

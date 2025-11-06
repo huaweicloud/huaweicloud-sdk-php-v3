@@ -29,6 +29,7 @@ class Restore implements ModelInterface, ArrayAccess
     * publicIp  publicIp
     * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     * ipv6Enable  **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。 **取值范围**： 不涉及。
+    * numberOfCn  **参数解释**： CN部署量。取值范围为3~集群节点数，最大值为20，默认值为3。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class Restore implements ModelInterface, ArrayAccess
             'port' => 'int',
             'publicIp' => '\HuaweiCloud\SDK\Dws\V2\Model\PublicIp',
             'enterpriseProjectId' => 'string',
-            'ipv6Enable' => 'bool'
+            'ipv6Enable' => 'bool',
+            'numberOfCn' => 'int'
     ];
 
     /**
@@ -55,6 +57,7 @@ class Restore implements ModelInterface, ArrayAccess
     * publicIp  publicIp
     * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     * ipv6Enable  **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。 **取值范围**： 不涉及。
+    * numberOfCn  **参数解释**： CN部署量。取值范围为3~集群节点数，最大值为20，默认值为3。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class Restore implements ModelInterface, ArrayAccess
         'port' => 'int32',
         'publicIp' => null,
         'enterpriseProjectId' => null,
-        'ipv6Enable' => null
+        'ipv6Enable' => null,
+        'numberOfCn' => 'int32'
     ];
 
     /**
@@ -102,6 +106,7 @@ class Restore implements ModelInterface, ArrayAccess
     * publicIp  publicIp
     * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     * ipv6Enable  **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。 **取值范围**： 不涉及。
+    * numberOfCn  **参数解释**： CN部署量。取值范围为3~集群节点数，最大值为20，默认值为3。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class Restore implements ModelInterface, ArrayAccess
             'port' => 'port',
             'publicIp' => 'public_ip',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'ipv6Enable' => 'ipv6_enable'
+            'ipv6Enable' => 'ipv6_enable',
+            'numberOfCn' => 'number_of_cn'
     ];
 
     /**
@@ -128,6 +134,7 @@ class Restore implements ModelInterface, ArrayAccess
     * publicIp  publicIp
     * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     * ipv6Enable  **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。 **取值范围**： 不涉及。
+    * numberOfCn  **参数解释**： CN部署量。取值范围为3~集群节点数，最大值为20，默认值为3。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class Restore implements ModelInterface, ArrayAccess
             'port' => 'setPort',
             'publicIp' => 'setPublicIp',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'ipv6Enable' => 'setIpv6Enable'
+            'ipv6Enable' => 'setIpv6Enable',
+            'numberOfCn' => 'setNumberOfCn'
     ];
 
     /**
@@ -154,6 +162,7 @@ class Restore implements ModelInterface, ArrayAccess
     * publicIp  publicIp
     * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     * ipv6Enable  **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。 **取值范围**： 不涉及。
+    * numberOfCn  **参数解释**： CN部署量。取值范围为3~集群节点数，最大值为20，默认值为3。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class Restore implements ModelInterface, ArrayAccess
             'port' => 'getPort',
             'publicIp' => 'getPublicIp',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'ipv6Enable' => 'getIpv6Enable'
+            'ipv6Enable' => 'getIpv6Enable',
+            'numberOfCn' => 'getNumberOfCn'
     ];
 
     /**
@@ -236,6 +246,7 @@ class Restore implements ModelInterface, ArrayAccess
         $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
+        $this->container['numberOfCn'] = isset($data['numberOfCn']) ? $data['numberOfCn'] : null;
     }
 
     /**
@@ -482,6 +493,30 @@ class Restore implements ModelInterface, ArrayAccess
     public function setIpv6Enable($ipv6Enable)
     {
         $this->container['ipv6Enable'] = $ipv6Enable;
+        return $this;
+    }
+
+    /**
+    * Gets numberOfCn
+    *  **参数解释**： CN部署量。取值范围为3~集群节点数，最大值为20，默认值为3。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getNumberOfCn()
+    {
+        return $this->container['numberOfCn'];
+    }
+
+    /**
+    * Sets numberOfCn
+    *
+    * @param int|null $numberOfCn **参数解释**： CN部署量。取值范围为3~集群节点数，最大值为20，默认值为3。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setNumberOfCn($numberOfCn)
+    {
+        $this->container['numberOfCn'] = $numberOfCn;
         return $this;
     }
 

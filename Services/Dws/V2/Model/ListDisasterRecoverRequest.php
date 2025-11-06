@@ -20,20 +20,30 @@ class ListDisasterRecoverRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * primaryClusterId  **参数解释**： 主集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyClusterId  **参数解释**： 备集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * id  **参数解释**： 容灾ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'primaryClusterId' => 'string',
+            'standbyClusterId' => 'string',
+            'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * primaryClusterId  **参数解释**： 主集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyClusterId  **参数解释**： 备集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * id  **参数解释**： 容灾ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'primaryClusterId' => null,
+        'standbyClusterId' => null,
+        'id' => null
     ];
 
     /**
@@ -59,29 +69,44 @@ class ListDisasterRecoverRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * primaryClusterId  **参数解释**： 主集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyClusterId  **参数解释**： 备集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * id  **参数解释**： 容灾ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'primaryClusterId' => 'primary_cluster_id',
+            'standbyClusterId' => 'standby_cluster_id',
+            'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * primaryClusterId  **参数解释**： 主集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyClusterId  **参数解释**： 备集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * id  **参数解释**： 容灾ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
+            'primaryClusterId' => 'setPrimaryClusterId',
+            'standbyClusterId' => 'setStandbyClusterId',
+            'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * primaryClusterId  **参数解释**： 主集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyClusterId  **参数解释**： 备集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * id  **参数解释**： 容灾ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
+            'primaryClusterId' => 'getPrimaryClusterId',
+            'standbyClusterId' => 'getStandbyClusterId',
+            'id' => 'getId'
     ];
 
     /**
@@ -142,6 +167,9 @@ class ListDisasterRecoverRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['primaryClusterId'] = isset($data['primaryClusterId']) ? $data['primaryClusterId'] : null;
+        $this->container['standbyClusterId'] = isset($data['standbyClusterId']) ? $data['standbyClusterId'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -164,6 +192,78 @@ class ListDisasterRecoverRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets primaryClusterId
+    *  **参数解释**： 主集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getPrimaryClusterId()
+    {
+        return $this->container['primaryClusterId'];
+    }
+
+    /**
+    * Sets primaryClusterId
+    *
+    * @param string|null $primaryClusterId **参数解释**： 主集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setPrimaryClusterId($primaryClusterId)
+    {
+        $this->container['primaryClusterId'] = $primaryClusterId;
+        return $this;
+    }
+
+    /**
+    * Gets standbyClusterId
+    *  **参数解释**： 备集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getStandbyClusterId()
+    {
+        return $this->container['standbyClusterId'];
+    }
+
+    /**
+    * Sets standbyClusterId
+    *
+    * @param string|null $standbyClusterId **参数解释**： 备集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setStandbyClusterId($standbyClusterId)
+    {
+        $this->container['standbyClusterId'] = $standbyClusterId;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  **参数解释**： 容灾ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id **参数解释**： 容灾ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+        return $this;
     }
 
     /**

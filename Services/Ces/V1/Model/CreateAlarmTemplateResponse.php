@@ -159,6 +159,15 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['templateId']) && (mb_strlen($this->container['templateId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'templateId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['templateId']) && (mb_strlen($this->container['templateId']) < 2)) {
+                $invalidProperties[] = "invalid value for 'templateId', the character length must be bigger than or equal to 2.";
+            }
+            if (!is_null($this->container['templateId']) && !preg_match("/^at([0-9A-Za-z])+$/", $this->container['templateId'])) {
+                $invalidProperties[] = "invalid value for 'templateId', must be conform to the pattern /^at([0-9A-Za-z])+$/.";
+            }
         return $invalidProperties;
     }
 

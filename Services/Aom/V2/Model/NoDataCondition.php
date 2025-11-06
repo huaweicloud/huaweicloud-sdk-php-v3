@@ -20,9 +20,9 @@ class NoDataCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * noDataTimeframe  无数据周期的个数。
-    * noDataAlertState  数据不足时，阈值规则的状态。 - “no_data”：数据不足并发送通知 - “alerting”：告警 - “ok”：正常 - “pre_state”：保持上一个状态
-    * notifyNoData  数据不足是否通知。
+    * noDataTimeframe  无数据处理连续周期。取值范围为1~5。（当\"notify_no_data\"为true时，该参数必填，当\"notify_no_data\"为false时，该参数为空）
+    * noDataAlertState  数据不足时，阈值规则的状态。（当\"notify_no_data\"为true时，该参数必填，当\"notify_no_data\"为false时，该参数为空） - “no_data”：数据不足并发送通知 - “alerting”：告警 - “ok”：正常 - “pre_state”：保持上一个状态
+    * notifyNoData  无数据处理开关。true表示启用无数据处理，false表示关闭无数据处理。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class NoDataCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * noDataTimeframe  无数据周期的个数。
-    * noDataAlertState  数据不足时，阈值规则的状态。 - “no_data”：数据不足并发送通知 - “alerting”：告警 - “ok”：正常 - “pre_state”：保持上一个状态
-    * notifyNoData  数据不足是否通知。
+    * noDataTimeframe  无数据处理连续周期。取值范围为1~5。（当\"notify_no_data\"为true时，该参数必填，当\"notify_no_data\"为false时，该参数为空）
+    * noDataAlertState  数据不足时，阈值规则的状态。（当\"notify_no_data\"为true时，该参数必填，当\"notify_no_data\"为false时，该参数为空） - “no_data”：数据不足并发送通知 - “alerting”：告警 - “ok”：正常 - “pre_state”：保持上一个状态
+    * notifyNoData  无数据处理开关。true表示启用无数据处理，false表示关闭无数据处理。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class NoDataCondition implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * noDataTimeframe  无数据周期的个数。
-    * noDataAlertState  数据不足时，阈值规则的状态。 - “no_data”：数据不足并发送通知 - “alerting”：告警 - “ok”：正常 - “pre_state”：保持上一个状态
-    * notifyNoData  数据不足是否通知。
+    * noDataTimeframe  无数据处理连续周期。取值范围为1~5。（当\"notify_no_data\"为true时，该参数必填，当\"notify_no_data\"为false时，该参数为空）
+    * noDataAlertState  数据不足时，阈值规则的状态。（当\"notify_no_data\"为true时，该参数必填，当\"notify_no_data\"为false时，该参数为空） - “no_data”：数据不足并发送通知 - “alerting”：告警 - “ok”：正常 - “pre_state”：保持上一个状态
+    * notifyNoData  无数据处理开关。true表示启用无数据处理，false表示关闭无数据处理。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class NoDataCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * noDataTimeframe  无数据周期的个数。
-    * noDataAlertState  数据不足时，阈值规则的状态。 - “no_data”：数据不足并发送通知 - “alerting”：告警 - “ok”：正常 - “pre_state”：保持上一个状态
-    * notifyNoData  数据不足是否通知。
+    * noDataTimeframe  无数据处理连续周期。取值范围为1~5。（当\"notify_no_data\"为true时，该参数必填，当\"notify_no_data\"为false时，该参数为空）
+    * noDataAlertState  数据不足时，阈值规则的状态。（当\"notify_no_data\"为true时，该参数必填，当\"notify_no_data\"为false时，该参数为空） - “no_data”：数据不足并发送通知 - “alerting”：告警 - “ok”：正常 - “pre_state”：保持上一个状态
+    * notifyNoData  无数据处理开关。true表示启用无数据处理，false表示关闭无数据处理。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class NoDataCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * noDataTimeframe  无数据周期的个数。
-    * noDataAlertState  数据不足时，阈值规则的状态。 - “no_data”：数据不足并发送通知 - “alerting”：告警 - “ok”：正常 - “pre_state”：保持上一个状态
-    * notifyNoData  数据不足是否通知。
+    * noDataTimeframe  无数据处理连续周期。取值范围为1~5。（当\"notify_no_data\"为true时，该参数必填，当\"notify_no_data\"为false时，该参数为空）
+    * noDataAlertState  数据不足时，阈值规则的状态。（当\"notify_no_data\"为true时，该参数必填，当\"notify_no_data\"为false时，该参数为空） - “no_data”：数据不足并发送通知 - “alerting”：告警 - “ok”：正常 - “pre_state”：保持上一个状态
+    * notifyNoData  无数据处理开关。true表示启用无数据处理，false表示关闭无数据处理。
     *
     * @var string[]
     */
@@ -223,7 +223,7 @@ class NoDataCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets noDataTimeframe
-    *  无数据周期的个数。
+    *  无数据处理连续周期。取值范围为1~5。（当\"notify_no_data\"为true时，该参数必填，当\"notify_no_data\"为false时，该参数为空）
     *
     * @return int|null
     */
@@ -235,7 +235,7 @@ class NoDataCondition implements ModelInterface, ArrayAccess
     /**
     * Sets noDataTimeframe
     *
-    * @param int|null $noDataTimeframe 无数据周期的个数。
+    * @param int|null $noDataTimeframe 无数据处理连续周期。取值范围为1~5。（当\"notify_no_data\"为true时，该参数必填，当\"notify_no_data\"为false时，该参数为空）
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class NoDataCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets noDataAlertState
-    *  数据不足时，阈值规则的状态。 - “no_data”：数据不足并发送通知 - “alerting”：告警 - “ok”：正常 - “pre_state”：保持上一个状态
+    *  数据不足时，阈值规则的状态。（当\"notify_no_data\"为true时，该参数必填，当\"notify_no_data\"为false时，该参数为空） - “no_data”：数据不足并发送通知 - “alerting”：告警 - “ok”：正常 - “pre_state”：保持上一个状态
     *
     * @return string|null
     */
@@ -259,7 +259,7 @@ class NoDataCondition implements ModelInterface, ArrayAccess
     /**
     * Sets noDataAlertState
     *
-    * @param string|null $noDataAlertState 数据不足时，阈值规则的状态。 - “no_data”：数据不足并发送通知 - “alerting”：告警 - “ok”：正常 - “pre_state”：保持上一个状态
+    * @param string|null $noDataAlertState 数据不足时，阈值规则的状态。（当\"notify_no_data\"为true时，该参数必填，当\"notify_no_data\"为false时，该参数为空） - “no_data”：数据不足并发送通知 - “alerting”：告警 - “ok”：正常 - “pre_state”：保持上一个状态
     *
     * @return $this
     */
@@ -271,7 +271,7 @@ class NoDataCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets notifyNoData
-    *  数据不足是否通知。
+    *  无数据处理开关。true表示启用无数据处理，false表示关闭无数据处理。
     *
     * @return bool|null
     */
@@ -283,7 +283,7 @@ class NoDataCondition implements ModelInterface, ArrayAccess
     /**
     * Sets notifyNoData
     *
-    * @param bool|null $notifyNoData 数据不足是否通知。
+    * @param bool|null $notifyNoData 无数据处理开关。true表示启用无数据处理，false表示关闭无数据处理。
     *
     * @return $this
     */

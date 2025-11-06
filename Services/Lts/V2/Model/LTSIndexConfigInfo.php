@@ -24,6 +24,7 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
     * fields  字段索引配置
     * sqlAnalysisEnable  是否开启可视化
     * logStreamId  日志流id
+    * fastAnalysisSampleCount  **参数解释：** 快速分析采样日志条数。 **约束限制：** 不涉及。 **取值范围：** 最小值：100000 最大值：10000000 **默认取值：** 100000
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
             'fullTextIndex' => '\HuaweiCloud\SDK\Lts\V2\Model\LTSFullTextIndexInfo',
             'fields' => '\HuaweiCloud\SDK\Lts\V2\Model\LTSFieldsInfo[]',
             'sqlAnalysisEnable' => 'bool',
-            'logStreamId' => 'string'
+            'logStreamId' => 'string',
+            'fastAnalysisSampleCount' => 'int'
     ];
 
     /**
@@ -40,6 +42,7 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
     * fields  字段索引配置
     * sqlAnalysisEnable  是否开启可视化
     * logStreamId  日志流id
+    * fastAnalysisSampleCount  **参数解释：** 快速分析采样日志条数。 **约束限制：** 不涉及。 **取值范围：** 最小值：100000 最大值：10000000 **默认取值：** 100000
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
         'fullTextIndex' => null,
         'fields' => null,
         'sqlAnalysisEnable' => null,
-        'logStreamId' => null
+        'logStreamId' => null,
+        'fastAnalysisSampleCount' => 'int64'
     ];
 
     /**
@@ -77,6 +81,7 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
     * fields  字段索引配置
     * sqlAnalysisEnable  是否开启可视化
     * logStreamId  日志流id
+    * fastAnalysisSampleCount  **参数解释：** 快速分析采样日志条数。 **约束限制：** 不涉及。 **取值范围：** 最小值：100000 最大值：10000000 **默认取值：** 100000
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
             'fullTextIndex' => 'fullTextIndex',
             'fields' => 'fields',
             'sqlAnalysisEnable' => 'sqlAnalysisEnable',
-            'logStreamId' => 'logStreamId'
+            'logStreamId' => 'logStreamId',
+            'fastAnalysisSampleCount' => 'fastAnalysisSampleCount'
     ];
 
     /**
@@ -93,6 +99,7 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
     * fields  字段索引配置
     * sqlAnalysisEnable  是否开启可视化
     * logStreamId  日志流id
+    * fastAnalysisSampleCount  **参数解释：** 快速分析采样日志条数。 **约束限制：** 不涉及。 **取值范围：** 最小值：100000 最大值：10000000 **默认取值：** 100000
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
             'fullTextIndex' => 'setFullTextIndex',
             'fields' => 'setFields',
             'sqlAnalysisEnable' => 'setSqlAnalysisEnable',
-            'logStreamId' => 'setLogStreamId'
+            'logStreamId' => 'setLogStreamId',
+            'fastAnalysisSampleCount' => 'setFastAnalysisSampleCount'
     ];
 
     /**
@@ -109,6 +117,7 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
     * fields  字段索引配置
     * sqlAnalysisEnable  是否开启可视化
     * logStreamId  日志流id
+    * fastAnalysisSampleCount  **参数解释：** 快速分析采样日志条数。 **约束限制：** 不涉及。 **取值范围：** 最小值：100000 最大值：10000000 **默认取值：** 100000
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
             'fullTextIndex' => 'getFullTextIndex',
             'fields' => 'getFields',
             'sqlAnalysisEnable' => 'getSqlAnalysisEnable',
-            'logStreamId' => 'getLogStreamId'
+            'logStreamId' => 'getLogStreamId',
+            'fastAnalysisSampleCount' => 'getFastAnalysisSampleCount'
     ];
 
     /**
@@ -181,6 +191,7 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
         $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;
         $this->container['sqlAnalysisEnable'] = isset($data['sqlAnalysisEnable']) ? $data['sqlAnalysisEnable'] : null;
         $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : null;
+        $this->container['fastAnalysisSampleCount'] = isset($data['fastAnalysisSampleCount']) ? $data['fastAnalysisSampleCount'] : null;
     }
 
     /**
@@ -310,6 +321,30 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
     public function setLogStreamId($logStreamId)
     {
         $this->container['logStreamId'] = $logStreamId;
+        return $this;
+    }
+
+    /**
+    * Gets fastAnalysisSampleCount
+    *  **参数解释：** 快速分析采样日志条数。 **约束限制：** 不涉及。 **取值范围：** 最小值：100000 最大值：10000000 **默认取值：** 100000
+    *
+    * @return int|null
+    */
+    public function getFastAnalysisSampleCount()
+    {
+        return $this->container['fastAnalysisSampleCount'];
+    }
+
+    /**
+    * Sets fastAnalysisSampleCount
+    *
+    * @param int|null $fastAnalysisSampleCount **参数解释：** 快速分析采样日志条数。 **约束限制：** 不涉及。 **取值范围：** 最小值：100000 最大值：10000000 **默认取值：** 100000
+    *
+    * @return $this
+    */
+    public function setFastAnalysisSampleCount($fastAnalysisSampleCount)
+    {
+        $this->container['fastAnalysisSampleCount'] = $fastAnalysisSampleCount;
         return $this;
     }
 

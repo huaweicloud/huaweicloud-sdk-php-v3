@@ -22,8 +22,8 @@ class BatchMetricData implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * unit  指标单位。
     * datapoints  指标数据列表。由于查询数据时，云监控会根据所选择的聚合粒度向前取整from参数，所以datapoints中包含的数据点有可能会多于预期。
-    * namespace  指标命名空间，格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * metricName  指标名称，例如弹性云服务器监控指标中的cpu_util；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * namespace  指标命名空间，格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
+    * metricName  指标名称，例如弹性云服务器监控指标中的cpu_util；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * dimensions  指标维度列表。
     *
     * @var string[]
@@ -40,8 +40,8 @@ class BatchMetricData implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * unit  指标单位。
     * datapoints  指标数据列表。由于查询数据时，云监控会根据所选择的聚合粒度向前取整from参数，所以datapoints中包含的数据点有可能会多于预期。
-    * namespace  指标命名空间，格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * metricName  指标名称，例如弹性云服务器监控指标中的cpu_util；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * namespace  指标命名空间，格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
+    * metricName  指标名称，例如弹性云服务器监控指标中的cpu_util；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * dimensions  指标维度列表。
     *
     * @var string[]
@@ -79,8 +79,8 @@ class BatchMetricData implements ModelInterface, ArrayAccess
     * and the value is the original name
     * unit  指标单位。
     * datapoints  指标数据列表。由于查询数据时，云监控会根据所选择的聚合粒度向前取整from参数，所以datapoints中包含的数据点有可能会多于预期。
-    * namespace  指标命名空间，格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * metricName  指标名称，例如弹性云服务器监控指标中的cpu_util；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * namespace  指标命名空间，格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
+    * metricName  指标名称，例如弹性云服务器监控指标中的cpu_util；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * dimensions  指标维度列表。
     *
     * @var string[]
@@ -97,8 +97,8 @@ class BatchMetricData implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * unit  指标单位。
     * datapoints  指标数据列表。由于查询数据时，云监控会根据所选择的聚合粒度向前取整from参数，所以datapoints中包含的数据点有可能会多于预期。
-    * namespace  指标命名空间，格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * metricName  指标名称，例如弹性云服务器监控指标中的cpu_util；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * namespace  指标命名空间，格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
+    * metricName  指标名称，例如弹性云服务器监控指标中的cpu_util；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * dimensions  指标维度列表。
     *
     * @var string[]
@@ -115,8 +115,8 @@ class BatchMetricData implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * unit  指标单位。
     * datapoints  指标数据列表。由于查询数据时，云监控会根据所选择的聚合粒度向前取整from参数，所以datapoints中包含的数据点有可能会多于预期。
-    * namespace  指标命名空间，格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * metricName  指标名称，例如弹性云服务器监控指标中的cpu_util；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * namespace  指标命名空间，格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
+    * metricName  指标名称，例如弹性云服务器监控指标中的cpu_util；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * dimensions  指标维度列表。
     *
     * @var string[]
@@ -202,12 +202,30 @@ class BatchMetricData implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['unit']) && (mb_strlen($this->container['unit']) > 32)) {
+                $invalidProperties[] = "invalid value for 'unit', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['unit']) && (mb_strlen($this->container['unit']) < 0)) {
+                $invalidProperties[] = "invalid value for 'unit', the character length must be bigger than or equal to 0.";
+            }
         if ($this->container['datapoints'] === null) {
             $invalidProperties[] = "'datapoints' can't be null";
         }
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 32)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 3)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 3.";
+            }
         if ($this->container['metricName'] === null) {
             $invalidProperties[] = "'metricName' can't be null";
         }
+            if ((mb_strlen($this->container['metricName']) > 96)) {
+                $invalidProperties[] = "invalid value for 'metricName', the character length must be smaller than or equal to 96.";
+            }
+            if ((mb_strlen($this->container['metricName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'metricName', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -272,7 +290,7 @@ class BatchMetricData implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  指标命名空间，格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    *  指标命名空间，格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
     *
     * @return string|null
     */
@@ -284,7 +302,7 @@ class BatchMetricData implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 指标命名空间，格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * @param string|null $namespace 指标命名空间，格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
     *
     * @return $this
     */
@@ -296,7 +314,7 @@ class BatchMetricData implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricName
-    *  指标名称，例如弹性云服务器监控指标中的cpu_util；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    *  指标名称，例如弹性云服务器监控指标中的cpu_util；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     *
     * @return string
     */
@@ -308,7 +326,7 @@ class BatchMetricData implements ModelInterface, ArrayAccess
     /**
     * Sets metricName
     *
-    * @param string $metricName 指标名称，例如弹性云服务器监控指标中的cpu_util；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * @param string $metricName 指标名称，例如弹性云服务器监控指标中的cpu_util；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     *
     * @return $this
     */

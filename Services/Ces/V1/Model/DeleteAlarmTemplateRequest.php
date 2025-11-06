@@ -161,6 +161,9 @@ class DeleteAlarmTemplateRequest implements ModelInterface, ArrayAccess
         if ($this->container['templateId'] === null) {
             $invalidProperties[] = "'templateId' can't be null";
         }
+            if (!preg_match("/^at([0-9A-Za-z]){0,62}$/", $this->container['templateId'])) {
+                $invalidProperties[] = "invalid value for 'templateId', must be conform to the pattern /^at([0-9A-Za-z]){0,62}$/.";
+            }
         return $invalidProperties;
     }
 

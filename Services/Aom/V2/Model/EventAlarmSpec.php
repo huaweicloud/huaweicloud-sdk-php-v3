@@ -24,8 +24,8 @@ class EventAlarmSpec implements ModelInterface, ArrayAccess
     * eventSource  告警来源。 - “RDS” - “EVS” - “CCE” - “LTS” - “AOM”
     * monitorObjects  监控对象列表。键值对形式，键值为： - “event_type”：通知类型 - “event_severity”：告警级别 - “event_name”：事件名称 - “namespace”：命名空间 - “clusterId”：集群id - “customField”：用户自定义字段
     * triggerConditions  触发条件。
-    * alarmRuleTemplateBindEnable  是否绑定告警规则模版（废弃）。
-    * alarmRuleTemplateId  告警规则模版id（废弃）。
+    * alarmRuleTemplateBindEnable  是否绑定告警模板（废弃）。
+    * alarmRuleTemplateId  告警模板id（废弃）。
     *
     * @var string[]
     */
@@ -44,8 +44,8 @@ class EventAlarmSpec implements ModelInterface, ArrayAccess
     * eventSource  告警来源。 - “RDS” - “EVS” - “CCE” - “LTS” - “AOM”
     * monitorObjects  监控对象列表。键值对形式，键值为： - “event_type”：通知类型 - “event_severity”：告警级别 - “event_name”：事件名称 - “namespace”：命名空间 - “clusterId”：集群id - “customField”：用户自定义字段
     * triggerConditions  触发条件。
-    * alarmRuleTemplateBindEnable  是否绑定告警规则模版（废弃）。
-    * alarmRuleTemplateId  告警规则模版id（废弃）。
+    * alarmRuleTemplateBindEnable  是否绑定告警模板（废弃）。
+    * alarmRuleTemplateId  告警模板id（废弃）。
     *
     * @var string[]
     */
@@ -85,8 +85,8 @@ class EventAlarmSpec implements ModelInterface, ArrayAccess
     * eventSource  告警来源。 - “RDS” - “EVS” - “CCE” - “LTS” - “AOM”
     * monitorObjects  监控对象列表。键值对形式，键值为： - “event_type”：通知类型 - “event_severity”：告警级别 - “event_name”：事件名称 - “namespace”：命名空间 - “clusterId”：集群id - “customField”：用户自定义字段
     * triggerConditions  触发条件。
-    * alarmRuleTemplateBindEnable  是否绑定告警规则模版（废弃）。
-    * alarmRuleTemplateId  告警规则模版id（废弃）。
+    * alarmRuleTemplateBindEnable  是否绑定告警模板（废弃）。
+    * alarmRuleTemplateId  告警模板id（废弃）。
     *
     * @var string[]
     */
@@ -105,8 +105,8 @@ class EventAlarmSpec implements ModelInterface, ArrayAccess
     * eventSource  告警来源。 - “RDS” - “EVS” - “CCE” - “LTS” - “AOM”
     * monitorObjects  监控对象列表。键值对形式，键值为： - “event_type”：通知类型 - “event_severity”：告警级别 - “event_name”：事件名称 - “namespace”：命名空间 - “clusterId”：集群id - “customField”：用户自定义字段
     * triggerConditions  触发条件。
-    * alarmRuleTemplateBindEnable  是否绑定告警规则模版（废弃）。
-    * alarmRuleTemplateId  告警规则模版id（废弃）。
+    * alarmRuleTemplateBindEnable  是否绑定告警模板（废弃）。
+    * alarmRuleTemplateId  告警模板id（废弃）。
     *
     * @var string[]
     */
@@ -125,8 +125,8 @@ class EventAlarmSpec implements ModelInterface, ArrayAccess
     * eventSource  告警来源。 - “RDS” - “EVS” - “CCE” - “LTS” - “AOM”
     * monitorObjects  监控对象列表。键值对形式，键值为： - “event_type”：通知类型 - “event_severity”：告警级别 - “event_name”：事件名称 - “namespace”：命名空间 - “clusterId”：集群id - “customField”：用户自定义字段
     * triggerConditions  触发条件。
-    * alarmRuleTemplateBindEnable  是否绑定告警规则模版（废弃）。
-    * alarmRuleTemplateId  告警规则模版id（废弃）。
+    * alarmRuleTemplateBindEnable  是否绑定告警模板（废弃）。
+    * alarmRuleTemplateId  告警模板id（废弃）。
     *
     * @var string[]
     */
@@ -236,6 +236,9 @@ class EventAlarmSpec implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['triggerConditions'] === null) {
+            $invalidProperties[] = "'triggerConditions' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -326,7 +329,7 @@ class EventAlarmSpec implements ModelInterface, ArrayAccess
     * Gets triggerConditions
     *  触发条件。
     *
-    * @return \HuaweiCloud\SDK\Aom\V2\Model\EventTriggerCondition[]|null
+    * @return \HuaweiCloud\SDK\Aom\V2\Model\EventTriggerCondition[]
     */
     public function getTriggerConditions()
     {
@@ -336,7 +339,7 @@ class EventAlarmSpec implements ModelInterface, ArrayAccess
     /**
     * Sets triggerConditions
     *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\EventTriggerCondition[]|null $triggerConditions 触发条件。
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\EventTriggerCondition[] $triggerConditions 触发条件。
     *
     * @return $this
     */
@@ -348,7 +351,7 @@ class EventAlarmSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmRuleTemplateBindEnable
-    *  是否绑定告警规则模版（废弃）。
+    *  是否绑定告警模板（废弃）。
     *
     * @return bool|null
     */
@@ -360,7 +363,7 @@ class EventAlarmSpec implements ModelInterface, ArrayAccess
     /**
     * Sets alarmRuleTemplateBindEnable
     *
-    * @param bool|null $alarmRuleTemplateBindEnable 是否绑定告警规则模版（废弃）。
+    * @param bool|null $alarmRuleTemplateBindEnable 是否绑定告警模板（废弃）。
     *
     * @return $this
     */
@@ -372,7 +375,7 @@ class EventAlarmSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmRuleTemplateId
-    *  告警规则模版id（废弃）。
+    *  告警模板id（废弃）。
     *
     * @return string|null
     */
@@ -384,7 +387,7 @@ class EventAlarmSpec implements ModelInterface, ArrayAccess
     /**
     * Sets alarmRuleTemplateId
     *
-    * @param string|null $alarmRuleTemplateId 告警规则模版id（废弃）。
+    * @param string|null $alarmRuleTemplateId 告警模板id（废弃）。
     *
     * @return $this
     */

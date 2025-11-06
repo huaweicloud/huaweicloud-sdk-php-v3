@@ -16,12 +16,12 @@ class CreateEventsResponseBody implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateEventsResponseBody';
+    protected static $openAPIModelName = 'CreateEventsResponse_body';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * eventId  事件ID。
-    * eventName  事件名称。  必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为64。
+    * eventId  **参数解释**： 事件ID。 **取值范围**： 不涉及。
+    * eventName  **参数解释**： 事件名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CreateEventsResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * eventId  事件ID。
-    * eventName  事件名称。  必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为64。
+    * eventId  **参数解释**： 事件ID。 **取值范围**： 不涉及。
+    * eventName  **参数解释**： 事件名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CreateEventsResponseBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * eventId  事件ID。
-    * eventName  事件名称。  必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为64。
+    * eventId  **参数解释**： 事件ID。 **取值范围**： 不涉及。
+    * eventName  **参数解释**： 事件名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CreateEventsResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * eventId  事件ID。
-    * eventName  事件名称。  必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为64。
+    * eventId  **参数解释**： 事件ID。 **取值范围**： 不涉及。
+    * eventName  **参数解释**： 事件名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CreateEventsResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * eventId  事件ID。
-    * eventName  事件名称。  必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为64。
+    * eventId  **参数解释**： 事件ID。 **取值范围**： 不涉及。
+    * eventName  **参数解释**： 事件名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -172,6 +172,12 @@ class CreateEventsResponseBody implements ModelInterface, ArrayAccess
         if ($this->container['eventId'] === null) {
             $invalidProperties[] = "'eventId' can't be null";
         }
+            if ((mb_strlen($this->container['eventId']) > 9999)) {
+                $invalidProperties[] = "invalid value for 'eventId', the character length must be smaller than or equal to 9999.";
+            }
+            if ((mb_strlen($this->container['eventId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'eventId', the character length must be bigger than or equal to 1.";
+            }
         if ($this->container['eventName'] === null) {
             $invalidProperties[] = "'eventName' can't be null";
         }
@@ -197,7 +203,7 @@ class CreateEventsResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventId
-    *  事件ID。
+    *  **参数解释**： 事件ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -209,7 +215,7 @@ class CreateEventsResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets eventId
     *
-    * @param string $eventId 事件ID。
+    * @param string $eventId **参数解释**： 事件ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -221,7 +227,7 @@ class CreateEventsResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventName
-    *  事件名称。  必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为64。
+    *  **参数解释**： 事件名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -233,7 +239,7 @@ class CreateEventsResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets eventName
     *
-    * @param string $eventName 事件名称。  必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为64。
+    * @param string $eventName **参数解释**： 事件名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */

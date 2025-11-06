@@ -20,8 +20,8 @@ class PushEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  告警所属的企业项目id。
-    * action  接口请求动作。action=clear代表清除告警，不传或者传其他值默认为上报动作。
+    * enterpriseProjectId  告警所属的企业项目id。获取方式请参见：[获取企业项目ID](aom_04_0024.xml)。 如果不传该参数值，默认为default企业项目，ID为0。
+    * action  接口请求动作： - 不传或者传其他值：代表上报告警或事件动作。该参数值默认为空，即默认上报告警或事件。 - clear：代表清除告警动作。
     * body  body
     *
     * @var string[]
@@ -34,8 +34,8 @@ class PushEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  告警所属的企业项目id。
-    * action  接口请求动作。action=clear代表清除告警，不传或者传其他值默认为上报动作。
+    * enterpriseProjectId  告警所属的企业项目id。获取方式请参见：[获取企业项目ID](aom_04_0024.xml)。 如果不传该参数值，默认为default企业项目，ID为0。
+    * action  接口请求动作： - 不传或者传其他值：代表上报告警或事件动作。该参数值默认为空，即默认上报告警或事件。 - clear：代表清除告警动作。
     * body  body
     *
     * @var string[]
@@ -69,8 +69,8 @@ class PushEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  告警所属的企业项目id。
-    * action  接口请求动作。action=clear代表清除告警，不传或者传其他值默认为上报动作。
+    * enterpriseProjectId  告警所属的企业项目id。获取方式请参见：[获取企业项目ID](aom_04_0024.xml)。 如果不传该参数值，默认为default企业项目，ID为0。
+    * action  接口请求动作： - 不传或者传其他值：代表上报告警或事件动作。该参数值默认为空，即默认上报告警或事件。 - clear：代表清除告警动作。
     * body  body
     *
     * @var string[]
@@ -83,8 +83,8 @@ class PushEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  告警所属的企业项目id。
-    * action  接口请求动作。action=clear代表清除告警，不传或者传其他值默认为上报动作。
+    * enterpriseProjectId  告警所属的企业项目id。获取方式请参见：[获取企业项目ID](aom_04_0024.xml)。 如果不传该参数值，默认为default企业项目，ID为0。
+    * action  接口请求动作： - 不传或者传其他值：代表上报告警或事件动作。该参数值默认为空，即默认上报告警或事件。 - clear：代表清除告警动作。
     * body  body
     *
     * @var string[]
@@ -97,8 +97,8 @@ class PushEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  告警所属的企业项目id。
-    * action  接口请求动作。action=clear代表清除告警，不传或者传其他值默认为上报动作。
+    * enterpriseProjectId  告警所属的企业项目id。获取方式请参见：[获取企业项目ID](aom_04_0024.xml)。 如果不传该参数值，默认为default企业项目，ID为0。
+    * action  接口请求动作： - 不传或者传其他值：代表上报告警或事件动作。该参数值默认为空，即默认上报告警或事件。 - clear：代表清除告警动作。
     * body  body
     *
     * @var string[]
@@ -217,7 +217,7 @@ class PushEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  告警所属的企业项目id。
+    *  告警所属的企业项目id。获取方式请参见：[获取企业项目ID](aom_04_0024.xml)。 如果不传该参数值，默认为default企业项目，ID为0。
     *
     * @return string|null
     */
@@ -229,7 +229,7 @@ class PushEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 告警所属的企业项目id。
+    * @param string|null $enterpriseProjectId 告警所属的企业项目id。获取方式请参见：[获取企业项目ID](aom_04_0024.xml)。 如果不传该参数值，默认为default企业项目，ID为0。
     *
     * @return $this
     */
@@ -241,7 +241,7 @@ class PushEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  接口请求动作。action=clear代表清除告警，不传或者传其他值默认为上报动作。
+    *  接口请求动作： - 不传或者传其他值：代表上报告警或事件动作。该参数值默认为空，即默认上报告警或事件。 - clear：代表清除告警动作。
     *
     * @return string|null
     */
@@ -253,7 +253,7 @@ class PushEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 接口请求动作。action=clear代表清除告警，不传或者传其他值默认为上报动作。
+    * @param string|null $action 接口请求动作： - 不传或者传其他值：代表上报告警或事件动作。该参数值默认为空，即默认上报告警或事件。 - clear：代表清除告警动作。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class CountEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  查询类型。type=active_alert代表查询活动告警，type=history_alert代表查询历史告警。不传或者传其他值则返回指定查询条件的所有信息。
+    * type  查询类型： - active_alert：代表查询活动告警 - history_alert代表查询历史告警。  不传或者传其他值，则返回指定查询条件的所有信息。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CountEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  查询类型。type=active_alert代表查询活动告警，type=history_alert代表查询历史告警。不传或者传其他值则返回指定查询条件的所有信息。
+    * type  查询类型： - active_alert：代表查询活动告警 - history_alert代表查询历史告警。  不传或者传其他值，则返回指定查询条件的所有信息。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CountEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  查询类型。type=active_alert代表查询活动告警，type=history_alert代表查询历史告警。不传或者传其他值则返回指定查询条件的所有信息。
+    * type  查询类型： - active_alert：代表查询活动告警 - history_alert代表查询历史告警。  不传或者传其他值，则返回指定查询条件的所有信息。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CountEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  查询类型。type=active_alert代表查询活动告警，type=history_alert代表查询历史告警。不传或者传其他值则返回指定查询条件的所有信息。
+    * type  查询类型： - active_alert：代表查询活动告警 - history_alert代表查询历史告警。  不传或者传其他值，则返回指定查询条件的所有信息。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CountEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  查询类型。type=active_alert代表查询活动告警，type=history_alert代表查询历史告警。不传或者传其他值则返回指定查询条件的所有信息。
+    * type  查询类型： - active_alert：代表查询活动告警 - history_alert代表查询历史告警。  不传或者传其他值，则返回指定查询条件的所有信息。
     * body  body
     *
     * @var string[]
@@ -208,7 +208,7 @@ class CountEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  查询类型。type=active_alert代表查询活动告警，type=history_alert代表查询历史告警。不传或者传其他值则返回指定查询条件的所有信息。
+    *  查询类型： - active_alert：代表查询活动告警 - history_alert代表查询历史告警。  不传或者传其他值，则返回指定查询条件的所有信息。
     *
     * @return string|null
     */
@@ -220,7 +220,7 @@ class CountEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 查询类型。type=active_alert代表查询活动告警，type=history_alert代表查询历史告警。不传或者传其他值则返回指定查询条件的所有信息。
+    * @param string|null $type 查询类型： - active_alert：代表查询活动告警 - history_alert代表查询历史告警。  不传或者传其他值，则返回指定查询条件的所有信息。
     *
     * @return $this
     */

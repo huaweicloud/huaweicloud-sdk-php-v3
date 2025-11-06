@@ -169,6 +169,9 @@ class TagsBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['key'] === null) {
+            $invalidProperties[] = "'key' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,7 +190,7 @@ class TagsBody implements ModelInterface, ArrayAccess
     * Gets key
     *  标签键
     *
-    * @return string|null
+    * @return string
     */
     public function getKey()
     {
@@ -197,7 +200,7 @@ class TagsBody implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 标签键
+    * @param string $key 标签键
     *
     * @return $this
     */

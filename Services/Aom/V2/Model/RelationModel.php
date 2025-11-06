@@ -20,9 +20,9 @@ class RelationModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  指定查询字段的key，对应metadata里面的key 。
+    * key  指定查询字段的key，对应metadata里面的key 。当metadata_relation参数不为空时 key参数必填。
     * value  查询条件中指定key的值。
-    * relation  该条件与其他条件的组合方式。 AND：必须满足所有条件； OR：可以满足其中一个条件； NOT：必须不满足所有条件。
+    * relation  该条件与其他条件的组合方式。  - AND：必须满足所有条件。 -  OR：可以满足其中一个条件。 -  NOT：必须不满足所有条件。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class RelationModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  指定查询字段的key，对应metadata里面的key 。
+    * key  指定查询字段的key，对应metadata里面的key 。当metadata_relation参数不为空时 key参数必填。
     * value  查询条件中指定key的值。
-    * relation  该条件与其他条件的组合方式。 AND：必须满足所有条件； OR：可以满足其中一个条件； NOT：必须不满足所有条件。
+    * relation  该条件与其他条件的组合方式。  - AND：必须满足所有条件。 -  OR：可以满足其中一个条件。 -  NOT：必须不满足所有条件。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class RelationModel implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  指定查询字段的key，对应metadata里面的key 。
+    * key  指定查询字段的key，对应metadata里面的key 。当metadata_relation参数不为空时 key参数必填。
     * value  查询条件中指定key的值。
-    * relation  该条件与其他条件的组合方式。 AND：必须满足所有条件； OR：可以满足其中一个条件； NOT：必须不满足所有条件。
+    * relation  该条件与其他条件的组合方式。  - AND：必须满足所有条件。 -  OR：可以满足其中一个条件。 -  NOT：必须不满足所有条件。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class RelationModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  指定查询字段的key，对应metadata里面的key 。
+    * key  指定查询字段的key，对应metadata里面的key 。当metadata_relation参数不为空时 key参数必填。
     * value  查询条件中指定key的值。
-    * relation  该条件与其他条件的组合方式。 AND：必须满足所有条件； OR：可以满足其中一个条件； NOT：必须不满足所有条件。
+    * relation  该条件与其他条件的组合方式。  - AND：必须满足所有条件。 -  OR：可以满足其中一个条件。 -  NOT：必须不满足所有条件。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class RelationModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  指定查询字段的key，对应metadata里面的key 。
+    * key  指定查询字段的key，对应metadata里面的key 。当metadata_relation参数不为空时 key参数必填。
     * value  查询条件中指定key的值。
-    * relation  该条件与其他条件的组合方式。 AND：必须满足所有条件； OR：可以满足其中一个条件； NOT：必须不满足所有条件。
+    * relation  该条件与其他条件的组合方式。  - AND：必须满足所有条件。 -  OR：可以满足其中一个条件。 -  NOT：必须不满足所有条件。
     *
     * @var string[]
     */
@@ -197,6 +197,9 @@ class RelationModel implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['key'] === null) {
+            $invalidProperties[] = "'key' can't be null";
+        }
             $allowedValues = $this->getRelationAllowableValues();
                 if (!is_null($this->container['relation']) && !in_array($this->container['relation'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -221,9 +224,9 @@ class RelationModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  指定查询字段的key，对应metadata里面的key 。
+    *  指定查询字段的key，对应metadata里面的key 。当metadata_relation参数不为空时 key参数必填。
     *
-    * @return string|null
+    * @return string
     */
     public function getKey()
     {
@@ -233,7 +236,7 @@ class RelationModel implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 指定查询字段的key，对应metadata里面的key 。
+    * @param string $key 指定查询字段的key，对应metadata里面的key 。当metadata_relation参数不为空时 key参数必填。
     *
     * @return $this
     */
@@ -269,7 +272,7 @@ class RelationModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets relation
-    *  该条件与其他条件的组合方式。 AND：必须满足所有条件； OR：可以满足其中一个条件； NOT：必须不满足所有条件。
+    *  该条件与其他条件的组合方式。  - AND：必须满足所有条件。 -  OR：可以满足其中一个条件。 -  NOT：必须不满足所有条件。
     *
     * @return string|null
     */
@@ -281,7 +284,7 @@ class RelationModel implements ModelInterface, ArrayAccess
     /**
     * Sets relation
     *
-    * @param string|null $relation 该条件与其他条件的组合方式。 AND：必须满足所有条件； OR：可以满足其中一个条件； NOT：必须不满足所有条件。
+    * @param string|null $relation 该条件与其他条件的组合方式。  - AND：必须满足所有条件。 -  OR：可以满足其中一个条件。 -  NOT：必须不满足所有条件。
     *
     * @return $this
     */

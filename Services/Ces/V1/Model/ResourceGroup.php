@@ -20,9 +20,9 @@ class ResourceGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * namespace  资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dimensions  一个或者多个资源维度。
-    * status  资源分组中该资源的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * namespace  **参数解释** 资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。 **默认取值** 不涉及
+    * dimensions  **参数解释** 资源的维度信息 **约束限制** 不超过4个维度
+    * status  status
     * eventType  事件类型，默认为0。
     *
     * @var string[]
@@ -30,15 +30,15 @@ class ResourceGroup implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'namespace' => 'string',
             'dimensions' => '\HuaweiCloud\SDK\Ces\V1\Model\MetricsDimension[]',
-            'status' => 'string',
+            'status' => '\HuaweiCloud\SDK\Ces\V1\Model\StatusSchema',
             'eventType' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * namespace  资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dimensions  一个或者多个资源维度。
-    * status  资源分组中该资源的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * namespace  **参数解释** 资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。 **默认取值** 不涉及
+    * dimensions  **参数解释** 资源的维度信息 **约束限制** 不超过4个维度
+    * status  status
     * eventType  事件类型，默认为0。
     *
     * @var string[]
@@ -73,9 +73,9 @@ class ResourceGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * namespace  资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dimensions  一个或者多个资源维度。
-    * status  资源分组中该资源的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * namespace  **参数解释** 资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。 **默认取值** 不涉及
+    * dimensions  **参数解释** 资源的维度信息 **约束限制** 不超过4个维度
+    * status  status
     * eventType  事件类型，默认为0。
     *
     * @var string[]
@@ -89,9 +89,9 @@ class ResourceGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * namespace  资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dimensions  一个或者多个资源维度。
-    * status  资源分组中该资源的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * namespace  **参数解释** 资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。 **默认取值** 不涉及
+    * dimensions  **参数解释** 资源的维度信息 **约束限制** 不超过4个维度
+    * status  status
     * eventType  事件类型，默认为0。
     *
     * @var string[]
@@ -105,9 +105,9 @@ class ResourceGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * namespace  资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dimensions  一个或者多个资源维度。
-    * status  资源分组中该资源的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * namespace  **参数解释** 资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。 **默认取值** 不涉及
+    * dimensions  **参数解释** 资源的维度信息 **约束限制** 不超过4个维度
+    * status  status
     * eventType  事件类型，默认为0。
     *
     * @var string[]
@@ -191,6 +191,18 @@ class ResourceGroup implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 9999)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 9999.";
+            }
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 1)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['eventType']) && ($this->container['eventType'] > 1)) {
+                $invalidProperties[] = "invalid value for 'eventType', must be smaller than or equal to 1.";
+            }
+            if (!is_null($this->container['eventType']) && ($this->container['eventType'] < 0)) {
+                $invalidProperties[] = "invalid value for 'eventType', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -207,7 +219,7 @@ class ResourceGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    *  **参数解释** 资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -219,7 +231,7 @@ class ResourceGroup implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * @param string|null $namespace **参数解释** 资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -231,7 +243,7 @@ class ResourceGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensions
-    *  一个或者多个资源维度。
+    *  **参数解释** 资源的维度信息 **约束限制** 不超过4个维度
     *
     * @return \HuaweiCloud\SDK\Ces\V1\Model\MetricsDimension[]|null
     */
@@ -243,7 +255,7 @@ class ResourceGroup implements ModelInterface, ArrayAccess
     /**
     * Sets dimensions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\MetricsDimension[]|null $dimensions 一个或者多个资源维度。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\MetricsDimension[]|null $dimensions **参数解释** 资源的维度信息 **约束限制** 不超过4个维度
     *
     * @return $this
     */
@@ -255,9 +267,9 @@ class ResourceGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源分组中该资源的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    *  status
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\StatusSchema|null
     */
     public function getStatus()
     {
@@ -267,7 +279,7 @@ class ResourceGroup implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源分组中该资源的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\StatusSchema|null $status status
     *
     * @return $this
     */

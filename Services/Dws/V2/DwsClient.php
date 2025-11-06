@@ -2662,6 +2662,9 @@ class DwsClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['needSendRequest'] !== null) {
+            $queryParams['need_send_request'] = $localVarParams['needSendRequest'];
+        }
         if ($localVarParams['disasterRecoveryId'] !== null) {
             $pathParams['disaster_recovery_id'] = $localVarParams['disasterRecoveryId'];
         }
@@ -6128,13 +6131,22 @@ class DwsClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['primaryClusterId'] !== null) {
+            $queryParams['primary_cluster_id'] = $localVarParams['primaryClusterId'];
+        }
+        if ($localVarParams['standbyClusterId'] !== null) {
+            $queryParams['standby_cluster_id'] = $localVarParams['standbyClusterId'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -9625,7 +9637,7 @@ class DwsClient extends Client
     }
 
     /**
-     * 集群扩容前检查
+     * 集群扩容前准备
      *
      * 下发扩容配置文件，完成扩容准备工作。
      * 
@@ -11127,7 +11139,7 @@ class DwsClient extends Client
     }
 
     /**
-     * 查询节点列表
+     * 获取扩容准备信息
      *
      * 获取扩容准备信息。
      * 

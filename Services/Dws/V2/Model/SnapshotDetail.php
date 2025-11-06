@@ -31,6 +31,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
     * clusterName  **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 快照更新时间。 **取值范围**： 不涉及。
     * bakExpectedStartTime  **参数解释**： 快照预计开始时间。 **取值范围**： 不涉及。
     * bakKeepDay  **参数解释**： 快照保留天数。 **取值范围**： 不涉及。
     * bakPeriod  **参数解释**： 快照策略。 **取值范围**： 不涉及。
@@ -44,10 +45,13 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
     * supportInplaceRestore  **参数解释**： 是否支持就地恢复。 **取值范围**： 不涉及。
     * fineGrainedBackup  **参数解释**： 是否是细粒度备份。 **取值范围**： 不涉及。
-    * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： cluster：集群级快照； schema：schema级快照； table：表级快照；
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
     * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
+    * clusterTaskStatus  **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
+    * supportFineGrainedCrossVersionRestore  **参数解释**： 是否支持细粒度跨版本恢复。 **取值范围**： 不涉及。
+    * supportFineGrainedAsymmetricRestore  **参数解释**： 是否支持细粒度异构恢复。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -63,6 +67,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
             'clusterId' => 'string',
             'datastore' => '\HuaweiCloud\SDK\Dws\V2\Model\Datastore',
             'clusterName' => 'string',
+            'updated' => 'string',
             'bakExpectedStartTime' => 'string',
             'bakKeepDay' => 'int',
             'bakPeriod' => 'string',
@@ -79,7 +84,10 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
             'backupLevel' => 'string',
             'fineGrainedBackupDetail' => '\HuaweiCloud\SDK\Dws\V2\Model\FineGrainedSnapshotDetail',
             'guestAgentVersion' => 'string',
-            'clusterStatus' => 'string'
+            'clusterStatus' => 'string',
+            'clusterTaskStatus' => 'string',
+            'supportFineGrainedCrossVersionRestore' => 'bool',
+            'supportFineGrainedAsymmetricRestore' => 'bool'
     ];
 
     /**
@@ -95,6 +103,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
     * clusterName  **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 快照更新时间。 **取值范围**： 不涉及。
     * bakExpectedStartTime  **参数解释**： 快照预计开始时间。 **取值范围**： 不涉及。
     * bakKeepDay  **参数解释**： 快照保留天数。 **取值范围**： 不涉及。
     * bakPeriod  **参数解释**： 快照策略。 **取值范围**： 不涉及。
@@ -108,10 +117,13 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
     * supportInplaceRestore  **参数解释**： 是否支持就地恢复。 **取值范围**： 不涉及。
     * fineGrainedBackup  **参数解释**： 是否是细粒度备份。 **取值范围**： 不涉及。
-    * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： cluster：集群级快照； schema：schema级快照； table：表级快照；
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
     * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
+    * clusterTaskStatus  **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
+    * supportFineGrainedCrossVersionRestore  **参数解释**： 是否支持细粒度跨版本恢复。 **取值范围**： 不涉及。
+    * supportFineGrainedAsymmetricRestore  **参数解释**： 是否支持细粒度异构恢复。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -127,6 +139,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
         'clusterId' => null,
         'datastore' => null,
         'clusterName' => null,
+        'updated' => null,
         'bakExpectedStartTime' => null,
         'bakKeepDay' => null,
         'bakPeriod' => null,
@@ -143,7 +156,10 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
         'backupLevel' => null,
         'fineGrainedBackupDetail' => null,
         'guestAgentVersion' => null,
-        'clusterStatus' => null
+        'clusterStatus' => null,
+        'clusterTaskStatus' => null,
+        'supportFineGrainedCrossVersionRestore' => null,
+        'supportFineGrainedAsymmetricRestore' => null
     ];
 
     /**
@@ -180,6 +196,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
     * clusterName  **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 快照更新时间。 **取值范围**： 不涉及。
     * bakExpectedStartTime  **参数解释**： 快照预计开始时间。 **取值范围**： 不涉及。
     * bakKeepDay  **参数解释**： 快照保留天数。 **取值范围**： 不涉及。
     * bakPeriod  **参数解释**： 快照策略。 **取值范围**： 不涉及。
@@ -193,10 +210,13 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
     * supportInplaceRestore  **参数解释**： 是否支持就地恢复。 **取值范围**： 不涉及。
     * fineGrainedBackup  **参数解释**： 是否是细粒度备份。 **取值范围**： 不涉及。
-    * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： cluster：集群级快照； schema：schema级快照； table：表级快照；
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
     * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
+    * clusterTaskStatus  **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
+    * supportFineGrainedCrossVersionRestore  **参数解释**： 是否支持细粒度跨版本恢复。 **取值范围**： 不涉及。
+    * supportFineGrainedAsymmetricRestore  **参数解释**： 是否支持细粒度异构恢复。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -212,6 +232,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
             'clusterId' => 'cluster_id',
             'datastore' => 'datastore',
             'clusterName' => 'cluster_name',
+            'updated' => 'updated',
             'bakExpectedStartTime' => 'bak_expected_start_time',
             'bakKeepDay' => 'bak_keep_day',
             'bakPeriod' => 'bak_period',
@@ -228,7 +249,10 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
             'backupLevel' => 'backup_level',
             'fineGrainedBackupDetail' => 'fine_grained_backup_detail',
             'guestAgentVersion' => 'guest_agent_version',
-            'clusterStatus' => 'cluster_status'
+            'clusterStatus' => 'cluster_status',
+            'clusterTaskStatus' => 'cluster_task_status',
+            'supportFineGrainedCrossVersionRestore' => 'support_fine_grained_cross_version_restore',
+            'supportFineGrainedAsymmetricRestore' => 'support_fine_grained_asymmetric_restore'
     ];
 
     /**
@@ -244,6 +268,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
     * clusterName  **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 快照更新时间。 **取值范围**： 不涉及。
     * bakExpectedStartTime  **参数解释**： 快照预计开始时间。 **取值范围**： 不涉及。
     * bakKeepDay  **参数解释**： 快照保留天数。 **取值范围**： 不涉及。
     * bakPeriod  **参数解释**： 快照策略。 **取值范围**： 不涉及。
@@ -257,10 +282,13 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
     * supportInplaceRestore  **参数解释**： 是否支持就地恢复。 **取值范围**： 不涉及。
     * fineGrainedBackup  **参数解释**： 是否是细粒度备份。 **取值范围**： 不涉及。
-    * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： cluster：集群级快照； schema：schema级快照； table：表级快照；
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
     * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
+    * clusterTaskStatus  **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
+    * supportFineGrainedCrossVersionRestore  **参数解释**： 是否支持细粒度跨版本恢复。 **取值范围**： 不涉及。
+    * supportFineGrainedAsymmetricRestore  **参数解释**： 是否支持细粒度异构恢复。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -276,6 +304,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
             'clusterId' => 'setClusterId',
             'datastore' => 'setDatastore',
             'clusterName' => 'setClusterName',
+            'updated' => 'setUpdated',
             'bakExpectedStartTime' => 'setBakExpectedStartTime',
             'bakKeepDay' => 'setBakKeepDay',
             'bakPeriod' => 'setBakPeriod',
@@ -292,7 +321,10 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
             'backupLevel' => 'setBackupLevel',
             'fineGrainedBackupDetail' => 'setFineGrainedBackupDetail',
             'guestAgentVersion' => 'setGuestAgentVersion',
-            'clusterStatus' => 'setClusterStatus'
+            'clusterStatus' => 'setClusterStatus',
+            'clusterTaskStatus' => 'setClusterTaskStatus',
+            'supportFineGrainedCrossVersionRestore' => 'setSupportFineGrainedCrossVersionRestore',
+            'supportFineGrainedAsymmetricRestore' => 'setSupportFineGrainedAsymmetricRestore'
     ];
 
     /**
@@ -308,6 +340,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
     * clusterName  **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 快照更新时间。 **取值范围**： 不涉及。
     * bakExpectedStartTime  **参数解释**： 快照预计开始时间。 **取值范围**： 不涉及。
     * bakKeepDay  **参数解释**： 快照保留天数。 **取值范围**： 不涉及。
     * bakPeriod  **参数解释**： 快照策略。 **取值范围**： 不涉及。
@@ -321,10 +354,13 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
     * supportInplaceRestore  **参数解释**： 是否支持就地恢复。 **取值范围**： 不涉及。
     * fineGrainedBackup  **参数解释**： 是否是细粒度备份。 **取值范围**： 不涉及。
-    * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： cluster：集群级快照； schema：schema级快照； table：表级快照；
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
     * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
+    * clusterTaskStatus  **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
+    * supportFineGrainedCrossVersionRestore  **参数解释**： 是否支持细粒度跨版本恢复。 **取值范围**： 不涉及。
+    * supportFineGrainedAsymmetricRestore  **参数解释**： 是否支持细粒度异构恢复。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -340,6 +376,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
             'clusterId' => 'getClusterId',
             'datastore' => 'getDatastore',
             'clusterName' => 'getClusterName',
+            'updated' => 'getUpdated',
             'bakExpectedStartTime' => 'getBakExpectedStartTime',
             'bakKeepDay' => 'getBakKeepDay',
             'bakPeriod' => 'getBakPeriod',
@@ -356,7 +393,10 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
             'backupLevel' => 'getBackupLevel',
             'fineGrainedBackupDetail' => 'getFineGrainedBackupDetail',
             'guestAgentVersion' => 'getGuestAgentVersion',
-            'clusterStatus' => 'getClusterStatus'
+            'clusterStatus' => 'getClusterStatus',
+            'clusterTaskStatus' => 'getClusterTaskStatus',
+            'supportFineGrainedCrossVersionRestore' => 'getSupportFineGrainedCrossVersionRestore',
+            'supportFineGrainedAsymmetricRestore' => 'getSupportFineGrainedAsymmetricRestore'
     ];
 
     /**
@@ -428,6 +468,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['datastore'] = isset($data['datastore']) ? $data['datastore'] : null;
         $this->container['clusterName'] = isset($data['clusterName']) ? $data['clusterName'] : null;
+        $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
         $this->container['bakExpectedStartTime'] = isset($data['bakExpectedStartTime']) ? $data['bakExpectedStartTime'] : null;
         $this->container['bakKeepDay'] = isset($data['bakKeepDay']) ? $data['bakKeepDay'] : null;
         $this->container['bakPeriod'] = isset($data['bakPeriod']) ? $data['bakPeriod'] : null;
@@ -445,6 +486,9 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
         $this->container['fineGrainedBackupDetail'] = isset($data['fineGrainedBackupDetail']) ? $data['fineGrainedBackupDetail'] : null;
         $this->container['guestAgentVersion'] = isset($data['guestAgentVersion']) ? $data['guestAgentVersion'] : null;
         $this->container['clusterStatus'] = isset($data['clusterStatus']) ? $data['clusterStatus'] : null;
+        $this->container['clusterTaskStatus'] = isset($data['clusterTaskStatus']) ? $data['clusterTaskStatus'] : null;
+        $this->container['supportFineGrainedCrossVersionRestore'] = isset($data['supportFineGrainedCrossVersionRestore']) ? $data['supportFineGrainedCrossVersionRestore'] : null;
+        $this->container['supportFineGrainedAsymmetricRestore'] = isset($data['supportFineGrainedAsymmetricRestore']) ? $data['supportFineGrainedAsymmetricRestore'] : null;
     }
 
     /**
@@ -757,6 +801,30 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     public function setClusterName($clusterName)
     {
         $this->container['clusterName'] = $clusterName;
+        return $this;
+    }
+
+    /**
+    * Gets updated
+    *  **参数解释**： 快照更新时间。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getUpdated()
+    {
+        return $this->container['updated'];
+    }
+
+    /**
+    * Sets updated
+    *
+    * @param string|null $updated **参数解释**： 快照更新时间。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setUpdated($updated)
+    {
+        $this->container['updated'] = $updated;
         return $this;
     }
 
@@ -1074,7 +1142,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupLevel
-    *  **参数解释**： 备份级别。 **取值范围**： 不涉及。
+    *  **参数解释**： 备份级别。 **取值范围**： cluster：集群级快照； schema：schema级快照； table：表级快照；
     *
     * @return string|null
     */
@@ -1086,7 +1154,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     /**
     * Sets backupLevel
     *
-    * @param string|null $backupLevel **参数解释**： 备份级别。 **取值范围**： 不涉及。
+    * @param string|null $backupLevel **参数解释**： 备份级别。 **取值范围**： cluster：集群级快照； schema：schema级快照； table：表级快照；
     *
     * @return $this
     */
@@ -1165,6 +1233,78 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     public function setClusterStatus($clusterStatus)
     {
         $this->container['clusterStatus'] = $clusterStatus;
+        return $this;
+    }
+
+    /**
+    * Gets clusterTaskStatus
+    *  **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getClusterTaskStatus()
+    {
+        return $this->container['clusterTaskStatus'];
+    }
+
+    /**
+    * Sets clusterTaskStatus
+    *
+    * @param string|null $clusterTaskStatus **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setClusterTaskStatus($clusterTaskStatus)
+    {
+        $this->container['clusterTaskStatus'] = $clusterTaskStatus;
+        return $this;
+    }
+
+    /**
+    * Gets supportFineGrainedCrossVersionRestore
+    *  **参数解释**： 是否支持细粒度跨版本恢复。 **取值范围**： 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getSupportFineGrainedCrossVersionRestore()
+    {
+        return $this->container['supportFineGrainedCrossVersionRestore'];
+    }
+
+    /**
+    * Sets supportFineGrainedCrossVersionRestore
+    *
+    * @param bool|null $supportFineGrainedCrossVersionRestore **参数解释**： 是否支持细粒度跨版本恢复。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setSupportFineGrainedCrossVersionRestore($supportFineGrainedCrossVersionRestore)
+    {
+        $this->container['supportFineGrainedCrossVersionRestore'] = $supportFineGrainedCrossVersionRestore;
+        return $this;
+    }
+
+    /**
+    * Gets supportFineGrainedAsymmetricRestore
+    *  **参数解释**： 是否支持细粒度异构恢复。 **取值范围**： 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getSupportFineGrainedAsymmetricRestore()
+    {
+        return $this->container['supportFineGrainedAsymmetricRestore'];
+    }
+
+    /**
+    * Sets supportFineGrainedAsymmetricRestore
+    *
+    * @param bool|null $supportFineGrainedAsymmetricRestore **参数解释**： 是否支持细粒度异构恢复。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setSupportFineGrainedAsymmetricRestore($supportFineGrainedAsymmetricRestore)
+    {
+        $this->container['supportFineGrainedAsymmetricRestore'] = $supportFineGrainedAsymmetricRestore;
         return $this;
     }
 

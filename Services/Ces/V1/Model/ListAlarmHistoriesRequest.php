@@ -20,16 +20,16 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  服务提供的资源分组功能，创建的资源分组ID，如：rg1603107497873DK4O2pXbn。
-    * alarmId  告警规则ID。如：al1603088932912v98rGl1al。
-    * alarmName  告警规则名称，如alarm-test01。
-    * alarmStatus  告警历史的状态，取值为ok，alarm，insufficient_data； ok为正常，alarm为告警，insufficient_data为数据不足。
-    * alarmLevel  告警历史的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
-    * namespace  告警资源对应的命名空间，如ECS服务的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * from  查询告警历史的起始时间，UNIX时间戳，单位毫秒，如：1602501480905；from，to如果不进行赋值，则默认to是当前时间，from是当前时间减7天的时间戳。
-    * to  查询告警历史的截止时间，UNIX时间戳，单位毫秒。from必须小于等于to，如：1603106280905；from，to如果不进行赋值，则默认to是当前时间，from是当前时间减7天的时间戳。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * groupId  **参数解释**： 当前资源所在分组信息 **约束限制**： 不涉及。 **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串，字符长度为24 **默认取值**： 不涉及
+    * alarmId  **参数解释**： 告警规则ID **约束限制**： 不涉及 **取值范围**： 以al开头，后跟22位由字母或数字组成的字符串，字符长度为24 **默认取值**： 不涉及
+    * alarmName  **参数解释**： 告警规则名称 **约束限制**： 不涉及 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1, 128]个字符 **默认取值**： 不涉及
+    * alarmStatus  **参数解释**： 告警状态。 **约束限制**： 不涉及 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效 **默认取值**： 不涉及
+    * alarmLevel  **参数解释**： 告警历史的告警级别，值为1,2,3,4 **约束限制**： 不涉及 **取值范围**： 枚举值： - 1：紧急 - 2：重要 - 3：次要 - 4：提示 **默认取值**： 不涉及
+    * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制**： 不涉及 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间 **默认取值**： 不涉及
+    * from  **参数解释**： 通过时间筛选traces的起始时间(包括传入时间)，为timestamp **约束限制**： 不涉及 **取值范围**： 长度为[1,13]个字符 **默认取值**： 不涉及
+    * to  **参数解释**： 通过时间筛选traces的终止时间(包括传入时间)，为timestamp **约束限制**： 不涉及 **取值范围**： 长度为[1,13]个字符 **默认取值**： 不涉及
+    * start  **参数解释**： 分页查询时查询的起始位置，表示从第几条数据开始 **约束限制**： 不涉及。 **取值范围**： 大于等于0的整数 **默认取值**： 0
+    * limit  **参数解释**： 本次查询的最大条目数 **约束限制**： 不涉及。 **取值范围**： 取值范围[1,100] **默认取值**： 100
     *
     * @var string[]
     */
@@ -38,7 +38,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
             'alarmId' => 'string',
             'alarmName' => 'string',
             'alarmStatus' => 'string',
-            'alarmLevel' => 'string',
+            'alarmLevel' => 'int',
             'namespace' => 'string',
             'from' => 'string',
             'to' => 'string',
@@ -48,16 +48,16 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  服务提供的资源分组功能，创建的资源分组ID，如：rg1603107497873DK4O2pXbn。
-    * alarmId  告警规则ID。如：al1603088932912v98rGl1al。
-    * alarmName  告警规则名称，如alarm-test01。
-    * alarmStatus  告警历史的状态，取值为ok，alarm，insufficient_data； ok为正常，alarm为告警，insufficient_data为数据不足。
-    * alarmLevel  告警历史的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
-    * namespace  告警资源对应的命名空间，如ECS服务的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * from  查询告警历史的起始时间，UNIX时间戳，单位毫秒，如：1602501480905；from，to如果不进行赋值，则默认to是当前时间，from是当前时间减7天的时间戳。
-    * to  查询告警历史的截止时间，UNIX时间戳，单位毫秒。from必须小于等于to，如：1603106280905；from，to如果不进行赋值，则默认to是当前时间，from是当前时间减7天的时间戳。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * groupId  **参数解释**： 当前资源所在分组信息 **约束限制**： 不涉及。 **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串，字符长度为24 **默认取值**： 不涉及
+    * alarmId  **参数解释**： 告警规则ID **约束限制**： 不涉及 **取值范围**： 以al开头，后跟22位由字母或数字组成的字符串，字符长度为24 **默认取值**： 不涉及
+    * alarmName  **参数解释**： 告警规则名称 **约束限制**： 不涉及 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1, 128]个字符 **默认取值**： 不涉及
+    * alarmStatus  **参数解释**： 告警状态。 **约束限制**： 不涉及 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效 **默认取值**： 不涉及
+    * alarmLevel  **参数解释**： 告警历史的告警级别，值为1,2,3,4 **约束限制**： 不涉及 **取值范围**： 枚举值： - 1：紧急 - 2：重要 - 3：次要 - 4：提示 **默认取值**： 不涉及
+    * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制**： 不涉及 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间 **默认取值**： 不涉及
+    * from  **参数解释**： 通过时间筛选traces的起始时间(包括传入时间)，为timestamp **约束限制**： 不涉及 **取值范围**： 长度为[1,13]个字符 **默认取值**： 不涉及
+    * to  **参数解释**： 通过时间筛选traces的终止时间(包括传入时间)，为timestamp **约束限制**： 不涉及 **取值范围**： 长度为[1,13]个字符 **默认取值**： 不涉及
+    * start  **参数解释**： 分页查询时查询的起始位置，表示从第几条数据开始 **约束限制**： 不涉及。 **取值范围**： 大于等于0的整数 **默认取值**： 0
+    * limit  **参数解释**： 本次查询的最大条目数 **约束限制**： 不涉及。 **取值范围**： 取值范围[1,100] **默认取值**： 100
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  服务提供的资源分组功能，创建的资源分组ID，如：rg1603107497873DK4O2pXbn。
-    * alarmId  告警规则ID。如：al1603088932912v98rGl1al。
-    * alarmName  告警规则名称，如alarm-test01。
-    * alarmStatus  告警历史的状态，取值为ok，alarm，insufficient_data； ok为正常，alarm为告警，insufficient_data为数据不足。
-    * alarmLevel  告警历史的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
-    * namespace  告警资源对应的命名空间，如ECS服务的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * from  查询告警历史的起始时间，UNIX时间戳，单位毫秒，如：1602501480905；from，to如果不进行赋值，则默认to是当前时间，from是当前时间减7天的时间戳。
-    * to  查询告警历史的截止时间，UNIX时间戳，单位毫秒。from必须小于等于to，如：1603106280905；from，to如果不进行赋值，则默认to是当前时间，from是当前时间减7天的时间戳。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * groupId  **参数解释**： 当前资源所在分组信息 **约束限制**： 不涉及。 **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串，字符长度为24 **默认取值**： 不涉及
+    * alarmId  **参数解释**： 告警规则ID **约束限制**： 不涉及 **取值范围**： 以al开头，后跟22位由字母或数字组成的字符串，字符长度为24 **默认取值**： 不涉及
+    * alarmName  **参数解释**： 告警规则名称 **约束限制**： 不涉及 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1, 128]个字符 **默认取值**： 不涉及
+    * alarmStatus  **参数解释**： 告警状态。 **约束限制**： 不涉及 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效 **默认取值**： 不涉及
+    * alarmLevel  **参数解释**： 告警历史的告警级别，值为1,2,3,4 **约束限制**： 不涉及 **取值范围**： 枚举值： - 1：紧急 - 2：重要 - 3：次要 - 4：提示 **默认取值**： 不涉及
+    * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制**： 不涉及 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间 **默认取值**： 不涉及
+    * from  **参数解释**： 通过时间筛选traces的起始时间(包括传入时间)，为timestamp **约束限制**： 不涉及 **取值范围**： 长度为[1,13]个字符 **默认取值**： 不涉及
+    * to  **参数解释**： 通过时间筛选traces的终止时间(包括传入时间)，为timestamp **约束限制**： 不涉及 **取值范围**： 长度为[1,13]个字符 **默认取值**： 不涉及
+    * start  **参数解释**： 分页查询时查询的起始位置，表示从第几条数据开始 **约束限制**： 不涉及。 **取值范围**： 大于等于0的整数 **默认取值**： 0
+    * limit  **参数解释**： 本次查询的最大条目数 **约束限制**： 不涉及。 **取值范围**： 取值范围[1,100] **默认取值**： 100
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  服务提供的资源分组功能，创建的资源分组ID，如：rg1603107497873DK4O2pXbn。
-    * alarmId  告警规则ID。如：al1603088932912v98rGl1al。
-    * alarmName  告警规则名称，如alarm-test01。
-    * alarmStatus  告警历史的状态，取值为ok，alarm，insufficient_data； ok为正常，alarm为告警，insufficient_data为数据不足。
-    * alarmLevel  告警历史的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
-    * namespace  告警资源对应的命名空间，如ECS服务的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * from  查询告警历史的起始时间，UNIX时间戳，单位毫秒，如：1602501480905；from，to如果不进行赋值，则默认to是当前时间，from是当前时间减7天的时间戳。
-    * to  查询告警历史的截止时间，UNIX时间戳，单位毫秒。from必须小于等于to，如：1603106280905；from，to如果不进行赋值，则默认to是当前时间，from是当前时间减7天的时间戳。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * groupId  **参数解释**： 当前资源所在分组信息 **约束限制**： 不涉及。 **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串，字符长度为24 **默认取值**： 不涉及
+    * alarmId  **参数解释**： 告警规则ID **约束限制**： 不涉及 **取值范围**： 以al开头，后跟22位由字母或数字组成的字符串，字符长度为24 **默认取值**： 不涉及
+    * alarmName  **参数解释**： 告警规则名称 **约束限制**： 不涉及 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1, 128]个字符 **默认取值**： 不涉及
+    * alarmStatus  **参数解释**： 告警状态。 **约束限制**： 不涉及 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效 **默认取值**： 不涉及
+    * alarmLevel  **参数解释**： 告警历史的告警级别，值为1,2,3,4 **约束限制**： 不涉及 **取值范围**： 枚举值： - 1：紧急 - 2：重要 - 3：次要 - 4：提示 **默认取值**： 不涉及
+    * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制**： 不涉及 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间 **默认取值**： 不涉及
+    * from  **参数解释**： 通过时间筛选traces的起始时间(包括传入时间)，为timestamp **约束限制**： 不涉及 **取值范围**： 长度为[1,13]个字符 **默认取值**： 不涉及
+    * to  **参数解释**： 通过时间筛选traces的终止时间(包括传入时间)，为timestamp **约束限制**： 不涉及 **取值范围**： 长度为[1,13]个字符 **默认取值**： 不涉及
+    * start  **参数解释**： 分页查询时查询的起始位置，表示从第几条数据开始 **约束限制**： 不涉及。 **取值范围**： 大于等于0的整数 **默认取值**： 0
+    * limit  **参数解释**： 本次查询的最大条目数 **约束限制**： 不涉及。 **取值范围**： 取值范围[1,100] **默认取值**： 100
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  服务提供的资源分组功能，创建的资源分组ID，如：rg1603107497873DK4O2pXbn。
-    * alarmId  告警规则ID。如：al1603088932912v98rGl1al。
-    * alarmName  告警规则名称，如alarm-test01。
-    * alarmStatus  告警历史的状态，取值为ok，alarm，insufficient_data； ok为正常，alarm为告警，insufficient_data为数据不足。
-    * alarmLevel  告警历史的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
-    * namespace  告警资源对应的命名空间，如ECS服务的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * from  查询告警历史的起始时间，UNIX时间戳，单位毫秒，如：1602501480905；from，to如果不进行赋值，则默认to是当前时间，from是当前时间减7天的时间戳。
-    * to  查询告警历史的截止时间，UNIX时间戳，单位毫秒。from必须小于等于to，如：1603106280905；from，to如果不进行赋值，则默认to是当前时间，from是当前时间减7天的时间戳。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * groupId  **参数解释**： 当前资源所在分组信息 **约束限制**： 不涉及。 **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串，字符长度为24 **默认取值**： 不涉及
+    * alarmId  **参数解释**： 告警规则ID **约束限制**： 不涉及 **取值范围**： 以al开头，后跟22位由字母或数字组成的字符串，字符长度为24 **默认取值**： 不涉及
+    * alarmName  **参数解释**： 告警规则名称 **约束限制**： 不涉及 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1, 128]个字符 **默认取值**： 不涉及
+    * alarmStatus  **参数解释**： 告警状态。 **约束限制**： 不涉及 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效 **默认取值**： 不涉及
+    * alarmLevel  **参数解释**： 告警历史的告警级别，值为1,2,3,4 **约束限制**： 不涉及 **取值范围**： 枚举值： - 1：紧急 - 2：重要 - 3：次要 - 4：提示 **默认取值**： 不涉及
+    * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制**： 不涉及 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间 **默认取值**： 不涉及
+    * from  **参数解释**： 通过时间筛选traces的起始时间(包括传入时间)，为timestamp **约束限制**： 不涉及 **取值范围**： 长度为[1,13]个字符 **默认取值**： 不涉及
+    * to  **参数解释**： 通过时间筛选traces的终止时间(包括传入时间)，为timestamp **约束限制**： 不涉及 **取值范围**： 长度为[1,13]个字符 **默认取值**： 不涉及
+    * start  **参数解释**： 分页查询时查询的起始位置，表示从第几条数据开始 **约束限制**： 不涉及。 **取值范围**： 大于等于0的整数 **默认取值**： 0
+    * limit  **参数解释**： 本次查询的最大条目数 **约束限制**： 不涉及。 **取值范围**： 取值范围[1,100] **默认取值**： 100
     *
     * @var string[]
     */
@@ -219,7 +219,45 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ALARM_STATUS_OK = 'ok';
+    const ALARM_STATUS_ALARM = 'alarm';
+    const ALARM_STATUS_INSUFFICIENT_DATA = 'insufficient_data';
+    const ALARM_STATUS_INVALID = 'invalid';
+    const ALARM_LEVEL_1 = 1;
+    const ALARM_LEVEL_2 = 2;
+    const ALARM_LEVEL_3 = 3;
+    const ALARM_LEVEL_4 = 4;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAlarmStatusAllowableValues()
+    {
+        return [
+            self::ALARM_STATUS_OK,
+            self::ALARM_STATUS_ALARM,
+            self::ALARM_STATUS_INSUFFICIENT_DATA,
+            self::ALARM_STATUS_INVALID,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAlarmLevelAllowableValues()
+    {
+        return [
+            self::ALARM_LEVEL_1,
+            self::ALARM_LEVEL_2,
+            self::ALARM_LEVEL_3,
+            self::ALARM_LEVEL_4,
+        ];
+    }
 
 
     /**
@@ -257,17 +295,69 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['groupId']) && !preg_match("/^rg([a-z]|[A-Z]|[0-9]){22}$/", $this->container['groupId'])) {
+                $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /^rg([a-z]|[A-Z]|[0-9]){22}$/.";
+            }
+            if (!is_null($this->container['alarmId']) && !preg_match("/^al([0-9A-Za-z]){22}$/", $this->container['alarmId'])) {
+                $invalidProperties[] = "invalid value for 'alarmId', must be conform to the pattern /^al([0-9A-Za-z]){22}$/.";
+            }
+            if (!is_null($this->container['alarmName']) && (mb_strlen($this->container['alarmName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'alarmName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['alarmName']) && (mb_strlen($this->container['alarmName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'alarmName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['alarmName']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['alarmName'])) {
+                $invalidProperties[] = "invalid value for 'alarmName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
+            }
+            $allowedValues = $this->getAlarmStatusAllowableValues();
+                if (!is_null($this->container['alarmStatus']) && !in_array($this->container['alarmStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'alarmStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getAlarmLevelAllowableValues();
+                if (!is_null($this->container['alarmLevel']) && !in_array($this->container['alarmLevel'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'alarmLevel', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 32)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 3)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['namespace']) && !preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/", $this->container['namespace'])) {
+                $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/.";
+            }
             if (!is_null($this->container['from']) && (mb_strlen($this->container['from']) > 13)) {
                 $invalidProperties[] = "invalid value for 'from', the character length must be smaller than or equal to 13.";
             }
-            if (!is_null($this->container['from']) && (mb_strlen($this->container['from']) < 13)) {
-                $invalidProperties[] = "invalid value for 'from', the character length must be bigger than or equal to 13.";
+            if (!is_null($this->container['from']) && (mb_strlen($this->container['from']) < 1)) {
+                $invalidProperties[] = "invalid value for 'from', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['from']) && !preg_match("/^(0|[1-9]([0-9]+))$/", $this->container['from'])) {
+                $invalidProperties[] = "invalid value for 'from', must be conform to the pattern /^(0|[1-9]([0-9]+))$/.";
             }
             if (!is_null($this->container['to']) && (mb_strlen($this->container['to']) > 13)) {
                 $invalidProperties[] = "invalid value for 'to', the character length must be smaller than or equal to 13.";
             }
-            if (!is_null($this->container['to']) && (mb_strlen($this->container['to']) < 13)) {
-                $invalidProperties[] = "invalid value for 'to', the character length must be bigger than or equal to 13.";
+            if (!is_null($this->container['to']) && (mb_strlen($this->container['to']) < 1)) {
+                $invalidProperties[] = "invalid value for 'to', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['to']) && !preg_match("/^(0|[1-9]([0-9]+))$/", $this->container['to'])) {
+                $invalidProperties[] = "invalid value for 'to', must be conform to the pattern /^(0|[1-9]([0-9]+))$/.";
+            }
+            if (!is_null($this->container['start']) && !preg_match("/^(0|[1-9][0-9]*)$/", $this->container['start'])) {
+                $invalidProperties[] = "invalid value for 'start', must be conform to the pattern /^(0|[1-9][0-9]*)$/.";
+            }
+            if (!is_null($this->container['limit']) && !preg_match("/^([1-9]|[1-9][0-9]|100)$/", $this->container['limit'])) {
+                $invalidProperties[] = "invalid value for 'limit', must be conform to the pattern /^([1-9]|[1-9][0-9]|100)$/.";
             }
         return $invalidProperties;
     }
@@ -285,7 +375,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  服务提供的资源分组功能，创建的资源分组ID，如：rg1603107497873DK4O2pXbn。
+    *  **参数解释**： 当前资源所在分组信息 **约束限制**： 不涉及。 **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串，字符长度为24 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -297,7 +387,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 服务提供的资源分组功能，创建的资源分组ID，如：rg1603107497873DK4O2pXbn。
+    * @param string|null $groupId **参数解释**： 当前资源所在分组信息 **约束限制**： 不涉及。 **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串，字符长度为24 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -309,7 +399,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmId
-    *  告警规则ID。如：al1603088932912v98rGl1al。
+    *  **参数解释**： 告警规则ID **约束限制**： 不涉及 **取值范围**： 以al开头，后跟22位由字母或数字组成的字符串，字符长度为24 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -321,7 +411,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmId
     *
-    * @param string|null $alarmId 告警规则ID。如：al1603088932912v98rGl1al。
+    * @param string|null $alarmId **参数解释**： 告警规则ID **约束限制**： 不涉及 **取值范围**： 以al开头，后跟22位由字母或数字组成的字符串，字符长度为24 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -333,7 +423,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmName
-    *  告警规则名称，如alarm-test01。
+    *  **参数解释**： 告警规则名称 **约束限制**： 不涉及 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1, 128]个字符 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -345,7 +435,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmName
     *
-    * @param string|null $alarmName 告警规则名称，如alarm-test01。
+    * @param string|null $alarmName **参数解释**： 告警规则名称 **约束限制**： 不涉及 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1, 128]个字符 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -357,7 +447,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmStatus
-    *  告警历史的状态，取值为ok，alarm，insufficient_data； ok为正常，alarm为告警，insufficient_data为数据不足。
+    *  **参数解释**： 告警状态。 **约束限制**： 不涉及 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -369,7 +459,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmStatus
     *
-    * @param string|null $alarmStatus 告警历史的状态，取值为ok，alarm，insufficient_data； ok为正常，alarm为告警，insufficient_data为数据不足。
+    * @param string|null $alarmStatus **参数解释**： 告警状态。 **约束限制**： 不涉及 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -381,9 +471,9 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmLevel
-    *  告警历史的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
+    *  **参数解释**： 告警历史的告警级别，值为1,2,3,4 **约束限制**： 不涉及 **取值范围**： 枚举值： - 1：紧急 - 2：重要 - 3：次要 - 4：提示 **默认取值**： 不涉及
     *
-    * @return string|null
+    * @return int|null
     */
     public function getAlarmLevel()
     {
@@ -393,7 +483,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmLevel
     *
-    * @param string|null $alarmLevel 告警历史的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
+    * @param int|null $alarmLevel **参数解释**： 告警历史的告警级别，值为1,2,3,4 **约束限制**： 不涉及 **取值范围**： 枚举值： - 1：紧急 - 2：重要 - 3：次要 - 4：提示 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -405,7 +495,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  告警资源对应的命名空间，如ECS服务的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    *  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制**： 不涉及 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -417,7 +507,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 告警资源对应的命名空间，如ECS服务的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * @param string|null $namespace **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制**： 不涉及 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -429,7 +519,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets from
-    *  查询告警历史的起始时间，UNIX时间戳，单位毫秒，如：1602501480905；from，to如果不进行赋值，则默认to是当前时间，from是当前时间减7天的时间戳。
+    *  **参数解释**： 通过时间筛选traces的起始时间(包括传入时间)，为timestamp **约束限制**： 不涉及 **取值范围**： 长度为[1,13]个字符 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -441,7 +531,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets from
     *
-    * @param string|null $from 查询告警历史的起始时间，UNIX时间戳，单位毫秒，如：1602501480905；from，to如果不进行赋值，则默认to是当前时间，from是当前时间减7天的时间戳。
+    * @param string|null $from **参数解释**： 通过时间筛选traces的起始时间(包括传入时间)，为timestamp **约束限制**： 不涉及 **取值范围**： 长度为[1,13]个字符 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -453,7 +543,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets to
-    *  查询告警历史的截止时间，UNIX时间戳，单位毫秒。from必须小于等于to，如：1603106280905；from，to如果不进行赋值，则默认to是当前时间，from是当前时间减7天的时间戳。
+    *  **参数解释**： 通过时间筛选traces的终止时间(包括传入时间)，为timestamp **约束限制**： 不涉及 **取值范围**： 长度为[1,13]个字符 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -465,7 +555,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets to
     *
-    * @param string|null $to 查询告警历史的截止时间，UNIX时间戳，单位毫秒。from必须小于等于to，如：1603106280905；from，to如果不进行赋值，则默认to是当前时间，from是当前时间减7天的时间戳。
+    * @param string|null $to **参数解释**： 通过时间筛选traces的终止时间(包括传入时间)，为timestamp **约束限制**： 不涉及 **取值范围**： 长度为[1,13]个字符 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -477,7 +567,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets start
-    *  分页起始值，类型为integer，默认值为0。
+    *  **参数解释**： 分页查询时查询的起始位置，表示从第几条数据开始 **约束限制**： 不涉及。 **取值范围**： 大于等于0的整数 **默认取值**： 0
     *
     * @return string|null
     */
@@ -489,7 +579,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets start
     *
-    * @param string|null $start 分页起始值，类型为integer，默认值为0。
+    * @param string|null $start **参数解释**： 分页查询时查询的起始位置，表示从第几条数据开始 **约束限制**： 不涉及。 **取值范围**： 大于等于0的整数 **默认取值**： 0
     *
     * @return $this
     */
@@ -501,7 +591,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    *  **参数解释**： 本次查询的最大条目数 **约束限制**： 不涉及。 **取值范围**： 取值范围[1,100] **默认取值**： 100
     *
     * @return string|null
     */
@@ -513,7 +603,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * @param string|null $limit **参数解释**： 本次查询的最大条目数 **约束限制**： 不涉及。 **取值范围**： 取值范围[1,100] **默认取值**： 100
     *
     * @return $this
     */

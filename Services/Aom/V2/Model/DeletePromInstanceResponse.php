@@ -26,7 +26,7 @@ class DeletePromInstanceResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string'
+            'body' => 'map[string,bool]'
     ];
 
     /**
@@ -177,7 +177,7 @@ class DeletePromInstanceResponse implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return string|null
+    * @return map[string,bool]|null
     */
     public function getBody()
     {
@@ -187,7 +187,7 @@ class DeletePromInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param string|null $body body
+    * @param map[string,bool]|null $body body
     *
     * @return $this
     */

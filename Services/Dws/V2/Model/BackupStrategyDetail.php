@@ -28,6 +28,9 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     * nextFireTime  **参数解释**： 下次触发时间（预估，与其它任务冲突时不执行）。 **取值范围**： 不涉及。
     * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
     * timeZoneOffset  **参数解释**： 时区偏移量（相比UTC时间）。 **取值范围**： 0~23
+    * backupDatabase  **参数解释**： 备份的数据库。 **取值范围**： 不涉及。
+    * backupSchemaList  **参数解释**： 备份的数据库模式列表。 **取值范围**： 不涉及。
+    * backupTableList  **参数解释**： 备份的数据库表列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -39,7 +42,10 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
             'backupLevel' => 'string',
             'nextFireTime' => 'string',
             'updateTime' => 'string',
-            'timeZoneOffset' => 'int'
+            'timeZoneOffset' => 'int',
+            'backupDatabase' => 'string',
+            'backupSchemaList' => 'string',
+            'backupTableList' => 'string'
     ];
 
     /**
@@ -52,6 +58,9 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     * nextFireTime  **参数解释**： 下次触发时间（预估，与其它任务冲突时不执行）。 **取值范围**： 不涉及。
     * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
     * timeZoneOffset  **参数解释**： 时区偏移量（相比UTC时间）。 **取值范围**： 0~23
+    * backupDatabase  **参数解释**： 备份的数据库。 **取值范围**： 不涉及。
+    * backupSchemaList  **参数解释**： 备份的数据库模式列表。 **取值范围**： 不涉及。
+    * backupTableList  **参数解释**： 备份的数据库表列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -63,7 +72,10 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
         'backupLevel' => null,
         'nextFireTime' => null,
         'updateTime' => null,
-        'timeZoneOffset' => 'int32'
+        'timeZoneOffset' => 'int32',
+        'backupDatabase' => null,
+        'backupSchemaList' => null,
+        'backupTableList' => null
     ];
 
     /**
@@ -97,6 +109,9 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     * nextFireTime  **参数解释**： 下次触发时间（预估，与其它任务冲突时不执行）。 **取值范围**： 不涉及。
     * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
     * timeZoneOffset  **参数解释**： 时区偏移量（相比UTC时间）。 **取值范围**： 0~23
+    * backupDatabase  **参数解释**： 备份的数据库。 **取值范围**： 不涉及。
+    * backupSchemaList  **参数解释**： 备份的数据库模式列表。 **取值范围**： 不涉及。
+    * backupTableList  **参数解释**： 备份的数据库表列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -108,7 +123,10 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
             'backupLevel' => 'backup_level',
             'nextFireTime' => 'next_fire_time',
             'updateTime' => 'update_time',
-            'timeZoneOffset' => 'time_zone_offset'
+            'timeZoneOffset' => 'time_zone_offset',
+            'backupDatabase' => 'backup_database',
+            'backupSchemaList' => 'backup_schema_list',
+            'backupTableList' => 'backup_table_list'
     ];
 
     /**
@@ -121,6 +139,9 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     * nextFireTime  **参数解释**： 下次触发时间（预估，与其它任务冲突时不执行）。 **取值范围**： 不涉及。
     * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
     * timeZoneOffset  **参数解释**： 时区偏移量（相比UTC时间）。 **取值范围**： 0~23
+    * backupDatabase  **参数解释**： 备份的数据库。 **取值范围**： 不涉及。
+    * backupSchemaList  **参数解释**： 备份的数据库模式列表。 **取值范围**： 不涉及。
+    * backupTableList  **参数解释**： 备份的数据库表列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -132,7 +153,10 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
             'backupLevel' => 'setBackupLevel',
             'nextFireTime' => 'setNextFireTime',
             'updateTime' => 'setUpdateTime',
-            'timeZoneOffset' => 'setTimeZoneOffset'
+            'timeZoneOffset' => 'setTimeZoneOffset',
+            'backupDatabase' => 'setBackupDatabase',
+            'backupSchemaList' => 'setBackupSchemaList',
+            'backupTableList' => 'setBackupTableList'
     ];
 
     /**
@@ -145,6 +169,9 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     * nextFireTime  **参数解释**： 下次触发时间（预估，与其它任务冲突时不执行）。 **取值范围**： 不涉及。
     * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
     * timeZoneOffset  **参数解释**： 时区偏移量（相比UTC时间）。 **取值范围**： 0~23
+    * backupDatabase  **参数解释**： 备份的数据库。 **取值范围**： 不涉及。
+    * backupSchemaList  **参数解释**： 备份的数据库模式列表。 **取值范围**： 不涉及。
+    * backupTableList  **参数解释**： 备份的数据库表列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -156,7 +183,10 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
             'backupLevel' => 'getBackupLevel',
             'nextFireTime' => 'getNextFireTime',
             'updateTime' => 'getUpdateTime',
-            'timeZoneOffset' => 'getTimeZoneOffset'
+            'timeZoneOffset' => 'getTimeZoneOffset',
+            'backupDatabase' => 'getBackupDatabase',
+            'backupSchemaList' => 'getBackupSchemaList',
+            'backupTableList' => 'getBackupTableList'
     ];
 
     /**
@@ -225,6 +255,9 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
         $this->container['nextFireTime'] = isset($data['nextFireTime']) ? $data['nextFireTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['timeZoneOffset'] = isset($data['timeZoneOffset']) ? $data['timeZoneOffset'] : null;
+        $this->container['backupDatabase'] = isset($data['backupDatabase']) ? $data['backupDatabase'] : null;
+        $this->container['backupSchemaList'] = isset($data['backupSchemaList']) ? $data['backupSchemaList'] : null;
+        $this->container['backupTableList'] = isset($data['backupTableList']) ? $data['backupTableList'] : null;
     }
 
     /**
@@ -438,6 +471,78 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     public function setTimeZoneOffset($timeZoneOffset)
     {
         $this->container['timeZoneOffset'] = $timeZoneOffset;
+        return $this;
+    }
+
+    /**
+    * Gets backupDatabase
+    *  **参数解释**： 备份的数据库。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getBackupDatabase()
+    {
+        return $this->container['backupDatabase'];
+    }
+
+    /**
+    * Sets backupDatabase
+    *
+    * @param string|null $backupDatabase **参数解释**： 备份的数据库。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setBackupDatabase($backupDatabase)
+    {
+        $this->container['backupDatabase'] = $backupDatabase;
+        return $this;
+    }
+
+    /**
+    * Gets backupSchemaList
+    *  **参数解释**： 备份的数据库模式列表。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getBackupSchemaList()
+    {
+        return $this->container['backupSchemaList'];
+    }
+
+    /**
+    * Sets backupSchemaList
+    *
+    * @param string|null $backupSchemaList **参数解释**： 备份的数据库模式列表。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setBackupSchemaList($backupSchemaList)
+    {
+        $this->container['backupSchemaList'] = $backupSchemaList;
+        return $this;
+    }
+
+    /**
+    * Gets backupTableList
+    *  **参数解释**： 备份的数据库表列表。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getBackupTableList()
+    {
+        return $this->container['backupTableList'];
+    }
+
+    /**
+    * Sets backupTableList
+    *
+    * @param string|null $backupTableList **参数解释**： 备份的数据库表列表。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setBackupTableList($backupTableList)
+    {
+        $this->container['backupTableList'] = $backupTableList;
         return $this;
     }
 

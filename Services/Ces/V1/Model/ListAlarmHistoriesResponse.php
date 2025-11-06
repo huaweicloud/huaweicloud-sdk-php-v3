@@ -21,19 +21,19 @@ class ListAlarmHistoriesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmHistories  一条或者多条告警历史详细信息
+    * alarmHistories  **参数解释**： 一条或者多条告警历史详细信息
     * metaData  metaData
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'alarmHistories' => '\HuaweiCloud\SDK\Ces\V1\Model\AlarmHistoryInfo[]',
-            'metaData' => '\HuaweiCloud\SDK\Ces\V1\Model\MetaDataForAlarmHistory'
+            'alarmHistories' => '\HuaweiCloud\SDK\Ces\V1\Model\AlarmHistoryInfoResp[]',
+            'metaData' => '\HuaweiCloud\SDK\Ces\V1\Model\MetaDataForAlarmHistoryResp'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmHistories  一条或者多条告警历史详细信息
+    * alarmHistories  **参数解释**： 一条或者多条告警历史详细信息
     * metaData  metaData
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListAlarmHistoriesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmHistories  一条或者多条告警历史详细信息
+    * alarmHistories  **参数解释**： 一条或者多条告警历史详细信息
     * metaData  metaData
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListAlarmHistoriesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmHistories  一条或者多条告警历史详细信息
+    * alarmHistories  **参数解释**： 一条或者多条告警历史详细信息
     * metaData  metaData
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListAlarmHistoriesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmHistories  一条或者多条告警历史详细信息
+    * alarmHistories  **参数解释**： 一条或者多条告警历史详细信息
     * metaData  metaData
     *
     * @var string[]
@@ -186,9 +186,9 @@ class ListAlarmHistoriesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmHistories
-    *  一条或者多条告警历史详细信息
+    *  **参数解释**： 一条或者多条告警历史详细信息
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\AlarmHistoryInfo[]|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\AlarmHistoryInfoResp[]|null
     */
     public function getAlarmHistories()
     {
@@ -198,7 +198,7 @@ class ListAlarmHistoriesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmHistories
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\AlarmHistoryInfo[]|null $alarmHistories 一条或者多条告警历史详细信息
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\AlarmHistoryInfoResp[]|null $alarmHistories **参数解释**： 一条或者多条告警历史详细信息
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class ListAlarmHistoriesResponse implements ModelInterface, ArrayAccess
     * Gets metaData
     *  metaData
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\MetaDataForAlarmHistory|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\MetaDataForAlarmHistoryResp|null
     */
     public function getMetaData()
     {
@@ -222,7 +222,7 @@ class ListAlarmHistoriesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets metaData
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\MetaDataForAlarmHistory|null $metaData metaData
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\MetaDataForAlarmHistoryResp|null $metaData metaData
     *
     * @return $this
     */

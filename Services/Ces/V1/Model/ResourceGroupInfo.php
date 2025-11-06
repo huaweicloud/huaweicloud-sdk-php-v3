@@ -21,12 +21,12 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * groupName  资源分组的名称，如：ResourceGroup-Test01。
-    * type  资源分组添加资源方式，EPS：同步企业项目，TAG：标签动态匹配，空值：手动添加；
+    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual/空值（手动添加）
     * relationIds  企业项目ID列表
     * groupId  资源分组的ID，如：rg1603786526428bWbVmk4rP。
     * createTime  资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
     * instanceStatistics  instanceStatistics
-    * status  资源分组的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * status  status
     * enterpriseProjectId  创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
     * resources  一组或者多个资源信息，默认为空。
     *
@@ -39,7 +39,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
             'groupId' => 'string',
             'createTime' => 'int',
             'instanceStatistics' => '\HuaweiCloud\SDK\Ces\V1\Model\InstanceStatistics',
-            'status' => 'string',
+            'status' => '\HuaweiCloud\SDK\Ces\V1\Model\StatusSchema',
             'enterpriseProjectId' => 'string',
             'resources' => '\HuaweiCloud\SDK\Ces\V1\Model\Resource[]'
     ];
@@ -47,12 +47,12 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * groupName  资源分组的名称，如：ResourceGroup-Test01。
-    * type  资源分组添加资源方式，EPS：同步企业项目，TAG：标签动态匹配，空值：手动添加；
+    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual/空值（手动添加）
     * relationIds  企业项目ID列表
     * groupId  资源分组的ID，如：rg1603786526428bWbVmk4rP。
     * createTime  资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
     * instanceStatistics  instanceStatistics
-    * status  资源分组的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * status  status
     * enterpriseProjectId  创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
     * resources  一组或者多个资源信息，默认为空。
     *
@@ -94,12 +94,12 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * groupName  资源分组的名称，如：ResourceGroup-Test01。
-    * type  资源分组添加资源方式，EPS：同步企业项目，TAG：标签动态匹配，空值：手动添加；
+    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual/空值（手动添加）
     * relationIds  企业项目ID列表
     * groupId  资源分组的ID，如：rg1603786526428bWbVmk4rP。
     * createTime  资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
     * instanceStatistics  instanceStatistics
-    * status  资源分组的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * status  status
     * enterpriseProjectId  创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
     * resources  一组或者多个资源信息，默认为空。
     *
@@ -120,12 +120,12 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * groupName  资源分组的名称，如：ResourceGroup-Test01。
-    * type  资源分组添加资源方式，EPS：同步企业项目，TAG：标签动态匹配，空值：手动添加；
+    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual/空值（手动添加）
     * relationIds  企业项目ID列表
     * groupId  资源分组的ID，如：rg1603786526428bWbVmk4rP。
     * createTime  资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
     * instanceStatistics  instanceStatistics
-    * status  资源分组的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * status  status
     * enterpriseProjectId  创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
     * resources  一组或者多个资源信息，默认为空。
     *
@@ -146,12 +146,12 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * groupName  资源分组的名称，如：ResourceGroup-Test01。
-    * type  资源分组添加资源方式，EPS：同步企业项目，TAG：标签动态匹配，空值：手动添加；
+    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual/空值（手动添加）
     * relationIds  企业项目ID列表
     * groupId  资源分组的ID，如：rg1603786526428bWbVmk4rP。
     * createTime  资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
     * instanceStatistics  instanceStatistics
-    * status  资源分组的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * status  status
     * enterpriseProjectId  创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
     * resources  一组或者多个资源信息，默认为空。
     *
@@ -246,11 +246,32 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) > 32)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 0)) {
-                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 1)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 9223372036854775807.";
+            }
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12}$|0|all_granted_eps/", $this->container['enterpriseProjectId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12}$|0|all_granted_eps/.";
             }
         return $invalidProperties;
     }
@@ -292,7 +313,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  资源分组添加资源方式，EPS：同步企业项目，TAG：标签动态匹配，空值：手动添加；
+    *  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual/空值（手动添加）
     *
     * @return string|null
     */
@@ -304,7 +325,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 资源分组添加资源方式，EPS：同步企业项目，TAG：标签动态匹配，空值：手动添加；
+    * @param string|null $type 资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual/空值（手动添加）
     *
     * @return $this
     */
@@ -412,9 +433,9 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源分组的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    *  status
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\StatusSchema|null
     */
     public function getStatus()
     {
@@ -424,7 +445,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源分组的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\StatusSchema|null $status status
     *
     * @return $this
     */

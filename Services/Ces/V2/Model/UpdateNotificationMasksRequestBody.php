@@ -23,10 +23,10 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
     * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationIds  **参数解释**： 关联ID。        **约束限制**： 数组长度为[1,100] relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略ID。
     * relationType  relationType
-    * metricNames  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
-    * productMetrics  按云产品维度屏蔽时的指标信息
-    * resourceLevel  dimension: 子维度,product: 云产品
-    * productName  资源为云产品时云产品名称
+    * metricNames  **参数解释** 关联指标名称列表。 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标名称最多为50个，最少为0个。
+    * productMetrics  **参数解释** 按云产品维度屏蔽时的指标信息。 **约束限制**：| 包含的指标信息最多为50个，最少为0个。
+    * resourceLevel  **参数解释** 资源类型。 **约束限制**： **取值范围**： 枚举值，取值为dimension、product - dimension: 子维度 - product: 云产品 **默认取值**： 不涉及。
+    * productName  **参数解释** 资源为云产品时的云产品名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     * resources  **参数解释**： 关联资源。           **约束限制**： 数组长度为[1,100]
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
@@ -59,10 +59,10 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
     * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationIds  **参数解释**： 关联ID。        **约束限制**： 数组长度为[1,100] relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略ID。
     * relationType  relationType
-    * metricNames  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
-    * productMetrics  按云产品维度屏蔽时的指标信息
-    * resourceLevel  dimension: 子维度,product: 云产品
-    * productName  资源为云产品时云产品名称
+    * metricNames  **参数解释** 关联指标名称列表。 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标名称最多为50个，最少为0个。
+    * productMetrics  **参数解释** 按云产品维度屏蔽时的指标信息。 **约束限制**：| 包含的指标信息最多为50个，最少为0个。
+    * resourceLevel  **参数解释** 资源类型。 **约束限制**： **取值范围**： 枚举值，取值为dimension、product - dimension: 子维度 - product: 云产品 **默认取值**： 不涉及。
+    * productName  **参数解释** 资源为云产品时的云产品名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     * resources  **参数解释**： 关联资源。           **约束限制**： 数组长度为[1,100]
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
@@ -116,10 +116,10 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
     * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationIds  **参数解释**： 关联ID。        **约束限制**： 数组长度为[1,100] relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略ID。
     * relationType  relationType
-    * metricNames  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
-    * productMetrics  按云产品维度屏蔽时的指标信息
-    * resourceLevel  dimension: 子维度,product: 云产品
-    * productName  资源为云产品时云产品名称
+    * metricNames  **参数解释** 关联指标名称列表。 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标名称最多为50个，最少为0个。
+    * productMetrics  **参数解释** 按云产品维度屏蔽时的指标信息。 **约束限制**：| 包含的指标信息最多为50个，最少为0个。
+    * resourceLevel  **参数解释** 资源类型。 **约束限制**： **取值范围**： 枚举值，取值为dimension、product - dimension: 子维度 - product: 云产品 **默认取值**： 不涉及。
+    * productName  **参数解释** 资源为云产品时的云产品名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     * resources  **参数解释**： 关联资源。           **约束限制**： 数组长度为[1,100]
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
@@ -152,10 +152,10 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
     * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationIds  **参数解释**： 关联ID。        **约束限制**： 数组长度为[1,100] relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略ID。
     * relationType  relationType
-    * metricNames  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
-    * productMetrics  按云产品维度屏蔽时的指标信息
-    * resourceLevel  dimension: 子维度,product: 云产品
-    * productName  资源为云产品时云产品名称
+    * metricNames  **参数解释** 关联指标名称列表。 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标名称最多为50个，最少为0个。
+    * productMetrics  **参数解释** 按云产品维度屏蔽时的指标信息。 **约束限制**：| 包含的指标信息最多为50个，最少为0个。
+    * resourceLevel  **参数解释** 资源类型。 **约束限制**： **取值范围**： 枚举值，取值为dimension、product - dimension: 子维度 - product: 云产品 **默认取值**： 不涉及。
+    * productName  **参数解释** 资源为云产品时的云产品名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     * resources  **参数解释**： 关联资源。           **约束限制**： 数组长度为[1,100]
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
@@ -188,10 +188,10 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
     * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationIds  **参数解释**： 关联ID。        **约束限制**： 数组长度为[1,100] relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略ID。
     * relationType  relationType
-    * metricNames  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
-    * productMetrics  按云产品维度屏蔽时的指标信息
-    * resourceLevel  dimension: 子维度,product: 云产品
-    * productName  资源为云产品时云产品名称
+    * metricNames  **参数解释** 关联指标名称列表。 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标名称最多为50个，最少为0个。
+    * productMetrics  **参数解释** 按云产品维度屏蔽时的指标信息。 **约束限制**：| 包含的指标信息最多为50个，最少为0个。
+    * resourceLevel  **参数解释** 资源类型。 **约束限制**： **取值范围**： 枚举值，取值为dimension、product - dimension: 子维度 - product: 云产品 **默认取值**： 不涉及。
+    * productName  **参数解释** 资源为云产品时的云产品名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     * resources  **参数解释**： 关联资源。           **约束限制**： 数组长度为[1,100]
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
@@ -457,7 +457,7 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricNames
-    *  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
+    *  **参数解释** 关联指标名称列表。 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标名称最多为50个，最少为0个。
     *
     * @return string[]|null
     */
@@ -469,7 +469,7 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets metricNames
     *
-    * @param string[]|null $metricNames 关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
+    * @param string[]|null $metricNames **参数解释** 关联指标名称列表。 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标名称最多为50个，最少为0个。
     *
     * @return $this
     */
@@ -481,7 +481,7 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets productMetrics
-    *  按云产品维度屏蔽时的指标信息
+    *  **参数解释** 按云产品维度屏蔽时的指标信息。 **约束限制**：| 包含的指标信息最多为50个，最少为0个。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]|null
     */
@@ -493,7 +493,7 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets productMetrics
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]|null $productMetrics 按云产品维度屏蔽时的指标信息
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]|null $productMetrics **参数解释** 按云产品维度屏蔽时的指标信息。 **约束限制**：| 包含的指标信息最多为50个，最少为0个。
     *
     * @return $this
     */
@@ -505,7 +505,7 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceLevel
-    *  dimension: 子维度,product: 云产品
+    *  **参数解释** 资源类型。 **约束限制**： **取值范围**： 枚举值，取值为dimension、product - dimension: 子维度 - product: 云产品 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -517,7 +517,7 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets resourceLevel
     *
-    * @param string|null $resourceLevel dimension: 子维度,product: 云产品
+    * @param string|null $resourceLevel **参数解释** 资源类型。 **约束限制**： **取值范围**： 枚举值，取值为dimension、product - dimension: 子维度 - product: 云产品 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -529,7 +529,7 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets productName
-    *  资源为云产品时云产品名称
+    *  **参数解释** 资源为云产品时的云产品名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -541,7 +541,7 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets productName
     *
-    * @param string|null $productName 资源为云产品时云产品名称
+    * @param string|null $productName **参数解释** 资源为云产品时的云产品名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -24,6 +24,7 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
     * confContent  配置文件内容。
     * setting  setting
     * sensitiveWords  敏感字符替换 输入需要隐藏的敏感字串列表。配置隐藏字符串列表后，在返回的配置内容中，会将所有在列表中的字串隐藏为***（列表最大支持20条，单个字串最大长度512字节）
+    * desc  **参数解释**： 配置文件描述。 **约束限制**： 不涉及 **取值范围**： 不超过128个字符。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
             'name' => 'string',
             'confContent' => 'string',
             'setting' => '\HuaweiCloud\SDK\Css\V1\Model\Setting',
-            'sensitiveWords' => 'string[]'
+            'sensitiveWords' => 'string[]',
+            'desc' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
     * confContent  配置文件内容。
     * setting  setting
     * sensitiveWords  敏感字符替换 输入需要隐藏的敏感字串列表。配置隐藏字符串列表后，在返回的配置内容中，会将所有在列表中的字串隐藏为***（列表最大支持20条，单个字串最大长度512字节）
+    * desc  **参数解释**： 配置文件描述。 **约束限制**： 不涉及 **取值范围**： 不超过128个字符。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
         'name' => null,
         'confContent' => null,
         'setting' => null,
-        'sensitiveWords' => null
+        'sensitiveWords' => null,
+        'desc' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
     * confContent  配置文件内容。
     * setting  setting
     * sensitiveWords  敏感字符替换 输入需要隐藏的敏感字串列表。配置隐藏字符串列表后，在返回的配置内容中，会将所有在列表中的字串隐藏为***（列表最大支持20条，单个字串最大长度512字节）
+    * desc  **参数解释**： 配置文件描述。 **约束限制**： 不涉及 **取值范围**： 不超过128个字符。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
             'name' => 'name',
             'confContent' => 'conf_content',
             'setting' => 'setting',
-            'sensitiveWords' => 'sensitive_words'
+            'sensitiveWords' => 'sensitive_words',
+            'desc' => 'desc'
     ];
 
     /**
@@ -93,6 +99,7 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
     * confContent  配置文件内容。
     * setting  setting
     * sensitiveWords  敏感字符替换 输入需要隐藏的敏感字串列表。配置隐藏字符串列表后，在返回的配置内容中，会将所有在列表中的字串隐藏为***（列表最大支持20条，单个字串最大长度512字节）
+    * desc  **参数解释**： 配置文件描述。 **约束限制**： 不涉及 **取值范围**： 不超过128个字符。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'confContent' => 'setConfContent',
             'setting' => 'setSetting',
-            'sensitiveWords' => 'setSensitiveWords'
+            'sensitiveWords' => 'setSensitiveWords',
+            'desc' => 'setDesc'
     ];
 
     /**
@@ -109,6 +117,7 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
     * confContent  配置文件内容。
     * setting  setting
     * sensitiveWords  敏感字符替换 输入需要隐藏的敏感字串列表。配置隐藏字符串列表后，在返回的配置内容中，会将所有在列表中的字串隐藏为***（列表最大支持20条，单个字串最大长度512字节）
+    * desc  **参数解释**： 配置文件描述。 **约束限制**： 不涉及 **取值范围**： 不超过128个字符。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'confContent' => 'getConfContent',
             'setting' => 'getSetting',
-            'sensitiveWords' => 'getSensitiveWords'
+            'sensitiveWords' => 'getSensitiveWords',
+            'desc' => 'getDesc'
     ];
 
     /**
@@ -181,6 +191,7 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
         $this->container['confContent'] = isset($data['confContent']) ? $data['confContent'] : null;
         $this->container['setting'] = isset($data['setting']) ? $data['setting'] : null;
         $this->container['sensitiveWords'] = isset($data['sensitiveWords']) ? $data['sensitiveWords'] : null;
+        $this->container['desc'] = isset($data['desc']) ? $data['desc'] : null;
     }
 
     /**
@@ -307,6 +318,30 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
     public function setSensitiveWords($sensitiveWords)
     {
         $this->container['sensitiveWords'] = $sensitiveWords;
+        return $this;
+    }
+
+    /**
+    * Gets desc
+    *  **参数解释**： 配置文件描述。 **约束限制**： 不涉及 **取值范围**： 不超过128个字符。 **默认取值**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getDesc()
+    {
+        return $this->container['desc'];
+    }
+
+    /**
+    * Sets desc
+    *
+    * @param string|null $desc **参数解释**： 配置文件描述。 **约束限制**： 不涉及 **取值范围**： 不超过128个字符。 **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setDesc($desc)
+    {
+        $this->container['desc'] = $desc;
         return $this;
     }
 

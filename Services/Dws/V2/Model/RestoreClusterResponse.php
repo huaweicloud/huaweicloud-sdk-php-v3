@@ -22,21 +22,25 @@ class RestoreClusterResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * cluster  cluster
+    * jobId  **参数解释**： 异步任务ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'cluster' => '\HuaweiCloud\SDK\Dws\V2\Model\Cluster'
+            'cluster' => '\HuaweiCloud\SDK\Dws\V2\Model\Cluster',
+            'jobId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * cluster  cluster
+    * jobId  **参数解释**： 异步任务ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'cluster' => null
+        'cluster' => null,
+        'jobId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class RestoreClusterResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * cluster  cluster
+    * jobId  **参数解释**： 异步任务ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'cluster' => 'cluster'
+            'cluster' => 'cluster',
+            'jobId' => 'job_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * cluster  cluster
+    * jobId  **参数解释**： 异步任务ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'cluster' => 'setCluster'
+            'cluster' => 'setCluster',
+            'jobId' => 'setJobId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * cluster  cluster
+    * jobId  **参数解释**： 异步任务ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'cluster' => 'getCluster'
+            'cluster' => 'getCluster',
+            'jobId' => 'getJobId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class RestoreClusterResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['cluster'] = isset($data['cluster']) ? $data['cluster'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class RestoreClusterResponse implements ModelInterface, ArrayAccess
     public function setCluster($cluster)
     {
         $this->container['cluster'] = $cluster;
+        return $this;
+    }
+
+    /**
+    * Gets jobId
+    *  **参数解释**： 异步任务ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getJobId()
+    {
+        return $this->container['jobId'];
+    }
+
+    /**
+    * Sets jobId
+    *
+    * @param string|null $jobId **参数解释**： 异步任务ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setJobId($jobId)
+    {
+        $this->container['jobId'] = $jobId;
         return $this;
     }
 

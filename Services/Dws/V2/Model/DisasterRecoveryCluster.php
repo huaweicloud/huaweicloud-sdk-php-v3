@@ -29,6 +29,10 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     * progress  **参数解释**： 容灾进度。 **取值范围**： 不涉及。
     * lastSuccessTime  **参数解释**： 上一次容灾时间。 **取值范围**： 不涉及。
     * obsBucketName  **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
+    * datastoreVersion  **参数解释**： 数据库版本。 **取值范围**： 不涉及。
+    * datastoreType  **参数解释**： 数据库类型。 **取值范围**： 不涉及。
+    * diskCapacity  **参数解释**： 磁盘容量。 **取值范围**： 不涉及。
+    * diskUsed  **参数解释**： 磁盘使用率。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -41,7 +45,11 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
             'status' => 'string',
             'progress' => 'string',
             'lastSuccessTime' => 'string',
-            'obsBucketName' => 'string'
+            'obsBucketName' => 'string',
+            'datastoreVersion' => 'string',
+            'datastoreType' => 'string',
+            'diskCapacity' => 'string',
+            'diskUsed' => 'string'
     ];
 
     /**
@@ -55,6 +63,10 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     * progress  **参数解释**： 容灾进度。 **取值范围**： 不涉及。
     * lastSuccessTime  **参数解释**： 上一次容灾时间。 **取值范围**： 不涉及。
     * obsBucketName  **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
+    * datastoreVersion  **参数解释**： 数据库版本。 **取值范围**： 不涉及。
+    * datastoreType  **参数解释**： 数据库类型。 **取值范围**： 不涉及。
+    * diskCapacity  **参数解释**： 磁盘容量。 **取值范围**： 不涉及。
+    * diskUsed  **参数解释**： 磁盘使用率。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -67,7 +79,11 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
         'status' => null,
         'progress' => null,
         'lastSuccessTime' => null,
-        'obsBucketName' => null
+        'obsBucketName' => null,
+        'datastoreVersion' => null,
+        'datastoreType' => null,
+        'diskCapacity' => null,
+        'diskUsed' => null
     ];
 
     /**
@@ -102,6 +118,10 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     * progress  **参数解释**： 容灾进度。 **取值范围**： 不涉及。
     * lastSuccessTime  **参数解释**： 上一次容灾时间。 **取值范围**： 不涉及。
     * obsBucketName  **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
+    * datastoreVersion  **参数解释**： 数据库版本。 **取值范围**： 不涉及。
+    * datastoreType  **参数解释**： 数据库类型。 **取值范围**： 不涉及。
+    * diskCapacity  **参数解释**： 磁盘容量。 **取值范围**： 不涉及。
+    * diskUsed  **参数解释**： 磁盘使用率。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -114,7 +134,11 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
             'status' => 'status',
             'progress' => 'progress',
             'lastSuccessTime' => 'last_success_time',
-            'obsBucketName' => 'obs_bucket_name'
+            'obsBucketName' => 'obs_bucket_name',
+            'datastoreVersion' => 'datastore_version',
+            'datastoreType' => 'datastore_type',
+            'diskCapacity' => 'disk_capacity',
+            'diskUsed' => 'disk_used'
     ];
 
     /**
@@ -128,6 +152,10 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     * progress  **参数解释**： 容灾进度。 **取值范围**： 不涉及。
     * lastSuccessTime  **参数解释**： 上一次容灾时间。 **取值范围**： 不涉及。
     * obsBucketName  **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
+    * datastoreVersion  **参数解释**： 数据库版本。 **取值范围**： 不涉及。
+    * datastoreType  **参数解释**： 数据库类型。 **取值范围**： 不涉及。
+    * diskCapacity  **参数解释**： 磁盘容量。 **取值范围**： 不涉及。
+    * diskUsed  **参数解释**： 磁盘使用率。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -140,7 +168,11 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'progress' => 'setProgress',
             'lastSuccessTime' => 'setLastSuccessTime',
-            'obsBucketName' => 'setObsBucketName'
+            'obsBucketName' => 'setObsBucketName',
+            'datastoreVersion' => 'setDatastoreVersion',
+            'datastoreType' => 'setDatastoreType',
+            'diskCapacity' => 'setDiskCapacity',
+            'diskUsed' => 'setDiskUsed'
     ];
 
     /**
@@ -154,6 +186,10 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     * progress  **参数解释**： 容灾进度。 **取值范围**： 不涉及。
     * lastSuccessTime  **参数解释**： 上一次容灾时间。 **取值范围**： 不涉及。
     * obsBucketName  **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
+    * datastoreVersion  **参数解释**： 数据库版本。 **取值范围**： 不涉及。
+    * datastoreType  **参数解释**： 数据库类型。 **取值范围**： 不涉及。
+    * diskCapacity  **参数解释**： 磁盘容量。 **取值范围**： 不涉及。
+    * diskUsed  **参数解释**： 磁盘使用率。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -166,7 +202,11 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'progress' => 'getProgress',
             'lastSuccessTime' => 'getLastSuccessTime',
-            'obsBucketName' => 'getObsBucketName'
+            'obsBucketName' => 'getObsBucketName',
+            'datastoreVersion' => 'getDatastoreVersion',
+            'datastoreType' => 'getDatastoreType',
+            'diskCapacity' => 'getDiskCapacity',
+            'diskUsed' => 'getDiskUsed'
     ];
 
     /**
@@ -236,6 +276,10 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
         $this->container['progress'] = isset($data['progress']) ? $data['progress'] : null;
         $this->container['lastSuccessTime'] = isset($data['lastSuccessTime']) ? $data['lastSuccessTime'] : null;
         $this->container['obsBucketName'] = isset($data['obsBucketName']) ? $data['obsBucketName'] : null;
+        $this->container['datastoreVersion'] = isset($data['datastoreVersion']) ? $data['datastoreVersion'] : null;
+        $this->container['datastoreType'] = isset($data['datastoreType']) ? $data['datastoreType'] : null;
+        $this->container['diskCapacity'] = isset($data['diskCapacity']) ? $data['diskCapacity'] : null;
+        $this->container['diskUsed'] = isset($data['diskUsed']) ? $data['diskUsed'] : null;
     }
 
     /**
@@ -473,6 +517,102 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     public function setObsBucketName($obsBucketName)
     {
         $this->container['obsBucketName'] = $obsBucketName;
+        return $this;
+    }
+
+    /**
+    * Gets datastoreVersion
+    *  **参数解释**： 数据库版本。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDatastoreVersion()
+    {
+        return $this->container['datastoreVersion'];
+    }
+
+    /**
+    * Sets datastoreVersion
+    *
+    * @param string|null $datastoreVersion **参数解释**： 数据库版本。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDatastoreVersion($datastoreVersion)
+    {
+        $this->container['datastoreVersion'] = $datastoreVersion;
+        return $this;
+    }
+
+    /**
+    * Gets datastoreType
+    *  **参数解释**： 数据库类型。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDatastoreType()
+    {
+        return $this->container['datastoreType'];
+    }
+
+    /**
+    * Sets datastoreType
+    *
+    * @param string|null $datastoreType **参数解释**： 数据库类型。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDatastoreType($datastoreType)
+    {
+        $this->container['datastoreType'] = $datastoreType;
+        return $this;
+    }
+
+    /**
+    * Gets diskCapacity
+    *  **参数解释**： 磁盘容量。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDiskCapacity()
+    {
+        return $this->container['diskCapacity'];
+    }
+
+    /**
+    * Sets diskCapacity
+    *
+    * @param string|null $diskCapacity **参数解释**： 磁盘容量。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDiskCapacity($diskCapacity)
+    {
+        $this->container['diskCapacity'] = $diskCapacity;
+        return $this;
+    }
+
+    /**
+    * Gets diskUsed
+    *  **参数解释**： 磁盘使用率。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDiskUsed()
+    {
+        return $this->container['diskUsed'];
+    }
+
+    /**
+    * Sets diskUsed
+    *
+    * @param string|null $diskUsed **参数解释**： 磁盘使用率。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDiskUsed($diskUsed)
+    {
+        $this->container['diskUsed'] = $diskUsed;
         return $this;
     }
 

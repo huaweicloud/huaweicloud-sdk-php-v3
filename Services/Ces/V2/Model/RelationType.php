@@ -14,6 +14,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     const RESOURCE = 'RESOURCE';
     const RESOURCE_POLICY_NOTIFICATION = 'RESOURCE_POLICY_NOTIFICATION';
     const RESOURCE_POLICY_ALARM = 'RESOURCE_POLICY_ALARM';
+    const EVENT_SYS = 'EVENT.SYS';
     
     /**
      * Gets allowable values of the enum
@@ -26,6 +27,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
             self::RESOURCE,
             self::RESOURCE_POLICY_NOTIFICATION,
             self::RESOURCE_POLICY_ALARM,
+            self::EVENT_SYS,
         ];
     }
 }

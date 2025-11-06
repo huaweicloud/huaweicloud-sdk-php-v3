@@ -21,25 +21,33 @@ class UpdateTransferRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * logTransferId  日志转储ID
+    * logGroupId  日志组ID
     * logTransferInfo  logTransferInfo
+    * logStreams  日志流信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'logTransferId' => 'string',
-            'logTransferInfo' => '\HuaweiCloud\SDK\Lts\V2\Model\UpdateTransferRequestBodyLogTransferInfo'
+            'logGroupId' => 'string',
+            'logTransferInfo' => '\HuaweiCloud\SDK\Lts\V2\Model\UpdateTransferRequestBodyLogTransferInfo',
+            'logStreams' => '\HuaweiCloud\SDK\Lts\V2\Model\LogStreams[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * logTransferId  日志转储ID
+    * logGroupId  日志组ID
     * logTransferInfo  logTransferInfo
+    * logStreams  日志流信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'logTransferId' => null,
-        'logTransferInfo' => null
+        'logGroupId' => null,
+        'logTransferInfo' => null,
+        'logStreams' => null
     ];
 
     /**
@@ -66,37 +74,49 @@ class UpdateTransferRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * logTransferId  日志转储ID
+    * logGroupId  日志组ID
     * logTransferInfo  logTransferInfo
+    * logStreams  日志流信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'logTransferId' => 'log_transfer_id',
-            'logTransferInfo' => 'log_transfer_info'
+            'logGroupId' => 'log_group_id',
+            'logTransferInfo' => 'log_transfer_info',
+            'logStreams' => 'log_streams'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * logTransferId  日志转储ID
+    * logGroupId  日志组ID
     * logTransferInfo  logTransferInfo
+    * logStreams  日志流信息
     *
     * @var string[]
     */
     protected static $setters = [
             'logTransferId' => 'setLogTransferId',
-            'logTransferInfo' => 'setLogTransferInfo'
+            'logGroupId' => 'setLogGroupId',
+            'logTransferInfo' => 'setLogTransferInfo',
+            'logStreams' => 'setLogStreams'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * logTransferId  日志转储ID
+    * logGroupId  日志组ID
     * logTransferInfo  logTransferInfo
+    * logStreams  日志流信息
     *
     * @var string[]
     */
     protected static $getters = [
             'logTransferId' => 'getLogTransferId',
-            'logTransferInfo' => 'getLogTransferInfo'
+            'logGroupId' => 'getLogGroupId',
+            'logTransferInfo' => 'getLogTransferInfo',
+            'logStreams' => 'getLogStreams'
     ];
 
     /**
@@ -158,7 +178,9 @@ class UpdateTransferRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['logTransferId'] = isset($data['logTransferId']) ? $data['logTransferId'] : null;
+        $this->container['logGroupId'] = isset($data['logGroupId']) ? $data['logGroupId'] : null;
         $this->container['logTransferInfo'] = isset($data['logTransferInfo']) ? $data['logTransferInfo'] : null;
+        $this->container['logStreams'] = isset($data['logStreams']) ? $data['logStreams'] : null;
     }
 
     /**
@@ -220,6 +242,30 @@ class UpdateTransferRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets logGroupId
+    *  日志组ID
+    *
+    * @return string|null
+    */
+    public function getLogGroupId()
+    {
+        return $this->container['logGroupId'];
+    }
+
+    /**
+    * Sets logGroupId
+    *
+    * @param string|null $logGroupId 日志组ID
+    *
+    * @return $this
+    */
+    public function setLogGroupId($logGroupId)
+    {
+        $this->container['logGroupId'] = $logGroupId;
+        return $this;
+    }
+
+    /**
     * Gets logTransferInfo
     *  logTransferInfo
     *
@@ -240,6 +286,30 @@ class UpdateTransferRequestBody implements ModelInterface, ArrayAccess
     public function setLogTransferInfo($logTransferInfo)
     {
         $this->container['logTransferInfo'] = $logTransferInfo;
+        return $this;
+    }
+
+    /**
+    * Gets logStreams
+    *  日志流信息
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\LogStreams[]|null
+    */
+    public function getLogStreams()
+    {
+        return $this->container['logStreams'];
+    }
+
+    /**
+    * Sets logStreams
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\LogStreams[]|null $logStreams 日志流信息
+    *
+    * @return $this
+    */
+    public function setLogStreams($logStreams)
+    {
+        $this->container['logStreams'] = $logStreams;
         return $this;
     }
 

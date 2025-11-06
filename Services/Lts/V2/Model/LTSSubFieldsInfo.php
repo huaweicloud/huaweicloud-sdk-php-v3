@@ -22,44 +22,32 @@ class LTSSubFieldsInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * fieldType  字段类型
     * fieldName  字段名称
-    * caseSensitive  是否大小写敏感
-    * includeChinese  是否包含中文
-    * tokenizer  分词符
     * quickAnalysis  是否快速分析
-    * ascii  特殊分词符
+    * fieldAnalysisAlias  **参数解释：** 别名，设置别名后，只支持使用别名进行SQL搜索分析，不支持使用别名进行关键字搜索。 **约束限制：** 不涉及。 **取值范围：** 长度不能大于256。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'fieldType' => 'string',
             'fieldName' => 'string',
-            'caseSensitive' => 'bool',
-            'includeChinese' => 'bool',
-            'tokenizer' => 'string',
             'quickAnalysis' => 'bool',
-            'ascii' => 'string[]'
+            'fieldAnalysisAlias' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * fieldType  字段类型
     * fieldName  字段名称
-    * caseSensitive  是否大小写敏感
-    * includeChinese  是否包含中文
-    * tokenizer  分词符
     * quickAnalysis  是否快速分析
-    * ascii  特殊分词符
+    * fieldAnalysisAlias  **参数解释：** 别名，设置别名后，只支持使用别名进行SQL搜索分析，不支持使用别名进行关键字搜索。 **约束限制：** 不涉及。 **取值范围：** 长度不能大于256。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'fieldType' => null,
         'fieldName' => null,
-        'caseSensitive' => null,
-        'includeChinese' => null,
-        'tokenizer' => null,
         'quickAnalysis' => null,
-        'ascii' => null
+        'fieldAnalysisAlias' => null
     ];
 
     /**
@@ -87,66 +75,48 @@ class LTSSubFieldsInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * fieldType  字段类型
     * fieldName  字段名称
-    * caseSensitive  是否大小写敏感
-    * includeChinese  是否包含中文
-    * tokenizer  分词符
     * quickAnalysis  是否快速分析
-    * ascii  特殊分词符
+    * fieldAnalysisAlias  **参数解释：** 别名，设置别名后，只支持使用别名进行SQL搜索分析，不支持使用别名进行关键字搜索。 **约束限制：** 不涉及。 **取值范围：** 长度不能大于256。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'fieldType' => 'fieldType',
             'fieldName' => 'fieldName',
-            'caseSensitive' => 'caseSensitive',
-            'includeChinese' => 'includeChinese',
-            'tokenizer' => 'tokenizer',
             'quickAnalysis' => 'quickAnalysis',
-            'ascii' => 'ascii'
+            'fieldAnalysisAlias' => 'fieldAnalysisAlias'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * fieldType  字段类型
     * fieldName  字段名称
-    * caseSensitive  是否大小写敏感
-    * includeChinese  是否包含中文
-    * tokenizer  分词符
     * quickAnalysis  是否快速分析
-    * ascii  特殊分词符
+    * fieldAnalysisAlias  **参数解释：** 别名，设置别名后，只支持使用别名进行SQL搜索分析，不支持使用别名进行关键字搜索。 **约束限制：** 不涉及。 **取值范围：** 长度不能大于256。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'fieldType' => 'setFieldType',
             'fieldName' => 'setFieldName',
-            'caseSensitive' => 'setCaseSensitive',
-            'includeChinese' => 'setIncludeChinese',
-            'tokenizer' => 'setTokenizer',
             'quickAnalysis' => 'setQuickAnalysis',
-            'ascii' => 'setAscii'
+            'fieldAnalysisAlias' => 'setFieldAnalysisAlias'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * fieldType  字段类型
     * fieldName  字段名称
-    * caseSensitive  是否大小写敏感
-    * includeChinese  是否包含中文
-    * tokenizer  分词符
     * quickAnalysis  是否快速分析
-    * ascii  特殊分词符
+    * fieldAnalysisAlias  **参数解释：** 别名，设置别名后，只支持使用别名进行SQL搜索分析，不支持使用别名进行关键字搜索。 **约束限制：** 不涉及。 **取值范围：** 长度不能大于256。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'fieldType' => 'getFieldType',
             'fieldName' => 'getFieldName',
-            'caseSensitive' => 'getCaseSensitive',
-            'includeChinese' => 'getIncludeChinese',
-            'tokenizer' => 'getTokenizer',
             'quickAnalysis' => 'getQuickAnalysis',
-            'ascii' => 'getAscii'
+            'fieldAnalysisAlias' => 'getFieldAnalysisAlias'
     ];
 
     /**
@@ -226,11 +196,8 @@ class LTSSubFieldsInfo implements ModelInterface, ArrayAccess
     {
         $this->container['fieldType'] = isset($data['fieldType']) ? $data['fieldType'] : null;
         $this->container['fieldName'] = isset($data['fieldName']) ? $data['fieldName'] : null;
-        $this->container['caseSensitive'] = isset($data['caseSensitive']) ? $data['caseSensitive'] : null;
-        $this->container['includeChinese'] = isset($data['includeChinese']) ? $data['includeChinese'] : null;
-        $this->container['tokenizer'] = isset($data['tokenizer']) ? $data['tokenizer'] : null;
         $this->container['quickAnalysis'] = isset($data['quickAnalysis']) ? $data['quickAnalysis'] : null;
-        $this->container['ascii'] = isset($data['ascii']) ? $data['ascii'] : null;
+        $this->container['fieldAnalysisAlias'] = isset($data['fieldAnalysisAlias']) ? $data['fieldAnalysisAlias'] : null;
     }
 
     /**
@@ -260,12 +227,6 @@ class LTSSubFieldsInfo implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['fieldName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'fieldName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['tokenizer']) && (mb_strlen($this->container['tokenizer']) > 128)) {
-                $invalidProperties[] = "invalid value for 'tokenizer', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['tokenizer']) && (mb_strlen($this->container['tokenizer']) < 0)) {
-                $invalidProperties[] = "invalid value for 'tokenizer', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -330,78 +291,6 @@ class LTSSubFieldsInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets caseSensitive
-    *  是否大小写敏感
-    *
-    * @return bool|null
-    */
-    public function getCaseSensitive()
-    {
-        return $this->container['caseSensitive'];
-    }
-
-    /**
-    * Sets caseSensitive
-    *
-    * @param bool|null $caseSensitive 是否大小写敏感
-    *
-    * @return $this
-    */
-    public function setCaseSensitive($caseSensitive)
-    {
-        $this->container['caseSensitive'] = $caseSensitive;
-        return $this;
-    }
-
-    /**
-    * Gets includeChinese
-    *  是否包含中文
-    *
-    * @return bool|null
-    */
-    public function getIncludeChinese()
-    {
-        return $this->container['includeChinese'];
-    }
-
-    /**
-    * Sets includeChinese
-    *
-    * @param bool|null $includeChinese 是否包含中文
-    *
-    * @return $this
-    */
-    public function setIncludeChinese($includeChinese)
-    {
-        $this->container['includeChinese'] = $includeChinese;
-        return $this;
-    }
-
-    /**
-    * Gets tokenizer
-    *  分词符
-    *
-    * @return string|null
-    */
-    public function getTokenizer()
-    {
-        return $this->container['tokenizer'];
-    }
-
-    /**
-    * Sets tokenizer
-    *
-    * @param string|null $tokenizer 分词符
-    *
-    * @return $this
-    */
-    public function setTokenizer($tokenizer)
-    {
-        $this->container['tokenizer'] = $tokenizer;
-        return $this;
-    }
-
-    /**
     * Gets quickAnalysis
     *  是否快速分析
     *
@@ -426,26 +315,26 @@ class LTSSubFieldsInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets ascii
-    *  特殊分词符
+    * Gets fieldAnalysisAlias
+    *  **参数解释：** 别名，设置别名后，只支持使用别名进行SQL搜索分析，不支持使用别名进行关键字搜索。 **约束限制：** 不涉及。 **取值范围：** 长度不能大于256。 **默认取值：** 不涉及。
     *
-    * @return string[]|null
+    * @return string|null
     */
-    public function getAscii()
+    public function getFieldAnalysisAlias()
     {
-        return $this->container['ascii'];
+        return $this->container['fieldAnalysisAlias'];
     }
 
     /**
-    * Sets ascii
+    * Sets fieldAnalysisAlias
     *
-    * @param string[]|null $ascii 特殊分词符
+    * @param string|null $fieldAnalysisAlias **参数解释：** 别名，设置别名后，只支持使用别名进行SQL搜索分析，不支持使用别名进行关键字搜索。 **约束限制：** 不涉及。 **取值范围：** 长度不能大于256。 **默认取值：** 不涉及。
     *
     * @return $this
     */
-    public function setAscii($ascii)
+    public function setFieldAnalysisAlias($fieldAnalysisAlias)
     {
-        $this->container['ascii'] = $ascii;
+        $this->container['fieldAnalysisAlias'] = $fieldAnalysisAlias;
         return $this;
     }
 

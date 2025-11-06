@@ -22,6 +22,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  规则id
     * policyid  策略id
+    * policyname  策略名称
     * url  规则应用的url
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  规则内容
@@ -35,6 +36,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'policyid' => 'string',
+            'policyname' => 'string',
             'url' => 'string',
             'category' => 'string',
             'contents' => 'string[]',
@@ -48,6 +50,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  规则id
     * policyid  策略id
+    * policyname  策略名称
     * url  规则应用的url
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  规则内容
@@ -61,6 +64,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'policyid' => null,
+        'policyname' => null,
         'url' => null,
         'category' => null,
         'contents' => null,
@@ -95,6 +99,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  规则id
     * policyid  策略id
+    * policyname  策略名称
     * url  规则应用的url
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  规则内容
@@ -108,6 +113,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'id' => 'id',
             'policyid' => 'policyid',
+            'policyname' => 'policyname',
             'url' => 'url',
             'category' => 'category',
             'contents' => 'contents',
@@ -121,6 +127,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  规则id
     * policyid  策略id
+    * policyname  策略名称
     * url  规则应用的url
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  规则内容
@@ -134,6 +141,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'id' => 'setId',
             'policyid' => 'setPolicyid',
+            'policyname' => 'setPolicyname',
             'url' => 'setUrl',
             'category' => 'setCategory',
             'contents' => 'setContents',
@@ -147,6 +155,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  规则id
     * policyid  策略id
+    * policyname  策略名称
     * url  规则应用的url
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  规则内容
@@ -160,6 +169,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'id' => 'getId',
             'policyid' => 'getPolicyid',
+            'policyname' => 'getPolicyname',
             'url' => 'getUrl',
             'category' => 'getCategory',
             'contents' => 'getContents',
@@ -229,6 +239,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['policyid'] = isset($data['policyid']) ? $data['policyid'] : null;
+        $this->container['policyname'] = isset($data['policyname']) ? $data['policyname'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
         $this->container['contents'] = isset($data['contents']) ? $data['contents'] : null;
@@ -305,6 +316,30 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     public function setPolicyid($policyid)
     {
         $this->container['policyid'] = $policyid;
+        return $this;
+    }
+
+    /**
+    * Gets policyname
+    *  策略名称
+    *
+    * @return string|null
+    */
+    public function getPolicyname()
+    {
+        return $this->container['policyname'];
+    }
+
+    /**
+    * Sets policyname
+    *
+    * @param string|null $policyname 策略名称
+    *
+    * @return $this
+    */
+    public function setPolicyname($policyname)
+    {
+        $this->container['policyname'] = $policyname;
         return $this;
     }
 

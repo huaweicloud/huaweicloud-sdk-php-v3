@@ -340,6 +340,15 @@ class Metadata implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['ltsAlarmType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'ltsAlarmType', the character length must be bigger than or equal to 1.";
             }
+        if ($this->container['logGroupName'] === null) {
+            $invalidProperties[] = "'logGroupName' can't be null";
+        }
+        if ($this->container['logStreamName'] === null) {
+            $invalidProperties[] = "'logStreamName' can't be null";
+        }
+        if ($this->container['eventSubtype'] === null) {
+            $invalidProperties[] = "'eventSubtype' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -550,7 +559,7 @@ class Metadata implements ModelInterface, ArrayAccess
     * Gets logGroupName
     *  日志组原始名称
     *
-    * @return string|null
+    * @return string
     */
     public function getLogGroupName()
     {
@@ -560,7 +569,7 @@ class Metadata implements ModelInterface, ArrayAccess
     /**
     * Sets logGroupName
     *
-    * @param string|null $logGroupName 日志组原始名称
+    * @param string $logGroupName 日志组原始名称
     *
     * @return $this
     */
@@ -574,7 +583,7 @@ class Metadata implements ModelInterface, ArrayAccess
     * Gets logStreamName
     *  日志流原始名称
     *
-    * @return string|null
+    * @return string
     */
     public function getLogStreamName()
     {
@@ -584,7 +593,7 @@ class Metadata implements ModelInterface, ArrayAccess
     /**
     * Sets logStreamName
     *
-    * @param string|null $logStreamName 日志流原始名称
+    * @param string $logStreamName 日志流原始名称
     *
     * @return $this
     */
@@ -598,7 +607,7 @@ class Metadata implements ModelInterface, ArrayAccess
     * Gets eventSubtype
     *  **参数解释：** 告警类型。 **取值范围：** - sql： sql告警 - keywords：关键词告警
     *
-    * @return string|null
+    * @return string
     */
     public function getEventSubtype()
     {
@@ -608,7 +617,7 @@ class Metadata implements ModelInterface, ArrayAccess
     /**
     * Sets eventSubtype
     *
-    * @param string|null $eventSubtype **参数解释：** 告警类型。 **取值范围：** - sql： sql告警 - keywords：关键词告警
+    * @param string $eventSubtype **参数解释：** 告警类型。 **取值范围：** - sql： sql告警 - keywords：关键词告警
     *
     * @return $this
     */

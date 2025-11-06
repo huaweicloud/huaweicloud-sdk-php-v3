@@ -39,9 +39,9 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
             'alarmActionEnabled' => 'bool',
             'alarmLevel' => 'int',
             'alarmType' => 'string',
-            'alarmActions' => '\HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]',
-            'insufficientdataActions' => '\HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]',
-            'okActions' => '\HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]'
+            'alarmActions' => '\HuaweiCloud\SDK\Ces\V1\Model\Notification[][]',
+            'insufficientdataActions' => '\HuaweiCloud\SDK\Ces\V1\Model\Notification[][]',
+            'okActions' => '\HuaweiCloud\SDK\Ces\V1\Model\Notification[][]'
     ];
 
     /**
@@ -263,6 +263,27 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['alarmName']) && (mb_strlen($this->container['alarmName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'alarmName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['alarmName']) && (mb_strlen($this->container['alarmName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'alarmName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['alarmName']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['alarmName'])) {
+                $invalidProperties[] = "invalid value for 'alarmName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
+            }
+            if (!is_null($this->container['alarmDescription']) && (mb_strlen($this->container['alarmDescription']) > 256)) {
+                $invalidProperties[] = "invalid value for 'alarmDescription', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['alarmDescription']) && (mb_strlen($this->container['alarmDescription']) < 0)) {
+                $invalidProperties[] = "invalid value for 'alarmDescription', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['alarmLevel']) && ($this->container['alarmLevel'] > 4)) {
+                $invalidProperties[] = "invalid value for 'alarmLevel', must be smaller than or equal to 4.";
+            }
+            if (!is_null($this->container['alarmLevel']) && ($this->container['alarmLevel'] < 1)) {
+                $invalidProperties[] = "invalid value for 'alarmLevel', must be bigger than or equal to 1.";
+            }
             $allowedValues = $this->getAlarmTypeAllowableValues();
                 if (!is_null($this->container['alarmType']) && !in_array($this->container['alarmType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -433,7 +454,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
     * Gets alarmActions
     *  告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\Notification[][]|null
     */
     public function getAlarmActions()
     {
@@ -443,7 +464,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmActions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]|null $alarmActions 告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[][]|null $alarmActions 告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
     *
     * @return $this
     */
@@ -457,7 +478,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
     * Gets insufficientdataActions
     *  数据不足触发的动作（该参数已废弃，建议无需配置）。
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\Notification[][]|null
     */
     public function getInsufficientdataActions()
     {
@@ -467,7 +488,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets insufficientdataActions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]|null $insufficientdataActions 数据不足触发的动作（该参数已废弃，建议无需配置）。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[][]|null $insufficientdataActions 数据不足触发的动作（该参数已废弃，建议无需配置）。
     *
     * @return $this
     */
@@ -481,7 +502,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
     * Gets okActions
     *  告警恢复触发的动作
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\Notification[][]|null
     */
     public function getOkActions()
     {
@@ -491,7 +512,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets okActions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\AlarmActions[]|null $okActions 告警恢复触发的动作
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[][]|null $okActions 告警恢复触发的动作
     *
     * @return $this
     */

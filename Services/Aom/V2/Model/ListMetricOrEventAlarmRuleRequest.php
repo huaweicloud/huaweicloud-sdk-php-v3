@@ -31,7 +31,7 @@ class ListMetricOrEventAlarmRuleRequest implements ModelInterface, ArrayAccess
     * promInstanceId  Prometheus实例id。
     * bindNotificationRuleId  绑定的告警行动规则名称。
     * relatedCceClusters  CCE集群id。
-    * enterpriseProjectId  企业项目id。  - 查询单个企业项目下实例，填写企业项目id。  - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * enterpriseProjectId  企业项目id。获取方式请参见：[获取企业项目ID](aom_04_0024.xml)。 - 查询单个企业项目下实例，填写企业项目id。  - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @var string[]
     */
@@ -63,7 +63,7 @@ class ListMetricOrEventAlarmRuleRequest implements ModelInterface, ArrayAccess
     * promInstanceId  Prometheus实例id。
     * bindNotificationRuleId  绑定的告警行动规则名称。
     * relatedCceClusters  CCE集群id。
-    * enterpriseProjectId  企业项目id。  - 查询单个企业项目下实例，填写企业项目id。  - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * enterpriseProjectId  企业项目id。获取方式请参见：[获取企业项目ID](aom_04_0024.xml)。 - 查询单个企业项目下实例，填写企业项目id。  - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @var string[]
     */
@@ -116,7 +116,7 @@ class ListMetricOrEventAlarmRuleRequest implements ModelInterface, ArrayAccess
     * promInstanceId  Prometheus实例id。
     * bindNotificationRuleId  绑定的告警行动规则名称。
     * relatedCceClusters  CCE集群id。
-    * enterpriseProjectId  企业项目id。  - 查询单个企业项目下实例，填写企业项目id。  - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * enterpriseProjectId  企业项目id。获取方式请参见：[获取企业项目ID](aom_04_0024.xml)。 - 查询单个企业项目下实例，填写企业项目id。  - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @var string[]
     */
@@ -148,7 +148,7 @@ class ListMetricOrEventAlarmRuleRequest implements ModelInterface, ArrayAccess
     * promInstanceId  Prometheus实例id。
     * bindNotificationRuleId  绑定的告警行动规则名称。
     * relatedCceClusters  CCE集群id。
-    * enterpriseProjectId  企业项目id。  - 查询单个企业项目下实例，填写企业项目id。  - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * enterpriseProjectId  企业项目id。获取方式请参见：[获取企业项目ID](aom_04_0024.xml)。 - 查询单个企业项目下实例，填写企业项目id。  - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class ListMetricOrEventAlarmRuleRequest implements ModelInterface, ArrayAccess
     * promInstanceId  Prometheus实例id。
     * bindNotificationRuleId  绑定的告警行动规则名称。
     * relatedCceClusters  CCE集群id。
-    * enterpriseProjectId  企业项目id。  - 查询单个企业项目下实例，填写企业项目id。  - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * enterpriseProjectId  企业项目id。获取方式请参见：[获取企业项目ID](aom_04_0024.xml)。 - 查询单个企业项目下实例，填写企业项目id。  - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @var string[]
     */
@@ -609,7 +609,7 @@ class ListMetricOrEventAlarmRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目id。  - 查询单个企业项目下实例，填写企业项目id。  - 查询所有企业项目下实例，填写“all_granted_eps”。
+    *  企业项目id。获取方式请参见：[获取企业项目ID](aom_04_0024.xml)。 - 查询单个企业项目下实例，填写企业项目id。  - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @return string|null
     */
@@ -621,7 +621,7 @@ class ListMetricOrEventAlarmRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目id。  - 查询单个企业项目下实例，填写企业项目id。  - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * @param string|null $enterpriseProjectId 企业项目id。获取方式请参见：[获取企业项目ID](aom_04_0024.xml)。 - 查询单个企业项目下实例，填写企业项目id。  - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @return $this
     */

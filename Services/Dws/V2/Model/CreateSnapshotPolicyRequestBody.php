@@ -26,6 +26,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
     * serverPort  **参数解释**： NBU备份介质端口。备份介质为NBU时该字段必填。 **取值范围**： 不涉及。
     * backupParam  **参数解释**： NBU备份参数。备份介质为NBU时该字段必选。 **取值范围**： 不涉及。
     * serverIps  **参数解释**： 备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。 **取值范围**： 不涉及。
+    * autoBackup  **参数解释**： 是否自动备份。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
             'deviceName' => 'string',
             'serverPort' => 'string',
             'backupParam' => 'string',
-            'serverIps' => 'string[]'
+            'serverIps' => 'string[]',
+            'autoBackup' => 'bool'
     ];
 
     /**
@@ -46,6 +48,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
     * serverPort  **参数解释**： NBU备份介质端口。备份介质为NBU时该字段必填。 **取值范围**： 不涉及。
     * backupParam  **参数解释**： NBU备份参数。备份介质为NBU时该字段必选。 **取值范围**： 不涉及。
     * serverIps  **参数解释**： 备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。 **取值范围**： 不涉及。
+    * autoBackup  **参数解释**： 是否自动备份。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
         'deviceName' => null,
         'serverPort' => null,
         'backupParam' => null,
-        'serverIps' => null
+        'serverIps' => null,
+        'autoBackup' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
     * serverPort  **参数解释**： NBU备份介质端口。备份介质为NBU时该字段必填。 **取值范围**： 不涉及。
     * backupParam  **参数解释**： NBU备份参数。备份介质为NBU时该字段必选。 **取值范围**： 不涉及。
     * serverIps  **参数解释**： 备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。 **取值范围**： 不涉及。
+    * autoBackup  **参数解释**： 是否自动备份。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
             'deviceName' => 'device_name',
             'serverPort' => 'server_port',
             'backupParam' => 'backup_param',
-            'serverIps' => 'server_ips'
+            'serverIps' => 'server_ips',
+            'autoBackup' => 'auto_backup'
     ];
 
     /**
@@ -107,6 +113,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
     * serverPort  **参数解释**： NBU备份介质端口。备份介质为NBU时该字段必填。 **取值范围**： 不涉及。
     * backupParam  **参数解释**： NBU备份参数。备份介质为NBU时该字段必选。 **取值范围**： 不涉及。
     * serverIps  **参数解释**： 备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。 **取值范围**： 不涉及。
+    * autoBackup  **参数解释**： 是否自动备份。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
             'deviceName' => 'setDeviceName',
             'serverPort' => 'setServerPort',
             'backupParam' => 'setBackupParam',
-            'serverIps' => 'setServerIps'
+            'serverIps' => 'setServerIps',
+            'autoBackup' => 'setAutoBackup'
     ];
 
     /**
@@ -127,6 +135,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
     * serverPort  **参数解释**： NBU备份介质端口。备份介质为NBU时该字段必填。 **取值范围**： 不涉及。
     * backupParam  **参数解释**： NBU备份参数。备份介质为NBU时该字段必选。 **取值范围**： 不涉及。
     * serverIps  **参数解释**： 备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。 **取值范围**： 不涉及。
+    * autoBackup  **参数解释**： 是否自动备份。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
             'deviceName' => 'getDeviceName',
             'serverPort' => 'getServerPort',
             'backupParam' => 'getBackupParam',
-            'serverIps' => 'getServerIps'
+            'serverIps' => 'getServerIps',
+            'autoBackup' => 'getAutoBackup'
     ];
 
     /**
@@ -203,6 +213,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
         $this->container['serverPort'] = isset($data['serverPort']) ? $data['serverPort'] : null;
         $this->container['backupParam'] = isset($data['backupParam']) ? $data['backupParam'] : null;
         $this->container['serverIps'] = isset($data['serverIps']) ? $data['serverIps'] : null;
+        $this->container['autoBackup'] = isset($data['autoBackup']) ? $data['autoBackup'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
     public function setServerIps($serverIps)
     {
         $this->container['serverIps'] = $serverIps;
+        return $this;
+    }
+
+    /**
+    * Gets autoBackup
+    *  **参数解释**： 是否自动备份。 **取值范围**： 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getAutoBackup()
+    {
+        return $this->container['autoBackup'];
+    }
+
+    /**
+    * Sets autoBackup
+    *
+    * @param bool|null $autoBackup **参数解释**： 是否自动备份。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setAutoBackup($autoBackup)
+    {
+        $this->container['autoBackup'] = $autoBackup;
         return $this;
     }
 

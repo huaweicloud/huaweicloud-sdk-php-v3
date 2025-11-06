@@ -161,6 +161,9 @@ class DeleteResourceGroupRequest implements ModelInterface, ArrayAccess
         if ($this->container['groupId'] === null) {
             $invalidProperties[] = "'groupId' can't be null";
         }
+            if (!preg_match("/^rg([a-z]|[A-Z]|[0-9]){22}$/", $this->container['groupId'])) {
+                $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /^rg([a-z]|[A-Z]|[0-9]){22}$/.";
+            }
         return $invalidProperties;
     }
 

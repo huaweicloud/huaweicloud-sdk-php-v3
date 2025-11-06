@@ -21,9 +21,9 @@ class AlarmNotification implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * notificationType  通知类型。 - “direct”：直接告警 - “alarm_policy”：告警降噪
-    * routeGroupEnable  启用分组规则。 - 当通知类型为“alarm_policy”时：true - 当通知类型为“direct”时：false
-    * routeGroupRule  分组规则名称。 - 当route_group_enable 为true时，填分组规则名称 - 当route_group_enable 为false时，填“”
-    * notificationEnable  是否启用告警行动规则。 - 当通知类型为“direct”时，填true - 当通知类型为“alarm_policy”时，填false
+    * routeGroupEnable  启用告警分组规则。 - 当通知类型为“alarm_policy”时：true - 当通知类型为“direct”时：false 如果告警触发“notify_triggered”或告警恢复“notify_resolved”都设置为false（即都不进行告警通知），则route_group_enable需设置为false。
+    * routeGroupRule  告警分组规则名称。 - 当route_group_enable 为true时，填告警分组规则名称 - 当route_group_enable 为false时，填“”
+    * notificationEnable  是否启用告警通知规则。 - 当通知类型为“direct”时，填true - 当通知类型为“alarm_policy”时，填false 如果告警触发“notify_triggered”或告警恢复“notify_resolved”都设置为false（即都不进行告警通知），则notification_enable需设置为false。
     * bindNotificationRuleId  告警行动策略id。 - 当notification_enable为true时，填告警行动策略id - 当notification_enable为false时，填“”
     * notifyResolved  告警解决是否通知。 - true：通知 - false：不通知
     * notifyTriggered  告警触发是否通知。 - true：通知 - false：不通知
@@ -45,9 +45,9 @@ class AlarmNotification implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * notificationType  通知类型。 - “direct”：直接告警 - “alarm_policy”：告警降噪
-    * routeGroupEnable  启用分组规则。 - 当通知类型为“alarm_policy”时：true - 当通知类型为“direct”时：false
-    * routeGroupRule  分组规则名称。 - 当route_group_enable 为true时，填分组规则名称 - 当route_group_enable 为false时，填“”
-    * notificationEnable  是否启用告警行动规则。 - 当通知类型为“direct”时，填true - 当通知类型为“alarm_policy”时，填false
+    * routeGroupEnable  启用告警分组规则。 - 当通知类型为“alarm_policy”时：true - 当通知类型为“direct”时：false 如果告警触发“notify_triggered”或告警恢复“notify_resolved”都设置为false（即都不进行告警通知），则route_group_enable需设置为false。
+    * routeGroupRule  告警分组规则名称。 - 当route_group_enable 为true时，填告警分组规则名称 - 当route_group_enable 为false时，填“”
+    * notificationEnable  是否启用告警通知规则。 - 当通知类型为“direct”时，填true - 当通知类型为“alarm_policy”时，填false 如果告警触发“notify_triggered”或告警恢复“notify_resolved”都设置为false（即都不进行告警通知），则notification_enable需设置为false。
     * bindNotificationRuleId  告警行动策略id。 - 当notification_enable为true时，填告警行动策略id - 当notification_enable为false时，填“”
     * notifyResolved  告警解决是否通知。 - true：通知 - false：不通知
     * notifyTriggered  告警触发是否通知。 - true：通知 - false：不通知
@@ -90,9 +90,9 @@ class AlarmNotification implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * notificationType  通知类型。 - “direct”：直接告警 - “alarm_policy”：告警降噪
-    * routeGroupEnable  启用分组规则。 - 当通知类型为“alarm_policy”时：true - 当通知类型为“direct”时：false
-    * routeGroupRule  分组规则名称。 - 当route_group_enable 为true时，填分组规则名称 - 当route_group_enable 为false时，填“”
-    * notificationEnable  是否启用告警行动规则。 - 当通知类型为“direct”时，填true - 当通知类型为“alarm_policy”时，填false
+    * routeGroupEnable  启用告警分组规则。 - 当通知类型为“alarm_policy”时：true - 当通知类型为“direct”时：false 如果告警触发“notify_triggered”或告警恢复“notify_resolved”都设置为false（即都不进行告警通知），则route_group_enable需设置为false。
+    * routeGroupRule  告警分组规则名称。 - 当route_group_enable 为true时，填告警分组规则名称 - 当route_group_enable 为false时，填“”
+    * notificationEnable  是否启用告警通知规则。 - 当通知类型为“direct”时，填true - 当通知类型为“alarm_policy”时，填false 如果告警触发“notify_triggered”或告警恢复“notify_resolved”都设置为false（即都不进行告警通知），则notification_enable需设置为false。
     * bindNotificationRuleId  告警行动策略id。 - 当notification_enable为true时，填告警行动策略id - 当notification_enable为false时，填“”
     * notifyResolved  告警解决是否通知。 - true：通知 - false：不通知
     * notifyTriggered  告警触发是否通知。 - true：通知 - false：不通知
@@ -114,9 +114,9 @@ class AlarmNotification implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * notificationType  通知类型。 - “direct”：直接告警 - “alarm_policy”：告警降噪
-    * routeGroupEnable  启用分组规则。 - 当通知类型为“alarm_policy”时：true - 当通知类型为“direct”时：false
-    * routeGroupRule  分组规则名称。 - 当route_group_enable 为true时，填分组规则名称 - 当route_group_enable 为false时，填“”
-    * notificationEnable  是否启用告警行动规则。 - 当通知类型为“direct”时，填true - 当通知类型为“alarm_policy”时，填false
+    * routeGroupEnable  启用告警分组规则。 - 当通知类型为“alarm_policy”时：true - 当通知类型为“direct”时：false 如果告警触发“notify_triggered”或告警恢复“notify_resolved”都设置为false（即都不进行告警通知），则route_group_enable需设置为false。
+    * routeGroupRule  告警分组规则名称。 - 当route_group_enable 为true时，填告警分组规则名称 - 当route_group_enable 为false时，填“”
+    * notificationEnable  是否启用告警通知规则。 - 当通知类型为“direct”时，填true - 当通知类型为“alarm_policy”时，填false 如果告警触发“notify_triggered”或告警恢复“notify_resolved”都设置为false（即都不进行告警通知），则notification_enable需设置为false。
     * bindNotificationRuleId  告警行动策略id。 - 当notification_enable为true时，填告警行动策略id - 当notification_enable为false时，填“”
     * notifyResolved  告警解决是否通知。 - true：通知 - false：不通知
     * notifyTriggered  告警触发是否通知。 - true：通知 - false：不通知
@@ -138,9 +138,9 @@ class AlarmNotification implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * notificationType  通知类型。 - “direct”：直接告警 - “alarm_policy”：告警降噪
-    * routeGroupEnable  启用分组规则。 - 当通知类型为“alarm_policy”时：true - 当通知类型为“direct”时：false
-    * routeGroupRule  分组规则名称。 - 当route_group_enable 为true时，填分组规则名称 - 当route_group_enable 为false时，填“”
-    * notificationEnable  是否启用告警行动规则。 - 当通知类型为“direct”时，填true - 当通知类型为“alarm_policy”时，填false
+    * routeGroupEnable  启用告警分组规则。 - 当通知类型为“alarm_policy”时：true - 当通知类型为“direct”时：false 如果告警触发“notify_triggered”或告警恢复“notify_resolved”都设置为false（即都不进行告警通知），则route_group_enable需设置为false。
+    * routeGroupRule  告警分组规则名称。 - 当route_group_enable 为true时，填告警分组规则名称 - 当route_group_enable 为false时，填“”
+    * notificationEnable  是否启用告警通知规则。 - 当通知类型为“direct”时，填true - 当通知类型为“alarm_policy”时，填false 如果告警触发“notify_triggered”或告警恢复“notify_resolved”都设置为false（即都不进行告警通知），则notification_enable需设置为false。
     * bindNotificationRuleId  告警行动策略id。 - 当notification_enable为true时，填告警行动策略id - 当notification_enable为false时，填“”
     * notifyResolved  告警解决是否通知。 - true：通知 - false：不通知
     * notifyTriggered  告警触发是否通知。 - true：通知 - false：不通知
@@ -307,7 +307,7 @@ class AlarmNotification implements ModelInterface, ArrayAccess
 
     /**
     * Gets routeGroupEnable
-    *  启用分组规则。 - 当通知类型为“alarm_policy”时：true - 当通知类型为“direct”时：false
+    *  启用告警分组规则。 - 当通知类型为“alarm_policy”时：true - 当通知类型为“direct”时：false 如果告警触发“notify_triggered”或告警恢复“notify_resolved”都设置为false（即都不进行告警通知），则route_group_enable需设置为false。
     *
     * @return bool
     */
@@ -319,7 +319,7 @@ class AlarmNotification implements ModelInterface, ArrayAccess
     /**
     * Sets routeGroupEnable
     *
-    * @param bool $routeGroupEnable 启用分组规则。 - 当通知类型为“alarm_policy”时：true - 当通知类型为“direct”时：false
+    * @param bool $routeGroupEnable 启用告警分组规则。 - 当通知类型为“alarm_policy”时：true - 当通知类型为“direct”时：false 如果告警触发“notify_triggered”或告警恢复“notify_resolved”都设置为false（即都不进行告警通知），则route_group_enable需设置为false。
     *
     * @return $this
     */
@@ -331,7 +331,7 @@ class AlarmNotification implements ModelInterface, ArrayAccess
 
     /**
     * Gets routeGroupRule
-    *  分组规则名称。 - 当route_group_enable 为true时，填分组规则名称 - 当route_group_enable 为false时，填“”
+    *  告警分组规则名称。 - 当route_group_enable 为true时，填告警分组规则名称 - 当route_group_enable 为false时，填“”
     *
     * @return string
     */
@@ -343,7 +343,7 @@ class AlarmNotification implements ModelInterface, ArrayAccess
     /**
     * Sets routeGroupRule
     *
-    * @param string $routeGroupRule 分组规则名称。 - 当route_group_enable 为true时，填分组规则名称 - 当route_group_enable 为false时，填“”
+    * @param string $routeGroupRule 告警分组规则名称。 - 当route_group_enable 为true时，填告警分组规则名称 - 当route_group_enable 为false时，填“”
     *
     * @return $this
     */
@@ -355,7 +355,7 @@ class AlarmNotification implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationEnable
-    *  是否启用告警行动规则。 - 当通知类型为“direct”时，填true - 当通知类型为“alarm_policy”时，填false
+    *  是否启用告警通知规则。 - 当通知类型为“direct”时，填true - 当通知类型为“alarm_policy”时，填false 如果告警触发“notify_triggered”或告警恢复“notify_resolved”都设置为false（即都不进行告警通知），则notification_enable需设置为false。
     *
     * @return bool|null
     */
@@ -367,7 +367,7 @@ class AlarmNotification implements ModelInterface, ArrayAccess
     /**
     * Sets notificationEnable
     *
-    * @param bool|null $notificationEnable 是否启用告警行动规则。 - 当通知类型为“direct”时，填true - 当通知类型为“alarm_policy”时，填false
+    * @param bool|null $notificationEnable 是否启用告警通知规则。 - 当通知类型为“direct”时，填true - 当通知类型为“alarm_policy”时，填false 如果告警触发“notify_triggered”或告警恢复“notify_resolved”都设置为false（即都不进行告警通知），则notification_enable需设置为false。
     *
     * @return $this
     */

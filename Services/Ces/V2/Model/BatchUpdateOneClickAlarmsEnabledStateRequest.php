@@ -27,7 +27,7 @@ class BatchUpdateOneClickAlarmsEnabledStateRequest implements ModelInterface, Ar
     */
     protected static $openAPITypes = [
             'oneClickAlarmId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Ces\V2\Model\BatchUpdateOneClickAlarmsEnabledStateRequestBody'
+            'body' => '\HuaweiCloud\SDK\Ces\V2\Model\BatchEnableAlarmsRequestBody'
     ];
 
     /**
@@ -223,7 +223,7 @@ class BatchUpdateOneClickAlarmsEnabledStateRequest implements ModelInterface, Ar
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\BatchUpdateOneClickAlarmsEnabledStateRequestBody|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\BatchEnableAlarmsRequestBody|null
     */
     public function getBody()
     {
@@ -233,7 +233,7 @@ class BatchUpdateOneClickAlarmsEnabledStateRequest implements ModelInterface, Ar
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\BatchUpdateOneClickAlarmsEnabledStateRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\BatchEnableAlarmsRequestBody|null $body body
     *
     * @return $this
     */

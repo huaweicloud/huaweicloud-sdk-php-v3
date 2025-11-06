@@ -21,7 +21,7 @@ class CreateResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  创建的资源分组ID，如：rg1606377637506DmVOENVyL。
+    * groupId  **参数解释** 资源分组ID，如：rg1606377637506DmVOENVyL **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  创建的资源分组ID，如：rg1606377637506DmVOENVyL。
+    * groupId  **参数解释** 资源分组ID，如：rg1606377637506DmVOENVyL **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateResourceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  创建的资源分组ID，如：rg1606377637506DmVOENVyL。
+    * groupId  **参数解释** 资源分组ID，如：rg1606377637506DmVOENVyL **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  创建的资源分组ID，如：rg1606377637506DmVOENVyL。
+    * groupId  **参数解释** 资源分组ID，如：rg1606377637506DmVOENVyL **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  创建的资源分组ID，如：rg1606377637506DmVOENVyL。
+    * groupId  **参数解释** 资源分组ID，如：rg1606377637506DmVOENVyL **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -159,6 +159,12 @@ class CreateResourceGroupResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -175,7 +181,7 @@ class CreateResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  创建的资源分组ID，如：rg1606377637506DmVOENVyL。
+    *  **参数解释** 资源分组ID，如：rg1606377637506DmVOENVyL **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -187,7 +193,7 @@ class CreateResourceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 创建的资源分组ID，如：rg1606377637506DmVOENVyL。
+    * @param string|null $groupId **参数解释** 资源分组ID，如：rg1606377637506DmVOENVyL **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
     *
     * @return $this
     */

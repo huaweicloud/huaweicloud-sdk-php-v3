@@ -39,6 +39,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * environmentId  ServiceStage环境ID
     * componentId  ServiceStage组件ID
     * accessConfigTypeSource  日志接入自建软件来源
+    * recursiveDepth  **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +62,8 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
             'applicationId' => 'string',
             'environmentId' => 'string',
             'componentId' => 'string[]',
-            'accessConfigTypeSource' => 'string'
+            'accessConfigTypeSource' => 'string',
+            'recursiveDepth' => 'int'
     ];
 
     /**
@@ -85,6 +87,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * environmentId  ServiceStage环境ID
     * componentId  ServiceStage组件ID
     * accessConfigTypeSource  日志接入自建软件来源
+    * recursiveDepth  **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -107,7 +110,8 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
         'applicationId' => null,
         'environmentId' => null,
         'componentId' => null,
-        'accessConfigTypeSource' => null
+        'accessConfigTypeSource' => null,
+        'recursiveDepth' => 'int32'
     ];
 
     /**
@@ -152,6 +156,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * environmentId  ServiceStage环境ID
     * componentId  ServiceStage组件ID
     * accessConfigTypeSource  日志接入自建软件来源
+    * recursiveDepth  **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -174,7 +179,8 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
             'applicationId' => 'application_id',
             'environmentId' => 'environment_id',
             'componentId' => 'component_id',
-            'accessConfigTypeSource' => 'access_config_type_source'
+            'accessConfigTypeSource' => 'access_config_type_source',
+            'recursiveDepth' => 'recursive_depth'
     ];
 
     /**
@@ -198,6 +204,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * environmentId  ServiceStage环境ID
     * componentId  ServiceStage组件ID
     * accessConfigTypeSource  日志接入自建软件来源
+    * recursiveDepth  **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -220,7 +227,8 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
             'applicationId' => 'setApplicationId',
             'environmentId' => 'setEnvironmentId',
             'componentId' => 'setComponentId',
-            'accessConfigTypeSource' => 'setAccessConfigTypeSource'
+            'accessConfigTypeSource' => 'setAccessConfigTypeSource',
+            'recursiveDepth' => 'setRecursiveDepth'
     ];
 
     /**
@@ -244,6 +252,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * environmentId  ServiceStage环境ID
     * componentId  ServiceStage组件ID
     * accessConfigTypeSource  日志接入自建软件来源
+    * recursiveDepth  **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -266,7 +275,8 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
             'applicationId' => 'getApplicationId',
             'environmentId' => 'getEnvironmentId',
             'componentId' => 'getComponentId',
-            'accessConfigTypeSource' => 'getAccessConfigTypeSource'
+            'accessConfigTypeSource' => 'getAccessConfigTypeSource',
+            'recursiveDepth' => 'getRecursiveDepth'
     ];
 
     /**
@@ -361,6 +371,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
         $this->container['environmentId'] = isset($data['environmentId']) ? $data['environmentId'] : null;
         $this->container['componentId'] = isset($data['componentId']) ? $data['componentId'] : null;
         $this->container['accessConfigTypeSource'] = isset($data['accessConfigTypeSource']) ? $data['accessConfigTypeSource'] : null;
+        $this->container['recursiveDepth'] = isset($data['recursiveDepth']) ? $data['recursiveDepth'] : null;
     }
 
     /**
@@ -867,6 +878,30 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     public function setAccessConfigTypeSource($accessConfigTypeSource)
     {
         $this->container['accessConfigTypeSource'] = $accessConfigTypeSource;
+        return $this;
+    }
+
+    /**
+    * Gets recursiveDepth
+    *  **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getRecursiveDepth()
+    {
+        return $this->container['recursiveDepth'];
+    }
+
+    /**
+    * Sets recursiveDepth
+    *
+    * @param int|null $recursiveDepth **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setRecursiveDepth($recursiveDepth)
+    {
+        $this->container['recursiveDepth'] = $recursiveDepth;
         return $this;
     }
 

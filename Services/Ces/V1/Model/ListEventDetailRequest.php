@@ -20,17 +20,17 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * eventName  事件名称。
-    * eventType  事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
-    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
-    * eventSource  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
-    * eventLevel  事件的级别，值为Critical，Major，Minor，Info；Critical为紧急，Major为重要，Minor为次要，Info为提示。
-    * eventUser  上报事件监控数据时用户的名称，也可为projectID。
-    * eventState  事件的状态，值为normal，warning，incident；normal为正常，warning为警告，incident为故障。
-    * from  查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
-    * to  查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100，用于限制结果数据条数。
+    * eventName  **参数解释**： 事件名称，值为系统产生的事件名称或用户自定义上报的事件名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * eventType  **参数解释**： 事件类型。 **约束限制**： 不涉及。 **取值范围**： 值为EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS：系统事件。 - EVENT.CUSTOM：自定义事件。 **默认取值**： 不涉及。
+    * subEventType  **参数解释**： 事件子类。 **约束限制**： 不涉及。 **取值范围**： 枚举类型 - SUB_EVENT.OPS: 运维事件 - SUB_EVENT.PLAN: 计划事件 - SUB_EVENT.CUSTOM: 自定义事件 **默认取值**： 不涉及。
+    * eventSource  **参数解释**： 事件来源，取值为各云服务的命名空间。云服务的命名空间请参考“[支持监控的服务列表](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,32]个字符。 正则匹配：以字母开头，中间有一个点，包含字母、数字、下划线的字符串。 **默认取值**： 不涉及。
+    * eventLevel  **参数解释**： 事件的级别。 **约束限制**： 不涉及。 **取值范围**： 值为Critical、Major、Minor、Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示 **默认取值**： 不涉及。
+    * eventUser  **参数解释**： 上报事件监控数据时用户的名称，也可为projectID。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,64]个字符。 正则匹配：由零个或多个字母、数字、下划线、横线、斜杠、空格、@ 符号或点号组成的字符串。 **默认取值**： 不涉及。
+    * eventState  **参数解释**： 事件的状态。 **约束限制**： 不涉及。 **取值范围**： 值为normal、warning、incident。 - normal: 正常 - warning: 警告 - incident: 故障 **默认取值**： 不涉及。
+    * from  **参数解释**： 查询数据起始时间，UNIX时间戳，单位毫秒。例如：1605952700911。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * to  **参数解释**： 查询数据截止时间，UNIX时间戳，单位毫秒。 **约束限制**： 其中from必须小于to。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * start  **参数解释**： 分页起始值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 单次查询的条数限制，用于限制结果数据条数。 **约束限制**： 不涉及。 **取值范围**： 大小为[1,100]的整数 **默认取值**： 100
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * eventName  事件名称。
-    * eventType  事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
-    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
-    * eventSource  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
-    * eventLevel  事件的级别，值为Critical，Major，Minor，Info；Critical为紧急，Major为重要，Minor为次要，Info为提示。
-    * eventUser  上报事件监控数据时用户的名称，也可为projectID。
-    * eventState  事件的状态，值为normal，warning，incident；normal为正常，warning为警告，incident为故障。
-    * from  查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
-    * to  查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100，用于限制结果数据条数。
+    * eventName  **参数解释**： 事件名称，值为系统产生的事件名称或用户自定义上报的事件名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * eventType  **参数解释**： 事件类型。 **约束限制**： 不涉及。 **取值范围**： 值为EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS：系统事件。 - EVENT.CUSTOM：自定义事件。 **默认取值**： 不涉及。
+    * subEventType  **参数解释**： 事件子类。 **约束限制**： 不涉及。 **取值范围**： 枚举类型 - SUB_EVENT.OPS: 运维事件 - SUB_EVENT.PLAN: 计划事件 - SUB_EVENT.CUSTOM: 自定义事件 **默认取值**： 不涉及。
+    * eventSource  **参数解释**： 事件来源，取值为各云服务的命名空间。云服务的命名空间请参考“[支持监控的服务列表](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,32]个字符。 正则匹配：以字母开头，中间有一个点，包含字母、数字、下划线的字符串。 **默认取值**： 不涉及。
+    * eventLevel  **参数解释**： 事件的级别。 **约束限制**： 不涉及。 **取值范围**： 值为Critical、Major、Minor、Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示 **默认取值**： 不涉及。
+    * eventUser  **参数解释**： 上报事件监控数据时用户的名称，也可为projectID。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,64]个字符。 正则匹配：由零个或多个字母、数字、下划线、横线、斜杠、空格、@ 符号或点号组成的字符串。 **默认取值**： 不涉及。
+    * eventState  **参数解释**： 事件的状态。 **约束限制**： 不涉及。 **取值范围**： 值为normal、warning、incident。 - normal: 正常 - warning: 警告 - incident: 故障 **默认取值**： 不涉及。
+    * from  **参数解释**： 查询数据起始时间，UNIX时间戳，单位毫秒。例如：1605952700911。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * to  **参数解释**： 查询数据截止时间，UNIX时间戳，单位毫秒。 **约束限制**： 其中from必须小于to。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * start  **参数解释**： 分页起始值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 单次查询的条数限制，用于限制结果数据条数。 **约束限制**： 不涉及。 **取值范围**： 大小为[1,100]的整数 **默认取值**： 100
     *
     * @var string[]
     */
@@ -74,7 +74,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
         'eventState' => null,
         'from' => 'int64',
         'to' => 'int64',
-        'start' => 'int32',
+        'start' => 'int64',
         'limit' => 'int32'
     ];
 
@@ -101,17 +101,17 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * eventName  事件名称。
-    * eventType  事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
-    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
-    * eventSource  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
-    * eventLevel  事件的级别，值为Critical，Major，Minor，Info；Critical为紧急，Major为重要，Minor为次要，Info为提示。
-    * eventUser  上报事件监控数据时用户的名称，也可为projectID。
-    * eventState  事件的状态，值为normal，warning，incident；normal为正常，warning为警告，incident为故障。
-    * from  查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
-    * to  查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100，用于限制结果数据条数。
+    * eventName  **参数解释**： 事件名称，值为系统产生的事件名称或用户自定义上报的事件名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * eventType  **参数解释**： 事件类型。 **约束限制**： 不涉及。 **取值范围**： 值为EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS：系统事件。 - EVENT.CUSTOM：自定义事件。 **默认取值**： 不涉及。
+    * subEventType  **参数解释**： 事件子类。 **约束限制**： 不涉及。 **取值范围**： 枚举类型 - SUB_EVENT.OPS: 运维事件 - SUB_EVENT.PLAN: 计划事件 - SUB_EVENT.CUSTOM: 自定义事件 **默认取值**： 不涉及。
+    * eventSource  **参数解释**： 事件来源，取值为各云服务的命名空间。云服务的命名空间请参考“[支持监控的服务列表](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,32]个字符。 正则匹配：以字母开头，中间有一个点，包含字母、数字、下划线的字符串。 **默认取值**： 不涉及。
+    * eventLevel  **参数解释**： 事件的级别。 **约束限制**： 不涉及。 **取值范围**： 值为Critical、Major、Minor、Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示 **默认取值**： 不涉及。
+    * eventUser  **参数解释**： 上报事件监控数据时用户的名称，也可为projectID。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,64]个字符。 正则匹配：由零个或多个字母、数字、下划线、横线、斜杠、空格、@ 符号或点号组成的字符串。 **默认取值**： 不涉及。
+    * eventState  **参数解释**： 事件的状态。 **约束限制**： 不涉及。 **取值范围**： 值为normal、warning、incident。 - normal: 正常 - warning: 警告 - incident: 故障 **默认取值**： 不涉及。
+    * from  **参数解释**： 查询数据起始时间，UNIX时间戳，单位毫秒。例如：1605952700911。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * to  **参数解释**： 查询数据截止时间，UNIX时间戳，单位毫秒。 **约束限制**： 其中from必须小于to。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * start  **参数解释**： 分页起始值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 单次查询的条数限制，用于限制结果数据条数。 **约束限制**： 不涉及。 **取值范围**： 大小为[1,100]的整数 **默认取值**： 100
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * eventName  事件名称。
-    * eventType  事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
-    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
-    * eventSource  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
-    * eventLevel  事件的级别，值为Critical，Major，Minor，Info；Critical为紧急，Major为重要，Minor为次要，Info为提示。
-    * eventUser  上报事件监控数据时用户的名称，也可为projectID。
-    * eventState  事件的状态，值为normal，warning，incident；normal为正常，warning为警告，incident为故障。
-    * from  查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
-    * to  查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100，用于限制结果数据条数。
+    * eventName  **参数解释**： 事件名称，值为系统产生的事件名称或用户自定义上报的事件名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * eventType  **参数解释**： 事件类型。 **约束限制**： 不涉及。 **取值范围**： 值为EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS：系统事件。 - EVENT.CUSTOM：自定义事件。 **默认取值**： 不涉及。
+    * subEventType  **参数解释**： 事件子类。 **约束限制**： 不涉及。 **取值范围**： 枚举类型 - SUB_EVENT.OPS: 运维事件 - SUB_EVENT.PLAN: 计划事件 - SUB_EVENT.CUSTOM: 自定义事件 **默认取值**： 不涉及。
+    * eventSource  **参数解释**： 事件来源，取值为各云服务的命名空间。云服务的命名空间请参考“[支持监控的服务列表](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,32]个字符。 正则匹配：以字母开头，中间有一个点，包含字母、数字、下划线的字符串。 **默认取值**： 不涉及。
+    * eventLevel  **参数解释**： 事件的级别。 **约束限制**： 不涉及。 **取值范围**： 值为Critical、Major、Minor、Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示 **默认取值**： 不涉及。
+    * eventUser  **参数解释**： 上报事件监控数据时用户的名称，也可为projectID。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,64]个字符。 正则匹配：由零个或多个字母、数字、下划线、横线、斜杠、空格、@ 符号或点号组成的字符串。 **默认取值**： 不涉及。
+    * eventState  **参数解释**： 事件的状态。 **约束限制**： 不涉及。 **取值范围**： 值为normal、warning、incident。 - normal: 正常 - warning: 警告 - incident: 故障 **默认取值**： 不涉及。
+    * from  **参数解释**： 查询数据起始时间，UNIX时间戳，单位毫秒。例如：1605952700911。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * to  **参数解释**： 查询数据截止时间，UNIX时间戳，单位毫秒。 **约束限制**： 其中from必须小于to。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * start  **参数解释**： 分页起始值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 单次查询的条数限制，用于限制结果数据条数。 **约束限制**： 不涉及。 **取值范围**： 大小为[1,100]的整数 **默认取值**： 100
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * eventName  事件名称。
-    * eventType  事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
-    * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
-    * eventSource  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
-    * eventLevel  事件的级别，值为Critical，Major，Minor，Info；Critical为紧急，Major为重要，Minor为次要，Info为提示。
-    * eventUser  上报事件监控数据时用户的名称，也可为projectID。
-    * eventState  事件的状态，值为normal，warning，incident；normal为正常，warning为警告，incident为故障。
-    * from  查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
-    * to  查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100，用于限制结果数据条数。
+    * eventName  **参数解释**： 事件名称，值为系统产生的事件名称或用户自定义上报的事件名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+    * eventType  **参数解释**： 事件类型。 **约束限制**： 不涉及。 **取值范围**： 值为EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS：系统事件。 - EVENT.CUSTOM：自定义事件。 **默认取值**： 不涉及。
+    * subEventType  **参数解释**： 事件子类。 **约束限制**： 不涉及。 **取值范围**： 枚举类型 - SUB_EVENT.OPS: 运维事件 - SUB_EVENT.PLAN: 计划事件 - SUB_EVENT.CUSTOM: 自定义事件 **默认取值**： 不涉及。
+    * eventSource  **参数解释**： 事件来源，取值为各云服务的命名空间。云服务的命名空间请参考“[支持监控的服务列表](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,32]个字符。 正则匹配：以字母开头，中间有一个点，包含字母、数字、下划线的字符串。 **默认取值**： 不涉及。
+    * eventLevel  **参数解释**： 事件的级别。 **约束限制**： 不涉及。 **取值范围**： 值为Critical、Major、Minor、Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示 **默认取值**： 不涉及。
+    * eventUser  **参数解释**： 上报事件监控数据时用户的名称，也可为projectID。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,64]个字符。 正则匹配：由零个或多个字母、数字、下划线、横线、斜杠、空格、@ 符号或点号组成的字符串。 **默认取值**： 不涉及。
+    * eventState  **参数解释**： 事件的状态。 **约束限制**： 不涉及。 **取值范围**： 值为normal、warning、incident。 - normal: 正常 - warning: 警告 - incident: 故障 **默认取值**： 不涉及。
+    * from  **参数解释**： 查询数据起始时间，UNIX时间戳，单位毫秒。例如：1605952700911。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * to  **参数解释**： 查询数据截止时间，UNIX时间戳，单位毫秒。 **约束限制**： 其中from必须小于to。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * start  **参数解释**： 分页起始值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 单次查询的条数限制，用于限制结果数据条数。 **约束限制**： 不涉及。 **取值范围**： 大小为[1,100]的整数 **默认取值**： 100
     *
     * @var string[]
     */
@@ -234,6 +234,13 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
     const SUB_EVENT_TYPE_SUB_EVENT_OPS = 'SUB_EVENT.OPS';
     const SUB_EVENT_TYPE_SUB_EVENT_PLAN = 'SUB_EVENT.PLAN';
     const SUB_EVENT_TYPE_SUB_EVENT_CUSTOM = 'SUB_EVENT.CUSTOM';
+    const EVENT_LEVEL_CRITICAL = 'Critical';
+    const EVENT_LEVEL_MAJOR = 'Major';
+    const EVENT_LEVEL_INFO = 'Info';
+    const EVENT_LEVEL_MINOR = 'Minor';
+    const EVENT_STATE_NORMAL = 'normal';
+    const EVENT_STATE_WARNING = 'warning';
+    const EVENT_STATE_INCIDENT = 'incident';
     
 
     /**
@@ -260,6 +267,35 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
             self::SUB_EVENT_TYPE_SUB_EVENT_OPS,
             self::SUB_EVENT_TYPE_SUB_EVENT_PLAN,
             self::SUB_EVENT_TYPE_SUB_EVENT_CUSTOM,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEventLevelAllowableValues()
+    {
+        return [
+            self::EVENT_LEVEL_CRITICAL,
+            self::EVENT_LEVEL_MAJOR,
+            self::EVENT_LEVEL_INFO,
+            self::EVENT_LEVEL_MINOR,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEventStateAllowableValues()
+    {
+        return [
+            self::EVENT_STATE_NORMAL,
+            self::EVENT_STATE_WARNING,
+            self::EVENT_STATE_INCIDENT,
         ];
     }
 
@@ -303,6 +339,12 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
         if ($this->container['eventName'] === null) {
             $invalidProperties[] = "'eventName' can't be null";
         }
+            if ((mb_strlen($this->container['eventName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'eventName', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['eventName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'eventName', the character length must be bigger than or equal to 1.";
+            }
         if ($this->container['eventType'] === null) {
             $invalidProperties[] = "'eventType' can't be null";
         }
@@ -322,6 +364,58 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['eventSource']) && (mb_strlen($this->container['eventSource']) > 32)) {
+                $invalidProperties[] = "invalid value for 'eventSource', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['eventSource']) && (mb_strlen($this->container['eventSource']) < 0)) {
+                $invalidProperties[] = "invalid value for 'eventSource', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getEventLevelAllowableValues();
+                if (!is_null($this->container['eventLevel']) && !in_array($this->container['eventLevel'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'eventLevel', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['eventUser']) && (mb_strlen($this->container['eventUser']) > 64)) {
+                $invalidProperties[] = "invalid value for 'eventUser', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['eventUser']) && (mb_strlen($this->container['eventUser']) < 0)) {
+                $invalidProperties[] = "invalid value for 'eventUser', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getEventStateAllowableValues();
+                if (!is_null($this->container['eventState']) && !in_array($this->container['eventState'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'eventState', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['from']) && ($this->container['from'] > 9999999999999)) {
+                $invalidProperties[] = "invalid value for 'from', must be smaller than or equal to 9999999999999.";
+            }
+            if (!is_null($this->container['from']) && ($this->container['from'] < 1111111111111)) {
+                $invalidProperties[] = "invalid value for 'from', must be bigger than or equal to 1111111111111.";
+            }
+            if (!is_null($this->container['to']) && ($this->container['to'] > 9999999999999)) {
+                $invalidProperties[] = "invalid value for 'to', must be smaller than or equal to 9999999999999.";
+            }
+            if (!is_null($this->container['to']) && ($this->container['to'] < 1111111111111)) {
+                $invalidProperties[] = "invalid value for 'to', must be bigger than or equal to 1111111111111.";
+            }
+            if (!is_null($this->container['start']) && ($this->container['start'] > 9999999999999)) {
+                $invalidProperties[] = "invalid value for 'start', must be smaller than or equal to 9999999999999.";
+            }
+            if (!is_null($this->container['start']) && ($this->container['start'] < 0)) {
+                $invalidProperties[] = "invalid value for 'start', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -338,7 +432,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventName
-    *  事件名称。
+    *  **参数解释**： 事件名称，值为系统产生的事件名称或用户自定义上报的事件名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -350,7 +444,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets eventName
     *
-    * @param string $eventName 事件名称。
+    * @param string $eventName **参数解释**： 事件名称，值为系统产生的事件名称或用户自定义上报的事件名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -362,7 +456,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventType
-    *  事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
+    *  **参数解释**： 事件类型。 **约束限制**： 不涉及。 **取值范围**： 值为EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS：系统事件。 - EVENT.CUSTOM：自定义事件。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -374,7 +468,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param string $eventType 事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
+    * @param string $eventType **参数解释**： 事件类型。 **约束限制**： 不涉及。 **取值范围**： 值为EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS：系统事件。 - EVENT.CUSTOM：自定义事件。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -386,7 +480,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets subEventType
-    *  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
+    *  **参数解释**： 事件子类。 **约束限制**： 不涉及。 **取值范围**： 枚举类型 - SUB_EVENT.OPS: 运维事件 - SUB_EVENT.PLAN: 计划事件 - SUB_EVENT.CUSTOM: 自定义事件 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -398,7 +492,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets subEventType
     *
-    * @param string|null $subEventType 事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
+    * @param string|null $subEventType **参数解释**： 事件子类。 **约束限制**： 不涉及。 **取值范围**： 枚举类型 - SUB_EVENT.OPS: 运维事件 - SUB_EVENT.PLAN: 计划事件 - SUB_EVENT.CUSTOM: 自定义事件 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -410,7 +504,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventSource
-    *  事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
+    *  **参数解释**： 事件来源，取值为各云服务的命名空间。云服务的命名空间请参考“[支持监控的服务列表](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,32]个字符。 正则匹配：以字母开头，中间有一个点，包含字母、数字、下划线的字符串。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -422,7 +516,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets eventSource
     *
-    * @param string|null $eventSource 事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
+    * @param string|null $eventSource **参数解释**： 事件来源，取值为各云服务的命名空间。云服务的命名空间请参考“[支持监控的服务列表](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,32]个字符。 正则匹配：以字母开头，中间有一个点，包含字母、数字、下划线的字符串。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -434,7 +528,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventLevel
-    *  事件的级别，值为Critical，Major，Minor，Info；Critical为紧急，Major为重要，Minor为次要，Info为提示。
+    *  **参数解释**： 事件的级别。 **约束限制**： 不涉及。 **取值范围**： 值为Critical、Major、Minor、Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -446,7 +540,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets eventLevel
     *
-    * @param string|null $eventLevel 事件的级别，值为Critical，Major，Minor，Info；Critical为紧急，Major为重要，Minor为次要，Info为提示。
+    * @param string|null $eventLevel **参数解释**： 事件的级别。 **约束限制**： 不涉及。 **取值范围**： 值为Critical、Major、Minor、Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -458,7 +552,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventUser
-    *  上报事件监控数据时用户的名称，也可为projectID。
+    *  **参数解释**： 上报事件监控数据时用户的名称，也可为projectID。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,64]个字符。 正则匹配：由零个或多个字母、数字、下划线、横线、斜杠、空格、@ 符号或点号组成的字符串。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -470,7 +564,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets eventUser
     *
-    * @param string|null $eventUser 上报事件监控数据时用户的名称，也可为projectID。
+    * @param string|null $eventUser **参数解释**： 上报事件监控数据时用户的名称，也可为projectID。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,64]个字符。 正则匹配：由零个或多个字母、数字、下划线、横线、斜杠、空格、@ 符号或点号组成的字符串。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -482,7 +576,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventState
-    *  事件的状态，值为normal，warning，incident；normal为正常，warning为警告，incident为故障。
+    *  **参数解释**： 事件的状态。 **约束限制**： 不涉及。 **取值范围**： 值为normal、warning、incident。 - normal: 正常 - warning: 警告 - incident: 故障 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -494,7 +588,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets eventState
     *
-    * @param string|null $eventState 事件的状态，值为normal，warning，incident；normal为正常，warning为警告，incident为故障。
+    * @param string|null $eventState **参数解释**： 事件的状态。 **约束限制**： 不涉及。 **取值范围**： 值为normal、warning、incident。 - normal: 正常 - warning: 警告 - incident: 故障 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -506,7 +600,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets from
-    *  查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
+    *  **参数解释**： 查询数据起始时间，UNIX时间戳，单位毫秒。例如：1605952700911。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -518,7 +612,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets from
     *
-    * @param int|null $from 查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
+    * @param int|null $from **参数解释**： 查询数据起始时间，UNIX时间戳，单位毫秒。例如：1605952700911。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -530,7 +624,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets to
-    *  查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
+    *  **参数解释**： 查询数据截止时间，UNIX时间戳，单位毫秒。 **约束限制**： 其中from必须小于to。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -542,7 +636,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets to
     *
-    * @param int|null $to 查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
+    * @param int|null $to **参数解释**： 查询数据截止时间，UNIX时间戳，单位毫秒。 **约束限制**： 其中from必须小于to。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -554,7 +648,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets start
-    *  分页起始值，类型为integer，默认值为0。
+    *  **参数解释**： 分页起始值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return int|null
     */
@@ -566,7 +660,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets start
     *
-    * @param int|null $start 分页起始值，类型为integer，默认值为0。
+    * @param int|null $start **参数解释**： 分页起始值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return $this
     */
@@ -578,7 +672,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  单次查询的条数限制，取值范围(0,100]，默认值为100，用于限制结果数据条数。
+    *  **参数解释**： 单次查询的条数限制，用于限制结果数据条数。 **约束限制**： 不涉及。 **取值范围**： 大小为[1,100]的整数 **默认取值**： 100
     *
     * @return int|null
     */
@@ -590,7 +684,7 @@ class ListEventDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 单次查询的条数限制，取值范围(0,100]，默认值为100，用于限制结果数据条数。
+    * @param int|null $limit **参数解释**： 单次查询的条数限制，用于限制结果数据条数。 **约束限制**： 不涉及。 **取值范围**： 大小为[1,100]的整数 **默认取值**： 100
     *
     * @return $this
     */

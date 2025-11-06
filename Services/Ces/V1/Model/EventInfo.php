@@ -21,11 +21,11 @@ class EventInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * eventName  事件名称。
-    * eventType  事件类型。
+    * eventType  枚举类型 EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，EVENT.CUSTOM为自定义事件
     * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
     * eventCount  选择查询的时间范围内，此事件发生的数量。
     * latestOccurTime  此事件最近一次发生的时间。
-    * latestEventSource  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
+    * latestEventSource  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”；如果是自定义事件，则为用户自定义上报定义。
     *
     * @var string[]
     */
@@ -41,11 +41,11 @@ class EventInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * eventName  事件名称。
-    * eventType  事件类型。
+    * eventType  枚举类型 EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，EVENT.CUSTOM为自定义事件
     * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
     * eventCount  选择查询的时间范围内，此事件发生的数量。
     * latestOccurTime  此事件最近一次发生的时间。
-    * latestEventSource  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
+    * latestEventSource  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”；如果是自定义事件，则为用户自定义上报定义。
     *
     * @var string[]
     */
@@ -82,11 +82,11 @@ class EventInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * eventName  事件名称。
-    * eventType  事件类型。
+    * eventType  枚举类型 EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，EVENT.CUSTOM为自定义事件
     * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
     * eventCount  选择查询的时间范围内，此事件发生的数量。
     * latestOccurTime  此事件最近一次发生的时间。
-    * latestEventSource  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
+    * latestEventSource  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”；如果是自定义事件，则为用户自定义上报定义。
     *
     * @var string[]
     */
@@ -102,11 +102,11 @@ class EventInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * eventName  事件名称。
-    * eventType  事件类型。
+    * eventType  枚举类型 EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，EVENT.CUSTOM为自定义事件
     * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
     * eventCount  选择查询的时间范围内，此事件发生的数量。
     * latestOccurTime  此事件最近一次发生的时间。
-    * latestEventSource  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
+    * latestEventSource  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”；如果是自定义事件，则为用户自定义上报定义。
     *
     * @var string[]
     */
@@ -122,11 +122,11 @@ class EventInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * eventName  事件名称。
-    * eventType  事件类型。
+    * eventType  枚举类型 EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，EVENT.CUSTOM为自定义事件
     * subEventType  事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
     * eventCount  选择查询的时间范围内，此事件发生的数量。
     * latestOccurTime  此事件最近一次发生的时间。
-    * latestEventSource  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
+    * latestEventSource  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”；如果是自定义事件，则为用户自定义上报定义。
     *
     * @var string[]
     */
@@ -179,10 +179,25 @@ class EventInfo implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const EVENT_TYPE_EVENT_SYS = 'EVENT.SYS';
+    const EVENT_TYPE_EVENT_CUSTOM = 'EVENT.CUSTOM';
     const SUB_EVENT_TYPE_SUB_EVENT_OPS = 'SUB_EVENT.OPS';
     const SUB_EVENT_TYPE_SUB_EVENT_PLAN = 'SUB_EVENT.PLAN';
     const SUB_EVENT_TYPE_SUB_EVENT_CUSTOM = 'SUB_EVENT.CUSTOM';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEventTypeAllowableValues()
+    {
+        return [
+            self::EVENT_TYPE_EVENT_SYS,
+            self::EVENT_TYPE_EVENT_CUSTOM,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -230,6 +245,20 @@ class EventInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['eventName']) && (mb_strlen($this->container['eventName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'eventName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['eventName']) && (mb_strlen($this->container['eventName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'eventName', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getEventTypeAllowableValues();
+                if (!is_null($this->container['eventType']) && !in_array($this->container['eventType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'eventType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             $allowedValues = $this->getSubEventTypeAllowableValues();
                 if (!is_null($this->container['subEventType']) && !in_array($this->container['subEventType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -238,6 +267,24 @@ class EventInfo implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['eventCount']) && ($this->container['eventCount'] > 999999)) {
+                $invalidProperties[] = "invalid value for 'eventCount', must be smaller than or equal to 999999.";
+            }
+            if (!is_null($this->container['eventCount']) && ($this->container['eventCount'] < 0)) {
+                $invalidProperties[] = "invalid value for 'eventCount', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['latestOccurTime']) && ($this->container['latestOccurTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'latestOccurTime', must be smaller than or equal to 9223372036854775807.";
+            }
+            if (!is_null($this->container['latestOccurTime']) && ($this->container['latestOccurTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'latestOccurTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['latestEventSource']) && (mb_strlen($this->container['latestEventSource']) > 9999)) {
+                $invalidProperties[] = "invalid value for 'latestEventSource', the character length must be smaller than or equal to 9999.";
+            }
+            if (!is_null($this->container['latestEventSource']) && (mb_strlen($this->container['latestEventSource']) < 1)) {
+                $invalidProperties[] = "invalid value for 'latestEventSource', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -278,7 +325,7 @@ class EventInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventType
-    *  事件类型。
+    *  枚举类型 EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，EVENT.CUSTOM为自定义事件
     *
     * @return string|null
     */
@@ -290,7 +337,7 @@ class EventInfo implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param string|null $eventType 事件类型。
+    * @param string|null $eventType 枚举类型 EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，EVENT.CUSTOM为自定义事件
     *
     * @return $this
     */
@@ -374,7 +421,7 @@ class EventInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestEventSource
-    *  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
+    *  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”；如果是自定义事件，则为用户自定义上报定义。
     *
     * @return string|null
     */
@@ -386,7 +433,7 @@ class EventInfo implements ModelInterface, ArrayAccess
     /**
     * Sets latestEventSource
     *
-    * @param string|null $latestEventSource 事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
+    * @param string|null $latestEventSource 事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”；如果是自定义事件，则为用户自定义上报定义。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class CreateEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  响应参数。
+    * body  事件响应体
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  响应参数。
+    * body  事件响应体
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateEventsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  响应参数。
+    * body  事件响应体
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  响应参数。
+    * body  事件响应体
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  响应参数。
+    * body  事件响应体
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class CreateEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
-    *  响应参数。
+    *  事件响应体
     *
     * @return \HuaweiCloud\SDK\Ces\V1\Model\CreateEventsResponseBody[]|null
     */
@@ -187,7 +187,7 @@ class CreateEventsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\CreateEventsResponseBody[]|null $body 响应参数。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\CreateEventsResponseBody[]|null $body 事件响应体
     *
     * @return $this
     */

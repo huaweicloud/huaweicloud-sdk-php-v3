@@ -213,9 +213,6 @@ class OperateUsedJobSchedule implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['jobScheduleType'] === null) {
-            $invalidProperties[] = "'jobScheduleType' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -258,7 +255,7 @@ class OperateUsedJobSchedule implements ModelInterface, ArrayAccess
     * Gets jobScheduleType
     *  计划类型。默认值recurring。  automatically：SQL Server代理启动时自动启动。 cpu_idle：CPU空闲时启动。 recurring：重复执行。 one_time：执行一次。
     *
-    * @return string
+    * @return string|null
     */
     public function getJobScheduleType()
     {
@@ -268,7 +265,7 @@ class OperateUsedJobSchedule implements ModelInterface, ArrayAccess
     /**
     * Sets jobScheduleType
     *
-    * @param string $jobScheduleType 计划类型。默认值recurring。  automatically：SQL Server代理启动时自动启动。 cpu_idle：CPU空闲时启动。 recurring：重复执行。 one_time：执行一次。
+    * @param string|null $jobScheduleType 计划类型。默认值recurring。  automatically：SQL Server代理启动时自动启动。 cpu_idle：CPU空闲时启动。 recurring：重复执行。 one_time：执行一次。
     *
     * @return $this
     */

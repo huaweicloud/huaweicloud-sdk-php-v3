@@ -25,7 +25,7 @@ class CreateMetricDataRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Ces\V1\Model\MetricDataItem[]'
+            'body' => '\HuaweiCloud\SDK\Ces\V1\Model\CreateMetricDataRequestBody[]'
     ];
 
     /**
@@ -176,7 +176,7 @@ class CreateMetricDataRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  添加一条或多条自定义指标监控数据，请求参数。
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\MetricDataItem[]|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\CreateMetricDataRequestBody[]|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class CreateMetricDataRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\MetricDataItem[]|null $body 添加一条或多条自定义指标监控数据，请求参数。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\CreateMetricDataRequestBody[]|null $body 添加一条或多条自定义指标监控数据，请求参数。
     *
     * @return $this
     */

@@ -20,10 +20,10 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmTemplateId  自定义告警模的ID，如：at1603330892378wkDm77y6B。
-    * namespace  自定义告警模板选择的资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dname  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * start  分页起始值，类型为integer，默认值为0。
+    * alarmTemplateId  自定义告警模版的ID，如：at1603330892378wkDm77y6B。
+    * namespace  自定义告警模板选择的资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
+    * dname  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
+    * start  分页起始位置，值为告警模版的ID，如：at1603330892378wkDm77y6B。
     * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
     *
     * @var string[]
@@ -38,10 +38,10 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmTemplateId  自定义告警模的ID，如：at1603330892378wkDm77y6B。
-    * namespace  自定义告警模板选择的资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dname  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * start  分页起始值，类型为integer，默认值为0。
+    * alarmTemplateId  自定义告警模版的ID，如：at1603330892378wkDm77y6B。
+    * namespace  自定义告警模板选择的资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
+    * dname  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
+    * start  分页起始位置，值为告警模版的ID，如：at1603330892378wkDm77y6B。
     * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
     *
     * @var string[]
@@ -77,10 +77,10 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmTemplateId  自定义告警模的ID，如：at1603330892378wkDm77y6B。
-    * namespace  自定义告警模板选择的资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dname  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * start  分页起始值，类型为integer，默认值为0。
+    * alarmTemplateId  自定义告警模版的ID，如：at1603330892378wkDm77y6B。
+    * namespace  自定义告警模板选择的资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
+    * dname  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
+    * start  分页起始位置，值为告警模版的ID，如：at1603330892378wkDm77y6B。
     * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
     *
     * @var string[]
@@ -95,10 +95,10 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmTemplateId  自定义告警模的ID，如：at1603330892378wkDm77y6B。
-    * namespace  自定义告警模板选择的资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dname  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * start  分页起始值，类型为integer，默认值为0。
+    * alarmTemplateId  自定义告警模版的ID，如：at1603330892378wkDm77y6B。
+    * namespace  自定义告警模板选择的资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
+    * dname  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
+    * start  分页起始位置，值为告警模版的ID，如：at1603330892378wkDm77y6B。
     * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
     *
     * @var string[]
@@ -113,10 +113,10 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmTemplateId  自定义告警模的ID，如：at1603330892378wkDm77y6B。
-    * namespace  自定义告警模板选择的资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * dname  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * start  分页起始值，类型为integer，默认值为0。
+    * alarmTemplateId  自定义告警模版的ID，如：at1603330892378wkDm77y6B。
+    * namespace  自定义告警模板选择的资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
+    * dname  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
+    * start  分页起始位置，值为告警模版的ID，如：at1603330892378wkDm77y6B。
     * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
     *
     * @var string[]
@@ -202,6 +202,45 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['alarmTemplateId']) && !preg_match("/^at([0-9A-Za-z]){0,62}$/", $this->container['alarmTemplateId'])) {
+                $invalidProperties[] = "invalid value for 'alarmTemplateId', must be conform to the pattern /^at([0-9A-Za-z]){0,62}$/.";
+            }
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 32)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 3)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['namespace']) && !preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/", $this->container['namespace'])) {
+                $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/.";
+            }
+            if (!is_null($this->container['dname']) && (mb_strlen($this->container['dname']) > 131)) {
+                $invalidProperties[] = "invalid value for 'dname', the character length must be smaller than or equal to 131.";
+            }
+            if (!is_null($this->container['dname']) && (mb_strlen($this->container['dname']) < 1)) {
+                $invalidProperties[] = "invalid value for 'dname', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['dname']) && !preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}$/", $this->container['dname'])) {
+                $invalidProperties[] = "invalid value for 'dname', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}$/.";
+            }
+            if (!is_null($this->container['start']) && (mb_strlen($this->container['start']) > 64)) {
+                $invalidProperties[] = "invalid value for 'start', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['start']) && (mb_strlen($this->container['start']) < 0)) {
+                $invalidProperties[] = "invalid value for 'start', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['start']) && !preg_match("/^at([0-9A-Za-z]){0,62}$/", $this->container['start'])) {
+                $invalidProperties[] = "invalid value for 'start', must be conform to the pattern /^at([0-9A-Za-z]){0,62}$/.";
+            }
+            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) > 3)) {
+                $invalidProperties[] = "invalid value for 'limit', the character length must be smaller than or equal to 3.";
+            }
+            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['limit']) && !preg_match("/^([1-9]|[1-9][0-9]|100)$/", $this->container['limit'])) {
+                $invalidProperties[] = "invalid value for 'limit', must be conform to the pattern /^([1-9]|[1-9][0-9]|100)$/.";
+            }
         return $invalidProperties;
     }
 
@@ -218,7 +257,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmTemplateId
-    *  自定义告警模的ID，如：at1603330892378wkDm77y6B。
+    *  自定义告警模版的ID，如：at1603330892378wkDm77y6B。
     *
     * @return string|null
     */
@@ -230,7 +269,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmTemplateId
     *
-    * @param string|null $alarmTemplateId 自定义告警模的ID，如：at1603330892378wkDm77y6B。
+    * @param string|null $alarmTemplateId 自定义告警模版的ID，如：at1603330892378wkDm77y6B。
     *
     * @return $this
     */
@@ -242,7 +281,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  自定义告警模板选择的资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    *  自定义告警模板选择的资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
     *
     * @return string|null
     */
@@ -254,7 +293,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 自定义告警模板选择的资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * @param string|null $namespace 自定义告警模板选择的资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
     *
     * @return $this
     */
@@ -266,7 +305,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dname
-    *  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    *  自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
     *
     * @return string|null
     */
@@ -278,7 +317,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dname
     *
-    * @param string|null $dname 自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * @param string|null $dname 自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
     *
     * @return $this
     */
@@ -290,7 +329,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets start
-    *  分页起始值，类型为integer，默认值为0。
+    *  分页起始位置，值为告警模版的ID，如：at1603330892378wkDm77y6B。
     *
     * @return string|null
     */
@@ -302,7 +341,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets start
     *
-    * @param string|null $start 分页起始值，类型为integer，默认值为0。
+    * @param string|null $start 分页起始位置，值为告警模版的ID，如：at1603330892378wkDm77y6B。
     *
     * @return $this
     */

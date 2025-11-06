@@ -22,7 +22,7 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * groupName  资源分组的名称；长度为1-128，只能包含0-9/a-z/A-Z/_/-或汉字；如：ResourceGroup-Test01。
     * groupId  资源分组的ID，长度为1-128，只能包含0-9/a-z/A-Z；如：rg16063743652226ew93e64p。
-    * status  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，
+    * status  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未配置告警规则
     * start  分页起始值，类型为integer，默认值为0。
     * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
     *
@@ -40,7 +40,7 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * groupName  资源分组的名称；长度为1-128，只能包含0-9/a-z/A-Z/_/-或汉字；如：ResourceGroup-Test01。
     * groupId  资源分组的ID，长度为1-128，只能包含0-9/a-z/A-Z；如：rg16063743652226ew93e64p。
-    * status  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，
+    * status  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未配置告警规则
     * start  分页起始值，类型为integer，默认值为0。
     * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
     *
@@ -79,7 +79,7 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * groupName  资源分组的名称；长度为1-128，只能包含0-9/a-z/A-Z/_/-或汉字；如：ResourceGroup-Test01。
     * groupId  资源分组的ID，长度为1-128，只能包含0-9/a-z/A-Z；如：rg16063743652226ew93e64p。
-    * status  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，
+    * status  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未配置告警规则
     * start  分页起始值，类型为integer，默认值为0。
     * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
     *
@@ -97,7 +97,7 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * groupName  资源分组的名称；长度为1-128，只能包含0-9/a-z/A-Z/_/-或汉字；如：ResourceGroup-Test01。
     * groupId  资源分组的ID，长度为1-128，只能包含0-9/a-z/A-Z；如：rg16063743652226ew93e64p。
-    * status  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，
+    * status  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未配置告警规则
     * start  分页起始值，类型为integer，默认值为0。
     * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
     *
@@ -115,7 +115,7 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * groupName  资源分组的名称；长度为1-128，只能包含0-9/a-z/A-Z/_/-或汉字；如：ResourceGroup-Test01。
     * groupId  资源分组的ID，长度为1-128，只能包含0-9/a-z/A-Z；如：rg16063743652226ew93e64p。
-    * status  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，
+    * status  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未配置告警规则
     * start  分页起始值，类型为integer，默认值为0。
     * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
     *
@@ -169,7 +169,24 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_HEALTH = 'health';
+    const STATUS_UNHEALTH = 'unhealth';
+    const STATUS_NO_ALARM_RULE = 'no_alarm_rule';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_HEALTH,
+            self::STATUS_UNHEALTH,
+            self::STATUS_NO_ALARM_RULE,
+        ];
+    }
 
 
     /**
@@ -202,6 +219,44 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['groupName']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['groupName'])) {
+                $invalidProperties[] = "invalid value for 'groupName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['groupId']) && !preg_match("/^rg([a-z]|[A-Z]|[0-9]){22}$/", $this->container['groupId'])) {
+                $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /^rg([a-z]|[A-Z]|[0-9]){22}$/.";
+            }
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['start']) && ($this->container['start'] > 9999999)) {
+                $invalidProperties[] = "invalid value for 'start', must be smaller than or equal to 9999999.";
+            }
+            if (!is_null($this->container['start']) && ($this->container['start'] < 0)) {
+                $invalidProperties[] = "invalid value for 'start', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -266,7 +321,7 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，
+    *  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未配置告警规则
     *
     * @return string|null
     */
@@ -278,7 +333,7 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，
+    * @param string|null $status 资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未配置告警规则
     *
     * @return $this
     */

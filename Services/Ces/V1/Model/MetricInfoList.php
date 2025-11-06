@@ -21,8 +21,8 @@ class MetricInfoList implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * dimensions  指标维度
-    * metricName  指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为64；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * namespace  指标命名空间，例如弹性云服务器命名空间SYS.ECS；格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32。说明： 当alarm_type为（EVENT.SYS| EVENT.CUSTOM）时允许为空；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * metricName  指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为96；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * namespace  指标命名空间，例如弹性云服务器命名空间SYS.ECS；格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32。说明： 当alarm_type为（EVENT.SYS| EVENT.CUSTOM）时允许为空；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
     * unit  指标单位。
     *
     * @var string[]
@@ -37,8 +37,8 @@ class MetricInfoList implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * dimensions  指标维度
-    * metricName  指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为64；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * namespace  指标命名空间，例如弹性云服务器命名空间SYS.ECS；格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32。说明： 当alarm_type为（EVENT.SYS| EVENT.CUSTOM）时允许为空；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * metricName  指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为96；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * namespace  指标命名空间，例如弹性云服务器命名空间SYS.ECS；格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32。说明： 当alarm_type为（EVENT.SYS| EVENT.CUSTOM）时允许为空；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
     * unit  指标单位。
     *
     * @var string[]
@@ -74,8 +74,8 @@ class MetricInfoList implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * dimensions  指标维度
-    * metricName  指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为64；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * namespace  指标命名空间，例如弹性云服务器命名空间SYS.ECS；格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32。说明： 当alarm_type为（EVENT.SYS| EVENT.CUSTOM）时允许为空；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * metricName  指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为96；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * namespace  指标命名空间，例如弹性云服务器命名空间SYS.ECS；格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32。说明： 当alarm_type为（EVENT.SYS| EVENT.CUSTOM）时允许为空；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
     * unit  指标单位。
     *
     * @var string[]
@@ -90,8 +90,8 @@ class MetricInfoList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * dimensions  指标维度
-    * metricName  指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为64；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * namespace  指标命名空间，例如弹性云服务器命名空间SYS.ECS；格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32。说明： 当alarm_type为（EVENT.SYS| EVENT.CUSTOM）时允许为空；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * metricName  指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为96；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * namespace  指标命名空间，例如弹性云服务器命名空间SYS.ECS；格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32。说明： 当alarm_type为（EVENT.SYS| EVENT.CUSTOM）时允许为空；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
     * unit  指标单位。
     *
     * @var string[]
@@ -106,8 +106,8 @@ class MetricInfoList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * dimensions  指标维度
-    * metricName  指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为64；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
-    * namespace  指标命名空间，例如弹性云服务器命名空间SYS.ECS；格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32。说明： 当alarm_type为（EVENT.SYS| EVENT.CUSTOM）时允许为空；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * metricName  指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为96；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * namespace  指标命名空间，例如弹性云服务器命名空间SYS.ECS；格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32。说明： 当alarm_type为（EVENT.SYS| EVENT.CUSTOM）时允许为空；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
     * unit  指标单位。
     *
     * @var string[]
@@ -197,8 +197,8 @@ class MetricInfoList implements ModelInterface, ArrayAccess
         if ($this->container['metricName'] === null) {
             $invalidProperties[] = "'metricName' can't be null";
         }
-            if ((mb_strlen($this->container['metricName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'metricName', the character length must be smaller than or equal to 64.";
+            if ((mb_strlen($this->container['metricName']) > 96)) {
+                $invalidProperties[] = "invalid value for 'metricName', the character length must be smaller than or equal to 96.";
             }
             if ((mb_strlen($this->container['metricName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'metricName', the character length must be bigger than or equal to 1.";
@@ -255,7 +255,7 @@ class MetricInfoList implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricName
-    *  指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为64；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    *  指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为96；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     *
     * @return string
     */
@@ -267,7 +267,7 @@ class MetricInfoList implements ModelInterface, ArrayAccess
     /**
     * Sets metricName
     *
-    * @param string $metricName 指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为64；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * @param string $metricName 指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为96；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class MetricInfoList implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  指标命名空间，例如弹性云服务器命名空间SYS.ECS；格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32。说明： 当alarm_type为（EVENT.SYS| EVENT.CUSTOM）时允许为空；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    *  指标命名空间，例如弹性云服务器命名空间SYS.ECS；格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32。说明： 当alarm_type为（EVENT.SYS| EVENT.CUSTOM）时允许为空；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
     *
     * @return string
     */
@@ -291,7 +291,7 @@ class MetricInfoList implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string $namespace 指标命名空间，例如弹性云服务器命名空间SYS.ECS；格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32。说明： 当alarm_type为（EVENT.SYS| EVENT.CUSTOM）时允许为空；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * @param string $namespace 指标命名空间，例如弹性云服务器命名空间SYS.ECS；格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32。说明： 当alarm_type为（EVENT.SYS| EVENT.CUSTOM）时允许为空；各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。
     *
     * @return $this
     */

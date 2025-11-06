@@ -26,7 +26,7 @@ class ShowQuotasResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'quotas' => '\HuaweiCloud\SDK\Ces\V1\Model\Quotas'
+            'quotas' => '\HuaweiCloud\SDK\Ces\V1\Model\QuotasResp'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ShowQuotasResponse implements ModelInterface, ArrayAccess
     * Gets quotas
     *  quotas
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\Quotas|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\QuotasResp|null
     */
     public function getQuotas()
     {
@@ -187,7 +187,7 @@ class ShowQuotasResponse implements ModelInterface, ArrayAccess
     /**
     * Sets quotas
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\Quotas|null $quotas quotas
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\QuotasResp|null $quotas quotas
     *
     * @return $this
     */

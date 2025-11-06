@@ -20,7 +20,7 @@ class EventQueryParam2Sort implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * orderBy  排序字段列表。会根据列表中定义顺序对返回列表最排序。
+    * orderBy  排序字段列表。会根据列表中定义顺序对返回列表最排序。当sort参数不为空时，order_by参数必填。
     * order  排序方式枚举值。asc代表正序，desc代表倒序。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class EventQueryParam2Sort implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * orderBy  排序字段列表。会根据列表中定义顺序对返回列表最排序。
+    * orderBy  排序字段列表。会根据列表中定义顺序对返回列表最排序。当sort参数不为空时，order_by参数必填。
     * order  排序方式枚举值。asc代表正序，desc代表倒序。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class EventQueryParam2Sort implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * orderBy  排序字段列表。会根据列表中定义顺序对返回列表最排序。
+    * orderBy  排序字段列表。会根据列表中定义顺序对返回列表最排序。当sort参数不为空时，order_by参数必填。
     * order  排序方式枚举值。asc代表正序，desc代表倒序。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class EventQueryParam2Sort implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * orderBy  排序字段列表。会根据列表中定义顺序对返回列表最排序。
+    * orderBy  排序字段列表。会根据列表中定义顺序对返回列表最排序。当sort参数不为空时，order_by参数必填。
     * order  排序方式枚举值。asc代表正序，desc代表倒序。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class EventQueryParam2Sort implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * orderBy  排序字段列表。会根据列表中定义顺序对返回列表最排序。
+    * orderBy  排序字段列表。会根据列表中定义顺序对返回列表最排序。当sort参数不为空时，order_by参数必填。
     * order  排序方式枚举值。asc代表正序，desc代表倒序。
     *
     * @var string[]
@@ -184,6 +184,9 @@ class EventQueryParam2Sort implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['orderBy'] === null) {
+            $invalidProperties[] = "'orderBy' can't be null";
+        }
             $allowedValues = $this->getOrderAllowableValues();
                 if (!is_null($this->container['order']) && !in_array($this->container['order'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -208,9 +211,9 @@ class EventQueryParam2Sort implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderBy
-    *  排序字段列表。会根据列表中定义顺序对返回列表最排序。
+    *  排序字段列表。会根据列表中定义顺序对返回列表最排序。当sort参数不为空时，order_by参数必填。
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getOrderBy()
     {
@@ -220,7 +223,7 @@ class EventQueryParam2Sort implements ModelInterface, ArrayAccess
     /**
     * Sets orderBy
     *
-    * @param string[]|null $orderBy 排序字段列表。会根据列表中定义顺序对返回列表最排序。
+    * @param string[] $orderBy 排序字段列表。会根据列表中定义顺序对返回列表最排序。当sort参数不为空时，order_by参数必填。
     *
     * @return $this
     */

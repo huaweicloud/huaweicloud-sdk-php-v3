@@ -25,9 +25,6 @@ class StructConfig implements ModelInterface, ArrayAccess
     * templateId  所用模板id。当使用系统模板时，当前属性可以为空
     * templateName  所用模板名称，会对模板名称及id进行校验
     * templateType  所用模板类型，分为built_in及custom两种类型，对应系统模板和自定义模板，系统模板分为CTS，VPC和ELB三种。
-    * demoFields  示例字段数组，只需要填写与模板中is_analysis状态不同的字段
-    * tagFields  Tag字段数组，只需要填写与模板中is_analysis状态不同的字段
-    * quickAnalysis  是否开启demo_fields和tag_fields快速分析,为true时，所有的demo_fields和tag_fields全部字段均打开快速分析;不填或者为false，以模板中的demo_fields和tag_fields中的is_analysis决定是否开启快速分析。
     *
     * @var string[]
     */
@@ -36,10 +33,7 @@ class StructConfig implements ModelInterface, ArrayAccess
             'logStreamId' => 'string',
             'templateId' => 'string',
             'templateName' => 'string',
-            'templateType' => 'string',
-            'demoFields' => '\HuaweiCloud\SDK\Lts\V2\Model\FieldModel[]',
-            'tagFields' => '\HuaweiCloud\SDK\Lts\V2\Model\FieldModel[]',
-            'quickAnalysis' => 'bool'
+            'templateType' => 'string'
     ];
 
     /**
@@ -49,9 +43,6 @@ class StructConfig implements ModelInterface, ArrayAccess
     * templateId  所用模板id。当使用系统模板时，当前属性可以为空
     * templateName  所用模板名称，会对模板名称及id进行校验
     * templateType  所用模板类型，分为built_in及custom两种类型，对应系统模板和自定义模板，系统模板分为CTS，VPC和ELB三种。
-    * demoFields  示例字段数组，只需要填写与模板中is_analysis状态不同的字段
-    * tagFields  Tag字段数组，只需要填写与模板中is_analysis状态不同的字段
-    * quickAnalysis  是否开启demo_fields和tag_fields快速分析,为true时，所有的demo_fields和tag_fields全部字段均打开快速分析;不填或者为false，以模板中的demo_fields和tag_fields中的is_analysis决定是否开启快速分析。
     *
     * @var string[]
     */
@@ -60,10 +51,7 @@ class StructConfig implements ModelInterface, ArrayAccess
         'logStreamId' => null,
         'templateId' => null,
         'templateName' => null,
-        'templateType' => null,
-        'demoFields' => null,
-        'tagFields' => null,
-        'quickAnalysis' => null
+        'templateType' => null
     ];
 
     /**
@@ -94,9 +82,6 @@ class StructConfig implements ModelInterface, ArrayAccess
     * templateId  所用模板id。当使用系统模板时，当前属性可以为空
     * templateName  所用模板名称，会对模板名称及id进行校验
     * templateType  所用模板类型，分为built_in及custom两种类型，对应系统模板和自定义模板，系统模板分为CTS，VPC和ELB三种。
-    * demoFields  示例字段数组，只需要填写与模板中is_analysis状态不同的字段
-    * tagFields  Tag字段数组，只需要填写与模板中is_analysis状态不同的字段
-    * quickAnalysis  是否开启demo_fields和tag_fields快速分析,为true时，所有的demo_fields和tag_fields全部字段均打开快速分析;不填或者为false，以模板中的demo_fields和tag_fields中的is_analysis决定是否开启快速分析。
     *
     * @var string[]
     */
@@ -105,10 +90,7 @@ class StructConfig implements ModelInterface, ArrayAccess
             'logStreamId' => 'log_stream_id',
             'templateId' => 'template_id',
             'templateName' => 'template_name',
-            'templateType' => 'template_type',
-            'demoFields' => 'demo_fields',
-            'tagFields' => 'tag_fields',
-            'quickAnalysis' => 'quick_analysis'
+            'templateType' => 'template_type'
     ];
 
     /**
@@ -118,9 +100,6 @@ class StructConfig implements ModelInterface, ArrayAccess
     * templateId  所用模板id。当使用系统模板时，当前属性可以为空
     * templateName  所用模板名称，会对模板名称及id进行校验
     * templateType  所用模板类型，分为built_in及custom两种类型，对应系统模板和自定义模板，系统模板分为CTS，VPC和ELB三种。
-    * demoFields  示例字段数组，只需要填写与模板中is_analysis状态不同的字段
-    * tagFields  Tag字段数组，只需要填写与模板中is_analysis状态不同的字段
-    * quickAnalysis  是否开启demo_fields和tag_fields快速分析,为true时，所有的demo_fields和tag_fields全部字段均打开快速分析;不填或者为false，以模板中的demo_fields和tag_fields中的is_analysis决定是否开启快速分析。
     *
     * @var string[]
     */
@@ -129,10 +108,7 @@ class StructConfig implements ModelInterface, ArrayAccess
             'logStreamId' => 'setLogStreamId',
             'templateId' => 'setTemplateId',
             'templateName' => 'setTemplateName',
-            'templateType' => 'setTemplateType',
-            'demoFields' => 'setDemoFields',
-            'tagFields' => 'setTagFields',
-            'quickAnalysis' => 'setQuickAnalysis'
+            'templateType' => 'setTemplateType'
     ];
 
     /**
@@ -142,9 +118,6 @@ class StructConfig implements ModelInterface, ArrayAccess
     * templateId  所用模板id。当使用系统模板时，当前属性可以为空
     * templateName  所用模板名称，会对模板名称及id进行校验
     * templateType  所用模板类型，分为built_in及custom两种类型，对应系统模板和自定义模板，系统模板分为CTS，VPC和ELB三种。
-    * demoFields  示例字段数组，只需要填写与模板中is_analysis状态不同的字段
-    * tagFields  Tag字段数组，只需要填写与模板中is_analysis状态不同的字段
-    * quickAnalysis  是否开启demo_fields和tag_fields快速分析,为true时，所有的demo_fields和tag_fields全部字段均打开快速分析;不填或者为false，以模板中的demo_fields和tag_fields中的is_analysis决定是否开启快速分析。
     *
     * @var string[]
     */
@@ -153,10 +126,7 @@ class StructConfig implements ModelInterface, ArrayAccess
             'logStreamId' => 'getLogStreamId',
             'templateId' => 'getTemplateId',
             'templateName' => 'getTemplateName',
-            'templateType' => 'getTemplateType',
-            'demoFields' => 'getDemoFields',
-            'tagFields' => 'getTagFields',
-            'quickAnalysis' => 'getQuickAnalysis'
+            'templateType' => 'getTemplateType'
     ];
 
     /**
@@ -237,9 +207,6 @@ class StructConfig implements ModelInterface, ArrayAccess
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
         $this->container['templateName'] = isset($data['templateName']) ? $data['templateName'] : null;
         $this->container['templateType'] = isset($data['templateType']) ? $data['templateType'] : null;
-        $this->container['demoFields'] = isset($data['demoFields']) ? $data['demoFields'] : null;
-        $this->container['tagFields'] = isset($data['tagFields']) ? $data['tagFields'] : null;
-        $this->container['quickAnalysis'] = isset($data['quickAnalysis']) ? $data['quickAnalysis'] : null;
     }
 
     /**
@@ -428,78 +395,6 @@ class StructConfig implements ModelInterface, ArrayAccess
     public function setTemplateType($templateType)
     {
         $this->container['templateType'] = $templateType;
-        return $this;
-    }
-
-    /**
-    * Gets demoFields
-    *  示例字段数组，只需要填写与模板中is_analysis状态不同的字段
-    *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\FieldModel[]|null
-    */
-    public function getDemoFields()
-    {
-        return $this->container['demoFields'];
-    }
-
-    /**
-    * Sets demoFields
-    *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\FieldModel[]|null $demoFields 示例字段数组，只需要填写与模板中is_analysis状态不同的字段
-    *
-    * @return $this
-    */
-    public function setDemoFields($demoFields)
-    {
-        $this->container['demoFields'] = $demoFields;
-        return $this;
-    }
-
-    /**
-    * Gets tagFields
-    *  Tag字段数组，只需要填写与模板中is_analysis状态不同的字段
-    *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\FieldModel[]|null
-    */
-    public function getTagFields()
-    {
-        return $this->container['tagFields'];
-    }
-
-    /**
-    * Sets tagFields
-    *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\FieldModel[]|null $tagFields Tag字段数组，只需要填写与模板中is_analysis状态不同的字段
-    *
-    * @return $this
-    */
-    public function setTagFields($tagFields)
-    {
-        $this->container['tagFields'] = $tagFields;
-        return $this;
-    }
-
-    /**
-    * Gets quickAnalysis
-    *  是否开启demo_fields和tag_fields快速分析,为true时，所有的demo_fields和tag_fields全部字段均打开快速分析;不填或者为false，以模板中的demo_fields和tag_fields中的is_analysis决定是否开启快速分析。
-    *
-    * @return bool|null
-    */
-    public function getQuickAnalysis()
-    {
-        return $this->container['quickAnalysis'];
-    }
-
-    /**
-    * Sets quickAnalysis
-    *
-    * @param bool|null $quickAnalysis 是否开启demo_fields和tag_fields快速分析,为true时，所有的demo_fields和tag_fields全部字段均打开快速分析;不填或者为false，以模板中的demo_fields和tag_fields中的is_analysis决定是否开启快速分析。
-    *
-    * @return $this
-    */
-    public function setQuickAnalysis($quickAnalysis)
-    {
-        $this->container['quickAnalysis'] = $quickAnalysis;
         return $this;
     }
 

@@ -284,12 +284,12 @@ class CocClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function handleAlarm($request)
+    public function handlerAlarm($request)
     {
-        return $this->handleAlarmWithHttpInfo($request);
+        return $this->handlerAlarmWithHttpInfo($request);
     }
 
-    public function handleAlarmWithHttpInfo($request)
+    public function handlerAlarmWithHttpInfo($request)
     {
         $resourcePath = '/v1/alarm-mgmt/alarm/{alarm_id}/auto-process';
         $formParams = [];
@@ -335,8 +335,8 @@ class CocClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\HandleAlarmResponse',
-            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\HandleAlarmRequest');
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\HandlerAlarmResponse',
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\HandlerAlarmRequest');
     }
 
     /**

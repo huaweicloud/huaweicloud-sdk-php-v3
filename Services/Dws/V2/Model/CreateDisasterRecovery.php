@@ -27,6 +27,13 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     * drSyncPeriod  **参数解释**： 同步周期。 **取值范围**： 不涉及。
     * primaryObsBucket  **参数解释**： 主集群OBS桶。 **取值范围**： 不涉及。
     * standbyObsBucket  **参数解释**： 备集群obs桶。 **取值范围**： 不涉及。
+    * discoveryRecoveryId  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+    * primaryClusterRegion  **参数解释**： 容灾主Region。 **取值范围**： 不涉及。
+    * standbyClusterRegion  **参数解释**： 容灾备Region。 **取值范围**： 不涉及。
+    * primaryClusterProjectId  **参数解释**： 容灾主集群项目ID。 **取值范围**： 不涉及。
+    * standbyClusterProjectId  **参数解释**： 容灾备集群项目ID。 **取值范围**： 不涉及。
+    * clusterRole  **参数解释**： 集群角色。 **取值范围**： 不涉及。
+    * primaryClusterInfo  primaryClusterInfo
     *
     * @var string[]
     */
@@ -37,7 +44,14 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
             'standbyClusterId' => 'string',
             'drSyncPeriod' => 'string',
             'primaryObsBucket' => 'string',
-            'standbyObsBucket' => 'string'
+            'standbyObsBucket' => 'string',
+            'discoveryRecoveryId' => 'string',
+            'primaryClusterRegion' => 'string',
+            'standbyClusterRegion' => 'string',
+            'primaryClusterProjectId' => 'string',
+            'standbyClusterProjectId' => 'string',
+            'clusterRole' => 'string',
+            'primaryClusterInfo' => '\HuaweiCloud\SDK\Dws\V2\Model\CreateDrClusterDto'
     ];
 
     /**
@@ -49,6 +63,13 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     * drSyncPeriod  **参数解释**： 同步周期。 **取值范围**： 不涉及。
     * primaryObsBucket  **参数解释**： 主集群OBS桶。 **取值范围**： 不涉及。
     * standbyObsBucket  **参数解释**： 备集群obs桶。 **取值范围**： 不涉及。
+    * discoveryRecoveryId  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+    * primaryClusterRegion  **参数解释**： 容灾主Region。 **取值范围**： 不涉及。
+    * standbyClusterRegion  **参数解释**： 容灾备Region。 **取值范围**： 不涉及。
+    * primaryClusterProjectId  **参数解释**： 容灾主集群项目ID。 **取值范围**： 不涉及。
+    * standbyClusterProjectId  **参数解释**： 容灾备集群项目ID。 **取值范围**： 不涉及。
+    * clusterRole  **参数解释**： 集群角色。 **取值范围**： 不涉及。
+    * primaryClusterInfo  primaryClusterInfo
     *
     * @var string[]
     */
@@ -59,7 +80,14 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
         'standbyClusterId' => null,
         'drSyncPeriod' => null,
         'primaryObsBucket' => null,
-        'standbyObsBucket' => null
+        'standbyObsBucket' => null,
+        'discoveryRecoveryId' => null,
+        'primaryClusterRegion' => null,
+        'standbyClusterRegion' => null,
+        'primaryClusterProjectId' => null,
+        'standbyClusterProjectId' => null,
+        'clusterRole' => null,
+        'primaryClusterInfo' => null
     ];
 
     /**
@@ -92,6 +120,13 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     * drSyncPeriod  **参数解释**： 同步周期。 **取值范围**： 不涉及。
     * primaryObsBucket  **参数解释**： 主集群OBS桶。 **取值范围**： 不涉及。
     * standbyObsBucket  **参数解释**： 备集群obs桶。 **取值范围**： 不涉及。
+    * discoveryRecoveryId  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+    * primaryClusterRegion  **参数解释**： 容灾主Region。 **取值范围**： 不涉及。
+    * standbyClusterRegion  **参数解释**： 容灾备Region。 **取值范围**： 不涉及。
+    * primaryClusterProjectId  **参数解释**： 容灾主集群项目ID。 **取值范围**： 不涉及。
+    * standbyClusterProjectId  **参数解释**： 容灾备集群项目ID。 **取值范围**： 不涉及。
+    * clusterRole  **参数解释**： 集群角色。 **取值范围**： 不涉及。
+    * primaryClusterInfo  primaryClusterInfo
     *
     * @var string[]
     */
@@ -102,7 +137,14 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
             'standbyClusterId' => 'standby_cluster_id',
             'drSyncPeriod' => 'dr_sync_period',
             'primaryObsBucket' => 'primary_obs_bucket',
-            'standbyObsBucket' => 'standby_obs_bucket'
+            'standbyObsBucket' => 'standby_obs_bucket',
+            'discoveryRecoveryId' => 'discovery_recovery_id',
+            'primaryClusterRegion' => 'primary_cluster_region',
+            'standbyClusterRegion' => 'standby_cluster_region',
+            'primaryClusterProjectId' => 'primary_cluster_project_id',
+            'standbyClusterProjectId' => 'standby_cluster_project_id',
+            'clusterRole' => 'cluster_role',
+            'primaryClusterInfo' => 'primary_cluster_info'
     ];
 
     /**
@@ -114,6 +156,13 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     * drSyncPeriod  **参数解释**： 同步周期。 **取值范围**： 不涉及。
     * primaryObsBucket  **参数解释**： 主集群OBS桶。 **取值范围**： 不涉及。
     * standbyObsBucket  **参数解释**： 备集群obs桶。 **取值范围**： 不涉及。
+    * discoveryRecoveryId  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+    * primaryClusterRegion  **参数解释**： 容灾主Region。 **取值范围**： 不涉及。
+    * standbyClusterRegion  **参数解释**： 容灾备Region。 **取值范围**： 不涉及。
+    * primaryClusterProjectId  **参数解释**： 容灾主集群项目ID。 **取值范围**： 不涉及。
+    * standbyClusterProjectId  **参数解释**： 容灾备集群项目ID。 **取值范围**： 不涉及。
+    * clusterRole  **参数解释**： 集群角色。 **取值范围**： 不涉及。
+    * primaryClusterInfo  primaryClusterInfo
     *
     * @var string[]
     */
@@ -124,7 +173,14 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
             'standbyClusterId' => 'setStandbyClusterId',
             'drSyncPeriod' => 'setDrSyncPeriod',
             'primaryObsBucket' => 'setPrimaryObsBucket',
-            'standbyObsBucket' => 'setStandbyObsBucket'
+            'standbyObsBucket' => 'setStandbyObsBucket',
+            'discoveryRecoveryId' => 'setDiscoveryRecoveryId',
+            'primaryClusterRegion' => 'setPrimaryClusterRegion',
+            'standbyClusterRegion' => 'setStandbyClusterRegion',
+            'primaryClusterProjectId' => 'setPrimaryClusterProjectId',
+            'standbyClusterProjectId' => 'setStandbyClusterProjectId',
+            'clusterRole' => 'setClusterRole',
+            'primaryClusterInfo' => 'setPrimaryClusterInfo'
     ];
 
     /**
@@ -136,6 +192,13 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     * drSyncPeriod  **参数解释**： 同步周期。 **取值范围**： 不涉及。
     * primaryObsBucket  **参数解释**： 主集群OBS桶。 **取值范围**： 不涉及。
     * standbyObsBucket  **参数解释**： 备集群obs桶。 **取值范围**： 不涉及。
+    * discoveryRecoveryId  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+    * primaryClusterRegion  **参数解释**： 容灾主Region。 **取值范围**： 不涉及。
+    * standbyClusterRegion  **参数解释**： 容灾备Region。 **取值范围**： 不涉及。
+    * primaryClusterProjectId  **参数解释**： 容灾主集群项目ID。 **取值范围**： 不涉及。
+    * standbyClusterProjectId  **参数解释**： 容灾备集群项目ID。 **取值范围**： 不涉及。
+    * clusterRole  **参数解释**： 集群角色。 **取值范围**： 不涉及。
+    * primaryClusterInfo  primaryClusterInfo
     *
     * @var string[]
     */
@@ -146,7 +209,14 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
             'standbyClusterId' => 'getStandbyClusterId',
             'drSyncPeriod' => 'getDrSyncPeriod',
             'primaryObsBucket' => 'getPrimaryObsBucket',
-            'standbyObsBucket' => 'getStandbyObsBucket'
+            'standbyObsBucket' => 'getStandbyObsBucket',
+            'discoveryRecoveryId' => 'getDiscoveryRecoveryId',
+            'primaryClusterRegion' => 'getPrimaryClusterRegion',
+            'standbyClusterRegion' => 'getStandbyClusterRegion',
+            'primaryClusterProjectId' => 'getPrimaryClusterProjectId',
+            'standbyClusterProjectId' => 'getStandbyClusterProjectId',
+            'clusterRole' => 'getClusterRole',
+            'primaryClusterInfo' => 'getPrimaryClusterInfo'
     ];
 
     /**
@@ -214,6 +284,13 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
         $this->container['drSyncPeriod'] = isset($data['drSyncPeriod']) ? $data['drSyncPeriod'] : null;
         $this->container['primaryObsBucket'] = isset($data['primaryObsBucket']) ? $data['primaryObsBucket'] : null;
         $this->container['standbyObsBucket'] = isset($data['standbyObsBucket']) ? $data['standbyObsBucket'] : null;
+        $this->container['discoveryRecoveryId'] = isset($data['discoveryRecoveryId']) ? $data['discoveryRecoveryId'] : null;
+        $this->container['primaryClusterRegion'] = isset($data['primaryClusterRegion']) ? $data['primaryClusterRegion'] : null;
+        $this->container['standbyClusterRegion'] = isset($data['standbyClusterRegion']) ? $data['standbyClusterRegion'] : null;
+        $this->container['primaryClusterProjectId'] = isset($data['primaryClusterProjectId']) ? $data['primaryClusterProjectId'] : null;
+        $this->container['standbyClusterProjectId'] = isset($data['standbyClusterProjectId']) ? $data['standbyClusterProjectId'] : null;
+        $this->container['clusterRole'] = isset($data['clusterRole']) ? $data['clusterRole'] : null;
+        $this->container['primaryClusterInfo'] = isset($data['primaryClusterInfo']) ? $data['primaryClusterInfo'] : null;
     }
 
     /**
@@ -418,6 +495,174 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     public function setStandbyObsBucket($standbyObsBucket)
     {
         $this->container['standbyObsBucket'] = $standbyObsBucket;
+        return $this;
+    }
+
+    /**
+    * Gets discoveryRecoveryId
+    *  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDiscoveryRecoveryId()
+    {
+        return $this->container['discoveryRecoveryId'];
+    }
+
+    /**
+    * Sets discoveryRecoveryId
+    *
+    * @param string|null $discoveryRecoveryId **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDiscoveryRecoveryId($discoveryRecoveryId)
+    {
+        $this->container['discoveryRecoveryId'] = $discoveryRecoveryId;
+        return $this;
+    }
+
+    /**
+    * Gets primaryClusterRegion
+    *  **参数解释**： 容灾主Region。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getPrimaryClusterRegion()
+    {
+        return $this->container['primaryClusterRegion'];
+    }
+
+    /**
+    * Sets primaryClusterRegion
+    *
+    * @param string|null $primaryClusterRegion **参数解释**： 容灾主Region。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setPrimaryClusterRegion($primaryClusterRegion)
+    {
+        $this->container['primaryClusterRegion'] = $primaryClusterRegion;
+        return $this;
+    }
+
+    /**
+    * Gets standbyClusterRegion
+    *  **参数解释**： 容灾备Region。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getStandbyClusterRegion()
+    {
+        return $this->container['standbyClusterRegion'];
+    }
+
+    /**
+    * Sets standbyClusterRegion
+    *
+    * @param string|null $standbyClusterRegion **参数解释**： 容灾备Region。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setStandbyClusterRegion($standbyClusterRegion)
+    {
+        $this->container['standbyClusterRegion'] = $standbyClusterRegion;
+        return $this;
+    }
+
+    /**
+    * Gets primaryClusterProjectId
+    *  **参数解释**： 容灾主集群项目ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getPrimaryClusterProjectId()
+    {
+        return $this->container['primaryClusterProjectId'];
+    }
+
+    /**
+    * Sets primaryClusterProjectId
+    *
+    * @param string|null $primaryClusterProjectId **参数解释**： 容灾主集群项目ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setPrimaryClusterProjectId($primaryClusterProjectId)
+    {
+        $this->container['primaryClusterProjectId'] = $primaryClusterProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets standbyClusterProjectId
+    *  **参数解释**： 容灾备集群项目ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getStandbyClusterProjectId()
+    {
+        return $this->container['standbyClusterProjectId'];
+    }
+
+    /**
+    * Sets standbyClusterProjectId
+    *
+    * @param string|null $standbyClusterProjectId **参数解释**： 容灾备集群项目ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setStandbyClusterProjectId($standbyClusterProjectId)
+    {
+        $this->container['standbyClusterProjectId'] = $standbyClusterProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets clusterRole
+    *  **参数解释**： 集群角色。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getClusterRole()
+    {
+        return $this->container['clusterRole'];
+    }
+
+    /**
+    * Sets clusterRole
+    *
+    * @param string|null $clusterRole **参数解释**： 集群角色。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setClusterRole($clusterRole)
+    {
+        $this->container['clusterRole'] = $clusterRole;
+        return $this;
+    }
+
+    /**
+    * Gets primaryClusterInfo
+    *  primaryClusterInfo
+    *
+    * @return \HuaweiCloud\SDK\Dws\V2\Model\CreateDrClusterDto|null
+    */
+    public function getPrimaryClusterInfo()
+    {
+        return $this->container['primaryClusterInfo'];
+    }
+
+    /**
+    * Sets primaryClusterInfo
+    *
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\CreateDrClusterDto|null $primaryClusterInfo primaryClusterInfo
+    *
+    * @return $this
+    */
+    public function setPrimaryClusterInfo($primaryClusterInfo)
+    {
+        $this->container['primaryClusterInfo'] = $primaryClusterInfo;
         return $this;
     }
 
