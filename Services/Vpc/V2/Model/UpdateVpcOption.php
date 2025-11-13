@@ -24,6 +24,7 @@ class UpdateVpcOption implements ModelInterface, ArrayAccess
     * description  功能说明：虚拟私有云的描述  取值范围：0-255个字符，不能包含“<”和“>”。
     * cidr  功能说明：虚拟私有云下可用子网的范围  取值范围：  - 10.0.0.0/8 ~ 10.255.255.240/28 - 172.16.0.0/12 ~ 172.31.255.240/28 - 192.168.0.0/16 ~ 192.168.255.240/28  约束：必须是ipv4 cidr格式，例如：192.168.0.0/16
     * routes  功能说明：路由信息列表，详情参见route对象
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class UpdateVpcOption implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'cidr' => 'string',
-            'routes' => '\HuaweiCloud\SDK\Vpc\V2\Model\Route[]'
+            'routes' => '\HuaweiCloud\SDK\Vpc\V2\Model\Route[]',
+            'enableNetworkAddressUsageMetrics' => 'bool'
     ];
 
     /**
@@ -40,6 +42,7 @@ class UpdateVpcOption implements ModelInterface, ArrayAccess
     * description  功能说明：虚拟私有云的描述  取值范围：0-255个字符，不能包含“<”和“>”。
     * cidr  功能说明：虚拟私有云下可用子网的范围  取值范围：  - 10.0.0.0/8 ~ 10.255.255.240/28 - 172.16.0.0/12 ~ 172.31.255.240/28 - 192.168.0.0/16 ~ 192.168.255.240/28  约束：必须是ipv4 cidr格式，例如：192.168.0.0/16
     * routes  功能说明：路由信息列表，详情参见route对象
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class UpdateVpcOption implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'cidr' => null,
-        'routes' => null
+        'routes' => null,
+        'enableNetworkAddressUsageMetrics' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class UpdateVpcOption implements ModelInterface, ArrayAccess
     * description  功能说明：虚拟私有云的描述  取值范围：0-255个字符，不能包含“<”和“>”。
     * cidr  功能说明：虚拟私有云下可用子网的范围  取值范围：  - 10.0.0.0/8 ~ 10.255.255.240/28 - 172.16.0.0/12 ~ 172.31.255.240/28 - 192.168.0.0/16 ~ 192.168.255.240/28  约束：必须是ipv4 cidr格式，例如：192.168.0.0/16
     * routes  功能说明：路由信息列表，详情参见route对象
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class UpdateVpcOption implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'cidr' => 'cidr',
-            'routes' => 'routes'
+            'routes' => 'routes',
+            'enableNetworkAddressUsageMetrics' => 'enable_network_address_usage_metrics'
     ];
 
     /**
@@ -93,6 +99,7 @@ class UpdateVpcOption implements ModelInterface, ArrayAccess
     * description  功能说明：虚拟私有云的描述  取值范围：0-255个字符，不能包含“<”和“>”。
     * cidr  功能说明：虚拟私有云下可用子网的范围  取值范围：  - 10.0.0.0/8 ~ 10.255.255.240/28 - 172.16.0.0/12 ~ 172.31.255.240/28 - 192.168.0.0/16 ~ 192.168.255.240/28  约束：必须是ipv4 cidr格式，例如：192.168.0.0/16
     * routes  功能说明：路由信息列表，详情参见route对象
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class UpdateVpcOption implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'cidr' => 'setCidr',
-            'routes' => 'setRoutes'
+            'routes' => 'setRoutes',
+            'enableNetworkAddressUsageMetrics' => 'setEnableNetworkAddressUsageMetrics'
     ];
 
     /**
@@ -109,6 +117,7 @@ class UpdateVpcOption implements ModelInterface, ArrayAccess
     * description  功能说明：虚拟私有云的描述  取值范围：0-255个字符，不能包含“<”和“>”。
     * cidr  功能说明：虚拟私有云下可用子网的范围  取值范围：  - 10.0.0.0/8 ~ 10.255.255.240/28 - 172.16.0.0/12 ~ 172.31.255.240/28 - 192.168.0.0/16 ~ 192.168.255.240/28  约束：必须是ipv4 cidr格式，例如：192.168.0.0/16
     * routes  功能说明：路由信息列表，详情参见route对象
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class UpdateVpcOption implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'cidr' => 'getCidr',
-            'routes' => 'getRoutes'
+            'routes' => 'getRoutes',
+            'enableNetworkAddressUsageMetrics' => 'getEnableNetworkAddressUsageMetrics'
     ];
 
     /**
@@ -181,6 +191,7 @@ class UpdateVpcOption implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['cidr'] = isset($data['cidr']) ? $data['cidr'] : null;
         $this->container['routes'] = isset($data['routes']) ? $data['routes'] : null;
+        $this->container['enableNetworkAddressUsageMetrics'] = isset($data['enableNetworkAddressUsageMetrics']) ? $data['enableNetworkAddressUsageMetrics'] : null;
     }
 
     /**
@@ -310,6 +321,30 @@ class UpdateVpcOption implements ModelInterface, ArrayAccess
     public function setRoutes($routes)
     {
         $this->container['routes'] = $routes;
+        return $this;
+    }
+
+    /**
+    * Gets enableNetworkAddressUsageMetrics
+    *  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+    *
+    * @return bool|null
+    */
+    public function getEnableNetworkAddressUsageMetrics()
+    {
+        return $this->container['enableNetworkAddressUsageMetrics'];
+    }
+
+    /**
+    * Sets enableNetworkAddressUsageMetrics
+    *
+    * @param bool|null $enableNetworkAddressUsageMetrics 功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+    *
+    * @return $this
+    */
+    public function setEnableNetworkAddressUsageMetrics($enableNetworkAddressUsageMetrics)
+    {
+        $this->container['enableNetworkAddressUsageMetrics'] = $enableNetworkAddressUsageMetrics;
         return $this;
     }
 

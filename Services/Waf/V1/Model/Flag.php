@@ -23,8 +23,8 @@ class Flag implements ModelInterface, ArrayAccess
     * pci3ds  是否开启pci_3ds合规认证   - true：开启   - false：不开启
     * pciDss  是否开启pci_dss合规认证   - true：开启   - false：不开启
     * cname  old：代表域名使用的老的cname，new：代表域名使用新的cname
-    * isDualAz  域名是否开启ipv6   - true：支持   - false：不支持
-    * ipv6  域名是否开启ipv6   - true：支持   - false：不支持
+    * isDualAz  域名是否开启ipv6   - true：开启   - false：不开启
+    * ipv6  域名是否开启ipv6   - true：开启   - false：不开启
     *
     * @var string[]
     */
@@ -41,8 +41,8 @@ class Flag implements ModelInterface, ArrayAccess
     * pci3ds  是否开启pci_3ds合规认证   - true：开启   - false：不开启
     * pciDss  是否开启pci_dss合规认证   - true：开启   - false：不开启
     * cname  old：代表域名使用的老的cname，new：代表域名使用新的cname
-    * isDualAz  域名是否开启ipv6   - true：支持   - false：不支持
-    * ipv6  域名是否开启ipv6   - true：支持   - false：不支持
+    * isDualAz  域名是否开启ipv6   - true：开启   - false：不开启
+    * ipv6  域名是否开启ipv6   - true：开启   - false：不开启
     *
     * @var string[]
     */
@@ -80,8 +80,8 @@ class Flag implements ModelInterface, ArrayAccess
     * pci3ds  是否开启pci_3ds合规认证   - true：开启   - false：不开启
     * pciDss  是否开启pci_dss合规认证   - true：开启   - false：不开启
     * cname  old：代表域名使用的老的cname，new：代表域名使用新的cname
-    * isDualAz  域名是否开启ipv6   - true：支持   - false：不支持
-    * ipv6  域名是否开启ipv6   - true：支持   - false：不支持
+    * isDualAz  域名是否开启ipv6   - true：开启   - false：不开启
+    * ipv6  域名是否开启ipv6   - true：开启   - false：不开启
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class Flag implements ModelInterface, ArrayAccess
     * pci3ds  是否开启pci_3ds合规认证   - true：开启   - false：不开启
     * pciDss  是否开启pci_dss合规认证   - true：开启   - false：不开启
     * cname  old：代表域名使用的老的cname，new：代表域名使用新的cname
-    * isDualAz  域名是否开启ipv6   - true：支持   - false：不支持
-    * ipv6  域名是否开启ipv6   - true：支持   - false：不支持
+    * isDualAz  域名是否开启ipv6   - true：开启   - false：不开启
+    * ipv6  域名是否开启ipv6   - true：开启   - false：不开启
     *
     * @var string[]
     */
@@ -116,8 +116,8 @@ class Flag implements ModelInterface, ArrayAccess
     * pci3ds  是否开启pci_3ds合规认证   - true：开启   - false：不开启
     * pciDss  是否开启pci_dss合规认证   - true：开启   - false：不开启
     * cname  old：代表域名使用的老的cname，new：代表域名使用新的cname
-    * isDualAz  域名是否开启ipv6   - true：支持   - false：不支持
-    * ipv6  域名是否开启ipv6   - true：支持   - false：不支持
+    * isDualAz  域名是否开启ipv6   - true：开启   - false：不开启
+    * ipv6  域名是否开启ipv6   - true：开启   - false：不开启
     *
     * @var string[]
     */
@@ -405,7 +405,7 @@ class Flag implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDualAz
-    *  域名是否开启ipv6   - true：支持   - false：不支持
+    *  域名是否开启ipv6   - true：开启   - false：不开启
     *
     * @return string|null
     */
@@ -417,7 +417,7 @@ class Flag implements ModelInterface, ArrayAccess
     /**
     * Sets isDualAz
     *
-    * @param string|null $isDualAz 域名是否开启ipv6   - true：支持   - false：不支持
+    * @param string|null $isDualAz 域名是否开启ipv6   - true：开启   - false：不开启
     *
     * @return $this
     */
@@ -429,7 +429,7 @@ class Flag implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6
-    *  域名是否开启ipv6   - true：支持   - false：不支持
+    *  域名是否开启ipv6   - true：开启   - false：不开启
     *
     * @return string|null
     */
@@ -441,7 +441,7 @@ class Flag implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6
     *
-    * @param string|null $ipv6 域名是否开启ipv6   - true：支持   - false：不支持
+    * @param string|null $ipv6 域名是否开启ipv6   - true：开启   - false：不开启
     *
     * @return $this
     */

@@ -23,17 +23,13 @@ class SubTemplate implements ModelInterface, ArrayAccess
     * subType  模板子类型，只支持以下5种类型：sms,dingding,wechat,webhook,email
     * content  子模版正文，$符号后所跟变量仅支持以下变量，根据不同告警类型（关键词告警和sql告警），所支持的变量亦不相同。 目前两种告警类型有共同变量如下：告警级别：${event_severity};发生时间：${starts_at};告警源：$event.metadata.resource_provider;资源类型：$event.metadata.resource_type;资源标识：${resources};统计类型：关键词统计;表达式：$event.annotations.condition_expression;当前值: $event.annotations.current_value;统计周期：$event.annotations.frequency; 关键词告警特有变量：查询时间：$event.annotations.results[0].time;查询日志：$event.annotations.results[0].raw_results; sql告警特有变量：日志组/流名称：$event.annotations.results[0].resource_id;查询语句：$event.annotations.results[0].sql;查询时间：$event.annotations.results[0].time;查询URL：$event.annotations.results[0].url;查询日志：$event.annotations.results[0].raw_results; 变量后面的分号\";\"为英文符号，必须添加，否则模板会出现替换失败的情况
     * topic  邮件主题,只有sub_type=email时生效
-    * sendType  **参数解释：**  当消息模板类型为webhook时生效，决定该消息的渲染方式。 **取值范围：**  - HTML - JSON
-    * version  **参数解释：**  消息模板的适用版本。 **取值范围：**   v1：标识为LTS的消息模板。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'subType' => 'string',
             'content' => 'string',
-            'topic' => 'string',
-            'sendType' => 'string',
-            'version' => 'string'
+            'topic' => 'string'
     ];
 
     /**
@@ -41,17 +37,13 @@ class SubTemplate implements ModelInterface, ArrayAccess
     * subType  模板子类型，只支持以下5种类型：sms,dingding,wechat,webhook,email
     * content  子模版正文，$符号后所跟变量仅支持以下变量，根据不同告警类型（关键词告警和sql告警），所支持的变量亦不相同。 目前两种告警类型有共同变量如下：告警级别：${event_severity};发生时间：${starts_at};告警源：$event.metadata.resource_provider;资源类型：$event.metadata.resource_type;资源标识：${resources};统计类型：关键词统计;表达式：$event.annotations.condition_expression;当前值: $event.annotations.current_value;统计周期：$event.annotations.frequency; 关键词告警特有变量：查询时间：$event.annotations.results[0].time;查询日志：$event.annotations.results[0].raw_results; sql告警特有变量：日志组/流名称：$event.annotations.results[0].resource_id;查询语句：$event.annotations.results[0].sql;查询时间：$event.annotations.results[0].time;查询URL：$event.annotations.results[0].url;查询日志：$event.annotations.results[0].raw_results; 变量后面的分号\";\"为英文符号，必须添加，否则模板会出现替换失败的情况
     * topic  邮件主题,只有sub_type=email时生效
-    * sendType  **参数解释：**  当消息模板类型为webhook时生效，决定该消息的渲染方式。 **取值范围：**  - HTML - JSON
-    * version  **参数解释：**  消息模板的适用版本。 **取值范围：**   v1：标识为LTS的消息模板。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'subType' => null,
         'content' => null,
-        'topic' => null,
-        'sendType' => null,
-        'version' => null
+        'topic' => null
     ];
 
     /**
@@ -80,17 +72,13 @@ class SubTemplate implements ModelInterface, ArrayAccess
     * subType  模板子类型，只支持以下5种类型：sms,dingding,wechat,webhook,email
     * content  子模版正文，$符号后所跟变量仅支持以下变量，根据不同告警类型（关键词告警和sql告警），所支持的变量亦不相同。 目前两种告警类型有共同变量如下：告警级别：${event_severity};发生时间：${starts_at};告警源：$event.metadata.resource_provider;资源类型：$event.metadata.resource_type;资源标识：${resources};统计类型：关键词统计;表达式：$event.annotations.condition_expression;当前值: $event.annotations.current_value;统计周期：$event.annotations.frequency; 关键词告警特有变量：查询时间：$event.annotations.results[0].time;查询日志：$event.annotations.results[0].raw_results; sql告警特有变量：日志组/流名称：$event.annotations.results[0].resource_id;查询语句：$event.annotations.results[0].sql;查询时间：$event.annotations.results[0].time;查询URL：$event.annotations.results[0].url;查询日志：$event.annotations.results[0].raw_results; 变量后面的分号\";\"为英文符号，必须添加，否则模板会出现替换失败的情况
     * topic  邮件主题,只有sub_type=email时生效
-    * sendType  **参数解释：**  当消息模板类型为webhook时生效，决定该消息的渲染方式。 **取值范围：**  - HTML - JSON
-    * version  **参数解释：**  消息模板的适用版本。 **取值范围：**   v1：标识为LTS的消息模板。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'subType' => 'sub_type',
             'content' => 'content',
-            'topic' => 'topic',
-            'sendType' => 'sendType',
-            'version' => 'version'
+            'topic' => 'topic'
     ];
 
     /**
@@ -98,17 +86,13 @@ class SubTemplate implements ModelInterface, ArrayAccess
     * subType  模板子类型，只支持以下5种类型：sms,dingding,wechat,webhook,email
     * content  子模版正文，$符号后所跟变量仅支持以下变量，根据不同告警类型（关键词告警和sql告警），所支持的变量亦不相同。 目前两种告警类型有共同变量如下：告警级别：${event_severity};发生时间：${starts_at};告警源：$event.metadata.resource_provider;资源类型：$event.metadata.resource_type;资源标识：${resources};统计类型：关键词统计;表达式：$event.annotations.condition_expression;当前值: $event.annotations.current_value;统计周期：$event.annotations.frequency; 关键词告警特有变量：查询时间：$event.annotations.results[0].time;查询日志：$event.annotations.results[0].raw_results; sql告警特有变量：日志组/流名称：$event.annotations.results[0].resource_id;查询语句：$event.annotations.results[0].sql;查询时间：$event.annotations.results[0].time;查询URL：$event.annotations.results[0].url;查询日志：$event.annotations.results[0].raw_results; 变量后面的分号\";\"为英文符号，必须添加，否则模板会出现替换失败的情况
     * topic  邮件主题,只有sub_type=email时生效
-    * sendType  **参数解释：**  当消息模板类型为webhook时生效，决定该消息的渲染方式。 **取值范围：**  - HTML - JSON
-    * version  **参数解释：**  消息模板的适用版本。 **取值范围：**   v1：标识为LTS的消息模板。
     *
     * @var string[]
     */
     protected static $setters = [
             'subType' => 'setSubType',
             'content' => 'setContent',
-            'topic' => 'setTopic',
-            'sendType' => 'setSendType',
-            'version' => 'setVersion'
+            'topic' => 'setTopic'
     ];
 
     /**
@@ -116,17 +100,13 @@ class SubTemplate implements ModelInterface, ArrayAccess
     * subType  模板子类型，只支持以下5种类型：sms,dingding,wechat,webhook,email
     * content  子模版正文，$符号后所跟变量仅支持以下变量，根据不同告警类型（关键词告警和sql告警），所支持的变量亦不相同。 目前两种告警类型有共同变量如下：告警级别：${event_severity};发生时间：${starts_at};告警源：$event.metadata.resource_provider;资源类型：$event.metadata.resource_type;资源标识：${resources};统计类型：关键词统计;表达式：$event.annotations.condition_expression;当前值: $event.annotations.current_value;统计周期：$event.annotations.frequency; 关键词告警特有变量：查询时间：$event.annotations.results[0].time;查询日志：$event.annotations.results[0].raw_results; sql告警特有变量：日志组/流名称：$event.annotations.results[0].resource_id;查询语句：$event.annotations.results[0].sql;查询时间：$event.annotations.results[0].time;查询URL：$event.annotations.results[0].url;查询日志：$event.annotations.results[0].raw_results; 变量后面的分号\";\"为英文符号，必须添加，否则模板会出现替换失败的情况
     * topic  邮件主题,只有sub_type=email时生效
-    * sendType  **参数解释：**  当消息模板类型为webhook时生效，决定该消息的渲染方式。 **取值范围：**  - HTML - JSON
-    * version  **参数解释：**  消息模板的适用版本。 **取值范围：**   v1：标识为LTS的消息模板。
     *
     * @var string[]
     */
     protected static $getters = [
             'subType' => 'getSubType',
             'content' => 'getContent',
-            'topic' => 'getTopic',
-            'sendType' => 'getSendType',
-            'version' => 'getVersion'
+            'topic' => 'getTopic'
     ];
 
     /**
@@ -211,8 +191,6 @@ class SubTemplate implements ModelInterface, ArrayAccess
         $this->container['subType'] = isset($data['subType']) ? $data['subType'] : null;
         $this->container['content'] = isset($data['content']) ? $data['content'] : null;
         $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
-        $this->container['sendType'] = isset($data['sendType']) ? $data['sendType'] : null;
-        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
     }
 
     /**
@@ -326,54 +304,6 @@ class SubTemplate implements ModelInterface, ArrayAccess
     public function setTopic($topic)
     {
         $this->container['topic'] = $topic;
-        return $this;
-    }
-
-    /**
-    * Gets sendType
-    *  **参数解释：**  当消息模板类型为webhook时生效，决定该消息的渲染方式。 **取值范围：**  - HTML - JSON
-    *
-    * @return string|null
-    */
-    public function getSendType()
-    {
-        return $this->container['sendType'];
-    }
-
-    /**
-    * Sets sendType
-    *
-    * @param string|null $sendType **参数解释：**  当消息模板类型为webhook时生效，决定该消息的渲染方式。 **取值范围：**  - HTML - JSON
-    *
-    * @return $this
-    */
-    public function setSendType($sendType)
-    {
-        $this->container['sendType'] = $sendType;
-        return $this;
-    }
-
-    /**
-    * Gets version
-    *  **参数解释：**  消息模板的适用版本。 **取值范围：**   v1：标识为LTS的消息模板。
-    *
-    * @return string|null
-    */
-    public function getVersion()
-    {
-        return $this->container['version'];
-    }
-
-    /**
-    * Sets version
-    *
-    * @param string|null $version **参数解释：**  消息模板的适用版本。 **取值范围：**   v1：标识为LTS的消息模板。
-    *
-    * @return $this
-    */
-    public function setVersion($version)
-    {
-        $this->container['version'] = $version;
         return $this;
     }
 

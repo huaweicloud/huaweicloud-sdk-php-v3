@@ -1488,6 +1488,12 @@ class CocClient extends Client
         if ($localVarParams['pageSize'] !== null) {
             $queryParams['page_size'] = $localVarParams['pageSize'];
         }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']

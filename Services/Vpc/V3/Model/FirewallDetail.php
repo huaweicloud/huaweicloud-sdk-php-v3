@@ -33,6 +33,7 @@ class FirewallDetail implements ModelInterface, ArrayAccess
     * associations  功能说明：ACL绑定的子网列表
     * ingressRules  功能说明：ACL入方向规则列表
     * egressRules  功能说明：ACL出方向规则列表
+    * type  参数解释： 网络ACL支持绑定的子网类型。 取值范围： normal：默认值，表示网络ACL支持绑定普通子网。 CloudDCN：表示网络ACL支持绑定CloudDCN子网。
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class FirewallDetail implements ModelInterface, ArrayAccess
             'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]',
             'associations' => '\HuaweiCloud\SDK\Vpc\V3\Model\FirewallAssociation[]',
             'ingressRules' => '\HuaweiCloud\SDK\Vpc\V3\Model\FirewallRuleDetail[]',
-            'egressRules' => '\HuaweiCloud\SDK\Vpc\V3\Model\FirewallRuleDetail[]'
+            'egressRules' => '\HuaweiCloud\SDK\Vpc\V3\Model\FirewallRuleDetail[]',
+            'type' => 'string'
     ];
 
     /**
@@ -67,6 +69,7 @@ class FirewallDetail implements ModelInterface, ArrayAccess
     * associations  功能说明：ACL绑定的子网列表
     * ingressRules  功能说明：ACL入方向规则列表
     * egressRules  功能说明：ACL出方向规则列表
+    * type  参数解释： 网络ACL支持绑定的子网类型。 取值范围： normal：默认值，表示网络ACL支持绑定普通子网。 CloudDCN：表示网络ACL支持绑定CloudDCN子网。
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class FirewallDetail implements ModelInterface, ArrayAccess
         'tags' => null,
         'associations' => null,
         'ingressRules' => null,
-        'egressRules' => null
+        'egressRules' => null,
+        'type' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class FirewallDetail implements ModelInterface, ArrayAccess
     * associations  功能说明：ACL绑定的子网列表
     * ingressRules  功能说明：ACL入方向规则列表
     * egressRules  功能说明：ACL出方向规则列表
+    * type  参数解释： 网络ACL支持绑定的子网类型。 取值范围： normal：默认值，表示网络ACL支持绑定普通子网。 CloudDCN：表示网络ACL支持绑定CloudDCN子网。
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class FirewallDetail implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'associations' => 'associations',
             'ingressRules' => 'ingress_rules',
-            'egressRules' => 'egress_rules'
+            'egressRules' => 'egress_rules',
+            'type' => 'type'
     ];
 
     /**
@@ -156,6 +162,7 @@ class FirewallDetail implements ModelInterface, ArrayAccess
     * associations  功能说明：ACL绑定的子网列表
     * ingressRules  功能说明：ACL入方向规则列表
     * egressRules  功能说明：ACL出方向规则列表
+    * type  参数解释： 网络ACL支持绑定的子网类型。 取值范围： normal：默认值，表示网络ACL支持绑定普通子网。 CloudDCN：表示网络ACL支持绑定CloudDCN子网。
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class FirewallDetail implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'associations' => 'setAssociations',
             'ingressRules' => 'setIngressRules',
-            'egressRules' => 'setEgressRules'
+            'egressRules' => 'setEgressRules',
+            'type' => 'setType'
     ];
 
     /**
@@ -190,6 +198,7 @@ class FirewallDetail implements ModelInterface, ArrayAccess
     * associations  功能说明：ACL绑定的子网列表
     * ingressRules  功能说明：ACL入方向规则列表
     * egressRules  功能说明：ACL出方向规则列表
+    * type  参数解释： 网络ACL支持绑定的子网类型。 取值范围： normal：默认值，表示网络ACL支持绑定普通子网。 CloudDCN：表示网络ACL支持绑定CloudDCN子网。
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class FirewallDetail implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'associations' => 'getAssociations',
             'ingressRules' => 'getIngressRules',
-            'egressRules' => 'getEgressRules'
+            'egressRules' => 'getEgressRules',
+            'type' => 'getType'
     ];
 
     /**
@@ -280,6 +290,7 @@ class FirewallDetail implements ModelInterface, ArrayAccess
         $this->container['associations'] = isset($data['associations']) ? $data['associations'] : null;
         $this->container['ingressRules'] = isset($data['ingressRules']) ? $data['ingressRules'] : null;
         $this->container['egressRules'] = isset($data['egressRules']) ? $data['egressRules'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -328,6 +339,9 @@ class FirewallDetail implements ModelInterface, ArrayAccess
         }
         if ($this->container['egressRules'] === null) {
             $invalidProperties[] = "'egressRules' can't be null";
+        }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
         }
         return $invalidProperties;
     }
@@ -652,6 +666,30 @@ class FirewallDetail implements ModelInterface, ArrayAccess
     public function setEgressRules($egressRules)
     {
         $this->container['egressRules'] = $egressRules;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  参数解释： 网络ACL支持绑定的子网类型。 取值范围： normal：默认值，表示网络ACL支持绑定普通子网。 CloudDCN：表示网络ACL支持绑定CloudDCN子网。
+    *
+    * @return string
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string $type 参数解释： 网络ACL支持绑定的子网类型。 取值范围： normal：默认值，表示网络ACL支持绑定普通子网。 CloudDCN：表示网络ACL支持绑定CloudDCN子网。
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

@@ -22,6 +22,7 @@ class HtapLTSConfigResponseInstance implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**： HTAP标准版实例ID，此参数是实例的唯一标识。  **取值范围**：  只能由英文字母、数字组成，后缀为in17，长度为36个字符。
     * name  **参数解释**： HTAP标准版实例名称。  **取值范围**：  不涉及。
+    * mode  **参数解释**：  HTAP标准版实例模式。  **取值范围**：  - Cluster：集群模式。 - Single：单机模式。
     * engineName  **参数解释**： 引擎类型。  **取值范围**：  不涉及。
     * engineVersion  **参数解释**： 引擎版本。  **取值范围**：  不涉及。
     * status  **参数解释**： HTAP标准版实例状态。  **取值范围**：  不涉及。
@@ -33,6 +34,7 @@ class HtapLTSConfigResponseInstance implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'name' => 'string',
+            'mode' => 'string',
             'engineName' => 'string',
             'engineVersion' => 'string',
             'status' => 'string',
@@ -44,6 +46,7 @@ class HtapLTSConfigResponseInstance implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**： HTAP标准版实例ID，此参数是实例的唯一标识。  **取值范围**：  只能由英文字母、数字组成，后缀为in17，长度为36个字符。
     * name  **参数解释**： HTAP标准版实例名称。  **取值范围**：  不涉及。
+    * mode  **参数解释**：  HTAP标准版实例模式。  **取值范围**：  - Cluster：集群模式。 - Single：单机模式。
     * engineName  **参数解释**： 引擎类型。  **取值范围**：  不涉及。
     * engineVersion  **参数解释**： 引擎版本。  **取值范围**：  不涉及。
     * status  **参数解释**： HTAP标准版实例状态。  **取值范围**：  不涉及。
@@ -55,6 +58,7 @@ class HtapLTSConfigResponseInstance implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
+        'mode' => null,
         'engineName' => null,
         'engineVersion' => null,
         'status' => null,
@@ -87,6 +91,7 @@ class HtapLTSConfigResponseInstance implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  **参数解释**： HTAP标准版实例ID，此参数是实例的唯一标识。  **取值范围**：  只能由英文字母、数字组成，后缀为in17，长度为36个字符。
     * name  **参数解释**： HTAP标准版实例名称。  **取值范围**：  不涉及。
+    * mode  **参数解释**：  HTAP标准版实例模式。  **取值范围**：  - Cluster：集群模式。 - Single：单机模式。
     * engineName  **参数解释**： 引擎类型。  **取值范围**：  不涉及。
     * engineVersion  **参数解释**： 引擎版本。  **取值范围**：  不涉及。
     * status  **参数解释**： HTAP标准版实例状态。  **取值范围**：  不涉及。
@@ -98,6 +103,7 @@ class HtapLTSConfigResponseInstance implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'id' => 'id',
             'name' => 'name',
+            'mode' => 'mode',
             'engineName' => 'engine_name',
             'engineVersion' => 'engine_version',
             'status' => 'status',
@@ -109,6 +115,7 @@ class HtapLTSConfigResponseInstance implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**： HTAP标准版实例ID，此参数是实例的唯一标识。  **取值范围**：  只能由英文字母、数字组成，后缀为in17，长度为36个字符。
     * name  **参数解释**： HTAP标准版实例名称。  **取值范围**：  不涉及。
+    * mode  **参数解释**：  HTAP标准版实例模式。  **取值范围**：  - Cluster：集群模式。 - Single：单机模式。
     * engineName  **参数解释**： 引擎类型。  **取值范围**：  不涉及。
     * engineVersion  **参数解释**： 引擎版本。  **取值范围**：  不涉及。
     * status  **参数解释**： HTAP标准版实例状态。  **取值范围**：  不涉及。
@@ -120,6 +127,7 @@ class HtapLTSConfigResponseInstance implements ModelInterface, ArrayAccess
     protected static $setters = [
             'id' => 'setId',
             'name' => 'setName',
+            'mode' => 'setMode',
             'engineName' => 'setEngineName',
             'engineVersion' => 'setEngineVersion',
             'status' => 'setStatus',
@@ -131,6 +139,7 @@ class HtapLTSConfigResponseInstance implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**： HTAP标准版实例ID，此参数是实例的唯一标识。  **取值范围**：  只能由英文字母、数字组成，后缀为in17，长度为36个字符。
     * name  **参数解释**： HTAP标准版实例名称。  **取值范围**：  不涉及。
+    * mode  **参数解释**：  HTAP标准版实例模式。  **取值范围**：  - Cluster：集群模式。 - Single：单机模式。
     * engineName  **参数解释**： 引擎类型。  **取值范围**：  不涉及。
     * engineVersion  **参数解释**： 引擎版本。  **取值范围**：  不涉及。
     * status  **参数解释**： HTAP标准版实例状态。  **取值范围**：  不涉及。
@@ -142,6 +151,7 @@ class HtapLTSConfigResponseInstance implements ModelInterface, ArrayAccess
     protected static $getters = [
             'id' => 'getId',
             'name' => 'getName',
+            'mode' => 'getMode',
             'engineName' => 'getEngineName',
             'engineVersion' => 'getEngineVersion',
             'status' => 'getStatus',
@@ -209,6 +219,7 @@ class HtapLTSConfigResponseInstance implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
         $this->container['engineName'] = isset($data['engineName']) ? $data['engineName'] : null;
         $this->container['engineVersion'] = isset($data['engineVersion']) ? $data['engineVersion'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -242,6 +253,9 @@ class HtapLTSConfigResponseInstance implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['name']) < 2)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 2.";
             }
+        if ($this->container['mode'] === null) {
+            $invalidProperties[] = "'mode' can't be null";
+        }
         if ($this->container['engineName'] === null) {
             $invalidProperties[] = "'engineName' can't be null";
         }
@@ -340,6 +354,30 @@ class HtapLTSConfigResponseInstance implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets mode
+    *  **参数解释**：  HTAP标准版实例模式。  **取值范围**：  - Cluster：集群模式。 - Single：单机模式。
+    *
+    * @return string
+    */
+    public function getMode()
+    {
+        return $this->container['mode'];
+    }
+
+    /**
+    * Sets mode
+    *
+    * @param string $mode **参数解释**：  HTAP标准版实例模式。  **取值范围**：  - Cluster：集群模式。 - Single：单机模式。
+    *
+    * @return $this
+    */
+    public function setMode($mode)
+    {
+        $this->container['mode'] = $mode;
         return $this;
     }
 

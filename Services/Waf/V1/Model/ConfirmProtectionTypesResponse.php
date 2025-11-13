@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\RocketMQ\V2\Model;
+namespace HuaweiCloud\SDK\Waf\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SendMessageRep implements ModelInterface, ArrayAccess
+class ConfirmProtectionTypesResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,34 +17,30 @@ class SendMessageRep implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SendMessageRep';
+    protected static $openAPIModelName = 'ConfirmProtectionTypesResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * body  **参数解释**： 消息内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * propertyList  **参数解释**： 特性列表。
+    * total  总数
+    * items  类型名称
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'topic' => 'string',
-            'body' => 'string',
-            'propertyList' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\SendMessageProperties[]'
+            'total' => 'int',
+            'items' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * body  **参数解释**： 消息内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * propertyList  **参数解释**： 特性列表。
+    * total  总数
+    * items  类型名称
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'topic' => null,
-        'body' => null,
-        'propertyList' => null
+        'total' => null,
+        'items' => null
     ];
 
     /**
@@ -69,44 +66,38 @@ class SendMessageRep implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * body  **参数解释**： 消息内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * propertyList  **参数解释**： 特性列表。
+    * total  总数
+    * items  类型名称
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'topic' => 'topic',
-            'body' => 'body',
-            'propertyList' => 'property_list'
+            'total' => 'total',
+            'items' => 'items'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * body  **参数解释**： 消息内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * propertyList  **参数解释**： 特性列表。
+    * total  总数
+    * items  类型名称
     *
     * @var string[]
     */
     protected static $setters = [
-            'topic' => 'setTopic',
-            'body' => 'setBody',
-            'propertyList' => 'setPropertyList'
+            'total' => 'setTotal',
+            'items' => 'setItems'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * body  **参数解释**： 消息内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * propertyList  **参数解释**： 特性列表。
+    * total  总数
+    * items  类型名称
     *
     * @var string[]
     */
     protected static $getters = [
-            'topic' => 'getTopic',
-            'body' => 'getBody',
-            'propertyList' => 'getPropertyList'
+            'total' => 'getTotal',
+            'items' => 'getItems'
     ];
 
     /**
@@ -167,9 +158,8 @@ class SendMessageRep implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
-        $this->container['propertyList'] = isset($data['propertyList']) ? $data['propertyList'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
     }
 
     /**
@@ -195,74 +185,50 @@ class SendMessageRep implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets topic
-    *  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * Gets total
+    *  总数
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getTopic()
+    public function getTotal()
     {
-        return $this->container['topic'];
+        return $this->container['total'];
     }
 
     /**
-    * Sets topic
+    * Sets total
     *
-    * @param string|null $topic **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param int|null $total 总数
     *
     * @return $this
     */
-    public function setTopic($topic)
+    public function setTotal($total)
     {
-        $this->container['topic'] = $topic;
+        $this->container['total'] = $total;
         return $this;
     }
 
     /**
-    * Gets body
-    *  **参数解释**： 消息内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * Gets items
+    *  类型名称
     *
-    * @return string|null
+    * @return string[]|null
     */
-    public function getBody()
+    public function getItems()
     {
-        return $this->container['body'];
+        return $this->container['items'];
     }
 
     /**
-    * Sets body
+    * Sets items
     *
-    * @param string|null $body **参数解释**： 消息内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string[]|null $items 类型名称
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setItems($items)
     {
-        $this->container['body'] = $body;
-        return $this;
-    }
-
-    /**
-    * Gets propertyList
-    *  **参数解释**： 特性列表。
-    *
-    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\SendMessageProperties[]|null
-    */
-    public function getPropertyList()
-    {
-        return $this->container['propertyList'];
-    }
-
-    /**
-    * Sets propertyList
-    *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\SendMessageProperties[]|null $propertyList **参数解释**： 特性列表。
-    *
-    * @return $this
-    */
-    public function setPropertyList($propertyList)
-    {
-        $this->container['propertyList'] = $propertyList;
+        $this->container['items'] = $items;
         return $this;
     }
 

@@ -38,6 +38,7 @@ class CreateSmartChatRoomRequestBody implements ModelInterface, ArrayAccess
     * chatSubtitleConfig  chatSubtitleConfig
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * exitMuteThreshold  **参数解释**： 静默退出时长。
+    * enableSemanticAction  是否优先级加载模型资产
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class CreateSmartChatRoomRequestBody implements ModelInterface, ArrayAccess
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
             'chatSubtitleConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ChatSubtitleConfig',
             'chatVideoType' => 'string',
-            'exitMuteThreshold' => 'int'
+            'exitMuteThreshold' => 'int',
+            'enableSemanticAction' => 'bool'
     ];
 
     /**
@@ -82,6 +84,7 @@ class CreateSmartChatRoomRequestBody implements ModelInterface, ArrayAccess
     * chatSubtitleConfig  chatSubtitleConfig
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * exitMuteThreshold  **参数解释**： 静默退出时长。
+    * enableSemanticAction  是否优先级加载模型资产
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class CreateSmartChatRoomRequestBody implements ModelInterface, ArrayAccess
         'reviewConfig' => null,
         'chatSubtitleConfig' => null,
         'chatVideoType' => null,
-        'exitMuteThreshold' => 'int32'
+        'exitMuteThreshold' => 'int32',
+        'enableSemanticAction' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class CreateSmartChatRoomRequestBody implements ModelInterface, ArrayAccess
     * chatSubtitleConfig  chatSubtitleConfig
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * exitMuteThreshold  **参数解释**： 静默退出时长。
+    * enableSemanticAction  是否优先级加载模型资产
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class CreateSmartChatRoomRequestBody implements ModelInterface, ArrayAccess
             'reviewConfig' => 'review_config',
             'chatSubtitleConfig' => 'chat_subtitle_config',
             'chatVideoType' => 'chat_video_type',
-            'exitMuteThreshold' => 'exit_mute_threshold'
+            'exitMuteThreshold' => 'exit_mute_threshold',
+            'enableSemanticAction' => 'enable_semantic_action'
     ];
 
     /**
@@ -191,6 +197,7 @@ class CreateSmartChatRoomRequestBody implements ModelInterface, ArrayAccess
     * chatSubtitleConfig  chatSubtitleConfig
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * exitMuteThreshold  **参数解释**： 静默退出时长。
+    * enableSemanticAction  是否优先级加载模型资产
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class CreateSmartChatRoomRequestBody implements ModelInterface, ArrayAccess
             'reviewConfig' => 'setReviewConfig',
             'chatSubtitleConfig' => 'setChatSubtitleConfig',
             'chatVideoType' => 'setChatVideoType',
-            'exitMuteThreshold' => 'setExitMuteThreshold'
+            'exitMuteThreshold' => 'setExitMuteThreshold',
+            'enableSemanticAction' => 'setEnableSemanticAction'
     ];
 
     /**
@@ -235,6 +243,7 @@ class CreateSmartChatRoomRequestBody implements ModelInterface, ArrayAccess
     * chatSubtitleConfig  chatSubtitleConfig
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * exitMuteThreshold  **参数解释**： 静默退出时长。
+    * enableSemanticAction  是否优先级加载模型资产
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class CreateSmartChatRoomRequestBody implements ModelInterface, ArrayAccess
             'reviewConfig' => 'getReviewConfig',
             'chatSubtitleConfig' => 'getChatSubtitleConfig',
             'chatVideoType' => 'getChatVideoType',
-            'exitMuteThreshold' => 'getExitMuteThreshold'
+            'exitMuteThreshold' => 'getExitMuteThreshold',
+            'enableSemanticAction' => 'getEnableSemanticAction'
     ];
 
     /**
@@ -392,6 +402,7 @@ class CreateSmartChatRoomRequestBody implements ModelInterface, ArrayAccess
         $this->container['chatSubtitleConfig'] = isset($data['chatSubtitleConfig']) ? $data['chatSubtitleConfig'] : null;
         $this->container['chatVideoType'] = isset($data['chatVideoType']) ? $data['chatVideoType'] : null;
         $this->container['exitMuteThreshold'] = isset($data['exitMuteThreshold']) ? $data['exitMuteThreshold'] : null;
+        $this->container['enableSemanticAction'] = isset($data['enableSemanticAction']) ? $data['enableSemanticAction'] : null;
     }
 
     /**
@@ -920,6 +931,30 @@ class CreateSmartChatRoomRequestBody implements ModelInterface, ArrayAccess
     public function setExitMuteThreshold($exitMuteThreshold)
     {
         $this->container['exitMuteThreshold'] = $exitMuteThreshold;
+        return $this;
+    }
+
+    /**
+    * Gets enableSemanticAction
+    *  是否优先级加载模型资产
+    *
+    * @return bool|null
+    */
+    public function getEnableSemanticAction()
+    {
+        return $this->container['enableSemanticAction'];
+    }
+
+    /**
+    * Sets enableSemanticAction
+    *
+    * @param bool|null $enableSemanticAction 是否优先级加载模型资产
+    *
+    * @return $this
+    */
+    public function setEnableSemanticAction($enableSemanticAction)
+    {
+        $this->container['enableSemanticAction'] = $enableSemanticAction;
         return $this;
     }
 

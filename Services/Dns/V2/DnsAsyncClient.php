@@ -94,6 +94,74 @@ class DnsAsyncClient extends Client
     }
 
     /**
+     * 解析器访问日志关联VPC
+     *
+     * 解析器访问日志关联VPC。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function associateResolverQueryLogConfigAsync($request)
+    {
+        return $this->associateResolverQueryLogConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function associateResolverQueryLogConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/resolver/queryloggingconfig/{id}/associatevpc';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\AssociateResolverQueryLogConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\AssociateResolverQueryLogConfigRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 解析器转发规则关联VPC
      *
      * 解析器转发规则关联VPC。
@@ -226,6 +294,210 @@ class DnsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\AssociateRouterResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\AssociateRouterRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量创建公网记录集
+     *
+     * 提交批量创建公网记录集任务，返回任务ID。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateCombinedPublicRecordsetsTaskAsync($request)
+    {
+        return $this->batchCreateCombinedPublicRecordsetsTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function batchCreateCombinedPublicRecordsetsTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/operation-task/batch-create-combined-recordset';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchCreateCombinedPublicRecordsetsTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchCreateCombinedPublicRecordsetsTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量创建公网记录集
+     *
+     * 提交批量创建公网记录集任务，返回任务ID。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreatePublicRecordsetsTaskAsync($request)
+    {
+        return $this->batchCreatePublicRecordsetsTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function batchCreatePublicRecordsetsTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/operation-task/batch-create-recordset';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchCreatePublicRecordsetsTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchCreatePublicRecordsetsTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量创建公网域名
+     *
+     * 提交批量创建公网域名任务，返回任务ID。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreatePublicZonesTaskAsync($request)
+    {
+        return $this->batchCreatePublicZonesTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function batchCreatePublicZonesTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/operation-task/batch-create-zone';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchCreatePublicZonesTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchCreatePublicZonesTaskRequest',
             $asyncRequest = true);
     }
 
@@ -366,25 +638,26 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 批量删除域名下的记录集
+     * 批量删除公网记录集
      *
-     * 批量删除域名下的记录集，当删除的资源不存在时，则默认删除成功。
-     * 响应结果中只包含本次实际删除的资源。
-     * 支持公网域名和内网域名。
+     * 提交批量删除公网记录集任务，返回任务ID。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function batchDeleteRecordSetWithLineAsync($request)
+    public function batchDeletePublicRecordsetsTaskAsync($request)
     {
-        return $this->batchDeleteRecordSetWithLineAsyncWithHttpInfo($request);
+        return $this->batchDeletePublicRecordsetsTaskAsyncWithHttpInfo($request);
     }
     
-    public function batchDeleteRecordSetWithLineAsyncWithHttpInfo($request){
+    public function batchDeletePublicRecordsetsTaskAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2.1/zones/{zone_id}/recordsets';
+        $resourcePath = '/v2.1/operation-task/batch-delete-recordset';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -397,9 +670,6 @@ class DnsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['zoneId'] !== null) {
-            $pathParams['zone_id'] = $localVarParams['zoneId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -421,7 +691,7 @@ class DnsAsyncClient extends Client
         );
 
         return $this->callApi(
-            $method='DELETE',
+            $method='POST',
             $resourcePath,
             $pathParams,
             $queryParams,
@@ -429,9 +699,9 @@ class DnsAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteRecordSetWithLineResponse',
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeletePublicRecordsetsTaskResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteRecordSetWithLineRequest',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeletePublicRecordsetsTaskRequest',
             $asyncRequest = true);
     }
 
@@ -704,24 +974,26 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 批量修改记录集
+     * 批量转移公网域名
      *
-     * 批量修改记录集。属于原子性操作，请求记录集将全部完成修改，或不做任何修改。
-     * 仅公网域名支持。
+     * 提交批量转移公网域名任务，返回任务ID。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function batchUpdateRecordSetWithLineAsync($request)
+    public function batchTransferPublicZonesTaskAsync($request)
     {
-        return $this->batchUpdateRecordSetWithLineAsyncWithHttpInfo($request);
+        return $this->batchTransferPublicZonesTaskAsyncWithHttpInfo($request);
     }
     
-    public function batchUpdateRecordSetWithLineAsyncWithHttpInfo($request){
+    public function batchTransferPublicZonesTaskAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2.1/zones/{zone_id}/recordsets';
+        $resourcePath = '/v2.1/operation-task/batch-transfer';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -734,9 +1006,6 @@ class DnsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['zoneId'] !== null) {
-            $pathParams['zone_id'] = $localVarParams['zoneId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -758,7 +1027,7 @@ class DnsAsyncClient extends Client
         );
 
         return $this->callApi(
-            $method='PUT',
+            $method='POST',
             $resourcePath,
             $pathParams,
             $queryParams,
@@ -766,9 +1035,77 @@ class DnsAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSetWithLineResponse',
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchTransferPublicZonesTaskResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSetWithLineRequest',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchTransferPublicZonesTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量修改公网记录集
+     *
+     * 提交批量修改公网记录集任务，返回任务ID。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchUpdatePublicRecordsetsTaskAsync($request)
+    {
+        return $this->batchUpdatePublicRecordsetsTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function batchUpdatePublicRecordsetsTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/operation-task/batch-update-recordset';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchUpdatePublicRecordsetsTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchUpdatePublicRecordsetsTaskRequest',
             $asyncRequest = true);
     }
 
@@ -1239,23 +1576,23 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 批量线路创建记录集
+     * 创建解析器访问日志
      *
-     * 批量线路创建记录集。属于原子性操作，如果存在一个参数校验不通过，则创建失败。仅公网域名支持。
+     * 创建解析器访问日志。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function createRecordSetWithBatchLinesAsync($request)
+    public function createResolverQueryLogConfigAsync($request)
     {
-        return $this->createRecordSetWithBatchLinesAsyncWithHttpInfo($request);
+        return $this->createResolverQueryLogConfigAsyncWithHttpInfo($request);
     }
     
-    public function createRecordSetWithBatchLinesAsyncWithHttpInfo($request){
+    public function createResolverQueryLogConfigAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2.1/zones/{zone_id}/recordsets/batch/lines';
+        $resourcePath = '/v2/resolver/queryloggingconfig';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1268,9 +1605,6 @@ class DnsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['zoneId'] !== null) {
-            $pathParams['zone_id'] = $localVarParams['zoneId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1300,9 +1634,9 @@ class DnsAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithBatchLinesResponse',
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateResolverQueryLogConfigResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithBatchLinesRequest',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateResolverQueryLogConfigRequest',
             $asyncRequest = true);
     }
 
@@ -1368,6 +1702,142 @@ class DnsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateResolverRuleResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateResolverRuleRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建公网域名找回
+     *
+     * 创建公网域名找回请求。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createRetrievalAsync($request)
+    {
+        return $this->createRetrievalAsyncWithHttpInfo($request);
+    }
+    
+    public function createRetrievalAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/retrieval';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRetrievalResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRetrievalRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 验证公网域名找回
+     *
+     * 验证公网域名找回。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createRetrievalVerificationAsync($request)
+    {
+        return $this->createRetrievalVerificationAsyncWithHttpInfo($request);
+    }
+    
+    public function createRetrievalVerificationAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/retrieval/verification/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRetrievalVerificationResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRetrievalVerificationRequest',
             $asyncRequest = true);
     }
 
@@ -1771,6 +2241,71 @@ class DnsAsyncClient extends Client
     }
 
     /**
+     * 删除解析器访问日志
+     *
+     * 删除解析器访问日志。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteResolverQueryLogConfigAsync($request)
+    {
+        return $this->deleteResolverQueryLogConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteResolverQueryLogConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/resolver/queryloggingconfig/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteResolverQueryLogConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteResolverQueryLogConfigRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 删除解析器转发规则
      *
      * 删除解析器转发规则。
@@ -1975,6 +2510,74 @@ class DnsAsyncClient extends Client
     }
 
     /**
+     * 解析器访问日志解关联VPC
+     *
+     * 解析器访问日志解关联VPC。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function disassociateResolverQueryLogConfigAsync($request)
+    {
+        return $this->disassociateResolverQueryLogConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function disassociateResolverQueryLogConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/resolver/queryloggingconfig/{id}/disassociatevpc';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DisassociateResolverQueryLogConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DisassociateResolverQueryLogConfigRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 解析器转发规则解关联VPC
      *
      * 解析器转发规则解关联VPC。
@@ -2169,6 +2772,77 @@ class DnsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListApiVersionsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListApiVersionsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询批量操作任务列表
+     *
+     * 查询批量操作任务列表。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBatchOperationTasksAsync($request)
+    {
+        return $this->listBatchOperationTasksAsyncWithHttpInfo($request);
+    }
+    
+    public function listBatchOperationTasksAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/batch-operation-tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListBatchOperationTasksResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListBatchOperationTasksRequest',
             $asyncRequest = true);
     }
 
@@ -2813,6 +3487,77 @@ class DnsAsyncClient extends Client
     }
 
     /**
+     * 查询解析器访问日志列表
+     *
+     * 查询解析器访问日志列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listResolverQueryLogConfigsAsync($request)
+    {
+        return $this->listResolverQueryLogConfigsAsyncWithHttpInfo($request);
+    }
+    
+    public function listResolverQueryLogConfigsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/resolver/queryloggingconfig';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['vpcId'] !== null) {
+            $queryParams['vpc_id'] = $localVarParams['vpcId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListResolverQueryLogConfigsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListResolverQueryLogConfigsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询解析器转发规则列表
      *
      * 查询解析器转发规则列表。
@@ -3230,6 +3975,154 @@ class DnsAsyncClient extends Client
     }
 
     /**
+     * 查询批量操作任务
+     *
+     * 查询批量操作任务，分页返回失败条目。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showBatchOperationTaskAsync($request)
+    {
+        return $this->showBatchOperationTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function showBatchOperationTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/batch-operation-tasks/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['errorItemLimit'] !== null) {
+            $queryParams['error_item_limit'] = $localVarParams['errorItemLimit'];
+        }
+        if ($localVarParams['errorItemOffset'] !== null) {
+            $queryParams['error_item_offset'] = $localVarParams['errorItemOffset'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowBatchOperationTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowBatchOperationTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询公网域名的域名诊断
+     *
+     * 查询公网域名的域名诊断。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDomainDetectionAsync($request)
+    {
+        return $this->showDomainDetectionAsyncWithHttpInfo($request);
+    }
+    
+    public function showDomainDetectionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/zones/{zone_id}/detection';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $queryParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($localVarParams['zoneId'] !== null) {
+            $pathParams['zone_id'] = $localVarParams['zoneId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowDomainDetectionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowDomainDetectionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询租户配额
      *
      * 查询租户在DNS服务下的资源配额，包括公网域名配额、内网域名配额、记录集配额、反向解析配额、自定义线路配额、线路分组配额、入站终端节点配额、出站终端节点配额、转发规则配额等。
@@ -3291,6 +4184,80 @@ class DnsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowDomainQuotaResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowDomainQuotaRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询公网域名的邮箱域名
+     *
+     * 查询公网域名的邮箱域名。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showEmailRecordSetAsync($request)
+    {
+        return $this->showEmailRecordSetAsyncWithHttpInfo($request);
+    }
+    
+    public function showEmailRecordSetAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/zones/{zone_id}/email-recordsets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['zoneId'] !== null) {
+            $pathParams['zone_id'] = $localVarParams['zoneId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowEmailRecordSetResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowEmailRecordSetRequest',
             $asyncRequest = true);
     }
 
@@ -3691,6 +4658,71 @@ class DnsAsyncClient extends Client
     }
 
     /**
+     * 查询解析器访问日志
+     *
+     * 查询解析器访问日志。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showResolverQueryLogConfigAsync($request)
+    {
+        return $this->showResolverQueryLogConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function showResolverQueryLogConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/resolver/queryloggingconfig/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowResolverQueryLogConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowResolverQueryLogConfigRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询解析器转发规则
      *
      * 查询解析器转发规则。
@@ -3820,6 +4852,284 @@ class DnsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowResourceTagResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowResourceTagRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询公网域名找回
+     *
+     * 查询公网域名找回请求。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRetrievalAsync($request)
+    {
+        return $this->showRetrievalAsyncWithHttpInfo($request);
+    }
+    
+    public function showRetrievalAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/retrieval';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowRetrievalResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowRetrievalRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询公网域名找回结果
+     *
+     * 查询公网域名找回结果。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRetrievalVerificationAsync($request)
+    {
+        return $this->showRetrievalVerificationAsyncWithHttpInfo($request);
+    }
+    
+    public function showRetrievalVerificationAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/retrieval/verification/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowRetrievalVerificationResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowRetrievalVerificationRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询公网域名的网站域名
+     *
+     * 查询公网域名的网站域名。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showWebsiteRecordSetAsync($request)
+    {
+        return $this->showWebsiteRecordSetAsyncWithHttpInfo($request);
+    }
+    
+    public function showWebsiteRecordSetAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/zones/{zone_id}/website-recordsets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['zoneId'] !== null) {
+            $pathParams['zone_id'] = $localVarParams['zoneId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowWebsiteRecordSetResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowWebsiteRecordSetRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询公网域名的DNS服务器地址
+     *
+     * 查询域名当前DNS服务器地址及华为云提供的DNS服务器地址。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showZoneNameServerAsync($request)
+    {
+        return $this->showZoneNameServerAsyncWithHttpInfo($request);
+    }
+    
+    public function showZoneNameServerAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/public-zones/dns-servers/{domain_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $pathParams['domain_name'] = $localVarParams['domainName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowZoneNameServerResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowZoneNameServerRequest',
             $asyncRequest = true);
     }
 
@@ -4378,6 +5688,9 @@ class DnsAsyncClient extends Client
      *
      * 关闭公网域名的DNSSEC。
      * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
@@ -4443,6 +5756,9 @@ class DnsAsyncClient extends Client
      *
      * 开启公网域名的DNSSEC。
      * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+     * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
@@ -4507,6 +5823,9 @@ class DnsAsyncClient extends Client
      * 查询DNSSEC
      *
      * 查询公网域名的DNSSEC。
+     * 
+     * **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+     * **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4858,7 +6177,7 @@ class DnsAsyncClient extends Client
     /**
      * 查询租户记录集列表
      *
-     * 当您的记录集创建成功后，您可以通过调用此接口查询指定域名下的所有记录集信息，包括名称、ID、状态、所属域名、解析记录值、标签、TTL、创建时间、修改时间、描述等。
+     * 当您的记录集创建成功后，您可以通过调用此接口查询所有记录集信息，包括名称、ID、状态、所属域名、解析记录值、标签、TTL、创建时间、修改时间、描述等。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5404,6 +6723,213 @@ class DnsAsyncClient extends Client
     }
 
     /**
+     * 批量创建记录集
+     *
+     * 提交批量创建记录集任务，返回任务ID。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateRecordSetsTaskAsync($request)
+    {
+        return $this->batchCreateRecordSetsTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function batchCreateRecordSetsTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/zones/{zone_id}/recordsets/batch-create-task';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['zoneId'] !== null) {
+            $pathParams['zone_id'] = $localVarParams['zoneId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchCreateRecordSetsTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchCreateRecordSetsTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量删除域名下的记录集
+     *
+     * 批量删除域名下的记录集，当删除的资源不存在时，则默认删除成功。
+     * 响应结果中只包含本次实际删除的资源。
+     * 支持公网域名和内网域名。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteRecordSetWithLineAsync($request)
+    {
+        return $this->batchDeleteRecordSetWithLineAsyncWithHttpInfo($request);
+    }
+    
+    public function batchDeleteRecordSetWithLineAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/zones/{zone_id}/recordsets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['zoneId'] !== null) {
+            $pathParams['zone_id'] = $localVarParams['zoneId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteRecordSetWithLineResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteRecordSetWithLineRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量修改记录集
+     *
+     * 批量修改记录集。属于原子性操作，请求记录集将全部完成修改，或不做任何修改。
+     * 仅公网域名支持。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchUpdateRecordSetWithLineAsync($request)
+    {
+        return $this->batchUpdateRecordSetWithLineAsyncWithHttpInfo($request);
+    }
+    
+    public function batchUpdateRecordSetWithLineAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/zones/{zone_id}/recordsets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['zoneId'] !== null) {
+            $pathParams['zone_id'] = $localVarParams['zoneId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSetWithLineResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSetWithLineRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建弹性公网IP的反向解析记录
      *
      * 创建弹性公网IP的反向解析记录。
@@ -5465,6 +6991,74 @@ class DnsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreatePtrResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreatePtrRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量线路创建记录集
+     *
+     * 批量线路创建记录集。属于原子性操作，如果存在一个参数校验不通过，则创建失败。仅公网域名支持。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createRecordSetWithBatchLinesAsync($request)
+    {
+        return $this->createRecordSetWithBatchLinesAsyncWithHttpInfo($request);
+    }
+    
+    public function createRecordSetWithBatchLinesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/zones/{zone_id}/recordsets/batch/lines';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['zoneId'] !== null) {
+            $pathParams['zone_id'] = $localVarParams['zoneId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithBatchLinesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithBatchLinesRequest',
             $asyncRequest = true);
     }
 
@@ -5533,6 +7127,71 @@ class DnsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithLineResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithLineRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除批量创建记录集任务
+     *
+     * 删除批量创建记录集任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteBatchCreateRecordSetsTaskAsync($request)
+    {
+        return $this->deleteBatchCreateRecordSetsTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteBatchCreateRecordSetsTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/zones/{zone_id}/recordsets/batch-create-task';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['zoneId'] !== null) {
+            $pathParams['zone_id'] = $localVarParams['zoneId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteBatchCreateRecordSetsTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteBatchCreateRecordSetsTaskRequest',
             $asyncRequest = true);
     }
 
@@ -5826,7 +7485,7 @@ class DnsAsyncClient extends Client
     /**
      * 查询租户记录集列表
      *
-     * 当您的记录集创建成功后，您可以通过调用此接口查询单个记录集信息，包括名称、ID、状态、所属域名、解析记录值、标签、TTL、创建时间、修改时间、描述等。
+     * 当您的记录集创建成功后，您可以通过调用此接口查询所有记录集信息，包括名称、ID、状态、所属域名、解析记录值、标签、TTL、创建时间、修改时间、描述等。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5934,9 +7593,80 @@ class DnsAsyncClient extends Client
     }
 
     /**
+     * 查询系统线路
+     *
+     * 查询系统预置解析线路。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSystemLinesAsync($request)
+    {
+        return $this->listSystemLinesAsyncWithHttpInfo($request);
+    }
+    
+    public function listSystemLinesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/system-lines';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['locale'] !== null) {
+            $queryParams['locale'] = $localVarParams['locale'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListSystemLinesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListSystemLinesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 设置记录集状态
      *
-     * 当您的内网域名创建成功后，您可以通过调用此接口设置记录集的状态，包括暂停、启用。
+     * 当您的记录集创建成功后，您可以通过调用此接口设置记录集的状态，包括暂停、启用。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5998,6 +7728,77 @@ class DnsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\SetRecordSetsStatusResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\SetRecordSetsStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询批量创建记录集任务
+     *
+     * 查询批量创建记录集任务，分页返回失败条目。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showBatchCreateRecordSetsTaskAsync($request)
+    {
+        return $this->showBatchCreateRecordSetsTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function showBatchCreateRecordSetsTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/zones/{zone_id}/recordsets/batch-create-task';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['errorItemLimit'] !== null) {
+            $queryParams['error_item_limit'] = $localVarParams['errorItemLimit'];
+        }
+        if ($localVarParams['errorItemOffset'] !== null) {
+            $queryParams['error_item_offset'] = $localVarParams['errorItemOffset'];
+        }
+        if ($localVarParams['zoneId'] !== null) {
+            $pathParams['zone_id'] = $localVarParams['zoneId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowBatchCreateRecordSetsTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowBatchCreateRecordSetsTaskRequest',
             $asyncRequest = true);
     }
 
@@ -6069,7 +7870,7 @@ class DnsAsyncClient extends Client
     /**
      * 查询域名下的记录集列表
      *
-     * 当您的记录集创建成功后，您可以通过调用此接口查询单个记录集信息，包括名称、ID、状态、所属域名、解析记录值、标签、TTL、创建时间、修改时间、描述等。
+     * 当您的记录集创建成功后，您可以通过调用此接口查询指定域名下的所有记录集信息，包括名称、ID、状态、所属域名、解析记录值、标签、TTL、创建时间、修改时间、描述等。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

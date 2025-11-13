@@ -49,7 +49,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
             'isCssSql' => 'bool',
             'sqlAlarmRuleId' => 'string',
             'sqlAlarmRuleDescription' => 'string',
-            'sqlRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\SqlRequest[]',
+            'sqlRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\SqlRequestResponse[]',
             'frequency' => '\HuaweiCloud\SDK\Lts\V2\Model\FrequencyRespBody',
             'conditionExpression' => 'string',
             'topics' => '\HuaweiCloud\SDK\Lts\V2\Model\Topics[]',
@@ -655,7 +655,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     * Gets sqlRequests
     *  SQL详细信息
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\SqlRequest[]
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\SqlRequestResponse[]
     */
     public function getSqlRequests()
     {
@@ -665,7 +665,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets sqlRequests
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\SqlRequest[] $sqlRequests SQL详细信息
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\SqlRequestResponse[] $sqlRequests SQL详细信息
     *
     * @return $this
     */

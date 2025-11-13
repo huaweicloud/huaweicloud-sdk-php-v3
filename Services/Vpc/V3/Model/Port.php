@@ -23,7 +23,7 @@ class Port implements ModelInterface, ArrayAccess
     * adminStateUp  1、功能描述：管理状态 2、取值范围：true/false 3、约束：N/A 4、默认值：true 5、权限：N/A
     * bindinghostId  1、功能描述：主机ID 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
     * bindingprofile  1、功能描述：提供用户设置自定义信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * bindingvifDetails  1、功能描述：vif的详细信息， \"ovs_hybrid_plug\": 是否为ovs/bridge混合模式 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * bindingvifDetails  bindingvifDetails
     * bindingvifType  1、功能描述：端口的接口类型 (ovs/hw_veb等)(扩展属性) 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
     * bindingvnicType  1、功能描述：绑定的vNIC类型normal: 软交换direct: SRIOV硬直通（不支持） 2、取值范围：normal或者direct 3、约束：N/A 4、默认值：N/A 5、权限：N/A
     * createdAt  1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
@@ -54,7 +54,7 @@ class Port implements ModelInterface, ArrayAccess
     * extraDhcpOpts  功能说明：DHCP的扩展属性
     * positionType  1、功能描述：边缘场景位置类型 2、取值范围：N/A 3、约束：N/A 4、默认值：center 5、权限：N/A
     * instanceInfo  1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * tags  1、功能描述：端口标签 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * tags  参数解释： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。 取值范围： 不涉及。
     * allowedAddressPairs  1、功能描述：IP/Mac对列表 2、取值范围：N/A 3、约束： - IP地址不允许为 “0.0.0.0/0” - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 4、默认值：N/A 5、权限：N/A
     *
     * @var string[]
@@ -63,7 +63,7 @@ class Port implements ModelInterface, ArrayAccess
             'adminStateUp' => 'bool',
             'bindinghostId' => 'string',
             'bindingprofile' => 'object',
-            'bindingvifDetails' => 'object',
+            'bindingvifDetails' => '\HuaweiCloud\SDK\Vpc\V3\Model\BindingVifDetails',
             'bindingvifType' => 'string',
             'bindingvnicType' => 'string',
             'createdAt' => '\DateTime',
@@ -94,7 +94,7 @@ class Port implements ModelInterface, ArrayAccess
             'extraDhcpOpts' => '\HuaweiCloud\SDK\Vpc\V3\Model\ExtraDhcpOpt[]',
             'positionType' => 'string',
             'instanceInfo' => 'object',
-            'tags' => 'string[]',
+            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]',
             'allowedAddressPairs' => '\HuaweiCloud\SDK\Vpc\V3\Model\AllowedAddressPair[]'
     ];
 
@@ -103,7 +103,7 @@ class Port implements ModelInterface, ArrayAccess
     * adminStateUp  1、功能描述：管理状态 2、取值范围：true/false 3、约束：N/A 4、默认值：true 5、权限：N/A
     * bindinghostId  1、功能描述：主机ID 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
     * bindingprofile  1、功能描述：提供用户设置自定义信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * bindingvifDetails  1、功能描述：vif的详细信息， \"ovs_hybrid_plug\": 是否为ovs/bridge混合模式 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * bindingvifDetails  bindingvifDetails
     * bindingvifType  1、功能描述：端口的接口类型 (ovs/hw_veb等)(扩展属性) 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
     * bindingvnicType  1、功能描述：绑定的vNIC类型normal: 软交换direct: SRIOV硬直通（不支持） 2、取值范围：normal或者direct 3、约束：N/A 4、默认值：N/A 5、权限：N/A
     * createdAt  1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
@@ -134,7 +134,7 @@ class Port implements ModelInterface, ArrayAccess
     * extraDhcpOpts  功能说明：DHCP的扩展属性
     * positionType  1、功能描述：边缘场景位置类型 2、取值范围：N/A 3、约束：N/A 4、默认值：center 5、权限：N/A
     * instanceInfo  1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * tags  1、功能描述：端口标签 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * tags  参数解释： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。 取值范围： 不涉及。
     * allowedAddressPairs  1、功能描述：IP/Mac对列表 2、取值范围：N/A 3、约束： - IP地址不允许为 “0.0.0.0/0” - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 4、默认值：N/A 5、权限：N/A
     *
     * @var string[]
@@ -204,7 +204,7 @@ class Port implements ModelInterface, ArrayAccess
     * adminStateUp  1、功能描述：管理状态 2、取值范围：true/false 3、约束：N/A 4、默认值：true 5、权限：N/A
     * bindinghostId  1、功能描述：主机ID 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
     * bindingprofile  1、功能描述：提供用户设置自定义信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * bindingvifDetails  1、功能描述：vif的详细信息， \"ovs_hybrid_plug\": 是否为ovs/bridge混合模式 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * bindingvifDetails  bindingvifDetails
     * bindingvifType  1、功能描述：端口的接口类型 (ovs/hw_veb等)(扩展属性) 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
     * bindingvnicType  1、功能描述：绑定的vNIC类型normal: 软交换direct: SRIOV硬直通（不支持） 2、取值范围：normal或者direct 3、约束：N/A 4、默认值：N/A 5、权限：N/A
     * createdAt  1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
@@ -235,7 +235,7 @@ class Port implements ModelInterface, ArrayAccess
     * extraDhcpOpts  功能说明：DHCP的扩展属性
     * positionType  1、功能描述：边缘场景位置类型 2、取值范围：N/A 3、约束：N/A 4、默认值：center 5、权限：N/A
     * instanceInfo  1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * tags  1、功能描述：端口标签 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * tags  参数解释： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。 取值范围： 不涉及。
     * allowedAddressPairs  1、功能描述：IP/Mac对列表 2、取值范围：N/A 3、约束： - IP地址不允许为 “0.0.0.0/0” - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 4、默认值：N/A 5、权限：N/A
     *
     * @var string[]
@@ -284,7 +284,7 @@ class Port implements ModelInterface, ArrayAccess
     * adminStateUp  1、功能描述：管理状态 2、取值范围：true/false 3、约束：N/A 4、默认值：true 5、权限：N/A
     * bindinghostId  1、功能描述：主机ID 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
     * bindingprofile  1、功能描述：提供用户设置自定义信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * bindingvifDetails  1、功能描述：vif的详细信息， \"ovs_hybrid_plug\": 是否为ovs/bridge混合模式 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * bindingvifDetails  bindingvifDetails
     * bindingvifType  1、功能描述：端口的接口类型 (ovs/hw_veb等)(扩展属性) 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
     * bindingvnicType  1、功能描述：绑定的vNIC类型normal: 软交换direct: SRIOV硬直通（不支持） 2、取值范围：normal或者direct 3、约束：N/A 4、默认值：N/A 5、权限：N/A
     * createdAt  1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
@@ -315,7 +315,7 @@ class Port implements ModelInterface, ArrayAccess
     * extraDhcpOpts  功能说明：DHCP的扩展属性
     * positionType  1、功能描述：边缘场景位置类型 2、取值范围：N/A 3、约束：N/A 4、默认值：center 5、权限：N/A
     * instanceInfo  1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * tags  1、功能描述：端口标签 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * tags  参数解释： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。 取值范围： 不涉及。
     * allowedAddressPairs  1、功能描述：IP/Mac对列表 2、取值范围：N/A 3、约束： - IP地址不允许为 “0.0.0.0/0” - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 4、默认值：N/A 5、权限：N/A
     *
     * @var string[]
@@ -364,7 +364,7 @@ class Port implements ModelInterface, ArrayAccess
     * adminStateUp  1、功能描述：管理状态 2、取值范围：true/false 3、约束：N/A 4、默认值：true 5、权限：N/A
     * bindinghostId  1、功能描述：主机ID 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
     * bindingprofile  1、功能描述：提供用户设置自定义信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * bindingvifDetails  1、功能描述：vif的详细信息， \"ovs_hybrid_plug\": 是否为ovs/bridge混合模式 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * bindingvifDetails  bindingvifDetails
     * bindingvifType  1、功能描述：端口的接口类型 (ovs/hw_veb等)(扩展属性) 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
     * bindingvnicType  1、功能描述：绑定的vNIC类型normal: 软交换direct: SRIOV硬直通（不支持） 2、取值范围：normal或者direct 3、约束：N/A 4、默认值：N/A 5、权限：N/A
     * createdAt  1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
@@ -395,7 +395,7 @@ class Port implements ModelInterface, ArrayAccess
     * extraDhcpOpts  功能说明：DHCP的扩展属性
     * positionType  1、功能描述：边缘场景位置类型 2、取值范围：N/A 3、约束：N/A 4、默认值：center 5、权限：N/A
     * instanceInfo  1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * tags  1、功能描述：端口标签 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * tags  参数解释： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。 取值范围： 不涉及。
     * allowedAddressPairs  1、功能描述：IP/Mac对列表 2、取值范围：N/A 3、约束： - IP地址不允许为 “0.0.0.0/0” - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 4、默认值：N/A 5、权限：N/A
     *
     * @var string[]
@@ -739,9 +739,9 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets bindingvifDetails
-    *  1、功能描述：vif的详细信息， \"ovs_hybrid_plug\": 是否为ovs/bridge混合模式 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  bindingvifDetails
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\BindingVifDetails
     */
     public function getBindingvifDetails()
     {
@@ -751,7 +751,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets bindingvifDetails
     *
-    * @param object $bindingvifDetails 1、功能描述：vif的详细信息， \"ovs_hybrid_plug\": 是否为ovs/bridge混合模式 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\BindingVifDetails $bindingvifDetails bindingvifDetails
     *
     * @return $this
     */
@@ -1483,9 +1483,9 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  1、功能描述：端口标签 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  参数解释： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。 取值范围： 不涉及。
     *
-    * @return string[]
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]
     */
     public function getTags()
     {
@@ -1495,7 +1495,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string[] $tags 1、功能描述：端口标签 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[] $tags 参数解释： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。 取值范围： 不涉及。
     *
     * @return $this
     */

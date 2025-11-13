@@ -23,13 +23,13 @@ class TmsResourceInstancesRequest implements ModelInterface, ArrayAccess
     * offset  索引位置，默认为0
     * limit  查询记录数，默认为1000
     * action  操作标识
-    * tags  tags
-    * sysTags  sysTags
-    * matches  matches
+    * tags  标签
+    * sysTags  系统标签
+    * matches  tms资源标签
     * withoutAnyTag  无任何标签的资源筛选标识
-    * tagsAny  tagsAny
-    * notTagsAny  notTagsAny
-    * notTags  notTags
+    * tagsAny  任意标签的资源筛选标识
+    * notTagsAny  不标识于标签
+    * notTags  不标识于标签
     *
     * @var string[]
     */
@@ -51,13 +51,13 @@ class TmsResourceInstancesRequest implements ModelInterface, ArrayAccess
     * offset  索引位置，默认为0
     * limit  查询记录数，默认为1000
     * action  操作标识
-    * tags  tags
-    * sysTags  sysTags
-    * matches  matches
+    * tags  标签
+    * sysTags  系统标签
+    * matches  tms资源标签
     * withoutAnyTag  无任何标签的资源筛选标识
-    * tagsAny  tagsAny
-    * notTagsAny  notTagsAny
-    * notTags  notTags
+    * tagsAny  任意标签的资源筛选标识
+    * notTagsAny  不标识于标签
+    * notTags  不标识于标签
     *
     * @var string[]
     */
@@ -100,13 +100,13 @@ class TmsResourceInstancesRequest implements ModelInterface, ArrayAccess
     * offset  索引位置，默认为0
     * limit  查询记录数，默认为1000
     * action  操作标识
-    * tags  tags
-    * sysTags  sysTags
-    * matches  matches
+    * tags  标签
+    * sysTags  系统标签
+    * matches  tms资源标签
     * withoutAnyTag  无任何标签的资源筛选标识
-    * tagsAny  tagsAny
-    * notTagsAny  notTagsAny
-    * notTags  notTags
+    * tagsAny  任意标签的资源筛选标识
+    * notTagsAny  不标识于标签
+    * notTags  不标识于标签
     *
     * @var string[]
     */
@@ -128,13 +128,13 @@ class TmsResourceInstancesRequest implements ModelInterface, ArrayAccess
     * offset  索引位置，默认为0
     * limit  查询记录数，默认为1000
     * action  操作标识
-    * tags  tags
-    * sysTags  sysTags
-    * matches  matches
+    * tags  标签
+    * sysTags  系统标签
+    * matches  tms资源标签
     * withoutAnyTag  无任何标签的资源筛选标识
-    * tagsAny  tagsAny
-    * notTagsAny  notTagsAny
-    * notTags  notTags
+    * tagsAny  任意标签的资源筛选标识
+    * notTagsAny  不标识于标签
+    * notTags  不标识于标签
     *
     * @var string[]
     */
@@ -156,13 +156,13 @@ class TmsResourceInstancesRequest implements ModelInterface, ArrayAccess
     * offset  索引位置，默认为0
     * limit  查询记录数，默认为1000
     * action  操作标识
-    * tags  tags
-    * sysTags  sysTags
-    * matches  matches
+    * tags  标签
+    * sysTags  系统标签
+    * matches  tms资源标签
     * withoutAnyTag  无任何标签的资源筛选标识
-    * tagsAny  tagsAny
-    * notTagsAny  notTagsAny
-    * notTags  notTags
+    * tagsAny  任意标签的资源筛选标识
+    * notTagsAny  不标识于标签
+    * notTags  不标识于标签
     *
     * @var string[]
     */
@@ -345,7 +345,7 @@ class TmsResourceInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  tags
+    *  标签
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstancesTag[]|null
     */
@@ -357,7 +357,7 @@ class TmsResourceInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstancesTag[]|null $tags tags
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstancesTag[]|null $tags 标签
     *
     * @return $this
     */
@@ -369,7 +369,7 @@ class TmsResourceInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sysTags
-    *  sysTags
+    *  系统标签
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstancesTag[]|null
     */
@@ -381,7 +381,7 @@ class TmsResourceInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sysTags
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstancesTag[]|null $sysTags sysTags
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstancesTag[]|null $sysTags 系统标签
     *
     * @return $this
     */
@@ -393,7 +393,7 @@ class TmsResourceInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets matches
-    *  matches
+    *  tms资源标签
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceTag[]|null
     */
@@ -405,7 +405,7 @@ class TmsResourceInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets matches
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceTag[]|null $matches matches
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceTag[]|null $matches tms资源标签
     *
     * @return $this
     */
@@ -441,7 +441,7 @@ class TmsResourceInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tagsAny
-    *  tagsAny
+    *  任意标签的资源筛选标识
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstancesTag[]|null
     */
@@ -453,7 +453,7 @@ class TmsResourceInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tagsAny
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstancesTag[]|null $tagsAny tagsAny
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstancesTag[]|null $tagsAny 任意标签的资源筛选标识
     *
     * @return $this
     */
@@ -465,7 +465,7 @@ class TmsResourceInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets notTagsAny
-    *  notTagsAny
+    *  不标识于标签
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstancesTag[]|null
     */
@@ -477,7 +477,7 @@ class TmsResourceInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets notTagsAny
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstancesTag[]|null $notTagsAny notTagsAny
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstancesTag[]|null $notTagsAny 不标识于标签
     *
     * @return $this
     */
@@ -489,7 +489,7 @@ class TmsResourceInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets notTags
-    *  notTags
+    *  不标识于标签
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstancesTag[]|null
     */
@@ -501,7 +501,7 @@ class TmsResourceInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets notTags
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstancesTag[]|null $notTags notTags
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstancesTag[]|null $notTags 不标识于标签
     *
     * @return $this
     */

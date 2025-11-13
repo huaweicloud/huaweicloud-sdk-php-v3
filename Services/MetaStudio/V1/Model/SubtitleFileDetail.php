@@ -25,6 +25,7 @@ class SubtitleFileDetail implements ModelInterface, ArrayAccess
     * subtitleFileDownloadUrl  字幕文件下载链接。
     * subtitleFileUploadUrl  字幕文件上传链接。
     * generateTime  字幕文件生成时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * errorInfo  errorInfo
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class SubtitleFileDetail implements ModelInterface, ArrayAccess
             'subtitleFileState' => 'string',
             'subtitleFileDownloadUrl' => 'string',
             'subtitleFileUploadUrl' => 'string',
-            'generateTime' => 'string'
+            'generateTime' => 'string',
+            'errorInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse'
     ];
 
     /**
@@ -43,6 +45,7 @@ class SubtitleFileDetail implements ModelInterface, ArrayAccess
     * subtitleFileDownloadUrl  字幕文件下载链接。
     * subtitleFileUploadUrl  字幕文件上传链接。
     * generateTime  字幕文件生成时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * errorInfo  errorInfo
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class SubtitleFileDetail implements ModelInterface, ArrayAccess
         'subtitleFileState' => null,
         'subtitleFileDownloadUrl' => null,
         'subtitleFileUploadUrl' => null,
-        'generateTime' => null
+        'generateTime' => null,
+        'errorInfo' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class SubtitleFileDetail implements ModelInterface, ArrayAccess
     * subtitleFileDownloadUrl  字幕文件下载链接。
     * subtitleFileUploadUrl  字幕文件上传链接。
     * generateTime  字幕文件生成时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * errorInfo  errorInfo
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class SubtitleFileDetail implements ModelInterface, ArrayAccess
             'subtitleFileState' => 'subtitle_file_state',
             'subtitleFileDownloadUrl' => 'subtitle_file_download_url',
             'subtitleFileUploadUrl' => 'subtitle_file_upload_url',
-            'generateTime' => 'generate_time'
+            'generateTime' => 'generate_time',
+            'errorInfo' => 'error_info'
     ];
 
     /**
@@ -100,6 +106,7 @@ class SubtitleFileDetail implements ModelInterface, ArrayAccess
     * subtitleFileDownloadUrl  字幕文件下载链接。
     * subtitleFileUploadUrl  字幕文件上传链接。
     * generateTime  字幕文件生成时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * errorInfo  errorInfo
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class SubtitleFileDetail implements ModelInterface, ArrayAccess
             'subtitleFileState' => 'setSubtitleFileState',
             'subtitleFileDownloadUrl' => 'setSubtitleFileDownloadUrl',
             'subtitleFileUploadUrl' => 'setSubtitleFileUploadUrl',
-            'generateTime' => 'setGenerateTime'
+            'generateTime' => 'setGenerateTime',
+            'errorInfo' => 'setErrorInfo'
     ];
 
     /**
@@ -118,6 +126,7 @@ class SubtitleFileDetail implements ModelInterface, ArrayAccess
     * subtitleFileDownloadUrl  字幕文件下载链接。
     * subtitleFileUploadUrl  字幕文件上传链接。
     * generateTime  字幕文件生成时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * errorInfo  errorInfo
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class SubtitleFileDetail implements ModelInterface, ArrayAccess
             'subtitleFileState' => 'getSubtitleFileState',
             'subtitleFileDownloadUrl' => 'getSubtitleFileDownloadUrl',
             'subtitleFileUploadUrl' => 'getSubtitleFileUploadUrl',
-            'generateTime' => 'getGenerateTime'
+            'generateTime' => 'getGenerateTime',
+            'errorInfo' => 'getErrorInfo'
     ];
 
     /**
@@ -209,6 +219,7 @@ class SubtitleFileDetail implements ModelInterface, ArrayAccess
         $this->container['subtitleFileDownloadUrl'] = isset($data['subtitleFileDownloadUrl']) ? $data['subtitleFileDownloadUrl'] : null;
         $this->container['subtitleFileUploadUrl'] = isset($data['subtitleFileUploadUrl']) ? $data['subtitleFileUploadUrl'] : null;
         $this->container['generateTime'] = isset($data['generateTime']) ? $data['generateTime'] : null;
+        $this->container['errorInfo'] = isset($data['errorInfo']) ? $data['errorInfo'] : null;
     }
 
     /**
@@ -382,6 +393,30 @@ class SubtitleFileDetail implements ModelInterface, ArrayAccess
     public function setGenerateTime($generateTime)
     {
         $this->container['generateTime'] = $generateTime;
+        return $this;
+    }
+
+    /**
+    * Gets errorInfo
+    *  errorInfo
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse|null
+    */
+    public function getErrorInfo()
+    {
+        return $this->container['errorInfo'];
+    }
+
+    /**
+    * Sets errorInfo
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse|null $errorInfo errorInfo
+    *
+    * @return $this
+    */
+    public function setErrorInfo($errorInfo)
+    {
+        $this->container['errorInfo'] = $errorInfo;
         return $this;
     }
 

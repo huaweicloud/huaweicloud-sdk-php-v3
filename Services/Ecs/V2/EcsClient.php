@@ -292,6 +292,71 @@ class EcsClient extends Client
     }
 
     /**
+     * 云服务器组批量添加成员
+     *
+     * 将云服务器加入云服务器组。添加成功后，该云服务器与云服务器组中的其他成员尽量分散地创建在不同主机上。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchAddServerGroupMember($request)
+    {
+        return $this->batchAddServerGroupMemberWithHttpInfo($request);
+    }
+
+    public function batchAddServerGroupMemberWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cloudservers/os-server-groups/{server_group_id}/add_members';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverGroupId'] !== null) {
+            $pathParams['server_group_id'] = $localVarParams['serverGroupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchAddServerGroupMemberResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchAddServerGroupMemberRequest');
+    }
+
+    /**
      * 批量添加云服务器网卡
      *
      * 给云服务器添加一张或多张网卡。
@@ -486,6 +551,71 @@ class EcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchCreateServerTagsResponse',
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchCreateServerTagsRequest');
+    }
+
+    /**
+     * 云服务器组批量删除成员
+     *
+     * 将弹性云服务器移出云服务器组。移出后，该云服务器与云服务器组中的成员不再遵从反亲和策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteServerGroupMember($request)
+    {
+        return $this->batchDeleteServerGroupMemberWithHttpInfo($request);
+    }
+
+    public function batchDeleteServerGroupMemberWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cloudservers/os-server-groups/{server_group_id}/remove_members';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverGroupId'] !== null) {
+            $pathParams['server_group_id'] = $localVarParams['serverGroupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchDeleteServerGroupMemberResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchDeleteServerGroupMemberRequest');
     }
 
     /**

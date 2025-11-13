@@ -21,8 +21,8 @@ class ListAntileakagePolicyRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  防泄漏规则数量
-    * items  防泄漏规则列表
+    * total  防泄露规则数量
+    * items  防泄露规则列表
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListAntileakagePolicyRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  防泄漏规则数量
-    * items  防泄漏规则列表
+    * total  防泄露规则数量
+    * items  防泄露规则列表
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListAntileakagePolicyRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  防泄漏规则数量
-    * items  防泄漏规则列表
+    * total  防泄露规则数量
+    * items  防泄露规则列表
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListAntileakagePolicyRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  防泄漏规则数量
-    * items  防泄漏规则列表
+    * total  防泄露规则数量
+    * items  防泄露规则列表
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListAntileakagePolicyRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  防泄漏规则数量
-    * items  防泄漏规则列表
+    * total  防泄露规则数量
+    * items  防泄露规则列表
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListAntileakagePolicyRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  防泄漏规则数量
+    *  防泄露规则数量
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListAntileakagePolicyRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 防泄漏规则数量
+    * @param int|null $total 防泄露规则数量
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListAntileakagePolicyRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets items
-    *  防泄漏规则列表
+    *  防泄露规则列表
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\LeakageListInfo[]|null
     */
@@ -222,7 +222,7 @@ class ListAntileakagePolicyRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\LeakageListInfo[]|null $items 防泄漏规则列表
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\LeakageListInfo[]|null $items 防泄露规则列表
     *
     * @return $this
     */

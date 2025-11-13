@@ -25,6 +25,8 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
     * id  频道ID。频道唯一标识，为必填项。
     * name  频道名。可选配置
     * state  频道状态 - ON：频道下发成功后，自动启动拉流、转码、录制等功能 - OFF：仅保存频道信息，不启动频道
+    * mode  频道模式 ADD_CDN：一站式服务，源站和CDN绑在一起（默认） ONLY_OS：独立源站服务，CDN和源站解耦
+    * region  当mode是ONLY_OS时，该字段生效，表示频道所在Region
     * input  input
     * encoderSettings  转码模板配置
     * recordSettings  recordSettings
@@ -39,6 +41,8 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'state' => 'string',
+            'mode' => 'string',
+            'region' => 'string',
             'input' => '\HuaweiCloud\SDK\Live\V1\Model\InputStreamInfo',
             'encoderSettings' => '\HuaweiCloud\SDK\Live\V1\Model\ModifyOttChannelEncoderSettingsEncoderSettings[]',
             'recordSettings' => '\HuaweiCloud\SDK\Live\V1\Model\CreateOttChannelInfoReqRecordSettings',
@@ -53,6 +57,8 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
     * id  频道ID。频道唯一标识，为必填项。
     * name  频道名。可选配置
     * state  频道状态 - ON：频道下发成功后，自动启动拉流、转码、录制等功能 - OFF：仅保存频道信息，不启动频道
+    * mode  频道模式 ADD_CDN：一站式服务，源站和CDN绑在一起（默认） ONLY_OS：独立源站服务，CDN和源站解耦
+    * region  当mode是ONLY_OS时，该字段生效，表示频道所在Region
     * input  input
     * encoderSettings  转码模板配置
     * recordSettings  recordSettings
@@ -67,6 +73,8 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'state' => null,
+        'mode' => null,
+        'region' => null,
         'input' => null,
         'encoderSettings' => null,
         'recordSettings' => null,
@@ -102,6 +110,8 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
     * id  频道ID。频道唯一标识，为必填项。
     * name  频道名。可选配置
     * state  频道状态 - ON：频道下发成功后，自动启动拉流、转码、录制等功能 - OFF：仅保存频道信息，不启动频道
+    * mode  频道模式 ADD_CDN：一站式服务，源站和CDN绑在一起（默认） ONLY_OS：独立源站服务，CDN和源站解耦
+    * region  当mode是ONLY_OS时，该字段生效，表示频道所在Region
     * input  input
     * encoderSettings  转码模板配置
     * recordSettings  recordSettings
@@ -116,6 +126,8 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'state' => 'state',
+            'mode' => 'mode',
+            'region' => 'region',
             'input' => 'input',
             'encoderSettings' => 'encoder_settings',
             'recordSettings' => 'record_settings',
@@ -130,6 +142,8 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
     * id  频道ID。频道唯一标识，为必填项。
     * name  频道名。可选配置
     * state  频道状态 - ON：频道下发成功后，自动启动拉流、转码、录制等功能 - OFF：仅保存频道信息，不启动频道
+    * mode  频道模式 ADD_CDN：一站式服务，源站和CDN绑在一起（默认） ONLY_OS：独立源站服务，CDN和源站解耦
+    * region  当mode是ONLY_OS时，该字段生效，表示频道所在Region
     * input  input
     * encoderSettings  转码模板配置
     * recordSettings  recordSettings
@@ -144,6 +158,8 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'state' => 'setState',
+            'mode' => 'setMode',
+            'region' => 'setRegion',
             'input' => 'setInput',
             'encoderSettings' => 'setEncoderSettings',
             'recordSettings' => 'setRecordSettings',
@@ -158,6 +174,8 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
     * id  频道ID。频道唯一标识，为必填项。
     * name  频道名。可选配置
     * state  频道状态 - ON：频道下发成功后，自动启动拉流、转码、录制等功能 - OFF：仅保存频道信息，不启动频道
+    * mode  频道模式 ADD_CDN：一站式服务，源站和CDN绑在一起（默认） ONLY_OS：独立源站服务，CDN和源站解耦
+    * region  当mode是ONLY_OS时，该字段生效，表示频道所在Region
     * input  input
     * encoderSettings  转码模板配置
     * recordSettings  recordSettings
@@ -172,6 +190,8 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'state' => 'getState',
+            'mode' => 'getMode',
+            'region' => 'getRegion',
             'input' => 'getInput',
             'encoderSettings' => 'getEncoderSettings',
             'recordSettings' => 'getRecordSettings',
@@ -221,6 +241,8 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
     }
     const STATE_ON = 'ON';
     const STATE_OFF = 'OFF';
+    const MODE_ADD_CDN = 'ADD_CDN';
+    const MODE_ONLY_OS = 'ONLY_OS';
     
 
     /**
@@ -233,6 +255,19 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
         return [
             self::STATE_ON,
             self::STATE_OFF,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getModeAllowableValues()
+    {
+        return [
+            self::MODE_ADD_CDN,
+            self::MODE_ONLY_OS,
         ];
     }
 
@@ -257,6 +292,8 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['input'] = isset($data['input']) ? $data['input'] : null;
         $this->container['encoderSettings'] = isset($data['encoderSettings']) ? $data['encoderSettings'] : null;
         $this->container['recordSettings'] = isset($data['recordSettings']) ? $data['recordSettings'] : null;
@@ -322,6 +359,14 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['state']) < 2)) {
                 $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 2.";
             }
+            $allowedValues = $this->getModeAllowableValues();
+                if (!is_null($this->container['mode']) && !in_array($this->container['mode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'mode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['input'] === null) {
             $invalidProperties[] = "'input' can't be null";
         }
@@ -462,6 +507,54 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
     public function setState($state)
     {
         $this->container['state'] = $state;
+        return $this;
+    }
+
+    /**
+    * Gets mode
+    *  频道模式 ADD_CDN：一站式服务，源站和CDN绑在一起（默认） ONLY_OS：独立源站服务，CDN和源站解耦
+    *
+    * @return string|null
+    */
+    public function getMode()
+    {
+        return $this->container['mode'];
+    }
+
+    /**
+    * Sets mode
+    *
+    * @param string|null $mode 频道模式 ADD_CDN：一站式服务，源站和CDN绑在一起（默认） ONLY_OS：独立源站服务，CDN和源站解耦
+    *
+    * @return $this
+    */
+    public function setMode($mode)
+    {
+        $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets region
+    *  当mode是ONLY_OS时，该字段生效，表示频道所在Region
+    *
+    * @return string|null
+    */
+    public function getRegion()
+    {
+        return $this->container['region'];
+    }
+
+    /**
+    * Sets region
+    *
+    * @param string|null $region 当mode是ONLY_OS时，该字段生效，表示频道所在Region
+    *
+    * @return $this
+    */
+    public function setRegion($region)
+    {
+        $this->container['region'] = $region;
         return $this;
     }
 

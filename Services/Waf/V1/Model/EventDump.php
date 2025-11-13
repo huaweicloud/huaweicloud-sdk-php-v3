@@ -20,19 +20,19 @@ class EventDump implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * source  source
-    * state  state
-    * description  description
-    * id  id
-    * filename  filename
-    * obsname  obsname
-    * tenantid  tenantid
-    * start  start
-    * end  end
-    * total  total
-    * url  url
-    * urltimestamp  urltimestamp
-    * timestamp  timestamp
+    * source  文件来源
+    * state  文件状态
+    * description  事件描述
+    * id  文件id
+    * filename  文件名
+    * obsname  文件obs名
+    * tenantid  租户id
+    * start  统计开始时间
+    * end  统计截止时间
+    * total  总计事件数
+    * url  链接
+    * urltimestamp  更新url时间戳
+    * timestamp  文件生成时间戳
     *
     * @var string[]
     */
@@ -54,19 +54,19 @@ class EventDump implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * source  source
-    * state  state
-    * description  description
-    * id  id
-    * filename  filename
-    * obsname  obsname
-    * tenantid  tenantid
-    * start  start
-    * end  end
-    * total  total
-    * url  url
-    * urltimestamp  urltimestamp
-    * timestamp  timestamp
+    * source  文件来源
+    * state  文件状态
+    * description  事件描述
+    * id  文件id
+    * filename  文件名
+    * obsname  文件obs名
+    * tenantid  租户id
+    * start  统计开始时间
+    * end  统计截止时间
+    * total  总计事件数
+    * url  链接
+    * urltimestamp  更新url时间戳
+    * timestamp  文件生成时间戳
     *
     * @var string[]
     */
@@ -109,19 +109,19 @@ class EventDump implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * source  source
-    * state  state
-    * description  description
-    * id  id
-    * filename  filename
-    * obsname  obsname
-    * tenantid  tenantid
-    * start  start
-    * end  end
-    * total  total
-    * url  url
-    * urltimestamp  urltimestamp
-    * timestamp  timestamp
+    * source  文件来源
+    * state  文件状态
+    * description  事件描述
+    * id  文件id
+    * filename  文件名
+    * obsname  文件obs名
+    * tenantid  租户id
+    * start  统计开始时间
+    * end  统计截止时间
+    * total  总计事件数
+    * url  链接
+    * urltimestamp  更新url时间戳
+    * timestamp  文件生成时间戳
     *
     * @var string[]
     */
@@ -143,19 +143,19 @@ class EventDump implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * source  source
-    * state  state
-    * description  description
-    * id  id
-    * filename  filename
-    * obsname  obsname
-    * tenantid  tenantid
-    * start  start
-    * end  end
-    * total  total
-    * url  url
-    * urltimestamp  urltimestamp
-    * timestamp  timestamp
+    * source  文件来源
+    * state  文件状态
+    * description  事件描述
+    * id  文件id
+    * filename  文件名
+    * obsname  文件obs名
+    * tenantid  租户id
+    * start  统计开始时间
+    * end  统计截止时间
+    * total  总计事件数
+    * url  链接
+    * urltimestamp  更新url时间戳
+    * timestamp  文件生成时间戳
     *
     * @var string[]
     */
@@ -177,19 +177,19 @@ class EventDump implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * source  source
-    * state  state
-    * description  description
-    * id  id
-    * filename  filename
-    * obsname  obsname
-    * tenantid  tenantid
-    * start  start
-    * end  end
-    * total  total
-    * url  url
-    * urltimestamp  urltimestamp
-    * timestamp  timestamp
+    * source  文件来源
+    * state  文件状态
+    * description  事件描述
+    * id  文件id
+    * filename  文件名
+    * obsname  文件obs名
+    * tenantid  租户id
+    * start  统计开始时间
+    * end  统计截止时间
+    * total  总计事件数
+    * url  链接
+    * urltimestamp  更新url时间戳
+    * timestamp  文件生成时间戳
     *
     * @var string[]
     */
@@ -306,7 +306,7 @@ class EventDump implements ModelInterface, ArrayAccess
 
     /**
     * Gets source
-    *  source
+    *  文件来源
     *
     * @return string|null
     */
@@ -318,7 +318,7 @@ class EventDump implements ModelInterface, ArrayAccess
     /**
     * Sets source
     *
-    * @param string|null $source source
+    * @param string|null $source 文件来源
     *
     * @return $this
     */
@@ -330,7 +330,7 @@ class EventDump implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  state
+    *  文件状态
     *
     * @return string|null
     */
@@ -342,7 +342,7 @@ class EventDump implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state state
+    * @param string|null $state 文件状态
     *
     * @return $this
     */
@@ -354,7 +354,7 @@ class EventDump implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  description
+    *  事件描述
     *
     * @return string|null
     */
@@ -366,7 +366,7 @@ class EventDump implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description description
+    * @param string|null $description 事件描述
     *
     * @return $this
     */
@@ -378,7 +378,7 @@ class EventDump implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  id
+    *  文件id
     *
     * @return string|null
     */
@@ -390,7 +390,7 @@ class EventDump implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id id
+    * @param string|null $id 文件id
     *
     * @return $this
     */
@@ -402,7 +402,7 @@ class EventDump implements ModelInterface, ArrayAccess
 
     /**
     * Gets filename
-    *  filename
+    *  文件名
     *
     * @return string|null
     */
@@ -414,7 +414,7 @@ class EventDump implements ModelInterface, ArrayAccess
     /**
     * Sets filename
     *
-    * @param string|null $filename filename
+    * @param string|null $filename 文件名
     *
     * @return $this
     */
@@ -426,7 +426,7 @@ class EventDump implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsname
-    *  obsname
+    *  文件obs名
     *
     * @return string|null
     */
@@ -438,7 +438,7 @@ class EventDump implements ModelInterface, ArrayAccess
     /**
     * Sets obsname
     *
-    * @param string|null $obsname obsname
+    * @param string|null $obsname 文件obs名
     *
     * @return $this
     */
@@ -450,7 +450,7 @@ class EventDump implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantid
-    *  tenantid
+    *  租户id
     *
     * @return string|null
     */
@@ -462,7 +462,7 @@ class EventDump implements ModelInterface, ArrayAccess
     /**
     * Sets tenantid
     *
-    * @param string|null $tenantid tenantid
+    * @param string|null $tenantid 租户id
     *
     * @return $this
     */
@@ -474,7 +474,7 @@ class EventDump implements ModelInterface, ArrayAccess
 
     /**
     * Gets start
-    *  start
+    *  统计开始时间
     *
     * @return int|null
     */
@@ -486,7 +486,7 @@ class EventDump implements ModelInterface, ArrayAccess
     /**
     * Sets start
     *
-    * @param int|null $start start
+    * @param int|null $start 统计开始时间
     *
     * @return $this
     */
@@ -498,7 +498,7 @@ class EventDump implements ModelInterface, ArrayAccess
 
     /**
     * Gets end
-    *  end
+    *  统计截止时间
     *
     * @return int|null
     */
@@ -510,7 +510,7 @@ class EventDump implements ModelInterface, ArrayAccess
     /**
     * Sets end
     *
-    * @param int|null $end end
+    * @param int|null $end 统计截止时间
     *
     * @return $this
     */
@@ -522,7 +522,7 @@ class EventDump implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  total
+    *  总计事件数
     *
     * @return int|null
     */
@@ -534,7 +534,7 @@ class EventDump implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total total
+    * @param int|null $total 总计事件数
     *
     * @return $this
     */
@@ -546,7 +546,7 @@ class EventDump implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
-    *  url
+    *  链接
     *
     * @return string|null
     */
@@ -558,7 +558,7 @@ class EventDump implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param string|null $url url
+    * @param string|null $url 链接
     *
     * @return $this
     */
@@ -570,7 +570,7 @@ class EventDump implements ModelInterface, ArrayAccess
 
     /**
     * Gets urltimestamp
-    *  urltimestamp
+    *  更新url时间戳
     *
     * @return int|null
     */
@@ -582,7 +582,7 @@ class EventDump implements ModelInterface, ArrayAccess
     /**
     * Sets urltimestamp
     *
-    * @param int|null $urltimestamp urltimestamp
+    * @param int|null $urltimestamp 更新url时间戳
     *
     * @return $this
     */
@@ -594,7 +594,7 @@ class EventDump implements ModelInterface, ArrayAccess
 
     /**
     * Gets timestamp
-    *  timestamp
+    *  文件生成时间戳
     *
     * @return int|null
     */
@@ -606,7 +606,7 @@ class EventDump implements ModelInterface, ArrayAccess
     /**
     * Sets timestamp
     *
-    * @param int|null $timestamp timestamp
+    * @param int|null $timestamp 文件生成时间戳
     *
     * @return $this
     */

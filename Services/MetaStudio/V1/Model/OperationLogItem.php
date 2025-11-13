@@ -22,7 +22,7 @@ class OperationLogItem implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * time  操作时间
     * action  操作名称,当前已有的action为CREATE_JOB(创建任务),COMMIT_JOB(提交任务),SYSTEM_AUDIT_PASS(系统审核通过),ADMIN_AUDIT_PASS(管理员审核通过),AUDIT_NOT_PASS(审核未通过),TRAINING_FINISH(训练完成),UPLOADING_MODEL(上传语音模型),COMPLETE_JOB(任务完成)
-    * operator  操作者,USER(用户),ADMIN(管理员),SYSTEM(用户)
+    * operator  操作者,USER(用户),ADMIN(管理员),SYSTEM(系统用户)
     * externalInfo  externalInfo
     *
     * @var string[]
@@ -38,7 +38,7 @@ class OperationLogItem implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * time  操作时间
     * action  操作名称,当前已有的action为CREATE_JOB(创建任务),COMMIT_JOB(提交任务),SYSTEM_AUDIT_PASS(系统审核通过),ADMIN_AUDIT_PASS(管理员审核通过),AUDIT_NOT_PASS(审核未通过),TRAINING_FINISH(训练完成),UPLOADING_MODEL(上传语音模型),COMPLETE_JOB(任务完成)
-    * operator  操作者,USER(用户),ADMIN(管理员),SYSTEM(用户)
+    * operator  操作者,USER(用户),ADMIN(管理员),SYSTEM(系统用户)
     * externalInfo  externalInfo
     *
     * @var string[]
@@ -75,7 +75,7 @@ class OperationLogItem implements ModelInterface, ArrayAccess
     * and the value is the original name
     * time  操作时间
     * action  操作名称,当前已有的action为CREATE_JOB(创建任务),COMMIT_JOB(提交任务),SYSTEM_AUDIT_PASS(系统审核通过),ADMIN_AUDIT_PASS(管理员审核通过),AUDIT_NOT_PASS(审核未通过),TRAINING_FINISH(训练完成),UPLOADING_MODEL(上传语音模型),COMPLETE_JOB(任务完成)
-    * operator  操作者,USER(用户),ADMIN(管理员),SYSTEM(用户)
+    * operator  操作者,USER(用户),ADMIN(管理员),SYSTEM(系统用户)
     * externalInfo  externalInfo
     *
     * @var string[]
@@ -91,7 +91,7 @@ class OperationLogItem implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * time  操作时间
     * action  操作名称,当前已有的action为CREATE_JOB(创建任务),COMMIT_JOB(提交任务),SYSTEM_AUDIT_PASS(系统审核通过),ADMIN_AUDIT_PASS(管理员审核通过),AUDIT_NOT_PASS(审核未通过),TRAINING_FINISH(训练完成),UPLOADING_MODEL(上传语音模型),COMPLETE_JOB(任务完成)
-    * operator  操作者,USER(用户),ADMIN(管理员),SYSTEM(用户)
+    * operator  操作者,USER(用户),ADMIN(管理员),SYSTEM(系统用户)
     * externalInfo  externalInfo
     *
     * @var string[]
@@ -107,7 +107,7 @@ class OperationLogItem implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * time  操作时间
     * action  操作名称,当前已有的action为CREATE_JOB(创建任务),COMMIT_JOB(提交任务),SYSTEM_AUDIT_PASS(系统审核通过),ADMIN_AUDIT_PASS(管理员审核通过),AUDIT_NOT_PASS(审核未通过),TRAINING_FINISH(训练完成),UPLOADING_MODEL(上传语音模型),COMPLETE_JOB(任务完成)
-    * operator  操作者,USER(用户),ADMIN(管理员),SYSTEM(用户)
+    * operator  操作者,USER(用户),ADMIN(管理员),SYSTEM(系统用户)
     * externalInfo  externalInfo
     *
     * @var string[]
@@ -273,7 +273,7 @@ class OperationLogItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets operator
-    *  操作者,USER(用户),ADMIN(管理员),SYSTEM(用户)
+    *  操作者,USER(用户),ADMIN(管理员),SYSTEM(系统用户)
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class OperationLogItem implements ModelInterface, ArrayAccess
     /**
     * Sets operator
     *
-    * @param string|null $operator 操作者,USER(用户),ADMIN(管理员),SYSTEM(用户)
+    * @param string|null $operator 操作者,USER(用户),ADMIN(管理员),SYSTEM(系统用户)
     *
     * @return $this
     */

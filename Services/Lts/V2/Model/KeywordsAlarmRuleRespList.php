@@ -28,12 +28,9 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * keywordsRequests  关键词详细信息
     * frequency  frequency
     * keywordsAlarmLevel  告警级别
-    * keywordsAlarmSend  是否发送
     * domainId  domainId
     * createTime  创建时间（毫秒时间戳）
     * updateTime  更新时间（毫秒时间戳）
-    * topics  通知主题
-    * templateName  消息模板名称
     * status  告警状态
     * triggerConditionCount  触发条件：触发周期;默认为1
     * triggerConditionFrequency  触发条件：触发次数;默认为1
@@ -41,6 +38,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * recoveryPolicy  恢复策略周期;默认为3
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
     *
     * @var string[]
     */
@@ -50,22 +48,20 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
             'keywordsAlarmRuleName' => 'string',
             'keywordsAlarmRuleDescription' => 'string',
             'conditionExpression' => 'string',
-            'keywordsRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\KeywordsRequest[]',
+            'keywordsRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\KeywordsRequestResponse[]',
             'frequency' => '\HuaweiCloud\SDK\Lts\V2\Model\Frequency',
             'keywordsAlarmLevel' => 'string',
-            'keywordsAlarmSend' => 'bool',
             'domainId' => 'string',
             'createTime' => 'int',
             'updateTime' => 'int',
-            'topics' => '\HuaweiCloud\SDK\Lts\V2\Model\Topics[]',
-            'templateName' => 'string',
             'status' => 'string',
             'triggerConditionCount' => 'int',
             'triggerConditionFrequency' => 'int',
             'whetherRecoveryPolicy' => 'bool',
             'recoveryPolicy' => 'int',
             'notificationFrequency' => 'int',
-            'alarmActionRuleName' => 'string'
+            'alarmActionRuleName' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsResBody[]'
     ];
 
     /**
@@ -78,12 +74,9 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * keywordsRequests  关键词详细信息
     * frequency  frequency
     * keywordsAlarmLevel  告警级别
-    * keywordsAlarmSend  是否发送
     * domainId  domainId
     * createTime  创建时间（毫秒时间戳）
     * updateTime  更新时间（毫秒时间戳）
-    * topics  通知主题
-    * templateName  消息模板名称
     * status  告警状态
     * triggerConditionCount  触发条件：触发周期;默认为1
     * triggerConditionFrequency  触发条件：触发次数;默认为1
@@ -91,6 +84,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * recoveryPolicy  恢复策略周期;默认为3
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
     *
     * @var string[]
     */
@@ -103,19 +97,17 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
         'keywordsRequests' => null,
         'frequency' => null,
         'keywordsAlarmLevel' => null,
-        'keywordsAlarmSend' => null,
         'domainId' => null,
         'createTime' => 'int64',
         'updateTime' => 'int64',
-        'topics' => null,
-        'templateName' => null,
         'status' => null,
         'triggerConditionCount' => 'int32',
         'triggerConditionFrequency' => 'int32',
         'whetherRecoveryPolicy' => null,
         'recoveryPolicy' => 'int32',
         'notificationFrequency' => 'int32',
-        'alarmActionRuleName' => null
+        'alarmActionRuleName' => null,
+        'tags' => null
     ];
 
     /**
@@ -149,12 +141,9 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * keywordsRequests  关键词详细信息
     * frequency  frequency
     * keywordsAlarmLevel  告警级别
-    * keywordsAlarmSend  是否发送
     * domainId  domainId
     * createTime  创建时间（毫秒时间戳）
     * updateTime  更新时间（毫秒时间戳）
-    * topics  通知主题
-    * templateName  消息模板名称
     * status  告警状态
     * triggerConditionCount  触发条件：触发周期;默认为1
     * triggerConditionFrequency  触发条件：触发次数;默认为1
@@ -162,6 +151,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * recoveryPolicy  恢复策略周期;默认为3
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
     *
     * @var string[]
     */
@@ -174,19 +164,17 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
             'keywordsRequests' => 'keywords_requests',
             'frequency' => 'frequency',
             'keywordsAlarmLevel' => 'keywords_alarm_level',
-            'keywordsAlarmSend' => 'keywords_alarm_send',
             'domainId' => 'domain_id',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
-            'topics' => 'topics',
-            'templateName' => 'template_name',
             'status' => 'status',
             'triggerConditionCount' => 'trigger_condition_count',
             'triggerConditionFrequency' => 'trigger_condition_frequency',
             'whetherRecoveryPolicy' => 'whether_recovery_policy',
             'recoveryPolicy' => 'recovery_policy',
             'notificationFrequency' => 'notification_frequency',
-            'alarmActionRuleName' => 'alarm_action_rule_name'
+            'alarmActionRuleName' => 'alarm_action_rule_name',
+            'tags' => 'tags'
     ];
 
     /**
@@ -199,12 +187,9 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * keywordsRequests  关键词详细信息
     * frequency  frequency
     * keywordsAlarmLevel  告警级别
-    * keywordsAlarmSend  是否发送
     * domainId  domainId
     * createTime  创建时间（毫秒时间戳）
     * updateTime  更新时间（毫秒时间戳）
-    * topics  通知主题
-    * templateName  消息模板名称
     * status  告警状态
     * triggerConditionCount  触发条件：触发周期;默认为1
     * triggerConditionFrequency  触发条件：触发次数;默认为1
@@ -212,6 +197,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * recoveryPolicy  恢复策略周期;默认为3
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
     *
     * @var string[]
     */
@@ -224,19 +210,17 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
             'keywordsRequests' => 'setKeywordsRequests',
             'frequency' => 'setFrequency',
             'keywordsAlarmLevel' => 'setKeywordsAlarmLevel',
-            'keywordsAlarmSend' => 'setKeywordsAlarmSend',
             'domainId' => 'setDomainId',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
-            'topics' => 'setTopics',
-            'templateName' => 'setTemplateName',
             'status' => 'setStatus',
             'triggerConditionCount' => 'setTriggerConditionCount',
             'triggerConditionFrequency' => 'setTriggerConditionFrequency',
             'whetherRecoveryPolicy' => 'setWhetherRecoveryPolicy',
             'recoveryPolicy' => 'setRecoveryPolicy',
             'notificationFrequency' => 'setNotificationFrequency',
-            'alarmActionRuleName' => 'setAlarmActionRuleName'
+            'alarmActionRuleName' => 'setAlarmActionRuleName',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -249,12 +233,9 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * keywordsRequests  关键词详细信息
     * frequency  frequency
     * keywordsAlarmLevel  告警级别
-    * keywordsAlarmSend  是否发送
     * domainId  domainId
     * createTime  创建时间（毫秒时间戳）
     * updateTime  更新时间（毫秒时间戳）
-    * topics  通知主题
-    * templateName  消息模板名称
     * status  告警状态
     * triggerConditionCount  触发条件：触发周期;默认为1
     * triggerConditionFrequency  触发条件：触发次数;默认为1
@@ -262,6 +243,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * recoveryPolicy  恢复策略周期;默认为3
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
     *
     * @var string[]
     */
@@ -274,19 +256,17 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
             'keywordsRequests' => 'getKeywordsRequests',
             'frequency' => 'getFrequency',
             'keywordsAlarmLevel' => 'getKeywordsAlarmLevel',
-            'keywordsAlarmSend' => 'getKeywordsAlarmSend',
             'domainId' => 'getDomainId',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
-            'topics' => 'getTopics',
-            'templateName' => 'getTemplateName',
             'status' => 'getStatus',
             'triggerConditionCount' => 'getTriggerConditionCount',
             'triggerConditionFrequency' => 'getTriggerConditionFrequency',
             'whetherRecoveryPolicy' => 'getWhetherRecoveryPolicy',
             'recoveryPolicy' => 'getRecoveryPolicy',
             'notificationFrequency' => 'getNotificationFrequency',
-            'alarmActionRuleName' => 'getAlarmActionRuleName'
+            'alarmActionRuleName' => 'getAlarmActionRuleName',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -416,12 +396,9 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
         $this->container['keywordsRequests'] = isset($data['keywordsRequests']) ? $data['keywordsRequests'] : null;
         $this->container['frequency'] = isset($data['frequency']) ? $data['frequency'] : null;
         $this->container['keywordsAlarmLevel'] = isset($data['keywordsAlarmLevel']) ? $data['keywordsAlarmLevel'] : null;
-        $this->container['keywordsAlarmSend'] = isset($data['keywordsAlarmSend']) ? $data['keywordsAlarmSend'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
-        $this->container['topics'] = isset($data['topics']) ? $data['topics'] : null;
-        $this->container['templateName'] = isset($data['templateName']) ? $data['templateName'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['triggerConditionCount'] = isset($data['triggerConditionCount']) ? $data['triggerConditionCount'] : null;
         $this->container['triggerConditionFrequency'] = isset($data['triggerConditionFrequency']) ? $data['triggerConditionFrequency'] : null;
@@ -429,6 +406,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
         $this->container['recoveryPolicy'] = isset($data['recoveryPolicy']) ? $data['recoveryPolicy'] : null;
         $this->container['notificationFrequency'] = isset($data['notificationFrequency']) ? $data['notificationFrequency'] : null;
         $this->container['alarmActionRuleName'] = isset($data['alarmActionRuleName']) ? $data['alarmActionRuleName'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -498,9 +476,6 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['keywordsAlarmSend'] === null) {
-            $invalidProperties[] = "'keywordsAlarmSend' can't be null";
-        }
         if ($this->container['domainId'] === null) {
             $invalidProperties[] = "'domainId' can't be null";
         }
@@ -528,9 +503,6 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
             if (($this->container['updateTime'] < 13)) {
                 $invalidProperties[] = "invalid value for 'updateTime', must be bigger than or equal to 13.";
             }
-        if ($this->container['topics'] === null) {
-            $invalidProperties[] = "'topics' can't be null";
-        }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -688,7 +660,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * Gets keywordsRequests
     *  关键词详细信息
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\KeywordsRequest[]
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\KeywordsRequestResponse[]
     */
     public function getKeywordsRequests()
     {
@@ -698,7 +670,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets keywordsRequests
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\KeywordsRequest[] $keywordsRequests 关键词详细信息
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\KeywordsRequestResponse[] $keywordsRequests 关键词详细信息
     *
     * @return $this
     */
@@ -753,30 +725,6 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     public function setKeywordsAlarmLevel($keywordsAlarmLevel)
     {
         $this->container['keywordsAlarmLevel'] = $keywordsAlarmLevel;
-        return $this;
-    }
-
-    /**
-    * Gets keywordsAlarmSend
-    *  是否发送
-    *
-    * @return bool
-    */
-    public function getKeywordsAlarmSend()
-    {
-        return $this->container['keywordsAlarmSend'];
-    }
-
-    /**
-    * Sets keywordsAlarmSend
-    *
-    * @param bool $keywordsAlarmSend 是否发送
-    *
-    * @return $this
-    */
-    public function setKeywordsAlarmSend($keywordsAlarmSend)
-    {
-        $this->container['keywordsAlarmSend'] = $keywordsAlarmSend;
         return $this;
     }
 
@@ -849,54 +797,6 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     public function setUpdateTime($updateTime)
     {
         $this->container['updateTime'] = $updateTime;
-        return $this;
-    }
-
-    /**
-    * Gets topics
-    *  通知主题
-    *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\Topics[]
-    */
-    public function getTopics()
-    {
-        return $this->container['topics'];
-    }
-
-    /**
-    * Sets topics
-    *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\Topics[] $topics 通知主题
-    *
-    * @return $this
-    */
-    public function setTopics($topics)
-    {
-        $this->container['topics'] = $topics;
-        return $this;
-    }
-
-    /**
-    * Gets templateName
-    *  消息模板名称
-    *
-    * @return string|null
-    */
-    public function getTemplateName()
-    {
-        return $this->container['templateName'];
-    }
-
-    /**
-    * Sets templateName
-    *
-    * @param string|null $templateName 消息模板名称
-    *
-    * @return $this
-    */
-    public function setTemplateName($templateName)
-    {
-        $this->container['templateName'] = $templateName;
         return $this;
     }
 
@@ -1065,6 +965,30 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     public function setAlarmActionRuleName($alarmActionRuleName)
     {
         $this->container['alarmActionRuleName'] = $alarmActionRuleName;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\TagsResBody[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\TagsResBody[]|null $tags **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

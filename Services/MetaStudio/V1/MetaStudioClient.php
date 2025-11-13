@@ -669,6 +669,296 @@ class MetaStudioClient extends Client
     }
 
     /**
+     * 创建语音录制配置
+     *
+     * 该接口用于创建语音录制配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAudioRecordConfig($request)
+    {
+        return $this->createAudioRecordConfigWithHttpInfo($request);
+    }
+
+    public function createAudioRecordConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/digital-human-chat/audio-record-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateAudioRecordConfigResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateAudioRecordConfigRequest');
+    }
+
+    /**
+     * 删除语音录制配置
+     *
+     * 该接口用于删除语音录制配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteAudioRecordConfig($request)
+    {
+        return $this->deleteAudioRecordConfigWithHttpInfo($request);
+    }
+
+    public function deleteAudioRecordConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/digital-human-chat/audio-record-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\DeleteAudioRecordConfigResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\DeleteAudioRecordConfigRequest');
+    }
+
+    /**
+     * 查询语音录制配置
+     *
+     * 该接口用于查询语音录制配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAudioRecordConfig($request)
+    {
+        return $this->showAudioRecordConfigWithHttpInfo($request);
+    }
+
+    public function showAudioRecordConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/digital-human-chat/audio-record-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowAudioRecordConfigResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowAudioRecordConfigRequest');
+    }
+
+    /**
+     * 修改语音录制配置
+     *
+     * 该接口用于修改语音录制配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateAudioRecordConfig($request)
+    {
+        return $this->updateAudioRecordConfigWithHttpInfo($request);
+    }
+
+    public function updateAudioRecordConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/digital-human-chat/audio-record-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateAudioRecordConfigResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateAudioRecordConfigRequest');
+    }
+
+    /**
      * 删除导入导出任务
      *
      * 删除导入导出任务
@@ -1186,6 +1476,184 @@ class MetaStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowTaskResponse',
             $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowTaskRequest');
+    }
+
+    /**
+     * 查询用户数据概览
+     *
+     * 获取周期内用户的资源使用情况概览
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSummaryUsageData($request)
+    {
+        return $this->showSummaryUsageDataWithHttpInfo($request);
+    }
+
+    public function showSummaryUsageDataWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/data-analysis-summary';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['userId'] !== null) {
+            $queryParams['user_id'] = $localVarParams['userId'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $queryParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['businessType'] !== null) {
+            $queryParams['business_type'] = $localVarParams['businessType'];
+        }
+        if ($localVarParams['unit'] !== null) {
+            $queryParams['unit'] = $localVarParams['unit'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowSummaryUsageDataResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowSummaryUsageDataRequest');
+    }
+
+    /**
+     * 查询用户数据详情
+     *
+     * 获取周期内用户的资源使用情况
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showUsageData($request)
+    {
+        return $this->showUsageDataWithHttpInfo($request);
+    }
+
+    public function showUsageDataWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/data-analysis';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['userId'] !== null) {
+            $queryParams['user_id'] = $localVarParams['userId'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $queryParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['businessType'] !== null) {
+            $queryParams['business_type'] = $localVarParams['businessType'];
+        }
+        if ($localVarParams['unit'] !== null) {
+            $queryParams['unit'] = $localVarParams['unit'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowUsageDataResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowUsageDataRequest');
     }
 
     /**
@@ -6603,6 +7071,83 @@ class MetaStudioClient extends Client
     }
 
     /**
+     * 互动规则库增加规则
+     *
+     * 该接口用于互动规则库增加规则。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createInteractionRule($request)
+    {
+        return $this->createInteractionRuleWithHttpInfo($request);
+    }
+
+    public function createInteractionRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/smart-live-interaction-rule-groups/{group_id}/rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateInteractionRuleResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateInteractionRuleRequest');
+    }
+
+    /**
      * 创建智能直播间互动规则库
      *
      * 该接口用于创建智能直播间互动规则库。
@@ -6674,6 +7219,83 @@ class MetaStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateInteractionRuleGroupResponse',
             $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateInteractionRuleGroupRequest');
+    }
+
+    /**
+     * 互动规则库删除某条规则
+     *
+     * 该接口用于互动规则库修改删除规则。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteInteractionRule($request)
+    {
+        return $this->deleteInteractionRuleWithHttpInfo($request);
+    }
+
+    public function deleteInteractionRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/smart-live-interaction-rule-groups/{group_id}/rules/{rule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $pathParams['rule_id'] = $localVarParams['ruleId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\DeleteInteractionRuleResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\DeleteInteractionRuleRequest');
     }
 
     /**
@@ -6837,6 +7459,246 @@ class MetaStudioClient extends Client
     }
 
     /**
+     * 查询智能直播间互动规则库概要列表
+     *
+     * 该接口用于智能直播间互动规则库概要列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listInteractionRuleGroupsSummary($request)
+    {
+        return $this->listInteractionRuleGroupsSummaryWithHttpInfo($request);
+    }
+
+    public function listInteractionRuleGroupsSummaryWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/smart-live-interaction-rule-groups-summary';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['createSince'] !== null) {
+            $queryParams['create_since'] = $localVarParams['createSince'];
+        }
+        if ($localVarParams['createUntil'] !== null) {
+            $queryParams['create_until'] = $localVarParams['createUntil'];
+        }
+        if ($localVarParams['groupName'] !== null) {
+            $queryParams['group_name'] = $localVarParams['groupName'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListInteractionRuleGroupsSummaryResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListInteractionRuleGroupsSummaryRequest');
+    }
+
+    /**
+     * 查询智能直播间互动规则库详情
+     *
+     * 该接口用于查询智能直播间互动规则库详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showInteractionRuleGroup($request)
+    {
+        return $this->showInteractionRuleGroupWithHttpInfo($request);
+    }
+
+    public function showInteractionRuleGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/smart-live-interaction-rule-groups/{group_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowInteractionRuleGroupResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowInteractionRuleGroupRequest');
+    }
+
+    /**
+     * 互动规则库修改某条规则
+     *
+     * 该接口用于互动规则库修改某条规则。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateInteractionRule($request)
+    {
+        return $this->updateInteractionRuleWithHttpInfo($request);
+    }
+
+    public function updateInteractionRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/smart-live-interaction-rule-groups/{group_id}/rules/{rule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $pathParams['rule_id'] = $localVarParams['ruleId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateInteractionRuleResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateInteractionRuleRequest');
+    }
+
+    /**
      * 更新智能直播间互动规则库
      *
      * 该接口用于更新智能直播间互动规则库。
@@ -6985,6 +7847,74 @@ class MetaStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateInteractiveChatResponse',
             $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateInteractiveChatRequest');
+    }
+
+    /**
+     * 下载加密文件
+     *
+     * 下载加密文件
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showEncryptFile($request)
+    {
+        return $this->showEncryptFileWithHttpInfo($request);
+    }
+
+    public function showEncryptFileWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/voice-training-manage/common/encrypt-file-download';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['tenantId'] !== null) {
+            $queryParams['tenant_id'] = $localVarParams['tenantId'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $queryParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['onceToken'] !== null) {
+            $queryParams['once_token'] = $localVarParams['onceToken'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/octet-stream']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/octet-stream'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowEncryptFileResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowEncryptFileRequest');
     }
 
     /**
@@ -9256,6 +10186,80 @@ class MetaStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowLivePlatformResponse',
             $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowLivePlatformRequest');
+    }
+
+    /**
+     * 查询直播平台对接方式
+     *
+     * 该接口用于直播平台对接方式。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showLivePlatformAccessType($request)
+    {
+        return $this->showLivePlatformAccessTypeWithHttpInfo($request);
+    }
+
+    public function showLivePlatformAccessTypeWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/live-platforms/access-types';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['used'] !== null) {
+            $queryParams['used'] = $localVarParams['used'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowLivePlatformAccessTypeResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowLivePlatformAccessTypeRequest');
     }
 
     /**
@@ -12703,6 +13707,77 @@ class MetaStudioClient extends Client
     }
 
     /**
+     * 查询声音训练资源
+     *
+     * 查询声音训练资源。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showVoiceTrainingQuotas($request)
+    {
+        return $this->showVoiceTrainingQuotasWithHttpInfo($request);
+    }
+
+    public function showVoiceTrainingQuotasWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/voice-training-manage/quotas';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'application/json;charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'application/json;charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowVoiceTrainingQuotasResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowVoiceTrainingQuotasRequest');
+    }
+
+    /**
      * 创建应用
      *
      * 该接口用于创建应用。
@@ -13926,6 +15001,77 @@ class MetaStudioClient extends Client
     }
 
     /**
+     * 租户设置直播租户级配置
+     *
+     * 该接口用于租户设置直播租户级配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSmartLiveUserConfig($request)
+    {
+        return $this->updateSmartLiveUserConfigWithHttpInfo($request);
+    }
+
+    public function updateSmartLiveUserConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/smart-live-configs/user-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateSmartLiveUserConfigResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateSmartLiveUserConfigRequest');
+    }
+
+    /**
      * 批量确认命令
      *
      * 该接口用于批量确认命令列表
@@ -14083,6 +15229,89 @@ class MetaStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ExecuteSmartLiveCommandResponse',
             $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ExecuteSmartLiveCommandRequest');
+    }
+
+    /**
+     * 查询数字人直播插入命令列表
+     *
+     * 该接口用于查询数字人直播插入命令列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listInsertCommands($request)
+    {
+        return $this->listInsertCommandsWithHttpInfo($request);
+    }
+
+    public function listInsertCommandsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/smart-live-rooms/{room_id}/smart-live-jobs/{job_id}/command/insert-commands';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['roomId'] !== null) {
+            $pathParams['room_id'] = $localVarParams['roomId'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListInsertCommandsResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListInsertCommandsRequest');
     }
 
     /**
@@ -15091,6 +16320,80 @@ class MetaStudioClient extends Client
     }
 
     /**
+     * 查询直播建配置风险信息
+     *
+     * 该接口用查询直播建配置风险信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showLiveWarningInfo($request)
+    {
+        return $this->showLiveWarningInfoWithHttpInfo($request);
+    }
+
+    public function showLiveWarningInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/smart-live-rooms/{room_id}/live-warning-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['roomId'] !== null) {
+            $pathParams['room_id'] = $localVarParams['roomId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowLiveWarningInfoResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowLiveWarningInfoRequest');
+    }
+
+    /**
      * 查询智能直播间剧本详情
      *
      * 该接口用于查询智能直播间剧本详情。
@@ -15880,6 +17183,80 @@ class MetaStudioClient extends Client
     }
 
     /**
+     * 提交短任务
+     *
+     * 提交短任务，执行改接口后，任务会正式开始执行。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function commitShortJob($request)
+    {
+        return $this->commitShortJobWithHttpInfo($request);
+    }
+
+    public function commitShortJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/voice-training-manage/user/short-jobs/{job_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CommitShortJobResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CommitShortJobRequest');
+    }
+
+    /**
      * 提交语音训练任务
      *
      * 提交训练任务,执行该接口后,任务会进入审核状态,审核完成后会等待训练。
@@ -16019,6 +17396,81 @@ class MetaStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ConfirmTrainingSegmentResponse',
             $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ConfirmTrainingSegmentRequest');
+    }
+
+    /**
+     * 创建短任务
+     *
+     * 用户创建短任务（音频质量检测等），该接口会返回一个obs上传地址，用于上传语音文件。
+     * 文件上传后，调用“提交短任务”接口，启动短任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createShortJob($request)
+    {
+        return $this->createShortJobWithHttpInfo($request);
+    }
+
+    public function createShortJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/voice-training-manage/user/short-jobs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'application/json;charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'application/json;charset=utf-8'],
+                ['application/json', 'application/json;charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateShortJobResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateShortJobRequest');
     }
 
     /**
@@ -16248,6 +17700,75 @@ class MetaStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateTrainingMiddleJobResponse',
             $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateTrainingMiddleJobRequest');
+    }
+
+    /**
+     * 创建第三方平台语音训练任务
+     *
+     * 用户创建第三方平台语音训练任务,该接口会返回一个obs上传地址，用于上传语音文件。
+     * 仅支持zip包方式上传语音文件：
+     * * 语音文件打包成zip上传：上传的训练数据为一个zip格式压缩文件,其中包含一段wav格式的长音频文件。
+     * 
+     * &gt; * 文件上传后，调用“提交语音训练任务”接口，启动审核和训练。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createTrainingThirdPartyJob($request)
+    {
+        return $this->createTrainingThirdPartyJobWithHttpInfo($request);
+    }
+
+    public function createTrainingThirdPartyJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/voice-training-manage/user/third-party-jobs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'application/json;charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'application/json;charset=utf-8'],
+                ['application/json', 'application/json;charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateTrainingThirdPartyJobResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateTrainingThirdPartyJobRequest');
     }
 
     /**
@@ -16690,6 +18211,80 @@ class MetaStudioClient extends Client
     }
 
     /**
+     * 查询短任务详情
+     *
+     * 查询短任务详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showShortJob($request)
+    {
+        return $this->showShortJobWithHttpInfo($request);
+    }
+
+    public function showShortJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/voice-training-manage/user/short-jobs/{job_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'application/json;charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'application/json;charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowShortJobResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowShortJobRequest');
+    }
+
+    /**
      * 查询用户配置的个性化音频时长
      *
      * 查询用户配置的个性化音频时长
@@ -16808,6 +18403,74 @@ class MetaStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowTrainingSegmentInfoResponse',
             $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowTrainingSegmentInfoRequest');
+    }
+
+    /**
+     * 用户获取附件上传url
+     *
+     * 用户获取附件上传url
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showUserReviewAttachmentUploadingAddress($request)
+    {
+        return $this->showUserReviewAttachmentUploadingAddressWithHttpInfo($request);
+    }
+
+    public function showUserReviewAttachmentUploadingAddressWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/voice-training-manage/user/jobs/{job_id}/review-attachment-uploading-address-url';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startNumber'] !== null) {
+            $queryParams['start_number'] = $localVarParams['startNumber'];
+        }
+        if ($localVarParams['endNumber'] !== null) {
+            $queryParams['end_number'] = $localVarParams['endNumber'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'application/json;charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'application/json;charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowUserReviewAttachmentUploadingAddressResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowUserReviewAttachmentUploadingAddressRequest');
     }
 
     /**
@@ -19576,6 +21239,7 @@ class MetaStudioClient extends Client
      * 复制视频制作剧本
      *
      * 该接口用于复制视频制作剧本。
+     * &gt; - 复制的剧本不包含预览字幕信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

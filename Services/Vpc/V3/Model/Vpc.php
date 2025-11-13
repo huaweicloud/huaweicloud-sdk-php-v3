@@ -32,6 +32,8 @@ class Vpc implements ModelInterface, ArrayAccess
     * updatedAt  功能说明：VPC更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * cloudResources  功能说明：VPC关联资源类型和数量 取值范围：目前只返回VPC关联的routetable和virsubnet
     * tags  功能说明：VPC的标签信息，详情参见Tag对象 取值范围：0-10个标签键值对
+    * blockServiceEndpointStates  功能说明：默认情况下，VPC中的资源可以通过内网访问服务终结点。开启该项后，VPC将无法通过内网访问服务终结点，请谨慎操作。 无法访问以下云服务：容器镜像服务SWR、云日志服务LTS、企业主机安全HSS、应用运维管理AOM、应用性能管理APM、对象存储服务OBS、API网关APIG。 取值范围： off：代表禁用。 on：代表开启。
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -47,7 +49,9 @@ class Vpc implements ModelInterface, ArrayAccess
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime',
             'cloudResources' => '\HuaweiCloud\SDK\Vpc\V3\Model\CloudResource[]',
-            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\Tag[]'
+            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\Tag[]',
+            'blockServiceEndpointStates' => 'string',
+            'enableNetworkAddressUsageMetrics' => 'bool'
     ];
 
     /**
@@ -64,6 +68,8 @@ class Vpc implements ModelInterface, ArrayAccess
     * updatedAt  功能说明：VPC更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * cloudResources  功能说明：VPC关联资源类型和数量 取值范围：目前只返回VPC关联的routetable和virsubnet
     * tags  功能说明：VPC的标签信息，详情参见Tag对象 取值范围：0-10个标签键值对
+    * blockServiceEndpointStates  功能说明：默认情况下，VPC中的资源可以通过内网访问服务终结点。开启该项后，VPC将无法通过内网访问服务终结点，请谨慎操作。 无法访问以下云服务：容器镜像服务SWR、云日志服务LTS、企业主机安全HSS、应用运维管理AOM、应用性能管理APM、对象存储服务OBS、API网关APIG。 取值范围： off：代表禁用。 on：代表开启。
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -79,7 +85,9 @@ class Vpc implements ModelInterface, ArrayAccess
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time',
         'cloudResources' => null,
-        'tags' => null
+        'tags' => null,
+        'blockServiceEndpointStates' => null,
+        'enableNetworkAddressUsageMetrics' => null
     ];
 
     /**
@@ -117,6 +125,8 @@ class Vpc implements ModelInterface, ArrayAccess
     * updatedAt  功能说明：VPC更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * cloudResources  功能说明：VPC关联资源类型和数量 取值范围：目前只返回VPC关联的routetable和virsubnet
     * tags  功能说明：VPC的标签信息，详情参见Tag对象 取值范围：0-10个标签键值对
+    * blockServiceEndpointStates  功能说明：默认情况下，VPC中的资源可以通过内网访问服务终结点。开启该项后，VPC将无法通过内网访问服务终结点，请谨慎操作。 无法访问以下云服务：容器镜像服务SWR、云日志服务LTS、企业主机安全HSS、应用运维管理AOM、应用性能管理APM、对象存储服务OBS、API网关APIG。 取值范围： off：代表禁用。 on：代表开启。
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -132,7 +142,9 @@ class Vpc implements ModelInterface, ArrayAccess
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
             'cloudResources' => 'cloud_resources',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'blockServiceEndpointStates' => 'block_service_endpoint_states',
+            'enableNetworkAddressUsageMetrics' => 'enable_network_address_usage_metrics'
     ];
 
     /**
@@ -149,6 +161,8 @@ class Vpc implements ModelInterface, ArrayAccess
     * updatedAt  功能说明：VPC更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * cloudResources  功能说明：VPC关联资源类型和数量 取值范围：目前只返回VPC关联的routetable和virsubnet
     * tags  功能说明：VPC的标签信息，详情参见Tag对象 取值范围：0-10个标签键值对
+    * blockServiceEndpointStates  功能说明：默认情况下，VPC中的资源可以通过内网访问服务终结点。开启该项后，VPC将无法通过内网访问服务终结点，请谨慎操作。 无法访问以下云服务：容器镜像服务SWR、云日志服务LTS、企业主机安全HSS、应用运维管理AOM、应用性能管理APM、对象存储服务OBS、API网关APIG。 取值范围： off：代表禁用。 on：代表开启。
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -164,7 +178,9 @@ class Vpc implements ModelInterface, ArrayAccess
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
             'cloudResources' => 'setCloudResources',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'blockServiceEndpointStates' => 'setBlockServiceEndpointStates',
+            'enableNetworkAddressUsageMetrics' => 'setEnableNetworkAddressUsageMetrics'
     ];
 
     /**
@@ -181,6 +197,8 @@ class Vpc implements ModelInterface, ArrayAccess
     * updatedAt  功能说明：VPC更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * cloudResources  功能说明：VPC关联资源类型和数量 取值范围：目前只返回VPC关联的routetable和virsubnet
     * tags  功能说明：VPC的标签信息，详情参见Tag对象 取值范围：0-10个标签键值对
+    * blockServiceEndpointStates  功能说明：默认情况下，VPC中的资源可以通过内网访问服务终结点。开启该项后，VPC将无法通过内网访问服务终结点，请谨慎操作。 无法访问以下云服务：容器镜像服务SWR、云日志服务LTS、企业主机安全HSS、应用运维管理AOM、应用性能管理APM、对象存储服务OBS、API网关APIG。 取值范围： off：代表禁用。 on：代表开启。
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -196,7 +214,9 @@ class Vpc implements ModelInterface, ArrayAccess
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
             'cloudResources' => 'getCloudResources',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'blockServiceEndpointStates' => 'getBlockServiceEndpointStates',
+            'enableNetworkAddressUsageMetrics' => 'getEnableNetworkAddressUsageMetrics'
     ];
 
     /**
@@ -269,6 +289,8 @@ class Vpc implements ModelInterface, ArrayAccess
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['cloudResources'] = isset($data['cloudResources']) ? $data['cloudResources'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['blockServiceEndpointStates'] = isset($data['blockServiceEndpointStates']) ? $data['blockServiceEndpointStates'] : null;
+        $this->container['enableNetworkAddressUsageMetrics'] = isset($data['enableNetworkAddressUsageMetrics']) ? $data['enableNetworkAddressUsageMetrics'] : null;
     }
 
     /**
@@ -332,6 +354,12 @@ class Vpc implements ModelInterface, ArrayAccess
         }
         if ($this->container['tags'] === null) {
             $invalidProperties[] = "'tags' can't be null";
+        }
+        if ($this->container['blockServiceEndpointStates'] === null) {
+            $invalidProperties[] = "'blockServiceEndpointStates' can't be null";
+        }
+        if ($this->container['enableNetworkAddressUsageMetrics'] === null) {
+            $invalidProperties[] = "'enableNetworkAddressUsageMetrics' can't be null";
         }
         return $invalidProperties;
     }
@@ -632,6 +660,54 @@ class Vpc implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets blockServiceEndpointStates
+    *  功能说明：默认情况下，VPC中的资源可以通过内网访问服务终结点。开启该项后，VPC将无法通过内网访问服务终结点，请谨慎操作。 无法访问以下云服务：容器镜像服务SWR、云日志服务LTS、企业主机安全HSS、应用运维管理AOM、应用性能管理APM、对象存储服务OBS、API网关APIG。 取值范围： off：代表禁用。 on：代表开启。
+    *
+    * @return string
+    */
+    public function getBlockServiceEndpointStates()
+    {
+        return $this->container['blockServiceEndpointStates'];
+    }
+
+    /**
+    * Sets blockServiceEndpointStates
+    *
+    * @param string $blockServiceEndpointStates 功能说明：默认情况下，VPC中的资源可以通过内网访问服务终结点。开启该项后，VPC将无法通过内网访问服务终结点，请谨慎操作。 无法访问以下云服务：容器镜像服务SWR、云日志服务LTS、企业主机安全HSS、应用运维管理AOM、应用性能管理APM、对象存储服务OBS、API网关APIG。 取值范围： off：代表禁用。 on：代表开启。
+    *
+    * @return $this
+    */
+    public function setBlockServiceEndpointStates($blockServiceEndpointStates)
+    {
+        $this->container['blockServiceEndpointStates'] = $blockServiceEndpointStates;
+        return $this;
+    }
+
+    /**
+    * Gets enableNetworkAddressUsageMetrics
+    *  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+    *
+    * @return bool
+    */
+    public function getEnableNetworkAddressUsageMetrics()
+    {
+        return $this->container['enableNetworkAddressUsageMetrics'];
+    }
+
+    /**
+    * Sets enableNetworkAddressUsageMetrics
+    *
+    * @param bool $enableNetworkAddressUsageMetrics 功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+    *
+    * @return $this
+    */
+    public function setEnableNetworkAddressUsageMetrics($enableNetworkAddressUsageMetrics)
+    {
+        $this->container['enableNetworkAddressUsageMetrics'] = $enableNetworkAddressUsageMetrics;
         return $this;
     }
 

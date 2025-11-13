@@ -43,6 +43,8 @@ class Subnet implements ModelInterface, ArrayAccess
     * tenantId  项目ID
     * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启当前子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+    * availableIpAddressCount  功能说明：子网内剩余可用的IPv4地址数量。
     *
     * @var string[]
     */
@@ -69,7 +71,9 @@ class Subnet implements ModelInterface, ArrayAccess
             'scope' => 'string',
             'tenantId' => 'string',
             'createdAt' => '\DateTime',
-            'updatedAt' => '\DateTime'
+            'updatedAt' => '\DateTime',
+            'enableNetworkAddressUsageMetrics' => 'bool',
+            'availableIpAddressCount' => 'int'
     ];
 
     /**
@@ -97,6 +101,8 @@ class Subnet implements ModelInterface, ArrayAccess
     * tenantId  项目ID
     * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启当前子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+    * availableIpAddressCount  功能说明：子网内剩余可用的IPv4地址数量。
     *
     * @var string[]
     */
@@ -123,7 +129,9 @@ class Subnet implements ModelInterface, ArrayAccess
         'scope' => null,
         'tenantId' => null,
         'createdAt' => 'date-time',
-        'updatedAt' => 'date-time'
+        'updatedAt' => 'date-time',
+        'enableNetworkAddressUsageMetrics' => null,
+        'availableIpAddressCount' => 'int32'
     ];
 
     /**
@@ -172,6 +180,8 @@ class Subnet implements ModelInterface, ArrayAccess
     * tenantId  项目ID
     * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启当前子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+    * availableIpAddressCount  功能说明：子网内剩余可用的IPv4地址数量。
     *
     * @var string[]
     */
@@ -198,7 +208,9 @@ class Subnet implements ModelInterface, ArrayAccess
             'scope' => 'scope',
             'tenantId' => 'tenant_id',
             'createdAt' => 'created_at',
-            'updatedAt' => 'updated_at'
+            'updatedAt' => 'updated_at',
+            'enableNetworkAddressUsageMetrics' => 'enable_network_address_usage_metrics',
+            'availableIpAddressCount' => 'available_ip_address_count'
     ];
 
     /**
@@ -226,6 +238,8 @@ class Subnet implements ModelInterface, ArrayAccess
     * tenantId  项目ID
     * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启当前子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+    * availableIpAddressCount  功能说明：子网内剩余可用的IPv4地址数量。
     *
     * @var string[]
     */
@@ -252,7 +266,9 @@ class Subnet implements ModelInterface, ArrayAccess
             'scope' => 'setScope',
             'tenantId' => 'setTenantId',
             'createdAt' => 'setCreatedAt',
-            'updatedAt' => 'setUpdatedAt'
+            'updatedAt' => 'setUpdatedAt',
+            'enableNetworkAddressUsageMetrics' => 'setEnableNetworkAddressUsageMetrics',
+            'availableIpAddressCount' => 'setAvailableIpAddressCount'
     ];
 
     /**
@@ -280,6 +296,8 @@ class Subnet implements ModelInterface, ArrayAccess
     * tenantId  项目ID
     * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启当前子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+    * availableIpAddressCount  功能说明：子网内剩余可用的IPv4地址数量。
     *
     * @var string[]
     */
@@ -306,7 +324,9 @@ class Subnet implements ModelInterface, ArrayAccess
             'scope' => 'getScope',
             'tenantId' => 'getTenantId',
             'createdAt' => 'getCreatedAt',
-            'updatedAt' => 'getUpdatedAt'
+            'updatedAt' => 'getUpdatedAt',
+            'enableNetworkAddressUsageMetrics' => 'getEnableNetworkAddressUsageMetrics',
+            'availableIpAddressCount' => 'getAvailableIpAddressCount'
     ];
 
     /**
@@ -407,6 +427,8 @@ class Subnet implements ModelInterface, ArrayAccess
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
+        $this->container['enableNetworkAddressUsageMetrics'] = isset($data['enableNetworkAddressUsageMetrics']) ? $data['enableNetworkAddressUsageMetrics'] : null;
+        $this->container['availableIpAddressCount'] = isset($data['availableIpAddressCount']) ? $data['availableIpAddressCount'] : null;
     }
 
     /**
@@ -508,6 +530,12 @@ class Subnet implements ModelInterface, ArrayAccess
         }
         if ($this->container['updatedAt'] === null) {
             $invalidProperties[] = "'updatedAt' can't be null";
+        }
+        if ($this->container['enableNetworkAddressUsageMetrics'] === null) {
+            $invalidProperties[] = "'enableNetworkAddressUsageMetrics' can't be null";
+        }
+        if ($this->container['availableIpAddressCount'] === null) {
+            $invalidProperties[] = "'availableIpAddressCount' can't be null";
         }
         return $invalidProperties;
     }
@@ -1072,6 +1100,54 @@ class Subnet implements ModelInterface, ArrayAccess
     public function setUpdatedAt($updatedAt)
     {
         $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
+    * Gets enableNetworkAddressUsageMetrics
+    *  功能说明：是否开启当前子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+    *
+    * @return bool
+    */
+    public function getEnableNetworkAddressUsageMetrics()
+    {
+        return $this->container['enableNetworkAddressUsageMetrics'];
+    }
+
+    /**
+    * Sets enableNetworkAddressUsageMetrics
+    *
+    * @param bool $enableNetworkAddressUsageMetrics 功能说明：是否开启当前子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+    *
+    * @return $this
+    */
+    public function setEnableNetworkAddressUsageMetrics($enableNetworkAddressUsageMetrics)
+    {
+        $this->container['enableNetworkAddressUsageMetrics'] = $enableNetworkAddressUsageMetrics;
+        return $this;
+    }
+
+    /**
+    * Gets availableIpAddressCount
+    *  功能说明：子网内剩余可用的IPv4地址数量。
+    *
+    * @return int
+    */
+    public function getAvailableIpAddressCount()
+    {
+        return $this->container['availableIpAddressCount'];
+    }
+
+    /**
+    * Sets availableIpAddressCount
+    *
+    * @param int $availableIpAddressCount 功能说明：子网内剩余可用的IPv4地址数量。
+    *
+    * @return $this
+    */
+    public function setAvailableIpAddressCount($availableIpAddressCount)
+    {
+        $this->container['availableIpAddressCount'] = $availableIpAddressCount;
         return $this;
     }
 

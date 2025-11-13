@@ -25,6 +25,7 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
     * enterpriseProjectId  功能说明：ACL企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     * tags  功能描述：ACL资源标签
     * adminStateUp  功能说明：ACL是否开启，默认值true 取值范围：true表示ACL开启；false表示ACL关闭
+    * type  参数解释：   网络ACL支持关联的子网类型。 约束限制：   不涉及。 取值范围：   normal：表示网络ACL支持关联普通子网。   clouddcn：表示网络ACL支持关联CloudDCN子网。 默认取值：   normal
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
             'description' => 'string',
             'enterpriseProjectId' => 'string',
             'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]',
-            'adminStateUp' => 'bool'
+            'adminStateUp' => 'bool',
+            'type' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
     * enterpriseProjectId  功能说明：ACL企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     * tags  功能描述：ACL资源标签
     * adminStateUp  功能说明：ACL是否开启，默认值true 取值范围：true表示ACL开启；false表示ACL关闭
+    * type  参数解释：   网络ACL支持关联的子网类型。 约束限制：   不涉及。 取值范围：   normal：表示网络ACL支持关联普通子网。   clouddcn：表示网络ACL支持关联CloudDCN子网。 默认取值：   normal
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
         'description' => null,
         'enterpriseProjectId' => null,
         'tags' => null,
-        'adminStateUp' => null
+        'adminStateUp' => null,
+        'type' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
     * enterpriseProjectId  功能说明：ACL企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     * tags  功能描述：ACL资源标签
     * adminStateUp  功能说明：ACL是否开启，默认值true 取值范围：true表示ACL开启；false表示ACL关闭
+    * type  参数解释：   网络ACL支持关联的子网类型。 约束限制：   不涉及。 取值范围：   normal：表示网络ACL支持关联普通子网。   clouddcn：表示网络ACL支持关联CloudDCN子网。 默认取值：   normal
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
             'description' => 'description',
             'enterpriseProjectId' => 'enterprise_project_id',
             'tags' => 'tags',
-            'adminStateUp' => 'admin_state_up'
+            'adminStateUp' => 'admin_state_up',
+            'type' => 'type'
     ];
 
     /**
@@ -100,6 +106,7 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
     * enterpriseProjectId  功能说明：ACL企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     * tags  功能描述：ACL资源标签
     * adminStateUp  功能说明：ACL是否开启，默认值true 取值范围：true表示ACL开启；false表示ACL关闭
+    * type  参数解释：   网络ACL支持关联的子网类型。 约束限制：   不涉及。 取值范围：   normal：表示网络ACL支持关联普通子网。   clouddcn：表示网络ACL支持关联CloudDCN子网。 默认取值：   normal
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'tags' => 'setTags',
-            'adminStateUp' => 'setAdminStateUp'
+            'adminStateUp' => 'setAdminStateUp',
+            'type' => 'setType'
     ];
 
     /**
@@ -118,6 +126,7 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
     * enterpriseProjectId  功能说明：ACL企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     * tags  功能描述：ACL资源标签
     * adminStateUp  功能说明：ACL是否开启，默认值true 取值范围：true表示ACL开启；false表示ACL关闭
+    * type  参数解释：   网络ACL支持关联的子网类型。 约束限制：   不涉及。 取值范围：   normal：表示网络ACL支持关联普通子网。   clouddcn：表示网络ACL支持关联CloudDCN子网。 默认取值：   normal
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'tags' => 'getTags',
-            'adminStateUp' => 'getAdminStateUp'
+            'adminStateUp' => 'getAdminStateUp',
+            'type' => 'getType'
     ];
 
     /**
@@ -192,6 +202,7 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -336,6 +347,30 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
     public function setAdminStateUp($adminStateUp)
     {
         $this->container['adminStateUp'] = $adminStateUp;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  参数解释：   网络ACL支持关联的子网类型。 约束限制：   不涉及。 取值范围：   normal：表示网络ACL支持关联普通子网。   clouddcn：表示网络ACL支持关联CloudDCN子网。 默认取值：   normal
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 参数解释：   网络ACL支持关联的子网类型。 约束限制：   不涉及。 取值范围：   normal：表示网络ACL支持关联普通子网。   clouddcn：表示网络ACL支持关联CloudDCN子网。 默认取值：   normal
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

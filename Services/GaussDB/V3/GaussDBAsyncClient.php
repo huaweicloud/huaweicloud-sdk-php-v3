@@ -13665,6 +13665,77 @@ class GaussDBAsyncClient extends Client
     }
 
     /**
+     * HTAP数据同步模板下载
+     *
+     * HTAP数据同步模板下载。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function downloadImportExcelTemplateAsync($request)
+    {
+        return $this->downloadImportExcelTemplateAsyncWithHttpInfo($request);
+    }
+    
+    public function downloadImportExcelTemplateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/htap/template';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['templateType'] !== null) {
+            $queryParams['template_type'] = $localVarParams['templateType'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\DownloadImportExcelTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\DownloadImportExcelTemplateRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询数据库列表
      *
      * 查询数据库列表。
@@ -17256,6 +17327,82 @@ class GaussDBAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\UpgradeSrKernelVersionResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\UpgradeSrKernelVersionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * HTAP库表导入校验
+     *
+     * 创建数据同步时支持Excel导入并进行校验。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function uploadImportExcelTemplateAsync($request)
+    {
+        return $this->uploadImportExcelTemplateAsyncWithHttpInfo($request);
+    }
+    
+    public function uploadImportExcelTemplateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/htap/template';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = true;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        foreach ($httpBody::attributeMap() as $k => $v) {
+            $getter = $httpBody::getters()[$k];
+            $value = $httpBody->$getter();
+            $formParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['multipart/form-data']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\UploadImportExcelTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\UploadImportExcelTemplateRequest',
             $asyncRequest = true);
     }
 

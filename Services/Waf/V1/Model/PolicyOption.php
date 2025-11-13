@@ -32,7 +32,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * custom  精准防护是否开启
     * whiteblackip  黑白名单防护是否开启
     * geoip  地理位置访问控制规则是否开启
-    * ignore  误报屏蔽是否开启
+    * ignore  全局白名单是否开启
     * privacy  隐私屏蔽是否开启
     * antitamper  网页防篡改规则是否开启
     * antileakage  防敏感信息泄露规则是否开启
@@ -76,7 +76,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * custom  精准防护是否开启
     * whiteblackip  黑白名单防护是否开启
     * geoip  地理位置访问控制规则是否开启
-    * ignore  误报屏蔽是否开启
+    * ignore  全局白名单是否开启
     * privacy  隐私屏蔽是否开启
     * antitamper  网页防篡改规则是否开启
     * antileakage  防敏感信息泄露规则是否开启
@@ -141,7 +141,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * custom  精准防护是否开启
     * whiteblackip  黑白名单防护是否开启
     * geoip  地理位置访问控制规则是否开启
-    * ignore  误报屏蔽是否开启
+    * ignore  全局白名单是否开启
     * privacy  隐私屏蔽是否开启
     * antitamper  网页防篡改规则是否开启
     * antileakage  防敏感信息泄露规则是否开启
@@ -185,7 +185,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * custom  精准防护是否开启
     * whiteblackip  黑白名单防护是否开启
     * geoip  地理位置访问控制规则是否开启
-    * ignore  误报屏蔽是否开启
+    * ignore  全局白名单是否开启
     * privacy  隐私屏蔽是否开启
     * antitamper  网页防篡改规则是否开启
     * antileakage  防敏感信息泄露规则是否开启
@@ -229,7 +229,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * custom  精准防护是否开启
     * whiteblackip  黑白名单防护是否开启
     * geoip  地理位置访问控制规则是否开启
-    * ignore  误报屏蔽是否开启
+    * ignore  全局白名单是否开启
     * privacy  隐私屏蔽是否开启
     * antitamper  网页防篡改规则是否开启
     * antileakage  防敏感信息泄露规则是否开启
@@ -649,7 +649,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ignore
-    *  误报屏蔽是否开启
+    *  全局白名单是否开启
     *
     * @return bool|null
     */
@@ -661,7 +661,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets ignore
     *
-    * @param bool|null $ignore 误报屏蔽是否开启
+    * @param bool|null $ignore 全局白名单是否开启
     *
     * @return $this
     */

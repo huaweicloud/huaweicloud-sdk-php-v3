@@ -25,7 +25,7 @@ class ListLivePlatformsRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * accessType  平台对接类型。
+    * accessType  平台对接类型。| * MEITUAN_OFFICIAL：对接美团直播平台官方接口 * MSS_STANDARD：对接MetaStudio定义的标准接口
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class ListLivePlatformsRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * accessType  平台对接类型。
+    * accessType  平台对接类型。| * MEITUAN_OFFICIAL：对接美团直播平台官方接口 * MSS_STANDARD：对接MetaStudio定义的标准接口
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ListLivePlatformsRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * accessType  平台对接类型。
+    * accessType  平台对接类型。| * MEITUAN_OFFICIAL：对接美团直播平台官方接口 * MSS_STANDARD：对接MetaStudio定义的标准接口
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ListLivePlatformsRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * accessType  平台对接类型。
+    * accessType  平台对接类型。| * MEITUAN_OFFICIAL：对接美团直播平台官方接口 * MSS_STANDARD：对接MetaStudio定义的标准接口
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ListLivePlatformsRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * accessType  平台对接类型。
+    * accessType  平台对接类型。| * MEITUAN_OFFICIAL：对接美团直播平台官方接口 * MSS_STANDARD：对接MetaStudio定义的标准接口
     *
     * @var string[]
     */
@@ -385,7 +385,7 @@ class ListLivePlatformsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessType
-    *  平台对接类型。
+    *  平台对接类型。| * MEITUAN_OFFICIAL：对接美团直播平台官方接口 * MSS_STANDARD：对接MetaStudio定义的标准接口
     *
     * @return string|null
     */
@@ -397,7 +397,7 @@ class ListLivePlatformsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets accessType
     *
-    * @param string|null $accessType 平台对接类型。
+    * @param string|null $accessType 平台对接类型。| * MEITUAN_OFFICIAL：对接美团直播平台官方接口 * MSS_STANDARD：对接MetaStudio定义的标准接口
     *
     * @return $this
     */

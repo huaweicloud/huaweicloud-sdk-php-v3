@@ -25,6 +25,8 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
     * description  功能说明：虚拟私有云的描述 取值范围：0-255个字符，不能包含“<”和“>”。
     * enterpriseProjectId  功能说明：企业项目ID。创建虚拟私有云时，给虚拟私有云绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：\"0\"
     * tags  功能说明：VPC资源标签。创建VPC时，给VPC添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
+    * blockServiceEndpointStates  功能说明：默认情况下，VPC中的资源可以通过内网访问服务终结点。开启该项后，VPC将无法通过内网访问服务终结点，请谨慎操作。 无法访问以下云服务：容器镜像服务SWR、云日志服务LTS、企业主机安全HSS、应用运维管理AOM、应用性能管理APM、对象存储服务OBS、API网关APIG。 取值范围： off：代表禁用。 on：代表开启。
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'enterpriseProjectId' => 'string',
-            'tags' => 'string[]'
+            'tags' => 'string[]',
+            'blockServiceEndpointStates' => 'string',
+            'enableNetworkAddressUsageMetrics' => 'bool'
     ];
 
     /**
@@ -43,6 +47,8 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
     * description  功能说明：虚拟私有云的描述 取值范围：0-255个字符，不能包含“<”和“>”。
     * enterpriseProjectId  功能说明：企业项目ID。创建虚拟私有云时，给虚拟私有云绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：\"0\"
     * tags  功能说明：VPC资源标签。创建VPC时，给VPC添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
+    * blockServiceEndpointStates  功能说明：默认情况下，VPC中的资源可以通过内网访问服务终结点。开启该项后，VPC将无法通过内网访问服务终结点，请谨慎操作。 无法访问以下云服务：容器镜像服务SWR、云日志服务LTS、企业主机安全HSS、应用运维管理AOM、应用性能管理APM、对象存储服务OBS、API网关APIG。 取值范围： off：代表禁用。 on：代表开启。
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'enterpriseProjectId' => null,
-        'tags' => null
+        'tags' => null,
+        'blockServiceEndpointStates' => null,
+        'enableNetworkAddressUsageMetrics' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
     * description  功能说明：虚拟私有云的描述 取值范围：0-255个字符，不能包含“<”和“>”。
     * enterpriseProjectId  功能说明：企业项目ID。创建虚拟私有云时，给虚拟私有云绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：\"0\"
     * tags  功能说明：VPC资源标签。创建VPC时，给VPC添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
+    * blockServiceEndpointStates  功能说明：默认情况下，VPC中的资源可以通过内网访问服务终结点。开启该项后，VPC将无法通过内网访问服务终结点，请谨慎操作。 无法访问以下云服务：容器镜像服务SWR、云日志服务LTS、企业主机安全HSS、应用运维管理AOM、应用性能管理APM、对象存储服务OBS、API网关APIG。 取值范围： off：代表禁用。 on：代表开启。
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'blockServiceEndpointStates' => 'block_service_endpoint_states',
+            'enableNetworkAddressUsageMetrics' => 'enable_network_address_usage_metrics'
     ];
 
     /**
@@ -100,6 +112,8 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
     * description  功能说明：虚拟私有云的描述 取值范围：0-255个字符，不能包含“<”和“>”。
     * enterpriseProjectId  功能说明：企业项目ID。创建虚拟私有云时，给虚拟私有云绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：\"0\"
     * tags  功能说明：VPC资源标签。创建VPC时，给VPC添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
+    * blockServiceEndpointStates  功能说明：默认情况下，VPC中的资源可以通过内网访问服务终结点。开启该项后，VPC将无法通过内网访问服务终结点，请谨慎操作。 无法访问以下云服务：容器镜像服务SWR、云日志服务LTS、企业主机安全HSS、应用运维管理AOM、应用性能管理APM、对象存储服务OBS、API网关APIG。 取值范围： off：代表禁用。 on：代表开启。
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'blockServiceEndpointStates' => 'setBlockServiceEndpointStates',
+            'enableNetworkAddressUsageMetrics' => 'setEnableNetworkAddressUsageMetrics'
     ];
 
     /**
@@ -118,6 +134,8 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
     * description  功能说明：虚拟私有云的描述 取值范围：0-255个字符，不能包含“<”和“>”。
     * enterpriseProjectId  功能说明：企业项目ID。创建虚拟私有云时，给虚拟私有云绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：\"0\"
     * tags  功能说明：VPC资源标签。创建VPC时，给VPC添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
+    * blockServiceEndpointStates  功能说明：默认情况下，VPC中的资源可以通过内网访问服务终结点。开启该项后，VPC将无法通过内网访问服务终结点，请谨慎操作。 无法访问以下云服务：容器镜像服务SWR、云日志服务LTS、企业主机安全HSS、应用运维管理AOM、应用性能管理APM、对象存储服务OBS、API网关APIG。 取值范围： off：代表禁用。 on：代表开启。
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'blockServiceEndpointStates' => 'getBlockServiceEndpointStates',
+            'enableNetworkAddressUsageMetrics' => 'getEnableNetworkAddressUsageMetrics'
     ];
 
     /**
@@ -192,6 +212,8 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['blockServiceEndpointStates'] = isset($data['blockServiceEndpointStates']) ? $data['blockServiceEndpointStates'] : null;
+        $this->container['enableNetworkAddressUsageMetrics'] = isset($data['enableNetworkAddressUsageMetrics']) ? $data['enableNetworkAddressUsageMetrics'] : null;
     }
 
     /**
@@ -345,6 +367,54 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets blockServiceEndpointStates
+    *  功能说明：默认情况下，VPC中的资源可以通过内网访问服务终结点。开启该项后，VPC将无法通过内网访问服务终结点，请谨慎操作。 无法访问以下云服务：容器镜像服务SWR、云日志服务LTS、企业主机安全HSS、应用运维管理AOM、应用性能管理APM、对象存储服务OBS、API网关APIG。 取值范围： off：代表禁用。 on：代表开启。
+    *
+    * @return string|null
+    */
+    public function getBlockServiceEndpointStates()
+    {
+        return $this->container['blockServiceEndpointStates'];
+    }
+
+    /**
+    * Sets blockServiceEndpointStates
+    *
+    * @param string|null $blockServiceEndpointStates 功能说明：默认情况下，VPC中的资源可以通过内网访问服务终结点。开启该项后，VPC将无法通过内网访问服务终结点，请谨慎操作。 无法访问以下云服务：容器镜像服务SWR、云日志服务LTS、企业主机安全HSS、应用运维管理AOM、应用性能管理APM、对象存储服务OBS、API网关APIG。 取值范围： off：代表禁用。 on：代表开启。
+    *
+    * @return $this
+    */
+    public function setBlockServiceEndpointStates($blockServiceEndpointStates)
+    {
+        $this->container['blockServiceEndpointStates'] = $blockServiceEndpointStates;
+        return $this;
+    }
+
+    /**
+    * Gets enableNetworkAddressUsageMetrics
+    *  功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+    *
+    * @return bool|null
+    */
+    public function getEnableNetworkAddressUsageMetrics()
+    {
+        return $this->container['enableNetworkAddressUsageMetrics'];
+    }
+
+    /**
+    * Sets enableNetworkAddressUsageMetrics
+    *
+    * @param bool|null $enableNetworkAddressUsageMetrics 功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+    *
+    * @return $this
+    */
+    public function setEnableNetworkAddressUsageMetrics($enableNetworkAddressUsageMetrics)
+    {
+        $this->container['enableNetworkAddressUsageMetrics'] = $enableNetworkAddressUsageMetrics;
         return $this;
     }
 

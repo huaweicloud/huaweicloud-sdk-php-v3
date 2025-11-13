@@ -7249,6 +7249,12 @@ class CodeArtsRepoClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
         if ($localVarParams['repositoryId'] !== null) {
             $pathParams['repository_id'] = $localVarParams['repositoryId'];
         }
@@ -7633,6 +7639,12 @@ class CodeArtsRepoClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['repositoryId'] !== null) {
             $pathParams['repository_id'] = $localVarParams['repositoryId'];

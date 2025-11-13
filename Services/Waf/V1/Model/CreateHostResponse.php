@@ -34,7 +34,7 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
     * server  防护域名的源站服务器配置信息
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * timestamp  创建防护域名的时间
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
     * blockPage  blockPage
@@ -82,7 +82,7 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
     * server  防护域名的源站服务器配置信息
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * timestamp  创建防护域名的时间
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
     * blockPage  blockPage
@@ -151,7 +151,7 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
     * server  防护域名的源站服务器配置信息
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * timestamp  创建防护域名的时间
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
     * blockPage  blockPage
@@ -199,7 +199,7 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
     * server  防护域名的源站服务器配置信息
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * timestamp  创建防护域名的时间
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
     * blockPage  blockPage
@@ -247,7 +247,7 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
     * server  防护域名的源站服务器配置信息
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * timestamp  创建防护域名的时间
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
     * blockPage  blockPage
@@ -721,7 +721,7 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets exclusiveIp
-    *  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    *  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     *
     * @return bool|null
     */
@@ -733,7 +733,7 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets exclusiveIp
     *
-    * @param bool|null $exclusiveIp 是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * @param bool|null $exclusiveIp 是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     *
     * @return $this
     */

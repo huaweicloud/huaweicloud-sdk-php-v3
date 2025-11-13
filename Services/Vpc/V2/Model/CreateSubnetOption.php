@@ -33,6 +33,7 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
     * availabilityZone  功能说明：子网所在的可用分区标识 约束：系统存在的可用分区标识
     * extraDhcpOpts  子网配置的NTP地址或租约时间
     * tags  功能说明：子网资源标签。创建子网时，给子网添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启当前子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
             'dnsList' => 'string[]',
             'availabilityZone' => 'string',
             'extraDhcpOpts' => '\HuaweiCloud\SDK\Vpc\V2\Model\ExtraDhcpOption[]',
-            'tags' => 'string[]'
+            'tags' => 'string[]',
+            'enableNetworkAddressUsageMetrics' => 'bool'
     ];
 
     /**
@@ -67,6 +69,7 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
     * availabilityZone  功能说明：子网所在的可用分区标识 约束：系统存在的可用分区标识
     * extraDhcpOpts  子网配置的NTP地址或租约时间
     * tags  功能说明：子网资源标签。创建子网时，给子网添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启当前子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
         'dnsList' => null,
         'availabilityZone' => null,
         'extraDhcpOpts' => null,
-        'tags' => null
+        'tags' => null,
+        'enableNetworkAddressUsageMetrics' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
     * availabilityZone  功能说明：子网所在的可用分区标识 约束：系统存在的可用分区标识
     * extraDhcpOpts  子网配置的NTP地址或租约时间
     * tags  功能说明：子网资源标签。创建子网时，给子网添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启当前子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
             'dnsList' => 'dnsList',
             'availabilityZone' => 'availability_zone',
             'extraDhcpOpts' => 'extra_dhcp_opts',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'enableNetworkAddressUsageMetrics' => 'enable_network_address_usage_metrics'
     ];
 
     /**
@@ -156,6 +162,7 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
     * availabilityZone  功能说明：子网所在的可用分区标识 约束：系统存在的可用分区标识
     * extraDhcpOpts  子网配置的NTP地址或租约时间
     * tags  功能说明：子网资源标签。创建子网时，给子网添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启当前子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
             'dnsList' => 'setDnsList',
             'availabilityZone' => 'setAvailabilityZone',
             'extraDhcpOpts' => 'setExtraDhcpOpts',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'enableNetworkAddressUsageMetrics' => 'setEnableNetworkAddressUsageMetrics'
     ];
 
     /**
@@ -190,6 +198,7 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
     * availabilityZone  功能说明：子网所在的可用分区标识 约束：系统存在的可用分区标识
     * extraDhcpOpts  子网配置的NTP地址或租约时间
     * tags  功能说明：子网资源标签。创建子网时，给子网添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
+    * enableNetworkAddressUsageMetrics  功能说明：是否开启当前子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
             'dnsList' => 'getDnsList',
             'availabilityZone' => 'getAvailabilityZone',
             'extraDhcpOpts' => 'getExtraDhcpOpts',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'enableNetworkAddressUsageMetrics' => 'getEnableNetworkAddressUsageMetrics'
     ];
 
     /**
@@ -280,6 +290,7 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
         $this->container['extraDhcpOpts'] = isset($data['extraDhcpOpts']) ? $data['extraDhcpOpts'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['enableNetworkAddressUsageMetrics'] = isset($data['enableNetworkAddressUsageMetrics']) ? $data['enableNetworkAddressUsageMetrics'] : null;
     }
 
     /**
@@ -625,6 +636,30 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets enableNetworkAddressUsageMetrics
+    *  功能说明：是否开启当前子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+    *
+    * @return bool|null
+    */
+    public function getEnableNetworkAddressUsageMetrics()
+    {
+        return $this->container['enableNetworkAddressUsageMetrics'];
+    }
+
+    /**
+    * Sets enableNetworkAddressUsageMetrics
+    *
+    * @param bool|null $enableNetworkAddressUsageMetrics 功能说明：是否开启当前子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+    *
+    * @return $this
+    */
+    public function setEnableNetworkAddressUsageMetrics($enableNetworkAddressUsageMetrics)
+    {
+        $this->container['enableNetworkAddressUsageMetrics'] = $enableNetworkAddressUsageMetrics;
         return $this;
     }
 

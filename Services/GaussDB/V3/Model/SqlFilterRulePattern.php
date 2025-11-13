@@ -20,26 +20,42 @@ class SqlFilterRulePattern implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pattern  SQL限流规则。
-    * maxConcurrency  最大并发数。
+    * pattern  **参数解释**：  SQL限流规则。  **取值范围**：  由一个或多个关键字（最多为128个关键字）组成，关键字之间通过\"~\"分隔符分开，如select~from~t1。规则中不能包含‘\\’、中英文逗号、‘~~’，不能以‘~’结尾。
+    * maxConcurrency  **参数解释**：  最大并发数。  **取值范围**：  不涉及。
+    * curConcurrency  **参数解释**：  当前并发数。  **取值范围**：  0 - 4294967296。
+    * curReject  **参数解释**：  当前拦截次数。  **取值范围**：  0 - 4294967296。
+    * createAt  **参数解释**：  SQL限流规则创建时间。  **取值范围**：  0 - 9223372036854775807。
+    * expireAt  **参数解释**：  SQL限流规则失效时间。  **取值范围**：  0 - 9223372036854775807。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'pattern' => 'string',
-            'maxConcurrency' => 'int'
+            'maxConcurrency' => 'int',
+            'curConcurrency' => 'int',
+            'curReject' => 'int',
+            'createAt' => 'int',
+            'expireAt' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pattern  SQL限流规则。
-    * maxConcurrency  最大并发数。
+    * pattern  **参数解释**：  SQL限流规则。  **取值范围**：  由一个或多个关键字（最多为128个关键字）组成，关键字之间通过\"~\"分隔符分开，如select~from~t1。规则中不能包含‘\\’、中英文逗号、‘~~’，不能以‘~’结尾。
+    * maxConcurrency  **参数解释**：  最大并发数。  **取值范围**：  不涉及。
+    * curConcurrency  **参数解释**：  当前并发数。  **取值范围**：  0 - 4294967296。
+    * curReject  **参数解释**：  当前拦截次数。  **取值范围**：  0 - 4294967296。
+    * createAt  **参数解释**：  SQL限流规则创建时间。  **取值范围**：  0 - 9223372036854775807。
+    * expireAt  **参数解释**：  SQL限流规则失效时间。  **取值范围**：  0 - 9223372036854775807。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'pattern' => null,
-        'maxConcurrency' => 'int32'
+        'maxConcurrency' => 'int32',
+        'curConcurrency' => 'int32',
+        'curReject' => 'int32',
+        'createAt' => 'int64',
+        'expireAt' => 'int64'
     ];
 
     /**
@@ -65,38 +81,62 @@ class SqlFilterRulePattern implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pattern  SQL限流规则。
-    * maxConcurrency  最大并发数。
+    * pattern  **参数解释**：  SQL限流规则。  **取值范围**：  由一个或多个关键字（最多为128个关键字）组成，关键字之间通过\"~\"分隔符分开，如select~from~t1。规则中不能包含‘\\’、中英文逗号、‘~~’，不能以‘~’结尾。
+    * maxConcurrency  **参数解释**：  最大并发数。  **取值范围**：  不涉及。
+    * curConcurrency  **参数解释**：  当前并发数。  **取值范围**：  0 - 4294967296。
+    * curReject  **参数解释**：  当前拦截次数。  **取值范围**：  0 - 4294967296。
+    * createAt  **参数解释**：  SQL限流规则创建时间。  **取值范围**：  0 - 9223372036854775807。
+    * expireAt  **参数解释**：  SQL限流规则失效时间。  **取值范围**：  0 - 9223372036854775807。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'pattern' => 'pattern',
-            'maxConcurrency' => 'max_concurrency'
+            'maxConcurrency' => 'max_concurrency',
+            'curConcurrency' => 'cur_concurrency',
+            'curReject' => 'cur_reject',
+            'createAt' => 'create_at',
+            'expireAt' => 'expire_at'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pattern  SQL限流规则。
-    * maxConcurrency  最大并发数。
+    * pattern  **参数解释**：  SQL限流规则。  **取值范围**：  由一个或多个关键字（最多为128个关键字）组成，关键字之间通过\"~\"分隔符分开，如select~from~t1。规则中不能包含‘\\’、中英文逗号、‘~~’，不能以‘~’结尾。
+    * maxConcurrency  **参数解释**：  最大并发数。  **取值范围**：  不涉及。
+    * curConcurrency  **参数解释**：  当前并发数。  **取值范围**：  0 - 4294967296。
+    * curReject  **参数解释**：  当前拦截次数。  **取值范围**：  0 - 4294967296。
+    * createAt  **参数解释**：  SQL限流规则创建时间。  **取值范围**：  0 - 9223372036854775807。
+    * expireAt  **参数解释**：  SQL限流规则失效时间。  **取值范围**：  0 - 9223372036854775807。
     *
     * @var string[]
     */
     protected static $setters = [
             'pattern' => 'setPattern',
-            'maxConcurrency' => 'setMaxConcurrency'
+            'maxConcurrency' => 'setMaxConcurrency',
+            'curConcurrency' => 'setCurConcurrency',
+            'curReject' => 'setCurReject',
+            'createAt' => 'setCreateAt',
+            'expireAt' => 'setExpireAt'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pattern  SQL限流规则。
-    * maxConcurrency  最大并发数。
+    * pattern  **参数解释**：  SQL限流规则。  **取值范围**：  由一个或多个关键字（最多为128个关键字）组成，关键字之间通过\"~\"分隔符分开，如select~from~t1。规则中不能包含‘\\’、中英文逗号、‘~~’，不能以‘~’结尾。
+    * maxConcurrency  **参数解释**：  最大并发数。  **取值范围**：  不涉及。
+    * curConcurrency  **参数解释**：  当前并发数。  **取值范围**：  0 - 4294967296。
+    * curReject  **参数解释**：  当前拦截次数。  **取值范围**：  0 - 4294967296。
+    * createAt  **参数解释**：  SQL限流规则创建时间。  **取值范围**：  0 - 9223372036854775807。
+    * expireAt  **参数解释**：  SQL限流规则失效时间。  **取值范围**：  0 - 9223372036854775807。
     *
     * @var string[]
     */
     protected static $getters = [
             'pattern' => 'getPattern',
-            'maxConcurrency' => 'getMaxConcurrency'
+            'maxConcurrency' => 'getMaxConcurrency',
+            'curConcurrency' => 'getCurConcurrency',
+            'curReject' => 'getCurReject',
+            'createAt' => 'getCreateAt',
+            'expireAt' => 'getExpireAt'
     ];
 
     /**
@@ -159,6 +199,10 @@ class SqlFilterRulePattern implements ModelInterface, ArrayAccess
     {
         $this->container['pattern'] = isset($data['pattern']) ? $data['pattern'] : null;
         $this->container['maxConcurrency'] = isset($data['maxConcurrency']) ? $data['maxConcurrency'] : null;
+        $this->container['curConcurrency'] = isset($data['curConcurrency']) ? $data['curConcurrency'] : null;
+        $this->container['curReject'] = isset($data['curReject']) ? $data['curReject'] : null;
+        $this->container['createAt'] = isset($data['createAt']) ? $data['createAt'] : null;
+        $this->container['expireAt'] = isset($data['expireAt']) ? $data['expireAt'] : null;
     }
 
     /**
@@ -175,6 +219,30 @@ class SqlFilterRulePattern implements ModelInterface, ArrayAccess
         if ($this->container['maxConcurrency'] === null) {
             $invalidProperties[] = "'maxConcurrency' can't be null";
         }
+            if (!is_null($this->container['curConcurrency']) && ($this->container['curConcurrency'] > 4294967296)) {
+                $invalidProperties[] = "invalid value for 'curConcurrency', must be smaller than or equal to 4294967296.";
+            }
+            if (!is_null($this->container['curConcurrency']) && ($this->container['curConcurrency'] < 0)) {
+                $invalidProperties[] = "invalid value for 'curConcurrency', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['curReject']) && ($this->container['curReject'] > 4294967296)) {
+                $invalidProperties[] = "invalid value for 'curReject', must be smaller than or equal to 4294967296.";
+            }
+            if (!is_null($this->container['curReject']) && ($this->container['curReject'] < 0)) {
+                $invalidProperties[] = "invalid value for 'curReject', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['createAt']) && ($this->container['createAt'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'createAt', must be smaller than or equal to 9223372036854775807.";
+            }
+            if (!is_null($this->container['createAt']) && ($this->container['createAt'] < 0)) {
+                $invalidProperties[] = "invalid value for 'createAt', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['expireAt']) && ($this->container['expireAt'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'expireAt', must be smaller than or equal to 9223372036854775807.";
+            }
+            if (!is_null($this->container['expireAt']) && ($this->container['expireAt'] < 0)) {
+                $invalidProperties[] = "invalid value for 'expireAt', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -191,7 +259,7 @@ class SqlFilterRulePattern implements ModelInterface, ArrayAccess
 
     /**
     * Gets pattern
-    *  SQL限流规则。
+    *  **参数解释**：  SQL限流规则。  **取值范围**：  由一个或多个关键字（最多为128个关键字）组成，关键字之间通过\"~\"分隔符分开，如select~from~t1。规则中不能包含‘\\’、中英文逗号、‘~~’，不能以‘~’结尾。
     *
     * @return string
     */
@@ -203,7 +271,7 @@ class SqlFilterRulePattern implements ModelInterface, ArrayAccess
     /**
     * Sets pattern
     *
-    * @param string $pattern SQL限流规则。
+    * @param string $pattern **参数解释**：  SQL限流规则。  **取值范围**：  由一个或多个关键字（最多为128个关键字）组成，关键字之间通过\"~\"分隔符分开，如select~from~t1。规则中不能包含‘\\’、中英文逗号、‘~~’，不能以‘~’结尾。
     *
     * @return $this
     */
@@ -215,7 +283,7 @@ class SqlFilterRulePattern implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxConcurrency
-    *  最大并发数。
+    *  **参数解释**：  最大并发数。  **取值范围**：  不涉及。
     *
     * @return int
     */
@@ -227,13 +295,109 @@ class SqlFilterRulePattern implements ModelInterface, ArrayAccess
     /**
     * Sets maxConcurrency
     *
-    * @param int $maxConcurrency 最大并发数。
+    * @param int $maxConcurrency **参数解释**：  最大并发数。  **取值范围**：  不涉及。
     *
     * @return $this
     */
     public function setMaxConcurrency($maxConcurrency)
     {
         $this->container['maxConcurrency'] = $maxConcurrency;
+        return $this;
+    }
+
+    /**
+    * Gets curConcurrency
+    *  **参数解释**：  当前并发数。  **取值范围**：  0 - 4294967296。
+    *
+    * @return int|null
+    */
+    public function getCurConcurrency()
+    {
+        return $this->container['curConcurrency'];
+    }
+
+    /**
+    * Sets curConcurrency
+    *
+    * @param int|null $curConcurrency **参数解释**：  当前并发数。  **取值范围**：  0 - 4294967296。
+    *
+    * @return $this
+    */
+    public function setCurConcurrency($curConcurrency)
+    {
+        $this->container['curConcurrency'] = $curConcurrency;
+        return $this;
+    }
+
+    /**
+    * Gets curReject
+    *  **参数解释**：  当前拦截次数。  **取值范围**：  0 - 4294967296。
+    *
+    * @return int|null
+    */
+    public function getCurReject()
+    {
+        return $this->container['curReject'];
+    }
+
+    /**
+    * Sets curReject
+    *
+    * @param int|null $curReject **参数解释**：  当前拦截次数。  **取值范围**：  0 - 4294967296。
+    *
+    * @return $this
+    */
+    public function setCurReject($curReject)
+    {
+        $this->container['curReject'] = $curReject;
+        return $this;
+    }
+
+    /**
+    * Gets createAt
+    *  **参数解释**：  SQL限流规则创建时间。  **取值范围**：  0 - 9223372036854775807。
+    *
+    * @return int|null
+    */
+    public function getCreateAt()
+    {
+        return $this->container['createAt'];
+    }
+
+    /**
+    * Sets createAt
+    *
+    * @param int|null $createAt **参数解释**：  SQL限流规则创建时间。  **取值范围**：  0 - 9223372036854775807。
+    *
+    * @return $this
+    */
+    public function setCreateAt($createAt)
+    {
+        $this->container['createAt'] = $createAt;
+        return $this;
+    }
+
+    /**
+    * Gets expireAt
+    *  **参数解释**：  SQL限流规则失效时间。  **取值范围**：  0 - 9223372036854775807。
+    *
+    * @return int|null
+    */
+    public function getExpireAt()
+    {
+        return $this->container['expireAt'];
+    }
+
+    /**
+    * Sets expireAt
+    *
+    * @param int|null $expireAt **参数解释**：  SQL限流规则失效时间。  **取值范围**：  0 - 9223372036854775807。
+    *
+    * @return $this
+    */
+    public function setExpireAt($expireAt)
+    {
+        $this->container['expireAt'] = $expireAt;
         return $this;
     }
 

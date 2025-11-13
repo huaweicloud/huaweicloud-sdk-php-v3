@@ -29,6 +29,8 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
     * number  行数
     * searchTimeRange  查询执行任务时最近数据的时间范围，最大值为60
     * searchTimeRangeUnit  查询时间单位
+    * customDate  customDate
+    * isTimeRangeRelative  **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
     *
     * @var string[]
     */
@@ -41,7 +43,9 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
             'condition' => 'string',
             'number' => 'int',
             'searchTimeRange' => 'int',
-            'searchTimeRangeUnit' => 'string'
+            'searchTimeRangeUnit' => 'string',
+            'customDate' => '\HuaweiCloud\SDK\Lts\V2\Model\CustomDate',
+            'isTimeRangeRelative' => 'bool'
     ];
 
     /**
@@ -55,6 +59,8 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
     * number  行数
     * searchTimeRange  查询执行任务时最近数据的时间范围，最大值为60
     * searchTimeRangeUnit  查询时间单位
+    * customDate  customDate
+    * isTimeRangeRelative  **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
     *
     * @var string[]
     */
@@ -67,7 +73,9 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
         'condition' => null,
         'number' => 'int32',
         'searchTimeRange' => 'int32',
-        'searchTimeRangeUnit' => null
+        'searchTimeRangeUnit' => null,
+        'customDate' => null,
+        'isTimeRangeRelative' => null
     ];
 
     /**
@@ -102,6 +110,8 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
     * number  行数
     * searchTimeRange  查询执行任务时最近数据的时间范围，最大值为60
     * searchTimeRangeUnit  查询时间单位
+    * customDate  customDate
+    * isTimeRangeRelative  **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
     *
     * @var string[]
     */
@@ -114,7 +124,9 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
             'condition' => 'condition',
             'number' => 'number',
             'searchTimeRange' => 'search_time_range',
-            'searchTimeRangeUnit' => 'search_time_range_unit'
+            'searchTimeRangeUnit' => 'search_time_range_unit',
+            'customDate' => 'custom_date',
+            'isTimeRangeRelative' => 'is_time_range_relative'
     ];
 
     /**
@@ -128,6 +140,8 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
     * number  行数
     * searchTimeRange  查询执行任务时最近数据的时间范围，最大值为60
     * searchTimeRangeUnit  查询时间单位
+    * customDate  customDate
+    * isTimeRangeRelative  **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
     *
     * @var string[]
     */
@@ -140,7 +154,9 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
             'condition' => 'setCondition',
             'number' => 'setNumber',
             'searchTimeRange' => 'setSearchTimeRange',
-            'searchTimeRangeUnit' => 'setSearchTimeRangeUnit'
+            'searchTimeRangeUnit' => 'setSearchTimeRangeUnit',
+            'customDate' => 'setCustomDate',
+            'isTimeRangeRelative' => 'setIsTimeRangeRelative'
     ];
 
     /**
@@ -154,6 +170,8 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
     * number  行数
     * searchTimeRange  查询执行任务时最近数据的时间范围，最大值为60
     * searchTimeRangeUnit  查询时间单位
+    * customDate  customDate
+    * isTimeRangeRelative  **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
     *
     * @var string[]
     */
@@ -166,7 +184,9 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
             'condition' => 'getCondition',
             'number' => 'getNumber',
             'searchTimeRange' => 'getSearchTimeRange',
-            'searchTimeRangeUnit' => 'getSearchTimeRangeUnit'
+            'searchTimeRangeUnit' => 'getSearchTimeRangeUnit',
+            'customDate' => 'getCustomDate',
+            'isTimeRangeRelative' => 'getIsTimeRangeRelative'
     ];
 
     /**
@@ -255,6 +275,8 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
         $this->container['number'] = isset($data['number']) ? $data['number'] : null;
         $this->container['searchTimeRange'] = isset($data['searchTimeRange']) ? $data['searchTimeRange'] : null;
         $this->container['searchTimeRangeUnit'] = isset($data['searchTimeRangeUnit']) ? $data['searchTimeRangeUnit'] : null;
+        $this->container['customDate'] = isset($data['customDate']) ? $data['customDate'] : null;
+        $this->container['isTimeRangeRelative'] = isset($data['isTimeRangeRelative']) ? $data['isTimeRangeRelative'] : null;
     }
 
     /**
@@ -530,6 +552,54 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
     public function setSearchTimeRangeUnit($searchTimeRangeUnit)
     {
         $this->container['searchTimeRangeUnit'] = $searchTimeRangeUnit;
+        return $this;
+    }
+
+    /**
+    * Gets customDate
+    *  customDate
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\CustomDate|null
+    */
+    public function getCustomDate()
+    {
+        return $this->container['customDate'];
+    }
+
+    /**
+    * Sets customDate
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\CustomDate|null $customDate customDate
+    *
+    * @return $this
+    */
+    public function setCustomDate($customDate)
+    {
+        $this->container['customDate'] = $customDate;
+        return $this;
+    }
+
+    /**
+    * Gets isTimeRangeRelative
+    *  **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
+    *
+    * @return bool|null
+    */
+    public function getIsTimeRangeRelative()
+    {
+        return $this->container['isTimeRangeRelative'];
+    }
+
+    /**
+    * Sets isTimeRangeRelative
+    *
+    * @param bool|null $isTimeRangeRelative **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
+    *
+    * @return $this
+    */
+    public function setIsTimeRangeRelative($isTimeRangeRelative)
+    {
+        $this->container['isTimeRangeRelative'] = $isTimeRangeRelative;
         return $this;
     }
 

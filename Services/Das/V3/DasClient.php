@@ -970,6 +970,74 @@ class DasClient extends Client
     }
 
     /**
+     * 创建导出历史事务任务
+     *
+     * DAS收集历史事务开关打开后，支持创建一次性导出指定时间范围内的历史事务数据任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createHistoryTransactionExportTask($request)
+    {
+        return $this->createHistoryTransactionExportTaskWithHttpInfo($request);
+    }
+
+    public function createHistoryTransactionExportTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/transaction/{instance_id}/create-export-task';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Das\V3\Model\CreateHistoryTransactionExportTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Das\V3\Model\CreateHistoryTransactionExportTaskRequest');
+    }
+
+    /**
      * 创建快照
      *
      * 创建快照
@@ -1319,6 +1387,74 @@ class DasClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Das\V3\Model\DeleteDbUserResponse',
             $requestType='\HuaweiCloud\SDK\Das\V3\Model\DeleteDbUserRequest');
+    }
+
+    /**
+     * 删除导出历史事务任务
+     *
+     * DAS收集历史事务开关打开后，删除历史事务导出任务记录对应的OBS文件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteHistoryTransactionExportTask($request)
+    {
+        return $this->deleteHistoryTransactionExportTaskWithHttpInfo($request);
+    }
+
+    public function deleteHistoryTransactionExportTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/transaction/{instance_id}/delete-export-task';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Das\V3\Model\DeleteHistoryTransactionExportTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Das\V3\Model\DeleteHistoryTransactionExportTaskRequest');
     }
 
     /**
@@ -2649,6 +2785,77 @@ class DasClient extends Client
     }
 
     /**
+     * 查询历史事务导出任务列表
+     *
+     * DAS收集历史事务开关打开后，查询历史事务导出任务列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listHistoryTransactionExportTask($request)
+    {
+        return $this->listHistoryTransactionExportTaskWithHttpInfo($request);
+    }
+
+    public function listHistoryTransactionExportTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/transaction/{instance_id}/get-export-task-list';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Das\V3\Model\ListHistoryTransactionExportTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Das\V3\Model\ListHistoryTransactionExportTaskRequest');
+    }
+
+    /**
      * 查询InnoDB锁等待列表
      *
      * 查询InnoDB锁等待列表。
@@ -3701,6 +3908,142 @@ class DasClient extends Client
     }
 
     /**
+     * 内置账号登录
+     *
+     * 内置账号登录
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function loginBuiltInAccount($request)
+    {
+        return $this->loginBuiltInAccountWithHttpInfo($request);
+    }
+
+    public function loginBuiltInAccountWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/login-built-in-account';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Das\V3\Model\LoginBuiltInAccountResponse',
+            $requestType='\HuaweiCloud\SDK\Das\V3\Model\LoginBuiltInAccountRequest');
+    }
+
+    /**
+     * 内置账号登出
+     *
+     * 内置账号登出
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function logoffBuiltInAccount($request)
+    {
+        return $this->logoffBuiltInAccountWithHttpInfo($request);
+    }
+
+    public function logoffBuiltInAccountWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/logoff-built-in-account';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Das\V3\Model\LogoffBuiltInAccountResponse',
+            $requestType='\HuaweiCloud\SDK\Das\V3\Model\LogoffBuiltInAccountRequest');
+    }
+
+    /**
      * 根据原始SQL生成SQL限流关键字
      *
      * 根据原始SQL生成SQL限流关键字，目前支持MySQL、MariaDB、GaussDB(for MySQL)三种引擎。
@@ -4306,6 +4649,74 @@ class DasClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Das\V3\Model\ShowHealthReportSettingsResponse',
             $requestType='\HuaweiCloud\SDK\Das\V3\Model\ShowHealthReportSettingsRequest');
+    }
+
+    /**
+     * 查询历史事务导出任务详情
+     *
+     * DAS收集历史事务开关打开后，查询历史事务导出任务详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showHistoryTransactionExportTaskInfo($request)
+    {
+        return $this->showHistoryTransactionExportTaskInfoWithHttpInfo($request);
+    }
+
+    public function showHistoryTransactionExportTaskInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/transaction/{instance_id}/get-export-task-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $queryParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Das\V3\Model\ShowHistoryTransactionExportTaskInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Das\V3\Model\ShowHistoryTransactionExportTaskInfoRequest');
     }
 
     /**

@@ -27,7 +27,7 @@ class UpdateNotificationTemplateRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'domainId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Lts\V2\Model\CreateNotificationTemplateRequestBody'
+            'body' => '\HuaweiCloud\SDK\Lts\V2\Model\UpdateNotificationTemplateRequestBody'
     ];
 
     /**
@@ -220,7 +220,7 @@ class UpdateNotificationTemplateRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\CreateNotificationTemplateRequestBody|null
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\UpdateNotificationTemplateRequestBody|null
     */
     public function getBody()
     {
@@ -230,7 +230,7 @@ class UpdateNotificationTemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\CreateNotificationTemplateRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\UpdateNotificationTemplateRequestBody|null $body body
     *
     * @return $this
     */

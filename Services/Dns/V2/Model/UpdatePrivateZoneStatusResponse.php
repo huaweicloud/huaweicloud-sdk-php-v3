@@ -25,10 +25,10 @@ class UpdatePrivateZoneStatusResponse implements ModelInterface, ArrayAccess
     * name  **参数解释：** 域名。 **取值范围：** 不涉及。
     * description  **参数解释：** 域名的描述信息。 **取值范围：** 长度不超过255个字符。
     * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **取值范围：** 不涉及。
-    * zoneType  **参数解释：** 域名类型。 **取值范围：** public：公网域名。
+    * zoneType  **参数解释：** 域名类型。 **取值范围：** private：内网域名。
     * ttl  **参数解释：** 该域名下SOA记录中的有效缓存时间，以秒为单位。 **取值范围：** 1~2147483647。
     * serial  **参数解释：** 该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。 **取值范围：** 不涉及。
-    * status  **参数解释：** 公网域名状态。 **取值范围：** - ACTIVE：正常 - DISABLE：暂停
+    * status  **参数解释：** 内网域名状态。 **取值范围：** - ACTIVE：正常 - DISABLE：暂停
     * recordNum  **参数解释：** 该域名下的记录集个数。 **取值范围：** 不涉及。
     * poolId  **参数解释：** 托管该域名的pool，由系统分配。 **取值范围：** 不涉及。
     * projectId  **参数解释：** 域名所属的项目ID。 **取值范围：** 不涉及。
@@ -63,10 +63,10 @@ class UpdatePrivateZoneStatusResponse implements ModelInterface, ArrayAccess
     * name  **参数解释：** 域名。 **取值范围：** 不涉及。
     * description  **参数解释：** 域名的描述信息。 **取值范围：** 长度不超过255个字符。
     * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **取值范围：** 不涉及。
-    * zoneType  **参数解释：** 域名类型。 **取值范围：** public：公网域名。
+    * zoneType  **参数解释：** 域名类型。 **取值范围：** private：内网域名。
     * ttl  **参数解释：** 该域名下SOA记录中的有效缓存时间，以秒为单位。 **取值范围：** 1~2147483647。
     * serial  **参数解释：** 该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。 **取值范围：** 不涉及。
-    * status  **参数解释：** 公网域名状态。 **取值范围：** - ACTIVE：正常 - DISABLE：暂停
+    * status  **参数解释：** 内网域名状态。 **取值范围：** - ACTIVE：正常 - DISABLE：暂停
     * recordNum  **参数解释：** 该域名下的记录集个数。 **取值范围：** 不涉及。
     * poolId  **参数解释：** 托管该域名的pool，由系统分配。 **取值范围：** 不涉及。
     * projectId  **参数解释：** 域名所属的项目ID。 **取值范围：** 不涉及。
@@ -122,10 +122,10 @@ class UpdatePrivateZoneStatusResponse implements ModelInterface, ArrayAccess
     * name  **参数解释：** 域名。 **取值范围：** 不涉及。
     * description  **参数解释：** 域名的描述信息。 **取值范围：** 长度不超过255个字符。
     * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **取值范围：** 不涉及。
-    * zoneType  **参数解释：** 域名类型。 **取值范围：** public：公网域名。
+    * zoneType  **参数解释：** 域名类型。 **取值范围：** private：内网域名。
     * ttl  **参数解释：** 该域名下SOA记录中的有效缓存时间，以秒为单位。 **取值范围：** 1~2147483647。
     * serial  **参数解释：** 该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。 **取值范围：** 不涉及。
-    * status  **参数解释：** 公网域名状态。 **取值范围：** - ACTIVE：正常 - DISABLE：暂停
+    * status  **参数解释：** 内网域名状态。 **取值范围：** - ACTIVE：正常 - DISABLE：暂停
     * recordNum  **参数解释：** 该域名下的记录集个数。 **取值范围：** 不涉及。
     * poolId  **参数解释：** 托管该域名的pool，由系统分配。 **取值范围：** 不涉及。
     * projectId  **参数解释：** 域名所属的项目ID。 **取值范围：** 不涉及。
@@ -160,10 +160,10 @@ class UpdatePrivateZoneStatusResponse implements ModelInterface, ArrayAccess
     * name  **参数解释：** 域名。 **取值范围：** 不涉及。
     * description  **参数解释：** 域名的描述信息。 **取值范围：** 长度不超过255个字符。
     * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **取值范围：** 不涉及。
-    * zoneType  **参数解释：** 域名类型。 **取值范围：** public：公网域名。
+    * zoneType  **参数解释：** 域名类型。 **取值范围：** private：内网域名。
     * ttl  **参数解释：** 该域名下SOA记录中的有效缓存时间，以秒为单位。 **取值范围：** 1~2147483647。
     * serial  **参数解释：** 该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。 **取值范围：** 不涉及。
-    * status  **参数解释：** 公网域名状态。 **取值范围：** - ACTIVE：正常 - DISABLE：暂停
+    * status  **参数解释：** 内网域名状态。 **取值范围：** - ACTIVE：正常 - DISABLE：暂停
     * recordNum  **参数解释：** 该域名下的记录集个数。 **取值范围：** 不涉及。
     * poolId  **参数解释：** 托管该域名的pool，由系统分配。 **取值范围：** 不涉及。
     * projectId  **参数解释：** 域名所属的项目ID。 **取值范围：** 不涉及。
@@ -198,10 +198,10 @@ class UpdatePrivateZoneStatusResponse implements ModelInterface, ArrayAccess
     * name  **参数解释：** 域名。 **取值范围：** 不涉及。
     * description  **参数解释：** 域名的描述信息。 **取值范围：** 长度不超过255个字符。
     * email  **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **取值范围：** 不涉及。
-    * zoneType  **参数解释：** 域名类型。 **取值范围：** public：公网域名。
+    * zoneType  **参数解释：** 域名类型。 **取值范围：** private：内网域名。
     * ttl  **参数解释：** 该域名下SOA记录中的有效缓存时间，以秒为单位。 **取值范围：** 1~2147483647。
     * serial  **参数解释：** 该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。 **取值范围：** 不涉及。
-    * status  **参数解释：** 公网域名状态。 **取值范围：** - ACTIVE：正常 - DISABLE：暂停
+    * status  **参数解释：** 内网域名状态。 **取值范围：** - ACTIVE：正常 - DISABLE：暂停
     * recordNum  **参数解释：** 该域名下的记录集个数。 **取值范围：** 不涉及。
     * poolId  **参数解释：** 托管该域名的pool，由系统分配。 **取值范围：** 不涉及。
     * projectId  **参数解释：** 域名所属的项目ID。 **取值范围：** 不涉及。
@@ -425,7 +425,7 @@ class UpdatePrivateZoneStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneType
-    *  **参数解释：** 域名类型。 **取值范围：** public：公网域名。
+    *  **参数解释：** 域名类型。 **取值范围：** private：内网域名。
     *
     * @return string|null
     */
@@ -437,7 +437,7 @@ class UpdatePrivateZoneStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets zoneType
     *
-    * @param string|null $zoneType **参数解释：** 域名类型。 **取值范围：** public：公网域名。
+    * @param string|null $zoneType **参数解释：** 域名类型。 **取值范围：** private：内网域名。
     *
     * @return $this
     */
@@ -497,7 +497,7 @@ class UpdatePrivateZoneStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释：** 公网域名状态。 **取值范围：** - ACTIVE：正常 - DISABLE：暂停
+    *  **参数解释：** 内网域名状态。 **取值范围：** - ACTIVE：正常 - DISABLE：暂停
     *
     * @return string|null
     */
@@ -509,7 +509,7 @@ class UpdatePrivateZoneStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释：** 公网域名状态。 **取值范围：** - ACTIVE：正常 - DISABLE：暂停
+    * @param string|null $status **参数解释：** 内网域名状态。 **取值范围：** - ACTIVE：正常 - DISABLE：暂停
     *
     * @return $this
     */

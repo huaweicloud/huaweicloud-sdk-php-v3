@@ -21,8 +21,8 @@ class ListEventLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  total
-    * items  items
+    * total  防护事件下载文件总数
+    * items  防护事件下载文件列表
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListEventLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  total
-    * items  items
+    * total  防护事件下载文件总数
+    * items  防护事件下载文件列表
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListEventLogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  total
-    * items  items
+    * total  防护事件下载文件总数
+    * items  防护事件下载文件列表
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListEventLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  total
-    * items  items
+    * total  防护事件下载文件总数
+    * items  防护事件下载文件列表
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListEventLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  total
-    * items  items
+    * total  防护事件下载文件总数
+    * items  防护事件下载文件列表
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListEventLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  total
+    *  防护事件下载文件总数
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListEventLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total total
+    * @param int|null $total 防护事件下载文件总数
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListEventLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets items
-    *  items
+    *  防护事件下载文件列表
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\EventDump[]|null
     */
@@ -222,7 +222,7 @@ class ListEventLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\EventDump[]|null $items items
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\EventDump[]|null $items 防护事件下载文件列表
     *
     * @return $this
     */

@@ -24,7 +24,6 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmRuleName  SQL告警名称
     * alarmRuleAlias  规则名称
     * isCssSql  是否管道符sql查询
-    * indexId  索引id
     * projectId  项目id
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
@@ -34,13 +33,13 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间（毫秒时间戳）
-    * updateTime  更新时间（毫秒时间戳）
-    * topics  主题
-    * language  邮件附加信息语言
-    * id  规则ID。
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * triggerConditionCount  **参数解释：** 告警触发条件：满足条件次数。满足条件次数是指设置的SQL语句。 **取值范围：** 不涉及。
+    * triggerConditionFrequency  **参数解释：** 触发条件：触发周期。 **取值范围：** 不涉及。
+    * whetherRecoveryPolicy  **参数解释：** 是否打开恢复通知。 **取值范围：** - true：配置告警恢复策略。 - false：不配置告警恢复策略。
+    * recoveryPolicy  **参数解释：** 恢复策略周期。 **取值范围：** 不涉及。
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
     *
     * @var string[]
     */
@@ -48,23 +47,22 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             'sqlAlarmRuleName' => 'string',
             'alarmRuleAlias' => 'string',
             'isCssSql' => 'bool',
-            'indexId' => 'string',
             'projectId' => 'string',
             'sqlAlarmRuleId' => 'string',
             'sqlAlarmRuleDescription' => 'string',
-            'sqlRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\SqlRequest[]',
+            'sqlRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\SqlRequestResponse[]',
             'frequency' => '\HuaweiCloud\SDK\Lts\V2\Model\FrequencyRespBody',
             'conditionExpression' => 'string',
             'sqlAlarmLevel' => 'string',
             'sqlAlarmSend' => 'bool',
             'domainId' => 'string',
-            'createTime' => 'int',
-            'updateTime' => 'int',
-            'topics' => '\HuaweiCloud\SDK\Lts\V2\Model\Topics[]',
-            'language' => 'string',
-            'id' => 'string',
             'notificationFrequency' => 'int',
-            'alarmActionRuleName' => 'string'
+            'alarmActionRuleName' => 'string',
+            'triggerConditionCount' => 'int',
+            'triggerConditionFrequency' => 'int',
+            'whetherRecoveryPolicy' => 'bool',
+            'recoveryPolicy' => 'int',
+            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsResBody[]'
     ];
 
     /**
@@ -72,7 +70,6 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmRuleName  SQL告警名称
     * alarmRuleAlias  规则名称
     * isCssSql  是否管道符sql查询
-    * indexId  索引id
     * projectId  项目id
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
@@ -82,13 +79,13 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间（毫秒时间戳）
-    * updateTime  更新时间（毫秒时间戳）
-    * topics  主题
-    * language  邮件附加信息语言
-    * id  规则ID。
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * triggerConditionCount  **参数解释：** 告警触发条件：满足条件次数。满足条件次数是指设置的SQL语句。 **取值范围：** 不涉及。
+    * triggerConditionFrequency  **参数解释：** 触发条件：触发周期。 **取值范围：** 不涉及。
+    * whetherRecoveryPolicy  **参数解释：** 是否打开恢复通知。 **取值范围：** - true：配置告警恢复策略。 - false：不配置告警恢复策略。
+    * recoveryPolicy  **参数解释：** 恢复策略周期。 **取值范围：** 不涉及。
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
     *
     * @var string[]
     */
@@ -96,7 +93,6 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
         'sqlAlarmRuleName' => null,
         'alarmRuleAlias' => null,
         'isCssSql' => null,
-        'indexId' => null,
         'projectId' => null,
         'sqlAlarmRuleId' => null,
         'sqlAlarmRuleDescription' => null,
@@ -106,13 +102,13 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
         'sqlAlarmLevel' => null,
         'sqlAlarmSend' => null,
         'domainId' => null,
-        'createTime' => 'int64',
-        'updateTime' => 'int64',
-        'topics' => null,
-        'language' => null,
-        'id' => null,
         'notificationFrequency' => 'int32',
-        'alarmActionRuleName' => null
+        'alarmActionRuleName' => null,
+        'triggerConditionCount' => 'int32',
+        'triggerConditionFrequency' => 'int32',
+        'whetherRecoveryPolicy' => null,
+        'recoveryPolicy' => 'int32',
+        'tags' => null
     ];
 
     /**
@@ -141,7 +137,6 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmRuleName  SQL告警名称
     * alarmRuleAlias  规则名称
     * isCssSql  是否管道符sql查询
-    * indexId  索引id
     * projectId  项目id
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
@@ -151,13 +146,13 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间（毫秒时间戳）
-    * updateTime  更新时间（毫秒时间戳）
-    * topics  主题
-    * language  邮件附加信息语言
-    * id  规则ID。
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * triggerConditionCount  **参数解释：** 告警触发条件：满足条件次数。满足条件次数是指设置的SQL语句。 **取值范围：** 不涉及。
+    * triggerConditionFrequency  **参数解释：** 触发条件：触发周期。 **取值范围：** 不涉及。
+    * whetherRecoveryPolicy  **参数解释：** 是否打开恢复通知。 **取值范围：** - true：配置告警恢复策略。 - false：不配置告警恢复策略。
+    * recoveryPolicy  **参数解释：** 恢复策略周期。 **取值范围：** 不涉及。
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
     *
     * @var string[]
     */
@@ -165,7 +160,6 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             'sqlAlarmRuleName' => 'sql_alarm_rule_name',
             'alarmRuleAlias' => 'alarm_rule_alias',
             'isCssSql' => 'is_css_sql',
-            'indexId' => 'indexId',
             'projectId' => 'projectId',
             'sqlAlarmRuleId' => 'sql_alarm_rule_id',
             'sqlAlarmRuleDescription' => 'sql_alarm_rule_description',
@@ -175,13 +169,13 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             'sqlAlarmLevel' => 'sql_alarm_level',
             'sqlAlarmSend' => 'sql_alarm_send',
             'domainId' => 'domain_id',
-            'createTime' => 'create_time',
-            'updateTime' => 'update_time',
-            'topics' => 'topics',
-            'language' => 'language',
-            'id' => 'id',
             'notificationFrequency' => 'notification_frequency',
-            'alarmActionRuleName' => 'alarm_action_rule_name'
+            'alarmActionRuleName' => 'alarm_action_rule_name',
+            'triggerConditionCount' => 'trigger_condition_count',
+            'triggerConditionFrequency' => 'trigger_condition_frequency',
+            'whetherRecoveryPolicy' => 'whether_recovery_policy',
+            'recoveryPolicy' => 'recovery_policy',
+            'tags' => 'tags'
     ];
 
     /**
@@ -189,7 +183,6 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmRuleName  SQL告警名称
     * alarmRuleAlias  规则名称
     * isCssSql  是否管道符sql查询
-    * indexId  索引id
     * projectId  项目id
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
@@ -199,13 +192,13 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间（毫秒时间戳）
-    * updateTime  更新时间（毫秒时间戳）
-    * topics  主题
-    * language  邮件附加信息语言
-    * id  规则ID。
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * triggerConditionCount  **参数解释：** 告警触发条件：满足条件次数。满足条件次数是指设置的SQL语句。 **取值范围：** 不涉及。
+    * triggerConditionFrequency  **参数解释：** 触发条件：触发周期。 **取值范围：** 不涉及。
+    * whetherRecoveryPolicy  **参数解释：** 是否打开恢复通知。 **取值范围：** - true：配置告警恢复策略。 - false：不配置告警恢复策略。
+    * recoveryPolicy  **参数解释：** 恢复策略周期。 **取值范围：** 不涉及。
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
     *
     * @var string[]
     */
@@ -213,7 +206,6 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             'sqlAlarmRuleName' => 'setSqlAlarmRuleName',
             'alarmRuleAlias' => 'setAlarmRuleAlias',
             'isCssSql' => 'setIsCssSql',
-            'indexId' => 'setIndexId',
             'projectId' => 'setProjectId',
             'sqlAlarmRuleId' => 'setSqlAlarmRuleId',
             'sqlAlarmRuleDescription' => 'setSqlAlarmRuleDescription',
@@ -223,13 +215,13 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             'sqlAlarmLevel' => 'setSqlAlarmLevel',
             'sqlAlarmSend' => 'setSqlAlarmSend',
             'domainId' => 'setDomainId',
-            'createTime' => 'setCreateTime',
-            'updateTime' => 'setUpdateTime',
-            'topics' => 'setTopics',
-            'language' => 'setLanguage',
-            'id' => 'setId',
             'notificationFrequency' => 'setNotificationFrequency',
-            'alarmActionRuleName' => 'setAlarmActionRuleName'
+            'alarmActionRuleName' => 'setAlarmActionRuleName',
+            'triggerConditionCount' => 'setTriggerConditionCount',
+            'triggerConditionFrequency' => 'setTriggerConditionFrequency',
+            'whetherRecoveryPolicy' => 'setWhetherRecoveryPolicy',
+            'recoveryPolicy' => 'setRecoveryPolicy',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -237,7 +229,6 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmRuleName  SQL告警名称
     * alarmRuleAlias  规则名称
     * isCssSql  是否管道符sql查询
-    * indexId  索引id
     * projectId  项目id
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
@@ -247,13 +238,13 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间（毫秒时间戳）
-    * updateTime  更新时间（毫秒时间戳）
-    * topics  主题
-    * language  邮件附加信息语言
-    * id  规则ID。
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    * triggerConditionCount  **参数解释：** 告警触发条件：满足条件次数。满足条件次数是指设置的SQL语句。 **取值范围：** 不涉及。
+    * triggerConditionFrequency  **参数解释：** 触发条件：触发周期。 **取值范围：** 不涉及。
+    * whetherRecoveryPolicy  **参数解释：** 是否打开恢复通知。 **取值范围：** - true：配置告警恢复策略。 - false：不配置告警恢复策略。
+    * recoveryPolicy  **参数解释：** 恢复策略周期。 **取值范围：** 不涉及。
+    * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
     *
     * @var string[]
     */
@@ -261,7 +252,6 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             'sqlAlarmRuleName' => 'getSqlAlarmRuleName',
             'alarmRuleAlias' => 'getAlarmRuleAlias',
             'isCssSql' => 'getIsCssSql',
-            'indexId' => 'getIndexId',
             'projectId' => 'getProjectId',
             'sqlAlarmRuleId' => 'getSqlAlarmRuleId',
             'sqlAlarmRuleDescription' => 'getSqlAlarmRuleDescription',
@@ -271,13 +261,13 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             'sqlAlarmLevel' => 'getSqlAlarmLevel',
             'sqlAlarmSend' => 'getSqlAlarmSend',
             'domainId' => 'getDomainId',
-            'createTime' => 'getCreateTime',
-            'updateTime' => 'getUpdateTime',
-            'topics' => 'getTopics',
-            'language' => 'getLanguage',
-            'id' => 'getId',
             'notificationFrequency' => 'getNotificationFrequency',
-            'alarmActionRuleName' => 'getAlarmActionRuleName'
+            'alarmActionRuleName' => 'getAlarmActionRuleName',
+            'triggerConditionCount' => 'getTriggerConditionCount',
+            'triggerConditionFrequency' => 'getTriggerConditionFrequency',
+            'whetherRecoveryPolicy' => 'getWhetherRecoveryPolicy',
+            'recoveryPolicy' => 'getRecoveryPolicy',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -324,8 +314,6 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     const SQL_ALARM_LEVEL_MINOR = 'Minor';
     const SQL_ALARM_LEVEL_MAJOR = 'Major';
     const SQL_ALARM_LEVEL_CRITICAL = 'CRITICAL';
-    const LANGUAGE_ZH_CN = 'zh-cn';
-    const LANGUAGE_EN_US = 'en-us';
     const NOTIFICATION_FREQUENCY_0 = 0;
     const NOTIFICATION_FREQUENCY_5 = 5;
     const NOTIFICATION_FREQUENCY_10 = 10;
@@ -348,19 +336,6 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             self::SQL_ALARM_LEVEL_MINOR,
             self::SQL_ALARM_LEVEL_MAJOR,
             self::SQL_ALARM_LEVEL_CRITICAL,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getLanguageAllowableValues()
-    {
-        return [
-            self::LANGUAGE_ZH_CN,
-            self::LANGUAGE_EN_US,
         ];
     }
 
@@ -402,7 +377,6 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
         $this->container['sqlAlarmRuleName'] = isset($data['sqlAlarmRuleName']) ? $data['sqlAlarmRuleName'] : null;
         $this->container['alarmRuleAlias'] = isset($data['alarmRuleAlias']) ? $data['alarmRuleAlias'] : null;
         $this->container['isCssSql'] = isset($data['isCssSql']) ? $data['isCssSql'] : null;
-        $this->container['indexId'] = isset($data['indexId']) ? $data['indexId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['sqlAlarmRuleId'] = isset($data['sqlAlarmRuleId']) ? $data['sqlAlarmRuleId'] : null;
         $this->container['sqlAlarmRuleDescription'] = isset($data['sqlAlarmRuleDescription']) ? $data['sqlAlarmRuleDescription'] : null;
@@ -412,13 +386,13 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
         $this->container['sqlAlarmLevel'] = isset($data['sqlAlarmLevel']) ? $data['sqlAlarmLevel'] : null;
         $this->container['sqlAlarmSend'] = isset($data['sqlAlarmSend']) ? $data['sqlAlarmSend'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
-        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
-        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
-        $this->container['topics'] = isset($data['topics']) ? $data['topics'] : null;
-        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['notificationFrequency'] = isset($data['notificationFrequency']) ? $data['notificationFrequency'] : null;
         $this->container['alarmActionRuleName'] = isset($data['alarmActionRuleName']) ? $data['alarmActionRuleName'] : null;
+        $this->container['triggerConditionCount'] = isset($data['triggerConditionCount']) ? $data['triggerConditionCount'] : null;
+        $this->container['triggerConditionFrequency'] = isset($data['triggerConditionFrequency']) ? $data['triggerConditionFrequency'] : null;
+        $this->container['whetherRecoveryPolicy'] = isset($data['whetherRecoveryPolicy']) ? $data['whetherRecoveryPolicy'] : null;
+        $this->container['recoveryPolicy'] = isset($data['recoveryPolicy']) ? $data['recoveryPolicy'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -467,26 +441,6 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 32.";
             }
-            if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 13)) {
-                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 13.";
-            }
-            if (!is_null($this->container['createTime']) && ($this->container['createTime'] < 13)) {
-                $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 13.";
-            }
-            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] > 13)) {
-                $invalidProperties[] = "invalid value for 'updateTime', must be smaller than or equal to 13.";
-            }
-            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] < 13)) {
-                $invalidProperties[] = "invalid value for 'updateTime', must be bigger than or equal to 13.";
-            }
-            $allowedValues = $this->getLanguageAllowableValues();
-                if (!is_null($this->container['language']) && !in_array($this->container['language'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'language', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             $allowedValues = $this->getNotificationFrequencyAllowableValues();
                 if (!is_null($this->container['notificationFrequency']) && !in_array($this->container['notificationFrequency'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -582,30 +536,6 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets indexId
-    *  索引id
-    *
-    * @return string|null
-    */
-    public function getIndexId()
-    {
-        return $this->container['indexId'];
-    }
-
-    /**
-    * Sets indexId
-    *
-    * @param string|null $indexId 索引id
-    *
-    * @return $this
-    */
-    public function setIndexId($indexId)
-    {
-        $this->container['indexId'] = $indexId;
-        return $this;
-    }
-
-    /**
     * Gets projectId
     *  项目id
     *
@@ -681,7 +611,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * Gets sqlRequests
     *  SQL详细信息
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\SqlRequest[]|null
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\SqlRequestResponse[]|null
     */
     public function getSqlRequests()
     {
@@ -691,7 +621,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sqlRequests
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\SqlRequest[]|null $sqlRequests SQL详细信息
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\SqlRequestResponse[]|null $sqlRequests SQL详细信息
     *
     * @return $this
     */
@@ -822,126 +752,6 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets createTime
-    *  创建时间（毫秒时间戳）
-    *
-    * @return int|null
-    */
-    public function getCreateTime()
-    {
-        return $this->container['createTime'];
-    }
-
-    /**
-    * Sets createTime
-    *
-    * @param int|null $createTime 创建时间（毫秒时间戳）
-    *
-    * @return $this
-    */
-    public function setCreateTime($createTime)
-    {
-        $this->container['createTime'] = $createTime;
-        return $this;
-    }
-
-    /**
-    * Gets updateTime
-    *  更新时间（毫秒时间戳）
-    *
-    * @return int|null
-    */
-    public function getUpdateTime()
-    {
-        return $this->container['updateTime'];
-    }
-
-    /**
-    * Sets updateTime
-    *
-    * @param int|null $updateTime 更新时间（毫秒时间戳）
-    *
-    * @return $this
-    */
-    public function setUpdateTime($updateTime)
-    {
-        $this->container['updateTime'] = $updateTime;
-        return $this;
-    }
-
-    /**
-    * Gets topics
-    *  主题
-    *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\Topics[]|null
-    */
-    public function getTopics()
-    {
-        return $this->container['topics'];
-    }
-
-    /**
-    * Sets topics
-    *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\Topics[]|null $topics 主题
-    *
-    * @return $this
-    */
-    public function setTopics($topics)
-    {
-        $this->container['topics'] = $topics;
-        return $this;
-    }
-
-    /**
-    * Gets language
-    *  邮件附加信息语言
-    *
-    * @return string|null
-    */
-    public function getLanguage()
-    {
-        return $this->container['language'];
-    }
-
-    /**
-    * Sets language
-    *
-    * @param string|null $language 邮件附加信息语言
-    *
-    * @return $this
-    */
-    public function setLanguage($language)
-    {
-        $this->container['language'] = $language;
-        return $this;
-    }
-
-    /**
-    * Gets id
-    *  规则ID。
-    *
-    * @return string|null
-    */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-    * Sets id
-    *
-    * @param string|null $id 规则ID。
-    *
-    * @return $this
-    */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-        return $this;
-    }
-
-    /**
     * Gets notificationFrequency
     *  通知频率,单位(分钟)
     *
@@ -986,6 +796,126 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     public function setAlarmActionRuleName($alarmActionRuleName)
     {
         $this->container['alarmActionRuleName'] = $alarmActionRuleName;
+        return $this;
+    }
+
+    /**
+    * Gets triggerConditionCount
+    *  **参数解释：** 告警触发条件：满足条件次数。满足条件次数是指设置的SQL语句。 **取值范围：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getTriggerConditionCount()
+    {
+        return $this->container['triggerConditionCount'];
+    }
+
+    /**
+    * Sets triggerConditionCount
+    *
+    * @param int|null $triggerConditionCount **参数解释：** 告警触发条件：满足条件次数。满足条件次数是指设置的SQL语句。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setTriggerConditionCount($triggerConditionCount)
+    {
+        $this->container['triggerConditionCount'] = $triggerConditionCount;
+        return $this;
+    }
+
+    /**
+    * Gets triggerConditionFrequency
+    *  **参数解释：** 触发条件：触发周期。 **取值范围：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getTriggerConditionFrequency()
+    {
+        return $this->container['triggerConditionFrequency'];
+    }
+
+    /**
+    * Sets triggerConditionFrequency
+    *
+    * @param int|null $triggerConditionFrequency **参数解释：** 触发条件：触发周期。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setTriggerConditionFrequency($triggerConditionFrequency)
+    {
+        $this->container['triggerConditionFrequency'] = $triggerConditionFrequency;
+        return $this;
+    }
+
+    /**
+    * Gets whetherRecoveryPolicy
+    *  **参数解释：** 是否打开恢复通知。 **取值范围：** - true：配置告警恢复策略。 - false：不配置告警恢复策略。
+    *
+    * @return bool|null
+    */
+    public function getWhetherRecoveryPolicy()
+    {
+        return $this->container['whetherRecoveryPolicy'];
+    }
+
+    /**
+    * Sets whetherRecoveryPolicy
+    *
+    * @param bool|null $whetherRecoveryPolicy **参数解释：** 是否打开恢复通知。 **取值范围：** - true：配置告警恢复策略。 - false：不配置告警恢复策略。
+    *
+    * @return $this
+    */
+    public function setWhetherRecoveryPolicy($whetherRecoveryPolicy)
+    {
+        $this->container['whetherRecoveryPolicy'] = $whetherRecoveryPolicy;
+        return $this;
+    }
+
+    /**
+    * Gets recoveryPolicy
+    *  **参数解释：** 恢复策略周期。 **取值范围：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getRecoveryPolicy()
+    {
+        return $this->container['recoveryPolicy'];
+    }
+
+    /**
+    * Sets recoveryPolicy
+    *
+    * @param int|null $recoveryPolicy **参数解释：** 恢复策略周期。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setRecoveryPolicy($recoveryPolicy)
+    {
+        $this->container['recoveryPolicy'] = $recoveryPolicy;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\TagsResBody[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\TagsResBody[]|null $tags **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

@@ -21,8 +21,8 @@ class ListSecurityReportSubscriptionsResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  total
-    * items  items
+    * total  安全报告订阅数
+    * items  安全报告订阅列表
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListSecurityReportSubscriptionsResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  total
-    * items  items
+    * total  安全报告订阅数
+    * items  安全报告订阅列表
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListSecurityReportSubscriptionsResponse implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  total
-    * items  items
+    * total  安全报告订阅数
+    * items  安全报告订阅列表
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListSecurityReportSubscriptionsResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  total
-    * items  items
+    * total  安全报告订阅数
+    * items  安全报告订阅列表
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListSecurityReportSubscriptionsResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  total
-    * items  items
+    * total  安全报告订阅数
+    * items  安全报告订阅列表
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListSecurityReportSubscriptionsResponse implements ModelInterface, ArrayAc
 
     /**
     * Gets total
-    *  total
+    *  安全报告订阅数
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListSecurityReportSubscriptionsResponse implements ModelInterface, ArrayAc
     /**
     * Sets total
     *
-    * @param int|null $total total
+    * @param int|null $total 安全报告订阅数
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListSecurityReportSubscriptionsResponse implements ModelInterface, ArrayAc
 
     /**
     * Gets items
-    *  items
+    *  安全报告订阅列表
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportSubscriptionSummaryResponse[]|null
     */
@@ -222,7 +222,7 @@ class ListSecurityReportSubscriptionsResponse implements ModelInterface, ArrayAc
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportSubscriptionSummaryResponse[]|null $items items
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportSubscriptionSummaryResponse[]|null $items 安全报告订阅列表
     *
     * @return $this
     */

@@ -22,6 +22,7 @@ class SubTaskInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * subTaskName  **参数解释**：  子任务名。  **取值范围**：  不涉及。
     * percent  **参数解释**：  子任务进度百分比。  **取值范围**：  0-100。
+    * status  **参数解释**：  子任务状态。  **取值范围**：  - Pending：表示待执行。 - Running：表示运行中。 - Completed：表示已完成。
     * remainingTime  **参数解释**：  剩余时间，单位为秒。  **取值范围**：  不涉及。
     *
     * @var string[]
@@ -29,6 +30,7 @@ class SubTaskInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'subTaskName' => 'string',
             'percent' => 'string',
+            'status' => 'string',
             'remainingTime' => 'string'
     ];
 
@@ -36,6 +38,7 @@ class SubTaskInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * subTaskName  **参数解释**：  子任务名。  **取值范围**：  不涉及。
     * percent  **参数解释**：  子任务进度百分比。  **取值范围**：  0-100。
+    * status  **参数解释**：  子任务状态。  **取值范围**：  - Pending：表示待执行。 - Running：表示运行中。 - Completed：表示已完成。
     * remainingTime  **参数解释**：  剩余时间，单位为秒。  **取值范围**：  不涉及。
     *
     * @var string[]
@@ -43,6 +46,7 @@ class SubTaskInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'subTaskName' => null,
         'percent' => null,
+        'status' => null,
         'remainingTime' => null
     ];
 
@@ -71,6 +75,7 @@ class SubTaskInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * subTaskName  **参数解释**：  子任务名。  **取值范围**：  不涉及。
     * percent  **参数解释**：  子任务进度百分比。  **取值范围**：  0-100。
+    * status  **参数解释**：  子任务状态。  **取值范围**：  - Pending：表示待执行。 - Running：表示运行中。 - Completed：表示已完成。
     * remainingTime  **参数解释**：  剩余时间，单位为秒。  **取值范围**：  不涉及。
     *
     * @var string[]
@@ -78,6 +83,7 @@ class SubTaskInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'subTaskName' => 'sub_task_name',
             'percent' => 'percent',
+            'status' => 'status',
             'remainingTime' => 'remaining_time'
     ];
 
@@ -85,6 +91,7 @@ class SubTaskInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * subTaskName  **参数解释**：  子任务名。  **取值范围**：  不涉及。
     * percent  **参数解释**：  子任务进度百分比。  **取值范围**：  0-100。
+    * status  **参数解释**：  子任务状态。  **取值范围**：  - Pending：表示待执行。 - Running：表示运行中。 - Completed：表示已完成。
     * remainingTime  **参数解释**：  剩余时间，单位为秒。  **取值范围**：  不涉及。
     *
     * @var string[]
@@ -92,6 +99,7 @@ class SubTaskInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'subTaskName' => 'setSubTaskName',
             'percent' => 'setPercent',
+            'status' => 'setStatus',
             'remainingTime' => 'setRemainingTime'
     ];
 
@@ -99,6 +107,7 @@ class SubTaskInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * subTaskName  **参数解释**：  子任务名。  **取值范围**：  不涉及。
     * percent  **参数解释**：  子任务进度百分比。  **取值范围**：  0-100。
+    * status  **参数解释**：  子任务状态。  **取值范围**：  - Pending：表示待执行。 - Running：表示运行中。 - Completed：表示已完成。
     * remainingTime  **参数解释**：  剩余时间，单位为秒。  **取值范围**：  不涉及。
     *
     * @var string[]
@@ -106,6 +115,7 @@ class SubTaskInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'subTaskName' => 'getSubTaskName',
             'percent' => 'getPercent',
+            'status' => 'getStatus',
             'remainingTime' => 'getRemainingTime'
     ];
 
@@ -169,6 +179,7 @@ class SubTaskInfo implements ModelInterface, ArrayAccess
     {
         $this->container['subTaskName'] = isset($data['subTaskName']) ? $data['subTaskName'] : null;
         $this->container['percent'] = isset($data['percent']) ? $data['percent'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['remainingTime'] = isset($data['remainingTime']) ? $data['remainingTime'] : null;
     }
 
@@ -239,6 +250,30 @@ class SubTaskInfo implements ModelInterface, ArrayAccess
     public function setPercent($percent)
     {
         $this->container['percent'] = $percent;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  **参数解释**：  子任务状态。  **取值范围**：  - Pending：表示待执行。 - Running：表示运行中。 - Completed：表示已完成。
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status **参数解释**：  子任务状态。  **取值范围**：  - Pending：表示待执行。 - Running：表示运行中。 - Completed：表示已完成。
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

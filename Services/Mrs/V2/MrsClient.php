@@ -1256,6 +1256,68 @@ class MrsClient extends Client
     }
 
     /**
+     * 获取当前集群通信安全授权状态
+     *
+     * 获取当前集群通信安全授权状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSecurityRuleStatus($request)
+    {
+        return $this->listSecurityRuleStatusWithHttpInfo($request);
+    }
+
+    public function listSecurityRuleStatusWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/security-rule/status';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\ListSecurityRuleStatusResponse',
+            $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\ListSecurityRuleStatusRequest');
+    }
+
+    /**
      * 缩容集群
      *
      * 对MRS集群进行缩容。
@@ -1726,6 +1788,130 @@ class MrsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\CancelSyncIamUserResponse',
             $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\CancelSyncIamUserRequest');
+    }
+
+    /**
+     * 查询指定集群的IAM同步情况
+     *
+     * 查询指定集群的IAM同步情况
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSyncRequirements($request)
+    {
+        return $this->listSyncRequirementsWithHttpInfo($request);
+    }
+
+    public function listSyncRequirementsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/iam-sync/is-synchronous';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\ListSyncRequirementsResponse',
+            $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\ListSyncRequirementsRequest');
+    }
+
+    /**
+     * 查询当前集群是否在IAM同步进行中
+     *
+     * 查询当前集群是否在IAM同步进行中
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSyncStatus($request)
+    {
+        return $this->listSyncStatusWithHttpInfo($request);
+    }
+
+    public function listSyncStatusWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/iam-sync';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\ListSyncStatusResponse',
+            $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\ListSyncStatusRequest');
     }
 
     /**

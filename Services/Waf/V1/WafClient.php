@@ -237,6 +237,68 @@ class WafClient extends Client
     }
 
     /**
+     * 查询独享引擎代理
+     *
+     * 查询独享引擎的代理
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkAgency($request)
+    {
+        return $this->checkAgencyWithHttpInfo($request);
+    }
+
+    public function checkAgencyWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/premium-waf/agency';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\CheckAgencyResponse',
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\CheckAgencyRequest');
+    }
+
+    /**
      * 按application规则类型获取内置规则类型
      *
      * 按application规则类型获取内置规则类型
@@ -370,6 +432,275 @@ class WafClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ConfirmAsyncJobResponse',
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ConfirmAsyncJobRequest');
+    }
+
+    /**
+     * 根据Id查询机房IP情报防护规则
+     *
+     * 根据Id查询机房IP情报防护规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function confirmIpReputationRule($request)
+    {
+        return $this->confirmIpReputationRuleWithHttpInfo($request);
+    }
+
+    public function confirmIpReputationRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/ip-reputation/{rule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $pathParams['rule_id'] = $localVarParams['ruleId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ConfirmIpReputationRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ConfirmIpReputationRuleRequest');
+    }
+
+    /**
+     * 查询敏感信息选项的详细信息
+     *
+     * 查询敏感信息选项的详细信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function confirmPolicyAntileakageMap($request)
+    {
+        return $this->confirmPolicyAntileakageMapWithHttpInfo($request);
+    }
+
+    public function confirmPolicyAntileakageMapWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/waf/tag/antileakage/map';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['lang'] !== null) {
+            $queryParams['lang'] = $localVarParams['lang'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ConfirmPolicyAntileakageMapResponse',
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ConfirmPolicyAntileakageMapRequest');
+    }
+
+    /**
+     * 查询威胁情报控制防护选项的详细信息
+     *
+     * 查询威胁情报控制防护选项的详细信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function confirmPolicyIpReputationMap($request)
+    {
+        return $this->confirmPolicyIpReputationMapWithHttpInfo($request);
+    }
+
+    public function confirmPolicyIpReputationMapWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/waf/tag/ip-reputation/map';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['lang'] !== null) {
+            $queryParams['lang'] = $localVarParams['lang'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ConfirmPolicyIpReputationMapResponse',
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ConfirmPolicyIpReputationMapRequest');
+    }
+
+    /**
+     * 按防护规则类型获取内置规则类型
+     *
+     * 按防护规则类型获取内置规则类型
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function confirmProtectionTypes($request)
+    {
+        return $this->confirmProtectionTypesWithHttpInfo($request);
+    }
+
+    public function confirmProtectionTypesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/waf/rules/protection-types';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ConfirmProtectionTypesResponse',
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ConfirmProtectionTypesRequest');
     }
 
     /**
@@ -1408,6 +1739,77 @@ class WafClient extends Client
     }
 
     /**
+     * 创建机房IP情报规则
+     *
+     * 创建IP情报规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createIpReputationRule($request)
+    {
+        return $this->createIpReputationRuleWithHttpInfo($request);
+    }
+
+    public function createIpReputationRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/ip-reputation';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\CreateIpReputationRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\CreateIpReputationRuleRequest');
+    }
+
+    /**
      * 创建防护策略
      *
      * 创建防护策略，系统会在生成策略时配置一些默认的配置项，如果需要修改策略的默认配置项需要通过调用更新防护策略接口实现
@@ -1476,9 +1878,9 @@ class WafClient extends Client
     }
 
     /**
-     * 创建独享模式域名
+     * 创建独享模式域名或者创建云模式ELB接入模式域名
      *
-     * 创建独享模式域名
+     * 创建独享模式域名或者创建云模式ELB接入模式域名
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3301,9 +3703,9 @@ class WafClient extends Client
     }
 
     /**
-     * 查询所有策略防敏感信息泄漏规则
+     * 查询所有策略防敏感信息泄露规则
      *
-     * 查询所有策略防敏感信息泄漏规则
+     * 查询所有策略防敏感信息泄露规则
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5948,6 +6350,77 @@ class WafClient extends Client
     }
 
     /**
+     * 查询安全报告历史统计周期列表
+     *
+     * 查询安全报告历史统计周期列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSecurityReportHistoryPeriods($request)
+    {
+        return $this->listSecurityReportHistoryPeriodsWithHttpInfo($request);
+    }
+
+    public function listSecurityReportHistoryPeriodsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/waf/security-report/history-periods';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['subscriptionId'] !== null) {
+            $queryParams['subscription_id'] = $localVarParams['subscriptionId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListSecurityReportHistoryPeriodsResponse',
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListSecurityReportHistoryPeriodsRequest');
+    }
+
+    /**
      * 查询安全报告发送记录
      *
      * 查询安全报告发送记录
@@ -8475,6 +8948,71 @@ class WafClient extends Client
     }
 
     /**
+     * 查询安全报告订阅
+     *
+     * 查询安全报告订阅
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSecurityReportSubscription($request)
+    {
+        return $this->showSecurityReportSubscriptionWithHttpInfo($request);
+    }
+
+    public function showSecurityReportSubscriptionWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/waf/security-report/subscriptions/{subscription_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['subscriptionId'] !== null) {
+            $pathParams['subscription_id'] = $localVarParams['subscriptionId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ShowSecurityReportSubscriptionResponse',
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ShowSecurityReportSubscriptionRequest');
+    }
+
+    /**
      * 查询WAF回源Ip信息
      *
      * 查询WAF回源Ip信息
@@ -9746,14 +10284,7 @@ class WafClient extends Client
     /**
      * 修改云模式域名路由信息
      *
-     * **参数解释：**
      * 更新云模式域名路由信息
-     * **约束限制：**
-     * 不涉及
-     * **取值范围：**
-     * 不涉及
-     * **默认取值：**
-     * 不涉及
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10680,6 +11211,71 @@ class WafClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateWhiteblackipRuleResponse',
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateWhiteblackipRuleRequest');
+    }
+
+    /**
+     * 根据Id查询Web防护规则
+     *
+     * 根据Id查询Web防护规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showWebProtectionRule($request)
+    {
+        return $this->showWebProtectionRuleWithHttpInfo($request);
+    }
+
+    public function showWebProtectionRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/waf/web-protection-rules/{rule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $pathParams['rule_id'] = $localVarParams['ruleId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ShowWebProtectionRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ShowWebProtectionRuleRequest');
     }
 
     protected function callApi(

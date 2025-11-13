@@ -28,6 +28,7 @@ class TrafficMirrorFilter implements ModelInterface, ArrayAccess
     * egressRules  功能说明：出方向筛选规则列表
     * createdAt  创建时间戳
     * updatedAt  更新时间戳
+    * type  参数解释： 流量镜像筛选条件的镜像源类型。 取值范围： eni：弹性网卡
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class TrafficMirrorFilter implements ModelInterface, ArrayAccess
             'ingressRules' => '\HuaweiCloud\SDK\Vpc\V3\Model\TrafficMirrorFilterRule[]',
             'egressRules' => '\HuaweiCloud\SDK\Vpc\V3\Model\TrafficMirrorFilterRule[]',
             'createdAt' => '\DateTime',
-            'updatedAt' => '\DateTime'
+            'updatedAt' => '\DateTime',
+            'type' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class TrafficMirrorFilter implements ModelInterface, ArrayAccess
     * egressRules  功能说明：出方向筛选规则列表
     * createdAt  创建时间戳
     * updatedAt  更新时间戳
+    * type  参数解释： 流量镜像筛选条件的镜像源类型。 取值范围： eni：弹性网卡
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class TrafficMirrorFilter implements ModelInterface, ArrayAccess
         'ingressRules' => null,
         'egressRules' => null,
         'createdAt' => 'date-time',
-        'updatedAt' => 'date-time'
+        'updatedAt' => 'date-time',
+        'type' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class TrafficMirrorFilter implements ModelInterface, ArrayAccess
     * egressRules  功能说明：出方向筛选规则列表
     * createdAt  创建时间戳
     * updatedAt  更新时间戳
+    * type  参数解释： 流量镜像筛选条件的镜像源类型。 取值范围： eni：弹性网卡
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class TrafficMirrorFilter implements ModelInterface, ArrayAccess
             'ingressRules' => 'ingress_rules',
             'egressRules' => 'egress_rules',
             'createdAt' => 'created_at',
-            'updatedAt' => 'updated_at'
+            'updatedAt' => 'updated_at',
+            'type' => 'type'
     ];
 
     /**
@@ -121,6 +127,7 @@ class TrafficMirrorFilter implements ModelInterface, ArrayAccess
     * egressRules  功能说明：出方向筛选规则列表
     * createdAt  创建时间戳
     * updatedAt  更新时间戳
+    * type  参数解释： 流量镜像筛选条件的镜像源类型。 取值范围： eni：弹性网卡
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class TrafficMirrorFilter implements ModelInterface, ArrayAccess
             'ingressRules' => 'setIngressRules',
             'egressRules' => 'setEgressRules',
             'createdAt' => 'setCreatedAt',
-            'updatedAt' => 'setUpdatedAt'
+            'updatedAt' => 'setUpdatedAt',
+            'type' => 'setType'
     ];
 
     /**
@@ -145,6 +153,7 @@ class TrafficMirrorFilter implements ModelInterface, ArrayAccess
     * egressRules  功能说明：出方向筛选规则列表
     * createdAt  创建时间戳
     * updatedAt  更新时间戳
+    * type  参数解释： 流量镜像筛选条件的镜像源类型。 取值范围： eni：弹性网卡
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class TrafficMirrorFilter implements ModelInterface, ArrayAccess
             'ingressRules' => 'getIngressRules',
             'egressRules' => 'getEgressRules',
             'createdAt' => 'getCreatedAt',
-            'updatedAt' => 'getUpdatedAt'
+            'updatedAt' => 'getUpdatedAt',
+            'type' => 'getType'
     ];
 
     /**
@@ -225,6 +235,7 @@ class TrafficMirrorFilter implements ModelInterface, ArrayAccess
         $this->container['egressRules'] = isset($data['egressRules']) ? $data['egressRules'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -258,6 +269,9 @@ class TrafficMirrorFilter implements ModelInterface, ArrayAccess
         }
         if ($this->container['updatedAt'] === null) {
             $invalidProperties[] = "'updatedAt' can't be null";
+        }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
         }
         return $invalidProperties;
     }
@@ -462,6 +476,30 @@ class TrafficMirrorFilter implements ModelInterface, ArrayAccess
     public function setUpdatedAt($updatedAt)
     {
         $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  参数解释： 流量镜像筛选条件的镜像源类型。 取值范围： eni：弹性网卡
+    *
+    * @return string
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string $type 参数解释： 流量镜像筛选条件的镜像源类型。 取值范围： eni：弹性网卡
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

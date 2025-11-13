@@ -21,8 +21,8 @@ class ConfirmTmsResourceInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalCount  totalCount
-    * resources  resources
+    * totalCount  资源总数
+    * resources  资源列表
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ConfirmTmsResourceInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalCount  totalCount
-    * resources  resources
+    * totalCount  资源总数
+    * resources  资源列表
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ConfirmTmsResourceInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalCount  totalCount
-    * resources  resources
+    * totalCount  资源总数
+    * resources  资源列表
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ConfirmTmsResourceInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalCount  totalCount
-    * resources  resources
+    * totalCount  资源总数
+    * resources  资源列表
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ConfirmTmsResourceInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalCount  totalCount
-    * resources  resources
+    * totalCount  资源总数
+    * resources  资源列表
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ConfirmTmsResourceInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  totalCount
+    *  资源总数
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ConfirmTmsResourceInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount totalCount
+    * @param int|null $totalCount 资源总数
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ConfirmTmsResourceInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
-    *  resources
+    *  资源列表
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstance[]|null
     */
@@ -222,7 +222,7 @@ class ConfirmTmsResourceInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstance[]|null $resources resources
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceInstance[]|null $resources 资源列表
     *
     * @return $this
     */

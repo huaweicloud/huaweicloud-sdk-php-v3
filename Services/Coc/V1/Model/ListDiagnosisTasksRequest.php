@@ -29,6 +29,8 @@ class ListDiagnosisTasksRequest implements ModelInterface, ArrayAccess
     * endTime  诊断工单的执行结束时间
     * pageIndex  分页查询页索引
     * pageSize  分页查询页大小
+    * offset  分页查询页索引
+    * limit  分页查询页大小
     *
     * @var string[]
     */
@@ -41,7 +43,9 @@ class ListDiagnosisTasksRequest implements ModelInterface, ArrayAccess
             'startTime' => 'int',
             'endTime' => 'int',
             'pageIndex' => 'int',
-            'pageSize' => 'int'
+            'pageSize' => 'int',
+            'offset' => 'int',
+            'limit' => 'int'
     ];
 
     /**
@@ -55,6 +59,8 @@ class ListDiagnosisTasksRequest implements ModelInterface, ArrayAccess
     * endTime  诊断工单的执行结束时间
     * pageIndex  分页查询页索引
     * pageSize  分页查询页大小
+    * offset  分页查询页索引
+    * limit  分页查询页大小
     *
     * @var string[]
     */
@@ -67,7 +73,9 @@ class ListDiagnosisTasksRequest implements ModelInterface, ArrayAccess
         'startTime' => 'int64',
         'endTime' => 'int64',
         'pageIndex' => 'int32',
-        'pageSize' => 'int32'
+        'pageSize' => 'int32',
+        'offset' => 'int32',
+        'limit' => 'int32'
     ];
 
     /**
@@ -102,6 +110,8 @@ class ListDiagnosisTasksRequest implements ModelInterface, ArrayAccess
     * endTime  诊断工单的执行结束时间
     * pageIndex  分页查询页索引
     * pageSize  分页查询页大小
+    * offset  分页查询页索引
+    * limit  分页查询页大小
     *
     * @var string[]
     */
@@ -114,7 +124,9 @@ class ListDiagnosisTasksRequest implements ModelInterface, ArrayAccess
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'pageIndex' => 'page_index',
-            'pageSize' => 'page_size'
+            'pageSize' => 'page_size',
+            'offset' => 'offset',
+            'limit' => 'limit'
     ];
 
     /**
@@ -128,6 +140,8 @@ class ListDiagnosisTasksRequest implements ModelInterface, ArrayAccess
     * endTime  诊断工单的执行结束时间
     * pageIndex  分页查询页索引
     * pageSize  分页查询页大小
+    * offset  分页查询页索引
+    * limit  分页查询页大小
     *
     * @var string[]
     */
@@ -140,7 +154,9 @@ class ListDiagnosisTasksRequest implements ModelInterface, ArrayAccess
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'pageIndex' => 'setPageIndex',
-            'pageSize' => 'setPageSize'
+            'pageSize' => 'setPageSize',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit'
     ];
 
     /**
@@ -154,6 +170,8 @@ class ListDiagnosisTasksRequest implements ModelInterface, ArrayAccess
     * endTime  诊断工单的执行结束时间
     * pageIndex  分页查询页索引
     * pageSize  分页查询页大小
+    * offset  分页查询页索引
+    * limit  分页查询页大小
     *
     * @var string[]
     */
@@ -166,7 +184,9 @@ class ListDiagnosisTasksRequest implements ModelInterface, ArrayAccess
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'pageIndex' => 'getPageIndex',
-            'pageSize' => 'getPageSize'
+            'pageSize' => 'getPageSize',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -278,6 +298,8 @@ class ListDiagnosisTasksRequest implements ModelInterface, ArrayAccess
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['pageIndex'] = isset($data['pageIndex']) ? $data['pageIndex'] : null;
         $this->container['pageSize'] = isset($data['pageSize']) ? $data['pageSize'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -346,23 +368,29 @@ class ListDiagnosisTasksRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['endTime']) && ($this->container['endTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'endTime', must be bigger than or equal to 0.";
             }
-        if ($this->container['pageIndex'] === null) {
-            $invalidProperties[] = "'pageIndex' can't be null";
-        }
-            if (($this->container['pageIndex'] > 10000)) {
+            if (!is_null($this->container['pageIndex']) && ($this->container['pageIndex'] > 10000)) {
                 $invalidProperties[] = "invalid value for 'pageIndex', must be smaller than or equal to 10000.";
             }
-            if (($this->container['pageIndex'] < 1)) {
+            if (!is_null($this->container['pageIndex']) && ($this->container['pageIndex'] < 1)) {
                 $invalidProperties[] = "invalid value for 'pageIndex', must be bigger than or equal to 1.";
             }
-        if ($this->container['pageSize'] === null) {
-            $invalidProperties[] = "'pageSize' can't be null";
-        }
-            if (($this->container['pageSize'] > 100)) {
+            if (!is_null($this->container['pageSize']) && ($this->container['pageSize'] > 100)) {
                 $invalidProperties[] = "invalid value for 'pageSize', must be smaller than or equal to 100.";
             }
-            if (($this->container['pageSize'] < 1)) {
+            if (!is_null($this->container['pageSize']) && ($this->container['pageSize'] < 1)) {
                 $invalidProperties[] = "invalid value for 'pageSize', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 10000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 10000.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 1)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -550,7 +578,7 @@ class ListDiagnosisTasksRequest implements ModelInterface, ArrayAccess
     * Gets pageIndex
     *  分页查询页索引
     *
-    * @return int
+    * @return int|null
     */
     public function getPageIndex()
     {
@@ -560,7 +588,7 @@ class ListDiagnosisTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets pageIndex
     *
-    * @param int $pageIndex 分页查询页索引
+    * @param int|null $pageIndex 分页查询页索引
     *
     * @return $this
     */
@@ -574,7 +602,7 @@ class ListDiagnosisTasksRequest implements ModelInterface, ArrayAccess
     * Gets pageSize
     *  分页查询页大小
     *
-    * @return int
+    * @return int|null
     */
     public function getPageSize()
     {
@@ -584,13 +612,61 @@ class ListDiagnosisTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets pageSize
     *
-    * @param int $pageSize 分页查询页大小
+    * @param int|null $pageSize 分页查询页大小
     *
     * @return $this
     */
     public function setPageSize($pageSize)
     {
         $this->container['pageSize'] = $pageSize;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  分页查询页索引
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 分页查询页索引
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  分页查询页大小
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 分页查询页大小
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

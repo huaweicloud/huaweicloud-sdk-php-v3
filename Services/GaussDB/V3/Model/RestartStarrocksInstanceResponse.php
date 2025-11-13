@@ -21,22 +21,22 @@ class RestartStarrocksInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workflowId  工作流ID。
+    * jobId  工作流ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'workflowId' => 'string'
+            'jobId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workflowId  工作流ID。
+    * jobId  工作流ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'workflowId' => null
+        'jobId' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class RestartStarrocksInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workflowId  工作流ID。
+    * jobId  工作流ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'workflowId' => 'workflow_id'
+            'jobId' => 'job_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workflowId  工作流ID。
+    * jobId  工作流ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'workflowId' => 'setWorkflowId'
+            'jobId' => 'setJobId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workflowId  工作流ID。
+    * jobId  工作流ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'workflowId' => 'getWorkflowId'
+            'jobId' => 'getJobId'
     ];
 
     /**
@@ -148,7 +148,7 @@ class RestartStarrocksInstanceResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['workflowId'] = isset($data['workflowId']) ? $data['workflowId'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class RestartStarrocksInstanceResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets workflowId
+    * Gets jobId
     *  工作流ID。
     *
     * @return string|null
     */
-    public function getWorkflowId()
+    public function getJobId()
     {
-        return $this->container['workflowId'];
+        return $this->container['jobId'];
     }
 
     /**
-    * Sets workflowId
+    * Sets jobId
     *
-    * @param string|null $workflowId 工作流ID。
+    * @param string|null $jobId 工作流ID。
     *
     * @return $this
     */
-    public function setWorkflowId($workflowId)
+    public function setJobId($jobId)
     {
-        $this->container['workflowId'] = $workflowId;
+        $this->container['jobId'] = $jobId;
         return $this;
     }
 

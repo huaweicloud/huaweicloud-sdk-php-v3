@@ -33,6 +33,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
+    * enterpriseProjectId  **参数解释：** 企业项目id信息。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'recoveryPolicy' => 'int',
             'notificationFrequency' => 'int',
             'alarmActionRuleName' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsRequestBody[]'
+            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsRequestBody[]',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -67,6 +69,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
+    * enterpriseProjectId  **参数解释：** 企业项目id信息。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
         'recoveryPolicy' => 'int32',
         'notificationFrequency' => 'int32',
         'alarmActionRuleName' => null,
-        'tags' => null
+        'tags' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
+    * enterpriseProjectId  **参数解释：** 企业项目id信息。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'recoveryPolicy' => 'recovery_policy',
             'notificationFrequency' => 'notification_frequency',
             'alarmActionRuleName' => 'alarm_action_rule_name',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -156,6 +162,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
+    * enterpriseProjectId  **参数解释：** 企业项目id信息。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'recoveryPolicy' => 'setRecoveryPolicy',
             'notificationFrequency' => 'setNotificationFrequency',
             'alarmActionRuleName' => 'setAlarmActionRuleName',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -190,6 +198,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
+    * enterpriseProjectId  **参数解释：** 企业项目id信息。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'recoveryPolicy' => 'getRecoveryPolicy',
             'notificationFrequency' => 'getNotificationFrequency',
             'alarmActionRuleName' => 'getAlarmActionRuleName',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -326,6 +336,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
         $this->container['notificationFrequency'] = isset($data['notificationFrequency']) ? $data['notificationFrequency'] : null;
         $this->container['alarmActionRuleName'] = isset($data['alarmActionRuleName']) ? $data['alarmActionRuleName'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -714,6 +725,30 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  **参数解释：** 企业项目id信息。 **约束限制：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId **参数解释：** 企业项目id信息。 **约束限制：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

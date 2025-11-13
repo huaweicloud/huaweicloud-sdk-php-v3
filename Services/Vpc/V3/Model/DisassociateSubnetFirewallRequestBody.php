@@ -21,21 +21,25 @@ class DisassociateSubnetFirewallRequestBody implements ModelInterface, ArrayAcce
     /**
     * Array of property to type mappings. Used for (de)serialization
     * subnets  解绑ACL的子网列表
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会执行网络ACL解绑子网。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接执行网络ACL解绑子网。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'subnets' => '\HuaweiCloud\SDK\Vpc\V3\Model\FirewallAssociation[]'
+            'subnets' => '\HuaweiCloud\SDK\Vpc\V3\Model\FirewallAssociation[]',
+            'dryRun' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * subnets  解绑ACL的子网列表
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会执行网络ACL解绑子网。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接执行网络ACL解绑子网。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'subnets' => null
+        'subnets' => null,
+        'dryRun' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class DisassociateSubnetFirewallRequestBody implements ModelInterface, ArrayAcce
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * subnets  解绑ACL的子网列表
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会执行网络ACL解绑子网。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接执行网络ACL解绑子网。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'subnets' => 'subnets'
+            'subnets' => 'subnets',
+            'dryRun' => 'dry_run'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * subnets  解绑ACL的子网列表
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会执行网络ACL解绑子网。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接执行网络ACL解绑子网。
     *
     * @var string[]
     */
     protected static $setters = [
-            'subnets' => 'setSubnets'
+            'subnets' => 'setSubnets',
+            'dryRun' => 'setDryRun'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * subnets  解绑ACL的子网列表
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会执行网络ACL解绑子网。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接执行网络ACL解绑子网。
     *
     * @var string[]
     */
     protected static $getters = [
-            'subnets' => 'getSubnets'
+            'subnets' => 'getSubnets',
+            'dryRun' => 'getDryRun'
     ];
 
     /**
@@ -148,6 +158,7 @@ class DisassociateSubnetFirewallRequestBody implements ModelInterface, ArrayAcce
     public function __construct(array $data = null)
     {
         $this->container['subnets'] = isset($data['subnets']) ? $data['subnets'] : null;
+        $this->container['dryRun'] = isset($data['dryRun']) ? $data['dryRun'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class DisassociateSubnetFirewallRequestBody implements ModelInterface, ArrayAcce
     public function setSubnets($subnets)
     {
         $this->container['subnets'] = $subnets;
+        return $this;
+    }
+
+    /**
+    * Gets dryRun
+    *  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会执行网络ACL解绑子网。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接执行网络ACL解绑子网。
+    *
+    * @return bool|null
+    */
+    public function getDryRun()
+    {
+        return $this->container['dryRun'];
+    }
+
+    /**
+    * Sets dryRun
+    *
+    * @param bool|null $dryRun 功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会执行网络ACL解绑子网。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接执行网络ACL解绑子网。
+    *
+    * @return $this
+    */
+    public function setDryRun($dryRun)
+    {
+        $this->container['dryRun'] = $dryRun;
         return $this;
     }
 

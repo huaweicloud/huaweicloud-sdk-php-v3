@@ -2166,6 +2166,71 @@ class AadAsyncClient extends Client
     }
 
     /**
+     * 查询日志配置
+     *
+     * 查询日志配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showLtsConfigAsync($request)
+    {
+        return $this->showLtsConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function showLtsConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/cnad/config/lts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'enabled', 'lts_id_info']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'enabled', 'lts_id_info'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V1\Model\ShowLtsConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aad\V1\Model\ShowLtsConfigRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询策略详情
      *
      * 查询策略详情
@@ -2434,6 +2499,74 @@ class AadAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Aad\V1\Model\UpdateInstanceIpRuleResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Aad\V1\Model\UpdateInstanceIpRuleRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 设置日志配置
+     *
+     * 设置日志配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateLtsConfigAsync($request)
+    {
+        return $this->updateLtsConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function updateLtsConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/cnad/config/lts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V1\Model\UpdateLtsConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aad\V1\Model\UpdateLtsConfigRequest',
             $asyncRequest = true);
     }
 

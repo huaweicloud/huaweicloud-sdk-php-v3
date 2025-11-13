@@ -20,11 +20,11 @@ class TmsResourceInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceId  resourceId
-    * resourceName  resourceName
-    * resourceDetail  resourceDetail
-    * tags  tags
-    * sysTags  sysTags
+    * resourceId  资源id
+    * resourceName  资源名称
+    * resourceDetail  资源细节
+    * tags  系统标签键值对
+    * sysTags  系统标签键值对
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class TmsResourceInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceId  resourceId
-    * resourceName  resourceName
-    * resourceDetail  resourceDetail
-    * tags  tags
-    * sysTags  sysTags
+    * resourceId  资源id
+    * resourceName  资源名称
+    * resourceDetail  资源细节
+    * tags  系统标签键值对
+    * sysTags  系统标签键值对
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class TmsResourceInstance implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceId  resourceId
-    * resourceName  resourceName
-    * resourceDetail  resourceDetail
-    * tags  tags
-    * sysTags  sysTags
+    * resourceId  资源id
+    * resourceName  资源名称
+    * resourceDetail  资源细节
+    * tags  系统标签键值对
+    * sysTags  系统标签键值对
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class TmsResourceInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceId  resourceId
-    * resourceName  resourceName
-    * resourceDetail  resourceDetail
-    * tags  tags
-    * sysTags  sysTags
+    * resourceId  资源id
+    * resourceName  资源名称
+    * resourceDetail  资源细节
+    * tags  系统标签键值对
+    * sysTags  系统标签键值对
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class TmsResourceInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceId  resourceId
-    * resourceName  resourceName
-    * resourceDetail  resourceDetail
-    * tags  tags
-    * sysTags  sysTags
+    * resourceId  资源id
+    * resourceName  资源名称
+    * resourceDetail  资源细节
+    * tags  系统标签键值对
+    * sysTags  系统标签键值对
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class TmsResourceInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  resourceId
+    *  资源id
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class TmsResourceInstance implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId resourceId
+    * @param string|null $resourceId 资源id
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class TmsResourceInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
-    *  resourceName
+    *  资源名称
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class TmsResourceInstance implements ModelInterface, ArrayAccess
     /**
     * Sets resourceName
     *
-    * @param string|null $resourceName resourceName
+    * @param string|null $resourceName 资源名称
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class TmsResourceInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceDetail
-    *  resourceDetail
+    *  资源细节
     *
     * @return object|null
     */
@@ -278,7 +278,7 @@ class TmsResourceInstance implements ModelInterface, ArrayAccess
     /**
     * Sets resourceDetail
     *
-    * @param object|null $resourceDetail resourceDetail
+    * @param object|null $resourceDetail 资源细节
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class TmsResourceInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  tags
+    *  系统标签键值对
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceTag[]|null
     */
@@ -302,7 +302,7 @@ class TmsResourceInstance implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceTag[]|null $tags tags
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceTag[]|null $tags 系统标签键值对
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class TmsResourceInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets sysTags
-    *  sysTags
+    *  系统标签键值对
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceTag[]|null
     */
@@ -326,7 +326,7 @@ class TmsResourceInstance implements ModelInterface, ArrayAccess
     /**
     * Sets sysTags
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceTag[]|null $sysTags sysTags
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceTag[]|null $sysTags 系统标签键值对
     *
     * @return $this
     */

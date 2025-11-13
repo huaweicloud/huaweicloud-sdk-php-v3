@@ -27,7 +27,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * updateUntil  过滤更新时间<=输入时间的记录。
     * updateSince  过滤更新时间>=输入时间的记录。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING
+    * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING 任务状态包括：       * CREATING: 创建中       * SYSTEM_AUDITING: 系统审核中       * AUDITING: 人工审核中       * WAITING_SPLIT: 等待切割       * SPLITTING: 切割中       * SPLIT_FAILED: 切割失败       * ANNOTATING: 标注中       * WAITING: 等待训练       * PROCESSING: 任务训练中       * RESULT_REVIEW: 审核结果       * AUDIT_FAILED: 审核失败,等待用户重传数据       * UPLOADING: 上传中       * FAILED: 失败       * SUCCEED: 成功
     * jobId  任务id。
     * voiceName  声音名称。
     * tag  任务标签。
@@ -67,7 +67,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * updateUntil  过滤更新时间<=输入时间的记录。
     * updateSince  过滤更新时间>=输入时间的记录。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING
+    * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING 任务状态包括：       * CREATING: 创建中       * SYSTEM_AUDITING: 系统审核中       * AUDITING: 人工审核中       * WAITING_SPLIT: 等待切割       * SPLITTING: 切割中       * SPLIT_FAILED: 切割失败       * ANNOTATING: 标注中       * WAITING: 等待训练       * PROCESSING: 任务训练中       * RESULT_REVIEW: 审核结果       * AUDIT_FAILED: 审核失败,等待用户重传数据       * UPLOADING: 上传中       * FAILED: 失败       * SUCCEED: 成功
     * jobId  任务id。
     * voiceName  声音名称。
     * tag  任务标签。
@@ -128,7 +128,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * updateUntil  过滤更新时间<=输入时间的记录。
     * updateSince  过滤更新时间>=输入时间的记录。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING
+    * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING 任务状态包括：       * CREATING: 创建中       * SYSTEM_AUDITING: 系统审核中       * AUDITING: 人工审核中       * WAITING_SPLIT: 等待切割       * SPLITTING: 切割中       * SPLIT_FAILED: 切割失败       * ANNOTATING: 标注中       * WAITING: 等待训练       * PROCESSING: 任务训练中       * RESULT_REVIEW: 审核结果       * AUDIT_FAILED: 审核失败,等待用户重传数据       * UPLOADING: 上传中       * FAILED: 失败       * SUCCEED: 成功
     * jobId  任务id。
     * voiceName  声音名称。
     * tag  任务标签。
@@ -168,7 +168,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * updateUntil  过滤更新时间<=输入时间的记录。
     * updateSince  过滤更新时间>=输入时间的记录。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING
+    * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING 任务状态包括：       * CREATING: 创建中       * SYSTEM_AUDITING: 系统审核中       * AUDITING: 人工审核中       * WAITING_SPLIT: 等待切割       * SPLITTING: 切割中       * SPLIT_FAILED: 切割失败       * ANNOTATING: 标注中       * WAITING: 等待训练       * PROCESSING: 任务训练中       * RESULT_REVIEW: 审核结果       * AUDIT_FAILED: 审核失败,等待用户重传数据       * UPLOADING: 上传中       * FAILED: 失败       * SUCCEED: 成功
     * jobId  任务id。
     * voiceName  声音名称。
     * tag  任务标签。
@@ -208,7 +208,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * updateUntil  过滤更新时间<=输入时间的记录。
     * updateSince  过滤更新时间>=输入时间的记录。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING
+    * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING 任务状态包括：       * CREATING: 创建中       * SYSTEM_AUDITING: 系统审核中       * AUDITING: 人工审核中       * WAITING_SPLIT: 等待切割       * SPLITTING: 切割中       * SPLIT_FAILED: 切割失败       * ANNOTATING: 标注中       * WAITING: 等待训练       * PROCESSING: 任务训练中       * RESULT_REVIEW: 审核结果       * AUDIT_FAILED: 审核失败,等待用户重传数据       * UPLOADING: 上传中       * FAILED: 失败       * SUCCEED: 成功
     * jobId  任务id。
     * voiceName  声音名称。
     * tag  任务标签。
@@ -597,7 +597,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING
+    *  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING 任务状态包括：       * CREATING: 创建中       * SYSTEM_AUDITING: 系统审核中       * AUDITING: 人工审核中       * WAITING_SPLIT: 等待切割       * SPLITTING: 切割中       * SPLIT_FAILED: 切割失败       * ANNOTATING: 标注中       * WAITING: 等待训练       * PROCESSING: 任务训练中       * RESULT_REVIEW: 审核结果       * AUDIT_FAILED: 审核失败,等待用户重传数据       * UPLOADING: 上传中       * FAILED: 失败       * SUCCEED: 成功
     *
     * @return string|null
     */
@@ -609,7 +609,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING
+    * @param string|null $state 任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING 任务状态包括：       * CREATING: 创建中       * SYSTEM_AUDITING: 系统审核中       * AUDITING: 人工审核中       * WAITING_SPLIT: 等待切割       * SPLITTING: 切割中       * SPLIT_FAILED: 切割失败       * ANNOTATING: 标注中       * WAITING: 等待训练       * PROCESSING: 任务训练中       * RESULT_REVIEW: 审核结果       * AUDIT_FAILED: 审核失败,等待用户重传数据       * UPLOADING: 上传中       * FAILED: 失败       * SUCCEED: 成功
     *
     * @return $this
     */

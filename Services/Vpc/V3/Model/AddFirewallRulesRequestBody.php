@@ -21,21 +21,25 @@ class AddFirewallRulesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * firewall  firewall
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会插入网络ACL规则。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接插入网络ACL规则。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'firewall' => '\HuaweiCloud\SDK\Vpc\V3\Model\FirewallInsertRuleOption'
+            'firewall' => '\HuaweiCloud\SDK\Vpc\V3\Model\FirewallInsertRuleOption',
+            'dryRun' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * firewall  firewall
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会插入网络ACL规则。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接插入网络ACL规则。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'firewall' => null
+        'firewall' => null,
+        'dryRun' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class AddFirewallRulesRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * firewall  firewall
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会插入网络ACL规则。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接插入网络ACL规则。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'firewall' => 'firewall'
+            'firewall' => 'firewall',
+            'dryRun' => 'dry_run'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * firewall  firewall
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会插入网络ACL规则。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接插入网络ACL规则。
     *
     * @var string[]
     */
     protected static $setters = [
-            'firewall' => 'setFirewall'
+            'firewall' => 'setFirewall',
+            'dryRun' => 'setDryRun'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * firewall  firewall
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会插入网络ACL规则。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接插入网络ACL规则。
     *
     * @var string[]
     */
     protected static $getters = [
-            'firewall' => 'getFirewall'
+            'firewall' => 'getFirewall',
+            'dryRun' => 'getDryRun'
     ];
 
     /**
@@ -148,6 +158,7 @@ class AddFirewallRulesRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['firewall'] = isset($data['firewall']) ? $data['firewall'] : null;
+        $this->container['dryRun'] = isset($data['dryRun']) ? $data['dryRun'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class AddFirewallRulesRequestBody implements ModelInterface, ArrayAccess
     public function setFirewall($firewall)
     {
         $this->container['firewall'] = $firewall;
+        return $this;
+    }
+
+    /**
+    * Gets dryRun
+    *  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会插入网络ACL规则。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接插入网络ACL规则。
+    *
+    * @return bool|null
+    */
+    public function getDryRun()
+    {
+        return $this->container['dryRun'];
+    }
+
+    /**
+    * Sets dryRun
+    *
+    * @param bool|null $dryRun 功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会插入网络ACL规则。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接插入网络ACL规则。
+    *
+    * @return $this
+    */
+    public function setDryRun($dryRun)
+    {
+        $this->container['dryRun'] = $dryRun;
         return $this;
     }
 

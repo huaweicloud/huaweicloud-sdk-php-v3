@@ -29,7 +29,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
     * ipv6Enable  是否开启IPv6防护，仅专业版和企业版支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * blockPage  blockPage
     * trafficMark  trafficMark
@@ -73,7 +73,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
     * ipv6Enable  是否开启IPv6防护，仅专业版和企业版支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * blockPage  blockPage
     * trafficMark  trafficMark
@@ -138,7 +138,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
     * ipv6Enable  是否开启IPv6防护，仅专业版和企业版支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * blockPage  blockPage
     * trafficMark  trafficMark
@@ -182,7 +182,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
     * ipv6Enable  是否开启IPv6防护，仅专业版和企业版支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * blockPage  blockPage
     * trafficMark  trafficMark
@@ -226,7 +226,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
     * ipv6Enable  是否开启IPv6防护，仅专业版和企业版支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * blockPage  blockPage
     * trafficMark  trafficMark
@@ -635,7 +635,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets exclusiveIp
-    *  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    *  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     *
     * @return bool|null
     */
@@ -647,7 +647,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets exclusiveIp
     *
-    * @param bool|null $exclusiveIp 是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * @param bool|null $exclusiveIp 是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     *
     * @return $this
     */

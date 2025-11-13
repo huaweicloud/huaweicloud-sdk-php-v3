@@ -22,24 +22,28 @@ class NodeSqlFilterRulePattern implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * pattern  SQL限流规则，由一个或多个关键字（最多为128个关键字）组成，关键字之间通过\"~\"分隔符分开，如select~from~t1。规则中不能包含‘\\’、中英文逗号、‘~~’，不能以‘~’结尾。
     * maxConcurrency  最大并发数。取值范围：非负整数。
+    * expireAt  **参数解释**：  SQL限流失效时间，标准秒级时间戳，永久生效SQL限流规则该字段为null。  **约束限制**：  不涉及。  **取值范围**：  0 - 9223372036854775807。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'pattern' => 'string',
-            'maxConcurrency' => 'int'
+            'maxConcurrency' => 'int',
+            'expireAt' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * pattern  SQL限流规则，由一个或多个关键字（最多为128个关键字）组成，关键字之间通过\"~\"分隔符分开，如select~from~t1。规则中不能包含‘\\’、中英文逗号、‘~~’，不能以‘~’结尾。
     * maxConcurrency  最大并发数。取值范围：非负整数。
+    * expireAt  **参数解释**：  SQL限流失效时间，标准秒级时间戳，永久生效SQL限流规则该字段为null。  **约束限制**：  不涉及。  **取值范围**：  0 - 9223372036854775807。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'pattern' => null,
-        'maxConcurrency' => 'int32'
+        'maxConcurrency' => 'int32',
+        'expireAt' => 'int64'
     ];
 
     /**
@@ -67,36 +71,42 @@ class NodeSqlFilterRulePattern implements ModelInterface, ArrayAccess
     * and the value is the original name
     * pattern  SQL限流规则，由一个或多个关键字（最多为128个关键字）组成，关键字之间通过\"~\"分隔符分开，如select~from~t1。规则中不能包含‘\\’、中英文逗号、‘~~’，不能以‘~’结尾。
     * maxConcurrency  最大并发数。取值范围：非负整数。
+    * expireAt  **参数解释**：  SQL限流失效时间，标准秒级时间戳，永久生效SQL限流规则该字段为null。  **约束限制**：  不涉及。  **取值范围**：  0 - 9223372036854775807。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'pattern' => 'pattern',
-            'maxConcurrency' => 'max_concurrency'
+            'maxConcurrency' => 'max_concurrency',
+            'expireAt' => 'expire_at'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * pattern  SQL限流规则，由一个或多个关键字（最多为128个关键字）组成，关键字之间通过\"~\"分隔符分开，如select~from~t1。规则中不能包含‘\\’、中英文逗号、‘~~’，不能以‘~’结尾。
     * maxConcurrency  最大并发数。取值范围：非负整数。
+    * expireAt  **参数解释**：  SQL限流失效时间，标准秒级时间戳，永久生效SQL限流规则该字段为null。  **约束限制**：  不涉及。  **取值范围**：  0 - 9223372036854775807。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'pattern' => 'setPattern',
-            'maxConcurrency' => 'setMaxConcurrency'
+            'maxConcurrency' => 'setMaxConcurrency',
+            'expireAt' => 'setExpireAt'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * pattern  SQL限流规则，由一个或多个关键字（最多为128个关键字）组成，关键字之间通过\"~\"分隔符分开，如select~from~t1。规则中不能包含‘\\’、中英文逗号、‘~~’，不能以‘~’结尾。
     * maxConcurrency  最大并发数。取值范围：非负整数。
+    * expireAt  **参数解释**：  SQL限流失效时间，标准秒级时间戳，永久生效SQL限流规则该字段为null。  **约束限制**：  不涉及。  **取值范围**：  0 - 9223372036854775807。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'pattern' => 'getPattern',
-            'maxConcurrency' => 'getMaxConcurrency'
+            'maxConcurrency' => 'getMaxConcurrency',
+            'expireAt' => 'getExpireAt'
     ];
 
     /**
@@ -159,6 +169,7 @@ class NodeSqlFilterRulePattern implements ModelInterface, ArrayAccess
     {
         $this->container['pattern'] = isset($data['pattern']) ? $data['pattern'] : null;
         $this->container['maxConcurrency'] = isset($data['maxConcurrency']) ? $data['maxConcurrency'] : null;
+        $this->container['expireAt'] = isset($data['expireAt']) ? $data['expireAt'] : null;
     }
 
     /**
@@ -234,6 +245,30 @@ class NodeSqlFilterRulePattern implements ModelInterface, ArrayAccess
     public function setMaxConcurrency($maxConcurrency)
     {
         $this->container['maxConcurrency'] = $maxConcurrency;
+        return $this;
+    }
+
+    /**
+    * Gets expireAt
+    *  **参数解释**：  SQL限流失效时间，标准秒级时间戳，永久生效SQL限流规则该字段为null。  **约束限制**：  不涉及。  **取值范围**：  0 - 9223372036854775807。  **默认取值**：  不涉及。
+    *
+    * @return int|null
+    */
+    public function getExpireAt()
+    {
+        return $this->container['expireAt'];
+    }
+
+    /**
+    * Sets expireAt
+    *
+    * @param int|null $expireAt **参数解释**：  SQL限流失效时间，标准秒级时间戳，永久生效SQL限流规则该字段为null。  **约束限制**：  不涉及。  **取值范围**：  0 - 9223372036854775807。  **默认取值**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setExpireAt($expireAt)
+    {
+        $this->container['expireAt'] = $expireAt;
         return $this;
     }
 

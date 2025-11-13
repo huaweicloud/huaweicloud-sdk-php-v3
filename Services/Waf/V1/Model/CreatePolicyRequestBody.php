@@ -20,7 +20,7 @@ class CreatePolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  策略名称（策略名称只能由数字、字母和下划线组成，长度不能超过64为字符）
+    * name  策略名称（策略名称只能由数字、字母和下划线组成，长度不能超过64位字符）
     * logActionReplaced  cc规则和精准防护规则“防护动作”选择“仅记录”时，Web基础防护是否命中策略规则并阻断，默认为true
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CreatePolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  策略名称（策略名称只能由数字、字母和下划线组成，长度不能超过64为字符）
+    * name  策略名称（策略名称只能由数字、字母和下划线组成，长度不能超过64位字符）
     * logActionReplaced  cc规则和精准防护规则“防护动作”选择“仅记录”时，Web基础防护是否命中策略规则并阻断，默认为true
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CreatePolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  策略名称（策略名称只能由数字、字母和下划线组成，长度不能超过64为字符）
+    * name  策略名称（策略名称只能由数字、字母和下划线组成，长度不能超过64位字符）
     * logActionReplaced  cc规则和精准防护规则“防护动作”选择“仅记录”时，Web基础防护是否命中策略规则并阻断，默认为true
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CreatePolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  策略名称（策略名称只能由数字、字母和下划线组成，长度不能超过64为字符）
+    * name  策略名称（策略名称只能由数字、字母和下划线组成，长度不能超过64位字符）
     * logActionReplaced  cc规则和精准防护规则“防护动作”选择“仅记录”时，Web基础防护是否命中策略规则并阻断，默认为true
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CreatePolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  策略名称（策略名称只能由数字、字母和下划线组成，长度不能超过64为字符）
+    * name  策略名称（策略名称只能由数字、字母和下划线组成，长度不能超过64位字符）
     * logActionReplaced  cc规则和精准防护规则“防护动作”选择“仅记录”时，Web基础防护是否命中策略规则并阻断，默认为true
     *
     * @var string[]
@@ -188,7 +188,7 @@ class CreatePolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  策略名称（策略名称只能由数字、字母和下划线组成，长度不能超过64为字符）
+    *  策略名称（策略名称只能由数字、字母和下划线组成，长度不能超过64位字符）
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class CreatePolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 策略名称（策略名称只能由数字、字母和下划线组成，长度不能超过64为字符）
+    * @param string $name 策略名称（策略名称只能由数字、字母和下划线组成，长度不能超过64位字符）
     *
     * @return $this
     */

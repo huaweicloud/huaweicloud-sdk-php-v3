@@ -21,21 +21,25 @@ class AddSecurityGroupsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * port  port
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会执行端口插入安全组。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接执行端口插入安全组。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'port' => '\HuaweiCloud\SDK\Vpc\V3\Model\InsertSecurityGroupOption'
+            'port' => '\HuaweiCloud\SDK\Vpc\V3\Model\InsertSecurityGroupOption',
+            'dryRun' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * port  port
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会执行端口插入安全组。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接执行端口插入安全组。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'port' => null
+        'port' => null,
+        'dryRun' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class AddSecurityGroupsRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * port  port
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会执行端口插入安全组。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接执行端口插入安全组。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'port' => 'port'
+            'port' => 'port',
+            'dryRun' => 'dry_run'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * port  port
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会执行端口插入安全组。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接执行端口插入安全组。
     *
     * @var string[]
     */
     protected static $setters = [
-            'port' => 'setPort'
+            'port' => 'setPort',
+            'dryRun' => 'setDryRun'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * port  port
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会执行端口插入安全组。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接执行端口插入安全组。
     *
     * @var string[]
     */
     protected static $getters = [
-            'port' => 'getPort'
+            'port' => 'getPort',
+            'dryRun' => 'getDryRun'
     ];
 
     /**
@@ -148,6 +158,7 @@ class AddSecurityGroupsRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
+        $this->container['dryRun'] = isset($data['dryRun']) ? $data['dryRun'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class AddSecurityGroupsRequestBody implements ModelInterface, ArrayAccess
     public function setPort($port)
     {
         $this->container['port'] = $port;
+        return $this;
+    }
+
+    /**
+    * Gets dryRun
+    *  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会执行端口插入安全组。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接执行端口插入安全组。
+    *
+    * @return bool|null
+    */
+    public function getDryRun()
+    {
+        return $this->container['dryRun'];
+    }
+
+    /**
+    * Sets dryRun
+    *
+    * @param bool|null $dryRun 功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会执行端口插入安全组。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接执行端口插入安全组。
+    *
+    * @return $this
+    */
+    public function setDryRun($dryRun)
+    {
+        $this->container['dryRun'] = $dryRun;
         return $this;
     }
 

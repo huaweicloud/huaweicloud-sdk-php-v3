@@ -24,6 +24,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     * assetName  资产名称。
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线
     * assetType  资产类型。 公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
+    * blockReasonCode  冻结原因编号。
     * coverUrl  封面图片路径。
     * thumbnailUrl  缩略图路径。
     *
@@ -34,6 +35,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
             'assetName' => 'string',
             'assetState' => 'string',
             'assetType' => 'string',
+            'blockReasonCode' => 'string',
             'coverUrl' => 'string',
             'thumbnailUrl' => 'string'
     ];
@@ -44,6 +46,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     * assetName  资产名称。
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线
     * assetType  资产类型。 公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
+    * blockReasonCode  冻结原因编号。
     * coverUrl  封面图片路径。
     * thumbnailUrl  缩略图路径。
     *
@@ -54,6 +57,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
         'assetName' => null,
         'assetState' => null,
         'assetType' => null,
+        'blockReasonCode' => null,
         'coverUrl' => null,
         'thumbnailUrl' => null
     ];
@@ -85,6 +89,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     * assetName  资产名称。
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线
     * assetType  资产类型。 公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
+    * blockReasonCode  冻结原因编号。
     * coverUrl  封面图片路径。
     * thumbnailUrl  缩略图路径。
     *
@@ -95,6 +100,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
             'assetName' => 'asset_name',
             'assetState' => 'asset_state',
             'assetType' => 'asset_type',
+            'blockReasonCode' => 'block_reason_code',
             'coverUrl' => 'cover_url',
             'thumbnailUrl' => 'thumbnail_url'
     ];
@@ -105,6 +111,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     * assetName  资产名称。
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线
     * assetType  资产类型。 公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
+    * blockReasonCode  冻结原因编号。
     * coverUrl  封面图片路径。
     * thumbnailUrl  缩略图路径。
     *
@@ -115,6 +122,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
             'assetName' => 'setAssetName',
             'assetState' => 'setAssetState',
             'assetType' => 'setAssetType',
+            'blockReasonCode' => 'setBlockReasonCode',
             'coverUrl' => 'setCoverUrl',
             'thumbnailUrl' => 'setThumbnailUrl'
     ];
@@ -125,6 +133,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     * assetName  资产名称。
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线
     * assetType  资产类型。 公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
+    * blockReasonCode  冻结原因编号。
     * coverUrl  封面图片路径。
     * thumbnailUrl  缩略图路径。
     *
@@ -135,6 +144,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
             'assetName' => 'getAssetName',
             'assetState' => 'getAssetState',
             'assetType' => 'getAssetType',
+            'blockReasonCode' => 'getBlockReasonCode',
             'coverUrl' => 'getCoverUrl',
             'thumbnailUrl' => 'getThumbnailUrl'
     ];
@@ -265,6 +275,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
         $this->container['assetName'] = isset($data['assetName']) ? $data['assetName'] : null;
         $this->container['assetState'] = isset($data['assetState']) ? $data['assetState'] : null;
         $this->container['assetType'] = isset($data['assetType']) ? $data['assetType'] : null;
+        $this->container['blockReasonCode'] = isset($data['blockReasonCode']) ? $data['blockReasonCode'] : null;
         $this->container['coverUrl'] = isset($data['coverUrl']) ? $data['coverUrl'] : null;
         $this->container['thumbnailUrl'] = isset($data['thumbnailUrl']) ? $data['thumbnailUrl'] : null;
     }
@@ -305,6 +316,12 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['blockReasonCode']) && (mb_strlen($this->container['blockReasonCode']) > 256)) {
+                $invalidProperties[] = "invalid value for 'blockReasonCode', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['blockReasonCode']) && (mb_strlen($this->container['blockReasonCode']) < 0)) {
+                $invalidProperties[] = "invalid value for 'blockReasonCode', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['coverUrl']) && (mb_strlen($this->container['coverUrl']) > 2048)) {
                 $invalidProperties[] = "invalid value for 'coverUrl', the character length must be smaller than or equal to 2048.";
             }
@@ -424,6 +441,30 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     public function setAssetType($assetType)
     {
         $this->container['assetType'] = $assetType;
+        return $this;
+    }
+
+    /**
+    * Gets blockReasonCode
+    *  冻结原因编号。
+    *
+    * @return string|null
+    */
+    public function getBlockReasonCode()
+    {
+        return $this->container['blockReasonCode'];
+    }
+
+    /**
+    * Sets blockReasonCode
+    *
+    * @param string|null $blockReasonCode 冻结原因编号。
+    *
+    * @return $this
+    */
+    public function setBlockReasonCode($blockReasonCode)
+    {
+        $this->container['blockReasonCode'] = $blockReasonCode;
         return $this;
     }
 

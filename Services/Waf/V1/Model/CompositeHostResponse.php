@@ -36,7 +36,7 @@ class CompositeHostResponse implements ModelInterface, ArrayAccess
     * accessProgress  接入进度，仅用于新版console(前端)使用
     * premiumWafInstances  租户引擎实例信息列表
     * description  域名描述
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
     * enterpriseProjectId  企业项目id
@@ -84,7 +84,7 @@ class CompositeHostResponse implements ModelInterface, ArrayAccess
     * accessProgress  接入进度，仅用于新版console(前端)使用
     * premiumWafInstances  租户引擎实例信息列表
     * description  域名描述
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
     * enterpriseProjectId  企业项目id
@@ -153,7 +153,7 @@ class CompositeHostResponse implements ModelInterface, ArrayAccess
     * accessProgress  接入进度，仅用于新版console(前端)使用
     * premiumWafInstances  租户引擎实例信息列表
     * description  域名描述
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
     * enterpriseProjectId  企业项目id
@@ -201,7 +201,7 @@ class CompositeHostResponse implements ModelInterface, ArrayAccess
     * accessProgress  接入进度，仅用于新版console(前端)使用
     * premiumWafInstances  租户引擎实例信息列表
     * description  域名描述
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
     * enterpriseProjectId  企业项目id
@@ -249,7 +249,7 @@ class CompositeHostResponse implements ModelInterface, ArrayAccess
     * accessProgress  接入进度，仅用于新版console(前端)使用
     * premiumWafInstances  租户引擎实例信息列表
     * description  域名描述
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
     * enterpriseProjectId  企业项目id
@@ -767,7 +767,7 @@ class CompositeHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets exclusiveIp
-    *  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    *  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     *
     * @return bool|null
     */
@@ -779,7 +779,7 @@ class CompositeHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets exclusiveIp
     *
-    * @param bool|null $exclusiveIp 是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+    * @param bool|null $exclusiveIp 是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
     *
     * @return $this
     */
